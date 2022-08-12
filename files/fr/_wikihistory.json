@@ -278,24 +278,6 @@
       "Macadam"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T23:07:59.110Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Porkepix",
-      "genma"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T23:00:23.677Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Goofy",
-      "htindon"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-02-09T18:25:52.010Z",
     "contributors": [
@@ -14804,12 +14786,6 @@
       "loella16"
     ]
   },
-  "Web/API/FileRequest/lockedFile": {
-    "modified": "2019-03-18T21:38:29.049Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/FileRequest/onprogress": {
     "modified": "2019-03-18T21:38:33.597Z",
     "contributors": [
@@ -16167,6 +16143,12 @@
       "gadgino"
     ]
   },
+  "Web/API/IDBFileRequest/lockedFile": {
+    "modified": "2019-03-18T21:38:29.049Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
   "Web/API/IDBIndex": {
     "modified": "2020-09-12T05:13:55.776Z",
     "contributors": [
@@ -16799,24 +16781,11 @@
       "P45QU10U"
     ]
   },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2020-04-20T11:30:29.100Z",
-    "contributors": [
-      "tristantheb"
-    ]
-  },
   "Web/API/KeyframeEffect/KeyframeEffect": {
     "modified": "2019-03-23T22:28:20.379Z",
     "contributors": [
       "SphinxKnight",
       "HereComesJuju"
-    ]
-  },
-  "Web/API/LocalFileSystem": {
-    "modified": "2020-11-02T04:24:20.566Z",
-    "contributors": [
-      "SphinxKnight",
-      "roxaneprovost"
     ]
   },
   "Web/API/Location": {
@@ -18573,6 +18542,12 @@
       "fscholz",
       "khalid32",
       "Feugy"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2020-04-20T11:30:29.100Z",
+    "contributors": [
+      "tristantheb"
     ]
   },
   "Web/API/URL": {
@@ -34828,14 +34803,6 @@
       "tregagnon"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-15T21:27:20.298Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-15T21:27:18.952Z",
     "contributors": [
@@ -41655,6 +41622,13 @@
       "Copen"
     ]
   },
+  "conflicting/Web/API/File_and_Directory_Entries_API": {
+    "modified": "2020-11-02T04:24:20.566Z",
+    "contributors": [
+      "SphinxKnight",
+      "roxaneprovost"
+    ]
+  },
   "conflicting/Web/API/FormData/Using_FormData_Objects": {
     "modified": "2019-03-23T23:02:24.025Z",
     "contributors": [
@@ -42337,6 +42311,24 @@
       "BenoitL"
     ]
   },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T23:07:59.110Z",
+    "contributors": [
+      "loella16",
+      "Jeremie",
+      "Porkepix",
+      "genma"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-23T23:00:23.677Z",
+    "contributors": [
+      "loella16",
+      "Jeremie",
+      "Goofy",
+      "htindon"
+    ]
+  },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {
     "modified": "2020-03-12T19:39:10.978Z",
     "contributors": [
@@ -42444,6 +42436,14 @@
       "SphinxKnight",
       "teoli",
       "Goofy",
+      "tregagnon"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
+    "modified": "2020-10-15T21:27:20.298Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
       "tregagnon"
     ]
   },

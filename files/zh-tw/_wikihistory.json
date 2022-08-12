@@ -89,19 +89,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:23:29.116Z",
-    "contributors": [
-      "iigmir",
-      "marktwtn"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-18T21:44:50.733Z",
-    "contributors": [
-      "Rocker"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2019-03-23T22:28:09.468Z",
     "contributors": [
@@ -3488,7 +3475,7 @@
       "abc225666"
     ]
   },
-  "Web/API/File_Handle_API": {
+  "Web/API/File_and_Directory_Entries_API": {
     "modified": "2019-03-23T23:28:50.291Z",
     "contributors": [
       "jackblackevo",
@@ -7898,6 +7885,19 @@
     "modified": "2019-03-23T22:06:20.131Z",
     "contributors": [
       "jackblackevo"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:23:29.116Z",
+    "contributors": [
+      "iigmir",
+      "marktwtn"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-18T21:44:50.733Z",
+    "contributors": [
+      "Rocker"
     ]
   },
   "conflicting/Web/JavaScript/Guide": {

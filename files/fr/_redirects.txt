@@ -1284,8 +1284,8 @@
 /fr/docs/Glisser_et_déposer	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Glisser_et_déposer/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Glossaire	/fr/docs/Glossary
-/fr/docs/Glossaire/404	/fr/docs/Glossary/404
-/fr/docs/Glossaire/502	/fr/docs/Glossary/502
+/fr/docs/Glossaire/404	/fr/docs/conflicting/Web/HTTP/Status/404
+/fr/docs/Glossaire/502	/fr/docs/conflicting/Web/HTTP/Status/502
 /fr/docs/Glossaire/AJAX	/fr/docs/Glossary/AJAX
 /fr/docs/Glossaire/ALPN	/fr/docs/Glossary/ALPN
 /fr/docs/Glossaire/API	/fr/docs/Glossary/API
@@ -1742,6 +1742,8 @@
 /fr/docs/Glossaire/Élément	/fr/docs/Glossary/Element
 /fr/docs/Glossaire/Éléments_supports_de_script	/fr/docs/Glossary/Script-supporting_element
 /fr/docs/Glossaire/évènement	/fr/docs/Glossary/event
+/fr/docs/Glossary/404	/fr/docs/conflicting/Web/HTTP/Status/404
+/fr/docs/Glossary/502	/fr/docs/conflicting/Web/HTTP/Status/502
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
@@ -2333,7 +2335,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/message	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error
-/fr/docs/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/fr/docs/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /fr/docs/JavaScript/Reference/Objets_globaux/EvalError/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError
@@ -3779,6 +3781,7 @@
 /fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
+/fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IDBFileRequest/lockedFile
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
@@ -3804,6 +3807,8 @@
 /fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/Web/API/KeyboardEvent/key/Key_Values	/fr/docs/Web/API/UI_Events/Keyboard_event_key_values
+/fr/docs/Web/API/LocalFileSystem	/fr/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
 /fr/docs/Web/API/Location.replace	/fr/docs/Web/API/Location/replace
@@ -4856,6 +4861,7 @@
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
@@ -5083,7 +5089,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError

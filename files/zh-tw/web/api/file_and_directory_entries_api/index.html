@@ -1,0 +1,186 @@
+---
+title: FileHandle API
+slug: Web/API/File_and_Directory_Entries_API
+translation_of: Web/API/File_Handle_API
+original_slug: Web/API/File_Handle_API
+---
+<p>FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 <a href="https://developer.mozilla.org/en-US/docs/DOM/File" title="DOM/File">File</a> API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。</p>
+<h2 id="API">API</h2>
+<h3 id="建立_FileHandle">建立 FileHandle</h3>
+<p>若要建立 FileHandle 物件，則需要 <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBFactory#open" title="IndexedDB/IDBFactory#open">IndexedDB Database</a>。</p>
+<div style="overflow: hidden;">
+  <pre class="brush: js">var idbreq = indexedDB.open("MyTestDatabase");
+
+idbreq.onsuccess = function(){
+  var db = idbreq.result;
+  var handleReq = db.mozCreateFileHandle("test.bin", "binary");
+
+  handleReq.onsuccess = function(){
+    var handle = handleReq.result;
+    console.log('handle', handle);
+  };
+};
+</pre>
+</div>
+<p><code>mozCreateFileHandle() </code><code>共使用 </code>2<code> 組參數</code> (Argument)：1 組名稱與 1 組檔案類別 (Optional type)。但這 2 組<code>參</code>數均只屬於敘述性<code>參</code>數，不會用於資料庫。舉例來說，名稱可能是空白字串，而且不需為專屬字串。所以 API 根本不會注意這些參數值。</p>
+<p>另請注意，上列程式碼僅會建立「暫時性檔案」，亦即當你保留 FileHandle 物件時，該檔案才會存在。如果你要在重新整理頁面/重新啟動 App 之後，仍能保留檔案，則必須將 Handle 儲存於更永久性的位置 (如資料庫本身之內) 中。</p>
+<pre class="brush: js">var transaction = db.transaction(["test"], "readwrite");
+var objectStore = transaction.objectStore("test");
+objectStore.add(myFile, myKey).onsuccess = function(event) {
+  // The file is now referenced from database too.
+}
+</pre>
+<h3 id="FileHandle_介面">FileHandle 介面</h3>
+<pre>interface FileHandle
+{
+  LockedFile open(optional DOMString mode);
+  DOMRequest getFile()
+  readonly attribute DOMString name;
+  readonly attribute DOMString type;
+  attribute Function? onabort;
+  attribute Function? onerror;
+};</pre>
+<dl>
+  <dt>
+    open([mode="readonly"])</dt>
+  <dd>
+    可回傳 <a href="#LockedFile_interface">LockedFile</a>。<code>mode</code> 可為「<code>readonly」或「</code><code>readwrite」。</code></dd>
+  <dt>
+    getFile()</dt>
+  <dd>
+    針對檔案而回傳 <a href="/en-US/docs/DOM/DOMRequest" title="/en-US/docs/DOM/DOMRequest">DOMRequest</a>。若成功，就會收到以 <a href="https://developer.mozilla.org/en-US/docs/DOM/File" title="DOM/File">File</a> 物件形式呈現的唯讀「snapshot」檔案內容 (可用於任何接受 <a href="https://developer.mozilla.org/en-US/docs/DOM/Blob" title="DOM/Blob">Blob</a> 的地方，如 <a href="https://developer.mozilla.org/en-US/docs/DOM/FileReader" title="DOM/FileReader">FileReader</a> 或 <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> 等)。
+    <pre class="brush: js">myFile.getFile().onsuccess = function(event) {
+  var file = event.target.result;
+  var transcation = myDatabase.transaction(["snapshots"], "readwrite");
+  var objectStore = transaction.objectStore("snapshots");
+  objectStore.add(file, snapshotKey).onsuccess = function(event) {
+    // A new readonly copy of the file has been created.
+  }
+}
+</pre>
+  </dd>
+  <dt>
+    name</dt>
+  <dd>
+    檔案名稱。</dd>
+  <dt>
+    type</dt>
+  <dd>
+    代表 content-type。</dd>
+  <dt>
+    abort event</dt>
+  <dd>
+    放棄已鎖定的檔案，就會發生此事件。</dd>
+  <dt>
+    error event</dt>
+  <dd>
+    任何內部錯誤，都會發生此事件。</dd>
+</dl>
+<h3 id="LockedFile_介面">LockedFile 介面</h3>
+<pre>interface LockedFile
+{
+  readonly attribute FileHandle fileHandle;
+  readonly attribute DOMString mode;
+  readonly attribute boolean active;
+  attribute any? location;
+  FileRequest getMetadata(optional FileMetadataParameters parameters);
+  FileRequest readAsArrayBuffer(unsigned long long size);
+  FileRequest readAsText(unsigned long long size, optional DOMString encoding);
+  FileRequest write(DOMString or ArrayBuffer or Blob value);
+  FileRequest append(DOMString or ArrayBuffer or Blob value);
+  FileRequest truncate(optional unsigned long long size);
+  FileRequest flush();
+  void abort();
+  attribute Function? oncomplete;
+  attribute Function? onabort;
+  attribute Function? onerror;
+};</pre>
+<dl>
+  <dt>
+    fileHandle</dt>
+  <dd>
+    來自於解鎖的 FileHandle 物件。</dd>
+  <dt>
+    mode</dt>
+  <dd>
+    <code>「readonly」或「</code><code>readwrite」。</code></dd>
+  <dt>
+    active</dt>
+  <dd>
+    一旦建立之後，就隨即啟動 LockedFile。此 LockedFile 是「可寫入存取 (Write access) 實際底層檔案」的唯一物件。LockedFile 上的作業，均於 <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29" title="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a> 之中執行；也就是說，只要啟動了 LockedFile，則此 LockedFile 的所有作業都一定會在底層檔案上依序執行，而不會與其他 LockedFiles 的作業交錯執行。</dd>
+  <dd>
+    若停用了 LockedFile，則只要在同樣的 LockedFile 上執行讀/寫作業，都會丟出錯誤訊息。</dd>
+</dl>
+<dl>
+  <dt>
+    location</dt>
+  <dd>
+    檔案中的位置 (Offset)。每次讀/寫作業之後，此數值均將自動變更。讀寫作業均從該 location 開始，而 null 代表檔案末端。</dd>
+  <dt>
+    getMetadata(parameters)</dt>
+  <dd>
+    針對後設資料 (Metadata) 而回傳 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。此<code>參</code>數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 <code>true</code>。目前僅有 <code>size</code> 與 <code>lastModified</code> 為可能的參數。</dd>
+  <dt>
+    readAsArrayBuffer(size)</dt>
+  <dd>
+    針對既有<code> size </code>的 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffer</a>，回傳 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。此作業均從 <code>location</code> 開始，另根據讀取位元組的數目，移動 <code>location</code>。</dd>
+  <dt>
+    readAsText(size [, encoding])</dt>
+  <dd>
+    針對既有 <code>size</code> 的字串，以既定的<code> encoding</code> 回傳 <a href="/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。此作業均從 <code>location</code> 開始，另根據讀取位元組的數目，移動 <code>location</code>。<a href="https://developer.mozilla.org/en-US/docs/DOM/FileReader" title="DOM/FileReader">FileReader</a> API 中的對等函式，也以相同方式運作。
+    <pre class="brush: js">var lockedFile = myFile.open();
+var request = lockedFile.readAsText(3);
+request.onsuccess = function(event) {
+  var text = request.result;
+  // 3 characters have been read.
+}
+</pre>
+  </dd>
+  <dt>
+    write(value)</dt>
+  <dd>
+    針對成功/失敗的寫入作業，回傳 <a href="/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。寫入作業將從 <code>location</code> 開始，另根據寫入位元組的數目，移動位置。
+    <pre class="brush: js">var lockedFile = myFile.open("readwrite");
+var request = lockedFile.write("foo");
+request.onsuccess = function(event) {
+  // The string "foo" has been written.
+}
+</pre>
+  </dd>
+  <dt>
+    append(value)</dt>
+  <dd>
+    針對成功/失敗的附加 (Append) 作業，回傳 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest</a>。不論 <code>location</code> 為何，該數值均附加於檔案末端。在附加資料完畢後，<code>location</code> 隨即設定為 <code>null</code>。</dd>
+  <dt>
+    truncate([size])</dt>
+  <dd>
+    針對成功/失敗的截斷 (Truncate) 作業，回傳 <a href="/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface" title="WebAPI/FileHandle_API#FileRequest_interface">FileRequest。</a></dd>
+  <dd>
+    如果是以單一<code>參</code>數呼叫該函式，則截斷成功之後，則<strong>不論</strong><code> location</code> 為何，檔案將剩下第一個 <code>size</code> 的位元組。</dd>
+  <dd>
+    若沒有用任何<code>參</code>數呼叫該函式，則檔案將剩下 <code>location</code> 的第一個位元組。</dd>
+  <dt>
+    flush()</dt>
+  <dd>
+    強制移轉緩衝過的資料至磁碟上，作業成功之後將回傳 FileRequest。此時即便 App 當機或非刻意中止，都能確保資料已經位於磁碟上了。</dd>
+  <dt>
+    abort()</dt>
+  <dd>
+    停用 LockedFile 並取消全部尚未執行的作業。</dd>
+  <dt>
+    complete, abort, error events</dt>
+</dl>
+<h3 id="FileRequest_介面">FileRequest 介面</h3>
+<p>此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 <a href="https://developer.mozilla.org/en-US/docs/DOM/DOMRequest" title="DOM/DOMRequest">DOMRequest</a> 並類似 <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBRequest" title="IndexedDB/IDBRequest">IDBRequest</a>，同時還擁有 <code>onprogress </code><code>事件。在成功之後，則可透過</code> <code>result </code><code>屬性而取得必要檔案作業的結果。</code></p>
+<pre>interface FileRequest : DOMRequest
+{
+  readonly attribute LockedFile lockedFile;
+  attribute Function? onprogress;
+};</pre>
+<dl>
+  <dt>
+     </dt>
+</dl>
+<h2 id="說明">說明</h2>
+<h3 id="API_與_FileWriter_的差異？">API 與 FileWriter 的差異？</h3>
+<p><a href="http://dev.w3.org/2009/dap/file-system/file-writer.html" title="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter 規格</a>定義了 FileWriter，也就是用以呈現「可編輯的檔案」的物件。<a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html" title="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Public-webapps 討論串</a>則下了結論：若單一檔案同時寫入不同的實體 (Entity)，將導致 API 成效不彰。最後就是 FileHandle API 應具備自己的 LockedFile 與交易機制。</p>
