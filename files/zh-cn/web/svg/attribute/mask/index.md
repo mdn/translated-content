@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/mask
 
 | 类别   | 外观属性                                                         |
 | ------ | ---------------------------------------------------------------- |
-| 值     | [<FuncIRI>](/en/SVG/Content_type#FuncIRI) \| **none** \| inherit |
+| 值     | [\<FuncIRI>](/en/SVG/Content_type#FuncIRI) \| **none** \| inherit |
 | 可变性 | Yes                                                              |
 
 - [\<funcIRI>](/en/SVG/Content_type#FuncIRI)

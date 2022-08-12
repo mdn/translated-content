@@ -15,7 +15,7 @@ translation_of: Web/SVG/Attribute/attributeName
 
 | 类别     | 动画属性目标属性                                                                      |
 | -------- | ------------------------------------------------------------------------------------- |
-| 值       | <attributeName>                                                                       |
+| 值       | \<attributeName>                                                                       |
 | 可变性   | No                                                                                    |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute) |
 

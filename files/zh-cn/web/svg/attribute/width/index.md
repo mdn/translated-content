@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/width
 
 | 类别   | 无                                      |
 | ------ | --------------------------------------- |
-| 值     | [<length>](/en/SVG/Content_type#Length) |
+| 值     | [\<length>](/en/SVG/Content_type#Length) |
 | 可变性 | Yes                                     |
 
 {{ page("/zh-CN/docs/Web/SVG/Content_type","长度") }}

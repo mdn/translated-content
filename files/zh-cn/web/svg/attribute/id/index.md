@@ -30,7 +30,7 @@ translation_of: Web/SVG/Attribute/id
 
 ## 用法说明
 
-| 值     | <id>   |
+| 值     | \<id>   |
 | ------ | ------ |
 | 默认值 | _None_ |
 | 可动画 | No     |

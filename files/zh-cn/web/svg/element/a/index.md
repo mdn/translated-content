@@ -11,7 +11,7 @@ translation_of: Web/SVG/Element/a
 
 使用 SVG 的锚元素 (\<a>) 定义一个超链接。
 
-由于这个元素和 [HTML 的 \<a> 标签](/en-US/docs/Web/HTML/Element/a) 使用了相同的标签名，当使用 CSS 或 `querySelector 选择"a"时，可能应用到错误的元素上。 可以尝试使用 `[`@namespace`规则](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@namespace) 来区分两者
+由于这个元素和 [HTML 的 \<a> 标签](/en-US/docs/Web/HTML/Element/a) 使用了相同的标签名，当使用 CSS 或 `querySelector` 选择"a"时，可能应用到错误的元素上。 可以尝试使用 [`@namespace`规则](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@namespace) 来区分两者
 
 ## 用法
 

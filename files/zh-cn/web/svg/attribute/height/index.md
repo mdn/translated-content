@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/height
 
 | 类别   | 无                                      |
 | ------ | --------------------------------------- |
-| 值     | [<length>](/en/SVG/Content_type#Length) |
+| 值     | [\<length>](/en/SVG/Content_type#Length) |
 | 可变性 | Yes                                     |
 
 {{ page("/zh-CN/Content_type","Length") }}
@@ -36,7 +36,7 @@ translation_of: Web/SVG/Attribute/height
 
 ## 元素
 
-下列元素可以使用 `height `属性：
+下列元素可以使用 `height` 属性：
 
 - [滤镜元素](/en/SVG/Element#FilterPrimitive) »
 - {{ SVGElement("filter") }}

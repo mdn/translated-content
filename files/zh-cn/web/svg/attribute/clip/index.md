@@ -42,7 +42,7 @@ html,body,svg { height:100% }
 
 **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
-| 可用值     | **auto** \| <shape> \| inherit |
+| 可用值     | **auto** \| \<shape> \| inherit |
 | ---------- | ------------------------------ |
 | 默认值     | Yes                            |
 | Animatable | Yes                            |

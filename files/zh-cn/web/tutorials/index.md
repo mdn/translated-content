@@ -50,7 +50,7 @@ translation_of: Web/Tutorials
   - : Codecademy 是学习如何编写 JavaScript 最容易的方式。它互动、有趣，你能够和你的朋友们一起来学习。
 - [开始使用 JavaScript](/zh-CN/docs/JavaScript/Getting_Started)
   - : JavaScript 是什么以及它如何帮助你？
-- [JavaScript 最佳实践](http://dev.opera.com/articles/view/javascript-best-practices/)[ ](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)_（来自 WebPlatform.org 网站）_
+- [JavaScript 最佳实践](http://dev.opera.com/articles/view/javascript-best-practices/) _（来自 WebPlatform.org 网站）_
   - : 学习一些明显或者不是很明显的编写 JavaScript 最佳实践。
 - [CodeAvengers](http://codeavengers.com/)_（来自 CodeAvengers.com 网站）_
   - : Code Avengers（代码复仇者联盟）是一个有趣且高效的学习使用 HTML, CSS, and JavaScript 编写网络 apps 和游戏代码的好地方。
@@ -76,7 +76,7 @@ translation_of: Web/Tutorials
   - : John Resig 的高级 JavaScript 指南。
 - [介绍 JavaScript DOM](http://www.elated.com/articles/javascript-dom-intro/) (Elated)
   - : DOM 是什么，以及为什么有用？这篇文章将向你介绍 Javascript 这一强大功能。
-- [一个麻烦的 API : DOM 理论 ](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/)(YUI Blog)
+- [一个麻烦的 API : DOM 理论](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/) (YUI Blog)
   - : Douglas Crockford 解释文件对象模型。
 - [Javascript 进阶](http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/) (YUI Blog)
   - : Douglas Crockford 审视代码的模式，以便程序员在创建应用的时候可以选择。
@@ -110,7 +110,7 @@ translation_of: Web/Tutorials
   - : CSS 完整参考，包含 Firefox 和另外浏览器支持的详细信息。
 - [CSS 挑战](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (维基大学)
   - : 让你的 CSS 技巧更灵活，看你是否需要更多的练习。
-- [中级 CSS 概念 ](http://www.html.net/tutorials/css/)(HTML.net)
+- [中级 CSS 概念](http://www.html.net/tutorials/css/) (HTML.net)
   - : 分组，伪类等等。
 - [CSS 定位 101](http://www.alistapart.com/articles/css-positioning-101/) (A List Apart)
   - : 使用符合标准的定位，无表布局。

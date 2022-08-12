@@ -11,7 +11,7 @@ translation_of: Web/SVG/Attribute/version
 
 | 类别     | None                                    |
 | -------- | --------------------------------------- |
-| 值       | [<number>](/en/SVG/Content_type#Number) |
+| 值       | [\<number>](/en/SVG/Content_type#Number) |
 | 动画属性 | No                                      |
 
 ## 规范

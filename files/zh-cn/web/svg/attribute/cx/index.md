@@ -37,7 +37,7 @@ html,body,svg { height:100% }
 
 对于 {{SVGElement('circle')}}，`cx` 用来定义图形中心的 x 轴坐标。
 
-| 值     | **[<length>](/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
+| 值     | **[\<length>](/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
 | ------ | -------------------------------------------------------------------------------------------------------------- |
 | 默认值 | `0`                                                                                                            |
 | 可变性 | Yes                                                                                                            |
@@ -48,7 +48,7 @@ html,body,svg { height:100% }
 
 对于 {{SVGElement('ellipse')}}，`cx` 用来定义图形中心的 x 轴坐标。
 
-| 值     | **[<length>](/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
+| 值     | **[\<length>](/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
 | ------ | -------------------------------------------------------------------------------------------------------------- |
 | 默认值 | `0`                                                                                                            |
 | 可变性 | Yes                                                                                                            |
@@ -59,7 +59,7 @@ html,body,svg { height:100% }
 
 对于 {{SVGElement('radialGradient')}}, `cx` 用来定义径向渐变终止圆的 x 轴坐标。
 
-| 值     | **[<length>](/docs/Web/SVG/Content_type#Length)** |
+| 值     | **[\<length>](/docs/Web/SVG/Content_type#Length)** |
 | ------ | ------------------------------------------------- |
 | 默认值 | `50%`                                             |
 | 可变性 | Yes                                               |

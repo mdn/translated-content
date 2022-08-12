@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/stroke-width
 
 | 类别   | 外观属性                                                                                              |
 | ------ | ----------------------------------------------------------------------------------------------------- |
-| 值     | [<length>](/en/SVG/Content_type#Length) \| [<percentage>](/en/SVG/Content_type#Percentage) \| inherit |
+| 值     | [\<length>](/en/SVG/Content_type#Length) \| [\<percentage>](/en/SVG/Content_type#Percentage) \| inherit |
 | 可变性 | Yes                                                                                                   |
 
 ## 示例

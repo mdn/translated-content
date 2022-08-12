@@ -31,16 +31,16 @@ html,body,svg { height:100% }
 
 作为表示属性，任何元素都可以使用**`transform`** （在 SVG 1.1 中，仅这 16 个元素被允许使用：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}})。
 
-另外，作为 SVG 1.1 的遗留物，{{SVGElement('linearGradient')}}和{{SVGElement('radialGradient')}}支持 `gradientTransform `属性，而{{SVGElement('pattern')}}支持 `patternTransform `属性，两者的行为完全相同于 `transform` 属性
+另外，作为 SVG 1.1 的遗留物，{{SVGElement('linearGradient')}}和{{SVGElement('radialGradient')}}支持 `gradientTransform` 属性，而{{SVGElement('pattern')}}支持 `patternTransform` 属性，两者的行为完全相同于 `transform` 属性
 
-| Value         | **[<transform-list>](/docs/Web/SVG/Content_type#Transform-list)** |
+| Value         | **[\<transform-list>](/docs/Web/SVG/Content_type#Transform-list)** |
 | ------------- | ----------------------------------------------------------------- |
 | Default value | _none_                                                            |
 | Animatable    | Yes                                                               |
 
 ## Transform functions
 
-`transform` 属性 *`<transform-list> `*可以使用以下的所有 `transform `函数
+`transform` 属性 *`<transform-list>`* 可以使用以下的所有 `transform` 函数
 
 **警告：** 根据规范，您还应该能够使用 CSS {{cssxref('transform-function', 'transform functions')}}，但是，这不能保证兼容性。
 

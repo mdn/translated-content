@@ -55,7 +55,7 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 
 您可以查看 [pwa.rocks](https://pwa.rocks/) 上的列表以获取更多示例。特别值得一提的是 [hnpwa.com](https://hnpwa.com/)，它列出了 Hacker News 网站的示例实现（而不是随处可见的 TodoMVC 应用程序），您可以在其中看到各种前端框架的使用。
 
-您甚至可以使用[ PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
+您甚至可以使用 [PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
 
 对于 Service Worker 和消息推送，请务必查看 [Service Worker 手册](https://serviceworke.rs/)。这是一个在现代站点中使用 Service Worker 的方法集合。
 

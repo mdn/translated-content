@@ -56,7 +56,7 @@ translation_of: Web/SVG/Tutorial/Patterns
  </pattern>
 ```
 
-现在，因为 pattern 内容与 pattern 本身处于相同的单元系统中，所以我们不用偏移边框以使 pattern 在正确的位置上开始，并且即使对象变大，pattern 也会自动的缩放以保证 pattern 内部的对象数目和重复不变。这与 `userSpaceOnUse `系统不同，userSpaceOnUse 系统中如果对象改变大小，pattern 本身会保持不变，只是重复更多次去填满边框。
+现在，因为 pattern 内容与 pattern 本身处于相同的单元系统中，所以我们不用偏移边框以使 pattern 在正确的位置上开始，并且即使对象变大，pattern 也会自动的缩放以保证 pattern 内部的对象数目和重复不变。这与 `userSpaceOnUse` 系统不同，userSpaceOnUse 系统中如果对象改变大小，pattern 本身会保持不变，只是重复更多次去填满边框。
 
 它有一点点的副作用，在 Gecko 中的圆如果半径设置得小于 0.075（尽管半径应该设置的比这个值大得多。这个可能是 pattern 元素中的一个 bug，或者也不算 bug，我也不太清楚）的话绘制的时候可能会出现问题，为了规避这个问题，可能最好的办法是尽量避免在 `objectBoundingBox` 单元中绘制图形。
 

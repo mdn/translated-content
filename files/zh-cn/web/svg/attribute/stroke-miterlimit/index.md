@@ -23,7 +23,7 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 
 | 类别   | 外观属性                |
 | ------ | ----------------------- |
-| 值     | <miterlimit> \| inherit |
+| 值     | \<miterlimit> \| inherit |
 | 初始值 | 4                       |
 | 可动性 | Yes                     |
 

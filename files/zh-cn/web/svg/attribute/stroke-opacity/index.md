@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/stroke-opacity
 
 | 类别   | 外观属性                   |
 | ------ | -------------------------- |
-| 值     | <opacity-value> \| inherit |
+| 值     | \<opacity-value> \| inherit |
 | 可变性 | Yes                        |
 
 - \<opacity-value>

@@ -16,7 +16,7 @@ translation_of: Web/SVG/Attribute/fy
 
 | 类别     | 无                                                                                                                           |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [<coordinate>](/en/SVG/Content_type#Coordinate)                                                                              |
+| 值       | [\<coordinate>](/en/SVG/Content_type#Coordinate)                                                                              |
 | 可变性   | 非                                                                                                                           |
 | 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 

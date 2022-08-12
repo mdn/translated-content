@@ -46,11 +46,11 @@ for ([initialExpression]; [condition]; [incrementExpression])
 
 当一个 `for` 循环执行的时候，会发生以下过程：
 
-1.  如果有初始化表达式 `initialExpression`，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。
-2.  计算 `condition` 表达式的值。如果 `condition` 的值是 true，循环中的语句会被执行。如果 `condition` 的值是 false，`for` 循环终止。如果 `condition` 表达式整个都被省略掉了，condition 的值会被认为是 true。
-3.  循环中的 `statement` 被执行。如果需要执行多条语句，可以使用块（`{ ... }`）来包裹这些语句。
-4.  如果有更新表达式 `incrementExpression`，执行更新表达式。
-5.  回到步骤 2。
+1. 如果有初始化表达式 `initialExpression`，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。
+2. 计算 `condition` 表达式的值。如果 `condition` 的值是 true，循环中的语句会被执行。如果 `condition` 的值是 false，`for` 循环终止。如果 `condition` 表达式整个都被省略掉了，condition 的值会被认为是 true。
+3. 循环中的 `statement` 被执行。如果需要执行多条语句，可以使用块（`{ ... }`）来包裹这些语句。
+4. 如果有更新表达式 `incrementExpression`，执行更新表达式。
+5. 回到步骤 2。
 
 ### **例子**
 
@@ -339,7 +339,7 @@ while (i < 5) {
 
 每次遇到 `continue` 语句时，`checkj` 语句会一直重复执行，直到 `checkj` 语句的条件为 `false`。
 
-当返回` false` 后，将会执行 `checkiandj` 的剩余语句，`checkiandj` 会一直执行，直到 `checkiandj` 的条件为 `false`。
+当返回 `false` 后，将会执行 `checkiandj` 的剩余语句，`checkiandj` 会一直执行，直到 `checkiandj` 的条件为 `false`。
 
 当 `checkiandj` 的返回值为 `false` 时，将会执行 `checkiandj` 的下面的语句。
 

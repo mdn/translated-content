@@ -17,7 +17,7 @@ in 属性标识输入的原语。
 
 | Categories | None                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Value      | `SourceGraphic` \| `SourceAlpha` \| `BackgroundImage` \| `BackgroundAlpha` \| `FillPaint` \| `StrokePaint` \| <filter-primitive-reference> |
+| Value      | `SourceGraphic` \| `SourceAlpha` \| `BackgroundImage` \| `BackgroundAlpha` \| `FillPaint` \| `StrokePaint` \| \<filter-primitive-reference> |
 | Animatable | Yes                                                                                                                                        |
 
 - SourceGraphic

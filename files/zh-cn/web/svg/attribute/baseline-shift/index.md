@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/baseline-shift
 
 | 类别     | 外观属性                                                                                                   |
 | -------- | ---------------------------------------------------------------------------------------------------------- |
-| 值       | **auto** \| baseline \| super \| sub \| <percentage> \| [<length>](/en/SVG/Content_type#Length) \| inherit |
+| 值       | **auto** \| baseline \| super \| sub \| \<percentage> \| [\<length>](/en/SVG/Content_type#Length) \| inherit |
 | 可变性   | Yes                                                                                                        |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                        |
 

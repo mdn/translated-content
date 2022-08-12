@@ -18,7 +18,7 @@ opacity 属性指定了一个对象或一组对象的透明度，也就是说，
 
 | 类别   | 外观属性                   |
 | ------ | -------------------------- |
-| 值     | <opacity-value> \| inherit |
+| 值     | \<opacity-value> \| inherit |
 | 可变性 | Yes                        |
 
 - \<opacity-value>
