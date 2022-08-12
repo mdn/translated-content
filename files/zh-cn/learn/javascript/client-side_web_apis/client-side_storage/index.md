@@ -491,7 +491,7 @@ function displayData() {
 
 再次，让我们打破这个：
 
-- 首先，我们清空 [元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义, 但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。
+- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。
 - 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
 - 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor)方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
 - 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor)使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
@@ -545,7 +545,7 @@ function deleteItem(e) {
 
 如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。您可以存储任何您想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
-为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [元素 用于在 HTML 或者 XHTML 文档中嵌入视频内容。">`<video>`](/zh-CN/docs/Web/HTML/Element/video)元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
+为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
 
 让我们来看看这个例子中最有趣的部分。我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。
 
@@ -632,7 +632,7 @@ function deleteItem(e) {
     };
     ```
 
-5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob ，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为[元素为\<picture>，\<audio>或\<video>元素指定多个媒体资源。 这是一个空元素。 它通常用于以不同浏览器支持的多种格式提供相同的媒体内容。">`<source>`](/zh-CN/docs/Web/HTML/Element/source)元素`src`属性的值，并且它可以正常工作。
+5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob ，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {
