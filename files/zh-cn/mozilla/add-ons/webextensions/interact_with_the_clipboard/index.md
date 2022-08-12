@@ -70,7 +70,9 @@ browser.alarms.onAlarm.addListener(copy);
 
 这种触发不一定成功，它取决于浏览器是否支持。Firefox 浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：
 
-    "document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
+```
+"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
+```
 
 为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。
 

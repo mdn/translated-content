@@ -39,4 +39,4 @@ node.isSupported(feature, version)
 
 ## Gecko 附注
 
-- 从 Gecko 19.0 {{geckoRelease("19.0")}}开始，该方法的结果总是会返回`true `({{bug("801425")}}),从 Gecko 22.0 {{geckoRelease("22.0")}}起，该方法被彻底删除。
+- 从 Gecko 19.0 {{geckoRelease("19.0")}}开始，该方法的结果总是会返回`true` ({{bug("801425")}}),从 Gecko 22.0 {{geckoRelease("22.0")}}起，该方法被彻底删除。

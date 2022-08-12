@@ -65,8 +65,6 @@ biquadFilter.gain.value = 25;
 
 {{Compat("api.BaseAudioContext.createBiquadFilter")}}
 
-##
-
 ## 相关
 
 - [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -32,7 +32,7 @@ gl.canvas;
 <canvas id="canvas"></canvas>
 ```
 
-你可以通过 canvas 得到一个从 `WebGLRenderingContext `返回的引用：
+你可以通过 canvas 得到一个从 `WebGLRenderingContext` 返回的引用：
 
 ```js
 var canvas = document.getElementById("canvas");

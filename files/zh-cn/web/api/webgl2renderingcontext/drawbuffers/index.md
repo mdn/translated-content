@@ -29,7 +29,7 @@ void gl.drawBuffers(buffers);
 
 ### 报错信息
 
-- 如果` buffers` 包含了不止一个合法值， `gl.INVALID_ENUM`错误会被抛出
+- 如果 `buffers` 包含了不止一个合法值， `gl.INVALID_ENUM`错误会被抛出
 
 ## 示例
 

@@ -84,7 +84,7 @@ translation_of: Mozilla/Firefox/Releases/21
 
     - `nsINavHistoryFullVisitResultNode`
 
-  - Deprecated, use` mozIAsyncHistory::updatePlaces` instead:
+  - Deprecated, use `mozIAsyncHistory::updatePlaces` instead:
 
     - `nsINavHistoryService::AddVisit`
 

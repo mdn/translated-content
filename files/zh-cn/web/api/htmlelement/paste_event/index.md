@@ -40,8 +40,8 @@ _functionRef_ 是一个函数名或者函数表达式。
 
   function pasteIntercept(evt)
   {
-        evt.preventDefault();
-  	log("粘贴被阻止");
+    evt.preventDefault();
+    log("粘贴被阻止");
   }
 
   document.getElementById("editor").addEventListener("paste", pasteIntercept, false);

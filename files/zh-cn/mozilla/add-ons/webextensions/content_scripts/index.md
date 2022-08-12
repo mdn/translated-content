@@ -427,7 +427,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
 XPCNativeWrapper(window.wrappedJSObject.foo);
 ```
 
-查看 [Xray vision ](/en-US/docs/Mozilla/Tech/Xray_vision)文档获取更多。
+查看 [Xray vision](/en-US/docs/Mozilla/Tech/Xray_vision) 文档获取更多。
 
 ### 与页面脚本共享 content script 对象
 

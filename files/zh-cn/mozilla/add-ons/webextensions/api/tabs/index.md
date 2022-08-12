@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ## 方法
 
 - {{WebExtAPIRef("tabs.connect()")}}
-  - : 在运行于该标签的任何 [content scripts ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
+  - : 在运行于该标签的任何 [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
 - {{WebExtAPIRef("tabs.create()")}}
   - : 创建一个新标签。
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}

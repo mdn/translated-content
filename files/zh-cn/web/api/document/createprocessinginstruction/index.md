@@ -5,7 +5,7 @@ translation_of: Web/API/Document/createProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
-`createProcessingInstruction() `创建一个新的处理指令节点，并返回。
+`createProcessingInstruction()` 创建一个新的处理指令节点，并返回。
 
 ## Syntax
 

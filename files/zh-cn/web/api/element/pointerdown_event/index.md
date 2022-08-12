@@ -49,8 +49,6 @@ function init() {
 
 {{Compat("api.GlobalEventHandlers.onpointerdown")}}
 
-##
-
 ## 参阅
 
 - {{ event("pointerdown") }}

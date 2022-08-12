@@ -10,7 +10,7 @@ original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 {{ ApiRef("HTML DOM") }}
 
-元素的 `scroll `事件处理函数。
+元素的 `scroll` 事件处理函数。
 
 ### 语法
 

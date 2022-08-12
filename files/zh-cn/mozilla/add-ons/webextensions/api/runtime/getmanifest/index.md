@@ -6,7 +6,7 @@ tags:
   - 附加组件
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
-{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
+{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
 
 ## 语法
 

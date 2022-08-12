@@ -89,4 +89,4 @@ function onMessage(e) {
 
 ## 参见
 
-- 使用[ channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 使用 [channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

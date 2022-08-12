@@ -169,11 +169,13 @@ getting.then(onGot, onError);
 
 最后，完整的扩展看起来是这样：
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 现在：
 
