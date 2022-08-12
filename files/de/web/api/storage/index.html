@@ -40,7 +40,7 @@ translation_of: Web/API/Storage
 
 <p>Zuerst wird mit <code>!localStorage.getItem('bgcolor') </code>geprüft, ob das Objekt keinen Datensatz namens <code>bgcolor</code> enthält. Ist der Datensatz <code>bgcolor</code> nicht vorhanden, wird <code>populateStorage()</code> aufgerufen, um Werte aus der Seite auszulesen und mittels {{domxref("Storage.setItem()")}} im <code>Storage</code>-Objekt zu speichern.<br>
  Anschließend folgt der Aufruf der Funktion <code>setStyles()</code>, die alle Daten mittels {{domxref("Storage.getItem()")}} ausliest und die Darstellung der Seite entsprechend ändert.<br>
-  </p>
+  </p>
 
 <pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
@@ -83,7 +83,7 @@ function setStyles() {
   <tr>
    <td>{{SpecName('Web Storage', '#the-storage-interface', 'Storage')}}</td>
    <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

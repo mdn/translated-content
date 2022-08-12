@@ -19,20 +19,20 @@ translation_of: Web/API/Cache
 
 <p>The <strong><code>Cache</code></strong> interface provides a storage mechanism for <code><a href="http://fetch.spec.whatwg.org/#request">Request</a></code> / <code><a href="http://fetch.spec.whatwg.org/#response">Response</a></code> object pairs that are cached, for example as part of the {{domxref("ServiceWorker")}} life cycle. Note that the <code>Cache</code> interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.</p>
 
-<p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}})  handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
+<p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}})  handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
 
-<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> for more information.</p>
+<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> for more information.</p>
 
 <div class="note">
-<p><strong>Note</strong>: {{domxref("Cache.put")}}, {{domxref("Cache.add")}}, and {{domxref("Cache.addAll")}} only allow <code>GET</code> requests to be stored in the cache.</p>
+<p><strong>Note</strong>: {{domxref("Cache.put")}}, {{domxref("Cache.add")}}, and {{domxref("Cache.addAll")}} only allow <code>GET</code> requests to be stored in the cache.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage.  More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.</p>
+<p><strong>Note</strong>: Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage.  More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> As of Chrome 46, the Cache API will only store requests from secure origins, meaning those served over HTTPS.</p>
+<p><strong>Note:</strong> As of Chrome 46, the Cache API will only store requests from secure origins, meaning those served over HTTPS.</p>
 </div>
 
 <div class="note">
@@ -40,7 +40,7 @@ translation_of: Web/API/Cache
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> The caching API doesn't honor HTTP caching headers.</p>
+<p><strong>Note:</strong> The caching API doesn't honor HTTP caching headers.</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -57,7 +57,7 @@ translation_of: Web/API/Cache
  <dt>{{domxref("Cache.put", "Cache.put(request, response)")}}</dt>
  <dd>Takes both a request and its response and adds it to the given cache.</dd>
  <dt>{{domxref("Cache.delete", "Cache.delete(request, options)")}}</dt>
- <dd>Finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to <code>true</code>. If no {{domxref("Cache")}} entry is found, it returns <code>false</code>.</dd>
+ <dd>Finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to <code>true</code>. If no {{domxref("Cache")}} entry is found, it returns <code>false</code>.</dd>
  <dt>{{domxref("Cache.keys", "Cache.keys(request, options)")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Cache")}} keys.</dd>
 </dl>
@@ -72,7 +72,7 @@ translation_of: Web/API/Cache
 
 <p>The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name. The code also deletes all caches that aren't named in <code>CURRENT_CACHES</code>.</p>
 
-<div class="note"><strong>Note:</strong> In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a> script is performing.</div>
+<div class="note"><strong>Note:</strong> In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a> script is performing.</div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;
 

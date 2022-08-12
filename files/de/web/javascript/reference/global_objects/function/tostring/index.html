@@ -40,7 +40,7 @@ Function.prototype.toString.call(proxy); // TypeError
 
 <p>Wenn die <code>toString()</code> Methode auf eingebauten Objekten oder einer von <code>Function.prototype.bind</code> erstellten Methode aufgerufen wird, gibt <code>toString() </code><em>native function string</em> zurück, was wie folgt aussiet:</p>
 
-<pre class="brush: js">"function () {\n    [native code]\n}"
+<pre class="brush: js">"function () {\n    [native code]\n}"
 </pre>
 
 <p>Wenn die <code>toString()</code> Methode auf einer Funktion aufgerufen wird, die mit dem <code>Function</code> Konstruktor erstellt wurde, gibt diese den Quelltext der syntetischen Funktionsdeklerations mit dem Namen "anonymous" zurück, welche die Parameter und den Funktionrumpf enthält.</p>
@@ -129,7 +129,7 @@ a =&gt; a</pre>
    <td>
     <pre>
 Object.getOwnPropertyDescriptor({
-    get a(){}
+    get a(){}
 }, "a").get</pre>
    </td>
    <td>
@@ -141,7 +141,7 @@ Object.getOwnPropertyDescriptor({
    <td>
     <pre>
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+    set a(x){}
 }, "a").set</pre>
    </td>
    <td>
@@ -209,7 +209,7 @@ Function("a", "b")</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

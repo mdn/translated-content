@@ -11,9 +11,9 @@ translation_of: Web/API/MouseEvent
 ---
 <p id="Summary">{{APIRef("DOM Events")}}</p>
 
-<p>Die <strong><code>MouseEvent</code></strong> Schnittstelle stellt Events bereit, die während der Benutzerinteraktion mit einem Zeigegerät (zum Beispiel eine Maus) auftreten. Häufige Events, die diese Schnittstelle nutzen sind {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.</p>
+<p>Die <strong><code>MouseEvent</code></strong> Schnittstelle stellt Events bereit, die während der Benutzerinteraktion mit einem Zeigegerät (zum Beispiel eine Maus) auftreten. Häufige Events, die diese Schnittstelle nutzen sind {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.</p>
 
-<p><code>MouseEvent</code> wird vererbt von {{domxref("UIEvent")}}, welches wiederum vererbt wird von {{domxref("Event")}}. Obwohl die {{domxref("MouseEvent.initMouseEvent()")}} Methode wegen der Rückwärtskompatibilität bleibt, sollte das Erstellen eines <code>MouseEvent</code> Objekts durch den {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} Konstruktor erfolgen.</p>
+<p><code>MouseEvent</code> wird vererbt von {{domxref("UIEvent")}}, welches wiederum vererbt wird von {{domxref("Event")}}. Obwohl die {{domxref("MouseEvent.initMouseEvent()")}} Methode wegen der Rückwärtskompatibilität bleibt, sollte das Erstellen eines <code>MouseEvent</code> Objekts durch den {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} Konstruktor erfolgen.</p>
 
 <p>Mehrere spezifischere Events basieren auf MouseEvent, davon {{domxref("WheelEvent")}} und {{domxref("DragEvent")}}.</p>
 
@@ -26,11 +26,11 @@ translation_of: Web/API/MouseEvent
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
-<p><em>Diese Schnittstelle erbt Eigenschaften der Elternobjekte {{domxref("UIEvent")}} und {{domxref("Event")}}.</em></p>
+<p><em>Diese Schnittstelle erbt Eigenschaften der Elternobjekte {{domxref("UIEvent")}} und {{domxref("Event")}}.</em></p>
 
 <dl>
  <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
- <dd>Gibt <code>true</code> zurück wenn die <kbd>alt</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
+ <dd>Gibt <code>true</code> zurück wenn die <kbd>alt</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
  <dd>Die Nummer des Buttons der gedrückt wurde (wenn anwendbar), während das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
@@ -42,9 +42,9 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.clientY")}} {{readonlyinline}}</dt>
  <dd>Die y-Koordinate des Mauszeigers in lokalen (DOM Inhalt) Koordinaten.</dd>
  <dt>{{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}</dt>
- <dd>Gibt <code>true</code> zurück, wenn die <kbd>control</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
+ <dd>Gibt <code>true</code> zurück, wenn die <kbd>control</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.metaKey")}} {{readonlyinline}}</dt>
- <dd>Gibt <code>true</code> zurück, wenn die <kbd>meta</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
+ <dd>Gibt <code>true</code> zurück, wenn die <kbd>meta</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.movementX")}} {{readonlyinline}}</dt>
  <dd>Die x-Koordinate des Mauszeigers relativ zur Position des letzten {{event("mousemove")}} Events.</dd>
  <dt>{{domxref("MouseEvent.movementY")}} {{readonlyinline}}</dt>
@@ -58,7 +58,7 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}</dt>
  <dd>Die y-Koordinate des Mauszeigers relativ zum gesamten Dokument.</dd>
  <dt>{{domxref("MouseEvent.region")}} {{readonlyinline}}</dt>
- <dd>Gibt die id des Trefferbereichs wieder, die von dem Event betroffen ist. Wenn kein Trefferbereich betroffen ist, wird <code>null</code> zurückgegeben.</dd>
+ <dd>Gibt die id des Trefferbereichs wieder, die von dem Event betroffen ist. Wenn kein Trefferbereich betroffen ist, wird <code>null</code> zurückgegeben.</dd>
  <dt>{{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}</dt>
  <dd>
  <p>Das sekundäre Zielobjekt des Events, sofern verfügbar.</p>
@@ -68,14 +68,14 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.screenY")}} {{readonlyinline}}</dt>
  <dd>Die y-Koordinate des Mauszeigers in globalen (Bildschirm) Koordinaten.</dd>
  <dt>{{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}</dt>
- <dd>Gibt <code>true</code> zurück, wenn die <kbd>shift</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
+ <dd>Gibt <code>true</code> zurück, wenn die <kbd>shift</kbd> Taste gedrückt war, während das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}</dt>
  <dd>Der Button, der gedrückt war, als das MouseEvent ausgelöst wurde.</dd>
  <dt>{{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>Die Stärke des Drucks, die auf ein Touch- oder Tabletgerät ausgeübt wurde, während das Event ausgelöst wurde. Der Wert bewegt sich zwischen <code>0.0</code> (Minimalste Druckstärke) und <code>1.0</code> (Maximalster Druckstärke)</dd>
+ <dd>Die Stärke des Drucks, die auf ein Touch- oder Tabletgerät ausgeübt wurde, während das Event ausgelöst wurde. Der Wert bewegt sich zwischen <code>0.0</code> (Minimalste Druckstärke) und <code>1.0</code> (Maximalster Druckstärke)</dd>
  <dt>{{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>
- <p>Der Typ des Geräts das den Event generiert hat (eine der <code>MOZ_SOURCE_*</code> Konstanten die weiter unten gelistet werden). Es ermöglicht zum Beispiel die Bestimmung ob ein MouseEvent tatsächlich von einer Maus oder von einem Touchgerät ausgelöst wurde (welches den Grad der Genauigkeit beeinflusst, mit dem man die Koordinaten des Events betrachten kann).</p>
+ <p>Der Typ des Geräts das den Event generiert hat (eine der <code>MOZ_SOURCE_*</code> Konstanten die weiter unten gelistet werden). Es ermöglicht zum Beispiel die Bestimmung ob ein MouseEvent tatsächlich von einer Maus oder von einem Touchgerät ausgelöst wurde (welches den Grad der Genauigkeit beeinflusst, mit dem man die Koordinaten des Events betrachten kann).</p>
  </dd>
  <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>Die Stärke des Drucks, die beim Klick angewendet wurde.</dd>
@@ -100,14 +100,14 @@ translation_of: Web/API/MouseEvent
 
 <dl>
  <dt>{{domxref("MouseEvent.getModifierState()")}}</dt>
- <dd>Gibt den aktuellen Zustand der angegebenen Modifizierungstaste zurück. Für Detailinformationen siehe {{domxref("KeyboardEvent.getModifierState()")}}.</dd>
+ <dd>Gibt den aktuellen Zustand der angegebenen Modifizierungstaste zurück. Für Detailinformationen siehe {{domxref("KeyboardEvent.getModifierState()")}}.</dd>
  <dt>{{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initialisiert den Wert eines erzeugten <code>MouseEvent</code>. Wenn der Event bereits ausgesendet wurde, wird durch diese Methode nichts passieren.</dd>
+ <dd>Initialisiert den Wert eines erzeugten <code>MouseEvent</code>. Wenn der Event bereits ausgesendet wurde, wird durch diese Methode nichts passieren.</dd>
 </dl>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Dieses Beispiel demonstriert das Simulieren eines Klicks (die programmatische Erzeugung eines Klickereignisses) auf eine Checkbox mittels DOM Methoden. </p>
+<p>Dieses Beispiel demonstriert das Simulieren eines Klicks (die programmatische Erzeugung eines Klickereignisses) auf eine Checkbox mittels DOM Methoden. </p>
 
 <pre class="brush: js">function simulateClick() {
   var evt = new <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a>("click", {
@@ -275,7 +275,7 @@ document.getElementById("button").addEventListener('click', simulateClick);</pre
    <td>{{ CompatUnknown() }}</td>
   </tr>
   <tr>
-   <td>{{domxref("MouseEvent.screenX")}}, {{domxref("MouseEvent.screenY")}}, {{domxref("MouseEvent.clientX")}}, and {{domxref("MouseEvent.Y")}} are double instead of long.</td>
+   <td>{{domxref("MouseEvent.screenX")}}, {{domxref("MouseEvent.screenY")}}, {{domxref("MouseEvent.clientX")}}, and {{domxref("MouseEvent.Y")}} are double instead of long.</td>
    <td>{{CompatChrome(56)}}</td>
    <td>{{ CompatUnknown() }}</td>
    <td>{{ CompatUnknown() }}</td>
@@ -314,7 +314,7 @@ document.getElementById("button").addEventListener('click', simulateClick);</pre
 </table>
 </div>
 
-<p>[1] Setzt das Aktivieren von <code>ExperimentalCanvasFeatures</code> voraus.</p>
+<p>[1] Setzt das Aktivieren von <code>ExperimentalCanvasFeatures</code> voraus.</p>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

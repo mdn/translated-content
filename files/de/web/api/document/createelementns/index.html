@@ -7,7 +7,7 @@ translation_of: Web/API/Document/createElementNS
 
 <div>Erzeugt ein Element mit der angegebenen Namespace-URL und einem Namen.</div>
 
-<div> </div>
+<div> </div>
 
 <div>Um ein Element zu definieren, ohne eine Namespace-URL anzugeben, verwenden Sie die Methode <a href="createElement" title="createElement">createElement</a>.</div>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Document/createElementNS
  <dt><code>qualifiedName</code></dt>
  <dd>Ein String, der den Namen des Elements angibt. Die Eigenschaft <a href="/en-US/docs/DOM/element.nodeName">nodeName</a> des neu erstellten Elements wird mit dem Wert von <code>qualifiedName</code> initialisiert.</dd>
  <dt><code>options</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
- <dd>Das optionale Objekt <code>ElementCreationOptions</code> enthält eine einzelne Eigenschaft mit Namen  <code>is</code>, dessen Wert der Tag-Name eines zuvor mit <code>customElements.define()</code> definierten angepassten Elements ist. Aus Gründen der Abwärtskompatibilität erlauben einige Browser hier auch die Übergabe eines Strings mit dem Taf-Namen (s. <a class="external external-icon" href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>). Siehe <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> für weitere Informationen zur Verwendung dieses Parameters.</dd>
+ <dd>Das optionale Objekt <code>ElementCreationOptions</code> enthält eine einzelne Eigenschaft mit Namen  <code>is</code>, dessen Wert der Tag-Name eines zuvor mit <code>customElements.define()</code> definierten angepassten Elements ist. Aus Gründen der Abwärtskompatibilität erlauben einige Browser hier auch die Übergabe eines Strings mit dem Taf-Namen (s. <a class="external external-icon" href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>). Siehe <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> für weitere Informationen zur Verwendung dieses Parameters.</dd>
  <dd>Das neue Element erhält ein Attribut mit Namen <code>is</code> dessen Wert den Tag-Namen des Elements enthält. Angepasste Elemente sind ein experimentelles Feature, das nich in allen Browsern verfügbar ist.</dd>
 </dl>
 
@@ -76,7 +76,7 @@ translation_of: Web/API/Document/createElementNS
 </pre>
 
 <div class="note">
-<p>Das obige Beispiel verwendet ein Inline-Skript, was für XHTML-Dokumente nicht empfohlen wird. Dieses Beispiel ist eigentlich ein XUL-Dokument mit eingebettetem XHTML. Nichts desto trotz bleibt die Empfehlung bestehen.</p>
+<p>Das obige Beispiel verwendet ein Inline-Skript, was für XHTML-Dokumente nicht empfohlen wird. Dieses Beispiel ist eigentlich ein XUL-Dokument mit eingebettetem XHTML. Nichts desto trotz bleibt die Empfehlung bestehen.</p>
 </div>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
@@ -91,7 +91,7 @@ translation_of: Web/API/Document/createElementNS
   <tr>
    <td>{{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -161,9 +161,9 @@ translation_of: Web/API/Document/createElementNS
 
 <p>[1] In vorangegangenen Versionen dieser Spezifikation war dieses Argument ein einfacher String, dessen Wert der Tag-Name eines angepassten Elements ist. Aus Gründen der Abwärtskompatibilität akzeptiert Chrome hier beide Formate</p>
 
-<p>[2] Siehe [1] oben: Wie Chrome, akzeptiert hier auch Firefox einen String anstelle eines Objekts. Allerdings erst ab Version 51 aufwärts. In Version 50 muss  <code>options</code> ein Objekt sein.</p>
+<p>[2] Siehe [1] oben: Wie Chrome, akzeptiert hier auch Firefox einen String anstelle eines Objekts. Allerdings erst ab Version 51 aufwärts. In Version 50 muss  <code>options</code> ein Objekt sein.</p>
 
-<p>[3] Um in Firefox mit angepassten Elementen zu experimentieren müssen die Einstellungen  <code>dom.webcomponents.enabled</code> und <code>dom.webcomponents.customelements.enabled</code> auf <code>true</code> gesetzt werden.</p>
+<p>[3] Um in Firefox mit angepassten Elementen zu experimentieren müssen die Einstellungen  <code>dom.webcomponents.enabled</code> und <code>dom.webcomponents.customelements.enabled</code> auf <code>true</code> gesetzt werden.</p>
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

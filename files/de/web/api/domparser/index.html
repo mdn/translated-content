@@ -25,7 +25,7 @@ const doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 
 <h3 id="Error_handling" name="Error_handling">Fehlerbehandlung</h3>
 
-<p>Beachte dass derzeit keine Exception ausgelöst wird, wenn es beim Ausführen des Parser-Prozesses zu einem Fehler kommen sollte. Stattdessen wird ein Fehler-Dokument  (s.a. {{Bug(45566)}}) ausgelöst:</p>
+<p>Beachte dass derzeit keine Exception ausgelöst wird, wenn es beim Ausführen des Parser-Prozesses zu einem Fehler kommen sollte. Stattdessen wird ein Fehler-Dokument  (s.a. {{Bug(45566)}}) ausgelöst:</p>
 
 <pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
 (error description)
@@ -33,7 +33,7 @@ const doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 &lt;/parsererror&gt;
 </pre>
 
-<p>Die Parsing-Fehler werden auch in der Error-Console, zusammen mit dem Dokument-URl als Fehlerquelle ausgegeben (s.u.).</p>
+<p>Die Parsing-Fehler werden auch in der Error-Console, zusammen mit dem Dokument-URl als Fehlerquelle ausgegeben (s.u.).</p>
 
 <h2 id="Ein_SVG-_oder_HTML-Dokument_parsen">Ein SVG- oder HTML-Dokument parsen</h2>
 
@@ -55,9 +55,9 @@ const htmlDoc = new DOMParser().parseFromString(stringContainingHTMLSource, "tex
 /*global document, DOMParser*/
 
 (function(DOMParser) {
-    "use strict";
+    "use strict";
 
-    const proto = DOMParser.prototype;
+    const proto = DOMParser.prototype;
     const nativeParse = <span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString</span>;
 
     // Firefox/Opera/IE werfen bei unbekannten Typen Fehler

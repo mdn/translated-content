@@ -9,19 +9,19 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>
 
-<p>Es gibt mehrere Möglichkeiten die Farben von Formen mit zu verändern, mit Inline CSS (inklusive Attributen am Objekt), eingebettetem CSS oder einer externen CSS Datei. Die meisten <a href="/en-US/docs/Glossary/SVG">SVG</a>s im Netz nutzen Inline CSS, aber jede Möglichkeit hat Vor- und Nachteile.</p>
+<p>Es gibt mehrere Möglichkeiten die Farben von Formen mit zu verändern, mit Inline CSS (inklusive Attributen am Objekt), eingebettetem CSS oder einer externen CSS Datei. Die meisten <a href="/en-US/docs/Glossary/SVG">SVG</a>s im Netz nutzen Inline CSS, aber jede Möglichkeit hat Vor- und Nachteile.</p>
 
 <h2 id="Fill_and_Stroke_Attributes" name="Fill_and_Stroke_Attributes">Füllungs- und Konturattribute</h2>
 
 <h3 id="Painting" name="Painting">Malen</h3>
 
-<p>Durch das Setzen zweier Attribute beim Element, kann einfache Farbgebung durchgeführt werden: <code>fill</code> und <code>stroke</code>. Dabei setzt <code>fill </code>die Farbe innerhalb des Objektes, während <code>stroke</code> die Farbe der Linien um das Objekt herum bestimmt. Es können die gleichen Namensschemen für CSS Farben genutzt werden, welche auf bei HTML Elementen verwendet werden - also Farbnamen (z.B. <em>red</em>), RGB Werte (z.B. <em>rgb(255, 0, 0)</em>, HEX Codes, rgba und weitere).</p>
+<p>Durch das Setzen zweier Attribute beim Element, kann einfache Farbgebung durchgeführt werden: <code>fill</code> und <code>stroke</code>. Dabei setzt <code>fill </code>die Farbe innerhalb des Objektes, während <code>stroke</code> die Farbe der Linien um das Objekt herum bestimmt. Es können die gleichen Namensschemen für CSS Farben genutzt werden, welche auf bei HTML Elementen verwendet werden - also Farbnamen (z.B. <em>red</em>), RGB Werte (z.B. <em>rgb(255, 0, 0)</em>, HEX Codes, rgba und weitere).</p>
 
 <pre class="brush:xml;"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
        fill-opacity="0.5" stroke-opacity="0.8"/&gt;
 </pre>
 
-<p>Zusätzlich kann die Durchsichtigkeit von <code>fill</code> und <code>stroke</code> in SVG verändert werden. Diese wird durch die <code>fill-opacity</code> und <code>stroke-opacity</code> Attribute gesetzt.</p>
+<p>Zusätzlich kann die Durchsichtigkeit von <code>fill</code> und <code>stroke</code> in SVG verändert werden. Diese wird durch die <code>fill-opacity</code> und <code>stroke-opacity</code> Attribute gesetzt.</p>
 
 <div class="note style-wrap">Bemerkung: In Firefox 3+ sind auch rgba Werte möglich, und erzeugen den gleichen Effekt, allerdings wird empfohlen aus Kompatibilitätsgründen fill/stroke-opacity separat zu setzen. Wenn ein rgba Wert und ein fill/stroke-opacity Wert gesetzt wird, so werden beide angewendet.</div>
 
@@ -84,18 +84,18 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 <p>Dem <code>stroke-dasharray</code> Attribut wird eine Liste von Zahlen übergeben, welche durch Kommas getrennt sind.</p>
 
 <div class="note">
-<p>Bemerkung: Anders als bei Pfaden <strong><em>müssen</em></strong> die Zahlen durch ein Komma getrennt werden (Leerzeichen werden ignoriert).</p>
+<p>Bemerkung: Anders als bei Pfaden <strong><em>müssen</em></strong> die Zahlen durch ein Komma getrennt werden (Leerzeichen werden ignoriert).</p>
 </div>
 
-<p>Die erste Zahl gibt die Länge der gefüllten Bereiche an, die zweite Nummer die Länge der ungefüllten Bereiche. Im obigen Beispiel werden also 5 Pixel gefüllt, gefolgt von 5 Pixeln Leerbereich und dann dem nächsten 5 Pixel Strich. Es können mehr Zahlen angegeben werden, um ein komplexeres Muster zu erzeugen. Das erste Beispiel hat drei Zahlen. Der Renderer wiederholt die Zahlen hier zweimal, um ein gleichmäßiges Muster zu erzeugen. Hier werden zuerst 5 Pixel gefüllt, 10 Pixel leer, 5 Pixel gefüllt und dann 5 Pixel leer, 10 gefüllt und abschließend 5 Pixel leer gezeichnet. Dann wiederholt sich dieses Muster.</p>
+<p>Die erste Zahl gibt die Länge der gefüllten Bereiche an, die zweite Nummer die Länge der ungefüllten Bereiche. Im obigen Beispiel werden also 5 Pixel gefüllt, gefolgt von 5 Pixeln Leerbereich und dann dem nächsten 5 Pixel Strich. Es können mehr Zahlen angegeben werden, um ein komplexeres Muster zu erzeugen. Das erste Beispiel hat drei Zahlen. Der Renderer wiederholt die Zahlen hier zweimal, um ein gleichmäßiges Muster zu erzeugen. Hier werden zuerst 5 Pixel gefüllt, 10 Pixel leer, 5 Pixel gefüllt und dann 5 Pixel leer, 10 gefüllt und abschließend 5 Pixel leer gezeichnet. Dann wiederholt sich dieses Muster.</p>
 
-<p>Es gibt weitere Kontur- und Füllungseigenschaften, zum Beispiel <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a></code>, welche bestimmt welche Farbe überlagerte Formen bekommen; <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code>, welche festlegt ob eine Kontur miter zeichnet; <a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a> legt fest wo die Strichelung einer Kontur auf der Linie beginnt.</p>
+<p>Es gibt weitere Kontur- und Füllungseigenschaften, zum Beispiel <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a></code>, welche bestimmt welche Farbe überlagerte Formen bekommen; <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code>, welche festlegt ob eine Kontur miter zeichnet; <a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a> legt fest wo die Strichelung einer Kontur auf der Linie beginnt.</p>
 
 <h2 id="Using_CSS" name="Using_CSS">CSS verwenden</h2>
 
-<p>Neben der Möglichkeit Attribute beim Objekt selbst zu setzen, kann auch CSS zum Kontrollieren von Füllungen und Konturen verwendet werden. Attribute die sich mit dem Malen und dem Füllen befassen sind meist verfügbar, also können zum Beispiel <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... auf diese Weise verwendet werden, zusätzlich zu den Verlaufs- und Musterversionen von den unten gezeigten. Attribute wie <code>width</code>, <code>height</code> oder Pfadbefehle können durch CSS nicht verändert werden. Am einfachsten ist es durch Probieren herauszufinden welche Attribute in CSS verfügbar sind.</p>
+<p>Neben der Möglichkeit Attribute beim Objekt selbst zu setzen, kann auch CSS zum Kontrollieren von Füllungen und Konturen verwendet werden. Attribute die sich mit dem Malen und dem Füllen befassen sind meist verfügbar, also können zum Beispiel <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... auf diese Weise verwendet werden, zusätzlich zu den Verlaufs- und Musterversionen von den unten gezeigten. Attribute wie <code>width</code>, <code>height</code> oder Pfadbefehle können durch CSS nicht verändert werden. Am einfachsten ist es durch Probieren herauszufinden welche Attribute in CSS verfügbar sind.</p>
 
-<div class="note style-wrap">Die <a class="external" href="http://www.w3.org/TR/SVG/propidx.html">SVG Spezifikation</a> unterscheidet strikt zwischen Attributen, die <em>Eigenschaften</em> sind und anderen Attributen. Ersteres kann mit CSS verändert werden, letzteres nicht.</div>
+<div class="note style-wrap">Die <a class="external" href="http://www.w3.org/TR/SVG/propidx.html">SVG Spezifikation</a> unterscheidet strikt zwischen Attributen, die <em>Eigenschaften</em> sind und anderen Attributen. Ersteres kann mit CSS verändert werden, letzteres nicht.</div>
 
 <p>CSS kann mit dem style Attribut direkt beim Element eingefügt werden:</p>
 
@@ -103,7 +103,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 </pre>
 
-<p>oder es kann in eine spezielle Style-Sektion getan werden, welche eingebunden wird. Anstatt diesen dann in den <code>&lt;head&gt;</code> zu packen, wie in HTML, wird er in eine Sektion getan, welche <code><a href="/en/SVG/Element/defs" title="en/SVG/Element/defs">&lt;defs&gt;</a> </code>heißt.<code> &lt;defs&gt; </code>steht für Definitionen (definitions) und ist dafür da, dass Elemente erstellt werden können, welche nicht direkt im SVG auftauchen, aber von anderen Elementen genutzt werden können.</p>
+<p>oder es kann in eine spezielle Style-Sektion getan werden, welche eingebunden wird. Anstatt diesen dann in den <code>&lt;head&gt;</code> zu packen, wie in HTML, wird er in eine Sektion getan, welche <code><a href="/en/SVG/Element/defs" title="en/SVG/Element/defs">&lt;defs&gt;</a> </code>heißt.<code> &lt;defs&gt; </code>steht für Definitionen (definitions) und ist dafür da, dass Elemente erstellt werden können, welche nicht direkt im SVG auftauchen, aber von anderen Elementen genutzt werden können.</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -119,7 +119,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 &lt;/svg&gt;
 </pre>
 
-<p>Styles in eine Sektion dieser Art zu bewegen kann es einfacher machen die Eigenschaften großer Elementgruppen anzupassen. Es können zusätzlich Dinge wie <strong>hover-Pseudoklassen</strong> genutzt werden, um Überrolleffekte zu erzeugen:</p>
+<p>Styles in eine Sektion dieser Art zu bewegen kann es einfacher machen die Eigenschaften großer Elementgruppen anzupassen. Es können zusätzlich Dinge wie <strong>hover-Pseudoklassen</strong> genutzt werden, um Überrolleffekte zu erzeugen:</p>
 
 <pre class="brush:css;"> #MyRect:hover {
    stroke: black;
@@ -128,7 +128,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 </pre>
 
-<p>Es kann auch ein externes Stylesheet für CSS mit <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">normaler XML-Stylesheet Syntax</a> angegeben werden:</p>
+<p>Es kann auch ein externes Stylesheet für CSS mit <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">normaler XML-Stylesheet Syntax</a> angegeben werden:</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;?xml-stylesheet type="text/css" href="style.css"?&gt;

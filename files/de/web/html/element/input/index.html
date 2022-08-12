@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/input
 ---
 <div>{{HTMLRef}}</div>
 
-<p>Das <strong>HTML-Element <code>&lt;input&gt;</code></strong> ermöglicht es, interaktive Bedienelemente für webbasierte Formulare zu erstellen, die Daten vom Benutzer entgegennehmen.<br>
+<p>Das <strong>HTML-Element <code>&lt;input&gt;</code></strong> ermöglicht es, interaktive Bedienelemente für webbasierte Formulare zu erstellen, die Daten vom Benutzer entgegennehmen.<br>
  Eine große Bandbreite verschiedener Eingabedaten und Bedienelemente ist verfügbar, abhängig je nach Gerät und {{Glossary("user agent")}}. Das <code>&lt;input&gt;</code> Element ist eine der mächtigsten und komplexesten von allen HTML-Elemente, da es eine ungeheure Anzahl an Kombinationen aus Eingabetypen und Attributen besitzt.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/input
   <tr>
    <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
    <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.<br>
-    Wenn der {{htmlattrxref("type", "input")}} nicht den Wert <code>hidden</code> hat, dann ein label-bares Element, mit greifbarem Inhalt.</td>
+    Wenn der {{htmlattrxref("type", "input")}} nicht den Wert <code>hidden</code> hat, dann ein label-bares Element, mit greifbarem Inhalt.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <th scope="row">Erlaubte Elternknoten</th>
-   <td>Jedes Element, das <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> erlaubt.</td>
+   <td>Jedes Element, das <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> erlaubt.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -67,12 +67,12 @@ translation_of: Web/HTML/Element/input
 
 <h2 id="Arten_des_&lt;input>-Elements">Arten des &lt;input&gt;-Elements</h2>
 
-<p>Wie ein &lt;input&gt; sich verhält ist stark von seinem <strong>type</strong>-Attribut abhängig. Deshalb werden dessen Werte in einer eigenen Referenz beschrieben. Fehlt das Attribut, gilt der Standardwert <code>text</code>.</p>
+<p>Wie ein &lt;input&gt; sich verhält ist stark von seinem <strong>type</strong>-Attribut abhängig. Deshalb werden dessen Werte in einer eigenen Referenz beschrieben. Fehlt das Attribut, gilt der Standardwert <code>text</code>.</p>
 
 <p><code>type</code> kann folgende Werte annehmen:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/input/button">button</a>: Ein Knopf zum Drücken ohne voreingestelltes Verhalten. </li>
+ <li><a href="https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/input/button">button</a>: Ein Knopf zum Drücken ohne voreingestelltes Verhalten. </li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a>: Ein Kästchen zum Auswählen. Das <strong>value</strong>-Attribut muss benutzt werden, um den Wert zu definieren, den dieses Element übermittelt. Mit dem <strong>checked</strong>-Attribut kann angezeigt werden, dass das Element ausgewählt ist. Es ist auch möglich das <strong>indeterminate</strong>-Attribut zu verwenden, um anzuzeigen, dass das Kästchen sich in einem undefinierten Zustand befindet (auf den meisten Plattformen wird dies durch eine horizontale Linie durch das Kästchen dargestellt).</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color">color</a>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Festlegen einer Farbe. Die Benutzerschnittstelle einer Farbauswahl muss nichts anderes tun, als einfache Farben als Text anzunehmen. (<a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)">mehr Infos</a>).</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">date</a>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben eines Datum (Jahr, Monat und Tag, ohne Uhrzeit).</li>
@@ -80,13 +80,13 @@ translation_of: Web/HTML/Element/input
  <li><a href="/de/docs/Web/HTML/Element/input/email">email</a>: {{HTMLVersionInline("5")}} Ein Feld zum Bearbeiten einer E-Mail-Adresse. Der Eingabewert wird vor dem Übermitteln darauf überprüft, ob er entweder leer ist oder eine einzelne, valide E-Mail-Adresse enthält. Die CSS-Pseudoklassen {{cssxref(":valid")}}- und {{cssxref(":invalid")}} werden entsprechend gesetzt.</li>
  <li><code>file</code>: Ein Bedienelement, das den Nutzer eine Datei auswählen lässt. Das <strong>accept</strong>-Attribut definiert die Art der auswählbaren Dateien.</li>
  <li><code>hidden</code>: Ein unsichtbares Bedienelement, dessen Wert aber dennoch an den Server übermittelt wird.</li>
- <li><code>image</code>: Ein graphischer Knopf zum Abschicken. Das <strong>src</strong>-Attribut ist erforderlich, um die Quelle des Bildes anzugeben. Im ebenfalls verpflichtenden a<strong>lt</strong>-Attribut ist alternativer Text zu definieren. Die <strong>height</strong>- und <strong>width</strong>-Attribute können benutzt werden um die Größe des Bildes in Pixeln anzugeben. </li>
+ <li><code>image</code>: Ein graphischer Knopf zum Abschicken. Das <strong>src</strong>-Attribut ist erforderlich, um die Quelle des Bildes anzugeben. Im ebenfalls verpflichtenden a<strong>lt</strong>-Attribut ist alternativer Text zu definieren. Die <strong>height</strong>- und <strong>width</strong>-Attribute können benutzt werden um die Größe des Bildes in Pixeln anzugeben. </li>
  <li><code>month</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben von Monat und Jahr, ohne Zeitzone.</li>
- <li><code>number</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben einer Gleitkommazahl. </li>
+ <li><code>number</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben einer Gleitkommazahl. </li>
  <li><code>password</code>: Ein einzeiliges Textfeld, dessen Wert verschleiert wird. Das <strong>maxlength</strong>-Attribut legt die maximale Länge des einzugebenden Wertes fest.
   <div class="note"><strong>Bemerkung</strong>: Alle Formulare mit sensitiven Daten wie Passwörter (z.B. Anmeldeformulare) sollten über HTTPS ausgeliefert werden. Firefox warnt mit verschiedenen Methoden vor unsicheren Anmeldeverfahren (siehe <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Insecure_passwords">Insecure passwords</a>). Andere Browser bieten ähnliche Mechanismen.</div>
  </li>
- <li><code>radio</code>: Ein Schaltknopf. Das <strong>value</strong>-Attribut muss verwendet werden, um den von diesem Element übermittelten Wert festzulegen. Das <strong>checked</strong>-Attribut definiert, ob es standardmäßig angewählt ist. Schaltknöpfe mit demselben Wert für das <strong>name</strong>-Attribut gehören zur selben Gruppe. Nur jeweils ein Schaltknopf einer Gruppe kann angewählt sein. </li>
+ <li><code>radio</code>: Ein Schaltknopf. Das <strong>value</strong>-Attribut muss verwendet werden, um den von diesem Element übermittelten Wert festzulegen. Das <strong>checked</strong>-Attribut definiert, ob es standardmäßig angewählt ist. Schaltknöpfe mit demselben Wert für das <strong>name</strong>-Attribut gehören zur selben Gruppe. Nur jeweils ein Schaltknopf einer Gruppe kann angewählt sein. </li>
  <li><code>range</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eintragen einer Zahl, deren genauer Wert unwichtig ist. Sind die entsprechenden Attribute nicht festgelegt, gelten folgende Voreinstellungen:
   <ul>
    <li><code>min</code>: 0</li>
@@ -95,13 +95,13 @@ translation_of: Web/HTML/Element/input
    <li><code>step</code>: 1</li>
   </ul>
  </li>
- <li><code>reset</code>: Ein Knopf, der den Inhalt des Formulars auf die Standardwerte zurücksetzt. </li>
- <li><code>search</code>: {{HTMLVersionInline("5")}} Ein einzeiliges Textfeld zur Eingabe von Suchbegriffen. Zeilenumbrüche werden automatisch aus dem Eingabewert entfernt. </li>
- <li><code>submit</code>: Ein Knopf zum Übermitteln des Formulars. </li>
+ <li><code>reset</code>: Ein Knopf, der den Inhalt des Formulars auf die Standardwerte zurücksetzt. </li>
+ <li><code>search</code>: {{HTMLVersionInline("5")}} Ein einzeiliges Textfeld zur Eingabe von Suchbegriffen. Zeilenumbrüche werden automatisch aus dem Eingabewert entfernt. </li>
+ <li><code>submit</code>: Ein Knopf zum Übermitteln des Formulars. </li>
  <li><code>tel</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Anzeigen einer Telefonnummer. Zeilenumbrüche werden automatisch aus dem Eingabewert entfernt, sonst werden keine anderen Regeln erzwungen. Attribute wie pattern und <strong>maxlength</strong> können verwendet werden, um zulässige Werte einzuschränken. Die CSS-Pseudoklassen {{cssxref(":valid")}}- und {{cssxref(":invalid")}} werden entsprechend gesetzt.</li>
- <li><code>text</code>: Ein einzeiliges Textfeld; Zeilenumbrüche werden automatisch aus dem Eingabewert entfernt. </li>
+ <li><code>text</code>: Ein einzeiliges Textfeld; Zeilenumbrüche werden automatisch aus dem Eingabewert entfernt. </li>
  <li><code>time</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben einer Uhrzeit ohne Zeitzone.</li>
- <li><code>url</code>: {{HTMLVersionInline("5")}} Ein Feld zum Eingeben einer URL. Der Eingabewert wird vor dem Übermitteln darauf überprüft, ob er leer oder eine korrekte, absolute URL ist. Attribute wie <strong>pattern</strong> und <strong>maxlength</strong> können verwendet werden um zulässige Werte einzuschränken. Die CSS-Pseudoklassen {{cssxref(":valid")}}- und {{cssxref(":invalid")}} werden entsprechend gesetzt.</li>
+ <li><code>url</code>: {{HTMLVersionInline("5")}} Ein Feld zum Eingeben einer URL. Der Eingabewert wird vor dem Übermitteln darauf überprüft, ob er leer oder eine korrekte, absolute URL ist. Attribute wie <strong>pattern</strong> und <strong>maxlength</strong> können verwendet werden um zulässige Werte einzuschränken. Die CSS-Pseudoklassen {{cssxref(":valid")}}- und {{cssxref(":invalid")}} werden entsprechend gesetzt.</li>
  <li><code>week</code>: {{HTMLVersionInline("5")}} Ein Bedienelement zum Eingeben eines Datums bestehend aus einer Jahreszahl und einer Wochennummer, ohne Zeitzone.</li>
 </ul>
 
@@ -134,7 +134,7 @@ translation_of: Web/HTML/Element/input
 
 <dl>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>Die Art des Bedienelements. Siehe <a href="#arten_des_&lt;input&gt;-elements">Arten des &lt;input&gt;-Elements</a> für die einzelnen Typen. </dd>
+ <dd>Die Art des Bedienelements. Siehe <a href="#arten_des_&lt;input&gt;-elements">Arten des &lt;input&gt;-Elements</a> für die einzelnen Typen. </dd>
  <dt>{{htmlattrdef("accept")}}</dt>
  <dd>Ist der Wert des <strong>type</strong>-Attributes <code>file</code>, beschreibt dieses Attribut die Art der Dateien, die der Server akzeptiert. Sonst wird es ignoriert. Der Wert muss eine durch Kommata getrennte Liste eindeutiger Werte sein:</dd>
  <dt>{{htmlattrdef("accesskey")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}</dt>
@@ -153,7 +153,7 @@ translation_of: Web/HTML/Element/input
  </ul>
  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize"><code>autocapitalize</code> documentation</a> in der Safari HTML Reference.</dd>
  <dt>{{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Dieses Attribute gibt an, ob der Browser den Wert des Eingabeelements automatisch vervollständigen kann. </dd>
+ <dd>Dieses Attribute gibt an, ob der Browser den Wert des Eingabeelements automatisch vervollständigen kann. </dd>
  <dd>Zulässige Werte sind:
  <ul>
   <li><code>off</code>: Der Anwender muss jedesmal einen Wert in dieses Feld eintragen oder das Dokument stellt ein eigenes Verfahren für das Vervollständigen bereit. Der Browser vervollständigt das Feld nicht automatisch.</li>
@@ -163,7 +163,7 @@ translation_of: Web/HTML/Element/input
   <li><code>given-name</code>: Rufname.</li>
   <li><code>additional-name</code>: Weitere Vornamen.</li>
   <li><code>family-name</code>: Nachname.</li>
-  <li><code>honorific-suffix</code>: Namensanhängel (z.B. "Jr.", "B.Sc.",  "II").</li>
+  <li><code>honorific-suffix</code>: Namensanhängel (z.B. "Jr.", "B.Sc.",  "II").</li>
   <li><code>nickname: Spitzname</code></li>
   <li><code>email</code>: E-Mail-Adresse</li>
   <li><code>username</code>: Nutzername</li>
@@ -172,7 +172,7 @@ translation_of: Web/HTML/Element/input
   <li><code>organization-title</code>: Berufsbezeichnung (z.B. "Software-Ingenieur", "Senior Vice President", "Stellvertretender Direktor").</li>
   <li><code>organization</code></li>
   <li><code>street-address</code>: Adresse</li>
-  <li><code>address-line1</code>, <code>address-line2</code>, <code>address-line3</code>, <code>address-level4</code>, <code>address-level3</code>, <code>address-level2</code>, <code>address-level1</code></li>
+  <li><code>address-line1</code>, <code>address-line2</code>, <code>address-line3</code>, <code>address-level4</code>, <code>address-level3</code>, <code>address-level2</code>, <code>address-level1</code></li>
   <li><code>country</code></li>
   <li><code>country-name</code></li>
   <li><code>postal-code: Postleitzahl</code></li>
@@ -185,7 +185,7 @@ translation_of: Web/HTML/Element/input
   <li><code>cc-exp-month</code></li>
   <li><code>cc-exp-year</code></li>
   <li><code>cc-csc</code>: Sicherheitscode des Zahlungsinstruments.</li>
-  <li><code>cc-type</code>: Art des Zahlungsinstruments (e.g. Visa).</li>
+  <li><code>cc-type</code>: Art des Zahlungsinstruments (e.g. Visa).</li>
   <li><code>transaction-currency</code></li>
   <li><code>transaction-amount</code></li>
   <li><code>language</code>: Bevorzugte Sprache, gültiges BCP 47 Sprach-Tag.</li>
@@ -195,7 +195,7 @@ translation_of: Web/HTML/Element/input
   <li><code>bday-year</code></li>
   <li><code>sex</code>: Geschlechtliche Identität (z.B. weiblich), beliebiger Text ohne Zeilenumbrüche.</li>
   <li><code>tel</code>: Telefonnummer</li>
-  <li><code>url</code>: Homepage oder andere Webseite, die zur Firma, Person, Adresse oder der Kontaktinformation in den anderen mit diesem Feld verbundenen Feldern gehört.</li>
+  <li><code>url</code>: Homepage oder andere Webseite, die zur Firma, Person, Adresse oder der Kontaktinformation in den anderen mit diesem Feld verbundenen Feldern gehört.</li>
   <li><code>photo</code>: Foto, Icon oder anderes Bild, das zur Firma, Person, Adresse oder der Kontaktinformation in den anderen mit diesem Feld verbundenen Feldern gehört.</li>
  </ul>
 
@@ -203,7 +203,7 @@ translation_of: Web/HTML/Element/input
 
  <p>Ist <strong>autocomplete</strong> für ein Eingabeelement nicht angegeben, verwendet der Browser das <strong>autocomplete</strong>-Attribut des Formular-Eigentümers für dieses Element. Der Formular-Eigentümer ist entweder das <code>form</code>-Element, von dem dieses <code>input</code>-Element abstammt oder das <code>form</code>-Element, dessen <strong>id</strong> im <strong>form</strong>-Attribut des Eingabelements angegeben ist. Mehr Informationen dazu bei {{htmlattrxref("autocomplete", "form")}} in {{HTMLElement("form")}}.</p>
 
- <p>Das <strong>autocomplete</strong>-Attribute kontrolliert auch, ob Firefox (anders als andere Browser) die Atribute <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">disabled und checked eines Eingabeelements zwischen Ladevorgängen der Seite</a> erhält. Diese Funktion ist normalerweise aktiv, es wird durch Setzen von  <strong>autocomplete</strong> auf <code>off</code> abgeschaltet. Das gilt auch für solche Eingabefelder, für die das <strong>autocomplete</strong>-Attribut normalerweise wegen des Werts von <strong>type</strong> nicht wirkt. Siehe {{bug(654072)}}.</p>
+ <p>Das <strong>autocomplete</strong>-Attribute kontrolliert auch, ob Firefox (anders als andere Browser) die Atribute <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">disabled und checked eines Eingabeelements zwischen Ladevorgängen der Seite</a> erhält. Diese Funktion ist normalerweise aktiv, es wird durch Setzen von  <strong>autocomplete</strong> auf <code>off</code> abgeschaltet. Das gilt auch für solche Eingabefelder, für die das <strong>autocomplete</strong>-Attribut normalerweise wegen des Werts von <strong>type</strong> nicht wirkt. Siehe {{bug(654072)}}.</p>
 
  <p>Bei den meisten modernen Browsern (einschließlich Firefox 38+, Google Chrome 34+, IE11+) verhindert das Setzen von <strong>autocomplete</strong> nicht, dass der Passwort-Manager dem Nutzer anbietet, seine Login-Daten zu speichern und gegebenenfalls anschließend automatisch einzutragen. Siehe <a href="https://developer.mozilla.org/de/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">the autocomplete attribute and login fields</a>.</p>
  </dd>

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Functions/Methoden_Definitionen
 ---
 <div>{{JsSidebar("Functions")}}</div>
 
-<p>Beginnend mit ECMAScript 2015 wurde eine kürzere Syntax für Methodendefinitionen in Objekt Initialisierungen eingeführt. Es ist eine Abkürzung für die Zuweisung einer Funktion an einen Methodennamen.</p>
+<p>Beginnend mit ECMAScript 2015 wurde eine kürzere Syntax für Methodendefinitionen in Objekt Initialisierungen eingeführt. Es ist eine Abkürzung für die Zuweisung einer Funktion an einen Methodennamen.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -43,11 +43,11 @@ original_slug: Web/JavaScript/Reference/Functions/Methoden_Definitionen
 
 <pre class="brush: js">var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };</pre>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...<code>foo: function() {}</code>...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.</p>
+<p><strong>Hinweis:</strong> Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...<code>foo: function() {}</code>...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.</p>
 </div>
 
 <h3 id="Kurze_Generatormethoden">Kurze Generatormethoden</h3>
@@ -78,7 +78,7 @@ console.log(it.next().value); // 1</pre>
 
 <h3 id="Methodendefinitionen_die_nicht_konstruiert_werden_können">Methodendefinitionen die nicht konstruiert werden können</h3>
 
-<p>Alle Methodendefinitionen die keine Konstruktoren sind werden einen {{jsxref("TypeError")}} erzeugen,  wenn man versucht sie zu instantieren.</p>
+<p>Alle Methodendefinitionen die keine Konstruktoren sind werden einen {{jsxref("TypeError")}} erzeugen,  wenn man versucht sie zu instantieren.</p>
 
 <pre class="brush: js example-bad">var obj = {
   method() {},
@@ -138,7 +138,7 @@ console.log(bar.foo2()); // 2</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -216,7 +216,7 @@ console.log(bar.foo2()); // 2</pre>
 
 <ul>
  <li>Vor SpiderMonkey 38 {{geckoRelease(38)}} waren "<code>get</code>" und "<code>set</code>" nicht valide Namen für Generatormethoden. Das wurde in {{bug(1073809)}} behoben.</li>
- <li>Vor SpiderMonkey 41 {{geckoRelease(41)}} mussten geschweifte Klammern für Methoden nicht notwendiger weise benutzt werden. Jetzt sind sie vorausgesetzt, um konform zur ES2015 Spezifikation zu sein. Es wird ein {{jsxref("SyntaxError")}} in dieser und späteren Versionen erzeugt ({{bug(1150855)}}).
+ <li>Vor SpiderMonkey 41 {{geckoRelease(41)}} mussten geschweifte Klammern für Methoden nicht notwendiger weise benutzt werden. Jetzt sind sie vorausgesetzt, um konform zur ES2015 Spezifikation zu sein. Es wird ein {{jsxref("SyntaxError")}} in dieser und späteren Versionen erzeugt ({{bug(1150855)}}).
   <pre class="brush: js example-bad">var o = {x() 12}; // SyntaxError</pre>
  </li>
  <li>Die Restriktion, dass Generatormethoden Konstuktoren sind wurde in SpiderMonkey 41 {{geckoRelease(41)}} implementiert. Dazu siehe auch {{bug(1059908)}} und {{bug(1166950)}}</li>

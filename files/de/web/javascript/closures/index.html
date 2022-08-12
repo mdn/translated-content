@@ -10,9 +10,9 @@ tags:
 translation_of: Web/JavaScript/Closures
 ---
 <div>{{jsSidebar("Intermediate")}}<br>
- </div>
+ </div>
 
-<p class="summary"><em>Closures</em> sind Funktionen mit unabhängigen, freien Variablen. Anders ausgedrückt: Die in der <em>Closure</em> definierte Funktion merkt sich die Umgebung, in der sie erzeugt wurde.</p>
+<p class="summary"><em>Closures</em> sind Funktionen mit unabhängigen, freien Variablen. Anders ausgedrückt: Die in der <em>Closure</em> definierte Funktion merkt sich die Umgebung, in der sie erzeugt wurde.</p>
 
 <h2 id="Lexical_scoping">Lexical scoping</h2>
 
@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Closures
 init();</pre>
 </div>
 
-<p><code>init()</code> erzeugt eine lokale Variable <code>name</code> und anschließend eine Funktion <code>displayName()</code>. <code>displayName()</code> ist eine interne Funktion definiert in <code>init()</code> und ist ausschließlich im Rahmen dieser Funktion verfügbar. <code>displayName()</code> besitzt keine eigenen lokalen Variablen, hat jedoch Zugriff auf Variablen umgebender Funktionen und kann darum die Variable <code>name</code> aus der umschließenden Eltern-Funktion abrufen.</p>
+<p><code>init()</code> erzeugt eine lokale Variable <code>name</code> und anschließend eine Funktion <code>displayName()</code>. <code>displayName()</code> ist eine interne Funktion definiert in <code>init()</code> und ist ausschließlich im Rahmen dieser Funktion verfügbar. <code>displayName()</code> besitzt keine eigenen lokalen Variablen, hat jedoch Zugriff auf Variablen umgebender Funktionen und kann darum die Variable <code>name</code> aus der umschließenden Eltern-Funktion abrufen.</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}</p>
 
-<p>Dieses <a href="http://jsfiddle.net/xAFs9/3/">Code-Beispiel</a> zeigt, dass es funktioniert. Es handelt sich hier um einen lexikalischen Geltungsbereich (<em>lexical</em> <em>scoping</em>), d.h. in JavaScript wird der Geltungsbereich (<em>scope</em>) einer Variablen bestimmt durch ihren Fundort im Quellcode (darum lexikalisch). Und verschachtelte Funktionen haben Zugriff auf Variablen, die im umschließenden Geltungsbereich (<em>outer scope</em>) deklariert werden.</p>
+<p>Dieses <a href="http://jsfiddle.net/xAFs9/3/">Code-Beispiel</a> zeigt, dass es funktioniert. Es handelt sich hier um einen lexikalischen Geltungsbereich (<em>lexical</em> <em>scoping</em>), d.h. in JavaScript wird der Geltungsbereich (<em>scope</em>) einer Variablen bestimmt durch ihren Fundort im Quellcode (darum lexikalisch). Und verschachtelte Funktionen haben Zugriff auf Variablen, die im umschließenden Geltungsbereich (<em>outer scope</em>) deklariert werden.</p>
 
 <h2 id="Closure">Closure</h2>
 
@@ -55,13 +55,13 @@ var myFunc = makeFunc();
 myFunc();
 </pre>
 
-<p>Zum Laufen gebracht zeigt dieser Code exakt den gleichen Effekt wie das vorherige <code>init()</code> Beispiel: Die Zeichenfolge "Mozilla" wird als JavaScript <em>alert</em> Meldung angezeigt. Der interessante Unterschied besteht darin, dass die innere Funktion <code>displayName()</code> von der äußeren Funktion schon vor ihrer Ausführung zurückgegeben wurde.</p>
+<p>Zum Laufen gebracht zeigt dieser Code exakt den gleichen Effekt wie das vorherige <code>init()</code> Beispiel: Die Zeichenfolge "Mozilla" wird als JavaScript <em>alert</em> Meldung angezeigt. Der interessante Unterschied besteht darin, dass die innere Funktion <code>displayName()</code> von der äußeren Funktion schon vor ihrer Ausführung zurückgegeben wurde.</p>
 
-<p>Dass der Code weiterhin funktioniert, mag verwundern. Üblicherweise existieren die in einer Funktion enthaltenen lokalen Variablen nur während ihrer Ausführung. Man könnte also annehmen, dass die Variable <code>name</code> nicht mehr abrufbar ist, nachdem <code>makeFunc()</code> geendet hat. Da der Code trotzdem funktioniert, ist dies offensichtlich nicht der Fall.</p>
+<p>Dass der Code weiterhin funktioniert, mag verwundern. Üblicherweise existieren die in einer Funktion enthaltenen lokalen Variablen nur während ihrer Ausführung. Man könnte also annehmen, dass die Variable <code>name</code> nicht mehr abrufbar ist, nachdem <code>makeFunc()</code> geendet hat. Da der Code trotzdem funktioniert, ist dies offensichtlich nicht der Fall.</p>
 
-<p>Des Rätsels Lösung ist, dass <code>myFunc</code> zu einem Funktionsabschluss, einer <em>Closure</em>, geworden ist. Die <em>Closure</em> ist ein besonderes Objekt mit zwei außergewöhnlichen Merkmalen – sie umfasst sowohl die Funktion, wie auch das Umfeld, in dem diese erzeugt wurde. Dieses Umfeld besteht aus sämtlichen lokalen Variablen, die im Geltungsbereich (<em>Scope</em>) lagen zum Zeitpunkt der Erzeugung der <em>Closure.</em> Im obigen Beispiel ist <code>myFunc</code> eine <em>Closure</em>, die sowohl die Funktion <em>myFunc</em>, wie auch die Zeichenfolge "Mozilla", die bei der Erzeugung der <em>Closure</em> exisitierte, umfasst. </p>
+<p>Des Rätsels Lösung ist, dass <code>myFunc</code> zu einem Funktionsabschluss, einer <em>Closure</em>, geworden ist. Die <em>Closure</em> ist ein besonderes Objekt mit zwei außergewöhnlichen Merkmalen – sie umfasst sowohl die Funktion, wie auch das Umfeld, in dem diese erzeugt wurde. Dieses Umfeld besteht aus sämtlichen lokalen Variablen, die im Geltungsbereich (<em>Scope</em>) lagen zum Zeitpunkt der Erzeugung der <em>Closure.</em> Im obigen Beispiel ist <code>myFunc</code> eine <em>Closure</em>, die sowohl die Funktion <em>myFunc</em>, wie auch die Zeichenfolge "Mozilla", die bei der Erzeugung der <em>Closure</em> exisitierte, umfasst. </p>
 
-<p>Hier nun ein etwas interessanteres Beispiel, eine <code>makeAdder()</code> Funktion:</p>
+<p>Hier nun ein etwas interessanteres Beispiel, eine <code>makeAdder()</code> Funktion:</p>
 
 <pre class="brush: js notranslate">function makeAdder(x) {
   return function(y) {
@@ -76,21 +76,21 @@ console.log(add5(2));  // 7
 console.log(add10(2)); // 12
 </pre>
 
-<p>In diesem Beispiel haben wir eine Funktion <code>makeAdder(x)</code> definiert, die ein einzelnes Argument <code>x</code> erwartet und eine neue Funktion zurück gibt. Die zurückgegebene Funktion erwartet ein Argument <code>y</code> und liefert die Summe von <code>x</code> und <code>y</code> als Ergebnis.</p>
+<p>In diesem Beispiel haben wir eine Funktion <code>makeAdder(x)</code> definiert, die ein einzelnes Argument <code>x</code> erwartet und eine neue Funktion zurück gibt. Die zurückgegebene Funktion erwartet ein Argument <code>y</code> und liefert die Summe von <code>x</code> und <code>y</code> als Ergebnis.</p>
 
-<p>Die Funktion <code>makeAdder</code> ist im Wesentlichen eine Factory für spezielle Funktionen: sie erzeugt  Funktionen, welche ihrem Argument einen bestimmten Wert hinzuaddieren. Im vorangegangenen Beispiel erzeugen wir mittels dieser Factory zwei neue Funktionen: eine von ihnen addiert 5 zu ihrem Argument, die andere addiert 10 hinzu.</p>
+<p>Die Funktion <code>makeAdder</code> ist im Wesentlichen eine Factory für spezielle Funktionen: sie erzeugt  Funktionen, welche ihrem Argument einen bestimmten Wert hinzuaddieren. Im vorangegangenen Beispiel erzeugen wir mittels dieser Factory zwei neue Funktionen: eine von ihnen addiert 5 zu ihrem Argument, die andere addiert 10 hinzu.</p>
 
-<p><code>add5</code> und <code>add10</code> sind beides Closures. Sie teilen beide den selben Funktionsrumpf, behalten aber verschiedene Kontexte. In <code>add5</code>'s Kontext ist <code>x</code> 5, im Kontext von <code>add10</code> ist <code>x</code> 10.</p>
+<p><code>add5</code> und <code>add10</code> sind beides Closures. Sie teilen beide den selben Funktionsrumpf, behalten aber verschiedene Kontexte. In <code>add5</code>'s Kontext ist <code>x</code> 5, im Kontext von <code>add10</code> ist <code>x</code> 10.</p>
 
 <h2 id="Practical_closures">Practical closures</h2>
 
 <h3 id="Closures_in_der_Praxis">Closures in der Praxis</h3>
 
-<p>Soviel zur Theorie von Closures — aber gibt es tatsächlich einen Praxisnutzen? Betrachten wir dafür die Auswirkungen in der Praxis. Ein Closure lässt uns Daten (die Ausführungsumgebung) mit einer Funktion, die auf diesen Daten operiert, verbinden. Das hat offensichtliche Parallelen zur objektorientierten Programmierung, bei der die Daten eines Objekts (die Objekteigenschaften) mit einer oder mehreren Methoden verbunden werden. Somit kann ein Closure immer dann verwendet werden, wo normalerweise ein Objekt mit einer einzigen Methode verwendet wird.</p>
+<p>Soviel zur Theorie von Closures — aber gibt es tatsächlich einen Praxisnutzen? Betrachten wir dafür die Auswirkungen in der Praxis. Ein Closure lässt uns Daten (die Ausführungsumgebung) mit einer Funktion, die auf diesen Daten operiert, verbinden. Das hat offensichtliche Parallelen zur objektorientierten Programmierung, bei der die Daten eines Objekts (die Objekteigenschaften) mit einer oder mehreren Methoden verbunden werden. Somit kann ein Closure immer dann verwendet werden, wo normalerweise ein Objekt mit einer einzigen Methode verwendet wird.</p>
 
 <p>Besonders im Web kommt uns das häufig entgegen. Ein Großteil von JavaScript-Code ist ereignisbasierter Code: wir definieren erst ein Verhalten, und hängen es dann an ein Benutzerereignis (bspw. einen Mausklick oder Tastendruck). Unser Code nimmt dabei üblicherweise die Form eines Callback an: eine einzelne Funktion, die bei Eintreten des Ereignisses aufgerufen wird.</p>
 
-<p>Hier ein Beispiel aus der Praxis: Angenommen, wir wollen Buttons auf einer Seite hinzufügen, die die Schriftgröße ändern – eine Möglichkeit wäre, die Schriftgröße mittels der Eigenschaft <code>font-size</code> im <code>body</code>-Element in Pixel (<code>px</code>) zu setzen und bei anderen Elementen der Seite (z.B. <em>header</em>-Elemente wie <code>h1</code>, <code>h2</code>) die Eigenschaft <code>font-size</code> in der relativen Einheit <code>em</code> anzugeben:</p>
+<p>Hier ein Beispiel aus der Praxis: Angenommen, wir wollen Buttons auf einer Seite hinzufügen, die die Schriftgröße ändern – eine Möglichkeit wäre, die Schriftgröße mittels der Eigenschaft <code>font-size</code> im <code>body</code>-Element in Pixel (<code>px</code>) zu setzen und bei anderen Elementen der Seite (z.B. <em>header</em>-Elemente wie <code>h1</code>, <code>h2</code>) die Eigenschaft <code>font-size</code> in der relativen Einheit <code>em</code> anzugeben:</p>
 
 <pre class="brush: css notranslate">body {
   font-family: Helvetica, Arial, sans-serif;
@@ -106,7 +106,7 @@ h2 {
 }
 </pre>
 
-<p>Unser interaktiver Schriftgößen-Button ändert die <code>font-size</code>-Eigenschaft des <code>body</code>-Elements. Diese Änderung wird von den anderen Elementen auf der Seite wahrgenommen und die Elemente passen sich dank der relativen Einheit <code>em</code> nun der neuen Schriftgröße an.</p>
+<p>Unser interaktiver Schriftgößen-Button ändert die <code>font-size</code>-Eigenschaft des <code>body</code>-Elements. Diese Änderung wird von den anderen Elementen auf der Seite wahrgenommen und die Elemente passen sich dank der relativen Einheit <code>em</code> nun der neuen Schriftgröße an.</p>
 
 <p>Hier das JavaScript:</p>
 
