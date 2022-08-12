@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLImageElement/referrerPolicy
 
 
 
-<p><code><strong>HTMLImageElement</strong></code><strong><code>.referrerPolicy</code></strong> 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","img")}} 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。</p>
+<p><code><strong>HTMLImageElement</strong></code><strong><code>.referrerPolicy</code></strong> 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","img")}} 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。</p>
 
 
 
@@ -21,8 +21,8 @@ translation_of: Web/API/HTMLImageElement/referrerPolicy
 <dl>
  <dd>
  <ul>
-  <li><code>"no-referrer"</code> 表示 HTTP 头部信息将不会发送 <code>referrer</code> 。</li>
-  <li><code>"origin"</code> 表示 referrer 只包含策略、主机名、端口等页面源的信息。</li>
+  <li><code>"no-referrer"</code> 表示 HTTP 头部信息将不会发送 <code>referrer</code> 。</li>
+  <li><code>"origin"</code> 表示 referrer 只包含策略、主机名、端口等页面源的信息。</li>
   <li><code>"unsafe-url"</code> 这意味着引用者将包括源站和路径（但不包括片段、密码或用户名）。这种情况是不安全的，因为它可能会泄漏路径信息，这些信息已被使用 TLS 隐藏到第三方。</li>
  </ul>
  </dd>

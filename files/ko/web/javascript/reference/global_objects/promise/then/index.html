@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>then()</strong></code> 메서드는 {{domxref("Promise")}}를 리턴하고 두 개의 콜백 함수를 인수로 받습니다. 하나는 <code>Promise</code>가 <strong>이행</strong>했을 때, 다른 하나는 <strong>거부</strong>했을 때를 위한 콜백 함수입니다.</p>
+<p><code><strong>then()</strong></code> 메서드는 {{domxref("Promise")}}를 리턴하고 두 개의 콜백 함수를 인수로 받습니다. 하나는 <code>Promise</code>가 <strong>이행</strong>했을 때, 다른 하나는 <strong>거부</strong>했을 때를 위한 콜백 함수입니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
@@ -34,7 +34,7 @@ p.then(function(value) {
 
 <dl>
  <dt><code>onFulfilled</code></dt>
- <dd><code>Promise</code>가 수행될 때 호출되는 {{jsxref("Function")}}으로, <strong>이행 값(fulfillment value)</strong> 하나를 인수로 받습니다.</dd>
+ <dd><code>Promise</code>가 수행될 때 호출되는 {{jsxref("Function")}}으로, <strong>이행 값(fulfillment value)</strong> 하나를 인수로 받습니다.</dd>
  <dt><code>onRejected</code></dt>
  <dd><code>Promise</code>가 거부될 때 호출되는 {{jsxref("Function")}}으로, <strong>거부 이유(rejection reason)</strong> 하나를 인수로 받습니다.</dd>
 </dl>
@@ -78,7 +78,7 @@ setTimeout(() =&gt; {
 
 <h2 id="설명">설명</h2>
 
-<p><code>then</code>과 {{jsxref("Promise.prototype.catch()")}} 메서드는 프로미스를 반환하기 때문에, 체이닝이 가능합니다. 이를 <em>합성</em>이라고도 합니다.</p>
+<p><code>then</code>과 {{jsxref("Promise.prototype.catch()")}} 메서드는 프로미스를 반환하기 때문에, 체이닝이 가능합니다. 이를 <em>합성</em>이라고도 합니다.</p>
 
 <h2 id="예제">예제</h2>
 
@@ -99,7 +99,7 @@ p1.then(function(value) {
 
 <h3 id="체이닝">체이닝</h3>
 
-<p><code>then</code> 메서드는 <code>Promise</code>를 리턴하기 때문에, 이어지는 <code>then</code> 호출들을 손쉽게 연결할 수 있습니다.</p>
+<p><code>then</code> 메서드는 <code>Promise</code>를 리턴하기 때문에, 이어지는 <code>then</code> 호출들을 손쉽게 연결할 수 있습니다.</p>
 
 <p><code>then</code>에 핸들러로 전달된 함수가 프로미스를 반환할 경우, 이와 동등한 프로미스가 메서드 체인의 그다음 <code>then</code>에 노출됩니다. 아래 예제에서는 <code>setTimeout</code> 함수로 비동기 코드를 흉내냅니다.</p>
 
@@ -266,35 +266,13 @@ p3.then(function(v) {
 })();
 </pre>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 표준에서 초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-
-
 <p>{{Compat("javascript.builtins.Promise.then")}}</p>
-
-
 
 <h2 id="참조">참조</h2>
 

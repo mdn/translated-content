@@ -23,7 +23,7 @@ original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
  </tbody>
 </table>
 
-<p>CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned relative to their default position in normal layout flow, the other elements around them, their parent container, or the main viewport/window.  The page layout techniques we'll be covering in more detail in this module are</p>
+<p>CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned relative to their default position in normal layout flow, the other elements around them, their parent container, or the main viewport/window.  The page layout techniques we'll be covering in more detail in this module are</p>
 
 <ul>
  <li>Normal flow</li>
@@ -40,7 +40,7 @@ original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 
 <h2 id="Normal_flow">Normal flow</h2>
 
-<p>Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout. Let's look at a quick HTML example:</p>
+<p>Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout. Let's look at a quick HTML example:</p>
 
 <pre class="brush: html">&lt;p&gt;I love my cat.&lt;/p&gt;
 
@@ -61,16 +61,16 @@ original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 <p>The elements that appear one below the other are described as <em>block</em> elements, in contrast to <em>inline</em> elements, which appear one beside the other, like the individual words in a paragraph.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.</p>
+<p><strong>Note</strong>: The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.</p>
 </div>
 
-<p>When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.</p>
+<p>When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.</p>
 
 <p>The methods that can change how elements are laid out in CSS are as follows:</p>
 
 <ul>
- <li><strong>The {{cssxref("display")}} property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a> for more information). We then have entire layout methods that are switched on via a value of <code>display</code>, for example <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
- <li><strong>Floats</strong> — Applying a {{cssxref("float")}} value such as <code>left</code> can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.</li>
+ <li><strong>The {{cssxref("display")}} property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a> for more information). We then have entire layout methods that are switched on via a value of <code>display</code>, for example <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
+ <li><strong>Floats</strong> — Applying a {{cssxref("float")}} value such as <code>left</code> can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.</li>
  <li><strong>The {{cssxref("position")}} property</strong> — Allows you to precisely control the placement of boxes inside other boxes. <code>static</code> positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top left of the browser viewport.</li>
  <li><strong>Table layout</strong> — features designed for styling the parts of an HTML table can be used on non-table elements using <code>display: table</code> and associated properties.</li>
  <li><strong>Multi-column layout</strong> — The <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> properties can cause the content of a block to layout in columns, as you might see in a newspaper.</li>
@@ -159,7 +159,7 @@ original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 <p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox, to find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
+<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox, to find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
 </div>
 
 <h2 id="Grid_Layout">Grid Layout</h2>
@@ -265,10 +265,10 @@ original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 <p>The {{cssxref("float")}} property has four possible values:</p>
 
 <ul>
- <li><code>left</code> — Floats the element to the left.</li>
- <li><code>right</code> — Floats the element to the right.</li>
- <li><code>none</code> — Specifies no floating at all. This is the default value.</li>
- <li><code>inherit</code> — Specifies that the value of the <code>float</code> property should be inherited from the element's parent element.</li>
+ <li><code>left</code> — Floats the element to the left.</li>
+ <li><code>right</code> — Floats the element to the right.</li>
+ <li><code>none</code> — Specifies no floating at all. This is the default value.</li>
+ <li><code>inherit</code> — Specifies that the value of the <code>float</code> property should be inherited from the element's parent element.</li>
 </ul>
 
 <p>In the example below we float a <code>&lt;div&gt;</code> left, and give it a {{cssxref("margin")}} on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.</p>
@@ -330,10 +330,10 @@ p {
 <p>There are five types of positioning you should know about:</p>
 
 <ul>
- <li><strong>Static positioning</strong> is the default that every element gets — it just means "put the element into its normal position in the document layout flow — nothing special to see here".</li>
- <li><strong>Relative positioning</strong> allows you to modify an element's position on the page, moving it relative to its position in normal flow — including making it overlap other elements on the page.</li>
- <li><strong>Absolute positioning</strong> moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's <code>&lt;html&gt;</code> element (or its nearest positioned ancestor element). This is useful for creating complex layout effects such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.</li>
- <li><strong>Fixed positioning</strong> is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.</li>
+ <li><strong>Static positioning</strong> is the default that every element gets — it just means "put the element into its normal position in the document layout flow — nothing special to see here".</li>
+ <li><strong>Relative positioning</strong> allows you to modify an element's position on the page, moving it relative to its position in normal flow — including making it overlap other elements on the page.</li>
+ <li><strong>Absolute positioning</strong> moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's <code>&lt;html&gt;</code> element (or its nearest positioned ancestor element). This is useful for creating complex layout effects such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.</li>
+ <li><strong>Fixed positioning</strong> is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.</li>
  <li><strong>Sticky positioning</strong> is a newer positioning method which makes an element act like <code>position: static</code> until it hits a defined offset from the viewport, at which point it acts like <code>position: fixed</code>.</li>
 </ul>
 
@@ -596,7 +596,7 @@ p {
 
 <p>Now, the CSS for our example. Most of the CSS is fairly ordinary, except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively — basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.</p>
 
-<p>You'll notice that the caption paragraph has been given <code>display: table-caption;</code> — which makes it act like a table {{htmlelement("caption")}} — and <code>caption-side: bottom;</code> to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the <code>&lt;input&gt;</code> elements in the source. This allows for a nice bit of flexibility.</p>
+<p>You'll notice that the caption paragraph has been given <code>display: table-caption;</code> — which makes it act like a table {{htmlelement("caption")}} — and <code>caption-side: bottom;</code> to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the <code>&lt;input&gt;</code> elements in the source. This allows for a nice bit of flexibility.</p>
 
 <pre class="brush: css">html {
   font-family: sans-serif;

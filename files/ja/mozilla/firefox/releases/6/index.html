@@ -71,8 +71,8 @@ translation_of: Mozilla/Firefox/Releases/6
 </dl>
 <ul>
   <li>これまでずっと、空文字列を返すだけだった <code>navigator.securityPolicy</code> プロパティが完全に削除されました。</li>
-  <li><a href="/ja/docs/Web/API/BlobBuilder" title="BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。"><code>BlobBuilder</code></a> がサポートされました。現時点では接頭辞付きの実装 (<code>MozBlobBuilder</code>) となっています。</li>
-  <li><a href="/ja/docs/Web/API/Document/height" title="現在の document オブジェクトの高さを返します。多くの場合、これは現在の文書の &lt;body> 要素の高さと同じ値です。"><code>document.height</code></a>, <a href="/ja/docs/Web/API/Document/width" title="現在の文書の &lt;body> 要素の現在の幅をピクセル値で返します。"><code>document.width</code></a> が削除されました。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=585877" title="FIXED: remove document.height / document.width">バグ 585877</a></li>
+  <li><a href="/ja/docs/Web/API/BlobBuilder" title="BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。"><code>BlobBuilder</code></a> がサポートされました。現時点では接頭辞付きの実装 (<code>MozBlobBuilder</code>) となっています。</li>
+  <li><a href="/ja/docs/Web/API/Document/height" title="現在の document オブジェクトの高さを返します。多くの場合、これは現在の文書の &lt;body> 要素の高さと同じ値です。"><code>document.height</code></a>, <a href="/ja/docs/Web/API/Document/width" title="現在の文書の &lt;body> 要素の現在の幅をピクセル値で返します。"><code>document.width</code></a> が削除されました。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=585877" title="FIXED: remove document.height / document.width">バグ 585877</a></li>
   <li><a href="/ja/docs/Web/API/DocumentType" title="DocumentType インターフェイスは、doctype を包含する Node を表します。"><code>DocumentType</code></a> オブジェクトの <code>entities</code>, <code>notations</code> プロパティが削除されました。これは実装されておらず常に <code>null</code> を返しており、また仕様からも削除されていました。</li>
   <li><code>DOMConfiguration</code> インターフェースと、それを使用していた <code>document.domConfig</code> プロパティが削除されました。これらはサポートされておらず、また DOM 仕様からも削除されていました。</li>
   <li><code>hashchange</code> イベントが適切に <a href="/ja/docs/DOM/window.onhashchange#The_hashchange_event" title="DOM/window.onhashchange#The_hashchange_event"><code>newURL</code>, <code>oldURL</code> フィールド</a> を含むようになりました。</li>
@@ -87,7 +87,7 @@ translation_of: Mozilla/Firefox/Releases/6
   <li><code>EventTarget</code> の関数 <a href="/ja/docs/XPCOM_Interface_Reference/nsIDOMEventTarget" title="XPCOM_Interface_Reference/nsIDOMEventTarget"><code>addEventListener()</code></a> に指定する引数 <code>useCapture</code> が optional となりました。これは WebKit の動作とも共通し、また新しい仕様でもそう定義されています。</li>
   <li><a href="/ja/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> オブジェクトの <code>mozResponseArrayBuffer</code> プロパティが <code>responseType</code>, <code>response</code> プロパティに置き換えられました。</li>
   <li><a href="/ja/docs/DOM/HTMLElement" title="DOM/HTMLElement"><code>HTMLElement</code></a> インターフェースに <a href="/ja/docs/Web/API/Element/dataset" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>element.dataset</code></a> プロパティが追加されました。このプロパティにより <a href="/ja/docs/HTML/Global_attributes#attr-data-*" title="HTML/Global_attributes#attr-data-*">要素の <code>data-*</code> グローバル属性</a> にアクセスできます。</li>
-  <li><a href="/ja/docs/Web/API/CustomEvent" title="このインターフェイスは親である Event からプロパティを継承します:"><code>CustomEvent</code></a> インターフェースが実装されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=427537" title="FIXED: Implement CustomEvent DOM3 specification">バグ 427537</a>)</li>
+  <li><a href="/ja/docs/Web/API/CustomEvent" title="このインターフェイスは親である Event からプロパティを継承します:"><code>CustomEvent</code></a> インターフェースが実装されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=427537" title="FIXED: Implement CustomEvent DOM3 specification">バグ 427537</a>)</li>
   <li>セキュリティの観点から、ユーザーがロケーションバーに <code>data:</code> URI と <code>javascript:</code> URI を入力した時、現在のページのセキュリティコンテキストを受け継がなくなりました。代わりに、新しい空のセキュリティコンテキストが生成されます。これにより、ロケーションバーに入力した <code>javascript:</code> URI から読み込まれたスクリプトは、DOM メソッドなどへのアクセスを持たなくなります。しかし、これらの URI がスクリプトから使用された場合は、これまでと同じように動作します。</li>
 </ul>
 <h3 id="JavaScript">JavaScript</h3>
@@ -190,34 +190,34 @@ translation_of: Mozilla/Firefox/Releases/6
   <dt>
     <a href="/ja/docs/XPCOM_Interface_Reference/nsITelemetry" title="XPCOM_Interface_Reference/nsITelemetry"><code>nsITelemetry</code></a></dt>
   <dd>
-    パフォーマンス測定を目的とした <a class="external" href="http://mozilla.jp/legal/privacy/firefox/#telemetry">使用統計情報 (Telemetry)</a> を記録とヒストグラムの生成に使用されます。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649502" title="FIXED: Expose histograms to JS">バグ 649502</a> と <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=585196" title="FIXED: telemetry infrastructure">バグ 585196</a> 参照。</dd>
+    パフォーマンス測定を目的とした <a class="external" href="http://mozilla.jp/legal/privacy/firefox/#telemetry">使用統計情報 (Telemetry)</a> を記録とヒストグラムの生成に使用されます。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649502" title="FIXED: Expose histograms to JS">バグ 649502</a> と <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=585196" title="FIXED: telemetry infrastructure">バグ 585196</a> 参照。</dd>
   <dt>
     <a href="/ja/docs/XPCOM_Interface_Reference/nsITimedChannel" title="XPCOM_Interface_Reference/nsITimedChannel"><code>nsITimedChannel</code></a></dt>
   <dd>
-    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=576006" title="FIXED: Implement timing interface for channels">バグ 576006</a> 参照。</dd>
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=576006" title="FIXED: Implement timing interface for channels">バグ 576006</a> 参照。</dd>
   <dt>
     <a href="/ja/docs/XPCOM_Interface_Reference/nsIWebSocketListener" title="XPCOM_Interface_Reference/nsIWebSocketListener"><code>nsIWebSocketListener</code></a></dt>
   <dd>
-    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=640003" title="FIXED: WebSockets - upgrade to ietf-07">バグ 640003</a> 参照。</dd>
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=640003" title="FIXED: WebSockets - upgrade to ietf-07">バグ 640003</a> 参照。</dd>
   <dt>
     <a href="/ja/docs/XPCOM_Interface_Reference/nsIWebSocketProtocol" title="XPCOM_Interface_Reference/nsIWebSocketProtocol"><code>nsIWebSocketProtocol</code></a></dt>
   <dd>
-    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=640003" title="FIXED: WebSockets - upgrade to ietf-07">バグ 640003</a> 参照。</dd>
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=640003" title="FIXED: WebSockets - upgrade to ietf-07">バグ 640003</a> 参照。</dd>
 </dl>
 <h4 id="削除されたインタフェース">削除されたインタフェース</h4>
 <p>以下のインタフェースは、不要となり削除された実装です。詳細はバグを参照してください。</p>
 <ul>
-  <li><code>nsIDOMDocumentEvent</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655517" title="FIXED: Remove nsIDOMDocumentEvent">バグ 655517</a>)</li>
-  <li><code>nsIDOMDocumentTraversal</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655514" title="FIXED: Remove nsIDOMDocumentTraversal">バグ 655514</a>)</li>
-  <li><code>nsIDOMDocumentRange</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655513" title="FIXED: Remove nsIDOMDocumentRange">バグ 655513</a>)</li>
-  <li><code>IWeaveCrypto</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=651596" title="FIXED: Eliminate IWeaveCrypto">バグ 651596</a>)</li>
-  <li><code>nsIDOM3DocumentEvent</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=481863" title="FIXED: Remove nsIDOM3DocumentEvent">バグ 481863</a>)</li>
+  <li><code>nsIDOMDocumentEvent</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655517" title="FIXED: Remove nsIDOMDocumentEvent">バグ 655517</a>)</li>
+  <li><code>nsIDOMDocumentTraversal</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655514" title="FIXED: Remove nsIDOMDocumentTraversal">バグ 655514</a>)</li>
+  <li><code>nsIDOMDocumentRange</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655513" title="FIXED: Remove nsIDOMDocumentRange">バグ 655513</a>)</li>
+  <li><code>IWeaveCrypto</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=651596" title="FIXED: Eliminate IWeaveCrypto">バグ 651596</a>)</li>
+  <li><code>nsIDOM3DocumentEvent</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=481863" title="FIXED: Remove nsIDOM3DocumentEvent">バグ 481863</a>)</li>
   <li><code>nsIDOMAbstractView</code></li>
   <li><code>nsILiveTitleNotificationSubject</code></li>
-  <li><code>nsIPlugin</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=637253" title="FIXED: decomtamination: remove nsIPlugin and nsIPluginInstance">バグ 637253</a>)</li>
-  <li><code>nsIPluginInstance</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=637253" title="FIXED: decomtamination: remove nsIPlugin and nsIPluginInstance">バグ 637253</a>)</li>
-  <li><code>nsIHTMLEditRules</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=633750" title="FIXED: deCOM nsIHTMLEditRules">バグ 633750</a>)</li>
-  <li><a href="/ja/docs/XPCOM_Interface_Reference/nsIXSLTProcessorObsolete"><code>nsIXSLTProcessorObsolete</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649534" title="FIXED: Remove nsIXSLTProcessorObsolete">バグ 649534</a>)</li>
+  <li><code>nsIPlugin</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=637253" title="FIXED: decomtamination: remove nsIPlugin and nsIPluginInstance">バグ 637253</a>)</li>
+  <li><code>nsIPluginInstance</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=637253" title="FIXED: decomtamination: remove nsIPlugin and nsIPluginInstance">バグ 637253</a>)</li>
+  <li><code>nsIHTMLEditRules</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=633750" title="FIXED: deCOM nsIHTMLEditRules">バグ 633750</a>)</li>
+  <li><a href="/ja/docs/XPCOM_Interface_Reference/nsIXSLTProcessorObsolete"><code>nsIXSLTProcessorObsolete</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649534" title="FIXED: Remove nsIXSLTProcessorObsolete">バグ 649534</a>)</li>
 </ul>
 <h3 id="その他の変更">その他の変更</h3>
 <dl>

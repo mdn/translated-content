@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>values()</code></strong> 메서드는 배열의 각 인덱스에 대한 값을 가지는 새로운 <strong><code>Array Iterator</code></strong> 객체를 반환합니다.</p>
+<p><strong><code>values()</code></strong> 메서드는 배열의 각 인덱스에 대한 값을 가지는 새로운 <strong><code>Array Iterator</code></strong> 객체를 반환합니다.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-values.html")}}</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 
 <h2 id="예제">예제</h2>
 
-<h3 id="for...of_루프를_통한_반복"><code>for...of</code> 루프를 통한 반복</h3>
+<h3 id="for...of_루프를_통한_반복"><code>for...of</code> 루프를 통한 반복</h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
@@ -39,7 +39,7 @@ for (let letter of eArr) {
 }
 </pre>
 
-<h3 id="다른_반복법">다른 반복법</h3>
+<h3 id="다른_반복법">다른 반복법</h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
@@ -50,27 +50,9 @@ console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

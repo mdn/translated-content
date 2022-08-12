@@ -17,14 +17,14 @@ translation_of: Web/HTML/Element/input/button
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Elementos {{HTMLElement("input")}} do tipo <strong><code>button</code> </strong>são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).</span></p>
+<p><span class="seoSummary">Elementos {{HTMLElement("input")}} do tipo <strong><code>button</code> </strong>são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">A fonte para estes exemplos interativos é armazenado em um repositório GitHub. Se você gostaria de contribuir com projetos de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos uma requisição pull.</p>
+<p class="hidden">A fonte para estes exemplos interativos é armazenado em um repositório GitHub. Se você gostaria de contribuir com projetos de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos uma requisição pull.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Enquanto elementos <code>&lt;input&gt;</code> do tipo <code>button</code> ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.</p>
+<p><strong>Nota</strong>: Enquanto elementos <code>&lt;input&gt;</code> do tipo <code>button</code> ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.</p>
 </div>
 
 <table class="properties">
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/input/button
 
 <h2 id="Value">Value</h2>
 
-<p>Seu atributo {{htmlattrxref("value", "input")}} de um elemento <code>&lt;input type="button"&gt;</code>  contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão</p>
+<p>Seu atributo {{htmlattrxref("value", "input")}} de um elemento <code>&lt;input type="button"&gt;</code>  contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão</p>
 
 <div id="summary-example3">
 <pre class="brush: html">&lt;input type="button" value="Click Me"&gt;</pre>
@@ -72,11 +72,11 @@ translation_of: Web/HTML/Element/input/button
 
 <h2 id="Usando_buttons">Usando buttons</h2>
 
-<p>Elementos <code>&lt;input type="button"&gt;</code> não possuem comportamento padrão (seu primos,<code> <a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> e <code><a href="/en-US/docs/Web/HTML/Element/input/reset">&lt;input type="reset"&gt;</a></code> são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.</p>
+<p>Elementos <code>&lt;input type="button"&gt;</code> não possuem comportamento padrão (seu primos,<code> <a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> e <code><a href="/en-US/docs/Web/HTML/Element/input/reset">&lt;input type="reset"&gt;</a></code> são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.</p>
 
 <h3 id="Um_simples_botão">Um simples botão</h3>
 
-<p>Nós iremos começar criando um simples botão com um evento {{event("click")}} que inicia nossa máquina (bem, ele altera o <code>value</code> do botão e o contéudo texto do seguinte parágrafo):</p>
+<p>Nós iremos começar criando um simples botão com um evento {{event("click")}} que inicia nossa máquina (bem, ele altera o <code>value</code> do botão e o contéudo texto do seguinte parágrafo):</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;input type="button" value="Start machine"&gt;
@@ -89,16 +89,16 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }</pre>
 
-<p>O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o <code>&lt;input&gt;</code> no DOM, salvando esta referência na variável <code>button</code>. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento {{event("click")}} for executado no botão.</p>
+<p>O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o <code>&lt;input&gt;</code> no DOM, salvando esta referência na variável <code>button</code>. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento {{event("click")}} for executado no botão.</p>
 
 <p>{{EmbedLiveSample("A_simple_button", 650, 100)}}</p>
 
@@ -123,13 +123,13 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }</pre>
 </div>
 
@@ -159,12 +159,12 @@ function updateButton() {
 button.addEventListener('click', disableButton);
 
 function disableButton() {
-  button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
-    button.disabled = false;
-    button.value = 'Enabled';
-  }, 2000);
+  button.disabled = true;
+  button.value = 'Disabled';
+  window.setTimeout(function() {
+    button.disabled = false;
+    button.value = 'Enabled';
+  }, 2000);
 }</pre>
 </div>
 
@@ -223,13 +223,13 @@ function disableButton() {
 
 <div class="hidden">
 <pre class="brush: css">body {
-  background: #ccc;
+  background: #ccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #ccc;
   width: 150px;
   height: 75px;
   padding: 5px;

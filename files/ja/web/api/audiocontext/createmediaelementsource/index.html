@@ -32,7 +32,7 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 <p>以下の例では、createMediaElementSource()を使用して {{ htmlelement("audio") }} から音源を作成します。 再生される音源は {{ domxref("GainNode") }} を介し {{ domxref("AudioDestinationNode") }} に渡されます。マウスポインタが動くとupdatePage()関数が呼ばれ、マウスポインタのY座標の値をウィンドウの高さで割った比率を元に現在のゲインを計算します。また、マウスポインタを上下に動かすことで、再生している音楽の音量を上げ下げできます。</p>
 
 <div class="note">
-<p><strong>注記</strong>:  <a href="http://mdn.github.io/media-source-buffer/">この例のデモ</a>と、<a href="https://github.com/mdn/media-source-buffer">ソース</a>を見ることができます。</p>
+<p><strong>注記</strong>:  <a href="http://mdn.github.io/media-source-buffer/">この例のデモ</a>と、<a href="https://github.com/mdn/media-source-buffer">ソース</a>を見ることができます。</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -87,7 +87,7 @@ gainNode.connect(audioCtx.destination);</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

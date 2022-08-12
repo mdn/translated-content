@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>El método <code>Object.keys()</code> devuelve un array de las propiedades <strong><code>names</code> </strong>de un objeto, en el mismo orden como se obtienen en un loop normal</p>
+<p>El método <code>Object.keys()</code> devuelve un array de las propiedades <strong><code>names</code> </strong>de un objeto, en el mismo orden como se obtienen en un loop normal</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -23,11 +23,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Un array de strings que representan toda las propiedades  del objeto</p>
+<p>Un array de strings que representan toda las propiedades  del objeto</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p><code>Object.keys</code> devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran directamente en el object. El orden de las propiedades es el mismo que se proporciona al iterar manualmente sobre las propiedades del objeto.</p>
+<p><code>Object.keys</code> devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran directamente en el object. El orden de las propiedades es el mismo que se proporciona al iterar manualmente sobre las propiedades del objeto.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -53,7 +53,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']
 
 <h2 id="Notas">Notas</h2>
 
-<p>En ES5, si el argumento para este método no es un objeto (uno primitivo), causará un {{jsxref("Global_Objects/TypeError", "TypeError")}}. En ES2015, un argumento no-objeto será coaccionado hacia un objeto.</p>
+<p>En ES5, si el argumento para este método no es un objeto (uno primitivo), causará un {{jsxref("Global_Objects/TypeError", "TypeError")}}. En ES2015, un argumento no-objeto será coaccionado hacia un objeto.</p>
 
 <pre class="brush: js notranslate">&gt; Object.keys("foo")
 // TypeError: "foo" is not an object  (ES5)
@@ -63,7 +63,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para añadir soporte <code>Object.keys</code> en entornos más antiguos que no lo soportan de forma nativa, copia el siguiente fragmento:</p>
+<p>Para añadir soporte <code>Object.keys</code> en entornos más antiguos que no lo soportan de forma nativa, copia el siguiente fragmento:</p>
 
 <pre class="brush: js notranslate">// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
@@ -108,9 +108,9 @@ if (!Object.keys) {
 }
 </pre>
 
-<p>Ten en cuenta que el código anterior incluye claves no-enumerables en IE7 (y quizás IE8), al pasar en un objeto desde una ventana diferente.</p>
+<p>Ten en cuenta que el código anterior incluye claves no-enumerables en IE7 (y quizás IE8), al pasar en un objeto desde una ventana diferente.</p>
 
-<p>Para un simple Polyfill del Navegador, mira <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Compatibilidad de Object.keys en Navegadores</a>.</p>
+<p>Para un simple Polyfill del Navegador, mira <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Compatibilidad de Object.keys en Navegadores</a>.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

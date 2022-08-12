@@ -54,7 +54,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
  </li>
 </ul>
 
-<p>Esta comparación <em>no</em> es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. El operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica varias coerciones(comprobaciones) en ambos sentidos (si no tienen el mismo Type) antes de probar la igualdad (lo que resulta en comportamientos como  <code>"" == false</code> siendo <code>true</code>), pero <code>Object.is</code> no obliga a niguno de los valores.</p>
+<p>Esta comparación <em>no</em> es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. El operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica varias coerciones(comprobaciones) en ambos sentidos (si no tienen el mismo Type) antes de probar la igualdad (lo que resulta en comportamientos como  <code>"" == false</code> siendo <code>true</code>), pero <code>Object.is</code> no obliga a niguno de los valores.</p>
 
 <p>Esta <em>tampoco</em> es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. El operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (y el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata los valores <code>-0</code> <code>y +0</code> como iguales, y además, trata {{jsxref("Number.NaN")}} como no igual a {{jsxref("NaN")}}.</p>
 
@@ -83,14 +83,14 @@ Object.is(NaN, 0/0);         // true
 
 <pre class="brush: js notranslate">if (!Object.is) {
   Object.is = function(x, y) {
-    // SameValue algorithm
+    // SameValue algorithm
     if (x === y) { // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
+      // Steps 6.b-6.e: +0 != -0
       return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x &amp;&amp; y !== y;
-    }
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x &amp;&amp; y !== y;
+    }
   };
 }
 </pre>
@@ -121,5 +121,5 @@ Object.is(NaN, 0/0);         // true
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li><a href="/es/docs/Web/JavaScript/Equality_comparisons_and_sameness">Comparadores de igualdad e identidad</a> —Una comparación de las 3 operaciones de cotejamiento integradas.</li>
+ <li><a href="/es/docs/Web/JavaScript/Equality_comparisons_and_sameness">Comparadores de igualdad e identidad</a> —Una comparación de las 3 operaciones de cotejamiento integradas.</li>
 </ul>

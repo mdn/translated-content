@@ -7,15 +7,17 @@ translation_of: Glossary/undefined
 
 ## 例子
 
-    var x; //创建一个变量，但并没有赋值
+```js
+var x; //创建一个变量，但并没有赋值
 
-    console.log("X的值是", x)  //返回X的值是undefined
+console.log("X的值是", x)  //返回X的值是undefined
+```
 
 ## 更多
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Undefined value")}} on Wikipedia
+- [Undefined value](https://zh.wikipedia.org/wiki/Undefined_value) on Wikipedia
 
 ### 技术参考
 

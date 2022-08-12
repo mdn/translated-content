@@ -12,21 +12,21 @@ original_slug: Web/SVG/Tutorial/Pfade
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}</p>
 
-<p>Das <a href="/en-US/Web/SVG/Element/path"><code>&lt;path&gt;</code></a> Element ist das mächtigste Element in der SVG Sammlung der <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes">grundlegenden Elemente</a>. Man kann es zur Erstellung von Linien, Kurven, Bögen und weiterem verwenden.</p>
+<p>Das <a href="/en-US/Web/SVG/Element/path"><code>&lt;path&gt;</code></a> Element ist das mächtigste Element in der SVG Sammlung der <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes">grundlegenden Elemente</a>. Man kann es zur Erstellung von Linien, Kurven, Bögen und weiterem verwenden.</p>
 
-<p>Pfade bilden komplexe Formen beim Kombinieren mehrerer gerader Linien oder Kurven. Komplexe Formen, die nur aus geraden Linien bestehen, können als <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">Polylines</a> erstellt werden. Während Polylines und Pfade ähnlich aussehende Formen bilden können benötigen Polylines viele kleine geraden Linien um Kurven zu simulieren und werden nicht gut auf grössere Grössen skaliert. Ein gutes Verständnis der Pfade ist wichtig beim zeichen von SVGs. Während das Erstellen komplexer Pfade mit einem XML Editor oder Texteditor nicht empfohlen wird, hilft das Verständnis derer Funktionsweise Anzeigeprobleme in SVGs zu identifizieren und zu beheben.</p>
+<p>Pfade bilden komplexe Formen beim Kombinieren mehrerer gerader Linien oder Kurven. Komplexe Formen, die nur aus geraden Linien bestehen, können als <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">Polylines</a> erstellt werden. Während Polylines und Pfade ähnlich aussehende Formen bilden können benötigen Polylines viele kleine geraden Linien um Kurven zu simulieren und werden nicht gut auf grössere Grössen skaliert. Ein gutes Verständnis der Pfade ist wichtig beim zeichen von SVGs. Während das Erstellen komplexer Pfade mit einem XML Editor oder Texteditor nicht empfohlen wird, hilft das Verständnis derer Funktionsweise Anzeigeprobleme in SVGs zu identifizieren und zu beheben.</p>
 
-<p>Die Form eines Pfad-Elements wird durch ein Attribut definiert: {{ SVGAttr("d") }} (weiteres in <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes">grundlegende Formen</a>). Das <code>"d"</code> Attribut beinhaltet eine Folge an Befehlen und deren benötigten Parametern.</p>
+<p>Die Form eines Pfad-Elements wird durch ein Attribut definiert: {{ SVGAttr("d") }} (weiteres in <a href="/de/docs/Web/SVG/Tutorial/Basic_Shapes">grundlegende Formen</a>). Das <code>"d"</code> Attribut beinhaltet eine Folge an Befehlen und deren benötigten Parametern.</p>
 
-<p>Jeder dieser Befehle wird instanziert (z.B. das Erstellen einer Klasse, deren Benennung oder deren Lokalisierung) mit einem bestimmten Buchstaben. Beispielsweise: Verschiebe zur x- und y-Koordinate (10, 10). Der "Move to" Befehl wird mit dem Buchstaben M aufgerufen. Wenn der Parser zu diesem Buchstaben kommt, weiss er, dass eine Verschiebung zu einem Punkt erwünscht ist. Um nun also eine Verschiebung zu (10, 10) vorzunehmen, würde man den Befehl "M 10 10" benutzen. Danach liest der Parser der nächsten Befehl aus.</p>
+<p>Jeder dieser Befehle wird instanziert (z.B. das Erstellen einer Klasse, deren Benennung oder deren Lokalisierung) mit einem bestimmten Buchstaben. Beispielsweise: Verschiebe zur x- und y-Koordinate (10, 10). Der "Move to" Befehl wird mit dem Buchstaben M aufgerufen. Wenn der Parser zu diesem Buchstaben kommt, weiss er, dass eine Verschiebung zu einem Punkt erwünscht ist. Um nun also eine Verschiebung zu (10, 10) vorzunehmen, würde man den Befehl "M 10 10" benutzen. Danach liest der Parser der nächsten Befehl aus.</p>
 
-<p>Alle dieser Befehle gibt es in zwei Varianten. Ein <strong>Grossbuchstabe</strong> gibt absolute Koordinaten auf der Seite an und ein <strong>Kleinbuchstabe</strong> gibt relative Koordinaten (z.B. <em>verschiebe vom vorherigen Punkt 10px nach oben und 7px nach links</em>).</p>
+<p>Alle dieser Befehle gibt es in zwei Varianten. Ein <strong>Grossbuchstabe</strong> gibt absolute Koordinaten auf der Seite an und ein <strong>Kleinbuchstabe</strong> gibt relative Koordinaten (z.B. <em>verschiebe vom vorherigen Punkt 10px nach oben und 7px nach links</em>).</p>
 
-<p>Koordinaten im <code>"d"</code> Attribute sind <strong>immer einheitslos</strong> und somit im Benutzerkoordinatensystem. Später wird erläutert, wie Pfade transformiert werden können um anderen Bedürfnissen gerecht zu werden.</p>
+<p>Koordinaten im <code>"d"</code> Attribute sind <strong>immer einheitslos</strong> und somit im Benutzerkoordinatensystem. Später wird erläutert, wie Pfade transformiert werden können um anderen Bedürfnissen gerecht zu werden.</p>
 
 <h2 id="Linienbefehle">Linienbefehle</h2>
 
-<p>Es gibt fünf Linienbefehle für <code>&lt;path&gt;</code> Elemente. Der erste Befehl ist der "Move To" Befehl oder M, welcher oben beschrieben wurde. Er benötigt zwei Argumente, eine  Koordinate 'x' und eine Koordinate 'y' zu denen verschoben werden soll. Falls sich der Cursor bereits irgendwo auf der Seite befindet, wird keine Linie gezeichnet, um diese beiden Punkte zu verbinden. Der "Move To" Befehl erscheint am Anfang von Pfaddefinitionen, um festzulegen, wo mit der Zeichnung begonnen werden soll. z.B. :</p>
+<p>Es gibt fünf Linienbefehle für <code>&lt;path&gt;</code> Elemente. Der erste Befehl ist der "Move To" Befehl oder M, welcher oben beschrieben wurde. Er benötigt zwei Argumente, eine  Koordinate 'x' und eine Koordinate 'y' zu denen verschoben werden soll. Falls sich der Cursor bereits irgendwo auf der Seite befindet, wird keine Linie gezeichnet, um diese beiden Punkte zu verbinden. Der "Move To" Befehl erscheint am Anfang von Pfaddefinitionen, um festzulegen, wo mit der Zeichnung begonnen werden soll. z.B. :</p>
 
 <pre>M x y
 </pre>
@@ -46,18 +46,18 @@ original_slug: Web/SVG/Tutorial/Pfade
 
 &lt;/svg&gt;</pre>
 
-<p>Es gibt drei Befehle, mit denen Linien gezeichnet werden können. Am typischsten ist der "Line To" Befehl, aufgerufen mit <code>L</code>. <code>L</code> benötigt zwei Parameter – x und y Koordinaten – und zeichnet eine Linie von der aktuellen Position zu einer neuen Position.</p>
+<p>Es gibt drei Befehle, mit denen Linien gezeichnet werden können. Am typischsten ist der "Line To" Befehl, aufgerufen mit <code>L</code>. <code>L</code> benötigt zwei Parameter – x und y Koordinaten – und zeichnet eine Linie von der aktuellen Position zu einer neuen Position.</p>
 
 <pre> L x y (oder l dx dy)
 </pre>
 
-<p>Es gibt zwei abgekürzte Formen um horizontale und vertikale Linien zu zeichnen. <code>H</code> zeichnet eine horizontale Line und <code>V</code> zeichnet eine vertikale Linie. Beide Befehle benötigen nur ein Argument, da sie nur in eine Richtung verschieben.</p>
+<p>Es gibt zwei abgekürzte Formen um horizontale und vertikale Linien zu zeichnen. <code>H</code> zeichnet eine horizontale Line und <code>V</code> zeichnet eine vertikale Linie. Beide Befehle benötigen nur ein Argument, da sie nur in eine Richtung verschieben.</p>
 
 <pre> H x (oder h dx)
  V y (oder v dy)
 </pre>
 
-<p>Eine einfache Anwendung ist das Zeichnen einer Form. Wir werden mit einem Rechteck beginnen (die Art, die auch einfacher mit dem <code>&lt;rect&gt;</code> Element erstellt werden könnte). Es wird nur aus horizontalen und vertikalen Linien zusammengestellt<span style="line-height: 1.5;">:</span></p>
+<p>Eine einfache Anwendung ist das Zeichnen einer Form. Wir werden mit einem Rechteck beginnen (die Art, die auch einfacher mit dem <code>&lt;rect&gt;</code> Element erstellt werden könnte). Es wird nur aus horizontalen und vertikalen Linien zusammengestellt<span style="line-height: 1.5;">:</span></p>
 
 <p><img alt="" class="internal" src="/@api/deki/files/292/=Path_Line_Commands.png" style="float: right;"></p>
 
@@ -73,7 +73,7 @@ original_slug: Web/SVG/Tutorial/Pfade
 
 &lt;/svg&gt;</pre>
 
-<p>Wir können die obige Pfaddefinition ein wenig kürzen, indem wir den "Close Path" Befehl verwenden, welcher mit <code>Z</code> aufgerufen wird. Dieser Befehl zeichnet eine gerade Linie von der aktuellen Position zum ersten Punkt des Pfades. Er wird oft am Ende eines Pfad Elements verwendet, allerdings nicht immer. Es gibt keinen unterschied zwischen dem gross oder klein geschriebenen Befehl.</p>
+<p>Wir können die obige Pfaddefinition ein wenig kürzen, indem wir den "Close Path" Befehl verwenden, welcher mit <code>Z</code> aufgerufen wird. Dieser Befehl zeichnet eine gerade Linie von der aktuellen Position zum ersten Punkt des Pfades. Er wird oft am Ende eines Pfad Elements verwendet, allerdings nicht immer. Es gibt keinen unterschied zwischen dem gross oder klein geschriebenen Befehl.</p>
 
 <pre> Z (oder z)
 </pre>
@@ -83,7 +83,7 @@ original_slug: Web/SVG/Tutorial/Pfade
 <pre class="brush: xml"> &lt;path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/&gt;
 </pre>
 
-<p>Sie können auch die relative Form dieser Befehle verwenden, um das gleiche Bild zu zeichnen. Relative Befehle werden mit Kleinbuchstaben aufgerufen und anstatt den Cursor auf eine genaue Koordinate zu bewegen, bewegen sie ihn relativ zu seiner letzten Position. Da unsere Box beispielsweise 80 x 80 ist, hätte das Pfad-Element so geschrieben werden können:</p>
+<p>Sie können auch die relative Form dieser Befehle verwenden, um das gleiche Bild zu zeichnen. Relative Befehle werden mit Kleinbuchstaben aufgerufen und anstatt den Cursor auf eine genaue Koordinate zu bewegen, bewegen sie ihn relativ zu seiner letzten Position. Da unsere Box beispielsweise 80 x 80 ist, hätte das Pfad-Element so geschrieben werden können:</p>
 
 <pre class="brush: xml"> &lt;path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/&gt;
 </pre>
@@ -124,12 +124,12 @@ original_slug: Web/SVG/Tutorial/Pfade
 
 <p>Das obige Beispiel erstellt neun kubische Bezier-Kurven. Wenn sich die Kurven nach rechts bewegen, werden die Kontrollpunkte horizontal gespreizt. Wenn sich die Kurven nach unten bewegen, werden sie weiter von den Endpunkten getrennt. Zu beachten ist hier, dass die Kurve in Richtung des ersten Kontrollpunktes beginnt und sich dann so biegt, dass sie in Richtung des zweiten Kontrollpunktes verläuft.</p>
 
-<p>Es ist möglich, mehrere Bezier-Kurven aneinander zu reihen, um erweiterte, gleichmäßige Formen zu erzeugen. Häufig ist der Kontrollpunkt auf der einen Seite eines Punktes eine Reflexion des Kontrollpunktes auf der anderen Seite, um die Steigung konstant zu halten. In diesem Fall können Sie eine abgekürzte Version des kubischen Bezier verwenden, die durch den Befehl <code>S</code> (oder <code>s</code>) definiert wird.</p>
+<p>Es ist möglich, mehrere Bezier-Kurven aneinander zu reihen, um erweiterte, gleichmäßige Formen zu erzeugen. Häufig ist der Kontrollpunkt auf der einen Seite eines Punktes eine Reflexion des Kontrollpunktes auf der anderen Seite, um die Steigung konstant zu halten. In diesem Fall können Sie eine abgekürzte Version des kubischen Bezier verwenden, die durch den Befehl <code>S</code> (oder <code>s</code>) definiert wird.</p>
 
 <pre> S x2 y2, x y (oder s dx2 dy2, dx dy)
 </pre>
 
-<p><code>S</code> erstellt den selben Kurventyp wie zuvor. Wenn er aber einem anderen <code>S</code>- oder <code>C</code>-Befehl folgt, wird angenommen, dass der erste Kontrollpunkt eine Reflexion des zuvor verwendeten ist. Folgt der Befehl <code>S</code> nicht einem anderen <code>S</code>- oder <code>C</code>-Befehl, so wird die aktuelle Position des Cursors als erster Kontrollpunkt verwendet. In diesem Fall ist das Ergebnis das gleiche wie das, was der <code>Q</code>-Befehl mit den gleichen Parametern ergeben hätte. Ein Beispiel für diese Syntax ist unten dargestellt, und in der Abbildung links sind die angegebenen Kontrollpunkte rot und der daraus abgeleitete Kontrollpunkt blau dargestellt.</p>
+<p><code>S</code> erstellt den selben Kurventyp wie zuvor. Wenn er aber einem anderen <code>S</code>- oder <code>C</code>-Befehl folgt, wird angenommen, dass der erste Kontrollpunkt eine Reflexion des zuvor verwendeten ist. Folgt der Befehl <code>S</code> nicht einem anderen <code>S</code>- oder <code>C</code>-Befehl, so wird die aktuelle Position des Cursors als erster Kontrollpunkt verwendet. In diesem Fall ist das Ergebnis das gleiche wie das, was der <code>Q</code>-Befehl mit den gleichen Parametern ergeben hätte. Ein Beispiel für diese Syntax ist unten dargestellt, und in der Abbildung links sind die angegebenen Kontrollpunkte rot und der daraus abgeleitete Kontrollpunkt blau dargestellt.</p>
 
 <p><img alt="ShortCut_Cubic_Bezier_with_grid.png" class="internal" src="https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
 
@@ -175,7 +175,7 @@ original_slug: Web/SVG/Tutorial/Pfade
  a rx ry x-Achsen-Drehung Bogen-Flag Ausschwenkungs-Flag dx dy
 </pre>
 
-<p>An seinem Anfang nimmt das Bogenelement zwei Argumente für den x-Radius und den y-Radius auf. Falls benötigt, schlagen sie <a href="/en-US/Web/SVG/Element/ellipse">Ellipsen</a> nach, um deren Verhaltensweisen zu verstehen. Die letzten beiden Argumente bezeichnen die x- und y-Koordinaten um den Konturverlauf zu beenden. Zusammen bilden diese vier Werte die Grundstruktur des Bogens.</p>
+<p>An seinem Anfang nimmt das Bogenelement zwei Argumente für den x-Radius und den y-Radius auf. Falls benötigt, schlagen sie <a href="/en-US/Web/SVG/Element/ellipse">Ellipsen</a> nach, um deren Verhaltensweisen zu verstehen. Die letzten beiden Argumente bezeichnen die x- und y-Koordinaten um den Konturverlauf zu beenden. Zusammen bilden diese vier Werte die Grundstruktur des Bogens.</p>
 
 <p>Der dritte Parameter beschreibt die Drehung des Bogens. Dies lässt sich am besten an einem Beispiel erklären:</p>
 
@@ -190,23 +190,23 @@ original_slug: Web/SVG/Tutorial/Pfade
            L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>Dieses Beispiel zeigt ein Pfad-Element, welches diagonal über die Seite verläuft. In dessen Mitte wurden zwei elliptische Bögen (x-Radius = 30, y-Radius = 50) ausgeschnitten. Im ersten Bogen wurde die x-Achsen-Rotation bei 0 gelassen, damit die Ellipse, um die der Bogen verläuft (in grau abgebildet) gerade nach oben und unten ausgerichtet wird. Im zweiten Bogen wurde die x-Achsen-Rotation allerdings auf -45 Grad gesetzt. Das dreht die Ellipse, damit sie mit der kürzeren Achse der Pfadrichtung ausgerichtet wird, wie im Beispielbild durch die zweite Ellipse dargestellt.</p>
+<p>Dieses Beispiel zeigt ein Pfad-Element, welches diagonal über die Seite verläuft. In dessen Mitte wurden zwei elliptische Bögen (x-Radius = 30, y-Radius = 50) ausgeschnitten. Im ersten Bogen wurde die x-Achsen-Rotation bei 0 gelassen, damit die Ellipse, um die der Bogen verläuft (in grau abgebildet) gerade nach oben und unten ausgerichtet wird. Im zweiten Bogen wurde die x-Achsen-Rotation allerdings auf -45 Grad gesetzt. Das dreht die Ellipse, damit sie mit der kürzeren Achse der Pfadrichtung ausgerichtet wird, wie im Beispielbild durch die zweite Ellipse dargestellt.</p>
 
 <p>Für die ungedrehte Ellipse im obigen Bild gibt es zwei verschiedene Bögen, zwischen denen gewählt werden kann, nicht vier, da die Linie, die vom Anfang bis zum Ende des Bogens durch die Mitte der Ellipse verläuft. In einem leicht veränderten Beispiel können Sie die zwei Ellipsen sehen, die die vier verschiedenen Bögen bilden.</p>
 
 <p><img alt="Show the 4 arcs on the Ellipse example" src="https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png" style="height: 320px; width: 320px;"></p>
 
 <pre>&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
-  &lt;path d="M10 315
-           L 110 215
-           A 36 60 0 0 1 150.71 170.29
-           L 172.55 152.45
-           A 30 50 -45 0 1 215.1 109.9
-           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/&gt;
-  &lt;circle cx="150.71" cy="170.29" r="2" fill="red"/&gt;
-  &lt;circle cx="110" cy="215" r="2" fill="red"/&gt;
-  &lt;ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
-  &lt;ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
+  &lt;path d="M10 315
+           L 110 215
+           A 36 60 0 0 1 150.71 170.29
+           L 172.55 152.45
+           A 30 50 -45 0 1 215.1 109.9
+           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/&gt;
+  &lt;circle cx="150.71" cy="170.29" r="2" fill="red"/&gt;
+  &lt;circle cx="110" cy="215" r="2" fill="red"/&gt;
+  &lt;ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
+  &lt;ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
 &lt;/svg&gt;
 </pre>
 
@@ -235,6 +235,6 @@ original_slug: Web/SVG/Tutorial/Pfade
 
 <p>Bögen sind eine einfache Möglichkeit, Kreise oder Ellipsen in Ihren Zeichnungen zu erstellen. Zum Beispiel würde ein Kreisdiagramm für jedes Stück einen anderen Bogen erfordern.</p>
 
-<p>Falls sie SVG aus <a href="/de/HTML/Canvas">Canvas</a> herleiten können Bögen die meisten Verständnisprobleme verursachen, allerdings sind sie auch viel mächtiger. Vollständige Kreise und Ellipsen sind eigentlich die einzigen Formen, bei denen SVG-Bögen Probleme beim Zeichnen haben. Da der Start- und Endpunkt für jeden Pfad, der um einen Kreis verläuft, der gleiche Punkt ist, gibt es eine unendliche Anzahl von Kreisen, die ausgewählt werden können, und der tatsächliche Pfad ist undefiniert. Es ist möglich, sie anzunähern, indem man den Start- und Endpunkt des Pfades leicht schräg stellt und ihn dann mit einem anderen Pfadsegment verbindet. Beispielsweise können Sie für jeden Halbkreis einen Kreis mit einem Bogen erstellen. An diesem Punkt ist es oft einfacher, ein Kreis- oder Ellipsen-Element zu verwenden. Diese interaktive Codepen könnte ihnen vieleicht beim Verständnis der Konzepte hinter SVG Bögen zu verstehen: <a href="http://codepen.io/lingtalfi/pen/yaLWJG">http://codepen.io/lingtalfi/pen/yaLWJG</a> (nur in Chrome und Firefox getestet, funktioniert möglicherweise nicht in Ihrem Browser)</p>
+<p>Falls sie SVG aus <a href="/de/HTML/Canvas">Canvas</a> herleiten können Bögen die meisten Verständnisprobleme verursachen, allerdings sind sie auch viel mächtiger. Vollständige Kreise und Ellipsen sind eigentlich die einzigen Formen, bei denen SVG-Bögen Probleme beim Zeichnen haben. Da der Start- und Endpunkt für jeden Pfad, der um einen Kreis verläuft, der gleiche Punkt ist, gibt es eine unendliche Anzahl von Kreisen, die ausgewählt werden können, und der tatsächliche Pfad ist undefiniert. Es ist möglich, sie anzunähern, indem man den Start- und Endpunkt des Pfades leicht schräg stellt und ihn dann mit einem anderen Pfadsegment verbindet. Beispielsweise können Sie für jeden Halbkreis einen Kreis mit einem Bogen erstellen. An diesem Punkt ist es oft einfacher, ein Kreis- oder Ellipsen-Element zu verwenden. Diese interaktive Codepen könnte ihnen vieleicht beim Verständnis der Konzepte hinter SVG Bögen zu verstehen: <a href="http://codepen.io/lingtalfi/pen/yaLWJG">http://codepen.io/lingtalfi/pen/yaLWJG</a> (nur in Chrome und Firefox getestet, funktioniert möglicherweise nicht in Ihrem Browser)</p>
 
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}</p>

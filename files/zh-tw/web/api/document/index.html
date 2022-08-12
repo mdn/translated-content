@@ -48,7 +48,7 @@ translation_of: Web/API/Document
  <dd>Returns the document location as a string.</dd>
  <dt>{{domxref("Document.domConfig")}} {{Deprecated_inline}}</dt>
  <dd>Should return a {{domxref("DOMConfiguration")}} object.</dd>
- <dt>{{domxref("Document.fullscreen")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
  <dd><code>true</code> when the document is in {{domxref("Using_full-screen_mode","full-screen mode")}}.</dd>
  <dt>{{domxref("Document.hidden")}} {{readonlyinline}}</dt>
  <dd>…</dd>
@@ -86,9 +86,9 @@ translation_of: Web/API/Document
  </dd>
  <dt>{{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}</dt>
  <dd>Returns the encoding as determined by the XML declaration.</dd>
- <dt>{{domxref("Document.xmlStandalone")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlStandalone")}} {{Deprecated_Inline}}</dt>
  <dd>Returns <code>true</code> if the XML declaration specifies the document to be standalone (<em>e.g.,</em> An external part of the DTD affects the document's content), else <code>false</code>.</dd>
- <dt>{{domxref("Document.xmlVersion")}} {{obsolete_inline("10.0")}}</dt>
+ <dt>{{domxref("Document.xmlVersion")}} {{Deprecated_Inline}}</dt>
  <dd>Returns the version number as specified in the XML declaration or <code>"1.0"</code> if the declaration is absent.</dd>
 </dl>
 
@@ -131,7 +131,7 @@ translation_of: Web/API/Document
  <dd>Returns a list of the {{HTMLElement("form")}} elements within the current document.</dd>
  <dt>{{domxref("Document.head")}} {{readonlyinline}}</dt>
  <dd>Returns the {{HTMLElement("head")}} element of the current document.</dd>
- <dt>{{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.height")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the height of the current document.</dd>
  <dt>{{domxref("Document.images")}} {{readonlyinline}}</dt>
  <dd>Returns a list of the images in the current document.</dd>
@@ -157,7 +157,7 @@ translation_of: Web/API/Document
  <dd>Returns the document location as a string.</dd>
  <dt>{{domxref("Document.vlinkColor")}} {{Deprecated_inline}}</dt>
  <dd>Gets/sets the color of visited hyperlinks.</dd>
- <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns the width of the current document.</dd>
 </dl>
 
@@ -221,7 +221,7 @@ translation_of: Web/API/Document
  <dd>Creates a new element with the given tag name.</dd>
  <dt>{{domxref("Document.createElementNS()")}}</dt>
  <dd>Creates a new element with the given tag name and namespace URI.</dd>
- <dt>{{domxref("Document.createEntityReference()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.createEntityReference()")}} {{Deprecated_Inline}}</dt>
  <dd>Creates a new entity reference object and returns it.</dd>
  <dt>{{domxref("Document.createEvent()")}}</dt>
  <dd>Creates an event object.</dd>
@@ -257,7 +257,7 @@ translation_of: Web/API/Document
  <dd>Returns a list of elements with the given tag name and namespace.</dd>
  <dt>{{domxref("Document.importNode()")}}</dt>
  <dd>Returns a clone of a node from an external document.</dd>
- <dt>{{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.normalizeDocument()")}} {{Deprecated_Inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
  <dt>{{domxref("Document.registerElement()")}} {{experimental_inline}}</dt>
  <dd>Registers a web component.</dd>
@@ -265,7 +265,7 @@ translation_of: Web/API/Document
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
  <dt>{{domxref("Document.releaseEvents()")}} {{non-standard_inline}} {{Deprecated_inline}}</dt>
  <dd>See {{domxref("Window.releaseEvents()")}}.</dd>
- <dt>{{domxref("Document.routeEvent()")}} {{non-standard_inline}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Document.routeEvent()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>See {{domxref("Window.routeEvent()")}}.</dd>
  <dt>{{domxref("Document.mozSetImageElement()")}} {{non-standard_inline}}</dt>
  <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
@@ -352,13 +352,13 @@ translation_of: Web/API/Document
 <p>Mozilla also define some non-standard methods:</p>
 
 <dl>
- <dt>{{domxref("document.execCommandShowHelp")}} {{obsolete_inline("14.0")}}</dt>
+ <dt>{{domxref("document.execCommandShowHelp")}} {{Deprecated_Inline}}</dt>
  <dd>This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
- <dt>{{domxref("document.getBoxObjectFor")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("document.getBoxObjectFor")}} {{Deprecated_Inline}}</dt>
  <dd>Use the {{domxref("Element.getBoundingClientRect()")}} method instead.</dd>
  <dt>{{domxref("document.loadOverlay")}}</dt>
  <dd>Loads a <a href="/en-US/docs/XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
- <dt>{{domxref("document.queryCommandText")}} {{obsolete_inline("14.0")}}</dt>
+ <dt>{{domxref("document.queryCommandText")}} {{Deprecated_Inline}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
 </dl>
 
@@ -367,7 +367,7 @@ translation_of: Web/API/Document
 <p>Microsoft defines some non-standard properties:</p>
 
 <dl>
- <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
  <dt>Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</dt>
 </dl>

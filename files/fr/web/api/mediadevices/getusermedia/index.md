@@ -243,7 +243,7 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple, un
 }
 ```
 
-Voir [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
+Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
 ## Specifications
 

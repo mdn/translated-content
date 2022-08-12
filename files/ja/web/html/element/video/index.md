@@ -4,24 +4,23 @@ slug: Web/HTML/Element/video
 tags:
   - Element
   - HTML
-  - HTML 動画
+  - HTML Video
   - HTML Video Player
   - HTML embedded content
   - HTML5
   - Media
   - Movie Playback
   - Movies
-  - マルチメディア
+  - Multimedia
   - Playing Movies
   - Playing Video
-  - リファレンス
+  - Reference
   - Showing Video
-  - 動画
-  - ウェブ
+  - Video
+  - Web
 browser-compat: html.elements.video
 translation_of: Web/HTML/Element/video
 ---
-
 {{HTMLRef}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
@@ -78,7 +77,7 @@ translation_of: Web/HTML/Element/video
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
 - {{htmlattrdef("height")}}
-  - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します。（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)。）
+  - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
 - {{htmlattrdef("loop")}}
   - : 論理型の属性です。指定された場合、ブラウザーは動画の末尾に達すると、自動的に先頭に戻ります。
 - {{htmlattrdef("muted")}}
@@ -120,7 +119,7 @@ translation_of: Web/HTML/Element/video
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         {{DOMxRef("ScriptProcessorNode")}} の入力バッファが処理可能になった。
@@ -324,11 +323,33 @@ elem.audioTracks.onremovetrack = function(event) {
 
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して {{domxref("VideoTrackList/addtrack_event", "addtrack")}} および {{domxref("VideoTrackList/removetrack_event", "removetrack")}} イベントを監視することもできます。
 
+### 動画へのサーバーの対応
+
+サーバーで動画の MIME タイプが適切に設定されていないと、動画が表示されないか X 印がついた灰色のボックスが表示される（JavaScript が有効である場合）可能性があります。
+
+Ogg Theora 形式で動画を提供する場合、 Apache Web Server では "video/ogg" MIME タイプに動画ファイルの拡張子を追加すると問題が解決します。もっとも一般的な動画ファイルの拡張子は ".ogm", ".ogv", ".ogg" です。"/etc/apache" の "mime.types" ファイルを編集するか、 `httpd.conf` で `"AddType"` の設定ディレクティブを使用してください。
+
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
+
+WebM 形式で動画を提供する場合、 Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子 (一般的には ".webm") を MIME type "video/webm" に追加することで問題が解決します。
+
+```
+AddType video/webm .webm
+```
+
+ウェブホスティングサービスでは、全体の更新が行われるまでの間、新技術向けに MIME タイプの設定を変更するための簡単なインターフェイスを提供しているかもしれません。
+
 ## 例
 
-### 単純な動画の例
+### 単一のソース
 
 この例では、アクティブ化されたときに動画を再生し、再生を制御するためにブラウザーの既定の動画コントロールをユーザーに提供します。
+
+#### HTML
 
 ```html
 <!-- Simple video example -->
@@ -346,13 +367,17 @@ elem.audioTracks.onremovetrack = function(event) {
 </video>
 ```
 
-{{EmbedLiveSample('Simple_video_example', '640', '370', '', 'Web/HTML/Element/video')}}
+#### 結果
+
+{{EmbedLiveSample('Single source', '', '400')}}
 
 動画の再生が始まるまで、 `poster` 属性で指定された画像がその場所に表示されます。ブラウザーが動画の再生に対応していない場合は、代替テキストが表示されます。
 
-### 複数のソースの例
+### 複数のソース
 
 この例は、メディアの 3 つの異なるソースを提供する最後のものをベースにしています。これにより、ブラウザーで対応している動画コーデックに関係なく、動画を見ることができます。
+
+#### HTML
 
 ```html
 <!-- Using multiple sources as fallbacks for a video tag -->
@@ -374,31 +399,13 @@ elem.audioTracks.onremovetrack = function(event) {
 </video>
 ```
 
-{{EmbedLiveSample('Multiple_sources_example', '640', '370')}}
+#### 結果
+
+{{EmbedLiveSample('Multiple sources', '', '400')}}
 
 はじめに [WebM](/ja/docs/Web/Media/Formats/Containers#webm) を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Formats/Containers#mp4) を試します。最後に [Ogg](/ja/docs/Web/Media/Formats/Containers#ogg) を試します。 video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
 
 メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
-
-### 動画へのサーバーの対応
-
-サーバーで動画の MIME タイプが適切に設定されていないと、動画が表示されないか X 印がついた灰色のボックスが表示される（JavaScript が有効である場合）可能性があります。
-
-Ogg Theora 形式で動画を提供する場合、 Apache Web Server では "video/ogg" MIME タイプに動画ファイルの拡張子を追加すると問題が解決します。もっとも一般的な動画ファイルの拡張子は ".ogm", ".ogv", ".ogg" です。"/etc/apache" の "mime.types" ファイルを編集するか、 `httpd.conf` で `"AddType"` の設定ディレクティブを使用してください。
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-WebM 形式で動画を提供する場合、 Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子 (一般的には ".webm") を MIME type "video/webm" に追加することで問題が解決します。
-
-```
-AddType video/webm .webm
-```
-
-ウェブホスティングサービスでは、全体の更新が行われるまでの間、新技術向けに MIME タイプの設定を変更するための簡単なインターフェイスを提供しているかもしれません。
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
@@ -430,7 +437,6 @@ AddType video/webm .webm
 
 字幕は動画の主題を邪魔しないようにしてください。これは [`align` VTT キュー設定](/ja/docs/Web/API/WebVTT_API#cue_settings)を使用して位置を決めることができます。
 
-- [MDN 字幕とクローズドキャプション — プラグイン](/ja/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/ja/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
@@ -446,7 +452,7 @@ AddType video/webm .webm
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 記述コンテンツ, 埋め込みコンテンツ。 {{htmlattrxref("controls", "video")}} 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>

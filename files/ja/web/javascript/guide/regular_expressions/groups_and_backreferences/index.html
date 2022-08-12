@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   <tr>
    <td><code>(<em>x</em>)</code></td>
    <td>
-    <p><strong>キャプチャグループ：</strong> <code><em>x</em></code> にマッチし、マッチした内容を記憶します。例えば <code>/(foo)/</code> は "foo bar" の "foo" にマッチし、記憶します。</p>
+    <p><strong>キャプチャグループ：</strong> <code><em>x</em></code> にマッチし、マッチした内容を記憶します。例えば <code>/(foo)/</code> は "foo bar" の "foo" にマッチし、記憶します。</p>
 
     <p>正規表現は複数のキャプチャグループを持つことができます。結果、一般的にキャプチャグループ内の左括弧と同じ順にある、配列の要素のキャプチャグループに一致しています。たいていの場合、これはキャプチャグループ自身の順番です。これはキャプチャグループがネストしている場合に重要です。マッチは結果の要素のインデックス (<code>[1], ..., [n]</code>) や、あらかじめ定義されている <code>RegExp</code> オブジェクトのプロパティ (<code>$1, ..., $9</code>) を使ってアクセスできます。</p>
 
@@ -79,7 +79,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
    <td>
     <p><strong>名前付きキャプチャグループ：</strong> <code>x</code> にマッチし、<code>&lt;Name&gt;</code> で指定された名前に従い、返されるマッチの <code>groups</code> プロパティに記憶されます。三角括弧 ('<code>&lt;</code>' と '<code>&gt;</code>') にはグループ名が必須です。</p>
 
-    <p>例えば、電話番号からアメリカのエリアコードを取り出す際、<code>/\((?&lt;area&gt;\d\d\d)\)/</code> を使うことができます。 結果の番号は <code>matches.groups.area</code> に表示されます。</p>
+    <p>例えば、電話番号からアメリカのエリアコードを取り出す際、<code>/\((?&lt;area&gt;\d\d\d)\)/</code> を使うことができます。 結果の番号は <code>matches.groups.area</code> に表示されます。</p>
    </td>
   </tr>
   <tr>

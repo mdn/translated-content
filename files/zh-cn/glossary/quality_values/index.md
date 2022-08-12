@@ -9,7 +9,9 @@ translation_of: Glossary/Quality_values
 
 以下语法
 
-    text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
+text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
 
 表明优先级先后顺序：
 
@@ -21,7 +23,9 @@ translation_of: Glossary/Quality_values
 
 如果前面这两个值未定义优先级，值的顺序并不重要。然而，q 值相同时，值越具体，其优先级越高。
 
-    text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
+text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
 
 | Value 值    | Priority 优先级               |
 | ----------- | ----------------------------- |

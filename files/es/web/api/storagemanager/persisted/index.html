@@ -11,7 +11,7 @@ translation_of: Web/API/StorageManager/persisted
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">La propiedad <strong><code>persisted</code></strong> de la interfaz {{domxref("StorageManager")}} devuelve una {{jsxref('Promise')}} que se resuelve como <code>true</code> si <em>box mode</em> es</span> persistente <span class="seoSummary">para el alamacenamiento de su sitio.</span></p>
+<p><span class="seoSummary">La propiedad <strong><code>persisted</code></strong> de la interfaz {{domxref("StorageManager")}} devuelve una {{jsxref('Promise')}} que se resuelve como <code>true</code> si <em>box mode</em> es</span> persistente <span class="seoSummary">para el alamacenamiento de su sitio.</span></p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -28,12 +28,12 @@ translation_of: Web/API/StorageManager/persisted
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <pre class="brush: js"><code>if (navigator.storage &amp;&amp; navigator.storage.persist)
-  navigator.storage.persisted().then(function(persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
-  });</code></pre>
+  navigator.storage.persisted().then(function(persistent) {
+    if (persistent)
+      console.log("Storage will not be cleared except by explicit user action");
+    else
+      console.log("Storage may be cleared by the UA under storage pressure.");
+  });</code></pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

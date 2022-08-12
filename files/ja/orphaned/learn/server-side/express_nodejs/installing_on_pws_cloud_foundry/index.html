@@ -17,15 +17,15 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 <ul>
  <li>PWS has a <a href="https://run.pivotla.io/pricing">flexible pricing</a> that is extremely well tuned for small runtimes such as node. It's possible to run a redundant pair of your app for less than $5 per month. That includes a standby failover system to take over running your app if the main server fails at any point.</li>
  <li>As a PaaS, PWS takes care of a lot of the web infrastructure for us. This makes it much easier to get started, because you don't worry about servers, load balancers, reverse proxies, restarting your website on a crash, or any of the other web infrastructure that PWS provides for us under the hood.</li>
- <li>Because PWS is using Cloud Foundry, an open platform. You can therefore easily deploy your application to other Cloud Foundry providers such as <a href="https://www.ibm.com/cloud-computing/bluemix/">IBM BlueMix</a>, <a href="https://www.anynines.com/">AnyNines</a> and <a href="https://www.swisscom.ch/en/business/enterprise/offer/cloud-data-center-services/paas/application-cloud.html">Swisscomm Application Cloud</a>. The below instructions will work with any standard Cloud Foundry deployment with minor modifications.</li>
+ <li>Because PWS is using Cloud Foundry, an open platform. You can therefore easily deploy your application to other Cloud Foundry providers such as <a href="https://www.ibm.com/cloud-computing/bluemix/">IBM BlueMix</a>, <a href="https://www.anynines.com/">AnyNines</a> and <a href="https://www.swisscom.ch/en/business/enterprise/offer/cloud-data-center-services/paas/application-cloud.html">Swisscomm Application Cloud</a>. The below instructions will work with any standard Cloud Foundry deployment with minor modifications.</li>
  <li>While it does have some limitations, these will not affect this particular application. For example:
   <ul>
-   <li>PWS and Cloud Foundry provide only short-lived storage so user-uploaded files cannot safely be stored on PWS itself.</li>
+   <li>PWS and Cloud Foundry provide only short-lived storage so user-uploaded files cannot safely be stored on PWS itself.</li>
    <li>The free trial is good for a year and only up to $87 of app usage. For a typical Node app that means you can run an app for an entire year.</li>
   </ul>
  </li>
  <li>Mostly it just works, and if you end up loving it and want to upgrade, scaling your app is very easy.</li>
- <li>PWS and other Cloud Foundry applications are used for production apps. </li>
+ <li>PWS and other Cloud Foundry applications are used for production apps. </li>
 </ul>
 
 <h2 id="How_does_PWS_work_2">How does PWS work?</h2>
@@ -43,7 +43,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 <ul>
  <li>Configuring the package.json file to run with the engines available on PWS.</li>
  <li>Adding and installing the<a href="https://github.com/cloudfoundry-community/node-cfenv"> 'cfenv' node module</a> to make working with services easier.</li>
- <li>Using the cfenv module to connect to a MongoDB instance from mLab that was created and bound using the PWS marketplace.</li>
+ <li>Using the cfenv module to connect to a MongoDB instance from mLab that was created and bound using the PWS marketplace.</li>
  <li>Using the <a href="https://github.com/cloudfoundry/cli">cf CLI</a> tool to create a new mongoDB service instance and bind it to the local library application.</li>
  <li>How to set environment variables for Node using the cf CLI.</li>
  <li>How to look at logs, again using the cf CLI tool.</li>
@@ -56,18 +56,18 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 <p>You'll then need to follow the preparation steps listed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#Getting_your_website_ready_to_publish">Getting your website ready to publish</a> section of <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a>, before then following the steps listed below.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This work flow is based on the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#Example_Installing_LocalLibrary_on_Heroku">Mozilla Heroku work flow in the main Express/Node tutorial series</a> for consistency, to help readers compare and contrast. </p>
+<p><strong>Note</strong>: This work flow is based on the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#Example_Installing_LocalLibrary_on_Heroku">Mozilla Heroku work flow in the main Express/Node tutorial series</a> for consistency, to help readers compare and contrast. </p>
 </div>
 
 <h2 id="Modifying_the_LocalLibrary_for_PWS">Modifying the LocalLibrary for PWS</h2>
 
 <p id="How_does_PWS_work">Deployment of a Node application on Cloud Foundry takes the following steps. Using the downloaded 'cf' CLI tool on your environment, your source code and supporting metadata files are uploaded to Cloud Foundry which will assemble and package the components of your application. Note that your files need to be located on your system to deploy or as a zip archive somewhere accessible on the internet. We'll assume the former.</p>
 
-<p>This means, no assumptions about which source control system is used. As long as you have a complete source tree in your local file system you can deploy the app. There are some things you have to make available to ensure the correctly assembly of your Node application. First Cloud Foundry cf CLI will look for the presence of the 'package.json' file to determine the dependencies and download the necessary components. The rules of this assembly are defined in Cloud Foundry's <a href="http://docs.run.pivotal.io/buildpacks/node/">nodejs buildpack</a>. An optional cloud foundry manifest file can specify information about your application such as name, size and start command if non-standard. In addition to deploying the application, the cf CLI tool can also configure services, set environment variables and view logs. That's all the overview you need in order to get started (see <a href="https://docs.run.pivotal.io">Getting Started on Pivotal Web Services</a> for a more comprehensive guide). Let's start making the changes so you'll need to deploy the <em>LocalLibrary</em> application to  PWS.</p>
+<p>This means, no assumptions about which source control system is used. As long as you have a complete source tree in your local file system you can deploy the app. There are some things you have to make available to ensure the correctly assembly of your Node application. First Cloud Foundry cf CLI will look for the presence of the 'package.json' file to determine the dependencies and download the necessary components. The rules of this assembly are defined in Cloud Foundry's <a href="http://docs.run.pivotal.io/buildpacks/node/">nodejs buildpack</a>. An optional cloud foundry manifest file can specify information about your application such as name, size and start command if non-standard. In addition to deploying the application, the cf CLI tool can also configure services, set environment variables and view logs. That's all the overview you need in order to get started (see <a href="https://docs.run.pivotal.io">Getting Started on Pivotal Web Services</a> for a more comprehensive guide). Let's start making the changes so you'll need to deploy the <em>LocalLibrary</em> application to  PWS.</p>
 
 <h3 id="Set_node_version">Set node version</h3>
 
-<p>The <strong>package.json</strong> contains everything needed to work out your application dependencies and what file should be launched to start your site. Cloud Foundry and PWS detects the presence of this file, and will use it to provision your app environment. The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
+<p>The <strong>package.json</strong> contains everything needed to work out your application dependencies and what file should be launched to start your site. Cloud Foundry and PWS detects the presence of this file, and will use it to provision your app environment. The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
 
 <pre class="brush: bash">node --version
 # <em>will return version e.g. v6.10.3</em></pre>
@@ -81,7 +81,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
     "node": "6.10.3"
   },</strong>
   "private": true,
-  ...
+  ...
 </pre>
 
 <h3 id="Database_configuration">Database configuration</h3>
@@ -114,7 +114,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 
 </pre>
 
-<p>Writing the code to extract and parse this environment variable is not hard, but it doesn't add a lot of value when others have written libraries to do this. In this case, there is a node.js package we can use called <a href="https://github.com/cloudfoundry-community/node-cfenv"><em>cfenv</em></a>.</p>
+<p>Writing the code to extract and parse this environment variable is not hard, but it doesn't add a lot of value when others have written libraries to do this. In this case, there is a node.js package we can use called <a href="https://github.com/cloudfoundry-community/node-cfenv"><em>cfenv</em></a>.</p>
 
 <p>This will download the cfenv module and its dependencies, and modify the package.json file as required. Open <strong>app.js</strong> and find the block with all the 'requires' that load the modules into your application. In this example look for the line that looks something like this:</p>
 
@@ -126,7 +126,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 
 <ol>
  <li>
-  <p>To install the package, go to your terminal and make sure you are in the directory where the <code>package.json</code> file for LocalLibrary is. From the command line, type:</p>
+  <p>To install the package, go to your terminal and make sure you are in the directory where the <code>package.json</code> file for LocalLibrary is. From the command line, type:</p>
 
   <pre class="brush: bash">npm install cfenv</pre>
  </li>
@@ -140,18 +140,18 @@ var appEnv = cfenv.getAppEnv();
   <p>When this line executes, all the Cloud Foundry application environment information will become available to the application in the <code>appEnv</code> object.</p>
  </li>
  <li>
-  <p>Now it is time to update the application to use the database configured by the platform. Find the line that sets the mongoDB connection variable. It will look something like this:</p>
+  <p>Now it is time to update the application to use the database configured by the platform. Find the line that sets the mongoDB connection variable. It will look something like this:</p>
 
   <pre class="brush: js">var mongoDB = process.env.MONGODB_URI || dev_db_url;</pre>
  </li>
  <li>
-  <p>You will now modify the line with the following code  <code>appEnv.getServiceURL('node-express-tutorial-mongodb')</code> to get the connection string from an environment variable that is being managed by the <code>cfenv</code>  module. If no service has been created and bound it will use your own database URL you created as part of the tutorial instead of the one from the environment. So replace the line above with the following:</p>
+  <p>You will now modify the line with the following code  <code>appEnv.getServiceURL('node-express-tutorial-mongodb')</code> to get the connection string from an environment variable that is being managed by the <code>cfenv</code>  module. If no service has been created and bound it will use your own database URL you created as part of the tutorial instead of the one from the environment. So replace the line above with the following:</p>
 
   <pre class="brush: js">var mongoDB = appEnv.getServiceURL('node-express-tutorial-mongodb') || dev_db_url;
 </pre>
  </li>
  <li>
-  <p>Now run the site locally (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
+  <p>Now run the site locally (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
  </li>
 </ol>
 
@@ -163,8 +163,8 @@ var appEnv = cfenv.getAppEnv();
  <li>Go to <a href="https://run.pivotal.io">https://run.pivotal.io</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
  <li>Enter your details and then press <strong>CREATE FREE ACCOUNT</strong>. You'll be asked to check your email for a sign-up email.</li>
  <li>Click the account activation link in the signup email. You'll be taken back to your account on the web browser and you will complete the registration.</li>
- <li>You will set your password and go through the rest of the new user sign up and how to claim your free trial account. Note you need a mobile phone to confirm your account. You will receive an "org" account funded with $87 of application usage credit. Note your email account can be in multiple orgs on PWS. This is similar to your user account on services like GitHub.</li>
- <li>Go to <a href="https://login.run.pivotal.io">https://console.run.pivotal.io</a> and login in. You'll then be logged in and taken to the PWS dashboard: <a href="https://console.run.pivotal.io">https://console.run.pivotal.io</a>.</li>
+ <li>You will set your password and go through the rest of the new user sign up and how to claim your free trial account. Note you need a mobile phone to confirm your account. You will receive an "org" account funded with $87 of application usage credit. Note your email account can be in multiple orgs on PWS. This is similar to your user account on services like GitHub.</li>
+ <li>Go to <a href="https://login.run.pivotal.io">https://console.run.pivotal.io</a> and login in. You'll then be logged in and taken to the PWS dashboard: <a href="https://console.run.pivotal.io">https://console.run.pivotal.io</a>.</li>
 </ul>
 
 <h2 id="Install_the_cf_CLI_client">Install the cf CLI client</h2>
@@ -178,7 +178,7 @@ var appEnv = cfenv.getAppEnv();
 
 <h2 id="Create_and_upload_the_website">Create and upload the website</h2>
 
-<p>To create the app we navigate to the directory where our modified files are. This is the same directory where the LocalLibrary package.json file is located. First, let's tell the cf CLI which Cloud Foundry instance you want to use. We need to do this, since the cf CLI tool can be used with any standard Cloud Foundry system, so this command indicates which specific Cloud Foundry you are using. Enter the following terminal command now:</p>
+<p>To create the app we navigate to the directory where our modified files are. This is the same directory where the LocalLibrary package.json file is located. First, let's tell the cf CLI which Cloud Foundry instance you want to use. We need to do this, since the cf CLI tool can be used with any standard Cloud Foundry system, so this command indicates which specific Cloud Foundry you are using. Enter the following terminal command now:</p>
 
 <pre class="brush: bash">cf api api.run.pivotal.io</pre>
 
@@ -198,7 +198,7 @@ Password: enter your password</pre>
 
 <h2 id="Setting_configuration_variables">Setting configuration variables</h2>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
+<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
 
 <ol>
  <li>
@@ -208,7 +208,7 @@ Password: enter your password</pre>
 </pre>
  </li>
  <li>
-  <p>We should also use a separate database for production. Cloud Foundry can take advantage of a marketplace to create a new service and automatically bind it to your app. Bind means place the service database credentials in the environment variable space of the container running your application for you to access. Enter the following commands:</p>
+  <p>We should also use a separate database for production. Cloud Foundry can take advantage of a marketplace to create a new service and automatically bind it to your app. Bind means place the service database credentials in the environment variable space of the container running your application for you to access. Enter the following commands:</p>
 
   <pre class="brush: bash">cf create-service mlab sandbox node-express-tutorial-mongodb
 cf bind-service some-unique-name node-express-tutorial-mongodb

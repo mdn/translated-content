@@ -19,15 +19,15 @@ translation_of: Web/API/Window/openDialog
 </pre>
 
 <dl>
- <dt>newWindow </dt>
+ <dt>newWindow </dt>
  <dd>Das geöffnete Fenster</dd>
- <dt>url </dt>
+ <dt>url </dt>
  <dd>Die URL, die im neu geöffneten Fenster geladen wird.</dd>
- <dt>name </dt>
+ <dt>name </dt>
  <dd>Der Name des Fensters (optional). Siehe <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open</a> für detailierte Informationen.</dd>
- <dt>features </dt>
+ <dt>features </dt>
  <dd>Siehe <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open</a>.</dd>
- <dt>arg1, arg2, ... </dt>
+ <dt>arg1, arg2, ... </dt>
  <dd>Die Argumente, die dem neuen Fenster gegeben werden (optional).</dd>
 </dl>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/Window/openDialog
 
 <h4 id="Default_behaviour" name="Default_behaviour">Standardverhalten</h4>
 
-<p>Die window Features <code>chrome</code> und <code>dialog</code>  sind immer eingeschaltet, ausser sie werden explizit ausgeschaltet ("<code>chrome=no</code>"). <code>openDialog</code> behandelt einen nicht vorhandenen features Parameter gleich wie <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open</a>, (ein leerer String schaltet alle Features aus) ausser <code>chrome</code> und <code>dialog</code>, welche standartmässig eingeschaltet sind. Wenn der <code>features</code> Parameter ein leerer String ist, oder nur behaviour features (<code>chrome</code>, <code>dependent</code>, <code>dialog</code> und <code>modal</code>) enthält, werden die chrome features nach der "OS' choice" ausgewählt. Das heisst, der window creation code erhält keine spezifischen Anweisungen, kann dafür das chrome auswählen, das am besten zu einem Dialog auf diesem operating system passt.</p>
+<p>Die window Features <code>chrome</code> und <code>dialog</code>  sind immer eingeschaltet, ausser sie werden explizit ausgeschaltet ("<code>chrome=no</code>"). <code>openDialog</code> behandelt einen nicht vorhandenen features Parameter gleich wie <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open</a>, (ein leerer String schaltet alle Features aus) ausser <code>chrome</code> und <code>dialog</code>, welche standartmässig eingeschaltet sind. Wenn der <code>features</code> Parameter ein leerer String ist, oder nur behaviour features (<code>chrome</code>, <code>dependent</code>, <code>dialog</code> und <code>modal</code>) enthält, werden die chrome features nach der "OS' choice" ausgewählt. Das heisst, der window creation code erhält keine spezifischen Anweisungen, kann dafür das chrome auswählen, das am besten zu einem Dialog auf diesem operating system passt.</p>
 
 <h4 id="Passing_extra_parameters_to_the_dialog" name="Passing_extra_parameters_to_the_dialog">Zusätzliche Parameter zum Dialog hinzufügen</h4>
 

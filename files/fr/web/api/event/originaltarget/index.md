@@ -1,35 +1,24 @@
 ---
 title: Event.originalTarget
 slug: Web/API/Event/originalTarget
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Propriétés
-  - origine
+page-type: web-api-instance-property
 translation_of: Web/API/Event/originalTarget
+browser-compat: api.Event.originalTarget
+l10n:
+  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
-{{ ApiRef("DOM") }} {{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-La cible d'origine de l'évènement avant tout reciblage. (spécifique à Mozilla)
+La propriété en lecture seule **`originalTarget`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), renvoie la cible originale de l'évènement avant les éventuels reciblages. À la différence de [`Event.explicitOriginalTarget`](/fr/docs/Web/API/Event/explicitOriginalTarget), il peut s'agir d'un contenu natif anonyme.
 
-En présence de contenu anonyme [XBL](/fr/docs/XBL), ce sera le nœud anonyme sur lequel l'événement a été déclenché à l'origine. Voir [Anonymous Content#Event_Flow_and_Targeting](/fr/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting) pour plus de détails.
+## Spécifications
 
-**Note :** `originalTarget` peut aussi être un contenu anonyme natif  (voir {{Bug("208427")}}), dans ce cas, il est inutile pour le code non privilégié.
-
-Voir aussi [Comparaison des cibles d'évènements.](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_%C3%A9v%C3%A8nements)
-
-## Exemple
-
-_Besoin d'un exemple qui ait du sens ici. ^^_
-
-## Spécification
-
-C'est une propriété propre à Mozilla. Définie dans {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}
-
-Cette propriété d'évènements **n'est pas définie** dans la spécification [W3.org DOM niveau 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html)
+Il s'agit d'une propriété spécifique à Mozilla qui ne fait partie d'aucune spécification actuelle et qui n'est pas en voie de standardisation.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.originalTarget")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparison_of_Event_Targets)

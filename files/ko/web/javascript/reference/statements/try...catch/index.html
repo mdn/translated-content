@@ -6,7 +6,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 <div>
 <p>{{jsSidebar("Statements")}}</p>
 
-<p><strong><code>try...catch</code></strong> 문은 실행할 코드블럭을 표시하고 예외(exception)가 발생(throw)할 경우의 응답을 지정합니다.</p>
+<p><strong><code>try...catch</code></strong> 문은 실행할 코드블럭을 표시하고 예외(exception)가 발생(throw)할 경우의 응답을 지정합니다.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</p>
 </div>
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 <h2 id="설명">설명</h2>
 
-<p>try 선언의 구성은 하나 혹은 그 이상의 선언을 포함한 try 블록 및 catch 항목이나 finally 항목 중 최소한 하나 혹은 둘 다 포함하여 이루어진다. 즉, try 선언에는 세 가지 형식이 존재한다.</p>
+<p>try 선언의 구성은 하나 혹은 그 이상의 선언을 포함한 try 블록 및 catch 항목이나 finally 항목 중 최소한 하나 혹은 둘 다 포함하여 이루어진다. 즉, try 선언에는 세 가지 형식이 존재한다.</p>
 
 <ol>
  <li><code>try...catch</code></li>
@@ -53,13 +53,13 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
  <li><code>try...catch...finally</code></li>
 </ol>
 
-<p><code>catch</code> 블록은 <code>try</code> 블록 안에서 예외가 발생(throw)하는 경우 무엇을 할지 명시하는 코드를 포함합니다.  <code>try</code> 블록 (또는 <code>try</code> 블록 내에서 호출된 함수) 내의 명령문이 예외를 throw 하면 제어가 <code>catch</code> 블록으로 이동합니다. <code>try</code> 블록에 예외가 발생하지 않으면 <code>catch</code> 블록을 건너뜁니다.</p>
+<p><code>catch</code> 블록은 <code>try</code> 블록 안에서 예외가 발생(throw)하는 경우 무엇을 할지 명시하는 코드를 포함합니다.  <code>try</code> 블록 (또는 <code>try</code> 블록 내에서 호출된 함수) 내의 명령문이 예외를 throw 하면 제어가 <code>catch</code> 블록으로 이동합니다. <code>try</code> 블록에 예외가 발생하지 않으면 <code>catch</code> 블록을 건너뜁니다.</p>
 
-<p><code>finally</code> 블록은 <code>try</code> 블록과 <code>catch</code> 블록(들)이 실행을 마친 후 항상 실행됩니다. 예외가 발생했는지에 관계없이 항상 실행됩니다.</p>
+<p><code>finally</code> 블록은 <code>try</code> 블록과 <code>catch</code> 블록(들)이 실행을 마친 후 항상 실행됩니다. 예외가 발생했는지에 관계없이 항상 실행됩니다.</p>
 
-<p>하나 이상의 <code>try</code> 문을 중첩 할 수 있습니다. 내부의 <code>try</code> 문에 <code>catch</code> 블록이 없으면, 둘러싼 <code>try</code> 문의 <code>catch</code> 블록이 입력됩니다.</p>
+<p>하나 이상의 <code>try</code> 문을 중첩 할 수 있습니다. 내부의 <code>try</code> 문에 <code>catch</code> 블록이 없으면, 둘러싼 <code>try</code> 문의 <code>catch</code> 블록이 입력됩니다.</p>
 
-<p>또한 <code>try</code> 문을 사용하여 예외처리를 합니다. 예외처리에 대해 더 알고 싶다면, <a href="/en-US/docs/Web/JavaScript/Guide" title="en/JavaScript/Guide">JavaScript Guide</a> 를 참고하세요.</p>
+<p>또한 <code>try</code> 문을 사용하여 예외처리를 합니다. 예외처리에 대해 더 알고 싶다면, <a href="/en-US/docs/Web/JavaScript/Guide" title="en/JavaScript/Guide">JavaScript Guide</a> 를 참고하세요.</p>
 
 <h3 id="무조건적_catch_문">무조건적 <code>catch</code> 문</h3>
 
@@ -78,7 +78,7 @@ catch (e) {
 
 <h3 id="조건적_catch_문">조건적 <code>catch</code> 문</h3>
 
-<p>다음과 같이 <code>try...catch</code>블록을 <code>if...else if...else</code> 구조와 결합하여 '조건부 <code>catch</code>-blocks'을 만들 수 있습니다.</p>
+<p>다음과 같이 <code>try...catch</code>블록을 <code>if...else if...else</code> 구조와 결합하여 '조건부 <code>catch</code>-blocks'을 만들 수 있습니다.</p>
 
 
 
@@ -129,11 +129,11 @@ catch (e) {
 
 <h3 id="The_finally-block">The finally-block</h3>
 
-<p>The <code>finally</code>-block contains statements to execute after the <code>try</code>-block and <code>catch</code>-block(s) execute, but before the statements following the <code>try...catch...finally</code>-block. Note that the <code>finally</code>-block executes regardless of whether an exception is thrown. Also, if an exception is thrown, the statements in the <code>finally</code>-block execute even if no <code>catch</code>-block handles the exception.</p>
+<p>The <code>finally</code>-block contains statements to execute after the <code>try</code>-block and <code>catch</code>-block(s) execute, but before the statements following the <code>try...catch...finally</code>-block. Note that the <code>finally</code>-block executes regardless of whether an exception is thrown. Also, if an exception is thrown, the statements in the <code>finally</code>-block execute even if no <code>catch</code>-block handles the exception.</p>
 
 
 
-<p>The following example shows one use case for the <code>finally</code>-block. The code opens a file and then executes statements that use the file; the <code>finally</code>-block makes sure the file always closes after it is used even if an exception was thrown.</p>
+<p>The following example shows one use case for the <code>finally</code>-block. The code opens a file and then executes statements that use the file; the <code>finally</code>-block makes sure the file always closes after it is used even if an exception was thrown.</p>
 
 <pre >openMyFile();
 try {
@@ -167,7 +167,7 @@ catch (ex) {
 // "outer" "oops"
 </pre>
 
-<p>Now, if we already caught the exception in the inner <code>try</code>-block by adding a <code>catch</code>-block</p>
+<p>Now, if we already caught the exception in the inner <code>try</code>-block by adding a <code>catch</code>-block</p>
 
 <pre >try {
   try {
@@ -213,11 +213,11 @@ catch (ex) {
 // "outer" "oops"
 </pre>
 
-<p>Any given exception will be caught only once by the nearest enclosing <code>catch</code>-block unless it is rethrown. Of course, any new exceptions raised in the "inner" block (because the code in <code>catch</code>-block may do something that throws), will be caught by the "outer" block.</p>
+<p>Any given exception will be caught only once by the nearest enclosing <code>catch</code>-block unless it is rethrown. Of course, any new exceptions raised in the "inner" block (because the code in <code>catch</code>-block may do something that throws), will be caught by the "outer" block.</p>
 
 <h3 id="Returning_from_a_finally-block">Returning from a finally-block</h3>
 
-<p>If the <code>finally</code>-block returns a value, this value becomes the return value of the entire <code>try-catch-finally</code> statement, regardless of any <code>return</code> statements in the <code>try</code> and <code>catch</code>-blocks. This includes exceptions thrown inside of the <code>catch</code>-block:</p>
+<p>If the <code>finally</code>-block returns a value, this value becomes the return value of the entire <code>try-catch-finally</code> statement, regardless of any <code>return</code> statements in the <code>try</code> and <code>catch</code>-blocks. This includes exceptions thrown inside of the <code>catch</code>-block:</p>
 
 <pre >(function() {
   try {
@@ -242,22 +242,11 @@ catch (ex) {
 // "inner" "oops"
 // "finally"</pre>
 
-<p>The outer "oops" is not thrown because of the return in the <code>finally</code>-block. The same would apply to any value returned from the <code>catch</code>-block.</p>
+<p>The outer "oops" is not thrown because of the return in the <code>finally</code>-block. The same would apply to any value returned from the <code>catch</code>-block.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-try-statement', 'try statement')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

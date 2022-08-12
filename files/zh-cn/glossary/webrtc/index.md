@@ -20,6 +20,6 @@ WebRTC 主要由以下几个部分组成：
 
 ## 了解更多
 
-- {{Interwiki("wikipedia", "WebRTC")}} on Wikipedia
+- [WebRTC](https://zh.wikipedia.org/wiki/WebRTC) on Wikipedia
 - [Guide to WebRTC on MDN](/zh-CN/docs/Web/API/WebRTC_API)
 - [Browser support of WebRTC](https://caniuse.com/rtcpeerconnection)

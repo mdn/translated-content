@@ -69,7 +69,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  <li>Se olharmos para a linha 86 em nosso nosso código de código, vamos encontrar a seguinte linha:
   <pre class="brush: js">envioPalpite.addeventListener('click', conferir Palpite);</pre>
  </li>
- <li>O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn <em>nome-da-funcionalidade</em>" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: <code><a href="/pt-BR/docs/Web/API/Element/addEventListener">addEventListener()</a></code>.</li>
+ <li>O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn <em>nome-da-funcionalidade</em>" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: <code><a href="/pt-BR/docs/Web/API/Element/addEventListener">addEventListener()</a></code>.</li>
  <li>Então, olhando nessa essa página, o erro parece ser termos digitado o nome da função errado! Lembre-se de que o JavaScript diferencia letras maiúsculas de minúsculas, então qualquer diferença na digitação ou no uso de letras maiúsculas irá causar um erro. Alterar <code>addeventListener</code> para <code>addEventListener</code> deverá corrigir esse erro. Faça essa alteração no código do seu arquivo.</li>
 </ol>
 
@@ -91,7 +91,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  <li>Dê uma olhada na linha 78, e você verá o seguinte código:
   <pre class="brush: js">baixoOuAlto.textContent = 'Seu palpite foi muito alto!';</pre>
  </li>
- <li>Essa linha está tentando definir a propriedade <code>textContent</code> (conteúdo de texto) da variável <code>baixoOuAlto</code> como uma sequência de texto, mas isso não está funcionando porque <code>baixoOuAlto</code> não contém o que deveria conter. Vamos ver o porquê — tente localizar outras instâncias de <code>baixoOuAlto</code> no código. A instância que aparece primeiro no código  JavaScript é na linha 48:
+ <li>Essa linha está tentando definir a propriedade <code>textContent</code> (conteúdo de texto) da variável <code>baixoOuAlto</code> como uma sequência de texto, mas isso não está funcionando porque <code>baixoOuAlto</code> não contém o que deveria conter. Vamos ver o porquê — tente localizar outras instâncias de <code>baixoOuAlto</code> no código. A instância que aparece primeiro no código  JavaScript é na linha 48:
   <pre class="brush: js">var baixoOuAlto = document.querySelector('baixoOuAlto');</pre>
  </li>
  <li>Nesse ponto estamos tentando fazer com que a variável contenha uma referência a um elemento no documento HTML. Vamos conferir se o valor é <code>null</code> (nulo) depois que essa linha é executada. Adicione o seguinte código na linha 49:
@@ -108,7 +108,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js">&lt;p class="baixoOuAlto"&gt;&lt;/p&gt;</pre>
  </li>
  <li>Então nós precisamos de um seletor de classe aqui, que começa com um ponto (.), mas o seletor passado pelo método <code>querySelector()</code> na linha 48 não tem o ponto. Esse pode ser o problema! Tente mudar <code>baixoOuAlto</code> para <code>.baixoOuAlto</code> na linha 48.</li>
- <li>Tente salvar o arquivo e atualizá-lo no navegador de novo, e a sua declaração <code>console.log()</code> deverá retornar o elemento <code>&lt;p&gt;</code> que queremos. Ufa! Outro erro resolvido! Você pode deletar a linha do seu  <code>console.log()</code> agora, ou mantê-la para referência posterior — a escolha é sua.</li>
+ <li>Tente salvar o arquivo e atualizá-lo no navegador de novo, e a sua declaração <code>console.log()</code> deverá retornar o elemento <code>&lt;p&gt;</code> que queremos. Ufa! Outro erro resolvido! Você pode deletar a linha do seu  <code>console.log()</code> agora, ou mantê-la para referência posterior — a escolha é sua.</li>
 </ol>
 
 <div class="note">
@@ -149,7 +149,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <pre class="brush: js">Math.random()</pre>
 
-<p>Em seguida, passamos o resultado invocando <code>Math.random()</code> através de  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:</p>
+<p>Em seguida, passamos o resultado invocando <code>Math.random()</code> através de  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:</p>
 
 <pre>Math.floor(Math.random()) + 1</pre>
 
@@ -223,7 +223,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Erro de sintaxe: esperado uma expressão, obtido uma 'string' e Erro de sintaxe: string literal não terminada. Esses erros geralmente significam que você deixou de colocar aspas no início ou no final da declaração de uma cadeia de texto. No primeiro erro acima, '<em>string'</em> seria substituído pelo(s) caractere(s) encontrado(s) pelo navegador ao invés da aspa no início de uma cadeia de texto. O segundo erro quer dizer que a cadeia de texto não foi finalizada com o caractere de aspa.</p>
 
-<p>Para todos esses erros, pense em como nós abordamos os exemplos em que olhamos no passo a passo. Quando um erro surge, olha o número da linha que é informado, vá até essa linha e veja se consegue localizar o que há de errado. Mantenha em mente que o erro não estará necessariamente nessa linha, e também que o erro pode não ter sido causado exatamente  pelo mesmo problema que citamos acima!</p>
+<p>Para todos esses erros, pense em como nós abordamos os exemplos em que olhamos no passo a passo. Quando um erro surge, olha o número da linha que é informado, vá até essa linha e veja se consegue localizar o que há de errado. Mantenha em mente que o erro não estará necessariamente nessa linha, e também que o erro pode não ter sido causado exatamente  pelo mesmo problema que citamos acima!</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Veja nossas páginas de referência <a href="/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> para mais detalhes sobre esses erros.</p>

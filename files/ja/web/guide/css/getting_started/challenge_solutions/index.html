@@ -3,7 +3,7 @@ title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
-<p>このページは、 <a href="/ja/CSS/Getting_Started">CSS Getting Started</a> チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。</p>
+<p>このページは、 <a href="/ja/CSS/Getting_Started">CSS Getting Started</a> チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。</p>
 <h2 id="CSS_をなぜ用いるか"><a href="/ja/CSS/Getting_Started/Why_use_CSS" id="Why_use_CSS_Colors" title="MDC">CSS をなぜ用いるか</a></h2>
 <h3 id="Colors">Colors</h3>
 <dl>
@@ -16,7 +16,7 @@ translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
  <dt>
   Solution</dt>
  <dd>
-  CSS supports common color names like <code>orange</code>, <code>yellow</code>, <code>blue</code>, <code>green</code>, or <code>black</code>. It also supports some more exotic color names like <code>chartreuse</code>, <code>fuschia</code>, or <code>burlywood</code>. See <a href="/ja/CSS/color_value">CSS Color value</a> for a complete list as well as other ways of specifying colors.</dd>
+  CSS supports common color names like <code>orange</code>, <code>yellow</code>, <code>blue</code>, <code>green</code>, or <code>black</code>. It also supports some more exotic color names like <code>chartreuse</code>, <code>fuschia</code>, or <code>burlywood</code>. See <a href="/ja/CSS/color_value">CSS Color value</a> for a complete list as well as other ways of specifying colors.</dd>
 </dl>
 <h2 id="どのように_CSS_は動作するのか"><a href="/ja/CSS/Getting_Started/How_CSS_works" id="How_CSS_works_DOM_inspector" title="MDC">どのように CSS は動作するのか</a></h2>
 <h3 id="DOM_inspector">DOM inspector</h3>
@@ -28,7 +28,7 @@ translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
  <dt>
   Solution</dt>
  <dd>
-  In the menu above the right-hand pane, choose <strong>CSS Rules</strong>.  You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the <strong>font-weight</strong> property as <code>bolder</code>; your stylesheet defines the <strong>color</strong> property as <code>red</code>.</dd>
+  In the menu above the right-hand pane, choose <strong>CSS Rules</strong>.  You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the <strong>font-weight</strong> property as <code>bolder</code>; your stylesheet defines the <strong>color</strong> property as <code>red</code>.</dd>
 </dl>
 <h2 id="接続と継承"><a href="/ja/CSS/Getting_Started/Cascading_and_inheritance" id="Cascading_and_inheritance" title="MDC">接続と継承</a></h2>
 <h3 id="Inherited_styles">Inherited styles</h3>
@@ -57,7 +57,7 @@ strong {color: orange; text-decoration: underline;}
  <dt>
   Solution</dt>
  <dd>
-  Add a rule with an ID selector of <code>#second</code> and a declaration <code>color: blue;</code>, as shown below:
+  Add a rule with an ID selector of <code>#second</code> and a declaration <code>color: blue;</code>, as shown below:
   <pre class="brush: css">#second { color: blue; }
 </pre>
   A more specific selector, <code>p#second</code> also works.</dd>
@@ -171,7 +171,7 @@ p {
  <dd>
   <code>lower-roman</code> のリストスタイルを使って、リスト項目に一つルールを定義します:
   <pre class="brush: css">li {
-  list-style: lower-roman;
+  list-style: lower-roman;
 }
 </pre>
  </dd>
@@ -189,8 +189,8 @@ p {
   <pre class="brush: css">/* numbered headings */
 body {counter-reset: headnum;}
 h3:before {
-  content: "(" counter(headnum, upper-latin) ") ";
-  counter-increment: headnum;
+  content: "(" counter(headnum, upper-latin) ") ";
+  counter-increment: headnum;
 }
 
 </pre>

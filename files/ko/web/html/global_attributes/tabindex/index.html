@@ -38,45 +38,15 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 <p>키보드 입력을 통해 포커스 가능한 상호작용 항목을 만들기 위해 비 <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠">대화형 콘텐츠</a>에 <code>tabindex</code>를 추가하는 것을 피하세요. 이를테면 버튼을 나타내기 위해 {{htmlelement("button")}} 대신 {{htmlelement("div")}}를 사용하는 것을 말합니다.</p>
 
-<p>비 대화형 요소를 사용해 만든 대화형 컴포넌트는 접근성 트리에 나타나지 않으므로, 보조 기술이 해당 컴포넌트로 탐색하거나 조작하는 것을 방지합니다. 상호작용 가능한 항목은 대화형 요소({{htmlelement("a")}}, {{htmlelement("button")}}, {{htmlelement("details")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}} 등)를 사용해 적절한 의미와 함께 나타내야 합니다. 대화형 콘텐츠 요소는 보통 <a href="/ko/docs/Web/Accessibility/ARIA">ARIA</a>가 관리하는, 접근성 기술에 알려줄 수 있는 자신의 역할과 상태를 내장하고 있습니다.</p>
+<p>비 대화형 요소를 사용해 만든 대화형 컴포넌트는 접근성 트리에 나타나지 않으므로, 보조 기술이 해당 컴포넌트로 탐색하거나 조작하는 것을 방지합니다. 상호작용 가능한 항목은 대화형 요소({{htmlelement("a")}}, {{htmlelement("button")}}, {{htmlelement("details")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}} 등)를 사용해 적절한 의미와 함께 나타내야 합니다. 대화형 콘텐츠 요소는 보통 <a href="/ko/docs/Web/Accessibility/ARIA">ARIA</a>가 관리하는, 접근성 기술에 알려줄 수 있는 자신의 역할과 상태를 내장하고 있습니다.</p>
 
 <ul>
  <li><a href="https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Using the tabindex attribute | The Paciello Group</a></li>
 </ul>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-tabindex-attribute", "tabindex")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, the attribute is now supported on all elements (global attributes).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

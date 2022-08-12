@@ -139,7 +139,7 @@ p.awesome {
 
 <h3 id="is_및_not_예외"><code>:is()</code> 및 <code>:not()</code> 예외</h3>
 
-<p>모두 일치 의사 클래스 {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} 및 부정 의사 클래스 {{CSSxRef(":not", ":not()")}}은 명시도 계산에서 의사 클래스로 취급되지 <em>않습니다</em>. 그러나 이들 의사 클래스 안에 명시된 선택자는 <a href="#selector-type" title="selector types">선택자 유형</a>의 수를 결정할 때 일반 선택자로 셉니다.</p>
+<p>모두 일치 의사 클래스 {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} 및 부정 의사 클래스 {{CSSxRef(":not", ":not()")}}은 명시도 계산에서 의사 클래스로 취급되지 <em>않습니다</em>. 그러나 이들 의사 클래스 안에 명시된 선택자는 <a href="#selector-type" title="selector types">선택자 유형</a>의 수를 결정할 때 일반 선택자로 셉니다.</p>
 
 <p>다음 CSS 조각과 HTML은...</p>
 
@@ -167,7 +167,7 @@ div:not(.outer) p {
 
 <p>{{SeeCompatTable}}</p>
 
-<p>명시도 조정 가상 클래스 {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}의 명시도는 항상 0입니다.</p>
+<p>명시도 조정 가상 클래스 {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}의 명시도는 항상 0입니다.</p>
 
 <p>다음 CSS 조각과 HTML은...</p>
 
@@ -286,46 +286,39 @@ h1 {
 
 <p><code>h1</code> 선택자는 특정한 요소와 직접 일치하지만 초록색 선택자는 그렇지 않고 부모로부터 상속되기 때문입니다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<div style="overflow: auto;">
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#specificity-rules", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>명시도 조정 선택자 {{CSSxRef(":where", ":where()")}} 추가.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#specificity", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/Pseudo-elements">의사 요소</a> 추가.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "cascade.html#specificity", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/Pseudo-classes">의사 클래스</a> 추가.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#cascading-order", "Cascading order")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>초기 정의.</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Specifications}}
 
 <h2 id="같이_보기">같이 보기</h2>
 
 <ul>
  <li>명시도 계산기: CSS 규칙을 테스트하고 이해할 수 있는 대화형 웹사이트 - <a href="https://specificity.keegan.st/">https://specificity.keegan.st/</a></li>
  <li>CSS3 선택자 명시도 - <a class="external" href="http://www.w3.org/TR/selectors/#specificity" rel="freelink">http://www.w3.org/TR/selectors/#specificity</a></li>
- <li>{{CSS_key_concepts}}</li>
+ <li>CSS 주요 개념
+  <ul>
+    <li><a href="/ko/docs/Web/CSS/Syntax">CSS 문법</a></li>
+    <li><a href="/ko/docs/Web/CSS/At-rule">@규칙</a></li>
+    <li><a href="/ko/docs/Web/CSS/Comments">주석</a></li>
+    <li><a href="/ko/docs/Web/CSS/Specificity">명시도</a></li>
+    <li><a href="/ko/docs/Web/CSS/inheritance">상속</a></li>
+    <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">박스 모델</a></li>
+    <li><a href="/ko/docs/Web/CSS/Layout_mode">레이아웃 모드</a></li>
+    <li><a href="/ko/docs/Web/CSS/Visual_formatting_model">시각적 서식 모델</a></li>
+    <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">마진 중첩</a></li>
+    <li>값
+      <ul>
+        <li><a href="/ko/docs/Web/CSS/initial_value">초깃값</a></li>
+        <li><a href="/ko/docs/Web/CSS/computed_value">계산값</a></li>
+        <li><a href="/ko/docs/Web/CSS/resolved_value">결정값</a></li>
+        <li><a href="/ko/docs/Web/CSS/specified_value">지정값</a></li>
+        <li><a href="/ko/docs/Web/CSS/used_value">사용값</a></li>
+        <li><a href="/ko/docs/Web/CSS/actual_value">실제값</a></li>
+      </ul>
+    </li>
+    <li><a href="/ko/docs/Web/CSS/Value_definition_syntax">값 정의 구문</a></li>
+    <li><a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a></li>
+    <li><a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a></li>
+  </ul>
+</li>
 </ul>

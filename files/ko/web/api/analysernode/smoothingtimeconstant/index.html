@@ -29,7 +29,7 @@ browser-compat: api.AnalyserNode.smoothingTimeConstant
 <p>기술적인 측면에서, 우리는 <a href="https://webaudio.github.io/web-audio-api/#blackman-window">Blackman window</a>를 적용했고 값들을 시간에 대해 매끄럽게 합니다. 기본값은 대부분의 경우에 적합합니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 만약 범위 0-1 바깥의 값이 설정된다면, <code>INDEX_SIZE_ERR</code> 예외가 발생합니다.</p>
+<p><strong>참고</strong>: 만약 범위 0-1 바깥의 값이 설정된다면, <code>INDEX_SIZE_ERR</code> 예외가 발생합니다.</p>
 </div>
 
 <h2 id="Example">예제</h2>
@@ -54,25 +54,25 @@ var dataArray = new Uint8Array(bufferLength);
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
-  drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-  analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  var barWidth = (WIDTH / bufferLength) * 2.5;
+  var barHeight;
+  var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
-    barHeight = dataArray[i];
+  for(var i = 0; i &lt; bufferLength; i++) {
+    barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
-    x += barWidth + 1;
-  }
+    x += barWidth + 1;
+  }
 };
 
 draw();</pre>

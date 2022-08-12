@@ -46,7 +46,7 @@ a[class~="logo"] {
  <dt><code>[<em>attr</em>~=<em>value</em>]</code></dt>
  <dd><code>attr</code>이라는 이름의 특성값이 정확히 <code>value</code>인 요소를 선택합니다. <code>attr</code> 특성은 공백으로 구분한 여러 개의 값을 가지고 있을 수 있습니다.</dd>
  <dt><code>[<em>attr</em>|=<em>value</em>]</code></dt>
- <dd><code>attr</code>이라는 특성값을 가지고 있으며, 그 특성값이 정확히 <code>value</code>이거나 <code>value</code>로 시작하면서 <code>-</code>(U+002D) 문자가 곧바로 뒤에 따라 붙으면 이 요소를 선택합니다. 보통 언어 서브코드(<code>en-US</code>, <code>ko-KR</code> 등)가 일치하는지 확인할 때 사용합니다.</dd>
+ <dd><code>attr</code>이라는 특성값을 가지고 있으며, 그 특성값이 정확히 <code>value</code>이거나 <code>value</code>로 시작하면서 <code>-</code>(U+002D) 문자가 곧바로 뒤에 따라 붙으면 이 요소를 선택합니다. 보통 언어 서브코드(<code>en-US</code>, <code>ko-KR</code> 등)가 일치하는지 확인할 때 사용합니다.</dd>
  <dt><code>[<em>attr</em>^=<em>value</em>]</code></dt>
  <dd><code>attr</code>이라는 특성값을 가지고 있으며, 접두사로 <code>value</code>가 값에 포함되어 있으면 이 요소를 선택합니다.</dd>
  <dt><code>[<em>attr</em>$=<em>value</em>]</code></dt>
@@ -54,7 +54,7 @@ a[class~="logo"] {
  <dt><code>[<em>attr</em>*=<em>value</em>]</code></dt>
  <dd><code>attr</code>이라는 특성값을 가지고 있으며, 값 안에 <code>value</code>라는 문자열이 적어도 하나 이상 존재한다면 이 요소를 선택합니다.</dd>
  <dt id="case-insensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
- <dd>괄호를 닫기 전에 <code>i</code> 혹은 <code>I</code>를 붙여주면 값의 대소문자를 구분하지 않습니다. (ASCII 범위 내에 존재하는 문자에 한해서 적용됩니다)</dd>
+ <dd>괄호를 닫기 전에 <code>i</code> 혹은 <code>I</code>를 붙여주면 값의 대소문자를 구분하지 않습니다. (ASCII 범위 내에 존재하는 문자에 한해서 적용됩니다)</dd>
  <dt><a id="case-sensitive" name="case-sensitive"><code>[attr operator value s]</code></a> {{experimental_inline}}</dt>
  <dd>괄호를 닫기 전에 <code>s</code> 혹은 <code>S</code>를 붙여주면 값의 대소문자를 구분합니다. (ASCII 범위 내에 존재하는 문자에 한해서 적용됩니다)</dd>
 </dl>
@@ -88,7 +88,7 @@ a[href*="insensitive" i] {
 /* Links with "cAsE" anywhere in the URL,
 with matching capitalization */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* Links that end in ".org" */
@@ -179,45 +179,18 @@ ol[type="A" s] {
 <h4 id="HTML_3">HTML</h4>
 
 <pre class="brush: html;">&lt;ol type="A"&gt;
-  &lt;li&gt;Example list&lt;/li&gt;
+  &lt;li&gt;Example list&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
 <h4 id="결과_3">결과</h4>
 
 <p>{{EmbedLiveSample("HTML_정렬_목록")}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>특성값 내에 존재하는 ASCII 문자의 대소문자를 구분하지 않는 수식자(modifier)를 추가하였습니다.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>초기 정의.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.selectors.attribute")}}</p>
 

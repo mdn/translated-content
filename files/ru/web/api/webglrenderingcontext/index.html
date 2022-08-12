@@ -5,41 +5,41 @@ translation_of: Web/API/WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>Интерфейс <strong>WebGLRenderingContext </strong>обеспечивает доступ к контексту рендеринга OpenGL ES 2.0 (<strong>OpenGL</strong> for <strong>E</strong>mbedded <strong>S</strong>ystems — OpenGL для встраиваемых систем) для использования его с помощью  HTML {{HTMLElement("canvas")}} элемента.</p>
+<p>Интерфейс <strong>WebGLRenderingContext </strong>обеспечивает доступ к контексту рендеринга OpenGL ES 2.0 (<strong>OpenGL</strong> for <strong>E</strong>mbedded <strong>S</strong>ystems — OpenGL для встраиваемых систем) для использования его с помощью  HTML {{HTMLElement("canvas")}} элемента.</p>
 
-<p>Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента  &lt;canvas&gt; , используя "webgl" в качестве аргумента.</p>
+<p>Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента  &lt;canvas&gt; , используя "webgl" в качестве аргумента.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl');
 </pre>
 
-<p>После того, как вы  получили  WebGL контекст, вы можете его использовать для рендеринга.</p>
+<p>После того, как вы  получили  WebGL контекст, вы можете его использовать для рендеринга.</p>
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> содержит больше информации, примеров, ссылок на ресурсы которые помогут  начать использовать  WebGL.</p>
+<p> <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> содержит больше информации, примеров, ссылок на ресурсы которые помогут  начать использовать  WebGL.</p>
 
 <h2 id="Константы">Константы</h2>
 
-<p>Смотрите на <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a>.</p>
+<p>Смотрите на <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a>.</p>
 
-<h2 id="WebGL_контекст"> WebGL контекст</h2>
+<h2 id="WebGL_контекст"> WebGL контекст</h2>
 
-<p>Ниже перечислены свойства и методы которые дают общую информацию и функциональность при работе с WebGL контекстом:</p>
+<p>Ниже перечислены свойства и методы которые дают общую информацию и функциональность при работе с WebGL контекстом:</p>
 
 <dl>
  <dt>{{domxref("WebGLRenderingContext.canvas")}}</dt>
- <dd> Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может быть  {{jsxref("null")}} если будет применятся в контексте элемента иного типа чем  {{HTMLElement("canvas")}}.</dd>
+ <dd> Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может быть  {{jsxref("null")}} если будет применятся в контексте элемента иного типа чем  {{HTMLElement("canvas")}}.</dd>
  <dt>{{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}</dt>
  <dd>
- <p>Вставляет окна в первоначальный {{domxref("HTMLCanvasElement")}} , если контекст не привязан к конкретному холсту.</p>
+ <p>Вставляет окна в первоначальный {{domxref("HTMLCanvasElement")}} , если контекст не привязан к конкретному холсту.</p>
  </dd>
  <dt>{{domxref("WebGLRenderingContext.drawingBufferWidth")}}</dt>
- <dd>Доступная только для чтения ширина текущего буфера отрисовки. Должна совпадать с шириной холста связанного с данным  контекстом.</dd>
+ <dd>Доступная только для чтения ширина текущего буфера отрисовки. Должна совпадать с шириной холста связанного с данным  контекстом.</dd>
  <dt>{{domxref("WebGLRenderingContext.drawingBufferHeight")}}</dt>
- <dd>Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным  контекстом.</dd>
+ <dd>Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным  контекстом.</dd>
  <dt>{{domxref("WebGLRenderingContext.getContextAttributes()")}}</dt>
- <dd>Возвращает <code>WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать </code>{{jsxref("null")}} если контекст утерян.<code> </code></dd>
+ <dd>Возвращает <code>WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать </code>{{jsxref("null")}} если контекст утерян.<code> </code></dd>
  <dt>{{domxref("WebGLRenderingContext.isContextLost()")}}</dt>
- <dd>Возвращает <code>true</code> если контекст утерян, в противном случае возвращает <code>false</code>.</dd>
+ <dd>Возвращает <code>true</code> если контекст утерян, в противном случае возвращает <code>false</code>.</dd>
 </dl>
 
 <h2 id="Просмотр_и_обрезка">Просмотр и обрезка</h2>
@@ -59,56 +59,56 @@ var gl = canvas.getContext('webgl');
  <dt>{{domxref("WebGLRenderingContext.blendColor()")}}</dt>
  <dd>Устанавливает параметры смешивания источника и назначения</dd>
  <dt>{{domxref("WebGLRenderingContext.blendEquation()")}}</dt>
- <dd> Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному  уравнению.</dd>
+ <dd> Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному  уравнению.</dd>
 </dl>
 
-<p><strong>{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}</strong> </p>
+<p><strong>{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}</strong> </p>
 
-<p>Устанавливает уравнение смешивания RGB и уравнение alpha  смешивания  отдельно.</p>
+<p>Устанавливает уравнение смешивания RGB и уравнение alpha  смешивания  отдельно.</p>
 
 <dl>
  <dt>{{domxref("WebGLRenderingContext.blendFunc()")}}</dt>
- <dd>Определяет, какая арифметическая функция используется для смешивания пикселей.</dd>
+ <dd>Определяет, какая арифметическая функция используется для смешивания пикселей.</dd>
  <dt>{{domxref("WebGLRenderingContext.blendFuncSeparate()")}}</dt>
- <dd>Определяет, какая арифметическая функция используется для смешивания пикселей для RGB и альфа-компонентов по отдельности.</dd>
+ <dd>Определяет, какая арифметическая функция используется для смешивания пикселей для RGB и альфа-компонентов по отдельности.</dd>
  <dt>{{domxref("WebGLRenderingContext.clearColor()")}}</dt>
- <dd>Задаёт значения цвета, используемые при очистке цветовых буферов.</dd>
+ <dd>Задаёт значения цвета, используемые при очистке цветовых буферов.</dd>
  <dt>{{domxref("WebGLRenderingContext.clearDepth()")}}</dt>
  <dd>Задаёт значение глубины, используемый при очистке буфера глубины.</dd>
  <dt>{{domxref("WebGLRenderingContext.clearStencil()")}}</dt>
  <dd>Задаёт значение шаблона, используемый при очистке буфера шаблона.</dd>
  <dt>{{domxref("WebGLRenderingContext.colorMask()")}}</dt>
- <dd>Устанавливает какие цветовые компоненты для включены или выключены при отрисовке или рендеринге на{{domxref("WebGLFramebuffer")}}.</dd>
+ <dd>Устанавливает какие цветовые компоненты для включены или выключены при отрисовке или рендеринге на{{domxref("WebGLFramebuffer")}}.</dd>
  <dt>{{domxref("WebGLRenderingContext.cullFace()")}}</dt>
- <dd>Определяет, будет видима или нет передняя- и / или обратная сторона многоугольника.</dd>
+ <dd>Определяет, будет видима или нет передняя- и / или обратная сторона многоугольника.</dd>
  <dt>{{domxref("WebGLRenderingContext.depthFunc()")}}</dt>
- <dd>Определяет функцию, которая сравнивает входящую глубину пикселей к текущему значению глубины буфера.</dd>
+ <dd>Определяет функцию, которая сравнивает входящую глубину пикселей к текущему значению глубины буфера.</dd>
  <dt>{{domxref("WebGLRenderingContext.depthMask()")}}</dt>
- <dd>Включает или выключает запись в буфер глубины.</dd>
+ <dd>Включает или выключает запись в буфер глубины.</dd>
  <dt>{{domxref("WebGLRenderingContext.depthRange()")}}</dt>
- <dd>Определяет диапазон отображения глубины согласно стандартных координат  к координатам окна устройства.</dd>
+ <dd>Определяет диапазон отображения глубины согласно стандартных координат  к координатам окна устройства.</dd>
  <dt>{{domxref("WebGLRenderingContext.disable()")}}</dt>
- <dd>Отключает конкретные возможности WebGL.</dd>
+ <dd>Отключает конкретные возможности WebGL.</dd>
  <dt>{{domxref("WebGLRenderingContext.enable()")}}</dt>
  <dd>Включает конкретные возможности WebGL.</dd>
  <dt>{{domxref("WebGLRenderingContext.frontFace()")}}</dt>
- <dd>Определяет видимость  передней или задней стороны  многоугольника, при его вращении.</dd>
+ <dd>Определяет видимость  передней или задней стороны  многоугольника, при его вращении.</dd>
  <dt>{{domxref("WebGLRenderingContext.getParameter()")}}</dt>
  <dd>Возвращает значение переданного параметра по имени.</dd>
  <dt>{{domxref("WebGLRenderingContext.getError()")}}</dt>
  <dd>Возвращает информацию об ошибках.</dd>
  <dt>{{domxref("WebGLRenderingContext.hint()")}}</dt>
- <dd>Указывает подсказки для определённого поведения. Интерпретация этих подсказок зависит от реализации.</dd>
+ <dd>Указывает подсказки для определённого поведения. Интерпретация этих подсказок зависит от реализации.</dd>
  <dt>{{domxref("WebGLRenderingContext.isEnabled()")}}</dt>
- <dd>Проверяет,  включена или нет конкретная способность WebG.</dd>
+ <dd>Проверяет,  включена или нет конкретная способность WebG.</dd>
  <dt>{{domxref("WebGLRenderingContext.lineWidth()")}}</dt>
- <dd>Устанавливает ширину  растровой линии.</dd>
+ <dd>Устанавливает ширину  растровой линии.</dd>
  <dt>{{domxref("WebGLRenderingContext.pixelStorei()")}}</dt>
- <dd>Определяет режимы хранилища пикселей</dd>
+ <dd>Определяет режимы хранилища пикселей</dd>
  <dt>{{domxref("WebGLRenderingContext.polygonOffset()")}}</dt>
- <dd>Определяет факторы масштабирования  и единицы для расчёта значения глубины.</dd>
+ <dd>Определяет факторы масштабирования  и единицы для расчёта значения глубины.</dd>
  <dt>{{domxref("WebGLRenderingContext.sampleCoverage()")}}</dt>
- <dd>Определяет составные параметры  для сглаживания эффектов.</dd>
+ <dd>Определяет составные параметры  для сглаживания эффектов.</dd>
  <dt>{{domxref("WebGLRenderingContext.stencilFunc()")}}</dt>
  <dd>Sets the both front and back function and reference value for stencil testing.</dd>
  <dt>{{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}</dt>

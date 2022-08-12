@@ -15,8 +15,8 @@ translation_of: Glossary/Cross-site_scripting
 
 在以下 2 种情况下，容易发生 XSS 攻击：
 
-1.  数据从一个不可靠的链接进入到一个 Web 应用程序。
-2.  没有过滤掉恶意代码的动态内容被发送给 Web 用户。
+1. 数据从一个不可靠的链接进入到一个 Web 应用程序。
+2. 没有过滤掉恶意代码的动态内容被发送给 Web 用户。
 
 恶意内容一般包括 {{glossary("JavaScript")}}，但是，有时候也会包括 HTML，FLASH 或是其他浏览器可执行的代码。XSS 攻击的形式千差万别，但他们通常都会：将 cookies 或其他隐私信息发送给攻击者，将受害者重定向到由攻击者控制的网页，或是经由恶意网站在受害者的机器上进行其他恶意操作。
 
@@ -33,7 +33,7 @@ XSS 攻击可以分为 3 类：存储型（持久型）、反射型（非持久�
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Cross-site scripting")}} on Wikipedia
+- [Cross-site scripting](https://zh.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
 - [Cross-site scripting on OWASP](https://www.owasp.org/index.php/XSS)
 - [Another article about Cross-site scripting](https://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
 - [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)

@@ -14,10 +14,10 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 
 <h2 id="summary" name="summary">Resumen</h2>
 
-<p>El  método estático <code><strong>Object.defineProperty()</strong></code> define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.</p>
+<p>El  método estático <code><strong>Object.defineProperty()</strong></code> define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo <code>Object</code>.</p>
+<p><strong>Nota:</strong> Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo <code>Object</code>.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -43,27 +43,27 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 
 <p>Este método nos permite modificar el comportamiento por defecto de las propiedades. Es decir, nos permite definir una propiedad como no enumerable, no modificable o incluso evitar que pueda ser eliminada del objeto.</p>
 
-<p>Existen dos tipos de descriptores: De datos y de acceso.  Un <em><dfn>descriptor de datos</dfn></em> define una propiedad que tiene un valor, el cual puede ser o no modificado. Un descriptor de acceso define una propiedad mediante un par de funciones getter-setter que describe como se obtiene o se modifica el contenido de dicha propiedad. Un descriptor debe de ser de uno de estos dos tipos; no puede ser ambos.</p>
+<p>Existen dos tipos de descriptores: De datos y de acceso.  Un <em><dfn>descriptor de datos</dfn></em> define una propiedad que tiene un valor, el cual puede ser o no modificado. Un descriptor de acceso define una propiedad mediante un par de funciones getter-setter que describe como se obtiene o se modifica el contenido de dicha propiedad. Un descriptor debe de ser de uno de estos dos tipos; no puede ser ambos.</p>
 
 <p>Ambos tipos de descriptores son objetos y comparten las siguientes claves opcionales:</p>
 
 <dl>
  <dt><code>configurable</code></dt>
- <dd><code>true</code> si y solo si el tipo de descriptor de propiedad puede modificarse y si la propiedad puede ser eliminada del correspondiente objeto.<br>
- <strong>Por defecto es <code>false</code>.</strong></dd>
+ <dd><code>true</code> si y solo si el tipo de descriptor de propiedad puede modificarse y si la propiedad puede ser eliminada del correspondiente objeto.<br>
+ <strong>Por defecto es <code>false</code>.</strong></dd>
  <dt><code>enumerable</code></dt>
- <dd><code>true</code> si y solo si dicha propiedad se muestra durante la enumeración de las propiedades del objeto correspondiente.<br>
- <strong>Por defecto es <code>false</code>.</strong></dd>
+ <dd><code>true</code> si y solo si dicha propiedad se muestra durante la enumeración de las propiedades del objeto correspondiente.<br>
+ <strong>Por defecto es <code>false</code>.</strong></dd>
 </dl>
 
 <p>Un descriptor de datos tiene además las siguientes claves opcionales:</p>
 
 <dl>
  <dt><code>value</code></dt>
- <dd>El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript  (number, object, function, etc).<br>
+ <dd>El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript  (number, object, function, etc).<br>
  <strong>Por defecto es {{jsxref("Objetos_Globales/undefined", "undefined")}}.</strong></dd>
  <dt><code>writable</code></dt>
- <dd><code>true</code> Indica si el valor de la propiedad puede modificarse con el  {{jsxref("Operators/Assignment_Operators", "operador de asignación", "", 1)}}.<br>
+ <dd><code>true</code> Indica si el valor de la propiedad puede modificarse con el  {{jsxref("Operators/Assignment_Operators", "operador de asignación", "", 1)}}.<br>
  <strong>Defaults to <code>false</code>.</strong></dd>
 </dl>
 
@@ -125,7 +125,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 <h3 id="Example:_Creating_a_property" name="Example:_Creating_a_property">Ejemplo: Creando una propiedad</h3>
 
-<p>Cuando la propiedad especificada no existe en el objeto<code>, Object.defineProperty()</code> crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos <code>value</code>, <code>get</code> y <code>set</code> se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar  <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> es denominada “genérica” y  “tipificada” como un descriptor de datos.</p>
+<p>Cuando la propiedad especificada no existe en el objeto<code>, Object.defineProperty()</code> crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos <code>value</code>, <code>get</code> y <code>set</code> se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar  <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> es denominada “genérica” y  “tipificada” como un descriptor de datos.</p>
 
 <pre class="brush: js">var o = {}; // Creates a new object
 
@@ -160,15 +160,15 @@ Object.defineProperty(o, 'conflict', {
 
 <h3 id="Example:_Modifying_a_property" name="Example:_Modifying_a_property">Ejemplo: Modificando una propiedad</h3>
 
-<p>Cuando la propiedad realmente existe, <code>Object.defineProperty()</code> intenta modificar la propiedad de acuerdo a los valores en la descripción y la configuración actual del objeto. Si la descripción antigüa tenía su atributo de configuración establecido en <code>false</code> (la propiedad se dice "sin capacidad de configuración"), entonces ningún atributo además de los que tienen capacidad de escritura pueden ser cambiados. En ese caso, no es posible cambiar hacía atras o hacía delante entre datos y métodos de acceso de tipos de propiedades.</p>
+<p>Cuando la propiedad realmente existe, <code>Object.defineProperty()</code> intenta modificar la propiedad de acuerdo a los valores en la descripción y la configuración actual del objeto. Si la descripción antigüa tenía su atributo de configuración establecido en <code>false</code> (la propiedad se dice "sin capacidad de configuración"), entonces ningún atributo además de los que tienen capacidad de escritura pueden ser cambiados. En ese caso, no es posible cambiar hacía atras o hacía delante entre datos y métodos de acceso de tipos de propiedades.</p>
 
-<p>Si una propiedad no tiene capacidad de configuración, su atributo <code>writabble</code> solo puede ser cambiada to <code>false</code>.</p>
+<p>Si una propiedad no tiene capacidad de configuración, su atributo <code>writabble</code> solo puede ser cambiada to <code>false</code>.</p>
 
-<p>Un {{jsxref("Global_Objects/TypeError", "TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo <code>writable</code>) a menos que el valor actual y el valor nuevo sean los mismos.</p>
+<p>Un {{jsxref("Global_Objects/TypeError", "TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo <code>writable</code>) a menos que el valor actual y el valor nuevo sean los mismos.</p>
 
 <h4 id="Writable_attribute" name="Writable_attribute">Atributo writable</h4>
 
-<p>Cuando la propiedad de un atributo <code>writable</code> es establecido to <code>false</code>, la propiedad se dice esta "sin capacidad de escritura". No puede ser reasignada.</p>
+<p>Cuando la propiedad de un atributo <code>writable</code> es establecido to <code>false</code>, la propiedad se dice esta "sin capacidad de escritura". No puede ser reasignada.</p>
 
 <pre class="brush: js">var o = {}; // Crea un objeto nuevo
 
@@ -182,11 +182,11 @@ o.a = 25; // Ningún error arrojado (lo tiraría en modo estricto, aún si el va
 console.log(o.a); // muestra 37. La asignación no funcionó
 </pre>
 
-<p>Como es visto en el ejemplo anterior, intentar escribir en una propiedad "sin capacidad de  escritura" no la cambia pero sí arroja un error.</p>
+<p>Como es visto en el ejemplo anterior, intentar escribir en una propiedad "sin capacidad de  escritura" no la cambia pero sí arroja un error.</p>
 
 <h4 id="Enumerable_attribute" name="Enumerable_attribute">Atributo enumerable</h4>
 
-<p>El atributo de la propiedad <code>enumerable</code> se define si la propiedad aparece en un ciclo {{jsxref("Statements/for...in", "for...in")}} y {{jsxref("Object.keys()")}} o no.</p>
+<p>El atributo de la propiedad <code>enumerable</code> se define si la propiedad aparece en un ciclo {{jsxref("Statements/for...in", "for...in")}} y {{jsxref("Object.keys()")}} o no.</p>
 
 <pre class="brush: js">var o = {};
 Object.defineProperty(o, 'a', { value: 1, enumerable: true });
@@ -227,7 +227,7 @@ delete o.a; // No hace nada
 console.log(o.a); // logs 1
 </pre>
 
-<p>Si <code>o.a</code> tuviese <code>configurable</code>  a <code>true</code>, no se habrían arrojado errores y la propiedad habría sido eliminada. </p>
+<p>Si <code>o.a</code> tuviese <code>configurable</code>  a <code>true</code>, no se habrían arrojado errores y la propiedad habría sido eliminada. </p>
 
 <h3 id="Example:_Adding_properties_and_default_values" name="Example:_Adding_properties_and_default_values">Ejemplo: Añadiendo propiedades y valores por defecto</h3>
 
@@ -325,7 +325,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
   <tr>
    <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

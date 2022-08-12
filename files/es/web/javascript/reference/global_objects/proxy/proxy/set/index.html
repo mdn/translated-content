@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>handler.set()</strong></code> captura las asignaciones de un valor a una determinada propiedad.</p>
+<p>El método <code><strong>handler.set()</strong></code> captura las asignaciones de un valor a una determinada propiedad.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -23,7 +23,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 <h3 id="Parámetros">Parámetros</h3>
 
-<p>El método <code>set</code> recibe los siguientes parámetros.<code>this</code> se asocia al handler.</p>
+<p>El método <code>set</code> recibe los siguientes parámetros.<code>this</code> se asocia al handler.</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -34,35 +34,35 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
  <dd>El nuevo valor asignado a la propiedad.</dd>
  <dt><code>receiver</code></dt>
  <dd>El objeto al que originalmente iba dirigida la asignación. Normalmente es el proxy. Sin embargo el manejador o <code>set</code> handler puede ser llamado de forma indirecta a través de un prototipo entre otros.</dd>
- <dd>Por ejemplo, suponga que un escript ejecuta la sentencia <code>obj.name = "jen"</code>, y <code>obj</code> no es un proxy, y no posee la propiedad <code>.name</code>, pero tiene un proxy en su cadena de prototipos. El manejador <code>set</code> de este proxy será llamado y  obj será pasado como el receiver.</dd>
+ <dd>Por ejemplo, suponga que un escript ejecuta la sentencia <code>obj.name = "jen"</code>, y <code>obj</code> no es un proxy, y no posee la propiedad <code>.name</code>, pero tiene un proxy en su cadena de prototipos. El manejador <code>set</code> de este proxy será llamado y  obj será pasado como el receiver.</dd>
 </dl>
 
 <h3 id="Valor_Devuelto">Valor Devuelto</h3>
 
-<p>El método <code>set</code> debe devolver un valor booleano. Devolverá <code>true</code> para indicar que la asignación se ha llevado a cabo con éxito. Si devuelve <code>false</code>, y la asignación tiene lugar en modo estricto, se lanzará un error de tipo <code>TypeError</code>.</p>
+<p>El método <code>set</code> debe devolver un valor booleano. Devolverá <code>true</code> para indicar que la asignación se ha llevado a cabo con éxito. Si devuelve <code>false</code>, y la asignación tiene lugar en modo estricto, se lanzará un error de tipo <code>TypeError</code>.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El método <code><strong>handler.set</strong></code> captura la asignación de un valor a una propiedad.</p>
+<p>El método <code><strong>handler.set</strong></code> captura la asignación de un valor a una propiedad.</p>
 
-<h3 id="Qué_intercepta">Qué intercepta</h3>
+<h3 id="Qué_intercepta">Qué intercepta</h3>
 
 <p>Las siguientes operaciones son capturadas:</p>
 
 <ul>
- <li>Asignación a propiedades: <code>proxy[foo] = bar</code> y <code>proxy.foo = bar</code></li>
+ <li>Asignación a propiedades: <code>proxy[foo] = bar</code> y <code>proxy.foo = bar</code></li>
  <li>Asignación a propiedades heredadas: <code>Object.create(proxy)[foo] = bar</code></li>
  <li>{{jsxref("Reflect.set()")}}</li>
 </ul>
 
 <h3 id="Invariantes">Invariantes</h3>
 
-<p>Si los siguientes invariantes son violados, el proxy lanzará un {{jsxref("TypeError")}}:</p>
+<p>Si los siguientes invariantes son violados, el proxy lanzará un {{jsxref("TypeError")}}:</p>
 
 <ul>
- <li>El valor de la propiedad no puede ser diferente al de la correspondiente propiedad del objeto, si esta es una propiedad no configurable, o sin permisos de escritura.</li>
- <li>No se puede asignar un valor a una propiedad si la correspondiente propiedad en el objeto objetivo es no configurable y tiene <code>undefined</code> como su atributo [[Set]].</li>
- <li>En modo estricto, la devolución de <code>false</code> pro parte del manejador <code>set</code> lanzará una excepción del tipo {{jsxref("TypeError")}}.</li>
+ <li>El valor de la propiedad no puede ser diferente al de la correspondiente propiedad del objeto, si esta es una propiedad no configurable, o sin permisos de escritura.</li>
+ <li>No se puede asignar un valor a una propiedad si la correspondiente propiedad en el objeto objetivo es no configurable y tiene <code>undefined</code> como su atributo [[Set]].</li>
+ <li>En modo estricto, la devolución de <code>false</code> pro parte del manejador <code>set</code> lanzará una excepción del tipo {{jsxref("TypeError")}}.</li>
 </ul>
 
 <h2 id="Ejemplos">Ejemplos</h2>
@@ -70,18 +70,18 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 <p>El siguiente código captura la asignación de un valor a una propiedad.</p>
 
 <pre class="brush: js">var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value
-    console.log('property set: ' + prop + ' = ' + value)
-    return true
-  }
+  set: function(target, prop, value, receiver) {
+    target[prop] = value
+    console.log('property set: ' + prop + ' = ' + value)
+    return true
+  }
 })
 
-console.log('a' in p)  // false
+console.log('a' in p)  // false
 
-p.a = 10               // "propiedad asignada: a = 10"
-console.log('a' in p)  // true
-console.log(p.a)       // 10
+p.a = 10               // "propiedad asignada: a = 10"
+console.log('a' in p)  // true
+console.log(p.a)       // 10
 </pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
@@ -101,12 +101,12 @@ console.log(p.a)       // 10
   <tr>
    <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidad_con_los_buscadores">Compatibilidad con los buscadores</h2>
+<h2 id="Compatibilidad_con_los_buscadores">Compatibilidad con los buscadores</h2>
 
 <div>
 

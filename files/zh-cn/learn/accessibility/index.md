@@ -3,8 +3,6 @@ title: 可访问性
 slug: learn/Accessibility
 translation_of: Learn/Accessibility
 ---
-# 可访问性
-
 如果你想成为一个 web 开发者，学习一些 HTML,CSS 和 JavaScript 是很有用的，但是仅仅使用这些技术是不够的，你应该更进一步拓展你的知识 — 你需要响应式地使用它们来最大程度地发展你的用户，并且使用这些技术时不能把任何一门排斥出去。为了达到这个目的，要遵循一般最佳实践（这些最佳实践已经被 [HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS), 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 相关的话题所证明）,进行跨浏览器测试，并且从项目最初阶段就把易使用性考虑在内。在这个模块中我们将会详细讨论后者。
 
 ## 预备知识：

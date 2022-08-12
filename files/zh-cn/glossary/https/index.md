@@ -9,4 +9,4 @@ translation_of: Glossary/https
 
 ### 基础知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "HTTPS")}}
+- 在维基百科上的 [HTTPS](https://zh.wikipedia.org/wiki/HTTPS)

@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong><code>ebGLRenderingContext.bindBuffer()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).</p>
+<p><strong><code>ebGLRenderingContext.bindBuffer()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
  <dt>target</dt>
  <dd>{{domxref("GLenum")}} определяет точку связывания (target). Возможные значения:
  <ul>
-  <li><code>gl.ARRAY_BUFFER</code>: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.</li>
+  <li><code>gl.ARRAY_BUFFER</code>: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.</li>
   <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: Буфер использующий для индексирования элементов.</li>
   <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
    <ul>
@@ -57,7 +57,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 
 <h3 id="Getting_current_bindings">Getting current bindings</h3>
 
-<p>To check the current buffer bindings, query the <code>ARRAY_BUFFER_BINDING</code> and <code>ELEMENT_ARRAY_BUFFER_BINDING</code> constants.</p>
+<p>To check the current buffer bindings, query the <code>ARRAY_BUFFER_BINDING</code> and <code>ELEMENT_ARRAY_BUFFER_BINDING</code> constants.</p>
 
 <pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);

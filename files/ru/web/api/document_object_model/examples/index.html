@@ -8,8 +8,8 @@ original_slug: DOM/DOM_Reference/Examples
 
 <h2 id="Example_1_height_and_width">Пример 1: высота и ширина</h2>
 
-<p>В следующем примере показано использование свойств высоты и ширины для изображений разных размеров:<br>
-  </p>
+<p>В следующем примере показано использование свойств высоты и ширины для изображений разных размеров:<br>
+  </p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -127,7 +127,7 @@ function changeText() {
 
 <h2 id="Example_4_Using_Stylesheets">Пример 4: Использование Стилей</h2>
 
-<p>Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS-правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.</p>
+<p>Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS-правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.</p>
 
 <pre class="brush:js">var ss = document.styleSheets;
 
@@ -153,9 +153,9 @@ P
 
 <h2 id="Example_5_Event_Propagation">Пример 5: Распространение Событий</h2>
 
-<p>Этот пример демонстрирует, как события срабатывают и обрабатываются в DOM очень простым путём. Когда загружается BODY в составе HTML-документа, обработчик событий регистрируется в верхней строке таблицы TABLE. Обработчик событий реагирует на событие запуском функции stopEvent, изменяющей значение в нижней ячейке.</p>
+<p>Этот пример демонстрирует, как события срабатывают и обрабатываются в DOM очень простым путём. Когда загружается BODY в составе HTML-документа, обработчик событий регистрируется в верхней строке таблицы TABLE. Обработчик событий реагирует на событие запуском функции stopEvent, изменяющей значение в нижней ячейке.</p>
 
-<p>Однако, stopEvent также вызывает метод объекта событий, {{domxref("event.stopPropagation")}}, что препятствует дальнейшему всплытию события в DOM. Обратите внимание, что сама таблица имеет {{domxref("element.onclick","onclick")}} обработчик событий, который должен отображать сообщение при нажатии на таблицу. Но метод stopEvent метод прекратил распространение, и поэтому после обновления данных в таблице фаза события эффективно завершается, и отображается окно предупреждения для подтверждения.</p>
+<p>Однако, stopEvent также вызывает метод объекта событий, {{domxref("event.stopPropagation")}}, что препятствует дальнейшему всплытию события в DOM. Обратите внимание, что сама таблица имеет {{domxref("element.onclick","onclick")}} обработчик событий, который должен отображать сообщение при нажатии на таблицу. Но метод stopEvent метод прекратил распространение, и поэтому после обновления данных в таблице фаза события эффективно завершается, и отображается окно предупреждения для подтверждения.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -201,7 +201,7 @@ function load() {
 
 <h2 id="Example_6_getComputedStyle">Пример 6: getComputedStyle</h2>
 
-<p>Этот пример показывает как {{domxref("window.getComputedStyle")}} метод может использоваться для получения стилей элемента, которые не заданы с помощью атрибута style или с помощью JavaScript (e.g., <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>). Эти последние типы стилей можно получить с помощью более прямых {{domxref("element.style", "elt.style")}} свойств, которые указаны в <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a>.</p>
+<p>Этот пример показывает как {{domxref("window.getComputedStyle")}} метод может использоваться для получения стилей элемента, которые не заданы с помощью атрибута style или с помощью JavaScript (e.g., <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>). Эти последние типы стилей можно получить с помощью более прямых {{domxref("element.style", "elt.style")}} свойств, которые указаны в <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a>.</p>
 
 <p>getComputedStyle () возвращает объект ComputedCSSStyleDeclaration, свойства индивидуального стиля которого могут ссылаться на метод getPropertyValue () этого объекта, как показано в следующем примере документа.</p>
 
@@ -259,7 +259,7 @@ function cStyles() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_7_Displaying_Event_Object_Properties">Пример 7: Отображение Свойств Событий Объекта</h2>
+<h2 id="Example_7_Displaying_Event_Object_Properties">Пример 7: Отображение Свойств Событий Объекта</h2>
 
 
 
@@ -267,7 +267,7 @@ function cStyles() {
 
 <p>Свойства объектов событий сильно различаются между браузерами, WHATWG DOM Standard перечисляет стандартные свойства, однако многие браузеры значительно расширили их.</p>
 
-<p>Поместите следующий код в пустой текстовый файл и загрузите его в различные браузеры, вы будете удивлены различным количеством и именами свойств. Вы также можете добавить некоторые элементы на страницу и вызвать эту функцию из разных обработчиков событий.</p>
+<p>Поместите следующий код в пустой текстовый файл и загрузите его в различные браузеры, вы будете удивлены различным количеством и именами свойств. Вы также можете добавить некоторые элементы на страницу и вызвать эту функцию из разных обработчиков событий.</p>
 
 
 
@@ -289,40 +289,40 @@ td { padding: 2px 10px 2px 10px; }
 &lt;script&gt;
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var lableList = ['#', 'Property', 'Value'];
+  var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
-    addCell(row, lableList[i]);
-  }
+  for (var i=0; i&lt;len; i++) {
+    addCell(row, lableList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
 &lt;/script&gt;
 &lt;/head&gt;

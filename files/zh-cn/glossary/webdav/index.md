@@ -20,7 +20,7 @@ WebDAV 允许客户端执行以下操作
 
 ## 了解更多
 
-- 维基百科上的 {{interwiki("wikipedia", "WebDAV")}}
+- 维基百科上的 [WebDAV](https://zh.wikipedia.org/wiki/WebDAV)
 - 技术参考：
 
   - {{rfc(2518)}}

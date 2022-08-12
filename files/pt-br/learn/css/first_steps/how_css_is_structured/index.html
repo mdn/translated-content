@@ -8,13 +8,13 @@ original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 
 <div>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</div>
 
-<p class="summary">Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de olhar um pouco mais a fundo das estruturas da linguagem em si. Nós ja conhecemos muitos conceitos discutidos aqui, entretanto, você pode voltar para qualquer um em específico, se achar algum dos proximos conceitos um tanto confuso</p>
+<p class="summary">Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de olhar um pouco mais a fundo das estruturas da linguagem em si. Nós ja conhecemos muitos conceitos discutidos aqui, entretanto, você pode voltar para qualquer um em específico, se achar algum dos proximos conceitos um tanto confuso</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Conceitos básicos de computação, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">softwares básicos instalados</a>, conhecimentos básicos de <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">operação com arquivos</a>,  básico de HTML (veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introdução ao HTML</a>), e  uma ideia de <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">Como  funciona o CSS</a>.</td>
+   <td>Conceitos básicos de computação, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">softwares básicos instalados</a>, conhecimentos básicos de <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">operação com arquivos</a>,  básico de HTML (veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introdução ao HTML</a>), e  uma ideia de <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">Como  funciona o CSS</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -29,9 +29,9 @@ original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 
 <h3 id="Folha_de_Estilos_Externa">Folha de Estilos Externa</h3>
 
-<p>Em <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">Começando com o CSS</a> nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.</p>
+<p>Em <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">Começando com o CSS</a> nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.</p>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Uma folha de estilos externa  é quando você tem seu CSS escrito em um arquivo separado com uma extensão </span></font>.css</code>, e você o refere dentro de um elemento <code>&lt;link&gt;</code> do HTML:</p>
+<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Uma folha de estilos externa  é quando você tem seu CSS escrito em um arquivo separado com uma extensão </span></font>.css</code>, e você o refere dentro de um elemento <code>&lt;link&gt;</code> do HTML:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -58,9 +58,9 @@ p {
   color: red;
 }</pre>
 
-<p>O atributo <code>href</code> do elemento {{htmlelement("link")}}, precisa fazer referência a um arquivo em nosso sistema de arquivos.</p>
+<p>O atributo <code>href</code> do elemento {{htmlelement("link")}}, precisa fazer referência a um arquivo em nosso sistema de arquivos.</p>
 
-<p>No exemplo abaixo, o arquivo CSS está na mesma pasta que o documento HTML, mas você pode colocá-lo em outro lugar e reajustar o caminho marcado para encontrá-lo, como a seguir: </p>
+<p>No exemplo abaixo, o arquivo CSS está na mesma pasta que o documento HTML, mas você pode colocá-lo em outro lugar e reajustar o caminho marcado para encontrá-lo, como a seguir: </p>
 
 <pre class="brush: html notranslate">&lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
 &lt;link rel="stylesheet" href="styles/style.css"&gt;
@@ -73,7 +73,7 @@ p {
 
 <h3 id="Folha_de_estilos_interna">Folha de estilos interna</h3>
 
-<p>Uma folha de estilos interna é  usada quando você não tem um arquivo CSS externo, mas, ao contrário,  coloca seu CSS dentro de elemento {{htmlelement("style")}} localizado no {{htmlelement("head")}} do documento HTML.</p>
+<p>Uma folha de estilos interna é  usada quando você não tem um arquivo CSS externo, mas, ao contrário,  coloca seu CSS dentro de elemento {{htmlelement("style")}} localizado no {{htmlelement("head")}} do documento HTML.</p>
 
 <p>Deste modo, seu HTML se parecerá assim:</p>
 
@@ -100,11 +100,11 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>Isso pode ser útil em algumas circunstâncias (talvez você esteja trabalhando em um sistema de gerenciamento de conteúdo - CMS - onde não tem permissão para modificar diretamente os arquivos CSS), entretanto isso não é tão eficiente quanto o uso de folhas de estilo externas — em um website, o CSS precisaria ser repetido em todas as páginas e atualizado em vários locais sempre que mudanças fossem necessárias.</p>
+<p>Isso pode ser útil em algumas circunstâncias (talvez você esteja trabalhando em um sistema de gerenciamento de conteúdo - CMS - onde não tem permissão para modificar diretamente os arquivos CSS), entretanto isso não é tão eficiente quanto o uso de folhas de estilo externas — em um website, o CSS precisaria ser repetido em todas as páginas e atualizado em vários locais sempre que mudanças fossem necessárias.</p>
 
 <h3 id="Estilos_inline">Estilos inline</h3>
 
-<p>Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo <code>style</code>:</p>
+<p>Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo <code>style</code>:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -118,9 +118,9 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Por favor, não utilize isso a menos que seja estritamente necessário!</strong> É péssimo para manutenção (você precisará atualizar a mesma informação diversas vezes em cada documento), além do que, mistura sua informação de estilização do CSS com sua informação de estrutura HTML, tornando seu código de difícil leitura e compreensão. Manter diferentes tipos de código separados torna o trabalho muito mais fácil para todos os que trabalham no código.</p>
+<p><strong>Por favor, não utilize isso a menos que seja estritamente necessário!</strong> É péssimo para manutenção (você precisará atualizar a mesma informação diversas vezes em cada documento), além do que, mistura sua informação de estilização do CSS com sua informação de estrutura HTML, tornando seu código de difícil leitura e compreensão. Manter diferentes tipos de código separados torna o trabalho muito mais fácil para todos os que trabalham no código.</p>
 
-<p>Existem alguns lugares onde o estilo embutido é mais comum, ou mesmo aconselhável. Você pode ter que recorrer ao uso deles se seu ambiente de trabalho for realmente restritivo (talvez o seu CMS permita apenas que você edite o corpo do HTML). Você também os verá sendo muito usados em e-mails em HTML de modo a obter compatibilidade com o maior número possível de clientes de e-mail.</p>
+<p>Existem alguns lugares onde o estilo embutido é mais comum, ou mesmo aconselhável. Você pode ter que recorrer ao uso deles se seu ambiente de trabalho for realmente restritivo (talvez o seu CMS permita apenas que você edite o corpo do HTML). Você também os verá sendo muito usados em e-mails em HTML de modo a obter compatibilidade com o maior número possível de clientes de e-mail.</p>
 
 <h2 id="Playing_with_the_CSS_in_this_article">Playing with the CSS in this article</h2>
 
@@ -154,15 +154,15 @@ p {
 
 <p>If you are not using a system where you can easily create files, you can instead use the interactive editor below to experiment.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
 
 <p>Read on, and have fun!</p>
 
 <h2 id="Seletores">Seletores</h2>
 
-<p>Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.</p>
+<p>Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.</p>
 
-<p>Each CSS rule starts with a selector or a list of selectors in order to tell the browser which element or elements the rules should apply to. All of the following are examples of valid selectors, or lists of selectors.</p>
+<p>Each CSS rule starts with a selector or a list of selectors in order to tell the browser which element or elements the rules should apply to. All of the following are examples of valid selectors, or lists of selectors.</p>
 
 <pre class="brush: css notranslate">h1
 a:link
@@ -339,7 +339,7 @@ p {
    for top/bottom, then left/right */
 padding: 10px 15px 15px 5px;</pre>
 
-<p>Does the same thing as all these together:</p>
+<p>Does the same thing as all these together:</p>
 
 <pre class="brush: css notranslate">padding-top: 10px;
 padding-right: 15px;
@@ -492,12 +492,12 @@ padding- left: 10px;</pre>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+<h2 id="Neste_módulo">Neste módulo</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">O que é CSS?</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">O que é CSS?</a></li>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Começando com CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Como o CSS é  estruturad</a>o</li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Como o CSS funciona</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Como o CSS é  estruturad</a>o</li>
+ <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Como o CSS funciona</a></li>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Usando seu novo conhecimento</a></li>
 </ol>

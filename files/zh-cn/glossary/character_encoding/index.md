@@ -22,4 +22,4 @@ original_slug: Glossary/字符编码
 ### 常识
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Character encoding")}} on Wikipedia
+- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) on Wikipedia

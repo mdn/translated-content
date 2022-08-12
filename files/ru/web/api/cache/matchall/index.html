@@ -5,7 +5,7 @@ translation_of: Web/API/Cache/matchAll
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>Метод <strong><code>matchAll()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
+<p>Метод <strong><code>matchAll()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Cache/matchAll
 <p>{{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
 
 <div class="note">
-<p><strong>Замечание</strong>: {{domxref("Cache.match()")}} в основном идентичен <code>Cache.matchAll()</code>, за исключением того, что последний разрешается с <code>response[0]</code> (т.е., первым совпадающим ответом) вместо <code>response</code> (всех совпадающих ответов в массиве).</p>
+<p><strong>Замечание</strong>: {{domxref("Cache.match()")}} в основном идентичен <code>Cache.matchAll()</code>, за исключением того, что последний разрешается с <code>response[0]</code> (т.е., первым совпадающим ответом) вместо <code>response</code> (всех совпадающих ответов в массиве).</p>
 </div>
 
 <h3 id="Параметры">Параметры</h3>
@@ -28,12 +28,12 @@ translation_of: Web/API/Cache/matchAll
  <dt>request</dt>
  <dd>Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>Объект options, разрешающий вам установить особые команды контроля поиска соответствий ключа, выполняемого операцией <code>match</code>. Доступные параметры:
+ <dd>Объект options, разрешающий вам установить особые команды контроля поиска соответствий ключа, выполняемого операцией <code>match</code>. Доступные параметры:
  <ul>
-  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое говорит должен ли  процесс сопоставления ключей игнорировать строку запроса в url.  Если равно <code>true</code>, часть <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет игнорироваться при поиске соответствий ключа . По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, если равно <code>true</code>, предотвращает проверку метода <code>http</code> для запроса {{domxref("Request")}} (обычно разрешены лишь <code>GET и</code> <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true,</code> говорит процессу сопоставления ключей не проверять соответствие заголовка <code>VARY</code> — т.е., если URL совпадает, то вы получите соответствие независимо от того, содержит ли объект {{domxref("Response")}} заголовок <code>VARY, или нет</code>. По умолчанию равно <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, которая представляет собой имя кеша для поиска. <strong>Заметьте, что этот параметр игнорируется методом <code>Cache.matchAll()</code>.</strong></li>
+  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое говорит должен ли  процесс сопоставления ключей игнорировать строку запроса в url.  Если равно <code>true</code>, часть <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет игнорироваться при поиске соответствий ключа . По умолчанию равно <code>false</code>.</li>
+  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, если равно <code>true</code>, предотвращает проверку метода <code>http</code> для запроса {{domxref("Request")}} (обычно разрешены лишь <code>GET и</code> <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
+  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true,</code> говорит процессу сопоставления ключей не проверять соответствие заголовка <code>VARY</code> — т.е., если URL совпадает, то вы получите соответствие независимо от того, содержит ли объект {{domxref("Response")}} заголовок <code>VARY, или нет</code>. По умолчанию равно <code>false</code>.</li>
+  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, которая представляет собой имя кеша для поиска. <strong>Заметьте, что этот параметр игнорируется методом <code>Cache.matchAll()</code>.</strong></li>
  </ul>
  </dd>
 </dl>

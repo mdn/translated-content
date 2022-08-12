@@ -8,4 +8,4 @@ original_slug: Glossary/数字证书
 
 ## 了解更多
 
-- Wikipedia 上的{{interwiki("wikipedia", "Public_key_certificate", "Digital certificate ")}}
+- Wikipedia 上的[Digital certificate](https://zh.wikipedia.org/wiki/Public_key_certificate)

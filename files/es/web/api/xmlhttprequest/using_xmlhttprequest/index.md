@@ -5,14 +5,14 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
-En esta guía le echaremos un vistazo a cómo usar
+En esta guía le echaremos un vistazo a cómo usar
 {{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)
 con el objetivo de intercambiar datos entre el sitio web y el servidor.
 
 Se incluyen ejemplos, tanto para los casos de uso comunes de `XMLHttpRequest`,
 como para los más inusuales.
 
-Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
+Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
 envíe la solicitud. Una vez que la transacción haya sido completada, el objeto
 contendrá información útil tal como el cuerpo de la respuesta y el estado [HTTP
 status](/es/docs/Web/HTTP/Status) del resultado.

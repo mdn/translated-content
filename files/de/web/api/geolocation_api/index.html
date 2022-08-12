@@ -20,7 +20,7 @@ original_slug: Web/WebAPI/verwenden_von_geolocation
 </pre>
 
 <div class="note">
-<p><strong>Notiz:</strong> In Firefox 24 und älteren Versionen hat <code>"geolocation" in navigator</code> immer true zurückgegeben, auch wenn die API ausgeschaltet war. Dies wurde mit <a href="/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25</a> gelöst um mit dem Standard kompatibel zu sein. ({{ bug(884921) }})</p>
+<p><strong>Notiz:</strong> In Firefox 24 und älteren Versionen hat <code>"geolocation" in navigator</code> immer true zurückgegeben, auch wenn die API ausgeschaltet war. Dies wurde mit <a href="/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25</a> gelöst um mit dem Standard kompatibel zu sein. ({{ bug(884921) }})</p>
 </div>
 
 <h3 id="Die_derzeitige_Position_abfragen">Die derzeitige Position abfragen</h3>
@@ -39,10 +39,10 @@ original_slug: Web/WebAPI/verwenden_von_geolocation
 
 <h3 id="Die_derzeitige_Position_überwachen">Die derzeitige Position überwachen</h3>
 
-<p>Wenn sich die Positionsdaten ändern (entweder über die Bewegung des Gerätes oder den Erhalt genauere Geolokationsdaten), können Sie eine Callback-Funktion erstellen, die mit der erneuerten Positionsinformation arbeitet. Dies ist über die Funktion {{domxref("window.navigator.geolocation.watchPosition()","watchPosition()")}} möglich, welche die gleichen Eingabeparameter wie {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}}. besitzt. Die Callback-Funktion wird mehrere Male ausgeführt, dies erlaubt dem Browser die Position aufgrund von Bewegungen oder genaueren Positionsdaten, durch das Verwenden von anderen (langsameren) Methoden, zu erneuern. Die Fehler-Callback-Funktion, welche wie auch in {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}},  hier optional ist, kann auch mehrfach aufgerufen werden.</p>
+<p>Wenn sich die Positionsdaten ändern (entweder über die Bewegung des Gerätes oder den Erhalt genauere Geolokationsdaten), können Sie eine Callback-Funktion erstellen, die mit der erneuerten Positionsinformation arbeitet. Dies ist über die Funktion {{domxref("window.navigator.geolocation.watchPosition()","watchPosition()")}} möglich, welche die gleichen Eingabeparameter wie {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}}. besitzt. Die Callback-Funktion wird mehrere Male ausgeführt, dies erlaubt dem Browser die Position aufgrund von Bewegungen oder genaueren Positionsdaten, durch das Verwenden von anderen (langsameren) Methoden, zu erneuern. Die Fehler-Callback-Funktion, welche wie auch in {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}},  hier optional ist, kann auch mehrfach aufgerufen werden.</p>
 
 <div class="note">
-<p><strong>Notiz:</strong> Sie können  {{domxref("window.navigator.geolocation.watchPosition()","watchPosition()")}} auch ohne ein vorangestellten Aufruf von {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}} nutzen.</p>
+<p><strong>Notiz:</strong> Sie können  {{domxref("window.navigator.geolocation.watchPosition()","watchPosition()")}} auch ohne ein vorangestellten Aufruf von {{domxref("window.navigator.geolocation.getCurrentPosition()","getCurrentPosition()")}} nutzen.</p>
 </div>
 
 <pre class="brush: js">var watchID = navigator.geolocation.watchPosition(function(position) {
@@ -78,8 +78,7 @@ var geo_options = {
 
 var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);</pre>
 
-<p><a id="fck_paste_padding">Ein (englisches) Beispiel von watchPosition in Aktion: </a><a class="external" href="http://www.thedotproduct.org/experiments/geo/">http://www.thedotproduct.org/experiments/geo/</a><br>
- <a id="fck_paste_padding">﻿</a></p>
+<p>Ein (englisches) Beispiel von watchPosition in Aktion: <a class="external" href="http://www.thedotproduct.org/experiments/geo/">http://www.thedotproduct.org/experiments/geo/</a></p>
 
 <h2 id="Darstellung_einer_Position">Darstellung einer Position</h2>
 
@@ -224,59 +223,7 @@ prompt(window,
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{ CompatibilityTable() }}</div>
-
-<div> </div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundsätzlicher Support</td>
-   <td>5</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>10.60<br>
-    Removed in 15.0<br>
-    Reintroduced in 16.0</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundsätzlicher Support</td>
-   <td>2.1</td>
-   <td>11</td>
-   <td>{{CompatGeckoMobile("4")}}</td>
-   <td>10</td>
-   <td>10.60</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h3 id="Gecko-Notizen">Gecko-Notizen</h3>
 

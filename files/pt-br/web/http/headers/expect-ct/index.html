@@ -48,10 +48,10 @@ translation_of: Web/HTTP/Headers/Expect-CT
 <h2 id="Sintaxe">Sintaxe</h2>
 
 <pre class="notranslate">Expect-CT: report-uri="&lt;uri&gt;",
-           enforce,
+           enforce,
            max-age=&lt;age&gt;</pre>
 
-<h2 id="Diretivas"> Diretivas</h2>
+<h2 id="Diretivas"> Diretivas</h2>
 
 <dl>
  <dt><code>max-age</code></dt>
@@ -60,11 +60,11 @@ translation_of: Web/HTTP/Headers/Expect-CT
 
  <p>Se o cache receber um valor maior do que ele pode representar, or se qualquer um dos seus cálculos subsequentes estourar o limite, o cache vai considerar este valor a ser 2,147,483,648 (2<sup>31</sup>) ou o maior inteiro positivo que ele pode representar.</p>
  </dd>
- <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
+ <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
  <dd>
  <p>A URI onde o agente de usuário deve reportar falhas <code>Expect-CT</code>.</p>
  Quando presente com a diretiva <code>enforce</code>, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário<em> </em>que ambos o <em>compliance</em> da política do Certificado de Transparência deve ser executado <em>e</em> que as violações devem ser reportadas.</dd>
- <dt><code>enforce</code> {{optional_inline}}</dt>
+ <dt><code>enforce</code> {{optional_inline}}</dt>
  <dd>
  <p>Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.</p>
 

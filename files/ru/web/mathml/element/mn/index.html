@@ -9,26 +9,26 @@ translation_of: Web/MathML/Element/mn
 ---
 <div>{{MathMLRef}}</div>
 
-<p class="summary">Элемент <code>&lt;mn&gt;</code> разметки MathML представляет собой числовой литерал, который обычно является последовательностью цифр с возможным разделителем (точкой или запятой). Тем не менее, в нём также может быть произвольный текст, который на самом деле является числом, например "eleven" ("одиннадцать").</p>
+<p class="summary">Элемент <code>&lt;mn&gt;</code> разметки MathML представляет собой числовой литерал, который обычно является последовательностью цифр с возможным разделителем (точкой или запятой). Тем не менее, в нём также может быть произвольный текст, который на самом деле является числом, например "eleven" ("одиннадцать").</p>
 
 <h2 id="Атрибуты">Атрибуты</h2>
 
 <dl>
  <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Предусмотрено для использования с <a href="/ru/docs/Web/CSS">таблицами стилей</a>.</dd>
+ <dd>Предусмотрено для использования с <a href="/ru/docs/Web/CSS">таблицами стилей</a>.</dd>
  <dt id="attr-dir">dir</dt>
- <dd>Направление текста. Возможные значения: либо <code>ltr</code> (слева направо) или <code>rtl</code> (справа налево).</dd>
+ <dd>Направление текста. Возможные значения: либо <code>ltr</code> (слева направо) или <code>rtl</code> (справа налево).</dd>
  <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>Логическое значение, определяющее, используется ли большое вертикальное пространство для отображаемых уравнений; если установлено значение <code>false</code>, то используется более компактный макет. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда <code>displaystyle</code> установлено на <code>true</code>. Смотрите также <code>largeop</code> и <code>movablelimits</code> на {{ MathMLElement("mo") }}.</dd>
+ <dd>Логическое значение, определяющее, используется ли большое вертикальное пространство для отображаемых уравнений; если установлено значение <code>false</code>, то используется более компактный макет. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда <code>displaystyle</code> установлено на <code>true</code>. Смотрите также <code>largeop</code> и <code>movablelimits</code> на {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-href">href</dt>
  <dd>Используется для установки гиперссылки на указанный URI.</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
- <dd>Цвет фона (если изображение имеет прозрачность). Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имена цветов HTML</a>.</dd>
+ <dd>Цвет фона (если изображение имеет прозрачность). Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имена цветов HTML</a>.</dd>
  <dt id="attr-mathcolor">mathcolor</dt>
- <dd>Цвет текста. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имена цветов HTML</a>.</dd>
+ <dd>Цвет текста. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имена цветов HTML</a>.</dd>
  <dt id="attr-mathsize">mathsize</dt>
- <dd>Размер контента. Смотрите <a href="/ru/docs/Web/CSS/размер">length</a> для возможных значений.<br>
- Устаревшие значения: <code>small</code>, <code>normal</code> и <code>big</code>. Они будут удалены в будущем.</dd>
+ <dd>Размер контента. Смотрите <a href="/ru/docs/Web/CSS/размер">length</a> для возможных значений.<br>
+ Устаревшие значения: <code>small</code>, <code>normal</code> и <code>big</code>. Они будут удалены в будущем.</dd>
  <dt id="attr-mathvariant">mathvariant</dt>
  <dd>Этот атрибут определяет логический класс числа, который варьируется в типографике.То есть, хотя имена предполагают типографский стиль для класса, семантически, элементы с одним и тем же классом обрабатываются «одинаково» в выражении, которое может включать или не включать отображение их с именованной типографикой. Допускаются следующие значения:
  <ul>
@@ -67,15 +67,15 @@ translation_of: Web/MathML/Element/mn
 
 <pre class="brush: html">&lt;math&gt;
 
-  &lt;mn&gt; 0 &lt;/mn&gt;
+  &lt;mn&gt; 0 &lt;/mn&gt;
 
-  &lt;mn&gt; 1.337 &lt;/mn&gt;
+  &lt;mn&gt; 1.337 &lt;/mn&gt;
 
-  &lt;mn&gt; twelve &lt;/mn&gt;
+  &lt;mn&gt; twelve &lt;/mn&gt;
 
-  &lt;mn&gt; XVI &lt;/mn&gt;
+  &lt;mn&gt; XVI &lt;/mn&gt;
 
-  &lt;mn&gt; 2e10 &lt;/mn&gt;
+  &lt;mn&gt; 2e10 &lt;/mn&gt;
 
 &lt;/math&gt;
 </pre>
@@ -93,7 +93,7 @@ translation_of: Web/MathML/Element/mn
 <h2 id="Особенности_ядра_Gecko">Особенности ядра Gecko</h2>
 
 <ul>
- <li>Некоторые значения <code>mathvariant</code> реализованы только начиная с Gecko 28.0 {{ geckoRelease("28.0") }} и требуют соответствующих <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">математических шрифтов</a>.</li>
+ <li>Некоторые значения <code>mathvariant</code> реализованы только начиная с Gecko 28.0 {{ geckoRelease("28.0") }} и требуют соответствующих <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">математических шрифтов</a>.</li>
 </ul>
 
 <div class="jfk-bubble gtx-bubble" style="">

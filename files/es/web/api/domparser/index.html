@@ -5,19 +5,19 @@ translation_of: Web/API/DOMParser
 ---
 <p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-<p><code>DOMParser</code> puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un <a href="/es/docs/Web/API/Document">Documento</a> DOM. <code>DOMParser</code> está especificado en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</p>
+<p><code>DOMParser</code> puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un <a href="/es/docs/Web/API/Document">Documento</a> DOM. <code>DOMParser</code> está especificado en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</p>
 
-<p>Tener en cuenta que <a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> soporta parsear XML y HTML desde recursos direccionables por URL.</p>
+<p>Tener en cuenta que <a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> soporta parsear XML y HTML desde recursos direccionables por URL.</p>
 
 <h2 id="Creando_un_DOMParser">Creando un DOMParser</h2>
 
-<p>Para crear un objeto <code>DOMParser </code>simplemente usar <code>new DOMParser()</code>.</p>
+<p>Para crear un objeto <code>DOMParser </code>simplemente usar <code>new DOMParser()</code>.</p>
 
-<p>Para más información sobre crear un objeto <code>DOMParser</code> en extensiones Firefox, por favor vea la documentación de <a href="/en-US/docs/nsIDOMParser" title="nsIDOMParser"><code>nsIDOMParser</code></a>.</p>
+<p>Para más información sobre crear un objeto <code>DOMParser</code> en extensiones Firefox, por favor vea la documentación de <a href="/en-US/docs/nsIDOMParser" title="nsIDOMParser"><code>nsIDOMParser</code></a>.</p>
 
 <h2 id="Parseando_XML">Parseando XML</h2>
 
-<p>Una vez creado el objeto parseador, puedes parsear XML desde una cadena de texto usando el método <code>parseFromString:</code></p>
+<p>Una vez creado el objeto parseador, puedes parsear XML desde una cadena de texto usando el método <code>parseFromString:</code></p>
 
 <pre class="brush: js">var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
@@ -25,7 +25,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 <h3 id="Error_handling" name="Error_handling">Manejo de errores</h3>
 
-<p><code><font face="Open Sans, Arial, sans-serif">Es importante tener en cuenta que si el proceso de parseado falla, actualmente </font>DOMParser</code> no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):</p>
+<p><code><font face="Open Sans, Arial, sans-serif">Es importante tener en cuenta que si el proceso de parseado falla, actualmente </font>DOMParser</code> no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):</p>
 
 <pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
 (error description)
@@ -37,7 +37,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 <h2 id="Parseando_un_documento_SVG_o_HTML">Parseando un documento SVG o HTML</h2>
 
-<p>El <code>DOMParser</code> puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es <code>text/xml</code>, el objeto resultante será un <code>XMLDocument</code>, si el tipo MIME es <code>image/svg+xml</code> será un <code>SVGDocument,</code> y si el tipo MIME es <code>text/html</code> será un <code>HTMLDocument</code>.</p>
+<p>El <code>DOMParser</code> puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es <code>text/xml</code>, el objeto resultante será un <code>XMLDocument</code>, si el tipo MIME es <code>image/svg+xml</code> será un <code>SVGDocument,</code> y si el tipo MIME es <code>text/html</code> será un <code>HTMLDocument</code>.</p>
 
 <pre class="brush: js">var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
@@ -104,7 +104,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 <h3 id="DOMParser_de_ChromeJSMXPCOMPrivileged_Scope">DOMParser de Chrome/JSM/XPCOM/Privileged Scope</h3>
 
-<p>Ver artículo aquí: <a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a></p>
+<p>Ver artículo aquí: <a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a></p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -129,7 +129,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 {{Compat("api.DOMParser")}}
 
-<h2 id="See_also" name="See_also"> </h2>
+<h2 id="See_also" name="See_also"> </h2>
 
 <h2 id="See_also" name="See_also">Ver también</h2>
 

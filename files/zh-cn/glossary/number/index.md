@@ -11,7 +11,7 @@ translation_of: Glossary/Number
 
 ### 基础知识
 
-- 维基百科上的{{Interwiki("wikipedia", "Data type#Numeric_types", "数字类型")}}
+- 维基百科上的[数字类型](https://zh.wikipedia.org/wiki/Data_type#Numeric_types)
 
 ### 技术参考
 

@@ -188,7 +188,7 @@ Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt; y
 
 <h3 id="Aprendizaje_activo_proporciona_estilo_a_tus_enlaces">Aprendizaje activo: proporciona estilo a tus enlaces</h3>
 
-<p>En esta sesión de aprendizaje activo, queremos que tomes nuestro conjunto de reglas vacías y añadas tus propias declaraciones para lograr unos enlaces geniales. Da rienda suelta a tu imaginación. Estamos seguros de que puedes crear algo genial y tan funcional como nuestro ejemplo anterior.</p>
+<p>En esta sesión de aprendizaje activo, queremos que tomes nuestro conjunto de reglas vacías y añadas tus propias declaraciones para lograr unos enlaces geniales. Da rienda suelta a tu imaginación. Estamos seguros de que puedes crear algo genial y tan funcional como nuestro ejemplo anterior.</p>
 
 <p>Si te equivocas, puedes volver a empezar pulsando el botón <em>Reinicio</em>. Si te quedas encallado, pulsa el botón <em>Mostrar la solución</em> para recuperar el ejemplo anterior.</p>
 
@@ -229,7 +229,7 @@ a:active {
   &lt;h2&gt;Salida&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reinicio" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reinicio" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Mostrar la solución" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -253,9 +253,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -326,11 +326,11 @@ a[href*="http"] {
 
 <p>¿Qué pasa aquí? Omitiremos la mayor parte del CSS, ya que es la misma información que has visto antes. Sin embargo, la última regla es interesante: insertamos una imagen de fondo personalizada en enlaces externos de una manera similar a como manejamos <a href="/es/docs/Learn/CSS/Styling_text/Styling_lists#Uso_de_una_imagen_personalizada_como_vi%C3%B1eta">viñetas personalizadas en los elementos de lista</a> en el último artículo. Esta vez, sin embargo, utilizamos la propiedad abreviada {{cssxref("background")}} en lugar de las propiedades individuales. Establecemos la ruta a la imagen que queremos insertar, especificamos el valor <code>no-repeat</code> para que solo se inserte una copia, y luego especificamos la posición como al 100% a la derecha del contenido de texto y a 0 píxeles del extremo superior.</p>
 
-<p>También usamos {{cssxref("background-size")}} para especificar el tamaño de la imagen de fondo (es útil tener un icono más grande y luego cambiar su tamaño de esta manera, según sea necesario para fines de diseño web adaptativo). Sin embargo, esto solo funciona con Internet Explorer 9 y versiones posteriores, por lo que si trabajas con navegadores antiguos, tendrás que cambiar el tamaño de la imagen e insertarla tal como es.</p>
+<p>También usamos {{cssxref("background-size")}} para especificar el tamaño de la imagen de fondo (es útil tener un icono más grande y luego cambiar su tamaño de esta manera, según sea necesario para fines de diseño web adaptativo). Sin embargo, esto solo funciona con Internet Explorer 9 y versiones posteriores, por lo que si trabajas con navegadores antiguos, tendrás que cambiar el tamaño de la imagen e insertarla tal como es.</p>
 
 <p>Finalmente, establecemos un área de relleno a la derecha ({{cssxref ("padding-right")}}) para los enlaces, para crear un espacio en que aparezca la imagen de fondo, de modo que no se superponga con el texto.</p>
 
-<p>Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks">HTML</a> de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un <a href="/es/docs/Learn/CSS/Building_blocks/Selectores_CSS#Selectores_de_atributo">selector de atributos</a>: <code>a[href*="http"]</code> selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo {{htmlattrxref("href","a")}} con un valor que contiene «http» en algún lugar de su contenido textual.</p>
+<p>Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks">HTML</a> de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un <a href="/es/docs/Learn/CSS/Building_blocks/Selectores_CSS#Selectores_de_atributo">selector de atributos</a>: <code>a[href*="http"]</code> selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo {{htmlattrxref("href","a")}} con un valor que contiene «http» en algún lugar de su contenido textual.</p>
 
 <p>Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!</p>
 
@@ -342,7 +342,7 @@ a[href*="http"] {
 
 <p>Las herramientas que has explorado hasta ahora en este artículo también se pueden usar de otras maneras. Por ejemplo, los estados como <code>hover</code> se pueden usar para diseñar muchos elementos diferentes, no solo enlaces. Es posible que desees diseñar un estado que señale el paso del cursor por encima de párrafos, elementos de lista u otras cosas.</p>
 
-<p>Además, suele ser bastante común dar a los enlaces un aspecto y un comportamiento de botón en ciertas circunstancias: el menú de navegación de un sitio web generalmente está marcado como una lista que contiene enlaces, y es posible aplicarle estilo fácilmente para que se parezca a un conjunto de botones de control o pestañas que proporcionan al usuario acceso a otras partes del sitio web. Vamos a ver cómo.</p>
+<p>Además, suele ser bastante común dar a los enlaces un aspecto y un comportamiento de botón en ciertas circunstancias: el menú de navegación de un sitio web generalmente está marcado como una lista que contiene enlaces, y es posible aplicarle estilo fácilmente para que se parezca a un conjunto de botones de control o pestañas que proporcionan al usuario acceso a otras partes del sitio web. Vamos a ver cómo.</p>
 
 <p>En primer lugar, un poco de HTML:</p>
 
@@ -367,18 +367,18 @@ li {
 }
 
 a {
-  outline: none;
+  outline: none;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 li:last-child a {
-  margin-right: 0;
+  margin-right: 0;
 }
 
 a:link, a:visited, a:focus {

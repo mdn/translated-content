@@ -150,9 +150,9 @@ P
 #LUMPY
 </pre>
 
-<h2 id="Example_5:_Event_Propagation" name="Example_5:_Event_Propagation"> </h2>
+<h2 id="Example_5:_Event_Propagation" name="Example_5:_Event_Propagation"> </h2>
 
-<h2 id="Example_5:_Event_Propagation" name="Example_5:_Event_Propagation">Exemplo 5: Propagação de Eventos</h2>
+<h2 id="Example_5:_Event_Propagation" name="Example_5:_Event_Propagation">Exemplo 5: Propagação de Eventos</h2>
 
 <p>Este exemplo demonstra como eventos disparar e são tratados no DOM de uma forma muito simples. Quando o corpo deste documento HTML é carregado, um ouvinte de evento é registrado com a linha superior da tabela. O ouvinte de eventos processa o evento executando a função stopEvent, que altera o valor na célula inferior da tabela.</p>
 
@@ -200,7 +200,7 @@ function load() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_6:_getComputedStyle" name="Example_6:_getComputedStyle">Exemplo 6: getComputedStyle</h2>
+<h2 id="Example_6:_getComputedStyle" name="Example_6:_getComputedStyle">Exemplo 6: getComputedStyle</h2>
 
 <p>Este exemplo demonstra como o método {{domxref ("window.getComputedStyle")}} pode ser usado para obter os estilos de um elemento que não são definidos usando o atributo de estilo ou com JavaScript (por exemplo, elt.style.backgroundColor = "rgb (173, 216, 230) "). Estes últimos tipos de estilos podem ser recuperados com a propriedade {{domxref ("element.style", "elt.style")}} mais direta, cujas propriedades estão listadas na <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Reference">Lista de Propriedades do DOM CSS</a>.</p>
 
@@ -266,7 +266,7 @@ function cStyles() {
 
 <p>As propriedades dos objetos de evento diferem muito entre os navegadores, o <a href="https://dom.spec.whatwg.org">WHATWG DOM Standard</a> lista as propriedades padrão, porém muitos navegadores estenderam muito esses valores.</p>
 
-<p>Coloque o seguinte código em um arquivo de texto em branco e carregue-o em uma variedade de navegadores, você ficará surpreso com o número diferente e nomes de propriedades. Você também pode querer adicionar alguns elementos na página e chamar essa função de manipuladores de eventos diferentes.</p>
+<p>Coloque o seguinte código em um arquivo de texto em branco e carregue-o em uma variedade de navegadores, você ficará surpreso com o número diferente e nomes de propriedades. Você também pode querer adicionar alguns elementos na página e chamar essa função de manipuladores de eventos diferentes.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -286,40 +286,40 @@ td { padding: 2px 10px 2px 10px; }
 &lt;script&gt;
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var lableList = ['#', 'Property', 'Value'];
+  var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
-    addCell(row, lableList[i]);
-  }
+  for (var i=0; i&lt;len; i++) {
+    addCell(row, lableList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
 &lt;/script&gt;
 &lt;/head&gt;
@@ -331,7 +331,7 @@ window.onload = function(event){
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_8:_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">Exemplo 8: Usando a interface de tabela  do DOM</h2>
+<h2 id="Example_8:_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">Exemplo 8: Usando a interface de tabela  do DOM</h2>
 
 <p>A interface DOM HTMLTableElement fornece alguns métodos de conveniência para criar e manipular tabelas. Dois métodos usados com freqüência são {{domxref ("HTMLTableElement.insertRow")}} e {{domxref ("tableRow.insertCell")}}.</p>
 
@@ -364,7 +364,7 @@ for (var i = 0; i &lt; 2; i++) {
 <ul>
  <li>A propriedade {{domxref ("element.innerHTML", "innerHTML")}} de uma tabela nunca deve ser usada para modificar uma tabela, embora você possa usá-la para escrever uma tabela inteira ou o conteúdo de uma célula.</li>
  <li>Se os métodos DOM Core {{domxref ("document.createElement")}} e {{domxref ("Node.appendChild")}} são usados para criar linhas e células, o IE requer que eles sejam anexados a um elemento tbody, enquanto outros Os navegadores permitirão acrescentar a um elemento da tabela (as linhas serão adicionadas ao último elemento tbody).</li>
- <li>Há uma série de outros métodos convenientes pertencentes à<a href="/en-US/docs/"> tabela de interface</a> que podem ser usados para criar e modificar tabelas.</li>
+ <li>Há uma série de outros métodos convenientes pertencentes à<a href="/en-US/docs/"> tabela de interface</a> que podem ser usados para criar e modificar tabelas.</li>
 </ul>
 
 <h2 id="Subnav">Subnav</h2>

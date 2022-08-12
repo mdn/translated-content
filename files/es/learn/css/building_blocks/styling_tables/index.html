@@ -22,7 +22,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 <h2 id="Una_tabla_HTML_típica">Una tabla HTML típica</h2>
 
-<p>Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:</p>
+<p>Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:</p>
 
 <pre class="brush: html notranslate">&lt;table summary="Los grupos de música punk más famosos del Reino Unido"&gt;
   &lt;caption&gt;Un resumen de los grupos de música punk más famosos del Reino Unido&lt;/caption&gt;
@@ -65,7 +65,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
   &lt;/tfoot&gt;
 &lt;/table&gt;</pre>
 
-<p>La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlattrxref("summary","table")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
+<p>La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlattrxref("summary","table")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13064/table-unstyled.png" style="display: block; margin: 0 auto;"></p>
 
@@ -76,7 +76,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 <p>En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla juntos.</p>
 
 <ol>
- <li>Para comenzar, crea una copia local del <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html" title="código de ejemplo">código de ejemplo</a>, descarga las dos imágenes (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> y <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a>), y pon los tres archivos en alguna carpeta de tu ordenador.</li>
+ <li>Para comenzar, crea una copia local del <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html" title="código de ejemplo">código de ejemplo</a>, descarga las dos imágenes (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> y <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a>), y pon los tres archivos en alguna carpeta de tu ordenador.</li>
  <li>Ahora crea un archivo nuevo llamado <code>style.css</code> y guárdalo con el resto de archivos, en la misma carpeta.</li>
  <li>Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
   <pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
@@ -119,11 +119,11 @@ th, td {
 <p>Las partes más importantes que destacamos son:</p>
 
 <ul>
- <li>En general es una buena idea establecer un valor {{cssxref("table-layout")}} en <code>fixed</code> para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con <code>table-layout: fixed</code>, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
+ <li>En general es una buena idea establecer un valor {{cssxref("table-layout")}} en <code>fixed</code> para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con <code>table-layout: fixed</code>, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
   Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).</li>
  <li>Un valor {{cssxref("border-collapse")}} de <code>collapse</code> es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. <img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;"> Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces <code>border-collapse: collapse;</code>, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: <img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
- <li>Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.</li>
+ <li>Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.</li>
  <li>Hemos puesto área de relleno ({{cssxref("padding")}}) en los elementos {{htmlelement("th")}} y {{htmlelement("td")}}; esto da a los datos espacio para que respiren y mejora la legibilidad de la tabla.</li>
 </ul>
 
@@ -135,7 +135,7 @@ th, td {
 
 <p>Ahora arreglaremos un poco nuestro texto.</p>
 
-<p>En primer lugar, hemos ido a <a href="https://www.google.com/fonts">Google Fonts</a> y hemos encontrado un tipo de letra adecuado para una tabla sobre bandas punk. Puedes buscar uno diferente si lo deseas; solo tienes que reemplazar el elemento {{htmlelement ("link")}} que te hemos proporcionado y la declaración {{cssxref ("font-family")}} personalizada por las que te proporcione Google Fonts.</p>
+<p>En primer lugar, hemos ido a <a href="https://www.google.com/fonts">Google Fonts</a> y hemos encontrado un tipo de letra adecuado para una tabla sobre bandas punk. Puedes buscar uno diferente si lo deseas; solo tienes que reemplazar el elemento {{htmlelement ("link")}} que te hemos proporcionado y la declaración {{cssxref ("font-family")}} personalizada por las que te proporcione Google Fonts.</p>
 
 <p>Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento <code>&lt;link&gt;</code>:</p>
 
@@ -202,7 +202,7 @@ thead th, tfoot th, tfoot td {
 
 <p>Una vez más, aquí no hay nada específico para las tablas, pero vale la pena señalar algunas cosas.</p>
 
-<p>Hemos añadido una imagen de fondo ({{cssxref("background-image")}}) a los elementos {{htmlelement("thead")}} y {{htmlelement("tfoot")}}, y hemos cambiado el ({{cssxref("color")}}) de todo el texto del encabezado y el pie de página por el blanco (y le hemos dado una sombra, {{cssxref("text-shadow")}}) para que sea legible. Siempre debes asegurarte de que tu texto contraste bien con el fondo, para que sea legible.</p>
+<p>Hemos añadido una imagen de fondo ({{cssxref("background-image")}}) a los elementos {{htmlelement("thead")}} y {{htmlelement("tfoot")}}, y hemos cambiado el ({{cssxref("color")}}) de todo el texto del encabezado y el pie de página por el blanco (y le hemos dado una sombra, {{cssxref("text-shadow")}}) para que sea legible. Siempre debes asegurarte de que tu texto contraste bien con el fondo, para que sea legible.</p>
 
 <p>También hemos añadido un degradado lineal a los elementos {{htmlelement("th")}} y {{htmlelement("td")}} del encabezado y el pie de página para obtener un poco de textura, y también hemos dado a esos elementos un borde púrpura brillante. Es útil tener múltiples elementos anidados disponibles para que puedas superponer estilos. Sí, podríamos haber colocado tanto la imagen de fondo como el gradiente lineal en los elementos {{htmlelement ("thead")}} y {{htmlelement ("tfoot")}} utilizando múltiples imágenes de fondo, pero decidimos hacerlo por separado por los navegadores más antiguos que no admiten múltiples imágenes de fondo o gradientes lineales.</p>
 

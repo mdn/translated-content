@@ -15,4 +15,4 @@ translation_of: Glossary/Host
 
 ### 基礎知識
 
-- 維基百科上的{{interwiki("wikipedia", "主機")}}
+- 維基百科上的[主機](https://zh.wikipedia.org/wiki/主機)

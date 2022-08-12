@@ -50,7 +50,7 @@ Accept-Ranges: none
 Host: i.imgur.com
 Range: bytes=0-1023</pre>
 
-<p>サーバーは {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードとともに以下のレスポンスを返します:</p>
+<p>サーバーは {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードとともに以下のレスポンスを返します:</p>
 
 <pre class="notranslate">HTTP/1.1 206 Partial Content
 Content-Range: bytes 0-1023/146515
@@ -59,7 +59,7 @@ Content-Length: 1024
 (binary content)
 </pre>
 
-<p>{{HTTPHeader("Content-Length")}} はここでの場合、要求された範囲の大きさを返します(画像全体の大きさではありません)。 {{HTTPHeader("Content-Range")}} レスポンスヘッダーはこの部分的なメッセージが全体のリソースのうちのどの部分に属しているのかを指し示しています。</p>
+<p>{{HTTPHeader("Content-Length")}} はここでの場合、要求された範囲の大きさを返します(画像全体の大きさではありません)。 {{HTTPHeader("Content-Range")}} レスポンスヘッダーはこの部分的なメッセージが全体のリソースのうちのどの部分に属しているのかを指し示しています。</p>
 
 <h3 id="Multipart_ranges" name="Multipart_ranges">複数部分のリクエスト</h3>
 
@@ -67,7 +67,7 @@ Content-Length: 1024
 
 <pre class="notranslate">curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"</pre>
 
-<p>サーバーは {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードと {{HTTPHeader("Content-Type")}}<code>: multipart/byteranges; boundary=3d6b6a416f9b5</code> ヘッダを伴ってレスポンスを返し、そこでは指定した複数のバイト範囲に関するデータが後ろに続いていることがわかります。 各々のバイト範囲において対応する <code>Content-Type</code> と <code>Content-Range</code> ヘッダーフィールドが含まれており、それぞれのボディ部分を区切るための境界文字列が境界パラメーターによって指定されています。</p>
+<p>サーバーは {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードと {{HTTPHeader("Content-Type")}}<code>: multipart/byteranges; boundary=3d6b6a416f9b5</code> ヘッダを伴ってレスポンスを返し、そこでは指定した複数のバイト範囲に関するデータが後ろに続いていることがわかります。 各々のバイト範囲において対応する <code>Content-Type</code> と <code>Content-Range</code> ヘッダーフィールドが含まれており、それぞれのボディ部分を区切るための境界文字列が境界パラメーターによって指定されています。</p>
 
 <pre class="notranslate">HTTP/1.1 206 Partial Content
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
@@ -101,7 +101,7 @@ eta http-equiv="Content-type" content="text/html; c
 <p>範囲リクエストを用いる際、これに関連した３つのステータスコードが存在します。</p>
 
 <ul>
- <li>範囲リクエストが成功した際 {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードがサーバーから返されます。</li>
+ <li>範囲リクエストが成功した際 {{HTTPStatus("206")}} <code>Partial Content</code> ステータスコードがサーバーから返されます。</li>
  <li>範囲リクエストが元のリソースの境界を越え出た場合 (つまり範囲を示す値がリソースより外にはみ出た場合) 、サーバーは {{HTTPStatus("416")}} <code>Requested Range Not Satisfiable</code> ステータスコードを返します。</li>
  <li>範囲リクエストがサポートされていない場合、サーバーから {{HTTPStatus("200")}} <code>OK</code> ステータスコードが返されます。</li>
 </ul>

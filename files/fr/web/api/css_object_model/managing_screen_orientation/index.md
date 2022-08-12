@@ -119,7 +119,7 @@ Et voici le résultat:
 
 ## Verrouiller l'orientation de l'écran
 
-> **Attention :** Cette API est expérimentale et est actuellement disponible sur [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) et [Firefox pour Android](/en-US/docs/Mozilla/Firefox_for_Android) avec le préfixe `moz`, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe `ms`.
+> **Attention :** Cette API est expérimentale et est actuellement disponible sur [Firefox OS](/fr/docs/Mozilla/Firefox_OS) et [Firefox pour Android](/fr/docs/Mozilla/Firefox_for_Android) avec le préfixe `moz`, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe `ms`.
 
 Certains appareils (principalement les appareils mobiles) peuvent changer dynamiquement d'orientation d'écran selon leur propre orientation, garantissant que l'utilisateur sera toujours capable de lire ce qu'il y a sur l'écran. Bien que ce comportement soit parfaitement adapté au contenu texte, certains contenus peuvent être affectés négativement par ce changement. Par exemple, les jeux basés sur l'orientation de l'appareil être gachés par un tel changement.
 
@@ -151,7 +151,7 @@ screen.lockOrientation('landscape');
 
 ## Firefox OS et Android: Verrouiller l'orientation avec le manifeste
 
-Pour Firefox OS et Firefox Android (bientôt pour la version bureau de Firefox également), vous pouvez le champ [orientation](/en-US/Apps/Build/Manifest#orientation) dans le fichier manifeste de votre application, par exemple:
+Pour Firefox OS et Firefox Android (bientôt pour la version bureau de Firefox également), vous pouvez le champ [orientation](/fr/Apps/Build/Manifest#orientation) dans le fichier manifeste de votre application, par exemple:
 
 ```json
 "orientation": "portrait"

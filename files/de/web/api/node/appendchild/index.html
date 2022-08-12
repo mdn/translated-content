@@ -13,9 +13,9 @@ translation_of: Web/API/Node/appendChild
 
 <p>Die <code><strong>Node.appendChild()</strong></code> Methode fügt einen Kind-Knoten am Ende der Liste aller Kinder des angegebenen Eltern-Knotens an (to append = anhängen).</p>
 
-<p>Wenn das gegebene Kind eine Referenz zu einem existierenden Knoten im Dokument ist, wird <code>appendChild()</code> es von der aktuellen Position zu der neuen Position bewegen. Es gibt also keine Notwendigkeit den Knoten erst zu entfernen, weil ein Knoten in einem Dokument nicht gleichzeitig an zwei Stellen vorkommen kann. Also, wenn der Knoten bereits einen Eltern-Knoten hat, wird der Knoten zuerst entfernt und dann erneut am Ende der Kind-Knoten-Liste angehängt.</p>
+<p>Wenn das gegebene Kind eine Referenz zu einem existierenden Knoten im Dokument ist, wird <code>appendChild()</code> es von der aktuellen Position zu der neuen Position bewegen. Es gibt also keine Notwendigkeit den Knoten erst zu entfernen, weil ein Knoten in einem Dokument nicht gleichzeitig an zwei Stellen vorkommen kann. Also, wenn der Knoten bereits einen Eltern-Knoten hat, wird der Knoten zuerst entfernt und dann erneut am Ende der Kind-Knoten-Liste angehängt.</p>
 
-<p>Das {{domxref("Node.cloneNode()")}}  kann genutzt werden um eine Kopie des Knotens zu machen, bevor es an einen neuen Eltern-Knoten angehängt wird. Zu beachten: Kopien die mit <code>cloneNode</code> gemacht wurden, werden nicht automatisch Synchron gehalten.</p>
+<p>Das {{domxref("Node.cloneNode()")}}  kann genutzt werden um eine Kopie des Knotens zu machen, bevor es an einen neuen Eltern-Knoten angehängt wird. Zu beachten: Kopien die mit <code>cloneNode</code> gemacht wurden, werden nicht automatisch Synchron gehalten.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Node/appendChild
 
 <p>Eine Verkettung kann anders ablaufen als erwartet, da appendChild() das Kindelement zurück gibt.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</code></pre>
+<pre class="brush: html">var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</pre>
 
 <p>Setzt nur <code>aBlock</code> auf <code>&lt;b&gt;&lt;/b&gt;</code>, was möglicherweise nicht das gewünschte ist.</p>
 
@@ -81,57 +81,7 @@ document.body.appendChild(p);</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

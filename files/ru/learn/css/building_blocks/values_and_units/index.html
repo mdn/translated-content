@@ -22,7 +22,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="Что_такое_значение_CSS">Что такое значение CSS?</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В спецификациях CSS и на страницах свойств здесь в MDN вы сможете определять (узнавать) значения, потому как они будут заключены в угловые скобки, например </span></span><code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> или <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code><a href="/en-US/docs/Web/CSS/length">. </a>Если вы видите значение <code>&lt;color&gt;</code> как действительное для определённого свойства это значит что вы можете использовать любой валидный цвет в качестве значение для этого свойства, как перечислено на странице <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code><a href="/en-US/docs/Web/CSS/color_value">.</a></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">В спецификациях CSS и на страницах свойств здесь в MDN вы сможете определять (узнавать) значения, потому как они будут заключены в угловые скобки, например </span></span><code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> или <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code><a href="/en-US/docs/Web/CSS/length">. </a>Если вы видите значение <code>&lt;color&gt;</code> как действительное для определённого свойства это значит что вы можете использовать любой валидный цвет в качестве значение для этого свойства, как перечислено на странице <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code><a href="/en-US/docs/Web/CSS/color_value">.</a></p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: You'll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value.</p>
@@ -32,7 +32,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p><strong>Note</strong>: Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
 </div>
 
-<p>В следующем примере мы установили цвет нашего заголовка используя ключевое слово и фон используя функцию  <code>rgb()</code>:</p>
+<p>В следующем примере мы установили цвет нашего заголовка используя ключевое слово и фон используя функцию  <code>rgb()</code>:</p>
 
 <pre class="brush: css"><code>h1 {
   color: black;
@@ -40,7 +40,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 } </code>
 </pre>
 
-<p>Значение в CSS это путь определения коллекции допустимых под-значений. То есть если вы видите <code>&lt;color&gt;</code> как применённый, то вам не надо озадачиваться какой из разных типов значения цвета может быть использован — ключевое слово, hex значение, функция <code>rgb()</code> и т.д. Вы можете воспользоваться <em>любым </em>доступным значением <code>&lt;color&gt;</code> при условии, что они поддерживаются вашим браузером. Страницы для всех значений на MDN дадут вам информацию о поддержке браузеров. Например, если вы посмотрите на страницу <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> то вы увидите раздел совместимости браузеров в котором перечислены различные типы значений цвета и их поддержка.</p>
+<p>Значение в CSS это путь определения коллекции допустимых под-значений. То есть если вы видите <code>&lt;color&gt;</code> как применённый, то вам не надо озадачиваться какой из разных типов значения цвета может быть использован — ключевое слово, hex значение, функция <code>rgb()</code> и т.д. Вы можете воспользоваться <em>любым </em>доступным значением <code>&lt;color&gt;</code> при условии, что они поддерживаются вашим браузером. Страницы для всех значений на MDN дадут вам информацию о поддержке браузеров. Например, если вы посмотрите на страницу <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> то вы увидите раздел совместимости браузеров в котором перечислены различные типы значений цвета и их поддержка.</p>
 
 <p>Давайте посмотрим на некоторые типы значений и единиц с примерами чтобы вы могли опробовать различные возможные значения, с которыми вы можете часто сталкиваться.</p>
 
@@ -58,7 +58,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
  <tbody>
   <tr>
    <td><code><a href="/en-US/docs/Web/CSS/integer">&lt;integer&gt;</a></code></td>
-   <td><code>&lt;integer&gt;</code> (целое число) — целое число такое как <code>1024</code> или <code>-55</code>.</td>
+   <td><code>&lt;integer&gt;</code> (целое число) — целое число такое как <code>1024</code> или <code>-55</code>.</td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></code></td>
@@ -69,7 +69,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
   <tr>
    <td><code>&lt;dimension&gt;</code></td>
    <td>
-    <p><code>&lt;dimension&gt;</code> (измерение) это — <code>&lt;number&gt;</code> (число) с единицей измерения, прикреплённой к нему, например <code>45deg</code>, <code>5s</code>, или <code>10px</code>. <code>&lt;dimension&gt;</code> — это зонт категорий, включающих в себя типы <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/time">&lt;time&gt;</a></code>, и <code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code><a href="/en-US/docs/Web/CSS/resolution"> </a>(длина, угол, время и разрешение)<a href="/en-US/docs/Web/CSS/resolution">. </a></p>
+    <p><code>&lt;dimension&gt;</code> (измерение) это — <code>&lt;number&gt;</code> (число) с единицей измерения, прикреплённой к нему, например <code>45deg</code>, <code>5s</code>, или <code>10px</code>. <code>&lt;dimension&gt;</code> — это зонт категорий, включающих в себя типы <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/time">&lt;time&gt;</a></code>, и <code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code><a href="/en-US/docs/Web/CSS/resolution"> </a>(длина, угол, время и разрешение)<a href="/en-US/docs/Web/CSS/resolution">. </a></p>
    </td>
   </tr>
   <tr>
@@ -83,11 +83,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h3 id="Длины">Длины</h3>
 
-<p>Числовой тип, с которым вы будете сталкиваться чаще всего это <code>&lt;length&gt;</code> (длина), например <code>10px</code> (пиксели) или <code>30em</code>. Существует два типа длин используемых в CSS — относительные и абсолютные. Важно знать разницу для того, чтобы понимать, насколько большими станут вещи.</p>
+<p>Числовой тип, с которым вы будете сталкиваться чаще всего это <code>&lt;length&gt;</code> (длина), например <code>10px</code> (пиксели) или <code>30em</code>. Существует два типа длин используемых в CSS — относительные и абсолютные. Важно знать разницу для того, чтобы понимать, насколько большими станут вещи.</p>
 
-<h4 id="Абсолютные_единицы_длины">Абсолютные единицы длины</h4>
+<h4 id="Абсолютные_единицы_длины">Абсолютные единицы длины</h4>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Ниже приведены все единицы абсолютной длины </span></span>— они не являются относительными к чему-либо и обычно считаются всегда одинакового размера.</p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Ниже приведены все единицы абсолютной длины </span></span>— они не являются относительными к чему-либо и обычно считаются всегда одинакового размера.</p>
 
 <table class="standard-table">
  <thead>
@@ -136,7 +136,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
  </tbody>
 </table>
 
-<p>Большинство из этих значений больше полезны при использовании печати, чем для вывода на экран. Например, мы обычно не используем <code>cm</code> (сантиметры) на экране. Единственное значение которое вы в основном будете использовать это <code>px</code> (пиксели).</p>
+<p>Большинство из этих значений больше полезны при использовании печати, чем для вывода на экран. Например, мы обычно не используем <code>cm</code> (сантиметры) на экране. Единственное значение которое вы в основном будете использовать это <code>px</code> (пиксели).</p>
 
 <h4 id="Единицы_относительной_длины">Единицы относительной длины</h4>
 
@@ -195,7 +195,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>Второй блок имеет ширину, установленную в единицах <code>vw</code> (ширина окна просмотра). Это значение относительно к ширине окна просмотра и таким образом 10vw это 10 процентов от ширины окна просмотра. Если вы измените ширину окна вашего браузера, размер блока должен измениться, однако этот пример встроен в страницу с использованием <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, поэтому это не сработает. Для того чтобы увидеть это в действии вы должны <a href="https://mdn.github.io/css-examples/learn/values-units/length.html">открыть этот пример в отдельной вкладке браузера</a>.</p>
 
-<p>Третий блок использует единицы <code>em</code>. Они относительны к размеру шрифта. Я установил размер шрифта <code>1em</code> для содержимого {{htmlelement("div")}}, который имеет класс <code>.wrapper</code>. Измените это значение на <code>1.5em</code> и вы увидите что, размер шрифта всех этих элементов увеличится, но только последний объект станет шире, поскольку его ширина относительна к тому размера шрифта.</p>
+<p>Третий блок использует единицы <code>em</code>. Они относительны к размеру шрифта. Я установил размер шрифта <code>1em</code> для содержимого {{htmlelement("div")}}, который имеет класс <code>.wrapper</code>. Измените это значение на <code>1.5em</code> и вы увидите что, размер шрифта всех этих элементов увеличится, но только последний объект станет шире, поскольку его ширина относительна к тому размера шрифта.</p>
 
 <p>После выполнения инструкция выше, попробуйте поиграть со значениями и посмотрите, что у вас получится.</p>
 
@@ -215,23 +215,23 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>Однако, если вы измените <code>font-size</code> (размер шрифта) <code>&lt;html&gt;</code> в CSS, вы увидите что все остальное изменится относительно ему — и <code>rem</code>- и <code>em</code>-размеры текста</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
 
 <h3 id="Проценты">Проценты</h3>
 
 <p>Во многих случаях проценты обрабатываются таким же образом, как и длина. С процентами фишка в том, что они всегда устанавливаются относительно некоторого другого значения. Например, если вы установите <code>font-size</code> элемента как проценты, то это будет процент от <code>font-size</code> родительского элемента. Если вы используете процент для значения <code>width </code>(ширина), то это будет процент от <code>width</code> родителя.</p>
 
-<p>В примере ниже два блока с размерами в процентах и два с размерами в пикселях имеющих одинаковые имена классов. Оба набора имеют ширину 200px и 40% соответственно.</p>
+<p>В примере ниже два блока с размерами в процентах и два с размерами в пикселях имеющих одинаковые имена классов. Оба набора имеют ширину 200px и 40% соответственно.</p>
 
 <p>Различие в том, что второй набор блоков находится внутри обёртки которая имеет ширину 400 пикселей. Второй блок шириной в 200px имеет ту же ширину что и первый, но второй 40 процентный блок теперь имеет 40% от 400px — намного уже чем первый.</p>
 
 <p><strong>Попробуйте изменить ширину обёртки (.wrapper) или процентное значение чтобы увидеть, как это работает.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
 
 <p>В следующем примере размер шрифта установлен в процентах. Каждый <code>&lt;li&gt;</code> имеет <code>font-size</code> 80%, поэтому элементы вложенного списка становятся прогрессивно меньше так как они наследуют свои размеры от родителя.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
 
 <p>Обратите внимание, в то время как многие значения принимают как длину, так и проценты, существуют те, которые принимают только длину. Вы можете посмотреть какие значения допустимы на справочной странице свойств MDN. Если допустимые значения включают <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code>, тогда вы можете использовать и длину, и проценты. Если же допустимые значения включают только <code>&lt;length&gt;</code>, то использование процентов невозможно.</p>
 
@@ -239,9 +239,9 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>Некоторые значения принимают числа без каких-либо единиц измерения. Примером свойства принимающего числа без единиц измерения может служить свойство <code>opacity</code>, которое контролирует мутность элемента (настолько он прозрачен). Это свойство принимает числа между <code>0</code> (полностью прозрачное) и <code>1</code> (полностью мутное).</p>
 
-<p><strong>В примере ниже, попробуйте изменить значение </strong><code><strong>opacity</strong></code><strong> на различные десятичные значения между </strong><code><strong>0</strong></code><strong> и </strong><code><strong>1</strong></code><strong> и посмотрите, как блок и его содержимое становится более и/или менее мутными.</strong></p>
+<p><strong>В примере ниже, попробуйте изменить значение </strong><code><strong>opacity</strong></code><strong> на различные десятичные значения между </strong><code><strong>0</strong></code><strong> и </strong><code><strong>1</strong></code><strong> и посмотрите, как блок и его содержимое становится более и/или менее мутными.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>Внимание</strong>: Когда вы используете числа в CSS в качестве значений, они не должны быть заключены в кавычки.</p>
@@ -269,7 +269,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>Эти значения являются немного более сложными и менее простыми для понимания, но они намного более универсальны чем ключевые слова — вы можете использовать hex-значения чтобы отобразить любой цвет, который вы хотите использовать в своей цветовой схеме.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
 
 <p><strong>И снова, попробуйте изменить значения, чтобы посмотреть, как варьируют цвета.</strong></p>
 
@@ -279,7 +279,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>Давайте перепишем наш последний пример используя RGB цвета:</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
 
 <p>А также вы можете использовать цвета RGBA — что работает в точности, как и цвета RGB и то есть вы можете использовать любое значение RGB, однако существует четвёртое значение, которое представляет альфа канал цвета, которое контролирует мутность. Если вы установите это значение на <code>0</code>, то это сделает цвет полностью прозрачным, тогда как <code>1</code> сделает его полностью мутным. Значения между дают вам разные уровни прозрачности.</p>
 
@@ -309,11 +309,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>We can update the RGB example to use HSL colors like this:</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
 
 <p>Just as RGB has RGBA, HSL has an HSLA equivalent, which gives you the same ability to specify the alpha channel. I've demonstrated this below by changing my RGBA example to use HSLA colors.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
 
 <p>You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!</p>
 
@@ -323,7 +323,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>In the example below we have demonstrated an image and a gradient in use as a value for the CSS <code>background-image</code> property.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: there are some other possible values for <code>&lt;image&gt;</code>, however these are newer and currently have poor browser support. Check out the page on MDN for the <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> data type if you want to read about them.</p>
@@ -337,7 +337,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>In the following example we have positioned a background image 40px from the top and to the right of the container using a keyword.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
 
 <p><strong>Play around with these values to see how you can push the image around.</strong></p>
 
@@ -347,7 +347,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>There are places where you use strings in CSS, for example <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">when specifying generated content</a>. In this case the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
 
 <h2 id="Functions">Functions</h2>
 

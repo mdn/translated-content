@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p><strong>optional chaining</strong> 연산자 (<strong><code>?.</code></strong>) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.</p>
+<p><strong>optional chaining</strong> 연산자 (<strong><code>?.</code></strong>) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.</p>
   
-<p><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
+<p><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
 
-<p>따라서 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
+<p>따라서 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
 
 <p>optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지만, 정의되지 않은 루트 객체와는 함께 사용할 수 있다.</p>
 
@@ -25,19 +25,19 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <h2>설명</h2>
 
-<p>optional chaining 연산자는 참조나 기능이 <code>undefined</code> 또는 <code>null</code>일 수 있을 때 연결된 객체의 값에 접근하는 단순화할 수 있는 방법을 제공한다.</p>
+<p>optional chaining 연산자는 참조나 기능이 <code>undefined</code> 또는 <code>null</code>일 수 있을 때 연결된 객체의 값에 접근하는 단순화할 수 있는 방법을 제공한다.</p>
 
-<p>예를 들어, 중첩된 구조를 가진 객체에서 <code>obj</code>가 있다. optional chaining이 없이 깊이 중첩된 하위 속성을 찾으려면, 다음과 같이 참조를 확인해야 한다:</p>
+<p>예를 들어, 중첩된 구조를 가진 객체에서 <code>obj</code>가 있다. optional chaining이 없이 깊이 중첩된 하위 속성을 찾으려면, 다음과 같이 참조를 확인해야 한다:</p>
 
 <pre class="brush: js">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
 
-<p><code>obj.first</code>의 값은 <code>obj.first.second</code>의 값에 접근하기 전에 <code>null</code> (그리고 <code>undefined</code>)가 아니라는 점을 검증한다. 이는 만약에 <code>obj.first</code>를 테스트 없이 <code>obj.first.second</code> 에 직접 접근할 때 일어날 수 있는 에러를 방지한다. </p>
+<p><code>obj.first</code>의 값은 <code>obj.first.second</code>의 값에 접근하기 전에 <code>null</code> (그리고 <code>undefined</code>)가 아니라는 점을 검증한다. 이는 만약에 <code>obj.first</code>를 테스트 없이 <code>obj.first.second</code> 에 직접 접근할 때 일어날 수 있는 에러를 방지한다. </p>
 
-<p>그러나 optional chaining 연산자(<code>?.</code>)를 사용하여, <code>obj.first.second</code> 에 접근하기 전에 <code>obj.first</code>의 상태에 따라 명시적으로 테스트하거나 단락시키지 않아도 된다:</p>
+<p>그러나 optional chaining 연산자(<code>?.</code>)를 사용하여, <code>obj.first.second</code> 에 접근하기 전에 <code>obj.first</code>의 상태에 따라 명시적으로 테스트하거나 단락시키지 않아도 된다:</p>
 
 <pre class="brush: js">let nestedProp = obj.first?.second;</pre>
 
-<p><code>.</code> 대신에 <code>?.</code> 연산자를 사용함으로써, 자바스크립트는 <code>obj.first.second</code>에 접근하기 전에 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>이라면, 그 표현식은 자동으로 단락되어 <code>undefined</code>가 반환된다.</p>
+<p><code>.</code> 대신에 <code>?.</code> 연산자를 사용함으로써, 자바스크립트는 <code>obj.first.second</code>에 접근하기 전에 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>이라면, 그 표현식은 자동으로 단락되어 <code>undefined</code>가 반환된다.</p>
 
 <p>이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.</p>
 
@@ -46,23 +46,23 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <h3>함수의 호출과 Optional chaining</h3>
 
-<p>존재하지 않을 수 있는 매서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우,  유용할 수 있다.</p>
+<p>존재하지 않을 수 있는 매서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우,  유용할 수 있다.</p>
 
-<p>함수 호출과 optional chaining을 사용함으로써 메서드를 찾을 수 없는 경우에 예외를 발생시키는 것 대신에 그 표현식은 자동으로 <code>undefined</code>를 반환한다:</p>
+<p>함수 호출과 optional chaining을 사용함으로써 메서드를 찾을 수 없는 경우에 예외를 발생시키는 것 대신에 그 표현식은 자동으로 <code>undefined</code>를 반환한다:</p>
 
 <pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
 <div class="blockIndicator note">
-<p><strong>메모:</strong> 만약 속성에 해당 이름이 있지만 함수가 아니라면, <code>?.</code>의 사용은 여전히 예외를 발생시킨다. {{JSxRef("TypeError")}} exception (<code>x.y</code><code> is not a function</code>).</p>
+<p><strong>메모:</strong> 만약 속성에 해당 이름이 있지만 함수가 아니라면, <code>?.</code>의 사용은 여전히 예외를 발생시킨다. {{JSxRef("TypeError")}} exception (<code>x.y</code><code> is not a function</code>).</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>메모:</strong> 만약 <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>이면, <code>TypeError</code> 예외가 여전히 발생 할 것이다. <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>으로 예상된다면, <code>?.</code>을 사용해야한다: <code>someInterface?.customMethod?.()</code></p>
+<p><strong>메모:</strong> 만약 <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>이면, <code>TypeError</code> 예외가 여전히 발생 할 것이다. <code>someInterface</code> 자체가 <code>null</code>이나 <code>undefined</code>으로 예상된다면, <code>?.</code>을 사용해야한다: <code>someInterface?.customMethod?.()</code></p>
 </div>
 
-<h4 id="optional_callbacks과_event_handlers_다루기">optional callbacks과 event handlers 다루기</h4>
+<h4 id="optional_callbacks과_event_handlers_다루기">optional callbacks과 event handlers 다루기</h4>
 
-<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
+<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
 
 <pre class="brush: js">// Written as of ES2019
 function doSomething(onContent, onError) {
@@ -110,7 +110,7 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 
 <h3>기본 예제</h3>
 
-<p>이 예제는 해당 멤버가 없을 때, map에서 멤버 bar의 <code>name</code>의 속성 값을 찾는다. 그러므로 결과는 <code>undefined</code>이다.</p>
+<p>이 예제는 해당 멤버가 없을 때, map에서 멤버 bar의 <code>name</code>의 속성 값을 찾는다. 그러므로 결과는 <code>undefined</code>이다.</p>
 
 <pre class="brush: js">let myMap = new Map();
 myMap.set("foo", {name: "baz", desc: "inga"});
@@ -119,7 +119,7 @@ let nameBar = myMap.get("bar")?.name;</pre>
 
 <h3>단락 평가</h3>
 
-<p>표현식에서 optional chaining을 사용할 때, 만약 왼쪽에 있는 피연산자가 <code>null</code> or <code>undefined</code>인  경우, 그 표현식은 평가되지 않는다. 예들 들어:</p>
+<p>표현식에서 optional chaining을 사용할 때, 만약 왼쪽에 있는 피연산자가 <code>null</code> or <code>undefined</code>인  경우, 그 표현식은 평가되지 않는다. 예들 들어:</p>
 
 <pre class="brush: js">let potentiallyNullObj = null;
 let x = 0;
@@ -147,7 +147,7 @@ let duration = vacations.trip?.getTime?.();
 
 <h3>널 병합 연산자와 같이 사용하기</h3>
 
-<p>널 병합 연산자는 optional chaining를 사용한 후에 아무 값도 찾을 수 없을 때 기본 값을 주기 위해 사용될 수 있다:</p>
+<p>널 병합 연산자는 optional chaining를 사용한 후에 아무 값도 찾을 수 없을 때 기본 값을 주기 위해 사용될 수 있다:</p>
 
 <pre class="brush: js">let customer = {
   name: "Carl",
@@ -156,24 +156,9 @@ let duration = vacations.trip?.getTime?.();
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city</pre>
 
-<h2>명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.es/proposal-optional-chaining/#top">Proposal for the "optional chaining" operator</a></td>
-   <td>Stage 4</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2>브라우저 호환성</h2>
 

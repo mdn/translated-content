@@ -17,4 +17,4 @@ original_slug: Glossaire/RDF
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Resource Description Framework")}} sur Wikipédia
+- [<i lang="en">Resource Description Framework</i>](https://fr.wikipedia.org/wiki/Resource_Description_Framework) sur Wikipédia

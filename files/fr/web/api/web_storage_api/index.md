@@ -25,7 +25,7 @@ Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionS
 
 > **Note :** À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
 
-> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) et suivantes.)
+> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
 > **Note :** Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
 

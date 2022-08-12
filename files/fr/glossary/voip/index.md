@@ -16,4 +16,4 @@ La VoIP vous permet d'appeler directement depuis un ordinateur, un téléphone s
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "VoIP")}} sur Wikipédia
+- [VoIP](https://fr.wikipedia.org/wiki/Voix_sur_IP) sur Wikipédia

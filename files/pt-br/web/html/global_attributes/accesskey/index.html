@@ -8,11 +8,11 @@ translation_of: Web/HTML/Global_attributes/accesskey
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <code><strong>accesskey</strong></code> fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).</p>
+<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <code><strong>accesskey</strong></code> fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}</div>
 
-<div class="hidden">O código fonte desse exemplo interativo está armazenado em um repositório no GitHub. Se você deseja contribuir com o projeto de exemplos interativos, por favor clone o repositório: <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie uma solicitação de recebimento.</div>
+<div class="hidden">O código fonte desse exemplo interativo está armazenado em um repositório no GitHub. Se você deseja contribuir com o projeto de exemplos interativos, por favor clone o repositório: <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie uma solicitação de recebimento.</div>
 
 <div class="note">
 <p><strong>Nota</strong>: Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.</p>
@@ -64,7 +64,7 @@ translation_of: Web/HTML/Global_attributes/accesskey
   <tr>
    <th>Opera 12</th>
    <td colspan="3" rowspan="1">
-    <p><kbd>Shift</kbd> + <kbd>Esc</kbd> abre uma lista de conteúdos acessíveis pela tecla de acesso e, em seguida, pode escolher um item pressionando <kbd><em>key</em></kbd></p>
+    <p><kbd>Shift</kbd> + <kbd>Esc</kbd> abre uma lista de conteúdos acessíveis pela tecla de acesso e, em seguida, pode escolher um item pressionando <kbd><em>key</em></kbd></p>
    </td>
   </tr>
  </tbody>
@@ -72,16 +72,16 @@ translation_of: Web/HTML/Global_attributes/accesskey
 
 <h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
 
-<p>Além do baixo suporte ao navegador, existem inúmeras preocupações com o atributo <code>accesskey</code>:</p>
+<p>Além do baixo suporte ao navegador, existem inúmeras preocupações com o atributo <code>accesskey</code>:</p>
 
 <ul>
- <li>Um valor de <code>accesskey</code> pode entrar em conflito com uma tecla de atalho do sistema ou do navegador, ou alguma funcionalidade de tecnologia assistida. O que pode funcionar para uma combinação de sistema operacional, tecnologia assistida e navegador pode não funcionar com outras combinações.</li>
- <li>Certos valores de <code>accesskey</code> podem não estar presentes em alguns teclados, especialmente quando a internacionalização é uma preocupação. Portanto, a adaptação a idiomas específicos pode causar problemas adicionais.</li>
- <li>Os valores de <code>accesskey</code> que dependem de números podem ser confusos para indivíduos com problemas cognitivos, onde o número não tem uma associação lógica com a funcionalidade que aciona.</li>
- <li>Informar o usuário que <code>accesskey</code> estão presentes, para que eles estejam cientes da funcionalidade. Se o sistema não tiver o método de o usuário dessa funcionalidade, ele poderá ativar acidentalmente as teclas de acesso (<code>accesskeys)</code>.</li>
+ <li>Um valor de <code>accesskey</code> pode entrar em conflito com uma tecla de atalho do sistema ou do navegador, ou alguma funcionalidade de tecnologia assistida. O que pode funcionar para uma combinação de sistema operacional, tecnologia assistida e navegador pode não funcionar com outras combinações.</li>
+ <li>Certos valores de <code>accesskey</code> podem não estar presentes em alguns teclados, especialmente quando a internacionalização é uma preocupação. Portanto, a adaptação a idiomas específicos pode causar problemas adicionais.</li>
+ <li>Os valores de <code>accesskey</code> que dependem de números podem ser confusos para indivíduos com problemas cognitivos, onde o número não tem uma associação lógica com a funcionalidade que aciona.</li>
+ <li>Informar o usuário que <code>accesskey</code> estão presentes, para que eles estejam cientes da funcionalidade. Se o sistema não tiver o método de o usuário dessa funcionalidade, ele poderá ativar acidentalmente as teclas de acesso (<code>accesskeys)</code>.</li>
 </ul>
 
-<p>Devido a esses problemas, geralmente não é aconselhável usar o <code>accesskey</code>s para a maioria dos sites e aplicativos da web.</p>
+<p>Devido a esses problemas, geralmente não é aconselhável usar o <code>accesskey</code>s para a maioria dos sites e aplicativos da web.</p>
 
 <p><a href="https://webaim.org/techniques/keyboard/accesskey#spec">WebAIM: Keyboard Accessibility - Accesskey</a></p>
 

@@ -7,7 +7,7 @@ translation_of: Web/API/Document/createElementNS
 
 <p>지정된 네임스페이스 URI와 적합한 이름으로 엘리먼트를 만든다.</p>
 
-<p>네임스페이스 URI를 지정하지 않고 엘리먼트를 만들려면 <a href="createElement" title="createElement">createElement</a>메소드를 사용하라.</p>
+<p>네임스페이스 URI를 지정하지 않고 엘리먼트를 만들려면 <a href="createElement" title="createElement">createElement</a>메소드를 사용하라.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/createElementNS
  <dd>A string that specifies the type of element to be created. The <a href="/en-US/docs/DOM/element.nodeName">nodeName</a> property of the created element is initialized with the value of <code>qualifiedName</code>.</dd>
  <dt><code>options</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
  <dd>An optional <code>ElementCreationOptions</code> object containing a single property named <code>is</code>, whose value is the tag name for a custom element previously defined using <code>customElements.define()</code>. For backwards compatibility with previous versions of the <a class="external external-icon" href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name. See <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> for more information on how to use this parameter.</dd>
- <dd>The new element will be given an <code>is</code> attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.</dd>
+ <dd>The new element will be given an <code>is</code> attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,10 +33,10 @@ translation_of: Web/API/Document/createElementNS
 <h2 id="Example" name="Example"><a id="Valid Namespace URIs" name="Valid Namespace URIs">Valid Namespace URIs</a></h2>
 
 <ul>
- <li>HTML - Use <code>http://www.w3.org/1999/xhtml</code></li>
- <li>SVG - Use <code>http://www.w3.org/2000/svg</code></li>
+ <li>HTML - Use <code>http://www.w3.org/1999/xhtml</code></li>
+ <li>SVG - Use <code>http://www.w3.org/2000/svg</code></li>
  <li>XBL - Use <code>http://www.mozilla.org/xbl</code></li>
- <li>XUL - Use <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code></li>
+ <li>XUL - Use <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code></li>
 </ul>
 
 <h2 id="Example" name="Example">Example</h2>
@@ -79,20 +79,7 @@ translation_of: Web/API/Document/createElementNS
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

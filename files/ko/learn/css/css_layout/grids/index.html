@@ -42,13 +42,13 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <h2 id="Creating_your_grid_in_CSS">CSS에서 그리드 생성하기</h2>
 
-<p>당신의 디자인에 필요한 그리드를 결정했다면 해당 CSS 그리드 레이아웃을 생성하고 그 위에 항목을 올려놓기 위해 CSS 그리드 레이아웃을 사용할 수 있습니다. 우리는 먼저 그리드 레이아웃의 기본 기능을 살펴보고 난 뒤 당신의 프로젝트에 맞는 간단한 그리드 시스템을 생성하는 방법을 살펴보겠습니다.</p>
+<p>당신의 디자인에 필요한 그리드를 결정했다면 해당 CSS 그리드 레이아웃을 생성하고 그 위에 항목을 올려놓기 위해 CSS 그리드 레이아웃을 사용할 수 있습니다. 우리는 먼저 그리드 레이아웃의 기본 기능을 살펴보고 난 뒤 당신의 프로젝트에 맞는 간단한 그리드 시스템을 생성하는 방법을 살펴보겠습니다.</p>
 
 <h3 id="Defining_a_grid">그리드의 정의</h3>
 
-<p>본격적인 출발에 앞서 텍스트 편집기 및 브라우저 상에서 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html">시작 파일</a>을 다운로드하고 엽니다(<a href="https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html">여기에서 라이브로 볼 수도 있습니다</a>). 예를 들어, 당신은 일부 자식 항목이 있는 컨테이너 예제를 보게됩니다. 기본값으로 이들은 일반 대열로 표시되므로 상자들은 다른 대상 요소 바로 밑에 표시됩니다. 우리는 이 단원의 첫 번째 부분은 이 (시작) 파일을 가지고 작업할 것이며, 거기에 변경을 더해 그리드가 어떻게 동작하는지 확인하게 됩니다.</p>
+<p>본격적인 출발에 앞서 텍스트 편집기 및 브라우저 상에서 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html">시작 파일</a>을 다운로드하고 엽니다(<a href="https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html">여기에서 라이브로 볼 수도 있습니다</a>). 예를 들어, 당신은 일부 자식 항목이 있는 컨테이너 예제를 보게됩니다. 기본값으로 이들은 일반 대열로 표시되므로 상자들은 다른 대상 요소 바로 밑에 표시됩니다. 우리는 이 단원의 첫 번째 부분은 이 (시작) 파일을 가지고 작업할 것이며, 거기에 변경을 더해 그리드가 어떻게 동작하는지 확인하게 됩니다.</p>
 
-<p>{{cssxref("display")}} 속성에 <code>grid</code> 값을 사용해 그리드를 규정한다. 이로써 Flexbox와 마찬가지로 그리드 레이아웃으로 전환하며, 컨테이너의 직계 자식 전체가 그리드 아이템이 됩니다. 내려받은 시작 파일 내부 CSS 부분에 다음을 추가하세요:</p>
+<p>{{cssxref("display")}} 속성에 <code>grid</code> 값을 사용해 그리드를 규정한다. 이로써 Flexbox와 마찬가지로 그리드 레이아웃으로 전환하며, 컨테이너의 직계 자식 전체가 그리드 아이템이 됩니다. 내려받은 시작 파일 내부 CSS 부분에 다음을 추가하세요:</p>
 
 <pre class="brush: css">.container {
     display: grid;
@@ -175,7 +175,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 }
 </pre>
 
-<p>이러한 간격은 길이 단위 또는 백분율이 될 수 있지만, <code>fr</code> 단위는 될 수 없습니다.</p>
+<p>이러한 간격은 길이 단위 또는 백분율이 될 수 있지만, <code>fr</code> 단위는 될 수 없습니다.</p>
 
 <div id="Grid_3">
 <div class="hidden">

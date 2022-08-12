@@ -39,23 +39,23 @@ tags:
 <p>次のサンプルコードは、3 番目と 4 番目の列が削除された情報の表スタイルでのグループ化を示しています。 <code>aria-colindex</code> は行の位置を説明するために使用されており、支援技術を使用している人が特定の行が削除されたことを推測できるようにします。 </p>
 
 <pre class="brush: html">&lt;div role="grid" aria-colcount="6"&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;div role="columnheader" aria-colindex="1"&gt;First name&lt;/div&gt;
-      &lt;div role="columnheader" aria-colindex="2"&gt;Last name&lt;/div&gt;
-      &lt;div role="columnheader" aria-colindex="5"&gt;City&lt;/div&gt;
-      &lt;div role="columnheader" aria-colindex="6"&gt;Zip&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;div role="gridcell" aria-colindex="1"&gt;Debra&lt;/div&gt;
-      &lt;div role="gridcell" aria-colindex="2"&gt;Burks&lt;/div&gt;
-      &lt;div role="gridcell" aria-colindex="5"&gt;New York&lt;/div&gt;
-      &lt;div role="gridcell" aria-colindex="6"&gt;14127&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  …
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;div role="columnheader" aria-colindex="1"&gt;First name&lt;/div&gt;
+      &lt;div role="columnheader" aria-colindex="2"&gt;Last name&lt;/div&gt;
+      &lt;div role="columnheader" aria-colindex="5"&gt;City&lt;/div&gt;
+      &lt;div role="columnheader" aria-colindex="6"&gt;Zip&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;div role="gridcell" aria-colindex="1"&gt;Debra&lt;/div&gt;
+      &lt;div role="gridcell" aria-colindex="2"&gt;Burks&lt;/div&gt;
+      &lt;div role="gridcell" aria-colindex="5"&gt;New York&lt;/div&gt;
+      &lt;div role="gridcell" aria-colindex="6"&gt;14127&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  …
 &lt;/div&gt;
 </pre>
 
@@ -115,33 +115,33 @@ tags:
 
 <pre class="brush: html">&lt;h3 id="table-title"&gt;Jovian gas giant planets&lt;/h3&gt;
 &lt;div role="grid" aria-describedby="table-title"&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;div role="columnheader"&gt;Name&lt;/div&gt;
-      &lt;div role="columnheader"&gt;Diameter (km)&lt;/div&gt;
-      &lt;div role="columnheader"&gt;Length of day (hours)&lt;/div&gt;
-      &lt;div role="columnheader"&gt;Distance from Sun (10&lt;sup&gt;6&lt;/sup&gt;km)&lt;/div&gt;
-      &lt;div role="columnheader"&gt;Number of moons&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;div role="gridcell"&gt;Jupiter&lt;/div&gt;
-      &lt;div role="gridcell"&gt;142,984&lt;/div&gt;
-      &lt;div role="gridcell"&gt;9.9&lt;/div&gt;
-      &lt;div role="gridcell"&gt;778.6&lt;/div&gt;
-      &lt;div role="gridcell"&gt;67&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;div role="gridcell"&gt;Saturn&lt;/div&gt;
-      &lt;div role="gridcell"&gt;120,536&lt;/div&gt;
-      &lt;div role="gridcell"&gt;10.7&lt;/div&gt;
-      &lt;div role="gridcell"&gt;1433.5&lt;/div&gt;
-      &lt;div role="gridcell"&gt;62&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;div role="columnheader"&gt;Name&lt;/div&gt;
+      &lt;div role="columnheader"&gt;Diameter (km)&lt;/div&gt;
+      &lt;div role="columnheader"&gt;Length of day (hours)&lt;/div&gt;
+      &lt;div role="columnheader"&gt;Distance from Sun (10&lt;sup&gt;6&lt;/sup&gt;km)&lt;/div&gt;
+      &lt;div role="columnheader"&gt;Number of moons&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;div role="gridcell"&gt;Jupiter&lt;/div&gt;
+      &lt;div role="gridcell"&gt;142,984&lt;/div&gt;
+      &lt;div role="gridcell"&gt;9.9&lt;/div&gt;
+      &lt;div role="gridcell"&gt;778.6&lt;/div&gt;
+      &lt;div role="gridcell"&gt;67&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;div role="gridcell"&gt;Saturn&lt;/div&gt;
+      &lt;div role="gridcell"&gt;120,536&lt;/div&gt;
+      &lt;div role="gridcell"&gt;10.7&lt;/div&gt;
+      &lt;div role="gridcell"&gt;1433.5&lt;/div&gt;
+      &lt;div role="gridcell"&gt;62&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -169,7 +169,7 @@ tags:
  <li><a href="http://www.maxability.co.in/wai-aria-overview/columnheader-role/">Columnheader - Maxability</a></li>
  <li><a href="http://www.maxability.co.in/2017/07/aria-colcount-property/">aria-colcount - Maxability</a></li>
  <li><a href="/ja/docs/Web/HTML/Element/td">表のデータセル要素</a></li>
- <li><a href="https://www.w3.org/TR/wai-aria-1.1/#gridcell">gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria-1.1/#gridcell">gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
  <li><a href="http://www.maxability.co.in/wai-aria-overview/gridcell-role/">Gridcell Role - Maxability</a></li>
 </ul>
 

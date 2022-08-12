@@ -14,4 +14,4 @@ translation_of: Glossary/hash
 
 ### 基础知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "散列函数")}}
+- 在维基百科上的 [散列函数](https://zh.wikipedia.org/wiki/散列函数)

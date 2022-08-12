@@ -8,7 +8,7 @@ tags:
   - 拖动
 translation_of: Web/API/Document/dragstart_event
 ---
-<div>当用户开始拖动一个元素或者一个选择文本的时候 <code>dragstart</code> 事件就会触发。</div>
+<div>当用户开始拖动一个元素或者一个选择文本的时候 <code>dragstart</code> 事件就会触发。</div>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -156,9 +156,9 @@ translation_of: Web/API/Document/dragstart_event
 <h3 id="HTML_内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div class="dropzone"&gt;
-    &lt;div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"&gt;
-        This div is draggable
-    &lt;/div&gt;
+    &lt;div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"&gt;
+        This div is draggable
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="dropzone"&gt;&lt;/div&gt;
 &lt;div class="dropzone"&gt;&lt;/div&gt;
@@ -166,75 +166,75 @@ translation_of: Web/API/Document/dragstart_event
 
 <h3 id="CSS_内容">CSS 内容</h3>
 
-<pre class="brush: css">  #draggable {
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    background: white;
-  }
+<pre class="brush: css">  #draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
 
-  .dropzone {
-    width: 200px;
-    height: 20px;
-    background: blueviolet;
-    margin-bottom: 10px;
-    padding: 10px;
-  }</pre>
+  .dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
+  }</pre>
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<pre class="brush: js">  var dragged;
+<pre class="brush: js">  var dragged;
 
-  /* 可拖动的目标元素会触发事件 */
-  document.addEventListener("drag", function( event ) {
+  /* 可拖动的目标元素会触发事件 */
+  document.addEventListener("drag", function( event ) {
 
-  }, false);
+  }, false);
 
-  document.addEventListener("dragstart", function( event ) {
-      // 保存拖动元素的引用 (ref.)
-      dragged = event.target;
-      // 使其半透明
-      event.target.style.opacity = .5;
-  }, false);
+  document.addEventListener("dragstart", function( event ) {
+      // 保存拖动元素的引用 (ref.)
+      dragged = event.target;
+      // 使其半透明
+      event.target.style.opacity = .5;
+  }, false);
 
-  document.addEventListener("dragend", function( event ) {
-      // 重置透明度
-      event.target.style.opacity = "";
-  }, false);
+  document.addEventListener("dragend", function( event ) {
+      // 重置透明度
+      event.target.style.opacity = "";
+  }, false);
 
-  /* 放下目标节点时触发事件 */
-  document.addEventListener("dragover", function( event ) {
-      // 阻止默认动作
-      event.preventDefault();
-  }, false);
+  /* 放下目标节点时触发事件 */
+  document.addEventListener("dragover", function( event ) {
+      // 阻止默认动作
+      event.preventDefault();
+  }, false);
 
-  document.addEventListener("dragenter", function( event ) {
-      // 当可拖动的元素进入可放置的目标高亮目标节点
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "purple";
-      }
+  document.addEventListener("dragenter", function( event ) {
+      // 当可拖动的元素进入可放置的目标高亮目标节点
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "purple";
+      }
 
-  }, false);
+  }, false);
 
-  document.addEventListener("dragleave", function( event ) {
-      // 当拖动元素离开可放置目标节点，重置其背景
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "";
-      }
+  document.addEventListener("dragleave", function( event ) {
+      // 当拖动元素离开可放置目标节点，重置其背景
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+      }
 
-  }, false);
+  }, false);
 
-  document.addEventListener("drop", function( event ) {
-      // 阻止默认动作（如打开一些元素的链接）
-      event.preventDefault();
-      // 移动拖动的元素到所选择的放置目标节点
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "";
-          dragged.parentNode.removeChild( dragged );
-          event.target.appendChild( dragged );
-      }
+  document.addEventListener("drop", function( event ) {
+      // 阻止默认动作（如打开一些元素的链接）
+      event.preventDefault();
+      // 移动拖动的元素到所选择的放置目标节点
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+          dragged.parentNode.removeChild( dragged );
+          event.target.appendChild( dragged );
+      }
 
-  }, false);</pre>
+  }, false);</pre>
 
 <p>{{ EmbedLiveSample('示例：dropzone') }}</p>
 

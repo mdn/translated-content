@@ -9,9 +9,9 @@ original_slug: WebSockets
 ---
 <p>WebSockets ist eine fortschrittliche Technologie welche es möglich macht eine interaktive Kommunikations-Session zwischen dem Browser des Benutzers und dem Server herzustellen. Mit dieser API können Sie Nachrichten zum Server senden und ereignisorientierte Antworten erhalten ohne beim Server die Antwort abzufragen.</p>
 
-<div class="cleared row topicpage-table">
+<div>
 <div class="section">
-<h2 class="Documentation" id="Documentation" name="Documentation">Dokumentation</h2>
+<h2 id="Documentation" name="Documentation">Dokumentation</h2>
 
 <dl>
  <dt><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications" title="WebSockets/Writing WebSocket client applications">Websocket Client-Anwendungen schreiben</a></dt>
@@ -25,16 +25,16 @@ original_slug: WebSockets
 </div>
 
 <div class="section">
-<h2 class="Tools" id="Tools" name="Tools">Tools</h2>
+<h2 id="Tools" name="Tools">Tools</h2>
 
 <ul>
- <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: Eine mächtige, plattform-übergreifende WebSocket API für <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Eine WebSocket-Server API Implementation für <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
- <li><a href="http://www.totaljs.com">Total.js</a>: Ein Web-Applikation Framework für <a href="http://www.nodejs.org">Node.js</a> (Beispiel: <a href="https://github.com/totaljs/examples/tree/master/websocket">WebSocket chat</a>)</li>
+ <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: Eine mächtige, plattform-übergreifende WebSocket API für <a class="external" href="http://nodejs.org">Node.js</a>.</li>
+ <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Eine WebSocket-Server API Implementation für <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="http://www.totaljs.com">Total.js</a>: Ein Web-Applikation Framework für <a href="http://www.nodejs.org">Node.js</a> (Beispiel: <a href="https://github.com/totaljs/examples/tree/master/websocket">WebSocket chat</a>)</li>
  <li><a href="http://ajf.me/websocket/#libs">Eine erweiterte Liste von Frameworks und Bibliotheken</a></li>
 </ul>
 
-<h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">Verwandte Themen</h2>
+<h2 id="Related_Topics" name="Related_Topics">Verwandte Themen</h2>
 
 <ul>
  <li><a href="/en-US/docs/AJAX" title="AJAX">AJAX</a>, <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a></li>
@@ -52,121 +52,7 @@ original_slug: WebSockets
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Version -76  {{obsolete_inline}}</td>
-   <td>6</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.00 (disabled)</td>
-   <td>5.0.1</td>
-  </tr>
-  <tr>
-   <td>Protokol-Version 7 {{obsolete_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Protokol-Version 10 {{obsolete_inline}}</td>
-   <td>14</td>
-   <td>{{CompatGeckoDesktop("7.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>HTML5 Labs</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Standard - RFC 6455 Support</td>
-   <td>16</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td>Benutzbarkeit in Workern</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Version -76<br>
-    {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protokol-Version 7<br>
-    {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protokol-Version 8 (IETF-Entwurf 10) {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Standard - RFC 6455 Support</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td>Benutzbarkeit in Workern</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h3 id="Hinweise_zu_Gecko">Hinweise zu Gecko</h3>
 

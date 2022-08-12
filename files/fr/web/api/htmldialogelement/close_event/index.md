@@ -102,4 +102,4 @@ closeButton.addEventListener('click', () => {
 
 ## Voir également
 
-- Élément HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog)
+- Élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)

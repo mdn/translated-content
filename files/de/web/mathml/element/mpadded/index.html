@@ -9,7 +9,7 @@ translation_of: Web/MathML/Element/mpadded
 ---
 <div>{{MathMLRef}}</div>
 
-<p class="summary">Das Element <code>&lt;mpadded&gt;</code> wird in MathML genutzt, um einen Ausdruck mit zusätzlichem Innenabstand zu versehen und um Position und Größe einzustellen. (engl. to pad = auspolstern)</p>
+<p class="summary">Das Element <code>&lt;mpadded&gt;</code> wird in MathML genutzt, um einen Ausdruck mit zusätzlichem Innenabstand zu versehen und um Position und Größe einzustellen. (engl. to pad = auspolstern)</p>
 
 <p>Die Ausdehnung der umgebenden Box eines mathematischen Ausdrucks wird zuerst von seiner typographischen Breite und Höhe bestimmt. Der Bezugspunkt des Ausdrucks (Kind-Element) liegt anfangs auf dem Bezugspunkt des umgebenden <code>&lt;mpadded&gt;</code>-Elements.</p>
 
@@ -21,9 +21,9 @@ translation_of: Web/MathML/Element/mpadded
  <dt id="attr-class-id-style">class, id, style</dt>
  <dd>Zur Einbindung von <a href="https://developer.mozilla.org/de/docs/Web/CSS">CSS-Stylesheets</a> und zur direkten Anwendung von CSS-Angaben.</dd>
  <dt id="attr-depth">depth</dt>
- <dd>Setzt oder ändert die vertikale Ausdehnung der umgebenden Box von <code>&lt;mpadded&gt;</code> <em>unterhalb</em> der Grundlinie. Eine (nichtnegative) <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die weder mit - noch mit + beginnt, <em>setzt</em> den Wert. Eine <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die mit - oder + beginnt, <em>verringert</em> bzw. <em>erhöht</em> den Wert entsprechend. (Eine Verringerung von <code>depth</code> kann zu Überlappung mit dem Ausdruck darunter führen und sollte vermieden werden.)</dd>
+ <dd>Setzt oder ändert die vertikale Ausdehnung der umgebenden Box von <code>&lt;mpadded&gt;</code> <em>unterhalb</em> der Grundlinie. Eine (nichtnegative) <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die weder mit - noch mit + beginnt, <em>setzt</em> den Wert. Eine <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die mit - oder + beginnt, <em>verringert</em> bzw. <em>erhöht</em> den Wert entsprechend. (Eine Verringerung von <code>depth</code> kann zu Überlappung mit dem Ausdruck darunter führen und sollte vermieden werden.)</dd>
  <dt id="attr-height">height</dt>
- <dd>Setzt oder ändert die vertikale Ausdehnung der umgebenden Box von <code>&lt;mpadded&gt;</code> <em>oberhalb</em> der Grundlinie. Eine (nichtnegative) <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die weder mit - noch mit + beginnt, <em>setzt</em> den Wert. Eine <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die mit - oder + beginnt, <em>verringert</em> bzw. <em>erhöht</em> den Wert entsprechend. (Eine Verringerung von <code>height</code> kann zu Überlappung mit dem Ausdruck darüber führen und sollte vermieden werden.)</dd>
+ <dd>Setzt oder ändert die vertikale Ausdehnung der umgebenden Box von <code>&lt;mpadded&gt;</code> <em>oberhalb</em> der Grundlinie. Eine (nichtnegative) <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die weder mit - noch mit + beginnt, <em>setzt</em> den Wert. Eine <a href="/de/docs/Web/MathML/Attribute/Werte">Längenangabe</a>, die mit - oder + beginnt, <em>verringert</em> bzw. <em>erhöht</em> den Wert entsprechend. (Eine Verringerung von <code>height</code> kann zu Überlappung mit dem Ausdruck darüber führen und sollte vermieden werden.)</dd>
  <dt id="attr-href">href</dt>
  <dd>Mit diesem Attribut kann ein Link gesetzt werden.</dd>
  <dt id="attr-lspace">lspace</dt>
@@ -46,11 +46,11 @@ translation_of: Web/MathML/Element/mpadded
 
 <pre class="brush: html">&lt;math&gt;
 
-  &lt;mpadded height="+150px" width="100px" lspace="2height"&gt;
-    &lt;mi&gt; x &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-  &lt;/mpadded&gt;
+  &lt;mpadded height="+150px" width="100px" lspace="2height"&gt;
+    &lt;mi&gt; x &lt;/mi&gt;
+    &lt;mo&gt; + &lt;/mo&gt;
+    &lt;mi&gt; y &lt;/mi&gt;
+  &lt;/mpadded&gt;
 
 &lt;/math&gt;
 </pre>
@@ -81,123 +81,7 @@ translation_of: Web/MathML/Element/mpadded
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathbackground</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathcolor</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>voffset</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathbackground</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathcolor</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>voffset</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Hinweise_zu_Gecko">Hinweise zu Gecko</h2>
 

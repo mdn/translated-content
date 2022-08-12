@@ -13,7 +13,7 @@ Un utilisateur est dit **privilégié** lorsqu'il se voit attribuer des droits s
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Privilège (informatique)")}} sur Wikipédia
+- [Privilège](https://fr.wikipedia.org/wiki/Privil%C3%A8ge_(informatique)) sur Wikipédia
 
 ### Apprendre sur ce sujet
 

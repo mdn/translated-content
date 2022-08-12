@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 <p><code>indexOf()</code> 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.</p>
 
 <div class="blockIndicator note">
-<p><strong>참고</strong>: 문자열은 {{jsxref("String.prototype.indexOf()")}}를 참고하세요.</p>
+<p><strong>참고</strong>: 문자열은 {{jsxref("String.prototype.indexOf()")}}를 참고하세요.</p>
 </div>
 
 <p>{{EmbedInteractiveExample("pages/js/array-indexof.html")}}</p>
@@ -99,7 +99,7 @@ if (!Array.prototype.indexOf) {
     var k;
 
     // 1. 이 값을 인수로 전달하는 ToObject를 호출 한 결과를
-    // o라고합니다.
+    // o라고합니다.
     if (this == null) {
       throw new TypeError('"this" is null or not defined');
     }
@@ -107,8 +107,8 @@ if (!Array.prototype.indexOf) {
     var o = Object(this);
 
     // 2. lenValue를 Get 함수를 호출 한 결과로 둡니다.
-     // 인수가 "length"인 o의 내부 메소드.
-     // 3. len을 ToUint32 (lenValue)로 지정합니다.
+     // 인수가 "length"인 o의 내부 메소드.
+     // 3. len을 ToUint32 (lenValue)로 지정합니다.
     var len = o.length &gt;&gt;&gt; 0;
 
     // 4. len이 0이면 -1을 반환합니다.
@@ -117,7 +117,7 @@ if (!Array.prototype.indexOf) {
     }
 
     // 5.Index에서 인수가 전달 된 경우 n을
-    // ToInteger (fromIndex); 그렇지 않으면 n은 0이됩니다.
+    // ToInteger (fromIndex); 그렇지 않으면 n은 0이됩니다.
     var n = fromIndex | 0;
 
     // 6. If n &gt;= len, return -1.
@@ -126,24 +126,24 @@ if (!Array.prototype.indexOf) {
     }
 
    // 7. n&gt; = 0 인 경우 k를 n이라고 합니다.
-   // 8. 그렇지 않으면 n &lt;0, k는 len - abs (n)이됩니다.
-   // k가 0보다 작은 경우 k를 0으로 만듭니다.
+   // 8. 그렇지 않으면 n &lt;0, k는 len - abs (n)이됩니다.
+   // k가 0보다 작은 경우 k를 0으로 만듭니다.
     k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
 
     // 9. k &lt;len 인 동안 반복한다.
     while (k &lt; len) {
        // a. Pk를 ToString (k)이라고합시다.
-       // 이것은 in 연산자의 LHS 피연산자에 대해 암시 적입니다.
-       // b. kPresent를 호출 한 결과라고합시다.
-       // Hasproperty 인수에 Pk가있는 o의 내부 메소드.
-       //이 단계는 c와 결합 될 수 있습니다.
-       // c. kPresent가 참이면
-       // i. elementK를 Get을 호출 한 결과로합시다.
-       // ToString (k) 인수를 가진 o의 내부 메쏘드.
-       // ii. 적용한 결과와 동일하게 봅시다.
-       // 엄격한 평등 비교 알고리즘
-       // searchElement 및 elementK.
-       // iii. 동일하면 k를 반환합니다.
+       // 이것은 in 연산자의 LHS 피연산자에 대해 암시 적입니다.
+       // b. kPresent를 호출 한 결과라고합시다.
+       // Hasproperty 인수에 Pk가있는 o의 내부 메소드.
+       //이 단계는 c와 결합 될 수 있습니다.
+       // c. kPresent가 참이면
+       // i. elementK를 Get을 호출 한 결과로합시다.
+       // ToString (k) 인수를 가진 o의 내부 메쏘드.
+       // ii. 적용한 결과와 동일하게 봅시다.
+       // 엄격한 평등 비교 알고리즘
+       // searchElement 및 elementK.
+       // iii. 동일하면 k를 반환합니다.
       if (k in o &amp;&amp; o[k] === searchElement) {
         return k;
       }
@@ -154,38 +154,13 @@ if (!Array.prototype.indexOf) {
 }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div>
-<p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.indexOf")}}
 
 <h2 id="같이_보기">같이 보기</h2>
 

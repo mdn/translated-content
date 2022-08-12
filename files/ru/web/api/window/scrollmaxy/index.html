@@ -8,9 +8,9 @@ tags:
   - Свойство
 translation_of: Web/API/Window/scrollMaxY
 ---
-<div>{{APIRef}} {{Non-standard_header}}</div>
+<div>{{APIRef}} {{Non-standard_header}}</div>
 
-<p>Свойство <code><strong>Window.scrollMaxY</strong></code> возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.</p>
+<p>Свойство <code><strong>Window.scrollMaxY</strong></code> возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Window/scrollMaxY
 </pre>
 
 <ul>
- <li><code>yMax</code> - число пикселей.</li>
+ <li><code>yMax</code> - число пикселей.</li>
 </ul>
 
 <h2 id="Example">Пример</h2>
@@ -29,7 +29,7 @@ var maxY = window.scrollMaxY;
 window.scrollTo(0,maxY);
 </pre>
 
-<h2 id="Notes">Примечания </h2>
+<h2 id="Notes">Примечания </h2>
 
 <p>Не используйте это свойство для получения общей высоты документа, так как оно не равнозначно {{domxref("window.innerHeight")}} + window.scrollMaxY, потому что {{domxref("window.innerHeight")}} включает ещё ширину любой видимой горизонтальной полосы прокрутке. Вместо этого применяйте {{domxref("element.scrollHeight","document.body.scrollHeight")}}. Смотрите также {{domxref("window.scrollMaxX")}} и {{domxref("window.scrollTo")}}.</p>
 

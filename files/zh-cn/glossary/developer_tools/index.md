@@ -14,7 +14,7 @@ translation_of: Glossary/Developer_Tools
 
 ### 常识
 
-- {{interwiki("wikipedia", "Web development tools", "Web development tools")}} on Wikipedia
+- [Web development tools](https://zh.wikipedia.org/wiki/Web_development_tools) on Wikipedia
 
 ### 技术参考
 

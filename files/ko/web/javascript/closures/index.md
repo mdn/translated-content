@@ -30,12 +30,12 @@ original_slug: Web/JavaScript/Guide/Closures
 ```
 
 `init()`은 지역 변수 `name`과 함수 `displayName()`을 생성한다. `displayName()`은
-`init()` 안에 정의된 내부 함수이며 `init()` 함수 본문에서만 사용할 수 있다. 여기서 주의할 점은 `displayName()` 내부엔 자신만의 지역 변수가 없다는 점이다. 그런데 함수 내부에서 외부 함수의 변수에 접근할 수 있기 때문에 `displayName()` 역시 부모 함수 `init()`에서 선언된 변수 `name`에 접근할 수 있다. 만약 `displayName()`가 자신만의 `name`변수를 가지고 있었다면, `name`대신 `this.name`을 사용했을 것이다.
+`init()` 안에 정의된 내부 함수이며 `init()` 함수 본문에서만 사용할 수 있다. 여기서 주의할 점은 `displayName()` 내부엔 자신만의 지역 변수가 없다는 점이다. 그런데 함수 내부에서 외부 함수의 변수에 접근할 수 있기 때문에 `displayName()` 역시 부모 함수 `init()`에서 선언된 변수 `name`에 접근할 수 있다. 만약 `displayName()`가 자신만의 `name`변수를 가지고 있었다면, `name`대신 `this.name`을 사용했을 것이다.
 
 {{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
 
 위 코드를 [실행](http://jsfiddle.net/xAFs9/3/)하면 `displayName()` 함수 내의
-`alert()`문이 부모 함수에서 정의한 변수 `name`의 값을 성공적으로 출력한다. 이 예시를 통해 함수가 중첩된 상황에서 파서가 어떻게 변수를 처리하는지 알 수 있다. 이는 어휘적 범위 지정(lexical scoping)의 한 예이다. 여기서 "lexical"이란, 어휘적 범위 지정(lexical scoping) 과정에서 변수가 어디에서 사용 가능한지 알기 위해 그 변수가 소스코드 내 어디에서 선언되었는지 고려한다는 것을 의미한다. 단어 "lexical"은 이런 사실을 나타낸다. 중첩된 함수는 외부 범위(scope)에서 선언한 변수에도 접근할 수 있다.
+`alert()`문이 부모 함수에서 정의한 변수 `name`의 값을 성공적으로 출력한다. 이 예시를 통해 함수가 중첩된 상황에서 파서가 어떻게 변수를 처리하는지 알 수 있다. 이는 어휘적 범위 지정(lexical scoping)의 한 예이다. 여기서 "lexical"이란, 어휘적 범위 지정(lexical scoping) 과정에서 변수가 어디에서 사용 가능한지 알기 위해 그 변수가 소스코드 내 어디에서 선언되었는지 고려한다는 것을 의미한다. 단어 "lexical"은 이런 사실을 나타낸다. 중첩된 함수는 외부 범위(scope)에서 선언한 변수에도 접근할 수 있다.
 
 ## 클로저(Closure)
 
@@ -280,7 +280,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
-ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
+ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
 
 ```html
     <p id="help">Helpful notes will appear here</p>
@@ -380,7 +380,7 @@ ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "
     setupHelp();
 ```
 
-더 많은 클로저를 사용하는 것이 싫다면 ES2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 키워드를 사용할 수 있다.
+더 많은 클로저를 사용하는 것이 싫다면 ES2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드를 사용할 수 있다.
 
 ```js
     function showHelp(help) {
@@ -407,7 +407,7 @@ ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "
 
 위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/ko/docs/Web/HTML/Element/input), as shown:
 
 ```js
 function showHelp(help) {
@@ -502,5 +502,5 @@ setupHelp();
     }).call(MyObject.prototype);
 ```
 
-앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
+앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
 참고하라.

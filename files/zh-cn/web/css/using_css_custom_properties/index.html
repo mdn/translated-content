@@ -8,11 +8,11 @@ tags:
   - variable
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
-<div><strong>自定义属性</strong>（有时候也被称作<strong>CSS 变量</strong>或者<strong>级联变量</strong>）是由 CSS 作者定义的，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： <strong><code>--main-color: black;</code></strong>），由<a href="/zh-CN/docs/Web/CSS/var">var() </a>函数来获取值（比如： <code>color: <strong>var(--main-color)</strong>;</code>）</div>
+<div><strong>自定义属性</strong>（有时候也被称作<strong>CSS 变量</strong>或者<strong>级联变量</strong>）是由 CSS 作者定义的，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： <strong><code>--main-color: black;</code></strong>），由<a href="/zh-CN/docs/Web/CSS/var">var() </a>函数来获取值（比如： <code>color: <strong>var(--main-color)</strong>;</code>）</div>
 
 
 
-<div>复杂的网站都会有大量的 CSS 代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，<code>--main-text-color</code> 会比 <code>#00ff00</code> 更易理解，尤其是这个颜色值在其他上下文中也被使用到。</div>
+<div>复杂的网站都会有大量的 CSS 代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，<code>--main-text-color</code> 会比 <code>#00ff00</code> 更易理解，尤其是这个颜色值在其他上下文中也被使用到。</div>
 
 
 
@@ -99,7 +99,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>{{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}</p>
 
-<p>注意到在 CSS 代码中的重复：背景色 <code>brown</code> 被多处设置。对于一些 CSS 声明，是可以在级联关系更高的位置设置，通过 CSS 继承自然地解决这个重复的问题。但在一般项目中，是不可能通过这样的方式去解决。通过在 {{cssxref(":root")}} 伪类上设置自定义属性，然后在整个文档需要的地方使用，可以减少这样的重复性：</p>
+<p>注意到在 CSS 代码中的重复：背景色 <code>brown</code> 被多处设置。对于一些 CSS 声明，是可以在级联关系更高的位置设置，通过 CSS 继承自然地解决这个重复的问题。但在一般项目中，是不可能通过这样的方式去解决。通过在 {{cssxref(":root")}} 伪类上设置自定义属性，然后在整个文档需要的地方使用，可以减少这样的重复性：</p>
 
 <pre class="brush: css notranslate"><code>:root {
   --main-bg-color: brown;
@@ -164,7 +164,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
   --test: 2em;
 }</code></pre>
 
-<p>在这个情况下， <code>var(--test)</code> 的结果分别是：</p>
+<p>在这个情况下， <code>var(--test)</code> 的结果分别是：</p>
 
 <ul>
  <li>对于元素 <code>class="two"</code> ：<code>10px</code></li>
@@ -245,15 +245,15 @@ p { color: var(--text-color); }
 
 <h2 id="JavaScript_中的值">JavaScript 中的值</h2>
 
-<p>在 JavaScript 中获取或者修改 CSS  变量和操作普通 CSS 属性是一样的：</p>
+<p>在 JavaScript 中获取或者修改 CSS  变量和操作普通 CSS 属性是一样的：</p>
 
-<pre class="notranslate">// 获取一个 Dom 节点上的 CSS 变量
+<pre class="notranslate">// 获取一个 Dom 节点上的 CSS 变量
 element.style.getPropertyValue("--my-var");
 
-// 获取任意 Dom 节点上的 CSS 变量
+// 获取任意 Dom 节点上的 CSS 变量
 getComputedStyle(element).getPropertyValue("--my-var");
 
-// 修改一个 Dom 节点上的 CSS 变量
+// 修改一个 Dom 节点上的 CSS 变量
 element.style.setProperty("--my-var", jsVar + 4);</pre>
 
 <h2 id="Browser_compatibility">浏览器支持</h2>

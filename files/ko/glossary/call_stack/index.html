@@ -7,7 +7,7 @@ tags:
   - 호출 스택
 translation_of: Glossary/Call_stack
 ---
-<p><strong>호출 스택</strong>은 여러 함수들({{glossary("function","functions")}})을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘입니다. 현재 어떤 함수가 동작하고있는 지, 그 함수 내에서 어떤 함수가 동작하는 지, 다음에 어떤 함수가 호출되어야하는 지 등을 제어합니다.</p>
+<p><strong>호출 스택</strong>은 여러 함수들({{glossary("function","functions")}})을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘입니다. 현재 어떤 함수가 동작하고있는 지, 그 함수 내에서 어떤 함수가 동작하는 지, 다음에 어떤 함수가 호출되어야하는 지 등을 제어합니다.</p>
 
 <ul>
  <li>스크립트가 함수를 호출하면 인터프리터는 이를 호출 스택에 추가한 다음 함수를 수행하기 시작합니다.</li>
@@ -35,9 +35,9 @@ translation_of: Glossary/Call_stack
 <p>위 코드는 다음과 같이 실행될 것입니다.</p>
 
 <ol>
- <li><code>greeting()</code> 함수에 도달할 때까지, 모든 함수를 무시합니다.</li>
+ <li><code>greeting()</code> 함수에 도달할 때까지, 모든 함수를 무시합니다.</li>
  <li><code>greeting()</code> 함수를 호출합니다.</li>
- <li><code>greeting()</code> 함수를 호출 스택 리스트에 추가합니다.<br>
+ <li><code>greeting()</code> 함수를 호출 스택 리스트에 추가합니다.<br>
 
   <div class="note">
   <p>호출 스택 리스트:<br>
@@ -55,7 +55,7 @@ translation_of: Glossary/Call_stack
   </div>
  </li>
  <li><code>sayHi()</code> 함수의 끝에 도달할 때까지, 함수 내부의 모든 코드를 실행합니다.</li>
- <li><code>sayHi()</code> 가 호출된 라인으로 돌아와 <code>greeting()</code> 함수의 나머지를 계속 실행합니다.</li>
+ <li><code>sayHi()</code> 가 호출된 라인으로 돌아와 <code>greeting()</code> 함수의 나머지를 계속 실행합니다.</li>
  <li>호출 스택 리스트에서 <code>sayHi()</code> 함수를 제거합니다.<br>
 
   <div class="note">
@@ -80,5 +80,5 @@ translation_of: Glossary/Call_stack
 <h3 id="일반_지식">일반 지식</h3>
 
 <ul>
- <li>{{Interwiki("wikipedia", "Call stack")}} on Wikipedia</li>
+ <li><a href="https://ko.wikipedia.org/wiki/%EC%BD%9C_%EC%8A%A4%ED%83%9D">콜 스택</a> on Wikipedia</li>
 </ul>

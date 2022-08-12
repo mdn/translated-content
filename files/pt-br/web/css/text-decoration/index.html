@@ -13,12 +13,12 @@ translation_of: Web/CSS/text-decoration
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade <strong><code>text-decoration</code></strong> do CSS é usada para definir a formatação de  <code>underline</code>, <code>overline</code>, <code>line-through</code> ou <code>blink</code>. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.</p>
+<p>A propriedade <strong><code>text-decoration</code></strong> do CSS é usada para definir a formatação de  <code>underline</code>, <code>overline</code>, <code>line-through</code> ou <code>blink</code>. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.</p>
 
 <p>A propriedade text-decoration desenha em elementos descendentes. Isso significa que não é possivel desabilitar em um descendente uma decoração que foi especificada em um de seus antecessores. Por exemplo, no markup <code>&lt;p&gt;Esse texto tem &lt;em&gt;alguns elementos enfatizados&lt;/em&gt; nele.&lt;/p&gt;</code>, a regra de estilo <code>p { text-decoration: underline; }</code> faria com que todo o parágrafo fosse sublinhado. A regra <code>em { text-decoration: none; }</code> não causaria qualquer mudanca; o parágrafo inteiro ainda estaria sublinhado. Entretanto, a regra <code>em { text-decoration: overline; }</code> iria decorar o trecho "alguns elementos enfatizados".</p>
 
 <div class="note style-wrap">
-<p><strong>Nota: </strong>CSS 3 transformou a propriedade Text-Decoration para forma reduzida, usando as seguintes propriedades: {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, e {{cssxref("text-decoration-style")}}. Como em outras propriedades reduzidas, isso significa que ele reseta o valor de cada uma para padrão se não for explicitamente especificada na forma reduzida.</p>
+<p><strong>Nota: </strong>CSS 3 transformou a propriedade Text-Decoration para forma reduzida, usando as seguintes propriedades: {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, e {{cssxref("text-decoration-style")}}. Como em outras propriedades reduzidas, isso significa que ele reseta o valor de cada uma para padrão se não for explicitamente especificada na forma reduzida.</p>
 </div>
 
 <p>{{cssinfo}}</p>
@@ -38,7 +38,7 @@ text-decoration: unset;
 
 <h3 id="Valores">Valores</h3>
 
-<p>A propriedade <code>text-decoration</code> é escrita de forma reduzida e pode usar os valores de cada uma das propriedades: {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, e {{cssxref("text-decoration-style")}}</p>
+<p>A propriedade <code>text-decoration</code> é escrita de forma reduzida e pode usar os valores de cada uma das propriedades: {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, e {{cssxref("text-decoration-style")}}</p>
 
 <h3 id="Sintaxe_Formal">Sintaxe Formal</h3>
 
@@ -194,12 +194,12 @@ p.underover {
 
 <p>[1] O valor <code>blink </code>não tem nenhum efeito.</p>
 
-<p>[2] Safari não suporta {{cssxref("text-decoration-style")}}.</p>
+<p>[2] Safari não suporta {{cssxref("text-decoration-style")}}.</p>
 
-<p>[3] Essa versão do Gecko tem implementação parcial.</p>
+<p>[3] Essa versão do Gecko tem implementação parcial.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>O atributo {{cssxref("list-style")}} controla a aparência dos itens em listas {{HTMLElement("ol")}} e {{HTMLElement("ul")}} no HTML.</li>
+ <li>O atributo {{cssxref("list-style")}} controla a aparência dos itens em listas {{HTMLElement("ol")}} e {{HTMLElement("ul")}} no HTML.</li>
 </ul>

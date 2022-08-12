@@ -38,11 +38,11 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 <p>{{jsxref("Object")}} 和 <code>Map</code> 類似。兩者都允許你設置對應的鍵值對，檢索這些值，刪除鍵，並檢測是否有什麼存儲在鍵中。正因為如此（也因為沒有內置的替代品），<code>Object</code> 在歷史上一直被當作 <code>Map</code> 使用；然而在某些情況下，使用 <code>Map</code> 有一些重要的不同之處:</p>
 
 <ul>
- <li><code>Object</code> 的鍵是 {{jsxref("String", "字串")}} 和 {{jsxref("Symbol", "Symbol")}}，而它們在 <code>Map</code> 中可以是任意的資料型態，包括函數，對象以及原始的資料型態。</li>
+ <li><code>Object</code> 的鍵是 {{jsxref("String", "字串")}} 和 {{jsxref("Symbol", "Symbol")}}，而它們在 <code>Map</code> 中可以是任意的資料型態，包括函數，對象以及原始的資料型態。</li>
  <li>你可以使用 <code>size</code> 屬性輕鬆地獲得 <code>Map</code> 的大小，而 <code>Object</code> 中的屬性數量必須手動確認。</li>
  <li><code>Map</code> 是可迭代（<a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>）的，因此可以直接迭代，而在 <code>Object</code> 上迭代則需要以某種方式獲取其鍵並對其進行迭代。</li>
- <li><code>Object</code> 有一個原型，所以如果不小心，映射中有一些默認鍵可能與鍵發生衝突。從 ES5 開始，這可以通過使用 <code>map = Object.create(null)</code> 來繞過這個問題，但是很少這樣做。</li>
- <li>在涉及頻繁添加和刪除鍵值對的場景中，<code>Map</code> 可能表現得更好。</li>
+ <li><code>Object</code> 有一個原型，所以如果不小心，映射中有一些默認鍵可能與鍵發生衝突。從 ES5 開始，這可以通過使用 <code>map = Object.create(null)</code> 來繞過這個問題，但是很少這樣做。</li>
+ <li>在涉及頻繁添加和刪除鍵值對的場景中，<code>Map</code> 可能表現得更好。</li>
 </ul>
 
 <h2 id="屬性">屬性</h2>
@@ -50,7 +50,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 <dl>
  <dt><code>Map.length</code></dt>
  <dd><code>length</code>屬性的值為 0<br>
- 要計算 <code>Map</code> 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。</dd>
+ 要計算 <code>Map</code> 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。</dd>
  <dt>{{jsxref("Map.@@species", "get Map[@@species]")}}</dt>
  <dd>用於創建派生物件的構造函數。</dd>
  <dt>{{jsxref("Map.prototype")}}</dt>
@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 
 <h2 id="Map_物件實體"><code>Map</code> 物件實體</h2>
 
-<p>所有的 <code>Map</code> 實例都繼承自 {{jsxref("Map.prototype")}}.</p>
+<p>所有的 <code>Map</code> 實例都繼承自 {{jsxref("Map.prototype")}}.</p>
 
 <h3 id="屬性_2">屬性</h3>
 
@@ -71,7 +71,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_Map_物件">使用 <code>Map</code> 物件</h3>
+<h3 id="使用_Map_物件">使用 <code>Map</code> 物件</h3>
 
 <pre class="brush: js">var myMap = new Map();
 
@@ -97,7 +97,7 @@ myMap.get({});           // undefined, because keyObj !== {}
 myMap.get(function() {}) // undefined, because keyFunc !== function () {}
 </pre>
 
-<h3 id="使用_NaN_作為_Map_的鍵">使用 <code>NaN</code> 作為 <code>Map</code> 的鍵</h3>
+<h3 id="使用_NaN_作為_Map_的鍵">使用 <code>NaN</code> 作為 <code>Map</code> 的鍵</h3>
 
 <p><code>NaN</code> 同樣可以作為 <code>Map</code> 的 key，雖然每個 <code>NaN</code> 都不等於自己本身，下面的例子是有效的，因為 <code>NaN</code> 無法區分彼此。</p>
 
@@ -152,7 +152,7 @@ for (var [key, value] of myMap.entries()) {
 // Will show 2 logs; first with "0 = zero" and second with "1 = one"
 </pre>
 
-<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
+<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
 
 <pre class="brush: js">var kvArray = [['key1', 'value1'], ['key2', 'value2']];
 
@@ -170,7 +170,7 @@ console.log(Array.from(myMap.keys())); // Will show ["key1", "key2"]
 
 
 
-<h3 id="複製與合併_Map"> 複製與合併 <code>Map</code></h3>
+<h3 id="複製與合併_Map"> 複製與合併 <code>Map</code></h3>
 
 <p>就像 <code>Array</code> 一樣，<code>Map</code> 可以被複製:</p>
 
@@ -227,31 +227,13 @@ console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three</code>
 </pre>
 
-<h2 id="規範">規範</h2>
+<h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map-objects', 'Map')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map-objects', 'Map')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{Compat("javascript.builtins.Map")}}</p>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

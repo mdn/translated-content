@@ -38,7 +38,7 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>: Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como <a href="/es/docs/Web/CSS/::first-letter">::first-letter</a> (selecciona la primera letra del texto de un elemento), <a href="/es/docs/Web/CSS/::first-line">::first-line</a> (selecciona la primera línea del texto de un elemento), o <a href="/es/docs/Web/CSS/::selection">::selection</a> (selecciona el texto que está resaltado por el cursor).</p>
+<p><strong>Nota</strong>: Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como <a href="/es/docs/Web/CSS/::first-letter">::first-letter</a> (selecciona la primera letra del texto de un elemento), <a href="/es/docs/Web/CSS/::first-line">::first-line</a> (selecciona la primera línea del texto de un elemento), o <a href="/es/docs/Web/CSS/::selection">::selection</a> (selecciona el texto que está resaltado por el cursor).</p>
 </div>
 
 <h2 id="Tipos_de_letra">Tipos de letra</h2>
@@ -99,7 +99,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Solo hay un cierto número de tipos de letra que están disponibles en todos los sistemas en general, y que en consecuencia pueden utilizarse sin demasiadas preocupaciones. Son los llamados <em>tipos de letra seguros para la web</em>, o <em><strong>web safe fonts</strong></em>.</p>
 
-<p>La mayor parte del tiempo, como desarrolladores web deseamos tener un control específico mayor sobre los tipos de letra con que se va a mostrar para mostrar nuestro contenido de texto. El problema está en encontrar una manera de saber de qué tipo de letra dispone el ordenador que se utiliza para acceder a nuestras páginas. No hay manera de saber esto en todos los casos, pero al menos contamos con que los tipos de letra seguros para la web están disponibles en casi todos los sistemas operativos más utilizados (las distribuciones Linux más comunes, Windows, Mac, Android, e iOS).</p>
+<p>La mayor parte del tiempo, como desarrolladores web deseamos tener un control específico mayor sobre los tipos de letra con que se va a mostrar para mostrar nuestro contenido de texto. El problema está en encontrar una manera de saber de qué tipo de letra dispone el ordenador que se utiliza para acceder a nuestras páginas. No hay manera de saber esto en todos los casos, pero al menos contamos con que los tipos de letra seguros para la web están disponibles en casi todos los sistemas operativos más utilizados (las distribuciones Linux más comunes, Windows, Mac, Android, e iOS).</p>
 
 <p>La lista de los tipos de letra seguros para la web cambia al ir evolucionando los sistemas operativos, pero es correcto considerar los tipos de letra siguientes como seguros para la web, al menos por ahora (muchos de ellos se han popularizado gracias a la iniciativa <em><a href="https://es.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the web</a></em> de Microsoft, de finales de la década de 1990 y principios de la del 2000):</p>
 
@@ -155,7 +155,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h4 id="Fuentes_predeterminadas">Fuentes predeterminadas</h4>
 
-<p>CSS define cinco nombres genéricos para los tipos de letra <code>serif</code><font face="Open Sans, Arial, sans-serif">, </font><code>sans-serif</code>,<font face="Open Sans, Arial, sans-serif"> </font><code>monospace</code>, <code>cursive</code> y <code>fantasy</code>. Son muy genéricos y el tipo de letra exacto que se va a utilizar cuando se especifiquen dichos nombres dependerá de cada navegador y puede variar dependiendo del sistema operativo. Representa el <em>peor escenario posible</em>, en el que el navegador tratará de proporcionar al menos una fuente que parezca apropiada. <code>serif</code>, <code>sans-serif</code> y <code>monospace</code> son bastante predecibles y el navegador debería proporcionar algo razonable. Por otra parte, <code>cursive</code> y <code>fantasy</code> son menos predecibles y te recomendamos que las uses con cautela, y vayas probando a medida que avanzas.</p>
+<p>CSS define cinco nombres genéricos para los tipos de letra <code>serif</code><font face="Open Sans, Arial, sans-serif">, </font><code>sans-serif</code>,<font face="Open Sans, Arial, sans-serif"> </font><code>monospace</code>, <code>cursive</code> y <code>fantasy</code>. Son muy genéricos y el tipo de letra exacto que se va a utilizar cuando se especifiquen dichos nombres dependerá de cada navegador y puede variar dependiendo del sistema operativo. Representa el <em>peor escenario posible</em>, en el que el navegador tratará de proporcionar al menos una fuente que parezca apropiada. <code>serif</code>, <code>sans-serif</code> y <code>monospace</code> son bastante predecibles y el navegador debería proporcionar algo razonable. Por otra parte, <code>cursive</code> y <code>fantasy</code> son menos predecibles y te recomendamos que las uses con cautela, y vayas probando a medida que avanzas.</p>
 
 <p>Los cinco nombres se definen de la manera siguiente:</p>
 
@@ -359,7 +359,7 @@ h1 {
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -421,13 +421,13 @@ h1 {
   font-size: 26px;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -481,14 +481,14 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -529,14 +529,14 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -556,8 +556,8 @@ p {
 <p>Así, como ejemplo, podemos aplicar a la primera línea de los elementos {{htmlelement("p")}} de nuestro ejemplo lo siguiente:</p>
 
 <pre class="brush: css notranslate">p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
 }</pre>
 
 <p>y obtendremos:</p>
@@ -583,19 +583,19 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
 }
 
 p {
@@ -680,7 +680,7 @@ p {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -702,9 +702,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);

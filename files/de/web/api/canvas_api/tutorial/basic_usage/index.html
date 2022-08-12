@@ -13,7 +13,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Grundlagen
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}</div>
 
 <div class="summary">
-<p>Beginnen wir diese Einführung mit einem Blick auf das {{Glossary("HTML")}}-Element {{HTMLElement("canvas")}} an sich. Am Ende wirst du in einem Canvas einen 2D-Context anlegen können und ein erstes Beispiel im Browser gezeichnet haben.</p>
+<p>Beginnen wir diese Einführung mit einem Blick auf das {{Glossary("HTML")}}-Element {{HTMLElement("canvas")}} an sich. Am Ende wirst du in einem Canvas einen 2D-Context anlegen können und ein erstes Beispiel im Browser gezeichnet haben.</p>
 </div>
 
 <h2 id="Das_&lt;canvas>-Element">Das <code>&lt;canvas&gt;</code>-Element</h2>
@@ -23,13 +23,13 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Grundlagen
 <pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>Auf den ersten Blick sieht ein {{HTMLElement("canvas")}} wie ein {{HTMLElement("img")}}-Element aus, mit dem Unterschied, dass es die Attribute <code>src</code> und <code>alt</code> nicht besitzt. Das <code>&lt;canvas&gt;</code>-Element hat nur zwei Attribute - {{htmlattrxref("width", "canvas")}} und {{htmlattrxref("height", "canvas")}}. Diese sind optional und können auch über {{Glossary("DOM")}}-<a href="/de/docs/Web/API/HTMLCanvasElement">Eigenschaften</a> gesetzt werden. Wenn die Attribute nicht gesetzt sind, bekommt das Element eine Breite von <strong>300px</strong> und eine Höhe von <strong>150px</strong>. Die Maße des canvas können auch über {{Glossary("CSS")}} gesetzt werden, allerdings wird das Bild dann auf die gesetzte Größe skaliert. Wenn das Verhältnis der CSS-Maße nicht zur ursprünglichen Größe passt, wird das Bild verzerrt.</p>
+<p>Auf den ersten Blick sieht ein {{HTMLElement("canvas")}} wie ein {{HTMLElement("img")}}-Element aus, mit dem Unterschied, dass es die Attribute <code>src</code> und <code>alt</code> nicht besitzt. Das <code>&lt;canvas&gt;</code>-Element hat nur zwei Attribute - {{htmlattrxref("width", "canvas")}} und {{htmlattrxref("height", "canvas")}}. Diese sind optional und können auch über {{Glossary("DOM")}}-<a href="/de/docs/Web/API/HTMLCanvasElement">Eigenschaften</a> gesetzt werden. Wenn die Attribute nicht gesetzt sind, bekommt das Element eine Breite von <strong>300px</strong> und eine Höhe von <strong>150px</strong>. Die Maße des canvas können auch über {{Glossary("CSS")}} gesetzt werden, allerdings wird das Bild dann auf die gesetzte Größe skaliert. Wenn das Verhältnis der CSS-Maße nicht zur ursprünglichen Größe passt, wird das Bild verzerrt.</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Wenn das Ergebnis des Renderings verzerrt wirkt, dann setze bitte die Attribute <code>width</code> und <code>height</code> explizit im <code>&lt;canvas&gt;</code> und nicht über CSS.</p>
+<p><strong>Hinweis:</strong> Wenn das Ergebnis des Renderings verzerrt wirkt, dann setze bitte die Attribute <code>width</code> und <code>height</code> explizit im <code>&lt;canvas&gt;</code> und nicht über CSS.</p>
 </div>
 
-<p>Das <a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute#id">id</a>-Attribut ist eines der <a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute">globalen Attribute</a> in HTML, welche auf alle HTML-Elemente anwendbar sind (sein sollen). Es empfiehlt sich eine <code>id</code> zu vergeben, dadurch wird der Zugriff mit JavaScript/CSS vereinfacht.</p>
+<p>Das <a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute#id">id</a>-Attribut ist eines der <a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute">globalen Attribute</a> in HTML, welche auf alle HTML-Elemente anwendbar sind (sein sollen). Es empfiehlt sich eine <code>id</code> zu vergeben, dadurch wird der Zugriff mit JavaScript/CSS vereinfacht.</p>
 
 <p>Auch wenn man nicht mit CSS die Maße des canvas festlegen sollte, kann man jegliche andere CSS-Eigenschaften auf das {{HTMLElement("canvas")}}-Element anwenden (margin, border, background etc). Diese CSS-Regeln haben keinen Effekt auf das eigentliche Zeichnen (anders bei <a href="https://developer.mozilla.org/de/docs/SVG">SVG</a>)</p>
 
@@ -51,7 +51,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Grundlagen
 
 <h3 id="Benötigter_&lt;canvas>-Tag">Benötigter <code>&lt;/canvas&gt;</code>-Tag</h3>
 
-<p>Im Unterschied zu dem {{HTMLElement("img")}}-Element, <strong>benötigt</strong> das {{HTMLElement("canvas")}}-Element den Endtag  (<code>&lt;/canvas&gt;</code>).</p>
+<p>Im Unterschied zu dem {{HTMLElement("img")}}-Element, <strong>benötigt</strong> das {{HTMLElement("canvas")}}-Element den Endtag  (<code>&lt;/canvas&gt;</code>).</p>
 
 <p>Wenn kein Fallback definiert wird, reicht ein <code>&lt;canvas id="foo" ...&gt;&lt;/canvas&gt;</code> völlig aus.</p>
 
@@ -65,7 +65,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Grundlagen
 var ctx = canvas.getContext("2d");
 </pre>
 
-<p>Die erste Zeile speichert in der Variablen <code>canvas</code> den DOM-Knoten unseres canvas mithilfe der {{domxref("document.getElementById()")}}-Methode. Danach wird die <code>getContext()</code>-Methode aufgerufen, um den Kontext in der Variablen <code>ctx</code> zu speichern.</p>
+<p>Die erste Zeile speichert in der Variablen <code>canvas</code> den DOM-Knoten unseres canvas mithilfe der {{domxref("document.getElementById()")}}-Methode. Danach wird die <code>getContext()</code>-Methode aufgerufen, um den Kontext in der Variablen <code>ctx</code> zu speichern.</p>
 
 <div id="section_5">
 <h2 id="Browserkompatibilität_prüfen">Browserkompatibilität prüfen</h2>
@@ -89,7 +89,7 @@ if (canvas.getContext) {
 <p>Eine einfache HTML-Struktur reicht für unser Tutorial erst einmal völlig aus.</p>
 
 <div class="note">
-<p><strong>Hinweis</strong>: Es gilt als schlechter Stil, Skripte direkt in HTML einzubetten. Wir tun das hier nur aus Gründen der Kompaktheit.</p>
+<p><strong>Hinweis</strong>: Es gilt als schlechter Stil, Skripte direkt in HTML einzubetten. Wir tun das hier nur aus Gründen der Kompaktheit.</p>
 </div>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -114,7 +114,7 @@ if (canvas.getContext) {
 &lt;/html&gt;
 </pre>
 
-<p>Das Skript enthält eine Funktion <code>draw()</code>, die nach dem Laden der Seite ausgeführt wird; dies geschieht durch Hören auf das {{event("load")}}-Ereignis des Dokuments. Diese oder eine ähnliche Funktion könnte auch durch {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}} oder jeden anderen Ereignisbehandler aufgerufen werden, solange die Seite vorher geladen wurde.</p>
+<p>Das Skript enthält eine Funktion <code>draw()</code>, die nach dem Laden der Seite ausgeführt wird; dies geschieht durch Hören auf das {{event("load")}}-Ereignis des Dokuments. Diese oder eine ähnliche Funktion könnte auch durch {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}} oder jeden anderen Ereignisbehandler aufgerufen werden, solange die Seite vorher geladen wurde.</p>
 
 <p>So sieht die Vorlage in Aktion aus. Wie man hier sehen kann, ist sie anfangs leer.</p>
 

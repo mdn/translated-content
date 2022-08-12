@@ -17,7 +17,7 @@ Les _forks_ sont communs dans le développement des logiciels libres et _open so
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Fork_(software_development)","Fork")}} sur Wikipédia
+- [<i lang="en">Fork</i>](https://fr.wikipedia.org/wiki/Fork_(d%C3%A9veloppement_logiciel)) sur Wikipédia
 - [Comment forker un dépôt GitHub](https://help.github.com/articles/fork-a-repo/) (_fork_ comme dans un contexte Git)
 
 ### Divers forks réputés

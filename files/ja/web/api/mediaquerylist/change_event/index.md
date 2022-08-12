@@ -70,8 +70,8 @@ mql.onchange = (e) => {
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/CSS/Media_queries)
-- [コードからのメディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

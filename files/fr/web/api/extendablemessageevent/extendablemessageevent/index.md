@@ -57,7 +57,7 @@ var myEME = new ExtendableMessageEvent('message', init);
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)
+- [Canal de messages](/fr/docs/Web/API/Channel_Messaging_API)

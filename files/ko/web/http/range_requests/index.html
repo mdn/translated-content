@@ -23,9 +23,9 @@ Accept-Ranges: bytes
 Content-Length: 146515
 </pre>
 
-<p>이 응답에서, <code>Accept-Ranges: bytes</code>는 바이트가 범위 요청에서 최소단위로 사용될 수 있음을 알려줍니다. 여기에서 {{HTTPHeader("Content-Length")}} 헤더 역시 이미지를 얻기 위한 최대 크기를 알 수 있어 유용합니다.</p>
+<p>이 응답에서, <code>Accept-Ranges: bytes</code>는 바이트가 범위 요청에서 최소단위로 사용될 수 있음을 알려줍니다. 여기에서 {{HTTPHeader("Content-Length")}} 헤더 역시 이미지를 얻기 위한 최대 크기를 알 수 있어 유용합니다.</p>
 
-<p>만약 사이트에서 <code>Accept-Ranges</code>헤더를 빠트린다면, 분할 요청을 지원하지 않는 것으로 생각됩니다. 일부 사이트는 명확하게 "<code>none</code>"을 값으로 보내 지원하지 않는 것을 알려줍니다. 일부 어플리케이션에서는 다운로드 매니저에서 일시정지 버튼을 없애버리는 경우가 있습니다.</p>
+<p>만약 사이트에서 <code>Accept-Ranges</code>헤더를 빠트린다면, 분할 요청을 지원하지 않는 것으로 생각됩니다. 일부 사이트는 명확하게 "<code>none</code>"을 값으로 보내 지원하지 않는 것을 알려줍니다. 일부 어플리케이션에서는 다운로드 매니저에서 일시정지 버튼을 없애버리는 경우가 있습니다.</p>
 
 <pre>curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
 
@@ -36,7 +36,7 @@ Accept-Ranges: none
 
 <h2 id="서버에_특정_범위를_요청">서버에 특정 범위를 요청</h2>
 
-<p>만약 서버가 범위 요청을 지원한다면, {{HTTPHeader("Range")}} 헤더를 사용하여 요청할 수 있습니다. 이는 서버에서 문서의 일부분만 돌려주면 된다는 것을 알 수 있게 해줍니다.</p>
+<p>만약 서버가 범위 요청을 지원한다면, {{HTTPHeader("Range")}} 헤더를 사용하여 요청할 수 있습니다. 이는 서버에서 문서의 일부분만 돌려주면 된다는 것을 알 수 있게 해줍니다.</p>
 
 <h3 id="단일_부분_범위">단일 부분 범위</h3>
 
@@ -50,7 +50,7 @@ Accept-Ranges: none
 Host: i.imgur.com
 Range: bytes=0-1023</pre>
 
-<p>서버에서 {{HTTPStatus("206")}} <code>Partial Content</code> 상태로 응답합니다:</p>
+<p>서버에서 {{HTTPStatus("206")}} <code>Partial Content</code> 상태로 응답합니다:</p>
 
 <pre>HTTP/1.1 206 Partial Content
 Content-Range: bytes 0-1023/146515

@@ -6,6 +6,44 @@
 
 > MDN 中的文档正在逐渐向 Markdown 格式迁移（由 [yari 平台](https://developer.mozilla.org/zh-CN/docs/MDN/Yari)渲染为 HTML），以下的说明仅针对 Markdown 格式，对于现有的 HTML 格式文档，并非完全适用。若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
 
+## 元数据
+
+每个文档的开头都会有元数据，大致的结构如下：
+
+```yaml
+---
+title: Fetch API
+slug: Web/API/Fetch_API
+page-type: web-api-overview
+tags:
+  - API
+  - Fetch
+  - Landing
+  - Reference
+  - Response
+  - XMLHttpRequest
+  - request
+browser-compat: api.fetch
+---
+```
+
+其中：
+
+- `title` 为文档的大标题
+- `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
+- `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
+- `tags` 为[文章标签](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag)，被用于站点管理和自动化数据处理
+- `browser-compat` 为[**浏览器兼容性表**](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)对应的宏所使用的元数据。
+
+在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`tags`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+
+最终在简体中文文档中呈现的元数据如下所示：
+
+```yaml
+title: Fetch API
+slug: Web/API/Fetch_API
+```
+
 ## 翻译标题和 ID
 
 文档中的目录导航、与代码块相关联的运行实例等会使用到 HTML ID。而对于 Markdown 文档，其渲染得到的 HTML 文件的 ID 则与 Markdown 文档中的标题相对应（但这并不意味着两者相等，yari 平台对于半角空格、标点等有特殊处理）。

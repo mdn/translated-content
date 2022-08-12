@@ -17,5 +17,5 @@ UDP 适用于不需要差错和纠错的应用程序，它的[协议栈](https:/
 
 ## 参见
 
-- 维基百科上的 {{Interwiki("wikipedia", "用户数据报协议")}}
+- 维基百科上的 [用户数据报协议](https://zh.wikipedia.org/wiki/用户数据报协议)
 - [规范](https://datatracker.ietf.org/doc/html/rfc768)

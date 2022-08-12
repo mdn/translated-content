@@ -16,7 +16,7 @@ translation_of: Web/API/NodeList
 <div class="note">
 <p><code>NodeList</code> は <code>Array</code> とは異なりますが、 <code>forEach()</code> メソッドで処理を反復適用することは可能です。 {{jsxref("Array.from()")}} を使うことで <code>Array</code> に変換することができます。</p>
 
-<p>ただし、古いブラウザーでは <code>NodeList.forEach()</code> も <code>Array.from()</code> も実装されていない場合があります。これらの制限は {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} を使うことで回避することが可能です (この文書に詳しく書かれています)。</p>
+<p>ただし、古いブラウザーでは <code>NodeList.forEach()</code> も <code>Array.from()</code> も実装されていない場合があります。これらの制限は {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} を使うことで回避することが可能です (この文書に詳しく書かれています)。</p>
 </div>
 
 <p>場合によっては、 <code>NodeList</code> が<em>ライブ</em>であること、すなわち DOM 内が更新されると自動的にコレクションが更新されることがあります。例えば、 {{domxref("Node.childNodes")}} はライブです。</p>

@@ -11,5 +11,5 @@ translation_of: Glossary/Type
 
 ### 基本知識
 
-- 維基百科的{{Interwiki("wikipedia", "資料型別")}}
+- 維基百科的[資料型別](https://zh.wikipedia.org/wiki/資料型別)
 - [JavaScript 的資料型別](/zh-TW/docs/Web/JavaScript/Data_structures)

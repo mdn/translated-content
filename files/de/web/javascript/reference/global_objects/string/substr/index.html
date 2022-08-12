@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 <div>{{JSRef}}</div>
 
-<p>Die Methode <strong><code>substr()</code></strong> gibt die Zeichen eines Strings in einem gegebenen Intervall zurück.</p>
+<p>Die Methode <strong><code>substr()</code></strong> gibt die Zeichen eines Strings in einem gegebenen Intervall zurück.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 <dl>
  <dt><code>start</code></dt>
- <dd>Ort im String, an dem mit dem Extrahieren von Zeichen begonnen wird. Wird eine negative Zahl übergeben, wird sie als <code>str.length - start</code> behandelt (Wenn <code>start</code> z. B. -3 ist, wird es als <code>str.length - 3</code> behandelt).</dd>
+ <dd>Ort im String, an dem mit dem Extrahieren von Zeichen begonnen wird. Wird eine negative Zahl übergeben, wird sie als <code>str.length - start</code> behandelt (Wenn <code>start</code> z. B. -3 ist, wird es als <code>str.length - 3</code> behandelt).</dd>
  <dt><code>length</code></dt>
  <dd>Optional. Die Anzahl der Zeichen, die extrahiert werden sollen.</dd>
 </dl>
@@ -32,17 +32,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 <h2 id="Description" name="Description">Beschreibung</h2>
 
-<p><code>start</code> ist ein Zeichenindex. Der Index des ersten Zeichens ist 0 und der Index des letzten Zeichens ist 1 weniger als die Länge des Strings. <code>substr()</code>fängt mit dem Extrahieren von Zeichen bei <code>start</code> an und extrahiert <code>length</code> Zeichen (es sei denn, es erreicht vorher das Ende des Strings, dann gibt es weniger zurück).</p>
+<p><code>start</code> ist ein Zeichenindex. Der Index des ersten Zeichens ist 0 und der Index des letzten Zeichens ist 1 weniger als die Länge des Strings. <code>substr()</code>fängt mit dem Extrahieren von Zeichen bei <code>start</code> an und extrahiert <code>length</code> Zeichen (es sei denn, es erreicht vorher das Ende des Strings, dann gibt es weniger zurück).</p>
 
-<p>Wenn <code>start</code> positiv ist und größer gleich der Länge des Strings ist, gibt <code>substr()</code> einen leeren String zurück.</p>
+<p>Wenn <code>start</code> positiv ist und größer gleich der Länge des Strings ist, gibt <code>substr()</code> einen leeren String zurück.</p>
 
-<p>Wenn <code>start</code> negativ ist, verwendet <code>substr()</code> es als Zeichenindex vom Ende des Strings. Wenn <code>start</code> negativ ist und <code>abs(start)</code> größer als die Länge des Strings ist, verwendet <code>substr()</code> 0 als Zeichenindex. Anmerkung: Der beschriebene Umgang mit negativen Werten für <code>start</code> wird von Microsoft JScript nicht unterstützt.</p>
+<p>Wenn <code>start</code> negativ ist, verwendet <code>substr()</code> es als Zeichenindex vom Ende des Strings. Wenn <code>start</code> negativ ist und <code>abs(start)</code> größer als die Länge des Strings ist, verwendet <code>substr()</code> 0 als Zeichenindex. Anmerkung: Der beschriebene Umgang mit negativen Werten für <code>start</code> wird von Microsoft JScript nicht unterstützt.</p>
 
-<p>Wenn <code>length</code> 0 oder negativ ist, gibt <code>substr()</code> einen leeren String zurück. Wenn <code>length</code> nicht übergeben wird, extrahiert <code>substr()</code> alle Zeichen bis zum Ende des Strings.</p>
+<p>Wenn <code>length</code> 0 oder negativ ist, gibt <code>substr()</code> einen leeren String zurück. Wenn <code>length</code> nicht übergeben wird, extrahiert <code>substr()</code> alle Zeichen bis zum Ende des Strings.</p>
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example:_Using_substr" name="Example:_Using_substr">Verwenden von <code>substr()</code></h3>
+<h3 id="Example:_Using_substr" name="Example:_Using_substr">Verwenden von <code>substr()</code></h3>
 
 <pre class="brush: js">var str = 'abcdefghij';
 
@@ -113,55 +113,7 @@ if ('ab'.substr(-1) != 'b') {
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

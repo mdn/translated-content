@@ -6,9 +6,9 @@ original_slug: Web/JavaScript/Reference/Statements/funktion
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Die <strong>Funktionsdeklaration</strong> definiert eine Funktion mit den angegebenen Parametern.</p>
+<p>Die <strong>Funktionsdeklaration</strong> definiert eine Funktion mit den angegebenen Parametern.</p>
 
-<p>Es kann auch eine Funktion mit dem {{jsxref("Function")}}-Konstruktor und einem {{jsxref("Operators/function", "Funktionsausdruck")}} deklariert werden.</p>
+<p>Es kann auch eine Funktion mit dem {{jsxref("Function")}}-Konstruktor und einem {{jsxref("Operators/function", "Funktionsausdruck")}} deklariert werden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,19 +34,19 @@ original_slug: Web/JavaScript/Reference/Statements/funktion
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">Eine Funktion, die mit der Funktionsdeklaration erstellt wurde, ist ein </span><code style="font-size: 14px; font-style: normal; line-height: 1.5;">Function</code><span style="font-size: 14px; font-weight: normal; line-height: 1.5;"> -Objekt und hat alle Eigenschaften, Methoden und Verhalten des <strong>Function</strong>-Objekts</span><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">. Siehe {{jsxref("Function")}} für detaillierte Information über Funktionen.</span></p>
+<p><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">Eine Funktion, die mit der Funktionsdeklaration erstellt wurde, ist ein </span><code style="font-size: 14px; font-style: normal; line-height: 1.5;">Function</code><span style="font-size: 14px; font-weight: normal; line-height: 1.5;"> -Objekt und hat alle Eigenschaften, Methoden und Verhalten des <strong>Function</strong>-Objekts</span><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">. Siehe {{jsxref("Function")}} für detaillierte Information über Funktionen.</span></p>
 
-<p>Eine Funktion kann auch mit einem Ausdruck erzeugt werden (siehe {{jsxref("Operators/function", "function expression")}}).</p>
+<p>Eine Funktion kann auch mit einem Ausdruck erzeugt werden (siehe {{jsxref("Operators/function", "function expression")}}).</p>
 
-<p>Standardmäßig geben Funktionen <code>undefined </code>zurück. Um einen beliebigen anderen Wert zurückzugeben muss die Funktion einen {{jsxref("Statements/return", "return")}}-Ausdruck haben, der den Wert der Rückgabe angibt.</p>
+<p>Standardmäßig geben Funktionen <code>undefined </code>zurück. Um einen beliebigen anderen Wert zurückzugeben muss die Funktion einen {{jsxref("Statements/return", "return")}}-Ausdruck haben, der den Wert der Rückgabe angibt.</p>
 
 <h3 id="Bedingungskreierte_Funktionen">Bedingungskreierte Funktionen</h3>
 
-<p>Funktionen können bedingungskreiert werden. Das heißt: Eine Funktionsanweisung kann innerhalb einer <code>if</code>-Anweisung verschachtelt werden. Die meisten modernen Browser, abseits von Mozilla, werden solche konditionsbasierten Deklarationen als unkonditionelle Deklarationen behandeln und die Funktion erstellen, ob wahr oder nicht, siehe <a href="http://kangax.github.io/nfe/#function-statements">dieser Artikel</a> für eine Übersicht. Deshalb sollten sie so nicht verwendet werden. Stattdessen sollten Funktionsausdrücke für eine konditionelle Erstellung verwendet werden.</p>
+<p>Funktionen können bedingungskreiert werden. Das heißt: Eine Funktionsanweisung kann innerhalb einer <code>if</code>-Anweisung verschachtelt werden. Die meisten modernen Browser, abseits von Mozilla, werden solche konditionsbasierten Deklarationen als unkonditionelle Deklarationen behandeln und die Funktion erstellen, ob wahr oder nicht, siehe <a href="http://kangax.github.io/nfe/#function-statements">dieser Artikel</a> für eine Übersicht. Deshalb sollten sie so nicht verwendet werden. Stattdessen sollten Funktionsausdrücke für eine konditionelle Erstellung verwendet werden.</p>
 
 <h3 id="Hochziehen_der_Funktionsdeklaration">Hochziehen der Funktionsdeklaration</h3>
 
-<p>Funktionsdeklarationen in Javascript ziehen die Funktionsdefinition hoch. D. h. Funktionen können benutzt werden noch bevor sie deklariert wurden:</p>
+<p>Funktionsdeklarationen in Javascript ziehen die Funktionsdefinition hoch. D. h. Funktionen können benutzt werden noch bevor sie deklariert wurden:</p>
 
 <pre class="brush: js">hochgezogen(); // loggt "foo"
 
@@ -66,12 +66,12 @@ var nichtHochgezogen = function() {
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Mit_function">Mit <code>function</code></h3>
+<h3 id="Mit_function">Mit <code>function</code></h3>
 
 <p>Der folgende Code deklariert eine Funktion, die die Summe aller Verkäufe zurückgibt, wenn sie die Anzahl der verkauften Einheiten <code>a</code>, <code>b</code>, und <code>c </code>übergeben bekommt.</p>
 
 <pre class="brush: js">function berechne_verkäufe(einheit_a, einheit_b, einheit_c) {
-   return einheit_a*79 + einheit_b * 129 + einheit_c * 699;
+   return einheit_a*79 + einheit_b * 129 + einheit_c * 699;
 }
 </pre>
 
@@ -87,17 +87,17 @@ var nichtHochgezogen = function() {
   <tr>
    <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-13', 'Function definition')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES3', '#sec-13', 'Function definition')}}</td>
    <td>{{Spec2('ES3')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES1', '#sec-13', 'Function definition')}}</td>
@@ -109,74 +109,7 @@ var nichtHochgezogen = function() {
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in sloppy mode</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in sloppy mode</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatChrome(49.0)}}</p>
-   </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

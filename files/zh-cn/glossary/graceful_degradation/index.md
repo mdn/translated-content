@@ -18,7 +18,7 @@ original_slug: Glossary/优雅降级
 
 ### 基本知识
 
-- 维基百科的{{Interwiki("wikipedia", "优雅降级")}}
+- 维基百科的[优雅降级](https://zh.wikipedia.org/wiki/优雅降级)
 - [MDN Web 文档词汇表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Graceful degradation")}}

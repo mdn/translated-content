@@ -31,7 +31,6 @@ translation_of: Web/API/Server-sent_events
 
 - [PHP を使用した簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-
 ## 仕様書
 
 {{Specifications}}

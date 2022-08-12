@@ -15,7 +15,7 @@ Les informations ci-dessous proviennent de RTCPeerConnection; elles pourraient r
 
 ## Usage basique
 
-l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, en générant {{interwiki("wikipedia", "Session Description Protocol")}} a échanger entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
+l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, au format [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
 
 Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
 
@@ -99,7 +99,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error)
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 

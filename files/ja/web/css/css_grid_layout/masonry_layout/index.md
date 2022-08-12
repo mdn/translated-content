@@ -23,9 +23,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ```css
 .container {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
 }
 ```
 

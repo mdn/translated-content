@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>O método<strong><code>HTMLInputElement.setSelectionRange()</code></strong> define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.</p>
+<p>O método<strong><code>HTMLInputElement.setSelectionRange()</code></strong> define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.</p>
 
 <p>Opcionalmente, em navegadores mais novos, você pode especificar a direção na qual a seleção deve ser feita; isso permite a você indicar, por exemplo, que a seleção foi feita como se o usuário tivesse clicado no fim do texto selecionado e arrastado em direção ao início.</p>
 
@@ -150,7 +150,7 @@ function SelectText () {
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -158,7 +158,7 @@ function SelectText () {
 
 <p>[1] The support for <code>selectionDirection</code> was added Blink in {{WebkitBug("60403")}}.</p>
 
-<p>Note that accordingly to the <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> <code>selectionStart</code>, <code>selectionEnd</code> properties and <code>setSelectionRange</code> method apply only to inputs of types text, search, URL, tel and password. Chrome, starting from version 33, throws an exception while accessing those properties and method on the rest of input types. For example, on input of type number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Related links: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">question on StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg bug</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium bug</a>.</p>
+<p>Note that accordingly to the <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> <code>selectionStart</code>, <code>selectionEnd</code> properties and <code>setSelectionRange</code> method apply only to inputs of types text, search, URL, tel and password. Chrome, starting from version 33, throws an exception while accessing those properties and method on the rest of input types. For example, on input of type number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Related links: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">question on StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg bug</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium bug</a>.</p>
 
 <p>[2] The support for <code>selectionDirection</code> was added to Gecko in {{bug("674558")}}.</p>
 

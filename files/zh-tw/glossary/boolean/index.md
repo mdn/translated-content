@@ -36,7 +36,7 @@ for(var i=0; i<4; i++) {
 
 ### 常規知識
 
-- 維基百科{{Interwiki("wikipedia", "Boolean data type", "Boolean")}}
+- 維基百科[Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
 
 ### 技術參考
 

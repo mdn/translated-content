@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Math.min()</code></strong> 함수는 주어진 숫자들 중 가장 작은 값을 반환합니다.</p>
+<p><strong><code>Math.min()</code></strong> 함수는 주어진 숫자들 중 가장 작은 값을 반환합니다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <h2 id="Description">Description</h2>
 
-<p><code>min()</code> 함수는 <code>Math</code> 의 정적 메소드 이므로, 사용자가 생성한 <code>Math</code> 객체의 메소드로 호출하는 것이 아닌 항상 <code>Math.min()</code> 으로 호출되어야 합니다. (<code>Math</code> 는 생성자가 아닙니다).</p>
+<p><code>min()</code> 함수는 <code>Math</code> 의 정적 메소드 이므로, 사용자가 생성한 <code>Math</code> 객체의 메소드로 호출하는 것이 아닌 항상 <code>Math.min()</code> 으로 호출되어야 합니다. (<code>Math</code> 는 생성자가 아닙니다).</p>
 
 <p>만약 주어진 인자값이 없을 경우, {{jsxref("Infinity")}} 가 반환됩니다.</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <h3 id="Using_Math.min()">Using <code>Math.min()</code></h3>
 
-<p>아래 수식은 <code>x</code> 와<code>y</code> 중 작은 값을 찾아 <code>z</code> 에 할당 합니다.     </p>
+<p>아래 수식은 <code>x</code> 와<code>y</code> 중 작은 값을 찾아 <code>z</code> 에 할당 합니다.     </p>
 
 <pre class="brush: js">var x = 10, y = -20;
 var z = Math.min(x, y);
@@ -42,7 +42,7 @@ var z = Math.min(x, y);
 
 <h3 id="Clipping_a_value_with_Math.min()">Clipping a value with <code>Math.min()</code></h3>
 
-<p><code>Math.min()</code> 함수는 때때로 값 제한, 즉 항상 기준 보다 작거나 같은 값으로 제한하는 용도로 사용됩니다. 예를 들면,</p>
+<p><code>Math.min()</code> 함수는 때때로 값 제한, 즉 항상 기준 보다 작거나 같은 값으로 제한하는 용도로 사용됩니다. 예를 들면,</p>
 
 <pre class="brush: js">var x = f(foo);
 
@@ -51,7 +51,7 @@ if (x &gt; boundary) {
 }
 </pre>
 
-<p> 위 코드는 다음과 같이 쓸 수 있습니다.</p>
+<p> 위 코드는 다음과 같이 쓸 수 있습니다.</p>
 
 <pre class="brush: js">var x = Math.min(f(foo), boundary);
 </pre>
@@ -60,35 +60,7 @@ if (x &gt; boundary) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.min', 'Math.min')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -49,4 +49,4 @@ Cette propriété est prise en charge par les navigateurs basés sur WebKit ou B
 
 ## Voir aussi
 
-- [Les extensions CSS spécifiques à WebKit](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [Les extensions CSS spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

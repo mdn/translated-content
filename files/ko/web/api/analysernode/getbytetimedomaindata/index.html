@@ -33,7 +33,7 @@ analyser.getByteTimeDomainData(dataArray); // getByteTimeDomainData()로부터 �
 
 <h3 id="Return_value">반환 값</h3>
 
-<p><strong><code>void</code></strong> | 없음</p>
+<p><strong><code>void</code></strong> | 없음</p>
 
 <h2 id="Example">예제</h2>
 
@@ -52,32 +52,32 @@ analyser.getByteTimeDomainData(dataArray);
 // 현재 오디오 소스의 오실로스코프를 그립니다
 function draw() {
   drawVisual = requestAnimationFrame(draw);
-  analyser.getByteTimeDomainData(dataArray);
+  analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-  const sliceWidth = WIDTH * 1.0 / bufferLength;
-  let x = 0;
+  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i &lt; bufferLength; i++) {
-    const v = dataArray[i]/128.0;
-    const y = v * HEIGHT/2;
+  for(var i = 0; i &lt; bufferLength; i++) {
+    const v = dataArray[i]/128.0;
+    const y = v * HEIGHT/2;
 
-    if(i === 0)
-      canvasCtx.moveTo(x, y);
-    else
-      canvasCtx.lineTo(x, y);
+    if(i === 0)
+      canvasCtx.moveTo(x, y);
+    else
+      canvasCtx.lineTo(x, y);
 
-    x += sliceWidth;
-  }
+    x += sliceWidth;
+  }
 
-  canvasCtx.lineTo(WIDTH, HEIGHT/2);
-  canvasCtx.stroke();
+  canvasCtx.lineTo(WIDTH, HEIGHT/2);
+  canvasCtx.stroke();
 };
 
 draw();

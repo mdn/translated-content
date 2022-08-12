@@ -323,7 +323,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Implémentation et déploiement
 
-The [pointer events browser compatibility data](/en-US/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
+The [pointer events browser compatibility data](/fr/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
 
 Some new value have been proposed for the {{cssxref("touch-action", "CSS touch-action")}} property as part of [Pointer Events Level 2](https://w3c.github.io/pointerevents/) specification but currently those new values have no implementation support.
 

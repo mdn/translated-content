@@ -11,5 +11,5 @@ UTF-8 (UCS Transformation Format 8) 是万维网上最常用的{{Glossary("Chara
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "UTF-8")}} on Wikipedia
+- [UTF-8](https://zh.wikipedia.org/wiki/UTF-8) on Wikipedia
 - [FAQ about UTF-8 on Unicode website](https://www.unicode.org/faq/utf_bom.html#UTF8)

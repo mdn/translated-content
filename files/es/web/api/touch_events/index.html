@@ -113,11 +113,11 @@ original_slug: DOM/Touch_events
 
 <p>Esto nos permite conseguir las coordenadas de la posición previa de cada toque y usar el método apropiado de contexto para dibujar un segmento de línea uniendo dos posiciones a la vez.</p>
 
-<p>Después de dibujar la línea, llamamos a  <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a> para reemplazar la información previa sobre el punto de toque con la información actual de la matriz <code>ongoingTouches</code>.</p>
+<p>Después de dibujar la línea, llamamos a  <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a> para reemplazar la información previa sobre el punto de toque con la información actual de la matriz <code>ongoingTouches</code>.</p>
 
 <h3 id="Manejando_el_final_de_un_toque">Manejando el final de un toque</h3>
 
-<p>Cuando el usuario levanta un dedo de la superficie, un evento <code>touchend</code> es enviado.  De igual manera, si el dedo se desliza fuera de nuestro lienzo, obtenemos un evento <code>touchleave</code>. Manejamos ambos casos de la misma manera: llamando a la función <code>handleEnd()</code> de abajo. Su trabajo es dibujar el último segmento de línea para cada toque que ha finalizado y remueve el punto de toque de la lista de toques en marcha.</p>
+<p>Cuando el usuario levanta un dedo de la superficie, un evento <code>touchend</code> es enviado.  De igual manera, si el dedo se desliza fuera de nuestro lienzo, obtenemos un evento <code>touchleave</code>. Manejamos ambos casos de la misma manera: llamando a la función <code>handleEnd()</code> de abajo. Su trabajo es dibujar el último segmento de línea para cada toque que ha finalizado y remueve el punto de toque de la lista de toques en marcha.</p>
 
 <pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();
@@ -140,7 +140,7 @@ original_slug: DOM/Touch_events
 }
 </pre>
 
-<p>Esto es muy similar a la función previa; la única diferencia real es que cuando llamamos a  <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a>, simplemente remueve la antigua entrada de la lista de toques en marcha, sin añadir la información actualizada. El resultado es que detenemos el seguimiento del punto de toque.</p>
+<p>Esto es muy similar a la función previa; la única diferencia real es que cuando llamamos a  <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a>, simplemente remueve la antigua entrada de la lista de toques en marcha, sin añadir la información actualizada. El resultado es que detenemos el seguimiento del punto de toque.</p>
 
 <h3 id="Manejando_los_toques_cancelados">Manejando los toques cancelados</h3>
 
@@ -164,7 +164,7 @@ original_slug: DOM/Touch_events
 
 <h4 id="Seleccionando_un_color_para_cada_toque">Seleccionando un color para cada toque</h4>
 
-<p>Con el fin de hacer que cada dibujo de toque se vea diferente, la función  <code>colorForTouch()</code> es usada para elegir un color basado en el identificador único de toque. Este identificador estará siempre entre 0 y un valor menos que el número de toques activos. Puesto que es muy improbable que alguna persona con más de 16 dedos use este demo, convertimos estos directamente en colores de escalas grises.</p>
+<p>Con el fin de hacer que cada dibujo de toque se vea diferente, la función  <code>colorForTouch()</code> es usada para elegir un color basado en el identificador único de toque. Este identificador estará siempre entre 0 y un valor menos que el número de toques activos. Puesto que es muy improbable que alguna persona con más de 16 dedos use este demo, convertimos estos directamente en colores de escalas grises.</p>
 
 <pre class="brush: js">function colorForTouch(touch) {
   var id = touch.identifier;
@@ -173,7 +173,7 @@ original_slug: DOM/Touch_events
 }
 </pre>
 
-<p>El resultado de esta función es un string o cadena que puede ser usada cuando se llame a funciones {{ HTMLElement("canvas") }} para configurar los colores de dibujos. Por ejemplo, para un valor {{ domxref("Touch.identifier") }}  de 10, el resultado string o cadena es "#aaa".</p>
+<p>El resultado de esta función es un string o cadena que puede ser usada cuando se llame a funciones {{ HTMLElement("canvas") }} para configurar los colores de dibujos. Por ejemplo, para un valor {{ domxref("Touch.identifier") }}  de 10, el resultado string o cadena es "#aaa".</p>
 
 <h4 id="Encontrando_un_toque_continuo">Encontrando un toque continuo</h4>
 

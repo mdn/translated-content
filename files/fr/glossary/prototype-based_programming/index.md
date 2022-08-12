@@ -15,4 +15,4 @@ En termes simples, ce type de style permet de créer un {{Glossary('Object', 'ob
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Programmation_orientée_prototype", "Programmation orientée prototype")}} sur Wikipédia
+- [Programmation orientée prototype](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_prototype) sur Wikipédia

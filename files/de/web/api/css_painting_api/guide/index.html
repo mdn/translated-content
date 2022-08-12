@@ -3,23 +3,23 @@ title: Die CSS Painting API verwenden
 slug: Web/API/CSS_Painting_API/Guide
 translation_of: Web/API/CSS_Painting_API/Guide
 ---
-<p>Die CSS Paint API wurde entworfen, um Entwicklern zu ermöglichen, programmatisch Bilder festzulegen, die überall dort verwendet werden können, wo ein CSS Bild aufgerufen werden kann, wie in CSS <code><a href="/en-US/docs/Web/CSS/background-image">background-image</a></code>, <code><a href="/en-US/docs/Web/CSS/border-image-source">border-image</a></code>, <code><a href="/en-US/docs/Web/CSS/mask-image">mask-image</a></code>, etc.</p>
+<p>Die CSS Paint API wurde entworfen, um Entwicklern zu ermöglichen, programmatisch Bilder festzulegen, die überall dort verwendet werden können, wo ein CSS Bild aufgerufen werden kann, wie in CSS <code><a href="/en-US/docs/Web/CSS/background-image">background-image</a></code>, <code><a href="/en-US/docs/Web/CSS/border-image-source">border-image</a></code>, <code><a href="/en-US/docs/Web/CSS/mask-image">mask-image</a></code>, etc.</p>
 
 <p>Um programmatisch ein Bild zu erstellen, das von einem CSS stylesheet verwendet wird, müssen wir folgende Schritte abarbeiten:</p>
 
 <ol>
- <li>Lege ein "paint worklet" mit der <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> Funktion fest.</li>
+ <li>Lege ein "paint worklet" mit der <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> Funktion fest.</li>
  <li>Melde das worklet an.</li>
- <li>Binde mit Include die <code>{{cssxref('paint()','paint()')}}</code> CSS Funktion ein.</li>
+ <li>Binde mit Include die <code>{{cssxref('paint()','paint()')}}</code> CSS Funktion ein.</li>
 </ol>
 
-<p>Zum besseren Verständnis dieser einzelnen Schritte werden wir eine halbhohe farbliche Markierung wie in folgender Titelzeile erstellen:</p>
+<p>Zum besseren Verständnis dieser einzelnen Schritte werden wir eine halbhohe farbliche Markierung wie in folgender Titelzeile erstellen:</p>
 
 <p><img alt="Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header" src="https://mdn.mozillademos.org/files/16774/mycoolheader.png" style="height: 54px; width: 239px;"></p>
 
 <h2 id="CSS_paint_worklet">CSS paint worklet</h2>
 
-<p>In einer externen Skript-Datei nutzen wir die <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> Funktion, um unser <a href="/en-US/docs/Web/API/PaintWorklet">CSS Paint worklet</a> zu benennen. Diese benötigt zwei Parameter. Der erste ist der Name, den wir dem worklet geben — diesen Namen werden wir als einen Parameter von der paint() Funktion verwenden, wenn wir das Bild einem Element hinzufügen wollen. Der zweite Parameter ist die Klasse, die die ganze Magie ausführt: die die Kontext-Entscheidungen festlegt und natürlich das Bild, das wir auf unsere Oberfläche malen wollen.</p>
+<p>In einer externen Skript-Datei nutzen wir die <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> Funktion, um unser <a href="/en-US/docs/Web/API/PaintWorklet">CSS Paint worklet</a> zu benennen. Diese benötigt zwei Parameter. Der erste ist der Name, den wir dem worklet geben — diesen Namen werden wir als einen Parameter von der paint() Funktion verwenden, wenn wir das Bild einem Element hinzufügen wollen. Der zweite Parameter ist die Klasse, die die ganze Magie ausführt: die die Kontext-Entscheidungen festlegt und natürlich das Bild, das wir auf unsere Oberfläche malen wollen.</p>
 
 <pre class="brush: js notranslate">registerPaint('headerHighlight', class {
 
@@ -42,38 +42,38 @@ translation_of: Web/API/CSS_Painting_API/Guide
   }
 });</pre>
 
-<p>In diesem Klassenbeispiel haben wir die Umstände (options) eines einzelnen Kontexts mit der <code>contextOptions()</code> Funktion festgelegt: wir haben ein einfaches Objekt zurückgegeben, das aussagt, dass die Alphatransparenz erlaubt ist.</p>
+<p>In diesem Klassenbeispiel haben wir die Umstände (options) eines einzelnen Kontexts mit der <code>contextOptions()</code> Funktion festgelegt: wir haben ein einfaches Objekt zurückgegeben, das aussagt, dass die Alphatransparenz erlaubt ist.</p>
 
-<p>Wir haben dann die <code>paint()</code> Funktion verwendet, um unser Objekt auf die Canvas zu zeichnen.</p>
+<p>Wir haben dann die <code>paint()</code> Funktion verwendet, um unser Objekt auf die Canvas zu zeichnen.</p>
 
-<p>Die <code>paint()</code> Funktion kann drei Parameter aufnehmen. Hier übergeben wir nur ein Argument: den Rendering Kontext (wir schauen uns das im weiteren Verlauf noch genauer an), der oftmals mit dem Variablennamen <code>ctx</code> bezeichnet wird. Der 2D Rendering Context ist eine Untermenge der <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas API</a>; die Version, die für CSS Houdini verfügbar is (auch <code>PaintRenderingContext2D genannt</code>), ist eine weitere Untermenge, die über die meisten Zusätze verfügt, die auch in der Canvas API vorhanden sind, mit Ausnahme von <code>CanvasImageData</code>, <code>CanvasUserInterface</code>, <code>CanvasText</code>, und <code>CanvasTextDrawingStyles</code> APIs.</p>
+<p>Die <code>paint()</code> Funktion kann drei Parameter aufnehmen. Hier übergeben wir nur ein Argument: den Rendering Kontext (wir schauen uns das im weiteren Verlauf noch genauer an), der oftmals mit dem Variablennamen <code>ctx</code> bezeichnet wird. Der 2D Rendering Context ist eine Untermenge der <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas API</a>; die Version, die für CSS Houdini verfügbar is (auch <code>PaintRenderingContext2D genannt</code>), ist eine weitere Untermenge, die über die meisten Zusätze verfügt, die auch in der Canvas API vorhanden sind, mit Ausnahme von <code>CanvasImageData</code>, <code>CanvasUserInterface</code>, <code>CanvasText</code>, und <code>CanvasTextDrawingStyles</code> APIs.</p>
 
-<p>Wir weisen mit <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> den Wert <code>hsla(55, 90%, 60%, 1.0)</code> zu, ein blasses Gelb, und rufen dann <code>fillRect()</code> auf, um ein farbiges Rechteck zu erstellen. Die Parameter von <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">fillRect()</a></code> sind, in der Abfolge, x-Achse und y-Achse (und zugleich die feste Koordinate), Breite und Höhe. <code>fillRect(0, 15, 200, 20)</code> erstellt ein Rechteck von 200 Einheiten Breite und 20 Einheiten Höhe, die 0 Einheiten von der linken und 15 Einheiten von der oberen Seite der Box entfernt sind, in der das Rechteck eingezeichnet wird.</p>
+<p>Wir weisen mit <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> den Wert <code>hsla(55, 90%, 60%, 1.0)</code> zu, ein blasses Gelb, und rufen dann <code>fillRect()</code> auf, um ein farbiges Rechteck zu erstellen. Die Parameter von <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">fillRect()</a></code> sind, in der Abfolge, x-Achse und y-Achse (und zugleich die feste Koordinate), Breite und Höhe. <code>fillRect(0, 15, 200, 20)</code> erstellt ein Rechteck von 200 Einheiten Breite und 20 Einheiten Höhe, die 0 Einheiten von der linken und 15 Einheiten von der oberen Seite der Box entfernt sind, in der das Rechteck eingezeichnet wird.</p>
 
-<p>Wir können die CSS <code><a href="/en-US/docs/Web/CSS/background-size">background-size</a></code> and <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code> Eigenschaften (properties) verwenden, um das Hintergrundbild in seiner Größe und Position zu verändern, aber die oben festgelegten Werte sind die Standardwerte der gelben Box, die wir in unserem paint worklet definiert haben.</p>
+<p>Wir können die CSS <code><a href="/en-US/docs/Web/CSS/background-size">background-size</a></code> and <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code> Eigenschaften (properties) verwenden, um das Hintergrundbild in seiner Größe und Position zu verändern, aber die oben festgelegten Werte sind die Standardwerte der gelben Box, die wir in unserem paint worklet definiert haben.</p>
 
 <p>Wir haben dieses Beispiel einfach gehalten. Für mehr Möglichkeiten werfen Sie bitte einen Blick in die <a href="/en-US/docs/Web/HTML/Element/canvas">Canvas Dokumentation</a>. Wir werden weiter unten im Tutorial auch komplexere Beispiele nutzen.</p>
 
 <h2 id="Das_paint_worklet_verwenden">Das paint worklet verwenden</h2>
 
-<p>Um das paint worklet zu verwenden, müssen wir dies mit <code><a href="/en-US/docs/Web/API/Worklet/addModule">addModule()</a></code> anmelden und in unsere CSS einfügen, wobei wir sicherstellen müssen, dass der CSS Selektor zu einem DOM Knoten in unserem HTML-Code passt.</p>
+<p>Um das paint worklet zu verwenden, müssen wir dies mit <code><a href="/en-US/docs/Web/API/Worklet/addModule">addModule()</a></code> anmelden und in unsere CSS einfügen, wobei wir sicherstellen müssen, dass der CSS Selektor zu einem DOM Knoten in unserem HTML-Code passt.</p>
 
 <h3 id="Das_worklet_anmelden">Das worklet anmelden</h3>
 
-<p>Wir haben unser paint worklet in einer externen script-Datei erstellt, wie oben geziegt. Wir müssen jetzt unser <a href="/en-US/docs/Web/API/PaintWorklet">worklet</a> in unserer Hauptanwendung anmelden:</p>
+<p>Wir haben unser paint worklet in einer externen script-Datei erstellt, wie oben geziegt. Wir müssen jetzt unser <a href="/en-US/docs/Web/API/PaintWorklet">worklet</a> in unserer Hauptanwendung anmelden:</p>
 
 <pre class="brush: js notranslate">CSS.paintWorklet.addModule('nameOfPaintWorkletFile.js');</pre>
 
-<p>Dazu benutzen wir die von Paint Worklet bereitgestellte Funktion <code>addModule()</code> in einem <code>&lt;script&gt;</code>-Block innerhalb unseres HTML oder in einer externen JavaScript-Datei, die dann seinerseits von der Hauptanwendung aufgerufen werden muss.</p>
+<p>Dazu benutzen wir die von Paint Worklet bereitgestellte Funktion <code>addModule()</code> in einem <code>&lt;script&gt;</code>-Block innerhalb unseres HTML oder in einer externen JavaScript-Datei, die dann seinerseits von der Hauptanwendung aufgerufen werden muss.</p>
 
 <p>In unserem Beispiel ist das worklet auf GitHub gespeichert.</p>
 
 <div id="paintapi">
 <pre class="brush: js notranslate">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/01partOne/header-highlight.js');</pre>
 
-<h3 id="Auf_das_paint_worklet_in_CSS_verweisen">Auf das paint worklet in CSS verweisen</h3>
+<h3 id="Auf_das_paint_worklet_in_CSS_verweisen">Auf das paint worklet in CSS verweisen</h3>
 
-<p>Haben wir das paint worklet angemeldet, können wir es in CSS benutzen. Dabei kann man die Funktion <code>paint()</code> so benutzen, wie man auch jeden anderen <code>&lt;image&gt;</code> Typ verwendet. In <code>paint()</code> wird als Parameter derselbe Name des worklets übergeben, den wir bei <code>registerPaint()</code> eingetragen haben.</p>
+<p>Haben wir das paint worklet angemeldet, können wir es in CSS benutzen. Dabei kann man die Funktion <code>paint()</code> so benutzen, wie man auch jeden anderen <code>&lt;image&gt;</code> Typ verwendet. In <code>paint()</code> wird als Parameter derselbe Name des worklets übergeben, den wir bei <code>registerPaint()</code> eingetragen haben.</p>
 
 <pre class="brush: css notranslate">.fancy {
   background-image: paint(headerHighlight);
@@ -85,20 +85,20 @@ translation_of: Web/API/CSS_Painting_API/Guide
 
 <pre class="brush: html notranslate">&lt;h1 class="fancy"&gt;My Cool Header&lt;/h1&gt;</pre>
 
-<p>Das folgende Beispiel wird wie das obige Beispiel in einem <a href="/Web/API/CSS/paintWorklet#Browser_compatibility">Browsers, der die CSS Painting API unterstützt</a>, aussehen.</p>
+<p>Das folgende Beispiel wird wie das obige Beispiel in einem <a href="/Web/API/CSS/paintWorklet#Browser_compatibility">Browsers, der die CSS Painting API unterstützt</a>, aussehen.</p>
 </div>
 
 <p>{{EmbedLiveSample("paintapi", 120, 120)}}</p>
 
-<p>Während Sie vom HTML aus das worklet nicht mehr (innerlich) verändern können, können Sie trotzdem mit CSS über <code>background-size</code> und <code>background-position</code> Größe und Position des Bildes anpassen.</p>
+<p>Während Sie vom HTML aus das worklet nicht mehr (innerlich) verändern können, können Sie trotzdem mit CSS über <code>background-size</code> und <code>background-position</code> Größe und Position des Bildes anpassen.</p>
 
 <h2 id="PaintSize">PaintSize</h2>
 
-<p>Im Beispiel oben haben wir eine Box aus 20x200 Einheiten erstellt, die 15 Einheiten vom oberen Rand der umgebenen Box - eines HTML-Elements - entfernt liegt, gleichgültig, welche Größe die umhüllende Box selbst hat. Ist der Text klein, sieht die Box wie eine große Unterstreichung aus, ist er groß und lang, ist die Box gleich einem Balken unter den ersten Buchstaben. Günstiger wäre aber, wenn das Hintergrundbild relativ zur Größe des umhüllenden Elementes wäre. Dafür können wir die <code>paintSize</code> Property, bzw. <code>size.width</code> und <code>size.height</code>, verwenden. Diese übernimmt die Breite und Höhe des umliegenden Elements und rechnet die Größe des worklets dafür aus.</p>
+<p>Im Beispiel oben haben wir eine Box aus 20x200 Einheiten erstellt, die 15 Einheiten vom oberen Rand der umgebenen Box - eines HTML-Elements - entfernt liegt, gleichgültig, welche Größe die umhüllende Box selbst hat. Ist der Text klein, sieht die Box wie eine große Unterstreichung aus, ist er groß und lang, ist die Box gleich einem Balken unter den ersten Buchstaben. Günstiger wäre aber, wenn das Hintergrundbild relativ zur Größe des umhüllenden Elementes wäre. Dafür können wir die <code>paintSize</code> Property, bzw. <code>size.width</code> und <code>size.height</code>, verwenden. Diese übernimmt die Breite und Höhe des umliegenden Elements und rechnet die Größe des worklets dafür aus.</p>
 
 <p><img alt="The background is 50% of the height and 60% of the width of the element" src="https://mdn.mozillademos.org/files/16783/mycoolheadersized.png" style="height: 148px; width: 554px;"></p>
 
-<p>In diesem Beispiel-Bild ist der Hintergrund proportional zu der Größe des umhüllenden Elements. Das dritte Beispiel hat als Breite <code>width: 50%</code>; das Hintergrundbild passt sich in den ersten beiden Beispielen der Größe der Schrift an und damit der Höhe des Blocks, im dritten Beispiel sieht man aber auch deutlich, dass die Breite ebenfalls passend gemacht wird.</p>
+<p>In diesem Beispiel-Bild ist der Hintergrund proportional zu der Größe des umhüllenden Elements. Das dritte Beispiel hat als Breite <code>width: 50%</code>; das Hintergrundbild passt sich in den ersten beiden Beispielen der Größe der Schrift an und damit der Höhe des Blocks, im dritten Beispiel sieht man aber auch deutlich, dass die Breite ebenfalls passend gemacht wird.</p>
 
 <p>Der Code, mit dem das möglich ist, sieht dann folgendermaßen aus:</p>
 
@@ -144,7 +144,7 @@ translation_of: Web/API/CSS_Painting_API/Guide
 </pre>
 </div>
 
-<p>Wenn du mit diesem worklet herumspielst, kannst du dessen Größe über die Eigenschaften <code>font-size</code> und <code>width</code> des umhüllenden Elements ändern.</p>
+<p>Wenn du mit diesem worklet herumspielst, kannst du dessen Größe über die Eigenschaften <code>font-size</code> und <code>width</code> des umhüllenden Elements ändern.</p>
 
 <p>In Browsern, die CSS Paint API unterstützen, erscheint das unten aufgeführte Beispielt wie das Bild oben.</p>
 
@@ -165,7 +165,7 @@ translation_of: Web/API/CSS_Painting_API/Guide
 });
 </pre>
 
-<p>Die drei Parameter der Funktion <code>paint()</code> enthalten den Zeichenkontext, die Größe des Malgrundes (meist des umgebenden Elements) und Eigenschaften (properties). Um auf die Eigenschaften zugreifen zu können, muss man die statische Methode <code>inputProperties()</code> aufrufen, die den Zugriff auf die CSS properties ermöglicht, sowohl der regulären als auch <a href="/en-US/docs/Web/CSS/CSS_Variables">angepasster Eigenschaften</a>. Diese liefert ein <code><a href="/en-US/docs/Glossary/array">array</a></code> mit den Namen der Eigenschaften zurück (wir werfen im letzten Abschnitt einen näheren Blick auf <code>inputArguments).</code></p>
+<p>Die drei Parameter der Funktion <code>paint()</code> enthalten den Zeichenkontext, die Größe des Malgrundes (meist des umgebenden Elements) und Eigenschaften (properties). Um auf die Eigenschaften zugreifen zu können, muss man die statische Methode <code>inputProperties()</code> aufrufen, die den Zugriff auf die CSS properties ermöglicht, sowohl der regulären als auch <a href="/en-US/docs/Web/CSS/CSS_Variables">angepasster Eigenschaften</a>. Diese liefert ein <code><a href="/en-US/docs/Glossary/array">array</a></code> mit den Namen der Eigenschaften zurück (wir werfen im letzten Abschnitt einen näheren Blick auf <code>inputArguments).</code></p>
 
 <h3 id="Example">Example</h3>
 
@@ -174,7 +174,7 @@ translation_of: Web/API/CSS_Painting_API/Guide
 
 <p><img alt="The width and color of the background image changes based on the custom properties" src="https://mdn.mozillademos.org/files/16784/boxbg.png" style="height: 255px; width: 739px;"></p>
 
-<p>In unserer CSS weisen wir verschiedene Farben und eine Anpassung der Breite des worklets über die <code>--boxColor</code> und <code>--widthSubtractor</code> Eigenschaften zu.</p>
+<p>In unserer CSS weisen wir verschiedene Farben und eine Anpassung der Breite des worklets über die <code>--boxColor</code> und <code>--widthSubtractor</code> Eigenschaften zu.</p>
 
 <pre class="brush: html; hidden notranslate">&lt;ul&gt;
     &lt;li&gt;item 1&lt;/li&gt;
@@ -216,7 +216,7 @@ li:nth-of-type(3n+1) {
 }</pre>
 </div>
 
-<p>Beachte, dass wir im CSS Eigenschaften verwenden, die nicht zum normalen CSS gehören, sondern von uns selbst definiert worden sind: <code>boxColor</code> und <code>widthSubtractor</code>. Auf diese können wir im worklet zugreifen, wenn wir diese über <code>inputProperties()</code> zugänglich machen.</p>
+<p>Beachte, dass wir im CSS Eigenschaften verwenden, die nicht zum normalen CSS gehören, sondern von uns selbst definiert worden sind: <code>boxColor</code> und <code>widthSubtractor</code>. Auf diese können wir im worklet zugreifen, wenn wir diese über <code>inputProperties()</code> zugänglich machen.</p>
 
 <pre class="brush: js notranslate">registerPaint('boxbg', class {
 
@@ -240,9 +240,9 @@ li:nth-of-type(3n+1) {
   }
 });</pre>
 
-<p>Wir haben die Methode <code>inputProperties()</code> in der <code>registerPaint()</code> Klasse verwendet, um die Werte der beiden von uns definierten Eigenschaften zu erhalten, die das worklet <code>boxbg</code> anwenden. Mit <code>inputProperties()</code> legen wir uns einen Array an, der normale CSS-Eigenschaften wie auch selbst definierte erhalten kann.</p>
+<p>Wir haben die Methode <code>inputProperties()</code> in der <code>registerPaint()</code> Klasse verwendet, um die Werte der beiden von uns definierten Eigenschaften zu erhalten, die das worklet <code>boxbg</code> anwenden. Mit <code>inputProperties()</code> legen wir uns einen Array an, der normale CSS-Eigenschaften wie auch selbst definierte erhalten kann.</p>
 
-<p>In unserem <code>&lt;script&gt;</code>-Block melden wir das worklet an:</p>
+<p>In unserem <code>&lt;script&gt;</code>-Block melden wir das worklet an:</p>
 
 <div id="paintapi">
 <pre class="brush: js notranslate">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklet/boxbg.js');</pre>
@@ -254,7 +254,7 @@ li:nth-of-type(3n+1) {
 
 <h2 id="Komplexität_hinzufügen">Komplexität hinzufügen</h2>
 
-<p>Das obenstehende Beispiel ist nicht sonderlich aufregend, da man es ebenso mit CSS in wenigen Schritten und ohne den Aufwand eines worklets programmieren kann, etwa, indem man <a href="/en-US/docs/Learn/CSS/Howto/Generated_content">dekorative Inhalte</a> mit <code><a href="/en-US/docs/Web/CSS/::before">::before</a> hinzufügt</code> oder mit <code>background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;</code> - Was die CSS Painting API so interessant und machtvoll macht, ist die Möglichkeit, komplexe Bilder zu erstellen und Variablen zu übergeben.</p>
+<p>Das obenstehende Beispiel ist nicht sonderlich aufregend, da man es ebenso mit CSS in wenigen Schritten und ohne den Aufwand eines worklets programmieren kann, etwa, indem man <a href="/en-US/docs/Learn/CSS/Howto/Generated_content">dekorative Inhalte</a> mit <code><a href="/en-US/docs/Web/CSS/::before">::before</a> hinzufügt</code> oder mit <code>background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;</code> - Was die CSS Painting API so interessant und machtvoll macht, ist die Möglichkeit, komplexe Bilder zu erstellen und Variablen zu übergeben.</p>
 
 <p>Werfen wir einen Blick auf ein komplexeres Beispiel.</p>
 
@@ -304,7 +304,7 @@ li:nth-of-type(3n+1) {
 &lt;h3 class="fancy"&gt;Medium size header&lt;/h3&gt;
 &lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;</pre>
 
-<p>Dann geben wir den einzelnen HTML-Elementen je einen verschiedenen Wert für die <a href="/en-US/docs/Web/CSS/CSS_Variables">von uns definierte Eigenschaft</a> <code>--highColour:</code></p>
+<p>Dann geben wir den einzelnen HTML-Elementen je einen verschiedenen Wert für die <a href="/en-US/docs/Web/CSS/CSS_Variables">von uns definierte Eigenschaft</a> <code>--highColour:</code></p>
 
 <pre class="brush: css notranslate">.fancy {
   background-image: paint(headerHighlight);
@@ -319,14 +319,14 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <p>{{EmbedLiveSample("example4", 300, 300)}}</p>
 
-<p>Während man das worklet selbst nicht ändern kann, kann man mit CSS und HTML jedoch herumspielen. Vielleicht probieren Sie mal <code><a href="/en-US/docs/Web/CSS/float">float</a></code> und <code><a href="/en-US/docs/Web/CSS/clear">clear</a></code> bei den Titelzeilen <code>&lt;h1&gt;</code>, <code>&lt;h3&gt;</code> und <code>&lt;h6&gt;</code> aus.</p>
+<p>Während man das worklet selbst nicht ändern kann, kann man mit CSS und HTML jedoch herumspielen. Vielleicht probieren Sie mal <code><a href="/en-US/docs/Web/CSS/float">float</a></code> und <code><a href="/en-US/docs/Web/CSS/clear">clear</a></code> bei den Titelzeilen <code>&lt;h1&gt;</code>, <code>&lt;h3&gt;</code> und <code>&lt;h6&gt;</code> aus.</p>
 
 <p>Man kann natürlich auch Hintergrundbilder ohne CSS paint API erstellen. Das kann allerdings zu einem großen Mehraufwand und wesentlich mehr Code führen. Mit CSS Paint API kann ein worklet immer wieder verwendet werden und über eine Parameter-Übergabe rasch angepasst werden.</p>
 </div>
 
 <h2 id="Parameter_übergeben">Parameter übergeben</h2>
 
-<p>Mit der CSS Paint API können wir nicht nur auf selbstdefinierte Eigenschaften zugreifen, sondern auch über die CSS-Funktion <code>paint()</code> auch Parameter übergeben.</p>
+<p>Mit der CSS Paint API können wir nicht nur auf selbstdefinierte Eigenschaften zugreifen, sondern auch über die CSS-Funktion <code>paint()</code> auch Parameter übergeben.</p>
 
 <p>Nehmen wir an, wir wollen ab und zu den Hintergrund nur mit einem Strich statt vollständig füllen. Dafür können wir ein Extra-Argument übergeben, welches dann im worklet abgefragt und entsprechend verarbeitet wird.</p>
 
@@ -335,7 +335,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 }
 </pre>
 
-<p>Mit der Methode <code>inputArguments()</code> in der Klasse <code>registerPaint()</code> machen wir das zusätzliche Argument aus der CSS-Funktion <code>paint()</code> zugänglich:</p>
+<p>Mit der Methode <code>inputArguments()</code> in der Klasse <code>registerPaint()</code> machen wir das zusätzliche Argument aus der CSS-Funktion <code>paint()</code> zugänglich:</p>
 
 <pre class="brush: js notranslate">static get inputArguments() { return ['*']; }
 </pre>
@@ -363,11 +363,11 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 }
 </pre>
 
-<p>Wir können auch den Datentyp genau angeben. Wenn wir die Werte der Argumente mit <code>get</code> holen, fragen wir dann speziell nach einer <code>&lt;length&gt;</code> Einheit.</p>
+<p>Wir können auch den Datentyp genau angeben. Wenn wir die Werte der Argumente mit <code>get</code> holen, fragen wir dann speziell nach einer <code>&lt;length&gt;</code> Einheit.</p>
 
 <pre class="brush: js notranslate">static get inputArguments() { return ['*', '&lt;length&gt;']; }</pre>
 
-<p>In diesem Fall haben wir spezifisch nach einem <code>&lt;length&gt;</code> Attribut gefragt. Das erste Element des Arrays wird dann als <code><a href="/en-US/docs/Web/API/CSSUnparsedValue">CSSUnparsedValue</a></code>, das zweite als <code><a href="/en-US/docs/Web/API/CSSStyleValue">CSSStyleValue</a></code> übergeben.</p>
+<p>In diesem Fall haben wir spezifisch nach einem <code>&lt;length&gt;</code> Attribut gefragt. Das erste Element des Arrays wird dann als <code><a href="/en-US/docs/Web/API/CSSUnparsedValue">CSSUnparsedValue</a></code>, das zweite als <code><a href="/en-US/docs/Web/API/CSSStyleValue">CSSStyleValue</a></code> übergeben.</p>
 
 <p>Wenn das selbstdefinierte Argument ein CSS-Wert ist, zum Beispiel eine Maßeinheit, können wir die Typed OM CSSStyleValue Klasse (und deren Unterklassen) aufrufen, indem wir das Schlüsselwort für diesen Typen in der Methode <code>inputArguments()</code> nutzen.</p>
 
@@ -378,12 +378,12 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 }
 </pre>
 
-<p>Wenn wir mit <code>get</code> unsere Argumentenliste holen, können wir direkt nach der <code>&lt;length&gt;</code> Einheit fragen.</p>
+<p>Wenn wir mit <code>get</code> unsere Argumentenliste holen, können wir direkt nach der <code>&lt;length&gt;</code> Einheit fragen.</p>
 
 <pre class="brush: js notranslate">static get inputArguments() { return ['*', '&lt;length&gt;']; }
 </pre>
 
-<p>Nun können wir Typen und Werte der Properties übergeben, was bedeutet: wir können die Anzahl der Pixel und den Typ Nummer direkt verwenden (zugegeben nimmt <code>ctx.lineWidth</code> einen Float als Wert und eigentlich keinen Wert mit Längeneinheiten, aber um des Beispiels willen ...).</p>
+<p>Nun können wir Typen und Werte der Properties übergeben, was bedeutet: wir können die Anzahl der Pixel und den Typ Nummer direkt verwenden (zugegeben nimmt <code>ctx.lineWidth</code> einen Float als Wert und eigentlich keinen Wert mit Längeneinheiten, aber um des Beispiels willen ...).</p>
 
 <pre class="brush: js notranslate">paint(ctx, size, props, args) {
 
@@ -401,7 +401,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <p>Es ist wichtig, hier den Unterschied zwischen selbsterstellten Properties und den Argumenten zu erwähnen. Selbsterstellte Properties (und auch alle Properties für einen bestimmten Selektor) sind global - sie können überall in unserem CSS und JS verwendet werden.</p>
 
-<p>Wenn Sie zum Beispiel ein <code>--mainColor</code> definiert haben, der dazu dient, eine Farbe mit der Funktion <code>paint()</code> zu setzen, kann dieser auch dazu verwendet werden, anderswo im CSS Farben zu setzen. Wenn Sie diesen Wert speziell für paint ändern wollen, kann sich das als schwierig erweisen. Hier kommt dann das angepasste Argument ins Spiel. Argumente dienen dazu, das zu kontrollieren, was man aktuell zeichnet, während Properties dazu dienen, den Stil zu kontrollieren.</p>
+<p>Wenn Sie zum Beispiel ein <code>--mainColor</code> definiert haben, der dazu dient, eine Farbe mit der Funktion <code>paint()</code> zu setzen, kann dieser auch dazu verwendet werden, anderswo im CSS Farben zu setzen. Wenn Sie diesen Wert speziell für paint ändern wollen, kann sich das als schwierig erweisen. Hier kommt dann das angepasste Argument ins Spiel. Argumente dienen dazu, das zu kontrollieren, was man aktuell zeichnet, während Properties dazu dienen, den Stil zu kontrollieren.</p>
 
 <p><img alt="The list items have a background image that is either pink, purple or green, with different stroke widths, and the green one being filled." src="https://mdn.mozillademos.org/files/16786/hollowfilled.png" style="height: 292px; width: 327px;"></p>
 
@@ -479,7 +479,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 });
 </pre>
 
-<p>Wir können verschiedene Farbe und Strichstärken setzen und entscheiden, ob das Hintergrundbild gefüllt oder leer ist:</p>
+<p>Wir können verschiedene Farbe und Strichstärken setzen und entscheiden, ob das Hintergrundbild gefüllt oder leer ist:</p>
 
 <div id="example5">
 <pre class="brush: css notranslate">li {
@@ -519,7 +519,7 @@ li:nth-of-type(3n+1) {
 &lt;/ul&gt;
 </pre>
 
-<p>In unserem <code>&lt;script&gt;</code>-Block melden wir das Worklet an:</p>
+<p>In unserem <code>&lt;script&gt;</code>-Block melden wir das Worklet an:</p>
 
 <pre class="brush: js notranslate">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hollow.js');</pre>
 </div>

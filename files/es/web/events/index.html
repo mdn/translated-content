@@ -3,7 +3,7 @@ title: Referencia de Eventos
 slug: Web/Events
 translation_of: Web/Events
 ---
-<p> Los eventos se envían para notificar al código de cosas interesantes que han ocurrido. Cada evento está representado por un objeto que se basa en la interfaz {{domxref("Event")}}, y puede tener campos y/o funciones personalizadas adicionales para obtener más información acerca de lo sucedido. Los eventos pueden representar cualquier cosa desde las interacciones básicas del usuario <span id="result_box" lang="es"><span class="hps">para</span> <span class="hps">notificaciones automatizadas</span> <span class="hps">de</span> <span class="hps">las cosas que suceden</span> <span class="hps">en el modelo</span> <span class="hps">de representación.</span></span></p>
+<p> Los eventos se envían para notificar al código de cosas interesantes que han ocurrido. Cada evento está representado por un objeto que se basa en la interfaz {{domxref("Event")}}, y puede tener campos y/o funciones personalizadas adicionales para obtener más información acerca de lo sucedido. Los eventos pueden representar cualquier cosa desde las interacciones básicas del usuario <span id="result_box" lang="es"><span class="hps">para</span> <span class="hps">notificaciones automatizadas</span> <span class="hps">de</span> <span class="hps">las cosas que suceden</span> <span class="hps">en el modelo</span> <span class="hps">de representación.</span></span></p>
 
 <p>Este artículo ofrece una lista de eventos que se pueden enviar; algunos son eventos estándar definidos en las especificaciones oficiales, mientras que otros son eventos usados internamente por los navegadores específicos; por ejemplo, Eventos específicos de Mozilla se enumeran de manera que los <a href="/en-US/docs/Mozilla/Add-ons">complementos</a> pueden usarlos para interactuar con el navegador.</p>
 
@@ -78,7 +78,7 @@ translation_of: Web/Events
    <td>{{event("beforeunload")}}</td>
    <td>{{domxref("BeforeUnloadEvent")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/html5/browsers.html#unloading-documents">HTML5 </a></td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{event("beginEvent")}}</td>
@@ -88,7 +88,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code></td>
-   <td> </td>
+   <td> </td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
    <td>Una conexión abierta en la base de datos está bloqueando una transacción <code>versionchange</code> en la misma base de datos.</td>
   </tr>
@@ -168,9 +168,9 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code></td>
-   <td> </td>
+   <td> </td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/IndexedDB/#transaction">IndexedDB</a></td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{event("complete")}}</td>
@@ -185,7 +185,7 @@ translation_of: Web/Events
    <td>La composición de un pasaje de texto se ha completado o cancelado.</td>
   </tr>
   <tr>
-   <td>{{event("compositionstart")}} {{gecko_minversion_inline("9")}}</td>
+   <td>{{event("compositionstart")}} {{gecko_minversion_inline("9")}}</td>
    <td>{{domxref("CompositionEvent")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-compositionstart">DOM L3</a></td>
    <td><span id="result_box" lang="es"><span class="hps">La composición de un</span> <span class="hps">pasaje de un texto</span> <span class="hps">está preparado</span> <span class="hps">(similar a</span> <span class="hps">KeyDown</span> <span class="hps">para una entrada de</span> <span class="hps">teclado,</span> <span class="hps">sino que trabaja</span> <span class="hps">con otros</span> <span class="hps">insumos, como el</span> <span class="hps">reconocimiento de voz</span><span>)</span></span>.</td>
@@ -398,7 +398,7 @@ translation_of: Web/Events
    <td>{{event("ended_(Web_Audio)", "ended")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;">{{SpecName("Web Audio API")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{event("endEvent")}}</td>
@@ -423,7 +423,7 @@ translation_of: Web/Events
    <td>{{event("error")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://dev.w3.org/html5/spec/offline.html">Offline</a></td>
-   <td><span id="result_box" lang="es"><span class="hps">Se ha producido un</span> <span class="hps">error al descargar</span> <span class="hps">el manifiesto de</span> <span class="hps">caché</span> <span class="hps">o actualizar el</span> <span class="hps">contenido de  la </span></span>aplicación.</td>
+   <td><span id="result_box" lang="es"><span class="hps">Se ha producido un</span> <span class="hps">error al descargar</span> <span class="hps">el manifiesto de</span> <span class="hps">caché</span> <span class="hps">o actualizar el</span> <span class="hps">contenido de  la </span></span>aplicación.</td>
   </tr>
   <tr>
    <td>{{event("error")}}</td>
@@ -873,7 +873,7 @@ translation_of: Web/Events
    <td>{{event("timeout")}}</td>
    <td>{{domxref("ProgressEvent")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-timeout">XMLHttpRequest</a></td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{event("timeupdate")}}</td>
@@ -937,7 +937,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code></td>
-   <td> </td>
+   <td> </td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
    <td>An attempt was made to open a database with a version number higher than its current version. A <code>versionchange</code> transaction has been created.</td>
   </tr>
@@ -949,7 +949,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></td>
-   <td> </td>
+   <td> </td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/IndexedDB/#database-interface">IndexedDB</a></td>
    <td>A <code>versionchange</code> transaction completed.</td>
   </tr>
@@ -1004,7 +1004,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("cardstatechange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The {{domxref("MozMobileConnection.cardState")}} property changes value.</td>
   </tr>
@@ -1016,31 +1016,31 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("connectionInfoUpdate")}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="http://mxr.mozilla.org/mozilla-central/source/dom/wifi/nsIWifi.idl?rev=3e586802f478#176"><em>Firefox OS specific</em></a></td>
    <td>The informations about the signal strength and the link speed have been updated.</td>
   </tr>
   <tr>
    <td>{{event("cfstatechange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The call forwarding state changes.</td>
   </tr>
   <tr>
    <td>{{event("datachange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The {{domxref("MozMobileConnection.data")}} object changes values.</td>
   </tr>
   <tr>
    <td>{{event("dataerror")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The {{domxref("MozMobileConnection.data")}} object receive an error from the <abbr title="Radio Interface Layer">RIL</abbr>.</td>
   </tr>
   <tr>
    <td>{{event("DOMMouseScroll")}} {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>The wheel button of a pointing device is rotated (detail attribute is a number of lines). (use {{event("wheel")}} instead)</td>
   </tr>
@@ -1064,25 +1064,25 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("icccardlockerror")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>the {{domxref("MozMobileConnection.unlockCardLock()")}} or {{domxref("MozMobileConnection.setCardLock()")}} methods fails.</td>
   </tr>
   <tr>
    <td>{{event("iccinfochange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The {{domxref("MozMobileConnection.iccInfo")}} object changes.</td>
   </tr>
   <tr>
    <td>{{event("localized")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em><a href="https://github.com/fabi1cazenave/webL10n">Mozilla Specific</a></em></td>
    <td>The page has been localized using data-l10n-* attributes.</td>
   </tr>
   <tr>
    <td>{{event("mousewheel")}} {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="http://msdn.microsoft.com/en-us/library/ie/ms536951%28v=vs.85%29.aspx"><em>IE invented</em></a></td>
    <td>The wheel button of a pointing device is rotated.</td>
   </tr>
@@ -1094,91 +1094,91 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("mozbrowserclose")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when window.close() is called within a browser iframe.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsercontextmenu")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when a browser {{HTMLElement("iframe")}} try to open a context menu.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsererror")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when an error occured while trying to load a content within a browser iframe</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsericonchange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when the favicon of a browser iframe changes.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowserlocationchange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when an browser iframe's location changes.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowserloadend")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when the browser iframe has finished loading all its assets.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowserloadstart")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when the browser iframe starts to load a new page.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowseropenwindow")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when {{domxref("window.open()")}} is called within a browser iframe.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsersecuritychange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when the SSL state changes within a browser iframe.</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsershowmodalprompt")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when {{domxref("window.alert","alert()")}}, {{domxref("window.confirm","confirm()")}} or {{domxref("window.prompt","prompt()")}} are called within a browser iframe</td>
   </tr>
   <tr>
    <td>{{event("mozbrowsertitlechange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>Sent when the document.title changes within a browser iframe.</td>
   </tr>
   <tr>
    <td>{{event("MozGamepadButtonDown")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>To be specified</em></td>
    <td>A gamepad button is pressed down.</td>
   </tr>
   <tr>
    <td>{{event("MozGamepadButtonUp")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>To be specified</em></td>
    <td>A gamepad button is released.</td>
   </tr>
   <tr>
    <td>{{event("MozMousePixelScroll")}} {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>The wheel button of a pointing device is rotated (detail attribute is a number of pixels). (use wheel instead)</td>
   </tr>
   <tr>
    <td>{{event("MozOrientation")}} {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>Fresh data is available from an orientation sensor (see deviceorientation).</td>
   </tr>
@@ -1190,25 +1190,25 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("moztimechange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>The time of the device has been changed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchDown</a> {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>A touch point is placed on the touch surface (use touchstart instead).</td>
   </tr>
   <tr>
    <td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchMove</a> {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>A touch point is moved along the touch surface (use touchmove instead).</td>
   </tr>
   <tr>
    <td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchUp</a> {{deprecated_inline}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>A touch point is removed from the touch surface (use touchend instead).</td>
   </tr>
@@ -1256,7 +1256,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("disabled")}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="http://mxr.mozilla.org/mozilla-central/source/dom/wifi/nsIWifi.idl?rev=3e586802f478#182"><em>Firefox OS specific</em></a></td>
    <td>Wifi has been disabled on the device.</td>
   </tr>
@@ -1274,7 +1274,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("enabled")}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="http://mxr.mozilla.org/mozilla-central/source/dom/wifi/nsIWifi.idl?rev=3e586802f478#182"><em>Firefox OS specific</em></a></td>
    <td>Wifi has been enabled on the device.</td>
   </tr>
@@ -1328,7 +1328,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("statuschange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="http://mxr.mozilla.org/mozilla-central/source/dom/wifi/nsIWifi.idl?rev=3e586802f478#156"><em>Firefox OS specific</em></a></td>
    <td>The status of the Wifi connection changed.</td>
   </tr>
@@ -1340,31 +1340,31 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("smartcard-insert")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>A <a href="/en-US/docs/JavaScript_crypto">smartcard</a> has been inserted.</td>
   </tr>
   <tr>
    <td>{{event("smartcard-remove")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla specific</em></td>
    <td>A <a href="/en-US/docs/JavaScript_crypto">smartcard</a> has been removed.</td>
   </tr>
   <tr>
    <td>{{event("stkcommand")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The <abbr title="SIM Application Toolkit">STK</abbr> Proactive Command is issued from <abbr title="Integrated Circuit Card">ICC</abbr>.</td>
   </tr>
   <tr>
    <td>{{event("stksessionend")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The <abbr title="SIM Application Toolkit">STK</abbr> Session is terminated by <abbr title="Integrated Circuit Card">ICC</abbr>.</td>
   </tr>
   <tr>
    <td><code>text</code></td>
-   <td> </td>
+   <td> </td>
    <td><em>Mozilla Specific</em></td>
    <td>A generic composition event occurred.</td>
   </tr>
@@ -1382,13 +1382,13 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("ussdreceived")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>A new <abbr title="Unstructured Supplementary Service Data">USSD</abbr> message is received</td>
   </tr>
   <tr>
    <td>{{event("voicechange")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>Firefox OS specific</em></td>
    <td>The {{domxref("MozMobileConnection.voice")}} object changes values.</td>
   </tr>
@@ -1413,43 +1413,43 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("broadcast")}}</td>
-   <td> </td>
+   <td> </td>
    <td><a href="/en-US/docs/XUL/Tutorial/Broadcasters_and_Observers#Broadcast_event">XUL</a></td>
    <td>An <code>observer</code> noticed a change to the attributes of a watched broadcaster.</td>
   </tr>
   <tr>
    <td>{{event("CheckboxStateChange")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>The state of a <code>checkbox</code> has been changed either by a user action or by a script (useful for accessibility).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/close_event">close</a></td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>The close button of the window has been clicked.</td>
   </tr>
   <tr>
    <td>{{event("command")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>An element has been activated.</td>
   </tr>
   <tr>
    <td>{{event("commandupdate")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>A command update occurred on a <code>commandset</code> element.</td>
   </tr>
   <tr>
    <td>{{event("DOMMenuItemActive")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>A menu or menuitem has been hovered or highlighted.</td>
   </tr>
   <tr>
    <td>{{event("DOMMenuItemInactive")}}</td>
-   <td> </td>
+   <td> </td>
    <td><em>XUL</em></td>
    <td>A menu or menuitem is no longer hovered or highlighted.</td>
   </tr>
@@ -1479,13 +1479,13 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{event("RadioStateChange")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>The state of a <code>radio</code> has been changed either by a user action or by a script (useful for accessibility).</td>
   </tr>
   <tr>
    <td>{{event("ValueChange")}}</td>
-   <td> </td>
+   <td> </td>
    <td>XUL</td>
    <td>The value of an element has changed (a progress bar for example, useful for accessibility).</td>
   </tr>
@@ -1504,283 +1504,283 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozSwipeGesture">MozSwipeGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A touch point is swiped across the touch surface</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGestureStart">MozMagnifyGestureStart</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points start to move away from each other.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGestureUpdate">MozMagnifyGestureUpdate</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points move away from each other (after a MozMagnifyGestureStart).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGesture">MozMagnifyGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points moved away from each other (after a sequence of MozMagnifyGestureUpdate).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozRotateGestureStart">MozRotateGestureStart</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points start to rotate around a point.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozRotateGestureUpdate">MozRotateGestureUpdate</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points rotate around a point (after a MozRotateGestureStart).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozRotateGesture">MozRotateGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points rotate around a point (after a sequence of MozRotateGestureUpdate).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozTapGesture">MozTapGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Two touch points are tapped on the touch surface.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozPressTapGesture">MozPressTapGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A "press-tap" gesture happened on the touch surface (first finger down, second finger down, second finger up, first finger up).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozEdgeUIGesture">MozEdgeUIGesture</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A touch point is swiped across the touch surface to invoke the edge UI (Win8 only).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozAfterPaint">MozAfterPaint</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Content has been repainted.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozBeforeResize">MozBeforeResize</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A window is about to be resized.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMPopupBlocked">DOMPopupBlocked</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A popup has been blocked</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMWindowCreated">DOMWindowCreated</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A window has been created.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMWindowClose">DOMWindowClose</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A window is about to be closed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMTitleChanged">DOMTitleChanged</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specifc</em></td>
    <td>The title of a window has changed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMLinkAdded">DOMLinkAdded</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specifc</em></td>
    <td>A link has been added a document.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMLinkRemoved">DOMLinkRemoved</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specifc</em></td>
    <td>A link has been removed inside from a document.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMMetaAdded">DOMMetaAdded</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A <code>meta</code> element has been added to a document.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMMetaRemoved">DOMMetaRemoved</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A <code>meta</code> element has been removed from a document.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMWillOpenModalDialog">DOMWillOpenModalDialog</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A modal dialog is about to open.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMModalDialogClosed">DOMModalDialogClosed</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A modal dialog has been closed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMAutoComplete">DOMAutoComplete</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The content of an element has been auto-completed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The frame has finished loading (but not its dependent resources).</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/AlertActive">AlertActive</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A <code><a href="/en-US/docs/XUL/notification">notification</a></code> element is shown.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/AlertClose">AlertClose</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A <code><a href="/en-US/docs/XUL/notification">notification</a></code> element is closed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/fullscreen">fullscreen</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Browser fullscreen mode has been entered or left.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/sizemodechange">sizemodechange</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>Window has entered/left fullscreen mode, or has been minimized/unminimized.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/MozEnteredDomFullscreen">MozEnteredDomFullscreen</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td><a href="/en-US/docs/DOM/Using_full-screen_mode">DOM fullscreen</a> mode has been entered.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSWindowClosing">SSWindowClosing</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The session store will stop tracking this window.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSTabClosing">SSTabClosing</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The session store will stop tracking this tab.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSTabRestoring">SSTabRestoring</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab is about to be restored.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSTabRestored">SSTabRestored</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been restored.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSWindowStateReady">SSWindowStateReady</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A window state has switched to "ready".</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/SSWindowStateBusy">SSWindowStateBusy</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A window state has switched to "busy".</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/tabviewsearchenabled">tabviewsearchenabled</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The search feature of Panorama has been activated</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/tabviewsearchdisabled">tabviewsearchdisabled</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The search feature of Panorama has been deactivated</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/tabviewframeinitialized">tabviewframeinitialized</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The frame container of Panorama has been initialized</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/tabviewshown">tabviewshown</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The Panorama tab has been shown</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/tabviewhidden">tabviewhidden</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>The Panorama tab has been hidden</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabOpen">TabOpen</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been opened.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabClose">TabClose</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been closed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabSelect">TabSelect</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been selected.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabShow">TabShow</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been shown.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabHide">TabHide</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been hidden.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabPinned">TabPinned</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been pinned.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/TabUnpinned">TabUnpinned</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>Addons specific</em></td>
    <td>A tab has been unpinned.</td>
   </tr>
@@ -1799,19 +1799,19 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewRefreshed">CssRuleViewRefreshed</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>devtools specific</em></td>
    <td>The "Rules" view of the style inspector has been updated.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewChanged">CssRuleViewChanged</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>devtools specific</em></td>
    <td>The "Rules" view of the style inspector has been changed.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewCSSLinkClicked">CssRuleViewCSSLinkClicked</a></td>
-   <td> </td>
+   <td> </td>
    <td><em>devtools specific</em></td>
    <td>A link to a CSS file has been clicked in the "Rules" view of the style inspector.</td>
   </tr>

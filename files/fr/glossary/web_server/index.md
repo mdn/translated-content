@@ -12,4 +12,4 @@ Un serveur Web est un logiciel qui s'exécute souvent sur un serveur matériel o
 ## Voir aussi
 
 - [Introduction to serversIntroduction aux serveurs](/fr/docs/Learn/Common_questions/What_is_a_web_server)
-- {{Interwiki("wikipedia", "Server (computing)")}} sur Wikipédia
+- [Serveur informatique](https://fr.wikipedia.org/wiki/Serveur_informatique) sur Wikipédia

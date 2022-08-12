@@ -21,7 +21,7 @@ translation_of: Web/API/PerformancePaintTiming
 
 <h2 id="プロパティ">プロパティ</h2>
 
-<p>このインタフェースにはプロパティはありませんが、次のようにプロパティを修飾および制約することで、次の {{domxref("PerformanceEntry")}} プロパティ ("<code>paint</code>"{{domxref ("PerformanceEntry.entryType","パフォーマンスエントリタイプ")}} 用) を拡張します。</p>
+<p>このインタフェースにはプロパティはありませんが、次のようにプロパティを修飾および制約することで、次の {{domxref("PerformanceEntry")}} プロパティ ("<code>paint</code>"{{domxref ("PerformanceEntry.entryType","パフォーマンスエントリタイプ")}} 用) を拡張します。</p>
 
 <dl>
  <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
@@ -41,15 +41,15 @@ translation_of: Web/API/PerformancePaintTiming
 <h2 id="例">例</h2>
 
 <pre class="brush: js">function showPaintTimings() {
-  if (window.performance) {
-    let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
-      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
-    });
-  } else {
-    console.log('Performance timing isn\'t supported.');
-  }
+  if (window.performance) {
+    let performance = window.performance;
+    let performanceEntries = performance.getEntriesByType('paint');
+    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
+      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
+    });
+  } else {
+    console.log('Performance timing isn\'t supported.');
+  }
 }</pre>
 
 <p>上記のコードは、次のようなコンソール出力を生成します。</p>

@@ -24,7 +24,7 @@ translation_of: Learn/Common_questions/What_is_a_domain_name
 
 <p><span class="seoSummary">도메인 이름은 인터넷 인프라의 핵심 부분입니다. 인터넷에서 사용할 수있는 모든 웹 서버에 대해 사람이 읽을 수있는 주소를 제공합니다.</span></p>
 
-<p>Any Internet-connected computer can be reached through a public {{Glossary("IP")}} Address, which consists of 32 bits for IPv4 (they are usually written as four numbers between 0 and 255, separated by dots (e.g., <code>173.194.121.32</code>) or which consists of 128 bits for IPv6 (they are usually written as eight groups of 4 hexadecimal numbers, separated by colons (e.g., <code>2027:0da8:8b73:0000:0000:8a2e:0370:1337</code>). Computers can handle those addresses easily, but people have a hard time finding out who's running the server or what service the website offers. IP addresses are hard to remember and might change over time. To solve all those problems we use human-readable addresses called domain names.</p>
+<p>Any Internet-connected computer can be reached through a public {{Glossary("IP")}} Address, which consists of 32 bits for IPv4 (they are usually written as four numbers between 0 and 255, separated by dots (e.g., <code>173.194.121.32</code>) or which consists of 128 bits for IPv6 (they are usually written as eight groups of 4 hexadecimal numbers, separated by colons (e.g., <code>2027:0da8:8b73:0000:0000:8a2e:0370:1337</code>). Computers can handle those addresses easily, but people have a hard time finding out who's running the server or what service the website offers. IP addresses are hard to remember and might change over time. To solve all those problems we use human-readable addresses called domain names.</p>
 
 <h2 id="Active_Learning">Active Learning</h2>
 
@@ -38,7 +38,7 @@ translation_of: Learn/Common_questions/What_is_a_domain_name
 
 <p><img alt="Anatomy of the MDN domain name" src="https://mdn.mozillademos.org/files/11229/structure.png" style="height: 76px; width: 252px;"></p>
 
-<p>각각의 파트들은 전체 도메인 이름에 대해 특별한 정보를 제공합니다. </p>
+<p>각각의 파트들은 전체 도메인 이름에 대해 특별한 정보를 제공합니다. </p>
 
 <dl>
  <dt>{{Glossary("TLD")}} (Top-Level Domain; 최고레벨 도메인).</dt>
@@ -65,7 +65,7 @@ translation_of: Learn/Common_questions/What_is_a_domain_name
 
 <ul>
  <li>Go to a domain name registrar's website. Most of them provide a “whois” service that tells you whether a domain name is available.</li>
- <li>Alternatively, if you use a system with a built-in shell, type a <code>whois</code> command into it, as shown here for <code>mozilla.org</code>:</li>
+ <li>Alternatively, if you use a system with a built-in shell, type a <code>whois</code> command into it, as shown here for <code>mozilla.org</code>:</li>
 </ul>
 
 <pre>$ whois mozilla.org
@@ -92,7 +92,7 @@ Registrant Country:US
 Registrant Phone:+1.6509030800
 </pre>
 
-<p>보시는 바와 같이 <code>mozilla.org</code>는 Mozilla Foundation에 의해 이미 등록되어 있기 때문에 등록이 안되네요.</p>
+<p>보시는 바와 같이 <code>mozilla.org</code>는 Mozilla Foundation에 의해 이미 등록되어 있기 때문에 등록이 안되네요.</p>
 
 <p><code>afunkydomainname.org</code>을 등록하는 것도 봅시다</p>
 
@@ -100,7 +100,7 @@ Registrant Phone:+1.6509030800
 NOT FOUND
 </pre>
 
-<p>위에 나온 것 같이 도메인이 <code>whois</code> 데이터베이스에 존재하지 않네요. 따라서 이건 등록할수 있습니다. 좋은 정보네요.</p>
+<p>위에 나온 것 같이 도메인이 <code>whois</code> 데이터베이스에 존재하지 않네요. 따라서 이건 등록할수 있습니다. 좋은 정보네요.</p>
 
 <h4 id="도메인_네임_얻기">도메인 네임 얻기</h4>
 
@@ -110,7 +110,7 @@ NOT FOUND
  <li>등록 웹사이트로 가세요.</li>
  <li>일반적으로 눈에 띄게 “Get a domain name” 이라는 글자가 있을거에요. 클릭하세요.</li>
  <li>요구하는 상세 정보를 채우세요. 그리고 특별히 원하는 도메인 네임의 스펠링을 정확하게 입력했는지 다시한번 확인해주세요. 한번 지불하면 돌이킬 수 없습니다.</li>
- <li>등록이 잘 되었다면 등록 웹사이트에서 연락이 올 것입니다. 그리고 몇시간내로 모든 DNS 서버들이 당신의 DNS 정보를 받을거구요.</li>
+ <li>등록이 잘 되었다면 등록 웹사이트에서 연락이 올 것입니다. 그리고 몇시간내로 모든 DNS 서버들이 당신의 DNS 정보를 받을거구요.</li>
 </ol>
 
 <div class="note">
@@ -122,7 +122,7 @@ NOT FOUND
 <p>DNS databases are stored on every DNS server worldwide, and all these servers refer to a few ones called “authoritative name server” or “top-level DNS servers.” Whenever your registrar creates or updates any information for a given domain, the information must be refreshed in every DNS database. Each DNS server that knows about a given domain stores the information for some time before it is automatically invalidated and then refreshed (the DNS server queries an authoritative server again). Thus, it takes some time for DNS servers that know about this domain name to get the up-to-date information.</p>
 
 <div class="note">
-<p><strong>Note :</strong> This time is often called <strong>propagation time</strong>. However this term is not precise since the update is not propagating itself (top → down). DNS servers queried by your computer (down) are the ones that fetch the information from the authoritative server (top) when they need it.</p>
+<p><strong>Note :</strong> This time is often called <strong>propagation time</strong>. However this term is not precise since the update is not propagating itself (top → down). DNS servers queried by your computer (down) are the ones that fetch the information from the authoritative server (top) when they need it.</p>
 </div>
 
 <h3 id="DNS_리퀘스트는_어떻게_작동할까요">DNS 리퀘스트는 어떻게 작동할까요?</h3>
@@ -145,5 +145,5 @@ NOT FOUND
 <ul>
  <li>If you want to get hands-on, it's a good time to start digging into design and explore <a href="/en-US/Learn/Anatomy_of_a_web_page">the anatomy of a web page</a>.</li>
  <li>It's also worth noting that some aspects of building a website cost money. Please refer to <a href="/en-US/docs/Learn/How_much_does_it_cost">how much it costs to build a web site</a>.</li>
- <li>Or read more about <a href="http://en.wikipedia.org/wiki/Domain_name">Domain Name</a> on Wikipedia.</li>
+ <li>Or read more about <a href="http://en.wikipedia.org/wiki/Domain_name">Domain Name</a> on Wikipedia.</li>
 </ul>

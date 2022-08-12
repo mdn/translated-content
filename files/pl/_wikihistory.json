@@ -845,14 +845,7 @@
       "kamilcios"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2020-12-14T09:30:58.653Z",
-    "contributors": [
-      "wbamberg",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-09-30T17:52:07.531Z",
     "contributors": [
       "chrisdavidmills",
@@ -865,7 +858,7 @@
       "Dominik9522"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:15:08.485Z",
     "contributors": [
       "chrisdavidmills",
@@ -884,6 +877,13 @@
       "marin_s"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2020-12-14T09:30:58.653Z",
+    "contributors": [
+      "wbamberg",
+      "Mars"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2020-12-14T11:30:10.778Z",
     "contributors": [
@@ -891,7 +891,7 @@
       "klez"
     ]
   },
-  "MDN/Guidelines": {
+  "MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:31:06.666Z",
     "contributors": [
       "chrisdavidmills",
@@ -2433,16 +2433,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-24T00:18:31.426Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "AshfaqHossain",
-      "wojciech.fornal",
-      "Ptak82"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2020-10-15T22:04:15.653Z",
     "contributors": [
@@ -3634,6 +3624,16 @@
       "Rev"
     ]
   },
+  "Web/API/Window/load_event": {
+    "modified": "2019-03-24T00:18:31.426Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "AshfaqHossain",
+      "wojciech.fornal",
+      "Ptak82"
+    ]
+  },
   "Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:47:52.730Z",
     "contributors": [
@@ -3869,12 +3869,6 @@
       "lordBN",
       "Dzordzu",
       "Tigt"
-    ]
-  },
-  "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
-    "modified": "2019-03-23T22:15:44.866Z",
-    "contributors": [
-      "konradluka"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -4133,6 +4127,13 @@
     "modified": "2019-03-18T21:39:51.689Z",
     "contributors": [
       "andrzejkrecicki"
+    ]
+  },
+  "Web/CSS/CSS_Fonts": {
+    "modified": "2019-01-22T18:17:17.900Z",
+    "contributors": [
+      "teoli",
+      "Witia"
     ]
   },
   "Web/CSS/CSS_Grid_Layout": {
@@ -5328,13 +5329,6 @@
       "Witia"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2019-01-22T18:17:17.900Z",
-    "contributors": [
-      "teoli",
-      "Witia"
-    ]
-  },
   "Web/HTML/Element/bdo": {
     "modified": "2019-03-18T21:12:41.027Z",
     "contributors": [
@@ -5839,15 +5833,6 @@
       "maciejmarczak"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2019-01-16T16:02:28.093Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2019-01-16T15:45:03.435Z",
     "contributors": [
@@ -5941,7 +5926,7 @@
       "pceuropa"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
+  "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2019-01-16T16:04:32.529Z",
     "contributors": [
       "teoli",
@@ -9639,6 +9624,12 @@
       "Jan Dudek"
     ]
   },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-03-23T22:15:44.866Z",
+    "contributors": [
+      "konradluka"
+    ]
+  },
   "conflicting/Web/CSS": {
     "modified": "2019-01-16T16:10:29.072Z",
     "contributors": [
@@ -9982,6 +9973,15 @@
       "Grzybu",
       "Takenbot",
       "gandalf"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2019-01-16T16:02:28.093Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {

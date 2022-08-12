@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
 
-<div class="summary"><span>Ранее в этом уроке мы узнали о</span> <span style="background-color: #e6ecf9;"> <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a></span> <span>и <strong>координатном пространстве</strong> .</span> <span> До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд.</span> При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
+<div class="summary"><span>Ранее в этом уроке мы узнали о</span> <span style="background-color: #e6ecf9;"> <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a></span> <span>и <strong>координатном пространстве</strong> .</span> <span> До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд.</span> При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
 
 <h2 id="Saving_and_restoring_state"><span style="background-color: #e6ecf9;">Сохранение и восстановление состояния</span></h2>
 
@@ -18,19 +18,19 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
  <dd><span>Восстанавливает последнее сохранённое состояние холста.</span></dd>
 </dl>
 
-<p>Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод <code>save()</code>, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:</p>
+<p>Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод <code>save()</code>, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:</p>
 
 <ul>
- <li>Трансформации, которые были применены (например, <code>translate</code>, <code>rotate</code> and <code>scale</code> – см. ниже).</li>
+ <li>Трансформации, которые были применены (например, <code>translate</code>, <code>rotate</code> and <code>scale</code> – см. ниже).</li>
  <li>Текущее значение следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.</li>
  <li>Текущее значение границ вырезанного холста (<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths">clipping path</a>), которые будут рассматриваться в следующем разделе.</li>
 </ul>
 
-<p>Вы можете вызывать метод <code>save()</code> столько раз, сколько захотите. В то же время, при вызове метода <code>restore()</code> последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.</p>
+<p>Вы можете вызывать метод <code>save()</code> столько раз, сколько захотите. В то же время, при вызове метода <code>restore()</code> последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.</p>
 
-<h3 id="A_save_and_restore_canvas_state_example">Пример <font face="consolas, Liberation Mono, courier, monospace">сохранения и восстановления</font> состояния холста</h3>
+<h3 id="A_save_and_restore_canvas_state_example">Пример <font face="consolas, Liberation Mono, courier, monospace">сохранения и восстановления</font> состояния холста</h3>
 
-<p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
+<p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
 
 <pre class="brush: js; highlight:[5,10,15,18]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -61,15 +61,15 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Сначала рисуется большой прямоугольник с настройками по умолчанию. Затем мы сохраняем состояние холста, после чего изменяем цвет заливки. Затем рисуем второй синий прямоугольник меньшего размера и опять сохраняем состояние. Снова изменяем какие-то настройки и рисуем третий полупрозрачный белый прямоугольник.</p>
 
-<p>До сих пор наши действия ничем не отличались от тех, что мы делали в предыдущем разделе. Однако, как только мы сделали первый вызов <code>restore(),</code> последнее сохранённое состояние отрисовки было восстановлено из стека, вернув все сохранённые настройки. Если бы мы не сохранили предыдущее состояние, используя <code>save()</code>, нам бы пришлось менять цвет заливки и настройки прозрачности вручную для возврата к предыдущему состоянию. Для каких-нибудь двух простых свойств это, может быть, сделать не так сложно. Но если таких свойств гораздо больше, это чревато очень быстрым разрастанием кода.</p>
+<p>До сих пор наши действия ничем не отличались от тех, что мы делали в предыдущем разделе. Однако, как только мы сделали первый вызов <code>restore(),</code> последнее сохранённое состояние отрисовки было восстановлено из стека, вернув все сохранённые настройки. Если бы мы не сохранили предыдущее состояние, используя <code>save()</code>, нам бы пришлось менять цвет заливки и настройки прозрачности вручную для возврата к предыдущему состоянию. Для каких-нибудь двух простых свойств это, может быть, сделать не так сложно. Но если таких свойств гораздо больше, это чревато очень быстрым разрастанием кода.</p>
 
-<p>Когда второй вызов <code>restore()</code> сделан, изначальное состояние (то самое, которое было сделано перед первым вызовом <code>save</code>) восстанавливается и последний нарисованный прямоугольник вновь становится чёрным.</p>
+<p>Когда второй вызов <code>restore()</code> сделан, изначальное состояние (то самое, которое было сделано перед первым вызовом <code>save</code>) восстанавливается и последний нарисованный прямоугольник вновь становится чёрным.</p>
 
 <p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
 
 <h2 id="Translating">Трансляция (смещение)</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">Первый метод для трансформирования холста <code>translate()</code>. Он используется для перемещения холста в любую точку нашей сетки.</p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">Первый метод для трансформирования холста <code>translate()</code>. Он используется для перемещения холста в любую точку нашей сетки.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
@@ -108,7 +108,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <h2 id="Rotating">Поворот</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">Второй метод трансформации <code>rotate()</code>. Он используется для поворота нашего холста.</p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">Второй метод трансформации <code>rotate()</code>. Он используется для поворота нашего холста.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
