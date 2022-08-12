@@ -11,45 +11,43 @@ tags:
 translation_of: Glossary/Boolean
 original_slug: Glossary/불린
 ---
-<p>컴퓨터 과학에서, <strong>불린(boolean)</strong>은 논리적인 데이터 유형이다. 불린은 <code>참(true)</code> 혹은 <code>거짓(false)</code> 값만을 가질 수 있다. 자바스크립트에서 불린 조건은 어떤 코드 부문이 실행되어야 할 지(예를 들어 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if 절</a> 안에서) 또는 어떤 코드 부문을 반복해야 할지(예를 들어 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for 문</a> 안에서) 결정하는 데 쓰인다.</p>
+컴퓨터 과학에서, **불린(boolean)**은 논리적인 데이터 유형이다. 불린은 `참(true)` 혹은 `거짓(false)` 값만을 가질 수 있다. 자바스크립트에서 불린 조건은 어떤 코드 부문이 실행되어야 할 지(예를 들어 [if 절](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 안에서) 또는 어떤 코드 부문을 반복해야 할지(예를 들어 [for 문](/ko/docs/Web/JavaScript/Reference/Statements/for) 안에서) 결정하는 데 쓰인다.
 
-<p>아래는 불린이 쓰일 수 있는 예시를 보여주는 유사코드이다(실행 가능한 코드가 아니다).</p>
+아래는 불린이 쓰일 수 있는 예시를 보여주는 유사코드이다(실행 가능한 코드가 아니다).
 
-<pre>***JavaScript if Statement***
-if(boolean conditional) {
-   //coding
-}
+```js
+    ***JavaScript if Statement***
+    if(boolean conditional) {
+       //coding
+    }
 
-if(true) {
-  console.log("boolean conditional resolved to true");
-} else {
-    console.log("boolean conditional resolved to false");
-  }
+    if(true) {
+      console.log("boolean conditional resolved to true");
+    } else {
+        console.log("boolean conditional resolved to false");
+      }
 
 
 
-***JavaScript for Loop***
-for(control variable; boolean conditional; counter) {
-  //coding
-}
+    ***JavaScript for Loop***
+    for(control variable; boolean conditional; counter) {
+      //coding
+    }
 
-for(var i=0; i&lt;4; i++) {
-  console.log("I print only when the boolean conditional is true");
-}</pre>
+    for(var i=0; i<4; i++) {
+      console.log("I print only when the boolean conditional is true");
+    }
+```
 
-<p>불린(Boolean)이란 이름은 기호 논리학 분야의 선구자인 영국 수학자 <a href="https://ko.wikipedia.org/wiki/%EC%A1%B0%EC%A7%80_%EB%B6%88">조지 불</a>의 이름을 따 만들어졌다.</p>
+불린(Boolean)이란 이름은 기호 논리학 분야의 선구자인 영국 수학자 [조지 불](https://ko.wikipedia.org/wiki/%EC%A1%B0%EC%A7%80_%EB%B6%88)의 이름을 따 만들어졌다.
 
-<h2 id="더_알아보기">더 알아보기</h2>
+## 더 알아보기
 
-<h3 id="일반적인_지식">일반적인 지식</h3>
+### 일반적인 지식
 
-<ul>
- <li>위키피디아, <a href="https://ko.wikipedia.org/wiki/%EB%B6%88%EB%A6%AC%EC%96%B8">불리언</a></li>
-</ul>
+- 위키피디아, [불리언](https://ko.wikipedia.org/wiki/%EB%B6%88%EB%A6%AC%EC%96%B8)
 
-<h3 id="참고문헌">참고문헌</h3>
+### 참고문헌
 
-<ul>
- <li>The JavaScript global object: {{jsxref("Boolean")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
-</ul>
+- The JavaScript global object: {{jsxref("Boolean")}}
+- [JavaScript data types and data structures](/ko/docs/Web/JavaScript/Data_structures)
