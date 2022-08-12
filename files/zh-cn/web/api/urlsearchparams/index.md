@@ -22,7 +22,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 构造函数
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - : 返回一个 `URLSearchParams `对象。
+  - : 返回一个 `URLSearchParams` 对象。
 
 ## 方法
 

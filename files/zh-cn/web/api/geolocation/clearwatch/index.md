@@ -58,8 +58,6 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 {{Compat("api.Geolocation.clearWatch")}}
 
-##
-
 ## 相关链接
 
 - [使用地理位置定位](/en-US/docs/WebAPI/Using_geolocation)

@@ -19,8 +19,8 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 
 在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。 非交互式的简单内容更改应标记为实时区域。 以下是每个相关的 ARIA 活动区域属性的列表，并带有说明。
 
-1.  **`aria-live`**: `aria-live=POLITENESS_SETTING` 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：`off`, `polite` or `assertive` 。默认设置是 `off` 。这个设置是到目前为止最重要的。
-2.  **`aria-controls`**: `aria-controls=[IDLIST]` 被用来将控制动作与它控制的区域相关联。区域就像`div` 里面的 `id` 被鉴别；多区域可以被一个带空格的控制动作关联，例如： `aria-controls="myRegionID1 myRegionsID2"` 。
+1. **`aria-live`**: `aria-live=POLITENESS_SETTING` 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：`off`, `polite` or `assertive` 。默认设置是 `off` 。这个设置是到目前为止最重要的。
+2. **`aria-controls`**: `aria-controls=[IDLIST]` 被用来将控制动作与它控制的区域相关联。区域就像`div` 里面的 `id` 被鉴别；多区域可以被一个带空格的控制动作关联，例如： `aria-controls="myRegionID1 myRegionsID2"` 。
 
     > **警告：** 尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。需要研究。
 
@@ -129,12 +129,12 @@ renderPlanetInfoButton.addEventListener('click', event => {
 
 JAWS 10.0 版中已添加对实时区域的常规支持。 Windows Eyes 从 8.0 版开始支持“在 Microsoft Internet Explorer 和 Mozilla Firefox 的浏览模式之外使用”的实时区域。 NVDA 早在 2008 年就为 Mozilla Firefox 添加了对实时区域的一些基本支持，并在 2010 年和 2014 年进行了改进。2015 年，还为 Internet Explorer（MSHTML）添加了基本支持。
 
-Paciello Group 有一些[与活动区域支持状态有关的信息 ](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014) ，Paul J. Adam 特别研究了[ 对于 `Aria-Atomic `与 `Aria-Relevant` 的支持](http://pauljadam.com/demos/aria-atomic-relevant.html)。
+Paciello Group 有一些 [与活动区域支持状态有关的信息](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014)，Paul J. Adam 特别研究了[对于 `Aria-Atomic` 与 `Aria-Relevant` 的支持](http://pauljadam.com/demos/aria-atomic-relevant.html)。
 
-1.  **`aria-atomic`**: `aria-atomic=BOOLEAN` 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 `false` 或者 `true`。默认值为 `false`。
-2.  [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)：`aria-relevant=[LIST_OF_CHANGES]` 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：`additions`, `removals`, `text`, `all` 。 默认值是 `additions text`。
-3.  **`aria-labelledby`** : `aria-labelledby=[IDLIST]` 被用来将一个区域与其标签关联起来，与 aria-control 类似，但将标签与区域关联。标签标识符间用空格隔开。
-4.  **`aria-describedby`** : `aria-describedby=[IDLIST]` 被用来将一个区域与其描述关联起来，与 aria-control 类似，但将标签与描述关联。描述标识符间用空格隔开。
+1. **`aria-atomic`**: `aria-atomic=BOOLEAN` 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 `false` 或者 `true`。默认值为 `false`。
+2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)：`aria-relevant=[LIST_OF_CHANGES]` 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：`additions`, `removals`, `text`, `all` 。 默认值是 `additions text`。
+3. **`aria-labelledby`** : `aria-labelledby=[IDLIST]` 被用来将一个区域与其标签关联起来，与 aria-control 类似，但将标签与区域关联。标签标识符间用空格隔开。
+4. **`aria-describedby`** : `aria-describedby=[IDLIST]` 被用来将一个区域与其描述关联起来，与 aria-control 类似，但将标签与描述关联。描述标识符间用空格隔开。
 
 ### 高级用例: 时钟
 
@@ -203,7 +203,7 @@ function change(event) {
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-	<!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add remove users here-->
 </ul>
 ```
 

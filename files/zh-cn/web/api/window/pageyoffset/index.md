@@ -8,7 +8,7 @@ translation_of: Web/API/Window/pageYOffset
 ---
 {{ APIRef("CSSOM View") }}
 
-只读属性`pageYOffset`是 `scrollY `的别名。
+只读属性`pageYOffset`是 `scrollY` 的别名。
 
 ## 规范
 

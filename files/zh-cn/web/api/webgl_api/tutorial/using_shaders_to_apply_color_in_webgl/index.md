@@ -87,11 +87,11 @@ initBuffers() {
     </script>
 ```
 
-为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor `变量中获取这个颜色的值：
+为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor` 变量中获取这个颜色的值：
 
 ```html
     <script id="shader-fs" type="x-shader/x-fragment">
-    	varying lowp vec4 vColor;
+      varying lowp vec4 vColor;
 
       void main(void) {
         gl_FragColor = vColor;

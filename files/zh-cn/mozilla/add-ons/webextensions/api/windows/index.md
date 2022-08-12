@@ -61,7 +61,7 @@ Edge 中不支持 Promises。需使用回调。
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.com/extensions/windows) API。此文档基于 Chromium 代码中的[` windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> **备注：** 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.com/extensions/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 >
 > Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
 

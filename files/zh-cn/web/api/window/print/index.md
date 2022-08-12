@@ -25,6 +25,6 @@ window.print()
 
 ## 参见
 
-1.  [Printing](/zh-cn/Printing)
-2.  [`window.onbeforeprint`](/zh-cn/DOM/window.onbeforeprint)
-3.  [`window.onafterprint`](/zh-cn/DOM/window.onafterprint)
+1. [Printing](/zh-cn/Printing)
+2. [`window.onbeforeprint`](/zh-cn/DOM/window.onbeforeprint)
+3. [`window.onafterprint`](/zh-cn/DOM/window.onafterprint)

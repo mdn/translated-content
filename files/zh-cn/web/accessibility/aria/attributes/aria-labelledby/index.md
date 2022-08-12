@@ -31,84 +31,98 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby
 
 在下面的示例中，每个输入域都被它自身的独立标签以及其所在组的标签进行了标识：
 
-    <div id="billing">Billing Address</div>
+```html
+<div id="billing">Billing Address</div>
 
-    <div>
-        <div id="name">Name</div>
-        <input type="text" aria-labelledby="name billing"/>
-    </div>
-    <div>
-        <div id="address">Address</div>
-        <input type="text" aria-labelledby="address billing"/>
-    </div>
+<div>
+    <div id="name">Name</div>
+    <input type="text" aria-labelledby="name billing"/>
+</div>
+<div>
+    <div id="address">Address</div>
+    <input type="text" aria-labelledby="address billing"/>
+</div>
+```
 
 #### 示例 2: 联结的标题和区域 Associating Headings With Regions
 
 在下面的示例中，标题元素被与它们作为标题的内容联结在一起。注意，所参考的区域是包含标题元素的那个区域。
 
-    <div role="main" aria-labelledby="foo">
-       <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
-       Strong winds expand fires ignited by high temperatures ...
-    </div>
+```html
+<div role="main" aria-labelledby="foo">
+    <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
+    Strong winds expand fires ignited by high temperatures ...
+</div>
+```
 
 #### 示例 3: 单选组 Radio Groups
 
 在下面的示例中，单选组[radiogroup](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_radiogroup_role)的容器通过一个 aria-labeledby 属性与他的的标签相联结：
 
-    <div id="radio_label">My radio label</div>
-    <ul role="radiogroup" aria-labelledby="radio_label">
-        <li role="radio">Item #1</li>
-        <li role="radio">Item #2</li>
-        <li role="radio">Item #3</li>
-    </ul>
+```html
+<div id="radio_label">My radio label</div>
+<ul role="radiogroup" aria-labelledby="radio_label">
+    <li role="radio">Item #1</li>
+    <li role="radio">Item #2</li>
+    <li role="radio">Item #3</li>
+</ul>
+```
 
 #### 示例 4: 对话框标签 Dialog Label
 
 在下面的示例中，标记对话框的标题元素通过 aria-labeledby 属性被引用
 
-    <div role="dialog" aria-labelledby="dialogheader">
-        <h2 id="dialogheader">Choose a File</h2>
-        ... Dialog contents
-    </div>
+```html
+<div role="dialog" aria-labelledby="dialogheader">
+    <h2 id="dialogheader">Choose a File</h2>
+    ... Dialog contents
+</div>
+```
 
 #### 示例 5: 内联定义 Inline Definition
 
 在下面的示例中，某一事物的被一个叙述性的自然流所描述的定义与这一事物本身通过**aria-labeledby**属性相联结：
 
-    <p>The doctor explained it had been a <dfn id="placebo">placebo</dfn>, or <span role="definition" aria-labelledby="placebo">
-    an inert preparation prescribed more for the mental relief of the patient than for its actual effect on a disorder.</span>
-    </p>
+```html
+<p>The doctor explained it had been a <dfn id="placebo">placebo</dfn>, or <span role="definition" aria-labelledby="placebo">
+an inert preparation prescribed more for the mental relief of the patient than for its actual effect on a disorder.</span>
+</p>
+```
 
 #### 示例 6: 定义列表 Definition Lists
 
 在下面的示例中，正式的定义列表中的定义与他们所定义的项目通过 aria-labeledby 属性相联结：
 
-    <dl>
-        <dt id="anathema">anthema</dt>
-        <dd role="definition" aria-labelledby="anathema">a ban or curse solemnly pronounced by ecclesiastical authority
-                                                         and accompanied by excommunication</dd>
-        <dd role="definition" aria-labelledby="anathema">a vigorous denunciation : cursor</dd>
+```html
+<dl>
+    <dt id="anathema">anthema</dt>
+    <dd role="definition" aria-labelledby="anathema">a ban or curse solemnly pronounced by ecclesiastical authority
+                                                        and accompanied by excommunication</dd>
+    <dd role="definition" aria-labelledby="anathema">a vigorous denunciation : cursor</dd>
 
-        <dt id="homily">homily</dt>
-        <dd role="definition" aria-labelledby="homily">a usually short sermon</dd>
-        <dd role="definition" aria-labelledby="homily">a lecture or discourse on or of a moral theme</dd>
+    <dt id="homily">homily</dt>
+    <dd role="definition" aria-labelledby="homily">a usually short sermon</dd>
+    <dd role="definition" aria-labelledby="homily">a lecture or discourse on or of a moral theme</dd>
 
-    </dl>
+</dl>
+```
 
 #### 示例 7: 菜单
 
 在下面的示例中，一个[popup menu](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-haspopup_attribute)通过 aria-labeledby 属性与其标签相联结：
 
-    <div role="menubar">
-        <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
-        <div role="menu" aria-labelledby="fileMenu">
-            <div role="menuitem">Open</div>
-            <div role="menuitem">Save</div>
-            <div role="menuitem">Save as ...</div>
-            ...
-        </div>
+```html
+<div role="menubar">
+    <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
+    <div role="menu" aria-labelledby="fileMenu">
+        <div role="menuitem">Open</div>
+        <div role="menuitem">Save</div>
+        <div role="menuitem">Save as ...</div>
         ...
     </div>
+    ...
+</div>
+```
 
 ### 注意
 

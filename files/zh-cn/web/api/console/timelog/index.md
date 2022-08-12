@@ -36,7 +36,7 @@ console.timeLog(label);
 default: 1042ms
 ```
 
-如果传入了一个已经存在的 `label` ，则会以 `label: `作为引导返回数据：
+如果传入了一个已经存在的 `label` ，则会以 `label:` 作为引导返回数据：
 
 ```plain
 label: 1242ms

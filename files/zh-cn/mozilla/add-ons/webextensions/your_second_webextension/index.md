@@ -44,48 +44,50 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 创建一个新目录，并切换到该目录：
 
-1.  ```bash
-    mkdir beastify
-    cd beastify
-    ```
+```bash
+mkdir beastify
+cd beastify
+```
 
 ### manifest.json
 
 现在创建一个名为 "manifest.json" 的文件，并对其添加下列内容：
 
-1.       {
+```json
+{
 
-          "manifest_version": 2,
-          "name": "Beastify",
-          "version": "1.0",
+  "manifest_version": 2,
+  "name": "Beastify",
+  "version": "1.0",
 
-          "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-          "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
-          "icons": {
-            "48": "icons/beasts-48.png"
-          },
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
 
-          "permissions": [
-            "activeTab"
-          ],
+  "permissions": [
+    "activeTab"
+  ],
 
-          "browser_action": {
-            "default_icon": "icons/beasts-32.png",
-            "default_title": "Beastify",
-            "default_popup": "popup/choose_beast.html"
-          },
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "Beastify",
+    "default_popup": "popup/choose_beast.html"
+  },
 
-          "web_accessible_resources": [
-            "beasts/frog.jpg",
-            "beasts/turtle.jpg",
-            "beasts/snake.jpg"
-          ]
+  "web_accessible_resources": [
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
+  ]
 
-        }
+}
+```
 
 - 最开始的三个属性：**`manifest_version`**, **`name`**, **`version`**, 是必须的并且包含了插件最基本的信息。
-- [description ](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description)和 [homepage_url ](/Add-ons/WebExtensions/manifest.json/homepage_url)是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
-- [icons ](/zh-CN/Add-ons/WebExtensions/manifest.json/icons)也是可选但推荐的，它决定了插件在附加组件中的图标。
+- [description](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description) 和 [homepage_url](/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
+- [icons](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
 - **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。
 - **`browser_action`** 指定了工具栏按钮。我们在这里提供了三个信息片段：
 
@@ -140,30 +142,30 @@ touch choose_beast.html choose_beast.css choose_beast.js
 
 HTML 文件就像这样：
 
-1.  ```html
-    <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="choose_beast.css"/>
-      </head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_beast.css"/>
+  </head>
 
-    <body>
-      <div id="popup-content">
-        <div class="button beast">Frog</div>
-        <div class="button beast">Turtle</div>
-        <div class="button beast">Snake</div>
-        <div class="button reset">Reset</div>
-      </div>
-      <div id="error-content" class="hidden">
-        <p>Can't beastify this web page.</p><p>Try a different page.</p>
-      </div>
-      <script src="choose_beast.js"></script>
-    </body>
+<body>
+  <div id="popup-content">
+    <div class="button beast">Frog</div>
+    <div class="button beast">Turtle</div>
+    <div class="button beast">Snake</div>
+    <div class="button reset">Reset</div>
+  </div>
+  <div id="error-content" class="hidden">
+    <p>Can't beastify this web page.</p><p>Try a different page.</p>
+  </div>
+  <script src="choose_beast.js"></script>
+</body>
 
-    </html>
-    ```
+</html>
+```
 
 我们有一个 ID 为 `"popup-content"` 的[\<div>](/zh-CN/docs/Web/HTML/Element/div)元素包含了每个动物选择。我们还有另外一个`<div>` 元素，它的 ID 为 `"error-content"` ，class 为`"hidden"`。我们将会使用它以防初始化弹窗的时候出问题。
 
@@ -173,144 +175,144 @@ HTML 文件就像这样：
 
 CSS 固定了弹出窗的大小，确保 3 个选择填充满空间，并给了他们基本点样式。同时隐藏了`class="hidden"`的元素，这意味着我们的`"error-content"` `<div>` 将会被默认隐藏：
 
-1.  ```css
-    html, body {
-      width: 100px;
-    }
+```css
+html, body {
+  width: 100px;
+}
 
-    .hidden {
-      display: none;
-    }
+.hidden {
+  display: none;
+}
 
-    .button {
-      margin: 3% auto;
-      padding: 4px;
-      text-align: center;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
+.button {
+  margin: 3% auto;
+  padding: 4px;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 
-    .beast:hover {
-      background-color: #CFF2F2;
-    }
+.beast:hover {
+  background-color: #CFF2F2;
+}
 
-    .beast {
-      background-color: #E5F2F2;
-    }
+.beast {
+  background-color: #E5F2F2;
+}
 
-    .reset {
-      background-color: #FBFBC9;
-    }
+.reset {
+  background-color: #FBFBC9;
+}
 
-    .reset:hover {
-      background-color: #EAEA9D;
-    }
-    ```
+.reset:hover {
+  background-color: #EAEA9D;
+}
+```
 
 #### choose_beast.js
 
 我们在弹出窗的脚本中监听点击事件。如果用户选择其中一个动物，我们在当前标签页中插入一段内容脚本。一旦内容脚本加载，我们发送一条有关动物选择的信息：
 
-1.  ```js
-    /**
-     * CSS to hide everything on the page,
-     * except for elements that have the "beastify-image" class.
-     */
-    const hidePage = `body > :not(.beastify-image) {
-                        display: none;
-                      }`;
+```js
+/**
+ * CSS to hide everything on the page,
+ * except for elements that have the "beastify-image" class.
+ */
+const hidePage = `body > :not(.beastify-image) {
+                    display: none;
+                  }`;
+
+/**
+ * Listen for clicks on the buttons, and send the appropriate message to
+ * the content script in the page.
+ */
+function listenForClicks() {
+  document.addEventListener("click", (e) => {
 
     /**
-     * Listen for clicks on the buttons, and send the appropriate message to
-     * the content script in the page.
+     * Given the name of a beast, get the URL to the corresponding image.
      */
-    function listenForClicks() {
-      document.addEventListener("click", (e) => {
+    function beastNameToURL(beastName) {
+      switch (beastName) {
+        case "Frog":
+          return browser.extension.getURL("beasts/frog.jpg");
+        case "Snake":
+          return browser.extension.getURL("beasts/snake.jpg");
+        case "Turtle":
+          return browser.extension.getURL("beasts/turtle.jpg");
+      }
+    }
 
-        /**
-         * Given the name of a beast, get the URL to the corresponding image.
-         */
-        function beastNameToURL(beastName) {
-          switch (beastName) {
-            case "Frog":
-              return browser.extension.getURL("beasts/frog.jpg");
-            case "Snake":
-              return browser.extension.getURL("beasts/snake.jpg");
-            case "Turtle":
-              return browser.extension.getURL("beasts/turtle.jpg");
-          }
-        }
-
-        /**
-         * Insert the page-hiding CSS into the active tab,
-         * then get the beast URL and
-         * send a "beastify" message to the content script in the active tab.
-         */
-        function beastify(tabs) {
-          browser.tabs.insertCSS({code: hidePage}).then(() => {
-            let url = beastNameToURL(e.target.textContent);
-            browser.tabs.sendMessage(tabs[0].id, {
-              command: "beastify",
-              beastURL: url
-            });
-          });
-        }
-
-        /**
-         * Remove the page-hiding CSS from the active tab,
-         * send a "reset" message to the content script in the active tab.
-         */
-        function reset(tabs) {
-          browser.tabs.removeCSS({code: hidePage}).then(() => {
-            browser.tabs.sendMessage(tabs[0].id, {
-              command: "reset",
-            });
-          });
-        }
-
-        /**
-         * Just log the error to the console.
-         */
-        function reportError(error) {
-          console.error(`Could not beastify: ${error}`);
-        }
-
-        /**
-         * Get the active tab,
-         * then call "beastify()" or "reset()" as appropriate.
-         */
-        if (e.target.classList.contains("beast")) {
-          browser.tabs.query({active: true, currentWindow: true})
-            .then(beastify)
-            .catch(reportError);
-        }
-        else if (e.target.classList.contains("reset")) {
-          browser.tabs.query({active: true, currentWindow: true})
-            .then(reset)
-            .catch(reportError);
-        }
+    /**
+     * Insert the page-hiding CSS into the active tab,
+     * then get the beast URL and
+     * send a "beastify" message to the content script in the active tab.
+     */
+    function beastify(tabs) {
+      browser.tabs.insertCSS({code: hidePage}).then(() => {
+        let url = beastNameToURL(e.target.textContent);
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "beastify",
+          beastURL: url
+        });
       });
     }
 
     /**
-     * There was an error executing the script.
-     * Display the popup's error message, and hide the normal UI.
+     * Remove the page-hiding CSS from the active tab,
+     * send a "reset" message to the content script in the active tab.
      */
-    function reportExecuteScriptError(error) {
-      document.querySelector("#popup-content").classList.add("hidden");
-      document.querySelector("#error-content").classList.remove("hidden");
-      console.error(`Failed to execute beastify content script: ${error.message}`);
+    function reset(tabs) {
+      browser.tabs.removeCSS({code: hidePage}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "reset",
+        });
+      });
     }
 
     /**
-     * When the popup loads, inject a content script into the active tab,
-     * and add a click handler.
-     * If we couldn't inject the script, handle the error.
+     * Just log the error to the console.
      */
-    browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
-    .then(listenForClicks)
-    .catch(reportExecuteScriptError);
-    ```
+    function reportError(error) {
+      console.error(`Could not beastify: ${error}`);
+    }
+
+    /**
+     * Get the active tab,
+     * then call "beastify()" or "reset()" as appropriate.
+     */
+    if (e.target.classList.contains("beast")) {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(beastify)
+        .catch(reportError);
+    }
+    else if (e.target.classList.contains("reset")) {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(reset)
+        .catch(reportError);
+    }
+  });
+}
+
+/**
+ * There was an error executing the script.
+ * Display the popup's error message, and hide the normal UI.
+ */
+function reportExecuteScriptError(error) {
+  document.querySelector("#popup-content").classList.add("hidden");
+  document.querySelector("#error-content").classList.remove("hidden");
+  console.error(`Failed to execute beastify content script: ${error.message}`);
+}
+
+/**
+ * When the popup loads, inject a content script into the active tab,
+ * and add a click handler.
+ * If we couldn't inject the script, handle the error.
+ */
+browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
+.then(listenForClicks)
+.catch(reportExecuteScriptError);
+```
 
 从 96 行开始。只要弹出窗加载完，popup scrpit 就会使用 [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API 在活跃标签页执行 content script。如果执行 content scrpit 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。
 
@@ -336,56 +338,56 @@ CSS 固定了弹出窗的大小，确保 3 个选择填充满空间，并给了�
 
 在扩展的根目录下创建一个新的文件夹，叫做"content_scripts"，然后在里面新建一个新的名为 "beastify.js" 的文件，内容如下：
 
-1.  ```js
-    (function() {
-      /**
-       * Check and set a global guard variable.
-       * If this content script is injected into the same page again,
-       * it will do nothing next time.
-       */
-      if (window.hasRun) {
-        return;
-      }
-      window.hasRun = true;
+```js
+(function() {
+  /**
+   * Check and set a global guard variable.
+   * If this content script is injected into the same page again,
+   * it will do nothing next time.
+   */
+  if (window.hasRun) {
+    return;
+  }
+  window.hasRun = true;
 
-      /**
-       * Given a URL to a beast image, remove all existing beasts, then
-       * create and style an IMG node pointing to
-       * that image, then insert the node into the document.
-       */
-      function insertBeast(beastURL) {
-        removeExistingBeasts();
-        let beastImage = document.createElement("img");
-        beastImage.setAttribute("src", beastURL);
-        beastImage.style.height = "100vh";
-        beastImage.className = "beastify-image";
-        document.body.appendChild(beastImage);
-      }
+  /**
+   * Given a URL to a beast image, remove all existing beasts, then
+   * create and style an IMG node pointing to
+   * that image, then insert the node into the document.
+   */
+  function insertBeast(beastURL) {
+    removeExistingBeasts();
+    let beastImage = document.createElement("img");
+    beastImage.setAttribute("src", beastURL);
+    beastImage.style.height = "100vh";
+    beastImage.className = "beastify-image";
+    document.body.appendChild(beastImage);
+  }
 
-      /**
-       * Remove every beast from the page.
-       */
-      function removeExistingBeasts() {
-        let existingBeasts = document.querySelectorAll(".beastify-image");
-        for (let beast of existingBeasts) {
-          beast.remove();
-        }
-      }
+  /**
+   * Remove every beast from the page.
+   */
+  function removeExistingBeasts() {
+    let existingBeasts = document.querySelectorAll(".beastify-image");
+    for (let beast of existingBeasts) {
+      beast.remove();
+    }
+  }
 
-      /**
-       * Listen for messages from the background script.
-       * Call "beastify()" or "reset()".
-      */
-      browser.runtime.onMessage.addListener((message) => {
-        if (message.command === "beastify") {
-          insertBeast(message.beastURL);
-        } else if (message.command === "reset") {
-          removeExistingBeasts();
-        }
-      });
+  /**
+   * Listen for messages from the background script.
+   * Call "beastify()" or "reset()".
+  */
+  browser.runtime.onMessage.addListener((message) => {
+    if (message.command === "beastify") {
+      insertBeast(message.beastURL);
+    } else if (message.command === "reset") {
+      removeExistingBeasts();
+    }
+  });
 
-    })();
-    ```
+})();
+```
 
 content script 做的第一件事是检查全局变量 `window.hasRun`：如果它被设置了，脚本直接返回，否则设置`window.hasRun`并继续。原因是每次用户打开弹出窗，弹出窗就会在活跃页面执行一个 content script，所以我们可能会在单个页面运行多个脚本实例。如果是这样的话，我们需要保证只有一个实例在做所有事情。
 
@@ -406,26 +408,28 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 请仔细确认项目目录如下所示：
 
-1.       beastify/
+```
+beastify/
 
-            beasts/
-                frog.jpg
-                snake.jpg
-                turtle.jpg
+  beasts/
+      frog.jpg
+      snake.jpg
+      turtle.jpg
 
-            content_scripts/
-                beastify.js
+  content_scripts/
+      beastify.js
 
-            icons/
-                beasts-32.png
-                beasts-48.png
+  icons/
+      beasts-32.png
+      beasts-48.png
 
-            popup/
-                choose_beast.css
-                choose_beast.html
-                choose_beast.js
+  popup/
+      choose_beast.css
+      choose_beast.html
+      choose_beast.js
 
-            manifest.json
+  manifest.json
+```
 
 Firefox 45 开始，你可以临时从硬盘中安装扩展
 
@@ -443,7 +447,7 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 
 你可以通过使用 [web-ext](/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具来将临时安装的工作自动化，试试这个：
 
-1.  ```bash
-    cd beastify
-    web-ext run
-    ```
+```bash
+cd beastify
+web-ext run
+```

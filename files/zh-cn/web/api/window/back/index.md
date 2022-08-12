@@ -22,5 +22,3 @@ function goBack() {
    if ( canGoBack ) window.back();
 }
 ```
-
-##

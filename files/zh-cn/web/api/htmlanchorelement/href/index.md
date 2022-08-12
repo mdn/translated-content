@@ -8,7 +8,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
 {{ApiRef("URL API")}}
 
-**`HTMLHyperlinkElementUtils.href `**属性是一个包含整个 URL 的 {{domxref("USVString")}}。
+**`HTMLHyperlinkElementUtils.href`** 属性是一个包含整个 URL 的 {{domxref("USVString")}}。
 
 ## Syntax
 
