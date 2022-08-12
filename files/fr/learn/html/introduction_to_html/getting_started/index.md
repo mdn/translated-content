@@ -436,7 +436,7 @@ Ces deux exemples vous donneront le résultat suivant :
 
 Si vous regardez ce qui se passe sur le Web, vous rencontrerez tous types de styles de balises étranges, y compris des valeurs d'attribut sans guillemets. C'est permis dans certaines circonstances, mais cela va briser votre balisage dans d'autres. Par exemple, si nous revisitons notre exemple de lien ci-dessus, nous pourrons écrire une version de base avec _seulement_ l'attribut `href`, comme ceci :
 
-```html 
+```html
 <a href=https://www.mozilla.org>mon site web favori</a>
 ```
 

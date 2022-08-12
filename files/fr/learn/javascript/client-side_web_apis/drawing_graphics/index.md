@@ -449,7 +449,7 @@ Et voilà&nbsp;! L'exemple terminé devrait ressembler à ceci&nbsp;:
 
 Nous vous encourageons ici à manipuler cet exemple et à l'adapter comme bon vous semble&nbsp;! Vous pouvez par exemple&nbsp;:
 
-- Dessiner des rectangles ou des arcs voire embarquer des images plutôt que de dessiner des triangles, 
+- Dessiner des rectangles ou des arcs voire embarquer des images plutôt que de dessiner des triangles,
 - Modifier les valeurs des variables `length` et `moveOffset`.
 - Utiliser des nombres aléatoires en exploitant la fonction `rand()` que nous avons incluse mais pas utilisée.
 
