@@ -1,6 +1,6 @@
 ---
 title: コードサンプル
-slug: conflicting/MDN/Writing_guidelines/Page_structures
+slug: MDN/Writing_guidelines/Page_structures/Code_examples
 tags:
   - Code
   - Examples
@@ -11,7 +11,7 @@ tags:
   - Structures
   - インタラクティブ
   - 例
-translation_of: MDN/Structures/Code_examples
+translation_of: MDN/Writing_guidelines/Page_structures/Code_examples
 original_slug: MDN/Structures/Code_examples
 ---
 <div>{{MDNSidebar}}</div>

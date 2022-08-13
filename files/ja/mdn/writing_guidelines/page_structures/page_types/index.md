@@ -1,14 +1,13 @@
 ---
 title: ページの種類
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_6db09f02e81dc219a06b5bf434b08b0f
+slug: MDN/Writing_guidelines/Page_structures/Page_types
 tags:
   - ドキュメント
   - ガイド
   - MDN メタ
   - 構造
   - テンプレート
-translation_of: MDN/Structures/Page_types
+translation_of: MDN/Writing_guidelines/Page_structures/Page_types
 original_slug: MDN/Structures/Page_types
 ---
 {{MDNSidebar}}

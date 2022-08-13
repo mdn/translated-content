@@ -1,14 +1,13 @@
 ---
 title: マクロの使用
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
+slug: MDN/Writing_guidelines/Page_structures/Macros
 tags:
   - Guide
   - Kuma
   - KumaScript
   - MDN Meta
   - Structures
-translation_of: MDN/Structures/Macros
+translation_of: MDN/Writing_guidelines/Page_structures/Macros
 original_slug: MDN/Structures/Macros
 ---
 <div>{{MDNSidebar}}</div>
