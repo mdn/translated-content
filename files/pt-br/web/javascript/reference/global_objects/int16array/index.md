@@ -104,7 +104,7 @@ Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArr
 - {{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}
   - : Classifica os elementos de uma matriz e retorna a matriz. Veja também {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
-  - : Retorna um novo `Int16Array `a partir do índice de elemento inicial e final fornecido.
+  - : Retorna um novo `Int16Array`a partir do índice de elemento inicial e final fornecido.
 - {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na matriz. Veja também {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}

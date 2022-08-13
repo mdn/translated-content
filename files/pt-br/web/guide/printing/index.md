@@ -24,7 +24,7 @@ Adicione o seguinte código dentro da tag {{HTMLElement("head")}}.
 
 Alguns navegadores (incluindo o Firefox 6 e versões mais antigas do Internet Explorer) enviam eventos `beforeprint` e `afterprint` para permitir que o conteúdo determine quando a impressão deve ocorrer. Você pode usar isto para ajustar a interface presente durante a impressão (como a exibição ou ocultação de elementos de interface do usuário durante o processo de impressão).
 
-> **Note:** **Nota:** Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint") e [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint "DOM/window.onafterprint") para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
+> **Nota:** Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint") e [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint "DOM/window.onafterprint") para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
 
 ## Exemplos
 
@@ -104,7 +104,7 @@ function printPage (sURL) {
 </html>
 ```
 
-> **Note:** **Nota:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
+> **Nota:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## Veja também
 

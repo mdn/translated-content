@@ -112,8 +112,8 @@ Aqui está uma lista de funcionalidades comuns, controláveis com HTTP:
 
 Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou um _proxy_, ele realiza os seguintes passos:
 
-1.  Abre uma conexão TCP: A conexão TCP será usada para enviar uma requisição, ou várias, e receber uma resposta. O cliente pode abrir uma nova conexão, reusar uma conexão existente, ou abrir várias conexões aos servidores.
-2.  Envia uma mensagem HTTP: mensagens HTTP (antes do HTTP/2.0) são legíveis às pessoas. Com o HTTP/2.0, essas mensagens simples são encapsuladas dentro de quadros (_frames_), tornando-as impossíveis de ler diretamente, mas o princípio se mantém o mesmo.
+1. Abre uma conexão TCP: A conexão TCP será usada para enviar uma requisição, ou várias, e receber uma resposta. O cliente pode abrir uma nova conexão, reusar uma conexão existente, ou abrir várias conexões aos servidores.
+2. Envia uma mensagem HTTP: mensagens HTTP (antes do HTTP/2.0) são legíveis às pessoas. Com o HTTP/2.0, essas mensagens simples são encapsuladas dentro de quadros (_frames_), tornando-as impossíveis de ler diretamente, mas o princípio se mantém o mesmo.
 
     ```html
     GET / HTTP/1.1
@@ -121,7 +121,7 @@ Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou
     Accept-Language: fr
     ```
 
-3.  Lê a resposta do servidor:
+3. Lê a resposta do servidor:
 
     ```html
     HTTP/1.1 200 OK
@@ -136,7 +136,7 @@ Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou
     <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
     ```
 
-4.  Fecha ou reutiliza a conexão para requisições futuras.
+4. Fecha ou reutiliza a conexão para requisições futuras.
 
 Se a linha de montagem (_pipelining_) estiver ativada, várias requisições podem ser enviadas sem que a primeira resposta seja totalmente recebida. A linha de montagem HTTP se provou difícil de ser implementada nas redes existentes, onde peças antigas de _software_ coexistem com versões modernas. A linha de montagem HTTP tem sido substituída no HTTP/2.0 com multiplexação mais robusta de requisições dentro de um quadro (_frame_).
 

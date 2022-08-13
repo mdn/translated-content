@@ -19,7 +19,7 @@ A propriedade de somente leitura da interface **`fullscreen`** retorna se o docu
 
 Apesar dessa propriedade ser de somente leitura, ela não será executa se for modificada (mesmo em modo estrito); o setter não é um operador e não será modificado.
 
-> **Note:** **Nota:** Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
+> **Nota:** Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
 
 ## Síntaxe
 

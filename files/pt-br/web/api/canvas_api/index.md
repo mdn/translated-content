@@ -57,7 +57,7 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Note:** **Nota:** As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/WebGL).
+> **Nota:** As interfaces relacionadas ao `WebGLRenderingContext` são referenciadas sob [WebGL](/pt-BR/docs/Web/WebGL).
 
 {{domxref("CanvasCaptureMediaStream")}} é uma interface relacionada.
 
@@ -85,7 +85,7 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
 - [JavaScript InfoVis Toolkit](http://thejit.org/) cria visualizações de dados interativas.
 - [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
-- [p5.js ](https://p5js.org/)tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
+- [p5.js](https://p5js.org/)tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
 - [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
 - [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
 - [Processing.js](http://processingjs.org/) é um conversor da linguagem de visualização Processing.
@@ -94,7 +94,7 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 - [Scrawl-canvas](http://scrawl.rikweb.org.uk/) é uma biblioteca JavaScript de código aberto para criação e manipulação de elementos canvas 2D.
 - O framework [ZIM](http://zimjs.com/) provê conveniências, componentes e controles para programar criatividade no canvas - inclui acessibilidade e centenas de tutoriais cheios de cores.
 
-> **Note:** **Nota:** Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
+> **Nota:** Veja a [WebGL API](/pt-BR/docs/Web/WebGL) para bibliotecas 2D e 3D que usam WebGL.
 
 ## Especificações
 

@@ -27,7 +27,7 @@ WebAssembly está sendo criado em código aberto dentro do [W3C WebAssembly Comm
 - Manter a segurança — WebAssembly é especificado para ser executado num ambiente seguro e controlado. Como outros códigos web, ele reforçará as mesmas políticas de origem e permissões dos browsers.
 - Não quebrar a web — WebAssembly foi pensado de maneira que ele seja executado em harmonia com outras tecnologias web, mantendo a compatibilidade retroativa.
 
-> **Note:** **Nota**: WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](http://webassembly.org/docs/non-web/)).
+> **Nota:** WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](http://webassembly.org/docs/non-web/)).
 
 ## Como o WebAssembly se encaixa na plataforma web?
 
@@ -93,11 +93,11 @@ A ferramenta Emscripten é capaz de pegar qualquer código fonte C/C++ e compil�
 
 De maneira resumida, o processo funciona da seguinte maneira:
 
-1.  Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
-2.  Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
-3.  Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
+1. Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
+2. Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
+3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
 
-> **Note:** **Nota**: Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
+> **Nota:** Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 O código de "cola" JavaScript não é tão simples quanto você imagina. Para começar, o Emscripten implementa bibliotecas populares de C/C++ como SDL, OpenGL, OpenAL e partes do POSIX. Essas bibliotecas são implementadas em termos de APIs da Web e, portanto, cada uma exige algum código JavaScript para conectar o WebAssembly à API da Web subjacente.
 

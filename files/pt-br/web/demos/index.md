@@ -77,15 +77,13 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 ## HTML
 
-- [Zen Photon Garden ](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
 
 ## API da Web
 
 ### API de notificações
 
 - [HTML5 Notifications](http://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
-
-<!---->
 
 ### API de áudio da Web
 

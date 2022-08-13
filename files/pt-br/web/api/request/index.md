@@ -71,7 +71,7 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.text()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("USVString")}} (texto) com a representação do corpo da requisição.
 
-> **Note:** **Nota**: Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
+> **Nota:** Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
 
 ## Exemplos
 
@@ -106,7 +106,7 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed; // true
 ```
 
-> **Note:** **Nota:** O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
+> **Nota:** O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
 
 Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo, e poderá capturar a resposta da seguinte forma:
 

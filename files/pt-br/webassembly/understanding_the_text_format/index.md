@@ -8,7 +8,7 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 
 Para permitir que o WebAssembly seja lido e editado por humanos foi criado uma representação textual do código binário wasm. Essa é uma forma textual intermediária desenvolvida para ser usada em editores de textos, ferramentas de desenvolvimento dos navegatores, etc. Esse artigo expica como essa expressão textual funciona, mostrando a sintase de maneira bruta, e como ela está relacionada com o código binário ao qual ela representa - e os objetos que encapsulam o wasm dentro do JavaScript.
 
-> **Note:** **Nota**: Esse artigo trata de maneira aprofundada a descrição textual do WebAssembly, se você é um desenvolvedor web que quer apenas carregar algum módulo wasm em seu código JavaScript e usá-lo em sua página web recomendamos que dê uma olhada no seguinte artigo: [Using the WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API). Esse artigo será de grande valia caso você queira otimizar a performance de módulos wasm em seu código JavaScript, ou ainda fazer seu próprio compilador de WebAssembly.
+> **Nota:** Esse artigo trata de maneira aprofundada a descrição textual do WebAssembly, se você é um desenvolvedor web que quer apenas carregar algum módulo wasm em seu código JavaScript e usá-lo em sua página web recomendamos que dê uma olhada no seguinte artigo: [Using the WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API). Esse artigo será de grande valia caso você queira otimizar a performance de módulos wasm em seu código JavaScript, ou ainda fazer seu próprio compilador de WebAssembly.
 
 ## S-expressions
 
@@ -446,11 +446,11 @@ Our `.wat` examples look like so:
 
 These work as follows:
 
-1.  The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
-2.  This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
-3.  In `shared1.wat`, we export a function called `doIt` — this fucntion creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
-4.  In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
-5.  When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
+1. The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
+2. This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
+3. In `shared1.wat`, we export a function called `doIt` — this fucntion creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
+4. In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
+5. When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
 
 > **Note:** **Note**: The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example: (i32.store (i32.const 0) (i32.const 42))
 > (call_indirect $void_to_i32 (i32.const 0))

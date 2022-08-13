@@ -16,7 +16,7 @@ Cascading Stylesheets — ou {{glossary("CSS")}} — é a primeira tecnologia qu
 Você deveria aprender o básico de HTML antes de tentar algo com CSS. Nós recomendamos que você comece através da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).Neste módulo você irá aprender sobre:
 
 - CSS, começando com a [introdução ao CSS](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS)
-- [Módulos HTML ](/en-US/Learn/HTML#Modules)mais avançados
+- [Módulos HTML](/en-US/Learn/HTML#Modules)mais avançados
 - [JavaScript](/pt-BR/docs/Learn/JavaScript), e como utiliza-lo para adicionar funcionalidade dinâmica as páginas da web
 
 Uma vez que voce entendeu os Fundamentos do HTML, Nós recomendamos que você aprenda HTML e CSS ao mesmo tempo, movendo-se para trás e para frente entre os dois temas. Isso por que HTML é muito mais interessante com CSS e você não pode aprender realmente CSS sem conhecer HTML.

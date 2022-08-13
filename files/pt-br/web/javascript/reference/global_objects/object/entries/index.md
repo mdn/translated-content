@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-O método **`Object.entries()`** retorna uma array dos próprios pares `[key, value] `enumeráveis de um dado objeto, na mesma ordem dos objetos providos através do loop {{jsxref("Statements/for...in", "for...in")}} (sendo a diferença que o for-in loop enumera também propriedades dispostas na cadeia de prototipagem - _prototype chain_).
+O método **`Object.entries()`** retorna uma array dos próprios pares `[key, value]`enumeráveis de um dado objeto, na mesma ordem dos objetos providos através do loop {{jsxref("Statements/for...in", "for...in")}} (sendo a diferença que o for-in loop enumera também propriedades dispostas na cadeia de prototipagem - _prototype chain_).
 
 ## Sintaxe
 
@@ -20,15 +20,15 @@ O método **`Object.entries()`** retorna uma array dos próprios pares `[key, va
 ### Parâmetros
 
 - `obj`
-  - : O objeto cujos próprios pares `[key, value] `de propriedades enumeráveis deverão ser retornados.
+  - : O objeto cujos próprios pares `[key, value]`de propriedades enumeráveis deverão ser retornados.
 
 ### Valor de retorno
 
-Uma array de pares `[key, value] `enumeráveis de propriedades de um dado objeto.
+Uma array de pares `[key, value]`enumeráveis de propriedades de um dado objeto.
 
 ## Descrição
 
-`Object.entries()` retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades `[key, value] `enumeráveis encontrados diretamente sobre o objeto. A ordem das propriedades é a mesma que seria se fossem iteradas as propriedades do objeto manualmente.
+`Object.entries()` retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades `[key, value]`enumeráveis encontrados diretamente sobre o objeto. A ordem das propriedades é a mesma que seria se fossem iteradas as propriedades do objeto manualmente.
 
 ## Exemplos
 

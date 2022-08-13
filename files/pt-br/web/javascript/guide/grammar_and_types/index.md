@@ -60,7 +60,7 @@ Um identificador JavaScript deve começar com uma letra, underline (`_`), ou cif
 
 Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) como caracteres e identificadores.
 
-Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e` _nome`.
+Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e`_nome`.
 
 ### Declarando variáveis
 
@@ -392,7 +392,7 @@ Por exemplo:
 
 Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves (`{}`). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o `{` será interpretado como início de um bloco.
 
-Segue um exemplo de um objeto literal. O primeiro elemento do objeto `carro `define uma propriedade, `meuCarro`, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade `getCarro`, é imediatamente atribuído o resultado de chamar uma função (`tipoCarro("Fiat")`); o terceiro elemento, a propriedade `especial`, usa uma variável existente (`vendas)`.
+Segue um exemplo de um objeto literal. O primeiro elemento do objeto `carro`define uma propriedade, `meuCarro`, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade `getCarro`, é imediatamente atribuído o resultado de chamar uma função (`tipoCarro("Fiat")`); o terceiro elemento, a propriedade `especial`, usa uma variável existente (`vendas)`.
 
 ```js
 var vendas = "Toyota";
@@ -517,7 +517,7 @@ O resultado disso seria:
 
     Ele lê "The Cremation of Sam McGee" de R.W. Service.
 
-Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo `c:\temp `para uma string, utilize o seguinte:
+Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo `c:\temp`para uma string, utilize o seguinte:
 
 ```js
 var home = "c:\\temp";

@@ -14,12 +14,12 @@ O objetivo aqui é lhe prover com um conjunto de ferramentas para construir um c
 
 Antes de iniciar este módulo, você deve ter:
 
-1.  Familiaridade básica com uso de computadores, e usar a Web passivamente (por exemplo. apenas olhar, consumindo o conteúdo.)
-2.  Um ambiente de trabalho básico configurado conforme detalhado em [Instalando software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software), e um entendimento de como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
-4.  Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
+1. Familiaridade básica com uso de computadores, e usar a Web passivamente (por exemplo. apenas olhar, consumindo o conteúdo.)
+2. Um ambiente de trabalho básico configurado conforme detalhado em [Instalando software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software), e um entendimento de como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
+4. Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
 
-> **Note:** **Nota**: Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](http://jsbin.com/) ou [Glitch](https://glitch.com/).
+> **Nota:** Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](http://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

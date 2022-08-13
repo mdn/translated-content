@@ -282,16 +282,16 @@ This starts by fetching the URL of the {{ HTMLElement("div") }} with the ID `fil
 
 If the {{ domxref("FileList") }} object passed to `handleFiles()` is `null`, we simply set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:
 
-1.  A new unordered list ({{ HTMLElement("ul") }}) element is created.
-2.  The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
-3.  For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
+1. A new unordered list ({{ HTMLElement("ul") }}) element is created.
+2. The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
+3. For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
 
-    1.  Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
-    2.  Create a new image ({{ HTMLElement("img") }}) element.
-    3.  Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
-    4.  Set the image's height to 60 pixels.
-    5.  Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
-    6.  Append the new list item to the list.
+    1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
+    2. Create a new image ({{ HTMLElement("img") }}) element.
+    3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
+    4. Set the image's height to 60 pixels.
+    5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
+    6. Append the new list item to the list.
 
 ## Example: Uploading a user-selected file
 
@@ -350,12 +350,12 @@ The `FileUpload()` function shown above creates a throbber, which is used to dis
 
 Before actually transferring the data, several preparatory steps are taken:
 
-1.  The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information, so that as the upload progresses, the throbber will be updated based on the latest information.
-2.  The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber with 100% as the progress information (to ensure the progress indicator actually reaches 100%, in case of granularity quirks during the process). It then removes the throbber, since it's no longer needed. This causes the throbber to disappear once the upload is complete.
-3.  The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
-4.  The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all, depending on your use case.
-5.  The `FileReader` object is used to convert the file to a binary string.
-6.  Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
+1. The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information, so that as the upload progresses, the throbber will be updated based on the latest information.
+2. The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber with 100% as the progress information (to ensure the progress indicator actually reaches 100%, in case of granularity quirks during the process). It then removes the throbber, since it's no longer needed. This causes the throbber to disappear once the upload is complete.
+3. The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
+4. The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all, depending on your use case.
+5. The `FileReader` object is used to convert the file to a binary string.
+6. Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
 
 ### Handling the upload process for a file, asynchronously
 

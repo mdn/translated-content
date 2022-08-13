@@ -81,6 +81,6 @@ Enquanto o valor de `identity`, que significa sem codificação, não é explici
 
 ## Veja também
 
-- [Negociação de conteúdo ](/pt-BR/docs/Web/HTTP/Content_negotiation)HTTP
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation)HTTP
 - Cabeçalho com o resultado do conteúdo de negociação: {{HTTPHeader("Content-Encoding")}}
 - Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

@@ -87,7 +87,7 @@ var var2 = 4;
 | Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                 | `var1 < var2 "12" < "2"`             |
 | Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                           | `var1 <= var2 var2 <= 5`             |
 
-> **Note:** **Nota:** (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
+> **Nota:** (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
 
 ### Operadores aritméticos
 
@@ -149,7 +149,7 @@ Por exemplo, a representação binária de nove é 1001 e a representação bin�
 | `~15`     | `-16`     | ` ~``00000000...`` 00001111 = ``1111``1111``...``11110000 `       |
 | `~9`      | `-10`     | ` ~``00000000``...``0000`` 1001 = ``1111``1111``...``1111``0110 ` |
 
-> **Note:** **Nota**: No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
+> **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 
 #### Operadores de deslocamento bit a bit
 
@@ -515,7 +515,7 @@ O JavaScript possui as seguintes categorias de expressão:
 
 - Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)).
 - String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)).
-- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[ operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
+- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
 - Expressões primárias: Palavras reservadas e expressões gerais do JavaScript.
 - Expressão lado esquerdo: atribuição à esquerda de valores.
 
@@ -579,7 +579,7 @@ Comprehensions são uma característica experimental de JavaScript, marcada para
 Comprehensions de array.
 
 {{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions "The generator comprehension syntax is a JavaScript expression which allows you to quickly assemble a new generator function based on an existing iterable object. Comprehensions exist in many programming languages.")
-``**`gerador de `comprehensions
+``**`gerador de`comprehensions
 
 Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:
 
@@ -598,7 +598,7 @@ Atribuição à esquerda de valores.
 
 #### `new`
 
-Você pode utilizar o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: `Array`, `Boolean`, `Date`, `Function`, `Image`, `Number`, `Object`, `Option`, `RegExp `ou `String`. No servidor, você pode também utilizar `DbPool`, `Lock`, `File `ou `SendMail`. Utilize o operador `new` da seguinte forma:
+Você pode utilizar o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: `Array`, `Boolean`, `Date`, `Function`, `Image`, `Number`, `Object`, `Option`, `RegExp`ou `String`. No servidor, você pode também utilizar `DbPool`, `Lock`, `File`ou `SendMail`. Utilize o operador `new` da seguinte forma:
 
 ```js
 var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);

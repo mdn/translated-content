@@ -14,7 +14,7 @@ Este atributo especifica informação de estilo para o elemento atual. O atribut
 
 | Categorias          | Atributo de apresentação                                                    |
 | ------------------- | --------------------------------------------------------------------------- |
-| Valor               | <style>                                                                     |
+| Valor               | &lt;style>                                                                     |
 | Animável?           | Não                                                                         |
 | Documento Normativo | [SVG 1.1 (2ª Edição)](http://www.w3.org/TR/SVG/styling.html#StyleAttribute) |
 

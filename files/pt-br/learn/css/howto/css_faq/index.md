@@ -48,11 +48,11 @@ Sempre que possível, use a declaração de `DOCTYPE` HTML5.
 Abaixo temos algumas das possíveis causas:
 
 - O caminho para o arquivo CSS está incorreto.
-- Para ser aplicado, uma folha de estilos CSS deve ser servido ao navegador com o tipo MIME `text/css. `Caso o servidor não sirva a folha de estilos com este tipo, as regras CSS não serão interpretadas e aplicadas aos elementos no documento.
+- Para ser aplicado, uma folha de estilos CSS deve ser servido ao navegador com o tipo MIME `text/css.`Caso o servidor não sirva a folha de estilos com este tipo, as regras CSS não serão interpretadas e aplicadas aos elementos no documento.
 
 ## Qual a diferença entre `id` e `class`?
 
-Elementos HTML podem ter um atributo `id` e/ou um atributo `class. `O atributo `id` designa um nome ao elemento ao qual este é aplicado, e para que a marcação seja válida, deverá haver no documento apenas um elemento com o nome designado (Por exemplo: Caso você designe o nome _janela_ a um elemento, nenhum outro elemento poderá ter o nome _janela_).
+Elementos HTML podem ter um atributo `id` e/ou um atributo `class.`O atributo `id` designa um nome ao elemento ao qual este é aplicado, e para que a marcação seja válida, deverá haver no documento apenas um elemento com o nome designado (Por exemplo: Caso você designe o nome _janela_ a um elemento, nenhum outro elemento poderá ter o nome _janela_).
 
 O atributo `class` designa um ou vários nomes de classes as quais um elemento pertence. Diferentemente do valor designado no atributo `id`, os nomes designados em `class` podem ser reutilizados em outros elementos no documento. De qualquer forma, CSS permite que você aplique estilos tanto para uma `id` particular quanto para `classes`.
 
@@ -67,7 +67,7 @@ Geralmente é recomendável que se utilize classes sempre que possível, utiliza
 - Classes permitem que você estilize diversos elementos. Sendo assim, classes podem ajudar a desenvolver folhas de estilo menores; mais enchutas, já que regras podem ser facilmente reutilizadas entre elementos. Isso não só ajuda na manutenção da folha de estilo, como também agiliza a renderização de páginas, principalmente em conexões lentas.
 - Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
 
-> **Note:** **Nota**: Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
+> **Nota:** Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
 
 ## Como eu redefino o valor padrão de uma propriedade?
 
@@ -89,7 +89,7 @@ h1 { color: initial; }
 
 ## Como eu derivo um estilo de outro?
 
-CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS ](/pt-BR/docs/Web/CSS/Using_CSS_variables)agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
+CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables)agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
 
 ## Como eu aplico diversas classes a um elemento?
 
@@ -229,9 +229,9 @@ Caso você precise usar propriedades prefixadas em seu trabalho, você deve decl
 transform: rotate(90deg);
 ```
 
-> **Note:** **Nota**: Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
+> **Nota:** Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Note:** **Nota**: Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions "CSS Reference/Mozilla Extensions") para mais informações sobre propriedades CSS prefixadas da Mozilla.
+> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions "CSS Reference/Mozilla Extensions") para mais informações sobre propriedades CSS prefixadas da Mozilla.
 
 ## Como `z-index` está relacionado a posicionamento?
 
@@ -239,4 +239,4 @@ A propriedade `z-index` especifica a ordem dos elementos da pilha.
 
 Um elemento com z-index/ordem na pilha maior sempre será renderizado à frente de um elemento com um z-index/ordem de pilha menor. `z-index` funcionará apenas em elementos que tenham uma posição especificada (Ou seja, só funcionará caso o elemento tenha `position:absolute`, `position:relative` ou `position:fixed`).
 
-> **Note:** **Nota**: Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).
+> **Nota:** Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).

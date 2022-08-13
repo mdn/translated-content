@@ -30,7 +30,7 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
   - : O elemento que possui o atributo.
 
-> **Note:** **Nota:** DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
+> **Nota:** DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
 > Como isto não é sempre verdadeiro em casos como objetos `Attr` sendo retornados pelo {{domxref("Document.evaluate")}}, o DOM Living Standard reintroduziu a propriedade.Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0 {{geckoRelease("7.0")}}. Esta mensagem foi removida novamente no Gecko 49.0 {{geckoRelease("49.0")}}.
 
 ## Propriedades e métodos descontinuados
@@ -80,7 +80,7 @@ Os seguintes métodos foram reprovados:
   - : Use {{domxref("Element.getAttribute()")}} no lugar.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} no lugar.
-- `hasAttributes() `{{obsolete_inline("21.0")}}
+- `hasAttributes()`{{obsolete_inline("21.0")}}
   - : Este método agora sempre retorna false.
 - `hasChildNodes()`
   - : Este método agora sempre retorna false.

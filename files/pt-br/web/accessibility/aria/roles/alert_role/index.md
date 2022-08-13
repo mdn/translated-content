@@ -44,7 +44,7 @@ Os produtos de tecnologias assistivas devem atender tal evento e notificar seus 
 - Leitores de tela podem interromper a produção corrente (quer sejam a fala, ou o braille) e, imediatamente, anunciar, ou exibir, a mensagem de alerta.
 - Ampliadores de tela podem, visualmente, indicar que houve um alerta e qual era o seu texto.
 
-> **Note:** **Nota:** As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
+> **Nota:** As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
 
 ### Exemplos
 
@@ -110,7 +110,7 @@ document.getElementById("expirationWarning").className = "";
 
 ### Notas:
 
-- A utilização da função alerta em um elemento implica que ele tenha a` aria-live="assertive".`
+- A utilização da função alerta em um elemento implica que ele tenha a`aria-live="assertive".`
 - O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.
 - Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role").
 

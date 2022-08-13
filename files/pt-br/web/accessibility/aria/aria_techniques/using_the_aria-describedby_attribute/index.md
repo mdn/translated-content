@@ -21,7 +21,7 @@ uma lista de IDs de elementos separados por um espaço
 
 ### Efeitos possíveis em user agents e tecnologia assistiva
 
-> **Note:** **Nota:** Opiniões podem difererir em como a tecnologia assistiva deve lidar com essa técnica. A informação fornecida abaixo é uma dessas opiniões e, portanto, não normativa.
+> **Nota:** Opiniões podem difererir em como a tecnologia assistiva deve lidar com essa técnica. A informação fornecida abaixo é uma dessas opiniões e, portanto, não normativa.
 
 ### Exemplos
 

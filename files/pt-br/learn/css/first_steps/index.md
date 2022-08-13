@@ -21,11 +21,11 @@ CSS ( Planilhas de estilo em cascata) é usada para estilizar e arranjar página
 
 Antes de iniciar este módulo, você deve ter:
 
-1.  Familiaridade básica com o uso de computadores e utilização da internet passivamente (Ex: vendo e consumindo o conteúdo.)
-2.  Um ambiente de trabalho básico configurado conforme detalhado em [Instalando Software Básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software/pt-BR/docs/) e um entendimento de como criar e gerenciar arquivos, conforme detalhado em [Lidando com Arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Familiaridade básica com HTML, como discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
+1. Familiaridade básica com o uso de computadores e utilização da internet passivamente (Ex: vendo e consumindo o conteúdo.)
+2. Um ambiente de trabalho básico configurado conforme detalhado em [Instalando Software Básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software/pt-BR/docs/) e um entendimento de como criar e gerenciar arquivos, conforme detalhado em [Lidando com Arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Familiaridade básica com HTML, como discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
 
-> **Note:** **Nota**: Se você está trabalhando em um computador/tablet/ou outro dispostivo onde você não tem habilidade para criar seus próprios arquivos, você poderá tentar (a maioria) os exemplos de códigos em um programa online de codificação como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você está trabalhando em um computador/tablet/ou outro dispostivo onde você não tem habilidade para criar seus próprios arquivos, você poderá tentar (a maioria) os exemplos de códigos em um programa online de codificação como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
 ## Guias
 

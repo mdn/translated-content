@@ -23,7 +23,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 ## O que deu errado?
 
-Requisições {{Glossary("CORS")}} devem apenas usar o esquema de URL HTTPS, mas a URL especificada pela requisição é de um tipo diferente. Isso geralmente ocorre se a URL especifica um arquivo local, usando uma URL` file:///`.
+Requisições {{Glossary("CORS")}} devem apenas usar o esquema de URL HTTPS, mas a URL especificada pela requisição é de um tipo diferente. Isso geralmente ocorre se a URL especifica um arquivo local, usando uma URL`file:///`.
 
 Para consertar esse problema, apenas certifique-se que você está usando URLs HTTPS quando emitir requisições que envolvam CORS.
 

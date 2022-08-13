@@ -10,7 +10,7 @@ A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistur
 
 O evento `scroll` é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma [API Web](/pt-BR/docs/Web/API), ou o {{glossary("user agent")}}.
 
-> **Note:** **Nota:** Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
+> **Nota:** Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
 
 ## Sintaxe
 

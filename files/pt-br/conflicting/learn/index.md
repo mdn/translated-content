@@ -16,13 +16,13 @@ Nosso [Caminho de aprendizagem para desenvolvedores da web de front-end](/pt-BR/
 
 ## Maio 2020
 
-Nosso módulo [Entendendo as estruturas do Client-side JavaScript ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)já está disponível. Aprenda por que existem frameworks, quando você deve usar um (e quando não deveria), que tipos de recursos são comuns a todos os frameworks e como eles se relacionam com o JavaScript básico que você conhece. Depois de ter uma compreensão geral das estruturas, vá para a série de tutoriais que abrangem estruturas populares como React, Ember e Vue.
+Nosso módulo [Entendendo as estruturas do Client-side JavaScript](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)já está disponível. Aprenda por que existem frameworks, quando você deve usar um (e quando não deveria), que tipos de recursos são comuns a todos os frameworks e como eles se relacionam com o JavaScript básico que você conhece. Depois de ter uma compreensão geral das estruturas, vá para a série de tutoriais que abrangem estruturas populares como React, Ember e Vue.
 
 Nosso aprendizado de [Web Forms](/pt-BR/docs/Learn/Forms) agora tem avaliações "Teste suas habilidades" que acompanham os artigos.
 
 ## Abril 2020
 
-Nosso novo módulo [Entendendo as ferramentas de desenvolvimento client-side web ](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools)foi lançado! Aprenda os fundamentos das ferramentas de desenvolvimento da web, incluindo os tipos de ferrramentas existentes, as linhas de comando, gerenciadores de pacotes e como montar sua própria cadeia de ferramentas funcionais.
+Nosso novo módulo [Entendendo as ferramentas de desenvolvimento client-side web](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools)foi lançado! Aprenda os fundamentos das ferramentas de desenvolvimento da web, incluindo os tipos de ferrramentas existentes, as linhas de comando, gerenciadores de pacotes e como montar sua própria cadeia de ferramentas funcionais.
 
 ## Março 2020
 

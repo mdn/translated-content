@@ -9,7 +9,7 @@ translation_of: Mozilla/Firefox/Releases/57
 
 O Firefox 57 recebeu o nome de lançamento **Quantum**, após o projeto de engenharia Firefox [Quantum](https://wiki.mozilla.org/Quantum) que tem como objetivo reconstruir o Firefox a partir do zero, trazendo consigo grande desempenho, estabilidade e melhorias visuais. This is the first version of Firefox to ship some of these improvements, so we wanted to mark the occasion.
 
-> **Note:** **Nota:** Para ler mais sobre os recursos do Quantum nesta versão, veja: [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) por Dan Callahan.
+> **Nota:** Para ler mais sobre os recursos do Quantum nesta versão, veja: [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) por Dan Callahan.
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — também conhecido como **Quantum CSS** ou **Stylo** ─ está habilitado por padrão no Firefox 57 para desktop, com versões móveis do Firefox para seguir mais tarde. Os desenvolvedores não devem notar nada significativamente diferente, além de toda uma série de melhorias de desempenho. Existem, no entanto, algumas pequenas diferenças funcionais no Stylo, implementado para corrigir o comportamento não padronizado do Gecko que deve ser eliminado. Nos reportaremos tais diferenças nas páginas de referência e nas notas de lançamento conforme apropriado (veja [Quantum CSS notes](#quantum_css_notes)).
 
@@ -64,7 +64,7 @@ Sem mudanças.
 #### Novas APIs
 
 - A {{DOMxRef("PerformanceObserver")}} está habilitado por padrão(default). ({{bug(1386021)}}).
-- As interfaces {{DOMxRef("AbortController")}} e {{DOMxRef("AbortSignal")}} (conhecidos como o Abort API) foram adicionados, permitindo requisições DOM (tal como[ fetch requests](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) ser abortado se desejar. ({{bug(1378342)}}).
+- As interfaces {{DOMxRef("AbortController")}} e {{DOMxRef("AbortSignal")}} (conhecidos como o Abort API) foram adicionados, permitindo requisições DOM (tal como[fetch requests](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) ser abortado se desejar. ({{bug(1378342)}}).
 - \[2] O [Storage API](/pt-BR/docs/Web/API/Storage_API) está implementado e habilitado por padrão(default). ({{bug(1399038)}}).
 
 #### DOM

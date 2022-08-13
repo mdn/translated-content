@@ -11,8 +11,6 @@ original_slug: Web/API/Window/performance
 - {{domxref("Performance.mark()", "performance.mark()")}}
   - : Mapeia um {{domxref("DOMHighResTimeStamp")}} para o nome especificado representando a quantidade de milissegundos passados desde um momento de referência.
 
-<!---->
-
 - {{domxref("Performance.now()", "performance.now()")}}
   - : Retorna um {{domxref("DOMHighResTimeStamp")}} representando a quantidade de milissegundos passados desde um momento de referência.
 

@@ -39,7 +39,7 @@ O `substr()` extrai caracteres de comprimento de uma `str`, contando a partir do
 - Se o `start` for um número positivo, o índice começa a contar no início da string. Seu valor é limitado ao tamanho da string (`str.length`).
 - Se o `start` for um número negativo, o índice começa a contar a partir do final da string. Seu valor é limitado ao tamanho da string (`-str.length`).
 
-> **Note:** **Nota**: No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
+> **Nota:** No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
 
 - Se `length` for omitido, `substr()` extrairá caracteres até o final da string.
 - Se `length` for {{jsxref("undefined")}}, `substr()` extrai os caracteres até o final da string.
@@ -80,7 +80,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+       // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)

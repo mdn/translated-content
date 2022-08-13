@@ -17,7 +17,7 @@ A declaração estática **`import`** é usada para importar vínculos que são 
 
 Há também uma função dinâmica** \*\***`import()`\*\*, que não requer scripts de `type="module"`.
 
-A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule `na tag de script.
+A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule`na tag de script.
 
 A importação dinâmica é útil em situações em que você deseja carregar um módulo condicionalmente ou sob demanda. A forma estática é preferível para carregar dependências iniciais e pode se beneficiar mais prontamente de ferramentas de análise estática e [tree shaking](/pt-BR/docs/Glossary/Tree_shaking).
 

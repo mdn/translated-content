@@ -60,5 +60,5 @@ Existem dois casos de uso comuns:
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("416")}}`Range Not Satisfiable`
+- {{HTTPStatus("412")}}`Precondition Failed`

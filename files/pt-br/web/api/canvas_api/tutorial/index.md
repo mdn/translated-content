@@ -22,7 +22,7 @@ Introduzido pela primeira vez no WebKit pela Apple para o OS X Dashboard, o `<ca
 
 ## Antes de começar
 
-Usar o elemento `<canvas> `não é muito difícil, mas você precisa de um conhecimento básico sobre [HTML](/pt-BR/docs/HTML "HTML") e [JavaScript](/pt-BR/docs/JavaScript "JavaScript"). O elemento `<canvas>` não é suportado por alguns navegadores antigos, mas é suportado em versões recentes da maioria dos navegadores. O tamanho padrão de um canvas é de 300px \* 150px (largura \* altura). Porém, tamanhos customizados podem ser definidos usando as propriedades `width` e `height` do CSS. Para desenhar gráficos no canvas iremos usar um contexto de objeto JavaScript, o que criará gráficos em tempo real.
+Usar o elemento `<canvas>`não é muito difícil, mas você precisa de um conhecimento básico sobre [HTML](/pt-BR/docs/HTML "HTML") e [JavaScript](/pt-BR/docs/JavaScript "JavaScript"). O elemento `<canvas>` não é suportado por alguns navegadores antigos, mas é suportado em versões recentes da maioria dos navegadores. O tamanho padrão de um canvas é de 300px \* 150px (largura \* altura). Porém, tamanhos customizados podem ser definidos usando as propriedades `width` e `height` do CSS. Para desenhar gráficos no canvas iremos usar um contexto de objeto JavaScript, o que criará gráficos em tempo real.
 
 ## Nesse tutorial
 

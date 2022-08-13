@@ -16,7 +16,7 @@ O cabeçalho **`Accept-CH-Lifetime`** é colocado pelo servidor para especificar
 | ------------------------------------------------ | ---------------------------------------- |
 | {{Glossary("Forbidden header name")}} | ?                                        |
 
-> **Note:** **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
+> **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
 
 ## Sintaxe
 

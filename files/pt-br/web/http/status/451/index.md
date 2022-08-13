@@ -23,8 +23,6 @@ Qualquer identificação da entidade responsável pela não disponibilidade do r
     Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
     Content-Type: text/html
 
-<!---->
-
     <html>
           <head><title>Unavailable For Legal Reasons</title></head>
           <body>

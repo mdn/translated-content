@@ -14,7 +14,7 @@ translation_of: Web/API/Element/innerHTML
 
 A propriedade **`Element.innerHTML`** define ou obtém a sintaxe HTML ou XML descrevendo os elementos descendentes.
 
-> **Note:** **Nota:** Se um nó {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} tem um nó filho que inclui os caracteres (&), (<), ou (>), o innerHTML retornará esses caracteres como \&amp, \&lt e \&gt respectivamente. Utilize {{domxref("Node.textContent")}} para recuperar uma cópia correta do conteúdo desses nós de texto.
+> **Nota:** Se um nó {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} tem um nó filho que inclui os caracteres (&), (<), ou (>), o innerHTML retornará esses caracteres como \&amp, \&lt e \&gt respectivamente. Utilize {{domxref("Node.textContent")}} para recuperar uma cópia correta do conteúdo desses nós de texto.
 
 ## Sintaxe
 

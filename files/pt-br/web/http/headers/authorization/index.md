@@ -30,7 +30,9 @@ O cabeçalho de requisição HTTP **`Authorization`** contém as credenciais par
     - [Autenticação para servidores AWS (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 - \<credenciais>
   - : Se a autenticação "Basic" é utilizada, as credenciais construção são parecidas com isto:\* O nome de usuário com a senha combinados por dois pontos (`aladdin:opensesame`).
-    - A cadeia de caracteres resultante é uma codificação [base64](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) (`YWxhZGRpbjpvcGVuc2VzYW1l`).> **Note:** **Nota**: Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro como mandar em texto limpo (base64 é uma codificação que pode ser revertida). Use o HTTPS em conjunto com a Autenticação Basic.
+    - A cadeia de caracteres resultante é uma codificação [base64](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+
+    > **Nota:** Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro como mandar em texto limpo (base64 é uma codificação que pode ser revertida). Use o HTTPS em conjunto com a Autenticação Basic.
 
 ## Exemplos
 

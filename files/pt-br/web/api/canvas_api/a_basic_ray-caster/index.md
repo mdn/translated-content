@@ -24,7 +24,7 @@ A ideia básica é usar o {{domxref("window.setInterval","setInterval()")}} com 
 
 Sendo assim, a cada atualização, o raycaster verifica se você pressionou qualquer tecla por último, para conservar os cálculos não fazendo casting caso você esteja ocioso. Se você tiver pressionado, então o canvas é limpo, o solo e o céu são desenhados, a posição da câmera e/ou a orientação são atualizados, e os raios são feitos. Como os raios se cruzam paredes, então eles tornam uma tira de tela vertical na cor da parede que eles atingiram, misturado com uma versão mais escura da cor de acordo com a distância para a parede. A altura da fita também é modulada pela distância da câmera para a parede, e é desenhada centrada sobre a linha do horizonte.
 
-O código que eu acabei com é um amálgama regurgitado dos capítulos de raycaster de um velho André LaMothe*Tricks* do _livro de Gurus de Programação de Jogos_ (ISBN: 0672305070), e um[ jaspe raycaster](http://www.shinelife.co.uk/java-maze/) que encontrei online, filtrado através da minha compulsão de renomear tudo para que faça sentido Para mim, e todos os ajustes que tinham que ser feitos para fazer as coisas funcionarem bem.
+O código que eu acabei com é um amálgama regurgitado dos capítulos de raycaster de um velho André LaMothe*Tricks* do _livro de Gurus de Programação de Jogos_ (ISBN: 0672305070), e um[jaspe raycaster](http://www.shinelife.co.uk/java-maze/) que encontrei online, filtrado através da minha compulsão de renomear tudo para que faça sentido Para mim, e todos os ajustes que tinham que ser feitos para fazer as coisas funcionarem bem.
 
 # Resultados
 

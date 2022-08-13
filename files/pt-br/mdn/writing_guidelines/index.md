@@ -42,7 +42,7 @@ Os documentos wiki da MDN foram preparados com as contribuições de muitos auto
 
 Note que nesse exemplo, "Mozilla Contributors" leva para a história da página citada. Veja [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) para explicações mais detalhadas.
 
-> **Note:** **Nota:** Veja [MDN content on WebPlatform.org](/pt-BR/docs/MDN_content_on_WebPlatform.org) para informações sobre como reutilizar e atribuir conteúdo da MDN naquele site.
+> **Nota:** Veja [MDN content on WebPlatform.org](/pt-BR/docs/MDN_content_on_WebPlatform.org) para informações sobre como reutilizar e atribuir conteúdo da MDN naquele site.
 
 Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](http://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
 

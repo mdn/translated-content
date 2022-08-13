@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLCollection
 
 A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.
 
-> **Note:** **Nota:** Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
+> **Nota:** Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
 
 Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela será automaticamente atualizada quando o documento for modificado.
 
@@ -25,7 +25,7 @@ Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela
 
 ## Uso no JavaScript
 
-`HTMLCollection `expõe seus membros diretamente como propriedades, tanto por nome quanto por índice. IDs HTML podem conter : e . como caracteres válidos, o que fará necessária a utilização de colchetes para acessar as propriedades. Atualmente HTMLCollection não reconhece IDs puramente numéricos, o que pode causar conflitos com acesso em formato array, apesar do HTML5 os permitir.
+`HTMLCollection`expõe seus membros diretamente como propriedades, tanto por nome quanto por índice. IDs HTML podem conter : e . como caracteres válidos, o que fará necessária a utilização de colchetes para acessar as propriedades. Atualmente HTMLCollection não reconhece IDs puramente numéricos, o que pode causar conflitos com acesso em formato array, apesar do HTML5 os permitir.
 
 Por exemplo, assumindo que há um elemento `<form>` no documento e seu `id` é `"myForm"`:
 

@@ -29,9 +29,13 @@ _A interface `History` não herda nenhuma propriedade._
 _The `History`_ _interface doesn't inherit any methods._
 
 - {{domxref("History.back()")}}
-  - : Goes to the previous page in session history, the same action as when the user clicks the browser's Back button. Equivalent to `history.go(-1)`.> **Note:** Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
+  - : Goes to the previous page in session history, the same action as when the user clicks the browser's Back button. Equivalent to `history.go(-1)`.
+
+  > **Note:** Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
 - {{domxref("History.forward()")}}
-  - : Goes to the next page in session history, the same action as when the user clicks the browser's Forward button; this is equivalent to `history.go(1)`.> **Note:** Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.
+  - : Goes to the next page in session history, the same action as when the user clicks the browser's Forward button; this is equivalent to `history.go(1)`.
+
+  > **Note:** Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.
 - {{domxref("History.go()")}}
   - : Loads a page from the session history, identified by its relative location to the current page, for example -1 for the previous page or 1 for the next page. If you specify an out-of-bounds value (for instance, specifying -1 when there are no previously-visited pages in the session history), this method silently has no effect. Calling `go()` without parameters or a value of 0 reloads the current page. Internet Explorer lets you specify a string, instead of an integer, to go to a specific URL in the history list.
 - {{domxref("History.pushState()")}} {{ gecko_minversion_inline("2.0") }}

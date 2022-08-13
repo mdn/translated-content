@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 O método **`Object.defineProperty()`** define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.
 
-> **Note:** **Nota**: Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo `Object`.
+> **Nota:** Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo `Object`.
 
 ## Sintaxe
 

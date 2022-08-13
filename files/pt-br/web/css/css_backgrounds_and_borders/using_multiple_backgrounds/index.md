@@ -23,7 +23,7 @@ Especificar planos de fundo múltplos é fácil:
 }
 ```
 
-Você pode fazer isso com a propriedade reduzida {{ cssxref("background") }} e também com as propriedade individuais, com a excessão de {{ cssxref("background-color") }}. Isto é, as seguintes propriedades de plano de fundo podem ser especificadas com uma lista, uma por fundo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},` `{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Você pode fazer isso com a propriedade reduzida {{ cssxref("background") }} e também com as propriedade individuais, com a excessão de {{ cssxref("background-color") }}. Isto é, as seguintes propriedades de plano de fundo podem ser especificadas com uma lista, uma por fundo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},``{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Exemplo
 

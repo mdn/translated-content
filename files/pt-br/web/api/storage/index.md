@@ -28,8 +28,6 @@ Se você quiser manipular o armazenamento de sessão para um domínio, você cha
 - {{domxref("Storage.key()")}}
   - : Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..
 
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Quando passado um nome de chave, retornará o valor dessa chave.
 - {{domxref("Storage.setItem()")}}
@@ -73,7 +71,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** **Nota**: Para ver isso funcionando como um exemplo completo de trabalho, consulte nossa [Demonstração de armazenamento na Web](https://github.com/mdn/web-storage-demo).
+> **Nota:** Para ver isso funcionando como um exemplo completo de trabalho, consulte nossa [Demonstração de armazenamento na Web](https://github.com/mdn/web-storage-demo).
 
 ## Especificações
 

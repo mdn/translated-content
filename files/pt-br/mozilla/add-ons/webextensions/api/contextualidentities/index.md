@@ -43,6 +43,7 @@ Para usar esta API você precisará incluir a [permissão](/pt-BR/docs/Mozilla/A
   - : Atualiza as propriedades existentes de uma identidade contextual.
 - {{WebExtAPIRef("contextualIdentities.remove()")}}
   - : Exclui uma identidade contextual.
+
 - ## Eventos
 
   {{WebExtAPIRef("contextualIdentities.onCreated")}}

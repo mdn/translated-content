@@ -13,7 +13,7 @@ original_slug: Web/HTTP/Headers/Public-Key-Pins-Report-Only
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
-> **Note:** **Nota:** O mecanismo de Fixação de Chave Pública (_Public Key Pinning_) foi depreciado em favor do [Certificado de Transparência (Certificate Transparency)](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
+> **Nota:** O mecanismo de Fixação de Chave Pública (_Public Key Pinning_) foi depreciado em favor do [Certificado de Transparência (Certificate Transparency)](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
 
 O cabeçalho de resposta HTTP **`Public-Key-Pins-Report-Only`** era utilizado para enviar relatórios de violação de fixação para a `report-uri` especificada em cabeçalho mas, diferente do {{HTTPHeader("Public-Key-Pins")}} que ainda permite os navegadores se conectarem ao servidor se a fixação é violada. O cabeçalho é silenciosamente ignorado em navegadores modernos já que o suporte para HPKP foi removido. Use o [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.
 

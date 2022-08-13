@@ -79,8 +79,6 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
 - {{jsxref("Statements/label", "label")}}
   - : Fornece uma instrução com um identificador que pode ser referido usando `break` ou `continue` instruções.
 
-<!---->
-
 - {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
   - : Extende o alcance de uma instrução.
 

@@ -28,7 +28,9 @@ A diferença entre o **`Array.of()`** e o construtor de **`Array`** é no tratam
 
 - `elementN`
   - : Elementos usados para criar o `array`.
+
 - ### Valor de retorno
+
   - : Uma nova instância de {{jsxref("Array")}}.
 
 ## Descrição

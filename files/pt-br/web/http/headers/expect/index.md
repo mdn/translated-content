@@ -62,5 +62,5 @@ O servidor checa os cabeçalhos da requisição e responde com uma resposta {{HT
 
 ## Veja também
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}}`Expectation Failed`
+- {{HTTPStatus("100")}}`Continue`

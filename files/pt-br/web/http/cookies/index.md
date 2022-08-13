@@ -36,7 +36,7 @@ O cabeçalho HTTP de resposta {{HTTPHeader("Set-Cookie")}} envia cookies do serv
 
 Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 
-> **Note:** **Nota:** Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:\* [PHP](https://secure.php.net/manual/en/function.setcookie.php)
+> **Nota:** Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:\* [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 >
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
@@ -65,7 +65,7 @@ Ao invés de expirar quando o cliente fecha, _cookies permanentes_ expiram em um
 
     Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
-> **Note:** **Nota**: Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
+> **Nota:** Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
 
 ### Cookies `Secure` e `HttpOnly`
 
@@ -105,8 +105,6 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 
 - `None`
   - : O navegador irá enviar os cookies tanto para as requisições _cross-site_ quanto _same-site_.
-
-<!---->
 
 - `Strict`
   - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo`Strict` será incluído.

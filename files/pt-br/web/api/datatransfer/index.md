@@ -95,7 +95,7 @@ Guarda uma lista dos tipos de formato dos dados que estão armazenados para o pr
 
 O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.
 
-> **Note:** **Nota:** Esse método está atualmente implementado somento no Windows.
+> **Nota:** Esse método está atualmente implementado somento no Windows.
 
 #### Valores possíveis
 
@@ -104,13 +104,13 @@ O estado do cursor de drag. Isto é usado principalmente para controlar o cursor
 - `default`
   - : Utiliza o comportamento padrão Gecko, que é definir o cursor para uma seta durante a operação de arrastar.
 
-> **Note:** **Nota:** Se você especificar qualquer valor diferente de "default", "auto" é assumido.
+> **Nota:** Se você especificar qualquer valor diferente de "default", "auto" é assumido.
 
 ### mozItemCount
 
 O número de ítens sendo arrastados.
 
-> **Note:** **Nota:** Essa propriedade é específica Gecko.
+> **Nota:** Essa propriedade é específica Gecko.
 
 ### mozSourceNode
 
@@ -118,13 +118,13 @@ O número de ítens sendo arrastados.
 
 O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é `null` para drags externos ou se o elmento não pode acessar o node.
 
-> **Note:** **Nota:** Essa propriedade é específica Gecko.
+> **Nota:** Essa propriedade é específica Gecko.
 
 ### mozUserCancelled
 
 Essa propriedade é aplicada apenas no evento `dragend`, e é `true` se o usuário cancelar a operação de arrastar pressionando escape (esc). Será `false` em qualquer outro caso, incluindo se a operação de arrastar falhar por algum motivo, por exemplo devido a ação de soltar em um local inválido.
 
-> **Note:** **Nota:** Essa propriedade é específica Gecko.
+> **Nota:** Essa propriedade é específica Gecko.
 
 ## Methods
 

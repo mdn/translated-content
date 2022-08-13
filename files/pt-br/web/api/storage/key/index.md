@@ -40,7 +40,7 @@ for(var i =0; i < localStorage.length; i++){
 }
 ```
 
-> **Note:** **Nota**: Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
+> **Nota:** Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Especificações
 

@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
 {{HTTPSidebar}}
 
-> **Note:** **Nota:** Devido a um [bug no Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), configurar Cross-Origin-Resource-Policy pode quebrar a renderização de PDF, impedindo visitantes de conseguir ler além da primeira página de alguns PDFs. Utilize com cuidado este cabeçalho em um ambiente de produção.
+> **Nota:** Devido a um [bug no Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), configurar Cross-Origin-Resource-Policy pode quebrar a renderização de PDF, impedindo visitantes de conseguir ler além da primeira página de alguns PDFs. Utilize com cuidado este cabeçalho em um ambiente de produção.
 
 O cabeçalho de resposta HTTP **`Cross-Origin-Resource-Policy`** indica um desejo que o navegador bloqueie requisições que não sejam entre origens e/ou entre sites para um dado recurso.
 

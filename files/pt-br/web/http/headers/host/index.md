@@ -9,7 +9,7 @@ O cabeçalho de solicitação de **`Host`** especifica o nome de domínio do ser
 
 Se nenhuma porta for fornecida a porta padrão para o serviço solicitado (por exemplo, "80" para um HTTP URL) está implícita.
 
-Um campo de cabeçalho de `Host `deve ser enviado em todas as mensagens desolicitação HTTP / 1. 1. Um código de status {{HTTPStatus("400")}} (Bad Request) será enviado para qualquer mensagem de solicitação HTTP/1.1 que não contenha um campo de cabeçalho do host ou contenha mais de um.
+Um campo de cabeçalho de `Host`deve ser enviado em todas as mensagens desolicitação HTTP / 1. 1. Um código de status {{HTTPStatus("400")}} (Bad Request) será enviado para qualquer mensagem de solicitação HTTP/1.1 que não contenha um campo de cabeçalho do host ou contenha mais de um.
 
 | Header type                                      | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

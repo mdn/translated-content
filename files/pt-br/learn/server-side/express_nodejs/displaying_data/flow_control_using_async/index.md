@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 ---
 O código da _Controller_, para algumas de nossas páginas dependerá dos resultados de várias solicitações assíncronas, que talvez possam ser necessárias para serem executadas em uma ordem específica ou em paralelo. Para gerenciar o controle do nosso fluxo e renderizar páginas quando tivermos todas as informações necessárias disponíveis, usaremos o popular módulo [async](https://www.npmjs.com/package/async).
 
-> **Note:** **Nota:** Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
+> **Nota:** Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
 
 Async has a lot of useful methods (check out [the documentation](http://caolan.github.io/async/docs.html)). Some of the more important functions are:
 
@@ -17,7 +17,7 @@ Async has a lot of useful methods (check out [the documentation](http://caolan.g
 
 A maioria dos métodos que usamos no Express são assíncronos - você especifica uma operação para executar, passando um _callback_. O método retorna imediatamente e o _callback_ é invocado quando a operação solicitada é concluída. Por convenção no _Express_, as funções de _callback_ passam um valor de erro como o primeiro parâmetro (ou nulo em sucesso) e os resultados da função (se houver algum) como o segundo parâmetro.
 
-Se uma _Controller_ só precisa _executar_ _**uma** operação assíncrona_ para obter as informações necessárias para renderizar uma página, a implementação é fácil —simplesmente renderizamos o _template_ no _callback_. O código abaixo ilustra uma função que renderiza a contagem de um _model_ ExampleModel (usando o método `count() `do Mongoose.
+Se uma _Controller_ só precisa _executar_ _**uma** operação assíncrona_ para obter as informações necessárias para renderizar uma página, a implementação é fácil —simplesmente renderizamos o _template_ no _callback_. O código abaixo ilustra uma função que renderiza a contagem de um _model_ ExampleModel (usando o método `count()`do Mongoose.
 
 ```js
 exports.example_model_count = function(req, res, next) {

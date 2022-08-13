@@ -14,7 +14,7 @@ original_slug: Web/HTTP/Headers/Public-Key-Pins
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
-> **Note:** **Nota:** O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
+> **Nota:** O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
 
 O cabeçalho de resposta HTTP **`Public-Key-Pins`** usado para associar uma {{Glossary("key")}} pública criptográfica especifica com um certo servidor web para reduzir o risco de ataques {{Glossary("MITM")}} com certificados forjados, entretanto, ele foi removido em navegadores modernos e não é mais suportado. Use [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.
 

@@ -30,7 +30,7 @@ Uma lista de IDs do elemento separada por espaços
 
 Quando ambos `aria-labelledby` e [`aria-label`](/en/ARIA/ARIA_Techniques/Using_the_aria-label_attribute "Using the aria-labelledby attribute") são usados, user agents dão precedência ao `aria-labelledby` quando computam o nome da propriedade acessível.
 
-> **Note:** **Nota:** Opinões podem diferir em como as tecnologias assistivas devem manipular essa técnica. A informação fornecida acima é uma dessas opiniões e portanto não normativa.
+> **Nota:** Opinões podem diferir em como as tecnologias assistivas devem manipular essa técnica. A informação fornecida acima é uma dessas opiniões e portanto não normativa.
 
 ### Exemplos
 

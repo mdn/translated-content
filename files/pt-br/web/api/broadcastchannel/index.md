@@ -27,6 +27,7 @@ _Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}
 
 - {{domxref("BroadcastChannel.name")}}
   - : Retorna um {{domxref("DOMString")}}, o nome do canal.
+
 - ### Event handlers
 
   {{domxref("BroadcastChannel.onmessage")}}

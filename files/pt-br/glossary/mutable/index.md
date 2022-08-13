@@ -26,11 +26,11 @@ Um **objeto mutável** é um objeto cujo estado pode ser modificado após sua cr
 
 Ao anexar a 'stringImutavel' com um valor de string, os seguintes eventos ocorrem:
 
-1.  O valor existente de 'stringImutavel' é recuperado.
-2.  'World' é anexado ao valor existente de 'stringImutavel'.
-3.  O valor resultante é então alocado para um novo bloco na memória.
-4.  O objeto 'stringImutavel' agora aponta para um novo espaço de memória criado.
-5.  O espaço de memória criado anteriormente está habilitado para a coleta de lixo.
+1. O valor existente de 'stringImutavel' é recuperado.
+2. 'World' é anexado ao valor existente de 'stringImutavel'.
+3. O valor resultante é então alocado para um novo bloco na memória.
+4. O objeto 'stringImutavel' agora aponta para um novo espaço de memória criado.
+5. O espaço de memória criado anteriormente está habilitado para a coleta de lixo.
 
 ## Aprenda mais
 

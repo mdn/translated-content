@@ -17,7 +17,7 @@ O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/d
 | ------------------------------------------------ | ---------------------------------------- |
 | {{Glossary("Forbidden header name")}} | ?                                        |
 
-> **Note:** **Nota:** _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> **Nota:** _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
 ## Sintaxe
 

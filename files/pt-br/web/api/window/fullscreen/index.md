@@ -20,8 +20,6 @@ Com "_chrome privileges_" (privilégios para acesso a funções de baixo nível)
 - `isInFullScreen`
   - : Um booleano. Valores possíveis:
 
-<!---->
-
 - `true`: A janela está em modo de tela cheia.
 - `false`: A janela não está em modo de tela cheia.
 

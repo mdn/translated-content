@@ -35,10 +35,10 @@ Vamos explorar esse parágrafo mais profundamente.
 
 As principais partes de um elemento são:
 
-1.  A **tag de abertura**: Consiste no nome do elemento (no caso, p), envolvido em **parênteses angulares** de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.
-2.  A **tag de fechamento**: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.
-3.  O **conteúdo**: Esse é o conteúdo do elemento, que nesse caso é apenas texto.
-4.  O **elemento**: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.
+1. A **tag de abertura**: Consiste no nome do elemento (no caso, p), envolvido em **parênteses angulares** de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.
+2. A **tag de fechamento**: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.
+3. O **conteúdo**: Esse é o conteúdo do elemento, que nesse caso é apenas texto.
+4. O **elemento**: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.
 
 Elementos também podem ter atributos, que parecem assim:
 
@@ -48,11 +48,11 @@ Atributos contém informação extra sobre o elemento que você não quer que ap
 
 Um atributo sempre deve ter:
 
-1.  Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).
-2.  O nome do atributo, seguido por um sinal de igual.
-3.  Aspas de abertura e fechamento, envolvendo todo o valor do atributo.
+1. Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).
+2. O nome do atributo, seguido por um sinal de igual.
+3. Aspas de abertura e fechamento, envolvendo todo o valor do atributo.
 
-> **Note:** **Nota**: Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
+> **Nota:** Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
 
 ### Aninhando elementos
 
@@ -118,8 +118,8 @@ Como dissemos antes, isso incorpora uma imagem na nossa página na posição que
 
 Incluímos também um atributo `alt` (_alternative_). Neste atributo, você especifica um texto descritivo para usuários que não podem ver a imagem, possivelmente devido aos seguintes motivos:
 
-1.  Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.
-2.  Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo `src` para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:
+1. Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.
+2. Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo `src` para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:
 
 ![](https://i.imgur.com/35Rirpx.png)
 
@@ -127,7 +127,7 @@ As palavras-chave para o texto alternativo são "texto descritivo". O texto alte
 
 Tente criar um texto alternativo melhor para sua imagem agora.
 
-> **Note:** **Nota**: Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Acessibilidade)
+> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Acessibilidade)
 
 ## Marcando o texto
 
@@ -146,7 +146,7 @@ Os elementos de cabeçalhos permitem especificar que certas partes do seu conte�
 
 Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
-> **Note:** **Nota**: Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para [acessibilidade](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura) e [outros motivos, como SEO](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para [acessibilidade](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura) e [outros motivos, como SEO](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
 
 ### Parágrafo
 
@@ -162,8 +162,8 @@ Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-
 
 Muito do conteúdo da web é de listas e o HTML tem elementos especiais para elas. Listas de marcação sempre consistem em pelo menos 2 elementos. Os tipos mais comuns de lista são ordenadas e não ordenadas:
 
-1.  **Listas não ordenadas** são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.
-2.  **Listas Ordenadas** são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.
+1. **Listas não ordenadas** são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.
+2. **Listas Ordenadas** são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.
 
 Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).
 
@@ -193,20 +193,20 @@ Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.
 
 Links são muito importantes — eles são o que faz da web ser de fato uma REDE! Para adicionar um link, precisamos usar um elemento simples — {{htmlelement ("a")}} — "a" é a forma abreviada de "âncora". Para transformar o texto do seu parágrafo em um link, siga estas etapas:
 
-1.  Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".
-2.  Envolva o texto em um elemento {{htmlelement("a")}} , assim:
+1. Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".
+2. Envolva o texto em um elemento {{htmlelement("a")}} , assim:
 
     ```html
     <a>Mozilla Manifesto</a>
     ```
 
-3.  Dê ao elemento \<a> um atributo href, assim:
+3. Dê ao elemento \<a> um atributo href, assim:
 
     ```html
     <a href="">Mozilla Manifesto</a>
     ```
 
-4.  Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
+4. Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
 
     ```html
     <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>

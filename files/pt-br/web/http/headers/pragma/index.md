@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Pragma
 
 O cabeçalho genérico HTTP/1.0 **`Pragma`** é um cabeçalho de implementação específica que pode ter vários efeitos ao longo da cadeia de requisição e resposta. Ele é usado para compatibilidade retroativa com caches do HTTP/1.0 onde o cabeçalho HTTP/1.1 `Cache-Control` ainda não está presente.
 
-> **Note:** **Nota**: `Pragma` não é especificado para respostas HTTP e por isso não é uma substituição confiável para o cabeçalho genérico HTTP/1.1 `Cache-Control`, apesar de ele ter o mesmo comportamento que `Cache-Control: no-cache`, se o cabeçalho `Cache-Control` for omitido na requisição. Use `Pragma` somente para compatibilidade retroativa com clientes HTTP/1.0.
+> **Nota:** `Pragma` não é especificado para respostas HTTP e por isso não é uma substituição confiável para o cabeçalho genérico HTTP/1.1 `Cache-Control`, apesar de ele ter o mesmo comportamento que `Cache-Control: no-cache`, se o cabeçalho `Cache-Control` for omitido na requisição. Use `Pragma` somente para compatibilidade retroativa com clientes HTTP/1.0.
 
 | Tipo de cabeçalho                                                | {{Glossary("General header")}}, mas o comportamente de resposta não é especificado e portanto específico de implementação. |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |

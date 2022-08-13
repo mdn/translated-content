@@ -25,8 +25,6 @@ A propriedade CSS white-space é usada para descrever como os espaços em branco
 
     Formal syntax: {{csssyntax("white-space")}}
 
-<!---->
-
     white-space: normal
     white-space: nowrap
     white-space: pre

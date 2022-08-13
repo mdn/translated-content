@@ -22,7 +22,7 @@ O método **`has()`\*\*** \*\*retorna um valor booleano indicando se um elemento
 
 Retorna `true` se um elemento com o valor especificado existe no objeto `Set`; `false` caso contrário.
 
-> **Note:** **Nota:** Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar quando o elemento dado é encontrado.
+> **Nota:** Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar quando o elemento dado é encontrado.
 
 ## Exemplos
 

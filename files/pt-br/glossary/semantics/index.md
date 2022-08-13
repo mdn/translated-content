@@ -73,8 +73,6 @@ Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Eleme
 - [Using HTML sections and outlines](/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
 - {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
 
-<!---->
-
 - [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
 
   - {{Glossary("SEO")}}

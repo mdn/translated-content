@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Origin
 
 O cabeçalho de requisição **`Origin`** indica onde a requisição se originou. Ele não inclui nenhuma informação do caminho, somente o nome do servidor. Ele é enviado com requisições {{Glossary("CORS")}}, também como requisições {{HTTPMethod("POST")}}. Ele é similar ao cabeçalho {{HTTPHeader("Referer")}}, mas, diferente deste cabeçalho, ele não mostra o caminho inteiro.
 
-> **Note:** **Nota**: O cabeçalho {{httpheader("Origin")}} não é colocado em [requisições Fetch](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) com um método {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} (este comportamento foi corrigido no Firefox 65 — veja {{bug(1508661)}}).
+> **Nota:** O cabeçalho {{httpheader("Origin")}} não é colocado em [requisições Fetch](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) com um método {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} (este comportamento foi corrigido no Firefox 65 — veja {{bug(1508661)}}).
 
 | Tipo de cabeçalho                                | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

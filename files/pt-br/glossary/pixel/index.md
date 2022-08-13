@@ -14,4 +14,4 @@ A resolução de exibição pode ser expressada utilizando-se pixels como unidad
 
 ### Referência técnica
 
-- [Pixel ](https://pt.wikipedia.org/wiki/Pixel)na Wikipedia
+- [Pixel](https://pt.wikipedia.org/wiki/Pixel)na Wikipedia

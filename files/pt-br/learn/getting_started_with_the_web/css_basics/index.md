@@ -30,13 +30,13 @@ Vamos tentar: cole as três linhas de CSS acima em um novo arquivo, no seu edito
 
 Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos) e [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico) para descobrir o que você precisa fazer primeiro).
 
-1.  Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
+1. Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
 
     ```html
     <link href="estilos/estilo.css" rel="stylesheet">
     ```
 
-2.  Salve o arquivo `index.html` e abra ele no seu navegador. Você deve ver uma página como essa:
+2. Salve o arquivo `index.html` e abra ele no seu navegador. Você deve ver uma página como essa:
 
 ![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png)Se o texto do seu parágrafo estiver vermelho, parabéns! Você acabou de escrever seu primeiro CSS de sucesso.
 
@@ -101,7 +101,7 @@ Há muito mais seletores para explorar e você pode achar uma lista mais detalha
 
 Agora que exploramos algumas noções básicas de CSS, vamos começar a adicionar mais regras e informações no nosso arquivo `estilo.css` para deixar nosso exemplo bonito. Vamos começar fazendo nossas fontes e textos parecerem um pouco melhores.
 
-1.  Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
+1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
 
     ```html
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -109,8 +109,8 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
 
     Esse código vincula sua página a uma folha de estilo que baixa a família de fontes Open Sans junto com sua página web e permite que você a defina em seus elementos HTML usando sua própria folha de estilos.
 
-2.  Em seguida, exclua a regra existente no seu arquivo `estilo.css`. Foi um bom teste, mas o texto vermelho não parece muito bom.
-3.  Adicione as seguintes linhas em seu lugar, substituindo a linha do espaço reservado pela linha `font-family` que você obteve do Google Fonts. (`font-family` significa apenas a(s) fonte(s) que você deseja usar para o seu texto.) Esta regra primeiro define uma fonte base global e o tamanho da fonte para a página inteira (já que {{HTMLElement ("html")}} é o elemento pai de toda a página, e todos os elementos dentro dele herdam o mesmo `font-size` e `font-family`):
+2. Em seguida, exclua a regra existente no seu arquivo `estilo.css`. Foi um bom teste, mas o texto vermelho não parece muito bom.
+3. Adicione as seguintes linhas em seu lugar, substituindo a linha do espaço reservado pela linha `font-family` que você obteve do Google Fonts. (`font-family` significa apenas a(s) fonte(s) que você deseja usar para o seu texto.) Esta regra primeiro define uma fonte base global e o tamanho da fonte para a página inteira (já que {{HTMLElement ("html")}} é o elemento pai de toda a página, e todos os elementos dentro dele herdam o mesmo `font-size` e `font-family`):
 
     ```css
     html {font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
@@ -118,9 +118,9 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
     }
     ```
 
-    > **Note:** **Nota**: Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
+    > **Nota:** Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
 
-4.  Agora definiremos tamanhos de fonte para elementos que contêm texto dentro do corpo HTML ({{htmlelement ("h1")}}, {{htmlelement ("li")}} e {{htmlelement ("p")}}). Também centralizaremos o texto do nosso cabeçalho e definiremos a altura da linha e o espaçamento das letras no conteúdo do corpo para torná-lo um pouco mais legível:
+4. Agora definiremos tamanhos de fonte para elementos que contêm texto dentro do corpo HTML ({{htmlelement ("h1")}}, {{htmlelement ("li")}} e {{htmlelement ("p")}}). Também centralizaremos o texto do nosso cabeçalho e definiremos a altura da linha e o espaçamento das letras no conteúdo do corpo para torná-lo um pouco mais legível:
 
     ```css
     h1 {
@@ -226,9 +226,9 @@ img {
 
 Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos usar novamente o truque `margin: 0 auto` que aprendemos anteriormente para o corpo, mas também precisamos fazer outra coisa. O elemento {{htmlelement ("body")}} é **em nível de bloco**, o que significa que ocupa espaço na página e pode ter margens e outros valores de espaçamento aplicados a ele. Imagens, por outro lado, são elementos **em linha**, o que significa que não podem ter margens. Então, para aplicar margens a uma imagem, temos que dar o comportamento de nível de bloco a imagem usando `display: block;`.
 
-> **Note:** **Nota**: As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
+> **Nota:** As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
 
-> **Note:** **Nota**: Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
+> **Nota:** Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
 
 ## Conclusão
 

@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Errors/Não_definido
 
 Há uma variavel inexistente referenciada em algum lugar. Essa variável precisa ser declarada ou você precisa ter certeza que ela está disponível no seu atual script ou {{Glossary("escopo")}}.
 
-> **Note:** **Nota:** Quando carregar uma biblioteca (como o JQuery) tenha certeza que ela está carregada antes que você acesse as variáveis dela, como "$". Coloque na tag {{HTMLElement("script")}} para carregar a biblioteca antes do seu código usá-lo.
+> **Nota:** Quando carregar uma biblioteca (como o JQuery) tenha certeza que ela está carregada antes que você acesse as variáveis dela, como "$". Coloque na tag {{HTMLElement("script")}} para carregar a biblioteca antes do seu código usá-lo.
 
 ## Exemplos
 

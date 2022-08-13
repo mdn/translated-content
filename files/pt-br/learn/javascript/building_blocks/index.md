@@ -21,7 +21,7 @@ Neste módulo, continuaremos nossa abordagem por todos os recursos-chave fundame
 
 Antes de iniciar este módulo, você deve ter familiaridade com os conceitos básicos de [HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML) e [CSS](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS), além de ter estudado nosso módulo anterior, [primeiros passos no Javacript](/pt-BR/docs/Learn/JavaScript/First_steps).
 
-> **Note:** **Nota**: Se você está trabalhando em um computador, tablet ou outro dispositivo onde você não tem a habilidade para criar seus próprios arquivos, você pode testar os exemplos de código (a maioria deles) em um programa de codificação online, tal como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você está trabalhando em um computador, tablet ou outro dispositivo onde você não tem a habilidade para criar seus próprios arquivos, você pode testar os exemplos de código (a maioria deles) em um programa de codificação online, tal como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
 ## Guias
 

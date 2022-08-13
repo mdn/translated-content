@@ -26,7 +26,7 @@ Antes de começar a codificar, é sempre melhor dar um passo atrás e tomar o te
 A criação de formulários é um passo importante quando você está construindo um site ou um aplicativo. Está além do escopo deste artigo cobrir as formas, mas se você quiser se aprofundar neste tópico você deve ler os seguintes artigos:
 
 - A Smashing Magazine tem [ótimos artigos sobre UX](http://uxdesign.smashingmagazine.com/tag/forms/) nos formulários, mas talvez o mais importante é o [Extenso Guia para a usabilidade em formulários Web](https://translate.google.com/translate?sl=en&tl=pt&js=y&prev=_t&hl=pt-BR&ie=UTF-8&u=http%3A%2F%2Fwww.smashingmagazine.com%2Ftag%2Fforms%2F&edit-text=&act=url).
-- UXMatters também é um recurso muito atencioso com bons conselhos de [melhores práticas básicas ](https://translate.google.com/translate?sl=en&tl=pt&js=y&prev=_t&hl=pt-BR&ie=UTF-8&u=http%3A%2F%2Fwww.uxmatters.com%2Fmt%2Farchives%2F2012%2F05%2F7-basic-best-practices-for-buttons.php&edit-text=&act=url)para conceitos complexos, tais como [formulários de várias páginas ](https://translate.google.com/translate?hl=pt-BR&sl=en&tl=pt&u=http%3A%2F%2Fwww.uxmatters.com%2Fmt%2Farchives%2F2010%2F03%2Fpagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php).
+- UXMatters também é um recurso muito atencioso com bons conselhos de [melhores práticas básicas](https://translate.google.com/translate?sl=en&tl=pt&js=y&prev=_t&hl=pt-BR&ie=UTF-8&u=http%3A%2F%2Fwww.uxmatters.com%2Fmt%2Farchives%2F2012%2F05%2F7-basic-best-practices-for-buttons.php&edit-text=&act=url)para conceitos complexos, tais como [formulários de várias páginas](https://translate.google.com/translate?hl=pt-BR&sl=en&tl=pt&u=http%3A%2F%2Fwww.uxmatters.com%2Fmt%2Farchives%2F2010%2F03%2Fpagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php).
 
 Neste artigo vamos construir um formulário de contato simples. Vamos fazer um esboço.
 
@@ -48,7 +48,7 @@ Todos formulários HTML começam com um elemento {{HTMLElement("form")}} como es
 </form>
 ```
 
-Este elemento define um formulário. É um elemento de container como um elemento {{HTMLElement ("div")}} ou {{HTMLElement ("p")}} , mas ele também suporta alguns atributos específicos para configurar a forma como o formulário se comporta. Todos os seus atributos são opcionais, mas é considerada a melhor prática sempre definir pelo menos o atributo `action `e o atributo `method`.
+Este elemento define um formulário. É um elemento de container como um elemento {{HTMLElement ("div")}} ou {{HTMLElement ("p")}} , mas ele também suporta alguns atributos específicos para configurar a forma como o formulário se comporta. Todos os seus atributos são opcionais, mas é considerada a melhor prática sempre definir pelo menos o atributo `action`e o atributo `method`.
 
 - O atributo \_**action** \_define o local (uma URL) em que os dados recolhidos do formulário devem ser enviados.
 - O atributo _**method**_ define qual o método HTTP para enviar os dados (ele pode ser "**GET**" ou "**POST**" (veja as diferenças [aqui](http://www.comocriarsites.com/html/como-funciona-os-metodos-get-e-post-diferencas/)).
@@ -82,7 +82,7 @@ Os elementos {{HTMLElement ("div")}} estão lá para estruturar nosso código e 
 
 No elemento {{HTMLElement ("input")}} , o atributo mais importante é o atributo `type`. Esse atributo é extremamente importante porque define a forma como o elemento {{HTMLElement ("input")}} se comporta. Ele pode mudar radicalmente o elemento, então preste atenção a ele. Se você quiser saber mais sobre isso, leia o artigo [native form widgets](/pt-BR/docs/HTML/Forms/The_native_form_widgets "/en-US/docs/HTML/Forms/The_native_forms_widgets"). Em nosso exemplo, nós usamos somente o `type="text",` valor padrão para este atributo. Ele representa um campo de texto com uma única linha que aceita qualquer tipo de texto sem controle ou validação. Nós também usamos o `type="email"` que define um campo de texto com uma única linha que só aceita um endereço de e-mail bem-formados. Este último valor torna um campo de texto básico em uma espécie de campo "inteligente", que irá realizar alguns testes com os dados digitados pelo usuário. Se você quiser saber mais sobre a validação de formulário, detalharemos melhor no artigo [Validação de dados de formulário](/pt-BR/docs/HTML/Forms/Data_form_validation).
 
-Por último, mas não menos importante, observe a sintaxe de `<input /> `e `<textarea> </ textarea>.` Esta é uma das esquisitices do HTML. A tag** `<input />` **é um elemento que se auto-fecha, o que significa que se você quiser encerrar formalmente o elemento, você tem que adicionar uma barra "**/**" no final do próprio elemento e não uma tag de fechamento. No entanto, o tipo {{HTMLElement ("textarea")}} não é um elemento de auto-fechamento, então você tem que fechá-lo com a tag final adequada. Isso tem um impacto sobre um recurso específico de formulários HTML: a maneira como você define o valor padrão. Para definir o valor padrão de um elemento {{HTMLElement ("input")}} você tem que usar o atributo `value `como este:
+Por último, mas não menos importante, observe a sintaxe de `<input />`e `<textarea> </ textarea>.` Esta é uma das esquisitices do HTML. A tag** `<input />` **é um elemento que se auto-fecha, o que significa que se você quiser encerrar formalmente o elemento, você tem que adicionar uma barra "**/**" no final do próprio elemento e não uma tag de fechamento. No entanto, o tipo {{HTMLElement ("textarea")}} não é um elemento de auto-fechamento, então você tem que fechá-lo com a tag final adequada. Isso tem um impacto sobre um recurso específico de formulários HTML: a maneira como você define o valor padrão. Para definir o valor padrão de um elemento {{HTMLElement ("input")}} você tem que usar o atributo `value`como este:
 
 ```html
 <input type="text" value="Por padrão, este elemento será preenchido com este texto " />
@@ -120,8 +120,8 @@ O nosso formulário está quase pronto; nós temos apenas que adicionar um botã
 
 Um botão pode ser de três tipos: **`submit`**, **`reset`**, ou **`button`**.
 
-- Um clique sobre um botão de **`submit` **envia os dados do formulário para a página de web definida pelo atributo **`action `**do elemento {{HTMLElement ("form")}} .
-- Um clique sobre um botão de **`reset `**redefine imediatamente todos os campos do formulário para o seu valor padrão. De um ponto de vista na usabilidade do usuário(UX), isso é considerado uma má prática.
+- Um clique sobre um botão de **`submit` **envia os dados do formulário para a página de web definida pelo atributo **`action`**do elemento {{HTMLElement ("form")}} .
+- Um clique sobre um botão de **`reset`**redefine imediatamente todos os campos do formulário para o seu valor padrão. De um ponto de vista na usabilidade do usuário(UX), isso é considerado uma má prática.
 - Um clique em um botão do tipo **`button`** faz ...ops, nada! Isso soa bobo, mas é incrivelmente útil para construir botões personalizados com JavaScript, ou seja, ele pode assumir qualquer comportamento através desta linguagem.
 
 Note que você também pode usar o elemento {{HTMLElement ("input")}} com o tipo correspondente para produzir um botão. A principal diferença com o elemento {{HTMLElement ("button")}} é que o elemento {{HTMLElement ("input")}} permite apenas texto sem formatação como seu valor, enquanto que o elemento {{HTMLElement ("button")}} permite que o conteúdo HTML completo como seu valor.
@@ -195,7 +195,7 @@ input:focus, textarea:focus {
 }
 ```
 
-Campos de texto de várias linhas precisam de alguns estilos personalizados sozinhos. Por padrão, um elemento {{HTMLElement ("textarea")}} é um bloco em linha com sua parte inferior alinhada à linha de base do texto. Na maioria das vezes, não é baseline o que queremos. Nesse caso, a fim de alinhar a `label `e o campo, temos que alterar a propriedade _vertical-align_ do {{HTMLElement ("textarea")}} para _top_.
+Campos de texto de várias linhas precisam de alguns estilos personalizados sozinhos. Por padrão, um elemento {{HTMLElement ("textarea")}} é um bloco em linha com sua parte inferior alinhada à linha de base do texto. Na maioria das vezes, não é baseline o que queremos. Nesse caso, a fim de alinhar a `label`e o campo, temos que alterar a propriedade _vertical-align_ do {{HTMLElement ("textarea")}} para _top_.
 
 Observe também o uso da propriedade de _resize_, que é uma forma de permitir que os usuários redimensionar um elemento {{HTMLElement ("textarea")}}.
 
@@ -212,7 +212,7 @@ textarea {
 }
 ```
 
-Muitas vezes, os botões precisam de estilos especiais também. Para esse fim, nós o colocamos dentro de uma {{HTMLElement ("div")}} com uma classe css _`button`_. Aqui, queremos que o botão esteja alinhado com os outros campos . Para conseguir isso, temos de imitar a presença de uma {{HTMLElement ("label")}}. Isso é feito utilizando `padding `e `margin`.
+Muitas vezes, os botões precisam de estilos especiais também. Para esse fim, nós o colocamos dentro de uma {{HTMLElement ("div")}} com uma classe css _`button`_. Aqui, queremos que o botão esteja alinhado com os outros campos . Para conseguir isso, temos de imitar a presença de uma {{HTMLElement ("label")}}. Isso é feito utilizando `padding`e `margin`.
 
 ```css
 .button {
@@ -239,7 +239,7 @@ O elemento {{HTMLElement("form")}} definirá onde e como enviar os dados, graça
 
 Mas não é o suficiente. Nós também precisamos dar um nome a nossos dados. Esses nomes são importantes em ambos os lados; no lado do navegador, ele informa ao navegador que nome dar a cada pedaço de dados, e no lado do servidor, ele permite que o servidor lidar com cada pedaço de dados pelo nome.
 
-Então, para nomear seus dados, você precisará usar o atributo \_**`name `**\_em cada campo do formulário que irá recolher uma parte específica dos dados:
+Então, para nomear seus dados, você precisará usar o atributo \_**`name`**\_em cada campo do formulário que irá recolher uma parte específica dos dados:
 
 ```html
 <form action="/pagina-processa-dados-do-form" method="post">

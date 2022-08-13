@@ -16,7 +16,7 @@ Antes de iniciar este módulo, você deve possuir alguma familiaridade com HTML 
 
 Você precisa possuir também alguma familiaridade com os conceitos básicos de Javascript. Para isso indicamos o módulo [Primeitos Passos: JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Blocos de Construção do JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks).
 
-> **Note:** **Nota**: Se você está trabalhando em um computador/tablet/outros equipamentos , ao qual não é possível criar seus próprios arquivos , você pode testar (em grande parte) os nossos códigos de exemplo, em um editor de código online , tal como o JSBin ou o Thimble .
+> **Nota:** Se você está trabalhando em um computador/tablet/outros equipamentos , ao qual não é possível criar seus próprios arquivos , você pode testar (em grande parte) os nossos códigos de exemplo, em um editor de código online , tal como o JSBin ou o Thimble .
 
 ## Guias
 

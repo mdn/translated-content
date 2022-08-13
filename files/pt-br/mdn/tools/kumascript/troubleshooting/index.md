@@ -29,8 +29,6 @@ Verifique:
 - Tags HTML aparecendo dentro de uma chamada de macro
   - : Se você aplicar estilos a uma macro, geralmente não irá funcionar, pois uma tag `</code>` pode aparecer dentro do código fonte da macro, causado erros de sintaxe na macro. Verifique a visão de código-fonte para ver o código que foi gerado, e remova qualquer estilo desnecessário.
 
-<!---->
-
 ## Erro tipo _TemplateLoadingError_
 
 `TemplateLoadingError` erros aparecendo quando um KumaScript tem problemas de encontrar qual [macro](/pt-BR/docs/MDN/Contribute/Content/Macros) incluir numa página.

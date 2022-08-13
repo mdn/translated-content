@@ -58,8 +58,6 @@ Para mais informação, veja o artigo principal [Policy Feature](/docs/Web/HTTP/
 - {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
   - : Controla se as tarefas devem ser executadas em enquadramentos enquanto eles estão fora da janela de visualização visível.
 
-<!---->
-
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}
   - : Controla se o documento atual é permitido de usar {{DOMxRef("Element.requestFullScreen()")}}. Quando esta política está desabilitada, a {{JSxRef("Promise")}} retornada rejeita com um {{JSxRef("TypeError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/geolocation','geolocation')}}
@@ -69,12 +67,8 @@ Para mais informação, veja o artigo principal [Policy Feature](/docs/Web/HTTP/
 - {{httpheader('Feature-Policy/layout-animations','layout-animations')}}
   - : Controla se o documento atual é permitido de mostrar animações de _layout_.
 
-<!---->
-
 - {{httpheader('Feature-Policy/legacy-image-formats','legacy-image-formats')}}
   - : Controla se o documento atual é permitido de mostrar imagens em formatos legados.
-
-<!---->
 
 - {{httpheader('Feature-Policy/magnetometer','magnetometer')}}
   - : Controla se o documento atual é permitido de coletar informação sobre a orientação do dispositivo através da interface {{DOMxRef("Magnetometer")}}.

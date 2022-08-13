@@ -10,11 +10,11 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 
 Um evento manipulador para um evento `popstate` na janela
 
-Um evento popstate é disparado para a janela toda vez que o histórico de atividades mudar entre dois históricos de entradas para o mesmo documento. Se o histórico de entrada a ser ativo for criado por uma chamada para `history.pushState()` ou for afetado por um chamada `history.replaceState()`, o estado do evento `popstate `contém uma cópia do histórico do estado de entrada do objeto.
+Um evento popstate é disparado para a janela toda vez que o histórico de atividades mudar entre dois históricos de entradas para o mesmo documento. Se o histórico de entrada a ser ativo for criado por uma chamada para `history.pushState()` ou for afetado por um chamada `history.replaceState()`, o estado do evento `popstate`contém uma cópia do histórico do estado de entrada do objeto.
 
-Note que apenas chamando `history.pushState()` ou `history.replaceState() `não irá desencadear um evento` popstate. `O evento `popstate `é apenas desencadeado por uma ação do navegador com clicar em um botão de voltar (ou chamar `history.back() `em JavaScript). E o evento é apenas desencadeado quando o usuário navega entre dois históricos de entrada do mesmo documento.
+Note que apenas chamando `history.pushState()` ou `history.replaceState()`não irá desencadear um evento`popstate.`O evento `popstate`é apenas desencadeado por uma ação do navegador com clicar em um botão de voltar (ou chamar `history.back()`em JavaScript). E o evento é apenas desencadeado quando o usuário navega entre dois históricos de entrada do mesmo documento.
 
-Navegadores tendem a lidar com o evento `popstate `diferente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emite um evento `popstate` no carregamento da página, mas Firefox não.
+Navegadores tendem a lidar com o evento `popstate`diferente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emite um evento `popstate` no carregamento da página, mas Firefox não.
 
 ## Sintaxe
 

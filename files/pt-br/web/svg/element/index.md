@@ -29,7 +29,9 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
 - {{SVGElement("color-profile")}}
+
 - ### D
+
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
 - {{SVGElement("discard")}}
@@ -75,7 +77,9 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 - {{SVGElement("hatch")}}
 - {{SVGElement("hatchpath")}}
+
 - ### I
+
 - {{SVGElement("image")}}
 
 ### L

@@ -42,7 +42,7 @@ O método `finally()` é bastante similar a chamar `.then(quandoEstabelecida, qu
 - Diferentemente de `Promise.resolve(2).then(() => {}, () => {})` (será resolvido como `undefined`), `Promise.resolve(2).finally(() => {})` será resolvido como `2`.
 - De maneira semelhante, diferentemente de `Promise.reject(3).then(() => {}, () => {})` (que será resolvido como `undefined`), `Promise.reject(3).finally(() => {})` será rejeitado como `3`.
 
-> **Note:** **Nota:** Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
+> **Nota:** Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
 
 ## Exemplos
 

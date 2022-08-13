@@ -29,8 +29,6 @@ O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensag
 - \<unit>
   - : A unidade nos quais a variação é especificada. Geralmente em `bytes`.
 
-<!---->
-
 - \<range-start>
   - : Um inteiro na dada unidade indicando o começo da variação da requisitada.
 - \<range-end>

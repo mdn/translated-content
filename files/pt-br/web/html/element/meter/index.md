@@ -20,7 +20,7 @@ O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de 
 
 ## Atributos
 
-Como todos os elementos HTML, esse elemento suporta[ attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
+Como todos os elementos HTML, esse elemento suporta[attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
 - {{ htmlattrdef("value") }}
   - : O valor numérico atual. Ele deve estar entre os valores mínimos e máximo (o atributo **min** e o atributo **max**) se eles estiverem especificados. Se não especificado ou mal formatado, o valor é 0. Se especificado, mas fora do intervalo dado pelos atributos **min** e **max**, o valor é igual ao extremo do intervalo mais próximo.
@@ -35,7 +35,7 @@ Como todos os elementos HTML, esse elemento suporta[ attributes](/en/HTML/Global
 - {{ htmlattrdef("optimum") }}
   - : Esse atributo indica o valor numérico ótimo. Deve estar dentro do intervalo (definido pelos atributos **min** e **max**). Quando com os atributos **low** e **high**, ele indica a região do intervalo qu é considerada preferível. Por exemplo, se estiver entre os atributos **min** e **low**, então a parte inferior do intervalo é considerada como ótima.
 - {{ htmlattrdef("form") }}
-  - : Esse atributo associa o elemento com um elemento` form` que é dono de um elemento `meter`. Por exemplo, um elemento `meter` pode estar mostrando um intervalo correspondente a um elemento `input` do **type**(tipo) _number_. Esse atributo só é utilizado se o elemento `meter` está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento `form`.
+  - : Esse atributo associa o elemento com um elemento`form` que é dono de um elemento `meter`. Por exemplo, um elemento `meter` pode estar mostrando um intervalo correspondente a um elemento `input` do **type**(tipo) _number_. Esse atributo só é utilizado se o elemento `meter` está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento `form`.
 
 ## Exemplos
 

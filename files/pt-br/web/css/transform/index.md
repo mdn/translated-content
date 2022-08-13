@@ -11,7 +11,7 @@ A propriedade CSS `transform` permite modificar o espaço coordenado do modelo d
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-Se a propriedade tem um valor diferente de `none, `um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
+Se a propriedade tem um valor diferente de `none,`um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
 
 ## Sintaxe
 
@@ -102,8 +102,6 @@ Specifies a 2D transformation matrix comprised of the specified six values. This
      -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
           -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
              transform: matrix(1, -0.2, 0, 1, 0, 0);
-
-<!---->
 
      background: wheat;
      max-width: intrinsic;

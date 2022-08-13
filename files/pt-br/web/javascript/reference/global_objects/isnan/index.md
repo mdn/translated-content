@@ -28,7 +28,7 @@ A função **`isNaN()`** determina se o valor é {{jsxref("Global_Objects/NaN", 
 
 ### A necessidade da função `isNaN`
 
-Ao contrário de todas as outras possibilidades de valores no JavaScript, não é possivel confiar nos operadores de igualdade `(== e ===)` para determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não, porque ambos, `NaN == NaN e NaN === NaN`, terá como valor de retorno:` false`. Daí a necessidade da funçao `isNAN`.
+Ao contrário de todas as outras possibilidades de valores no JavaScript, não é possivel confiar nos operadores de igualdade `(== e ===)` para determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não, porque ambos, `NaN == NaN e NaN === NaN`, terá como valor de retorno:`false`. Daí a necessidade da funçao `isNAN`.
 
 ### Origem dos valores `NaN`
 
@@ -40,7 +40,7 @@ Por exemplo, divida zero por zero e o resultado será `NaN` , mas se dividir out
 
 Desde as primeiras versões da especificação da função isNaN , o seu comportamento para argumentos não numéricos tem sido confuso. Quando o argumento para a função `isNaN` não é do tipo* **Numbe**r*, o valor é primeiro convertido para um número. O valor resultante é em seguida testado para determinar se se trata de {{jsxref("Number.isNaN()")}}. Assim, para os não-números que quando forçados ao tipo numérico resultado em um valor numérico não-`NaN` válido (particularmente strings vazias e primitivas booleanas, que quando submetidas ao `cast` dão valores numéricos zero ou um), o "falso" valor retornado pode ser inesperado; a cadeia vazia , por exemplo, é certamente "not-a-number" A confusão decorre do fato de que o termo, " não é um número " , tem um significado específico para os números representados como valores de ponto flutuante IEEE- 794 . A função deve ser interpretada como respondendo à pergunta: "este valor, quando convertido para um valor numérico, um valor IEEE -794 ' not-a-number"?
 
-A ultima versão do ECMAScript (ES6) contém A função {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` será a real forma para testar se x é NaN ou não. Mesmo com `Number.isNaN`, porém, o significado de NaN continua ser a precisão numérica, e não simplesmente, "não é um número = `NaN`, _not a number_". Paralelamente , na expressão `Number.isNaN`, a expressão` (x != x)` é a forma mais confiável para testar se a variável `x `é` NaN` ou não, assim o resultado não é sujeito ao falso positivo que faz `isNaN` não ser confiável.
+A ultima versão do ECMAScript (ES6) contém A função {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` será a real forma para testar se x é NaN ou não. Mesmo com `Number.isNaN`, porém, o significado de NaN continua ser a precisão numérica, e não simplesmente, "não é um número = `NaN`, _not a number_". Paralelamente , na expressão `Number.isNaN`, a expressão`(x != x)` é a forma mais confiável para testar se a variável `x`é`NaN` ou não, assim o resultado não é sujeito ao falso positivo que faz `isNaN` não ser confiável.
 
 A polyfill for `isNaN` would be (the polyfill leverages the unique never-equal-to-itself characteristic of `NaN`):
 

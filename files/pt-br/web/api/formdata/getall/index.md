@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/getAll
 
 O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
 
-> **Note:** **Nota**: Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> **Nota:** Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 

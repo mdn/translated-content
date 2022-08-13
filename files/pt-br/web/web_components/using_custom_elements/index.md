@@ -16,7 +16,7 @@ original_slug: Web/Web_Components/Usando_custom_elements
 
 Um dos principais recursos do padrão de Web Components é a capacidade de criar elementos personalizados que encapsulam sua funcionalidade em uma página HTML, em vez de ter que se contentar com um lote longo e aninhado de elementos que, juntos, fornecem um recurso de página personalizada. Este artigo apresenta o uso da API de Custom Elements.
 
-> **Note:** **Nota**: Custom elements são suportados por padrão no Firefox, Chrome e Edge (76). Opera e Safari até agora suportam apenas custom elements autônomos.
+> **Nota:** Custom elements são suportados por padrão no Firefox, Chrome e Edge (76). Opera e Safari até agora suportam apenas custom elements autônomos.
 
 ## Visão de alto nível
 
@@ -190,7 +190,7 @@ Usar o elemento integrado em um documento da web também parece um pouco diferen
 
 Você usa um elemento `<ul>` normalmente, mas especifica o nome do elemento personalizado dentro do atributo `is`.
 
-> **Note:** **Nota**: Novamente, você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) aqui.
+> **Nota:** Novamente, você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) aqui.
 
 ## Usando os callbacks do ciclo de vida
 
@@ -198,7 +198,7 @@ Você pode definir vários retornos de chamada diferentes dentro da definição 
 
 - `connectedCallback`: Chamado sempre que o custom element é anexado a um elemento conectado ao documento. Isso acontecerá sempre que o nó for movido e pode acontecer antes que o conteúdo do elemento tenha sido totalmente analisado.
 
-  > **Note:** **Nota**: `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
+  > **Nota:** `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
 
 - `disconnectedCallback`: Invocado sempre que o custom element é desconectado do documento DOM.
 - `adoptedCallback`: Invocado sempre que o custom element é movido para um novo documento.
@@ -274,7 +274,7 @@ static get observedAttributes() { return ['c', 'l']; }
 
 Isso é colocado bem no topo do construtor, em nosso exemplo.
 
-> **Note:** **Nota**: Encontre o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) aqui.
+> **Nota:** Encontre o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) aqui.
 
 ## Polyfills vs. classes
 

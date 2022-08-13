@@ -26,11 +26,11 @@ Antes que você faça qualquer coisa, você precisa de algumas ideias. O que seu
 
 Para começar, você deve responder às seguintes questões:
 
-1.  **Sobre o que é seu site?** Você gosta de cachorros, Nova Iorque ou Pacman?
-2.  **Que informação você está apresentando sobre o assunto?** Escreva um título e alguns parágrafos e pense em uma imagem para ilustrar sua página.
-3.  **Como será seu site,** em termos simples. Qual é a cor de fundo? Qual é o tipo de fonte apropriado: formal, desenhado, negrito e gritante, sutil?
+1. **Sobre o que é seu site?** Você gosta de cachorros, Nova Iorque ou Pacman?
+2. **Que informação você está apresentando sobre o assunto?** Escreva um título e alguns parágrafos e pense em uma imagem para ilustrar sua página.
+3. **Como será seu site,** em termos simples. Qual é a cor de fundo? Qual é o tipo de fonte apropriado: formal, desenhado, negrito e gritante, sutil?
 
-> **Note:** **Nota**: Projetos complexos precisam de guias detalhados que abordam todos os detalhes de cores, fontes, espaçamento entre itens de uma página, estilo de escrita apropriado, e por aí vai. Isso é denominado um guia de design, sistema de design ou manual da marca, e você pode ver um exemplo no [Sistema de Design do Firefox Photon](https://design.firefox.com/photon/) (em inglês).
+> **Nota:** Projetos complexos precisam de guias detalhados que abordam todos os detalhes de cores, fontes, espaçamento entre itens de uma página, estilo de escrita apropriado, e por aí vai. Isso é denominado um guia de design, sistema de design ou manual da marca, e você pode ver um exemplo no [Sistema de Design do Firefox Photon](https://design.firefox.com/photon/) (em inglês).
 
 ## Rascunhando seu design
 
@@ -38,7 +38,7 @@ Em seguida, pegue papel e caneta e faça um rascunho de como você deseja que se
 
 ![](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
 
-> **Note:** **Nota**: Mesmo em sites reais e complexos, os times de design geralmente começam pelo rascunho em papel e depois constroem a versão digital usando um editor gráfico ou tecnologias da web.Os times de web geralmente incluem um designer gráfico e um designer de {{Glossary("UX", "experiencia do usuário")}} (UX). Designers gráficos, obviamente, constroem a parte visual do site. UX designers tem uma função de certa forma mais abstrata, direcionando como os usuários vão interagir e experimentar o site.
+> **Nota:** Mesmo em sites reais e complexos, os times de design geralmente começam pelo rascunho em papel e depois constroem a versão digital usando um editor gráfico ou tecnologias da web.Os times de web geralmente incluem um designer gráfico e um designer de {{Glossary("UX", "experiencia do usuário")}} (UX). Designers gráficos, obviamente, constroem a parte visual do site. UX designers tem uma função de certa forma mais abstrata, direcionando como os usuários vão interagir e experimentar o site.
 
 ## Construindo seus ativos
 
@@ -58,8 +58,8 @@ Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_Colors/se
 
 Para escolher uma imagens, vá no [Google Imagens](https://www.google.com/imghp?gws_rd=ssl) e procure por algo que se encaixe no seu site.
 
-1.  Quando você achar a imagem que você quer, clique nela para obter uma visão ampliada dela.
-2.  Clique com o botão direito na imagem (Ctrl + click no Mac) escolha _Salvar imagem como..._ e escolha um local seguro para salvar sua imagem. Como alternativa, copie o endereço web da imagem da barra de endereço do navegador, para uso posterior.
+1. Quando você achar a imagem que você quer, clique nela para obter uma visão ampliada dela.
+2. Clique com o botão direito na imagem (Ctrl + click no Mac) escolha _Salvar imagem como..._ e escolha um local seguro para salvar sua imagem. Como alternativa, copie o endereço web da imagem da barra de endereço do navegador, para uso posterior.
 
 ![](https://mdn.mozillademos.org/files/16599/updated-google-images.png)
 
@@ -71,10 +71,10 @@ Observe que a maioria das imagens na Web, inclusive no Imagens do Google, é pro
 
 Para escolher uma fonte:
 
-1.  Vá no [Google Fontes](http://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
-2.  Clique no ícone "mais" (Adicionar a) ao lado da fonte desejada.
-3.  Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
-4.  Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.
+1. Vá no [Google Fontes](http://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
+2. Clique no ícone "mais" (Adicionar a) ao lado da fonte desejada.
+3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
+4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.
 
 ![](https://mdn.mozillademos.org/files/13871/font1.png)
 

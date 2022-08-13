@@ -36,7 +36,7 @@ Antes de iniciar esse módulo, você não precisa de nenhum conhecimento prévio
 - [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
 - [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
 
-> **Note:** **Nota**: Se você está trabalhando em um computador/tablet/outro dispositivo onde você não pode criar os seus próprio arquivos, você pode experimentar (em sua maioria) os códigos de exemplo em um programa de codificação online como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você está trabalhando em um computador/tablet/outro dispositivo onde você não pode criar os seus próprio arquivos, você pode experimentar (em sua maioria) os códigos de exemplo em um programa de codificação online como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
 ## Guias
 

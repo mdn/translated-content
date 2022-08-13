@@ -23,7 +23,7 @@ Os leitores de tela devem anunciar o campo como obrigatório.
 
 Observe que esse atributo não alterará automaticamente a apresentação do campo.
 
-> **Note:** **Nota:** Opiniões podem diferir em como a tecnologia assistiva deve lidar com esta técnica. A informação fornecida acima é uma dessas opiniões e, portanto, não é normativa.
+> **Nota:** Opiniões podem diferir em como a tecnologia assistiva deve lidar com esta técnica. A informação fornecida acima é uma dessas opiniões e, portanto, não é normativa.
 
 ### Exemplos
 

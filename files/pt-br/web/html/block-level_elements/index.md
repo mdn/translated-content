@@ -71,8 +71,6 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
 - {{ HTMLElement("fieldset") }}
   - : Rótulo de conjunto de campos.
 
-<!---->
-
 - {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
   - : Legenda da figura.
 - {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
@@ -95,8 +93,6 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Contains the central content unique to this document.
 - {{ HTMLElement("nav") }}
   - : Contains navigation links.
-
-<!---->
 
 - {{ HTMLElement("ol") }}
   - : Ordered list.

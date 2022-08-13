@@ -19,7 +19,7 @@ Os suportes para Fetch ainda estão em uma fase bastante precoce, mas começa a 
 
 Caso tenha interesse no uso da ferramenta, há também uma [Fetch Polyfill](https://github.com/github/fetch) disponivel que recria as funcionalidade para outros navegadores que ainda não o suporta. Fique ciente que está em estado experimental e ainda não há uma versão completa.
 
-> **Note:** **Nota**: There have been some concerns raised that the [Fetch spec](https://fetch.spec.whatwg.org/) is at odds with the [Streams spec](https://streams.spec.whatwg.org/); however, future plans show an intention to integrate Streams with Fetch: read [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/) for more information.
+> **Nota:** There have been some concerns raised that the [Fetch spec](https://fetch.spec.whatwg.org/) is at odds with the [Streams spec](https://streams.spec.whatwg.org/); however, future plans show an intention to integrate Streams with Fetch: read [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/) for more information.
 
 ## Detecção de Recursos
 
@@ -54,7 +54,7 @@ Aqui estamos procurando uma imagem e inserindo em um elemento {{htmlelement("img
 
 Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem da resposta, nós usamos o método {{domxref("Body.blob","blob()")}} (definido no mixin do {{domxref("Body")}}, que são implementados por ambos os objetos {{domxref("Request")}} e {{domxref("Response")}}.)
 
-> **Note:** **Nota**: O Body mixin além disso possui métodos similares para extrair outros tipos de conteúdo do body; Veja a sessão [Body](#body) para mais detalhes.
+> **Nota:** O Body mixin além disso possui métodos similares para extrair outros tipos de conteúdo do body; Veja a sessão [Body](#body) para mais detalhes.
 
 Um `objectURL` é criado na extração de {{domxref("Blob")}}, que então é inserido no {{domxref("img")}}.
 
@@ -136,7 +136,7 @@ var anotherRequest = new Request(myRequest,myInit);
 
 Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.
 
-> **Note:** **Nota**: Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, `clone()` não.
+> **Nota:** Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, `clone()` não.
 
 ## Headers
 

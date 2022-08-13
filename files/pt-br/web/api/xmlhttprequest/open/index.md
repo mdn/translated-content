@@ -26,7 +26,9 @@ O {{domxref("XMLHttpRequest")}} método**`open()`** inicializa uma nova requisi�
 - `url`
   - : Um {{domxref("DOMString")}} representando a URL para enviar a requisição.
 - `async` {{optional_inline}}
-  - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.> **Note:** **Nota:** Requisições Síncronas no thread principal podem ser facilmente disruptivas para a experiência de usuário e devem ser evitadas; de fato, muitos navegadores descontinuaram inteiramente o suporte para XHR síncrono no thread principal. Requisições síncronas são permitidas nos {{domxref("Worker")}}s.
+  - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.
+
+  > **Nota:** Requisições Síncronas no thread principal podem ser facilmente disruptivas para a experiência de usuário e devem ser evitadas; de fato, muitos navegadores descontinuaram inteiramente o suporte para XHR síncrono no thread principal. Requisições síncronas são permitidas nos {{domxref("Worker")}}s.
 - `user` {{optional_inline}}
   - : O nome de usuário opcional para ser usado em autenticação; por padrão, isso é o valor `null`.
 - `password` {{optional_inline}}

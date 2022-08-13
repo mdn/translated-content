@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Status/411
 
 O código de resposta **`411 Length Required`** de erro de cliente do Protocolo de Transferência de HyperTexto (HTTP) indica que o servidor se nega a aceitar a requisição sem um cabeçalho {{HTTPHeader("Content-Length")}} definido.
 
-> **Note:** **Nota:** pela especificação, quando envia dados em uma série de blocos, o cabeçalho `Content-Length` é omitido e no início de cada bloco você precisa adicionar o tamanho do bloco corrente no formato hexadecimal. Veja {{HTTPHeader("Transfer-Encoding")}} para mais detalhes.
+> **Nota:** pela especificação, quando envia dados em uma série de blocos, o cabeçalho `Content-Length` é omitido e no início de cada bloco você precisa adicionar o tamanho do bloco corrente no formato hexadecimal. Veja {{HTTPHeader("Transfer-Encoding")}} para mais detalhes.
 
 ## Status
 

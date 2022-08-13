@@ -33,4 +33,4 @@ Nomes de cabeçalho proibidos começam com `Proxy-`ou `Sec-`, ou são um dos seg
 - `Upgrade`
 - `Via`
 
-> **Note:** **Nota**: O cabeçalho `User-Agent` não é mais proibido, de [acordo com a especificação](https://fetch.spec.whatwg.org/#terminology-headers) - consulte a lista de nomes de cabeçalhos proibidos (isso foi implementado no Firefox 43) - agora ele pode ser definido em um objeto e busca de [Headers](/pt-BR/docs/Web/API/Headers), ou via XHR [setRequestHeader()](/pt-BR/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29).
+> **Nota:** O cabeçalho `User-Agent` não é mais proibido, de [acordo com a especificação](https://fetch.spec.whatwg.org/#terminology-headers) - consulte a lista de nomes de cabeçalhos proibidos (isso foi implementado no Firefox 43) - agora ele pode ser definido em um objeto e busca de [Headers](/pt-BR/docs/Web/API/Headers), ou via XHR [setRequestHeader()](/pt-BR/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29).

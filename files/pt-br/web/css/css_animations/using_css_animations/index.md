@@ -17,9 +17,9 @@ Animações CSS tornam possível animar transições de um estilo CSS para outro
 
 Existem três vantagens chave para animações CSS além das técnicas tradicionais de animação dirigidas por script:
 
-1.  São de fácil utilização para animações simples; você pode criá-las sem mesmo ter que conhecer JavaScript.
-2.  As animações executam bem, mesmo sobre moderada carga do sistema. Animações simples podem normalmente ser executadas precariamente em JavaScript (a não ser que sejam bem feitas). A ferramenta de renderização pode usar frame-skipping e outras técnicas para manter a performance o mais estável possível.
-3.  Deixando o navegador controlar a sequência de animação permite ao navegador otimizar a performance e eficiência em, por exemplo, reduzir a frequência de update de animações correndo em abas que não estão visíveis no momento.
+1. São de fácil utilização para animações simples; você pode criá-las sem mesmo ter que conhecer JavaScript.
+2. As animações executam bem, mesmo sobre moderada carga do sistema. Animações simples podem normalmente ser executadas precariamente em JavaScript (a não ser que sejam bem feitas). A ferramenta de renderização pode usar frame-skipping e outras técnicas para manter a performance o mais estável possível.
+3. Deixando o navegador controlar a sequência de animação permite ao navegador otimizar a performance e eficiência em, por exemplo, reduzir a frequência de update de animações correndo em abas que não estão visíveis no momento.
 
 ## Configurando a animação
 
@@ -328,7 +328,7 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 
 # Veja-me mover
 
-Este exemplo mostra como usar animações CSS para fazer o elemento `H1 `se mover pela página.
+Este exemplo mostra como usar animações CSS para fazer o elemento `H1`se mover pela página.
 
 Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
 

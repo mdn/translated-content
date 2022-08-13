@@ -18,7 +18,7 @@ O cabeçalho de requisição HTTP **`Accept`** anuncia quais tipos de conteúdo,
 | Tipo de cabeçalho                                            | {{Glossary("Request header")}}                                                                                                                                                      |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{Glossary("Forbidden header name")}}             | não                                                                                                                                                                                           |
-| {{Glossary("CORS-safelisted request header")}} | sim, com a restrição adicional de que valores não podem conter um _byte de requisição de cabeçalho CORS inseguro:_` "():<>?@[\]{}`, Delete, Tab e outros caracteres de controle: 0x00 à 0x19. |
+| {{Glossary("CORS-safelisted request header")}} | sim, com a restrição adicional de que valores não podem conter um _byte de requisição de cabeçalho CORS inseguro:_`"():<>?@[\]{}`, Delete, Tab e outros caracteres de controle: 0x00 à 0x19. |
 
 ## Sintaxe
 

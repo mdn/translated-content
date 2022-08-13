@@ -16,7 +16,7 @@ O servidor deve enviar no cabeçalho de resposta "close" {{HTTPHeader("Connectio
 
 Essa resposta está sendo mais usada desde que alguns browsers como Chrome, Firefox 27+, e IE9, usam o mecanismo "HTTP pre-connection" para acelerar a navegação.
 
-> **Note:** **Nota:** alguns servidores simplesmente encerram a conexão sem enviar esssa mensagem.
+> **Nota:** alguns servidores simplesmente encerram a conexão sem enviar esssa mensagem.
 
 ## Status
 

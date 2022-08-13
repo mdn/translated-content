@@ -13,10 +13,8 @@ Módulos exportados ficam em {{jsxref("Strict_mod", "strict mode")}}, independen
 
 Há dois tipos de exportação:
 
-1.  Exportações Explícitas (Named Exports) (Zero ou mais exports por módulo)
-2.  Exportações Padrão (Default Exports) (Uma por módulo)
-
-<!---->
+1. Exportações Explícitas (Named Exports) (Zero ou mais exports por módulo)
+2. Exportações Padrão (Default Exports) (Uma por módulo)
 
     // Exportando recursos individuais
     export let name1, name2, …, nameN; // também var, const
@@ -119,7 +117,7 @@ export { function1, function2 };
 
 Mas onde `function1` e `function2` não ficam disponíveis dentro do módulo atual.
 
-> **Note:** **Nota:** Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
+> **Nota:** Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
 
 ```js
 import DefaultExport from 'bar.js'; // Válido

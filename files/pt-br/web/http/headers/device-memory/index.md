@@ -17,7 +17,7 @@ O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/
 | ------------------------------------------------ | ---------------------------------------- |
 | {{Glossary("Forbidden header name")}} | ?                                        |
 
-> **Note:** **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
 ## Sintaxe
 

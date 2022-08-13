@@ -22,12 +22,8 @@ Você também pode definir funções assíncronas usando uma {{jsxref("Operators
 - `nome`
   - : O nome da função.
 
-<!---->
-
 - `param`
   - : O nome de um parâmetro a ser passado para a função.
-
-<!---->
 
 - `instruções`
   - : As instruções que compõem o corpo da função.
@@ -36,7 +32,7 @@ Você também pode definir funções assíncronas usando uma {{jsxref("Operators
 
 Quando uma função assíncrona é chamada, ela retorna uma {{jsxref("Promise")}}. Quando a função assíncrona retorna um valor, a `Promise` será resolvida com o valor retornado. Quando a função assíncrona lança uma exceção ou algum valor, a `Promise` será rejeitada com o valor lançado.
 
-Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da `Promise `passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.
+Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da `Promise`passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.
 
 > **Note:** A proposta das funções `async/await` é de simplificar o uso de forma síncrona das `Promises` e executar alguns procedimentos em um grupo de `Promises`. Assim como `Promises` são similares a `callbacks` estruturados, funções `async/await` são similares à junção de `generators` com `Promises`.
 
@@ -104,7 +100,7 @@ async function pegarDadosProcessados(url) {
 }
 ```
 
-Note que no exemplo acima não tem a instrução `await` na instrução do `return`, porque o valor retornado de uma função `async é `implícitamente passado por um {{jsxref("Promise.resolve")}}.
+Note que no exemplo acima não tem a instrução `await` na instrução do `return`, porque o valor retornado de uma função `async é`implícitamente passado por um {{jsxref("Promise.resolve")}}.
 
 ## Especificações
 

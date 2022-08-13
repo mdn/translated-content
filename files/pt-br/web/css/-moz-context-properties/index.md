@@ -5,7 +5,7 @@ translation_of: Web/CSS/-moz-context-properties
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-> **Note:** **Nota**: Essa característica está disponível desde o Fireforx 55, mas só é suportada atualmente com imagens SVG carregadas via URLs `chrome://` ou `resource://`. Para experimentar o recurso em SVG na web é necessário definir `svg.context-properties.content.enabled` para `true`.
+> **Nota:** Essa característica está disponível desde o Fireforx 55, mas só é suportada atualmente com imagens SVG carregadas via URLs `chrome://` ou `resource://`. Para experimentar o recurso em SVG na web é necessário definir `svg.context-properties.content.enabled` para `true`.
 
 Se você referenciar uma imagem SVG em uma página web (como com o elemento {{htmlelement("img")}} ou como imagem de fundo), a imagem SVG pode coordenar com o elemento de incorporação (seu contexto) para que a imagem adote os valores da propriedade definidos no elemento de incorporação. Para fazer isso o elemento de incorporação pecisa listar as propriedades que precisarão ficar disponíveis para a imagem listando-os como valores da propriedade de **`-moz-context-properties`**, e a imagem precisa optar em usar essas propriedades usando valores como o `context-fill`.
 

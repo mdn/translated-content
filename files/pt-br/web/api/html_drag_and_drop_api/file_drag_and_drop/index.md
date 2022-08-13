@@ -10,7 +10,7 @@ As interfaces HTML Drag and Drop permitem que os aplicativos da Web arrastem e s
 
 Os principais passos para o drag and drop é definir a _drop zone_ (ou seja definir um elemento para a queda dos arquivos) e definir event handlers para os eventos {{event("drop")}} e {{event("dragover")}} . Essas etapas são descritas abaixo, incluindo exemplos de trechos de código. O codigo fonte esta disponivel em [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests e/ou issues são bem-vindas).
 
-> **Note:** Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}Define duas APIs diferentes para suportar arrastar e soltar arquivos. Uma API é a interface {{domxref("DataTransfer")}} e a segunda API é a interface {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}. Este exemplo ilustra o uso de ambas as APIs (e não usa nehuma interface específica do Gecko).
+> **Nota:** {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}Define duas APIs diferentes para suportar arrastar e soltar arquivos. Uma API é a interface {{domxref("DataTransfer")}} e a segunda API é a interface {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}. Este exemplo ilustra o uso de ambas as APIs (e não usa nehuma interface específica do Gecko).
 
 ## Definindo a drop _zone_
 
@@ -40,7 +40,7 @@ Por fim, um aplicativo pode querer estilizar o elemento da drop zone para indica
 }
 ```
 
-> **Note:** Nota: Observe que os eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo para o navegador do OS.
+> **Nota:** Observe que os eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo para o navegador do OS.
 
 ## Processo de drop
 

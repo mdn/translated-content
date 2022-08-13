@@ -29,7 +29,7 @@ Se você chamar `pop()` em um array vazio, ele retorna o valor {{jsxref("Global_
 
 ### Exemplo: Removendo o último elemento de um array
 
-O código seguinte cria o array `meuPeixe `contendo quatro elementos e então remove seu último elemento.
+O código seguinte cria o array `meuPeixe`contendo quatro elementos e então remove seu último elemento.
 
 ```js
 var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];

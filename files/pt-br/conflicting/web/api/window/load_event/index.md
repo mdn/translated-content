@@ -12,7 +12,7 @@ Um manipulador de eventos para o evento de carregamento do objeto {{domxref("win
 
     window.onload = funcRef;
 
-- `funcRef é a função do manipulador a ser chamada quando o evento de carregamento do objeto `{{domxref("window")}} `dispara.`
+- `funcRef é a função do manipulador a ser chamada quando o evento de carregamento do objeto`{{domxref("window")}} `dispara.`
 
 ## Exemplos
 
@@ -45,7 +45,7 @@ window.onload = function() {
 
 O evento de carregamento dispara no final do processo de carregamento do documento. Neste ponto, todos os objetos do documento estão no DOM, e todas as imagens, scripts, links e sub-frames terminaram de carregar.
 
-Existe também os [Gecko-Specific DOM Events](/pt-BR/docs/Web/Events), como o `DOMContentLoaded `e o `DOMFrameContentLoaded` (que pode ser manipulado utilizando o {{domxref("EventTarget.addEventListener()")}}) que são disparados após o DOM para a página ser construído, mas não espera outros recursos serem carregados.
+Existe também os [Gecko-Specific DOM Events](/pt-BR/docs/Web/Events), como o `DOMContentLoaded`e o `DOMFrameContentLoaded` (que pode ser manipulado utilizando o {{domxref("EventTarget.addEventListener()")}}) que são disparados após o DOM para a página ser construído, mas não espera outros recursos serem carregados.
 
 ## Especificações
 

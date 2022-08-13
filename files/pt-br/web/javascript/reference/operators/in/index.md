@@ -16,8 +16,6 @@ O **operador** **`in` **retorna `true` se a propriedade especificada estiver no 
 - `prop`
   - : Um string ou símbolo representando o nome de uma propriedade ou o índice de um array (não-símbolos serão trazidos para strings).
 
-<!---->
-
 - `object`
   - : Objeto para verificar se este (ou sua cadeia de protótipo) contém a propriedade com o nome especificado.
 

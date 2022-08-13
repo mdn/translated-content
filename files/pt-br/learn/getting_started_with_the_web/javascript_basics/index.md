@@ -39,24 +39,24 @@ No entanto, ficar confortável com o JavaScript é um pouco mais difícil do que
 
 > **Warning:** **Importante**: Se você não acompanhou o restante de nosso curso, [faça o download desse código exemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) e use-o como um ponto de partida.
 
-1.  Primeiro, vá para o seu site de teste e crie uma nova pasta chamada `scripts`. Em seguida, dentro da nova pasta de scripts que você acabou de criar, crie um novo arquivo chamado `main.js`. Salve na sua pasta de `scripts`.
-2.  Em seguida, no seu arquivo `index.html`, insira o seguinte elemento em uma nova linha logo antes da tag de fechamento `</body>`:
+1. Primeiro, vá para o seu site de teste e crie uma nova pasta chamada `scripts`. Em seguida, dentro da nova pasta de scripts que você acabou de criar, crie um novo arquivo chamado `main.js`. Salve na sua pasta de `scripts`.
+2. Em seguida, no seu arquivo `index.html`, insira o seguinte elemento em uma nova linha logo antes da tag de fechamento `</body>`:
 
     ```html
     <script src="scripts/main.js"></script>
     ```
 
-3.  Isso é basicamente a mesma coisa que o elemento {{htmlelement("link")}} para o CSS — ele aplica o JavaScript à página, para que ele tenha efeito no HTML (junto com o CSS e qualquer outra coisa na página).
-4.  Agora adicione o seguinte código no arquivo `main.js`:
+3. Isso é basicamente a mesma coisa que o elemento {{htmlelement("link")}} para o CSS — ele aplica o JavaScript à página, para que ele tenha efeito no HTML (junto com o CSS e qualquer outra coisa na página).
+4. Agora adicione o seguinte código no arquivo `main.js`:
 
     ```js
     const meuCabecalho = document.querySelector('h1');
     meuCabecalho.textContent = 'Ola mundo!';
     ```
 
-5.  Por fim, verifique se os arquivos HTML e Javascript estão salvos e, em seguida, carregue o `index.html` no navegador. Você deve ver algo do tipo:![](https://mdn.mozillademos.org/files/9543/hello-world.png)
+5. Por fim, verifique se os arquivos HTML e Javascript estão salvos e, em seguida, carregue o `index.html` no navegador. Você deve ver algo do tipo:![](https://mdn.mozillademos.org/files/9543/hello-world.png)
 
-> **Note:** **Nota**: A razão pela qual colocamos o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML, é que o HTML é carregado pelo navegador na ordem em que ele aparece no arquivo. Se o JavaScript é carregado primeiro ele pode afetar o HTML abaixo dele, mas as vezes isso pode não funcionar, já que o JavaScript seria carregado antes do HTML em que ele deveria trabalhar. Portanto, colocar o JavaScript próximo à parte inferior da página HTML geralmente é um meio de corrigir isto, veja [Estratégias de carregamento de scripts](/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript#Script_loading_strategies).
+> **Nota:** A razão pela qual colocamos o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML, é que o HTML é carregado pelo navegador na ordem em que ele aparece no arquivo. Se o JavaScript é carregado primeiro ele pode afetar o HTML abaixo dele, mas as vezes isso pode não funcionar, já que o JavaScript seria carregado antes do HTML em que ele deveria trabalhar. Portanto, colocar o JavaScript próximo à parte inferior da página HTML geralmente é um meio de corrigir isto, veja [Estratégias de carregamento de scripts](/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript#Script_loading_strategies).
 
 ### O que aconteceu?
 
@@ -64,7 +64,7 @@ Seu texto de título foi alterado para "Hello world!" usando JavaScript. Você f
 
 Depois disso, você define o valor da propriedade {{domxref ("Node.textContent", "textContent")}} para "Hello world!", na variável `meuCabecalho` (que representa o conteúdo do título).
 
-> **Note:** **Nota**: Os dois recursos usados acima são partes da [API do Modelo de Objeto de Documento (DOM)](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador), que permite manipular documentos.
+> **Nota:** Os dois recursos usados acima são partes da [API do Modelo de Objeto de Documento (DOM)](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador), que permite manipular documentos.
 
 ## Curso intensivo de fundamentos da linguagem
 
@@ -80,13 +80,13 @@ Vamos explicar alguns dos principais recursos da linguagem JavaScript, para dar 
 let minhaVariavel;
 ```
 
-> **Note:** **Nota**: Ponto-e-vírgula no fim de uma linha indica onde uma instrução termina; só é absolutamente necessário quando você precisa separar instruções em uma única linha. No entanto, algumas pessoas acreditam que é uma boa prática colocá-las no final de cada instrução. Existem outras regras para quando você deve ou não usá-las — consulte [Seu Guia para Ponto-e-Vírgula em Javascript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/) para mais detalhes.
+> **Nota:** Ponto-e-vírgula no fim de uma linha indica onde uma instrução termina; só é absolutamente necessário quando você precisa separar instruções em uma única linha. No entanto, algumas pessoas acreditam que é uma boa prática colocá-las no final de cada instrução. Existem outras regras para quando você deve ou não usá-las — consulte [Seu Guia para Ponto-e-Vírgula em Javascript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/) para mais detalhes.
 
-> **Note:** **Nota**: Você pode dar quase qualquer nome a uma variável, mas há algumas restrições (veja [esse artigo sobre regras de nomes de variáveis](http://www.codelifter.com/main/tips/tip_020.shtml)). Se você não tem certeza, você pode [conferir se sua variável tem um nome válido](https://mothereff.in/js-variables).
+> **Nota:** Você pode dar quase qualquer nome a uma variável, mas há algumas restrições (veja [esse artigo sobre regras de nomes de variáveis](http://www.codelifter.com/main/tips/tip_020.shtml)). Se você não tem certeza, você pode [conferir se sua variável tem um nome válido](https://mothereff.in/js-variables).
 
-> **Note:** **Nota**: JavaScript é case sensitive — `minhaVariavel` é diferente de `minhavariavel`. Se você estiver tendo problemas no seu código, cheque seu casing!
+> **Nota:** JavaScript é case sensitive — `minhaVariavel` é diferente de `minhavariavel`. Se você estiver tendo problemas no seu código, cheque seu casing!
 
-> **Note:** **Nota**: Para mais detalhes sobre a diferença entre `var` e `let`, veja[ A diferença entre var e let](/pt-BR/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let).
+> **Nota:** Para mais detalhes sobre a diferença entre `var` e `let`, veja[A diferença entre var e let](/pt-BR/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let).
 
 Depois de declarar uma variável, você pode dar a ela um valor:
 
@@ -155,7 +155,7 @@ Um `{{Glossary("operator", "operador")}}` é um símbolo matemático que produz 
 
 Há vários outros operadores para explorar, mas por enquanto esses são suficientes. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para ver uma lista completa.
 
-> **Note:** **Nota**: Misturar tipos de dados pode levar a resultados estranhos quando uma operação é executada, portanto, tome cuidado para declarar suas variáveis corretamente, e você obterá os resultados esperados. Por exemplo, digite `'35' + '25'` no seu console. Por que você não teve o resultado esperado? Porque as aspas transformam os números em strings, você acabou concatenando strings em vez de somar os números. Se você digitar `35 + 25`, você obterá o resultado correto.
+> **Nota:** Misturar tipos de dados pode levar a resultados estranhos quando uma operação é executada, portanto, tome cuidado para declarar suas variáveis corretamente, e você obterá os resultados esperados. Por exemplo, digite `'35' + '25'` no seu console. Por que você não teve o resultado esperado? Porque as aspas transformam os números em strings, você acabou concatenando strings em vez de somar os números. Se você digitar `35 + 25`, você obterá o resultado correto.
 
 ### Condicionais
 
@@ -176,10 +176,11 @@ A expressão dentro do `if ( ... )` é o teste — ela usa o operador de igualda
 
 {{Glossary("Function", "Funções")}} são uma maneira de encapsular funcionalidades que você deseja reutilizar. Quando você precisa de um procedimento, você pode chamar a função com um nome, em vez de reescrever o código inteiro a cada vez. Você já viu alguns usos de funções acima, por exemplo:
 
-1.  ```js
+1. ```js
     let minhaVariavel = document.querySelector('h1');
     ```
-2.  ```js
+
+2. ```js
     alert('Ola!');
     ```
 
@@ -206,7 +207,7 @@ multiplica(20, 20);
 multiplica(0.5, 3);
 ```
 
-> **Note:** **Nota**: A instrução [`return`](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) diz ao navegador para retornar a variável `resultado` da função para que ela esteja disponível para uso. Isso é necessário porque as variáveis definidas dentro das funções só estão disponíveis dentro destas funções. Isso é chamado {{Glossary("Scope", "Escopo")}} de variável (leia mais em[ escopo da variável](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope).)
+> **Nota:** A instrução [`return`](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) diz ao navegador para retornar a variável `resultado` da função para que ela esteja disponível para uso. Isso é necessário porque as variáveis definidas dentro das funções só estão disponíveis dentro destas funções. Isso é chamado {{Glossary("Scope", "Escopo")}} de variável (leia mais em[escopo da variável](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope).)
 
 ### Eventos
 
@@ -243,10 +244,10 @@ Agora que analisamos alguns fundamentos do JavaScript, vamos adicionar alguns re
 
 Nessa parte, nós adicionaremos outra imagem no nosso site, e vamos usar o JavaScript para alternar entre as duas, quando a imagem for clicada.
 
-1.  Antes de tudo, ache outra imagem que você gostaria que aparecesse no seu site. Tenha certeza que ela tem o mesmo tamanho que sua primeira imagem, ou o mais perto disso possível.
-2.  Salve a imagem na pasta `imagens`.
-3.  Renomeie a imagem para 'firefox2.png' (sem as aspas).
-4.  Vá no seu arquivo `main.js`, e digite o seguinte código JavaScript (se seu "Ola mundo" em JavaScript ainda estiver lá, delete-o):
+1. Antes de tudo, ache outra imagem que você gostaria que aparecesse no seu site. Tenha certeza que ela tem o mesmo tamanho que sua primeira imagem, ou o mais perto disso possível.
+2. Salve a imagem na pasta `imagens`.
+3. Renomeie a imagem para 'firefox2.png' (sem as aspas).
+4. Vá no seu arquivo `main.js`, e digite o seguinte código JavaScript (se seu "Ola mundo" em JavaScript ainda estiver lá, delete-o):
 
     ```js
     let minhaImagem = document.querySelector('img');
@@ -261,34 +262,34 @@ Nessa parte, nós adicionaremos outra imagem no nosso site, e vamos usar o JavaS
     }
     ```
 
-5.  Salve todos os arquivos e carregue o `index.html` no navegador. Agora quando você clicar na imagem, ela deve mudar para a outra!
+5. Salve todos os arquivos e carregue o `index.html` no navegador. Agora quando você clicar na imagem, ela deve mudar para a outra!
 
 Você armazena uma referência ao seu elemento {{htmlelement("img")}} na variável `minhaImagem`. Depois, você faz a propriedade do manipulador de evento `onclick` dessa variável igual a uma função sem nome (uma função "anônima"). Agora, toda vez que esse elemento de imagem é clicado:
 
-1.  Você recupera o valor do atributo `src` da imagem.
-2.  Você usa uma condicional para checar se o valor `src` é igual ao caminho da imagem original:
+1. Você recupera o valor do atributo `src` da imagem.
+2. Você usa uma condicional para checar se o valor `src` é igual ao caminho da imagem original:
 
-    1.  Se for, você muda o valor de `src` para o caminho da segunda imagem, forçando a outra imagem a ser carregada dentro do elemento {{htmlelement("img")}}.
-    2.  Se não é (significando que já mudou), nós mudamos o valor `src` de volta ao caminho da imagem, para o estado original.
+    1. Se for, você muda o valor de `src` para o caminho da segunda imagem, forçando a outra imagem a ser carregada dentro do elemento {{htmlelement("img")}}.
+    2. Se não é (significando que já mudou), nós mudamos o valor `src` de volta ao caminho da imagem, para o estado original.
 
 ### Adicionando uma mensagem personalizada de boas vindas
 
 Em seguida, adicionaremos outro trecho de código, alterando o título da página para uma mensagem personalizada de boas vindas quando o usuário realizar sua primeira visita ao site. Essa mensagem de boas vindas persistirá, quando o usuário deixar o site e voltar mais tarde — salvaremos a mensagem usando a [API de Armazenamento Web](/pt-BR/docs/Web/API/Web_Storage_API_pt_br). Incluiremos também uma opção para mudar o usuário e, portanto, a mensagem de boas vindas sempre que necessário.
 
-1.  Em `index.html`, adicione a seguinte linha de código antes do elemento {{htmlelement("script")}}:
+1. Em `index.html`, adicione a seguinte linha de código antes do elemento {{htmlelement("script")}}:
 
     ```html
     <button>Mudar usuário</button>
     ```
 
-2.  Em `main.js`, adicione o seguinte código no fim do arquivo, exatamente como está escrito — isso pega referências para o novo botão que adicionamos e para o título, e guarda ambos em variáveis:
+2. Em `main.js`, adicione o seguinte código no fim do arquivo, exatamente como está escrito — isso pega referências para o novo botão que adicionamos e para o título, e guarda ambos em variáveis:
 
     ```js
     let meuBotao = document.querySelector('button');
     let meuCabecalho = document.querySelector('h1');
     ```
 
-3.  Agora adicione a seguinte função para criar a saudação personalizada — isso não vai fazer nada ainda, mas corrigiremos isso em um momento:
+3. Agora adicione a seguinte função para criar a saudação personalizada — isso não vai fazer nada ainda, mas corrigiremos isso em um momento:
 
     ```js
     function defineNomeUsuario() {
@@ -300,7 +301,7 @@ Em seguida, adicionaremos outro trecho de código, alterando o título da págin
 
     Essa função contem uma função [`prompt()`](/pt-BR/docs/Web/API/Window/prompt), que traz uma caixa de diálogo assim como `alert()` faz. Este `prompt()`, no entanto, pede ao usuário para inserir algum dado e guarda os dados em uma variável quando o botão **OK** é pressionado. Nesse caso, estamos pedindo ao usuário para digitar seu nome. Em seguida, chamamos uma API denominada `localStorage`, o que nos permite guardar dados no navegador para usarmos mais tarde. Usamos a função `setItem()` de localStorage para criar e guardar um item de dado chamado `'nome'`, definindo seu valor para a variável `meuNome` que contém o nome que o usuário digitou. Finalmente, definimos o `textContent` do título como uma string, mais o nome recém-armazenado do usuário.
 
-4.  Em seguida, adicione esse bloco `if ... else` — poderíamos chamar isso de código de inicialização, pois ele estrutura o aplicativo quando é carregado pela primeira vez:
+4. Em seguida, adicione esse bloco `if ... else` — poderíamos chamar isso de código de inicialização, pois ele estrutura o aplicativo quando é carregado pela primeira vez:
 
     ```js
     if(!localStorage.getItem('nome')) {
@@ -313,7 +314,7 @@ Em seguida, adicionaremos outro trecho de código, alterando o título da págin
 
     Primeiro, esse bloco usa o operador de negação (NÃO lógico representado pelo `!`) para checar se o dado `nome` existe — se não existir, a função `defineNomeUsuario()` é executada para criá-lo. Se ele já existir (isto é, se o usuário já tiver digitado quando visitou o site anteriormente), nós recuperamos o nome guardado usando `getItem()` e associamos o `textContent` do título a uma string, mais o nome do usuário, como fizemos dentro de `defineNomeUsuario()`.
 
-5.  Finalmente, coloque o evento `onclick` no botão, para que quando clicado, ele execute a função `defineNomeUsuario()`. Isso permite que o usuário defina um novo nome sempre que quiser ao pressionar o botão:
+5. Finalmente, coloque o evento `onclick` no botão, para que quando clicado, ele execute a função `defineNomeUsuario()`. Isso permite que o usuário defina um novo nome sempre que quiser ao pressionar o botão:
 
     ```js
     meuBotao.onclick = function() { defineNomeUsuario();

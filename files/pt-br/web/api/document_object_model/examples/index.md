@@ -371,7 +371,7 @@ for (var i = 0; i < 2; i++) {
 
 - A propriedade {{domxref ("element.innerHTML", "innerHTML")}} de uma tabela nunca deve ser usada para modificar uma tabela, embora você possa usá-la para escrever uma tabela inteira ou o conteúdo de uma célula.
 - Se os métodos DOM Core {{domxref ("document.createElement")}} e {{domxref ("Node.appendChild")}} são usados para criar linhas e células, o IE requer que eles sejam anexados a um elemento tbody, enquanto outros Os navegadores permitirão acrescentar a um elemento da tabela (as linhas serão adicionadas ao último elemento tbody).
-- Há uma série de outros métodos convenientes pertencentes à[ tabela de interface](/pt-BR/docs/) que podem ser usados para criar e modificar tabelas.
+- Há uma série de outros métodos convenientes pertencentes à[tabela de interface](/pt-BR/docs/) que podem ser usados para criar e modificar tabelas.
 
 ## Subnav
 

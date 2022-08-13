@@ -10,8 +10,8 @@ IAlguns navegadores utilizam [Online/Offline events](http://www.whatwg.org/specs
 
 Para criar um bom aplicativo off-line, primeiramente é necessário que você saiba quando o aplicativo está off-line. Consequentemente, você também precisará saber quando seu aplicativo retorna ao estado on-line novamente, ou seja, os eventos são:
 
-1.  Você precisa saber quando o usuário está on-line novamente, assim você pode sincronizar novamente com o servidor.
-2.  Você precisa saber quando o usuário está off-line, então você deverá agendar os acessos ao servidor para mais tarde.
+1. Você precisa saber quando o usuário está on-line novamente, assim você pode sincronizar novamente com o servidor.
+2. Você precisa saber quando o usuário está off-line, então você deverá agendar os acessos ao servidor para mais tarde.
 
 Este é o processo que os eventos on-line/off-line ajudam a facilitar.
 

@@ -8,7 +8,7 @@ original_slug: Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegado
 
 Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desenvolvedores. Essas ferramentas fazem muitas coisas, desde inspecionar o HTML, CSS e JavaScript recém carregado e quais recursos foram requeridos até mostrar quanto tempo a página precisou para carregar. Este artigo explica como usar as funções básicas das ferramentas para desenvolvedores do seu navegador.
 
-> **Note:** **Nota**: Antes de você executar os exemplos abaixo, abra o [Beginner's example site](http://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) ). Você poderá abrir isso enquanto segue os passos abaixo.
+> **Nota:** Antes de você executar os exemplos abaixo, abra o [Beginner's example site](http://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) ). Você poderá abrir isso enquanto segue os passos abaixo.
 
 ## Como abrir o devtools no seu navegador
 
@@ -161,13 +161,15 @@ Aparecerá uma janela como a seguinte:
 
 Para ver o que acontece, tente inserir os seguintes trechos de código no console, um por um (e, em seguida, pressione Enter):
 
-1.  ```js
+1. ```js
     alert('hello!');
     ```
-2.  ```js
+
+2. ```js
     document.querySelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+
+3. ```js
     var myImage = document.createElement('img');
     myImage.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myImage);
@@ -175,13 +177,15 @@ Para ver o que acontece, tente inserir os seguintes trechos de código no consol
 
 Agora, tente inserir as seguintes versões incorretas do código e veja o que você obtém.
 
-1.  ```js
+1. ```js
     alert('hello!);
     ```
-2.  ```js
+
+2. ```js
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+
+3. ```js
     var myImage = document.createElement('img');
     myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myImage);

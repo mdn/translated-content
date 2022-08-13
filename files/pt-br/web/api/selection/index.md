@@ -108,7 +108,7 @@ A API de Seleção tem um comportamento comum (i.e. compartilhado entre navegado
 
 Os comportamentos são que um elemento editado recebe o foco se anteriormente a seleção estiver fora dele, então um método da API de seleção é executado e causa uma nova seleção que será feita em um único intervalo dentro do elemento sendo editado. O foco então é movido para o final do elemento.
 
-> **Note:** **Nota**: Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
+> **Nota:** Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
 
 O comportamento acima é aplicado para as seleções feitas usando os seguintes métodos:
 
@@ -168,5 +168,3 @@ Outras palavras chaves usadas nesta seção.
 - Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
 - Mozilla source code: {{Source("dom/webidl/Selection.webidl")}}
 - {{DOMxRef("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} used to be exposed to the web content until Firefox 29
-
-<!---->

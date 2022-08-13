@@ -37,7 +37,7 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
+
     ``````css hidden
     .parent { width: 250px; height:125px;}
     .box {
@@ -260,11 +260,11 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
 
 - {{cssxref("transition-timing-function")}}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As[ timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).`transition-timing-function: ease````html hidden
+  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As[timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).`transition-timing-function: ease````html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
+
     ``````css hidden
     .parent { width: 250px; height:125px;}
     .box {
@@ -483,7 +483,7 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
+
     ``````css hidden
     .parent {
         width: 250px;
@@ -917,8 +917,6 @@ Você pode usar o evento {{event("transitionend")}} para detectar a uma animaç�
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
-
-<!---->
 
 - `elapsedTime`
   - : A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.

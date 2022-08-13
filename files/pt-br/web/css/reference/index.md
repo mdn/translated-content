@@ -10,7 +10,7 @@ Use esta **referência de CSS** para navegar por um índice alfabético das prop
 
 Esta referência lista não somente as propriedades do CSS1 e CSS2.1, mas também referências para qualquer propriedade, conceito padronizado ou estabilizado do CSS3.
 
-Veja também [Extensões CSS Mozilla ](/en/CSS/CSS_Reference/Mozilla_Extensions "en/CSS_Reference/Mozilla_Extensions")para propriedades específicas do Gecko prefixadas com `-moz` e [Extensões CSS do WebKit](/en/CSS/CSS_Reference/Webkit_Extensions "WebKit extensions") para propriedades específicas do WebKit. Veja [Visão geral de propriedades CSS prefixadas por distribuidor](http://peter.sh/experiments/vendor-prefixed-css-property-overview/) por Peter Beverloo para todas as propriedades prefixadas.
+Veja também [Extensões CSS Mozilla](/en/CSS/CSS_Reference/Mozilla_Extensions "en/CSS_Reference/Mozilla_Extensions")para propriedades específicas do Gecko prefixadas com `-moz` e [Extensões CSS do WebKit](/en/CSS/CSS_Reference/Webkit_Extensions "WebKit extensions") para propriedades específicas do WebKit. Veja [Visão geral de propriedades CSS prefixadas por distribuidor](http://peter.sh/experiments/vendor-prefixed-css-property-overview/) por Peter Beverloo para todas as propriedades prefixadas.
 
 {{ CSS_Ref() }}
 

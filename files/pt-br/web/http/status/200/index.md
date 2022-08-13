@@ -14,7 +14,7 @@ O significado de sucesso depende do método de requisição HTTP:
 - {{HTTPMethod("POST")}}: O recurso descrevendo o resultado da ação é transmitido no corpo da mensagem.
 - {{HTTPMethod("TRACE")}}: O corpo da mensagem contém a mensagem da requisição tal qual foi recebida pelo servidor.
 
-O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} geralmente não são ` 200 ``OK`, e sim {{HTTPStatus("204")}} `No Content` (ou {{HTTPStatus("201")}} `Created` quando o recurso é carregado pela primeira vez).
+O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} geralmente não são `200 ``OK`, e sim {{HTTPStatus("204")}} `No Content` (ou {{HTTPStatus("201")}} `Created` quando o recurso é carregado pela primeira vez).
 
 ## Status
 

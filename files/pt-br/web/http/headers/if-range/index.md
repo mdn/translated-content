@@ -32,8 +32,6 @@ O caso de uso mais comum é continuar um _download_, para garantir que o recurso
 - \<etag>
   - : _Tags_ de entidade que representam unicamente os recursos requisitados. Eles são uma cadeia de caracteres ASCII colocados entre aspas duplas (como `"675af34563dc-tr34"`). Elas podem ser prefixadas por `W/` para indicar que o _algoritmo de comparação fraco_ deve ser utilizado.
 
-<!---->
-
 - \<nome-dia>
   - : Um entre "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (sensível ao caso).
 - \<dia>
@@ -73,5 +71,5 @@ O caso de uso mais comum é continuar um _download_, para garantir que o recurso
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("206")}}`Partial Content`
 - [Requisições Condicionais HTTP](/pt-BR/docs/Web/HTTP/Conditional_requests)

@@ -18,7 +18,7 @@ Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguinte
 - A extensão TLS do tipo `signed_certificate_timestamp` enviada durante um _handshake_.
 - Dando suporte a OCSP (que é, a extensão TLS `status_request`) e provendo uma `SignedCertificateTimestampList`
 
-> **Note:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos ](https://www.certificate-transparency.org/known-logs)**.
+> **Note:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
 
 > **Note:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
 

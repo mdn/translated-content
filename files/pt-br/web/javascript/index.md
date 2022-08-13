@@ -41,8 +41,6 @@ Vá para a [Área de aprendizado de JavaScript](/pt-BR/docs/Learn/JavaScript) se
 - [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   - : Uma visão geral para aqueles que _pensam_ que conhecem JavaScript.
 
-<!---->
-
 - [Estruturas de dados do JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures)
   - : Um resumo das estruturas de dados disponíveis em JavaScript.
 - [Comparações de igualdade e uniformidade](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness)

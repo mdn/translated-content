@@ -14,7 +14,7 @@ A interface **Geolocation** representa um objeto ábil de programaticamente obte
 
 Um objeto com tal interface é obtido utilizando a propriedade {{domxref("NavigatorGeolocation.geolocation")}} implementada pelo objeto {{domxref("Navigator")}}.
 
-> **Note:** **Nota:** Por questões de segurança, quando uma página tenta obter acesso às informações de localização o usuário é notificado e uma requisição é feita para o mesmo fornecesser a permissão. Saiba que cada navegaor possui suas próprias políticas e métodos para requisitar tal permissão.
+> **Nota:** Por questões de segurança, quando uma página tenta obter acesso às informações de localização o usuário é notificado e uma requisição é feita para o mesmo fornecesser a permissão. Saiba que cada navegaor possui suas próprias políticas e métodos para requisitar tal permissão.
 
 ## Propriedades
 

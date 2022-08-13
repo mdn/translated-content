@@ -26,22 +26,14 @@ As declarações **try...catch** marcam um bloco de declarações para testar (*
 - `try_statements`
   - : Declarações (statements) a serem executadas.
 
-<!---->
-
 - `catch_statements_1`, `catch_statements_2`
   - : Declarações que são executadas se uma exceção é lançada no bloco `try.`
-
-<!---->
 
 - `exception_var_1`, `exception_var_2`
   - : Um indentificador que leva um objeto exceção para uma cláusula `catch` associada.
 
-<!---->
-
 - `condition_1`
   - : Uma expressão condicional.
-
-<!---->
 
 - `finally_statements`
   - : Declarações que são executadas depois que a declaração `try` é completada. Essas declarações são executadas independetemente se uma exceção foi ou não lançada ou capturada.
@@ -50,13 +42,13 @@ As declarações **try...catch** marcam um bloco de declarações para testar (*
 
 A declaração `try` consiste em um bloco `try`, que contém uma ou mais declarações, e ao menos uma cláusula `catch` ou uma cláusula `finally`, ou ambas. Ou seja, há 3 formas de declarações `try` :
 
-1.  `try...catch`
-2.  `try...finally`
-3.  `try...catch...finally`
+1. `try...catch`
+2. `try...finally`
+3. `try...catch...finally`
 
-Uma cláusula `catch` contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco `try`. Ou seja, se você quer que o bloco `try `tenha êxito, e caso não tenha, você quer que o controle passe para o bloco `catch`. Caso qualquer declaração dentro do bloco `try` (ou em uma função chamada no interior do bloco `try`) lançar uma exceção o controle imediatamente muda para a cláusula `catch`. Se nenhuma exceção for lançada no bloco `try` a cláusula `catch` é ignorada.
+Uma cláusula `catch` contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco `try`. Ou seja, se você quer que o bloco `try`tenha êxito, e caso não tenha, você quer que o controle passe para o bloco `catch`. Caso qualquer declaração dentro do bloco `try` (ou em uma função chamada no interior do bloco `try`) lançar uma exceção o controle imediatamente muda para a cláusula `catch`. Se nenhuma exceção for lançada no bloco `try` a cláusula `catch` é ignorada.
 
-A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes ao `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
+A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch`porém antes das declarações seguintes ao `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
 
 Você pode aninhar uma ou mais declarações `try`. Caso uma declaração `try` interior não tenha uma cláusula `catch`, a cláusula catch pertencente a declaração `try` que a envolve é introduzida.
 
@@ -124,9 +116,9 @@ Esse identificador é local para a cláusula `catch`. Ou seja, é criado quando 
 
 ### A cláusula `finally`
 
-A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes a declaração `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
+A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch`porém antes das declarações seguintes a declaração `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
 
-A cláusula `finally` contém declarações para executarem após a execução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes a declaração `try`. A cláusula `finally` é excutada independente se uma exceção for lançada ou não. Caso uma exceção seja lançada, as declarações no interior da cláusula `finally` são executadas mesmo que nenhum `catch` manipule a exceção.
+A cláusula `finally` contém declarações para executarem após a execução do bloco `try` e da(s) cláusula(s) `catch`porém antes das declarações seguintes a declaração `try`. A cláusula `finally` é excutada independente se uma exceção for lançada ou não. Caso uma exceção seja lançada, as declarações no interior da cláusula `finally` são executadas mesmo que nenhum `catch` manipule a exceção.
 
 Você pode utilizar a cláusula `finally` para fazer seu script falhar graciosamente quando uma exceção ocorrer; por exemplo, você pode precisar liberar um recurso que seu script possui vinculado. O exemplo seguinte abre um aquivo e então executa declarações que utilizam o arquivo (server-side JavaScript permite que você acesse arquivos). Se uma exceção for lançada enquanto o arquivo estiver aberto, a cláusula `finally` fecha o arquivo antes que o script falhe.
 
@@ -211,7 +203,7 @@ Qualquer exceção lançada será capturada apenas uma vez pelo bloco `catch` en
 
 ### Retornando de um bloco `finally`
 
-Caso o bloco `finally` retorne um valor, esse valor torna-se o valor de retorno do produto de `try-catch-finally `inteiro, independente de qualquer declaração return nos blocos `try` e `catch`. Isso inclui exceções lançadas dentro do bloco `catch`:
+Caso o bloco `finally` retorne um valor, esse valor torna-se o valor de retorno do produto de `try-catch-finally`inteiro, independente de qualquer declaração return nos blocos `try` e `catch`. Isso inclui exceções lançadas dentro do bloco `catch`:
 
     try {
       try {

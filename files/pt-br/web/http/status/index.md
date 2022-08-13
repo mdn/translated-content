@@ -11,11 +11,11 @@ translation_of: Web/HTTP/Status
 
 Os códigos de _status_ das respostas HTTP indicam se uma requisição HTTP foi corretamente concluída. As respostas são agrupadas em cinco classes:
 
-1.  Respostas de informação (`100`-`199`),
-2.  Respostas de sucesso (`200`-`299`),
-3.  Redirecionamentos (`300`-`399`)
-4.  Erros do cliente (`400`-`499`)
-5.  Erros do servidor (`500`-`599`).
+1. Respostas de informação (`100`-`199`),
+2. Respostas de sucesso (`200`-`299`),
+3. Redirecionamentos (`300`-`399`)
+4. Erros do cliente (`400`-`499`)
+5. Erros do servidor (`500`-`599`).
 
 Os status abaixo são definidos pela [seção 10 da RFC 2616](https://tools.ietf.org/html/rfc2616#section-10). Você pode encontrar uma versão atualizada da especificação na [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.5.1).
 
@@ -38,8 +38,6 @@ Os status abaixo são definidos pela [seção 10 da RFC 2616](https://tools.ietf
 - `HEAD`: Os cabeçalhos da entidade estão no corpo da mensagem.
 - `PUT` ou `POST`: O recurso descrevendo o resultado da ação é transmitido no corpo da mensagem.
 - `TRACE`: O corpo da mensagem contém a mensagem de requisição recebida pelo servidor.
-
-<!---->
 
 - {{HTTPStatus(200, "200 OK")}}
   - : Estas requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP:
@@ -76,7 +74,7 @@ Os status abaixo são definidos pela [seção 10 da RFC 2616](https://tools.ietf
   - : Essa resposta é usada para questões de cache. Diz ao cliente que a resposta não foi modificada. Portanto, o cliente pode usar a mesma versão em cache da resposta.
 - `305 Use Proxy` {{deprecated_inline}}
   - : Foi definida em uma versão anterior da especificação HTTP para indicar que uma resposta deve ser acessada por um proxy. Foi depreciada por questões de segurança em respeito a configuração em banda de um proxy.
-- `306 unused `{{deprecated_inline}}
+- `306 unused`{{deprecated_inline}}
   - : Esse código de resposta não é mais utilizado, encontra-se reservado. Foi usado numa versão anterior da especificação HTTP 1.1.
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
   - : O servidor mandou essa resposta direcionando o cliente a buscar o recurso requisitado em outra URI com o mesmo método que foi utilizado na requisição original. Tem a mesma semântica do código `302 Found`, com a exceção de que o user-agent _não deve_ mudar o método HTTP utilizado: se um `POST` foi utilizado na primeira requisição, um `POST` deve ser utilizado na segunda.

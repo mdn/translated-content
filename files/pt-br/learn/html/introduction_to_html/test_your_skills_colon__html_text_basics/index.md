@@ -14,7 +14,7 @@ original_slug: Aprender/HTML/Introducao_ao_HTML/Test_your_skills:_HTML_text_basi
 
 O objetivo deste teste de habilidades é avaliar se você entendeu nosso artigo [Fundamentos do texto em HTML.](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)
 
-> **Note:** **Nota**: Você pode testar suas soluções nos editores interativos abaixo, entretanto pode ser de ajuda fazer download do código e usar uma ferramenta online como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para trabalhar nas tarefas.
+> **Nota:** Você pode testar suas soluções nos editores interativos abaixo, entretanto pode ser de ajuda fazer download do código e usar uma ferramenta online como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para trabalhar nas tarefas.
 >
 > Se você ficar travado em alguma tarefa, peça-nos ajuda — veja a seção[Assessment or further help](#assessment_or_further_help) no final desta página.
 
@@ -52,8 +52,8 @@ Você pode praticar os exemplos nos Editores Interativos acima.
 
 Se você gostaria de ter seu trabalho avaliado ou está travado e quer pedir ajuda:
 
-1.  Coloque seu trabalho em um editor online compartilhável como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Você pode escrever o código por si só ou usar os arquivos linkados nas seções acima.
-2.  Escreva um post pedindo por avaliação e/ou ajuda no [Fórum de discussão do MDN na categoria Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
+1. Coloque seu trabalho em um editor online compartilhável como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Você pode escrever o código por si só ou usar os arquivos linkados nas seções acima.
+2. Escreva um post pedindo por avaliação e/ou ajuda no [Fórum de discussão do MDN na categoria Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
     - Um título descritivo como "Avaliação desejada para o teste de habilidade Texto básico em HTML 1"
     - Detalhes sobre o que você já tentou e o que você gostaria que fizéssemos, p. ex. se você está travado e precisa de ajuda ou se deseja uma avaliação.

@@ -19,7 +19,7 @@ Este capítulo apresenta coleções de dados que são ordenados por uma chave; O
 
 ECMAScript 6 apresenta uma nova estrutura de dados para mapear valores para valores. Um objeto {{jsxref("Map")}} é um simples mapa de chave/valor que pode ter seus elementos iterados por ordem de inserção.
 
-O código a seguir mostra algumas operações básicas com um `Map`. Veja também a página de referência do {{jsxref("Map")}} para mais exemplos e a API completa. Você pode usar um laço {{jsxref("Statements/for...of","for...of")}} para retornar um array de` [chave, valor]` para cada iteração.
+O código a seguir mostra algumas operações básicas com um `Map`. Veja também a página de referência do {{jsxref("Map")}} para mais exemplos e a API completa. Você pode usar um laço {{jsxref("Statements/for...of","for...of")}} para retornar um array de`[chave, valor]` para cada iteração.
 
 ```js
 var sayings = new Map();
@@ -47,7 +47,7 @@ sayings.size; // 0
 Tradicionalmente, {{jsxref("Object", "objetos", "", 1)}} tem sido usado para mapear strings para valores. Objetos permitem que você defina chaves para valores, recupere esses valores, exclua chaves e detecte se algo está armazenado em uma chave. Objetos `Map`, contudo, possuem algumas vantagens que os tornam mapas melhores.
 
 - As chaves de um `Objeto` são {{jsxref("Global_Objects/String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
-- Você pode obter o tamanho de um `Map` facilmente enquanto que para um `Object, `você tem que obter manualmente o seu tamanho.
+- Você pode obter o tamanho de um `Map` facilmente enquanto que para um `Object,`você tem que obter manualmente o seu tamanho.
 - A iteração de mapas é por ordem de inserção dos elementos.
 - Um `Object` tem um protótipo, então existem chaves padrão no mapa. (este pode ser ignorado usando `map = Object.create(null)`).
 
@@ -65,7 +65,7 @@ Uma diferença para objetos `Map` é que chaves `WeakMap` não são enumeráveis
 
 Para mais informações e código de exemplo, veja também "Por quê \_Weak_Map?" na página de referência {{jsxref("WeakMap")}}.
 
-Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6" ](http://fitzgeraldnick.com/weblog/53/)em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado `não é exportado pelo módulo.
+Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](http://fitzgeraldnick.com/weblog/53/)em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado`não é exportado pelo módulo.
 
 ```js
 const privates = new WeakMap();

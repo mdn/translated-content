@@ -28,7 +28,7 @@ Os novos argumentos _`locales`_ e _`options`_ permitem que os aplicativos especi
 - `compareString`
   - : A string com a qual a _`referenceStr`_ é comparada.
 - `locales` _e _`options`
-  - : Esses argumentos personalizam o comportamento da função e permitem que os aplicativos especifiquem o idioma cujas convenções de formatação devem ser usadas. Em implementações que ignoram os argumentos _`locales`_ e _`options`_, a localidade usada e a forma da string retornada são inteiramente dependentes da implementação.Consulte o [construtor ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)[`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) para obter detalhes sobre esses parâmetros e como usá-los.
+  - : Esses argumentos personalizam o comportamento da função e permitem que os aplicativos especifiquem o idioma cujas convenções de formatação devem ser usadas. Em implementações que ignoram os argumentos _`locales`_ e _`options`_, a localidade usada e a forma da string retornada são inteiramente dependentes da implementação.Consulte o [construtor](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)[`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) para obter detalhes sobre esses parâmetros e como usá-los.
 
 ### Valor retornado
 

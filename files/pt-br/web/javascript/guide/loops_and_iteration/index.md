@@ -40,10 +40,10 @@ Um laço [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) é repetido 
 
 Quando um for é executado, ocorre o seguinte:
 
-1.  A expressão `expressao Inicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
-2.  A expressão `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira.
-3.  A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
-4.  A atualização da expressão `incremento`, se houver, executa, e retorna o controle para o passo 2.
+1. A expressão `expressao Inicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
+2. A expressão `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira.
+3. A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
+4. A atualização da expressão `incremento`, se houver, executa, e retorna o controle para o passo 2.
 
 ### Exemplo
 
@@ -178,8 +178,8 @@ Use [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) para terminar
 
 Segue a sintaxe do break:
 
-1.  `break;`
-2.  `break label;`
+1. `break;`
+2. `break label;`
 
 Na primeira opção será encerrado o laço de repetição mais interno ou `switch`. Já na segunda opção será encerrada o bloco de código referente a label.
 
@@ -225,8 +225,8 @@ A declaração [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/contin
 
 Segue a sintaxe do `continue`:
 
-1.  `continue;`
-2.  `continue `_`label;`_
+1. `continue;`
+2. `continue`_`label;`_
 
 ### Exemplo 1
 

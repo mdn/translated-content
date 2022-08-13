@@ -18,7 +18,7 @@ O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode
 
 A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte `X-Frame-Options`.
 
-> **Note:** **Nota:** O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
+> **Nota:** O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
 
 | Tipo de cabeçalho                                | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -44,7 +44,7 @@ Se você especifica `DENY`, não somente tentativas em carregar a página em um 
 
 ## Exemplos
 
-> **Note:** **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
+> **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
 
 ### Configurando o Apache
 

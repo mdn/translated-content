@@ -14,7 +14,7 @@ original_slug: Web/HTTP/Headers/Conexão
 
 O cabeçalho **`Connection`** controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for `keep-alive`, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.
 
-> **Note:** **Nota:** [Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> **Nota:** [Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
 Exceto pelos cabeçalhos padrões _hop-by-hop_ (salto-por-salto) ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} e {{HTTPHeader("Proxy-Authenticate")}}), quaisquer cabeçalhos _hop-by-hop_ usados pela mensagem devem estar listados no cabeçalho `Connection`, para que o primeiro proxy saiba que tem que consumi-los e não repassá-los além. Os cabeçalhos _hop-by-hop_ padrões podem ser listados também (como é o caso do {{HTTPHeader("Keep-Alive")}}, mas não é obrigatório).
 

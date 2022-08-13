@@ -64,14 +64,19 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.rootNode")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Retorna um objeto {{domxref("Node")}} representando o nó mais alto em uma árvore, ou o nó atual, se ele for o mais alto da árvore. Isso foi substituído por {{domxref("Node.getRootNode()")}}.
+
 - ### Propriedades obsoletas
 
   {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
 
-  - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.> **Note:** **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML. {{gecko_minversion_inline("1.9.2")}}
+  - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
+
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML. {{gecko_minversion_inline("1.9.2")}}
 
 - {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
-  - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.> **Note:** **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}
+  - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
+
+  > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}
 - {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
   - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
 
@@ -150,7 +155,7 @@ Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `paren
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object "en-US/docs/JavaScript/Reference/Global_Objects/Object")` do tipo Node`).
+  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object "en-US/docs/JavaScript/Reference/Global_Objects/Object")`do tipo Node`).
 - `callbackFunction`
   - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
 

@@ -10,7 +10,7 @@ Você tem um formulário — um formulário de contato, por exemplo — no qual 
 
 ## O formulário
 
-Primeiro, por favor leia sobre a técnica de [`aria-required` ](/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields "/en/Web/Accessibility/ARIA/forms/Basic_form_hints")if you have not done so, as this technique expands upon that.
+Primeiro, por favor leia sobre a técnica de [`aria-required`](/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields "/en/Web/Accessibility/ARIA/forms/Basic_form_hints")if you have not done so, as this technique expands upon that.
 
 Here is a simple form:
 
@@ -41,9 +41,9 @@ Here is a simple form:
 
 Form validations consists of several steps:
 
-1.  Checking if the e-mail address or entered name are valid. Each field has a set of criteria which must be met in order to pass validation. In order to simplify this example, we’ll check whether the e-mail address contains the “@” symbol, and if the name entry contains at least 1 character.
-2.  If the above criteria is not met, the field’s `aria-invalid` attribute will be given a value of “`true`”.
-3.  If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘`alert`’ function, we’ll use a simple WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus (caused by the “`onblur`” handler in JavaScript's default ‘`alert`’ function).
+1. Checking if the e-mail address or entered name are valid. Each field has a set of criteria which must be met in order to pass validation. In order to simplify this example, we’ll check whether the e-mail address contains the “@” symbol, and if the name entry contains at least 1 character.
+2. If the above criteria is not met, the field’s `aria-invalid` attribute will be given a value of “`true`”.
+3. If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘`alert`’ function, we’ll use a simple WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus (caused by the “`onblur`” handler in JavaScript's default ‘`alert`’ function).
 
 Below is example JavaScript code which could be inserted above the closing “`head`” tag:
 
@@ -91,8 +91,8 @@ To see if it is valid, the function checks whether the `indexOf` the `input`’s
 
 If invalid, the function does two things:
 
-1.  It sets the element’s `aria-invalid` attribute to “`true`”, which will indicate to screen readers that there is invalid content in here.
-2.  It will call the `addAlert` function to add the alert with the provided error message.
+1. It sets the element’s `aria-invalid` attribute to “`true`”, which will indicate to screen readers that there is invalid content in here.
+2. It will call the `addAlert` function to add the alert with the provided error message.
 
 If the search term is found, the `aria-invalid` attribute is reset to “`false`”. In addition, any leftover alerts are removed.
 
@@ -122,8 +122,8 @@ All that’s left now is add the event handler. We need to change the two inputs
 
 If you use Firefox 3 and a currently-supported screen reader, try the following:
 
-1.  Enter only your first name as the name. When tabbing, you’ll hear an alert that tells you you’ve entered an invalid name. You can then shift-tab back and correct the error.
-2.  Enter an e-mail address without the “@” symbol. When tabbing out of this field, you should hear a warning that says you didn’t enter a valid e-mail address.
+1. Enter only your first name as the name. When tabbing, you’ll hear an alert that tells you you’ve entered an invalid name. You can then shift-tab back and correct the error.
+2. Enter an e-mail address without the “@” symbol. When tabbing out of this field, you should hear a warning that says you didn’t enter a valid e-mail address.
 
 In both cases, when returning focus to the field in question, your screen reader should tell you that this field is invalid. JAWS 9 supports this, but JAWS 8 does not, so this may not work in all versions of the screen readers supported.
 

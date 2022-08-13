@@ -30,11 +30,11 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 
 - Seletores básicos
 
-  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors)` elementname`
+  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors)`elementname`
   - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
   - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
-  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors)`* ns|* *|*`
+  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors)`[attr=value]`
   - `Seletores de estado a:active, a:visited`
 
 - Combinadores

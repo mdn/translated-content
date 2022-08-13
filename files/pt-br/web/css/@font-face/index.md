@@ -42,7 +42,7 @@ A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um 
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Permite o controle de baixo nível sobre as variações de fonte OpenType ou TrueType, especificando os nomes dos quatro eixos das letras dos recursos para variar, juntamente com seus valores de variação.
 - {{cssxref("@font-face/src", "src")}}
-  - : Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:`css src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf) format("truetype"); `Os tipos disponíveis são: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, e `"svg"`.
+  - : Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:`css src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf) format("truetype");`Os tipos disponíveis são: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, e `"svg"`.
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : O intervalo de pontos de código Unicode a serem usados na fonte.
 

@@ -65,5 +65,5 @@ Existem dois casos de uso comuns:
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}}`Not Modified`
+- {{HTTPStatus("412")}}`Precondition Failed`

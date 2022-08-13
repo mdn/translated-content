@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 
 O método **`toGMTString()`** converte a data para uma cadeia de caracteres (_string)_, usando as convenções de Internet para o Horário de Greenwich (GMT). O formato exato do valor retornado por `toGMTString()` varia de acordo com plataforma e navegador, em geral ele deve representar uma _string_ legível para um ser humano.
 
-> **Note:** **Nota:** `toGMTString()` está depreciado e não deve ser mais usado. Ele se mantém implementado somente para retrocompatibilidade; por favor use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
+> **Nota:** `toGMTString()` está depreciado e não deve ser mais usado. Ele se mantém implementado somente para retrocompatibilidade; por favor use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
 
 ## Sintaxe
 

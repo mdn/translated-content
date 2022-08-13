@@ -15,7 +15,7 @@ original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 
 O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis).
 
-> **Note:** **Nota**: Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
+> **Nota:** Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
 >
 > Se você travar, peça ajuda — veja a seção [Assessment or further help](#assessment_or_further_help) na parte inferior desta página.
 
@@ -61,8 +61,8 @@ Você pode praticar esses exemplos nos editores interativos acima.
 
 Se você gostaria que seu trabalho fosse avaliado, ou está travado e quer pedir ajuda:
 
-1.  Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
-2.  Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
+1. Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
+2. Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
     - Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".
     - Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.

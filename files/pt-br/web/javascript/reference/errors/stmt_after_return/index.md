@@ -20,7 +20,7 @@ Codigo inacessível depois da declaração de retorno pode ocorrer nas seguintes
 - Quando usado em uma expressão após a declaração de um {{jsxref("Statements/return", "return")}} , ou
 - quando usado em uma expressão **return** sem ponto e vírgula porém incluindo uma expressão diretamente depois.
 
-Quando existe uma expressão após uma declaração válida de `return, `um warning é dado para indicar que o código depois da declaração `return` é inacessível, significando que ele pode nunca ser executado.
+Quando existe uma expressão após uma declaração válida de `return,`um warning é dado para indicar que o código depois da declaração `return` é inacessível, significando que ele pode nunca ser executado.
 
 Porque eu devo usar ponto-e-virgula após declarações `return`? No caso de declarações `return` sem ponto-e-vírgula, ele pode deixar obscuro se o desenvolvedor quis usar o return na proxima linha, ou parar a execução e retornar. O warning indica que há uma ambiguidade no modo que a declaração `return` foi escrita.
 

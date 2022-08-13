@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 **`Promise`** é um objeto usado para processamento assíncrono. Um `Promise` (_de "promessa"_) representa um valor que pode estar disponível agora, no futuro ou nunca.
 
-> **Note:** **Nota:** Esse artigo descreve o construtor `Promise,`os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de [utilizando promises](/pt-BR/docs/Web/JavaScript/Guide/Usando_promises). O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".
+> **Nota:** Esse artigo descreve o construtor `Promise,`os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de [utilizando promises](/pt-BR/docs/Web/JavaScript/Guide/Usando_promises). O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".
 
 ## Descrição
 
@@ -43,12 +43,8 @@ Como os métodos `Promise.prototype.then` e `Promise.prototype.catch` retornam p
 - {{jsxref("Promise.race", "Promise.race(lista)")}}
   - : Retorna uma promise que resolve ou rejeita assim que uma das promises do argumento lista resolve ou rejeita, com um valor ou o motivo daquela promise.
 
-<!---->
-
 - {{jsxref("Promise.reject", "Promise.reject(motivo)")}}
   - : Retorna um objeto `Promise` que foi rejeitado por um dado motivo.
-
-<!---->
 
 - {{jsxref("Promise.resolve", "Promise.resolve(valor)")}}
   - : Retorna um objeto `Promise` que foi resolvido com um dado valor. Se o valor é `thenable` (possui um método `then`), a promise retornada "seguirá" este método, adotando esse estado eventual; caso contrário a promise retornada será realizada com o valor. Geralmente, se você quer saber se um valor é uma promise ou não, utilize {{jsxref("Promise.resolve", "Promise.resolve(valor)")}} e trabalhe com a valor de retorno que é sempre uma promise.
@@ -127,7 +123,7 @@ Este exemplo é executado pelo click do botão. Você precisa de uma versão de 
 
 ### Carregando uma imagem com XHR
 
-Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN[ promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
+Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN[promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
 
 ## Especificações
 

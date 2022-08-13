@@ -40,7 +40,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** **Nota**: Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> **Nota:** Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
 ## Especificações
 
@@ -54,7 +54,7 @@ function setStyles() {
 
 Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos [estatísticas detalhadas dos níveis de compatibilidade para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
 
-> **Note:** **Nota:** A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.
+> **Nota:** A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.
 
 ## Veja também
 

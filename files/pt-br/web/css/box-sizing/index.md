@@ -13,8 +13,6 @@ A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da 
 
     Sintaxe formal: {{csssyntax("box-sizing")}}
 
-<!---->
-
     box-sizing: content-box
     box-sizing: border-box
 

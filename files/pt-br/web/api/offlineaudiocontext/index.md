@@ -43,7 +43,7 @@ Quando a 'promise' `startRendering()` é resolvida, a renderização foi conclu�
 
 Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa `AudioBuffer`. Isso é jogado como parte de um gráfico de áudio padrão simples.
 
-> **Note:** **Nota**: Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
+> **Nota:** Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
 
 ```js
 // define o contexto de áudio online e offline

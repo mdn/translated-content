@@ -75,7 +75,7 @@ var fatorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
 console.log(fatorial(3));
 ```
 
-As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função `map `sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:
+As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função `map`sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:
 
 ```js
 function map(f,a) {
@@ -106,7 +106,7 @@ if (num == 0){
 }
 ```
 
-Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string` `em tempo real, como no método {{jsxref("eval()")}}.
+Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string``em tempo real, como no método {{jsxref("eval()")}}.
 
 Um **método** é uma função invocada por um objeto. Leia mais sobre objetos e métodos em [Trabalhando com Objetos](/pt-BR/docs/JavaScript/Guide/Working_with_Objects "en-US/docs/JavaScript/Guide/Working with Objects").
 
@@ -128,7 +128,7 @@ Funções devem estar no escopo quando são chamadas, mas a declaração de uma 
 
 O escopo de uma função é a função na qual ela é declarada, ou todo o programa se ela é declarada no nível superior.
 
-> **Note:** Nota: Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., `function funcNome(){ })`. O código a seguir não vai funcionar.
+> **Nota:** Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., `function funcNome(){ })`. O código a seguir não vai funcionar.
 
 ```js
 console.log(square(5));
@@ -201,9 +201,9 @@ getScore(); // Retorna "Chamahk scored 5"
 
 Uma função pode referir-se e chamar a si própria. Há três maneiras de uma função referir-se a si mesma:
 
-1.  o nome da função
-2.  [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee)
-3.  uma variável no escopo que se refere a função
+1. o nome da função
+2. [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee)
+3. uma variável no escopo que se refere a função
 
 Por exemplo, considere a seguinte definição de função:
 
@@ -215,9 +215,9 @@ var foo = function bar() {
 
 Dentro do corpo da função, todos, a seguir, são equivalentes:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Uma função que chama a si mesma é chamada de função recursiva. Em alguns casos, a recursividade é análoga a um laço. Ambos executam o código várias vezes, e ambos necessitam de uma condição (para evitar um laço infinito, ou melhor, recursão infinita, neste caso). Por exemplo, o seguinte laço:
 
@@ -349,9 +349,9 @@ A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
 
 Neste exemplo, `C` acessa `y` do `B` e `x` do `A`. Isso pode ser feito porque:
 
-1.  B forma uma _closure_ incluindo `A`, isto é, `B` pode acessar argumentos e variáveis de `A`.
-2.  C forma uma _closure_ incluindo `B`.
-3.  Devido a closure `B` inclui `A`, a _closure_ `C` inclui `A`, `C` pode acessar tanto argumentos e variáveis de `B` como de `A`. Em outras palavras, `C` _encadeia_ o escopo de `B` e `A`, nesta ordem.
+1. B forma uma _closure_ incluindo `A`, isto é, `B` pode acessar argumentos e variáveis de `A`.
+2. C forma uma _closure_ incluindo `B`.
+3. Devido a closure `B` inclui `A`, a _closure_ `C` inclui `A`, `C` pode acessar tanto argumentos e variáveis de `B` como de `A`. Em outras palavras, `C` _encadeia_ o escopo de `B` e `A`, nesta ordem.
 
 O inverso, no entanto, não é verdadeiro. `A` não pode acessar `C`, porque `A` não pode acessar qualquer argumento ou variável de `B`. Assim, `C` é privado somente a `B`.
 
@@ -492,7 +492,7 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **Note:** Nota: A variável `arguments` é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade `length`. No entanto, não possui todos os métodos de manipulação de array.
+> **Nota:** A variável `arguments` é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade `length`. No entanto, não possui todos os métodos de manipulação de array.
 
 Veja objeto {{jsxref("Function")}} na referência do JavaScript para maiores informações.
 
@@ -621,7 +621,7 @@ JavaScript tem várias funções pré-definidas:
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : A função global **`isFinite()`** determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : A função **`isNaN()`** determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof `para determinar se o valor não é um número.
+  - : A função **`isNaN()`** determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof`para determinar se o valor não é um número.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : A função **`parseFloat()`** analisa um argumento do tipo _string_ e retorna um número de ponto flutuante.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

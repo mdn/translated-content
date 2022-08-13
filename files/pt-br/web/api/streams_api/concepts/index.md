@@ -77,7 +77,7 @@ Para iniciar um pipe chain é chamado o **original source**, e no final é chama
 
 ![](https://mdn.mozillademos.org/files/15818/PipeChain.png)
 
-> **Note:** **Nota**: Esta funcionalidade não está totalmente pensada ainda, embora disponível em muitos navegadores. Até certo ponto espero que a especificação dos writers pode contribuir para algo como uma clase `TransformStream` para criar facilmente transform stream.
+> **Nota:** Esta funcionalidade não está totalmente pensada ainda, embora disponível em muitos navegadores. Até certo ponto espero que a especificação dos writers pode contribuir para algo como uma clase `TransformStream` para criar facilmente transform stream.
 
 ## Backpressure
 
@@ -104,6 +104,6 @@ O cálculo realizado é
 
 O **desired size** é o tamanho de chunks que um stream ainda pode aceitar para manter o fluxo do stream menor que o high water mark. Após o cálculo ser efetuado, a geração de chunks terá sua velocidade reduzida ou aumentada conforme apropriado para manter o fluxo do stream o mais rápido possível enquanto mantém o tamanho desejado acima de zero. Se o valor cair para zero (ou menor no caso de writable streams), significa que os chunks estão sendo gerados mais rápido que o stream pode lidar, o qual resulta em problemas.
 
-> **Note:** **Nota**: O que ocorre no caso em que valor desejado for zero ou negativo não foi definido na especificação até o momento. Paciência é uma virtude.
+> **Nota:** O que ocorre no caso em que valor desejado for zero ou negativo não foi definido na especificação até o momento. Paciência é uma virtude.
 
 Como um exemplo, vamos pegar um chunk de tamanho 1, e uma high water mark de 3. Isto significa que até 3 chunks podem ser enfileirados antes que a high water mark seja alcançada e o backpressure aplicado.

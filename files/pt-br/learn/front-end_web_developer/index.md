@@ -80,8 +80,6 @@ As avaliações em cada módulo são projetadas para testar seu conhecimento sob
 
 #### Guias principais
 
-<!---->
-
 - [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML) (15–20 horas de leitura/exercícios)
 - [Multimídia e Incorporação](/pt-BR/docs/Aprender/HTML/Multimedia_and_embedding) (15–20 horas de leitura/exercícios)
 - [Tabelas em HTML](/pt-BR/docs/Aprender/HTML/Tables) (5–10 horas de leitura/exercícios)
@@ -100,14 +98,10 @@ As avaliações em cada módulo são projetadas para testar seu conhecimento sob
 
 #### Guias principais
 
-<!---->
-
-<!---->
-
 - [Primeiros passos com CSS](/pt-BR/docs/Learn/CSS/First_steps) (10–15 horas de leitura/exercícios)
 - [Blocos de construção CSS](/pt-BR/docs/Learn/CSS/Building_blocks) (35–45 horas de leitura/exercícios)
 - [Estilizando Texto](/pt-BR/docs/Aprender/CSS/Estilizando_texto) (15–20 horas de leitura/exercícios)
-- [CSS layout ](/pt-BR/docs/Learn/CSS/CSS_layout)(30–40 horas de leitura/exercícios)
+- [CSS layout](/pt-BR/docs/Learn/CSS/CSS_layout)(30–40 horas de leitura/exercícios)
 
 #### Conteúdo adicional
 
@@ -126,10 +120,6 @@ Tempo para completar: 135–185 horas
 As avaliações em cada módulo são projetadas para testar seu conhecimento sobre o assunto — a conclusão de cada uma provará que você pode passar para o próximo.
 
 #### Guias principais
-
-<!---->
-
-<!---->
 
 - [Primeiros passos com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) (30–40 horas de leitura/exercícios)
 - [Elementos construtivos do Javascript](/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos) (25–35 horas de leitura/exercícioss)
@@ -151,10 +141,6 @@ As avaliações em cada módulo são projetadas para testar seu conhecimento sob
 
 #### Guias principais
 
-<!---->
-
-<!---->
-
 - [Formulários da Web - Trabalhando com dados do usuário](/pt-BR/docs/Web/Guide/HTML/Forms) (40–50 horas)
 
 ### Fazendo uma web para todas as pessoas
@@ -170,10 +156,6 @@ Tempo para completar: 60–75 horas
 As avaliações em cada módulo são projetadas para testar seu conhecimento sobre o assunto — a conclusão de cada uma provará que você pode passar para o próximo.
 
 #### Guias principais
-
-<!---->
-
-<!---->
 
 - [Cross Browser Teste](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 horas de leitura/exercícioss)
 - [Acessibilidade](/pt-BR/docs/Web/Acessibilidade) (20–25 horas de leitura/exercícios)
@@ -191,10 +173,6 @@ Tempo para completar: 55–90 horas
 Não temos avaliações específicas neste conjunto de módulos, mas os tutoriais de estudo de caso no final dos 2º e 3º módulos irão te preparar bem para compreender os elementos essenciais das ferramentas modernas.
 
 #### Guias principais
-
-<!---->
-
-<!---->
 
 - [Git and GitHub](/pt-BR/docs/Learn/Tools_and_testing/GitHub) (5 hour read)
 - [Understanding client-side web development tools](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools) (20–25 horas de leitura)
