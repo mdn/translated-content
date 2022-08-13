@@ -23,8 +23,6 @@ Con privilegios chrome, el valor de esta propiedad se puede cambiar, de otra for
 - `isInFullScreen`
   - : Un valor*binario* . Los valores posibles son:
 
-<!---->
-
 - `true`: (Cierto) la ventana esta en modo pantalla completa.
 - `false`: (Falso)la ventana NO esta en modo pantalla completa.
 

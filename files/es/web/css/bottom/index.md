@@ -52,8 +52,6 @@ El siguiente ejemplo permite contrastar entre `position:absolute` y `position:fi
 
 - **Atención**: IE6 **no** soporta el código `position:fixed`.
 
-<!---->
-
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
        "http://www.w3.org/TR/html4/strict.dtd">
     <html>

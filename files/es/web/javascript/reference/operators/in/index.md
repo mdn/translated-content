@@ -19,8 +19,6 @@ original_slug: Web/JavaScript/Referencia/Operadores/in
 - `prop`
   - : Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).
 
-<!---->
-
 - `object`
   - : El objeto (o su cadena de prototipo) sobre el que comprobar si contiene la propiedad con el nombre especificado.
 

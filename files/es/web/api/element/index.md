@@ -114,67 +114,41 @@ El objeto [event](/es/DOM/event "es/DOM/event") es pasado al parámetro `event` 
 - [onblur](/es/DOM/element.onblur "es/DOM/element.onblur") - (al quitar el foco)
   - : Devuelve el código de manejo de evento para el evento `blur`.
 
-<!---->
-
 - [onchange](/es/DOM/element.onchange "es/DOM/element.onchange") - (al modificar)
   - : Devuelve el código de manejo de evento para el evento `change`.
-
-<!---->
 
 - [onclick](/es/DOM/element.onclick "es/DOM/element.onclick") - (al hacer clic)
   - : Devuelve el código de manejo de evento para el evento `onclick`.
 
-<!---->
-
 - [ondblclick](/es/DOM/element.ondblclick "es/DOM/element.ondblclick") - (al hacer doble clic)
   - : Devuelve el código de manejo de evento para el evento `ondblclick`.
-
-<!---->
 
 - [onfocus](/es/DOM/element.onfocus "es/DOM/element.onfocus") - (al poner el foco)
   - : Devuelve el código de manejo de evento para el evento `onfocus`.
 
-<!---->
-
 - [onkeydown](/es/DOM/element.onkeydown "es/DOM/element.onkeydown") - (al tener una tecla apretada)
   - : Devuelve el código de manejo de evento para el evento `onkeydown`.
-
-<!---->
 
 - [onkeypress](/es/DOM/element.onkeypress "es/DOM/element.onkeypress") - (al apretar una tecla)
   - : Devuelve el código de manejo de evento para el evento `onkeypress`.
 
-<!---->
-
 - [onkeyup](/es/DOM/element.onkeyup "es/DOM/element.onkeyup") - (al soltar una tecla)
   - : Devuelve el código de manejo de evento para el evento `onkeyup`.
-
-<!---->
 
 - [onmousedown](/es/DOM/element.onmousedown "es/DOM/element.onmousedown") - (al tener el botón del ratón apretado)
   - : Devuelve el código de manejo de evento para el evento `onmousedown`.
 
-<!---->
-
 - [onmousemove](/es/DOM/element.onmousemove "es/DOM/element.onmousemove") - (al mover el ratón)
   - : Devuelve el código de manejo de evento para el evento `onmousemove`.
-
-<!---->
 
 - [onmouseout](/es/DOM/element.onmouseout "es/DOM/element.onmouseout") - (al quitar el puntero del ratón)
   - : Devuelve el código de manejo de evento para el evento `onmouseout`.
 
-<!---->
-
 - [onmouseover](/es/DOM/element.onmouseover "es/DOM/element.onmouseover") - (al pasar el ratón encima)
   - : Devuelve el código de manejo de evento para el evento `onmouseover`.
 
-<!---->
-
 - [onmouseup](/es/DOM/element.onmouseup "es/DOM/element.onmouseup") - (al soltar el botón del ratón)
   - : Devuelve el código de manejo de evento para el evento `onmouseup`.
-
-<!---->
 
 - [onresize](/es/DOM/element.onresize "es/DOM/element.onresize") - (al re-dimensionar la pantalla)
   - : Devuelve el código de manejo de evento para el evento `onresize`.

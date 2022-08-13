@@ -19,8 +19,6 @@ Convierte (parsea) un argumento de tipo cadena y devuelve un entero de la base e
 - `cadena`
   - : Una cadena que representa el valor que se desea convertir.
 
-<!---->
-
 - `base`
   - : Un entero que representa la base de la mencionada cadena.
 

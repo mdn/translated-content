@@ -40,8 +40,6 @@ _La nueva versión de la interfaz de `MediaQueryList` hereda métodos de su inte
 - {{domxref("MediaQueryList.removeListener()")}}
   - : Elimina un escucha de `MediaQueryListener`. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.
 
-<!---->
-
 ## Ejemplos
 
 Este ejemplo sencillo crea una `MediaQueryList` y, a continuación, establece un detector para detectar cuándo cambia el estado de la consulta de medios, ejecutando una función personalizada cuando cambia la apariencia de la página.

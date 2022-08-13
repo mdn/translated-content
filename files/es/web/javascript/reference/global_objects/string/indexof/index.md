@@ -24,8 +24,6 @@ El método **`indexOf()`**devuelve el índice, dentro del objeto `String` que re
 - `valorBusqueda`
   - : Una cadena que representa el valor de búsqueda.
 
-<!---->
-
 - `indiceDesde`
   - : La localización dentro de la cadena llamada desde la que empezará la búsqueda. Puede ser un entero entre 0 y la longitud de la cadena. El valor predeterminado es 0.
 

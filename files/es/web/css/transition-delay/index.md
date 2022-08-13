@@ -21,8 +21,6 @@ You may specify multiple delays; each delay will be applied to the corresponding
 
     Formal syntax: {{csssyntax("transition-delay")}}
 
-<!---->
-
     transition-delay: 3s
     transition-delay: 2s, 4ms
 

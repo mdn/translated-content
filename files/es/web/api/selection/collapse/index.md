@@ -22,8 +22,6 @@ Pliega la selección a un simple punto. El documento no es modificado. Si el con
 - _`parentNode`_
   - : La localización del cursor estará dentro de este nodo.
 
-<!---->
-
 - _`offset`_
   - : El cursor estará colocado éste número de caracteres desdel el comienzo del texto de
     _`parentNode`'_

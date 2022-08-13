@@ -24,32 +24,20 @@ Accepts the same parameters as the longest form of the constructor, and returns 
 - `año`
   - : Un año mayor de 1900.
 
-<!---->
-
 - `mes`
   - : Un entero entre 0 y 11 que representa al mes.
-
-<!---->
 
 - `dia`
   - : Un entero entre 1 y 31 que representa al día del mes.
 
-<!---->
-
 - `hora`
   - : Un entero entre 0 y 23 que representa la hora.
-
-<!---->
 
 - `minutos`
   - : Un entero entre 0 y 59 que representa los minutos.
 
-<!---->
-
 - `segundos`
   - : Un entero entre 0 y 59 que representa los segundos.
-
-<!---->
 
 - `milisegundos`
   - : Un entero entre 0 y 999 que representa los milisegundos.

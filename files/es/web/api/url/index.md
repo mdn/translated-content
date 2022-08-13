@@ -43,8 +43,6 @@ When using a user agent where no constructor has been implemented yet, it is pos
 - {{domxref("URL.origin")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.
 
-<!---->
-
 - {{domxref("URL.searchParams")}}
   - : Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.
 

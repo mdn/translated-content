@@ -26,8 +26,6 @@ El método **`substr()`** devuelve los caracteres de una cadena que comienzan en
 - `inicio`
   - : Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como `longCad + inicio` donde `longCad` es la longitud de la cadena (por ejemplo, si `inicio` es -3 se trata como `longCad - 3`).
 
-<!---->
-
 - `longitud`
   - : Opcional. El número de caracteres a extraer. Si este argumento es {{jsxref("undefined")}}, todos los caracteres desde `inicio` hasta el final de la cadena serán extraidos.
 

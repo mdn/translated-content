@@ -47,8 +47,6 @@ Acepta uno, dos , tres o cuatro valores de los siguientes:
   - : `auto es reemplazado por algún valor` apropiado. Por ejemplo, puede usarse para centrar horizontalmente un elemento bloque.
     `div { width:50%; margin:0 auto; }` centrará el div horizontalmente.
 
-<!---->
-
 - **Un** único valor aplicará para todos los **cuatro lados**.
 - **Dos** valores aplicarán: El primer valor para **arriba y abajo**, el segundo valor para **izquierda y derecha**.
 - **Tres** valores aplicarán: El primero para **arriba**, el segundo para **izquierda y derecha**, el tercero para **abajo**.

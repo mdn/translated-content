@@ -17,8 +17,6 @@ original_slug: Web/JavaScript/Reference/Errors/caracter_ilegal
     SyntaxError: illegal character (Firefox)
     SyntaxError: Invalid or unexpected token (Chrome)
 
-<!---->
-
     ErrorDeSintasix: Carácter ilegal (Firefox)
     ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
 

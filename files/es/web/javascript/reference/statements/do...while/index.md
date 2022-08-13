@@ -22,8 +22,6 @@ La sentencia (hacer mientras) crea un bucle que ejecuta una sentencia especifica
 - `sentencia`
   - : Una sentencia que se ejecuta al menos una vez y es reejecutada cada vez que la condición se evalúa a verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utilice la sentencia {{jsxref("Statements/block", "block")}} (`{ ... }`) para agrupar aquellas sentencias.
 
-<!---->
-
 - `condición`
   - : Una expresión se evalúa después de cada pase del bucle. Si `condición` se evalúa como verdadera, la `sentencia` se re-ejecuta. Cuando `condición` se evalúa como falsa, el control pasa a la siguiente sentencia hacer mientras.
 

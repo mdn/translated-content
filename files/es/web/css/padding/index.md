@@ -32,8 +32,6 @@ Esta propiedad puede ser especificada utilizando uno, dos, tres o cuatro de los 
 - `<percentage>`
   - : Con respecto a la anchura("width") del bloque que lo contiene.
 
-<!---->
-
 - **Uno:** un valor unico se aplica a los 4 lados.
 - **Dos:** el primer valor se aplica a **arriba y abajo**, el segundo valor se aplica a **derecha e izquierda**.
 - **Tres:** el primer valor se aplica a **arriba**, el segundo valor a **derecha e izquierda** y el tercer valor se aplica a **abajo** del elemento.

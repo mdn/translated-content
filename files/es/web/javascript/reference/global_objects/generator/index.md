@@ -46,8 +46,6 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 - `Generator.prototype.constructor`
   - : Especifica la funciòn que construye el prototipo del objeto.
 
-<!---->
-
 - `Generator.prototype[@@toStringTag]`
   - : La cuerda `"Generator"`.
 

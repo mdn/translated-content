@@ -43,8 +43,6 @@ writing-mode: unset;
 - `sideways-rl`{{experimental_inline}}
   - : El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la derecha.
 
-<!---->
-
 - `sideways-lr`{{experimental_inline}}
   - : El contenido fluye verticalmente de arriba hacia abajo y todos los glifos, incluidos aquellos de los sistemas de escritura verticales, se colocan de lado hacia la izquierda.
 - `lr` {{deprecated_inline}}

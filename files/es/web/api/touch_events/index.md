@@ -17,8 +17,6 @@ Con el fin de proporcionar soporte de calidad para usuarios de interfaces tácti
 - Superficie
   - : La superficie sensible al tacto. Esta puede ser una pantalla o un trackpad.
 
-<!---->
-
 - **Punto de toque**
   - : Un punto de contacto con la superficie. Esto podría ser un dedo (o un codo, oreja, nariz, o lo que sea, pero probablemente un dedo) o un stylus.
 

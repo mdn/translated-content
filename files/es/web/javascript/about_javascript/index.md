@@ -44,8 +44,6 @@ Otra aplicación común para JavaScript es como lenguaje de programación de lad
 - {{web.link("/es/docs/Mozilla/Projects/SpiderMonkey", "SpiderMonkey")}}
   - : Información específica sobre la implementación de JavaScript de Mozilla en el motor C/C++ (también conocido como SpiderMonkey), incluye cómo integrarlo en aplicaciones.
 
-<!---->
-
 - {{web.link("/es/docs/Rhino", "Rhino")}}
   - : Información específica para la implementación de JavaScript escrita en Java (también conocido como Rhino).
 - {{JSxRef("../Language_Resources", "Recursos del lenguaje")}}
