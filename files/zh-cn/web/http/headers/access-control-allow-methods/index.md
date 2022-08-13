@@ -6,64 +6,50 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>响应首部 <strong><code>Access-Control-Allow-Methods</code></strong> 在对 {{glossary("preflight request")}}.（预检请求）的应答中明确了客户端所要访问的资源允许使用的方法或方法列表。</p>
+响应首部 **`Access-Control-Allow-Methods`** 在对 {{glossary("preflight request")}}.（预检请求）的应答中明确了客户端所要访问的资源允许使用的方法或方法列表。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">报头类型</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| 报头类型                                         | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Access-Control-Allow-Methods: &lt;method&gt;, &lt;method&gt;, ...
-</pre>
+```plain
+Access-Control-Allow-Methods: <method>, <method>, ...
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;method&gt;</dt>
- <dd>用逗号隔开的允许使用的 <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> 列表。</dd>
-</dl>
+- \<method>
+  - : 用逗号隔开的允许使用的 [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods) 列表。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre>Access-Control-Allow-Methods: POST, GET, OPTIONS</pre>
+```plain
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="兼容性注解">兼容性注解</h2>
+## 兼容性注解
 
-<ul>
- <li>最新规范中提到的通配符值 (*) 尚未在以下浏览器中实现：
-  <ul>
-   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
-   <li>Firefox: {{bug(1309358)}}</li>
-   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
-  </ul>
- </li>
-</ul>
+- 最新规范中提到的通配符值 (\*) 尚未在以下浏览器中实现：
 
-<h2 id="查看更多">查看更多</h2>
+  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
+  - Firefox: {{bug(1309358)}}
+  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+## 查看更多
+
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Request-Method")}}

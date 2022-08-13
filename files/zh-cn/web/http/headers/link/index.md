@@ -3,43 +3,43 @@ title: Link
 slug: Web/HTTP/Headers/Link
 translation_of: Web/HTTP/Headers/Link
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP 实体报头 <strong><code>Link</code></strong> 提供了序列化 HTTP 头部链接的方法。它在语义上与 HTML 元素 {{HTMLElement("link")}} 相等。</p>
+HTTP 实体报头 **`Link`** 提供了序列化 HTTP 头部链接的方法。它在语义上与 HTML 元素 {{HTMLElement("link")}} 相等。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
+```plain
+Link: < uri-reference >; param1=value1; param2="value2"
+```
 
-<dl>
- <dt><code>&lt;uri-reference&gt;</code></dt>
- <dd>URI reference 必须要用 <code>&lt;</code> 和 <code>&gt;</code>来关闭。</dd>
-</dl>
+- `<uri-reference>`
+  - : URI reference 必须要用 `<` 和 `>`来关闭。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>link 头部包含以 <code>;</code> 分隔的参数，这些参数与 HTML 元素 {{HTMLElement("link")}} 的属性一致。</p>
+link 头部包含以 `;` 分隔的参数，这些参数与 HTML 元素 {{HTMLElement("link")}} 的属性一致。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>URI 必须要用 <code>&lt;</code> 和 <code>&gt; 来关闭：</code></p>
+URI 必须要用 `<` 和 `> 来关闭：`
 
-<pre class="brush: http; example-good">Link: &lt;https://example.com&gt;; rel="preload"</pre>
+```http example-good
+Link: <https://example.com>; rel="preload"
+```
 
-<pre class="brush: http; example-bad">Link: https://bad.example; rel="preload"</pre>
+```http example-bad
+Link: https://bad.example; rel="preload"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{HTTPStatus(103, "103 Early Hints")}}</li>
-</ul>
+- {{HTTPStatus(103, "103 Early Hints")}}

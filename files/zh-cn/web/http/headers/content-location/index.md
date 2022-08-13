@@ -7,51 +7,41 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Content-Location
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Content-Location</code></strong> 首部指定的是要返回的数据的地址选项。最主要的用途是用来指定要访问的资源经过<a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商</a>后的结果的 URL。</p>
+**`Content-Location`** 首部指定的是要返回的数据的地址选项。最主要的用途是用来指定要访问的资源经过[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)后的结果的 URL。
 
-<p>{{HTTPHeader("Location")}} 与 <code>Content-Location</code>是不同的，前者（{{HTTPHeader("Location")}} ）指定的是一个重定向请求的目的地址（或者新创建的文件的 URL），而后者（ <code>Content-Location</code>）指向的是可供访问的资源的直接地址，不需要进行进一步的内容协商。Location 对应的是响应，而 Content-Location 对应的是要返回的实体。</p>
+{{HTTPHeader("Location")}} 与 `Content-Location`是不同的，前者（{{HTTPHeader("Location")}} ）指定的是一个重定向请求的目的地址（或者新创建的文件的 URL），而后者（ `Content-Location`）指向的是可供访问的资源的直接地址，不需要进行进一步的内容协商。Location 对应的是响应，而 Content-Location 对应的是要返回的实体。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Entity header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Content-Location: &lt;url&gt;
-</pre>
+```plain
+Content-Location: <url>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>相对地址（相对于要访问的 URL）或绝对地址。</dd>
-</dl>
+- \<url>
+  - : 相对地址（相对于要访问的 URL）或绝对地址。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Content-Location: /index.html</pre>
+```plain
+Content-Location: /index.html
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Location")}}</li>
-</ul>
+- {{HTTPHeader("Location")}}

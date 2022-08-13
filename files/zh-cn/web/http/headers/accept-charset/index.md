@@ -10,79 +10,58 @@ tags:
   - 请求头
 translation_of: Web/HTTP/Headers/Accept-Charset
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Accept-Charset</code></strong> 请求头用来告知（服务器）客户端可以处理的字符集类型。 借助<a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商机制</a>，服务器可以从诸多备选项中选择一项进行应用， 并使用{{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器通常不会设置此项值，因为每种内容类型的默认值通常都是正确的，但是发送它会更有利于识别。</p>
+**`Accept-Charset`** 请求头用来告知（服务器）客户端可以处理的字符集类型。 借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)，服务器可以从诸多备选项中选择一项进行应用， 并使用{{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器通常不会设置此项值，因为每种内容类型的默认值通常都是正确的，但是发送它会更有利于识别。
 
-<p>如果服务器不能提供任何可以匹配的字符集的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少采用，取而代之的是将其忽略。</p>
+如果服务器不能提供任何可以匹配的字符集的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少采用，取而代之的是将其忽略。
 
-<div class="note">
-<p>在早期版本的 HTTP/1.1 协议中，规定了一个默认的字符集 (ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。</p>
-</div>
+> **备注：** 在早期版本的 HTTP/1.1 协议中，规定了一个默认的字符集 (ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">Accept-Charset: &lt;charset&gt;
+```plain
+Accept-Charset: <charset>
 
 // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
+Accept-Charset: utf-8, iso-8859-1;q=0.5
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>&lt;charset&gt;</code></dt>
- <dd><code>诸如 utf-8</code> 或 <code>iso-8859-15 的字符集。</code></dd>
- <dt><code>*</code></dt>
- <dd><code>在这个消息头中未提及的任意其他字符集；'*'</code> 用来表示通配符。</dd>
- <dt><code>;q=</code> (q-factor weighting)</dt>
- <dd>值代表优先顺序，用相对<a href="/en-US/docs/Glossary/Quality_values">质量价值</a>表示，又称为权重。</dd>
-</dl>
+- `<charset>`
+  - : `诸如 utf-8` 或 `iso-8859-15 的字符集。`
+- `*`
+  - : `在这个消息头中未提及的任意其他字符集；'*'` 用来表示通配符。
+- `;q=` (q-factor weighting)
+  - : 值代表优先顺序，用相对[质量价值](/zh-CN/docs/Glossary/Quality_values)表示，又称为权重。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre>Accept-Charset: iso-8859-1
+```plain
+Accept-Charset: iso-8859-1
 
 Accept-Charset: utf-8, iso-8859-1;q=0.5
 
 Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Accept-Charset", "5.3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                            | Title                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Accept-Charset", "5.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("http.headers.Accept-Charset")}}</p>
+{{Compat("http.headers.Accept-Charset")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商机制</a></li>
- <li>用来表示内容协商结果的消息头: {{HTTPHeader("Content-Type")}}</li>
- <li>其他类似消息头: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}</li>
-</ul>
+- HTTP [内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)
+- 用来表示内容协商结果的消息头: {{HTTPHeader("Content-Type")}}
+- 其他类似消息头: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

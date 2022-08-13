@@ -3,60 +3,50 @@ title: 'CSP: connect-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的<code><strong>connect</strong></code><strong><code>-src</code></strong> 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下: </p>
+HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-src`** 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下:
 
-<ul>
- <li>{{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},</li>
- <li>{{domxref("Fetch")}},</li>
- <li>{{domxref("XMLHttpRequest")}},</li>
- <li>{{domxref("WebSocket")}}, and</li>
- <li>{{domxref("EventSource")}}.</li>
-</ul>
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
+- {{domxref("Fetch")}},
+- {{domxref("XMLHttpRequest")}},
+- {{domxref("WebSocket")}}, and
+- {{domxref("EventSource")}}.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>Yes. If this directive is absent, the user agent will look for the <code>default-src</code> directive.</td>
-  </tr>
- </tbody>
-</table>
+| CSP version                           | 1                                                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Directive type                        | {{Glossary("Fetch directive")}}                                                    |
+| {{CSP("default-src")}} fallback | Yes. If this directive is absent, the user agent will look for the `default-src` directive. |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>connect-src 可以设置一个或者多个源地址: </p>
+connect-src 可以设置一个或者多个源地址:
 
-<pre class="syntaxbox">Content-Security-Policy: connect-src &lt;source&gt;;
-Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```plain
+Content-Security-Policy: connect-src <source>;
+Content-Security-Policy: connect-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>给定如下 CSP 头部: </p>
+给定如下 CSP 头部:
 
-<pre class="brush: bash">Content-Security-Policy: connect-src https://example.com/</pre>
+```bash
+Content-Security-Policy: connect-src https://example.com/
+```
 
-<p>如下的连接请求会被阻塞且不会加载: </p>
+如下的连接请求会被阻塞且不会加载:
 
-<pre class="brush: html">&lt;a ping="https://not-example.com"&gt;
+```html
+<a ping="https://not-example.com">
 
-&lt;script&gt;
+<script>
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://not-example.com/');
   xhr.send();
@@ -66,29 +56,26 @@ Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
   var es = new EventSource("https://not-example.com/");
 
   navigator.sendBeacon("https://not-example.com/", { ... });
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<ul>
- <li>Prior to Firefox 23, <code>xhr-src</code> was used in place of the <code>connect-src</code> directive and only restricted the use of {{domxref("XMLHttpRequest")}}.</li>
-</ul>
+- Prior to Firefox 23, `xhr-src` was used in place of the `connect-src` directive and only restricted the use of {{domxref("XMLHttpRequest")}}.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}</li>
- <li>{{domxref("Fetch")}}</li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("WebSocket")}}</li>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{domxref("Fetch")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}

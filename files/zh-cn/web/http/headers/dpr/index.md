@@ -3,53 +3,43 @@ title: DPR
 slug: Web/HTTP/Headers/DPR
 translation_of: Web/HTTP/Headers/DPR
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p><code><strong>DPR</strong></code>请求头是“ <a href="/zh-CN/docs/Glossary/Client_hints">客户端提示”</a>消息头，它代表客户端设备的像素比 ({{Glossary("DPR")}})，该比例是与每个 CSS 像素相对应的物理设备像素的数量。</p>
+**`DPR`**请求头是“ [客户端提示”](/zh-CN/docs/Glossary/Client_hints)消息头，它代表客户端设备的像素比 ({{Glossary("DPR")}})，该比例是与每个 CSS 像素相对应的物理设备像素的数量。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive <code>DPR</code> header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.</p>
-</div>
+> **备注：** Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive `DPR` header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">DPR: &lt;number&gt;
-</pre>
+```plain
+DPR: <number>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>Server first needs to opt in to receive <code>DPR</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>DPR</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
+Server first needs to opt in to receive `DPR` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `DPR` and {{HTTPHeader("Accept-CH-Lifetime")}}.
 
-<pre>Accept-CH: DPR
+```plain
+Accept-CH: DPR
 Accept-CH-Lifetime: 86400
-</pre>
+```
 
-<p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
+Then on subsequent requests the client might send `DPR` header back:
 
-<pre>DPR: 1.0
-</pre>
+```plain
+DPR: 1.0
+```
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("http.headers.DPR")}}</p>
+{{Compat("http.headers.DPR")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Accept-CH")}}
+- {{HTTPHeader("Accept-CH-Lifetime")}}
+- {{HTTPHeader("Vary")}}

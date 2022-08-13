@@ -3,48 +3,38 @@ title: Allow
 slug: Web/HTTP/Headers/Allow
 translation_of: Web/HTTP/Headers/Allow
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Allow</strong></code> 首部字段用于枚举资源所支持的 HTTP 方法的集合。</p>
+**`Allow`** 首部字段用于枚举资源所支持的 HTTP 方法的集合。
 
-<p>若服务器返回状态码 {{HTTPStatus("405")}} <code>Method Not Allowed，则该首部字段亦需要同时返回给客户端。如果</code> <code>Allow</code>  首部字段的值为空，说明资源不接受使用任何 HTTP 方法的请求。这是可能的，比如服务器需要临时禁止对资源的任何访问。</p>
+若服务器返回状态码 {{HTTPStatus("405")}} `Method Not Allowed，则该首部字段亦需要同时返回给客户端。如果` `Allow` 首部字段的值为空，说明资源不接受使用任何 HTTP 方法的请求。这是可能的，比如服务器需要临时禁止对资源的任何访问。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Entity header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Allow: &lt;http-methods&gt;
-</pre>
+```plain
+Allow: <http-methods>
+```
 
-<h2 id="声明">声明</h2>
+## 声明
 
-<dl>
- <dt>&lt;http-methods&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Methods">HTTP </a>请求方法的集合。</dd>
-</dl>
+- \<http-methods>
+  - : [HTTP ](/zh-CN/docs/Web/HTTP/Methods)请求方法的集合。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Allow: GET, POST, HEAD</pre>
+```plain
+Allow: GET, POST, HEAD
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPStatus("405")}}</li>
- <li>{{HTTPHeader("Server")}}</li>
-</ul>
+- {{HTTPStatus("405")}}
+- {{HTTPHeader("Server")}}

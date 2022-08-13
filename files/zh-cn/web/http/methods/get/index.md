@@ -7,54 +7,32 @@ tags:
   - 请求方法
 translation_of: Web/HTTP/Methods/GET
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP<code> GET</code> 方法</strong>请求指定的资源。使用 <code>GET</code> 的请求应该只用于获取数据。</p>
+**HTTP` GET` 方法**请求指定的资源。使用 `GET` 的请求应该只用于获取数据。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">请求是否有主体</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">成功的响应是否有主体</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("安全")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("幂等")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("可缓存")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">HTML 表单是否支持</th>
-   <td>是</td>
-  </tr>
- </tbody>
-</table>
+| 请求是否有主体                   | 否  |
+| -------------------------------- | --- |
+| 成功的响应是否有主体             | 是  |
+| {{Glossary("安全")}}     | 是  |
+| {{Glossary("幂等")}}     | 是  |
+| {{Glossary("可缓存")}} | 是  |
+| HTML 表单是否支持                | 是  |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">GET /index.html
-</pre>
+```plain
+GET /index.html
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPHeader("Range")}}

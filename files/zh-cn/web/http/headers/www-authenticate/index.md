@@ -9,62 +9,51 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p> HTTP <strong><code>WWW-Authenticate</code></strong> 响应头定义了使用何种验证方式去获取对资源的连接。</p>
+HTTP **`WWW-Authenticate`** 响应头定义了使用何种验证方式去获取对资源的连接。
 
-<p><code>WWW-Authenticate</code> header 通常会和一个 {{HTTPStatus("401")}} <code>Unauthorized</code> 的响应一同被发送。</p>
+`WWW-Authenticate` header 通常会和一个 {{HTTPStatus("401")}} `Unauthorized` 的响应一同被发送。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-</pre>
+```plain
+WWW-Authenticate: <type> realm=<realm>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;type&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Authentication type</a>，一个通用类型 <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>。 IANA 维护了一个 <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of Authentication schemes</a>。</dd>
- <dt>realm=&lt;realm&gt;</dt>
- <dd>一个保护区域的描述。如果未指定 realm，客户端通常显示一个格式化的主机名来替代。</dd>
- <dt>charset=&lt;charset&gt;</dt>
- <dd>当提交用户名和密码时，告知客户端服务器首选的编码方案。唯一的允许值是不区分大小写的字符串"UTF-8"。这与 realm 字符串的编码无关。</dd>
-</dl>
+- \<type>
+  - : [Authentication type](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)，一个通用类型 ["Basic"](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)。 IANA 维护了一个 [list of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
+- realm=\<realm>
+  - : 一个保护区域的描述。如果未指定 realm，客户端通常显示一个格式化的主机名来替代。
+- charset=\<charset>
+  - : 当提交用户名和密码时，告知客户端服务器首选的编码方案。唯一的允许值是不区分大小写的字符串"UTF-8"。这与 realm 字符串的编码无关。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>通常的，一个服务器响应包含一个像如下<code>WWW-Authenticate</code>的头信息：</p>
+通常的，一个服务器响应包含一个像如下`WWW-Authenticate`的头信息：
 
-<pre class="notranslate">WWW-Authenticate: Basic
+```plain
+WWW-Authenticate: Basic
 
 WWW-Authenticate: Basic realm="Access to the staging site"
-</pre>
+```
 
-<p>作为一个例子，可以查看<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 页面，了解如何配置 Apache 和 nginx 服务器来使用 HTTP basic authentication 密码保护你的站点。</p>
+作为一个例子，可以查看[ HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 页面，了解如何配置 Apache 和 nginx 服务器来使用 HTTP basic authentication 密码保护你的站点。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

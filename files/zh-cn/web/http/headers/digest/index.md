@@ -6,68 +6,56 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Digest
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Digest</strong></code> 响应 HTTP 头提供了请求资源一个 {{Glossary("摘要")}} 。</p>
+**`Digest`** 响应 HTTP 头提供了请求资源一个 {{Glossary("摘要")}} 。
 
-<p>在 <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a> 术语中，它是一个资源的选定表示。这个选定代表依赖于 <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> 和 <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code> 头部值：所以一个单一的资源可能有多个不同的摘要值。</p>
+在 [RFC 7231](https://tools.ietf.org/html/rfc7231) 术语中，它是一个资源的选定表示。这个选定代表依赖于 [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) 和 [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) 头部值：所以一个单一的资源可能有多个不同的摘要值。
 
-<p>摘要是整个表示的计算。这个表示可以是：</p>
+摘要是整个表示的计算。这个表示可以是：
 
-<ul>
- <li>完全包含在响应消息体中</li>
- <li>完全不包含在消息体中中 (例如，在一个 <code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code> 请求的响应中)</li>
- <li>部分包含在消息体中 (例如，在一个 <a href="/en-US/docs/Web/HTTP/Range_requests">range request</a> 的响应中)。</li>
-</ul>
+- 完全包含在响应消息体中
+- 完全不包含在消息体中中 (例如，在一个 [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD) 请求的响应中)
+- 部分包含在消息体中 (例如，在一个 [range request](/zh-CN/docs/Web/HTTP/Range_requests) 的响应中)。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;
+```plain
+Digest: <digest-algorithm>=<digest-value>
 
-Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&lt;digest-value&gt;
-</pre>
+Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>&lt;digest-algorithm&gt;</code></dt>
- <dd>已支持的摘要算法在 <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> 和 <a href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>,中定义，包括 <code>SHA-256</code> 和 <code>SHA-512</code>。一些支持的算法 (如 <code>unixsum</code> 和 <code>MD5</code>) 容易发生冲突，因此不适合冲突阻力很重要的应用。</dd>
- <dt><code>&lt;digest-value&gt;</code></dt>
- <dd>对资源表示的摘要算法的结果和编码的结果。摘要算法的选择决定了编码类型：例如 <code>SHA-256</code> 用 base64 编码。</dd>
-</dl>
+- `<digest-algorithm>`
+  - : 已支持的摘要算法在 [RFC 3230](https://tools.ietf.org/html/rfc3230) 和 [RFC 5843](https://tools.ietf.org/html/rfc5843),中定义，包括 `SHA-256` 和 `SHA-512`。一些支持的算法 (如 `unixsum` 和 `MD5`) 容易发生冲突，因此不适合冲突阻力很重要的应用。
+- `<digest-value>`
+  - : 对资源表示的摘要算法的结果和编码的结果。摘要算法的选择决定了编码类型：例如 `SHA-256` 用 base64 编码。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="syntaxbox">Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637</pre>
+```plain
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>该头最初在 <a href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> 中定义，但在 <a href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> 里的 "选中的表示" 定义使原始定与当前 HTTP 规范中不一致。发布时，"HTTP 资源摘要" 草案将废弃 RFC 3230 并将更新标准以保持一致。</p>
+该头最初在 [RFC 3230](https://tools.ietf.org/html/rfc3230) 中定义，但在 [RFC 7231](https://www.rfc-editor.org/info/rfc7231) 里的 "选中的表示" 定义使原始定与当前 HTTP 规范中不一致。发布时，"HTTP 资源摘要" 草案将废弃 RFC 3230 并将更新标准以保持一致。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Want-Digest")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests">HTTP range requests</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206"><code>206 Partial Content</code></a></li>
-</ul>
+- {{HTTPHeader("Want-Digest")}}
+- [HTTP range requests](/zh-CN/docs/Web/HTTP/Range_requests)
+- [`206 Partial Content`](/zh-CN/docs/Web/HTTP/Status/206)

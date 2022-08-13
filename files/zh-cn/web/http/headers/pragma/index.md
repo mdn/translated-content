@@ -7,60 +7,43 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Pragma
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Pragma</strong></code> 是一个在 HTTP/1.0 中规定的通用首部，这个首部的效果依赖于不同的实现，所以在“请求 - 响应”链中可能会有不同的效果。它用来向后兼容只支持 HTTP/1.0 协议的缓存服务器，那时候 HTTP/1.1 协议中的 Cache-Control 还没有出来。</p>
+**`Pragma`** 是一个在 HTTP/1.0 中规定的通用首部，这个首部的效果依赖于不同的实现，所以在“请求 - 响应”链中可能会有不同的效果。它用来向后兼容只支持 HTTP/1.0 协议的缓存服务器，那时候 HTTP/1.1 协议中的 Cache-Control 还没有出来。
 
-<div class="note">
-<p><strong>注意：</strong>由于 Pragma 在 HTTP 响应中的行为没有确切规范，所以不能可靠替代 HTTP/1.1 中通用首部 Cache-Control，尽管在请求中，假如 Cache-Control 不存在的话，它的行为与 Cache-Control: no-cache 一致。建议只在需要兼容 HTTP/1.0 客户端的场合下应用 Pragma 首部。</p>
-</div>
+> **备注：** 由于 Pragma 在 HTTP 响应中的行为没有确切规范，所以不能可靠替代 HTTP/1.1 中通用首部 Cache-Control，尽管在请求中，假如 Cache-Control 不存在的话，它的行为与 Cache-Control: no-cache 一致。建议只在需要兼容 HTTP/1.0 客户端的场合下应用 Pragma 首部。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("General header")}}, but response behavior is not specified and thus implementation-specific.</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                                                      | {{Glossary("General header")}}, but response behavior is not specified and thus implementation-specific. |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| {{Glossary("Forbidden header name")}}                                                 | no                                                                                                                 |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                                                                                                                |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Pragma: no-cache
-</pre>
+```plain
+Pragma: no-cache
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>no-cache</dt>
- <dd>
- <p>与 Cache-Control: no-cache 效果一致。强制要求缓存服务器在返回缓存的版本之前将请求提交到源头服务器进行验证。</p>
- </dd>
-</dl>
+- no-cache
+  - : 与 Cache-Control: no-cache 效果一致。强制要求缓存服务器在返回缓存的版本之前将请求提交到源头服务器进行验证。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Pragma: no-cache</pre>
+```plain
+Pragma: no-cache
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

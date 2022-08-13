@@ -6,49 +6,37 @@ tags:
   - 跨域资源共享
 translation_of: Web/HTTP/Headers/Access-Control-Request-Method
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}请求头 **`Access-Control-Request-Method `**出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)。因为预检请求所使用的方法总是 {{HTTPMethod("OPTIONS")}} ，与实际请求所使用的方法不一样，所以这个请求头是必要的。
 
-<div>请求头  <strong><code>Access-Control-Request-Method </code></strong>出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪种  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods">HTTP 方法</a>。因为预检请求所使用的方法总是 {{HTTPMethod("OPTIONS")}} ，与实际请求所使用的方法不一样，所以这个请求头是必要的。</div>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+Access-Control-Request-Method: <method>
+```
 
-<pre class="syntaxbox">Access-Control-Request-Method: &lt;method&gt;
-</pre>
+## 指令
 
-<h2 id="指令">指令</h2>
+- \<method>
+  - : 一种 [HTTP 请求方法 ](/zh-CN/docs/Web/HTTP/Methods), 例如 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 或 {{HTTPMethod("DELETE")}}。
 
-<dl>
- <dt>&lt;method&gt;</dt>
- <dd>一种 <a href="/en-US/docs/Web/HTTP/Methods">HTTP 请求方法 </a>, 例如 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 或 {{HTTPMethod("DELETE")}}。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+```plain
+Access-Control-Request-Method: POST
+```
 
-<pre>Access-Control-Request-Method: POST</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Headers")}}

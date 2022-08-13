@@ -3,62 +3,45 @@ title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
 translation_of: Web/HTTP/Headers/Sec-Fetch-User
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>Sec-Fetch-User</code></strong> 获取元数据标头表明了一个导航请求是否由用户激活触发。</p>
+**`Sec-Fetch-User`** 获取元数据标头表明了一个导航请求是否由用户激活触发。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>只要包含前缀 <code>Sec-</code> 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                  | {{Glossary("Fetch Metadata Request Header")}}                             |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}             | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
+| {{Glossary("CORS-safelisted request header")}} |                                                                                          |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Sec-Fetch-User: ?0
+```plain
+Sec-Fetch-User: ?0
 Sec-Fetch-User: ?1
-</pre>
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>该值是一个布尔结构化的标头。</p>
+该值是一个布尔结构化的标头。
 
-<dl>
- <dt><code>?0</code></dt>
- <dd>导航请求由用户激活触发。</dd>
- <dt><code>?1</code></dt>
- <dd>导航请求由用户激活以外的原因触发。</dd>
-</dl>
+- `?0`
+  - : 导航请求由用户激活触发。
+- `?1`
+  - : 导航请求由用户激活以外的原因触发。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>暂时没有内容</p>
+暂时没有内容
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另请参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
-</ul>
+- {{HTTPHeader("Sec-Fetch-Dest")}}
+- {{HTTPHeader("Sec-Fetch-Mode")}}
+- {{HTTPHeader("Sec-Fetch-Site")}}

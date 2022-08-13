@@ -6,69 +6,56 @@ tags:
   - HTTP Headers
 translation_of: Web/HTTP/Headers/Keep-Alive
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Keep-Alive</strong></code> 是一个通用消息头，允许消息发送者暗示连接的状态，还可以用来设置超时时长和最大请求数。</p>
+**`Keep-Alive`** 是一个通用消息头，允许消息发送者暗示连接的状态，还可以用来设置超时时长和最大请求数。
 
-<div class="note">
-<p>需要将 The {{HTTPHeader("Connection")}} 首部的值设置为  "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}  是被忽略的；在其中采用其他机制来进行连接管理。</p>
-</div>
+> **备注：** 需要将 The {{HTTPHeader("Connection")}} 首部的值设置为 "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}} 是被忽略的；在其中采用其他机制来进行连接管理。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("General header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("General header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Keep-Alive: <em>parameters</em></pre>
+```plain
+Keep-Alive: parameters
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><em>parameters</em></dt>
- <dd>一系列用逗号隔开的参数，每一个参数由一个标识符和一个值构成，并使用等号 (<code>'='</code>) 隔开。下述标识符是可用的：
- <ul>
-  <li><code>timeout</code>：指定了一个空闲连接需要保持打开状态的最小时长（以秒为单位）。需要注意的是，如果没有在传输层设置 keep-alive TCP message 的话，大于 TCP 层面的超时设置会被忽略。</li>
-  <li><code>max</code>：在连接关闭之前，在此连接可以发送的请求的最大值。在非管道连接中，除了 0 以外，这个值是被忽略的，因为需要在紧跟着的响应中发送新一次的请求。HTTP 管道连接则可以用它来限制管道的使用。</li>
- </ul>
- </dd>
-</dl>
+- _parameters_
+  - : 一系列用逗号隔开的参数，每一个参数由一个标识符和一个值构成，并使用等号 (`'='`) 隔开。下述标识符是可用的：
 
-<h2 id="示例">示例</h2>
+    - `timeout`：指定了一个空闲连接需要保持打开状态的最小时长（以秒为单位）。需要注意的是，如果没有在传输层设置 keep-alive TCP message 的话，大于 TCP 层面的超时设置会被忽略。
+    - `max`：在连接关闭之前，在此连接可以发送的请求的最大值。在非管道连接中，除了 0 以外，这个值是被忽略的，因为需要在紧跟着的响应中发送新一次的请求。HTTP 管道连接则可以用它来限制管道的使用。
 
-<p><code>含有 Keep-Alive</code> 首部的响应示例：</p>
+## 示例
 
-<pre>HTTP/1.1 200 OK
-<strong>Connection: Keep-Alive</strong>
+`含有 Keep-Alive` 首部的响应示例：
+
+```plain
+HTTP/1.1 200 OK
+Connection: Keep-Alive
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8
 Date: Thu, 11 Aug 2016 15:23:13 GMT
-<strong>Keep-Alive: timeout=5, max=1000</strong>
+Keep-Alive: timeout=5, max=1000
 Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
 Server: Apache
 
-(body)</pre>
+(body)
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Connection")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x">Connection management in HTTP/1.x</a></li>
-</ul>
+- {{HTTPHeader("Connection")}}
+- [Connection management in HTTP/1.x](/zh-CN/docs/Web/HTTP/Connection_management_in_HTTP_1.x)

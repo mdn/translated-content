@@ -8,44 +8,32 @@ tags:
   - 头部
 translation_of: Web/HTTP/Headers/Connection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>Connection </strong>头（header） 决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。</p>
+**Connection** 头（header） 决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。
 
-<div class="note">
-<p><a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">特定于连接的标头字段（例如 Connection）不得与 HTTP/2 一起使用。</a></p>
-</div>
+> **备注：** [特定于连接的标头字段（例如 Connection）不得与 HTTP/2 一起使用。](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
-<p>除去标准的逐段传输（hop-by-hop）头（{{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}），任何逐段传输头都需要在 Connection 头中列出，这样才能让第一个代理知道必须处理它们且不转发这些头。标准的逐段传输头也可以列出（常见的例子是 {{HTTPHeader("Keep-Alive")}}，但这不是必须的）。</p>
+除去标准的逐段传输（hop-by-hop）头（{{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}），任何逐段传输头都需要在 Connection 头中列出，这样才能让第一个代理知道必须处理它们且不转发这些头。标准的逐段传输头也可以列出（常见的例子是 {{HTTPHeader("Keep-Alive")}}，但这不是必须的）。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("General header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("General header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Connection: keep-alive
+```plain
+Connection: keep-alive
 Connection: close
-</pre>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>close</code></dt>
- <dd>表明客户端或服务器想要关闭该网络连接，这是 HTTP/1.0 请求的默认值</dd>
- <dt>以逗号分隔的 HTTP 头 [通常仅有 <code>keep-alive</code>]</dt>
- <dd>表明客户端想要保持该网络连接打开，HTTP/1.1 的请求默认使用一个持久连接。这个请求头列表由头部名组成，这些头将被第一个非透明的代理或者代理间的缓存所移除：这些头定义了发出者和第一个实体之间的连接，而不是和目的地节点间的连接。</dd>
-</dl>
+- `close`
+  - : 表明客户端或服务器想要关闭该网络连接，这是 HTTP/1.0 请求的默认值
+- 以逗号分隔的 HTTP 头 \[通常仅有 `keep-alive`]
+  - : 表明客户端想要保持该网络连接打开，HTTP/1.1 的请求默认使用一个持久连接。这个请求头列表由头部名组成，这些头将被第一个非透明的代理或者代理间的缓存所移除：这些头定义了发出者和第一个实体之间的连接，而不是和目的地节点间的连接。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("http.headers.Connection")}}</div>
+{{Compat("http.headers.Connection")}}

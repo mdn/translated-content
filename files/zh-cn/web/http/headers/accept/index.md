@@ -3,70 +3,57 @@ title: Accept
 slug: Web/HTTP/Headers/Accept
 translation_of: Web/HTTP/Headers/Accept
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Accept</code></strong> 请求头用来告知（服务器）客户端可以处理的内容类型，这种内容类型用<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 类型</a>来表示。借助<a href="/zh-CN/docs/Web/HTTP/Content_negotiation">内容协商机制</a>, 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求头设置合适的值，比如获取一个 CSS 层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。</p>
+**`Accept`** 请求头用来告知（服务器）客户端可以处理的内容类型，这种内容类型用[MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)来表示。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation), 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求头设置合适的值，比如获取一个 CSS 层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple header", "CORS-safelisted request-header")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                                          | {{Glossary("Request header")}} |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                                       |
+| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Accept: &lt;MIME_type&gt;/&lt;MIME_subtype&gt;
-Accept: &lt;MIME_type&gt;/*
+```plain
+Accept: <MIME_type>/<MIME_subtype>
+Accept: <MIME_type>/*
 Accept: */*
 
 // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>单一精确的 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 类型</a>，例如<code>text/html</code>.</dd>
- <dt><code>&lt;MIME_type&gt;/*</code></dt>
- <dd>一类 MIME 类型，但是没有指明子类。<code>image/*</code> 可以用来指代 <code>image/png</code>、<code>image/svg</code>、<code>image/gif</code> 以及任何其他的图片类型。</dd>
- <dt><code>*/*</code></dt>
- <dd>任意类型的 MIME 类型</dd>
- <dt><code>;q=</code> (q 因子权重)</dt>
- <dd>值代表优先顺序，用相对<a href="/zh-CN/docs/Glossary/Quality_values">质量价值</a>表示，又称作权重。</dd>
-</dl>
+- `<MIME_type>/<MIME_subtype>`
+  - : 单一精确的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，例如`text/html`.
+- `<MIME_type>/*`
+  - : 一类 MIME 类型，但是没有指明子类。`image/*` 可以用来指代 `image/png`、`image/svg`、`image/gif` 以及任何其他的图片类型。
+- `*/*`
+  - : 任意类型的 MIME 类型
+- `;q=` (q 因子权重)
+  - : 值代表优先顺序，用相对[质量价值](/zh-CN/docs/Glossary/Quality_values)表示，又称作权重。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Accept: text/html
+```plain
+Accept: text/html
 
 Accept: image/*
 
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>HTTP <a href="/zh-CN/docs/Web/HTTP/Content_negotiation">内容协商</a></li>
- <li>表示内容协商结果的消息头: {{HTTPHeader("Content-Type")}}</li>
- <li>其他相似消息头: {{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
+- 表示内容协商结果的消息头: {{HTTPHeader("Content-Type")}}
+- 其他相似消息头: {{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}

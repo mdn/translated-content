@@ -3,61 +3,51 @@ title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
 translation_of: Web/HTTP/Headers/Device-Memory
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p><code><strong>Device-Memory</strong></code> 是一个跟 <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a> 相关的请求头，它跟 <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> 请求头的作用相似，用来表示客户端设备内存的近似大小。</p>
+**`Device-Memory`** 是一个跟 [Device Memory API](/zh-CN/docs/Web/API/Device_Memory_API) 相关的请求头，它跟 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 请求头的作用相似，用来表示客户端设备内存的近似大小。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive <code>Device-Memory</code> header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.</p>
-</div>
+> **备注：** Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive `Device-Memory` header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>设备的内存大小可能会被用作指纹变量，因此将这个取值设置的比较粗糙，以减少滥用它的可能性。 请求头采用以下值：0.25、0.5、1、2、4、8。</p>
+设备的内存大小可能会被用作指纹变量，因此将这个取值设置的比较粗糙，以减少滥用它的可能性。 请求头采用以下值：0.25、0.5、1、2、4、8。
 
-<pre class="syntaxbox">Device-Memory: &lt;number&gt;
-</pre>
+```plain
+Device-Memory: <number>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>服务器需要先发送包含 <code>Device-Memory</code> 的 {{HTTPHeader("Accept-CH")}} 和 {{HTTPHeader("Accept-CH-Lifetime")}} 响应头，来表明可以接收 <code>Device-Memory</code> 请求头。</p>
+服务器需要先发送包含 `Device-Memory` 的 {{HTTPHeader("Accept-CH")}} 和 {{HTTPHeader("Accept-CH-Lifetime")}} 响应头，来表明可以接收 `Device-Memory` 请求头。
 
-<pre>Accept-CH: Device-Memory
+```plain
+Accept-CH: Device-Memory
 Accept-CH-Lifetime: 86400
-</pre>
+```
 
-<p>接下来客户端发送的请求则可能会包含 <code>Device-Memory</code> 请求头：</p>
+接下来客户端发送的请求则可能会包含 `Device-Memory` 请求头：
 
-<pre>Device-Memory: 1
-</pre>
+```plain
+Device-Memory: 1
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
-</ul>
+- [Device Memory API](/zh-CN/docs/Web/API/Device_Memory_API)
+- {{HTTPHeader("Accept-CH")}}
+- {{HTTPHeader("Accept-CH-Lifetime")}}
+- {{HTTPHeader("Vary")}}
+- {{DOMxRef("Navigator.deviceMemory")}}

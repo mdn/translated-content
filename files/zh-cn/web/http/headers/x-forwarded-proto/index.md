@@ -7,59 +7,50 @@ tags:
   - 非标准化
 translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>X-Forwarded-Proto</code></strong> (XFP) 是一个事实上的标准首部，用来确定客户端与代理服务器或者负载均衡服务器之间的连接所采用的传输协议（HTTP 或 HTTPS）。在服务器的访问日志中记录的是负载均衡服务器与服务器之间的连接所使用的传输协议，而非客户端与负载均衡服务器之间所使用的协议。为了确定客户端与负载均衡服务器之间所使用的协议， X-Forwarded-Proto 就派上了用场。</p>
+**`X-Forwarded-Proto`** (XFP) 是一个事实上的标准首部，用来确定客户端与代理服务器或者负载均衡服务器之间的连接所采用的传输协议（HTTP 或 HTTPS）。在服务器的访问日志中记录的是负载均衡服务器与服务器之间的连接所使用的传输协议，而非客户端与负载均衡服务器之间所使用的协议。为了确定客户端与负载均衡服务器之间所使用的协议， X-Forwarded-Proto 就派上了用场。
 
-<p>HTTP 协议中的 {{HTTPHeader("Forwarded")}}  是这个消息首部的标准化版本。</p>
+HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">X-Forwarded-Proto: &lt;protocol&gt;
-</pre>
+```plain
+X-Forwarded-Proto: <protocol>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;protocol&gt;</dt>
- <dd>经过转发的传输协议（http 或 https）。</dd>
-</dl>
+- \<protocol>
+  - : 经过转发的传输协议（http 或 https）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>X-Forwarded-Proto: https</pre>
+```plain
+X-Forwarded-Proto: https
+```
 
-<p>其他非标准形式：</p>
+其他非标准形式：
 
-<pre># Microsoft
+```plain
+# Microsoft
 Front-End-Https: on
 
 X-Forwarded-Protocol: https
 X-Forwarded-Ssl: on
 X-Url-Scheme: https
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.</p>
+不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Forwarded")}}</li>
- <li>{{HTTPHeader("X-Forwarded-For")}}</li>
- <li>{{HTTPHeader("X-Forwarded-Host")}}</li>
-</ul>
+- {{HTTPHeader("Forwarded")}}
+- {{HTTPHeader("X-Forwarded-For")}}
+- {{HTTPHeader("X-Forwarded-Host")}}

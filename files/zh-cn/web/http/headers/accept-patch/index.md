@@ -3,70 +3,53 @@ title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
 translation_of: Web/HTTP/Headers/Accept-Patch
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>服务器使用 HTTP 响应头 <code><strong>Accept-</strong></code><strong><code>Patch</code></strong> 通知浏览器请求的媒体类型 (media-type) 可以被服务器理解。</p>
+服务器使用 HTTP 响应头 **`Accept-Patch`** 通知浏览器请求的媒体类型 (media-type) 可以被服务器理解。
 
-<p><strong><code>Accept-Patch</code></strong> in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:</p>
+**`Accept-Patch`** in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:
 
-<p>A server receiving a PATCH request with an unsupported media type could reply with  {{HTTPStatus("415")}} <code>Unsupported Media Type</code> and an Accept-Patch header referencing one or more supported media types.</p>
+A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an Accept-Patch header referencing one or more supported media types.
 
-<p> </p>
+> **备注：** An IANA registry maintains [a complete list of official content encodings](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+>
+> - Two others content encoding, `bzip` and `bzip2`, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.
 
-<div class="note"><strong>Notes:</strong>
+| 头部类型                                                               | {{Glossary("Response header")}} |
+| ---------------------------------------------------------------------- | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | yes                                      |
 
-<ul>
- <li>
-  <p>An IANA registry maintains <a href="http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p>
- </li>
- <li>Two others content encoding, <code>bzip</code> and <code>bzip2</code>, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.</li>
-</ul>
-</div>
+## 语法
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">头部类型</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头）</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+```plain
+Accept-Patch: application/example, text/example
 Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<p>(无)</p>
+(无)
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+```plain
+Accept-Patch: application/example, text/example
 
 Accept-Patch: text/example;charset=utf-8
 
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>Http method {{HTTPMethod("PATCH")}}</li>
- <li>HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}</li>
-</ul>
+- Http method {{HTTPMethod("PATCH")}}
+- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}

@@ -8,83 +8,59 @@ tags:
   - 请求方法
 translation_of: Web/HTTP/Methods/DELETE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP DELETE </strong>请求方法用于删除指定的资源。</p>
+**HTTP DELETE** 请求方法用于删除指定的资源。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">请求是否有主体</th>
-   <td>可以有</td>
-  </tr>
-  <tr>
-   <th scope="row">成功的返回是否有主体</th>
-   <td>可以有</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("安全")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("幂等")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("可缓存")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">可以在<a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>中使用</th>
-   <td>否</td>
-  </tr>
- </tbody>
-</table>
+| 请求是否有主体                                             | 可以有 |
+| ---------------------------------------------------------- | ------ |
+| 成功的返回是否有主体                                       | 可以有 |
+| {{Glossary("安全")}}                               | 否     |
+| {{Glossary("幂等")}}                               | 是     |
+| {{Glossary("可缓存")}}                           | 否     |
+| 可以在[HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms)中使用 | 否     |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">DELETE /file.html HTTP/1.1
-</pre>
+```plain
+DELETE /file.html HTTP/1.1
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="请求">请求</h3>
+### 请求
 
-<pre>DELETE /file.html HTTP/1.1</pre>
+```plain
+DELETE /file.html HTTP/1.1
+```
 
-<h3 id="响应">响应</h3>
+### 响应
 
-<p>如果 <code>DELETE </code>方法成功执行，那么可能会有以下几种状态码：</p>
+如果 `DELETE `方法成功执行，那么可能会有以下几种状态码：
 
-<ul>
- <li>状态码  {{HTTPStatus("202")}} (<code>Accepted</code>) 表示请求的操作可能会成功执行，但是尚未开始执行。</li>
- <li>状态码 {{HTTPStatus("204")}} (<code>No Content</code>) 表示操作已执行，但是无进一步的相关信息。</li>
- <li>状态码  {{HTTPStatus("200")}} (<code>OK</code>) 表示操作已执行，并且响应中提供了相关状态的描述信息。</li>
-</ul>
+- 状态码 {{HTTPStatus("202")}} (`Accepted`) 表示请求的操作可能会成功执行，但是尚未开始执行。
+- 状态码 {{HTTPStatus("204")}} (`No Content`) 表示操作已执行，但是无进一步的相关信息。
+- 状态码 {{HTTPStatus("200")}} (`OK`) 表示操作已执行，并且响应中提供了相关状态的描述信息。
 
-<pre>HTTP/1.1 200 OK
+```plain
+HTTP/1.1 200 OK
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;File deleted.&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+<html>
+  <body>
+    <h1>File deleted.</h1>
+  </body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}</li>
-</ul>
-
-<p> </p>
-
-<p> </p>
+- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}

@@ -5,65 +5,52 @@ tags:
   - 响应首部
 translation_of: Web/HTTP/Headers/Retry-After
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>在 HTTP 协议中，响应首部 <strong><code>Retry-After</code></strong> 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：</p>
+在 HTTP 协议中，响应首部 **`Retry-After`** 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：
 
-<ul>
- <li>当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。</li>
- <li>当与重定向响应一起发送的时候，比如 {{HTTPStatus(301)}} (Moved Permanently，永久迁移)，表示用户代理在发送重定向请求之前需要等待的最短时间。</li>
-</ul>
+- 当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。
+- 当与重定向响应一起发送的时候，比如 {{HTTPStatus(301)}} (Moved Permanently，永久迁移)，表示用户代理在发送重定向请求之前需要等待的最短时间。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Retry-After: &lt;http-date&gt;
-Retry-After: &lt;delay-seconds&gt;
-</pre>
+```plain
+Retry-After: <http-date>
+Retry-After: <delay-seconds>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;http-date&gt;</dt>
- <dd>表示在此时间之后可以重新尝试。参见  {{HTTPHeader("Date")}}  首部来获取 HTTP 协议中关于日期格式的细节信息。</dd>
- <dt>&lt;delay-seconds&gt;</dt>
- <dd>一个非负的十进制整数，表示在重试之前需要等待的秒数。</dd>
-</dl>
+- \<http-date>
+  - : 表示在此时间之后可以重新尝试。参见 {{HTTPHeader("Date")}} 首部来获取 HTTP 协议中关于日期格式的细节信息。
+- \<delay-seconds>
+  - : 一个非负的十进制整数，表示在重试之前需要等待的秒数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="对于计划内宕机时间的处理">对于计划内宕机时间的处理</h3>
+### 对于计划内宕机时间的处理
 
-<p>不同的客户端与服务器端应用对于 Retry-After 首部的支持依然不太一致。不过，一些爬虫程序，比如谷歌的爬虫程序 Googlebot，会遵循 Retry-After 首部的规则。将其与  {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在)  响应一起发送有助于互联网引擎做出判断，在宕机结束之后继续对网站构建索引。</p>
+不同的客户端与服务器端应用对于 Retry-After 首部的支持依然不太一致。不过，一些爬虫程序，比如谷歌的爬虫程序 Googlebot，会遵循 Retry-After 首部的规则。将其与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送有助于互联网引擎做出判断，在宕机结束之后继续对网站构建索引。
 
-<pre>Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
+```plain
+Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
 Retry-After: 120
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html">Google Webmaster blog: How to deal with planned site downtime</a></li>
- <li>{{HTTPStatus(503)}} (Service Unavailable)</li>
- <li>{{HTTPStatus(301)}} (Moved Permanently)</li>
-</ul>
+- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
+- {{HTTPStatus(503)}} (Service Unavailable)
+- {{HTTPStatus(301)}} (Moved Permanently)

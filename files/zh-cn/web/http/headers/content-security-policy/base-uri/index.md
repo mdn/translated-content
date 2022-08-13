@@ -9,78 +9,73 @@ tags:
   - 文档指令
 translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议 {{HTTPHeader("Content-Security-Policy")}} 首部字段中的 <strong><code>base-uri</code></strong> 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。 </p>
+HTTP 协议 {{HTTPHeader("Content-Security-Policy")}} 首部字段中的 **`base-uri`** 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Document directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>No. Not setting this allows anything.</td>
-  </tr>
- </tbody>
-</table>
+| CSP version                           | 2                                            |
+| ------------------------------------- | -------------------------------------------- |
+| Directive type                        | {{Glossary("Document directive")}} |
+| {{CSP("default-src")}} fallback | No. Not setting this allows anything.        |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>base-uri 安全策略可以设置一个或多个源：</p>
+base-uri 安全策略可以设置一个或多个源：
 
-<pre class="syntaxbox">Content-Security-Policy: base-uri &lt;source&gt;;
-Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
-</pre>
+```plain
+Content-Security-Policy: base-uri <source>;
+Content-Security-Policy: base-uri <source> <source>;
+```
 
-<h3 id="源">源</h3>
+### 源
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Meta_tag_配置">Meta tag 配置</h3>
+### Meta tag 配置
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+```
 
-<h3 id="Apache_配置">Apache 配置</h3>
+### Apache 配置
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self';
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h3 id="Nginx_配置">Nginx 配置</h3>
+### Nginx 配置
 
-<pre class="brush: bash">add_header Content-Security-Policy "base-uri 'self';"</pre>
+```bash
+add_header Content-Security-Policy "base-uri 'self';"
+```
 
-<h3 id="违犯策略的案例"><em>违犯策略的案例</em></h3>
+### _违犯策略的案例_
 
-<p>假如你的域名不是 example.com，那么将 {{HTMLElement("base")}} 元素的 href 属性值设置成 example.com 会违犯 CSP 策略。</p>
+假如你的域名不是 example.com，那么将 {{HTMLElement("base")}} 元素的 href 属性值设置成 example.com 会违犯 CSP 策略。
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
-&lt;base href="http://example.com/"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<base href="http://example.com/">
 
 // Error: Refused to set the document's base URI to 'http://example.com/'
 // because it violates the following Content Security Policy
-// directive: "base-uri 'self'"</pre>
+// directive: "base-uri 'self'"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPheader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{domxref("Node.baseURI")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{HTMLElement("base")}}
+- {{domxref("Node.baseURI")}}

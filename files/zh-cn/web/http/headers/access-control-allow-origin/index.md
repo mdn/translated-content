@@ -3,66 +3,58 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
-<div><code><strong>Access-Control-Allow-Origin</strong></code> 响应头指定了该响应的资源是否被允许与给定的{{glossary("origin")}}共享。</div>
+**`Access-Control-Allow-Origin`** 响应头指定了该响应的资源是否被允许与给定的{{glossary("origin")}}共享。
 
-<div> </div>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origin>
+```
 
-<pre class="syntaxbox">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origin&gt;
-</pre>
+## 指令
 
-<h2 id="指令">指令</h2>
+- \*
+  - : 对于不需具备凭证（credentials）的请求，服务器会以“`*`”作为通配符，从而允许所有域都具有访问资源的权限。
+- \<origin>
+  - : 指定一个可以访问资源的 URI。
 
-<dl>
- <dt>*</dt>
- <dd>对于不需具备凭证（credentials）的请求，服务器会以“<code>*</code>”作为通配符，从而允许所有域都具有访问资源的权限。</dd>
- <dt>&lt;origin&gt;</dt>
- <dd>指定一个可以访问资源的 URI。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+如需允许所有资源都可以访问`您`的资源，您可以如此设置：
 
-<p>如需允许所有资源都可以访问<code>您</code>的资源，您可以如此设置：</p>
+```plain
+Access-Control-Allow-Origin: *
+```
 
-<pre>Access-Control-Allow-Origin: *</pre>
+如需允许`https://developer.mozilla.org`访问您的资源，您可以设置：
 
-<p>如需允许<code>https://developer.mozilla.org</code>访问您的资源，您可以设置：</p>
+```plain
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+### CORS 和缓存
 
-<h3 id="CORS和缓存">CORS 和缓存</h3>
+如果服务器未使用“`*`”，而是指定了一个域，那么为了向客户端表明服务器的返回会根据`Origin`请求头而有所不同，必须在{{HTTPHeader("Vary")}}响应头中包含`Origin`。
 
-<p>如果服务器未使用“<code>*</code>”，而是指定了一个域，那么为了向客户端表明服务器的返回会根据<code>Origin</code>请求头而有所不同，必须在{{HTTPHeader("Vary")}}响应头中包含<code>Origin</code>。</p>
+```plain
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}

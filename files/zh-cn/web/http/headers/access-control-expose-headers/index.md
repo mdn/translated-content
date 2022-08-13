@@ -6,82 +6,68 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>响应首部 <strong><code>Access-Control-Expose-Headers</code></strong> 列出了哪些首部可以作为响应的一部分暴露给外部。</p>
+响应首部 **`Access-Control-Expose-Headers`** 列出了哪些首部可以作为响应的一部分暴露给外部。
 
-<p>默认情况下，只有七种 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）可以暴露给外部：</p>
+默认情况下，只有七种 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）可以暴露给外部：
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Content-Language")}}</li>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("Pragma")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Expires")}}
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("Pragma")}}
 
-<p>如果想要让客户端可以访问到其他的首部信息，可以将它们在 <code>Access-Control-Expose-Headers</code> 里面列出来。</p>
+如果想要让客户端可以访问到其他的首部信息，可以将它们在 `Access-Control-Expose-Headers` 里面列出来。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```plain
+Access-Control-Expose-Headers: <header-name>, <header-name>, ...
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>包含 0 个或多个除 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）之外的<a href="/en-US/docs/Web/HTTP/Headers">首部名称</a>列表，可以暴露给外部，供页面资源使用。</dd>
-</dl>
+- \<header-name>
+  - : 包含 0 个或多个除 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）之外的[首部名称](/zh-CN/docs/Web/HTTP/Headers)列表，可以暴露给外部，供页面资源使用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>想要暴露一个非简单响应首部，可以这样指定：</p>
+想要暴露一个非简单响应首部，可以这样指定：
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length</pre>
+```plain
+Access-Control-Expose-Headers: Content-Length
+```
 
-<p>想要额外暴露自定义的首部，例如 <code>X-Kuma-Revision</code>，可以指定多个，用逗号隔开：</p>
+想要额外暴露自定义的首部，例如 `X-Kuma-Revision`，可以指定多个，用逗号隔开：
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
+```plain
+Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="关于兼容性的注意事项">关于兼容性的注意事项</h2>
+## 关于兼容性的注意事项
 
-<ul>
- <li>在最新规范中提出的通配符 (*)，尚未被如下浏览器实现：
-  <ul>
-   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
-   <li>Firefox: {{bug(1309358)}}</li>
-   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
-  </ul>
- </li>
-</ul>
+- 在最新规范中提出的通配符 (\*)，尚未被如下浏览器实现：
 
-<h2 id="相关内容">相关内容</h2>
+  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
+  - Firefox: {{bug(1309358)}}
+  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
-</ul>
+## 相关内容
+
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}

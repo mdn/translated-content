@@ -3,70 +3,50 @@ title: Sec-Fetch-Site
 slug: Web/HTTP/Headers/Sec-Fetch-Site
 translation_of: Web/HTTP/Headers/Sec-Fetch-Site
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>Sec-Fetch-Site</code></strong> 获取元数据标头表明了一个请求发起者的来源与目标资源来源之间的关系。</p>
+**`Sec-Fetch-Site`** 获取元数据标头表明了一个请求发起者的来源与目标资源来源之间的关系。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>只要包含前缀 <code>Sec-</code> 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                      | {{Glossary("Fetch Metadata Request Header")}}                             |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}                 | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
+| {{Glossary("CORS-safelisted response header")}} |                                                                                          |
+| {{Glossary("CORS-safelisted request header")}}     |                                                                                          |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Sec-Fetch-Site: cross-site
+```plain
+Sec-Fetch-Site: cross-site
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Site: same-site
 Sec-Fetch-Site: none
-</pre>
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<dl>
- <dt><code>cross-site</code></dt>
- <dd>TBD</dd>
- <dt><code>same-origin</code></dt>
- <dd>TBD</dd>
- <dt><code>same-site</code></dt>
- <dd>TBD</dd>
- <dt><code>none</code></dt>
- <dd>这一请求与任意上下文无关，例如站点、源，或者框架。当用户采用某些方式发起请求时该值会被使用，例如：直接在地址栏中输入 URL、打开一个书签，或者往浏览器窗口中拖放一个文件。</dd>
-</dl>
+- `cross-site`
+  - : TBD
+- `same-origin`
+  - : TBD
+- `same-site`
+  - : TBD
+- `none`
+  - : 这一请求与任意上下文无关，例如站点、源，或者框架。当用户采用某些方式发起请求时该值会被使用，例如：直接在地址栏中输入 URL、打开一个书签，或者往浏览器窗口中拖放一个文件。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>暂时没有内容</p>
+暂时没有内容
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另请参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
-</ul>
+- {{HTTPHeader("Sec-Fetch-Mode")}}
+- {{HTTPHeader("Sec-Fetch-User")}}
+- {{HTTPHeader("Sec-Fetch-Dest")}}

@@ -3,73 +3,58 @@ title: 'CSP: worker-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/worker-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>worker-src</strong></code> directive specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** directive specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Fallback</th>
-   <td>
-    <p>If this directive is absent, the user agent will first look for the {{CSP("child-src")}} directive, then the {{CSP("script-src")}} directive, then finally for the {{CSP("default-src")}} directive, when governing worker execution.</p>
+| CSP version    | 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Directive type | {{Glossary("Fetch directive")}}                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Fallback       | If this directive is absent, the user agent will first look for the {{CSP("child-src")}} directive, then the {{CSP("script-src")}} directive, then finally for the {{CSP("default-src")}} directive, when governing worker execution.Chrome 59 and higher skips the {{CSP("child-src")}} directive.Edge 17 skips the {{CSP("script-src")}} directive ([bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17415478/)). |
 
-    <p>Chrome 59 and higher skips the {{CSP("child-src")}} directive.</p>
+## Syntax
 
-    <p>Edge 17 skips the {{CSP("script-src")}} directive (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17415478/">bug</a>).</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+One or more sources can be allowed for the `worker-src` policy:
 
-<h2 id="Syntax">Syntax</h2>
+```plain
+Content-Security-Policy: worker-src <source>;
+Content-Security-Policy: worker-src <source> <source>;
+```
 
-<p>One or more sources can be allowed for the <code>worker-src</code> policy:</p>
+### Sources
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: worker-src &lt;source&gt;;
-Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
-</pre>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h3 id="Sources">Sources</h3>
+## Examples
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+### Violation cases
 
-<h2 id="Examples">Examples</h2>
+Given this CSP header:
 
-<h3 id="Violation_cases">Violation cases</h3>
+```bash
+Content-Security-Policy: worker-src https://example.com/
+```
 
-<p>Given this CSP header:</p>
+{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} are blocked and won't load:
 
-<pre class="brush: bash notranslate">Content-Security-Policy: worker-src https://example.com/</pre>
-
-<p>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} are blocked and won't load:</p>
-
-<pre class="brush: html notranslate">&lt;script&gt;
+```html
+<script>
   var blockedWorker = new Worker("data:application/javascript,...");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy">CSP for Web Workers</a></li>
- <li>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [CSP for Web Workers](/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy)
+- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

@@ -9,51 +9,42 @@ tags:
   - 安全
 translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP 内容安全策略) 中 <code><strong>font</strong></code><strong><code>-src</code></strong> 指令定义了 {{cssxref("@font-face")}} 加载字体的有效源规则。</p>
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP 内容安全策略) 中 **`font-src`** 指令定义了 {{cssxref("@font-face")}} 加载字体的有效源规则。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP 版本</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">指令类型</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} 替代</th>
-   <td>是。如果 <code><strong>font</strong></code><strong><code>-src</code></strong> 没有指定，则使用 <code>default-src</code> 指令。</td>
-  </tr>
- </tbody>
-</table>
+| CSP 版本                          | 1                                                                       |
+| --------------------------------- | ----------------------------------------------------------------------- |
+| 指令类型                          | {{Glossary("Fetch directive")}}                                |
+| {{CSP("default-src")}} 替代 | 是。如果 **`font-src`** 没有指定，则使用 `default-src` 指令。 |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>font-src</code> 策略可以包含一个或多个源：</p>
+`font-src` 策略可以包含一个或多个源：
 
-<pre class="syntaxbox">Content-Security-Policy: font-src &lt;source&gt;;
-Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```plain
+Content-Security-Policy: font-src <source>;
+Content-Security-Policy: font-src <source> <source>;
+```
 
-<h3 id="源代码">源代码</h3>
+### 源代码
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="反例">反例</h3>
+### 反例
 
-<p>给出这个 CSP 头：</p>
+给出这个 CSP 头：
 
-<pre class="brush: bash">Content-Security-Policy: font-src https://example.com/
-</pre>
+```bash
+Content-Security-Policy: font-src https://example.com/
+```
 
-<p>以下的字体源将被阻止，不会加载到浏览器中：</p>
+以下的字体源将被阻止，不会加载到浏览器中：
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   @font-face {
     font-family: "MyFont";
     src: url("https://not-example.com/font");
@@ -61,19 +52,18 @@ Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
   body {
     font-family: "MyFont";
   }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{cssxref("@font-face")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{cssxref("@font-face")}}

@@ -9,90 +9,79 @@ tags:
 translation_of: Web/HTTP/Headers/X-DNS-Prefetch-Control
 original_slug: Controlling_DNS_prefetching
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>X-DNS-Prefetch-Control</code></strong> 头控制着浏览器的 DNS 预读取功能。 DNS 预读取是一项使浏览器主动去执行域名解析的功能，其范围包括文档的所有链接，无论是图片的，CSS 的，还是 JavaScript 等其他用户能够点击的 URL。</p>
+**`X-DNS-Prefetch-Control`** 头控制着浏览器的 DNS 预读取功能。 DNS 预读取是一项使浏览器主动去执行域名解析的功能，其范围包括文档的所有链接，无论是图片的，CSS 的，还是 JavaScript 等其他用户能够点击的 URL。
 
-<p>因为预读取会在后台执行，所以 {{glossary("DNS")}} 很可能在链接对应的东西出现之前就已经解析完毕。这能够减少用户点击链接时的延迟。</p>
+因为预读取会在后台执行，所以 {{glossary("DNS")}} 很可能在链接对应的东西出现之前就已经解析完毕。这能够减少用户点击链接时的延迟。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">X-DNS-Prefetch-Control: on
+```plain
+X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>on</dt>
- <dd>启用 DNS 预解析。在浏览器支持 DNS 预解析的特性时即使不使用该标签浏览器依然会进行预解析。</dd>
- <dt>off</dt>
- <dd>关闭 DNS 预解析。这个属性在页面上的链接并不是由你控制的或是你根本不想向这些域名引导数据时是非常有用的。</dd>
-</dl>
+- on
+  - : 启用 DNS 预解析。在浏览器支持 DNS 预解析的特性时即使不使用该标签浏览器依然会进行预解析。
+- off
+  - : 关闭 DNS 预解析。这个属性在页面上的链接并不是由你控制的或是你根本不想向这些域名引导数据时是非常有用的。
 
-<h2 id="介绍">介绍</h2>
+## 介绍
 
-<p>DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手机网络上特别明显。预读取 DNS 能让延迟明显减少一些，例如在用户点击链接时。在某些情况下，延迟能减少一秒钟。 </p>
+DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手机网络上特别明显。预读取 DNS 能让延迟明显减少一些，例如在用户点击链接时。在某些情况下，延迟能减少一秒钟。
 
-<p>在某些浏览器中这个预读取的行为将会与页面实际内容并行发生（而不是串行）。正因如此，某些高延迟的域名的解析过程才不会卡住资源的加载。</p>
+在某些浏览器中这个预读取的行为将会与页面实际内容并行发生（而不是串行）。正因如此，某些高延迟的域名的解析过程才不会卡住资源的加载。
 
-<p>这样可以极大的加速（尤其是移动网络环境下）页面的加载。在某些图片较多的页面中，在发起图片加载请求之前预先把域名解析好将会有至少 5% 的图片加载速度提升。</p>
+这样可以极大的加速（尤其是移动网络环境下）页面的加载。在某些图片较多的页面中，在发起图片加载请求之前预先把域名解析好将会有至少 5% 的图片加载速度提升。
 
-<h3 id="在浏览器中设置预读取配置">在浏览器中设置预读取配置</h3>
+### 在浏览器中设置预读取配置
 
-<p>一般来说并不需要去管理预读取，但是可能会有用户希望关闭预读取功能。这时只需要将 <code>network.dns.disablePrefetch</code> 选项值设置为 <code>true</code> 就可以了。</p>
+一般来说并不需要去管理预读取，但是可能会有用户希望关闭预读取功能。这时只需要将 `network.dns.disablePrefetch` 选项值设置为 `true` 就可以了。
 
-<p>另外，默认情况下，通过 {{glossary("HTTPS")}} 加载的页面上内嵌链接的域名并不会执行预加载。在 Firefox 浏览器中，可以通过 about:config 设置 <code>network.dns.disablePrefetchFromHTTPS</code> 值为 <code>false</code> 来改变这一默认行为。</p>
+另外，默认情况下，通过 {{glossary("HTTPS")}} 加载的页面上内嵌链接的域名并不会执行预加载。在 Firefox 浏览器中，可以通过 about:config 设置 `network.dns.disablePrefetchFromHTTPS` 值为 `false` 来改变这一默认行为。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="打开和关闭_DNS_预读取">打开和关闭 DNS 预读取</h3>
+### 打开和关闭 DNS 预读取
 
-<p>你可以通过在服务器端发送 <code>X-DNS-Prefetch-Control</code> 报头，或是在文档中使用值为 {{ htmlattrxref("http-equiv") }} 的 {{ HTMLElement("meta") }} 标签：</p>
+你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 {{ htmlattrxref("http-equiv") }} 的 {{ HTMLElement("meta") }} 标签：
 
-<pre>&lt;meta http-equiv="x-dns-prefetch-control" content="off"&gt;
-</pre>
+```plain
+<meta http-equiv="x-dns-prefetch-control" content="off">
+```
 
-<p>您可以通过将 <code>content</code> 的参数设置为“<code>on</code>”来改变设置。</p>
+您可以通过将 `content` 的参数设置为“`on`”来改变设置。
 
-<h3 id="强制查询特定主机名">强制查询特定主机名</h3>
+### 强制查询特定主机名
 
-<p>你可以通过使用 {{ htmlattrxref("rel","link") }} 属性值为 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">link type</a> 中的 <code>dns-prefetch</code> 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：</p>
+你可以通过使用 {{ htmlattrxref("rel","link") }} 属性值为 [link type](/zh-CN/docs/Web/HTML/Link_types) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
 
-<pre class="brush: html">&lt;link rel="dns-prefetch" href="http://www.spreadfirefox.com/"&gt;
-</pre>
+```html
+<link rel="dns-prefetch" href="http://www.spreadfirefox.com/">
+```
 
-<p>在这个例子中，Firefox 将预解析域名"<a href="http://www.spreadfirefox.com">www.spreadfirefox.com</a>"。</p>
+在这个例子中，Firefox 将预解析域名"[www.spreadfirefox.com](http://www.spreadfirefox.com)"。
 
-<p>而且，{{ HTMLElement("link") }} 元素也可以使用不完整的 URL 的主机名来标记预解析，但这些主机名前必需要有双斜线：</p>
+而且，{{ HTMLElement("link") }} 元素也可以使用不完整的 URL 的主机名来标记预解析，但这些主机名前必需要有双斜线：
 
-<pre class="brush: html">&lt;link rel="dns-prefetch" href="//www.spreadfirefox.com"&gt;
-</pre>
+```html
+<link rel="dns-prefetch" href="//www.spreadfirefox.com">
+```
 
-<p>强制对域名进行预读取在一些情况下很有用，比如，在网站的主页上，强制在整个网站上频繁引用的域名的预解析，即使它们不在主页本身上使用。即使主页的性能可能不受影响，这将提高整体站点性能。</p>
+强制对域名进行预读取在一些情况下很有用，比如，在网站的主页上，强制在整个网站上频繁引用的域名的预解析，即使它们不在主页本身上使用。即使主页的性能可能不受影响，这将提高整体站点性能。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("http.headers.X-DNS-Prefetch-Control")}}
 
+## 参考
 
-<p>{{Compat("http.headers.X-DNS-Prefetch-Control")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="http://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html">DNS Prefetching for Firefox (blog post)</a></li>
- <li><a href="http://dev.chromium.org/developers/design-documents/dns-prefetching">Google Chrome handles DNS prefetching control</a></li>
-</ul>
+- [DNS Prefetching for Firefox (blog post)](http://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
+- [Google Chrome handles DNS prefetching control](http://dev.chromium.org/developers/design-documents/dns-prefetching)
