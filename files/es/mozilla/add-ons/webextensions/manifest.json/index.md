@@ -3,49 +3,42 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<div class="blockIndicator note">
-<p>Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre <a href="/en-US/docs/Web/Manifest">Web App Manifest</a>.</p>
-</div>
+> **Nota:** Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre [Web App Manifest](/es/docs/Web/Manifest).
 
-<p>El archivo <code>manifest.json</code> es el único archivo que toda extensión usando la API WebExtension debe contener necesariamente.</p>
+El archivo `manifest.json` es el único archivo que toda extensión usando la API WebExtension debe contener necesariamente.
 
-<p>Usando <code>manifest.json</code>, puedes especificar los metadatos básicos de tu extensión como nombre y versión, así como aspectos funcionales de tu extensión (tales como scripts en segundo plano, scripts de contenido y acciones del navegador).</p>
+Usando `manifest.json`, puedes especificar los metadatos básicos de tu extensión como nombre y versión, así como aspectos funcionales de tu extensión (tales como scripts en segundo plano, scripts de contenido y acciones del navegador).
 
-<p>Es un archivo con formato <a href="/en-US/docs/Glossary/JSON">JSON</a>, con una excepción: permite comentarios con "<code>//</code>".</p>
+Es un archivo con formato [JSON](/es/docs/Glossary/JSON), con una excepción: permite comentarios con "`//`".
 
+## Lista de claves de `manifest.json`
 
-<h2 id="Lista_de_claves_de_manifest.json">Lista de claves de <code>manifest.json</code></h2>
+Las claves de manifest.json son:
 
-<p>Las claves de manifest.json son:</p>
+{{ListSubpages("/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
 
-<div class="index">{{ListSubpages("/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}</div>
+### Notas acerca de las claves de manifest.json
 
+- `"manifest_version"`, `"version"`, and `"name"` son las únicas llaves obligatorias.
+- `"default_locale"` Debe estar presente **solo** si la carpeta "`_locales`" existe.
+- `"browser_specific_settings"` no tiene soporte en Google Chrome.
 
-<h3 class="index" id="Notas_acerca_de_las_claves_de_manifest.json">Notas acerca de las claves de manifest.json</h3>
+### Acceder a las claves de manifest.json en tiempo de ejecución
 
-<ul>
- <li><code>"manifest_version"</code>, <code>"version"</code>, and <code>"name"</code> son las únicas llaves obligatorias.</li>
- <li><code>"default_locale"</code> Debe estar presente <strong>solo</strong> si la carpeta "<code>_locales</code>" existe.</li>
- <li><code>"browser_specific_settings"</code> no tiene soporte en Google Chrome.</li>
-</ul>
+Puedes acceder a el manifest desde el código JavaScript de tu extensión utilizando la función {{WebExtAPIRef("runtime.getManifest()")}}:
 
-<h3 id="Acceder_a_las_claves_de_manifest.json_en_tiempo_de_ejecución">Acceder a las claves de  manifest.json en tiempo de ejecución</h3>
+```js
+browser.runtime.getManifest().version;
+```
 
-<p>Puedes acceder a el manifest desde el código JavaScript de tu extensión utilizando la función {{WebExtAPIRef("runtime.getManifest()")}}:</p>
+## Compatibilidad de Navegadores
 
-<pre class="brush: js; no-line-numbers notranslate">browser.runtime.getManifest().version;</pre>
+Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
+{{Compat("webextensions.manifest")}}
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Ver También
 
-<p>Para un resumen extendido de las llaves y sub-llaves ver la <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json"> tabla completa de compatibilidad de <code>manifest.json</code> en navegadores</a>.</p>
-
-
-
-<p>{{Compat("webextensions.manifest")}}</p>
-
-<h2 id="Ver_También">Ver También</h2>
-
-<p>API JavaScript de {{WebExtAPIRef("permissions")}}</p>
+API JavaScript de {{WebExtAPIRef("permissions")}}

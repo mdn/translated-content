@@ -3,12 +3,10 @@ title: Arpanet
 slug: Glossary/Arpanet
 translation_of: Glossary/Arpanet
 ---
-<p>La <strong>ARPAnet </strong>(advanced research projects agency network) o Red de Angencias de Proyectos de Investigación Avanzada en español, era una red de computadoras construida en 1969 como un medio resistente para enviar datos militares y conectar principales grupos de investigación a través de los Estados Unidos. ARPAnet ejecutó NCP (network control protocol/protocolo de control de red) y subsequentemente  la primera versión del protocolo de Internet o la suite {{glossary("TCP")}}/{{glossary("IPv6","IP")}}, teniendo la ARPAnet una descatada parte en la naciente {{glossary("Internet")}}. ARPAnet finalizó a comienzos de 1990.</p>
+La **ARPAnet** (advanced research projects agency network) o Red de Angencias de Proyectos de Investigación Avanzada en español, era una red de computadoras construida en 1969 como un medio resistente para enviar datos militares y conectar principales grupos de investigación a través de los Estados Unidos. ARPAnet ejecutó NCP (network control protocol/protocolo de control de red) y subsequentemente la primera versión del protocolo de Internet o la suite {{glossary("TCP")}}/{{glossary("IPv6","IP")}}, teniendo la ARPAnet una descatada parte en la naciente {{glossary("Internet")}}. ARPAnet finalizó a comienzos de 1990.
 
-<h2 id="Saber_más">Saber más</h2>
+## Saber más
 
-<h3 id="Conocimiento_general">Conocimiento general</h3>
+### Conocimiento general
 
-<ul>
- <li>{{Interwiki("wikipedia", "Arpanet")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Arpanet")}} on Wikipedia

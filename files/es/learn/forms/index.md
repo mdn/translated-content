@@ -7,113 +7,96 @@ tags:
   - HTML5
 original_slug: HTML/HTML5/Forms_in_HTML5
 ---
-<p>{{ gecko_minversion_header("2") }}</p>
+{{ gecko_minversion_header("2") }}
 
-<p>Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.</p>
+Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 
-<p>Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.</p>
+Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.
 
-<h3 id="El_elemento_&lt;input>">El elemento <code>&lt;input&gt;</code></h3>
+### El elemento `<input>`
 
-<p>El elemento <code>{{ HTMLElement("input") }}</code> tiene nuevos valores para el atributo {{ htmlattrxref("type", "input") }}.</p>
+El elemento `{{ HTMLElement("input") }}` tiene nuevos valores para el atributo {{ htmlattrxref("type", "input") }}.
 
-<ul>
- <li><span style="font-family: courier new;">search</span>: El elemento representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.</li>
- <li><span style="font-family: courier new;">tel</span>: El elemento representa un control para editar un número de teléfono, porque los números teléfonicos varían ampliamente en el mundo. Puedes usar atributos como {{ htmlattrxref("pattern", "input") }} y {{ htmlattrxref("maxlength", "input") }} para restringir los valores ingresados en la caja.</li>
- <li><span style="font-family: courier new;">url</span>: El elemento representa un control para editar una <a class="external" href="http://es.wikipedia.org/URL">URL</a>. Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.</li>
- <li>
-  <p><span style="font-family: courier new;">email</span>: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF <span style="font-family: courier new;"><code><code title="">1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )</code></code></span> donde <code title="">atext</code> está definida en RFC 5322, sección 3.2.3 y <code title="">ldh-str</code> está definida en RFC 1034, sección 3.5.</p>
+- search: El elemento representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.
+- tel: El elemento representa un control para editar un número de teléfono, porque los números teléfonicos varían ampliamente en el mundo. Puedes usar atributos como {{ htmlattrxref("pattern", "input") }} y {{ htmlattrxref("maxlength", "input") }} para restringir los valores ingresados en la caja.
+- url: El elemento representa un control para editar una [URL](http://es.wikipedia.org/URL). Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.
+- email: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF `1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )` donde `atext` está definida en RFC 5322, sección 3.2.3 y `ldh-str` está definida en RFC 1034, sección 3.5.
 
-  <div class="note">Nota: si el atributo {{ htmlattrxref("multiple", "input") }} está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.</div>
- </li>
-</ul>
+  > **Nota:** Nota: si el atributo {{ htmlattrxref("multiple", "input") }} está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.
 
-<p>El elemento {{ HTMLElement("input") }} también tiene nuevos atributos:</p>
+El elemento {{ HTMLElement("input") }} también tiene nuevos atributos:
 
-<ul>
- <li>{{ htmlattrxref("list", "input") }}: El ID de un elemento {{ HTMLElement("datalist") }} cuyo contenido, los elementos {{ HTMLElement("option") }}, van a ser usados como ayudas y serán mostrados como propuestas en el área de sugerencias del campo input.</li>
- <li>{{ htmlattrxref("pattern", "input") }}: Una expresión regular contra la que es verificado el valor del control, que puede ser usada con valores de {{ htmlattrxref("type", "input") }} de <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code> y <code>email</code>.</li>
- <li>{{ htmlattrxref("formmethod", "input") }}: Una cadena que indica qué método HTTP (GET, POST, PUT o DELETE) debe ser usado cuando se envía; sobrescribe el {{ htmlattrxref("method", "form") }} del elemento {{ HTMLElement("form") }}, si se define. El {{ htmlattrxref("formmethod", "input") }} sólo se aplica cuando el {{ htmlattrxref("type", "input") }} es <span style="font-family: courier new;">image</span> o <span style="font-family: courier new;">submit</span>, y, para los métodos PUT y DELETE, sólo funcionará con un destino que esté en el mismo dominio (política del mismo origen).</li>
-</ul>
+- {{ htmlattrxref("list", "input") }}: El ID de un elemento {{ HTMLElement("datalist") }} cuyo contenido, los elementos {{ HTMLElement("option") }}, van a ser usados como ayudas y serán mostrados como propuestas en el área de sugerencias del campo input.
+- {{ htmlattrxref("pattern", "input") }}: Una expresión regular contra la que es verificado el valor del control, que puede ser usada con valores de {{ htmlattrxref("type", "input") }} de `text`, `tel`, `search`, `url` y `email`.
+- {{ htmlattrxref("formmethod", "input") }}: Una cadena que indica qué método HTTP (GET, POST, PUT o DELETE) debe ser usado cuando se envía; sobrescribe el {{ htmlattrxref("method", "form") }} del elemento {{ HTMLElement("form") }}, si se define. El {{ htmlattrxref("formmethod", "input") }} sólo se aplica cuando el {{ htmlattrxref("type", "input") }} es image o submit, y, para los métodos PUT y DELETE, sólo funcionará con un destino que esté en el mismo dominio (política del mismo origen).
 
-<h3 id="El_elemento_&lt;form>">El elemento <code>&lt;form&gt;</code></h3>
+### El elemento `<form>`
 
-<p>El elemento {{ HTMLElement("form") }} tiene un nuevo atributo:</p>
+El elemento {{ HTMLElement("form") }} tiene un nuevo atributo:
 
-<ul>
- <li>{{ htmlattrxref("novalidate", "form") }}: Este atributo previene que el formulario sea validado antes del envío.</li>
-</ul>
+- {{ htmlattrxref("novalidate", "form") }}: Este atributo previene que el formulario sea validado antes del envío.
 
-<h3 id="El_elemento_&lt;datalist>">El elemento <code>&lt;datalist&gt; </code></h3>
+### El elemento `<datalist>`
 
-<p>El elemento {{ HTMLElement("datalist") }} representa la lista de elementos {{ HTMLElement("option") }} como sugerencias cuando se llena un campo {{ HTMLElement("input") }}.</p>
+El elemento {{ HTMLElement("datalist") }} representa la lista de elementos {{ HTMLElement("option") }} como sugerencias cuando se llena un campo {{ HTMLElement("input") }}.
 
-<p>Puedes usar el atributo {{ htmlattrxref("list", "input") }} en un elemento {{ HTMLElement("input") }} para enlazar a un campo de ingreso específico con un elemento {{ HTMLElement("datalist") }} determinado.</p>
+Puedes usar el atributo {{ htmlattrxref("list", "input") }} en un elemento {{ HTMLElement("input") }} para enlazar a un campo de ingreso específico con un elemento {{ HTMLElement("datalist") }} determinado.
 
-<pre>&lt;label&gt;Superhéroe favorito&lt;/label&gt;
-&lt;input list="superheroes" name="list" /&gt;
-&lt;datalist id="superheroes"&gt;
-    &lt;option label="Iron Man" value="Iron Man"&gt;
-    &lt;option label="The Hulk" value="The Hulk"&gt;
-&lt;/datalist&gt;
-</pre>
+    <label>Superhéroe favorito</label>
+    <input list="superheroes" name="list" />
+    <datalist id="superheroes">
+        <option label="Iron Man" value="Iron Man">
+        <option label="The Hulk" value="The Hulk">
+    </datalist>
 
-<h3 id="El_elemento_&lt;output>">El elemento <code>&lt;output&gt;</code></h3>
+### El elemento `<output>`
 
-<p>El elemento <code>{{ HTMLElement("output") }}</code> representa el resultado de un cálculo.</p>
+El elemento `{{ HTMLElement("output") }}` representa el resultado de un cálculo.
 
-<p>Puedes usar el atributo {{ htmlattrxref("for", "output") }} para especificar una relación entre el elemento output y otros elementos en el documento que afectan el cálculo (por ejemplo, ingreso de datos o parámetros). El valor del atributo {{ htmlattrxref("for", "output") }} es una lista separada por espacios de IDs de otros elementos.</p>
+Puedes usar el atributo {{ htmlattrxref("for", "output") }} para especificar una relación entre el elemento output y otros elementos en el documento que afectan el cálculo (por ejemplo, ingreso de datos o parámetros). El valor del atributo {{ htmlattrxref("for", "output") }} es una lista separada por espacios de IDs de otros elementos.
 
-<h3 id="El_atributo_placeholder">El atributo placeholder</h3>
+### El atributo placeholder
 
-<p>El atributo {{ htmlattrxref("placeholder", "input") }} en elementos <code>{{ HTMLElement("input") }}</code> y <code>{{ HTMLElement("textarea") }}</code> provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.</p>
+El atributo {{ htmlattrxref("placeholder", "input") }} en elementos `{{ HTMLElement("input") }}` y `{{ HTMLElement("textarea") }}` provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.
 
-<pre>&lt;input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/&gt;
-</pre>
+    <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
 
-<h3 id="El_atributo_autofocus">El atributo autofocus</h3>
+### El atributo autofocus
 
-<p>El atributo <strong>autofocus</strong> te permite especificar que una parte del formulario debe tener foco para ingresar información cuando se carga la página, a menos que el usuario lo cambie, por ejemplo al escribir en otro lugar. Sólo un elemento del formulario en un documento puede tener el atributo <strong>autofocus</strong>, que es de tipo boolean. Este atributo puede ser aplicado a los elementos <code>{{ HTMLElement("input") }}</code>, <code>{{ HTMLElement("button") }}</code>, <code>{{ HTMLElement("select") }}</code> y <code>{{ HTMLElement("textarea") }}</code>. La excepción es que <strong>autofocus</strong> no puede ser aplicado a un elemento <code>&lt;input&gt;</code> si el atributo {{ htmlattrxref("type", "input") }} <code>hidden</code> está seleccionado (esto quiere decir, no se puede enfocar automáticamente un elemento escondido).</p>
+El atributo **autofocus** te permite especificar que una parte del formulario debe tener foco para ingresar información cuando se carga la página, a menos que el usuario lo cambie, por ejemplo al escribir en otro lugar. Sólo un elemento del formulario en un documento puede tener el atributo **autofocus**, que es de tipo boolean. Este atributo puede ser aplicado a los elementos `{{ HTMLElement("input") }}`, `{{ HTMLElement("button") }}`, `{{ HTMLElement("select") }}` y `{{ HTMLElement("textarea") }}`. La excepción es que **autofocus** no puede ser aplicado a un elemento `<input>` si el atributo {{ htmlattrxref("type", "input") }} `hidden` está seleccionado (esto quiere decir, no se puede enfocar automáticamente un elemento escondido).
 
-<pre>&lt;input type="text" id="user" autofocus /&gt;
-</pre>
+    <input type="text" id="user" autofocus />
 
-<h3 id="La_propiedad_label.control_del_DOM">La propiedad label.control del DOM</h3>
+### La propiedad label.control del DOM
 
-<p>La interface <a href="/en/DOM/HTMLLabelElement" title="en/DOM/HTMLLabelElement">HTMLLabelElement</a> DOM brinda una propiedad extra, sumadas a las propiedades que corresponden a los atributos del elemento <code>{{ HTMLElement("label") }}</code> de HTML. La propiedad <strong>control</strong> devuelve el controlador etiquetado, es decir el controlador para quien está hecha la etiqueta, que está determinado por el atributo {{ htmlattrxref("for", "label") }} (si está definido) o por el primer elemento controlador descendiente.</p>
+La interface [HTMLLabelElement](/en/DOM/HTMLLabelElement "en/DOM/HTMLLabelElement") DOM brinda una propiedad extra, sumadas a las propiedades que corresponden a los atributos del elemento `{{ HTMLElement("label") }}` de HTML. La propiedad **control** devuelve el controlador etiquetado, es decir el controlador para quien está hecha la etiqueta, que está determinado por el atributo {{ htmlattrxref("for", "label") }} (si está definido) o por el primer elemento controlador descendiente.
 
-<h3 id="Validación_restringida">Validación restringida</h3>
+### Validación restringida
 
-<p>El HTML5 brinda sintaxis y elementos de API para posibilitar la validación de formularios del lado del cliente. Aunque esta funcionalidad no reemplaza la validación del lado del servidor, que todavía es necesaria por seguridad e integridad de la información, la validación del lado del cliente puede brindar una experiencia de usuario mejor al darle al usuario una respuesta inmediata acerca de la información ingresada.</p>
+El HTML5 brinda sintaxis y elementos de API para posibilitar la validación de formularios del lado del cliente. Aunque esta funcionalidad no reemplaza la validación del lado del servidor, que todavía es necesaria por seguridad e integridad de la información, la validación del lado del cliente puede brindar una experiencia de usuario mejor al darle al usuario una respuesta inmediata acerca de la información ingresada.
 
-<h4 id="Sintaxis_de_HTML_para_la_validación_restringida">Sintaxis de HTML para la validación restringida</h4>
+#### Sintaxis de HTML para la validación restringida
 
-<p>Los siguientes elementos de sintaxis de HTML5 pueden ser usados para restringir datos en el formulario.</p>
+Los siguientes elementos de sintaxis de HTML5 pueden ser usados para restringir datos en el formulario.
 
-<ul>
- <li>El atributo {{ htmlattrxref("required", "input") }} en los elementos {{ HTMLElement("input") }}, {{ HTMLElement("select") }} y {{ HTMLElement("textarea") }} indica que se debe ingresar algún dato. (En el elemento {{ HTMLElement("input") }}, {{ htmlattrxref("required", "input") }} sólo se aplica con ciertos valores del atributo {{ htmlattrxref("type", "input") }}.)</li>
- <li>El atributo {{ htmlattrxref("pattern", "input") }} en el elemento {{ HTMLElement("input") }} restringe el valor para que concuerde con una expresión regular específica.</li>
- <li>Los atributos {{ htmlattrxref("min", "input") }} y {{ htmlattrxref("max", "input") }} del elemento {{ HTMLElement("input") }} restringen los valores máximos y mínimos que pueden ser ingresados.</li>
- <li>El atributo {{ htmlattrxref("step", "input") }} del elemento {{ HTMLElement("input") }} (cuando se usa en combinación con los atributos {{ htmlattrxref("min", "input") }} y {{ htmlattrxref("max", "input") }}) restringe la granularidad de los valores ingresados. Un valor que no se corresponda con un valor permitido no será validado.</li>
- <li>El atributo {{ htmlattrxref("maxlength", "input") }} de los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} restringe el máximo número de caracteres (en puntos de código unicode) que el usuario puede ingresar.</li>
- <li>Los valores <code>url</code> y <code>email</code> para {{ htmlattrxref("type", "input") }} restringen el valor para una URL o dirección de correo válida respectivamente.</li>
-</ul>
+- El atributo {{ htmlattrxref("required", "input") }} en los elementos {{ HTMLElement("input") }}, {{ HTMLElement("select") }} y {{ HTMLElement("textarea") }} indica que se debe ingresar algún dato. (En el elemento {{ HTMLElement("input") }}, {{ htmlattrxref("required", "input") }} sólo se aplica con ciertos valores del atributo {{ htmlattrxref("type", "input") }}.)
+- El atributo {{ htmlattrxref("pattern", "input") }} en el elemento {{ HTMLElement("input") }} restringe el valor para que concuerde con una expresión regular específica.
+- Los atributos {{ htmlattrxref("min", "input") }} y {{ htmlattrxref("max", "input") }} del elemento {{ HTMLElement("input") }} restringen los valores máximos y mínimos que pueden ser ingresados.
+- El atributo {{ htmlattrxref("step", "input") }} del elemento {{ HTMLElement("input") }} (cuando se usa en combinación con los atributos {{ htmlattrxref("min", "input") }} y {{ htmlattrxref("max", "input") }}) restringe la granularidad de los valores ingresados. Un valor que no se corresponda con un valor permitido no será validado.
+- El atributo {{ htmlattrxref("maxlength", "input") }} de los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} restringe el máximo número de caracteres (en puntos de código unicode) que el usuario puede ingresar.
+- Los valores `url` y `email` para {{ htmlattrxref("type", "input") }} restringen el valor para una URL o dirección de correo válida respectivamente.
 
-<p>Además, puedes prevenir la validación restringida especificando el atributo {{ htmlattrxref("novalidate", "form") }} en el elemento {{ HTMLElement("form") }}, o el atributo {{ htmlattrxref("formnovalidate", "button") }} en el elemento {{ HTMLElement("button") }} y en el elemento {{ HTMLElement("input") }} (cuando {{ htmlattrxref("type", "input") }} es <code>submit</code> o <code>image</code>). Estos atributos indican que el formulario no será validado cuando se envie.</p>
+Además, puedes prevenir la validación restringida especificando el atributo {{ htmlattrxref("novalidate", "form") }} en el elemento {{ HTMLElement("form") }}, o el atributo {{ htmlattrxref("formnovalidate", "button") }} en el elemento {{ HTMLElement("button") }} y en el elemento {{ HTMLElement("input") }} (cuando {{ htmlattrxref("type", "input") }} es `submit` o `image`). Estos atributos indican que el formulario no será validado cuando se envie.
 
-<h4 id="API_de_validación_restringida">API de validación restringida</h4>
+#### API de validación restringida
 
-<p>Las siguientes propiedades y métodos del DOM relacionadas con la validación restringida están disponibles para scripts del lado del cliente:</p>
+Las siguientes propiedades y métodos del DOM relacionadas con la validación restringida están disponibles para scripts del lado del cliente:
 
-<ul>
- <li>En objetos <a href="/en/DOM/HTMLFormElement" title="en/DOM/HTMLFormElement">HTMLFormElement</a>, el método <code>checkValidity()</code>, que devuelve verdadero si todos los elementos asociados del formulario que necesitan validación satisfacen las restricciones y falso si no lo hacen.</li>
- <li>En <a href="/en/HTML/Content_categories#form-associated" title="en/HTML/Content Categories#form-associated">elementos asociados al formulario</a>:
-  <ul>
-   <li>la propiedad <code>willValidate</code>, que es falso si el elemento no satisface las restricciones.</li>
-   <li>la propiedad <code>validity</code>, que es un objeto <a href="/en/DOM/ValidityState_Interface" title="en/DOM/ValidityState Interface">ValidityState</a> que representa los estados de validación en que está el elemento (p.e., condiciones de restricción que han fallado o exitosas).</li>
-   <li>la propiedad <code>validationMessage</code>, que es un mensaje que contiene todas las fallas en las restricciones que pertenecen a ese elemento.</li>
-   <li>el método <code>checkValidity()</code>, que devuelve falso si el elemento falla en satisfacer alguna de las restricciones o verdadero si pasa lo contrario.</li>
-   <li>el método <code>setCustomValidity()</code>, que establece un mensaje de validación personalizado, permitiendo imponer y validad restricciones más allá de las que están predefinidas.</li>
-  </ul>
- </li>
-</ul>
+- En objetos [HTMLFormElement](/en/DOM/HTMLFormElement "en/DOM/HTMLFormElement"), el método `checkValidity()`, que devuelve verdadero si todos los elementos asociados del formulario que necesitan validación satisfacen las restricciones y falso si no lo hacen.
+- En [elementos asociados al formulario](/en/HTML/Content_categories#form-associated "en/HTML/Content Categories#form-associated"):
+
+  - la propiedad `willValidate`, que es falso si el elemento no satisface las restricciones.
+  - la propiedad `validity`, que es un objeto [ValidityState](/en/DOM/ValidityState_Interface "en/DOM/ValidityState Interface") que representa los estados de validación en que está el elemento (p.e., condiciones de restricción que han fallado o exitosas).
+  - la propiedad `validationMessage`, que es un mensaje que contiene todas las fallas en las restricciones que pertenecen a ese elemento.
+  - el método `checkValidity()`, que devuelve falso si el elemento falla en satisfacer alguna de las restricciones o verdadero si pasa lo contrario.
+  - el método `setCustomValidity()`, que establece un mensaje de validación personalizado, permitiendo imponer y validad restricciones más allá de las que están predefinidas.

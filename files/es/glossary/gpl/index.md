@@ -12,19 +12,15 @@ tags:
   - Open Source
 translation_of: Glossary/GPL
 ---
-<p>La lincencia GNU <em>GPL</em> (GNU General Public License en español <strong>Licencia Pública General de GNU</strong>) es una licencia de software libre <a href="/es/docs/Glossary/copyleft">copyleft</a> publicada por la <em>Free Software Foundation</em>. Los usuarios de un programa con licencia GPL son libres para usarlo, acceder al código fuente, modificarlo y distribuir los cambios; <span id="result_box" lang="es"><span>siempre que redistribuyan el programa completo (modificado o no modificado) bajo la misma licencia</span></span>.</p>
+La lincencia GNU _GPL_ (GNU General Public License en español **Licencia Pública General de GNU**) es una licencia de software libre [copyleft](/es/docs/Glossary/copyleft) publicada por la _Free Software Foundation_. Los usuarios de un programa con licencia GPL son libres para usarlo, acceder al código fuente, modificarlo y distribuir los cambios; siempre que redistribuyan el programa completo (modificado o no modificado) bajo la misma licencia.
 
-<h2 id="Para_saber_más...">Para saber más...</h2>
+## Para saber más...
 
-<h3 id="Cultura_General">Cultura General</h3>
+### Cultura General
 
-<ul>
- <li>{{Interwiki("wikipedia","GNU_General_Public_License")}} en Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia","GNU_General_Public_License")}} en Wikipedia
 
-<h3 id="Referencia_Técnica">Referencia Técnica</h3>
+### Referencia Técnica
 
-<ul>
- <li><a href="https://gnu.org/licenses/gpl.html">GPL License</a></li>
- <li><a href="http://www.gnu.org/licenses/gpl-faq.html">FAQ</a> de licencias GNU</li>
-</ul>
+- [GPL License](https://gnu.org/licenses/gpl.html)
+- [FAQ](http://www.gnu.org/licenses/gpl-faq.html) de licencias GNU

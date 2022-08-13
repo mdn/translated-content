@@ -10,67 +10,53 @@ tags:
 translation_of: Learn/Forms/Test_your_skills:_HTML5_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>El objetivo de esta prueba es evaluar si has comprendido nuestro artículo <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.</p>
+El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types).
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, o <a href="https://glitch.com/" rel="noopener">Glitch</a> para trabajar en las tareas.<br>
- <br>
- Si te atascas, pide ayuda — mira la sección <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional">Evaluación o ayuda adicional</a> al final de esta página.</p>
-</div>
+> **Nota:** Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+>
+> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
 
-<h2 id="Controles_HTML5_1">Controles HTML5 1</h2>
+## Controles HTML5 1
 
-<p>Primero exploraremos algunos de los tipos nuevos de <code>input</code> en HTML5. Crea las etiquetas <code>input</code> apropiadas para que un usuario actualice sus detalles para:</p>
+Primero exploraremos algunos de los tipos nuevos de `input` en HTML5. Crea las etiquetas `input` apropiadas para que un usuario actualice sus detalles para:
 
-<ol>
- <li>Email</li>
- <li>Website</li>
- <li>Número de teléfono</li>
- <li>Color favorito</li>
-</ol>
+1.  Email
+2.  Website
+3.  Número de teléfono
+4.  Color favorito
 
-<p>Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:</p>
+Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
 
-<div class="blockIndicator note">
-<p><a href="/en-US/docshttps://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html">Descarga el código inicial de esta tarea</a> para trabajar en tu propio editor o en un editor en línea.</p>
-</div>
+> **Nota:** [Descarga el código inicial de esta tarea](/es/docshttps://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
-<h2 id="Controles_HTML5_2">Controles HTML5 2</h2>
+## Controles HTML5 2
 
-<p>A continuación, queremos que implementes un control deslizante para permitir al usuario escoger el número máximo de personas para invitar a su fiesta.</p>
+A continuación, queremos que implementes un control deslizante para permitir al usuario escoger el número máximo de personas para invitar a su fiesta.
 
-<ol>
- <li>Implemente un control deslizante básico que acompañe a la etiqueta provista.</li>
- <li>Establezca un valor minimo de 1, uno máximo de 30 y un valor inicial de 10.</li>
- <li>Crea un elemento de salida correspondiente para poner el valor actual del deslizador. Asígnale la clase invite-output, y asocialo semanticamente con le entrada. Si haces esto correctamente, el JavaScript incluido en la página automáticamente actualizará el valor cuando se deslice el control.</li>
-</ol>
+1.  Implemente un control deslizante básico que acompañe a la etiqueta provista.
+2.  Establezca un valor minimo de 1, uno máximo de 30 y un valor inicial de 10.
+3.  Crea un elemento de salida correspondiente para poner el valor actual del deslizador. Asígnale la clase invite-output, y asocialo semanticamente con le entrada. Si haces esto correctamente, el JavaScript incluido en la página automáticamente actualizará el valor cuando se deslice el control.
 
-<p>Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:</p>
+Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls2.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls2.html", '100%', 700)}}
 
-<div class="blockIndicator note">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html">Descarga el código inicial de esta tarea</a> para trabajar en tu propio editor o en un editor en línea.</p>
-</div>
+> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
-<h2 id="Evaluación_o_ayuda_adicional">Evaluación o ayuda adicional</h2>
+## Evaluación o ayuda adicional
 
-<p>Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.</p>
+Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.
 
-<p>Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:</p>
+Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
 
-<ol>
- <li>Pon tu trabajo en un editor en línea con capacidad de compartir como <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, o <a href="https://glitch.com/" rel="noopener">Glitch</a>. Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.</li>
- <li>Escribe una publicación solicitando evaluacion y/o ayuda en el <a href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Tu publicación debería incluir:
-  <ul>
-   <li>Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de controles HTML5 1".</li>
-   <li>Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.</li>
-   <li>Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un  editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica  - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.</li>
-   <li>Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.</li>
-  </ul>
- </li>
-</ol>
+1.  Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
+2.  Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+
+    - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de controles HTML5 1".
+    - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
+    - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
+    - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.

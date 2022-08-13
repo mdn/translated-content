@@ -9,35 +9,22 @@ tags:
 translation_of: Web/API/CanvasImageSource
 original_slug: Web/API/CanvasImageSource
 ---
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p>El tipo auxiliar <code><strong>CanvasImageSource</strong></code> representa cualquiera de los siguientes tipos:</p>
+El tipo auxiliar **`CanvasImageSource`** representa cualquiera de los siguientes tipos:
 
-<ul>
- <li>{{domxref("CSSImageValue")}}</li>
- <li>{{domxref("HTMLImageElement")}}</li>
- <li>{{domxref("SVGImageElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("ImageBitmap")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
-</ul>
+- {{domxref("CSSImageValue")}}
+- {{domxref("HTMLImageElement")}}
+- {{domxref("SVGImageElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("OffscreenCanvas")}}
 
-<p>Este es un tipo auxiliar usado para simplificar la especificación, no es una interfáz y por ello no hay objetos implementandolo.</p>
+Este es un tipo auxiliar usado para simplificar la especificación, no es una interfáz y por ello no hay objetos implementandolo.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |

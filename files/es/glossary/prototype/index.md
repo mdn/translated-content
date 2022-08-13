@@ -3,14 +3,12 @@ title: Prototipo
 slug: Glossary/Prototype
 translation_of: Glossary/Prototype
 ---
-<p>Un prototipo es un modelo que muestra pronto en el ciclo de desarrollo la apariencia y el comportamiento de una aplicación o producto.</p>
+Un prototipo es un modelo que muestra pronto en el ciclo de desarrollo la apariencia y el comportamiento de una aplicación o producto.
 
-<p>Mira <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">La herencia y la cadena de prototipado.</a></p>
+Mira [La herencia y la cadena de prototipado.](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-<h2 id="Saber_más">Saber más</h2>
+## Saber más
 
-<h3 id="Conocimiento_general">Conocimiento general</h3>
+### Conocimiento general
 
-<ul>
- <li>{{Interwiki("wikipedia", "Software Prototyping")}} en la Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Software Prototyping")}} en la Wikipedia

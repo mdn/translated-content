@@ -7,30 +7,31 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="blockIndicator note">
-<p>Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">cómo se ponen juntos los archivos</a>. Entonces, usa la <a href="/es/docs/Mozilla/Add-ons/WebExtensions#Reference">documentación de referencia</a> para empezar a construir tu extensión. Visita el <a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">Firefox Extension Workshop</a> para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.</p>
-</div>
+> **Nota:** Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a [cómo se ponen juntos los archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Entonces, usa la [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions#Reference) para empezar a construir tu extensión. Visita el [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.
 
-<p>En este artículo abordaremos la creación de una extensión para Firefox, desde el comienzo hasta el final. La extensión solo agrega un borde rojo a cualquiera de las páginas cargadas desde "mozilla.org" o cualquiera de sus subdominios.</p>
+En este artículo abordaremos la creación de una extensión para Firefox, desde el comienzo hasta el final. La extensión solo agrega un borde rojo a cualquiera de las páginas cargadas desde "mozilla.org" o cualquiera de sus subdominios.
 
-<p>El código fuente de este ejemplo se encuentra en GitHub: <a href="https://github.com/mdn/webextensions-examples/tree/master/borderify">https://github.com/mdn/webextensions-examples/tree/master/borderify</a>.</p>
+El código fuente de este ejemplo se encuentra en GitHub: <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
 
-<p>Primero, necesitas tener instalado Firefox versión 45 o superior.</p>
+Primero, necesitas tener instalado Firefox versión 45 o superior.
 
-<h2 id="Escribiendo_la_extensión">Escribiendo la extensión</h2>
+## Escribiendo la extensión
 
-<p>Crea una nuevo directorio y navega a él. Por ejemplo, en tu línea de comandos/terminal se hace de esta manera:</p>
+Crea una nuevo directorio y navega a él. Por ejemplo, en tu línea de comandos/terminal se hace de esta manera:
 
-<pre class="brush: bash notranslate">mkdir borderify
-cd borderify</pre>
+```bash
+mkdir borderify
+cd borderify
+```
 
-<h3 id="manifest.json">manifest.json</h3>
+### manifest.json
 
-<p>Ahora crearemos un archivo  nuevo llamado "manifest.json" directamente en la carpeta "borderify". Añádale el siguiente contenido:</p>
+Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carpeta "borderify". Añádale el siguiente contenido:
 
-<pre class="brush: json notranslate">{
+```json
+{
 
   "manifest_version": 2,
   "name": "Borderify",
@@ -49,113 +50,105 @@ cd borderify</pre>
     }
   ]
 
-}</pre>
+}
+```
 
-<ul>
- <li>Los primeros 3 parámetros:<code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/name">name</a></code>, y <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/version">version</a></code>, son obligatorios, y contienen metadatos básicos para la extensión.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/description">description</a></code> es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.</li>
-</ul>
+- Los primeros 3 parámetros:[`manifest_version`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/name), y [`version`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
+- [`description`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
+- [`icons`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
 
-<p>El parámetro más interesante aquí es <code><a href="/es/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, el cual le dice a Firefox que cargue el script en las páginas Web, cuyas URL coincidan con un patrón especifico. En este caso, le estamos pidiendo a Firefox que cargue el script llamado "borderify.js" en todas las paginas HTTP o HTTPS cargadas desde "mozilla.org" o cualquiera de sus subdominios.</p>
+El parámetro más interesante aquí es [`content_scripts`](/es/Add-ons/WebExtensions/manifest.json/content_scripts), el cual le dice a Firefox que cargue el script en las páginas Web, cuyas URL coincidan con un patrón especifico. En este caso, le estamos pidiendo a Firefox que cargue el script llamado "borderify.js" en todas las paginas HTTP o HTTPS cargadas desde "mozilla.org" o cualquiera de sus subdominios.
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/Content_scripts">Aprenda más acerca de los scripts contenidos.</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Match_patterns">Aprenda más acerca de los patrones coincidentes</a>.</li>
-</ul>
+- [Aprenda más acerca de los scripts contenidos.](/es/Add-ons/WebExtensions/Content_scripts)
+- [Aprenda más acerca de los patrones coincidentes](/es/Add-ons/WebExtensions/Match_patterns).
 
-<div class="warning">
-<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">En algunas situaciones usted necesita especificar un ID para su extensión</a>. Si necesita especificar un ID para el complemento, incluya el parámetro <code><a href="/es/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> en el <code>manifest.json</code> y configure la propiedad <code>gecko.id</code>:</p>
+> **Advertencia:** [En algunas situaciones usted necesita especificar un ID para su extensión](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/Add-ons/WebExtensions/manifest.json/applications) en el `manifest.json` y configure la propiedad `gecko.id`:```json
+> "applications": {
+> "gecko": {
+> "id": "borderify@example.com"
+> }
+> }
+>
+> ```
+>
+> ```
 
-<pre class="brush: json notranslate">"applications": {
-  "gecko": {
-    "id": "borderify@example.com"
-  }
-}</pre>
-</div>
+### icons/border-48.png
 
-<h3 id="iconsborder-48.png">icons/border-48.png</h3>
+La extensión debería tener un ícono. Este se mostrará junto al listado de extensiones en el Administrador de Add-ons. Nuestro manifest.json promete que tendremos un ícono en el directorio "icons/border-48.png".
 
-<p>La extensión debería tener un ícono. Este se mostrará junto al listado de extensiones en el Administrador de Add-ons. Nuestro manifest.json promete que tendremos un ícono  en el directorio "icons/border-48.png".</p>
+Crea el directorio "icons" dentro de la carpeta "borderify". Almacena ahí el icono y nómbralo "border-48.png". Puedes utilizar [el de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png), el cual se obtuvo a partir del Google Material Design iconset, y es utilizado bajo los términos de la licencia [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/).
 
-<p>Crea el directorio "icons" dentro de la carpeta "borderify". Almacena ahí el icono y nómbralo "border-48.png". Puedes utilizar <a href="https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png">el de nuestro ejemplo</a>, el cual se obtuvo a partir del Google Material Design iconset, y es utilizado bajo los términos de la licencia <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a>.</p>
+Si eliges emplear tu propio icono, este debe ser de 48x48 pixeles. También puedes aplicar un icono de 96x96 pixeles, para resoluciones mayores, y si haces esto, se especifica como la propiedad `96` en el objeto icons del manifest.json:
 
-<p>Si eliges emplear tu propio icono, este debe ser de 48x48 pixeles. También puedes aplicar un icono de 96x96 pixeles, para resoluciones mayores, y si haces esto, se especifica como la propiedad <code>96</code> en el objeto icons del manifest.json:</p>
-
-<pre class="brush: json notranslate">"icons": {
+```json
+"icons": {
   "48": "icons/border-48.png",
   "96": "icons/border-96.png"
-}</pre>
+}
+```
 
-<p>Alternativamente, puedes aplicar un archivo SVG ahí, y este se escalará apropiadamente. (Aunque: si usas SVG y tu icono incluye texto, puedes usar la herramienta "convert to path" del editor SVG para aplanar el texto, de modo que se escalone con un tamaño/posición coherente).</p>
+Alternativamente, puedes aplicar un archivo SVG ahí, y este se escalará apropiadamente. (Aunque: si usas SVG y tu icono incluye texto, puedes usar la herramienta "convert to path" del editor SVG para aplanar el texto, de modo que se escalone con un tamaño/posición coherente).
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/manifest.json/icons">Aprender mas acerca de la especificación de iconos.</a></li>
-</ul>
+- [Aprender mas acerca de la especificación de iconos.](/es/Add-ons/WebExtensions/manifest.json/icons)
 
-<h3 id="borderify.js">borderify.js</h3>
+### borderify.js
 
-<p>Finalmente, crea un archivo de nombre "borderify.js" directamente en el directorio "borderify". Y déjale el siguiente contenido:</p>
+Finalmente, crea un archivo de nombre "borderify.js" directamente en el directorio "borderify". Y déjale el siguiente contenido:
 
-<pre class="brush: js notranslate">document.body.style.border = "5px solid red";</pre>
+```js
+document.body.style.border = "5px solid red";
+```
 
-<p>Este script se cargara en las páginas que coincidan con el patrón dado en el parámetro <code>content_scripts</code> del archivo manifest.json. El script tiene acceso directo al documento, de la misma manera que los scripts cargados por la propia página.</p>
+Este script se cargara en las páginas que coincidan con el patrón dado en el parámetro `content_scripts` del archivo manifest.json. El script tiene acceso directo al documento, de la misma manera que los scripts cargados por la propia página.
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/Content_scripts">Aprender más acerca de los scripts de contenido.</a></li>
-</ul>
+- [Aprender más acerca de los scripts de contenido.](/es/Add-ons/WebExtensions/Content_scripts)
 
-<h2 id="Probándolo">Probándolo</h2>
+## Probándolo
 
-<p>Primero, verifica que tienes todos los archivos en su lugar:</p>
+Primero, verifica que tienes todos los archivos en su lugar:
 
-<pre class="notranslate">borderify/
-    icons/
-        border-48.png
-    borderify.js
-    manifest.json</pre>
+    borderify/
+        icons/
+            border-48.png
+        borderify.js
+        manifest.json
 
-<h3 id="Instalación">Instalación</h3>
+### Instalación
 
-<p>Abre "about:debugging" en Firefox, da click en "Cargar complemento temporal" y selecciona cualquier archivo en el directorio de la extensión:</p>
+Abre "about:debugging" en Firefox, da click en "Cargar complemento temporal" y selecciona cualquier archivo en el directorio de la extensión:
 
-<p>{{EmbedYouTube("cer9EUKegG4")}}</p>
+{{EmbedYouTube("cer9EUKegG4")}}
 
-<p>La extensión se encontrará instalada, y lo estará hasta que reinicies Firefox.</p>
+La extensión se encontrará instalada, y lo estará hasta que reinicies Firefox.
 
-<p>Alternativamente, puede ejecuturar la extensión desde la línea de comandos utilizando la herramienta <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>.</p>
+Alternativamente, puede ejecuturar la extensión desde la línea de comandos utilizando la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
 
-<h3 id="Probando">Probando</h3>
+### Probando
 
-<p>Ahora pruebe visitando una página bajo "mozilla.org", y usted verá el borde rojo alrededor de la página:</p>
+Ahora pruebe visitando una página bajo "mozilla.org", y usted verá el borde rojo alrededor de la página:
 
-<p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
+{{EmbedYouTube("rxBQl2Z9IBQ")}}
 
-<div class="note">
-<p>No lo intentes en addons.mozilla.org! Los scripts de contenido están actualmente bloqueados en ese dominio.</p>
-</div>
+> **Nota:** No lo intentes en addons.mozilla.org! Los scripts de contenido están actualmente bloqueados en ese dominio.
 
-<p>Experimenta un poco. Edita el contenido del script para cambiar el color del borde, o haz algo más en el contenido de la página. Si actualizas el script de contenido, recarga los archivos de la extensión haciendo clic en el botón "Recargar" en about:debugging. Podrás ver los cambios en el momento:</p>
+Experimenta un poco. Edita el contenido del script para cambiar el color del borde, o haz algo más en el contenido de la página. Si actualizas el script de contenido, recarga los archivos de la extensión haciendo clic en el botón "Recargar" en about:debugging. Podrás ver los cambios en el momento:
 
-<p>{{EmbedYouTube("NuajE60jfGY")}}</p>
+{{EmbedYouTube("NuajE60jfGY")}}
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Aprende más sobre cómo recargar las extensiones</a></li>
-</ul>
+- [Aprende más sobre cómo recargar las extensiones](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
-<h2 id="Empaquetar_y_publicar">Empaquetar y publicar</h2>
+## Empaquetar y publicar
 
-<p>Para que otras personas puedan utilizar tu extensión, necesitas empaquetarlo y enviarlo a Mozilla para que lo firmen. Para que aprendas más sobre eso, mira <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">"Publicando tu extension"</a>.</p>
+Para que otras personas puedan utilizar tu extensión, necesitas empaquetarlo y enviarlo a Mozilla para que lo firmen. Para que aprendas más sobre eso, mira ["Publicando tu extension"](/es/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension).
 
-<h2 id="¿Qué_sigue">¿Qué sigue?</h2>
+## ¿Qué sigue?
 
-<p>Ahora que tienes una idea acerca del proceso de desarrollo de una WebExtension para Firefox, continúa con:</p>
+Ahora que tienes una idea acerca del proceso de desarrollo de una WebExtension para Firefox, continúa con:
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/Your_second_WebExtension">escribe una extensión más compleja</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">leer más acerca de la anatomía de una extensión</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Examples">explora los ejemplos de extensiones</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/What_next_">encuentra lo que necesitas para desarrollar, probar y publicar tu extensión</a></li>
- <li><a href="/es/Add-ons/WebExtensions/API">leer acerca de las APIs de JavaScript disponibles para las extensiones.</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience">lleva tu aprendizaje más lejos</a></li>
-</ul>
+- [escribe una extensión más compleja](/es/Add-ons/WebExtensions/Your_second_WebExtension)
+- [leer más acerca de la anatomía de una extensión](/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [explora los ejemplos de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [encuentra lo que necesitas para desarrollar, probar y publicar tu extensión](/es/docs/Mozilla/Add-ons/WebExtensions/What_next_)
+- [leer acerca de las APIs de JavaScript disponibles para las extensiones.](/es/Add-ons/WebExtensions/API)
+- [lleva tu aprendizaje más lejos](/es/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience)

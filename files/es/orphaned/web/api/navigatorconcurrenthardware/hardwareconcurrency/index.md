@@ -4,67 +4,51 @@ slug: orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 translation_of: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>La propiedad <code><strong>navigator.hardwareConcurrency  </strong></code>es de solo lectura navigator.hardwareConcurrency devuelve el número de procesadores lógicos disponibles para ejecutar subprocesos en la computadora del usuario.</p>
+La propiedad **`navigator.hardwareConcurrency `**es de solo lectura navigator.hardwareConcurrency devuelve el número de procesadores lógicos disponibles para ejecutar subprocesos en la computadora del usuario.
 
-<h2 id="Sintaxi">Sintaxi</h2>
+## Sintaxi
 
-<pre class="syntaxbox"><em>logicalProcessors</em> = window.navigator.hardwareConcurrency
-</pre>
+    logicalProcessors = window.navigator.hardwareConcurrency
 
-<h2 id="Valor">Valor</h2>
+## Valor
 
-<p>{{jsxref("Number")}} <span class="tlid-translation translation" lang="es"><span title="">indica el número de núcleos de procesadores lógicos.</span></span></p>
+{{jsxref("Number")}} indica el número de núcleos de procesadores lógicos.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">Las computadoras modernas tienen múltiples núcleos de procesadores físicos en su CPU (dos o cuatro núcleos son típicos), pero cada núcleo físico también puede ejecutar más de un subproceso a la vez utilizando técnicas avanzadas de programación.</span> <span title="">Por lo tanto, una CPU de cuatro núcleos puede ofrecer ocho núcleos de procesador lógico, por ejemplo.</span> <span title="">El número de núcleos de procesador lógico se puede utilizar para medir el número de subprocesos que se pueden ejecutar de manera efectiva a la vez sin que tengan que cambiar de contexto.</span></span></p>
+Las computadoras modernas tienen múltiples núcleos de procesadores físicos en su CPU (dos o cuatro núcleos son típicos), pero cada núcleo físico también puede ejecutar más de un subproceso a la vez utilizando técnicas avanzadas de programación. Por lo tanto, una CPU de cuatro núcleos puede ofrecer ocho núcleos de procesador lógico, por ejemplo. El número de núcleos de procesador lógico se puede utilizar para medir el número de subprocesos que se pueden ejecutar de manera efectiva a la vez sin que tengan que cambiar de contexto.
 
-<p> <span class="tlid-translation translation" lang="es"><span title="">Sin embargo, el navegador puede optar por informar un número menor de núcleos lógicos para representar con mayor precisión el número de </span></span>{{domxref("Worker")}}s<span class="tlid-translation translation" lang="es"><span title=""> que pueden ejecutarse a la vez, así que no trate esto como una medida absoluta del número de núcleos en el sistema del usuario</span> <span title="">.</span></span></p>
+Sin embargo, el navegador puede optar por informar un número menor de núcleos lógicos para representar con mayor precisión el número de {{domxref("Worker")}}s que pueden ejecutarse a la vez, así que no trate esto como una medida absoluta del número de núcleos en el sistema del usuario .
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En este ejemplo, se crea un {{domxref ("Worker")}} para cada procesador lógico informado por el navegador y se crea un registro que incluye una referencia al nuevo worker, así como un valor booleano que indica si nosotros ' estoy usando ese worker todavía; Estos objetos, a su vez, se almacenan en una matriz para su uso posterior. Esto crea un grupo de workers que podemos usar para procesar solicitudes más adelante.</p>
+En este ejemplo, se crea un {{domxref ("Worker")}} para cada procesador lógico informado por el navegador y se crea un registro que incluye una referencia al nuevo worker, así como un valor booleano que indica si nosotros ' estoy usando ese worker todavía; Estos objetos, a su vez, se almacenan en una matriz para su uso posterior. Esto crea un grupo de workers que podemos usar para procesar solicitudes más adelante.
 
-<pre class="brush: js">let workerList = [];
+```js
+let workerList = [];
 
-for (let i = 0; i &lt; window.navigator.hardwareConcurrency; i++) {
+for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
   let newWorker = {
     worker: new Worker('cpuworker.js'),
     inUse: false
   };
   workerList.push(newWorker);
-}</pre>
+}
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-hardwareconcurrency', 'navigator.hardwareConcurrency')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', '#dom-navigator-hardwareconcurrency', 'navigator.hardwareConcurrency')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.NavigatorConcurrentHardware.hardwareConcurrency")}}
 
+## See also
 
-<p>{{Compat("api.NavigatorConcurrentHardware.hardwareConcurrency")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Navigator")}}</li>
- <li>{{domxref("WorkerNavigator")}}</li>
-</ul>
+- {{domxref("Navigator")}}
+- {{domxref("WorkerNavigator")}}

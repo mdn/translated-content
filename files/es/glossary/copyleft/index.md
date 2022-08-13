@@ -10,12 +10,10 @@ tags:
   - Licencia
 translation_of: Glossary/Copyleft
 ---
-<p><em>Copyleft </em>es un término, que normalmente se refiere a una licencia, y que se utiliza para indicar que <span id="result_box" lang="es"><span>toda redistribución de un trabajo bajo esta licencia <strong>es obligatorio</strong> que esté sujeta a la <strong>misma licencia</strong></span></span><strong> que el original</strong>. Un buen ejemplo de copyleft es la licencia GNU <a href="/es/docs/Glossary/GPL">GPL</a> (para aplicaciones software) y la licencia <em>Creative Commons SA</em> (<em>Share Alike</em> en español Compartir Igual) (para trabajos y obras de arte).</p>
+_Copyleft_ es un término, que normalmente se refiere a una licencia, y que se utiliza para indicar que toda redistribución de un trabajo bajo esta licencia **es obligatorio** que esté sujeta a la **misma licencia** **que el original**. Un buen ejemplo de copyleft es la licencia GNU [GPL](/es/docs/Glossary/GPL) (para aplicaciones software) y la licencia _Creative Commons SA_ (_Share Alike_ en español Compartir Igual) (para trabajos y obras de arte).
 
-<h2 id="Para_saber_más...">Para saber más...</h2>
+## Para saber más...
 
-<h3 id="Cultura_General">Cultura General</h3>
+### Cultura General
 
-<ul>
- <li>{{Interwiki("wikipedia", "Copyleft")}} en Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Copyleft")}} en Wikipedia

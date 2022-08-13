@@ -5,12 +5,10 @@ tags:
   - Seguridad
 translation_of: Glossary/challenge
 ---
-<p>En protocolos de seguridad, un <em>desafío </em>es una información enviada al cliente por el servidor con el fin de generar una respuesta diferente cada vez . Los protocolos desafío-respuesta son una forma de batallar contra los <a href="https://es.wikipedia.org/wiki/Ataque_de_REPLAY">ataques de REPLAY</a> donde un atacante escucha los mensajes previos y los reenvía en un momento posterior para obtener las mismas credenciales que el mensaje original.</p>
+En protocolos de seguridad, un _desafío_ es una información enviada al cliente por el servidor con el fin de generar una respuesta diferente cada vez . Los protocolos desafío-respuesta son una forma de batallar contra los [ataques de REPLAY](https://es.wikipedia.org/wiki/Ataque_de_REPLAY) donde un atacante escucha los mensajes previos y los reenvía en un momento posterior para obtener las mismas credenciales que el mensaje original.
 
-<p>El <a href="/es/docs/Web/HTTP/Authentication">protocolo de autenticación HTTP</a> está basado en los protocolos desafío-respuesta, aunque la autenticación "Basic" no usa un desafío real (el <em>realm </em>siempre es el mismo).</p>
+El [protocolo de autenticación HTTP](/es/docs/Web/HTTP/Authentication) está basado en los protocolos desafío-respuesta, aunque la autenticación "Basic" no usa un desafío real (el _realm_ siempre es el mismo).
 
-<h2 id="Leer_más">Leer más</h2>
+## Leer más
 
-<ul>
- <li><a href="https://es.wikipedia.org/wiki/Protocolos_desaf%C3%ADo-respuesta">Protocolos desafío-respuesta</a> en Wikipedia.</li>
-</ul>
+- [Protocolos desafío-respuesta](https://es.wikipedia.org/wiki/Protocolos_desaf%C3%ADo-respuesta) en Wikipedia.

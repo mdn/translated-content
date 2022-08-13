@@ -6,10 +6,10 @@ tags:
   - Infraestructura
 translation_of: Glossary/ASCII
 ---
-<p><strong>ASCII</strong> (<em>American Standard Code for Information Interchange</em>) es uno de los métodos de codificación más utilizados por las computadoras para convertir letras, números, signos de puntuación y códigos de control en formato digital. Desde 2007, {{Glossary("UTF-8")}} lo reemplazó en la Web.</p>
+**ASCII** (_American Standard Code for Information Interchange_) es uno de los métodos de codificación más utilizados por las computadoras para convertir letras, números, signos de puntuación y códigos de control en formato digital. Desde 2007, {{Glossary("UTF-8")}} lo reemplazó en la Web.
 
-<h2 id="Aprender_más">Aprender más</h2>
+## Aprender más
 
-<h3 id="Conocimientos_generales">Conocimientos generales</h3>
+### Conocimientos generales
 
-<p>{{Interwiki("wikipedia", "ASCII")}} en Wikipedia</p>
+{{Interwiki("wikipedia", "ASCII")}} en Wikipedia

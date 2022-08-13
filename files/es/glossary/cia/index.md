@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/CIA
 original_slug: Glossary/CID
 ---
-<p>CID (Confidencialidad, Integridad, Disponibilidad) (también llamado la triada CID o la triada DIC) es un modelo que guía las políticas de una organización para la seguridad de la información.</p>
+CID (Confidencialidad, Integridad, Disponibilidad) (también llamado la triada CID o la triada DIC) es un modelo que guía las políticas de una organización para la seguridad de la información.
 
-<h2 id="Saber_más">Saber más</h2>
+## Saber más
 
-<h3 id="Conocimiento_general">Conocimiento general</h3>
+### Conocimiento general
 
-<ul>
- <li>{{Interwiki("wikipedia", "Seguridad_de_la_información#Concepción_de_la_seguridad_de_la_información", "CIA")}} en Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Seguridad_de_la_información#Concepción_de_la_seguridad_de_la_información", "CIA")}} en Wikipedia

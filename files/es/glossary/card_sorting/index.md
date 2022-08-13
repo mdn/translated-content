@@ -8,12 +8,10 @@ tags:
 translation_of: Glossary/Card_sorting
 original_slug: Glossary/Clasificación_por_tarjetas_(card_sorting)
 ---
-<p>La clasificación por tarjetas (card sorting) es una técnica simple utilizada en la {{glossary("Information architecture", "arquitectura de la información")}} en la cual las personas involucradas en el diseño de una página web (u otro tipo de producto) están invitadas a describir el contenido / servicios / características que creen que el producto debería contener, para luego organizar estas características dentro de categorías o grupos. Esto se puede usar, por ejemplo, para determinar qué debe aparecer en cada página de una aplicación web. El nombre proviene del hecho de que a menudo la clasificación de las cartas se lleva a cabo literalmente escribiendo los elementos que se van a clasificar en tarjetas, y luego apilando las tarjetas.</p>
+La clasificación por tarjetas (card sorting) es una técnica simple utilizada en la {{glossary("Information architecture", "arquitectura de la información")}} en la cual las personas involucradas en el diseño de una página web (u otro tipo de producto) están invitadas a describir el contenido / servicios / características que creen que el producto debería contener, para luego organizar estas características dentro de categorías o grupos. Esto se puede usar, por ejemplo, para determinar qué debe aparecer en cada página de una aplicación web. El nombre proviene del hecho de que a menudo la clasificación de las cartas se lleva a cabo literalmente escribiendo los elementos que se van a clasificar en tarjetas, y luego apilando las tarjetas.
 
-<h2 id="Saber_más"><strong>Saber más</strong></h2>
+## Saber más
 
-<h3 id="Conocimientos_generales"><strong>Conocimientos generales</strong></h3>
+### Conocimientos generales
 
-<ul>
- <li>{{interwiki("wikipedia", "Card_sorting", "Card sorting")}} en Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Card_sorting", "Card sorting")}} en Wikipedia

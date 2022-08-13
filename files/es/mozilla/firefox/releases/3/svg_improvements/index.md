@@ -8,56 +8,47 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/SVG_improvements
 original_slug: Mejoras_SVG_en_Firefox_3
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 3 ofrece una mejor implementación de <a href="es/SVG">Gráficos Vectoriales Escalables (SVG)</a> en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.</p>
+Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables (SVG)](es/SVG) en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.
 
-<ul>
- <li>Se ha implementado el elemento <code>foreignObject</code> ({{ Bug(326966) }}). Vea la <a class="external" href="http://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement">especificación</a> o <a class="external" href="http://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html">este artículo</a> para más detalles.</li>
- <li>Implementado el elemento <code>pattern</code> (<a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#PatternElement">especificación</a>).</li>
- <li>Implementado el elemento <code>mask</code> (<a class="external" href="http://www.w3.org/TR/SVG11/masking.html#MaskElement">especificación</a>).</li>
- <li>Implementados nuevos filtros (<a class="external" href="http://www.w3.org/TR/SVG11/filters.html">especificación</a>):
-  <ul>
-   <li><code>filter</code></li>
-   <li><code>feDistantLight</code></li>
-   <li><code>fePointLight</code></li>
-   <li><code>feSpotLight</code></li>
-   <li><code>feBlend</code></li>
-   <li><code>feColorMatrix</code></li>
-   <li><code>feConvolveMatrix</code></li>
-   <li><code>feComponentTransfer</code>, <code>feFuncR</code>, <code>feFuncG</code>, <code>feFuncB</code>, <code>feFuncA</code></li>
-   <li><code>feComposite</code></li>
-   <li><code>feConvolveMatrix</code></li>
-   <li><code>feDiffuseLighting</code></li>
-   <li><code>feDistantLight</code></li>
-   <li><code>feFlood</code></li>
-   <li><code>feGaussianBlur</code></li>
-   <li><code>feMerge</code>, <code>feMergeNode</code></li>
-   <li><code>feMorphology</code></li>
-   <li><code>feOffset</code></li>
-   <li><code>fePointLight</code></li>
-   <li><code>feSpecularLighting</code></li>
-   <li><code>feTurbulence</code></li>
-   <li><code>feTile</code></li>
-  </ul>
- </li>
- <li>Se han arreglado varios fallos en la manipulación del elemento <code>&lt;a&gt;</code> en SVG; ver {{ Bug(267664) }}, {{ Bug(268135) }}, {{ Bug(316248) }}, {{ Bug(317270) }} y {{ Bug(320724) }}.</li>
- <li>Se han implementado los métodos de DOM en SVG <code>getNumberOfChars()</code>, <code>getComputedTextLength()</code>, <code>getSubStringLength()</code>, <code>getStartPositionOfChar()</code>, <code>getEndPositionOfChar()</code>, <code>getRotationOfChar()</code> y <code>getCharNumAtPosition()</code>.</li>
- <li>Implementación del atributo <code>xml:space</code> (<a class="external" href="http://www.w3.org/TR/SVG/text.html#WhiteSpace">especificación</a>).</li>
- <li>Se ha implementado el comportamiento por defecto de <code>fill</code>/<code>stroke</code> (<a class="external" href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">especificación</a>).</li>
- <li>Se implementan ya las unidades <code>em</code> y <code>ex</code> para indicar longitudes ({{ Bug(305859) }}).</li>
-</ul>
+- Se ha implementado el elemento `foreignObject` ({{ Bug(326966) }}). Vea la [especificación](http://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) o [este artículo](http://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html) para más detalles.
+- Implementado el elemento `pattern` ([especificación](http://www.w3.org/TR/SVG11/pservers.html#PatternElement)).
+- Implementado el elemento `mask` ([especificación](http://www.w3.org/TR/SVG11/masking.html#MaskElement)).
+- Implementados nuevos filtros ([especificación](http://www.w3.org/TR/SVG11/filters.html)):
 
-<h3 id="Vea_tambi.C3.A9n" name="Vea_tambi.C3.A9n">Vea también</h3>
+  - `filter`
+  - `feDistantLight`
+  - `fePointLight`
+  - `feSpotLight`
+  - `feBlend`
+  - `feColorMatrix`
+  - `feConvolveMatrix`
+  - `feComponentTransfer`, `feFuncR`, `feFuncG`, `feFuncB`, `feFuncA`
+  - `feComposite`
+  - `feConvolveMatrix`
+  - `feDiffuseLighting`
+  - `feDistantLight`
+  - `feFlood`
+  - `feGaussianBlur`
+  - `feMerge`, `feMergeNode`
+  - `feMorphology`
+  - `feOffset`
+  - `fePointLight`
+  - `feSpecularLighting`
+  - `feTurbulence`
+  - `feTile`
 
-<ul>
- <li><a href="es/SVG">SVG</a></li>
- <li><a href="es/SVG_en_Firefox">SVG en Firefox</a></li>
- <li><a href="es/Firefox_3_para_desarrolladores">Firefox 3 para desarrolladores</a></li>
-</ul>
+- Se han arreglado varios fallos en la manipulación del elemento `<a>` en SVG; ver {{ Bug(267664) }}, {{ Bug(268135) }}, {{ Bug(316248) }}, {{ Bug(317270) }} y {{ Bug(320724) }}.
+- Se han implementado los métodos de DOM en SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()` y `getCharNumAtPosition()`.
+- Implementación del atributo `xml:space` ([especificación](http://www.w3.org/TR/SVG/text.html#WhiteSpace)).
+- Se ha implementado el comportamiento por defecto de `fill`/`stroke` ([especificación](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint)).
+- Se implementan ya las unidades `em` y `ex` para indicar longitudes ({{ Bug(305859) }}).
 
-<p> </p>
+### Vea también
 
-<div class="noinclude"> </div>
+- [SVG](es/SVG)
+- [SVG en Firefox](es/SVG_en_Firefox)
+- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
 
-<p>{{ languages( { "en": "en/SVG_improvements_in_Firefox_3", "fr": "fr/Am\u00e9liorations_SVG_dans_Firefox_3", "ja": "ja/SVG_improvements_in_Firefox_3", "pl": "pl/Poprawki_SVG_w_Firefoksie_3" } ) }}</p>
+{{ languages( { "en": "en/SVG_improvements_in_Firefox\_3", "fr": "fr/Am\u00e9liorations_SVG_dans_Firefox\_3", "ja": "ja/SVG_improvements_in_Firefox\_3", "pl": "pl/Poprawki_SVG_w_Firefoksie\_3" } ) }}

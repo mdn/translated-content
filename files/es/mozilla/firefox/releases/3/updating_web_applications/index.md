@@ -6,83 +6,73 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web o aplicación web, así como nuevas características que se pueden aprovechar. Este artículo servirá como punto de partida para actualizar el contenido web de modo que se pueda aprovechar Firefox 3 al máximo.</p>
+Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web o aplicación web, así como nuevas características que se pueden aprovechar. Este artículo servirá como punto de partida para actualizar el contenido web de modo que se pueda aprovechar Firefox 3 al máximo.
 
-<h3 id="DOM_changes" name="DOM_changes">Cambios DOM</h3>
+### Cambios DOM
 
+Nodes from external documents should be cloned using [`document.importNode()`](/es/docs/Web/API/Document/importNode "Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual.") (or adopted using [`document.adoptNode()`](/es/docs/Web/API/Document/adoptNode "Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual.")) before they
+can be inserted into the current document. For more on the [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument "La propiedad de lectura Nodo.ownerDocument devuelve el objecto Document de más alto nivel/jerarquia para ese nodo.") issues, see the
+[W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
-<p>Nodes from external documents should be cloned using <a href="/es/docs/Web/API/Document/importNode" title="Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual."><code>document.importNode()</code></a> (or adopted using <a href="/es/docs/Web/API/Document/adoptNode" title="Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual."><code>document.adoptNode()</code></a>) before they
-    can be inserted into the current document. For more on the <a href="/es/docs/Web/API/Node/ownerDocument" title="La propiedad de lectura Nodo.ownerDocument devuelve el objecto Document de más alto nivel/jerarquia para ese nodo."><code>Node.ownerDocument</code></a> issues, see the
-    <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
+sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
+improved future compatibility.
 
-    <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
-    sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
-    improved future compatibility.</p>
+### Cambios HTML
 
-<h3 id="HTML_changes" name="HTML_changes">Cambios HTML</h3>
+#### Cambios en el conjunto de caracteres de herencia
 
-<h4 id="Changes_to_character_set_inheritance" name="Changes_to_character_set_inheritance">Cambios en el conjunto de caracteres de herencia</h4>
+Firefox 3 cierra un fallo en la seguridad en frames e iframes que les permitía heredar el conjunto de caracteres de donde eran derivadas. Esto podría causar problemas en ciertos casos. Ahora, las frames están solamente permitidas a heredar el conjunto de caracteres si ambos frames y el conjunto de caracteres fue cargado del mismo servidor. Si tienes páginas que asumen que las frames fueron cargadas de otro servidor heredará el mismo conjunto de caracteres, deberías actualizar los HTML de las frames para indicar el conjunto de caracteres específicamente.
 
-<p>Firefox 3 cierra un fallo en la seguridad en frames e iframes que les permitía heredar el conjunto de caracteres de donde eran derivadas. Esto podría causar problemas en ciertos casos. Ahora, las frames están solamente permitidas a heredar el conjunto de caracteres si ambos frames y el conjunto de caracteres fue cargado del mismo servidor. Si tienes páginas que asumen que las frames fueron cargadas de otro servidor heredará el mismo conjunto de caracteres, deberías actualizar los HTML de las frames para indicar el conjunto de caracteres específicamente.</p>
+#### Cambios en el elemento SCRIPT
 
-<h4 id="Cambios_en_el_elemento_SCRIPT">Cambios en el elemento SCRIPT</h4>
+Ahora hay que cerrar el elemento \<script> en `text/html` con \</script> en los documentos de HTML 4, incluso si no hay contenido dentro. En las versiones previas de Firefox, bastaba con hacer:
 
-<p>Ahora hay que cerrar el elemento <span style="font-family: Courier New;"><span class="nowiki">&lt;script&gt;</span></span> en <span style="font-family: Courier New;"><code>text/html</code></span> con <span style="font-family: Courier New;"><span class="nowiki">&lt;/script&gt;</span></span> en los documentos de HTML 4, incluso si no hay contenido dentro. En las versiones previas de Firefox, bastaba con hacer:</p>
+    <script ...   />
 
-<pre class="eval">&lt;script ...   /&gt;
-</pre>
+Ahora se deben cumplir las especificaciones de HTML (si se trata de un HTML), y por lo tanto se deben cerrar, así:
 
-<p>Ahora se deben cumplir las especificaciones de HTML (si se trata de un HTML), y por lo tanto se deben cerrar, así:</p>
+    <script ...></script>
 
-<pre class="eval">&lt;script ...&gt;&lt;/script&gt;
-</pre>
+Esto mejora tanto la compatibilidad como la seguridad.
 
-<p>Esto mejora tanto la compatibilidad como la seguridad.</p>
+### Cambios en CSS
 
-<h3 id="Cambios_en_CSS" name="Cambios_en_CSS">Cambios en CSS</h3>
+#### Cambio al tamaño de fuente basado en unidades em, ex
 
-<h4 id="Cambio_al_tama.C3.B1o_de_fuente_basado_en_unidades_em.2C_ex" name="Cambio_al_tama.C3.B1o_de_fuente_basado_en_unidades_em.2C_ex">Cambio al tamaño de fuente basado en unidades em, ex</h4>
+Los valores de fuente en unidades em y ex solían ser afectadas por el tamaño mínimo de fuente utilizado por el usuario: si una fuente se desplegaba más grande debido al tamaño mínimo, el ajuste de las unidades em y ex para el tamaño de fuente basados en esta se incrementarían de forma acorde. Esto era inconsistente con la forma en que las fuentes basadas en porcentaje se comportaban.
 
-<p>Los valores de fuente en unidades em y ex solían ser afectadas por el tamaño mínimo de fuente utilizado por el usuario: si una fuente se desplegaba más grande debido al tamaño mínimo, el ajuste de las unidades em y ex para el tamaño de fuente basados en esta se incrementarían de forma acorde. Esto era inconsistente con la forma en que las fuentes basadas en porcentaje se comportaban.</p>
+Los valores del tamaño de fuente en unidades em y ex ahora están basadas en un "tamaño de fuente intencionado" que no se ve afectado por el tamaño mínimo de fuente del usuario. En otras palabras, los tamaños de la fuente se calculan de acuerdo a las intenciones del diseñador y se ajustan al tamaño mínimo de fuente después de ello.
 
-<p>Los valores del tamaño de fuente en unidades em y ex ahora están basadas en un "tamaño de fuente intencionado" que no se ve afectado por el tamaño mínimo de fuente del usuario. En otras palabras, los tamaños de la fuente se calculan de acuerdo a las intenciones del diseñador y se ajustan al tamaño mínimo de fuente después de ello.</p>
+Ver {{ Bug(322943) }} para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.
 
-<p>Ver {{ Bug(322943) }} para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.</p>
+### Cambios de seguridad
 
-<h3 id="Cambios_de_seguridad" name="Cambios_de_seguridad">Cambios de seguridad</h3>
+#### Acceso Chrome
 
-<h4 id="Acceso_Chrome" name="Acceso_Chrome">Acceso Chrome</h4>
+En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes [`chrome://`]() usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos, lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.
 
-<p>En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://</a></code></span> usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos,  lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.</p>
+Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del [`chrome://browser/`]() y en espacio chrome://toolkit/. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.
 
-<p>Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://browser/</a></code> </span>y en espacio <span style="font-family: Courier New;"><a class="external" rel="freelink">chrome://toolkit/</a></span>. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.</p>
+Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo chrome.manifest de esta manera:
 
-<p>Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo<span style="font-family: Courier New;"> chrome.manifest </span>de esta manera:</p>
+    content mypackage location/ contentaccessible=yes
 
-<pre class="eval">content mypackage location/ contentaccessible=yes
-</pre>
+Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el contentaccessible de alguna manera, ya que consituye un riesgo potencial en la seguridad.
 
-<p>Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el <span style="font-family: Courier New;">contentaccessible </span>de alguna manera, ya que consituye un riesgo potencial en la seguridad.</p>
+> **Nota:** Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto: content mypackage location/
+> content mypackage location/ contentaccessible=yes
 
-<div class="note"><strong>Nota:</strong> Ya que Firefox 2 no entiende la bandera <code>contentaccessible</code> (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:
+#### Campos para subir archivos
 
-<pre class="eval">content mypackage location/
-content mypackage location/ contentaccessible=yes
-</pre>
-</div>
+En versiones anteriores de Firefox, había casos en los que cuando el usuario seleccionaba un archivo para subir, la aplicación web podía ver la ruta completa del archivo. Esta pertinencia de privacidad ha sido resuelta en Firefox 3; ahora la aplicación web solo mostrará el nombre del archivo.
 
-<h4 id="Campos_para_subir_archivos">Campos para subir archivos</h4>
+### Cambios en JavaScript
 
-<p>En versiones anteriores de Firefox, había casos en los que cuando el usuario seleccionaba un archivo para subir, la aplicación web podía ver la ruta completa del archivo. Esta pertinencia de privacidad ha sido resuelta en Firefox 3; ahora la aplicación web solo mostrará el nombre del archivo.</p>
+Firefox 3 soporta [JavaScript 1.8](../../../../../en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
 
-<h3 id="Cambios_en_JavaScript" name="Cambios_en_JavaScript">Cambios en JavaScript</h3>
+### Vea también
 
-<p>Firefox 3 soporta <span style="color: #008080;"><a href="../../../../../en/New_in_JavaScript_1.8" rel="internal">JavaScript 1.8</a></span>. Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los <span style="font-family: Courier New;">Script </span>obsoletos y no-estandar no son soportados. Esto no es la etiqueta <span style="font-family: Courier New;"><code><span class="nowiki">&lt;script&gt;</span></code></span>, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.</p>
-
-<h3 id="Vea_tambien" name="Vea_tambien">Vea también</h3>
-
-<ul>
- <li><a href="/es/Firefox_3_for_developers" title="es/Firefox_3_for_developers">Firefox 3 para desarrolladores</a> <a href="/es/New_in_JavaScript_1.8" title="es/New_in_JavaScript_1.8">Nuevo en  JavaScript 1.8</a> <a href="/es/Updating_extensions_for_Firefox_3" title="es/Updating_extensions_for_Firefox_3">Actualizando extensiones para Firefox 3</a></li>
-</ul>
+- [Firefox 3 para desarrolladores](/es/Firefox_3_for_developers "es/Firefox_3_for_developers") [Nuevo en JavaScript 1.8](/es/New_in_JavaScript_1.8 "es/New_in_JavaScript_1.8") [Actualizando extensiones para Firefox 3](/es/Updating_extensions_for_Firefox_3 "es/Updating_extensions_for_Firefox_3")

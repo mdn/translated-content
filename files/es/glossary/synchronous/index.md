@@ -9,17 +9,15 @@ tags:
 translation_of: Glossary/Synchronous
 original_slug: Glossary/Sincronico
 ---
-<p>Sincrónico<em> se</em> refiere a la comunicación en tiempo real donde cada lado recibe (y si es necesario, procesa y responde) mensajes instantáneamente (o lo más cerca posible a instantáneamente).</p>
+Sincrónico _se_ refiere a la comunicación en tiempo real donde cada lado recibe (y si es necesario, procesa y responde) mensajes instantáneamente (o lo más cerca posible a instantáneamente).
 
-<p>Un ejemplo humano es el teléfono — durante una llamada telefónica tiendes a responder a la otra persona inmediatamente.</p>
+Un ejemplo humano es el teléfono — durante una llamada telefónica tiendes a responder a la otra persona inmediatamente.
 
-<p>Muchos comandos de programación son también sincrónicos — por ejemplo cuando escribes en una calculadora, el entorno te devolverá el resultado instantáneamente, a menos que lo programes para no hacerlo.</p>
+Muchos comandos de programación son también sincrónicos — por ejemplo cuando escribes en una calculadora, el entorno te devolverá el resultado instantáneamente, a menos que lo programes para no hacerlo.
 
-<h2 id="Aprende_más">Aprende más</h2>
+## Aprende más
 
-<h3 id="Referencias_técnicas">Referencias técnicas</h3>
+### Referencias técnicas
 
-<ul>
- <li>{{glossary("Asynchronous")}}</li>
- <li><a href="/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">Solicitudes síncronas y asíncronas</a> usando la {{glossary("API")}} <a href="https://developer.mozilla.org/es/docs/Web/API/XMLHttpRequest">XMLHttpRequest()</a></li>
-</ul>
+- {{glossary("Asynchronous")}}
+- [Solicitudes síncronas y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) usando la {{glossary("API")}} [XMLHttpRequest()](/es/docs/Web/API/XMLHttpRequest)

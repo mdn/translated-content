@@ -5,11 +5,12 @@ tags:
   - Glosario
 translation_of: Glossary/Constructor
 ---
-<p>Un <strong>constructor</strong> pertenece a una clase objeto ({{glossary("object")}}) particular la cual es instanciada. El constructor inicializa este objeto y puede otorgar acceso a su información privada. El concepto de objeto puede ser aplicado a la mayoría de los lenguajes orientados a objetos ({{glossary("OOP","object-oriented programming")}}). En esencia, un constructor en {{glossary("JavaScript")}} suele ser declarado al comienzo de una instancia de una clase ({{glossary("class")}}).</p>
+Un **constructor** pertenece a una clase objeto ({{glossary("object")}}) particular la cual es instanciada. El constructor inicializa este objeto y puede otorgar acceso a su información privada. El concepto de objeto puede ser aplicado a la mayoría de los lenguajes orientados a objetos ({{glossary("OOP","object-oriented programming")}}). En esencia, un constructor en {{glossary("JavaScript")}} suele ser declarado al comienzo de una instancia de una clase ({{glossary("class")}}).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">// This is a generic default constructor class Default
+```js
+// This is a generic default constructor class Default
 function Default() {
 }
 
@@ -17,31 +18,26 @@ function Default() {
 // with parameter arguments
 function Overloaded(arg1, arg2, ...,argN){
 }
-</pre>
+```
 
-<p>Para llamar al constructor de una clase en Javascript, use el operador <code>new</code> para asignar un objeto de referencia ({{glossary("object reference")}}) a una {{glossary("variable")}}.</p>
+Para llamar al constructor de una clase en Javascript, use el operador `new` para asignar un objeto de referencia ({{glossary("object reference")}}) a una {{glossary("variable")}}.
 
-<pre class="brush: js">function Default() {
+```js
+function Default() {
 }
 
 // A new reference of a Default object assigned to a
 // local variable defaultReference
 var defaultReference = new Default();
-</pre>
+```
 
-<p> </p>
+## Saber más
 
-<h2 id="Saber_más">Saber más</h2>
+### Conocimiento general
 
-<h3 id="Conocimiento_general">Conocimiento general</h3>
+- {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "Constructor")}} en Wikipedia
 
-<ul>
- <li>{{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "Constructor")}} en Wikipedia</li>
-</ul>
+### Referencia técnica
 
-<h3 id="Referencia_técnica">Referencia técnica</h3>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor">The constructor in object oriented programming for JavaScript</a> en MDN</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">New operator in JavaScript</a> en MDN</li>
-</ul>
+- [The constructor in object oriented programming for JavaScript](/es/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor) en MDN
+- [New operator in JavaScript](/es/docs/Web/JavaScript/Reference/Operators/new) en MDN

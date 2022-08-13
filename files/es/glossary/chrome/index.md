@@ -8,10 +8,8 @@ tags:
   - WebMechanics
 translation_of: Glossary/Chrome
 ---
-<p><span id="result_box" lang="es"><span>En un navegador, Chrome es cualquier aspecto visible de un navegador aparte de las páginas web en sí (por ejemplo, barras de herramientas, barra de menús, pestañas).</span></span> Esto no debe confundirse con el navegador {{glossary("Google Chrome")}}.</p>
+En un navegador, Chrome es cualquier aspecto visible de un navegador aparte de las páginas web en sí (por ejemplo, barras de herramientas, barra de menús, pestañas). Esto no debe confundirse con el navegador {{glossary("Google Chrome")}}.
 
-<h2 id="Leer_más">Leer más</h2>
+## Leer más
 
-<ul>
- <li><a href="http://www.nngroup.com/articles/browser-and-gui-chrome/">Browser and GUI Chrome</a></li>
-</ul>
+- [Browser and GUI Chrome](http://www.nngroup.com/articles/browser-and-gui-chrome/)

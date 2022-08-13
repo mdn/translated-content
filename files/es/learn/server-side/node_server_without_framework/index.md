@@ -3,24 +3,23 @@ title: Servidor Node sin framework
 slug: Learn/Server-side/Node_server_without_framework
 translation_of: Learn/Server-side/Node_server_without_framework
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">Este artículo proporciona un servidor de ficheros estático simple construido con Node.js puro, para aquellos de vosotros que no quieran usar un framework.</p>
+Este artículo proporciona un servidor de ficheros estático simple construido con Node.js puro, para aquellos de vosotros que no quieran usar un framework.
 
-<p><a href="https://nodejs.org/en/">NodeJS</a> has many frameworks to help you get your server up and running, the most popular being:</p>
+[NodeJS](https://nodejs.org/en/) has many frameworks to help you get your server up and running, the most popular being:
 
-<ul>
- <li><a href="http://expressjs.com/">Express</a>: The most used framework.</li>
- <li><a href="https://www.totaljs.com/">Total</a>: The all-in-one Node.js framework that has everything and does not depend on any other framework or module.</li>
-</ul>
+- [Express](http://expressjs.com/): The most used framework.
+- [Total](https://www.totaljs.com/): The all-in-one Node.js framework that has everything and does not depend on any other framework or module.
 
-<p>There is however not a solution that will suit every situation. A developer may need to build his/her own server, without any other dependency.</p>
+There is however not a solution that will suit every situation. A developer may need to build his/her own server, without any other dependency.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Below is a simple static file server built with NodeJS:</p>
+Below is a simple static file server built with NodeJS:
 
-<pre class="brush: js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -73,8 +72,9 @@ http.createServer(function (request, response) {
     });
 
 }).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');</pre>
+console.log('Server running at http://127.0.0.1:8125/');
+```
 
-<h2 id="To_do">To do</h2>
+## To do
 
-<p>It would be nice to extend this article to explain how the above code works, and perhaps also show an extended version that serves static files and also handles some kind of dynamic requests too.</p>
+It would be nice to extend this article to explain how the above code works, and perhaps also show an extended version that serves static files and also handles some kind of dynamic requests too.

@@ -13,16 +13,16 @@ tags:
   - Índice
 translation_of: Glossary
 ---
-<p>Las tecnologías web contienen largas listas de jerga y abreviaturas que se utilizan en la documentación y codificación. Este glosario ofrece definiciones de palabras y abreviaturas que necesitas saber para entender y construir con éxito tu web.</p>
+Las tecnologías web contienen largas listas de jerga y abreviaturas que se utilizan en la documentación y codificación. Este glosario ofrece definiciones de palabras y abreviaturas que necesitas saber para entender y construir con éxito tu web.
 
-<p>{{GlossaryList({"split":"h3", "css":"multiColumnList"})}}</p>
+{{GlossaryList({"split":"h3", "css":"multiColumnList"})}}
 
-<h2 id="Contribuir_al_glosario">Contribuir al glosario</h2>
+## Contribuir al glosario
 
-<p>Este glosario es un trabajo en curso que nunca termina. Puedes ayudar a mejorarlo <a href="/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary">escribiendo nuevas entradas</a> o haciendo mejor las ya existentes. La forma más fácil de empezar es presionando el siguiente botón o elegir uno de los términos sugeridos debajo.</p>
+Este glosario es un trabajo en curso que nunca termina. Puedes ayudar a mejorarlo [escribiendo nuevas entradas](/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) o haciendo mejor las ya existentes. La forma más fácil de empezar es presionando el siguiente botón o elegir uno de los términos sugeridos debajo.
 
-<p><strong><a href="/es/docs/new?parent=4391">Añadir una nueva entrada en el glosario</a></strong></p>
+**[Añadir una nueva entrada en el glosario](/es/docs/new?parent=4391)**
 
-<p>{{GlossaryList({"terms":["DMZ","HMAC","condition","modem","OVP","TTL","Unicode"], "filter":"notdefined", "css":"multiColumnList"})}}</p>
+{{GlossaryList({"terms":\["DMZ","HMAC","condition","modem","OVP","TTL","Unicode"], "filter":"notdefined", "css":"multiColumnList"})}}
 
-<p>Si deseas saber más acerca de cómo contribuir al glosario, echa un vistazo a <a href="/es/docs/MDN/Doc_status/Glossary">la página de estado de la documentación del glosario</a>.</p>
+Si deseas saber más acerca de cómo contribuir al glosario, echa un vistazo a [la página de estado de la documentación del glosario](/es/docs/MDN/Doc_status/Glossary).

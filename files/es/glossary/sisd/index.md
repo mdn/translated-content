@@ -7,14 +7,12 @@ tags:
   - SISD
 translation_of: Glossary/SISD
 ---
-<p>SISD son las siglas de <strong>Single Instruction/Single Data</strong> la cual es una {{Interwiki("wikipedia","Flynn%27s_taxonomy","clasificación de arquitecturas")}}. En las arquitecturas SISD, un único procesador ejecuta una única instrucción sobre un único punto de la memoria.</p>
+SISD son las siglas de **Single Instruction/Single Data** la cual es una {{Interwiki("wikipedia","Flynn%27s_taxonomy","clasificación de arquitecturas")}}. En las arquitecturas SISD, un único procesador ejecuta una única instrucción sobre un único punto de la memoria.
 
-<p>En contraposición {{Glossary("SIMD")}} es una arquitectura que permite realizar una operación sobre distintos puntos de memoria.</p>
+En contraposición {{Glossary("SIMD")}} es una arquitectura que permite realizar una operación sobre distintos puntos de memoria.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<h3 id="General_knowledge">General knowledge</h3>
+### General knowledge
 
-<ul>
- <li>{{Interwiki("wikipedia", "SISD")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "SISD")}} on Wikipedia
