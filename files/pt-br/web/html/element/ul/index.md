@@ -135,6 +135,4 @@ A saída HTML acima será:
   - a propriedade [line-height](/en/CSS/line-height "en/CSS/line-height"), válida para simular o atributo ultrapassado` `{{ htmlattrxref("compact", "ul") }},
   - a propriedade [margin](/en/CSS/margin "en/CSS/margin"), proveitosa para controlar a indentação da lista.
 
-{{ languages({ "en":"en/HTML/Element/ul", "de":"de/HTML/Element/ul", "ja":"ja/HTML/Element/ul", "pl":"pl/HTML/Element/ul"}) }}
-
 {{ HTMLRef }}

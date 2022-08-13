@@ -114,5 +114,3 @@ The [UserCSP Addon](https://addons.mozilla.org/en-us/firefox/addon/newusercspdes
 - [CSP policy directives](/en/Security/CSP/CSP_policy_directives "en/Security/CSP/CSP policy directives")
 - [Using CSP violation reports](/en/Security/CSP/Using_CSP_violation_reports "en/Security/CSP/Using CSP violation reports")
 - [Content Security Policy recommendation bookmarklet](http://brandon.sternefamily.net/posts/2010/10/content-security-policy-recommendation-bookmarklet/)
-
-{{ languages( { "ja": "ja/Security/CSP/Using_Content_Security_Policy" } ) }}

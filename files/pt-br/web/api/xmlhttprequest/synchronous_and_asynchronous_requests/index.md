@@ -238,5 +238,3 @@ function logData() {
 - [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest")
 - [AJAX](/pt-BR/docs/AJAX)
 - [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
-
-{{ languages( {"zh-cn": "zh-cn/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" } ) }}
