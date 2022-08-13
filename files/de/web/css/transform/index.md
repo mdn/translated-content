@@ -60,7 +60,7 @@ transform: unset;
 
 Die Eigenschaft `transform` kann entweder als Schlüsselwortwert [`none`](/de/docs/Web/CSS/transform$edit#none) oder mehrere[`<transform-function>`](/de/docs/Web/CSS/transform$edit#<transform-function>) -Werte angegeben werden.
 
-> **Note:** **Hinweis:** Wenn {{cssxref("transform-function/perspective", "perspective()")}} einer von mehreren Funktionswerten ist, muss er zuerst aufgeführt werden.
+> **Hinweis:** Wenn {{cssxref("transform-function/perspective", "perspective()")}} einer von mehreren Funktionswerten ist, muss er zuerst aufgeführt werden.
 
 ### Werte
 

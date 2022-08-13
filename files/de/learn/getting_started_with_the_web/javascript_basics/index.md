@@ -38,24 +38,24 @@ Jedoch ist JavaScript etwas komplexer als HTML und CSS. Daher werden Sie klein a
 
 > **Warning:** **WICHTIG**: Wenn Sie dem vorhergehenden Kurs nicht bis hierher gefolgt sind, [laden Sie dieses Codebeispiel herunter](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) und benutzen es als Einstieg.
 
-1.  Zuerst gehen Sie zu Ihrer Testseite und erstellen eine neue Datei mit dem Namen `main.js`. Speichern Sie diese Datei in Ihrem skripts-Ordner.
-2.  Dann gehen Sie zur `index.html` Datei und fügen das folgende Element in einer neuen Zeile vor dem schließenden `</body>-`Tag ein:
+1. Zuerst gehen Sie zu Ihrer Testseite und erstellen eine neue Datei mit dem Namen `main.js`. Speichern Sie diese Datei in Ihrem skripts-Ordner.
+2. Dann gehen Sie zur `index.html` Datei und fügen das folgende Element in einer neuen Zeile vor dem schließenden `</body>-`Tag ein:
 
     ```html
     <script src="scripts/main.js"></script>
     ```
 
-3.  Dies macht dasselbe, wie das {{htmlelement("link")}} Element für CSS — Es bindet die JavaScript-Datei auf der Seite ein, damit es einen Einfluss auf den HTML Code haben kann (und auch auf den CSS-Code und alles andere auf der Seite).
-4.  Fügen Sie nun den folgenden Code in die `main.js-`Datei ein:
+3. Dies macht dasselbe, wie das {{htmlelement("link")}} Element für CSS — Es bindet die JavaScript-Datei auf der Seite ein, damit es einen Einfluss auf den HTML Code haben kann (und auch auf den CSS-Code und alles andere auf der Seite).
+4. Fügen Sie nun den folgenden Code in die `main.js-`Datei ein:
 
     ```js
     var myHeading = document.querySelector('h1');
     myHeading.textContent = 'Hallo Welt!';
     ```
 
-5.  Gehen Sie sicher, dass die Javascript und HTML-Dateien gespeichert sind, und laden `index.html` in einen Browser. Die Webseite sollte wie folgt aussehen:![](https://mdn.mozillademos.org/files/15479/beginner-js1-de.jpg)
+5. Gehen Sie sicher, dass die Javascript und HTML-Dateien gespeichert sind, und laden `index.html` in einen Browser. Die Webseite sollte wie folgt aussehen:![](https://mdn.mozillademos.org/files/15479/beginner-js1-de.jpg)
 
-> **Note:** **Hinweis**: Das {{htmlelement("script")}}-Element haben wir am Ende des \<body>-Elements geschrieben, da das HTML vom Browser in der Reihenfolge geladen wird, wie es in der Datei geschrieben wurde. Wenn der JavaScript-Code geladen wird, bevor die HTML-Seite aufgebaut wurde, hat es möglicherweise keinen Einfluss auf die HTML-Elemente, die später geladen werden. Also ist es meistens am besten, JavaScript-Code eher am Ende der HTML Seite einzubinden.
+> **Hinweis:** Das {{htmlelement("script")}}-Element haben wir am Ende des \<body>-Elements geschrieben, da das HTML vom Browser in der Reihenfolge geladen wird, wie es in der Datei geschrieben wurde. Wenn der JavaScript-Code geladen wird, bevor die HTML-Seite aufgebaut wurde, hat es möglicherweise keinen Einfluss auf die HTML-Elemente, die später geladen werden. Also ist es meistens am besten, JavaScript-Code eher am Ende der HTML Seite einzubinden.
 
 ### Was ist passiert?
 
@@ -63,7 +63,7 @@ Ihre Überschrift wurde durch die Benutzung von JavaScript zu "Hello world!" ge�
 
 Anschließend setzen wir den Wert der Eigenschaft {{domxref("Node.textContent", "textContent")}} der Variablen `myHeading` (die den Inhalt des Headings repräsentiert) auf "Hallo Welt!".
 
-> **Note:** **Hinweis:** Beide Funktionen die Sie genutzt haben\*\* **sind Teile** \*\*des [Document Object Model (DOM) API](/de/docs/Web/API/Document_Object_Model)
+> **Hinweis:** Beide Funktionen die Sie genutzt haben **sind Teile** des [Document Object Model (DOM) API](/de/docs/Web/API/Document_Object_Model)
 
 ## Programmier-Crash-Kurs
 
@@ -73,7 +73,7 @@ Es folgt eine Beschreibung einiger Basis-Eigenschaften der Sprache JavaScript, u
 
 ### Variablen
 
-{{Glossary("Variable", "Variables")}} sind Container, in denen Werte gespeichert werden können. Zunächst wird eine Variable mit dem Schlüsselwort `var `deklariert, gefolgt von irgendeinem Namen, unter dem diese Variable adressiert werden soll:
+{{Glossary("Variable", "Variables")}} sind Container, in denen Werte gespeichert werden können. Zunächst wird eine Variable mit dem Schlüsselwort `var`deklariert, gefolgt von irgendeinem Namen, unter dem diese Variable adressiert werden soll:
 
 ```js
 var myVariable;
@@ -146,7 +146,7 @@ Ein {{Glossary("operator")}} ist ein mathematisches Symbol, das ein Ergebnis erz
 | subtrahieren, multiplizieren, teilen | Verhalten sich so, wie aus der Mathematik bekannt.                                                                                                                      | `-`, `*`, `/` | `9 - 3; 8 * 2; // in JS ist der Multiplikationsoperator ein Stern 9 / 3;`                                                                                                                                                                                                                      |
 | Zuweisungsoperator                   | Sie haben dies bereits gesehen: Ein Wert wird einer Variablen zugeordnet                                                                                                | `=`           | `var myVariable = 'Bob';`                                                                                                                                                                                                                                                                      |
 | Gleichheitsoperator                  | Prüft zwei Werte auf Gleichheit und liefert `true`/`false` (Boolean) als Ergebnis                                                                                       | `===`         | `var myVariable = 3; myVariable === 4;`                                                                                                                                                                                                                                                        |
-| Verneinung, ungleich                 | Liefert als Ergebnis das logische Gegenteil; dreht ein `true` in ein `false, `etc. In Verbindung mit dem Gleichheitsoperator wird geprüft, ob zwei Werte ungleich sind. | `!`, `!==`    | Der Basis-Ausdruck ist `true`, aber der Vergleich liefert `false` weil er negiert wurde:`var myVariable = 3; !(myVariable === 3);`Hier wird geprüft, ob `myVariable` ungleich 3 ist. Der Rückgabewert ist `false, weil myVariable `den Wert 3 aufweist.`var myVariable = 3; myVariable !== 3;` |
+| Verneinung, ungleich                 | Liefert als Ergebnis das logische Gegenteil; dreht ein `true` in ein `false,`etc. In Verbindung mit dem Gleichheitsoperator wird geprüft, ob zwei Werte ungleich sind. | `!`, `!==`    | Der Basis-Ausdruck ist `true`, aber der Vergleich liefert `false` weil er negiert wurde:`var myVariable = 3; !(myVariable === 3);`Hier wird geprüft, ob `myVariable` ungleich 3 ist. Der Rückgabewert ist `false, weil myVariable`den Wert 3 aufweist.`var myVariable = 3; myVariable !== 3;` |
 
 Es gibt noch viele weitere Operatoren zu entdecken, aber es reicht für jetzt. Eine komplette Liste finden Sie in [Ausdrücke und Operatoren](/de/docs/Web/JavaScript/Reference/Operators).
 
@@ -165,16 +165,17 @@ if (eis === 'Schokolade') {
 }
 ```
 
-Der Ausdruck innerhalb des `if ( ... ) `ist der Test - dieser verwendet den Gleichheitsoperator (wie oben beschrieben), um die Variable `eis` mit dem String S`chokolade` zu vergleichen, um zu sehen, ob die Werte identisch sind. Liefert dieser Vergleich `true`, wird der erste Block des Codes ausgeführt. Wenn nicht, wird dieser Code übersprungen und der zweite Block nach dem `else` Befehl ausgeführt.
+Der Ausdruck innerhalb des `if ( ... )`ist der Test - dieser verwendet den Gleichheitsoperator (wie oben beschrieben), um die Variable `eis` mit dem String S`chokolade` zu vergleichen, um zu sehen, ob die Werte identisch sind. Liefert dieser Vergleich `true`, wird der erste Block des Codes ausgeführt. Wenn nicht, wird dieser Code übersprungen und der zweite Block nach dem `else` Befehl ausgeführt.
 
 ### Funktionen
 
 {{Glossary("Function", "Functions")}} ist ein Weg, um Funktionalitäten zusammenzupacken, die wiederverwendet werden sollen. Immer wenn die Funktionalität benötigt wird, wird die Funktion unter ihrem Namen aufgerufen, statt denselben Code immer wieder erneut schreiben zu müssen. Sie haben bereits einige Verwendungen von Funktionen gesehen, zum Beispiel:
 
-1.  ```js
+1. ```js
     var myVariable = document.querySelector('h1');
     ```
-2.  ```js
+
+2. ```js
     alert('Hallo!');
     ```
 
@@ -238,10 +239,10 @@ Nun, da wir einige Grundlagen von JavaScript kennengelernt haben, lassen Sie uns
 
 Wir werden der Webseite ein weiteres Bild hinzufügen. Mit etwas JavaScript-Code werden wir zwischen den beiden Bildern wechseln, wenn auf diese mit der Maus geklickt wird.
 
-1.  Suchen Sie sich zuerst ein zweites Bild für Ihre Webseite aus. Es sollte möglichst die selbe Größe haben, wie das Bild, das Sie schon auf der Webseite haben.
-2.  Speichern Sie dieses Bild in Ihrem `bilder`-Ordner.
-3.  Ändern Sie den Namen des Bildes in etwas, das Sie sich leicht merken können, wir haben es `'firefox2.png'` genannt.
-4.  Gehen Sie in Ihre `main.js` Datei und geben den folgenden JavaScript-Code ein: (Löschen Sie das "hello world"-Beispiel von oben)
+1. Suchen Sie sich zuerst ein zweites Bild für Ihre Webseite aus. Es sollte möglichst die selbe Größe haben, wie das Bild, das Sie schon auf der Webseite haben.
+2. Speichern Sie dieses Bild in Ihrem `bilder`-Ordner.
+3. Ändern Sie den Namen des Bildes in etwas, das Sie sich leicht merken können, wir haben es `'firefox2.png'` genannt.
+4. Gehen Sie in Ihre `main.js` Datei und geben den folgenden JavaScript-Code ein: (Löschen Sie das "hello world"-Beispiel von oben)
 
     ```js
     var myImage = document.querySelector('img');
@@ -256,34 +257,34 @@ Wir werden der Webseite ein weiteres Bild hinzufügen. Mit etwas JavaScript-Code
     }
     ```
 
-5.  Speichern Sie alle Dateien und laden Sie `index.html` in Ihrem Browser. Wenn Sie jetzt auf das Bild klicken, sollte es sich ändern!
+5. Speichern Sie alle Dateien und laden Sie `index.html` in Ihrem Browser. Wenn Sie jetzt auf das Bild klicken, sollte es sich ändern!
 
 Wir erstellen die Variable `myImage` und speichern in dieser eine Referenz zu unserem Bild-Element(`img`). Als nächstes setzen wir das `onclick`-Event dieser Variablen gleich mit einer Funktion ohne Namen (einer*anonymen* Funktion). In dieser Funktion steht, was jedes mal passieren soll, wenn auf das Bild geklickt wird:
 
-1.  Wir holen uns den Wert des `src` Attributes von unserem Bild.
-2.  Wir benutzen eine `if`-Bedingung, um zu überprüfen ob der `src`-Wert derselbe ist, wie der Pfad unseres original Bildes:
+1. Wir holen uns den Wert des `src` Attributes von unserem Bild.
+2. Wir benutzen eine `if`-Bedingung, um zu überprüfen ob der `src`-Wert derselbe ist, wie der Pfad unseres original Bildes:
 
-    1.  Wenn die Bedingung wahr ist, ändern wir den `src`-Wert in den Pfad des zweiten Bildes, so das dieses Bild nun in unser {{htmlelement("image")}}-Element geladen wird.
-    2.  Wenn die Bedingung falsch ist (das Bild also schon angeklickt und geändert wurde), ändern wir den `src`-Wert wieder in den Pfad des ersten Bildes, so das bei erneutem Klick mit der Maus das Originalbild wieder erscheint.
+    1. Wenn die Bedingung wahr ist, ändern wir den `src`-Wert in den Pfad des zweiten Bildes, so das dieses Bild nun in unser {{htmlelement("image")}}-Element geladen wird.
+    2. Wenn die Bedingung falsch ist (das Bild also schon angeklickt und geändert wurde), ändern wir den `src`-Wert wieder in den Pfad des ersten Bildes, so das bei erneutem Klick mit der Maus das Originalbild wieder erscheint.
 
 ### Ein persönlicher Willkommensgruß
 
 Als nächstes fügen wir unserer Webseite einen persönlichen Willkommensgruß hinzu, welcher vom Benutzer beim ersten Besuch der Seite geändert werden kann. Die Änderung soll auch erhalten bleiben, wenn der Benutzer die Seite verlässt und später wieder zurück kommt. Wir werden auch eine Option haben, den Nutzer zu ändern, so das der Gruß dementsprechend geändert wird.
 
-1.  In der `index.html`-Datei fügen Sie direkt vor dem {{htmlelement("script")}} Element folgende Code-Zeile ein:
+1. In der `index.html`-Datei fügen Sie direkt vor dem {{htmlelement("script")}} Element folgende Code-Zeile ein:
 
     ```html
     <button>Name ändern</button>
     ```
 
-2.  In `main.js` fügen Sie den folgenden Code am Ende hinzu. Achten Sie darauf, das Ihr Code genauso aussieht wie hier gezeigt. Damit erstellen wir zwei neue Variablen und speichern in der Ersten eine Referenz zu unserem neu erstellten button und in der Zweiten zu unserer Hauptüberschrift auf der Webseite:
+2. In `main.js` fügen Sie den folgenden Code am Ende hinzu. Achten Sie darauf, das Ihr Code genauso aussieht wie hier gezeigt. Damit erstellen wir zwei neue Variablen und speichern in der Ersten eine Referenz zu unserem neu erstellten button und in der Zweiten zu unserer Hauptüberschrift auf der Webseite:
 
     ```js
     var myButton = document.querySelector('button');
     var myHeading = document.querySelector('h1');
     ```
 
-3.  Fügen Sie nun die folgende Funktion ein. Diese erstellt den personalisierten Willkommensgruß. Jetzt macht diese Funktion noch nichts, aber wir werden sie gleich benutzen:
+3. Fügen Sie nun die folgende Funktion ein. Diese erstellt den personalisierten Willkommensgruß. Jetzt macht diese Funktion noch nichts, aber wir werden sie gleich benutzen:
 
     ```js
     function setUserName() {
@@ -295,7 +296,7 @@ Als nächstes fügen wir unserer Webseite einen persönlichen Willkommensgruß h
 
     Innerhalb der Funktion wird in der ersten Zeile die neue Variable `myName` erstellt, in welcher der Name des Benutzers gespeichert werden soll. Der Name des Benutzers wird mit der [`prompt()`](/de/docs/Web/API/Window.prompt)-Funktion erfragt - es öffnet sich eine Dialogbox, ähnlich wie bei der `alert()`-Funktion, in welcher der Benutzer seinen Namen eingeben kann und mit einem klick auf **OK** bestätigen kann. Als nächstes Rufen wir eine API namens `localStorage` auf, mit welcher wir Daten im Browser speichern und später darauf zurückgreifen können. Wir nutzen die s`etItem()`-Funktion von `localStorage`, um ein Datenobjekt mit dem Namen `'name'` zu erstellen und setzen für den Wert die Variable `myName` ein, welche den Namen enthält, den der Benutzer eingegeben hat. Als letztes ersetzen wir den Textinhalt (`textContent`) von `myHeading` mit unserem Gruß welcher den Namen des Benutzers beinhaltet.
 
-4.  Fügen Sie als nächstes diesen `if ... else` Block hinzu — dies ist der Initialisierungscode, mit welchem wir unsere App aufsetzen, wenn sie das erste mal geladen wird:
+4. Fügen Sie als nächstes diesen `if ... else` Block hinzu — dies ist der Initialisierungscode, mit welchem wir unsere App aufsetzen, wenn sie das erste mal geladen wird:
 
     ```js
     if(!localStorage.getItem('name')) {
@@ -308,7 +309,7 @@ Als nächstes fügen wir unserer Webseite einen persönlichen Willkommensgruß h
 
     Dieser Code-Block benutzt eine logische Verneinung, um zu überprüfen ob es schon einen gespeicherten Namen gibt. Wenn der Name nicht existiert, dann wird die Funktion `setUserName()` aufgerufen, um einen Namen zu bekommen. Wenn der Name existiert, der Benutzer also diesen schon bei einem vorherigen Besuch der Webseite angegeben hat, dann wird der gespeicherte Name mit der `getItem()`-Funktion geladen, in der Variablen `storedName` gespeichert und dem String für den Willkommensgruß hinzugefügt.
 
-5.  Als letztes fügen wir unserem Button den unten stehenden `onclick`-Eventhandler hinzu, welcher die `setUserName()`-Funktion aufruft. Damit kann der Benutzer den Namen jederzeit ändern, wenn er auf den Button drückt:
+5. Als letztes fügen wir unserem Button den unten stehenden `onclick`-Eventhandler hinzu, welcher die `setUserName()`-Funktion aufruft. Damit kann der Benutzer den Namen jederzeit ändern, wenn er auf den Button drückt:
 
     ```js
     myButton.onclick = function() {

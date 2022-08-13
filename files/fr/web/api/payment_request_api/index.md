@@ -42,8 +42,6 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 - {{domxref('MerchantValidationEvent')}}
   - : Correspond à la demande effectuée par le navigateur vers le site marchand afin de valider le fait qu'il a la possibilité/permission d'utiliser un gestionnaire de paiement spécifique (par exemple, enregistré/validé pour utiliser Apple Pay).
 
-<!---->
-
 ## Dictionnaires
 
 - {{domxref("AddressErrors")}}

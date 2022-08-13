@@ -19,8 +19,6 @@ translation_of: Web/XPath/Functions/key
 - `keyname`
   - : 使用される[`xsl:key`](/ja/docs/XSLT/Elements/key)要素の名前を含む文字列。
 
-<!---->
-
 - `value`
   - : 返されるノード集合には、与えられたキーに対してこの値を持つすべてのノードが含まれます。
 

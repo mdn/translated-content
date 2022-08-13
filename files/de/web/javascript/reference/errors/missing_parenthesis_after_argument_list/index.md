@@ -24,7 +24,7 @@ Es gibt einen Fehler mit der Art wie die Funktion aufgerufen wird. Es kann sich 
 
 ## Beispiele
 
-Bei einem fehlenden "+" Operator, um zwei Strings zu konkatinieren,erwartet JavaScript , dass nur `"PI: " der Parameter `für die "log" Funktion ist. Darum sollte danach die Funktion mit einer abschliessenden Klammer abgeschlossen werden.
+Bei einem fehlenden "+" Operator, um zwei Strings zu konkatinieren,erwartet JavaScript , dass nur `"PI: " der Parameter`für die "log" Funktion ist. Darum sollte danach die Funktion mit einer abschliessenden Klammer abgeschlossen werden.
 
 ```js example-bad
 console.log("PI: " Math.PI);

@@ -67,12 +67,8 @@ translation_of: Learn/Forms
 - [JavaScript によるフォームの送信](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
   - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます([FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)もご覧ください)。
 
-<!---->
-
 - [フォームコントロール用の CSS プロパティ互換性テーブル](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : この最後の記事では、どの CSS プロパティがフォーム要素に互換性があるのかを引くことのできるハンディリファレンスを提供します。
-
-<!---->
 
 ## 関連情報
 

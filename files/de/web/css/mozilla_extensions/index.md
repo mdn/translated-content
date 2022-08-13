@@ -272,7 +272,7 @@ Wenn sie standardisiert und die Unterstützung für die Variante ohne Präfix hi
 
 ### {{Cssxref("border-style")}} und {{Cssxref("outline-style")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid `{{obsolete_inline}} entfernt in Gecko 1.9 {{geckoRelease("1.9")}}
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{obsolete_inline}} entfernt in Gecko 1.9 {{geckoRelease("1.9")}}
 
 ### {{cssxref("&lt;color&gt;")}} Schlüsselwörter
 

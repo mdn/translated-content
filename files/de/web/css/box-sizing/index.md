@@ -23,7 +23,7 @@ Die `box-sizing` Eigenschaft kann verwendet werden, um dieses Verhalten anzupass
 
   weist den Browser an, bei den Werten, die Sie für die Breite und Höhe eines Elements angeben, alle Ränder und Auffüllungen zu berücksichtigen. Wenn Sie die Breite eines Elements auf 100 Pixel festlegen, werden diese 100 Pixel alle von Ihnen hinzugefügten Ränder oder Füllungen enthalten, und das Inhaltsfeld wird verkleinert, um diese zusätzliche Breite zu absorbieren. Dadurch wird die Größenanpassung von Elementen normalerweise viel einfacher.
 
-> **Note:** **Hinweis:** Es ist oft nützlich, bei Layoutelementen die `box-sizing` auf `border-box` zu setzen. Dies erleichtert den Umgang mit der Größe von Elementen erheblich und eliminiert im Allgemeinen eine Reihe von Fallstricken, auf die Sie beim Layouten Ihres Inhalts stoßen können. Bei der Verwendung von `position: relative` oder `position: absolute` und der Nutzung von `box-sizing: content-box` können die Positionswerte relativ zum Inhalt und unabhängig von Änderungen der Rahmen- und Füllungsgrößen eingestellt werden, was manchmal wünschenswert ist.
+> **Hinweis:** Es ist oft nützlich, bei Layoutelementen die `box-sizing` auf `border-box` zu setzen. Dies erleichtert den Umgang mit der Größe von Elementen erheblich und eliminiert im Allgemeinen eine Reihe von Fallstricken, auf die Sie beim Layouten Ihres Inhalts stoßen können. Bei der Verwendung von `position: relative` oder `position: absolute` und der Nutzung von `box-sizing: content-box` können die Positionswerte relativ zum Inhalt und unabhängig von Änderungen der Rahmen- und Füllungsgrößen eingestellt werden, was manchmal wünschenswert ist.
 
 ## Syntax
 

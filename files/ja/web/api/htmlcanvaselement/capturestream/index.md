@@ -15,7 +15,7 @@ translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-**`HTMLCanvasElement`\*\***`.captureStream()`\*\* メソッドは、canvas の前面をリアルタイムにキャプチャした動画を {{domxref("CanvasCaptureMediaStream")}} として返すメソッドです。
+**`HTMLCanvasElement.captureStream()`** メソッドは、canvas の前面をリアルタイムにキャプチャした動画を {{domxref("CanvasCaptureMediaStream")}} として返すメソッドです。
 
 ## 構文
 

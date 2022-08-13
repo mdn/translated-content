@@ -15,30 +15,30 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 original_slug: Web/CSS/CSS_Colors/Narzedzie_doboru_kolorow
 ---
 ```html hidden
-    <div id="container">
-        <div id="palette" class="block">
-            <div id="color-palette"></div>
-            <div id="color-info">
-                <div class="title"> CSS Color </div>
-            </div>
-        </div>
+    <div id="container">
+        <div id="palette" class="block">
+            <div id="color-palette"></div>
+            <div id="color-info">
+                <div class="title"> CSS Color </div>
+            </div>
+        </div>
 
-        <div id="picker" class="block">
-            <div class="ui-color-picker" data-topic="picker" data-mode="HSL"></div>
-            <div id="picker-samples" sample-id="master"></div>
-            <div id="controls">
-                <div id="delete">
-                    <div id="trash-can"></div>
-                </div>
-                <div id="void-sample" class="icon"></div>
-            </div>
-        </div>
+        <div id="picker" class="block">
+            <div class="ui-color-picker" data-topic="picker" data-mode="HSL"></div>
+            <div id="picker-samples" sample-id="master"></div>
+            <div id="controls">
+                <div id="delete">
+                    <div id="trash-can"></div>
+                </div>
+                <div id="void-sample" class="icon"></div>
+            </div>
+        </div>
 
-        <div id="canvas" data-tutorial="drop">
-            <div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
-                data-max="20" data-sensivity="10"></div>
-        </div>
-    </div>
+        <div id="canvas" data-tutorial="drop">
+            <div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
+                data-max="20" data-sensivity="10"></div>
+        </div>
+    </div>
 ```
 
 ```css hidden
@@ -3211,7 +3211,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 To narzędzie ułatwia tworzenie, wybieranie i eksperymentowanie z niestandadrowymi kolorami w sieci. Umożliwia także konwersję pomiędzy różnymi [formatami kolorów](/pl/docs/Web/CSS/color_value) obsługiwanymi przez [CSS](/pl/docs/Web/CSS), w tym: kolory HEXA, RGB (Red/Green/Blue) i HSL (Hue/Saturation/Lightness). Możliwa jest też kontrola kanału alpha w formatach RGB (rgba) i HSL.
 
-Każdy wybrany kolor prezentowany jest we wszystkich trzech standardowych formatach CSS . Dodatkowo, bazując na obecnie wybranym kolorze, tworzona jest paleta HSL, HSV oraz alpha. Okno wyboru koloru "zakraplacz" można przełączać pomiędzy formatami HSL i HSV. Przeciągając kolory do pojemnika na dole i poruszając nimi nad sobą możesz przetestować jak wyglądają obok siebie. Zmieniaj względną wartość z-index aby przesunąc kolor na wierzch lub schować za innym.
+Każdy wybrany kolor prezentowany jest we wszystkich trzech standardowych formatach CSS . Dodatkowo, bazując na obecnie wybranym kolorze, tworzona jest paleta HSL, HSV oraz alpha. Okno wyboru koloru "zakraplacz" można przełączać pomiędzy formatami HSL i HSV. Przeciągając kolory do pojemnika na dole i poruszając nimi nad sobą możesz przetestować jak wyglądają obok siebie. Zmieniaj względną wartość z-index aby przesunąc kolor na wierzch lub schować za innym.
 
 To narzędzie pozwoli ci odnależć idealne kolory CSS do wykorzystania w twoim [HTML](/pl/docs/Web/HTML).
 

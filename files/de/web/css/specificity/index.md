@@ -37,7 +37,7 @@ Die folgende Selektorenliste ist nach aufsteigender Spezifität sortiert:
 
 ### Die `!important` Ausnahme
 
-Wenn eine `!important` Regel auf eine Stildeklaration angewendet wird, überschreibt diese Deklaration alle anderen Deklarationen des CSS, unabhängig davon, wo sie in der Deklarationsliste steht. Jedoch hat `!important` nichts mit Spezifität zu tun. Es wird davon **abgeraten**, `!important `zu verwenden, da es das Debuggen erschwert, weil die normale _Kaskadierung_ der Stylesheets dadurch unterbrochen wird.
+Wenn eine `!important` Regel auf eine Stildeklaration angewendet wird, überschreibt diese Deklaration alle anderen Deklarationen des CSS, unabhängig davon, wo sie in der Deklarationsliste steht. Jedoch hat `!important` nichts mit Spezifität zu tun. Es wird davon **abgeraten**, `!important`zu verwenden, da es das Debuggen erschwert, weil die normale _Kaskadierung_ der Stylesheets dadurch unterbrochen wird.
 
 **Einige allgemeine Regeln:**
 
@@ -48,8 +48,8 @@ Wenn eine `!important` Regel auf eine Stildeklaration angewendet wird, überschr
 
 **Anstatt `!important` zu verwenden kann folgendes getan werden:**
 
-1.  Besseren Gebrauch der CSS Kaskadierungseigenschaften machen.
-2.  Spezifischere Regeln verwenden. Eines oder mehrere Elemente vor dem Element anzugeben, das selektiert werden soll, ist spezifischer und erhält eine höhere Priorität:
+1. Besseren Gebrauch der CSS Kaskadierungseigenschaften machen.
+2. Spezifischere Regeln verwenden. Eines oder mehrere Elemente vor dem Element anzugeben, das selektiert werden soll, ist spezifischer und erhält eine höhere Priorität:
 
     ```html
     <div id="test">
@@ -69,8 +69,8 @@ Unabhängig von der Reihenfolge, in der der Text steht, wird der Text grün darg
 
 A) Erstes Szenario
 
-1.  Eine globale CSS Datei wird verwendet, die die visuellen Aspekte der Seite global setzt.
-2.  Es werden Inline Styles in Elementen verwendet, wovon grundsätzlich abgeraten wird.
+1. Eine globale CSS Datei wird verwendet, die die visuellen Aspekte der Seite global setzt.
+2. Es werden Inline Styles in Elementen verwendet, wovon grundsätzlich abgeraten wird.
 
 In diesem Fall sollten bestimmte Stile in der globalen CSS Datei als !important deklariert werden, was Inline Styles überschreibt.
 

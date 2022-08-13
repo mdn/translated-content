@@ -38,7 +38,7 @@ Mit Hilfe von `<mpadded>` kann die Breite und Höhe der umgebenden Box veränder
 
 ### Pseudo-Einheiten
 
-Für die Attribute `depth`, `height`, `lspace`, `voffset`, and `width` können die Schlüsselwörter `"depth`",` "height"` und `"width"` genutzt werden. Sie repräsentieren jeweils den Wert, den sie benennen.
+Für die Attribute `depth`, `height`, `lspace`, `voffset`, and `width` können die Schlüsselwörter `"depth`",`"height"` und `"width"` genutzt werden. Sie repräsentieren jeweils den Wert, den sie benennen.
 
 ## Beispiele
 

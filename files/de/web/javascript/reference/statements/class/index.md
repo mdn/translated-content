@@ -33,7 +33,7 @@ Klassendeklarationen sind nicht {{Glossary("Hoisting", "hoisted")}} (im Gegensat
 
 ### Eine einfache Klassendeklaration
 
-Im folgenden Beispiel definieren wir zuerst eine Klasse mit dem Namen Polygon. Diese wird danach erweitert, um eine Klasse mit dem Namen Square zu erstellen. Beachten Sie, dass die Anweisung` super() `nur im Konstruktor verwendet werden kann und vor dem `this `Schlüsselwort verwendet werden kann.
+Im folgenden Beispiel definieren wir zuerst eine Klasse mit dem Namen Polygon. Diese wird danach erweitert, um eine Klasse mit dem Namen Square zu erstellen. Beachten Sie, dass die Anweisung`super()`nur im Konstruktor verwendet werden kann und vor dem `this`Schlüsselwort verwendet werden kann.
 
 ```js
 class Polygon {
@@ -52,7 +52,7 @@ class Square extends Polygon {
 }
 ```
 
-> **Warning:** ### Versuch eine Klasse zweimal zu deklarierenNeudeklarieren einer Klasse unter Einsatz von Klassendeklarationen führt zu einem TypeError.`js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared `Der gleiche Fehler tritt auch auf, wenn eine Klasse zuvor mit einem class-Ausdruck definiert wurde.```js
+> **Warning:** ### Versuch eine Klasse zweimal zu deklarierenNeudeklarieren einer Klasse unter Einsatz von Klassendeklarationen führt zu einem TypeError.`js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared`Der gleiche Fehler tritt auch auf, wenn eine Klasse zuvor mit einem class-Ausdruck definiert wurde.```js
 > var Foo = class {};
 > class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 >

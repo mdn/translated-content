@@ -32,8 +32,6 @@ _Hérite des propriétés de son parent, `AudioNode`._
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : Valeur minimum de la plage nominale (effective).
 
-<!---->
-
 - {{domxref("AudioParam.value")}}
   - : Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de `AudioParam.defaultValue`. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la `AudioParam` - est ignorée, sans lever aucune exception
 

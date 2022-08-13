@@ -30,8 +30,6 @@ Willkommen! Durch das Betreten dieser Seite haben Sie bereits den ersten Schritt
 - [Häufig gestellte Fragen](/de/docs/MDN/Contribute/FAQ)
   - : Tipps und Antworten zu den häufigsten Fragen über Beiträge zu MDN.
 
-<!---->
-
 - [Zu Kuma beitragen](/de/docs/MDN/Kuma/Contributing)
   - : Eine Anleitung zu Beiträgen zum Kuma Projekt. Kuma ist der Name der Plattform, welche die MDN Webseiten unterstützt.
 

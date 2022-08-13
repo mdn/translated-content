@@ -9,7 +9,7 @@ tags:
 translation_of: Web/API/Node/nodeValue
 original_slug: Web/API/Element/nodeValue
 ---
-{{APIRef}} Podsumowanie
+{{APIRef}} Podsumowanie
 
 Zwraca wartość bieżącego węzła.
 

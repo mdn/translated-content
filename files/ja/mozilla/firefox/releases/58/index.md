@@ -195,8 +195,6 @@ _変更なし。_
 
 - [Firefox — Notes (58.0)](https://www.mozilla.org/firefox/58.0/releasenotes/)
 
-<!---->
-
 ## 過去のバージョン
 
 {{Firefox_for_developers(57)}}

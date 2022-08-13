@@ -358,12 +358,8 @@ Web Audio API は、音声処理に適することを理由に、平面的なバ
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
   - : 現在の周波数データを渡された {{domxref("Float32Array")}} 型配列にコピーします。
 
-<!---->
-
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
   - : 現在の周波数データを渡された {{domxref("Uint8Array")}} 型配列(符号なしバイト配列)にコピーします。
-
-<!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : 現在の波形データまたはタイムドメインデータを渡された{{domxref("Float32Array")}}型配列にコピーします。

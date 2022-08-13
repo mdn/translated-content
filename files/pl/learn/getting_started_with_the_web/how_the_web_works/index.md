@@ -60,7 +60,7 @@ Po wpisaniu adresu strony internetowej w przeglądarce (dla naszej analogii jest
 
 ## Wyjaśnienie DNS
 
-Prawdziwe adresy internetowe nie są miłymi, zapadającymi w pamięć słowami, które wpisujesz do paska adresu, aby znaleźć swoje ulubione strony. Są to specjalne numery, które wyglądają tak: `63.245.215.20`.
+Prawdziwe adresy internetowe nie są miłymi, zapadającymi w pamięć słowami, które wpisujesz do paska adresu, aby znaleźć swoje ulubione strony. Są to specjalne numery, które wyglądają tak: `63.245.215.20`.
 
 Nazywa się to {{Glossary("IP Address", "adresem IP")}} i reprezentuje on unikalną lokalizację w sieci. Jednakże, nie jest to łatwe do zapamiętania, prawda? Właśnie dlatego wynaleziono system nazw domen. Są to specjalne serwery, które dopasowują adres internetowy, który wpisujesz do przeglądarki (np. "mozilla.org") do rzeczywistego adresu strony internetowej (IP).
 

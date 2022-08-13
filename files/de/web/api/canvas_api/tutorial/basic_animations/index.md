@@ -14,13 +14,13 @@ Die wahrscheinlich größte Einschränkung ist, dass jede Form, die einmal gezei
 
 Diese Schritte müssen Sie befolgen, um ein neues Frame zu zeichnen:
 
-1.  **Bereinigen Sie die Zeichenfläche _(canvas)_**
+1. **Bereinigen Sie die Zeichenfläche _(canvas)_**
     Sofern die Form, die Sie zeichnen wollen, nicht den gesamten Platz der Zeichenfläche einnimmt, müssen Sie alle vorherigen Formen entfernen. Am einfachsten erreichen Sie dies über die {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}-Methode.
-2.  **Sichern Sie den Canvas-Zustand**
+2. **Sichern Sie den Canvas-Zustand**
     Wenn Sie irgendeine Einstellung verändern (wie das Layout, Transformtationen, etc.), die den Status der Zeichenfläche beeinflussen, sollten Sie den Ursprungszustand sichern. Nur so gewährleisten Sie, dass der Ursprungszustand für jedes neue Frame verwendet wird. Verwenden Sie hierfür die `save()`-Methode.
-3.  **Zeichnen Sie die animierte Form**
+3. **Zeichnen Sie die animierte Form**
     Hier erzeugen Sie nun endlich die eigentliche Animation.
-4.  **Setzen Sie den Canvas-Zustand zurück.**
+4. **Setzen Sie den Canvas-Zustand zurück.**
     Mit der `restore()`-Methode können Sie auf den Ursprungszustand zurückwechseln, um ein neues Frame zu erzeugen.
 
 ## Steuerung einer Animation

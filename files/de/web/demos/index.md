@@ -34,7 +34,7 @@ Mozilla unterstützt eine Vielzahl an Open Web Technologien und ermutigt ihre Ve
 - [Canvas ash2](http://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
 - [Canvas ash8](http://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor ](http://viliusle.github.io/miniPaint/)([source code](https://github.com/viliusle/miniPaint))
+- [miniPaint - Image editor](http://viliusle.github.io/miniPaint/)([source code](https://github.com/viliusle/miniPaint))
 
 ### SVG
 
@@ -94,7 +94,7 @@ Mozilla unterstützt eine Vielzahl an Open Web Technologien und ermutigt ihre Ve
 
 ## HTML
 
-- [Zen Photon Garden ](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
 - [HTMl Meta Tags For SMO](http://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html)
 
 ## Web APIs
@@ -102,8 +102,6 @@ Mozilla unterstützt eine Vielzahl an Open Web Technologien und ermutigt ihre Ve
 ### Notifications API
 
 - HTML5 Notifications ([source code](https://github.com/elfoxero/html5notifications))
-
-<!---->
 
 ### Web Audio API
 

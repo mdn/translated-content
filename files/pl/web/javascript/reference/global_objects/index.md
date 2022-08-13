@@ -11,11 +11,11 @@ original_slug: Web/JavaScript/Referencje/Obiekty
 ---
 {{jsSidebar("Objects")}}
 
-W tym rozdziale opisano wszystkie standardowe obiekty wbudowane JavaScript, w tym ich metody i właściwości.
+W tym rozdziale opisano wszystkie standardowe obiekty wbudowane JavaScript, w tym ich metody i właściwości.
 
-Pojęcie "obiekty globalne" (lub standardowe obiekty wbudowane) tutaj nie są tym samym, co **obiekt globalny**, który  odnosi się do **obiektów o zasięgu globalnym**. Dostęp do **obiektu globalnego** można uzyskać za pomocą operatoa {{jsxref("Operatory/this", "this")}} w zakresie globalnym (ale tylko, jeśli nie jest właczony tryb ścisły ECMAScript 5. W trybie ścisłym, w takim przypadku zostanie zwrócona wartość  {{jsxref("undefined")}}). W rzeczywistości, zakres globalny **składa się** z własciwości obiektu globalnego, w tym właściwości dziedziczonych, jeśli istnieją.
+Pojęcie "obiekty globalne" (lub standardowe obiekty wbudowane) tutaj nie są tym samym, co **obiekt globalny**, który  odnosi się do **obiektów o zasięgu globalnym**. Dostęp do **obiektu globalnego** można uzyskać za pomocą operatoa {{jsxref("Operatory/this", "this")}} w zakresie globalnym (ale tylko, jeśli nie jest właczony tryb ścisły ECMAScript 5. W trybie ścisłym, w takim przypadku zostanie zwrócona wartość  {{jsxref("undefined")}}). W rzeczywistości, zakres globalny **składa się** z własciwości obiektu globalnego, w tym właściwości dziedziczonych, jeśli istnieją.
 
-Innymi obiektami o zasięgu globalnym są [obiekty tworzone w skryptach przez użytkowników](/pl/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects) albo dostarczane przez aplikacje hosta. Obiekty hosta dostępne w kontekście przeglądarki są opisane w  [informatorze API](/pl/docs/Web/API/Reference). Więcej informacji o różnicach dzielących [DOM](/pl/docs/DOM/DOM_Reference) i rdzeń [JavaScript](/pl/docs/Web/JavaScript), znajdziesz we [Przeglądzie technologii JavaScript](/pl/docs/Web/JavaScript/JavaScript_technologies_overview).
+Innymi obiektami o zasięgu globalnym są [obiekty tworzone w skryptach przez użytkowników](/pl/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects) albo dostarczane przez aplikacje hosta. Obiekty hosta dostępne w kontekście przeglądarki są opisane w  [informatorze API](/pl/docs/Web/API/Reference). Więcej informacji o różnicach dzielących [DOM](/pl/docs/DOM/DOM_Reference) i rdzeń [JavaScript](/pl/docs/Web/JavaScript), znajdziesz we [Przeglądzie technologii JavaScript](/pl/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ## Obiekty standardowe wg kategorii
 
@@ -30,7 +30,7 @@ Właściwości globalne zwracają proste wartości, które nie mają swoich wła
 
 ### Funkcje
 
-Należą tu funkcje globalne (wywoływane globalnie a nie w jakimś obiekcie), które  zwracają swoją wartość bezpośredni do wywołania.
+Należą tu funkcje globalne (wywoływane globalnie a nie w jakimś obiekcie), które  zwracają swoją wartość bezpośredni do wywołania.
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
@@ -47,7 +47,7 @@ Należą tu funkcje globalne (wywoływane globalnie a nie w jakimś obiekcie), k
 
 ### Obiekty podstawowe
 
-Są to  fundamentalne, podstawowe obiekty, stanowiące podstawę do tworzenia innych obiektów. Obejmuje to obiekty reprezentujace obiekty ogólne, funkcje i błędy.
+Są to  fundamentalne, podstawowe obiekty, stanowiące podstawę do tworzenia innych obiektów. Obejmuje to obiekty reprezentujace obiekty ogólne, funkcje i błędy.
 
 - {{jsxref("Object")}}
 - {{jsxref("Function")}}
@@ -72,14 +72,14 @@ Są to obiekty podstawowe reprezentujace liczby, daty i obliczenia matematyczne.
 
 ### Przetwarzanie tekstu
 
-Kategorie te tworzą obiekty reprezentujące łańcuchy i obsługujace manipulowanie łańcuchami.
+Kategorie te tworzą obiekty reprezentujące łańcuchy i obsługujace manipulowanie łańcuchami.
 
 - {{jsxref("String")}}
 - {{jsxref("RegExp")}}
 
 ### Indeksowane kolekcje
 
-Obiekty te reprezentują kolekcje danych, ktore są uporządkowane według wartości indeksu. Opejmuje to tablice, typowane tablice i konstrukcje podobne do tablic.
+Obiekty te reprezentują kolekcje danych, ktore są uporządkowane według wartości indeksu. Opejmuje to tablice, typowane tablice i konstrukcje podobne do tablic.
 
 - {{jsxref("Array")}}
 - {{jsxref("Int8Array")}}
@@ -121,7 +121,7 @@ Typy danych wektorowych {{Glossary("SIMD")}} są obiektami, w których dane form
 
 ### Dane strukturalne
 
-Obiekty tej kategorii reprezentują i współdziałają ze strukturyzowanymi buforami danych i danymi kodowymi uzywającymi notacji JSON (JavaScript Object Notation).
+Obiekty tej kategorii reprezentują i współdziałają ze strukturyzowanymi buforami danych i danymi kodowymi uzywającymi notacji JSON (JavaScript Object Notation).
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("SharedArrayBuffer")}} {{experimental_inline}}

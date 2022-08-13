@@ -50,7 +50,7 @@ width: unset;
   - : Siehe {{cssxref("&lt;length&gt;")}} für mögliche Einheiten.
 - `<percentage>`
   - : Angegeben als {{cssxref("&lt;percentage&gt;")}} der Breite des beinhaltenden Blocks.
-- `border-box `{{experimental_inline}}
+- `border-box`{{experimental_inline}}
   - : Falls angegeben, wird der vorherige {{cssxref("&lt;length&gt;")}} oder {{cssxref("&lt;percentage&gt;")}} Wert auf die Borderbox des Elements angewendet.
 - `content-box` {{experimental_inline}}
   - : Falls angegeben, wird der vorherige {{cssxref("&lt;length&gt;")}} oder {{cssxref("&lt;percentage&gt;")}} Wert auf die Contentbox des Elements angewendet.

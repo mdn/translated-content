@@ -42,7 +42,7 @@ Dies nennt man einen _asynchronen Funktionsaufruf_. Diese Vorgehensweise hat meh
 
 Anders als bei Callback-Übergabe nach dem alten Verfahren, können Promise-Objekte folgendes sicherstellen:
 
-- Callback-Funktionen werden erst aufgerufen, wenn der [derzeitige Durchlauf des Javascript Event Loops ](/de/docs/Web/JavaScript/EventLoop#Run-to-completion)vollständig ist.
+- Callback-Funktionen werden erst aufgerufen, wenn der [derzeitige Durchlauf des Javascript Event Loops](/de/docs/Web/JavaScript/EventLoop#Run-to-completion)vollständig ist.
 - Callback-Funktionen, die in `.then()` angehängt werden, werden _nach_ dem Ende der asynchronen Operation aufgerufen.
 - Mehrere Callback-Funktionen können durch mehrmaliges Aufrufen von `.then()` angehängt werden, um unabhängig von der Funktion selbst in der Anhänge-Reihenfolge aufgerufen zu werden.
 

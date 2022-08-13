@@ -14,7 +14,7 @@ html, body, svg {height: 100%}
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50" />
+  <circle cx="50" cy="50" r="50" />
 </svg>
 ```
 
@@ -27,7 +27,7 @@ html, body, svg {height: 100%}
     _Typ wartości_ : **[\<długość>](/docs/Web/SVG/Content_type#Length)** | **[\<procent>](/docs/Web/SVG/Content_type#Percentage)** ; _Wartość domyślna_ : `0`; _Animowalny_ : **tak**
 - {{SVGAttr ("cy")}}
   - : Ten atrybut definiuje współrzędną osi y środka środka elementu.
-    _Typ wartości_ :  **[\<długość>](/docs/Web/SVG/Content_type#Length)** | **[\<procent>](/docs/Web/SVG/Content_type#Percentage)** ; _Wartość domyślna_ : `0`; _Animowalny_ : **tak**
+    _Typ wartości_ :  **[\<długość>](/docs/Web/SVG/Content_type#Length)** | **[\<procent>](/docs/Web/SVG/Content_type#Percentage)** ; _Wartość domyślna_ : `0`; _Animowalny_ : **tak**
 - {{SVGAttr ("r")}}
   - : Ten atrybut definiuje promień elementu.
     Wartość mniejsza lub równa zero powoduje wyłączenie renderowania okręgu.
@@ -36,7 +36,7 @@ html, body, svg {height: 100%}
   - : Ten atrybut pozwala określić całkowitą długość ścieżki w jednostkach użytkownika.
     _Typ wartości_ : [**\<liczba>**](/docs/Web/SVG/Content_type#Number) ; _Wartość domyślna_ : _brak_ ; _Animowalny_ : **tak**
 
-> **Note:** **Uwaga:** Począwszy od SVG2 i _Geometria Propertie_ s, czyli te atrybuty mogą być również używane jako właściwości CSS dla tego elementu.SVG2 `cx`, `cy`and `r` are
+> **Uwaga:** Począwszy od SVG2 i _Geometria Propertie_ s, czyli te atrybuty mogą być również używane jako właściwości CSS dla tego elementu.SVG2 `cx`, `cy`and `r` are
 
 ### Globalne atrybuty
 
@@ -61,7 +61,7 @@ html, body, svg {height: 100%}
 
 | Specification                                                                                    | Status                       | Comment              |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}         | {{Spec2 ("SVG2")}}     |                      |
+| {{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}         | {{Spec2 ("SVG2")}}     |                      |
 | {{SpecName ("SVG1.1", "shapes.html # CircleElement", "&lt;circle&gt;")}} | {{Spec2 ("SVG1.1")}} | Początkowa definicja |
 
 ## Zgodność przeglądarki

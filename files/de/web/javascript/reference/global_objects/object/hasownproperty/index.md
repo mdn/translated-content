@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 {{JSRef}}
 
-Die Methode **`hasOwnProperty() `**gibt einen boolean Wert zurück abhängig von der Existenz des gegebenen **Attributs** in einem **Objekt.**
+Die Methode **`hasOwnProperty()`**gibt einen boolean Wert zurück abhängig von der Existenz des gegebenen **Attributs** in einem **Objekt.**
 
 ## Syntax
 

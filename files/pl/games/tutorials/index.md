@@ -13,8 +13,8 @@ translation_of: Games/Tutorials
 
 Ta strona zawiera poradniki, które wyróżniają wiele sposobów pracy w celu skutecznego wszelkiego rodzaju gier internetowych.
 
-- [Gra Breakout 2D w czystym JavaScript](/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
-  - : W tym poradniku krok po kroku stworzysz prosty klon gry Breakout napisany w całości w czystym języku JavaScript. Nauczysz się podstaw używania elementu {{htmlelement("canvas")}} do implementowania podstawowych mechanik gry jak renderowanie, przesuwanie grafik, wykrywanie kolizji, mechanizmu sterowania oraz stanu wygrania/przegrania.
+- [Gra Breakout 2D w czystym JavaScript](/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+  - : W tym poradniku krok po kroku stworzysz prosty klon gry Breakout napisany w całości w czystym języku JavaScript. Nauczysz się podstaw używania elementu {{htmlelement("canvas")}} do implementowania podstawowych mechanik gry jak renderowanie, przesuwanie grafik, wykrywanie kolizji, mechanizmu sterowania oraz stanu wygrania/przegrania.
 - [2D breakout game using Phaser](/pl/docs/Games/Workflows/2D_breakout_game_Phaser)
   - : In this step-by-step tutorial you'll implement the same breakout clone as the previous tutorial series, except that this time you'll do it using the[Phaser](http://phaser.io/) HTML5 game framework. This idea here is to teach some of the fundamentals (and advantages) of working with frameworks, along with fundamental game mechanics.
 - [2D maze game with device orientation](/pl/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation)

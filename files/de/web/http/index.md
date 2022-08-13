@@ -20,8 +20,6 @@ Obwohl oft auf einer TCP/IP Schicht aufgebaut, könnte es auch auf jede andere v
 - [HTTP-Cookies](/de/Web_Development/HTTP_cookies)
   - : Wie Cookies funktionieren, definiert der RFC 6265. Wenn ein Server eine HTTP-Anfrage erhält, kann er einen `Set-Cookie` Header mit der Antwort senden. Danach wird der Cookie-Wert zusammen mit jeder Anfrage an den gleichen Server in Form eines `Cookie` HTTP-Headers gesendet. Zusätzlich kann eine Verfallsverzögerung angegeben werden. Einschränkungen einer bestimmten Domäne und eines bestimmten Pfades können ebenfalls festgelegt werden.
 
-<!---->
-
 - [Basic access authentication](/de/docs/HTTP/Basic_access_authentication)
   - : Im Kontext einer HTTP-Transaktion ist **basic access authentication** eine Methode für einen [HTTP user agent](/de/docs/Web/API/window.navigator.userAgent) einen Benutzernamen und ein Kennwort beim Stellen einer Anfrage zu übermitteln.
 - [HTTP pipelining FAQ](/de/HTTP_Pipelining_FAQ)
@@ -51,9 +49,9 @@ HTTP/1.1 is currently being revised by the [IETF HTTPbis Working Group](https://
 
 Because HTTP is a client-server protocol, an HTTP session consists of three phases:
 
-1.  The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
-2.  The client sends its request and then waits for the answer.
-3.  The server processes the request and sends back its answer, containing a status code and the appropriate data.
+1. The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
+2. The client sends its request and then waits for the answer.
+3. The server processes the request and sends back its answer, containing a status code and the appropriate data.
 
 Starting with HTTP/1.1, the connection is no longer closed after the third phase, as the client is allowed to issue another request at this point: the second and third phases can therefore be done several times.
 
@@ -69,13 +67,13 @@ With TCP, the default port for an HTTP server on a computer is port 80, though o
 
 Once the connection is established, the user-agent can send its request. (A user-agent is typically a web browser, but need not be.) A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided in three blocks:
 
-1.  The first line contains a request method followed by its parameters:
+1. The first line contains a request method followed by its parameters:
 
     - the path of the document, i.e., an absolute URL without the protocol and the domain name
     - the HTTP protocol version used
 
-2.  The subsequent lines each represent a specific HTTP header, giving the server some information about what kind of data is appropriate (e.g., what language, what MIME types) or some data altering its behavior (e.g., not sending an answer if it is already cached). These HTTP headers form a block that ends with an empty line.
-3.  The final block is the optional data block, which contains further data and is mainly used by the POST method.
+2. The subsequent lines each represent a specific HTTP header, giving the server some information about what kind of data is appropriate (e.g., what language, what MIME types) or some data altering its behavior (e.g., not sending an answer if it is already cached). These HTTP headers form a block that ends with an empty line.
+3. The final block is the optional data block, which contains further data and is mainly used by the POST method.
 
 #### Beispiele von Anfragen
 
@@ -100,9 +98,9 @@ Once the connection is established, the user-agent can send its request. (A user
 
 After the connected agent has sent its request, the web server handles it, and finally sends a response back. Similarly to a client request, a server response is formed of text directives, separated by CRLF, though divided in three different blocks:
 
-1.  The first line, the _status line_, consists of an acknowledgment of the HTTP version used followed by a status request (and its meaning in human-readable text).
-2.  The subsequent lines each represent a specific HTTP header giving the client some information about the data sent (e.g., type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block that ends with an empty line.
-3.  The final block is the data block, which contains the data (if any).
+1. The first line, the _status line_, consists of an acknowledgment of the HTTP version used followed by a status request (and its meaning in human-readable text).
+2. The subsequent lines each represent a specific HTTP header giving the client some information about the data sent (e.g., type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block that ends with an empty line.
+3. The final block is the data block, which contains the data (if any).
 
 #### Beispiele von Antworten
 
@@ -299,9 +297,9 @@ The MIME type is the mechanism to tell the client the kind of document transmitt
 >
 > - Most web servers send unknown-type resources using the default `application/octet-stream` MIME type; for security reasons, most browsers, like Firefox, do not allow setting a custom default action for such resources and force the user to store it to disk in order to use it. Some common cases of often incorrectly configured servers happens for the following file types:
 >
->   - Rar-encoded files. The ideal would be to be able to set the real type of the encoded files; this often is not possible (as it may not be known to the server and these files may contains several resource of different types). In that case, configure the server to send the `application/x-rar-compressed `MIME type or some users won't be able to define a useful default action for them.
+>   - Rar-encoded files. The ideal would be to be able to set the real type of the encoded files; this often is not possible (as it may not be known to the server and these files may contains several resource of different types). In that case, configure the server to send the `application/x-rar-compressed`MIME type or some users won't be able to define a useful default action for them.
 >   - Audio and video files. Only resources with the proper MIME Type will be recognized and played, using a {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} elements. Be sure to [use the correct MIME type for audio and video resources](/de/Media_formats_supported_by_the_audio_and_video_elements).
->   - Proprietary file types. Pay special attention when serving a proprietary file type. Be sure not to forget to add an x-prefixed type for it; otherwise, special handling won't be possible. This is especially true with resources using the [Keyhole Markup Language](https://en.wikipedia.org/wiki/Keyhole_Markup_Language), which should be served as `application/vnd.google-earth.kml+xml `for an optimal user experience.
+>   - Proprietary file types. Pay special attention when serving a proprietary file type. Be sure not to forget to add an x-prefixed type for it; otherwise, special handling won't be possible. This is especially true with resources using the [Keyhole Markup Language](https://en.wikipedia.org/wiki/Keyhole_Markup_Language), which should be served as `application/vnd.google-earth.kml+xml`for an optimal user experience.
 
 ## Siehe auch
 

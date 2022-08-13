@@ -21,8 +21,6 @@ substring-before( bottedefoin , aiguille )
 - `bottedefoin`
   - : La chaîne à évaluer. Un extrait de cette chaîne sera retourné.
 
-<!---->
-
 - `aiguille`
   - : La sous-chaîne à rechercher. Tout le contenu se trouvant avant la première occurrence de `aiguille` dans la chaîne `bottedefoin` sera retourné.
 

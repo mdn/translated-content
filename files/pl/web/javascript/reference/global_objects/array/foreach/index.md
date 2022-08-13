@@ -36,7 +36,7 @@ Jeśli parametr `thisArg` został dostarczony do metody `forEach`, będzie on ws
 
 Metoda `forEach` nie modyfikuje tablicy na której jest wywołana.
 
-Zakres elementów przetwarzanych przez `forEach` jest ustawiany przed pierwszym wywołaniem funkcji `callback`. Elementy dołączone do końca tablicy po momencie wywołania `forEach` nie są przesyłane do funkcji `callback`. Jeśli istniejące elementy tablicy są zmieniane lub usuwane, to wartość przesyłana do funkcji `callback` odpowiada wartości w momencie, w którym `forEach` się o nie zwróci; elementy usunięte zanim zostaną odwiedzone nie zostaną odwiedzone. Jeżeli element już odwiedzony zostanie usunięty (nastąpi skrócenie tablicy), element tablicy w kolejności po obecnie odwiedzanym zostanie pominięty.
+Zakres elementów przetwarzanych przez `forEach` jest ustawiany przed pierwszym wywołaniem funkcji `callback`. Elementy dołączone do końca tablicy po momencie wywołania `forEach` nie są przesyłane do funkcji `callback`. Jeśli istniejące elementy tablicy są zmieniane lub usuwane, to wartość przesyłana do funkcji `callback` odpowiada wartości w momencie, w którym `forEach` się o nie zwróci; elementy usunięte zanim zostaną odwiedzone nie zostaną odwiedzone. Jeżeli element już odwiedzony zostanie usunięty (nastąpi skrócenie tablicy), element tablicy w kolejności po obecnie odwiedzanym zostanie pominięty.
 
 ### Kompatybilność
 
@@ -48,7 +48,7 @@ if (!Array.prototype.forEach)
   Array.prototype.forEach = function(fun /*, thisp*/)
   {
     var len = this.length;
-    if (typeof fun != "function")
+    if (typeof fun != "function")
       throw new TypeError();
 
     var thisp = arguments[1];

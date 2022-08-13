@@ -27,7 +27,7 @@ translation_of: Web/API/Document/anchors
 
 ### Uwagi
 
-Ze względu na zgodność wsteczną, zwracany zestaw kotwic zawiera tylko kotwice posiadające atrybut `name`, bez tych które posiadają jedynie atrybut `id`.
+Ze względu na zgodność wsteczną, zwracany zestaw kotwic zawiera tylko kotwice posiadające atrybut `name`, bez tych które posiadają jedynie atrybut `id`.
 
 ### Specyfikacja
 

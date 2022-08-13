@@ -19,8 +19,6 @@ In {{domxref("Window.sessionStorage")}} gespeicherte Daten verfallen mit Ablauf 
 - {{domxref("Storage.key()")}}
   - : Gibt unter Angabe einer Zahl n den Schlüssel des n-ten Datensatzes zurück.
 
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Gibt den zum Schlüssel gehörigen Wert zurück.
 - {{domxref("Storage.setItem()")}}
@@ -34,7 +32,7 @@ In {{domxref("Window.sessionStorage")}} gespeicherte Daten verfallen mit Ablauf 
 
 In diesem Beispiel wird auf das `Storage`-Objekt `localStorage` zugegriffen.
 
-Zuerst wird mit `!localStorage.getItem('bgcolor') `geprüft, ob das Objekt keinen Datensatz namens `bgcolor` enthält. Ist der Datensatz `bgcolor` nicht vorhanden, wird `populateStorage()` aufgerufen, um Werte aus der Seite auszulesen und mittels {{domxref("Storage.setItem()")}} im `Storage`-Objekt zu speichern.
+Zuerst wird mit `!localStorage.getItem('bgcolor')`geprüft, ob das Objekt keinen Datensatz namens `bgcolor` enthält. Ist der Datensatz `bgcolor` nicht vorhanden, wird `populateStorage()` aufgerufen, um Werte aus der Seite auszulesen und mittels {{domxref("Storage.setItem()")}} im `Storage`-Objekt zu speichern.
 Anschließend folgt der Aufruf der Funktion `setStyles()`, die alle Daten mittels {{domxref("Storage.getItem()")}} ausliest und die Darstellung der Seite entsprechend ändert.
 
 ```js

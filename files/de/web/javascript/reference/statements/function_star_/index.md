@@ -26,12 +26,8 @@ Eine Generatorfunktion kann auch mittels des {{jsxref("GeneratorFunction")}}-Kon
 - `name`
   - : Der Name der Funktion.
 
-<!---->
-
 - `param`
   - : Der Name eines an die Funktion zu übergebenden Arguments. Eine Funktion kann bis zu 255 Argumente haben.
-
-<!---->
 
 - `statements`
   - : Die den Körper der Funktion ergebenden Anweisungen.
@@ -146,7 +142,7 @@ var obj = new f; // throws "TypeError: f ist kein Konstruktor"
 
 #### Generatoren und Iteratoren in Firefox-Versionen vor 26
 
-Ältere Firefox-Versionen implementierten eine ältere Version des Generatorenentwurfs. In den älteren Versionen wurden Generatoren, neben anderen Abweichungen, mit dem normalen Schlüsselwort `function` (ohne den Stern) definiert. Siehe [veraltete Generatorfunktion ](/de/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)für weitere Informationen.
+Ältere Firefox-Versionen implementierten eine ältere Version des Generatorenentwurfs. In den älteren Versionen wurden Generatoren, neben anderen Abweichungen, mit dem normalen Schlüsselwort `function` (ohne den Stern) definiert. Siehe [veraltete Generatorfunktion](/de/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)für weitere Informationen.
 
 #### `IteratorResult`-Objekt zurückgegeben anstatt Ausnahme erzeugt
 

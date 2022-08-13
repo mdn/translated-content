@@ -50,8 +50,8 @@ if (!Array.prototype.lastIndexOf)
     else
     {
       from = (from < 0)
-           ? Math.ceil(from)
-           : Math.floor(from);
+           ? Math.ceil(from)
+           : Math.floor(from);
       if (from < 0)
         from += len;
       else if (from >= len)
@@ -100,9 +100,9 @@ Poniższy przykład używa `lastIndexOf` do znalezienia wszystkich wystąpień e
 ```js
 indices = [];
 idx = array.lastIndexOf(element)
-while (idx != -1) {
+while (idx != -1) {
    indices.push(idx);
-   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 ```
 

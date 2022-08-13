@@ -51,8 +51,6 @@ _このインターフェースは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope.onlanguagechange")}}
   - : ユーザーの選択言語を変更したときに、 global/worker スコープオブジェクトで発火する {{event("Event_handlers", "event handler")}}。
 
-<!---->
-
 - {{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}
   - : {{event("close")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
 - {{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}

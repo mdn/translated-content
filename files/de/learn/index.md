@@ -38,7 +38,7 @@ Wir möchten mit Ihnen auf einen Nenner kommen. Welche Beschreibung trifft am eh
 
 ### Ich bin Anfänger
 
-Herzlich Willkommen! Am besten fangen Sie mit unserer Serie ["Lerne das Internet kennen" ](/de/Learn/Getting_started_with_the_web)an. Hier erfahren Sie alles über die Grundlagen, welche Sie zum Einstieg in die Webentwicklung brauchen.
+Herzlich Willkommen! Am besten fangen Sie mit unserer Serie ["Lerne das Internet kennen"](/de/Learn/Getting_started_with_the_web)an. Hier erfahren Sie alles über die Grundlagen, welche Sie zum Einstieg in die Webentwicklung brauchen.
 
 ### Ich kenne das Web
 
@@ -48,7 +48,7 @@ Sehr gut! In dem Fall können Sie sich die wichtigsten Webtechnologien genauer a
 
 Großartig! Dann sind Sie möglicherweise an unseren fortgeschrittenen [Guides](/de/docs/Web/Guide) und [Tutorials](/de/docs/Web/Tutorials) interessiert. Vielleicht möchten Sie auch selbst [zum MDN Lernbereich beitragen](/en-US/Learn/How_to_contribute) ;-)
 
-> **Note:** Hinweis: Wir werden immer mehr Lernmaterial veröffentlichen, beispielsweise für erfahrene Programmierer zu spezifischen fortgeschrittenen Techniken, native Entwickler, die neu auf dem Web sind, oder Menschen, die Design-Techniken lernen wollen.
+> **Hinweis:** Wir werden immer mehr Lernmaterial veröffentlichen, beispielsweise für erfahrene Programmierer zu spezifischen fortgeschrittenen Techniken, native Entwickler, die neu auf dem Web sind, oder Menschen, die Design-Techniken lernen wollen.
 
 ## Unsere Themen
 
@@ -81,8 +81,6 @@ Der gesamte Lernbereich wurde von unseren Freiwilligen erstellt. Wir brauchen Si
 
 - [Mozilla Developer Newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
   - : Unser Newsletter für Webentwickler. (in Englisch)
-
-<!---->
 
 - [Codecademy](https://www.codecademy.com/)
   - : Eine gute, interaktive Webseite, um Programmiersprachen und Webentwicklung zu lernen. (in Englisch)

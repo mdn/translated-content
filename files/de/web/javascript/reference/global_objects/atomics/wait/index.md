@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
 {{JSRef}}
 
-Die statische **`Atomics`\*\***`.wait()`\*\* Methode verifiziert, dass eine gegebene Position in einem {{jsxref("Int32Array")}} ein gegebene Wert ist und dann schläft und entweder aufgeweckt wird oder ein Timeout bekommt. Die Strings `"ok"`, `"not-equal"`, und `"timed-out"` sind alle möglichen Rückgabewerte
+Die statische **`Atomics.wait()`** Methode verifiziert, dass eine gegebene Position in einem {{jsxref("Int32Array")}} ein gegebene Wert ist und dann schläft und entweder aufgeweckt wird oder ein Timeout bekommt. Die Strings `"ok"`, `"not-equal"`, und `"timed-out"` sind alle möglichen Rückgabewerte
 
-> **Note:** **Hinweis:** Diese Operation funktioniert nur mit einem geteilten {{jsxref("Int32Array")}} und ist nicht im Main-Thread erlaubt.
+> **Hinweis:** Diese Operation funktioniert nur mit einem geteilten {{jsxref("Int32Array")}} und ist nicht im Main-Thread erlaubt.
 
 ## Syntax
 

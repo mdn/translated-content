@@ -34,13 +34,9 @@ La fonction [evaluate](/fr/docs/Web/API/Document/evaluate) prend cinq arguments 
 - `namespaceResolver`
   - : Une fonction à laquelle sera passé tout préfixe d'espace de nommage contenu dans l'expression `xpathExpression` et qui renvoie une chaîne représentant l'URI de l'espace de nommage associé à ce préfixe. Cela permet la conversion entre le préfixe utilisé dans les expressions XPath et les différents préfixes éventuellement utilisés dans le document. Cette fonction peut être :
 
-<!---->
-
 - [Créée](#Impl.C3.A9mentation_d.27un_r.C3.A9solveur_d.27espaces_de_nommage_par_d.C3.A9faut) à l'aide de la méthode [`createNSResolver`](/fr/docs/Web/API/Document/createNSResolver) d'un objet [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html). C'est la solution à utiliser à peu près tout le temps.
 - Une valeur `null`, qui peut être utilisé pour les documents HTML ou lorsqu'aucun préfixe n'est utilisé. Remarquez que si l'expression `xpathExpression` contient un préfixe d'espace de nommage cela déclenchera une exception `DOMException` portant le code `NAMESPACE_ERR`.
 - Une fonction personnalisée définie par l'utilisateur. Voir la section [Implémentation d'un résolveur d'espace de nommage personnalisé](#Impl.C3.A9mentation_d.27un_r.C3.A9solveur_d.27espace_de_nommage_personnalis.C3.A9) dans l'annexe pour plus de détails.
-
-<!---->
 
 - `resultType`
   - : Une [constante](#Constantes_d.C3.A9finies_de_XPathResult) qui définit le type de résultat à renvoyer comme résultat de l'évaluation. La constante la plus courante est `XPathResult.ANY_TYPE` qui renverra un résultat du type le plus naturel par rapport à l'expression XPath. Une section de l'annexe contient une liste complète des [constantes disponibles](#Constantes_d.C3.A9finies_de_XPathResult). Elles sont expliquées dans la section [#Définition du type de retour](#D.C3.A9finition_du_type_de_retour) ci-dessous.

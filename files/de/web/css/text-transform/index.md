@@ -397,7 +397,7 @@ Das `text-transform` CSS Attribut legt die Groß- und Kleinschreibung eines Elem
 
 ### Browserinformationen
 
-Das capitalize Schlüsselwort wurde in CSS1 bzw. CSS 2.1 nicht eindeutig spezifiziert. Dadurch wurde der erste großzuschreibende Buchstabe unterschiedlich ermittelt. Sowohl Webkit-basierte Browser als auch die Gecko Engine identifizierte Symbole fälschlicherwiese als Buchstaben. Beispielsweise galten bei Firefox `- `respektive `_` als Buchstaben. Internet Explorer 9 hielt sich den Spezifikationen insgesamt am nächsten. Mit CSS3 wurde das Verhalten vereinheitlicht. Der Kompatibilitätstabelle können die Browserversionen entnommen werden, mit denen der Standard erstmals exakt umgesetzt wurde.
+Das capitalize Schlüsselwort wurde in CSS1 bzw. CSS 2.1 nicht eindeutig spezifiziert. Dadurch wurde der erste großzuschreibende Buchstabe unterschiedlich ermittelt. Sowohl Webkit-basierte Browser als auch die Gecko Engine identifizierte Symbole fälschlicherwiese als Buchstaben. Beispielsweise galten bei Firefox `-`respektive `_` als Buchstaben. Internet Explorer 9 hielt sich den Spezifikationen insgesamt am nächsten. Mit CSS3 wurde das Verhalten vereinheitlicht. Der Kompatibilitätstabelle können die Browserversionen entnommen werden, mit denen der Standard erstmals exakt umgesetzt wurde.
 
 ## Siehe auch
 

@@ -22,8 +22,6 @@ Funkcja `key` zwraca zbiór wierzchołków posiadających podaną wartość dane
 - `nazwaklucza`
   - : Łańcuch znaków zawierający nazwę elementu [`xsl:key`](pl/XSLT/key) do użycia.
 
-<!---->
-
 - `wartość`
   - : Zwrócony zbiór wierzchołków będzie zawierał każdy wierzchołek, który posiada tę wartość dla danego klucza.
 

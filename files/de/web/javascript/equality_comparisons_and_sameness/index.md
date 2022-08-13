@@ -219,7 +219,7 @@ Aside from the way it treats [`NaN`](/de/docs/Web/JavaScript/Reference/Global_Ob
 Here's an in-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
 - [`- (unary negation)`](/de/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29 "/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators")
-  - : It's obvious that negating `0` produces `-0`. But the abstraction of an expression can cause `-0` to creep in when you don't realize it. For example, consider:`js let stoppingForce = obj.mass * -obj.velocity `If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propogates out into `stoppingForce`.
+  - : It's obvious that negating `0` produces `-0`. But the abstraction of an expression can cause `-0` to creep in when you don't realize it. For example, consider:`js let stoppingForce = obj.mass * -obj.velocity`If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propogates out into `stoppingForce`.
 - [`Math.atan2`](/de/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2)
 
   [`Math.ceil`](/de/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)

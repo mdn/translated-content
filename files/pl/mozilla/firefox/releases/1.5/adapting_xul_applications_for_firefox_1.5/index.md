@@ -22,7 +22,7 @@ Strona zawiera listę zmian w [Firefoksie 1.5](pl/Firefox_1.5) wpływających na
 - [XPCNativeWrapper](pl/XPCNativeWrapper) są domyślnie włączone, a ich działanie zmienione na podobne do działania w wersji 1.0.x
 - Prostsza metoda [rejestracji Chrome](pl/Rejestracja_Chrome) przestarzałego contents.rdf.
 - Dla nakładek menu kontekstowego: nazwa funkcji \<tt>gContextMenu.linkURL()\</tt> została zmieniona na \<tt>gContextMenu.getLinkURL()\</tt>, a \<tt>linkURL\</tt> jest teraz własnością. Aby użyć w trybie zgodności wstecznej:
-  \<tt>url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();\</tt>
+  \<tt>url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();\</tt>
 
 ### Pozostałe informacje
 

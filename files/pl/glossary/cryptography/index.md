@@ -8,6 +8,6 @@ original_slug: Glossary/Kryptografia
 
 ### Dowiedz się więcej<br>Wiedza ogólna
 
-{{Interwiki("wikipedia", "Kryptografia")}}  Wikipedia
-     {{Glossary( "Cryptography")}}
-   [ Informacje poradnik bezpieczeństwa](/pl/docs/)
+{{Interwiki("wikipedia", "Kryptografia")}}  Wikipedia
+     {{Glossary( "Cryptography")}}
+   [ Informacje poradnik bezpieczeństwa](/pl/docs/)

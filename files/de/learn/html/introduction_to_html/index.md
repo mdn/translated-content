@@ -22,7 +22,7 @@ original_slug: Learn/HTML/Einführung_in_HTML
 
 Sie benötigen für dieses Modul keine HTML Kenntnisse, allerdings sollten Sie grundsätzlich mit Computern umgehen können und das Internet passiv nutzen (d.h. im Internet surfen und Inhalte konsumieren). Sie sollten sich bereits eine einfache Arbeitsumgebung eingerichtet haben, wie in [Notwendige Software installieren](/de/docs/Learn/Getting_started_with_the_web/Installing_basic_software) beschrieben; und wissen wie Sie Ihre Dateien erstellen und ordnen, wie in [Dateien nutzen](/de/docs/Learn/Getting_started_with_the_web/dateien_nutzen) erklärt. Beide Artikel sind Teil unserer Artikelserie [Lerne das Internet kennen](/de/docs/Learn/Getting_started_with_the_web), welche das Grundwissen abdeckt, welches in diesem Modul vorrausgesetzt wird.
 
-> **Note:** **Hinweis**: Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble ](https://thimble.mozilla.org/)ausprobieren.
+> **Hinweis:** Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/)ausprobieren.
 
 ## Lerneinheiten
 

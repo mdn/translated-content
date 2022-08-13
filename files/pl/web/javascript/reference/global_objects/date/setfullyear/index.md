@@ -24,12 +24,8 @@ Ustawia kompletny rok dla określonej daty stosownie do czasu lokalnego.
 - `yearValue`
   - : Liczba całkowita określająca wartość numeryczną roku, na przykład; 1995.
 
-<!---->
-
 - `monthValue`
   - : Liczba całkowita z przedziału od 0 do 11 (reprezentująca miesiące od stycznia do grudnia).
-
-<!---->
 
 - `dayValue`
   - : Liczba całkowita z przedziału od 1 do 31 reprezentująca dzień miesiąca. Jeśli zostaje podany parametr `dayValue`, należzy również podać `monthValue`.

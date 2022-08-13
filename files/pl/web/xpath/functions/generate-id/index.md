@@ -30,8 +30,6 @@ Funkcja `generate-id` generuje unikatowy identyfikator dla pierwszego wierzchoł
 
 - Ten sam identyfikator musi zostać wygenerowany każdorazowo dla tego samego wierzchołka w aktualnym dokumencie aktualnej transformacji.
 
-<!---->
-
 - Wygenerowany identyfikator nie może być taki sam w kolejnej transformacji.
 
 Ta funkcja jest specyficznym dla XSLT dodatkiem do XPath. Nie jest częścią głównej biblioteki funkcji XPath.

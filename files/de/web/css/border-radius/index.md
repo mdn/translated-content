@@ -81,7 +81,7 @@ Beispiel zur Slash-Notation:
      border-bottom-left-radius:  3px 4px;
 ```
 
-> **Note:** **Hinweis:** Elliptische Rahmen (Slash mit erweitertem border-radius Syntax) werden von Versionen vor Gecko 1.9.1 (Firefox 3.5) nicht unterstützt.
+> **Hinweis:** Elliptische Rahmen (Slash mit erweitertem border-radius Syntax) werden von Versionen vor Gecko 1.9.1 (Firefox 3.5) nicht unterstützt.
 
 ## Beispiele
 

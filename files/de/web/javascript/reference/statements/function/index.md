@@ -19,12 +19,8 @@ Es kann auch eine Funktion mit dem {{jsxref("Function")}}-Konstruktor und einem 
 - `name`
   - : Der Funktionsname.
 
-<!---->
-
 - `param`
   - : Der Name des Arguments, der an die Funktion übergeben werden soll. Eine Funktion kann bis zu 255 Argumente haben.
-
-<!---->
 
 - `statements`
   - : Die Ausdrücke, aus denen der Funktionskörper besteht.
@@ -35,7 +31,7 @@ Eine Funktion, die mit der Funktionsdeklaration erstellt wurde, ist ein `Functio
 
 Eine Funktion kann auch mit einem Ausdruck erzeugt werden (siehe {{jsxref("Operators/function", "function expression")}}).
 
-Standardmäßig geben Funktionen `undefined `zurück. Um einen beliebigen anderen Wert zurückzugeben muss die Funktion einen {{jsxref("Statements/return", "return")}}-Ausdruck haben, der den Wert der Rückgabe angibt.
+Standardmäßig geben Funktionen `undefined`zurück. Um einen beliebigen anderen Wert zurückzugeben muss die Funktion einen {{jsxref("Statements/return", "return")}}-Ausdruck haben, der den Wert der Rückgabe angibt.
 
 ### Bedingungskreierte Funktionen
 
@@ -67,7 +63,7 @@ var nichtHochgezogen = function() {
 
 ### Mit `function`
 
-Der folgende Code deklariert eine Funktion, die die Summe aller Verkäufe zurückgibt, wenn sie die Anzahl der verkauften Einheiten `a`, `b`, und `c `übergeben bekommt.
+Der folgende Code deklariert eine Funktion, die die Summe aller Verkäufe zurückgibt, wenn sie die Anzahl der verkauften Einheiten `a`, `b`, und `c`übergeben bekommt.
 
 ```js
 function berechne_verkäufe(einheit_a, einheit_b, einheit_c) {

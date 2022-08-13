@@ -20,8 +20,6 @@ void ctx.strokeText(texte, x, y [, largeurMax]);
 - `texte`
   - : Le texte à tracer en utilisant les valeurs en cours de {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, et {{domxref("CanvasRenderingContext2D.direction","direction")}}.
 
-<!---->
-
 - `x`
   - : La coordonnée sur l'axe des x du point de départ du texte.
 - `y`

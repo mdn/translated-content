@@ -35,7 +35,7 @@ String"
 "Ein äußerst langer String"
 ```
 
-> **Note:** **Hinweis:** Strings in doppelten Anführungszeichen können auch mit Hilfe von \22 escapt werden und Strings mit einfachen Anführungszeichen mit Hilfe von \27.
+> **Hinweis:** Strings in doppelten Anführungszeichen können auch mit Hilfe von \22 escapt werden und Strings mit einfachen Anführungszeichen mit Hilfe von \27.
 
 ## Spezifikationen
 

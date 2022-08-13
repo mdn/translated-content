@@ -50,8 +50,6 @@ Ein, zwei, drei oder vier `<outline-radius>` Werte, die jeweils einem dieser Wer
 - \<percentage>
   - : Eine {{cssxref("&lt;percentage&gt;")}}; siehe {{cssxref("border-radius")}} für Details.
 
-<!---->
-
 - Falls ein einzelner Wert gesetzt ist, wird er auf alle 4 Ecken angewendet.
 - Falls zwei Werte gesetzt sind, bezieht sich der erste auf die linke obere und die rechte untere Ecke und der zweite auf die rechte obere und die linke untere Ecke.
 - Falls drei Werte gesetzt sind, bezieht sich der erste auf die linke obere Ecke, der zweite auf die rechte obere und die linke untere Ecke und der dritte auf die rechte untere Ecke.

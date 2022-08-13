@@ -21,8 +21,6 @@ Die CSS Eigenschaft `text-indent` legt den Einzug vor der ersten Zeile eines Tex
 
     Formal syntax: {{csssyntax("text-indent")}}
 
-<!---->
-
     text-indent: 3mm       /* Beispielwerte */
     text-indent: 40px
     text-indent: 15%       /* Prozentuale Angaben sind relativ zur Breite des Blockelements */
@@ -92,7 +90,7 @@ p {
 | ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------- |
 | {{SpecName('CSS3 Text', '#text-indent', 'text-indent')}}             | {{Spec2('CSS3 Text')}}             | Schlüsselwerte `hanging` und `each-line` hinzugefügt                                    |
 | {{SpecName('CSS3 Transitions', '#animatable-css', 'text-indent')}} | {{Spec2('CSS3 Transitions')}} | `text-indent` als Eigenschaft, die animiert werden kann                                 |
-| {{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}} | {{Spec2('CSS2.1')}}                 | Verhalten von `display: inline-block` und anderen `block `Containern explizit definiert |
+| {{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}} | {{Spec2('CSS2.1')}}                 | Verhalten von `display: inline-block` und anderen `block`Containern explizit definiert |
 | {{SpecName('CSS1', '#text-indent', 'text-indent')}}                     | {{Spec2('CSS1')}}                 |                                                                                         |
 
 ## Browserkompatibilität

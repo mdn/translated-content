@@ -32,8 +32,6 @@ Zapis` ::aft​er` został wprowadzony w CSS 3 w celu ustanowienia różnicy pom
       </body>
     </html>
 
-<!---->
-
     p:after {
       content: 'Koniec';
       display: block;

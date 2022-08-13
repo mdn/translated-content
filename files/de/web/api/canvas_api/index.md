@@ -10,11 +10,11 @@ original_slug: Web/HTML/Canvas
 ---
 {{CanvasSidebar}}
 
-Mit der Einführung von [HTML5 ](/de/docs/HTML/HTML5)wurde ein neues "Leinwand" Element zum Zeichnen von Grafiken mittels [JavaScript](/de/docs/Web/JavaScript)-API vorgestellt: **{{HTMLElement("canvas")}}**. Die Anwendungsgebiete sind äußerst flexibel, so ist es möglich, mit Canvas Diagramme zu zeichnen, Bilder zu bearbeiten, Animationen zu erstellen oder sogar Videos zu bearbeiten und zu rendern.
+Mit der Einführung von [HTML5](/de/docs/HTML/HTML5)wurde ein neues "Leinwand" Element zum Zeichnen von Grafiken mittels [JavaScript](/de/docs/Web/JavaScript)-API vorgestellt: **{{HTMLElement("canvas")}}**. Die Anwendungsgebiete sind äußerst flexibel, so ist es möglich, mit Canvas Diagramme zu zeichnen, Bilder zu bearbeiten, Animationen zu erstellen oder sogar Videos zu bearbeiten und zu rendern.
 
-Der Support für `<canvas>` in Mozilla-Anwendungen wurde ab Gecko 1.8 (sprich ab [Firefox 1.5](/de/docs/Mozilla/Firefox/Releases/1.5)) implementiert. Canvas stammt ursprünglich von Apple und wurde für das OS X [Dashboard ](https://en.wikipedia.org/wiki/Dashboard_%28Mac_OS%29)und den Safari-browser entwickelt. Der Internet Explorer unterstützt Canvas ab Version 9, wobei es durch ein Skript von Google's [Explorer Canvas Projekt](http://excanvas.sourceforge.net/) auch in früheren Versionen des IE lauffähig ist. Google Chrome und Opera ab Version 9 unterstützen `<canvas>` ebenfalls problemlos.
+Der Support für `<canvas>` in Mozilla-Anwendungen wurde ab Gecko 1.8 (sprich ab [Firefox 1.5](/de/docs/Mozilla/Firefox/Releases/1.5)) implementiert. Canvas stammt ursprünglich von Apple und wurde für das OS X [Dashboard](https://en.wikipedia.org/wiki/Dashboard_%28Mac_OS%29)und den Safari-browser entwickelt. Der Internet Explorer unterstützt Canvas ab Version 9, wobei es durch ein Skript von Google's [Explorer Canvas Projekt](http://excanvas.sourceforge.net/) auch in früheren Versionen des IE lauffähig ist. Google Chrome und Opera ab Version 9 unterstützen `<canvas>` ebenfalls problemlos.
 
-Das `<canvas>` Element wird zudem von [WebGL ](/de/docs/Web/WebGL)für die hardwarebeschleunigte Darstellung von 3D-Grafiken auf Webseiten eingesetzt.
+Das `<canvas>` Element wird zudem von [WebGL](/de/docs/Web/WebGL)für die hardwarebeschleunigte Darstellung von 3D-Grafiken auf Webseiten eingesetzt.
 
 ## Beispiel
 

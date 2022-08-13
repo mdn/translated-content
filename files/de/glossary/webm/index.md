@@ -14,8 +14,6 @@ translation_of: Glossary/webm
 
 - {{interwiki("wikipedia", "WebM")}} auf Wikipedia
 
-<!---->
-
 - [Glossar](/de/docs/Glossary)
 
   - {{Glossary("WebP")}}

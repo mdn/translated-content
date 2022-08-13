@@ -36,7 +36,7 @@ console.log(encodeURIComponent('\uD800'));
 console.log(encodeURIComponent('\uDFFF'));
 ```
 
-Um unerwartete Anfragen an den Server zu vermeiden, sollte `encodeURIComponent` für jeden benutzerdefinierten Parameter, der als Teil der URI übergeben wird, verwendet werden. Z.B. könnte ein Benutzer in einem variablen Kommentar "`Thyme &time=again`" schreiben. Ohne Verwendung von `encodeURIComponent` erhältst Du `comment=Thyme%20&time=again`. Beachte, dass das Kaufmännische Und (Ampersand) und das Gleich-Zeichen ein neues Schlüssel-Wert-Paar bedeuten. Das bedeutet, dass statt dem POST-Schlüssel "`Thyme &time=again`" zwei POST-Schlüssel verwendet werden, der eine mit dem Wert "`Thyme `", der andere (`time`) mit `again`.
+Um unerwartete Anfragen an den Server zu vermeiden, sollte `encodeURIComponent` für jeden benutzerdefinierten Parameter, der als Teil der URI übergeben wird, verwendet werden. Z.B. könnte ein Benutzer in einem variablen Kommentar "`Thyme &time=again`" schreiben. Ohne Verwendung von `encodeURIComponent` erhältst Du `comment=Thyme%20&time=again`. Beachte, dass das Kaufmännische Und (Ampersand) und das Gleich-Zeichen ein neues Schlüssel-Wert-Paar bedeuten. Das bedeutet, dass statt dem POST-Schlüssel "`Thyme &time=again`" zwei POST-Schlüssel verwendet werden, der eine mit dem Wert "`Thyme`", der andere (`time`) mit `again`.
 
 Bei [`application/x-www-form-urlencoded`](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm) werden Leerzeichen mit '+' ersetzt, so dass es u.U. erwünscht ist, nach der Ersetzung durch `encodeURIComponent` eine weitere Ersetzung von "%20" mit "+" durchzuführen.
 

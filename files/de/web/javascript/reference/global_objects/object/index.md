@@ -26,8 +26,6 @@ Der **`Object`**-Konstruktor erstellt ein Objekt
 - NameWertPaar1, NameWertPaar2, ... NameWertPaarN
   - : Paare von Namen (**`String`**) und Werten (eines beliebigen Typs) bei denen der Name durch ein Doppelpunkt vom Wert getrennt ist.
 
-<!---->
-
 - Wert
   - : Ein Wert eines beliebigen Typs.
 

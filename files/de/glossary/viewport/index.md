@@ -17,6 +17,6 @@ Der Teil des viewports, der im Moment sichtbar ist, wird als **visual viewport**
 
 - {{Interwiki("wikipedia", "Viewport")}} auf Wikipedia
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) auf Stackoverflow (Englisch)
-- [Get viewport/window size (width and height) with javascript ](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)(Englisch)
+- [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)(Englisch)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode, Englisch)
 - [VisualViewport API](/de/docs/Web/API/Visual_Viewport_API)

@@ -25,8 +25,6 @@ sel.collapse(parentNode, offset);
 - _`parentNode`_
   - : Le curseur d'édition sera placé à l'intérieur de ce noeud.
 
-<!---->
-
 - _`offset`_
   - : Indique la position du curseur d'édition dans `parentNode`.
 

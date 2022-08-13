@@ -24,8 +24,6 @@ Ustawia sekundy dla określonej daty stosownie do czasu uniwersalnego.
 - `secondsValue`
   - : Liczba całkowita pomiędzy 0 a 59.
 
-<!---->
-
 - `msValue`
   - : Liczba pomiędzy 0 a 999, reprezentująca milisekundy.
 

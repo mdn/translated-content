@@ -35,7 +35,7 @@ JavaScript ist eine Programmiersprache mit der sich komplexe Programme in eine W
 - animierte 2D/3D Grafiken ( Spiele )
 - ...)
 
-kannst du dir sicher sein das JavaScript benutzt wurde. Es ist die Dritte der Drei Standard-Technologien im Web, die anderen beiden ( [HTML ](de/Learn/HTML)und [CSS ](/de/docs/Learn/CSS)) werden in anderen Bereichen des MDN eingeführt und referenziert.
+kannst du dir sicher sein das JavaScript benutzt wurde. Es ist die Dritte der Drei Standard-Technologien im Web, die anderen beiden ( [HTML](de/Learn/HTML)und [CSS](/de/docs/Learn/CSS)) werden in anderen Bereichen des MDN eingeführt und referenziert.
 
 ![](https://mdn.mozillademos.org/files/13502/cake.png)
 
@@ -87,7 +87,7 @@ function updateName() {
 
 {{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
 
-Klick auf das Label und sieh, was passiert (den [Code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) findest du auf GitHub und hier kannst du es in [Aktion ](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)sehen).
+Klick auf das Label und sieh, was passiert (den [Code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) findest du auf GitHub und hier kannst du es in [Aktion](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)sehen).
 
 ## So und was kann ich jetzt damit machen?
 
@@ -187,9 +187,9 @@ JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS 
 
 ### Internal JavaScript
 
-1.  First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
-2.  Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
-3.  Next, go to your text editor and add the following just before your closing `</body>` tag:
+1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
+2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
+3. Next, go to your text editor and add the following just before your closing `</body>` tag:
 
     ```html
     <script>
@@ -199,7 +199,7 @@ JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS 
     </script>
     ```
 
-4.  Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
+4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
     ```js
     function createParagraph() {
@@ -215,7 +215,7 @@ JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS 
     }
     ```
 
-5.  Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.
+5. Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.
 
 > **Note:** If your example doesn't seem to work, go through the steps again and check that you did everything right. Did you save your local copy of the starting code as a `.html` file? Did you add your {{htmlelement("script")}} element just before the `</body>` tag? Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
@@ -225,15 +225,15 @@ JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS 
 
 This works great, but what if we wanted to put our JavaScript in an external file? Let's explore this now.
 
-1.  First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
-2.  Next, copy all of the script out of your current {{htmlelement("script")}} element and paste it into the .js file. Save that file.
-3.  Now replace your current {{htmlelement("script")}} element with the following:
+1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
+2. Next, copy all of the script out of your current {{htmlelement("script")}} element and paste it into the .js file. Save that file.
+3. Now replace your current {{htmlelement("script")}} element with the following:
 
     ```html
     <script src="script.js"></script>
     ```
 
-4.  Save and refresh your browser, and you should see the same thing! It works just the same, but now we've got the JavaScript in an external file. This is generally a good thing in terms of organizing your code, and making it reusable across multiple HTML files. Plus the HTML is easier to read without huge chunks of script dumped in it.
+4. Save and refresh your browser, and you should see the same thing! It works just the same, but now we've got the JavaScript in an external file. This is generally a good thing in terms of organizing your code, and making it reusable across multiple HTML files. Plus the HTML is easier to read without huge chunks of script dumped in it.
 
 **Note**: You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 

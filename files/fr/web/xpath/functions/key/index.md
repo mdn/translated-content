@@ -21,8 +21,6 @@ key( nom-de-clef , valeur )
 - `nom-de-clef`
   - : Une chaîne contenant le nom de l'élément [`xsl:key`](fr/XSLT/key) à utiliser.
 
-<!---->
-
 - `valeur`
   - : L'ensemble de nœuds retourné contiendra chaque nœud qui possède cette valeur pour la clef donnée.
 

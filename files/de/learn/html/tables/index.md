@@ -22,7 +22,7 @@ Das Strukturieren tabellarischer Daten ist eine sehr häufige Aufgabe in HTML. E
 
 Bevor Sie dieses Modul beginnen sollten Sie sich mit den Grundlagen von HTML beschäftigt haben – lesen Sie dazu die [Einführung in HTML](/de/docs/Learn/HTML/Einführung_in_HTML).
 
-> **Note:** **Hinweis**: Wenn Sie auf einem Computer, Tablet oder anderem Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien anzulegen, können Sie die (meisten) Codebeispiele auch in einem Online-Editor, wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) ausprobieren.
+> **Hinweis:** Wenn Sie auf einem Computer, Tablet oder anderem Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien anzulegen, können Sie die (meisten) Codebeispiele auch in einem Online-Editor, wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) ausprobieren.
 
 ## Lerneinheiten
 

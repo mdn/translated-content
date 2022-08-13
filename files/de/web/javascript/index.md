@@ -14,7 +14,7 @@ JavaScript (JS) ist eine leichtgewichtige, interpretierte oder JIT-übersetzte S
 
 Dieser Bereich dient zur Beschreibung der Sprache JavaScript selbst, also allgemeinen Inhalten, die nicht nur speziell für Webseiten oder andere Umgebungen gelten. Für weitere Informationen zu bestimmten {{Glossary("API","APIs")}} für Webseiten, siehe auf den Seiten für [Web APIs](/docs/Web/API) und [DOM](/docs/Glossary/DOM).
 
-Der Standard für JavaScript ist [ECMAScript](/de/docs/Web/JavaScript/Language_Resources). Stand 2012 unterstützen alle [modernen Browser ](https://kangax.github.io/compat-table/es5/)ECMAScript 5.1 vollständig. Ältere Browser unterstützen mindestens ECMAScript 3. Am 17. Juni 2015 veröffentlichte [ECMA International](https://www.ecma-international.org) die sechste Version von ECMAScript, welche offiziell ECMAScript 2015 genannt wird und initial mit ECMAScript 6 oder ES6 referenziert wurde. Seitdem gibt es jedes Jahr eine neue Version von ECMAScript-Standards. Diese Dokumentation referenziert den letzen Entwurfsstand, welcher aktuell [ECMAScript 2019](https://tc39.github.io/ecma262/) ist.
+Der Standard für JavaScript ist [ECMAScript](/de/docs/Web/JavaScript/Language_Resources). Stand 2012 unterstützen alle [modernen Browser](https://kangax.github.io/compat-table/es5/)ECMAScript 5.1 vollständig. Ältere Browser unterstützen mindestens ECMAScript 3. Am 17. Juni 2015 veröffentlichte [ECMA International](https://www.ecma-international.org) die sechste Version von ECMAScript, welche offiziell ECMAScript 2015 genannt wird und initial mit ECMAScript 6 oder ES6 referenziert wurde. Seitdem gibt es jedes Jahr eine neue Version von ECMAScript-Standards. Diese Dokumentation referenziert den letzen Entwurfsstand, welcher aktuell [ECMAScript 2019](https://tc39.github.io/ecma262/) ist.
 
 Man sollte JavaScript nicht mit der [Programmiersprache Java](<https://de.wikipedia.org/wiki/Java_(Programmiersprache)>) verwechseln. Beide, "Java" und "JavaScript" sind Handelsmarken und/oder registrierte Handelsmarken von Oracle in den USA oder anderen Ländern. Die beiden Programmiersprachen haben eine sehr unterschiedliche Syntax, Semantik und Verwendung.
 
@@ -45,14 +45,10 @@ Besuchen Sie unseren Lernbereich zu JavaScript-Themen, wenn Sie noch keine Erfah
 - [Eine Wiedereinführung in JavaScript](/de/docs/Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript)
   - : Ein Überblick für diejenigen, die _meinen_, dass sie JavaScript bereits kennen.
 
-<!---->
-
 - [JavaScript-Datenstrukturen](/docs/Web/JavaScript/Data_structures)
   - : Überblick über vorhandene Datenstrukturen in JavaScript.
 - [Vergleiche auf Gleichheit und deren Verwendung](/de/docs/Web/JavaScript/Vergleiche_auf_Gleichheit_und_deren_Verwendung)
   - : JavaScript stellt drei verschieden Vergleichsoperatoren bereit: Strikte Gleichheit mit `===`, lose Gleichheit mit `==` und die {{jsxref("Global_Objects/Object/is", "Object.is()")}} Methode.
-
-<!---->
 
 ### Erweitert
 

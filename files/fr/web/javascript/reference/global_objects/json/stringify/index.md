@@ -30,8 +30,6 @@ JSON.stringify( valeur[, remplaçant [, espace]])
 - `espace` {{optional_inline}}
   - : Un objet {{jsxref("String")}} ou {{jsxref("Number")}} qui est utilisé pour insérer des blancs dans la chaîne JSON produite afin de faciliter la lisibilité.
 
-<!---->
-
 - Si cet argument est un nombre, il indiquera le nombre d'espaces à utiliser pour l'indentation (la valeur est ramenée à 10 si elle dépasse 10).
 - Si l'argument est une chaîne, les 10 premiers caractères (ou la chaîne si elle est plus courte) seront utilisés pour les blancs.
 - Si le paramètre n'est pas fourni (ou s'il est nul), aucun blanc ne sera utilisé.

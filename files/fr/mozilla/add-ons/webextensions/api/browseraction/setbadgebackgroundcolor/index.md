@@ -48,8 +48,6 @@ browser.browserAction.setBadgeBackgroundColor(
     - `windowId`{{optional_inline}}
       - : `integer`. Définit la couleur d'arrière-plan du badge uniquement pour l'onglet donné.
 
-<!---->
-
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur d'arrière-plan du badge global est définie à la place.
 

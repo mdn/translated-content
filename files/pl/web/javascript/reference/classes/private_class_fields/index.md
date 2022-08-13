@@ -37,12 +37,12 @@ Prywatne pola statyczne są tylko dostępne z poziomu statycznych metod.
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
-  }
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+  }
 }
 
 console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
@@ -56,12 +56,12 @@ Może to prowadzić to nieoczekiwanego zachowania podczas używania **`this`**.
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42
+    return this.#PRIVATE_STATIC_FIELD
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -83,12 +83,12 @@ Enkapsulacja jest wymuszona przez język. Próba dostępu do prywatnego pola poz
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField
 
-  constructor() {
-    this.#privateField = 42
-    this.#randomField = 444 // Syntax error
-  }
+  constructor() {
+    this.#privateField = 42
+    this.#randomField = 444 // Syntax error
+  }
 }
 
 const instance = new ClassWithPrivateField()
@@ -103,17 +103,17 @@ Podobnie jak ich publiczne odpowiedniki, prywatne metody statyczne są wywoływa
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+    static #privateStaticMethod() {
+        return 42
+    }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+    static publicStaticMethod1() {
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+    }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+    static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+    }
 }
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
@@ -124,15 +124,15 @@ Może to prowadzić do nieoczekiwanego zachowania przy używaniu **`this`**. W p
 
 ```js
 class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+    static #privateStaticMethod() {
+        return 42;
+    }
+    static publicStaticMethod1() {
+        return Base.#privateStaticMethod();
+    }
+    static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+    }
 }
 
 class Derived extends Base {}
@@ -147,13 +147,13 @@ Prywatne metody instancji to metody dostępne dla instancji klasy, które mają 
 
 ```js
 class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
+  #privateMethod() {
+    return 'hello world'
+  }
 
-  getPrivateMessage() {
-      return this.#privateMethod()
-  }
+  getPrivateMessage() {
+      return this.#privateMethod()
+  }
 }
 
 const instance = new ClassWithPrivateMethod()
@@ -165,19 +165,19 @@ Prywatne metody mogą używać async lub być generatorami. Możliwe jest równi
 
 ```js
 class ClassWithPrivateAccessor {
-  #message
+  #message
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg
-  }
+  get #decoratedMessage() {
+    return `✨${this.#message}✨`
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg
+  }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
-  }
+  constructor() {
+    this.#decoratedMessage = 'hello world'
+    console.log(this.#decoratedMessage)
+  }
 }
 
 new ClassWithPrivateAccessor();

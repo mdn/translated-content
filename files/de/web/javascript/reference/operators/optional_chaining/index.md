@@ -64,7 +64,7 @@ Verwendet man optionale Verkettung mit Funktionsaufrufen, wird der Ausdruck auto
 let result = someInterface.customMethod?.();
 ```
 
-> **Note:** Wenn eine Eigenschaft mit dem Namen existiert, die aber keine Funktion ist, wird `?.` trotzdem eine {{JSxRef("TypeError")}} Ausnahme auslösen (` x.y`` ist keine Funktion  `).
+> **Note:** Wenn eine Eigenschaft mit dem Namen existiert, die aber keine Funktion ist, wird `?.` trotzdem eine {{JSxRef("TypeError")}} Ausnahme auslösen (`x.y`` ist keine Funktion`).
 
 #### Optionale Callbacks oder Event Handler handhaben
 

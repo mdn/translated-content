@@ -16,9 +16,9 @@ Bei Low-Level Programmiersprachen wie C, die zur systemnahen Programmierung eing
 
 Unabhängig von der eingesetzten Programmiersprache läuft der Zyklus für die Speichernutzung immer ungefähr gleich ab:
 
-1.  Alloziierung/Zuweisung des benötigten Speichers.
-2.  Benutzung des Speichers (lesen, schreiben).
-3.  Freigabe des alloziierten Speichers, wenn er nicht mehr benötigt wird.
+1. Alloziierung/Zuweisung des benötigten Speichers.
+2. Benutzung des Speichers (lesen, schreiben).
+3. Freigabe des alloziierten Speichers, wenn er nicht mehr benötigt wird.
 
 Der erste und zweite Schritt erfolgt bei allen Programmiersprachen explizit. Der letzte Schritt, die Freigabe des Speichers, wird bei Low-Level-Sprachen explizit und bei höheren Programmiersprachen wie JavaScript meist implizit vorgenommen.
 

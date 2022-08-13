@@ -36,47 +36,29 @@ Brak.
 - `method`
   - : Określa format wyjściowy.
 
-<!---->
-
 - `version`
   - : Określa wartość atrybutu wersji deklaracji XML lub HTML w dokumencie wyjściowym. Można go używać wyłącznie z `method="html"` lub `method="xml"`.
-
-<!---->
 
 - `encoding`
   - : Określa wartość atrybutu kodowania `encoding` w dokumencie wyjściowym.
 
-<!---->
-
 - `omit-xml-declaration`
   - : Wskazuje czy dołączyć do wyjścia deklarację XML. Dozwolone wartości to "`yes`" lub "`no`".
-
-<!---->
 
 - `standalone` (Niewspierane)
   - : Jeśli obecny wskazuje, że samodzielna deklaracja powinna pojawić się dokumencie wyjściowym; wskazuje również jej wartość. Dozwolone wartości to "yes" lub "no".
 
-<!---->
-
 - `doctype-public`
   - : Określa wartość atrybutu `PUBLIC` deklaracji `DOCTYPE` w dokumencie wyjściowym.
-
-<!---->
 
 - `doctype-system`
   - : Określa wartość atrybutu `SYSTEM` deklaracji `DOCTYPE` w dokumencie wyjściowym.
 
-<!---->
-
 - `cdata-section-elements`
   - : Wypisuje elementy, których treść tekstowa powinna być zapisana jako sekcje `CDATA`. Elementy powinny być oddzielone za pomocą białych znaków.
 
-<!---->
-
 - `indent` (Niewspierane)
   - : Określa czy wyjście powinno zostać wcięte, aby ukazać jego hierarchiczną strukturę.
-
-<!---->
 
 - `media-type` (Nieobsługiwany)
   - : Określa typ MIME dokumentu wyjściowego.

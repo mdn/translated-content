@@ -20,8 +20,6 @@ translation_of: Web/HTML/Element/input/image
 - {{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}
   - : The URI of a program that processes the information submitted by the input element, here image if specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
 
-<!---->
-
 - {{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}
   - : If the input element is an image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:\* `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.

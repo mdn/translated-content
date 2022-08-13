@@ -25,8 +25,6 @@ Im Gegensatz zur {{jsxref("Statements/break", "break")}} Anweisung, beendet `con
 
 - In einer {{jsxref("Statements/while", "while")}} Schleife wird zur Bedingung gesprungen.
 
-<!---->
-
 - In einer {{jsxref("Statements/for", "for")}} Schleife wird zur Schlussanweisung gesprungen.
 
 Die `continue` Anweisung kann optional den Namen beinhalten und erlaubt dem Programm zum nächsten Durchlauf einer benannten Schleife zu springen anstatt der aktuellen. In diesem Fall muss die `continue` Anweisung innerhalb der benannten Anweisung liegen.

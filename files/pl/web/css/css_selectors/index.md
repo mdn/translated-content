@@ -64,7 +64,7 @@ translation_of: Web/CSS/CSS_Selectors
   - : The `+` combinator selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.
     **Syntax:** `A + B`
     **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that directly follow an {{HTMLElement("h2")}}.
-- [Column combinator](/pl/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+- [Column combinator](/pl/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.
     **Syntax:** `A || B`
     **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.

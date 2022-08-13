@@ -119,8 +119,6 @@ La balise `<svg>` n'a pas besoin des attributs `version`, `baseProfile` ou `xmln
 - Le navigateur ne peut pas placer ces images SVG en cache comme il pourrait le faire avec d'autres ressources.
 - Vous pouvez inclure un contenu à utiliser au cas où le navigateur ne supporte pas le SVG, grâce à {{svgelement("foreignObject")}}. Toutefois, les navigateurs qui supportent SVG téléchargeront quand même les ressources supplémentaires. Il faut donc décider si cette charge supplémentaire est nécessaire pour gérer les anciens navigateurs.
 
-<!---->
-
 ## Comment intégrer un SVG dans un élément {{htmlelement("object")}}
 
 Cette syntaxe est assez simple et permet également de définir un contenu à utiliser quand SVG n'est pas supporté :

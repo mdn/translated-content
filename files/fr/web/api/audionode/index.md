@@ -22,22 +22,14 @@ Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel gr
 - {{domxref("AudioNode.context")}} {{readonlyInline}}
   - : Renvoie le {{domxref("AudioContext")}} associé, c'est-à-dire l'objet représentant le graphe de traitement dont le noeud fait partie.
 
-<!---->
-
 - {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
   - : Renvoie le nombre d'entrées d'un noeud. Les noeuds source sont des noeuds dont la propriété `numberOfInputs` a la valeur `0`.
-
-<!---->
 
 - {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
   - : Renvoie le nombre de sorties d'un noeud. Les noeuds de destination — comme {{ domxref("AudioDestinationNode") }} — sont des noeuds dont cette propriété a la valeur `0`.
 
-<!---->
-
 - {{domxref("AudioNode.channelCount")}}
   - : Représente un entier utilisé pour déterminer le nombre de canaux lors d'une [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante). Son usage et sa définition précise dépendent de la valeur de {{domxref("AudioNode.channelCountMode")}}.
-
-<!---->
 
 - {{domxref("AudioNode.channelCountMode")}}
   - : Représente une liste énumérative qui décrit la façon dont les canaux doivent être connectés entre les entrées et les sorties.

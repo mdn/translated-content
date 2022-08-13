@@ -33,7 +33,7 @@ Wywołanie metody `toSource` instancji {{jsxref("Error")}} (w tym _[NativeErrors
 
 gdzie wymienione atrybuty odpowiadają właściwym własnościom instancji błędu.
 
-> **Note:** **Uwaga:** należy pamiętać, że własności używanen przez metodę `toSource` podczas tworzenia tego ciągu znaków są modyfikowalne i mogą nie odzwierciedlać dokładnie funkcji użytej do stworzenia instancji błędu lub nazwy pliku czy numeru linii gdzie wystąpił dany błąd.
+> **Uwaga:** należy pamiętać, że własności używanen przez metodę `toSource` podczas tworzenia tego ciągu znaków są modyfikowalne i mogą nie odzwierciedlać dokładnie funkcji użytej do stworzenia instancji błędu lub nazwy pliku czy numeru linii gdzie wystąpił dany błąd.
 
 ## Specyfikacje
 

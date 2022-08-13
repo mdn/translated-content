@@ -55,8 +55,8 @@ Wenn Sie alle Details über Kaskadierung und Vererbung erfahren wollen, rufen Si
 
 ## Aktion: Vererbung verwenden
 
-1.  Editieren Sie Ihre CSS Datei.
-2.  Kopieren Sie die folgende Zeile in Ihre CSS Datei. Es macht dabei keinen Unterschied, ob Sie die Zeile vor oder nach der bereits enthaltenen Zeile einfügen. Es ist aber verständlicher die Zeile oben einzufügen, da das {{ HTMLElement("p") }} Element in Ihrem Dokument das Elternelement vom {{ HTMLElement("strong") }} Element ist:
+1. Editieren Sie Ihre CSS Datei.
+2. Kopieren Sie die folgende Zeile in Ihre CSS Datei. Es macht dabei keinen Unterschied, ob Sie die Zeile vor oder nach der bereits enthaltenen Zeile einfügen. Es ist aber verständlicher die Zeile oben einzufügen, da das {{ HTMLElement("p") }} Element in Ihrem Dokument das Elternelement vom {{ HTMLElement("strong") }} Element ist:
 
     ```css
     p {
@@ -65,7 +65,7 @@ Wenn Sie alle Details über Kaskadierung und Vererbung erfahren wollen, rufen Si
     }
     ```
 
-3.  Laden Sie die Seite im Webbrowser erneut, damit die Änderung an Ihrem Beispieldokument sehen können. Die unterstreichende Line betrifft den gesamten Text im Absatz und somit auch alle Anfangsbuchstaben. Die {{ HTMLElement("strong") }} Elemente haben den Unterstrich von ihrem Elternknoten {{ HTMLElement("p") }} geerbt.
+3. Laden Sie die Seite im Webbrowser erneut, damit die Änderung an Ihrem Beispieldokument sehen können. Die unterstreichende Line betrifft den gesamten Text im Absatz und somit auch alle Anfangsbuchstaben. Die {{ HTMLElement("strong") }} Elemente haben den Unterstrich von ihrem Elternknoten {{ HTMLElement("p") }} geerbt.
 
     Die {{ HTMLElement("strong") }} Elemente sind aber immer noch rot. Die rote Farbe gehört zu ihrem eigenen Style und hat somit Priorität gegenüber dem blau des {{ HTMLElement("p") }} Elternelements.
 

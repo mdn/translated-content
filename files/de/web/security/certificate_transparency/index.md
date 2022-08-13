@@ -42,7 +42,7 @@ Apple [verlangt](https://support.apple.com/en-gb/HT205280) eine unterschiedliche
 
 Firefox [prüft aktuell nicht](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) bzw. erfordert nicht, dass CT-Protokolle verwendet werden, wenn Nutzer die Webseiten besuchen.
 
-Der [Expect-CT header ](/de/docs/Web/HTTP/Headers/Expect-CT)kann verwendet werden, um vom Browser zu verlangen, dass dieser _immer_ die Certificate Transparency erfordert (z.B. in Chrome, selbst wenn das Zertifikat ausgestellt wurde mit einem _notBefore Datum_ vor April).
+Der [Expect-CT header](/de/docs/Web/HTTP/Headers/Expect-CT)kann verwendet werden, um vom Browser zu verlangen, dass dieser _immer_ die Certificate Transparency erfordert (z.B. in Chrome, selbst wenn das Zertifikat ausgestellt wurde mit einem _notBefore Datum_ vor April).
 
 ## Spezifikationen
 

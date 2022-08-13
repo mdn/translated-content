@@ -26,19 +26,13 @@ translation_of: Web/XPath/Functions/current
 
     <xsl:value-of select="current()"/>
 
-<!---->
-
     <xsl:value-of select="."/>
 
 内側の式（角括弧など）では、現在のノードは一番外側の式の場合と同じです。したがって、次の 3 つの式のすべてにおいて`current`関数（式全体ではない）が同じノードを返します。さらに、後者の 2 つは意味的に同等です。
 
     <xsl:value-of select="current()"/>
 
-<!---->
-
     <xsl:value-of select="foo/bar[current() = X]"/>
-
-<!---->
 
     <xsl:variable name="current" select="current()"/>
     <xsl:value-of select="foo/bar[$current = X]"/>

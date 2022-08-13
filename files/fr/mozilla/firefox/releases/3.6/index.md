@@ -104,8 +104,6 @@ Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonction
 - [Détection des changements de largeur et hauteur d'un document](/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged)
   - : Le nouvel évènement `MozScrollAreaChanged` est déclenché lorsqu'une des propriétés `scrollWidth` ou `scrollHeight` d'un document change.
 
-<!---->
-
 - La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
 - Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/DOM/window.mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/DOM/window.mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
 - La nouvelle propriété `mozScreenPixelsPerCSSPixel` de [`nsIDOMWindowUtils`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils) uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.

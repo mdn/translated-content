@@ -24,7 +24,7 @@ Das **`Boolean`** Objekt ist ein Objekt-Wrapper für einen booleschen Wert.
 
 Der als erster Parameter übergebene Wert wird, wenn nötig, in einen booleschen Wert umgewandelt. Wird der Wert ausgelassen oder ist `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}} oder der leere String (`""`), so besitzt das Objekt den Initialwert `false`. Alle anderen Werte, einschließlich eines Objektes oder des Strings `"false"`, erzeugen ein Objekt mit dem Initialwert `true`.
 
-Die Werte `true `und `false `des `Boolean`-Objektes sind nicht zu verwechseln mit den primitiven Booleanwerten `true `und `false.`
+Die Werte `true`und `false`des `Boolean`-Objektes sind nicht zu verwechseln mit den primitiven Booleanwerten `true`und `false.`
 
 Jedes Objekt, dessen Wert nicht {{jsxref("undefined")}} oder {{jsxref("null")}} entspricht, einschließlich eines `Boolean-`Objektes, dessen Wert `false` ist, wird bei der Übergabe an eine Bedingung als `true` gewertet. Beispielsweise wird das folgende {{jsxref("Statements/if...else", "if")}} Konstrukt als `true` ausgewertet:
 
@@ -60,9 +60,9 @@ myString = new String('Hello'); // string objekt
 s = Boolean(myString);      //  initialer Wert von true
 ```
 
-Ein `Boolean`-Objekt darf nicht anstelle eines primitiven `Boolean-wertes `verwendet werden.
+Ein `Boolean`-Objekt darf nicht anstelle eines primitiven `Boolean-wertes`verwendet werden.
 
-> **Note:** **Hinweis:** Wenn die nicht standardisierte Eigenschaft [`document.all`](/de/docs/Web/API/Document#Properties) als Argument für den Konstruktor benutzt wird, ist das Resultat ein `Boolean` Objekt mit dem Wert `false`. Diese Eigenschaft ist veraltet und nicht standardisierte und darf nicht eingesetzt werden.
+> **Hinweis:** Wenn die nicht standardisierte Eigenschaft [`document.all`](/de/docs/Web/API/Document#Properties) als Argument für den Konstruktor benutzt wird, ist das Resultat ein `Boolean` Objekt mit dem Wert `false`. Diese Eigenschaft ist veraltet und nicht standardisierte und darf nicht eingesetzt werden.
 
 ## Eigenschaften
 

@@ -168,8 +168,6 @@ MDN は、私達がそうであるべきだと感じるあり方で Web を維�
 - ...
   ほか、たくさんの [Kuma への貢献者たち](https://github.com/mozilla/kuma/graphs/contributors)。
 
-<!---->
-
 - Chris Mills
 - Will Bamberg
 - David Bruant

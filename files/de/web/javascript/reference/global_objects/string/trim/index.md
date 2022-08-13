@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
 {{JSRef}}
 
-Die**` trim()`** Methode entfernt Leerzeichen an beiden Enden einer Zeichenfolge. Das betrifft Leerzeichen verschiedenster Art (space, tab, no-break space, etc.) und alle Zeilenumbruch einleitende Zeichen (LF, CR, etc.).
+Die**`trim()`** Methode entfernt Leerzeichen an beiden Enden einer Zeichenfolge. Das betrifft Leerzeichen verschiedenster Art (space, tab, no-break space, etc.) und alle Zeilenumbruch einleitende Zeichen (LF, CR, etc.).
 
 ## Syntax
 

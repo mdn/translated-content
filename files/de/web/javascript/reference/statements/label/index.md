@@ -21,9 +21,9 @@ Ein Statement kann ein Label erhalten und zusammen mit dem {{jsxref("Statements/
 
 ## Beschreibung
 
-Sie können ein Label verwenden, um eine Schleife zu identifizieren und danach einen `break `oder `continue `Statement verwenden, um anzugeben ob ein Programm die Schleife abbrechen oder weiter abarbeiten soll.
+Sie können ein Label verwenden, um eine Schleife zu identifizieren und danach einen `break`oder `continue`Statement verwenden, um anzugeben ob ein Programm die Schleife abbrechen oder weiter abarbeiten soll.
 
-> **Note:** **Hinweis:** JavaScript hat **KEINE** `goto `Statements. Sie können die Labels nur mit `break` oder `continue `verwenden.
+> **Hinweis:** JavaScript hat **KEINE** `goto`Statements. Sie können die Labels nur mit `break` oder `continue`verwenden.
 
 ## Beispiele
 

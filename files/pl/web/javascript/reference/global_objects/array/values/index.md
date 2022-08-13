@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Array/values
 ---
 {{JSRef}}
 
-Metoda **`values()`** zwraca nowy obiekt **`Array Iterator`** , który zawiera wartości dla każdego indeksu w tablicy.
+Metoda **`values()`** zwraca nowy obiekt **`Array Iterator`** , który zawiera wartości dla każdego indeksu w tablicy.
 
 ```js
 var a = ['w', 'y', 'k', 'o', 'p'];
@@ -36,7 +36,7 @@ Nowy obiekt {{jsxref("Array")}} iterator.
 
 ## Przykłady
 
-### Iteracja używająca pętli [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+### Iteracja używająca pętli [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 var arr = ['w', 'y', 'k', 'o', 'p'];
@@ -52,7 +52,7 @@ for (let letter of iterator) {
 | Specyfikacja                                                                                                 | Status                       | Komentarz           |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Kompatybilność przeglądarek
 

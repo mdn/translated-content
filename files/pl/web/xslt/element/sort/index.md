@@ -31,22 +31,14 @@ Brak.
 - `select`
   - : Używa wyrażenia XPath do określenia węzłów, które mają zostać posortowane.
 
-<!---->
-
 - `order`
   - : Określa czy węzły mają być przetwarzane w kolejności "`ascending`" (rosnącej) lub "`descending`" (malejącej). Wartością domyślną jest "`ascending`".
-
-<!---->
 
 - `case-order`
   - : Wskazuje, które z liter (małe czy duże) mają być uporządkowane jako pierwsze. Dostępnymi wartościami są "`upper-first`" (najpierw duże) i "`lower-first`" (najpierw małe).
 
-<!---->
-
 - `lang`
   - : Określa, który język ma zostać użyty przez sortowanie.
-
-<!---->
 
 - `data-type`
   - : Definiuje czy pozycje mają być uporządkowane alfabetycznie czy numerycznie. Dostępnymi wartościami są "`text`" (alfabetycznie) i "`number`" (numerycznie) z "`text`" jako wartością domyślną.

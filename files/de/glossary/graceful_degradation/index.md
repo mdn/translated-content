@@ -21,8 +21,6 @@ _Graceful degredation_ ist eine nützliche Technik, die es Webentwicklern erlaub
 
 - {{Interwiki("wikipedia", "Graceful degradation")}} auf Wikipedia
 
-<!---->
-
 - [Glossar](/de/docs/Glossary)
 
   - {{Glossary("Polyfill")}}

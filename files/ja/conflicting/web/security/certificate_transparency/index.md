@@ -50,15 +50,9 @@ HPKP は _Trust on First Use_ ({{Glossary("TOFU")}}) 技術の 1 つです。 HP
 
     openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-<!---->
-
     openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-<!---->
-
     openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-
-<!---->
 
     openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 

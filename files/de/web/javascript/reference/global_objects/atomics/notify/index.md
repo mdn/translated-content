@@ -11,9 +11,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
 {{JSRef}}
 
-Die statische **`Atomics`\*\***`.notify()`\*\* Methode benachrichtigt Threads, die in einer Warteschlange schlafen.
+Die statische **`Atomics.notify()`** Methode benachrichtigt Threads, die in einer Warteschlange schlafen.
 
-> **Note:** **Hinweis:** Diese Operation funktioniert nur mit einem {{jsxref("Int32Array")}}.
+> **Hinweis:** Diese Operation funktioniert nur mit einem {{jsxref("Int32Array")}}.
 
 ## Syntax
 

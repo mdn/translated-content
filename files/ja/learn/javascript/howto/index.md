@@ -95,8 +95,6 @@ var myObject = {
 - [配列とは](/ja/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
 - [ループとは](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
 
-<!---->
-
 - [関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
 - [イベントとは](/ja/docs/Learn/JavaScript/Building_blocks/Events)
 - [オブジェクトとは](/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics)

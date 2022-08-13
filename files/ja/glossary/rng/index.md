@@ -25,8 +25,6 @@ translation_of: Glossary/RNG
 - JavaScript の組み込み PRNG 関数である {{jsxref("Math.random()")}}。これは暗号学的に安全な PRNG ではありません。
 - {{domxref("Crypto.getRandomValues()")}}: 暗号学的に安全な数値を提供するためのものです。
 
-<!---->
-
 - {{domxref("RandomSource")}}
 - {{jsxref("Math.random()")}}
 - {{domxref("Crypto.getRandomValues()")}}

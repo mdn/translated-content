@@ -150,7 +150,7 @@ var foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
 
-> **Note:** Hinweis: Wenn das this Argument von call, bind oder apply auf einer Pfeilfunktion benutzt werden, wird dieser ignoriert. Man kann dem Aufruf weitere Argumente hinzufügen, das erste Argument (thisArg) sollte aber null sein.
+> **Hinweis:** Wenn das this Argument von call, bind oder apply auf einer Pfeilfunktion benutzt werden, wird dieser ignoriert. Man kann dem Aufruf weitere Argumente hinzufügen, das erste Argument (thisArg) sollte aber null sein.
 
 ```js
 // Aufruf als Methode eines Objektes

@@ -46,8 +46,6 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 - [ウェブアプリケーションからファイルを扱う](/ja/docs/Using_files_from_web_applications "Using files from web applications")
   - : 新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザの選択したローカルファイルにアクセス出来るようになりました。これには `input type="file"` HTML 要素において複数のファイルを選択する `multiple` 属性のサポートが含まれます。
 
-<!---->
-
 - HTML5 video がポスター・フレームをサポート
   - : [`video`](/ja/docs/HTML/Element/Video "HTML/Element/Video") 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
 - チェックボックスとラジオボタンが `indeterminate` 属性をサポート

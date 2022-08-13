@@ -125,7 +125,7 @@ Ein ähnliches Ergebnis kann durch die {{jsxref("String.prototype.localeCompare(
 
 Es ist zu betonen, dass JavaScript zwischen `String`-Objekten und primitiven String-Werten unterscheidet. (Das selbe gilt für {{jsxref("Boolean")}} und {{jsxref("Global_Objects/Number", "Numbers")}}.)
 
-String-Literale (definiert mit doppelten oder einfachen Anführungszeichen) und Strings, die von` String`-Aufrufen in einem Nicht-Konstruktor-Kontext (z. B. ohne das {{jsxref("Operators/new", "new")}}-Schlüsselwort zu benutzen) zurückgegeben werden, sind String-Primitives. JavaScript wandelt automatisch Primitives zu `String`-Objekten um, so dass es möglich ist `String`-Objekt-Methoden für String-Primitives zu nutzen. In Kontexten, in denen eine Methode auf ein String-Primitive bezogen aufgerufen oder eine Eigenschaft eines solchen abgefragt wird, sorgt JavaScript dafür, dass das String-Primitive wie ein Objekt behandelt wird.
+String-Literale (definiert mit doppelten oder einfachen Anführungszeichen) und Strings, die von`String`-Aufrufen in einem Nicht-Konstruktor-Kontext (z. B. ohne das {{jsxref("Operators/new", "new")}}-Schlüsselwort zu benutzen) zurückgegeben werden, sind String-Primitives. JavaScript wandelt automatisch Primitives zu `String`-Objekten um, so dass es möglich ist `String`-Objekt-Methoden für String-Primitives zu nutzen. In Kontexten, in denen eine Methode auf ein String-Primitive bezogen aufgerufen oder eine Eigenschaft eines solchen abgefragt wird, sorgt JavaScript dafür, dass das String-Primitive wie ein Objekt behandelt wird.
 
 ```js
 var s_prim = 'foo';

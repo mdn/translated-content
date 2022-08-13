@@ -335,7 +335,7 @@ Der nachfolgende Code ist nicht immer der effizienteste Weg, aber als einfaches 
 
 - Die Existenz einer Eigenschaft erkennen: `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
 - Alle Eigenschaften durchlaufen:
-  `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use` filter()`, `map()`, etc.)
+  `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use`filter()`, `map()`, etc.)
 
 ```js
 var SimplePropertyRetriever = {

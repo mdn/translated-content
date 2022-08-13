@@ -112,10 +112,6 @@ _変更なし。_
 - {{domxref("CSSValue")}}、{{domxref("CSSPrimitiveValue")}}、{{domxref("CSSValueList")}} のサポートを廃止しました ({{bug(1459871)}})。
 - {{domxref("window.getComputedStyle()")}} が表示するものがない `Window` で呼び出されたときに、`null` を返さないようになりました ({{bug(1467722)}})。
 
-<!---->
-
-<!---->
-
 ### HTTP
 
 #### 廃止

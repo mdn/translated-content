@@ -56,11 +56,11 @@ Aufgrund des momentanen Farbschemas ist der Text der Webseite schwierig zu lesen
 
 ### Semantisches HTML
 
-1.  Der Inhalt der Website ist momentan nicht besonders zugänglich. Probieren Sie aus was passiert, wenn Sie durch die Website navigieren.
-2.  Können Sie den Text des Artikels so ändern, um einfacher mit einem Screenreader navigieren zu können?
-3.  Das Navigationsmenü der Website (eingebunden in `<div class="nav"></div>`) könnte zugänglicher werden, indem man es in das geignete semantische HTML5-Element einbettet.
+1. Der Inhalt der Website ist momentan nicht besonders zugänglich. Probieren Sie aus was passiert, wenn Sie durch die Website navigieren.
+2. Können Sie den Text des Artikels so ändern, um einfacher mit einem Screenreader navigieren zu können?
+3. Das Navigationsmenü der Website (eingebunden in `<div class="nav"></div>`) könnte zugänglicher werden, indem man es in das geignete semantische HTML5-Element einbettet.
 
-> **Note:** **Hinweis:** **Sie müssen die CSS-Regelselektoren aktualisieren, die die Tags so formatieren, dass sie den semantischen Überschriften entsprechen. Sobald Sie Absatzelemente hinzufügen, werden Sie feststellen, dass das Styling besser aussieht.**
+> **Hinweis:** **Sie müssen die CSS-Regelselektoren aktualisieren, die die Tags so formatieren, dass sie den semantischen Überschriften entsprechen. Sobald Sie Absatzelemente hinzufügen, werden Sie feststellen, dass das Styling besser aussieht.**
 
 ### Die Bilder
 
@@ -68,13 +68,13 @@ Die Bilder sind momenten nicht zugänglich für Benutzer von Screenreadern. Kön
 
 ### Der Musikplayer
 
-1.  The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
-2.  The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
+1. The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
+2. The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
 
 ### Die Formulare
 
-1.  The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
-2.  The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
+1. The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
+2. The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
 
 ### Schaltfläche zum Ein- und Ausblenden von Kommentaren
 

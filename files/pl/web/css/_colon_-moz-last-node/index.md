@@ -30,8 +30,6 @@ Pseudoklasa `:last-node` sprawia iż własności stosowane są do elementu tylko
       </body>
     </html>
 
-<!---->
-
     span:-moz-last-node { font-weight: bold; }
 
 Powyższy zapis pogrubi czcionkę wewnątrz wszystkich elementów `span`, które są ostatnimi dziećmi swoich rodziców. Zostaną tutaj pogrubione obydwa słowa "**drugi**".

@@ -14,8 +14,6 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
 
-<!---->
-
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : Détermine si oui ou non un service worker est prêt à contrôler la page. Cette propriété retourne une {{jsxref("Promise")}} qui ne sera jamais rejetée, et se résoudra en un {{domxref("ServiceWorkerRegistration")}} avec un worker en état {{domxref("ServiceWorkerRegistration.active")}}.
 

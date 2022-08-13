@@ -47,9 +47,9 @@ a * c + b * c // 9
 
 | Specification                                                                                        | Status                       | Comment                                            |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ESDraft', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}                     | {{Spec2('ES5.1')}}     |                                                    |
 | {{SpecName('ES1', '#sec-11.1.4', 'The Grouping Operator')}}                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
 
 ## Wsparcie przeglądarek

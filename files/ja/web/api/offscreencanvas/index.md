@@ -33,12 +33,8 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 - {{domxref("OffscreenCanvas.getContext()")}}
   - : Returns a rendering context for the offscreen canvas.
 
-<!---->
-
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
-
-<!---->
 
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.

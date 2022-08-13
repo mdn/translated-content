@@ -37,8 +37,6 @@ Le constructeur peut renvoyer des exceptions:
 - `SECURITY_ERR`
   - : Le port sur lequel on essaie d'établir la connexion est bloqué.
 
-<!---->
-
 ### Erreurs de connexion
 
 Si une erreur se produit lors de la tentative de connexion, un évènement nommé "error" est d'abord renvoyé à l'objet  [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.

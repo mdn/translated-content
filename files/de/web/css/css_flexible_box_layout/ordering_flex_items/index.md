@@ -50,7 +50,7 @@ Wenn man einen `reverse` Wert benuzt, oder in irgendeiner Weise die Reihenfolge 
 
 > “Autoren sollten die Reihenfolgen- oder Umgekehrtwerte der flex-flow/flex-direction Eigenschaften nicht als Ersatz für die tatsächliche Änderung des Dokumentes nutzen, da das die Barrierefreiheit des Dokumentes einschränkt.”
 
-> **Note:** **Hinweis**: Firefox hatte ein paar Jahre lang einen Bug, bei dem es versucht hatte der visuellen Reihenfolge und nicht der Quelltext-Reihenfolge zu folgen, daruch verhielt es sich anders als andere Browser. Dieser Bug ist mittlerweile gefixt. Man sollte immer Quelltext-Reihenfolge als die logische Reihenfolge für das Dokument benutzen, da alle aktuellen User Agents diesem Schema folgen.
+> **Hinweis:** Firefox hatte ein paar Jahre lang einen Bug, bei dem es versucht hatte der visuellen Reihenfolge und nicht der Quelltext-Reihenfolge zu folgen, daruch verhielt es sich anders als andere Browser. Dieser Bug ist mittlerweile gefixt. Man sollte immer Quelltext-Reihenfolge als die logische Reihenfolge für das Dokument benutzen, da alle aktuellen User Agents diesem Schema folgen.
 
 In dem Live-Beispiel unten habe ich einen focus-style hinzugefügt, damit man, wenn man mit tab von link zu link wechselt, sieht welcher link markiert wird. Wenn man die Reihenfolge mit `flex-direction` wechselst, dann sieht man wie die tab Reihenfolge immernoch der Reihenfolge der Elemente im Quelltext folgen.
 

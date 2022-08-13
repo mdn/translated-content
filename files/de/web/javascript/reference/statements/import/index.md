@@ -30,8 +30,6 @@ Das **import Statement** wird verwendet um Funktionen, Objekte und Primitives zu
 - name
   - : Name des Objekts, das die importierten Daten empfängt
 
-<!---->
-
 - `member, memberN`
   - : Namen der exportierten Member, die importiert werden
 - `defaultMember`

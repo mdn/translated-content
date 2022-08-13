@@ -29,9 +29,9 @@ Eine größte ganze Zahl, die kleiner oder gleich der übergebenen Zahl ist.
 
 ## Beschreibung
 
-Weil `floor()` eine statische Methode von `Math` ist, wird sie immer als` Math.floor() `aufgerufen und nicht als eine Methode eines erstellten `Math` Objektes (`Math `ist kein Konstruktor).
+Weil `floor()` eine statische Methode von `Math` ist, wird sie immer als`Math.floor()`aufgerufen und nicht als eine Methode eines erstellten `Math` Objektes (`Math`ist kein Konstruktor).
 
-> **Note:** **Hinweis:** `Math.floor(null)` gibt 0, aber nicht {{jsxref("NaN")}}, zurück.
+> **Hinweis:** `Math.floor(null)` gibt 0, aber nicht {{jsxref("NaN")}}, zurück.
 
 ## Beispiele
 

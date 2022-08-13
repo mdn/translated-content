@@ -10,9 +10,9 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 
 Es gibt drei zentrale Vorteile von CSS-Animationen gegenüber traditionellen skriptgetriebenen Animationstechniken:
 
-1.  Sie sind einfach zu nutzen für simple Animationen; man kann sie ohne Javascript-Kenntnisse erstellen.
-2.  Die Animationen laufen performant, sogar unter mäßiger Systemauslastung. Im Gegensatz dazu fallen selbst simple Javascript-Animationen durch schlechte Performance auf. Die Engine kann einzelne Frames überspringen und kennt weitere Techniken, um die Ausführung so sauber wie möglich zu gestalten.
-3.  Da der Browser die Animation kontrolliert, kann er selbstständig die Performance optimieren, zum Beispiel durch das Drosseln der Freqenz von Animationen in aktuell nicht sichtbaren Browser-Tabs.
+1. Sie sind einfach zu nutzen für simple Animationen; man kann sie ohne Javascript-Kenntnisse erstellen.
+2. Die Animationen laufen performant, sogar unter mäßiger Systemauslastung. Im Gegensatz dazu fallen selbst simple Javascript-Animationen durch schlechte Performance auf. Die Engine kann einzelne Frames überspringen und kennt weitere Techniken, um die Ausführung so sauber wie möglich zu gestalten.
+3. Da der Browser die Animation kontrolliert, kann er selbstständig die Performance optimieren, zum Beispiel durch das Drosseln der Freqenz von Animationen in aktuell nicht sichtbaren Browser-Tabs.
 
 ## Konfigurieren der Animation
 
@@ -47,7 +47,7 @@ Sie können optional zusätzliche Keyframes einfügen, die jeweils Zwischenschri
 
 ## Beispiele
 
-> **Note:** **Hinweis:** Einige ältere Browser (vor 2017) benötigen unter Umständen Präfixe; die Live-Beispiele, welche durch einen Klick im Browser betrachtet werden können, beinhalten die `-webkit` Präfix-Syntax.
+> **Hinweis:** Einige ältere Browser (vor 2017) benötigen unter Umständen Präfixe; die Live-Beispiele, welche durch einen Klick im Browser betrachtet werden können, beinhalten die `-webkit` Präfix-Syntax.
 
 ### Einen Text übers Fenster gleiten lassen.
 
@@ -88,7 +88,7 @@ at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.</p>
 ```
 
-> **Note:** **Hinweis**: Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
+> **Hinweis:** Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -139,7 +139,7 @@ her in a languid, sleepy voice.</p>
 
 Dies teilt dem Browser mit, dass nach 75% der Animationssequenz der linke Außenabstand des Headers bei 25% und die Breite bei 150% liegen sollte.
 
-> **Note:** **Hinweis**: Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
+> **Hinweis:** Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -237,7 +237,7 @@ p {
 }
 ```
 
-> **Note:** **Hinweis**: Sie können weitere Beispiele auf der Referenzseite von {{cssxref("animation")}} finden.
+> **Hinweis:** Sie können weitere Beispiele auf der Referenzseite von {{cssxref("animation")}} finden.
 
 ### Setzen mehrere Animationseigenschaftswerte
 
@@ -368,7 +368,7 @@ Der Vollständigkeit halber ist hier das HTML, welches den Seiteninhalt darstell
 
 Hier gibt es eine Live-Ausgabe:
 
-> **Note:** **Hinweis**: Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
+> **Hinweis:** Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 

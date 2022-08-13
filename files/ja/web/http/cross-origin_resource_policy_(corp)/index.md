@@ -40,8 +40,6 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 - cross-origin
   - : いかなる _{{Glossary("origin")}}_ (same-site と cross-site 両方) からのリクエストでもリソースを読み込めます。
 
-<!---->
-
     Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 
 クロスオリジンリソースポリシーチェックの際に、ヘッダーが設定されている場合、ブラウザーは異なるオリジンやサイトから発行された `no-cors` リクエストを拒否します。

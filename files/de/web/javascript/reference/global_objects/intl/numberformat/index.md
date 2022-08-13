@@ -25,7 +25,7 @@ Das **`Intl.NumberFormat`** Objekt ist ein Konstruktor für Objekte, die spracha
   - : Optional. Ein String mit einem BCP 47 Sprachcode, oder ein Array mit solchen Strings. Für die generelle Form und Interpretation des `locales` Arguments siehe im {{jsxref("Intl", "Intl Artikel", "#Locale_identification_and_negotiation", 1)}}. Die folgenden Unicode Erweiterungsschlüssel sind erlaubt:
 
     - `nu`
-      - : Das einzusetzende Nummerierungssystem. Mögliche Wert sind:` "arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
+      - : Das einzusetzende Nummerierungssystem. Mögliche Wert sind:`"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
 
 - `options`
   - : Optional. Ein Objekt mit einigen oder allen der folgenden Eigenschaften:_ `localeMatcher`

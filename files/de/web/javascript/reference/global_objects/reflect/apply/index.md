@@ -3,7 +3,7 @@ title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
-{{JSRef}}Die statische Methode **`Reflect`\*\***`.apply()`\*\* ruft eine Zielfunktion mit den spezifizierten Parametern auf.{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
+{{JSRef}}Die statische Methode **`Reflect.apply()`** ruft eine Zielfunktion mit den spezifizierten Parametern auf.{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 
 ## Syntax
 

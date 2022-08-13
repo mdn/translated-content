@@ -116,11 +116,11 @@ Parametry zdefiniowane wcześniej (bardziej na lewo na liście parametrów), są
 
 ```js
 function pozdrów(imię, pozdrowienie, wiadomość = pozdrowienie + ' ' + imię) {
-    return [imię, pozdrowienie, wiadomość];
+    return [imię, pozdrowienie, wiadomość];
 }
 
-pozdrów('Dawid', 'Cześć');  // ["Dawid", "Cześć", "Cześć Dawid"]
-pozdrów('Dawid', 'Cześć', 'Wszystkiego najlepszego!');  // ["Dawid", "Cześć", "Wszystkiego najlepszego!"]
+pozdrów('Dawid', 'Cześć');  // ["Dawid", "Cześć", "Cześć Dawid"]
+pozdrów('Dawid', 'Cześć', 'Wszystkiego najlepszego!');  // ["Dawid", "Cześć", "Wszystkiego najlepszego!"]
 ```
 
 Ta funkcjonalność może być przybliżona w ten sposób, pokazujący, jak wiele przypadków brzegowych może być obsłużonych:

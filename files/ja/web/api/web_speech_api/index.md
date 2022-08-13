@@ -57,8 +57,6 @@ Web Speech API は、ウェブアプリが音声データを扱えるように�
 - {{domxref("SpeechSynthesisUtterance")}}
   - : 音声リクエストを表します。これは、音声サービスが読み上げるコンテンツとその読み上げ方 (言語、音声の高低、音量など) についての情報を含みます。
 
-<!---->
-
 - {{domxref("SpeechSynthesisVoice")}}
   - : システムがサポートする音声を表します。すべての `SpeechSynthesisVoice` は、それ自身に関連する音声サービス (言語、名前、URI についての情報を含む) を持ちます。
 - {{domxref("Window.speechSynthesis")}}

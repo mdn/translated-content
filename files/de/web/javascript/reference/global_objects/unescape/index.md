@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 
 Die veraltete **`unescape()`** Methode erstellt einen neuen String, in dem hexadezimal escapte Sequenzen mit den entsprechenden umgewandelten Zeichen ersetzt werden. Die escape Sequenz kann vorher durch eine Funktion wie {{jsxref("Global_Objects/escape", "escape")}} erzeugt werden. Da `unescape` veraltet ist, sollte {{jsxref("Global_Objects/decodeURI", "decodeURI")}} oder {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} verwendet werden.
 
-> **Note:** **HInweis:** `unescape` sollte nicht verwendet werden um URIs zu decodieren, nutze stattdessen `decodeURI`.
+> **Hinweis:** `unescape` sollte nicht verwendet werden um URIs zu decodieren, nutze stattdessen `decodeURI`.
 
 ## Syntax
 

@@ -23,13 +23,9 @@ translation_of: Web/API/Navigator/share
 - `data`
   - : シェアするデータを含むオブジェクトです。以下のフィールドのうち少なくとも一つを指定しなければなりません。利用可能なオプションは下記のとおりです。
 
-<!---->
-
 - `url`: シェアする URL を表す {{domxref("USVString")}}。
 - `text`: シェアするテキストを表す {{domxref("USVString")}}。
 - `title`: シェアするタイトルを表す {{domxref("USVString")}}。
-
-<!---->
 
 ### 返値
 

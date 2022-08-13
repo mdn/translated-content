@@ -39,23 +39,23 @@ pointer-events: unset;
 - `auto`
   - : Das Element verhält sich als ob die `pointer-events Eigenschaft nicht spezifiziert wurde. Im SVG-Inhalt hat dieser Wert und der Wert visiblePainted` `den selben Effekt.`
 - `none`
-  - : Das Element ist nie das Ziel von Mouse-Events; trotzdem werden abstämmige Elemente angezielt, sofern Ihre `pointer-events `einen abweichenden Wert haben. In diesem Fall lösen Mouse-Events während Ihrem Weg zu/von den Nachkömmlingen während der Event-Capture/[bubble](/de/docs/Web/API/event.bubbles)-Phasen gegebenenfalls die Event-Listener des übergeordneten Elements aus.
+  - : Das Element ist nie das Ziel von Mouse-Events; trotzdem werden abstämmige Elemente angezielt, sofern Ihre `pointer-events`einen abweichenden Wert haben. In diesem Fall lösen Mouse-Events während Ihrem Weg zu/von den Nachkömmlingen während der Event-Capture/[bubble](/de/docs/Web/API/event.bubbles)-Phasen gegebenenfalls die Event-Listener des übergeordneten Elements aus.
 - `visiblePainted`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist, sich der Mauszeiger im Inneren (z. B. 'fill') befindet und die `fill-`Eigenschaft einen anderen Wert als `none` hat oder wenn sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befindet und die `stroke-`Eigenschaft einen anderen Wert als `none `hat.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist, sich der Mauszeiger im Inneren (z. B. 'fill') befindet und die `fill-`Eigenschaft einen anderen Wert als `none` hat oder wenn sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befindet und die `stroke-`Eigenschaft einen anderen Wert als `none`hat.
 - `visibleFill`
   - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist und sich der Mauszeiger im Inneren (z. B. 'fill') befindet. Der Wert der `fill-`Eigenschaft beinflusst die Event-Verarbeitung nicht.
 - `visibleStroke`
   - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist und sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befindet. Der Wert der `stroke-`Eigenschaft beinflusst die Event-Verarbeitung nicht.
 - `visible`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist und sich der Mauszeiger entweder im Inneren (z. B. 'fill') oder über einem Umgrenzung (z. B. 'stroke') des Elements befindet. Die Werte der `stroke- `und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn die `visibility` Eigenschaft auf `visible` gesetzt ist und sich der Mauszeiger entweder im Inneren (z. B. 'fill') oder über einem Umgrenzung (z. B. 'stroke') des Elements befindet. Die Werte der `stroke-`und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
 - `painted`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger im Inneren (z. B. 'fill') des Elements befindet, und die `fill-`Eigenschaft einen anderen Wert als `none` hat, oder sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befindet, und die `stroke-`Eigenschaft einen anderen Wert als `none `hat. Die Werte der `stroke- `und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger im Inneren (z. B. 'fill') des Elements befindet, und die `fill-`Eigenschaft einen anderen Wert als `none` hat, oder sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befindet, und die `stroke-`Eigenschaft einen anderen Wert als `none`hat. Die Werte der `stroke-`und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
 - `fill`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger im Inneren (z. B. 'fill') des Elements befindet. Die Werte der `stroke- `und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger im Inneren (z. B. 'fill') des Elements befindet. Die Werte der `stroke-`und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
 - `stroke`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befinden. Die Werte der `stroke- `und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger über einem Umgrenzung (z. B. 'stroke') des Elements befinden. Die Werte der `stroke-`und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
 - `all`
-  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger entweder im Inneren (z. B. 'fill') oder über einem Umgrenzung (z. B. 'stroke') des Elements befinden. Die Werte der `stroke- `und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
+  - : Nur SVG. Das Element kann nur Ziel eines Mouse-Events werden, wenn sich der Mauszeiger entweder im Inneren (z. B. 'fill') oder über einem Umgrenzung (z. B. 'stroke') des Elements befinden. Die Werte der `stroke-`und `fill-`Eigenschaft beinflussen die Event-Verarbeitung nicht.
 
 ### Formale Syntax
 

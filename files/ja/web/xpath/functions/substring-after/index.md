@@ -21,8 +21,6 @@ translation_of: Web/XPath/Functions/substring-after
 - _`haystack`_
   - : 評価される文字列。この文字列の一部が返される。
 
-<!---->
-
 - _`needle`_
   - : 検索する文字列。_`haystack`_ 内で最初に見つかった*`needle`* よりも後にあるすべての文字が返される。
 

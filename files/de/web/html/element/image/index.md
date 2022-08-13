@@ -26,7 +26,7 @@ Es war vielleicht einmal Bestandteil der Spezifikation, aber niemand scheint sic
 
 ## Browserkompatibilität
 
-Im Allgemeinen werden Browser versuchen das Element in ein `<img>` abzubilden, jedoch nur wenn das {{htmlattrxref("src", "img")}}-Attribute ebenso angegeben ist. Die Erstellung eines` <image>`-Elements ohne ein `src`-Attribut resultiert in ein `HTMLElement`-Objekt mit dem lokalen Elementnamen "image". Wenn das Element jedoch mit einem `src`-Attribut erstellt wurde, ist das Ergebnis stattdessen ein `HTMLImageElement` und sein lokaler Elementname wird geändert zu "img".
+Im Allgemeinen werden Browser versuchen das Element in ein `<img>` abzubilden, jedoch nur wenn das {{htmlattrxref("src", "img")}}-Attribute ebenso angegeben ist. Die Erstellung eines`<image>`-Elements ohne ein `src`-Attribut resultiert in ein `HTMLElement`-Objekt mit dem lokalen Elementnamen "image". Wenn das Element jedoch mit einem `src`-Attribut erstellt wurde, ist das Ergebnis stattdessen ein `HTMLImageElement` und sein lokaler Elementname wird geändert zu "img".
 
 Dennoch bedeutet dies nicht, dass es eine gute Idee ist das Element zu nutzen. Ist es nämlich nicht.
 

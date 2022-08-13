@@ -63,8 +63,6 @@ Jeśli jako wartość początkową określony zostanie dowolny obiekt, w tym obi
 - `Boolean.length`
   - : Length property whose value is 1.
 
-<!---->
-
 - {{jsxref("Boolean.prototype")}}
   - : Definiuje własność współdzieloną przez wszystkie obiekty Boolean.
 

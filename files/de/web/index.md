@@ -40,6 +40,7 @@ Das offene Web bietet unglaubliche Möglichkeiten für Entwickler, die Webseiten
   - : **Scalable Vector Graphics (SVG)** ermöglichen es Ihnen, Bilder als Gruppen von Vektoren und Formen zu beschreiben. Dadurch kann reibungslos skaliert werden und die Objekte sehen in jeder Darstellungsgröße gleich aus.
 - [WebGL](/de/docs/Web/WebGL "/en-US/docs/Web/WebGL")
   - : **WebGL** ermöglicht 3D-Grafiken im Internet durch die Einführung einer API, die an OpenGL ES 2.0 angelehnt ist, und in HTML {{HTMLElement("canvas")}} Elementen verwendet werden kann.
+
 - ### Audio, Video, und Multimedia
 
   [Webmedientechnologien](/de/docs/Web/Media)
@@ -72,8 +73,6 @@ Das offene Web bietet unglaubliche Möglichkeiten für Entwickler, die Webseiten
   - : Dokumentation für Entwickler von Webanwendungen; Web Apps sind echte “Write-once, deploy anywhere” Apps für Mobil, Desktop und Firefox OS.
 - [Barrierefreiheit](/de/docs/Web/Barrierefreiheit)
   - : Barrierefreiheit in der Webentwicklung bedeutet, dass so viele Menschen wie möglich Webseiten verwenden können, auch wenn die Fähigkeiten dieser Menschen in irgendeiner Weise eingeschränkt sind. Hier informieren wir über die Entwicklung von zugänglichen Inhalten.
-
-<!---->
 
 - [Security](/de/docs/Web/Security)
   - : Lerne hier, wie du es unterbindest, dass deine Webseite oder App unzulässige Daten herausgibt.

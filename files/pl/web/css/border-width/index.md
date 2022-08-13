@@ -71,10 +71,10 @@ Uwaga: Wartość `em` jest również dopuszczalna.
 
 | Przeglądarka      | Najniższa wersja |
 | ----------------- | ---------------- |
-| Internet Explorer |                  |
-| Firefox           |                  |
-| Netscape          |                  |
-| Opera             |                  |
+| Internet Explorer |                  |
+| Firefox           |                  |
+| Netscape          |                  |
+| Opera             |                  |
 
 
 

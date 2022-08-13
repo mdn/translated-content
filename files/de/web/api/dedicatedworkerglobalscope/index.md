@@ -23,7 +23,7 @@ _Dieses Interface erbt seine Eigenschaften aus dem Interface _{{domxref("WorkerG
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Gibt das mit dem Worker verbundene {{domxref("WorkerLocation")}} Objekt zurück. Bei `WorkerLocation` handelt es sich um ein spezifisches location Objekt, welches aus Teilen des {{domxref("Location")}} Objekts des Browserscope besteht, jedoch für den Worker angepasst wurde.
 - {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
-  - : Git das mit dem Worker verbundene {{domxref("WorkerNavigator")}} Objekt zurück. Bei `WorkerNavigator `handelt es sich um ein spezifisches navigations Objekt, welches aus Teilen des {{domxref("Navigator")}} Objekts des Browserscope besteht, jedoch für den Worker angepasst wurde.
+  - : Git das mit dem Worker verbundene {{domxref("WorkerNavigator")}} Objekt zurück. Bei `WorkerNavigator`handelt es sich um ein spezifisches navigations Objekt, welches aus Teilen des {{domxref("Navigator")}} Objekts des Browserscope besteht, jedoch für den Worker angepasst wurde.
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
   - : Git das mit dem Worker verbunde {{domxref("Performance")}} Objekt zurück. Dabei handelt es sich um ein reguläres performance Objekt, welches jedoch nur teile der Eigenschaften und Methoden umfasst.
 

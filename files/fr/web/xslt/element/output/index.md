@@ -35,47 +35,29 @@ Aucun.
 - `method`
   - : Définit le format de sortie.
 
-<!---->
-
 - `version`
   - : Définit la valeur de l'attribut version dans la déclaration XML ou HTML du document de sortie. Cet attribut n'est utilisé qu'avec `method="html"` ou `method="xml"`.
-
-<!---->
 
 - `encoding`
   - : Définit la valeur de l'attribut `encoding` dans le document de sortie.
 
-<!---->
-
 - `omit-xml-declaration`
   - : Indique d'inclure ou non, une déclaration XML dans le document de sortie. Les valeurs possibles sont `yes` ou `no`.
-
-<!---->
 
 - `standalone` (Non supporté)
   - : Indique, si utilisé, qu'une déclaration autonome doit être incluse dans le document de sortie et donne sa valeur. Les valeurs possibles sont `yes` ou `no`.
 
-<!---->
-
 - `doctype-public`
   - : Définit la valeur de l'attribut `PUBLIC` de la déclaration du `DOCTYPE` dans le document de sortie.
-
-<!---->
 
 - `doctype-system`
   - : Définit la valeur de l'attribut `SYSTEM` de la déclaration du `DOCTYPE` dans le document de sortie.
 
-<!---->
-
 - `cdata-section-elements`
   - : Liste les éléments dont le contenu texte doit être écrit en tant que section `CDATA`. Les éléments sont séparés par des espaces.
 
-<!---->
-
 - `indent` (Non supporté.)
   - : Spécifie si la sortie doit indentée pour indiquer sa structure hiérarchique.
-
-<!---->
 
 - `media-type` (Non supporté.)
   - : Définit le type MIME du document de sortie.

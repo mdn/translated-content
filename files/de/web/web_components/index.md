@@ -33,11 +33,11 @@ Webkomponenten zielen darauf ab, diese Probleme zu lösen. Bestehend aus drei Ha
 
 Die grundsätzliche Herangehensweise für das Implementieren einer Webkomponente sieht im Allgemeinen so aus:
 
-1.  Erstellen einer Klasse oder einer Funktion, in der die Funktionalität der Webkomponente festgelegt wird. Falls Sie hierzu eine Klasse einsetzen, dann verwenden Sie die ECMAScript 2015-Syntax (siehe auch [Klassen](/de/docs/Web/JavaScript/Reference/Classes)).
-2.  Registrieren des neuen benutzerdefinierten Elements mithilfe der {{domxref("CustomElementRegistry.define()")}}-Methode. Dieser Methode werden der zu definierende Elementname, die Klasse bzw. Funktion, in der die Funktionalität definiert ist, sowie optional das Element, von dem das neue benutzerdefinierte Element erbt, übergeben.
-3.  Falls erforderlich: Anfügen eines Schatten-DOMs zum benutzerdefinierten Element mithilfe der {{domxref("Element.attachShadow()")}}-Methode. Kindelemente, Ereignisbehandlungsroutinen usw. werden dem Schatten-DOM unter Verwendung der üblichen DOM-Methoden hinzugefügt.
-4.  Falls erforderlich: Definieren einer HTML-Vorlage mithilfe von {{htmlelement("template")}} und {{htmlelement("slot")}}. Auch hier werden die üblichen DOM-Methoden verwendet, um die HTML-Vorlage anschließend zu kopieren und zum Schatten-DOM hinzuzufügen.
-5.  Das so geschaffene benutzerdefinierte Element kann überall auf der Seite eingefügt werden — ebenso wie ein normales HTML-Element.
+1. Erstellen einer Klasse oder einer Funktion, in der die Funktionalität der Webkomponente festgelegt wird. Falls Sie hierzu eine Klasse einsetzen, dann verwenden Sie die ECMAScript 2015-Syntax (siehe auch [Klassen](/de/docs/Web/JavaScript/Reference/Classes)).
+2. Registrieren des neuen benutzerdefinierten Elements mithilfe der {{domxref("CustomElementRegistry.define()")}}-Methode. Dieser Methode werden der zu definierende Elementname, die Klasse bzw. Funktion, in der die Funktionalität definiert ist, sowie optional das Element, von dem das neue benutzerdefinierte Element erbt, übergeben.
+3. Falls erforderlich: Anfügen eines Schatten-DOMs zum benutzerdefinierten Element mithilfe der {{domxref("Element.attachShadow()")}}-Methode. Kindelemente, Ereignisbehandlungsroutinen usw. werden dem Schatten-DOM unter Verwendung der üblichen DOM-Methoden hinzugefügt.
+4. Falls erforderlich: Definieren einer HTML-Vorlage mithilfe von {{htmlelement("template")}} und {{htmlelement("slot")}}. Auch hier werden die üblichen DOM-Methoden verwendet, um die HTML-Vorlage anschließend zu kopieren und zum Schatten-DOM hinzuzufügen.
+5. Das so geschaffene benutzerdefinierte Element kann überall auf der Seite eingefügt werden — ebenso wie ein normales HTML-Element.
 
 ## Übungen
 
@@ -96,8 +96,6 @@ Die grundsätzliche Herangehensweise für das Implementieren einer Webkomponente
   - : Weist einem Element einen Einschub innerhalb eines [Schatten-DOM](/de/docs/Web/Web_Components/Using_shadow_DOM)-Baums zu.
 - {{domxref("Slotable")}}
   - : Ein Mixin, das sowohl von {{domxref("Element")}}- als auch {{domxref("Text")}}-Nodes implementiert wird. Es definiert Methoden, die es den jeweiligen Nodes erlauben, Inhalt eines {{htmlelement("slot")}}-Elements zu werden. Das Mixin definiert ein Attribute: {{domxref("Slotable.assignedSlot")}}, das eine Referenz auf den Einschub liefert, in den die Node eingefügt wurde.
-
-<!---->
 
 - {{domxref("Element")}}-Erweiterungen
   - : Erweiterungen der `Element`-Schnittstelle, die sich auf Einschübe beziehen:\* {{domxref("Element.slot")}}: Liefert den Namen des Einschubs, der dem Element hinzugefügt wurde.

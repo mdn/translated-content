@@ -17,7 +17,7 @@ Die [Pseudoklasse](/de/docs/CSS/Pseudo-classes "Pseudo-classes") `:active` entsp
 
 Die Stile können von weiteren Pseudoklassen überschrieben werden: {{cssxref(":link")}}, {{cssxref(":hover")}} und {{cssxref(":visited")}}. Deshalb ist es wichtig, die _LVHA-Reihenfolge_ einzuhalten: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note:** **Hinweis:** Auf Systemen mit Mäusen mit mehreren Knöpfen, definiert CSS 3, dass die `:active` Pseudoklasse nur dem Hauptknopf zugewiesen wird; bei Mäusen für Rechtshänder ist dies typischerweise der linkeste Knopf.
+> **Hinweis:** Auf Systemen mit Mäusen mit mehreren Knöpfen, definiert CSS 3, dass die `:active` Pseudoklasse nur dem Hauptknopf zugewiesen wird; bei Mäusen für Rechtshänder ist dies typischerweise der linkeste Knopf.
 
 ## Beispiel
 

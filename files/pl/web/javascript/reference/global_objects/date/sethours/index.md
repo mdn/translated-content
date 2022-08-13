@@ -28,17 +28,11 @@ Ustawia godziny dla określonej daty stosownie do czasu lokalnego.
 - `hoursValue`
   - : Liczba całkowita pomiędzy 0 i 23, reprezentująca godziny.
 
-<!---->
-
 - `minutesValue`
   - : Liczba całkowita pomiędzy 0 i 59, reprezentująca minuty.
 
-<!---->
-
 - `secondsValue`
   - : Liczba całkowita pomiędzy 0 i 59, reprezentująca sekundy. Jeśli określisz parametr `secondsValue`, musisz także określić `minutesValue`.
-
-<!---->
 
 - `msValue`
   - : A Liczba pomiędzy 0 i 999, reprezentująca milisekundy. Jeśli określisz parametr `msValue`, musisz także określić `minutesValue` i `secondsValue`.

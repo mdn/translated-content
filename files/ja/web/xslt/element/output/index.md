@@ -35,47 +35,29 @@ translation_of: Web/XSLT/Element/output
 - `method`
   - : 出力形式を指定します。
 
-<!---->
-
 - `version`
   - : 出力文書内の XML 宣言または HTML 宣言の version 属性の値を指定します。この属性は `method="html"` または `method="xml"` の場合にのみ使用されます。
-
-<!---->
 
 - `encoding`
   - : 出力文書の `encoding` 属性の値を指定します。
 
-<!---->
-
 - `omit-xml-declaration`
   - : XML 宣言を出力に含めるかどうかを示します。許容可能な値は "`yes`" または "`no`" です。
-
-<!---->
 
 - `standalone` (サポートされていません)
   - : 存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は "yes" または "no" です。
 
-<!---->
-
 - `doctype-public`
   - : 出力文書の `DOCTYPE` 宣言の `PUBLIC` 属性の値を指定します。
-
-<!---->
 
 - `doctype-system`
   - : 出力文書の `DOCTYPE` 宣言の `SYSTEM` 属性の値を指定します。
 
-<!---->
-
 - `cdata-section-elements`
   - : テキストの内容を `CDATA` セクションとして記述する要素をリストします。要素は空白で区切る必要があります。
 
-<!---->
-
 - `indent` (サポートされていません)
   - : 階層構造を示すために出力を字下げするかどうかを指定します。
-
-<!---->
 
 - `media-type` (サポートされていません)
   - : 出力ドキュメントの MIME タイプを指定します。

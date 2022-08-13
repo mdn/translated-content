@@ -22,12 +22,8 @@ Funkcja `format-number` ocenia liczbę i zwraca łańcuch znaków reprezentując
 - `liczba`
   - : Liczba do sformatowania
 
-<!---->
-
 - `wzorzec`
   - : Łańcuch znaków w formacie klasy DecimalFormat [JDK 1.1](http://java.sun.com/products/archive/jdk/1.1/) (Dokumentacja JDK 1.1 nie jest dostępna. Dostępne są informacje dotyczące [Java SE 6 DecimalFormat](http://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html).).
-
-<!---->
 
 - `format_dziesiętny` (opcjonalnie)
   - : Nazwa elementu [`xsl:decimal-format`](pl/XSLT/decimal-format) definiująca format liczby, który ma zostać użyty. Jeśli argument zostanie pominięty, użyty zostanie format dziesiętny.

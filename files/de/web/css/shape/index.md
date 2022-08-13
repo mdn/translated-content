@@ -33,17 +33,11 @@ Die `rect()` Funktion erstellt einen Bereich in Form eines Rechtecks.
 - _top_
   - : Ist eine {{cssxref("&lt;length&gt;")}}, die den Versatz der Oberkante des Rechtecks relativ zur Oberkante der Element Box beschreibt.
 
-<!---->
-
 - _right_
   - : Ist eine {{cssxref("&lt;length&gt;")}}, die den Versatz der rechten Kante des Rechtecks relativ zur linken Kante der Element Box beschreibt.
 
-<!---->
-
 - _bottom_
   - : Ist eine {{cssxref("&lt;length&gt;")}}, die den Versatz der Unterkante des Rechtecks relativ zur Oberkante der Element Box beschreibt.
-
-<!---->
 
 - _left_
   - : Ist eine {{cssxref("&lt;length&gt;")}}, die den Versatz der linken Kante des Rechtecks relativ zur linken Kante der Element Box beschreibt.

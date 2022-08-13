@@ -4,9 +4,9 @@ slug: Web/CSS/Reference
 translation_of: Web/CSS/Reference
 original_slug: Web/CSS/CSS_Reference
 ---
-Specyfikacja CSS zawiera wszystkie standardowe właściwości [CSS](/pl/docs/CSS "CSS"), w tym  [pseudo-klas](/pl/docs/CSS/Pseudo-classes) i [pseudo-elementow](/pl/docs/CSS/Pseudo-elements), zasad używania [znaku @](/pl/docs/CSS/At-rule), i selektorów w porządku alfabetycznym. Taka organizacja specyfikacji pozwala na szybki dostęp do szczegółowych informacji o każdym elemencie specyfikacji.
+Specyfikacja CSS zawiera wszystkie standardowe właściwości [CSS](/pl/docs/CSS "CSS"), w tym  [pseudo-klas](/pl/docs/CSS/Pseudo-classes) i [pseudo-elementow](/pl/docs/CSS/Pseudo-elements), zasad używania [znaku @](/pl/docs/CSS/At-rule), i selektorów w porządku alfabetycznym. Taka organizacja specyfikacji pozwala na szybki dostęp do szczegółowych informacji o każdym elemencie specyfikacji.
 
-Specyfikacja CSS nie tylko opisuje ustandaryzowane właściwości CSS1 i CSS2.1, ale odnosi się również do specyfikacji najnowszej wersji - [CSS3](/en/CSS/CSS3 "CSS3"), zarówno elementów w fazie koncepcji jak i elementów zatwierdzonych.
+Specyfikacja CSS nie tylko opisuje ustandaryzowane właściwości CSS1 i CSS2.1, ale odnosi się również do specyfikacji najnowszej wersji - [CSS3](/en/CSS/CSS3 "CSS3"), zarówno elementów w fazie koncepcji jak i elementów zatwierdzonych.
 
 Zobacz także [rozszerzenie CSS Mozilli](/pl/docs/CSS/CSS_Reference/Mozilla_Extensions) skonstrułowanych dla programów opartych na Gecko, z prefiksem -moz; oraz [rozszerzenia CSS WebKit](/pl/docs/CSS/CSS_Reference/Webkit_Extensions) dla programów opartych na tym silniku. Sprawdź [zestawienie właściwości wszystko prefiksów CSS](http://peter.sh/experiments/vendor-prefixed-css-property-overview/) autorstwa Petera Beverloo.
 

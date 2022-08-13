@@ -9,6 +9,6 @@ Ein Crawler ist ein Programm – oft auch Bot oder Robot genannt –, das system
 
 - {{Interwiki("wikipedia", "Webcrawler")}} auf Wikipedia
 
-1.  [MDN Web Docs Glossary](/de/docs/Glossary)
+1. [MDN Web Docs Glossary](/de/docs/Glossary)
 
-    1.  {{Glossary("Search engine")}}
+    1. {{Glossary("Search engine")}}

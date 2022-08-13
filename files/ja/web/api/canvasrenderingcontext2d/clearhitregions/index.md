@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clearHitRegions
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-Canvas 2D API の**`CanvasRenderingContext2D`\*\***`.clearHitRegions()`\*\*メソッドは canvas からすべてのヒット領域を削除します。
+Canvas 2D API の**`CanvasRenderingContext2D.clearHitRegions()`**メソッドは canvas からすべてのヒット領域を削除します。
 
 ## 構文
 

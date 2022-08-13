@@ -85,8 +85,6 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/label", "label")}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
 
-<!---->
-
 - {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
   - : Extends the scope chain for a statement.
 
@@ -95,10 +93,10 @@ For an alphabetical listing see the sidebar on the left.
 | Specification                                                                                                                                                                    | Status                       | Comment                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------- |
 | {{SpecName('ES1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES1')}}         | Initial definition                           |
-| {{SpecName('ES3', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES3')}}         |                                              |
-| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES5.1')}}     |                                              |
+| {{SpecName('ES3', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES3')}}         |                                              |
+| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES5.1')}}     |                                              |
 | {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}}         | {{Spec2('ES6')}}         | New: function\*, let, for...of, yield, class |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ESDraft')}} |                                              |
+| {{SpecName('ESDraft', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ESDraft')}} |                                              |
 
 ## Browser compatibility
 

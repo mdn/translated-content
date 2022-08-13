@@ -17,7 +17,7 @@ Die **`unicode-bidi`** [CSS](/de/docs/Web/CSS) Eigenschaft zusammen mit der {{Cs
 
 Die `unicode-bidi` und{{cssxref("direction")}} Eigenschaften sind die einzigen zwei Werte welche nicht von der {{cssxref("all")}} Kurzform betroffen sind.
 
-> **Note:** **Hinweis:** Die Eigenschaft ist für DTD Designer gedacht. Web Designer und ähnliche sollten es nicht überschreiben.
+> **Hinweis:** Die Eigenschaft ist für DTD Designer gedacht. Web Designer und ähnliche sollten es nicht überschreiben.
 
 {{cssinfo}}
 

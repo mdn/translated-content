@@ -34,8 +34,6 @@ gdzie
 
     window.setTimeout('window.parent.generateOutput()', 1000);
 
-<!---->
-
     function generateOutput(aConcise) {
       if(aConcise)
         parent.generateConciseOutput();

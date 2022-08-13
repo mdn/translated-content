@@ -42,8 +42,6 @@ Przykład nada własności wszystkim elementom `A`, na których nie stoi kursor.
 
     a:link:visited {własności }
 
-<!---->
-
     body > input:not([disabled]):not([type=text]) {własności }
 
 Przykład przypisze własności wszystkim elementom `INPUT`, które są dziećmi `BODY` oraz, które nie mają atrybutu `DISABLED` i jednocześnie nie są typu `TEXT`.

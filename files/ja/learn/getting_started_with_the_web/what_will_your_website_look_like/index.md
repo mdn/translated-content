@@ -71,7 +71,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 1.  [Google Fonts](http://www.google.com/fonts) に行き、ページをスクロールして気に入ったフォントを見つけます。右側のコントロールを使って、結果をフィルタすることもできます。
 2.  使いたいフォントの上にある**プラス** (追加) アイコンをクリックします。
-3.  ページ下部のパネルにある "\* Family Selected"\_ \_と書かれたボタンをクリックします ("\*" は選択したフォントの数によって変わります)。
+3.  ページ下部のパネルにある "\* Family Selected" と書かれたボタンをクリックします ("\*" は選択したフォントの数によって変わります)。
 4.  ポップアップボックスに、Google が用意してくれた数行のコードが表示されるので、あとでテキストエディタに入力する時のためにコピーしておきます。
 
 ![](https://mdn.mozillademos.org/files/13871/font1.png)

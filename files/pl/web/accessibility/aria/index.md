@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/Accessibility/ARIA
 ---
-Accessible Rich Internet Applications **(ARIA)** jest zbiorem atrybutów, które umożliwiają rozwój aplikacji webowych (szczególnie tych, które wykorzystują AJAX, Javascript itp.) w taki sposób, iż są one przyjaźniejsze ludziom z niepełnosprawnościami.  Dla przykładu, ARIA umożliwia bezproblemową nawigację po stronie, pomoce przy typowaniu, przyjazne użytkownikowi aktualizacje treści, i wiele, wiele więcej.
+Accessible Rich Internet Applications **(ARIA)** jest zbiorem atrybutów, które umożliwiają rozwój aplikacji webowych (szczególnie tych, które wykorzystują AJAX, Javascript itp.) w taki sposób, iż są one przyjaźniejsze ludziom z niepełnosprawnościami.  Dla przykładu, ARIA umożliwia bezproblemową nawigację po stronie, pomoce przy typowaniu, przyjazne użytkownikowi aktualizacje treści, i wiele, wiele więcej.
 
 ARIA jest zbiorem specjalnych atrybutów poprawiajacych dostępność aplikacji, które mogą zostać dodane do dowolnego języka znaczników. Jednakże atrybuty te są przystosowane głównie pod HTML, co powoduje, iż są one wyłącznie tam stosowane.
 Atrybut `role` definiuje specjalne role dla obiektów (takich jak `article` , `alert` , `slider` , czy `button` ). Dodatkowo atrubuty ARIA dostarczają inne przydatne opcje, takie jak opis do `form` , albo właściwą długość pasku postępu (np. instalacji, aktualizacji lub innego działania). Atrybuty aria moga także zostać użyte w celu aktywacji, deaktywacji, czy ustalenia innego stanu obiektów (np. stanu `button`)

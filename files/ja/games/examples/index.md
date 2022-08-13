@@ -17,8 +17,6 @@ translation_of: Games/Examples
 - [Orpega](http://orpe.ga/)
   - : Massively-multiplayer space-themed 2d shooter made in straight HTML5/JavaScript without an engine and NodeJS for the server (http\://orpe.ga/)
 
-<!---->
-
 - [Beloola](http://www.beloola.com)
   - : WebVR platform to connect passionate people. Experience both available on 2D screens and on VR HMDs (_Settings / Switch to VR mode_).
 - [Tanx](http://playcanv.as/p/aP0oxhUr)

@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 {{APIRef}}
 
-Die **`CanvasRenderingContext2D`\*\***`.textAlign`\*\* Eigenschaft der Canvas 2D API spezifiert die aktuelle Textausrichtung welche beim zeichnen von Text verwendet wird.
+Die **`CanvasRenderingContext2D.textAlign`** Eigenschaft der Canvas 2D API spezifiert die aktuelle Textausrichtung welche beim zeichnen von Text verwendet wird.
 
 Nehmen Sie in Acht, dass die Ausrichtung auf dem x Wert der {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} Methode basiert. Wenn `textAlign` `"center"` ist, dann würde der Text an der Stelle `x - (width / 2)` gezeichnet werden.
 

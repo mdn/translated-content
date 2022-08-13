@@ -28,8 +28,6 @@ translation_of: Web/CSS/@font-face
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : Определяет как отображается шрифт, основываясь на том, был ли он загружен и готов ли к использованию.
 
-<!---->
-
 - {{cssxref("@font-face/font-family", "font-family")}}
   - : Указывает имя шрифта, которое будет использоваться для задания свойств шрифта.
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
@@ -51,8 +49,6 @@ translation_of: Web/CSS/@font-face
     Чтобы дать браузеру возможность выбрать наиболее подходящий формат шрифта, его можно указать при объявлении внутри функции `format()`:
     src: url(ideal-sans-serif.woff) format("woff"),
     url(basic-sans-serif.ttf) format("opentype");Список доступных форматов: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, и `"svg"`.
-
-<!---->
 
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : Диапазон Unicode кодов, который будет использоваться в шрифте.

@@ -16,7 +16,7 @@ original_slug: Web/CSS/:-webkit-autofill
 
 Die `:-webkit-autofill` CSS [Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes) matcht, wenn der Wert eines {{HTMLElement("input")}} Elements durch den Browser vorausgefüllt wird.
 
-> **Note:** **Hinweis:** Die User Agent Stylesheets einiger Browser verwenden `!important` in ihren `:-webkit-autofill` Stildeklarationen, was sie durch Webseiten nicht überschreibbar macht, ohne dass auf JavaScript Hacks zurückgegriffen werden muss.
+> **Hinweis:** Die User Agent Stylesheets einiger Browser verwenden `!important` in ihren `:-webkit-autofill` Stildeklarationen, was sie durch Webseiten nicht überschreibbar macht, ohne dass auf JavaScript Hacks zurückgegriffen werden muss.
 
 ## Spezifikationen
 

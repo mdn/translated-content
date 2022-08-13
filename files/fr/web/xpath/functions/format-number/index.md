@@ -21,12 +21,8 @@ format-number( nombre , motif [, format-décimal] )
 - `nombre`
   - : Le nombre à formater.
 
-<!---->
-
 - `motif`
   - : Une chaîne au format de la classe [Decimal Format (en)](http://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) du JDK 1.1. La notice du JDK 1.1 n'est plus disponible. Vous trouverez ici la notice pour le JSE 6: [Decimal Format (en)](http://java.sun.com/javase/6/docs/api/java/text/DecimalFormat.html)
-
-<!---->
 
 - `format-décimal` (optionnel)
   - : Le nom d'un élément [`xsl:decimal-format`](fr/XSLT/decimal-format) qui définit le format de nombre à utiliser. Si il est omis, le format décimal par défaut est utilisé.

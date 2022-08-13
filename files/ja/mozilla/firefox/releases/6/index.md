@@ -53,8 +53,6 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 - [Server-sent events](/ja/docs/Server-sent_events "Server-sent_events")
   - : Server-sent events はサーバが手元で生成された DOM イベントと同じようにイベントを送出するよう、Web アプリケーションが尋ねるための機能です。
 
-<!---->
-
 - これまでずっと、空文字列を返すだけだった `navigator.securityPolicy` プロパティが完全に削除されました。
 - [`BlobBuilder`](/ja/docs/Web/API/BlobBuilder "BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。") がサポートされました。現時点では接頭辞付きの実装 (`MozBlobBuilder`) となっています。
 - [`document.height`](/ja/docs/Web/API/Document/height "現在の document オブジェクトの高さを返します。多くの場合、これは現在の文書の <body> 要素の高さと同じ値です。"), [`document.width`](/ja/docs/Web/API/Document/width "現在の文書の <body> 要素の現在の幅をピクセル値で返します。") が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877 "FIXED: remove document.height / document.width")
@@ -98,8 +96,6 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 
 - [WebSocket](/ja/docs/WebSockets "WebSockets")
   - : WebSocket プロトコルのサポートがバージョン 07 に更新されました。また、グローバルオブジェクトの`WebSocket`オブジェクトが`MozWebSocket`に改称されました。接頭辞のないオブジェクトの検出を目的としたときに問題となるため、それを防ぐ目的です。
-
-<!---->
 
 - `Content-Disposition` ヘッダの構文解析が修正され、バックスラッシュでエスケープされた ASCII 文字が適切に文字そのものとして処理されるようになりました。これまではその文字をアンダースコア ("`_`")に置き換えるという誤った処理がなされていました。
 - `Set-Cookie` ヘッダのパスの値において、クォートが適切に処理されるようになりました。これまでクォートを使った場合はそれがデリミタではなく、パスの文字列として認識されていました。**この変更により、いくつかのサイトで互換性の問題が発生する可能性があります。**製作者はコードをチェックすることが望まれます。
@@ -194,8 +190,6 @@ Firefox 6 へアドオンを対応させるために必要な作業の概要は 
 
 - [Firefox 6 の後方互換性に関わる修正のまとめ](https://dev.mozilla.jp/2011/06/firefox6-backward-compatibility/)
 - [高速リリースサイクルに関するよくある質問](http://mozilla.jp/firefox/preview/faq/)
-
-<!---->
 
 - [Firefox 5 for developers](/ja/docs/Mozilla/Firefox/Releases/5)
 - [Firefox 4 for developers](/ja/docs/Mozilla/Firefox/Releases/4)

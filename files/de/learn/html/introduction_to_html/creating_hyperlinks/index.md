@@ -48,7 +48,7 @@ Hyperlinks, kurz Links, sind ein wichtiger Teil des Internets, denn sie machen e
 
 Hyperlinks sind eine der Erfindungen, welche das _Internet_ zu einem einzigen zusammenhängenden Netzwerk machen. Sie sind von Beginn an ein Teil des Netzes (engl. "_web_") und definieren dieses, indem sie uns erlauben von einem Dokument auf ein anderes Dokument (oder eine andere Quelle) zu verweisen. Auch auf bestimmte Inhalte einer Webseite kann direkt verlinkt werden, genauso wie auch auf Apps per Hyperlink verwiesen werden kann. Fast alles im Internet kann zu einem Link konvertiert werden und mit diesem kann die entsprechende Web-Adresse ({{glossary("URL")}}) im Internet von einem Browser gefunden werden.
 
-> **Note:** **Hinweis**: Eine URL kann auf HTML-Dateien, Textdateien, Bilder, Dokumente, Video- oder Audiodateien verweisen und auf alles andere, was im Internet präsentiert werden kann. Wenn der Browser nicht weiß, wie er mit einer Datei umgehen soll, fragt er nach, ob die Datei geöffnet werden soll, wodurch das öffnen der Datei an ein anderes Programm auf dem Computer abgegeben wird, oder ob sie herunter geladen werden soll, damit man später diese Datei lokal nutzen kann.
+> **Hinweis:** Eine URL kann auf HTML-Dateien, Textdateien, Bilder, Dokumente, Video- oder Audiodateien verweisen und auf alles andere, was im Internet präsentiert werden kann. Wenn der Browser nicht weiß, wie er mit einer Datei umgehen soll, fragt er nach, ob die Datei geöffnet werden soll, wodurch das öffnen der Datei an ein anderes Programm auf dem Computer abgegeben wird, oder ob sie herunter geladen werden soll, damit man später diese Datei lokal nutzen kann.
 
 Die Webseite von BBC enthält zum Beispiel eine große Anzahl an Links, welche auf verschiedene Nachrichtenartikel verweisen, aber auch zu verschiedenen Bereichen der Website (Navigation), Login/Registrations-Seiten (für Benutzeraccounts) und mehr.
 
@@ -83,7 +83,7 @@ Das gibt das folgende Resultat (der Text aus dem `>title<`-Attribut wird als Too
 
 Ich erstelle einen Link zu der [Mozilla Webseite](https://www.mozilla.org/en-US/ "Der beste Ort um mehr über Mozilla zu lernen und wie jeder dazu beitragen kann").
 
-> **Note:** **Hinweis**: Der Text aus dem `>title<`-Attribut wird nur durch den Mauszeiger angezeigt, was bedeutet, das Leute die nur die Tastatur benutzen oder Tablet/Smartphone Benutzer, diese Information nicht angezeigt bekommen. Wenn es sich also um eine wichtige Information handelt, wäre es wohl besser diese im normalen Text unterzubringen.
+> **Hinweis:** Der Text aus dem `>title<`-Attribut wird nur durch den Mauszeiger angezeigt, was bedeutet, das Leute die nur die Tastatur benutzen oder Tablet/Smartphone Benutzer, diese Information nicht angezeigt bekommen. Wenn es sich also um eine wichtige Information handelt, wäre es wohl besser diese im normalen Text unterzubringen.
 
 ### Aktives Lernen: Erstellen Sie Ihren einen Hyperlink
 
@@ -102,7 +102,7 @@ Wie oben schon erwähnt, können Sie fast alle Inhalte in Links umwandeln, auch 
   <img src="mozilla-image.png" alt="Mozilla Logo welches zur Mozilla Webseite verlinkt"></a>
 ```
 
-> **Note:** **Hinweis**: Sie werden mehr über das Einbinden von Bildern auf Webseiten in einem späteren Artikel erfahren.
+> **Hinweis:** Sie werden mehr über das Einbinden von Bildern auf Webseiten in einem späteren Artikel erfahren.
 
 ## Kurzer Exkurs zu URLs und Linkpfaden
 
@@ -137,7 +137,7 @@ Es gibt auch zwei Verzeichnisse in unserem Stammverzeichnis, namens `pdfs` und `
   <p>Ein Link zu meiner <a href="../pdfs/project-brief.pdf">Projektbeschreibung</a>.</p>
   ```
 
-> **Note:** **Hinweis**: Sie können mehrere Schritte kombinieren und so komplexe URL-Pfade angeben, zum Beispiel `../../../komplexer/pfad/zu/meiner/datei.html`.
+> **Hinweis:** Sie können mehrere Schritte kombinieren und so komplexe URL-Pfade angeben, zum Beispiel `../../../komplexer/pfad/zu/meiner/datei.html`.
 
 ### Innerhalb eines Dokuments verlinken
 
@@ -265,16 +265,16 @@ Sie müssen sich lokale Kopien der folgenden vier Seiten machen. Speichern Sie a
 
 Aufgaben:
 
-1.  Fügen Sie eine ungeordnete Liste an dem angezeigten Platz in einer der Dateien ein. Diese Liste soll alle Namen der zu verlinkenden Seiten beinhalten. Ein Navigationsmenü ist tatsächlich nur eine Liste von Links, semantisch ist dies also der richtige Weg eine Navigation zu erstellen.
-2.  Verändern Sie jeden Seitennamen in einen Link.
-3.  Kopieren Sie das fertige Navigationsmenü und fügen es auf alle Seiten ein.
-4.  Auf jeder einzelnen Seite löschen Sie den Link zu der Seite selbst. Es ist sinnlos auf einer Seite einen Link zu sich selbst zu beinhalten. Dazu dient der visuelle Unterschied als Indikator, auf welcher Seite man sich gerade befindet.
+1. Fügen Sie eine ungeordnete Liste an dem angezeigten Platz in einer der Dateien ein. Diese Liste soll alle Namen der zu verlinkenden Seiten beinhalten. Ein Navigationsmenü ist tatsächlich nur eine Liste von Links, semantisch ist dies also der richtige Weg eine Navigation zu erstellen.
+2. Verändern Sie jeden Seitennamen in einen Link.
+3. Kopieren Sie das fertige Navigationsmenü und fügen es auf alle Seiten ein.
+4. Auf jeder einzelnen Seite löschen Sie den Link zu der Seite selbst. Es ist sinnlos auf einer Seite einen Link zu sich selbst zu beinhalten. Dazu dient der visuelle Unterschied als Indikator, auf welcher Seite man sich gerade befindet.
 
 Wenn Sie fertig sind, dann sollte die Webseite wie folgt aussehen:
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
 
-> **Note:** **Hinweis**: Falls Sie stecken bleiben und nicht weiter wissen, dann können Sie sich unsere korrekte Lösung anschauen: [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up)
+> **Hinweis:** Falls Sie stecken bleiben und nicht weiter wissen, dann können Sie sich unsere korrekte Lösung anschauen: [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up)
 
 ## E-mail Links
 
@@ -303,7 +303,7 @@ Hier ist ein Beispiel das cc, bcc, subject und body beinhaltet:
 </a>
 ```
 
-> **Note:** **Hinweis:** Die Werte der Felder müssen URL gerecht geschrieben sein, dass heißt mit speziellen Charakteren anstatt Leerzeichen, Umlauten und Sonderzeichen. Bemerken Sie auch die Verwendung des Fragezeichens (`?`), um die eigentliche URL von den Feldwerten abzugrenzen und das Und-Zeichen (&), um die Feldwerte voneinander zu trennen. Dies ist Standard URL-Query Notation. Sie werden mehr darüber in einem fortgeschrittenen Modul lernen.
+> **Hinweis:** Die Werte der Felder müssen URL gerecht geschrieben sein, dass heißt mit speziellen Charakteren anstatt Leerzeichen, Umlauten und Sonderzeichen. Bemerken Sie auch die Verwendung des Fragezeichens (`?`), um die eigentliche URL von den Feldwerten abzugrenzen und das Und-Zeichen (&), um die Feldwerte voneinander zu trennen. Dies ist Standard URL-Query Notation. Sie werden mehr darüber in einem fortgeschrittenen Modul lernen.
 
 Hier sind noch ein paar Beispiele für `mailto` URLs:
 

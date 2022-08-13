@@ -88,7 +88,7 @@ Wenn der Benutzer noch einmal Zurück drückt, ändert sich die URL zu http\://m
 - **title** — Aktuell ignoriert Firefox diesen Parameter, wenngleich er in Zukunft verwendet werden könnte. Um gegenüber zukünftigen Änderungen abgesichert zu sein, empfiehlt sich, einen leeren String zu übergeben. Alternativ kann man hier einen kurzen Titel für den Status hinterlassen.
 - **URL** — Der neue history-Eintrag erhält mit diesem Parameter seine URL. Man beachte, dass der Browser nicht versuchen wird, nach einem Aufruf von `pushState()` diese URL zu laden, aber später dennoch versuchen könnte, beispielsweise nachdem der Nutzer seinen Browser neu gestartet hat. Die neue URL muss nicht absolute sein; wenn sie relativ ist, wird sie relativ zur aktuellen URL aufgelöst. Die neue URL muss denselben Ursprung haben wie die aktuelle, sonst gibt `pushState()` eine _Exception_ zurück. Dieser Parameter ist optional; falls er übergeben wird, wird er auf die aktuelle URL des _documents_ gesetzt.
 
-> **Note:** **Anmerkung:** In Gecko 2.0 {{ geckoRelease("2.0") }} bis Gecko 5.0 {{ geckoRelease("5.0") }} wird das übergebene Objekt mittels JSON serialisiert. Ab Gecko 6.0 {{ geckoRelease("6.0") }}, übernimmt der[ structured clone algorithm](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm") die Serialisierung des Objekts. Dies erlaubt eine größere Vielfalt an Objekten, die sich sicher serialisieren lassen.
+> **Note:** **Anmerkung:** In Gecko 2.0 {{ geckoRelease("2.0") }} bis Gecko 5.0 {{ geckoRelease("5.0") }} wird das übergebene Objekt mittels JSON serialisiert. Ab Gecko 6.0 {{ geckoRelease("6.0") }}, übernimmt der[structured clone algorithm](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm") die Serialisierung des Objekts. Dies erlaubt eine größere Vielfalt an Objekten, die sich sicher serialisieren lassen.
 
 In gewissem Sinne ist der Aufruf von `pushState()` ähnlich dem Setzen von `window.location = "#foo"`, insofern beide einen weiteren history-Eintrag sowohl erzeugen als auch aktivieren, der mit dem aktuellen Document verbunden ist. Aber `pushState()` hat ein paar Vorteile:
 
@@ -107,7 +107,7 @@ Man beachte, dass `pushState()` niemals das Auslösen eines `hashchange`-Events 
 
 `replaceState()` ist insbesondere nützlich, um das _Status_-Objekt oder die URL des aktuellen history-Eintrages als Reaktion auf eine Benutzer-Aktion zu aktualisieren.
 
-> **Note:** **Anmerkung:** In Gecko 2.0 {{ geckoRelease("2.0") }} bis Gecko 5.0 {{ geckoRelease("5.0") }} wird das übergebene Objekt mittels JSON serialisiert. Ab Gecko 6.0 {{ geckoRelease("6.0") }}, übernimmt der[ structured clone algorithm](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm") die Serialisierung des Objekts. Dies erlaubt eine größere Vielfalt an Objekten, die sich sicher serialisieren lassen.
+> **Note:** **Anmerkung:** In Gecko 2.0 {{ geckoRelease("2.0") }} bis Gecko 5.0 {{ geckoRelease("5.0") }} wird das übergebene Objekt mittels JSON serialisiert. Ab Gecko 6.0 {{ geckoRelease("6.0") }}, übernimmt der[structured clone algorithm](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm") die Serialisierung des Objekts. Dies erlaubt eine größere Vielfalt an Objekten, die sich sicher serialisieren lassen.
 
 ### Beispiel für die replaceState()-Methode
 

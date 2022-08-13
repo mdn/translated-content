@@ -32,7 +32,7 @@ CSS bestimmt die _konkrete Objektgröße_ anhand dieser _inneren Maße_, der _an
 | {{cssxref("list-style-image")}}                                                                                                                                            | Die Größe eines Zeichens in `1em`                                                                                     |
 | {{cssxref("border-image")}}                                                                                                                                                | Die Größe des Randbildbereichs des Elements                                                                           |
 | {{cssxref("cursor")}}                                                                                                                                                        | Eine durch den Browser definierte Größe, die der normalen Größe eines Mauszeigers auf dem benutzten System entspricht |
-| Ersetzter Inhalt wie die Kombination der CSS Eigenschaft {{cssxref("content")}} mit den CSS Pseudoelementen {{cssxref("::after")}} und {{cssxref("::before")}} | Ein ` 300px`` × 150px  ` Rechteck                                                                                     |
+| Ersetzter Inhalt wie die Kombination der CSS Eigenschaft {{cssxref("content")}} mit den CSS Pseudoelementen {{cssxref("::after")}} und {{cssxref("::before")}} | Ein `300px`` × 150px` Rechteck                                                                                     |
 
 Die konkrete Objektgröße wird mit Hilfe des folgenden Algorithmus berechnet:
 
@@ -42,7 +42,7 @@ Die konkrete Objektgröße wird mit Hilfe des folgenden Algorithmus berechnet:
 
 Bilder können von diversen CSS Eigenschaften verwendet werden, wie {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} oder {{cssxref("cursor")}}.
 
-> **Note:** **Hinweis:** Nicht alle Browser unterstützen alle Arten von Bildern in allen Eigenschaften. Der Unterpunkt [Browser Kompatibilität](#Browser_Kompatibilität) enhält hierzu eine detaillierte Liste.
+> **Hinweis:** Nicht alle Browser unterstützen alle Arten von Bildern in allen Eigenschaften. Der Unterpunkt [Browser Kompatibilität](#Browser_Kompatibilität) enhält hierzu eine detaillierte Liste.
 
 ## Syntax
 

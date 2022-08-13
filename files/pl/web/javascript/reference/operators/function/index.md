@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencje/Operatory/Operator_function
 ---
 ### Podsumowanie
 
-Operator `function` jest używany do definiowania funkcji wewnątrz wyrażenia.
+Operator `function` jest używany do definiowania funkcji wewnątrz wyrażenia.
 
 ## Składnia
 
@@ -22,12 +22,8 @@ Operator `function` jest używany do definiowania funkcji wewnątrz wyrażenia.
 - `nazwa`
   - : Nazwa funkcji. Może zostać pominięta, w takim wypadku funkcja staje się anonimowa. Nazwa jest tylko lokalna i istnieje wewnętrz funkcji.
 
-<!---->
-
 - `argumentN`
   - : Nazwa argumentu, który ma zostać przekazany do funkcji. Funkcja może posiadać do 255 argumentów.
-
-<!---->
 
 - `instrukcje`
   - : Instrukcje, które stanowią ciało funkcji.
@@ -58,9 +54,9 @@ Poniższy przykład definiuje nienazwaną funkcję i przypisują ją do `x`. Fun
 
 | Specyfikacja                                                                                         | Status                       | Komentarze                         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                    |
+| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                    |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                    |
+| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                    |
 | {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         | Zaimplementowano w JavaScript 1.5. |
 
 ## Wsparcie przeglądarek

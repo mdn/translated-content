@@ -34,13 +34,13 @@ Zwei neue Browser-Events ermöglichen beides.
 
 Falls man die neuen Events verwendet, werden die Webseiten in anderen und älteren Browsern trotzdem richtig angezeigt. Getestet wurden Firefox, Internet Explorer, Opera und Safari. Die neue _bfcache_-Funktion wird nur verwendet, wenn die Webseite in einen Firefox-Browser 1.5 oder höher geladen wird.
 
-Hinweis: Safari unterstützt die neuen Events in einer zukünftigen Version (10-2009, siehe[ WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
+Hinweis: Safari unterstützt die neuen Events in einer zukünftigen Version (10-2009, siehe[WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
 
 Standardverhalten bei Webseiten sehen wie folgend aus:
 
-1.  Benutzer navigiert zu der Webseite.
-2.  Wenn sich die Seite aufbaut, werden die Inline-Scripts ausgeführt.
-3.  Nach vollständigem Aufbau, wird der `unload`-Handler ausgelöst.
+1. Benutzer navigiert zu der Webseite.
+2. Wenn sich die Seite aufbaut, werden die Inline-Scripts ausgeführt.
+3. Nach vollständigem Aufbau, wird der `unload`-Handler ausgelöst.
 
 Einige Seiten verfügen über einen vierten Schritt. Falls die Seite einen `unload`-Handler besitzt, wird dieser beim Verlassen der Webseite zusätzlich ausgelöst. Falls ein `unload` oder `beforeunload` Handler vorhanden ist, wird die Seite nicht zwischengespeichert.
 
@@ -56,7 +56,7 @@ Dieses Ereignis funktioniert genauso, wie das `load`-Event, jedoch wird dieses E
 
 Folglich muss man jedes JavaScript, welches bei jedem Besuch der Webseite durchlaufen soll, mit dem `pageshow`-Ereignis verknüpfen.
 
-Werden JavaScript Funktionen als Teil des` pageshow` Events aufgerufen, kann durch den Aufruf des `pageshow` Events im `load` Event sichergestellt werden, dass die Funktionen von anderen Versionen und Browsern als Firefox 1.5, geladen werden. Siehe auch im späteren Beispiel weiter unten.
+Werden JavaScript Funktionen als Teil des`pageshow` Events aufgerufen, kann durch den Aufruf des `pageshow` Events im `load` Event sichergestellt werden, dass die Funktionen von anderen Versionen und Browsern als Firefox 1.5, geladen werden. Siehe auch im späteren Beispiel weiter unten.
 
 #### Das `pagehide` Ereignis
 
@@ -76,11 +76,11 @@ Wenn man `unload` oder `beforeunload` Events verwenden möchte und das Seiten-Ca
     window.addEventListener('unload', UnloadHandler, false);
 
     function PageShowHandler() {
-    	window.addEventListener('unload', UnloadHandler, false);
+     window.addEventListener('unload', UnloadHandler, false);
     }
 
     function UnloadHandler() {
-    	window.removeEventListener('beforeunload', UnloadHandler, false);
+     window.removeEventListener('beforeunload', UnloadHandler, false);
     }
 
 ### Beispiel-Code
@@ -89,11 +89,7 @@ Das folgende Beispiel veranschaulicht eine Seite, die beide Events verwendet (`l
 
 - In anderen Browsern als dem Firefox 1.5 passiert folgendes zu jedem Zeitpunkt, bei dem die Seite geladen wird: Das `onload`-Ereigniss löst die `onLoad`-Funktion aus, welche wiederum die `onPageShow`-Funktion ausführt (sowie eine zusätzliche Funktion).
 
-<!---->
-
 - Im Firefox 1.5 verhält sich das `onload`-Event wie bei jedem anderen Browser, wenn die Webseite das erste Mal geladen wird (also nicht aus dem Zwischenspeicher). Zusätzlich wird das `pageshow`-Event ausgelöst und falls die `persisted`-Eigenschaft den Wert `false` besitzt, wird nichts Zusätzliches ausgeführt.
-
-<!---->
 
 - Wird die Webseite beim Firefox 1.5 aus dem Zwischenspeicher geladen, wird nur das `pageshow`-Event ausgelöst. Besitzt die `persisted`-Eigenschaft den Wert `true`, werden nur die JavaScript-Aktionen ausgeführt, die in der `onPageShow`-Funktion gelistet sind.
 
@@ -102,8 +98,6 @@ In diesem Beispiel:
 - Die Webseite ermittelt und visualisiert das derzeitige Datum und die derzeitige Zeit bei jedem Anzeigen der Webseite. Die Berechnung enthält auch Sekunden sowie Millisekunden, sodass die Funktionen einfach getestet werden können.
 - Der Cursor wird im Eingabefeld des Formulars für den Namen platziert. Wenn der Benutzer nun beim Firefox 1.5, nach abschicken des Formulars, zurück zur Eingabe navigiert, verharrt der Cursor beim zuletzt ausgewählten Feld. Bei anderen Browsern, wird der Cursor erneut im Namensfeld platziert.
 
-<!---->
-
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
        "http://www.w3.org/TR/html4/loose.dtd">
     <HTML>
@@ -111,33 +105,33 @@ In diesem Beispiel:
     <title>Order query : Firefox 1.5 Example</title>
     <style type="text/css">
     body, p {
-    	font-family: Verdana, sans-serif;
-    	font-size: 12px;
-       	}
+     font-family: Verdana, sans-serif;
+     font-size: 12px;
+        }
     </style>
     <script type="text/javascript">
     function onLoad() {
-    	loadOnlyFirst();
-    	onPageShow();
+     loadOnlyFirst();
+     onPageShow();
     }
 
     function onPageShow() {
     //Berechne die aktuelle Zeit
             var currentTime= new Date();
-    	var year=currentTime.getFullYear();
-    	var month=currentTime.getMonth()+1;
-    	var day=currentTime.getDate();
-    	var hour=currentTime.getHours();
-    	var min=currentTime.getMinutes();
-    	var sec=currentTime.getSeconds();
-    	var mil=currentTime.getMilliseconds();
-    	var displayTime = (month + "/" + day + "/" + year + " " +
-    		hour + ":" + min + ":" + sec + ":" + mil);
-    	document.getElementById("timefield").value=displayTime;
+     var year=currentTime.getFullYear();
+     var month=currentTime.getMonth()+1;
+     var day=currentTime.getDate();
+     var hour=currentTime.getHours();
+     var min=currentTime.getMinutes();
+     var sec=currentTime.getSeconds();
+     var mil=currentTime.getMilliseconds();
+     var displayTime = (month + "/" + day + "/" + year + " " +
+      hour + ":" + min + ":" + sec + ":" + mil);
+     document.getElementById("timefield").value=displayTime;
     }
 
     function loadOnlyFirst() {
-    	document.zipForm.name.focus();
+     document.zipForm.name.focus();
     }
     </script>
     </head>
@@ -162,24 +156,24 @@ Im Gegensatz dazu: Wenn die vorherige Seite nicht auf das `pageshow`-Event hört
 
     <script>
     function onLoad() {
-    	loadOnlyFirst();
+     loadOnlyFirst();
 
     //Berechne die aktuelle Zeit
             var currentTime= new Date();
-    	var year = currentTime.getFullYear();
-    	var month = currentTime.getMonth()+1;
-    	var day = currentTime.getDate();
-    	var hour=currentTime.getHours();
-    	var min=currentTime.getMinutes();
-    	var sec=currentTime.getSeconds();
-    	var mil=currentTime.getMilliseconds();
-    	var displayTime = (month + "/" + day + "/" + year + " " +
-    		hour + ":" + min + ":" + sec + ":" + mil);
-    	document.getElementById("timefield").value=displayTime;
+     var year = currentTime.getFullYear();
+     var month = currentTime.getMonth()+1;
+     var day = currentTime.getDate();
+     var hour=currentTime.getHours();
+     var min=currentTime.getMinutes();
+     var sec=currentTime.getSeconds();
+     var mil=currentTime.getMilliseconds();
+     var displayTime = (month + "/" + day + "/" + year + " " +
+      hour + ":" + min + ":" + sec + ":" + mil);
+     document.getElementById("timefield").value=displayTime;
     }
 
     function loadOnlyFirst() {
-    	document.zipForm.name.focus();
+     document.zipForm.name.focus();
     }
     </script>
     </head>

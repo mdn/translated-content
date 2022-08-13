@@ -20,7 +20,7 @@ Der Default Wert dieser Eigenschaft in Mozilla Firefox ist rot (`#ee0000` in hex
 
 `document.alinkColor` ist laut [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) veraltet. Eine Alternative wäre der CSS Selektor {{ Cssxref(":active") }}.
 
-Eine weitere Alternative ist `document.body.aLink`, obwohl diese laut[ HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) ebenfalls veraltet ist und der CSS Selektor präferiert wird.
+Eine weitere Alternative ist `document.body.aLink`, obwohl diese laut[HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) ebenfalls veraltet ist und der CSS Selektor präferiert wird.
 
 [Gecko](en/Gecko) unterstützt sowohl `alinkColor`/`:active` als auch{{ Cssxref(":focus") }}. Der Internet Explorer 6 und 7 unterstützen lediglich `alinkColor`/`:active` für [HTML anchor (\<a>) links](en/HTML/Element/a) und verhält sich ähnlich wie `:focus` bei Gecko. `:focus` wird im IE nicht unterstützt.
 

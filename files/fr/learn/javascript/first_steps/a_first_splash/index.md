@@ -492,8 +492,6 @@ Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce 
   - Ensuite, nous chaînons un autre test à la fin du précédent avec une structure `else if(){ }`. Cette structure vérifie si l'utilisateur a épuisé toutes ses tentatives. Si c'est le cas, le programme fait la même chose que dans le bloc précédent, mais avec un message de fin de partie au lieu d'un message de félicitations.
   - Le dernier bloc chaîné à la fin de ce code (`else { }`) contient du code qui n'est exécuté que si aucun des deux autres tests n'a renvoyé _vrai_ (c'est-à-dire que le joueur n'a pas deviné juste, mais qu'il lui reste des possibilité de supposition). Dans ce cas, nous lui disons que sa supposition est mauvaise, puis nous effectuons un autre test conditionnel pour vérifier si elle est supérieure ou inférieure à la valeur exacte et affichons un autre message approprié pour indiquer si sa supposition est trop forte ou trop faible.
 
-<!---->
-
 - Les trois dernières lignes de la fonction (ligne 26-28) préparent à une nouvelle proposition. Nous ajoutons 1 à la variable `guessCount` qui décompte les tours (`++` est une opération d'incrémentation — ajout de 1), puis effaçons le champ texte du formulaire et lui redonnons le focus, pour être prêt pour la saisie suivante.
 
 ### Evénements

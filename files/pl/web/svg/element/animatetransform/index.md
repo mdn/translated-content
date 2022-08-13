@@ -43,14 +43,14 @@ Element animateTransform służy do transformacji właściwości elementu takich
 
 ### Atrybuty globalne
 
-- [Conditional processing attributes](</pl/docs/Web/SVG/Attribute#Conditional processing attributes> "en-US/docs/Web/SVG/Attribute#Conditional processing attributes") »
-- [Core attributes](</pl/docs/Web/SVG/Attribute#Core attributes> "en-US/docs/Web/SVG/Attribute#Core attributes") »
-- [Animation event attributes](</pl/docs/Web/SVG/Attribute#Animation event attributes> "en-US/docs/Web/SVG/Attribute#Animation event attributes") »
-- [Xlink attributes](</pl/docs/Web/SVG/Attribute#Xlink attributes> "en-US/docs/Web/SVG/Attribute#Xlink attributes") »
-- [Animation attribute target attributes](</pl/docs/Web/SVG/Attribute#Animation attribute target attributes> "en-US/docs/Web/SVG/Attribute#Animation attribute target attributes") »
-- [Animation timing attributes](</pl/docs/Web/SVG/Attribute#Animation timing attributes> "en-US/docs/Web/SVG/Attribute#Animation timing attributes") »
-- [Animation value attributes](</pl/docs/Web/SVG/Attribute#Animation value attributes> "en-US/docs/Web/SVG/Attribute#Animation value attributes") »
-- [Animation addition attributes](</pl/docs/Web/SVG/Attribute#Animation addition attributes> "en-US/docs/Web/SVG/Attribute#Animation addition attributes") »
+- [Conditional processing attributes](</pl/docs/Web/SVG/Attribute#Conditional processing attributes> "en-US/docs/Web/SVG/Attribute#Conditional processing attributes") »
+- [Core attributes](</pl/docs/Web/SVG/Attribute#Core attributes> "en-US/docs/Web/SVG/Attribute#Core attributes") »
+- [Animation event attributes](</pl/docs/Web/SVG/Attribute#Animation event attributes> "en-US/docs/Web/SVG/Attribute#Animation event attributes") »
+- [Xlink attributes](</pl/docs/Web/SVG/Attribute#Xlink attributes> "en-US/docs/Web/SVG/Attribute#Xlink attributes") »
+- [Animation attribute target attributes](</pl/docs/Web/SVG/Attribute#Animation attribute target attributes> "en-US/docs/Web/SVG/Attribute#Animation attribute target attributes") »
+- [Animation timing attributes](</pl/docs/Web/SVG/Attribute#Animation timing attributes> "en-US/docs/Web/SVG/Attribute#Animation timing attributes") »
+- [Animation value attributes](</pl/docs/Web/SVG/Attribute#Animation value attributes> "en-US/docs/Web/SVG/Attribute#Animation value attributes") »
+- [Animation addition attributes](</pl/docs/Web/SVG/Attribute#Animation addition attributes> "en-US/docs/Web/SVG/Attribute#Animation addition attributes") »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atrybuty specyficzne

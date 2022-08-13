@@ -36,8 +36,6 @@ Deklaruje nazwaną stałą tylko do odczytu.
 - `nazwaStałej`
   - : Nazwa stałej. Może być dowolnym dozwolonym identyfikatorem.
 
-<!---->
-
 - `wartość`
   - : Wartość stałej. Może być dowolną dozwoloną wartością lub wynikiem wyrażenia.
 

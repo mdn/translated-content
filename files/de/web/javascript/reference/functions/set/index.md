@@ -23,8 +23,6 @@ Die **`set`** Syntax bindet eine Objekteigenschaft an eine Funktion welche aufge
 - `prop`
   - : Der Name der Eigenschaft, die an die gegebene Funktion gebunden wird.
 
-<!---->
-
 - `val`
   - : Ein Alias für die Variable, die den Wert enthält, der der Eigenschaft `prop` zugewiesen wird.
 - expression

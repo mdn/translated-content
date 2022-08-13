@@ -38,8 +38,6 @@ Deklaruje zmienną oraz opcjonalnie przypisuje jej wartość początkową.
 - `varnameN`
   - : Nazwa zmiennej. Może być dowolnym, dozwolonym identyfikatorem.
 
-<!---->
-
 - `valueN`
   - : Zainicjalizowanie wartości zmiennej. Może być dowolnym, dozwolonym wyrażeniem.
 

@@ -68,8 +68,8 @@ Ein mit Flexbox angelegter Bereich eines Dokuments wird als **Flex Container** b
 - Elemente werden in einer Zeile angezeigt (die Standardeinstellung der Eigenschaft `flex-direction` ist `row`).
 - Die Positionen beginnen an der Startkante der Hauptachse.
 - Die Elemente dehnen sich nicht auf der Hauptdimension aus, sondern können schrumpfen.
-- Die {{cssxref("flex-basis")}} Eigenschaft wird auf `auto `gesetzt.
-- Die{{cssxref("flex-wrap")}} Eigenschaft wird auf `nowrap `gesetzt.
+- Die {{cssxref("flex-basis")}} Eigenschaft wird auf `auto`gesetzt.
+- Die{{cssxref("flex-wrap")}} Eigenschaft wird auf `nowrap`gesetzt.
 
 Dies hat zur Folge, dass Ihre Elemente in einer Reihe angeordnet werden, wobei die Größe des Inhalts als Größe in der Hauptachse verwendet wird. Wenn es mehr Elemente gibt, als in den Container passen, werden sie nicht eingepackt, sondern überlaufen. Wenn einige Elemente größer als andere sind, dehnen sich alle Elemente entlang der Querachse aus, um ihre volle Größe zu erreichen.
 

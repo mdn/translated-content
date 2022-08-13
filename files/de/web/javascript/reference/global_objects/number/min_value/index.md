@@ -25,7 +25,7 @@ Weil `MIN_VALUE` eine statische Eigenschaft von {{jsxref("Number")}} ist, wird s
 
 ### Einsatz von `MIN_VALUE`
 
-Im folgenden Quelltext werden zwei nummerische Werte dividiert. Wenn das Ergebnis größer oder gleich `MIN_VALUE` ist, wird `func1()` ausgeführt; andernfalls wird `func2() `ausgeführt.
+Im folgenden Quelltext werden zwei nummerische Werte dividiert. Wenn das Ergebnis größer oder gleich `MIN_VALUE` ist, wird `func1()` ausgeführt; andernfalls wird `func2()`ausgeführt.
 
 ```js
 if (num1 / num2 >= Number.MIN_VALUE) {

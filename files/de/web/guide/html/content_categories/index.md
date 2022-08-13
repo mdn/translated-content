@@ -17,7 +17,7 @@ Es gibt drei Typen von Inhaltskategorien:
 
 - Hauptinhaltskategorien(engl. `main content categories`), welche Inhaltsregeln beschreiben, welche bei vielen Elementen gültig sind;
 - Formzusammenhängende Inhaltskategorien(engl. `form-related content categories`), welche Inhaltsregeln beschreiben, welche für formzusammenhängende Elemente gelten;
-- Spezifische Inhaltskategorien(engl.` specific content categories`), welche seltene Kategorien beschreiben, welche nur für wenige Elemente gelten, manchmal nur in einem spezifischen Context.
+- Spezifische Inhaltskategorien(engl.`specific content categories`), welche seltene Kategorien beschreiben, welche nur für wenige Elemente gelten, manchmal nur in einem spezifischen Context.
 
 [![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png "Content_categories_venn.png")
 

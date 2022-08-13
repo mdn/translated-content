@@ -29,8 +29,6 @@ translation_of: Web/API/Path2D/Path2D
 - `d` {{optional_inline}}
   - : [SVG パス](/ja/docs/Web/SVG/Tutorial/Paths) からなる文字列を渡して呼出すと、その内容のパスが新たにつくられます。
 
-<!---->
-
 ## 例
 
 ### パスを複製してつくる

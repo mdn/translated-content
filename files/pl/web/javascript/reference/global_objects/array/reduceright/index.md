@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Array/ReduceRight
 ---
 {{JSRef}}
 
-Metoda **`reduceRight()`** przekazuje do funkcji wartość przyrostową dla każdego elementu w tablicy zaczynając od prawej do lewej (od najwyższego indexu do najniższego) w celu sprowadzenia tablicy do pojedynczej wartości.
+Metoda **`reduceRight()`** przekazuje do funkcji wartość przyrostową dla każdego elementu w tablicy zaczynając od prawej do lewej (od najwyższego indexu do najniższego) w celu sprowadzenia tablicy do pojedynczej wartości.
 
 {{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
 
@@ -20,15 +20,15 @@ Sprawdź również {{jsxref("Array.prototype.reduce()")}} dla redukowania tablic
 
 - `callback`
   - : Funkcja która będzie wołana dla każdego elementu w tablicy, przyjmuje 4 argumenty:_ `akumulator`
-    _ : Wartość zwrócona z poprzedniego wywołania funkcji `callback` lub `wartośćPoczątkowa`, jeśli została zdefiniowana. (Sprawdź poniżej.)
+    _ : Wartość zwrócona z poprzedniego wywołania funkcji `callback` lub `wartośćPoczątkowa`, jeśli została zdefiniowana. (Sprawdź poniżej.)
     - `obecnaWartość`
       - : Element z tablicy, który aktualnie jest przetwarzany
     - `index`{{optional_inline}}
       - : Index aktualnie przetwarzanego elementu z tablicy.
     - `tablica`{{optional_inline}}
-      - : Tablica, na której `reduceRight()` zostało zawołane.
+      - : Tablica, na której `reduceRight()` zostało zawołane.
 - `wartośćPoczątkowa`{{optional_inline}}
-  - : Wartość, która zostanie użyta do pierwszego wykonania funkcji `callback`. Jeśli wartość ta nie zostanie zdefiniowana, ostatni element tablicy zostanie użyty i pominięty. Wołanie reduce lub reduceRight na pustej tablicy bez zdefiniowanej wartości początkowej spowoduje błąd `TypeError`.
+  - : Wartość, która zostanie użyta do pierwszego wykonania funkcji `callback`. Jeśli wartość ta nie zostanie zdefiniowana, ostatni element tablicy zostanie użyty i pominięty. Wołanie reduce lub reduceRight na pustej tablicy bez zdefiniowanej wartości początkowej spowoduje błąd `TypeError`.
 
 ### Wartość zwracana
 
@@ -36,9 +36,9 @@ Wartość wynikowa redukcji.
 
 ## Opis
 
-`reduceRight` wykonuje funkcję `callback` dla każdego elementu z tablicy, z wyłączeniem miejsc niezdefiniowanych w tablicy, przekazując cztery argumenty: wartość początkową (lub wartość z poprzedniego wywołania funkcji `callback`), wartość obecnie przetwarzanego elementu, obecny index oraz tablicę na której wykonywane są iteracje.
+`reduceRight` wykonuje funkcję `callback` dla każdego elementu z tablicy, z wyłączeniem miejsc niezdefiniowanych w tablicy, przekazując cztery argumenty: wartość początkową (lub wartość z poprzedniego wywołania funkcji `callback`), wartość obecnie przetwarzanego elementu, obecny index oraz tablicę na której wykonywane są iteracje.
 
-Użycie funkcji `callback` w metodzie reduceRight może wyglądac następująco:
+Użycie funkcji `callback` w metodzie reduceRight może wyglądac następująco:
 
 ```js
 array.reduceRight(function(akumulator, obecnaWartość, index, tablica) {
@@ -46,9 +46,9 @@ array.reduceRight(function(akumulator, obecnaWartość, index, tablica) {
 });
 ```
 
-Przy pierwszym wywołaniu funkcji, `akumulator` i `obecnaWartość` mogą mieć jedną z 2 wartości. Jeśli `wartośćPoczątkowa` została przekazana do `reduceRight`, to `akumulator` będzie równy `wartośćPoczątkowa` a `obecnaWartość` będzie równa ostatniej wartości z tablicy. Jeśli `wartośćPoczątkowa` nie została zdefiniowana, wtedy `akumulator` będzie równy ostatniej wartości z tablicy a `obecnaWartość` będzie równa przedostatniej wartości z tablicy.
+Przy pierwszym wywołaniu funkcji, `akumulator` i `obecnaWartość` mogą mieć jedną z 2 wartości. Jeśli `wartośćPoczątkowa` została przekazana do `reduceRight`, to `akumulator` będzie równy `wartośćPoczątkowa` a `obecnaWartość` będzie równa ostatniej wartości z tablicy. Jeśli `wartośćPoczątkowa` nie została zdefiniowana, wtedy `akumulator` będzie równy ostatniej wartości z tablicy a `obecnaWartość` będzie równa przedostatniej wartości z tablicy.
 
-Jeśli tablica jest pusta i `wartośćPoczątkowa` nie została zdefiniowana, spowoduje to błąd: {{jsxref("TypeError")}}. Jeśli tablica ma tylko jeden element (niezależnie od jego pozycji) i `wartośćPoczątkowa` nie została zdefiniowana lub `wartośćPoczątkowa` została zdefiniowana ale tablica jest pusta, to ta pojedyncza wartość zostanie zwrócona bez wołania funkcji `callback`.
+Jeśli tablica jest pusta i `wartośćPoczątkowa` nie została zdefiniowana, spowoduje to błąd: {{jsxref("TypeError")}}. Jeśli tablica ma tylko jeden element (niezależnie od jego pozycji) i `wartośćPoczątkowa` nie została zdefiniowana lub `wartośćPoczątkowa` została zdefiniowana ale tablica jest pusta, to ta pojedyncza wartość zostanie zwrócona bez wołania funkcji `callback`.
 
 Przykład pokazujący, jak przepływają dane do funkcji `callback`:
 
@@ -58,7 +58,7 @@ Przykład pokazujący, jak przepływają dane do funkcji `callback`:
 });
 ```
 
-Funkcja `callback` wykona się 4 razy a argumenty wywołań oraz wartości zwracane będą zgodne z poniższą tabelą:
+Funkcja `callback` wykona się 4 razy a argumenty wywołań oraz wartości zwracane będą zgodne z poniższą tabelą:
 
 | `callback`  | `akumulator` | `obecnaWartość` | `index` | `tablica`         | zwrócona wartość |
 | ----------- | ------------ | --------------- | ------- | ----------------- | ---------------- |
@@ -67,9 +67,9 @@ Funkcja `callback` wykona się 4 razy a argumenty wywołań oraz wartości zwr
 | third call  | `9`          | `1`             | `1`     | `[0, 1, 2, 3, 4]` | `10`             |
 | fourth call | `10`         | `0`             | `0`     | `[0, 1, 2, 3, 4]` | `10`             |
 
-Wartość zwrócona przez `reduceRight` będzie tym, co zostało zwrócone przez ostatnie wywołanie funkcji `callback` (`10`).
+Wartość zwrócona przez `reduceRight` będzie tym, co zostało zwrócone przez ostatnie wywołanie funkcji `callback` (`10`).
 
-Jeśli `wartośćPoczątkowa` zostałaby zdefiniowana wyniki wyglądałyby następująco:
+Jeśli `wartośćPoczątkowa` zostałaby zdefiniowana wyniki wyglądałyby następująco:
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(function(akumulator, obecnaWartość, index, tablica) {
@@ -85,7 +85,7 @@ Jeśli `wartośćPoczątkowa` zostałaby zdefiniowana wyniki wyglądałyby nas
 | fourth call | `19`         | `1`             | `1`     | `[0, 1, 2, 3, 4]` | `20`             |
 | fifth call  | `20`         | `0`             | `0`     | `[0, 1, 2, 3, 4]` | `20`             |
 
-Wartość zwrócona przez `reduceRight` w tym przypadku, będzie, oczywiście, `20`.
+Wartość zwrócona przez `reduceRight` w tym przypadku, będzie, oczywiście, `20`.
 
 ## Przykłady
 
@@ -152,7 +152,7 @@ const computation2 = (input, callback) => {
 }
 ```
 
-### ​​​​​​Różnica pomiędzy `reduce` i `reduceRight`
+### ​​​​​​Różnica pomiędzy `reduce` i `reduceRight`
 
 ```js
 var a = ['1', '2', '3', '4', '5'];
@@ -165,19 +165,19 @@ console.log(right); // "54321"
 
 ### Przykład na rozwijanie funkcji
 
-W rozwijaniu funkcji chodzi o to, że w wywołaniu jednej funkcji możemy użyć wielu funkcji. Odbywa się to od prawej do lewej, wołając każdą funkcję z wynikiem zwróconym przez poprzednią.
+W rozwijaniu funkcji chodzi o to, że w wywołaniu jednej funkcji możemy użyć wielu funkcji. Odbywa się to od prawej do lewej, wołając każdą funkcję z wynikiem zwróconym przez poprzednią.
 
 ```js
 /**
- * Function Composition is way in which result of one function can
- * be passed to another and so on.
- *
- * h(x) = f(g(x))
- *
- * Function execution happens right to left
- *
- * https://en.wikipedia.org/wiki/Function_composition
- */
+ * Function Composition is way in which result of one function can
+ * be passed to another and so on.
+ *
+ * h(x) = f(g(x))
+ *
+ * Function execution happens right to left
+ *
+ * https://en.wikipedia.org/wiki/Function_composition
+ */
 
 const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
 
@@ -196,7 +196,7 @@ console.log(compose(inc, double)(2)); // 5
 
 ## Polyfill
 
-`reduceRight` zostało dodane dostandardu ECMA-262 w piątej edycji, w związku z czym może jeszcze nie być dodane do wszystkich implementacji standardu. Można to rozwiązać poprzez użycie poniższego kodu na początku aplikacji, pozwoli to na używanie `reduceRight` w środowiskach, które tego nie implementują.
+`reduceRight` zostało dodane dostandardu ECMA-262 w piątej edycji, w związku z czym może jeszcze nie być dodane do wszystkich implementacji standardu. Można to rozwiązać poprzez użycie poniższego kodu na początku aplikacji, pozwoli to na używanie `reduceRight` w środowiskach, które tego nie implementują.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.22

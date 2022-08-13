@@ -6,11 +6,11 @@ tags:
   - Słownik
 translation_of: Glossary/Truthy
 ---
-W {{Glossary("JavaScript")}}, **prawda** jest wartością uważaną za prawdziwą, w  kontekście {{Glossary("Wyrażenie logiczne", "wyrażenia logicznego")}}, reprezentowaną przez wartość wbudowaną `true`. Z definicji, **prawdziwe są wszystkie wartości, z wyjątkiem tych, które są zdefiniowane jako  {{Glossary("Nieprawda", "nieprawdziwe")}}** (czyli `false`, `0`, `""`, `null`, `undefined` i `NaN`).
+W {{Glossary("JavaScript")}}, **prawda** jest wartością uważaną za prawdziwą, w  kontekście {{Glossary("Wyrażenie logiczne", "wyrażenia logicznego")}}, reprezentowaną przez wartość wbudowaną `true`. Z definicji, **prawdziwe są wszystkie wartości, z wyjątkiem tych, które są zdefiniowane jako  {{Glossary("Nieprawda", "nieprawdziwe")}}** (czyli `false`, `0`, `""`, `null`, `undefined` i `NaN`).
 
 {{Glossary("JavaScript")}} używa {{Glossary("Type_Conversion", "konwersji typów")}} w kontekście logicznym.
 
-Przykładami wartości *prawdziwych* w JavaScript (które będą przetłumaczone na wbudowaną wartość `true` i wykonane w bloku `if`) są:
+Przykładami wartości *prawdziwych* w JavaScript (które będą przetłumaczone na wbudowaną wartość `true` i wykonane w bloku `if`) są:
 
 ```js
 if (true)

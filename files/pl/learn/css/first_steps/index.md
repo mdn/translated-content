@@ -17,8 +17,6 @@ Pokaże Ci on, jak korzystać z podstawowych funkcji CSS przy użyciu praktyczny
 
 - Część I ilustruje podstawowe funkcje CSS, które działają w Mozilli oraz innych nowoczesnych przeglądarkach.
 
-<!---->
-
 - Część II zawiera przykłady specjalnych funkcji działających w Mozilli, ale niekoniecznie działających w innych środowiskach.
 
 Ten kurs bazuje na [specyfikacji CSS 2.1](http://www.w3.org/TR/CSS21/).
@@ -41,7 +39,7 @@ Jeżeli nie chcesz edytować plików, możesz po prostu czytać kurs i patrzeć 
 
 Niektóre części tego kursu mogą wymagać innych aplikacji Mozilli. Części te są opcjonalne. Jeżeli nie chcesz pobierać innych aplikacji Mozilli, po prostu pomiń je.
 
-**Uwaga:**  CSS umożliwia pracę z kolorami, więc niektóre części kursu zależą od kolorów. Możesz z nich wygodnie korzystać, jeśli posiadasz kolorowy wyświetlacz i prawidłowo rozróżniasz kolory.
+**Uwaga:**  CSS umożliwia pracę z kolorami, więc niektóre części kursu zależą od kolorów. Możesz z nich wygodnie korzystać, jeśli posiadasz kolorowy wyświetlacz i prawidłowo rozróżniasz kolory.
 
 #### Jak korzystać z tego kursu
 

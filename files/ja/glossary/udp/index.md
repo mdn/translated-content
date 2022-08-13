@@ -16,5 +16,3 @@ UDP is suitable for purposes where error checking and correction are either not 
 ### 技術リファレンス
 
 - [Specification](http://tools.ietf.org/html/rfc768)
-
-<!---->

@@ -23,7 +23,7 @@ Własność **id** jednoznacznie identyfikuje bieżący element.
 
 ### Przykład
 
-    if (element.id != "main_loop")
+    if (element.id != "main_loop")
          goBack();
 
 ### Uwagi

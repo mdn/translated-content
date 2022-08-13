@@ -21,8 +21,6 @@ _Progressive enhancement_ ist eine nützliche Technik, die es Webentwicklern erl
 
 - {{Interwiki("wikipedia", "Progressive Verbesserung")}} auf Wikipedia
 
-<!---->
-
 - [Glossar](/de/docs/Glossary)
 
   - {{Glossary("Graceful degradation")}}

@@ -68,7 +68,7 @@ Jedoch sagt die `length` Eigenschaft nicht zwangsläufig etwas über die Anzahl 
 {{js_property_attributes(1, 0, 0)}}
 
 - `Writable`: Wenn das Attribut auf `false` gesetzt ist, kann der Wert der Eigenschaft nicht mehr geändert werden.
-- `Configurable`: Wenn das Attribut auf `false` gesetzt ist, wird jeder Versuch scheitern, die Werte der Attribute `Writable`, ` Configurable und `` Enumerable  `zu ändern.
+- `Configurable`: Wenn das Attribut auf `false` gesetzt ist, wird jeder Versuch scheitern, die Werte der Attribute `Writable`, `Configurable und `` Enumerable`zu ändern.
 - `Enumerable`: Wenn das Attribut auf `true` gesetzt ist, wird das Attribut während [for](/de/docs/Web/JavaScript/Reference/Statements/for) oder [for..in](/de/docs/Web/JavaScript/Reference/Statements/for...in) Schleifen iteriert.
 
 ## Beispiele

@@ -19,11 +19,11 @@ Diese At-Regel ist nützlich, wenn nicht-ASCII Zeichen in manchen CSS Eigenschaf
 
 Da es mehrere Möglichkeiten gibt, die Zeichenkodierung eines Stylesheets anzugeben, versucht der Browser die folgenden Methoden in der angegebenen Reihenfolge (und stoppt, sobald eine ein Ergebnis zurückliefert):
 
-1.  Der Wert des [Unicode Bytereihenfolge](http://de.wikipedia.org/wiki/Byte_Order_Mark) Zeichens, das am Anfang der Datei gesetzt ist.
-2.  Der Wert, der durch das `charset` Attribut des `Content-Type:` HTTP-Headers angegeben wurde oder das Äquivalent hierzu im Protokoll, das verwendet wird, um das Stylesheet zu übertragen.
-3.  Die `@charset` CSS At-Regel.
-4.  Benutze die Zeichenkodierung, die durch das referenzierte Dokument angegeben wird: Das `charset` Attribut des {{ HTMLElement("link") }} Elements. Diese Methode ist veraltet in HTML5 und darf nicht verwendet werden.
-5.  Nimm an, dass das Dokument UTF-8 kodiert ist.
+1. Der Wert des [Unicode Bytereihenfolge](http://de.wikipedia.org/wiki/Byte_Order_Mark) Zeichens, das am Anfang der Datei gesetzt ist.
+2. Der Wert, der durch das `charset` Attribut des `Content-Type:` HTTP-Headers angegeben wurde oder das Äquivalent hierzu im Protokoll, das verwendet wird, um das Stylesheet zu übertragen.
+3. Die `@charset` CSS At-Regel.
+4. Benutze die Zeichenkodierung, die durch das referenzierte Dokument angegeben wird: Das `charset` Attribut des {{ HTMLElement("link") }} Elements. Diese Methode ist veraltet in HTML5 und darf nicht verwendet werden.
+5. Nimm an, dass das Dokument UTF-8 kodiert ist.
 
 ## Syntax
 

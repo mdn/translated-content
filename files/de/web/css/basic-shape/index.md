@@ -29,8 +29,6 @@ Die folgenden Formen werden unterstützt. Alle `<basic-shape>` Werte verwenden d
 - `ellipse()`
   - : ellipse( [<shape-radius>{2}]? [at <position>]? )Definiert eine Ellipse, deren Hauptachse und Nebenachse entlang der x- oder y-Achsen verlaufen.Das `<shape-radius>` Argument repräsentiert den Radius entlang der x- bzw. y-Achse. Negative Werte sind ungültig. Prozentwerte werden im Verhältnis zur Breite (für die x-Achse) und Höhe (für die y-Achse) des Referenzrahmens bestimmt.Das {{cssxref("&lt;position&gt;")}}-Argument definiert den Mittelpunkt der Ellipse. Standardmäßig wird die Ellipse in der Mitte des Referenzrahmens platziert.
 
-<!---->
-
 - `polygon()`
   - : polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )Definiert ein Vieleck (Polygon).`<fill-rule>` definiert die [Füllregel](/de/docs/Web/SVG/Attribute/fill-rule), die zur Bestimmung der Innenfläche des Polygons verwendet werden soll. Mögliche Werte sind `nonzero` und `evenodd`. Der Standardwert ist `nonzero`.Jedes Argumentpaar der Liste stellt die x- und y-Koordinate einer Ecke des Vielecks dar.
 - `path()`

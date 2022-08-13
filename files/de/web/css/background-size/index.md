@@ -15,7 +15,7 @@ translation_of: Web/CSS/background-size
 
 Die `background-size` [CSS](/de/docs/CSS "CSS") Eigenschaft definiert die Abmessungen eines Hintergrundbildes. Die Abmessungen des Bildes können komplett festgelegt werden oder nur teilweise, um das eigentliche Seitenverhältnis zu erhalten.
 
-> **Note:** **Hinweis:** Folgt auf `background-size` die {{cssxref("background")}} Kurzform und es wird in ihr kein Wert für diese Eigenschaft angegeben, wird der Wert auf den Standardwert zurückgesetzt.
+> **Hinweis:** Folgt auf `background-size` die {{cssxref("background")}} Kurzform und es wird in ihr kein Wert für diese Eigenschaft angegeben, wird der Wert auf den Standardwert zurückgesetzt.
 
 {{cssinfo}}
 
@@ -67,11 +67,11 @@ background-size: unset;
 
 Die Interpretation möglicher Werte hängt von den Maßen (Breite und Höhe) und der Proportion (Verhältnis von Breite zu Höhe) des Bildes ab. Eine Rastergrafik hat immer eigene Maße und eine eigene Proportion. Eine Vektorgrafik kann beide eigenen Maße haben (und somit auch eine eigene Proportion). Sie kann aber auch nur ein oder kein eigenes Maß haben. In beiden Fällen kann sie (muss aber nicht) eine eigen Proportion haben. Farbverläufe werden als Grafiken ohne eigene Maße und eigener Proportion behandelt.
 
-> **Note:** **Hinweis:** Dieses Verhalten hat sich in Gecko 8.0 {{geckoRelease("8.0")}} geändert. Vorher wurden Farbverläufe als Grafiken ohne eigene Maße, aber mit einer eigenen Proportion behandelt. Die Proportion entsprach dabei derjenigen des Positionierungsbereich des Hintergrunds.
+> **Hinweis:** Dieses Verhalten hat sich in Gecko 8.0 {{geckoRelease("8.0")}} geändert. Vorher wurden Farbverläufe als Grafiken ohne eigene Maße, aber mit einer eigenen Proportion behandelt. Die Proportion entsprach dabei derjenigen des Positionierungsbereich des Hintergrunds.
 
 Hintergrundbilder, die mittels {{cssxref("-moz-element")}} generiert wurden, werden momentan als Bilder mit den Maßen des Elements behandelt. Außer es handelt sich um ein SVG-Element, dann werden die Maße des Hintergrund-Positionierungsbereich mit der eigenen Proportion verwendet.
 
-> **Note:** **Hinweis:** Die entspricht nicht dem spezifizierten Verhalten, wonach die Maße und die Proportion stets denjenigen Werten des Elements entsprechen müssen.
+> **Hinweis:** Die entspricht nicht dem spezifizierten Verhalten, wonach die Maße und die Proportion stets denjenigen Werten des Elements entsprechen müssen.
 
 Die gerenderte Größe des Hintergrundbildes wird folgendermaßen berechnet:
 
@@ -79,7 +79,7 @@ Die gerenderte Größe des Hintergrundbildes wird folgendermaßen berechnet:
   - : Das Hintergrundbild wird mit den angegebenen Werten gerendert.
 - Falls die Schlüsselwörter `contain` oder `cover` gesetzt werden:
   - : Das Bild behält seine eigene Proportion bei, wobei die Maße so berechnet werden, dass das Bild im Hintergrund-Positionierungsbereich enthalten ist beziehungsweise ihn abdeckt. Besitzt das Bild keine eigene Proportion, wird es auf die Größe des Hintergrund-Positionierungsbereichs gerendert.
-- Falls ` background-size ``auto` oder `auto auto` ist:
+- Falls `background-size ``auto` oder `auto auto` ist:
   - : Besitzt das Bild beide Maße, wird es in dieser Größe gerendert. Hat es keine eigenen Maße und keine eigene Proportion, wird es in der Größe des Hintergrund-Positionierungsbereich gerendert. Hat es keine Maße, aber eine Proportion, wird es so gerendert als ob `contain` angegeben wurde. Hat es ein Maß angegeben und besitzt eine Proportion, wird es entsprechend dieser Angaben gerendert. Hat es ein Maß und keine Proportion, wird es mit diesem eigenen Maß und dem entsprechenden Maß des Hintergrund-Positionierungsbereichs gerendert.
 - Falls `background-size` ein `auto` und ein nicht-`auto` Wert besitzt:
   - : Hat das Bild eine eigene Proportion, wird das nicht spezifizierte Maß aus dem angegebenen Maß und der Proportion berechnet. Hat das Bild keine eigene Proportion, wird das angebene Maß und das entsprechende eigene Maß des Bilds verwendet, falls vorhanden. Existiert kein eigenes Maß, wird dasjenige des Hintergrund-Positionierungsbereichs verwendet.

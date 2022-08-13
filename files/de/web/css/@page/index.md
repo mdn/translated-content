@@ -18,7 +18,7 @@ Die `@page` CSS At-Regel wird verwendet, um einige CSS Eigenschaften zu ändern,
 
 Die `@page` At-Regel kann über die CSS Objektmodellschnittstelle {{domxref("CSSPageRule")}} angesprochen werden.
 
-> **Note:** **Hinweis:** Das W3C diskutiert, wie die viewportbezogenen {{cssxref("&lt;length&gt;")}} Einheiten, `vh`, `vw`, `vmin`, und `vmax` gehandhabt werden sollen. Bis dahin sollten diese nicht in einer `@page` At-Regel verwendet werden.
+> **Hinweis:** Das W3C diskutiert, wie die viewportbezogenen {{cssxref("&lt;length&gt;")}} Einheiten, `vh`, `vw`, `vmin`, und `vmax` gehandhabt werden sollen. Bis dahin sollten diese nicht in einer `@page` At-Regel verwendet werden.
 
 ## Syntax
 
@@ -27,12 +27,8 @@ Die `@page` At-Regel kann über die CSS Objektmodellschnittstelle {{domxref("CSS
 - {{cssxref("@page/size", "size")}}
   - : Bestimmt die Zielgröße und -ausrichtung des den Seitenbereich beinhaltenden Blocks. Im allgemeinen Fall, in dem ein Seitenbereich auf einer Seitenpostille dargestellt wird, gibt sie auch die Größe der Zielseitenpostille an.
 
-<!---->
-
 - {{cssxref("@page/marks", "marks")}}
   - : Fügt dem Dokument Schneide- und/oder Registrierungsmarker hinzu.
-
-<!---->
 
 - {{cssxref("@page/bleed", "bleed")}}
   - : Gibt den Überhang über den Seitenbereich an, bei dem die Darstellung der Seite abgeschnitten wird.

@@ -83,8 +83,6 @@ Le serveur répond avec une message de statut à chaque fois qu'il reçoit une r
 - **503 : Service indisponible (_Service unavailable_)**
   - : Cela est généralement lié à une surcharge temporaire du serveur. Réessayez dans quelques temps.
 
-<!---->
-
 Lorsqu'on débute avec une site simple, on rencontre le plus souvent des codes 200, 304, 403, et 404.
 
 #### Corriger l'erreur 404

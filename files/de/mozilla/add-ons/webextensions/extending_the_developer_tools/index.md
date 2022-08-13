@@ -11,9 +11,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 > **Note:** Das heißt Folgendes wird nicht unterstützt , sie können Änderungen an der Seite sehen, die von Seitenskripten vorgenommen wurden.Diese Seite beschreibt devtools-APIs, wie sie in Firefox 55 vorhanden sind. Obwohl die APIs auf den Chrome devtools APIs basieren, gibt es noch viele Funktionen, die in Firefox noch nicht implementiert sind und daher hier nicht dokumentiert sind. Informationen zu den derzeit fehlenden Funktionen finden Sie unter Einschränkungen der devtools-APIs.
 
 - Sie können WebExtensions-APIs verwenden, um die integrierten Entwicklertools des Browsers zu erweitern. Um eine devtools-Erweiterung zu erstellen, geben Sie den Schlüssel "devtools_Seite" in manifest.json ein:
+
 - ```json
   "devtools_seite": "devtools/devtools-seite.html"
   ```
+
 - Der Wert dieses Schlüssels ist eine URL, die auf eine HTML-Datei verweist, die mit Ihrer Erweiterung gebündelt wurde . Die URL sollte relativ zur manifest.json-Datei selbst sein.
 - Die HTML-Datei definiert eine spezielle Seite in der Verlängerung, Seite der devtools ResourceHinzufügen
 
@@ -23,10 +25,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 
 Die devtools-Seite hat kein sichtbares DOM, kann aber JavaScript-Quellen mit \<script> -Tags enthalten. Die Quellen müssen mit der Erweiterung selbst gebündelt werden. Die normalen DOM-APIs, auf die über das globale Fensterobjekt zugegriffen werden kann Die gleichen WebExtension-APIs wie in Inhaltsskripten Die devtools-APIs: Devtools inspiziertes Fenster devtools.network devtools.panels Beachten Sie, dass die devtools-Seite keinen Zugriff auf andere Web Extensions-APIs erhält und die Hintergrundseite keinen Zugriff auf die devtools-APIs erhält. Stattdessen müssen die davetool-Seite und die Hintergrundseite definiert werden. Verwenden der Laufzeit-Messeging-APIs. Hier ist ein Beispiel:
 
--       <!DOCTYPE html> <html>   <head>     <meta charset="utf-8">   </head>   <body>     <script sec="devtools.js"></script>   </body> </html>The devtools.js file will hold the actual code creating your dev tools extensions.
+- <!DOCTYPE html> <html>   <head>     <meta charset="utf-8">   </head>   <body>     <script sec="devtools.js"></script>   </body> </html>The devtools.js file will hold the actual code creating your dev tools extensions.
+
 - ### Erstellen von panel
+
 - Das devtools-Fenster enthält eine Reihe separater Tools - den JavaScript-Debugger, den Netzwerkmonitor usw. Über eine Reihe von Registerkarten am oberen Rand kann der Benutzer zwischen den verschiedenen Werkzeugen wechseln. Das Fenster, in dem sich die Benutzeroberfläche jedes Tools befindet, wird als "Panel" bezeichnet.
 - `Gebrauche der devtools.panels.create()` API,, um Ihren eigenen Panel Herzustellen in devtools Fenster(Window)
+
 - ```js
   browser.devtools.panels.create(
     "My Panel",                      // title
@@ -37,9 +42,12 @@ Die devtools-Seite hat kein sichtbares DOM, kann aber JavaScript-Quellen mit \<s
     newPanel.onHidden.addListener(unInitialisePanel);
   });
   ```
+
 - Hierfür sind drei Argumente erforderlich: Titel, Symbol und Inhalt des Panels. Es wird ein Versprechen zurück gegeben, das devtool panel ExtensionPanel-Objekt aufgelöst wird, das in neue Panel darstellt.
 - `devtools.panels.ExtensionPanel` dieser obieckt reprsentiert das neue Panel
+
 - ### Interaktion mit dem Zielfenster
+
 - Die Entwicklertools sind immer an eine bestimmte Browserregisterkarte angehängt. Dies wird als "Ziel" für die Entwicklertools oder als "inspiziertes Fenster" bezeichnet, damit können Sie inspizierten Fenster mit der Sie interagieren
 - [`devtools.inspectedWindow`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow) API.
 
@@ -87,15 +95,20 @@ Diese APIs basieren auf den Chrome devtools-APIs, aber im Vergleich zu Chrome fe
   ```
 
 - ![](https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png)
+
 - ## Einschränkungen der devtools APIs
+
 - ### devtools inspizierte Window
+
 - Folgendes wird nicht unterstüzt
 - `inspectedWindow.getResources()`
 - `inspectedWindow.onResourceAdded`
 - `inspectedWindow.onResourceContentCommitted`
 - None of the options to `inspectedWindow.eval()` are supported.
 - Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect(...)` are both supported (starting from Firefox 55).
+
 - ### devtools.panele
+
 - The following are not supported:
 - `panels.elements`
 - `panels.sources`
@@ -105,6 +118,8 @@ Diese APIs basieren auf den Chrome devtools-APIs, aber im Vergleich zu Chrome fe
 - `panels.Button`
 - `panels.ElementsPanel`
 - `panels.SourcesPanel`
+
 - ### Beispielsweise
+
 - Das [webextensions-examples](https://github.com/mdn/webextensions-examples) bericht an GitHub, enthält einige Beispiele für Erweiterungen, die devtools-Panels verwenden:
 - [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) benutzen Sie dentools Panels

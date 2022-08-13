@@ -17,7 +17,7 @@ Die **`arguments.callee`**-Eigenschaft enthält die Referenz der aktuell ausgef�
 
 `callee` ist eine Eigenschaft des `arguments`-Objektes. Sie kann eingesetzt werden, um aus dem Körper einer Funktion auf die aktuell ausgeführte Funktion zu referenzieren. Dieses ist sinnvoll, wenn der Name der Funktion unbekannt ist. Auch in einer anonymen Funktion (ohne Namen) funktioniert dieses.
 
-> **Warning:** **Warnung**: Die Version 5 von ECMAScript (ES5) verbietet die nutzung von `arguments.callee() im `{{jsxref("Strict_mode", "strict mode")}}. Der Einsatz von `arguments.callee() `soll vermieden werden, wenn function-Ausdrücke einen Namen haben oder Funktionen deklariert werden, die sich selbst aufrufen müssen.
+> **Warning:** **Warnung**: Die Version 5 von ECMAScript (ES5) verbietet die nutzung von `arguments.callee() im`{{jsxref("Strict_mode", "strict mode")}}. Der Einsatz von `arguments.callee()`soll vermieden werden, wenn function-Ausdrücke einen Namen haben oder Funktionen deklariert werden, die sich selbst aufrufen müssen.
 
 ### Warum wurde `arguments.callee` vom ES5 strict mode entfernt?
 

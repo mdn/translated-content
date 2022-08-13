@@ -33,11 +33,7 @@ Jeżeli `compareFunction` zostanie podana, elementy tablicy zostaną posortowane
 
 - `compareFunction(a, b)` zwróci wartość mniejszą od 0 - indeks elementu `a` będzie mniejszy niż indeks `b` (logicznie `a` < `b`).
 
-<!---->
-
 - `compareFunction(a, b)` zwróci 0 - pozostawia `a` oraz `b` w niezmienionej kolejności względem siebie, jednak w dalszym ciągu oba będą porównywane z innymi elementami (logicznie `b` = `a`). Uwaga: Standard ECMAscript nie gwarantuje niezmienionej kolejności (np. Mozilla wszystkie wersje do 2003 roku).
-
-<!---->
 
 - `compareFunction(a, b)` zwraca wartość większą od 0 - indeks elementu `a` będzie większy niż indeks `b` (logicznie `a` > `b`).
 

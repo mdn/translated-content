@@ -18,8 +18,6 @@ Real-time streaming protocol (RTSP) はネットワークプロトコルの一�
 - ウィキペディア上の {{Interwiki("wikipedia", "Real_Time_Streaming_Protocol","RTSP")}}
 - [RFC 7826](https://tools.ietf.org/html/rfc7826) (このプロトコルの動作を詳細に定義した文書の一つ)
 
-<!---->
-
 - [MDN Web Docs 用語集](/ja/docs/Glossary)
 
   - {{Glossary("RTSP")}}

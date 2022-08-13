@@ -19,12 +19,8 @@ translation_of: Web/XPath/Functions/format-number
 - `number`
   - : フォーマットする数値
 
-<!---->
-
 - `pattern`
   - : JDK 1.1 DecimalFormat クラスの形式の文字列。（[JDK 1.1](http://java.sun.com/products/archive/jdk/1.1/)のドキュメントはオンラインでは入手できません。[Java SE 6 DecimalFormat](https://docs.oracle.com/javase/jp/6/api/java/text/DecimalFormat.html)はこちらです）
-
-<!---->
 
 - `decimal-format` (任意)
   - : 使用する数値書式を定義する[`xsl:decimal-format`](/ja/docs/XSLT/Elements/decimal-format)要素の名前。省略すると、デフォルトの 10 進形式が使用されます。

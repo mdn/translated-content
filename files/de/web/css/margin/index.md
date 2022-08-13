@@ -62,13 +62,9 @@ Es werden bis zu vier der folgenden Werte akzeptiert:
 
     margin: auto;              /* Die Box wird horizontal zentriert, kein Abstand (0) oben und unten */
 
-<!---->
-
     margin:     auto;
     background: gold;
     width:      66%;
-
-<!---->
 
     margin:     -1em 0 100px -40px;
     background: plum;

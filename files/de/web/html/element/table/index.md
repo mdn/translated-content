@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/table
 
 Das _HTML-Tabellen-Element_ (`<table>`) repräsentiert Daten in zwei oder mehr Dimensionen.
 
-> **Note:** **Hinweis:** Bevor es [CSS](/de/docs/CSS "CSS") gab, wurden HTML-{{HTMLElement("table")}}-Elemente oft für das Seitenlayout verwendet. Von dieser Nutzung wird seit HTML 4 abgeraten, und das {{HTMLElement("table")}}-Element **sollte nicht** für Layoutzwecke verwendet werden.
+> **Hinweis:** Bevor es [CSS](/de/docs/CSS "CSS") gab, wurden HTML-{{HTMLElement("table")}}-Elemente oft für das Seitenlayout verwendet. Von dieser Nutzung wird seit HTML 4 abgeraten, und das {{HTMLElement("table")}}-Element **sollte nicht** für Layoutzwecke verwendet werden.
 
 ## Nutzungskontext
 
@@ -120,9 +120,8 @@ Dieses Element beinhaltet die [globalen Attribute](/de/docs/HTML/Global_attribut
   - : Dieses aufgezählte Attribut gibt an, wie die Tabelle im beinhaltenden Dokument ausgerichtet werden muss. Es kann die folgenden Werte haben:\* left, bedeutet, dass die Tabelle links im Dokument angezeigt werden soll;
     - center, bedeutet, dass die Tabelle mittig im Dokument angezeigt werden soll;
     - right, bedeutet, dass die Tabelle rechts im Dokument angezeigt werden soll.> **Note:** **Hinweis:\*** **Verwenden Sie dieses Attribut nicht**, da es überholt ist: das {{HTMLElement("table")}}-Element sollte mit [CSS](/de/docs/CSS "CSS") angepasst werden. Um einen ähnlichen Effekt zu erreichen wie mit dem align-Attribut, sollten die [CSS](/de/docs/CSS "CSS")-Eigenschaften "text-align" und "vertical-align" verwendet werden.
+      >
       > - Vor Firefox 4 unterstützte Firefox, nur im Quirks-Modus, auch die Werte `middle`, `absmiddle`, und `abscenter` als Synonyme von `center`_._
-
-<!---->
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
   - | : Dieses Attribut definiert die Hintergrundsfarbe von der Tabelle und deren Inhalt. Die Farbe entspricht einem 6-stelligen Hexadezimalcode definiert in [sRGB](http://www.w3.org/Graphics/Color/sRGB) mit einem vorangestellten '#'. Es kann auch einer der sechszehn vordefinierten Farbnamen benutzt werden: |                     | black = "#000000" |                    | green = "#008000"                                                                                                                                                                                                                                                                                                                                                       |
@@ -133,24 +132,16 @@ Dieses Element beinhaltet die [globalen Attribute](/de/docs/HTML/Global_attribut
     |                                                                                                                                                                                                                                                                                                                | maroon = "#800000"  |                   | navy = "#000080"   |
     |                                                                                                                                                                                                                                                                                                                | red = "#FF0000"     |                   | blue = "#0000FF"   |
     |                                                                                                                                                                                                                                                                                                                | purple = "#800080"  |                   | teal = "#008080"   |
-    |                                                                                                                                                                                                                                                                                                                | fuchsia = "#FF00FF" |                   | aqua = "#00FFFF"   | > **Note:** **Gebrauchshinweis:** Es wird von der Benutzung dieses Attributs abgeraten, da es veraltet ist. Das {{HTMLElement("table")}} Element sollte mit [CSS](/de/docs/Web/CSS "CSS") formatiert werden. Um einen ähnlichen Effekt zu erzielen sollte das [CSS ](/de/docs/Web/CSS "CSS")Attribut {{cssxref("background-color")}} verwendet werden. |
-
-<!---->
+    |                                                                                                                                                                                                                                                                                                                | fuchsia = "#FF00FF" |                   | aqua = "#00FFFF"   | > **Note:** **Gebrauchshinweis:** Es wird von der Benutzung dieses Attributs abgeraten, da es veraltet ist. Das {{HTMLElement("table")}} Element sollte mit [CSS](/de/docs/Web/CSS "CSS") formatiert werden. Um einen ähnlichen Effekt zu erzielen sollte das [CSS](/de/docs/Web/CSS "CSS")Attribut {{cssxref("background-color")}} verwendet werden. |
 
 - {{htmlattrdef("border")}} {{Deprecated_inline}}
   - : Dieser Integer Wert definiert die Breite des Rahmens in Pixeln. Wenn er auf 0 gesetzt wird, dann impliziert es, dass das {{htmlattrxref("frame", "table")}} Attribut auf void gesetzt ist.> **Note:** **Gebrauchshinweis:** Es wird von der Benutzung dieses Attributs abgeraten, da es veraltet ist. Das {{HTMLElement("table")}} Element sollte mit [CSS](/de/docs/Web/CSS "CSS") formatiert werden.. Um einen ähnlichen Effekt wie das border Attribut zu erzielen sollten die [CSS](/de/docs/Web/CSS "CSS") Eigenschaften {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} und{{cssxref("border-style")}} benutzt werden.
 
-<!---->
-
 - {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
   - : This attribute defines the space between the content of a cell and the border, displayed or not, of it. If it is a pixel length, this pixel-sized space will be applied on all four sides; if it is a percentage length, the content will be centered and the total vertical space (top and bottom) will represent this percentage. The same is true for the total horizontal space (left and right).> **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/de/docs/CSS "CSS"). To give a similar effect than the border attribute, use the [CSS](/de/docs/CSS "CSS") property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("padding")}} on the {{HTMLElement("td")}}.
 
-<!---->
-
 - {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
   - : This attribute defines the size, in percentage or in pixels, of the space between two cells (both horizontally and vertically), between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.> **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/de/docs/CSS "CSS"). To give a similar effect than the border attribute, use the [CSS](/de/docs/CSS "CSS") property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("margin")}} on the {{HTMLElement("td")}} element.
-
-<!---->
 
 - {{htmlattrdef("frame")}} {{Deprecated_inline}}
   - | : This enumerated attribute defines which side of the frame surrounding the table must be displayed. It may have the following values: |        | above |        | below                                                                                                                                                                                                                                                                                                                                                           |
@@ -160,27 +151,23 @@ Dieses Element beinhaltet die [globalen Attribute](/de/docs/HTML/Global_attribut
     |                                                                                                                                        | border |       | box    |
     |                                                                                                                                        | void   |       |        | > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/de/docs/CSS "CSS"). To give a similar effect than the frame attribute, use the [CSS](/de/docs/CSS "CSS") properties {{cssxref("border-style")}} and {{cssxref("border-width")}}. |
 
-<!---->
-
 - {{htmlattrdef("rules")}} {{Deprecated_inline()}}
   - : This enumerated attribute defines where rules, i.e. lines, should appear in a table. It can have the following values:\* none, which indicates the no rules will be displayed; it is the default value;
     - groups, which will make the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;
     - rows, which will make the rules to be displayed between rows;
     - columns, which will make the rules to be displayed between columns;
     - all, which wil make the rules to be displayed between rows and columns.> **Note:** :\* The styling of the rules is browser-dependant and cannot be modified.
+      >
       > - Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/de/docs/CSS "CSS"). use the [CSS](/de/docs/CSS "CSS") property {{cssxref("border")}} on the adequate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} or {{HTMLElement("colgroup")}} elements.
-
-<!---->
 
 - {{htmlattrdef("summary")}} {{Deprecated_inline}}
   - : This attribute defines an alternative text use to describe the table in user-agent unable to display it. Typically, it contents a description of it to allow visually impaired people, like blind people browsing the web using Braille screen, to get the information in it. If the information added in this attribute may also be useful for non-visually impaired people, consider using the {{HTMLElement("caption")}} instead. The summary attribute is not mandatory and may be omitted when a {{HTMLElement("caption")}} element fulfills its role.> **Note:** **Usage Note:** Do not use this attribute, as it has been deprecated. Instead, use one of these way of describing a table:\* In prose, surrounding the table (this is the less semantic-conveying way of doing it).
+    >
     > - In the table's {{HTMLElement("caption")}} element.
     > - In a {{HTMLElement("details")}} element, inside the table's {{HTMLElement("caption")}} element.
     > - Include the {{HTMLElement("table")}} element in a {{HTMLElement("figure")}} element and add the description in prose next to it.
     > - Include the {{HTMLElement("table")}} element in a {{HTMLElement("figure")}} element and add the description in prose inside a {{HTMLElement("figcaption")}} element.
     > - Adjust the table so that such description is no more needed, by using {{HTMLElement("th")}} and {{HTMLElement("thead")}} elements for example.
-
-<!---->
 
 - {{htmlattrdef("width")}} {{Deprecated_inline}}
   - : This attribute defines the width of the table. It may either be a pixel length or a percentage value, representing the percentage of the width of its container that the table should use.> **Note:** **Usage Note:** Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/de/docs/CSS "CSS"). use the [CSS](/de/docs/CSS "CSS") property {{cssxref("width")}} instead.

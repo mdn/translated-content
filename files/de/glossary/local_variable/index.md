@@ -19,6 +19,6 @@ function fun(){
 }
 ```
 
-1.  General knowledge
+1. General knowledge
 
-    1.  {{interwiki("wikipedia", "Local variable", "Local variable")}} on Wikipedia
+    1. {{interwiki("wikipedia", "Local variable", "Local variable")}} on Wikipedia

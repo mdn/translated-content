@@ -361,7 +361,7 @@ Das folgende Beispiel erstellt das `coffees` Array mit drei Elementen und der L�
 var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **Note:** **Hinweis:** Ein Array Literal ist eine Art von Objektinitialisierung. Sie dazu auch den [Einsatz von Objektinitialisierern](/de/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
+> **Hinweis:** Ein Array Literal ist eine Art von Objektinitialisierung. Sie dazu auch den [Einsatz von Objektinitialisierern](/de/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
 
 Wenn ein Array durch ein Literal im Toplevel Skript erstellt wird, interpretiert JavaScript das Array immer dann, wenn ein Ausdruck dieses Literal enthält. Im Gegensatz dazu wird ein Literal in einer Funktion immer neu erstellt, wenn die Funktion aufgerufen wird.
 
@@ -375,11 +375,11 @@ Man muss nicht alle Elemente in einem Array Literal spezifizieren. Wenn man zwei
 var fish = ["Lion", , "Angel"];
 ```
 
-Dieses Array hat zwei Elemente mit Werten und ein leeres Element (`fish[0]` ist "Lion",` fish[1]` ist `undefined` und `fish[2]` ist "Angel").
+Dieses Array hat zwei Elemente mit Werten und ein leeres Element (`fish[0]` ist "Lion",`fish[1]` ist `undefined` und `fish[2]` ist "Angel").
 
 Wenn man ein trennendes Komma am Ende der Elementliste hinzufügt, wird es ignoriert. Im folgenden Beispiel ist die Länge des Arrays drei. Es gibt kein `myList[3]`. Alle weiteren Kommas in der Liste führen zu einem neuen Element.
 
-> **Note:** **Hinweis:** Trennende Kommas können in älteren Browserversionen zu Fehlern führen. Zudem ist es ein guter Stil diese Kommas zu entfernen.
+> **Hinweis:** Trennende Kommas können in älteren Browserversionen zu Fehlern führen. Zudem ist es ein guter Stil diese Kommas zu entfernen.
 
 ```js
 var myList = ['home', , 'school', ];

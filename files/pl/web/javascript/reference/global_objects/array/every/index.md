@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Array/every
 
 ## Podsumowanie
 
-Metoda  **`every() `**sprawdza, czy wszystkie elementy w tablicy przechodzą test zrealizowany w postaci dostarczonej funkcji.
+Metoda  **`every() `**sprawdza, czy wszystkie elementy w tablicy przechodzą test zrealizowany w postaci dostarczonej funkcji.
 
 ## Składnia
 
@@ -24,10 +24,10 @@ Metoda  **`every() `**sprawdza, czy wszystkie elementy w tablicy przechodzą te
 - `callback`
   - : Funkcja sprawdzająca dla każdego elementu. Zawiera trzy argumenty.
     **currentValue
-      **Bieżący element przetwarzany w tablicy
+      **Bieżący element przetwarzany w tablicy
 - **index**
-  - :      Indeks bieżacego elementu przetwarzanego w tablicy **array**
-        Tablica na której została wywołana funkcja
+  - :      Indeks bieżacego elementu przetwarzanego w tablicy **array**
+        Tablica na której została wywołana funkcja
 - `thisObject`
   - : Opcjonalnie. Obiekt, na który będzie wskazywał `this`, gdy wykonana zostanie funkcja zwrotna `callback`.
 
@@ -53,14 +53,14 @@ if (!Array.prototype.every)
   Array.prototype.every = function(fun /*, thisp*/)
   {
     var len = this.length;
-    if (typeof fun != "function")
+    if (typeof fun != "function")
       throw new TypeError();
 
     var thisp = arguments[1];
     for (var i = 0; i < len; i++)
     {
       if (i in this &&
-          !fun.call(thisp, this[i], i, this))
+          !fun.call(thisp, this[i], i, this))
         return false;
     }
 

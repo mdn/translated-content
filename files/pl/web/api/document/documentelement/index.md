@@ -30,8 +30,6 @@ Zwraca [`Element`](pl/DOM/element) będący bezpośrednim dzieckiem [document](p
        //poprzez first_tier[i]
     }
 
-<!---->
-
     var rootElement = document.documentElement;
     var firstTier = rootElement.childNodes;
     // firstTier jest NodeList bezpośredniego dziecka elementu głównego

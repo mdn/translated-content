@@ -40,14 +40,14 @@ Wszystkie pułapki są opcjonalne. Jeśli pułapka nie została zdefiniowana, do
 - {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
   - : Pułapka na operator {{jsxref("Operators/new", "new")}}.
 
-Niektóre niestandardowe pułapki są [przestarzałe i zostały usunięte](/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy).
+Niektóre niestandardowe pułapki są [przestarzałe i zostały usunięte](/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy).
 
 ## Specyfikacje
 
 | Specyfikacja                                                                                                                                                                     | Status                       | Komentarz                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
 | {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ES2015')}}     | Początkowa definicja.                     |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | Usunięto funkcję obsługującą `enumerate`. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | Usunięto funkcję obsługującą `enumerate`. |
 
 ## Kompatybilność przeglądarek
 

@@ -64,8 +64,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 - plusSign
   - : プラス記号の文字列 ("+")。
 
-<!---->
-
 - percentSign
   - : パーセント文字列 ("%")。
 - unit

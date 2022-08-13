@@ -87,7 +87,7 @@ Operator `/` także działa zgodnie z założeniami z całymi liczbami.
 
 Jako że są to `BigInt`y, a nie `BigDecimal`, operacja dzielenia będzie zaokroąglała wynik do `0` (zatem można prościej powiedzieć, że nie zwraca ułamkowej części wyniku).
 
-> **Warning:** Ułamkowy wynik operacji będzie przycięty, kiedy używany jest  `BigInt`.
+> **Warning:** Ułamkowy wynik operacji będzie przycięty, kiedy używany jest  `BigInt`.
 
 ```js
 const expected = 4n / 2n

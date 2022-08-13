@@ -17,7 +17,7 @@ Der `<percentage>` [CSS](/de/docs/Web/CSS "CSS") Datentyp repräsentiert einen P
 
 Viele Längeneigenschaften verwenden Prozentwerte, wie {{ Cssxref("width") }}, {{ Cssxref("margin") }} und {{ Cssxref("padding") }}. Prozentwerte können auch in {{ Cssxref("font-size") }} vorkommen, wo die Größe des Texts direkt von der Textgröße des Elternelements abhängt.
 
-> **Note:** **Hinweis:** Nur berechnete Werte werden vererbt. D. h. auch wenn ein Prozentwert für eine Elterneigenschaft verwendet wird, wird für die vererbte Eigenschaft ein realer Wert, wie beispielsweise eine Breite in Pixeln für einen {{cssxref("&lt;length&gt;")}} Wert, verwendet, nicht der Prozentwert.
+> **Hinweis:** Nur berechnete Werte werden vererbt. D. h. auch wenn ein Prozentwert für eine Elterneigenschaft verwendet wird, wird für die vererbte Eigenschaft ein realer Wert, wie beispielsweise eine Breite in Pixeln für einen {{cssxref("&lt;length&gt;")}} Wert, verwendet, nicht der Prozentwert.
 
 ## Interpolation
 

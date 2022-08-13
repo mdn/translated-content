@@ -21,5 +21,3 @@ In einer Programmiersprache ist eine Anweisung eine Vorschrift innerhalb des Cod
 ### Technische Referenz
 
 - [JavaScript: Anweisungen und Deklarationen](/de/docs/Web/JavaScript/Reference/Statements) (englisch)
-
-<!---->

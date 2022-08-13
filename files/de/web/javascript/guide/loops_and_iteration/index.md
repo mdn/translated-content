@@ -46,11 +46,11 @@ Eine {{jsxref("statements/for","for Schleife")}} wird so lange durchlaufen, bis 
 
 Bei der Ausführung einer for Schleife geschieht folgendes:
 
-1.  Der Ausdruck zur Initialisierung der Schleife `initialerAsudruck`, wird ausgeführt, sofern dieser existiert. Dieser Ausdruck initialisiert einen oder mehrere Schleifenzähler, wobei die Syntax beliebig komplexe Ausdrücke zulässt. In diesem Ausdruck können auch Variablen deklariert werden.
-2.  Die Bedingung `Bedingung` wird geprüft. Wenn die Auswertung von `Bedingung` den Wert `true` ergibt, werden die Anweisungen innerhalb der Schleife ausgeführt. Ergibt die Prüfung hingegen `false`, wird die Schleife verlassen. Bleibt die Bedingung leer, wird immer der Wert `true` angenommen.
-3.  Die `Anweisung` wird ausgeführt. Um mehrere Anweisungen auszuführen, werden Block-Anweisungen (`{ ... }`) verwendet, um diese zu gruppieren.
-4.  Wenn vorhanden, wird der Ausdruck `erhöhenderAusdruck` ausgeführt.
-5.  Geht zu Schritt 2 zurück.
+1. Der Ausdruck zur Initialisierung der Schleife `initialerAsudruck`, wird ausgeführt, sofern dieser existiert. Dieser Ausdruck initialisiert einen oder mehrere Schleifenzähler, wobei die Syntax beliebig komplexe Ausdrücke zulässt. In diesem Ausdruck können auch Variablen deklariert werden.
+2. Die Bedingung `Bedingung` wird geprüft. Wenn die Auswertung von `Bedingung` den Wert `true` ergibt, werden die Anweisungen innerhalb der Schleife ausgeführt. Ergibt die Prüfung hingegen `false`, wird die Schleife verlassen. Bleibt die Bedingung leer, wird immer der Wert `true` angenommen.
+3. Die `Anweisung` wird ausgeführt. Um mehrere Anweisungen auszuführen, werden Block-Anweisungen (`{ ... }`) verwendet, um diese zu gruppieren.
+4. Wenn vorhanden, wird der Ausdruck `erhöhenderAusdruck` ausgeführt.
+5. Geht zu Schritt 2 zurück.
 
 ### Beispiel
 
@@ -98,7 +98,7 @@ Das {{jsxref("statements/do...while", "do...while")}} Statement wiederholt eine 
       anweisung
     while (bedingung);
 
-`amweisung` wird dabei einmal ausgeführt, bevor die Bedingung geprüft wird. Um mehrere Anweisungen auszuführen, werden diese als Block Statement (`{ ... }`) gruppiert. Wenn `bedingung` `true` ist, wird die Anweisung erneut ausgeführt. Nach jeder Ausführung der Anweisungen, wird die Bedingung erneut geprüft. Sobald `bedingung` `false` ergibt, endet die Ausführung der Schleife und die nächste Anweisung nach der `do...while `Schleife aus wird ausgeführt.
+`amweisung` wird dabei einmal ausgeführt, bevor die Bedingung geprüft wird. Um mehrere Anweisungen auszuführen, werden diese als Block Statement (`{ ... }`) gruppiert. Wenn `bedingung` `true` ist, wird die Anweisung erneut ausgeführt. Nach jeder Ausführung der Anweisungen, wird die Bedingung erneut geprüft. Sobald `bedingung` `false` ergibt, endet die Ausführung der Schleife und die nächste Anweisung nach der `do...while`Schleife aus wird ausgeführt.
 
 ### Beispiel
 

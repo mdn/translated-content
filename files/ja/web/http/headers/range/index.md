@@ -31,8 +31,6 @@ translation_of: Web/HTTP/Headers/Range
 - \<unit>
   - : 範囲を指定する単位です。これはふつう `bytes` です。
 
-<!---->
-
 - \<range-start>
   - : 整数値で、リクエストする範囲の先頭を指定した単位で示します。
 - \<range-end>

@@ -67,187 +67,113 @@ W tym miejscu "elementy" oznaczają ten interfejs, jaki mają wszystkie elementy
 - [attributes](/pl/DOM/element.attributes "pl/DOM/element.attributes")
   - : Zwraca tablicę atrybutów elementu.
 
-<!---->
-
 - [childNodes](/pl/DOM/element.childNodes "pl/DOM/element.childNodes")
   - : Zwraca tablicę węzłów potomnych elementu
-
-<!---->
 
 - [className](/pl/DOM/element.className "pl/DOM/element.className")
   - : Pobiera/ustawia klasę elementu.
 
-<!---->
-
 - [clientHeight](/pl/DOM/element.clientHeight "pl/DOM/element.clientHeight")
   - : Własność DHTML-a, reprezentuje wewnętrzną wysokość elementu.
-
-<!---->
 
 - [clientLeft](/pl/DOM/element.clientLeft "pl/DOM/element.clientLeft")
   - : Długość od lewego obramowania elementu wyrażona w pikselach. _Aktualnie nie obsługiwana._
 
-<!---->
-
 - [clientTop](/pl/DOM/element.clientTop "pl/DOM/element.clientTop")
   - : Długość od górnego obramowania elementu wyrażona w pikselach. _Aktualnie nie obsługiwana._
-
-<!---->
 
 - [clientWidth](/pl/DOM/element.clientWidth "pl/DOM/element.clientWidth")
   - : Własność DHTML-a, reprezentuje wewnętrzną szerokość elementu.
 
-<!---->
-
 - [dir](/pl/DOM/element.dir "pl/DOM/element.dir")
   - : Pobiera/ustawia kierunkowość (ang. _directionality_) elementu.
-
-<!---->
 
 - [firstChild](/pl/DOM/element.firstChild "pl/DOM/element.firstChild")
   - : Zwraca pierwsze dziecko bieżącego węzła.
 
-<!---->
-
 - [id](/pl/DOM/element.id "pl/DOM/element.id")
   - : Pobiera/ustawia id elementu.
-
-<!---->
 
 - [innerHTML](/pl/DOM/element.innerHTML "pl/DOM/element.innerHTML")
   - : innerHTML zwraca całą zawartość elementu wraz ze znacznikami.
 
-<!---->
-
 - [lang](/pl/DOM/element.lang "pl/DOM/element.lang")
   - : Określa język bazowy dla wartość atrybutów i tekstowej zawartości elementu.
-
-<!---->
 
 - [lastChild](/pl/DOM/element.lastChild "pl/DOM/element.lastChild")
   - : Zwraca ostatnie dziecko bieżącego węzła.
 
-<!---->
-
 - [length](/pl/DOM/element.length "pl/DOM/element.length")
   - : Zwraca ilość elementów listy (np. childNodes).
-
-<!---->
 
 - [localName](/pl/DOM/element.localName "pl/DOM/element.localName")
   - : Zwraca lokalną część uściślonej nazwy węzła.
 
-<!---->
-
 - [name](/pl/DOM/element.name "pl/DOM/element.name")
   - : Pobiera lub ustawia atrybut `name` - dostępne nie dla wszystkich elementów.
-
-<!---->
 
 - [namespaceURI](/pl/DOM/element.namespaceURI "pl/DOM/element.namespaceURI")
   - : URI przestrzeni nazw węzła lub NULL, jeśli nie określono przestrzeni nazw.
 
-<!---->
-
 - [nextSibling](/pl/DOM/element.nextSibling "pl/DOM/element.nextSibling")
   - : Zwraca węzeł bezpośrednio następny w drzewie dokumentu.
-
-<!---->
 
 - [nodeName](/pl/DOM/element.nodeName "pl/DOM/element.nodeName")
   - : Zwraca nazwę biężącego węzła.
 
-<!---->
-
 - [nodeType](/pl/DOM/element.nodeType "pl/DOM/element.nodeType")
   - : Zwraca typ bieżącego węzła.
-
-<!---->
 
 - [nodeValue](/pl/DOM/element.nodeValue "pl/DOM/element.nodeValue")
   - : Zwraca wartość bieżącego węzła.
 
-<!---->
-
 - [offsetHeight](/pl/DOM/element.offsetHeight "pl/DOM/element.offsetHeight")
   - : offsetHeight jest własnością DHTML-a, zwracającą wysokość elementu względem układu.
-
-<!---->
 
 - [offsetLeft](/pl/DOM/element.offsetLeft "pl/DOM/element.offsetLeft")
   - : offsetLeft pobiera/ustawia ilość pikseli, jaka dzieli element od lewej strony wewnątrz węzła offsetParent.
 
-<!---->
-
 - [offsetParent](/pl/DOM/element.offsetParent "pl/DOM/element.offsetParent")
   - : offsetParent zwraca referencję do obiektu, w którym obecny element się znajduje (tj. rodzica).
-
-<!---->
 
 - [offsetTop](/pl/DOM/element.offsetTop "pl/DOM/element.offsetTop")
   - : offsetTop zwraca pozycję obecnego elementu względem góry węzła offsetParent.
 
-<!---->
-
 - [offsetWidth](/pl/DOM/element.offsetWidth "pl/DOM/element.offsetWidth")
   - : offsetWidth jest własnością DHTML-a, zwracającą szerokość elementu względem układu.
-
-<!---->
 
 - [ownerDocument](/pl/DOM/element.ownerDocument "pl/DOM/element.ownerDocument")
   - : Zwraca dokument, w którym znajduje się bieżący węzeł.
 
-<!---->
-
 - [parentNode](/pl/DOM/element.parentNode "pl/DOM/element.parentNode")
   - : Zwraca rodzica bieżącego węzła.
-
-<!---->
 
 - [prefix](/pl/DOM/element.prefix "pl/DOM/element.prefix")
   - : Zwraca prefiks przestrzeni nazw obecnego węzła bądź NULL, jeśli nie określono przestrzeni nazw.
 
-<!---->
-
 - [previousSibling](/pl/DOM/element.previousSibling "pl/DOM/element.previousSibling")
   - : Zwraca węzeł bezpośrednio poprzedni w drzewie dokumentu.
-
-<!---->
 
 - [scrollHeight](/pl/DOM/element.scrollHeight "pl/DOM/element.scrollHeight")
   - : Własność DHTML-a, zwraca wysokość zawartości elementu z paskiem przewijania.
 
-<!---->
-
 - [scrollLeft](/pl/DOM/element.scrollLeft "pl/DOM/element.scrollLeft")
   - : pobiera bądź ustawia liczbę pikseli, o którą zostanie przewinięta zawartość dokumentu. Kierunek przewijania odbywa się w lewo.
-
-<!---->
 
 - [scrollTop](/pl/DOM/element.scrollTop "pl/DOM/element.scrollTop")
   - : Własność DHTML-a, która ustawia bądź pobiera odległość między górą elementu a najwyższym punktem zawartości elementu z paskiem przewijania.
 
-<!---->
-
 - [scrollWidth](/pl/DOM/element.scrollWidth "pl/DOM/element.scrollWidth")
   - : Zwraca the width of the scroll view of an element.
-
-<!---->
 
 - [style](/pl/DOM/element.style "pl/DOM/element.style")
   - : Zwraca blok reguł stylów dla elementu.
 
-<!---->
-
 - [tabIndex](/pl/DOM/element.tabIndex "pl/DOM/element.tabIndex")
   - : Pobiera/ustawia pozycję elementu w porządku tabulacji.
 
-<!---->
-
 - [tagName](/pl/DOM/element.tagName "pl/DOM/element.tagName")
   - : Zwraca nazwę elementu.
-
-<!---->
 
 - [textContent](/pl/DOM/element.textContent "pl/DOM/element.textContent")
   - : Pobiera/ustawia zawartość tekstu elementu włączając jego potomków.
@@ -257,137 +183,83 @@ W tym miejscu "elementy" oznaczają ten interfejs, jaki mają wszystkie elementy
 - [addEventListener](/pl/DOM/element.addEventListener "pl/DOM/element.addEventListener")
   - : Pozwala zarejestrować obserwatora zdarzeń dla celu zdarzenia.
 
-<!---->
-
 - [appendChild](/pl/DOM/element.appendChild "pl/DOM/element.appendChild")
   - : Wstawia określony węzeł do listy węzłów dokumentu.
-
-<!---->
 
 - [blur](/pl/DOM/element.blur "pl/DOM/element.blur")
   - : Dezaktywuje bieżący element.
 
-<!---->
-
 - [click](/pl/DOM/element.click "pl/DOM/element.click")
   - : Wywołuje kliknięcie na elemencie.
-
-<!---->
 
 - [cloneNode](/pl/DOM/element.cloneNode "pl/DOM/element.cloneNode")
   - : Zwraca kopię bieżącego węzła.
 
-<!---->
-
 - [dispatchEvent](/pl/DOM/element.dispatchEvent "pl/DOM/element.dispatchEvent")
   - : Pozwala przekazać wywołania zdarzeń do modelu zdarzeń w implementacji DOM.
-
-<!---->
 
 - [focus](/pl/DOM/element.focus "pl/DOM/element.focus")
   - : Aktywuje bieżący element.
 
-<!---->
-
 - [getAttribute](/pl/DOM/element.getAttribute "pl/DOM/element.getAttribute")
   - : Zwraca wartość atrybutu o podanej nazwie.
-
-<!---->
 
 - [getAttributeNS](/pl/DOM/element.getAttributeNS "pl/DOM/element.getAttributeNS")
   - : Zwraca wartość atrybutu o podanej nazwie i przestrzeni nazw.
 
-<!---->
-
 - [getAttributeNode](/pl/DOM/element.getAttributeNode "pl/DOM/element.getAttributeNode")
   - : Zwraca atrybut elementu jako osobny węzeł.
-
-<!---->
 
 - [getElementsByTagName](/pl/DOM/element.getElementsByTagName "pl/DOM/element.getElementsByTagName")
   - : Zwraca elementy o podanej nazwie będące potomkami bieżącego elementu.
 
-<!---->
-
 - [hasAttribute](/pl/DOM/element.hasAttribute "pl/DOM/element.hasAttribute")
   - : Zwraca wartość logiczną zależnie od tego, czy element posiada atrybut o podanej nazwie.
-
-<!---->
 
 - [hasAttributeNS](/pl/DOM/element.hasAttributeNS "pl/DOM/element.hasAttributeNS")
   - : Zwraca wartość logiczną zależnie od tego, czy element posiada atrybut o podanej nazwie i przestrzeni nazw.
 
-<!---->
-
 - [hasAttributes](/pl/DOM/element.hasAttributes "pl/DOM/element.hasAttributes")
   - : Zwraca wartość logiczną zależnie od tego, czy element posiada jakiekolwiek atrybuty.
-
-<!---->
 
 - [hasChildNodes](/pl/DOM/element.hasChildNodes "pl/DOM/element.hasChildNodes")
   - : Zwraca wartość logiczną zależnie od tego, czy element posiada dzieci.
 
-<!---->
-
 - [insertBefore](/pl/DOM/element.insertBefore "pl/DOM/element.insertBefore")
   - : Metoda pozwala wstawić węzeł przed bieżącym elementem w DOM.
-
-<!---->
 
 - [item](/pl/DOM/element.item "pl/DOM/element.item")
   - : Zwraca węzeł z drzewa wg podanego indeksu.
 
-<!---->
-
 - [normalize](/pl/DOM/element.normalize "pl/DOM/element.normalize")
   - : Metoda zapisuje bieżący węzeł i całe drzewo znajdujące się wewnątrz w "znormalizowanej" formie.
-
-<!---->
 
 - [removeAttribute](/pl/DOM/element.removeAttribute "pl/DOM/element.removeAttribute")
   - : Usuwa atrybut elementu.
 
-<!---->
-
 - [removeAttributeNode](/pl/DOM/element.removeAttributeNode "pl/DOM/element.removeAttributeNode")
   - : Usuwa określony atrybut elementu.
-
-<!---->
 
 - [removeChild](/pl/DOM/element.removeChild "pl/DOM/element.removeChild")
   - : Usuwa węzeł potomny bieżącego elementu.
 
-<!---->
-
 - [removeEventListener](/pl/DOM/element.removeEventListener "pl/DOM/element.removeEventListener")
   - : Pozwala usunąć obserwatora zdarzeń z celu zdarzenia.
-
-<!---->
 
 - [replaceChild](/pl/DOM/element.replaceChild "pl/DOM/element.replaceChild")
   - : Metoda replaceChild() zastępuje węzeł potomny bieżącego elementu innym węzłem.
 
-<!---->
-
 - [setAttribute](/pl/DOM/element.setAttribute "pl/DOM/element.setAttribute")
   - : Dodaje nowy atrybut bądź zmienia wartość atrybutu bieżącego elementu.
-
-<!---->
 
 - [setAttributeNS](/pl/DOM/element.setAttributeNS "pl/DOM/element.setAttributeNS")
   - : Dodaje nowy atrybut bądź zmienia wartość atrybutu bieżącego elementu, wg podanej nazwy i przestrzeni nazw.
 
-<!---->
-
 - [setAttributeNode](/pl/DOM/element.setAttributeNode "pl/DOM/element.setAttributeNode")
   - : Dodaje nowy węzeł atrybutu do bieżącego elementu.
 
-<!---->
-
 - [setAttributeNodeNS](/pl/DOM/element.setAttributeNodeNS "pl/DOM/element.setAttributeNodeNS")
   - : Dodaje nowy węzeł atrybutu do bieżącego elementu wg podanej nazwy i przestrzeni nazw.
-
-<!---->
 
 - [supports](/pl/DOM/element.supports "pl/DOM/element.supports")
   - : Sprawdza, czy implementacja DOM pozwala na wykorzystanie konkretnej możliwości.
@@ -396,13 +268,13 @@ W tym miejscu "elementy" oznaczają ten interfejs, jaki mają wszystkie elementy
 
 Poniższe właściwości nie mogą być przypisane, tak jak uchwyty zdarzeń obiektów document czy window. Wszystkie poniższe własności służą tylko do odczytu - zwracają kod obsługi zdarzeń, jeżeli został on nadany elementowi w samym HTML-u bądź XML-u.
 
-**Są to właściwości odnoszące się do HTML dla atrybutów zdarzeń 'on'.**
+**Są to właściwości odnoszące się do HTML dla atrybutów zdarzeń 'on'.**
 
-**W przeciwieństwie do odpowiadających atrybutów, wartości tych właściwość są funkcjami lub jakimkolwiek innym obiektem implementowanym przez [EventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) interfejs. Przypisanie atrybutu zdarzenia w HTML powoduje utworzenie funkcji opakowującej funkcji dla określonego kodu. Np. podając następujący HTML:**
+**W przeciwieństwie do odpowiadających atrybutów, wartości tych właściwość są funkcjami lub jakimkolwiek innym obiektem implementowanym przez [EventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) interfejs. Przypisanie atrybutu zdarzenia w HTML powoduje utworzenie funkcji opakowującej funkcji dla określonego kodu. Np. podając następujący HTML:**
 
     <div onclick="foo();">click me!</div>
 
-**Jeżeli `element` jest referencją do `<div>`, wartość `element.onclick` wynosi faktycznie:**
+**Jeżeli `element` jest referencją do `<div>`, wartość `element.onclick` wynosi faktycznie:**
 
     function onclick(event) {
        foo();
@@ -413,62 +285,38 @@ Poniższe właściwości nie mogą być przypisane, tak jak uchwyty zdarzeń obi
 - [onblur](/pl/DOM/element.onblur "pl/DOM/element.onblur")
   - : Zwraca kod obsługi zdarzenia blur.
 
-<!---->
-
 - [onclick](/pl/DOM/element.onclick "pl/DOM/element.onclick")
   - : Zwraca kod obsługi zdarzenia onclick.
-
-<!---->
 
 - [ondblclick](/pl/DOM/element.ondblclick "pl/DOM/element.ondblclick")
   - : Zwraca kod obsługi zdarzenia dblclick.
 
-<!---->
-
 - [onfocus](/pl/DOM/element.onfocus "pl/DOM/element.onfocus")
   - : Zwraca kod obsługi zdarzenia focus.
-
-<!---->
 
 - [onkeydown](/pl/DOM/element.onkeydown "pl/DOM/element.onkeydown")
   - : Zwraca kod obsługi zdarzenia keydown.
 
-<!---->
-
 - [onkeypress](/pl/DOM/element.onkeypress "pl/DOM/element.onkeypress")
   - : Zwraca kod obsługi zdarzenia keypress.
-
-<!---->
 
 - [onkeyup](/pl/DOM/element.onkeyup "pl/DOM/element.onkeyup")
   - : Zwraca kod obsługi zdarzenia keyup.
 
-<!---->
-
 - [onmousedown](/pl/DOM/element.onmousedown "pl/DOM/element.onmousedown")
   - : Zwraca kod obsługi zdarzenia mousedown.
-
-<!---->
 
 - [onmousemove](/pl/DOM/element.onmousemove "pl/DOM/element.onmousemove")
   - : Zwraca kod obsługi zdarzenia mousemove.
 
-<!---->
-
 - [onmouseout](/pl/DOM/element.onmouseout "pl/DOM/element.onmouseout")
   - : Zwraca kod obsługi zdarzenia mouseout.
-
-<!---->
 
 - [onmouseover](/pl/DOM/element.onmouseover "pl/DOM/element.onmouseover")
   - : Zwraca kod obsługi zdarzenia mouseover.
 
-<!---->
-
 - [onmouseup](/pl/DOM/element.onmouseup "pl/DOM/element.onmouseup")
   - : Zwraca kod obsługi zdarzenia mouseup.
-
-<!---->
 
 - [onresize](/pl/DOM/element.onresize "pl/DOM/element.onresize")
   - : Zwraca kod obsługi zdarzenia resize.

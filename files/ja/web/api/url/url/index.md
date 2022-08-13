@@ -25,7 +25,7 @@ translation_of: Web/API/URL/URL
 
 - `url`
   - : 絶対 URL または相対 URL を表す {{domxref("USVString")}}。`url` が相対 URL の場合、`base` は必須であり、ベース URL として使用されます。`url` が絶対 URL の場合、指定された `base` は無視されます。
-- `base`\_ \_{{optional_inline}}
+- `base` {{optional_inline}}
   - : `url` が相対 URL の場合に使用するベース URL を表す {{domxref("USVString")}}。 指定しない場合のデフォルトは `''` です。
 
 > **Note:** **注**: 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。

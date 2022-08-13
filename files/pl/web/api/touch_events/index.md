@@ -17,8 +17,6 @@ Zdarzenia dotykowe są podobne do zdarzeń myszki, z tą różnicą, że pozwala
 - Powierzchnia
   - : Powierzchnia dotykowa. Może to być ekran lub gładzik.
 
-<!---->
-
 - Punkt dotyku
   - : Punkt kontaktu z powierzchnią. Może to być palec (lub łokieć, ucho, nos, cokolwiek, ale najczęściej jednak palec) lub rysik.
 
@@ -35,7 +33,7 @@ Zdarzenia dotykowe są podobne do zdarzeń myszki, z tą różnicą, że pozwala
 
 Poniższy przykład śledzi wiele dotknięć w jednym czasie, pozwalając użytkownikowi na rysowanie w elemencie {{HTMLElement("canvas")}} przy użyciu więcej niż jednego palca jednocześnie. Kod ten będzie działać jedynie w przeglądarkach wspierających zdarzenia dotykowe.
 
-> **Note:** **Uwaga:** W niniejszym tekście słowo „palec” używane jest do opisania kontaktu z powierzchnią dotykową, ale może to być oczywiście także rysik lub dowolna inna metoda dotykania ekranu.
+> **Uwaga:** W niniejszym tekście słowo „palec” używane jest do opisania kontaktu z powierzchnią dotykową, ale może to być oczywiście także rysik lub dowolna inna metoda dotykania ekranu.
 
 ### Stwórz kanwę
 
@@ -144,7 +142,7 @@ After drawing the line, we call [`Array.splice()`](/pl/docs/Web/JavaScript/Refer
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle this by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.
+When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle this by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.
 
 ```js
 function handleEnd(evt) {
@@ -186,7 +184,7 @@ function handleCancel(evt) {
   var touches = evt.changedTouches;
 
   for (var i = 0; i < touches.length; i++) {
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+    var idx = ongoingTouchIndexById(touches[i].identifier);
     ongoingTouches.splice(idx, 1);  // remove it; we're done
   }
 }
@@ -313,7 +311,7 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ### `Touch`
 
-Touch events are typically available on devices with a touch screen, but many browsers make the touch events API unavailable on all desktop devices, even those with touch screens.
+Touch events are typically available on devices with a touch screen, but many browsers make the touch events API unavailable on all desktop devices, even those with touch screens.
 
 The reason for this is that some websites use the availability of parts of the touch events API as an indicator that the browser is running on a mobile device. If the touch events API is available, these websites will assume a mobile device and serve mobile-optimised content. This may then provide a poor experience for users of desktop devices that have touch screens.
 

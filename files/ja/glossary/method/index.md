@@ -24,8 +24,6 @@ translation_of: Glossary/Method
 
 - [JavaScript 内蔵メソッド一覧](/ja/docs/Web/JavaScript/Reference/Methods_Index)
 
-<!---->
-
 - [MDN Web Docs 用語集](/ja/docs/Glossary)
 
   - {{Glossary("function", "関数")}}

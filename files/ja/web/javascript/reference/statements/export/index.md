@@ -24,8 +24,6 @@ translation_of: Web/JavaScript/Reference/Statements/export
 1.  名前付きエクスポート (モジュールごとに 0 以上のエクスポート)
 2.  デフォルトエクスポート (モジュールごとに 1 つのエクスポート)
 
-<!---->
-
     // 個々の機能をエクスポート
     export let name1, name2, …, nameN; // var, const も
     export let name1 = …, name2 = …, …, nameN; // var, const も

@@ -19,14 +19,12 @@ Das **`do...while` statement** erstellt eine Schleife, die einen bestimmten Ausd
 - `statement`
   - : Ein Ausdruck, welcher mindestens einmal ausgeführt wird und jedes Mal, wenn die Aussage wahr ist, wieder ausgeführt wird. Um mehrere Ausdrücke in der Schleife auszuführen, nutzen Sie eine {{jsxref("Statements/block", "block")}} - Aussage (`{ ... }`) um diese Aussagen zu gruppieren.
 
-<!---->
-
 - `condition`
   - : Eine Aussage, die nach jedem Durchgang durch die Schleife überprüft wird. Falls `condition` wahr ist, wird das `statement` wieder ausgeführt. Wenn `condition` falsch wird, geht das Programm zu dem Ausdruck nach dem `do...while` über.
 
 ## Beispiele
 
-### `do...while `benutzen
+### `do...while`benutzen
 
 In dem folgendem Beispiel wird die `do...while` - Schleife mindestens einmal ausgeführt und wird wieder ausgeführt, bis `i` nicht länger weniger als 5 ist.
 

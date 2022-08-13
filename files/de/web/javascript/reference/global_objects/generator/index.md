@@ -58,7 +58,7 @@ Firefox (SpiderMonkey) hat eine frühe Version der Generatoren in [JavaScript 1.
 
 ### Veraltete Generator Methoden
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()`{{non-standard_inline}}
   - : Gibt einen Wert vom {{jsxref("Operators/yield", "yield")}} Ausdruck zurück. Diese korrespondiert mit der `next()` Methode in ES2015 Generator Objekt.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Beendet einen Generator, so dass der Aufruf von `next()` zu einem {{jsxref("StopIteration")}} Fehler führt. Diese korrespondiert mit der `return()` Methode in ES2015 Generator Objekt.

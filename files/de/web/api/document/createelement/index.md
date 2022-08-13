@@ -11,7 +11,7 @@ translation_of: Web/API/Document/createElement
 ---
 {{APIRef("DOM")}}
 
-In einem [HTML ](/de/docs/Web/HTML)Dokument erstellt die **`Document.createElement()`** Methode ein spezifiziertes HTML Element oder ein {{domxref("HTMLUnknownElement")}} wenn der gegebene Elementname ein unbekannter ist.
+In einem [HTML](/de/docs/Web/HTML)Dokument erstellt die **`Document.createElement()`** Methode ein spezifiziertes HTML Element oder ein {{domxref("HTMLUnknownElement")}} wenn der gegebene Elementname ein unbekannter ist.
 
 ## Syntax
 

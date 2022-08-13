@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/get
 
 Die **`get()`** Methode der {{domxref("FormData")}} Schnittstelle gibt die den ersten Wert, der dem gegebenen Schlüssel zugeordnet ist, aus dem `FormData` Objekt zurück. Wenn mehrere Werte zu erwarten sind und diese alle verwendet werden sollen, sollte stattdeessen die Methode {{domxref("FormData.getAll()","getAll()")}} verwendet werden.
 
-> **Note:** **Hinweis:** Diese Methode ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
+> **Hinweis:** Diese Methode ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
 
 ## Syntax
 

@@ -25,7 +25,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 }
 ```
 
-Für weitere Informationen über das Erstellen von `vertexShader` und `fragmentShader, lese dir `{{domxref("WebGLShader")}} durch.
+Für weitere Informationen über das Erstellen von `vertexShader` und `fragmentShader, lese dir`{{domxref("WebGLShader")}} durch.
 
 ## Beispiele
 

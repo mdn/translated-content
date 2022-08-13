@@ -19,13 +19,9 @@ translation_of: Web/CSS/background-position
 ## Składnia
 
     background-position: [ <percentage> | <length> | left | center | right  ]
-                         [ <percentage> | <length> | top  | center | bottom ] ? ;
-
-<!---->
+                         [ <percentage> | <length> | top  | center | bottom ] ? ;
 
     background-position: [ top | center | bottom ];
-
-<!---->
 
     background-position: inherit;
 

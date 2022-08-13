@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/String/fontsize
 
 ## Podsumowanie
 
-Powoduje wyświetlenie łańcucha znaków w określonym rozmiarze czcionki, tak jak to było w znaczniku {{HTMLElement("font")}}.
+Powoduje wyświetlenie łańcucha znaków w określonym rozmiarze czcionki, tak jak to było w znaczniku {{HTMLElement("font")}}.
 
 ## Składnia
 

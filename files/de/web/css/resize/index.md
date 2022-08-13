@@ -52,7 +52,7 @@ Die Eigenschaft `resize` wird als ein einzelner Schlüsselwortwert aus der folge
 - `inline` {{experimental_inline}}
   - : Abhängig von den Werten für {{cssxref("writing-mode")}} und {{cssxref("direction")}}, zeigt das Element eine Möglichkeit an, die es dem Benutzer erlaubt, die horizontale oder vertikale Größe des Elements in Inlinerichtung zu ändern.
 
-> **Note:** **Hinweis:** `resize` wird nicht auf Blöcke angewendet, für die die {{cssxref("overflow")}} Eigenschaft auf `visible` gesetzt ist.
+> **Hinweis:** `resize` wird nicht auf Blöcke angewendet, für die die {{cssxref("overflow")}} Eigenschaft auf `visible` gesetzt ist.
 
 ## Formale Definition
 

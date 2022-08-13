@@ -5,7 +5,7 @@ translation_of: Web/CSS/WebKit_Extensions
 ---
 {{ CSSRef() }}
 
-WebKit unterstützt eine Reihe von [CSS](/de/CSS "en/CSS") Erweiterungen, welche mit dem Präfix` -webkit` versehen sind. Alle Erweiterungen mit dem Präfix `-webkit` funktionieren auch mit dem Präfix `-apple`.
+WebKit unterstützt eine Reihe von [CSS](/de/CSS "en/CSS") Erweiterungen, welche mit dem Präfix`-webkit` versehen sind. Alle Erweiterungen mit dem Präfix `-webkit` funktionieren auch mit dem Präfix `-apple`.
 
 Einige dieser Eigenschaften sind für eine Aufnahme in die CSS Spezifikation vorgeschlagen. Es kann allerdings Abweichungen von der im Standard definierten Eigenschaft und der durch `-webkit-` eingeführten Eigenschaften geben.
 

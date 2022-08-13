@@ -17,7 +17,7 @@ translation_of: Web/CSS/order
 
 Die `order` [CSS](/de/docs/Web/CSS) Eigenschaft gibt die Reihenfolge an, in der Flexelemente innerhalb ihres Flexcontainers dargestellt werden. Elemente werden in aufsteigender Reihenfolge des `order` Werts dargestellt. Elemente mit dem gleichen `order` Wert werden in der Reihenfolge dargestellt, in der sie im Quelltext auftauchen.
 
-> **Note:** **Hinweis:** `order` beeinflusst nur die visuelle Reihenfolge von Elementen und nicht deren logische oder Tab-Reihenfolge. `order` darf nicht bei nicht visuellen Medien wie Sprache verwendet werden.
+> **Hinweis:** `order` beeinflusst nur die visuelle Reihenfolge von Elementen und nicht deren logische oder Tab-Reihenfolge. `order` darf nicht bei nicht visuellen Medien wie Sprache verwendet werden.
 
 {{cssinfo}}
 

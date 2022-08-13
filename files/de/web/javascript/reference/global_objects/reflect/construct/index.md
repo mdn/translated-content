@@ -3,7 +3,7 @@ title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
-{{JSRef}}Die statische Methode **`Reflect`\*\***`.construct()`\*\* verhält sich wie der [`new` operator](/de/docs/Web/JavaScript/Reference/Operators/new), allerdings in Form einer Funktion.Sie ist das Equivalent zu `new target(...args)`. Es existiert zudem die Option, einen anderen Prototyp zu definieren.{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
+{{JSRef}}Die statische Methode **`Reflect.construct()`** verhält sich wie der [`new` operator](/de/docs/Web/JavaScript/Reference/Operators/new), allerdings in Form einer Funktion.Sie ist das Equivalent zu `new target(...args)`. Es existiert zudem die Option, einen anderen Prototyp zu definieren.{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 
 ## Syntax
 

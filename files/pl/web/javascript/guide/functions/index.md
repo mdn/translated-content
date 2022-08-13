@@ -71,14 +71,14 @@ y = mycar.make; // y wciąż dostaje wartość "Honda"
 
 ### Wyrażenia funkcyjne
 
-Podczas gdy powyższa deklaracja jest syntaktycznie wyrażeniem, funkcje mogą być utworzone także przez **wyrażenie funkcyjne.** Taka funkcja może być **anonimowa;** nie posiadająca nazwy. Dla przykładu, funkcja `square `może być zdefiniowana następująco:
+Podczas gdy powyższa deklaracja jest syntaktycznie wyrażeniem, funkcje mogą być utworzone także przez **wyrażenie funkcyjne.** Taka funkcja może być **anonimowa;** nie posiadająca nazwy. Dla przykładu, funkcja `square `może być zdefiniowana następująco:
 
 ```js
 var square = function(number) { return number * number };
 var x = square(4) // x gets the value 16
 ```
 
-Deklaracja funkcji przy  pomocy wyrażenia funkcyjnego nie oznacza, że funkcja musi być anonimowa. Nadal może ona posiadać swoją nazwę, która może przydać się do wywołania samej siebie czy do identyfikacji w śladzie stosu podczas debugowania kodu.
+Deklaracja funkcji przy  pomocy wyrażenia funkcyjnego nie oznacza, że funkcja musi być anonimowa. Nadal może ona posiadać swoją nazwę, która może przydać się do wywołania samej siebie czy do identyfikacji w śladzie stosu podczas debugowania kodu.
 
 ```js
 var factorial = function fac(n) { return n<2 ? 1 : n*fac(n-1) };
@@ -86,7 +86,7 @@ var factorial = function fac(n) { return n<2 ? 1 : n*fac(n-1) };
 console.log(factorial(3));
 ```
 
-Function expressions are convenient when passing a function as an argument to another function. The following example shows a `map` function being defined and then called with an expression function as its first parameter:
+Function expressions are convenient when passing a function as an argument to another function. The following example shows a `map` function being defined and then called with an expression function as its first parameter:
 
 ```js
 function map(f,a) {
@@ -131,7 +131,7 @@ square(5);
 
 Powyższy kod wywołuje funkcję dla argumentu 5. Funkcja wykonuje się i zwraca wartość 25.
 
-Funkcja musi znajdować się w obecnym zakresie by mogła zostać wywołana. Jej wywołanie może jednak znajdować się powyżej jej deklaracji. Mamy wtedy do czynienia ze zjawiskiem hoistingu.
+Funkcja musi znajdować się w obecnym zakresie by mogła zostać wywołana. Jej wywołanie może jednak znajdować się powyżej jej deklaracji. Mamy wtedy do czynienia ze zjawiskiem hoistingu.
 
 ```js
 console.log(square(5));
@@ -139,9 +139,9 @@ console.log(square(5));
 function square(n) { return n*n }
 ```
 
-Zakres funkcji jest funkcją w której została ona zadeklarowana co oznacza, że deklarując funkcję na najwyższym poziomie programu, znajduje się ona w zakresie globalnym.
+Zakres funkcji jest funkcją w której została ona zadeklarowana co oznacza, że deklarując funkcję na najwyższym poziomie programu, znajduje się ona w zakresie globalnym.
 
-> **Note:** **Notka:** Zjawisko hoistingu funkcji zachodzi wyłącznie w przypadku powyższego sposobu deklaracji (`function funcName(){}`). Poniższy kod nie zadziała, w tym przypadku funkcja została zadeklarowana za pomocą wyrażenia.
+> **Note:** **Notka:** Zjawisko hoistingu funkcji zachodzi wyłącznie w przypadku powyższego sposobu deklaracji (`function funcName(){}`). Poniższy kod nie zadziała, w tym przypadku funkcja została zadeklarowana za pomocą wyrażenia.
 
 ```js example-bad
 console.log(square(5));
@@ -150,9 +150,9 @@ square = function (n) {
 }
 ```
 
-Argumenty funkcji mogą być nie tylko łańcuchami lub liczbami.Funkcja `show_props()` (zdefiniowana w [Working with objects](/pl/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties "https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties")) jest przykładem funkcji przyjmującej objekt jako argument.
+Argumenty funkcji mogą być nie tylko łańcuchami lub liczbami.Funkcja `show_props()` (zdefiniowana w [Working with objects](/pl/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties "https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties")) jest przykładem funkcji przyjmującej objekt jako argument.
 
-Funkcja może wywoływać samą siebie. Na przykład, poniżej mamy funkcję rekurencyjnie obliczającą silnię.
+Funkcja może wywoływać samą siebie. Na przykład, poniżej mamy funkcję rekurencyjnie obliczającą silnię.
 
 ```js
 function factorial(n){
@@ -174,11 +174,11 @@ d = factorial(4); // d gets the value 24
 e = factorial(5); // e gets the value 120
 ```
 
-Istnieją inne sposoby wywołania funkcji. Często zdarzają się sytuacje gdy funkcja musi zostać wywołana dynamicznie, przyjmuje różna liczbę argumentów lub zmienia sie kontekst jej wywołania. Okazuje się, że funkcje są tak naprawdę obiektami, które posiadaja własne metody (sprawdź obiekt {{jsxref("Function")}}). Jednej z tych metod {{jsxref("Function.apply", "apply()")}} możemy użyć do zmiany kontekstu wywołania funkcji.
+Istnieją inne sposoby wywołania funkcji. Często zdarzają się sytuacje gdy funkcja musi zostać wywołana dynamicznie, przyjmuje różna liczbę argumentów lub zmienia sie kontekst jej wywołania. Okazuje się, że funkcje są tak naprawdę obiektami, które posiadaja własne metody (sprawdź obiekt {{jsxref("Function")}}). Jednej z tych metod {{jsxref("Function.apply", "apply()")}} możemy użyć do zmiany kontekstu wywołania funkcji.
 
 ## Zakres funkcji
 
-Zmienne zdefiniowane wewnątrz funkcji nie są dostępne poza nią, ponieważ są zdefiniowane tylko w wewnętrznym zakresie funkcji. Sama funkcja ma dostęp do innych zmiennych i funkcji zdefiniowanych w tym samym zakresie, w którym została zdefiniowana. Innymi słowy, funkcja zdefiniowana w zakresie globalnym ma dostęp do wszystkich zmiennych zdefiniowanych w zakresie globalnym. Funkcja zdefiniowana w innej funkcji ma dostęp do wszystkich zmiennych zdefiniowanych w funkcji macierzystej oraz zmiennych, do których ma dostęp funkcja macierzysta.
+Zmienne zdefiniowane wewnątrz funkcji nie są dostępne poza nią, ponieważ są zdefiniowane tylko w wewnętrznym zakresie funkcji. Sama funkcja ma dostęp do innych zmiennych i funkcji zdefiniowanych w tym samym zakresie, w którym została zdefiniowana. Innymi słowy, funkcja zdefiniowana w zakresie globalnym ma dostęp do wszystkich zmiennych zdefiniowanych w zakresie globalnym. Funkcja zdefiniowana w innej funkcji ma dostęp do wszystkich zmiennych zdefiniowanych w funkcji macierzystej oraz zmiennych, do których ma dostęp funkcja macierzysta.
 
 ```js
 // Poniższe zmienne są zdefiniowane z zakresie globalnym
@@ -218,7 +218,7 @@ Funkcja może się odwoływać i wywoływać samą siebie. Istnieją trzy sposob
 2.  [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 3.  przez zmienną dostępna w zakresie, która odwołuje się do funkcji
 
-Na przykład, rozważ następującą definicję funkcji:
+Na przykład, rozważ następującą definicję funkcji:
 
 ```js
 var foo = function bar() {
@@ -232,7 +232,7 @@ Within the function body, the following are all equivalent:
 2.  `arguments.callee()`
 3.  `foo()`
 
-Funkcja, która wywołuje samą siebie to _funkcja rekurencyjna_. W pewnym sensie rekurencja jest analogiczna z pętlą. Zarówno funkcja rekurencyjna, jak i pętla wykonują ten sam kod wiele razy, potrzebują warunku końca (aby uniknąć wiecznej pętli lub bardziej w tym przypadku wiecznej rekurencji). Dla przykładu następująca pętla:
+Funkcja, która wywołuje samą siebie to _funkcja rekurencyjna_. W pewnym sensie rekurencja jest analogiczna z pętlą. Zarówno funkcja rekurencyjna, jak i pętla wykonują ten sam kod wiele razy, potrzebują warunku końca (aby uniknąć wiecznej pętli lub bardziej w tym przypadku wiecznej rekurencji). Dla przykładu następująca pętla:
 
 ```js
 var x = 0;
@@ -297,15 +297,13 @@ foo(3);
 
 ### Funkcje zagnieżdżone i domknięcia
 
-Możesz zagnieżdżać funkcję w funkcji. Zagnieżdżona (wewnętrzna) funkcja jest prywatna dla funkcji (zewnętrznej), która ją zawiera. W ten sposób tworzy się domknięcie (_closure)_. Domknięcie jest wyrażeniem (zwykle funkcją), które może posiadać dodatkowe zmienne razem ze środowiskiem, które "wiąże" te zmienne (w ten sposób domknięcie jest zamykane).
+Możesz zagnieżdżać funkcję w funkcji. Zagnieżdżona (wewnętrzna) funkcja jest prywatna dla funkcji (zewnętrznej), która ją zawiera. W ten sposób tworzy się domknięcie (_closure)_. Domknięcie jest wyrażeniem (zwykle funkcją), które może posiadać dodatkowe zmienne razem ze środowiskiem, które "wiąże" te zmienne (w ten sposób domknięcie jest zamykane).
 
 Ponieważ funkcja zagnieżdżona jest równocześnie domknięciem, to oznacza, że może "dziedziczyć" wszystkie argumenty i zmienne funkcji, która ją zawiera. Innymi słowy, funkcja wewnętrzna zawiera zakres funkcji zewnętrznej.
 
 Podsumowując:
 
 - Funkcja wewnętrzna może być dostępna tylko przez instrukcje z funkcji zewnętrznej.
-
-<!---->
 
 - Funkcja wewnętrzna tworzy domknięcie: może używać argumentów i zmiennych funkcji zewnętrznej, podczas gdy funkcja zewnętrzna nie może używać argumentów i zmiennych funkcji wewnętrznej.
 
@@ -323,7 +321,7 @@ b = addSquares(3,4); // returns 25
 c = addSquares(4,5); // returns 41
 ```
 
-Ponieważ funkcja wewnętrzna tworzy domknięcie, możesz wywołać funkcję zewnętrzną i podać argumenty zarówno dla zewnętrznej, jak i wewnętrznej funkcji:
+Ponieważ funkcja wewnętrzna tworzy domknięcie, możesz wywołać funkcję zewnętrzną i podać argumenty zarówno dla zewnętrznej, jak i wewnętrznej funkcji:
 
 ```js
 function outside(x) {
@@ -340,13 +338,13 @@ result1 = outside(3)(5); // returns 8
 
 ### Zachowywanie zmiennych
 
-Zwróć uwagę jak zmienna `x` jest zachowana, kiedy zwracana jest funkcja `inside`. Domknięcie musi zachować argumenty i zmienne we wszystkich zakresach, do których się odwołuje. Jako że każde wywołanie potencjalnie dostarcza różne wartości argumentów, przy każdym wywołaniu outside jest tworzone nowe domknięcie. Pamięć może być zwolniona, tylko jeśli zwracany `inside` nie jest więcej dostępny.
+Zwróć uwagę jak zmienna `x` jest zachowana, kiedy zwracana jest funkcja `inside`. Domknięcie musi zachować argumenty i zmienne we wszystkich zakresach, do których się odwołuje. Jako że każde wywołanie potencjalnie dostarcza różne wartości argumentów, przy każdym wywołaniu outside jest tworzone nowe domknięcie. Pamięć może być zwolniona, tylko jeśli zwracany `inside` nie jest więcej dostępny.
 
-Ten sposób nie różni się od zachowywania referencji w innych obiektach, lecz jest mniej oczywisty, ponieważ referencje nie są tworzone bezpośrednio i nie można ich zweryfikować.
+Ten sposób nie różni się od zachowywania referencji w innych obiektach, lecz jest mniej oczywisty, ponieważ referencje nie są tworzone bezpośrednio i nie można ich zweryfikować.
 
 ### Wielokrotnie zagnieżdżone funkcje
 
-Funkcje mogą być zagnieżdżone wielokrotnie, np. funkcja (A) zawierająca funkcję (B) zawierającą funkcję (C). Obydwie funkcje B i C tworzą domknięcia więc B ma dostęp do A a C ma dostęp do B. Dodatkowo, ponieważ C ma dostęp do B która ma dostęp do A, więc C również ma dostęp do A. W ten sposób domknięcia mogą zawierać wiele zakresów; zawierają rekurencyjne zakresy funkcji, które je zawierają. Efekt ten nazywa się _wiązaniem zakresów (\_\_scope chaining)_. (Później zostanie wyjaśnione określenie "chaining".)
+Funkcje mogą być zagnieżdżone wielokrotnie, np. funkcja (A) zawierająca funkcję (B) zawierającą funkcję (C). Obydwie funkcje B i C tworzą domknięcia więc B ma dostęp do A a C ma dostęp do B. Dodatkowo, ponieważ C ma dostęp do B która ma dostęp do A, więc C również ma dostęp do A. W ten sposób domknięcia mogą zawierać wiele zakresów; zawierają rekurencyjne zakresy funkcji, które je zawierają. Efekt ten nazywa się _wiązaniem zakresów (\_\_scope chaining)_. (Później zostanie wyjaśnione określenie "chaining".)
 
 Rozważ poniższy przykład:
 
@@ -363,17 +361,17 @@ function A(x) {
 A(1); // logs 6 (1 + 2 + 3)
 ```
 
-W tym przykładzie `C` ma dostęp do zmiennej `y` w `B` i `x` w `A`. Jest to możliwe, ponieważ:
+W tym przykładzie `C` ma dostęp do zmiennej `y` w `B` i `x` w `A`. Jest to możliwe, ponieważ:
 
-1.  `B` tworzy domknięcie zawierające `A` i dlatego `B` ma dostęp do argumentów i zmiennych `A`.
-2.  `C` tworzy domknięcie zawierające `B`.
-3.  Ponieważ domknięcie `B` zawiera `A`, to domknięcie `C` również zawiera `A`. `C` ma dostęp do zmiennych i argumentów zarówno `B` jak i `A`. Innymi słowy `C` wiąże zakresy `B` i `A`.
+1.  `B` tworzy domknięcie zawierające `A` i dlatego `B` ma dostęp do argumentów i zmiennych `A`.
+2.  `C` tworzy domknięcie zawierające `B`.
+3.  Ponieważ domknięcie `B` zawiera `A`, to domknięcie `C` również zawiera `A`. `C` ma dostęp do zmiennych i argumentów zarówno `B` jak i `A`. Innymi słowy `C` wiąże zakresy `B` i `A`.
 
-Jednak sytuacja odwrotna nie jest już prawdziwa. `A` nie ma dostępu do `C`, ponieważ `A` nie może dostać się do żadnego argumentu i zmiennej `B`, dla której `C` jest zmienną. Zatem `C` pozostaje prywatny (dostępny) tylko dla `B`.
+Jednak sytuacja odwrotna nie jest już prawdziwa. `A` nie ma dostępu do `C`, ponieważ `A` nie może dostać się do żadnego argumentu i zmiennej `B`, dla której `C` jest zmienną. Zatem `C` pozostaje prywatny (dostępny) tylko dla `B`.
 
 ### Konflikty nazw
 
-Gdy dwa argumenty lub zmienne w zakresach danego zamknięcia mają tę samą nazwę, wtedy występuje konflikt nazw. Czym bardziej wewnętrzny zakres, tym większe pierwszeństwo, więc najbardziej wewnętrzny zakres ma najwyższy priorytet, a najbardziej zewnętrzny zakres ma najniższy. Sytuacja ta, określana jest wiązaniem zakresów. Pierwszy w łańcuchu to najbardziej wewnętrzny zakres, a ostatni to najbardziej zewnętrzny. Rozważ następujący przykład:
+Gdy dwa argumenty lub zmienne w zakresach danego zamknięcia mają tę samą nazwę, wtedy występuje konflikt nazw. Czym bardziej wewnętrzny zakres, tym większe pierwszeństwo, więc najbardziej wewnętrzny zakres ma najwyższy priorytet, a najbardziej zewnętrzny zakres ma najniższy. Sytuacja ta, określana jest wiązaniem zakresów. Pierwszy w łańcuchu to najbardziej wewnętrzny zakres, a ostatni to najbardziej zewnętrzny. Rozważ następujący przykład:
 
 ```js
 function outside() {
@@ -519,7 +517,7 @@ Starting with ECMAScript 6, there are two new kinds of parameters: default param
 
 In JavaScript, parameters of functions default to `undefined`. However, in some situations it might be useful to set a different default value. This is where default parameters can help.
 
-In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`. If in the following example, no value is provided for `b` in the call, its value would be `undefined`  when evaluating `a*b` and the call to `multiple` would have returned `NaN`. However, this is caught with the second line in this example:
+In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`. If in the following example, no value is provided for `b` in the call, its value would be `undefined`  when evaluating `a*b` and the call to `multiple` would have returned `NaN`. However, this is caught with the second line in this example:
 
 ```js
 function multiply(a, b) {
@@ -586,13 +584,13 @@ Until arrow functions, every new function defined its own [this](/pl/docs/Web/Ja
 ```js
 function Person() {
   // The Person() constructor defines `this` as itself.
-  this.age = 0;
+  this.age = 0;
 
   setInterval(function growUp() {
     // In nonstrict mode, the growUp() function defines `this`
     // as the global object, which is different from the `this`
     // defined by the Person() constructor.
-    this.age++;
+    this.age++;
   }, 1000);
 }
 

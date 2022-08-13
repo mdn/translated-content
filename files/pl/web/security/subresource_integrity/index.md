@@ -54,7 +54,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 >
 > - Krok z `awk` jest niezbędny, ponieważ `shasum` w danych wyjściowych przekazuje zahashowaną nazwę pliku do `xxd`. Trzeba liczyć się z katastrofalnymi konsekwencjami, jeśli nazwa pliku zawiera znaki występujące w zapisie heksadecymalnym - `xxd` odkoduje ten zapis i przekaże go do `base64`.
 
-Warto wiedzieć, że dostępny na <https://www.srihash.org/> **SRI Hash Generator** to narzędzie online umożliwiające generowanie hashy SRI.
+Warto wiedzieć, że dostępny na <https://www.srihash.org/> **SRI Hash Generator** to narzędzie online umożliwiające generowanie hashy SRI.
 
 ### Zasady bezpieczeństwa zawartości i Integralności podzasobów(Content Security Policy & Subresource Integrity)
 

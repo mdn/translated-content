@@ -36,7 +36,7 @@ Das sortierte Array. Beachten Sie, dass das Array {{interwiki("wikipedia","in-pl
 
 Wenn `compareFunction` nicht angegeben wird, werden alle Arrayelemente, die nicht `undefined` sind, sortiert indem sie in Strings konvertiert werden und in UTF-16-Code-Unit-Reihenfolge verglichen werden. Zum Beispiel steht "banana" vor "cherry". Bei einer numerischen Sortierung kommt 9 vor 80, aber weil Zahlen in Strings konvertiert werden, kommt "80" in Unicode vor "9". Alle Elemente die `undefined` sind werden ans Ende des Arrays sortiert.
 
-> **Note:** Hinweis: In UTF-16 werden Unicode-Zeichen über `\uFFFF` als zwei Ersatzcodeeinheiten im Bereich `\uD800` - `\ uDFFF` codiert. Der Wert jeder Codeeinheit wird für den Vergleich gesondert berücksichtigt. Daher wird das durch das Ersatzpaar `\uD655` `\uDE55` gebildete Zeichen vor dem Zeichen `\uFF3A` sortiert.
+> **Hinweis:** In UTF-16 werden Unicode-Zeichen über `\uFFFF` als zwei Ersatzcodeeinheiten im Bereich `\uD800` - `\ uDFFF` codiert. Der Wert jeder Codeeinheit wird für den Vergleich gesondert berücksichtigt. Daher wird das durch das Ersatzpaar `\uD655` `\uDE55` gebildete Zeichen vor dem Zeichen `\uFF3A` sortiert.
 
 Wenn `compareFunction` angegeben wird, werden alle Arrayelemente, die nicht `undefined` sind, nach dem Rückgabewert der Vergleichsfunktion sortiert (alle Elemente die `undefined` sind werden ans Ende des Arrays sortiert, ohne Aufruf von `compareFunction`). Wenn `a` und `b` zwei zu vergleichende Elemente sind, gilt Folgendes:
 

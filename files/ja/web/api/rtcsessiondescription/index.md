@@ -27,8 +27,6 @@ _`RTCSessionDescription` が継承するプロパティは存在しません。_
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
   - : これは `RTCSdpType` の列挙型であり、ディスクリプションの種類を表します。
 
-<!---->
-
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
   - : これは、セッションを説明するための {{Glossary("SDP")}} 形式の {{domxref("DOMString")}} です。
 

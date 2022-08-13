@@ -26,10 +26,10 @@ Właściwość clear określa, czy dany element pojawi się obok [pływających]
 
 ### Wartości
 
-- **none** : Element*nie* jest przesuwany poniżej elementów pływających.
-- **left** : Element jest przesuwany poniżej elementów pływających po lewej.
-- **right** : Element jest przesuwany poniżej elementów pływających po prawej.
-- **both** : Element jest przesuwany poniżej elementów pływających po obu stronach.
+- **none** : Element*nie* jest przesuwany poniżej elementów pływających.
+- **left** : Element jest przesuwany poniżej elementów pływających po lewej.
+- **right** : Element jest przesuwany poniżej elementów pływających po prawej.
+- **both** : Element jest przesuwany poniżej elementów pływających po obu stronach.
 
 ### Przykłady
 

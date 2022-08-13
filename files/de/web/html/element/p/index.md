@@ -21,7 +21,7 @@ Das **\<p>**-Element erzeugt einen Absatz, den zusammenhängenden Abschnitt eine
 
 Dieses Element unterstützt lediglich die [globalen Attribute](/de/docs/Web/HTML/Global_attributes).
 
-> **Note:** **Hinweis:** Das `align`-Attribut sollte nicht mehr benutzt werden.
+> **Hinweis:** Das `align`-Attribut sollte nicht mehr benutzt werden.
 
 ## Beispiel
 

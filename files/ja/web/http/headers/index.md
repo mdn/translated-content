@@ -36,8 +36,6 @@ translation_of: Web/HTTP/Headers
 - {{ httpheader("Transfer-Encoding") }}
 - {{ httpheader("Upgrade") }} ([プロトコルのアップグレードの仕組み](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)も参照)
 
-<!---->
-
 - エンドツーエンドヘッダー
   - : これらのヘッダーは、メッセージの最終的な宛先、すなわちリクエストならばサーバー、レスポンスならばクライアントに伝送し*なければなりません*。中間のプロキシーはヘッダーを変更せずに再伝送しなければならず、またキャッシュには保存しなければなりません。
 - ホップバイホップヘッダー

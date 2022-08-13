@@ -7,7 +7,7 @@ translation_of: Web/API/Element/innerHTML
 
 Die {{domxref("Element")}} Eigenschaft **`innerHTML`** ruft das im Element enthaltene HTML-oder XML-Markup ab oder legt dieses fest.
 
-> **Note:** **Hinweis:** Wenn ein {{HTMLElement("div")}}, {{HTMLElement("span")}} oder {{HTMLElement("noembed")}}-Knoten einen untergeordneten Textknoten mit den Zeichen `&`, `<` oder `>` enthält, gibt `innerHTML` diese Zeichen als ihre entsprechende HTML-Entitäten `"&amp;"`, `"&lt;"` bzw. `"&gt;"` zurück. Verwenden Sie {{domxref("Node.textContent")}}, um eine reine Kopie des Inhalts dieser Textknoten zu erhalten.
+> **Hinweis:** Wenn ein {{HTMLElement("div")}}, {{HTMLElement("span")}} oder {{HTMLElement("noembed")}}-Knoten einen untergeordneten Textknoten mit den Zeichen `&`, `<` oder `>` enthält, gibt `innerHTML` diese Zeichen als ihre entsprechende HTML-Entitäten `"&amp;"`, `"&lt;"` bzw. `"&gt;"` zurück. Verwenden Sie {{domxref("Node.textContent")}}, um eine reine Kopie des Inhalts dieser Textknoten zu erhalten.
 
 Verwenden Sie die Methode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}, um den HTML-Code in das Dokument einzufügen, anstatt den Inhalt eines Elements zu ersetzen.
 
@@ -42,7 +42,7 @@ let contents = myElement.innerHTML;
 
 Auf diese Weise können Sie das HTML-Markup der Inhaltsknoten des Elements anzeigen.
 
-> **Note:** **Hinweis:** Das zurückgegebene HTML- oder XML-Fragment wird basierend auf dem aktuellen Inhalt des Elements generiert, sodass das Markup und Formatierung des zurückgegebenen Fragments wahrscheinlich nicht mit dem ursprünglichen Seiten-Markup übereinstimmt.
+> **Hinweis:** Das zurückgegebene HTML- oder XML-Fragment wird basierend auf dem aktuellen Inhalt des Elements generiert, sodass das Markup und Formatierung des zurückgegebenen Fragments wahrscheinlich nicht mit dem ursprünglichen Seiten-Markup übereinstimmt.
 
 ### Inhalte eines Element ersetzen
 
@@ -66,9 +66,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 Was passiert genau, wenn Sie den Wert von `innerHTML` festlegen? Der Benutzer-Agent führt dabei die folgenden Schritte aus:
 
-1.  Der angegebene Wert wird als HTML oder XML analysiert (basierend auf dem Dokumenttyp), sodass ein {{domxref("DocumentFragment")}}-Objekt den neuen Satz von DOM-Knoten für die neuen Elemente darstellt.
-2.  Wenn das Element, dessen Inhalt ersetzt wird, ein {{HTMLElement("template")}}-Element ist, wird das Attribut {{domxref("HTMLTemplateElement.content", "content")}} des Elements `<template>` durch das neue `DocumentFragment` ersetzt, welches in Schritt 1 erstellt wurde.
-3.  Bei allen anderen Elementen wird der Inhalt des Elements durch die Knoten im neuen `DocumentFragment` ersetzt.
+1. Der angegebene Wert wird als HTML oder XML analysiert (basierend auf dem Dokumenttyp), sodass ein {{domxref("DocumentFragment")}}-Objekt den neuen Satz von DOM-Knoten für die neuen Elemente darstellt.
+2. Wenn das Element, dessen Inhalt ersetzt wird, ein {{HTMLElement("template")}}-Element ist, wird das Attribut {{domxref("HTMLTemplateElement.content", "content")}} des Elements `<template>` durch das neue `DocumentFragment` ersetzt, welches in Schritt 1 erstellt wurde.
+3. Bei allen anderen Elementen wird der Inhalt des Elements durch die Knoten im neuen `DocumentFragment` ersetzt.
 
 ### Sicherheitsüberlegungen
 

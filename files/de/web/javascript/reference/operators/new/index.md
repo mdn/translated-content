@@ -22,8 +22,6 @@ Der** `new` Operator** erzeugt eine Instanz eines benutzerdefinierten Objekttyps
 - `constructor`
   - : Eine Funktion, welche den Typ der Objektinstanz spezifiziert.
 
-<!---->
-
 - `arguments`
   - : Eine Liste von Werten, die dem `constructor` übergeben wird.
 
@@ -31,16 +29,16 @@ Der** `new` Operator** erzeugt eine Instanz eines benutzerdefinierten Objekttyps
 
 Das erstellen eines benutzerdefinierten Objektes benötigt zwei Schritte:
 
-1.  Definieren eines Objekttypen indem eine Funktion geschrieben wird.
-2.  Erstellen einer Instanz des Objektes mit `new`.
+1. Definieren eines Objekttypen indem eine Funktion geschrieben wird.
+2. Erstellen einer Instanz des Objektes mit `new`.
 
 Um ein neuen Objekttypen zu definieren, erstellt man eine Funktion für den Objekttypen, die seinen Namen und Eigenschaften spezifiziert. Ein Objekt kann Eigenschaften haben, die ebenfalls Objekte sind. Sie dazu das Beispiel unten.
 
 Wenn der Code `new Foo(...)` ausgeführt wird, passieren folgende Dinge:
 
-1.  Ein neues Objekt wird erstellt, welches von `Foo.prototype` erbt.
-2.  Die Konstruktorfunktion `Foo` wird mit den spezifizierten Argumenten aufgerufen und [`this`](/de/docs/Web/JavaScript/Reference/Operators/this) wird an das neu erstellte Objekt gebunden. `new Foo` ist gleichbedeutend mit `new Foo()`, d. h. wenn keine Argumentenliste spezifiziert ist, wird `Foo` ohne Argumente aufgerufen.
-3.  Das Objekt, welches von der Konstruktorfunktion zurückgegeben wird, ist das Resultat des ganzen `new` Ausdrucks. Wenn die Konstruktorfunktion nicht explizit ein Objekt zurück gibt, wird stattdessen das erstellte Objekt aus Schritt 1 zurückgegeben. (Normalerweise geben Konstruktoren keinen Wert zurück, aber sie können es tun, um den normalen Objekterstellungsprozess zu überschreiben.)
+1. Ein neues Objekt wird erstellt, welches von `Foo.prototype` erbt.
+2. Die Konstruktorfunktion `Foo` wird mit den spezifizierten Argumenten aufgerufen und [`this`](/de/docs/Web/JavaScript/Reference/Operators/this) wird an das neu erstellte Objekt gebunden. `new Foo` ist gleichbedeutend mit `new Foo()`, d. h. wenn keine Argumentenliste spezifiziert ist, wird `Foo` ohne Argumente aufgerufen.
+3. Das Objekt, welches von der Konstruktorfunktion zurückgegeben wird, ist das Resultat des ganzen `new` Ausdrucks. Wenn die Konstruktorfunktion nicht explizit ein Objekt zurück gibt, wird stattdessen das erstellte Objekt aus Schritt 1 zurückgegeben. (Normalerweise geben Konstruktoren keinen Wert zurück, aber sie können es tun, um den normalen Objekterstellungsprozess zu überschreiben.)
 
 Man kann immer eine Eigenschaft zu dem vorher erstellten Objekt hinzufügen. Zum Beispiel fügt das Statement `auto1.farbe = "schwarz"` die Eigenschaft `farbe` zu `auto1` hinzu und weist dieser den Wert `"schwarz"` zu. Jedoch hat das keinen Effekt auf andere Objekte. Um die Eigenschaft zu allen Objekten des selben Typs hinzuzufügen, muss die Eigenschaft dem `Auto` Objekttypen hinzugefügt werden.
 

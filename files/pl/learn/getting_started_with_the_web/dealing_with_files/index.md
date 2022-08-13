@@ -5,11 +5,11 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-Strona internetowa zawiera wiele plików: pliki z treścią, kod, arkusze stylów, media, i więcej. Kiedy budujesz stronę internetową, musisz zebrać je wszystkie razem i stworzyć z nich rozsądną strukturę na swoim komputerze oraz upewnić się, że mogą się one między sobą komunikować, zanim [wyślesz je na serwer hostingowy](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website). Sekcja _Struktura plików witryny_ omawia podstawowe kwestie jakich powinieneś być świadomy, aby zbudować racjonalną strukturę plików dla twojej strony internetowej.
+Strona internetowa zawiera wiele plików: pliki z treścią, kod, arkusze stylów, media, i więcej. Kiedy budujesz stronę internetową, musisz zebrać je wszystkie razem i stworzyć z nich rozsądną strukturę na swoim komputerze oraz upewnić się, że mogą się one między sobą komunikować, zanim [wyślesz je na serwer hostingowy](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website). Sekcja _Struktura plików witryny_ omawia podstawowe kwestie jakich powinieneś być świadomy, aby zbudować racjonalną strukturę plików dla twojej strony internetowej.
 
 ## Gdzie na twoim komputerze powinna znajdować się twoja strona internetowa?
 
-Kiedy pracujesz lokalnie na swoim komputerze, powinieneś wszystkie pliki zwiazane z daną stroną trzymać w pojedynczym folderze, który będzie odzwierciedlał folder na serwerze, na którym zamierzasz publikować stronę.  Ten folder może się znajdować gdzie tylko chcesz, na twoim komputerze, choć raczej powinieneś go przechowywać w miejscu, które łatwo odnajdziesz. Może to być twój Pulpit czy folder domowy linuxa, albo bezpośrednio na dysku twardym bez katalogów nadrzędnych.
+Kiedy pracujesz lokalnie na swoim komputerze, powinieneś wszystkie pliki zwiazane z daną stroną trzymać w pojedynczym folderze, który będzie odzwierciedlał folder na serwerze, na którym zamierzasz publikować stronę.  Ten folder może się znajdować gdzie tylko chcesz, na twoim komputerze, choć raczej powinieneś go przechowywać w miejscu, które łatwo odnajdziesz. Może to być twój Pulpit czy folder domowy linuxa, albo bezpośrednio na dysku twardym bez katalogów nadrzędnych.
 
 1.  Wybierz miejsce przechowywania projektu strony. Utwórz katalog o nazwie `web-projects` (lub podobnej). Tu będzie się znajdował projekt twojej strony.
 2.  Wewnątrz katalogu utwórz kolejny folder do przechowywania twojej pierwszej strony internetowej. Nazwij go `test-site` (lub w bardziej kreatywny sposób).
@@ -19,7 +19,7 @@ Kiedy pracujesz lokalnie na swoim komputerze, powinieneś wszystkie pliki zwiaza
 Jak zauważysz, w tym artykule poprosimy cię o nazywanie folderów i plików tylko małymi literami i bez spacji w nazwie. A to dlatego, że:
 
 1.  Wiele komputerów, a w szczególności serwerów sieciowych, jest wrażliwych na wielkość liter w nazwach. Tak więc na przykłąd, jeśli umieścisz obraz z twojej strony w `test-site/MyImage.jpg`, a następnie w innym pliku odwołasz się do niego jako `test-site/myimage.jpg`, to może nie zadziałać.
-2.  Przeglądarki, serwery sieciowe oraz języki programowania nie do końca radzą sobie ze spacjami w nazwach. Na przykład, jeśli użyjesz spacji w nazwie pliku, niektóre systemy potraktują tę nazwę jako dwie nazwy dwóch plików. Niektóre serwery zastąpią spacje w nazwie symbolem "%20" (kod znaku dla spacji w URIs), w rezultacie przestaną działać wszystkie twoje odnośniki do takiego pliku. Lepiej jest stosować myślniki niż podkreślenia: `my-file.html` vs. `my_file.html`.
+2.  Przeglądarki, serwery sieciowe oraz języki programowania nie do końca radzą sobie ze spacjami w nazwach. Na przykład, jeśli użyjesz spacji w nazwie pliku, niektóre systemy potraktują tę nazwę jako dwie nazwy dwóch plików. Niektóre serwery zastąpią spacje w nazwie symbolem "%20" (kod znaku dla spacji w URIs), w rezultacie przestaną działać wszystkie twoje odnośniki do takiego pliku. Lepiej jest stosować myślniki niż podkreślenia: `my-file.html` vs. `my_file.html`.
 
 Krótko mówiąc powinieneś używać myślników w nazwach plików (oczywiście jeśli chcesz używać kilkuwyrazowych nazw). Wyszukiwarka Google traktuje myślnik jako separator słów, ale podkreślenie już nie. Z tego powodu najlepiej jest wyrobić sobie nawyk pisania nazw plików i folderów małymi literami i bez spacji, i raczej nie używać myślników czy podkreśleń, chyba że wiesz co robisz. W ten sposób unikniesz już części problemów jakie możesz napotkać.
 
@@ -32,7 +32,7 @@ Następnie zobaczmy jaką strukturę powinna mieć twoja strona internetowa. Naj
 3.  **katalog `styles`**: Ten folder będzie zawierał pliki CSS do nadania wyglądu twojej strony (np. ustawieni koloru tekstu i tła strony). Utwórz katalog `styles` wewnątrz folderu `test-site`.
 4.  **katalog `scripts`**: Ten folder będzie zawierał cały JavaScript użyty do uczynienia twojej strony interaktywną (np. przyciski wczytujące dane po kliknięciu). Utwórz folder o nazwie `scripts` wewnątrz katalogu `test-site`.
 
-> **Note:** **Uwaga**: W systemie Windows, możesz napotkać na problem z wyświetlaniem nazw plików, ponieważ domyślnie włączona jest opcja folderów zwana **Ukryj rozszeżenia znanych typów plików**. Możesz ją wyłączyć w prosty sposób. Otwórz Eksplorator Plików, kliknij opcję w menu **Organizuj** a następnie  **Opcje folderów i wyszukiwania**. W zakładce **Widok** odzdnacz opcję **Ukryj rozszeżenia...** Po bardziej szczegółowe informacje (w zależności od twojej wersji systemu Windows) sięgnij do strony Microsoft lub po prostu poszukaj w Internecie!
+> **Uwaga:** W systemie Windows, możesz napotkać na problem z wyświetlaniem nazw plików, ponieważ domyślnie włączona jest opcja folderów zwana **Ukryj rozszeżenia znanych typów plików**. Możesz ją wyłączyć w prosty sposób. Otwórz Eksplorator Plików, kliknij opcję w menu **Organizuj** a następnie  **Opcje folderów i wyszukiwania**. W zakładce **Widok** odzdnacz opcję **Ukryj rozszeżenia...** Po bardziej szczegółowe informacje (w zależności od twojej wersji systemu Windows) sięgnij do strony Microsoft lub po prostu poszukaj w Internecie!
 
 ## Ścieżki do plików
 
@@ -69,7 +69,7 @@ Kilka ogólnych reguł tworzenia ścieżek:
 
 Jak narazie to wszystko co powinieneś o tym wiedzieć.
 
-> **Note:** **Uwaga**: W systemie Windows w ścieżkach do plików używa się znaku backslash a nie slash, enp. `C:\windows`. To jest nieistotne dla HTML — nawet jeśli tworzysz strony na Windowsie, nadal powinieneś używać w ścieżkach znaku slash.
+> **Uwaga:** W systemie Windows w ścieżkach do plików używa się znaku backslash a nie slash, enp. `C:\windows`. To jest nieistotne dla HTML — nawet jeśli tworzysz strony na Windowsie, nadal powinieneś używać w ścieżkach znaku slash.
 
 ## Co jeszcze należy zrobić?
 

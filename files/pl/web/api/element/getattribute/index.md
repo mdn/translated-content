@@ -13,8 +13,8 @@ getAttribute zwraca wartość atrybutu o podanej nazwie.
 
     atrybut = element.getAttribute(nazwaAtrybutu)
 
-- `atrybut` to ciąg zawierający wartość atrybutu o nazwie `nazwaAtrybutu`
-- `nazwaAtrybutu` jest nazwą atrybutu, który chcesz pobrać
+- `atrybut` to ciąg zawierający wartość atrybutu o nazwie `nazwaAtrybutu`
+- `nazwaAtrybutu` jest nazwą atrybutu, który chcesz pobrać
 
 ### Przykład
 

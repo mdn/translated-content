@@ -31,8 +31,6 @@ translation_of: Web/API/PerformanceObserver
 - {{domxref("PerformanceObserver.takeRecords","PerformanceObserver.takeRecords()")}}
   - : パフォーマンスオブザーバに格納されている{{domxref("PerformanceEntry","パフォーマンスエントリ")}} の現在のリストを空にして返します。
 
-<!---->
-
 ## 例
 
 ```js

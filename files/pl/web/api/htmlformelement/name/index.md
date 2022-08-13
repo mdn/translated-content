@@ -23,7 +23,7 @@ translation_of: Web/API/HTMLFormElement/name
 ### Przykład
 
     form1 = document.getElementById("form1").name;
-    if (form1 != document.form.form1) {
+    if (form1 != document.form.form1) {
        // przeglądarka nie obsługuje tego odniesienia do formularza
     }
 

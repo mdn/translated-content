@@ -30,8 +30,6 @@ Ciąg reprezentujący URI przestrzeni nazw, w której dany wierzchołek kontekst
 
 - Jeśli podany wierzchołek nie posiada przestrzeni nazw, zwrócony łańcuch znaków będzie zawsze pusty.
 
-<!---->
-
 - Dla wierzchołków innych niż wierzchołki elementu i atrybutu, zwrócony łańcuch znaków będzie zawsze pusty.
 
 ### Definicja

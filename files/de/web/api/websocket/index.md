@@ -33,8 +33,6 @@ Der Konstruktur kann folgende Exceptions werfen:
 - `SECURITY_ERR`
   - : Der Port auf dem man die Verbindung aufbauen will, ist blockiert worden.
 
-<!---->
-
 ## Methoden Übersicht
 
 | `void close(in optional unsigned long code, in optional DOMString reason);` |

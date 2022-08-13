@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Status
 
 HTTP-Antwortstatuscodes zeigen an, ob eine bestimmte [HTTP](/de/docs/Web/HTTP)-Anfrage erfolgreich abgeschlossen wurde. Die Antworten sind in fünf Klassen eingeteilt:
 
-1.  Informative Antworten (100-199)
-2.  Erfolgreiche Antworten (200-299)
-3.  Umleitungen (300-399)
-4.  Client-Fehler (400-499)
-5.  Server-Fehler (500-599)
+1. Informative Antworten (100-199)
+2. Erfolgreiche Antworten (200-299)
+3. Umleitungen (300-399)
+4. Client-Fehler (400-499)
+5. Server-Fehler (500-599)
 
 Die folgenden Statuscodes sind in [Abschnitt 10 von RFC 2616](https://tools.ietf.org/html/rfc2616#section-10) definiert. Eine aktualisierte Spezifikation finden Sie in [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.5.1).
 

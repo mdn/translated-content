@@ -48,8 +48,6 @@ translation_of: Web/API/XRRigidTransform
 - {{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}
   - : 16 メンバーの {{DOMxRef("Float32Array")}} の形式で変換行列を返します。 配列を使用して行列を表す方法については、[行列のフォーマット](/ja/docs/Web/API/XRRigidTransform/matrix#Matrix_format)のセクションを参照してください。
 
-<!---->
-
 - {{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}
   - : この変換の逆である `XRRigidTransform` を返します。 つまり、元の変換によって以前に変換されたオブジェクトに適用された場合、変換が元に戻され、元のオブジェクトが返されます。
 

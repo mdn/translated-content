@@ -33,8 +33,6 @@ Wenn Speicher geteilt wird, können mehrere Threads auf dem gleichen Speicher le
 - {{jsxref("Atomics.exchange()")}}
   - : Speichert einen angegebenen Wert an einer angegebenen Position im Array. Gibt den alten Wert zurück.
 
-<!---->
-
 - {{jsxref("Atomics.load()")}}
   - : Gibt den Wert an einer angegebenen Position im Array zurück.
 - {{jsxref("Atomics.or()")}}
@@ -82,6 +80,6 @@ Vor Firefox 48 waren die neuesten API-Namen und Semantiken noch nicht implementi
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript getypte Arrays](/de/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/de/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– Eine einfache Bibliothek, die Synchronisation und verteilte Abstraktionen ermöglicht.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple)– Eine einfache Bibliothek, die Synchronisation und verteilte Abstraktionen ermöglicht.
 - [Geteilter Speicher (Shared Memory) – ein kurzes Tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -22,8 +22,6 @@ Funkcja `starts-with` sprawdza, czy pierwszy łańcuch znaków rozpoczyna się d
 - _`stóg siana`_
   - : Przeszukiwany łańcuch znaków.
 
-<!---->
-
 - _`igła`_
   - : Szukany łańcuch znaków.
 

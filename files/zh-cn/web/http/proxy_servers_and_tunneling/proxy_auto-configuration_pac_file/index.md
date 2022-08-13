@@ -37,8 +37,6 @@ function FindProxyForURL(url, host)
 - 如果那个字符串为空，则不使用任何代理
 - 字符串中可以包含如下任意数量的“代理配置块”（building blocks），用分号分隔：
 
-<!---->
-
 - `DIRECT`
   - : 直连，不经过任何代理
 - `PROXY host:port`

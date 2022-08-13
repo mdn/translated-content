@@ -24,7 +24,7 @@ Beginnen wir mit dem {{HTMLElement("canvas")}}-Element:
 
 Auf den ersten Blick sieht ein {{HTMLElement("canvas")}} wie ein {{HTMLElement("img")}}-Element aus, mit dem Unterschied, dass es die Attribute `src` und `alt` nicht besitzt. Das `<canvas>`-Element hat nur zwei Attribute - {{htmlattrxref("width", "canvas")}} und {{htmlattrxref("height", "canvas")}}. Diese sind optional und können auch über {{Glossary("DOM")}}-[Eigenschaften](/de/docs/Web/API/HTMLCanvasElement) gesetzt werden. Wenn die Attribute nicht gesetzt sind, bekommt das Element eine Breite von **300px** und eine Höhe von **150px**. Die Maße des canvas können auch über {{Glossary("CSS")}} gesetzt werden, allerdings wird das Bild dann auf die gesetzte Größe skaliert. Wenn das Verhältnis der CSS-Maße nicht zur ursprünglichen Größe passt, wird das Bild verzerrt.
 
-> **Note:** **Hinweis:** Wenn das Ergebnis des Renderings verzerrt wirkt, dann setze bitte die Attribute `width` und `height` explizit im `<canvas>` und nicht über CSS.
+> **Hinweis:** Wenn das Ergebnis des Renderings verzerrt wirkt, dann setze bitte die Attribute `width` und `height` explizit im `<canvas>` und nicht über CSS.
 
 Das [id](/de/docs/Web/HTML/Globale_Attribute#id)-Attribut ist eines der [globalen Attribute](/de/docs/Web/HTML/Globale_Attribute) in HTML, welche auf alle HTML-Elemente anwendbar sind (sein sollen). Es empfiehlt sich eine `id` zu vergeben, dadurch wird der Zugriff mit JavaScript/CSS vereinfacht.
 
@@ -84,7 +84,7 @@ if (canvas.getContext) {
 
 Eine einfache HTML-Struktur reicht für unser Tutorial erst einmal völlig aus.
 
-> **Note:** **Hinweis**: Es gilt als schlechter Stil, Skripte direkt in HTML einzubetten. Wir tun das hier nur aus Gründen der Kompaktheit.
+> **Hinweis:** Es gilt als schlechter Stil, Skripte direkt in HTML einzubetten. Wir tun das hier nur aus Gründen der Kompaktheit.
 
 ```html
 <!DOCTYPE html>

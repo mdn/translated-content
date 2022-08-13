@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/summary
 
 Das HTML _summary_ Element (`<summary>`) wird für Zusammenfassungen oder Legenden für den Inhalt eines {{HTMLElement("details")}} Elements verwendet.
 
-> **Note:** **Hinweis:** Wenn das `<summary>` Element ausgelassen wird, wird stattdessen die Titelzeile des "details" Bereich genutzt.
+> **Hinweis:** Wenn das `<summary>` Element ausgelassen wird, wird stattdessen die Titelzeile des "details" Bereich genutzt.
 
 ## Anwendung
 

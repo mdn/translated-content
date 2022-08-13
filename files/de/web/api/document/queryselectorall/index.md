@@ -11,7 +11,7 @@ translation_of: Web/API/Document/querySelectorAll
 
 Die Methode **`querySelectorAll()`** von {{domxref("Document")}} gibt eine statische (nicht live) {{domxref("NodeList")}} zurück, die eine Liste der Elemente des Dokuments darstellt, die mit der angegebenen Selektorgruppe übereinstimmen.
 
-> **Note:** **Hinweis:** Diese Methode wird basierend auf dem Mixin der Methode {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} von {{domxref("ParentNode")}} implementiert.
+> **Hinweis:** Diese Methode wird basierend auf dem Mixin der Methode {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} von {{domxref("ParentNode")}} implementiert.
 
 ## Syntax
 
@@ -22,13 +22,13 @@ Die Methode **`querySelectorAll()`** von {{domxref("Document")}} gibt eine stati
 - `selectors`
   - : Ein {{domxref("DOMString")}} der einen oder mehrere Selektoren zum Abgleich enthält. Dieser String muss ein valider [CSS-Selektor](/de/docs/Web/CSS/CSS_Selectors)-String sein, andernfalls wird eine `SyntaxError` Exception ausgelöst. Weitere Informationen zu Selektoren und deren Verwaltung finden Sie unter [DOM Elemente mittels Selektoren ermitteln](/de/docs/Gecko-DOM-Referenz/DOM_Elemente_mittels_Selektoren_ermitteln). Es können mehrere durch Kommata getrennte Selektoren angegeben werden.
 
-> **Note:** **Hinweis:** Zeichen, die nicht zur Standard-CSS-Syntax gehören, müssen mit einem Backslash-Zeichen maskiert werden. Da JavaScript auch Backslash-Escape-Anweisungen verwendet, müssen Sie beim Schreiben von String-Literalen mit diesen Zeichen besonders vorsichtig sein. Weitere Informationen finden Sie unter [Sonderzeichen maskieren](#sonderzeichen_maskieren).
+> **Hinweis:** Zeichen, die nicht zur Standard-CSS-Syntax gehören, müssen mit einem Backslash-Zeichen maskiert werden. Da JavaScript auch Backslash-Escape-Anweisungen verwendet, müssen Sie beim Schreiben von String-Literalen mit diesen Zeichen besonders vorsichtig sein. Weitere Informationen finden Sie unter [Sonderzeichen maskieren](#sonderzeichen_maskieren).
 
 ### Rückgabewert
 
 Eine statische (nicht-live) {{domxref("NodeList")}} mit je einem {{domxref("Element")}}-Objekt für jedes Element das mind. einem der angegebenen Selektoren entspricht oder eine leere {{domxref("NodeList")}} im Falle keiner Übereinstimmungen.
 
-> **Note:** **Hinweis:** Wenn `selectors` ein [CSS Pseudo-Element](/de/docs/Web/CSS/Pseudo-elements) enthält ist die zurückgegebene Liste immer leer.
+> **Hinweis:** Wenn `selectors` ein [CSS Pseudo-Element](/de/docs/Web/CSS/Pseudo-elements) enthält ist die zurückgegebene Liste immer leer.
 
 ### Exceptions
 

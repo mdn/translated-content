@@ -50,7 +50,7 @@ var n = 0755; // 493
 var m = 0644; // 420
 ```
 
-Der Strict mode in ECMAScript 5 verbietet Oktalzahlen. Die Syntax der Oktalzahlen ist in ECMAScript 5 nicht vorhanden, jedoch wird es von allen Browser, durch eine führende 0, unterstützt: `0644 === 420` und` "\045" === "%"`. In ECMAScript 2015 sind Oktalzahlen mit dem Präfix `0o` unterstützt:
+Der Strict mode in ECMAScript 5 verbietet Oktalzahlen. Die Syntax der Oktalzahlen ist in ECMAScript 5 nicht vorhanden, jedoch wird es von allen Browser, durch eine führende 0, unterstützt: `0644 === 420` und`"\045" === "%"`. In ECMAScript 2015 sind Oktalzahlen mit dem Präfix `0o` unterstützt:
 
 ```js
 var a = 0o10; // ES2015: 8

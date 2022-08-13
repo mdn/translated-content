@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/base
 
 Das _HTML Base Element_ (**\<base>**) definiert die Basis URL für alle relativen URLs im Dokument. Das \<base> Element darf nur einmal im Dokument vorkommen.
 
-> **Note:** **Hinweis:** Falls mehrere `<base>` Elemente in einem Dokument vorhanden sind, wird nur der Erste **href** und der Erste **target** Wert verwendet. Alle anderen werden ignoriert.
+> **Hinweis:** Falls mehrere `<base>` Elemente in einem Dokument vorhanden sind, wird nur der Erste **href** und der Erste **target** Wert verwendet. Alle anderen werden ignoriert.
 
 | [Inhaltskategorien](/de/docs/Web/HTML/Content_categories) | Metadata Inhalt.                                                                                                     |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |

@@ -29,8 +29,6 @@ lang( chaîne )
 
 - La langue d'un nœud est déterminée par son attribut `xml:lang`. Si le nœud courant ne possède pas cet attribut, alors la valeur de l'attribut `xml:lang` du plus proche ancêtre le possédant déterminera la langue du nœud courant. Si la langue ne peut être déterminée (aucun ancêtre avec un attribut `xml:lang`), cette fonction retourne le booléen `false`.
 
-<!---->
-
 - Si la `chaîne` donnée ne spécifie pas de code de pays, cette fonction sélectionnera les nœuds dans la langue spécifiée, suivie éventuellement de n'importe quel code de pays. La réciproque n'est pas vraie.
 
 Regardons le code XML suivant&nbsp;:

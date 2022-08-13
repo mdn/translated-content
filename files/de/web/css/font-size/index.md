@@ -155,7 +155,7 @@ Die `font-size`-Eigenschaft kann auf zwei Weisen spezifiziert werden:
 ### Werte
 
 - `xx-small, x-small, small, medium, large, x-large, xx-large`
-  - : Ein Satz von Schlüsselwörtern absoluter Größe, basierend auf der vom Benutzer festgelegten Schriftgröße (welche `medium `entspricht). Ähnlich der HTML-Tags `<font size="1">` bis `<font size="7">`, bei denen die benutzerdefinierte Größe `<font size="3">` entspricht.
+  - : Ein Satz von Schlüsselwörtern absoluter Größe, basierend auf der vom Benutzer festgelegten Schriftgröße (welche `medium`entspricht). Ähnlich der HTML-Tags `<font size="1">` bis `<font size="7">`, bei denen die benutzerdefinierte Größe `<font size="3">` entspricht.
 - `larger, smaller`
   - : Größer oder kleiner als die Schriftgröße des Elternelements; grob das Verhältnis, das benutzt wird, um die obigen absoluten Schlüsselwörter zu unterscheiden.
 - `<length-percentage>`
@@ -265,16 +265,16 @@ span { font-size: 16px; }
 
 ```css
 .small {
-	font-size: xx-small;
+ font-size: xx-small;
 }
 .larger {
-	font-size: larger;
+ font-size: larger;
 }
 .point {
-	font-size: 24pt;
+ font-size: 24pt;
 }
 .percent {
-	font-size: 200%;
+ font-size: 200%;
 }
 ```
 

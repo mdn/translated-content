@@ -27,7 +27,7 @@ Istnieje mnóstwo wbudowanych funkcji wymagających (callback) funkcji. Będzies
 
 - Gdy pracujesz z {{jsxref("Array")}} lub {{jsxref("TypedArray")}} objektami:
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Gdy pracujesz z {{jsxref("Map")}} i {{jsxref("Set")}} objektami:
 

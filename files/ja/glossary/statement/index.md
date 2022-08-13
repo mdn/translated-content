@@ -18,5 +18,3 @@ translation_of: Glossary/Statement
 ### 技術リファレンス
 
 - [JavaScript の文と宣言](/ja/docs/Web/JavaScript/Reference/Statements)
-
-<!---->

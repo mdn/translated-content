@@ -8,7 +8,7 @@ original_slug: Erweiterungen_für_Firefox_3_aktualisieren
 ---
 Dieser Artikel liefert nützliche Informationen für Entwickler, die ihre Erweiterungen aktualisieren möchten, um eine einwandfreie Funktion unter Firefox 3 zu gewährleisten.
 
-Vorweg eine hilfreiche Anmerkung: Wenn die einzig notwendige Änderung an der Erweiterung der Eintrag `maxVersion` im Installationsmanifest ist und die Erweiterung auf [addons.mozilla.org](https://addons.mozilla.org) bereitgestellt wird, ist es nicht nötig eine neue Version der Erweiterung zu veröffentlichen. Im »Developer Control Panel« auf AMO kann die `maxVersion`, ohne einen neuen Upload, eingestellt werden. Dadurch kann auch vermieden werden, dass die Erweiterung nochmal überprüft werden muss.
+Vorweg eine hilfreiche Anmerkung: Wenn die einzig notwendige Änderung an der Erweiterung der Eintrag `maxVersion` im Installationsmanifest ist und die Erweiterung auf [addons.mozilla.org](https://addons.mozilla.org) bereitgestellt wird, ist es nicht nötig eine neue Version der Erweiterung zu veröffentlichen. Im  »Developer Control Panel« auf AMO kann die `maxVersion`, ohne einen neuen Upload, eingestellt werden. Dadurch kann auch vermieden werden, dass die Erweiterung nochmal überprüft werden muss.
 
 ### Schritt 1: Installationsmanifest aktualisieren
 
@@ -28,7 +28,7 @@ Dabei sollte darauf geachtet werden, dass Firefox 3 keine extra ".0" in der Vers
 
 Es gab (und es wird weiterhin welche geben) eine Reihe von API Veränderungen, die dazu führen, dass einige Erweiterungen nicht weiter funktionieren. Es wird an einer kompletten Liste gearbeitet, die diese Veränderungen aufzählt.
 
-> **Note:** **Hinweis:** Wenn die Erweiterung noch immer ein [`Install.js`](/de/Install.js "de/Install.js") Skript, anstatt eines [Installationsmanifests](/de/Installationsmanifest "de/Installationsmanifest") benutzt, sollte ein Wechsel jetzt getätigt werden. Firefox 3 unterstützt keine `install.js` Skripte in XPI Dateien mehr.
+> **Hinweis:** Wenn die Erweiterung noch immer ein [`Install.js`](/de/Install.js "de/Install.js") Skript, anstatt eines [Installationsmanifests](/de/Installationsmanifest "de/Installationsmanifest") benutzt, sollte ein Wechsel jetzt getätigt werden. Firefox 3 unterstützt keine `install.js` Skripte in XPI Dateien mehr.
 
 #### Das Installationsmanifest lokalisieren
 
@@ -149,8 +149,8 @@ _Einfache Änderungen, die Sie bei der Aktualisierung Ihrer Erweiterung auf Fire
 - Veränderungen an [nsISupports proxies](/de/NsISupports_proxies "de/NsISupports_proxies") und möglicherweise ab Thread-bezogenen Interfaces muss noch dokumentiert werden.
 - Wenn XML Prozessanweisungen wie `<?xml-stylesheet ?>` in XUL Dateien verwendet werden, sollten Änderungen durch [Bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654 "FIXED: Processing instructions in XUL are not added to the content model") beachtet werden:
 
-  1.  XML Prozessanweisungen werden nun in das XUL DOM hinzugefügt. Das bedeutet, dass [`document.firstChild`](/de/docs/Web/API/Document/firstChild "Die Beschreibung hierüber wurde bisher noch nicht geschrieben. Bitte überlege, mitzuwirken!") nicht unbedingt mehr das Root-Element sein muss. Wenn das Wurzelelement angesprochen werden muss sollte [`document.documentElement`](/de/docs/Web/API/Document/documentElement "Lesbar, nicht schreibbar") verwendet werden.
-  2.  `<?xml-stylesheet ?>` und `<?xul-overlay ?>` Prozessanweisungen haben jetzt außerhalb des Dokumentprologs keinen Effekt mehr.
+  1. XML Prozessanweisungen werden nun in das XUL DOM hinzugefügt. Das bedeutet, dass [`document.firstChild`](/de/docs/Web/API/Document/firstChild "Die Beschreibung hierüber wurde bisher noch nicht geschrieben. Bitte überlege, mitzuwirken!") nicht unbedingt mehr das Root-Element sein muss. Wenn das Wurzelelement angesprochen werden muss sollte [`document.documentElement`](/de/docs/Web/API/Document/documentElement "Lesbar, nicht schreibbar") verwendet werden.
+  2. `<?xml-stylesheet ?>` und `<?xul-overlay ?>` Prozessanweisungen haben jetzt außerhalb des Dokumentprologs keinen Effekt mehr.
 
 - `window.addEventListener("load", myFunc, true)` wird nicht ausgeführt, wenn Webinhalte geladen werden (Browser eine Seite lädt). Durch [Bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639 "FIXED: Split windows into an inner and outer object") wurde die Art und Weise in der innere und äußere Fenster kommunizieren verändert. Ein einfacher Fix, der auch in Firefox 2 funktioniert: `gBrowser.addEventListener("load", myFunc, true)` wie [hier](/de/Codeschnipsel/Tabbed_browser#Detecting_page_load) beschrieben.
 - `content.window.getSelection()` gibt ein Objekt zurück (welches durch `toString()` zu einem String umgewandelt werden kann), im Gegensatz zu dem jetzt veraltetem `content.document.getSelection()`, welches einen String zurück gibt.

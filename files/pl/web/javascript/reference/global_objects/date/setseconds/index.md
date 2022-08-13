@@ -28,8 +28,6 @@ Ustawia sekundy dla określonej daty stosownie do czasu lokalnego.
 - `secondsValue`
   - : Liczba całkowita z przedziału 0 i 59.
 
-<!---->
-
 - `msValue`
   - : Liczba z przedziału 0 i 999, reprezentująca milisekundy.
 

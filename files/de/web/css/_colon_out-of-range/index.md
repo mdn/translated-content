@@ -15,7 +15,7 @@ translation_of: Web/CSS/:out-of-range
 
 Die `:out-of-range` CSS [Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes "Pseudo-classes") passt, wenn das value Attribut eines Elements außerhalb der angegebenen Begrenzungen für dieses Element ist. Sie erlaubt der Seite, darauf zu reagieren, dass der aktuell definierte Wert eines Elements außerhalb der Bereichsgrenzen ist. Ein Wert kann außerhalb eines Bereichs sein, wenn er entweder kleiner oder größer als die gesetzten Minimal- und Maximalwerte ist.
 
-> **Note:** **Hinweis:** Diese Pseudoklasse trifft nur auf Elemente zu, die Bereichsbegrenzungen haben. Falls keine solchen Begrenzungen existieren, kann der Wert des Elements weder innerhalb noch außerhalb der Grenzen liegen.
+> **Hinweis:** Diese Pseudoklasse trifft nur auf Elemente zu, die Bereichsbegrenzungen haben. Falls keine solchen Begrenzungen existieren, kann der Wert des Elements weder innerhalb noch außerhalb der Grenzen liegen.
 
 ## Beispiel
 

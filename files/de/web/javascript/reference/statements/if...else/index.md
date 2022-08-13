@@ -19,12 +19,8 @@ Die **if-Anweisung** führt Anweisungen aus, wenn eine bestimmte Bedingung zu `t
 - `bedingung`
   - : Ein [Ausdruck](/de/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions), der zu `true` oder `false` ausgewertet wird.
 
-<!---->
-
 - `anweisung1`
   - : Eine Anweisung, die ausgeführt wird, wenn `bedingung` zu `true` ausgewertet wird. Diese Anweisung kann jede gültige Anweisung sein, auch eine if-Anweisung. Um mehrere Anweisungen auszuführen, muss eine {{jsxref("Statements/block", "block")}}-Anweisung (`{...}`) genutzt werden, um die Anweisungen zu gruppieren. Wenn keine Anweisung ausgeführt werden soll, muss die {{jsxref("Statements/empty", "empty")}}-Anweisung genutzt werden.
-
-<!---->
 
 - `anweisung2`
   - : Eine Anweisung, die ausgeführt wird, wenn `bedingung` zu false ausgewertet wird und die `else` Klausel existiert. Auch hier können alle Anweisungen, egal ob {{jsxref("Statements/block", "block")}}-Anweisung (`{...}`) oder weitere if-Anweisungen genutzt werden.

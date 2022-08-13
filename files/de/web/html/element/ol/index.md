@@ -23,7 +23,7 @@ Das HTML Element _ordered list_ \<ol> wird verwendet, um eine geordnete Liste zu
     > **Note:** Das Start-Attribut wurde in HTML4 als deprecated markiert, allerdings in HTML5 wieder integriert.
 
 - {{htmlattrdef("type")}} {{HTMLVersionInline(5)}}
-  - : Wird verwendet, um das Aufzählungszeichen der Liste festzulegen. Die Werte sind in der [HTML3.2](/de/HTML3.2 "de/HTML3.2") Spezifikation festgelegt und in der „transitional“ Version von [HTML 4.0/4.01](/de/HTML4.01 "de/HTML4.01") sind `circle`, `disc`, und `square` aufgeführt. Der Browser kann über unterschiedliche Zeichen entscheiden, abhängig vom Grad der Verschachtelung, wenn das type Attribut nicht verwendet wird. Das WebTV Interface unterstützt auch ein `triangle` Zeichen. Dieses Attribut ist veraltet, es sollte die [CSS](/de/CSS "de/CSS") [list-style-type](/de/CSS/list-style-type "de/CSS/list-style-type") Eigenschaft stattdessen verwendet werden.> **Note:** Das Type-Attribut wurde in HTML4 als deprecated markiert, allerdings in HTML5 wieder integriert.
+  - : Wird verwendet, um das Aufzählungszeichen der Liste festzulegen. Die Werte sind in der [HTML3.2](/de/HTML3.2 "de/HTML3.2") Spezifikation festgelegt und in der „transitional “ Version von [HTML 4.0/4.01](/de/HTML4.01 "de/HTML4.01") sind `circle`, `disc`, und `square` aufgeführt. Der Browser kann über unterschiedliche Zeichen entscheiden, abhängig vom Grad der Verschachtelung, wenn das type Attribut nicht verwendet wird. Das WebTV Interface unterstützt auch ein `triangle` Zeichen. Dieses Attribut ist veraltet, es sollte die [CSS](/de/CSS "de/CSS") [list-style-type](/de/CSS/list-style-type "de/CSS/list-style-type") Eigenschaft stattdessen verwendet werden.> **Note:** Das Type-Attribut wurde in HTML4 als deprecated markiert, allerdings in HTML5 wieder integriert.
 - {{htmlattrdef("compact")}} {{ Deprecated_inline() }}
 
   - : Gibt an, dass die Liste in einer kompakten Form gerendert werden soll. Die Interpretation dieses Attributs hängt vom Browser ab.
@@ -42,9 +42,9 @@ Das HTML Element _ordered list_ \<ol> wird verwendet, um eine geordnete Liste zu
 
 Dieses HTML gibt das Folgende aus:
 
-1.  Erster Eintrag
-2.  Zweiter Eintrag
-3.  Dritter Eintrag
+1. Erster Eintrag
+2. Zweiter Eintrag
+3. Dritter Eintrag
 
 ### Verwendung des `start` Attributs
 

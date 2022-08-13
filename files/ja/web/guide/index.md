@@ -32,8 +32,6 @@ translation_of: Web/Guide
 - [モバイルウェブ開発](/ja/docs/Web/Guide/Mobile)
   - : この記事では、モバイル端末でもしっかりと動作するウェブサイトを設計するのに必要な主な技術の一部についての概要を示しています。[Firefox for Android](/ja/Mozilla/Firefox_for_Android) もご覧ください。
 
-<!---->
-
 - [プログレッシブウェブアプリ](/ja/Apps/Progressive#Core_PWA_guides)
   - : PWA はどの環境でも動作し、ネイティブアプリケーションと同等のユーザー体験を得られるようないくつかの機能を提供します。このガイド集には PWA について知っておくべき全てのことが書かれています。
 - [最適化とパフォーマンス](/ja/docs/Web/Guide/Performance)

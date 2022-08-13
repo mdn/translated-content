@@ -16,8 +16,6 @@ Die **`navigator.sendBeacon()`** Methode dient dazu, kleinere Datenmengen asynch
 - `url`
   - : Der `url` Parameter steht für die ermittelte URL, an die `data` zu senden ist.
 
-<!---->
-
 - `data`
   - : Der Parameter `data` enthält zu übermittelnde Daten der Art {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}} oder {{domxref("FormData")}}.
 

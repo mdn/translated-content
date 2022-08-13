@@ -167,8 +167,6 @@ Was sich ändert und in Zukunft wahrscheinlich noch mehr, ist, wie Informationen
 - ...
   Und viele weitere [Kuma Mitwirkende.](https://github.com/mozilla/kuma/graphs/contributors)
 
-<!---->
-
 - Chris Mills
 - Will Bamberg
 - David Bruant

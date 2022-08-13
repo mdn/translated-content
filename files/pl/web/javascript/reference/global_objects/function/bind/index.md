@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Function/bind
 ---
 {{JSRef}}
 Metoda **`bind()`** tworzy nową funkcję, której wywołanie powoduje ustawienie **this** na podaną wartość, z podaną sekwencją argumentów poprzedzającą dowolną podaną podczas wywołania nowej funkcji.
- {{EmbedInteractiveExample ("pages/js/function-bind.html", "taller")}}
+ {{EmbedInteractiveExample ("pages/js/function-bind.html", "taller")}}
 Źródło tego interaktywnego przykładu jest przechowywane w repozytorium GitHub. Jeśli chcesz przyczynić się do projektu interaktywnych przykładów, sklonuj https\://github.com/mdn/interactive-examples i wyślij nam prośbę o pobranie.
 
 ## Syntax
@@ -39,7 +39,7 @@ Funckja wiązania **(bound function)** ma następujące właściwości wewnętrz
 - **`[[Call]]`**
   - : Executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a `this` value and a list containing the arguments passed to the function by a call expression.
 
-When a bound function is called, it calls internal method `[[Call]]` on `[[BoundTargetFunction]]`, with following arguments `Call(boundThis, ...args)`. Where `boundThis` is `[[BoundThis]]`, `args` is `[[BoundArguments]]`, followed by the arguments passed by the function call.
+When a bound function is called, it calls internal method `[[Call]]` on `[[BoundTargetFunction]]`, with following arguments `Call(boundThis, ...args)`. Where `boundThis` is `[[BoundThis]]`, `args` is `[[BoundArguments]]`, followed by the arguments passed by the function call.
 
 A bound function may also be constructed using the {{jsxref("Operators/new", "new")}} operator. Doing so acts as though the target function had instead been constructed. The provided `this` value is ignored, while prepended arguments are provided to the emulated function.
 
@@ -140,7 +140,7 @@ flower.bloom();
 
 ### Funkcje powiązane używane jako kostruktory
 
-> **Warning:** Ostrzeżenie: ta sekcja pokazuje możliwości JavaScript i dokumentuje niektóre przypadki krawędzi metody bind ().Metody przedstawione poniżej nie są najlepszym sposobem na robienie rzeczy i prawdopodobnie nie powinny być stosowane w żadnym środowisku produkcyjnym.
+> **Ważne:** Ostrzeżenie: ta sekcja pokazuje możliwości JavaScript i dokumentuje niektóre przypadki krawędzi metody bind ().Metody przedstawione poniżej nie są najlepszym sposobem na robienie rzeczy i prawdopodobnie nie powinny być stosowane w żadnym środowisku produkcyjnym.
 
 Funkcje powiązane są automatycznie odpowiednie do użycia z operatorem {{jsxref ("Operators/new", "new")}} do tworzenia nowych instancji utworzonych przez funkcję docelową. Gdy do utworzenia wartości używana jest funkcja powiązana, pod warunkiem, że jest to ignorowane.
 
@@ -302,7 +302,7 @@ Jeśli zdecydujesz się użyć tej częściowej implementacji, nie możesz poleg
 
 Jeśli jest to absolutnie konieczne, a wydajność nie stanowi problemu, znacznie wolniejsze (ale bardziej zgodne ze specyfikacją rozwiązanie) można znaleźć na stronie https\://github.com/Raynos/function-bind.
 
-## Dane techniczne
+## Dane techniczne
 
 | Specyfikacja                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------ |

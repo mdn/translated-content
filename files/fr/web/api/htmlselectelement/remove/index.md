@@ -17,8 +17,6 @@ collection.remove(index);
 
 - _index est_ un entier long définissant la position du {{ domxref("HTMLOptionElement") }} à enlever de la collection. Si rien n'est trouvé à cette position dans la liste, la méthode n'a aucun effet.
 
-<!---->
-
 ## Exemple
 
 ```js

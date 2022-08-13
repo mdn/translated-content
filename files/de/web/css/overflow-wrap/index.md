@@ -15,7 +15,7 @@ original_slug: Web/CSS/word-wrap
 
 Die `word-wrap` Eigenschaft wird verwendet, um anzugeben ob der Webbrowser Zeilenumbrüche innerhalb von Wörtern machen darf. Dies ist nötig um einem Overflow vorzubeugen, wenn ein sonst nicht trennbarer Text zu lang für die beinhaltende Box wäre.
 
-> **Note:** **Hinweis:** Die ursprünglich (unprefixed) proprietäre Erweiterung `word-wrap` von Microsoft wurde im aktuellen Entwurf der CSS3 Text Spezifikation in {{cssxref("overflow-wrap")}} umbenannt. `word-wrap` wird jetzt als "alternativer Name" für `overflow-wrap` angesehen. Stabile Builds von Google Chrome und Opera unterstützen die neue Syntax.
+> **Hinweis:** Die ursprünglich (unprefixed) proprietäre Erweiterung `word-wrap` von Microsoft wurde im aktuellen Entwurf der CSS3 Text Spezifikation in {{cssxref("overflow-wrap")}} umbenannt. `word-wrap` wird jetzt als "alternativer Name" für `overflow-wrap` angesehen. Stabile Builds von Google Chrome und Opera unterstützen die neue Syntax.
 
 {{cssinfo}}
 

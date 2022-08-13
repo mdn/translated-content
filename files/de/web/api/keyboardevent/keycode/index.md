@@ -59,37 +59,37 @@ Google Chrome, Chromium and Safari must decide the value from the input characte
 
 Starting in Firefox 15 {{geckoRelease("15.0")}}, Gecko gets `keyCode` values from ASCII characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
 
-1.  If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
-2.  If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
-3.  If the pressed key inputs an ASCII alphabetic or numeric character with no modifier key, use a keycode for it.
-4.  If the pressed key inputs an ASCII alphabetic or numeric character with a Shift key modifier, use a keycode for it.
-5.  If the pressed key inputs a different ASCII character with no modifier key, use a keycode for it.
-6.  If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
-7.  Otherwise, i.e., pressed key inputs a unicode character:
+1. If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
+2. If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
+3. If the pressed key inputs an ASCII alphabetic or numeric character with no modifier key, use a keycode for it.
+4. If the pressed key inputs an ASCII alphabetic or numeric character with a Shift key modifier, use a keycode for it.
+5. If the pressed key inputs a different ASCII character with no modifier key, use a keycode for it.
+6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
+7. Otherwise, i.e., pressed key inputs a unicode character:
 
-    1.  If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keyCode_of_punctuation_keys_on_some_keyboard_layout).
-    2.  Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
+    1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keyCode_of_punctuation_keys_on_some_keyboard_layout).
+    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
-        1.  If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
-        2.  Otherwise, use 0 or compute with [the following additional rules](#keyCode_of_punctuation_keys_on_some_keyboard_layout).
+        1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
+        2. Otherwise, use 0 or compute with [the following additional rules](#keyCode_of_punctuation_keys_on_some_keyboard_layout).
 
 Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 
 > **Warning:** The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
 
-1.  If running macOS or Linux:
+1. If running macOS or Linux:
 
-    1.  If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
+    1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
 
-        1.  If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
-        2.  If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
-        3.  Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+        1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
+        2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
+        3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
-    2.  Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+    2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
-2.  If running on Windows:
+2. If running on Windows:
 
-    1.  Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
+    1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
 
 <table class="standard-table">
   <caption>

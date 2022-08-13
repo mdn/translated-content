@@ -14,17 +14,11 @@ Atrybut `<bgsound>` Internet Explorera wiąże dźwięk tła ze stroną
 - balance
   - : Ten atrybut definiuje liczbę między -10,000 a +10,000, która decyduje, jak natężenie dźwięku będzie dzielone między głośniki.
 
-<!---->
-
 - loop
   - : Ten atrybut wskazuje liczbę powtórzeń dźwięku, który jest do odegrania i może mieć zarówno wartość liczbową, jak i słowo kluczowe `infinite` (nieskończony).
 
-<!---->
-
 - src
   - : Ten atrybut określa URL pliku dźwiękowego do odegrania, który musi być jednym z podanych typów: .wav, .au, or .mid.
-
-<!---->
 
 - volume
   - : Ten atrybut definiuje liczbę pomiędzy -10,000 a 0, która decyduje o głośności dźwięku w tle strony.

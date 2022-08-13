@@ -23,9 +23,9 @@ Ustawia opóźnienie do cyklicznego wywoływania określonej funkcji.
 
 Parametry
 
-- `idInterwalu` to identyfikator ustawianego interwału który można przekazać do funkcji [`window.clearInterval()`](/pl/DOM/window.clearInterval "pl/DOM/window.clearInterval").
-- `funkcja` to funkcja, dla której ustawiane jest opóźnienie
-- `kod `to ciąg znaków zawierający kod javascript do cyklicznego wykonania. Jest to składnia alternatywna, której wykorzystanie **nie jest zalecane** z tych samych powodów, co stosowanie [`eval()`](/en/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval! "en/JavaScript/Reference/Global Objects/eval#Don't use eval!").
+- `idInterwalu` to identyfikator ustawianego interwału który można przekazać do funkcji [`window.clearInterval()`](/pl/DOM/window.clearInterval "pl/DOM/window.clearInterval").
+- `funkcja` to funkcja, dla której ustawiane jest opóźnienie
+- `kod `to ciąg znaków zawierający kod javascript do cyklicznego wykonania. Jest to składnia alternatywna, której wykorzystanie **nie jest zalecane** z tych samych powodów, co stosowanie [`eval()`](/en/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval! "en/JavaScript/Reference/Global Objects/eval#Don't use eval!").
 - `opóźnienie` to liczba milisekund (tysięcznych części sekundy), co którą wywoływana będzie `funkcja `lub `kod`
 
 Należy zwrócić uwagę, że przekazywanie dodatkowych parametrów w pierwszej składni nie działa w Internet Explorerze.
@@ -59,7 +59,7 @@ function zmienKolorTekstu() {
   }
 }
 
-function zatrzymajZmianeKoloru() {
+function zatrzymajZmianeKoloru() {
   clearInterval(idInterwalu);
 }
 </script>
@@ -76,11 +76,11 @@ function zatrzymajZmianeKoloru() {
 
 ### Uwagi
 
-Funkcja setInterval() służy do ustawienia opóźnienia dla cyklicznie wywoływanych funkcji, takich jak funkcje animacji.
+Funkcja setInterval() służy do ustawienia opóźnienia dla cyklicznie wywoływanych funkcji, takich jak funkcje animacji.
 
-Możliwe jest anulowanie wykonania fukcji poprzez wywołanie [`window.clearInterval()`](/pl/DOM/window.clearInterval "pl/DOM/window.clearInterval").
+Możliwe jest anulowanie wykonania fukcji poprzez wywołanie [`window.clearInterval()`](/pl/DOM/window.clearInterval "pl/DOM/window.clearInterval").
 
-Jeżeli funkcja ma zostać wykonana *tylko raz* a nie być wykonywana cyklicznie to należy skorzystać z  [`window.setTimeout()`](/pl/DOM/window.setTimeout "pl/DOM/window.setTimeout").
+Jeżeli funkcja ma zostać wykonana *tylko raz* a nie być wykonywana cyklicznie to należy skorzystać z  [`window.setTimeout()`](/pl/DOM/window.setTimeout "pl/DOM/window.setTimeout").
 
 ### Specyfikacja
 

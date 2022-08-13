@@ -15,7 +15,7 @@ Dieser Artikel enthält Informationen zu den Änderungen in Firefox 58, die sich
 - Die Option zum Anzeigen von MDN-Dokumenten aus dem CSS-Bereich des Seiteninspektors wurde entfernt ({{bug (1382171)}}).
 - Der [CSS-Formen-Textmarker](/de/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) wurde standardmäßig für Formen aktiviert, die über {{cssxref ("clip-path")}} ({{bug (1405339)}}) erstellt wurden.
 - Der [Netzwerkmonitor](/de/docs/Tools/Network_Monitor) verfügt jetzt über eine Schaltfläche zum [Anhalten / Wiedergeben der Aufzeichnung des Netzwerkverkehr](/de/docs/Tools/Network_Monitor#Pausing_and_resume_network_traffic_recording)s ({{bug (1005755)}}).
-- Im [Netzwerkmonitor ](/de/docs/Tools/Network_Monitor)ist die Filterschaltfläche "Flash" nicht mehr verfügbar und Flash-Anforderungen sind im Filter "Others" enthalten ({{bug (1413540)}}).
+- Im [Netzwerkmonitor](/de/docs/Tools/Network_Monitor)ist die Filterschaltfläche "Flash" nicht mehr verfügbar und Flash-Anforderungen sind im Filter "Others" enthalten ({{bug (1413540)}}).
 
 ### HTML
 

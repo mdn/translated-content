@@ -49,17 +49,11 @@ Poniżej znajdują się artykuły omawiające główne nowe funkcje w Firefoksie
 - [SVG w XHTML - Wprowadzenie](pl/SVG_w_XHTML_-_Wprowadzenie)
   - : Dowiedz się, jak stosować SVG wewnątrz stron XHTML i jak można wykorzystać JavaScript i CSS do manipulowania obrazem w sposób analogiczny do zwykłego XHTML-a. Zajrzyj też na [SVG w Firefoksie](pl/SVG_w_Firefoksie), aby dowiedzieć się o stanie i znanych problemach implementacji SVG.
 
-<!---->
-
 - [Rysowanie grafik za pomocą Canvas](pl/Rysowanie_grafik_za_pomoc%c4%85_Canvas)
   - : Naucz się korzystać z nowego znacznika `<canvas>` i rysować grafy i inne obiekty w Firefoksie.
 
-<!---->
-
 - [Kolumny CSS3](pl/Kolumny_CSS3)
   - : Naucz się korzystać z automatycznego układania teksty w wielu kolumnach zgodnie z propozycją CSS3.
-
-<!---->
 
 - [Zastosowanie cache'owania w Firefoksie 1.5](pl/Zastosowanie_cache'owania_w_Firefoksie_1.5)
   - : Przeczytaj o `bfcache` i zwiększeniu prędkości przeglądania stron poprzednich i następnych jakie oferuje.
@@ -69,37 +63,23 @@ Poniżej znajdują się artykuły omawiające główne nowe funkcje w Firefoksie
 - [Tworzymy rozszerzenie](pl/Tworzymy_rozszerzenie)
   - : Ten przewodnik poprowadzi Cię poprzez kroki, które należy wykonać aby stworzyć bardzo proste rozszerzenia dla Firefoksa. Zobacz także [przewodnik w bazie wiedzy MozillaZine](http://kb.mozillazine.org/Getting_started_with_extension_development), który demonstruje nowe cechy Menedżera Rozszerzeń w wersji 1.5, który sprawia, że tworzenie rozszerzenia jest jeszcze łatwiejsze.
 
-<!---->
-
 - [XPCNativeWrapper](pl/XPCNativeWrapper)
   - : `XPCNativeWrapper` jest sposobem na opakowanie obiektu, aby możliwy był [bezpieczny dostęp z uprawnionego kodu](pl/Bezpieczny_dost%c4%99p_do_sk%c5%82adnik%c3%b3w_DOM_z_poziomu_chrome). Może być one użyty we wszystkich wersjach Firefoksa, mimo że działanie to zmieniło się nieco począwszy od Firefoksa 1.5 (Gecko 1.8).
-
-<!---->
 
 - [System preferencji](pl/System_preferencji)
   - : Dowiedz się więcej o nowych kontrolkach, które pozwalają na stworzenie okien Opcji w prostszy i wymagający mniej kodu JavaScript sposób.
 
-<!---->
-
 - [Międzynarodowe pismo w XUL JavaScript](pl/Mi%c4%99dzynarodowe_pismo_w_XUL_JavaScript)
   - : Pliki XUL JavaScript mogą teraz zawierać pliki spoza zakresu ASCII.
-
-<!---->
 
 - [Zmiany w API Tree](pl/Tree_Widget_Changes)
   - : Interfejsy do obsługi elementów `<tree>` XUL-a zostały zmienione.
 
-<!---->
-
 - [Zmiany w XUL-u w Firefoksie 1.5](pl/Zmiany_w_XUL-u_w_Firefoksie_1.5)
   - : Podsumowanie zmian w XUL-u. Zobacz także [Dostosowanie aplikacji XUL do Firefoksa 1.5](pl/Dostosowanie_aplikacji_XUL_do_Firefoksa_1.5).
 
-<!---->
-
 - Zmiany związane z obsługą sieci
   - :
-
-<!---->
 
 - Komunikaty certyfikatów mogą być teraz nadpisywane dla każdego kanału. Działa to poprzez ustawianie odpytywacza interfejsu jako [nsIChannel](pl/NsIChannel) notificationCallbacks i przydzielenie interfejsu dla [nsIBadCertListener](pl/NsIBadCertListener).
 - Listenery nsIWebBrowserPersist mogą teraz implementować [nsIInterfaceRequestor](pl/NsIInterfaceRequestor)::GetInterface i dostaną szansę podania wszystkich interfejsów o jakie kanał może zapytać, włączając [nsIProgressEventSink](pl/NsIProgressEventSink) (niezbyt przydatny, redunduje [nsIWebProgressListener](pl/NsIWebProgressListener)). Przydatne interfejsy to m.in. [nsIChannelEventSink](pl/NsIChannelEventSink) oraz [nsIBadCertListener](pl/NsIBadCertListener).

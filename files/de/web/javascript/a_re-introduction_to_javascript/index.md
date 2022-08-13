@@ -96,7 +96,7 @@ Um eine Binärzahl in ein Integer zu ändern, verwendet man einfach die Basis 2:
 parseInt("11", 2); // 3
 ```
 
-Auf die gleiche Weise lassen sich auch Gleitkommazahlen mit Hilfe der Funktion[ ](/de/docs/Web/JavaScript/Reference/Global_Objects/parseFloat){{jsxref("Global_Objects/parseFloat", "parseFloat()")}} konvertieren. Anders als bei der {{jsxref("Global_Objects/parseInt", "parseInt()")}} Funktion nutzt `parseFloat()` immer die Basis 10.
+Auf die gleiche Weise lassen sich auch Gleitkommazahlen mit Hilfe der Funktion[](/de/docs/Web/JavaScript/Reference/Global_Objects/parseFloat){{jsxref("Global_Objects/parseFloat", "parseFloat()")}} konvertieren. Anders als bei der {{jsxref("Global_Objects/parseInt", "parseInt()")}} Funktion nutzt `parseFloat()` immer die Basis 10.
 
 Auch der unäre + Operator kann eingesetzt werden, um zu einer Zahl zu konvertieren:
 
@@ -147,7 +147,7 @@ Strings sind in JavaScript eine Folge von [Unicode-Zeichen](/de/docs/Web/JavaScr
 
 Für ein einzelnes Zeichen, verwendet man einfach einen String mit einem Zeichen.
 
-Um die Länge eines Strings (in Codeeinheiten) herauszufinden, nutzt man die [length ](/de/docs/Web/JavaScript/Reference/Global_Objects/String/length)Eigenschaft:
+Um die Länge eines Strings (in Codeeinheiten) herauszufinden, nutzt man die [length](/de/docs/Web/JavaScript/Reference/Global_Objects/String/length)Eigenschaft:
 
 ```js
 'hello'.length; // 5
@@ -167,8 +167,8 @@ JavaScript unterscheidet zwischen {{jsxref("null")}}, wobei es sich um einen Wer
 
 JavaScript hat einen Boolean Typ mit den möglichen Werten `true` und `false` (beide sind Schlüsselwörter). Jeder Wert kann mit den folgenden Regeln zu einem Boolean konvertiert werden:
 
-1.  `false`, `0`, leere Strings (`""`), `NaN`, `null`, und `undefined` werden `false`.
-2.  Alle anderen Werte werden `true`.
+1. `false`, `0`, leere Strings (`""`), `NaN`, `null`, und `undefined` werden `false`.
+2. Alle anderen Werte werden `true`.
 
 Die Konvertierung kann explizit mit der `Boolean()` Funktion durchgeführt werden:
 
@@ -232,7 +232,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 Deklariert man eine Variable, ohne ihr einen Wert zuzuweisen, ist ihr Typ `undefined`.
 
-Ein sehr wichtiger Unterschied zu anderen Programmiersprachen wie Java besteht darin, dass bei JavaScript keine Blöckegültigkeitsbereiche hat, sondern nur Funktionsgültigkeitsbereiche. Wird eine Variable mit dem `var` Schlüsselwort in einer zusammengesetzten Statement (z.B. if-Anweisung) definiert, so ist diese Variable innerhalb der ganzen Funktion sichtbar. Jedoch ist es ab ECMAScript 2015 mit [let ](/de/docs/Web/JavaScript/Reference/Statements/let)und [const](/de/docs/Web/JavaScript/Reference/Statements/const) Deklarationen möglich, Variablen mit Blocksichtbarkeitsbereich zu erstellen.
+Ein sehr wichtiger Unterschied zu anderen Programmiersprachen wie Java besteht darin, dass bei JavaScript keine Blöckegültigkeitsbereiche hat, sondern nur Funktionsgültigkeitsbereiche. Wird eine Variable mit dem `var` Schlüsselwort in einer zusammengesetzten Statement (z.B. if-Anweisung) definiert, so ist diese Variable innerhalb der ganzen Funktion sichtbar. Jedoch ist es ab ECMAScript 2015 mit [let](/de/docs/Web/JavaScript/Reference/Statements/let)und [const](/de/docs/Web/JavaScript/Reference/Statements/const) Deklarationen möglich, Variablen mit Blocksichtbarkeitsbereich zu erstellen.
 
 ## Operatoren
 
@@ -797,7 +797,7 @@ var s = new Person("Simon", "Willison");
 
 Hier wird ein neues Schlüsselwort aufgeführt: `new`. `new` steht in starker Beziehung zu `this`. Es erstellt ein neues Objekt und ruft die nachstehende Funktion auf, wobei `this` dann das neue Objekt ist. Zu beachten ist, dass die Funktion keinen Wert zurückgibt, sondern das `this`-Objekt modifiziert. Das `new` gibt dann das `this`-Objekt an den Aufrufer zurück. Funktionen die für den Aufruf mit `new` konzipiert sind, nennt man Konstruktoren. Gängige Praxis ist es, diese Funktionen mit einem großen Anfangsbuchstaben zu versehen, um an den Einsatz von `new` zu erinnern.
 
-Die nun optimiertere Funktion hat jedoch immernoch eine Fehlerquelle mit dem Aufruf von` fullName()`.
+Die nun optimiertere Funktion hat jedoch immernoch eine Fehlerquelle mit dem Aufruf von`fullName()`.
 
 Das `person`-Objekt wird besser, weist jedoch noch immer einige unangenehme Effekte auf: Bei jedem Erstellen eines `person`-Objekts werden zwei neue Funktionen erzeugt — wäre es nicht besser, wenn dieser Code wiederverwendet werden könnte?
 

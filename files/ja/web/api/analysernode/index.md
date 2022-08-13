@@ -46,12 +46,8 @@ _{{domxref("AudioNode")}}からメソッドを継承する_.
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
   - : 周波数データを引数として渡された Float32Array 配列へコピーする。
 
-<!---->
-
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
   - : 周波数データを引数として渡された Uint8Array 配列(unsigned byte 配列)へコピーする。
-
-<!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : 音声波形データを引数として渡された Float32Array 配列へコピーする。

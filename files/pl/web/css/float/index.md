@@ -31,9 +31,9 @@ float: left | right | none | [inherit](pl/CSS/inherit)
 
 ### Wartości
 
-- **left** : Element pływa po lewej stronie zawierającego go bloku.
-- **right** : Element pływa po prawej stronie zawierającego go bloku.
-- **none** : Element nie pływa.
+- **left** : Element pływa po lewej stronie zawierającego go bloku.
+- **right** : Element pływa po prawej stronie zawierającego go bloku.
+- **none** : Element nie pływa.
 
 ### Przykłady
 

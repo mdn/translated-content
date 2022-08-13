@@ -38,7 +38,7 @@ Mehrere andere populäre Namen wie `self` und `global` wurden aus dem Vorschlag 
 
 ### Umgebungsübergreifend den globalen Kontext finden
 
-Vor `globalThis` war `Function('return this')()` die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen. Dies führt jedoch in einigen Einstellungen zu [CSP ](/de/docs/Web/HTTP/CSP)Verstößen. Daher verwendet [es6-shim](https://github.com/paulmillr/es6-shim) eine Prüfung wie diese:
+Vor `globalThis` war `Function('return this')()` die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen. Dies führt jedoch in einigen Einstellungen zu [CSP](/de/docs/Web/HTTP/CSP)Verstößen. Daher verwendet [es6-shim](https://github.com/paulmillr/es6-shim) eine Prüfung wie diese:
 
 ```js
 var getGlobal = function () {

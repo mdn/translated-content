@@ -56,11 +56,7 @@ Następnie, kiedy już zostało zadeklarowane, co będzie się działo zaraz po 
 
 - Pierwszy parametr metody `open()` określa metodę zapytania HTTP - GET, POST, HEAD lub dowolną inną metodę, której chcesz użyć i którą obsługuje serwer. Dla zachowania zgodności ze standardem nazwę metody wpisuj dużymi literami. W przeciwnym razie niektóre przeglądarki (np. Firefox) mogą nie przetworzyć zapytania. Aby dowiedzieć się więcej na temat możliwych metod zapytań HTTP, zajrzyj do [dokumentacji W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
 
-<!---->
-
 - Drugi parametr określa URL strony, która ma zostać odpytana. W celu zwiększenia bezpieczeństwa, nie jest możliwe odpytywanie stron znajdujących się w domenach zewnętrznych (tzw. 3rd-party domains). Upewnij się, że wpisujesz dokładną nazwę domeny, na wszystkich swoich stronach, w przeciwnym razie po wywołaniu metody `open()` dostaniesz odpowiedź z błędem "brak dostępu" (permission denied). Częstym błędem jest otwieranie strony jako domena.tld, ale wywoływanie stron z www\.domena.tld.
-
-<!---->
 
 - Trzeci parametr decyduje, czy zapytanie ma być asynchroniczne. Jeżeli tak, wykonywanie funkcji JavaScript będzie kontynuowane podczas oczekiwania na odpowiedź z serwera. I to jest właśnie A w nazwie AJAX.
 
@@ -144,7 +140,7 @@ Stwórzmy teraz proste zapytanie HTTP. JavaScript odpyta serwer o dokument HTML 
             }
 
             if (!http_request) {
-                alert('Poddaję się :( Nie mogę stworzyć instancji obiektu XMLHTTP');
+                alert('Poddaję się :( Nie mogę stworzyć instancji obiektu XMLHTTP');
                 return false;
             }
             http_request.onreadystatechange = function() { alertContents(http_request); };
@@ -222,7 +218,7 @@ W poprzednim przykładzie, po otrzymaniu odpowiedzi z serwera, użyliśmy właś
 
 Przede wszystkim stwórzmy prawidłowy dokument XML, o który odpytamy potem serwer. Taki dokument (\<tt>test.xml\</tt>) może wyglądać tak:
 
-    <?xml version="1.0" ?>
+    <?xml version="1.0" ?>
     <root>
         Jestem testem.
     </root>

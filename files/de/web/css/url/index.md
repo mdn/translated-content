@@ -25,7 +25,7 @@ Der `<url>` Datentyp wird mit der funktionalen Notation [`url()`]() spezifiziert
     <a_css_property>: url('http://mysite.example.com/mycursor.png')
     <a_css_property>: url(http://mysite.example.com/mycursor.png)
 
-> **Note:** **Hinweis:** Steuerzeichen über 0x7e sind ab Firefox 15 in URLs ohne Anführungszeichen nicht erlaubt. Sieh {{Bug(752230)}} für mehr Details.
+> **Hinweis:** Steuerzeichen über 0x7e sind ab Firefox 15 in URLs ohne Anführungszeichen nicht erlaubt. Sieh {{Bug(752230)}} für mehr Details.
 
 ## Beispiele
 

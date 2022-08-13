@@ -48,13 +48,9 @@ Die nachfolgende Liste zeigt eine komplette Übersicht aller HTML-Block-Elemente
 - {{ HTMLElement("div") }}
   - : Allgemeine Unterteilung ohne semantische Aussage.
 
-<!---->
-
 - {{ HTMLElement("dl") }}
 
   - : Definitionsliste.
-
-<!---->
 
 - {{ HTMLElement("fieldset") }}
   - : Gruppe von Elementen im Formular oder Reiter im Dialog.

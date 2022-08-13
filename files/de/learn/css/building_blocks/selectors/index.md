@@ -196,8 +196,8 @@ Mehr Beispiele zu [Tabellen](/de/docs/Web/Guide/CSS/Getting_Started/Tables) find
 
 ## Aktion: class und ID Selektoren verwenden
 
-1.  Bearbeiten Sie Ihre HTML Datei und duplizieren Sie den Absatz mit copy and paste.
-2.  Danach setzen Sie ein **id** und **class** Attribut auf den ersten Absatz und ein **id** Attribut auf dem zweiten wie unten dargestellt. Alternativ können Sie die gesamte Datei kopieren und einfügen:
+1. Bearbeiten Sie Ihre HTML Datei und duplizieren Sie den Absatz mit copy and paste.
+2. Danach setzen Sie ein **id** und **class** Attribut auf den ersten Absatz und ein **id** Attribut auf dem zweiten wie unten dargestellt. Alternativ können Sie die gesamte Datei kopieren und einfügen:
 
     ```html
     <!doctype html>
@@ -222,7 +222,7 @@ Mehr Beispiele zu [Tabellen](/de/docs/Web/Guide/CSS/Getting_Started/Tables) find
     </html>
     ```
 
-3.  Bearbeiten Sie jetzt Ihre CSS Datei. Ersetzen Sie den gesamten Inhalt mit:
+3. Bearbeiten Sie jetzt Ihre CSS Datei. Ersetzen Sie den gesamten Inhalt mit:
 
     ```css
     strong {
@@ -242,7 +242,7 @@ Mehr Beispiele zu [Tabellen](/de/docs/Web/Guide/CSS/Getting_Started/Tables) find
     }
     ```
 
-4.  Speichern Sie die Dateien und aktualisieren Sie den Webbrowser, um das Ergebnis zu sehen:
+4. Speichern Sie die Dateien und aktualisieren Sie den Webbrowser, um das Ergebnis zu sehen:
 
     | **C**ascading **S**tyle **S**heets |
     | ---------------------------------- |
@@ -256,13 +256,13 @@ Mehr Beispiele zu [Tabellen](/de/docs/Web/Guide/CSS/Getting_Started/Tables) find
 
 Herausforderungen
 
-1.  Ohne die HTML Datei zu verändern, fügen sie eine einzige Regel in Ihrer CSS Datei hinzu, die die Farbe aller Anfangsbuchstaben wie jetzt beibehält aber alle anderen Buchstaben im zweiten Absatz blau macht:
+1. Ohne die HTML Datei zu verändern, fügen sie eine einzige Regel in Ihrer CSS Datei hinzu, die die Farbe aller Anfangsbuchstaben wie jetzt beibehält aber alle anderen Buchstaben im zweiten Absatz blau macht:
 
     | **C**ascading **S**tyle **S**heets |
     | ---------------------------------- |
     | **C**ascading **S**tyle **S**heets |
 
-2.  Ändern sie jetzt die neue Regel (ohne etwas anderes zu ändern), um den ersten Absatz auch blau zu machen:
+2. Ändern sie jetzt die neue Regel (ohne etwas anderes zu ändern), um den ersten Absatz auch blau zu machen:
 
     | **C**ascading **S**tyle **S**heets |
     | ---------------------------------- |
@@ -270,7 +270,7 @@ Herausforderungen
 
 Mögliche Lösung
 
-1.  Fügen Sie eine Regel mit dem ID Selektor `#second` und einer Deklaration `color: blue;` wie unten dargestellt hinzu:
+1. Fügen Sie eine Regel mit dem ID Selektor `#second` und einer Deklaration `color: blue;` wie unten dargestellt hinzu:
 
     ```css
     #second {
@@ -280,7 +280,7 @@ Mögliche Lösung
 
     Ein noch spezifischerer Selektor `p#second` funktioniert auch.
 
-2.  Ändern Sie den Selektor der neuen Regel auf `p`, damit er ein Tag-Selektor ist:
+2. Ändern Sie den Selektor der neuen Regel auf `p`, damit er ein Tag-Selektor ist:
 
     ```css
     p {
@@ -292,7 +292,7 @@ Mögliche Lösung
 
 ## Aktion: pseudo-classes Selektoren verwenden
 
-1.  Erstellen Sie eine HTML Datei wie folgt:
+1. Erstellen Sie eine HTML Datei wie folgt:
 
     ```html
     <!doctype html>
@@ -308,7 +308,7 @@ Mögliche Lösung
     </html>
     ```
 
-2.  Bearbeiten Sie jetzt Ihre CSS Datei. Ersetzen Sie den gesamten Inhalt mit:
+2. Bearbeiten Sie jetzt Ihre CSS Datei. Ersetzen Sie den gesamten Inhalt mit:
 
     ```css
     a.homepage:link, a.homepage:visited {
@@ -328,9 +328,10 @@ Mögliche Lösung
     }
     ```
 
-3.  Speichern Sie die Dateien und aktualisieren Sie den Webbrowser, um das Ergebnis zu sehen (fahren sie mit dem Mauszeiger über den folgenden Link, um den Effekt zu sehen):
+3. Speichern Sie die Dateien und aktualisieren Sie den Webbrowser, um das Ergebnis zu sehen (fahren sie mit dem Mauszeiger über den folgenden Link, um den Effekt zu sehen):
 
     | Go to our Home page |
+
     | ------------------- |
 
 ## Aktion: Selektoren basierend auf Beziehungen und pseudo-classes verwenden

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Number/isInteger
 ---
 {{JSRef}}
 
-Metoda **`Number.isInteger()`** sprawdza czy wpisana wartość jest liczbą całkowitą.
+Metoda **`Number.isInteger()`** sprawdza czy wpisana wartość jest liczbą całkowitą.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ Metoda zwraca wartość typu {{jsxref("Boolean")}}.
 
 ## Opis
 
-Jeśli sprawdzana zmienna jest liczbą całkowitą metoda zwraca `true`, w innym przypadku zwraca `false`. Jeśli zmienna jest typu {{jsxref("NaN")}} lub spoza zakresu metoda zwraca `false`.
+Jeśli sprawdzana zmienna jest liczbą całkowitą metoda zwraca `true`, w innym przypadku zwraca `false`. Jeśli zmienna jest typu {{jsxref("NaN")}} lub spoza zakresu metoda zwraca `false`.
 
 ## Przykłady
 
@@ -49,8 +49,8 @@ Number.isInteger([1]);       // false
 ```js
 Number.isInteger = Number.isInteger || function(value) {
   return typeof value === 'number' &&
-    isFinite(value) &&
-    Math.floor(value) === value;
+    isFinite(value) &&
+    Math.floor(value) === value;
 };
 ```
 
@@ -59,7 +59,7 @@ Number.isInteger = Number.isInteger || function(value) {
 | Specification                                                                                | Status                       | Comment             |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Kompatybilne przegladarki
 

@@ -14,7 +14,7 @@ translation_of: Web/API/Document/adoptNode
     knoten = document.adoptNode(externerKnoten);
 
 - `knoten`
-  - : Ist der übertragene Knoten, welcher nun dieses Dokument als sein `ownerDocument `hat. Der Elternknoten ([`parentNode`](/en-US/docs/DOM/Node.parentNode)) is `null`, da er noch nicht in den Dokumentenbaum eingefügt wurde. Zu beachten ist, dass `knoten` und `externerKnoten` nach dem Funktionsaufruf das gleiche Objekt sind.
+  - : Ist der übertragene Knoten, welcher nun dieses Dokument als sein `ownerDocument`hat. Der Elternknoten ([`parentNode`](/en-US/docs/DOM/Node.parentNode)) is `null`, da er noch nicht in den Dokumentenbaum eingefügt wurde. Zu beachten ist, dass `knoten` und `externerKnoten` nach dem Funktionsaufruf das gleiche Objekt sind.
 - `externerKnoten`
   - : Ist der Knoten eines anderes Dokumentes, der übertragen werden soll.
 

@@ -75,8 +75,6 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 - MDN の [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5)
 - Wikipedia 上の {{interwiki("wikipedia", "意味論#コンピュータ科学", "コンピュータ科学におけるセマンティクスの意味")}}
 
-<!---->
-
 - [MDN 用語集](/ja/docs/Glossary)
 
   - {{Glossary("SEO")}}

@@ -11,7 +11,7 @@ translation_of: Web/API/URL/protocol
 ---
 {{ApiRef("URL API")}}
 
-Die **`protocol `**Eigenschaft der {{domxref("URL")}} Schnittstelle ist ein {{domxref("USVString")}} der das Protokollschema der URL, einschließlich des finalen `':' `darstellt.
+Die **`protocol`**Eigenschaft der {{domxref("URL")}} Schnittstelle ist ein {{domxref("USVString")}} der das Protokollschema der URL, einschließlich des finalen `':'`darstellt.
 
 {{AvailableInWorkers}}
 

@@ -25,7 +25,7 @@ Brak.
 
 ## Opis
 
-Wartością zwracaną przez `getUTCDate` jest liczba całkowita z przedziału od 1 do 31.
+Wartością zwracaną przez `getUTCDate` jest liczba całkowita z przedziału od 1 do 31.
 
 ## Przykłady
 

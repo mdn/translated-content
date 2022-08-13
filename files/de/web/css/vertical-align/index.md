@@ -198,7 +198,7 @@ img.middle { vertical-align: middle; }
 | Spezifikation                                                                                            | Status                                   | Kommentar                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align')}}             | {{Spec2('CSS3 Transitions')}} | Definiert`vertical-align` als animierbar.                                                                                                              |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}} | {{Spec2('CSS2.1')}}                 | Fügt den {{cssxref("&lt;length&gt;")}} Wert hinzu und erlaubt die Anwendung auf Elemente mit `table-cell `{{cssxref("display")}}-Typ. |
+| {{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}} | {{Spec2('CSS2.1')}}                 | Fügt den {{cssxref("&lt;length&gt;")}} Wert hinzu und erlaubt die Anwendung auf Elemente mit `table-cell`{{cssxref("display")}}-Typ. |
 | {{SpecName('CSS1', '#vertical-align', 'vertical-align')}}                             | {{Spec2('CSS1')}}                 | Einführung.                                                                                                                                            |
 
 {{cssinfo}}

@@ -4,7 +4,7 @@ slug: Glossary/Abstraction
 translation_of: Glossary/Abstraction
 original_slug: Glossary/Abstrakcja
 ---
-Abstrakcja w {{Glossary("computer programming")}} to sposób na zmniejszenie złożoności i umożliwienie wydajnego projektowania i wdrażania w złożonych systemach oprogramowania. Ukrywa złożoność techniczną systemów za prostszą {{Glossary("API", "APIs")}}.
+Abstrakcja w {{Glossary("computer programming")}} to sposób na zmniejszenie złożoności i umożliwienie wydajnego projektowania i wdrażania w złożonych systemach oprogramowania. Ukrywa złożoność techniczną systemów za prostszą {{Glossary("API", "APIs")}}.
 
 ## Zalety Abstrakcji Danych
 

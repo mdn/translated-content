@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
 {{JSRef}}
 
-Die **`next`\*\***`()`\*\* Methode gibt ein Objekt mit den zwei Eigenschaften `done` und `value` zurück. Man kann der `next` Methode auch einen Wert für den Generator übergeben.
+Die **`next()`** Methode gibt ein Objekt mit den zwei Eigenschaften `done` und `value` zurück. Man kann der `next` Methode auch einen Wert für den Generator übergeben.
 
 ## Syntax
 

@@ -10,7 +10,7 @@ translation_of: Web/API/WebGL_API
 
 WebGL (Web Graphics Library) ist eine Javascript-API zum Rendern interaktiver 3D und 2D Grafiken mittels eines kompatiblen Web-Browsers ohne Einsatz zusätzlicher Plugins. Mit [WebGL](http://www.khronos.org/webgl/) steht eine API zur Verfügung, die an [OpenGL ES 2.0](http://www.khronos.org/opengles/) angelehnt ist und deren Inhalte mittels eines {{HTMLElement("canvas")}} Elements dargestellt werden.
 
-WebGL steht ab [Firefox](/en-US/Firefox "Firefox 4 for developers") 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari ](http://www.apple.com/safari/ "http://www.apple.com/fr/safari/")5.1+ und [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+ zur Verfügung. Allerdings muss auch die Hardware des Zielgerätes dieses Feature unterstützen.
+WebGL steht ab [Firefox](/en-US/Firefox "Firefox 4 for developers") 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/ "http://www.apple.com/fr/safari/")5.1+ und [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+ zur Verfügung. Allerdings muss auch die Hardware des Zielgerätes dieses Feature unterstützen.
 
 WebGL2 steht ab [Firefox](/en-US/Firefox "Firefox 4 for developers") 51+, [Google Chrome](http://www.google.com/chrome/) 56+ und [Opera](http://www.opera.com/) 42+ standardmäßig zur Verfügung. WebGL2 wird derzeit nicht von Internet Explorer oder Edge unterstützt.
 

@@ -23,8 +23,6 @@ L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées
 
 ## Propriétés
 
-<!---->
-
 - {{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}
   - : La coordonnée x de l'origine du `DOMRect`.
 - {{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}

@@ -43,7 +43,7 @@ Eine zusätzlich erforderliche Serialisierung wird vermieden, was einen deutlich
     </p>
     <!-- afterend -->
 
-> **Note:** **Hinweis:** Die `beforebegin` und `afterend` Positionierungen wirken nur, wenn der Knoten innerhalb des DOM-Baums steht und ein Eltern-Element hat.
+> **Hinweis:** Die `beforebegin` und `afterend` Positionierungen wirken nur, wenn der Knoten innerhalb des DOM-Baums steht und ein Eltern-Element hat.
 
 ## Beispiel
 

@@ -23,9 +23,9 @@ Ein Service-Worker läuft in einem Worker-Kontext. Es hat keinerlei Zugriff auf 
 
 Service-Worker laufen aus Sicherheitsgründen nur über das HTTPS-Protokoll. Veränderte Netzwerkanfragen könnten "Man in the middle"-Angriffe deutlich leichter machen.
 
-> **Note:** **Hinweis:** Service-Worker haben in Bereichen wie [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) gezeigt, dass sie dort besonders gut genutzt werden können, da sie keine Vermutungen darüber treffen, was Sie machen wollen und brechen ihre Aktionen entsprechend ab. Sie haben deshalb die Kontrolle über alles.
+> **Hinweis:** Service-Worker haben in Bereichen wie [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) gezeigt, dass sie dort besonders gut genutzt werden können, da sie keine Vermutungen darüber treffen, was Sie machen wollen und brechen ihre Aktionen entsprechend ab. Sie haben deshalb die Kontrolle über alles.
 
-> **Note:** **Hinweis**: Service-Worker basieren auf [Promises](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise). Generell sind sie abhängig von Anfragen und sie werden mit einer erfolgreichen oder einer fehlerhaften Aktion antworten. Die Architektur ist deshalb ideal dafür.
+> **Hinweis:** Service-Worker basieren auf [Promises](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise). Generell sind sie abhängig von Anfragen und sie werden mit einer erfolgreichen oder einer fehlerhaften Aktion antworten. Die Architektur ist deshalb ideal dafür.
 
 ### Registrierung
 
@@ -35,9 +35,9 @@ Ein Service-Worker wird über die {{domxref("ServiceWorkerContainer.register()")
 
 Ihr Service-Worker muss folgenden Lebenszyklus durchlaufen:
 
-1.  Download
-2.  Installation
-3.  Aktivierung
+1. Download
+2. Installation
+3. Aktivierung
 
 Der Service-Worker wird sofort mit heruntergeladen, sobald der Nutzer erstmals eine von Service-Workern kontrollierte Seite aufruft.
 
@@ -55,7 +55,7 @@ Außerdem existiert ein `activate`-Event. Wenn es feuert, ist es ein guter Zeitp
 
 Ihr Service-Worker kann mit dem {{domxref("FetchEvent")}} auf Anfragen antworten. Sie können die Antworten auf die Anfragen verändern, wie Sie wollen. Nutzen Sie dazu die {{domxref("FetchEvent.respondWith") }}-Methode.
 
-> **Note:** **Hinweis:** Weil `oninstall`/`onactivate `eine Weile benötigen, um ihre Aktionen abzuschließen, ist es empfehlenswert, eine `waitUntil`-Methode bereitzustellen, die, wenn `oninstall `oder` onactivate` gefeuert werden, ein `Promise` geliefert wird. Events, die der Funktion dienen, werden dem Service-Worker nicht enthalten und der `Promise` wird erfolgreich ausgeführt.
+> **Hinweis:** Weil `oninstall`/`onactivate`eine Weile benötigen, um ihre Aktionen abzuschließen, ist es empfehlenswert, eine `waitUntil`-Methode bereitzustellen, die, wenn `oninstall`oder`onactivate` gefeuert werden, ein `Promise` geliefert wird. Events, die der Funktion dienen, werden dem Service-Worker nicht enthalten und der `Promise` wird erfolgreich ausgeführt.
 
 Für eine komplette Anleitung, die zeigt, wie Sie Ihr erstes Beispiel erstellen, siehe [Using Service Workers](/de/docs/Web/API/ServiceWorker_API/Using_Service_Workers).
 
@@ -89,11 +89,11 @@ In Zukunft werden Service-Worker zu weiteren nützlichen Dingen fähig sein, die
 - {{domxref("Clients") }}
   - : Repräsentiert einen Container von {{domxref("Client")}}-Objekten; die hauptsächtliche Methode, um die aktiven Service-Worker-Clients anzusteuern.
 - {{domxref("ExtendableEvent") }}
-  - : Erweitert die Lebensdauer der `install `und `activate`-Events, die vom {{domxref("ServiceWorkerGlobalScope")}} entfernt werden als teil des Service-Worker-Lebenszyklus. Dies versichert, dass einige Events wie z. B. das {{domxref("FetchEvent")}} nicht vom {{domxref("ServiceWorker")}}, solange sie veraltete Cache-Einträge löschen usw.
+  - : Erweitert die Lebensdauer der `install`und `activate`-Events, die vom {{domxref("ServiceWorkerGlobalScope")}} entfernt werden als teil des Service-Worker-Lebenszyklus. Dies versichert, dass einige Events wie z. B. das {{domxref("FetchEvent")}} nicht vom {{domxref("ServiceWorker")}}, solange sie veraltete Cache-Einträge löschen usw.
 - {{domxref("ExtendableMessageEvent") }}
   - : Das Event-Objekt von einem {{event("message_(ServiceWorker)","message")}}-Event, welches von einem Service-Worker gefeuert wird.
 - {{domxref("FetchEvent") }}
-  - : Die Parameter, die dem {{domxref("ServiceWorkerGlobalScope.onfetch")}}-Handler übergeben werden. `FetchEvent `repräsentiert eine Fetch-Aktion, die vom {{domxref("ServiceWorkerGlobalScope")}} eines {{domxref("ServiceWorker")}} entfernt wird. Es beinhaltet Information über die Anfrage und der daraus resultierenden Antwort, und stellt die {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}-Methode bereit. Es ermöglicht eine willkürliche Antwort, die zurück zur kontrollierten Seite gesendet wird.
+  - : Die Parameter, die dem {{domxref("ServiceWorkerGlobalScope.onfetch")}}-Handler übergeben werden. `FetchEvent`repräsentiert eine Fetch-Aktion, die vom {{domxref("ServiceWorkerGlobalScope")}} eines {{domxref("ServiceWorker")}} entfernt wird. Es beinhaltet Information über die Anfrage und der daraus resultierenden Antwort, und stellt die {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}-Methode bereit. Es ermöglicht eine willkürliche Antwort, die zurück zur kontrollierten Seite gesendet wird.
 - {{domxref("InstallEvent") }}
   - : The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 - {{domxref("Navigator.serviceWorker") }}

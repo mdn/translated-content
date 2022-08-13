@@ -24,8 +24,6 @@ Die **`setFloat32()`** Methode speichert eine 32-Bit Gleitkommazahl mit Vorzeich
 - byteOffset
   - : Das Offset, in Bytes, vom Start der View, an dem die Daten gespeichert werden sollen.
 
-<!---->
-
 - value
   - : Der Wert, der gespeichert werden soll.
 - littleEndian

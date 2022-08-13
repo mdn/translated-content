@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/getAll
 
 Die **`getAll()`** Methode der {{domxref("FormData")}} Schnittstelle gibt alle Werte zurück, die innerhalb eines `FormData` Objekts mit einem gegebenen Schlüssel assoziiert sind.
 
-> **Note:** **Hinweis**: Diese Methode ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
+> **Hinweis:** Diese Methode ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
 
 ## Syntax
 

@@ -15,8 +15,6 @@ Mit der CSS-Eigenschaft `text-decoration-color` kann die Farbe für Unterstreich
 
     Formale Syntax: {{csssyntax("text-decoration-color")}}
 
-<!---->
-
     text-decoration-color: currentColor
     text-decoration-color: red
     text-decoration-color: #00ff00

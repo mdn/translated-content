@@ -228,7 +228,7 @@ Die Folgende Tabelle fasst die verfügbaren Traps von `Proxy` Objekten zusammen.
       <td>
         Eigenschaftszugriff: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Vererbter Eigenschaftszugriff:
-        <code>Object.create(proxy)[foo]</code
+        <code>Object.create[proxy](foo)</code
         ><br />{{jsxref("Reflect.get()")}}
       </td>
       <td>
@@ -255,7 +255,7 @@ Die Folgende Tabelle fasst die verfügbaren Traps von `Proxy` Objekten zusammen.
       <td>
         Eigenschaftszuweisung: <code>proxy[foo] = bar</code> and
         <code>proxy.foo = bar</code><br />Vererbte Eigenschaftszuweisung:
-        <code>Object.create(proxy)[foo] = bar</code
+        <code>Object.create[proxy](foo) = bar</code
         ><br />{{jsxref("Reflect.set()")}}
       </td>
       <td>

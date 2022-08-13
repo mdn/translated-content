@@ -37,7 +37,7 @@ var proxy = new Proxy(function() {}, {});
 Function.prototype.toString.call(proxy); // TypeError
 ```
 
-Wenn die `toString()` Methode auf eingebauten Objekten oder einer von `Function.prototype.bind` erstellten Methode aufgerufen wird, gibt `toString() `_native function string_ zurück, was wie folgt aussiet:
+Wenn die `toString()` Methode auf eingebauten Objekten oder einer von `Function.prototype.bind` erstellten Methode aufgerufen wird, gibt `toString()`_native function string_ zurück, was wie folgt aussiet:
 
 ```js
 "function () {\n    [native code]\n}"

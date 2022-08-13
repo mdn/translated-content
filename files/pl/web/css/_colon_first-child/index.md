@@ -32,8 +32,6 @@ Pseudoklasa `:first-child` sprawia iż własności stosowane są do elementu tyl
       </body>
     </html>
 
-<!---->
-
     span:first-child { font-weight: bold; }
 
 Powyższy zapis pogrubi czcionkę wewnątrz wszystkich elementów `span`, które są pierwszymi dziećmi swoich rodziców. Zostaną tutaj pogrubione słowa "**pierwszy**":
@@ -63,8 +61,6 @@ Ten przykład ustawi czerwony kolor tła wszystkim elementom `div`, które są j
         <td>Wiersz k2</td>
       </tr>
     </table>
-
-<!---->
 
     table tr:first-child { background-color: red; }
 

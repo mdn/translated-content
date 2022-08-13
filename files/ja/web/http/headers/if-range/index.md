@@ -32,8 +32,6 @@ translation_of: Web/HTTP/Headers/If-Range
 - \<etag>
   - : リクエストされたリソースを表すエンティティータグです。これは `"675af34563dc-tr34"` のようにダブルクオートに囲まれた ASCII の文字列で、弱い比較アルゴリズムを使うことを示すために `W/` がプレフィックスとしてつくことがあります。
 
-<!---->
-
 - \<day-name>
   - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
 - \<day>

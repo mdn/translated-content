@@ -24,12 +24,8 @@ Zmienia zawartość tablicy, dodając nowe elementy podczas usuwania starych ele
 - `start`
   - : Indeks od którego rozpoczynamy modyfikację tablicy.
 
-<!---->
-
 - `deleteCount`
-  - : Liczba całkowita określająca liczbę starych elementów tablicy do usunięcia. Jeżeli deleteCount wynosi 0, nic nie zostanie usunięte. W tym przypadku należy podać co najmniej jeden nowy element. W przypadku gdy parametr deleteCount nie został podany (druga forma składni podana powyżej, która jest rozszerzeniem SpiderMonkey), wszystkie elementy o indeksach wyższych `lub równych index` są usuwane.
-
-<!---->
+  - : Liczba całkowita określająca liczbę starych elementów tablicy do usunięcia. Jeżeli deleteCount wynosi 0, nic nie zostanie usunięte. W tym przypadku należy podać co najmniej jeden nowy element. W przypadku gdy parametr deleteCount nie został podany (druga forma składni podana powyżej, która jest rozszerzeniem SpiderMonkey), wszystkie elementy o indeksach wyższych `lub równych index` są usuwane.
 
 - `itemN`
   - : Elementy dodawane do tablicy. Jeżeli nie określimy żadnych elementów, `splice` usunie tylko podaną liczbę elementów.

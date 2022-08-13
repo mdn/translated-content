@@ -38,8 +38,6 @@ original_slug: Creating_toolbar_buttons
 - `class="toolbarbutton-1"` によって、「アイコンと文字」モードで正常にツールバーボタンが表示されるようになります。さらにパッディングも調整されます。
 - `oncommand` 属性で、ボタンがクリックされたときに実行されるコマンドを指定してください。ミドルクリックを扱いたい場合は `onclick` ハンドラを追加し、その中で `event.button` を確認してください。
 
-<!---->
-
     onclick: function(event) {
       switch(event.button) {
         case 0:

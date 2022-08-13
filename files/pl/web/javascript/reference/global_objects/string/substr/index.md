@@ -24,8 +24,6 @@ Zwraca określoną liczbę początkowych znaków w łańcuchu znaków w określo
 - `start`
   - : Lokalizacja, w której rozpoczyna się wyciąganie znaków (wartość liczbowa pomiędzy 0, a jeden znak mniej niż długość łańcucha znaków).
 
-<!---->
-
 - `length`
   - : Liczba znaków do wyciągnięcia.
 
@@ -35,7 +33,7 @@ Zwraca określoną liczbę początkowych znaków w łańcuchu znaków w określo
 
 Jeśli `start` jest dodatnie i jest długością łańcucha znaków lub dłuższą wartością, `substr()` nie zwraca znaków.
 
-Jeśli `start` jest ujemne, `substr()` stosuje to jako indeks znaków z końca łańcucha znaków. Jeśli `start` jest ujemne i `abs(start)` jest większe niż długość łańcucha znaków to `substr()` stosuje 0 jako początek indeksu.
+Jeśli `start` jest ujemne, `substr()` stosuje to jako indeks znaków z końca łańcucha znaków. Jeśli `start` jest ujemne i `abs(start)` jest większe niż długość łańcucha znaków to `substr()` stosuje 0 jako początek indeksu.
 
 Jeśli `length` jest 0 lub ujemne, `substr()` nie zwróci znaków. Jeśli `length` jest opuszczone, `substr()` wyciągnie znaki aż do końca łańcucha znaków.
 

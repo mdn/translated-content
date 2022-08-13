@@ -99,8 +99,6 @@ Mozilla は、幅広い既存の Web テクノロジーをサポートし、そ�
 
 - HTML5 通知 ([ソースコード](https://github.com/elfoxero/html5notifications))
 
-<!---->
-
 ### Web Audio API
 
 - [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)

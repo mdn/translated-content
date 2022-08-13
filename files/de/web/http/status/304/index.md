@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/304
 ---
 {{HTTPSidebar}}
 
-Der HTTP-Statuscode **`304 Not Modified `**gibt an, dass die angeforderten Ressourcen nicht erneut übertragen werden müssen. Es handelt sich um eine implizite Weiterleitung zu einer zwischengespeicherten Ressource. Dies geschieht, wenn die Anforderungsmethode {{glossary("safe")}} ist, wie eine {{HTTPMethod("GET")}}- oder {{HTTPMethod("HEAD")}}-Anfrage oder wenn die Anfrage bedingt ist und einen {{HTTPHeader("If-None-Match")}}- oder {{HTTPHeader("If-Modified-Since")}}-Header verwendet.
+Der HTTP-Statuscode **`304 Not Modified`**gibt an, dass die angeforderten Ressourcen nicht erneut übertragen werden müssen. Es handelt sich um eine implizite Weiterleitung zu einer zwischengespeicherten Ressource. Dies geschieht, wenn die Anforderungsmethode {{glossary("safe")}} ist, wie eine {{HTTPMethod("GET")}}- oder {{HTTPMethod("HEAD")}}-Anfrage oder wenn die Anfrage bedingt ist und einen {{HTTPHeader("If-None-Match")}}- oder {{HTTPHeader("If-Modified-Since")}}-Header verwendet.
 
 Eine entsprechende Antwort mit {{HTTPStatus("200")}} `OK` hätte die Header {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, und {{HTTPHeader("Vary")}} enthalten.
 

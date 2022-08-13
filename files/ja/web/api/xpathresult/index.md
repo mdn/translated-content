@@ -10,32 +10,20 @@ translation_of: Web/API/XPathResult
 - {{domxref("XPathResult.booleanValue")}}
   - : readonly boolean
 
-<!---->
-
 - {{domxref("XPathResult.invalidIteratorState")}}
   - : readonly boolean
-
-<!---->
 
 - {{domxref("XPathResult.numberValue")}}
   - : readonly float
 
-<!---->
-
 - {{domxref("XPathResult.resultType")}}
   - : readonly integer (short)
-
-<!---->
 
 - {{domxref("XPathResult.singleNodeValue")}}
   - : readonly Node
 
-<!---->
-
 - {{domxref("XPathResult.snapshotLength")}}
   - : readonly Integer
-
-<!---->
 
 - {{domxref("XPathResult.stringValue")}}
   - : readonly String

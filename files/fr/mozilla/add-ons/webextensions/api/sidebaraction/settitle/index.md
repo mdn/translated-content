@@ -57,8 +57,6 @@ browser.sidebarAction.setTitle(
     - `windowId`{{optional_inline}}
       - : `integer`. Définit le titre uniquement pour la fenêtre donnée.
 
-<!---->
-
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - SI `windowId` et `tabId` sont tous les deux omis, le titre global est définit.
 

@@ -331,8 +331,6 @@ Pour résumer :
 
 - on ne peut accéder à la fonction interne seulement avec des instructions contenues dans la fonction externe,
 
-<!---->
-
 - la fonction interne est une fermeture : la fonction interne peut utiliser des arguments et des variables de la fonction externe alors que la fonction externe ne peut pas utiliser de variables et d'arguments de la fonction interne.
 
 L'exemple suivant, montre le cas de fonctions imbriquées :

@@ -30,8 +30,6 @@ translation_of: Web/CSS/color
 - color
   - : Kolor może być określony zgodnie z poniższymi zasadami:
 
-<!---->
-
 - jako heksadecymalna (szesnastkowa) wartość RGB
 - jako regularna wartość RGB lub RGBA
 - jako regularna wartość HSL lub HSLA

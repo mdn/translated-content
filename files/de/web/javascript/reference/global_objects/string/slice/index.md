@@ -14,9 +14,9 @@ Die **`slice()`** Methode extrahiert einen Teilbereich eines Strings und gibt ei
 ### Parameters
 
 - `AnfangIndex`
-  - : Der nullbasierte Index von welchem mit der Extraktion begonnen wird. Wenn dieser negativ ist, wird er als `strLength + AnfangIndex, `wobei `strLength` die länge des Strings darstellt, (bspw., wenn `AnfangIndex` `-3` ist, wird es als `strLength - 3 gewertet`). Wenn `beginIndex` größer oder gleich length des Strings ist, gibt `slice()` einen leeren String zurück.
+  - : Der nullbasierte Index von welchem mit der Extraktion begonnen wird. Wenn dieser negativ ist, wird er als `strLength + AnfangIndex,`wobei `strLength` die länge des Strings darstellt, (bspw., wenn `AnfangIndex` `-3` ist, wird es als `strLength - 3 gewertet`). Wenn `beginIndex` größer oder gleich length des Strings ist, gibt `slice()` einen leeren String zurück.
 - `EndIndex`
-  - : Optional. Der nullbasierte Index _vor_ welchem die Extraktion beendet wird. Der Charakter an diesem Index wird nicht mit einbezogen. Wenn `EndIndex `ausgelassen wird, extrahiert `slice()` bis zum Ende des Strings. Wenn `EndIndex `negativ ist, wird es wie `strLength + EndIndex` gewertet, wobei strLength sich auf die Länge des Strings bezieht (z.B.: wenn E`ndIndex` ` -3 ist, wird es gewertet wie ``strLength - 3).`
+  - : Optional. Der nullbasierte Index _vor_ welchem die Extraktion beendet wird. Der Charakter an diesem Index wird nicht mit einbezogen. Wenn `EndIndex`ausgelassen wird, extrahiert `slice()` bis zum Ende des Strings. Wenn `EndIndex`negativ ist, wird es wie `strLength + EndIndex` gewertet, wobei strLength sich auf die Länge des Strings bezieht (z.B.: wenn E`ndIndex` `-3 ist, wird es gewertet wie ``strLength - 3).`
 
 ### Return value
 
@@ -26,7 +26,7 @@ Ein neuer String, welcher die extrahierte Sektion des Strings enthält.
 
 `slice()` extrahiert den Text eines Strings und gibt einen neuen zurück. Änderungen im einen String wirken sich nicht auf den anderen String aus.
 
-`slice()` extrahiert bis, aber nicht einschließlich, ` EndIndex. ``str.slice(1, 4)` extrahiert den zweiten Charakter bis zum vierten (Character mit den Indexen 1, 2, und 3).
+`slice()` extrahiert bis, aber nicht einschließlich, `EndIndex. ``str.slice(1, 4)` extrahiert den zweiten Charakter bis zum vierten (Character mit den Indexen 1, 2, und 3).
 
 Als Beispiel, `str.slice(2, -1)` extrahiert den dritten Charakter bis zum zweiten, bis zum letzten Charakter im String.
 

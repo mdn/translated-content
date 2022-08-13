@@ -29,9 +29,9 @@ Die **`Number.isNaN()`** Methode stellt fest, ob der Übergabewert {{jsxref("NaN
 
 ## Beschreibung
 
-Weil beide Gleichheitsoperatoren, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} und {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, den Vergleich, ob {{jsxref("NaN")}} _gleich_ {{jsxref("NaN")}} ist, zu `false `auswerten, hat die Methode `Number.isNaN()` an Bedeutung gewonnen. Diese Situation ist anders als bei allen anderen Vergleichen von Werten in JavaScript.
+Weil beide Gleichheitsoperatoren, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} und {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, den Vergleich, ob {{jsxref("NaN")}} _gleich_ {{jsxref("NaN")}} ist, zu `false`auswerten, hat die Methode `Number.isNaN()` an Bedeutung gewonnen. Diese Situation ist anders als bei allen anderen Vergleichen von Werten in JavaScript.
 
-Im Vergleich zu der globalen Methode {{jsxref("isNaN", "isNaN()")}} hat die Methode `Number.isNaN()` nicht das Problem, dass Werte zu einer Nummer konvertiert werden. Das bedeutet, das Werte, die normalerweise zu {{jsxref("NaN")}} konvertiert würden, aber momentan nicht dem Wert {{jsxref("NaN")}} entsprechen, ohne Probleme der Methode übergeben werden können. Das wiederum bedeutet, dass nur Werte vom Typ {{jsxref("Number")}}, die zudem {{jsxref("NaN")}} entsprechen `true `als Resultat haben.
+Im Vergleich zu der globalen Methode {{jsxref("isNaN", "isNaN()")}} hat die Methode `Number.isNaN()` nicht das Problem, dass Werte zu einer Nummer konvertiert werden. Das bedeutet, das Werte, die normalerweise zu {{jsxref("NaN")}} konvertiert würden, aber momentan nicht dem Wert {{jsxref("NaN")}} entsprechen, ohne Probleme der Methode übergeben werden können. Das wiederum bedeutet, dass nur Werte vom Typ {{jsxref("Number")}}, die zudem {{jsxref("NaN")}} entsprechen `true`als Resultat haben.
 
 ## Beispiele
 

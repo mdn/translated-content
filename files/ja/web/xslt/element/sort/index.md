@@ -25,22 +25,14 @@ translation_of: Web/XSLT/Element/sort
 - `select`
   - : XPath 式を使用してソートするノードを指定します。
 
-<!---->
-
 - `order`
   - : ノードを "`ascending`" または "`descending`" に処理するかどうかを指定します。デフォルトは "`ascending`" です。
-
-<!---->
 
 - `case-order`
   - : 大文字か小文字かを最初に指示するかどうかを示します。許容される値は "`upper-first`" および "`lower-first`" である。
 
-<!---->
-
 - `lang`
   - : ソートで使用する言語を指定します。
-
-<!---->
 
 - `data-type`
   - : アイテムをアルファベット順または数値順に並べ替えるかどうかを定義します。 許容される値は "`text`" と "`number`" で、"`text`" がデフォルトです。

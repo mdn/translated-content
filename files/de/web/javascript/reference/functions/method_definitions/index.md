@@ -49,7 +49,7 @@ var obj = {
 };
 ```
 
-> **Note:** **Hinweis:** Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...`foo: function() {}`...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.
+> **Hinweis:** Die kurze Syntax benutzt benamte Funktionen statt anonymen Funktionen (wie in ...`foo: function() {}`...). Benamte Funktionen können sich vom Funktionskörper aus aufrufen (für anonyme Funktionen ist das unmöglich, weil sie keinen Bezeichner haben). Für mehr Details, siehe {{jsxref("Operators/function","function","#Beispiele")}}.
 
 ### Kurze Generatormethoden
 

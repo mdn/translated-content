@@ -22,18 +22,12 @@ translation_of: Web/XPath/Functions/position
 
 - コンテキストにおけるノードの位置はゼロ起点ではないことに注意してください。最初のノードの位置は 1 です。
 
-<!---->
-
 - コンテキストはパスのほかの部分によって決定します。
-
-<!---->
 
     <xsl:template match="//a[position() = 5]">
      <!-- このテンプレートは文書内のあらゆる位置にある
              5 番目の a 要素にマッチする -->
     </xsl:template>
-
-<!---->
 
     <xsl:template match="//div[@class='foo']/bar[position() = 1]">
      <!-- このテンプレートは class 属性が "foo" に等しい div 要素の子である

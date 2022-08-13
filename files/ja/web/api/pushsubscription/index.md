@@ -27,8 +27,6 @@ translation_of: Web/API/PushSubscription
 - {{domxref("PushSubscription.options")}} {{readonlyinline}}
   - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
 
-<!---->
-
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
   - : プッシュサービスに関連したサブスクリプション ID を含む {{domxref("DOMString")}}。
 

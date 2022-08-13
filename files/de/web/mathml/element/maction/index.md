@@ -17,8 +17,8 @@ Das **`<maction>`**-Element verbindet Ausdrücke oder Teile von Ausdrücken mit 
   - : Bestimmt, welche Aktion mit diesem Ausdruck verbunden werden soll. Mögliche Werte sind:\* `statusline`: Wenn der _expression_ angeklickt wird oder der Nutzer den Mauszeiger über den Ausdruck bewegt, dann wird _message_ in der Statuszeile des Browsers eingeblendet. Die Syntax ist: `<maction actiontype="statusline"> expression message </maction>.`
     - `toggle`: Wenn der Ausdruck mit der Maus angeklickt wird, dann wechselt die Darstellung zum nächsten der Ausdrücke. Jeder Klick setzt den Wert von `selection` um eins herauf, nach dem letzten Ausdruck folgt wieder der erste.
       The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
-    - `tooltip `{{ unimplemented_inline() }} : Wenn der Mauszeiger über _expression_ bewegt wird, dann wird ein Tooltip mit dem Text _message_ angezeigt.
-      Die Syntax ist:` <maction actiontype="tooltip"> expression message </maction>.`
+    - `tooltip`{{ unimplemented_inline() }} : Wenn der Mauszeiger über _expression_ bewegt wird, dann wird ein Tooltip mit dem Text _message_ angezeigt.
+      Die Syntax ist:`<maction actiontype="tooltip"> expression message </maction>.`
 - class, id, style
   - : Zur Einbindung von [CSS-Stylesheets](/de/docs/Web/CSS) und zur direkten Anwendung von CSS-Angaben.
 - href

@@ -111,7 +111,7 @@ h1, h2, h3 {color: navy;}
 
 ## Aktion: Kommentare hinzufügen und das Layout verbessern
 
-1.  Bearbeiten Sie Ihre CSS Datei und schreiben Sie die folgenden Regeln hinein (in beliebiger Reihenfolge):
+1. Bearbeiten Sie Ihre CSS Datei und schreiben Sie die folgenden Regeln hinein (in beliebiger Reihenfolge):
 
     ```css
     strong {color: red;}
@@ -121,8 +121,8 @@ h1, h2, h3 {color: navy;}
     p {color: blue;}
     ```
 
-2.  Machen Sie den Stylesheet lesbaren, in dem sie die Regeln in eine für Sie logische Reihenfolge bringen und Sie Ihrer Meinung nach sinnvolle Leerstellen und Kommentare einfügen.
-3.  Speichern Sie die Datei und aktualisieren Sie Ihren Webbrowser, um sicherzustellen, dass Ihre Änderungen keinen Einfluss auf die Anwendung des Stylesheets haben:
+2. Machen Sie den Stylesheet lesbaren, in dem sie die Regeln in eine für Sie logische Reihenfolge bringen und Sie Ihrer Meinung nach sinnvolle Leerstellen und Kommentare einfügen.
+3. Speichern Sie die Datei und aktualisieren Sie Ihren Webbrowser, um sicherzustellen, dass Ihre Änderungen keinen Einfluss auf die Anwendung des Stylesheets haben:
 
     | **C**ascading **S**tyle **S**heets |
     | ---------------------------------- |

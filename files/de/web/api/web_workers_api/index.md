@@ -35,8 +35,6 @@ Neben dedizierten Workern gibt es noch andere Typen:
 - {{domxref("WorkerLocation")}}
   - : Definiert die absolute Quelle des Skripts das im [`Worker`](/de/docs/Web/API/Worker "The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread.") ausgeführet wird.
 
-<!---->
-
 - {{domxref("SharedWorker")}}
   - : Repräsentiert einen speziellen Worker, auf den von verschiedenen Fenstern, IFrames oder sogar Workern zugegrifffen werden kann.
 - {{domxref("WorkerGlobalScope")}}

@@ -21,8 +21,6 @@ translation_of: Glossary/Number
 - JavaScript のデータ構造 : [Number](/ja/docs/Web/JavaScript/Data_structures#Number_type)
 - JavaScript のグローバルオブジェクト {{jsxref("Number")}}
 
-<!---->
-
 - [MDN 用語集](/ja/docs/Glossary)
 
   - {{Glossary("JavaScript")}}

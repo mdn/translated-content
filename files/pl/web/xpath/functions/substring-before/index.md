@@ -22,8 +22,6 @@ Funkcja `substring-before` zwraca łańcuch znaków będący resztą podanego ł
 - _`stóg siana`_
   - : Oceniany łańcuch znaków. Zostanie zwrócona część tego łańcucha.
 
-<!---->
-
 - _`igła`_
   - : Szukany podciąg. Zostanie zwrócone wszystko przed pierwszym wystąpieniem _`igła`_ w łańcuchu _`stóg siana`_.
 

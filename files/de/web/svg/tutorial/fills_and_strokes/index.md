@@ -15,7 +15,7 @@ Es gibt mehrere Möglichkeiten die Farben von Formen mit zu verändern, mit Inli
 
 ### Malen
 
-Durch das Setzen zweier Attribute beim Element, kann einfache Farbgebung durchgeführt werden: `fill` und `stroke`. Dabei setzt `fill `die Farbe innerhalb des Objektes, während `stroke` die Farbe der Linien um das Objekt herum bestimmt. Es können die gleichen Namensschemen für CSS Farben genutzt werden, welche auf bei HTML Elementen verwendet werden - also Farbnamen (z.B. _red_), RGB Werte (z.B. _rgb(255, 0, 0)_, HEX Codes, rgba und weitere).
+Durch das Setzen zweier Attribute beim Element, kann einfache Farbgebung durchgeführt werden: `fill` und `stroke`. Dabei setzt `fill`die Farbe innerhalb des Objektes, während `stroke` die Farbe der Linien um das Objekt herum bestimmt. Es können die gleichen Namensschemen für CSS Farben genutzt werden, welche auf bei HTML Elementen verwendet werden - also Farbnamen (z.B. _red_), RGB Werte (z.B. _rgb(255, 0, 0)_, HEX Codes, rgba und weitere).
 
 ```xml
  <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -105,7 +105,7 @@ CSS kann mit dem style Attribut direkt beim Element eingefügt werden:
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-oder es kann in eine spezielle Style-Sektion getan werden, welche eingebunden wird. Anstatt diesen dann in den `<head>` zu packen, wie in HTML, wird er in eine Sektion getan, welche `<defs> `heißt.` <defs> `steht für Definitionen (definitions) und ist dafür da, dass Elemente erstellt werden können, welche nicht direkt im SVG auftauchen, aber von anderen Elementen genutzt werden können.
+oder es kann in eine spezielle Style-Sektion getan werden, welche eingebunden wird. Anstatt diesen dann in den `<head>` zu packen, wie in HTML, wird er in eine Sektion getan, welche `<defs>`heißt.`<defs>`steht für Definitionen (definitions) und ist dafür da, dass Elemente erstellt werden können, welche nicht direkt im SVG auftauchen, aber von anderen Elementen genutzt werden können.
 
 ```xml
 <?xml version="1.0" standalone="no"?>

@@ -111,8 +111,6 @@ Das Element `<mo>` stellt einen Operator dar. Neben Rechenzeichen im strengen ma
 
       <math><mn mathvariant="stretched">مثال</mn></math>
 
-<!---->
-
 - maxsize
   - : Falls [`stretchy`](#stretchy) auf `true` gesetzt ist, dann gibt `maxsize` die _maximale_ Größe des Operators an. Erlaubte Werte sind `infinity` und eine [Längenangabe](/de/docs/MathML/Attributes/Values#Lengths).
 - minsize

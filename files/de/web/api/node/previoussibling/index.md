@@ -36,14 +36,14 @@ Folgendes HTML-Dokument ist gegeben:
 So kann der vorangestellte Datenknoten von `<ul>` ermittelt werden:
 
 ```js
-	// Diese Variable speichert eine Referenz auf das letzte Element, das <body> enthält, also <ul>
-	var element = document.body.children[2];
+ // Diese Variable speichert eine Referenz auf das letzte Element, das <body> enthält, also <ul>
+ var element = document.body.children[2];
 
-	// Nun ermitteln wir durch previousSibling den vorangestellten Knoten
-	var vorangestellterKnoten = element.previousSibling;
+ // Nun ermitteln wir durch previousSibling den vorangestellten Knoten
+ var vorangestellterKnoten = element.previousSibling;
 
-	// Ausgabe des Knoten-Namens
-	alert(vorangestellterKnoten.nodeName);
+ // Ausgabe des Knoten-Namens
+ alert(vorangestellterKnoten.nodeName);
 ```
 
 **Erläuterung:**

@@ -45,7 +45,7 @@ Die folgende Funktion erstellt drei Datensätze im [localStorage](/de/docs/Web/A
       localStorage.setItem('image', 'myCat.png');
     }
 
-> **Note:** **Hinweis**: Weitere Beispiele sind im [Web-Storage-Demo](https://mdn.github.io/dom-examples/web-storage/) zu finden.
+> **Hinweis:** Weitere Beispiele sind im [Web-Storage-Demo](https://mdn.github.io/dom-examples/web-storage/) zu finden.
 
 ## Spezifikationen
 
@@ -59,7 +59,7 @@ Die folgende Funktion erstellt drei Datensätze im [localStorage](/de/docs/Web/A
 
 Alle Browser haben verschiedene Kapazitäten für localStorage und sessionStorage. Hier gibt es eine [detaillierten Übersicht der Kapazitäten verschiedener Browser](http://dev-test.nemikor.com/web-storage/support-test/).
 
-> **Note:** **Hinweis:** Seit iOS 5.1, speichert Safari Mobile localStorage-Daten im Cache-Ordner, der gelegentlich durch das Betriebssystem geleert wird, insbesondere falls nur noch wenig freier Speicher zur Verfügung steht.
+> **Hinweis:** Seit iOS 5.1, speichert Safari Mobile localStorage-Daten im Cache-Ordner, der gelegentlich durch das Betriebssystem geleert wird, insbesondere falls nur noch wenig freier Speicher zur Verfügung steht.
 
 ## Siehe auch
 

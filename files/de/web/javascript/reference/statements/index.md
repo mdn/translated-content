@@ -83,8 +83,6 @@ Für eine alphabetische Auflistung, siehe Sidebar auf der linken Seite.
 - {{jsxref("Statements/label", "label")}}
   - : Hängt ein Etikett an eine Anweisung an. Auf dieses Etikett können [`break`](/de/docs/Web/JavaScript/Reference/Statements/break) (aussteigen) oder [`continue`](/de/docs/Web/JavaScript/Reference/Statements/continue) (fortsetzen) hinweisen, um den Kontrollfluss mit einer größeren Genauigkeit zu steuern.
 
-<!---->
-
 - {{deprecated_inline()}} {{jsxref("Statements/with", "with")}}
   - : Extends the scope chain for a statement.
 

@@ -94,8 +94,6 @@ setCookie.then(logCookie, logError);
   /path/to/script.js
   ```
 
-<!---->
-
 - Firefox では、`tabs.query()` を使用して URL でタブにクエリを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
 - Firefox では、`beforeunload` イベントの後に `tabs.remove()` の promise が実行されますが、Chrome では コールバック が `beforeunload` を待ちません。
 

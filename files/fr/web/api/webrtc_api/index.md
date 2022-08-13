@@ -73,8 +73,6 @@ Ces interfaces sont utilisées pour configurer, ouvrir et gérer les connexions 
 - {{domxref("RTCConfiguration")}}
   - : Utilisé pour fournir des options de configuration pour un [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection).
 
-<!---->
-
 - {{domxref("RTCSctpTransport")}}
   - : Fournit des informations qui décrivent un transport Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) et fournit aussi un moeyn d'accéder au transport Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) sur lequel les paquets SCTP pour tous les canaux de données d'un [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) sont envoyés et reçus.
 

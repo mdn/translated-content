@@ -87,8 +87,6 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : `break` や `continue` 文を使う際に参照できる識別子を含む文を用意します。
 
-<!---->
-
 - {{jsxref("Statements/with", "with")}}
   - : 文のスコープチェーンを拡張します。
 

@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 {{JSRef}}
 
-Die statische **`Atomics`\*\***`.sub()`\*\* Methode subtrahiert eine gegebenen Wert an einer gegebenen Position im Array und gibt den alten Wert zurück. Diese atomare Operation garantiert, dass keine andere Schreiboperation während der Operation durchgeführt werden kann.
+Die statische **`Atomics.sub()`** Methode subtrahiert eine gegebenen Wert an einer gegebenen Position im Array und gibt den alten Wert zurück. Diese atomare Operation garantiert, dass keine andere Schreiboperation während der Operation durchgeführt werden kann.
 
 {{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 

@@ -28,8 +28,6 @@ translation_of: MDN/Tools/KumaScript/Troubleshooting
 - マクロ呼び出し内に HTML タグがある
   - : If you apply styling to a macro, it will often break because, for example, a `</code>` tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.
 
-<!---->
-
 ## TemplateLoadingError
 
 `TemplateLoadingError` のエラーは KumaScript がページにどの [macro](/ja/docs/MDN/Contribute/Content/Macros) を取り込むか探せないときに表示されます。

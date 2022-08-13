@@ -32,7 +32,7 @@ Własność ta zwraca nazwę produktu bieżącej przeglądarki.
     }
     </script>
     <button onclick="prod();">produkt</button>
-    <div id="d"> </div>
+    <div id="d"> </div>
     // zwraca "Gecko"
 
 ### Uwagi

@@ -44,13 +44,13 @@ Faktyczna kolejność przycisków może być różna, zależnie od konfiguracji 
         btnCode = e.button;
 
         switch (btnCode){
-          case 0  : alert('Kliknięto lewym przyciskiem');
+          case 0  : alert('Kliknięto lewym przyciskiem');
                     break;
-          case 1  : alert('Kliknięto środkowym przyciskiem');
+          case 1  : alert('Kliknięto środkowym przyciskiem');
                     break;
-          case 2  : alert('Kliknięto prawym przyciskiem');
+          case 2  : alert('Kliknięto prawym przyciskiem');
                     break;
-          default : alert('Nieoczekiwany kod: ' + btnCode);
+          default : alert('Nieoczekiwany kod: ' + btnCode);
         }
       }
     }

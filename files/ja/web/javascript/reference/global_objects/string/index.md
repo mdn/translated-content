@@ -25,8 +25,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
     const string2 = 'これも文字列プリミティブ';
     const string3 = `別な文字列プリミティブ`;
 
-<!---->
-
     const string4 = new String("文字列オブジェクト");
 
 文字列プリミティブと文字列オブジェクトは、ほとんどの場合は交換して使用することができます。下記の「[文字列プリミティブと String オブジェクト](#String_primitives_and_String_objects)」を参照してください。

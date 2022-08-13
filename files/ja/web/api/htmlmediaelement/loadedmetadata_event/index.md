@@ -108,6 +108,4 @@ video.onloadedmetadata = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 
-<!---->
-
 - このイベントは Gecko の [音声 API 拡張](/ja/docs/Introducing_the_Audio_API_Extension)の一部です。

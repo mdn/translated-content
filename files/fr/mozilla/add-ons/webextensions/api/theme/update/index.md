@@ -30,8 +30,6 @@ browser.theme.update(
 - `windowId` {{optional_inline}}
   - : `integer`. L'ID d'une fenêtre. Si cela est prévu, le thème est appliqué uniquement à cette fenêtre. S'il est omis, le thème est appliqué à toutes les fenêtres.
 
-<!---->
-
 - `theme`
   - : `object`. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier
 

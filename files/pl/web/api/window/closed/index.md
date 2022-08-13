@@ -25,8 +25,6 @@ Ta własność jest tylko do odczytu.
 - `isClosed`
   - : Wartość logiczna. Możliwe wartości:
 
-<!---->
-
 - `true`: Okno zostało zamknięte.
 - `false`: Okno jest otwarte.
 
@@ -37,7 +35,7 @@ Ta własność jest tylko do odczytu.
 Ten przykład demonstruje w jaki sposób okno otworzone może zmienić adres URL okna, które je otwarło. Przed próbą zmiany adresu URL, sprawdza czy obecne okno posiada okno-rodzica stosując własność [`window.opener`](pl/DOM/window.opener) oraz czy nie zostało ono zamknięte.
 
     // Sprawdza czy okno otwierające istnieje i nie zostało zamknięte
-    if (window.opener && !window.opener.closed) {
+    if (window.opener && !window.opener.closed) {
       window.opener.location.href = "http://www.mozilla.org";
     }
 
@@ -50,7 +48,7 @@ W tym przykładzie funkcja `refreshPopupWindow()` wywołuje metodę `reload` obi
     var popupWindow = null;
 
     function refreshPopupWindow() {
-      if (popupWindow && !popupWindow.closed) {
+      if (popupWindow && !popupWindow.closed) {
         // popupWindow jest otwarte, przeładujmy je
         popupWindow.location.reload(true);
       } else {

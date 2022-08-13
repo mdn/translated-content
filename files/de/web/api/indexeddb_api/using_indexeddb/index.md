@@ -16,11 +16,11 @@ Eine Referenzdokumentation zur IndexedDB-API finden Sie im Artikel [IndexedDB](/
 
 Das von IndexedDB unterstützte Grundschema sieht folgendermaßen aus:
 
-1.  Öffne eine Datenbank und starte eine Transaktion.
-2.  Erzeuge einen Objektspeicher.
-3.  Fordere die Ausführung von Datenbankoperationen an, wie das Hinzufügen und Auslesen von Daten.
-4.  Warte auf die richtige Art von DOM-Ereignis, das auftritt, wenn die Operation beendet ist.
-5.  Verarbeite die Ergebnisse? (, welche im Anforderungsobjekt gefunden werden können).
+1. Öffne eine Datenbank und starte eine Transaktion.
+2. Erzeuge einen Objektspeicher.
+3. Fordere die Ausführung von Datenbankoperationen an, wie das Hinzufügen und Auslesen von Daten.
+4. Warte auf die richtige Art von DOM-Ereignis, das auftritt, wenn die Operation beendet ist.
+5. Verarbeite die Ergebnisse? (, welche im Anforderungsobjekt gefunden werden können).
 
 Mit dem Wissen über diese Grundkonzepte können wir uns nun konkreteren Dingen zuwenden.
 
@@ -242,7 +242,7 @@ for (var i in customerData) {
 }
 ```
 
-The `result` of a request generated from a call to `add() `is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, use the `put()` function.
+The `result` of a request generated from a call to `add()`is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, use the `put()` function.
 
 ## Daten aus der Datenbank löschen
 
@@ -303,7 +303,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The` openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+The`openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
 
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 

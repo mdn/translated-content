@@ -34,8 +34,6 @@ Les en-têtes peuvent aussi être groupés par la manière dont les {{Glossary("
 - {{httpheader("Transfer-Encoding")}}
 - {{httpheader("Upgrade")}} (voir aussi [mécanisme de mise à jour de protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism))
 
-<!---->
-
 - En-têtes de bout en bout ('End-to-end headers') :
   - : Ces entêtes doivent être transmis au destinataire final du message ; c'est-à-dire le serveur dans le cas d'une requête ou le client dans le cas d'une réponse. Les serveurs mandataires intermédiaires doivent retransmettre les en-têtes de bout en bout sans modification et doivent les mettre en cache.
 - En-têtes de point à point ('Hop-by-hop headers') :
@@ -243,17 +241,11 @@ Les {{Glossary("Client_hints", "astuces clients")}} HTTP sont enc cours de créa
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ({{Glossary("COEP")}})
   - : autorise un serveur à déclarer une règlementation sur les contenus embarqués pour un document donné.
 
-<!---->
-
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} ({{Glossary("COOP")}})
   - : interdit les autres domaines d'ouvrir ou de contrôler une fenêtre.
 
-<!---->
-
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} ({{Glossary("CORP")}})
   - : interdit les autre domaines de lire la réponse des ressources si cet en-tête leur est appliqué.
-
-<!---->
 
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : contrôle les ressources que l'agent utilisateur est autorisé à charger pour une page donnée.

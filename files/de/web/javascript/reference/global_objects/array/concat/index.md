@@ -32,7 +32,7 @@ Eine neue {{jsxref("Array")}} Instanz.
 
 `concat` generiert ein neues Array. Dieses besteht aus den Elementen des Arrays, auf dem diese Methode aufgerufen wurde, gefolgt von dem Element oder den Elementen, die als Argument übergeben wurden.
 
-Die `concat `Methode verändert nicht das `this` Objekt oder eines der übergebenen Argumente, sondern gibt eine flache Kopie (_shallow copy_) zurück, die Kopien der Elemente in den ursprünglichen Arrays enthält. Elemente der ursprünglichen Arrays werden folgendermaßen in das neue Array kopiert:
+Die `concat`Methode verändert nicht das `this` Objekt oder eines der übergebenen Argumente, sondern gibt eine flache Kopie (_shallow copy_) zurück, die Kopien der Elemente in den ursprünglichen Arrays enthält. Elemente der ursprünglichen Arrays werden folgendermaßen in das neue Array kopiert:
 
 - Objektreferenzen (und nicht das eigentliche Objekt): `concat` kopiert Objektreferenzen in das neue Array. Sowohl das ursprüngliche Array als auch das neue Array zeigen auf das gleiche Objekt. Das heißt, wenn ein referiertes Objekt verändert wird, sind diese Änderungen sowohl im neuen als auch in den ursprünglichen Arrays sichtbar.
 - Zeichenketten (Strings), Zahlen und Booleane (nicht {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}} und {{jsxref("Global_Objects/Boolean", "Boolean")}} Objekte): `concat` kopiert die Werte von Strings und Zahlen in das neue Array.

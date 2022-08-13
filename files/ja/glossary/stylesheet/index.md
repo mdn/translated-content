@@ -14,7 +14,5 @@ translation_of: Glossary/Stylesheet
 
 ### 一般知識
 
-<!---->
-
 - [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
 - ウィキペディア [スタイルシート](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%83%88)

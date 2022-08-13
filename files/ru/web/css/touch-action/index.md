@@ -78,7 +78,7 @@ Another common pattern is that of an image carousel which uses pointer events to
 }
 ```
 
-**touch-action** is also often used to completely disable the delay of **click** events caused by support for the\*\* \*\*double-tap to zoom gesture.
+**touch-action** is also often used to completely disable the delay of **click** events caused by support for the double-tap to zoom gesture.
 
 ```css
 html {

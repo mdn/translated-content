@@ -79,7 +79,7 @@ Gibt ein Array mit [`MutationRecord`s](#MutationRecord) zurück.
 
 | Property                | Description                                                                                                                                                              |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `childList`             | Wenn Kindelemente (child nodes) der Ziel-Node (inklusive Textnodes) beobachtet werden sollen, muss `childList `auf `true` gesetzt werden.                                |
+| `childList`             | Wenn Kindelemente (child nodes) der Ziel-Node (inklusive Textnodes) beobachtet werden sollen, muss `childList`auf `true` gesetzt werden.                                |
 | `attributes`            | Muss auf `true` gesetzt werden, wenn Veränderungen an Attributen der Ziel-Node (target node) beobachtet bzw. berichtet werden sollen.                                    |
 | `characterData`         | Muss `true` sein, wenn Veränderungen an den Daten der Ziel-Node beobachtet werden sollen.                                                                                |
 | `subtree`               | Auf `true` setzen, wenn nicht nur Änderungen an der Ziel-Node (target node) beobachtet werden sollen, sondern auch Veränderungen von dessen Kindelementen (child nodes). |
@@ -101,7 +101,7 @@ Als erstes Argument wird an die Callback-Funktion des Observers ein Array aus `M
 | `nextSibling`        | `{{domxref("Node")}}`         | Gibt den folgenden Sibling der hinzugefügten oder entfernten Node(s) zurück, sonst `null`.                                                                                                                                                                                                |
 | `attributeName`      | `String`                           | Gibt den lokalen Namen des geänderten Attributs zurück, sonst `null`.                                                                                                                                                                                                                     |
 | `attributeNamespace` | `String`                           | Gibt den lokalen Namespace des geänderten Attributs zurück, sonst `null`.                                                                                                                                                                                                                 |
-| `oldValue`           | `String`                           | Rückgabewert hängt vom `type `ab. Bei `attributes` wird der Wert des Attributs vor der Änderung zurückgegeben. Bei `characterData`, der Wert von Data vor der Änderung. Bei `childList` wird `null` zurückgegeben.                                                                        |
+| `oldValue`           | `String`                           | Rückgabewert hängt vom `type`ab. Bei `attributes` wird der Wert des Attributs vor der Änderung zurückgegeben. Bei `characterData`, der Wert von Data vor der Änderung. Bei `childList` wird `null` zurückgegeben.                                                                        |
 
 ## Nutzungsbeispiel
 

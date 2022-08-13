@@ -23,7 +23,7 @@ Das Erlernen von HTML, CSS und JavaScript ist nützlich, wenn Sie ein Webentwick
 
 Um das Meiste aus diesem Modul herauszuholen, wäre es eine gute Idee, entweder mindestens die ersten beiden Module der [HTML](https://developer.mozilla.org/de/Learn/HTML)-, [CSS](/de/docs/Learn/CSS)- und [JavaScript](/de/docs/Learn/JavaScript)-Themen durchzuarbeiten, oder vielleicht sogar noch besser, die relevanten Teile des Barrierefreiheit Moduls durchzuarbeiten, während Sie die entsprechenden Technologiethemen durcharbeiten.
 
-> **Note:** **Hinweis:** Wenn Sie auf einem Computer/Tablet/anderem Gerät arbeiten, auf dem sie keine eigenen Dateien erstellen können, können Sie die meisten Codebeispiele in einem Online-Codeprogramm wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/de/) ausprobieren.
+> **Hinweis:** Wenn Sie auf einem Computer/Tablet/anderem Gerät arbeiten, auf dem sie keine eigenen Dateien erstellen können, können Sie die meisten Codebeispiele in einem Online-Codeprogramm wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/de/) ausprobieren.
 
 ## Leitfäden
 

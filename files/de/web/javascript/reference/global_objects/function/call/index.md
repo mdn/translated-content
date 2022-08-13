@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 Die **`call()`** Methode ruft eine Funktion mit dem Argument this und den individuellen Parametern auf.
 
-> **Note:** **Hinweis:** Die Syntax dieser Funktion ist nahezu identisch zu {{jsxref("Function.prototype.apply", "apply()")}}. Der Unterschied ist, dass `call()` eine **Liste von Argumenten** und `apply()` einen einzelnen **Array von Argumenten** akzeptiert.
+> **Hinweis:** Die Syntax dieser Funktion ist nahezu identisch zu {{jsxref("Function.prototype.apply", "apply()")}}. Der Unterschied ist, dass `call()` eine **Liste von Argumenten** und `apply()` einen einzelnen **Array von Argumenten** akzeptiert.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 

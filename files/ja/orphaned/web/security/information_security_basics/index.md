@@ -20,8 +20,6 @@ original_slug: Web/Security/Information_Security_Basics
 - [脅威](/ja/docs/Web/Security/Information_Security_Basics/Threats)
   - : 主要な脅威の概念を簡単に案内します。
 
-<!---->
-
 - [脆弱性](/ja/docs/Web/Security/Information_Security_Basics/Vulnerabilities)
   - : 主要な分野の脆弱性を定義し、すべてのソフトウェアの脆弱性の存在を議論します。
 

@@ -50,13 +50,11 @@ Um Zugang zu einer Datenbank zu erhalten, benutze [`open()`](/de/docs/Web/API/ID
 - {{domxref("IDBEnvironment")}}
   - : Stellt den Zugang zur IndexedDB Funktionalität zur Verfügung. Es ist implementiert durch die {{domxref("window")}} und {{domxref("worker")}} Objekte.
 - {{domxref("IDBFactory")}}
-  - : Stellt den Zugang zu einer Datenbank bereit. Dies ist die durch das globale Objekt [`indexedDB `](/de/docs/Web/API/IDBEnvironment.indexedDB)bereitgestellte Schnittstelle und dadurch der Eingangspunkt für die API.
+  - : Stellt den Zugang zu einer Datenbank bereit. Dies ist die durch das globale Objekt [`indexedDB`](/de/docs/Web/API/IDBEnvironment.indexedDB)bereitgestellte Schnittstelle und dadurch der Eingangspunkt für die API.
 - {{domxref("IDBOpenDBRequest")}}
   - : Stellt eine Anfrage zum Öffnen einer Datenbank dar.
 - {{domxref("IDBDatabase")}}
   - : Repräsentiert eine Verbindung zu einer Datenbank. Es ist der einzige Weg eine Transaktion in der Datenbank zu erreichen.
-
-<!---->
 
 - {{domxref("IDBRequest")}}
   - : Eine allgemeine Schnittstelle, die Datenbankabfragen behandelt und den Zugang zu Ergebnissen bereitstellt.

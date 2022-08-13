@@ -27,8 +27,6 @@ navigator.sendBeacon(url, donnees);
 - `url`
   - : Le paramètre `url` indique l'URL résolue à laquelle les `donnees` seront transmises.
 
-<!---->
-
 - `donnees`
   - : Le paramètre `donnees` est un objet {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou {{domxref("FormData")}} qui contient les données à transmettre.
 

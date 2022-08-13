@@ -28,8 +28,6 @@ translation_of: Web/API/Window/fullScreen
 - `isInFullScreen`
   - : 論理値。取り得る値は次の通りです。
 
-<!---->
-
 - `true`: そのウィンドウは全画面モードです。
 - `false`: そのウィンドウは全画面モードではありません。
 

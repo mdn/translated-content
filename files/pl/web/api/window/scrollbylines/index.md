@@ -28,8 +28,6 @@ Przewija dokument przez daną liczbę linii.
     // przewija w dół o 5 linii w dokumencie.
     <button onclick="scrollByLines(5);">down 5 lines</button>
 
-<!---->
-
     // przewija w górę o 5 linii w dokumencie.
     <button onclick="scrollByLines(-5);">up 5 lines</button>
 

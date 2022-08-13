@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/RegExp
 
 ## Podsumowanie
 
-Obiekt wyrażeń regularnych (ang. _regular expression_) zawiera wzór regularnego wyrażenia. Posiada ono właściwości i metody, które umożliwiają znalezienie lub zmianę ciągu znaków w innym ciągu znaków.
+Obiekt wyrażeń regularnych (ang. _regular expression_) zawiera wzór regularnego wyrażenia. Posiada ono właściwości i metody, które umożliwiają znalezienie lub zmianę ciągu znaków w innym ciągu znaków.
 
 W dodatku do właściwości pojedynczego obiektu wyrażenia regularnego, które tworzysz używając funkcji konstruktora `RegExp`, predefiniowany obiekt `RegExp` posiada własności statyczne, które są ustawione, kiedy jakiekolwiek wyrażenie regularne jest użyte.
 
@@ -65,7 +65,7 @@ re = /\w+/;
 | `$`      | Oznacza koniec wejścia. Jeśli flaga wielu linii (ang. _multiline_) jest ustawiona na _prawda_ (`true`), znajduje również bezpośrednio przed znakiem końca linii.Na przykład, `/a$/` nie znajdzie "a" w "mrówkojad" ale znajdzie "a" w "mrówka".                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `*`      | Znajduje poprzedzającą pozycję 0 lub więcej razy.Na przykład, `/bu*/` znajdzie "buuuu" w "Duch krzyknął buuuu" i "b" w "Głośnik zabrzmiał basowo" ale nic w "Ptak zaśpiewał".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `+`      | Znajduje poprzedzającą pozycję 1 lub więcej razy. Równoważne do `{1,}`.Na przykład, `/r+/` dopasuje się do "r" w "cukierek" i do wszystkich "r" w "cukierrrrrrrek".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `?`      | Znajduje poprzedzającą pozycję 0 razy lub 1 raz.Na przykład `/o?ąt?/` znajdzie "oł" w "anioł" i "ąt" w "kąt".Jeśli zostanie użyte zaraz po którymś ze znaków \*, +, ?, lub {}, to wymusza przejście do trybu niezachłannego (domyślne jest dopasowanie zachłanne), czyli dopasowanie następuje do najmniejszego ciągu spełniającego wyrażenie, a nie do największego.Pytajnik używany jest także w _lookahead assertions_, opisanych pod `(?=)`, `(?!)` i `(?:)` w tej tabeli.                                                                                                                                                                                                                                            |
+| `?`      | Znajduje poprzedzającą pozycję 0 razy lub 1 raz.Na przykład `/o?ąt?/` znajdzie "oł" w "anioł" i "ąt" w "kąt".Jeśli zostanie użyte zaraz po którymś ze znaków \*, +, ?, lub {}, to wymusza przejście do trybu niezachłannego (domyślne jest dopasowanie zachłanne), czyli dopasowanie następuje do najmniejszego ciągu spełniającego wyrażenie, a nie do największego.Pytajnik używany jest także w _lookahead assertions_, opisanych pod `(?=)`, `(?!)` i `(?:)` w tej tabeli.                                                                                                                                                                                                                                            |
 | `.`      | (Kropka) znajduje jakikolwiek pojedynczy znak poza znakiem nowej linii.Na przykład, `/.a/` znajdzie "ja" i "na" w "jabłko rośnie na drzewie ale arbuz nie", ale nie znajdzie "al" i "ar".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `(x)`    | Znajduje "x" i zapamiętuje to dopasowanie. Nazywa się to "nawiasy wychwytujące" (ang. _capturing parentheses_).Na przykład, `/(foo)/` znajduje i zapamiętuje "foo" w "foo bar". Znaleziony pod-ciąg (_substring_) może być ponownie wywołany elementów tablicy wynikowej `1, ..., n` jak również z predefiniowanych własności obiektu `RegExp`, `$1, ..., $9`.                                                                                                                                                                                                                                                                                                                                                            |
 | `(?:x)`  | Znajduje "x", ale nie pamięta dopasowania. Nazywa się to "nawiasy niewychwytujące" (ang. _non-capturing parentheses_). Znaleziony podciąg (_substring_) nie może być wywołany ponownie z elementów wynikowych tablicy `1, ..., n` ani za pomocą właściwości obiektu `RegExp`, `$1, ..., $9`.                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -108,13 +108,13 @@ Oddzielny predefiniowany obiekt `RegExp` jest dostępny dla każdego okna, to je
 - {{jsxref("RegExp.prototype")}}
   - : Pozwala na dodanie własności wszystkim obiektom.
 - `RegExp.length`
-  - : Wartość parametru `RegExp.length` wynosi 2.
+  - : Wartość parametru `RegExp.length` wynosi 2.
 - {{jsxref("RegExp.lastIndex")}}
   - : Indeks, od którego rozpoczynać następne szukanie.
 
 ## Metody
 
-Globalny objekt `RegExp` nie posiada własnych metod, jednam może dziedziczyć metody z innych obiektów.
+Globalny objekt `RegExp` nie posiada własnych metod, jednam może dziedziczyć metody z innych obiektów.
 
 ## Przykłady
 
@@ -129,9 +129,9 @@ var newstr = str.replace(re, "$2, $1");
 document.write(newstr);
 ```
 
-Wyświetli "Kowalski, Jan".
+Wyświetli "Kowalski, Jan".
 
 ## Zobacz także
 
-- Rozdział w [JavaScript Guide](/pl/docs/Web/JavaScript/Guide) o [Regular Expressions](/pl/docs/Web/JavaScript/Guide/Regular_Expressions)
+- Rozdział w [JavaScript Guide](/pl/docs/Web/JavaScript/Guide) o [Regular Expressions](/pl/docs/Web/JavaScript/Guide/Regular_Expressions)
 - {{jsxref("String.prototype.match()")}}

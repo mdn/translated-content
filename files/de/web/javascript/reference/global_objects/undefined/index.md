@@ -54,7 +54,7 @@ else {
 }
 ```
 
-> **Note:** Hinweis: Der strikte Gleichheitsoperator muss statt dem Standard-Gleichheitsoperator benutzt werden, weil `x == undefined` auch prüft, ob `x` `null` ist, was bei strikter Gleichheit nicht so ist. `null` ist nicht äquivalent zu `undefined` Für Details siehe {{jsxref("Operators/Comparison_Operators", "Vergleichsoperatoren")}}
+> **Hinweis:** Der strikte Gleichheitsoperator muss statt dem Standard-Gleichheitsoperator benutzt werden, weil `x == undefined` auch prüft, ob `x` `null` ist, was bei strikter Gleichheit nicht so ist. `null` ist nicht äquivalent zu `undefined` Für Details siehe {{jsxref("Operators/Comparison_Operators", "Vergleichsoperatoren")}}
 
 ### `Typeof` Operator und `undefined`
 

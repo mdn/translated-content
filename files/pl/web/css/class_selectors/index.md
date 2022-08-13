@@ -9,7 +9,7 @@ tags:
 translation_of: Web/CSS/Class_selectors
 original_slug: Web/CSS/Selektor_klasy
 ---
-{{CSSRef("Selectors")}} Selektor klasy wyszukuje każdy element z atrybutem {{htmlattrxref("class")}} w dokumencie HTML. Atrybut {{htmlattrxref("class")}} jest zdefiniowany jako lista przedmiotów oddzielonych ze sobą spacją, jeden z nich musi zgadzać się z podaną klasą w selektorze (CSS).
+{{CSSRef("Selectors")}} Selektor klasy wyszukuje każdy element z atrybutem {{htmlattrxref("class")}} w dokumencie HTML. Atrybut {{htmlattrxref("class")}} jest zdefiniowany jako lista przedmiotów oddzielonych ze sobą spacją, jeden z nich musi zgadzać się z podaną klasą w selektorze (CSS).
 
 ## Składnia
 

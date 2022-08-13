@@ -21,7 +21,7 @@ Nachdem eine {{DOMxRef("Response")}} abgerufen wurde, stehen eine Reihe von Meth
 
 Sie können eine Anfrage und Antwort direkt erstellen, indem Sie die Konstruktoren {{DOMxRef("Request.Request", "Request()")}} und {{DOMxRef("Response.Response", "Response()")}} verwenden, was Sie aber wahrscheinlich in den seltensten Fällen tun werden. Stattdessen werden diese eher als Ergebnis anderer API-Aktionen erstellt (z. B. durch {{DOMxRef("FetchEvent.respondWith()")}} von Service Workern).
 
-> **Note:** Hinweis: Erfahren Sie mehr über die Verwendung der Funktionen der Fetch API in der [Verwendung von Fetch](/de/docs/Web/API/Fetch_API/Using_Fetch) und lernen Sie die [Grundkonzepte von Fetch](/de/docs/Web/API/Fetch_API/Basic_concepts).
+> **Hinweis:** Erfahren Sie mehr über die Verwendung der Funktionen der Fetch API in der [Verwendung von Fetch](/de/docs/Web/API/Fetch_API/Using_Fetch) und lernen Sie die [Grundkonzepte von Fetch](/de/docs/Web/API/Fetch_API/Basic_concepts).
 
 ### Einen Abruf abbrechen
 

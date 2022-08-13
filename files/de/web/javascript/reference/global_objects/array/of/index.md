@@ -9,7 +9,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-{{JSRef}}Die **`Array.of()`** Methode erstellt eine neue {{jsxref("Array")}} Instanz aus einer variablen Anzahl an Argumenten, ohne Rücksicht auf die Anzahl oder den Typ der Argumente.Der Unterschied zwischen **`Array.of()`** und dem **`Array`** Konstruktor ist die Behandlung von ganzen Zahlen als Argumente: **`Array.of(7)`** erstellt ein Array mit einem Element, 7. **`Array(7)`** hingegen erstellt ein leeres Array, bei dem die Eigenschaft `length `den Wert `7` gesetzt ist (**Bemerkung:** das impliziert ein Array mit `7` leeren Elementen, bei dem alle Elemente `undefined` sind).
+{{JSRef}}Die **`Array.of()`** Methode erstellt eine neue {{jsxref("Array")}} Instanz aus einer variablen Anzahl an Argumenten, ohne Rücksicht auf die Anzahl oder den Typ der Argumente.Der Unterschied zwischen **`Array.of()`** und dem **`Array`** Konstruktor ist die Behandlung von ganzen Zahlen als Argumente: **`Array.of(7)`** erstellt ein Array mit einem Element, 7. **`Array(7)`** hingegen erstellt ein leeres Array, bei dem die Eigenschaft `length`den Wert `7` gesetzt ist (**Bemerkung:** das impliziert ein Array mit `7` leeren Elementen, bei dem alle Elemente `undefined` sind).
 
 ```js
 Array.of(7);       // [7]
@@ -34,7 +34,7 @@ Eine neue {{jsxref("Array")}} Instanz.
 
 ## Beschreibung
 
-Diese Funktion ist Teil des EMCAScript 2015 Standards. Für mehr Information siehe [`Array.of` and `Array.from` ](https://gist.github.com/rwaldron/1074126)und [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576).
+Diese Funktion ist Teil des EMCAScript 2015 Standards. Für mehr Information siehe [`Array.of` and `Array.from`](https://gist.github.com/rwaldron/1074126)und [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576).
 
 ## Beispiele
 

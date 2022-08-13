@@ -44,8 +44,6 @@ The cascading algorithm determines how to find the value to apply for each prope
 
     \* based on [w3.org CSS3 specs](https://www.w3.org/TR/css-cascade-3/#importance)
 
-<!---->
-
 1.  In case of equality, the [specificity](/ru/docs/CSS/Specificity) of a value is considered to choose one or the other.
 
 ## CSS animations and the cascade
@@ -93,11 +91,7 @@ So three declarations are in competition:
 
     margin-left: 0
 
-<!---->
-
     margin-left: 3px
-
-<!---->
 
     margin-left: 1px
 

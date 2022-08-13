@@ -5,7 +5,7 @@ translation_of: Web/API/DOMTokenList
 ---
 {{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
 
-Die **`DOMTokenList `**Schnittstelle repräsentiert eine Sammlung von durch Leerzeichen getrennte Zeichen/ Merkmale (Tokens). Solch eine Ansammlung wird wiedergegben von {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}} oder {{domxref("HTMLAreaElement.relList")}}. Deren Index beginnt bei 0 wie bei JavaScript {{jsxref("Array")}} Objekten. `DOMTokenList` achten immer auf die Groß- und Kleinschreibung.
+Die **`DOMTokenList`**Schnittstelle repräsentiert eine Sammlung von durch Leerzeichen getrennte Zeichen/ Merkmale (Tokens). Solch eine Ansammlung wird wiedergegben von {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}} oder {{domxref("HTMLAreaElement.relList")}}. Deren Index beginnt bei 0 wie bei JavaScript {{jsxref("Array")}} Objekten. `DOMTokenList` achten immer auf die Groß- und Kleinschreibung.
 
 ## Eigenschaften
 

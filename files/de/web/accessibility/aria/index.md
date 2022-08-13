@@ -76,12 +76,8 @@ ARIA-Information von Blogs sind meist schnell veraltet. Dennoch gibt es einige h
 - Beispiele für zugängliche JS-Widget-Libraries
   - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
 
-<!---->
-
 - [Yahoo! Mail](http://mail.yahoo.com)
   - : Yahoo! hat bei Yahoo! Mail sehr gute Arbeit geleistet. Einer Web-App, die beinahe wie eine native App aussieht und sehr gut funktioniert, wie ein [Review über Yahoo! Mail](http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/) des Screen-Reader-Benutzers Marco Zehe zeigt. Sein Kommentar: "Keep up the good work!".
-
-<!---->
 
 - [Yahoo! Search](http://search.yahoo.com)
   - : Yahoo! hat hier ebenfalls sehr gute Arbeit geleistet, die Möglichkeiten mit ARIA voll ausgeschöpft und die [Technik ausführlich dokumentiert](http://ycorpblog.com/2011/03/23/searchdirect/). Bei Yahoo! Search kommt eine Kombination von ARIA-Landmarken, Live-Regionen und Widgets zum Einsatz.

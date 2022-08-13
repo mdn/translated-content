@@ -18,7 +18,7 @@ Własność CSS 'text-transform' definiuje, czy tekst w elemencie powinien być 
 
 ## Składnia
 
-    text-transform : capitalize | uppercase | lowercase| none
+    text-transform : capitalize | uppercase | lowercase| none
 
 ### Wartości
 

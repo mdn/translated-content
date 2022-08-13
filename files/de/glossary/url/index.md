@@ -8,7 +8,7 @@ translation_of: Glossary/URL
 ---
 Ein **Uniform Resource Locator** (**URL**) ist ein Text-String, der angibt, wo eine Ressource im Internet gefunden werden kann.
 
-Im Zusammenhang mit {{Glossary("HTTP")}}, werden URLs auch "Web-Adresse" oder "Link" genannt. Der Browser zeigt URLs in der Adressleiste an, zum Beispiel: `https://developer.mozilla.org `Einige Browser zeigen nur den Teil der URL nach den "//" an, das ist der {{Glossary("Domain name")}}
+Im Zusammenhang mit {{Glossary("HTTP")}}, werden URLs auch "Web-Adresse" oder "Link" genannt. Der Browser zeigt URLs in der Adressleiste an, zum Beispiel: `https://developer.mozilla.org`Einige Browser zeigen nur den Teil der URL nach den "//" an, das ist der {{Glossary("Domain name")}}
 
 URLs können auch für den Dateiaustausch ({{Glossary("FTP")}}) , E-Mails ({{Glossary("SMTP")}}), und andere Anwendungen genutzt werden.
 

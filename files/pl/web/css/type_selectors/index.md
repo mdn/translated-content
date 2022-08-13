@@ -47,7 +47,7 @@ span {
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
 | {{SpecName('CSS4 Selectors', '#type-selectors', 'Type (tag name) selector')}} | {{Spec2('CSS4 Selectors')}} | No changes         |
 | {{SpecName('CSS3 Selectors', '#type-selectors', 'type selectors')}}                 | {{Spec2('CSS3 Selectors')}} | No changes         |
-| {{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}         | {{Spec2('CSS2.1')}}             |                    |
+| {{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}         | {{Spec2('CSS2.1')}}             |                    |
 | {{SpecName('CSS1', '#basic-concepts', 'type selectors')}}                             | {{Spec2('CSS1')}}             | Initial definition |
 
 ## Kompatybilność przeglądarek

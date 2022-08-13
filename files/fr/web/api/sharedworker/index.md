@@ -30,8 +30,6 @@ _Il hérite des propriétés de son parent, {{domxref("EventTarget")}}, et impl�
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Retourne un objet {{domxref("MessagePort")}} utilisé pour communiquer et contrôler le worker partagé.
 
-<!---->
-
 ## Méthodes
 
 _Hérite des méthodes de son parent, {{domxref("EventTarget")}}, et implémente les méthodes de {{domxref("AbstractWorker")}}._

@@ -27,7 +27,7 @@ widows: initial;
 widows: unset;
 ```
 
-> **Note:** **Hinweis**: In der Typografie ist ein _Hurenkind_ die letzte Zeile eines Absatzes, die allein oben auf einer Seite angezeigt wird (der Absatz wird von einer vorherigen Seite fortgesetzt).
+> **Hinweis:** In der Typografie ist ein _Hurenkind_ die letzte Zeile eines Absatzes, die allein oben auf einer Seite angezeigt wird (der Absatz wird von einer vorherigen Seite fortgesetzt).
 
 ## Syntax
 

@@ -16,7 +16,7 @@ Die [CSS](/de/docs/Web/CSS)-Funktion **`translateY()`** positioniert ein Element
 
 ![](https://mdn.mozillademos.org/files/12125/translateY.png)
 
-> **Note:** **Hinweis:** `translateY(ty)` ist dasselbe wie `translate(0, ty)` oder `translate3d(0, ty, 0)`.
+> **Hinweis:** `translateY(ty)` ist dasselbe wie `translate(0, ty)` oder `translate3d(0, ty, 0)`.
 
 ## Syntax
 

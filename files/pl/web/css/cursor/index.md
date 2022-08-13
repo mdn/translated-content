@@ -18,11 +18,9 @@ Własność `cursor` określa kursor myszy wyświetlany, kiedy wskaźnik myszy j
 
 ## Składnia
 
-    cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | {{ Cssxref("inherit") }} ;
+    cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | {{ Cssxref("inherit") }} ;
 
-<!---->
-
-    cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
+    cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 ### Wartości
 
@@ -30,8 +28,6 @@ Własność `cursor` określa kursor myszy wyświetlany, kiedy wskaźnik myszy j
   - : URL własnego kursora. Może być podany więcej niż jeden w wypadku, kiedy niektóre typy obrazów nie są obsługiwane. Pozostałe adresy URL muszą być podane jako ostatnie. Zobacz [Użycie wartości URL dla własności cursor](pl/U%c5%bcycie_warto%c5%9bci_URL_dla_w%c5%82asno%c5%9bci_cursor) po więcej informacji.
 - \<std-cursor-name>
   - : Jedna z nazw kursorów podanych w poniższej tabeli.
-
-<!---->
 
 - `default`
   - : domyślny kursor (zazwyczaj strzałka)

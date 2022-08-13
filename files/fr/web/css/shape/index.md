@@ -29,17 +29,11 @@ rect(haut, droite, bas, gauche)
 - `haut`
   - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté haut du rectangle et le côté haut de la bordure de l'élément.
 
-<!---->
-
 - `droite`
   - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté droit du rectangle et le côté gauche de la bordure de l'élément.
 
-<!---->
-
 - `bas`
   - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté bas du rectangle et le côté haut de la bordure de l'élément.
-
-<!---->
 
 - `gauche`
   - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté gauche du rectangle et le côté gauche de la bordure de l'élément.

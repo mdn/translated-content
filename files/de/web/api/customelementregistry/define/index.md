@@ -47,7 +47,7 @@ Void.
 | `SyntaxError`       | Der angegebene Name ist kein [gültiger benutzerdefinierter Elementname](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                                                                                                                                                                                                                                                 |
 | `TypeError`         | Der referenzierte Konstruktor ist kein Konstruktor.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-> **Note:** **Hinweis**: Du wirst oftmals `NotSupportedError`s geworfen bekommen, die so erscheinen als würde `define()` fehlschlagen, aber stattdessen wahrscheinlich ein Problem mit {domxref("Element.attachShadow()")}} sind.
+> **Hinweis:** Du wirst oftmals `NotSupportedError`s geworfen bekommen, die so erscheinen als würde `define()` fehlschlagen, aber stattdessen wahrscheinlich ein Problem mit {domxref("Element.attachShadow()")}} sind.
 
 ## Beispiele
 
@@ -139,7 +139,7 @@ customElements.define('popup-info', PopUpInfo);
                                     numbers on the back of your card.">
 ```
 
-> **Note:** **Hinweis**: Konstruktoren für autonome benutzerdefinierte Elemente müssen {{domxref("HTMLElement")}} extenden.
+> **Hinweis:** Konstruktoren für autonome benutzerdefinierte Elemente müssen {{domxref("HTMLElement")}} extenden.
 
 ### Benutzerdefiniertes integriertes Element
 

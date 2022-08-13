@@ -15,22 +15,22 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 
 Bei fließenden Blöcken ([`float`](/de/docs/Web/CSS/float)) ist die Stapelreihenfolge ein wenig anders. Fließende Blöcke werden zwischen nicht positionierten Blöcken und positionierten Blöcken platziert:
 
-1.  Der Hintergrund und die Ränder des Wurzelelements
-2.  Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
-3.  Fließende Blöcke
-4.  Nachfolgende [positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Elemente, in der Reihenfolge ihres Erscheinens in der HTML-Datei
+1. Der Hintergrund und die Ränder des Wurzelelements
+2. Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
+3. Fließende Blöcke
+4. Nachfolgende [positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Elemente, in der Reihenfolge ihres Erscheinens in der HTML-Datei
 
 Wie Sie im Beispiel unten sehen können, sind Hintergrund und Rahmen des nicht positionierten Blocks (DIV #4) von fließenden Blöcken völlig unbeeinflusst, der Inhalt ist jedoch betroffen. Dies geschieht gemäß dem Standard-Float-Verhalten. Dieses Verhalten kann mit einer zusätzlichen Regel in der obigen Liste dargestellt werden:
 
-1.  Der Hintergrund und die Ränder des Wurzelelements
-2.  Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
-3.  Schwebende Blöcke
-4.  Nachfolgende [nicht-positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Inline-Elemente
-5.  Nachfolgende [positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Elemente, in der Reihenfolge ihres Erscheinens in der HTML
+1. Der Hintergrund und die Ränder des Wurzelelements
+2. Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
+3. Schwebende Blöcke
+4. Nachfolgende [nicht-positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Inline-Elemente
+5. Nachfolgende [positionierte](/de/docs/Web/CSS/position#Types_of_positioning) Elemente, in der Reihenfolge ihres Erscheinens in der HTML
 
 ![Example of stacking rules with floating boxes](/@api/deki/files/911/=Understanding_zindex_02.png)
 
-> **Note:** **Hinweis:** Wenn ein Deckkraftwert ([`opacity`](/de/docs/Web/CSS/opacity)) auf den nicht positionierten Block (DIV #4) angewendet wird, passiert etwas Seltsames: Der Hintergrund und der Rand dieses Blocks ragen über die schwebenden Blöcke und die positionierten Blöcke hinaus. Das liegt an einem besonderen Teil der Spezifikation: Das Anwenden eines Deckkraftwerts erzeugt einen neuen Stapelkontext (siehe [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
+> **Hinweis:** Wenn ein Deckkraftwert ([`opacity`](/de/docs/Web/CSS/opacity)) auf den nicht positionierten Block (DIV #4) angewendet wird, passiert etwas Seltsames: Der Hintergrund und der Rand dieses Blocks ragen über die schwebenden Blöcke und die positionierten Blöcke hinaus. Das liegt an einem besonderen Teil der Spezifikation: Das Anwenden eines Deckkraftwerts erzeugt einen neuen Stapelkontext (siehe [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
 
 ## Quellcode für das Beispiel
 

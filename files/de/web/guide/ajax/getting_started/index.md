@@ -35,7 +35,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 }
 ```
 
-> **Note:** Hinweis: Zur Veranschaulichung ist die obige Abbildung eine etwas vereinfachte Version des Codes, der für die Erstellung einer XMLHttp-Instanz zu verwenden ist. Ein realistischeres Beispiel finden Sie in Schritt 3 dieses Artikels.
+> **Hinweis:** Zur Veranschaulichung ist die obige Abbildung eine etwas vereinfachte Version des Codes, der für die Erstellung einer XMLHttp-Instanz zu verwenden ist. Ein realistischeres Beispiel finden Sie in Schritt 3 dieses Artikels.
 
 Nachdem die Anfrage abgesandt wurde, kommt eine Antwort zurück. Jetzt muss dem XMLHttp-Anfrageobjekt mitteilt werden, welche JavaScript-Funktion die Antwort behandeln wird, indem die `onreadystatechange` -Eigenschaft des Objekts gesetzt und nach der Funktion benannt wird, die aufgerufen werden soll, wenn sich der Status der Anfrage ändert, etwa so:
 
@@ -163,11 +163,11 @@ In this example:
 - Die Anfrage wird gestellt und dann (`onreadystatechange`) zur Ausführung an `alertContents()` übergeben;
 - `alertContents()` prüft, ob die Antwort empfangen wurde und OK ist, dann `alert()` den Inhalt der `test.html`-Datei.
 
-> **Note:** Hinweis: Wenn Sie eine Anfrage an ein Stück Code senden, das XML statt einer statischen HTML-Datei zurückgibt, müssen Sie die Antwortheader so einstellen, dass sie im Internet Explorer funktionieren.. Wenn Sie den Header Content-Type `Content-Type: application/xml nicht angeben`, gibt IE nach der Zeile, in der Sie versucht haben, auf ein XML-Element zuzugreifen, einen JavaScript-Fehler " Object Expected " aus.
+> **Hinweis:** Wenn Sie eine Anfrage an ein Stück Code senden, das XML statt einer statischen HTML-Datei zurückgibt, müssen Sie die Antwortheader so einstellen, dass sie im Internet Explorer funktionieren.. Wenn Sie den Header Content-Type `Content-Type: application/xml nicht angeben`, gibt IE nach der Zeile, in der Sie versucht haben, auf ein XML-Element zuzugreifen, einen JavaScript-Fehler " Object Expected " aus.
 
 > **Note:** **Hinweis 2**: Wenn Sie den Header `Cache-Control: no-cache` nicht setzen, wird der Browser die Antwort zwischenspeichern und die Anfrage nie erneut senden, was das Debugging erschwert. Sie können auch einen immer unterschiedlichen GET-Parameter hinzufügen, wie einen Zeitstempel oder eine Zufallszahl (siehe [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
-> **Note:** **Hinweis 3**: Wenn die `httpRequest`-Variable global verwendet wird, können sich konkurrierende Aufrufe von `makeRequest()` gegenseitig überschreiben und eine Wettlaufsituation auslösen. Wird der `httpRequest `lokal ain einer [closure](/en/JavaScript/Guide/Closures) Umgebung mit einer AJAX-Function deklariert, so wird dies vermieden.
+> **Note:** **Hinweis 3**: Wenn die `httpRequest`-Variable global verwendet wird, können sich konkurrierende Aufrufe von `makeRequest()` gegenseitig überschreiben und eine Wettlaufsituation auslösen. Wird der `httpRequest`lokal ain einer [closure](/en/JavaScript/Guide/Closures) Umgebung mit einer AJAX-Function deklariert, so wird dies vermieden.
 
 Im Falle eines Kommunikationsfehlers (z. B. bei einem Serverausfall) wird beim Zugriff auf den Antwortstatus in der Methode `onreadystatechange` eine Ausnahmemeldung zurückgegeben. Um dieses Problem zu beheben, könnten Sie Ihre `if...then`-Anweisung in a `try...catch` packen:
 
@@ -217,7 +217,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 
-Dieser Code nimmt das von `responseXML` übergebene `XMLDocument`-Objekt und verwendet DOM-Methoden, um auf einige der im XML-Dokument enthaltenen Daten zuzugreifen. Sie können [here](http://www.w3clubs.com/mozdev/test.xml) das `test.xml` and[ here](http://www.w3clubs.com/mozdev/httprequest_test_xml.html) das aktualisierte test script aufrufen.
+Dieser Code nimmt das von `responseXML` übergebene `XMLDocument`-Objekt und verwendet DOM-Methoden, um auf einige der im XML-Dokument enthaltenen Daten zuzugreifen. Sie können [here](http://www.w3clubs.com/mozdev/test.xml) das `test.xml` and[here](http://www.w3clubs.com/mozdev/httprequest_test_xml.html) das aktualisierte test script aufrufen.
 
 ## Schritt 5 – Arbeiten mit Daten
 

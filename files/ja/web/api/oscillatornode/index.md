@@ -29,12 +29,8 @@ translation_of: Web/API/OscillatorNode
 - {{domxref("OscillatorNode.frequency")}}
   - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} であり、振動数・周波数をヘルツ (hertz、記号：Hz)で表わしたものです。(AudioParam は読み取り専用ですが、この値は設定できます。)初期値は 440 HZ (標準 A(ラ) 音) です。
 
-<!---->
-
 - {{domxref("OscillatorNode.detune")}}
   - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} であり、振動の離調をセントで表わしたものです。(AudioParam は読み取り専用ですが、この値は設定できます。)初期値は 0 です。
-
-<!---->
 
 - {{domxref("OscillatorNode.type")}}
   - : 再生する波形の種類を指定する文字列です。いくつかの標準値の中から 1 つ、または、{{domxref("PeriodicWave")}} を使用した、カスタム波形を設定することができます。設定する波の種類により、それぞれに合わせたトーンが生成されます。初期値は sine (サイン波) です。

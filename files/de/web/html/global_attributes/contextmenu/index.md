@@ -13,7 +13,7 @@ original_slug: Web/HTML/Globale_Attribute/kontextmenu
 
 > **Warning:** Das [contextmenu Attrbut ist obsolet](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) und die Unterstützung wird aus allen Browsern entfernt werden.
 
-Das [globale Attribut ](/de/docs/Web/HTML/Global_attributes)**`contextmenu`** ist die [**id**](/de/docs/Web/HTML/Global_attributes/id) von einem {{HTMLElement("menu")}}, welches als Kontextmenü benutzt werden soll.
+Das [globale Attribut](/de/docs/Web/HTML/Global_attributes)**`contextmenu`** ist die [**id**](/de/docs/Web/HTML/Global_attributes/id) von einem {{HTMLElement("menu")}}, welches als Kontextmenü benutzt werden soll.
 
 Ein _Kontextmenü_ ist ein Menü, dass nach einer Interaktion des Benutzers erscheint. HTML5 erlaubt nun, dieses Menü anzupassen. Hier sind ein paar Beispiele, inklusive verschachtelter Menüs.
 

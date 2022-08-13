@@ -122,8 +122,6 @@ _変更なし。_
 - [`sdk/ui`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/ui) ボタンにバッジを付加できます ({{bug(994280)}})。
 - どこででも sdk モジュールにアクセスできるグローバル関数 `require` を実装しました ({{bug(1070927)}})。使用方法は以下のとおりです:
 
-<!---->
-
     var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
 
 #### 詳細

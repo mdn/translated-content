@@ -33,6 +33,6 @@ Vor einiger Zeit kehrte JavaScript zur Server-seitigen Programmierung zurück, d
 
 ### Technisches
 
-- [The latest ECMAScript standard](http://www.ecma-international.org/publications/standards/Ecma-262.htm)  (englisch)
+- [The latest ECMAScript standard](http://www.ecma-international.org/publications/standards/Ecma-262.htm)  (englisch)
 - The [JavaScript-Referenz](/de/docs/Web/JavaScript/reference) bei MDN
-- [The _Eloquent JavaScript_ book](http://eloquentjavascript.net/)  (englisch)
+- [The _Eloquent JavaScript_ book](http://eloquentjavascript.net/)  (englisch)

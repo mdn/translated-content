@@ -50,8 +50,6 @@ Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
     - `windowId`{{optional_inline}}
       - : `integer`. Définir le texte du badge pour la fenêtre donnée.
 
-<!---->
-
 - si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
 - si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
 

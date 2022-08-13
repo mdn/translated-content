@@ -23,8 +23,6 @@ Przemieszcza skupienie zaznaczenia do podanego miejsca. Kotwica zaznaczenia nie 
 - _`parentNode`_
   - : Węzeł, w którym skupienie zmieni swoje położenie.
 
-<!---->
-
 - _`offset`_
   - : Pozycja od początku węzła tekstowego
     _`parentNode`_

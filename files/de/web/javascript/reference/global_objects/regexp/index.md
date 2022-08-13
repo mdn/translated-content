@@ -623,11 +623,11 @@ var re = new RegExp("\\w+");
 
 ### Fußnoten
 
-1.  Equivalent to:
+1. Equivalent to:
 
     `[\t\n\v\f\r \u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000]`
 
-2.  Equivalent to:
+2. Equivalent to:
 
     `[^\t\n\v\f\r \u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000]`
 
@@ -656,7 +656,7 @@ Das globale `RegExp` Objekt hat keine eigenen Methoden. Es erbt allerdings manch
 
 ### Beispiel: Anwendung regulären Ausdrucks zur Datenformatänderung
 
-Das folgende Script nutzt die [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace "JavaScript/Reference/Global_Objects/String/replace") Methode und nutzt die vererbte [String](/de/docs/JavaScript/Reference/Global_Objects/String "JavaScript/Reference/Global_Objects/String") Instanz `(re)` um als Rückgabewert eine Übereinstimmung des Namens `(str) `in dem Format _erster, letzter_ und im Format _letzter_, _erster_ zu finden. In dem zu ersetzenden Text nutzt das Script $1 und $2 um das Ergebnis der übereinstimmenden Treffer in der Klammer als Muster des regulären Ausdrucks.
+Das folgende Script nutzt die [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace "JavaScript/Reference/Global_Objects/String/replace") Methode und nutzt die vererbte [String](/de/docs/JavaScript/Reference/Global_Objects/String "JavaScript/Reference/Global_Objects/String") Instanz `(re)` um als Rückgabewert eine Übereinstimmung des Namens `(str)`in dem Format _erster, letzter_ und im Format _letzter_, _erster_ zu finden. In dem zu ersetzenden Text nutzt das Script $1 und $2 um das Ergebnis der übereinstimmenden Treffer in der Klammer als Muster des regulären Ausdrucks.
 
 ```js
 var re = /(\w+)\s(\w+)/;

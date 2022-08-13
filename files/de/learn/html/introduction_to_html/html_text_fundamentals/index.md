@@ -626,7 +626,7 @@ Hier ist die beste Faustregel dafür: es ist wahrscheinlich in Ordnung `<b>`, `<
 - {{HTMLElement('b')}} wird benutzt, um die traditionelle Rolle von fettem Text anzuzeigen: Stichwörter, Produktnamen, wichtige Sätze...
 - {{HTMLElement('u')}} wird benutzt, um die traditionelle Rolle von unterstrichenem Text anzuzeigen: richtige Namen, Rechtschreibfehler...
 
-> **Note:** **Hinweis:**Eine Warnung zu unterstrichenem Text: **Unterstrichener Text wird stark mit Hyperlinks assoziiert.** Deswegen ist es auf Webseiten besser, nur Links zu unterstreichen. Benutzen Sie das `<u>`-Element, wo es passt, aber passen Sie möglicherweise mit CSS an, damit der Text anders aussieht, als die Links auf Ihrer Webseite. Unten können Sie sehen, wie das gemacht werden kann.
+> **Hinweis:**Eine Warnung zu unterstrichenem Text: **Unterstrichener Text wird stark mit Hyperlinks assoziiert.** Deswegen ist es auf Webseiten besser, nur Links zu unterstreichen. Benutzen Sie das `<u>`-Element, wo es passt, aber passen Sie möglicherweise mit CSS an, damit der Text anders aussieht, als die Links auf Ihrer Webseite. Unten können Sie sehen, wie das gemacht werden kann.
 
 ```html
 <!-- Wissenschaftliche Namen -->

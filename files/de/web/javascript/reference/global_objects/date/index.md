@@ -34,42 +34,26 @@ The source for this interactive example is stored in a GitHub repository. If you
 - `value`
   - : Ganze Zahl, die die Anzahl der Millisekunden seit dem 1. Januar 1970 00:00:00 UTC (Unixzeit) repräsentiert.
 
-<!---->
-
 - `dateString`
   - : String der ein Datum repräsentiert. Der String muss in einem Format vorliegen, der von der {{jsxref("Date.parse()")}} Methode eingelesen werden kann ([IETF-compliant RFC 2822 Zeitstempel](http://tools.ietf.org/html/rfc2822#page-14) und auch eine [Version von ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).**Anmerkung:** Von dem Einlesen eines Zeitstempel-Strings durch den `Date` Konstruktor (und `Date.parse`, denn diese Funktion ist äquivalent) wird stark abgeraten, wegen der Unterschiede in den Browsern und Inkonsistenzen. Die Unterstützung für RFC 2822 formatierte Strings ist nur eine Konvention. Unterstützung für ISO 8601 formatierte Strings unterscheidet sich in den Strings mit nur einem Datum (z. B. "1970-01-01") werden nur als UTC behandelt und nicht als lokales Daten.
-
-<!---->
 
 - `year`
   - : Ganze Zahl, die die Jahre repräsentiert. Werte von 0 bis 99 werden zu den Jahren 1900 bis 1999 umgewandelt. Siehe das [Beispiel unten](#zwei_ziffrige_zahlen_für_die_jahre_1900_-_1999).
 
-<!---->
-
 - `monthIndex`
   - : Ganze Zahl, die den Monat repräsentiert. Die Zahl beginnt bei 0 für Januar und endet bei 11 für Dezember.
-
-<!---->
 
 - `day`
   - : Ganze Zahl, die den Tag des Monats repräsentiert.
 
-<!---->
-
 - `hour`
   - : Ganze Zahl, die die Stunde des Tages repräsentiert.
-
-<!---->
 
 - `minute`
   - : Ganze Zahl, die die Minuten einer Stunde repräsentiert.
 
-<!---->
-
 - `second`
   - : Ganze Zahl, die die Sekunden einer Minute repräsentiert.
-
-<!---->
 
 - `millisecond`
   - : Ganze Zahl, die die Millisekunden einer Sekunde repräsentiert.
@@ -146,8 +130,6 @@ Durch die unterschiedlichen Längen von Tagen (wegen der Sommer/Winter Zeitumste
     var end = Date.now();
     var elapsed = end - start; // elapsed time in milliseconds
 
-<!---->
-
     // Einsatz Eingebauter Methoden
     var start = new Date();
 
@@ -156,16 +138,14 @@ Durch die unterschiedlichen Längen von Tagen (wegen der Sommer/Winter Zeitumste
     var end = new Date();
     var elapsed = end.getTime() - start.getTime(); // elapsed time in milliseconds
 
-<!---->
-
     // Testen einer funktion und Rückgabe des Rückgabewertes
     function printElapsedTime (fTest) {
-    	var nStartTime = Date.now(),
+     var nStartTime = Date.now(),
                 vReturn = fTest(),
                 nEndTime = Date.now();
 
-    	alert("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
-    	return vReturn;
+     alert("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
+     return vReturn;
     }
 
     yourFunctionReturn = printElapsedTime(yourFunction);

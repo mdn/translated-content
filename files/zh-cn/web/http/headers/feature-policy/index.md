@@ -24,8 +24,6 @@ Feature-Policy: <directive> <allowlist>
 - `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，
 - `'none'`: 从最上层到包含的内容都禁止本特性。 \<origin(s)>: 在特定的源中允许，源 URL 以空格分割。
 
-<!---->
-
 - `*`: 本特性默认在最上层和包含的内容中（iframes）允许。
 - `'self'`: 本特性默认在最上层允许，而包含的内容中（iframes）使用源地址相同设定。也就是说本特性在 iframe 中不允许跨域访问。
 - `'none'`: 本特性默认在最上层和包含的内容中（iframes）都禁止。

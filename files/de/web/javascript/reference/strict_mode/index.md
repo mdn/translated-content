@@ -15,9 +15,9 @@ Der in ECMAScript 5 eingeführte strikte Modus von JavaScript ist eine Möglichk
 
 Der strikte Modus nimmt einige Änderungen an der normalen JavaScript-Semantik vor:
 
-1.  Bisher still ignorierte Fehler führen zum Skriptabbruch.
-2.  Behebt Fehler, die Optimierungen durch JavaScript-Interpreter erschweren oder verhindern. Code im strikten Modus kann manchmal schneller ausgeführt werden als identischer Code im nicht-strikten Modus.
-3.  Verbietet Syntax, die in zukünftigen Versionen von ECMAScript wahrscheinlich definiert wird.
+1. Bisher still ignorierte Fehler führen zum Skriptabbruch.
+2. Behebt Fehler, die Optimierungen durch JavaScript-Interpreter erschweren oder verhindern. Code im strikten Modus kann manchmal schneller ausgeführt werden als identischer Code im nicht-strikten Modus.
+3. Verbietet Syntax, die in zukünftigen Versionen von ECMAScript wahrscheinlich definiert wird.
 
 Siehe [Wechsel zum Strict Mode](/de/docs/Web/JavaScript/Reference/Strict_mode/wechsel_zum_strict_mode), falls Ihr Code im eingeschränken Modus von JavaScript funktionieren soll.
 

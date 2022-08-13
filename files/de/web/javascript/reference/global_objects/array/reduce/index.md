@@ -53,7 +53,7 @@ Beim ersten Aufruf von `callback` sind die Werte von `accumulator` und `currentV
 - Wenn `initialValue` beim Aufruf von `reduce()` angegeben wird, ist `accumulator` gleich dem `initialValue` und `currentValue` ist gleich dem ersten Wert im Array.
 - Wenn kein `initialValue` angegeben wird, ist `accumulator` gleich mit dem ersten Wert im Array und `currentValue` wird gleich dem zweiten Wert im Array sein.
 
-> **Note:** **Hinweis:** Wenn `initialValue` nicht angegeben wird, wird `reduce()` die `callback`-Funktion startend beim Index 1 aufrufen, der erste Index wird übersprungen. Wenn `initialValue` angegeben ist, wird bei Index 0 begonnen.
+> **Hinweis:** Wenn `initialValue` nicht angegeben wird, wird `reduce()` die `callback`-Funktion startend beim Index 1 aufrufen, der erste Index wird übersprungen. Wenn `initialValue` angegeben ist, wird bei Index 0 begonnen.
 
 Wenn das Array leer ist und kein `initialValue` angegeben ist, wird ein {{jsxref("TypeError")}} erzeugt. Wenn das Array nur ein Element hat (die Position ist egal) und kein `initialValue` angegeben ist oder wenn `initialValue` angegeben ist und das Array leer ist, wird der einzelne Wert sofort zurückgegeben, ohne `callback` aufzurufen.
 

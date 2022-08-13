@@ -41,11 +41,11 @@ Damit ein XML Dokument valide ist, müssen einige semantische Regeln erfüllt se
 
 Wie in HTML, gibt es in XML sogenannte _Entities_, um spezielle, reservierte Zeichen (wie das Größer-als-Zeichen, welches für Tags benutzt wird) zu verwenden. Es gibt fünf nennenswerte, die man wissen sollte:
 
-    &lt; 	< 	      Kleiner-als-Zeichen
-    &gt; 	> 	      Größer-als-Zeichen
-    &amp; 	& 	      Ampersand (Und Zeichen).
-    &quot; 	" 	      Anführungszeichen.
-    &apos; 	' 	      Apostroph.
+    &lt;  <        Kleiner-als-Zeichen
+    &gt;  >        Größer-als-Zeichen
+    &amp;  &        Ampersand (Und Zeichen).
+    &quot;  "        Anführungszeichen.
+    &apos;  '        Apostroph.
 
 Da nur fünf _Entities_ deklariert sind, können weitere mittels der [Dokumenttyp-Definition](/de/DTD "de/DTD") hinzugefügt werden.
 

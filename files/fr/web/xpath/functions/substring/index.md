@@ -21,12 +21,8 @@ substring( chaîne , début [, longueur] )
 - `chaîne`
   - : La chaîne à évaluer.
 
-<!---->
-
 - `début`
   - : La position dans la `chaîne` où commence la sous-chaîne.
-
-<!---->
 
 - `longueur` (optionnel)
   - : La longueur de la sous-chaîne à extraire. S'il est omis, la chaîne retournée contiendra tous les caractères depuis la position `début` jusqu'à la fin de la `chaîne`.

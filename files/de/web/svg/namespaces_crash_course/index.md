@@ -83,7 +83,7 @@ Es ist nützlich zu wissen, dass Namensraumpräfixe auch als _Tag_-Namen genutzt
       </body>
     </html>
 
-Weil hier das Namensraumpräfix verwendet wurde für das `<svg:svg> `Tag und sein Kind `<svg:circle>`, war es nicht nötig, den Standardnamensraum erneut zu deklarieren. Allgemein ist es jedoch besser, den Standardnamensraum erneut auszuweisen als eine Menge Tags derart mit Präfixen zu versehen.
+Weil hier das Namensraumpräfix verwendet wurde für das `<svg:svg>`Tag und sein Kind `<svg:circle>`, war es nicht nötig, den Standardnamensraum erneut zu deklarieren. Allgemein ist es jedoch besser, den Standardnamensraum erneut auszuweisen als eine Menge Tags derart mit Präfixen zu versehen.
 
 ### Arbeiten mit Namensraum-XML
 

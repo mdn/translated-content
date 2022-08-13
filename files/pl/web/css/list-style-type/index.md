@@ -18,7 +18,7 @@ translation_of: Web/CSS/list-style-type
 
 ## Składnia
 
-     list-style-type:  <std-list-style-name> | {{ Cssxref("none") }} | {{ Cssxref("inherit") }} ;
+     list-style-type:  <std-list-style-name> | {{ Cssxref("none") }} | {{ Cssxref("inherit") }} ;
 
 ### Wartości
 

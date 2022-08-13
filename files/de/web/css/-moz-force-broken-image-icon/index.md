@@ -14,7 +14,7 @@ translation_of: Web/CSS/-moz-force-broken-image-icon
 
 `-moz-force-broken-image-icon` ist eine erweiterte CSS Eigenschaft. Der Wert `1` erzwingt ein Symbol für nicht ladbare Bilder auch wenn das Bild ein {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}} Attribut hat. Wenn der Wert `0` verwendet wird, wird sich das Bild wie gewohnt verhalten und nur das `alt` Attribut anzeigen.
 
-> **Note:** **Hinweis:** Sogar wenn der Wert auf `1` gesetzt wird, wird das `alt` Attribut immer noch angezeigt. Mehr Informationen sind weiter unten verfügbar.
+> **Hinweis:** Sogar wenn der Wert auf `1` gesetzt wird, wird das `alt` Attribut immer noch angezeigt. Mehr Informationen sind weiter unten verfügbar.
 
 {{cssinfo}}
 
@@ -43,7 +43,7 @@ img {
 
 {{EmbedLiveSample('Beispiele','125','125','/files/4619/broken%20image%20link.png')}}
 
-> **Note:** **Hinweis:** Sofern das Bild keine definierte Höhe und Breite hat, wird das Symbol für nicht ladbare Bilder nicht angezeigt, aber das `alt` Attribut wird ebenfalls versteckt, wenn `-moz-force-broken-image-icon` auf `1` gesetzt wird.
+> **Hinweis:** Sofern das Bild keine definierte Höhe und Breite hat, wird das Symbol für nicht ladbare Bilder nicht angezeigt, aber das `alt` Attribut wird ebenfalls versteckt, wenn `-moz-force-broken-image-icon` auf `1` gesetzt wird.
 
 ## Hinweise
 

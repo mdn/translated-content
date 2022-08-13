@@ -80,7 +80,7 @@ In diesem Fall wollen wir keine allgemeinen Leute - wir wollen Lehrer und Schül
 
 Das ist wirklich sehr nützlich - Lehrer und Schüler haben viele gemeinsame Merkmale wie Name, Geschlecht und Alter, so dass es praktisch ist, diese Merkmale nur einmal zu definieren. Sie können dasselbe Merkmal auch separat in verschiedenen Klassen definieren, da jede Definition dieses Merkmals in einem anderen Namensraum liegt. Die Begrüßung eines Schülers könnte z.B. die Form "Yo, ich bin `firstName`" haben (z.B. Yo, ich bin Sam), während ein Lehrer etwas formelleres verwenden könnte, wie z.B. "Hallo, mein Name ist `prefix` `lastName` und ich unterrichte `Subject`". (z.B. Hallo, ich heiße Mr. Griffiths und unterrichte Chemie).
 
-> **Note:** **Hinweis:** Das Fachwort für die Fähigkeit, mehrere Objekttypen mit der gleichen Funktionalität zu implementieren, nennt man Polymorphismus. Nur für den Fall, dass Sie sich das fragen.
+> **Hinweis:** Das Fachwort für die Fähigkeit, mehrere Objekttypen mit der gleichen Funktionalität zu implementieren, nennt man Polymorphismus. Nur für den Fall, dass Sie sich das fragen.
 
 Sie können nun Objektinstanzen aus Ihren Unterklassen erzeugen. Beispiel:
 
@@ -96,7 +96,7 @@ Lassen Sie uns nun das Erstellen von Klassen über Konstruktoren und das Erstell
 
 ### Ein einfaches Beispiel
 
-1.  Fangen wir damit an, wie man eine Person mit einer normalen Funktion definieren könnte. Fügen Sie diese Funktion innerhalb des Skript-Elements der oojs.html hinzu:
+1. Fangen wir damit an, wie man eine Person mit einer normalen Funktion definieren könnte. Fügen Sie diese Funktion innerhalb des Skript-Elements der oojs.html hinzu:
 
     ```js
     function createNewPerson(name) {
@@ -109,7 +109,7 @@ Lassen Sie uns nun das Erstellen von Klassen über Konstruktoren und das Erstell
     }
     ```
 
-2.  Sie können nun eine neue Person erstellen, indem Sie diese Funktion aufrufen - bitte geben Sie die folgenden Zeilen in der JavaScript-Konsole Ihres Browsers ein:
+2. Sie können nun eine neue Person erstellen, indem Sie diese Funktion aufrufen - bitte geben Sie die folgenden Zeilen in der JavaScript-Konsole Ihres Browsers ein:
 
     ```js
     var salva = createNewPerson('Salva');
@@ -119,7 +119,7 @@ Lassen Sie uns nun das Erstellen von Klassen über Konstruktoren und das Erstell
 
     Das funktioniert zwar ganz gut, aber es ist ein bisschen umständlich. Wenn wir wissen, dass wir ein Objekt erstellen wollen, warum müssen wir dann explizit ein neues leeres Objekt erstellen und es zurückgeben? Glücklicherweise bietet uns JavaScript eine praktische Vereinfachung in Form von Konstruktorfunktionen - nutzen wir jetzt eine!
 
-3.  Ersetzen Sie die vorher implementierte Funktion durch folgende:
+3. Ersetzen Sie die vorher implementierte Funktion durch folgende:
 
     ```js
     function Person(name) {
@@ -132,18 +132,18 @@ Lassen Sie uns nun das Erstellen von Klassen über Konstruktoren und das Erstell
 
 Die Konstruktorfunktion ist die JavaScript-Version einer Klasse. Sie werden feststellen, dass sie alle Eigenschaften hat, die man in einer Funktion erwartet, obwohl sie weder etwas zurückgibt oder explizit ein Objekt erzeugt - sie definiert im Grunde nur Eigenschaften und Methoden. Sie werden sehen, dass dieses Schlüsselwort auch hier verwendet wird - es besagt im Grunde, dass immer dann, wenn eine dieser Objektinstanzen erzeugt wird, die Eigenschaft `name` des Objekts gleich dem Namenswert ist, der an den Konstruktoraufruf übergeben wird, und die Methode `greeting()` wird ebenfalls den Namenswert verwenden, der an den Konstruktoraufruf übergeben wird.
 
-> **Note:** **Hinweis:** Der Name einer Konstruktorfunktion beginnt normalerweise mit einem Großbuchstaben - diese Konvention wird verwendet, um Konstruktorfunktionen im Code leichter erkennbar zu machen.
+> **Hinweis:** Der Name einer Konstruktorfunktion beginnt normalerweise mit einem Großbuchstaben - diese Konvention wird verwendet, um Konstruktorfunktionen im Code leichter erkennbar zu machen.
 
 Wie rufen wir also einen Konstruktor auf, um einige Objekte zu erstellen?
 
-1.  Fügen Sie die folgenden Zeilen unterhalb Ihres vorherigen Codezusatzes ein:
+1. Fügen Sie die folgenden Zeilen unterhalb Ihres vorherigen Codezusatzes ein:
 
     ```js
     var person1 = new Person('Bob');
     var person2 = new Person('Sarah');
     ```
 
-2.  Speichern Sie Ihren Code, laden Sie ihn im Browser neu und geben Sie die folgenden Zeilen in Ihre JS-Konsole ein:
+2. Speichern Sie Ihren Code, laden Sie ihn im Browser neu und geben Sie die folgenden Zeilen in Ihre JS-Konsole ein:
 
     ```js
     person1.name
@@ -196,7 +196,7 @@ Beachten Sie, dass wir beim Aufruf unserer Konstruktor-Funktion jedes Mal `greet
 
 Das Beispiel, das wir oben betrachtet haben, war nur ein einfaches Beispiel, um den Einstieg zu erleichtern. Lassen Sie uns nun weitermachen und unsere finale Konstruktor-Funktion `Person()` erstellen.
 
-1.  Entfernen Sie den bisher eingefügten Code und fügen Sie nachfolgenden Konstruktor als Ersatz hinzu - dies ist im Prinzip genau dasselbe, wie das einfache Beispiel, nur etwas komplexer:
+1. Entfernen Sie den bisher eingefügten Code und fügen Sie nachfolgenden Konstruktor als Ersatz hinzu - dies ist im Prinzip genau dasselbe, wie das einfache Beispiel, nur etwas komplexer:
 
     ```js
     function Person(first, last, age, gender, interests) {
@@ -216,7 +216,7 @@ Das Beispiel, das wir oben betrachtet haben, war nur ein einfaches Beispiel, um 
     }
     ```
 
-2.  Fügen Sie nun unter dem Code von oben folgende Zeile ein, um eine Objektinstanz zu erzeugen:
+2. Fügen Sie nun unter dem Code von oben folgende Zeile ein, um eine Objektinstanz zu erzeugen:
 
     ```js
     var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
@@ -231,7 +231,7 @@ person1.bio()
 // etc.
 ```
 
-> **Note:** **Hinweis:** Wenn Sie Probleme haben, dies zum Laufen zu bringen, vergleichen Sie Ihren Code mit unserer Version - siehe [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) ([hier](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html) können Sie auch sehen, wie es live läuft).
+> **Hinweis:** Wenn Sie Probleme haben, dies zum Laufen zu bringen, vergleichen Sie Ihren Code mit unserer Version - siehe [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) ([hier](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html) können Sie auch sehen, wie es live läuft).
 
 ### Weitere Übungen
 
@@ -239,7 +239,7 @@ Versuchen Sie zunächst, ein paar weitere eigene Objekte hinzuzufügen, und vers
 
 Außerdem gibt es einige Probleme mit unserer `bio()`-Methode - die Ausgabe enthält immer das Pronomen "He", egal ob Ihre `Person` weiblich ist oder einem anderen Geschlecht angehört. Und die `bio()`-Methode wird nur zwei Interessen enthalten, auch wenn mehr im Interessen-Array aufgelistet sind. Finden Sie heraus, wie man das in der Klassendefinition (Konstruktor) beheben kann? Sie können jeden beliebigen Code in einen Konstruktor einfügen (Sie werden wahrscheinlich ein paar Bedingungen und eine Schleife benötigen). Überlegen Sie sich, wie die Sätze je nach Geschlecht und je nachdem, ob die Anzahl der aufgelisteten Interessen 1, 2 oder mehr als 2 beträgt, unterschiedlich strukturiert werden sollten.
 
-> **Note:** **Hinweis:** Wenn Sie nicht weiterkommen, haben wir eine Antwort bzw. Lösung in unserem [GitHub-Repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) bereitgestellt ([Sehen Sie es sich hier an](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) - versuchen Sie bitte aber erst einmal, die Lösung selbst zu schreiben!
+> **Hinweis:** Wenn Sie nicht weiterkommen, haben wir eine Antwort bzw. Lösung in unserem [GitHub-Repo](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) bereitgestellt ([Sehen Sie es sich hier an](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) - versuchen Sie bitte aber erst einmal, die Lösung selbst zu schreiben!
 
 ## Andere Möglichkeiten, Objektinstanzen zu erzeugen
 
@@ -251,13 +251,13 @@ Diese machen Sinn, aber es gibt auch andere Wege - wir möchten Sie mit diesen v
 
 Zuerst können Sie den `Object()` Konstruktor verwenden, um ein neues Objekt zu erstellen. Ja, sogar generische Objekte haben einen Konstruktor, der ein leeres Objekt erzeugt.
 
-1.  Geben Sie dies in die JavaScript-Konsole Ihres Browsers ein:
+1. Geben Sie dies in die JavaScript-Konsole Ihres Browsers ein:
 
     ```js
     var person1 = new Object();
     ```
 
-2.  Diese speichert ein leeres Objekt in der Variable `person1`. Sie können dann diesem Objekt Eigenschaften und Methoden mit Punkt- oder Klammer-Notation hinzufügen, wie gewünscht. Versuchen Sie diese Beispiele in Ihrer Konsole:
+2. Diese speichert ein leeres Objekt in der Variable `person1`. Sie können dann diesem Objekt Eigenschaften und Methoden mit Punkt- oder Klammer-Notation hinzufügen, wie gewünscht. Versuchen Sie diese Beispiele in Ihrer Konsole:
 
     ```js
     person1.name = 'Chris';
@@ -267,7 +267,7 @@ Zuerst können Sie den `Object()` Konstruktor verwenden, um ein neues Objekt zu 
     };
     ```
 
-3.  Sie können auch ein Objektliteral als Parameter an den `Object()` Konstruktor übergeben, um es mit Eigenschaften/Methoden vorzufüllen. Versuchen Sie folgendes in Ihrer JS-Konsole:
+3. Sie können auch ein Objektliteral als Parameter an den `Object()` Konstruktor übergeben, um es mit Eigenschaften/Methoden vorzufüllen. Versuchen Sie folgendes in Ihrer JS-Konsole:
 
     ```js
     var person1 = new Object({
@@ -285,13 +285,13 @@ Konstruktoren können Ihnen helfen, Ihren Code zu ordnen - Sie können Konstrukt
 
 Einige Leute ziehen es jedoch vor, Objektinstanzen zu erstellen, ohne vorher Konstruktoren zu erstellen, insbesondere wenn sie nur wenige Instanzen eines Objekts erstellen müssen. JavaScript hat eine eingebaute Methode namens `create()`, die es Ihnen einfach ermöglicht, dies zu tun. Mit ihr können Sie ein neues Objekt auf Basis eines beliebigen vorhandenen Objekts erstellen.
 
-1.  Wenn Ihre fertige Übung aus den vorherigen Abschnitten im Browser geladen ist, versuchen Sie folgendes in Ihrer JavaScript-Konsole:
+1. Wenn Ihre fertige Übung aus den vorherigen Abschnitten im Browser geladen ist, versuchen Sie folgendes in Ihrer JavaScript-Konsole:
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  Nun geben Sie bitte folgendes in die JavaScript-Konsole ein:
+2. Nun geben Sie bitte folgendes in die JavaScript-Konsole ein:
 
     ```js
     person2.name

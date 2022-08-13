@@ -7,7 +7,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 Eines der Hauptmerkmale des Web Components Standards ist die Möglichkeit, benutzerdefinierte Elemente (custom elements) zu erstellen, die ihre Funktionalität auf einer HTML-Seite kapseln, anstatt sich mit einem langen, verschachtelten Stapel von Elementen begnügen zu müssen, die zusammen eine benutzerdefinierte Seitenfunktion bereitstellen. Dieser Artikel stellt die Verwendung von benutzerdefinierten HTML-Elementen vor.
 
-> **Note:** **Hinweis**: Benutzerdefinierte Elemente werden standardmäßig in Chrome und Opera unterstützt. Firefox ist sehr weit in der Entwicklung; sie sind derzeit verfügbar, wenn Sie die Einstellungen `dom.webcomponents.shadowdom.enabled `und `dom.webcomponents.customelements.enabled` auf `true` setzen. Die Implementierung von Firefox soll in der Version 60/61 standardmäßig aktiviert werden. Safari unterstützt bisher nur autonome benutzerdefinierte Elemente, und Edge arbeitet auch an einer Implementierung.
+> **Hinweis:** Benutzerdefinierte Elemente werden standardmäßig in Chrome und Opera unterstützt. Firefox ist sehr weit in der Entwicklung; sie sind derzeit verfügbar, wenn Sie die Einstellungen `dom.webcomponents.shadowdom.enabled`und `dom.webcomponents.customelements.enabled` auf `true` setzen. Die Implementierung von Firefox soll in der Version 60/61 standardmäßig aktiviert werden. Safari unterstützt bisher nur autonome benutzerdefinierte Elemente, und Edge arbeitet auch an einer Implementierung.
 
 ## High-Level-Ansicht
 
@@ -42,7 +42,7 @@ class WordCount extends HTMLParagraphElement {
 }
 ```
 
-Dies ist nur ein einfaches Beispiel, aber es gibt noch mehr, was Sie hier tun können. Es ist möglich, spezifische Lifecycle-Callbacks innerhalb des Konstruktors zu definieren, die an bestimmten Stellen im Lebenszyklus des Elements ablaufen. Zum Beispiel wird `connectedCallback `aufgerufen, wenn das benutzerdefinierte Element zum ersten Mal mit dem DOM des Dokuments verbunden wird, während `attributeChangedCallback` aufgerufen wird, wenn eines der Attribute des benutzerdefinierten Elements hinzugefügt, entfernt oder geändert wird.
+Dies ist nur ein einfaches Beispiel, aber es gibt noch mehr, was Sie hier tun können. Es ist möglich, spezifische Lifecycle-Callbacks innerhalb des Konstruktors zu definieren, die an bestimmten Stellen im Lebenszyklus des Elements ablaufen. Zum Beispiel wird `connectedCallback`aufgerufen, wenn das benutzerdefinierte Element zum ersten Mal mit dem DOM des Dokuments verbunden wird, während `attributeChangedCallback` aufgerufen wird, wenn eines der Attribute des benutzerdefinierten Elements hinzugefügt, entfernt oder geändert wird.
 
 Im untenstehenden Kapitel [Using the lifecycle callbacks](#using_the_lifecycle_callbacks) wirst du mehr über Lifecycle-Callbacks erfahren.
 
@@ -140,7 +140,7 @@ In unserem HTML sieht das nun so aus:
   back of your card.">
 ```
 
-> **Note:** Die vollständige [JavaScript Quelle ](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js).
+> **Note:** Die vollständige [JavaScript Quelle](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js).
 
 ### Customized built-in elements
 

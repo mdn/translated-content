@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/hr
 ---
 ### Podsumowanie
 
-Element **`<hr>`** reprezentuje zmianę tematu pomiędzy akapitami, np. zmiana sceny w powieści lub przejście do innego tematu w sekcji. W poprzednich wersjach HTML znacznik **`<hr>`** reprezentował poziomą linię. Niektóre przeglądarki nadal mogą wyświetlać go jako wypukłą lub wklęsłą linię, jednak ma on ściśle zdefiniowane semantyczne znaczenie i nie służy względom prezentacyjnym.
+Element **`<hr>`** reprezentuje zmianę tematu pomiędzy akapitami, np. zmiana sceny w powieści lub przejście do innego tematu w sekcji. W poprzednich wersjach HTML znacznik **`<hr>`** reprezentował poziomą linię. Niektóre przeglądarki nadal mogą wyświetlać go jako wypukłą lub wklęsłą linię, jednak ma on ściśle zdefiniowane semantyczne znaczenie i nie służy względom prezentacyjnym.
 
 ### Atrybuty
 

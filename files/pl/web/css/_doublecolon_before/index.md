@@ -31,8 +31,6 @@ Zobacz przykład
       </body>
     </html>
 
-<!---->
-
     p:before {
       content: 'Tekst przed akapitem';
       display: block;

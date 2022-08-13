@@ -29,7 +29,7 @@ Sprawdza, czy jakikolwiek element tablicy zalicza test zaimplementowany przez do
 
 ## Opis
 
-`some` wykonuje funkcję `callback`) na każdym elemencie tablicy, aż znajdzie taki, dla którego `callback` zwróci prawdę (`true`). Jeżeli taki element zostanie znaleziony, `some` zakończy swoje działanie i zwróci prawdę (`true`), w przeciwnym przypadku (gdy `callback` zwróci fałsz dla każdego z elementów) `some` zwróci `false`. Tablice nie są traktowane jako "zwarte" - czyli `callback` zostanie wywołany dla każdego indeksu tablicy dla którego wartość została przypisana. Nie zostanie wywołany dla indeksów, które zostały usunięte, bądź dla których nigdy nie została przypisana wartość.
+`some` wykonuje funkcję `callback`) na każdym elemencie tablicy, aż znajdzie taki, dla którego `callback` zwróci prawdę (`true`). Jeżeli taki element zostanie znaleziony, `some` zakończy swoje działanie i zwróci prawdę (`true`), w przeciwnym przypadku (gdy `callback` zwróci fałsz dla każdego z elementów) `some` zwróci `false`. Tablice nie są traktowane jako "zwarte" - czyli `callback` zostanie wywołany dla każdego indeksu tablicy dla którego wartość została przypisana. Nie zostanie wywołany dla indeksów, które zostały usunięte, bądź dla których nigdy nie została przypisana wartość.
 
 `callback` wywoływana jest z trzema argumentami: wartością elementu, jego indeksem i przemierzaną tablicą.
 

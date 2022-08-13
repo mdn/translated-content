@@ -15,7 +15,7 @@ Das **`FormData`**-Interface ermöglicht das einfache Erstellen eines Objektes b
 
 Ein Objekt, dass FormData implementiert, kann direkt in den {{jsxref("Statements/for...of", "for...of")}} Strukturen benutzt werden, statt {{domxref('FormData.entries()', 'entries()')}} zu verwenden: `for (var p of myFormData)` ist identisch zu `for (var p of myFormData.entries())`.
 
-> **Note:** **Hinweis**: Dieses Feature ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
+> **Hinweis:** Dieses Feature ist in [Web Workers](/de/docs/Web/API/Web_Workers_API) verfügbar.
 
 ## Konstruktor
 

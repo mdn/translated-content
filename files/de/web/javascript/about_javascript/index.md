@@ -45,8 +45,6 @@ Eine weiteres Einsatzgebiet für JavaScript ist der Einsatz als serverseitige Sk
 - [SpiderMonkey](/de/docs/Mozilla/Projects/SpiderMonkey "en-US/docs/SpiderMonkey")
   - : Informationen spezifisch zu Mozillas Implementierung von JavaScript der C/C++ Umgebung SpiderMonkey. Beinhaltet auch Informationen über das einbetten in Applikationen.
 
-<!---->
-
 - [Rhino](/de/docs/Rhino "en-US/docs/Rhino")
   - : Informationen spezifisch zu Mozillas Implementierung von JavaScript in der Java Umgebungen Rhino.
 - [Sprachquellen](/de/docs/Web/JavaScript/Language_Resources "en-US/docs/JavaScript_Language_Resources")

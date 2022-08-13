@@ -24,8 +24,6 @@ Die **`getUint32()`** Methode gibt eine ganze vorzeichenlose 8-Bit Zahl (Unsigne
 - byteOffset
   - : Das Offset, in Bytes, vom Start der View, an dem die Daten gelesen werden sollen.
 
-<!---->
-
 - littleEndian
   - : {{optional_inline}} Gibt an, ob die 32 Bit Zahl als {{Glossary("Endianness", "little- oder big-Endian")}} abgespeichert wird. Wenn false oder undefined angegewen ist, wird ein big-Endian gelesen.
 

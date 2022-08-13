@@ -51,8 +51,6 @@ Each interface will have its own page too, describing the purpose of the interfa
 - Slug: _AudioContext_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext](/ja/docs/Web/API/AudioContext)
 
-<!---->
-
 - Title: _AudioNode_
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioNode](/ja/docs/Web/API/AudioNode)
@@ -84,8 +82,6 @@ Examples:
 - Slug: _state_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/state](/ja/docs/Web/API/AudioContext/state)
 
-<!---->
-
 - Title: _AudioContext.onstatechange_
 - Slug: _onstatechange_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/onstatechange](/ja/docs/Web/API/AudioContext/onstatechange)
@@ -101,8 +97,6 @@ Examples:
 - Title: _AudioContext.close()_
 - Slug: _close_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close](/ja/docs/Web/API/AudioContext/close)
-
-<!---->
 
 - Title: _AudioContext.createGain()_
 - Slug: _createGain_

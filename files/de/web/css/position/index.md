@@ -28,7 +28,7 @@ Ein _absolut positioniertes Element_ ist ein Element für das `absolute` oder `f
 - static
   - : Standardwert. Das Element ist im normalen Fluss. Die Eigenschaften `top`, `right`, `bottom` oder `left` haben keine Auswirkungen.
 - relative
-  - : Das Element wird vom normalen Fluss aus verschoben und hat keinen Einfluss auf andere Elemente, da an der ursprünglichen Position Platz gelassen wird. Bei `table-*-group`,` table-row`,` table-column`,` table-cell`, und` table-caption `Elementen ist kein Effekt definiert.
+  - : Das Element wird vom normalen Fluss aus verschoben und hat keinen Einfluss auf andere Elemente, da an der ursprünglichen Position Platz gelassen wird. Bei `table-*-group`,`table-row`,`table-column`,`table-cell`, und`table-caption`Elementen ist kein Effekt definiert.
 - absolute
   - : Das Element wird aus dem normalen Fluss gelöst und unabhängig verschoben. Dabei können andere Elemente verdeckt werden. Diese verhalten sich so, als ob das Element nicht vorhanden wäre und lassen keinen Platz für das Element.
 - sticky {{Experimental_inline}}

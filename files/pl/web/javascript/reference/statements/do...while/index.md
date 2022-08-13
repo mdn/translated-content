@@ -40,8 +40,6 @@ Wykonuje zadane polecenia dopóki warunek jest spełniony. Polecenia wykonywane 
 - `polecenia`
   - : Blok poleceń, który jest wykonywany przynajmniej raz. i jest wykonywany ponownie tak długo, jak `warunek` jest spełniony.
 
-<!---->
-
 - `warunek`
   - : Obliczany przy każdym przejściu pętli. Jeśli `warunek` ma wartość _prawda_, polecenia w bloku go poprzedzającym są wykonywane ponownie. Kiedy `warunek` osiągnie wartość _fałsz_, sterowanie przepływa do następnego polecenia po pętli `do...while`
 

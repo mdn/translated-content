@@ -11,4 +11,4 @@ original_slug: Web/CSS/Aural
 
 Eine [Mediengruppe](/de/docs/Web/CSS/@media#Mediengruppen) definiert durch die [CSS](/de/docs/Web/CSS) Standards.
 
-> **Note:** **Hinweis:** Diese Mediengruppe wurde in Gecko nie vollständig implementiert und wurde in {{Gecko("6.0")}} entfernt.
+> **Hinweis:** Diese Mediengruppe wurde in Gecko nie vollständig implementiert und wurde in {{Gecko("6.0")}} entfernt.

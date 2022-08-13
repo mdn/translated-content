@@ -37,7 +37,7 @@ Das **`Promise`**-Interface repräsentiert einen Proxy für einen Wert, der nich
 
 Ein Promise mit dem Status _pending_ kann entweder zu _fulfilled_ mit Wert oder zu einem _rejected_ mit Grund werden. Wenn einer dieser Fälle eintritt, werden die assoziierten _Handler_, die über die _then_-Methode gequeued wurde, aufgerufen. Ist ein Promise bereits in fullfilled oder rejected und wird erst dann ein entsprechender _Handler_ hinzugefügt, dann wird dieser Handler aufgerufen. Es gibt somit keine _Race Conditions_ zwischen der Ausführung der asynchronen Aktion und dem Hinzufügen des _Handlers_.
 
-Da die Methoden` Promise.prototype.then` und `Promise.prototype.catch` Promises zurückgeben, können sie aneinander gereiht werden (Komposition).
+Da die Methoden`Promise.prototype.then` und `Promise.prototype.catch` Promises zurückgeben, können sie aneinander gereiht werden (Komposition).
 
 ![](https://mdn.mozillademos.org/files/8633/promises.png)
 
@@ -55,12 +55,8 @@ Da die Methoden` Promise.prototype.then` und `Promise.prototype.catch` Promises 
 - {{jsxref("Promise.race", "Promise.race(iterable)")}}
   - : Gibt einen `Promise` zurück, der aufgelöst oder verworfen wird, sobald einer der Promises in dem `iterable`-Argument aufgelöst oder verworfen wurde, und den Wert oder den Grund dieses Promise enthält.
 
-<!---->
-
 - {{jsxref("Promise.reject", "Promise.reject(reason)")}}
   - : Gibt einen `Promise` zurück, der mit dem angegeben Grund (`reason`) verworfen wird.
-
-<!---->
 
 - {{jsxref("Promise.resolve", "Promise.resolve(value)")}}
   - : Gibt einen `Promise` zurück, der mit `value` aufgelöst wird. Falls der Wert ein _thenable_ ist (Objekt besitzt eine `then`-Methode), folgt der zurückgegebene `Promise` dem _thenable_ und übernimmt den Status. Andernfalls wird der zurückgegebene `Promise` auf _fulfilled_ gesetzt.
@@ -81,7 +77,7 @@ Da die Methoden` Promise.prototype.then` und `Promise.prototype.catch` Promises 
 
 \<div id="log">\</div>
 
-Dieses kleine Beispiel zeigt den Mechanismus eines `Promise`. Die Methode `testPromise() `wird jedes Mal aufgerufen, wenn der {{HTMLElement("button")}} geklickt wurde. Es wird ein Promise erstellt, der mithilfe von `window.setTimeout` nach einer zufällig gewählten Zeit (1-3 s) zu `'result'` aufgelöst wird.
+Dieses kleine Beispiel zeigt den Mechanismus eines `Promise`. Die Methode `testPromise()`wird jedes Mal aufgerufen, wenn der {{HTMLElement("button")}} geklickt wurde. Es wird ein Promise erstellt, der mithilfe von `window.setTimeout` nach einer zufällig gewählten Zeit (1-3 s) zu `'result'` aufgelöst wird.
 
 Die Ausführung der Promises wird mit einem _fulfill_-Callback unter Verwendung von `p1.then` gelogt. Durch ein paar Logeinträge wird gezeigt, wie der synchrone Teil der Methode von der asynchronen Vollendung des Promises abgekoppelt ist.
 
@@ -139,7 +135,7 @@ Dieses Beispiel wird ausgeführt, wenn der Button geklickt wird. Man benötigt e
 
 ### Laden eines Bildes mit XHR
 
-Ein weiteres, einfaches Beispiel für die Verwendung von Promises und `XMLHTTPRequest,` um ein Bild zu laden, ist in dem MDN GitHub [promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html) Repository. [Hier ](https://mdn.github.io/js-examples/promises-test/)kannst du es in Aktion sehen. Jeder Schritt ist kommentiert und erlaubt die den Promises und der XHR-Architektur nachzuvollziehen.
+Ein weiteres, einfaches Beispiel für die Verwendung von Promises und `XMLHTTPRequest,` um ein Bild zu laden, ist in dem MDN GitHub [promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html) Repository. [Hier](https://mdn.github.io/js-examples/promises-test/)kannst du es in Aktion sehen. Jeder Schritt ist kommentiert und erlaubt die den Promises und der XHR-Architektur nachzuvollziehen.
 
 ## Spezifikationen
 

@@ -19,8 +19,6 @@ translation_of: Web/XPath/Functions/substring
 - _`string`_
   - : 評価する文字列。
 
-<!---->
-
 - _`start`_
   - : *`string`*内での部分文字列の開始位置。
 - _`length`_(省略可)

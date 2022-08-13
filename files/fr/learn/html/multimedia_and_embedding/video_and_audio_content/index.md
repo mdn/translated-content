@@ -289,5 +289,3 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - [Ajouter des images vectorielles à une page Web](/fr/Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_%C3%A0_une_page_web)
 - [Ajouter des images "responsive" à une page Web](/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web)
 - [Mozilla splash page](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-
-<!---->

@@ -20,7 +20,7 @@ Ein {{jsxref("Promise")}}, das mit dem angegeben Grund abgelehnt wurde
 
 ## Beschreibung
 
-Die statische `Promise.reject` Funktion gibt ein `Promise` zurück, das abgelehnt wurde. Für Debugging zwecke, sowie gezielte Fehlerverarbeitung ist es empfehlenswert, als `reason` eine `instanceof `{{jsxref("Error")}}. zu verwenden.
+Die statische `Promise.reject` Funktion gibt ein `Promise` zurück, das abgelehnt wurde. Für Debugging zwecke, sowie gezielte Fehlerverarbeitung ist es empfehlenswert, als `reason` eine `instanceof`{{jsxref("Error")}}. zu verwenden.
 
 ## Beispiele
 

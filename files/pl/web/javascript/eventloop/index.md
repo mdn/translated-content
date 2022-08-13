@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/EventLoop
 ---
 {{JsSidebar("Advanced")}}
 
-Model współbieżności w JavaScript opiera się o "event loop". Model ten jest lekko odmienny od spotykanego innych językach programowania takich jak C lub Java.
+Model współbieżności w JavaScript opiera się o "event loop". Model ten jest lekko odmienny od spotykanego innych językach programowania takich jak C lub Java.
 
 ## Koncepcje środowiska wykonawczego
 
@@ -33,7 +33,7 @@ function bar(x) {
 console.log(bar(7)); //zwraca 42
 ```
 
-Podczas wywoływania funkcji `bar`, tworzona jest pierwsza klatka (ang. frame), która zawiera argumenty funkcji `bar` oraz jej lokalne zmienne. Gdy `bar` wywołuje `foo`, tworzona jest kolejna klatka, która trafia na wierzch stosu. Druga klatka zawiera argumenty funkcji  `foo` dla której została utworzona oraz jej lokalne zmienne. Gdy funkcja `foo` zwraca wynik działania, klatka znajdująca się na wierzchu stosu jest usuwana (pozostawiając wyłącznie klatkę wywołującą funkcję `bar`). Gdy w kolejnym kroku funkcja `bar` zwróci wynik, stos zostaje opróżniony.
+Podczas wywoływania funkcji `bar`, tworzona jest pierwsza klatka (ang. frame), która zawiera argumenty funkcji `bar` oraz jej lokalne zmienne. Gdy `bar` wywołuje `foo`, tworzona jest kolejna klatka, która trafia na wierzch stosu. Druga klatka zawiera argumenty funkcji  `foo` dla której została utworzona oraz jej lokalne zmienne. Gdy funkcja `foo` zwraca wynik działania, klatka znajdująca się na wierzchu stosu jest usuwana (pozostawiając wyłącznie klatkę wywołującą funkcję `bar`). Gdy w kolejnym kroku funkcja `bar` zwróci wynik, stos zostaje opróżniony.
 
 ### Heap
 
@@ -69,7 +69,7 @@ Wadą tego modelu jest to, że jeśli wykonanie wiadomości trwa zbyt długo, ap
 
 W przeglądarkach internetowych wiadomości są dodawane przy każdym wystąpieniu eventu z dołączonym nasłuchiwaniem. Jeżeli brak nasłuchiwania event jest gubiony. Zatem przykładowo kliknięcie na element z nasłuchiwaniem doda nową wiadomość.
 
-Funkcja [`setTimeout`](/en-US/docs/Web/API/WindowTimers.setTimeout "/en-US/docs/window.setTimeout") przyjmuje dwa argumenty: wiadomość do dodania do kolejki oraz czas (argument opcjonalny, domyślnie 0). Podany czas reprezentuje minimalne opóźnienie, po którym wiadomość trafi do kolejki. Jeżeli w kolejce nie ma innej wiadomości, zostaje ona przetworzona natychmiast po upływie danego czasu opóźnienia. Jeżeli jednak w kolejce znajdują się wiadomości, wiadomość [`setTimeout`](/en-US/docs/Web/API/WindowTimers.setTimeout "/en-US/docs/window.setTimeout") odczeka aż inne wiadomości zostaną przetworzone. Z tego powodu drugi argument tej funkcji określa czas minimalny,  nie gwarantowany.
+Funkcja [`setTimeout`](/en-US/docs/Web/API/WindowTimers.setTimeout "/en-US/docs/window.setTimeout") przyjmuje dwa argumenty: wiadomość do dodania do kolejki oraz czas (argument opcjonalny, domyślnie 0). Podany czas reprezentuje minimalne opóźnienie, po którym wiadomość trafi do kolejki. Jeżeli w kolejce nie ma innej wiadomości, zostaje ona przetworzona natychmiast po upływie danego czasu opóźnienia. Jeżeli jednak w kolejce znajdują się wiadomości, wiadomość [`setTimeout`](/en-US/docs/Web/API/WindowTimers.setTimeout "/en-US/docs/window.setTimeout") odczeka aż inne wiadomości zostaną przetworzone. Z tego powodu drugi argument tej funkcji określa czas minimalny,  nie gwarantowany.
 
 Poniższy przykład ilustruje tę ideę (`setTimeout` nie zostanie uruchomiony bezpośrednio po upływie określonego czasu):
 

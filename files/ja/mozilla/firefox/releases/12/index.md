@@ -88,8 +88,6 @@ Mozilla は人気のアドオン [Firebug](http://getfirebug.com/ "Firebug Firef
 
 - [`nsISupports` プロキシ](/ja/docs/nsISupports_proxies "nsISupports_proxies") が削除されました。代わりに [runnable を使ってください](/ja/docs/XPCOM/Making_cross-thread_calls_using_runnables "XPCOM/Making_cross-thread_calls_using_runnables")。
 
-<!---->
-
 - Firefox 11 changed the behavior of [`Components.utils.getWeakReference()`](/ja/docs/Components.utils.getWeakReference "Components.utils.getWeakReference") to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.
 
 ### XPConnect

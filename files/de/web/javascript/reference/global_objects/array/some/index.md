@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 Die Methode **`some()`** überprüft ob mindestens ein Element des Arrays den als Funktion übergebenen Kriterien entspricht.
 
-> **Note:** **Hinweis:** Diese Methode gibt `false` für jede Bedingung auf einem leeren Array zurück.
+> **Hinweis:** Diese Methode gibt `false` für jede Bedingung auf einem leeren Array zurück.
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
@@ -44,7 +44,7 @@ Die Methode **`some()`** überprüft ob mindestens ein Element des Arrays den al
 
 `callback` wird mit drei Argumenten aufgerufen: Dem Wert des Elementes, dem Index des Elementes und dem zugrundeliegenden `Array`.
 
-WIrd ein `thisArg` Parameter an die `some()` Methode übergeben, wird dieser als `this` bei der `callback` Funtion benutzt. Andernfalls wird der Wert {{jsxref("undefined")}} als `this` benutzt. Der tatsächliche Wert von `this` wird entsprechend der [generellen Regeln zur Belegung des this Schlüsselwortes innerhalb von Funktionen ](/de/docs/Web/JavaScript/Reference/Operators/this)gesetzt.
+WIrd ein `thisArg` Parameter an die `some()` Methode übergeben, wird dieser als `this` bei der `callback` Funtion benutzt. Andernfalls wird der Wert {{jsxref("undefined")}} als `this` benutzt. Der tatsächliche Wert von `this` wird entsprechend der [generellen Regeln zur Belegung des this Schlüsselwortes innerhalb von Funktionen](/de/docs/Web/JavaScript/Reference/Operators/this)gesetzt.
 
 `some()` verändert nicht das Array auf dem die Methode aufgerufen wurde.
 

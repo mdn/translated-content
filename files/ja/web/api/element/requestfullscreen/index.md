@@ -42,8 +42,6 @@ translation_of: Web/API/Element/requestFullScreen
 - 要素が HTML, SVG, Math の要素ではない
 - 全画面が許可されていない (例えば、ユーザーの操作ではない) 又は対応していない。
 
-<!---->
-
 - `{{jsxref("TypeError")}}`
   - : 以下の状況の一つが発生する可能性あります。
 

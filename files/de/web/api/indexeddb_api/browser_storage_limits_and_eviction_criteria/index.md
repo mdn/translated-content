@@ -95,5 +95,5 @@ Die letzte Zugriffszeit für jede Quelle wird im temporären Speicher vorgehalte
 
 ## Siehe auch
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), von[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Eine detaillierte Analyse client-seitiger Speicherung in mobilen Browsern.
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), von[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Ein Blick auf die Quota Management API in Chrome/Blink (welche auch Opera berücksichtigen sollte).
+- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), von[Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Eine detaillierte Analyse client-seitiger Speicherung in mobilen Browsern.
+- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), von[Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Ein Blick auf die Quota Management API in Chrome/Blink (welche auch Opera berücksichtigen sollte).

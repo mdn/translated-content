@@ -17,10 +17,10 @@ The aim here is to provide you with a toolkit for writing competent CSS and help
 
 Before starting this module, you should have:
 
-1.  Basic familiarity with using computers, and using the Web passively (i.e. just looking at it, consuming the content.)
-2.  A basic work environment set up as detailed in [Installing basic software](/de/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/de/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Basic familiarity with HTML, as discussed in the [Introduction to HTML](/de/docs/Learn/HTML/Introduction_to_HTML) module.
-4.  An understanding of the basics of CSS, as discussed in the [CSS first steps](/de/docs/Learn/CSS/First_steps) module.
+1. Basic familiarity with using computers, and using the Web passively (i.e. just looking at it, consuming the content.)
+2. A basic work environment set up as detailed in [Installing basic software](/de/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/de/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/de/docs/Learn/HTML/Introduction_to_HTML) module.
+4. An understanding of the basics of CSS, as discussed in the [CSS first steps](/de/docs/Learn/CSS/First_steps) module.
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](http://jsbin.com/) or [Glitch](https://glitch.com/).
 

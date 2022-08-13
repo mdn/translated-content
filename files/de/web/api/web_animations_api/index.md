@@ -13,8 +13,6 @@ Die Web-Animations-API bietet Browsern und Entwicklern eine gemeinsame Sprache, 
 
 ## Webanimationsschnittstellen
 
-<!---->
-
 - {{domxref("Animation")}}
   - : Bietet Steuerelemente zur Wiedergabe und eine Zeitleiste für einen Animationsknoten. Kann ein mit dem {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} Konstruktor erstelltes Object aufnehmen.
 - {{domxref("KeyframeEffect")}}
@@ -38,13 +36,12 @@ Die Web-Animations-API fügt {{domxref ("document")}} und {{domxref ("element")}
   - : Das `DocumentTimeline` Objekt stellt die Standardzeitleiste des Dokuments dar.
 - {{domxref("document.getAnimations()")}}
   - : Gibt ein Array von {{domxref ("Animation")}} - Objekten zurück, die derzeit für Elemente im `document` wirksam sind.
+
 - ### Erweiterungen der `Element` Schnittstelle
 
   {{domxref("Element.animate()")}}
 
   - : Eine Shortcut-Methode zum Erstellen und Wiedergeben einer Animation für ein Element. Sie gibt die erstellte {{domxref ("Animation")}} Objektinstanz zurück.
-
-<!---->
 
 ## Read-Only-Schnittstellen für Web-Animationen
 

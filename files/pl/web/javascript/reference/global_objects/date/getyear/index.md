@@ -29,11 +29,7 @@ Metoda `getYear` zwraca rok minus 1900; tak więc:
 
 - Dla lat późniejszych lub równych 2000, wartość zwracana przez `getYear` wynosi 100 lub więcej. Przykładowo, dla roku 2026, `getYear` zwraca 126.
 
-<!---->
-
 - Dla lat pomiędzy i włącznie z latami 1900 i 1999, wartość zwracana przez `getYear` zawiera się w przedziale od 0 do 99. Na przykład, jeśli mamy rok 1976, `getYear` zwraca 76.
-
-<!---->
 
 - Dla lat wcześniejszych niż 1900, wartość zwracana przez `getYear` jest mniejsza niż 0. Na przykład, dla roku 1800, `getYear` zwraca -100.
 
@@ -46,8 +42,6 @@ Aby obsłużyć lata zarówno przed jak i po roku 2000, należy zamiast `getYear
 Metoda `getYear()` zwraca rok w formacie 2-cyfrowym lub 4-cyfrowym:
 
 - Dla roczników pomiędzy i włącznie z latami 1900 i 1999, wartość zwracana przez `getYear` jest to rok minus 1900. Na przykład, dla roku 1976 będzie to liczba 76.
-
-<!---->
 
 - Dla roczników niższych niż 1900 lub wyższych niż 1999, wartość zwracana przez `getYear` jest cztero-cyfrowa. Na przykład, dla roku 1856, wartość jest równa 1856. Dla roku 2026, wartość wynosi 2026.
 

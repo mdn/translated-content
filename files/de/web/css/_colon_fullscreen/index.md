@@ -17,7 +17,7 @@ translation_of: Web/CSS/:fullscreen
 
 ## Übersicht
 
-Die [CSS](/de/docs/Web/CSS) [Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes) `:fullscreen `betrifft jedes Element, welches sich im [Vollbildmodus](/de/docs/Web/Guide/API/DOM/Verwendung_des_Vollbildmodus) befindet. Sie selektiert nicht nur das Toplevelelement, sondern den ganzen Stapel an Elementen.
+Die [CSS](/de/docs/Web/CSS) [Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes) `:fullscreen`betrifft jedes Element, welches sich im [Vollbildmodus](/de/docs/Web/Guide/API/DOM/Verwendung_des_Vollbildmodus) befindet. Sie selektiert nicht nur das Toplevelelement, sondern den ganzen Stapel an Elementen.
 
 > **Note:** Das W3C empfiehlt das zusammengeschriebene `:fullscreen`, d. h. ohne Bindestrich, jedoch haben sowohl Gecko als auch Webkit eine Präfixversion mit Bindestrich implementiert : `:-webkit-full-screen` und `:-moz-full-screen`. Microsoft Edge und Internet Explorer verwenden die Syntaxen `:fullscreen` und `:-ms-fullscreen`.
 

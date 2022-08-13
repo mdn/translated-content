@@ -23,8 +23,6 @@ Die **`slice()`** Methode gibt einen neuen `ArrayBuffer` zurück, wessen Inhalt 
 - `begin`
   - : 0-basierter Byteindex an welchem slice `slice` mit dem zuschneiden beginnt.
 
-<!---->
-
 - `end`
   - : Byteindex bevor `slice` das zuschneiden beendet. Wenn end nicht angegeben ist, wird der neue `ArrayBuffer` alle Bytes von `begin` des `ArrayBuffer` enthalten. Der durch die Anfangs- und Endwerte angegebene Bereich wird an den gültigen Indexbereich für das aktuelle Array gebunden. Wenn die berechnete Länge des neuen ArrayBuffers negativ wäre, wird er auf 0 gesetzt.
 

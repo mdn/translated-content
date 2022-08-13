@@ -31,7 +31,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 - `'afterend'`
   - : `element` の直後に挿入
 
-`text`\_ \_には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
+`text` には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
 
 ### ポジション名の可視化
 

@@ -24,15 +24,15 @@ Usuwa ostatni element z tablicy zwracając go. Metoda ta zmienia długość tabl
 ### Zwracana wartość
 
 Ostatni element tablicy;
-Jeśli tablica jest pusta zwraca {{jsxref("undefined")}}
+Jeśli tablica jest pusta zwraca {{jsxref("undefined")}}
 
 ## Opis
 
 Metoda pop usuwa ostatni element tablicy i zwraca tę wartość.
 
-`pop` is intentionally generic. Metoda ta może być {{jsxref("Function.call", "called", "", 1)}} lub {{jsxref("Function.apply", "applied", "", 1)}} do obiektu przypominającego tablice. Obiekty, które nie posiadają właściwości `length` odzwierciedlającej ostani element w serii, przy właściwościach liczonych od zera nie mogą zachowywać się w żaden znaczący sposób.
+`pop` is intentionally generic. Metoda ta może być {{jsxref("Function.call", "called", "", 1)}} lub {{jsxref("Function.apply", "applied", "", 1)}} do obiektu przypominającego tablice. Obiekty, które nie posiadają właściwości `length` odzwierciedlającej ostani element w serii, przy właściwościach liczonych od zera nie mogą zachowywać się w żaden znaczący sposób.
 
-Jeśli zawołasz  `pop()` na pustej tablicy, zwróci ona {{jsxref("undefined")}}.
+Jeśli zawołasz  `pop()` na pustej tablicy, zwróci ona {{jsxref("undefined")}}.
 
 ## Przykład
 
@@ -55,9 +55,9 @@ Następujący kod tworzy tablicę `myFish` zawierającą cztery elementy, a nast
 | Specification                                                                                        | Status                       | Comment                                            |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Kompatybilność z przeglądarkami
 

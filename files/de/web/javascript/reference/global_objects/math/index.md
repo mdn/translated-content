@@ -20,8 +20,6 @@ Im Unterschied zu den anderen globalen Objekten hat `Math` keinen Konstruktor. A
 - {{jsxref("Math.E")}}
   - : Eulersche Zahl und die Basis für den natürlichen Logarithmus (gerundet 2,718).
 
-<!---->
-
 - {{jsxref("Math.LN2")}}
   - : Natürlicher Logarithmus von 2 (gerundet 0,693).
 - {{jsxref("Math.LN10")}}
@@ -42,8 +40,6 @@ Im Unterschied zu den anderen globalen Objekten hat `Math` keinen Konstruktor. A
 > **Note:** **Anmerkung**: Die trigonometrischen Funktionen (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) erwarten Parameter und geben Rückgabewerte im Bogenmaß zurück. Um dieses in das Gradmaß umzurechnen, teilt man durch `(Math.PI / 180)` und multipliziert das Ergebnis mit der Bogenmaß.
 
 > **Note:** **Anmerkung:** Bei vielen mathematischen Funktionen ist die Präzision implementationsabhängig. Das bedeutet, dass es bei verschiedenen Browsern verschiedene Ergebnisse geben kann. Auch in der gleichen JavaScript-Umgebung auf verschiedenen Betriebssystemen oder Architekturen können Abweichungen entstehen.
-
-<!---->
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : Gibt den Betrag einer Zahl zurück.
@@ -101,8 +97,6 @@ Im Unterschied zu den anderen globalen Objekten hat `Math` keinen Konstruktor. A
   - : Gibt eine Pseudozufallszahl zwischen 0 und 1 zurück.
 - {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
   - : Gibt den ganzzahlig gerundeten Wert des Parameters zurück.
-
-<!---->
 
 - {{jsxref("Global_Objects/Math/sign", "Math.sign(x)")}}
   - : Gibt das Vorzeichen (positiv, negativ, 0) von x zurück.

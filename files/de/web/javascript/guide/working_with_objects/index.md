@@ -86,7 +86,7 @@ propertyName = 'model';
 myCar[propertyName] = 'Mustang';
 ```
 
-Man kann die Klammernotation mit [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)[ ](/de/docs/Web/JavaScript/Reference/Statements/for...in)nutzen, um über alle enumerable (aufzählbaren) Eigenschaften eines Objektes zu iterieren. Um dieses zu zeigen wie das funktioniert, zeigt die folgende Funktion die Eigenschaften eines Objektes, wenn eine Objekt und der Name des Objektes der Funktion als Parameter übergeben werden:
+Man kann die Klammernotation mit [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)[](/de/docs/Web/JavaScript/Reference/Statements/for...in)nutzen, um über alle enumerable (aufzählbaren) Eigenschaften eines Objektes zu iterieren. Um dieses zu zeigen wie das funktioniert, zeigt die folgende Funktion die Eigenschaften eines Objektes, wenn eine Objekt und der Name des Objektes der Funktion als Parameter übergeben werden:
 
 ```js
 function showProps(obj, objName) {
@@ -124,14 +124,14 @@ Before ECMAScript 5, there was no native way to list all properties of an object
 
 ```js
 function listAllProperties(o) {
-	var objectToInspect;
-	var result = [];
+ var objectToInspect;
+ var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
+ for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
       result = result.concat(Object.getOwnPropertyNames(objectToInspect));
-	}
+ }
 
-	return result;
+ return result;
 }
 ```
 
@@ -176,8 +176,8 @@ You can also use object initializers to create arrays. See [array literals](/de/
 
 Alternatively, you can create an object with these two steps:
 
-1.  Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
-2.  Create an instance of the object with `new`.
+1. Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
+2. Create an instance of the object with `new`.
 
 To define an object type, create a function for the object type that specifies its name, properties, and methods. For example, suppose you want to create an object type for cars. You want this type of object to be called `Car`, and you want it to have properties for make, model, and year. To do this, you would write the following function:
 

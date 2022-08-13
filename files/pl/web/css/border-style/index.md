@@ -30,18 +30,16 @@ Własność `border-style` jest skróconą własnością dla ustawienia stylu li
 - \<border-style>
   - : Style linii mogą przyjąć którąś z podanych wartości.
 
-<!---->
-
-- **none** : Brak obramowania, ustawia szerokość na 0. Jest to domyślna wartość.
-- **hidden** : Tak samo jako 'none', oprócz konfliktu rozdzielczości obramowania dla elementów tabeli.
-- **dashed** : Serie kresek lub fragmentów linii.
-- **dotted** : Serie kropek.
-- **double** : Dwie proste linie, które dają w sumie liczbę pikseli zdefiniowaną jako `border-width`.
-- **groove** : Efekt wyrzeźbienia.
-- **inset** : Sprawia wrażenie, że blok jest zapadnięty.
-- **outset** : Przeciwieństwo 'inset'. Sprawia, że blok wydaje się trójwymiarowy (wysunięty).
-- **ridge** : Przeciwieństwo 'groove'. Obramowanie wydaje się trójwymiarowe (zapowiadane).
-- **solid** : Pojedyncza, prosta, ciągła linia.
+- **none** : Brak obramowania, ustawia szerokość na 0. Jest to domyślna wartość.
+- **hidden** : Tak samo jako 'none', oprócz konfliktu rozdzielczości obramowania dla elementów tabeli.
+- **dashed** : Serie kresek lub fragmentów linii.
+- **dotted** : Serie kropek.
+- **double** : Dwie proste linie, które dają w sumie liczbę pikseli zdefiniowaną jako `border-width`.
+- **groove** : Efekt wyrzeźbienia.
+- **inset** : Sprawia wrażenie, że blok jest zapadnięty.
+- **outset** : Przeciwieństwo 'inset'. Sprawia, że blok wydaje się trójwymiarowy (wysunięty).
+- **ridge** : Przeciwieństwo 'groove'. Obramowanie wydaje się trójwymiarowe (zapowiadane).
+- **solid** : Pojedyncza, prosta, ciągła linia.
 
 Można podać do czterech wartości.
 Pierwsza wartość ustawia wszystkie cztery krawędzie.

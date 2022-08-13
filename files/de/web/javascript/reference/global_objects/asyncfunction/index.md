@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 Der **`AsyncFunction` Konstruktor** erstellt ein neues {{jsxref("Statements/async_function", "AsyncFunction")}} Objekt. In JavaScript ist jede asynchrone Funktion ein `AsyncFunction` Objekt.
 
-> **Note:** **Hinweis:** `AsyncFunction` ist kein globales Objekt. Durch die ausführung des folgenden Quelltextes kann das Objekte erhalten werden.```js
+> **Hinweis:** `AsyncFunction` ist kein globales Objekt. Durch die ausführung des folgenden Quelltextes kann das Objekte erhalten werden.```js
 > Object.getPrototypeOf(async function(){}).constructor
 >
 > ```
@@ -36,7 +36,7 @@ Der **`AsyncFunction` Konstruktor** erstellt ein neues {{jsxref("Statements/asyn
 
 Alle an die Funktion übergebenen Argumente werden als die Namen der Bezeichner der Parameter in der zu erstellenden Funktion in der Reihenfolge behandelt, in der sie übergeben werden.
 
-> **Note:** **Hinweis:** Mit dem `AsyncFunction` Konstruktor erstellte {{jsxref("Statements/async_function", "asyncFunctions")}} erstellen keine Closures in ihrem Erstellungskontext; Sie werden immer im globalen Scope erstellt. Wenn sie ausgeführt werden, haben sie nur Zugriff auf eigene lokale Variablen und globale Variablen, jedoch nicht auf Variablen aus dem Scope, indem der `AsyncFunction` Konstruktor aufgerufen wurde. Dies ist der Unterschied zum Einsatz von {{jsxref("Global_Objects/eval", "eval")}} mit Quelltext für eine asynchrone Funktionsanweisung.
+> **Hinweis:** Mit dem `AsyncFunction` Konstruktor erstellte {{jsxref("Statements/async_function", "asyncFunctions")}} erstellen keine Closures in ihrem Erstellungskontext; Sie werden immer im globalen Scope erstellt. Wenn sie ausgeführt werden, haben sie nur Zugriff auf eigene lokale Variablen und globale Variablen, jedoch nicht auf Variablen aus dem Scope, indem der `AsyncFunction` Konstruktor aufgerufen wurde. Dies ist der Unterschied zum Einsatz von {{jsxref("Global_Objects/eval", "eval")}} mit Quelltext für eine asynchrone Funktionsanweisung.
 
 Das Aufrufen des `AsyncFunction` Konstruktors als Funktion (ohne Einsatz des `new` Operators) hat den gleichen Effekt wie das Aufrufen als Konstruktor.
 

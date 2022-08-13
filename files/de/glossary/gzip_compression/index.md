@@ -11,6 +11,4 @@ Gzip wird häufig von Webservern und mobilen Browsern unterstützt, was bedeutet
 - [Enable Gzip compression?](https://varvy.com/pagespeed/enable-compression.html)
 - [Gzip auf Wikipedia](https://de.wikipedia.org/wiki/Gzip)
 
-<!---->
-
 - <details><summary><a href="/en-US/docs/Glossary">MDN Glossary</a></summary>{{ListSubpages("/en-US/docs/Glossary")}}</details>

@@ -31,8 +31,6 @@ Welcome! By visiting this page, you've taken the first step toward becoming a co
 - [Frequently asked questions](/pl/docs/MDN/Contribute/FAQ)
   - : Tips and answers to the most common questions about contributing to MDN.
 
-<!---->
-
 - [Contributing to Kuma](/pl/docs/MDN/Kuma/Contributing)
   - : A guide to contributing to the Kuma project. Kuma is the platform that powers the MDN Web site.
 

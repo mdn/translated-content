@@ -39,8 +39,6 @@ This guide provides an overview of the media file types, {{Glossary("codec", "co
 - [Media containers (file types)](/zh-CN/docs/Web/Media/Formats/Containers)
   - : A guide to the file types that contain media data. Some are audio-specific, while others may be used for either audio or combined audiovisual content such as movies. Includes overviews of each of the file types supported by the major web browsers, along with browser support information and supported features.
 
-<!---->
-
 - [Web audio codec guide](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
   - : A guide to the audio codecs allowed for by the common media containers, as well as by the major browsers. Includes benefits, limitations, key specifications and capabilities, and use cases. It also covers each browser's support for using the codec in given containers.
 - [Web video codec guide](/zh-CN/docs/Web/Media/Formats/Video_codecs)

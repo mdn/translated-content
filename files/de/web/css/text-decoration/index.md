@@ -17,7 +17,7 @@ Die **`text-decoration`** CSS Eigenschaft wird dazu verwendet, die Textformatier
 
 Textdekorationen werden auf Unterelemente gezeichnet. Das bedeutet, dass es nicht möglich ist, die Textdekoration, die für ein übergeordnetes Element angegeben wurde, für ein Unterelement zu deaktivieren. Zum Beispiel würde in folgendem Markup `<p>Dieser Text hat <em>ein paar hervorgehobene Wörter</em>.</p>` die Stilregel `p { text-decoration: underline; }` den gesamten Absatz unterstreichen. Die Stilregel `em { text-decoration: none; }` würde nichts ändern; der gesamte Absatz wäre immer noch unterstrichen. Jedoch würde die Regel `em { text-decoration: overline; }` eine zweite Dekoration für "ein paar hervorgehobene Wörter" erscheinen lassen.
 
-> **Note:** **Hinweis:** CSS Text Decoration Level 3 hat diese Eigenschaft zu einer Kurzschreibweise für die drei neuen CSS Eigenschaften {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} und {{cssxref("text-decoration-style")}} gemacht. Wie für andere Kurzschreibweiseeigenschaften bedeutet dies, dass sie deren Werte auf deren Standardwerte zurücksetzt, falls diese nicht explizit in der Kurzschreibweiseeigenschaft angegeben sind.
+> **Hinweis:** CSS Text Decoration Level 3 hat diese Eigenschaft zu einer Kurzschreibweise für die drei neuen CSS Eigenschaften {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} und {{cssxref("text-decoration-style")}} gemacht. Wie für andere Kurzschreibweiseeigenschaften bedeutet dies, dass sie deren Werte auf deren Standardwerte zurücksetzt, falls diese nicht explizit in der Kurzschreibweiseeigenschaft angegeben sind.
 
 {{cssinfo}}
 

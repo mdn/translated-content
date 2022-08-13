@@ -23,7 +23,7 @@ Weil `MAX_VALUE` eine statische Eigenschaft von {{jsxref("Number")}} ist, wird s
 
 ### Einsatz von `MAX_VALUE`
 
-Im folgenden Quelltext werden zwei nummerische Werte multipliziert. Wenn das Ergebnis kleiner oder gleich `MAX_VALUE` ist, wird `func1()` ausgeführt; andernfalls wird `func2() `ausgeführt.
+Im folgenden Quelltext werden zwei nummerische Werte multipliziert. Wenn das Ergebnis kleiner oder gleich `MAX_VALUE` ist, wird `func1()` ausgeführt; andernfalls wird `func2()`ausgeführt.
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {

@@ -94,7 +94,7 @@ Der Winkel wird angegeben als ein Winkel zwischen horizontaler Linie und der Ver
 background: linear-gradient(<angle>, red, white);
 ```
 
-> **Note:** **Hinweis:** Mehrere Browser implementieren (mit Präfix) einen älteren Entwurf der Spezifikation, wo `0deg` nach rechts anstatt nach oben zeigte. Daher sollte auf den Wert des Winkels geachtet werden, wenn der standardisierte `linear-gradient` und der mit Präfix versehene gemischt verwendet werden. Eine einfache Formel hierfür ist 90 - x = y, wobei x die Standardverwendung und y die nicht standardisierte, mit Herstellerpräfix versehene Verwendung ist.
+> **Hinweis:** Mehrere Browser implementieren (mit Präfix) einen älteren Entwurf der Spezifikation, wo `0deg` nach rechts anstatt nach oben zeigte. Daher sollte auf den Wert des Winkels geachtet werden, wenn der standardisierte `linear-gradient` und der mit Präfix versehene gemischt verwendet werden. Eine einfache Formel hierfür ist 90 - x = y, wobei x die Standardverwendung und y die nicht standardisierte, mit Herstellerpräfix versehene Verwendung ist.
 
 ### Farbstopps
 

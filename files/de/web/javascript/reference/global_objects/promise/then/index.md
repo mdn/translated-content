@@ -75,7 +75,7 @@ p2.then(function(value) {
 
 {{Compat}}
 
-\[1] Gecko 24 besitzt, unter dem Namen Future, eine experimentielle Implementation von Promise. In Gecko 25 wurde der Name final festgelegt aber standardmäßig durch die Einstellung `dom.promise.enabled `deaktiviert. Durch [Bug 918806](https://bugzilla.mozilla.org/show_bug.cgi?id=918806) wurden Promises in Gecko 29 standardmäßig aktiviert.
+\[1] Gecko 24 besitzt, unter dem Namen Future, eine experimentielle Implementation von Promise. In Gecko 25 wurde der Name final festgelegt aber standardmäßig durch die Einstellung `dom.promise.enabled`deaktiviert. Durch [Bug 918806](https://bugzilla.mozilla.org/show_bug.cgi?id=918806) wurden Promises in Gecko 29 standardmäßig aktiviert.
 
 ## Siehe auch
 

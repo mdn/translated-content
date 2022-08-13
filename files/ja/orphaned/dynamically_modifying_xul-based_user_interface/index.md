@@ -60,8 +60,6 @@ _ドキュメント_
 - [`document.createElementNS()`](ja/DOM/document.createElementNS) は要素を作成しますが、ドキュメントのどこにもそれを設置しません。新しく作成された要素をドキュメントに挿入するには、[`appendChild()`](ja/DOM/element.appendChild) のような他の DOM メソッドを使う必要があります。
 - [`appendChild()`](ja/DOM/element.appendChild) はノードを他の全てのノードの後ろに追加するのに対し、[`insertBefore()`](ja/DOM/element.insertBefore) はノードを 2 つ目のパラメータで参照されたノードの前に挿入します。
 
-<!---->
-
     function createMenuItem(aLabel) {
       const XUL_NS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
       var item = document.createElementNS(XUL_NS, "menuitem"); // 新しい XUL メニューアイテムを作成する

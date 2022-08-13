@@ -26,7 +26,7 @@ Zum besseren Verständnis der Situation sehen Sie hier die Hierarchie des Stapel
 
     - DIV #4 (z-index 10)
 
-> **Note:** **Hinweis:** Es ist zu beachten, dass sich die HTML-Hierarchie im Allgemeinen von der Stapelkontexthierarchie unterscheidet. In der Stapelkontexthierarchie werden Elemente, die keinen Stapelkontext erzeugen, an ihrem übergeordneten Element zusammengeklappt.
+> **Hinweis:** Es ist zu beachten, dass sich die HTML-Hierarchie im Allgemeinen von der Stapelkontexthierarchie unterscheidet. In der Stapelkontexthierarchie werden Elemente, die keinen Stapelkontext erzeugen, an ihrem übergeordneten Element zusammengeklappt.
 
 ## Beispiel
 

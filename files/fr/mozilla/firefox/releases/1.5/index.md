@@ -31,17 +31,11 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 - [Introduction à SVG dans HTML](/fr/Introduction_à_SVG_dans_HTML)
   - : Apprenez à utiliser le SVG dans des pages XHTML et comment JavaScript et CSS sont utilisés pour manipuler une image comme vous le feriez avec le XHTML dans un script. Voir également [SVG dans Firefox](/fr/SVG_dans_Firefox) pour connaître l'état et les problèmes connus de l'implémentation du SVG dans la version 1.5.
 
-<!---->
-
 - [Dessiner avec canvas](/fr/Dessiner_avec_canvas)
   - : Apprenez à utiliser la nouvelle balise `<canvas>` et comment dessiner des graphiques et d'autres objets dans Firefox.
 
-<!---->
-
 - [Colonnes CSS3](/fr/Colonnes_CSS3)
   - : Apprenez à utiliser le nouveau support de mise en page multi-colonnes automatiques comme proposé par CSS3.
-
-<!---->
 
 - [Utilisation du cache de Firefox 1.5](/fr/Utilisation_du_cache_de_Firefox_1.5)
   - : Découvrez `bfcache` et comment il accélère la navigation en arrière et en avant.
@@ -51,27 +45,17 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 - [Construire une extension](/fr/Construire_une_extension)
   - : Ce tutoriel vous guidera par étape dans la création d'une extension très simple pour Firefox. Consultez également [un autre tutoriel sur la base de connaissance de MozillaZine](http://kb.mozillazine.org/Getting_started_with_extension_development) qui montre comment il est encore plus simple de créer une nouvelle extension avec les nouvelles fonctionnalités du gestionnaire d'extensions dans 1.5.
 
-<!---->
-
 - [XPCNativeWrapper](/fr/XPCNativeWrapper)
   - : `XPCNativeWrapper` est un moyen pour empaqueter un objet afin qu'il puisse [accéder à des privilèges chrome](/fr/Accès_sécurisé_au_contenu_DOM_depuis_le_chrome). Il peut être utilisé dans toutes les versions de Firefox bien que son comportement soit sensiblement différent au lancement de Firefox 1.5 (Gecko 1.8).
-
-<!---->
 
 - [Système de préférences](/fr/Système_de_préférences)
   - : Apprenez à utiliser les nouveaux composants graphiques qui vous permettront de créer des fenêtres d'options plus facilement en utilisant moins de code JavaScript.
 
-<!---->
-
 - [Caractères internationaux dans du JavaScript XUL](/fr/Caractères_internationaux_dans_du_JavaScript_XUL)
   - : Les fichiers JavaScript XUL peuvent maintenant contenir des caractères non-ASCII.
 
-<!---->
-
 - [Modifications de l'API Tree](/fr/Modifications_du_composant_graphique_tree)
   - : Les interfaces pour accéder aux éléments XUL `<tree>` ont été modifiées.
-
-<!---->
 
 - [Modifications XUL pour Firefox 1.5](/fr/Modifications_XUL_pour_Firefox_1.5)
   - : Résumé des modifications du XUL. Consultez également [Adaptation des applications XUL pour Firefox 1.5](/fr/Adaptation_des_applications_XUL_pour_Firefox_1.5).

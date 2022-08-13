@@ -19,8 +19,6 @@ translation_of: Web/XPath/Functions/contains
 - `haystack`
   - : 検索される文字列
 
-<!---->
-
 - `needle`
   - : `haystack` の部分文字列かどうかを検索する文字列
 

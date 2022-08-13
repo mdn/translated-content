@@ -14,6 +14,6 @@ In der {{glossary("OOP","objektorientierten Programmierung")}} definiert eine _K
 ### Allgemeinwissen
 
 - [Klassenbasierte vs. prototypbasierte Programmiersprachen](/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages) (wie JavaScript) (Englisch)
-- [Nutzung von Funktion als Klassen in JavaScript ](/de/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Class)(Englisch)
+- [Nutzung von Funktion als Klassen in JavaScript](/de/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Class)(Englisch)
 - [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) auf Wikipedia (Englisch)
 - [Objektorientierte Programmierung](https://de.wikipedia.org/wiki/Objektorientierte_Programmierung) auf Wikipedia

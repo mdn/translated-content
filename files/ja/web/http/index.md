@@ -28,14 +28,10 @@ translation_of: Web/HTTP
 - [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
   - : **サイト間 HTTP リクエスト**とは、リクエストを生成したリソースがあるドメインとは **別のドメイン** のリソースをリクエストする HTTP リクエストのことを指します。例えば、ドメイン A (`http://domaina.example/`) から読み込まれた HTML ページが、`img` 要素を使用してドメイン B の画像 (`http://domainb.foo/image.jpg`) に対するリクエストを発行することがそれにあたります。昨今のウェブページでは、CSS スタイルシートや画像データ、スクリプト、その他のリソースを含め、上記の例のようにサイトを跨ってデータを読み込むのが一般的になっています。ウェブ開発者は、CORS を使ってこのようなサイト間のリクエストに対して個々のサイトが示す挙動を制御することができます。
 
-<!---->
-
 - [HTTP の進化](/ja/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : 初期バージョンの HTTP から最新の HTTP/2、姿を現した HTTP/3 以降までの変革を端的に説明します。
 - [Mozilla ウェブセキュリティガイドライン](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
   - : 運用チームがセキュアなウェブアプリケーションを開発するのに役立つコツをまとめました。
-
-<!---->
 
 - [HTTP メッセージ](/ja/docs/Web/HTTP/Messages)
   - : HTTP/1.x や HTTP/2 の多様なメッセージが持つ型や構造を説明します。
@@ -54,8 +50,6 @@ translation_of: Web/HTTP
   - : HTTP では多様な操作を実現することができます。一般的な {{HTTPMethod("GET")}} や {{HTTPMethod("POST")}} だけでなく、{{HTTPMethod("OPTIONS")}} や {{HTTPMethod("DELETE")}}、{{HTTPMethod("TRACE")}} などのあまり一般的ではないリクエストも包括しています。
 - [HTTP ステータスレスポンスコード](/ja/docs/Web/HTTP/Response_codes)
   - : HTTP レスポンスコードは、特定の HTTP リクエストが正常に完了したかを示します。レスポンスは通知レスポンス、成功レスポンス、リダイレクション、クライアントエラー、サーバーエラーの 5 つのクラスに分類されます。
-
-<!---->
 
 - [CSP ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)
   - : ウェブサイトの管理者は、{{HTTPHeader("Content-Security-Policy")}} レスポンスヘッダーフィールドで、ユーザーエージェントが特定のページで読み込むことが許可されているリソースを制御することができます。いくつか例外はありますが、大元のサーバーやスクリプトのエンドポイントの特定をポリシーとして含んでいることが多いです。

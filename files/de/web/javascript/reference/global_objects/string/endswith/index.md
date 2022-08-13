@@ -26,7 +26,7 @@ Die Methode **`endsWith()`** bestimmt, ob ein String das Ende eines anderen Stri
 
 ### Rückgabewert
 
-`Falls suchString das Ende von str ist, wird `**`true`** zurückgeliefert, andernfalls wird **`false`** zurückgeliefert.
+`Falls suchString das Ende von str ist, wird`**`true`** zurückgeliefert, andernfalls wird **`false`** zurückgeliefert.
 
 ## Beschreibung
 

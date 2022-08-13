@@ -65,8 +65,6 @@ Gecko 1.9 以前では、アドオン開発者は、Firefox や Thunderbird の�
 
       extensions.EXTENSION_ID.description=LOCALIZED_DESCRIPTION
 
-<!---->
-
 - もしあなたが [デフォルト設定ファイル](/ja/Building_an_Extension#Defaults_Files) を作っていないのであれば、それを作ってください。
 - 次の 1 行を、デフォルト設定ファイルに加えてください (_EXTENSION_ID_ は拡張機能の ID ([install.rdf](/ja/Install_Manifests) から)、_PATH_TO_LOCALIZATION_FILE_ は上であなたが加えた、ローカライズしたプロパティファイルへの chrome パスです)。
 

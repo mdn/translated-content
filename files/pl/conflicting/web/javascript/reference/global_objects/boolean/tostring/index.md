@@ -37,8 +37,6 @@ Metoda `toSource` zwraca następujące wartości:
   }
   ```
 
-<!---->
-
 - dla instancji obiektu `Boolean` metoda `toSource` zwraca łańcuch znaków reprezentujący kod źródłowy.
 
 Metoda ta jest zwykle stosowana wewnętrznie przez interpreter JavaScriptu, a nie bezpośrednio w kodzie programów.

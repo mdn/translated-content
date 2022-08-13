@@ -3,7 +3,7 @@ title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
-{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}} Metoda **`HTMLCanvasElement`\*\***`.captureStream()`\*\* zwraca {{domxref("CanvasCaptureMediaStream")}} który jest wideo w czasie rzeczywistym z powierzchni elementu [`<canvas>`](/pl/docs/Web/HTML/Element/canvas "The documentation about this has not yet been written; please consider contributing!").
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}} Metoda **`HTMLCanvasElement.captureStream()`** zwraca {{domxref("CanvasCaptureMediaStream")}} który jest wideo w czasie rzeczywistym z powierzchni elementu [`<canvas>`](/pl/docs/Web/HTML/Element/canvas "The documentation about this has not yet been written; please consider contributing!").
 
 ## Składnia
 
@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLCanvasElement/captureStream
 ### Parametry
 
 - `frameRate` {{optional_inline}}
-  - : Liczba zmiennoprzecinkowa podójnej precyzji wskazuje na częstotliwość przechwytywania każdej klatki. W przypadku braku parametru nowa klatka będzie przechwytywana przy każdej zmianie {{HTMLElement("canvas")}}; jeśli ustawiona na `0`, przechwycona zostanie pojedyńcza klatka.
+  - : Liczba zmiennoprzecinkowa podójnej precyzji wskazuje na częstotliwość przechwytywania każdej klatki. W przypadku braku parametru nowa klatka będzie przechwytywana przy każdej zmianie {{HTMLElement("canvas")}}; jeśli ustawiona na `0`, przechwycona zostanie pojedyńcza klatka.
 
 ### Wartość zwrtona
 
@@ -45,6 +45,6 @@ innyKomputer.addStream(stream);
 ## Zobacz też
 
 - {{domxref("CanvasCaptureMediaStream")}}, interfejs do którego należy.
-- {{domxref("HTMLMediaElement.captureStream()")}}, pozwala na przechwytywanie stream-u z  elementu HTML.
+- {{domxref("HTMLMediaElement.captureStream()")}}, pozwala na przechwytywanie stream-u z  elementu HTML.
 - {{domxref("MediaStream")}}
 - {{domxref("Media Capture and Streams API")}}

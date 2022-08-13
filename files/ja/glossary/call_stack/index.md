@@ -72,8 +72,6 @@ greeting();
 
 - ウィキペディアの{{Interwiki("wikipedia", "コールスタック")}}
 
-<!---->
-
 - [MDN Web Docs 用語集](/ja/docs/Glossary)
 
   - {{Glossary("Call stack", "コールスタック")}}

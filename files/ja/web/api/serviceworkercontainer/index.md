@@ -23,8 +23,6 @@ translation_of: Web/API/ServiceWorkerContainer
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : {{domxref("ServiceWorker")}} オブジェクトの状態が `activating` または `activated` の場合、それを返します（{{domxref("ServiceWorkerRegistration.active")}} によって返されるのと同じオブジェクト）。 このプロパティは、強制リフレッシュのリクエスト中（_Shift_ + リフレッシュ）、またはアクティブワーカーがない場合は `null` を返します。
 
-<!---->
-
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : サービスワーカーがアクティブになるまでコードの実行を遅らせる方法を提供します。 決して拒否せず、現在のページに関連付けられている {{domxref("ServiceWorkerRegistration")}} に {{domxref("ServiceWorkerRegistration.active")}} ワーカーが存在するようになるまで無期限に待機する {{jsxref("Promise")}} を返します。 その条件が満たされると、{{domxref("ServiceWorkerRegistration")}} で解決されます。
 

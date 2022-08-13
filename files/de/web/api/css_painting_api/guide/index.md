@@ -7,9 +7,9 @@ Die CSS Paint API wurde entworfen, um Entwicklern zu ermöglichen, programmatisc
 
 Um programmatisch ein Bild zu erstellen, das von einem CSS stylesheet verwendet wird, müssen wir folgende Schritte abarbeiten:
 
-1.  Lege ein "paint worklet" mit der [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) Funktion fest.
-2.  Melde das worklet an.
-3.  Binde mit Include die `{{cssxref('paint()','paint()')}}` CSS Funktion ein.
+1. Lege ein "paint worklet" mit der [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) Funktion fest.
+2. Melde das worklet an.
+3. Binde mit Include die `{{cssxref('paint()','paint()')}}` CSS Funktion ein.
 
 Zum besseren Verständnis dieser einzelnen Schritte werden wir eine halbhohe farbliche Markierung wie in folgender Titelzeile erstellen:
 
@@ -129,8 +129,8 @@ registerPaint('headerHighlight', class {
 
 Der Code unterscheidet sich an zwei Stellen vom ersten Beispiel:
 
-1.  Wir haben ein zweites Argument in `paint()` eingefügt, die Größe `size`.
-2.  Wir berechnen die Dimensionen und die Position unseres Rechtecks relativ zu dieser Größe `size` und nicht mehr mit absoluten Werten, mit Hilfe der Properties `.width` und `.height`.
+1. Wir haben ein zweites Argument in `paint()` eingefügt, die Größe `size`.
+2. Wir berechnen die Dimensionen und die Position unseres Rechtecks relativ zu dieser Größe `size` und nicht mehr mit absoluten Werten, mit Hilfe der Properties `.width` und `.height`.
 
 Unsere HTML-Elemente haben nur ein Hintergrundbild, welches sich in Größe und Breite ändert.
 
@@ -280,36 +280,36 @@ registerPaint('headerHighlight', class {
 
   paint(ctx, size, props) {
 
-		/* set where to start the highlight & dimensions */
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const highlightHeight = size.height * 0.85;
+  /* set where to start the highlight & dimensions */
+  const x = 0;
+  const y = size.height * 0.3;
+  const blockWidth = size.width * 0.33;
+  const highlightHeight = size.height * 0.85;
         const color = props.get('--highColour');
 
-		ctx.fillStyle = color;
+  ctx.fillStyle = color;
 
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
-		ctx.lineTo( x, highlightHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo( x, y );
+  ctx.lineTo( blockWidth, y );
+  ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
+  ctx.lineTo( x, highlightHeight );
+  ctx.lineTo( x, y );
+  ctx.closePath();
+  ctx.fill();
 
-		/* create the dashes */
-		for (let i = 0; i < 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-			ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-			ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-			ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-			ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
-			ctx.closePath();
-			ctx.fill();
-		}
+  /* create the dashes */
+  for (let i = 0; i < 4; i++) {
+   let start = i * 2;
+   ctx.beginPath();
+   ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
+   ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
+   ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
+   ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
+   ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+   ctx.closePath();
+   ctx.fill();
+  }
   } // paint
 });
 ```
@@ -353,7 +353,7 @@ Nehmen wir an, wir wollen ab und zu den Hintergrund nur mit einem Strich statt v
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke);
+ background-image: paint(hollowHighlights, stroke);
 }
 ```
 
@@ -368,15 +368,15 @@ Und wenn wir darauf zugreifen wollen:
 ```js
 paint(ctx, size, props, args) {
 
-	// use our custom arguments
-	const hasStroke = args[0].toString();
+ // use our custom arguments
+ const hasStroke = args[0].toString();
 
-	// if stroke arg is 'stroke', don't fill
-	if (hasStroke === 'stroke') {
-		ctx.fillStyle = 'transparent';
-		ctx.strokeStyle = colour;
-	}
-	...
+ // if stroke arg is 'stroke', don't fill
+ if (hasStroke === 'stroke') {
+  ctx.fillStyle = 'transparent';
+  ctx.strokeStyle = colour;
+ }
+ ...
 }
 ```
 
@@ -384,7 +384,7 @@ Wir können auch mehr als ein Argument übergeben:
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke, 10px);
+ background-image: paint(hollowHighlights, stroke, 10px);
 }
 ```
 
@@ -402,7 +402,7 @@ Fügen wir einfach ein weiteres Argument für die Pixel-Breite unserer Hintergru
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke, 10px);
+ background-image: paint(hollowHighlights, stroke, 10px);
 }
 ```
 
@@ -417,15 +417,15 @@ Nun können wir Typen und Werte der Properties übergeben, was bedeutet: wir kö
 ```js
 paint(ctx, size, props, args) {
 
-		const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-		if (strokeWidth.unit === 'px') {
-			ctx.lineWidth = strokeWidth.value;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
+  if (strokeWidth.unit === 'px') {
+   ctx.lineWidth = strokeWidth.value;
+  } else {
+   ctx.lineWidth = 1.0;
+  }
 
-	...
+ ...
 }
 ```
 
@@ -450,61 +450,61 @@ registerPaint('hollowHighlights', class {
     // ctx   -> drawing context
     // size  -> size of the box being painted
     // props -> list of custom properties available to the element
-	// args  -> list of arguments set when calling the paint() function in the css
+ // args  -> list of arguments set when calling the paint() function in the css
 
-		// where to start the highlight & dimensions
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const blockHeight = size.height * 0.85;
+  // where to start the highlight & dimensions
+  const x = 0;
+  const y = size.height * 0.3;
+  const blockWidth = size.width * 0.33;
+  const blockHeight = size.height * 0.85;
 
-		// the values passed in the paint() function in the CSS
-		const colour = props.get( '--boxColor' );
-		const strokeType = args[0].toString();
-		const strokeWidth = parseInt(args[1]);
+  // the values passed in the paint() function in the CSS
+  const colour = props.get( '--boxColor' );
+  const strokeType = args[0].toString();
+  const strokeWidth = parseInt(args[1]);
 
 
-		// set the stroke width
-		if ( strokeWidth ) {
-			ctx.lineWidth = strokeWidth;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
-		// set the fill type
-		if ( strokeType === 'stroke' ) {
-			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = colour;
-		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = colour;
-			ctx.strokeStyle = colour;
-		} else {
-			ctx.fillStyle = 'none';
-			ctx.strokeStyle = 'none';
-		}
+  // set the stroke width
+  if ( strokeWidth ) {
+   ctx.lineWidth = strokeWidth;
+  } else {
+   ctx.lineWidth = 1.0;
+  }
+  // set the fill type
+  if ( strokeType === 'stroke' ) {
+   ctx.fillStyle = 'transparent';
+   ctx.strokeStyle = colour;
+  } else if ( strokeType === 'filled' ) {
+   ctx.fillStyle = colour;
+   ctx.strokeStyle = colour;
+  } else {
+   ctx.fillStyle = 'none';
+   ctx.strokeStyle = 'none';
+  }
 
-		// block
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + blockHeight, blockHeight );
-		ctx.lineTo( x, blockHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
-		ctx.stroke();
-		// dashes
-		for (let i = 0; i < 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( blockWidth + (start * 10) + 10, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10, y);
-			ctx.closePath();
-			ctx.fill();
-			ctx.stroke();
-		}
+  // block
+  ctx.beginPath();
+  ctx.moveTo( x, y );
+  ctx.lineTo( blockWidth, y );
+  ctx.lineTo( blockWidth + blockHeight, blockHeight );
+  ctx.lineTo( x, blockHeight );
+  ctx.lineTo( x, y );
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+  // dashes
+  for (let i = 0; i < 4; i++) {
+   let start = i * 2;
+   ctx.beginPath();
+   ctx.moveTo( blockWidth + (start * 10) + 10, y);
+   ctx.lineTo( blockWidth + (start * 10) + 20, y);
+   ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
+   ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
+   ctx.lineTo( blockWidth + (start * 10) + 10, y);
+   ctx.closePath();
+   ctx.fill();
+   ctx.stroke();
+  }
 
   } // paint
 });

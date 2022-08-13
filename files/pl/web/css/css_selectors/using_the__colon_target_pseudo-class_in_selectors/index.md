@@ -10,17 +10,17 @@ Czasami adres URL wskazuje na konkretny fragment dokumentu, ale użytkownikowi m
 
 ## Wybór targetu
 
-[Pseudoklasy](/en/CSS/Pseudo-classes "Pseudo-classes") {{cssxref(":target")}} używa się, aby ostylować targetowany element adresu URL, który zawiera identyfikator fragmentu.
+[Pseudoklasy](/en/CSS/Pseudo-classes "Pseudo-classes") {{cssxref(":target")}} używa się, aby ostylować targetowany element adresu URL, który zawiera identyfikator fragmentu.
 
-Przykładowo, adres URL `http://developer.mozilla.org/en/docs/Using_the_:target_selector#example` zawiera identyfikator fragmentu o treści `#example`. W HTML identyfikatory fragmentu to wartości atrybutów `id` lub `name` jako że atrybuty te dzielą tę samą przestrzeń na nazwy. A więc adres URL z naszego przykładu wskazywałby nam część strony o tytule "example".
+Przykładowo, adres URL `http://developer.mozilla.org/en/docs/Using_the_:target_selector#example` zawiera identyfikator fragmentu o treści `#example`. W HTML identyfikatory fragmentu to wartości atrybutów `id` lub `name` jako że atrybuty te dzielą tę samą przestrzeń na nazwy. A więc adres URL z naszego przykładu wskazywałby nam część strony o tytule "example".
 
-Przypuśćmy, że chcesz ostylować każdy element `h2`, który jest targetem URL i nie chcesz, żeby elementy innego rodzaju dostały ostylowane w ten sposób. To proste:
+Przypuśćmy, że chcesz ostylować każdy element `h2`, który jest targetem URL i nie chcesz, żeby elementy innego rodzaju dostały ostylowane w ten sposób. To proste:
 
 ```css
 h2:target { font-weight: bold; }
 ```
 
-Można też stworzyć style, które dotyczą jedynie konkretnego fragmentu naszej strony. Robi się to używając tego samego identyfikatora, który znajduje się w naszym URL. Tak więc aby dodać obramowanie do fragmentu strony zawierającego element `#example`, napisalibyśmy:
+Można też stworzyć style, które dotyczą jedynie konkretnego fragmentu naszej strony. Robi się to używając tego samego identyfikatora, który znajduje się w naszym URL. Tak więc aby dodać obramowanie do fragmentu strony zawierającego element `#example`, napisalibyśmy:
 
 ```css
 #example:target { border: 1px solid black; }
@@ -36,7 +36,7 @@ Jeżeli chcemy stworzyć uniwersalne stylowanie, którego będziemy używać do 
 
 ## Przykład
 
-W poniższym przykładzie jest pięć odnośników, które przenoszą nas do różnych elementów należących do jednego dokumentu. Wybierając link "Pierwszy" sprawi, że `<h1 id="one">` zostanie naszym pierwszym targetowanym elementem. Zwróć uwagę, że dokument zostać przewinięty przewinąć do nowej pozycji, jako że targetowane elementy umieszcza się w miarę możliwości na górze okna przeglądarki.
+W poniższym przykładzie jest pięć odnośników, które przenoszą nas do różnych elementów należących do jednego dokumentu. Wybierając link "Pierwszy" sprawi, że `<h1 id="one">` zostanie naszym pierwszym targetowanym elementem. Zwróć uwagę, że dokument zostać przewinięty przewinąć do nowej pozycji, jako że targetowane elementy umieszcza się w miarę możliwości na górze okna przeglądarki.
 
 ```html
 <h4 id="jeden">...</h4> <p id="dwa">...</p>
@@ -51,7 +51,7 @@ W poniższym przykładzie jest pięć odnośników, które przenoszą nas do ró
 
 ## Podsumowanie
 
-W przypadkach, gdy identyfikator fragmentu wskazuje na dany kawałek dokumentu, użytkownik może nie być pewny, którą część dokumentu ma czytać. Dzięki ostylowaniu targetu adresu URL można tego uniknąć.
+W przypadkach, gdy identyfikator fragmentu wskazuje na dany kawałek dokumentu, użytkownik może nie być pewny, którą część dokumentu ma czytać. Dzięki ostylowaniu targetu adresu URL można tego uniknąć.
 
 ## Zobacz też
 

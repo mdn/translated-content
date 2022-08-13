@@ -24,7 +24,7 @@ orphans: initial;
 orphans: unset;
 ```
 
-> **Note:** **Hinweis:** In der Typografie ist ein _Schusterjunge_ die erste Zeile eines Absatzes, die allein am unteren Rand einer Seite angezeigt wird (der Absatz wird auf einer nachfolgenden Seite fortgesetzt).
+> **Hinweis:** In der Typografie ist ein _Schusterjunge_ die erste Zeile eines Absatzes, die allein am unteren Rand einer Seite angezeigt wird (der Absatz wird auf einer nachfolgenden Seite fortgesetzt).
 
 ## Syntax
 

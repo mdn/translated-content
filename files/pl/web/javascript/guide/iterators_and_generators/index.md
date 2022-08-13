@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
 
-Przetwarzanie każdego elementu w kolekcji jest bardzo popularną operacją. JavaScript daje wiele możliwości iteracji przez elementy kolekcji: od prostej pętli {{jsxref("Polecenia/for","for")}} do {{jsxref("Obiekty/Array/map","map()")}} i {{jsxref("Obiekty/Array/filter","filter()")}}. Iteratory i Generatory wnoszą pojęcie interacji bezpośredno w natywne funkcjonalności języka i dają możliwość do dostosowania zachowania pętli {{jsxref("Polecenia/for...of","for...of")}}.
+Przetwarzanie każdego elementu w kolekcji jest bardzo popularną operacją. JavaScript daje wiele możliwości iteracji przez elementy kolekcji: od prostej pętli {{jsxref("Polecenia/for","for")}} do {{jsxref("Obiekty/Array/map","map()")}} i {{jsxref("Obiekty/Array/filter","filter()")}}. Iteratory i Generatory wnoszą pojęcie interacji bezpośredno w natywne funkcjonalności języka i dają możliwość do dostosowania zachowania pętli {{jsxref("Polecenia/for...of","for...of")}}.
 
 Zobacz także:
 
@@ -19,7 +19,7 @@ Zobacz także:
 
 ## Iteratory
 
-Obiekt jest **iteratorem** kiedy wie jak uzyskać dostęp do elementów z kolekcji pojedynczo, podczas gdy śledzi swoją obecną pozycję w tej sekwencji. W języku JavaScript iterator jest obiektem który dostarcza metodę next(), która zwraca następny obiekt w tej sekwencji. Ta metoda zwraca obiekt z dwoma właściwościami: `done` i `value`.
+Obiekt jest **iteratorem** kiedy wie jak uzyskać dostęp do elementów z kolekcji pojedynczo, podczas gdy śledzi swoją obecną pozycję w tej sekwencji. W języku JavaScript iterator jest obiektem który dostarcza metodę next(), która zwraca następny obiekt w tej sekwencji. Ta metoda zwraca obiekt z dwoma właściwościami: `done` i `value`.
 
 Po utworzeniu, obiekt iteratora może być użyty jawnie przez powtarzanie wywołania metody next().
 
@@ -80,9 +80,9 @@ We can make our own iterables like this:
 ```js
 var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+    yield 1;
+    yield 2;
+    yield 3;
 };
 
 for (let value of myIterable) {

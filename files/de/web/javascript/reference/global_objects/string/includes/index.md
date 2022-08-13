@@ -93,9 +93,9 @@ In Firefox 18 - 39 hieß diese Methode `contains()`. Es wurde zu `includes()` ({
 
 Es wurde gemeldet, dass manche Webseiten, die MooTools 1.2 nutzen mit Firefox 17 nicht mehr funktionieren. Diese Version von MooTools kontrolliert, ob `String.prototype.contains()` existiert und, wenn nicht, fügt es seine eigene Funktion hinzu.
 Mit der Einführung dieser Funktion in Firefox 17 wurde das Verhalten dieser Kontrolle geändert, sodass auf MooTools `String.prototype.contains()` basierender Code funktionsunfähig wurde.
-Aufgrund dessen wurde die Implementierung in Firefox 17 [abgeschaltet ](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8)und `String.prototype.contains()` war in Firefox 18 nutzbar. Ermöglicht wurde dies durch die [Veröffentlichung von MooTools Version 1.2.6.](http://mootools.net/blog/2013/02/19/mootools-1-2-6-released)
+Aufgrund dessen wurde die Implementierung in Firefox 17 [abgeschaltet](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8)und `String.prototype.contains()` war in Firefox 18 nutzbar. Ermöglicht wurde dies durch die [Veröffentlichung von MooTools Version 1.2.6.](http://mootools.net/blog/2013/02/19/mootools-1-2-6-released)
 
-MooTools 1.3 erzwingt die Nutzung der eigenen Version von `String.prototype.contains()`, demnach sollten Webseiten, die abhängig davon sind, weiterhin funktionieren. Beachte jedoch, dass sich die [MooTools 1.3 Signatur ](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains)von der ECMAScript 6 Signatur für diese Methode unterscheidet.
+MooTools 1.3 erzwingt die Nutzung der eigenen Version von `String.prototype.contains()`, demnach sollten Webseiten, die abhängig davon sind, weiterhin funktionieren. Beachte jedoch, dass sich die [MooTools 1.3 Signatur](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains)von der ECMAScript 6 Signatur für diese Methode unterscheidet.
 
 Später änderte [MooTools 1.5+ die Signatur, um sie dem ES2015 Standard anzupassen.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
 

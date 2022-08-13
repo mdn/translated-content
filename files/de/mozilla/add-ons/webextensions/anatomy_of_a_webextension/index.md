@@ -83,7 +83,7 @@ Hintergrundskripte sind beschränkt in einigen potenziell gefährlichen Operatio
 Deine Extension kann unterschiedliche Benutzeroberflächenkomponenten enthalten, deren Inhalt wird durch ein HTML-Dokument festgelegt:
 
 - eine [Sidebar](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) ist ein Element, das auf der linken Seite des Browserfensters neben der Webseite angezeigt wird
-- ein [Pop-up](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) ist ein Dialogfenster, dass du anzeigen kannst, wenn der Benutzer auf einen [Button der Werkzeugleiste](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) oder der [Adressleiste ](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)klickt
+- ein [Pop-up](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) ist ein Dialogfenster, dass du anzeigen kannst, wenn der Benutzer auf einen [Button der Werkzeugleiste](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) oder der [Adressleiste](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)klickt
 - eine [Options-Page](/de/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ist eine Seite, die gezeigt wird, wenn der Benutzer deine Add-on-Einstellungen im browser-eigenen Add-ons-Manager abruft.
 
 Für jeden dieser Komponenten, erstellst du eine HTML-Datei und verweist auf sie über ein spezielles Attribut in [manifest.json](/de/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Die HTML-Datei kann, wie eine normale Webseite, CSS- und JavaScript-Dateien einbinden.

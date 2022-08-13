@@ -14,8 +14,6 @@ CSS Properties and Values API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘�
 - {{cssxref('@property')}}
   - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を解析する方法を定義します。 CSS の {{cssxref('@property')}} を介してこのインターフェイスにアクセスします。
 
-<!---->
-
 ## 例
 
 次の例では、JavaScript で {{domxref('CSS.registerProperty')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} `--my-color` を色とし、デフォルト値を指定し、値を継承できないようにします。

@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 
 Krótki opis rozszerzenia, który jest przeznaczony do wyświetlenia w interfejsie przeglądarki użytkownika.
 
-Jest to [właściwość umiejscowiona](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Jest to [właściwość umiejscowiona](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
 ## Przykład
 

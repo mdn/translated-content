@@ -16,7 +16,7 @@ translation_of: Web/API/Document/querySelector
 
 Die Methode **`querySelector()`** von {{domxref("Document")}} gibt das erste {{domxref("Element")}} innerhalb eines Dokuments zurück, welches dem angegebenen Selektor bzw. Selektoren entspricht. Wurden keine Übereinstimmungen gefunden wird `null` zurückgegeben.
 
-> **Note:** **Hinweis:** Der Abgleich erfolgt indem sämtliche Knoten des Dokuments und deren Unterknoten der Reihe nach mittels Tiefensuche in Hauptreihenfolge (_depth-first pre-order_) durchlaufen werden.
+> **Hinweis:** Der Abgleich erfolgt indem sämtliche Knoten des Dokuments und deren Unterknoten der Reihe nach mittels Tiefensuche in Hauptreihenfolge (_depth-first pre-order_) durchlaufen werden.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ Die Methode **`querySelector()`** von {{domxref("Document")}} gibt das erste {{d
 - `selectors`
   - : Ein {{domxref("DOMString")}} mit einem oder mehreren Selektoren die abgeblichen werden sollen. Dieser String muss ein gültiger CSS-Selektor-String sein. Ist dies nicht der Fall, wird eine `SYNTAX_ERR` Exception ausgelöst. Weitere Informationen zu Selektoren und deren Verwaltung finden Sie unter [DOM Elemente mittels Selektoren ermitteln](/de/docs/Gecko-DOM-Referenz/DOM_Elemente_mittels_Selektoren_ermitteln).
 
-> **Note:** **Hinweis:** Zeichen, die nicht zur Standard-CSS-Syntax gehören, müssen mit einem Backslash-Zeichen maskiert werden. Da JavaScript auch Backslash-Escape-Anweisungen verwendet, müssen Sie beim Schreiben von String-Literalen mit diesen Zeichen besonders vorsichtig sein. Weitere Informationen finden Sie unter [Sonderzeichen maskieren](#sonderzeichen_maskieren).
+> **Hinweis:** Zeichen, die nicht zur Standard-CSS-Syntax gehören, müssen mit einem Backslash-Zeichen maskiert werden. Da JavaScript auch Backslash-Escape-Anweisungen verwendet, müssen Sie beim Schreiben von String-Literalen mit diesen Zeichen besonders vorsichtig sein. Weitere Informationen finden Sie unter [Sonderzeichen maskieren](#sonderzeichen_maskieren).
 
 ### Rückgabewert
 

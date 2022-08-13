@@ -36,7 +36,7 @@ Führt ein Browser diesen Code aus, wird er über einen Dialog die Erlaubnis des
 
 ![](https://mdn.mozillademos.org/files/9683/protocolregister.png)
 
-> **Note:** **Hinweis:** Das bei der Registrierung angegebene URL Template **muss** mit der die Anfrage stellenden Webseite **übereinstimmen**, oder die Registrierung schlägt fehl. Beispielsweise kann `http://example.com/homepage.html` einen Protokoll-Handler für `http://example.com/handle_mailto/%s registrieren, aber nicht für` `http://example.org/handle_mailto/%s`.
+> **Hinweis:** Das bei der Registrierung angegebene URL Template **muss** mit der die Anfrage stellenden Webseite **übereinstimmen**, oder die Registrierung schlägt fehl. Beispielsweise kann `http://example.com/homepage.html` einen Protokoll-Handler für `http://example.com/handle_mailto/%s registrieren, aber nicht für` `http://example.org/handle_mailto/%s`.
 
 Wird derselbe Handler mehrfach registriert, meldet der Browser das durch ein weiteres Pop-Up, das auf die bereits erfolgte Registrierung hinweist. Daher ist es sinnvoll, die Registrierung mit einem vorangehenden Check abzusichern.
 
@@ -80,13 +80,13 @@ Ab jetzt wird der Browser bei jedem Klick auf einen Verweis, der das neu registr
 
 ## Handling
 
-Der nächste Schritt ist das tatsächliche Handling. Der Browser kombiniert die `href `aus dem aktivierten Link mit dem registrierten URL Template und führt dann damit einen HTTP GET Request aus. Hervorgehend aus den vorangegangenen Beispielen würde der Request auf folgender URL stattfinden:
+Der nächste Schritt ist das tatsächliche Handling. Der Browser kombiniert die `href`aus dem aktivierten Link mit dem registrierten URL Template und führt dann damit einen HTTP GET Request aus. Hervorgehend aus den vorangegangenen Beispielen würde der Request auf folgender URL stattfinden:
 
     http://www.google.co.uk/?uri=burger:cheeseburger
 
 Serverseitiger Code kann dann die query String Parameter extrahieren und die gewünschte Aktion ausführen.
 
-> **Note:** **Hinweis:** Dem serverseitigen Code wird der **gesamte** Inhalt der href übergeben. D.h. der Server muss das Protokoll aus den Daten parsen.
+> **Hinweis:** Dem serverseitigen Code wird der **gesamte** Inhalt der href übergeben. D.h. der Server muss das Protokoll aus den Daten parsen.
 
 ### Beispiel
 

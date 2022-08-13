@@ -13,7 +13,7 @@ translation_of: Web/CSS/background-clip
 Die `background-clip` Eigenschaft legt fest, ob ein Hintergrundbild oder eine Hintergrundfarbe auch unterhalb des [Elementrahmens](/de/CSS/border "de/CSS/border") erweitert werden soll. Es können mehrere Werte (durch Kommata getrennt) definiert werden, um unterschiedliche Einstellungen für mehrere Hintergrundbilder festzulegen.
 Die Eigenschaft `-moz-background-clip` wird bis einschließlich Gecko 1.9.2 (Firefox 3.6) unterstützt.
 
-> **Note:** **Hinweis**: Um ältere und neuere Versionen von Gecko (Firefox) zu unterstützen, sollten Sie beide Eigenschaften (mit und ohne `-moz-`) im Stylesheet notieren. Siehe [Beispiele](#Beispiele).
+> **Hinweis:** Um ältere und neuere Versionen von Gecko (Firefox) zu unterstützen, sollten Sie beide Eigenschaften (mit und ohne `-moz-`) im Stylesheet notieren. Siehe [Beispiele](#Beispiele).
 
 Wenn kein `background-image` vorhanden ist, hat diese Eigenschaft nur einen sichtbaren Effekt, wenn der Rahmen über transparente oder teilweise transparente Bereiche verfügt (siehe [border-style](/de/CSS/border-style "de/CSS/border-style")). Andernfalls sind nur die Effekte des Rahmens selbst zu sehen.
 
@@ -111,7 +111,7 @@ pre {
 ## Spezifikation
 
 - [CSS 3 Backgrounds and Borders #background-clip](http://www.w3.org/TR/css3-background/#the-background-clip)
-- [CSS 3 Editor's Draft ](http://dev.w3.org/csswg/css3-background/#the-background-clip)(enthält `content-box`)
+- [CSS 3 Editor's Draft](http://dev.w3.org/csswg/css3-background/#the-background-clip)(enthält `content-box`)
 
 ## Siehe auch
 

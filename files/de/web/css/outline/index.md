@@ -47,7 +47,7 @@ outline: unset;
 
 Die `outline` Eigenschaft kann mit einem, zwei oder drei der unten aufgeführten Werte angegeben werden. Die Reihenfolge der Werte spielt dabei keine Rolle.
 
-> **Note:** **Hinweis:** Der Umriss ist für viele Elemente unsichtbar, wenn sein Stil nicht definiert ist. Dies liegt daran, dass der Stil standardmäßig auf keinen Stil eingestellt ist: `none`. Eine bemerkenswerte Ausnahme bilden `input` Elemente, die von den Browsern als Standard-Stil vorgegeben werden.
+> **Hinweis:** Der Umriss ist für viele Elemente unsichtbar, wenn sein Stil nicht definiert ist. Dies liegt daran, dass der Stil standardmäßig auf keinen Stil eingestellt ist: `none`. Eine bemerkenswerte Ausnahme bilden `input` Elemente, die von den Browsern als Standard-Stil vorgegeben werden.
 
 ### Values
 

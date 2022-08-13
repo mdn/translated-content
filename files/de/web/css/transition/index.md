@@ -10,7 +10,7 @@ translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 
-Die **`transition`** [CSS ](/en/CSS "CSS")Eigenschaft ist eine [Kurzschreibweise](/de/docs/Web/CSS/Shorthand_properties) für {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} und {{ cssxref("transition-delay") }}.
+Die **`transition`** [CSS](/en/CSS "CSS")Eigenschaft ist eine [Kurzschreibweise](/de/docs/Web/CSS/Shorthand_properties) für {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} und {{ cssxref("transition-delay") }}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 

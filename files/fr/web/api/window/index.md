@@ -324,8 +324,6 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
   - : Appelé quand le chargement d'une ressource a été avorté, comme par le fait qu'un utilisateur annule un chargement alors qu'il était encore en cours.
 
-<!---->
-
 - {{domxref("WindowEventHandlers.onafterprint")}}
   - : Appelé lorsque la boîte de dialogue d'impression est fermée. Voir l'événement {{event ("afterprint")}}.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
@@ -335,34 +333,22 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : Propriété de gestionnaire d'événements pour les événements avant-déchargement dans la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : Appelé après que la fenêtre a perdu la focalisation, comme en raison d'une fenêtre contextuelle.
-
-<!---->
 
 - {{domxref("GlobalEventHandlers.onchange")}}
   - : Propriété de gestionnaire d'événements pour les événements de changement dans la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : Appelé après qu'un QUELCONQUE bouton de la souris est pressé & relâché.
-
-<!---->
 
 - {domxref("GlobalEventHandlers.ondblclick")}}
   - : Appelé quand un double clic est fait avec un QUELCONQUE bouton de la souris.
 - {{domxref("GlobalEventHandlers.onclose")}}
   - : Appelé après la fermeture de la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Appelé lorsque le bouton DROIT de la souris est enfoncé.
-
-<!---->
 
 - {{domxref("Window.ondevicelight")}}
   - : Propriété de gestionnaire d'événements pour tous les changements de niveaux de luminosité ambiante.
@@ -375,17 +361,11 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("Window.ondeviceproximity")}}
   - : Propriété de gestionnaire d'événement pour l'événement de proximité de l'appareil.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Appelé lorsqu'une ressource ne se charge pas OU lorsqu'une erreur se produit lors de l'exécution. Voir l'événement {{event("error")}}.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Appelé après que la fenêtre a reçu ou récupéré la focalisation. Voir les événements {{event("focus")}}.
-
-<!---->
 
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Propriété de gestionnaire d'événements pour les événements {{event('hashchange')}} dans la fenêtre ; appelé lorsque la partie de l'URL après la marque hash ("#") change.
@@ -400,49 +380,31 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("GlobalEventHandlers.onkeydown")}}
   - : Appelé lorsque vous commencez à presser une touche QUELCONQUE. Voir l'événement {{event("keydown")}}.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onkeypress")}}
   - : Appelé lorsqu'une touche (à l'exception de Shift, Fn et CapsLock) est en position pressée. Voir l'événement {{event("keypress")}}.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Appelé lorsque vous avez fini de relâcher une touche QUELCONQUE. Voir l'événement {{event("keyup")}}.
-
-<!---->
 
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
   - : Propriété de gestionnaire d'événements pour les événements {{event("languagechange")}} dans la fenêtre.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Appelé après que toutes les ressources et les DOM ont été entièrement chargés. NE SERA PAS appelé lorsque la page est chargée à partir du cache, comme avec le bouton arrière.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Appelé quand un bouton QUELCONQUE de la souris est pressé.
-
-<!---->
 
 - {{domxref("GlobalEventHandlers.onmousemove")}}
   - : Appelé en continu quand la souris est déplacée dans la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Appelé lorsque le pointeur quitte la fenêtre.
-
-<!---->
 
 - {{domxref("GlobalEventHandlers.onmouseover")}}
   - : Appelé lorsque le pointeur entre dans la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Appelé quand un bouton QUELCONQUE de la souris est relâché.
-
-<!---->
 
 - {{domxref("Window.onmozbeforepaint")}}
   - : Propriété de gestionnaire d'événements pour l'événement MozBeforePaint, qui est déclenché avant de repeindre la fenêtre si l'événement a été demandé par un appel à la méthode {{domxref("Window.mozRequestAnimationFrame()")}}.
@@ -457,8 +419,6 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("Window.onpaint")}}
   - : Propriété de gestionnaire d'évènement pour les évènements de dessin de la fenêtre.
 
-<!---->
-
 - {{domxref("WindowEventHandlers.onpopstate")}}
   - : Appelé quand le bouton arrière est pressé.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
@@ -466,24 +426,16 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : Appelé lorsqu'un formulaire est réinitialisé
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onresize")}}
   - : Appelé en continu lorsque vous redimensionnez la fenêtre.
 
-<!---->
-
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : Appelé lorsque la barre de défilement est déplacée par un moyen QUELCONQUE. Si la ressource correspond entièrement à la fenêtre, cet événement ne peut pas être invoqué.
-
-<!---->
 
 - {{domxref("GlobalEventHandlers.onwheel")}}
   - : Appelé lorsque la roue de la souris est tournée autour d'un axe quelconque.
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Appelé après le texte dans un champ de saisie est sélectionné.
-
-<!---->
 
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("selectionchange")}} est déclenché.
@@ -492,14 +444,10 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Appelé lorsqu'un formulaire est soumis.
 
-<!---->
-
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
   - : Gestionnaire d'événements pour les événements de rejet {{jsxref("Promise")}} non gérés.
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Appelé lorsque l'utilisateur quitte la page.
-
-<!---->
 
 - {{domxref("Window.onuserproximity")}}
   - : Propriété de gestionnaire d'événements pour les événements de proximité d'utilisateur.

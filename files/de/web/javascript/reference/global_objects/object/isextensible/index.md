@@ -52,7 +52,7 @@ Object.isExtensible(frozen); // === false
 
 ## Anmerkungen
 
-In ES5 muss das Argument der Methode ein echtes Objekt sein. Ist dies nicht der Fall, wird ein {{jsxref("TypeError")}} geworfen. In ES2015 hingegen wird ein Nicht-Objekt einfach als nicht-erweiterbares Objekt behandelt, sodass von der Methode `false `zurückgegeben wird.
+In ES5 muss das Argument der Methode ein echtes Objekt sein. Ist dies nicht der Fall, wird ein {{jsxref("TypeError")}} geworfen. In ES2015 hingegen wird ein Nicht-Objekt einfach als nicht-erweiterbares Objekt behandelt, sodass von der Methode `false`zurückgegeben wird.
 
 ```js
 Object.isExtensible(1);

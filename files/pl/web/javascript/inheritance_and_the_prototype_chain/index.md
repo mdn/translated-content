@@ -10,19 +10,19 @@ original_slug: Web/JavaScript/dziedziczenie_lancuch_prototypow
 ---
 {{jsSidebar("Advanced")}}
 
-JavaScript bywa mylący dla developerów doświadczonych w językach opartych na klasach (jak Java lub C++) przez to, że jest dynamiczny i nie zapewnia implementacji klasy per se (słowo kluczowe `class` zostało wprowadzone w ES2015, ale to tylko lukier składniowy, JavaScript pozostaje oparty na prototypach).
+JavaScript bywa mylący dla developerów doświadczonych w językach opartych na klasach (jak Java lub C++) przez to, że jest dynamiczny i nie zapewnia implementacji klasy per se (słowo kluczowe `class` zostało wprowadzone w ES2015, ale to tylko lukier składniowy, JavaScript pozostaje oparty na prototypach).
 
-Jeżeli chodzi o dziedziczenie, JavaScript posiada tylko jedną konstrukcję: obiekty. Każdy obiekt posiada prywatną własność łączącą go z innym obiektem zwanym jego **prototypem**. Obiekt _prototype_ posiada swój własny prototyp, i tak dalej aż obiekt osiągnie `null` jako swój prototyp. `null` nie ma prototypu i działa jak zakończenie **łańcucha** **prototypów**.
+Jeżeli chodzi o dziedziczenie, JavaScript posiada tylko jedną konstrukcję: obiekty. Każdy obiekt posiada prywatną własność łączącą go z innym obiektem zwanym jego **prototypem**. Obiekt _prototype_ posiada swój własny prototyp, i tak dalej aż obiekt osiągnie `null` jako swój prototyp. `null` nie ma prototypu i działa jak zakończenie **łańcucha** **prototypów**.
 
-Podczas gdy jest to często uważane za słabość języka JavaScript, prototypowe podejście do dziedziczenia jest w rzeczywistości znacznie potężniejszym narzędziem niż model klasowy. Dla przykładu trywialnie proste jest zbudowanie klas w modelu prototypowym, podczas gdy odwrotna operacja jest znacznie bardziej skomplikowana.
+Podczas gdy jest to często uważane za słabość języka JavaScript, prototypowe podejście do dziedziczenia jest w rzeczywistości znacznie potężniejszym narzędziem niż model klasowy. Dla przykładu trywialnie proste jest zbudowanie klas w modelu prototypowym, podczas gdy odwrotna operacja jest znacznie bardziej skomplikowana.
 
 ## Dziedziczenie z łańcucha prototypów
 
 ### Dziedziczenie właściwości
 
-Obiekty w JavaScript są dynamicznymi "workami" właściwości, nazywanych **własnymi właściwościami**\_ _(\_own properties_). Obiekty JavaScript mają połączenie z obiektem prototypu. Podczas próby dostępu do właściwości obiektu, właściwość będzie szukana nie tylko w samym obiekcie, ale też w jego prototypie, prototypie jego prototypu i tak dalej, aż do odnalezienia właściwości o pasującej nazwie bądź końca łańcucha prototypów.
+Obiekty w JavaScript są dynamicznymi "workami" właściwości, nazywanych **własnymi właściwościami**\_ _(\_own properties_). Obiekty JavaScript mają połączenie z obiektem prototypu. Podczas próby dostępu do właściwości obiektu, właściwość będzie szukana nie tylko w samym obiekcie, ale też w jego prototypie, prototypie jego prototypu i tak dalej, aż do odnalezienia właściwości o pasującej nazwie bądź końca łańcucha prototypów.
 
-> **Note:** W standardzie ECMAScript, notacja `jakisObiekt.[[Prototype]] `jest używana do oznaczenia prototypu  `jakisObiekt.` Jest to odpowiednik właściwości `__proto__` (przestarzały).Nie powinno być to mylone z właściwością `func.prototype` funkcji, który zamiast tego oznacza `[[Prototype]]` który jest przypisany do wszystkich instancji stworzonych z danej funkcji kiedy jest użyta jako konstruktor . Od ECMAScript 6 do obiektu `[[Prototype]]` można uzyskać dostęp przez {{jsxref("Object.getPrototypeOf()")}} i {{jsxref("Object.setPrototypeOf()")}}.
+> **Note:** W standardzie ECMAScript, notacja `jakisObiekt.[[Prototype]] `jest używana do oznaczenia prototypu  `jakisObiekt.` Jest to odpowiednik właściwości `__proto__` (przestarzały).Nie powinno być to mylone z właściwością `func.prototype` funkcji, który zamiast tego oznacza `[[Prototype]]` który jest przypisany do wszystkich instancji stworzonych z danej funkcji kiedy jest użyta jako konstruktor . Od ECMAScript 6 do obiektu `[[Prototype]]` można uzyskać dostęp przez {{jsxref("Object.getPrototypeOf()")}} i {{jsxref("Object.setPrototypeOf()")}}.
 
 Oto co się dzieje kiedy próbujemy uzyskać dostęp do właściwości:
 
@@ -60,7 +60,7 @@ Ustawienie właściwości obiektu tworzy własną właściwość. Jedyny wyjąte
 
 ### Dziedziczenie "metody"
 
-JavaScript nie ma "metod" w rozumieniu języków obiektowych. W JS każda funkcja może być dodana jako właściwość do obiektu. Odziedziczona funkcja zachowuje się jak każda inna właściwość, wliczając w to zakrywanie właściwości, tak jak pokazano wyżej (w tym wypadku forma *nadpisania metody*).
+JavaScript nie ma "metod" w rozumieniu języków obiektowych. W JS każda funkcja może być dodana jako właściwość do obiektu. Odziedziczona funkcja zachowuje się jak każda inna właściwość, wliczając w to zakrywanie właściwości, tak jak pokazano wyżej (w tym wypadku forma *nadpisania metody*).
 
 Kiedy jest wykonywana odziedziczona metoda, wartość [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this "this") wskazuje na obiekt, który dziedziczy, nie na obiekt w którym ta metoda została zadeklarowana jako własna właściwość
 
@@ -134,7 +134,7 @@ var g = new Graph();
 // g.[[Prototype]] is the value of Graph.prototype when new Graph() is executed.
 ```
 
-### Za pomocą `Object.create`
+### Za pomocą `Object.create`
 
 ECMAScript 5 wprowadził nową metodę: {{jsxref("Object.create()")}}. Wywołanie tej metody tworzy nowy obiekt. Jego prototypem staje się pierwszy argument tej metody:
 
@@ -155,31 +155,31 @@ console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
 ```
 
-### Za pomocą słowa kluczowego `class`
+### Za pomocą słowa kluczowego `class`
 
-ECMAScript 6 wprowadził zestaw nowych słów kluczowych do implementacji [klas](/pl/docs/Web/JavaScript/Reference/Classes). Mimo, że konstrukcje te mogą wydawać się znajome programistom języków opartych na klasach, nie są one tym samym. JavaScript wciąż opiera się na prototypach. Nowe słowa kluczowe to {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} oraz {{jsxref("Operators/super", "super")}}.
+ECMAScript 6 wprowadził zestaw nowych słów kluczowych do implementacji [klas](/pl/docs/Web/JavaScript/Reference/Classes). Mimo, że konstrukcje te mogą wydawać się znajome programistom języków opartych na klasach, nie są one tym samym. JavaScript wciąż opiera się na prototypach. Nowe słowa kluczowe to {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} oraz {{jsxref("Operators/super", "super")}}.
 
 ```js
 "use strict";
 
 class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 }
 
 class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
+  constructor(sideLength) {
+    super(sideLength, sideLength);
+  }
   get area() {
-    return this.height * this.width;
-  }
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
-  }
+    return this.height * this.width;
+  }
+  set sideLength(newLength) {
+    this.height = newLength;
+    this.width = newLength;
+  }
 }
 
 var square = new Square(2);
@@ -189,13 +189,13 @@ var square = new Square(2);
 
 Czas dostępu do właściwości znajdujących się wysoko w łańcuchu prototypów może negatywnie wpływać na wydajność, co może mieć znaczenie w przypadku kodu, którego szybkość wykonania jest krytyczna. W dodatku próba dostępu do nieistniejącej właściwości zawsze powoduje przeszukanie pełnego łańcucha prototypów.
 
-Kiedy iterujemy po właściwościach obiektu, sięgamy do **każdej** właściwości widocznej w łańcuchu prototypów.
+Kiedy iterujemy po właściwościach obiektu, sięgamy do **każdej** właściwości widocznej w łańcuchu prototypów.
 
-Aby sprawdzić czy obiekt ma właściwość zdefiniowaną na nim samym, a nie gdzieś w łańcuchu prototypów, konieczne jest użycie metody [`hasOwnProperty`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"), którą wszystkie obiekty dziedziczą z `Object.prototype`.
+Aby sprawdzić czy obiekt ma właściwość zdefiniowaną na nim samym, a nie gdzieś w łańcuchu prototypów, konieczne jest użycie metody [`hasOwnProperty`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"), którą wszystkie obiekty dziedziczą z `Object.prototype`.
 
-[`hasOwnProperty`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") jest w JavaScript jedyną rzeczą, która działa na właściwościach obiektu **nie** przeszukując łańcucha prototypów.
+[`hasOwnProperty`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") jest w JavaScript jedyną rzeczą, która działa na właściwościach obiektu **nie** przeszukując łańcucha prototypów.
 
-Uwaga: sprawdzenie czy właściwość jest [`undefined`](/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined) **nie** wystarczy. Właściwość może istnieć, a jedynie mieć akurat wartość ustawioną na `undefined`.
+Uwaga: sprawdzenie czy właściwość jest [`undefined`](/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined) **nie** wystarczy. Właściwość może istnieć, a jedynie mieć akurat wartość ustawioną na `undefined`.
 
 ### Zła praktyka: Rozszerzanie natywnych prototypów
 

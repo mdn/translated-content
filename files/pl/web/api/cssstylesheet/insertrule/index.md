@@ -36,4 +36,4 @@ For rule sets this contains both the selector and the style declaration. For at-
 
 ### Specyfikacja
 
-[insertRule ](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-insertRule)
+[insertRule ](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-insertRule)

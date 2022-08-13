@@ -34,7 +34,7 @@ function square(number) {
 }
 ```
 
-Die Funktion `square `nimmt einen Parameter entgegen, welcher `number` heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der Parameter der Funktion (das ist `number`), multipliziert mit sich selbst, zurückgegeben werden soll. Dabei gibt das [`return`](/de/docs/Web/JavaScript/Reference/Statements/return "return") Statement an, welcher Wert von der Funktion zurückzugeben wird.
+Die Funktion `square`nimmt einen Parameter entgegen, welcher `number` heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der Parameter der Funktion (das ist `number`), multipliziert mit sich selbst, zurückgegeben werden soll. Dabei gibt das [`return`](/de/docs/Web/JavaScript/Reference/Statements/return "return") Statement an, welcher Wert von der Funktion zurückzugeben wird.
 
 ```js
 return number * number;
@@ -108,7 +108,7 @@ console.log(cube);
 
 gibt \[0, 1, 8, 125, 1000] zurück.
 
-In JavaScript kann eine Funktion definiert werden, wenn eine Bedingung erfüllt ist. Zum Beispiel wird `myFunc` nur definiert, wenn `num `gleich `0 `ist:
+In JavaScript kann eine Funktion definiert werden, wenn eine Bedingung erfüllt ist. Zum Beispiel wird `myFunc` nur definiert, wenn `num`gleich `0`ist:
 
 ```js
 var myFunc;
@@ -143,7 +143,7 @@ function square(n) { return n * n; }
 
 Der Scope einer Funktion ist die Funktion in der sie deklariert wird, oder das gesamte Programm, falls sie auf oberster Ebene deklariert wird.
 
-> **Note:** **Hinweis:** Nur die oben angegebene Syntax für Funktionen wird funktionieren (`function funcName(){}`). Der folgende Code funktioniert nicht. Das bedeutet, dass das nur mit Funktionsdeklarationen funktioniert aber nicht mit Funktionsausdrücken.
+> **Hinweis:** Nur die oben angegebene Syntax für Funktionen wird funktionieren (`function funcName(){}`). Der folgende Code funktioniert nicht. Das bedeutet, dass das nur mit Funktionsdeklarationen funktioniert aber nicht mit Funktionsausdrücken.
 
 ```js example-bad
 console.log(square); // square ist mit dem Initialwert undefined gehoisted.
@@ -217,9 +217,9 @@ getScore(); // gibt "Chamahk scored 5" zurück
 
 Eine Funktion kann sich selbst referenzieren und aufrufen. Dabei gibt es drei Möglichkeiten, wie eine Funktion sich selbst referenzieren kann:
 
-1.  Der Funktionsname
-2.  [`arguments.callee`](/de/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  Eine im Scope liegende Variable, die auf die Funktion referenziert.
+1. Der Funktionsname
+2. [`arguments.callee`](/de/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. Eine im Scope liegende Variable, die auf die Funktion referenziert.
 
 Nimmt man zum Beispiel folgende Funktion:
 
@@ -231,9 +231,9 @@ var foo = function bar() {
 
 Folgende Anweisungen im Körper der Funktion bewirken alle das Gleiche:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Eine Funktion, die sich selbst aufruft, wird _rekursive Funktion_ genannt. Rekursion ist dabei vergleichbar mit einer Schleife. Beide führen den selben Quelltext mehrfach aus und beide benötigen eine Bedingung (um eine unendliche Schleife zu vermeiden oder eine unendliche Rekursion zu vermeiden). Das nächste Beispiel zeigt eine Schleife:
 
@@ -366,9 +366,9 @@ A(1); // logs 6 (1 + 2 + 3)
 
 In diesem Beispiel benutzt C die Variablen `y`, von B, und `x`, von A. Das kann gemacht werden weil:
 
-1.  `B` ist eine Closure, die `A` enthält, z. B. `B` kann die Argumente und Variablen von `A` benutzen.
-2.  `C `ist ein Closure, die `B` enthält.
-3.  Weil die Closure von B auf A zugreifen kann, kann die Closure von C auf die Argumente und Variablen von A und B zugreifen. Anders gesagt verkettet C den Scope von B und A in dieser Reihenfolge.
+1. `B` ist eine Closure, die `A` enthält, z. B. `B` kann die Argumente und Variablen von `A` benutzen.
+2. `C`ist ein Closure, die `B` enthält.
+3. Weil die Closure von B auf A zugreifen kann, kann die Closure von C auf die Argumente und Variablen von A und B zugreifen. Anders gesagt verkettet C den Scope von B und A in dieser Reihenfolge.
 
 Das umgekehrte ist nicht möglich. A kann nicht auf C zugreifen, weil A nicht auf die Variablen und Argumente von B zugreifen kann und C eine Variable von B ist. So bleibt C für B privat.
 
@@ -506,7 +506,7 @@ myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
 myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 ```
 
-> **Note:** **Hinweis:** Die `arguments` Variable ist "Array-ähnlich", aber kein Array. Es ist Array-ähnlich indem es nummerierte Indizes und eine `length` Eigenschaft hat. Jedoch unterstützt es nicht alle Array-Manipulations-Methoden.
+> **Hinweis:** Die `arguments` Variable ist "Array-ähnlich", aber kein Array. Es ist Array-ähnlich indem es nummerierte Indizes und eine `length` Eigenschaft hat. Jedoch unterstützt es nicht alle Array-Manipulations-Methoden.
 
 Siehe im {{jsxref("Function")}} Objekt in den JavaScript Referenzen für mehr Informationen.
 
@@ -544,7 +544,7 @@ Für mehr Details, siehe in den Referenzen unter [Default-Parameter](/de/docs/We
 
 ### Rest-Parameter
 
-Die [Rest-Parameter ](/de/docs/Web/JavaScript/Reference/Functions/rest_parameters)Syntax ermöglicht er eine unendliche Anzahl von Argumenten als Array zu repräsentieren. Im Beispiel wird der Rest-Parameter eingesetzt um die alle Argumente ab dem zweiten Argument zu sammeln. Danach werden diese mit dem ersten Parameter multipliziert. Dieses Beispiel benutzt Pfeilfunktionen, welche in nächsten Kapitel erklärt werden:
+Die [Rest-Parameter](/de/docs/Web/JavaScript/Reference/Functions/rest_parameters)Syntax ermöglicht er eine unendliche Anzahl von Argumenten als Array zu repräsentieren. Im Beispiel wird der Rest-Parameter eingesetzt um die alle Argumente ab dem zweiten Argument zu sammeln. Danach werden diese mit dem ersten Parameter multipliziert. Dieses Beispiel benutzt Pfeilfunktionen, welche in nächsten Kapitel erklärt werden:
 
 ```js
 function multiply(multiplier, ...theArgs) {

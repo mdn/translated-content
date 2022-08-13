@@ -58,7 +58,7 @@ Die Eigenschaft `-webkit-mask-repeat-x` gibt an, ob und wie ein Maskenbild horiz
 
 ### Support für mehrere Bildmasken
 
-Sie können für jedes Maskenbild, getrennt durch Kommas, einen anderen `<repeat-style> `angeben:
+Sie können für jedes Maskenbild, getrennt durch Kommas, einen anderen `<repeat-style>`angeben:
 
 ```css
 .examplethree {

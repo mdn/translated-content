@@ -12,7 +12,7 @@ translation_of: Web/CSS/box-shadow
 
 ## Übersicht
 
-Die [CSS](/de/docs/Web/CSS)-Eigenschaft `box-shadow `beschreibt einen oder mehrere Schatteneffekte als eine kommaseparierte Liste. Sie erlaubt es, den Rahmen fast jedes Elements einen Schatten werfen zu lassen. Falls ein {{cssxref("border-radius")}} für das Element mit einem Schlagschatten angegeben ist, übernimmt der Schatten diese abgerundeten Ecken. Die z-Anordnung mehrerer Schlagschatten ist die gleiche wie bei mehreren [Textschatten](/de/docs/Web/CSS/text-shadow) (der zuerst angegebene Schatten ist der oberste).
+Die [CSS](/de/docs/Web/CSS)-Eigenschaft `box-shadow`beschreibt einen oder mehrere Schatteneffekte als eine kommaseparierte Liste. Sie erlaubt es, den Rahmen fast jedes Elements einen Schatten werfen zu lassen. Falls ein {{cssxref("border-radius")}} für das Element mit einem Schlagschatten angegeben ist, übernimmt der Schatten diese abgerundeten Ecken. Die z-Anordnung mehrerer Schlagschatten ist die gleiche wie bei mehreren [Textschatten](/de/docs/Web/CSS/text-shadow) (der zuerst angegebene Schatten ist der oberste).
 
 [Box-shadow-Generator](/de/docs/Web/CSS/CSS_Boxmodell/Box-shadow_Generator) ist ein interaktives Werkzeug, das es erlaubt, einen Schlagschatten zu generieren.
 
@@ -41,7 +41,7 @@ box-shadow: 3px 3px red, -1em 0 0.4em olive;
 
 - `inset`
   - : Falls nicht angegeben (Standardwert), wird angenommen, dass der Schatten ein Schlagschatten ist (als ob die Box über dem Inhalt schweben würde).
-    Die Angabe des Schlüsselworts `inset `ändert den Schatten so, dass er innerhalb des Rahmens angezeigt wird (als ob der Inhalt innerhalb der Box nach innen gedrückt wäre). Innere Schatten werden innerhalb des Randes (sogar transparenten) gezeichnet, über dem Hintergrund aber unterhalb des Inhalts.
+    Die Angabe des Schlüsselworts `inset`ändert den Schatten so, dass er innerhalb des Rahmens angezeigt wird (als ob der Inhalt innerhalb der Box nach innen gedrückt wäre). Innere Schatten werden innerhalb des Randes (sogar transparenten) gezeichnet, über dem Hintergrund aber unterhalb des Inhalts.
 - `<offset-x>` `<offset-y>`
   - : Diese zwei {{cssxref("&lt;length&gt;")}}-Werte setzen den Schattenabstand. `<offset-x>` beschreibt die horizontale Distanz. Negative Werte platzieren den Schatten links des Elements. `<offset-y>` beschreibt die vertikale Distanz. Negative Werte platzieren den Schatten oberhalb des Elements. Siehe {{cssxref("&lt;length&gt;")}} für mögliche Einheiten.
     Falls beide Werte `0` sind, wird der Schatten hinter dem Element platziert (und können einen Unschärfeeffekt erzeugen, falls `<blur-radius>` und/oder `<spread-radius>` gesetzt sind).

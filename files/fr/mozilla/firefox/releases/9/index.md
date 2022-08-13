@@ -68,8 +68,6 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - [Utilisation du mode plein écran](/fr/docs/DOM/Using_full-screen_mode)
   - : La nouvelle API pour le plein écran offre un moyen de présenter le contenu en utilisant la totalité de l'écran, sans l'interface du navigateur. C'est très bien pour les vidéos et les jeux. Cette API est encore expérimentale et préfixée.
 
-<!---->
-
 - La méthode [`Node.contains()`](/fr/docs/Web/API/Node/contains) est désormais implémentée, elle vous permet de déterminer si un nœud donné est un descendant d'un autre noeud.
 - L'attribut [`Node.parentElement`](/fr/docs/Web/API/Node/parentElement) a été implémenté, cela renvoie l'[`Element`](/fr/docs/Web/API/Element) parent d'un noeud DOM, ou `null` si le parent n'est pas un élément.
 - [Les évènements de composition](/fr/docs/DOM/CompositionEvent) du DOM Level 3 sont à présent supportés.

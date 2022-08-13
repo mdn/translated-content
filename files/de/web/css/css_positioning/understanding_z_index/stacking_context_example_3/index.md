@@ -45,7 +45,7 @@ Um die Situation besser zu verstehen, sehen Sie hier die Stapelkontexthierarchie
 
 Dieses Problem kann vermieden werden, indem die Überlappung zwischen den Menüs der verschiedenen Ebenen entfernt wird, oder indem individuelle (und unterschiedliche) `z-index` Werte verwendet werden, die über den id-Selektor anstelle des class-Selektors zugewiesen werden, oder indem die HTML-Hierarchie abgeflacht wird.
 
-> **Note:** **Hinweis:** Im Quellcode sehen Sie, dass die Menüs der zweiten und dritten Ebene aus mehreren DIVs bestehen, die in einem absolut positionierten Container enthalten sind. Dies ist nützlich, um sie alle auf einmal zu gruppieren und zu positionieren.
+> **Hinweis:** Im Quellcode sehen Sie, dass die Menüs der zweiten und dritten Ebene aus mehreren DIVs bestehen, die in einem absolut positionierten Container enthalten sind. Dies ist nützlich, um sie alle auf einmal zu gruppieren und zu positionieren.
 
 ## Beispiel Quellcode
 

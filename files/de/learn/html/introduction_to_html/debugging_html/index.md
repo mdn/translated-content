@@ -75,15 +75,15 @@ Was bedeutet permissiv? Wenn man in Programmiersprachen etwas falsch macht, dann
 
 HTML ignoriert Syntaxfehler, Browser rendern permissiv, die Seite wird angezeigt, obwohl Syntaxfehler im Code sind. Browser haben Regeln eingebaut, welche falsch geschriebenen HTML-Code trotzdem interpretieren, allerdings meist nicht so, wie es vorgesehen war. Die Fehler müssen trotzdem behoben werden.
 
-> **Note:** **Hinweis**: Warum wird HTML permissiv gerendert? Weil bei der Entwicklung des World Wide Web befunden wurde, dass es wichtiger ist, dass Leute ihre Inhalte publizieren können. Wichtiger als ein paar Syntaxfehler im Code, die eine Veröffentlichung verhindern würden. Das Internet wäre vermutlich nicht so populär, wenn die Regeln der Sprache strenger gewesen wären.
+> **Hinweis:** Warum wird HTML permissiv gerendert? Weil bei der Entwicklung des World Wide Web befunden wurde, dass es wichtiger ist, dass Leute ihre Inhalte publizieren können. Wichtiger als ein paar Syntaxfehler im Code, die eine Veröffentlichung verhindern würden. Das Internet wäre vermutlich nicht so populär, wenn die Regeln der Sprache strenger gewesen wären.
 
 ### Aktives Lernen: Permissiven Code untersuchen
 
 Es ist Zeit sich anzuschauen, wie permissiv HTML Code gerendert wird.
 
-1.  Laden Sie bitte die folgende Datei herunter und speichern sie diese lokal: [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) In diesem Demo-Code sind absichtlich einige Fehler verbaut. Der HTML-Code ist schlecht geschrieben.
-2.  Öffnen Sie diese Datei in einem Browser. Sie sollten folgendes sehen: ![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
-3.  Das sieht gleich etwas merkwürdig aus. Schauen sie sich nun den Quellcode der Datei an:
+1. Laden Sie bitte die folgende Datei herunter und speichern sie diese lokal: [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) In diesem Demo-Code sind absichtlich einige Fehler verbaut. Der HTML-Code ist schlecht geschrieben.
+2. Öffnen Sie diese Datei in einem Browser. Sie sollten folgendes sehen: ![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
+3. Das sieht gleich etwas merkwürdig aus. Schauen sie sich nun den Quellcode der Datei an:
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -104,16 +104,16 @@ Es ist Zeit sich anzuschauen, wie permissiv HTML Code gerendert wird.
     </ul>
     ```
 
-4.  Lassen Sie uns die Probleme erläutern:
+4. Lassen Sie uns die Probleme erläutern:
 
     - Die {{htmlelement("p","Absatz")}} und {{htmlelement("li","Listenpunkt")}} Elemente haben keine schließenden Tags. Auf dem Bild oben sehen wir, das dies kaum Auswikrungen hat, da es für den Browser einfach ist, trotzdem zu erkennen, wo das Ende dieser Elemente sein sollte.
     - Das erste {{htmlelement("strong")}} Element hat kein schließendes Tag. Der Browser kann nicht erraten, wo das Element enden soll, deswegen ist der ganze Rest von dem Text stark hervorgehoben.
     - Diese Sektion des Textes wurden die Elemente schlecht verschachtelt. `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. Wegen dem vorhergehenden Problem, kann man nicht sagen, wie dies vom Browser interpretiert wird.
     - Bei dem {{htmlattrxref("href","a")}}-Attributwert wurde ein schließendes, doppeltes Anführungszeichen vergessen. Dies scheint das größte Problem zu verursachen, der Link ist gar nicht erst gerendert worden.
 
-5.  Lassen Sie uns den Code anschauen den der Browser zum rendern benutzt hat, im Gegensatz zu dem geschriebenen Quellcode. Dafür benutzen wir die Web Developer Tools, die in jedem modernen Browser enthalten sind (nicht aber in der mobilen Version der Browser). Wenn Sie nicht wissen, was Web Developer Tools sind, dann nehmen Sie sich einige Minuten Zeit, um diesen Artikel zu lesen: [Entdecken Sie die Web Developer Tools](/de/docs/Learn/Discover_browser_developer_tools)
-6.  In dem DOM-Inspektor können Sie sehen, wie der gerenderte Code aussieht: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
-7.  Mit Hilfe des DOM-Inspektors können wir den Code den der Browser versucht hat zu beheben sehen und wie dieser versucht die HTML Fehler zu beheben. (Wir habe hier Firefox benutzt, um den Code anzuschauen; andere moderne Browser _sollten_ zu dem selben Resultat kommen.):
+5. Lassen Sie uns den Code anschauen den der Browser zum rendern benutzt hat, im Gegensatz zu dem geschriebenen Quellcode. Dafür benutzen wir die Web Developer Tools, die in jedem modernen Browser enthalten sind (nicht aber in der mobilen Version der Browser). Wenn Sie nicht wissen, was Web Developer Tools sind, dann nehmen Sie sich einige Minuten Zeit, um diesen Artikel zu lesen: [Entdecken Sie die Web Developer Tools](/de/docs/Learn/Discover_browser_developer_tools)
+6. In dem DOM-Inspektor können Sie sehen, wie der gerenderte Code aussieht: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
+7. Mit Hilfe des DOM-Inspektors können wir den Code den der Browser versucht hat zu beheben sehen und wie dieser versucht die HTML Fehler zu beheben. (Wir habe hier Firefox benutzt, um den Code anzuschauen; andere moderne Browser _sollten_ zu dem selben Resultat kommen.):
 
     - Den Absätzen und den Listenpunkten wurden schließende Tags hinzugefügt.
     - Es ist nicht klar, wo das erste `<strong>`-Element enden soll, deswegen hat der Browser jeden separaten Block mit einem eigenen `<strong>`-Tag versehen, bis zum Ende des Dokumentes!
@@ -149,10 +149,10 @@ Man kann entweder eine Webseite, ein hochgeladenes HTML-Dokument oder direkt ein
 
 Lassen Sie uns das Gelernte einmal in die Praxis umsetzen, mit unserem [Beispieldokument hier](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  Öffnen Sie als Erstes den [Markup Validation Service](https://validator.w3.org/) in einem anderen Browser-Tab.
-2.  Gehen Sie zu dem [Validate by Direct Input](https://validator.w3.org/#validate_by_input) Tab. Dort kann man direkt HTML-Code überprüfen.
-3.  Kopieren Sie den Code aus dem Beispieldokument komplett in das große Textfeld auf der Webseite des Markup Validation Service.
-4.  Klicken Sie auf _Check_.
+1. Öffnen Sie als Erstes den [Markup Validation Service](https://validator.w3.org/) in einem anderen Browser-Tab.
+2. Gehen Sie zu dem [Validate by Direct Input](https://validator.w3.org/#validate_by_input) Tab. Dort kann man direkt HTML-Code überprüfen.
+3. Kopieren Sie den Code aus dem Beispieldokument komplett in das große Textfeld auf der Webseite des Markup Validation Service.
+4. Klicken Sie auf _Check_.
 
 Dies sollte Ihnen eine Liste der Fehler und weitere Informationen geben.
 
@@ -170,7 +170,7 @@ Meistens sind die Fehlermeldungen hilfreich, manchmal aber auch schwierig zu ver
 
       Beispiel: <a href="https://www.mozilla.org/>Link zur Mozilla Homepage</a> ↩ </ul>↩ </body>↩</html>
 
-  > **Note:** **Hinweis**: Ein Attributwert, bei welchem geschlossene Anführungszeichen fehlen ist ein offenes Element, da der Rest des Dokumentes als der Wert des Attributes gelesen wird.
+  > **Hinweis:** Ein Attributwert, bei welchem geschlossene Anführungszeichen fehlen ist ein offenes Element, da der Rest des Dokumentes als der Wert des Attributes gelesen wird.
 
 - "Unclosed element `ul`": Diese Meldung ist nicht hilfreich, da das {{htmlelement("ul")}}-Element _richtig_ geschlossen wurde. Der Fehler kommt von dem nicht geschlossenen {{htmlelement("a")}}-Element, da dort die schließenden Anführungszeichen, bei einem der Attributwerte fehlen.
 

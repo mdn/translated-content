@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
 {{JSRef}}
 
-Die statische **`Atomics`\*\***`.store()`\*\* Methode speichert einen gegebenen Wert an einer gegebenen Position in dem Array und gibt den Wert zurück.
+Die statische **`Atomics.store()`** Methode speichert einen gegebenen Wert an einer gegebenen Position in dem Array und gibt den Wert zurück.
 
 {{EmbedInteractiveExample("pages/js/atomics-store.html")}}
 

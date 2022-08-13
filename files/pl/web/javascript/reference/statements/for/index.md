@@ -39,17 +39,11 @@ Tworzy pętlę, która składa się z trzech opcjonalnych wyrażeń, załączony
 - `wyrażenie-wstępne`
   - : Wyrażenie (włącznie z wyrażeniami przypisania) lub deklaracja zmiennej. Zazwyczaj używane do zainicjalizowania zmiennej licznika. Wyrażenie to może opcjonalnie deklarować nowe zmienne za pomocą słowa kluczowego `var`. Zmienne te nie są lokalne dla pętli, inaczej mówiąc, mają one taki sam zasięg jak pętla `for`.
 
-<!---->
-
 - `warunek`
   - : Wyrażenie sprawdzane podczas każdego przejścia przez pętlę. Jeśli warunek jest prawdziwy, wykonywana jest `instrukcja`. Sprawdzenie warunku jest opcjonalne. Jeśli zostanie pominięte, warunek jest zawsze uznawany jako prawdziwy.
 
-<!---->
-
 - `wyrażenie-inkrementacji`
   - : Ogólnie używane do aktualizacji lub inkrementacji wartości zmiennej licznika.
-
-<!---->
 
 - `instrukcja`
   - : Instrukcja, wykonywana dopóki warunek oceniany jest jako prawdziwy. Aby wykonać większą ilość instrukcji wewnątrz pętli, użyj instrukcji [block](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Polecenia/block) (`{ ... }`), aby pogrupować te instrukcje.

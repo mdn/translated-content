@@ -30,8 +30,6 @@ Funkcja `lang` określa, czy wierzchołek kontekstu jest zgodny z podanym język
 
 - Język wierzchołka określany jest na podstawie jego atrybutu `xml:lang`. Jeśli aktualny wierzchołek go nie posiada, wartość jest określana przez najbliższego przodka posiadającego atrybut `xml:lang`. W przypadku niemożności określenia języka (żaden przodek nie posiada atrybutu `xml:lang`), funkcja zwróci wartość fałsz.
 
-<!---->
-
 - Jeśli dany łańcuch znaków nie określa kodu kraju, funkcja ta porówna wierzchołki tego języka z wszystkimi kodami krajów. Odwrotność nie jest prawdziwa.
 
 Bazując na poniższym fragmencie kodu XML:

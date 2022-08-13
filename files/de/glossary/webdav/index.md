@@ -18,8 +18,6 @@ WebDAV erlaubt Klienten
 - Webseiten zu kopieren und zu verschieben
 - ein Dokument zu sperren, damit dieses nicht von mehreren Personen gleichzeitig bearbeitet wird
 
-<!---->
-
 ## Mehr erfahren
 
 ### Allgemeinwissen

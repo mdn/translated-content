@@ -28,8 +28,6 @@ false と評価できる式に対しては true を返し、true と評価でき
 - この関数は [boolean()](/ja/docs/Web/XPath/Functions/boolean) 関数と同様のふるまいをしますが、返される値はその逆です。
 - 要素に一部の属性がないことを検査することができます。
 
-<!---->
-
     <xsl:for-each match="//a[not(@name and @name = 'badname')]">
       <!-- iterates over any <a> element in the document, that
            either has no 'name' attribute at all, or it has one,

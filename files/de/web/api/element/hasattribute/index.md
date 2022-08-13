@@ -11,7 +11,7 @@ translation_of: Web/API/Element/hasAttribute
 ---
 {{APIRef("DOM")}}
 
-`Die Methode `**`Element.hasAttribute()`** nimmt einen **String** als Argument und gibt einen **Boolean** zurück. Der als Argument übergebene **String** spezifiziert das gemeinte Attribut und der Rückabe Wert gibt an, ob dieses Attribut in dem jeweiligen Element vorkommt .
+`Die Methode`**`Element.hasAttribute()`** nimmt einen **String** als Argument und gibt einen **Boolean** zurück. Der als Argument übergebene **String** spezifiziert das gemeinte Attribut und der Rückabe Wert gibt an, ob dieses Attribut in dem jeweiligen Element vorkommt .
 
 ## Syntax
 

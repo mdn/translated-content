@@ -20,7 +20,7 @@ Die `:hover` Pseudoklasse kann auf alle [Pseudoelemente](/de/docs/Web/CSS/Pseudo
 
 Webbrowser (User-Agents) wie Firefox, Internet Explorer, Safari, Opera oder Chrome, wenden den zugehörigen Stil an, wenn der Cursor (Mauszeiger) über ein Element fährt.
 
-> **Note:** **Hinweis**: Auf Touchscreens ist `:hover` problematisch oder unmöglich. Abhängig vom Browser, tritt die `:hover` Pseudoklasse niemals, nur für einen kurzen Moment nach dem Berühren in Kraft oder bleibt aktiviert, auch wenn der Nutzer das Element nicht mehr berührt, bis er ein anderes Element berührt. Weil Touchscreen-Geräte oft gleich sind, ist es wichtig für Webentwickler, keinen Inhalt zu haben, der nur über die `:hover` Pseudoklasse aufrufbar ist, da es für Nutzer von solchen Geräten schwierig oder unmöglich ist, diesen Inhalt aufzurufen.
+> **Hinweis:** Auf Touchscreens ist `:hover` problematisch oder unmöglich. Abhängig vom Browser, tritt die `:hover` Pseudoklasse niemals, nur für einen kurzen Moment nach dem Berühren in Kraft oder bleibt aktiviert, auch wenn der Nutzer das Element nicht mehr berührt, bis er ein anderes Element berührt. Weil Touchscreen-Geräte oft gleich sind, ist es wichtig für Webentwickler, keinen Inhalt zu haben, der nur über die `:hover` Pseudoklasse aufrufbar ist, da es für Nutzer von solchen Geräten schwierig oder unmöglich ist, diesen Inhalt aufzurufen.
 
 ## Beispiele
 
@@ -80,9 +80,9 @@ Sieh dir unser [CSS-basiertes Dropdown Menü Beispiel](/@api/deki/files/6238/=cs
 
 ### Galerie mit Vollbild-Bildern und Vorschauen
 
-Man kann die `:hover` Pseudoklasse nutzen, um eine Bildergalerie mit Vollbild-Bildern, welche nur angezeigt werden, wenn der Nutzer mit der Maus über die Vorschau fährt, zu erstellen. Sieh dir dafür [diese Demo ](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip")an.
+Man kann die `:hover` Pseudoklasse nutzen, um eine Bildergalerie mit Vollbild-Bildern, welche nur angezeigt werden, wenn der Nutzer mit der Maus über die Vorschau fährt, zu erstellen. Sieh dir dafür [diese Demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip")an.
 
-> **Note:** **Hinweis:** Für einen analogen Effekt, der jedoch auf der {{ cssxref(":checked") }} Pseudoklasse basiert (angewendet auf Auswahlfelder), sieh dir [diese Demo ](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip")an, übernommen von der {{ cssxref(":checked") }} Seite.
+> **Hinweis:** Für einen analogen Effekt, der jedoch auf der {{ cssxref(":checked") }} Pseudoklasse basiert (angewendet auf Auswahlfelder), sieh dir [diese Demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip")an, übernommen von der {{ cssxref(":checked") }} Seite.
 
 ## Spezifikationen
 

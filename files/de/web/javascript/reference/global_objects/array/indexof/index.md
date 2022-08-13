@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 Die Methode **`indexOf()`** gibt den Index zurück, an dem ein bestimmtes Element im Array zum ersten Mal auftritt oder -1 wenn es nicht vorhanden ist.
 
-> **Note:** **Hinweis:** Für die String Methode, siehe {{jsxref("String.prototype.indexOf()")}}.
+> **Hinweis:** Für die String Methode, siehe {{jsxref("String.prototype.indexOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 

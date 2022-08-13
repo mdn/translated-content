@@ -50,7 +50,7 @@ const COLUMNS = 80;
 
 #### `const`, `let` or `var`?
 
-Nie używaj `const` tam, gdzie nie chcesz użyć stałej. Być może chciałeś zadeklarować zmienną z zakresem ograniczonym do danego bloku kodu za pomocą `let` lub zmienną globalną przy użyciu `var`. Obydwie te opcje nie wymagają wartości początkowej.
+Nie używaj `const` tam, gdzie nie chcesz użyć stałej. Być może chciałeś zadeklarować zmienną z zakresem ograniczonym do danego bloku kodu za pomocą `let` lub zmienną globalną przy użyciu `var`. Obydwie te opcje nie wymagają wartości początkowej.
 
 ```js example-good
 let columns;

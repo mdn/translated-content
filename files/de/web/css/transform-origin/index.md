@@ -348,54 +348,54 @@ Die Schlüsselwörte entschprechen folgenden Angaben in {{cssxref("&lt;percentag
 | ------------------ | -------------- |
 | `transform: none;` | ```html hidden |
 
-<div class="box1">&nbsp;</div> 
+<div class="box1">&nbsp;</div>
 ``````css hidden
-.box1 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: none; -webkit-transform: none; } 
+.box1 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: none; -webkit-transform: none; }
 ```{{EmbedLiveSample('transform_none', '', '', '', '', 'no-button') }}                                                                                                             |
 | `transform: rotate(30deg);`                              | ```html hidden
-<div class="box2">&nbsp;</div> 
+<div class="box2">&nbsp;</div>
 ``````css hidden
-.box2 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: rotate(30deg); -webkit-transform: rotate(30deg); } 
+.box2 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: rotate(30deg); -webkit-transform: rotate(30deg); }
 ```{{EmbedLiveSample('transform_rotate_only', '', '', '', '', 'no-button') }}                                                                               |
 | `transform: rotate(30deg); transform-origin: 0 0;`       | ```html hidden
-<div class="box3">&nbsp;</div> 
+<div class="box3">&nbsp;</div>
 ``````css hidden
-.box3 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: 0 0; -webkit-transform-origin: 0 0; transform: rotate(30deg); -webkit-transform: rotate(30deg); } 
+.box3 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: 0 0; -webkit-transform-origin: 0 0; transform: rotate(30deg); -webkit-transform: rotate(30deg); }
 ```{{EmbedLiveSample('transform_rotate', '', '', '', '', 'no-button') }}                                 |
 | `transform: rotate(30deg); transform-origin: 100% 100%;` | ```html hidden
-<div class="box4">&nbsp;</div> 
+<div class="box4">&nbsp;</div>
 ``````css hidden
-.box4 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: 100% 100%; -webkit-transform-origin: 100% 100%; transform: rotate(30deg); -webkit-transform: rotate(30deg); } 
+.box4 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: 100% 100%; -webkit-transform-origin: 100% 100%; transform: rotate(30deg); -webkit-transform: rotate(30deg); }
 ```{{EmbedLiveSample('transform_rotate_with_percentage', '', '', '', '', 'no-button') }} |
 | `transform: rotate(30deg); transform-origin: -1em -3em;` | ```html hidden
-<div class="box5">&nbsp;</div> 
+<div class="box5">&nbsp;</div>
 ``````css hidden
-.box5 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: -1em -3em; -webkit-transform-origin: -1em -3em; transform: rotate(30deg); -webkit-transform: rotate(30deg); } 
+.box5 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform-origin: -1em -3em; -webkit-transform-origin: -1em -3em; transform: rotate(30deg); -webkit-transform: rotate(30deg); }
 ```{{EmbedLiveSample('transform_rotate_with_em', '', '', '', '', 'no-button') }}         |
 | `transform: scale(1.9);`                                 | ```html hidden
-<div class="box6">&nbsp;</div> 
+<div class="box6">&nbsp;</div>
 ``````css hidden
-.box6 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); } 
+.box6 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); }
 ```{{EmbedLiveSample('transform_scale_only', '', '', '', '', 'no-button') }}                                                                                         |
 | `transform: scale(1.9); transform-origin: 0 0;`          | ```html hidden
-<div class="box7">&nbsp;</div> 
+<div class="box7">&nbsp;</div>
 ``````css hidden
-.box7 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); transform-origin: 0 0; -webkit-transform-origin: 0 0; } 
+.box7 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); transform-origin: 0 0; -webkit-transform-origin: 0 0; }
 ```{{EmbedLiveSample('transform_scale_without_origin', '', '', '', '', 'no-button') }}                   |
 | `transform: scale(1.9); transform-origin: 100% -30%;`    | ```html hidden
-<div class="box8">&nbsp;</div> 
+<div class="box8">&nbsp;</div>
 ``````css hidden
-.box8 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; } 
+.box8 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; }
 ```{{EmbedLiveSample('transform_scale', '', '', '', '', 'no-button') }}                           |
 | `transform: skewX(50deg); transform-origin: 100% -30%;`  | ```html hidden
-<div class="box9">&nbsp;</div> 
+<div class="box9">&nbsp;</div>
 ``````css hidden
-.box9 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: skewX(50deg); -webkit-transform: skewX(50deg); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; } 
+.box9 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: skewX(50deg); -webkit-transform: skewX(50deg); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; }
 ```{{EmbedLiveSample('transform_skew_x', '', '', '', '', 'no-button') }}                       |
 | `transform: skewY(50deg); transform-origin: 100% -30%;`  | ```html hidden
-<div class="box10">&nbsp;</div> 
+<div class="box10">&nbsp;</div>
 ``````css hidden
-.box10 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: skewY(50deg); -webkit-transform: skewY(50deg); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; } 
+.box10 { margin: 0.5em; width: 3em; height: 3em; border: solid 1px; background-color: palegreen; transform: skewY(50deg); -webkit-transform: skewY(50deg); transform-origin: 100% -30%; -webkit-transform-origin: 100% -30%; }
 ```{{EmbedLiveSample('transform_skew_y', '', '', '', '', 'no-button') }}                     |
 
 ## Spezifikation

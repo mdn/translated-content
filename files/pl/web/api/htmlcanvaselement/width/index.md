@@ -5,9 +5,9 @@ translation_of: Web/API/HTMLCanvasElement/width
 ---
 {{APIRef("Canvas API")}}
 
-Własność **`HTMLCanvasElement.width `**wyrażana jest w dodatniej `liczbie całkowitej `odpowiada za atrybut {{htmlattrxref("width", "canvas")}} elemetu HTML {{HTMLElement("canvas")}} i jest interpretowana w pikselach CSS. Jeśli atrybut nie został określony, lub została przypisana do niego nieprawidłowa wartość, np. negatywna, zostanie użyta domyślna wartość `300`.
+Własność **`HTMLCanvasElement.width `**wyrażana jest w dodatniej `liczbie całkowitej `odpowiada za atrybut {{htmlattrxref("width", "canvas")}} elemetu HTML {{HTMLElement("canvas")}} i jest interpretowana w pikselach CSS. Jeśli atrybut nie został określony, lub została przypisana do niego nieprawidłowa wartość, np. negatywna, zostanie użyta domyślna wartość `300`.
 
-To jedna z dwóch własności kontrolujących wielkość {{HTMLElement("canvas")}}, druga z nich to {{domxref("HTMLCanvasElement.height")}}.
+To jedna z dwóch własności kontrolujących wielkość {{HTMLElement("canvas")}}, druga z nich to {{domxref("HTMLCanvasElement.height")}}.
 
 ## Składnia
 
@@ -16,7 +16,7 @@ To jedna z dwóch własności kontrolujących wielkość {{HTMLElement("canvas"
 
 ## Przykłady
 
-Wykorzystując element {{HTMLElement("canvas")}}:
+Wykorzystując element {{HTMLElement("canvas")}}:
 
 ```html
 <canvas id="canvas" width="300" height="300"></canvas>
@@ -24,7 +24,7 @@ Wykorzystując element {{HTMLElement("canvas")}}:
 
 You can get the width of the canvas with the following code:
 
-Informacje o szerokości {{HTMLElement("canvas")}} można uzyskać za pomocą kodu:
+Informacje o szerokości {{HTMLElement("canvas")}} można uzyskać za pomocą kodu:
 
 ```js
 var canvas = document.getElementById('canvas');
@@ -36,8 +36,8 @@ console.log(canvas.width); // 300
 | Specification                                                                                                            | Status                           | Comment                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', "scripting.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML WHATWG')}} | Brak zmian od ostatniego snapshota, {{SpecName('HTML5 W3C')}}            |
-| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}     | {{Spec2('HTML5.1')}}     |                                                                                 |
-| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML5 W3C')}}     | Snapshot {{SpecName('HTML WHATWG')}} zawierający początkową definicje. |
+| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}     | {{Spec2('HTML5.1')}}     |                                                                                 |
+| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML5 W3C')}}     | Snapshot {{SpecName('HTML WHATWG')}} zawierający początkową definicje. |
 
 ## Zgodność przegladarek
 
@@ -46,4 +46,4 @@ console.log(canvas.width); // 300
 ## Zobacz też
 
 - Interfejs definiujący tą własność, {{domxref("HTMLCanvasElement")}}.
-- Inna własność kontrolujaca wielkość {{HTMLElement("canvas")}}, {{domxref("HTMLCanvasElement.height")}}.
+- Inna własność kontrolujaca wielkość {{HTMLElement("canvas")}}, {{domxref("HTMLCanvasElement.height")}}.

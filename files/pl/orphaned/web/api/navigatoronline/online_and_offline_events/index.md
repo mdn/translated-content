@@ -61,7 +61,7 @@ XXX When mochitests for this are created, point to those instead and update this
        <script>
          function updateOnlineStatus(msg) {
            var status = document.getElementById("status");
-           var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+           var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
            status.setAttribute("class", condition);
            var state = document.getElementById("state");
            state.innerHTML = condition;

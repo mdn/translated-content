@@ -25,7 +25,7 @@ Brak.
 
 ## Opis
 
-Obiekt {{jsxref("Boolean")}} przesłania metodę `toString` obiektu {{jsxref("Object")}}, nie dziedziczy metody {{jsxref("Object.prototype.toString()")}}. Dla obiektów `Boolean` metoda `toString` zwraca ich tekstową reprezentację.
+Obiekt {{jsxref("Boolean")}} przesłania metodę `toString` obiektu {{jsxref("Object")}}, nie dziedziczy metody {{jsxref("Object.prototype.toString()")}}. Dla obiektów `Boolean` metoda `toString` zwraca ich tekstową reprezentację.
 
 JavaScript wywołuje metodę `toString` samoczynnie, kiedy instancja obiektu {{jsxref("Boolean")}} ma być reprezentowana jako wartość tekstowa lub kiedy instancja obiektu {{jsxref("Boolean")}} jest składnikiem konkatenacji ciągu(-ów) znaków.
 

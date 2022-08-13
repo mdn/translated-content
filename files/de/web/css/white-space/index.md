@@ -16,7 +16,7 @@ Die CSS Eigenschaft **`white-space`** wird benutzt, um Leerzeichen innerhalb ein
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **Note:** **Hinweis:** Um Wörter umzubrechen, verwenden Sie stattdessen {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, oder {{CSSxRef("hyphens")}}.
+> **Hinweis:** Um Wörter umzubrechen, verwenden Sie stattdessen {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, oder {{CSSxRef("hyphens")}}.
 
 ## Syntax
 

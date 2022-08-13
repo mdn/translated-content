@@ -64,7 +64,7 @@ Es gibt jedoch einen Weg für Erweiterungen ihre Inhalte zugänglich für das We
 
 Das Setzen dieses Kennzeichens sollte die Ausnahme bleiben, steht aber für die seltenen Fälle zur Verfügung. Beachten Sie, dass Firefox den Benutzer gegebenenfalls benachrichtigt, wenn Ihre Erweiterung `contentaccessible` benutzt und es als potentielles Sicherheitsrisiko angesehen wird.
 
-> **Note:** **Hinweis:** Weil Firefox 2 die `contentaccessible` Flag nicht versteht (es wird die komplette Zeile ignoriert), sollten zur Kompatibilität zu Firefox 2 und Firefox 3 die folgenden zwei Zeilen notiert werden. content mypackage location/
+> **Hinweis:** Weil Firefox 2 die `contentaccessible` Flag nicht versteht (es wird die komplette Zeile ignoriert), sollten zur Kompatibilität zu Firefox 2 und Firefox 3 die folgenden zwei Zeilen notiert werden. content mypackage location/
 > content mypackage location/ contentaccessible=yes
 
 #### Datei-upload Felder

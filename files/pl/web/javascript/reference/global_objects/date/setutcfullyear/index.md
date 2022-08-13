@@ -24,12 +24,8 @@ Ustawia pełen rok dla określonej daty stosownie do czasu uniwersalnego.
 - `yearValue`
   - : Liczba całkowita określająca numerycznie wartość roku, na przykład: 1995.
 
-<!---->
-
 - `monthValue`
   - : Liczba całkowita pomiędzy 0 a 11, reprezentuje nazwy miesięcy, od stycznia do grudnia.
-
-<!---->
 
 - `dayValue`
   - : Liczba całkowita pomiędzy 1 a 31, reprezentuje dzień miesiąca. Jeśli określimy parametr `dayValue`, to musimy także sprecyzować `monthValue`.

@@ -24,8 +24,6 @@ Cette propriété est en lecture seule.
 - `isClosed`
   - : Un booléen. Les valeurs possibles sont&nbsp;:
 
-<!---->
-
 - `false`&nbsp;: La fenêtre est ouverte.
 - `true`&nbsp;: La fenêtre a été fermée.
 
