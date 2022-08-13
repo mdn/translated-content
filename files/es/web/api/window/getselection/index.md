@@ -39,5 +39,3 @@ DOM Nivel 0. No es parte de ninguna especificación.
 ### Ver también
 
 [Selection](es/docs/Web/API/Selection), [Range](es/docs/Web/API/Range)
-
-{{ languages( { "en": "en/DOM/window\.getSelection", "fr": "fr/DOM/window\.getSelection", "it": "it/DOM/window\.getSelection", "ja": "ja/DOM/window\.getSelection", "pl": "pl/DOM/window\.getSelection" } ) }}

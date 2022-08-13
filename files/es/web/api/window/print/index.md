@@ -40,5 +40,3 @@ Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro d
 - [Impresión](/en/Printing "en/Printing")
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}
-
-{{ languages( { "ja": "ja/DOM/window\.print", "it": "it/DOM/window\.print" , "zh-cn": "zh-cn/DOM/window\.print" } ) }}

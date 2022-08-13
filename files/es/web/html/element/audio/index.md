@@ -69,5 +69,3 @@ Reproduce el fichero de audio adjunto a este artículo.
 - [`video`](/en/HTML/Element/Video "En/HTML/Element/Video")
 - [Usar audio y video en Firefox](/es/Using_audio_and_video_in_Firefox "Es/Usar audio y video en Firefox")
 - [The `audio` element](http://www.whatwg.org/specs/web-apps/current-work/#audio) (HTML 5 specification)
-
-{{ languages( { "en": "en/HTML/Element/Audio" , "fr": "fr/HTML/Element/audio" } ) }}

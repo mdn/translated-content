@@ -29,5 +29,3 @@ Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet "e
 ### Especificación
 
 [DOM Level 2 Style: styleSheets](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets)
-
-{{ languages( { "ja": "ja/DOM/document.styleSheets", "pl": "pl/DOM/document.styleSheets" } ) }}

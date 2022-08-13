@@ -59,5 +59,3 @@ Para mejorar la accesibilidad de la etiquetas puedes leer los siguientes artícu
 ## Consulta también
 
 - [Tema sobre canvas](/es/HTML/Canvas "es/HTML/Canvas")
-
-{{ languages( { "de": "de/HTML/Element/canvas", "en": "en/HTML/Element/canvas", "es": "es/HTML/Elemento/canvas", "ja": "ja/HTML/Element/canvas", "ko": "ko/HTML/Element/canvas", "nl": "nl/HTML/HTML_Tags/canvas", "pl": "pl/HTML/Element/canvas", "ru": "Ru/HTML/Element/canvas", "zh-cn": "cn/HTML/Element/canvas", "fr": "fr/HTML/Element/canvas" } ) }}

@@ -59,5 +59,3 @@ La propiedad `max-height` se utiliza para definir la altura máxima de un elemen
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "en": "en/CSS/max-height", "fr": "fr/CSS/max-height" } ) }}

@@ -107,5 +107,3 @@ Retorna la coordena horizontal del evento, relativo al documento completo.
 ### Specificación
 
 No es parte del estándar público.
-
-{{ languages( { "pl": "pl/DOM/event.pageX", "en": "en/DOM/event.pageX" } ) }}

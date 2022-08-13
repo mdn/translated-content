@@ -32,5 +32,3 @@ Pliega la selección a un simple punto. El documento no es modificado. Si el con
     /* Colocar el cursor al principio del cuerpo de un documento HTML. */
     var body = document.getElementsByTagName("body")[0];
     window.getSelection().collapse(body,0);
-
-{{ languages( { "en": "en/DOM/Selection/collapse", "it": "it/DOM/Selection/collapse", "pl": "pl/DOM/Selection/collapse" } ) }}

@@ -50,5 +50,3 @@ Siempre se hereda desde el elemento padre dentro del árbol del documento, aún 
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "fr": "fr/CSS/inherit", "en": "en/CSS/inherit" } ) }}

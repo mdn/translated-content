@@ -60,5 +60,3 @@ El soporte para `visibility: collapse` no se encuentra o está implementado parc
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "fr": "fr/CSS/visibility", "pl": "pl/Dokumentacja_CSS/W\u0142asno\u015bci_szablonu", "en": "en/CSS/visibility" } ) }}

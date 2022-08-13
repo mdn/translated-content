@@ -58,5 +58,3 @@ Al contrario que el atributo `dir` en HTML, la propiedad `direction` no es hered
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "fr": "fr/CSS/direction", "pl": "pl/CSS/direction", "en": "en/CSS/direction" } ) }}

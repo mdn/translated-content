@@ -53,5 +53,3 @@ Las palabras de código {{ Cssxref("inherit") }} permiten al autor definir, expl
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "en": "en/CSS/inheritance", "fr": "fr/CSS/H\u00e9ritage", "ja": "ja/CSS/inheritance", "pl": "pl/CSS/Dziedziczenie" } ) }}

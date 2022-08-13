@@ -38,5 +38,3 @@ Como en otras funciones XPath, la posición no está basada en cero. El primer c
 ### Soporte en Gecko
 
 Soportado.
-
-{{ languages( { "en": "en/XPath/Functions/substring", "fr": "fr/XPath/Fonctions/substring", "ja": "ja/XPath/Functions/substring", "pl": "pl/XPath/Funkcje/substring" } ) }}

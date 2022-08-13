@@ -102,5 +102,3 @@ This is as far back as the documentaion goes.
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "fr": "fr/CSS/bottom", "pl": "pl/CSS/bottom", "en": "en/CSS/bottom" } ) }}

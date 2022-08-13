@@ -32,5 +32,3 @@ Añade un objeto de rango a la selección.
       range.selectNode(strongs[i]);
       s.addRange(range);
      }
-
-{{ languages( { "en": "en/DOM/Selection/addRange", "it": "it/DOM/Selection/addRange", "pl": "pl/DOM/Selection/addRange" } ) }}

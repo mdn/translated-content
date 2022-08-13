@@ -29,5 +29,3 @@ Un rango plegado está vacío, sin tener algún contenido, especificando un simp
 ### Especificación
 
 [collapsed](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-collapsed)
-
-{{ languages( { "en": "en/DOM/range.collapsed", "ja": "ja/DOM/range.collapsed" } ) }}

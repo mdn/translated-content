@@ -23,5 +23,3 @@ del documento.
 ### Especificación
 
 [DOM Level 2 HTML: applets](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)
-
-{{ languages( { "en": "en/DOM/document.applets", "pl": "pl/DOM/document.applets" } ) }}
