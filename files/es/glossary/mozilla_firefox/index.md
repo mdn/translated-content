@@ -9,22 +9,18 @@ tags:
   - Navegador
 translation_of: Glossary/Mozilla_Firefox
 ---
-<p><span style="line-height: 1.5;">Mozilla Firefox es un {{Glossary("navegador")}} gratuito de codigo abierto cuyo desarrollo es supervisado por Mozilla Corporation. Firefox functiona sobre Windows, OS X, Linus y Android.</span></p>
+Mozilla Firefox es un {{Glossary("navegador")}} gratuito de codigo abierto cuyo desarrollo es supervisado por Mozilla Corporation. Firefox functiona sobre Windows, OS X, Linus y Android.
 
-<p><span style="line-height: 1.5;">First released in November 2004, Firefox is completely customizable with themes, plug-ins, and <a href="https://developer.mozilla.org/en-US/Add-ons">add-ons</a>.  Firefox uses {{glossary("Gecko")}} to render webpages, and implements both current and upcoming Web standards.</span></p>
+First released in November 2004, Firefox is completely customizable with themes, plug-ins, and [add-ons](https://developer.mozilla.org/en-US/Add-ons). Firefox uses {{glossary("Gecko")}} to render webpages, and implements both current and upcoming Web standards.
 
-<p><span style="line-height: 1.5;">Lanzado en Noviembre del 2014, Firefox es completamente personalizable con temas y <a href="https://developer.mozilla.org/es/Add-ons">complementos</a>. Firefox usa {{glossary("Gecko")}} para renderizar paginas webs, e implementa tanto actuales como próximos estandares Web.</span></p>
+Lanzado en Noviembre del 2014, Firefox es completamente personalizable con temas y [complementos](https://developer.mozilla.org/es/Add-ons). Firefox usa {{glossary("Gecko")}} para renderizar paginas webs, e implementa tanto actuales como próximos estandares Web.
 
-<h2 id="Aprende_más"><span style="line-height: 1.5;">Aprende más</span></h2>
+## Aprende más
 
-<h3 id="Conocimientos_generales">Conocimientos generales</h3>
+### Conocimientos generales
 
-<ul>
- <li><a href="https://www.firefox.com/">Sitio oficial de Mozilla Firefox</a></li>
-</ul>
+- [Sitio oficial de Mozilla Firefox](https://www.firefox.com/)
 
-<h3 id="Referencias_técnicas">Referencias técnicas</h3>
+### Referencias técnicas
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/Firefox">Documentación/Información para desarrolladores en MDN</a></li>
-</ul>
+- [Documentación/Información para desarrolladores en MDN](https://developer.mozilla.org/en-US/Firefox)

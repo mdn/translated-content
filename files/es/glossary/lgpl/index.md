@@ -12,17 +12,15 @@ tags:
   - Software Libre
 translation_of: Glossary/LGPL
 ---
-<p><em>LGPL </em>(GNU Lesser General Public License en español <strong>Licencia Pública General Reducida de GNU</strong>) es una licencia de software libre publicada por la <em>Free Software Foundation</em>. LGPL es una alternativa más permisiva que la estricta licencia <a href="/es/docs/Glossary/copyleft">copyleft</a> <a href="/es/docs/Glossary/GPL">GPL</a>.</p>
+_LGPL_ (GNU Lesser General Public License en español **Licencia Pública General Reducida de GNU**) es una licencia de software libre publicada por la _Free Software Foundation_. LGPL es una alternativa más permisiva que la estricta licencia [copyleft](/es/docs/Glossary/copyleft) [GPL](/es/docs/Glossary/GPL).
 
-<p>Esto supone que cualquier trabajo que use un elemento con licencia GPL <strong>tiene la obligación</strong> de ser publicado bajo las mismas condiciones (libre de usar, compartir, estudiar, y modificar). Por otro lado, LGPL solo requiere que los componentes derivados del elemento bajo LGPL continuen con esta licencia, y no el programa al completo.</p>
+Esto supone que cualquier trabajo que use un elemento con licencia GPL **tiene la obligación** de ser publicado bajo las mismas condiciones (libre de usar, compartir, estudiar, y modificar). Por otro lado, LGPL solo requiere que los componentes derivados del elemento bajo LGPL continuen con esta licencia, y no el programa al completo.
 
-<p>LGPL es usado habitualmente para licencias de componentes compartidos como por ejemplo librerías (<code>.dll</code>, <code>.so</code>, <code>.jar</code>, etc.).</p>
+LGPL es usado habitualmente para licencias de componentes compartidos como por ejemplo librerías (`.dll`, `.so`, `.jar`, etc.).
 
-<h2 id="Para_saber_más...">Para saber más...</h2>
+## Para saber más...
 
-<h3 id="Cultura_General">Cultura General</h3>
+### Cultura General
 
-<ul>
- <li>{{interwiki("wikipedia", "GNU Lesser General Public License", "GNU LGPL")}} en Wikipedia</li>
- <li><a href="http://www.gnu.org/copyleft/lesser.html">LGPL License</a> en gnu.org</li>
-</ul>
+- {{interwiki("wikipedia", "GNU Lesser General Public License", "GNU LGPL")}} en Wikipedia
+- [LGPL License](http://www.gnu.org/copyleft/lesser.html) en gnu.org

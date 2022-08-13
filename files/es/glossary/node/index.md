@@ -6,8 +6,8 @@ tags:
   - Glosario
 translation_of: Glossary/Node
 ---
-<p>El término <strong>nodo</strong> puede tener varios significados según el contexto. Puede referirse a:</p>
+El término **nodo** puede tener varios significados según el contexto. Puede referirse a:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<p>Otro uso de la palabra es cuando se habla de {{Glossary("Node.js")}}</p>
+Otro uso de la palabra es cuando se habla de {{Glossary("Node.js")}}

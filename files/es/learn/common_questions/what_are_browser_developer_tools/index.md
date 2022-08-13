@@ -13,236 +13,218 @@ tags:
   - aprende
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 ---
-<div>{{IncludeSubnav("/es/Learn")}}</div>
+{{IncludeSubnav("/es/Learn")}}
 
-<div class="summary">
-<p>Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.</p>
-</div>
+Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
-<div class="note">
-<p><strong>Nota</strong>: Antes de ejecutar los siguientes ejemplos, abre el <a href="http://mdn.github.io/beginner-html-site-scripted/">sitio de ejemplo para principiantes</a> que creamos durante la serie de artículos <a href="/es/Learn/Getting_started_with_the_web">Introducción a la Web</a>. Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.</p>
-</div>
+> **Nota:** Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](http://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
 
-<h2 id="Cómo_abrir_devtools_en_tu_navegador">Cómo abrir devtools en tu navegador</h2>
+## Cómo abrir devtools en tu navegador
 
-<p>Las herramientas para desarrolladores (<code>devtools</code>) viven dentro de tu navegador en una subventana que se ve más o menos así, dependiendo del navegador que estés utilizando:</p>
+Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador en una subventana que se ve más o menos así, dependiendo del navegador que estés utilizando:
 
-<p><img alt="Devtools" src="https://mdn.mozillademos.org/files/16205/DevTools_63_inspector.png" style="border: 1px solid black; display: block; height: 1364px; margin: 0px auto; width: 672px;"></p>
+![Devtools](https://mdn.mozillademos.org/files/16205/DevTools_63_inspector.png)
 
-<p>¿Cómo la levantas? Existen tres distintas maneras:</p>
+¿Cómo la levantas? Existen tres distintas maneras:
 
-<ul>
- <li><em><strong>Teclado:</strong></em> <em><kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd></em>, excepto en
+- _**Teclado:**_ _<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
 
-  <ul>
-   <li><strong>Internet Explorer y Edge: </strong><kbd>F12</kbd></li>
-   <li><strong>macOS: </strong><em><span class="Unicode"><kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>I</kbd></span></em></li>
-  </ul>
- </li>
- <li><span class="Unicode"><em><strong>Barra de menú:</strong></em></span>
-  <ul>
-   <li><strong>Firefox</strong>: Menú <img alt="Devtools" src="https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"><span class="Unicode"><em><span class="Unicode">➤ Desarrollador web</span></em> <em><span class="Unicode">➤ Alternar herramientas,</span> </em><span class="Unicode"> o </span> <em>➤ Herramientas</em></span> <em>➤ Alternar herramientas del desarrollador web</em></li>
-   <li><strong>Chrome:</strong> <em><span class="Unicode">Más herramientas</span> ➤ Herramientas del desarrollador</em></li>
-   <li><strong>Safari:</strong> <em><span class="Unicode">Desarrollador ➤</span> Mostrar el inspector web.</em> Si no puedes ver el menú <em>Desarrollar</em>, ve a <em>Safari<span class="Unicode"> ➤</span> Preferencias ➤ Avanzado</em> y marca la casilla de verificación <em>Mostrar menú desarrollador en la barra de menú</em>.</li>
-   <li><strong>Opera</strong>: <em><span class="Unicode">Desarrollador ➤ </span> Herramientas para desarrolladores</em></li>
-  </ul>
- </li>
- <li><strong><em>Menú contextual:</em></strong> Presiona y mantén presionado / haz clic con el botón derecho en un elemento en una página web (Ctrl-clic en Mac) y elige <em>Inspeccionar elemento</em> en el menú contextual que aparece. (<em>Una ventaja adicional:</em> este método, inmediatamente resalta el código del elemento en el que hiciste clic con el botón derecho).</li>
-</ul>
+  - **Internet Explorer y Edge:**
 
-<p><img alt="Inspector" src="https://mdn.mozillademos.org/files/16206/inspector_context.png" style="display: block; height: 232px; margin: 0px auto; width: 350px;"></p>
+    <kbd>F12</kbd>
 
-<h2 id="El_inspector_explorador_del_DOM_y_editor_CSS">El inspector: explorador del DOM y editor CSS</h2>
+  - **macOS:** _<kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>I</kbd>_
 
-<p>Las herramientas del desarrollador, generalmente se abren de forma predeterminada en el inspector, parecido a la siguiente captura de pantalla. Esta herramienta muestra cómo se ve el HTML en tu página en tiempo de ejecución, así como qué CSS se aplica a cada elemento de la página. También te permite modificar instantáneamente el HTML y CSS y ver los resultados de tus cambios reflejados en vivo en la ventana del navegador.</p>
+- _**Barra de menú:**_
 
-<p><img alt="Inspector resaltado" src="https://mdn.mozillademos.org/files/16208/inspector_highlighted.png" style="border-style: solid; border-width: 1px; display: block; height: 509px; margin: 0px auto; width: 672px;"></p>
+  - **Firefox**: Menú ![Devtools](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png)_➤ Desarrollador web_ *➤ Alternar herramientas, \_o *➤ Herramientas\_ _➤ Alternar herramientas del desarrollador web_
+  - **Chrome:** _Más herramientas ➤ Herramientas del desarrollador_
+  - **Safari:** _Desarrollador ➤ Mostrar el inspector web._ Si no puedes ver el menú _Desarrollar_, ve a _Safari ➤ Preferencias ➤ Avanzado_ y marca la casilla de verificación _Mostrar menú desarrollador en la barra de menú_.
+  - **Opera**: _Desarrollador ➤ Herramientas para desarrolladores_
 
-<p>Si <em>no</em> ves al inspector,</p>
+- **_Menú contextual:_** Presiona y mantén presionado / haz clic con el botón derecho en un elemento en una página web (Ctrl-clic en Mac) y elige _Inspeccionar elemento_ en el menú contextual que aparece. (_Una ventaja adicional:_ este método, inmediatamente resalta el código del elemento en el que hiciste clic con el botón derecho).
 
-<ul>
- <li>Toca o haz clic en la pestaña <em>Inspector</em>.</li>
- <li>En Internet Explorer, toca/haz clic en <em>Explorador del DOM</em> o presiona <kbd>Ctrl</kbd>+<kbd>1</kbd>.</li>
- <li>En Microsoft Edge u Opera, toca/haz clic en Elementos.</li>
- <li>En Safari, los controles no se presentan con tanta claridad, pero deberías ver el HTML si no has seleccionado otra cosa para que aparezca en la ventana. Presiona el botón <em>Estilo</em> para ver el CSS.</li>
-</ul>
+![Inspector](https://mdn.mozillademos.org/files/16206/inspector_context.png)
 
-<h3 id="Explorando_el_DOM_con_el_inspector">Explorando el DOM con el inspector</h3>
+## El inspector: explorador del DOM y editor CSS
 
-<p>Para empezar, haz clic con el botón derecho (Ctrl+clic) en un elemento HTML en el inspector del DOM y observa el menú contextual. Las opciones disponibles en el menú varían según el navegador, pero en su mayoría, las más importantes son las mismas:</p>
+Las herramientas del desarrollador, generalmente se abren de forma predeterminada en el inspector, parecido a la siguiente captura de pantalla. Esta herramienta muestra cómo se ve el HTML en tu página en tiempo de ejecución, así como qué CSS se aplica a cada elemento de la página. También te permite modificar instantáneamente el HTML y CSS y ver los resultados de tus cambios reflejados en vivo en la ventana del navegador.
 
-<p><img alt="Inspector del DOM" src="https://mdn.mozillademos.org/files/16209/dom_inspector.png" style="border: 1px solid black; display: block; height: 320px; margin: 0px auto; width: 350px;"></p>
+![Inspector resaltado](https://mdn.mozillademos.org/files/16208/inspector_highlighted.png)
 
-<ul>
- <li><strong>Eliminar nodo</strong> (A veces <em>Eliminar elemento</em>). Elimina el elemento actual.</li>
- <li><strong>Editar como HTML</strong> (A veces <em>Agregar atributo</em>/<em>Editar texto</em>). Te permite cambiar el HTML y ver los resultados en tiempo real. Muy útil para depurar y probar.</li>
- <li><strong>:hover/:active/:focus</strong>. Obliga a que se activen los estados de los elementos, para que puedas ver cómo se vería su estilo.</li>
- <li><strong>Copiar/Copiar como HTML</strong>. Copie el HTML seleccionado actualmente.</li>
- <li>Algunos navegadores también disponen de <em>Copiar ruta CSS</em> y <em>Copiar XPath</em>, para permitirte copiar el selector CSS o la expresión XPath que seleccionaría el elemento HTML actual.</li>
-</ul>
+Si _no_ ves al inspector,
 
-<p>Intenta editar algo de tu DOM ahora. Haz doble clic en un elemento o haz clic con el botón derecho del mouse y selecciona <em>Editar como HTML</em> en el menú contextual. Puedes realizar los cambios que desees, pero no los puedes guardar.</p>
+- Toca o haz clic en la pestaña _Inspector_.
+- En Internet Explorer, toca/haz clic en _Explorador del DOM_ o presiona
 
-<h3 id="Explorar_el_editor_CSS">Explorar el editor CSS</h3>
+  <kbd>Ctrl</kbd>
 
-<p>De manera predeterminada, el editor CSS muestra las reglas CSS aplicadas al elemento seleccionado actualmente:</p>
+  \+
 
-<p><img alt="Inspector CSS" src="https://mdn.mozillademos.org/files/16211/CSS_Inspector.png" style="display: block; height: 281px; margin: 0px auto; width: 500px;"></p>
+  <kbd>1</kbd>
 
-<p>Estas características son especialmente útiles:</p>
+  .
 
-<ul>
- <li>Las reglas aplicadas al elemento actual se muestran en orden de mayor a menor especificidad.</li>
- <li>Haz clic en las casillas de verificación junto a cada declaración para ver qué pasaría si eliminaras la declaración.</li>
- <li>Haz clic en la pequeña flecha al lado de la abreviatura de cada propiedad para mostrar los nombres completos equivalentes de la propiedad.</li>
- <li>Haz clic en el nombre o valor de una propiedad para que aparezca un cuadro de texto, donde puedes ingresar un nuevo valor para obtener una vista previa en vivo de un cambio de estilo.</li>
- <li>Junto a cada regla está el nombre del archivo y el número de línea en el que se define la regla. Al hacer clic en esa regla, las herramientas de desarrollo saltan para mostrarlas en su propia vista, donde generalmente puedes editar y guardar.</li>
- <li>También puedes hacer clic en la llave de cierre de cualquier regla para que aparezca un cuadro de texto en una nueva línea, donde puedes escribir una declaración completamente nueva para tu página.</li>
-</ul>
+- En Microsoft Edge u Opera, toca/haz clic en Elementos.
+- En Safari, los controles no se presentan con tanta claridad, pero deberías ver el HTML si no has seleccionado otra cosa para que aparezca en la ventana. Presiona el botón _Estilo_ para ver el CSS.
 
-<p>Notarás una serie de pestañas en las que se puede hacer clic en la parte superior del Visor CSS:</p>
+### Explorando el DOM con el inspector
 
-<ul>
- <li><em>Calculado</em>: Muestra los estilos calculados para el elemento seleccionado actualmente (los valores finales normalizados que aplica el navegador).</li>
- <li><em>Diseño</em>: En Firefox, esta área incluye dos secciones:
-  <ul>
-   <li><em>Modelo de caja</em>: representa visualmente el modelo de caja del elemento actual, por lo que de un vistazo puedes identificar qué relleno, borde y margen se le aplica, y qué tan grande es su contenido.</li>
-   <li><em>Cuadrícula</em>: Si la página que estás inspeccionando utiliza Grid CSS, esta sección te permite ver los detalles de la cuadrícula.</li>
-  </ul>
- </li>
- <li><em>Fuentes</em>: En Firefox, la pestaña <em>Fuentes</em> muestra los tipos de letra aplicados al elemento actual.</li>
-</ul>
+Para empezar, haz clic con el botón derecho (Ctrl+clic) en un elemento HTML en el inspector del DOM y observa el menú contextual. Las opciones disponibles en el menú varían según el navegador, pero en su mayoría, las más importantes son las mismas:
 
-<h3 id="Conocer_más">Conocer más</h3>
+![Inspector del DOM](https://mdn.mozillademos.org/files/16209/dom_inspector.png)
 
-<p>Obtén más información sobre el Inspector en diferentes navegadores:</p>
+- **Eliminar nodo** (A veces _Eliminar elemento_). Elimina el elemento actual.
+- **Editar como HTML** (A veces _Agregar atributo_/_Editar texto_). Te permite cambiar el HTML y ver los resultados en tiempo real. Muy útil para depurar y probar.
+- **:hover/:active/:focus**. Obliga a que se activen los estados de los elementos, para que puedas ver cómo se vería su estilo.
+- **Copiar/Copiar como HTML**. Copie el HTML seleccionado actualmente.
+- Algunos navegadores también disponen de _Copiar ruta CSS_ y _Copiar XPath_, para permitirte copiar el selector CSS o la expresión XPath que seleccionaría el elemento HTML actual.
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/docs/Tools/Page_Inspector">Inspector de páginas de Firefox.</a></li>
- <li><a href="https://docs.microsoft.com/es-es/microsoft-edge/">Explorador del DOM de Edge.</a></li>
- <li><a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&amp;utm_medium=redirect&amp;utm_campaign=2016q3">inspector del DOM de Chrome.</a> (el inspector de Opera funciona igual que este)</li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1">Safari inspector y explorador de estilos.</a></li>
-</ul>
+Intenta editar algo de tu DOM ahora. Haz doble clic en un elemento o haz clic con el botón derecho del mouse y selecciona _Editar como HTML_ en el menú contextual. Puedes realizar los cambios que desees, pero no los puedes guardar.
 
-<h2 id="El_depurador_de_JavaScript">El depurador de JavaScript</h2>
+### Explorar el editor CSS
 
-<p>El depurador de JavaScript te permite observar el valor de las variables y establecer puntos de interrupción, lugares en tu código en los que deseas pausar la ejecución e identificar los problemas que impiden que tu código se ejecute correctamente.</p>
+De manera predeterminada, el editor CSS muestra las reglas CSS aplicadas al elemento seleccionado actualmente:
 
-<p><img alt="Depurador de Firefox" src="https://mdn.mozillademos.org/files/16239/firefox_debugger.png" style="border: 1px solid black; display: block; height: 556px; margin: 0 auto; width: 672px;"></p>
+![Inspector CSS](https://mdn.mozillademos.org/files/16211/CSS_Inspector.png)
 
-<p>Para llegar al depurador:</p>
+Estas características son especialmente útiles:
 
-<p><strong>Firefox</strong>: Selecciona <img alt="" src="https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> ➤ <em>Desarrollador Web</em> ➤ <em>Depurador</em> o presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> para abrir el depurador de JavaScript. Si ya estás viendo las herramientas, haz clic en la pestaña <strong>Depurador</strong>.</p>
+- Las reglas aplicadas al elemento actual se muestran en orden de mayor a menor especificidad.
+- Haz clic en las casillas de verificación junto a cada declaración para ver qué pasaría si eliminaras la declaración.
+- Haz clic en la pequeña flecha al lado de la abreviatura de cada propiedad para mostrar los nombres completos equivalentes de la propiedad.
+- Haz clic en el nombre o valor de una propiedad para que aparezca un cuadro de texto, donde puedes ingresar un nuevo valor para obtener una vista previa en vivo de un cambio de estilo.
+- Junto a cada regla está el nombre del archivo y el número de línea en el que se define la regla. Al hacer clic en esa regla, las herramientas de desarrollo saltan para mostrarlas en su propia vista, donde generalmente puedes editar y guardar.
+- También puedes hacer clic en la llave de cierre de cualquier regla para que aparezca un cuadro de texto en una nueva línea, donde puedes escribir una declaración completamente nueva para tu página.
 
-<p><strong>Chrome</strong>: Abre las herramientas para desarrolladores y luego selecciona la pestaña <strong>Fuentes</strong>. (Opera funciona de la misma manera).</p>
+Notarás una serie de pestañas en las que se puede hacer clic en la parte superior del Visor CSS:
 
-<p><strong>Edge e Internet Explorer 11</strong>: presiona <kbd>F12</kbd> y luego <kbd>Ctrl</kbd>+<kbd>3</kbd>, o si ya estás viendo las herramientas, haz clic en la pestaña Depurador.</p>
+- _Calculado_: Muestra los estilos calculados para el elemento seleccionado actualmente (los valores finales normalizados que aplica el navegador).
+- _Diseño_: En Firefox, esta área incluye dos secciones:
 
-<p><strong>Safari</strong>: Abre las herramientas para desarrolladores y luego selecciona la pestaña Depurador.</p>
+  - _Modelo de caja_: representa visualmente el modelo de caja del elemento actual, por lo que de un vistazo puedes identificar qué relleno, borde y margen se le aplica, y qué tan grande es su contenido.
+  - _Cuadrícula_: Si la página que estás inspeccionando utiliza Grid CSS, esta sección te permite ver los detalles de la cuadrícula.
 
-<h3 id="Explorando_el_depurador">Explorando el depurador</h3>
+- _Fuentes_: En Firefox, la pestaña _Fuentes_ muestra los tipos de letra aplicados al elemento actual.
 
-<p>En Firefox hay tres paneles en el depurador de JavaScript.</p>
+### Conocer más
 
-<h4 id="Lista_de_archivos">Lista de archivos</h4>
+Obtén más información sobre el Inspector en diferentes navegadores:
 
-<p>El primer panel de la izquierda contiene la lista de archivos asociados con la página que estás depurando. Selecciona el archivo con el que deseas trabajar de esta lista. Haz clic en un archivo para seleccionarlo y ver su contenido en el panel central del depurador.</p>
+- [Inspector de páginas de Firefox.](/es/docs/Tools/Page_Inspector)
+- [Explorador del DOM de Edge.](https://docs.microsoft.com/es-es/microsoft-edge/)
+- [inspector del DOM de Chrome.](https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) (el inspector de Opera funciona igual que este)
+- [Safari inspector y explorador de estilos.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
-<p><img alt="Lista de archivos" src="https://mdn.mozillademos.org/files/16240/File_List.png" style="border: 1px solid black; display: block; height: 326px; margin: 0 auto; width: 350px;"></p>
+## El depurador de JavaScript
 
-<h4 id="Código_fuente">Código fuente</h4>
+El depurador de JavaScript te permite observar el valor de las variables y establecer puntos de interrupción, lugares en tu código en los que deseas pausar la ejecución e identificar los problemas que impiden que tu código se ejecute correctamente.
 
-<p>Establece puntos de interrupción donde desees pausar la ejecución. En la siguiente imagen, el resaltado del número 18 muestra que la línea tiene un punto de interrupción establecido.</p>
+![Depurador de Firefox](https://mdn.mozillademos.org/files/16239/firefox_debugger.png)
 
-<p><img alt="Código fuente" src="https://mdn.mozillademos.org/files/16241/Source_code.png" style="border: 1px solid black; display: block; height: 251px; margin: 0 auto; width: 400px;"></p>
+Para llegar al depurador:
 
-<h4 id="Ver_expresiones_y_puntos_de_interrupción">Ver expresiones y puntos de interrupción</h4>
+**Firefox**: Selecciona ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) ➤ _Desarrollador Web_ ➤ _Depurador_ o presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> para abrir el depurador de JavaScript. Si ya estás viendo las herramientas, haz clic en la pestaña **Depurador**.
 
-<p>El panel de la derecha muestra una lista de las expresiones en observación que has agregado y los puntos de interrupción que has establecido.</p>
+**Chrome**: Abre las herramientas para desarrolladores y luego selecciona la pestaña **Fuentes**. (Opera funciona de la misma manera).
 
-<p>En la imagen, la primera sección, <strong>Ver expresiones</strong>, muestra que se ha agregado la variable <code>listItems</code>. Puedes expandir la lista para ver los valores del arreglo.</p>
+**Edge e Internet Explorer 11**: presiona <kbd>F12</kbd> y luego <kbd>Ctrl</kbd>+<kbd>3</kbd>, o si ya estás viendo las herramientas, haz clic en la pestaña Depurador.
 
-<p>La siguiente sección, <strong>Puntos de interrupción</strong>, enumera los puntos de interrupción establecidos en la página. En <code>example.js</code>, se ha establecido un punto de interrupción en la instrucción <code>listItems.push(inputNewItem.value);</code></p>
+**Safari**: Abre las herramientas para desarrolladores y luego selecciona la pestaña Depurador.
 
-<p>Las dos últimas secciones solo aparecen cuando el código se está ejecutando.</p>
+### Explorando el depurador
 
-<p>La sección <strong>Pila de llamadas</strong> muestra qué código se ejecutó para llegar a la línea actual. Puedes ver que el código está en la función que maneja un clic del mouse y que el código está actualmente en pausa en el punto de interrupción.</p>
+En Firefox hay tres paneles en el depurador de JavaScript.
 
-<p>La sección final, <strong>Alcances</strong>, muestra qué valores son visibles desde varios puntos dentro de tu código. Por ejemplo, en la siguiente imagen, puedes ver los objetos disponibles para el código en la función <code>addItemClick</code>.</p>
+#### Lista de archivos
 
-<p><img alt="ver elementos" src="https://mdn.mozillademos.org/files/16242/watch_items.png" style="border: 1px solid black; display: block; height: 743px; width: 350px;"></p>
+El primer panel de la izquierda contiene la lista de archivos asociados con la página que estás depurando. Selecciona el archivo con el que deseas trabajar de esta lista. Haz clic en un archivo para seleccionarlo y ver su contenido en el panel central del depurador.
 
-<h3 id="Conocer_más_2">Conocer más</h3>
+![Lista de archivos](https://mdn.mozillademos.org/files/16240/File_List.png)
 
-<p>Obtén más información sobre el depurador de JavaScript en diferentes navegadores:</p>
+#### Código fuente
 
-<ul>
- <li><a href="/es/docs/Tools/Debugger">Depurador de JavaScript en Firefox.</a></li>
- <li><a href="https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/debugger">Depurador de Microsoft Edge.</a></li>
- <li><a href="https://developers.google.com/web/tools/chrome-devtools/javascript/">Depurador de Chrome.</a></li>
- <li><a href="https://developer.apple.com/safari/tools/">Depurador de Safari.</a></li>
-</ul>
+Establece puntos de interrupción donde desees pausar la ejecución. En la siguiente imagen, el resaltado del número 18 muestra que la línea tiene un punto de interrupción establecido.
 
-<h2 id="La_consola_de_JavaScript">La consola de JavaScript</h2>
+![Código fuente](https://mdn.mozillademos.org/files/16241/Source_code.png)
 
-<p>La consola de JavaScript es una herramienta increíblemente útil para depurar JavaScript que no funciona como se esperaba. Te permite ejecutar líneas de JavaScript en la página actualmente cargada en el navegador e informa los errores encontrados cuando el navegador intenta ejecutar tu código. Para acceder a la consola en cualquier navegador:</p>
+#### Ver expresiones y puntos de interrupción
 
-<p>Si las herramientas para desarrolladores ya están abiertas, haz clic o presiona la pestaña Consola.</p>
+El panel de la derecha muestra una lista de las expresiones en observación que has agregado y los puntos de interrupción que has establecido.
 
-<p>De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú <img alt="" src="https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> <span class="Unicode"> <em><span class="Unicode"> ➤ Desarrollador web</span></em> <em><span class="Unicode"> ➤ Consola web,</span></em> <span class="Unicode"> o</span> <em>Herramientas ➤</em></span> <em>Desarrollador web ➤ Consola web. </em>En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.</p>
+En la imagen, la primera sección, **Ver expresiones**, muestra que se ha agregado la variable `listItems`. Puedes expandir la lista para ver los valores del arreglo.
 
-<p>Esto te dará una ventana como la siguiente:</p>
+La siguiente sección, **Puntos de interrupción**, enumera los puntos de interrupción establecidos en la página. En `example.js`, se ha establecido un punto de interrupción en la instrucción `listItems.push(inputNewItem.value);`
 
-<p><img alt="Sólo consola" src="https://mdn.mozillademos.org/files/16212/console_only.png" style="border: 1px solid black; display: block; height: 187px; margin: 0px auto; width: 672px;"></p>
+Las dos últimas secciones solo aparecen cuando el código se está ejecutando.
 
-<p>Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):</p>
+La sección **Pila de llamadas** muestra qué código se ejecutó para llegar a la línea actual. Puedes ver que el código está en la función que maneja un clic del mouse y que el código está actualmente en pausa en el punto de interrupción.
 
-<ol>
- <li>
-  <pre class="brush: js notranslate">alert('hello!');</pre>
- </li>
- <li>
-  <pre class="brush: js notranslate">document.querySelector('html').style.backgroundColor = 'purple';</pre>
- </li>
- <li>
-  <pre class="brush: js notranslate">const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);</pre>
- </li>
-</ol>
+La sección final, **Alcances**, muestra qué valores son visibles desde varios puntos dentro de tu código. Por ejemplo, en la siguiente imagen, puedes ver los objetos disponibles para el código en la función `addItemClick`.
 
-<p>Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.</p>
+![ver elementos](https://mdn.mozillademos.org/files/16242/watch_items.png)
 
-<ol>
- <li>
-  <pre class="brush: js notranslate">alert('hello!);</pre>
- </li>
- <li>
-  <pre class="brush: js notranslate">document.cheeseSelector('html').style.backgroundColor = 'purple';</pre>
- </li>
- <li>
-  <pre class="brush: js notranslate">const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);</pre>
- </li>
-</ol>
+### Conocer más
 
-<p>Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos errores son bastante crípticos, ¡pero debería ser bastante sencillo resolver estos problemas!</p>
+Obtén más información sobre el depurador de JavaScript en diferentes navegadores:
 
-<h3 id="Conocer_más_3">Conocer más</h3>
+- [Depurador de JavaScript en Firefox.](/es/docs/Tools/Debugger)
+- [Depurador de Microsoft Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/debugger)
+- [Depurador de Chrome.](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+- [Depurador de Safari.](https://developer.apple.com/safari/tools/)
 
-<p>Obtén más información sobre la consola de JavaScript en diferentes navegadores:</p>
+## La consola de JavaScript
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Consola Web de Firefox.</a></li>
- <li><a href="https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium">Consola de JavaScript Edge.</a></li>
- <li><a href="https://developer.chrome.com/devtools/docs/console">Consola JavaScript de Chrome.</a> (el inspector de Opera funciona de la misma manera)</li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1">Consola en Safari.</a></li>
-</ul>
+La consola de JavaScript es una herramienta increíblemente útil para depurar JavaScript que no funciona como se esperaba. Te permite ejecutar líneas de JavaScript en la página actualmente cargada en el navegador e informa los errores encontrados cuando el navegador intenta ejecutar tu código. Para acceder a la consola en cualquier navegador:
 
-<h2 id="Ve_también">Ve también</h2>
+Si las herramientas para desarrolladores ya están abiertas, haz clic o presiona la pestaña Consola.
 
-<ul>
- <li><a href="/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Depurar HTML.</a></li>
- <li><a href="/es/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Depurar CSS.</a></li>
-</ul>
+De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web_ _➤ Consola web,_ o _Herramientas ➤_ _Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
+
+Esto te dará una ventana como la siguiente:
+
+![Sólo consola](https://mdn.mozillademos.org/files/16212/console_only.png)
+
+Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
+
+1.  ```js
+    alert('hello!');
+    ```
+2.  ```js
+    document.querySelector('html').style.backgroundColor = 'purple';
+    ```
+3.  ```js
+    const myWordmark = document.createElement('img');
+    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+    document.querySelector('h1').appendChild(myWordmark);
+    ```
+
+Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.
+
+1.  ```js
+    alert('hello!);
+    ```
+2.  ```js
+    document.cheeseSelector('html').style.backgroundColor = 'purple';
+    ```
+3.  ```js
+    const myWordmark = document.createElement('img');
+    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+    document.querySelector('h1').appendChild(myWordmark);
+    ```
+
+Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos errores son bastante crípticos, ¡pero debería ser bastante sencillo resolver estos problemas!
+
+### Conocer más
+
+Obtén más información sobre la consola de JavaScript en diferentes navegadores:
+
+- [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
+- [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
+- [Consola JavaScript de Chrome.](https://developer.chrome.com/devtools/docs/console) (el inspector de Opera funciona de la misma manera)
+- [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
+
+## Ve también
+
+- [Depurar HTML.](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Depurar CSS.](/es/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)

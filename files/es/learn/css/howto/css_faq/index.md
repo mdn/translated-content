@@ -7,113 +7,151 @@ tags:
 translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Preguntas_frecuentes_sobre_CSS
 ---
-<h4 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered"><span class="goog-gtc-unit" id="goog-gtc-unit-2"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr">Mi CSS es válida, pero no se representa correctamente</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-3"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Los navegadores utilizan la declaración <code>DOCTYPE</code> para elegir entre mostrar el documento usando un modo que sea más compatible con los estándares de la Web o mostrarlo con los fallos de los navegadores antiguos.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-4"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El uso de una declaración <code>DOCTYPE</code> correcta y moderna al inicio del código HTML mejorará el cumplimiento de los estándares del navegador.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-5"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Los navegadores modernos tienen fundamentalmente dos modos de renderizado:</span></span></p>
-<ul> <li><span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style=""><em>Quirks mode</em> (Modo no estándar): también se llama el modo de compatibilidad con versiones anteriores y permite que las páginas web heredadas se representen como sus autores habían previsto, siguiendo las normas de representación o renderizado no estándares que usan los navegadores antiguos.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-7"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Los documentos con una declaración <code>DOCTYPE</code> incompleta, incorrecta o faltante o con una declaración <code>DOCTYPE</code> conocida que se usara habitualmente antes de 2001 se representarán en el Modo no estándar.</span></span></li> <li><span class="goog-gtc-unit" id="goog-gtc-unit-8"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style=""><em>Standards Mode</em> (Modo estándar): el navegador intenta seguir estrictamente los estándares del W3C.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Se supone que las nuevas páginas HTML se diseñarán para navegadores compatibles con los estándares, y como resultado, las páginas con una declaración <code>DOCTYPE</code> moderna será renderizada con el Modo estándar.</span></span></li>
-</ul>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-10"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Los navegadores basados en Gecko tienen un tercer <em><a href="/en/Gecko's_&quot;Almost_Standards&quot;_Mode" title="en/Gecko's &quot;Almost Standards&quot; Mode">Modo casi estándar</a></em> que tiene solo una peculiaridades menores.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-11"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Esta es una lista de las declaraciones <code>DOCTYPE</code> más utilizadas que activarán el Modo estándar o el Modo casi estándar:</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-12"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;!</span></span><span class="goog-gtc-unit" id="goog-gtc-unit-13"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN"</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-14"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">"http://www.w3.org/TR/html4/loose.dtd"&gt;</span></span>
+#### Mi CSS es válida, pero no se representa correctamente
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-15"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;!</span></span><span class="goog-gtc-unit" id="goog-gtc-unit-16"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN"</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-17"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">"http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span>
+Los navegadores utilizan la declaración `DOCTYPE` para elegir entre mostrar el documento usando un modo que sea más compatible con los estándares de la Web o mostrarlo con los fallos de los navegadores antiguos. El uso de una declaración `DOCTYPE` correcta y moderna al inicio del código HTML mejorará el cumplimiento de los estándares del navegador.
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-18"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;!</span></span><span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN"</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-20"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span>
+Los navegadores modernos tienen fundamentalmente dos modos de renderizado:
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-21"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;!</span></span><span class="goog-gtc-unit" id="goog-gtc-unit-22"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN"</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-23"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></span>
-</pre>
-<h4 id="Difference_between_id_and_class" name="Difference_between_id_and_class"><span class="goog-gtc-unit" id="goog-gtc-unit-24"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Diferencia entre <code>id</code> y <code>class</code></span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-25"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Los elementos HTML pueden tener un atributo <code>id</code> y / o un atributo <code>class</code>.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-26"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El atributo <code>id</code> asigna un nombre a un elemento determinado y debe haber un solo elemento con ese nombre.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-27"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El atributo <code>class</code> asigna un elemento a una determinada clase y en general no puede haber más de un elemento con el mismo atributo <code>class</code>.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-28"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">CSS te permite aplicar estilos a un atributo <code>id</code> y / o <code>class</code> concreto.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-29"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Utiliza un estilo específico de <code>id</code> cuando desees restringir las reglas de estilo a un bloque o elemento concreto.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-30"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Este estilo lo usará <strong>un solo</strong> elemento con ese <code>id</code> concreto.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-31"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Usa un estilo específico de <code>class</code> cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-32"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Consulta <a href="/en/CSS/Getting_Started/Selectors" title="en/CSS/Getting Started/Selectors">Selectores CSS</a></span></span></p>
-<h4 id="Restoring_the_default_property_value" name="Restoring_the_default_property_value"><span class="goog-gtc-unit" id="goog-gtc-unit-33"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Restaurar el valor de la propiedad predeterminado</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-34"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Debido a que CSS no proporciona una palabra clave "predeterminada", la única manera de restaurar el valor predeterminado de una propiedad es volver a declarar explícitamente dicha propiedad.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-35"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Por lo tanto, debes tener especial cuidado al escribir reglas de estilo usando selectores (por ejemplo, los selectores por nombre de etiqueta, como <code>p</code> ) que tal vez desees reemplazar con reglas más específicas (como las que usan id o selectores de clase), porque el valor predeterminado original no puede restablecerse automáticamente.</span></span></p>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-36"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Debido a la naturaleza <em>en cascada</em> de CSS, es una buena práctica definir reglas de estilo de una manera lo más concreta posible para evitar aplicar estilo a elementos a los que no se tenía previsto aplicar.</span></span></p>
-<h4 id="Derived_styles" name="Derived_styles"><span class="goog-gtc-unit" id="goog-gtc-unit-37"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Estilos derivados</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-38"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">CSS no permite que se defina un estilo según los términos de otro.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-39"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">(Consulta la <a class="external" href="http://archivist.incutio.com/viewlist/css-discuss/2685">nota de Eric Meyer acerca de la postura del Grupo de trabajo)</a>.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-40"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Sin embargo, la asignación de múltiples clases a un solo elemento puede proporcionar el mismo efecto.</span></span></p>
-<h4 id="Assigning_multiple_classes" name="Assigning_multiple_classes"><span class="goog-gtc-unit" id="goog-gtc-unit-41"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Asignación de múltiples clases</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-42"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">A los elementos HTML se les pueden asignar varias clases listándolas  en el atributo <code>class</code>, con un espacio en blanco para separarlas.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-43"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;style type="text/css"&gt;</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-44"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.news { background: black; color: white; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-45"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.today { font-weight: bold; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-46"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/style&gt;</span></span>
+- _Quirks mode_ (Modo no estándar): también se llama el modo de compatibilidad con versiones anteriores y permite que las páginas web heredadas se representen como sus autores habían previsto, siguiendo las normas de representación o renderizado no estándares que usan los navegadores antiguos. Los documentos con una declaración `DOCTYPE` incompleta, incorrecta o faltante o con una declaración `DOCTYPE` conocida que se usara habitualmente antes de 2001 se representarán en el Modo no estándar.
+- _Standards Mode_ (Modo estándar): el navegador intenta seguir estrictamente los estándares del W3C. Se supone que las nuevas páginas HTML se diseñarán para navegadores compatibles con los estándares, y como resultado, las páginas con una declaración `DOCTYPE` moderna será renderizada con el Modo estándar.
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-47"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">&lt;div class="news today"&gt;</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-48"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">... contenido de las noticias de hoy ...</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-49"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/ div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-50"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve primero a través de la especificidad, a continuación, según el orden de las declaraciones CSS.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-51"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El orden de las clases en el atributo <code>class</code> no es relevante.</span></span></p>
-<h4 id="Style_rules_that_don.27t_work" name="Style_rules_that_don.27t_work"><span class="goog-gtc-unit" id="goog-gtc-unit-52"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Normas de estilo que no funcionan</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-53"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-54"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Puedes utilizar las <em>Reglas de estilo de CSS</em> del <a href="/en/DOM_Inspector" title="en/DOM Inspector">Inspector DOM</a> para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.</span></span></p>
-<h5 id="HTML_elements_hierarchy" name="HTML_elements_hierarchy"><span class="goog-gtc-unit" id="goog-gtc-unit-55"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Jerarquía de los elementos HTML</span></span></h5>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-56"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-57"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-58"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.news { color: black; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-59"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">. corpName {font-weight: bold; color: red;}</span></span>
+Los navegadores basados en Gecko tienen un tercer _[Modo casi estándar](/en/Gecko's_"Almost_Standards"_Mode (en/Gecko's "Almost Standards" Mode))_ que tiene solo una peculiaridades menores.
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-60"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita --&gt;</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-61"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;div class="news"&gt;</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-62"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">(Reuters) &lt;span class="corpName"&gt; General Electric &lt;/ span&gt; (GE.NYS) anunció el jueves ...</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-63"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/ div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-64"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">En el caso de jerarquías HTML complejas, si parece que se ignora una regla, comprueba si el elemento está dentro de otro elemento con un estilo diferente.</span></span></p>
-<h5 id="Explicitly_re-defined_style_rule" name="Explicitly_re-defined_style_rule"><span class="goog-gtc-unit" id="goog-gtc-unit-65"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Regla de estilo explícitamente redefinida</span></span></h5>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-66"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">En las hojas de estilo CSS el orden <strong>es</strong> importante.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-67"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Si defines una regla y luego vuelves a definirla, se usará la última definición.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-68"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">#stockTicker { font-weight: bold; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-69"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.stockSymbol { color: red; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-70"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">/*  otras reglas             */</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-71"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">/*  otras reglas             */</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-72"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">/*  otras reglas             */</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-73"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.stockSymbol { font-weight: normal; }</span></span>
+Esta es una lista de las declaraciones `DOCTYPE` más utilizadas que activarán el Modo estándar o el Modo casi estándar:
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-74"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita --&gt;</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-75"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;div id="stockTicker"&gt;</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-76"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-77"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/ div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-78"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Para evitar este tipo de errores, intenta definir las reglas solo una vez para un selector determinado y agrupa todas las reglas que pertenecen a ese selector.</span></span></p>
-<h5 id="Use_of_a_shorthand_property" name="Use_of_a_shorthand_property"><span class="goog-gtc-unit" id="goog-gtc-unit-79"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Uso de una propiedad abreviada</span></span></h5>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-80"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-81"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-82"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-83"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-84"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.stockSymbol { font: 14px Arial; color: red; }</span></span>
+    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-85"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;div id="stockTicker"&gt;</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-86"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-87"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/ div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-88"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">En el ejemplo anterior el problema se produjo en las reglas que pertencían a distintos elementos, pero puede ocurrir también para el mismo elemento, porque el orden de las reglas <strong>es</strong> importante.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-89"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">#stockTicker {</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-90"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">font-weight: bold;</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-91"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">font: 12px Verdana; / * font-weight es ahora normal * /</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-92"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">}</span></span>
-</pre>
-<h5 id="Use_of_the_.2A_selector" name="Use_of_the_.2A_selector"><span class="goog-gtc-unit" id="goog-gtc-unit-93"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Uso del selector <code>*</code></span></span></h5>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-94"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El selector <code>*</code> se refiere a cualquier elemento y tiene que utilizarse con especial cuidado.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-95"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">body * { font-weight: normal; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-96"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">#stockTicker { font: 12px Verdana; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-97"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.corpName { font-weight: bold; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-98"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.stockUp { color: red; }</span></span>
+    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-99"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;div id="section"&gt;</span></span>
-   <span class="goog-gtc-unit" id="goog-gtc-unit-100"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">NYS: &lt;span class="corpName"&gt;&lt;span class="stockUp"&gt;GE&lt;/span&gt;&lt;/span&gt; +1.0 ...</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-101"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;/ div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-102"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">En este ejemplo, el selector <code>body *</code> aplica la regla a todos los elementos dentro del cuerpo (<em>body</em>), en cualquier nivel de jerarquía, incluyendo <em>redtext.</em></span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-103"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Así <code>font-weight: bold;</code> aplicada a la clase <em>boldtext</em> se reemplaza por <code>font-weight: normal;</code> aplicada a <em>redtext.</em></span></span></p>
-<h5 id="Specificity_in_CSS" name="Specificity_in_CSS"><span class="goog-gtc-unit" id="goog-gtc-unit-104"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Especificidad en CSS</span></span></h5>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-105"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-106"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">El estilo en línea (en los atributos HTML <code>style</code>) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.</span></span></p>
-<pre><span class="goog-gtc-unit" id="goog-gtc-unit-107"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">div { color: black; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-108"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">#orange { color: orange; }</span></span>
-<span class="goog-gtc-unit" id="goog-gtc-unit-109"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.green { color: green; }</span></span>
+    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<span class="goog-gtc-unit" id="goog-gtc-unit-110"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">&lt;div id="orange" class="green" style="color: red;"&gt;This is red&lt;/div&gt;</span></span>
-</pre>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-111"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Las reglas son más complicadas cuando el selector tiene varias partes.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-112"><span class="goog-gtc-translatable goog-gtc-from-human goog-gtc-ph-missing" dir="ltr" style="">Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el <a class=" external" href="http://www.w3.org/TR/CSS21/cascade.html#specificity">capítulo 6.4.3 de la Especificación CSS 2.1</a></span></span></p>
-<h4 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F"><span class="goog-gtc-unit" id="goog-gtc-unit-113"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">¿Qué hacen las propiedades -moz-*?</span></span></h4>
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-114"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Por favor, consulta la página <a class="internal" href="/en/CSS_Reference/Mozilla_Extensions" title="en/CSS Reference/Mozilla Extensions">Extensiones CSS de Mozilla</a>.</span></span></p>
-<p> </p>
-<p>{{ languages( { "en": "en/Common_CSS_Questions", "pl": "pl/Cz\u0119ste_pytania_o_CSS", "zh-tw": "zh_tw/CSS_\u4e00\u822c\u554f\u984c" } ) }}</p>
+    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+#### Diferencia entre `id` y `class`
+
+Los elementos HTML pueden tener un atributo `id` y / o un atributo `class`. El atributo `id` asigna un nombre a un elemento determinado y debe haber un solo elemento con ese nombre. El atributo `class` asigna un elemento a una determinada clase y en general no puede haber más de un elemento con el mismo atributo `class`. CSS te permite aplicar estilos a un atributo `id` y / o `class` concreto.
+
+Utiliza un estilo específico de `id` cuando desees restringir las reglas de estilo a un bloque o elemento concreto. Este estilo lo usará **un solo** elemento con ese `id` concreto.
+
+Usa un estilo específico de `class` cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
+
+Consulta [Selectores CSS](/en/CSS/Getting_Started/Selectors "en/CSS/Getting Started/Selectors")
+
+#### Restaurar el valor de la propiedad predeterminado
+
+Debido a que CSS no proporciona una palabra clave "predeterminada", la única manera de restaurar el valor predeterminado de una propiedad es volver a declarar explícitamente dicha propiedad.
+
+Por lo tanto, debes tener especial cuidado al escribir reglas de estilo usando selectores (por ejemplo, los selectores por nombre de etiqueta, como `p` ) que tal vez desees reemplazar con reglas más específicas (como las que usan id o selectores de clase), porque el valor predeterminado original no puede restablecerse automáticamente.
+
+Debido a la naturaleza _en cascada_ de CSS, es una buena práctica definir reglas de estilo de una manera lo más concreta posible para evitar aplicar estilo a elementos a los que no se tenía previsto aplicar.
+
+#### Estilos derivados
+
+CSS no permite que se defina un estilo según los términos de otro. (Consulta la [nota de Eric Meyer acerca de la postura del Grupo de trabajo)](http://archivist.incutio.com/viewlist/css-discuss/2685). Sin embargo, la asignación de múltiples clases a un solo elemento puede proporcionar el mismo efecto.
+
+#### Asignación de múltiples clases
+
+A los elementos HTML se les pueden asignar varias clases listándolas en el atributo `class`, con un espacio en blanco para separarlas.
+
+    <style type="text/css">
+    .news { background: black; color: white; }
+    .today { font-weight: bold; }
+    </style>
+
+    <div class="news today">
+    ... contenido de las noticias de hoy ...
+    </ div>
+
+Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve primero a través de la especificidad, a continuación, según el orden de las declaraciones CSS. El orden de las clases en el atributo `class` no es relevante.
+
+#### Normas de estilo que no funcionan
+
+Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en/DOM_Inspector "en/DOM Inspector") para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+
+##### Jerarquía de los elementos HTML
+
+La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
+
+    .news { color: black; }
+    . corpName {font-weight: bold; color: red;}
+
+    <!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita -->
+    <div class="news">
+       (Reuters) <span class="corpName"> General Electric </ span> (GE.NYS) anunció el jueves ...
+    </ div>
+
+En el caso de jerarquías HTML complejas, si parece que se ignora una regla, comprueba si el elemento está dentro de otro elemento con un estilo diferente.
+
+##### Regla de estilo explícitamente redefinida
+
+En las hojas de estilo CSS el orden **es** importante. Si defines una regla y luego vuelves a definirla, se usará la última definición.
+
+    #stockTicker { font-weight: bold; }
+    .stockSymbol { color: red; }
+    /*  otras reglas             */
+    /*  otras reglas             */
+    /*  otras reglas             */
+    .stockSymbol { font-weight: normal; }
+
+    <!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita -->
+    <div id="stockTicker">
+       NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    </ div>
+
+Para evitar este tipo de errores, intenta definir las reglas solo una vez para un selector determinado y agrupa todas las reglas que pertenecen a ese selector.
+
+##### Uso de una propiedad abreviada
+
+Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
+
+    #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
+    .stockSymbol { font: 14px Arial; color: red; }
+
+    <div id="stockTicker">
+       NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    </ div>
+
+En el ejemplo anterior el problema se produjo en las reglas que pertencían a distintos elementos, pero puede ocurrir también para el mismo elemento, porque el orden de las reglas **es** importante.
+
+    #stockTicker {
+       font-weight: bold;
+       font: 12px Verdana; / * font-weight es ahora normal * /
+    }
+
+##### Uso del selector `*`
+
+El selector `*` se refiere a cualquier elemento y tiene que utilizarse con especial cuidado.
+
+    body * { font-weight: normal; }
+    #stockTicker { font: 12px Verdana; }
+    .corpName { font-weight: bold; }
+    .stockUp { color: red; }
+
+    <div id="section">
+       NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+    </ div>
+
+En este ejemplo, el selector `body *` aplica la regla a todos los elementos dentro del cuerpo (_body_), en cualquier nivel de jerarquía, incluyendo _redtext._ Así `font-weight: bold;` aplicada a la clase _boldtext_ se reemplaza por `font-weight: normal;` aplicada a _redtext._
+
+##### Especificidad en CSS
+
+Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo. El estilo en línea (en los atributos HTML `style`) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.
+
+    div { color: black; }
+    #orange { color: orange; }
+    .green { color: green; }
+
+    <div id="orange" class="green" style="color: red;">This is red</div>
+
+Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#specificity)
+
+#### ¿Qué hacen las propiedades -moz-\*?
+
+Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions "en/CSS Reference/Mozilla Extensions").
+
+{{ languages( { "en": "en/Common_CSS_Questions", "pl": "pl/Cz\u0119ste_pytania_o_CSS", "zh-tw": "zh_tw/CSS\_\u4e00\u822c\u554f\u984c" } ) }}

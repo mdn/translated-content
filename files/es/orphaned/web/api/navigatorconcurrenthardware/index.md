@@ -20,53 +20,34 @@ tags:
 translation_of: Web/API/NavigatorConcurrentHardware
 original_slug: Web/API/NavigatorConcurrentHardware
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>NavigatorConcurrentHardware</code></strong> {{Glossary("mixin")}} adds to the {{domxref("Navigator")}} interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.</p>
+The **`NavigatorConcurrentHardware`** {{Glossary("mixin")}} adds to the {{domxref("Navigator")}} interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>The number of <strong>logical processor cores</strong> is a way to measure the number of threads which can effectively be run at once without them having to share CPUs. Modern computers have multiple physical cores in their CPU (two or four cores is typical), but each physical core is also usually able to run more than one thread at a time using advanced scheduling techniques. So a four-core CPU may return 8. The browser may, however, choose to reduce the number in order to represent more accurately the number of {{domxref("Worker")}}s that can run at once</p>
+The number of **logical processor cores** is a way to measure the number of threads which can effectively be run at once without them having to share CPUs. Modern computers have multiple physical cores in their CPU (two or four cores is typical), but each physical core is also usually able to run more than one thread at a time using advanced scheduling techniques. So a four-core CPU may return 8. The browser may, however, choose to reduce the number in order to represent more accurately the number of {{domxref("Worker")}}s that can run at once
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyinline}}</dt>
- <dd>Returns the number of logical processors which may be available to the user agent. This value is always at least 1, and will be 1 if the actual number of logical processors can't be determined.</dd>
-</dl>
+- {{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyinline}}
+  - : Returns the number of logical processors which may be available to the user agent. This value is always at least 1, and will be 1 if the actual number of logical processors can't be determined.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>NavigatorConcurrentHardware</code></em><em> mixin has no methods.</em></p>
+_The `NavigatorConcurrentHardware`_ _mixin has no methods._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatorconcurrenthardware', 'NavigatorConcurrentHardware')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', '#navigatorconcurrenthardware', 'NavigatorConcurrentHardware')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.NavigatorConcurrentHardware")}}
 
+## See also
 
-<p>{{Compat("api.NavigatorConcurrentHardware")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Navigator")}}</li>
- <li>{{domxref("WorkerNavigator")}}</li>
-</ul>
+- {{domxref("Navigator")}}
+- {{domxref("WorkerNavigator")}}

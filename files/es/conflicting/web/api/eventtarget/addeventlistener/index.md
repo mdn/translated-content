@@ -4,42 +4,32 @@ slug: conflicting/Web/API/EventTarget/addEventListener
 translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<h2 id="Method_overview" name="Method_overview">Información General del Método</h2>
+## Información General del Método
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#handleEvent()">handleEvent</a>(in Event event);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void handleEvent(in Event event);` |
+| ----------------------------------- |
 
-<h2 id="Methods" name="Methods">Metodos</h2>
+## Metodos
 
-<h3 id="handleEvent()" name="handleEvent()">handleEvent()</h3>
+### handleEvent()
 
-<p>Este metodo es llamado cuando un evento ocurre del tipo para el cual la interfaz <code>EventListener</code> fue registrada.</p>
+Este metodo es llamado cuando un evento ocurre del tipo para el cual la interfaz `EventListener` fue registrada.
 
-<pre class="eval">void handleEvent(
-  in Event event
-);
-</pre>
+    void handleEvent(
+      in Event event
+    );
 
-<h5 id="Parameters" name="Parameters">Parametros</h5>
+##### Parametros
 
-<dl>
- <dt><code>event</code></dt>
- <dd>El DOM {{ domxref("Event") }} a registrar.</dd>
-</dl>
+- `event`
+  - : El DOM {{ domxref("Event") }} a registrar.
 
-<h3 id="Remarks" name="Remarks">Observaciones</h3>
+### Observaciones
 
-<p>Como la interfaz es marcada con la bandera <code><span class="nowiki">[function],todas los objetos </span></code><a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a>  de javascript automaticamente implementan esta interfaz. Llamando el método <a href="#handleevent">handleEvent</a> en tales implementaciones automaticamente invocan la funcion.</p>
+Como la interfaz es marcada con la bandera `[function],todas los objetos `[Function](/en/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function") de javascript automaticamente implementan esta interfaz. Llamando el método [handleEvent](#handleevent) en tales implementaciones automaticamente invocan la funcion.
 
-<h2 id="See_also" name="See_also">Mira también</h2>
+## Mira también
 
-<ul>
- <li>{{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}</li>
-</ul>
+- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}

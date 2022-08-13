@@ -3,28 +3,26 @@ title: Elemento vacío
 slug: Glossary/Empty_element
 translation_of: Glossary/Empty_element
 ---
-<p>Un <strong>elemento vacío </strong> es un {{Glossary("elemento")}} de HTML, SVG, o MathML que <strong>no puede</strong> tener nodos secundarios (es decir, elementos anidados o nodos de texto).</p>
+Un **elemento vacío** es un {{Glossary("elemento")}} de HTML, SVG, o MathML que **no puede** tener nodos secundarios (es decir, elementos anidados o nodos de texto).
 
-<p>Las especificaciones <a href="https://html.spec.whatwg.org/multipage/">HTML</a>, <a href="https://www.w3.org/TR/SVG2/">SVG</a>, y <a href="https://www.w3.org/TR/MathML3/">MathML</a> definen con precisión lo que cada elemento puede contener. Muchas combinaciones no tienen sentido semántico, por ejemplo un elemento {{HTMLElement("audio")}} anidado dentro de un elemento {{HTMLElement("hr")}}.</p>
+Las especificaciones [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), y [MathML](https://www.w3.org/TR/MathML3/) definen con precisión lo que cada elemento puede contener. Muchas combinaciones no tienen sentido semántico, por ejemplo un elemento {{HTMLElement("audio")}} anidado dentro de un elemento {{HTMLElement("hr")}}.
 
-<p>En HTML, el uso de una etiqueta de cierre en un elemento vacío normalmente no es válido. Por ejemplo, <code>&lt;input type="text"&gt;&lt;/input&gt;</code> es un elemento HTML no válido.</p>
+En HTML, el uso de una etiqueta de cierre en un elemento vacío normalmente no es válido. Por ejemplo, `<input type="text"></input>` es un elemento HTML no válido.
 
-<p>Los elementos vacíos en HTML son los siguientes:</p>
+Los elementos vacíos en HTML son los siguientes:
 
-<ul>
- <li>{{HTMLElement("area")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{HTMLElement("br")}}</li>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("embed")}}</li>
- <li>{{HTMLElement("hr")}}</li>
- <li>{{HTMLElement("img")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("keygen")}}(HTML 5.2 Draft removed)</li>
- <li>{{HTMLElement("link")}}</li>
- <li>{{HTMLElement("meta")}}</li>
- <li>{{HTMLElement("param")}}</li>
- <li>{{HTMLElement("source")}}</li>
- <li>{{HTMLElement("track")}}</li>
- <li>{{HTMLElement("wbr")}}</li>
-</ul>
+- {{HTMLElement("area")}}
+- {{HTMLElement("base")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("hr")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("keygen")}}(HTML 5.2 Draft removed)
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("param")}}
+- {{HTMLElement("source")}}
+- {{HTMLElement("track")}}
+- {{HTMLElement("wbr")}}

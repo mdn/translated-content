@@ -10,51 +10,51 @@ tags:
 translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
-<h2 id="El_problema">El problema</h2>
+## El problema
 
-<p>Tienes un formulario — un formulario de contacto — por ejemplo, en el que deseas poner algún control de error accesible. Ejemplos de problemas comunes incluyen direcciones de correo electrónico que no son válidas o un campo de nombre que no contiene al menos un nombre o apellido.</p>
+Tienes un formulario — un formulario de contacto — por ejemplo, en el que deseas poner algún control de error accesible. Ejemplos de problemas comunes incluyen direcciones de correo electrónico que no son válidas o un campo de nombre que no contiene al menos un nombre o apellido.
 
-<h2 id="El_formulario">El formulario</h2>
+## El formulario
 
-<p>Primero, lee acerca de la <code><a href="/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields" title="/es/Web/Accessibility/ARIA/forms/Basic_form_hints">técnica requerida por aria</a></code> si no lo has hecho, ya que esta técnica amplía a esa.</p>
+Primero, lee acerca de la [`técnica requerida por aria`](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields "/es/Web/Accessibility/ARIA/forms/Basic_form_hints") si no lo has hecho, ya que esta técnica amplía a esa.
 
-<p>Aquí hay un sencillo formulario:</p>
+Aquí hay un sencillo formulario:
 
-<pre class="brush: html notranslate"> &lt;form method="post" action="post.php"&gt;
-   &lt;fieldset&gt;
-     &lt;legend&gt;Introduce tus datos de contacto&lt;/legend&gt;
-     &lt;label for="name"&gt;Tu nombre (obligatorio):&lt;/label&gt;
-     &lt;input name="name" id="name" aria-required="true"/&gt;
-     &lt;br /&gt;
-     &lt;label for="email"&gt;Dirección de correo electrónico (obligatorio):&lt;/label&gt;
-     &lt;input name="email" id="email" aria-required="true"/&gt;
-     &lt;br /&gt;
-     &lt;label for="website"&gt;Sitio web (opcional):&lt;/label&gt;
-     &lt;input name="website" id="website"/&gt;
-   &lt;/fieldset&gt;
-   &lt;label for="message"&gt;Por favor ingresa tu mensaje (requerido):&lt;/label&gt;
-   &lt;br /&gt;
-   &lt;textarea name="message" id="message" rows="5" cols="80"
-             aria-required="true"&gt;&lt;/textarea&gt;
-   &lt;br /&gt;
-   &lt;input type="submit" name="submit" value="Enviar mensaje"/&gt;
-   &lt;input type="reset" name="reset" value="Restablecer formulario"/&gt;
- &lt;/form&gt;
-</pre>
+```html
+ <form method="post" action="post.php">
+   <fieldset>
+     <legend>Introduce tus datos de contacto</legend>
+     <label for="name">Tu nombre (obligatorio):</label>
+     <input name="name" id="name" aria-required="true"/>
+     <br />
+     <label for="email">Dirección de correo electrónico (obligatorio):</label>
+     <input name="email" id="email" aria-required="true"/>
+     <br />
+     <label for="website">Sitio web (opcional):</label>
+     <input name="website" id="website"/>
+   </fieldset>
+   <label for="message">Por favor ingresa tu mensaje (requerido):</label>
+   <br />
+   <textarea name="message" id="message" rows="5" cols="80"
+             aria-required="true"></textarea>
+   <br />
+   <input type="submit" name="submit" value="Enviar mensaje"/>
+   <input type="reset" name="reset" value="Restablecer formulario"/>
+ </form>
+```
 
-<h2 id="Verificación_de_validez_y_notificación_al_usuario"><span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">Verificación de validez y notificación al usuario</span></h2>
+## Verificación de validez y notificación al usuario
 
-<p>La validación de formularios consta de varios pasos:</p>
+La validación de formularios consta de varios pasos:
 
-<ol>
- <li>Verificando si la dirección de correo electrónico o el nombre ingresado son válidos. Cada campo tiene un conjunto de criterios que se deben cumplir para aprobar la validación. Para simplificar este ejemplo, verificaremos si la dirección de correo electrónico contiene el símbolo "@" y si la entrada del nombre contiene al menos 1 carácter.</li>
- <li>Si no se cumplen los criterios anteriores, el atributo <code>aria-invalid</code> del campo recibirá un valor de "<code>true</code>".</li>
- <li>Si no se cumplieron los criterios, se notificará al usuario mediante una alerta. En lugar de usar la función "<code>alert</code>" de JavaScript, usaremos un <em>widget WAI-ARIA</em> simple para la notificación. Esto notifica al usuario del error, pero le permite continuar modificando el formulario sin perder el foco (causado por el controlador "<code>onblur</code>" en la función "<code>alert</code>" predeterminada de JavaScript).</li>
-</ol>
+1.  Verificando si la dirección de correo electrónico o el nombre ingresado son válidos. Cada campo tiene un conjunto de criterios que se deben cumplir para aprobar la validación. Para simplificar este ejemplo, verificaremos si la dirección de correo electrónico contiene el símbolo "@" y si la entrada del nombre contiene al menos 1 carácter.
+2.  Si no se cumplen los criterios anteriores, el atributo `aria-invalid` del campo recibirá un valor de "`true`".
+3.  Si no se cumplieron los criterios, se notificará al usuario mediante una alerta. En lugar de usar la función "`alert`" de JavaScript, usaremos un _widget WAI-ARIA_ simple para la notificación. Esto notifica al usuario del error, pero le permite continuar modificando el formulario sin perder el foco (causado por el controlador "`onblur`" en la función "`alert`" predeterminada de JavaScript).
 
-<p>A continuación se muestra un código JavaScript de ejemplo que se podría insertar encima de la etiqueta de cierre "<code>head</code>":</p>
+A continuación se muestra un código JavaScript de ejemplo que se podría insertar encima de la etiqueta de cierre "`head`":
 
-<pre class="brush: js notranslate"> &lt;script type="application/javascript"&gt;
+```js
+ <script type="application/javascript">
  function removeOldAlert()
  {
    var oldAlert = document.getElementById("alert");
@@ -77,7 +77,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
  function checkValidity(aID, aSearchTerm, aMsg)
  {
    var elem = document.getElementById(aID);
-   var invalid = (elem.value.indexOf(aSearchTerm) &lt; 0);
+   var invalid = (elem.value.indexOf(aSearchTerm) < 0);
    if (invalid) {
      elem.setAttribute("aria-invalid", "true");
      addAlert(aMsg);
@@ -86,63 +86,58 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
      removeOldAlert();
    }
  }
- &lt;/script&gt;
-</pre>
+ </script>
+```
 
-<h2 id="La_función_checkValidity"><span class="mw-headline" id="The_checkValidity_function">La función <code>checkValidity</code></span></h2>
+## La función `checkValidity`
 
-<p>El método principal en JavaScript utilizado para la validación de formularios es la función <code>checkValidity</code>. Este método toma tres parámetros: el ID de el <code>input</code> que se va a validar, el término que se busca para asegurar la validez y el mensaje de error que se inserta en la alerta.</p>
+El método principal en JavaScript utilizado para la validación de formularios es la función `checkValidity`. Este método toma tres parámetros: el ID de el `input` que se va a validar, el término que se busca para asegurar la validez y el mensaje de error que se inserta en la alerta.
 
-<p>Para ver si es válido, la función comprueba si el valor <code>indexOf</code> del <code>input</code> es algo mayor que <code>-1</code>. Se devuelve un valor de <code>-1</code> o menos si el índice del término de búsqueda no se pudo encontrar dentro del valor.</p>
+Para ver si es válido, la función comprueba si el valor `indexOf` del `input` es algo mayor que `-1`. Se devuelve un valor de `-1` o menos si el índice del término de búsqueda no se pudo encontrar dentro del valor.
 
-<p>Si no es válido, la función hace dos cosas:</p>
+Si no es válido, la función hace dos cosas:
 
-<ol>
- <li>Establece el atributo <code>aria-invalid</code> del elemento en "<code>true</code>", lo que indicará a los lectores de pantalla que hay contenido no válido aquí.</li>
- <li>Llamará a la función <code>addAlert</code> para agregar la alerta con el mensaje de error proporcionado.</li>
-</ol>
+1.  Establece el atributo `aria-invalid` del elemento en "`true`", lo que indicará a los lectores de pantalla que hay contenido no válido aquí.
+2.  Llamará a la función `addAlert` para agregar la alerta con el mensaje de error proporcionado.
 
-<p>Si se encuentra el término de búsqueda, el atributo <code>aria-invalid</code> se restablece a “<code>false</code>”. Además, se eliminan las alertas sobrantes.</p>
+Si se encuentra el término de búsqueda, el atributo `aria-invalid` se restablece a “`false`”. Además, se eliminan las alertas sobrantes.
 
-<h2 id="La_función_addAlert"><span class="mw-headline" id="The_addAlert_function">La función <code>addAlert</code></span></h2>
+## La función `addAlert`
 
-<p>Esta función primero elimina las alertas antiguas. La función es simple: busca un elemento con id "<code>alert</code>" y, si lo encuentra, lo elimina del <a href="/es/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">modelo de objetos del documento</a>.</p>
+Esta función primero elimina las alertas antiguas. La función es simple: busca un elemento con id "`alert`" y, si lo encuentra, lo elimina del [modelo de objetos del documento](/es/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-<p>A continuación, la función crea un elemento <code>div</code> para contener el texto de alerta. Obtiene un ID de "<code>alert</code>". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el <a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="Módulo de atributo de rol XHTML">Módulo de atributos de rol XHTML</a> que simplemente se transfirió a HTML para simplificar.</p>
+A continuación, la función crea un elemento `div` para contener el texto de alerta. Obtiene un ID de "`alert`". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el [Módulo de atributos de rol XHTML](http://www.w3.org/TR/xhtml-role/ "Módulo de atributo de rol XHTML") que simplemente se transfirió a HTML para simplificar.
 
-<p>El texto se agrega al elemento <code>div</code> y el elemento <code>div</code> se agrega al documento.</p>
+El texto se agrega al elemento `div` y el elemento `div` se agrega al documento.
 
-<p>En el momento en que esto suceda, Firefox lanzará un evento "<code>alert</code>" a las tecnologías de asistencia cuando aparezca este <code>div</code>. La mayoría de los lectores de pantalla la recogerán automáticamente y la pregonarán. Esto es similar a la barra de notificaciones en Firefox que te pregunta si deseas guardar una contraseña. La alerta que acabamos de crear no tiene ningún botón para presionar, solo nos dice lo que está mal.</p>
+En el momento en que esto suceda, Firefox lanzará un evento "`alert`" a las tecnologías de asistencia cuando aparezca este `div`. La mayoría de los lectores de pantalla la recogerán automáticamente y la pregonarán. Esto es similar a la barra de notificaciones en Firefox que te pregunta si deseas guardar una contraseña. La alerta que acabamos de crear no tiene ningún botón para presionar, solo nos dice lo que está mal.
 
-<h2 id="Modificar_el_evento_onblur"><span class="mw-headline" id="Adding_the_magic_to_the_.E2.80.9Conblur.E2.80.9D_event">Modificar el evento "<code>onblur</code>"</span></h2>
+## Modificar el evento "`onblur`"
 
-<p>Todo lo que queda ahora es agregar el controlador de eventos. Necesitamos cambiar las dos entradas para el correo electrónico y el nombre para esto:</p>
+Todo lo que queda ahora es agregar el controlador de eventos. Necesitamos cambiar las dos entradas para el correo electrónico y el nombre para esto:
 
-<pre class="brush: html notranslate"> &lt;input name="name" id="name" aria-required="true"
-        onblur="checkValidity('name', '', '¡Se ingresó un nombre no válido!');"/&gt;
- &lt;br /&gt;
- &lt;input name="email" id="email" aria-required="true"
-        onblur="checkValidity('email', '@', 'Dirección de correo electrónico no válida');"/&gt;
-</pre>
+```html
+ <input name="name" id="name" aria-required="true"
+        onblur="checkValidity('name', '', '¡Se ingresó un nombre no válido!');"/>
+ <br />
+ <input name="email" id="email" aria-required="true"
+        onblur="checkValidity('email', '@', 'Dirección de correo electrónico no válida');"/>
+```
 
-<p><strong>Probar el ejemplo</strong></p>
+**Probar el ejemplo**
 
-<p>Si usas Firefox 3 y un lector de pantalla compatible actualmente, intenta lo siguiente:</p>
+Si usas Firefox 3 y un lector de pantalla compatible actualmente, intenta lo siguiente:
 
-<ol>
- <li>Ingresa solo tu primer nombre como nombre. Al pulsar la tecla de tabulación, escucharás una alerta que te indicará que ingresaste un nombre no válido. Luego puedes volver atrás con <code>Mayús-Tab</code> y corregir el error.</li>
- <li>Ingresa una dirección de correo electrónico sin el símbolo “@”. Cuando salgas de este campo, deberías escuchar una advertencia que dice que no ingresaste una dirección de correo electrónico válida.</li>
-</ol>
+1.  Ingresa solo tu primer nombre como nombre. Al pulsar la tecla de tabulación, escucharás una alerta que te indicará que ingresaste un nombre no válido. Luego puedes volver atrás con `Mayús-Tab` y corregir el error.
+2.  Ingresa una dirección de correo electrónico sin el símbolo “@”. Cuando salgas de este campo, deberías escuchar una advertencia que dice que no ingresaste una dirección de correo electrónico válida.
 
-<p>En ambos casos, al volver a enfocar el campo en cuestión, tu lector de pantalla debería decirte que este campo no es válido. JAWS 9 admite esto, pero JAWS 8 no, por lo que es posible que esto no funcione en todas las versiones de los lectores de pantalla compatibles.</p>
+En ambos casos, al volver a enfocar el campo en cuestión, tu lector de pantalla debería decirte que este campo no es válido. JAWS 9 admite esto, pero JAWS 8 no, por lo que es posible que esto no funcione en todas las versiones de los lectores de pantalla compatibles.
 
-<h2 id="Algunas_preguntas_que_podrías_tener"><span class="mw-headline" id="A_few_questions_that_you_might_have">Algunas preguntas que podrías tener</span></h2>
+## Algunas preguntas que podrías tener
 
-<dl>
- <dt>P. ¿Por qué pusiste “<code>(obligatorio)</code>” en el texto de la etiqueta y el atributo <code>aria-required</code> en algunas de las entradas?</dt>
- <dd>R. Si se tratara de un formulario real en vivo y el sitio estuviera siendo visitado por un navegador que aún no es compatible con ARIA, aún quisiéramos dar una indicación de que este es un campo obligatorio.</dd>
- <dt>P. ¿Por qué no vuelve a enfocarse en el campo no válido automáticamente?</dt>
- <dd>R. Porque esto no está permitido por las especificaciones de la API de Windows y posiblemente otras. Además, dejar que el enfoque salte sin interacción real del usuario con demasiada frecuencia no es algo agradable en general. </dd>
-</dl>
+- P. ¿Por qué pusiste “`(obligatorio)`” en el texto de la etiqueta y el atributo `aria-required` en algunas de las entradas?
+  - : R. Si se tratara de un formulario real en vivo y el sitio estuviera siendo visitado por un navegador que aún no es compatible con ARIA, aún quisiéramos dar una indicación de que este es un campo obligatorio.
+- P. ¿Por qué no vuelve a enfocarse en el campo no válido automáticamente?
+  - : R. Porque esto no está permitido por las especificaciones de la API de Windows y posiblemente otras. Además, dejar que el enfoque salte sin interacción real del usuario con demasiada frecuencia no es algo agradable en general.
 
-<div class="warning">Aún no definido: reconsideremos esto ─ personalmente, creo que establecer el enfoque podría ser bueno si se hace sin causar una trampa en el teclado.</div>
+> **Advertencia:** Aún no definido: reconsideremos esto ─ personalmente, creo que establecer el enfoque podría ser bueno si se hace sin causar una trampa en el teclado.

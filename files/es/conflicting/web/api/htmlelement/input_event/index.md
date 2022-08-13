@@ -4,38 +4,37 @@ slug: conflicting/Web/API/HTMLElement/input_event
 translation_of: Web/API/GlobalEventHandlers/oninput
 original_slug: Web/API/GlobalEventHandlers/oninput
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Un controlador de eventos para el evento input en la ventana. El evento input es llamado cuando el valor de un elemento {{ HTMLElement("input") }} ha cambiado. </p>
+Un controlador de eventos para el evento input en la ventana. El evento input es llamado cuando el valor de un elemento {{ HTMLElement("input") }} ha cambiado.
 
-<p>Este evento se propaga. Si está soportado en la ventana, también estará soportado en elementos {{ HTMLElement("input") }}.</p>
+Este evento se propaga. Si está soportado en la ventana, también estará soportado en elementos {{ HTMLElement("input") }}.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
 
 window.addEventListener('input', function (e) {
  console.log("Evento keyup detectado! proveniente de este elemento:", e.target);
 }, false);
 
-&lt;/script&gt;
+</script>
 
-&lt;input placeholder="Tipee aquí y vea la consola."&gt;
-</pre>
+<input placeholder="Tipee aquí y vea la consola.">
+```
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<p><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input">HTML - APIs de elementos de entrada comunes (<code>input</code>)</a></p>
+[HTML - APIs de elementos de entrada comunes (`input`)](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input)
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.GlobalEventHandlers.oninput")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a class="external" href="http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/">Un laberinto de navegadores HTML5, soporte para oninput</a></li>
- <li><a class="external" href="http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/">Corrigiendo oninput en IE con html5Widgets</a> incluye cobertura para IE6-8</li>
- <li>Mathias Bynens sugiere <a class="external" href="http://mathiasbynens.be/notes/oninput">enlazando a input y keydown</a></li>
- <li><a class="external" href="http://help.dottoro.com/ljhxklln.php">evento oninput | dottoro</a> posee notas acerca de bugs en IE9</li>
-</ul>
+- [Un laberinto de navegadores HTML5, soporte para oninput](http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
+- [Corrigiendo oninput en IE con html5Widgets](http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) incluye cobertura para IE6-8
+- Mathias Bynens sugiere [enlazando a input y keydown](http://mathiasbynens.be/notes/oninput)
+- [evento oninput | dottoro](http://help.dottoro.com/ljhxklln.php) posee notas acerca de bugs en IE9

@@ -7,58 +7,43 @@ tags:
   - JavaScript
 translation_of: Glossary/jQuery
 ---
-<p>jQuery es una {{Glossary("JavaScript")}} {{Glossary("Library")}} que se enfoca en simplificar la manipulación del {{Glossary("DOM")}}, llamadas {{Glossary("AJAX")}} y manejo de {{Glossary("Event")}}. Es utilizado por desarrolladores JavaScript de manera frecuente.</p>
+jQuery es una {{Glossary("JavaScript")}} {{Glossary("Library")}} que se enfoca en simplificar la manipulación del {{Glossary("DOM")}}, llamadas {{Glossary("AJAX")}} y manejo de {{Glossary("Event")}}. Es utilizado por desarrolladores JavaScript de manera frecuente.
 
-<p>jQUery usa un formato, <code>$(selector).action()</code> para asignar elementos a un evento. Para explicarlo con mayor detalle, <code>$(selector)</code> hara que jQuery seleccione los elementos <code>selector</code> y los asigne a un evento {{Glossary("API")}} llamado <code>.action()</code>.</p>
+jQUery usa un formato, `$(selector).action()` para asignar elementos a un evento. Para explicarlo con mayor detalle, `$(selector)` hara que jQuery seleccione los elementos `selector` y los asigne a un evento {{Glossary("API")}} llamado `.action()`.
 
-<pre class="brush: js"><code class="language-js">$(document).ready(function(){
+```js
+$(document).ready(function(){
   alert("¡Hola Mundo!");
   $("#blackBox").hide();
-});</code></pre>
+});
+```
 
-<p>El código anterior es equivalente al siguiente:</p>
+El código anterior es equivalente al siguiente:
 
-<pre class="brush: js"><code class="language-js">window.onload = function() {
+```js
+window.onload = function() {
   alert( "¡Hola Mundo!" );
   document.getElementById("blackBox").style.display = "none";
-};</code></pre>
+};
+```
 
-<h2 id="Descargar_jQuery">Descargar jQuery</h2>
+## Descargar jQuery
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>npm</strong></th>
-   <th scope="col">bower (solo file)</th>
-   <th scope="col">Google CDN</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>npm install jquery</code></td>
-   <td><code>bower install https://code.jquery.com/jquery-3.2.1.min.js</code></td>
-   <td><code>https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js</code></td>
-  </tr>
- </tbody>
-</table>
+| **npm**              | bower (solo file)                                           | Google CDN                                                         |
+| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| `npm install jquery` | `bower install https://code.jquery.com/jquery-3.2.1.min.js` | `https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js` |
 
-<h2 id="Aprende_más">Aprende más</h2>
+## Aprende más
 
-<h3 id="Conocimiento_general">Conocimiento general</h3>
+### Conocimiento general
 
-<ul>
- <li>{{Interwiki("wikipedia", "jQuery")}} en Wikipedia</li>
- <li><a href="http://jquery.com/">Sitio oficial de jQuery</a></li>
-</ul>
+- {{Interwiki("wikipedia", "jQuery")}} en Wikipedia
+- [Sitio oficial de jQuery](http://jquery.com/)
 
-<h3 id="Aprende_jQuery">Aprende jQuery</h3>
+### Aprende jQuery
 
-<ul>
- <li><a href="https://www.codecademy.com/learn/jquery">Curso web en codeacademy.com</a></li>
-</ul>
+- [Curso web en codeacademy.com](https://www.codecademy.com/learn/jquery)
 
-<h3 id="Información_técnica">Información técnica</h3>
+### Información técnica
 
-<ul>
- <li><a href="https://api.jquery.com/">Documentación de referencia de la API</a><a href="https://api.jquery.com/"> </a></li>
-</ul>
+- [Documentación de referencia de la API](https://api.jquery.com/)[](https://api.jquery.com/)

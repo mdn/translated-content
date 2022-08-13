@@ -10,35 +10,31 @@ translation_of: Web/API/NavigatorOnLine
 original_slug: Web/API/NavigatorOnLine
 browser-compat: api.NavigatorOnLine
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>NavigatorOnLine</strong></code> interface contains methods and properties related to the connectivity status of the browser.</p>
+The **`NavigatorOnLine`** interface contains methods and properties related to the connectivity status of the browser.
 
-<p>There is no object of type <code>NavigatorOnLine</code>, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.</p>
+There is no object of type `NavigatorOnLine`, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>NavigatorOnLine</code></em><em> interface doesn't inherit any property.</em></p>
+_The `NavigatorOnLine`_ _interface doesn't inherit any property._
 
-<dl>
- <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
-</dl>
+- {{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}
+  - : Returns a {{domxref("Boolean")}} indicating whether the browser is working online.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The </em><em><code>NavigatorOnLine</code></em><em> interface neither implements, nor inherit any method.</em></p>
+_The_ _`NavigatorOnLine`_ _interface neither implements, nor inherit any method._
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
 {{Specifications}}
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Navigator")}} interface that implements it.</li>
-</ul>
+- The {{domxref("Navigator")}} interface that implements it.

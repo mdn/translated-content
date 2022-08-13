@@ -9,25 +9,17 @@ tags:
   - Principiante
 translation_of: Glossary/SMTP
 ---
-<p><strong>SMTP</strong> (Protocolo de Transferencia de Correo Simple por sus siglas en inglés) es un <a href="/es/docs/Glossary/Protocol">protocolo</a> utilizado para enviar un nuevo correo. Como <a href="/es/docs/Glossary/POP">POP3</a> y <a href="/es/docs/Glossary/NNTP">NNTP</a>, es un protocolo dirigido por <a href="/es/docs/Glossary/State_machine">estado de máquina</a>.</p>
+**SMTP** (Protocolo de Transferencia de Correo Simple por sus siglas en inglés) es un [protocolo](/es/docs/Glossary/Protocol) utilizado para enviar un nuevo correo. Como [POP3](/es/docs/Glossary/POP) y [NNTP](/es/docs/Glossary/NNTP), es un protocolo dirigido por [estado de máquina](/es/docs/Glossary/State_machine).
 
-<p>El protocolo es relativamente simple. Las complicaciones principales incluyen soportar varios mecanismos de autenticación (<a class="external" href="http://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface"><abbr title="Generic Security Services Application Program Interface">GSSAPI</abbr></a>, <a class="external" href="http://en.wikipedia.org/wiki/CRAM-MD5"><abbr title="challenge-response authentication mechanism">CRAM-MD5</abbr></a>, <a class="external" href="http://en.wikipedia.org/wiki/NTLM"><abbr title="NT LAN Manager">NTLM</abbr></a>, MSN, AUTH LOGIN, AUTH PLAIN, etc.), manejo de respuestas de error, y retroceder cuando los mecanismos de autenticación fallan (p. ej., el servidor asegura que soporta un mecanismo, pero no).</p>
+El protocolo es relativamente simple. Las complicaciones principales incluyen soportar varios mecanismos de autenticación ([GSSAPI](http://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), [CRAM-MD5](http://en.wikipedia.org/wiki/CRAM-MD5), [NTLM](http://en.wikipedia.org/wiki/NTLM), MSN, AUTH LOGIN, AUTH PLAIN, etc.), manejo de respuestas de error, y retroceder cuando los mecanismos de autenticación fallan (p. ej., el servidor asegura que soporta un mecanismo, pero no).
 
-<section id="Quick_links">
-<ol>
- <li><a href="/es/docs/Glossary">Glosario</a>
+1.  [Glosario](/es/docs/Glossary)
 
-  <ol>
-   <li><a href="/es/docs/Glossary/NNTP">NNTP</a></li>
-   <li><a href="/es/docs/Glossary/POP">POP3</a></li>
-   <li><a href="/es/docs/Glossary/Protocol">protocolo</a></li>
-   <li><a href="/es/docs/Glossary/State_machine">estado de máquina</a></li>
-  </ol>
- </li>
- <li>Artículos de Wikipedia
-  <ol>
-   <li><a href="https://es.wikipedia.org/wiki/Protocolo_para_transferencia_simple_de_correo">SMTP</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+    1.  [NNTP](/es/docs/Glossary/NNTP)
+    2.  [POP3](/es/docs/Glossary/POP)
+    3.  [protocolo](/es/docs/Glossary/Protocol)
+    4.  [estado de máquina](/es/docs/Glossary/State_machine)
+
+2.  Artículos de Wikipedia
+
+    1.  [SMTP](https://es.wikipedia.org/wiki/Protocolo_para_transferencia_simple_de_correo)

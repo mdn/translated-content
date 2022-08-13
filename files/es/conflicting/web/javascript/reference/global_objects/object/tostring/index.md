@@ -4,42 +4,41 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>El método <strong><code>toSource()</code></strong> regresa una cadena representando el código fuente del objeto.</p>
+El método **`toSource()`** regresa una cadena representando el código fuente del objeto.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code>Object.toSource();
-<var>obj</var>.toSource();
-</code></pre>
+    Object.toSource();
+    obj.toSource();
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Una cadena representando el código fuente del objeto.</p>
+Una cadena representando el código fuente del objeto.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>EL método <code>toSource()</code> regresa los siguientes valores:</p>
+EL método `toSource()` regresa los siguientes valores:
 
-<ul>
- <li>Para el objeto incorporado {{jsxref("Object")}}, <code>toSource()</code> regresa la siguiente cadena indicando que el código fuente no está disponible:
+- Para el objeto incorporado {{jsxref("Object")}}, `toSource()` regresa la siguiente cadena indicando que el código fuente no está disponible:
 
-  <pre class="brush: js">function Object() {
-    [native code]
-}
-</pre>
- </li>
- <li>Para instancias de {{jsxref("Object")}}, <code>toSource()</code> regresa una cadena representando el código fuente.</li>
-</ul>
+  ```js
+  function Object() {
+      [native code]
+  }
+  ```
 
-<p>Puedes llamar el método <code>toSource()</code> durante el depurado para examinar el contenido de un objeto.</p>
+- Para instancias de {{jsxref("Object")}}, `toSource()` regresa una cadena representando el código fuente.
 
-<h3 id="Sobreescribir_el_método_toSource()"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #333333;">Sobreescribir el método </span></font>toSource()</code></h3>
+Puedes llamar el método `toSource()` durante el depurado para examinar el contenido de un objeto.
 
-<p>Es seguro para los objetos sobreescribir el método <strong>toSource()</strong><strong>.</strong> Por ejemplo:</p>
+### `Sobreescribir el método toSource()`
 
-<pre class="brush: js">function Person(name) {
+Es seguro para los objetos sobreescribir el método **toSource()\*\***.\*\* Por ejemplo:
+
+```js
+function Person(name) {
   this.name = name;
 }
 
@@ -47,31 +46,30 @@ Person.prototype.toSource = function Person_toSource() {
   return 'new Person(' + uneval(this.name) + ')';
 };
 
-console.log(new Person('Joe').toSource()); // ---&gt; nueva Person("Joe")
-</pre>
+console.log(new Person('Joe').toSource()); // ---> nueva Person("Joe")
+```
 
-<h3 id="Métodos_de_toSource()_incorporados">Métodos de <code>toSource()</code> incorporados</h3>
+### Métodos de `toSource()` incorporados
 
-<p>Cada tipo fundamental de JavaScript tiene su propio método <code>toSource()</code>.  Éstos objetos son:</p>
+Cada tipo fundamental de JavaScript tiene su propio método `toSource()`. Éstos objetos son:
 
-<ul>
- <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.</li>
- <li>{{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.</li>
- <li>{{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} object.</li>
- <li>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.</li>
- <li>{{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.</li>
- <li>{{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.</li>
- <li>{{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.</li>
- <li>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.</li>
- <li>{{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.</li>
- <li><code>Math.toSource()</code> — Regrsa la cadena "Math".</li>
-</ul>
+- {{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.
+- {{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.
+- {{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} object.
+- {{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.
+- {{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.
+- {{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.
+- {{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.
+- {{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.
+- {{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.
+- `Math.toSource()` — Regrsa la cadena "Math".
 
-<h3 id="Limitaciones_en_objetos_cíclicos">Limitaciones en objetos cíclicos</h3>
+### Limitaciones en objetos cíclicos
 
-<p>EN el caso de los objetos que contienen referencia a ellos mismos, por ejemplo, una lista enlazada cíclicamente o un árbol que puede ser atravesado en ambas formas, <code>toSource()</code> no recreará la referencia a sí mismo, a partir de Firefox 24. Por ejemplo:</p>
+EN el caso de los objetos que contienen referencia a ellos mismos, por ejemplo, una lista enlazada cíclicamente o un árbol que puede ser atravesado en ambas formas, `toSource()` no recreará la referencia a sí mismo, a partir de Firefox 24. Por ejemplo:
 
-<pre class="brush: js">var obj1 = {};
+```js
+var obj1 = {};
 var obj2 = { a: obj1 };
 obj1.b = obj2;
 
@@ -82,17 +80,18 @@ var objSource = obj1.toSource(); // regresa "({b:{a:{}}})"
 obj1 = eval(objSource);
 
 console.log('Ciclico: ' + (obj1.b.a == obj1));
-</pre>
+```
 
-<p>Si una estructura cíclica es usada y se necesita el método <code>toSource()</code>, el objeto debe proveer la sobreescritura de <code>toSource()</code>, ya sea usando una referencia a un constructor o proveyendo una función anónima.</p>
+Si una estructura cíclica es usada y se necesita el método `toSource()`, el objeto debe proveer la sobreescritura de `toSource()`, ya sea usando una referencia a un constructor o proveyendo una función anónima.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_toSource()">Usando <code>toSource()</code></h3>
+### Usando `toSource()`
 
-<p>El código siguiente define el objeto tipo <code>Dog</code> y crea a <code>theDog</code>, un objeto tipo <code>Dog</code>:</p>
+El código siguiente define el objeto tipo `Dog` y crea a `theDog`, un objeto tipo `Dog`:
 
-<pre class="brush: js">function Dog(name, breed, color, sex) {
+```js
+function Dog(name, breed, color, sex) {
   this.name = name;
   this.breed = breed;
   this.color = color;
@@ -100,28 +99,23 @@ console.log('Ciclico: ' + (obj1.b.a == obj1));
 }
 
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
-</pre>
+```
 
-<p>Llamando al método <code>toSource() de</code> <code>theDog</code> muestra el código JavaScript que define al objeto:</p>
+Llamando al método `toSource() de` `theDog` muestra el código JavaScript que define al objeto:
 
-<pre class="brush: js">theDog.toSource();
+```js
+theDog.toSource();
 // returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ningún estándar. Implementado en JavaScript 1.3.</p>
+No es parte de ningún estándar. Implementado en JavaScript 1.3.
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<div>
+{{Compat("javascript.builtins.Object.toSource")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Object.toSource")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

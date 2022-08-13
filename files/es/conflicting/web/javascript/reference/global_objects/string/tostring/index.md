@@ -11,47 +11,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>El método <strong><code>toSource()</code></strong> devuelve una cadena que representa el código fuente del objeto.</p>
+El método **`toSource()`** devuelve una cadena que representa el código fuente del objeto.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>String.toSource()
-<var>str</var>.toSource()
-</code></pre>
+    String.toSource()
+    str.toSource()
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Una cadena que representa el código fuente del objeto.</p>
+Una cadena que representa el código fuente del objeto.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>toSource()</code> devuelve los siguientes valores:</p>
+El método `toSource()` devuelve los siguientes valores:
 
-<p>Para el objeto incorporado {{jsxref("String")}}, <code>toSource()</code> devuelve la siguiente cadena indicando que el código fuente no está disponible:</p>
+Para el objeto incorporado {{jsxref("String")}}, `toSource()` devuelve la siguiente cadena indicando que el código fuente no está disponible:
 
-<pre class="brush: js">function String() {
+```js
+function String() {
     [native code]
 }
-</pre>
+```
 
-<p>Para instancias de {{jsxref("String")}} o cadenas literales, <code>toSource()</code> devuelve una cadena representando el código fuente.</p>
+Para instancias de {{jsxref("String")}} o cadenas literales, `toSource()` devuelve una cadena representando el código fuente.
 
-<p>Este método usualmente es llamado internamente por JavaScript y no explícitamente en código.</p>
+Este método usualmente es llamado internamente por JavaScript y no explícitamente en código.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ningún estándar. Implementado en JavaScript 1.3.</p>
+No es parte de ningún estándar. Implementado en JavaScript 1.3.
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
+{{Compat("javascript.builtins.String.toSource")}}
 
+## Véase también
 
-<p>{{Compat("javascript.builtins.String.toSource")}}</p>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

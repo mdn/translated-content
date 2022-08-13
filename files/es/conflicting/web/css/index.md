@@ -6,24 +6,16 @@ tags:
 translation_of: Web/CSS/Tools
 original_slug: Web/CSS/Tools
 ---
-<div> </div>
+CSS ofrece una serie de características poderosas que puede ser difíciles de usar, o tener un gran número de parámetros, por lo que es muy útil visualizarlos mientras se trabaja en ellos. Esta página ofrece enlaces a una serie de herramientas que le ayudarán a construir sus estilos usando estas caracteristicas.
 
-<p><span id="result_box" lang="es"><span>CSS</span> <span>ofrece una serie de</span> <span>características poderosas</span> <span>que puede ser</span> <span>difíciles de usar</span><span>,</span> <span>o tener un gran</span> <span>número de</span> <span>parámetros, por lo</span> <span>que es</span> <span>muy útil</span> <span>visualizarlos</span> <span>mientras se trabaja en</span> <span>ellos.</span> <span>Esta página</span> <span>ofrece</span> <span>enlaces a</span> <span>una serie de herramientas</span> <span>que</span> <span>le ayudarán a construir sus estilos usando estas caracteristicas</span><span>.</span></span></p>
+{{LandingPageListSubpages}}
 
-<p>{{LandingPageListSubpages}}</p>
+## Otras herramientas
 
-<h2 id="Otras_herramientas">Otras herramientas</h2>
+- #### Animación CSS - [Stylie](http://jeremyckahn.github.io/stylie/)
+- Para comprobar la información de la pantalla del dispositivo (helpful in {{Glossary("responsive web design")}}) - [mydevice.io](http://mydevice.io)
+- Menus CSS- [cssmenumaker.com](http://cssmenumaker.com/)
 
-<ul>
- <li>
-  <h4 id="Animación_CSS_-_Stylie">Animación CSS - <a href="http://jeremyckahn.github.io/stylie/">Stylie</a></h4>
- </li>
- <li><span id="result_box" lang="es"><span>Para</span> <span>comprobar la información de</span> <span>la pantalla del dispositivo</span></span> (helpful in {{Glossary("responsive web design")}}) - <a href="http://mydevice.io">mydevice.io</a></li>
- <li>Menus CSS- <a href="http://cssmenumaker.com/">cssmenumaker.com</a></li>
-</ul>
+## Temas relacionados
 
-<h2 id="Temas_relacionados">Temas relacionados</h2>
-
-<ul>
- <li><a href="/es/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a></li>
-</ul>
+- [CSS](/es/docs/Web/CSS "/en-US/docs/Web/CSS")
