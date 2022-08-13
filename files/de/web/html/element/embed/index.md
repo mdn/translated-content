@@ -38,8 +38,8 @@ Die Attribute dieses Elements enthalten die globalen Attribute.
 
 | Specification                                                                 | Status               | Comment |
 | ----------------------------------------------------------------------------- | -------------------- | ------- |
-| SpecName('HTML WHATWG', 'embedded-content.html#the-embed-element', '<embed>') | Spec2('HTML WHATWG') |         |
-| SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '<embed>') | Spec2('HTML5 W3C')   |         |
+| SpecName('HTML WHATWG', 'embedded-content.html#the-embed-element', '&lt;embed&gt;') | Spec2('HTML WHATWG') |         |
+| SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '&lt;embed&gt;') | Spec2('HTML5 W3C')   |         |
 
 ## Browser kompatibilität
 
