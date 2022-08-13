@@ -36,7 +36,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 取消目前振動
 
-`在` [`window.navigator.vibrate()`](/en-US/docs/Web/API/window.navigator.vibrate)` 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
+在 [`window.navigator.vibrate()`](/en-US/docs/Web/API/window.navigator.vibrate) 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
 
 ## 規格
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
-translation_of: Web/API/HTMLMediaElement/videoTracks
 ---
 {{APIRef("HTML DOM")}}
 

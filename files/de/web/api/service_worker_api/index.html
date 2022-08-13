@@ -21,7 +21,7 @@ translation_of: Web/API/Service_Worker_API
 
 <p>Ein Service-Worker ist ein ereignisgesteuerter <a href="/de/docs/Web/API/Worker">Worker</a>, der an einem Ursprung und einem Pfad registriert ist. Sie ist eine JavaScript-Datei, die in Abhängigkeit zu einer Webseite steht, Anfragen von Ressourcen abfängt und cached. In manchen Situationen kann es das Verhalten der Webseite beeinflussen. Ein häufiger Anwendungsfall ist die Abfrage, ob ein Netzwerk verfügbar ist, oder nicht.</p>
 
-<p>Ein Service-Worker läuft in einem Worker-Kontext. Es hat keinerlei Zugriff auf das DOM und läuft in einem separaten Thread, also isoliert vom JavaScript, dass die Hauptinteraktionslogik der Website steuert. Es läuft vollständig asynchron und verhindert die Ausführung anderer Scripte nicht. Daraus resultiert, dass APIs wie <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a>  oder <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">LocalStorage</a> nicht in Service-Workern benutzt werden können.</p>
+<p>Ein Service-Worker läuft in einem Worker-Kontext. Es hat keinerlei Zugriff auf das DOM und läuft in einem separaten Thread, also isoliert vom JavaScript, dass die Hauptinteraktionslogik der Website steuert. Es läuft vollständig asynchron und verhindert die Ausführung anderer Scripte nicht. Daraus resultiert, dass APIs wie <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a>  oder <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">LocalStorage</a> nicht in Service-Workern benutzt werden können.</p>
 
 <p>Service-Worker laufen aus Sicherheitsgründen nur über das HTTPS-Protokoll. Veränderte Netzwerkanfragen könnten "Man in the middle"-Angriffe deutlich leichter machen.</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/Service_Worker_API
 
 <h3 id="Registrierung">Registrierung</h3>
 
-<p>Ein Service-Worker wird über die {{domxref("ServiceWorkerContainer.register()")}}-Methode registriert. Falls sie erfolgreich war, wird Ihr Service-Worker vom Client heruntergeladen und versucht eine Installation/Aktivierung (siehe unten)  für URLs, die innerhalb der Quelle liegen oder die URLs, die Sie vorgeben.</p>
+<p>Ein Service-Worker wird über die {{domxref("ServiceWorkerContainer.register()")}}-Methode registriert. Falls sie erfolgreich war, wird Ihr Service-Worker vom Client heruntergeladen und versucht eine Installation/Aktivierung (siehe unten)  für URLs, die innerhalb der Quelle liegen oder die URLs, die Sie vorgeben.</p>
 
 <h3 id="Download_Installation_und_Aktivierung">Download, Installation und Aktivierung</h3>
 
@@ -108,11 +108,11 @@ translation_of: Web/API/Service_Worker_API
  <dt>{{domxref("ExtendableMessageEvent") }}</dt>
  <dd>Das Event-Objekt von einem {{event("message_(ServiceWorker)","message")}}-Event, welches von einem Service-Worker gefeuert wird.</dd>
  <dt>{{domxref("FetchEvent") }}</dt>
- <dd>Die Parameter, die dem {{domxref("ServiceWorkerGlobalScope.onfetch")}}-Handler übergeben werden. <code>FetchEvent </code>repräsentiert eine Fetch-Aktion, die vom {{domxref("ServiceWorkerGlobalScope")}} eines {{domxref("ServiceWorker")}} entfernt wird. Es beinhaltet Information über die Anfrage und der daraus resultierenden Antwort, und stellt die {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}-Methode bereit. Es ermöglicht eine willkürliche Antwort, die zurück  zur kontrollierten Seite gesendet wird.</dd>
+ <dd>Die Parameter, die dem {{domxref("ServiceWorkerGlobalScope.onfetch")}}-Handler übergeben werden. <code>FetchEvent </code>repräsentiert eine Fetch-Aktion, die vom {{domxref("ServiceWorkerGlobalScope")}} eines {{domxref("ServiceWorker")}} entfernt wird. Es beinhaltet Information über die Anfrage und der daraus resultierenden Antwort, und stellt die {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}-Methode bereit. Es ermöglicht eine willkürliche Antwort, die zurück  zur kontrollierten Seite gesendet wird.</dd>
  <dt>{{domxref("InstallEvent") }}</dt>
- <dd>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </dd>
+ <dd>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </dd>
  <dt>{{domxref("Navigator.serviceWorker") }}</dt>
- <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
+ <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
  <dt>{{domxref("NotificationEvent") }}</dt>
  <dd>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} handler, the <code>NotificationEvent</code> interface represents a notification click event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.</dd>
  <dt>{{domxref("ServiceWorker") }}</dt>
@@ -122,12 +122,12 @@ translation_of: Web/API/Service_Worker_API
  <dt>{{domxref("ServiceWorkerGlobalScope") }}</dt>
  <dd>Represents the global execution context of a service worker.</dd>
  <dt>{{domxref("ServiceWorkerMessageEvent")}}</dt>
- <dd>Contains information about an event sent to a {{domxref("ServiceWorkerContainer")}} target. </dd>
+ <dd>Contains information about an event sent to a {{domxref("ServiceWorkerContainer")}} target. </dd>
  <dt>{{domxref("ServiceWorkerRegistration") }}</dt>
  <dd>Represents a service worker registration.</dd>
  <dt>{{domxref("SyncEvent")}} {{non-standard_inline}}</dt>
  <dd>
- <p>The SyncEvent interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker. </p>
+ <p>The SyncEvent interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker. </p>
  </dd>
  <dt>{{domxref("SyncManager")}} {{non-standard_inline}}</dt>
  <dd>Provides an interface for registering and listing sync registrations.</dd>
@@ -154,115 +154,7 @@ translation_of: Web/API/Service_Worker_API
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{ CompatibilityTable() }}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>24</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>install/activate events</td>
-   <td>{{ CompatChrome(40.0) }}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>fetch event/request/<br>
-    <code>respondWith()</code></td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>caches/cache</td>
-   <td>
-    <p class="p1">{{CompatChrome(42.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("39.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td></td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td> install/activate events</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>fetch event/request/<br>
-    <code>respondWith()</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>caches/cache</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoMobile("39.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <div class="note">
 <p><strong>Note</strong>: For backwards compatibility, you could choose to use service workers and AppCache on the same web app to do equivalent things (if the AppCache will support doing those things, of course.) What happens in such a case is that browsers that don’t support Service Workers will use AppCache, and those that do will ignore the AppCache and let the service worker take over.</p>

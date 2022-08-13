@@ -153,9 +153,9 @@ a:focus, input:focus, button:focus, select:focus {
 
 有时可能无法使用键盘完成可访问性。你可能有一个语义不是很好的网站（也许你最终得到了一个糟糕的 CMS 网页，该 CMS 生成了由\<div> 组成的按钮），或者你正在使用一个没有内置键盘可访问性的复杂控件，例如 HTML5 {{htmlelement("video")}} 元素（令人惊奇的是，Opera 是唯一允许你在\<video>元素的默认浏览器控件之间进行制表的浏览器）。你有几种选择：
 
-1.  使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见[Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
-2.  通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅[Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
-3.  使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 ​​WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
+1. 使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见[Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
+2. 通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅[Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
+3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 ​​WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
 
     ```js
     document.onkeydown = function(e) {
@@ -285,9 +285,9 @@ CSS 往往提供的基本可访问性功能要比 HTML 少得多，但是如果�
 
 看下面的例子，我们用的是 Tenon。
 
-1.  访问[Tenon 主页](https://tenon.io)。
-2.  使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
-3.  下滑，直到你看到错误/描述部分，如下图。
+1. 访问[Tenon 主页](https://tenon.io)。
+2. 使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
+3. 下滑，直到你看到错误/描述部分，如下图。
 
 ![](https://mdn.mozillademos.org/files/14217/tenon-screenshot.png)
 
@@ -364,9 +364,9 @@ VO 有很多快捷键，我们没有全部列出来。只把测试网页可访�
 
 NVDA 只能运行在 Window 系统，你需要安装它。
 
-1.  在[nvaccess.org](http://www.nvaccess.org/)下载。你能选择免费下载，或赞助后再下载；你需要在下载前提供你的邮箱地址。
-2.  下载完成后，开始安装 - 双击安装程序，接受条款，一步步按提示来。
-3.  双击 NVDA 程序或快捷方式，或者按下 Ctrl + Alt + N 打开它。你会看见欢迎界面。你能选择一些选项，然后按下 OK 继续。
+1. 在[nvaccess.org](http://www.nvaccess.org/)下载。你能选择免费下载，或赞助后再下载；你需要在下载前提供你的邮箱地址。
+2. 下载完成后，开始安装 - 双击安装程序，接受条款，一步步按提示来。
+3. 双击 NVDA 程序或快捷方式，或者按下 Ctrl + Alt + N 打开它。你会看见欢迎界面。你能选择一些选项，然后按下 OK 继续。
 
 NVDA 现在在你的电脑上开启了。
 
@@ -385,7 +385,7 @@ NVDA 有很多快捷键，我们没有全部列出来。只把测试网页可访
 | 左和右                          | 移动到当前项的上/下一个字符，开始阅读                         |
 | Shift + H 和 H                  | 移动到上/下一标题，开始阅读                                   |
 | Shift + K 和 K                  | 移动到上/下一链接项，开始阅读                                 |
-| Shift + D 和 D                  | 移动到上/下一文档界标（比如<nav>），开始阅读                  |
+| Shift + D 和 D                  | 移动到上/下一文档界标（比如\<nav>），开始阅读                  |
 | Shift + 1–6 和 1–6              | 移动到上/下一标题（标题 1 - 6），开始阅读                     |
 | Shift + F 和 F                  | 移动到上/下一表单选项，聚焦                                   |
 | Shift + T 和 T                  | 移动到上/下一数据表，聚焦                                     |
@@ -417,15 +417,15 @@ NVDA 有很多快捷键，我们没有全部列出来。只把测试网页可访
 
 以下列表提供了一个清单，供参考，以确保已对项目执行建议的可访问性测试：
 
-1.  确保 HTML 尽可能是语义化的。[验证](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E9%AA%8C%E8%AF%81)是一个好方法，就像使用[审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)。
-2.  检查当关闭 CSS 时，你的内容能够被理解。
-3.  确认功能是[全键盘可访问](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98)的。使用 Tab 键、回车键等做测试。
-4.  确保非文本内容有[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E6%9B%BF%E4%BB%A3%E6%96%87%E6%9C%AC)。 [审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)能够很好地发现问题。
-5.  确保[颜色和颜色对比度](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%A2%9C%E8%89%B2%E5%92%8C%E9%A2%9C%E8%89%B2%E5%AF%B9%E6%AF%94%E5%BA%A6)是可接受的，使用合适的工具测试。
-6.  确保[隐藏的内容](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%9A%90%E8%97%8F%E7%9A%84%E5%86%85%E5%AE%B9)可以被屏幕阅读器读取。
-7.  尽可能的使功能在没有 JavaScript 的情况下也可以正常使用。
-8.  在合适的地方使用 ARIA 来提供可访问性。
-9.  使用[审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)测试一下你的网站。
+1. 确保 HTML 尽可能是语义化的。[验证](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E9%AA%8C%E8%AF%81)是一个好方法，就像使用[审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)。
+2. 检查当关闭 CSS 时，你的内容能够被理解。
+3. 确认功能是[全键盘可访问](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98)的。使用 Tab 键、回车键等做测试。
+4. 确保非文本内容有[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E6%9B%BF%E4%BB%A3%E6%96%87%E6%9C%AC)。 [审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)能够很好地发现问题。
+5. 确保[颜色和颜色对比度](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%A2%9C%E8%89%B2%E5%92%8C%E9%A2%9C%E8%89%B2%E5%AF%B9%E6%AF%94%E5%BA%A6)是可接受的，使用合适的工具测试。
+6. 确保[隐藏的内容](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%9A%90%E8%97%8F%E7%9A%84%E5%86%85%E5%AE%B9)可以被屏幕阅读器读取。
+7. 尽可能的使功能在没有 JavaScript 的情况下也可以正常使用。
+8. 在合适的地方使用 ARIA 来提供可访问性。
+9. 使用[审计工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7)测试一下你的网站。
 10. 使用屏幕阅读器实际测试一下。
 11. 在你的网站上可以添加可访问性策略/声明，以说明你的为可访问性做了什么。
 

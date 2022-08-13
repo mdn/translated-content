@@ -1,11 +1,6 @@
 ---
 title: element.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-tags:
-  - DOM
-  - onafterscriptexecute
-translation_of: Web/API/Document/onafterscriptexecute
-original_slug: Web/API/Document/onafterscriptexecute
 ---
 {{ApiRef}}
 

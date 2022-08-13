@@ -1,11 +1,6 @@
 ---
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
-tags:
-  - API
-  - WebGL
-  - 参考
-translation_of: Web/API/WebGLBuffer
 ---
 {{APIRef("WebGL")}}
 

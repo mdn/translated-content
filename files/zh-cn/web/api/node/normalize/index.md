@@ -1,11 +1,6 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
-tags:
-  - API
-  - Method
-  - Node
-translation_of: Web/API/Node/normalize
 ---
 {{APIRef("DOM")}}
 
@@ -15,8 +10,8 @@ translation_of: Web/API/Node/normalize
 
 注 2：两个以上相邻文本节点的产生原因包括：
 
-1.  通过脚本调用有关的 DOM 接口进行了文本节点的插入和分割等。
-2.  HTML 中超长的文本节点会被浏览器自动分割为多个相邻文本节点。
+1. 通过脚本调用有关的 DOM 接口进行了文本节点的插入和分割等。
+2. HTML 中超长的文本节点会被浏览器自动分割为多个相邻文本节点。
 
 ## 语法
 

@@ -83,7 +83,7 @@ var mycar = new Car("Eagle", "Talon TSi", 1993);
 return new Promise.resolve(true);
 ```
 
-使用[ Promise.resolve()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 或者 [Promise.reject()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 静态方法来代替：
+使用 [Promise.resolve()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 或者 [Promise.reject()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 静态方法来代替：
 
 ```js
 // 这是合法的，但是没必要这么长：

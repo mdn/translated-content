@@ -62,7 +62,7 @@ The range of elements processed by `forEach()` is set before the first invocatio
 
 `forEach()` does not mutate the array on which it is called (although `callback`, if invoked, may do so).
 
-> **備註：**除非是拋出異常，否則並沒有中止 `forEach()` 迴圈的辦法。如果你需要這樣做，`forEach()` 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。
+> **備註：** 除非是拋出異常，否則並沒有中止 `forEach()` 迴圈的辦法。如果你需要這樣做，`forEach()` 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。
 
 ## 範例
 

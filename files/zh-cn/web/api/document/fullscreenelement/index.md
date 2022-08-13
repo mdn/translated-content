@@ -1,8 +1,6 @@
 ---
 title: document.mozFullScreenElement
 slug: Web/API/Document/fullscreenElement
-translation_of: Web/API/DocumentOrShadowRoot/fullscreenElement
-original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
 {{ ApiRef() }}
 

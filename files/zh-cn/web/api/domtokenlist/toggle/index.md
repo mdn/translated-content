@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
-tags:
-  - .toggle()
-  - DOMTokenList.toggle()
-  - classList
-translation_of: Web/API/DOMTokenList/toggle
 ---
 {{APIRef("DOM")}}
 

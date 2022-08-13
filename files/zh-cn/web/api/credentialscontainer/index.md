@@ -1,11 +1,10 @@
 ---
 title: CredentialsContainer
 slug: Web/API/CredentialsContainer
-translation_of: Web/API/CredentialsContainer
 ---
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-[Credential Management API](/en-US/docs/Web/API/Credential_Management_API) 的 **`CredentialsContainer`** 接口提供了请求 credentials 和通知用户代理（当成功登陆或登出事件发生时）的方法。可通过 `Navigator.credentials `获得该接口。
+[Credential Management API](/en-US/docs/Web/API/Credential_Management_API) 的 **`CredentialsContainer`** 接口提供了请求 credentials 和通知用户代理（当成功登陆或登出事件发生时）的方法。可通过 `Navigator.credentials` 获得该接口。
 
 ## 属性
 

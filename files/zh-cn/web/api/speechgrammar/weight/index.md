@@ -1,17 +1,6 @@
 ---
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
-tags:
-  - API
-  - SpeechGrammar
-  - Web Speech API
-  - 实验性
-  - 属性
-  - 引用
-  - 权重
-  - 识别
-  - 语音识别
-translation_of: Web/API/SpeechGrammar/weight
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

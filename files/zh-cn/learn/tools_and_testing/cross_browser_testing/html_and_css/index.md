@@ -70,7 +70,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 ### 验证
 
-对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的[服务](https://validator.w3.org/)是 W3C[ 标记验证服务](https://validator.w3.org/)，提供您的代码，它就能返回错误列表：![The HTML validator homepage](validator.png)
+对于 HTML，要确保所有的标签都被正确地关闭和嵌套，写好 DOCTYPE，而且正确地使用各种标签。一个好的策略是定期验证你的代码。一个可以做到这一点的服务是 [W3C 标记验证服务](https://validator.w3.org/)，提供您的代码，它就能返回错误列表：
+
+![The HTML validator homepage](validator.png)
 
 CSS 有一个类似的路线——你需要检查你的属性名拼写是否正确，属性值拼写正确，并且对于它们使用的属性是有效的，你不会丢失任何大括号，等等。为了这个目的，W3C 也有一个 [CSS 验证器](http://jigsaw.w3.org/css-validator/)。
 
@@ -84,13 +86,13 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 但是，将代码复制并粘贴到网页上以检查其有效性是不太方便的。你真正想要的 Linter 可以和你的工作流更加契合，减免一切窗口切换等麻烦。
 
-许多代码编辑器都有 linter 插件。Github 的[ Atom](https://atom.io/) 代码编辑器例如有一个丰富的插件生态系统可用，有很多 linting 选项。向您展示一个这样的插件通常如何工作的例子：
+许多代码编辑器都有 linter 插件。Github 的 [Atom](https://atom.io/) 代码编辑器例如有一个丰富的插件生态系统可用，有很多 linting 选项。向您展示一个这样的插件通常如何工作的例子：
 
-1.  安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。
-2.  转到 Atom 的*首选项...*对话框（例如在 Mac 上选择 _Atom > Preferences..._ 或在 Windows / Linux 上选择 _File > Preferences..._），然后在左侧菜单中选择 Install 选项。
-3.  在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。
-4.  您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。
-5.  软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。
+1. 安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。
+2. 转到 Atom 的*首选项...*对话框（例如在 Mac 上选择 _Atom > Preferences..._ 或在 Windows / Linux 上选择 _File > Preferences..._），然后在左侧菜单中选择 Install 选项。
+3. 在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。
+4. 您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。
+5. 软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。
 
 ![](atom-htmltidy.png)![](atom-csslint.png)
 
@@ -271,9 +273,9 @@ form > #date
 
 然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/en-US/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
-1.  要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
-2.  现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
-3.  将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
+1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
+2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
+3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 
     ```html
     <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
@@ -308,9 +310,9 @@ background-image: linear-gradient(to right,green,yellow);
 
 最后三行显示了三个不同版本的[linear-gradient()](/zh-CN/docs/Web/CSS/linear-gradient)函数，用于在元素的背景中生成线性渐变：
 
-1.  第一个有一个-moz-前缀，并显示一个略老的语法版本（Firefox）
-2.  第二个有一个-webkit-前缀，并显示一个更老的专有版本的语法（这实际上是从一个真正的旧版本的 WebKit 引擎）。
-3.  第三个没有前缀，并显示语法的最终版本（包含在定义此功能的[CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
+1. 第一个有一个-moz-前缀，并显示一个略老的语法版本（Firefox）
+2. 第二个有一个-webkit-前缀，并显示一个更老的专有版本的语法（这实际上是从一个真正的旧版本的 WebKit 引擎）。
+3. 第三个没有前缀，并显示语法的最终版本（包含在定义此功能的[CSS 图像值和替换内容模块级别 3 规范中](https://drafts.csswg.org/css-images-3/#linear-gradients)）。
 
 前缀功能从来不应该用于生产网站——它们可能会在没有警告的情况下更改或删除，并导致跨浏览器问题。当开发人员决定只使用-webkit- 某个属性的版本时，这是一个特别的问题 - 这意味着该网站在其他浏览器中不起作用。这实际上发生了很多，其他浏览器已经开始实现-webkit-各种 CSS 属性的前缀版本，所以他们将使用这样的代码。由于这些类型的问题，浏览器供应商使用前缀最近已经下降，但仍然有一些需要注意。
 
@@ -318,16 +320,16 @@ background-image: linear-gradient(to right,green,yellow);
 
 试试这个简单的例子：
 
-1.  打开 google.com 或具有突出标题或其他块级元素的其他站点。
-2.  右键/ Cmd +单击有问题的元素并选择 Inspect / Inspect 元素（或者浏览器中的任何选项） - 这应该在浏览器中打开开发工具，在 DOM 检查器中高亮显示该元素。
-3.  寻找可以用来选择该元素的功能。例如，在撰写本文时，主要的 Google 徽标的 ID 为 hplogo。
-4.  将对此元素的引用存储在变量中，例如：
+1. 打开 google.com 或具有突出标题或其他块级元素的其他站点。
+2. 右键/ Cmd +单击有问题的元素并选择 Inspect / Inspect 元素（或者浏览器中的任何选项） - 这应该在浏览器中打开开发工具，在 DOM 检查器中高亮显示该元素。
+3. 寻找可以用来选择该元素的功能。例如，在撰写本文时，主要的 Google 徽标的 ID 为 hplogo。
+4. 将对此元素的引用存储在变量中，例如：
 
     ```js
     const test = document.getElementById('hplogo');
     ```
 
-5.  现在尝试为您感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
+5. 现在尝试为您感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
 
     ```js
     test.style.transform = 'rotate(90deg)'
@@ -362,9 +364,9 @@ Autoprefixer 也可用于其他更便捷的方式 - 请参阅[Autoprefixer 使�
 
 您也可以使用插件来编辑文本编辑器，如 Atom 或 Sublime 文本。例如，在 Atom 中：
 
-1.  您可以通过转到首选项>安装，搜索 Autoprefixer，然后安装。
-2.  您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。
-3.  在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。
+1. 您可以通过转到首选项>安装，搜索 Autoprefixer，然后安装。
+2. 您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。
+3. 在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。
 
 作为一个例子，我们输入了下面的代码：
 

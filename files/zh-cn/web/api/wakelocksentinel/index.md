@@ -1,7 +1,6 @@
 ---
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
-translation_of: Web/API/WakeLockSentinel
 ---
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 

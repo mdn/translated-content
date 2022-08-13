@@ -1,7 +1,6 @@
 ---
 title: click
 slug: Web/API/Element/click_event
-translation_of: Web/API/Element/click_event
 ---
 当定点设备的按钮（通常是鼠标左键）在一个元素上被按下和放开时，`click`事件就会被触发。
 

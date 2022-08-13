@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-tags:
-  - WebGL
-  - WebGLRenderingContext
-  - 只读
-  - 属性
-translation_of: Web/API/WebGLRenderingContext/canvas
 ---
 {{APIRef("WebGL")}}
 
@@ -32,7 +26,7 @@ gl.canvas;
 <canvas id="canvas"></canvas>
 ```
 
-你可以通过 canvas 得到一个从 `WebGLRenderingContext `返回的引用：
+你可以通过 canvas 得到一个从 `WebGLRenderingContext` 返回的引用：
 
 ```js
 var canvas = document.getElementById("canvas");

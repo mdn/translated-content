@@ -1,7 +1,6 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
-translation_of: Web/API/WindowClient/navigate
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

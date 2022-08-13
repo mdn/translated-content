@@ -1,7 +1,6 @@
 ---
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
-translation_of: Web/API/TimeRanges/end
 ---
 {{APIRef("DOM")}}
 

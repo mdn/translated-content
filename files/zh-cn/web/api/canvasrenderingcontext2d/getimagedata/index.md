@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
-translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 {{APIRef}}
 
@@ -37,7 +36,7 @@ ImageData ctx.getImageData(sx, sy, sw, sh);
 
 ### 使用 `getImageData` 方法
 
-这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制 ](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
+这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 

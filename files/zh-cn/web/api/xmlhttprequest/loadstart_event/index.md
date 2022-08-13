@@ -1,10 +1,6 @@
 ---
 title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
-tags:
-  - 事件
-translation_of: Web/API/XMLHttpRequest/loadstart_event
-original_slug: Web/Events/loadstart
 ---
 当程序开始加载时，loadstart 事件将被触发。这个事件可以被 {{domxref("XMLHttpRequest")}} 调用，也适用于 {{htmlelement("img")}} 和 {{htmlelement("video")}} 元素。
 
@@ -31,7 +27,7 @@ original_slug: Web/Events/loadstart
 | `type` {{readonlyInline}}             | {{domxref("DOMString")}}     | The type of event.                                                                                                                                             |
 | `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                                                                                     |
 | `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                                                                                       |
-| `lengthComputable `{{readonlyInline}} | {{jsxref("Boolean")}}         | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
+| `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
 | `loaded` {{readonlyInline}}           | unsigned long (long)                 | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
 | `total` {{readonlyInline}}            | unsigned long (long)                 | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
 

@@ -60,7 +60,7 @@ var o = {
 
 <h2 id="Description" name="Description">Beschreibung</h2>
 
-<p>Ein Objekt Initialisierer ist ein Ausdruck welcher die Initialisierung eines {{jsxref("Object")}} beschreibt. Objekte bestehen aus Eigenschaften, welche verwendet werden, um ein Objekt zu beschreiben. Die Werte der Objekt Eigenschaften können {{Glossary("primitive")}} Datentypen oder andere Objekte enthalten.</p>
+<p>Ein Objekt Initialisierer ist ein Ausdruck welcher die Initialisierung eines {{jsxref("Object")}} beschreibt. Objekte bestehen aus Eigenschaften, welche verwendet werden, um ein Objekt zu beschreiben. Die Werte der Objekt Eigenschaften können {{Glossary("primitive")}} Datentypen oder andere Objekte enthalten.</p>
 
 <h3 id="Objekte_erzeugen">Objekte erzeugen</h3>
 
@@ -68,7 +68,7 @@ var o = {
 
 <pre class="brush: js">var object = {};</pre>
 
-<p>Jedoch: die Vorteile der literalen oder Initialisierer Notation versetzen Sie in die Lage, Objekte inklusive Eigenschaften, innerhalb geschwungener Klammern, schneller zu erzeugen. Sie schreiben einfach eine Liste von Schlüssel:Werte Paaren, getrennt durch ein Komma. Der folgende Quellcode erzeugt ein Objekt mit drei Eigenschaften mit den Schlüsseln <code>"foo"</code>, <code>"age"</code> und <code>"baz"</code>. <span id="result_box" lang="de"><span class="hps">Die Werte dieser</span> <span class="hps">Schlüssel</span> <span class="hps">sind: die Zeichenkette</span> <code><span class="hps">"bar"</span></code><span>,</span> <span class="hps">die Zahl</span> <code><span class="hps">42</span></code> <span class="hps">und die dritte</span> <span class="hps">Eigenschaft hat</span> <span class="hps">ein anderes Objekt</span> <span class="hps">als Wert.</span></span></p>
+<p>Jedoch: die Vorteile der literalen oder Initialisierer Notation versetzen Sie in die Lage, Objekte inklusive Eigenschaften, innerhalb geschwungener Klammern, schneller zu erzeugen. Sie schreiben einfach eine Liste von Schlüssel:Werte Paaren, getrennt durch ein Komma. Der folgende Quellcode erzeugt ein Objekt mit drei Eigenschaften mit den Schlüsseln <code>"foo"</code>, <code>"age"</code> und <code>"baz"</code>. <span id="result_box" lang="de"><span>Die Werte dieser</span> <span>Schlüssel</span> <span>sind: die Zeichenkette</span> <code><span>"bar"</span></code><span>,</span> <span>die Zahl</span> <code><span>42</span></code> <span>und die dritte</span> <span>Eigenschaft hat</span> <span>ein anderes Objekt</span> <span>als Wert.</span></span></p>
 
 <pre class="brush: js">var object = {
   foo: "bar",
@@ -88,7 +88,7 @@ object.foo = "baz";
 
 <h3 id="Eigenschaften_definieren">Eigenschaften definieren</h3>
 
-<p><span id="result_box" lang="de"><span class="hps">Wir haben bereits</span> <span class="hps">gelernt, wie man</span> <span class="hps">Eigenschaften mit Hilfe der</span> <span class="hps">Initialisierungs</span> <span class="hps">Syntax</span> <span class="hps">schreibt</span><span>.</span> <span class="hps">Oft</span> <span class="hps">gibt es Variablen</span> <span class="hps">im </span><span class="hps">Code, die</span> <span class="hps">Sie in einem Objekt verwenden möchten</span><span>.</span> Man sieht oft Quellcode wie den folgenden: </span></p>
+<p><span id="result_box" lang="de"><span>Wir haben bereits</span> <span>gelernt, wie man</span> <span>Eigenschaften mit Hilfe der</span> <span>Initialisierungs</span> <span>Syntax</span> <span>schreibt</span><span>.</span> <span>Oft</span> <span>gibt es Variablen</span> <span>im </span><span>Code, die</span> <span>Sie in einem Objekt verwenden möchten</span><span>.</span> Man sieht oft Quellcode wie den folgenden: </span></p>
 
 <pre class="brush: js">var a = "foo",
     b = 42,
@@ -100,7 +100,7 @@ var o = {
   c: c
 };</pre>
 
-<p><span id="result_box" lang="de"><span class="hps">Mit</span> <span class="hps">ECMAScript</span> 2015 ist <span class="hps">eine</span> <span class="hps">kürzere</span> <span class="hps">Schreibweise</span> <span class="hps">verfügbar, um das</span> G<span class="hps">leiche zu erreichen</span><span>:</span></span></p>
+<p><span id="result_box" lang="de"><span>Mit</span> <span>ECMAScript</span> 2015 ist <span>eine</span> <span>kürzere</span> <span>Schreibweise</span> <span>verfügbar, um das</span> G<span>leiche zu erreichen</span><span>:</span></span></p>
 
 <pre class="brush: js">var a = "foo",
     b = 42,
@@ -114,13 +114,13 @@ console.log(); // true</pre>
 
 <h4 id="Doppelte_Eigenschaftsnamen">Doppelte Eigenschaftsnamen</h4>
 
-<p><span id="result_box" lang="de"><span class="hps">Bei Verwendung des</span> <span class="hps">gleichen Namens</span> <span class="hps">für Ihre</span> <span class="hps">Eigenschaften</span><span>, wird die</span> <span class="hps">zweite Eigenschaft</span> <span class="hps">die erste</span> <span class="hps">überschreiben.</span></span></p>
+<p><span id="result_box" lang="de"><span>Bei Verwendung des</span> <span>gleichen Namens</span> <span>für Ihre</span> <span>Eigenschaften</span><span>, wird die</span> <span>zweite Eigenschaft</span> <span>die erste</span> <span>überschreiben.</span></span></p>
 
 <pre class="brush: js">var a = {x: 1, x: 2};
 console.log(a); // { x: 2}
 </pre>
 
-<p>Im strikten Modus von ECMAScript 5 wurden doppelte Eigenschaftsnamen als {{jsxref("SyntaxError")}} gewertet. Mit der Einführung von berechneten Eigenschaftsnamen in ECMAScript 2015 wurde diese Einschränkung entfernt, was Duplikate zur Laufzeit möglich macht.</p>
+<p>Im strikten Modus von ECMAScript 5 wurden doppelte Eigenschaftsnamen als {{jsxref("SyntaxError")}} gewertet. Mit der Einführung von berechneten Eigenschaftsnamen in ECMAScript 2015 wurde diese Einschränkung entfernt, was Duplikate zur Laufzeit möglich macht.</p>
 
 <pre class="brush: js">function haveES2015DuplicatePropertySemantics(){
   "use strict";
@@ -137,7 +137,7 @@ console.log(a); // { x: 2}
 
 <h3 id="Methoden_Definitionen">Methoden Definitionen</h3>
 
-<p><span id="result_box" lang="de"><span class="hps">Eine</span> <span class="hps">Eigenschaft eines Objekts</span> <span class="hps">kann auch</span> <span class="hps">auf eine <a href="/de/docs/Web/JavaScript/Reference/Functions">Funktion</a></span> <span class="hps">oder</span> <span class="hps">einen</span> <a href="/de/docs/Web/JavaScript/Reference/Functions/get">Getter</a> <span class="hps">oder</span> <span class="hps"><a href="/de/docs/Web/JavaScript/Reference/Functions/set">Setter</a>-Methode</span> <span class="hps">verweisen</span></span>.</p>
+<p><span id="result_box" lang="de"><span>Eine</span> <span>Eigenschaft eines Objekts</span> <span>kann auch</span> <span>auf eine <a href="/de/docs/Web/JavaScript/Reference/Functions">Funktion</a></span> <span>oder</span> <span>einen</span> <a href="/de/docs/Web/JavaScript/Reference/Functions/get">Getter</a> <span>oder</span> <span><a href="/de/docs/Web/JavaScript/Reference/Functions/set">Setter</a>-Methode</span> <span>verweisen</span></span>.</p>
 
 <pre class="brush: js">var o = {
   <var>property: function </var>([<var>parameters</var>]) {},
@@ -145,7 +145,7 @@ console.log(a); // { x: 2}
   set <var>property</var>(<var>value</var>) {},
 };</pre>
 
-<p>In ECMAScript 2015 gibt es eine kürzere Schreibweise, mit der das Schlüsselwort "function" überflüssig wird.</p>
+<p>In ECMAScript 2015 gibt es eine kürzere Schreibweise, mit der das Schlüsselwort "function" überflüssig wird.</p>
 
 <pre class="brush: js">// Kurzschreibweise für Methoden Namen (ES2015)
 var o = {
@@ -197,7 +197,7 @@ console.log(config); // { size: 12, mobileSize: 4 }</pre>
 
 <h3 id="Spread_Eigenschaften">Spread Eigenschaften</h3>
 
-<p>Die Vorschlag von <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Eigenschaft für ECMAScript</a> (Stage 4) fügt <a href="/de/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread</a> Eigenschaften zu Objektliteralen hinzu. Er kopiert eigene aufzählbare Eigenschaften des genutzten Objektes in ein neues Objekt.</p>
+<p>Die Vorschlag von <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Eigenschaft für ECMAScript</a> (Stage 4) fügt <a href="/de/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread</a> Eigenschaften zu Objektliteralen hinzu. Er kopiert eigene aufzählbare Eigenschaften des genutzten Objektes in ein neues Objekt.</p>
 
 <p>Oberflächliches Clonen (ausgenommen Eigenschaften) oder Verschmelzen von Objekten ist nun mit einer Kürzeren Syntax als {{jsxref("Object.assign()")}} möglich.</p>
 
@@ -251,13 +251,13 @@ assert(obj3.__proto__ === 17);
 
 <h2 id="Objektliteral-Notation_vs_JSON">Objektliteral-Notation vs JSON</h2>
 
-<p><span id="result_box" lang="de"><span class="hps">Die</span> <span class="hps">Objekt-Literal</span> <span class="hps">Notation ist</span> <span class="hps">nicht dasselbe wie</span> <span class="hps">die</span> <span class="hps">JavaScript Object Notation</span> <span class="atn hps">(</span><span><a href="/de/docs/Glossary/JSON">JSON</a>)</span><span>.</span> <span class="hps">Obwohl</span> <span class="hps">sie ähnlich aussehen</span><span>, gibt es</span> <span class="hps">Unterschiede zwischen ihnen</span></span>:</p>
+<p><span id="result_box" lang="de"><span>Die</span> <span>Objekt-Literal</span> <span>Notation ist</span> <span>nicht dasselbe wie</span> <span>die</span> <span>JavaScript Object Notation</span> <span>(</span><span><a href="/de/docs/Glossary/JSON">JSON</a>)</span><span>.</span> <span>Obwohl</span> <span>sie ähnlich aussehen</span><span>, gibt es</span> <span>Unterschiede zwischen ihnen</span></span>:</p>
 
 <ul>
- <li><span id="result_box" lang="de"><span class="hps">JSON</span> <span class="hps">erlaubt</span> <span class="hps">nur</span> <span class="hps">Eigenschaftsdefinition</span>en <span class="hps">mit</span> <code><span class="hps">"Eigenschaft"</span><span>:</span> <span class="hps">Wert</span></code> <span class="hps">Syntax.</span> <span class="hps">Der Eigenschaftsname</span> <span class="hps">muss</span> <span class="hps">in doppelten Anführungszeichen geschrieben werden</span><span>, und die</span> <span class="hps">Definition kann nicht</span> in Kurzschreibweise erfolgen</span>.</li>
- <li><span id="result_box" lang="de"><span class="hps">In</span> <span class="hps">JSON</span> <span class="hps">können die Werte</span> <span class="hps">nur</span> <span class="hps">Strings, Zahlen</span><span>, Arrays,</span> <span class="hps"><code>true</code>, <code>false</code></span><span>, <code>null</code></span> <span class="hps">oder  andere</span> <span class="atn hps">(</span><span>JSON)</span> <span class="hps">Objekte sein</span></span>.</li>
- <li><span id="result_box" lang="de"><span class="hps">Ein</span> <span class="hps">Funktionswert</span> <span class="hps">(siehe</span> <span class="hps">"Methoden"</span> <span class="hps">oben)</span> <span class="hps">kann in JSON keinem Wert zugeordnet werden.</span></span></li>
- <li><span id="result_box" lang="de"><span class="hps">Objekte</span> <span class="atn hps">wie {</span><span class="atn">{</span><span>jsxref</span> <span class="atn hps">(</span><span class="atn hps">"Date</span><span>")</span><span>}}</span> <span class="hps">werden</span> </span><span id="result_box" lang="de"><span>nach dem Aufruf von</span> <span class="atn hps">{</span><span class="atn">{</span><span>jsxref</span> <span class="atn hps">(</span><span class="atn hps">"</span><span>JSON.parse</span><span class="hps">()")</span><span>}}</span></span><span id="result_box" lang="de">, in <span class="hps">einen String</span> <span class="hps">umgewandelt</span><span>, </span><span>.</span></span></li>
+ <li><span id="result_box" lang="de"><span>JSON</span> <span>erlaubt</span> <span>nur</span> <span>Eigenschaftsdefinition</span>en <span>mit</span> <code><span>"Eigenschaft"</span><span>:</span> <span>Wert</span></code> <span>Syntax.</span> <span>Der Eigenschaftsname</span> <span>muss</span> <span>in doppelten Anführungszeichen geschrieben werden</span><span>, und die</span> <span>Definition kann nicht</span> in Kurzschreibweise erfolgen</span>.</li>
+ <li><span id="result_box" lang="de"><span>In</span> <span>JSON</span> <span>können die Werte</span> <span>nur</span> <span>Strings, Zahlen</span><span>, Arrays,</span> <span><code>true</code>, <code>false</code></span><span>, <code>null</code></span> <span>oder  andere</span> <span>(</span><span>JSON)</span> <span>Objekte sein</span></span>.</li>
+ <li><span id="result_box" lang="de"><span>Ein</span> <span>Funktionswert</span> <span>(siehe</span> <span>"Methoden"</span> <span>oben)</span> <span>kann in JSON keinem Wert zugeordnet werden.</span></span></li>
+ <li><span id="result_box" lang="de"><span>Objekte</span> <span>wie {</span><span>{</span><span>jsxref</span> <span>(</span><span>"Date</span><span>")</span><span>}}</span> <span>werden</span> </span><span id="result_box" lang="de"><span>nach dem Aufruf von</span> <span>{</span><span>{</span><span>jsxref</span> <span>(</span><span>"</span><span>JSON.parse</span><span>()")</span><span>}}</span></span><span id="result_box" lang="de">, in <span>einen String</span> <span>umgewandelt</span><span>, </span><span>.</span></span></li>
  <li>{{jsxref("JSON.parse()")}} weist berechnete Eigenschaftsnamen zurück und wirft eine Fehlermeldung.</li>
 </ul>
 

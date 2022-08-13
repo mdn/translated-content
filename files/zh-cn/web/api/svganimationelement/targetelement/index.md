@@ -1,7 +1,6 @@
 ---
 title: targetElement
 slug: Web/API/SVGAnimationElement/targetElement
-translation_of: Web/API/SVGAnimationElement/targetElement
 ---
 {{APIRef("SVG")}}
 

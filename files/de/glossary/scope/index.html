@@ -8,9 +8,9 @@ translation_of: Glossary/Scope
 <p>Beispiel: <strong>{{glossary("function")}}</strong> dient als abgeschlossene Funktion (<strong>closure</strong>) in {{glossary("JavaScript")}}, und erzeugt so einen Scope, so dass z.B. eine Variable, die nur innerhalb der Funktion definiert wurde, außerhalb dieser Funktion oder in anderen Funktionen nicht angesprochen werden kann. Das folgende Beispiel ist deshalb fehlerhaft:</p>
 
 <pre class="syntaxbox notranslate">function exampleFunction() {
-    var x = "declared inside function";  // x can only be used in exampleFunction
-    console.log("Inside function");
-    console.log(x);
+    var x = "declared inside function";  // x can only be used in exampleFunction
+    console.log("Inside function");
+    console.log(x);
 }
 
 console.log(x);  // Causes error</pre>
@@ -23,7 +23,7 @@ exampleFunction();
 
 function exampleFunction() {
     console.log("Inside function");
-    console.log(x);
+    console.log(x);
 }
 
 console.log("Outside function");

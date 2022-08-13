@@ -1,7 +1,6 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
-translation_of: Web/API/Animation/play
 ---
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
 

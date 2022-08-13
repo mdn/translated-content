@@ -1,7 +1,6 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-translation_of: Web/API/Document/images
 ---
 {{APIRef("DOM")}}
 

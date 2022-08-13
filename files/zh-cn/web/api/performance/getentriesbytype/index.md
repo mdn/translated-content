@@ -1,9 +1,6 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
-tags:
-  - ZH
-translation_of: Web/API/Performance/getEntriesByType
 ---
 {{APIRef("Performance Timeline API")}}**`getEntriesByType()`** 方法返回给定类型的 {{domxref("PerformanceEntry")}} 列表
 

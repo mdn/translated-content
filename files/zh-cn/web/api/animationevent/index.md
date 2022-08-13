@@ -1,9 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - AnimationEvent
-translation_of: Web/API/AnimationEvent
 ---
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
@@ -20,7 +17,7 @@ _属性继承其父级{{domxref("Event")}}_.
 - {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
   - : Is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition.
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Is a `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * `_delay_`)`.
+  - : Is a `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
   - : Is a {{domxref("DOMString")}}, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: ` ''``. `
 

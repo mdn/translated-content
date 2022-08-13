@@ -24,7 +24,7 @@ translation_of: Web/API/SpeechSynthesis
 
 <dl>
  <dt>{{domxref("SpeechSynthesis.onvoiceschanged")}}</dt>
- <dd>Wird ausgelöst, wenn sich die Liste von {{domxref("SpeechSynthesisVoice")}}-Objekten, die von der {{domxref("SpeechSynthesis.getVoices()")}}-Methode zurückgegeben würde, geändert hat.</dd>
+ <dd>Wird ausgelöst, wenn sich die Liste von {{domxref("SpeechSynthesisVoice")}}-Objekten, die von der {{domxref("SpeechSynthesis.getVoices()")}}-Methode zurückgegeben würde, geändert hat.</dd>
 </dl>
 
 <h2 id="Methoden">Methoden</h2>
@@ -48,7 +48,7 @@ translation_of: Web/API/SpeechSynthesis
 
 <p>In our basic <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>, we first grab a reference to the SpeechSynthesis controller using <code>window.speechSynthesis</code>. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.</p>
 
-<p>Inside the <code>inputForm.onsubmit</code> handler, we stop the form submitting with <a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>,  create a new {{domxref("SpeechSynthesisUtterance")}} instance containing the text from the text {{htmlelement("input")}}, set the utterance's voice to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.</p>
+<p>Inside the <code>inputForm.onsubmit</code> handler, we stop the form submitting with <a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>,  create a new {{domxref("SpeechSynthesisUtterance")}} instance containing the text from the text {{htmlelement("input")}}, set the utterance's voice to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.</p>
 
 <pre class="brush: js">var synth = window.speechSynthesis;
 
@@ -114,7 +114,7 @@ inputForm.onsubmit = function(event) {
   <tr>
    <td>{{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}}</td>
    <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

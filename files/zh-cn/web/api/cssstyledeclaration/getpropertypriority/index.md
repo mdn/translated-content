@@ -1,12 +1,6 @@
 ---
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
-tags:
-  - API
-  - CSSDOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/getPropertyPriority
 ---
 {{ APIRef("CSSOM") }}
 

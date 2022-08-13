@@ -1,12 +1,6 @@
 ---
 title: Window.name
 slug: Web/API/Window/name
-tags:
-  - API
-  - NeedsUpdate
-  - 参考
-  - 属性
-translation_of: Web/API/Window/name
 ---
 {{APIRef}}
 

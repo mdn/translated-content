@@ -9,7 +9,7 @@ tags:
   - 术语
 translation_of: Web/Performance/Critical_rendering_path
 ---
-**关键渲染路径**是浏览器将 HTML，CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了 [文档对象模型 ](/zh-CN/docs/Web/API/Document_Object_Model)(DOM)，[CSS 对象模型 ](/zh-CN/docs/Web/API/CSS_Object_Model)(CSSOM)，渲染树和布局。
+**关键渲染路径**是浏览器将 HTML，CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了 [文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)(DOM)，[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) (CSSOM)，渲染树和布局。
 
 在解析 HTML 时会创建文档对象模型。HTML 可以请求 JavaScript，而 JavaScript 反过来，又可以更改 DOM。HTML 包含或请求样式，依次来构建 CSS 对象模型。浏览器引擎将两者结合起来以创建渲染树。布局确定页面上所有内容的大小和位置。确定布局后，将像素绘制到屏幕上。
 

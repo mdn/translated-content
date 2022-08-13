@@ -1,13 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Reference
-  - Web
-  - 文件 API
-translation_of: Web/API/File
 ---
 {{APIRef}}
 
@@ -15,7 +8,7 @@ translation_of: Web/API/File
 
 通常情况下， `File` 对象是来自用户在一个 {{HTMLElement("input")}} 元素上选择文件后返回的 {{domxref("FileList")}} 对象，也可以是来自由拖放操作生成的 {{domxref("DataTransfer")}} 对象，或者来自 {{domxref("HTMLCanvasElement")}} 上的 `mozGetAsFile`() API。在 Gecko 中，特权代码可以创建代表任何本地文件的 File 对象，而无需用户交互（有关详细信息，请参阅[注意事项](#注意事项)。
 
-`File` 对象是特殊类型的 {{domxref("Blob")}}，且可以用在任意的 Blob 类型的 context 中。比如说， {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, 及 {{domxref("XMLHttpRequest", "", "send()")}} 都能处理 `Blob` 和` File`。
+`File` 对象是特殊类型的 {{domxref("Blob")}}，且可以用在任意的 Blob 类型的 context 中。比如说， {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, 及 {{domxref("XMLHttpRequest", "", "send()")}} 都能处理 `Blob` 和 `File`。
 
 参考 [从 Web 应用程序使用文件](/en-US/docs/Using_files_from_web_applications) 了解更多信息和例子。
 

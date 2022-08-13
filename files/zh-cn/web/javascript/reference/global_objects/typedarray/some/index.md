@@ -37,7 +37,7 @@ typedarray.some(callback[, thisArg])
 
 ## 描述
 
-对于 typed array 中的每个元素，`some`方法执行一次 `callback`，直到找到一个`callback `返回 true 的元素。如果一个元素被找到，`some` 立即返回 `true`. 否则，`some` 返回 `false`.
+对于 typed array 中的每个元素，`some`方法执行一次 `callback`，直到找到一个`callback` 返回 true 的元素。如果一个元素被找到，`some` 立即返回 `true`. 否则，`some` 返回 `false`.
 
 `callback` 期望 3 个参数：元素的值，元素的索引，和被遍历的数组对象。
 

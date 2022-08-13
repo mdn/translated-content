@@ -34,12 +34,12 @@ original_slug: Learn/CSS/First_steps/CSS如何运行
 
 当浏览器展示一个文件的时候，它必须兼顾文件的内容和文件的样式信息，下面我们会了解到它处理文件的标准的流程。需要知道的是，下面的步骤是浏览加载网页的简化版本，而且不同的浏览器在处理文件的时候会有不同的方式，但是下面的步骤基本都会出现。
 
-1.  浏览器载入 HTML 文件（比如从网络上获取）。
-2.  将 HTML 文件转化成一个 DOM（Document Object Model），DOM 是文件在计算机内存中的表现形式，下一节将更加详细的解释 DOM。
-3.  接下来，浏览器会拉取该 HTML 相关的大部分资源，比如嵌入到页面的图片、视频和 CSS 样式。JavaScript 则会稍后进行处理，简单起见，同时此节主讲 CSS，所以这里对如何加载 JavaScript 不会展开叙述。
-4.  浏览器拉取到 CSS 之后会进行解析，根据选择器的不同类型（比如 element、class、id 等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id 选择器等）应用在对应的 DOM 的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。
-5.  上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。
-6.  网页展示在屏幕上（这一步被称为着色）。
+1. 浏览器载入 HTML 文件（比如从网络上获取）。
+2. 将 HTML 文件转化成一个 DOM（Document Object Model），DOM 是文件在计算机内存中的表现形式，下一节将更加详细的解释 DOM。
+3. 接下来，浏览器会拉取该 HTML 相关的大部分资源，比如嵌入到页面的图片、视频和 CSS 样式。JavaScript 则会稍后进行处理，简单起见，同时此节主讲 CSS，所以这里对如何加载 JavaScript 不会展开叙述。
+4. 浏览器拉取到 CSS 之后会进行解析，根据选择器的不同类型（比如 element、class、id 等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id 选择器等）应用在对应的 DOM 的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。
+5. 上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。
+6. 网页展示在屏幕上（这一步被称为着色）。
 
 结合下面的图示更形象：
 
@@ -68,14 +68,16 @@ original_slug: Learn/CSS/First_steps/CSS如何运行
 
 在这个 DOM 中，`<p>`元素对应了父节点，它的子节点是一个 text 节点和三个对应了`<span>`元素的节点，`SPAN`节点同时也是他们中的 Text 节点的父节点。
 
-    P
-    ├─ "Let's use:"
-    ├─ SPAN
-    |  └─ "Cascading"
-    ├─ SPAN
-    |  └─ "Style"
-    └─ SPAN
-       └─ "Sheets"
+```
+P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+    └─ "Sheets"
+```
 
 上图就是浏览器怎么解析之前那个 HTML 片段——它生成上图的 DOM 树形结构并将它按照如下输出到浏览器：
 
@@ -162,8 +164,8 @@ p {
 
 ## 模块目标
 
-1.  [什么是 CSS](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [入门 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 的结构](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 如何运行](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [使用新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [什么是 CSS](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [入门 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 的结构](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 如何运行](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [使用新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

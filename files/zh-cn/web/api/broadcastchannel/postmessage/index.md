@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
-translation_of: Web/API/BroadcastChannel/postMessage
 ---
 {{APIRef("BroadCastChannel API")}}
 

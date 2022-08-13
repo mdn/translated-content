@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Die <strong><code>map()</code></strong> (engl. <em>abbilden</em>) Methode<strong> </strong>wendet auf jedes Element des Arrays die bereitgestellte Funktion an und gibt das Ergebnis in einem neuen Array zurück.</span></p>
+<p><span class="seoSummary">Die <strong><code>map()</code></strong> (engl. <em>abbilden</em>) Methode wendet auf jedes Element des Arrays die bereitgestellte Funktion an und gibt das Ergebnis in einem neuen Array zurück.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-map.html")}}</div>
 
@@ -29,8 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>Funktion, die ein Element für das neue Array erstellt und drei Argumente entgegennimmt:</dd>
- <dd>
+ <dd>Funktion, die ein Element für das neue Array erstellt und drei Argumente entgegennimmt: <br/><br/>
  <dl>
   <dt><code>currentValue</code></dt>
   <dd>Das aktuelle Element, das im Array verarbeitet wird.</dd>
@@ -41,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
  </dl>
  </dd>
  <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>Wert, der als <code>this</code> verwendet wird, wenn <code>callback</code> ausgeführt wird.</dd>
+ <dd>Wert, der als <code>this</code> verwendet wird, wenn <code>callback</code> ausgeführt wird.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -58,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <ul>
  <li>Sie das Array, das zurückgegeben wird, nicht benötigen und/oder</li>
- <li>Ihr Callback keinen Wert zurückgibt.</li>
+ <li>Ihr Callback keinen Wert zurückgibt.</li>
 </ul>
 
 <p><code>callback</code> wird mit drei Argumenten aufgerufen:</p>
@@ -134,11 +133,11 @@ var a = map.call('Hello World', function(x) {
 
 <h3 id="Example_using_map_generically_querySelectorAll" name="Example:_using_map_generically_querySelectorAll">Generischer Einsatz von <code>map()</code> zusammen mit <code>querySelectorAll()</code></h3>
 
-<p>In diesem Beispiel wird gezeigt, wie Sie eine Sammlung von Objekten durchlaufen, die von {{domxref("document.querySelectorAll()", "querySelectorAll()")}} erfasst wurde. Dies liegt daran, dass {{domxref("document.querySelectorAll()", "querySelectorAll()")}} eine {{domxref("NodeList")}} zurückgibt, bei der es sich um eine Auflistung von Objekten handelt. In diesem Fall geben wir alle Werte der ausgewählten Optionen auf dem Bildschirm zurück:</p>
+<p>In diesem Beispiel wird gezeigt, wie Sie eine Sammlung von Objekten durchlaufen, die von {{domxref("document.querySelectorAll()", "querySelectorAll()")}} erfasst wurde. Dies liegt daran, dass {{domxref("document.querySelectorAll()", "querySelectorAll()")}} eine {{domxref("NodeList")}} zurückgibt, bei der es sich um eine Auflistung von Objekten handelt. In diesem Fall geben wir alle Werte der ausgewählten Optionen auf dem Bildschirm zurück:</p>
 
 <pre class="brush: js notranslate">var elems = document.querySelectorAll('select option:checked');
 var values = Array.prototype.map.call(elems, function(obj) {
-  return obj.value;
+  return obj.value;
 });
 </pre>
 
@@ -148,7 +147,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 <p><a href="http://www.wirfs-brock.com/allen/posts/166">(Inspiriert von diesem Blogpost)</a></p>
 
-<p>Üblicherweise wird die <code>callback</code> Funktion mit nur einem Argument benutzt. Das trifft auch für bestimmte andere Funktionen zu obwohl diese weitere optionale Argumente akzeptieren. Dies kann jedoch zu verwirrendem Verhalten führen.</p>
+<p>Üblicherweise wird die <code>callback</code> Funktion mit nur einem Argument benutzt. Das trifft auch für bestimmte andere Funktionen zu obwohl diese weitere optionale Argumente akzeptieren. Dies kann jedoch zu verwirrendem Verhalten führen.</p>
 
 <p>Betrachten wir folgendes Beispiel:</p>
 

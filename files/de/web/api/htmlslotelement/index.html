@@ -35,8 +35,8 @@ translation_of: Web/API/HTMLSlotElement
 
 <pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });</pre>
 
 <p>Here we grab references to all the slots, then add a slotchange event listener to the 2nd slot in the template — which is the one that keeps having its contents changed in the example.</p>
@@ -55,7 +55,7 @@ slots[1].addEventListener('slotchange', function(e) {
   <tr>
    <td>{{SpecName('HTML WHATWG','scripting.html#htmlslotelement','HTMLSlotElement')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

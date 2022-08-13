@@ -1,7 +1,6 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-translation_of: Web/API/Resize_Observer_API
 ---
 {{DefaultAPISidebar("Resize Observer API")}}
 

@@ -1,18 +1,10 @@
 ---
 title: Node.isEqualNode
 slug: Web/API/Node/isEqualNode
-tags:
-  - API
-  - DOM
-  - Node
-  - 参考
-  - 方法
-  - 节点
-translation_of: Web/API/Node/isEqualNode
 ---
 {{ ApiRef("DOM") }}
 
-**`Node.isEqualNode() `**方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征 (defining characteristics) 相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。
+**`Node.isEqualNode()`** 方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征 (defining characteristics) 相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。
 
 ### 语法
 

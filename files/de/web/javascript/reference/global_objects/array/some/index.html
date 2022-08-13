@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p><code>some()</code> verändert nicht das Array auf dem die Methode aufgerufen wurde.</p>
 
-<p>Die von <code>some()</code> zu verarbeitenden Elemente werden vor dem ersten Aufruf von <code>callback</code> ermittelt. Elemente, die nach dem Aufruf von <code>some()</code> zum Array hinzugefügt werden, werden nicht mit <code>callback</code> aufgerufen. <span id="result_box" lang="de"><span>Wird ein noch nicht besuchtes Element des Arrays durch </span></span><code>callback</code><span lang="de"><span> geändert, wird sein Wert, der an </span></span><code>callback</code><span lang="de"><span> </span></span><span lang="de"><span> übermittelt wird, der Wert zu dem Zeitpunkt, zu dem <code>some()</code> den Index besucht, sein.</span></span> Wird ein Element aus dem Array gelöscht, wird es nicht betrachtet.</p>
+<p>Die von <code>some()</code> zu verarbeitenden Elemente werden vor dem ersten Aufruf von <code>callback</code> ermittelt. Elemente, die nach dem Aufruf von <code>some()</code> zum Array hinzugefügt werden, werden nicht mit <code>callback</code> aufgerufen. <span id="result_box" lang="de"><span>Wird ein noch nicht besuchtes Element des Arrays durch </span></span><code>callback</code><span lang="de"><span> geändert, wird sein Wert, der an </span></span><code>callback</code><span lang="de"> </span><span lang="de"><span> übermittelt wird, der Wert zu dem Zeitpunkt, zu dem <code>some()</code> den Index besucht, sein.</span></span> Wird ein Element aus dem Array gelöscht, wird es nicht betrachtet.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -84,7 +84,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <h3 id="Prüfen_ob_ein_Element_in_einem_Array_existiert">Prüfen ob ein Element in einem Array existiert</h3>
 
-<p>Um die Methode  <code>includes()</code> nachzuahmen, gibt  die folgende Funktion <code>true</code> zurück, wenn das Element im Array existiert:</p>
+<p>Um die Methode  <code>includes()</code> nachzuahmen, gibt  die folgende Funktion <code>true</code> zurück, wenn das Element im Array existiert:</p>
 
 <pre class="brush: js">var fruits = ['apple', 'banana', 'mango', 'guava'];
 
@@ -181,12 +181,12 @@ if (!Array.prototype.some) {
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

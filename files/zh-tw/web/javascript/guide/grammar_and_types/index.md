@@ -53,7 +53,7 @@ JavaScript 有三種宣告方式
 
 變數（variable）是對值（value）的引用，變數的名稱被稱為 {{Glossary("Identifier", "identifiers")}} 需要遵從一定的規則。
 
-在 JavaScript 中，變數必須使用字母（letter）、下底線（ \_）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' \~ 'Z'）和小寫字母（'a' \~ 'z'）皆可使用且不相等。
+在 JavaScript 中，變數必須使用字母（letter）、下底線（\_）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' \~ 'Z'）和小寫字母（'a' \~ 'z'）皆可使用且不相等。
 
 You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) as characters in identifiers.
 
@@ -87,7 +87,7 @@ console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defi
 let y;
 ```
 
-你可以利用 `undefined` 來判斷該變數是否有值，在下面的程式碼的例子中，`input` 這個變數沒有賦值，`if `判斷式會得到 `true` 的結果。
+你可以利用 `undefined` 來判斷該變數是否有值，在下面的程式碼的例子中，`input` 這個變數沒有賦值，`if` 判斷式會得到 `true` 的結果。
 
 ```js
 var input;
@@ -450,7 +450,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 
 - 第一個屬性 `myCar` 賦值為字串 '`Saturn`'
 - 第二個屬性 `getCar` 賦值為「調用函數`carTypes('Honda')`」的結果
-- 第三個屬性 `special `使用現有變量 `sales` 賦值
+- 第三個屬性 `special` 使用現有變量 `sales` 賦值
 
 ```js
 var sales = 'Toyota';

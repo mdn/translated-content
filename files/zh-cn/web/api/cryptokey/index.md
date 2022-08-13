@@ -1,7 +1,6 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
-translation_of: Web/API/CryptoKey
 ---
 {{APIRef("Web Crypto API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Headers.set()
 slug: Web/API/Headers/set
-translation_of: Web/API/Headers/set
 ---
 {{APIRef("Fetch")}}
 
@@ -22,7 +21,7 @@ myHeaders.set(name, value);
 - `name`
   - : **`name`**就是需要对 HTTP header 设置新值的 key，一般为字符串。如果设置的**`name`** 不是 HTTP header 规范里面规定的 name，那么将会抛出错误"TypeError"。
 - `value`
-  - : **`value `**就是 **`name `**对应的值。
+  - : **`value`** 就是 **`name`** 对应的值。
 
 ### 返回
 

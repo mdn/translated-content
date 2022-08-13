@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
 {{JSRef}}
 
-`trimEnd() `方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
+`trimEnd()` 方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 

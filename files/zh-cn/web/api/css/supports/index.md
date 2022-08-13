@@ -1,11 +1,6 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports
-tags:
-  - API
-  - CSSOM
-  - Method
-translation_of: Web/API/CSS/supports
 ---
 {{APIRef("CSSOM")}}
 

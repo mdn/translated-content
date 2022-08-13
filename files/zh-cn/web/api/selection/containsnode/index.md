@@ -1,7 +1,6 @@
 ---
 title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
-translation_of: Web/API/Selection/containsNode
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

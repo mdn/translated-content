@@ -1,7 +1,6 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
-translation_of: Web/API/Document/scrollingElement
 ---
 {{APIRef("DOM")}}
 

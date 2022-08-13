@@ -1,14 +1,6 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - Element Lists
-  - HTMLCollection
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLCollection
 ---
 {{APIRef("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLShaderPrecisionFormat
 slug: Web/API/WebGLShaderPrecisionFormat
-translation_of: Web/API/WebGLShaderPrecisionFormat
 ---
 **WebGLShaderPrecisionFormat** 接口是[WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它表示通过调用{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}返回信息的信息。
 

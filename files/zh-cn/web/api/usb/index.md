@@ -1,7 +1,6 @@
 ---
 title: USB
 slug: Web/API/USB
-translation_of: Web/API/USB
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 

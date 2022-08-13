@@ -13,7 +13,7 @@ translation_of: Web/API/Canvas_API/Tutorial
 
 ## 在開始之前
 
-`<canvas>` 並不困難，但你需要了解基本的 [HTML](/en-US/docs/HTML) 與 [JavaScript](/en-US/docs/JavaScript)。部分舊版瀏覽器不支援` <canvas>，不過基本上現今所有主流的瀏覽器都有支援。`預設的畫布大小是 300px \* 150px（寬 \* 高）。但你也可以透過 HTML 寬、高屬性（{{Glossary("attribute")}}）自訂。為了在畫布上作畫，我們使用了一個 JavaScript context 物件來即時繪製圖形。
+`<canvas>` 並不困難，但你需要了解基本的 [HTML](/en-US/docs/HTML) 與 [JavaScript](/en-US/docs/JavaScript)。部分舊版瀏覽器不支援 `<canvas>`，不過基本上現今所有主流的瀏覽器都有支援。預設的畫布大小是 300px \* 150px（寬 \* 高）。但你也可以透過 HTML 寬、高屬性（{{Glossary("attribute")}}）自訂。為了在畫布上作畫，我們使用了一個 JavaScript context 物件來即時繪製圖形。
 
 ## 教學文件
 

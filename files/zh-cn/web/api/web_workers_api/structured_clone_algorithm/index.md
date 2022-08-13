@@ -1,14 +1,8 @@
 ---
 title: 结构化克隆算法
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-tags:
-  - DOM
-  - HTML5
-  - 结构化克隆算法
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
-original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 ---
-结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)的 `postMessage() `或使用 [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
+结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
 
 ## 结构化克隆所不能做到的
 
@@ -16,7 +10,7 @@ original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
 
-  - `RegExp `对象的 `lastIndex` 字段不会被保留
+  - `RegExp` 对象的 `lastIndex` 字段不会被保留
   - 属性描述符，setters 以及 getters（以及其他类似元数据的功能）同样不会被复制。例如，如果一个对象用属性描述符标记为 read-only，它将会被复制为 read-write，因为这是默认的情况下。
   - 原形链上的属性也不会被追踪以及复制。
 

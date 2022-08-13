@@ -1,14 +1,10 @@
 ---
 title: HTMLHyperlinkElementUtils.href
 slug: Web/API/HTMLAnchorElement/href
-tags:
-  - HTMLHyperlinkElementUtils.href
-translation_of: Web/API/HTMLHyperlinkElementUtils/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
 {{ApiRef("URL API")}}
 
-**`HTMLHyperlinkElementUtils.href `**属性是一个包含整个 URL 的 {{domxref("USVString")}}。
+**`HTMLHyperlinkElementUtils.href`** 属性是一个包含整个 URL 的 {{domxref("USVString")}}。
 
 ## Syntax
 

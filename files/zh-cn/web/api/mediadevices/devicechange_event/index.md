@@ -1,9 +1,8 @@
 ---
 title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
-translation_of: Web/API/MediaDevices/devicechange_event
 ---
-每当媒体设备（例如相机，麦克风或扬声器）连接到系统或从系统中移除时，`devicechange `事件就会被发送到 {{domxref("MediaDevices")}} 实例。 这是一个没有附加属性的通用 {{domxref("Event")}} 。
+每当媒体设备（例如相机，麦克风或扬声器）连接到系统或从系统中移除时，`devicechange` 事件就会被发送到 {{domxref("MediaDevices")}} 实例。 这是一个没有附加属性的通用 {{domxref("Event")}} 。
 
 ## 一般信息
 

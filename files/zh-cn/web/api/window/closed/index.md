@@ -1,7 +1,6 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-translation_of: Web/API/Window/closed
 ---
 {{APIRef}}
 

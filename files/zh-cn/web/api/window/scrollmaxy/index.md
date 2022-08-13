@@ -1,14 +1,6 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
-tags:
-  - API
-  - DOM_0
-  - HTML DOM
-  - 参考
-  - 属性
-  - 非标准
-translation_of: Web/API/Window/scrollMaxY
 ---
 {{APIRef}} {{Non-standard_header}}
 

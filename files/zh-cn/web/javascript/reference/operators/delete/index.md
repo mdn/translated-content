@@ -46,7 +46,7 @@ delete object['property']
 
 与通常的看法不同，`delete`操作符与直接释放内存**无关**。内存管理 通过断开引用来间接完成的，查看[内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)页可了解详情。
 
-**`delete `**操作符会从某个对象上移除指定属性。成功删除的时候会返回 `true`，否则返回 `false`。
+**`delete`** 操作符会从某个对象上移除指定属性。成功删除的时候会返回 `true`，否则返回 `false`。
 
 但是，以下情况需要重点考虑：
 
@@ -132,7 +132,7 @@ function func(param) {
 console.log(delete func); // false
 ```
 
-> **备注：**下文在英文原版中已删除
+> **备注：** 下文在英文原版中已删除
 
 任何使用 var 声明的变量都会被标记为不可设置的。在下面的例子中，salary 是不可设置的以及不能被删除的。在非严格模式下，下面的 delete 操作将会返回 false。
 
@@ -241,7 +241,7 @@ console.log(foo.bar);    //undefined
 
 当你删除一个数组元素时，数组的长度不受影响。即便你删除了数组的最后一个元素也是如此。
 
-当用 `delete` 操作符删除一个数组元素时，被删除的元素已经不再属于该数组。下面的例子中用 `delete `删除了` trees[3]`。
+当用 `delete` 操作符删除一个数组元素时，被删除的元素已经不再属于该数组。下面的例子中用 `delete` 删除了 `trees[3]`。
 
 ```js
 var trees = ["redwood","bay","cedar","oak","maple"];

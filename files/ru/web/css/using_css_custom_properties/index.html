@@ -22,14 +22,14 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Объявление переменной:</p>
 
-<pre class="brush:css; highlight:[2]  language-css">element {
+<pre class="brush:css">element {
   --main-bg-color: brown;
 }
 </pre>
 
 <p>Использование переменной:</p>
 
-<pre class="brush:css; highlight:[2]  language-css">element {
+<pre class="brush:css">element {
   background-color: var(--main-bg-color);
 }
 </pre>
@@ -43,7 +43,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 <p>Начнём с этого простого CSS, который окрасит элементы разных классов одинаковым цветом:</p>
 
 <div id="sample1">
-<pre class="brush:css; highlight:[3,20,26,32]">.one {
+<pre class="brush:css">.one {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -98,7 +98,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 </div>
 
 <div id="sample2">
-<pre class="brush:css; highlight:[2, 7, 24,30,36]">:root {
+<pre class="brush:css">:root {
   --main-bg-color: brown;
 }
 

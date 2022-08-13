@@ -1,13 +1,6 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
-tags:
-  - API
-  - HTML DOM
-  - Web
-  - 只读
-  - 属性
-translation_of: Web/API/HTMLMediaElement/networkState
 ---
 {{APIRef("HTML DOM")}}
 

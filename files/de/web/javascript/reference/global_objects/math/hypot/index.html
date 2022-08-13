@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 
 <p>Diese Funktion macht es ein bisschen einfacher und schneller, man kann einfach <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code> aufrufen.</p>
 
-<p><span id="result_box" lang="de"><span>Sie vermeidet zudem ein Problem, wenn Zahlen sehr groß werden. Die größte Zahl, die in JavaScript dargestellt werden kann ist </span></span><span style="line-height: 1.5;"><code>Number.MAX_VALUE = 1.797...e+308</code>. Wenn die Zahlen größer als <code>1e154</code> sind, wird das Quadrieren</span> dieser zu dem ergebnis <code><span style="line-height: 1.5;">Infinity</span></code><span style="line-height: 1.5;"> führen und das Ergebnis zerstören. Zum Beispiel: <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. Wenn <code>hypot()</code> stattdessen benutzt wird bekommt man ein gutes Ergebnis: <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>. Diese gilt auch für sehr kleine Zahlen. <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, wohingegen </span><code><span style="line-height: 1.5;">Math.hypot(1e-200, 1e-200) =</span></code><span style="line-height: 1.5;"><code>1.4142...e-200</code> eine gute Lösung ist.</span></p>
+<p><span id="result_box" lang="de"><span>Sie vermeidet zudem ein Problem, wenn Zahlen sehr groß werden. Die größte Zahl, die in JavaScript dargestellt werden kann ist </span></span><span style="line-height: 1.5;"><code>Number.MAX_VALUE = 1.797...e+308</code>. Wenn die Zahlen größer als <code>1e154</code> sind, wird das Quadrieren</span> dieser zu dem ergebnis <code><span style="line-height: 1.5;">Infinity</span></code><span style="line-height: 1.5;"> führen und das Ergebnis zerstören. Zum Beispiel: <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. Wenn <code>hypot()</code> stattdessen benutzt wird bekommt man ein gutes Ergebnis: <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>. Diese gilt auch für sehr kleine Zahlen. <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, wohingegen </span><code><span style="line-height: 1.5;">Math.hypot(1e-200, 1e-200) =</span></code><span style="line-height: 1.5;"><code>1.4142...e-200</code> eine gute Lösung ist.</span></p>
 
 <p>Weil <code>hypot()</code> eine statische Funktion von <code>Math</code> ist, wird es immer als <code>Math.hypot()</code> eingesetzt<code>,</code> jedoch nicht als Methode eines erzeugten <code>Math</code> Objektes (<code>Math</code> ist kein Konstruktor).</p>
 
@@ -108,7 +108,7 @@ Math.hypot(-3);          // 3, das gleiche wie Math.abs(-3)
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

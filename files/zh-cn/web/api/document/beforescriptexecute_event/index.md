@@ -1,11 +1,6 @@
 ---
 title: element.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
-tags:
-  - DOM
-  - onbeforescriptexecute
-translation_of: Web/API/Document/onbeforescriptexecute
-original_slug: Web/API/Document/onbeforescriptexecute
 ---
 {{ApiRef}}
 

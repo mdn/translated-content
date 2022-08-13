@@ -1,14 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - Location
-  - 参考
-  - 导航
-  - 方法
-  - 跳转
-translation_of: Web/API/Location/assign
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -33,7 +25,7 @@ location.assign(url);
 
 ```js
 // 跳转到 Location.reload() 这篇文章
-	document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload');
+document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload');
 ```
 
 ## 规范

@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 {{JSRef}}
 
-`apply() 方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 `[array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects) `)為參數的函式。`
+`apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects))為參數的函式。
 
-> **備註：**這個函式的語法和{{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 `call()` 接受**`一連串的參數`**，而 `apply() 接受一組陣列形式的參數。`
+> **備註：** 這個函式的語法和{{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 `call()` 接受**`一連串的參數`**，而 `apply() 接受一組陣列形式的參數。`
 
 ## 語法
 
@@ -18,9 +18,9 @@ fun.apply(thisArg, [argsArray])
 ### 參數
 
 - `thisArg`
-  - : 讓 _`fun `_`呼叫時`可以視為 this 的值。注意，這可能並不是最後會在方法裡看見的值：如果這是一個在非 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 下運作的程式碼，{{jsxref("null")}} 及 {{jsxref("undefined")}} 將會被全域物件取代，而原始類別將被封裝。
+  - : 讓 _`fun`_`呼叫時`可以視為 this 的值。注意，這可能並不是最後會在方法裡看見的值：如果這是一個在非 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 下運作的程式碼，{{jsxref("null")}} 及 {{jsxref("undefined")}} 將會被全域物件取代，而原始類別將被封裝。
 - `argsArray`
-  - : 一個 array-like object ，定義了 _`fun `_`要呼叫的一組參數，如果沒有需要提供，可以傳入 `{{jsxref("null")}} 或 {{jsxref("undefined")}} 。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like object ，而不一定要是一組陣列。查看下方的[瀏覽器相容性](#瀏覽器相容性) 資訊。
+  - : 一個 array-like object ，定義了 _`fun`_ 要呼叫的一組參數，如果沒有需要提供，可以傳入`{{jsxref("null")}} 或 {{jsxref("undefined")}} 。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like object ，而不一定要是一組陣列。查看下方的[瀏覽器相容性](#瀏覽器相容性) 資訊。
 
 ### 回傳值
 
@@ -30,13 +30,13 @@ fun.apply(thisArg, [argsArray])
 
 在呼叫一個現存的函式時，你可以傳入不同的 `this 物件值。this 參考到現在的物件，也就是正在執行的物件。apply 讓你可以只寫一次方法後，讓其他物件也繼承到這個方法，而不用一再重寫。`
 
-`apply 與` {{jsxref("Function.call", "call()")}} 非常相似，不同的是支援的傳入參數類型。使用陣列形式的參數，而不是命名過的接收參數。使用 `apply 時，`你可以選擇使用陣列實字：`fun.apply(this, ['eat', 'bananas']); 或是 `{{jsxref("Array")}} 物件： `fun.apply(this, new Array('eat', 'bananas'))。`
+`apply 與` {{jsxref("Function.call", "call()")}} 非常相似，不同的是支援的傳入參數類型。使用陣列形式的參數，而不是命名過的接收參數。使用 `apply 時，`你可以選擇使用陣列實字：`fun.apply(this, ['eat', 'bananas']);` 或是 {{jsxref("Array")}} 物件： `fun.apply(this, new Array('eat', 'bananas'))`。
 
-`除此之外，你也可以使用` {{jsxref("Functions/arguments", "arguments")}} 代表 `argsArray 參數。arguments 是在函式裡的區域變數，可用來存取所有沒有特別被所呼叫物件指定的傳入參數。因此，使用 apply 時你不需要知道所呼叫函式的指定參數。使用 `arguments 把所有參數傳入呼叫的方法裡，而被呼叫的方法會接手處理這些參數。
+`除此之外，你也可以使用` {{jsxref("Functions/arguments", "arguments")}} 代表 `argsArray 參數。arguments 是在函式裡的區域變數，可用來存取所有沒有特別被所呼叫物件指定的傳入參數。因此，使用 apply 時你不需要知道所呼叫函式的指定參數。使用`arguments 把所有參數傳入呼叫的方法裡，而被呼叫的方法會接手處理這些參數。
 
-從 ECMAScript 5th 版本後，也可以使用陣列形式的物件，在實踐上這代表他會擁有 ` length 以及整數範圍 `` (0...length-1) 的屬性。舉例來說，你可以使用  `{{domxref("NodeList")}} 或是一個像這樣的自定義屬性： `{ 'length': 2, '0': 'eat', '1': 'bananas' }。`
+從 ECMAScript 5th 版本後，也可以使用陣列形式的物件，在實踐上這代表他會擁有 `length` 以及整數範圍 `(0...length-1)` 的屬性。舉例來說，你可以使用 {{domxref("NodeList")}} 或是一個像這樣的自定義屬性： `{ 'length': 2, '0': 'eat', '1': 'bananas' }`。
 
-> **備註：**一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。
+> **備註：** 一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。
 
 ## 範例
 
@@ -52,7 +52,7 @@ Function.prototype.construct = function(aArgs) {
 };
 ```
 
-> **備註：**如上範例的 `Object.create()` 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：
+> **備註：** 如上範例的 `Object.create()` 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：
 >
 > ```js
 > Function.prototype.construct = function(aArgs) {
@@ -81,7 +81,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 ```
 
-> **備註：**This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
+> **備註：** This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
 
 ### 使用 `apply` 於內建的函數
 

@@ -1,7 +1,6 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
-translation_of: Web/API/PerformanceEntry/entryType
 ---
 {{APIRef("Performance Timeline API")}}
 

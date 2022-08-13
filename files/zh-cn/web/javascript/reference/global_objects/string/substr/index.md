@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 {{JSRef}}
 
-> **警告：**尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 替代它。
+> **警告：** 尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 替代它。
 
 **`substr()`** 方法返回一个字符串中从指定位置开始到指定字符数的字符。
 
@@ -20,7 +20,7 @@ str.substr(start[, length])
 ### 参数
 
 - `start`
-  - : 开始提取字符的位置。如果为负值，则被看作 ` strLength + ``start，其中` `strLength` 为字符串的长度（例如，如果 `start` 为 `-3，则被看作` `strLength + (-3)）。`
+  - : 开始提取字符的位置。如果为负值，则被看作 `strLength + start`，其中 `strLength` 为字符串的长度（例如，如果 `start` 为 `-3`，则被看作 `strLength + (-3)`）。
 - `length`
   - : 可选。提取的字符数。
 

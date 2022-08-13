@@ -1,7 +1,6 @@
 ---
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
-translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 

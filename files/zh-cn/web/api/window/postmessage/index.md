@@ -1,16 +1,6 @@
 ---
 title: window.postMessage
 slug: Web/API/Window/postMessage
-tags:
-  - AJAX
-  - API
-  - CORS
-  - DOM
-  - Window.postMessage()
-  - postMessage()
-  - 参考
-  - 方法
-translation_of: Web/API/Window/postMessage
 ---
 {{ApiRef("HTML DOM")}}
 
@@ -140,7 +130,7 @@ window.addEventListener("message", receiveMessage, false);
 
 ### **在扩展**{{Non-standard_inline}}**中使用 window\.postMessage**
 
-`window.postMessage`可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的`targetOrigin`参数当前被错误解释，使得将导致发送消息的唯一值为`“*”`。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。 最后，在文件中向页面发布消息：URL 当前要求`targetOrigin`参数为`“*”`。` file://`不能用作安全限制; 这个限制可能会在将来被修改。
+`window.postMessage`可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的`targetOrigin`参数当前被错误解释，使得将导致发送消息的唯一值为`“*”`。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。 最后，在文件中向页面发布消息：URL 当前要求`targetOrigin`参数为`“*”`。`file://`不能用作安全限制; 这个限制可能会在将来被修改。
 
 ## 规范
 

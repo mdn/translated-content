@@ -8,7 +8,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">이 페이지는 MDN에서 사용하기 위해 만든 많은 범용 매크로를 나열합니다. 이 매크로 사용법에 관한 정보는, <a href="/ko/docs/MDN/Contribute/Content/Macros">매크로 사용하기</a> 및 <a href="/ko/docs/MDN/Contribute/Editor/Links#Using_link_macros">링크 매크로 사용하기</a>를 참조하세요.</span> 드물게, 특별한 문맥에서만 쓰이거나 사라질(deprecated) 매크로에 관한 정보는 <a href="/ko/docs/MDN/Contribute/Structures/Macros/Other">기타 매크로</a>를 참조하세요. <a href="/ko/docs/templates" title="complete list of all macros on MDN">MDN의 모든 매크로 전체 목록</a>도 있습니다.</p>
+<p>이 페이지는 MDN에서 사용하기 위해 만든 많은 범용 매크로를 나열합니다. 이 매크로 사용법에 관한 정보는, <a href="/ko/docs/MDN/Contribute/Content/Macros">매크로 사용하기</a> 및 <a href="/ko/docs/MDN/Contribute/Editor/Links#Using_link_macros">링크 매크로 사용하기</a>를 참조하세요. 드물게, 특별한 문맥에서만 쓰이거나 사라질(deprecated) 매크로에 관한 정보는 <a href="/ko/docs/MDN/Contribute/Structures/Macros/Other">기타 매크로</a>를 참조하세요. <a href="/ko/docs/templates" title="complete list of all macros on MDN">MDN의 모든 매크로 전체 목록</a>도 있습니다.</p>
 
 <p>사용 가능 스타일에 관한 <a href="/ko/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS 스타일 안내서</a>도 참조하세요.</p>
 
@@ -44,7 +44,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 <ul>
  <li><code>\{{cssxref}}</code>는 <a href="/ko/docs/Web/CSS/CSS_Reference" title="CSS Reference">CSS 참고서</a> 내 페이지에 링크합니다.<br>
   예: <code>\{{cssxref("cursor")}}</code>, 결과: {{ cssxref("cursor") }}.</li>
- <li><code>\{{domxref}}</code>는 DOM 참고서 내 페이지에 링크합니다; 끝에 괄호를 포함하는 경우, 템플릿은 함수 이름처럼 보이도록 표시해야 함을 압니다. 예를 들어, <span class="plain"><span class="nowiki">\{{domxref("document.getElementsByName()")}}</span></span>은 {{ domxref("document.getElementsByName()") }}이 되고 <code>\{\{domxref("Node")\}\}</code>는 {{ domxref("Node") }}가 됩니다.</li>
+ <li><code>\{{domxref}}</code>는 DOM 참고서 내 페이지에 링크합니다; 끝에 괄호를 포함하는 경우, 템플릿은 함수 이름처럼 보이도록 표시해야 함을 압니다. 예를 들어, \{{domxref("document.getElementsByName()")}}은 {{ domxref("document.getElementsByName()") }}이 되고 <code>\{\{domxref("Node")\}\}</code>는 {{ domxref("Node") }}가 됩니다.</li>
  <li><code>\{{event}}</code>는 DOM Event 참고서 내 페이지에 링크합니다, 예: \{{event("change")}}는 {{event("change")}}가 됩니다.</li>
  <li><code>\{{HTMLElement}}</code>는 HTML 참고서 내 HTML 요소(element)에 링크합니다.</li>
  <li><code>\{{htmlattrxref}}</code>는 HTML attribute, 전역 attribute 설명 (attribute명만 지정한 경우) 또는 (attribute명 및 요소명을 지정한 경우) 지정 요소와 관련된 attribute에 링크합니다. 예를 들어, <code>\{\{htmlattrxref("lang")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("lang")}}.<code> </code> <code>\{\{htmlattrxref("type","input")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("type","input")}}.</li>

@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 - 可以使用数值或字符串作为标识；
 - 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
-- 它不能与另一个 `get `或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
+- 它不能与另一个 `get` 或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
 
 ## 示例
 
@@ -101,7 +101,7 @@ Getters 给你一种方法来定义一个对象的属性，但是在访问它们
 - 如果现在不需要该值。它将在稍后使用，或在某些情况下它根本不使用。
 - 如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。
 
-> **备注：**这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。
+> **备注：** 这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。
 
 在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。
 

@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/Element/pointercancel_event
-translation_of: Web/API/GlobalEventHandlers/onpointercancel
-original_slug: Web/API/GlobalEventHandlers/onpointercancel
 ---
 {{ApiRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
 {{APIRef("Intersection Observer API")}}
 

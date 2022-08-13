@@ -214,10 +214,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 由于 matches 是唯一的强制性键，其他三个键用于进一步限制匹配的 URL。要匹配作为一个整体的键，网址必须：
 
-1.  匹配 matches 属性
-2.  并且，匹配 include_globs 属性（如果有）
-3.  并且，不匹配`exclude_matches`属性（如果有）
-4.  并且，不匹配`exclude_globs`属性（如果有）
+1. 匹配 matches 属性
+2. 并且，匹配 include_globs 属性（如果有）
+3. 并且，不匹配`exclude_matches`属性（如果有）
+4. 并且，不匹配`exclude_globs`属性（如果有）
 
 ### globs
 

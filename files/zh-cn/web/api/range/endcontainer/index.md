@@ -1,7 +1,6 @@
 ---
 title: Range.endContainer
 slug: Web/API/Range/endContainer
-translation_of: Web/API/Range/endContainer
 ---
 {{ApiRef("DOM")}}
 

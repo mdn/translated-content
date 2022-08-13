@@ -43,7 +43,9 @@ This section explains the WebIDL syntax that describes overall API features.
 
 The interface name is the string that appears after the keyword `interface` and before the next opening bracket (`'{'`) or colon (`':'`).
 
-    interface URL {};
+```
+interface URL {};
+```
 
 Each WebIDL interface, being a true interface or a mixin, has its own page in the documentation, listing every constructor, property and method defined for it.
 
@@ -51,7 +53,9 @@ Each WebIDL interface, being a true interface or a mixin, has its own page in th
 
 The parent, if any, of a given interface is defined after the interface name, following a colon (`':'`). There can be only one parent per interface.
 
-    interface HTMLMediaElement : HTMLElement {…}
+```
+interface HTMLMediaElement : HTMLElement {…}
+```
 
 The inheritance chain is listed automatically in the sidebar (using the \\{{APIRef}} macro). It can also be added as an SVG image via the macro \\{{InheritanceDiagram}}.
 
@@ -59,8 +63,10 @@ The inheritance chain is listed automatically in the sidebar (using the \\{{APIR
 
 Some properties or methods are available to several interfaces. To prevent redefinition they are defined in special WebIDL interfaces called _mixins_. In the WebIDL, they are prefixed using the `[NoInterfaceObject]` annotation. The name of a mixin, `Body` in the following example, doesn't appear in JavaScript.
 
-    [NoInterfaceObject]
-       interface Body {…}
+```
+[NoInterfaceObject]
+  interface Body {…}
+```
 
 For documentation purposes, we create a mixin page, with the same structure as an interface page. As they are not true interfaces, the word _interface_ is not used — _mixin_ is used instead.
 
@@ -71,8 +77,10 @@ Mixin methods and properties are listed in the same way as regular methods and p
 
 Mixins implemented on an interface are defined using the `implements` keyword.
 
-    Request implements Body;
-    Response implements Body;
+```
+Request implements Body;
+Response implements Body;
+```
 
 > **备注：** Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface (such cases are bugs in the relevant specs — they shouldn't be defined as mixins, but as partial interfaces.)
 
@@ -80,21 +88,23 @@ Mixins implemented on an interface are defined using the `implements` keyword.
 
 Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with. If no annotation is available, the default value is `Window`.
 
-    [Exposed=(Window,Worker)]
-    interface Performance {
-       [DependsOn=DeviceState, Affects=Nothing]
-       DOMHighResTimeStamp now();
-    };
+```
+[Exposed=(Window,Worker)]
+interface Performance {
+    [DependsOn=DeviceState, Affects=Nothing]
+    DOMHighResTimeStamp now();
+};
 
-    [Exposed=Window]
-    partial interface Performance {
-       [Constant]
-       readonly attribute PerformanceTiming timing;
-       [Constant]
-       readonly attribute PerformanceNavigation navigation;
+[Exposed=Window]
+partial interface Performance {
+    [Constant]
+    readonly attribute PerformanceTiming timing;
+    [Constant]
+    readonly attribute PerformanceNavigation navigation;
 
-       jsonifier;
-    };
+    jsonifier;
+};
+```
 
 In this case `Performance.now()` is available on the `Window` scope and to any worker, while `Performance.timing`, `Performance.navigation` and `Performance.toJSON()` are not available to Web workers.
 
@@ -115,15 +125,19 @@ Another value is possible, like `System`, but this has a [special meaning](/en-U
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
-    [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
-    interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
+```
+[Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
+interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
+```
 
 Here, it is defined that when the global scope is of type `DedicatedWorkerGlobalScope`, that is if we are in a dedicated worker, any interface, property or method exposed – using the `[Exposed]` annotation – to `Worker` or `DedicatedWorker` is available.
 
 Even the primary global is defined in WebIDL. The primary global is the value of an `[Exposed]` annotation when not present. This is defined using the `[PrimaryGlobal]` annotation and is present on {{domxref('Window')}}:
 
-    [PrimaryGlobal, NeedResolve]
-    /*sealed*/ interface Window : EventTarget {…}
+```
+[PrimaryGlobal, NeedResolve]
+/*sealed*/ interface Window : EventTarget {…}
+```
 
 ### Preferences
 
@@ -131,12 +145,14 @@ Even the primary global is defined in WebIDL. The primary global is the value of
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
-    [Pref="media.webspeech.synth.enabled"]
-    interface SpeechSynthesis {
-       readonly attribute boolean pending;
-       readonly attribute boolean speaking;
-       readonly attribute boolean paused;
-    };
+```
+[Pref="media.webspeech.synth.enabled"]
+interface SpeechSynthesis {
+    readonly attribute boolean pending;
+    readonly attribute boolean speaking;
+    readonly attribute boolean paused;
+};
+```
 
 Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
@@ -148,19 +164,25 @@ You can recognize the definition of a property by the presence of the `attribute
 
 ### Name of the property
 
-    readonly attribute MediaError? error;
+```
+readonly attribute MediaError? error;
+```
 
 In the above example the name of the property is `error`; in the docs we will refer to it as `HTMLMediaElement.error` as it belongs to the `HTMLMediaElement` interface. Linking to the page is either done **with** the interface prefix using \\{{domxref('HTMLMediaElement.error')}} or **without** the prefix using \\{{domxref('HTMLMediaElement.error', 'error')}} when the context is obvious and unambiguous.
 
 ### Type of the property
 
-    readonly attribute MediaError? error;
+```
+readonly attribute MediaError? error;
+```
 
 The property value is an object of type `MediaError`. The question mark (`'?'`) indicates that it can take a value of `null`, and the documentation must explain _when_ this may occur. If no question mark is present, the `error` property can't be `null`.
 
 ### Writing permissions on the property
 
-    readonly attribute MediaError? error;
+```
+readonly attribute MediaError? error;
+```
 
 If the keyword `readonly` is present, the property can't be modified. It must be marked as read-only:
 
@@ -173,8 +195,10 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 ### Throwing exceptions
 
-    [SetterThrows]
-                attribute DOMString src;
+```
+[SetterThrows]
+attribute DOMString src;
+```
 
 In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
@@ -182,10 +206,12 @@ Note that some exceptions are not explicitly marked but are defined by the JavaS
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
-    partial interface Blob {
-      [GetterThrows]
-      readonly attribute unsigned long long size;
-    };
+```
+partial interface Blob {
+  [GetterThrows]
+  readonly attribute unsigned long long size;
+};
+```
 
 ### Not throwing exceptions
 
@@ -193,12 +219,14 @@ When the semantics of Webidl is not followed, an exception is often thrown, even
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
-    partial interface Document {
-      [LenientSetter]
-      readonly attribute boolean fullscreen;
-      [LenientSetter]
-      readonly attribute boolean fullscreenEnabled;
-    };
+```
+partial interface Document {
+  [LenientSetter]
+  readonly attribute boolean fullscreen;
+  [LenientSetter]
+  readonly attribute boolean fullscreenEnabled;
+};
+```
 
 In these cases, an extra sentence is added to the description of the property. E.g
 
@@ -216,8 +244,10 @@ For interface objects, the default is to return a _reference_ to the internal ob
 
 Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
-    [NewObject]
-       readonly attribute TimeRanges buffered;
+```
+[NewObject]
+readonly attribute TimeRanges buffered;
+```
 
 In this case, each call to `buffered` returns a different object: changing it will not change the internal value, and a change in the internal value will not affect each object instance. In the documentation, we will mark it by using the adjective _new_ next to object:
 
@@ -247,8 +277,10 @@ For documentation, the subpage must contain a sentence indicating if it is avail
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-    [Pref="media.webvtt.enabled"]
-        readonly attribute TextTrackList? textTracks;
+```
+[Pref="media.webvtt.enabled"]
+readonly attribute TextTrackList? textTracks;
+```
 
 Here `media.webvtt.enabled` controls the `textTracks` property.
 
@@ -260,21 +292,27 @@ You can recognize the definition of a method by the presence of parentheses afte
 
 ### Name of the method
 
-    DOMString canPlayType(DOMString type);
+```
+DOMString canPlayType(DOMString type);
+```
 
 The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaElement.canPlayType()` (with the parentheses that indicate that it is a method) in the docs, as it belongs to the `HTMLMediaElement` interface. Linking to the page is either done **with** the interface prefix using \\{{domxref('HTMLMediaElement.canPlayType()')}}, or **without** the prefix using \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} when the context is obvious and unambiguous. The parentheses should always be included.
 
 ### Parameters
 
-    TextTrack addTextTrack(TextTrackKind kind,
-                           optional DOMString label = "",
-                           optional DOMString language = "");
+```
+TextTrack addTextTrack(TextTrackKind kind,
+                        optional DOMString label = "",
+                        optional DOMString language = "");
+```
 
 The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
 
 ### Type of the return value
 
-    DOMString canPlayType(DOMString type);
+```
+DOMString canPlayType(DOMString type);
+```
 
 The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
@@ -282,8 +320,10 @@ The keyword `void` means that there is no return value. It is not a return value
 
 ### Throwing exceptions
 
-    [Throws]
-       void fastSeek(double time);
+```
+[Throws]
+void fastSeek(double time);
+```
 
 Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
@@ -303,16 +343,16 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
-    [Pref="media.webvtt.enabled"]
-       TextTrack addTextTrack(TextTrackKind kind,
-                              optional DOMString label = "",
-                              optional DOMString language = "");
+```
+[Pref="media.webvtt.enabled"]
+TextTrack addTextTrack(TextTrackKind kind,
+                      optional DOMString label = "",
+                      optional DOMString language = "");
+```
 
 Here `media.webvtt.enabled` controls the `addTextTrack()` method.
 
 > **备注：** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
-
-###
 
 ## Special methods
 
@@ -322,14 +362,18 @@ Some methods are not listed as regular methods in WebIDL but instead as special 
 
 A stringifier is mapped to `toString()` and defined as:
 
-    stringifier;
+```
+stringifier;
+```
 
 The `toString()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Range.toString()")}})
 
 A jsonifier is mapped to `toJSON()` and defined as:
 
-    jsonifier; // Gecko version
-    serializer; // Standard version
+```
+jsonifier; // Gecko version
+serializer; // Standard version
+```
 
 The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
@@ -343,7 +387,9 @@ There are two kinds of iteration possible: the _value iterator_ and the _pair it
 
 #### Value iterator
 
-    iterable<valueType>
+```
+iterable<valueType>
+```
 
 The iterator will iterate over values of type _valueType_. The generated methods will be:
 
@@ -356,12 +402,14 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 > **备注：** the value pairs to iterate over can be defined in two different ways:
 >
-> 1.  Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
-> 2.  In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
+> 1. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
+> 2. In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
 
 #### Pair iterator
 
-    iterable<keyType, valueType>
+```
+iterable<keyType, valueType>
+```
 
 The iterator will iterate over values of type _valueType_, with keys of type _keyType_. The generated methods will be:
 
@@ -379,7 +427,9 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
-    setlike<valueType>
+```
+setlike<valueType>
+```
 
 The generated properties will be:
 
@@ -404,31 +454,39 @@ Constructors are a little bit hidden in WebIDL: they are listed as annotations o
 
 This is the most common case for constructors. The constructor of a given interface A, can be used as `a = new A(parameters);`
 
-     [Constructor, Func="MessageChannel::Enabled",
-      Exposed=(Window,Worker)]
-        interface MessageChannel {…};
+```
+[Constructor, Func="MessageChannel::Enabled",
+Exposed=(Window,Worker)]
+  interface MessageChannel {…};
+```
 
 A constructor with the same interface is defined using the `Constructor` annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug _Web/API/MessageChannel/MessageChannel_ and the title `MessageChannel()`.
 
 Another example of an unnamed constructor, with parameters:
 
-    [Constructor(DOMString type, optional MessageEventInit eventInitDict),
-     Exposed=(Window,Worker,System)]
-       interface MessageEvent : Event {…};
+```
+[Constructor(DOMString type, optional MessageEventInit eventInitDict),
+  Exposed=(Window,Worker,System)]
+    interface MessageEvent : Event {…};
+```
 
 There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.
 
-    [Constructor(DOMString url, URL base),
-     Constructor(DOMString url, optional DOMString base),
-     Exposed=(Window,Worker)]
-        interface URL {};
+```
+[Constructor(DOMString url, URL base),
+  Constructor(DOMString url, optional DOMString base),
+  Exposed=(Window,Worker)]
+    interface URL {};
+```
 
 ### Named constructors
 
-    [NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
-        interface HTMLImageElement : HTMLElement {…
+```
+[NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
+    interface HTMLImageElement : HTMLElement {…
+```
 
-A named constructor is a constructor that has a different name than that of its interface. For example` new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
+A named constructor is a constructor that has a different name than that of its interface. For example`new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
 
 There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.
 

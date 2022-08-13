@@ -1,7 +1,6 @@
 ---
 title: 'Location: href'
 slug: Web/API/Location/href
-translation_of: Web/API/Location/href
 ---
 {{ApiRef("Location")}}
 

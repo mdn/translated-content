@@ -17,25 +17,25 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>Die meisten JavaScript-Toolkits stellen eine Bibliothek für clientseitige Komponenten bereit, welche den Benutzeroberflächen von bekannten Desktopumgebungen nachempfunden sind. Slider, Menüleisten, Dateisystem-Bäume usw. lassen sich mit einer Kombination von JavaScript, CSS und HTML erstellen. In der HTML4-Spezifikation werden keine Tags festgelegt, welche diese Komponenten semantisch beschreiben und Entwickler greifen daher üblicherweise auf Tags wie &lt;div&gt; und &lt;span&gt; zurück. Die so entwickelten Oberflächen sehen Desktop-Applikation sehr ähnlich, enthalten jedoch in der Regel nicht genügend semantische Informationen, um die korrekte Funktion unterstützender Technologie zu gewährleisten. So können dynamische Inhalte einer Webseite von Benutzern, die z.B. eine Website (aus welchen Gründen auch immer) nicht sehen können, nicht vollständlig erfasst werden. Börsenticker, Updates von Twitter-Feeds, Fortschrittsanzeigen und ähnliche Komponenten manipulieren das DOM auf eine Weise, die von Unterstützungstechnologie nicht erkannt werden kann. An dieser Stelle kommt <a href="/en/ARIA" title="ARIA">ARIA</a> zum Einsatz.</p>
 
-<p><em>Beispiel 1: Markup für eine Tabs-Komponente mit ARIA-Labeln. Im Markup sind keine Informationen enthalten, welche die Form und Funktion der Komponente beschreiben.</em></p>
+<p><em>Beispiel 1: Markup für eine Tabs-Komponente mit ARIA-Labeln. Im Markup sind keine Informationen enthalten, welche die Form und Funktion der Komponente beschreiben.</em></p>
 
 <pre class="brush: html"><code>&lt;!-- Dies ist eine Komponente für Tabs. Wie könnten Sie das wissen, würden sie nur das Markup betrachten? --&gt;
 &lt;ol&gt;
-  &lt;li id="ch1Tab"&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab"&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab"&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+  &lt;li id="ch1Tab"&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab"&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab"&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
+  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 <p><em>Beispiel 2: Die Tabs-Komponente könnte z.B. wie folgt aussehen. Bei der visuellen Betrachtung lässt sich dies erkennen, es gibt jedoch keine maschinenlesbare Beschreibungen für Unterstützungstechnologie.</em><br>
@@ -54,22 +54,22 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 <pre class="brush: html"><code>&lt;!-- Durch die zugeteilte Rolle sind die Tabs erkennbar! --&gt;</code>
 <code>&lt;!-- role-Attribute wurden der Liste und den einzelnen Elementen hinzugefügt. --&gt;</code>
 <code>&lt;ol role="tablist"&gt;</code>
-<code>  &lt;li id="ch1Tab" <span style="color: #ff0000;">role="tab"</span>&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab" <span style="color: #ff0000;">role="tab"</span>&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab" <span style="color: #ff0000;">role="tab"</span>&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+<code>  &lt;li id="ch1Tab" <span style="color: #ff0000;">role="tab"</span>&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab" <span style="color: #ff0000;">role="tab"</span>&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab" <span style="color: #ff0000;">role="tab"</span>&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;!-- Beachten Sie die Attribute 'role' und 'aria-labelledby', welche die Tab-Panels beschreiben. --&gt;
-  &lt;div id="ch1Panel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="ch1Tab"</span>&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="ch2Tab"</span>&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="quizTab"</span>&gt;Quiz content goes here&lt;/div&gt;
+  &lt;!-- Beachten Sie die Attribute 'role' und 'aria-labelledby', welche die Tab-Panels beschreiben. --&gt;
+  &lt;div id="ch1Panel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="ch1Tab"</span>&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="ch2Tab"</span>&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel" <span style="color: #ff0000;">role=”tabpanel” aria-labelledby="quizTab"</span>&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>
 
@@ -193,21 +193,21 @@ original_slug: Web/Barrierefreiheit/An_overview_of_accessible_web_applications_a
 
 <p>Von Entwicklern wird oft wenig darauf geachtet, ob Oberflächenkomponenten auch mit der Tastatur bedienbar sind. Damit die Kompnenten für möglichst viele Benutzer zugänglich sind, sollte für alle Funktionen der Komponenten einer Web-Applikation überprüft werden, ob sie auch ausschließlich mit Tastatur und ohne Maus bedient werden können. Für die praktische Umsetzung sollten die üblichen Konventionen für Desktop-Komponenten befolgt werden, also die Benutzung von Tab-, Enter-, Leertaste und Pfeiltasten ermöglicht werden.</p>
 
-<p>Traditionell ist die Tastaturnavigation im Web auf die Tab-Taste begrenzt. Der Nutzer drückt Tab um jeden Link, Button oder Formular auf der Seite nacheinander zu fukussieren, Shift-Tab um zum letzten Element zu springen. Das ist eine eindimensionale Form der Navigation—vor und zurück, ein Element pro Schritt. Auf sehr umfangreichen Seiten muss ein Nutzer der Tastaturnavigation oft dutzende Male die Tab-Taste drücken, um zu dem gewünschten Bereich zu kommen. Die Implementierung von Navigationskonventionen von Desktop-Programmen im Web hat das Potential die Navigation für viele Nutzer zu beschleunigen.</p>
+<p>Traditionell ist die Tastaturnavigation im Web auf die Tab-Taste begrenzt. Der Nutzer drückt Tab um jeden Link, Button oder Formular auf der Seite nacheinander zu fukussieren, Shift-Tab um zum letzten Element zu springen. Das ist eine eindimensionale Form der Navigation—vor und zurück, ein Element pro Schritt. Auf sehr umfangreichen Seiten muss ein Nutzer der Tastaturnavigation oft dutzende Male die Tab-Taste drücken, um zu dem gewünschten Bereich zu kommen. Die Implementierung von Navigationskonventionen von Desktop-Programmen im Web hat das Potential die Navigation für viele Nutzer zu beschleunigen.</p>
 
 <p>Hier eine Zusammenfassung wie Tastaturnavigation in einer ARIA-unterstützten Web-Applikation funktionieren sollte:</p>
 
 <ul>
- <li>Die Tab-Taste fokussiert eine Komponente als ganzes. Beispielsweise sollte das navigieren zu einer Menüleiste dessen erstes Element fokussieren</li>
- <li>Die Pfeiltasten sollten die Navigation innerhalb der Komponente ermöglichen. Zum Beispiel indem man mit dem linken und rechten Pfeil den Fokus auf den vorherigen und nächsten Menüpunkt verschiebt</li>
- <li>Wenn die Komponente nicht innerhalb eines Formulars liegt, sollten die Enter- und Leertaste das Kontrollelement auswählen oder aktivieren</li>
+ <li>Die Tab-Taste fokussiert eine Komponente als ganzes. Beispielsweise sollte das navigieren zu einer Menüleiste dessen erstes Element fokussieren</li>
+ <li>Die Pfeiltasten sollten die Navigation innerhalb der Komponente ermöglichen. Zum Beispiel indem man mit dem linken und rechten Pfeil den Fokus auf den vorherigen und nächsten Menüpunkt verschiebt</li>
+ <li>Wenn die Komponente nicht innerhalb eines Formulars liegt, sollten die Enter- und Leertaste das Kontrollelement auswählen oder aktivieren</li>
  <li>Innerhalb eines Formulars sollte die Leertaste das Element auswählen oder aktivieren, während die Enter-Taste die Standardfunktion des Formulars aufruft</li>
  <li>Ahme im Zweifelsfall die Desktop Standardfunktionalität dieses Elements nach</li>
 </ul>
 
-<p>In dem Beispiel der Tab-Komponente oben sollte der Nutzer also in der Lage sein mit den Tab- und Shift-Tab Tasten in und aus dem Komponenten-Container (&lt;ol&gt; in unserem Beispiel) zu navigieren. Sobald der Fokus innerhalb des Containers liegt, sollten die Pfeiltasten dem Nutzer erlauben zwischen den einzelnen Tabs (die &lt;li&gt; Elemente) zu navigieren. Ab hier variieren die Konventionen je nach Plattform. Unter Windows wird der nächste Tab automatisch aktivieren, wenn der Nutzer die Pfeiltasten drückt. Unter macOS, kann der Nutzer entweder die Enter- oder die Leertaste drücken, um den nächsten Tab zu aktivieren. Ein umfangreiches Tutorial zur Erstellung von <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets">Tastaturnavigation in JavaScript Komponenten</a> beschreibt wie man diese Funktionsweise mit JavaScript implementieren kann.</p>
+<p>In dem Beispiel der Tab-Komponente oben sollte der Nutzer also in der Lage sein mit den Tab- und Shift-Tab Tasten in und aus dem Komponenten-Container (&lt;ol&gt; in unserem Beispiel) zu navigieren. Sobald der Fokus innerhalb des Containers liegt, sollten die Pfeiltasten dem Nutzer erlauben zwischen den einzelnen Tabs (die &lt;li&gt; Elemente) zu navigieren. Ab hier variieren die Konventionen je nach Plattform. Unter Windows wird der nächste Tab automatisch aktivieren, wenn der Nutzer die Pfeiltasten drückt. Unter macOS, kann der Nutzer entweder die Enter- oder die Leertaste drücken, um den nächsten Tab zu aktivieren. Ein umfangreiches Tutorial zur Erstellung von <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets">Tastaturnavigation in JavaScript Komponenten</a> beschreibt wie man diese Funktionsweise mit JavaScript implementieren kann.</p>
 
-<p>Für mehr Details zu Koventionen bei desktopartiger Tastaturnavigation gibt es einen umfangreichen <a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a>. Dieser stellt einen Überblick darüber bereit, wie Tastaturnavigation in jeder von ARIA unterstützten Komponente funktionieren sollte. Die W3C bietet ebenfalls ein hilfreiches <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> Dokument, das Konventionen für Tastaturnavigation und Shortcuts für eine Vielzahl von Komponenten beinhaltet.</p>
+<p>Für mehr Details zu Koventionen bei desktopartiger Tastaturnavigation gibt es einen umfangreichen <a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a>. Dieser stellt einen Überblick darüber bereit, wie Tastaturnavigation in jeder von ARIA unterstützten Komponente funktionieren sollte. Die W3C bietet ebenfalls ein hilfreiches <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> Dokument, das Konventionen für Tastaturnavigation und Shortcuts für eine Vielzahl von Komponenten beinhaltet.</p>
 
 <h2 id="Weiterführende_Links">Weiterführende Links</h2>
 

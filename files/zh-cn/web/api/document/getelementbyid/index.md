@@ -1,12 +1,6 @@
 ---
 title: document.getElementById
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - 元素
-  - 选择器
-translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 

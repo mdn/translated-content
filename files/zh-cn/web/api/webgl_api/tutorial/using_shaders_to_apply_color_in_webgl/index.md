@@ -1,10 +1,6 @@
 ---
 title: 使用着色器将颜色应用于 WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-tags:
-  - WebGL
-  - 教程
-translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
@@ -87,11 +83,11 @@ initBuffers() {
     </script>
 ```
 
-为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor `变量中获取这个颜色的值：
+为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor` 变量中获取这个颜色的值：
 
 ```html
     <script id="shader-fs" type="x-shader/x-fragment">
-    	varying lowp vec4 vColor;
+      varying lowp vec4 vColor;
 
       void main(void) {
         gl_FragColor = vColor;

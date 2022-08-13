@@ -1,13 +1,12 @@
 ---
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
-translation_of: Web/API/Selection/anchorNode
 ---
 {{ApiRef}}
 
 ## 概述
 
-**`Selection.anchorNode `**`只读属性`返回选区开始位置所属的节点（{{domxref("Node")}}）。
+**`Selection.anchorNode`** 只读属性返回选区开始位置所属的节点（{{domxref("Node")}}）。
 
 ## 用法
 

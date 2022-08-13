@@ -38,7 +38,7 @@ new DataView(buffer [, byteOffset [, byteLength]])
 ### 异常
 
 - `{{jsxref("RangeError")}}`
-  - : 如果 `byteOffset` 或者 `byteLength `参数的值导致视图超出了 buffer 的结束位置就会抛出此异常。
+  - : 如果 `byteOffset` 或者 `byteLength` 参数的值导致视图超出了 buffer 的结束位置就会抛出此异常。
     例如，假设 buffer（缓冲对象）是 16 字节长度，`byteOffset` 参数为 8，`byteLength` 参数为 10，这个错误就会抛出，这是因为结果视图试图超出 buffer 对象的总长度 2 个字节。
 
 ## 描述

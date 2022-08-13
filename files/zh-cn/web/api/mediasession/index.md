@@ -1,16 +1,6 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
-tags:
-  - API
-  - Media Session API
-  - MediaSession
-  - 媒体
-  - 引用
-  - 接口
-  - 视频
-  - 音频
-translation_of: Web/API/MediaSession
 ---
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 

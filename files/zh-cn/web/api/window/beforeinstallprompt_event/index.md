@@ -1,11 +1,6 @@
 ---
 title: Window.onbeforeinstallprompt
 slug: Web/API/Window/beforeinstallprompt_event
-tags:
-  - Window.onbeforeinstallprompt
-  - beforeinstallprompt
-translation_of: Web/API/Window/onbeforeinstallprompt
-original_slug: Web/API/Window/onbeforeinstallprompt
 ---
 {{ ApiRef() }}
 

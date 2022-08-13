@@ -1,12 +1,6 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
-tags:
-  - API
-  - DOM 节点
-  - HTML 表单元素
-  - 表单
-translation_of: Web/API/HTMLFormElement/action
 ---
 {{APIRef("HTML DOM")}}
 

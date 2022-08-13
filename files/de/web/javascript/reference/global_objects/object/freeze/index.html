@@ -141,7 +141,7 @@ employee.address.city = "Noida"; // Attribute von Kind-Objekt können geändert 
 console.log(employee.address.city) // Ausgabe: "Noida"
 </pre>
 
-<p>Um ein Objekt unveränderlich zu machen, frieren Sie rekursiv jede Eigenschaft vom Typ <code>object</code> ein (deep freeze). Verwenden Sie das Muster im Einzelfall basierend auf Ihrem Entwurf, wenn Sie wissen, dass das Objekt keine {{interwiki("wikipedia", "Zyklus_(Graphentheorie)", "Zyklen")}} im Referenzgraph enthält, andernfalls kommt es zu einer Endlosschleife. Eine Verbesserung von <code>deepFreeze()</code> wäre eine interne Funktion, die ein Argument für einen Pfad (z. B. ein Array) empfängt, sodass Sie den Aufruf von <code>deepFreeze()</code> rekursiv unterdrücken können, wenn ein Objekt gerade unveränderlich gemacht wird. Es besteht weiterhin die Gefahr, dass ein Objekt eingefroren wird, das nicht eingefroren werden sollte, wie z. B. [window].</p>
+<p>Um ein Objekt unveränderlich zu machen, frieren Sie rekursiv jede Eigenschaft vom Typ <code>object</code> ein (deep freeze). Verwenden Sie das Muster im Einzelfall basierend auf Ihrem Entwurf, wenn Sie wissen, dass das Objekt keine {{interwiki("wikipedia", "Zyklus_(Graphentheorie)", "Zyklen")}} im Referenzgraph enthält, andernfalls kommt es zu einer Endlosschleife. Eine Verbesserung von <code>deepFreeze()</code> wäre eine interne Funktion, die ein Argument für einen Pfad (z. B. ein Array) empfängt, sodass Sie den Aufruf von <code>deepFreeze()</code> rekursiv unterdrücken können, wenn ein Objekt gerade unveränderlich gemacht wird. Es besteht weiterhin die Gefahr, dass ein Objekt eingefroren wird, das nicht eingefroren werden sollte, wie z. B. [window].</p>
 
 <pre class="brush: js">function deepFreeze(object) {
 
@@ -226,12 +226,12 @@ TypeError: Cannot freeze array buffer views with elements
   <tr>
    <td>{{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

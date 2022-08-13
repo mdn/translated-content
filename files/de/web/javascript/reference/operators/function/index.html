@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <dl>
  <dt><code>name</code></dt>
- <dd>Der Funktionsname. Kann weggelassen werden, wenn es sich um eine <em>anonyme </em>Funktion handelt. Der Name ist nur im Funktionskörper referenzierbar.</dd>
+ <dd>Der Funktionsname. Kann weggelassen werden, wenn es sich um eine <em>anonyme </em>Funktion handelt. Der Name ist nur im Funktionskörper referenzierbar.</dd>
  <dt><code>paramN</code></dt>
  <dd>Der Name eines Argumentes, welches der Funktion übergeben wird.</dd>
  <dt><code>statements</code></dt>
@@ -54,7 +54,7 @@ var notHoisted = function() {
 
 <h3 id="Benannte_Funktionsausdrücke">Benannte Funktionsausdrücke</h3>
 
-<p>Wenn man die aktuelle Funktion innerhalb des Funktionskörpers referenzieren will, muss ein Benannter Funktionsausdruck erstellt werden. <u><strong>Dieser Name ist nur im Funktionskörper referenzierbar. </strong></u>Das verhindert den Gebrauch der nicht standardisierten <code><a href="/de/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code> Eigenschaft.</p>
+<p>Wenn man die aktuelle Funktion innerhalb des Funktionskörpers referenzieren will, muss ein Benannter Funktionsausdruck erstellt werden. <strong>Dieser Name ist nur im Funktionskörper referenzierbar. </strong>Das verhindert den Gebrauch der nicht standardisierten <code><a href="/de/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code> Eigenschaft.</p>
 
 <pre class="brush: js">var math = {
   'fakultaet': function fakultaet(n) {
@@ -85,7 +85,7 @@ console.log(bar === baz);  // false (Fehler, weil baz == undefined)
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Das folgende Beispiel definiert eine unbenannte Funktion und weist sie <code>x</code> zu. Die Funktion gibt das Quadrat ihres Argumentes zurück.</p>
+<p>Das folgende Beispiel definiert eine unbenannte Funktion und weist sie <code>x</code> zu. Die Funktion gibt das Quadrat ihres Argumentes zurück.</p>
 
 <pre class="brush: js">var x = function(y) {
    return y * y;
@@ -110,17 +110,17 @@ console.log(bar === baz);  // false (Fehler, weil baz == undefined)
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-13', 'Function definition')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES3', '#sec-13', 'Function definition')}}</td>

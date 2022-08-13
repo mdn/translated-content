@@ -27,7 +27,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : The entry point to many [XPCOM](/zh-TW/docs/XPCOM) features. Some properties, e.g. [classes](/zh-TW/docs/Components.classes), are only available to sufficiently privileged code. **Web code should not use this property.**
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Returns a reference to the console object which provides access to the browser's debugging console.
-- {{domxref("Window.content")}} and Window\.\_content {{Non-standard_inline}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the XUL controller objects for the current chrome window.
@@ -142,7 +142,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
 ### Properties implemented from elsewhere

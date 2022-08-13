@@ -1,7 +1,6 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
-translation_of: Web/API/HTMLImageElement/complete
 ---
 {{APIRef("HTML DOM")}}
 

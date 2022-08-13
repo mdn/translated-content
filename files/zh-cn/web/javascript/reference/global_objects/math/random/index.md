@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
-> **备注：**`Math.random()` *不能*提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。
+> **备注：** `Math.random()` *不能*提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。
 
 ## 语法
 
@@ -59,7 +59,7 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **备注：**也许很容易想到用 `Math.round()` 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
+> **备注：** 也许很容易想到用 `Math.round()` 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
 
 ### 得到一个两数之间的随机整数，包括两个数在内
 

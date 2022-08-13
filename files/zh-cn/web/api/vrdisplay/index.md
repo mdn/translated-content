@@ -1,11 +1,10 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
-translation_of: Web/API/VRDisplay
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-[WebVR API](/en-US/docs/Web/API/WebVR_API) 中的 **`VRDisplay `**代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
+[WebVR API](/en-US/docs/Web/API/WebVR_API) 中的 **`VRDisplay`** 代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
 
 可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。
 

@@ -30,9 +30,9 @@ typedarray.filter(callback[, thisArg])
 
 `callback`以三个参数调用：
 
-1.  元素的值
-2.  元素下标
-3.  被遍历的类型化数组对象
+1. 元素的值
+2. 元素下标
+3. 被遍历的类型化数组对象
 
 如果将`thisArg`参数提供给`filter`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
 

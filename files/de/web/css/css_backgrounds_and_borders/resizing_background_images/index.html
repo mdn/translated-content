@@ -29,7 +29,7 @@ original_slug: Web/Guide/CSS/Scaling_background_images
 }
 </pre>
 
-<p>Man braucht für  {{ cssxref("background-size") }} kein Präfix mehr zu setzen, jedoch können  Präfix-Versionen hinzugefügt werden, wenn ältere Browser angesprochen werden sollen.</p>
+<p>Man braucht für  {{ cssxref("background-size") }} kein Präfix mehr zu setzen, jedoch können  Präfix-Versionen hinzugefügt werden, wenn ältere Browser angesprochen werden sollen.</p>
 
 <h2 id="Stretching_an_image" name="Stretching_an_image">Dehnen eines Bildes</h2>
 
@@ -67,17 +67,15 @@ original_slug: Web/Guide/CSS/Scaling_background_images
 
 <h3 id="contain" name="contain"><code>contain</code></h3>
 
-<p>Der contain Wert spezifiziert, unabhängig von der Größe der umgebenden Box, die Skalierung des Hintergrundbildes so, dass jede Seite so breit als irgend möglich angezeigt wird ohne über die Länge der korrespondierenden Seite des Containers hinauszugehen. Versuche mit einem Browser, der skalierende Hintergründe unterstützt (wie z. B.  Firefox 3.6 oder höher), dieses Fenster in der Größe zu verändern, um das Verhalten am untenstehenden Live-Beispiel zu sehen.</p>
+<p>Der contain Wert spezifiziert, unabhängig von der Größe der umgebenden Box, die Skalierung des Hintergrundbildes so, dass jede Seite so breit als irgend möglich angezeigt wird ohne über die Länge der korrespondierenden Seite des Containers hinauszugehen. Versuche mit einem Browser, der skalierende Hintergründe unterstützt (wie z. B.  Firefox 3.6 oder höher), dieses Fenster in der Größe zu verändern, um das Verhalten am untenstehenden Live-Beispiel zu sehen.</p>
 
-<figure>
 <p>{{ EmbedLiveSample("contain", "100%", "220") }}</p>
-</figure>
 
 <pre class="brush:html">&lt;div class="bgSizeContain"&gt;
   &lt;p&gt;Try resizing this window and see what happens.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;highlight:[4]">.bgSizeContain {
+<pre class="brush:css; highlight:[4]">.bgSizeContain {
   height: 200px;
   background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
   background-size: contain;
@@ -87,7 +85,7 @@ original_slug: Web/Guide/CSS/Scaling_background_images
 
 <h3 id="cover" name="cover"><code>cover</code></h3>
 
-<p>Der cover Wert spezifizert, dass das Hintergundbild in der Größe so angezeigt wird, dass es selbst so klein als möglich ist, dabei aber auf alle Fälle in beiden Dimensionen größer oder gleich der jeweiligen korresponierenden Maße des Containers ist. </p>
+<p>Der cover Wert spezifizert, dass das Hintergundbild in der Größe so angezeigt wird, dass es selbst so klein als möglich ist, dabei aber auf alle Fälle in beiden Dimensionen größer oder gleich der jeweiligen korresponierenden Maße des Containers ist. </p>
 
 <figure>{{ EmbedLiveSample("cover", "100%", "220") }}</figure>
 
@@ -97,7 +95,7 @@ original_slug: Web/Guide/CSS/Scaling_background_images
   &lt;p&gt;Try resizing this window and see what happens.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;highlight:[4]">.bgSizeCover {
+<pre class="brush:css; highlight:[4]">.bgSizeCover {
   height: 200px;
   background-image: url('https://mdn.mozillademos.org/files/8971/firefox_logo.png');
   background-size: cover;

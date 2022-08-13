@@ -11,11 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <strong><code>slice()</code></strong> Methode schreibt eine flache Kopie von einem Teil des Arrays in ein neues Array-Objekt von <code>begin</code> bis <code>end</code> (<code>end</code> nicht enthalten). Das originale Array wird nicht verändert.</p>
+<p>Die <strong><code>slice()</code></strong> Methode schreibt eine flache Kopie von einem Teil des Arrays in ein neues Array-Objekt von <code>begin</code> bis <code>end</code> (<code>end</code> nicht enthalten). Das originale Array wird nicht verändert.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-slice.html")}}</div>
-
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,16 +23,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <dl>
  <dt><code>begin</code>{{optional_inline}}</dt>
- <dd>Null-basierter Index, an welcher die Extraktion beginnt.</dd>
- <dd>Bei einem negativen Index kennzeichnet <code>begin</code> einen Versatz vom Ende der Sequenz. <code>slice(-2)</code> extrahiert die letzten zwei Elemente der Sequenz.</dd>
- <dd>Wenn <code>begin</code> undefiniert ist, beginnt <code>slice</code> bei Index <code>0</code>.</dd>
- <dd>Wenn <code>begin</code> größer als die Länge der Sequenz ist, wird ein leeres Array zurückgegeben.</dd>
+ <dd>Null-basierter Index, an welcher die Extraktion beginnt. <br/><br/>Bei einem negativen Index kennzeichnet <code>begin</code> einen Versatz vom Ende der Sequenz. <code>slice(-2)</code> extrahiert die letzten zwei Elemente der Sequenz. <br/><br/>Wenn <code>begin</code> undefiniert ist, beginnt <code>slice</code> bei Index <code>0</code>. <br/><br/>Wenn <code>begin</code> größer als die Länge der Sequenz ist, wird ein leeres Array zurückgegeben.</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>Null-basierter Index bevor die Extraktion endet. <code>slice</code> extrahiert bis zu, aber nicht inklusive <code>end</code>.</dd>
- <dd><code>slice(1,4)</code> extrahiert vom zweiten bis zum vierten Element (Elemente sind indexiert als 1, 2 und 3).</dd>
- <dd>Bei einem negativen Index kennzeichnet <code>end</code> einen Versatz vom Ende der Sequenz. <code>slice(2, -1)</code> extrahiert vom dritten bis zum vorletzten Element der Sequenz.</dd>
- <dd>Wenn auf <code>end</code> weggelassen wird, extrahiert <code>slice</code> bis zum Ende der Sequenz (<code>arr.length</code>).</dd>
- <dd>Wenn <code>end</code> größer als die Länge der Sequenz ist, extrahiert <code>slice</code> bis zum Ende der Sequenz (<code>arr.length</code>)</dd>
+ <dd>Null-basierter Index bevor die Extraktion endet. <code>slice</code> extrahiert bis zu, aber nicht inklusive <code>end</code>. <br/><br/><code>slice(1,4)</code> extrahiert vom zweiten bis zum vierten Element (Elemente sind indexiert als 1, 2 und 3). <br/><br/>Bei einem negativen Index kennzeichnet <code>end</code> einen Versatz vom Ende der Sequenz. <code>slice(2, -1)</code> extrahiert vom dritten bis zum vorletzten Element der Sequenz. <br/><br/>Wenn auf <code>end</code> weggelassen wird, extrahiert <code>slice</code> bis zum Ende der Sequenz (<code>arr.length</code>). <br/><br/>Wenn <code>end</code> größer als die Länge der Sequenz ist, extrahiert <code>slice</code> bis zum Ende der Sequenz (<code>arr.length</code>)</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -212,17 +203,17 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

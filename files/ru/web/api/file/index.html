@@ -9,7 +9,7 @@ translation_of: Web/API/File
 
 <p>Интерфейс <strong><code>File</code></strong> представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту.</p>
 
-<p><code>Объекты File</code>  как правило извлекаются из объекта {{domxref("FileList")}}, который возвращён как результат пользовательского выбора файлов с помощью {{HTMLElement("input")}} элемента, из drag and drop операций {{domxref("DataTransfer")}} объекта, или из <code>mozGetAsFile()</code> API на {{domxref("HTMLCanvasElement")}}. В Gecko, привилегированный код может создать файл представляющий любой локалный файл без пользовательского взаимодействия (см <a href="#gecko_notes">Gecko notes</a> для получения большей информации.)</p>
+<p><code>Объекты File</code> как правило извлекаются из объекта {{domxref("FileList")}}, который возвращён как результат пользовательского выбора файлов с помощью {{HTMLElement("input")}} элемента, из drag and drop операций {{domxref("DataTransfer")}} объекта, или из <code>mozGetAsFile()</code> API на {{domxref("HTMLCanvasElement")}}. В Gecko, привилегированный код может создать файл представляющий любой локальный файл без пользовательского взаимодействия (см. <a href="#gecko_notes">Gecko notes</a> для получения большей информации).</p>
 
 <p>Объект <code>File</code> - особый вид {{domxref("Blob")}}, и может быть использован в любом контексте так же, как и Blob. В частности, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, и {{domxref("XMLHttpRequest", "", "send()")}} допускают и <code>Blob,</code> и <code>File</code>.</p>
 

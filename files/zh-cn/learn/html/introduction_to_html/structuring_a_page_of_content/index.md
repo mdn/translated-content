@@ -65,7 +65,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 提示
 
-- 可用 [W3C ](https://validator.w3.org/)[HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
+- 可用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
 - 本测验不需要任何 CSS 知识；只需用 HTML 元素添加现成的 CSS 即可。
 - 现成的 CSS 已经设计好布局，使用正确的结构元素，页面就会渲染成绿色。
 - 如果你遇到困难不知道应该把添加元素到哪里，通常一个好的做法是：画一个简单的页面布局模块图，然后为每个块记录下恰当的元素。
@@ -78,7 +78,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 测验
 
-如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678) 或者 [Mozilla 聊天室 ](https://wiki.mozilla.org/IRC)的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
+如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678) 或者 [Mozilla 聊天室](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
 
 {{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

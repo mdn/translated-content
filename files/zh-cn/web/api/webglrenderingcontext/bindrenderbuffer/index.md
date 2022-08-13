@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.bindRenderbuffer()
 slug: Web/API/WebGLRenderingContext/bindRenderbuffer
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bindRenderbuffer
 ---
 {{APIRef("WebGL")}}
 
@@ -36,7 +29,7 @@ None.
 
 ### 抛出错误
 
-如果 `target` 不是 `gl.RENDERBUFFER`，则抛出 `gl.INVALID_ENUM `错误。
+如果 `target` 不是 `gl.RENDERBUFFER`，则抛出 `gl.INVALID_ENUM` 错误。
 
 ## 示例
 
@@ -52,7 +45,7 @@ gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);
 
 ### 获取当前绑定
 
-要检查当前的渲染缓冲区绑定，请查询 `RENDERBUFFER_BINDING `常量。
+要检查当前的渲染缓冲区绑定，请查询 `RENDERBUFFER_BINDING` 常量。
 
 ```js
 gl.getParameter(gl.RENDERBUFFER_BINDING);

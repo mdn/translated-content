@@ -24,7 +24,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
 - [processing.js](http://processingjs.org/exhibition/)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor ](http://viliusle.github.io/miniPaint/)([source code](https://github.com/viliusle/miniPaint))
+- [miniPaint - Image editor](http://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 
 ### SVG
 
@@ -65,8 +65,8 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 
 ## CSS
 
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG. ](https://codepen.io/SoftwareRVG/full/OXkOWj)(debug mode)
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG. ](http://codepen.io/SoftwareRVG/pen/OXkOWj/)(source code)
+- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](https://codepen.io/SoftwareRVG/full/OXkOWj) (debug mode)
+- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](http://codepen.io/SoftwareRVG/pen/OXkOWj/) (source code)
 - [Paperfold](http://felixniklas.com/paperfold/)
 - [CSS Blockout](http://ondras.github.io/blockout/)
 - [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
@@ -84,7 +84,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 
 ## HTML
 
-- [Zen Photon Garden ](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](http://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 
 ## Web APIs
 

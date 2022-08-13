@@ -21,8 +21,8 @@ break-inside: avoid-region;
 
 如果需要定义一个中断点，必须遵循以下原则：
 
-1.  如果这三个中断属性的值有一个是*强制中断值*（这些强制中断值包括了 `always`, `left`, `right`, `page`, `column`, `region`），那么这个属性的值就具有优先权。如果其中一个以上是这样的断点，则使用流中最新出现的元素的值。因此，`break-before`值优先于`break-after`值，而后者又优先于`break-inside`值。
-2.  如果三个相关值中的任何一个是避免中断值，相关值包括 `avoid`, `avoid-page`, `avoid-region`, `avoid-column`, 则在该点上不应用此类中断。
+1. 如果这三个中断属性的值有一个是*强制中断值*（这些强制中断值包括了 `always`, `left`, `right`, `page`, `column`, `region`），那么这个属性的值就具有优先权。如果其中一个以上是这样的断点，则使用流中最新出现的元素的值。因此，`break-before`值优先于`break-after`值，而后者又优先于`break-inside`值。
+2. 如果三个相关值中的任何一个是避免中断值，相关值包括 `avoid`, `avoid-page`, `avoid-region`, `avoid-column`, 则在该点上不应用此类中断。
 
 一旦应用了强制中断，如果需要，可以添加软中断，但不能在元素边界上添加相应的`avoid`值。
 
@@ -38,7 +38,7 @@ break-inside: avoid-region;
   - : 避免主框中任何页的中断点
 - `avoid-column`
   - : 避免主框中任何列的中断点
-- `avoid-region `{{experimental_inline}}
+- `avoid-region` {{experimental_inline}}
   - : 避免原则框内的任何区域中断。
 
 ### Formal syntax

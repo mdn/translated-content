@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 {{JSRef}}
 
-**`Intl.Collator `**`是用于语言敏感字符串比较的 collators 构造函数。`
+**`Intl.Collator`** 是用于语言敏感字符串比较的 collators 构造函数。
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
 
@@ -27,7 +27,7 @@ Intl.Collator.call(this[, locales[, options]])
     - `kn`
       - : 是否应使用数字对照，使得 “1”<“2”<“10”。 可能的值为 “true” 和 “false”。 此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。
     - `kf`
-      - : `首先排序大写或者小写。可能的值为 “upper”，“lower” 或 “false”（使用区域设置的默认值）。 `此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。
+      - : 首先排序大写或者小写。可能的值为 “upper”，“lower” 或 “false”（使用区域设置的默认值）。此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。
 
 - `options`
 
@@ -46,14 +46,14 @@ Intl.Collator.call(this[, locales[, options]])
         - `"case"`: 只有不同的基本字母或大小写的字符串比较不相等。 Examples: `a ≠ b`, `a = á`, `a ≠ A。`
         - `"variant"`: 字符串的字母，口音和其他变音符号、或不同大小写比较不相等。 也可以考虑其他差异。例如： `a ≠ b`, `a ≠ á`, `a ≠ A`.
 
-        ` "variant" 的默认值使用 ``"sort"`; 它的 locale 依赖于使用 `"search"`.
+        `"variant"` 的默认值使用 `"sort"`；它的 locale 依赖于使用 `"search"`。
 
     - `ignore­Punctua­tion`
       - : 是否应忽略标点。 可能的值为 true 和 false; 默认值为 false。
     - `numeric`
       - : 是否应使用数字对照，使得 “1”<“2”<“10”。 可能的值为 “true” 和 “false”。默认值为 “false” 。 此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。实现不需要支持此属性。
     - `caseFirst`
-      - : `首先排序大写或者小写。可能的值为 “upper”，“lower” 或 “false”（使用区域设置的默认值）。 `此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。实现不需要支持此属性。
+      - : 首先排序大写或者小写。可能的值为 “upper”，“lower” 或 “false”（使用区域设置的默认值）。此选项可以通过 options 属性或通过 Unicode 扩展 key 设置; 如果两者都提供，options 属性优先。实现不需要支持此属性。
 
 ## 描述
 

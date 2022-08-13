@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 <p>Die statische <code><strong>Atomics</strong></code><strong><code>.wait()</code></strong> Methode verifiziert, dass eine gegebene Position in einem {{jsxref("Int32Array")}} ein gegebene Wert ist und dann schläft und entweder aufgeweckt wird oder ein Timeout bekommt. Die Strings <code>"ok"</code>, <code>"not-equal"</code>, und <code>"timed-out"</code> sind alle möglichen Rückgabewerte</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Diese Operation funktioniert nur mit einem geteilten<strong> </strong>{{jsxref("Int32Array")}} und ist nicht im Main-Thread erlaubt.</p>
+<p><strong>Hinweis:</strong> Diese Operation funktioniert nur mit einem geteilten {{jsxref("Int32Array")}} und ist nicht im Main-Thread erlaubt.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>Erzeugt einen {{jsxref("TypeError")}}, wenn <code>typedArray</code> kein  {{jsxref("Int32Array")}} ist.</li>
+ <li>Erzeugt einen {{jsxref("TypeError")}}, wenn <code>typedArray</code> kein  {{jsxref("Int32Array")}} ist.</li>
  <li>Erzeugt ein {{jsxref("RangeError")}}, wenn der <code>index</code> nicht in den Grenzen von <code>typedArray</code> ist.</li>
 </ul>
 

@@ -1,7 +1,6 @@
 ---
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
-translation_of: Web/API/ResizeObserver/unobserve
 ---
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 

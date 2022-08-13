@@ -28,7 +28,6 @@ translation_of: Web/HTTP/Headers/Sec-Fetch-Dest
   </tbody>
 </table>
 
-
 ## 语法
 
  ```

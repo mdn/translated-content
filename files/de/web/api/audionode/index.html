@@ -5,33 +5,33 @@ translation_of: Web/API/AudioNode
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>Ein <strong><code>AudioNode</code></strong> ist eine generische Schnittstelle um ein Signalverarbeitungsmodul wie z.B. ein HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} Element, ein {{domxref("OscillatorNode")}}, die Audio Destination, ein zwischengeschaltenes audio-verarbeitendes Modul wie z.B. einen {{domxref("BiquadFilterNode")}} oder {{domxref("ConvolverNode")}}), oder Lautstärkeregler (like {{domxref("GainNode")}}).</p>
+<p>Ein <strong><code>AudioNode</code></strong> ist eine generische Schnittstelle um ein Signalverarbeitungsmodul wie z.B. ein HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} Element, ein {{domxref("OscillatorNode")}}, die Audio Destination, ein zwischengeschaltenes audio-verarbeitendes Modul wie z.B. einen {{domxref("BiquadFilterNode")}} oder {{domxref("ConvolverNode")}}), oder Lautstärkeregler (like {{domxref("GainNode")}}).</p>
 
 <p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
 
-<p>Ein <code>AudioNode</code> hat Ein- und Ausgänge, jeweils mit einer gegebenen Anzahl an Kanälen.<em> </em>Einen <code>AudioNode</code> ohne Eingänge und mit einem oder mehreren Ausgängen nennt man <em>source node </em>(dt.: Quellknoten). Die Art der Signalverarbeitung in einem Audio Node variiert mit dessen Funktion. Der folgende Ablauf liegt jedoch immer zugrunde:  das Signal am Eingang wird eingelesen,  das Signal wird zu einem neuen Signal verarbeitet und an den Ausgang geleitet. In einigen Fällen, wir das Signal unverarbeitet durchgeschleust, so z.B. beim {{domxref("AnalyserNode")}}, wo das Resultat der Signalverarbeitung separat zugänglich ist.</p>
+<p>Ein <code>AudioNode</code> hat Ein- und Ausgänge, jeweils mit einer gegebenen Anzahl an Kanälen. Einen <code>AudioNode</code> ohne Eingänge und mit einem oder mehreren Ausgängen nennt man <em>source node </em>(dt.: Quellknoten). Die Art der Signalverarbeitung in einem Audio Node variiert mit dessen Funktion. Der folgende Ablauf liegt jedoch immer zugrunde:  das Signal am Eingang wird eingelesen,  das Signal wird zu einem neuen Signal verarbeitet und an den Ausgang geleitet. In einigen Fällen, wir das Signal unverarbeitet durchgeschleust, so z.B. beim {{domxref("AnalyserNode")}}, wo das Resultat der Signalverarbeitung separat zugänglich ist.</p>
 
-<p>Mehrere Nodes können zu einem <em>Processing Graph </em>(dt.:Verarbeitungs-Netz) verbunden werden. Ein solcher Graph befindet sich immer in genau einem {{domxref("AudioContext")}}. Signal- verarbeitende Nodes erben die Eigenschaften und Methoden von <code>Audio Node</code>, implementieren aber auch eigene Funktionalität. Weitere Informationen geben die Seiten der speziellen <code>Audio Nodes</code>,  die sie auf der Homepage der <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> finden.</p>
+<p>Mehrere Nodes können zu einem <em>Processing Graph </em>(dt.:Verarbeitungs-Netz) verbunden werden. Ein solcher Graph befindet sich immer in genau einem {{domxref("AudioContext")}}. Signal- verarbeitende Nodes erben die Eigenschaften und Methoden von <code>Audio Node</code>, implementieren aber auch eigene Funktionalität. Weitere Informationen geben die Seiten der speziellen <code>Audio Nodes</code>,  die sie auf der Homepage der <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> finden.</p>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>Hinweis</strong></span>: Ein <code>AudioNode</code> kann das Ziel von Events sein, und implementiert daher die {{domxref("EventTarget")}} Schnittstelle.</p>
+<p><span style="font-size: 14px; line-height: 21px;"><strong>Hinweis</strong></span>: Ein <code>AudioNode</code> kann das Ziel von Events sein, und implementiert daher die {{domxref("EventTarget")}} Schnittstelle.</p>
 </div>
 
 <h2 id="Properties" style="">Properties</h2>
 
 <dl>
  <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
- <dd>Liefert den assoziierten {{domxref("AudioContext")}}, der den signalverarbeitenden Graphen (processing graph) enthält, in den der Node eingebunden ist.</dd>
+ <dd>Liefert den assoziierten {{domxref("AudioContext")}}, der den signalverarbeitenden Graphen (processing graph) enthält, in den der Node eingebunden ist.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>Liefert die Anzahl der Eingänge des Nodes. Source nodes (dt. Quellknoten) sind definiert als Nodes, deren <code>numberOfInputs</code> Eigenschaft einen Wert von <code>0 </code>aufweist.</dd>
+ <dd>Liefert die Anzahl der Eingänge des Nodes. Source nodes (dt. Quellknoten) sind definiert als Nodes, deren <code>numberOfInputs</code> Eigenschaft einen Wert von <code>0 </code>aufweist.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>Liefert die Anzahl der Ausgänge des Nodes. Destination nodes (dt.: Zielknoten) — wie {{ domxref("AudioDestinationNode") }} — haben einen Wert von  <code>0</code> für diese Eigenschaft.</dd>
+ <dd>Liefert die Anzahl der Ausgänge des Nodes. Destination nodes (dt.: Zielknoten) — wie {{ domxref("AudioDestinationNode") }} — haben einen Wert von  <code>0</code> für diese Eigenschaft.</dd>
 </dl>
 
 <dl>
@@ -62,9 +62,9 @@ translation_of: Web/API/AudioNode
 
 <h2 id="Example">Example</h2>
 
-<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)</p>
 
-<pre class="brush: js;highlight[8,9,11,12,13,14]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -91,98 +91,14 @@ oscillator.channelCount;</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code> <code>channelCountMode</code></td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>25.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code><br>
-    <code>channelCountMode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

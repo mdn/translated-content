@@ -1,7 +1,6 @@
 ---
 title: ImageBitmap.height
 slug: Web/API/ImageBitmap/height
-translation_of: Web/API/ImageBitmap/height
 ---
 {{APIRef("Canvas API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
-translation_of: Web/API/DOMRectReadOnly
 ---
 {{APIRef("Geometry Interfaces")}}
 

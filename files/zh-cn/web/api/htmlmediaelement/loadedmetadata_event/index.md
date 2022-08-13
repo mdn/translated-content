@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadedmetadata
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
-tags:
-  - 事件处理器
-  - 全局事件处理器
-  - 参考
-  - 属性
-translation_of: Web/API/GlobalEventHandlers/onloadedmetadata
-original_slug: Web/API/GlobalEventHandlers/onloadedmetadata
 ---
 {{ ApiRef("HTML DOM") }}
 

@@ -1,14 +1,6 @@
 ---
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
-tags:
-  - API
-  - Canvas
-  - OffscreenCanvas
-  - Reference
-  - 性能
-  - 绘图
-translation_of: Web/API/ImageBitmapRenderingContext
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

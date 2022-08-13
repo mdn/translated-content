@@ -1,12 +1,6 @@
 ---
 title: RTCPeerConnection.remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
-tags:
-  - RTCPeerConnection
-  - WebRTC
-  - remoteDescription
-  - 中文
-translation_of: Web/API/RTCPeerConnection/remoteDescription
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

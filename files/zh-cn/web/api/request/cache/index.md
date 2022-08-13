@@ -1,11 +1,10 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
-translation_of: Web/API/Request/cache
 ---
 {{APIRef("Fetch")}}
 
-**`cache`** 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的 [HTTP ](/en-US/docs/Web/HTTP/Caching)缓存进行交互。
+**`cache`** 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的 [HTTP](/en-US/docs/Web/HTTP/Caching) 缓存进行交互。
 
 ## Syntax
 
@@ -30,7 +29,7 @@ A `RequestCache` value. The available values are:
   - 如果有匹配，无论是新的还是陈旧的，浏览器都会向远程服务器发出条件请求。如果服务器指示资源没有更改，则将从缓存中返回该资源。否则，将从服务器下载资源并更新缓存。
   - 如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。
 
-  `force-cache `— 浏览器在其 HTTP 缓存中寻找匹配的请求。
+  `force-cache` — 浏览器在其 HTTP 缓存中寻找匹配的请求。
 
   - 如果有匹配项，不管是新匹配项还是旧匹配项，都将从缓存中返回。
   - 如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。

@@ -1,11 +1,10 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
-translation_of: Web/API/WebGLRenderingContext/isBuffer
 ---
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.isBuffer() `**是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的方法之一。如果传递的 {{domxref("WebGLBuffer")}} 有效则返回 true，否则返回 false。
+**`WebGLRenderingContext.isBuffer()`** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的方法之一。如果传递的 {{domxref("WebGLBuffer")}} 有效则返回 true，否则返回 false。
 
 ## 句法
 

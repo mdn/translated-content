@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.openCursor
 slug: Web/API/IDBObjectStore/openCursor
-translation_of: Web/API/IDBObjectStore/openCursor
 ---
 {{ APIRef("IDBObjectStore") }}
 

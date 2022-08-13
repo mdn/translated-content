@@ -1,16 +1,6 @@
 ---
 title: PaymentAddress
 slug: Web/API/PaymentAddress
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Payment Request
-  - PaymentRequest
-  - Reference
-  - TopicStub
-  - paymentAddress
-translation_of: Web/API/PaymentAddress
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 

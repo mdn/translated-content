@@ -31,7 +31,7 @@ JavaScript 类型化数组是一种类似数组的对象，并提供了一种用
 
 ### 数据视图
 
-{{jsxref("DataView")}} 是一种底层接口，它提供有可以操作缓冲区中任意数据的读写接口。这对操作不同类型数据的场景很有帮助，例如：类型化数组视图都是运行在本地字节序模式 (参考 {{Glossary("Endianness")}})，可以通过使用 `DataView `来控制字节序。默认是大端字节序 (Big-endian)，但可以调用读写接口改为小端字节序 (Little-endian)。
+{{jsxref("DataView")}} 是一种底层接口，它提供有可以操作缓冲区中任意数据的读写接口。这对操作不同类型数据的场景很有帮助，例如：类型化数组视图都是运行在本地字节序模式 (参考 {{Glossary("Endianness")}})，可以通过使用 `DataView` 来控制字节序。默认是大端字节序 (Big-endian)，但可以调用读写接口改为小端字节序 (Little-endian)。
 
 ## 使用类型数组的 Web API
 
@@ -129,7 +129,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 现在你就可以通过`amountDueView[0]`的方式访问数量。
 
-> **备注：**C 语言结构体的[数据对齐](http://en.wikipedia.org/wiki/Data_structure_alignment)与平台相关。因此需要防范和考虑不同平台的字节填充对齐。
+> **备注：** C 语言结构体的[数据对齐](http://en.wikipedia.org/wiki/Data_structure_alignment)与平台相关。因此需要防范和考虑不同平台的字节填充对齐。
 
 ### 转换为普通数组
 

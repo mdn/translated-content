@@ -1,7 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
 {{DefaultAPISidebar("Console API")}}
 
@@ -9,7 +8,7 @@ Console API 提供了允许开发人员执行调试任务的功能，例如在�
 
 ## 概念和用法
 
-Console API 最初是一个专有的 API，不同的浏览器以自己的实现方式来实现它。[Console API ](https://console.spec.whatwg.org/)规范统一了这个 API 的行为，并且所有现代浏览器最终都决定实现这种行为 — 尽管一些实现仍然有自己的附加专有功能。了解这些请查看：
+Console API 最初是一个专有的 API，不同的浏览器以自己的实现方式来实现它。[Console API](https://console.spec.whatwg.org/) 规范统一了这个 API 的行为，并且所有现代浏览器最终都决定实现这种行为 — 尽管一些实现仍然有自己的附加专有功能。了解这些请查看：
 
 - [Google Chrome DevTools implementation](https://developers.google.com/chrome-developer-tools/docs/console-api)
 - [Safari DevTools implementation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

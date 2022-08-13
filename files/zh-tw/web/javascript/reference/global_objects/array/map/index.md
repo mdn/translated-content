@@ -65,8 +65,8 @@ let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 
 以下情況不應該使用 `map`；
 
-1.  不使用回傳的新陣列，
-2.  或/且不需要回傳新陣列。
+1. 不使用回傳的新陣列，
+2. 或/且不需要回傳新陣列。
 
 `callback` 函式於被調用時會傳入三個參數：元素值、元素之索引、以及被迭代的陣列物件。
 

@@ -38,7 +38,7 @@ String.fromCharCode(0x12014);      // gibt auch "—" zurück. Die Ziffer 1 wird
 
 <h2 id="Verwendung_mit_höheren_Werten">Verwendung mit höheren Werten</h2>
 
-<p>Die meisten Unicode-Werte können mit einer 16-bit-Nummer dargestellt werden (wie in den Anfängen der JavaScript-Standardisierung erwartet) und <code>fromCharCode()</code> kann verwendet werden, um ein einzelnes Zeichen für die meisten gängigen Werde (d.h. UCS-2 Werte, die ein Subset von UTF-16 mit den am häufigsten vorkommenden Zeichen bilden) darzustellen. Um jedoch ALLE gültigen Unicode-Werte (bis zu 21 bits) darzustellen, ist <code>fromCharCode()</code> allein nicht ausreichend. Da die höheren Code Point Zeichen zwei "Ersatznummern" (mit niedrigerem Wert) verwenden, um ein einzelnes Zeichen darzustellen, kann {{jsxref("String.fromCodePoint()")}} (Teil des ES2015 Standards) verwendet werden, um ein solches Paar und damit auch diese Zeichen mit höheren Werten darzustellen.</p>
+<p>Die meisten Unicode-Werte können mit einer 16-bit-Nummer dargestellt werden (wie in den Anfängen der JavaScript-Standardisierung erwartet) und <code>fromCharCode()</code> kann verwendet werden, um ein einzelnes Zeichen für die meisten gängigen Werde (d.h. UCS-2 Werte, die ein Subset von UTF-16 mit den am häufigsten vorkommenden Zeichen bilden) darzustellen. Um jedoch ALLE gültigen Unicode-Werte (bis zu 21 bits) darzustellen, ist <code>fromCharCode()</code> allein nicht ausreichend. Da die höheren Code Point Zeichen zwei "Ersatznummern" (mit niedrigerem Wert) verwenden, um ein einzelnes Zeichen darzustellen, kann {{jsxref("String.fromCodePoint()")}} (Teil des ES2015 Standards) verwendet werden, um ein solches Paar und damit auch diese Zeichen mit höheren Werten darzustellen.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 
@@ -57,72 +57,24 @@ String.fromCharCode(0x12014);      // gibt auch "—" zurück. Die Ziffer 1 wird
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

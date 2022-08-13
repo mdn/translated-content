@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
-> **備註：**如果輸入空陣列的話，這個方法會回傳 `false`。
+> **備註：** 如果輸入空陣列的話，這個方法會回傳 `false`。
 
 ## 語法
 

@@ -1,10 +1,6 @@
 ---
 title: WebGLRenderingContext.bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
-tags:
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bindAttribLocation
 ---
 {{APIRef("WebGL")}}
 

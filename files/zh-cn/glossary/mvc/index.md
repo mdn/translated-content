@@ -7,9 +7,9 @@ translation_of: Glossary/MVC
 
 对 MVC 软件设计模式的三个部分可以被描述如下：
 
-1.  Model: 模型持有所有的数据、状态和程序逻辑。
-2.  View: 负责界面的布局和显示。
-3.  Controller: 负责模型和界面之间的交互。
+1. Model: 模型持有所有的数据、状态和程序逻辑。
+2. View: 负责界面的布局和显示。
+3. Controller: 负责模型和界面之间的交互。
 
 ## Learn more
 

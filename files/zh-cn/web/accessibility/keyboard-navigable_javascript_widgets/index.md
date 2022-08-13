@@ -135,8 +135,8 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 当用户从一个组件 tab 离开之后 focus 回来，焦点应该回到离开之时正被 focus 中的元素上，比如某个树节点或者网格单元。有两种办法完成这一点：
 
-1.  `流动 tabindex`: 通过编程移动 focus
-2.  `aria-activedescendent`: 管理一个“虚拟” focus
+1. `流动 tabindex`: 通过编程移动 focus
+2. `aria-activedescendent`: 管理一个“虚拟” focus
 
 #### 方法 1: 流动 tabindex
 
@@ -144,9 +144,9 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 在每个元素上绑定 key down 事件，当捕捉到控制移动到另外元素的方向键时：
 
-1.  通过编码把 focus 应用到新元素上，
-2.  更改被 focus 中元素上的 tabindex 为“0”
-3.  更改之前被 focus 中元素的 tabindex 为“-1”.
+1. 通过编码把 focus 应用到新元素上，
+2. 更改被 focus 中元素上的 tabindex 为“0”
+3. 更改之前被 focus 中元素的 tabindex 为“-1”.
 
 这里有个 WAI-ARIA tree view 的例子是使用这种方案的。
 
@@ -183,7 +183,7 @@ Note that the use of this pattern requires the author to ensure that the current
 
 #### 使用 onkeydown 来捕获的关键事件，而不是 onkeypress 事件
 
-IE 不会触发非字母数字键的 `keypress `事件。使用 `onkeydown` 替代。
+IE 不会触发非字母数字键的 `keypress` 事件。使用 `onkeydown` 替代。
 
 #### 确保键盘和鼠标有相同的体验
 
@@ -195,7 +195,7 @@ IE 不会触发非字母数字键的 `keypress `事件。使用 `onkeydown` 替�
 
 #### 不要使用 :focus 来设置焦点的样式（如果要兼容 IE7 及更早版本）
 
-IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦点的样式。替代方法是在 `onfocus `事件处理程序中设置样式，例如，添加一个 CSS 样式到 `class` 属性中。
+IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦点的样式。替代方法是在 `onfocus`事件处理程序中设置样式，例如，添加一个 CSS 样式到 `class` 属性中。
 
 #### 始终用程序为 tabindex="-1" 的项和元素设置焦点样式
 
@@ -207,7 +207,9 @@ IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种
 
 例如：
 
-    <span tabindex="-1" onkeydown="return handleKeyDown();">
+```html
+<span tabindex="-1" onkeydown="return handleKeyDown();">
+```
 
 如果 `handleKeyDown()` 返回 `false`，将会结束事件处理，阻止浏览器继续处理按键行为。
 

@@ -1,20 +1,6 @@
 ---
 title: 画中画（Picture-in-Picture）API
 slug: Web/API/Picture-in-Picture_API
-page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Graphics
-  - Guide
-  - Overview
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - View
-  - pip
-translation_of: Web/API/Picture-in-Picture_API
 ---
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 

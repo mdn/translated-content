@@ -10,7 +10,7 @@ translation_of: Web/API/Push_API
 <h2 id="Push_Konzepte_und_Anwendung">Push Konzepte und Anwendung</h2>
 
 <div class="warning">
-<p>When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:</p>
+<p>When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:</p>
 
 <ul>
  <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet</a></li>
@@ -22,7 +22,7 @@ translation_of: Web/API/Push_API
 
 <p>Das Resultat {{domxref("PushSubscription")}} enthält sämtliche Information, die die App braucht, um Push Nachrichten zu senden: einen Endpunkt und den Kodierungsschlüssel zum Datenversand.</p>
 
-<p>Der<em> Service Worker</em> startet bei Bedarf, um eintreffende Nachrichten zu verarbeiten, welche an den Event Handler {{domxref("ServiceWorkerGlobalScope.onpush")}} geliefert werden. Dies erlaubt der App auf einlaufende Push Nachrichten zu reagieren, beispielsweise mit der Darstellung einer Notiz (mit dem Befehl {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
+<p>Der<em> Service Worker</em> startet bei Bedarf, um eintreffende Nachrichten zu verarbeiten, welche an den Event Handler {{domxref("ServiceWorkerGlobalScope.onpush")}} geliefert werden. Dies erlaubt der App auf einlaufende Push Nachrichten zu reagieren, beispielsweise mit der Darstellung einer Notiz (mit dem Befehl {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
 
 <p>Jedes Abonnement ist eindeutig für einen <em>Service Worker</em>. Der Endpunkt des Abonnements ist eine eindeutige <a href="http://www.w3.org/TR/capability-urls/">capability URL</a>: Kenntnis des Endpunkts ist alles was nötig ist, um eine Nachricht an Ihre Applikation zu senden. Die Endpunkt URL ist daher geheim zu halten, da sonst andere Applikationen Nachrichten an Ihre Applikation senden könnten.</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Push_API
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Chrome versions earlier than 52 require you to set up a project on <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> to send push messages, and use the associated project number and API key when sending push notifications. It also requires an app manifest, with some special parameters to use this service.</p>
+<p><strong>Note</strong>: Chrome versions earlier than 52 require you to set up a project on <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> to send push messages, and use the associated project number and API key when sending push notifications. It also requires an app manifest, with some special parameters to use this service.</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>
@@ -87,80 +87,7 @@ translation_of: Web/API/Push_API
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[1][3]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(48.0)}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(48.0)}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <ul>
  <li>[1] Currently available only on desktop versions of Firefox; also, push messages are only delivered when Firefox is running.</li>

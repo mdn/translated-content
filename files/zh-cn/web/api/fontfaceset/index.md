@@ -1,10 +1,6 @@
 ---
 title: FontFaceSet
 slug: Web/API/FontFaceSet
-tags:
-  - API
-  - Fonts
-translation_of: Web/API/FontFaceSet
 ---
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 

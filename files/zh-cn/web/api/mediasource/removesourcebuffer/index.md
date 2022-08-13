@@ -1,19 +1,6 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - removeSourceBuffer
-translation_of: Web/API/MediaSource/removeSourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

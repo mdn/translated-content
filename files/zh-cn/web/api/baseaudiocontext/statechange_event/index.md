@@ -1,8 +1,6 @@
 ---
 title: AudioContext.onstatechange
 slug: Web/API/BaseAudioContext/statechange_event
-translation_of: Web/API/BaseAudioContext/onstatechange
-original_slug: Web/API/BaseAudioContext/onstatechange
 ---
 {{ APIRef("Web Audio API") }}
 

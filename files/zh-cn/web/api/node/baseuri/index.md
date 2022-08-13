@@ -1,20 +1,12 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-tags:
-  - <base>
-  - API
-  - HTML
-  - Node.baseURI
-  - Property
-  - base
-translation_of: Web/API/Node/baseURI
 ---
 {{APIRef("DOM")}}
 
 **`Node.baseURI`** 是只读属性，返回一个节点的绝对基址 URL。
 
-当浏览器要获取绝对 URL 时，就需要用基 URL 去解析相对 URL。例如，解析 HTML {{HTMLElement("img")}} 元素的 `src `属性时，或者 处理 XML `xlink:href` 属性时—。
+当浏览器要获取绝对 URL 时，就需要用基 URL 去解析相对 URL。例如，解析 HTML {{HTMLElement("img")}} 元素的 `src` 属性时，或者 处理 XML `xlink:href` 属性时—。
 
 一般情况下，基 URL 是 document 的 location ，但是它受诸多方面因素的影响，例如 HTML 的 {{HTMLElement("base")}} 元素和 XML [`xml:base`](https://developer.mozilla.org/en-US/docs/XML/xml:base) 属性。
 
@@ -45,7 +37,7 @@ _document_ 的默认基 URL 是文档的地址（浏览器显示的地址，可�
 
 元素的基 URL 一般和其所在的文档相同。
 
-如果文档中有 [`xml:base`](https://developer.mozilla.org/en-US/docs/XML/xml:base) 属性（不要在 HTML 文档中这样做），在 `node.baseURI `计算基 URL 时，会把 `xml:base` 属性考虑进去。参考 [xml:base](https://developer.mozilla.org/en-US/docs/XML/xml:base) 来了解更多。
+如果文档中有 [`xml:base`](https://developer.mozilla.org/en-US/docs/XML/xml:base) 属性（不要在 HTML 文档中这样做），在 `node.baseURI` 计算基 URL 时，会把 `xml:base` 属性考虑进去。参考 [xml:base](https://developer.mozilla.org/en-US/docs/XML/xml:base) 来了解更多。
 
 可以通过 `{{domxref("element")}}.baseURI` 获取某个元素的基 URL。
 

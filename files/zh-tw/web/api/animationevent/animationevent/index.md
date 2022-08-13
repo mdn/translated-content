@@ -46,7 +46,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 - `animationNameArg`
   - : A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition.
 - `elapsedTimeArg`
-  - : A `float` indicating the amount of time the animation has been running, in seconds, as of the time the event was fired, excluding any time the animation was paused. For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/animation-delay), in which case the event will be fired with `elapsedTime` containing `(-1 * `_delay_`)`.
+  - : A `float` indicating the amount of time the animation has been running, in seconds, as of the time the event was fired, excluding any time the animation was paused. For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/animation-delay), in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
 
 ## Specifications
 

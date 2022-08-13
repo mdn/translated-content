@@ -1,15 +1,12 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-tags:
-  - defaultView
-translation_of: Web/API/Document/defaultView
 ---
 {{ ApiRef() }}
 
 ### 概述
 
-在浏览器中，该属性返回当前 `document `对象所关联的 [`window`](/zh-cn/DOM/window) 对象，如果没有，会返回 `null`。
+在浏览器中，该属性返回当前 `document` 对象所关联的 [`window`](/zh-cn/DOM/window) 对象，如果没有，会返回 `null`。
 
 ### 语法
 

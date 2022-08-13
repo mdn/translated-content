@@ -1,12 +1,6 @@
 ---
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
-tags:
-  - API
-  - DOM Events
-  - DataTransfer
-  - InputEvent
-translation_of: Web/API/InputEvent/dataTransfer
 ---
 {{SeeCompatTable}}{{APIRef("DOM Events")}}
 

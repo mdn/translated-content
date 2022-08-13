@@ -1,13 +1,6 @@
 ---
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - read
-translation_of: Web/API/Clipboard/read
 ---
 {{APIRef("Clipboard API")}}
 

@@ -1,21 +1,6 @@
 ---
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
-page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Static
-  - Static Method
-  - Video
-  - isTypeSupported
-translation_of: Web/API/MediaSource/isTypeSupported
 ---
 {{APIRef("Media Source Extensions")}}
 

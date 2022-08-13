@@ -1,17 +1,6 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-tags:
-  - API
-  - MouseEvent
-  - Property
-  - events
-  - 事件
-  - 参考
-  - 属性
-  - 鼠标
-  - 鼠标事件
-translation_of: Web/API/MouseEvent/screenX
 ---
 {{APIRef("DOM Events")}}
 

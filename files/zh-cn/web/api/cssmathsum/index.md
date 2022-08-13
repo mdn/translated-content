@@ -1,15 +1,6 @@
 ---
 title: CSSMathSum
 slug: Web/API/CSSMathSum
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
-translation_of: Web/API/CSSMathSum
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 

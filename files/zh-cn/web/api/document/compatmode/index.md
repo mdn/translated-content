@@ -1,13 +1,6 @@
 ---
 title: document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - Document
-  - 参考
-  - 属性
-translation_of: Web/API/Document/compatMode
 ---
 {{ ApiRef("DOM") }}
 
@@ -36,7 +29,7 @@ mode = document.compatMode;
     - `"BackCompat"`：文档为怪异模式。
     - `"CSS1Compat"`：文档不是怪异模式，意味着文档处于标准模式或者准标准模式。
 
-> **备注：**现在，这些模式都已经被标准化了，准标准模式已和标准模式相同，而标准模式成为了默认表现。标准模式和准标准模式这两个名字已经失去了意义，不再在规范文档中出现。
+> **备注：** 现在，这些模式都已经被标准化了，准标准模式已和标准模式相同，而标准模式成为了默认表现。标准模式和准标准模式这两个名字已经失去了意义，不再在规范文档中出现。
 
 ## 例子
 

@@ -62,7 +62,7 @@ article[data-columns='4'] {
 }
 ```
 
-你可以在这个[JSBin ](http://jsbin.com/ujiday/2/edit)里看到全部演示。
+你可以在这个[JSBin](http://jsbin.com/ujiday/2/edit) 里看到全部演示。
 
 Data 属性同样可以存储不断变化的信息，比如游戏的得分。使用 CSS 选择器与 JavaScript 去访问可以让你得到花俏的效果，这里你并不需要用常规的编写方案来编写代码。有关使用生成内容和 CSS 转换（[JSBin 示例](https://jsbin.com/atawaz/3/edit)）的示例，请参阅此[视频](https://www.youtube.com/watch?v=On_WyUB1gOk)。
 

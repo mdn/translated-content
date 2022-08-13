@@ -22,9 +22,9 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 | 代码点   | 名称           | 缩写   | 说明                                                                                                                                       |
 | -------- | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `U+200C` | 零宽度非结合子 | <ZWNJ> | 放置在一些经常会被当成连字的字符之间，用于将它们分别以独立形式显示（[Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner)）      |
-| `U+200D` | 零宽度结合子   | <ZWJ>  | 放置在一些通常不会被标记为连字的字符之间，用于将这些字符以连字形式显示（[Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner)）      |
-| `U+FEFF` | 字节流方向标识 | <BOM>  | 在脚本开头使用，除了将脚本标记为 Unicode 格式以外，还用来标记文本的字节流方向（[Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)） |
+| `U+200C` | 零宽度非结合子 | \<ZWNJ> | 放置在一些经常会被当成连字的字符之间，用于将它们分别以独立形式显示（[Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner)）      |
+| `U+200D` | 零宽度结合子   | \<ZWJ>  | 放置在一些通常不会被标记为连字的字符之间，用于将这些字符以连字形式显示（[Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner)）      |
+| `U+FEFF` | 字节流方向标识 | \<BOM>  | 在脚本开头使用，除了将脚本标记为 Unicode 格式以外，还用来标记文本的字节流方向（[Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)） |
 
 ## 空白符
 
@@ -32,12 +32,12 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 | 代码点 | 名称              | 缩写   | 说明                                                                                                        | 转义序列 |
 | ------ | ----------------- | ------ | ----------------------------------------------------------------------------------------------------------- | -------- |
-| U+0009 | 制表符            | <HT>   | 水平制表符                                                                                                  | \t       |
-| U+000B | 垂直制表符        | <VT>   | 垂直制表符                                                                                                  | \v       |
-| U+000C | 分页符            | <FF>   | 分页符（[Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)）                                    | \f       |
-| U+0020 | 空格              | <SP>   | 空格                                                                                                        |          |
-| U+00A0 | 无间断空格        | <NBSP> | 在该空格处不会换行                                                                                          |          |
-| Others | 其他 Unicode 空白 | <USP>  | [Wikipedia 上对 Unicode 空白的介绍](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |          |
+| U+0009 | 制表符            | \<HT>   | 水平制表符                                                                                                  | \t       |
+| U+000B | 垂直制表符        | \<VT>   | 垂直制表符                                                                                                  | \v       |
+| U+000C | 分页符            | \<FF>   | 分页符（[Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)）                                    | \f       |
+| U+0020 | 空格              | \<SP>   | 空格                                                                                                        |          |
+| U+00A0 | 无间断空格        | \<NBSP> | 在该空格处不会换行                                                                                          |          |
+| Others | 其他 Unicode 空白 | \<USP>  | [Wikipedia 上对 Unicode 空白的介绍](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |          |
 
 ## 行终止符
 
@@ -47,10 +47,10 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 
 | 编码   | 名称     | 缩写 | 说明                                              | 转义序列 |
 | ------ | -------- | ---- | ------------------------------------------------- | -------- |
-| U+000A | 换行符   | <LF> | 在 UNIX 系统中起新行                              | \n       |
-| U+000D | 回车符   | <CR> | 在 Commodore 和早期的 Mac 系统中起新行            | \r       |
-| U+2028 | 行分隔符 | <LS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
-| U+2029 | 段分隔符 | <PS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
+| U+000A | 换行符   | \<LF> | 在 UNIX 系统中起新行                              | \n       |
+| U+000D | 回车符   | \<CR> | 在 Commodore 和早期的 Mac 系统中起新行            | \r       |
+| U+2028 | 行分隔符 | \<LS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
+| U+2029 | 段分隔符 | \<PS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
 
 ## 注释
 
@@ -125,9 +125,9 @@ Hashbang 注释指定特定 JavaScript 解释器的路径要用于执行脚本�
 console.log("Hello world");
 ```
 
-> **备注：**：JavaScript 中的 hashbang 注释模仿 [Unix 中的 shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)，用于指定适当的解释器运行文件。
+> **备注：** JavaScript 中的 hashbang 注释模仿 [Unix 中的 shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)，用于指定适当的解释器运行文件。
 
-> **警告：**尽管在 hashbang 注释之前的 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。
+> **警告：** 尽管在 hashbang 注释之前的 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。
 
 您只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
 
@@ -168,7 +168,6 @@ console.log("Hello world");
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Operators/yield", "yield")}}
--
 
 ### 未来保留关键字
 

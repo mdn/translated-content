@@ -13,7 +13,7 @@ translation_of: Web/CSS/background-size
 
 <h2 id="Übersicht">Übersicht</h2>
 
-<p>Die <code style="font-size: 14px; line-height: inherit;">background-size</code><span style="line-height: inherit;"> </span><a href="/en-US/docs/CSS" style="line-height: inherit;" title="CSS">CSS</a> Eigenschaft definiert die Abmessungen eines Hintergrundbildes. Die Abmessungen des Bildes können komplett festgelegt werden oder nur teilweise, um das eigentliche Seitenverhältnis zu erhalten.</p>
+<p>Die <code style="font-size: 14px; line-height: inherit;">background-size</code><span style="line-height: inherit;"> </span><a href="/en-US/docs/CSS" style="line-height: inherit;" title="CSS">CSS</a> Eigenschaft definiert die Abmessungen eines Hintergrundbildes. Die Abmessungen des Bildes können komplett festgelegt werden oder nur teilweise, um das eigentliche Seitenverhältnis zu erhalten.</p>
 
 <div class="note"><strong>Hinweis:</strong> Folgt auf <code>background-size</code> die {{cssxref("background")}} Kurzform und es wird in ihr kein Wert für diese Eigenschaft angegeben, wird der Wert auf den Standardwert zurückgesetzt.</div>
 
@@ -57,7 +57,7 @@ background-size: unset;
  <dt><code>&lt;length&gt;</code></dt>
  <dd>Ein <code>{{cssxref("&lt;length&gt;")}}</code> Wert, der das Hintergrundbild auf die angegebene Länge in der entsprechenden Maßeinheit skaliert. Negative Werte sind nicht erlaubt.</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Ein {{cssxref("&lt;percentage&gt;")}} Wert,  der das Hintergrundbild auf den angegebenen Prozentwert des Hintergrund-Positionierungsbereich skaliert (angegeben durch {{cssxref("background-origin")}}). Standardmäßig umfasst der Positionierungsbereich den Inhalt des Elements und dessen Innenabstand (Padding), kann aber auch so abgeändert werden, dass er nur den Inhalt umfasst oder Inhalt, Innenabstand und Rahmen. Ist die {{cssxref("background-attachment","attachment")}} Eigenschaft auf <code>fixed</code> gesetzt, entspricht der Positionierungsbereich dem Browser-Fenster abzüglich des von eventuellen Scroll-Leisten genutzten Bereichs. Negative Prozentwerte sind nicht erlaubt.</dd>
+ <dd>Ein {{cssxref("&lt;percentage&gt;")}} Wert,  der das Hintergrundbild auf den angegebenen Prozentwert des Hintergrund-Positionierungsbereich skaliert (angegeben durch {{cssxref("background-origin")}}). Standardmäßig umfasst der Positionierungsbereich den Inhalt des Elements und dessen Innenabstand (Padding), kann aber auch so abgeändert werden, dass er nur den Inhalt umfasst oder Inhalt, Innenabstand und Rahmen. Ist die {{cssxref("background-attachment","attachment")}} Eigenschaft auf <code>fixed</code> gesetzt, entspricht der Positionierungsbereich dem Browser-Fenster abzüglich des von eventuellen Scroll-Leisten genutzten Bereichs. Negative Prozentwerte sind nicht erlaubt.</dd>
  <dt><code>auto</code></dt>
  <dd>Das <code>auto</code> Schlüsselwort skaliert das Hintergrundbild so in die entsprechende Richtung, dass das ursprüngliche Seitenverhältnis beibehalten wird.</dd>
  <dt><code>cover</code></dt>
@@ -84,7 +84,7 @@ background-size: unset;
  <dt>Falls <code>background-size </code><code>auto</code> oder <code>auto auto</code> ist:</dt>
  <dd>Besitzt das Bild beide Maße, wird es in dieser Größe gerendert. Hat es keine eigenen Maße und keine eigene Proportion, wird es in der Größe des Hintergrund-Positionierungsbereich gerendert. Hat es keine Maße, aber eine Proportion, wird es so gerendert als ob <code>contain</code> angegeben wurde. Hat es ein Maß angegeben und besitzt eine Proportion, wird es entsprechend dieser Angaben gerendert. Hat es ein Maß und keine Proportion, wird es mit diesem eigenen Maß und dem entsprechenden Maß des Hintergrund-Positionierungsbereichs gerendert.</dd>
  <dt>Falls <code>background-size</code> ein <code>auto</code> und ein nicht-<code>auto</code> Wert besitzt:</dt>
- <dd>Hat das Bild eine eigene Proportion, wird das nicht spezifizierte Maß aus dem angegebenen Maß und der Proportion berechnet. Hat das Bild keine eigene Proportion, wird das angebene Maß und das entsprechende eigene Maß des Bilds verwendet, falls vorhanden. Existiert kein eigenes Maß, wird dasjenige des Hintergrund-Positionierungsbereichs verwendet. </dd>
+ <dd>Hat das Bild eine eigene Proportion, wird das nicht spezifizierte Maß aus dem angegebenen Maß und der Proportion berechnet. Hat das Bild keine eigene Proportion, wird das angebene Maß und das entsprechende eigene Maß des Bilds verwendet, falls vorhanden. Existiert kein eigenes Maß, wird dasjenige des Hintergrund-Positionierungsbereichs verwendet. </dd>
 </dl>
 
 <p>Es ist zu beachten, dass Vektorgrafiken ohne Maße oder Proportion noch nicht vollständig in allen Browsern implementiert sind. Aus diesem Grund sollte man nicht zu sehr auf das oben beschriebene Verhalten vertrauen. Tests in unterschiedlichen Browsern (insbesondere Firefox 7 oder älter und Firefox 8 oder neuer) sind nötig, um festzustellen, ob die verschiedenen Darstellungen akzeptabel sind.</p>
@@ -133,7 +133,7 @@ background-size: unset;
   <tr>
    <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

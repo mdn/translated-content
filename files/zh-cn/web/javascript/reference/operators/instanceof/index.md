@@ -31,7 +31,7 @@ object instanceof constructor
 
 ## 描述
 
-`instanceof` 运算符用来检测 `constructor.prototype `是否存在于参数 `object` 的原型链上。
+`instanceof` 运算符用来检测 `constructor.prototype` 是否存在于参数 `object` 的原型链上。
 
 ```js
 // 定义构造函数
@@ -72,8 +72,7 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 比如检测一个 `Nodes` 在另一个窗口中是不是 `SVGElement`，你可以使用`myNode instanceof myNode.ownerDocument.defaultView.SVGElement`
 
-> **备注：**
-> 在代码中使用 XPCOM `instanceof `有特殊影响：如果查询接口成功执行后，`obj instanceof `_`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
+> **备注：** 在代码中使用 XPCOM `instanceof` 有特殊影响：如果查询接口成功执行后，`obj instanceof` _`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
 
 ## 示例
 

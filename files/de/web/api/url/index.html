@@ -11,7 +11,7 @@ translation_of: Web/API/URL
 ---
 <div>{{ApiRef("URL API")}} {{SeeCompatTable}}</div>
 
-<p>The <strong><code>URL</code></strong><strong> </strong>interface represent an object providing static methods used for creating object URLs.</p>
+<p>The <strong><code>URL</code></strong> interface represent an object providing static methods used for creating object URLs.</p>
 
 <p>When using a user agent where no constructor has been implemented yet, it is possible to access such an object using the {{domxref("Window.URL")}} properties (prefixed with Webkit-based browser as <code>Window.webkitURL</code>).</p>
 
@@ -98,110 +98,7 @@ translation_of: Web/API/URL
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>8.0 as <code>webkitURL</code><br>
-    35</td>
-   <td>{{CompatGeckoDesktop("2.0")}} (non-standard name) [1]<br>
-    {{CompatGeckoDesktop("19.0")}}</td>
-   <td>10.0</td>
-   <td>15.0 as <code>webkitURL<br>
-    {{CompatVersionUnknown}}</code></td>
-   <td>6.0 as <code>webkitURL</code><br>
-    7.0</td>
-  </tr>
-  <tr>
-   <td><code>URLUtils</code> properties</td>
-   <td>32</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>19</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, and <code>origin</code></td>
-   <td>32</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>19</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>protocol, host, hostname, port, href</code>, <code>pathname</code>, <code>search</code>, <code>hash</code></td>
-   <td>32</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>19</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>searchParams</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>19</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}as <code>webkitURL</code></td>
-   <td>{{CompatGeckoMobile("14.0")}}(non-standard name) [1]<br>
-    {{CompatGeckoMobile("19.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>15.0 as <code>webkitURL</code></td>
-   <td>
-    <p>6.0 as <code>webkitURL</code></p>
-
-    <p> </p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>URLUtils </code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, <code>href</code>, and <code>origin</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] From Gecko 2 (Firefox 4) to Gecko 18 included, Gecko supported this interface with the non-standard <code>nsIDOMMozURLProperty</code> internal type. As the only to access such an object was through {{domxref("window.URL")}}, in practice, this didn't make any difference.</p>
 

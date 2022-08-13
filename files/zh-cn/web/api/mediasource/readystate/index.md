@@ -1,19 +1,6 @@
 ---
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - readyState
-translation_of: Web/API/MediaSource/readyState
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

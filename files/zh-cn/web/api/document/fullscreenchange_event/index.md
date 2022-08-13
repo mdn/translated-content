@@ -1,7 +1,6 @@
 ---
 title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
-translation_of: Web/API/Document/fullscreenchange_event
 ---
 fullscreenchange 事件当浏览器进入或离开全屏时触发。
 

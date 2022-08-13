@@ -1,7 +1,6 @@
 ---
 title: suspend
 slug: Web/API/OfflineAudioContext/suspend
-translation_of: Web/API/OfflineAudioContext/suspend
 ---
 {{ APIRef("Web Audio API") }}
 

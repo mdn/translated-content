@@ -1,7 +1,6 @@
 ---
 title: Performance Timeline
 slug: Web/API/Performance_Timeline
-translation_of: Web/API/Performance_Timeline
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 

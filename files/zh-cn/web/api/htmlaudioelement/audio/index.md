@@ -1,15 +1,6 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
-tags:
-  - API
-  - Audio
-  - DOM
-  - 参考
-  - 多媒体
-  - 构造器
-  - 音频
-translation_of: Web/API/HTMLAudioElement/Audio
 ---
 {{APIRef("HTML DOM")}}
 
@@ -38,7 +29,7 @@ audioObj = new Audio(url);
 
 提供三种方法给开发者，判断音频文件是否已经加载，允许开始回放：
 
-- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值. 如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是` HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
+- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值. 如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是 `HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
 - 监听 {{domxref("HTMLMediaElement.canplay_event", "canplay")}} 事件。当足够的音频数据被发送至 `<audio>` 元素，能开始回放，即使可能出现中断时，会触发该事件。
 - 监听 {{domxref("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} 事件。当音频应该没有干扰能够顺利播放时将会触发该事件。
 
@@ -53,7 +44,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 ### 内存使用与管理
 
-如果所有使用 `Audio() `构造函数创建的 audio 元素被删除，根据 JavaScript 垃圾回收机制，如果播放正在进行，内存中的 audio 元素不会被移除。相反，音频将会继续播放并且它的对象会保留在内存中，直到播放结束或是被暂停（例如调用 {{domxref("HTMLMediaElement.pause", "pause()")}}）。在那个时候，这个对象才会成为垃圾回收的目标。
+如果所有使用 `Audio()` 构造函数创建的 audio 元素被删除，根据 JavaScript 垃圾回收机制，如果播放正在进行，内存中的 audio 元素不会被移除。相反，音频将会继续播放并且它的对象会保留在内存中，直到播放结束或是被暂停（例如调用 {{domxref("HTMLMediaElement.pause", "pause()")}}）。在那个时候，这个对象才会成为垃圾回收的目标。
 
 ## 规范
 

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
 {{JSRef}} {{deprecated_header}}
 
-**`bold() `**`方法会创建` HTML 元素 “b”，并将字符串加粗展示。
+**`bold()`** 方法会创建 HTML 元素 “b”，并将字符串加粗展示。
 
 ## 语法
 

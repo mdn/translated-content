@@ -1,7 +1,6 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-translation_of: Web/API/File/lastModifiedDate
 ---
 {{APIRef("File API")}}
 

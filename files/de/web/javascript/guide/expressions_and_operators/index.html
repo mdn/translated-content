@@ -34,12 +34,12 @@ original_slug: Web/JavaScript/Guide/Ausdruecke_und_Operatoren
  <li>{{ web.link("#Relational_operators", "Vergleichsoperator")}}</li>
 </ul>
 
-<p>JavaScript verfügt über beides, binäre als auch unäre Operatoren. Zudem existiert ein spezieller ternärer Operator - der Bedingungsoperator. Ein binärer Operator benötigt zwei Operanden, einen vor dem Operator und einen nach dem Operator:</p>
+<p>JavaScript verfügt über beides, binäre als auch unäre Operatoren. Zudem existiert ein spezieller ternärer Operator - der Bedingungsoperator. Ein binärer Operator benötigt zwei Operanden, einen vor dem Operator und einen nach dem Operator:</p>
 
 <pre class="syntaxbox"><em>operand1</em> <em>operator</em> <em>operand2</em>
 </pre>
 
-<p>Zum Beispiel: <code>3+4</code>, oder <code>x*y</code>.</p>
+<p>Zum Beispiel: <code>3+4</code>, oder <code>x*y</code>.</p>
 
 <p>Ein unärer Operator erwartet einen einzelnen Operanden, entweder vor, oder nach dem Operator:</p>
 
@@ -51,13 +51,13 @@ original_slug: Web/JavaScript/Guide/Ausdruecke_und_Operatoren
 <pre class="syntaxbox"><em>operand</em> <em>operator</em>
 </pre>
 
-<p>Zum Beispiel: <code>x++</code>, oder <code>++x</code>.</p>
+<p>Zum Beispiel: <code>x++</code>, oder <code>++x</code>.</p>
 
 <h3 id="Zuweisungsoperatoren">Zuweisungsoperatoren</h3>
 
-<p>Ein Zuweisungsoperator weißt seinem linken Operanden einen Wert zu. Dieser Wert basiert auf dem Ergebnis des rechten Operanden. Der einfachste Zuweisungsoperator ist das "Gleich" (<code>=</code>), welches den Wert des rechten Operanden dem linken Operanden zuweist.</p>
+<p>Ein Zuweisungsoperator weißt seinem linken Operanden einen Wert zu. Dieser Wert basiert auf dem Ergebnis des rechten Operanden. Der einfachste Zuweisungsoperator ist das "Gleich" (<code>=</code>), welches den Wert des rechten Operanden dem linken Operanden zuweist.</p>
 
-<p>Zum Beispiel: <code>x = y</code> (<code>y</code> wid der Wert von <code>x</code> zugewiesen).</p>
+<p>Zum Beispiel: <code>x = y</code> (<code>y</code> wid der Wert von <code>x</code> zugewiesen).</p>
 
 <p>Es gibt auch zusammengesetzte Zuweisungsoperatoren, diese stellen Abkürzungen für die in der folgenden Tabelle aufgelisteten Operationen dar:</p>
 
@@ -155,9 +155,9 @@ var [eins, zwei, drei] = foo;</pre>
 
 <h3 id="Vergleichsoperatoren">Vergleichsoperatoren</h3>
 
-<p>Ein Vergleichsoperator vergleicht seine Operanden und gibt einen logischen Wert zurück, der darauf basiert, ob der Vergleich wahr ist, oder nicht.</p>
+<p>Ein Vergleichsoperator vergleicht seine Operanden und gibt einen logischen Wert zurück, der darauf basiert, ob der Vergleich wahr ist, oder nicht.</p>
 
-<p>Die Operanden können numerische-, string-, logische- oder Objektwerte sein. Zeichenfolgen werden basierend auf der lexikographischen Standardreihenfolge mit unicodewerten verglichen. Wenn die beiden Operanden nicht vom selben Typ sind, versucht JavaScript in den meisten Fällen, sie in einen geeigneten Typ für den Vergleich zu konvertieren. Dieses Verhalten führt im Allgemeinen dazu, dass die Operanden numerisch verglichen werden. Die einzigen Ausnahmen für die Typumwandlung innerhalb von Vergleichen sind die Operatoren <code>===</code> und <code>!==</code>, die strenge Vergleiche durchführen. Diese Operatoren versuchen nicht, die Operanden in kompatible Typen zu konvertieren, bevor sie die Gleichheit überprüfen.</p>
+<p>Die Operanden können numerische-, string-, logische- oder Objektwerte sein. Zeichenfolgen werden basierend auf der lexikographischen Standardreihenfolge mit unicodewerten verglichen. Wenn die beiden Operanden nicht vom selben Typ sind, versucht JavaScript in den meisten Fällen, sie in einen geeigneten Typ für den Vergleich zu konvertieren. Dieses Verhalten führt im Allgemeinen dazu, dass die Operanden numerisch verglichen werden. Die einzigen Ausnahmen für die Typumwandlung innerhalb von Vergleichen sind die Operatoren <code>===</code> und <code>!==</code>, die strenge Vergleiche durchführen. Diese Operatoren versuchen nicht, die Operanden in kompatible Typen zu konvertieren, bevor sie die Gleichheit überprüfen.</p>
 
 <p>Die folgende Tabelle beschreibt die Vergleichsoperatoren in Bezug auf diesen Beispielcode:</p>
 
@@ -190,7 +190,7 @@ var var2 = 4;
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">Strict equal</a> (<code>===</code>)</td>
-   <td>Gibt <code>true</code> zurück, wenn die Operanden gleich sind und auch der Typ übereinstimmt. Weitere Informationen unter {{jsxref("Object.is")}} und <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" title="/en-US/docs/Web/JavaScript/Guide/Sameness">sameness in JS</a>.</td>
+   <td>Gibt <code>true</code> zurück, wenn die Operanden gleich sind und auch der Typ übereinstimmt. Weitere Informationen unter {{jsxref("Object.is")}} und <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" title="/en-US/docs/Web/JavaScript/Guide/Sameness">sameness in JS</a>.</td>
    <td><code>3 === var1</code></td>
   </tr>
   <tr>
@@ -227,18 +227,18 @@ var var2 = 4;
 </table>
 
 <div class="note">
-<p><strong>Note: </strong>(<strong>=&gt;</strong>) ist kein Operator, hiermit werden <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> notiert.</p>
+<p><strong>Note: </strong>(<strong>=&gt;</strong>) ist kein Operator, hiermit werden <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> notiert.</p>
 </div>
 
 <h3 id="Arithmetische_Operatoren_(Rechenzeichen)">Arithmetische Operatoren (Rechenzeichen)</h3>
 
-<p>Ein <a href="/de/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">arithmetischer Operator</a> nimmt numerische Werte (Literale oder Variablen) als Operanden entgegen und gibt einen einzelnen numerischen Wert zurück. Die arithmetischen Standardoperatoren sind Addition (<code>+)</code>, Subtraktion (<code>-</code>), Multiplikation (<code>*</code>) und Division (<code>/</code>). Diese Operatoren funktionieren wie in den meisten anderen Programmiersprachen, wenn sie mit Fließkommazahlen verwendet werden (beachten Sie insbesondere, dass die Division durch Null {{jsxref ("Infinity")}} ergibt).</p>
+<p>Ein <a href="/de/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">arithmetischer Operator</a> nimmt numerische Werte (Literale oder Variablen) als Operanden entgegen und gibt einen einzelnen numerischen Wert zurück. Die arithmetischen Standardoperatoren sind Addition (<code>+)</code>, Subtraktion (<code>-</code>), Multiplikation (<code>*</code>) und Division (<code>/</code>). Diese Operatoren funktionieren wie in den meisten anderen Programmiersprachen, wenn sie mit Fließkommazahlen verwendet werden (beachten Sie insbesondere, dass die Division durch Null {{jsxref ("Infinity")}} ergibt).</p>
 
 <pre class="brush: js">1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 </pre>
 
-<p>Neben den arithmetischen Standardoperatoren (+, -, * /), stellt JavaScript noch weitere Rechenzeichen zur Verfügung. Diese werden in der folgenden Tabelle aufgeführt:</p>
+<p>Neben den arithmetischen Standardoperatoren (+, -, * /), stellt JavaScript noch weitere Rechenzeichen zur Verfügung. Diese werden in der folgenden Tabelle aufgeführt:</p>
 
 <table class="fullwidth-table">
  <caption>Arithmetische Operatoren</caption>
@@ -262,7 +262,7 @@ var var2 = 4;
 
     <p>Wenn der Operator vorangestellt wird (<code>++x</code>), gibt er den Wert seines Operanden zurück nachdem 1 addiert wurde; Wenn der Operator nachgestellt wird (<code>x++</code>), gibt er den Wert seines Operanden zurück, bevor 1 addiert wurde.</p>
    </td>
-   <td>Wenn <code>x</code> gleich 3 ist, setzt <code>++x</code> <code>x</code> auf 4 und gibt 4 zurück, wobei <code>x++</code>  3 zurückgibt und erst danach <code>x</code> auf 4 setzt.</td>
+   <td>Wenn <code>x</code> gleich 3 ist, setzt <code>++x</code> <code>x</code> auf 4 und gibt 4 zurück, wobei <code>x++</code>  3 zurückgibt und erst danach <code>x</code> auf 4 setzt.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Decrement</a> (<code>--</code>)</td>
@@ -271,31 +271,31 @@ var var2 = 4;
 
     <p>Der Rückgabewert verhält sich analog zum increment Operator.</p>
    </td>
-   <td>Wenn <code>x</code> gleich 3 ist, setzt <code>--x</code> <code>x</code> auf 2 und gibt 2 zurück, wobei <code>x--</code> 3 zurückgibt und erst danach, <code>x</code> auf 2 setzt.</td>
+   <td>Wenn <code>x</code> gleich 3 ist, setzt <code>--x</code> <code>x</code> auf 2 und gibt 2 zurück, wobei <code>x--</code> 3 zurückgibt und erst danach, <code>x</code> auf 2 setzt.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation">Unary negation</a> (<code>-</code>)</td>
-   <td>Unärer Operator. Gibt die Negierung seines Operanden zurück.</td>
-   <td>Wenn <code>x</code> gleich 3 ist, gibt <code>-x</code> -3 zurück.</td>
+   <td>Unärer Operator. Gibt die Negierung seines Operanden zurück.</td>
+   <td>Wenn <code>x</code> gleich 3 ist, gibt <code>-x</code> -3 zurück.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">Unary plus</a> (<code>+</code>)</td>
    <td>Versucht, den Operanden in eine Zahl umzuwandeln, wenn dies nicht bereits der Fall ist.</td>
-   <td><code>+"3"</code> gibt <code>3</code> zurück.<br>
-    <code>+true</code> gibt <code>1</code> zurück.</td>
+   <td><code>+"3"</code> gibt <code>3</code> zurück.<br>
+    <code>+true</code> gibt <code>1</code> zurück.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Exponentiation operator</a> (<code>**</code>) {{experimental_inline}}</td>
    <td>Calculates the <code>base</code> to the <code>exponent</code> power, that is, <code>base<sup>exponent</sup></code></td>
-   <td><code>2 ** 3</code> gibt <code>8</code> zurück.<br>
-    <code>10 ** -1</code> gibt <code>0.1 </code>zurück.</td>
+   <td><code>2 ** 3</code> gibt <code>8</code> zurück.<br>
+    <code>10 ** -1</code> gibt <code>0.1 </code>zurück.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Bitweise_Operatoren">Bitweise Operatoren</h3>
 
-<p>Ein bitweiser Operator behandelt seine Operanden als eine Menge von 32 Bits (Nullen und Einsen) und nicht als dezimale, hexadezimale oder oktale Zahlen. Zum Beispiel hat die Dezimalzahl Neun eine binäre Darstellung von <code>1001</code>. Bitweise Operatoren führen ihre Operationen mit solchen binären Darstellungen aus, doch sie geben standardmäßige numerische JavaScript-Werte zurück.</p>
+<p>Ein bitweiser Operator behandelt seine Operanden als eine Menge von 32 Bits (Nullen und Einsen) und nicht als dezimale, hexadezimale oder oktale Zahlen. Zum Beispiel hat die Dezimalzahl Neun eine binäre Darstellung von <code>1001</code>. Bitweise Operatoren führen ihre Operationen mit solchen binären Darstellungen aus, doch sie geben standardmäßige numerische JavaScript-Werte zurück.</p>
 
 <p>Die folgende Tabelle fasst die bitweisen Operatoren von JavaScript zusammen.</p>
 
@@ -353,7 +353,7 @@ var var2 = 4;
 <p>Konzeptuell arbeiten bitweise logische Operatoren wie folgt:</p>
 
 <ul>
- <li>Die Operanden werden zu 32 Bit Integer Zahlen konvertiert und als Folge von Bits (Nullen und Einsen) dargestellt. Zahlen mit mehr als 32 Bits verlieren dabei ihre signifikanten Bits bis auf eine Länge von 32. Im folgenden Beispiel wird eine Zahl mit mehr als 32 Bits zu einer 32 Bit Integer Zahl konvertiert:
+ <li>Die Operanden werden zu 32 Bit Integer Zahlen konvertiert und als Folge von Bits (Nullen und Einsen) dargestellt. Zahlen mit mehr als 32 Bits verlieren dabei ihre signifikanten Bits bis auf eine Länge von 32. Im folgenden Beispiel wird eine Zahl mit mehr als 32 Bits zu einer 32 Bit Integer Zahl konvertiert:
   <pre>Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001</pre>
  </li>
@@ -401,7 +401,7 @@ After:              10100000000000000110000000000001</pre>
  </tbody>
 </table>
 
-<p>Beachte, dass alle 32 Bits invertiert werden, wenn der bitweise NOT Operator benutzt wird. Wenn dabei das höchstwertigste (ganz linke) Bit auf 1 gesetzt wird, entsteht eine negative Zahl. Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with the most significant (left-most) bit set to 1 represent negative numbers (Zweierkomplement). <code>~x</code> wird also genauso ausgewertet wie <code>-x - 1</code>.</p>
+<p>Beachte, dass alle 32 Bits invertiert werden, wenn der bitweise NOT Operator benutzt wird. Wenn dabei das höchstwertigste (ganz linke) Bit auf 1 gesetzt wird, entsteht eine negative Zahl. Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with the most significant (left-most) bit set to 1 represent negative numbers (Zweierkomplement). <code>~x</code> wird also genauso ausgewertet wie <code>-x - 1</code>.</p>
 
 <h4 id="Bitwise_Shift_Operators" name="Bitwise_Shift_Operators">Bitweise Schiebeoperatoren</h4>
 
@@ -442,7 +442,7 @@ After:              10100000000000000110000000000001</pre>
 
 <h3 id="Logische_Operatoren">Logische Operatoren</h3>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">Logische Operatoren</a> werden normalerweise mit boolesche (logischen) Werten verwendet - hierbei geben sie dann einen booleschen Wert zurück. Die Operatoren <code>&amp;&amp;</code> und <code>||</code> geben den Wert von einem der Operatoren zurück, sodass sie im Falle der Verwendung mit einem nicht-booleschen Wert auch einen nicht-booleschen Wert zurückgeben können. Die logischen Operatoren werden in der folgenden Tabelle beschrieben: </p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">Logische Operatoren</a> werden normalerweise mit boolesche (logischen) Werten verwendet - hierbei geben sie dann einen booleschen Wert zurück. Die Operatoren <code>&amp;&amp;</code> und <code>||</code> geben den Wert von einem der Operatoren zurück, sodass sie im Falle der Verwendung mit einem nicht-booleschen Wert auch einen nicht-booleschen Wert zurückgeben können. Die logischen Operatoren werden in der folgenden Tabelle beschrieben: </p>
 
 <table class="fullwidth-table">
  <caption>Logische Operatoren</caption>
@@ -457,26 +457,26 @@ After:              10100000000000000110000000000001</pre>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">Logical AND</a><code> </code>(<code>&amp;&amp;</code>)</td>
    <td><code>expr1 &amp;&amp; expr2</code></td>
-   <td>Gibt <code>expr1</code> zurück, sofern es zu <code>false</code> konvertiert werden kann; ansonsten wird <code>expr2</code> zurückgegeben. Insofern mit booleschen Werten verwendet, <code>&amp;&amp;</code> gibt <code>true</code> zurück, wenn beide Operanden wahr sind; ansonsten <code>false</code>.</td>
+   <td>Gibt <code>expr1</code> zurück, sofern es zu <code>false</code> konvertiert werden kann; ansonsten wird <code>expr2</code> zurückgegeben. Insofern mit booleschen Werten verwendet, <code>&amp;&amp;</code> gibt <code>true</code> zurück, wenn beide Operanden wahr sind; ansonsten <code>false</code>.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">Logical OR </a>(<code>||</code>)</td>
    <td><code>expr1 || expr2</code></td>
    <td>
-    <p>Gibt <code>expr1</code> zurück, sofern er zu <code>true</code> konvertiert werden kann. Insofern mit booleschen Werten verwendet, gibt der Operator <code>||</code> true zurück, wenn einer von beiden Operanden <code>true</code> ist; wenn beide <code>false</code> sind, wird <code>false</code> zurückgegeben. </p>
+    <p>Gibt <code>expr1</code> zurück, sofern er zu <code>true</code> konvertiert werden kann. Insofern mit booleschen Werten verwendet, gibt der Operator <code>||</code> true zurück, wenn einer von beiden Operanden <code>true</code> ist; wenn beide <code>false</code> sind, wird <code>false</code> zurückgegeben. </p>
    </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">Logical NOT </a>(<code>!</code>)</td>
    <td><code>!expr</code></td>
    <td>
-    <p>Gibt <code>false</code> zurück, wenn sein einziger Operand in <code>true</code> konvertiert werden kann; andernfalls gibt er <code>true</code> zurück. </p>
+    <p>Gibt <code>false</code> zurück, wenn sein einziger Operand in <code>true</code> konvertiert werden kann; andernfalls gibt er <code>true</code> zurück. </p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<p>Beispiele von Ausdrücken, die in <code>false</code> umgewandelt werden können, sind solche, die <code>null</code>, 0, <code>NaN</code>, einen leeren String ("") oder <code>undefined</code> sind. </p>
+<p>Beispiele von Ausdrücken, die in <code>false</code> umgewandelt werden können, sind solche, die <code>null</code>, 0, <code>NaN</code>, einen leeren String ("") oder <code>undefined</code> sind. </p>
 
 <p>Die folgenden Zeilen zeigen Beispiele des <code>&amp;&amp;</code> (logisches UND) Operators.</p>
 
@@ -507,16 +507,16 @@ var n2 = !false; // !f returns true
 var n3 = !"Cat"; // !t returns false
 </pre>
 
-<h4 id="Short-Circuit_Evaluation" name="Short-Circuit_Evaluation">Short-circuit-Bewertung </h4>
+<h4 id="Short-Circuit_Evaluation" name="Short-Circuit_Evaluation">Short-circuit-Bewertung </h4>
 
 <p>Da logische Ausdrücke von links nach rechts bewertet werden, werden sie auf eine mögliche "Abkürzung" (short-circuit) hin gemäß den folgenden Regeln evaluiert:</p>
 
 <ul>
- <li><code>false</code> &amp;&amp; <em>irgendwas</em> wird abgekürzt als <code>false</code> bewertet.</li>
- <li><code>true</code> || <em>irgendwas</em> wird abgekürtz als <code>true</code> bewertet. </li>
+ <li><code>false</code> &amp;&amp; <em>irgendwas</em> wird abgekürzt als <code>false</code> bewertet.</li>
+ <li><code>true</code> || <em>irgendwas</em> wird abgekürtz als <code>true</code> bewertet. </li>
 </ul>
 
-<p>Die Regeln der Logik garantieren, dass diese Bewertungen immer korrekt sind. Der <em>irgendwas</em>-Operand werden in den o.g. Beispielen hierbei nicht bewertet. </p>
+<p>Die Regeln der Logik garantieren, dass diese Bewertungen immer korrekt sind. Der <em>irgendwas</em>-Operand werden in den o.g. Beispielen hierbei nicht bewertet. </p>
 
 <h3 id="String-Operatoren">String-Operatoren</h3>
 
@@ -844,7 +844,7 @@ if (theDay instanceof Date) {
 
 <p>An <em>expression</em> is any valid unit of code that resolves to a value.</p>
 
-<p>Every syntactically valid expression resolves to some value but conceptually, there are two types of expressions: with side effects (for example: those that assign value to a variable) and those that in some sense evaluate and therefore resolve to a value.</p>
+<p>Every syntactically valid expression resolves to some value but conceptually, there are two types of expressions: with side effects (for example: those that assign value to a variable) and those that in some sense evaluate and therefore resolve to a value.</p>
 
 <p>The expression <code>x = 7</code> is an example of the first type. This expression uses the =<em> operator</em> to assign the value seven to the variable <code>x</code>. The expression itself evaluates to seven.</p>
 
@@ -886,7 +886,7 @@ this.propertyName
 
 <p>Enter a number between 18 and 99:</p>
 
-<p><input></p>
+{{EmbedLiveSample("", 300, 300)}}
 
 <h4 id="Grouping_operator">Grouping operator</h4>
 

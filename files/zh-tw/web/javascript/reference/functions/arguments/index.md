@@ -20,9 +20,9 @@ arguments
 
 ## 描述
 
-> **備註：**如果你有在使用 ES6 語法，建議參考[其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
+> **備註：** 如果你有在使用 ES6 語法，建議參考[其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
 
-> **備註：**「類陣列 (Array-like)」 的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()` ，或是 `map()` 。
+> **備註：** 「類陣列 (Array-like)」 的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()` ，或是 `map()` 。
 
 The `arguments` object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the `arguments` object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.
 
@@ -52,7 +52,7 @@ var args = [].slice.call(arguments);
 const args = Array.from(arguments);
 ```
 
-> **警告：**Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - [more information](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised `Array` constructor as a function:
+> **警告：** Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - [more information](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised `Array` constructor as a function:
 >
 > ```js
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));

@@ -46,7 +46,7 @@ translation_of: Web/SVG/Tutorial/Gradients
  <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-使用漸變時，我們需要在對象的 fill 或 stroke 屬性裡引用它。就像在 CSS 里通過`url`來引用其他元素一樣，在這裡，url 引用的是我們給漸變設置的 id，所以只需要將 fill 屬性設置成`url(#Gradient) `，我們的對象就可以呈現出五彩斑斕的效果。另外你也可以給 stroke 進行同樣的設置。
+使用漸變時，我們需要在對象的 fill 或 stroke 屬性裡引用它。就像在 CSS 里通過`url`來引用其他元素一樣，在這裡，url 引用的是我們給漸變設置的 id，所以只需要將 fill 屬性設置成`url(#Gradient)`，我們的對象就可以呈現出五彩斑斕的效果。另外你也可以給 stroke 進行同樣的設置。
 
 `<linearGradient>`元素還可以設置其他一些屬性，用來定義尺寸和样 ​​ 式。比如漸變的方向是由兩個點控制的，它們用`x1`， `x2`，`y1`，`y2`四個屬性控制，形成一條直線，漸變就沿這條直線變化。漸變默認的方向是水平方向，使用這些屬性就可以改變方向。上面例子裡的 Gradient2 就是一個垂直的漸變。
 

@@ -42,14 +42,12 @@ translation_of: Web/HTML/Element/link
 
 <p>Dieses Element beinhaltet die <a href="/de/docs/Web/HTML/Globale_Attribute">Globalen Attribute</a>.</p>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{htmlattrdef("charset")}}{{obsolete_inline}}</dt>
  <dd>Dieses Attribut definiert die Zeichenkodierung der verlinkten Ressource. Der Wert ist eine durch Leerzeichen und/oder Komma getrennte Liste von Zeichensätzen gemäß <a href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>. Der Standardwert ist ISO-8859-1.
- <div class="note"><strong>Verwendungshinweis</strong>: Dieses Attribut ist in HTML5 obsolet und <strong>darf von den Autoren nicht verwendet werden</strong>. Um seine Wirkung zu erzielen, verwenden Sie den <font face="Courier New, monospace"><font color="#000000">Content-Type</font></font> HTTP-Header auf der verlinkten Ressource.</div>
- </dd>
- <dd> </dd>
+ <div class="note"><strong>Verwendungshinweis</strong>: Dieses Attribut ist in HTML5 obsolet und <strong>darf von den Autoren nicht verwendet werden</strong>. Um seine Wirkung zu erzielen, verwenden Sie den <font face="Courier New, monospace"><font color="#000000">Content-Type</font></font> HTTP-Header auf der verlinkten Ressource.</div><br /><br /> </dd>
  <dt>{{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Dieses aufgezählte Attribut gibt an, ob das Abrufen des zugehörigen Bildes mit CORS erfolgen muss oder nicht. <a href="/en-US/docs/CORS_Enabled_Image">CORS-fähige Bilder</a> können im Element {{HTMLElement("canvas")}} wiederverwendet werden, ohne verunreinigt zu werden. Die zulässigen Werte sind:
  <dl>
@@ -72,9 +70,9 @@ translation_of: Web/HTML/Element/link
  <p>Die Verwendung von <code>disabled</code> als HTML-Attribut ist nicht standardisiert und wird nur von einigen Browsern verwendet (<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677">W3 #27677</a>). <strong>Verwenden Sie es nicht.</strong> Um einen ähnlichen Effekt zu erzielen, verwenden Sie eine der folgenden Techniken:</p>
 
  <p>Wenn das Attribut <code>disabled</code> direkt zu dem Element auf der Seite hinzugefügt wurde, darf stattdessen nicht das Element {{HTMLElement("link")}}} aufgenommen werden;<br>
-  Setzt die <code>disabled</code> <strong>Eigenschaft</strong> des <code>StyleSheet</code> DOM Objekts über Skripting.</p>
+  Setzt die <code>disabled</code> <strong>Eigenschaft</strong> des <code>StyleSheet</code> DOM Objekts über Skripting.</p>
 
- <p> </p>
+ <p> </p>
  </div>
  </dd>
 </dl>
@@ -187,170 +185,24 @@ function sheetError() {
   <tr>
    <td>{{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Alternative stylesheets</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code> attribute {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>methods</code> attribute {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>4.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>sizes</code> attribute</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} {{bug("441770")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>load</code> and <code>error</code> events</td>
-   <td>
-    <p>19 (Webkit: 535.23)</p>
-
-    <p>({{webkitbug(38995)}})</p>
-   </td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>11.60</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossorigin</code> attribute</td>
-   <td>{{CompatChrome("25")}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera("15")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Alternative stylesheets</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code> attribute {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>methods</code> attribute {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>4.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>sizes</code> attribute</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} {{bug("441770")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>load</code> and <code>error</code> events</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossorigin</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

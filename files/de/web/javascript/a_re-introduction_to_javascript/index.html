@@ -16,15 +16,15 @@ original_slug: Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript
 
 <p>Warum eine "Wieder" - Einführung? Weil {{Glossary("JavaScript")}} als <a class="external" href="http://javascript.crockford.com/javascript.html">die am meisten missverstandene Programmiersprache der Welt</a> bekannt ist. Obwohl die Sprache oft als Spielzeug abgewertet wird, besitzt sie neben ihrer Einfachheit einige mächtige Sprachfunktionen. Heutzutage wird JavaScript in einer Großzahl von wichtigen Anwendungen verwendet, was zeigt, dass Wissen über diese Technologie eine wichtige Eigenschaft für jeden Web- und Mobil-Entwickler ist.</p>
 
-<p>Es ist sinnvoll mit einem Überblick über die Sprachgeschichte zu beginnen. JavaScript wurde im Jahr 1995 von Brendan Eich entworfen, der Ingenieur bei Netscape war. JavaScript wurde erstmals 1996 mit Netscape 2 veröffentlicht. Ursprünglich hieß die Sprache LiveScript, wurde aber wegen unglücklichen Marketingentscheidung umbenannt, die sich die Popularität der Java-Sprache von Sun Microsystem zunutze machen wollte - obwohl beide wenig gemeinsam hatten. Dies ist seither eine Quelle für Verwirrung.</p>
+<p>Es ist sinnvoll mit einem Überblick über die Sprachgeschichte zu beginnen. JavaScript wurde im Jahr 1995 von Brendan Eich entworfen, der Ingenieur bei Netscape war. JavaScript wurde erstmals 1996 mit Netscape 2 veröffentlicht. Ursprünglich hieß die Sprache LiveScript, wurde aber wegen unglücklichen Marketingentscheidung umbenannt, die sich die Popularität der Java-Sprache von Sun Microsystem zunutze machen wollte - obwohl beide wenig gemeinsam hatten. Dies ist seither eine Quelle für Verwirrung.</p>
 
-<p>Einige Monate später veröffentlichte Microsoft JScript mit dem Internet Explorer 3. Diese war eine weitgehend zu JavaScript kompatibele Sprache. Einige Monate später übergab Netscape JavaScript an <a class="external" href="https://www.ecma-international.org/">Ecma International</a>, einer Europäischen Standardisierungsorganisation, welche noch im selben Jahr die ersten Edition des {{Glossary("ECMAScript")}} Standards veröffentlichten. Der Standard bekam 1999 ein bedeutendes Update mit <a class="external" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript Edition 3</a> und hält sich seither sehr stabil. Die vierte Edition des Standards wurde aufgrund von politischen Meinungsverschiedenheiten zur Komplexität der Sprache fallen gelassen. Viele Teile der vieren Edition bildeten die Basis der fünften und sechsten Edition des Standards, welche im Dezember 2009 bzw. im Juni 2015 veröffentlicht wurden.</p>
+<p>Einige Monate später veröffentlichte Microsoft JScript mit dem Internet Explorer 3. Diese war eine weitgehend zu JavaScript kompatibele Sprache. Einige Monate später übergab Netscape JavaScript an <a class="external" href="https://www.ecma-international.org/">Ecma International</a>, einer Europäischen Standardisierungsorganisation, welche noch im selben Jahr die ersten Edition des {{Glossary("ECMAScript")}} Standards veröffentlichten. Der Standard bekam 1999 ein bedeutendes Update mit <a class="external" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript Edition 3</a> und hält sich seither sehr stabil. Die vierte Edition des Standards wurde aufgrund von politischen Meinungsverschiedenheiten zur Komplexität der Sprache fallen gelassen. Viele Teile der vieren Edition bildeten die Basis der fünften und sechsten Edition des Standards, welche im Dezember 2009 bzw. im Juni 2015 veröffentlicht wurden.</p>
 
 <div class="note">
 <p>Aus Gründen der Vertrautheit verwenden wir ab hier die Bezeichnung "JavaScript" anstatt "ECMAScript".</p>
 </div>
 
-<p>Anders als viele andere Programmiersprachen, gibt es bei JavaScript kein Konzept für Eingabe und Ausgabe. JavaScript wurde als Skriptsprache in eine Hostumgebung entworfen und es ist die Aufgabe dieser Umgebung Mechanismen für die Kommunikation mit der Außenwelt bereitzustellen. Die hierfür am meisten genutzte Hostumgebung ist der Browser, jedoch findet man Interpreter auch in vielen anderen Anwendungen, zum Beispiel Adobe Acrobat, Photoshop, SVG Bilder, Yahoo! Widget Umgebung, serverseitigen Applikationen wie <a href="https://nodejs.org/">node.js</a>, NoSQL-Datenbanken wie die Open Source-Datenbank <a href="https://couchdb.apache.org/">Apache CouchDB</a>, integrierte Computer, Desktopumgebungen wie <a href="https://www.gnome.org/">GNOME</a> (eine der beliebtesten Desktopumgebungen für GNU/Linux Betriebssysteme) und vielen mehr.</p>
+<p>Anders als viele andere Programmiersprachen, gibt es bei JavaScript kein Konzept für Eingabe und Ausgabe. JavaScript wurde als Skriptsprache in eine Hostumgebung entworfen und es ist die Aufgabe dieser Umgebung Mechanismen für die Kommunikation mit der Außenwelt bereitzustellen. Die hierfür am meisten genutzte Hostumgebung ist der Browser, jedoch findet man Interpreter auch in vielen anderen Anwendungen, zum Beispiel Adobe Acrobat, Photoshop, SVG Bilder, Yahoo! Widget Umgebung, serverseitigen Applikationen wie <a href="https://nodejs.org/">node.js</a>, NoSQL-Datenbanken wie die Open Source-Datenbank <a href="https://couchdb.apache.org/">Apache CouchDB</a>, integrierte Computer, Desktopumgebungen wie <a href="https://www.gnome.org/">GNOME</a> (eine der beliebtesten Desktopumgebungen für GNU/Linux Betriebssysteme) und vielen mehr.</p>
 
 <h2 id="Überblick">Überblick</h2>
 
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript
  <li>{{jsxref("Symbol")}} (neu in ES 6)</li>
 </ul>
 
-<p>... und {{jsxref("undefined")}} und {{jsxref("null")}}, die ein wenig speziell sind. Und {{jsxref("Array")}} , die eine besonere Art von Objekt ist. Und {{jsxref("Date")}} <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Date"> </a>und {{jsxref("RegExp")}}, welche man quasi mitgeliefert bekommt. Wenn man genau sein will, sind Funktionen ebenfalls eine spezielle Art von Objekten. Also sieht das Typdiagramm eher so aus:</p>
+<p>... und {{jsxref("undefined")}} und {{jsxref("null")}}, die ein wenig speziell sind. Und {{jsxref("Array")}} , die eine besonere Art von Objekt ist. Und {{jsxref("Date")}} <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Date"> </a>und {{jsxref("RegExp")}}, welche man quasi mitgeliefert bekommt. Wenn man genau sein will, sind Funktionen ebenfalls eine spezielle Art von Objekten. Also sieht das Typdiagramm eher so aus:</p>
 
 <ul>
  <li>{{jsxref("Number")}}</li>
@@ -64,7 +64,7 @@ original_slug: Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript
 
 <h2 id="Numbers">Numbers</h2>
 
-<p>Numbers sind in JavaScript laut der Spezifikation "doppeltpräzise 64-bit Werte im IEEE 754 Format". Das hat einige interessante Konsequenzen. Es gibt in JavaScript nichts vergleichbares wie Integer, weshalb man vorsichtig mit Arithmetik umgehen muss, wenn man Mathematik wie in C oder Java nutzt.</p>
+<p>Numbers sind in JavaScript laut der Spezifikation "doppeltpräzise 64-bit Werte im IEEE 754 Format". Das hat einige interessante Konsequenzen. Es gibt in JavaScript nichts vergleichbares wie Integer, weshalb man vorsichtig mit Arithmetik umgehen muss, wenn man Mathematik wie in C oder Java nutzt.</p>
 
 <p>Achte auch auf Dinge wie:</p>
 
@@ -77,20 +77,20 @@ original_slug: Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript
 <pre class="brush: js">Math.sin(3.5);
 var umfang = 2 * Math.PI * r;</pre>
 
-<p>Man kann Strings mit der eingebauten {{jsxref("Global_Objects/parseInt", "parseInt()")}} Funktion nach Integer konvertieren. Die Funktion enthält die Basis des Zahlensystems für die Konvertierung als zweiten optionalen Parameter, welcher immer angegeben werden sollte:</p>
+<p>Man kann Strings mit der eingebauten {{jsxref("Global_Objects/parseInt", "parseInt()")}} Funktion nach Integer konvertieren. Die Funktion enthält die Basis des Zahlensystems für die Konvertierung als zweiten optionalen Parameter, welcher immer angegeben werden sollte:</p>
 
 <pre class="brush: js">parseInt("123", 10); // 123
 parseInt("010", 10); // 10
 </pre>
 
-<p>In älteren Browsern werden Strings, die mit "0" anfangen als Oktalzahlen (Basis 8) interpretiert, seit 2013 ist das aber nicht mehr so. Wenn man sich bei dem Stringformat nicht sicher ist, kann das in den älteren Browsern zu überraschenden Ergebnissen führen:</p>
+<p>In älteren Browsern werden Strings, die mit "0" anfangen als Oktalzahlen (Basis 8) interpretiert, seit 2013 ist das aber nicht mehr so. Wenn man sich bei dem Stringformat nicht sicher ist, kann das in den älteren Browsern zu überraschenden Ergebnissen führen:</p>
 
 <pre class="brush: js">parseInt("010");  //  8
 parseInt("0x10"); // 16</pre>
 
 <p>Hier sieht man, dass die {{jsxref("Global_Objects/parseInt", "parseInt()")}} Funktion den ersten String als Oktalzahl, wegen der führenden 0, und den zweiten String als Hexadezimalzahl, wegen des führenden "0x", interpretiert. Die Hexadezimalnotation ist immernoch zulässig; nur die Oktalnotation wurde entfernt, weil sie praktisch nicht mehr verwendet wird.</p>
 
-<p>Um eine Binärzahl in ein Integer zu ändern, verwendet man einfach die Basis 2:</p>
+<p>Um eine Binärzahl in ein Integer zu ändern, verwendet man einfach die Basis 2:</p>
 
 <pre class="brush: js">parseInt("11", 2); // 3</pre>
 
@@ -106,11 +106,11 @@ parseInt("0x10"); // 16</pre>
 
 <pre class="brush: js">parseInt("hello", 10); // NaN</pre>
 
-<p><code>NaN</code> ist gefährlich: Wenn es als Operand in eine mathematische Operation benutzt wird, wird das Ergebnis ebenfalls <code>NaN</code> sein;</p>
+<p><code>NaN</code> ist gefährlich: Wenn es als Operand in eine mathematische Operation benutzt wird, wird das Ergebnis ebenfalls <code>NaN</code> sein;</p>
 
 <pre class="brush: js">NaN + 5; // NaN</pre>
 
-<p>Mit der eingebauten  {{jsxref("Global_Objects/isNaN", "isNaN()")}} Funktion kann man auf <code>NaN</code> testen:</p>
+<p>Mit der eingebauten  {{jsxref("Global_Objects/isNaN", "isNaN()")}} Funktion kann man auf <code>NaN</code> testen:</p>
 
 <pre class="brush: js">isNaN(NaN); // true</pre>
 
@@ -133,7 +133,7 @@ isFinite(NaN);       // false</pre>
 
 <p>Strings sind in JavaScript eine Folge von <a href="/de/docs/Web/JavaScript/Guide/Grammar_and_types#String_Literale">Unicode-Zeichen</a>. Das sollte für alle erfreulich sein, die mit Internationalisierung arbeiten. Genauer gesagt sind Strings Folgen von UTF-16 Codeeinheit; jeder Codeeinheit ist durch eine 16-Bit Zahl repräsentiert. Jedes Unicode-Zeichen besteht aus 1 oder 2 Codeeinheiten.</p>
 
-<p>Für ein einzelnes Zeichen, verwendet man einfach einen String mit einem Zeichen.</p>
+<p>Für ein einzelnes Zeichen, verwendet man einfach einen String mit einem Zeichen.</p>
 
 <p>Um die Länge eines Strings (in Codeeinheiten) herauszufinden, nutzt man die <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/String/length">length </a>Eigenschaft:</p>
 
@@ -432,7 +432,7 @@ obj["for"] = "Simon"; // funktioniert
 
 <h2 id="Arrays">Arrays</h2>
 
-<p>Arrays sind in JavaScript ein spezieller Typ von Objekten. Sie funktionieren weitgehend wie normale Objekte (numerische Eigenschaften können nur über die <code>[]</code>-Syntax erreicht werden), besitzen jedoch eine zusätzliche Eigenschaft <code>length</code>. Der Wert dieser Eigenschaft ist immer der höchsten Index des Arrays + 1.</p>
+<p>Arrays sind in JavaScript ein spezieller Typ von Objekten. Sie funktionieren weitgehend wie normale Objekte (numerische Eigenschaften können nur über die <code>[]</code>-Syntax erreicht werden), besitzen jedoch eine zusätzliche Eigenschaft <code>length</code>. Der Wert dieser Eigenschaft ist immer der höchsten Index des Arrays + 1.</p>
 
 <p>Eine Möglichkeit ein Array zu erstellen ist die folgende:</p>
 
@@ -442,7 +442,7 @@ a[1] = 'cat';
 a[2] = 'hen';
 a.length; // 3</pre>
 
-<p>Eine praktischere Möglichkeit  ist die Erstellung über ein Array-Literal.</p>
+<p>Eine praktischere Möglichkeit  ist die Erstellung über ein Array-Literal.</p>
 
 <pre class="brush: js">var a = ['dog', 'cat', 'hen'];
 a.length; // 3</pre>
@@ -472,7 +472,7 @@ a.length; // 101</pre>
   // Tue etwas mit currentValue
 }</pre>
 
-<p>Man kann auch mit einer <a href="/de/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> Schleife über ein Array iterieren, wobei diese nicht über die Arrayelemente, sondern die Arrayindizes iteriert. Zudem wird bei einer solchen Schleife auch über Eigenschaften iteriert, die evtl. später in <code>Array.prototype</code> hinzugefügt werden. Deshalb wird diese Methode für Arrays nicht empfohlen.</p>
+<p>Man kann auch mit einer <a href="/de/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> Schleife über ein Array iterieren, wobei diese nicht über die Arrayelemente, sondern die Arrayindizes iteriert. Zudem wird bei einer solchen Schleife auch über Eigenschaften iteriert, die evtl. später in <code>Array.prototype</code> hinzugefügt werden. Deshalb wird diese Methode für Arrays nicht empfohlen.</p>
 
 <p>In ECMAScript (ES2015) wurde mit <code><a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code> eine weitere Schleife zur Iteration über Arrays eingeführt:</p>
 
@@ -555,7 +555,7 @@ a.length; // 101</pre>
 }
 </pre>
 
-<p>Das Beispiel demonstriert eine einfache Funktion. Einer JavaScript-Funktion können 0 oder mehr benannte Parameter übergeben werden. Der Funktionsrumpf kann beliebig viele Anweisungen enthalten und kann seine eigene lokalen Variablen definieren, die nur in der Funktion erreichbar sind. Das <code>return</code> Statement kann dazu benutzt werden, um jederzeit einen Rückgabewert festzulegen und die Funktion zu beenden. Wird kein <code>return</code>-Statement angegeben (oder ein leeres <code>return</code>-Statement ohne Wert), gibt JavaScript <code>undefined</code> zurück.</p>
+<p>Das Beispiel demonstriert eine einfache Funktion. Einer JavaScript-Funktion können 0 oder mehr benannte Parameter übergeben werden. Der Funktionsrumpf kann beliebig viele Anweisungen enthalten und kann seine eigene lokalen Variablen definieren, die nur in der Funktion erreichbar sind. Das <code>return</code> Statement kann dazu benutzt werden, um jederzeit einen Rückgabewert festzulegen und die Funktion zu beenden. Wird kein <code>return</code>-Statement angegeben (oder ein leeres <code>return</code>-Statement ohne Wert), gibt JavaScript <code>undefined</code> zurück.</p>
 
 <p>Die benannten Parameter sind eher als Richtlinie zu verstehen, weniger als eine Pflichtangabe. Eine Funktion kann also auch ohne Angabe der Parameter aufgerufen werden, wobei die Parameter dann den Wert <code>undefined</code> bekommen.</p>
 
@@ -594,7 +594,7 @@ add(2, 3, 4, 5); // 14
 
 avg(2, 3, 4, 5); // 3.5</pre>
 
-<p>Das ist wirklich nützlich, jedoch wirkt es noch ein bisschen lang. Um den Code ein wenig zu reduzieren, kann man den Einsatz des <code>arguments</code>-Arrays durch eine <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest Parameter Syntax</a> ersetzen. Damit können beliebig viele Argumente übergeben werden und der Code bleibt minimal. Der <strong>Rest Parameter Operator</strong> wird in der Funktionsparameterliste mit dem Format <code>...variable</code> geschrieben und enthält alle nicht benannten, der Funktion übergebenen Argumente in der Variable. Zudem kann man die <code>for</code>-Schleife durch eine <code>for...of</code>-Schleife ersetzen, um die Werte in der Variablen direkt verwenden zu können.</p>
+<p>Das ist wirklich nützlich, jedoch wirkt es noch ein bisschen lang. Um den Code ein wenig zu reduzieren, kann man den Einsatz des <code>arguments</code>-Arrays durch eine <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest Parameter Syntax</a> ersetzen. Damit können beliebig viele Argumente übergeben werden und der Code bleibt minimal. Der <strong>Rest Parameter Operator</strong> wird in der Funktionsparameterliste mit dem Format <code>...variable</code> geschrieben und enthält alle nicht benannten, der Funktion übergebenen Argumente in der Variable. Zudem kann man die <code>for</code>-Schleife durch eine <code>for...of</code>-Schleife ersetzen, um die Werte in der Variablen direkt verwenden zu können.</p>
 
 <pre class="brush: js">function avg(...args) {
   var sum = 0;
@@ -607,7 +607,7 @@ avg(2, 3, 4, 5); // 3.5</pre>
 avg(2, 3, 4, 5); // 3.5</pre>
 
 <div class="note">
-<p>Die Variable <code>args</code><strong> </strong>in der oberen Funktion<strong> </strong>enthält alle an die Funktion übergebenen Werte.</p>
+<p>Die Variable <code>args</code> in der oberen Funktion enthält alle an die Funktion übergebenen Werte.</p>
 
 <p>Es ist wichtig zu beachten, dass der Einsatz des <strong>Rest Parameter Operators</strong> in einer Funktionsdeklaration alle Argumente <strong>nach</strong> der Deklaration enthält, jedoch nicht die davor. Z. B. wird bei <code><em>function avg(</em><strong>firstValue</strong><em>, ...args)</em></code> der erste der Funktion übergebene Wert in der Variable <code>firstValue</code> gespeichert und alle folgenden Werte werden in der Variable <code>args</code> gespeichert. Das ist eine sehr nützliche Sprachfunktion, die jedoch ein neues Problem aufwirft. Die Funktion <code>avg()</code> nimmt eine mit Kommata getrennte Liste von Argumenten entgegen — was ist jedoch, wenn man den Durchschnitt eines Arrays haben möchte? Man kann die Funktion folgendermaßen umschreiben:</p>
 </div>
@@ -881,7 +881,7 @@ s.lastNameCaps();</pre>
 
 <h2 id="Closures">Closures</h2>
 
-<p>Nun wird einer der mächtigsten Abstraktionsmechanismen vorgestellt, den JavaScript mit sich bringt —  der jedoch oft auch für Verwirrung sorgt. Was passiert im nachfolgenden Codeschnipsel?</p>
+<p>Nun wird einer der mächtigsten Abstraktionsmechanismen vorgestellt, den JavaScript mit sich bringt —  der jedoch oft auch für Verwirrung sorgt. Was passiert im nachfolgenden Codeschnipsel?</p>
 
 <pre class="brush: js">function makeAdder(a) {
   return function(b) {
@@ -907,4 +907,4 @@ y(7) // ergibt 27
 
 <p>Scopeobjekte bilden eine Scopekette, die ähnlich funktioniert wie die Prototypenkette von JavaScripts Objektsystem.</p>
 
-<p>Eine <strong>Closure</strong> ist eine Kombination aus einer Funktion und dem Scopeobjekt, in dem die Funktion erstellt wurde. Closures sind in der Lage, einen Status zu speichern — als solches können sie oft an Stellen von Objekten eingesetzt werden. <a href="https://stackoverflow.com/questions/111102/how-do-javascript-closures-work">Hier sind einige gute Einführungen zu Closures zu finden</a>.</p>
+<p>Eine <strong>Closure</strong> ist eine Kombination aus einer Funktion und dem Scopeobjekt, in dem die Funktion erstellt wurde. Closures sind in der Lage, einen Status zu speichern — als solches können sie oft an Stellen von Objekten eingesetzt werden. <a href="https://stackoverflow.com/questions/111102/how-do-javascript-closures-work">Hier sind einige gute Einführungen zu Closures zu finden</a>.</p>

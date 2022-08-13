@@ -1,11 +1,6 @@
 ---
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
-tags:
-  - API
-  - DOM 遍历
-  - ShadowRoot
-translation_of: Web/API/Element/shadowRoot
 ---
 {{APIRef('Shadow DOM')}}{{SeeCompatTable}}
 

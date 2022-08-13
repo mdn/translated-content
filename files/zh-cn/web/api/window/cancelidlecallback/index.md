@@ -1,12 +1,6 @@
 ---
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
-tags:
-  - API
-  - JavaScript timers
-  - Window
-  - cancelIdleCallback
-translation_of: Web/API/Window/cancelIdleCallback
 ---
 {{APIRef}}{{SeeCompatTable}}
 
@@ -31,7 +25,7 @@ window.cancelIdleCallback(handle);
 
 ## 示例
 
-在文章 [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API) 中可以查看[ 完整示例](/en-US/docs/Web/API/Background_Tasks_API#Example) 。
+在文章 [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API) 中可以查看 [完整示例](/en-US/docs/Web/API/Background_Tasks_API#Example) 。
 
 ## 规范
 

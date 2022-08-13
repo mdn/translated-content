@@ -32,7 +32,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 在四大主流浏览器中，有两个 API 命名空间正在使用：
 
-- `browser.* `是 Firefox 和 Edge 使用的扩展 API 的标准
+- `browser.*` 是 Firefox 和 Edge 使用的扩展 API 的标准
 - `chrome.*` 是 Chrome 和 Opera 使用的扩展 API 的标准
 
 Firefox 也支持 Chrome 浏览器的 `chrome.*` 名称空间，主要用于协助扩展移植。然而，首选应该使用浏览器 `browser.*` 命名空间。除了被提议的标准外， `browser.*` 使用 promises ーー一种现代化且简单的处理异步事件机制。
@@ -48,7 +48,7 @@ Firefox 也支持 Chrome 浏览器的 `chrome.*` 名称空间，主要用于协�
 
 Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome [迁移](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)。然而，应该首选使用 promises（以及 `browser.*` 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。
 
-> **备注：** 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await ](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)或者 MDN 的 [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) 页面。
+> **备注：** 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) 或者 MDN 的 [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) 页面。
 
 #### 浏览器扩展 API 的垫片（Polyfill）
 
@@ -217,6 +217,6 @@ Firefox 和 Chrome 商店要求每个上传的扩展发布包都有一个单独�
 
 跨平台工作的主要重点可能是处理主要浏览器支持的 API 特性之间的差异。创建你的 `manifest.json` 文件应该是相对简单的，你可以手动完成。然后，您将需要考虑扩展包中的打包差异，以及提交到每个扩展商店的过程差异。
 
-您同时可以使用[ browser-extension-template](https://github.com/notlmn/browser-extension-template) 用于快速设置、生成和发布浏览器扩展项目。
+您同时可以使用 [browser-extension-template](https://github.com/notlmn/browser-extension-template) 用于快速设置、生成和发布浏览器扩展项目。
 
 根据本文中的建议，您现在应该能够创建一个在四种主要浏览器上都运行良好的扩展程序，使您能够将扩展功能交付给更多的人。

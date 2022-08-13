@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
-translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
 {{ APIRef("IndexedDB") }}
 

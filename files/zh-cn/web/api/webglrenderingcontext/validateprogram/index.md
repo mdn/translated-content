@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/validateProgram
 ---
 {{APIRef("WebGL")}}
 

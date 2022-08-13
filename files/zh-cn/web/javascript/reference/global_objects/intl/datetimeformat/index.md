@@ -50,7 +50,7 @@ Intl.DateTimeFormat.call(this[, locales[, options]])
         - `hour`, `minute`, `second`
         - `hour`, `minute`
 
-        实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集: [完全匹配`"basic"算法` ](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher)和 一种依赖于“best fit”算法的实现。
+        实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集: [完全匹配`"basic"算法`](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) 和 一种依赖于“best fit”算法的实现。
 
         - `weekday`
           - : 工作日的展现方式：可能的值有 `"narrow"`, `"short"`, `"long"`

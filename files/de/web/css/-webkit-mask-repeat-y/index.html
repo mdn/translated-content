@@ -32,7 +32,7 @@ translation_of: Web/CSS/-webkit-mask-repeat-y
  <dt>repeat</dt>
  <dd>Das Maskenbild wird vertikal wiederholt.</dd>
  <dt>no-repeat</dt>
- <dd>Das Maskenbild wird nicht vertikal wiederholt, nur eine Kopie des Maskenbildes wird in vertikaler Richtung gezeichnet. Der vertikale Rest des Inhalts des maskierten Elements wird nicht angezeigt.</dd>
+ <dd>Das Maskenbild wird nicht vertikal wiederholt, nur eine Kopie des Maskenbildes wird in vertikaler Richtung gezeichnet. Der vertikale Rest des Inhalts des maskierten Elements wird nicht angezeigt.</dd>
  <dt>space</dt>
  <dd>Das Bild wird so oft wie möglich wiederholt, ohne zu beschneiden. Das erste und das letzte Bild werden am oberen und unteren Rand des Elements fixiert, und Leerräume werden gleichmäßig zwischen den Bildern verteilt. Die Eigenschaft {{cssxref ("mask-position")}} wird ignoriert, es sei denn, nur ein Bild kann ohne Übersteuerung angezeigt werden. Der einzige Fall, in dem Clipping mit Leerzeichen auftritt, ist, wenn nicht genügend Platz vorhanden ist, um ein Bild anzuzeigen.</dd>
  <dt>round</dt>
@@ -56,13 +56,13 @@ translation_of: Web/CSS/-webkit-mask-repeat-y
 }
 </pre>
 
-<h3 id="Support_für_mehrere_Bildmasken">Support für mehrere Bildmasken</h3>
+<h3 id="Support_für_mehrere_Bildmasken">Support für mehrere Bildmasken</h3>
 
 <p>Sie können für jedes Maskenbild, getrennt durch Kommas, einen anderen <code>&lt;repeat-style&gt;</code> angeben:</p>
 
 <pre class="brush: css">.examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-y: repeat, space;
+  -webkit-mask-repeat-y: repeat, space;
 }
 </pre>
 
@@ -70,53 +70,7 @@ translation_of: Web/CSS/-webkit-mask-repeat-y
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Während die Eigenschaft selbst erkannt wird, akzeptiert sie keine Werte.</p>
 

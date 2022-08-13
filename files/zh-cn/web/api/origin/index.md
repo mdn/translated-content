@@ -1,12 +1,6 @@
 ---
 title: origin
 slug: Web/API/origin
-tags:
-  - global scope
-  - origin
-  - serialized
-translation_of: Web/API/origin
-original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
 {{APIRef()}}{{SeeCompatTable}}
 

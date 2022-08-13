@@ -29,14 +29,11 @@ arr</var>.copyWithin(<var>target</var>, <var>start</var>, <var>end</var>)</code>
 
 <dl>
  <dt><code>target</code></dt>
- <dd>Null-Basierter Index an dem die kopierte Sequenz kopiert wird. Wenn <code>target</code> negativ ist, wird vom Ende angefangen zu zählen.</dd>
- <dd>Wenn <code>target</code> glößer oder gleich <code>arr.length</code> ist, wird nicht kopiert. Wenn <code>target</code> nach <code>start</code> positioniert ist, wird die kopierte Sequenz gekürzt, um in die Länge des Arrays zu passen.</dd>
+ <dd>Null-Basierter Index an dem die kopierte Sequenz kopiert wird. Wenn <code>target</code> negativ ist, wird vom Ende angefangen zu zählen. <br/><br/>Wenn <code>target</code> glößer oder gleich <code>arr.length</code> ist, wird nicht kopiert. Wenn <code>target</code> nach <code>start</code> positioniert ist, wird die kopierte Sequenz gekürzt, um in die Länge des Arrays zu passen.</dd>
  <dt><code>start</code> {{optional_inline}}</dt>
- <dd>Null-Basierter Index an dem das Kopieren begonnen werden soll. Wenn <code>start</code> negativ ist, wird vom Ende angefangen zu zählen.</dd>
- <dd>Wenn <code>start</code> nicht angegeben wird, nutzt <code>copyWithin</code> den Standardwert 0.</dd>
+ <dd>Null-Basierter Index an dem das Kopieren begonnen werden soll. Wenn <code>start</code> negativ ist, wird vom Ende angefangen zu zählen. <br/><br/>Wenn <code>start</code> nicht angegeben wird, nutzt <code>copyWithin</code> den Standardwert 0.</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>Null-Basierter Index an dem das Kopieren beendet werden soll. <code>end</code> ist exklusiv und wird deswegen nicht mitkopiert. Wenn <code>end</code> negativ ist, wird vom Ende angefangen zu zählen.</dd>
- <dd>Wenn <code>end</code> nicht angegeben wird, nutzt <code>copyWithin</code> den Standardwert <code>arr.length</code>.</dd>
+ <dd>Null-Basierter Index an dem das Kopieren beendet werden soll. <code>end</code> ist exklusiv und wird deswegen nicht mitkopiert. Wenn <code>end</code> negativ ist, wird vom Ende angefangen zu zählen. <br/><br/>Wenn <code>end</code> nicht angegeben wird, nutzt <code>copyWithin</code> den Standardwert <code>arr.length</code>.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -45,7 +42,7 @@ arr</var>.copyWithin(<var>target</var>, <var>start</var>, <var>end</var>)</code>
 
 <h2 id="Description" name="Description">Beschreibung</h2>
 
-<p><code>copyWithin</code> arbeitet wie die <code>memcpy</code> Funktion in C und C++ und ist eine hoch perfomante Methode zum Verschieben von Daten in einem {{jsxref("Array")}} oder {{jsxref("TypedArray")}}. Die Sequenz wird in einer Operation kopiert und eingefügt; Die eingefügte Sequenz wird den kopierten Wert haben, auch wenn sich die Regionen im Array überschneiden.</p>
+<p><code>copyWithin</code> arbeitet wie die <code>memcpy</code> Funktion in C und C++ und ist eine hoch perfomante Methode zum Verschieben von Daten in einem {{jsxref("Array")}} oder {{jsxref("TypedArray")}}. Die Sequenz wird in einer Operation kopiert und eingefügt; Die eingefügte Sequenz wird den kopierten Wert haben, auch wenn sich die Regionen im Array überschneiden.</p>
 
 <p>Die <code>copyWithin</code> Funktion ist absichtlich generisch. Es wird nicht vorausgesetzt, dass <code>this</code> ein {{jsxref("Array")}} Objekt ist.</p>
 
@@ -162,12 +159,12 @@ i32a.copyWithin(0, 2);
   <tr>
    <td>{{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}}</td>
    <td>{{Spec2('ES2016')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

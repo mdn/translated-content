@@ -1,7 +1,6 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
-translation_of: Web/API/Document/visibilityState
 ---
 {{ ApiRef("DOM") }}
 

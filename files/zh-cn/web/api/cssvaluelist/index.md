@@ -1,13 +1,6 @@
 ---
 title: CSSValueList
 slug: Web/API/CSSValueList
-tags:
-  - API
-  - CSS
-  - DOM
-  - 参考
-  - 接口
-translation_of: Web/API/CSSValueList
 ---
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 

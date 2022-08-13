@@ -1,8 +1,6 @@
 ---
 title: element.oncopy
 slug: Web/API/HTMLElement/copy_event
-translation_of: Web/API/HTMLElement/oncopy
-original_slug: Web/API/HTMLElement/oncopy
 ---
 {{ ApiRef() }}
 

@@ -1,17 +1,6 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
-tags:
-  - API
-  - Introduction
-  - NeedsTranslation
-  - Overview
-  - Permissions
-  - Permissions API
-  - TopicStub
-  - Web
-  - access
-translation_of: Web/API/Permissions_API
 ---
 {{DefaultAPISidebar("Permissions API")}}
 

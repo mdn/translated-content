@@ -34,17 +34,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Die <code>push</code> Methode fügt Werte an das Ende eines Arrays an.</p>
+<p>Die <code>push</code> Methode fügt Werte an das Ende eines Arrays an.</p>
 
-<p class="p1"><code>push</code> ist absichtlich generisch gehalten. Die Methode kann mit Hilfe von {{jsxref("Function.call", "call()")}} und {{jsxref("Function.apply", "apply()")}} auch auf Array ähnliche Objekte angewendet werden. Die Methode wählt anhand der <code>length</code> Eigenschaft den Punkt aus, an dem die Werte eingefügt werden. Falls die <code>length</code> Eigenschaft nicht in eine Zahl umgewandelt werden kann, wird 0 als Index verwendet. Das gilt auch für den Fall, dass die <code>length</code> Eigenschaft nicht vorhanden ist. Die <code>length</code> Eigenschaft wird daraufhin erstellt.</p>
+<p><code>push</code> ist absichtlich generisch gehalten. Die Methode kann mit Hilfe von {{jsxref("Function.call", "call()")}} und {{jsxref("Function.apply", "apply()")}} auch auf Array ähnliche Objekte angewendet werden. Die Methode wählt anhand der <code>length</code> Eigenschaft den Punkt aus, an dem die Werte eingefügt werden. Falls die <code>length</code> Eigenschaft nicht in eine Zahl umgewandelt werden kann, wird 0 als Index verwendet. Das gilt auch für den Fall, dass die <code>length</code> Eigenschaft nicht vorhanden ist. Die <code>length</code> Eigenschaft wird daraufhin erstellt.</p>
 
-<p class="p2">Obwohl {{jsxref("Global_Objects/String", "Strings", "", 1)}} native, Array-ähnliche Objekte sind, sind sie in Anwendungen dieser Methode nicht geeignet, da Strings unveränderlich sind. Gleiches gilt für das native, Array-ähnliche Objekt {{jsxref("Functions/arguments", "arguments", "", 1)}}.</p>
+<p>Obwohl {{jsxref("Global_Objects/String", "Strings", "", 1)}} native, Array-ähnliche Objekte sind, sind sie in Anwendungen dieser Methode nicht geeignet, da Strings unveränderlich sind. Gleiches gilt für das native, Array-ähnliche Objekt {{jsxref("Functions/arguments", "arguments", "", 1)}}.</p>
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
 <h3 id="Example:_Adding_elements_to_an_array" name="Example:_Adding_elements_to_an_array">Elemente zu einem Array hinzufügen</h3>
 
-<p>Der folgende Quelltext erstellt ein <code>sports</code> Array mit zwei Elementen und fügt anschließend zwei weitere Elemente hinzu. Die Variable <code>total</code> enthält die neue Länge des Arrays.</p>
+<p>Der folgende Quelltext erstellt ein <code>sports</code> Array mit zwei Elementen und fügt anschließend zwei weitere Elemente hinzu. Die Variable <code>total</code> enthält die neue Länge des Arrays.</p>
 
 <pre class="brush: js">var sports = ['soccer', 'baseball'];
 var total = sports.push('football', 'swimming');
@@ -108,17 +108,17 @@ console.log(obj.length);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

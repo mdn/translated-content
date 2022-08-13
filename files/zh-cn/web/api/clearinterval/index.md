@@ -1,12 +1,6 @@
 ---
 title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
-tags:
-  - API
-  - 参考
-  - 方法
-translation_of: Web/API/clearInterval
-original_slug: Web/API/clearInterval
 ---
 {{ApiRef("HTML DOM")}}
 

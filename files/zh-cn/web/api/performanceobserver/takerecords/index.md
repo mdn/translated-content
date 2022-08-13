@@ -1,16 +1,6 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
-translation_of: Web/API/PerformanceObserver/takeRecords
 ---
 {{APIRef("Performance Timeline API")}}
 

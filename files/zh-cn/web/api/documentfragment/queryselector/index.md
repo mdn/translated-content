@@ -1,7 +1,6 @@
 ---
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
-translation_of: Web/API/DocumentFragment/querySelector
 ---
 {{ApiRef("DOM")}}
 

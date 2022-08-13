@@ -19,8 +19,8 @@ translation_of: Web/JavaScript/Reference/Statements/export
 
 存在两种 exports 导出方式：
 
-1.  命名导出（每个模块包含任意数量）
-2.  默认导出（每个模块包含一个）
+1. 命名导出（每个模块包含任意数量）
+2. 默认导出（每个模块包含一个）
 
 ```js
 // 导出单个特性
@@ -127,7 +127,7 @@ export { function1, function2 };
 
 但这里的 `function1` 和 `function2` 在当前模块中变得不可用。
 
-> **备注：**尽管与 import 等效，但以下语法在语法上无效：
+> **备注：** 尽管与 import 等效，但以下语法在语法上无效：
 
 ```js
 import DefaultExport from 'bar.js'; // 有效的

@@ -1,13 +1,6 @@
 ---
 title: WebGLSampler
 slug: Web/API/WebGLSampler
-tags:
-  - API
-  - WebGL
-  - WebGL2
-  - 参考
-  - 实验性
-translation_of: Web/API/WebGLSampler
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

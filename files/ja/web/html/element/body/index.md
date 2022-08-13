@@ -41,7 +41,7 @@ translation_of: Web/HTML/Element/body
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        開始タグは、内容の先頭が空白文字、コメント、 {{HTMLElement("script")}} 要素、 {{HTMLElement("style")}} 要素でない場合は省略可能です。終了タグは、 `<body>` 要素に内容または開始タグがあり、かつ、直後のノードがコメントでない場合は省略可能です。
+        開始タグは、内容の先頭が空白文字、コメント、 {{HTMLElement("script")}} 要素、 {{HTMLElement("style")}} 要素でない場合は省略可能です。終了タグは、 <code>&#x3C;body></code> 要素に内容または開始タグがあり、かつ、直後のノードがコメントでない場合は省略可能です。
       </td>
     </tr>
     <tr>
@@ -141,7 +141,6 @@ translation_of: Web/HTML/Element/body
   - : body の上マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-top")}} プロパティを使用してください。**
 - {{htmlattrdef("vlink")}} {{deprecated_inline}}
   - : 訪問済みのハイパーリンクの文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref(":visited")}} 擬似クラスで {{cssxref("color")}} プロパティを使用してください。**
-</dl>
 
 ## 例
 

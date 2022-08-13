@@ -1,11 +1,10 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
-translation_of: Web/API/HTMLMediaElement/readyState
 ---
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.readyState `**属性返回音频/视频的当前就绪状态。
+**`HTMLMediaElement.readyState`** 属性返回音频/视频的当前就绪状态。
 
 ## 语法
 

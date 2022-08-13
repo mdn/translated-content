@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 {{JSRef}}
 
-**`keys() `**方法返回一个包含数组中每个索引键的**`Array Iterator`**对象。
+**`keys()`** 方法返回一个包含数组中每个索引键的**`Array Iterator`**对象。
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 

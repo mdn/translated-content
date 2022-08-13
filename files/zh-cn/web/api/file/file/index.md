@@ -1,7 +1,6 @@
 ---
 title: File.File()
 slug: Web/API/File/File
-translation_of: Web/API/File/File
 ---
 {{APIRef("File")}}
 

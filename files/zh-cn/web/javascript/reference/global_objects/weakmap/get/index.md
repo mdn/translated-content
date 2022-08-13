@@ -16,7 +16,7 @@ wm.get(key);
 ### 参数
 
 - key
-  - : 必须。 想要从 `WeakMap `获取的元素的键。
+  - : 必须。 想要从 `WeakMap` 获取的元素的键。
 
 ### 返回值
 
@@ -24,7 +24,7 @@ wm.get(key);
 
 ## 例子
 
-### 使用 `get `方法``
+### 使用 `get` 方法
 
 ```js
 var wm = new WeakMap();

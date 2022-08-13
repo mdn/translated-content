@@ -37,9 +37,11 @@ init();</pre>
 
 <pre class="brush: js">function makeFunc() {
   var name = "Mozilla";
+
   function displayName() {
     alert(name);
   }
+
   return displayName;
 };
 
@@ -137,9 +139,11 @@ document.getElementById('size-16').onclick = size16;
 
 <pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;
+
   function changeBy(val) {
     privateCounter += val;
   }
+
   return {
     increment: function() {
       changeBy(1);
@@ -154,10 +158,14 @@ document.getElementById('size-16').onclick = size16;
 })();
 
 alert(Counter.value()); /* Alerts 0 */
+
 Counter.increment();
 Counter.increment();
+
 alert(Counter.value()); /* Alerts 2 */
+
 Counter.decrement();
+
 alert(Counter.value()); /* Alerts 1 */
 </pre>
 
@@ -171,9 +179,11 @@ alert(Counter.value()); /* Alerts 1 */
 
 <pre class="brush: js">var makeCounter = function() {
   var privateCounter = 0;
+
   function changeBy(val) {
     privateCounter += val;
   }
+
   return {
     increment: function() {
       changeBy(1);
@@ -189,11 +199,16 @@ alert(Counter.value()); /* Alerts 1 */
 
 var Counter1 = makeCounter();
 var Counter2 = makeCounter();
+
 alert(Counter1.value()); /* Alerts 0 */
+
 Counter1.increment();
 Counter1.increment();
+
 alert(Counter1.value()); /* Alerts 2 */
+
 Counter1.decrement();
+
 alert(Counter1.value()); /* Alerts 1 */
 alert(Counter2.value()); /* Alerts 0 */
 </pre>
@@ -285,6 +300,7 @@ setupHelp();
 <pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
+
   this.getName = function() {
     return this.name;
   };
@@ -301,6 +317,7 @@ setupHelp();
   this.name = name.toString();
   this.message = message.toString();
 }
+
 MyObject.prototype = {
   getName: function() {
     return this.name;
@@ -317,9 +334,11 @@ MyObject.prototype = {
   this.name = name.toString();
   this.message = message.toString();
 }
+
 MyObject.prototype.getName = function() {
   return this.name;
 };
+
 MyObject.prototype.getMessage = function() {
   return this.message;
 };
@@ -327,18 +346,21 @@ MyObject.prototype.getMessage = function() {
 
 <p>Код выше можно сделать аккуратнее:</p>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">MyObject<span class="punctuation token" style="color: #999999;">(</span></span>name<span class="punctuation token" style="color: #999999;">,</span> message<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-    <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>name <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> name<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">toString<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-    <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>message <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> message<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">toString<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
-<span class="punctuation token" style="color: #999999;">(</span><span class="keyword token" style="color: #0077aa;">function</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-    <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>getName <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">function</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-        <span class="keyword token" style="color: #0077aa;">return</span> <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>name<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span>
-    <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>getMessage <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">function</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-        <span class="keyword token" style="color: #0077aa;">return</span> <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>message<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">call<span class="punctuation token" style="color: #999999;">(</span></span>MyObject<span class="punctuation token" style="color: #999999;">.</span>prototype<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+<pre class="brush: js">function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+
+(function() {
+  this.getName = function() {
+    return this.name;
+  };
+
+  this.getMessage = function() {
+    return this.message;
+  };
+}).call(MyObject.prototype);
+</pre>
 
 <p>В обоих примерах выше методы определяются один раз — в прототипе. И все объекты, использующие данный прототип, будут использовать это определение без дополнительного расхода вычислительных ресурсов. Смотрите подробное описание в статье <a href="/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">Подробнее об объектной модели</a>.</p>
 

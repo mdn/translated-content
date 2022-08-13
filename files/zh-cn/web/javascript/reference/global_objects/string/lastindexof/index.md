@@ -41,7 +41,7 @@ str.lastIndexOf(searchValue[, fromIndex])
 'canal'.lastIndexOf('', 2);   // returns 2
 ```
 
-> **备注：**`'abab'.lastIndexOf('ab', 2)` 将返回 2 而不是 0，因为 fromIndex 只限制待匹配字符串的开头。
+> **备注：** `'abab'.lastIndexOf('ab', 2)` 将返回 2 而不是 0，因为 fromIndex 只限制待匹配字符串的开头。
 
 (例如'abadefgabm'.lastIndexOf('ab', 7) 返回 7，虽然查找的'ab'中的 b 已经在 index=8 的位置了从 index=7 的 a 处向左查找仍是能找到自身 a 加上其后连成 ab，因为 fromIndex 指的是待匹配字符串的开头那一个)
 

@@ -1,7 +1,6 @@
 ---
 title: Window.scrollbars
 slug: Web/API/Window/scrollbars
-translation_of: Web/API/Window/scrollbars
 ---
 {{ APIRef() }}
 

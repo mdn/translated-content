@@ -1,7 +1,6 @@
 ---
 title: document.implementation
 slug: Web/API/Document/implementation
-translation_of: Web/API/Document/implementation
 ---
 {{ApiRef}}
 

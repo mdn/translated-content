@@ -173,9 +173,9 @@ switch (expression) {
 }
 ```
 
-程序首先查找一个与 `expression `匹配的 `case `语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 `default `语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch `语句后面的语句。`default` 语句通常出现在 switch 语句里的最后面，当然这不是必须的。
+程序首先查找一个与 `expression` 匹配的 `case` 语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 `default` 语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch` 语句后面的语句。`default` 语句通常出现在 switch 语句里的最后面，当然这不是必须的。
 
-`可选的 break` 语句与每个 `case` 语句相关联， 保证在匹配的语句被执行后程序可以跳出 `switch `并且继续执行 `switch` 后面的语句。如果 break 被忽略，则程序将继续执行 switch 语句中的下一条语句。
+`可选的 break` 语句与每个 `case` 语句相关联， 保证在匹配的语句被执行后程序可以跳出 `switch` 并且继续执行 `switch` 后面的语句。如果 break 被忽略，则程序将继续执行 switch 语句中的下一条语句。
 
 **示例**
 在如下示例中，如果 `fruittype` 等于 "Bananas", 程序匹配到对应 "Bananas" 的`case` 语句，并执行相关语句。 当执行到 `break` 时，程序结束了 `switch` 并执行 `switch` 后面的语句。 如果不写 `break` ，那么程序将会执行 `case "Cherries"` 下的语句。
@@ -208,8 +208,8 @@ document.write("Is there anything else you'd like?<br>");
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
 
-- [`throw` ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
-- [`try...catch` ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
+- [`throw`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
+- [`try...catch`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
 
 ### 异常类型
 
@@ -235,7 +235,7 @@ throw true;       // Boolean type
 throw {toString: function() { return "I'm an object!"; } };
 ```
 
-> **备注：**你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
+> **备注：** 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
 
 ```js
 // Create an object type UserException

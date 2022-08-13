@@ -1,19 +1,6 @@
 ---
 title: HTMLVideoElement.autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Reference
-  - Video
-  - pip
-browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
 {{APIRef("HTML DOM")}}
 

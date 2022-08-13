@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-tags:
-  - API
-  - CSSOM
-  - 参考
-  - 只读
-  - 属性
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
 {{ APIRef("HTML DOM") }}
 

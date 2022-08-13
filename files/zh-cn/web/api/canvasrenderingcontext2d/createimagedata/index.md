@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D/createImageData
 ---
 {{APIRef}}
 

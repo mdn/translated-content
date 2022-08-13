@@ -1,7 +1,6 @@
 ---
 title: DeviceOrientationEvent.gamma
 slug: Web/API/DeviceOrientationEvent/gamma
-translation_of: Web/API/DeviceOrientationEvent/gamma
 ---
 {{ apiref("Device Orientation Events") }}
 

@@ -54,7 +54,7 @@ const WIDE_COLUMNS = 120;
 
 #### `const`, `let` or `var`?
 
-如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 关键字来声明一个拥有块作用域的变量，或者使用 `var `来声明一个全局变量。
+如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 关键字来声明一个拥有块作用域的变量，或者使用 `var` 来声明一个全局变量。
 
 ```js example-good
 let columns = 80;

@@ -1,16 +1,12 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-tags:
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
 
-要获得这个接口的对象，可以通过在 `<canvas> 元素上调用 `{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：
+要获得这个接口的对象，可以通过在 `<canvas>`  元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：
 
 ```js
 var canvas = document.getElementById('myCanvas');
@@ -223,7 +219,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
   - : 返回程序对象的信息。
 - {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-  - : 返回 `WebGLProgram `对象的信息日志。
+  - : 返回 `WebGLProgram` 对象的信息日志。
 - {{domxref("WebGLRenderingContext.getShaderParameter()")}}
   - : 返回着色器的信息。
 - {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}

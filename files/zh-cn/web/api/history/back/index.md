@@ -1,10 +1,6 @@
 ---
 title: back()
 slug: Web/API/History/back
-tags:
-  - HTML5
-  - History
-translation_of: Web/API/History/back
 ---
 {{APIRef("DOM")}}
 

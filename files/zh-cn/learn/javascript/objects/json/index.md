@@ -87,7 +87,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-如果我们要加载对象进入 JavaScript 程序，以保存为一个名为 `superHeroes `对象为例，我们使用 . 或 \[] 访问对象内的数据（关于。和 \[] 概念，见 [对象基础](/en-US/docs/Learn/JavaScript/Objects/Basics) ）。如：
+如果我们要加载对象进入 JavaScript 程序，以保存为一个名为 `superHeroes` 对象为例，我们使用 . 或 \[] 访问对象内的数据（关于。和 \[] 概念，见 [对象基础](/en-US/docs/Learn/JavaScript/Objects/Basics) ）。如：
 
 ```js
 superHeroes.hometown
@@ -100,11 +100,11 @@ superHeroes["active"]
 superHeroes["members"][1]["powers"][2]
 ```
 
-1.  首先我们有变量名 `superHeroes`，储存对象。
-2.  在对象中我们想访问 `members` 属性，所以我们使用 `["members"]`。
-3.  `members `包含有对象数组，我们想要访问第二个元素，所以我们使用`[1]`。
-4.  在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
-5.  `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
+1. 首先我们有变量名 `superHeroes`，储存对象。
+2. 在对象中我们想访问 `members` 属性，所以我们使用 `["members"]`。
+3. `members` 包含有对象数组，我们想要访问第二个元素，所以我们使用`[1]`。
+4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
+5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
 > **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
 
@@ -180,19 +180,19 @@ var section = document.querySelector('section');
 
 为了载入 JSON 到页面中，我们将使用 一个名为`XMLHTTPRequest`的 API（常称为 XHR）。这是一个非常有用的 JavaScript 对象，使我们能够通过代码来向服务器请求资源文件 (如：图片，文本，JSON，甚至 HTML 片段)，意味着我们可以更新小段内容而不用重新加载整个页面。这将有更多响应页面，听起来让人兴奋，但是这部分超出我们本部分的文章，所以就不多详述了。
 
-1.  首先，我们将保存一个即将访问的 URL 作为变量。在您的 JavaScript 代码的底部添加下面的代码：
+1. 首先，我们将保存一个即将访问的 URL 作为变量。在您的 JavaScript 代码的底部添加下面的代码：
 
     ```js
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2.  为了创建一个 HTTP 请求，我们需要创建一个 HTTP 请求对象，通过 new 构造函数的形式。在您最下面的代码中写入：
+2. 为了创建一个 HTTP 请求，我们需要创建一个 HTTP 请求对象，通过 new 构造函数的形式。在您最下面的代码中写入：
 
     ```js
     var request = new XMLHttpRequest();
     ```
 
-3.  现在我们需要使用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函数打开一个新的请求，添加如下代码：
+3. 现在我们需要使用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函数打开一个新的请求，添加如下代码：
 
     ```js
     request.open('GET', requestURL);
@@ -203,14 +203,14 @@ var section = document.querySelector('section');
     - HTTP 方法，网络连接时使用。这个示例中 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 就可以了，因为我们只要获得简单的数据。
     - URL，用于指向请求的地址。我们使用之前保存的变量。
 
-4.  接下来，添加，两行代码，我们设定 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 为 JSON，所以服务器将知道我们想要返回一个 JSON 对象，然后发送请求 :
+4. 接下来，添加，两行代码，我们设定 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 为 JSON，所以服务器将知道我们想要返回一个 JSON 对象，然后发送请求 :
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5.  最后一点内容涉及相应来自服务器的返回数据，然后处理它，添加如下代码在您先前的代码下方：
+5. 最后一点内容涉及相应来自服务器的返回数据，然后处理它，添加如下代码在您先前的代码下方：
 
     ```js
     request.onload = function() {
@@ -222,7 +222,7 @@ var section = document.querySelector('section');
 
 这儿我们保存了相应我们请求的数据 (访问 [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) 属性) 于变量 `superHeroes` ;这个变量现在含有 JSON！我们现在把`superHeroes`传给两个函数，第一个函数将会用正确的数据填充`<header>`，同时第二个函数将创建一个信息卡片，然后把它插入`<section>`中。
 
-我们把代码包在事件处理函数中，当请求对象`load`事件触发时执行代码 (`见onload`)，这是因为请求对象`load`事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response `是绝对可以访问的。
+我们把代码包在事件处理函数中，当请求对象`load`事件触发时执行代码 (`见onload`)，这是因为请求对象`load`事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
 
 ### 定位 header
 
@@ -240,7 +240,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-我们称参数为 `jsonObj`，那也是为什么我们要在其中调用 JSON 对象。这儿我们首先使用 `createElement() `创建了一个 `<h1>` 节点，将它的 [`textContent`](/en-US/docs/Web/API/Node/textContent) 设为 JSON 对象的 `squadName` 属性，然后通过 `appendChild() `把它加入 `<header>`中。然后我们对段落做了相同的一件事情：创建，设置内容，追加到 `<header>`。唯一的不同在于它的内容设为一个与 JSON 内属性 `homeTown `和`formed`相关联的字符串。
+我们称参数为 `jsonObj`，那也是为什么我们要在其中调用 JSON 对象。这儿我们首先使用 `createElement()` 创建了一个 `<h1>` 节点，将它的 [`textContent`](/en-US/docs/Web/API/Node/textContent) 设为 JSON 对象的 `squadName` 属性，然后通过 `appendChild()` 把它加入 `<header>`中。然后我们对段落做了相同的一件事情：创建，设置内容，追加到 `<header>`。唯一的不同在于它的内容设为一个与 JSON 内属性 `homeTown` 和`formed`相关联的字符串。
 
 ### 创建英雄信息卡片
 
@@ -281,16 +281,16 @@ function showHeroes(jsonObj) {
 }
 ```
 
-首先，我们保存了 JSON 的 `members `属性作为一个变量。这个数组含有多个带有英雄信息的对象。
+首先，我们保存了 JSON 的 `members` 属性作为一个变量。这个数组含有多个带有英雄信息的对象。
 
 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
 
-1.  创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>。`
-2.  设置 `<h2>` 为当前英雄的 `name`。
-3.  使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
-4.  保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。
-5.  使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
-6.  最后一件事情是追加` <h2>,<p>,还有``<ul>进入 ` `<article>` (`myArticle`)。然后将`<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
+1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>。`
+2. 设置 `<h2>` 为当前英雄的 `name`。
+3. 使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
+4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。
+5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
+6. 最后一件事情是追加` <h2>,<p>,还有``<ul>进入 ` `<article>` (`myArticle`)。然后将`<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
 

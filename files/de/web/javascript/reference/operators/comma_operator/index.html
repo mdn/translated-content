@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 
 <p>Der folgende Code gibt in der Konsole die Werte der diagonalen Elemente im Array aus:</p>
 
-<pre class="brush:js;highlight:[1]">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
+<pre class="brush:js">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
   console.log('a[' + i + '][' + j + '] = ' + a[i][j]);</pre>
 
 <p>Zu Beachten ist, dass das Komma in Zuweisungen, wie etwa bei der <code>var</code> Deklaration, nicht den erwarteten Effekt des Kommaoperators zu haben scheint, da Zuweisungen nicht in einem Ausdruck existieren. Im folgenden Beispiel wird <code>a</code> auf den Wert von <code>b = 3</code> gesetzt (welcher 3 ist), aber <code>c = 4</code> wird dennoch ausgewertet und dessen Ergebnis wird in der Konsole ausgegeben (i.e., 4). Das ist auf die <a href="/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Operator precedence</a> zurückzuführen.</p>
@@ -74,17 +74,17 @@ console.log(x); // 6 (ganz rechts)
   <tr>
    <td>{{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES1', '#sec-11.14', 'Comma operator')}}</td>

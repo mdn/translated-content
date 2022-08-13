@@ -1,15 +1,6 @@
 ---
 title: Console.timeLog()
 slug: Web/API/Console/timeLog
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
-translation_of: Web/API/Console/timeLog
 ---
 {{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
@@ -36,7 +27,7 @@ console.timeLog(label);
 default: 1042ms
 ```
 
-如果传入了一个已经存在的 `label` ，则会以 `label: `作为引导返回数据：
+如果传入了一个已经存在的 `label` ，则会以 `label:` 作为引导返回数据：
 
 ```plain
 label: 1242ms

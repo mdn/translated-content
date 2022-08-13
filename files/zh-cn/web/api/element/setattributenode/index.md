@@ -1,11 +1,6 @@
 ---
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-translation_of: Web/API/Element/setAttributeNode
 ---
 {{ APIRef("DOM") }}
 

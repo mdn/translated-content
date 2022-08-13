@@ -1,7 +1,6 @@
 ---
 title: WebGLActiveInfo
 slug: Web/API/WebGLActiveInfo
-translation_of: Web/API/WebGLActiveInfo
 ---
 {{APIRef("WebGL")}}
 

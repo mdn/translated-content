@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 - {{jsxref("Reflect.apply()", "Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)")}}
   - : 对一个函数进行调用操作，同时可以传入一个数组作为调用参数。和 {{jsxref("Function.prototype.apply()")}} 功能类似。
 - {{jsxref("Reflect.construct()", "Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])")}}
-  - : 对构造函数进行 [`new` ](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)操作，相当于执行 `new target(...args)`。
+  - : 对构造函数进行 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作，相当于执行 `new target(...args)`。
 - {{jsxref("Reflect.defineProperty()", "Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)")}}
   - : 和 {{jsxref("Object.defineProperty()")}} 类似。如果设置成功就会返回 `true`
 - {{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}

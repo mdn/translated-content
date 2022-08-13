@@ -43,7 +43,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 本教程提供了，有关选择托管站点的选项的一些指导，简要概述了为使您的 Express 应用程序准备好生产，所需执行的操作，以及如何将 LocalLibrary 网站安装到 [Heroku](https://www.heroku.com/)云托管上的工作示例服务。
 
-请记住，您不必使用 Heroku - 还有其他托管服务可用。我们还提供了一个单独的教程，以展示如何在 [PWS/Cloud Foundry ](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)上安装 LocalLibrary。
+请记住，您不必使用 Heroku - 还有其他托管服务可用。我们还提供了一个单独的教程，以展示如何在 [PWS/Cloud Foundry](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安装 LocalLibrary。
 
 ## 什么是生产环境？
 
@@ -85,7 +85,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 - 额外的好处。一些提供商将提供免费域名和 SSL 证书支持，否则您将不得不为此另外支付费用。
 - 您所依赖的“免费”等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着您最好在一开始就使用其他服务！
 
-当你刚开始时，好消息是有很多网站提供“免费”的计算环境，尽管有一些条件。例如， [Heroku ](https://www.heroku.com/)“永远”提供免费但资源有限的 PaaS 环境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure ](https://azure.microsoft.com/en-us/pricing/details/app-service/)和开源选项 [PWS/Cloud Foundry ](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)在您第一次加入时，提供免费信用额度。
+当你刚开始时，好消息是有很多网站提供“免费”的计算环境，尽管有一些条件。例如， [Heroku](https://www.heroku.com/) “永远”提供免费但资源有限的 PaaS 环境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和开源选项 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入时，提供免费信用额度。
 
 许多提供商还拥有“基本”层，可提供更多有用的计算能力，和更少的限制。举例来说， [Digital Ocean](https://www.digitalocean.com/) 是一个流行的托管服务提供商，它提供了一个相对便宜的基本计算层（在本教程写作时，是每月 5 美元的较低范围）。
 
@@ -111,7 +111,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 记录呼叫会对高流量网站产生影响。在生产环境中，您可能需要记录网站活动（例如，跟踪流量，或记录 API 调用），但您应尝试最小化为调试目的而添加的日志记录量。
 
-在生产环境中，最小化“调试”日志记录的一种方法，是使用类似[调试 debug ](https://www.npmjs.com/package/debug)的模块，允许您通过设置环境变量，来控制执行的日志记录。例如，下面的代码片段，显示了如何设置“author”日志记录。调试变量使用名称“author”声明，并且将自动显示，来自此对象的所有日志的前缀“author”。
+在生产环境中，最小化“调试”日志记录的一种方法，是使用类似[调试 debug](https://www.npmjs.com/package/debug) 的模块，允许您通过设置环境变量，来控制执行的日志记录。例如，下面的代码片段，显示了如何设置“author”日志记录。调试变量使用名称“author”声明，并且将自动显示，来自此对象的所有日志的前缀“author”。
 
 ```js
 var debug = require('debug')('author');
@@ -250,23 +250,23 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 有很多方法可以使用 git，但最简单的方法之一，是首先在[GitHub](https://github.com/)上建立一个帐户，在那里创建存储库，然后在本地同步它：
 
-1.  访问 <https://github.com/> 并创建一个帐户。
-2.  登录后，单击顶部工具栏中的 **+** 号链接，然后选择新建存储库**New repository**。
-3.  填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
+1. 访问 <https://github.com/> 并创建一个帐户。
+2. 登录后，单击顶部工具栏中的 **+** 号链接，然后选择新建存储库**New repository**。
+3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
     - 输入新的存储库名称（例如，express-locallibrary-tutorial）和描述（例如“以 Express（node）编写的本地图书馆网站”）。
     - 在 Add .gitignore 选择列表中选择 **Node**。
     - 在添加许可证 _Add license_ 选择列表中，选择您偏好的许可证。
     - 点选 **使用自述文件初始化此存储库** “**Initialize this repository with a README**”
 
-4.  按 **Create repository**.
-5.  单击新仓库页面上的绿色“克隆或下载”按钮 "**Clone or download**"。
-6.  从显示的对话框的文本字段，复制 URL 值（它应该类似于：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+4. 按 **Create repository**.
+5. 单击新仓库页面上的绿色“克隆或下载”按钮 "**Clone or download**"。
+6. 从显示的对话框的文本字段，复制 URL 值（它应该类似于：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
 
 现在创建了存储库（“repo”），我们将要在本地计算机上克隆它：
 
-1.  为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
-2.  打开命令提示符/终端，并使用您在上面复制的 URL，克隆 clone 存储库：
+1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
+2. 打开命令提示符/终端，并使用您在上面复制的 URL，克隆 clone 存储库：
 
     ```bash
     git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
@@ -274,7 +274,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
     这将在当前时间点之后，创建存储库。
 
-3.  到新的仓库。
+3. 到新的仓库。
 
     ```bash
     cd express-locallibrary-tutorial
@@ -282,12 +282,14 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 最后一步，是复制你的应用程序，然后使用 git，将文件添加到你的仓库：
 
-1.  将 Express 应用程序，复制到此文件夹中（不包括**/node_modules**，其中包含您应根据需要，从 NPM 获取的依赖项文件）。
-2.  打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
-3.  ```bash
+1. 将 Express 应用程序，复制到此文件夹中（不包括**/node_modules**，其中包含您应根据需要，从 NPM 获取的依赖项文件）。
+2. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
+
+3. ```bash
     git add -A
     ```
-4.  使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
+
+4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
     ```plain
     > git status
@@ -299,13 +301,13 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
             new file:   ...
     ```
 
-5.  如果您满意，请将文件提交到本地存储库：
+5. 如果您满意，请将文件提交到本地存储库：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  然后使用以下内容，将本地存储库同步到 Github 网站：
+6. 然后使用以下内容，将本地存储库同步到 Github 网站：
 
     ```bash
     git push origin master

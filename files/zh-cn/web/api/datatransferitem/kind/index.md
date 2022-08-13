@@ -1,16 +1,6 @@
 ---
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Property
-  - Reference
-  - drag and drop
-  - kind
-translation_of: Web/API/DataTransferItem/kind
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

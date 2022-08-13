@@ -1,11 +1,6 @@
 ---
 title: forward()
 slug: Web/API/History/forward
-tags:
-  - DOM
-  - HTML5
-  - History
-translation_of: Web/API/History/forward
 ---
 在会话历史中向前移动一页。它与使用`delta`参数为 1 时调用 `history.go(delta)`的效果相同。
 

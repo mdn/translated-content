@@ -5,11 +5,11 @@ translation_of: Web/CSS/Containing_block
 ---
 <div>{{cssref}}</div>
 
-<p class="summary" dir="ltr">На размер и позицию элемента часто влияет его <strong>содержащий блок</strong> (containing block). Чаще всего содержащим блоком является content область (<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>) ближайшего блочного (<a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a>) предка, но это не всегда так. <span class="seoSummary">В этой статье мы рассмотрим факторы, которые</span> определяют <span class="seoSummary">содержащий блок элемента.</span></p>
+<p class="summary">На размер и позицию элемента часто влияет его <strong>содержащий блок</strong> (containing block). Чаще всего содержащим блоком является content область (<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>) ближайшего блочного (<a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a>) предка, но это не всегда так. <span class="seoSummary">В этой статье мы рассмотрим факторы, которые</span> определяют <span class="seoSummary">содержащий блок элемента.</span></p>
 
-<p class="summary" dir="ltr">Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:</p>
+<p class="summary">Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:</p>
 
-<ol dir="ltr" start="1">
+<ol>
  <li>Content область или область контента (content area).</li>
  <li>Padding область или область внутреннего поля (padding area).</li>
  <li>Border область или область границы (border area).</li>
@@ -18,21 +18,21 @@ translation_of: Web/CSS/Containing_block
 
 <p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
 
-<p dir="ltr">Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.</p>
+<p>Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.</p>
 
-<h2 dir="ltr" id="Эффекты_содержащего_блока">Эффекты содержащего блока</h2>
+<h2 id="Эффекты_содержащего_блока">Эффекты содержащего блока</h2>
 
-<p dir="ltr">Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.</p>
+<p>Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.</p>
 
-<p dir="ltr">На размер и положение элемента часто влияет его содержащий блок. </p>
+<p>На размер и положение элемента часто влияет его содержащий блок. </p>
 
-<p dir="ltr">Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение <code>absolute</code> или <code>fixed</code>) рассчитываются исходя из его содержащего блока.</p>
+<p>Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение <code>absolute</code> или <code>fixed</code>) рассчитываются исходя из его содержащего блока.</p>
 
-<h2 dir="ltr" id="Определение_содержащего_блока">Определение содержащего блока</h2>
+<h2 id="Определение_содержащего_блока">Определение содержащего блока</h2>
 
-<p dir="ltr">Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:</p>
+<p>Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:</p>
 
-<ol dir="ltr" start="1">
+<ol>
  <li>Если свойство <code>position</code> имеет значение  <code><strong>static</strong></code>,<strong> </strong><code><strong>relative</strong></code>, или <strong><code>sticky</code></strong>, то содержащий блок задаётся краем <em>content бокса</em> ближайшего предка, который:
 
   <ul>
@@ -48,7 +48,7 @@ translation_of: Web/CSS/Containing_block
   </ul>
  </li>
  <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code> или <code><strong>fixed</strong></code>, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
-  <ol start="1">
+  <ol>
    <li>Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от <code>none</code>.</li>
    <li>Свойство {{cssxref("will-change")}} имеет значение <code>transform</code> или <code>perspective</code>.</li>
    <li>Свойство {{cssxref("filter")}}<strong> </strong> имеет значение отличное от <code>none</code> или <code>will-change</code> value of <code>filter</code> (работает только в Firefox).</li>
@@ -58,37 +58,37 @@ translation_of: Web/CSS/Containing_block
 </ol>
 
 <div class="note">
-<p dir="ltr"><strong>Примечание: </strong>Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется <strong>начальный содержащий блок</strong>. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).</p>
+<p><strong>Примечание: </strong>Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется <strong>начальный содержащий блок</strong>. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).</p>
 </div>
 
-<h2 dir="ltr" id="Calculating_percentage_values_from_the_containing_block">Calculating percentage values from the containing block</h2>
+<h2 id="Calculating_percentage_values_from_the_containing_block">Calculating percentage values from the containing block</h2>
 
-<p dir="ltr">As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
+<p>As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
 
-<ol dir="ltr" start="1">
+<ol>
  <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code><strong> </strong>of the containing block.</li>
  <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code><strong> </strong>of the containing block.</li>
 </ol>
 
-<h2 dir="ltr" id="Some_examples">Some examples</h2>
+<h2 id="Some_examples">Some examples</h2>
 
-<p dir="ltr">The HTML code for all our examples is:</p>
+<p>The HTML code for all our examples is:</p>
 
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
 
-<p dir="ltr">Only the CSS is altered in each instance below.</p>
+<p>Only the CSS is altered in each instance below.</p>
 
 <h3 id="Example_1">Example 1</h3>
 
 <p>In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.</p>
 
 <div class="hidden">
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -96,7 +96,7 @@ translation_of: Web/CSS/Containing_block
 </pre>
 </div>
 
-<pre class="brush: css" dir="ltr">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -123,7 +123,7 @@ p {
 <p>In this example, the paragraph's containing block is the {{HTMLElement("body")}}<strong> </strong>element, because <code>&lt;section&gt;</code> is not a block container (because of <code>display: inline</code>) and doesn’t establish a formatting context.</p>
 
 <div class="hidden">
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -131,7 +131,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css" dir="ltr">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -154,7 +154,7 @@ p {
 <p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were <code>border-box</code> this would not be the case.</p>
 
 <div class="hidden">
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -162,7 +162,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css" dir="ltr">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -193,7 +193,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>fixed</code>, so its containing block is the initial containing block (on screens, the viewport). Thus, the paragraph's dimensions change based on the size of the browser window.</p>
 
 <div class="hidden">
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -201,7 +201,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css" dir="ltr">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -230,7 +230,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't <code>none</code>.</p>
 
 <div class="hidden">
-<pre class="brush: html" dir="ltr">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -238,7 +238,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css" dir="ltr">body {
+<pre class="brush: css">body {
   background: beige;
 }
 

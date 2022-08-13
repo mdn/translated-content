@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
 
-> **備註：**此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
+> **備註：** 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
 
 {{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
 
@@ -41,7 +41,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 > **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作“promises” — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
 
-> **備註：**一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。您也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
+> **備註：** 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。您也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
 
 ## 屬性
 
@@ -127,7 +127,7 @@ myFirstPromise.then((successMessage) => {
 <div id="log"></div>
 ```
 
-`這個小範例演示了` `Promise` `的運作機制。每當 `{{HTMLElement("button")}} 被點擊時，`testPromise()` 方法被呼叫。每次點擊將透過 {{domxref("window.setTimeout()")}} 建立一個將在 1-3 秒內隨機地被實現的 promise，供 promise 計數（一個從 1 開始的數值）。建構式 `Promise()` 被用來建立 promise。
+這個小範例演示了 `Promise` 的運作機制。每當 {{HTMLElement("button")}} 被點擊時，`testPromise()` 方法被呼叫。每次點擊將透過 {{domxref("window.setTimeout()")}} 建立一個將在 1-3 秒內隨機地被實現的 promise，供 promise 計數（一個從 1 開始的數值）。建構式 `Promise()` 被用來建立 promise。
 
 promise 的實現值單純地經由一個實現回呼函式 {{jsxref("Promise.prototype.then()","p1.then()")}} 被印出。下以一些文字紀錄來展現方法中同步的與非同步處理 promise 的部分是如何分離彼此。
 

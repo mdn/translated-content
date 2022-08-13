@@ -29,8 +29,8 @@ navigator.registerProtocolHandler("mailto",
 
 ### 參考資料
 
-1.  [DOM:window.navigator.registerProtocolHandler 原始網頁](/en/docs/DOM:window.navigator.registerProtocolHandler)
+1. [DOM:window.navigator.registerProtocolHandler 原始網頁](/en/docs/DOM:window.navigator.registerProtocolHandler)
 
 ### 延伸閱讀
 
-1.  WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers)
+1. WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers)

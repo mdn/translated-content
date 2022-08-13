@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{js_property_attributes(0,0,1)}}
 
-> **备注：**在非标准的 ES2015 之前的实现中，`configurable`属性也是`false` 。
+> **备注：** 在非标准的 ES2015 之前的实现中，`configurable`属性也是`false` 。
 
 ## 示例
 
@@ -118,7 +118,7 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 
-> **警告：**脚本解释器只有在函数没有名为 name 的属性时才会设置内置的`Function.name`属性（参见 [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)）。但是，ES2015 规定由关键字*static*修饰的静态方法也会被认为是类的属性（ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)）。
+> **警告：** 脚本解释器只有在函数没有名为 name 的属性时才会设置内置的`Function.name`属性（参见 [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)）。但是，ES2015 规定由关键字*static*修饰的静态方法也会被认为是类的属性（ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)）。
 
 因此，我们无法获取具有静态方法属性`name()`的几乎任何类的类名称：
 
@@ -172,7 +172,7 @@ o[sym2].name; // ""
 
 ## JavaScript 压缩和 minifiers
 
-> **警告：**当使用`Function.name`和那些 JavaScript 压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作 JavaScript 构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称。
+> **警告：** 当使用`Function.name`和那些 JavaScript 压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作 JavaScript 构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称。
 
 例如下面的代码：
 

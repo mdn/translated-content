@@ -28,7 +28,7 @@ obj.hasOwnProperty(prop)
 
 ### 使用 `hasOwnProperty` 測試屬性是否存在
 
-這個範例顯示 `o `物件是否擁有名為 `prop `的屬性:
+這個範例顯示 `o` 物件是否擁有名為 `prop` 的屬性:
 
 ```js
 o = new Object();

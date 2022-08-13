@@ -1,13 +1,12 @@
 ---
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
-translation_of: Web/API/WebGLRenderingContext/compressedTexImage2D
 ---
 {{APIRef("WebGL")}}
 
 下面这两个 function：
 
-**`WebGLRenderingContext.compressedTexImage2D()`** and **`WebGL2RenderingContext.compressedTexImage3D()`** 在[WebGL API ](/en-US/docs/Web/API/WebGL_API)中特指压缩二维或三维纹理图像的格式。
+**`WebGLRenderingContext.compressedTexImage2D()`** and **`WebGL2RenderingContext.compressedTexImage3D()`** 在[WebGL API](/en-US/docs/Web/API/WebGL_API) 中特指压缩二维或三维纹理图像的格式。
 
 在使用这些方法之前，必须通过 [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)， 也就是 WebGL 扩展启用压缩图像格式。
 

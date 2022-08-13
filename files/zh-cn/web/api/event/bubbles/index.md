@@ -1,7 +1,6 @@
 ---
 title: event.bubbles
 slug: Web/API/Event/bubbles
-translation_of: Web/API/Event/bubbles
 ---
 {{ ApiRef() }}
 

@@ -1,10 +1,6 @@
 ---
 title: Notification.icon
 slug: Web/API/notification/icon
-tags:
-  - API
-  - Notification
-translation_of: Web/API/Notification/icon
 ---
 {{APIRef("Web Notifications")}}
 

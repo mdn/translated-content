@@ -15,10 +15,10 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <div>Die <strong>Klassendeklaration </strong>erstellt eine neue Klasse mit einem Namen unter Verwendung von prototypen Vererbung.</div>
 
-<div> </div>
+<div> </div>
 
 <div class="noinclude">
-<p>Sie können eine Klasse auch mit Hilfe einer {{jsxref("Operators/class", "class expression", "", 1)}} definieren. Unglücklicherweise ist es mit diesen class-Ausdrücken nicht möglich eine existierende Klasse erneut zu deklarieren. Dieses führt zu einem TypeError.</p>
+<p>Sie können eine Klasse auch mit Hilfe einer {{jsxref("Operators/class", "class expression", "", 1)}} definieren. Unglücklicherweise ist es mit diesen class-Ausdrücken nicht möglich eine existierende Klasse erneut zu deklarieren. Dieses führt zu einem TypeError.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Genau wie mit class expressions, wird der body der Klassendeklaration im <a href="/de/docs/Web/JavaScript/Reference/Strict_mode"><u><font color="#0066cc">strict mode</font></u></a> ausgeführt. Die constructor Eigenschaft ist optional.</p>
+<p>Genau wie mit class expressions, wird der body der Klassendeklaration im <a href="/de/docs/Web/JavaScript/Reference/Strict_mode"><font color="#0066cc">strict mode</font></a> ausgeführt. Die constructor Eigenschaft ist optional.</p>
 
 <p>Klassendeklarationen sind nicht {{Glossary("Hoisting", "hoisted")}} (im Gegensatz zu <a href="/de/docs/Web/JavaScript/Reference/Statements/function">function declarations</a>).</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = 'Square';
   }
 }</pre>
 
@@ -88,100 +88,14 @@ class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Array subclassing</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in sloppy mode</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>Array subclassing</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
-  <tr>
-   <td>Allowed in sloppy mode</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

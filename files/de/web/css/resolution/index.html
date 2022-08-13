@@ -21,7 +21,7 @@ translation_of: Web/CSS/resolution
  <dt><code><a name="dpcm">dpcm</a></code></dt>
  <dd>Diese Einheit repräsentiert die Anzahl an Punkten pro Zentimeter. Da 1 Zoll 2.54cm entspricht, <code>1dpcm ≈ 2.54dpi</code>.</dd>
  <dt><code><a name="dppx">dppx</a></code></dt>
- <dd>Diese Einheit repräsentiert die Anzahl an Punkten pro <code>px</code> Einheit. Wegen dem festen 1:96 Verhältnis von CSS <code class="css">in</code> zu CSS <code class="css">px</code>, ist <code class="css">1dppx</code> äquivalent zu <code class="css">96dpi</code>, dies enspricht der Standardauflösung von Bildern, die in CSS dargestellt werden, wie in {{cssxref("image-resolution")}} definiert.</dd>
+ <dd>Diese Einheit repräsentiert die Anzahl an Punkten pro <code>px</code> Einheit. Wegen dem festen 1:96 Verhältnis von CSS <code>in</code> zu CSS <code>px</code>, ist <code>1dppx</code> äquivalent zu <code>96dpi</code>, dies enspricht der Standardauflösung von Bildern, die in CSS dargestellt werden, wie in {{cssxref("image-resolution")}} definiert.</dd>
 </dl>
 
 <h2 id="Beispiele" name="Beispiele">Beispiele</h2>
@@ -70,69 +70,7 @@ ten dpi                                            Falsch: Nur Ziffern dürfen v
 
 <h2 id="Browser_Kompatibilit.C3.A4t" name="Browser_Kompatibilit.C3.A4t">Browser Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>29</td>
-   <td>3.5 (1.9.1) [**]</td>
-   <td>9</td>
-   <td>9.5</td>
-   <td>{{CompatNo}} [*]</td>
-  </tr>
-  <tr>
-   <td><code>dppx</code></td>
-   <td>29</td>
-   <td>{{CompatGeckoDesktop("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatNo}} [*]</td>
-   <td>yes</td>
-   <td>?</td>
-   <td>yes</td>
-   <td>{{CompatNo}} [*]</td>
-  </tr>
-  <tr>
-   <td><code>dppx</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[*] Die Webkit Engine unterstützt die CSS Auflösungsabfrage, wie sie in der Spezifikation definiert wird, nicht. Die Benutzung der nicht standardisierten <code>device-pixel-ratio</code> Abfrage wird für Safari Browser benötigt, siehe <a href="https://bugs.webkit.org/show_bug.cgi?id=16832">Bug 16832</a>.</p>
 

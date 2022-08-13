@@ -1,7 +1,6 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-translation_of: Web/API/StorageManager/estimate
 ---
 {{securecontext_header}}{{APIRef("Storage")}}
 

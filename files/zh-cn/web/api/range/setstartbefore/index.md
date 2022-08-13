@@ -1,7 +1,6 @@
 ---
 title: Range.setStartBefore()
 slug: Web/API/Range/setStartBefore
-translation_of: Web/API/Range/setStartBefore
 ---
 {{ApiRef("DOM")}}
 

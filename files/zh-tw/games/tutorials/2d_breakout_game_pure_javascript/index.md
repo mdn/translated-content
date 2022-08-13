@@ -26,15 +26,15 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 所有課程和其他不同版本的 [MDN 打磚塊遊戲](http://breakout.enclavegames.com/lesson10.html)，均可至 [GitHub 找到：](https://github.com/end3r/Canvas-gamedev-workshop)
 
-1.  [建立 Canvas 並繪製](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
-2.  [讓球移動](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3.  [讓球反彈](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4.  [搖桿和鍵盤控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
-5.  [判斷遊戲結束](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
-6.  [建立磚塊場地](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7.  [碰撞偵測](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)
-8.  [更新分數並判斷輸贏](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
-9.  [滑鼠控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls)
+1. [建立 Canvas 並繪製](/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+2. [讓球移動](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+3. [讓球反彈](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
+4. [搖桿和鍵盤控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
+5. [判斷遊戲結束](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
+6. [建立磚塊場地](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+7. [碰撞偵測](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)
+8. [更新分數並判斷輸贏](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
+9. [滑鼠控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [結束](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up)
 
 若一開始就單純使用 JavaScript，將能學到紮實的網頁遊戲開發知識。往後則可自由選擇你自己愛用的框架 (Framework) 來完成專案。

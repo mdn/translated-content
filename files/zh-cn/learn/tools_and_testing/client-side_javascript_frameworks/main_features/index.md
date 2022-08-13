@@ -75,6 +75,7 @@ var header = React.createElement("header", null,
 下面是一个简单的 Handlebars 示例：
 
 定义以下 Handlebars 模板：
+
 ```html
 <header>
   <h1>Hello, \{{subject}}!</h1>

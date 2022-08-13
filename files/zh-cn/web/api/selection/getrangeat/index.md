@@ -1,7 +1,6 @@
 ---
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
-translation_of: Web/API/Selection/getRangeAt
 ---
 {{APIRef}}**概述**
 

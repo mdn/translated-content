@@ -1,8 +1,6 @@
 ---
 title: Element.onfullscreenchange
 slug: Web/API/Element/fullscreenchange_event
-translation_of: Web/API/Element/onfullscreenchange
-original_slug: Web/API/Element/onfullscreenchange
 ---
 元素接口的 **`onfullscreenchange`** 属性是在元素过渡到或过渡到全屏模式时触发的全屏更改事件的事件处理程序。
 
@@ -14,7 +12,7 @@ targetDocument.onfullscreenchange = fullscreenChangeHandler;
 
 ### 值
 
-当事件处理程序处于 `fullscreenchange `模式的时候，表明游戏元素被改变了或者是退出了全屏模式
+当事件处理程序处于 `fullscreenchange` 模式的时候，表明游戏元素被改变了或者是退出了全屏模式
 
 ## Example
 

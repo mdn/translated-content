@@ -69,7 +69,7 @@ var foo = 'bar';​
 // SyntaxError: illegal character
 ```
 
-当使用文本编辑器如 VIM 进行探测的时候，可以发现这里存在一个零宽空格[ (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) 。
+当使用文本编辑器如 VIM 进行探测的时候，可以发现这里存在一个零宽空格 [(ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space)。
 
 ```js
 var foo = 'bar';​<200b>

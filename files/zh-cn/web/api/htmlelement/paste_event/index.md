@@ -1,8 +1,6 @@
 ---
 title: element.onpaste
 slug: Web/API/HTMLElement/paste_event
-translation_of: Web/API/HTMLElement/onpaste
-original_slug: Web/API/HTMLElement/onpaste
 ---
 {{ ApiRef() }}
 
@@ -40,8 +38,8 @@ _functionRef_ 是一个函数名或者函数表达式。
 
   function pasteIntercept(evt)
   {
-        evt.preventDefault();
-  	log("粘贴被阻止");
+    evt.preventDefault();
+    log("粘贴被阻止");
   }
 
   document.getElementById("editor").addEventListener("paste", pasteIntercept, false);

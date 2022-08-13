@@ -1,8 +1,6 @@
 ---
 title: blur (event)
 slug: Web/API/Element/blur_event
-translation_of: Web/API/Element/blur_event
-original_slug: Web/Events/blur
 ---
 当一个元素失去焦点的时候 blur 事件被触发。它和 [`focusout`](/zh-CN/docs/Mozilla_event_reference/focusout) 事件的主要区别是 focusout 支持冒泡。
 
@@ -21,7 +19,7 @@ original_slug: Web/Events/blur
 - 默认行为
   - : 无
 
-> **备注：**{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
+> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
 
 ## 属性
 

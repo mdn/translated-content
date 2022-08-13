@@ -1,7 +1,6 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
-translation_of: Web/API/Window/resizeBy
 ---
 {{APIRef}}
 
@@ -33,8 +32,8 @@ window.resizeBy(-200, -200);
 
 从 Firefox 7，依据[下面的规则](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)，不能再调整浏览器内一个窗口的默认大小了：
 
-1.  不能调整非 window\.open 方法打开的窗口或 Tab 的大小。
-2.  当一个窗口内包含有一个以上的 Tab 时，不能调整窗口的大小。
+1. 不能调整非 window\.open 方法打开的窗口或 Tab 的大小。
+2. 当一个窗口内包含有一个以上的 Tab 时，不能调整窗口的大小。
 
 ## 规范
 

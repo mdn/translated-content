@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/spacer
 
 **`<spacer>`** 是过时的 HTML 元素，它可以向页面插入间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。 但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。
 
-Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer> `的支持。
+Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` 的支持。
 
 ## 属性
 

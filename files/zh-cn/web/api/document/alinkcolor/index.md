@@ -1,16 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/alinkColor
 ---
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
@@ -32,4 +22,4 @@ document.alinkcolor 在 [DOM Level 2 HTML](<DOM Level 2 HTML>) 中不推荐使�
 
 另一种选择是使用 document.body.alink，虽然这在 [HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) 中可以用 CSS 使用替代。
 
-Gecko 支持 alinkcolor/:active 和 {{ Cssxref(":focus") }}。在 Internet Explorer 6/7 中 alinkcolor/:active 仅在 [HTML Elemeint A ](/en-US/docs/Web/API/Document/en/HTML/Element/a)上有效。
+Gecko 支持 alinkcolor/:active 和 {{ Cssxref(":focus") }}。在 Internet Explorer 6/7 中 alinkcolor/:active 仅在 [HTML Elemeint A](/en-US/docs/Web/API/Document/en/HTML/Element/a) 上有效。

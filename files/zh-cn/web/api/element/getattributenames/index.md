@@ -1,9 +1,6 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
-tags:
-  - getAttributeNames
-translation_of: Web/API/Element/getAttributeNames
 ---
 {{APIRef("DOM")}}
 
@@ -23,8 +20,8 @@ let attributeNames = element.getAttributeNames();
 // 遍历 elements 的元素
 for(let name of element.getAttributeNames())
 {
-	let value = element.getAttribute(name);
-	console.log(name, value);
+  let value = element.getAttribute(name);
+  console.log(name, value);
 }
 ```
 

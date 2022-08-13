@@ -1,16 +1,6 @@
 ---
 title: HTML 拖放 API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-  - drag and drop
-  - 事件
-  - 总览
-  - 拖放
-  - 指南
-  - 进阶
-translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
@@ -131,9 +121,9 @@ function dragstart_handler(ev) {
 
 有 3 个效果可以定义：
 
-1.  **`copy`** 表明被拖拽的数据将从它原本的位置拷贝到目标的位置。
-2.  **`move`** 表明被拖拽的数据将被移动。
-3.  **`link`** 表明在拖拽源位置和目标位置之间将会创建一些关系表格或是连接。
+1. **`copy`** 表明被拖拽的数据将从它原本的位置拷贝到目标的位置。
+2. **`move`** 表明被拖拽的数据将被移动。
+3. **`link`** 表明在拖拽源位置和目标位置之间将会创建一些关系表格或是连接。
 
 在拖拽过程中，拖拽效果也许会被修改以用于表明在具体位置上具体效果是否被允许，如果允许，在该位置则被允许放置。
 

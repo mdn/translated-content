@@ -22,7 +22,7 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>End-to-end Header</dt>
- <dd>Diese Header müssen an den endgültigen Empfänger der Nachricht übermittelt werden, d. h. den Server für eine Anfrage oder den Client für eine Antwort. Zwischen-Proxys müssen unmodifizierte End-to-end-Header erneut übertragen und zwischenspeichern.</dd>
+ <dd>Diese Header müssen an den endgültigen Empfänger der Nachricht übermittelt werden, d. h. den Server für eine Anfrage oder den Client für eine Antwort. Zwischen-Proxys müssen unmodifizierte End-to-end-Header erneut übertragen und zwischenspeichern.</dd>
  <dt>Hop-by-hop Header</dt>
  <dd>Diese Header sind nur für eine einzelne Verbindung auf Transportebene von Bedeutung und dürfen nicht von Proxys erneut übertragen oder zwischengespeichert werden. Solche Header sind: {{httpheader("Connection")}}, {{httpheader("Keep-Alive")}}, {{httpheader("ProxyAuthenticate")}}, {{httpheader("Proxy-Authorization")}}, {{httpheader("TE")}}, {{httpheader("Trailer")}}, {{httpheader("Transfer-Encoding")}} und {{httpheader("Upgrade")}}. Beachten Sie, dass nur Hop-by-hop Header mit dem allgemeinen Header {{httpheader("Connection")}} festgelegt werden können.</dd>
 </dl>
@@ -65,7 +65,7 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Server können Unterstützung für Clienthinweise unter Verwendung des Headerfelds Accept-CH oder eines entsprechenden HTML {{htmlelement("meta")}} Element mit dem Attribut http-equiv attribute (<a href="https://httpwg.org/http-extensions/client-hints.html#HTML5"><cite>[HTML5]</cite></a>) ankündigen.</dd>
+ <dd>Server können Unterstützung für Clienthinweise unter Verwendung des Headerfelds Accept-CH oder eines entsprechenden HTML {{htmlelement("meta")}} Element mit dem Attribut http-equiv attribute (<a href="https://httpwg.org/http-extensions/client-hints.html#HTML5"><cite>[HTML5]</cite></a>) ankündigen.</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
  <dd><span class="tlid-translation translation">Server können den Client auffordern, sich an die vom Client für einen bestimmten Zeitraum unterstützten Client Hints zu erinnern, um die Zustellung von Client hints für nachfolgende Anfragen an den Ursprung des Servers zu ermöglichen</span> (<a href="https://httpwg.org/http-extensions/client-hints.html#RFC6454"><cite>[RFC6454]</cite></a>).</dd>
  <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
@@ -73,13 +73,13 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Content-DPR")}} {{experimental_inline}}</dt>
  <dd><span class="tlid-translation translation">Das <code>Content-DPR</code> Antwort Header-Feld ist eine Zahl, die das Verhältnis zwischen physischen Pixeln und CSS Pixeln des ausgewählten Bilds als Antwort angibt.</span></dd>
  <dt>{{HTTPHeader("DPR")}} {{experimental_inline}}</dt>
- <dd>Das <code>DPR</code> Anfrage-Header-Feld ist eine Zahl, die das aktuelle Geräte-Pixelverhältnis (Device Pixel Ratio (DPR)) des Clients angibt. Hierbei handelt es sich um das Verhältnis der physischen Pixel zu CSS Pixeln (Abschnitt 5.2 von <a href="https://httpwg.org/http-extensions/client-hints.html#CSSVAL"><cite>[CSSVAL]</cite></a>) des Layout Viewport (Abschnitt 9.1.1 <cite>von </cite><a href="https://httpwg.org/http-extensions/client-hints.html#CSS2"><cite>[CSS2]</cite></a>) auf dem Gerät.</dd>
+ <dd>Das <code>DPR</code> Anfrage-Header-Feld ist eine Zahl, die das aktuelle Geräte-Pixelverhältnis (Device Pixel Ratio (DPR)) des Clients angibt. Hierbei handelt es sich um das Verhältnis der physischen Pixel zu CSS Pixeln (Abschnitt 5.2 von <a href="https://httpwg.org/http-extensions/client-hints.html#CSSVAL"><cite>[CSSVAL]</cite></a>) des Layout Viewport (Abschnitt 9.1.1 <cite>von </cite><a href="https://httpwg.org/http-extensions/client-hints.html#CSS2"><cite>[CSS2]</cite></a>) auf dem Gerät.</dd>
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
- <dd>Das <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a> [<cite><a class="bibref" href="https://wicg.github.io/netinfo/#bib-client-hints">CLIENT-HINTS</a></cite>] Anfrage-Header-Feld besteht aus einem oder mehreren Token, die die Präferenz des Benutzer-Agenten für eine reduzierte Datennutzung angeben.</dd>
+ <dd>Das <a href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a> [<cite><a href="https://wicg.github.io/netinfo/#bib-client-hints">CLIENT-HINTS</a></cite>] Anfrage-Header-Feld besteht aus einem oder mehreren Token, die die Präferenz des Benutzer-Agenten für eine reduzierte Datennutzung angeben.</dd>
  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
  <dd>
  <div id="rfc.section.3.3.p.1">
- <p>Das <code>Viewport-Width</code> Anfrage-Header-Feld ist eine Zahl, die die Breite des Layout Viewport in CSS Pixeln angibt. Der gegebene CSS Pixel Wert ist eine Zahl, die auf die kleinste folgende Ganzzahl (d. h. den Höchstwert) gerundet wird.</p>
+ <p>Das <code>Viewport-Width</code> Anfrage-Header-Feld ist eine Zahl, die die Breite des Layout Viewport in CSS Pixeln angibt. Der gegebene CSS Pixel Wert ist eine Zahl, die auf die kleinste folgende Ganzzahl (d. h. den Höchstwert) gerundet wird.</p>
  </div>
 
  <div id="rfc.section.3.3.p.2">
@@ -396,7 +396,7 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Large-Allocation")}}</dt>
  <dd>Setzt den Browser darüber in Kenntnis, dass die zu ladende Seite eine große Zuordnung durchführen möchte.</dd>
  <dt>{{HTTPHeader("Link")}}</dt>
- <dd>Das <code><a href="https://tools.ietf.org/html/rfc5988#section-5">Link</a></code> Entitäten-Header-Feld bietet eine Möglichkeit, eine oder mehrere Links in HTTP-Headern zu serialisieren. Es entspricht semantisch dem HTML Element {{HTMLElement("link")}}.</dd>
+ <dd>Das <code><a href="https://tools.ietf.org/html/rfc5988#section-5">Link</a></code> Entitäten-Header-Feld bietet eine Möglichkeit, eine oder mehrere Links in HTTP-Headern zu serialisieren. Es entspricht semantisch dem HTML Element {{HTMLElement("link")}}.</dd>
  <dt>{{HTTPHeader("Push-Policy")}} {{experimental_inline}}</dt>
  <dd>Eine <code><a href="https://tools.ietf.org/html/draft-ruellan-http-accept-push-policy-00#section-3.2">Push-Policy</a></code> definiert das Serververhalten bezüglich Push bei der Verarbeitung einer Anfrage.</dd>
 </dl>
@@ -405,7 +405,7 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Retry-After")}}</dt>
  <dd>Gibt an, wie lange der Benutzer-Agent warten soll, bevor eine Folgeanfrage gesendet wird.</dd>
  <dt>{{HTTPHeader("Signature")}} {{experimental_inline}}</dt>
- <dd>Das <code><a href="https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1">Signature</a></code> Header-Feld enthält eine Liste von Signaturen für einen Austausch, von welchem jeder Informationen darüber enthält, wie die Autorität dieser Signatur ermittelt und aktualisiert werden kann.</dd>
+ <dd>Das <code><a href="https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1">Signature</a></code> Header-Feld enthält eine Liste von Signaturen für einen Austausch, von welchem jeder Informationen darüber enthält, wie die Autorität dieser Signatur ermittelt und aktualisiert werden kann.</dd>
  <dt>{{HTTPHeader("Signed-Headers")}} {{experimental_inline}}</dt>
  <dd>Das <code><a href="https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2">Signed-Headers</a></code> Header-Feld identifiziert eine geordnete Liste von Antwort-Header-Feldern, die in eine Signatur aufgenommen werden sollen.</dd>
  <dt>{{HTTPHeader("Server-Timing")}}</dt>

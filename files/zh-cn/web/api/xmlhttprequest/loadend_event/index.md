@@ -1,8 +1,6 @@
 ---
 title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
-translation_of: Web/API/XMLHttpRequest/loadend_event
-original_slug: Web/Events/loadend
 ---
 loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发 “error”，“abort” 或 “load” 事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
 
@@ -29,7 +27,7 @@ loadend 事件总是在一个资源的加载进度停止之后被触发 (例如�
 | `type` {{readonlyInline}}             | {{domxref("DOMString")}}     | The type of event.                                                                                                                                             |
 | `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                                                                                     |
 | `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                                                                                       |
-| `lengthComputable `{{readonlyInline}} | {{jsxref("Boolean")}}         | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
+| `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
 | `loaded` {{readonlyInline}}           | unsigned long (long)                 | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
 | `total` {{readonlyInline}}            | unsigned long (long)                 | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
 

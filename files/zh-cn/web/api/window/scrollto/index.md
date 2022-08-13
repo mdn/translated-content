@@ -1,7 +1,6 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-translation_of: Web/API/Window/scrollTo
 ---
 {{ APIRef }}
 
@@ -23,9 +22,9 @@ window.scrollTo(options)
 - `y-coord` 是文档中的纵轴坐标。
 - `options` 是一个包含三个属性的对象：
 
-1.  `top` 等同于 `y-coord`
-2.  left 等同于 `x-coord`
-3.  `behavior` _类型 String，表示滚动行为，支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值 auto_
+1. `top` 等同于 `y-coord`
+2. left 等同于 `x-coord`
+3. `behavior` _类型 String，表示滚动行为，支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值 auto_
 
 ## 例子
 

@@ -1,11 +1,10 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-translation_of: Web/API/FileReader/readAsText
 ---
 {{APIRef("File API")}}
 
-`readAsText` 方法可以将 [Blob](/zh-CN/docs/Web/API/Blob) 或者 [File](/zh-CN/docs/Web/API/File)[ ](/zh-CN/docs/MDN/Doc_status/API/File_API)对象转根据特殊的编码格式转化为内容 (字符串形式)
+`readAsText` 方法可以将 [Blob](/zh-CN/docs/Web/API/Blob) 或者 [File](/zh-CN/docs/Web/API/File) 对象转根据特殊的编码格式转化为内容 (字符串形式)
 
 这个方法是异步的，也就是说，只有当执行完成后才能够查看到结果，如果直接查看是无结果的，并返回 undefined
 

@@ -7,17 +7,17 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary" style=""><font><font>Einer der Gründe, warum Flexbox das Interesse von Webentwicklern schnell geweckt hat, ist, dass es zum ersten Mal die richtigen Ausrichtungsfunktionen für das Web bereitgestellt hat.<span> </span></font><font>Es ermöglichte die richtige vertikale Ausrichtung, so dass wir endlich eine Box leicht zentrieren können.<span> </span></font><font>In diesem Handbuch werden wir uns eingehend mit der Funktionsweise der Ausrichtungs- und Ausrichtungseigenschaften in Flexbox befassen.</font></font></p>
+<p class="summary" style="">Einer der Gründe, warum Flexbox das Interesse von Webentwicklern schnell geweckt hat, ist, dass es zum ersten Mal die richtigen Ausrichtungsfunktionen für das Web bereitgestellt hat. Es ermöglichte die richtige vertikale Ausrichtung, so dass wir endlich eine Box leicht zentrieren können. In diesem Handbuch werden wir uns eingehend mit der Funktionsweise der Ausrichtungs- und Ausrichtungseigenschaften in Flexbox befassen.</p>
 
-<p style=""><font><font>Um unsere Box zu zentrieren, verwenden wir die<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-items</code><font><font>Eigenschaft, um unser Element auf der Querachse auszurichten, in diesem Fall der vertikal verlaufenden Blockachse.<span> </span></font><font>Wir verwenden<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>justify-content</code><font><font>, um das Element auf der Hauptachse auszurichten, in diesem Fall der horizontal verlaufenden Inline-Achse.</font></font></p>
+<p style="">Um unsere Box zu zentrieren, verwenden wir die <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-items</code>Eigenschaft, um unser Element auf der Querachse auszurichten, in diesem Fall der vertikal verlaufenden Blockachse. Wir verwenden <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>justify-content</code>, um das Element auf der Hauptachse auszurichten, in diesem Fall der horizontal verlaufenden Inline-Achse.</p>
 
 <p><img alt="A containing element with another box centered inside it." src="https://mdn.mozillademos.org/files/15627/align1.png" style="display: block; height: 357px; margin: 0px auto; width: 616px;"></p>
 
-<p><font>Sie können sich den Code dieses Beispiels unten ansehen.<span> </span></font><font>Ändern Sie die Größe des Containers oder des verschachtelten Elements, und das verschachtelte Element bleibt immer zentriert.</font></p>
+<p>Sie können sich den Code dieses Beispiels unten ansehen. Ändern Sie die Größe des Containers oder des verschachtelten Elements, und das verschachtelte Element bleibt immer zentriert.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}</p>
 
-<h2 id="Eigenschaften_die_die_Ausrichtung_steuern" style=""><font><font>Eigenschaften, die die Ausrichtung steuern</font></font></h2>
+<h2 id="Eigenschaften_die_die_Ausrichtung_steuern" style="">Eigenschaften, die die Ausrichtung steuern</h2>
 
 <p><span style="">Die Eigenschaften, die wir in diesem Handbuch betrachten werden, sind wie folgt.</span></p>
 
@@ -25,20 +25,20 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
  <li>{{cssxref("justify-content")}} — <span style="">steuert die Ausrichtung aller Elemente auf der Hauptachse.</span></li>
  <li>{{cssxref("align-items")}} — <span style="">steuert die Ausrichtung aller Elemente auf der Querachse.</span></li>
  <li>{{cssxref("align-self")}} — <span style="">steuert die Ausrichtung eines einzelnen Flex-Elements auf der Querachse.</span></li>
- <li>{{cssxref("align-content")}} — <font>in der Spezifikation als „Packing Flex Lines“ beschrieben;<span> </span></font><font>Steuert den Abstand zwischen den Flexlinien auf der Querachse.</font></li>
+ <li>{{cssxref("align-content")}} — in der Spezifikation als „Packing Flex Lines“ beschrieben; Steuert den Abstand zwischen den Flexlinien auf der Querachse.</li>
 </ul>
 
 <p><span style="">Wir werden auch herausfinden, wie automatische Ränder für die Ausrichtung in der Flexbox verwendet werden können.</span></p>
 
 <div class="note">
-<p><strong style=""><font><font>Hinweis</font></font></strong><font><font><span> </span>: Die Ausrichtungseigenschaften in Flexbox wurden in eine eigene Spezifikation eingefügt -<span> </span></font></font><a class="external" href="https://www.w3.org/TR/css-align-3/" rel="noopener" style=""><font><font>CSS Box Alignment Level 3</font></font></a><font><font><span> </span>.<span> </span></font><font>Es wird erwartet, dass diese Spezifikation letztendlich die in Flexbox Level One definierten Eigenschaften ersetzt.</font></font></p>
+<p><strong style="">Hinweis:</strong> Die Ausrichtungseigenschaften in Flexbox wurden in eine eigene Spezifikation eingefügt - <a class="external" href="https://www.w3.org/TR/css-align-3/" rel="noopener" style="">CSS Box Alignment Level 3</a> . Es wird erwartet, dass diese Spezifikation letztendlich die in Flexbox Level One definierten Eigenschaften ersetzt.</p>
 </div>
 
-<h2 id="Die_Querachse" style=""><font><font>Die Querachse</font></font></h2>
+<h2 id="Die_Querachse" style="">Die Querachse</h2>
 
-<p style=""><font><font>Die<span> </span></font><font>Eigenschaften<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-items</code><font><font>und<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-self</code><font><font>steuern die Ausrichtung unserer Flex-Elemente auf der Querachse in den Spalten if<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>flex-direction</code><font><font>is<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>row</code><font><font>und entlang der Zeile if<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>flex-direction</code><font><font>is<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>column</code><font><font>.</font></font></p>
+<p style="">Die Eigenschaften <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-items</code>und <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>align-self</code>steuern die Ausrichtung unserer Flex-Elemente auf der Querachse in den Spalten if <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>flex-direction</code>is <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>row</code>und entlang der Zeile if <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>flex-direction</code>is <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>column</code>.</p>
 
-<p style=""><font><font>Wir verwenden die Achsenausrichtung im einfachsten Flex-Beispiel.<span> </span></font><font>Wenn wir<span> </span></font></font><code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>display: flex</code><font><font>einem Container<span> </span></font><font>hinzufügen<span> </span></font><font>, werden alle untergeordneten Elemente zu flexiblen Elementen, die in einer Reihe angeordnet sind.<span> </span></font><font>Sie werden alle so groß wie der höchste Gegenstand, da dieser Gegenstand die Höhe der Gegenstände auf der Querachse definiert.<span> </span></font><font>Wenn für Ihren Flex-Container eine Höhe festgelegt ist, werden die Elemente auf diese Höhe gedehnt, unabhängig davon, wie viel Inhalt sich im Element befindet.</font></font></p>
+<p style="">Wir verwenden die Achsenausrichtung im einfachsten Flex-Beispiel. Wenn wir <code style='margin: 0px; padding: 0px 2px; border: 0px; font-style: inherit; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace;'>display: flex</code>einem Container hinzufügen , werden alle untergeordneten Elemente zu flexiblen Elementen, die in einer Reihe angeordnet sind. Sie werden alle so groß wie der höchste Gegenstand, da dieser Gegenstand die Höhe der Gegenstände auf der Querachse definiert. Wenn für Ihren Flex-Container eine Höhe festgelegt ist, werden die Elemente auf diese Höhe gedehnt, unabhängig davon, wie viel Inhalt sich im Element befindet.</p>
 
 <p><img alt="Three items, one with additional text causing it to be taller than the others." src="https://mdn.mozillademos.org/files/15628/align2.png" style="display: block; height: 131px; margin: 0px auto; width: 509px;"></p>
 
@@ -58,13 +58,13 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>In the live example below, the value of <code>align-items</code> is <code>stretch</code>. Try the other values and see how all of the items align against each other in the flex container.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}} </p>
 
 <h3 id="Aligning_one_item_with_align-self">Aligning one item with <code>align-self</code></h3>
 
 <p>The <code>align-items</code> property sets the <code>align-self</code> property on all of the flex items as a group. This means you can explicitly declare the <code>align-self</code> property to target a single item. The <code>align-self</code> property accepts all of the same values as <code>align-items</code> plus a value of <code>auto</code>, which will reset the value to that which is defined on the flex container.</p>
 
-<p>In this next live example, the flex container has <code>align-items: flex-start</code>, which means the items are all aligned to the start of the cross axis. I have targeted the first item using a <code>first-child</code> selector and set that item to <code>align-self: stretch</code>; another item has been selected using its class of <code>selected</code> and given <code>align-self: center</code>. You can change the value of <code>align-items</code> or change the values of <code>align-self</code> on the individual items to see how this works.</p>
+<p>In this next live example, the flex container has <code>align-items: flex-start</code>, which means the items are all aligned to the start of the cross axis. I have targeted the first item using a <code>first-child</code> selector and set that item to <code>align-self: stretch</code>; another item has been selected using its class of <code>selected</code> and given <code>align-self: center</code>. You can change the value of <code>align-items</code> or change the values of <code>align-self</code> on the individual items to see how this works.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}</p>
 
@@ -80,7 +80,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>You can try this out in the example below, which has a flex container with <code>flex-direction: column</code> yet otherwise is exactly the same as the previous example.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}} </p>
 
 <h2 id="Aligning_content_on_the_cross_axis_—_the_align-content_property">Aligning content on the cross axis — the align-content property</h2>
 
@@ -104,11 +104,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>Try out the other values to see how the <code>align-content</code> property works.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}} </p>
 
 <p>Once again we can switch our <code>flex-direction</code> to <code>column</code> in order to see how this property behaves when we are working by column. As before, we need enough space in the cross axis to have some free space after displaying all of the items.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}} </p>
 
 <div class="note">
 <p><strong>Note</strong>: the value <code>space-evenly</code> is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.</p>
@@ -137,11 +137,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>In the example below, the value of <code>justify-content</code> is <code>space-between</code>. The available space after displaying the items is distributed between the items. The left and right item line up flush with the start and end.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}} </p>
 
-<p>If the main axis is in the block direction because <code>flex-direction</code> is set to <code>column</code>, then <code>justify-content</code> will distribute space between items in that dimension as long as there is space in the flex container to distribute.</p>
+<p>If the main axis is in the block direction because <code>flex-direction</code> is set to <code>column</code>, then <code>justify-content</code> will distribute space between items in that dimension as long as there is space in the flex container to distribute.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}} </p>
 
 <h3 id="Alignment_and_Writing_Modes">Alignment and Writing Modes</h3>
 
@@ -155,7 +155,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>The live example below has the <code>direction</code> property set to <code>rtl</code> to force a right-to-left flow for our items. You can remove this, or change the values of <code>justify-content</code> to see how flexbox behaves when the start of the inline direction is on the right.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}} </p>
 
 <h2 id="Alignment_and_flex-direction">Alignment and flex-direction</h2>
 
@@ -163,7 +163,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>In this next example I have items laid out with <code>flex-direction: row-reverse</code> and <code>justify-content: flex-end</code>. In a left to right language the items all line up on the left. Try changing <code>flex-direction: row-reverse</code> to <code>flex-direction: row</code>. You will see that the items now move to the right hand side.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}} </p>
 
 <p>While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. <code>flex-start</code> will be where the start of a sentence of text would begin.</p>
 
@@ -191,13 +191,13 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 <p>In this live example, I have flex items arranged simply into a row with the basic flex values, and the class <code>push</code> has <code>margin-left: auto</code>. You can try removing this, or adding the class to another item to see how it works.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}} </p>
 
 <h2 id="Future_alignment_features_for_Flexbox">Future alignment features for Flexbox</h2>
 
 <p>At the beginning of this article I explained that the alignment properties currently contained in the Level 1 flexbox specification are also included in Box Alignment Level 3, which may well extend these properties and values in the future. We have already seen one place where this has happened, with the introduction of the <code>space-evenly</code> value for <code>align-content</code> and <code>justify-content</code> properties.</p>
 
-<p>The Box Alignment module also includes other methods of creating space between items, such as the <code>column-gap</code> and <code>row-gap</code> feature as seen in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. The inclusion of these properties in Box Alignment means that in future we should be able to use <code>column-gap</code> and <code>row-gap</code> in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.</p>
+<p>The Box Alignment module also includes other methods of creating space between items, such as the <code>column-gap</code> and <code>row-gap</code> feature as seen in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. The inclusion of these properties in Box Alignment means that in future we should be able to use <code>column-gap</code> and <code>row-gap</code> in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.</p>
 
 <p>My suggestion when exploring flexbox alignment in depth is to do so alongside looking at alignment in Grid Layout. Both specifications use the alignment properties as detailed in the Box Alignment specification. You can see how these properties behave when working with a grid in the MDN article <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment in Grid Layout</a>, and I have also compared how alignment works in these specifications in my <a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box Alignment Cheatsheet</a>.</p>
 

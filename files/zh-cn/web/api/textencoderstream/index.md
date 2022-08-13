@@ -1,14 +1,6 @@
 ---
 title: TextEncoderStream
 slug: Web/API/TextEncoderStream
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Encoding
-  - Reference
-  - TextEncoderStream
-transition_of: Web/API/TextEncoderStream
 ---
 {{APIRef("Encoding API")}}
 

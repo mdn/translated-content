@@ -1,7 +1,6 @@
 ---
 title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
-translation_of: Web/API/AmbientLightSensor
 ---
 {{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
 

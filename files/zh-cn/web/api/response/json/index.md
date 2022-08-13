@@ -1,15 +1,6 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Response
-translation_of: Web/API/Response/json
-browser-compat: api.Response.json
 ---
 {{APIRef("Fetch")}}{{domxref("Response")}} mixin 的 **`json()`** 方法接收一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个 Promise，Promise 的解析 resolve 结果是将文本体解析为 {{jsxref("JSON")}}。
 

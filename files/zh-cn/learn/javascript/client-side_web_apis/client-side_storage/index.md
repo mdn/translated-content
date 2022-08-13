@@ -86,16 +86,16 @@ Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文
 
 让我们来告诉你怎么做：
 
-1.  第一步，访问 GitHub 上的 [web storage blank template](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) (在新标签页打开此[模板](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html))。
-2.  打开你浏览器开发者工具的 JavaScript 控制台。
-3.  你所有的 web storage 数据都包含在浏览器内两个类似于对象的结构中： {{domxref("Window.sessionStorage", "sessionStorage")}} 和 {{domxref("Window.localStorage", "localStorage")}}。第一种方法，只要浏览器开着，数据就会一直保存 (关闭浏览器时数据会丢失) ，而第二种会一直保存数据，甚至到浏览器关闭又开启后也是这样。我们将在本文中使用第二种方法，因为它通常更有用。
-4.  {{domxref("Storage.setItem()")}} 方法允许您在存储中保存一个数据项——它接受两个参数：数据项的名字及其值。试着把它输入到你的 JavaScript 控制台（如果你愿意的话，可以把它的值改为你自己的名字！）
+1. 第一步，访问 GitHub 上的 [web storage blank template](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) (在新标签页打开此[模板](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html))。
+2. 打开你浏览器开发者工具的 JavaScript 控制台。
+3. 你所有的 web storage 数据都包含在浏览器内两个类似于对象的结构中： {{domxref("Window.sessionStorage", "sessionStorage")}} 和 {{domxref("Window.localStorage", "localStorage")}}。第一种方法，只要浏览器开着，数据就会一直保存 (关闭浏览器时数据会丢失) ，而第二种会一直保存数据，甚至到浏览器关闭又开启后也是这样。我们将在本文中使用第二种方法，因为它通常更有用。
+4. {{domxref("Storage.setItem()")}} 方法允许您在存储中保存一个数据项——它接受两个参数：数据项的名字及其值。试着把它输入到你的 JavaScript 控制台（如果你愿意的话，可以把它的值改为你自己的名字！）
 
     ```js
     localStorage.setItem('name','Chris');
     ```
 
-5.  {{domxref("Storage.getItem()")}} 方法接受一个参数——你想要检索的数据项的名称——并返回数据项的值。现在将这些代码输入到你的 JavaScript 控制台：
+5. {{domxref("Storage.getItem()")}} 方法接受一个参数——你想要检索的数据项的名称——并返回数据项的值。现在将这些代码输入到你的 JavaScript 控制台：
 
     ```js
     var myName = localStorage.getItem('name');
@@ -104,7 +104,7 @@ Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文
 
     在输入第二行时，您应该会看到 `myName`变量现在包含`name`数据项的值。
 
-6.  {{domxref("Storage.removeItem()")}} 方法接受一个参数——你想要删除的数据项的名称——并从 web storage 中删除该数据项。在您的 JavaScript 控制台中输入以下几行：
+6. {{domxref("Storage.removeItem()")}} 方法接受一个参数——你想要删除的数据项的名称——并从 web storage 中删除该数据项。在您的 JavaScript 控制台中输入以下几行：
 
     ```js
     localStorage.removeItem('name');
@@ -118,8 +118,8 @@ Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文
 
 web storage 的一个关键特性是，数据在不同页面加载时都存在（甚至是当浏览器关闭后，对 localStorage 的而言）。让我们来看看这个：
 
-1.  再次打开我们的 Web Storage 空白模板，但是这次你要在不同的浏览器中打开这个教程！这样可以更容易处理。
-2.  在浏览器的 JavaScript 控制台中输入这几行：
+1. 再次打开我们的 Web Storage 空白模板，但是这次你要在不同的浏览器中打开这个教程！这样可以更容易处理。
+2. 在浏览器的 JavaScript 控制台中输入这几行：
 
     ```js
     localStorage.setItem('name','Chris');
@@ -129,8 +129,8 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
     你应该看到 name 数据项返回。
 
-3.  现在关掉浏览器再把它打开。
-4.  再次输入下面几行：
+3. 现在关掉浏览器再把它打开。
+4. 再次输入下面几行：
 
     ```js
     var myName = localStorage.getItem('name');
@@ -155,9 +155,9 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 让我们来构建示例，以便了解它的工作原理。
 
-1.  首先，在您的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
-2.  接下来，请注意我们的 HTML 如何引用一个名为`index.js`的 JavaScript 文件（请参见第 40 行）。我们需要创建它并将 JavaScript 代码写入其中。在与 HTML 文件相同的目录中创建一个`index.js`文件。
-3.  我们首先创建对所有需要在此示例中操作的 HTML 功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。将以下几行添加到你的 JavaScript 文件中：
+1. 首先，在您的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
+2. 接下来，请注意我们的 HTML 如何引用一个名为`index.js`的 JavaScript 文件（请参见第 40 行）。我们需要创建它并将 JavaScript 代码写入其中。在与 HTML 文件相同的目录中创建一个`index.js`文件。
+3. 我们首先创建对所有需要在此示例中操作的 HTML 功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。将以下几行添加到你的 JavaScript 文件中：
 
     ```js
     // 创建所需的常量
@@ -172,7 +172,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     const personalGreeting = document.querySelector('.personal-greeting');
     ```
 
-4.  接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段： 在你之前的代码后添加这段代码：
+4. 接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段： 在你之前的代码后添加这段代码：
 
     ```js
     // 当按钮按下时阻止表单提交
@@ -181,7 +181,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-5.  现在我们需要添加一个事件监听器，当单击“Say hello”按钮时，它的处理函数将会运行。这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用`setItem()`将它保存在网络存储中，然后运行一个名为`nameDisplayCheck()`的函数来处理实际的网站文本的更新。将此添加到代码的底部：
+5. 现在我们需要添加一个事件监听器，当单击“Say hello”按钮时，它的处理函数将会运行。这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用`setItem()`将它保存在网络存储中，然后运行一个名为`nameDisplayCheck()`的函数来处理实际的网站文本的更新。将此添加到代码的底部：
 
     ```js
     // run function when the 'Say hello' button is clicked
@@ -194,7 +194,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-6.  此时，我们还需要一个事件处理程序，以便在单击“Forget”按钮时运行一个函数——且仅在单击“Say hello”按钮（两种表单状态来回切换）后才显示。在这个功能中，我们使用`removeItem()`从网络存储中删除项目`name`，然后再次运行`nameDisplayCheck()`以更新显示。将其添加到底部：
+6. 此时，我们还需要一个事件处理程序，以便在单击“Forget”按钮时运行一个函数——且仅在单击“Say hello”按钮（两种表单状态来回切换）后才显示。在这个功能中，我们使用`removeItem()`从网络存储中删除项目`name`，然后再次运行`nameDisplayCheck()`以更新显示。将其添加到底部：
 
     ```js
     // run function when the 'Forget' button is clicked
@@ -207,7 +207,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-7.  现在是时候定义`nameDisplayCheck()`函数本身了。在这里，我们通过使用`localStorage.getItem('name')`作为测试条件来检查 name 数据项是否已经存储在 Web Storage 中。如果它已被存储，则该调用的返回值为`true`; 如果没有，它会是`false`。如果是`true`，我们会显示个性化问候语，显示表格的“forget”部分，并隐藏表格的“Say hello”部分。如果是`false`，我们会显示一个通用问候语，并做相反的事。再次将下面的代码添到底部：
+7. 现在是时候定义`nameDisplayCheck()`函数本身了。在这里，我们通过使用`localStorage.getItem('name')`作为测试条件来检查 name 数据项是否已经存储在 Web Storage 中。如果它已被存储，则该调用的返回值为`true`; 如果没有，它会是`false`。如果是`true`，我们会显示个性化问候语，显示表格的“forget”部分，并隐藏表格的“Say hello”部分。如果是`false`，我们会显示一个通用问候语，并做相反的事。再次将下面的代码添到底部：
 
     ```js
     // define the nameDisplayCheck() function
@@ -232,7 +232,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     }
     ```
 
-8.  最后但同样重要的是，我们需要在每次加载页面时运行`nameDisplayCheck()`函数。如果我们不这样做，那么个性化问候不会在页面重新加载后保持。将以下代码添加到代码的底部：
+8. 最后但同样重要的是，我们需要在每次加载页面时运行`nameDisplayCheck()`函数。如果我们不这样做，那么个性化问候不会在页面重新加载后保持。将以下代码添加到代码的底部：
 
     ```js
     document.body.onload = nameDisplayCheck;
@@ -272,7 +272,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 现在让我们来看看为了建立数据库必须首先要做什么。
 
-1.  在常量声明下，加入这几行：
+1. 在常量声明下，加入这几行：
 
     ```js
     // Create an instance of a db object for us to store the open database in
@@ -281,7 +281,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
     这里我们声明了一个叫 `db` 的变量 — 这将在之后被用来存储一个代表数据库的对象。我们将在几个地方使用它，所以我们为了方便使用而在这里把它声明为全局的。
 
-2.  接着，在你的代码最后添加如下代码：
+2. 接着，在你的代码最后添加如下代码：
 
     ```js
     window.onload = function() {
@@ -291,7 +291,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
     我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的{{event("load")}}事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
 
-3.  在`window.onload`处理程序内，添加以下内容：
+3. 在`window.onload`处理程序内，添加以下内容：
 
     ```js
     // Open our database; it is created if it doesn't already exist
@@ -305,7 +305,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
     > **备注：** 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
 
-    1.  在之前添加的事件处理程序下方添加以下代码 - 在`window.onload`处理程序内：
+    1. 在之前添加的事件处理程序下方添加以下代码 - 在`window.onload`处理程序内：
 
         ```js
         // onerror handler signifies that the database didn't open successfully
@@ -327,9 +327,9 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
         如果系统返回：请求失败，[`request.onerror`](/zh-CN/docs/Web/API/IDBRequest/onerror)将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到 JavaScript 控制台。
 
-        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行一个名为`displayData()`的自定义函数，它把数据库中的数据显示在[ 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义, 但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。
+        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行一个名为`displayData()`的自定义函数，它把数据库中的数据显示在 [元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义, 但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。
 
-4.  最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：[`request.onupgradeneeded`](/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：
+4. 最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：[`request.onupgradeneeded`](/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：
 
     ```js
     // Setup the database tables if this has not already been done
@@ -369,7 +369,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 现在让我们看一下如何将记录添加到数据库中。这将使用我们页面上的表单完成。
 
-在您之前的事件处理程序下面（但仍在`window.onload`处理程序中），添加以下行，该行设置一个`onsubmit`处理程序，该处理程序运行`addData()`在提交表单时调用的函数（当[ 元素表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。">`<button>`](/zh-CN/docs/Web/HTML/Element/button)按下提交时导致成功提交表单）：
+在您之前的事件处理程序下面（但仍在`window.onload`处理程序中），添加以下行，该行设置一个`onsubmit`处理程序，该处理程序运行`addData()`在提交表单时调用的函数（当 [元素表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。">`<button>`](/zh-CN/docs/Web/HTML/Element/button)按下提交时导致成功提交表单）：
 
 ```js
 // Create an onsubmit handler so that when the form is submitted the addData() function is run
@@ -491,7 +491,7 @@ function displayData() {
 
 再次，让我们打破这个：
 
-- 首先，我们清空[ 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义, 但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。
+- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。
 - 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
 - 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor)方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
 - 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor)使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
@@ -545,11 +545,11 @@ function deleteItem(e) {
 
 如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。您可以存储任何您想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
-为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部[ 元素 用于在 HTML 或者 XHTML 文档中嵌入视频内容。">`<video>`](/zh-CN/docs/Web/HTML/Element/video)元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
+为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
 
 让我们来看看这个例子中最有趣的部分。我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。
 
-1.  对于这个简单的例子，我们已经存储了视频的名称以获取数组 opf 对象：
+1. 对于这个简单的例子，我们已经存储了视频的名称以获取数组 opf 对象：
 
     ```js
     const videos = [
@@ -562,7 +562,7 @@ function deleteItem(e) {
     ];
     ```
 
-2.  首先，一旦数据库成功打开，我们就运行一个`init()`函数。这会遍历不同的视频名称，尝试加载由`videos`数据库中的每个名称标识的记录。
+2. 首先，一旦数据库成功打开，我们就运行一个`init()`函数。这会遍历不同的视频名称，尝试加载由`videos`数据库中的每个名称标识的记录。
 
     如果在数据库中找到每个视频（通过查看`request.result`评估是否容易检查`true`- 如果记录不存在，那么`undefined`），视频文件（存储为 blob）和视频名称将直接传递给`displayVideo()`函数以放置它们在用户界面中。如果没有，视频名称将传递给`fetchVideoFromNetwork()`函数...你猜对了 - 从网络中获取视频。
 
@@ -588,7 +588,7 @@ function deleteItem(e) {
     }
     ```
 
-3.  以下片段是从内部`fetchVideoFromNetwork()`获取的 - 这里我们使用两个单独的[`fetch()`](/zh-CN/docs/Web/API/Fetch)请求获取视频的 MP4 和 WebM 版本。然后，我们使用该[`Body.blob()`](/zh-CN/docs/Web/API/Blob)方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。
+3. 以下片段是从内部`fetchVideoFromNetwork()`获取的 - 这里我们使用两个单独的[`fetch()`](/zh-CN/docs/Web/API/Fetch)请求获取视频的 MP4 和 WebM 版本。然后，我们使用该[`Body.blob()`](/zh-CN/docs/Web/API/Blob)方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。
 
     我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个 promises 都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)。这需要一个参数 - 引用您要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。
 
@@ -611,7 +611,7 @@ function deleteItem(e) {
     });
     ```
 
-4.  我们`storeVideo()`先来看看吧。这与您在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个`readwrite`事务并获取对象存储引用`videos`，创建一个表示要添加到数据库的记录的对象，然后使用它添加它[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。
+4. 我们`storeVideo()`先来看看吧。这与您在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个`readwrite`事务并获取对象存储引用`videos`，创建一个表示要添加到数据库的记录的对象，然后使用它添加它[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。
 
     ```js
     function storeVideo(mp4Blob, webmBlob, name) {
@@ -632,7 +632,7 @@ function deleteItem(e) {
     };
     ```
 
-5.  最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob ，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为[元素为\<picture>，\<audio>或\<video>元素指定多个媒体资源。 这是一个空元素。 它通常用于以不同浏览器支持的多种格式提供相同的媒体内容。">`<source>`](/zh-CN/docs/Web/HTML/Element/source)元素`src`属性的值，并且它可以正常工作。
+5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob ，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {

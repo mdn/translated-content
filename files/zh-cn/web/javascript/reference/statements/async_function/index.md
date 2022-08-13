@@ -42,9 +42,9 @@ async function name([param[, param[, ... param]]]) {
 
 async 函数可能包含 0 个或者多个{{jsxref("Operators/await", "await")}}表达式。await 表达式会暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用`async` / `await`关键字就可以在异步代码中使用普通的`try` / `catch`代码块。
 
-> **备注：**`await`关键字只在 async 函数内有效。如果你在 async 函数体之外使用它，就会抛出语法错误 {{jsxref("SyntaxError")}} 。
+> **备注：** `await`关键字只在 async 函数内有效。如果你在 async 函数体之外使用它，就会抛出语法错误 {{jsxref("SyntaxError")}} 。
 
-> **备注：**`async`/`await`的目的为了简化使用基于 promise 的 API 时所需的语法。`async`/`await`的行为就好像搭配使用了生成器和 promise。
+> **备注：** `async`/`await`的目的为了简化使用基于 promise 的 API 时所需的语法。`async`/`await`的行为就好像搭配使用了生成器和 promise。
 
 async 函数一定会返回一个 promise 对象。如果一个 async 函数的返回值看起来不是 promise，那么它将会被隐式地包装在一个 promise 中。
 
@@ -86,9 +86,9 @@ function foo() {
 
 在接下来的例子中，我们将使用 await 执行两次 promise，整个`foo`函数的执行将会被分为三个阶段。
 
-1.  `foo`函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过`foo`的进程，并将控制权交还给调用`foo`的函数。
-2.  一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将`1`（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即`result1`。接下来函数会继续进行，到达第二个 await 区域，此时`foo`函数的进程将再次被暂停。
-3.  一段时间后，同样当第二个 promise 完结的时候，`result2`将被赋值为`2`，之后函数将会正常同步执行，将默认返回`undefined` 。
+1. `foo`函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过`foo`的进程，并将控制权交还给调用`foo`的函数。
+2. 一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将`1`（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即`result1`。接下来函数会继续进行，到达第二个 await 区域，此时`foo`函数的进程将再次被暂停。
+3. 一段时间后，同样当第二个 promise 完结的时候，`result2`将被赋值为`2`，之后函数将会正常同步执行，将默认返回`undefined` 。
 
 ```plain
 async function foo() {
@@ -197,31 +197,27 @@ setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", the
 setTimeout(parallelPromise, 13000); // same as parallel
 ```
 
-> **备注：**
->
-> #### `await` and parallelism(并行)
->
-> 在`sequentialStart`中，程序在第一个`await`停留了 2 秒，然后又在第二个`await`停留了 1 秒。直到第一个计时器结束后，第二个计时器才被创建。程序需要 3 秒执行完毕。
->
-> 在 `concurrentStart`中，两个计时器被同时创建，然后执行`await`。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。
->
-> 但是 `await `仍旧是顺序执行的，第二个 `await` 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。
->
-> 如果你希望并行执行两个或更多的任务，你必须像在`parallel`中一样使用`await Promise.all([job1(), job2()])`。
+#### `await` and parallelism(并行)
 
-> **警告：**
->
-> #### `async`/`await 和`Promise#then 对比以及错误处理
->
-> 大多数 async 函数也可以使用 Promises 编写。但是，在错误处理方面，async 函数更容易捕获异常错误
->
-> 上面例子中的`concurrentStart`函数和`concurrentPromise`函数在功能上都是等效的。在`concurrentStart`函数中，如果任一`await`ed 调用失败，它将自动捕获异常，async 函数执行中断，并通过隐式返回 Promise 将错误传递给调用者。
->
-> 在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的`Promise`。在`concurrentPromise`函数中，这意味着它从`Promise.all([]).then()`返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！
->
-> 但是，async 函数仍有可能然可能错误地忽略错误。
-> 以`parallel` async 函数为例。 如果它没有等待`await`（或返回）`Promise.all([])`调用的结果，则不会传播任何错误。
-> 虽然`parallelPromise`函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于` return ``Promise.all([])`处理方式。
+在`sequentialStart`中，程序在第一个`await`停留了 2 秒，然后又在第二个`await`停留了 1 秒。直到第一个计时器结束后，第二个计时器才被创建。程序需要 3 秒执行完毕。
+
+在 `concurrentStart`中，两个计时器被同时创建，然后执行`await`。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。
+
+但是 `await` 仍旧是顺序执行的，第二个 `await` 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。
+
+如果你希望并行执行两个或更多的任务，你必须像在`parallel`中一样使用`await Promise.all([job1(), job2()])`。
+
+#### `async`/`await 和`Promise#then 对比以及错误处理
+
+大多数 async 函数也可以使用 Promises 编写。但是，在错误处理方面，async 函数更容易捕获异常错误
+
+上面例子中的`concurrentStart`函数和`concurrentPromise`函数在功能上都是等效的。在`concurrentStart`函数中，如果任一`await`ed 调用失败，它将自动捕获异常，async 函数执行中断，并通过隐式返回 Promise 将错误传递给调用者。
+
+在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的`Promise`。在`concurrentPromise`函数中，这意味着它从`Promise.all([]).then()`返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！
+
+但是，async 函数仍有可能然可能错误地忽略错误。
+以`parallel` async 函数为例。 如果它没有等待`await`（或返回）`Promise.all([])`调用的结果，则不会传播任何错误。
+虽然`parallelPromise`函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于 `return Promise.all([])`处理方式。
 
 ### 使用 async 函数重写 promise 链
 
@@ -255,29 +251,27 @@ async function getProcessedData(url) {
 
 注意，在上述示例中，`return` 语句中没有 `await` 操作符，因为 `async function` 的返回值将被隐式地传递给 `{{jsxref("Promise.resolve")}}`。
 
-> **备注：**
->
-> 返回值`隐式的传递给`{{jsxref("Promise.resolve")}}，并不意味着`return await promiseValue;和 return promiseValue;`在功能上相同。
->
-> 看下下面重写的上面代码，在`processDataInWorker`抛出异常时返回了 null：
->
-> ```plain
-> async function getProcessedData(url) {
->   let v;
->   try {
->     v = await downloadData(url);
->   } catch(e) {
->     v = await downloadFallbackData(url);
->   }
->   try {
->     return await processDataInWorker(v); // 注意 `return await` 和单独 `return` 的比较
->   } catch (e) {
->     return null;
->   }
-> }
-> ```
->
-> 简单地写上`return processDataInworker(v);将导致在 processDataInWorker(v)`出错时 function 返回值为{{jsxref("Promise")}}`而不是`返回 null。`return foo;`和`return await foo;`，有一些细微的差异：`return foo;`不管`foo`是 promise 还是 rejects 都将会直接返回`foo。相反地，`如果`foo`是一个{{jsxref("Promise")}}，`return await foo;`将等待`foo`执行 (resolve) 或拒绝 (reject)，如果是拒绝，将会在返回前抛出异常。
+返回值`隐式的传递给`{{jsxref("Promise.resolve")}}，并不意味着`return await promiseValue;和 return promiseValue;`在功能上相同。
+
+看下下面重写的上面代码，在`processDataInWorker`抛出异常时返回了 null：
+
+```js
+async function getProcessedData(url) {
+  let v;
+  try {
+    v = await downloadData(url);
+  } catch(e) {
+    v = await downloadFallbackData(url);
+  }
+  try {
+    return await processDataInWorker(v); // 注意 `return await` 和单独 `return` 的比较
+  } catch (e) {
+    return null;
+  }
+}
+```
+
+简单地写上`return processDataInworker(v);` 将导致在 `processDataInWorker(v)` 出错时 function 返回值为{{jsxref("Promise")}}而不是返回 `null`。`return foo;` 和 `return await foo;`，有一些细微的差异：`return foo;`不管`foo`是 promise 还是 rejects 都将会直接返回`foo`。相反地，如果`foo`是一个{{jsxref("Promise")}}，`return await foo;`将等待`foo`执行 (resolve) 或拒绝 (reject)，如果是拒绝，将会在返回前抛出异常。
 
 ## 规范
 

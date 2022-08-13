@@ -32,22 +32,22 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 > **警告：** 如果你没有完成之前的课程实践，可下载 [上一章节示例的压缩包](https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip) 并在本地解压作出发点。
 
-1.  首先，打开你的测试站点，创建一个名为 `scripts` 的文件夹。然后在其中创建一个名为 main.js 的文件。
-2.  下一步，在 `index.html` 文件\</body> 标签前的新行添加以下代码。
+1. 首先，打开你的测试站点，创建一个名为 `scripts` 的文件夹。然后在其中创建一个名为 main.js 的文件。
+2. 下一步，在 `index.html` 文件\</body> 标签前的新行添加以下代码。
 
     ```html
     <script src="scripts/main.js" defer></script>
     ```
 
-3.  与 CSS 的 {{htmlelement("link")}} 元素类似，它将 JavaScript 引入页面以作用于 HTML（以及 CSS 等页面上所有内容）：
-4.  现在将以下代码添加到 `main.js` 文件中：
+3. 与 CSS 的 {{htmlelement("link")}} 元素类似，它将 JavaScript 引入页面以作用于 HTML（以及 CSS 等页面上所有内容）：
+4. 现在将以下代码添加到 `main.js` 文件中：
 
     ```js
     let myHeading = document.querySelector('h1');
     myHeading.textContent = 'Hello world!';
     ```
 
-5.  最后，保存 HTML 和 JavaScript 文件，用浏览器打开 `index.html`。可以看到如下内容：![](hello-world.png)
+5. 最后，保存 HTML 和 JavaScript 文件，用浏览器打开 `index.html`。可以看到如下内容：![](hello-world.png)
 
 > **备注：** 我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。
 
@@ -277,12 +277,13 @@ if (iceCream === 'chocolate') {
 
 {{Glossary("Function", "函数")}} 用来封装可复用的功能。如果没有函数，一段特定的操作过程用几次就要重复写几次，而使用函数则只需写下函数名和一些简短的信息。之前已经涉及过一些函数，比如：
 
-1.  ```js
-    let myVariable = document.querySelector('h1');
-    ```
-2.  ```js
-    alert('hello!');
-    ```
+```js
+let myVariable = document.querySelector('h1');
+```
+
+```js
+alert('hello!');
+```
 
 `document.querySelector` 和 `alert` 是浏览器内置的函数，随时可用。
 
@@ -352,10 +353,10 @@ document.querySelector('html').addEventListener('click', () => {
 
 这里将用新的 DOM API 为网页添加另一张图片，并用 JavaScript 使图片在点击时进行切换。
 
-1.  首先，找到另一张你想要在你的页面上展示的图片，且尺寸与第一张图片尽可能相同。
-2.  将这张图片储存在你的`images`目录下。
-3.  将图片重命名为'firefox2.png'（去掉引号）。
-4.  打开 `main.js` 文件，输入下面的 JavaScript 代码 ( 请删除刚才的 "hello world" 脚本)：
+1. 首先，找到另一张你想要在你的页面上展示的图片，且尺寸与第一张图片尽可能相同。
+2. 将这张图片储存在你的`images`目录下。
+3. 将图片重命名为'firefox2.png'（去掉引号）。
+4. 打开 `main.js` 文件，输入下面的 JavaScript 代码 ( 请删除刚才的 "hello world" 脚本)：
 
     ```js
     let myImage = document.querySelector('img');
@@ -370,34 +371,34 @@ document.querySelector('html').addEventListener('click', () => {
     }
     ```
 
-5.  保存所有文件并用浏览器打开 `index.html` 。点击图片可以发现它能够切换了！
+5. 保存所有文件并用浏览器打开 `index.html` 。点击图片可以发现它能够切换了！
 
 这里首先把 {{htmlelement("img")}} 元素的引用存放在 `myImage` 变量里。然后将这个变量的 `onclick` 事件与一个匿名函数绑定。每次点击图片时：
 
-1.  获取这张图片的 `src` 属性值。
-2.  用一个条件句来判断 `src` 的值是否等于原始图像的路径：
+1. 获取这张图片的 `src` 属性值。
+2. 用一个条件句来判断 `src` 的值是否等于原始图像的路径：
 
-    1.  如果是，则将 `src` 的值改为第二张图片的路径，并在 {{htmlelement("img")}} 内加载该图片。
-    2.  如果不是（意味着它已经修改过）, 则把 `src` 的值重新设置为原始图片的路径，即原始状态。
+    1. 如果是，则将 `src` 的值改为第二张图片的路径，并在 {{htmlelement("img")}} 内加载该图片。
+    2. 如果不是（意味着它已经修改过）, 则把 `src` 的值重新设置为原始图片的路径，即原始状态。
 
 ### 添加个性化欢迎信息
 
 下面来添加另一段代码，在用户初次进入站点时将网页的标题改成一段个性化欢迎信息（即在标题中添加用户的名字）。名字信息会由 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 保存下来，即使用户关闭页面之后再重新打开，仍可得到之前的信息。还会添加一个选项，可以根据需要改变用户名字以更新欢迎信息。
 
-1.  打开 `index.html`，在 {{htmlelement("script")}} 标签**前**添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
+1. 打开 `index.html`，在 {{htmlelement("script")}} 标签**前**添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
 
     ```html
     <button>切换用户</button>
     ```
 
-2.  将以下 JavaScript 代码原封不动添加到 `main.js` 文件底部，将获取新按钮和标题的引用，并保存至变量中：
+2. 将以下 JavaScript 代码原封不动添加到 `main.js` 文件底部，将获取新按钮和标题的引用，并保存至变量中：
 
     ```js
     let myButton = document.querySelector('button');
     let myHeading = document.querySelector('h1');
     ```
 
-3.  然后添加以下函数来设置个性化欢迎信息。（函数需要在调用后生效，下文中提供了两种对该函数的调用方式）
+3. 然后添加以下函数来设置个性化欢迎信息。（函数需要在调用后生效，下文中提供了两种对该函数的调用方式）
 
     ```js
     function setUserName() {
@@ -409,7 +410,7 @@ document.querySelector('html').addEventListener('click', () => {
 
     该函数首先调用了 [`prompt()`](/zh-CN/docs/Web/API/Window.prompt) 函数，与 `alert()` 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 `myName` 变量里。接下来将调用 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage) API，它可以将数据存储在浏览器中供后续获取。这里用 `localStorage` 的 `setItem()` 函数来创建一个`'name'` 数据项，并把 `myName` 变量复制给它。最后将 `textContent` 属性设置为一个欢迎字符串加上这个新设置的名字。
 
-4.  接下来，添加以下的 `if ... else` 块。我们可以称之为初始化代码，因为它在页面初次读取时进行构造工作：
+4. 接下来，添加以下的 `if ... else` 块。我们可以称之为初始化代码，因为它在页面初次读取时进行构造工作：
 
     ```js
     if(!localStorage.getItem('name')) {
@@ -422,7 +423,7 @@ document.querySelector('html').addEventListener('click', () => {
 
     这里首次使用了取非运算符（逻辑非，用 `!` 表示）来检测 `'name'` 数据是否存在。若不存在，调用 `setUserName()` 创建。若存在（即用户上次访问时设置过），调用 `getItem()` 获取保存的名字，像上文的 `setUserName()` 那样设置 `textContent`。
 
-5.  最后，为按钮设置 onclick 事件处理器。按钮按下时运行 setUserName() 函数。这样用户就可以通过按这个按钮来自由设置新名字了：
+5. 最后，为按钮设置 onclick 事件处理器。按钮按下时运行 setUserName() 函数。这样用户就可以通过按这个按钮来自由设置新名字了：
 
     ```js
     myButton.onclick = function() {

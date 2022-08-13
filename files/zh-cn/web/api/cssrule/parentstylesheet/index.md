@@ -1,7 +1,6 @@
 ---
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
-translation_of: Web/API/CSSRule/parentStyleSheet
 ---
 {{ APIRef("CSSOM") }}
 

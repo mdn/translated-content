@@ -1,7 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-translation_of: Web/API/Storage/getItem
 ---
 {{APIRef("Web Storage API")}}
 
@@ -42,7 +41,7 @@ function setStyles() {
 }
 ```
 
-> **备注：**一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
+> **备注：** 一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
 
 ## 规范
 

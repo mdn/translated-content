@@ -1,7 +1,6 @@
 ---
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
-translation_of: Web/API/Selection/addRange
 ---
 {{ApiRef}}
 

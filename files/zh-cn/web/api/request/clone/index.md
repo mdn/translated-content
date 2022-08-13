@@ -1,7 +1,6 @@
 ---
 title: Request.clone()
 slug: Web/API/Request/clone
-translation_of: Web/API/Request/clone
 ---
 {{APIRef("Fetch")}}
 

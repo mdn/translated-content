@@ -1,7 +1,6 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
-translation_of: Web/API/DOMImplementation/createDocument
 ---
 {{ApiRef("DOM")}}
 
@@ -20,7 +19,7 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 - _qualifiedNameStr_
   - : {{domxref("DOMString")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
 - _documentType_ {{optional_inline}}
-  - : 文档的 `DocumentType `默认为 null.
+  - : 文档的 `DocumentType` 默认为 null.
 
 ## 例子
 

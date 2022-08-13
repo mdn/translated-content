@@ -1,13 +1,6 @@
 ---
 title: WEBGL_lose_context.loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
-translation_of: Web/API/WEBGL_lose_context/loseContext
 ---
 {{APIRef("WebGL")}}
 

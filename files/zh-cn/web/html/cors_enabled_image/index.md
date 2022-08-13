@@ -20,7 +20,7 @@ HTML 规范中图片有一个 `{{ htmlattrxref("crossorigin", "img") }}` 属性�
 
 尽管不通过 CORS 就可以在 `{{HTMLElement("canvas")}}` 中使用其他来源的图片，但是这会**污染**画布，并且不再认为是安全的画布，这将可能在 `{{HTMLElement("canvas")}}` 检索数据过程中引发异常。
 
-如果从外部引入的 HTML `{{HTMLElement("img")}} `或 SVG `{{SVGElement("svg")}}` ，并且图像源不符合规则，将会被阻止从 `{{HTMLElement("canvas")}}` 中读取数据。
+如果从外部引入的 HTML `{{HTMLElement("img")}}` 或 SVG `{{SVGElement("svg")}}` ，并且图像源不符合规则，将会被阻止从 `{{HTMLElement("canvas")}}` 中读取数据。
 
 在"被污染"的画布中调用以下方法将会抛出安全错误：
 
@@ -104,7 +104,7 @@ function imageReceived() {
 
 调整画布大小以匹配接收到的图像，然后使用 `{{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}` 将图像绘制到画布中。画布之后被插入到文档中显示。
 
-我们使用 Web Storage API 的本地存储机制来将图片实际存储到本地，该机制可通过全局 `{{domxref("Window.localStorage", "localStorage")}}` 进行访问。`canvas` 的 `{{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}` 方法用于将图像转换为 data:// URL 形式的 PNG 格式图片，之后使用 `{{domxref("Storage.setItem", "setItem()")}} `存储到本地。
+我们使用 Web Storage API 的本地存储机制来将图片实际存储到本地，该机制可通过全局 `{{domxref("Window.localStorage", "localStorage")}}` 进行访问。`canvas` 的 `{{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}` 方法用于将图像转换为 data:// URL 形式的 PNG 格式图片，之后使用 `{{domxref("Storage.setItem", "setItem()")}}` 存储到本地。
 
 您可以在 Glitch 上[尝试](https://cors-image-example.glitch.me)或[重写](https://glitch.com/edit/#!/remix/cors-image-example)此例子。
 

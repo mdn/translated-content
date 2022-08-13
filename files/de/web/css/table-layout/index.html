@@ -15,8 +15,6 @@ translation_of: Web/CSS/table-layout
 
 <div>{{EmbedInteractiveExample("pages/css/table-layout.html")}}</div>
 
-<p class="hidden">Die Quelle für dieses interaktive Beispiel ist in einem GitHub-Repository gespeichert. Wenn Sie zum Projekt der interaktiven Beispiele beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns eine Pull-Anfrage.</p>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css no-line-numbers notranslate">/* Keyword values */
@@ -35,8 +33,7 @@ table-layout: unset;
  <dt>{{Cssxref("auto")}}</dt>
  <dd>Standardwert. Die meisten Browser haben einen automatischen Tabellenlayout-Algorithmus. Die Breiten der Tabelle und ihrer Zellen werden an den Inhalt angepasst.</dd>
  <dt><code>fixed</code></dt>
- <dd>Die Tabellen- und Spaltenbreiten werden durch die Breiten der Tabellen- und Spaltenelemente oder durch die Breite der ersten Zellenzeile festgelegt. Zellen in nachfolgenden Zeilen haben keinen Einfluss auf die Spaltenbreiten.</dd>
- <dd>Bei der "festen" oder "fixierten" <code>fixed</code> Layoutmethode kann die gesamte Tabelle gerendert werden, sobald die erste Tabellenzeile heruntergeladen und analysiert wurde. Dies kann die Renderingzeit bei der "automatischen" <code>auto</code> Layoutmethode beschleunigen, aber der Inhalt nachfolgender Zellen passt möglicherweise nicht in die bereitgestellten Spaltenbreiten. Zellen verwenden die Eigenschaft {{Cssxref("overflow")}}, um zu bestimmen, ob überlaufende Inhalte abgeschnitten werden sollen. Dies erfolgt aber nur, wenn die Breite der Tabelle bekannt ist; andernfalls werden die Zellen nicht überlaufen.</dd>
+ <dd>Die Tabellen- und Spaltenbreiten werden durch die Breiten der Tabellen- und Spaltenelemente oder durch die Breite der ersten Zellenzeile festgelegt. Zellen in nachfolgenden Zeilen haben keinen Einfluss auf die Spaltenbreiten.<br/><br/>Bei der "festen" oder "fixierten" <code>fixed</code> Layoutmethode kann die gesamte Tabelle gerendert werden, sobald die erste Tabellenzeile heruntergeladen und analysiert wurde. Dies kann die Renderingzeit bei der "automatischen" <code>auto</code> Layoutmethode beschleunigen, aber der Inhalt nachfolgender Zellen passt möglicherweise nicht in die bereitgestellten Spaltenbreiten. Zellen verwenden die Eigenschaft {{Cssxref("overflow")}}, um zu bestimmen, ob überlaufende Inhalte abgeschnitten werden sollen. Dies erfolgt aber nur, wenn die Breite der Tabelle bekannt ist; andernfalls werden die Zellen nicht überlaufen.</dd>
 </dl>
 
 <h2 id="Formale_Definition">Formale Definition</h2>
@@ -73,10 +70,10 @@ table-layout: unset;
 }
 
 td {
-  border: 1px solid blue;
+  border: 1px solid blue;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }</pre>
 
 </div>

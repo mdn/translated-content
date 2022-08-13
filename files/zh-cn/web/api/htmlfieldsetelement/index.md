@@ -1,7 +1,6 @@
 ---
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
-translation_of: Web/API/HTMLFieldSetElement
 ---
 {{ ApiRef() }}
 
@@ -29,4 +28,4 @@ DOM `fieldset` elements expose the [HTMLFieldSetElement](http://dev.w3.org/html5
 | 名称 & 参数                                                       | 返回值    | 描述                                                                                                                                  |
 | ----------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `checkValidity`()                                                 | `Boolean` | 如果元素的值没有有效性问题,则返`回true`,否则返回`false`并触发`invalid`事件.                                                           |
-| `setCustomValidity(in `[DOMString](/zh-CN/DOM/DOMString)` error)` | `void`    | 设置一个自定义错误,则该元素将无法通过有效性验证.参数指定的字符串就是在向用户报告错误时显示的消息.如果为空字符串,则清除这个自定义错误. |
+| `setCustomValidity(in` [DOMString](/zh-CN/DOM/DOMString) `error)` | `void`    | 设置一个自定义错误,则该元素将无法通过有效性验证.参数指定的字符串就是在向用户报告错误时显示的消息.如果为空字符串,则清除这个自定义错误. |

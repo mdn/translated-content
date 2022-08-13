@@ -5,7 +5,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 ---
 <p>Чтобы завершить набор руководств по CSS Grid Layout, я собираюсь пройтись по основным видам макетов, которые демонстрируют несколько различных методов, которые можно использовать при проектировании с помощью grid layout. Мы рассмотрим пример использования областей сетки-шаблона, типичную гибкую сеточную систему с 12 столбцами, а также список продуктов с использованием автоматического размещения. Как вы можете видеть из этого списка примеров, существует несколько способов достижения желаемого результата с помощью компоновки сетки. Выберите метод, который вы считаете наиболее полезным для решения проблем, которые вы решаете, и проектов, которые вам нужно реализовать.</p>
 
-<h2 id="Адаптивный_1-3_колоночный_макет_с_использованием_grid-template-areas"><font face="Liberation Sans, sans-serif"><font size="4">Адаптивный 1-3 колоночный макет с использованием</font></font> <code>grid-template-areas</code></h2>
+<h2 id="Адаптивный_1-3_колоночный_макет_с_использованием_grid-template-areas">Адаптивный 1-3 колоночный макет с использованием <code>grid-template-areas</code></h2>
 
 <p>Многие веб-сайты являются разновидностью такого типа макета, с основным содержанием, боковыми панелями, хедером и футером. В адаптивном дизайне вы можете отобразить макет в виде одного столбца, добавив боковую панель в определённом месте, а затем ввести макет из трёх столбцов для более широких экранов.</p>
 
@@ -142,7 +142,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 
 <p>Это простой пример, но он демонстрирует, как мы можем использовать grid layout для перестройки нашего макета. В частности, я изменяю расположение рекламного блока, как заложено в настройках столбцов. Этот метод очень полезен на этапе прототипирования, он легко позволяет экспериментировать с расположением элементов. Вы всегда можете использовать сетку таким образом для прототипирования, даже несмотря на особенности отражения в различных браузерах, которые показывают ваш сайт.</p>
 
-<h2 id="Гибкий_12-колоночный_макет."><font face="Liberation Sans, sans-serif"><font size="4">Гибкий 12-колоночный макет.</font></font></h2>
+<h2 id="Гибкий_12-колоночный_макет.">Гибкий 12-колоночный макет.</h2>
 
 <p>Если вы работали с фреймворками или grid системами, вам знакомо размещение сайта на гибкой сетке с 12 или 16 столбцами. Мы можем создать такой макет, используя CSS Grid Layout. В качестве простого примера я создаю гибкую сетку из 12 столбцов, которая имеет 12 линий столбцов размером 12 <code>1fr</code>-все они имеют начальную линию с именем <code>col-start</code>. Это означает, что у нас будет двенадцать линий сетки с именем <code>col-start</code>.</p>
 
@@ -209,7 +209,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 
 <p>Существуют некоторые ключевые различия в том, как макет сетки работает над сеточными системами, которые вы, возможно, использовали ранее. Как вы можете видеть, нам не нужно добавлять какую-либо разметку для создания строки, сеточные системы должны сделать это, чтобы остановить элементы, появляющиеся в строке выше. С помощью CSS Grid Layout мы можем размещать элементы в строки, не опасаясь, что они поднимутся в строку выше, если она останется пустой. Благодаря этому строгому размещению столбцов и строк мы также можем легко оставить пустое пространство в нашем макете. Нам также не нужны специальные классы, чтобы тянуть или толкать элементы, чтобы вдавливать их в сетку. Все, что нам нужно сделать, это указать начальную и конечную строку для элемента.</p>
 
-<h3 id="Построение_макета_с_использованием_12-столбцовой_системы"><font face="Liberation Sans, sans-serif"><font size="4">Построение макета с использованием 12-столбцовой системы</font></font></h3>
+<h3 id="Построение_макета_с_использованием_12-столбцовой_системы">Построение макета с использованием 12-столбцовой системы</h3>
 
 <p>Чтобы увидеть, как этот метод макета работает на практике, мы можем создать тот же самый макет, который мы создали с {{cssxref("grid-template-areas")}}, на этот раз используя сеточную систему из 12 столбцов. Я начинаю с той же разметки, которая используется для примера областей шаблона сетки.</p>
 
@@ -533,61 +533,3 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
  <li>For inspiration see the <a href="http://labs.jensimmons.com/"><em>Layout Labs</em> from Jen Simmons</a>, she has been creating layouts based on a range of sources.</li>
  <li>For additional common layout patterns see <em><a href="http://gridbyexample.com">Grid by Example</a></em>, where there are many smaller examples of grid layout and also some larger UI patterns and full page layouts.</li>
 </ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

@@ -1,7 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
 {{ APIref("Geolocation API") }}
 
@@ -57,8 +56,6 @@ id = navigator.geolocation.watchPosition(success, error, options);
 ## 浏览器兼容性
 
 {{Compat("api.Geolocation.clearWatch")}}
-
-##
 
 ## 相关链接
 

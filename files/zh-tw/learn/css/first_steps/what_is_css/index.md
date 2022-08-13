@@ -136,8 +136,8 @@ CSS 並沒有什麼不同，它由 W3C 一個被稱為 [CSS 工作組](https://w
 
 ## 在這個單元中
 
-1.  [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 工作原理](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 工作原理](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

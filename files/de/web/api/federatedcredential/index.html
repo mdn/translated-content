@@ -10,13 +10,13 @@ translation_of: Web/API/FederatedCredential
 ---
 <p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
 
-<p>Die <strong><code>FederatedCredential</code></strong> Schnittstelle der <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> stellt Informationen über Zugangsdaten eines Anbieters föderierter Identitäten bereit. Ein Anbieter föderierter Identitäten ist ein Gebilde, dem eine Webseite vertraut, eine Nutzerin korrekt zu identifizieren und eine API für diesen Zweck bereit stellt. <a href="http://openid.net/developers/specs/">OpenID Connect</a> ist ein Beispiel für ein Framework für Anbieter föderierter Identitäten.</p>
+<p>Die <strong><code>FederatedCredential</code></strong> Schnittstelle der <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> stellt Informationen über Zugangsdaten eines Anbieters föderierter Identitäten bereit. Ein Anbieter föderierter Identitäten ist ein Gebilde, dem eine Webseite vertraut, eine Nutzerin korrekt zu identifizieren und eine API für diesen Zweck bereit stellt. <a href="http://openid.net/developers/specs/">OpenID Connect</a> ist ein Beispiel für ein Framework für Anbieter föderierter Identitäten.</p>
 
-<p>In Brwosern, die dies unterstützen, kann eine Instanz dieser Schnittstelle in der <code>credential</code> Funktions des <code>init</code> Objekt für globales {{domxref('fetch')}} mitgegeben werden.</p>
+<p>In Brwosern, die dies unterstützen, kann eine Instanz dieser Schnittstelle in der <code>credential</code> Funktions des <code>init</code> Objekt für globales {{domxref('fetch')}} mitgegeben werden.</p>
 
 <dl>
  <dt>{{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}</dt>
- <dd>Erstellt ein neues <code>FederatedCredential</code> Objekt.</dd>
+ <dd>Erstellt ein neues <code>FederatedCredential</code> Objekt.</dd>
 </dl>
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
@@ -24,7 +24,7 @@ translation_of: Web/API/FederatedCredential
 <p><em>Erbt Eigenschaften von seinem Vorfahren, {{domxref("Credential")}}.</em></p>
 
 <dl>
- <dt>{{domxref("FederatedCredential.provider")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("FederatedCredential.provider")}} {{readonlyInline}}</dt>
  <dd>Gibt einen {{domxref("USVString")}} zurück, der den Anbieter föderierter Identitäten eines Satzes von Zugangsdaten enthält.</dd>
 </dl>
 
@@ -70,56 +70,4 @@ navigator.credentials.store(cred)
 
 <h2 id="Browserkompabilität">Browserkompabilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>
-    <p>{{CompatChrome(51.0)}}</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}

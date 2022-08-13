@@ -1,7 +1,6 @@
 ---
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
-translation_of: Web/API/CSSSupportsRule
 ---
 {{APIRef("CSSOM")}}
 

@@ -1,12 +1,6 @@
 ---
 title: MIDIConnectionEvent
 slug: Web/API/MIDIConnectionEvent
-tags:
-  - API
-  - Draft
-  - MIDI
-  - 接口
-translation_of: Web/API/MIDIConnectionEvent
 ---
 {{APIRef("Web MIDI API")}}{{SeeCompatTable}}
 

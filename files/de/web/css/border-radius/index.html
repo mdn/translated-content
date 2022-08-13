@@ -23,7 +23,7 @@ translation_of: Web/CSS/border-radius
 bzw.
 
 border-radius: [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4}
-               [ / [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4} ]?
+               [ / [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4} ]?
 </pre>
 
 <h2 id="Werte">Werte</h2>
@@ -57,14 +57,14 @@ border-radius: [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4}
 
 /* ist gleichbedeutend zu: */
 
--moz-border-radius-topleft:      1em 5em;
--moz-border-radius-topright:     1em 5em;
--moz-border-radius-bottomright:  1em 5em;
--moz-border-radius-bottomleft:   1em 5em;
-     border-top-left-radius:     1em 5em;
-     border-top-right-radius:    1em 5em;
+-moz-border-radius-topleft:      1em 5em;
+-moz-border-radius-topright:     1em 5em;
+-moz-border-radius-bottomright:  1em 5em;
+-moz-border-radius-bottomleft:   1em 5em;
+     border-top-left-radius:     1em 5em;
+     border-top-right-radius:    1em 5em;
      border-bottom-right-radius: 1em 5em;
-     border-bottom-left-radius:  1em 5em;
+     border-bottom-left-radius:  1em 5em;
 </pre>
 
 <pre class="brush: css">-moz-border-radius: 4px 3px 6px / 2px 4px;
@@ -72,35 +72,35 @@ border-radius: [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4}
 
 /* ist gleichbedeutend zu: */
 
--moz-border-radius-topleft:      4px 2px;
--moz-border-radius-topright:     3px 4px;
--moz-border-radius-bottomright:  6px 2px;
--moz-border-radius-bottomleft:   3px 4px;
-     border-top-left-radius:     4px 2px;
-     border-top-right-radius:    3px 4px;
+-moz-border-radius-topleft:      4px 2px;
+-moz-border-radius-topright:     3px 4px;
+-moz-border-radius-bottomright:  6px 2px;
+-moz-border-radius-bottomleft:   3px 4px;
+     border-top-left-radius:     4px 2px;
+     border-top-right-radius:    3px 4px;
      border-bottom-right-radius: 6px 2px;
-     border-bottom-left-radius:  3px 4px;
+     border-bottom-left-radius:  3px 4px;
 </pre>
 
 <div class="note"><strong>Hinweis: </strong>Elliptische Rahmen (Slash mit erweitertem border-radius Syntax) werden von Versionen vor Gecko 1.9.1 (Firefox 3.5) nicht unterstützt.</div>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<pre style="float: left; margin: 10px; border: solid 10px; border-radius: 0 50px 50px 0;">border: solid 10px;
+<pre class="brush: css">border: solid 10px;
 
   /* Der Rahmen ergibt ein 'D' */
   -moz-border-radius: 0 50px 50px 0;
        border-radius: 0 50px 50px 0;
 </pre>
 
-<pre style="float: left; margin: 10px; border: groove 1em red; -webkit-border-radius: 2em; border-radius: 2em;">    border: groove 1em red;
+<pre class="brush: css">    border: groove 1em red;
 
            -moz-border-radius: 2em;
         -webkit-border-radius: 2em;
                 border-radius: 2em;
 </pre>
 
-<pre class="eval" style="float: left; margin: 10px; background: gold; border: ridge gold; -webkit-border-radius: 13em 3em; border-radius: 13em/3em;">
+<pre class="brush: css">
            background: gold;
            border: ridge gold;
 
@@ -109,18 +109,16 @@ border-radius: [ &lt;Länge&gt; | &lt;Prozentzahl&gt; ]{1,4}
                   border-radius: 13em/3em;
 </pre>
 
-<pre style="float: left; border: none; margin: 10px; background: gold; border-radius: 40px 10px;">    background: gold;
+<pre class="brush: css">    background: gold;
 
        -moz-border-radius: 40px 10px;
             border-radius: 40px 10px;
 </pre>
 
-<pre style="float: left; border: none; margin: 10px; background: black; color: gray; border-radius: 50%;">background: black;
+<pre class="brush: css">background: black;
 color: gray;
 border-radius: 50%;
 </pre>
-
-<p style=""> </p>
 
 <h2 id="Hinweise">Hinweise</h2>
 

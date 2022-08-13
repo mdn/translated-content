@@ -63,7 +63,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
   - : `删除了addEditorObserver()`,使用`setEditorObserver()`来替代，`removeEditorObserver()`不再需要一个`nsIEditorObserver`参数 ({{bug("785091")}})
 - `nsIHttpProtocolHandler`
   - : `http-on-modify-request` observers are no longer guaranteed to be called synchronously during
-    `nsIChannel.asyncOpen(). `For observers that need to be called during `asyncOpen`(), the new `http-on-opening-request` observer topic has been added. ({{bug("800799")}})
+    `nsIChannel.asyncOpen()`. For observers that need to be called during `asyncOpen`(), the new `http-on-opening-request` observer topic has been added. ({{bug("800799")}})
 
 #### 新增接口
 

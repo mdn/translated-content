@@ -1,13 +1,6 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
-tags:
-  - API
-  - Event
-  - Reference
-  - 只读
-  - 属性
-translation_of: Web/API/Event/isTrusted
 ---
 {{APIRef("DOM")}}
 

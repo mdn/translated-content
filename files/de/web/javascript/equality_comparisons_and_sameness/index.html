@@ -41,25 +41,25 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 </pre>
 
-<p>Strikte Gleichheit ist fast immer die am meisten geeignete Vergleichsoperation. Für alle Werte, die keine Zahlen sind, verwendet sie die naheliegende Semantik: ein Wert ist nur mit sich selbst gleich. Für Zahlen kommt eine leicht unterschiedliche Semantik zum Einsatz, da zwei Grenzfälle berücksichtigt werden müssen.  Im ersten Grenzfall kann die Zahl 0 als Gleitkommazahl ein positives oder negatives Vorzeichen haben. Dies kann zur Repräsentation von bestimmten mathematischen Lösungen nützlich sein. Da aber in den meisten Situationen nicht zwischen +0 und -0 unterschieden wird, behandelt die strikte Gleichheit diese zwei Werte als gleich. Der zweite Grenzfall ergibt sich dadruch, dass Gleitkommazahlen einen keine-Zahl Wert haben, <code>NaN</code> (not-a-number). Dadurch können Lösungen für schlecht definierte mathematische Probleme dargestellt werden (z.B.: negativ unendlich plus positiv undendlich). Strikte Gleichheit behandelt <code>NaN</code> als ungleich zu jedem anderen Wert und sich selbst. Der einzige Fall, in dem <code>(x !== x)</code> <code>true</code> ergibt, ist, wenn <code>x</code> den Wert <code>NaN</code> hat.</p>
+<p>Strikte Gleichheit ist fast immer die am meisten geeignete Vergleichsoperation. Für alle Werte, die keine Zahlen sind, verwendet sie die naheliegende Semantik: ein Wert ist nur mit sich selbst gleich. Für Zahlen kommt eine leicht unterschiedliche Semantik zum Einsatz, da zwei Grenzfälle berücksichtigt werden müssen.  Im ersten Grenzfall kann die Zahl 0 als Gleitkommazahl ein positives oder negatives Vorzeichen haben. Dies kann zur Repräsentation von bestimmten mathematischen Lösungen nützlich sein. Da aber in den meisten Situationen nicht zwischen +0 und -0 unterschieden wird, behandelt die strikte Gleichheit diese zwei Werte als gleich. Der zweite Grenzfall ergibt sich dadruch, dass Gleitkommazahlen einen keine-Zahl Wert haben, <code>NaN</code> (not-a-number). Dadurch können Lösungen für schlecht definierte mathematische Probleme dargestellt werden (z.B.: negativ unendlich plus positiv undendlich). Strikte Gleichheit behandelt <code>NaN</code> als ungleich zu jedem anderen Wert und sich selbst. Der einzige Fall, in dem <code>(x !== x)</code> <code>true</code> ergibt, ist, wenn <code>x</code> den Wert <code>NaN</code> hat.</p>
 
 <h2 id="Lose_Gleichheit_mit">Lose Gleichheit mit <code>==</code></h2>
 
-<p>Lose Gleichheit vergleicht zwei Werte auf deren Gleichheit, <em>nachdem</em> beide zu demselben Datentyp konvertiert wurden. Nach der Konvertierung (ein oder beide Werte können konvertiert werden) wird der finale Vergleich wie bei <code>===</code> ausgeführt.  Lose Gleichheit ist <em>symmetrisch</em>: <code>A == B</code> hat immer dieselbe Semantik wie <code>B == A</code> für alle Werte von <code>A</code> und <code>B</code>.</p>
+<p>Lose Gleichheit vergleicht zwei Werte auf deren Gleichheit, <em>nachdem</em> beide zu demselben Datentyp konvertiert wurden. Nach der Konvertierung (ein oder beide Werte können konvertiert werden) wird der finale Vergleich wie bei <code>===</code> ausgeführt.  Lose Gleichheit ist <em>symmetrisch</em>: <code>A == B</code> hat immer dieselbe Semantik wie <code>B == A</code> für alle Werte von <code>A</code> und <code>B</code>.</p>
 
 <p>Der Vergleich auf Gleichheit wird wie folgt für Operanden mit den verschiedenen Datentypen ausgeführt:</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th colspan="7" scope="col" style="text-align: center;">Operand B</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row"> </th>
-   <td> </td>
+   <th scope="row"> </th>
+   <td> </td>
    <td style="text-align: center;">Undefined</td>
    <td style="text-align: center;">Null</td>
    <td style="text-align: center;">Number</td>
@@ -127,9 +127,9 @@ console.log(obj === undefined); // false
  </tbody>
 </table>
 
-<p>In der oberen Tabelle versucht <code>ToNumber(A)</code> sein Argument vor dem Vergleich in eine Zahl zu konvertieren. Das Verhalten ist äquivalent zu <code>+A</code> (der unäre + Operator).  <code>ToPrimitive(A)</code> versucht sein Argument, das ein Objekt ist, in einen primitiven Wert zu konvertieren. Dazu wird eine unterschiedliche Sequenz von <code>A.toString</code> und <code>A.valueOf</code> Methoden von <code>A</code> aufzurufen.</p>
+<p>In der oberen Tabelle versucht <code>ToNumber(A)</code> sein Argument vor dem Vergleich in eine Zahl zu konvertieren. Das Verhalten ist äquivalent zu <code>+A</code> (der unäre + Operator).  <code>ToPrimitive(A)</code> versucht sein Argument, das ein Objekt ist, in einen primitiven Wert zu konvertieren. Dazu wird eine unterschiedliche Sequenz von <code>A.toString</code> und <code>A.valueOf</code> Methoden von <code>A</code> aufzurufen.</p>
 
-<p>Traditionell und laut ECMAScript sind alle Objekte lose ungleich zu <code>undefined</code> und <code>null</code>. Aber die meisten Webbbrowser erlauben einer sehr kleinen Menge von Objekten (speziell das <code>document.all</code> Objekt für jede Seite), dass sie sich in bestimmten Kontexten so verhalten, als ob sie den Wert <code>undefined</code> <em>emulieren</em>.  Lose Gleichheit ist ein derartiger Kontext. Daher ergibt die Methode <code>IsFalsy(A)</code> genau dann <code>true</code>, wenn A ein Objekt ist, das <code>undefined</code> <em>emuliert</em>. In allen anderen Fällen ist ein Objekt nie lose gleich zu <code>undefined</code> oder <code>null</code>.</p>
+<p>Traditionell und laut ECMAScript sind alle Objekte lose ungleich zu <code>undefined</code> und <code>null</code>. Aber die meisten Webbbrowser erlauben einer sehr kleinen Menge von Objekten (speziell das <code>document.all</code> Objekt für jede Seite), dass sie sich in bestimmten Kontexten so verhalten, als ob sie den Wert <code>undefined</code> <em>emulieren</em>.  Lose Gleichheit ist ein derartiger Kontext. Daher ergibt die Methode <code>IsFalsy(A)</code> genau dann <code>true</code>, wenn A ein Objekt ist, das <code>undefined</code> <em>emuliert</em>. In allen anderen Fällen ist ein Objekt nie lose gleich zu <code>undefined</code> oder <code>null</code>.</p>
 
 <pre class="brush: js">var num = 0;
 var obj = new String("0");
@@ -166,13 +166,13 @@ function attemptMutation(v)
 }
 </pre>
 
-<p><code>Object.defineProperty</code> wird eine Exception werfen, wenn ein Versuch zum Verändern eines unveränderbares Property es verändern würde. Es passiert nichts, solange keine Veränderung stattfinden soll.  Wenn <code>v</code> <code>-0</code> ist, wurde keine Veränderung angefragt und somit wird keine Exception geworfen. Wenn <code>v</code> aber <code>+0</code> ist, hätte <code>Number.NEGATIVE_ZERO</code> nicht länger seinen unveränderbaren Wert. Wenn ein unveränderbares Property neudefiniert wird, wird der neu spezifizierte Wert intern mittels der Same-value Gleichheit mit dem aktuellen Wert verglichen.</p>
+<p><code>Object.defineProperty</code> wird eine Exception werfen, wenn ein Versuch zum Verändern eines unveränderbares Property es verändern würde. Es passiert nichts, solange keine Veränderung stattfinden soll.  Wenn <code>v</code> <code>-0</code> ist, wurde keine Veränderung angefragt und somit wird keine Exception geworfen. Wenn <code>v</code> aber <code>+0</code> ist, hätte <code>Number.NEGATIVE_ZERO</code> nicht länger seinen unveränderbaren Wert. Wenn ein unveränderbares Property neudefiniert wird, wird der neu spezifizierte Wert intern mittels der Same-value Gleichheit mit dem aktuellen Wert verglichen.</p>
 
 <p>Die Same-value Gleichheit wird von der <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> Methode angeboten.</p>
 
 <h2 id="Abstrakte_Gleichheit_strikte_Gleichheit_und_same-value_Gleichheit_in_der_Spezifikation">Abstrakte Gleichheit, strikte Gleichheit und same-value Gleichheit in der Spezifikation</h2>
 
-<p>In ECMAScript 5 wird der Vergleich mit <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a> beschrieben. Der <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> Vergleich ist in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a> zu finden. (Diese beiden Abschnitte sind kurz und verständlich. Hinweis: zuerst den Abschnitt Strict Equality Algorithm lesen) ECMAScript 5 beschreibt auch die same-value Gleichheit in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> für die interne Verwendung in der JavaScript Engine. Dieser Abschnitt ist hauptsächlich derselbe wie Strict Equality Algorithm mit der Ausnahme, dass sich 11.9.6.4 und 9.12.4 in der Behandlung von Zahlen (<a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) unterscheiden. ECMAScript 2015 schlägt vor, dass dieser Algorithmus über <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> angeboten wird.</p>
+<p>In ECMAScript 5 wird der Vergleich mit <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a> beschrieben. Der <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> Vergleich ist in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a> zu finden. (Diese beiden Abschnitte sind kurz und verständlich. Hinweis: zuerst den Abschnitt Strict Equality Algorithm lesen) ECMAScript 5 beschreibt auch die same-value Gleichheit in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> für die interne Verwendung in der JavaScript Engine. Dieser Abschnitt ist hauptsächlich derselbe wie Strict Equality Algorithm mit der Ausnahme, dass sich 11.9.6.4 und 9.12.4 in der Behandlung von Zahlen (<a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) unterscheiden. ECMAScript 2015 schlägt vor, dass dieser Algorithmus über <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> angeboten wird.</p>
 
 <p>Wir können erkennen, dass mit double und triple equals, mit der Ausnahme der vorhergehenden Typkonvertierung in 11.9.6.1, der Strict Equality Algorithm eine Teilmenge des Abstract Equality Algorithm ist, weil 11.9.6.2–7 dem Abschnitt 11.9.3.1.a–f entspricht.</p>
 
@@ -373,9 +373,6 @@ function attemptMutation(v)
 
 <dl>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (unary negation)</code></a></dt>
-</dl>
-
-<dl>
  <dd>
  <p>It's obvious that negating <code>0</code> produces <code>-0</code>. But the abstraction of an expression can cause <code>-0</code> to creep in when you don't realize it. For example, consider:</p>
 
@@ -383,33 +380,18 @@ function attemptMutation(v)
 
  <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propogates out into <code>stoppingForce</code>.</p>
  </dd>
-</dl>
-
-<dl>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a></dt>
-</dl>
-
-<dl>
  <dd>It's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods in some cases, even when no <code>-0</code> exists as one of the parameters. E.g., using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a> to raise <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a></dt>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a></dt>
-</dl>
-
-<dl>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evalutes to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>

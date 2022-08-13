@@ -11,7 +11,7 @@ Mozilla 1.3 实现了微软 IE 浏览器的 designMode 特性。Mozilla 1.3 的�
 
 ### 配置富文本编辑
 
-富文本编辑通过设置文档的 "designMode" 属性为 "On" 来初始化。一旦 `designMode `设置为 "On" ，该文档即成为用户能够按使用 textarea 方式操作的富文本编辑区域。复制和粘贴等最基础的键盘操作可用，而其它命令则需通过站点实现。
+富文本编辑通过设置文档的 "designMode" 属性为 "On" 来初始化。一旦 `designMode` 设置为 "On" ，该文档即成为用户能够按使用 textarea 方式操作的富文本编辑区域。复制和粘贴等最基础的键盘操作可用，而其它命令则需通过站点实现。
 
 类似地，将 "contentEditable" 属性设置为 "true" 后，用户能够将文档中的独立元素设置为可编辑的。
 
@@ -21,7 +21,7 @@ Mozilla 1.3 实现了微软 IE 浏览器的 designMode 特性。Mozilla 1.3 的�
 
 ### 与 IE 区别
 
-Mozilla 与 IE 在 designMode 下的一个显著区别在于可编辑区域中所生成的代码。在 IE 中使用 em 与 i 等 HTML 标签，而 Mozilla 则默认生成带有内联样式规则的 span 标签。可通过 `styleWithCSS `命令以在 CSS 与 HTML 标记中切换。
+Mozilla 与 IE 在 designMode 下的一个显著区别在于可编辑区域中所生成的代码。在 IE 中使用 em 与 i 等 HTML 标签，而 Mozilla 则默认生成带有内联样式规则的 span 标签。可通过 `styleWithCSS` 命令以在 CSS 与 HTML 标记中切换。
 
 **Figure 1 : 生成 HTML 的区别**
 
@@ -54,7 +54,7 @@ Mozilla 与 IE 的另一个区别是在与 designMode 结合使用的场景中�
 
 #### 示例 1
 
-第一个示例中，将 HTML 文档中的 `designMode `设置为 "On"。在 Mozilla 1.3 中这将使整篇文档均可编辑。但在 IE 中并不支持通过 JavaScript 改变文档的 `designMode` 特性。需要兼容 IE 时，body 标签中的 `contentEditable` 属性需要设置为 "true"。
+第一个示例中，将 HTML 文档中的 `designMode` 设置为 "On"。在 Mozilla 1.3 中这将使整篇文档均可编辑。但在 IE 中并不支持通过 JavaScript 改变文档的 `designMode` 特性。需要兼容 IE 时，body 标签中的 `contentEditable` 属性需要设置为 "true"。
 
 **Figure 2 : 第一个示例**
 

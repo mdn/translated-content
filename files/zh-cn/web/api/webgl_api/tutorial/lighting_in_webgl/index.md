@@ -1,7 +1,6 @@
 ---
 title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
@@ -23,8 +22,8 @@ translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 
 虽然可以抛开了点光源和镜面反射，但是关于方向光还是有两点需要注意一下：
 
-1.  需要在每个顶点信息中加入面的**朝向法线**。这个法线是一个垂直于这个顶点所在平面的向量。
-2.  需要明确方向光的传播方向，可以使用一个**方向向量**来定义。
+1. 需要在每个顶点信息中加入面的**朝向法线**。这个法线是一个垂直于这个顶点所在平面的向量。
+2. 需要明确方向光的传播方向，可以使用一个**方向向量**来定义。
 
 接着，我们会更新顶点着色器，考虑到环境光，再考虑到方向光（方向光的作用会因为光线方向与面的夹角关系而不同），计算每一个顶点的颜色。实现这一目标的代码如下。
 

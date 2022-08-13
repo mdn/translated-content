@@ -46,7 +46,7 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-> **警告：**对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
+> **警告：** 对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
 >
 > ```js
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
@@ -98,7 +98,7 @@ var args = [...arguments];
 - [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
 
-> **备注：**在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
+> **备注：** 在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
 
 ## 例子
 

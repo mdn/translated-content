@@ -1,9 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-tags:
-  - Vibration API
-translation_of: Web/API/Vibration_API
 ---
 {{DefaultAPISidebar("Vibration API")}}
 
@@ -38,7 +35,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 停止振动
 
-当调用 [`window.navigator.vibrate()`](https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate)` 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。`
+当调用 [`window.navigator.vibrate()`](https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate) 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。
 
 ### 持续振动
 

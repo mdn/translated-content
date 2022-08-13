@@ -9,7 +9,7 @@ translation_of: Web/HTML/Element/frame
 
 `<frame>` 是 HTML 元素，它定义了一个特定区域，另一个 HTML 文档可以在里面展示。帧应该在 {{HTMLElement("frameset")}} 中使用。
 
-`<frame> `的使用不应提倡，因为有一些缺点，比如性能问题，以及使用屏幕阅读器的用户缺少可访问性。比起 `<frame>`，{{HTMLElement("iframe")}} 更应该提倡。
+`<frame>` 的使用不应提倡，因为有一些缺点，比如性能问题，以及使用屏幕阅读器的用户缺少可访问性。比起 `<frame>`，{{HTMLElement("iframe")}} 更应该提倡。
 
 ## 属性
 

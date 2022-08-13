@@ -32,7 +32,7 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
 ```
 
-但你自己创建的类不会有这份特殊待遇，`toString() `找不到 `toStringTag` 属性时只好返回默认的 `Object` 标签：
+但你自己创建的类不会有这份特殊待遇，`toString()` 找不到 `toStringTag` 属性时只好返回默认的 `Object` 标签：
 
 ```js
 class ValidatorClass {}

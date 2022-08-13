@@ -1,9 +1,6 @@
 ---
 title: 'HTMLMediaElement: canplay'
 slug: Web/API/HTMLMediaElement/canplay_event
-tags:
-  - canplay
-translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

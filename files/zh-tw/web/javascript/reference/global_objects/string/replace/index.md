@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 **`replace()`** 方法會傳回一個新字串，此新字串是透過將原字串與 `pattern` 比對，以 `replacement` 取代吻合處而生成。`pattern` 可以是字串或 {{jsxref("RegExp")}}，而 `replacement` 可以是字串或函式（會在每一次匹配時被呼叫）。
 
-> **備註：**原始的字串會保持不變。
+> **備註：** 原始的字串會保持不變。
 
 ## 語法
 

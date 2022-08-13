@@ -39,8 +39,8 @@ p {
   - [類型選擇器](/zh-TW/docs/Web/CSS/Type_selectors) `elementname`
   - [Class 選擇器](/zh-TW/docs/Web/CSS/Class_selectors) `.classname`
   - [ID 選擇器](/zh-TW/docs/Web/CSS/ID_selectors) `#idname`
-  - [通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [屬性選擇器](/zh-TW/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [屬性選擇器](/zh-TW/docs/Web/CSS/Attribute_selectors) `[attr=value]`
   - [狀態選擇器](/zh-TW/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - 複合選擇器

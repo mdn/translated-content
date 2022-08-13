@@ -1,7 +1,6 @@
 ---
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
-translation_of: Web/API/HashChangeEvent/oldURL
 ---
 {{APIRef("HTML DOM")}}
 

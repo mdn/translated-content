@@ -1,7 +1,6 @@
 ---
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
-translation_of: Web/API/CSSStyleDeclaration/length
 ---
 {{ APIRef("CSSOM") }}
 

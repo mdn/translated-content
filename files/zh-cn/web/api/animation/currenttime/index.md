@@ -1,9 +1,6 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
-tags:
-  - 动画
-translation_of: Web/API/Animation/currentTime
 ---
 {{APIRef("Web Animations API")}}{{SeeCompatTable}}
 

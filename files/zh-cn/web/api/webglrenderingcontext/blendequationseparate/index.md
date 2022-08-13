@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.blendEquationSeparate()
 slug: Web/API/WebGLRenderingContext/blendEquationSeparate
-translation_of: Web/API/WebGLRenderingContext/blendEquationSeparate
 ---
 {{APIRef("WebGL")}}
 

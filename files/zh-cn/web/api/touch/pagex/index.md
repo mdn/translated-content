@@ -1,9 +1,6 @@
 ---
 title: Touch.pageX
 slug: Web/API/Touch/pageX
-tags:
-  - touch
-translation_of: Web/API/Touch/pageX
 ---
 {{ ApiRef() }}
 

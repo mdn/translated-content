@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/Element/pointerdown_event
-translation_of: Web/API/GlobalEventHandlers/onpointerdown
-original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
 {{ApiRef("HTML DOM")}}
 
@@ -48,8 +46,6 @@ function init() {
 ## 浏览器支持
 
 {{Compat("api.GlobalEventHandlers.onpointerdown")}}
-
-##
 
 ## 参阅
 

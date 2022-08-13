@@ -79,8 +79,8 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 如果你希望测试你的页面，或者你遇到困难想要求助，你可以：
 
-1.  将你的文件提交到可网络共享的编辑器，如 CodePen、jsFiddle 或 Glitch。
-2.  在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加“学习”的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
+1. 将你的文件提交到可网络共享的编辑器，如 CodePen、jsFiddle 或 Glitch。
+2. 在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加“学习”的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
 
 - 一个描述性标题，例如“CSS 的初步尝试需要测试”。
 - 详细描述你希望我们做些什么——比如，你已经尝试过了，但是卡住了，需要帮助。
@@ -95,8 +95,8 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 **本章目录**
 
-1.  [什么是 CSS？](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 是如何构成的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [运用你所学的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [什么是 CSS？](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 是如何构成的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [运用你所学的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

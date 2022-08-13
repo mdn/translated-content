@@ -1,18 +1,12 @@
 ---
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - touch
-translation_of: Web/API/TouchEvent/touches
 ---
 {{ APIRef("Touch Events") }}
 
 ## 概要
 
-一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart `阶段。
+一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart` 阶段。
 
 此属性是 {{readonlyInline}}。
 
@@ -25,13 +19,13 @@ var touches = touchEvent.touches;
 ### 返回值
 
 - `touches`
-  - : 一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart `阶段。
+  - : 一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart` 阶段。
 
 ## 示例
 
-此示例说明 {{domxref("TouchEvent")}}` `对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。
+此示例说明 {{domxref("TouchEvent")}} 对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。
 
-在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}}` `列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
+在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}} 列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
 
 ```js
 someElement.addEventListener('touchstart', function(e) {

@@ -11,14 +11,13 @@ translation_of: Web/CSS/content
 
 <h2 id="Zusammenfassung">Zusammenfassung</h2>
 
-<p>Die <code>content</code> CSS Eigenschaft wird mit {{ cssxref("::before") }} und {{ cssxref("::after") }} Pseudo-elementen genutzt um Inhalte in einen Element zu generieren. Die Inhalte die in <code>content</code> eingefügt werden sind Anonym, sie werden nur gerendert und sind nicht im DOM vorhanden. Siehe:<em> <a href="/en-US/docs/CSS/Replaced_element" title="CSS/Replaced_element">replaced elements</a>.</em></p>
+<p>Die <code>content</code> CSS Eigenschaft wird mit {{ cssxref("::before") }} und {{ cssxref("::after") }} Pseudo-elementen genutzt um Inhalte in einen Element zu generieren. Die Inhalte die in <code>content</code> eingefügt werden sind Anonym, sie werden nur gerendert und sind nicht im DOM vorhanden. Siehe:<em> <a href="/en-US/docs/CSS/Replaced_element" title="CSS/Replaced_element">replaced elements</a>.</em></p>
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("content")}}
-</pre>
+{{csssyntax("/en-US/docs/CSS/Value_definition_syntax")}}
 
 <pre>content: normal                                /* Keywords die nicht mit anderen Werten kombiniert werden können */
 content: none
@@ -43,17 +42,17 @@ content: inherit
  <dt><code>none</code></dt>
  <dd>Das Pseudo-Element wird nicht erzeugt.</dd>
  <dt><code>normal</code></dt>
- <dd>Berechnet auf <code>none</code> für <code>:before</code> und <code>:after</code> Pseudo-elemente.</dd>
+ <dd>Berechnet auf <code>none</code> für <code>:before</code> und <code>:after</code> Pseudo-elemente.</dd>
  <dt>&lt;string&gt;</dt>
  <dd>Text Inhalt.</dd>
  <dt>&lt;uri&gt;<code> url()</code></dt>
  <dd>Der Wert ist ein URI, die eine externe Ressource bezeichnet (beispielsweise ein Bild). Wenn die Ressource oder das Bild nicht angezeigt werden kann, wird es entweder ignoriert oder ein Platzhalter wird angezeigt.</dd>
  <dt>&lt;counter&gt;</dt>
- <dd>Die Zähler (Counters) können mit zwei verschiedenen Funktionen angegeben werden: 'counter()' oder 'counters()'. Ersteres hat zwei Formen: 'counter(name) "oder" counter(name, style). Der erzeugte Text ist der Wert des counter innersten, im Scope dieses Pseudoelements; es wird in der angegebenen Art ('dezimal' als Standard) formatiert. Die letztere Funktion hat auch zwei Formen: "counter(name, string) 'oder' counters(name, string, style) '. Der erzeugte Text ist der Wert aller Zähler mit dem angegebenen Namen im Scope dieses Pseudoelements, von außen nach innen, durch den angegebenen String getrennt. Die counter werden in der angegebenen Art ('dezimal' als Standard) wiedergegeben. Siehe den Abschnitt über automatische Counter und Nummerierung für weitere Informationen. Der Name darf nicht "none", "inherit" oder "initial" sein. Ein solcher Name bewirkt, dass die Deklaration ignoriert wird.</dd>
+ <dd>Die Zähler (Counters) können mit zwei verschiedenen Funktionen angegeben werden: 'counter()' oder 'counters()'. Ersteres hat zwei Formen: 'counter(name) "oder" counter(name, style). Der erzeugte Text ist der Wert des counter innersten, im Scope dieses Pseudoelements; es wird in der angegebenen Art ('dezimal' als Standard) formatiert. Die letztere Funktion hat auch zwei Formen: "counter(name, string) 'oder' counters(name, string, style) '. Der erzeugte Text ist der Wert aller Zähler mit dem angegebenen Namen im Scope dieses Pseudoelements, von außen nach innen, durch den angegebenen String getrennt. Die counter werden in der angegebenen Art ('dezimal' als Standard) wiedergegeben. Siehe den Abschnitt über automatische Counter und Nummerierung für weitere Informationen. Der Name darf nicht "none", "inherit" oder "initial" sein. Ein solcher Name bewirkt, dass die Deklaration ignoriert wird.</dd>
  <dt><code>attr(X)</code></dt>
- <dd>Gibt den Wert des Elementen Attributes X als String zurück. Gibt es kein Attribut X wird ein leerer String zurückgegeben. Die Groß- und Kleinschreibung von Attributnamen hängt von der Dokumentsprache ab.</dd>
+ <dd>Gibt den Wert des Elementen Attributes X als String zurück. Gibt es kein Attribut X wird ein leerer String zurückgegeben. Die Groß- und Kleinschreibung von Attributnamen hängt von der Dokumentsprache ab.</dd>
  <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>Diese Werte werden durch die entsprechende Zeichenfolge aus der {{ cssxref("quotes") }} Eigenschaft ersetzt. </dd>
+ <dd>Diese Werte werden durch die entsprechende Zeichenfolge aus der {{ cssxref("quotes") }} Eigenschaft ersetzt. </dd>
  <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
  <dd>Stellt keine Inhalte, sondern erhöht (verringert) die Ebene der Schachtelung für Zitate.</dd>
 </dl>
@@ -66,27 +65,27 @@ content: inherit
 
 <pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
 &lt;p&gt; We shall start this with a quote from Sir Tim Berners-Lee,
-    &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;
-        I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.&lt;/q&gt;  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+    &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;
+        I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.&lt;/q&gt;  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
 &lt;/p&gt;
 
 &lt;h1&gt;6&lt;/h1&gt;
 &lt;p&gt; Here we shall quote the Mozilla Manifesto,
-    &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;
-        Individuals must have the ability to shape the Internet and their own experiences on the Internet.&lt;/q&gt; And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
+    &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;
+        Individuals must have the ability to shape the Internet and their own experiences on the Internet.&lt;/q&gt; And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
 &lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">q {
-    color: #00008B;
-    font-style: italic;
+    color: #00008B;
+    font-style: italic;
 }
 
-q::before   { content: open-quote }
-q::after    { content: close-quote }
+q::before   { content: open-quote }
+q::after    { content: close-quote }
 
-h1::before  { content: "Chapter "; }</pre>
+h1::before  { content: "Chapter "; }</pre>
 
 <h4 id="Ausgabe">Ausgabe</h4>
 
@@ -101,9 +100,9 @@ h1::before  { content: "Chapter "; }</pre>
 <h4 id="CSS_2">CSS</h4>
 
 <pre class="brush: css">a::before{
-    content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
-    font:    x-small Arial,freeSans,sans-serif;
-    color:   gray;
+    content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
+    font:    x-small Arial,freeSans,sans-serif;
+    color:   gray;
 }</pre>
 
 <h4 id="Ausgabe_2">Ausgabe</h4>
@@ -116,8 +115,8 @@ h1::before  { content: "Chapter "; }</pre>
 
 <pre class="brush: html">&lt;div&gt;
   &lt;ul class="brightIdea"&gt;
-    &lt;li&gt;This is my first idea&lt;/li&gt;
-    &lt;li&gt;and another good idea&lt;/li&gt;
+    &lt;li&gt;This is my first idea&lt;/li&gt;
+    &lt;li&gt;and another good idea&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
@@ -127,8 +126,8 @@ h1::before  { content: "Chapter "; }</pre>
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 .brightIdea li::after{
-    content: '\1f4a1';
-    font-family: 'entypo', sans-serif;
+    content: '\1f4a1';
+    font-family: 'entypo', sans-serif;
 }</pre>
 
 <h4 id="Ausgabe_3">Ausgabe</h4>
@@ -141,10 +140,10 @@ h1::before  { content: "Chapter "; }</pre>
 
 <pre class="brush: html">&lt;h2&gt;Paperback best sellers&lt;/h2&gt;
 &lt;ol&gt;
-    &lt;li&gt;Political thriller&lt;/li&gt;
-    &lt;li class="newEntry"&gt;Halloween Stories&lt;/li&gt;
-    &lt;li&gt;My Biography&lt;/li&gt;
-    &lt;li class="newEntry"&gt;Vampire Romance&lt;/li&gt;
+    &lt;li&gt;Political thriller&lt;/li&gt;
+    &lt;li class="newEntry"&gt;Halloween Stories&lt;/li&gt;
+    &lt;li&gt;My Biography&lt;/li&gt;
+    &lt;li class="newEntry"&gt;Vampire Romance&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
 <h4 id="CSS_4">CSS</h4>
@@ -154,8 +153,8 @@ Simple string example, but don't forget add a leading space in the text string
 for spacing purposes  */
 
 .newEntry::after {
-    content: " New!";
-    color: red;
+    content: " New!";
+    color: red;
 }</pre>
 
 <h4 id="Ausgabe_4">Ausgabe</h4>
@@ -167,39 +166,39 @@ for spacing purposes  */
 <h4 id="HTML_5">HTML</h4>
 
 <pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
-        Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-        Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a id="w3c" href="http://www.w3c.org/"&gt;
-        World Wide Web Consortium&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
+        Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
+        Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a id="w3c" href="http://www.w3c.org/"&gt;
+        World Wide Web Consortium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
 <h4 id="CSS_5">CSS</h4>
 
 <pre class="brush: css">a {
-    text-decoration: none;
-    border-bottom: 3px dotted navy;
+    text-decoration: none;
+    border-bottom: 3px dotted navy;
 }
 
 a::after {
-    content: " (" attr(id) ")";
+    content: " (" attr(id) ")";
 }
 
 #moz::before {
-    content:url(https://mozorg.cdn.mozilla.net/media/img/favicon.ico) ;
+    content:url(https://mozorg.cdn.mozilla.net/media/img/favicon.ico) ;
 }
 
 #mdn::before {
-    content:url(https://mdn.mozillademos.org/files/7691/mdn-favicon16.png) ;
+    content:url(https://mdn.mozillademos.org/files/7691/mdn-favicon16.png) ;
 }
 
 #w3c::before {
-    content:url(http://w3c.org/2008/site/images/favicon.ico) ;
+    content:url(http://w3c.org/2008/site/images/favicon.ico) ;
 }
 
 li {
-    margin: 1em;
+    margin: 1em;
 }
 
 </pre>

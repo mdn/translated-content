@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 
 已废弃的**`unescape()`** 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像{{jsxref("escape")}}里介绍的一样。因为 `unescape` 已经废弃，建议使用 {{jsxref("decodeURI")}}或者{{jsxref("decodeURIComponent")}} 替代本方法。
 
-> **备注：**不要使用`unescape`去解码 URLS，使用`decodeURI`或`decodeURIComponent`替代。
+> **备注：** 不要使用`unescape`去解码 URLS，使用`decodeURI`或`decodeURIComponent`替代。
 
 ## 语法
 

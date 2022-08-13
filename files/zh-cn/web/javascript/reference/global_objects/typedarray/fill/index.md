@@ -30,7 +30,7 @@ typedarray.fill(value[, start = 0[, end = this.length]])
 
 将被元素填充的区间是 \[`start`, `end`)。
 
-**`fill `**方法接受三个参数 `value`，`start` 以及 ` end。``start ` 和 `end` 参数是可选的，默认值分别为 `0` 和 `this.length。`
+**`fill`** 方法接受三个参数 `value`，`start` 以及 `end`。`start` 和 `end` 参数是可选的，默认值分别为 `0` 和 `this.length。`
 
 如果 `start` 参数是负值，它会被视为 `length+start`，其中 `length` 是类型化数组的长度。如果 `end` 参数是负值，它会被视为 `length+end。`
 

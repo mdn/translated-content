@@ -34,42 +34,42 @@ translation_of: 'Web/CSS/:hover'
 <p>Mit der <code>:hover</code> Pseudoklasse kann man komplexe Algorithmen in CSS erstellen. Dies ist eine verbreitete Methode, die genutzt wird, um beispielsweise Dropdown Menüs nur mit CSS (ohne <a href="/de/docs/Web/JavaScript" title="en/JavaScript">JavaScript</a>) zu erstellen. Die Idee dieser Methode ist das Erstellen einer Regel, wie die Folgende:</p>
 
 <pre class="brush: css">div.menu-bar ul ul {
-  display: none;
+  display: none;
 }
 
 div.menu-bar li:hover &gt; ul {
-  display: block;
+  display: block;
 }
 </pre>
 
 <p>Sie kann auf folgende HTML Struktur angewendet werden:</p>
 
 <pre class="brush: html">&lt;div class="menu-bar"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="example.html"&gt;Menü&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;a href="example.html"&gt;Link&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a class="menu-nav" href="example.html"&gt;Untermenü&lt;/a&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a class="menu-nav" href="example.html"&gt;Untermenü&lt;/a&gt;
-              &lt;ul&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="example.html"&gt;Menü&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="example.html"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="menu-nav" href="example.html"&gt;Untermenü&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a class="menu-nav" href="example.html"&gt;Untermenü&lt;/a&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 

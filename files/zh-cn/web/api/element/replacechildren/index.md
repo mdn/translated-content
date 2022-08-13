@@ -1,16 +1,6 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - replaceChildren
-translation_of: Web/API/Element/replaceChildren
-browser-compat: api.Element.replaceChildren
 ---
 {{APIRef("DOM")}}{{seecompattable}}
 

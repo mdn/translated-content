@@ -1,7 +1,6 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-translation_of: Web/API/Storage/clear
 ---
 {{APIRef("Web Storage API")}}
 
@@ -35,7 +34,7 @@ function populateStorage() {
 }
 ```
 
-> **备注：**一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
+> **备注：** 一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
 
 ## 规范
 

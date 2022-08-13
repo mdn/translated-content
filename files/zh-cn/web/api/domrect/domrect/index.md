@@ -1,7 +1,6 @@
 ---
 title: DOMRect.DOMRect()
 slug: Web/API/DOMRect/DOMRect
-translation_of: Web/API/DOMRect/DOMRect
 ---
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 

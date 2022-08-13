@@ -55,7 +55,7 @@ const y = new Error('Ich wurde mit dem "new" Schlüsselwort erstellt!');</pre>
  <dt>{{jsxref("ReferenceError")}}</dt>
  <dd>Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn eine nicht valide Referenz referenziert werden soll.</dd>
  <dt>{{jsxref("SyntaxError")}}</dt>
- <dd>Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn die Syntax von  Quellcode, der in der {{jsxref("Global_Objects/eval", "eval()")}} Funktion übergeben wird, nicht richtig ist.</dd>
+ <dd>Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn die Syntax von  Quellcode, der in der {{jsxref("Global_Objects/eval", "eval()")}} Funktion übergeben wird, nicht richtig ist.</dd>
  <dt>{{jsxref("TypeError")}}</dt>
  <dd>Erstellt eine Instanz, die einen Fehler repräsentiert, der auftritt, wenn eine Variable oder ein Parameter einen nicht validen Typen enthält.</dd>
  <dt>{{jsxref("URIError")}}</dt>
@@ -89,7 +89,7 @@ const y = new Error('Ich wurde mit dem "new" Schlüsselwort erstellt!');</pre>
 
 <h3 id="Werfen_eines_generischen_Errors">Werfen eines generischen Errors</h3>
 
-<p>Typischerweise erstellt man ein <code>Error</code> Objekt mit der Intention es mit dem {{jsxref("Statements/throw", "throw")}} Schlüsselwort zu werfen. Man kann den Fehler auffangen, indem man ein {{jsxref("Statements/try...catch", "try...catch")}} Konstrukt benutzt.</p>
+<p>Typischerweise erstellt man ein <code>Error</code> Objekt mit der Intention es mit dem {{jsxref("Statements/throw", "throw")}} Schlüsselwort zu werfen. Man kann den Fehler auffangen, indem man ein {{jsxref("Statements/try...catch", "try...catch")}} Konstrukt benutzt.</p>
 
 <pre class="brush: js">try {
   throw new Error('Whoops!');
@@ -116,7 +116,7 @@ const y = new Error('Ich wurde mit dem "new" Schlüsselwort erstellt!');</pre>
 
 <h3 id="Benutzerdefinierte_Fehlertypen">Benutzerdefinierte Fehlertypen</h3>
 
-<p>Manchmal möchte man aber einen eigenen Error erstellen, der von <code>Error</code> abgeleitet ist, durch den Aufruf <code>throw new CustomError()</code>  geworfen werden kann und durch <code>instanceof CustomError</code> abgefragt werden kann. Eigene Fehlertypen führen zu einer besseren und konsistenten Fehlerbehandlung. Für eine tiefer gehende Diskussion schaue bitte auf <a href="https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">Stack Overflow</a> nach.</p>
+<p>Manchmal möchte man aber einen eigenen Error erstellen, der von <code>Error</code> abgeleitet ist, durch den Aufruf <code>throw new CustomError()</code>  geworfen werden kann und durch <code>instanceof CustomError</code> abgefragt werden kann. Eigene Fehlertypen führen zu einer besseren und konsistenten Fehlerbehandlung. Für eine tiefer gehende Diskussion schaue bitte auf <a href="https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">Stack Overflow</a> nach.</p>
 
 <h4 id="ES6_benutzerdefinierte_Error_Klasse">ES6 benutzerdefinierte Error Klasse</h4>
 
@@ -209,17 +209,17 @@ try {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.11', 'Error')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES2015', '#sec-error-objects', 'Error')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-error-objects', 'Error')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

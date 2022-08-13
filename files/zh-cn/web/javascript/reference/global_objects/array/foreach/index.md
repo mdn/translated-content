@@ -48,9 +48,9 @@ arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
 
 可依次向 `callback` 函数传入三个参数：
 
-1.  数组当前项的值
-2.  数组当前项的索引
-3.  数组对象本身
+1. 数组当前项的值
+2. 数组当前项的索引
+3. 数组对象本身
 
 如果 `thisArg` 参数有值，则每次 `callback` 函数被调用时，`this` 都会指向 `thisArg` 参数。如果省略了 `thisArg` 参数，或者其值为 `null` 或 `undefined`，`this` 则指向全局对象。按照[函数观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，`callback` 函数最终可观察到 `this` 值。
 
@@ -122,7 +122,7 @@ items.forEach(function(item){
 
 ### 打印出数组的内容
 
-> **备注：**为了在控制台中显示数组的内容，你可以使用 [`console.table()`](/zh-CN/docs/Web/API/Console/table) 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
+> **备注：** 为了在控制台中显示数组的内容，你可以使用 [`console.table()`](/zh-CN/docs/Web/API/Console/table) 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
 
 下面的代码会为每一个数组元素输出一行记录：
 
@@ -166,7 +166,7 @@ obj.sum;
 
 因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callback` 函数，作为它的 `this` 值。
 
-> **备注：**如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
+> **备注：** 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
 
 ### 对象复制器函数
 

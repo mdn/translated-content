@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
-translation_of: Web/API/WebGLRenderingContext/getProgramParameter
 ---
 {{APIRef("WebGL")}}
 

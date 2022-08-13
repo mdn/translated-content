@@ -5,11 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <strong><code>test()</code></strong> Methode führt eine Suche nach einer Übereinstimmung zwischen einer regular expression und einem String durch. Sie gibt  <code>true</code> oder <code>false</code> zurück.</p>
+<p>Die <strong><code>test()</code></strong> Methode führt eine Suche nach einer Übereinstimmung zwischen einer regular expression und einem String durch. Sie gibt  <code>true</code> oder <code>false</code> zurück.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}</div>
-
-<p class="hidden">Der Quellcode dieses interaktiven Beispiels befindet sich in einer GitHub repository. Wenn Sie sich an diesem Projekt beteiligen möchten, clonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns einen pull request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Verwenden Sie <code>test()</code>, wenn Sie wissen möchten, ob ein Muster auf einen String zutrifft. <code>test()</code> gibt einen boolschen Wert zurück, wohingegen die {{jsxref("String.prototype.search()")}} Methode den Index der Übereinstimmung, oder wenn keine Übereinstimmung gefunden wird,  <code>-1</code> zurück gibt.</p>
+<p>Verwenden Sie <code>test()</code>, wenn Sie wissen möchten, ob ein Muster auf einen String zutrifft. <code>test()</code> gibt einen boolschen Wert zurück, wohingegen die {{jsxref("String.prototype.search()")}} Methode den Index der Übereinstimmung, oder wenn keine Übereinstimmung gefunden wird,  <code>-1</code> zurück gibt.</p>
 
 <p>Um mehr Informationen zu erhalten, können Sie alternativ die langsammere {{jsxref("RegExp.prototype.exec()", "exec()")}} Methode verwenden. (Sie ähnelt {{jsxref("String.prototype.match()")}} Methode.)</p>
 
@@ -38,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h3 id="test_anwenden">test() anwenden</h3>
 
-<p>Ein einfaches Beispiel, um zu testen, ob <code>"hello"</code> am Anfang eines Strings enthalten ist. Die Ausgabe ist ein boole'scher Wert.  </p>
+<p>Ein einfaches Beispiel, um zu testen, ob <code>"hello"</code> am Anfang eines Strings enthalten ist. Die Ausgabe ist ein boole'scher Wert.  </p>
 
 <pre class="brush: js notranslate">const str = 'hello world!';
 const result = /^hello/.test(str);
@@ -59,17 +57,17 @@ console.log(result); // true
 }
 </pre>
 
-<h3 id="Anwendung_von_test_mit_dem_Kennzeichen_global">Anwendung von test() mit dem Kennzeichen "global"</h3>
+<h3 id="Anwendung_von_test_mit_dem_Kennzeichen_global">Anwendung von test() mit dem Kennzeichen "global"</h3>
 
-<p>When a regex has the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">global flag</a> set, <code>test()</code> will advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} of the regex. ({{jsxref("RegExp.prototype.exec()")}} also advances the <code>lastIndex</code> property.)</p>
+<p>When a regex has the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">global flag</a> set, <code>test()</code> will advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} of the regex. ({{jsxref("RegExp.prototype.exec()")}} also advances the <code>lastIndex</code> property.)</p>
 
-<p>Further calls to <code>test(<var>str</var>)</code> will resume searching <code><var>str</var></code> starting from <code>lastIndex</code>. The <code>lastIndex</code> property will continue to increase each time <code>test()</code> returns <code>true</code>. </p>
+<p>Further calls to <code>test(<var>str</var>)</code> will resume searching <code><var>str</var></code> starting from <code>lastIndex</code>. The <code>lastIndex</code> property will continue to increase each time <code>test()</code> returns <code>true</code>. </p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> As long as <code>test()</code> returns <code>true</code>, <code>lastIndex</code> will <em>not</em> reset—even when testing a different string!</p>
+<p><strong>Note:</strong> As long as <code>test()</code> returns <code>true</code>, <code>lastIndex</code> will <em>not</em> reset—even when testing a different string!</p>
 </div>
 
-<p>When <code>test()</code> returns <code>false</code>, the calling regex's <code>lastIndex</code> property will reset to <code>0</code>.</p>
+<p>When <code>test()</code> returns <code>false</code>, the calling regex's <code>lastIndex</code> property will reset to <code>0</code>.</p>
 
 <p>The following example demonstrates this behaviour:</p>
 
@@ -114,14 +112,14 @@ regex.test('foobar')  //false
 
 <h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
 
-<p>Prior to Firefox 8, <code>test()</code> was implemented incorrectly. When called without parameters, it would match against the value of the previous input (<code>RegExp.input</code> property) instead of against the string <code>"undefined"</code>.</p>
+<p>Prior to Firefox 8, <code>test()</code> was implemented incorrectly. When called without parameters, it would match against the value of the previous input (<code>RegExp.input</code> property) instead of against the string <code>"undefined"</code>.</p>
 
-<p>This is fixed. Now, <code>/undefined/.test()</code> correctly results in <code>true</code>, instead of throwing an error.</p>
+<p>This is fixed. Now, <code>/undefined/.test()</code> correctly results in <code>true</code>, instead of throwing an error.</p>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li>Das Kapitel <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a> im <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
+ <li>Das Kapitel <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a> im <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
  <li>{{jsxref("RegExp")}}</li>
  <li>{{jsxref("RegExp.prototype")}}</li>
 </ul>

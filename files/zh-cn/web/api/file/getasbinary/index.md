@@ -1,7 +1,6 @@
 ---
 title: File.getAsBinary
 slug: Web/API/File/getAsBinary
-translation_of: Web/API/File/getAsBinary
 ---
 {{APIRef("File API")}}
 

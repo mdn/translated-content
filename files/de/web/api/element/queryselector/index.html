@@ -13,26 +13,26 @@ translation_of: Web/API/Element/querySelector
 </pre>
 
 <ul>
- <li><code>element</code> und <code>baseElement</code> sind {{domxref("element")}}-Objekte.</li>
- <li><code>selectors</code> ist eine Gruppe von <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a>.</li>
+ <li><code>element</code> und <code>baseElement</code> sind {{domxref("element")}}-Objekte.</li>
+ <li><code>selectors</code> ist eine Gruppe von <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a>.</li>
 </ul>
 
 <h2 id="Example" name="Example">Beispiel</h2>
 
-<p>In diesem Beispiel wird das erste <code>style</code> Element aus dem body Element zurückgegeben, das den type <code>text/css</code> oder keinen type hat.</p>
+<p>In diesem Beispiel wird das erste <code>style</code> Element aus dem body Element zurückgegeben, das den type <code>text/css</code> oder keinen type hat.</p>
 
 <pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 </pre>
 
 <h2 id="Notes" name="Notes">Bemerkungen</h2>
 
-<p>Gibt <code>null</code> zurück, wenn keine Elemente gefunden werden, andernfalls das Element.</p>
+<p>Gibt <code>null</code> zurück, wenn keine Elemente gefunden werden, andernfalls das Element.</p>
 
-<p>Eine <code>SYNTAX_ERR</code> Ausnahme tritt auf, wenn die angegebenen Selektoren ungültig sind.</p>
+<p>Eine <code>SYNTAX_ERR</code> Ausnahme tritt auf, wenn die angegebenen Selektoren ungültig sind.</p>
 
 <p><span style="font-family: Courier New;"><span>querySelector()</span></span> wurde in der WebApps API eingeführt.</p>
 
-<p>Das Argument <code>querySelector</code> muss der CSS Syntax folgen. Siehe {{domxref("document.querySelector")}} für konkrete Beispiele.</p>
+<p>Das Argument <code>querySelector</code> muss der CSS Syntax folgen. Siehe {{domxref("document.querySelector")}} für konkrete Beispiele.</p>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
@@ -51,17 +51,17 @@ translation_of: Web/API/Element/querySelector
   <tr>
    <td>Firefox (Gecko)</td>
    <td><strong>3.5</strong> (1.9.1)</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Opera</td>
    <td>10</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Chrome</td>
    <td>1</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Safari (webkit)</td>

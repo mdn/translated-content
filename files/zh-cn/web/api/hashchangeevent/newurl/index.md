@@ -1,13 +1,6 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
-tags:
-  - API
-  - HashChangeEvent
-  - Property
-  - Reference
-  - Web API
-translation_of: Web/API/HashChangeEvent/newURL
 ---
 {{APIRef("HTML DOM")}}
 

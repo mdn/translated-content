@@ -14,7 +14,7 @@ original_slug: Web/HTTP/Caching_FAQ
 
 <p>Der Mozilla Cache beinhaltet alle Dokumente, die via <a href="/en/HTTP" title="en/HTTP">HTTP</a> vom Benutzer heruntergeladen wurden. Dies mag sich zunächst widersprüchlich anhören, dieses Verhalten ermöglicht jedoch das Vor- und Zurück-Navigieren, Speichern, sowie die Anzeige des Quelltextes etc. im Browser, ohne dabei zusätzliche Serveranfragen zu benötigen. Somit verbessert es auch die Offline-Nutzung von temporär gespeicherten Inhalten im Cache.</p>
 
-<h3 id="What_about_documents_sent_with_a_Cache-control:_no-cache_header.3F" name="What_about_documents_sent_with_a_Cache-control:_no-cache_header.3F">Was ist mit Dokumenten die mit "Cache-control: no-cache"  in der Kopfzeile (Header) gesendet werden?</h3>
+<h3 id="What_about_documents_sent_with_a_Cache-control:_no-cache_header.3F" name="What_about_documents_sent_with_a_Cache-control:_no-cache_header.3F">Was ist mit Dokumenten die mit "Cache-control: no-cache"  in der Kopfzeile (Header) gesendet werden?</h3>
 
 <p>Auch "no-cache" Dokumente werden von uns aufgrund der oben genannten Gründe im Cache gespeichert.</p>
 
@@ -35,7 +35,7 @@ Expires: 0</pre>
 
 <p>Das gegenwärtige Alter entspricht für gewöhnlich fast Null, wird jedoch durch eine vorhandene <code>Age</code>-Angabe in der Antwort-Kopfzeile beeinflusst, die z.B. von Proxy Caches angeben wird um die Länge der Dauer anzugeben, die sich ein Dokument bereits in ihrem Cache befindet. Der exakte Algorithmus, der versucht, Fehler bei der Zeitverschiebung zu verhindern, wird in <a class="external" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a>, Abschnitt 13.2.3 beschrieben.</p>
 
-<p>Die Gültigkeit wird basierend auf mehreren Antwort-Kopfzeilen berechnet. Wenn die Kopfzeile <code>Cache-control: max-age=N</code> angegeben ist, entspricht die Gültigkeit des Dokumentes dem Wert N. Ist dieser Wert nicht vorhanden, was mitunter sehr oft der Fall ist, wird nach einer <code>Expires</code>-Angabe in der Kopfzeile gesucht. Existiert diese, ergibt sich die Gültigkeitsdauer aus dem darin enthaltenen Wert abzüglich des in <code>Date</code> enthaltenen Wertes. Sollte sich letztlich keine <code>Expires</code>-Angabe in den Antwort-Kopfzeilen befinden, wird nach einem <code>Last-Modified</code> Wert gesucht. Ist dieser Wert vorhanden, entspricht die Gültigkeitsdauer im Cache dem Wert <code>Date</code> abzüglich des Wertes <code>Last-Modified</code> geteilt durch 10. Dies ist die vereinfachte Darstellung des heuristischen Algorithmus, der in Abschnitt 13.2.4 des <a class="external" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> vorgeschlagen wird. </p>
+<p>Die Gültigkeit wird basierend auf mehreren Antwort-Kopfzeilen berechnet. Wenn die Kopfzeile <code>Cache-control: max-age=N</code> angegeben ist, entspricht die Gültigkeit des Dokumentes dem Wert N. Ist dieser Wert nicht vorhanden, was mitunter sehr oft der Fall ist, wird nach einer <code>Expires</code>-Angabe in der Kopfzeile gesucht. Existiert diese, ergibt sich die Gültigkeitsdauer aus dem darin enthaltenen Wert abzüglich des in <code>Date</code> enthaltenen Wertes. Sollte sich letztlich keine <code>Expires</code>-Angabe in den Antwort-Kopfzeilen befinden, wird nach einem <code>Last-Modified</code> Wert gesucht. Ist dieser Wert vorhanden, entspricht die Gültigkeitsdauer im Cache dem Wert <code>Date</code> abzüglich des Wertes <code>Last-Modified</code> geteilt durch 10. Dies ist die vereinfachte Darstellung des heuristischen Algorithmus, der in Abschnitt 13.2.4 des <a class="external" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> vorgeschlagen wird. </p>
 
 <p>Die Gültigkeitsdauer berechnet sich somit folgendermaßen:</p>
 
@@ -65,10 +65,10 @@ Expires: 0</pre>
 <h2 id="Original_Document_Information" name="Original_Document_Information">Informationen zum Original-Dokument</h2>
 
 <ul>
- <li>Autor(en): <a class="link-mailto" href="mailto:darin@meer.net">Darin Fisher</a></li>
+ <li>Autor(en): <a href="mailto:darin@meer.net">Darin Fisher</a></li>
  <li>Zuletzt aktualisiert: 16. Juni 2004</li>
- <li>Copyright Information: Teile des Inhaltes sind urheberrechtlich durch © 1998–2007 einzelne Mitwirkende von  mozilla.org; Inhalt lizensiert under einer Creative Commons Lizenz | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+ <li>Copyright Information: Teile des Inhaltes sind urheberrechtlich durch © 1998–2007 einzelne Mitwirkende von  mozilla.org; Inhalt lizensiert under einer Creative Commons Lizenz | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
 </ul>
 </div>
 
-<p> </p>
+<p> </p>

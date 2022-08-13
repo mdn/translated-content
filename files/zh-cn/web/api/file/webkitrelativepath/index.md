@@ -1,7 +1,6 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-translation_of: Web/API/File/webkitRelativePath
 ---
 {{APIRef("File API")}}{{non-standard_header}}
 

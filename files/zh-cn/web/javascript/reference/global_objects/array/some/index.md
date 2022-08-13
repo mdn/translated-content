@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 **`some()`** 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。
 
-> **备注：**如果用一个空数组进行测试，在任何情况下它返回的都是`false`。
+> **备注：** 如果用一个空数组进行测试，在任何情况下它返回的都是`false`。
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
@@ -135,7 +135,7 @@ getBoolean('true');  // true
 
 ## Polyfill
 
-在第 5 版时，`some()` 被添加进 ECMA-262 标准；这样导致某些实现环境可能不支持它。你可以把下面的代码插入到脚本的开头来解决此问题，从而允许在那些没有原生支持它的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 `Object `和 `TypeError` 拥有他们的初始值，且 `fun.call` 等价于 `{{jsxref("Function.prototype.call")}}`。
+在第 5 版时，`some()` 被添加进 ECMA-262 标准；这样导致某些实现环境可能不支持它。你可以把下面的代码插入到脚本的开头来解决此问题，从而允许在那些没有原生支持它的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 `Object` 和 `TypeError` 拥有他们的初始值，且 `fun.call` 等价于 `{{jsxref("Function.prototype.call")}}`。
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.17
