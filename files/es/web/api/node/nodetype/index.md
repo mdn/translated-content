@@ -3,93 +3,41 @@ title: Node.nodeType
 slug: Web/API/Node/nodeType
 translation_of: Web/API/Node/nodeType
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}La propiedad de solo lectura **`Node.nodeType`** retornará un valor positivo entero representando el tipo de nodo.
 
-<div>La propiedad de solo lectura <code style="font-style: normal;"><strong>Node.nodeType</strong></code> retornará un valor positivo entero representando el tipo de nodo.</div>
+## Sintaxis
 
-<div> </div>
-</div>
+    var type = node.nodeType;
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+la variable type será un entero positivo con alguno de los siguientes valores:
 
-<pre class="syntaxbox">var <var>type</var> = <var>node</var>.nodeType;
-</pre>
+| Name                                                                    | Value |
+| ----------------------------------------------------------------------- | ----- |
+| [`ELEMENT_NODE`](/es/docs/Web/API/Element)                              | `1`   |
+| `ATTRIBUTE_NODE` {{deprecated_inline()}}                       | `2`   |
+| [`TEXT_NODE`](/es/docs/Web/API/Text)                                    | `3`   |
+| `CDATA_SECTION_NODE` {{deprecated_inline()}}                   | `4`   |
+| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                | `5`   |
+| `ENTITY_NODE` {{deprecated_inline()}}                          | `6`   |
+| [`PROCESSING_INSTRUCTION_NODE`](/es/docs/Web/API/ProcessingInstruction) | `7`   |
+| [`COMMENT_NODE`](/es/docs/Web/API/document.createComment)               | `8`   |
+| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Element/html)                       | `9`   |
+| [`DOCUMENT_TYPE_NODE`](/es/docs/Web/API/document.doctype)               | `10`  |
+| [`DOCUMENT_FRAGMENT_NODE`](/es/docs/Web/API/DocumentFragment)           | `11`  |
+| `NOTATION_NODE` {{deprecated_inline()}}                        | `12`  |
 
-<p>la variable type será un entero positivo con alguno de los siguientes valores:</p>
+## Ejemplo
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/Element"><code>ELEMENT_NODE</code></a></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>ATTRIBUTE_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/Text"><code>TEXT_NODE</code></a></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <td><code>CDATA_SECTION_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>4</code></td>
-  </tr>
-  <tr>
-   <td><code>ENTITY_REFERENCE_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>5</code></td>
-  </tr>
-  <tr>
-   <td><code>ENTITY_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/ProcessingInstruction"><code>PROCESSING_INSTRUCTION_NODE</code></a></td>
-   <td><code>7</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/document.createComment"><code>COMMENT_NODE</code></a></td>
-   <td><code>8</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/HTML/Element/html"><code>DOCUMENT_NODE</code></a></td>
-   <td><code>9</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/document.doctype"><code>DOCUMENT_TYPE_NODE</code></a></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/DocumentFragment"><code>DOCUMENT_FRAGMENT_NODE</code></a></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <td><code>NOTATION_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>12</code></td>
-  </tr>
- </tbody>
-</table>
+Este es un ejemplo que verifica si el primer nodo dentro de un elemento tipo documento (document) es un comentario nodo, y si no lo es, muestra un mensaje.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
-
-<p>Este es un ejemplo que verifica si el primer nodo dentro de un elemento tipo documento (document) es un comentario nodo, y si no lo es, muestra un mensaje.</p>
-
-<pre class="brush: js">var node = document.documentElement.firstChild;
+```js
+var node = document.documentElement.firstChild;
 if (node.nodeType != Node.COMMENT_NODE)
   console.log("You should comment your code well!");
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558">DOM Level 2 Core: Node.nodeType</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558">DOM Level 3 Core: Node.nodeType</a></li>
- <li><a class="external" href="http://dom.spec.whatwg.org/#node">DOM Standard</a></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
+- [DOM Level 3 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
+- [DOM Standard](http://dom.spec.whatwg.org/#node)

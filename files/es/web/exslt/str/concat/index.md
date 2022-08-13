@@ -7,31 +7,27 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/concat
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>str:concat()</code> devuelve una cadena que contiene todos los valores cadena de un conjunto de nodos (node-set) concatenados juntos.</p>
+`str:concat()` devuelve una cadena que contiene todos los valores cadena de un conjunto de nodos (node-set) concatenados juntos.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">str:concat(<em>conjuntoNodos</em>)
-</pre>
+    str:concat(conjuntoNodos)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>conjuntoNodos</em></code></dt>
- <dd>El conjunto de nodos cuyos valores de cadena de los nodos deberían ser concatenados en una cadena.</dd>
-</dl>
+- `conjuntoNodos`
+  - : El conjunto de nodos cuyos valores de cadena de los nodos deberían ser concatenados en una cadena.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>Una cadena cuyo valor es el de todos los valores cadena de los nodos de <code><em>conjuntoNodos</em></code> concatenados juntos. Si <code><em>conjuntoNodos</em></code> está vacío, se devuelve una cadena vacía.</p>
+Una cadena cuyo valor es el de todos los valores cadena de los nodos de `conjuntoNodos` concatenados juntos. Si `conjuntoNodos` está vacío, se devuelve una cadena vacía.
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/str/functions/concat/index.html">EXSLT - STR:CONCAT</a></p>
+[EXSLT - STR:CONCAT](http://www.exslt.org/str/functions/concat/index.html)
 
-<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
+### Implementación en Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

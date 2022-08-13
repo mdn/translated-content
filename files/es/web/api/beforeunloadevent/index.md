@@ -3,66 +3,51 @@ title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 translation_of: Web/API/BeforeUnloadEvent
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>El evento <strong><code>beforeunload</code></strong> se diapara cuando la ventana, el documento y sus recursos están a punto de ser cerrados.</p>
+El evento **`beforeunload`** se diapara cuando la ventana, el documento y sus recursos están a punto de ser cerrados.
 
-<p>Cuando una cadena no vacía es asignada a la propiedad <code>returnValue</code> del Evento, un cuadro de diálogo aparece, pidiendo a los usuarios la confirmación para la página (ver ejemplo a continuación). Cuando no es asignado un valor, el evento se procesa en silencio. Algunas implementaciones muestran solamente el cuadro de diálogo si el marco o cualquier marco embebido recibe un gesto o interacción del usuario. Ver <a href="#compatibilidad_del_navegador">Compatibilidad del navegador</a> para más información.</p>
+Cuando una cadena no vacía es asignada a la propiedad `returnValue` del Evento, un cuadro de diálogo aparece, pidiendo a los usuarios la confirmación para la página (ver ejemplo a continuación). Cuando no es asignado un valor, el evento se procesa en silencio. Algunas implementaciones muestran solamente el cuadro de diálogo si el marco o cualquier marco embebido recibe un gesto o interacción del usuario. Ver [Compatibilidad del navegador](#compatibilidad_del_navegador) para más información.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td>Burbujas</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <td>Objetos de destino</td>
-   <td>defaultView</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("Event")}}</td>
-  </tr>
- </tbody>
-</table>
+| Burbujas           | No                           |
+| ------------------ | ---------------------------- |
+| Cancelable         | Sí                           |
+| Objetos de destino | defaultView                  |
+| Interface          | {{domxref("Event")}} |
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush:js;">window.addEventListener("beforeunload", function( event ) {
+```js
+window.addEventListener("beforeunload", function( event ) {
   event.returnValue = "\o/";
 });
 
 //is equivalent to
 window.addEventListener("beforeunload", function( event ) {
   event.preventDefault();
-});</pre>
+});
+```
 
-<p>Los navegadores basado en Webkit no se basan en las especificaciones del cuadro de diálogo. Un ejemplo compatible con la mayoria de los navegadores seria algo parecido al siguiente ejemplo.</p>
+Los navegadores basado en Webkit no se basan en las especificaciones del cuadro de diálogo. Un ejemplo compatible con la mayoria de los navegadores seria algo parecido al siguiente ejemplo.
 
-<pre class="brush: js">window.addEventListener("beforeunload", function (e) {
+```js
+window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "\o/";
 
   (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
   return confirmationMessage;                                //Webkit, Safari, Chrome etc.
-});</pre>
+});
+```
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
-<p>{{Compat("api.BeforeUnloadEvent")}}</p>
-</div>
+{{Compat("api.BeforeUnloadEvent")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{Event("DOMContentLoaded")}}</li>
- <li>{{Event("readystatechange")}}</li>
- <li>{{Event("load")}}</li>
- <li>{{Event("beforeunload")}}</li>
- <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Descargas de documentos — Solicitud para descargar un documento</a></li>
-</ul>
+- {{Event("DOMContentLoaded")}}
+- {{Event("readystatechange")}}
+- {{Event("load")}}
+- {{Event("beforeunload")}}
+- {{Event("unload")}}
+- [Descargas de documentos — Solicitud para descargar un documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

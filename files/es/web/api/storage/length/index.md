@@ -3,55 +3,44 @@ title: Storage.length
 slug: Web/API/Storage/length
 translation_of: Web/API/Storage/length
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La propiedad de sólo lectura <code>length</code> de la interfaz {{domxref("Storage")}} devuelve un entero que indica el numero de elementos guardados en el objeto<code> Storage</code>.</p>
+La propiedad de sólo lectura `length` de la interfaz {{domxref("Storage")}} devuelve un entero que indica el numero de elementos guardados en el objeto` Storage`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>aLength</em> = <em>storage</em>.length;</pre>
+    var aLength = storage.length;
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Entero</p>
+Entero
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>La siguiente función añade tres elementos de datos en el almacen local para el dominio actual, posteriormente, devuelve el número de elementos guardados en el almacen:</p>
+La siguiente función añade tres elementos de datos en el almacen local para el dominio actual, posteriormente, devuelve el número de elementos guardados en el almacen:
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'yellow');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
   localStorage.length; // should return 3
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Para un ejemplo real, vea nuestro <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
-</div>
+> **Nota:** Para un ejemplo real, vea nuestro [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificacíon</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-length', 'length')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificacíon                                                                   | Estado                           | Comentario |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#dom-storage-length', 'length')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("api.Storage.length")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Uso de la Web Storage API</a></p>
+[Uso de la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

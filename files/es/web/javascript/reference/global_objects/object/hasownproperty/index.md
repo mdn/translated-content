@@ -9,34 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/hasOwnProperty
 ---
-<div>{{JSRef("Objetos_globales", "Object")}}</div>
+{{JSRef("Objetos_globales", "Object")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El método <code><strong>hasOwnProperty()</strong></code> devuelve un booleano indicando si el objeto tiene la propiedad especificada.</p>
+El método **`hasOwnProperty()`** devuelve un booleano indicando si el objeto tiene la propiedad especificada.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>obj</em>.hasOwnProperty(<em>prop</em>)</code></pre>
+    obj.hasOwnProperty(prop)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>El nombre de la propiedad a buscar.</dd>
-</dl>
+- `prop`
+  - : El nombre de la propiedad a buscar.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Todo objeto descendiente de <code>Object</code> hereda el método <code>hasOwnProperty</code>. Este método puede ser usando para determinar si un objeto tiene la propiedad especificada como una propiedad directa de ese objeto; a diferencia del operador {{jsxref("Operators/in", "in")}}, este método no verifica la cadena prototipo del objeto.</p>
+Todo objeto descendiente de `Object` hereda el método `hasOwnProperty`. Este método puede ser usando para determinar si un objeto tiene la propiedad especificada como una propiedad directa de ese objeto; a diferencia del operador {{jsxref("Operators/in", "in")}}, este método no verifica la cadena prototipo del objeto.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence" name="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence">Ejemplo: usar <code>hasOwnProperty</code> para comprobar la existencia de una propiedad</h3>
+### Ejemplo: usar `hasOwnProperty` para comprobar la existencia de una propiedad
 
-<p>El siguiente ejemplo determina si el objeto <code>o</code> contiene una propiedad llamada <code>prop</code>:</p>
+El siguiente ejemplo determina si el objeto `o` contiene una propiedad llamada `prop`:
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 
 function changeO() {
@@ -46,23 +45,27 @@ function changeO() {
 
 o.hasOwnProperty('prop');   // returns true
 changeO();
-o.hasOwnProperty('prop');   // returns false</pre>
+o.hasOwnProperty('prop');   // returns false
+```
 
-<h3 id="Example:_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Ejemplo: Directo versus propiedades heredadas</h3>
+### Ejemplo: Directo versus propiedades heredadas
 
-<p>El siguiente ejemplo diferencia entre propiedades directas y propiedades heredadas a través de la cadena prototype:</p>
+El siguiente ejemplo diferencia entre propiedades directas y propiedades heredadas a través de la cadena prototype:
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 o.hasOwnProperty('prop');             // returns true
 o.hasOwnProperty('toString');         // returns false
-o.hasOwnProperty('hasOwnProperty');   // returns false</pre>
+o.hasOwnProperty('hasOwnProperty');   // returns false
+```
 
-<h3 id="Example:_Itarate_over_properties_not_considering_inherited_properties" name="Example:_Itarate_over_properties_not_considering_inherited_properties">Ejemplo: Iterando sobre las propiedades de un objeto</h3>
+### Ejemplo: Iterando sobre las propiedades de un objeto
 
-<p>El siguiente ejemplo muestra como iterar sobre las propiedades de un objeto sin ejecutar sobre propiedades heredadas. Observe que el bucle for..in ya está no solo iterando elementos enumerables, por consiguiente uno no debería asumir que basado en la falta de propiedades no numerales mostrando en el bucle que hasOwnProperty por si misma no está solo es estrictamente para iterar elementos numerados (como con {{jsxref("Object.getOwnPropertyNames()")}}).</p>
+El siguiente ejemplo muestra como iterar sobre las propiedades de un objeto sin ejecutar sobre propiedades heredadas. Observe que el bucle for..in ya está no solo iterando elementos enumerables, por consiguiente uno no debería asumir que basado en la falta de propiedades no numerales mostrando en el bucle que hasOwnProperty por si misma no está solo es estrictamente para iterar elementos numerados (como con {{jsxref("Object.getOwnPropertyNames()")}}).
 
-<pre class="brush: js">var buz = {
+```js
+var buz = {
     fog: 'stack'
 };
 
@@ -73,13 +76,15 @@ for (var name in buz) {
     else {
         alert(name); // toString or something else
     }
-}</pre>
+}
+```
 
-<h3 id="Ejemplo_hasOwnProperty_como_una_propiedad">Ejemplo: <code>hasOwnProperty</code> como una propiedad</h3>
+### Ejemplo: `hasOwnProperty` como una propiedad
 
-<p>JavaScript no protege el nombre de la propiedad <code>hasOwnProperty</code>; en consecuencia, si existe la posibilidad  de que un objeto pudiera tener la propiedad con ese nombre, es necesario usar un externo <code>hasOwnProperty</code> para obtener los correctos resultados:</p>
+JavaScript no protege el nombre de la propiedad `hasOwnProperty`; en consecuencia, si existe la posibilidad de que un objeto pudiera tener la propiedad con ese nombre, es necesario usar un externo `hasOwnProperty` para obtener los correctos resultados:
 
-<pre class="brush: js">var foo = {
+```js
+var foo = {
     hasOwnProperty: function() {
         return false;
     },
@@ -93,47 +98,26 @@ foo.hasOwnProperty('bar'); // always returns false
 
 // It's also possible to use the hasOwnProperty property from the Object property for this purpose
 Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
-</pre>
+```
 
-<p>Observe que en el último caso no han habido nuevos objetos creados.</p>
+Observe que en el último caso no han habido nuevos objetos creados.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificaciones</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition. Implemented in JavaScript 1.5</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                                             | Estado                   | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                                                        | Standard                 | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                             | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.Object.hasOwnProperty")}}
 
-<h2 id="See_Also" name="See_Also">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></li>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited">JavaScript Guide: Inheritance revisted</a></li>
-</ul>
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- [for...in](/es/docs/Web/JavaScript/Reference/Statements/for...in)
+- {{jsxref("Operators/in", "in")}}
+- [JavaScript Guide: Inheritance revisted](/es/docs/Web/JavaScript/Guide/Inheritance_Revisited)

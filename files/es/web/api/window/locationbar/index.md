@@ -3,64 +3,43 @@ title: Window.locationbar
 slug: Web/API/Window/locationbar
 translation_of: Web/API/Window/locationbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<div class="hidden">
-<h2 id="Resumen">Resumen</h2>
-</div>
+Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
 
-<p>Devuelve el objeto <code>locationbar</code>, del cual se puede comprobar su visibilidad.</p>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+    objRef = window.locationbar
 
-<pre class="syntaxbox"><var>objRef</var> = window.locationbar
-</pre>
+## Ejemplo
 
-<h2 id="Ejemplo">Ejemplo</h2>
+El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad `visible `del objeto `locationbar.`
 
-<p>El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad <code>visible </code>del objeto <code>locationbar.</code></p>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Various DOM Tests</title>
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
-
-&lt;script&gt;
+<script>
 var visible = window.locationbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}}     | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}</li>
-</ul>
+- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

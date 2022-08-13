@@ -10,51 +10,54 @@ tags:
 translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 ---
-<p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
+{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-<p>Las interfaces Drag-and-Drop posibilitan arrastrar y soltar archivos en una página web. En este documento se describe cómo una aplicación puede aceptar uno, o más, archivos que son arrastrados desde el <em>explorador de archivos </em>de la plataforma y soltados en una página web.</p>
+Las interfaces Drag-and-Drop posibilitan arrastrar y soltar archivos en una página web. En este documento se describe cómo una aplicación puede aceptar uno, o más, archivos que son arrastrados desde el _explorador de archivos_ de la plataforma y soltados en una página web.
 
-<p>Los pasos principales para configurar Drag-and-drop son: 1) definir una "zona drop (<em>drop zone), </em>es decir, definir un elemento donde se podrá soltar el archivo; y 2) definir funciones para la gestión de los eventos {{event("drop")}} y {{event("dragover")}}. Estos pasos se describen a continuación, tambien se incluyen ejemplos snippets de código. El código fuente completo está disponible en el <a href="https://github.com/mdn/dom-examples/tree/master/drag-and-drop">repositorio drag-and-drop de MDN</a> (cualquier sugerencia o  tema que revisar es bienvenido).</p>
+Los pasos principales para configurar Drag-and-drop son: 1) definir una "zona drop (_drop zone),_ es decir, definir un elemento donde se podrá soltar el archivo; y 2) definir funciones para la gestión de los eventos {{event("drop")}} y {{event("dragover")}}. Estos pasos se describen a continuación, tambien se incluyen ejemplos snippets de código. El código fuente completo está disponible en el [repositorio drag-and-drop de MDN](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (cualquier sugerencia o tema que revisar es bienvenido).
 
-<p class="note">Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} define 2 diferentes APIs para soportar drag and drop de archivos. Una API es la interfaz {{domxref("DataTransfer")}} y la segunda API son las interfaces {{domxref("DataTransferItem")}} y {{domxref("DataTransferItemList")}}.  Este ejemplo ilustra el uso de ambas APIs (y no usa ninguna interfaz específica de Gecko).</p>
+> **Nota:** Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} define 2 diferentes APIs para soportar drag and drop de archivos. Una API es la interfaz {{domxref("DataTransfer")}} y la segunda API son las interfaces {{domxref("DataTransferItem")}} y {{domxref("DataTransferItemList")}}. Este ejemplo ilustra el uso de ambas APIs (y no usa ninguna interfaz específica de Gecko).
 
-<h2 id="Define_la_zona_drop_drop_zone">Define la zona "drop" [drop <em>zone</em>]</h2>
+## Define la zona "drop" \[drop _zone_]
 
-<p>Es necesario configurar un evento {{event("drop")}} en el objeto sobre el cual se soltará el objeto arrastrado. Este evento llamará una función global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} que recibe los datos del objeto arrastrado. El siguiente código muestra cómo se hace con un elemento {{HTMLelement("div")}}:</p>
+Es necesario configurar un evento {{event("drop")}} en el objeto sobre el cual se soltará el objeto arrastrado. Este evento llamará una función global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} que recibe los datos del objeto arrastrado. El siguiente código muestra cómo se hace con un elemento {{HTMLelement("div")}}:
 
-<pre class="brush: html notranslate">&lt;div id="drop_zone" ondrop="dropHandler(event);"&gt;
-  &lt;p&gt;Arrastra y suelta uno o más archivos a esta zona ...&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="drop_zone" ondrop="dropHandler(event);">
+  <p>Arrastra y suelta uno o más archivos a esta zona ...</p>
+</div>
+```
 
-<p>Normalmente, una aplicación incluirá una función de gestión de eventos {{event("dragover")}} en el elemento objetivo del arrastre y esa función desactivará el comportamiento de arrastre por defecto del browser. Para añadir esta función necesita incluir una función global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:</p>
+Normalmente, una aplicación incluirá una función de gestión de eventos {{event("dragover")}} en el elemento objetivo del arrastre y esa función desactivará el comportamiento de arrastre por defecto del browser. Para añadir esta función necesita incluir una función global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
 
-<pre class="brush: html notranslate">&lt;div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"&gt;
-  &lt;p&gt;Arrastra y suelta uno o más archivos a esta zona ...&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+  <p>Arrastra y suelta uno o más archivos a esta zona ...</p>
+</div>
+```
 
-<p>Por último, puede que una aplicación quiera personalizar el estilo del elemento objetivo del arrastre para indicar visualmente que es una zona drag and drop. En este ejemplo, el elemento objetivo usa el siguiente estilo:</p>
+Por último, puede que una aplicación quiera personalizar el estilo del elemento objetivo del arrastre para indicar visualmente que es una zona drag and drop. En este ejemplo, el elemento objetivo usa el siguiente estilo:
 
-<pre class="brush: css notranslate">#drop_zone {
+```css
+#drop_zone {
   border: 5px solid blue;
   width:  200px;
   height: 100px;
 }
-</pre>
+```
 
-<div class="note">
-<p>Fíjese que los eventos <code>dragstart</code> y <code>dragend</code> no son activados cuando se arrastra un archivo al browser desde el SO.</p>
-</div>
+> **Nota:** Fíjese que los eventos `dragstart` y `dragend` no son activados cuando se arrastra un archivo al browser desde el SO.
 
-<h2 id="Procesar_la_acción_de_soltar_drop">Procesar la acción de soltar [drop]</h2>
+## Procesar la acción de soltar \[drop]
 
-<p>El evento {{event("drop")}} se ejecuta cuando el usuario suelta el o los archivos. En el siguiente manejador, si el navegador sorporta la interfaz {{domxref("DataTransferItemList")}} , el método {{domxref("DataTransferItem.getAsFile","getAsFile()")}} se utiliza para acceder cada fichero; de lo contrario la propiedad {{domxref("DataTransfer")}} de la interfaz {{domxref("DataTransfer.files","files")}} es usada para acceder cada archivo.</p>
+El evento {{event("drop")}} se ejecuta cuando el usuario suelta el o los archivos. En el siguiente manejador, si el navegador sorporta la interfaz {{domxref("DataTransferItemList")}} , el método {{domxref("DataTransferItem.getAsFile","getAsFile()")}} se utiliza para acceder cada fichero; de lo contrario la propiedad {{domxref("DataTransfer")}} de la interfaz {{domxref("DataTransfer.files","files")}} es usada para acceder cada archivo.
 
-<p>El ejemplo siguiente muestra como escribir el nombre de cada fichero arrastrado en la consola. En una aplicación <em>real</em>, se querrá procesar un archivo usando {{domxref("File","File API")}}.</p>
+El ejemplo siguiente muestra como escribir el nombre de cada fichero arrastrado en la consola. En una aplicación _real_, se querrá procesar un archivo usando {{domxref("File","File API")}}.
 
-<p>Nótese que en este ejemplo, cualquier item arrastrado que no sea un archivo es ignorado.</p>
+Nótese que en este ejemplo, cualquier item arrastrado que no sea un archivo es ignorado.
 
-<pre class="brush: js notranslate">function dropHandler(ev) {
+```js
+function dropHandler(ev) {
   console.log('Fichero(s) arrastrados');
 
   // Evitar el comportamiendo por defecto (Evitar que el fichero se abra/ejecute)
@@ -62,7 +65,7 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 
   if (ev.dataTransfer.items) {
     // Usar la interfaz DataTransferItemList para acceder a el/los archivos)
-    for (var i = 0; i &lt; ev.dataTransfer.items.length; i++) {
+    for (var i = 0; i < ev.dataTransfer.items.length; i++) {
       // Si los elementos arrastrados no son ficheros, rechazarlos
       if (ev.dataTransfer.items[i].kind === 'file') {
         var file = ev.dataTransfer.items[i].getAsFile();
@@ -71,32 +74,35 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
     }
   } else {
     // Usar la interfaz DataTransfer para acceder a el/los archivos
-    for (var i = 0; i &lt; ev.dataTransfer.files.length; i++) {
+    for (var i = 0; i < ev.dataTransfer.files.length; i++) {
       console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
     }
   }
 
   // Pasar el evento a removeDragData para limpiar
   removeDragData(ev)
-}</pre>
+}
+```
 
-<h2 id="Prevenir_el_comportamiento_default_de_arrastrado_en_el_browser">Prevenir el comportamiento default de arrastrado en el browser </h2>
+## Prevenir el comportamiento default de arrastrado en el browser
 
-<p>El siguiente evento {{event("dragover")}} llama a  {{domxref("Event.preventDefault","preventDefault()")}} para deshabilitar (turn off) la respuesta estandar drag-and-drop del browser.</p>
+El siguiente evento {{event("dragover")}} llama a {{domxref("Event.preventDefault","preventDefault()")}} para deshabilitar (turn off) la respuesta estandar drag-and-drop del browser.
 
-<pre class="brush: js notranslate">function dragOverHandler(ev) {
+```js
+function dragOverHandler(ev) {
   console.log('File(s) in drop zone');
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
 }
-</pre>
+```
 
-<h2 id="Limpieza_Cleanup">Limpieza (Cleanup)</h2>
+## Limpieza (Cleanup)
 
-<p>Typically, an application may want to perform some cleanup by deleting the file drag data. In this example, the drop event is passed along from drop handler to a custom function called removeDragData. If the browser supports the {{domxref("DataTransferItemList")}} interface, the list's {{domxref("DataTransferItemList.clear","clear()")}} method is used to delete the file drag data; otherwise the {{domxref("DataTransfer")}} object's {{domxref("DataTransfer.clearData","clearData()")}} method is used to delete the data.</p>
+Typically, an application may want to perform some cleanup by deleting the file drag data. In this example, the drop event is passed along from drop handler to a custom function called removeDragData. If the browser supports the {{domxref("DataTransferItemList")}} interface, the list's {{domxref("DataTransferItemList.clear","clear()")}} method is used to delete the file drag data; otherwise the {{domxref("DataTransfer")}} object's {{domxref("DataTransfer.clearData","clearData()")}} method is used to delete the data.
 
-<pre class="brush: js notranslate">function removeDragData(ev) {
+```js
+function removeDragData(ev) {
   console.log('Removing drag data')
 
   if (ev.dataTransfer.items) {
@@ -107,12 +113,10 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
     ev.dataTransfer.clearData();
   }
 }
-</pre>
+```
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</a></li>
- <li><a class="internal" href="/Web/Guide/HTML/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
-</ul>
+- [HTML Drag and Drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/Web/Guide/HTML/Drag_operations "Drag Operations")
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")

@@ -3,26 +3,26 @@ title: Window.opener
 slug: Web/API/Window/opener
 translation_of: Web/API/Window/opener
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>Devuelve una referencia de, la ventana que abrió la ventana actuál.</p>
+Devuelve una referencia de, la ventana que abrió la ventana actuál.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>objRef</var> = window.opener;
-</pre>
+    objRef = window.opener;
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">if (window.opener != indexWin) {
+```js
+if (window.opener != indexWin) {
   referToTop(window.opener);
 }
-</pre>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Cuando una ventana es abierta desde otra utilizando "Window.open()", esta, mantiene una referencia a la primera mediante "window.opener".  Si la ventana actuál no fué abierta, el metodo retorna NULL.</p>
+Cuando una ventana es abierta desde otra utilizando "Window\.open()", esta, mantiene una referencia a la primera mediante "window\.opener". Si la ventana actuál no fué abierta, el metodo retorna NULL.
 
-<p>El navegador de Windows Phone no soporta window.opener. Tampoco es soportado en Internet Explorer si la ventana nueva se encuentra en una zona de seguridad distinta.</p>
+El navegador de Windows Phone no soporta window\.opener. Tampoco es soportado en Internet Explorer si la ventana nueva se encuentra en una zona de seguridad distinta.

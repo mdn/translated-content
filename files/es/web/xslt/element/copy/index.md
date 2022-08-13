@@ -7,35 +7,33 @@ tags:
 translation_of: Web/XSLT/Element/copy
 original_slug: Web/XSLT/copy
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:copy&gt;</code> genera una copia superficial (el nodo y cualquier nodo del nombre de espacio asociado) del nodo actual al documento de salida. Este elemento no copia ni elementos hijo ni atributos del nodo actual.</p>
+El elemento `<xsl:copy>` genera una copia superficial (el nodo y cualquier nodo del nombre de espacio asociado) del nodo actual al documento de salida. Este elemento no copia ni elementos hijo ni atributos del nodo actual.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:copy use-attribute-sets=LISTA-DE-NOMBRES&gt;
-	PLANTILLA
-&lt;/xsl:copy&gt;</pre>
+    <xsl:copy use-attribute-sets=LISTA-DE-NOMBRES>
+    	PLANTILLA
+    </xsl:copy>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<dl>
- <dt><code>use-attribute-sets</code></dt>
- <dd>Lista conjunto de atributos que debería de ser aplicados al nodo de salida, si es un elemento. Los nombres del conjunto deben de estar separados por un espacio en blanco.</dd>
-</dl>
+- `use-attribute-sets`
+  - : Lista conjunto de atributos que debería de ser aplicados al nodo de salida, si es un elemento. Los nombres del conjunto deben de estar separados por un espacio en blanco.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Instrucción, aparece dentro de una plantilla.</p>
+Instrucción, aparece dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 7.5.</p>
+XSLT, sección 7.5.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Suportado.</p>
+Suportado.

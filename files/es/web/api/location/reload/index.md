@@ -11,65 +11,46 @@ tags:
   - metodo
 translation_of: Web/API/Location/reload
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>El metodo <code><strong>location.reload()</strong></code> carga de nuevo la URL actual, como lo hace el boton de Refresh de los navegadores.</p>
+El metodo **`location.reload()`** carga de nuevo la URL actual, como lo hace el boton de Refresh de los navegadores.
 
-<p>La recarga puede estar bloqueada y arrojar un <code>SECURITY_ERROR</code> {{domxref("DOMException")}} . Esto sucede si el {{Glossary("origin")}} de la llamada <code>location.reload()</code> difiere del origen de la página que posee el objeto { {domxref("Location")}}. Consulta <a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a> para mayor información.</p>
+La recarga puede estar bloqueada y arrojar un `SECURITY_ERROR` {{domxref("DOMException")}} . Esto sucede si el {{Glossary("origin")}} de la llamada `location.reload()` difiere del origen de la página que posee el objeto { {domxref("Location")}}. Consulta [Same-origin policy](/es/docs/Web/Security/Same-origin_policy) para mayor información.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><em>location</em>.reload();
-</pre>
-
-<h2 id="Ejemplo">Ejemplo</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html notranslate">&lt;button id="reload"&gt;Click para recargar&lt;/button&gt;
-</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js notranslate">const reload = document.getElementById('reload');
-
-reload.addEventListener('click', _ =&gt; { // el _ es para indicar la ausencia de parametros
     location.reload();
-});</pre>
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Ejemplo
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+### HTML
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+```html
+<button id="reload">Click para recargar</button>
+```
 
+### JavaScript
 
+```js
+const reload = document.getElementById('reload');
 
-<p>{{Compat("api.Location.reload")}}</p>
+reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+    location.reload();
+});
+```
 
-<h2 id="Ver_también">Ver también</h2>
+## Especificaciones
 
-<ul>
- <li>The {{domxref("Location")}} interface it belongs to.</li>
- <li>Similar methods: {{domxref("Location.assign()")}} and {{domxref("Location.replace()")}}.</li>
-</ul>
+| Specification                                                                                                    | Status                           | Comment                                          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
+| {{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+
+## Compatibilidad del navegador
+
+{{Compat("api.Location.reload")}}
+
+## Ver también
+
+- The {{domxref("Location")}} interface it belongs to.
+- Similar methods: {{domxref("Location.assign()")}} and {{domxref("Location.replace()")}}.

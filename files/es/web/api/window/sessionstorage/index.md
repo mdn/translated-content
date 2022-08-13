@@ -8,31 +8,36 @@ tags:
   - Sesion
 translation_of: Web/API/Window/sessionStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p>La propiedad <code>sessionStorage</code> permite acceder a un objeto {{domxref("Storage")}} asociado a la sesión actual. La propiedad sessionStorage es similar a <a href="/en-US/docs/Web/API/Window.localStorage"><code>localStorage</code></a>, la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario la información almacenada en sessionStorage es eliminada al finalizar la sesion de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. <strong>Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión</strong>, lo que difiere en la forma en que trabajan las cookies de sesión<strong>.</strong></p>
+La propiedad `sessionStorage` permite acceder a un objeto {{domxref("Storage")}} asociado a la sesión actual. La propiedad sessionStorage es similar a [`localStorage`](/es/docs/Web/API/Window.localStorage), la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario la información almacenada en sessionStorage es eliminada al finalizar la sesion de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. **Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión**, lo que difiere en la forma en que trabajan las cookies de sesión**.**
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">// Almacena la información en sessionStorage
+```js
+// Almacena la información en sessionStorage
 sessionStorage.setItem('key', 'value');
 
 // Obtiene la información almacenada desde sessionStorage
-var data = sessionStorage.getItem('key');</pre>
+var data = sessionStorage.getItem('key');
+```
 
-<h3 id="Valor">Valor </h3>
+### Valor
 
-<p>Un objeto de tipo {{domxref("Storage")}}.</p>
+Un objeto de tipo {{domxref("Storage")}}.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>El siguiente código accede al objeto {{domxref("Storage")}} del la sesión actual del domino y le añade un elemento utilizando {{domxref("Storage.setItem()")}}.</p>
+El siguiente código accede al objeto {{domxref("Storage")}} del la sesión actual del domino y le añade un elemento utilizando {{domxref("Storage.setItem()")}}.
 
-<pre class="brush: js">sessionStorage.setItem('myCat', 'Tom');</pre>
+```js
+sessionStorage.setItem('myCat', 'Tom');
+```
 
-<p>El siguiente ejemplo graba de forma automática el contenido de un campo de texto, y si el navegador es actualizado accidentalmente, restaura el contenido del campo de texto para no perder lo escrito.</p>
+El siguiente ejemplo graba de forma automática el contenido de un campo de texto, y si el navegador es actualizado accidentalmente, restaura el contenido del campo de texto para no perder lo escrito.
 
-<pre class="brush: js">// Obtiene el campo de texto que vamos a moniterear
+```js
+// Obtiene el campo de texto que vamos a moniterear
 var field = document.getElementById("field");
 
 // Verificamos si tenemos algún valor auto guardado
@@ -46,38 +51,22 @@ if (sessionStorage.getItem("autosave")) {
 field.addEventListener("change", function() {
   // Almacena el resultado en el objeto de almacenamiento de sesión
   sessionStorage.setItem("autosave", field.value);
-});</pre>
+});
+```
 
-<p> </p>
+> **Nota:** Por favor diríjase al artículo [Usando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para un ejemplo completo.
 
-<div class="note">
-<p><strong>Nota</strong>: Por favor diríjase al artículo <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando la API de Web Storage</a> para un ejemplo completo.</p>
-</div>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                           | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |            |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.Window.sessionStorage")}}
 
-<h2 id="Vea_También">Vea También</h2>
+## Vea También
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando la API de Web Storage</a></li>
- <li><a href="/en-US/docs/Web/API/Window.localStorage">Window.localStorage</a></li>
-</ul>
+- [Usando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Window.localStorage](/es/docs/Web/API/Window.localStorage)

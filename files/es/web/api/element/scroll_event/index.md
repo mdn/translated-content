@@ -4,26 +4,26 @@ slug: Web/API/Element/scroll_event
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Un manejador de eventos para desplazamiento en <code>element</code>.</p>
+Un manejador de eventos para desplazamiento en `element`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">element.onscroll = <var>functionReference</var>
-</pre>
+    element.onscroll = functionReference
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p><code>functionReference</code> es una referencia a una función para ser ejecutada cuando  <code>element</code> es desplazado (enrollado).</p>
+`functionReference` es una referencia a una función para ser ejecutada cuando `element` es desplazado (enrollado).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <style>
   #container {
     position: absolute;
     height: auto;
@@ -42,40 +42,28 @@ original_slug: Web/API/GlobalEventHandlers/onscroll
     display: block;
   }
 
-  &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="container"&gt;
-      &lt;div id="foo"&gt;&lt;/div&gt;
-    &lt;/div&gt;
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="foo"></div>
+    </div>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
       document.getElementById('container').onscroll = function() {
         console.log("scrolling");
       };
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>El evento es generado cuando el usuario realiza desplazamiento (scrolls) sobre el contenido de un elemento. <code>Element.onscroll</code> es equivalente a <code>element.addEventListener("scroll" ... )</code>.</p>
+El evento es generado cuando el usuario realiza desplazamiento (scrolls) sobre el contenido de un elemento. `Element.onscroll` es equivalente a `element.addEventListener("scroll" ... )`.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observaciones</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                           | Observaciones      |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Definición inicial |

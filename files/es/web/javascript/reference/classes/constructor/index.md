@@ -8,31 +8,32 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/constructor
 original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.</p>
+El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.
 
-<p>El código fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de Github. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud para extraer el código (pull request).</p>
+El código fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de Github. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud para extraer el código (pull request).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">constructor([argumentos]) { ... }</pre>
+    constructor([argumentos]) { ... }
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.</p>
+Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.
 
-<p>Un constructor puede utilizar la palabra clave super para llamar al constructor de una clase padre.</p>
+Un constructor puede utilizar la palabra clave super para llamar al constructor de una clase padre.
 
-<p>Si no especifica un método constructor, se utiliza un constructor predeterminado.</p>
+Si no especifica un método constructor, se utiliza un constructor predeterminado.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_el_método_constructor">Usando el método constructor</h3>
+### Usando el método constructor
 
-<p>Este fragmento de código se toma de la <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
+Este fragmento de código se toma de la [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Aquí, llama al constructor de la clase padre con sus longitudes
     // contemplando la anchura y la altura del Polígono
@@ -50,54 +51,41 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
   set area(value) {
     this.area = value;
   }
-}</pre>
+}
+```
 
-<h3 id="Constructores_por_defecto">Constructores por defecto</h3>
+### Constructores por defecto
 
-<p>Si no especifica un método constructor, se utiliza un constructor predeterminado. Para las clases base, el constructor por defecto es:</p>
+Si no especifica un método constructor, se utiliza un constructor predeterminado. Para las clases base, el constructor por defecto es:
 
-<pre class="brush: js notranslate">constructor() {}
-</pre>
+```js
+constructor() {}
+```
 
-<p>Para las clases derivadas, el constructor por defecto es:</p>
+Para las clases derivadas, el constructor por defecto es:
 
-<pre class="brush: js notranslate">constructor(...args) {
+```js
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("javascript.classes.constructor")}}</p>
+{{Compat("javascript.classes.constructor")}}
 
-<p>La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> y envíanos una solicitud de extracción</p>
+La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <https://github.com/mdn/browser-compat-data> y envíanos una solicitud de extracción
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [super()](/es/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expression](/es/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/es/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/es/docs/Web/JavaScript/Reference/Classes)

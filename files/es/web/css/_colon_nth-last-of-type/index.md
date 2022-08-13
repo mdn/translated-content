@@ -1,96 +1,77 @@
 ---
 title: ':nth-last-of-type()'
-slug: 'Web/CSS/:nth-last-of-type'
+slug: Web/CSS/:nth-last-of-type
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:nth-last-of-type'
+translation_of: Web/CSS/:nth-last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:nth-last-of-type()</code></strong> <a href="/es/docs/Web/CSS">CSS</a> coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-of-type()`** [CSS](/es/docs/Web/CSS) coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
 
-<pre class="brush: css no-line-numbers">/* Selecciona cada cuarto elementos &lt;p&gt; entre
+```css
+/* Selecciona cada cuarto elementos <p> entre
    cualquier grupo de hermanos, contando hacia
    atrás desde el último */
 p:nth-last-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota:</strong> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.</p>
-</div>
+> **Nota:** Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-of-type")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La pseudo-clase <code>nth-last-of-type</code> se especifica con un solo argumento, que representa el patrón para los elementos coincidentes, contando desde el final.</p>
+La pseudo-clase `nth-last-of-type` se especifica con un solo argumento, que representa el patrón para los elementos coincidentes, contando desde el final.
 
-<p>Ver {{Cssxref(":nth-last-child")}} para una explicación más detallada de su sintaxis.</p>
+Ver {{Cssxref(":nth-last-child")}} para una explicación más detallada de su sintaxis.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Este es un span.&lt;/span&gt;
-  &lt;span&gt;Este es otro span.&lt;/span&gt;
-  &lt;em&gt;Esto esta enfatizado.&lt;/em&gt;
-  &lt;span&gt;¡Guauu, este span se pone color lima!&lt;/span&gt;
-  &lt;strike&gt;Esto está tachado.&lt;/strike&gt;
-  &lt;span&gt;Aquí hay un último span.&lt;/span&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">span:nth-last-of-type(2) {
-  background-color: lime;
-}</pre>
-
-<h3 id="Resultado">Resultado</h3>
-
-<p>{{EmbedLiveSample('Ejemplo')}}</p>
-
-<h2 id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Los elementos coincidentes no requieren tener un padre.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
-
+```html
 <div>
-
-
-<p>{{Compat("css.selectors.nth-last-of-type")}}</p>
+  <span>Este es un span.</span>
+  <span>Este es otro span.</span>
+  <em>Esto esta enfatizado.</em>
+  <span>¡Guauu, este span se pone color lima!</span>
+  <strike>Esto está tachado.</strike>
+  <span>Aquí hay un último span.</span>
 </div>
+```
 
-<h2 id="Ver_también">Ver también</h2>
+### CSS
 
-<ul>
- <li>{{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+```css
+span:nth-last-of-type(2) {
+  background-color: lime;
+}
+```
+
+### Resultado
+
+{{EmbedLiveSample('Ejemplo')}}
+
+## Especificaciones
+
+| Especificación                                                                                           | Estado                               | Comentarios                                             |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
+| {{SpecName('CSS3 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+
+## Compatibilidad con navegadores
+
+{{Compat("css.selectors.nth-last-of-type")}}
+
+## Ver también
+
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}

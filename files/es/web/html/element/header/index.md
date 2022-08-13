@@ -8,68 +8,29 @@ tags:
 translation_of: Web/HTML/Element/header
 original_slug: Web/HTML/Elemento/header
 ---
-<p>El <em>elemento de HTML Header</em> (<span style="font-family: Courier New;">&lt;header&gt;</span>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.</p>
+El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
 
-<div class="note">
-<p><strong>Nota de uso:</strong></p>
+> **Nota:** **Nota de uso:\*** El elemento \<header> no es contenido de sección y, por lo tanto, no introduce una nueva sección en [descripción](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
 
-<ul>
- <li>El elemento <span style="font-family: Courier New;">&lt;header&gt;</span> no es contenido de sección y, por lo tanto, no introduce una nueva sección en <a href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">descripción</a>.</li>
-</ul>
-</div>
+### Contexto de uso
 
-<h3 id="Contexto_de_uso">Contexto de uso</h3>
+| Contenido permitido                                          | [Contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"), pero sin un <header> o {{ HTMLElement("footer") }} descendente                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de la etiqueta                                       | No está permitido, tanto la etiqueta de inicio como la de final son obligatorias                                                                                                                                                                                                                                                                                                                                                                                          |
+| Elementos padres permitidosRoles ARIA permitidosInreface DOM | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"). Ten en cuenta que un elemento `<header>` no debe ser descendiente de un elemento {{ HTMLElement("address") }}, {{ HTMLElement("footer") }} o cualquier otro elemento {{ HTMLElement("header") }}.{{ARIARole("group")}}, {{ARIARole("presentation")}}{{domxref("HTMLElement")}} |
+| Documento normativo                                          | [HTML5, sección 4.4.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element)                                                                                                                                                                                                                                                                                                                                                      |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Contenido permitido</td>
-   <td><a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">Contenido dinámico</a>, pero sin un <span style="font-family: Courier New;">&lt;header&gt;</span> o {{ HTMLElement("footer") }} descendente</td>
-  </tr>
-  <tr>
-   <td>Omisión de la etiqueta</td>
-   <td>No está permitido, tanto la <span title="syntax-start-tag">etiqueta de inicio</span> como la de <span title="syntax-end-tag">final</span> son obligatorias</td>
-  </tr>
-  <tr>
-   <td>
-    <p>Elementos padres permitidos</p>
+### Atributos
 
-    <p>Roles ARIA permitidos</p>
+Este elemento no tiene otros atributos que no sean los [atributos generales](../../../../en/HTML/global_attributes), comunes a todos los elementos.
 
-    <p>Inreface DOM</p>
-   </td>
-   <td>
-    <p>Cualquier elemento que acepte <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">contenido dinámico</a>. Ten en cuenta que un elemento <code>&lt;header&gt;</code> no debe ser descendiente de un elemento {{ HTMLElement("address") }}, {{ HTMLElement("footer") }} o cualquier otro elemento {{ HTMLElement("header") }}.</p>
+### Interfaz DOM
 
-    <p>{{ARIARole("group")}}, {{ARIARole("presentation")}}</p>
+Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element "en/DOM/element").
 
-    <p>{{domxref("HTMLElement")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element" rel="external nofollow">HTML5, sección 4.4.8</a></td>
-  </tr>
- </tbody>
-</table>
+### Mira también
 
-<h3 id="Atributos">Atributos</h3>
+- Otros elementos relacionados con secciones: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("section") }}, {{ HTMLElement("address") }};
+- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
 
-<p>Este elemento no tiene otros atributos que no sean los <a class="new " href="../../../../en/HTML/global_attributes" rel="internal">atributos generales</a>, comunes a todos los elementos.</p>
-
-<div id="section_3">
-<div id="section_3">
-<h3 class="editable" id="Interfaz_DOM">Interfaz DOM</h3>
-
-<p>Este elemento implementa la interfaz <code><a href="/en/DOM/element" title="en/DOM/element">HTMLElement</a></code>.</p>
-
-<h3 id="Mira_también">Mira también</h3>
-
-<ul>
- <li>Otros elementos relacionados con secciones: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("section") }}, {{ HTMLElement("address") }};</li>
- <li class="last"><a class="deki-ns current" href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
-
-<p>{{ languages( { "en": "en/HTML/Element/header" } ) }}</p>
-</div>
-</div>
+{{ languages( { "en": "en/HTML/Element/header" } ) }}

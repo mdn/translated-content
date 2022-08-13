@@ -3,64 +3,39 @@ title: Server
 slug: Web/HTTP/Headers/Server
 translation_of: Web/HTTP/Headers/Server
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La cabecera <code><strong>Server</strong></code> contiene la información acerca del software usado por el servidor original encargado de la solicitud.</p>
+La cabecera **`Server`** contiene la información acerca del software usado por el servidor original encargado de la solicitud.
 
-<p>La información larga y detallada debe de ser evitada en las cabeceras Server ya que puede revelar detalles de implementación que pueden hacer (un poco) más fácil para los atacantes encontrar y explotar huecos de seguridad.</p>
+La información larga y detallada debe de ser evitada en las cabeceras Server ya que puede revelar detalles de implementación que pueden hacer (un poco) más fácil para los atacantes encontrar y explotar huecos de seguridad.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">Server: &lt;producto&gt;
-</pre>
+    Server: <producto>
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt>&lt;producto&gt;</dt>
- <dd>El nombre del software o (sub) producto que se encargó de las solicitudes.</dd>
-</dl>
+- \<producto>
+  - : El nombre del software o (sub) producto que se encargó de las solicitudes.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre>Server: Apache/2.4.1 (Unix)</pre>
+    Server: Apache/2.4.1 (Unix)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Server", "7.4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                               | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("http.headers.Server")}}
 
+## Véase también
 
-<p>{{Compat("http.headers.Server")}}</p>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{HTTPHeader("Allow")}}</li>
-</ul>
+- {{HTTPHeader("Allow")}}

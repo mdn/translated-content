@@ -7,80 +7,30 @@ tags:
   - Web
 translation_of: Web/API/Window/hashchange_event
 ---
-<p>El evento <code>hashchange</code> es ejecutado cuando el fragmento identificador de la URL ha cambiado (la parte de la URL que continúa despues del simbolo #, incluyendo el símbolo #).</p>
+El evento `hashchange` es ejecutado cuando el fragmento identificador de la URL ha cambiado (la parte de la URL que continúa despues del simbolo #, incluyendo el símbolo #).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td>Burbujas</td>
-   <td>Si</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Objetivo</td>
-   <td>{{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("HashChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <td>Acción predeterminada</td>
-   <td>Ninguna</td>
-  </tr>
- </tbody>
-</table>
+| Burbujas              | Si                                       |
+| --------------------- | ---------------------------------------- |
+| Cancelable            | No                                       |
+| Objetivo              | {{domxref("Window")}}             |
+| Interface             | {{domxref("HashChangeEvent")}} |
+| Acción predeterminada | Ninguna                                  |
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The browsing context (<code>window</code>).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>oldURL</code> {{readonlyInline}}</td>
-   <td>{{jsxref("String")}}</td>
-   <td>The previous URL from which the window was navigated.</td>
-  </tr>
-  <tr>
-   <td>newURL {{readonlyInline}}</td>
-   <td>{{jsxref("String")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                           |
+| ------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.            |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.              |
+| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}         | The previous URL from which the window was navigated. |
+| newURL {{readonlyInline}}       | {{jsxref("String")}}         |                                                       |
 
-<p>En <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">esta página</a> se enlistan algunos scripts de ejemplo. Básicamente estos scripts revisan el <code>location.hash</code> en un intervalo regular. Aquí se muestra una versión que permite que solo un controlador sea ligado a la propiedad <code>window.onhashchange</code>:</p>
+En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) se enlistan algunos scripts de ejemplo. Básicamente estos scripts revisan el `location.hash` en un intervalo regular. Aquí se muestra una versión que permite que solo un controlador sea ligado a la propiedad `window.onhashchange`:
 
-<pre class="brush:js;">;(function(window) {
+```js
+;(function(window) {
 
   // salir si el navegador implementa el evento
   if ("onhashchange" in window) { return; }
@@ -95,7 +45,7 @@ translation_of: Web/API/Window/hashchange_event
       newHash = location.hash;
 
     // si el hash ha cambiado y un controlador ha sido ligado...
-    if (newHash != oldHash &amp;&amp; typeof window.onhashchange === "function") {
+    if (newHash != oldHash && typeof window.onhashchange === "function") {
       // ejecuta el controlador
       window.onhashchange({
         type: "hashchange",
@@ -109,32 +59,19 @@ translation_of: Web/API/Window/hashchange_event
   }, 100);
 
 })(window);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                                                                       | Estado                           | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.Window.hashchange_event")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/popstate"><code>popstate</code></a></li>
- <li><a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange">WindowEventHandlers.onhashchange</a></li>
-</ul>
+- [`popstate`](/es/docs/Mozilla_event_reference/popstate)
+- [WindowEventHandlers.onhashchange](/es/docs/Web/API/WindowEventHandlers/onhashchange)

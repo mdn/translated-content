@@ -3,31 +3,31 @@ title: Animaciones CSS tips y trucos
 slug: Web/CSS/CSS_Animations/Tips
 translation_of: Web/CSS/CSS_Animations/Tips
 ---
-<div>{{cssref}}</div>
+{{cssref}}Las Animaciones con CSS hacen posible crear cosas increíbles con los elementos que forman parte de tus documentos y apps . Sin embargo, hay cosas que deseas hacer que no son evidentes, o soluciones inteligentes que quizás no encuentres de inmediato. Este artículo es una colección de tips y trucos que hemos encontrado que podrían hacer más fácil el trabajo, incluido cómo volver a ejecutar una animación detenida.
 
-<div>Las Animaciones con CSS hacen posible crear cosas increíbles con los elementos que forman parte de tus documentos y apps . Sin embargo, hay cosas que deseas hacer que no son evidentes, o soluciones inteligentes que quizás no encuentres de inmediato. Este artículo es una colección de tips y trucos que hemos encontrado que podrían hacer más fácil el trabajo, incluido cómo volver a ejecutar una animación detenida.</div>
+## Corriendo una animación de nuevo
 
-<h2 id="Corriendo_una_animación_de_nuevo">Corriendo una animación de nuevo</h2>
+La especificación de CSS Animations no ofrece una forma de ejecutar una animación nuevamente. No hay un método mágico de `resetAnimation()` en los elementos, y tu no puedes solo configurar el elemento {{cssxref("animation-play-state")}} para `"correr"` de nuevo. En su lugar debes usar trucos inteligentes para que una animación detenida se reproduzca.
 
-<p>La especificación de CSS Animations no ofrece una forma de ejecutar una animación nuevamente. No hay un método mágico de <code>resetAnimation()</code> en los elementos, y tu no puedes solo configurar el elemento {{cssxref("animation-play-state")}} para <code>"correr"</code> de nuevo. En su lugar debes usar trucos inteligentes para que una animación detenida se reproduzca.</p>
+Aquí te mostramos una forma de hacerlo que sentimos es lo suficientemente estable y confiable para sugerirte
 
-<p>Aquí te mostramos una forma de hacerlo que sentimos es lo suficientemente estable y confiable para sugerirte</p>
+### Contenido HTML
 
-<h3 id="Contenido_HTML">Contenido HTML </h3>
+Primero, definamos el HTML para un {{HTMLElement("div")}} que deseamos animar y un botón que ejecurara (o repetira) la animación.
 
-<p>Primero, definamos el HTML para un {{HTMLElement("div")}}  que deseamos animar y un botón que ejecurara (o repetira) la animación.</p>
+```html
+<div class="box">
+</div>
 
-<pre class="brush: html notranslate">&lt;div class="box"&gt;
-&lt;/div&gt;
+<div class="runButton">Click me to run the animation</div>
+```
 
-&lt;div class="runButton"&gt;Click me to run the animation&lt;/div&gt;</pre>
+### Contenido CSS
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+Ahora definiremos la animación en si usando CSS. Algún CSS que no es importante (el estilo del botón "Run" en sí) no se muestran aquí, por brevedad.
 
-<p>Ahora definiremos la animación en si usando CSS. Algún CSS que no es importante (el estilo del botón "Run" en sí)  no se muestran aquí, por brevedad.</p>
-
-<div class="hidden">
-<pre class="brush: css notranslate">.runButton {
+```css hidden
+.runButton {
   cursor: pointer;
   width: 300px;
   border: 1px solid black;
@@ -39,10 +39,11 @@ translation_of: Web/CSS/CSS_Animations/Tips
   color: white;
   background-color: darkgreen;
   font: 14px "Open Sans", "Arial", sans-serif;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css notranslate">@keyframes colorchange {
+```css
+@keyframes colorchange {
   0% { background: yellow }
   100% { background: blue }
 }
@@ -55,55 +56,57 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 .changing {
   animation: colorchange 2s;
-}</pre>
+}
+```
 
-<p>Aquí hay dos clases. La clase <code>"box"</code> es un descripción básica de la apariencia de la caja, sin ninguna información de la animación incluida. Los detalles de la animación son incluidos en la clase <code>"changing"</code> class, que dice que {{cssxref("@keyframes")}} llamado <code>"colorchange"</code> debe usarse en el transcurso de dos segundo para animar la caja.</p>
+Aquí hay dos clases. La clase `"box"` es un descripción básica de la apariencia de la caja, sin ninguna información de la animación incluida. Los detalles de la animación son incluidos en la clase `"changing"` class, que dice que {{cssxref("@keyframes")}} llamado `"colorchange"` debe usarse en el transcurso de dos segundo para animar la caja.
 
-<p>Note que debido a esto, la caja no comienza con ningún efecto de animación en su lugar, por lo que no se animará</p>
+Note que debido a esto, la caja no comienza con ningún efecto de animación en su lugar, por lo que no se animará
 
-<h3 id="Contenido_JavaScript">Contenido JavaScript</h3>
+### Contenido JavaScript
 
-<p>Ahora veremos el JavaScript que jace el trabajo. La escencia de la técnica esta en la función <code>play()</code>, que se llama cuando el usuario hace clic en  el botón "Run".</p>
+Ahora veremos el JavaScript que jace el trabajo. La escencia de la técnica esta en la función `play()`, que se llama cuando el usuario hace clic en el botón "Run".
 
-<pre class="brush: js notranslate">function play() {
+```js
+function play() {
   document.querySelector(".box").className = "box";
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
       document.querySelector(".box").className = "box changing";
     });
   });
-}</pre>
+}
+```
 
-<p>Esto se ve raro, ¿cierto? Esto se debe a que la única forma de volver a reproducir una animación es eleminar el efecto de animación, dejar que el documento vuelva a calcular los estilos para que sepa que lo ha hecho y luego volver a agregar el efecto de animación al elemento. Para que eso suceda, tenemos que ser creativos.</p>
+Esto se ve raro, ¿cierto? Esto se debe a que la única forma de volver a reproducir una animación es eleminar el efecto de animación, dejar que el documento vuelva a calcular los estilos para que sepa que lo ha hecho y luego volver a agregar el efecto de animación al elemento. Para que eso suceda, tenemos que ser creativos.
 
-<p>Esto es lo que sucede cuando la función <code>play()</code> es llamada:</p>
+Esto es lo que sucede cuando la función `play()` es llamada:
 
-<ol>
- <li> La lista de clases CSS de caja se restablece a <code>"box"</code>. Esto tiene el efecto de remover   cualquier otra clase recurrente aplicada a la caja, incluida la clase <code>"changing"</code> que       controla la animación. En otras palabras eliminaremos el efecto de animación de la caja. Sin embargo, los cambios en la lista de clases no tienen efecto hasta que se recalcula completamente el estilo  y se ha producido una actualización para reflejar el cambio.</li>
- <li>Para estar seguros que los estilos son recalculados, nosotros usamos {{domxref("window.requestAnimationFrame()")}}, especifinado un callback. Nuestro callback se ejecuta justo antes del 'repaint' del documento. El problema para nosotros es que debido a que es antes del repaint, ¡El recalculo del estilo aún no ha suciedo! Por lo tanto...</li>
- <li>Nuestro callback habilmente llama a <code>requestAnimationFrame()</code> ¡por segunda vez!. En este momento el callback se compila antes del siguiente repaint, después de que se haya producido el recalculo del estilo. El callback añade la clase <code>"changing"</code>  de nuevo en la caja, para que el repaint inicie la animación una vez más.</li>
-</ol>
+1.  La lista de clases CSS de caja se restablece a `"box"`. Esto tiene el efecto de remover cualquier otra clase recurrente aplicada a la caja, incluida la clase `"changing"` que controla la animación. En otras palabras eliminaremos el efecto de animación de la caja. Sin embargo, los cambios en la lista de clases no tienen efecto hasta que se recalcula completamente el estilo y se ha producido una actualización para reflejar el cambio.
+2.  Para estar seguros que los estilos son recalculados, nosotros usamos {{domxref("window.requestAnimationFrame()")}}, especifinado un callback. Nuestro callback se ejecuta justo antes del 'repaint' del documento. El problema para nosotros es que debido a que es antes del repaint, ¡El recalculo del estilo aún no ha suciedo! Por lo tanto...
+3.  Nuestro callback habilmente llama a `requestAnimationFrame()` ¡por segunda vez!. En este momento el callback se compila antes del siguiente repaint, después de que se haya producido el recalculo del estilo. El callback añade la clase `"changing"` de nuevo en la caja, para que el repaint inicie la animación una vez más.
 
-<p>Por supuesto, también necesitamos agregar un controlador de eventos a nuestro botón  "Run" para que en verdad haga algo</p>
+Por supuesto, también necesitamos agregar un controlador de eventos a nuestro botón "Run" para que en verdad haga algo
 
-<pre class="brush: js notranslate">document.querySelector(".runButton").addEventListener("click", play, false);</pre>
+```js
+document.querySelector(".runButton").addEventListener("click", play, false);
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Run_an_animation_again', 320, 160) }}</p>
+{{ EmbedLiveSample('Run_an_animation_again', 320, 160) }}
 
-<h2 id="Detener_la_animación">Detener la animación</h2>
+## Detener la animación
 
-<p>Simplemente removemos {{cssxref("animation-name")}} aplicado al elemento que hace que eso salte o corte a su siguiente estado.Si, en cambio, desea que la animación se complete y luego se detenga, debe probar un enfoque diferente. Los principales trucos son:</p>
+Simplemente removemos {{cssxref("animation-name")}} aplicado al elemento que hace que eso salte o corte a su siguiente estado.Si, en cambio, desea que la animación se complete y luego se detenga, debe probar un enfoque diferente. Los principales trucos son:
 
-<ol>
- <li>Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en<code>animation-direction: alternate</code>. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.</li>
- <li>Use JavaScript y borre la animación  que se esta utilizando cuando se activa el evento <code>animationiteration</code>.</li>
-</ol>
+1.  Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en`animation-direction: alternate`. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.
+2.  Use JavaScript y borre la animación que se esta utilizando cuando se activa el evento `animationiteration`.
 
-<p>El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionandas anteriormente:</p>
+El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionandas anteriormente:
 
-<pre class="brush: css notranslate">.slidein {
+```css
+.slidein {
   animation-duration: 5s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -124,27 +127,27 @@ translation_of: Web/CSS/CSS_Animations/Tips
     margin-left: 0%;
   }
 }
-</pre>
+```
 
-<pre class="brush: html notranslate">&lt;h1 id="watchme"&gt;Click me to stop&lt;/h1&gt;
-</pre>
+```html
+<h1 id="watchme">Click me to stop</h1>
+```
 
-<pre class="brush: js notranslate">let watchme = document.getElementById('watchme')
+```js
+let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
-const listener = (e) =&gt; {
+const listener = (e) => {
   watchme.className = 'slidein stopped'
 }
-watchme.addEventListener('click', () =&gt;
+watchme.addEventListener('click', () =>
   watchme.addEventListener('animationiteration', listener, false)
 )
-</pre>
+```
 
-<p>Demo <a href="https://jsfiddle.net/morenoh149/5ty5a4oy/">https://jsfiddle.net/morenoh149/5ty5a4oy/</a></p>
+Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
-<h2 id="Mira_también">Mira también</h2>
+## Mira también
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{domxref("Window.requestAnimationFrame()")}}</li>
-</ul>
+- [Using CSS transitions](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("Window.requestAnimationFrame()")}}

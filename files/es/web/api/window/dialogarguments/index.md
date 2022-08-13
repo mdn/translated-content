@@ -3,12 +3,12 @@ title: Window.dialogArguments
 slug: Web/API/Window/dialogArguments
 translation_of: Web/API/Window/dialogArguments
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code>dialogArguments</code> retorna los parámetros que fueron pasados al método {{domxref("window.showModalDialog()")}}. Esto permite determinar qué parámetros fueron especificados cuando el diálogo modal fue creado.</p>
+La propiedad `dialogArguments` retorna los parámetros que fueron pasados al método {{domxref("window.showModalDialog()")}}. Esto permite determinar qué parámetros fueron especificados cuando el diálogo modal fue creado.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>value</var> = window.dialogArguments;</pre>
+    value = window.dialogArguments;

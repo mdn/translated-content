@@ -13,50 +13,55 @@ tags:
   - computedStyleMap()
 translation_of: Web/API/Element/computedStyleMap
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">El método <strong><code>computedStyleMap()</code></strong> de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}. </span></p>
+El método **`computedStyleMap()`** de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">var <var>stylePropertyMapReadOnly</var> = Element.computedStyleMap()</pre>
+    var stylePropertyMapReadOnly = Element.computedStyleMap()
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_de_resultado">Valor de resultado</h3>
+### Valor de resultado
 
-<p>Una interfaz {{domxref("StylePropertyMapReadOnly")}}.</p>
+Una interfaz {{domxref("StylePropertyMapReadOnly")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Comenzamos con algo de HTML simple: un párrafo con un enlace, y una lista de definición a la cual le añadiremos todos los pares de Propiedad CSS / Valor.</p>
+Comenzamos con algo de HTML simple: un párrafo con un enlace, y una lista de definición a la cual le añadiremos todos los pares de Propiedad CSS / Valor.
 
-<pre class="brush: html notranslate">&lt;p&gt;
-   &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
-&lt;/p&gt;
-&lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
+```html
+<p>
+   <a href="https://example.com">Link</a>
+</p>
+<dl id="regurgitation"></dl>
+```
 
-<p>Añadimos un poco de CSS</p>
+Añadimos un poco de CSS
 
-<pre class="brush: css notranslate">a {
+```css
+a {
   --colour: red;
   color: var(--colour);
-}</pre>
+}
+```
 
-<p>Añadimos Javascript para tomar nuestro enlace y devolvemos una lista de definición de todos los valores de propiedades CSS usando <code>computedStyleMap().</code></p>
+Añadimos Javascript para tomar nuestro enlace y devolvemos una lista de definición de todos los valores de propiedades CSS usando `computedStyleMap().`
 
-<pre class="brush: js notranslate">// obtenemos el elemento
+```js
+// obtenemos el elemento
 const myElement = document.querySelector('a');
 
-// obtenemos la &lt;dl&gt; que llenaremos
+// obtenemos la <dl> que llenaremos
 const stylesList = document.querySelector('#regurgitation');
 
 // recuperamos todos los estilos calculados con computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iteramos a través del mapa de todas las propiedades y valores, añadiendo un &lt;dt&gt; y &lt;dd&gt; para cada mapa
+// iteramos a través del mapa de todas las propiedades y valores, añadiendo un <dt> y <dd> para cada mapa
 for (const [prop, val] of allComputedStyles) {
 	// propiedades
 	const cssProperty = document.createElement('dt');
@@ -67,33 +72,21 @@ for (const [prop, val] of allComputedStyles) {
 	const cssValue = document.createElement('dd');
 	cssValue.appendChild(document.createTextNode(val));
 	stylesList.appendChild(cssValue);
-}</pre>
+}
+```
 
-<p>En <a href="/en-US/docs/Web/API/Element/computedStyleMap#Browser_compatibility">navegadores que soportan <code>computedStyleMap()</code></a>, verás una lista de todas las propiedades CSS y valores. En otros navegadores verás un enlace.</p>
+En [navegadores que soportan `computedStyleMap()`](/es/docs/Web/API/Element/computedStyleMap#Browser_compatibility), verás una lista de todas las propiedades CSS y valores. En otros navegadores verás un enlace.
 
-<p>{{EmbedLiveSample("Examples", 300, 300)}}</p>
+{{EmbedLiveSample("Examples", 300, 300)}}
 
-<p>¿Te diste cuenta cuántas propiedades CSS por defecto tenía un enlace? Actualiza el '<code>a</code>' a un '<code>p</code>', y notarás una diferencia en los valores calculados por defecto del <code>margin-top</code> y <code>margin-bottom</code>.</p>
+¿Te diste cuenta cuántas propiedades CSS por defecto tenía un enlace? Actualiza el '`a`' a un '`p`', y notarás una diferencia en los valores calculados por defecto del `margin-top` y `margin-bottom`.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Typed OM','#dom-element-computedstylemap','computedStyleMap()')}}</td>
-   <td>{{Spec2('CSS Typed OM')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                           | Comentario          |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('CSS Typed OM','#dom-element-computedstylemap','computedStyleMap()')}} | {{Spec2('CSS Typed OM')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navedadores">Compatibilidad con navedadores</h2>
+## Compatibilidad con navedadores
 
-
-
-<p>{{Compat("api.Element.computedStyleMap")}}</p>
+{{Compat("api.Element.computedStyleMap")}}

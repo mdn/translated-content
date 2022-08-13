@@ -7,46 +7,40 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/regexp/replace
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>regexp:replace()</code> reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.</p>
+`regexp:replace()` reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">regexp:replace(<em>original</em>,<em>expresionRegular</em>,<em>reemplazo</em>[,<em>opciones</em>])
-</pre>
+    regexp:replace(original,expresionRegular,reemplazo[,opciones])
 
-<h3 id="Arguments" name="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>original</em></code></dt>
- <dd>Cadena sobre la que se realiza la operación de búsqueda y reemplazo.</dd>
- <dt><code><em>expresionRegular</em></code></dt>
- <dd>Expresión regular a evaluar en estilo JavaScript.</dd>
- <dt><code><em>reemplazo</em></code></dt>
- <dd>Cadena con la que las subcadenas coincidentes serán reemplazadas.</dd>
- <dt><code><em>opciones</em></code></dt>
- <dd>Una cadena opcional que contiene caracteres con las opciones.</dd>
-</dl>
+- `original`
+  - : Cadena sobre la que se realiza la operación de búsqueda y reemplazo.
+- `expresionRegular`
+  - : Expresión regular a evaluar en estilo JavaScript.
+- `reemplazo`
+  - : Cadena con la que las subcadenas coincidentes serán reemplazadas.
+- `opciones`
+  - : Una cadena opcional que contiene caracteres con las opciones.
 
-<p>Los caracteres de opciones son:</p>
+Los caracteres de opciones son:
 
-<dl>
- <dt><code>g</code> - Reemplazo global</dt>
- <dd>Si se especifica esta opción, todas las ocurrencias de la expresión regular dentro de <code><em>original</em></code> serán reemplazadas. De otro modo sólo se reemplaza la primera ocurrencia.</dd>
- <dt><code>i</code> - Coincidencia sin importar mayúsculas</dt>
- <dd>Si se especifica esta opción, el emparejamiento se realiza de modo que no importen las mayúsculas.</dd>
-</dl>
+- `g` - Reemplazo global
+  - : Si se especifica esta opción, todas las ocurrencias de la expresión regular dentro de `original` serán reemplazadas. De otro modo sólo se reemplaza la primera ocurrencia.
+- `i` - Coincidencia sin importar mayúsculas
+  - : Si se especifica esta opción, el emparejamiento se realiza de modo que no importen las mayúsculas.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>La versión revisada de la cadena.</p>
+La versión revisada de la cadena.
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/regexp/functions/replace/index.html">EXSLT - REGEXP:REPLACE</a></p>
+[EXSLT - REGEXP:REPLACE](http://www.exslt.org/regexp/functions/replace/index.html)
 
-<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
+### Implementación de Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

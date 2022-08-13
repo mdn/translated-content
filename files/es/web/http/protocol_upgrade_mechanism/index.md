@@ -4,244 +4,222 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 translation_of: Web/HTTP/Protocol_upgrade_mechanism
 original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">El protocolo <a href="/en/HTTP" title="en/HTTP">HTTP</a> posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar. </span></p>
+El protocolo [HTTP](/en/HTTP "en/HTTP") posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
 
-<p>Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: <a href="#server-initiated_upgrade_to_tls">requerida actualización a TLS</a>), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.</p>
+Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: [requerida actualización a TLS](#server-initiated_upgrade_to_tls)), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.
 
-<h2 id="Acuerdo_de_conexión_(handshake)">Acuerdo de conexión (handshake)</h2>
+## Acuerdo de conexión (handshake)
 
-<p>Las actualizaciones del protocolo de comunicación son siempre iniciadas por el cliente; no hay un mecanismo establecido  para que el servidor pida un cambio de protocolo. Cuando el cliente desea una actualización a un nuevo protocolo, lo hace mandando una petición normal al servidor con cualquier método ({{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, etc.). La petición ha de configurarse de manera especial, para que incluya en ella, la petición de actualización del protocolo. </p>
+Las actualizaciones del protocolo de comunicación son siempre iniciadas por el cliente; no hay un mecanismo establecido para que el servidor pida un cambio de protocolo. Cuando el cliente desea una actualización a un nuevo protocolo, lo hace mandando una petición normal al servidor con cualquier método ({{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, etc.). La petición ha de configurarse de manera especial, para que incluya en ella, la petición de actualización del protocolo.
 
-<p>Específicamente la petición ha de incluir las dos siguientes cabeceras:</p>
+Específicamente la petición ha de incluir las dos siguientes cabeceras:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Connection">Connection: Upgrade</a></code></dt>
- <dd>La cabecera de conexión (<code>Connection</code>) ha de tener el valor <code>"Upgrade"</code>, para indicar que se está pidiendo una actualización del protocolo.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade: protocols</a></code></dt>
- <dd>La cabecera de actualización (<code>Upgrade</code>) indica los protocolos deseados, en orden de preferencia, separados por comas.</dd>
-</dl>
+- [`Connection: Upgrade`](/en-US/docs/Web/HTTP/Headers/Connection)
+  - : La cabecera de conexión (`Connection`) ha de tener el valor `"Upgrade"`, para indicar que se está pidiendo una actualización del protocolo.
+- [`Upgrade: protocols`](/en-US/docs/Web/HTTP/Headers/Upgrade)
+  - : La cabecera de actualización (`Upgrade`) indica los protocolos deseados, en orden de preferencia, separados por comas.
 
-<p>Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: <a href="#upgrading_to_a_websocket_connection">Upgrading to a WebSocket connection</a>.</p>
+Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a [WebSocket](/es/docs/Web/API/WebSocket) necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection).
 
-<p>El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (<code>"Upgrade"</code>) y responde con un estado normal, ( <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso requerido) — O puede  aceptar la actualización del protocolo de comunicación. En este caso, responde con un código <code>"101 Switching Protocols"</code>  y con una cabecera <code>Upgrade</code> que indica el protocolo elegido.</p>
+El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (`"Upgrade"`) y responde con un estado normal, ( `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso requerido) — O puede aceptar la actualización del protocolo de comunicación. En este caso, responde con un código `"101 Switching Protocols"` y con una cabecera `Upgrade` que indica el protocolo elegido.
 
-<p>Justo después de enviar el código de estado  <code>"101 Switching Protocols"</code> se procederá a realizar el acuerdo de conexión (corresponde con el termino: 'handshake' en inglés). Si el nuevo protocolo lo necesitase, el servidor, enviaría una la respuesta a la petición inicial (la que contenía la cabecera de <code>"Upgrade"</code> ) , de acuerdo a las reglas del protocolo. </p>
+Justo después de enviar el código de estado `"101 Switching Protocols"` se procederá a realizar el acuerdo de conexión (corresponde con el termino: 'handshake' en inglés). Si el nuevo protocolo lo necesitase, el servidor, enviaría una la respuesta a la petición inicial (la que contenía la cabecera de `"Upgrade"` ) , de acuerdo a las reglas del protocolo.
 
-<h2 id="El_código_de_estado_101">El código de estado 101</h2>
+## El código de estado 101
 
-<p>El código de estado {{HTTPStatus(101)}} se manda en respuesta a una petición que contenga la cabecera de <code>"Upgrade"</code> para indicar que el emisor de la petición desea actualizar el protocolo de comunicación. Si se responde con el código de estado <code>"101 Switching Protocols"</code>, se han de incluir también  las cabeceras <code>Connection</code> y <code>Upgrade</code> para definir el protocolo elegido. Más adelante en el texto se dan más detalles del funcionamiento de este mecanismo y ejemplos.</p>
+El código de estado {{HTTPStatus(101)}} se manda en respuesta a una petición que contenga la cabecera de `"Upgrade"` para indicar que el emisor de la petición desea actualizar el protocolo de comunicación. Si se responde con el código de estado `"101 Switching Protocols"`, se han de incluir también las cabeceras `Connection` y `Upgrade` para definir el protocolo elegido. Más adelante en el texto se dan más detalles del funcionamiento de este mecanismo y ejemplos.
 
-<p>Se puede utilizar el mecanismo de actualización del protocolo para pasar de una conexión en HTTP/1.1 a una conexión con HTTP/2, pero no se permite cambiar el protocolo en el otro sentido. De hecho, el código de estado  <code>"101 Switching Protocols"</code>, no está incluido en HTTP/2, ya que HTTP/2 no posee el mecanismo de actualización de protocolo. </p>
+Se puede utilizar el mecanismo de actualización del protocolo para pasar de una conexión en HTTP/1.1 a una conexión con HTTP/2, pero no se permite cambiar el protocolo en el otro sentido. De hecho, el código de estado `"101 Switching Protocols"`, no está incluido en HTTP/2, ya que HTTP/2 no posee el mecanismo de actualización de protocolo.
 
-<h2 id="Usos_frecuentes_del_mecanismo_de_actualización_de_protocolo">Usos frecuentes del mecanismo de actualización de protocolo</h2>
+## Usos frecuentes del mecanismo de actualización de protocolo
 
-<p>A continuación se presentan los casos más frecuentes del mecanismo de actualización de protocolo, mediante el uso de la cabecera <code>"Upgrade"</code>. </p>
+A continuación se presentan los casos más frecuentes del mecanismo de actualización de protocolo, mediante el uso de la cabecera `"Upgrade"`.
 
-<h3 id="Actualización_a_una_conexión_con_HTTP2">Actualización a una conexión con HTTP/2</h3>
+### Actualización a una conexión con HTTP/2
 
-<p>El procedimiento estándar, es iniciar una conexión usando HTTP/1.1, debido a su amplio uso. Y a continuación, hacer una petición de actualización de protocolo, a HTTP/2. De esta manera, se tiene una conexión de comunicaciones, incluso si el servidor no soporta protocolo HTTP/2. De todas formas, únicamente es posible actualizar el protocolo, a una versión de HTTP/2 no segura (no encriptada). Esto se realiza indicando el protocolo deseado como: <code>h2c</code>, que indica "HTTP/2 Cleartext". Además es necesario que se defina en los campos de cabecera las propiedades <code>HTTP2-Settings</code>. </p>
+El procedimiento estándar, es iniciar una conexión usando HTTP/1.1, debido a su amplio uso. Y a continuación, hacer una petición de actualización de protocolo, a HTTP/2. De esta manera, se tiene una conexión de comunicaciones, incluso si el servidor no soporta protocolo HTTP/2. De todas formas, únicamente es posible actualizar el protocolo, a una versión de HTTP/2 no segura (no encriptada). Esto se realiza indicando el protocolo deseado como: `h2c`, que indica "HTTP/2 Cleartext". Además es necesario que se defina en los campos de cabecera las propiedades `HTTP2-Settings`.
 
-<pre>GET / HTTP/1.1
-Host: destination.server.ext
-Connection: Upgrade, HTTP2-Settings
-Upgrade: h2c
-HTTP2-Settings: <em>base64EncodedSettings</em>
-</pre>
+    GET / HTTP/1.1
+    Host: destination.server.ext
+    Connection: Upgrade, HTTP2-Settings
+    Upgrade: h2c
+    HTTP2-Settings: base64EncodedSettings
 
-<p>Aquí, <code>base64EncodedSettings</code> es una propiedad de HTTP/2 <code>"SETTINGS"</code> del contenido de la trama que se expresa en formato <code>base64url</code>, seguido de un carácter de igual, <code>"="</code>,  omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.</p>
+Aquí, `base64EncodedSettings` es una propiedad de HTTP/2 `"SETTINGS"` del contenido de la trama que se expresa en formato `base64url`, seguido de un carácter de igual, `"="`, omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.
 
-<div class="note">
-<p>El formato <a href="https://tools.ietf.org/html/rfc4648#section-5">base64url</a> fno es el mismo que el formato estándar Base64.  La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : <code>"+"</code> y <code>"/"</code> a: <code>"-"</code> (menos) y <code>"_"</code>  respectivamente.</p>
-</div>
+> **Nota:** El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
 
-<p>Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con <code>"HTTP/1.1 200 OK"</code>  seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será:  "<code>HTTP/1.1 101 Switching Protocols"</code>. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.</p>
+Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con `"HTTP/1.1 200 OK"` seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será: "`HTTP/1.1 101 Switching Protocols"`. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.
 
-<pre>HTTP/1.1 101 Switching Protocols
-Connection: Upgrade
-Upgrade: h2c
+    HTTP/1.1 101 Switching Protocols
+    Connection: Upgrade
+    Upgrade: h2c
 
-<em>[standard HTTP/2 server connection preface, etc.]</em></pre>
+    [standard HTTP/2 server connection preface, etc.]
 
-<p>A continuación de la línea en blanco, que sigue al final de la cabecera de respuesta; el servidor, indicará los parámetros ("<code>SETTINGS"</code>) de la nueva comunicación con HTTP/2.</p>
+A continuación de la línea en blanco, que sigue al final de la cabecera de respuesta; el servidor, indicará los parámetros ("`SETTINGS"`) de la nueva comunicación con HTTP/2.
 
-<h3 id="Mejorar_a_una_conexión_WebSocket">Mejorar a una conexión WebSocket</h3>
+### Mejorar a una conexión WebSocket
 
-<p>By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a>, or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:</p>
+By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the [WebSocket API](/es/docs/Web/API/WebSocket), or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:
 
-<pre class="brush: js">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
+```js
+webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
+```
 
-<p>The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.</p>
+The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-<div class="note">
-<p>You can also use the <code>"wss://"</code> URL scheme to open a secure WebSocket connection.</p>
-</div>
+> **Nota:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
-<p>If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:</p>
+If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
-<pre>Connection: Upgrade
-Upgrade: websocket</pre>
+    Connection: Upgrade
+    Upgrade: websocket
 
-<h3 id="Cabeceras_específicas_de_WebSocket">Cabeceras específicas de WebSocket</h3>
+### Cabeceras específicas de WebSocket
 
-<p>The following headers are involved in the WebSocket upgrade process. Other than the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, the rest are generally optional or handled for you by the browser and server when they're talking to each other.</p>
+The following headers are involved in the WebSocket upgrade process. Other than the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, the rest are generally optional or handled for you by the browser and server when they're talking to each other.
 
-<h4 id="HTTPHeader(Sec-WebSocket-Extensions)">{{HTTPHeader("Sec-WebSocket-Extensions")}}</h4>
+#### {{HTTPHeader("Sec-WebSocket-Extensions")}}
 
-<p>Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one <code>Sec-WebSocket-Extension</code> header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.</p>
+Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one `Sec-WebSocket-Extension` header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.
 
-<pre class="syntaxbox">Sec-WebSocket-Extensions: <em>extensions</em></pre>
+    Sec-WebSocket-Extensions: extensions
 
-<dl>
- <dt><code>extensions</code></dt>
- <dd>A comma-separated list of extensions to request (or agree to support). These should be selected from the <a href="https://www.iana.org/assignments/websocket/websocket.xml#extension-name">IANA WebSocket Extension Name Registry</a>. Extensions which take parameters do so using semicolon delineation.</dd>
-</dl>
+- `extensions`
+  - : A comma-separated list of extensions to request (or agree to support). These should be selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name). Extensions which take parameters do so using semicolon delineation.
 
-<p>For example:</p>
+For example:
 
-<pre>Sec-WebSocket-Extensions: superspeed, colormode; depth=16</pre>
+    Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
-<h4 id="HTTPHeader(Sec-WebSocket-Key)">{{HTTPHeader("Sec-WebSocket-Key")}}</h4>
+#### {{HTTPHeader("Sec-WebSocket-Key")}}
 
-<p>Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this <em>does not provide security</em>. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key simply confirms that "Yes, I really mean to open a WebSocket connection."</p>
+Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key simply confirms that "Yes, I really mean to open a WebSocket connection."
 
-<p>This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.</p>
+This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.
 
-<pre class="syntaxbox">Sec-WebSocket-Key: <em>key</em></pre>
+    Sec-WebSocket-Key: key
 
-<dl>
- <dt><code>key</code></dt>
- <dd>The key for this request to upgrade. The client adds this if it wishes to do so, and the server will include in the response a key of its own, which the client will validate before delivering the upgrade reponse to you.</dd>
-</dl>
+- `key`
+  - : The key for this request to upgrade. The client adds this if it wishes to do so, and the server will include in the response a key of its own, which the client will validate before delivering the upgrade reponse to you.
 
-<p>The server's response's <code>Sec-WebSocket-Accept</code> header will have a value computed based upon the specified <code>key</code>.</p>
+The server's response's `Sec-WebSocket-Accept` header will have a value computed based upon the specified `key`.
 
-<h4 id="HTTPHeader(Sec-WebSocket-Protocol)">{{HTTPHeader("Sec-WebSocket-Protocol")}}</h4>
+#### {{HTTPHeader("Sec-WebSocket-Protocol")}}
 
-<p>The <code>Sec-WebSocket-Protocol</code> header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a <code>Sec-WebSocket-Protocol</code> header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.</p>
+The `Sec-WebSocket-Protocol` header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a `Sec-WebSocket-Protocol` header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.
 
-<pre class="syntaxbox">Sec-WebSocket-Protocol: <em>subprotocols</em></pre>
+    Sec-WebSocket-Protocol: subprotocols
 
-<dl>
- <dt><code>subprotocols</code></dt>
- <dd>A comma-separated list of subprotocol names, in the order of preference. The subprotocols may be selected from the <a href="https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name">IANA WebSocket Subprotocol Name Registry</a> or may be a custom name jointly understood by the client and the server.</dd>
-</dl>
+- `subprotocols`
+  - : A comma-separated list of subprotocol names, in the order of preference. The subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be a custom name jointly understood by the client and the server.
 
-<h4 id="HTTPHeader(Sec-WebSocket-Version)">{{HTTPHeader("Sec-WebSocket-Version")}}</h4>
+#### {{HTTPHeader("Sec-WebSocket-Version")}}
 
-<h5 id="Encabezado_de_petición">Encabezado de petición</h5>
+##### Encabezado de petición
 
-<p>Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.</p>
+Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.
 
-<pre class="syntaxbox">Sec-WebSocket-Version: <em>version</em></pre>
+    Sec-WebSocket-Version: version
 
-<dl>
- <dt><code>version</code></dt>
- <dd>The WebSocket protocol version the client wishes to use when communicating with the server. This number should be the most recent version possible listed in the <a href="https://www.iana.org/assignments/websocket/websocket.xml#version-number">IANA WebSocket Version Number Registry</a>. The most recent final version of the WebSocket protocol is version 13.</dd>
-</dl>
+- `version`
+  - : The WebSocket protocol version the client wishes to use when communicating with the server. This number should be the most recent version possible listed in the [IANA WebSocket Version Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#version-number). The most recent final version of the WebSocket protocol is version 13.
 
-<h5 id="Encabezado_de_respuesta">Encabezado de respuesta</h5>
+##### Encabezado de respuesta
 
-<p>If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a <code>Sec-WebSocket-Version</code> header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no <code>Sec-WebSocket-Version</code> header is included in the response.</p>
+If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a `Sec-WebSocket-Version` header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no `Sec-WebSocket-Version` header is included in the response.
 
-<pre class="syntaxbox">Sec-WebSocket-Version: <em>supportedVersions</em></pre>
+    Sec-WebSocket-Version: supportedVersions
 
-<dl>
- <dt><code>supportedVersions</code></dt>
- <dd>A comma-delineated list of the WebSocket protocol versions supported by the server.</dd>
-</dl>
+- `supportedVersions`
+  - : A comma-delineated list of the WebSocket protocol versions supported by the server.
 
-<h3 id="Cabeceras_exclusivas_de_respuesta">Cabeceras exclusivas de respuesta</h3>
+### Cabeceras exclusivas de respuesta
 
-<p>The response from the server may include these.</p>
+The response from the server may include these.
 
-<h4 id="HTTPHeader(Sec-WebSocket-Accept)">{{HTTPHeader("Sec-WebSocket-Accept")}}</h4>
+#### {{HTTPHeader("Sec-WebSocket-Accept")}}
 
-<p>Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the repsonse headers.</p>
+Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the repsonse headers.
 
-<pre class="syntaxbox">Sec-WebSocket-Accept: <em>hash</em></pre>
+    Sec-WebSocket-Accept: hash
 
-<dl>
- <dt><code>hash</code></dt>
- <dd>If a <code>Sec-WebSocket-Key</code> header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> encoded to obtain the value of this property.</dd>
-</dl>
+- `hash`
+  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
 
-<h3 id="Mejora_a_HTTP_sobre_TLS_iniciada_por_el_cliente">Mejora a HTTP sobre TLS iniciada por el cliente</h3>
+### Mejora a HTTP sobre TLS iniciada por el cliente
 
-<p>You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http://" to "https://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.</p>
+You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http\://" to "https\://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
 
-<p>Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token <code>"TLS/1.0"</code>. If the switch is made successfully, the original request (which included <code>Upgrade</code>) is completed as normal, but on the TLS connection.</p>
+Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token `"TLS/1.0"`. If the switch is made successfully, the original request (which included `Upgrade`) is completed as normal, but on the TLS connection.
 
-<p>The request to TLS can be made either optionally or mandatorily.</p>
+The request to TLS can be made either optionally or mandatorily.
 
-<h4 id="Mejora_opcional">Mejora opcional</h4>
+#### Mejora opcional
 
-<p>To upgrade to TLS optionally (that is, allowing the connection to continue in cleartext if the upgrade to TLS fails), you simply use the <code>Upgrade</code> and {{HTTPHeader("Connection")}} headers as expected. For example, given the original request:</p>
+To upgrade to TLS optionally (that is, allowing the connection to continue in cleartext if the upgrade to TLS fails), you simply use the `Upgrade` and {{HTTPHeader("Connection")}} headers as expected. For example, given the original request:
 
-<pre>GET http://destination.server.ext/secretpage.html HTTP/1.1
-Host: destination.server.ext
-Upgrade: TLS/1.0
-Connection: Upgrade</pre>
+    GET http://destination.server.ext/secretpage.html HTTP/1.1
+    Host: destination.server.ext
+    Upgrade: TLS/1.0
+    Connection: Upgrade
 
-<p>If the server <em>does not</em> support TLS upgrade, or is unable to upgrade to TLS at the time, it responds with a standard HTTP/1.1 response, such as:</p>
+If the server _does not_ support TLS upgrade, or is unable to upgrade to TLS at the time, it responds with a standard HTTP/1.1 response, such as:
 
-<pre>HTTP/1.1 200 OK
-Date: Thu, 17 Aug 2017 21:07:44 GMT
-Server: Apache
-Last-Modified: Thu, 17 Aug 2017 08:30:15 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 31374
+    HTTP/1.1 200 OK
+    Date: Thu, 17 Aug 2017 21:07:44 GMT
+    Server: Apache
+    Last-Modified: Thu, 17 Aug 2017 08:30:15 GMT
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 31374
 
-&lt;html&gt;
-  ...
-&lt;/html&gt;
-</pre>
+    <html>
+      ...
+    </html>
 
-<p>If the server <em>does</em> support TLS upgrade and wishes to permit the upgrade, it responds with the <code>"101 Switching Protocols"</code> response code, like this:</p>
+If the server _does_ support TLS upgrade and wishes to permit the upgrade, it responds with the `"101 Switching Protocols"` response code, like this:
 
-<pre>HTTP/1.1 101 Switching Protocols
-Upgrade: TLS/1.0, HTTP/1.1</pre>
+    HTTP/1.1 101 Switching Protocols
+    Upgrade: TLS/1.0, HTTP/1.1
 
-<p>Once the TLS handshake is complete, the original request will be responded to as normal.</p>
+Once the TLS handshake is complete, the original request will be responded to as normal.
 
-<h4 id="Mejora_obligatoria">Mejora obligatoria</h4>
+#### Mejora obligatoria
 
-<p>To request a mandatory upgrade to TLS—that is, to upgrade and fail the connection if the upgrade is not successful—your first request must be an {{HTTPMethod("OPTIONS")}} request, like this:</p>
+To request a mandatory upgrade to TLS—that is, to upgrade and fail the connection if the upgrade is not successful—your first request must be an {{HTTPMethod("OPTIONS")}} request, like this:
 
-<pre>OPTIONS * HTTP/1.1
-Host: destination.server.ext
-Upgrade: TLS/1.0
-Connection: Upgrade</pre>
+    OPTIONS * HTTP/1.1
+    Host: destination.server.ext
+    Upgrade: TLS/1.0
+    Connection: Upgrade
 
-<p>If the upgrade to TLS succeeds, the server will respond with <code>"101 Switching Protocols"</code> as described in the previous section. If the upgrade fails, the HTTP/1.1 connection will fail.</p>
+If the upgrade to TLS succeeds, the server will respond with `"101 Switching Protocols"` as described in the previous section. If the upgrade fails, the HTTP/1.1 connection will fail.
 
-<h3 id="Mejora_a_TLS_iniciada_por_el_servidor">Mejora a TLS iniciada por el servidor</h3>
+### Mejora a TLS iniciada por el servidor
 
-<p>This works roughly the same way as a client-initiated upgrade; an optional upgrade is requested by adding the {{HTTPHeader("Upgrade")}} header to any message. A mandatory upgrade, though, works slightly differently, in that it requests the upgrade by replying to a message it receives with the {{HTTPStatus(426)}} status code, like this:</p>
+This works roughly the same way as a client-initiated upgrade; an optional upgrade is requested by adding the {{HTTPHeader("Upgrade")}} header to any message. A mandatory upgrade, though, works slightly differently, in that it requests the upgrade by replying to a message it receives with the {{HTTPStatus(426)}} status code, like this:
 
-<pre>HTTP/1.1 426 Upgrade Required
-Upgrade: TLS/1.1, HTTP/1.1
-Connection: Upgrade
+    HTTP/1.1 426 Upgrade Required
+    Upgrade: TLS/1.1, HTTP/1.1
+    Connection: Upgrade
 
-&lt;html&gt;
-... Human-readable HTML page describing why the upgrade is required
-    and what to do if this text is seen ...
-&lt;/html&gt;</pre>
+    <html>
+    ... Human-readable HTML page describing why the upgrade is required
+        and what to do if this text is seen ...
+    </html>
 
-<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under <a href="#client-initiated_upgrade_to_tls">Client-initiated upgrade to TLS</a>.</p>
+If the client receiving the `"426 Upgrade Required"` response is willing and able to upgrade to TLS, it should then start the same process covered above under [Client-initiated upgrade to TLS](#client-initiated_upgrade_to_tls).
 
-<h2 id="Referencias">Referencias</h2>
+## Referencias
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
- <li>Especificaciones y RFCs:
-  <ul>
-   <li>{{RFC(2616)}}</li>
-   <li>{{RFC(6455)}}</li>
-   <li>{{RFC(2817)}}</li>
-   <li>{{RFC(7540)}}</li>
-  </ul>
- </li>
-</ul>
+- [WebSocket API](/es/docs/Web/API/WebSocket)
+- [HTTP](/es/docs/Web/HTTP)
+- Especificaciones y RFCs:
+
+  - {{RFC(2616)}}
+  - {{RFC(6455)}}
+  - {{RFC(2817)}}
+  - {{RFC(7540)}}

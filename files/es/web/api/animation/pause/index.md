@@ -12,37 +12,35 @@ tags:
   - waapi
 translation_of: Web/API/Animation/pause
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>El método <code><strong>pause()</strong></code> de la interfaz {{domxref("Animation")}} de la  <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>, suspende la reproducción de la animación.</p>
+El método **`pause()`** de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">animation.pause();
-</pre>
+    animation.pause();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>None.</p>
+None.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>None.</p>
+None.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<dl>
- <dt>InvalidStateError</dt>
- <dd>La animación {{domxref ("Animation.currentTime", "currentTime")}} no está resuelta <code>unresolved</code> (por ejemplo, si nunca se ha reproducido o no se está reproduciendo actualmente) y el tiempo de finalización de la animación es infinito positivo.</dd>
-</dl>
+- InvalidStateError
+  - : La animación {{domxref ("Animation.currentTime", "currentTime")}} no está resuelta `unresolved` (por ejemplo, si nunca se ha reproducido o no se está reproduciendo actualmente) y el tiempo de finalización de la animación es infinito positivo.
 
-<p>Lanza un <code>InvalidStateError</code> si el {{domxref("Animation.currentTime", "currentTime")}} de la animación no está resuelto <code>unresolved</code> (tal vez no se haya iniciado la reproducción) y el fin de la animación es infinito positivo.</p>
+Lanza un `InvalidStateError` si el {{domxref("Animation.currentTime", "currentTime")}} de la animación no está resuelto `unresolved` (tal vez no se haya iniciado la reproducción) y el fin de la animación es infinito positivo.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p><code>Animation.pause()</code> es utilizado en varias ocasiones en el juego Alice in Web Animations API Land <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>, porque las animaciones creadas con el método {{domxref("Element.animate()")}} se inician de inmediato y deben ser detenidas manualmente para evitar esto:</p>
+`Animation.pause()` es utilizado en varias ocasiones en el juego Alice in Web Animations API Land [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), porque las animaciones creadas con el método {{domxref("Element.animate()")}} se inician de inmediato y deben ser detenidas manualmente para evitar esto:
 
-<pre class="brush: js">// animación de la magdalena que lentamente se está comiendo
+```js
+// animación de la magdalena que lentamente se está comiendo
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -55,11 +53,12 @@ var nommingCake = document.getElementById('eat-me_sprite').animate(
 
 // realmente solo debe funcionar al hacer click, así que se pausa inicialmente:
 nommingCake.pause();
-</pre>
+```
 
-<p>Adicionalmente, al restablecer:</p>
+Adicionalmente, al restablecer:
 
-<pre class="brush: js">// Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
+```js
+// Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
 var stopPlayingAlice = function() {
   aliceChange.pause();
   nommingCake.pause();
@@ -69,38 +68,23 @@ var stopPlayingAlice = function() {
 // Cuando el usuario suelte el cupcake o la botella, pause las animaciones.
 cake.addEventListener("mouseup", stopPlayingAlice, false);
 bottle.addEventListener("mouseup", stopPlayingAlice, false);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-pause', 'play()')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                               | Comentario |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{SpecName('Web Animations', '#dom-animation-pause', 'play()')}} | {{Spec2("Web Animations")}} |            |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<div>
-<p>{{Compat("api.Animation.pause")}}</p>
-</div>
+{{Compat("api.Animation.pause")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.</li>
- <li>{{domxref("Animation.pause()")}} para pausar una animación.</li>
- <li>{{domxref("Animation.reverse()")}} para reproducir una animación al revés.</li>
- <li>{{domxref("Animation.finish()")}} para finalizar una animación.</li>
- <li>{{domxref("Animation.cancel()")}} para cancelar una animación.</li>
-</ul>
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
+- {{domxref("Animation.pause()")}} para pausar una animación.
+- {{domxref("Animation.reverse()")}} para reproducir una animación al revés.
+- {{domxref("Animation.finish()")}} para finalizar una animación.
+- {{domxref("Animation.cancel()")}} para cancelar una animación.

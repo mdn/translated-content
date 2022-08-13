@@ -12,74 +12,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>keys()</strong></code> devuelve un nuevo objeto  <code><strong>Array Iterator</strong></code> que contiene las claves de índice con las que acceder a cada elemento en el array.</p>
+El método **`keys()`** devuelve un nuevo objeto **`Array Iterator`** que contiene las claves de índice con las que acceder a cada elemento en el array.
 
-<p>{{EmbedInteractiveExample("pages/js/array-keys.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>arr</var>.keys()</pre>
+    arr.keys()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Un nuevo objeto iterador {{jsxref("Array")}}.</p>
+Un nuevo objeto iterador {{jsxref("Array")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Uso_básico">Uso básico</h3>
+### Uso básico
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var iterator = arr.keys();
 
 console.log(iterator.next()); // { value: 0, done: false }
 console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="El_iterador_no_ignora_los_huecos">El iterador no ignora los huecos</h3>
+### El iterador no ignora los huecos
 
-<pre class="brush: js">var arr = ['a', , 'c'];
+```js
+var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>{{Compat("javascript.builtins.Array.keys")}}</div>
+{{Compat("javascript.builtins.Array.keys")}}
 
-<div id="compat-mobile"> </div>
+## Ver también
 
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li><a href="/es/docs/Web/JavaScript/Reference/Iteration_protocols">Protocolos de iteración</a></li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)

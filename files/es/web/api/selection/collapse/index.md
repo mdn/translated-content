@@ -5,46 +5,34 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/collapse
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Pliega la selección a un simple punto. El documento no es modificado. Si el contenido es enfocado y editable, el cursor parpadeará ahí.</p>
+Pliega la selección a un simple punto. El documento no es modificado. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.collapse(
-<i>parentNode</i>,
-<i>offset</i>);
-</pre>
+    sel.collapse(
+    parentNode,
+    offset);
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>parentNode</code></i>
- </dt>
- <dd>La localización del cursor estará dentro de este nodo.</dd>
-</dl>
+- _`parentNode`_
+  - : La localización del cursor estará dentro de este nodo.
 
-<dl>
- <dt>
- <i><code>offset</code></i>
- </dt>
- <dd>El cursor estará colocado éste número de caracteres desdel el comienzo del texto de
- <i><code>parentNode</code>'</i>
- s text.</dd>
-</dl>
+<!---->
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+- _`offset`_
+  - : El cursor estará colocado éste número de caracteres desdel el comienzo del texto de
+    _`parentNode`'_
+    s text.
 
-<pre class="eval">/* Colocar el cursor al principio del cuerpo de un documento HTML. */
-var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body,0);
-</pre>
+### Ejemplos
 
-<p> </p>
+    /* Colocar el cursor al principio del cuerpo de un documento HTML. */
+    var body = document.getElementsByTagName("body")[0];
+    window.getSelection().collapse(body,0);
 
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/collapse", "it": "it/DOM/Selection/collapse", "pl": "pl/DOM/Selection/collapse" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/collapse", "it": "it/DOM/Selection/collapse", "pl": "pl/DOM/Selection/collapse" } ) }}

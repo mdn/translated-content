@@ -3,72 +3,47 @@ title: border-left
 slug: Web/CSS/border-left
 translation_of: Web/CSS/border-left
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <code>borde_izquierdo</code> es una propiedad rápida para poner el ancho, estilo y color del borde izquierdo de un elemento. Esta propiedad puede ser usada para poner los valores de uno o mas de : {{ Cssxref("border-left-width") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-left-color") }}. Valores omitidos son puestos a su valor inicial.</p>
+El `borde_izquierdo` es una propiedad rápida para poner el ancho, estilo y color del borde izquierdo de un elemento. Esta propiedad puede ser usada para poner los valores de uno o mas de : {{ Cssxref("border-left-width") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-left-color") }}. Valores omitidos son puestos a su valor inicial.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">border-left: [<em>border-width</em> || <em>border-style</em> || <em>border-color</em> | <em>inherit</em>] ;
-</pre>
+    border-left: [border-width || border-style || border-color | inherit] ;
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>border-width</dt>
- <dd>See {{ Cssxref("border-width") }}.</dd>
- <dt>border-style </dt>
- <dd>See {{ Cssxref("border-style") }}.</dd>
- <dt>border-color </dt>
- <dd>See {{ Cssxref("border-color") }}.</dd>
-</dl>
+- border-width
+  - : See {{ Cssxref("border-width") }}.
+- border-style
+  - : See {{ Cssxref("border-style") }}.
+- border-color
+  - : See {{ Cssxref("border-color") }}.
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>element {</p>
+element {
 
-<pre class="eval">    border-left: 1px solid #000;
-</pre>
+        border-left: 1px solid #000;
 
-<p>}</p>
+}
 
-<h2 id="Notas" name="Notas">Notas</h2>
+## Notas
 
-<p>Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{ Cssxref("color") }}</p>
+Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{ Cssxref("color") }}
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Backgrounds', '#border-left', 'border-left') }}</td>
-   <td>{{ Spec2('CSS3 Backgrounds') }}</td>
-   <td>No direct changes, though the modification of values for the {{ cssxref("border-left-color") }} do apply to it.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#propdef-border-left', 'border-left') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>No significant changes</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#border-left', 'border-left') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                                   | Comment                                                                                                                   |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Backgrounds', '#border-left', 'border-left') }}         | {{ Spec2('CSS3 Backgrounds') }} | No direct changes, though the modification of values for the {{ cssxref("border-left-color") }} do apply to it. |
+| {{ SpecName('CSS2.1', 'box.html#propdef-border-left', 'border-left') }} | {{ Spec2('CSS2.1') }}             | No significant changes                                                                                                    |
+| {{ SpecName('CSS1', '#border-left', 'border-left') }}                         | {{ Spec2('CSS1') }}                 | Initial definition                                                                                                        |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.border-left")}}

@@ -3,60 +3,55 @@ title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>El método <strong><code>Element.getElementsByClassName()</code></strong> retorna una {{domxref("HTMLCollection")}} "viva" conteniendo todos los elementos hijos que tienen todos los nombres de clase dados. Cuando se llama en el objeto document, se realiza la búsqueda en el documento completo, incluyendo el nodo raíz.</p>
+El método **`Element.getElementsByClassName()`** retorna una {{domxref("HTMLCollection")}} "viva" conteniendo todos los elementos hijos que tienen todos los nombres de clase dados. Cuando se llama en el objeto document, se realiza la búsqueda en el documento completo, incluyendo el nodo raíz.
 
-<p>De forma similar, el método {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} actúa en todo el documento; retornará los elementos que sean descendientes del documento raiz especificado que tengan los nombres de clase dados.</p>
+De forma similar, el método {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} actúa en todo el documento; retornará los elementos que sean descendientes del documento raiz especificado que tengan los nombres de clase dados.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+    var elements = element.getElementsByClassName(names);
 
-<ul>
- <li><em><var>elements</var></em> es una {{ domxref("HTMLCollection") }} "viva" de los elementos encontrados.</li>
- <li><em><var>names</var></em> es una cadena representando la lista de nombres de clase que deben concordar; los nombres de clase está separados por espacios en blanco.</li>
- <li><em>element</em> es cualquier {{domxref("Element")}} de un documento.</li>
-</ul>
+- **elements** es una {{ domxref("HTMLCollection") }} "viva" de los elementos encontrados.
+- **names** es una cadena representando la lista de nombres de clase que deben concordar; los nombres de clase está separados por espacios en blanco.
+- _element_ es cualquier {{domxref("Element")}} de un documento.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Obtiene todos los elementos que tienen una clase <code>test</code>:</p>
+Obtiene todos los elementos que tienen una clase `test`:
 
-<pre class="brush: js">element.getElementsByClassName('test');</pre>
+```js
+element.getElementsByClassName('test');
+```
 
-<p>Obtiene todos los elementos que tienen tanto la clase <code>red</code> como <code>test</code>:</p>
+Obtiene todos los elementos que tienen tanto la clase `red` como `test`:
 
-<pre class="brush: js">element.getElementsByClassName('red test');</pre>
+```js
+element.getElementsByClassName('red test');
+```
 
-<p>Obtiene todos los elementos que tienen la clase of <code>test</code>, dentro de un elemento que tiene el <code>id</code> <code>main</code>:</p>
+Obtiene todos los elementos que tienen la clase of `test`, dentro de un elemento que tiene el `id` `main`:
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+```js
+document.getElementById('main').getElementsByClassName('test');
+```
 
-<p>Podemos también usar métodos de  {{jsxref("Array.prototype")}} en cualquier {{ domxref("HTMLCollection") }} pasando <code><var>el HTMLCollection</var></code> como el valor <var>this</var> del método. Aquí encontramos todos los elementos {{HTMLElement("div")}} que tienen una clase <code>test</code>:</p>
+Podemos también usar métodos de {{jsxref("Array.prototype")}} en cualquier {{ domxref("HTMLCollection") }} pasando `el HTMLCollection` como el valor _this_ del método. Aquí encontramos todos los elementos {{HTMLElement("div")}} que tienen una clase `test`:
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'div';
-});</pre>
+});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observaciones</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                           | Estado                           | Observaciones      |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Definición inicial |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.Element.getElementsByClassName")}}

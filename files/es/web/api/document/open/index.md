@@ -4,107 +4,85 @@ slug: Web/API/Document/open
 translation_of: Web/API/Document/open
 original_slug: Web/API/Document/abrir
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>El método <strong><code>Document.open()</code></strong> abre un documento para escritura (<a href="/en-US/docs/Web/API/Document/write" title="en/DOM/document.write">writing</a>)</p>
+El método **`Document.open()`** abre un documento para escritura ([writing](/es/docs/Web/API/Document/write "en/DOM/document.write"))
 
-<p>Esto viene con algunos efectos secundarios. Por ejemplo:</p>
+Esto viene con algunos efectos secundarios. Por ejemplo:
 
-<ul>
- <li>Todos las atenciones de eventos actualmente registrados en el documento, los nodos dentro del documento o la ventana del documento son eliminados.</li>
- <li>Todos los nodos existentes se eliminan del documento.</li>
-</ul>
+- Todos las atenciones de eventos actualmente registrados en el documento, los nodos dentro del documento o la ventana del documento son eliminados.
+- Todos los nodos existentes se eliminan del documento.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">document.open();
-</pre>
+    document.open();
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Una instancia del objeto Document (<code>Document)</code>.</p>
+Una instancia del objeto Document (`Document)`.
 
-<h2 id="Example" name="Example">Ejemplos</h2>
+## Ejemplos
 
-<p>El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.</p>
+El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.
 
-<pre class="notranslate">document.open();
-document.write("&lt;p&gt;Hola mundo!&lt;/p&gt;");
-document.write("&lt;p&gt;Soy un pez&lt;/p&gt;");
-document.write("&lt;p&gt;El numero es 42&lt;/p&gt;");
-document.close();</pre>
+    document.open();
+    document.write("<p>Hola mundo!</p>");
+    document.write("<p>Soy un pez</p>");
+    document.write("<p>El numero es 42</p>");
+    document.close();
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<div class="blockIndicator note">
-<p>Traducción pendiente para el texto que sigue</p>
-</div>
+> **Nota:** Traducción pendiente para el texto que sigue
 
-<p>An automatic <code>document.open()</code> call happens when {{domxref("document.write()")}} is called after the page has loaded.</p>
+An automatic `document.open()` call happens when {{domxref("document.write()")}} is called after the page has loaded.
 
-<p>For years Firefox and Internet Explorer additionally erased all JavaScript variables, etc., in addition to removing all nodes. This is no longer the case.<span class="comment">document non-spec'ed parameters to document.open</span></p>
+For years Firefox and Internet Explorer additionally erased all JavaScript variables, etc., in addition to removing all nodes. This is no longer the case.document non-spec'ed parameters to document.open
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<p>Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.</p>
+Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.
 
-<p>Starting with Gecko 1.9.2, <code>document.open()</code> uses the <a href="/docs/Security_check_basics">principal</a> of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using <a class="internal" href="/en/wrappedJSObject"><code>wrappedJSObject</code></a>. See <a href="/en/Security_check_basics" title="en/Security check basics">Security check basics</a> for more about principals.</p>
+Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics "en/Security check basics") for more about principals.
 
-<h2 id="Example" name="Example">Three-argument document.open()</h2>
+## Three-argument document.open()
 
-<p>There is a lesser-known and little-used three-argument version of <code>document.open()</code> , which is an alias of {{domxref("Window.open()")}} (see its page for full details).</p>
+There is a lesser-known and little-used three-argument version of `document.open()` , which is an alias of {{domxref("Window.open()")}} (see its page for full details).
 
-<p>This call, for example opens github.com in a new window, with its opener set to <code>null</code>:</p>
+This call, for example opens github.com in a new window, with its opener set to `null`:
 
-<pre class="brush: js notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">open</span>(<span class="cm-string">'https://www.github.com'</span>,<span class="cm-string">''</span>, <span class="cm-string">'noopener=true'</span>)</span></span></span></pre>
+```js
+document.open('https://www.github.com','', 'noopener=true')
+```
 
-<h2 id="Two-argument_document.open"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Two-argument document.open()</span></span></span></h2>
+## Two-argument document.open()
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Browsers used to support a two-argument <code>document.open()</code>, with the following signature:</span></span></span></p>
+Browsers used to support a two-argument `document.open()`, with the following signature:
 
-<pre class="brush: js notranslate">document.open(<em>type</em>, <em>replace</em>)</pre>
+```js
+document.open(type, replace)
+```
 
-<p>Where <code>type</code> specified the MIME type of the data you are writing (e.g. <code>text/html</code>) and replace if set (i.e. a string of <code>"replace"</code>) specified that the history entry for the new document would replace the current history entry of the document being written to.</p>
+Where `type` specified the MIME type of the data you are writing (e.g. `text/html`) and replace if set (i.e. a string of `"replace"`) specified that the history entry for the new document would replace the current history entry of the document being written to.
 
-<p>This form is now obsolete; it won't throw an error, but instead just forwards to <code>document.open()</code> (i.e. is the equivalent of just running it with no arguments).  The history-replacement behavior now always happens.</p>
+This form is now obsolete; it won't throw an error, but instead just forwards to `document.open()` (i.e. is the equivalent of just running it with no arguments). The history-replacement behavior now always happens.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |         |
+| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Document.open")}}
 
+## See also
 
-<p>{{Compat("api.Document.open")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Document")}}</li>
- <li>{{domxref("Window.open()")}}</li>
-</ul>
+- {{domxref("Document")}}
+- {{domxref("Window.open()")}}

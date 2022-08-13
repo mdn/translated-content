@@ -4,71 +4,47 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getUTCFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>getUTCFullYear()</code></strong> devuelve el año en la fecha especificada en tiempo universal.</p>
+El método **`getUTCFullYear()`** devuelve el año en la fecha especificada en tiempo universal.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>objectoFecha</var>.getUTCFullYear()</code></pre>
+    objectoFecha.getUTCFullYear()
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un número que representa el año en la fecha representada por el <code><var>objectoFecha</var></code> en tiempo universal.</p>
+Un número que representa el año en la fecha representada por el `objectoFecha` en tiempo universal.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El valor devuelto por <code>getUTCFullYear()</code> es un número que no está afectado por  el efecto año 2000, por ejemplo, 1995.</p>
+El valor devuelto por `getUTCFullYear()` es un número que no está afectado por el efecto año 2000, por ejemplo, 1995.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Empleo_de_getUTCFullYear()">Empleo de <code>getUTCFullYear()</code></h3>
+### Empleo de `getUTCFullYear()`
 
-<p>El siguiente ejemplo asigna el valor de cuatro digitos del año actual a la variable <code>year</code>.</p>
+El siguiente ejemplo asigna el valor de cuatro digitos del año actual a la variable `year`.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var year = today.getUTCFullYear();
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementada en JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                               | Estado                       | Comentario                                          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Date.getUTCFullYear")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

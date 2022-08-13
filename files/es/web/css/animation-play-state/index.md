@@ -3,21 +3,22 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 translation_of: Web/CSS/animation-play-state
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>animation-play-state</code></strong> determina si una animación está en ejecución o en pausa. Puede ser consultada para determinar si la animación se está ejecutando. Además, su valor se puede establecer para pausar y reanudar una animación.</p>
+La propiedad [CSS](/es/docs/CSS "CSS") **`animation-play-state`** determina si una animación está en ejecución o en pausa. Puede ser consultada para determinar si la animación se está ejecutando. Además, su valor se puede establecer para pausar y reanudar una animación.
 
-<p>Reanudando una animación pausada, ésta empezará en el punto en el que fue pausada, en vez de empezar desde el principio.</p>
+Reanudando una animación pausada, ésta empezará en el punto en el que fue pausada, en vez de empezar desde el principio.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css">/* Single animation */
+```css
+/* Single animation */
 animation-play-state: running;
 animation-play-state: paused;
 
@@ -28,54 +29,36 @@ animation-play-state: paused, running, running;
 animation-play-state: inherited;
 animation-play-state: initial;
 animation-play-state: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>running</code></dt>
- <dd>La animación se está ejecutando.</dd>
- <dt><code>paused</code></dt>
- <dd>La animación está pausada.</dd>
-</dl>
+- `running`
+  - : La animación se está ejecutando.
+- `paused`
+  - : La animación está pausada.
 
-<h3 id="Syntax_formal">Syntax formal</h3>
+### Syntax formal
 
-<pre class="syntaxbox"><code>{{csssyntax}}</code>
-</pre>
+    {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Visita <a href="https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS" title="en/CSS/CSS_animations">animaciones CSS</a> para ver algunos ejemplos.</p>
+Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-play-state', 'animation-play-state')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Definición incial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                               | Comentario        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| {{SpecName('CSS3 Animations', '#animation-play-state', 'animation-play-state')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
 {{Compat("css.properties.animation-play-state")}}
 
-<h2 id="sect2"> </h2>
+##
 
-<h2 id="Consulte_también">Consulte también</h2>
+## Consulte también
 
-<ul>
- <li><a href="/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Usando animaciones CSS</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- {{domxref("AnimationEvent", "AnimationEvent")}}

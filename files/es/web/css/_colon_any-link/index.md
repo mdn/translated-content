@@ -1,6 +1,6 @@
 ---
 title: ':any-link'
-slug: 'Web/CSS/:any-link'
+slug: Web/CSS/:any-link
 tags:
   - CSS
   - Diseño
@@ -9,34 +9,35 @@ tags:
   - Pseudo-Clase CSS
   - Referencia
   - Web
-translation_of: 'Web/CSS/:any-link'
+translation_of: Web/CSS/:any-link
 ---
-<div>{{CSSRef}} {{SeeCompatTable}}</div>
+{{CSSRef}} {{SeeCompatTable}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:any-link` de [CSS](/es/docs/Web/CSS) representa a un elemento que actúa como el ancla origen de un hipervínculo independientemente de si ha sido visitado, es decir, coincide con cualquier elemento {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un atributo `href`. Por lo tanto, coincide con todos los elementos que coincidan con {{cssxref(":link")}} o {{cssxref(":visited")}}.
 
-<div>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code>:any-link</code> de <a href="/es/docs/Web/CSS">CSS</a> representa a un elemento que actúa como el ancla origen de un hipervínculo independientemente de si ha sido visitado, es decir, coincide con cualquier elemento {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un atributo <code>href</code>. Por lo tanto, coincide con todos los elementos que coincidan con {{cssxref(":link")}} o {{cssxref(":visited")}}.</div>
-
-
-
-<pre class="brush: css"><code>/* Selecciona cualquier elemento que coincida con :link o :visited */
+```css
+/* Selecciona cualquier elemento que coincida con :link o :visited */
 :any-link {
   color: green;
-}</code></pre>
+}
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="https://example.com"&gt;Enlace externo&lt;/a&gt;&lt;br&gt;
-&lt;a href="#"&gt;Enlace de destino interno&lt;/a&gt;&lt;br&gt;
-&lt;a&gt;Enlace de marcador de posición (no se personalizará)&lt;/a&gt;</pre>
+```html
+<a href="https://example.com">Enlace externo</a><br>
+<a href="#">Enlace de destino interno</a><br>
+<a>Enlace de marcador de posición (no se personalizará)</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a:any-link {
+```css
+a:any-link {
   border: 1px solid blue;
   color: orange;
 }
@@ -45,33 +46,19 @@ translation_of: 'Web/CSS/:any-link'
 a:-webkit-any-link {
   border: 1px solid blue;
   color: orange;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo')}}</p>
+{{EmbedLiveSample('Ejemplo')}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-any-link-pseudo", ":any-link")}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                               | Comentarios         |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS4 Selectors", "#the-any-link-pseudo", ":any-link")}} | {{Spec2('CSS4 Selectors')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.selectors.any-link")}}</p>
-
-<div id="compat-mobile"></div>
+{{Compat("css.selectors.any-link")}}

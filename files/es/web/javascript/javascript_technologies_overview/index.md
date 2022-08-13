@@ -4,85 +4,79 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 original_slug: Web/JavaScript/Descripción_de_las_tecnologías_JavaScript
 ---
-<div>{{JsSidebar("Introductory")}}</div>
+{{JsSidebar("Introductory")}}
 
-<h2 id="Introducción">Introducción</h2>
+## Introducción
 
-<p>Mientras que HTML define la estructura y el contenido de una página web y el CSS define el formato y la apariencia, JavaScript agrega interactividad a una página web y crea aplicaciones web enriquecidas.</p>
+Mientras que HTML define la estructura y el contenido de una página web y el CSS define el formato y la apariencia, JavaScript agrega interactividad a una página web y crea aplicaciones web enriquecidas.
 
-<p>Sin embargo, el término paraguas "JavaScript", tal como se entiende en un contexto de navegador web, contiene varios elementos muy diferentes. Uno de ellos es el lenguaje principal (ECMAScript), otro es la colección de las APIs Web, incluyendo el DOM (Document Object Model).</p>
+Sin embargo, el término paraguas "JavaScript", tal como se entiende en un contexto de navegador web, contiene varios elementos muy diferentes. Uno de ellos es el lenguaje principal (ECMAScript), otro es la colección de las APIs Web, incluyendo el DOM (Document Object Model).
 
-<h2 id="JavaScript_el_núcleo_del_lenguaje_ECMAScript">JavaScript, el núcleo del lenguaje (ECMAScript)</h2>
+## JavaScript, el núcleo del lenguaje (ECMAScript)
 
-<p>EL núcleo del lenguaje JavaScript está estandarizado por el Comité ECMA TC39 como un lenguaje llamado <a href="/en-US/docs/JavaScript/Language_Resources">ECMAScript</a>. La última versión de la especificación es <a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript 6.0</a>.</p>
+EL núcleo del lenguaje JavaScript está estandarizado por el Comité ECMA TC39 como un lenguaje llamado [ECMAScript](/es/docs/JavaScript/Language_Resources). La última versión de la especificación es [ECMAScript 6.0](http://www.ecma-international.org/ecma-262/6.0/).
 
-<p>Éste núcleo del lenguaje es también usado en ambientes No-Navegadores, por ejemplo en <a href="http://nodejs.org/">node.js</a>.</p>
+Éste núcleo del lenguaje es también usado en ambientes No-Navegadores, por ejemplo en [node.js](http://nodejs.org/).
 
-<h3 id="Qué_considera_ECMAScript_scope">Qué considera ECMAScript scope?</h3>
+### Qué considera ECMAScript scope?
 
-<p>Entre otras cosas, ECMAScript define:</p>
+Entre otras cosas, ECMAScript define:
 
-<ul>
- <li>Sintaxis (reglas de análisis, palabras clave, flujos de control, inicialización literal de objetos...).</li>
- <li>Mecanismos de control de errores (throw, try/catch, habilidad para crear tipos de Errores definidos por el usuario).</li>
- <li>Tipos (boolean, number, string, function, object...).</li>
- <li>Los objetos globales. En un navegador, estos objetos globales son los objetos de la ventana, pero ECMAScript solo define APIs no especificas para navegadores, ej. <code>parseInt</code>, <code>parseFloat</code>, <code>decodeURI</code>, <code>encodeURI</code>...</li>
- <li>Mecanismo de herencia basada en prototipos.</li>
- <li>Objetos y funciones incorporadas (<code>JSON</code>, <code>Math</code>, <code>Array.prototype</code> methods, Object introspection methods...)</li>
- <li>Modo estricto.</li>
-</ul>
+- Sintaxis (reglas de análisis, palabras clave, flujos de control, inicialización literal de objetos...).
+- Mecanismos de control de errores (throw, try/catch, habilidad para crear tipos de Errores definidos por el usuario).
+- Tipos (boolean, number, string, function, object...).
+- Los objetos globales. En un navegador, estos objetos globales son los objetos de la ventana, pero ECMAScript solo define APIs no especificas para navegadores, ej. `parseInt`, `parseFloat`, `decodeURI`, `encodeURI`...
+- Mecanismo de herencia basada en prototipos.
+- Objetos y funciones incorporadas (`JSON`, `Math`, `Array.prototype` methods, Object introspection methods...)
+- Modo estricto.
 
-<h3 id="Navegadores_soportados">Navegadores soportados</h3>
+### Navegadores soportados
 
-<p>A partir de Octubre del 2016, la gran mayoria de los navegadores soportan <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5.1</a> y <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015 aka ES6</a>, pero versiones antiguas (aún en uso) implementan ECMAScript 5 solamente.</p>
+A partir de Octubre del 2016, la gran mayoria de los navegadores soportan [ECMAScript 5.1](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) y [ECMAScript 2015 aka ES6](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla), pero versiones antiguas (aún en uso) implementan ECMAScript 5 solamente.
 
-<h3 id="Futuro">Futuro</h3>
+### Futuro
 
-<p>La 6ta edición principal de ECMAScript fue oficialmente aprobada y publicada como un estándar el 17 de Junio del 2015 por la ECMA General Assembly. Desde entonces las ediciones de ECMAScript son publicadas anualmente.</p>
+La 6ta edición principal de ECMAScript fue oficialmente aprobada y publicada como un estándar el 17 de Junio del 2015 por la ECMA General Assembly. Desde entonces las ediciones de ECMAScript son publicadas anualmente.
 
-<h3 id="Internacionalización_de_la_API">Internacionalización de la API</h3>
+### Internacionalización de la API
 
-<p>La <a href="http://ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API Specification</a> es una adición para la especificación del lenguaje ECMAScript, también estandarizada por Ecma TC39. La internacionalización de la API provee intercalación --collation-- (comparación de string), formateo de números, y fomateo de fechas/tiempo para aplicaciones JavaScript, permitiendo que las aplicaciones elijan el idioma y adapten la funcionalidad a sus necesidades. El estandar inicial fue aprobado en Diciembre del 2012; el estado de la implementación en navegadores es rastreado en la documentación de la <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Intl"><code>Intl</code> object</a>. Las especificaciones de la internacionalización son actualmente ratificadas cada año y los navegadores constantemente mejoran su implementación.</p>
+La [ECMAScript Internationalization API Specification](http://ecma-international.org/ecma-402/1.0/) es una adición para la especificación del lenguaje ECMAScript, también estandarizada por Ecma TC39. La internacionalización de la API provee intercalación --collation-- (comparación de string), formateo de números, y fomateo de fechas/tiempo para aplicaciones JavaScript, permitiendo que las aplicaciones elijan el idioma y adapten la funcionalidad a sus necesidades. El estandar inicial fue aprobado en Diciembre del 2012; el estado de la implementación en navegadores es rastreado en la documentación de la [`Intl` object](/es/docs/JavaScript/Reference/Global_Objects/Intl). Las especificaciones de la internacionalización son actualmente ratificadas cada año y los navegadores constantemente mejoran su implementación.
 
-<h2 id="DOM_APIs">DOM APIs</h2>
+## DOM APIs
 
-<h3 id="WebIDL">WebIDL</h3>
+### WebIDL
 
-<p>Las especificaciones de la <a href="http://www.w3.org/TR/WebIDL/">WebIDL</a> proporcionan el vínculo de las tecnologías DOM y ECMAScript.</p>
+Las especificaciones de la [WebIDL](http://www.w3.org/TR/WebIDL/) proporcionan el vínculo de las tecnologías DOM y ECMAScript.
 
-<h3 id="El_núcleo_del_DOM">El núcleo del DOM</h3>
+### El núcleo del DOM
 
-<p>El Document Object Model (DOM) es una <strong>convención multiplataforma e independiente</strong> del lenguaje para representar e interactuar con objetos en documentos HTML, XHTML y XML. Los objetos en el <strong>árbol DOM</strong> se pueden abordar y manipular mediante el uso de métodos en los objetos de otras tecnologías. El {{Glossary("W3C")}} estandariza el Modelo de Objetos del Documento Central, que define interfaces independientes del lenguaje que abstraen documentos HTML y XML como objetos, y también define mecanismos para manipular esta abstracción. Entre las cosas definidas por el DOM, podemos encontrar:</p>
+El Document Object Model (DOM) es una **convención multiplataforma e independiente** del lenguaje para representar e interactuar con objetos en documentos HTML, XHTML y XML. Los objetos en el **árbol DOM** se pueden abordar y manipular mediante el uso de métodos en los objetos de otras tecnologías. El {{Glossary("W3C")}} estandariza el Modelo de Objetos del Documento Central, que define interfaces independientes del lenguaje que abstraen documentos HTML y XML como objetos, y también define mecanismos para manipular esta abstracción. Entre las cosas definidas por el DOM, podemos encontrar:
 
-<ul>
- <li>La estructura del documento, un modelo de árbol, y la arquitectura de eventos DOM en el nucleo del DOM: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
- <li>Una definición menos rigurosa de la arquitectura de eventos DOM, así como eventos específicos en eventos DOM.</li>
- <li>Otras cosas como DOM Traversal y el DOM Range.</li>
-</ul>
+- La estructura del documento, un modelo de árbol, y la arquitectura de eventos DOM en el nucleo del DOM: `Node`, `Element`, `DocumentFragment`, `Document`, `DOMImplementation`, `Event`, `EventTarget`, …
+- Una definición menos rigurosa de la arquitectura de eventos DOM, así como eventos específicos en eventos DOM.
+- Otras cosas como DOM Traversal y el DOM Range.
 
-<p>Desde el punto de vista ECMAScript, los objetos definidos en la especificación DOM se denominan "objetos host".</p>
+Desde el punto de vista ECMAScript, los objetos definidos en la especificación DOM se denominan "objetos host".
 
-<h3 id="HTML_DOM">HTML DOM</h3>
+### HTML DOM
 
-<p>HTML, el lenguaje de marcado de la Web, se especifica en términos del DOM. Por encima de los conceptos abstractos definidos en DOM Core, HTML también define el significado de los elementos. El DOM HTML incluye cosas como el <code>className</code> propiedad en elementos HTML o API como {{domxref ("document.body")}}.</p>
+HTML, el lenguaje de marcado de la Web, se especifica en términos del DOM. Por encima de los conceptos abstractos definidos en DOM Core, HTML también define el significado de los elementos. El DOM HTML incluye cosas como el `className` propiedad en elementos HTML o API como {{domxref ("document.body")}}.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La especificación HTML también define restricciones en los documentos;</span> <span title="">por ejemplo, requiere que todos los elementos secundarios de un elemento</span></span> <code>ul</code> <span class="tlid-translation translation" lang="es"><span title="">que representa una lista desordenada, sean elementos</span></span> <code>li</code>, <span class="tlid-translation translation" lang="es"><span title="">ya que representan elementos de la lista.</span> <span title="">En general, también prohíbe el uso de elementos y atributos que no están definidos en un estándar.</span></span></p>
+La especificación HTML también define restricciones en los documentos; por ejemplo, requiere que todos los elementos secundarios de un elemento `ul` que representa una lista desordenada, sean elementos `li`, ya que representan elementos de la lista. En general, también prohíbe el uso de elementos y atributos que no están definidos en un estándar.
 
-<p>¿Busca <a href="/en-US/docs/DOM/document"><code>Document</code> object</a>, <a href="/en-US/docs/DOM/window"><code>Window</code> object</a>, <span class="tlid-translation translation" lang="es"><span title="">y los otros elementos DOM?</span></span> ? Lee la documentación <a href="/en-US/docs/Web/API/Document_Object_Model">DOM documentation</a>.</p>
+¿Busca [`Document` object](/es/docs/DOM/document), [`Window` object](/es/docs/DOM/window), y los otros elementos DOM? ? Lee la documentación [DOM documentation](/es/docs/Web/API/Document_Object_Model).
 
-<h2 id="Otras_API_notables"><span class="tlid-translation translation" lang="es"><span title="">Otras API notables</span></span></h2>
+## Otras API notables
 
-<ul>
- <li>Las funciones <code>setTimeout</code> <code>ysetInterval</code> <span class="tlid-translation translation" lang="es"><span title="">se especificaron por primera vez en la interfaz de</span></span> <code><a href="http://www.whatwg.org/html/#window">Window</a></code> <span class="tlid-translation translation" lang="es"><span title="">en HTML Standard.</span></span></li>
- <li><a href="https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest</a> <span class="tlid-translation translation" lang="es"><span title="">hace posible enviar solicitudes HTTP asincrónicas.</span></span></li>
- <li>EL <a href="http://dev.w3.org/csswg/cssom/">Modelo de Objetos CSS</a> <span class="tlid-translation translation" lang="es"><span title="">esume las reglas CSS como objetos.</span></span></li>
- <li><a href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers </a>permite el cálculo paralelo.</li>
- <li><a href="http://www.whatwg.org/C/#network">WebSockets</a> <span class="tlid-translation translation" lang="es"><span title="">permite la comunicación bidireccional de bajo nivel.</span></span></li>
- <li><a href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> <span class="tlid-translation translation" lang="es"><span title="">es una API de dibujo para</span></span> {{htmlelement("canvas")}}.</li>
-</ul>
+- Las funciones `setTimeout` `ysetInterval` se especificaron por primera vez en la interfaz de [`Window`](http://www.whatwg.org/html/#window) en HTML Standard.
+- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) hace posible enviar solicitudes HTTP asincrónicas.
+- EL [Modelo de Objetos CSS](http://dev.w3.org/csswg/cssom/) esume las reglas CSS como objetos.
+- [WebWorkers ](http://www.whatwg.org/specs/web-workers/current-work/)permite el cálculo paralelo.
+- [WebSockets](http://www.whatwg.org/C/#network) permite la comunicación bidireccional de bajo nivel.
+- [Canvas 2D Context](http://www.whatwg.org/html/#2dcontext) es una API de dibujo para {{htmlelement("canvas")}}.
 
-<h3 id="Soporte_del_navegador">Soporte del navegador</h3>
+### Soporte del navegador
 
-<p><span class="tlid-translation translation" lang="es"><span title="">Como todos los desarrolladores web han experimentado</span></span>,  <a href="http://ejohn.org/blog/the-dom-is-a-mess/">el DOM es un desastre</a>. <span class="tlid-translation translation" lang="es"><span title="">La uniformidad del soporte del navegador varía mucho de una característica a otra, principalmente porque muchas características DOM importantes tienen especificaciones muy poco claras (si las hay), y diferentes navegadores web agregan características incompatibles para casos de uso superpuestos (como el modelo de evento de Internet Explorer).</span> <span title="">A partir de junio de 2011, el W3C y particularmente el WHATWG están definiendo características antiguas en detalle para mejorar la interoperabilidad, y los navegadores a su vez pueden mejorar sus implementaciones basadas en estas especificaciones.</span></span></p>
+Como todos los desarrolladores web han experimentado, [el DOM es un desastre](http://ejohn.org/blog/the-dom-is-a-mess/). La uniformidad del soporte del navegador varía mucho de una característica a otra, principalmente porque muchas características DOM importantes tienen especificaciones muy poco claras (si las hay), y diferentes navegadores web agregan características incompatibles para casos de uso superpuestos (como el modelo de evento de Internet Explorer). A partir de junio de 2011, el W3C y particularmente el WHATWG están definiendo características antiguas en detalle para mejorar la interoperabilidad, y los navegadores a su vez pueden mejorar sus implementaciones basadas en estas especificaciones.
 
-<p><span class="tlid-translation translation" lang="es"><span title="">Un enfoque común, aunque quizás no el más confiable, para la compatibilidad entre navegadores es usar bibliotecas de JavaScript, que resumen las funciones DOM y mantienen sus API funcionando igual en diferentes navegadores.</span> <span title="">Algunos de los frameworks más utilizados son</span></span> <a href="http://jquery.com/">jQuery</a>, <a href="http://www.prototypejs.org/">prototype</a>, y <a href="http://developer.yahoo.com/yui/">YUI</a>.</p>
+Un enfoque común, aunque quizás no el más confiable, para la compatibilidad entre navegadores es usar bibliotecas de JavaScript, que resumen las funciones DOM y mantienen sus API funcionando igual en diferentes navegadores. Algunos de los frameworks más utilizados son [jQuery](http://jquery.com/), [prototype](http://www.prototypejs.org/), y [YUI](http://developer.yahoo.com/yui/).

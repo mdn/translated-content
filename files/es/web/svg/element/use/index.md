@@ -8,69 +8,64 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/use
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>El elemento <code>use</code> toma los nodos que están dentro del documento SVG y duplica el contenido donde éste esté siendo utilizado. El efecto es el mismo, como si éstos nodos hubiesen sido profundamente clonados en un elemento DOM no expuesto, y luego pegados donde se encuentra el elemento <code>use</code>, al igual que los <a href="/en-US/docs/Web/HTML/Element/template">elementos plantilla</a> son clonados en HTML5. Desde que los elementos clonados no sean expuestos como DOM, su cuidado debe tomarse en cuenta durante el uso de <a href="/en/CSS" title="en/CSS">CSS</a> para estilizar un elemento <code>use</code> y sus descendientes ocultos. Los atributos CSS no ofrecen la garantía de heredarse en los elementos DOM clonados y escondidos, a no ser que lo realice utilizando <a href="/en/CSS/inheritance" title="en/CSS/inheritance">herencia CSS</a>.</p>
+El elemento `use` toma los nodos que están dentro del documento SVG y duplica el contenido donde éste esté siendo utilizado. El efecto es el mismo, como si éstos nodos hubiesen sido profundamente clonados en un elemento DOM no expuesto, y luego pegados donde se encuentra el elemento `use`, al igual que los [elementos plantilla](/es/docs/Web/HTML/Element/template) son clonados en HTML5. Desde que los elementos clonados no sean expuestos como DOM, su cuidado debe tomarse en cuenta durante el uso de [CSS](/en/CSS "en/CSS") para estilizar un elemento `use` y sus descendientes ocultos. Los atributos CSS no ofrecen la garantía de heredarse en los elementos DOM clonados y escondidos, a no ser que lo realice utilizando [herencia CSS](/en/CSS/inheritance "en/CSS/inheritance").
 
-<p>Por razones de seguridad, algunos navegadores podrían aplicar una política del mismo origen sobre los elementos <code>use</code> y podrían negarse a cargar una URI de origen cruzado dentro del atributo <code>xlink:href</code>.</p>
+Por razones de seguridad, algunos navegadores podrían aplicar una política del mismo origen sobre los elementos `use` y podrían negarse a cargar una URI de origen cruzado dentro del atributo `xlink:href`.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: xml" id="Attributes">&lt;svg width="100%" height="100%" xmlns="<a href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a>" xmlns:xlink="<a href="http://www.w3.org/1999/xlink">http://www.w3.org/1999/xlink</a>"&gt;
-  &lt;style&gt;
+```xml
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
     .classA { fill:red }
-  &lt;/style&gt;
-  &lt;defs&gt;
-    &lt;g id="Port"&gt;
-      &lt;circle style="fill:inherit" r="10"/&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
+  </style>
+  <defs>
+    <g id="Port">
+      <circle style="fill:inherit" r="10"/>
+    </g>
+  </defs>
 
-  &lt;text y="15"&gt;black&lt;/text&gt;
-  &lt;use x="50" y="10" xlink:href="#Port" /&gt;
-  &lt;text y="35"&gt;red&lt;/text&gt;
-  &lt;use x="50" y="30" xlink:href="#Port" class="classA"/&gt;
-  &lt;text y="55"&gt;blue&lt;/text&gt;
-  &lt;use x="50" y="50" xlink:href="#Port" style="fill:blue"/&gt;
- &lt;/svg&gt;
-</pre>
+  <text y="15">black</text>
+  <use x="50" y="10" xlink:href="#Port" />
+  <text y="35">red</text>
+  <use x="50" y="30" xlink:href="#Port" class="classA"/>
+  <text y="55">blue</text>
+  <use x="50" y="50" xlink:href="#Port" style="fill:blue"/>
+ </svg>
+```
 
-<p> </p>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+### Atributos Globales
 
-<h3 id="Atributos_Globales">Atributos Globales</h3>
+- [Atributos de procesamiento condicional](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos núcleo](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de presentación](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos Xlink](/en/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de procesamiento condicional</a> »</li>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos núcleo</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de presentación</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos Xlink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+### Atributos específicos
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("xlink:href") }}
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+## Interfaz DOM
 
-<h2 id="Interfaz_DOM">Interfaz DOM</h2>
+Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement "en/DOM/SVGUseElement").
 
-<p>Este elemento implementa la interface <code><a href="/en/DOM/SVGUseElement" title="en/DOM/SVGUseElement">SVGUseElement</a></code>.</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
 {{Compat("svg.elements.use")}}

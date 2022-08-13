@@ -8,124 +8,115 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Los <strong><code>Uint8Array</code></strong> representan un array de enteros sin signo de 8 bits. El contenido se inicializa a 0. Una vez establecido, puedes hacer referencia a un elemento usando los métodos del objeto o usando la sintaxis de array estándar (esto es, usando la notación de corchetes).</p>
+Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El contenido se inicializa a 0. Una vez establecido, puedes hacer referencia a un elemento usando los métodos del objeto o usando la sintaxis de array estándar (esto es, usando la notación de corchetes).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">new Uint8Array(tamaño);
-new Uint8Array(typedArray);
-new Uint8Array(objeto);
-new Uint8Array(buffer [, byteOffset [, tamaño]]);</pre>
+    new Uint8Array(tamaño);
+    new Uint8Array(typedArray);
+    new Uint8Array(objeto);
+    new Uint8Array(buffer [, byteOffset [, tamaño]]);
 
-<p>Para más información acerca de la sintaxis del constructor y sus parámetros, mire <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
+Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>Retorna un número con el valor del tamaño del elemento. <code>1</code> en el caso del <code>Uint8Array</code>.</dd>
- <dt>Uint8Array.length</dt>
- <dd>Propiedad estática de tamaño cuyo valor es 3. Para el tamaño actual (número d elementos), mire {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.</dd>
- <dt>{{jsxref("TypedArray.name", "Uint8Array.name")}}</dt>
- <dd>Devuelve el nombre del constructor en un string. En el caso de <code>Uint8Array</code> devuelve: "Uint8Array".</dd>
- <dt>{{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}</dt>
- <dd>Prototipo para los objetos <em>TypedArray</em> .</dd>
-</dl>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+  - : Retorna un número con el valor del tamaño del elemento. `1` en el caso del `Uint8Array`.
+- Uint8Array.length
+  - : Propiedad estática de tamaño cuyo valor es 3. Para el tamaño actual (número d elementos), mire {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
+- {{jsxref("TypedArray.name", "Uint8Array.name")}}
+  - : Devuelve el nombre del constructor en un string. En el caso de `Uint8Array` devuelve: "Uint8Array".
+- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+  - : Prototipo para los objetos _TypedArray_ .
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{jsxref("TypedArray.from", "Uint8Array.from()")}}</dt>
- <dd>Crea un nuevo <code>Uint8Array</code> desde un array o un objeto iterable. Véase también {{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of", "Uint8Array.of()")}}</dt>
- <dd>Crea un  <code>Uint8Array con un número variable de argumentos</code>. Véase también {{jsxref("Array.of()")}}.</dd>
-</dl>
+- {{jsxref("TypedArray.from", "Uint8Array.from()")}}
+  - : Crea un nuevo `Uint8Array` desde un array o un objeto iterable. Véase también {{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of", "Uint8Array.of()")}}
+  - : Crea un `Uint8Array con un número variable de argumentos`. Véase también {{jsxref("Array.of()")}}.
 
-<h2 id="Uint8Array_prototype"><code>Uint8Array</code> prototype</h2>
+## `Uint8Array` prototype
 
-<p>Todos los objetos <code>Uint8Array</code> son heredados de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
 
-<h3 id="Propiedades_2">Propiedades</h3>
+### Propiedades
 
-<dl>
- <dt><code>Uint8Array.prototype.constructor</code></dt>
- <dd>Retorna la función que crea una instancia del prototype. Éste es el constructor por defecto de <code>Uint8Array</code>.</dd>
- <dt>{{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>Retorna el {{jsxref("ArrayBuffer")}} con la referencia del <code>Uint8Array. </code>Fijado en el tiempo de construcción y es de <strong>sólo lectura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>Retorna el tamaño (en bytes) del array <code>Uint8Array</code>. Fijado en el tiempo de construcción y es de <strong>sólo lectura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>Retorna el offset (en bytes) del <code>Uint8Array</code> desde el inicio de su  {{jsxref("ArrayBuffer")}}. Fijado en el tiempo de construcción y es de <strong>sólo lectura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>Retorna el número de elementos contenidos en el <code>Uint8Array</code>. Fijado en el tiempo de construcción y es de <strong>sólo lectura</strong>.</dd>
-</dl>
+- `Uint8Array.prototype.constructor`
+  - : Retorna la función que crea una instancia del prototype. Éste es el constructor por defecto de `Uint8Array`.
+- {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
+  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array. `Fijado en el tiempo de construcción y es de **sólo lectura**.
+- {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
+  - : Retorna el tamaño (en bytes) del array `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
+- {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}
+  - : Retorna el offset (en bytes) del `Uint8Array` desde el inicio de su {{jsxref("ArrayBuffer")}}. Fijado en el tiempo de construcción y es de **sólo lectura**.
+- {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}
+  - : Retorna el número de elementos contenidos en el `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 
-<h3 id="Métodos_2">Métodos</h3>
+### Métodos
 
-<dl>
- <dt>{{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}</dt>
- <dd>Copia una secuencia de elementos del array dentro del array. Véase también {{jsxref("Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}</dt>
- <dd>Retorna un nuevo objeto <code>Array Iterator</code> que contiene los pares de valores para cada índice del array. Véase también {{jsxref("Array.prototype.entries()")}}.</dd>
- <dt>{{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}</dt>
- <dd>Prueba si todos los elementos del array cumplen las condiciones de una función. Véase también {{jsxref("Array.prototype.every()")}}.</dd>
- <dt>{{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}</dt>
- <dd>Llena todos los elementos del array desde el principio hasta el final con un valor dado. Véase también {{jsxref("Array.prototype.fill()")}}.</dd>
- <dt>{{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}</dt>
- <dd>Crea un nuevo array con todos los elementos del array que satisfacen las condiciones de una función que devuelve verdadero. Véase también {{jsxref("Array.prototype.filter()")}}.</dd>
- <dt>{{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}</dt>
- <dd>Devuelve el valor encontrado en el array, si un elemento del array satisface una función dada de prueba o undefined si no es encontrada. Véase también {{jsxref("Array.prototype.find()")}}.</dd>
- <dt>{{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}</dt>
- <dd>Devuelve el índice encontrado en el array, si un elemento del array satisface una función dada de prueba o -1 si no es encontrada. Véase también {{jsxref("Array.prototype.findIndex()")}}.</dd>
- <dt>{{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}</dt>
- <dd>Llama a una función para cada elemento del array. Véase también {{jsxref("Array.prototype.forEach()")}}.</dd>
- <dt>{{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}} {{experimental_inline}}</dt>
- <dd>Determina si un <font face="consolas, Liberation Mono, courier, monospace">array</font> incluye un cierto elemento, retornando <code>true</code> o <code>false</code> según corresponda. Véase también {{jsxref("Array.prototype.includes()")}}.</dd>
- <dt>{{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}</dt>
- <dd>Devuelve el primer (menor) índice de un elemento dentro del array igual al valor especificado, o -1 si no es encontrado. Véase también {{jsxref("Array.prototype.indexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}</dt>
- <dd>Une todos los elementos de un array a una cadena.  Véase también {{jsxref("Array.prototype.join()")}}.</dd>
- <dt>{{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}</dt>
- <dd>Retorna un nuevo <code>Array Iterator</code> que contiene las claves para cada índice en el array. Véase también {{jsxref("Array.prototype.keys()")}}.</dd>
- <dt>{{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}</dt>
- <dd>Devuelve el último (mayor) índice de un elemento dentro del array igual al valor especificado, o -1 si no fue encontrado. Véase también {{jsxref("Array.prototype.lastIndexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}</dt>
- <dd>Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. Véase también {{jsxref("Array.prototype.map()")}}.</dd>
- <dt>{{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
- <dd>Primera versión no-estandar de {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}</dt>
- <dd>
- <p>Aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor. Véase también {{jsxref("Array.prototype.reduce()")}}.</p>
- </dd>
- <dt>{{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}</dt>
- <dd>Aplica una función a un acumulador y a cada valor de un array (de derecha a izquierda) para reducirlo a un único valor. Véase también {{jsxref("Array.prototype.reduceRight()")}}.</dd>
- <dt>{{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}</dt>
- <dd>Inverte el orden de los elementos de un array, el primero se convierte en el último y el último en el primero. See also {{jsxref("Array.prototype.reverse()")}}.</dd>
- <dt>{{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}</dt>
- <dd>Almacena múltiples valores en el array, leyendo los valores de entrada de un array específico.</dd>
- <dt>{{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}</dt>
- <dd>Extrae una porción de un array y devuelve uno nuevo. Véase también {{jsxref("Array.prototype.slice()")}}.</dd>
- <dt>{{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}</dt>
- <dd>Devuelve <code>true</code> si al menos un elemento de este array satisface la función de prueba proporcionada. Véase también {{jsxref("Array.prototype.some()")}}.</dd>
- <dt>{{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}</dt>
- <dd>Ordena los elementos de un array localmente y devuelve el array. Véase también {{jsxref("Array.prototype.sort()")}}.</dd>
- <dt>{{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}</dt>
- <dd>Retorna un nuevo <code>Uint8Array</code> desde el índice de elementos iniciales y finales proporcionados.</dd>
- <dt>{{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}</dt>
- <dd>Retorna un nuevo objeto <code>Array Iterator</code> que contiene los valores para cada índice en el array. Véase también {{jsxref("Array.prototype.values()")}}.</dd>
- <dt>{{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}</dt>
- <dd>Devuelve una cadena localizada que representa el array y sus elementos. Véase también {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
- <dt>{{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}</dt>
- <dd>Retorna una cadena representando el array sus elementos. Véase también {{jsxref("Array.prototype.toString()")}}.</dd>
- <dt>{{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}</dt>
- <dd>Retorna un nuevo objeto <code>Array Iterator</code> que contiene los valores para cada índice en el array.</dd>
-</dl>
+- {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}
+  - : Copia una secuencia de elementos del array dentro del array. Véase también {{jsxref("Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}
+  - : Retorna un nuevo objeto `Array Iterator` que contiene los pares de valores para cada índice del array. Véase también {{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}
+  - : Prueba si todos los elementos del array cumplen las condiciones de una función. Véase también {{jsxref("Array.prototype.every()")}}.
+- {{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}
+  - : Llena todos los elementos del array desde el principio hasta el final con un valor dado. Véase también {{jsxref("Array.prototype.fill()")}}.
+- {{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}
+  - : Crea un nuevo array con todos los elementos del array que satisfacen las condiciones de una función que devuelve verdadero. Véase también {{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}
+  - : Devuelve el valor encontrado en el array, si un elemento del array satisface una función dada de prueba o undefined si no es encontrada. Véase también {{jsxref("Array.prototype.find()")}}.
+- {{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}
+  - : Devuelve el índice encontrado en el array, si un elemento del array satisface una función dada de prueba o -1 si no es encontrada. Véase también {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}
+  - : Llama a una función para cada elemento del array. Véase también {{jsxref("Array.prototype.forEach()")}}.
+- {{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}} {{experimental_inline}}
+  - : Determina si un array incluye un cierto elemento, retornando `true` o `false` según corresponda. Véase también {{jsxref("Array.prototype.includes()")}}.
+- {{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}
+  - : Devuelve el primer (menor) índice de un elemento dentro del array igual al valor especificado, o -1 si no es encontrado. Véase también {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}
+  - : Une todos los elementos de un array a una cadena. Véase también {{jsxref("Array.prototype.join()")}}.
+- {{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}
+  - : Retorna un nuevo `Array Iterator` que contiene las claves para cada índice en el array. Véase también {{jsxref("Array.prototype.keys()")}}.
+- {{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}
+  - : Devuelve el último (mayor) índice de un elemento dentro del array igual al valor especificado, o -1 si no fue encontrado. Véase también {{jsxref("Array.prototype.lastIndexOf()")}}.
+- {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
+  - : Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. Véase también {{jsxref("Array.prototype.map()")}}.
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+  - : Primera versión no-estandar de {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
+  - : Aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor. Véase también {{jsxref("Array.prototype.reduce()")}}.
+- {{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}
+  - : Aplica una función a un acumulador y a cada valor de un array (de derecha a izquierda) para reducirlo a un único valor. Véase también {{jsxref("Array.prototype.reduceRight()")}}.
+- {{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}
+  - : Inverte el orden de los elementos de un array, el primero se convierte en el último y el último en el primero. See also {{jsxref("Array.prototype.reverse()")}}.
+- {{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}
+  - : Almacena múltiples valores en el array, leyendo los valores de entrada de un array específico.
+- {{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}
+  - : Extrae una porción de un array y devuelve uno nuevo. Véase también {{jsxref("Array.prototype.slice()")}}.
+- {{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}
+  - : Devuelve `true` si al menos un elemento de este array satisface la función de prueba proporcionada. Véase también {{jsxref("Array.prototype.some()")}}.
+- {{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}
+  - : Ordena los elementos de un array localmente y devuelve el array. Véase también {{jsxref("Array.prototype.sort()")}}.
+- {{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}
+  - : Retorna un nuevo `Uint8Array` desde el índice de elementos iniciales y finales proporcionados.
+- {{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}
+  - : Retorna un nuevo objeto `Array Iterator` que contiene los valores para cada índice en el array. Véase también {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}
+  - : Devuelve una cadena localizada que representa el array y sus elementos. Véase también {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
+  - : Retorna una cadena representando el array sus elementos. Véase también {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
+  - : Retorna un nuevo objeto `Array Iterator` que contiene los valores para cada índice en el array.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">// Desde una longitud
+```js
+// Desde una longitud
 var uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
@@ -144,53 +135,36 @@ console.log(y[0]); // 21
 // Desde un ArrayBuffer
 var buffer = new ArrayBuffer(8);
 var z = new Uint8Array(buffer, 1, 4);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Sustituida por ECMAScript 6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial en un ECMA standard. Se especificó que <code>new</code> es requirerido.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estatus                          | Comentario                                                                      |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Sustituida por ECMAScript 6.                                                    |
+| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definición inicial en un ECMA standard. Se especificó que `new` es requirerido. |
+| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                                 |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("javascript.builtins.Uint8Array")}}
 
-<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
+## Notas de compatibilidad
 
-<p>A partir de ECMAScript 2015 (ES6), los constructors de <code>Uint8Array</code> requiren ser construidos con un operador {{jsxref("Operators/new", "new")}}. Llamar a un contructor de <code>Uint8Array</code> como una función sin <code>new</code>, lanzará un {{jsxref("TypeError")}} de ahora en adelante.</p>
+A partir de ECMAScript 2015 (ES6), los constructors de `Uint8Array` requiren ser construidos con un operador {{jsxref("Operators/new", "new")}}. Llamar a un contructor de `Uint8Array` como una función sin `new`, lanzará un {{jsxref("TypeError")}} de ahora en adelante.
 
-<pre class="brush: js example-bad">var dv = Uint8Array([1, 2, 3]);
+```js example-bad
+var dv = Uint8Array([1, 2, 3]);
 // TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new Uint8Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Uint8Array([1, 2, 3]);
+```
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [JavaScript typed arrays](/es/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

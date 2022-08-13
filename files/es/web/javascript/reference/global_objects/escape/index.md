@@ -8,85 +8,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/escape
 original_slug: Web/JavaScript/Referencia/Objetos_globales/escape
 ---
-<div class="warning">{{Deprecated_header}} Advertencia <code>escape()</code> no esta estrictamente en desuso("eliminada por los estándares Web"), esta definida en  <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Anexo B</a> El estándar ECMA-262 , cuya introducción establece:
-<blockquote>… Todos las características especificas y comportamientos del lenguaje en este anexo tienen mas de una caracterísitca indeseable y en ausencia del legado sera eliminada de esta especificación. …<br>
-… Los programadores no deben usar o suponer la existencia de estas características y/o comportamientos al escribir nuevo código ECMAScript …</blockquote>
-</div>
+> **Advertencia:** {{Deprecated_header}} Advertencia `escape()` no esta estrictamente en desuso("eliminada por los estándares Web"), esta definida en [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) El estándar ECMA-262 , cuya introducción establece:> … Todos las características especificas y comportamientos del lenguaje en este anexo tienen mas de una caracterísitca indeseable y en ausencia del legado sera eliminada de esta especificación. …
+>
+> > … Los programadores no deben usar o suponer la existencia de estas características y/o comportamientos al escribir nuevo código ECMAScript …
 
+La función obsoleta **`escape()`** crea una nueva cadena de caracteres en los que ciertos caracteres han sido sustituidos por una secuencia hexadecimal de escape.
 
+## Sintaxis
 
-<p><span class="seoSummary">La función obsoleta <code><strong>escape()</strong></code> crea una nueva cadena de caracteres en los que ciertos caracteres han sido sustituidos por una secuencia hexadecimal de escape.</span></p>
+    escape(str)
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parametros
 
-<pre class="syntaxbox">escape(str)</pre>
+- `str`
+  - : Cadena a codificar.
 
-<h3 id="Parametros">Parametros</h3>
+### Devuelve
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Cadena a codificar.</dd>
-</dl>
+Una nueva cadena en la que ciertos caracteres han sido sustituidos.
 
-<h3 id="Devuelve">Devuelve</h3>
+## Descripción
 
-<p>Una nueva cadena en la que ciertos caracteres han sido sustituidos.</p>
+La función `escape `es una propiedad del _objeto global._ SLos caracteres especiales son codificados a excepción de: @\*\_+-./
 
-<h2 id="Descripción">Descripción</h2>
+La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuencia de escape de dos digitos: %xx. Para caracteres un valor superior, se usa el fomato de cuatro digitos: %**u**xxxx.
 
-<p>La función <code>escape </code>es una propiedad del <em>objeto global. </em>SLos caracteres especiales son codificados a excepción de: @*_+-./</p>
+## Ejemplos
 
-<p>La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuencia de escape de dos digitos: %xx. Para caracteres un valor superior, se usa el fomato de cuatro digitos: %<strong>u</strong>xxxx.</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<pre class="brush: js">escape('abc123');     // "abc123"
+```js
+escape('abc123');     // "abc123"
 escape('äöü');        // "%E4%F6%FC"
 escape('ć');          // "%u0107"
 
 // caracteres especiales
-escape('@*_+-./');    // "@*_+-./"</pre>
+escape('@*_+-./');    // "@*_+-./"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Defined in the (informative) Compatibility Annex B</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-escape-string', 'escape')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-escape-string', 'escape')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                       | Comment                                                                                |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition.                                                                    |
+| {{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}             | {{Spec2('ES5.1')}}     | Defined in the (informative) Compatibility Annex B                                     |
+| {{SpecName('ES6', '#sec-escape-string', 'escape')}}     | {{Spec2('ES6')}}         | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+| {{SpecName('ESDraft', '#sec-escape-string', 'escape')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("javascript.builtins.escape")}}</p>
+{{Compat("javascript.builtins.escape")}}
 
-<h2 id="Ver_más">Ver más</h2>
+## Ver más
 
-<ul>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
- <li>{{jsxref("unescape")}}</li>
-</ul>
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}
+- {{jsxref("unescape")}}

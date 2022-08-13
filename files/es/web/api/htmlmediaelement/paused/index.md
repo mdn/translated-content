@@ -3,54 +3,36 @@ title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 translation_of: Web/API/HTMLMediaElement/paused
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propiedad <strong><code>HTMLMediaElement.paused</code></strong> es solo de lectura, indica si el elemento multimedia está en pausa.</p>
+La propiedad **`HTMLMediaElement.paused`** es solo de lectura, indica si el elemento multimedia está en pausa.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>pausado</em> = <em>audioOVideo</em>.<strong>paused</strong></pre>
+    var pausado = audioOVideo.paused
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Es un {{domxref("Boolean")}}. <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Mostrara <strong>true </strong>si está pausado y <strong>false </strong>en caso contrario.</span></font></p>
+Es un {{domxref("Boolean")}}. Mostrara **true** si está pausado y **false** en caso contrario.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.paused); // true
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}                             | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("api.HTMLMediaElement.paused")}}
 
+## Ver también
 
-<p>{{Compat("api.HTMLMediaElement.paused")}}</p>
-
-<h2 id="See_Also" name="See_Also">Ver también</h2>
-
-<ul>
- <li>La interfaz que lo define, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- La interfaz que lo define, {{domxref("HTMLMediaElement")}}.

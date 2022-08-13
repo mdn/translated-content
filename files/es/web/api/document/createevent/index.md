@@ -10,27 +10,23 @@ translation_of: Web/API/Document/createEvent
 translation_of_original: Web/API/Event/createEvent
 original_slug: Web/API/Event/createEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Crea un nuevo evento, que debe ser inicializado llamando a su método <code>init()</code>.</p>
+Crea un nuevo evento, que debe ser inicializado llamando a su método `init()`.
 
-<h3 id="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre><code>document.createEvent(tipo);</code></pre>
+    document.createEvent(tipo);
 
-<dl>
- <dt><code>tipo</code></dt>
- <dd>Una string indicando el tipo de evento a crear.</dd>
-</dl>
+- `tipo`
+  - : Una string indicando el tipo de evento a crear.
 
-<p>Este método devuelve un nuevo objeto {{ domxref("Event") }} del DOM del tipo indicado, que debe ser inicializado antes de su uso.</p>
+Este método devuelve un nuevo objeto {{ domxref("Event") }} del DOM del tipo indicado, que debe ser inicializado antes de su uso.
 
-<h3 id="Ejemplo">Ejemplo</h3>
+### Ejemplo
 
-<pre>var nuevoEvento = document.createEvent("UIEvents");</pre>
+    var nuevoEvento = document.createEvent("UIEvents");
 
-<h3 id="Especificación">Especificación</h3>
+### Especificación
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document">DOM Level 2 Events</a></li>
-</ul>
+- [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)

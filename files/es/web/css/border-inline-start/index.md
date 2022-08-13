@@ -3,56 +3,55 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 translation_of: Web/CSS/border-inline-start
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong> <code>border-inline-start</code></strong> es una <a href="/en-US/docs/Web/CSS/Shorthand_properties">propiedad abreviada</a> para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.</p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
 
+## Sintaxis
 
-
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<pre class="brush:css no-line-numbers">border-inline-start: 1px;
+```css
+border-inline-start: 1px;
 border-inline-start: 2px dotted;
 border-inline-start: medium dashed green;
-</pre>
+```
 
-<p><code>border-inline-start</code> es especificado con uno o más de {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, and {{cssxref("border-inline-start-color")}}. El borde físico al que se mapea depende del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+`border-inline-start` es especificado con uno o más de {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, and {{cssxref("border-inline-start-color")}}. El borde físico al que se mapea depende del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<p>Propiedades relacionadas son {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-end")}}, que definen los otros bordes del elemento.</p>
+Propiedades relacionadas son {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-end")}}, que definen los otros bordes del elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>El <code>border-inline-start</code> es especificado con uno o más de los sigueintes valores, en cualquier orden:</p>
+El `border-inline-start` es especificado con uno o más de los sigueintes valores, en cualquier orden:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>El ancho del borde. Mira {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>La línea de estilo del borde. Mira {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>El color del borde. Mira {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : El ancho del borde. Mira {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : La línea de estilo del borde. Mira {{cssxref("border-style")}}.
+- `<'color'>`
+  - : El color del borde. Mira {{cssxref("color")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -61,38 +60,22 @@ border-inline-start: medium dashed green;
 .exampleText {
   writing-mode: vertical-rl;
   border-inline-start: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-start", "border-inline-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                               | Estado                                           | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start", "border-inline-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("css.properties.border-inline-start")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.border-inline-start")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

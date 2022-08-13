@@ -8,27 +8,25 @@ translation_of: Web/CSS/url()
 translation_of_original: Web/CSS/filter-function/url
 original_slug: Web/CSS/url()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La función de <a href="/es/docs/Web/CSS">CSS</a> <strong><code>url()</code></strong> usa un <a href="/es/docs/Web/SVG/Element/filter"> filtro SVG</a> para cambiar la apariencia en la imagen de entrada.</p>
+La función de [CSS](/es/docs/Web/CSS) **`url()`** usa un [filtro SVG](/es/docs/Web/SVG/Element/filter) para cambiar la apariencia en la imagen de entrada.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">url(<em>location</em>)</pre>
+    url(location)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>location</code></dt>
- <dd>La {{cssxref("&lt;url&gt;")}} de un archivo {{glossary("XML")}} que especifique un filtro SVG, y puede incluir un ancla a un elemento filtro específico.</dd>
-</dl>
+- `location`
+  - : La {{cssxref("&lt;url&gt;")}} de un archivo {{glossary("XML")}} que especifique un filtro SVG, y puede incluir un ancla a un elemento filtro específico.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: css">url(resources.svg#c1)</pre>
+```css
+url(resources.svg#c1)
+```
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

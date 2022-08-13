@@ -3,31 +3,27 @@ title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>Cancela la petición de animación previamente programada a través de {{domxref("window.requestAnimationFrame()")}}.</p>
+Cancela la petición de animación previamente programada a través de {{domxref("window.requestAnimationFrame()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);
-</pre>
+    window.cancelAnimationFrame(requestID);
 
-<div class="note">
-<p><strong>Nota:</strong> Antes de Firefox 23, la función es independiente del proveedor con el prefijo <code>window.mozCancelAnimationFrame()</code>. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.</p>
-</div>
+> **Nota:** Antes de Firefox 23, la función es independiente del proveedor con el prefijo `window.mozCancelAnimationFrame()`. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>ID de la petición</code></dt>
- <dd>El valor del ID regresado por la llamada a {{domxref("window.requestAnimationFrame()")}} que solicitó una llamada de vuelta.</dd>
-</dl>
+- `ID de la petición`
+  - : El valor del ID regresado por la llamada a {{domxref("window.requestAnimationFrame()")}} que solicitó una llamada de vuelta.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```js
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -39,28 +35,24 @@ var myReq;
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress/10, 200) + "px";
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     myReq = requestAnimationFrame(step);
   }
 }
 myReq = requestAnimationFrame(step);
 
 window.cancelAnimationFrame(myReq);
-</pre>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Window.cancelAnimationFrame")}}
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}</li>
-</ul>
+- {{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("window.mozAnimationStartTime")}}</li>
- <li>{{domxref("window.requestAnimationFrame()")}}</li>
-</ul>
+- {{domxref("window.mozAnimationStartTime")}}
+- {{domxref("window.requestAnimationFrame()")}}

@@ -7,46 +7,40 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/split
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>str:split()</code> divide una cadena usando una cadena patrón que determina donde deberían ocurrir las divisiones y devuelve un conjunto de nodos que contiene las cadenas resultantes.</p>
+`str:split()` divide una cadena usando una cadena patrón que determina donde deberían ocurrir las divisiones y devuelve un conjunto de nodos que contiene las cadenas resultantes.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">str:split(<em>cadena</em>,<em>patron</em>)
-</pre>
+    str:split(cadena,patron)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>cadena</em></code></dt>
- <dd>La cadena a dividir.</dd>
- <dt><code><em>patron</em></code></dt>
- <dd>El patrón que indica por donde dividir la cadena.</dd>
-</dl>
+- `cadena`
+  - : La cadena a dividir.
+- `patron`
+  - : El patrón que indica por donde dividir la cadena.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>Un conjunto de nodos de elementos <code>token</code>, donde cada uno contiene un trozo (token) de la <code><em>cadena</em></code>.</p>
+Un conjunto de nodos de elementos `token`, donde cada uno contiene un trozo (token) de la `cadena`.
 
-<p>Por ejemplo:</p>
+Por ejemplo:
 
-<pre class="eval">str:split('libro, teléfono, ordenador, silla', ', ')
-</pre>
+    str:split('libro, teléfono, ordenador, silla', ', ')
 
-<p>Devuelve un conjunto de nodos como este:</p>
+Devuelve un conjunto de nodos como este:
 
-<pre class="eval">&lt;token&gt;libro&lt;/token&gt;
-&lt;token&gt;teléfono&lt;/token&gt;
-&lt;token&gt;ordenador&lt;/token&gt;
-&lt;token&gt;silla&lt;/token&gt;
-</pre>
+    <token>libro</token>
+    <token>teléfono</token>
+    <token>ordenador</token>
+    <token>silla</token>
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/str/functions/split/index.html">EXSLT - STR:SPLIT</a></p>
+[EXSLT - STR:SPLIT](http://www.exslt.org/str/functions/split/index.html)
 
-<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
+### Implementación en Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

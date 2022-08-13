@@ -3,71 +3,53 @@ title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
 translation_of: Web/API/Element/hasAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>El método <strong><code>Elemento.hasAttribute()</code></strong> devuelve un valor <strong>Booleano</strong> indicando si el elemento tiene el atributo especificado o no.</p>
+El método **`Elemento.hasAttribute()`** devuelve un valor **Booleano** indicando si el elemento tiene el atributo especificado o no.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js"><var>var <em>resultado</em></var> = <em><var>elemento</var></em>.hasAttribute(<em><var>nombre</var></em>);
-</pre>
+```js
+var resultado = elemento.hasAttribute(nombre);
+```
 
-<dl>
- <dt><code>resultado</code></dt>
- <dd>contendrá el valor devuelto (<code>true</code> o <code>false)</code>.</dd>
- <dt><code>nombre</code></dt>
- <dd>consiste en una cadena de caracteres que representa el nombre del atributo a chequear.</dd>
-</dl>
+- `resultado`
+  - : contendrá el valor devuelto (`true` o `false)`.
+- `nombre`
+  - : consiste en una cadena de caracteres que representa el nombre del atributo a chequear.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">var foo = document.getElementById("foo");
+```js
+var foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // hacer algo
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush:js">;(function(prototype) {
+```js
+;(function(prototype) {
     prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &amp;&amp;
+        return !!(this.attributes[name] &&
                   this.attributes[name].specified);
     }
 })(Element.prototype);
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<div>{{DOMAttributeMethods}}</div>
+{{DOMAttributeMethods}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-hasattribute', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-hasattribute', 'Element.hasAttribute()')}} | {{Spec2('DOM WHATWG')}} | From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}} |
+| {{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                                                            |
+| {{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM2 Core')}}     | Initial definition.                                                                                        |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Element.hasAttribute")}}

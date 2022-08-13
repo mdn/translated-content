@@ -5,86 +5,61 @@ tags:
   - API
 translation_of: Web/API/WindowEventHandlers
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>WindowEventHandlers</code></strong> describes the event handlers common to several interfaces like {{domxref("Window")}}, or {{domxref("HTMLBodyElement")}} and  {{domxref("HTMLFrameSetElement")}}. Each of these interfaces can implement more event handlers.</p>
+**`WindowEventHandlers`** describes the event handlers common to several interfaces like {{domxref("Window")}}, or {{domxref("HTMLBodyElement")}} and {{domxref("HTMLFrameSetElement")}}. Each of these interfaces can implement more event handlers.
 
-<p><code>WindowEventHandlers</code> is a not an interface and no object of this type can be created.</p>
+`WindowEventHandlers` is a not an interface and no object of this type can be created.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The events properties, of the form <code>onXYZ</code>, are defined on the {{domxref("WindowEventHandlers")}}, and implemented by {{domxref("Window")}}, and {{domxref("WorkerGlobalScope")}} for Web Workers.</em></p>
+_The events properties, of the form `onXYZ`, are defined on the {{domxref("WindowEventHandlers")}}, and implemented by {{domxref("Window")}}, and {{domxref("WorkerGlobalScope")}} for Web Workers._
 
-<dl>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("afterprint")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("hashchange")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("languagechange")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pagehide")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pageshow")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("popstate")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onresize")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("resize")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("storage")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unload")}} event is raised.</dd>
-</dl>
+- {{domxref("WindowEventHandlers.onafterprint")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("afterprint")}} event is raised.
+- {{domxref("WindowEventHandlers.onbeforeprint")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.
+- {{domxref("WindowEventHandlers.onhashchange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("hashchange")}} event is raised.
+- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("languagechange")}} event is raised.
+- {{domxref("WindowEventHandlers.onmessage")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.
+- {{domxref("WindowEventHandlers.onoffline")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.
+- {{domxref("WindowEventHandlers.ononline")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pagehide")}} event is raised.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pageshow")}} event is raised.
+- {{domxref("WindowEventHandlers.onpopstate")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("popstate")}} event is raised.
+- {{domxref("WindowEventHandlers.onresize")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("resize")}} event is raised.
+- {{domxref("WindowEventHandlers.onstorage")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("storage")}} event is raised.
+- {{domxref("WindowEventHandlers.onunload")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unload")}} event is raised.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface defines no method.</em></p>
+_This interface defines no method._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since the latest snapshot, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Added <code>onlanguage</code> since the {{SpecName("HTML 5")}} snapshot.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Creation of <code>WindowEventHandlers</code> (properties where on the target before it).</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName("HTML5.1")}}.                                                          |
+| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. Added `onlanguage` since the {{SpecName("HTML 5")}} snapshot.           |
+| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. Creation of `WindowEventHandlers` (properties where on the target before it). |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.WindowEventHandlers")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window")}} and {{domxref("WorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}}

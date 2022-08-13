@@ -7,19 +7,20 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-color
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <strong><code>text-decoration-color</code></strong> establece el color usado cuando se dibujan subrayados o líneas a través del texto, especificadas por la propiedad {{ cssxref("text-decoration-line") }}. El color especificado será el mismo para los tres tipos de línea.</p>
+La propiedad **`text-decoration-color`** establece el color usado cuando se dibujan subrayados o líneas a través del texto, especificadas por la propiedad {{ cssxref("text-decoration-line") }}. El color especificado será el mismo para los tres tipos de línea.
 
-<p>CSS no provee un mecanismo directo para especificar un color único para cada tipo de línea. Sin embargo, se puede obtener un efecto similar anidando elementos HTML, aplicando diferente tipo de línea para cada uno (via la propiedad <code>text-decoration-line</code>), y especificando un color de línea (usando <code>text-decoration-color</code>) propio para cada elemento.</p>
+CSS no provee un mecanismo directo para especificar un color único para cada tipo de línea. Sin embargo, se puede obtener un efecto similar anidando elementos HTML, aplicando diferente tipo de línea para cada uno (via la propiedad `text-decoration-line`), y especificando un color de línea (usando `text-decoration-color`) propio para cada elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css">/* valores &lt;color&gt; */
+```css
+/* valores <color> */
 text-decoration-color: currentColor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
@@ -30,33 +31,33 @@ text-decoration-color: transparent;
 text-decoration-color: inherit;
 text-decoration-color: initial;
 text-decoration-color: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>La propiedad <code>color</code> acepta varlos nombres clave y notaciones numéricas. Vea {{cssxref("&lt;color&gt;")}} para más detalles.</dd>
-</dl>
+- `<color>`
+  - : La propiedad `color` acepta varlos nombres clave y notaciones numéricas. Vea {{cssxref("&lt;color&gt;")}} para más detalles.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css; highlight:[3]">.example {
+```css
+.example {
     text-decoration: underline;
     text-decoration-color: red;
 }
-</pre>
+```
 
-<p>El ejemplo anterior tiene el mismo efecto que el código siguiente, que además añade un estilo para cuando el elemento tiene el puntero del mouse encima.</p>
+El ejemplo anterior tiene el mismo efecto que el código siguiente, que además añade un estilo para cuando el elemento tiene el puntero del mouse encima.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 .example {
   font-size: 24px;
   text-decoration: underline;
@@ -66,35 +67,22 @@ text-decoration-color: unset;
   color: blue;
   text-decoration: line-through;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;span class="example"&gt;
-  &lt;span style="color:black;"&gt;texto negro con subrayado rojo, y azul con el cursor encima&lt;/span&gt;
-&lt;/span&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</style>
+</head>
+<body>
+<span class="example">
+  <span style="color:black;">texto negro con subrayado rojo, y azul con el cursor encima</span>
+</span>
+</body>
+</html>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Text Decoration', '#text-decoration-color-property', 'text-decoration-color') }}</td>
-   <td>{{ Spec2('CSS3 Text Decoration') }}</td>
-   <td>Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                       | Estado                                           | Comentarios                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Text Decoration', '#text-decoration-color-property', 'text-decoration-color') }} | {{ Spec2('CSS3 Text Decoration') }} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.text-decoration-color")}}

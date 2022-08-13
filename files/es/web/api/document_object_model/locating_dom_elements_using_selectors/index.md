@@ -8,44 +8,40 @@ tags:
 translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 original_slug: Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores
 ---
-<p>Los selectores api proveen metodos que hacen mas facil y rapido devolver elementos del nodo {{domxref("Element")}} del DOM mediante emparejamiento de un conjunto de selectores. Esto es mucho mas rapido que las tecnicas anteriores, donde fuera necesario, por ejemplo usar un loop en un codigo JavaScript para localizar el item especifico que quisieras encontrar.</p>
+Los selectores api proveen metodos que hacen mas facil y rapido devolver elementos del nodo {{domxref("Element")}} del DOM mediante emparejamiento de un conjunto de selectores. Esto es mucho mas rapido que las tecnicas anteriores, donde fuera necesario, por ejemplo usar un loop en un codigo JavaScript para localizar el item especifico que quisieras encontrar.
 
-<h2 id="Interfaz_de_NodeSelector">Interfaz de NodeSelector</h2>
+## Interfaz de NodeSelector
 
-<p>Esta especificación añade dos nuevos metodos a cualquier objeto implementando el {{domxref("Document")}}, {{domxref("DocumentFragment")}}, o {{domxref("Element")}} interfaces:</p>
+Esta especificación añade dos nuevos metodos a cualquier objeto implementando el {{domxref("Document")}}, {{domxref("DocumentFragment")}}, o {{domxref("Element")}} interfaces:
 
-<dl>
- <dt>{{domxref("Element.querySelector", "querySelector()")}}</dt>
- <dd>Devuelve la primera coincidencia del (elemento) {{domxref("Element")}} nodo dentro de las subramas del nodo. Sino se encuentra un nodo coincidente, se devuelve <code>null</code> .</dd>
- <dt>{{domxref("Element.querySelectorAll", "querySelectorAll()")}}</dt>
- <dd>devuelve un listado de nodos {{domxref("NodeList")}} conteniendo todos los elementos del nodo coincidentes( <code>Element</code>) dentro de las subramas del nodo, o Devuelve un Listado de Nodos vacio <code>NodeList</code> sino se encuentran coincidencias.</dd>
-</dl>
+- {{domxref("Element.querySelector", "querySelector()")}}
+  - : Devuelve la primera coincidencia del (elemento) {{domxref("Element")}} nodo dentro de las subramas del nodo. Sino se encuentra un nodo coincidente, se devuelve `null` .
+- {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
+  - : devuelve un listado de nodos {{domxref("NodeList")}} conteniendo todos los elementos del nodo coincidentes( `Element`) dentro de las subramas del nodo, o Devuelve un Listado de Nodos vacio `NodeList` sino se encuentran coincidencias.
 
-<div class="note"><strong>Note:</strong> El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.</div>
+> **Nota:** El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
 
-<p>Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo <a class="internal" href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code snippets/QuerySelector">Code snippets for querySelector</a>.</p>
+Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector").
 
-<h2 id="Selectors">Selectors</h2>
+## Selectors
 
-<p>El metodo de selectores acepta uno o mas selectores seperados por comas entre cada selector  para determinar que elemento o elementos deben ser devueltos. por ejemplo para seleccionar todos los elementos (p) del parrafo en un documento donde la clase CSS sea tanto <code>warning</code> or <code>note</code>, podes hacer lo siguiente:</p>
+El metodo de selectores acepta uno o mas selectores seperados por comas entre cada selector para determinar que elemento o elementos deben ser devueltos. por ejemplo para seleccionar todos los elementos (p) del parrafo en un documento donde la clase CSS sea tanto `warning` or `note`, podes hacer lo siguiente:
 
-<pre class="notranslate"><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
+    var special = document.querySelectorAll( "p.warning, p.note" );
 
-<p>tambien por usar query para etiquetas id. Por ejemplo:</p>
+tambien por usar query para etiquetas id. Por ejemplo:
 
-<pre class="notranslate"><code>var el = document.querySelector( "#main, #basic, #exclamation" );</code></pre>
+    var el = document.querySelector( "#main, #basic, #exclamation" );
 
-<p>luego de ejecutar el codigo de arriba, la variable <code>el</code> contiene el primer elemento del documento, su ID puede ser uno de los siguentes  <code>main</code>, <code>basic</code>, or <code>exclamation</code>.</p>
+luego de ejecutar el codigo de arriba, la variable `el` contiene el primer elemento del documento, su ID puede ser uno de los siguentes `main`, `basic`, or `exclamation`.
 
-<p>Podes usar cualquier selector CSS con los metodos <code>querySelector()</code> y <code>querySelectorAll()</code><em>.</em></p>
+Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySelectorAll()`_._
 
-<h2 id="Ver_tambien.">Ver tambien.</h2>
+## Ver tambien.
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
- <li>{{domxref("Element.querySelector()")}}</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}}</li>
- <li>{{domxref("Document.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}
+- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")

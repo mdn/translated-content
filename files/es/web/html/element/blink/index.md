@@ -10,42 +10,39 @@ tags:
 translation_of: Web/HTML/Element/blink
 original_slug: Web/HTML/Elemento/blink
 ---
-<div>{{Deprecated_header}} {{Non-standard_header}}</div>
+{{Deprecated_header}} {{Non-standard_header}}
 
-<p>El elemento HTML blink (<code>&lt;blink&gt;</code>) no es un elemento estándar que causa que el texto encerrado parpadee lentamente .</p>
+El elemento HTML blink (`<blink>`) no es un elemento estándar que causa que el texto encerrado parpadee lentamente .
 
-<div class="warning">
-<p class="note"><strong>Precaución :</strong> No usar este elemento ya que no es un elemento estándar y está <strong>obsoleto</strong>. El texto parpadeante es mal visto por diversos estándares de accesibilidad y la especificación de CSS permite a los exploradores ingnorar el valor del parpadeo . .</p>
-</div>
+> **Advertencia:** **Precaución :** No usar este elemento ya que no es un elemento estándar y está **obsoleto**. El texto parpadeante es mal visto por diversos estándares de accesibilidad y la especificación de CSS permite a los exploradores ingnorar el valor del parpadeo . .
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento no es soportado y por lo tanto implementa la interface {domxref("HTMLUnknownElement")}} .</p>
+Este elemento no es soportado y por lo tanto implementa la interface {domxref("HTMLUnknownElement")}} .
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:html">&lt;blink&gt;Why would somebody use this?&lt;/blink&gt;
-</pre>
+```html
+<blink>Why would somebody use this?</blink>
+```
 
-<h3 id="Resultado">Resultado </h3>
+### Resultado
 
-<p><img alt="Image:HTMLBlinkElement.gif" src="/@api/deki/files/247/=HTMLBlinkElement.gif"></p>
+![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<p>Este elemento no es parte del estándar ni de alguna espeficación . Si no nos crees puedes verlo por ti mismo en la <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features">espeficicación de HTML</a>.</p>
+Este elemento no es parte del estándar ni de alguna espeficación . Si no nos crees puedes verlo por ti mismo en la [espeficicación de HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
-<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
+## Compatibilidad en exploradores
 
 {{Compat("html.elements.blink")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="http://www.montulli.org/theoriginofthe%3Cblink%3Etag">Historia de la creación del elemento</a> &lt;blink&gt;</li>
- <li>{{cssxref("text-decoration")}}, donde un valor de parpadeo existe , aunque los exploradores no son obligados a hacer parpadear el texto efectivamente.</li>
- <li>{{htmlelement("marquee")}}, otro elemento similar que no pertenece a un estándar.</li>
- <li>Las <a href="/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS">animaciones CSS</a> son la forma correcta de crear tal efecto .</li>
-</ul>
+- [Historia de la creación del elemento](http://www.montulli.org/theoriginofthe%3Cblink%3Etag) \<blink>
+- {{cssxref("text-decoration")}}, donde un valor de parpadeo existe , aunque los exploradores no son obligados a hacer parpadear el texto efectivamente.
+- {{htmlelement("marquee")}}, otro elemento similar que no pertenece a un estándar.
+- Las [animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS) son la forma correcta de crear tal efecto .
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

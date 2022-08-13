@@ -3,17 +3,18 @@ title: Navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 translation_of: Web/API/Navigator/getUserMedia
 ---
-<p>Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto <a href="/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream" title="WebRTC/MediaStream_API#LocalMediaStream">LocalMediaStream</a> como argumento.</p>
+Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream") como argumento.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">navigator.getUserMedia ( constraints, successCallback, errorCallback );</pre>
+    navigator.getUserMedia ( constraints, successCallback, errorCallback );
 
-<p><strong>Ejemplo</strong></p>
+**Ejemplo**
 
-<p>Aquí  hay un ejemplo usando getUserMedia() con los prefijos del navegador.</p>
+Aquí hay un ejemplo usando getUserMedia() con los prefijos del navegador.
 
-<pre class="brush: js">navigator.getMedia = ( navigator.getUserMedia ||
+```js
+navigator.getMedia = ( navigator.getUserMedia ||
                        navigator.webkitGetUserMedia ||
                        navigator.mozGetUserMedia);
 
@@ -39,98 +40,54 @@ navigator.getMedia (
     console.log("Ocurrió el siguiente error: " + err);
    }
 
-);</pre>
+);
+```
 
-<h2 id="Parámetros">Parámetros</h2>
+## Parámetros
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Parámetro</th>
-   <th scope="col">
-    <p>Requerido/Opcional</p>
-   </th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>constraints</td>
-   <td>Requerido</td>
-   <td>El tipo de multimedia que soporta el objeto LocalMediaStream devuelto en el successCallback.</td>
-  </tr>
-  <tr>
-   <td>successCallback </td>
-   <td>Requerido</td>
-   <td>La función a invocar cuando se pasa el objeto LocalMediaStream.</td>
-  </tr>
-  <tr>
-   <td>errorCallback</td>
-   <td>Opcional</td>
-   <td>La función que se invoca en la aplicación si falla la llamada.</td>
-  </tr>
- </tbody>
-</table>
+| Parámetro       | Requerido/Opcional | Descripción                                                                                  |
+| --------------- | ------------------ | -------------------------------------------------------------------------------------------- |
+| constraints     | Requerido          | El tipo de multimedia que soporta el objeto LocalMediaStream devuelto en el successCallback. |
+| successCallback | Requerido          | La función a invocar cuando se pasa el objeto LocalMediaStream.                              |
+| errorCallback   | Opcional           | La función que se invoca en la aplicación si falla la llamada.                               |
 
-<h3 id="constraints">constraints</h3>
+### constraints
 
-<p>El parámetro <code>constraints</code> es un objeto <code>MediaStreamConstraints</code> con dos miembros booleanos: <code>video</code> y <code>audio</code>. Estos describen el los tipos de multimedia soportados por el objeto <a href="/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream" title="WebRTC/MediaStream_API#LocalMediaStream">LocalMediaStream</a>. Uno o ambos deben ser especificados para validar el argumento del parametro constraint. Si un constraint especificado no es soportado por el navegador, <code>getUserMedia </code>llama a la función <code>errorCallback </code>con el error <code>NOT_SUPPORTED_ERROR</code>. Si el navegador no puede encontrar ninguna fuente multimedia con el tipo especificado, <code>getUserMedia </code>llama a la función <code>errorCallback </code>con el error <code>MANDATORY_UNSATISFIED_ERR</code>.</p>
+El parámetro `constraints` es un objeto `MediaStreamConstraints` con dos miembros booleanos: `video` y `audio`. Estos describen el los tipos de multimedia soportados por el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream"). Uno o ambos deben ser especificados para validar el argumento del parametro constraint. Si un constraint especificado no es soportado por el navegador, `getUserMedia `llama a la función `errorCallback `con el error `NOT_SUPPORTED_ERROR`. Si el navegador no puede encontrar ninguna fuente multimedia con el tipo especificado, `getUserMedia `llama a la función `errorCallback `con el error `MANDATORY_UNSATISFIED_ERR`.
 
-<p>Si el valor o el miembro no es especificado en el objeto, el valor del miembro por defecto será falso. El siguiente ejemplo muestra como definir el constraints para audio y video:</p>
+Si el valor o el miembro no es especificado en el objeto, el valor del miembro por defecto será falso. El siguiente ejemplo muestra como definir el constraints para audio y video:
 
-<pre>{ video: true, audio: true }</pre>
+    { video: true, audio: true }
 
-<h3 id="successCallback">successCallback</h3>
+### successCallback
 
-<p>La función getUserMedia llamará a la función especificada en el <code>successCallback </code>con el objeto <a href="/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream" title="WebRTC/MediaStream_API#LocalMediaStream">LocalMediaStream</a> que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:</p>
+La función getUserMedia llamará a la función especificada en el `successCallback `con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream") que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
 
-<pre>function(localMediaStream) {
-   var video = document.querySelector('video');
-   video.src = window.URL.createObjectURL(localMediaStream);
-   video.onloadedmetadata = function(e) {
-      // Haz algo aquí con el video.
-   };
-},</pre>
+    function(localMediaStream) {
+       var video = document.querySelector('video');
+       video.src = window.URL.createObjectURL(localMediaStream);
+       video.onloadedmetadata = function(e) {
+          // Haz algo aquí con el video.
+       };
+    },
 
-<h3 id="errorCallback">errorCallback</h3>
+### errorCallback
 
-<p>La función <code>getUserMedia </code>llama a la función indicada en el errorCallback con un <code>código</code> como argumento. Los códigos de error se describen a continuación:</p>
+La función `getUserMedia `llama a la función indicada en el errorCallback con un `código` como argumento. Los códigos de error se describen a continuación:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Error </th>
-   <th scope="col">Descripción </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>PERMISSION_DENIED </td>
-   <td>El usuario denegó el permiso para usar el dispositivo multimadia requerido para esta operación. </td>
-  </tr>
-  <tr>
-   <td>NOT_SUPPORTED_ERROR </td>
-   <td>Un constraint especificado no es soportado por el navegador.</td>
-  </tr>
-  <tr>
-   <td>MANDATORY_UNSATISFIED_ERROR </td>
-   <td>No se encontraron fuentes multimedia del tipo especificado en el constraints.</td>
-  </tr>
-  <tr>
-   <td>NO_DEVICES_FOUND</td>
-   <td>No se encontró ninguna webcam instalada.</td>
-  </tr>
- </tbody>
-</table>
+| Error                       | Descripción                                                                                     |
+| --------------------------- | ----------------------------------------------------------------------------------------------- |
+| PERMISSION_DENIED           | El usuario denegó el permiso para usar el dispositivo multimadia requerido para esta operación. |
+| NOT_SUPPORTED_ERROR         | Un constraint especificado no es soportado por el navegador.                                    |
+| MANDATORY_UNSATISFIED_ERROR | No se encontraron fuentes multimedia del tipo especificado en el constraints.                   |
+| NO_DEVICES_FOUND            | No se encontró ninguna webcam instalada.                                                        |
 
-<h2 id="Compatibilidad_con_los_navegadores">Compatibilidad con los navegadores</h2>
+## Compatibilidad con los navegadores
 
 {{Compat("api.Navigator.getUserMedia")}}
 
-<h2 id="Vease_también">Vease también</h2>
+## Vease también
 
-<ul>
- <li><a href="/en-US/docs/WebRTC" title="WebRTC">WebRTC</a> - la página introductoria a la API</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API" title="WebRTC/MediaStream_API">MediaStream API</a> - la API para los objetos multimedia</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos" title="WebRTC/taking_webcam_photos">Taking webcam photos</a> - un tutorial acerca del uso de getUserMedia()</li>
-</ul>
+- [WebRTC](/es/docs/WebRTC "WebRTC") - la página introductoria a la API
+- [MediaStream API](/es/docs/WebRTC/MediaStream_API "WebRTC/MediaStream_API") - la API para los objetos multimedia
+- [Taking webcam photos](/es/docs/WebRTC/taking_webcam_photos "WebRTC/taking_webcam_photos") - un tutorial acerca del uso de getUserMedia()

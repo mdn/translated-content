@@ -8,51 +8,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/NaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propiedad <strong><code>Number.NaN</code></strong> representa Not-A-Number (No es numero). Equivalente de  {{jsxref("NaN")}}.</p>
+La propiedad **`Number.NaN`** representa Not-A-Number (No es numero). Equivalente de {{jsxref("NaN")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-nan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-nan.html")}}
 
-<p>No tienes que crear un objeto {{jsxref("Number")}} para acceder a esta propiedad estática (usa <code>Number.NaN</code>).</p>
+No tienes que crear un objeto {{jsxref("Number")}} para acceder a esta propiedad estática (usa `Number.NaN`).
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Chequea_si_los_valores_son_numericos">Chequea si los valores son numericos</h3>
+### Chequea si los valores son numericos
 
-<pre class="brush: js notranslate">function sanitise(x) {
+```js
+function sanitise(x) {
   if (isNaN(x)) {
     return Number.NaN;
   }
   return x;
-}</pre>
+}
+```
 
-<h3 id="Testing_against_NaN">Testing against NaN</h3>
+### Testing against NaN
 
-<p>See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN#Testing_against_NaN">Testing against NaN</a> on the <code>NaN</code> page.</p>
+See [Testing against NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN#Testing_against_NaN) on the `NaN` page.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Number.NaN")}}</p>
+{{Compat("javascript.builtins.Number.NaN")}}
 
-<h2 id="Tambien_mira">Tambien mira</h2>
+## Tambien mira
 
-<ul>
- <li>El objeto global {{jsxref("NaN")}} .</li>
- <li>El objeto {{jsxref("Number")}} al que pertenece.</li>
-</ul>
+- El objeto global {{jsxref("NaN")}} .
+- El objeto {{jsxref("Number")}} al que pertenece.

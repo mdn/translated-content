@@ -9,43 +9,44 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-block-end-color
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <code>border-block-end-color</code> define el color del borde del final lógico de un elemento, que se mapea a un color de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+La propiedad [CSS](/es/docs/Web/CSS "CSS") `border-block-end-color` define el color del borde del final lógico de un elemento, que se mapea a un color de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">border-block-end-color: yellow;
+```css
+border-block-end-color: yellow;
 border-block-end-color: #F5F6F7;
-</pre>
+```
 
-<p>Está relacionada con {{cssxref("border-block-start-color")}}, {{cssxref("border-inline-start-color")}}, y {{cssxref("border-inline-end-color")}}, que definen las otras propiedades de color de borde del elemento.</p>
+Está relacionada con {{cssxref("border-block-start-color")}}, {{cssxref("border-inline-start-color")}}, y {{cssxref("border-inline-end-color")}}, que definen las otras propiedades de color de borde del elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;'border-color'&gt;</code></dt>
- <dd>Véase {{ cssxref("border-color") }}</dd>
-</dl>
+- `<'border-color'>`
+  - : Véase {{ cssxref("border-color") }}
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Texto de ejemplo&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Texto de ejemplo</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -55,36 +56,22 @@ border-block-end-color: #F5F6F7;
   writing-mode: vertical-lr;
   border: 10px solid blue;
   border-block-end-color: red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-end-color", "border-block-end-color")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                       | Estado                                           | Comentarios        |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-color", "border-block-end-color")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("css.properties.border-block-end-color")}}
 
-<h2 id="Mira_también">Mira también</h2>
+## Mira también
 
-<ul>
- <li>Las propiedades físicas mapeadas: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, y {{cssxref("border-left-color")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}+ bug 1297097</li>
-</ul>
+- Las propiedades físicas mapeadas: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, y {{cssxref("border-left-color")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}+ bug 1297097

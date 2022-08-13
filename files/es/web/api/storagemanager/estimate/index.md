@@ -15,76 +15,63 @@ tags:
   - metodo
 translation_of: Web/API/StorageManager/estimate
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>El método <strong><code>estimate()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.</p>
+El método **`estimate()`** de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>estimatePromise</em> = <em>StorageManager</em>.estimate();</pre>
+    var estimatePromise = StorageManager.estimate();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Una {{jsxref('Promise')}} que se resuelve como un objeto que se ajusta al diccionario {{domxref('StorageEstimate')}}. Este diccionario contiene estimaciones sobre la cantidad de espacio disponible para el origen o aplicación (en {{domxref("StorageEstimate.quota")}}, así como la cantidad que se usa en ese momento (in {{domxref("StorageEstimate.usage")}}). Estos no son números exactos; entre la compresión, la deduplicación y la ofuscación por razones de seguridad, no serán precisos.</p>
+Una {{jsxref('Promise')}} que se resuelve como un objeto que se ajusta al diccionario {{domxref('StorageEstimate')}}. Este diccionario contiene estimaciones sobre la cantidad de espacio disponible para el origen o aplicación (en {{domxref("StorageEstimate.quota")}}, así como la cantidad que se usa en ese momento (in {{domxref("StorageEstimate.usage")}}). Estos no son números exactos; entre la compresión, la deduplicación y la ofuscación por razones de seguridad, no serán precisos.
 
-<p>Es posible que la <code>quota</code> varíe de una aplicación a otra en función de factores como la frecuencia con la que el usuario la visita, los datos de popularidad del sitio, etc.</p>
+Es posible que la `quota` varíe de una aplicación a otra en función de factores como la frecuencia con la que el usuario la visita, los datos de popularidad del sitio, etc.
 
-<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>En este ejemplo, obtenemos las estimaciones de uso y presentamos el porcentaje de la capacidad de almacenamiento utilizada actualmente al usuario.</p>
+En este ejemplo, obtenemos las estimaciones de uso y presentamos el porcentaje de la capacidad de almacenamiento utilizada actualmente al usuario.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  You're currently using about &lt;span id="percent"&gt;
-  &lt;/span&gt;% of your available storage.
-&lt;/p&gt;
-</pre>
+```html
+<p>
+  You're currently using about <span id="percent">
+  </span>% of your available storage.
+</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">navigator.storage.estimate().then(function(estimate) {
+```js
+navigator.storage.estimate().then(function(estimate) {
   document.getElementById("percent").innerHTML =
       (estimate.usage / estimate.quota).toFixed(2);
 });
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example', 600, 40) }}</p>
+{{ EmbedLiveSample('Example', 600, 40) }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}}</td>
-   <td>{{Spec2('Storage')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                       | Comentario          |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("api.StorageManager.estimate")}}
 
+## Ver también
 
-<p>{{Compat("api.StorageManager.estimate")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>Storage API</li>
- <li>{{domxref("Storage")}}, el objeto devuelto por {{domxref("Window.localStorage")}}</li>
- <li>{{domxref("StorageManager")}}</li>
- <li>{{domxref("navigator.storage")}}</li>
-</ul>
+- Storage API
+- {{domxref("Storage")}}, el objeto devuelto por {{domxref("Window.localStorage")}}
+- {{domxref("StorageManager")}}
+- {{domxref("navigator.storage")}}

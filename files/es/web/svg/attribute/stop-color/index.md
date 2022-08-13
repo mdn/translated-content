@@ -5,55 +5,31 @@ tags:
   - Atributos SVG
 translation_of: Web/SVG/Attribute/stop-color
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference hom</a>e</p>
+« [SVG Attribute reference hom](/en/SVG/Attribute "en/SVG/Attribute")e
 
-<p>El atributo <code>stop-color</code> indica que color usar en el stop del gradiente. La keyword <code>currentColor</code> y ICC  pueden ser especificadas de la misma manera con la especificación <a href="/en/SVG/Content_type#Paint" title="en/SVG/Content_type#Paint">&lt;paint&gt;</a> para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.</p>
+El atributo `stop-color` indica que color usar en el stop del gradiente. La keyword `currentColor` y ICC pueden ser especificadas de la misma manera con la especificación [\<paint>](/en/SVG/Content_type#Paint "en/SVG/Content_type#Paint") para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categorías</th>
-   <td>Presentation attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Valor</th>
-   <td>currentColor | <a href="/en/SVG/Content_type#Color" title="en/SVG/Content_type#Color">&lt;color&gt;</a> | <a href="/en/SVG/Content_type#ICCColor" title="en/SVG/Content_type#ICCColor">&lt;icccolor&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Valor inicial</th>
-   <td>negro</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <th scope="row">Documento normativo</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#StopColorProperty">SVG 1.1 (2.ª edición)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categorías          | Presentation attribute                                                                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Valor               | currentColor \| [<color>](/en/SVG/Content_type#Color "en/SVG/Content_type#Color") \| [<icccolor>](/en/SVG/Content_type#ICCColor "en/SVG/Content_type#ICCColor") \| inherit |
+| Valor inicial       | negro                                                                                                                                                                      |
+| Animatable          | Sí                                                                                                                                                                         |
+| Documento normativo | [SVG 1.1 (2.ª edición)](http://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                                                                                        |
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h2 id="Elementos">Elementos</h2>
+## Elementos
 
-<p>El siguiente elemento puede usar el atributo <code>stop-color</code></p>
+El siguiente elemento puede usar el atributo `stop-color`
 
-<ul>
- <li>{{ SVGElement("stop") }}</li>
-</ul>
+- {{ SVGElement("stop") }}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
+{{Compat("svg.attributes.presentation.stop-color")}}
 
+## Ver también
 
-<p>{{Compat("svg.attributes.presentation.stop-color")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{ SVGAttr("stop-opacity") }}</li>
-</ul>
+- {{ SVGAttr("stop-opacity") }}

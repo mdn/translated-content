@@ -5,31 +5,28 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
-<p>{{ ApiRef("DOM Events")}}</p>
+{{ ApiRef("DOM Events")}}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Lanza un evento en el sistema de eventos. El evento está sujeto al mismo comportamiento y capacidades que si fuera un evento de lanzamiento directo.</p>
+Lanza un evento en el sistema de eventos. El evento está sujeto al mismo comportamiento y capacidades que si fuera un evento de lanzamiento directo.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><em>bool</em> = <em>element</em>.dispatchEvent(<em>event</em>)
-</pre>
+    bool = element.dispatchEvent(event)
 
-<ul>
- <li><code>element</code> es el objetivo (<code>target</code> en Inglés) del evento.</li>
- <li><code>event</code> es un objeto de tipo <a href="es/DOM/event">event</a> que será lanzado.</li>
- <li>El valor devuelto es <code>false</code>, si al menos uno de los negociadores (en Inglés:<em>handler</em> ) que manejan el evento es <a href="es/DOM/event.preventDefault">preventDefault</a>. En caso contrario, devuelve <code>true</code>.</li>
-</ul>
+- `element` es el objetivo (`target` en Inglés) del evento.
+- `event` es un objeto de tipo [event](es/DOM/event) que será lanzado.
+- El valor devuelto es `false`, si al menos uno de los negociadores (en Inglés:_handler_ ) que manejan el evento es [preventDefault](es/DOM/event.preventDefault). En caso contrario, devuelve `true`.
 
-<h3 id="Notas" name="Notas">Notas</h3>
+### Notas
 
-<p>Como se ve en el ejemplo anterior, <code>dispatchEvent</code> es el último paso en el proceso crear-inicializar-lanzar, que se usa para el lanzamiento manual de eventos en el modelo de implementación de eventos.</p>
+Como se ve en el ejemplo anterior, `dispatchEvent` es el último paso en el proceso crear-inicializar-lanzar, que se usa para el lanzamiento manual de eventos en el modelo de implementación de eventos.
 
-<p>El evento puede ser creado mediante el método <a href="es/DOM/document.createEvent">document.createEvent</a> e inicializado usando <a href="es/DOM/event.initEvent">initEvent</a> u otro método, más específicamente, métodos de inicialización como <a href="es/DOM/event.initMouseEvent">initMouseEvent</a> o <a href="es/DOM/event.initUIEvent">initUIEvent</a>.</p>
+El evento puede ser creado mediante el método [document.createEvent](es/DOM/document.createEvent) e inicializado usando [initEvent](es/DOM/event.initEvent) u otro método, más específicamente, métodos de inicialización como [initMouseEvent](es/DOM/event.initMouseEvent) o [initUIEvent](es/DOM/event.initUIEvent).
 
-<p>Ver también <a href="es/DOM/event">Event object reference</a>.</p>
+Ver también [Event object reference](es/DOM/event).
 
-<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
+### Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent">DOM Level 2 Events: dispatchEvent</a></p>
+[DOM Level 2 Events: dispatchEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)

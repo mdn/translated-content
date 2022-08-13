@@ -11,27 +11,28 @@ tags:
   - startTime
 translation_of: Web/API/Animation/startTime
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p><span id="result_box" lang="es"><span>La propiedad <strong><code>Animation.startTime</code></strong> de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.</span></span></p>
+La propiedad **`Animation.startTime`** de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.
 
-<p>El  <strong>start time</strong> <strong>(tiempo de inicio)</strong> es el valor de tiempo de su {{domxref("timeline", "DocumentTimeline")}}cuando su objetivo {{domxref("KeyframeEffect")}} está programado para comenzar la reproducción. <span id="result_box" lang="es"><span>El </span></span><strong>start time</strong> <strong>(tiempo de inicio)</strong><span lang="es"><span> de una animación inicialmente no está resuelto (lo que significa que es <code>null</code> porque no tiene valor).</span></span></p>
+El **start time** **(tiempo de inicio)** es el valor de tiempo de su {{domxref("timeline", "DocumentTimeline")}}cuando su objetivo {{domxref("KeyframeEffect")}} está programado para comenzar la reproducción. El **start time** **(tiempo de inicio)** de una animación inicialmente no está resuelto (lo que significa que es `null` porque no tiene valor).
 
-<h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>animationStartedWhen</em> = <em>Animation</em>.startTime;
+    var animationStartedWhen = Animation.startTime;
 
-<em>Animation</em>.startTime = <em>newStartTime</em>;</pre>
+    Animation.startTime = newStartTime;
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un número de punto flotante que representa el tiempo actual en milisegundos, o nulo si no se establece ningún valor de  tiempo. Puede leer este valor para determinar en qué momento está establecido el punto de inicio, y puede modificarlo para que la animación comience en un momento diferente.</p>
+Un número de punto flotante que representa el tiempo actual en milisegundos, o nulo si no se establece ningún valor de tiempo. Puede leer este valor para determinar en qué momento está establecido el punto de inicio, y puede modificarlo para que la animación comience en un momento diferente.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010">Running on Web Animations API example</a>, podemos sincronizar todos los nuevos gatos animados dándoles el mismo tiempo de inicio <code>startTime</code> que el gato original:</p>
+En el ejemplo [Running on Web Animations API example](http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), podemos sincronizar todos los nuevos gatos animados dándoles el mismo tiempo de inicio `startTime` que el gato original:
 
-<pre class="brush: js">var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+```js
+var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
 
 /* Una función que crea nuevos gatos. */
 function addCat(){
@@ -48,39 +49,26 @@ function animateNewCatWithWAAPI() {
   // Animar a dicho gato con la función "animate" de WAAPI
   var newAnimationPlayer = newCat.animate(keyframes, timing);
 
-  // Establece que el punto de inicio de la animación sea el mismo que el original<code class="language-js"><span class="comment token"> .cat#withWAAPI</span></code>
-  newAnimationPlayer.startTime = catRunning.startTime;<em><strong>
-</strong></em>
+  // Establece que el punto de inicio de la animación sea el mismo que el original .cat#withWAAPI
+  newAnimationPlayer.startTime = catRunning.startTime;
+
   // Agrega el gato a la pila.
   WAAPICats.appendChild(newCat);
 }
-</pre>
+```
 
-<h2 id="Especificaciones"><span class="highlight-span"><span class="highlight-span">Especificaciones</span></span></h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-starttime', 'Animation.startTime' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                               | Comment         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------- |
+| {{SpecName('Web Animations', '#dom-animation-starttime', 'Animation.startTime' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
 
-<h2 id="Compatibilidad_del_navegador"><span class="highlight-span"><span class="highlight-span">Compatibilidad del navegador</span></span></h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.startTime")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;"><span class="highlight-span">Ver también</span></h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>{{domxref("Animation.currentTime")}} para el tiempo actual de la animación.</li>
-</ul>
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("Animation.currentTime")}} para el tiempo actual de la animación.

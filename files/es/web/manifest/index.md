@@ -3,11 +3,12 @@ title: Web App Manifest
 slug: Web/Manifest
 translation_of: Web/Manifest
 ---
-<p>El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear <a href="/en-US/docs/Web/Apps/Progressive">progressive web apps</a>: aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)</p>
+El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear [progressive web apps](/es/docs/Web/Apps/Progressive): aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)
 
-<h2 id="Manifiesto_de_ejemplo">Manifiesto de ejemplo</h2>
+## Manifiesto de ejemplo
 
-<pre class="brush: json notranslate">{
+```json
+{
   "name": "Google I/O 2015",
   "short_name": "I/O 2015",
   "start_url": "./?utm_source=web_app_manifest",
@@ -43,95 +44,72 @@ translation_of: Web/Manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.google.samples.apps.iosched"
   }]
-}</pre>
+}
+```
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<h3 id="background_color"><code>background_color</code></h3>
+### `background_color`
 
-<p>Define el color de fondo deseado para la aplicación. Este valor repite lo definido en la hoja de estilos de la aplicación, pero puede ser utilizado por los navegadores para pintar el color de fondo de una app si el manifiesto está disponible antes de que la hoja de estilos se haya cargado. Esto suaviza la transición entre lanzar una aplicación y cargar el contenido de la misma.</p>
+Define el color de fondo deseado para la aplicación. Este valor repite lo definido en la hoja de estilos de la aplicación, pero puede ser utilizado por los navegadores para pintar el color de fondo de una app si el manifiesto está disponible antes de que la hoja de estilos se haya cargado. Esto suaviza la transición entre lanzar una aplicación y cargar el contenido de la misma.
 
-<pre class="brush: json notranslate">"background_color": "red"</pre>
+```json
+"background_color": "red"
+```
 
-<div class="note">
-<p><strong>Note</strong>: El <code>background_color</code> únicamente está destinado a mejorar la experiencia de usuario mientras se carga la aplicación y no se debe usar como color de fondo cuando la hoja de estilos de la aplicación esté disponible.</p>
-</div>
+> **Nota:** El `background_color` únicamente está destinado a mejorar la experiencia de usuario mientras se carga la aplicación y no se debe usar como color de fondo cuando la hoja de estilos de la aplicación esté disponible.
 
-<h3 id="description"><code>description</code></h3>
+### `description`
 
-<p>Proporciona una descripción general sobre qué hace la aplicación.</p>
+Proporciona una descripción general sobre qué hace la aplicación.
 
-<pre class="brush: json notranslate">"description": "The app that helps you find the best food in town!"</pre>
+```json
+"description": "The app that helps you find the best food in town!"
+```
 
-<h3 id="dir"><code>dir</code></h3>
+### `dir`
 
-<p>Especifica la dirección del texto para <code>name</code>, <code>short_name</code>, y <code>description</code>. Junto con <code>lang</code>, ayuda a representar correctamente los idiomas que se escriben de derecha a izquierda (right-to-left).</p>
+Especifica la dirección del texto para `name`, `short_name`, y `description`. Junto con `lang`, ayuda a representar correctamente los idiomas que se escriben de derecha a izquierda (right-to-left).
 
-<pre class="brush: json notranslate" dir="rtl">"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"short_name": "أنا من التطبيق!"</pre>
+"short_name": "أنا من التطبيق!"
+```
 
-<p>Puede tener uno de los siguentes valores:</p>
+Puede tener uno de los siguentes valores:
 
-<ul>
- <li><code>ltr</code> (izquierda a derecha)</li>
- <li><code>rtl</code> (derecha a izquierda)</li>
- <li><code>auto</code> (indica al navegador que use el algoritmo Unicode bidirectional para hacer una estimación apropiada sobre la dirección del texto.)</li>
-</ul>
+- `ltr` (izquierda a derecha)
+- `rtl` (derecha a izquierda)
+- `auto` (indica al navegador que use el algoritmo Unicode bidirectional para hacer una estimación apropiada sobre la dirección del texto.)
 
-<div class="note">
-<p><strong>Note</strong>: Cuando se omite este valor, por defecto es <code>auto</code>.</p>
-</div>
+> **Nota:** Cuando se omite este valor, por defecto es `auto`.
 
-<h3 id="display"><code>display</code></h3>
+### `display`
 
-<p>Define el modo de visualización preferido para la aplicación web.</p>
+Define el modo de visualización preferido para la aplicación web.
 
-<pre class="brush: json notranslate">"display": "standalone"</pre>
+```json
+"display": "standalone"
+```
 
-<p>Los valores aceptados son:</p>
+Los valores aceptados son:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Display Mode</th>
-   <th scope="col">Description</th>
-   <th scope="col">Fallback Display Mode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>fullscreen</code></td>
-   <td>Se utiliza toda la pantalla disponible no se muestran elementos del user agent {{Glossary("chrome")}}.</td>
-   <td><code>standalone</code></td>
-  </tr>
-  <tr>
-   <td><code>standalone</code></td>
-   <td>La aplicación se mostrará como una app independiente. Así la aplicación puede tener su propia ventana, su propio icono en el lanzador de aplicaciones, etc. En este modo, the user agent excluirá los elementos de interfaz para controlar la navegación, pero puede incluir otros elementos como la barra de estado.</td>
-   <td><code>minimal-ui</code></td>
-  </tr>
-  <tr>
-   <td><code>minimal-ui</code></td>
-   <td>La aplicación se mostrará como una app independiente, pero tendrá un mínimo de elementos de interfaz para controlar la navegación. Estos elementos podrán variar según navegador.</td>
-   <td><code>browser</code></td>
-  </tr>
-  <tr>
-   <td><code>browser</code></td>
-   <td>La aplicación se abrirá en una pestaña nueva del navegador o una ventana nueva, dependiendo del navegador y plataforma. Esto es por defecto. </td>
-   <td>(None)</td>
-  </tr>
- </tbody>
-</table>
+| Display Mode | Description                                                                                                                                                                                                                                                                                                           | Fallback Display Mode |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `fullscreen` | Se utiliza toda la pantalla disponible no se muestran elementos del user agent {{Glossary("chrome")}}.                                                                                                                                                                                                          | `standalone`          |
+| `standalone` | La aplicación se mostrará como una app independiente. Así la aplicación puede tener su propia ventana, su propio icono en el lanzador de aplicaciones, etc. En este modo, the user agent excluirá los elementos de interfaz para controlar la navegación, pero puede incluir otros elementos como la barra de estado. | `minimal-ui`          |
+| `minimal-ui` | La aplicación se mostrará como una app independiente, pero tendrá un mínimo de elementos de interfaz para controlar la navegación. Estos elementos podrán variar según navegador.                                                                                                                                     | `browser`             |
+| `browser`    | La aplicación se abrirá en una pestaña nueva del navegador o una ventana nueva, dependiendo del navegador y plataforma. Esto es por defecto.                                                                                                                                                                          | (None)                |
 
-<div class="note">
-<p><strong>Note</strong>: Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica <a href="/docs/Web/CSS/@media/display-mode">display-mode</a>. Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.</p>
-</div>
+> **Nota:** Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
 
-<h3 id="icons"><code>icons</code></h3>
+### `icons`
 
-<p>Especifica un <em>array</em> de imágenes que pueden servir como iconos de aplicación en diferentes contextos. Por ejemplo, se pueden utilizar para representar la aplicación entre un listado de aplicaciones, o para integrar la aplicación web con un gestor de tareas del sistema operativo y/o las preferencias del sistema.</p>
+Especifica un _array_ de imágenes que pueden servir como iconos de aplicación en diferentes contextos. Por ejemplo, se pueden utilizar para representar la aplicación entre un listado de aplicaciones, o para integrar la aplicación web con un gestor de tareas del sistema operativo y/o las preferencias del sistema.
 
-<pre class="brush: json notranslate">"icons": [
+```json
+"icons": [
   {
     "src": "icon/lowres.webp",
     "sizes": "48x48",
@@ -149,79 +127,68 @@ translation_of: Web/Manifest
     "src": "icon/hd_hi.svg",
     "sizes": "72x72"
   }
-]</pre>
+]
+```
 
-<p>Los objetos de imagen pueden contener los siguientes valores:</p>
+Los objetos de imagen pueden contener los siguientes valores:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>sizes</code></td>
-   <td>Una cadena que contiene separados por espacios las dimensiones de la imagen. </td>
-  </tr>
-  <tr>
-   <td><code>src</code></td>
-   <td>La ruta de acceso al archivo de imagen.</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>A hint as to the media type of the image.The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support.</td>
-  </tr>
- </tbody>
-</table>
+| Member  | Description                                                                                                                                               |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sizes` | Una cadena que contiene separados por espacios las dimensiones de la imagen.                                                                              |
+| `src`   | La ruta de acceso al archivo de imagen.                                                                                                                   |
+| `type`  | A hint as to the media type of the image.The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support. |
 
-<h3 id="lang"><code>lang</code></h3>
+### `lang`
 
-<p>Especifica el idioma principal para in the <code>name</code> and <code>short_name</code> members. This value is a string containing a single language tag.</p>
+Especifica el idioma principal para in the `name` and `short_name` members. This value is a string containing a single language tag.
 
-<pre class="brush: json notranslate">"lang": "en-US"</pre>
+```json
+"lang": "en-US"
+```
 
-<h3 id="name"><code>name</code></h3>
+### `name`
 
-<p>Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.</p>
+Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.
 
-<pre class="brush: json notranslate">"name": "Google I/O 2015" </pre>
+```json
+"name": "Google I/O 2015"
+```
 
-<h3 id="orientation"><code>orientation</code></h3>
+### `orientation`
 
-<p>Define la orientación por defecto for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
+Define la orientación por defecto for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
-<pre class="brush: json notranslate"><code>​​"orientation": "portrait-primary"</code></pre>
+```json
+​​"orientation": "portrait-primary"
+```
 
-<p>Orientation puede ser alguno de los siguentes valores:</p>
+Orientation puede ser alguno de los siguentes valores:
 
-<ul>
- <li><code>any</code></li>
- <li><code>natural</code></li>
- <li><code>landscape</code></li>
- <li><code>landscape-primary</code></li>
- <li><code>landscape-secondary</code></li>
- <li><code>portrait</code></li>
- <li><code>portrait-primary</code></li>
- <li><code>portrait-secondary</code></li>
-</ul>
+- `any`
+- `natural`
+- `landscape`
+- `landscape-primary`
+- `landscape-secondary`
+- `portrait`
+- `portrait-primary`
+- `portrait-secondary`
 
-<h3 id="prefer_related_applications"><code>prefer_related_applications</code></h3>
+### `prefer_related_applications`
 
-<p>Especifica un valor booleano que sugiere que el agente de usuario le indique al usuario que las aplicaciones específicas relacionadas (ver abajo) están disponibles, y recomendadas sobre la aplicación web. Esto solamente debería ser usado si la aplicación nativa relacionada realmente ofrece algo que la aplicación web no puede hacer.  </p>
+Especifica un valor booleano que sugiere que el agente de usuario le indique al usuario que las aplicaciones específicas relacionadas (ver abajo) están disponibles, y recomendadas sobre la aplicación web. Esto solamente debería ser usado si la aplicación nativa relacionada realmente ofrece algo que la aplicación web no puede hacer.
 
-<pre class="brush: json notranslate">"prefer_related_applications": false</pre>
+```json
+"prefer_related_applications": false
+```
 
-<div class="note">
-<p><strong>Note</strong>: Si se omite, el valor por defecto es <code>false</code>.</p>
-</div>
+> **Nota:** Si se omite, el valor por defecto es `false`.
 
-<h3 id="related_applications"><code>related_applications</code></h3>
+### `related_applications`
 
-<p>Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.</p>
+Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.
 
-<pre class="brush: json notranslate">"related_applications": [
+```json
+"related_applications": [
   {
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
@@ -229,83 +196,63 @@ translation_of: Web/Manifest
   }, {
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
-  }]</pre>
+  }]
+```
 
-<p>Los objetos Application pueden contener los siguientes valores:</p>
+Los objetos Application pueden contener los siguientes valores:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>platform</code></td>
-   <td>The platform on which the application can be found.</td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>The URL at which the application can be found.</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>The ID used to represent the application on the specified platform.</td>
-  </tr>
- </tbody>
-</table>
+| Member     | Description                                                         |
+| ---------- | ------------------------------------------------------------------- |
+| `platform` | The platform on which the application can be found.                 |
+| `url`      | The URL at which the application can be found.                      |
+| `id`       | The ID used to represent the application on the specified platform. |
 
-<h3 id="scope"><code>scope</code></h3>
+### `scope`
 
-<p>Define el ámbito de navegación en el contexto de la aplicación web. Esto basicamente restringe qué paginas se pueden ver cuando se aplica el manifiesto. Si el usuario navega fuera del ámbito de la aplicación, continúa como en una web normal. </p>
+Define el ámbito de navegación en el contexto de la aplicación web. Esto basicamente restringe qué paginas se pueden ver cuando se aplica el manifiesto. Si el usuario navega fuera del ámbito de la aplicación, continúa como en una web normal.
 
-<pre class="brush: json notranslate">"scope": "/myapp/"</pre>
+```json
+"scope": "/myapp/"
+```
 
-<h3 id="short_name"><code>short_name</code></h3>
+### `short_name`
 
-<p>Proporciona un nombre corto para la aplicación. Está destinado para su uso cuando hay poco espacio para mostrar el nombre completo de la aplicación.</p>
+Proporciona un nombre corto para la aplicación. Está destinado para su uso cuando hay poco espacio para mostrar el nombre completo de la aplicación.
 
-<pre class="brush: json notranslate">"short_name": "I/O 2015"
-</pre>
+```json
+"short_name": "I/O 2015"
+```
 
-<h3 id="start_url"><code>start_url</code></h3>
+### `start_url`
 
-<p>Especifica la URL que se carga cuando el usuario lanza la aplicación desde un dispositivo. </p>
+Especifica la URL que se carga cuando el usuario lanza la aplicación desde un dispositivo.
 
-<pre class="brush: json notranslate">"start_url": "./?utm_source=web_app_manifest"</pre>
+```json
+"start_url": "./?utm_source=web_app_manifest"
+```
 
-<h3 id="theme_color"><code>theme_color</code></h3>
+### `theme_color`
 
-<p>Define el color por defecto para la aplicación. Esto en ocasiones afecta a como se muestra por el OS (e.g., en el lanzador de aplicaciones de Android, el color envuelve la aplicación).  </p>
+Define el color por defecto para la aplicación. Esto en ocasiones afecta a como se muestra por el OS (e.g., en el lanzador de aplicaciones de Android, el color envuelve la aplicación).
 
-<pre class="brush: json notranslate">"theme_color": "aliceblue"</pre>
+```json
+"theme_color": "aliceblue"
+```
 
-<h2 id="Splash_screens">Splash screens</h2>
+## Splash screens
 
-<p>En Chrome 47 y posteriores, se muestra una pantalla de bienvenida para las aplicaciones web que se inician desde la pantalla de inicio. Esta pantalla de bienvenida se genera de automáticamente mediante las propiedades del manifiesto de la aplicación web, especificamente: <code>name</code>, <code>background_color</code>, y el icono de la lista <code>icons</code> que sea el más cercano a los 128dpi para el dispositivo.</p>
+En Chrome 47 y posteriores, se muestra una pantalla de bienvenida para las aplicaciones web que se inician desde la pantalla de inicio. Esta pantalla de bienvenida se genera de automáticamente mediante las propiedades del manifiesto de la aplicación web, especificamente: `name`, `background_color`, y el icono de la lista `icons` que sea el más cercano a los 128dpi para el dispositivo.
 
-<h2 id="Tipo_Mime">Tipo Mime</h2>
+## Tipo Mime
 
-<p>Los manifiestos web se deben servir con el tipo MIME  <code>application/manifest+json</code>. Sin embargo, esto es opcional.  </p>
+Los manifiestos web se deben servir con el tipo MIME `application/manifest+json`. Sin embargo, esto es opcional.
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Manifest')}}</td>
-   <td>{{Spec2('Manifest')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                    | Status                       | Comment             |
+| -------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Initial definition. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("html.manifest")}}

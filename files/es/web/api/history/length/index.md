@@ -12,45 +12,25 @@ tags:
   - historial
 translation_of: Web/API/History/length
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p><span class="seoSummary">La propiedad de sólo lectura <code><strong>History.length</strong></code> retorna un entero representando el número de elementos en el historial de la sesión, incluyendo la página cargada actualmente. Por ejemplo, para una página cargada en una nueva pestaña esta propiedad retorna</span> <code>1</code>.</p>
+La propiedad de sólo lectura **`History.length`** retorna un entero representando el número de elementos en el historial de la sesión, incluyendo la página cargada actualmente. Por ejemplo, para una página cargada en una nueva pestaña esta propiedad retorna `1`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">const <em>length</em> = history.length
-</pre>
+    const length = history.length
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-history-length", "History.length")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambios desde {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-history-length", "History.length")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                           | Comentario                                          |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#dom-history-length", "History.length")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#dom-history-length", "History.length")}}     | {{Spec2('HTML5 W3C')}}     | Definición Inicial.                                 |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
+{{Compat("api.History.length")}}
 
+## Mira también
 
-<p>{{Compat("api.History.length")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>La interfaz {{domxref("History")}} a la que pertenece.</li>
-</ul>
+- La interfaz {{domxref("History")}} a la que pertenece.

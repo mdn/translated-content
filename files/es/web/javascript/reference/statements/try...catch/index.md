@@ -9,136 +9,136 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La declaración <strong><code>try...catch</code></strong> señala un bloque de instrucciones a intentar (<strong><code>try</code></strong>), y especifica una respuesta si se produce una excepción (<strong><code>catch</code></strong>).</p>
+La declaración **`try...catch`** señala un bloque de instrucciones a intentar (**`try`**), y especifica una respuesta si se produce una excepción (**`catch`**).
 
-<div>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">try {
-   <em>try_statements</em>
-}
-[catch (<em>exception_var_1</em> if <em>condition_1</em>) { // non-standard
-   <em>catch_statements_1</em>
-}]
-...
-[catch (<em>exception_var_2</em>) {
-   <em>catch_statements_2</em>
-}]
-[finally {
-   <em>finally_statements</em>
-}]
-</pre>
+    try {
+       try_statements
+    }
+    [catch (exception_var_1 if condition_1) { // non-standard
+       catch_statements_1
+    }]
+    ...
+    [catch (exception_var_2) {
+       catch_statements_2
+    }]
+    [finally {
+       finally_statements
+    }]
 
-<dl>
- <dt><code>try_statements</code></dt>
- <dd>Las sentencias que serán ejecutadas.</dd>
-</dl>
+- `try_statements`
+  - : Las sentencias que serán ejecutadas.
 
-<dl>
- <dt><code>catch_statements_1</code>, <code>catch_statements_2</code></dt>
- <dd>Sentencias que se ejecutan si una excepción es lanzada en el bloque <code>try</code>.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
- <dd>Identificador que contiene un objeto de excepcion asociado a la cláusula <code>catch</code>.</dd>
-</dl>
+- `catch_statements_1`, `catch_statements_2`
+  - : Sentencias que se ejecutan si una excepción es lanzada en el bloque `try`.
 
-<dl>
- <dt><code>condition_1</code></dt>
- <dd>Una expresión condicional.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>finally_statements</code></dt>
- <dd>Sentencias que se ejecutan después de que se completa la declaración <code>try</code> . Estas sentencias se ejecutan independientemente de si una excepcion fue lanzada o capturada.</dd>
-</dl>
+- `exception_var_1`, `exception_var_2`
+  - : Identificador que contiene un objeto de excepcion asociado a la cláusula `catch`.
 
-<h2 id="Descripción">Descripción</h2>
+<!---->
 
-<p>La sentencia <code>try</code> consiste en un bloque <code>try</code> que contiene una o más sentencias. Las llaves <code>{}</code> se deben utilizar siempre<code>,</code> incluso para una bloques de una sola sentencia. Al menos un bloque <code>catch</code> o un bloque <code>finally</code> debe estar presente. Esto nos da tres formas posibles para la sentencia <code>try</code>:</p>
+- `condition_1`
+  - : Una expresión condicional.
 
-<ol>
- <li><code>try...catch</code></li>
- <li><code>try...finally</code></li>
- <li><code>try...catch...finally</code></li>
-</ol>
+<!---->
 
-<p>Un bloque <code>catch</code> contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque <code>try</code>. Si cualquier sentencia dentro del bloque <code>try</code> (o en una funcion llamada desde dentro del bloque <code>try</code>) lanza una excepción, el control cambia inmediatamente al bloque <code>catch</code> . Si no se lanza ninguna excepcion en el bloque <code>try</code>, el bloque <code>catch</code> se omite.</p>
+- `finally_statements`
+  - : Sentencias que se ejecutan después de que se completa la declaración `try` . Estas sentencias se ejecutan independientemente de si una excepcion fue lanzada o capturada.
 
-<p>La bloque <code>finally</code> se ejecuta despues del bloque <code>try</code> y el/los bloque(s) <code>catch</code> hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.</p>
+## Descripción
 
-<p>Puede anidar una o más sentencias <code>try</code>. Si una sentencia <code>try</code> interna no tiene una bloque <code>catch</code>, se ejecuta el bloque <code>catch</code> de la sentencia <code>try</code> que la encierra.</p>
+La sentencia `try` consiste en un bloque `try` que contiene una o más sentencias. Las llaves `{}` se deben utilizar siempre`,` incluso para una bloques de una sola sentencia. Al menos un bloque `catch` o un bloque `finally` debe estar presente. Esto nos da tres formas posibles para la sentencia `try`:
 
-<p>Usted también puede usar la declaración <code>try</code> para manejar excepciones de JavaScript. Consulte la <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía de JavaScript</a> para obtener mayor información sobre excepciones de JavaScript.<br>
-  </p>
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
-<h3 id="Bloque_catch_incondicional">Bloque catch incondicional</h3>
+Un bloque `catch` contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque `try`. Si cualquier sentencia dentro del bloque `try` (o en una funcion llamada desde dentro del bloque `try`) lanza una excepción, el control cambia inmediatamente al bloque `catch` . Si no se lanza ninguna excepcion en el bloque `try`, el bloque `catch` se omite.
 
-<p>Cuando solo se utiliza un bloque <code>catch</code>, el bloque <code>catch</code> es ejecutado cuando cualquier excepción es lanzada. Por ejemplo, cuando la excepción ocurre en el siguiente código, el control se transfiere a la cláusula <code>catch</code>.</p>
+La bloque `finally` se ejecuta despues del bloque `try` y el/los bloque(s) `catch` hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.
 
-<pre class="brush: js">try {
+Puede anidar una o más sentencias `try`. Si una sentencia `try` interna no tiene una bloque `catch`, se ejecuta el bloque `catch` de la sentencia `try` que la encierra.
+
+Usted también puede usar la declaración `try` para manejar excepciones de JavaScript. Consulte la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) para obtener mayor información sobre excepciones de JavaScript.
+
+### Bloque catch incondicional
+
+Cuando solo se utiliza un bloque `catch`, el bloque `catch` es ejecutado cuando cualquier excepción es lanzada. Por ejemplo, cuando la excepción ocurre en el siguiente código, el control se transfiere a la cláusula `catch`.
+
+```js
+try {
    throw "myException"; // genera una excepción
 }
 catch (e) {
    // sentencias para manejar cualquier excepción
    logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
 }
-</pre>
+```
 
-<p>El bloque <code>catch</code> especifíca un identificador ( <code>e</code> en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque<code> catch</code></p>
+El bloque `catch` especifíca un identificador ( `e` en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque` catch`
 
-<h3 id="Bloques_catch_condicionales">Bloques catch condicionales</h3>
+### Bloques catch condicionales
 
-<p>Tambien se pueden crear "bloques <code>catch</code> condicionales", combinando bloques <code>try...catch</code> con estructuras  <code>if...else if...else</code> como estas:</p>
+Tambien se pueden crear "bloques `catch` condicionales", combinando bloques `try...catch` con estructuras `if...else if...else` como estas:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-    <span class="function token">myroutine</span><span class="punctuation token">();<code class="language-js"><span class="comment token">  </span></code></span><span class="comment token">// puede lanzar tres tipos de excepciones</span><span class="punctuation token"><code class="language-js">
-</code>}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">e</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>e <span class="keyword token">instanceof</span> <span class="class-name token">TypeError</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="comment token">// sentencias para manejar excepciones TypeError</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>e <span class="keyword token">instanceof</span> <span class="class-name token">RangeError</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="comment token">// sentencias para manejar excepciones RangeError</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>e <span class="keyword token">instanceof</span> <span class="class-name token">EvalError</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="comment token">// sentencias para manejar excepciones EvalError</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-       <span class="comment token">// sentencias para manejar cualquier excepción no especificada</span>
-       <span class="function token">logMyErrors</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// </span><span class="punctuation token">pasa el objeto de la excepción al manejador de errores</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+try {
+    myroutine();  // puede lanzar tres tipos de excepciones
+} catch (e) {
+    if (e instanceof TypeError) {
+        // sentencias para manejar excepciones TypeError
+    } else if (e instanceof RangeError) {
+        // sentencias para manejar excepciones RangeError
+    } else if (e instanceof EvalError) {
+        // sentencias para manejar excepciones EvalError
+    } else {
+       // sentencias para manejar cualquier excepción no especificada
+       logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
+}
+```
 
-<h3 id="The_exception_identifier" name="The_exception_identifier">El identificador de excepciones</h3>
+### El identificador de excepciones
 
-<p>Cuando una excepción es lanzada en el bloque <code>try</code>, <code><em>exception_var</em></code> (por ejemplo, la <code>e</code> en <code>catch (e)</code>) guarda el valor de la excepción. Se puede usar éste identificador para obtener información acerca de la excepción que fue lanzada. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque<code> catch.</code></p>
+Cuando una excepción es lanzada en el bloque `try`, `exception_var` (por ejemplo, la `e` en `catch (e)`) guarda el valor de la excepción. Se puede usar éste identificador para obtener información acerca de la excepción que fue lanzada. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque` catch.`
 
-<pre class="brush: js">function isValidJSON(text) {
+```js
+function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
   } catch {
     return false;
   }
-}</pre>
+}
+```
 
-<h3 id="The_finally_clause" name="The_finally_clause">La cláusula <code>finally</code></h3>
+### La cláusula `finally`
 
-<p>La cláusula <code>finally</code> contiene sentencias a ejecutarse después de que las cláusulas <code>try</code> y <code>catch</code> se ejecuten, pero antes de las sentencias que le siguen al bloque <code>try..catch..finally</code>. Note que la cláusula <code>finally</code> se ejecuta sin importar si una excepción es o no lanzada. Si una excepción es lanzada, las instrucciones en la cláusula <code>finally</code> se ejecutan incluso si ninguna cláusula <code>catch</code> maneja la excepción.</p>
+La cláusula `finally` contiene sentencias a ejecutarse después de que las cláusulas `try` y `catch` se ejecuten, pero antes de las sentencias que le siguen al bloque `try..catch..finally`. Note que la cláusula `finally` se ejecuta sin importar si una excepción es o no lanzada. Si una excepción es lanzada, las instrucciones en la cláusula `finally` se ejecutan incluso si ninguna cláusula `catch` maneja la excepción.
 
-<p>Usted puede usar la cláusula finally para hacer que su script falle plácidamente cuando una excepción ocurra; por ejemplo, para hacer una limpieza general, usted puede necesitar liberar un recurso que su script haya retenido.</p>
+Usted puede usar la cláusula finally para hacer que su script falle plácidamente cuando una excepción ocurra; por ejemplo, para hacer una limpieza general, usted puede necesitar liberar un recurso que su script haya retenido.
 
-<p>Puede parecer extraño tener una cláusula relacionada a una excepción que se ejecuta sin importar si hay una excepción o no, pero esta concepción en realidad sirve a un propósito. El punto importante no es que la cláusula <code>finally</code> siempre se ejecuta, si no más bien que el codigo ordinario que le sigue a <code>try..catch</code> no.</p>
+Puede parecer extraño tener una cláusula relacionada a una excepción que se ejecuta sin importar si hay una excepción o no, pero esta concepción en realidad sirve a un propósito. El punto importante no es que la cláusula `finally` siempre se ejecuta, si no más bien que el codigo ordinario que le sigue a `try..catch` no.
 
-<p>Por ejemplo, si otra excepción ocurre dentro de un bloque <code>catch</code> de una declaración <code>try</code>, cualquier codigo restante en el mismo bloque exterior <code>try</code> que encierra ese <code>try..catch</code> (o en el flujo principal, si no es un bloque <code>try</code> exterior) , no será ejecutado, dado que el control es inmediatamente transferido al bloque <code>catch</code> del <code>try</code> exterior (o el generador de error interno, si no es en un bloque <code>try</code>).</p>
+Por ejemplo, si otra excepción ocurre dentro de un bloque `catch` de una declaración `try`, cualquier codigo restante en el mismo bloque exterior `try` que encierra ese `try..catch` (o en el flujo principal, si no es un bloque `try` exterior) , no será ejecutado, dado que el control es inmediatamente transferido al bloque `catch` del `try` exterior (o el generador de error interno, si no es en un bloque `try`).
 
-<p>Por lo tanto, cualquier rutina de limpieza hecha en esa sección encerrada (o la principal) antes de que exista, será saltada. Sin embargo, si la declaración <code>try</code> tiene un bloque <code>finally</code>, entonces el código de ese bloque <code>finally</code> será ejecutado primero para permitir tal limpieza, y ENTONCES el bloque <code>catch</code> de la otra declaración <code>try</code> (o el generador de error) tomará el control para manejar la segunda excepción.</p>
+Por lo tanto, cualquier rutina de limpieza hecha en esa sección encerrada (o la principal) antes de que exista, será saltada. Sin embargo, si la declaración `try` tiene un bloque `finally`, entonces el código de ese bloque `finally` será ejecutado primero para permitir tal limpieza, y ENTONCES el bloque `catch` de la otra declaración `try` (o el generador de error) tomará el control para manejar la segunda excepción.
 
-<p>Ahora, si esa rutina de limpieza debiera ser hecha ya sea que el código del <code>try..catch</code> tenga éxito o no, entonces si el bloque <code>finally</code> se ejecutase solo después de una excepción, el mismo código de limpieza tendría que estar presente dentro y fuera del bloque <code>finally</code>, y por lo tanto no hay razón para no tener el bloque <code>finally</code> solo, y dejarlo ejecutarse sin importar si hay excepciones o no.</p>
+Ahora, si esa rutina de limpieza debiera ser hecha ya sea que el código del `try..catch` tenga éxito o no, entonces si el bloque `finally` se ejecutase solo después de una excepción, el mismo código de limpieza tendría que estar presente dentro y fuera del bloque `finally`, y por lo tanto no hay razón para no tener el bloque `finally` solo, y dejarlo ejecutarse sin importar si hay excepciones o no.
 
-<p>El siguiente ejemplo abre un archivo y despues ejecuta sentencias que usan el archivo (JavaScript del lado del servidor permite acceder a archivos). Si una excepción es lanzada mientras el archivo está abierto, la cláusula <code>finally</code> cierra el archivo antes de que el script falle. El código en <code>finally</code> también se ejecuta después de un retorno explícito de los bloques <code>try</code> o <code>catch</code>.</p>
+El siguiente ejemplo abre un archivo y despues ejecuta sentencias que usan el archivo (JavaScript del lado del servidor permite acceder a archivos). Si una excepción es lanzada mientras el archivo está abierto, la cláusula `finally` cierra el archivo antes de que el script falle. El código en `finally` también se ejecuta después de un retorno explícito de los bloques `try` o `catch`.
 
-<pre class="brush: js">openMyFile()
+```js
+openMyFile()
 try {
    // retiene un recurso
    writeMyFile(theData);
@@ -146,110 +146,116 @@ try {
 finally {
    closeMyFile(); // siempre cierra el recurso
 }
-</pre>
+```
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="The_finally_clause" name="The_finally_clause">Bloques try anidados</h3>
+### Bloques try anidados
 
-<p>Primero, veamos que pasa con esto:</p>
+Primero, veamos que pasa con esto:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'oops'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">finally</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'finally'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
-<span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'outer'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+try {
+  try {
+    throw new Error('oops');
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
 
-<span class="comment token">// Output:</span>
-<span class="comment token">// "finally"</span>
-<span class="comment token">// "outer" "oops"</span></code></pre>
+// Output:
+// "finally"
+// "outer" "oops"
+```
 
-<p>Ahora, si nosotros ya capturamos la excepción en una declaración try interna agregando un bloque catch.</p>
+Ahora, si nosotros ya capturamos la excepción en una declaración try interna agregando un bloque catch.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'oops'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'inner'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">finally</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'finally'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
-<span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'outer'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
 
-<span class="comment token">// Output:</span>
-<span class="comment token">// "inner" "oops"</span>
-<span class="comment token">// "finally"</span></code></pre>
+// Output:
+// "inner" "oops"
+// "finally"
+```
 
-<p>Y ahora vamos a relanzar el error.</p>
+Y ahora vamos a relanzar el error.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'oops'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'inner'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">throw</span> ex<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">finally</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'finally'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
-<span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'outer'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+    throw ex;
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
 
-<span class="comment token">// Output:</span>
-<span class="comment token">// "inner" "oops"</span>
-<span class="comment token">// "finally"</span>
-<span class="comment token">// "outer" "oops"</span></code></pre>
+// Output:
+// "inner" "oops"
+// "finally"
+// "outer" "oops"
+```
 
-<p>Cualquier excepción dada será capturada solo una vez por el bloque catch más cercano a menos que sea relanzado. Por supuesto cualquier nueva excepción que se origine en el bloque 'interno' (porque el código en el bloque catch puede hacer algo que lanze un error), será capturado por el bloque 'externo'.</p>
+Cualquier excepción dada será capturada solo una vez por el bloque catch más cercano a menos que sea relanzado. Por supuesto cualquier nueva excepción que se origine en el bloque 'interno' (porque el código en el bloque catch puede hacer algo que lanze un error), será capturado por el bloque 'externo'.
 
-<h3 id="Retornando_de_un_bloque_finally">Retornando de un bloque finally</h3>
+### Retornando de un bloque finally
 
-<p>Si el bloque <code>finally</code> retorna un valor, este valor se convierte en el valor de retorno de toda la producción <code>try-catch-finally</code>, a pesar de cualquier sentencia <code>return</code> en los bloques <code>try</code> y <code>catch</code>. Esto incluye excepciones lanzadas dentro del bloque catch.</p>
+Si el bloque `finally` retorna un valor, este valor se convierte en el valor de retorno de toda la producción `try-catch-finally`, a pesar de cualquier sentencia `return` en los bloques `try` y `catch`. Esto incluye excepciones lanzadas dentro del bloque catch.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    <span class="keyword token">try</span> <span class="punctuation token">{</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'oops'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'inner'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">throw</span> ex<span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">finally</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'finally'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">return</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'outer'</span><span class="punctuation token">,</span> ex<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+(function() {
+  try {
+    try {
+      throw new Error('oops');
+    }
+    catch (ex) {
+      console.error('inner', ex.message);
+      throw ex;
+    }
+    finally {
+      console.log('finally');
+      return;
+    }
+  }
+  catch (ex) {
+    console.error('outer', ex.message);
+  }
+})();
 
-<span class="comment token">// Output:</span>
-<span class="comment token">// "inner" "oops"</span>
-<span class="comment token">// "finally"</span></code></pre>
+// Output:
+// "inner" "oops"
+// "finally"
+```
 
-<p>El "oops" externo no es lanzado debido al retorno en el bloque finally. Lo mismo aplicaría para cualquier valor retornado del bloque catch.</p>
+El "oops" externo no es lanzado debido al retorno en el bloque finally. Lo mismo aplicaría para cualquier valor retornado del bloque catch.
 
-<p>Vea los ejemplos para {{jsxref("Sentencias/throw", "throw")}}.</p>
+Vea los ejemplos para {{jsxref("Sentencias/throw", "throw")}}.
 
-<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Sentencias/throw", "throw")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Sentencias/throw", "throw")}}

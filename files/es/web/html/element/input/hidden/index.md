@@ -13,111 +13,88 @@ tags:
 translation_of: Web/HTML/Element/input/hidden
 original_slug: Web/HTML/Elemento/input/hidden
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>"hidden"</strong></code> let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.</span></p>
+{{HTMLElement("input")}} elements of type **`"hidden"`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
-<div class="note">
-<p><strong>Note</strong>: Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.</p>
-</div>
+> **Nota:** Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.
 
-<div id="Basic_example">
-<pre class="brush: html">&lt;input id="prodId" name="prodId" type="hidden" value="xm234jq"&gt;</pre>
+```html
+<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+```
 
-<p>{{ EmbedLiveSample('Basic_example', 600, 40) }}</p>
-</div>
+{{ EmbedLiveSample('Basic_example', 600, 40) }}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>{{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>Ninguno.</td>
-  </tr>
-  <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>Ninguno.</td>
-  </tr>
- </tbody>
-</table>
+| **[Value](#value)**             | {{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor. |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Events**                      | Ninguno.                                                                                                     |
+| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}                                                     |
+| **IDL attributes**              | `value`                                                                                                      |
+| **Methods**                     | Ninguno.                                                                                                     |
 
-<h2 id="Valor_(Value)">Valor (Value)</h2>
+## Valor (Value)
 
-<p>El atributo {{htmlattrxref("value", "input")}} del elemento {{HTMLElement("input")}}  tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.</p>
+El atributo {{htmlattrxref("value", "input")}} del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
 
-<div class="warning">
-<p>Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en <code>hidden</code> inputs como una forma de seguridad.</p>
-</div>
+> **Advertencia:** Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
 
-<h2 id="Utilizando_hidden_inputs">Utilizando hidden inputs</h2>
+## Utilizando hidden inputs
 
-<p>Como se menciono anteriormente, las hidden inputs pueden ser utilizadas donde sea que se quiera incluir información del formulario que el usuario no pueda ver o modificar cuando sea enviado al servidor. Se mostrarán algunos ejemplos que ilustran su uso.</p>
+Como se menciono anteriormente, las hidden inputs pueden ser utilizadas donde sea que se quiera incluir información del formulario que el usuario no pueda ver o modificar cuando sea enviado al servidor. Se mostrarán algunos ejemplos que ilustran su uso.
 
-<h3 id="Seguimiento_de_contenido_editado">Seguimiento de contenido editado</h3>
+### Seguimiento de contenido editado
 
-<p>Uno de los usos más comunes para los hidden inputs es mantener un seguimiento de que registros de la base de datos necesitan actualizarse cuando un formulario de actualización es remitido. Un flujo de trabajo tipico se ve como:</p>
+Uno de los usos más comunes para los hidden inputs es mantener un seguimiento de que registros de la base de datos necesitan actualizarse cuando un formulario de actualización es remitido. Un flujo de trabajo tipico se ve como:
 
-<ol>
- <li>El usuario decide editar algún contenido sobre el cual tiene control, como una entrada de blog o la entrada de un producto. Comienza cuando se presiona el botón de editar.</li>
- <li>El contenido ha ser editado es tomado de la base de datos y cargados en un formulario HTML para permitir al usuario hacer cambios.</li>
- <li>Después de editar, el usuario remite el formulario y la información actualizada es envíada de vuelta al servidor para ser actualizada en el servidor.</li>
-</ol>
+1.  El usuario decide editar algún contenido sobre el cual tiene control, como una entrada de blog o la entrada de un producto. Comienza cuando se presiona el botón de editar.
+2.  El contenido ha ser editado es tomado de la base de datos y cargados en un formulario HTML para permitir al usuario hacer cambios.
+3.  Después de editar, el usuario remite el formulario y la información actualizada es envíada de vuelta al servidor para ser actualizada en el servidor.
 
-<p>La idea es que durante el paso 2, el ID del registro que se actualiza se mantenga en un hidden input. Cuando se envía el formulario en el paso 3, el ID se envía automáticamente al servidor con el contenido del registro. El ID permite que el componente de servidor del sitio sepa exactamente qué registro necesita ser actualizado con los datos enviados.</p>
+La idea es que durante el paso 2, el ID del registro que se actualiza se mantenga en un hidden input. Cuando se envía el formulario en el paso 3, el ID se envía automáticamente al servidor con el contenido del registro. El ID permite que el componente de servidor del sitio sepa exactamente qué registro necesita ser actualizado con los datos enviados.
 
-<p>Puede ver un ejemplo completo de como podría ser en la sección <a href="#examples">Examples</a> de abajo.</p>
+Puede ver un ejemplo completo de como podría ser en la sección [Examples](#examples) de abajo.
 
-<h3 id="Mejorando_la_seguridad_del_sitio_web">Mejorando la seguridad del sitio web</h3>
+### Mejorando la seguridad del sitio web
 
-<p>Hidden inputs también son usados para almacenar y enviar token de seguirdad o secretos (<em>secrets)</em>, con el propósito de mejorar la seguridad del sitio web. La idea básica es que si un usuario esta rellenando un formulario con información sensible, como un formulario en un sitio web bancario para transferir dinero a otra cuenta, el secreto que proporciona demostraría que son quienes dicen ser y que estan usando el formulario correcto para enviar la solicitud de transferencia.</p>
+Hidden inputs también son usados para almacenar y enviar token de seguirdad o secretos (_secrets)_, con el propósito de mejorar la seguridad del sitio web. La idea básica es que si un usuario esta rellenando un formulario con información sensible, como un formulario en un sitio web bancario para transferir dinero a otra cuenta, el secreto que proporciona demostraría que son quienes dicen ser y que estan usando el formulario correcto para enviar la solicitud de transferencia.
 
-<p>Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)">Cross Site Request Forgery (CSRF)</a>; prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.</p>
+Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como [Cross Site Request Forgery (CSRF)](</es/docs/Learn/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)>); prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.
 
-<div class="note">
-<p>Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.</p>
-</div>
+> **Nota:** Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.
 
-<h2 id="Validación">Validación</h2>
+## Validación
 
-<p>Hidden inputs no participan en la validación de restricciones; no son un valor real que deba ser restringido.</p>
+Hidden inputs no participan en la validación de restricciones; no son un valor real que deba ser restringido.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En el código de abajo se muestra como se puede implementar una versión simple de un formulario de actualización descrito anteriomente (ver <a href="#tracking_edited_content">Tracking edited content</a>), utilizando un hidden input para recordar el ID del registro ha ser editado.</p>
+En el código de abajo se muestra como se puede implementar una versión simple de un formulario de actualización descrito anteriomente (ver [Tracking edited content](#tracking_edited_content)), utilizando un hidden input para recordar el ID del registro ha ser editado.
 
-<p>El formulario HTML puede verse un como como este:</p>
+El formulario HTML puede verse un como como este:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="title"&gt;Título del artículo:&lt;/label&gt;
-    &lt;input type="text" id="titulo" name="titulo" value="Mi excelente artículo del blog"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="content"&gt;Contenido del artículo:&lt;/label&gt;
-    &lt;textarea id="contenido" name="contenido" cols="60" rows="5"&gt;
+```html
+<form>
+  <div>
+    <label for="title">Título del artículo:</label>
+    <input type="text" id="titulo" name="titulo" value="Mi excelente artículo del blog">
+  </div>
+  <div>
+    <label for="content">Contenido del artículo:</label>
+    <textarea id="contenido" name="contenido" cols="60" rows="5">
 Este es el contenido de mi excelente actículo del blog. ¡Espero lo disfrutes!
-    &lt;/textarea&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Actualizar artículo&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;input type="hidden" id="acticuloId" name="articuloId" value="34657"&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </div>
+  <div>
+    <button type="submit">Actualizar artículo</button>
+  </div>
+  <input type="hidden" id="acticuloId" name="articuloId" value="34657">
+</form>
+```
 
-<p>Añadiendo también unas líneas simples de CSS:</p>
+Añadiendo también unas líneas simples de CSS:
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -146,57 +123,35 @@ input, textarea {
 
 textarea {
   height: 60px;
-}</pre>
+}
+```
 
-<p>El servidor establecerá el valor del hidden input con el ID <code>"articuloID"</code> al ID del artículo en la base de datos antes de enviar el formulario al navegador del usuario, y se usará esa información cuando el formulario sea devuelto para saber que registro de la base de datos actualizar con la información modificada. No se necesitan scripts en el contenido para manejar esto.</p>
+El servidor establecerá el valor del hidden input con el ID `"articuloID"` al ID del artículo en la base de datos antes de enviar el formulario al navegador del usuario, y se usará esa información cuando el formulario sea devuelto para saber que registro de la base de datos actualizar con la información modificada. No se necesitan scripts en el contenido para manejar esto.
 
-<p>La salida se vería como:</p>
+La salida se vería como:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 200) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 200) }}
 
-<div class="note">
-<p><strong>Nota:</strong> Puede encontrar el ejemplo en GitHub (vea el <a href="https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html">código fuente</a>, y también <a href="https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html">veálo corriendo en vivo</a>).</p>
-</div>
+> **Nota:** Puede encontrar el ejemplo en GitHub (vea el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), y también [veálo corriendo en vivo](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
 
-<p>Cuando se envían, los datos del formulario enviados al servidor tendrán un aspecto parecido a este:</p>
+Cuando se envían, los datos del formulario enviados al servidor tendrán un aspecto parecido a este:
 
-<p><code>title=My+excellent+blog+post&amp;content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&amp;postId=34657</code></p>
+`title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
-<p>A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen enviando.</p>
+A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen enviando.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definición inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
+| {{SpecName('HTML5.1', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
 
-<h2 id="Compatibilidad_con_el_navegador">Compatibilidad con el navegador</h2>
+## Compatibilidad con el navegador
 
+{{Compat("html.elements.input.input-hidden")}}
 
+## Ver también
 
-<p>{{Compat("html.elements.input.input-hidden")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms guide</a></li>
- <li>{{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} en la que se basa</li>
-</ul>
+- [HTML forms guide](/es/docs/Learn/HTML/Forms)
+- {{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} en la que se basa

@@ -8,56 +8,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray/buffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propiedad de acceso <strong><code>buffer</code></strong> representa el {{jsxref("ArrayBuffer")}} referenciada por un <em>TypedArray</em> en tiempo de construcción.</p>
+La propiedad de acceso **`buffer`** representa el {{jsxref("ArrayBuffer")}} referenciada por un _TypedArray_ en tiempo de construcción.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>typedArray</var>.buffer</pre>
+    typedArray.buffer
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La propiedad <code>buffer</code> es una propiedad de acceso cuya función <em>set accessor</em> es <code>undefined</code>, significa que tu sólo puedes leer esta propiedad. El valor es establecido cuando <em>TypedArray</em> se construye y no puede ser cambiado. <em>TypedArray</em> es uno de los <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">TypedArray objects</a>.</p>
+La propiedad `buffer` es una propiedad de acceso cuya función _set accessor_ es `undefined`, significa que tu sólo puedes leer esta propiedad. El valor es establecido cuando _TypedArray_ se construye y no puede ser cambiado. _TypedArray_ es uno de los [TypedArray objects](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_la_propiedad_buffer">Usando la propiedad <code>buffer</code></h3>
+### Usando la propiedad `buffer`
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint16 = new Uint16Array(buffer);
 uint16.buffer; // ArrayBuffer { byteLength: 8 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estatus                      | Comentario          |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("javascript.builtins.TypedArray.buffer")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/es/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

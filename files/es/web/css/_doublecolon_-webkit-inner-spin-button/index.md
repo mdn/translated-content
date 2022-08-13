@@ -1,46 +1,47 @@
 ---
 title: '::-webkit-inner-spin-button'
-slug: 'Web/CSS/::-webkit-inner-spin-button'
+slug: Web/CSS/::-webkit-inner-spin-button
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Referencia
-translation_of: 'Web/CSS/::-webkit-inner-spin-button'
+translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <a href="/es/docs/Web/CSS">CSS</a>  <strong><code>::-webkit-inner-spin-button</code></strong> se usa para dar estilo a la parte interior del botón ruleta para seleccionar números  en los input con type="number".</p>
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-inner-spin-button`** se usa para dar estilo a la parte interior del botón ruleta para seleccionar números en los input con type="number".
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">input::-webkit-inner-spin-button {
+```css
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}</pre>
+}
+```
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;input type="number"&gt;
-</pre>
+```html
+<input type="number">
+```
 
-<p>{{EmbedLiveSample("Example", 200, 30)}}</p>
+{{EmbedLiveSample("Example", 200, 30)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.</p>
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-webkit-inner-spin-button")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{cssxref("::-webkit-outer-spin-button")}}</li>
- <li>{{cssxref("::-webkit-textfield-decoration-container")}}</li>
- <li><a href="http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement">Dando estilo a controles de formularios – WebKit</a></li>
-</ul>
+- {{cssxref("::-webkit-outer-spin-button")}}
+- {{cssxref("::-webkit-textfield-decoration-container")}}
+- [Dando estilo a controles de formularios – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

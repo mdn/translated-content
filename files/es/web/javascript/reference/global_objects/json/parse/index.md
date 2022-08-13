@@ -10,51 +10,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
-<div>{{JSRef("Global_Objects", "JSON")}}</div>
+{{JSRef("Global_Objects", "JSON")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El método <code><strong>JSON.parse()</strong></code> analiza una cadena de texto como JSON, transformando opcionalmente  el valor producido por el análisis.</p>
+El método **`JSON.parse()`** analiza una cadena de texto como JSON, transformando opcionalmente el valor producido por el análisis.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>JSON.parse(<em>text</em>[, <em>reviver</em>])</code></pre>
+    JSON.parse(text[, reviver])
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>text</code></dt>
- <dd>El texto que se convertirá a JSON. Vea el objeto {{jsxref("JSON")}} para una descripción de la sintaxis JSON.</dd>
- <dt><code>reviver</code> {{optional_inline()}}</dt>
- <dd>Si una función, <span id="result_box" lang="es"><span class="hps">prescribe</span> <span class="hps">cómo se transforma</span> <span class="hps">el valor producido</span> <span class="hps">originalmente por</span> <span class="hps">el parsing</span></span>, antes de retornar.</dd>
-</dl>
+- `text`
+  - : El texto que se convertirá a JSON. Vea el objeto {{jsxref("JSON")}} para una descripción de la sintaxis JSON.
+- `reviver` {{optional_inline()}}
+  - : Si una función, prescribe cómo se transforma el valor producido originalmente por el parsing, antes de retornar.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Retorna el objeto que se corresponde con el texto JSON entregado.</p>
+Retorna el objeto que se corresponde con el texto JSON entregado.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Lanza una excepción {{jsxref("SyntaxError")}} si la cadena a transformar no es un JSON válido.</p>
+Lanza una excepción {{jsxref("SyntaxError")}} si la cadena a transformar no es un JSON válido.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo_Usando_JSON.parse()">Ejemplo: Usando <code>JSON.parse()</code></h3>
+### Ejemplo: Usando `JSON.parse()`
 
-<pre class="brush: js">JSON.parse('{}');              // {}
+```js
+JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-</pre>
+```
 
-<h3 id="Ejemplo_Usando_el_parámetro_reviver">Ejemplo: <code>Usando el parámetro reviver</code></h3>
+### Ejemplo: `Usando el parámetro reviver`
 
-<p>Si se especifica un reviver, el valor computado por el parsing <em>es transformado </em>antes de retornar. Específicamente, el valor computado, y todas sus propiedades (comenzando con las propiedades más anidadas y siguiendo al propio valor original), son individualmente ejecutados a través del <code>reviver</code>, el cual es llamado con el objeto que contiene la propiedad que está siendo procesada como <code>this</code> y con el nombre de la propiedad como cadena y el valor de la propiedad como argumentos. Si la función <code>reviver</code> retorna <code>undefined</code> (o no retorna algún valor, por ejemplo: si la ejecución cae el final de la función), la propiedad es eliminada del objeto. De otra manera, la propiedad es redefinidad para ser el valor de retorno.</p>
+Si se especifica un reviver, el valor computado por el parsing _es transformado_ antes de retornar. Específicamente, el valor computado, y todas sus propiedades (comenzando con las propiedades más anidadas y siguiendo al propio valor original), son individualmente ejecutados a través del `reviver`, el cual es llamado con el objeto que contiene la propiedad que está siendo procesada como `this` y con el nombre de la propiedad como cadena y el valor de la propiedad como argumentos. Si la función `reviver` retorna `undefined` (o no retorna algún valor, por ejemplo: si la ejecución cae el final de la función), la propiedad es eliminada del objeto. De otra manera, la propiedad es redefinidad para ser el valor de retorno.
 
-<p>El <code>reviver</code> es llamada último con la cadena vacía y el valor más alto <span class="short_text" id="result_box" lang="es"><span class="hps">para permitir</span> <span class="hps">la transformación</span> <span class="hps">del valor</span> <span class="hps">más alto</span></span>. <span class="short_text" id="result_box" lang="es"><span class="hps">Asegúrese de</span> <span class="hps">manejar este caso</span> <span class="hps">adecuadamente</span></span>, <span id="result_box" lang="es"><span class="hps">por lo general</span> <span class="hps">mediante la devolución del</span> <span class="hps">valor proporcionado</span></span>, o <code>JSON.parse</code> will retorna <code>undefined</code>.</p>
+El `reviver` es llamada último con la cadena vacía y el valor más alto para permitir la transformación del valor más alto. Asegúrese de manejar este caso adecuadamente, por lo general mediante la devolución del valor proporcionado, o `JSON.parse` will retorna `undefined`.
 
-<pre class="brush: js">JSON.parse('{"p": 5}', function (k, v) {
+```js
+JSON.parse('{"p": 5}', function (k, v) {
     if(k === "") return v;     // if topmost value, return it,
     return v * 2;              // else return v * 2.
 });                            // { p: 10 }
@@ -71,50 +71,28 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 // 5
 // 3
 // ""
-</pre>
+```
 
-<h3 id="JSON.parse()_no_admite_comas_finales"><code>JSON.parse()</code> no admite comas finales</h3>
+### `JSON.parse()` no admite comas finales
 
-<pre class="example-bad brush: js example-bad line-numbers  language-js"><code class="language-js"><span class="comment token">// ambos lanzarán un SyntaxError</span>
-JSON<span class="punctuation token">.</span><span class="function token">parse</span><span class="punctuation token">(</span><span class="string token">'[1, 2, 3, 4, ]'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-JSON<span class="punctuation token">.</span><span class="function token">parse</span><span class="punctuation token">(</span><span class="string token">'{"foo" : 1, }'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+```js example-bad example-bad
+// ambos lanzarán un SyntaxError
+JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse('{"foo" : 1, }');
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial.<br>
-    Implementado en JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>
-    <p> </p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                       | Comentario                                          |
+| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.JSON.parse")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_native_JSON">Utilizando</a> <a href="/en-US/docs/Web/JavaScript/Guide/Using_native_JSON">JSON nativo</a></li>
-</ul>
+- [Utilizando](/es/docs/Web/JavaScript/Guide/Using_native_JSON) [JSON nativo](/es/docs/Web/JavaScript/Guide/Using_native_JSON)

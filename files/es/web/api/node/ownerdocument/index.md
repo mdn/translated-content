@@ -9,56 +9,36 @@ tags:
   - Referencia
 translation_of: Web/API/Node/ownerDocument
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propiedad de lectura <code><strong>ownerDocument</strong></code> de la interfaz {{domxref("Node")}} devuelve el objeto Document de más alto nivel/jerarquia para ese nodo.</p>
+La propiedad de lectura **`ownerDocument`** de la interfaz {{domxref("Node")}} devuelve el objeto Document de más alto nivel/jerarquia para ese nodo.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>var document</var> = <var>element</var>.ownerDocument;
-</pre>
+    var document = element.ownerDocument;
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p><code>document</code> es el objeto {{domxref("Document")}} de más alto nivel, con el que todos los nodos descendientes se crean. Si la propiedad se usa en un nodo que el mismo es un Document, el resultado es <code>null</code>.</p>
+`document` es el objeto {{domxref("Document")}} de más alto nivel, con el que todos los nodos descendientes se crean. Si la propiedad se usa en un nodo que el mismo es un Document, el resultado es `null`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">// dado un nodo "p",  coge el hijo que tenga la más alta jerarquia
+```js
+// dado un nodo "p",  coge el hijo que tenga la más alta jerarquia
 // del objeto Document
 
 var d = p.ownerDocument;
 var html = d.documentElement;
+```
 
-</pre>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                       | Estado                       | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}         | {{Spec2("DOM4")}}     |                    |
+| {{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM3 Core")}} | No change          |
+| {{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM2 Core")}} | Initial definition |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
 {{Compat("api.Node.ownerDocument")}}

@@ -10,54 +10,53 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>El método <code><strong>Object.setPrototypeOf()</strong></code> establece el prototipo (p.e., la propiedad interna <code>[[Prototype]]</code>) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.</p>
+El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propiedad interna `[[Prototype]]`) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.
 
-<div class="warning">
-<p><strong>Adverdencia:</strong> Cambiar la propiedad <code>[[Prototype]]</code> de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo <strong><em>todo</em></strong> navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia <code>obj.__proto___ = ...</code>,  but may extend to <strong><em>any</em></strong> code that has access to <strong><em>any</em></strong> object whose <code>[[Prototype]]</code> has been altered. If you care about performance you should avoid setting the <code>[[Prototype]]</code> of an object. Instead, create a new object with the desired <code>[[Prototype]]</code> using {{jsxref("Object.create()")}}.</p>
-</div>
+> **Advertencia:** **Adverdencia:** Cambiar la propiedad `[[Prototype]]` de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo **_todo_** navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia `obj.__proto___ = ...`, but may extend to **_any_** code that has access to **_any_** object whose `[[Prototype]]` has been altered. If you care about performance you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>);</code></pre>
+    Object.setPrototypeOf(obj, prototype);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>El objeto al que se ha de establecer el prototipo.</dd>
- <dt><code>prototype</code></dt>
- <dd>El nuevo prototipo del objeto, (un objeto o {{jsxref("null")}}).</dd>
-</dl>
+- `obj`
+  - : El objeto al que se ha de establecer el prototipo.
+- `prototype`
+  - : El nuevo prototipo del objeto, (un objeto o {{jsxref("null")}}).
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo <code>[[Prototype]]</code> se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro <code>prototype</code> no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad <code>[[Prototype]]</code> del <code>obj</code> al valor nuevo.</p>
+Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo `[[Prototype]]` se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro `prototype` no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad `[[Prototype]]` del `obj` al valor nuevo.
 
-<p><code>Object.setPrototypeOf()</code> está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.</p>
+`Object.setPrototypeOf()` está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">var dict = Object.setPrototypeOf({}, null);
-</pre>
+```js
+var dict = Object.setPrototypeOf({}, null);
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente <code>Object.setPrototypeOf</code> si aún no está disponible:</p>
+Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente `Object.setPrototypeOf` si aún no está disponible:
 
-<pre class="brush: js">// Solo funciona en Chrome y FirefoxOnly works in Chrome y FireFox, no funciona en IE:
+```js
+// Solo funciona en Chrome y FirefoxOnly works in Chrome y FireFox, no funciona en IE:
 Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
   obj.__proto__ = proto;
   return obj;
 }
-</pre>
+```
 
-<h2 id="Agregando_cadenas_de_prototipo">Agregando cadenas de prototipo</h2>
+## Agregando cadenas de prototipo
 
-<p>Una combinación de <code>Object.getPrototypeOf()</code> y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo  prototipo del objeto.</p>
+Una combinación de `Object.getPrototypeOf()` y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo prototipo del objeto.
 
-<pre class="brush: js">/**
+```js
+/**
 *** Object.appendChain(@object, @prototype)
 *
 * Agrega el primer prototipo no-nativo de una cadena a un nuevo prototipo.
@@ -73,7 +72,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 **/
 
 Object.appendChain = function(oChain, oProto) {
-  if (arguments.length &lt; 2) {
+  if (arguments.length < 2) {
     throw new TypeError('Object.appendChain - Not enough arguments');
   }
   if (typeof oProto === 'number' || typeof oProto === 'boolean') {
@@ -84,7 +83,7 @@ Object.appendChain = function(oChain, oProto) {
       oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
 
   for (var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype &amp;&amp; o1st !== Function.prototype;
+    o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
     o2nd = o1st;
@@ -99,13 +98,14 @@ Object.appendChain = function(oChain, oProto) {
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
 }
-</pre>
+```
 
-<h3 id="Uso">Uso</h3>
+### Uso
 
-<h4 id="Primer_ejemplo_Agregar_una_cadena_a_un_prototipo">Primer ejemplo: Agregar una cadena a un prototipo</h4>
+#### Primer ejemplo: Agregar una cadena a un prototipo
 
-<pre class="brush: js">function Mammal() {
+```js
+function Mammal() {
   this.isMammal = 'yes';
 }
 
@@ -127,11 +127,12 @@ function Animal() {
 Object.appendChain(oCat, new Animal());
 
 console.log(oCat.breathing); // 'yes'
-</pre>
+```
 
-<h4 id="Segundo_ejemplo_Transformando_un_valor_Primitivo_en_una_instancia_de_su_constructor_y_agregar_su_cadena_al_prototipo">Segundo ejemplo: Transformando un valor Primitivo en una instancia de su constructor y agregar su cadena al prototipo</h4>
+#### Segundo ejemplo: Transformando un valor Primitivo en una instancia de su constructor y agregar su cadena al prototipo
 
-<pre class="brush: js">function Symbol() {
+```js
+function Symbol() {
   this.isSymbol = 'yes';
 }
 
@@ -144,11 +145,12 @@ var oPrime = Object.appendChain(nPrime, new Symbol());
 console.log(oPrime); // '17'
 console.log(oPrime.isSymbol); // 'yes'
 console.log(typeof oPrime); // 'object'
-</pre>
+```
 
-<h4 id="Tercer_ejemplo_Agregando_una_cadena_a_la_Function.prototype_de_un_objeto_y_agregando_una_nueva_función_a_la_cadena">Tercer ejemplo: Agregando una cadena a la Function.prototype de un objeto y agregando una nueva función a la cadena</h4>
+#### Tercer ejemplo: Agregando una cadena a la Function.prototype de un objeto y agregando una nueva función a la cadena
 
-<pre class="brush: js">function Person(sName) {
+```js
+function Person(sName) {
   this.identity = sName;
 }
 
@@ -157,34 +159,21 @@ var george = Object.appendChain(new Person('George'),
 
 console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado               | Comentario          |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ES6')}} | Initial definition. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("javascript.builtins.Object.setPrototypeOf")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Reflect.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

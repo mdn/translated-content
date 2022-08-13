@@ -10,86 +10,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>pop()</strong></code> elimina el <strong>último</strong> elemento de un array y lo devuelve. Este método cambia la longitud del array.</p>
+El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
 
-<div>{{EmbedInteractiveExample("pages/js/array-pop.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-pop.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>arr</var>.pop()</pre>
+    arr.pop()
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>El elemento que ha sido eliminado del array; {{jsxref("undefined")}} si el array está vacío.</p>
+El elemento que ha sido eliminado del array; {{jsxref("undefined")}} si el array está vacío.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>pop</code> elimina el último elemento de un array y devuelve su valor al método que lo llamó.</p>
+El método `pop` elimina el último elemento de un array y devuelve su valor al método que lo llamó.
 
-<p><code>pop</code> es intencionadamente genérico; este método puede ser {{jsxref("Function.call", "called", "", 1)}} o {{jsxref("Function.apply", "applied", "", 1)}} en objectos similares a un array. En objetos que no contengan una propiedad <code>length</code>, que refleje su forma en una serie de propiedades numéricas consecutivas en base cero, puede no comportarse de manera significativa.</p>
+`pop` es intencionadamente genérico; este método puede ser {{jsxref("Function.call", "called", "", 1)}} o {{jsxref("Function.apply", "applied", "", 1)}} en objectos similares a un array. En objetos que no contengan una propiedad `length`, que refleje su forma en una serie de propiedades numéricas consecutivas en base cero, puede no comportarse de manera significativa.
 
-<p>Si se llama a <code>pop()</code> en un array vacío, devuelve {{jsxref("undefined")}}.</p>
+Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Eliminando_el_último_elemento_de_un_array">Eliminando el último elemento de un array</h3>
+### Eliminando el último elemento de un array
 
-<p>El siguiente código crea el array <code>myFish</code>, que contiene cuatro elementos, a continuación, elimina su último elemento.</p>
+El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
 var popped = myFish.pop();
 
 console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 
-console.log(popped); // 'sturgeon'</pre>
+console.log(popped); // 'sturgeon'
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>Estándar</td>
-   <td>Definición inicial. Implementada en JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                             | Estándar                     | Definición inicial. Implementada en JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
-<p>{{Compat("javascript.builtins.Array.pop")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.pop")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Array.prototype.splice()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

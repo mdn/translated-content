@@ -9,34 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Object.values()</strong></code><strong> </strong>devuelve un array con los valores correspondientes a las propiedades <strong>enumerables</strong> de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle <code>for-in</code> también enumera las propiedades en la cadena de prototipo de un objeto).</p>
+El método **`Object.values()`\*\*** **devuelve un array con los valores correspondientes a las propiedades **enumerables\*\* de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
 
-<p>{{EmbedInteractiveExample("pages/js/object-values.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+    Object.values(obj)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Objeto cuyas propiedades enumerables serán devueltas.</dd>
-</dl>
+- `obj`
+  - : Objeto cuyas propiedades enumerables serán devueltas.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un <code>array</code><strong> </strong>con las propiedades enumerables del objeto pasado como parámetro.</p>
+Un `array`\*\* \*\*con las propiedades enumerables del objeto pasado como parámetro.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>Object.values()</code><strong> </strong>devuelve un array cuyos elementos son valores de propiedades enumarables que se encuentran en el objeto. El orden de las propiedades es el mismo que el dado cuando se recorre el objeto de forma manual.</p>
+El método `Object.values()`\*\* \*\*devuelve un array cuyos elementos son valores de propiedades enumarables que se encuentran en el objeto. El orden de las propiedades es el mismo que el dado cuando se recorre el objeto de forma manual.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">var obj = { foo: 'bar', baz: 42 };
+```js
+var obj = { foo: 'bar', baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // array como objeto
@@ -52,47 +51,30 @@ var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; 
 my_obj.foo = 'bar';
 console.log(Object.values(my_obj)); // ['bar']
 
-// parámetros que no son Objetos<strong> </strong>se fuerzan a que se comporten como tal
+// parámetros que no son Objetos se fuerzan a que se comporten como tal
 console.log(Object.values('foo')); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para dar soporte compatible con  <code>Object.values()</code> a entornos antiguos que no la soportan de forma nativa, puedes encontrar un Polyfill<strong> </strong>en <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> o en los repositorios <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>.</p>
+Para dar soporte compatible con `Object.values()` a entornos antiguos que no la soportan de forma nativa, puedes encontrar un Polyfill\*\* \*\*en [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) o en los repositorios [es-shims/Object.values](https://github.com/es-shims/Object.values).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.values', 'Object.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-object.values', 'Object.values')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                       | Comentario          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} | Definición inicial. |
+| {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         |                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<div>{{Compat("javascript.builtins.Object.values")}}</div>
+{{Compat("javascript.builtins.Object.values")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades">Enumeración y propietarios de propiedades</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

@@ -3,50 +3,33 @@ title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
 translation_of: Web/API/HTMLMediaElement/pause
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>El método <strong><code>HTMLMediaElement.pause()</code></strong> pausará la reproducción de los medios, si los medios ya están en pausa, este método no tendrá efecto.</p>
+El método **`HTMLMediaElement.pause()`** pausará la reproducción de los medios, si los medios ya están en pausa, este método no tendrá efecto.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>HTMLMediaElement</em>.pause()</pre>
+    HTMLMediaElement.pause()
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-pause', 'pause()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition; living specification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-pause','pause()')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentarios                               |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------- |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-pause', 'pause()')}} | {{Spec2('HTML WHATWG')}} | Initial definition; living specification. |
+| {{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-pause','pause()')}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                       |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-
-
-<p>{{Compat("api.HTMLMediaElement.pause")}}</p>
+{{Compat("api.HTMLMediaElement.pause")}}

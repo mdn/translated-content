@@ -4,74 +4,46 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/SQRT2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}La propiedad **Math.SQRT2** representa la raíz cuadrada de de 2, aproximadamente 1.414:
 
-<div>La propiedad <strong>Math.SQRT2</strong> representa la raíz cuadrada de de 2, aproximadamente 1.414:</div>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math></p>
+{{js_property_attributes(0, 0, 0)}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+Debido a que SQRT2 es una propiedad estática de `Math`, siempre se utiliza como `Math.SQRT2`, en lugar de una propiedad de un objeto `Math` creado`.`
 
-<p>Debido a que SQRT2 es una propiedad estática de <code>Math</code>, siempre se utiliza como <code>Math.SQRT2</code>, en lugar de una propiedad de un objeto <code>Math</code> creado<code>.</code></p>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Utilizando Math.SQRT2
 
-<h3 id="Utilizando_Math.SQRT2">Utilizando Math.SQRT2</h3>
+La siguiente función retorna la raíz cuadrada de 2:
 
-<p>La siguiente función retorna la raíz cuadrada de 2:</p>
-
-<pre class="brush: js">function getRoot2() {
+```js
+function getRoot2() {
   return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>
-    <p>Definición inicial. Implementada en JavaScript 1.0.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                       | Comentarios                                         |
+| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}         | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Math.SQRT2")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

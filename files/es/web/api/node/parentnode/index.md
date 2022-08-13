@@ -3,53 +3,47 @@ title: Node.parentNode
 slug: Web/API/Node/parentNode
 translation_of: Web/API/Node/parentNode
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<div> </div>
-</div>
+La propiedad de sólo lectura **`node.parentNode`** devuelve el padre del nodo especificado en el árbol.
 
-<p>La propiedad de sólo lectura <code><strong>node.parentNode</strong></code> devuelve el padre del nodo especificado en el árbol.</p>
+## Sintaxis
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+    parentNode = node.parentNode
 
-<pre><em>parentNode</em> = <em>node</em>.parentNode</pre>
+parentNode es el padre del nodo actual. El padre de un elemento es un nodo del tipo `Element`, un nodo `Document`, o un nodo `DocumentFragment.`
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">parentNode</span></font> es el padre del nodo actual. El padre de un elemento es un nodo del tipo <code>Element</code>, un nodo <code>Document</code>, o un nodo <code>DocumentFragment.</code></p>
+## Ejemplo
 
-<h2 id="Example" name="Example">Ejemplo</h2>
-
-<pre class="brush:js">if (node.parentNode) {
+```js
+if (node.parentNode) {
   // Borra un nodo del árbol a no ser que
   // esté ya en el árbol
   node.parentNode.removeChild(node);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Los nodos del tipo <code>Document</code> y <code>DocumentFragment</code> nunca van a tener un elemento padre, <code>parentNode</code> devolverá siempre <code>null</code>.</p>
+Los nodos del tipo `Document` y `DocumentFragment` nunca van a tener un elemento padre, `parentNode` devolverá siempre `null`.
 
-<p>También devuelve <code>null</code> si el nodo acaba de ser creado y no está atado/incorporado al árbol.</p>
+También devuelve `null` si el nodo acaba de ser creado y no está atado/incorporado al árbol.
 
-<h2 id="Compatiblidad_de_navegador">Compatiblidad de navegador</h2>
+## Compatiblidad de navegador
 
 {{Compat("api.Node.parentNode")}}
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317">DOM Level 2 Core: Node.parentNode</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317">DOM Level 3 Core: Node.parentNode</a></li>
-</ul>
+- [DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM Level 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{Domxref("Node.firstChild")}}</li>
- <li>{{Domxref("Node.lastChild")}}</li>
- <li>{{Domxref("Node.childNodes")}}</li>
- <li>{{Domxref("Node.nextSibling")}}</li>
- <li>{{Domxref("Node.parentElement")}}</li>
- <li>{{Domxref("Node.previousSibling")}}</li>
- <li>{{Domxref("Node.removeChild")}}</li>
-</ul>
+- {{Domxref("Node.firstChild")}}
+- {{Domxref("Node.lastChild")}}
+- {{Domxref("Node.childNodes")}}
+- {{Domxref("Node.nextSibling")}}
+- {{Domxref("Node.parentElement")}}
+- {{Domxref("Node.previousSibling")}}
+- {{Domxref("Node.removeChild")}}

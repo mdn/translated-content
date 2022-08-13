@@ -1,73 +1,69 @@
 ---
 title: '::-moz-range-track'
-slug: 'Web/CSS/::-moz-range-track'
+slug: Web/CSS/::-moz-range-track
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Pseudo-elemento CSS
   - Referencia
-translation_of: 'Web/CSS/::-moz-range-track'
+translation_of: Web/CSS/::-moz-range-track
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El  <a href="/es/docs/Web/CSS/Pseudo-elements" title="es/CSS/Pseudo-elements">pseudo-elemento  </a><code>CSS</code><strong><code> ::-moz-range-track</code></strong> representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un  {{HTMLElement("input")}} con <code>type="range"</code>.</p>
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements "es/CSS/Pseudo-elements")`CSS`**` ::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
 
-<div class="note">
-<p>Si usamos  <code>::-moz-range-track</code> con cualquier otra cosa que no sea un  <code>&lt;input type="range"&gt;</code> ni seleccionaremos nada ni se mostrará efecto alguno.</p>
-</div>
+> **Nota:** Si usamos `::-moz-range-track` con cualquier otra cosa que no sea un `<input type="range">` ni seleccionaremos nada ni se mostrará efecto alguno.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">input[type=range]::-moz-range-track {
+```css
+input[type=range]::-moz-range-track {
   background-color: green;
 }
-</pre>
+```
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="Salida">Salida</h3>
+### Salida
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Example", 300, 50)}}
 
-<p>Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:</p>
+Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:
 
-<p><img alt="A range with the track green." src="https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png"></p>
+![A range with the track green.](https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un pseudo-elemento propietario específico del motor Gecko.</p>
+No es parte de ninguna especificación. Es un pseudo-elemento propietario específico del motor Gecko.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-moz-range-track")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>Los pseudo-elementos usados por Gecko para proporcionar estilos a las distintas partes de un input con type="range":
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}}, el cursor deslizándose sobre la ranura.</li>
-   <li>{{cssxref("::-moz-range-progress")}}</li>
-  </ul>
- </li>
- <li>Pseudo-elementos similares en otros navegadores:
-  <ul>
-   <li>{{cssxref("::-webkit-slider-runnable-track")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome and Opera).</li>
-   <li>{{cssxref("::-ms-track")}}, pseudo-elemento soportado por Internet Explorer y Edge.</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Dando estilo con CSS a elementos Input con type="range" para que se muestren correctamente en todos los navegadores.</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Dando estilos y scripting a elementos deslizantes</a></li>
-</ul>
+- Los pseudo-elementos usados por Gecko para proporcionar estilos a las distintas partes de un input con type="range":
+
+  - {{cssxref("::-moz-range-thumb")}}, el cursor deslizándose sobre la ranura.
+  - {{cssxref("::-moz-range-progress")}}
+
+- Pseudo-elementos similares en otros navegadores:
+
+  - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome and Opera).
+  - {{cssxref("::-ms-track")}}, pseudo-elemento soportado por Internet Explorer y Edge.
+
+- [CSS-Tricks: Dando estilo con CSS a elementos Input con type="range" para que se muestren correctamente en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Dando estilos y scripting a elementos deslizantes](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

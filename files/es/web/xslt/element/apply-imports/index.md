@@ -7,31 +7,30 @@ tags:
 translation_of: Web/XSLT/Element/apply-imports
 original_slug: Web/XSLT/apply-imports
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- El elemento <code>&lt;xsl:apply-imports&gt;</code> es complejo en su uso, y es utilizado mayoritariamente en hojas de estilo muy complejas. La precedencia de importación indica que las plantillas en la hoja de estilo principal tienen mayor precedencia que las plantillas en las hojas de estilo importadas. Sin embargo, en ocasiones es útil forzar al procesador para que aplique una plantilla de menor procedencia contenida en la hoja de estilo importada en lugar de una plantilla equivalente en la hoja de estilo principal.</p>
+El elemento `<xsl:apply-imports>` es complejo en su uso, y es utilizado mayoritariamente en hojas de estilo muy complejas. La precedencia de importación indica que las plantillas en la hoja de estilo principal tienen mayor precedencia que las plantillas en las hojas de estilo importadas. Sin embargo, en ocasiones es útil forzar al procesador para que aplique una plantilla de menor procedencia contenida en la hoja de estilo importada en lugar de una plantilla equivalente en la hoja de estilo principal.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:apply-imports/&gt;</pre>
+    <xsl:apply-imports/>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Instrucción, aparece dentro de una plantilla.</p>
+Instrucción, aparece dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 5.6.</p>
+XSLT, sección 5.6.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

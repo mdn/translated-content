@@ -5,41 +5,30 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/selectAllChildren
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Añadirá todos los "hijos" del nodo especificado a la selección. La selección previa se pierde.</p>
+Añadirá todos los "hijos" del nodo especificado a la selección. La selección previa se pierde.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.selectAllChildren(
-<i>parentNode</i>)
-</pre>
+    sel.selectAllChildren(
+    parentNode)
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>parentNode</code></i>
- </dt>
- <dd>Todos los "hijos" de
- <i><code>parentNode</code></i>
- serán seleccionados. El mismo
+- _`parentNode`_
+  - : Todos los "hijos" de
+    _`parentNode`_
+    serán seleccionados. El mismo
+    _`parentNode`_
+    no es parte de la selección.
 
- <i><code>parentNode</code></i>
- no es parte de la selección.</dd>
-</dl>
+### Ejemplos
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+    footer = document.getElementById("footer");
+    window.getSelection().selectAllChildren(footer);
+    /* Todo el contendio del pie de página ahora está seleccionado */
 
-<pre class="eval">footer = document.getElementById("footer");
-window.getSelection().selectAllChildren(footer);
-/* Todo el contendio del pie de página ahora está seleccionado */
-</pre>
-
-<p> </p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/selectAllChildren", "it": "it/DOM/Selection/selectAllChildren", "pl": "pl/DOM/Selection/selectAllChildren" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/selectAllChildren", "it": "it/DOM/Selection/selectAllChildren", "pl": "pl/DOM/Selection/selectAllChildren" } ) }}

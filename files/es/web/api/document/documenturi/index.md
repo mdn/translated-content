@@ -11,43 +11,29 @@ tags:
   - UbicaciónDocumento
 translation_of: Web/API/Document/documentURI
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>La propiedad <code><strong>documentURI</strong></code> de la interfaz del documento ({{domxref("Document")}}) devuelve la ubicación del documento como un <em>string</em>.</p>
+La propiedad **`documentURI`** de la interfaz del documento ({{domxref("Document")}}) devuelve la ubicación del documento como un _string_.
 
-<p>Originalmente DOM3 fue definido como un atributo de lectura/escritura. En DOM4 se especifica unicamente como de lectura.</p>
+Originalmente DOM3 fue definido como un atributo de lectura/escritura. En DOM4 se especifica unicamente como de lectura.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js"><code>var string = document.documentURI;</code>
-</pre>
+```js
+var string = document.documentURI;
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Los documentos HTML tienen una propiedad {{domxref("document.URL")}} la cual devuelve el mismo valor (ubicación del documento). A diferencia de <code>URL</code>, <code>documentURI</code> está disponible para todos los tipos de documentos web.</p>
+Los documentos HTML tienen una propiedad {{domxref("document.URL")}} la cual devuelve el mismo valor (ubicación del documento). A diferencia de `URL`, `documentURI` está disponible para todos los tipos de documentos web.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-document-documenturi','documentURI')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                       | Comentario         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('DOM4', '#dom-document-documenturi','documentURI')}}     | {{Spec2('DOM4')}}     |                    |
+| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}} | {{Spec2('DOM3 Core')}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Document.documentURI")}}

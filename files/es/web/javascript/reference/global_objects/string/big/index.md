@@ -11,45 +11,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/big
 ---
-<p>{{JSRef("Objetos_globales", "String")}}</p>
+{{JSRef("Objetos_globales", "String")}}
 
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>Provoca que una cadena sea mostrada con un tamaño de fuente grade, como si estuviese en una etiqueta {{HTMLElement("big")}}.</p>
+Provoca que una cadena sea mostrada con un tamaño de fuente grade, como si estuviese en una etiqueta {{HTMLElement("big")}}.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>cadena</em>.big()</pre>
+    cadena.big()
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+## Descripción
 
-<p>Usa el método <code>big</code> para formatear y mostrar una cadena en un documento.</p>
+Usa el método `big` para formatear y mostrar una cadena en un documento.
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo:_Usando_big" name="Ejemplo:_Usando_big">Ejemplo: Usando <code>big</code></h3>
+### Ejemplo: Usando `big`
 
-<p>El siguiente ejemplo usa los métodos de <code>string</code> para cambiar el tamañó de una cadena:</p>
+El siguiente ejemplo usa los métodos de `string` para cambiar el tamañó de una cadena:
 
-<pre>var cadenaMundo="¡Hola Mundo!";
+    var cadenaMundo="¡Hola Mundo!";
 
-console.log(cadenaMundo.small());
-console.log("&lt;P&gt;" + cadenaMundo.big());
-console.log("&lt;P&gt;" + cadenaMundo.fontsize(7));
-</pre>
+    console.log(cadenaMundo.small());
+    console.log("<P>" + cadenaMundo.big());
+    console.log("<P>" + cadenaMundo.fontsize(7));
 
-<p>Este ejemplo produce el mismo resultado que el siguiente HTML:</p>
+Este ejemplo produce el mismo resultado que el siguiente HTML:
 
-<pre>&lt;small&gt;¡Hola Mundo!&lt;/small&gt;
-&lt;p&gt;&lt;big&gt;¡Hola Mundo!&lt;/big&gt;
-&lt;p&gt;&lt;fontsize=7&gt;¡Hola Mundo!&lt;/fontsize&gt;
-</pre>
+    <small>¡Hola Mundo!</small>
+    <p><big>¡Hola Mundo!</big>
+    <p><fontsize=7>¡Hola Mundo!</fontsize>
 
-<h3 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h3>
+### Vea También
 
-<ul>
- <li>{{jsxref("String.prototype.fontsize()")}}</li>
- <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.small()")}}

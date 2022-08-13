@@ -8,45 +8,45 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>test()</strong></code> ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve <code>true</code> o <code>false</code>.</p>
+El método **`test()`** ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve `true` o `false`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>regexObj</var>.test(<var>cadena</var>)</code></pre>
+    regexObj.test(cadena)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>cadena</code></dt>
- <dd>La cadena a comparar contra la expresión regular.</dd>
-</dl>
+- `cadena`
+  - : La cadena a comparar contra la expresión regular.
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
-<p>Retorna <code>true</code> si existe una coincidencia entre la expresión regular y la cadena especificada; de lo contrario retorna <code>false</code>.</p>
+Retorna `true` si existe una coincidencia entre la expresión regular y la cadena especificada; de lo contrario retorna `false`.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Use <code>test()</code> cuando desee saber si existe la ocurrencia de un patrón en una cadena (similar al método {{jsxref("String.prototype.search()")}}, la diferencia es que <code>test()</code> devuelve un booleano, mientras que <code>search()</code> devuelve el índice de la coincidencia (si la encuentra) o -1 si no la encuentra).</p>
+Use `test()` cuando desee saber si existe la ocurrencia de un patrón en una cadena (similar al método {{jsxref("String.prototype.search()")}}, la diferencia es que `test()` devuelve un booleano, mientras que `search()` devuelve el índice de la coincidencia (si la encuentra) o -1 si no la encuentra).
 
-<p>Si requiere más información (a coste de una ejecución más lenta) utilice el método {{jsxref("RegExp.prototype.exec()", "exec()")}}. Al igual que este último, multiples llamadas a <code>test()</code> sobre la misma instancia global de una expresión regular avanzará desde de la ocurrencia anterior.</p>
+Si requiere más información (a coste de una ejecución más lenta) utilice el método {{jsxref("RegExp.prototype.exec()", "exec()")}}. Al igual que este último, multiples llamadas a `test()` sobre la misma instancia global de una expresión regular avanzará desde de la ocurrencia anterior.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_test()">Usando <code>test()</code></h3>
+### Usando `test()`
 
-<p>Ejemplo simple que prueba si "hello" está contenido al principio de una cadena y devuelve un valor booleano.</p>
+Ejemplo simple que prueba si "hello" está contenido al principio de una cadena y devuelve un valor booleano.
 
-<pre class="brush: js">var cadena = "hello world!";
+```js
+var cadena = "hello world!";
 var result = /^hello/.test(cadena);
 console.log(result); // true
-</pre>
+```
 
-<p dir="ltr" id="tw-target-text">El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:</p>
+El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:
 
-<pre class="brush: js">function probarEntrada(regexp, cadena){
+```js
+function probarEntrada(regexp, cadena){
   var subcadena;
   if (regexp.test(cadena)) {
     subcadena = ' contiene ';
@@ -55,47 +55,22 @@ console.log(result); // true
   }
   console.log(cadena + subcadena + regexp.source);
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definition inicial. Implementado en JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                       | Comentario                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Definition inicial. Implementado en JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}                     | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
 {{Compat("javascript.builtins.RegExp.test")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>El capítulo <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones Regulares</a> de la <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía JavaScript</a></li>
- <li>{{jsxref("RegExp")}}</li>
-</ul>
+- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
+- {{jsxref("RegExp")}}

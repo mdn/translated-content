@@ -3,51 +3,32 @@ title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
 translation_of: Web/API/Event/stopPropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>El método <code>stopPropagation()</code> de la interfaz {{domxref("Event")}} evita la propagación adicional del evento actual en las fases de captura y <em>bubbling</em>.</p>
+El método `stopPropagation()` de la interfaz {{domxref("Event")}} evita la propagación adicional del evento actual en las fases de captura y _bubbling_.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>event</em>.stopPropagation();</pre>
+    event.stopPropagation();
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Ver ejemplo 5: <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Propagación del evento</a> en el capítulo de Ejemplos para un ejemplo mas detallado de este método y la propagación del evento en el DOM.</p>
+Ver ejemplo 5: [Propagación del evento](/es/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation) en el capítulo de Ejemplos para un ejemplo mas detallado de este método y la propagación del evento en el DOM.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Ver las <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">Especificaciones del DOM</a> para la explicación del flujo del eventos. (El <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">Borrador de eventos del DOM nivel 3</a> tiene una ilustración.)</p>
+Ver las [Especificaciones del DOM](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para la explicación del flujo del eventos. (El [Borrador de eventos del DOM nivel 3](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) tiene una ilustración.)
 
-<p><a href="/en-US/docs/Web/API/event.preventDefault">preventDefault</a> es un método complementario que puede ser usado para prevenir la acción default del evento cuando este ocurre.</p>
+[preventDefault](/es/docs/Web/API/event.preventDefault) es un método complementario que puede ser usado para prevenir la acción default del evento cuando este ocurre.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-stopPropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#dom-event-stoppropagation", "Event.stopPropagation()")}}     | {{Spec2("DOM WHATWG")}} |                    |
+| {{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}             | {{Spec2("DOM4")}}         |                    |
+| {{SpecName("DOM2 Events", "#Events-Event-stopPropagation", "Event.stopPropagation()")}} | {{Spec2("DOM2 Events")}} | Definición inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("api.Event.stopPropagation")}}

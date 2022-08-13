@@ -8,77 +8,71 @@ tags:
   - Web
 translation_of: Web/CSS/-webkit-mask-box-image
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p><code>-webkit-mask-box-image</code> establece la imagen de máscara para la caja del borde de un elemento.</p>
+`-webkit-mask-box-image` establece la imagen de máscara para la caja del borde de un elemento.
 
-<ul>
- <li>{{ Xref_cssinitial() }}: none</li>
- <li>Se aplica a : Todos los elementos</li>
- <li>{{ Xref_cssinherited() }}: no</li>
- <li>Media: {{ Xref_cssvisual() }}</li>
- <li>{{ Xref_csscomputed() }}: tal y como se especfica</li>
-</ul>
+- {{ Xref_cssinitial() }}: none
+- Se aplica a : Todos los elementos
+- {{ Xref_cssinherited() }}: no
+- Media: {{ Xref_cssvisual() }}
+- {{ Xref_csscomputed() }}: tal y como se especfica
 
-<h2 id="Syntax" name="Syntax">Síntaxis</h2>
+## Síntaxis
 
-<pre class="eval">-webkit-mask-box-image: &lt;mask-box-image&gt; [&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt; &lt;x-repeat&gt; &lt;y-repeat&gt;]
-</pre>
+    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
 
-<p>Where:</p>
+Where:
 
-<dl>
- <dt>&lt;mask-box-image&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">{{cssxref("&lt;uri&gt;")}} | &lt;gradient&gt; | none</code></dd>
- <dt>&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">&lt;length&gt; | &lt;percentage&gt;</code></dd>
- <dt>&lt;x-repeat&gt; &lt;y-repeat&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">repeat | stretch | round</code></dd>
-</dl>
+- \<mask-box-image>
+  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+- \<top> \<right> \<bottom> \<left>
+  - : `<length> | <percentage>`
+- \<x-repeat> \<y-repeat>
+  - : `repeat | stretch | round`
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt>&lt;uri&gt;</dt>
- <dd>La localización del recurso imagen que será usada como imagen de máscara..</dd>
- <dt style="font-style: normal; font-weight: bold;">&lt;gradient&gt;</dt>
- <dd style="margin-bottom: 20px; padding-left: 16px; border-bottom-width: 1px; border-bottom-style: dashed; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding-top: 2px; padding-right: 0px; padding-bottom: 4px;">La función <span style="font-family: courier new;">-webkit-gradient</span> que se usará como imagen de máscara.</dd>
- <dt>none</dt>
- <dd>Para especificar que la caja del borde no va a tener imagen de máscara.</dd>
-</dl>
+- \<uri>
+  - : La localización del recurso imagen que será usada como imagen de máscara..
+- \<gradient>
+  - : La función -webkit-gradient que se usará como imagen de máscara.
+- none
+  - : Para especificar que la caja del borde no va a tener imagen de máscara.
 
-<dl>
- <dt>&lt;length&gt;</dt>
- <dd>El tamaño del desplazamiento de la imagen de máscara. Ver  {{cssxref("&lt;length&gt;")}} para posibles unidades.</dd>
- <dt>&lt;percentage&gt;</dt>
- <dd>El desplazamiento de la imagen de máscara tiene un valor que se corresponde con un porcentaje de la dimensiones (altura y anchura) del tamaño de la caja del borde.</dd>
- <dt style="font-style: normal; font-weight: bold;">repeat</dt>
- <dd>La imagen de máscara se repite tanta veces como sean necesarios para cubrir la caja.  Puede incluir una imagen parcial si no existe una división exacta con el tamaño de la caja.</dd>
- <dt>stretch</dt>
- <dd>La imagen de máscara se encoge para contener la caja del borde exactamente.</dd>
- <dt>round</dt>
- <dd> Se encoge y repite de tal manera que no existan partes de la imagen de máscara al final de la caja.</dd>
-</dl>
+<!---->
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+- \<length>
+  - : El tamaño del desplazamiento de la imagen de máscara. Ver {{cssxref("&lt;length&gt;")}} para posibles unidades.
+- \<percentage>
+  - : El desplazamiento de la imagen de máscara tiene un valor que se corresponde con un porcentaje de la dimensiones (altura y anchura) del tamaño de la caja del borde.
+- repeat
+  - : La imagen de máscara se repite tanta veces como sean necesarios para cubrir la caja. Puede incluir una imagen parcial si no existe una división exacta con el tamaño de la caja.
+- stretch
+  - : La imagen de máscara se encoge para contener la caja del borde exactamente.
+- round
+  - : Se encoge y repite de tal manera que no existan partes de la imagen de máscara al final de la caja.
 
-<pre class="brush: css">.exampleone {
+## Ejemplos
+
+```css
+.exampleone {
     -webkit-mask-box-image: url('mask.png');
 }
 
 .exampletwo {
     -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
 }
-</pre>
+```
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-mask-box-image")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}</p>
+{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}

@@ -5,38 +5,35 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Event/initEvent
 ---
-<div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
-<p>El método <code>initEvent</code> se usa para dar valor inicial a un <a href="es/DOM/event">evento</a> creado mediante <a href="es/DOM/document.createEvent">document.createEvent</a>.</p>
+### Resumen
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+El método `initEvent` se usa para dar valor inicial a un [evento](es/DOM/event) creado mediante [document.createEvent](es/DOM/document.createEvent).
 
-<pre class="eval"><em>event</em>.initEvent(<em>type</em>,<em>bubbles</em>,<em>cancelable</em>)
-</pre>
+### Sintaxis
 
-<dl>
- <dt><code>type</code></dt>
- <dd>El tipo de evento.</dd>
- <dt><code>bubbles</code></dt>
- <dd>Un valor binario indicando si el evento debe ser recurrente en la cadena de eventos, o no (ver <a href="/es/docs/DOM/event.bubbles">bubbles</a>).</dd>
- <dt><code>cancelable</code></dt>
- <dd>Un valor binario indicando si el evento puede ser cancelado o no (ver <a href="/es/docs/DOM/event.cancelable">cancelable</a>).</dd>
-</dl>
+    event.initEvent(type,bubbles,cancelable)
 
-<p>Nota: Un valor binario puede tener sólo valores 1 y 0. En lógica de Boole, cierto (<em>true</em> ) y falso (<em>false</em> ).</p>
+- `type`
+  - : El tipo de evento.
+- `bubbles`
+  - : Un valor binario indicando si el evento debe ser recurrente en la cadena de eventos, o no (ver [bubbles](/es/docs/DOM/event.bubbles)).
+- `cancelable`
+  - : Un valor binario indicando si el evento puede ser cancelado o no (ver [cancelable](/es/docs/DOM/event.cancelable)).
 
-<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
+Nota: Un valor binario puede tener sólo valores 1 y 0. En lógica de Boole, cierto (_true_ ) y falso (_false_ ).
 
-<pre class="eval">// crea un evento "click" que puede ser recurrente y
-// NO puede ser cancelado.
-event.initEvent("click", true, false);
-</pre>
+### Ejemplo
 
-<h3 id="Notas" name="Notas">Notas</h3>
+    // crea un evento "click" que puede ser recurrente y
+    // NO puede ser cancelado.
+    event.initEvent("click", true, false);
 
-<p>Los eventos inicializados de esta forma, deben haber sido creados por el método <a href="es/DOM/document.createEvent">document.createEvent</a>. Debemos llamar a <code>initEvent</code> para inicializar el evento antes de que pueda ser lanzado con <a href="es/DOM/element.dispatchEvent">dispatched</a>.</p>
+### Notas
 
-<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
+Los eventos inicializados de esta forma, deben haber sido creados por el método [document.createEvent](es/DOM/document.createEvent). Debemos llamar a `initEvent` para inicializar el evento antes de que pueda ser lanzado con [dispatched](es/DOM/element.dispatchEvent).
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initEvent">DOM Level 2 Events: Event.initEvent</a></p>
+### Especificación
+
+[DOM Level 2 Events: Event.initEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initEvent)

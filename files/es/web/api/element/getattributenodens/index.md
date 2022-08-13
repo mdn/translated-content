@@ -8,31 +8,28 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>Dados namespace y nodeName del element, devuelve su <code>Attr</code> .</p>
+Dados namespace y nodeName del element, devuelve su `Attr` .
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>,<em>nodeName</em>)
-</pre>
+    attributeNode = element.getAttributeNodeNS(namespace,nodeName)
 
-<ul>
- <li><code>attributeNode</code> es el nodo para el atributo especificado.</li>
- <li><code>namespace</code> es la cadena que define el namespace del atributo.</li>
- <li><code>nodeName</code> es la cadena que define el name del atributo.</li>
-</ul>
+- `attributeNode` es el nodo para el atributo especificado.
+- `namespace` es la cadena que define el namespace del atributo.
+- `nodeName` es la cadena que define el name del atributo.
 
-<p><span class="comment">== Example == TBD The example needs to be fixed pre&gt; // html: &lt;div id="top" /&gt; t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<a class="external" href="http://www.mozilla.org/ns/specialspace" rel="freelink">http://www.mozilla.org/ns/specialspace</a>", "id"); // iNode.value = "full-top" &lt;/pre</span></p>
+\== Example == TBD The example needs to be fixed pre> // html: \<div id="top" /> t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<http://www.mozilla.org/ns/specialspace>", "id"); // iNode.value = "full-top" \</pre
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>getAttributeNodeNS</code> es más específica <a href="en/DOM/element.getAttributeNode">getAttributeNode</a> en el sentido de que puedes especificar atributos de un namespace en particular.  Su método setter es <a href="en/DOM/element.setAttributeNodeNS">setAttributeNodeNS</a>.</p>
+`getAttributeNodeNS` es más específica [getAttributeNode](en/DOM/element.getAttributeNode) en el sentido de que puedes especificar atributos de un namespace en particular. Su método setter es [setAttributeNodeNS](en/DOM/element.setAttributeNodeNS).
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">DOM Level 2 Core: getAttributeNodeNS</a></p>
+[DOM Level 2 Core: getAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)

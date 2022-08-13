@@ -9,76 +9,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getPrototypeOf
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El método <code><strong>Object.getPrototypeOf()</strong></code> devuelve el prototipo (es decir, el valor de la propiedad interna <code>[[Prototype]]</code>) del objeto especificado.</p>
+El método **`Object.getPrototypeOf()`** devuelve el prototipo (es decir, el valor de la propiedad interna `[[Prototype]]`) del objeto especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Object.getPrototypeOf(<var>obj</var>)</code></pre>
+    Object.getPrototypeOf(obj)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>El objeto cuyo prototipo va a ser devuelto.</dd>
-</dl>
+- `obj`
+  - : El objeto cuyo prototipo va a ser devuelto.
 
-<h3 id="Valor_Devuelto">Valor Devuelto</h3>
+### Valor Devuelto
 
-<p>El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá {{jsxref("null")}}.</p>
+El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá {{jsxref("null")}}.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">var proto = {};
+```js
+var proto = {};
 var obj= Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
-</pre>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>En ES5, lanzará una excepción {{jsxref("Global_Objects/TypeError", "TypeError")}} si el parámetro <code>obj</code> no es un objeto. en ES6, El parámetro será forzado a un {{jsxref("Global_Objects/Object", "Object")}}.</p>
+En ES5, lanzará una excepción {{jsxref("Global_Objects/TypeError", "TypeError")}} si el parámetro `obj` no es un objeto. en ES6, El parámetro será forzado a un {{jsxref("Global_Objects/Object", "Object")}}.
 
-<pre class="brush: js">&gt; Object.getPrototypeOf('foo')
+```js
+> Object.getPrototypeOf('foo')
 TypeError: "foo" is not an object  // ES5 code
-&gt; Object.getPrototypeOf('foo')
+> Object.getPrototypeOf('foo')
 String.prototype                   // ES6 code
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                   | Comentario          |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}             | {{Spec2('ES5.1')}} | Definición inicial. |
+| {{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Object.getPrototypeOf")}}
 
-<h2 id="See_also" name="See_also">Mira también</h2>
+## Mira también
 
-<ul>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}</li>
- <li>John Resig's post on <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
- <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
+- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxref("Object.prototype.__proto__")}}
+- {{jsxref("Reflect.getPrototypeOf()")}}

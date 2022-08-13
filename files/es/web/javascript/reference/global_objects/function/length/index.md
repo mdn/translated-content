@@ -8,80 +8,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/length
 ---
-<div>{{JSRef("Global_Objects", "Function")}}</div>
+{{JSRef("Global_Objects", "Function")}}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>La propiedad <code><strong>length</strong></code> especifica el número de argumentos esperados por la función.</p>
+La propiedad **`length`** especifica el número de argumentos esperados por la función.
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+{{js_property_attributes(0,0,1)}}
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p><code>length</code> es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. Este número no incluye {{jsxref("rest_parameters", "rest parameter", "", 1)}}. En cambio, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} es local a una función y aporta el número de argumentos actuales pasados a una función.</p>
+`length` es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. Este número no incluye {{jsxref("rest_parameters", "rest parameter", "", 1)}}. En cambio, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} es local a una función y aporta el número de argumentos actuales pasados a una función.
 
-<h3 id="Propiedades_de_la_Función_constructora">Propiedades de la <code>Función</code> constructora</h3>
+### Propiedades de la `Función` constructora
 
-<p>El {{jsxref("Global_Objects/Function", "Function")}} constructor en sí mismo es {{jsxref("Global_Objects/Function", "Function")}} un objeto. Sú <code>propiedad length</code> tiene el valor 1. Los atributos son: Grabable: <code>false</code>, Enumerable: <code>false</code>, Configurable: <code>true</code>.</p>
+El {{jsxref("Global_Objects/Function", "Function")}} constructor en sí mismo es {{jsxref("Global_Objects/Function", "Function")}} un objeto. Sú `propiedad length` tiene el valor 1. Los atributos son: Grabable: `false`, Enumerable: `false`, Configurable: `true`.
 
-<h3 id="Propiedad_de_la_Función_prototype_object">Propiedad de la  <code>Función</code> prototype object</h3>
+### Propiedad de la `Función` prototype object
 
-<p>La propiedad length del {{jsxref("Global_Objects/Function", "Function")}} objeto prototype tiene el valor 0.</p>
+La propiedad length del {{jsxref("Global_Objects/Function", "Function")}} objeto prototype tiene el valor 0.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">console.log(Function.length); /* 1 */
+```js
+console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
 console.log((function(a, b)    {}).length); /* 2 etc. */
 console.log((function(...args) {}).length); /* 0, resto de parámetros no se contemplan */
 console.log((function(a, b = 1, c) {}).length); /* 1, solo parámetros antes del primero con un valor por defecto son contados */
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definición inicial. Implementado en JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td><code>length</code> property of the {{jsxref("Global_Objects/Function", "Function")}} constructor:<br>
-    {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}}<br>
-    <code>length</code> property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object:<br>
-    {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}}<br>
-    <code>length</code> property of {{jsxref("Global_Objects/Function", "Function")}} instances:<br>
-    {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>length</code> property of the {{jsxref("Global_Objects/Function", "Function")}} constructor:<br>
-    {{SpecName('ES6', '#sec-function.length', 'Function.length')}}<br>
-    <code>length</code> property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object:<br>
-    {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}}<br>
-    <code>length</code> property of {{jsxref("Global_Objects/Function", "Function")}} instances:<br>
-    {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>El atributo <code>configurable</code> de esta propiedad ahora es <code>true</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Estado                   | Comentario                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Standard                 | Definición inicial. Implementado en JavaScript 1.1.           |
+| `length` property of the {{jsxref("Global_Objects/Function", "Function")}} constructor: {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}} `length` property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object: {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}} `length` property of {{jsxref("Global_Objects/Function", "Function")}} instances: {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}} | {{Spec2('ES5.1')}} |                                                               |
+| `length` property of the {{jsxref("Global_Objects/Function", "Function")}} constructor: {{SpecName('ES6', '#sec-function.length', 'Function.length')}} `length` property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object: {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}} `length` property of {{jsxref("Global_Objects/Function", "Function")}} instances: {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}                         | {{Spec2('ES6')}}     | El atributo `configurable` de esta propiedad ahora es `true`. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Function.length")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Global_Objects/Function", "Función")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Function", "Función")}}

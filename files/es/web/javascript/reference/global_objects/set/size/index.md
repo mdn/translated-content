@@ -4,54 +4,38 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propiedad de acceso <code><strong>size</strong></code> devuelve el número de elementos que hay en el objeto {{jsxref("Set")}}.</p>
+La propiedad de acceso **`size`** devuelve el número de elementos que hay en el objeto {{jsxref("Set")}}.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El valor de <code>size</code> es un entero que representa cuantas entradas tiene el objeto <code>Set</code>. La función de accesso set para <code>size</code> es <code>undefined</code>; no se puede cambiar esta propiedad.</p>
+El valor de `size` es un entero que representa cuantas entradas tiene el objeto `Set`. La función de accesso set para `size` es `undefined`; no se puede cambiar esta propiedad.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_size">Usando <code>size</code></h3>
+### Usando `size`
 
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
 mySet.add("un texto")
 
 mySet.size; // 3
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-set.prototype.size', 'Set.prototype.size')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estatus                      | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-get-set.prototype.size', 'Set.prototype.size')}}     | {{Spec2('ES6')}}         | Definición inicial |
+| {{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.Set.size")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}

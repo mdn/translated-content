@@ -9,75 +9,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode
 ---
-<p>{{JSRef("Objetos_globales", "String")}}</p>
+{{JSRef("Objetos_globales", "String")}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <strong><code>String.fromCharCode()</code></strong> método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.</p>
+El **`String.fromCharCode()`** método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">String.fromCharCode(<em>num1</em>,<em> ...</em>,<em> numN</em>) </pre>
+    String.fromCharCode(num1, ..., numN)
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>num1, ..., num<em>N</em> </code></dt>
- <dd>Secuencia de números con los valores Unicode.</dd>
-</dl>
+- `num1, ..., numN`
+  - : Secuencia de números con los valores Unicode.
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+## Descripción
 
-<p>Este método devuelve una cadena y no un objeto <code>String</code>.</p>
+Este método devuelve una cadena y no un objeto `String`.
 
-<p>Debido a que <code>fromCharCode</code> es un método estático de <code>String</code>, usted siempre lo usará como <code>String.fromCharCode()</code>, en vez de un método de un objeto <code>String</code> creado por usted.</p>
+Debido a que `fromCharCode` es un método estático de `String`, usted siempre lo usará como `String.fromCharCode()`, en vez de un método de un objeto `String` creado por usted.
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo:_Usando_fromCharCode" name="Ejemplo:_Usando_fromCharCode">Ejemplo: Usando <code>fromCharCode</code></h3>
+### Ejemplo: Usando `fromCharCode`
 
-<p>El siguiene ejemplo devuelve la cadena "ABC".</p>
+El siguiene ejemplo devuelve la cadena "ABC".
 
-<pre class="brush: js">String.fromCharCode(65,66,67)
-</pre>
+```js
+String.fromCharCode(65,66,67)
+```
 
-<h2 id="Especificaciónes">Especificaciónes</h2>
+## Especificaciónes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Estándar</td>
-   <td>Primera definicíon<br>
-    Implementada en JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estatus                  | Comentario                                        |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                          | Estándar                 | Primera definicíon Implementada en JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                 | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.String.fromCharCode")}}
 
-<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
+## Vea También
 
-<ul>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

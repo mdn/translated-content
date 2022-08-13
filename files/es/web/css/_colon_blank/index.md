@@ -1,54 +1,33 @@
 ---
 title: ':blank'
-slug: 'Web/CSS/:blank'
+slug: Web/CSS/:blank
 tags:
   - ':blank'
   - Borrador
   - CSS
   - Experimental
-translation_of: 'Web/CSS/:blank'
+translation_of: Web/CSS/:blank
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> El selector <code>:blank</code> esta considerado en riesgo, puesto que la CSSWG sigue haciendo cambios.</p>
+> **Nota:** **Nota:** El selector `:blank` esta considerado en riesgo, puesto que la CSSWG sigue haciendo cambios.Ver [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 
-<p>Ver <a href="https://github.com/w3c/csswg-drafts/issues/1967" title="[selectors] decide on :blank">CSSWG issue #1967</a>.</p>
-</div>
+La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de entrada vaciós (eg. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).
 
-<p>La <a href="/en-US/docs/Web/CSS">pseudo-clase CSS</a> <strong><code>:blank</code></strong> selecciona elementos de entrada vaciós (eg. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).</p>
-
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
 {{CSSSyntax}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                               | Comentario         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
+{{Compat("css.selectors.blank")}}
 
+## Ver también
 
-<p>{{Compat("css.selectors.blank")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
-</ul>
+- {{CSSxRef(":empty")}}

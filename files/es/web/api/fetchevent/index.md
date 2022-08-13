@@ -11,50 +11,43 @@ tags:
   - Workers
 translation_of: Web/API/FetchEvent
 ---
-<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-<p>Este es el tipo de evento para eventos "<code>fetch</code>" despachados en el {{domxref("ServiceWorkerGlobalScope", "scope global del service worker", "", 1)}}. Contiene información sobre la búsqueda (fetch), incluyendo la petición (request) y cómo el receptor tratará la respuesta (response).</p>
+Este es el tipo de evento para eventos "`fetch`" despachados en el {{domxref("ServiceWorkerGlobalScope", "scope global del service worker", "", 1)}}. Contiene información sobre la búsqueda (fetch), incluyendo la petición (request) y cómo el receptor tratará la respuesta (response).
 
-<p>Provee el método {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, el cúal nos permite proporcionar una respuesta a esta búsqueda (fetch).</p>
+Provee el método {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, el cúal nos permite proporcionar una respuesta a esta búsqueda (fetch).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FetchEvent.FetchEvent()", "new FetchEvent()")}}</dt>
- <dd>Crea un nuevo objecto <code>FetchEvent</code>. Este constructor no se usa normalmente.  El propio navegador crea estos objetos y los proporciona a los callbacks de eventos "<code>fetch</code>".</dd>
-</dl>
+- {{domxref("FetchEvent.FetchEvent()", "new FetchEvent()")}}
+  - : Crea un nuevo objecto `FetchEvent`. Este constructor no se usa normalmente. El propio navegador crea estos objetos y los proporciona a los callbacks de eventos "`fetch`".
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><em>Hereda propiedades del ancestro, {{domxref("Event")}}</em>.</p>
+_Hereda propiedades del ancestro, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.clientId")}} {{readonlyInline}}</dt>
- <dd>El {{domxref("Client.id", "id")}} del mismo origen {{domxref("Client", "client")}} que inició el "fetch".</dd>
- <dt>{{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}</dt>
- <dd>Un {{jsxref("Promise")}} para un {{domxref("Response")}}, o vacío si este no es una navegación, o {{domxref("NavigationPreloadManager", "navigation preload", "", 1)}} no esta habilitado.</dd>
- <dt>{{domxref("fetchEvent.request")}} {{readonlyInline}}</dt>
- <dd>La {{domxref("Request")}} que el navegador intenta crear.</dd>
-</dl>
+- {{domxref("fetchEvent.clientId")}} {{readonlyInline}}
+  - : El {{domxref("Client.id", "id")}} del mismo origen {{domxref("Client", "client")}} que inició el "fetch".
+- {{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}
+  - : Un {{jsxref("Promise")}} para un {{domxref("Response")}}, o vacío si este no es una navegación, o {{domxref("NavigationPreloadManager", "navigation preload", "", 1)}} no esta habilitado.
+- {{domxref("fetchEvent.request")}} {{readonlyInline}}
+  - : La {{domxref("Request")}} que el navegador intenta crear.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Herada métodos del padre, </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+_Herada métodos del padre,_ _{{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.respondWith()")}}</dt>
- <dd>Evita el manejo de búsqueda predeterminado del navegador y proporciona (una promesa) una respuesta usted mismo.</dd>
- <dt>{{domxref("extendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Extiende el tiempo de vida del evento. Se usa para notificar al navegador las tareas que van más allá de la devolución de una respuesta, como la transmisión y el almacenamiento en caché.</p>
- </dd>
-</dl>
+- {{domxref("fetchEvent.respondWith()")}}
+  - : Evita el manejo de búsqueda predeterminado del navegador y proporciona (una promesa) una respuesta usted mismo.
+- {{domxref("extendableEvent.waitUntil()")}}
+  - : Extiende el tiempo de vida del evento. Se usa para notificar al navegador las tareas que van más allá de la devolución de una respuesta, como la transmisión y el almacenamiento en caché.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Este evento fetch, permite al navegador hacer esta acción por defecto para peticiones non-GET. Para peticiones GET  esto intenta retornar una coincidencia en el cache, y  vuelve de nuevo a la red. Si busca una concidencia en el cache, actualiza asincronicamente el cache para la próxima vez.</p>
+Este evento fetch, permite al navegador hacer esta acción por defecto para peticiones non-GET. Para peticiones GET esto intenta retornar una coincidencia en el cache, y vuelve de nuevo a la red. Si busca una concidencia en el cache, actualiza asincronicamente el cache para la próxima vez.
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   // Permite al navegador hacer este asunto por defecto
   // para peticiones non-GET.
   if (event.request.method != 'GET') return;
@@ -75,32 +68,20 @@ translation_of: Web/API/FetchEvent
     // Si no encontramos una coincidencia en el cache, usa la red.
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                               | Comentario          |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.FetchEvent")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Fetch API](/es/docs/Web/API/Fetch_API)

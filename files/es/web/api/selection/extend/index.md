@@ -5,37 +5,28 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/extend
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Traslada el foco de la selección a un punto especificado. El ancla de la selección no se mueve. La selección será desde el ancla hasta el nuevo focus regardless of direction.</p>
+Traslada el foco de la selección a un punto especificado. El ancla de la selección no se mueve. La selección será desde el ancla hasta el nuevo focus regardless of direction.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.extend(
-<i>parentNode</i>,
-<i>offset</i>)
-</pre>
+    sel.extend(
+    parentNode,
+    offset)
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>parentNode</code></i>
- </dt>
- <dd>El nodo dentro del cual el foco será movido.</dd>
-</dl>
+- _`parentNode`_
+  - : El nodo dentro del cual el foco será movido.
 
-<dl>
- <dt>
- <i><code>offset</code></i>
- </dt>
- <dd>El número de caracteres que habrá desde el principio del texto
- <i><code>parentNode</code></i>
- hasta donde el foco se colocará.</dd>
-</dl>
+<!---->
 
-<div class="noinclude"> </div>
+- _`offset`_
+  - : El número de caracteres que habrá desde el principio del texto
+    _`parentNode`_
+    hasta donde el foco se colocará.
 
-<p>{{ languages( { "en": "en/DOM/Selection/extend", "it": "it/DOM/Selection/extend", "pl": "pl/DOM/Selection/extend" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/extend", "it": "it/DOM/Selection/extend", "pl": "pl/DOM/Selection/extend" } ) }}

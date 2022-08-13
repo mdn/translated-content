@@ -3,53 +3,54 @@ title: padding-block-end
 slug: Web/CSS/padding-block-end
 translation_of: Web/CSS/padding-block-end
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>padding-block-end</code></strong> define el relleno de final de bloque lógico de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, o {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block-end`** define el relleno de final de bloque lógico de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, o {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<p>Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}, que define los otros rellenos del elemento.</p>
+Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}}, que define los otros rellenos del elemento.
 
-<div>{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}
 
+## Sintaxis
 
-
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-block-end: 10px;      /* An absolute length */
 padding-block-end: 1em;       /* A length relative to the text size */
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 padding-block-end: 5%;        /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-end: inherit;
 padding-block-end: initial;
 padding-block-end: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>La propiedad <code>padding-block-end</code> toma los mismos valores de la propiedad {{cssxref("padding-left")}}.</p>
+La propiedad `padding-block-end` toma los mismos valores de la propiedad {{cssxref("padding-left")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML </h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS </h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -59,38 +60,22 @@ padding-block-end: unset;
   writing-mode: vertical-lr;
   padding-block-end: 20px;
   background-color: #C8C800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-block-end", "padding-block-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                                           | Comentario          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-padding-block-end", "padding-block-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("css.properties.padding-block-end")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.padding-block-end")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Las propiedades físicas mapeadas: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

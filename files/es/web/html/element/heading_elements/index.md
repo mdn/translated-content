@@ -11,185 +11,135 @@ tags:
 translation_of: Web/HTML/Element/Heading_Elements
 original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
-<p id="Summary">Los elementos de <strong>encabezado</strong> implementan seis niveles de encabezado del documento, <code>&lt;h1&gt;</code> es el más importante, y <code>&lt;h6&gt;</code>, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.</p>
+Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
 
-<div class="note">
-<p><strong>Notas de uso:</strong></p>
+> **Nota:** **Notas de uso:\*** No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
+>
+> - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
+> - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
 
-<ul>
- <li>No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font-size")}} para eso.</li>
- <li>Evite omitir niveles de encabezado: siempre comience con <code>&lt;h1&gt;</code>, después use <code>&lt;h2&gt;</code> y así sucesivamente.</li>
- <li>Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar &lt;h1&gt; más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con <code>&lt;h2&gt;</code>. Cuando se usan secciones, debe usarse un <code>&lt;h1&gt;</code> por sección. Véase <a href="/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5">Definiendo secciones</a> en <a href="/es/docs/Sections_and_Outlines_of_an_HTML5_document">Secciones y esquema de un documento HTML5</a> para más información.</li>
-</ul>
-</div>
+| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), contenido de encabezados, contenido palpable.                                                                               |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                        | [Contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático).                                                                                                         |
+| Omisión de etiquetas                                                       | {{no_tag_omission}}                                                                                                                                                                                              |
+| Elementos padres permitidos                                                | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
+| Interfaz DOM                                                               | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                          |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
-   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">Contenido dinámico</a>, contenido de encabezados, contenido palpable.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenido permitido</th>
-   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático">Contenido textual o estático</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omisión de etiquetas</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos padres permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">contenido dinámico</a>; no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz DOM</th>
-   <td>{{domxref("HTMLHeadingElement")}}</td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-<p>Estos elementos incluyen los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
+El atributo `align` es obsoleto; no debe usarse.
 
-<p>El atributo <code>align</code> es obsoleto; no debe usarse.</p>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Todos los encabezados
 
-<h3 id="Todos_los_encabezados">Todos los encabezados</h3>
+El siguiente código muestra todos los niveles de encabezado.
 
-<p>El siguiente código muestra todos los niveles de encabezado.</p>
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
 
-<pre class="brush: html">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-&lt;h5&gt;Heading level 5&lt;/h5&gt;
-&lt;h6&gt;Heading level 6&lt;/h6&gt;
-</pre>
+Aquí está el resultado de este código:
 
-<p>Aquí está el resultado de este código:</p>
+{{ EmbedLiveSample('Todos_los_encabezados', '280', '300', '') }}
 
-<p>{{ EmbedLiveSample('Todos_los_encabezados', '280', '300', '') }}</p>
+### Página de ejemplo
 
-<h3 id="Página_de_ejemplo">Página de ejemplo</h3>
+El código siguiente muestra unos pocos encabezados con algo de contenido debajo de ellos.
 
-<p>El código siguiente muestra unos pocos encabezados con algo de contenido debajo de ellos.</p>
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here...</p>
 
-<pre class="brush: html">&lt;h1&gt;Heading elements&lt;/h1&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here...</p>
 
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;h3&gt;Example 1&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h3>Example 2</h3>
+<p>Some text here...</p>
 
-&lt;h3&gt;Example 2&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h2>See also</h2>
+<p>Some text here...</p>
+```
 
-&lt;h2&gt;See also&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
-</pre>
+Aquí está el resultado de este código:
 
-<p>Aquí está el resultado de este código:</p>
+{{ EmbedLiveSample('Página_de_ejemplo', '280', '480', '') }}
 
-<p>{{ EmbedLiveSample('Página_de_ejemplo', '280', '480', '') }}</p>
+## Sobre Accesibilidad
 
-<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
+### Navegación
 
-<h3 id="Navegación">Navegación</h3>
+Una forma típica de navegación que utilizan las personas no videntes es moverse a través de la pantalla con las etiquetas de encabezado. De esta forma, pueden conocer rápidamente el contenido de la página en poco tiempo; por esta razón es importante prestar mucha atención a nuestras etiquetas de encabezado y no saltearse ningún nivel o podríamos confundir a este usuario.
 
-<p>Una forma típica de navegación que utilizan las personas no videntes es moverse a través de la pantalla con las etiquetas de encabezado. De esta forma, pueden conocer rápidamente el contenido de la página en poco tiempo; por esta razón es importante prestar mucha atención a nuestras etiquetas de encabezado y no saltearse ningún nivel o podríamos confundir a este usuario.</p>
+#### No hacer
 
-<h4 id="No_hacer">No hacer</h4>
+```html example-bad
+<h1>Cabecera nivel 1</h1>
+<h3>Cabecera nivel 3</h3>
+<h4>Cabecera nivel 4</h4>
+```
 
-<pre class="brush: html example-bad">&lt;h1&gt;Cabecera nivel 1&lt;/h1&gt;
-&lt;h3&gt;Cabecera nivel 3&lt;/h3&gt;
-&lt;h4&gt;Cabecera nivel 4&lt;/h4&gt;
-</pre>
+#### Sí hacer
 
-<h4 id="Sí_hacer">Sí hacer</h4>
+```html example-good
+<h1>Cabecera nivel 1</h1>
+<h2>Cabecera nivel 2</h2>
+<h3>Cabecera nivel 3</h3>
+```
 
-<pre class="brush: html example-good">&lt;h1&gt;Cabecera nivel 1&lt;/h1&gt;
-&lt;h2&gt;Cabecera nivel 2&lt;/h2&gt;
-&lt;h3&gt;Cabecera nivel 3&lt;/h3&gt;
-</pre>
+#### Anidar
 
-<h4 id="Anidar">Anidar</h4>
+Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros documentos. Esto beneficia la organización de la información y también ayuda a los usuarios de lectores de pantalla a conocer mejor la jerarquía de los contenidos.
 
-<p>Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros documentos. Esto beneficia la organización de la información y también ayuda a los usuarios de lectores de pantalla a conocer mejor la jerarquía de los contenidos.</p>
+1.  `h1` Harry Potter
 
-<ol>
- <li><code>h1</code> Harry Potter
+    1.  `h2` Sinopsis
+    2.  `h2` Novelas
 
-  <ol>
-   <li><code>h2</code> Sinopsis</li>
-   <li><code>h2</code> Novelas
-    <ol>
-     <li><code>h3</code> Harry Potter y la Piedra Filosofal</li>
-     <li><code>h3</code> Harry Potter y la Cámara de los Secretos</li>
-     <li><code>h3</code> Harry Potter y el Prisionero de Azkaban</li>
-     <li><code>h3</code> Harry Potter y el Cáliz de Fuego</li>
-     <li><code>h3</code> Harry Potter y la Orden del Fenix</li>
-     <li><code>h3</code> Harry Potter y el Príncipe Mestizo</li>
-     <li><code>h3</code> Harry Potter y las Reliquias de la Muerte</li>
-    </ol>
-   </li>
-   <li><code>h2</code> Películas
-    <ol>
-     <li><code>h3</code> Harry Potter y la Piedra Filosofal</li>
-     <li><code>h3</code> Harry Potter y la Cámara de los Secretos</li>
-     <li><code>h3</code> Harry Potter y el Prisionero de Azkaban</li>
-     <li><code>h3</code> Harry Potter y el Cáliz de Fuego</li>
-     <li><code>h3</code> Harry Potter y la Orden del Fenix</li>
-     <li><code>h3</code> Harry Potter y el Príncipe Mestizo</li>
-     <li><code>h3</code> Harry Potter y las Reliquias de la Muerte (Parte 1)</li>
-     <li><code>h3</code> Harry Potter y las Reliquias de la Muerte (Parte 2)</li>
-    </ol>
-   </li>
-  </ol>
- </li>
-</ol>
+        1.  `h3` Harry Potter y la Piedra Filosofal
+        2.  `h3` Harry Potter y la Cámara de los Secretos
+        3.  `h3` Harry Potter y el Prisionero de Azkaban
+        4.  `h3` Harry Potter y el Cáliz de Fuego
+        5.  `h3` Harry Potter y la Orden del Fenix
+        6.  `h3` Harry Potter y el Príncipe Mestizo
+        7.  `h3` Harry Potter y las Reliquias de la Muerte
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+    3.  `h2` Películas
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+        1.  `h3` Harry Potter y la Piedra Filosofal
+        2.  `h3` Harry Potter y la Cámara de los Secretos
+        3.  `h3` Harry Potter y el Prisionero de Azkaban
+        4.  `h3` Harry Potter y el Cáliz de Fuego
+        5.  `h3` Harry Potter y la Orden del Fenix
+        6.  `h3` Harry Potter y el Príncipe Mestizo
+        7.  `h3` Harry Potter y las Reliquias de la Muerte (Parte 1)
+        8.  `h3` Harry Potter y las Reliquias de la Muerte (Parte 2)
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Especificaciones
+
+| Especificación                                                                                                                                                                                                           | Estatus                          | Comentarios |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                                         | {{Spec2('HTML4.01')}}     |             |
+
+## Compatibilidad de navegadores
 
 {{Compat("html.elements.h1")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{HTMLElement("p")}}</li>
- <li>{{HTMLElement("div")}}</li>
- <li>{{HTMLElement("section")}}</li>
-</ul>
+- {{HTMLElement("p")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("section")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

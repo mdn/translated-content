@@ -7,32 +7,32 @@ tags:
 translation_of: Web/XSLT/Element/comment
 original_slug: Web/XSLT/comment
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:comment&gt;</code> escribe un comentario en el documento de salida. Debe incluir sólo texto.</p>
+El elemento `<xsl:comment>` escribe un comentario en el documento de salida. Debe incluir sólo texto.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:comment&gt;
-	TEMPLATE
-&lt;/xsl:comment&gt; </pre>
+    <xsl:comment>
+    	TEMPLATE
+    </xsl:comment>
 
-<h3 id="Atributos_necesarios" name="Atributos_necesarios">Atributos necesarios</h3>
+### Atributos necesarios
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Instrucción, aparece dentro de una plantilla.</p>
+Instrucción, aparece dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 7.4.</p>
+XSLT, sección 7.4.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

@@ -1,73 +1,69 @@
 ---
 title: '::-moz-range-thumb'
-slug: 'Web/CSS/::-moz-range-thumb'
+slug: Web/CSS/::-moz-range-thumb
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Pseudo-elemento CSS
   - Referencia
-translation_of: 'Web/CSS/::-moz-range-thumb'
+translation_of: Web/CSS/::-moz-range-thumb
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El  <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a><code>CSS</code><strong><code> ::-moz-range-thumb</code></strong> representa el elemento que el usuario puede usar en el <em>"camino"</em> marcado por un elemento  {{HTMLElement("input")}} con <code>type="range"</code> para alterar su valor numérico.</p>
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS`**` ::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
 
-<div class="note">
-<p>Si se usa  <code>::-moz-range-thumb</code> en cualquier elemento  que no sea  <code>&lt;input type="range"&gt;</code> ni se seleccionará nada ni se conseguirá efecto alguno.</p>
-</div>
+> **Nota:** Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">input[type=range]::-moz-range-thumb {
+```css
+input[type=range]::-moz-range-thumb {
   background-color: green;
 }
-</pre>
+```
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="Salida">Salida</h3>
+### Salida
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Example", 300, 50)}}
 
-<p>Una barra de progreso que utilizara este estilo se visualizarías de la siguiente manera:</p>
+Una barra de progreso que utilizara este estilo se visualizarías de la siguiente manera:
 
-<p><img alt="The thumb of the &lt;input type=right> styled in green" src="https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png"></p>
+![The thumb of the <input type=right> styled in green](https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. El un pseudo-elemento propietario de Gecko.</p>
+No es parte de ninguna especificación. El un pseudo-elemento propietario de Gecko.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-moz-range-thumb")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>Los pseudo-elements usados por Gecko para dar estilo a otras parte de un input con typue="range":
-  <ul>
-   <li>{{cssxref("::-moz-range-track")}},</li>
-   <li>{{cssxref("::-moz-range-progress")}}</li>
-  </ul>
- </li>
- <li>Pseudo-elementos similares usados por otras nevagadores:
-  <ul>
-   <li>{{cssxref("::-ms-thumb")}}, pseudo-elemento soportado por Internet Explorer y Edge.</li>
-   <li>{{cssxref("::-webkit-slider-thumb")}}, pseudo-elemento souportado por WebKit y Blink (Safari, Chrome and Opera).</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Estilos con CSS para input con type="range" en los distintos navegadores.</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Dando estilos y haciendo script con elementos deslizadores.</a></li>
-</ul>
+- Los pseudo-elements usados por Gecko para dar estilo a otras parte de un input con typue="range":
+
+  - {{cssxref("::-moz-range-track")}},
+  - {{cssxref("::-moz-range-progress")}}
+
+- Pseudo-elementos similares usados por otras nevagadores:
+
+  - {{cssxref("::-ms-thumb")}}, pseudo-elemento soportado por Internet Explorer y Edge.
+  - {{cssxref("::-webkit-slider-thumb")}}, pseudo-elemento souportado por WebKit y Blink (Safari, Chrome and Opera).
+
+- [CSS-Tricks: Estilos con CSS para input con type="range" en los distintos navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Dando estilos y haciendo script con elementos deslizadores.](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

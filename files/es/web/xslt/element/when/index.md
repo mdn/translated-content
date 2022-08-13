@@ -7,35 +7,33 @@ tags:
 translation_of: Web/XSLT/Element/when
 original_slug: Web/XSLT/when
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:when&gt;</code> siempre aparece dentro de un elemento <code>&lt;xsl:choose&gt;</code>, actuando como una sentencia case.</p>
+El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, actuando como una sentencia case.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:when test=EXPRESIÓN&gt;
-	PLANTILLA
-&lt;/xsl:when&gt;</pre>
+    <xsl:when test=EXPRESIÓN>
+    	PLANTILLA
+    </xsl:when>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<dl>
- <dt><code>test</code></dt>
- <dd>Especifica una expresión booleana a evaluar. Si es cierta, se procesa el contenido del elemento; si es falsa, se ignora.</dd>
-</dl>
+- `test`
+  - : Especifica una expresión booleana a evaluar. Si es cierta, se procesa el contenido del elemento; si es falsa, se ignora.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Subinstrucción, siempre aparece dentro de un elemento <code>&lt;xsl:choose&gt;</code>.</p>
+Subinstrucción, siempre aparece dentro de un elemento `<xsl:choose>`.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 9.2.</p>
+XSLT, sección 9.2.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

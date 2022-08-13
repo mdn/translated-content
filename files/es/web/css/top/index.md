@@ -10,129 +10,103 @@ tags:
   - páginas_a_traducir
 translation_of: Web/CSS/top
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h3 id="Sumario" name="Sumario">Sumario</h3>
+### Sumario
 
-<p>La propiedad <code>top</code> especifica parte de la posición de un elemento posicionado. No tiene efecto en elementos no posicionados.</p>
+La propiedad `top` especifica parte de la posición de un elemento posicionado. No tiene efecto en elementos no posicionados.
 
-<p>Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}<code>: absolute</code> o {{ Cssxref("position") }}<code>: fixed</code>), determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene.</p>
+Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` o {{ Cssxref("position") }}`: fixed`), determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene.
 
-<p>Para los elementos con una posición relativa (aquellos que tienen la propiedad {{ Cssxref("position") }}<code>: relative</code>), determina el desplazamiento hacia abajo que tendrá el elemento con respecto a su posición normal.</p>
+Para los elementos con una posición relativa (aquellos que tienen la propiedad {{ Cssxref("position") }}`: relative`), determina el desplazamiento hacia abajo que tendrá el elemento con respecto a su posición normal.
 
-<p>Cuando se define tanto la propiedad <code>top </code>como {{cssxref("bottom")}} para un elemento, y  {{cssxref("height")}} no se ha definido, tiene un valor <code>auto </code>o 100%, tanto la distancia <code>top </code>como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad <code>top </code>tiene precedencia y {{cssxref("bottom")}} será ignorada.</p>
+Cuando se define tanto la propiedad `top `como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto `o 100%, tanto la distancia `top `como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top `tiene precedencia y {{cssxref("bottom")}} será ignorada.
 
-<ul>
- <li>{{ Xref_cssinitial() }}: {{ Cssxref("auto") }}</li>
- <li>Aplicable a: <a href="/es/CSS/position" title="es/CSS/position">Posicionar Elementos</a></li>
- <li>{{ Xref_cssinherited() }}: no</li>
- <li>Porcentajes: se refieren a la altura del bloque contenedor.</li>
- <li>Medio: {{ Xref_cssvisual() }}</li>
- <li>{{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.</li>
-</ul>
+- {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
+- Aplicable a: [Posicionar Elementos](/es/CSS/position "es/CSS/position")
+- {{ Xref_cssinherited() }}: no
+- Porcentajes: se refieren a la altura del bloque contenedor.
+- Medio: {{ Xref_cssvisual() }}
+- {{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval notranslate">   top: &lt;longitud&gt; | &lt;porcentaje&gt; | auto | inherit
-</pre>
+       top: <longitud> | <porcentaje> | auto | inherit
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<pre class="notranslate"> /* se puede también usar unidades px para posicionar body para luego operar con el div */
- body{
-   width: 100%;
-   height: 100%;
- }
- /* ahora podemos operar con unidades de porcentajes (con al 100% respecto de body) */
- div{
-   position:absolute;
-   left:15%;
-   top:30%;
-   bottom:30%;
-   width:70%;
-   height:40%;
-   text-align:left;
-   border: 3px rgb(0,0,0) solid;
- }
-</pre>
+     /* se puede también usar unidades px para posicionar body para luego operar con el div */
+     body{
+       width: 100%;
+       height: 100%;
+     }
+     /* ahora podemos operar con unidades de porcentajes (con al 100% respecto de body) */
+     div{
+       position:absolute;
+       left:15%;
+       top:30%;
+       bottom:30%;
+       width:70%;
+       height:40%;
+       text-align:left;
+       border: 3px rgb(0,0,0) solid;
+     }
 
-<pre class="notranslate"> &lt;?xml version="1.0" encoding="utf-8"?&gt;
- &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
- &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
-   &lt;head&gt;
-     &lt;meta http-equiv="Content-Type" content="application/xhtml+xml" /&gt;
-     &lt;title&gt;Mozzila.org height top left width porcentaje CSS&lt;/title&gt;
-     &lt;style type="text/css"&gt;
-       /* se puede también usar unidades px para posicionar body para luego operar con el div */
-       body{
-         width: 100%;
-         height: 100%;
-       }
-       /* ahora podemos operar con unidades de porcentajes (con respecto al 100% del body) */
-       div{
-         position:absolute;
-         left:15%;
-         top:30%;
-         bottom:30%;
-         width:70%;
-         height:40%;
-         text-align:left;
-         border: 3px rgb(0,0,0) solid;
-       }
-     &lt;/style&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-      &lt;center&gt;
-        &lt;div&gt;
-             ...Contenido...
-        &lt;/div&gt;
-      &lt;/center&gt;
+<!---->
 
-   &lt;/body&gt;
- &lt;/html&gt;
-</pre>
+     <?xml version="1.0" encoding="utf-8"?>
+     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+     <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+       <head>
+         <meta http-equiv="Content-Type" content="application/xhtml+xml" />
+         <title>Mozzila.org height top left width porcentaje CSS</title>
+         <style type="text/css">
+           /* se puede también usar unidades px para posicionar body para luego operar con el div */
+           body{
+             width: 100%;
+             height: 100%;
+           }
+           /* ahora podemos operar con unidades de porcentajes (con respecto al 100% del body) */
+           div{
+             position:absolute;
+             left:15%;
+             top:30%;
+             bottom:30%;
+             width:70%;
+             height:40%;
+             text-align:left;
+             border: 3px rgb(0,0,0) solid;
+           }
+         </style>
+       </head>
+       <body>
+          <center>
+            <div>
+                 ...Contenido...
+            </div>
+          </center>
 
-<h3 id="Notas" name="Notas"></h3>
+       </body>
+     </html>
 
-<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
+###
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-top">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/Style/CSS/current-work#positioning">CSS 3</a></li>
-</ul>
+### Especificaciones
 
-<h3 id="Compatibilidad_entre_navegadores" name="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h3>
+- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-top)
+- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión mínima</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>?</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>?</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>?</td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+### Compatibilidad entre navegadores
 
-<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+| Navegador         | Versión mínima |
+| ----------------- | -------------- |
+| Internet Explorer | ?              |
+| Firefox           | 1              |
+| Netscape          | ?              |
+| Opera             | ?              |
+| Safari            | ?              |
 
-<p>{{ Cssxref("position") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}, {{ Cssxref("left") }}</p>
+### Ver también
+
+{{ Cssxref("position") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}, {{ Cssxref("left") }}

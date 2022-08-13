@@ -7,33 +7,29 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/intersection
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>set:intersection()</code> devuelve la intersección de dos conjuntos de nodos. En otras palabras, devuelve un conjunto de nodos que contiene todos los nodos de ambos conjuntos de nodos.</p>
+`set:intersection()` devuelve la intersección de dos conjuntos de nodos. En otras palabras, devuelve un conjunto de nodos que contiene todos los nodos de ambos conjuntos de nodos.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">set:intersection(<em>conjuntoNodos1</em>,<em>conjuntoNodos2</em>)
-</pre>
+    set:intersection(conjuntoNodos1,conjuntoNodos2)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>conjuntoNodos1</em></code></dt>
- <dd>El primer conjunto de nodos.</dd>
- <dt><code><em>conjuntoNodos2</em></code></dt>
- <dd>El segundo conjunto de nodos.</dd>
-</dl>
+- `conjuntoNodos1`
+  - : El primer conjunto de nodos.
+- `conjuntoNodos2`
+  - : El segundo conjunto de nodos.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>Un conjunto de nodos que contiene todos los nodos tanto de<em>conjuntoNodos1</em> como de<em>conjuntoNodos2</em>.</p>
+Un conjunto de nodos que contiene todos los nodos tanto de*conjuntoNodos1* como de*conjuntoNodos2*.
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/set/functions/intersection/index.html">EXSLT - SET:INTERSECTION</a></p>
+[EXSLT - SET:INTERSECTION](http://www.exslt.org/set/functions/intersection/index.html)
 
-<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
+### Implementación de Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

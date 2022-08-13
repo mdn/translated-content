@@ -5,69 +5,36 @@ tags:
   - Encabezado HTTP Age
 translation_of: Web/HTTP/Headers/Age
 ---
-<div> </div>
+El encabezado **`Age`** contiene el tiempo medido en segundos que el objeto ha estado en la memoria caché de servidor proxy.El encabezado **`Age`** suele estar seteado en 0 (cero). Si **`Age : 0`** probablemente en ese instante se acaba de obtener la respuesta del servidor de origen, de lo contrario, por lo general esto se calcula como la diferencia entre la fecha actual del proxy y la fecha dada por el parámetro en cabecera "Date" ({{HTTPHeader("Date")}} ) incluído en la respuesta HTTP.
 
-<div>El encabezado <code><strong>Age</strong></code> contiene el tiempo medido en segundos que el objeto ha estado en la memoria caché de servidor proxy.</div>
+| Tipo de Cabecera                                                              | {{Glossary("Response header")}} |
+| ----------------------------------------------------------------------------- | ---------------------------------------- |
+| Nombre de Cabecera Prohibido {{Glossary("Forbidden header name")}} | no                                       |
 
-<div> </div>
+## Sintaxis
 
-<div>El encabezado <code><strong>Age</strong></code> suele estar seteado en 0 (cero). Si <code><strong>Age : 0</strong></code> probablemente en ese instante se acaba de obtener la respuesta del servidor de origen, de lo contrario, por lo general esto se calcula como la diferencia entre la fecha actual del proxy y la fecha dada por el parámetro en cabecera "Date" ({{HTTPHeader("Date")}} ) incluído en la respuesta HTTP.</div>
+    Age: <segundos>
 
-<div> </div>
+## Directivas
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de Cabecera</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Nombre de Cabecera Prohibido {{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+- \<segundos>
+  - : Número entero no negativo, que representa el tiempo en segundos que el objeto ha almacenado en la caché del proxy.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Ejemplos
 
-<pre class="syntaxbox">Age: &lt;segundos&gt;
-</pre>
+    Age: 24
 
-<h2 id="Directivas">Directivas</h2>
+## Especificaciones
 
-<dl>
- <dt>&lt;segundos&gt;</dt>
- <dd>
- <p>Número entero no negativo, que representa el tiempo en segundos que el objeto ha almacenado en la caché del proxy.</p>
- </dd>
-</dl>
+| Specification                            | Title                                           |
+| ---------------------------------------- | ----------------------------------------------- |
+| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Compatibilidad de Navegadores
 
-<pre>Age: 24</pre>
+{{Compat("http.headers.Age")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Ver también
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7234", "Age", "5.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
-
-<p>{{Compat("http.headers.Age")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

@@ -13,82 +13,54 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/compile
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>El método obsoleto <code><strong>compile</strong></code><strong><code>()</code></strong> es usado para (re-)compilar una expresión regular durante la ejecución del script. Es básicamente lo mismo que el constructor <code>RegExp</code>.</p>
+El método obsoleto **`compile`\*\***`()`\*\* es usado para (re-)compilar una expresión regular durante la ejecución del script. Es básicamente lo mismo que el constructor `RegExp`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>regexObj</var>.compile(<var>patrón, flags</var>)</code></pre>
+    regexObj.compile(patrón, flags)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>patrón</code></dt>
- <dd>El texto de la expresión regular.</dd>
- <dt><code>flags</code></dt>
- <dd>
- <p>Si es especificado, las flags pueden tener cualquier combinación de los siguientes valores:</p>
+- `patrón`
+  - : El texto de la expresión regular.
+- `flags`
+  - : Si es especificado, las flags pueden tener cualquier combinación de los siguientes valores:_ `g`
+    _ : búsqueda global (global match)
+    - `i`
+      - : ignorar mayúsculas o minúsculas
+    - `m`
+      - : Tratar caracteres de inicio y fin (^ y $) como multiples líneas de texto(por ejemplo: encontrar el inicio o fin de cada línea delimitada por \n o \r, no sólo al inicio o fin de toda la entrada de texto)
+    - `y`
+      - : sticky; busca solamente desde el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena objetivo (y no intenta buscar desde ningún índice posterior).
 
- <dl>
-  <dt><code>g</code></dt>
-  <dd>búsqueda global (global match)</dd>
-  <dt><code>i</code></dt>
-  <dd>ignorar mayúsculas o minúsculas</dd>
-  <dt><code>m</code></dt>
-  <dd>Tratar caracteres de inicio y fin (^ y $) como multiples líneas de texto(por ejemplo: encontrar el inicio o fin de cada línea delimitada por \n o \r, no sólo al inicio o fin de toda la entrada de texto)</dd>
-  <dt><code>y</code></dt>
-  <dd>sticky; busca solamente desde el índice indicado por la propiedad <code>lastIndex</code> de esta expresión regular en la cadena objetivo (y no intenta buscar desde ningún índice posterior).</dd>
- </dl>
- </dd>
-</dl>
+## Descripción
 
-<h2 id="Descripción">Descripción</h2>
+El método `compile` es obsoleto. Puedes simplemente utilizar el constructor `RegExp` para lograr el mismo efecto.
 
-<p> El método <code>compile</code> es obsoleto. Puedes simplemente utilizar el constructor <code>RegExp</code> para lograr el mismo efecto.</p>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Usando `compile()`
 
-<h3 id="Usando_compile">Usando <code>compile()</code></h3>
+El siguiente ejemplo muestra como recompilar una expresión regultar con un nuevo patrón y nuevas flags.
 
-<p>El siguiente ejemplo muestra como recompilar una expresión regultar con un nuevo patrón y nuevas flags.</p>
-
-<pre class="brush: js">var regexObj = new RegExp('foo', 'gi');
+```js
+var regexObj = new RegExp('foo', 'gi');
 regexObj.compile('new foo', 'g');
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Commentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial. Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                       | Commentario                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Definición inicial. Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web. |
+| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web.                     |
 
-<h2 id="Compatiblidad_con_navegadores">Compatiblidad con navegadores</h2>
+## Compatiblidad con navegadores
 
-<div>
+{{Compat("javascript.builtins.RegExp.compile")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.RegExp.compile")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("RegExp")}}</li>
-</ul>
+- {{jsxref("RegExp")}}

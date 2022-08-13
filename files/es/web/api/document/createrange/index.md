@@ -7,36 +7,30 @@ tags:
   - crear rango
 translation_of: Web/API/Document/createRange
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Retorna un nuevo objeto <code><a href="https://developer.mozilla.org/es/docs/Web/API/Range">Rango</a></code>.</p>
+Retorna un nuevo objeto [`Rango`](https://developer.mozilla.org/es/docs/Web/API/Range).
 
-<h3 id="Sint.C3.A1xis" name="Sint.C3.A1xis">Sintáxis</h3>
+### Sintáxis
 
-<pre class="eval"><var>range</var> = <var>document</var>.createRange();
-</pre>
+    range = document.createRange();
 
-<p>En este ejemplo, <code>range</code> es el nuevo objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Range">rango</a> creado.</p>
+En este ejemplo, `range` es el nuevo objeto [rango](/es/docs/Web/API/Range) creado.
 
-<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
+### Ejemplo
 
-<pre class="eval">var range = document.createRange();
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-</pre>
+    var range = document.createRange();
+    range.setStart(startNode, startOffset);
+    range.setEnd(endNode, endOffset);
 
-<h3 id="Notas" name="Notas">Notas</h3>
+### Notas
 
-<p>Una vez que se ha creado un objeto <code>Rango</code>, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.</p>
+Una vez que se ha creado un objeto `Rango`, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.
 
-<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
+### Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange">DOM Level 2 Range: DocumentRange.createRange</a></p>
+[DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
 
-
-
-<div class="noinclude"></div>
-
-<p>{{ languages( { "en": "en/DOM/document.createRange", "pl": "pl/DOM/document.createRange" } ) }}</p>
+{{ languages( { "en": "en/DOM/document.createRange", "pl": "pl/DOM/document.createRange" } ) }}

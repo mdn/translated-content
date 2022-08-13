@@ -9,31 +9,27 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">La sentencia </span><strong style="font-size: 1rem; letter-spacing: -0.00278rem;">sentencia <code>for...of</code></strong><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> ejecuta un bloque de código para cada elemento de un </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable" style="font-size: 1rem; letter-spacing: -0.00278rem;">objeto iterable</a>,<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or </span><a href="/en-US/docs/Web/API/NodeList" style="font-size: 1rem; letter-spacing: -0.00278rem;" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a><span style="font-size: 1rem; letter-spacing: -0.00278rem;">), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.</span></p>
-</div>
+La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().")), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">for (<em>variable</em> of <em>iterable</em>) {
-  <em>statement
-</em>}
-</pre>
+    for (variable of iterable) {
+      statement
+    }
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>En cada iteración el elemento (propiedad enumerable) correspondiente es asignado a <em>variable</em>. </dd>
- <dt><code>iterable</code></dt>
- <dd>Objeto cuyas propiedades enumerables son iteradas. </dd>
-</dl>
+- `variable`
+  - : En cada iteración el elemento (propiedad enumerable) correspondiente es asignado a _variable_.
+- `iterable`
+  - : Objeto cuyas propiedades enumerables son iteradas.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Iterando_un_jsxrefArray">Iterando un {{jsxref("Array")}}</h3>
+### Iterando un {{jsxref("Array")}}
 
-<pre class="brush: js">let iterable = [10, 20, 30];
+```js
+let iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -42,43 +38,50 @@ for (let value of iterable) {
 // 11
 // 21
 // 31
-</pre>
+```
 
-<p>Es posible usar <code>const</code> en lugar de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> </code>si no se va a modificar la variable dentro del bloque.</p>
+Es posible usar `const` en lugar de `let `si no se va a modificar la variable dentro del bloque.
 
-<pre class="brush: js">let iterable = [10, 20, 30];
+```js
+let iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
 }
 // 10
 // 20
-// 30</pre>
+// 30
+```
 
-<h3 id="Iterando_un_jsxrefString">Iterando un {{jsxref("String")}}</h3>
+### Iterando un {{jsxref("String")}}
 
-<pre class="brush: js">let iterable = "boo";
+```js
+let iterable = "boo";
 
 for (let value of iterable) {
   console.log(value);
 }
 // "b"
 // "o"
-// "o"</pre>
+// "o"
+```
 
-<h3 id="Iterando_un_jsxrefTypedArray">Iterando un {{jsxref("TypedArray")}}</h3>
+### Iterando un {{jsxref("TypedArray")}}
 
-<pre class="brush: js">let iterable = new Uint8Array([0x00, 0xff]);
+```js
+let iterable = new Uint8Array([0x00, 0xff]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 0
-// 255</pre>
+// 255
+```
 
-<h3 id="Iterando_un_jsxrefMap">Iterando un {{jsxref("Map")}}</h3>
+### Iterando un {{jsxref("Map")}}
 
-<pre class="brush: js">let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+```js
+let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -92,22 +95,26 @@ for (let [key, value] of iterable) {
 }
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="Iterando_un_jsxrefSet">Iterando un {{jsxref("Set")}}</h3>
+### Iterando un {{jsxref("Set")}}
 
-<pre class="brush: js">let iterable = new Set([1, 1, 2, 2, 3, 3]);
+```js
+let iterable = new Set([1, 1, 2, 2, 3, 3]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="Iterando_un_objeto_arguments">Iterando un objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></h3>
+### Iterando un objeto [arguments](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -115,40 +122,44 @@ for (let value of iterable) {
 
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="Iterando_una_colección_del_DOM">Iterando una colección del DOM</h3>
+### Iterando una colección del DOM
 
-<p>Iterando colecciones del DOM como un {{domxref("NodeList")}}: el siguiente ejemplo añade la clase "read" a los párrafos (<code>&lt;p&gt;</code>) que son descendientes directos de un (<code>&lt;article&gt;</code>):</p>
+Iterando colecciones del DOM como un {{domxref("NodeList")}}: el siguiente ejemplo añade la clase "read" a los párrafos (`<p>`) que son descendientes directos de un (`<article>`):
 
-<pre class="brush: js">// Nota: Esto solo funcionará en plataformas que tengan
+```js
+// Nota: Esto solo funcionará en plataformas que tengan
 // implementado NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll("article &gt; p");
+let articleParagraphs = document.querySelectorAll("article > p");
 
 for (let paragraph of articleParagraphs) {
   paragraph.classList.add("read");
-}</pre>
+}
+```
 
-<h3 id="Clausurando_iteraciones">Clausurando iteraciones</h3>
+### Clausurando iteraciones
 
-<p>En los bucles <code>for...of</code>, se puede causar que la iteración termine de un modo brusco usando: <code>break</code>, <code>continue<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of$edit#Chrome_closing_1">[4]</a></code>, <code>throw</code> or <code>return<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of$edit#Chrome_closing_2">[5]</a></code>. En estos casos la iteración se cierra.</p>
+En los bucles `for...of`, se puede causar que la iteración termine de un modo brusco usando: `break`, `continue[4]`, `throw` or `return[5]`. En estos casos la iteración se cierra.
 
-<pre><code>function* foo(){
-  yield 1;
-  yield 2;
-  yield 3;
-};
+    function* foo(){
+      yield 1;
+      yield 2;
+      yield 3;
+    };
 
-for (let o of foo()) {
-  console.log(o);
-  break; // closes iterator, triggers return
-}</code></pre>
+    for (let o of foo()) {
+      console.log(o);
+      break; // closes iterator, triggers return
+    }
 
-<h3 id="Iterando_generadores">Iterando generadores</h3>
+### Iterando generadores
 
-<p>También es posible iterar las nuevas funciones <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">generator</a></strong>:</p>
+También es posible iterar las nuevas funciones **[generator](/es/docs/Web/JavaScript/Reference/Statements/function*)**:
 
-<pre class="brush: js">function* fibonacci() { // una función generador
+```js
+function* fibonacci() { // una función generador
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -159,18 +170,16 @@ for (let o of foo()) {
 for (let n of fibonacci()) {
   console.log(n);
   // interrumpir la secuencia en 1000
-  if (n &gt;= 1000) {
+  if (n >= 1000) {
     break;
   }
-}</pre>
+}
+```
 
-<div class="note">
-<h4 id="No_se_deben_reutilizar_los_generadores"><a id="#re-use" name="#re-use">No se deben reutilizar los generadores</a></h4>
+> **Nota:** #### No se deben reutilizar los generadoresLos generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.
 
-<p>Los generadores no deben ser reutilizados, incluso si el bucle <strong><code>for...of</code></strong> se ha terminado antes de tiempo con la sentencia <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/break">break</a>. Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 (<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13">13.7.5.13, step 5m</a>), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.</p>
-</div>
-
-<pre class="brush: js example-bad">var gen = (function *(){
+```js example-bad
+var gen = (function *(){
   yield 1;
   yield 2;
   yield 3;
@@ -183,18 +192,20 @@ for (let o of gen) {
 // El generador no debe ser reutilizado, lo siguiente no tiene sentido
 for (let o of gen) {
   console.log(o); // Nunca será llamado
-}</pre>
+}
+```
 
-<h3 id="Iterando_otros_objetos_iterables">Iterando otros objetos iterables</h3>
+### Iterando otros objetos iterables
 
-<p>Es posible, además, iterar un objeto que explicitamente implemente el protocolo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterable</a>:</p>
+Es posible, además, iterar un objeto que explicitamente implemente el protocolo [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#iterable):
 
-<pre class="brush: js">var iterable = {
+```js
+var iterable = {
   [Symbol.iterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
@@ -208,17 +219,19 @@ for (var value of iterable) {
 }
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<h3 id="Diferencia_entre_for...of_y_for...in">Diferencia entre <code>for...of</code> y <code>for...in</code></h3>
+### Diferencia entre `for...of` y `for...in`
 
-<p>El bucle <code><strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="en-US/docs/JavaScript/Reference/Statements/for...in">for...in</a></strong> iterará sobre <strong>todas las propiedades de un objeto</strong>.</code> Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad <code>[[Enumerable]] </code>configurada como <code>true</code>. </p>
+El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]] `configurada como `true`.
 
-<p>La sintaxis de  <strong><code>for...of</code> </strong>es específica para las <strong>colecciones</strong>, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad <code>[Symbol.iterator]</code>.</p>
+La sintaxis de **`for...of` **es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 
-<p>El siguiente ejemplo muestra las diferencias entre un bucle<strong> <code>for...of</code></strong> y un bucle <strong>f<code>or...in</code></strong>. </p>
+El siguiente ejemplo muestra las diferencias entre un bucle** `for...of`** y un bucle **f`or...in`**.
 
-<pre class="brush: js">let arr = [3, 5, 7];
+```js
+let arr = [3, 5, 7];
 arr.foo = "hola";
 
 for (let i in arr) {
@@ -227,37 +240,21 @@ for (let i in arr) {
 
 for (let i of arr) {
    console.log(i); // logs "3", "5", "7"
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Cometario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Cometario           |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.statements.for_of")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map.prototype.forEach()")}}

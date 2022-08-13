@@ -3,50 +3,25 @@ title: CSS Writing Modes
 slug: Web/CSS/CSS_Writing_Modes
 translation_of: Web/CSS/CSS_Writing_Modes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Writing Modes</strong> es un modulo CSS que define varios modos internacionales de escritura, como izquierda-derecha (e.g. usado por Latin y textos Indic), de derecha-zquierda (e.g. usado por textos Hebreos o Árabes), bidireccional (usado cuando se mezcla izquierda-derecha y  derecha-izquierda) y vertical (e.g. usado por algunos textos Asiaticos).</p>
+**CSS Writing Modes** es un modulo CSS que define varios modos internacionales de escritura, como izquierda-derecha (e.g. usado por Latin y textos Indic), de derecha-zquierda (e.g. usado por textos Hebreos o Árabes), bidireccional (usado cuando se mezcla izquierda-derecha y derecha-izquierda) y vertical (e.g. usado por algunos textos Asiaticos).
 
-<h2 id="Referencia">Referencia</h2>
+## Referencia
 
-<h3 id="Propiedades">Propiedades</h3>
+### Propiedades
 
-<div class="index">
-<ul>
- <li>{{cssxref("direction")}}</li>
- <li>{{cssxref("glyph-orientation-horizontal")}}</li>
- <li>{{cssxref("text-combine-upright")}}</li>
- <li>{{cssxref("text-orientation")}}</li>
- <li>{{cssxref("unicode-bidi")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
-</div>
+- {{cssxref("direction")}}
+- {{cssxref("glyph-orientation-horizontal")}}
+- {{cssxref("text-combine-upright")}}
+- {{cssxref("text-orientation")}}
+- {{cssxref("unicode-bidi")}}
+- {{cssxref("writing-mode")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                   | Estado                                   | Comentario         |
+| ------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Writing Modes')}}     | {{Spec2('CSS3 Writing Modes')}} |                    |
+| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                 |                    |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                 | Initial definition |

@@ -1,6 +1,6 @@
 ---
 title: '::-webkit-slider-thumb'
-slug: 'Web/CSS/::-webkit-slider-thumb'
+slug: Web/CSS/::-webkit-slider-thumb
 tags:
   - CSS
   - NeedsBrowserCompatibility
@@ -11,28 +11,25 @@ tags:
   - Pseudo-elemento
   - Pseudo-elemento CSS
   - Referencia
-translation_of: 'Web/CSS/::-webkit-slider-thumb'
+translation_of: Web/CSS/::-webkit-slider-thumb
 ---
-<div>admi{{CSSRef}}{{Non-standard_header}}</div>
+admi{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El  <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a> <code>CSS </code><strong><code>::-webkit-slider-thumb</code></strong> representa el selector que el usuario puede mover a lo largo de la ranura de un elemento  {{HTMLElement("input")}} con  <code>type="range"</code> para modificar su valor numérico.</p>
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS `**`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.</p>
+No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{cssxref("::-webkit-slider-runnable-track")}}</li>
- <li>Psuedo-elementos similares en otros navegadores:
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}}</li>
-   <li>{{cssxref("::-ms-thumb")}}</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Dando estilos con CSS a elementos Input de tipo range para que se muestren correctamente en distintos navegadores</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes</a></li>
-</ul>
+- {{cssxref("::-webkit-slider-runnable-track")}}
+- Psuedo-elementos similares en otros navegadores:
+
+  - {{cssxref("::-moz-range-thumb")}}
+  - {{cssxref("::-ms-thumb")}}
+
+- [CSS-Tricks: Dando estilos con CSS a elementos Input de tipo range para que se muestren correctamente en distintos navegadores](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

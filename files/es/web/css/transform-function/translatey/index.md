@@ -8,70 +8,107 @@ tags:
 translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La función <strong><code>translateY()</code></strong> de <a href="/en-US/docs/Web/CSS">CSS</a> reposiciona un elemento verticalmente dentro del plano bidimensional. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
+La función **`translateY()`** de [CSS](/es/docs/Web/CSS) reposiciona un elemento verticalmente dentro del plano bidimensional. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12125/translateY.png" style="height: 195px; width: 243px;"></p>
+![](https://mdn.mozillademos.org/files/12125/translateY.png)
 
-<div class="note">
-<p><strong>Nota:</strong> <code>translateY(ty)</code> es equivalente a <code><a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(0, ty)</code> o <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(0, ty, 0)</code>.</p>
-</div>
+> **Nota:** `translateY(ty)` es equivalente a `translate(0, ty)` o `translate3d(0, ty, 0)`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css">/* &lt;length-percentage&gt; values */
+```css
+/* <length-percentage> values */
 transform: translateY(200px);
 transform: translateY(50%);
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>El valor es de tipo {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}}, representando el ordinal del vector de traslación. Un valor en porcentaje es relativo a la altura de la caja de referencia definida por la propiedad {{cssxref("transform-box")}}.</dd>
-</dl>
+- `<length-percentage>`
+  - : El valor es de tipo {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}}, representando el ordinal del vector de traslación. Un valor en porcentaje es relativo a la altura de la caja de referencia definida por la propiedad {{cssxref("transform-box")}}.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordenadas cartesianas en ℝ<sup>2</sup></th>
-   <th scope="col">Coordenadas homogéneas en ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordenadas cartesianas en ℝ<sup>3</sup></th>
-   <th scope="col">Coordenadas homogéneas en ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2">
-    <p>Una traslación no es una transformación linear en ℝ<sup>2 </sup> y no puede ser representada usando una matriz de coordenada cartesiana.</p>
-   </td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 1 0 t]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordenadas cartesianas en ℝ<sup>2</sup></th>
+      <th scope="col">Coordenadas homogéneas en ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordenadas cartesianas en ℝ<sup>3</sup></th>
+      <th scope="col">Coordenadas homogéneas en ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <p>
+          Una traslación no es una transformación linear en ℝ<sup>2 </sup>y no
+          puede ser representada usando una matriz de coordenada cartesiana.
+        </p>
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><math
+            ><mfenced
+              ><mtable
+                ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+                ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
+                ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 1 0 t]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
-<pre class="syntaxbox">translateY({{cssxref("&lt;length-percentage&gt;")}})
-</pre>
+    translateY({{cssxref("&lt;length-percentage&gt;")}})
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -81,38 +118,23 @@ transform: translateY(50%);
   transform: translateY(10px);
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Ejemplos", 250, 250)}}</p>
+{{EmbedLiveSample("Ejemplos", 250, 250)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-translatey", "translateY()")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estatus                              | Comentarios        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName("CSS3 Transforms", "#funcdef-transform-translatey", "translateY()")}} | {{Spec2("CSS3 Transforms")}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p>Por favor, véase el tipo <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para información de compatibilidad.</p>
+Por favor, véase el tipo [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

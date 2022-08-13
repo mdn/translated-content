@@ -11,60 +11,58 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<h3 id="Apilamiento_y_float">Apilamiento y float</h3>
+### Apilamiento y float
 
-<p>Para los bloques flotantes el orden de apilamiento es un poco diferente. Los bloques flotantes son colocados entre bloques no posicionados y bloques posicionados:</p>
+Para los bloques flotantes el orden de apilamiento es un poco diferente. Los bloques flotantes son colocados entre bloques no posicionados y bloques posicionados:
 
-<ol>
- <li>Fondo y bordes del elemento raiz</li>
- <li>Bloques descendientes en el flujo normal, en orden de aparición (en HTML)</li>
- <li>Bloques flotantes</li>
- <li>Elementos posicionados descendentemente , en orden de aparición (en HTML)</li>
-</ol>
+1.  Fondo y bordes del elemento raiz
+2.  Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
+3.  Bloques flotantes
+4.  Elementos posicionados descendentemente , en orden de aparición (en HTML)
 
-<p>En realidad, como puedes ver en el siguiente ejemplo, el fondo y el borde del bloque no posicionado (DIV #4) no son afectados por los bloques flotantes, mientras que el contenido si es afectado. Esto ocurre de acuerdo al comportamiento flotante stándar de CSS.</p>
+En realidad, como puedes ver en el siguiente ejemplo, el fondo y el borde del bloque no posicionado (DIV #4) no son afectados por los bloques flotantes, mientras que el contenido si es afectado. Esto ocurre de acuerdo al comportamiento flotante stándar de CSS.
 
-<p>Este comportamiento puede ser explicado con una versión mejorada de la lista previa:</p>
+Este comportamiento puede ser explicado con una versión mejorada de la lista previa:
 
-<ol>
- <li>Fondo y bordes del elemento raiz</li>
- <li>Bloques descendientes en el flujo normal, en orden de aparición (en HTML)</li>
- <li>Bloques flotantes</li>
- <li>Descendientes en línea en el flujo normal</li>
- <li>Elementos posicionados descendentemente , en orden de aparición (en HTML)</li>
-</ol>
+1.  Fondo y bordes del elemento raiz
+2.  Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
+3.  Bloques flotantes
+4.  Descendientes en línea en el flujo normal
+5.  Elementos posicionados descendentemente , en orden de aparición (en HTML)
 
-<div class="note"><strong>Nota:</strong> En el ejemplo debajo, todos los bloques excepto el no posicionado son translúcidos para mostrar el orden de apilamiento. Si la opacidad del bloque no posicionado (DIV #4) es reducida, entonces algo extraño ocurre: el fondo y el borde de ese bloque sobresale por encima de los bloques flotantes, pero aun debajo de los bloques posicionados. Yo no pude entender si esto es un bug o una interpretación peculiar de la especificación. (Aplicar opacidad debería crear implícitamente un contexto de apilamiento.)</div>
+> **Nota:** En el ejemplo debajo, todos los bloques excepto el no posicionado son translúcidos para mostrar el orden de apilamiento. Si la opacidad del bloque no posicionado (DIV #4) es reducida, entonces algo extraño ocurre: el fondo y el borde de ese bloque sobresale por encima de los bloques flotantes, pero aun debajo de los bloques posicionados. Yo no pude entender si esto es un bug o una interpretación peculiar de la especificación. (Aplicar opacidad debería crear implícitamente un contexto de apilamiento.)
 
-<p>{{ EmbedLiveSample('Example_source_code', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}</p>
+{{ EmbedLiveSample('Example_source_code', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}
 
-<h2 id="Código_fuente_de_ejemplo"><strong>Código fuente de ejemplo</strong></h2>
+## Código fuente de ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="abs1"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
+```html
+<div id="abs1">
+  <b>DIV #1</b><br />position: absolute;</div>
 
-&lt;div id="flo1"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;&lt;br /&gt;float: left;&lt;/div&gt;
+<div id="flo1">
+  <b>DIV #2</b><br />float: left;</div>
 
-&lt;div id="flo2"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;&lt;br /&gt;float: right;&lt;/div&gt;
+<div id="flo2">
+  <b>DIV #3</b><br />float: right;</div>
 
-&lt;br /&gt;
+<br />
 
-&lt;div id="sta1"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;&lt;br /&gt;no positioning&lt;/div&gt;
+<div id="sta1">
+  <b>DIV #4</b><br />no positioning</div>
 
-&lt;div id="abs2"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-</pre>
+<div id="abs2">
+  <b>DIV #5</b><br />position: absolute;</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   padding: 10px;
   text-align: center;
 }
@@ -117,29 +115,20 @@ b {
   left: 100px;
   border: 1px dashed #990;
   background-color: #fdd;
-}</pre>
+}
+```
 
-<h3 id="También_puedes_ver">También puedes ver</h3>
+### También puedes ver
 
-<ul>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index" title="  javichito Apilando sin z-index">Apilando sin z-index</a> : Reglas de apilamiento por defecto</li>
- <li>
-  <p><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index" title="Agregando z-index">Agregando z-index</a> : Usando z-index para cambiar el apilamiento por defecto</p>
- </li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento" title="El contexto de apilamiento">El contexto de apilamiento</a> : Notas sobre el contexto de apilamiento</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento" title="Ejemplo 1 del contexto de apilamiento">Ejemplo 1 del contexto de apilamiento</a> : Jerarquía HTML de 2 niveles, z-index en el último nivel</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento" title="Ejemplo 2 del contexto de apilamiento">Ejemplo 2 del contexto de apilamiento</a> : Jerarquía HTML de 2 niveles, z-index en todos los niveles</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento" title="Ejemplo 3 del contexto de apilamiento">Ejemplo 3 del contexto de apilamiento</a> : Jerarquía HTML de 3 niveles, z-index en el segundo nivel</li>
-</ul>
+- [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index "  javichito Apilando sin z-index") : Reglas de apilamiento por defecto
+- [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index "Agregando z-index") : Usando z-index para cambiar el apilamiento por defecto
+- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento "El contexto de apilamiento") : Notas sobre el contexto de apilamiento
+- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento "Ejemplo 1 del contexto de apilamiento") : Jerarquía HTML de 2 niveles, z-index en el último nivel
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento "Ejemplo 2 del contexto de apilamiento") : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento "Ejemplo 3 del contexto de apilamiento") : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
 
-<div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Información del documento original</h3>
+### Información del documento original
 
-<ul>
- <li>Autor(es): Paolo Lombardi</li>
- <li>Este artículo es una traducción al inglés de un artículo que escribí en italiano para <a href="http://www.yappy.it">YappY</a>. He dado el derecho de compartir el contenido bajo <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>Last Updated Date: November 3rd, 2014</li>
-</ul>
-</div>
-
-<p> </p>
+- Autor(es): Paolo Lombardi
+- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- Last Updated Date: November 3rd, 2014

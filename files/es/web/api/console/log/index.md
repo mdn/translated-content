@@ -18,80 +18,56 @@ tags:
   - Árbol JSON
 translation_of: Web/API/Console/log
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}Muestra un mensaje en la consola web (o del intérprete JavaScript).
 
-<div>Muestra un mensaje en la consola web (o del intérprete JavaScript).</div>
+{{AvailableInWorkers}}
 
-<div> </div>
+## Sintaxis
 
-<p>{{AvailableInWorkers}}</p>
+    console.log(obj1 [, obj2, ..., objN]);
+    console.log(msg [, subst1, ..., substN]);
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Parámetros
 
-<pre class="syntaxbox">console.log(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+- `obj1` ... `objN`
+  - : Una lista de objetos JavaScript para mostrar. Las representaciones en texto de cada uno de los objetos se agregan y muestran juntas (al final una tras otra), en el orden listado.
+- `msg`
+  - : Un texto (mensaje) conteniendo cero o más sustituciones de cadenas (sustituciones de strings).
+- `subst1` ... `substN`
+  - : Objetos JavaScript con la sustitución a reemplazar dentro del texto (**`msg`**). Esto brinda control adicional en el formato de salida del texto.
 
-<h2 id="Parámetros">Parámetros</h2>
+Vea "[Mostrando texto en la consola](/es/docs/DOM/console#Outputting_text_to_the_console)" en la documentación de {{domxref("console")}} para mas detalles.
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Una lista de objetos JavaScript para mostrar. Las representaciones en texto de cada uno de los objetos se agregan y muestran juntas (al final una tras otra), en el orden listado.</dd>
- <dt><code>msg</code></dt>
- <dd>Un texto (mensaje) conteniendo cero o más sustituciones de cadenas (sustituciones de strings). </dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Objetos JavaScript con la sustitución a reemplazar dentro del texto (<strong><code>msg</code></strong>). Esto brinda control adicional en el formato de salida del texto. </dd>
-</dl>
+## Especificaciones
 
-<p>Vea "<a href="/es/docs/DOM/console#Outputting_text_to_the_console">Mostrando texto en la consola</a>" en la documentación de {{domxref("console")}} para mas detalles.</p>
+| Especificación                                                       | Estado                           | Comentario         |
+| -------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("Console API", "#log", "console.log()")}} | {{Spec2("Console API")}} | Definicion inicial |
 
-<h2 id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#log", "console.log()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Definicion inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.console.log")}}
 
-<h2 id="Diferencia_con_console.dir()">Diferencia con console.dir()</h2>
+## Diferencia con console.dir()
 
-<p>Te preguntarás cual es la diferencia entre console.dir() y console.log().</p>
+Te preguntarás cual es la diferencia entre console.dir() y console.log().
 
-<p>Una diferencia útil en Chrome es cuando envías elementos DOM a la consola.</p>
+Una diferencia útil en Chrome es cuando envías elementos DOM a la consola.
 
-<p><img src="http://i.imgur.com/DozDcYR.png"></p>
+![](http://i.imgur.com/DozDcYR.png)
 
-<p>Importante:</p>
+Importante:
 
-<ul>
- <li><code>console.log</code> muestra el elemento en un árbol HTML</li>
- <li><code>console.dir</code> muestra el elemento en un árbol JSON</li>
-</ul>
+- `console.log` muestra el elemento en un árbol HTML
+- `console.dir` muestra el elemento en un árbol JSON
 
-<p>Específicamente, <code>console.log</code> brinda un tratamiento especial a los elementos del DOM, mientras que console.dir no. Esto es útil a menudo cuando intentas ver la representación completa del objeto JavaScript del DOM. </p>
+Específicamente, `console.log` brinda un tratamiento especial a los elementos del DOM, mientras que console.dir no. Esto es útil a menudo cuando intentas ver la representación completa del objeto JavaScript del DOM.
 
-<p>Hay mas información en la <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">referencia de la API Console de Chrome</a> acerca de esto y otras funciones.</p>
+Hay mas información en la [referencia de la API Console de Chrome](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject) acerca de esto y otras funciones.
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Documentación Opera Dragonfly: Consola</a>.</li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Usando las herramientas F12 de Consola para ver errores y estados</a>.</li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug soporta características adicionales en su propia implementación de console.log(), como <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">consola con estilos</a>.</li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: API de consola</a>.</li>
-</ul>
+- [Documentación Opera Dragonfly: Consola](http://www.opera.com/dragonfly/documentation/console/).
+- [MSDN: Usando las herramientas F12 de Consola para ver errores y estados](http://msdn.microsoft.com/library/gg589530).
+- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug soporta características adicionales en su propia implementación de console.log(), como [consola con estilos](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: API de consola](http://nodejs.org/docs/latest/api/console.html#console_console_log_data).

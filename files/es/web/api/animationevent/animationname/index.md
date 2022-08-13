@@ -11,43 +11,28 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent/animationName
 ---
-<p>{{SeeCompatTable}}{{ apiref("Web Animations API") }}</p>
+{{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
-<p>La propiedad de solo-lectura <code><strong>AnimationEvent.animationName</strong></code> es un {{domxref("DOMString")}} conteniendo el valor de  la propiedad de CSS {{cssxref("animation-name")}} asociada con la transición.</p>
+La propiedad de solo-lectura **`AnimationEvent.animationName`** es un {{domxref("DOMString")}} conteniendo el valor de la propiedad de CSS {{cssxref("animation-name")}} asociada con la transición.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>name</em> = <em>AnimationEvent</em>.animationName</pre>
+    name = AnimationEvent.animationName
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}</td>
-   <td>{{ Spec2('CSS3 Animations')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                       | Estatus                                  | Comentario          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }} | {{ Spec2('CSS3 Animations')}} | Definición Inicial. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.AnimationEvent.animationName")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Usando animaciones CSS</a></li>
- <li>Las propiedades CSS relacionadas con animacióny reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
- <li>La interface {{domxref("AnimationEvent")}} a la cual pertenece.</li>
-</ul>
+- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- Las propiedades CSS relacionadas con animacióny reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- La interface {{domxref("AnimationEvent")}} a la cual pertenece.

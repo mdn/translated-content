@@ -10,88 +10,65 @@ tags:
   - encabezado
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El encabezado de respuesta <strong><code>Access-Control-Allow-Credentials</code></strong> le dice al navegador si exponer la respuesta al código JavaScript (del frontend) cuando el modo credenciales en la petición es incluído.</p>
+El encabezado de respuesta **`Access-Control-Allow-Credentials`** le dice al navegador si exponer la respuesta al código JavaScript (del frontend) cuando el modo credenciales en la petición es incluído.
 
-<p>Cuando las credenciales de una petición ({{domxref("Request.credentials")}}) es <code>include</code>, los navegadores sólo expondran la respuesta al código JavaScript del frontend si el valor de <code>Access-Control-Allow-Credentials</code> es <code>true</code>.</p>
+Cuando las credenciales de una petición ({{domxref("Request.credentials")}}) es `include`, los navegadores sólo expondran la respuesta al código JavaScript del frontend si el valor de `Access-Control-Allow-Credentials` es `true`.
 
-<p>Las credenciales son cookies, encabezados de autorización o certíficados de cliente TLS.</p>
+Las credenciales son cookies, encabezados de autorización o certíficados de cliente TLS.
 
-<p>Cuando se usa como parte de una respueste a una petición previa, indica si la petición real puede ser hecha utilizando credenciales. Note que peticiones {{HTTPMethod("GET")}} sencillas no tienen una solicitud previa, y por lo tanto, una petición es hecha por un recurso con credenciales, si el encabezado no regresa con el recurso, la respuesta es ignorada por el navegador y no es devuelto como contenido web.</p>
+Cuando se usa como parte de una respueste a una petición previa, indica si la petición real puede ser hecha utilizando credenciales. Note que peticiones {{HTTPMethod("GET")}} sencillas no tienen una solicitud previa, y por lo tanto, una petición es hecha por un recurso con credenciales, si el encabezado no regresa con el recurso, la respuesta es ignorada por el navegador y no es devuelto como contenido web.
 
-<p>El encabezado <code>Access-Control-Allow-Credentials</code> trabaja en conjunción con la propiedad {{domxref("XMLHttpRequest.withCredentials")}} o con la opción <code>credentials</code> en el constructor {{domxref("Request.Request()", "Request()")}}  de la API Fetch. Para una petición CORS con credenciales, para que el navegador exponga la respuesta al código JavaScript del fronend, tanto el servidor (utilizando el encabezado <code>Access-Control-Allow-Credentials</code>) y el cliente (al configurar el modo de las credenciales para peticiones XHR, Fetch, o Ajax) se debe indicar que estan permitiendo la inclusión de credenciales.</p>
+El encabezado `Access-Control-Allow-Credentials` trabaja en conjunción con la propiedad {{domxref("XMLHttpRequest.withCredentials")}} o con la opción `credentials` en el constructor {{domxref("Request.Request()", "Request()")}} de la API Fetch. Para una petición CORS con credenciales, para que el navegador exponga la respuesta al código JavaScript del fronend, tanto el servidor (utilizando el encabezado `Access-Control-Allow-Credentials`) y el cliente (al configurar el modo de las credenciales para peticiones XHR, Fetch, o Ajax) se debe indicar que estan permitiendo la inclusión de credenciales.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de encabezado</th>
-   <td>{{Glossary("Response header", "Respuesta del encabezado")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de encabezado                                                                               | {{Glossary("Response header", "Respuesta del encabezado")}} |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                                               |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">Access-Control-Allow-Credentials: true
-</pre>
+    Access-Control-Allow-Credentials: true
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt>true</dt>
- <dd>El único valor válido para este encabezado es <code>true</code> (en minúsculas). Si no se necesitan credenciales, se debe omitir este encabezado (en lugar de colocar su valor como <code>false</code>).</dd>
-</dl>
+- true
+  - : El único valor válido para este encabezado es `true` (en minúsculas). Si no se necesitan credenciales, se debe omitir este encabezado (en lugar de colocar su valor como `false`).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Permitir credenciales:</p>
+Permitir credenciales:
 
-<pre class="notranslate">Access-Control-Allow-Credentials: true</pre>
+    Access-Control-Allow-Credentials: true
 
-<p>Utilizando <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> con credenciales:</p>
+Utilizando [XHR](/es/docs/Web/API/XMLHttpRequest) con credenciales:
 
-<pre class="brush: js notranslate">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<p>Utilizando <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> con credenciales:</p>
+Utilizando [Fetch](/es/docs/Web/API/Fetch_API) con credenciales:
 
-<pre class="brush: js notranslate">fetch(url, {
+```js
+fetch(url, {
   credentials: 'include'
-})</pre>
+})
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especifiación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especifiación                                                                                                                        | Estado                   | Comentario         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("http.headers.Access-Control-Allow-Credentials")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Credentials")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("XMLHttpRequest.withCredentials")}}</li>
- <li>{{domxref("Request.Request()", "Request()")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest.withCredentials")}}
+- {{domxref("Request.Request()", "Request()")}}

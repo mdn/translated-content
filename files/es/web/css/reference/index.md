@@ -8,240 +8,203 @@ tags:
 translation_of: Web/CSS/Reference
 original_slug: Web/CSS/Referencia_CSS
 ---
-<div class="note">
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-3"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Estamos trabajando sobre este documento.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-4"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Si deseas ayudarnos a redactar o mejorar alguna de las páginas listadas a continuación, te animamos a que lo hagas.</span></span></p>
+> **Nota:** Estamos trabajando sobre este documento. Si deseas ayudarnos a redactar o mejorar alguna de las páginas listadas a continuación, te animamos a que lo hagas.Si vas a agregar o modificar una página, por favor, ajústate a la plantilla [Referencia CSS:Plantilla de propiedades ](/en/CSS/CSS_Reference/Property_Template "en/CSS Reference/Property Template")y modifica según sea necesario.La plantilla básica para las páginas de ejemplo se puede encontrar aquí: [samples/cssref/TEMPLATE.html](/samples/cssref/TEMPLATE.html "https://developer.mozilla.org/samples/cssref/TEMPLATE.html ").Siéntete libre para discutir sobre cualquier pregunta o sugerencia en la página [Talk:CSS Reference](/Talk:en/CSS_Reference "Talk:en/CSS Reference").
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-5"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Si vas a agregar o modificar una página, por favor, ajústate a la plantilla <a href="/en/CSS/CSS_Reference/Property_Template" title="en/CSS Reference/Property Template">Referencia CSS:Plantilla de propiedades </a> y modifica según sea necesario.</span></span></p>
+Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudoelementos), [reglas-at](/es/docs/Web/CSS/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#Keyword_index), así como los [selectores por tipo](#Selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#DOM_CSS).
 
-<p><span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-from-human goog-gtc-ph-missing goog-gtc-translatable" dir="ltr">La plantilla básica para las páginas de ejemplo se puede encontrar aquí: </span></span> <a class="internal" href="/samples/cssref/TEMPLATE.html" title="https://developer.mozilla.org/samples/cssref/TEMPLATE.html ">samples/cssref/TEMPLATE.html</a>.</p>
-<span class="goog-gtc-unit" id="goog-gtc-unit-7"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Siéntete libre para discutir sobre cualquier pregunta o sugerencia en la página <a href="/Talk:en/CSS_Reference" title="Talk:en/CSS Reference">Talk:CSS Reference</a>.</span></span></div>
+Tenga en cuenta que las definiciones de reglas CSS son completamente [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
-<p><span class="seoSummary">Esta <em>Referencia CSS</em> muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares <a href="/es/docs/Web/CSS">CSS</a>, <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> y <a href="/es/docs/Web/CSS/Pseudoelementos">pseudo-elementos</a>, <a href="/es/docs/Web/CSS/At-rule">reglas-at</a>, <a href="/es/docs/Web/CSS/length">unidades</a>, y <a href="/es/docs/Web/CSS/Introducci%C3%B3n/Selectors">selectores</a>, todos juntos en <a href="#Keyword_index">orden alfabético</a>, así como los <a href="#Selectors">selectores por tipo</a>; y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de <a href="/es/docs/Web/CSS/CSS3">CSS3</a> estandarizado, o ya establecido. También incluye una breve <a href="#DOM_CSS">referencia DOM-CSS / CSSOM</a>.</span></p>
+Vea también las [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Referencia_CSS/Extensiones_CSS_Mozilla) para propiedades específicas de Gecko, que usan el prefijo `-moz`; y las [Extensiones CSS de WebKit](/es/docs/Web/CSS/CSS_Reference/Webkit_Extensions) para propiedades específicas de WebKit. Vea [Vendor-prefixed CSS Property Overview](http://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo como referencia a todas las propiedades con prefijo.
 
-<p>Tenga en cuenta que las definiciones de reglas CSS son completamente <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a> (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
+## Sintaxis de regla básica
 
-<p>Vea también las <a href="/es/docs/Web/CSS/Referencia_CSS/Extensiones_CSS_Mozilla">Extensiones CSS de Mozilla</a> para propiedades específicas de Gecko, que usan el prefijo <code>-moz</code>; y las <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Reference/Webkit_Extensions">Extensiones CSS de WebKit</a> para propiedades específicas de WebKit. Vea <a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">Vendor-prefixed CSS Property Overview</a> de Peter Beverloo como referencia a todas las propiedades con prefijo.</p>
+Se advierte que cualquier error de sintaxis en una definición de regla invalidará la regla por completo.
 
-<h2 id="Sintaxis_de_regla_básica">Sintaxis de regla básica</h2>
+### Sintaxis de regla de estilo
 
-<p>Se advierte que cualquier error de sintaxis en una definición de regla invalidará la regla por completo.</p>
+    selectorlist {
+       property: value;
+       [more property:value; pairs]
+    }
 
-<h3 id="Sintaxis_de_regla_de_estilo">Sintaxis de regla de estilo</h3>
+    ...where selectorlist is: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
 
-<pre class="syntaxbox"><strong><var>selectorlist</var> {
-   <var>property</var>: <var>value</var>; </strong>
-   <var>[more property:value; pairs] </var>
-<strong>}</strong>
+    Ver selector, pseudo-elemento, pseudo-clase más abajo.
 
-...where <var>selectorlist</var> is: <var>selector[:pseudo-class] [::pseudo-element] [, more selectorlists]</var>
+#### Ejemplos de reglas de estilo
 
-Ver <a href="#Selectors"><em>selector</em></a>, <em><a href="#pelm">pseudo-elemento</a></em>, <a href="#pcls"><em>pseudo-clase</em></a> más abajo.
-
-</pre>
-
-<h4 id="Ejemplos_de_reglas_de_estilo">Ejemplos de reglas de estilo</h4>
-
-<pre class="brush: css">strong {
+```css
+strong {
   color: red;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte <a href="/es/docs/Learn/CSS/Introduction_to_CSS/Selectors">este tutorial</a>. Tenga en cuenta que cualquier error de <a href="/es/docs/Web/CSS/syntax">sintaxis CSS</a> en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a>, mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
+Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn/CSS/Introduction_to_CSS/Selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/syntax) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
-<h3 id="Sintaxis_de_las_reglas-at_(rules)">Sintaxis de las reglas-at (@rules)</h3>
+### Sintaxis de las reglas-at (@rules)
 
-<p>Debido a que éstas tienen formatos de estructura variados, revise la sección <a href="/es/docs/Web/CSS/At-rule">reglas-At</a> para ver la sintaxis de la regla deseada.</p>
+Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/At-rule) para ver la sintaxis de la regla deseada.
 
-<h2 id="Índice_de_palabras_clave">Índice de palabras clave</h2>
+## Índice de palabras clave
 
-<div class="note">
-<p><strong>Nota:</strong> Los nombres de propiedad en este índice <strong>no</strong> incluyen los <a href="/es/docs/Web/CSS/CSS_Properties_Reference">nombres de JavaScript</a> donde difieren de los nombres estándar de CSS.</p>
-</div>
+> **Nota:** Los nombres de propiedad en este índice **no** incluyen los [nombres de JavaScript](/es/docs/Web/CSS/CSS_Properties_Reference) donde difieren de los nombres estándar de CSS.
 
-<div>{{CSS_Ref}}</div>
+{{CSS_Ref}}
 
-<h2 id="Selectores">Selectores</h2>
+## Selectores
 
-<h3 id="Selectores_básicos"><a href="/es/docs/Web/CSS/CSS_Selectors#Basic_selectors">Selectores básicos</a></h3>
+### [Selectores básicos](/es/docs/Web/CSS/CSS_Selectors#Basic_selectors)
 
-<ul>
- <li><a href="/es/docs/Web/CSS/Type_selectors">Selectores de tipo</a> <code>elementname</code></li>
- <li><a href="/es/docs/Web/CSS/Class_selectors">Selectores de clase</a> <code>.classname</code></li>
- <li><a href="/es/docs/Web/CSS/ID_selectors">Selectores de ID</a> <code>#idname</code></li>
- <li><a href="/es/docs/Web/CSS/Universal_selectors">Selectores universales</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
- <li><a href="/es/docs/Web/CSS/Selectores_atributo">Selectores de atributo</a> <code>[attr=value]</code></li>
-</ul>
+- [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) `elementname`
+- [Selectores de clase](/es/docs/Web/CSS/Class_selectors) `.classname`
+- [Selectores de ID](/es/docs/Web/CSS/ID_selectors) `#idname`
+- [Selectores universales](/es/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Selectores de atributo](/es/docs/Web/CSS/Selectores_atributo) `[attr=value]`
 
-<h3 id="Combinadores"><a href="/es/docs/Web/CSS/CSS_Selectors#Combinators">Combinadores</a></h3>
+### [Combinadores](/es/docs/Web/CSS/CSS_Selectors#Combinators)
 
-<ul>
- <li><a href="/es/docs/Web/CSS/Selectores_hermanos_adyacentes">Selectores de hermanos adyacentes</a> <code>A + B</code></li>
- <li><a href="/es/docs/Web/CSS/Selectores_hermanos_generales">Selectores de hermanos generales</a> <code>A ~ B</code></li>
- <li><a href="/es/docs/Web/CSS/Child_selectors">Selectores de hijo</a> <code>A &gt; B</code></li>
- <li><a href="/es/docs/Web/CSS/Descendant_selectors">Selectores de descendiente</a> <code>A B</code></li>
-</ul>
+- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Selectores_hermanos_adyacentes) `A + B`
+- [Selectores de hermanos generales](/es/docs/Web/CSS/Selectores_hermanos_generales) `A ~ B`
+- [Selectores de hijo](/es/docs/Web/CSS/Child_selectors) `A > B`
+- [Selectores de descendiente](/es/docs/Web/CSS/Descendant_selectors) `A B`
 
-<h3 id="Pseudo-clases"><a href="/es/docs/Web/CSS/Pseudo-classes">Pseudo-clases</a></h3>
+### [Pseudo-clases](/es/docs/Web/CSS/Pseudo-classes)
 
-<div class="index">
-<ul>
- <li id="pcls">{{ Cssxref(":active") }}</li>
- <li>{{ Cssxref(':any')}}</li>
- <li>{{ Cssxref(':any-link')}}</li>
- <li>{{ Cssxref(":checked") }}</li>
- <li>{{ Cssxref(":default") }}</li>
- <li>{{ Cssxref(":defined") }}</li>
- <li>{{ Cssxref(":dir", ":dir()")}}</li>
- <li>{{ Cssxref(":disabled") }}</li>
- <li>{{ Cssxref(":empty") }}</li>
- <li>{{ Cssxref(":enabled") }}</li>
- <li>{{ Cssxref(":first") }}</li>
- <li>{{ Cssxref(":first-child") }}</li>
- <li>{{ Cssxref(":first-of-type") }}</li>
- <li>{{ Cssxref(":fullscreen") }}</li>
- <li>{{ Cssxref(":focus") }}</li>
- <li>{{ Cssxref(":focus-visible") }}</li>
- <li>{{ Cssxref(":host") }}</li>
- <li>{{ Cssxref(":host()") }}</li>
- <li>{{ Cssxref(":host-context()") }}</li>
- <li>{{ Cssxref(":hover") }}</li>
- <li>{{ Cssxref(":indeterminate") }}</li>
- <li>{{ Cssxref(":in-range") }}</li>
- <li>{{ Cssxref(":invalid") }}</li>
- <li>{{ Cssxref(":lang", ":lang()") }}</li>
- <li>{{ Cssxref(":last-child") }}</li>
- <li>{{ Cssxref(":last-of-type") }}</li>
- <li>{{ Cssxref(":left") }}</li>
- <li>{{ Cssxref(":link") }}</li>
- <li>{{ Cssxref(":not", ":not()") }}</li>
- <li>{{ Cssxref(":nth-child", ":nth-child()") }}</li>
- <li>{{ Cssxref(":nth-last-child", ":nth-last-child()") }}</li>
- <li>{{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}</li>
- <li>{{ Cssxref(":nth-of-type", ":nth-of-type()") }}</li>
- <li>{{ Cssxref(":only-child") }}</li>
- <li>{{ Cssxref(":only-of-type") }}</li>
- <li>{{ Cssxref(":optional") }}</li>
- <li>{{ Cssxref(":out-of-range") }}</li>
- <li>{{ Cssxref(":read-only") }}</li>
- <li>{{ Cssxref(":read-write") }}</li>
- <li>{{ Cssxref(":required") }}</li>
- <li>{{ Cssxref(":right") }}</li>
- <li>{{ Cssxref(":root") }}</li>
- <li>{{ Cssxref(":scope") }}</li>
- <li>{{ Cssxref(":target") }}</li>
- <li>{{ Cssxref(":valid") }}</li>
- <li>{{ Cssxref(":visited") }}</li>
-</ul>
-</div>
+- {{ Cssxref(":active") }}
+- {{ Cssxref(':any')}}
+- {{ Cssxref(':any-link')}}
+- {{ Cssxref(":checked") }}
+- {{ Cssxref(":default") }}
+- {{ Cssxref(":defined") }}
+- {{ Cssxref(":dir", ":dir()")}}
+- {{ Cssxref(":disabled") }}
+- {{ Cssxref(":empty") }}
+- {{ Cssxref(":enabled") }}
+- {{ Cssxref(":first") }}
+- {{ Cssxref(":first-child") }}
+- {{ Cssxref(":first-of-type") }}
+- {{ Cssxref(":fullscreen") }}
+- {{ Cssxref(":focus") }}
+- {{ Cssxref(":focus-visible") }}
+- {{ Cssxref(":host") }}
+- {{ Cssxref(":host()") }}
+- {{ Cssxref(":host-context()") }}
+- {{ Cssxref(":hover") }}
+- {{ Cssxref(":indeterminate") }}
+- {{ Cssxref(":in-range") }}
+- {{ Cssxref(":invalid") }}
+- {{ Cssxref(":lang", ":lang()") }}
+- {{ Cssxref(":last-child") }}
+- {{ Cssxref(":last-of-type") }}
+- {{ Cssxref(":left") }}
+- {{ Cssxref(":link") }}
+- {{ Cssxref(":not", ":not()") }}
+- {{ Cssxref(":nth-child", ":nth-child()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":only-child") }}
+- {{ Cssxref(":only-of-type") }}
+- {{ Cssxref(":optional") }}
+- {{ Cssxref(":out-of-range") }}
+- {{ Cssxref(":read-only") }}
+- {{ Cssxref(":read-write") }}
+- {{ Cssxref(":required") }}
+- {{ Cssxref(":right") }}
+- {{ Cssxref(":root") }}
+- {{ Cssxref(":scope") }}
+- {{ Cssxref(":target") }}
+- {{ Cssxref(":valid") }}
+- {{ Cssxref(":visited") }}
 
-<h3 id="Pseudo-elementos"><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elementos</a></h3>
+### [Pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements)
 
-<div class="index">
-<ul>
- <li id="pelm">{{ Cssxref("::after") }}</li>
- <li>{{ Cssxref("::backdrop") }}</li>
- <li>{{ Cssxref("::before") }}</li>
- <li>{{ Cssxref("::cue") }}</li>
- <li>{{ Cssxref("::first-letter") }}</li>
- <li>{{ Cssxref("::first-line") }}</li>
- <li>{{ Cssxref("::grammar-error") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::marker") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::placeholder") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::selection") }}</li>
- <li>{{ Cssxref("::spelling-error") }} {{experimental_inline}}</li>
-</ul>
-</div>
+- {{ Cssxref("::after") }}
+- {{ Cssxref("::backdrop") }}
+- {{ Cssxref("::before") }}
+- {{ Cssxref("::cue") }}
+- {{ Cssxref("::first-letter") }}
+- {{ Cssxref("::first-line") }}
+- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
+- {{ Cssxref("::marker") }} {{experimental_inline}}
+- {{ Cssxref("::placeholder") }} {{experimental_inline}}
+- {{ Cssxref("::selection") }}
+- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
 
-<div class="note">
-<p><strong>Ver también:</strong> Una <a href="https://www.w3.org/TR/selectors/#selectors">lista completa de selectores</a> en la especificación de Nivel 3 de Selectores.</p>
-</div>
+> **Nota:** **Ver también:** Una [lista completa de selectores](https://www.w3.org/TR/selectors/#selectors) en la especificación de Nivel 3 de Selectores.
 
-<h2 id="Conceptos">Conceptos</h2>
+## Conceptos
 
-<h3 id="Sintaxis_y_semántica">Sintaxis y semántica</h3>
+### Sintaxis y semántica
 
-<ul>
- <li><a href="/es/docs/Web/CSS/Syntax">Sintaxis CSS</a></li>
- <li><a href="/es/docs/Web/CSS/At-rule">Reglas-at</a></li>
- <li><a href="/es/docs/Web/CSS/Cascade">Cascada</a></li>
- <li><a href="/es/docs/Web/CSS/Comments">Comentarios</a></li>
- <li><a href="/es/docs/Glossary/Descriptor_(CSS)">Descriptor</a></li>
- <li><a href="/es/docs/Web/CSS/inheritance">Herencia</a></li>
- <li><a href="/es/docs/Web/CSS/Shorthand_properties">Propiedades abreviadas</a></li>
- <li><a href="/es/docs/Web/CSS/Specificity">Especificidad</a></li>
- <li><a href="/es/docs/Web/CSS/Value_definition_syntax">Sintaxis de definición de valor</a></li>
-</ul>
+- [Sintaxis CSS](/es/docs/Web/CSS/Syntax)
+- [Reglas-at](/es/docs/Web/CSS/At-rule)
+- [Cascada](/es/docs/Web/CSS/Cascade)
+- [Comentarios](/es/docs/Web/CSS/Comments)
+- [Descriptor](</es/docs/Glossary/Descriptor_(CSS)>)
+- [Herencia](/es/docs/Web/CSS/inheritance)
+- [Propiedades abreviadas](/es/docs/Web/CSS/Shorthand_properties)
+- [Especificidad](/es/docs/Web/CSS/Specificity)
+- [Sintaxis de definición de valor](/es/docs/Web/CSS/Value_definition_syntax)
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<ul>
- <li><a href="/es/docs/Web/CSS/actual_value">Valor actual</a></li>
- <li><a href="/es/docs/Web/CSS/computed_value">Valor calculado</a></li>
- <li><a href="/es/docs/Web/CSS/initial_value">Valor inicial</a></li>
- <li><a href="/es/docs/Web/CSS/resolved_value">Valor resuelto</a></li>
- <li><a href="/es/docs/Web/CSS/specified_value">Valor específico</a></li>
- <li><a href="/es/docs/Web/CSS/used_value">Valor utilizado</a></li>
-</ul>
+- [Valor actual](/es/docs/Web/CSS/actual_value)
+- [Valor calculado](/es/docs/Web/CSS/computed_value)
+- [Valor inicial](/es/docs/Web/CSS/initial_value)
+- [Valor resuelto](/es/docs/Web/CSS/resolved_value)
+- [Valor específico](/es/docs/Web/CSS/specified_value)
+- [Valor utilizado](/es/docs/Web/CSS/used_value)
 
-<h3 id="Diseño">Diseño</h3>
+### Diseño
 
-<ul>
- <li><a href="/es/docs/Web/Guide/CSS/Block_formatting_context">Contexto de formato de bloque</a></li>
- <li><a href="/es/docs/Web/CSS/box_model">Modelo de caja</a></li>
- <li><a href="/es/docs/Web/CSS/All_About_The_Containing_Block">Containing block</a></li>
- <li><a href="/es/docs/Web/CSS/Layout_mode">Modo de diseño</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Margen colapsando</a></li>
- <li><a href="/es/docs/Web/CSS/Replaced_element">Elementos reemplazados</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Contexto de apilamiento</a></li>
- <li><a href="/es/docs/Web/Guide/CSS/Visual_formatting_model">Modelo de formato visual</a></li>
-</ul>
+- [Contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context)
+- [Modelo de caja](/es/docs/Web/CSS/box_model)
+- [Containing block](/es/docs/Web/CSS/All_About_The_Containing_Block)
+- [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
+- [Margen colapsando](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Elementos reemplazados](/es/docs/Web/CSS/Replaced_element)
+- [Contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Modelo de formato visual](/es/docs/Web/Guide/CSS/Visual_formatting_model)
 
-<h2 id="DOM-CSS_CSSOM">DOM-CSS / CSSOM</h2>
+## DOM-CSS / CSSOM
 
-<h3 id="Tipos_de_objetos_principales">Tipos de objetos principales</h3>
+### Tipos de objetos principales
 
-<ul>
- <li>document.<a href="/es/docs/Web/API/Document/styleSheets">styleSheets</a></li>
- <li>styleSheets[i].<a href="/es/docs/Web/API/CSSRuleList">cssRules</a></li>
- <li>cssRules[i].<a href="/es/docs/Web/API/CSSRule/cssText">cssText</a> (selector y estilo)</li>
- <li>cssRules[i].<a href="/es/docs/Web/API/CSSStyleRule/selectorText">selectorText</a></li>
- <li>elem.<a href="/es/docs/Web/API/HTMLElement/style">style</a></li>
- <li>elem.style.<a href="/es/docs/Web/API/CSSStyleDeclaration/cssText">cssText</a> (solo estilo)</li>
- <li>elem.<a href="/es/docs/Web/API/Element/className">className</a></li>
- <li>elem.<a href="/es/docs/Web/API/Element/classList">classList</a></li>
-</ul>
+- document.[styleSheets](/es/docs/Web/API/Document/styleSheets)
+- styleSheets\[i].[cssRules](/es/docs/Web/API/CSSRuleList)
+- cssRules\[i].[cssText](/es/docs/Web/API/CSSRule/cssText) (selector y estilo)
+- cssRules\[i].[selectorText](/es/docs/Web/API/CSSStyleRule/selectorText)
+- elem.[style](/es/docs/Web/API/HTMLElement/style)
+- elem.style.[cssText](/es/docs/Web/API/CSSStyleDeclaration/cssText) (solo estilo)
+- elem.[className](/es/docs/Web/API/Element/className)
+- elem.[classList](/es/docs/Web/API/Element/classList)
 
-<h3 id="Métodos_importantes">Métodos importantes</h3>
+### Métodos importantes
 
-<ul>
- <li>{{domxref("CSSStyleSheet.insertRule")}}</li>
- <li>{{domxref("CSSStyleSheet.deleteRule")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet.insertRule")}}
+- {{domxref("CSSStyleSheet.deleteRule")}}
 
-<h2 id="Tutoriales_CSS3">Tutoriales CSS3</h2>
+## Tutoriales CSS3
 
-<p>Estas páginas describen las nuevas tecnologías que aparecieron en CSS3, o las de CSS2.1 que no tienen mucho soporte:</p>
+Estas páginas describen las nuevas tecnologías que aparecieron en CSS3, o las de CSS2.1 que no tienen mucho soporte:
 
-<ul>
- <li><a href="/es/docs/CSS/Media_queries">Uso de media queries con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Uso de contadores con CSS</a></li>
- <li><a href="/es/docs/CSS/Using_CSS_gradients">Uso de gradientes con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Uso de transformaciones con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS">Uso de animaciones con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/Transiciones_de_CSS">Uso de transiciones con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">Uso de múltiples fondos con CSS</a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">Uso de las cajas flexibles con CSS</a></li>
- <li><a href="/es/docs/Columnas_con_CSS-3">Uso de columnas con CSS</a></li>
-</ul>
+- [Uso de media queries con CSS](/es/docs/CSS/Media_queries)
+- [Uso de contadores con CSS](/es/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Uso de gradientes con CSS](/es/docs/CSS/Using_CSS_gradients)
+- [Uso de transformaciones con CSS](/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Uso de animaciones con CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS)
+- [Uso de transiciones con CSS](/es/docs/Web/CSS/Transiciones_de_CSS)
+- [Uso de múltiples fondos con CSS](/es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)
+- [Uso de las cajas flexibles con CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+- [Uso de columnas con CSS](/es/docs/Columnas_con_CSS-3)
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Extensiones CSS de Mozilla</a> (con el prefijo <code>-moz</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions">Extensiones CSS de WebKit</a> (principalmente con el prefijo <code>-webkit</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">Extensiones CSS de Microsoft</a> (con el prefijo <code>-ms</code>)</li>
-</ul>
+- [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) (con el prefijo `-moz`)
+- [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) (principalmente con el prefijo `-webkit`)
+- [Extensiones CSS de Microsoft](/es/docs/Web/CSS/Microsoft_CSS_extensions) (con el prefijo `-ms`)

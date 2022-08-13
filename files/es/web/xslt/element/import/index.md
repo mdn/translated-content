@@ -7,34 +7,31 @@ tags:
 translation_of: Web/XSLT/Element/import
 original_slug: Web/XSLT/import
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- El elemento <code>&lt;xsl:import&gt;</code> sirve para importar el contenido de una hoja de estilo dentro de otra hoja de estilo. En general, el contenido de la hoja de estilo importada tiene una menor precedencia que el contenido de la hoja de estilo que la importa. Esto contrasta con el elemento <code>&lt;xsl:include&gt;</code> en el que el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.</p>
+El elemento `<xsl:import>` sirve para importar el contenido de una hoja de estilo dentro de otra hoja de estilo. En general, el contenido de la hoja de estilo importada tiene una menor precedencia que el contenido de la hoja de estilo que la importa. Esto contrasta con el elemento `<xsl:include>` en el que el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:import href=URI  /&gt;</pre>
+    <xsl:import href=URI  />
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<dl>
- <dt><code>href</code></dt>
- <dd>URI de la hoja de estilo a importar.</dd>
-</dl>
+- `href`
+  - : URI de la hoja de estilo a importar.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Nivel raíz, debe aparecer antes de cualquier otro hijo de <code>&lt;xsl:stylesheet&gt;</code> o <code>&lt;xsl:transform&gt;</code> en la hoja de estilo que la importa.</p>
+Nivel raíz, debe aparecer antes de cualquier otro hijo de `<xsl:stylesheet>` o `<xsl:transform>` en la hoja de estilo que la importa.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 2.6.2.</p>
+XSLT, sección 2.6.2.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Casi completamente soportado, con tan solo algunos detalles con variables de nivel raíz y parámetros desde Mozilla 1.0.</p>
+Casi completamente soportado, con tan solo algunos detalles con variables de nivel raíz y parámetros desde Mozilla 1.0.

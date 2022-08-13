@@ -4,76 +4,60 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}El método **`setMonth()`** establece el mes para una fecha específica de acuerdo con el año establecido actualmente.{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
-<div>El método <strong><code>setMonth()</code></strong> establece el mes para una fecha específica de acuerdo con el año establecido actualmente.</div>
+## Sintaxis
 
-<div>{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}</div>
+    dateObj.setMonth(monthValue[,dayValue])
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Versiones anteriores a JavaScript 1.3
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setMonth(<var>monthValue</var>[,<em>dayValue</em>])</code></pre>
+    dateObj.setMonth(monthValue)
 
-<h3 id="Versiones_anteriores_a_JavaScript_1.3">Versiones anteriores a JavaScript 1.3</h3>
+### Parámetros
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setMonth(<var>monthValue</var>)</code></pre>
+- `monthValue`
+  - : Un entero entre 0 y 11, representando los meses de Enero a Diciembre.
+- `dayValue`
+  - : Opcional. Un entero de 1 a 31, representando el dia del mes.
 
-<h3 id="Parámetros">Parámetros</h3>
+### Resultado
 
-<dl>
- <dt><code>monthValue</code></dt>
- <dd>Un entero entre 0 y 11, representando los meses de Enero a Diciembre.</dd>
- <dt><code>dayValue</code></dt>
- <dd>Opcional. Un entero de 1 a 31, representando el dia del mes.</dd>
-</dl>
+El valor retornado es el número de milisegundos entre el 1 de Enero de 1970 00:00:00 UTC y la fecha actualizada.
 
-<h3 id="Resultado">Resultado</h3>
+## Descripción
 
-<p>El valor retornado es el número de milisegundos entre el 1 de Enero de 1970 00:00:00 UTC y la fecha actualizada.</p>
+Si no especificas el parámetro `dayValue`, el valor retornado del metodo {{jsxref("Date.prototype.getDate()", "getDate()")}} es usado.
 
-<h2 id="Descripción">Descripción</h2>
+Si un parámetro especificado esta fuera del rango esperado, `setMonth()` intenta actualizar la información de la fecha en el objeto {{jsxref("Date")}} en consecuencia. Por ejemplo, si usted usa 15 para `monthValue`, usa 12 para incrementar el año en 1, y los 3 restantes para calcular el mes.
 
-<p>Si no especificas el parámetro <code>dayValue</code>, el valor retornado del metodo {{jsxref("Date.prototype.getDate()", "getDate()")}} es usado.</p>
+El día actual del mes tendrá un impacto en el comportamiento de este método. Conceptualmente agregará el número de días dados por el día actual del mes al primer día del nuevo mes especificado como parámetro, para devolver la nueva fecha. Por ejemplo, si el valor actual es el 31 de agosto de 2016, llamar a setMonth con un valor de 1 devolverá el 2 de marzo de 2016. Esto se debe a que en febrero de 2016 tuvo 29 días.
 
-<p>Si un parámetro especificado esta fuera del rango esperado, <code>setMonth()</code> intenta actualizar la información de la fecha en el objeto {{jsxref("Date")}} en consecuencia. Por ejemplo, si usted usa 15 para <code>monthValue</code>, usa 12 para incrementar el año en 1, y los 3 restantes para calcular el mes.</p>
+## Ejemplos
 
-<p>El día actual del mes tendrá un impacto en el comportamiento de este método. Conceptualmente agregará el número de días dados por el día actual del mes al primer día del nuevo mes especificado como parámetro, para devolver la nueva fecha. Por ejemplo, si el valor actual es el 31 de agosto de 2016, llamar a setMonth con un valor de 1 devolverá el 2 de marzo de 2016. Esto se debe a que en febrero de 2016 tuvo 29 días.</p>
+### Usando `setMonth()`
 
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Usando_setMonth">Usando <code>setMonth()</code></h3>
-
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMonth(6);
 
 //Cuidado con las transiciones de fin de mes
 var endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
 console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("javascript.builtins.Date.setMonth")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Date.setMonth")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMonth()")}}
+- {{jsxref("Date.prototype.setUTCMonth()")}}

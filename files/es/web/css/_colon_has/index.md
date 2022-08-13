@@ -1,50 +1,36 @@
 ---
 title: ':has'
-slug: 'Web/CSS/:has'
+slug: Web/CSS/:has
 tags:
   - CSS
   - Experimental
   - Pseudo clase
   - Referencia
   - Selectores CSS
-translation_of: 'Web/CSS/:has'
+translation_of: Web/CSS/:has
 ---
-<p>{{ CSSRef() }}{{SeeCompatTable}}</p>
+{{ CSSRef() }}{{SeeCompatTable}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>La <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> CSS<strong><code>:has()</code> </strong>representa un elemento si cualquiera de los selectores, en relación con el {{cssxref(":scope")}} del elemento dado, que se pasa como parámetro, coincide con al menos un elemento. La pseudo clase :<code>has()</code> tomo un selector como argumento.</p>
+La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) CSS**`:has()` **representa un elemento si cualquiera de los selectores, en relación con el {{cssxref(":scope")}} del elemento dado, que se pasa como parámetro, coincide con al menos un elemento. La pseudo clase :`has()` tomo un selector como argumento.
 
-<h2 id="Syntax" name="Syntax">Síntaxis</h2>
+## Síntaxis
 
-<pre>:has(<em>selector_list</em>) { propiedades de estilo }</pre>
+    :has(selector_list) { propiedades de estilo }
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<p>El siguiente selector  selecciona únicamente los elementos {{HTMLElement("a")}}  que contienen {{HTMLElement("img")}} hijo:</p>
+El siguiente selector selecciona únicamente los elementos {{HTMLElement("a")}} que contienen {{HTMLElement("img")}} hijo:
 
-<pre>a:has(&gt; img)
-</pre>
+    a:has(> img)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#relational', ':has()') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                                   | Comentario         |
+| ---------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{ SpecName('CSS4 Selectors', '#relational', ':has()') }} | {{ Spec2('CSS4 Selectors') }} | Definición Inicial |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre los distintos navegadores</h2>
+## Compatibilidad entre los distintos navegadores
 
 {{Compat("css.selectors.has")}}

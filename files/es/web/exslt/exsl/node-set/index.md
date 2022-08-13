@@ -7,33 +7,29 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/exsl/node-set
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>exsl:node-set()</code> devuelve un conjunto de nodos (node-set) de un fragmento de árbol resultante, que es lo que obtienes cuando miras en <code>xsl:variable</code> en vez de su atributo select para seleccionar el valor de la variable. Esto te permite procesar XML creado dentro de una variable en vez de procesarlo en múltiples pasos.</p>
+`exsl:node-set()` devuelve un conjunto de nodos (node-set) de un fragmento de árbol resultante, que es lo que obtienes cuando miras en `xsl:variable` en vez de su atributo select para seleccionar el valor de la variable. Esto te permite procesar XML creado dentro de una variable en vez de procesarlo en múltiples pasos.
 
-<p>Puedes usar también <code>exsl:node-set()</code> para transformar cadenas en nodos de texto.</p>
+Puedes usar también `exsl:node-set()` para transformar cadenas en nodos de texto.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">exsl:node-set(<em>objeto</em>)
-</pre>
+    exsl:node-set(objeto)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>objeto</em></code></dt>
- <dd>El objeto para el que se devuelve el correspondiente conjunto de nodos (node-set).</dd>
-</dl>
+- `objeto`
+  - : El objeto para el que se devuelve el correspondiente conjunto de nodos (node-set).
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>El cojunto de nodos (node-set) correspondiente al <code><em>objeto</em></code> espedificado.</p>
+El cojunto de nodos (node-set) correspondiente al `objeto` espedificado.
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/exsl/functions/node-set/index.html">EXSLT - EXSL:NODE-SET</a></p>
+[EXSLT - EXSL:NODE-SET](http://www.exslt.org/exsl/functions/node-set/index.html)
 
-<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
+### Implementación de Gecko
 
-<p>Implementado de Gecko 1.9 y posteriores.</p>
+Implementado de Gecko 1.9 y posteriores.

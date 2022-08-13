@@ -10,28 +10,26 @@ tags:
 translation_of: Web/API/Animation/finished
 original_slug: Web/API/Animation/terminado
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>La propiedad de solo-lectura de <code><strong>Animation</strong></code><strong><code>.finished</code></strong> de la  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.</p>
+La propiedad de solo-lectura de **`Animation`\*\***`.finished`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.
 
-<div class="note">
-<p>Una vez que la reproducción de la animación abandona el estado  <code>finished</code>  ( es decir, la reproducción se está ejecutando otra vez ), Un nuevo <code>Promise</code> es creado para esta propiedad. El nuevo <code>Promise</code> será resuelto cuando se haya completado la actual secuencia de la animación.</p>
-</div>
+> **Nota:** Una vez que la reproducción de la animación abandona el estado `finished` ( es decir, la reproducción se está ejecutando otra vez ), Un nuevo `Promise` es creado para esta propiedad. El nuevo `Promise` será resuelto cuando se haya completado la actual secuencia de la animación.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>animationsPromise</em> = <em>Animation.</em>finished;
-</pre>
+    var animationsPromise = Animation.finished;
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un objeto {{jsxref("Promise")}} que se resuelve cuando haya finalizado la reproducción de la animación.</p>
+Un objeto {{jsxref("Promise")}} que se resuelve cuando haya finalizado la reproducción de la animación.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>El siguiente código espera a que todas las animaciones que se ejecutan en el elemento <code>elem</code> hayan terminado, después elimina el elemento del arbol del DOM:</p>
+El siguiente código espera a que todas las animaciones que se ejecutan en el elemento `elem` hayan terminado, después elimina el elemento del arbol del DOM:
 
-<pre class="brush: js">Promise.all(
+```js
+Promise.all(
   elem.getAnimations().map(
     function(animation) {
       return animation.finished
@@ -41,33 +39,21 @@ original_slug: Web/API/Animation/terminado
   function() {
     return elem.remove();
   }
-);</pre>
+);
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-finished', 'Animation.finished' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                               | Comment         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------- |
+| {{SpecName('Web Animations', '#dom-animation-finished', 'Animation.finished' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.finished")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("KeyframeEffect")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- {{domxref("KeyframeEffect")}}
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

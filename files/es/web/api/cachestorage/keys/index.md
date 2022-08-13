@@ -3,72 +3,58 @@ title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
 translation_of: Web/API/CacheStorage/keys
 ---
-<p><font><font>{{APIRef ("API de Service Workers")}}</font></font></p>
+{{APIRef ("API de Service Workers")}}
 
-<p><span class="seoSummary"><font><font>El </font></font><code><strong>keys</strong></code><strong><code>()</code></strong><font><font>método de la interfaz {{domxref ("CacheStorage")}} devuelve un {{jsxref ("Promise")}} que se resolverá con una matriz que contiene las cadenas correspondientes a todos los {{domxref ("Cache")}} objetos rastreados por el objeto {{domxref ("CacheStorage")}} en el orden en que fueron creados. </font><font>Use este método para iterar sobre una lista de todos los objetos {{domxref ("Cache")}}.</font></font></span></p>
+El **`keys`\*\***`()`\*\*método de la interfaz {{domxref ("CacheStorage")}} devuelve un {{jsxref ("Promise")}} que se resolverá con una matriz que contiene las cadenas correspondientes a todos los {{domxref ("Cache")}} objetos rastreados por el objeto {{domxref ("CacheStorage")}} en el orden en que fueron creados. Use este método para iterar sobre una lista de todos los objetos {{domxref ("Cache")}}.
 
-<p><font><font>Puede acceder a </font></font><code>CacheStorage</code><font><font>través de la propiedad global {{domxref ("WindowOrWorkerGlobalScope.caches", "caches")}}.</font></font></p>
+Puede acceder a `CacheStorage`través de la propiedad global {{domxref ("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-<h2 id="Sintaxis"><font><font>Sintaxis</font></font></h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate"><font><font>caches.keys().then(function(</font></font><em><font><font>keyList</font></font></em><font><font>) {</font></font><font><font>
-  // haz algo con tu keyList</font></font><font><font>
-});</font></font>
-</pre>
+    caches.keys().then(function(keyList) {
+      // haz algo con tu keyList
+    });
 
-<h3 id="Parámetros"><font><font>Parámetros</font></font></h3>
+### Parámetros
 
-<p><font><font>Ninguna.</font></font></p>
+Ninguna.
 
-<h3 id="Valor_de_retorno"><font><font>Valor de retorno</font></font></h3>
+### Valor de retorno
 
-<p>a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.</p>
+a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.
 
-<h2 id="Examples" style="line-height: 30px; font-size: 2.14285714285714rem;">Examples</h2>
+## Examples
 
-<p>In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have a whitelist containing the names of the caches we want to keep (<code>cacheWhitelist</code>). We return the keys of the caches in the {{domxref("CacheStorage")}} object using <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we delete it using {{domxref("CacheStorage.delete()")}}.</p>
+In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have a whitelist containing the names of the caches we want to keep (`cacheWhitelist`). We return the keys of the caches in the {{domxref("CacheStorage")}} object using `keys()`, then check each key to see if it is in the whitelist. If not, we delete it using {{domxref("CacheStorage.delete()")}}.
 
-<pre class="brush: js notranslate"><font><font><font><font>then.addEventListener('activar', función (evento) { </font></font></font></font><font><font><font><font>
-  var cacheWhitelist = ['v2']; </font></font></font></font>
-<font><font><font><font>
-  event.waitUntil( </font></font></font></font><font><font><font><font>
-    caches.keys().then(function(keyList) { </font></font></font></font><font><font><font><font>
-      return Promise.all(keyList.map(function(key) {</font></font></font></font><font><font>
+```js
+then.addEventListener('activar', función (evento) {
+  var cacheWhitelist = ['v2'];
+
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
         if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(<font><font>key</font></font>);
+          return caches.delete(key);
         }
       });
-    })</font></font><font><font>
-  );</font></font><font><font>
-});</font></font></pre>
+    })
+  );
+});
+```
 
-<h2 id="Especificaciones"><font><font>Especificaciones</font></font></h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font><font>Especificación</font></font></th>
-   <th scope="col"><font><font>Estado</font></font></th>
-   <th scope="col"><font><font>Comentario</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>{{SpecName('Service Workers', '# dom-cachestorage-keys', 'CacheStorage: keys')}}</font></font></td>
-   <td><font><font>{{Spec2 ('Trabajadores de servicio')}}</font></font></td>
-   <td><font><font>Definición inicial</font></font></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                                               | Comentario         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------ |
+| {{SpecName('Service Workers', '# dom-cachestorage-keys', 'CacheStorage: keys')}} | {{Spec2 ('Trabajadores de servicio')}} | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador"><font><font>Compatibilidad del navegador</font></font></h2>
+## Compatibilidad del navegador
 
+{{Compat("api.CacheStorage.keys")}}
 
+## Ver también
 
-<p><font><font>{{Compat("api.CacheStorage.keys")}}</font></font></p>
-
-<h2 id="Ver_también"><font><font>Ver también</font></font></h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers"><font><font>Uso de trabajadores del servicio</font></font></a></li>
- <li><font><font>{{domxref("Cache")}}</font></font></li>
- <li><font><font><font><font>{{domxref("WindowOrWorkerGlobalScope.caches")}}</font></font></font></font></li>
-</ul>
+- [Uso de trabajadores del servicio](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

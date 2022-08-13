@@ -13,25 +13,26 @@ tags:
   - metodo
 translation_of: Web/API/XMLHttpRequest/abort
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>El método <strong>XMLHttpRequest.abort()</strong> aborta la petición si ha sido enviada. Cuando una petición se aborta, readyState se asigna a 0 (UNSENT), pero el evento <a href="/en-US/docs/Web/Events/readystatechange">readystatechange</a> no se lanza.</p>
+El método **XMLHttpRequest.abort()** aborta la petición si ha sido enviada. Cuando una petición se aborta, readyState se asigna a 0 (UNSENT), pero el evento [readystatechange](/es/docs/Web/Events/readystatechange) no se lanza.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">xhrInstance.abort();</pre>
+    xhrInstance.abort();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Vacío.</p>
+Vacío.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 xhr.open(method,url,true);
@@ -39,31 +40,18 @@ xhr.open(method,url,true);
 xhr.send();
 
 xhr.abort();
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-abort()-method')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                               | Comentario             |
+| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-abort()-method')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.XMLHttpRequest.abort")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Uso de XMLHttpRequest</a></li>
-</ul>
+- [Uso de XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

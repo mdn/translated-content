@@ -8,21 +8,22 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-webkit-border-before
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/es/docs/Web/CSS">CSS </a><strong><code>-webkit-border-before</code></strong> es una propiedad que permite configurar los valores de la propiedad borde para el bloque lógico de inicio en un sólo sitio de la hoja de estilos. <code>-webkit-border-before</code> se puede usar para establecer los valores para más de uno de: {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, y {{cssxref("-webkit-border-before-color")}}. Se mapea a un borde físico dependiendo del modo de escritura del elemento, la direccionalidad y la orientación del texto. Se corresonde con  la propiedad {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos en {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+La propiedad [CSS ](/es/docs/Web/CSS)**`-webkit-border-before`** es una propiedad que permite configurar los valores de la propiedad borde para el bloque lógico de inicio en un sólo sitio de la hoja de estilos. `-webkit-border-before` se puede usar para establecer los valores para más de uno de: {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, y {{cssxref("-webkit-border-before-color")}}. Se mapea a un borde físico dependiendo del modo de escritura del elemento, la direccionalidad y la orientación del texto. Se corresonde con la propiedad {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}} dependiendo de los valores definidos en {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<p>Se relaciona con {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, y {{cssxref("-webkit-border-end")}}, que definen los otros bordes del elemento.</p>
+Se relaciona con {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, y {{cssxref("-webkit-border-end")}}, que definen los otros bordes del elemento.
 
-<p>Esta propiedad se prevee que será incluida en el estándar como  {{cssxref("border-block-start")}}.</p>
+Esta propiedad se prevee que será incluida en el estándar como {{cssxref("border-block-start")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Valores para el borde */
+```css
+/* Valores para el borde */
 -webkit-border-before: 1px;
 -webkit-border-before: 2px dotted;
 -webkit-border-before: medium dashed blue;
@@ -31,37 +32,37 @@ translation_of: Web/CSS/-webkit-border-before
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
 -webkit-border-before: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Uno o más de los siguiente valores, dando igual el orden en el que se especifiquen:</p>
+Uno o más de los siguiente valores, dando igual el orden en el que se especifiquen:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>Ver {{cssxref("border-width")}}</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>Ver {{cssxref("border-style")}}</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>Ver {{cssxref("color")}}</dd>
-</dl>
+- `<'border-width'>`
+  - : Ver {{cssxref("border-width")}}
+- `<'border-style'>`
+  - : Ver {{cssxref("border-style")}}
+- `<'color'>`
+  - : Ver {{cssxref("color")}}
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Texto de ejemplo&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Texto de ejemplo</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -70,22 +71,21 @@ translation_of: Web/CSS/-webkit-border-before
 .exampleText {
   writing-mode: vertical-rl;
   -webkit-border-before: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación aunque está relacionada con la propiedad {{cssxref("border-block-start")}}.</p>
+No es parte de ninguna especificación aunque está relacionada con la propiedad {{cssxref("border-block-start")}}.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores.">Compatibilidad con los distintos navegadores.</h2>
+## Compatibilidad con los distintos navegadores.
 
 {{Compat("css.properties.-webkit-border-before")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{cssxref("border-block-start")}}</li>
- <li>Las propiedad físicas mapeadas: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}},  y{{cssxref("border-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("border-block-start")}}
+- Las propiedad físicas mapeadas: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, y{{cssxref("border-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

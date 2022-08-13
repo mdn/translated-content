@@ -7,31 +7,28 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/max
 ---
-<p>{{XsltRef}}<br>
- <code>math:max()</code> devuelve el valor máximo de un conjunto de nodos (node-set).</p>
+{{XsltRef}}
+`math:max()` devuelve el valor máximo de un conjunto de nodos (node-set).
 
-<p>To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using <code><a href="es/XSLT/sort">xsl:sort()</a></code> with a data type of <code>number</code>. The maximum value is then the first node in the sorted list, converted into a number.</p>
+To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](es/XSLT/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">math:max(<em>conjuntoNodos</em>)
-</pre>
+    math:max(conjuntoNodos)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>conjuntoNodos</em></code></dt>
- <dd>El conjunto de nodos cuyo valor más alto va a ser devuelto.</dd>
-</dl>
+- `conjuntoNodos`
+  - : El conjunto de nodos cuyo valor más alto va a ser devuelto.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado como más alto.</p>
+Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado como más alto.
 
-<h2 id="Definido_en" name="Definido_en">Definido en</h2>
+## Definido en
 
-<p><a class="external" href="http://www.exslt.org/math/functions/max/index.html">EXSLT - MATH:MAX</a></p>
+[EXSLT - MATH:MAX](http://www.exslt.org/math/functions/max/index.html)
 
-<h2 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h2>
+## Implementación en Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

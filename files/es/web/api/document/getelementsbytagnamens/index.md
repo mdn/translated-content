@@ -5,103 +5,99 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Document/getElementsByTagNameNS
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespace'. La búsqueda se realiza en todo el documento, incluyendo el elemento raíz.</p>
+Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespace'. La búsqueda se realiza en todo el documento, incluyendo el elemento raíz.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><em>elements</em> = document.getElementsByTagNameNS(<em>namespace</em>,<em>name</em>)
-</pre>
+    elements = document.getElementsByTagNameNS(namespace,name)
 
-<ul>
- <li><code>elements</code> es una lista del tipo <code>NodeList</code> de los elementos encontrados, en el orden en el que aparecen en el árbol.</li>
- <li><code>namespace</code> es el nombre URI en el que buscamos. (Véase <code><a href="es/DOM/element.namespaceURI">element.namespaceURI</a></code>).</li>
- <li><code>name</code> es bien el nombre local por el que buscamos, o bien el valor especial <code>"*"</code>, que representa todos los elementos (véase <code><a href="es/DOM/element.localName">element.localName</a></code>).</li>
-</ul>
+- `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
+- `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](es/DOM/element.namespaceURI)).
+- `name` es bien el nombre local por el que buscamos, o bien el valor especial `"*"`, que representa todos los elementos (véase [`element.localName`](es/DOM/element.localName)).
 
-<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
+### Ejemplo
 
-<p>En el siguiente ejemplo, <code>getElementsByTagNameNS</code> comienza por un elemento padre determinado y busca recurrentemente, hacia abajo, por los elementos que tienen el parámetro <code>name</code> que concuerda.</p>
+En el siguiente ejemplo, `getElementsByTagNameNS` comienza por un elemento padre determinado y busca recurrentemente, hacia abajo, por los elementos que tienen el parámetro `name` que concuerda.
 
-<p>Es importante tener en cuenta que cuando el nodo en el que se invoca <code>getElementsByTagName</code>, no es el nodo <code>document</code>, en realidad estamos usando el método <a href="es/DOM/element.getElementsByTagNameNS">element.getElementsByTagNameNS</a>.</p>
+Es importante tener en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad estamos usando el método [element.getElementsByTagNameNS](es/DOM/element.getElementsByTagNameNS).
 
-<p>Para usar el siguiente ejemplo, copia y pega en un documento con la extensión xhtml.</p>
+Para usar el siguiente ejemplo, copia y pega en un documento con la extensión xhtml.
 
-<pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    <html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;head&gt;
-&lt;title&gt;ejemplo de getElementsByTagNameNS&lt;/title&gt;
+    <head>
+    <title>ejemplo de getElementsByTagNameNS</title>
 
-&lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
-function getAllParaElems()
-{
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    function getAllParaElems()
+    {
+      var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = allParas.length;
+      var num = allParas.length;
 
-  alert("Hay " + num + " &amp;lt;p&amp;gt; elementos en este documento");
-}
+      alert("Hay " + num + " &lt;p&gt; elementos en este documento");
+    }
 
 
-function div1ParaElems()
-{
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    function div1ParaElems()
+    {
+      var div1 = document.getElementById("div1")
+      var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div1Paras.length;
+      var num = div1Paras.length;
 
-  alert("Hay " + num + " &amp;lt;p&amp;gt; elementos en el elemento div1");
-}
+      alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
+    }
 
 
-function div2ParaElems()
-{
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    function div2ParaElems()
+    {
+      var div2 = document.getElementById("div2")
+      var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div2Paras.length;
+      var num = div2Paras.length;
 
-  alert("Hay " + num + " &amp;lt;p&amp;gt; elementos en el elemento div2");
-}
+      alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
+    }
 
-&lt;/script&gt;
-&lt;/head&gt;
+    </script>
+    </head>
 
-&lt;body style="border: solid green 3px"&gt;
-&lt;p&gt;Algo de texto exterior&lt;/p&gt;
-&lt;p&gt;Algo de texto exterior&lt;/p&gt;
+    <body style="border: solid green 3px">
+    <p>Algo de texto exterior</p>
+    <p>Algo de texto exterior</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Algo de texto en div1&lt;/p&gt;
-    &lt;p&gt;Algo de texto en div1&lt;/p&gt;
-    &lt;p&gt;Algo de texto en div1&lt;/p&gt;
+      <div id="div1" style="border: solid blue 3px">
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-    &lt;p&gt;Algo de texto en div2&lt;/p&gt;
-    &lt;p&gt;Algo de texto en div2&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+        <div id="div2" style="border: solid red 3px">
+        <p>Algo de texto en div2</p>
+        <p>Algo de texto en div2</p>
+        </div>
+      </div>
 
-&lt;p&gt;Algo de texto exterior&lt;/p&gt;
-&lt;p&gt;Algo de texto exterior&lt;/p&gt;
+    <p>Algo de texto exterior</p>
+    <p>Algo de texto exterior</p>
 
-&lt;button onclick="getAllParaElems();"&gt;
- muestra todos los elementos p en el documento&lt;/button&gt;&lt;br /&gt;
+    <button onclick="getAllParaElems();">
+     muestra todos los elementos p en el documento</button><br />
 
-&lt;button onclick="div1ParaElems();"&gt;
- muestra todos los elementos p en el div1&lt;/button&gt;&lt;br /&gt;
+    <button onclick="div1ParaElems();">
+     muestra todos los elementos p en el div1</button><br />
 
-&lt;button onclick="div2ParaElems();"&gt;
- muestra todos los elementos p en el div2&lt;/button&gt;
+    <button onclick="div2ParaElems();">
+     muestra todos los elementos p en el div2</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </body>
+    </html>
 
-<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
+### Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">DOM Level 2 Core: Document.getElementsByTagNameNS</a></p>
+[DOM Level 2 Core: Document.getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS)

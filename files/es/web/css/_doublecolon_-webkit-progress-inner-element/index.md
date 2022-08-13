@@ -1,66 +1,63 @@
 ---
 title: '::-webkit-progress-inner-element'
-slug: 'Web/CSS/::-webkit-progress-inner-element'
+slug: Web/CSS/::-webkit-progress-inner-element
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Referencia
-translation_of: 'Web/CSS/::-webkit-progress-inner-element'
+translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a>  <a href="/es/docs/Web/CSS">CSS </a><strong><code>::-webkit-progress-inner-element</code></strong> representa la parte más exterior de un elemento  {{HTMLElement("progress")}}.  Es el padre del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.</p>
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS ](/es/docs/Web/CSS)**`::-webkit-progress-inner-element`** representa la parte más exterior de un elemento {{HTMLElement("progress")}}. Es el padre del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
 
-<div class="note">
-<p><strong>Nota:</strong> para que  <code>::-webkit-progress-inner-element</code> tenga efecto , hay que darle valor none a {{cssxref("-webkit-appearance")}} en el elemento  <code>&lt;progress&gt;</code>.</p>
-</div>
+> **Nota:** para que `::-webkit-progress-inner-element` tenga efecto , hay que darle valor none a {{cssxref("-webkit-appearance")}} en el elemento `<progress>`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">progress {
+```css
+progress {
   -webkit-appearance: none;
 }
 
 ::-webkit-progress-inner-element {
   border: 2px solid black;
 }
-</pre>
+```
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;progress value="10" max="50"&gt;
-</pre>
+```html
+<progress value="10" max="50">
+```
 
-<h3 id="Salida">Salida</h3>
+### Salida
 
-<p>{{EmbedLiveSample("Ejemplo", 200, 50)}}</p>
+{{EmbedLiveSample("Ejemplo", 200, 50)}}
 
-<p>Una barra de progreso que use el estilo especificado anteriormente tendrá una apariencia similar a la siguiente::</p>
+Una barra de progreso que use el estilo especificado anteriormente tendrá una apariencia similar a la siguiente::
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13492/-webkit-progress-inner-element%20example.png"></p>
+![](https://mdn.mozillademos.org/files/13492/-webkit-progress-inner-element%20example.png)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un pseudo-elemento propitario y específico de WebKit/Blink.</p>
+No es parte de ninguna especificación. Es un pseudo-elemento propitario y específico de WebKit/Blink.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-webkit-progress-inner-element")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>Los pseudo-elementos usados por WebKit/Blink para dar estilos a otras partes de un elemento  {{HTMLElement("progress")}} :
-  <ul>
-   <li>{{cssxref("::-webkit-progress-bar")}}</li>
-   <li>{{cssxref("::-webkit-progress-value")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("::-moz-progress-bar")}}</li>
- <li>{{cssxref("::-ms-fill")}}</li>
-</ul>
+- Los pseudo-elementos usados por WebKit/Blink para dar estilos a otras partes de un elemento {{HTMLElement("progress")}} :
+
+  - {{cssxref("::-webkit-progress-bar")}}
+  - {{cssxref("::-webkit-progress-value")}}
+
+- {{cssxref("::-moz-progress-bar")}}
+- {{cssxref("::-ms-fill")}}

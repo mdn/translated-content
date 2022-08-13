@@ -7,59 +7,61 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">La propiedad <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>border-right</code></strong> es un a propiedad rápida para dar valores al {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}} y {{cssxref("border-right-color")}}.</span> Estas propiedades establecen un <a href="/es/docs/Web/CSS/border">borde </a>derecho del elemento.</p>
+La propiedad [CSS](/es/docs/Web/CSS) **`border-right`** es un a propiedad rápida para dar valores al {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}} y {{cssxref("border-right-color")}}. Estas propiedades establecen un [borde ](/es/docs/Web/CSS/border)derecho del elemento.
 
-<div>{{EmbedInteractiveExample("pages/css/border-right.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-right.html")}}
 
+Como con todas las propiedades rápidas, `border-right` siempre establece los valores de todas las propiedades que puede establecer, incluso si no están especificadas. Establece los no especificados a sus valores por defecto. Lo que significa que ...
 
-
-<p>Como con todas las propiedades rápidas, <code>border-right</code> siempre establece los valores de todas las propiedades que puede establecer, incluso si no están especificadas. Establece los no especificados a sus valores por defecto. Lo que significa que ...</p>
-
-<pre class="brush: css">border-right-style: dotted;
+```css
+border-right-style: dotted;
 border-right: thick green;
-</pre>
+```
 
-<p>... es en realidad lo mismo que ...</p>
+... es en realidad lo mismo que ...
 
-<pre class="brush: css">border-right-style: dotted;
+```css
+border-right-style: dotted;
 border-right: none thick green;
-</pre>
+```
 
-<p>... y el valor de {{cssxref("border-right-style")}} dado previamente a <code>border-right</code> es ignorado. Puesto que el valor por defecto de {{cssxref("border-right-style")}} es <code>none</code>, si no se especifica la parte <code>border-style</code> el resultado es no establecer un borde.</p>
+... y el valor de {{cssxref("border-right-style")}} dado previamente a `border-right` es ignorado. Puesto que el valor por defecto de {{cssxref("border-right-style")}} es `none`, si no se especifica la parte `border-style` el resultado es no establecer un borde.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css no-line-numbers">border-right: 1px;
+```css
+border-right: 1px;
 border-right: 2px dotted;
 border-right: medium dashed green;
-</pre>
+```
 
-<p>Los tres valores de la propiedad rápida pueden ser especificados en cualquier orden, incluso omitiendo uno o dos de ellos.</p>
+Los tres valores de la propiedad rápida pueden ser especificados en cualquier orden, incluso omitiendo uno o dos de ellos.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>Ver {{cssxref("border-right-width")}}.</dd>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>Ver {{cssxref("border-right-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Ver {{cssxref("border-right-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : Ver {{cssxref("border-right-width")}}.
+- `<br-style>`
+  - : Ver {{cssxref("border-right-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : Ver {{cssxref("border-right-color")}}.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   Esta caja tiene un borde en el lado derecho.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-right: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -67,41 +69,20 @@ border-right: medium dashed green;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-right', 'border-right')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>No direct changes, though the modification of values for the {{cssxref("border-right-color")}} do apply to it.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-right', 'border-right')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant changes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-right', 'border-right')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                                   | Comentario                                                                                                                |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#border-right', 'border-right')}}         | {{Spec2('CSS3 Backgrounds')}} | No direct changes, though the modification of values for the {{cssxref("border-right-color")}} do apply to it. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-right', 'border-right')}} | {{Spec2('CSS2.1')}}                 | No significant changes.                                                                                                   |
+| {{SpecName('CSS1', '#border-right', 'border-right')}}                         | {{Spec2('CSS1')}}                 | Initial definition                                                                                                        |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilitidad del navegador</h2>
+## Compatibilitidad del navegador
 
-<p>{{Compat("css.properties.border-right")}}</p>
+{{Compat("css.properties.border-right")}}

@@ -4,54 +4,34 @@ slug: Web/API/Navigator/geolocation
 translation_of: Web/API/Navigator/geolocation
 original_slug: Web/API/NavigatorGeolocation/geolocation
 ---
-<p>{{APIRef("Geolocation API")}}<br>
- La propiedad de sólo lectura <strong><code>Navigator.geolocation</code></strong> devuelve un objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Geolocation" title="La interfaz Geolocalización representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados ​​en la ubicación del usuario."><code>Geolocation</code></a> que proporciona acceso web a la ubicación de un dispositivo. Esto permite ofrecer al sitio web o aplicación resultados personalizados basados en la ubicación del usuario.</p>
+{{APIRef("Geolocation API")}}
+La propiedad de sólo lectura **`Navigator.geolocation`** devuelve un objeto [`Geolocation`](/es/docs/Web/API/Geolocation "La interfaz Geolocalización representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados ​​en la ubicación del usuario.") que proporciona acceso web a la ubicación de un dispositivo. Esto permite ofrecer al sitio web o aplicación resultados personalizados basados en la ubicación del usuario.
 
-<div class="note">
-<p><strong>Nota:</strong> Por motivos de seguridad, cuando una página web trata de acceder a la información de ubicación, se solicita permiso al usuario. Cada navegador tiene sus propias reglas sobre cómo y cuándo obtener dicho permiso.</p>
-</div>
+> **Nota:** Por motivos de seguridad, cuando una página web trata de acceder a la información de ubicación, se solicita permiso al usuario. Cada navegador tiene sus propias reglas sobre cómo y cuándo obtener dicho permiso.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>geo</var> = <var>navigator</var>.geolocation
-</pre>
+    geo = navigator.geolocation
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("geolocation.getCurrentPosition", "geolocation.getCurrentPosition()")}}</dt>
- <dd>Utilizado para obtener la posición actual.</dd>
- <dt>{{domxref("geolocation.watchPosition", "geolocation.watchPosition()")}}</dt>
- <dd>Utilizado para asignar un manejador para dar seguimiento a cualquier cambio de ubicación.</dd>
- <dt>{{domxref("geolocation.clearWatch", "geolocation.clearWatch()")}}</dt>
- <dd>Utilizado para eliminar un manejador asignado a los cambios de ubicación.</dd>
-</dl>
+- {{domxref("geolocation.getCurrentPosition", "geolocation.getCurrentPosition()")}}
+  - : Utilizado para obtener la posición actual.
+- {{domxref("geolocation.watchPosition", "geolocation.watchPosition()")}}
+  - : Utilizado para asignar un manejador para dar seguimiento a cualquier cambio de ubicación.
+- {{domxref("geolocation.clearWatch", "geolocation.clearWatch()")}}
+  - : Utilizado para eliminar un manejador asignado a los cambios de ubicación.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificación inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                       | Estado                           | Comentario             |
+| ------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("api.Navigator.geolocation")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Utilizando la geolocalización</a></li>
-</ul>
+- [Utilizando la geolocalización](/docs/WebAPI/Using_geolocation "/en-US/docs/WebAPI/Using_geolocation")

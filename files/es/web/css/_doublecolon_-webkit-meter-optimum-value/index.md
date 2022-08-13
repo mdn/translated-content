@@ -1,30 +1,33 @@
 ---
 title: '::-webkit-meter-optimum-value'
-slug: 'Web/CSS/::-webkit-meter-optimum-value'
+slug: Web/CSS/::-webkit-meter-optimum-value
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Referencia
-translation_of: 'Web/CSS/::-webkit-meter-optimum-value'
+translation_of: Web/CSS/::-webkit-meter-optimum-value
 ---
-<p>{{CSSRef}}{{Non-standard_header}}</p>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El pseudo-elemento CSS <code>::-webkit-meter-optimum-value</code> da estilo al elemento  meter cuando su valor está dentro del rango min-max establecido.</p>
+El pseudo-elemento CSS `::-webkit-meter-optimum-value` da estilo al elemento meter cuando su valor está dentro del rango min-max establecido.
 
-<p>El color por defecto es verde.</p>
+El color por defecto es verde.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.</p>
+No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Puntuación sobre 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Puntuación sobre 10</meter>
+```
 
-<pre class="brush: css">meter::-webkit-meter-bar {
+```css
+meter::-webkit-meter-bar {
   /* Necesario para eliminar la propiedad de fondo por defecto */
   background : none;
   background-color : whiteSmoke;
@@ -33,25 +36,22 @@ translation_of: 'Web/CSS/::-webkit-meter-optimum-value'
 
 meter::-webkit-meter-optimum-value {
   box-shadow: 0 5px 5px -5px #999 inset;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Ejemplos', '100%', 50) }}</p>
+{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-<div class="note">
-<p><strong>Nota</strong>: Sólo funciona en navegadores basado en Webkit/Blink.</p>
-</div>
+> **Nota:** Sólo funciona en navegadores basado en Webkit/Blink.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-webkit-meter-optimum-value")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>Los pseudo-elementos de WebKit/Blink para dar estilos a otras partes de  {{htmlelement("meter")}}:</p>
+Los pseudo-elementos de WebKit/Blink para dar estilos a otras partes de {{htmlelement("meter")}}:
 
-<ul>
- <li>{{cssxref("::-webkit-meter-inner-element")}}</li>
- <li>{{cssxref("::-webkit-meter-bar")}}</li>
- <li>{{cssxref("::-webkit-meter-even-less-good-value")}}</li>
- <li>{{cssxref("::-webkit-meter-suboptimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-suboptimum-value")}}

@@ -8,40 +8,21 @@ tags:
 translation_of: Web/HTML/Global_attributes/slot
 original_slug: Web/HTML/Atributos_Globales/slot
 ---
-<div>{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}</div>
+{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-<p>El <a href="/en-US/docs/Web/HTML/Global_attributes">atributo global</a> <strong>slot</strong> asigna un espacio en un <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> árbol shadow a un elemento: Un elemento con un atributo <code>slot</code> es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor de atributo {{htmlattrxref("name", "slot")}} coincide con el valor de ese atributo <code>slot</code>.</p>
+El [atributo global](/es/docs/Web/HTML/Global_attributes) **slot** asigna un espacio en un [shadow DOM](/es/docs/Web/Web_Components/Shadow_DOM) árbol shadow a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor de atributo {{htmlattrxref("name", "slot")}} coincide con el valor de ese atributo `slot`.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |         |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("html.global_attributes.slot")}}
 
+## Vea también
 
-<p>{{Compat("html.global_attributes.slot")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>Todos los <a href="/en-US/docs/Web/HTML/Global_attributes">atributos globales</a>.</li>
-</ul>
+- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).

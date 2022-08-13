@@ -4,32 +4,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}La propiedad **`Number.MAX_VALUE`**` `representa el valor numérico positivo máximo representable en JavaScript.{{js_property_attributes(0, 0, 0)}}
 
-<div>La propiedad <strong><code>Number.MAX_VALUE</code></strong><code> </code>representa el valor numérico positivo máximo representable en JavaScript.</div>
+## Descripción
 
-<div> </div>
+La propiedad `MAX_VALUE` tiene un valor aproximado a `1.79E+308`. Si el valor es mayor será representado como _`Infinity`_.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Dado que `MAX_VALUE` es una propiedad estática de {{jsxref("Number")}}, siempre ha de usarse como `Number.MAX_VALUE`, y no como propiedad del objeto que has creado.
 
-<h2 id="Descripción">Descripción</h2>
+## Ejemplos
 
-<p>La propiedad <code>MAX_VALUE</code> tiene un valor aproximado a <code>1.79E+308</code>. Si el valor es mayor será representado como <em><code>Infinity</code></em>.</p>
+### Usando `MAX_VALUE`
 
-<p>Dado que <code>MAX_VALUE</code> es una propiedad estática de {{jsxref("Number")}}, siempre ha de usarse como <code>Number.MAX_VALUE</code>, y no como propiedad del objeto que has creado.</p>
+La función _verificarValorMaximo_ recibe un número como parámetro que se compara con _Number.MAX_VALUE._ Si el número es menor se imprime por consola _"El número no es infinito"_, de ser mayor _"El número es infinito"_.
 
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Usando_MAX_VALUE">Usando <code>MAX_VALUE</code></h3>
-
-<p>La función <em>verificarValorMaximo </em>recibe un número como parámetro que se compara con <em>Number.MAX_VALUE. </em>Si el número es menor se imprime por consola <em>"El número no es infinito"</em>, de ser mayor <em>"El número es infinito"</em>.</p>
-
-<pre class="brush: js">var numero1 = 1.79E+307;
+```js
+var numero1 = 1.79E+307;
 var numero2 = 1.79E+310;
 
 function verificarValorMaximo(num){
 
-	if (num &lt;= Number.MAX_VALUE) {
+	if (num <= Number.MAX_VALUE) {
 	  console.log("El número no es infinito");
 	} else {
 	  console.log("El número es infinito");
@@ -39,46 +34,21 @@ function verificarValorMaximo(num){
 
 verificarValorMaximo(numero1); // El número no es infinito
 verificarValorMaximo(numero2); // El número es infinito
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment                                            |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}                 | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Compatibilidad">Compatibilidad</h2>
+## Compatibilidad
 
 {{Compat("javascript.builtins.Number.MAX_VALUE")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}

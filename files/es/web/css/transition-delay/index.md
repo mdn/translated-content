@@ -3,51 +3,49 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 translation_of: Web/CSS/transition-delay
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/en/CSS" style="line-height: inherit;" title="CSS">CSS</a> <code style="font-size: 14px; line-height: inherit;">transition-delay</code><span style="line-height: inherit;"> especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion (</span><a href="/en/CSS/CSS_transitions" style="line-height: inherit;" title="en/CSS/CSS transitions">transition effect</a><span style="line-height: inherit;">).</span></p>
+La propiedad [CSS](/en/CSS "CSS") `transition-delay` especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion ([transition effect](/en/CSS/CSS_transitions "en/CSS/CSS transitions")).
 
-<p>Un valor de <code>0s</code>, o <code>0ms</code>, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.</p>
+Un valor de `0s`, o `0ms`, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.
 
-<p>Puedes especificar multiples retrasos ("delays"); cada retraso se aplicará a la propiedad correspondiente especificada por la propiedad <span style="line-height: inherit;">{{ cssxref("transition-property") }}, que actua como una lista maestra. Si hay menos delays especificados que en la lista maestra, valores perdidos son puestos en el valor inicial (0s).</span></p>
+Puedes especificar multiples retrasos ("delays"); cada retraso se aplicará a la propiedad correspondiente especificada por la propiedad {{ cssxref("transition-property") }}, que actua como una lista maestra. Si hay menos delays especificados que en la lista maestra, valores perdidos son puestos en el valor inicial (0s).
 
-<p><span style="line-height: inherit;">You may specify multiple delays; each delay will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer delays specified than in the master list, missing values are set to the initial value (</span><code style="font-size: 14px; line-height: inherit;">0s</code><span style="line-height: inherit;">). If there are more delays, the list is simply truncated to the right size. In both case the CSS declaration stays valid.</span></p>
+You may specify multiple delays; each delay will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer delays specified than in the master list, missing values are set to the initial value (`0s`). If there are more delays, the list is simply truncated to the right size. In both case the CSS declaration stays valid.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("transition-delay")}}
-</pre>
+    Formal syntax: {{csssyntax("transition-delay")}}
 
-<pre>transition-delay: 3s
-transition-delay: 2s, 4ms
+<!---->
 
-transition-delay: initial
-</pre>
+    transition-delay: 3s
+    transition-delay: 2s, 4ms
 
-<h3 id="Values">Values</h3>
+    transition-delay: initial
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>Is a {{cssxref("&lt;time&gt;")}} denoting the amount of time to wait between a property's value changing and the start of the animation effect.</dd>
-</dl>
+### Values
 
-<h2 id="Examples">Examples</h2>
+- `<time>`
+  - : Is a {{cssxref("&lt;time&gt;")}} denoting the amount of time to wait between a property's value changing and the start of the animation effect.
 
-<div>
-<div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 0.5s</code></p>
+## Examples
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+`transition-delay: 0.5s`
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
+
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -83,9 +81,10 @@ transition-delay: initial
     transition-delay:0.5s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -99,22 +98,21 @@ transition-delay: initial
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_0_5s",275,150)}}
+
+`transition-delay: 1s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_0_5s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -150,9 +148,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:1s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -166,22 +165,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_1s",275,150)}}
+
+`transition-delay: 2s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_1s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -217,9 +215,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:2s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -233,22 +232,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_2s",275,150)}}
+
+`transition-delay: 4s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_2s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -284,9 +282,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:4s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -300,39 +299,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("delay_4s",275,150)}}</div>
-</div>
-</div>
+{{EmbedLiveSample("delay_4s",275,150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#transition-delay', 'transition-delay') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                                   | Comment |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
+| {{ SpecName('CSS3 Transitions', '#transition-delay', 'transition-delay') }} | {{ Spec2('CSS3 Transitions') }} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.transition-delay")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transitions" title="en/CSS/CSS transitions">Using CSS transitions</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [Using CSS transitions](/es/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- {{ domxref("TransitionEvent") }}

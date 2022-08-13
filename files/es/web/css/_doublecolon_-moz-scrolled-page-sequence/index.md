@@ -1,31 +1,29 @@
 ---
 title: '::-moz-scrolled-page-sequence'
-slug: 'Web/CSS/::-moz-scrolled-page-sequence'
+slug: Web/CSS/::-moz-scrolled-page-sequence
 tags:
   - CSS
   - NeedsExample
   - No estándar(2)
   - Referencia
   - Referencia CSS
-translation_of: 'Web/CSS/::-moz-scrolled-page-sequence'
+translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
-<p>{{CSSRef}}{{non-standard_header}}</p>
+{{CSSRef}}{{non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a>CSS <code>::-moz-scrolled-page-sequence</code> CSS representa el fondo de la previsualización para impresión.</p>
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)CSS `::-moz-scrolled-page-sequence` CSS representa el fondo de la previsualización para impresión.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-moz-scrolled-page-sequence")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{cssxref("::-moz-page")}}</li>
- <li>{{cssxref("::-moz-page-sequence")}}</li>
-</ul>
+- {{cssxref("::-moz-page")}}
+- {{cssxref("::-moz-page-sequence")}}

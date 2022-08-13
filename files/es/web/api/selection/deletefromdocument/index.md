@@ -5,27 +5,22 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/deleteFromDocument
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Elimina del documento el contenido de la selección.</p>
+Elimina del documento el contenido de la selección.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.deleteFromDocument()
-</pre>
+    sel.deleteFromDocument()
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<p>Un usuario selecciona el texto (imaginario) "jos tienen do" del texto "Los conejos tienen dos orejas." en una página web. Después el usuario da click en un botón que ejecuta la acción cortar de JavaScript <code>window.getSelection().deleteFromDocument()</code>. El texto del documento quedaría como "Los cones orejas."</p>
+Un usuario selecciona el texto (imaginario) "jos tienen do" del texto "Los conejos tienen dos orejas." en una página web. Después el usuario da click en un botón que ejecuta la acción cortar de JavaScript `window.getSelection().deleteFromDocument()`. El texto del documento quedaría como "Los cones orejas."
 
-<p> </p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/deleteFromDocument", "it": "it/DOM/Selection/deleteFromDocument", "pl": "pl/DOM/Selection/deleteFromDocument" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/deleteFromDocument", "it": "it/DOM/Selection/deleteFromDocument", "pl": "pl/DOM/Selection/deleteFromDocument" } ) }}

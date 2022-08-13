@@ -10,43 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El objeto <code><strong>AggregateError</strong></code> representa un error cuando se deben agrupar varios errores en un solo error. Se lanza cuando una operación necesita informar de varios errores, por ejemplo, {{JSxRef("Promise.any()")}}, cuando todas las promesas que se le pasan son rechazadas.</p>
+El objeto **`AggregateError`** representa un error cuando se deben agrupar varios errores en un solo error. Se lanza cuando una operación necesita informar de varios errores, por ejemplo, {{JSxRef("Promise.any()")}}, cuando todas las promesas que se le pasan son rechazadas.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{JSxRef("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}</dt>
- <dd>Crea un nuevo objeto <code>AggregateError</code>.</dd>
-</dl>
+- {{JSxRef("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
+  - : Crea un nuevo objeto `AggregateError`.
 
-<h2 id="Propiedades_de_la_instancia">Propiedades de la instancia</h2>
+## Propiedades de la instancia
 
-<dl>
- <dt>{{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}</dt>
- <dd>Mensaje de error, el valor predeterminado es <code>""</code> (la cadena vacía).</dd>
- <dt>{{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}</dt>
- <dd>Nombre del error, el valor predeterminado es <code>AggregateError</code>.</dd>
-</dl>
+- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
+  - : Mensaje de error, el valor predeterminado es `""` (la cadena vacía).
+- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
+  - : Nombre del error, el valor predeterminado es `AggregateError`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Capturar_un_error_agregado">Capturar un error agregado</h3>
+### Capturar un error agregado
 
-<pre class="brush: js; notranslate">Promise.any([
+```js
+Promise.any([
   Promise.reject(new Error("algún error")),
-]).catch(e =&gt; {
+]).catch(e => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "Todas las promesas rechazadas"
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "algún error" ]
 });
-</pre>
+```
 
-<h3 id="Crear_un_AggregateError">Crear un <code>AggregateError</code></h3>
+### Crear un `AggregateError`
 
-<pre class="brush: js; notranslate">try {
+```js
+try {
   throw new AggregateError([
     new Error("algún error"),
   ], 'Hola');
@@ -56,33 +54,18 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "algún error" ]
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}} |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
+{{Compat("javascript.builtins.AggregateError")}}
 
+## Ve también
 
-<p>{{Compat("javascript.builtins.AggregateError")}}</p>
-</div>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li>{{JSxRef("Error")}}</li>
-</ul>
+- {{JSxRef("Error")}}

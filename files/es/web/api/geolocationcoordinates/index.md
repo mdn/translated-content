@@ -3,61 +3,44 @@ title: Coordinates
 slug: Web/API/GeolocationCoordinates
 translation_of: Web/API/GeolocationCoordinates
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p>La interfaz <strong><code>Coordinates</code></strong> representa la posición y altitud del dispositivo en la Tierra, así como la precisión con la cual estas propiedades son calculadas.</p>
+La interfaz **`Coordinates`** representa la posición y altitud del dispositivo en la Tierra, así como la precisión con la cual estas propiedades son calculadas.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><em>La interfaz <code>Coordinates</code> no hereda ninguna propiedad</em>.</p>
+_La interfaz `Coordinates` no hereda ninguna propiedad_.
 
-<dl>
- <dt>{{domxref("Coordinates.latitude")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la latitud de la posición en grados con decimales.</dd>
- <dt>{{domxref("Coordinates.longitude")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la longitud de la posición en grados con decimales.</dd>
- <dt>{{domxref("Coordinates.altitude")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la altitud de la posición en metros, relativo al nivel del mar. Este valor puede ser <code>null</code> si la implementación no puede proporcionar la información.</dd>
- <dt>{{domxref("Coordinates.accuracy")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la precisión de las propiedades <code>latitude</code> y <code>longitude</code>, expresada en metros.</dd>
- <dt>{{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la precisión de la propiedad <code>altitude</code> expresada en metros. Este valor puede ser <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.heading")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la dirección en la que el dispositivo está viajando. Este valor, indicado en grados, indica la distancia real a la que el dispositivo se encuentra del norte. <code>0</code> grados representa el norte real, y la dirección se determina en el sentido de la agujas del reloj (lo que significa que el este es <code>90</code> grados y el oeste es <code>270</code> grados). Si <code>speed</code> es <code>0</code>, <code>heading</code> es <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>. En caso de que el dispositivo no pueda proporcionar la información de <code>heading</code>, este valor es <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.speed")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>double</code> que representa la velocidad del dispositivo en metros por segundo. Este valor puede ser <code>null</code>.</dd>
-</dl>
+- {{domxref("Coordinates.latitude")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la latitud de la posición en grados con decimales.
+- {{domxref("Coordinates.longitude")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la longitud de la posición en grados con decimales.
+- {{domxref("Coordinates.altitude")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la altitud de la posición en metros, relativo al nivel del mar. Este valor puede ser `null` si la implementación no puede proporcionar la información.
+- {{domxref("Coordinates.accuracy")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la precisión de las propiedades `latitude` y `longitude`, expresada en metros.
+- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la precisión de la propiedad `altitude` expresada en metros. Este valor puede ser `null`.
+- {{domxref("Coordinates.heading")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la dirección en la que el dispositivo está viajando. Este valor, indicado en grados, indica la distancia real a la que el dispositivo se encuentra del norte. `0` grados representa el norte real, y la dirección se determina en el sentido de la agujas del reloj (lo que significa que el este es `90` grados y el oeste es `270` grados). Si `speed` es `0`, `heading` es [`NaN`](/en-US/docs/JavaScript/Reference/Global_Objects/NaN "/en-US/docs/JavaScript/Reference/Global_Objects/NaN"). En caso de que el dispositivo no pueda proporcionar la información de `heading`, este valor es `null`.
+- {{domxref("Coordinates.speed")}} {{readonlyInline}}
+  - : Devuelve un `double` que representa la velocidad del dispositivo en metros por segundo. Este valor puede ser `null`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em><em>La interfaz <code>Coordinates</code> no implementa ni edita ningún método<em>.</em></em></em></p>
+**La interfaz `Coordinates` no implementa ni edita ningún método*.***
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#coordinates', 'Coordinates')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificación inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                           | Comentario             |
+| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation', '#coordinates', 'Coordinates')}} | {{Spec2('Geolocation')}} | Especificación inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("api.GeolocationCoordinates")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Utilizando la geolocalización</a></li>
- <li>La interfaz {{domxref("Geolocation")}} que la utiliza.</li>
-</ul>
+- [Utilizando la geolocalización](/es/docs/WebAPI/Using_geolocation)
+- La interfaz {{domxref("Geolocation")}} que la utiliza.

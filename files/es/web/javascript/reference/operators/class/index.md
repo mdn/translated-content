@@ -11,23 +11,24 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/class
 original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>La <strong>expresión class</strong> es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las <a href="/es/docs/Web/JavaScript/Referencia/Operadores/function">funciones</a>, las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.</p>
+La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las [funciones](/es/docs/Web/JavaScript/Referencia/Operadores/function), las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var MyClass = class <em>[className]</em> [extends] {
-  // class body
-};</pre>
+    var MyClass = class [className] [extends] {
+      // class body
+    };
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Una expresión de clase tiene una sintaxis similar a la <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/class">declaración de una clase</a>. Sin embargo, con las expresiones de clases, está permitido omitir el nombre de la clase ("identificador de enlace"), cosa que no se puede hacer con las declaraciones de clases. Además, las expresiones de clases permiten redefinir/redeclarar clases y <strong>no lanzar</strong> ningún tipo de error como las <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/class">declaraciones de clases</a>. La propiedad <code>constructor</code> es opcional. Y el <em>typeof </em>de las clases generadas con esta palabra clave siempre será "function".</p>
+Una expresión de clase tiene una sintaxis similar a la [declaración de una clase](/es/docs/Web/JavaScript/Referencia/Sentencias/class). Sin embargo, con las expresiones de clases, está permitido omitir el nombre de la clase ("identificador de enlace"), cosa que no se puede hacer con las declaraciones de clases. Además, las expresiones de clases permiten redefinir/redeclarar clases y **no lanzar** ningún tipo de error como las [declaraciones de clases](/es/docs/Web/JavaScript/Referencia/Sentencias/class). La propiedad `constructor` es opcional. Y el _typeof_ de las clases generadas con esta palabra clave siempre será "function".
 
-<p>Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en <a href="/es/docs/Web/JavaScript/Referencia/Modo_estricto">modo estricto</a>.</p>
+Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto).
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var Foo = class {}; // la propiedad constructor es opcional
 var Foo = class {}; // Se permite repetir declaraciones
 
@@ -37,15 +38,16 @@ typeof class {}; // devuelve "function"
 Foo instanceof Object; // true
 Foo instanceof Function; // true
 class Foo {}; // Lanza TypeError, no permite volver a declararla
-</pre>
+```
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Una_clase_sencilla">Una clase sencilla</h3>
+### Una clase sencilla
 
-<p>Esta es una sencilla expresión de clase anónima a la que se puede hacer referencia utilizando la variable "Foo".</p>
+Esta es una sencilla expresión de clase anónima a la que se puede hacer referencia utilizando la variable "Foo".
 
-<pre class="brush: js">var Foo = class {
+```js
+var Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -55,13 +57,14 @@ class Foo {}; // Lanza TypeError, no permite volver a declararla
 var instance = new Foo();
 instance.bar(); // "Hello World!"
 Foo.name; // "Foo"
-</pre>
+```
 
-<h3 id="Expresiones_de_clase_con_nombre">Expresiones de clase con nombre</h3>
+### Expresiones de clase con nombre
 
-<p>Si se quiere hacer referencia a la clase actual dentro del cuerpo de la clase, se puede crear una expresión de clase con nombre. Este nombre sólo será visible en el mismo contexto de la expresión de clase.</p>
+Si se quiere hacer referencia a la clase actual dentro del cuerpo de la clase, se puede crear una expresión de clase con nombre. Este nombre sólo será visible en el mismo contexto de la expresión de clase.
 
-<pre class="brush: js">var Foo = class NamedFoo {
+```js
+var Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;
@@ -71,38 +74,21 @@ var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo no está definido
 Foo.name; // "NamedFoo"
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                       | Comentario          |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.operators.class")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Operadores/function">expresión <code>function</code></a></li>
- <li><code><a href="/es/docs/Web/JavaScript/Referencia/Sentencias/class">declaración class</a></code></li>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Classes">Clases</a></li>
-</ul>
+- [expresión `function`](/es/docs/Web/JavaScript/Referencia/Operadores/function)
+- [`declaración class`](/es/docs/Web/JavaScript/Referencia/Sentencias/class)
+- [Clases](/es/docs/Web/JavaScript/Referencia/Classes)

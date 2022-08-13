@@ -3,57 +3,45 @@ title: Worker.terminate()
 slug: Web/API/Worker/terminate
 translation_of: Web/API/Worker/terminate
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>El método <code><strong>terminate()</strong></code> de la interfaz {{domxref("Worker")}} termina inmediatamente el {{domxref("Worker")}}. Esto no ofrece la oportunidad de finalizar las operaciones que estuviera realizando el worker, termina la ejecución por completo.</p>
+El método **`terminate()`** de la interfaz {{domxref("Worker")}} termina inmediatamente el {{domxref("Worker")}}. Esto no ofrece la oportunidad de finalizar las operaciones que estuviera realizando el worker, termina la ejecución por completo.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">myWorker.terminate();</pre>
+```js
+myWorker.terminate();
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Nada.</p>
+Nada.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>El siguiente extracto de código muestra la creación de un objeto {{domxref("Worker")}} usando el constructor de  {{domxref("Worker.Worker", "Worker()")}} y éste es inmediatamente terminado.</p>
+El siguiente extracto de código muestra la creación de un objeto {{domxref("Worker")}} usando el constructor de {{domxref("Worker.Worker", "Worker()")}} y éste es inmediatamente terminado.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 myWorker.terminate();
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}}</td>
-   <td>{{Spec2('Web Workers')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                           | Comentario                                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
+| {{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('Web Workers')}} | Definición inicial.                                  |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Worker.terminate")}}
 
-<h2 id="Mirar_también">Mirar también</h2>
+## Mirar también
 
-<p>La interfaz {{domxref("Worker")}} a la que pertenece.</p>
+La interfaz {{domxref("Worker")}} a la que pertenece.

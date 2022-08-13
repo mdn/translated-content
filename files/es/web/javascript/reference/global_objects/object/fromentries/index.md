@@ -9,99 +9,84 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Object.fromEntries()</strong></code> transforma una lista de pares con <code>[clave-valor] </code>en un objeto.</p>
+El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-valor] `en un objeto.
 
-<div>{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
 
+## Sintaxis
 
+    Object.fromEntries(iterable);
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox notranslate">Object.fromEntries(<var>iterable</var>);</pre>
+- `iterador`
+  - : Un iterador como {{jsxref("Array")}}, {{jsxref("Map")}} u otros objetos que implementen el [protocolo iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol).
 
-<h3 id="Parámetros">Parámetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code><var>iterador</var></code></dt>
- <dd>Un iterador como {{jsxref("Array")}}, {{jsxref("Map")}} u otros objetos que implementen el <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">protocolo iterable</a>.</dd>
-</dl>
+Un nuevo objeto cuyas propiedades son dadas por las entradas del iterador.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descripción
 
-<p>Un nuevo objeto cuyas propiedades son dadas por las entradas del iterador.</p>
+El método `Object.fromEntries()` toma una lista de pares con clave-valor y devuelve un nuevo objeto cuyas propiedades son dadas por éstas entradas. El argumento _iterador_ se espera que sea un objeto que implemente un método `@@iterator`, que devuelve un objeto iterador, que produce un objeto tipo array de dos elementos, donde el primer elemento es un valor que se usará como la clave de la propiedad, y el segundo elemento es el valor a asociar con esa clave de propiedad.
 
-<h2 id="Descripción">Descripción</h2>
+`Object.fromEntries()` realiza lo inverso de {{jsxref("Object.entries()")}}.
 
-<p>El método <code>Object.fromEntries()</code> toma una lista de pares con clave-valor y devuelve un nuevo objeto cuyas propiedades son dadas por éstas entradas. El argumento <em>iterador </em>se espera que sea un objeto que implemente un método <code>@@iterator</code>, que devuelve un objeto iterador, que produce un objeto tipo array de dos elementos, donde el primer elemento es un valor que se usará como la clave de la propiedad, y el segundo elemento es el valor a asociar con esa clave de propiedad.</p>
+## Ejemplos
 
-<p><code>Object.fromEntries()</code> realiza lo inverso de {{jsxref("Object.entries()")}}.</p>
+### Convirtiendo un `Map` en un `Objeto`
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Con `Object.fromEntries`, puedes convertir de un {{jsxref("Map")}} a un {{jsxref("Object")}}:
 
-<h3 id="Convirtiendo_un_Map_en_un_Objeto">Convirtiendo un <code>Map</code> en un <code>Objeto</code></h3>
-
-<p>Con <code>Object.fromEntries</code>, puedes convertir de un {{jsxref("Map")}} a un {{jsxref("Object")}}:</p>
-
-<pre class="brush: js notranslate">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+```js
+const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
-</pre>
+```
 
-<h3 id="Convirtiendo_un_Arreglo_en_un_Objeto">Convirtiendo un <code>Arreglo</code> en un <code>Objeto</code></h3>
+### Convirtiendo un `Arreglo` en un `Objeto`
 
-<p>Con <code>Object.fromEntries</code>, puedes convertir de un {{jsxref("Array")}} a un {{jsxref("Object")}}:</p>
+Con `Object.fromEntries`, puedes convertir de un {{jsxref("Array")}} a un {{jsxref("Object")}}:
 
-<pre class="brush: js notranslate">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+```js
+const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
-</pre>
+```
 
-<h3 id="Transformación_de_Objetos">Transformación de Objetos</h3>
+### Transformación de Objetos
 
-<p>Con <code>Object.fromEntries</code>, su método inverso {{jsxref("Object.entries()")}}, y <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">array métodos de manipulaciín de arreglos</a>, puedes transformar objetos así:</p>
+Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [array métodos de manipulaciín de arreglos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2), puedes transformar objetos así:
 
-<pre class="brush: js notranslate">const object1 = { a: 1, b: 2, c: 3 };
+```js
+const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
   Object.entries(object1)
-  .map(([ key, val ]) =&gt; [ key, val * 2 ])
+  .map(([ key, val ]) => [ key, val * 2 ])
 );
 
 console.log(object2);
-// { a: 2, b: 4, c: 6 }</pre>
+// { a: 2, b: 4, c: 6 }
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}}</td>
-   <td>Etapa 4</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado  |
+| ------------------------------------------------------------------------------------------------ | ------- |
+| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | Etapa 4 |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("javascript.builtins.Object.fromEntries")}}
 
+## Véase tambien
 
-<p>{{Compat("javascript.builtins.Object.fromEntries")}}</p>
-
-<h2 id="Véase_tambien">Véase tambien</h2>
-
-<ul>
- <li>{{jsxref("Object.entries()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

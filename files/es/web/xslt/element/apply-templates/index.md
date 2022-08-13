@@ -7,38 +7,36 @@ tags:
 translation_of: Web/XSLT/Element/apply-templates
 original_slug: Web/XSLT/apply-templates
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:apply-templates&gt;</code> selecciona un conjunto de nodos del documento de entrada e instruye al procesador para aplicar las plantillas apropiadas a ellos.</p>
+El elemento `<xsl:apply-templates>` selecciona un conjunto de nodos del documento de entrada e instruye al procesador para aplicar las plantillas apropiadas a ellos.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:apply-templates select=EXPRESION mode=NOMBRE&gt;
-	&lt;xsl:with-param&gt; [opcional]
-	&lt;xsl:sort&gt; [opcional]
-&lt;/xsl:apply-templates&gt;</pre>
+    <xsl:apply-templates select=EXPRESION mode=NOMBRE>
+    	<xsl:with-param> [opcional]
+    	<xsl:sort> [opcional]
+    </xsl:apply-templates>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Usa una expresión XPath para indicar los nodos a ser procesados. Un asterisco(<code>*</code>) selecciona por completo el conjunto de nodos. Si el atributo no se establece, todos los nodos hijos del nodo actual son seleccionados.</dd>
- <dt><code>mode</code></dt>
- <dd>Si existend diferentes maneras definidas de procesar el mismo nodo, se distingue entre ellas.</dd>
-</dl>
+- `select`
+  - : Usa una expresión XPath para indicar los nodos a ser procesados. Un asterisco(`*`) selecciona por completo el conjunto de nodos. Si el atributo no se establece, todos los nodos hijos del nodo actual son seleccionados.
+- `mode`
+  - : Si existend diferentes maneras definidas de procesar el mismo nodo, se distingue entre ellas.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Instrucción, aparece dentro de una plantilla.</p>
+Instrucción, aparece dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT sección 5.4.</p>
+XSLT sección 5.4.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

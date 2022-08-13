@@ -3,62 +3,57 @@ title: style
 slug: Web/SVG/Element/style
 translation_of: Web/SVG/Element/style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>El elemento <code>style</code> permite agregar directamente hojas de estilo en el contenido del SVG. El elemento style de SVG tiene los mismos atributos que el elemento correspondiente en HTML (ver elemento  {{ HTMLElement("style") }} de HTML).</p>
+El elemento `style` permite agregar directamente hojas de estilo en el contenido del SVG. El elemento style de SVG tiene los mismos atributos que el elemento correspondiente en HTML (ver elemento {{ HTMLElement("style") }} de HTML).
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style type="text/css"&gt;
-    /* &lt;![CDATA[ */
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    /* <![CDATA[ */
     circle {
       fill: orange;
       stroke: black;
       stroke-width: 10px; // Note that the value of a pixel depend on the viewBox
     }
-    /* ]]&gt; */
-  &lt;/style&gt;
+    /* ]]> */
+  </style>
 
-  &lt;circle cx="50" cy="50" r="40" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="50" cy="50" r="40" />
+</svg>
+```
 
-<p>Live result:</p>
+Live result:
 
-<p>{{EmbedLiveSample("Ejemplo",150,165)}}</p>
+{{EmbedLiveSample("Ejemplo",150,165)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globales">Atributos globales</h3>
+### Atributos globales
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Core attributes</a> »</li>
-</ul>
+- [Core attributes](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("type") }}</li>
- <li>{{ SVGAttr("media") }}</li>
- <li>{{ SVGAttr("title") }}</li>
-</ul>
+- {{ SVGAttr("type") }}
+- {{ SVGAttr("media") }}
+- {{ SVGAttr("title") }}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>Este elemento implementa la interfaz <code><a href="/en/DOM/SVGStyleElement" title="en/DOM/SVGStyleElement">SVGStyleElement</a></code>.</p>
+Este elemento implementa la interfaz [`SVGStyleElement`](/en/DOM/SVGStyleElement "en/DOM/SVGStyleElement").
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("svg.elements.style")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/HTML/Element/style" title="en/HTML/Element/style">&lt;style&gt; element in HTML</a></li>
-</ul>
+- [\<style> element in HTML](/en/HTML/Element/style "en/HTML/Element/style")

@@ -9,32 +9,32 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/super
 original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>La palabra clave <strong>super</strong> es usada para acceder y llamar funciones del padre de un objeto.</p>
+La palabra clave **super** es usada para acceder y llamar funciones del padre de un objeto.
 
-<p>Las expresiones <code>super.prop</code> y <code>super[expr]</code> son válidas en cualquier <a href="/es/docs/Web/JavaScript/Reference/Functions/Method_definitions">definición de método</a> tanto para <a href="/es/docs/Web/JavaScript/Reference/Classes">clases</a> como para <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">objetos literales</a>.</p>
+Las expresiones `super.prop` y `super[expr]` son válidas en cualquier [definición de método](/es/docs/Web/JavaScript/Reference/Functions/Method_definitions) tanto para [clases](/es/docs/Web/JavaScript/Reference/Classes) como para [objetos literales](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">// llama al método constructor del objeto padre.
-super([arguments]);
+    // llama al método constructor del objeto padre.
+    super([arguments]);
 
-// llama cualquier otro método del objeto padre.
-super.functionOnParent([arguments]);
-</pre>
+    // llama cualquier otro método del objeto padre.
+    super.functionOnParent([arguments]);
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Cuando es usado en un constructor, la palabra clave <code>super</code> aparece  sola lo cual invoca el constructor del objeto padre. En este caso debe usarse antes de que la palabra clave <code>this</code> sea usada. La palabra clave <code>super</code> también puede utilizarse para llamar otras funciones del objeto padre.</p>
+Cuando es usado en un constructor, la palabra clave `super` aparece sola lo cual invoca el constructor del objeto padre. En este caso debe usarse antes de que la palabra clave `this` sea usada. La palabra clave `super` también puede utilizarse para llamar otras funciones del objeto padre.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Usando_super_en_clases">Usando <code>super</code> en clases</h3>
+### Usando `super` en clases
 
-<p>Este fragmento de código se toma del <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">ejemplo de clases</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demo en vivo</a>). Aquí se llama a <code>super()</code> para evitar la duplicación de las partes del constructor que son comunes entre <code>Rectangle</code> y <code>Square</code>.</p>
+Este fragmento de código se toma del [ejemplo de clases](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([demo en vivo](https://googlechrome.github.io/samples/classes-es6/index.html)). Aquí se llama a `super()` para evitar la duplicación de las partes del constructor que son comunes entre `Rectangle` y `Square`.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.name = 'Rectangle';
     this.height = height;
@@ -63,13 +63,15 @@ class Square extends Rectangle {
     // poder usar 'this'. Salir de esto provocará un error de referencia.
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h3 id="Super-llamando_a_métodos_estáticos">Super-llamando a métodos estáticos</h3>
+### Super-llamando a métodos estáticos
 
-<p>También puede llamar a super en métodos estáticos.</p>
+También puede llamar a super en métodos estáticos.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor() {}
   static logNbSides() {
     return 'I have 4 sides';
@@ -83,13 +85,14 @@ class Square extends Rectangle {
   }
 }
 Square.logDescription(); // 'Tengo 4 lados que son todos iguales'
-</pre>
+```
 
-<h3 id="Eliminar_propiedades_super_generará_un_error">Eliminar propiedades <code>super</code> generará un error</h3>
+### Eliminar propiedades `super` generará un error
 
-<p>No puede usar el <a href="/es/docs/Web/JavaScript/Reference/Operators/delete">operador de eliminación</a> y <code>super.prop</code> o <code>super[expr]</code> para eliminar la propiedad de una clase principal, lanzará {{jsxref("ReferenceError")}}.</p>
+No puede usar el [operador de eliminación](/es/docs/Web/JavaScript/Reference/Operators/delete) y `super.prop` o `super[expr]` para eliminar la propiedad de una clase principal, lanzará {{jsxref("ReferenceError")}}.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   constructor() {}
   foo() {}
 }
@@ -100,13 +103,15 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: eliminación no válida que implica 'super'. </pre>
+new Derived().delete(); // ReferenceError: eliminación no válida que implica 'super'.
+```
 
-<h3 id="super.prop_no_puede_sobrescribir_las_propiedades_no_modificables"><code>super.prop</code> no puede sobrescribir las propiedades no modificables</h3>
+### `super.prop` no puede sobrescribir las propiedades no modificables
 
-<p>Al definir propiedades que no se pueden escribir, p. Ej. {{jsxref("Object.defineProperty")}}, <code>super</code> no puede sobrescribir el valor de la propiedad.</p>
+Al definir propiedades que no se pueden escribir, p. Ej. {{jsxref("Object.defineProperty")}}, `super` no puede sobrescribir el valor de la propiedad.
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -122,13 +127,14 @@ new Derived().delete(); // ReferenceError: eliminación no válida que implica '
 var x = new X();
 x.f(); // TypeError: "prop" es de solo lectura
 console.log(x.prop); // 1
-</pre>
+```
 
-<h3 id="Usando_super.prop_en_objetos_literales">Usando <code>super.prop</code> en objetos literales</h3>
+### Usando `super.prop` en objetos literales
 
-<p>Super también se puede usar en el <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">inicializador de objetos / notación literal</a>. En este ejemplo, dos objetos definen un método. En el segundo objeto, <code>super</code> llama al primer método del objeto. Esto funciona con la ayuda de {{jsxref("Object.setPrototypeOf()")}} con el que podemos establecer el prototipo de <code>obj2</code> en <code>obj1</code>, de modo que <code>super</code> pueda encontrar el <code>method1</code> en <code>obj1</code>.</p>
+Super también se puede usar en el [inicializador de objetos / notación literal](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). En este ejemplo, dos objetos definen un método. En el segundo objeto, `super` llama al primer método del objeto. Esto funciona con la ayuda de {{jsxref("Object.setPrototypeOf()")}} con el que podemos establecer el prototipo de `obj2` en `obj1`, de modo que `super` pueda encontrar el `method1` en `obj1`.
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log('method 1');
   }
@@ -142,38 +148,19 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                       | Comentario          |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-super-keyword', 'super')}} | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-super-keyword', 'super')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("javascript.operators.super")}}
 
+## Ver también
 
-<p>{{Compat("javascript.operators.super")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Reference/Classes">Clases</a></li>
-</ul>
+- [Clases](/es/docs/Web/JavaScript/Reference/Classes)

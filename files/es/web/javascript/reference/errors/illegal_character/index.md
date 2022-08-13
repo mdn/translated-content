@@ -10,75 +10,82 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 original_slug: Web/JavaScript/Reference/Errors/caracter_ilegal
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensaje">Mensaje</h2>
+## Mensaje
 
-<pre class="syntaxbox">SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)</pre>
+    SyntaxError: illegal character (Firefox)
+    SyntaxError: Invalid or unexpected token (Chrome)
 
-<pre class="syntaxbox">ErrorDeSintasix: Carácter ilegal (Firefox)
-ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
-</pre>
+<!---->
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+    ErrorDeSintasix: Carácter ilegal (Firefox)
+    ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
 
-<p>{{jsxref("SyntaxError")}}  {{jsxref("ErrorDeSintaxis")}}</p>
+## Tipo de error
 
-<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
+{{jsxref("SyntaxError")}} {{jsxref("ErrorDeSintaxis")}}
 
-<p>Hay un componente léxico inválido o inesperado que no pertenece a su posición en el código. Utilice un editor que soporte el resaltado de sintaxis y que revise cuidadosamente su código contra discrepancias como un signo menos (<code> - </code>) contra un guion (<code> – </code>) o comillas simples (<code> " </code>) contra comillas no estándar (<code> “ </code>).</p>
+## ¿Qué salió mal?
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Hay un componente léxico inválido o inesperado que no pertenece a su posición en el código. Utilice un editor que soporte el resaltado de sintaxis y que revise cuidadosamente su código contra discrepancias como un signo menos (` - `) contra un guion (` – `) o comillas simples (` " `) contra comillas no estándar (` “ `).
 
-<h3 id="Caracteres_no_coincidentes">Caracteres no coincidentes</h3>
+## Ejemplos
 
-<p>Algunos caracteres parecen iguales, pero hará que el analizador falle al interpretar su código.</p>
+### Caracteres no coincidentes
 
-<pre class="brush: js example-bad">“Esto parece una cadena de caracteres”;
-<code class="language-js"><span class="comment token">// SyntaxError: illegal character</span></code>
+Algunos caracteres parecen iguales, pero hará que el analizador falle al interpretar su código.
+
+```js example-bad
+“Esto parece una cadena de caracteres”;
+// SyntaxError: illegal character
 // ErrorDeSintaxis: Carácter ilegal
 
 42 – 13;
-<code class="language-js"><span class="comment token">// SyntaxError: illegal character</span></code>
+// SyntaxError: illegal character
 // ErrorDeSintaxis: Carácter ilegal
-</pre>
+```
 
-<p>Esto debería funcionar:</p>
+Esto debería funcionar:
 
-<pre class="brush: js example-good">"Esto en realidad es una cadena de caracteres";
+```js example-good
+"Esto en realidad es una cadena de caracteres";
 
 42 - 13;
-</pre>
+```
 
-<h3 id="Caracteres_olvidados">Caracteres olvidados</h3>
+### Caracteres olvidados
 
-<p>Es fácil olvidar caracteres aquí o allí.</p>
+Es fácil olvidar caracteres aquí o allí.
 
-<pre class="brush: js example-bad">var colors = ['#000', #333', '#666'];
-<code class="language-js"><span class="comment token">// SyntaxError: illegal character</span></code>
+```js example-bad
+var colors = ['#000', #333', '#666'];
+// SyntaxError: illegal character
 // ErrorDeSintaxis: Carácter ilegal
-</pre>
+```
 
-<p>Agregue la comilla olvidada para <code><strong>'</strong>#333'</code>.</p>
+Agregue la comilla olvidada para `'#333'`.
 
-<pre class="brush: js example-good">var colors = ['#000', '#333', '#666'];</pre>
+```js example-good
+var colors = ['#000', '#333', '#666'];
+```
 
-<h3 id="Caracteres_escondidos">Caracteres escondidos</h3>
+### Caracteres escondidos
 
-<p>Cuando copia y pega un código de una fuente externa, puede haber caracteres inválidos. ¡Cuidado!</p>
+Cuando copia y pega un código de una fuente externa, puede haber caracteres inválidos. ¡Cuidado!
 
-<pre class="brush: js example-bad">var foo = 'bar';​
-<code class="language-js"><span class="comment token">// SyntaxError: illegal character</span></code>
+```js example-bad
+var foo = 'bar';​
+// SyntaxError: illegal character
 // ErrorDeSintaxis: Carácter ilegal
-</pre>
+```
 
-<p>Al inspeccionar este código en un editor como Vim, puede ver que en realidad hay un carácter de <a href="https://en.wikipedia.org/wiki/Zero-width_space">espacio de ancho cero (ZWSP) (U+200B)</a>.</p>
+Al inspeccionar este código en un editor como Vim, puede ver que en realidad hay un carácter de [espacio de ancho cero (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space).
 
-<pre class="brush: js">var foo = 'bar';​&lt;200b&gt;</pre>
+```js
+var foo = 'bar';​<200b>
+```
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Gramática léxica</a></li>
-</ul>
+- [Gramática léxica](/es/docs/Web/JavaScript/Reference/Lexical_grammar)

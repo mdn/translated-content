@@ -4,48 +4,42 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/catch
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong>catch()</strong> retorna una <code>Promise</code> y solo se ejecuta en los casos en los que la promesa se marca como <code>Reject</code>. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar <code>obj.catch(onRejected)</code> internamente llama a <code>obj.then(undefined, onRejected)</code>).</p>
+El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en los que la promesa se marca como `Reject`. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar `obj.catch(onRejected)` internamente llama a `obj.then(undefined, onRejected)`).
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="syntaxbox"><var>p.catch(onRejected)</var>;
+    p.catch(onRejected);
 
-p.catch(function(reason) {
-   // rejection
-});
-</pre>
+    p.catch(function(reason) {
+       // rejection
+    });
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>onRejected</dt>
- <dd>Una {{jsxref("Function")}} llamada cuando la <code>Promise</code> es rechazada. Esta función tiene un argumento:
- <dl>
-  <dt><code>reason</code></dt>
-  <dd>La razón del rechazo.</dd>
- </dl>
- La promesa devuelta por <code>catch()</code> es rechazada si <code>onRejected</code> lanza un error o retorna una <code>Promise</code> que a su vez se rechaza, de cualquier otra manera la <code>Promise</code> es resuelta.</dd>
-</dl>
+- onRejected
+  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:_ `reason`
+    _ : La razón del rechazo.La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
 
-<h3 id="Valor_de_Retorno_(Return)">Valor de Retorno (Return)</h3>
+### Valor de Retorno (Return)
 
-<p>Internamente llama a <code>Promise.prototype.then</code> en el objeto sobre el que se llama, pasándole el parámetro <code>undefined</code> y el manejador <code>onRejected</code> recibido; luego devuelve un valor de esa llamada (que es una {{jsxref("Promise")}}).</p>
+Internamente llama a `Promise.prototype.then` en el objeto sobre el que se llama, pasándole el parámetro `undefined` y el manejador `onRejected` recibido; luego devuelve un valor de esa llamada (que es una {{jsxref("Promise")}}).
 
-<p><strong>Demostración de la llamada interna:</strong></p>
+**Demostración de la llamada interna:**
 
-<pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
+```js
+// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
     var originalThen = Promise.prototype.then;
     var originalCatch = Promise.prototype.catch;
 
     Promise.prototype.then = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .then on %o with arguments: %o', this, arguments);
+        console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
         return originalThen.apply(this, arguments);
     };
     Promise.prototype.catch = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .catch on %o with arguments: %o', this, arguments);
+        console.log('> > > > > > called .catch on %o with arguments: %o', this, arguments);
         return originalCatch.apply(this, arguments);
     };
 
@@ -57,19 +51,20 @@ p.catch(function(reason) {
 Promise.resolve().catch(function XXX(){});
 
 // logs:
-// &gt; &gt; &gt; &gt; &gt; &gt; called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
-// &gt; &gt; &gt; &gt; &gt; &gt; called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
-</pre>
+// > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
+// > > > > > > called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+```
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>catch</code> puede ser muy útil para el manejo de errores en tu código con promesas.</p>
+El método `catch` puede ser muy útil para el manejo de errores en tu código con promesas.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_y_encadenando_el_método_catch">Usando y encadenando el método <code>catch</code></h3>
+### Usando y encadenando el método `catch`
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -95,11 +90,12 @@ p1.then(function(value) {
 }, function () {
   console.log('Not fired due to the catch');
 });
-</pre>
+```
 
-<h3 id="Trucos_cuando_lanzamos_errores">Trucos cuando lanzamos errores</h3>
+### Trucos cuando lanzamos errores
 
-<pre class="brush: js">// Hacer un throw llamará al método catch
+```js
+// Hacer un throw llamará al método catch
 var p1 = new Promise(function(resolve, reject) {
   throw 'Uh-oh!';
 });
@@ -127,11 +123,13 @@ var p3 = new Promise(function(resolve, reject) {
 
 p3.catch(function(e) {
    console.log(e); // Nunca será llamado
-});</pre>
+});
+```
 
-<h3 id="Si_se_resuelve_la_promesa">Si se resuelve la promesa</h3>
+### Si se resuelve la promesa
 
-<pre class="brush: js">// Crea una promesa que no llamará a <code>onReject</code>
+```js
+// Crea una promesa que no llamará a onReject
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
@@ -146,39 +144,21 @@ p2.then(function (value) {
 }, function (reason) {
     console.log("next promise's onRejected");
     console.log(reason);
-});</pre>
+});
+```
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial en el standar ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                       | Comment                                |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
+| {{SpecName('ES2015', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ES2015')}}     | Definición inicial en el standar ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                        |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("javascript.builtins.promise.catch")}}
 
+## Vea también
 
-<p>{{Compat("javascript.builtins.promise.catch")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}

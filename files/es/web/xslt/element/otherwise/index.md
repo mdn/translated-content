@@ -7,32 +7,32 @@ tags:
 translation_of: Web/XSLT/Element/otherwise
 original_slug: Web/XSLT/otherwise
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:otherwise&gt;</code> se utiliza para definir la acción que se debe tomar cuando no se aplica ninguna de las condiciones <code>&lt;xsl:when&gt;</code>. Es similar a <code>else</code> or <code>default</code> en otros lenguajes de programación.</p>
+El elemento `<xsl:otherwise>` se utiliza para definir la acción que se debe tomar cuando no se aplica ninguna de las condiciones `<xsl:when>`. Es similar a `else` or `default` en otros lenguajes de programación.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:otherwise&gt;
-	PLANTILLA
-&lt;/xsl:otherwise&gt;</pre>
+    <xsl:otherwise>
+    	PLANTILLA
+    </xsl:otherwise>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Subinstrucción, debe aparecer como el último hijo de un elemento <code>&lt;xsl:choose&gt;</code>, dentro de una plantilla.</p>
+Subinstrucción, debe aparecer como el último hijo de un elemento `<xsl:choose>`, dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 9.2</p>
+XSLT, sección 9.2
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

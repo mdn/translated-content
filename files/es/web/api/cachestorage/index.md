@@ -13,59 +13,55 @@ tags:
   - TopicStub
 translation_of: Web/API/CacheStorage
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>CacheStorage</code></strong> interface represents the storage for {{domxref("Cache")}} objects.</p>
+The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
-<p>The interface:</p>
+The interface:
 
-<ul>
- <li>Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
-  <div class="note"><strong>Note</strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.</div>
- </li>
- <li>Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.</li>
-</ul>
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
 
-<p>Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.</p>
+  > **Nota:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
 
-<p>Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the <code>CacheStorage</code> object tracks.</p>
+- Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
-<p>You can access <code>CacheStorage</code> through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
 
-<div class="note"><strong>Note</strong>: CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.</div>
+Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.</div>
+You can access `CacheStorage` through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.
 
-<h2 id="Methods">Methods</h2>
+> **Nota:** CacheStorage always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.
 
-<dl>
- <dt>{{domxref("CacheStorage.match()")}}</dt>
- <dd>Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.</dd>
- <dt>{{domxref("CacheStorage.has()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves to <code>true</code> if a {{domxref("Cache")}} object matching the <code>cacheName</code> exists.</dd>
- <dt>{{domxref("CacheStorage.open()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching the <code>cacheName</code> (a new cache is created if it doesn't already exist.)</dd>
- <dt>{{domxref("CacheStorage.delete()")}}</dt>
- <dd>Finds the {{domxref("Cache")}} object matching the <code>cacheName</code>, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to <code>true</code>. If no {{domxref("Cache")}} object is found, it resolves to <code>false</code>.</dd>
- <dt>{{domxref("CacheStorage.keys()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}}. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.</dd>
-</dl>
+> **Nota:** {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Methods
 
-<p>This code snippet is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>.) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.</p>
+- {{domxref("CacheStorage.match()")}}
+  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
+- {{domxref("CacheStorage.has()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves to `true` if a {{domxref("Cache")}} object matching the `cacheName` exists.
+- {{domxref("CacheStorage.open()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching the `cacheName` (a new cache is created if it doesn't already exist.)
+- {{domxref("CacheStorage.delete()")}}
+  - : Finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`. If no {{domxref("Cache")}} object is found, it resolves to `false`.
+- {{domxref("CacheStorage.keys()")}}
+  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}}. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
 
-<p>In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:</p>
+## Examples
 
-<ol>
- <li>Check whether a match for the request is found in the CacheStorage. If so, serve that.</li>
- <li>If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (<code>cache.put(event.request, response.clone())</code>.)</li>
- <li>If this fails (e.g. because the network is down), return a fallback response.</li>
-</ol>
+This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
-<p>Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.</p>
+In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(event) {
+1.  Check whether a match for the request is found in the CacheStorage. If so, serve that.
+2.  If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
+3.  If this fails (e.g. because the network is down), return a fallback response.
+
+Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
+
+```js
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -106,11 +102,12 @@ self.addEventListener('fetch', function(event) {
     }
   }));
 });
-</pre>
+```
 
-<p>This snippet shows how the API can be used outside of a service worker context, and uses the <code>await</code> operator for much more readable code.</p>
+This snippet shows how the API can be used outside of a service worker context, and uses the `await` operator for much more readable code.
 
-<pre class="brush: js notranslate">// Try to get data from the cache, but fall back to fetching it live.
+```js
+// Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
    const cacheVersion = 1;
    const cacheName    = `myapp-${ cacheVersion }`;
@@ -164,35 +161,21 @@ try {
    console.log( { data } );
 } catch ( error ) {
    console.error( { error } );
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment             |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.CacheStorage")}}
 
+## See also
 
-<p>{{Compat("api.CacheStorage")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

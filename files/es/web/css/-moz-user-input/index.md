@@ -7,21 +7,22 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-user-input
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>En las aplicaciones Mozilla , <code>-moz-user-input</code> determina si un elemento aceptará entrada por parte del usuario. <code>user-focus, </code>una propiedad similar fue propuesta en  <a class="external" href="http://www.w3.org/TR/2000/WD-css3-userint-20000216">primeros borradores de un predecesor de la especificación CSS3 UI</a> pero fue rechazada posteriormente por el grupo de trabajo..</p>
+En las aplicaciones Mozilla , `-moz-user-input` determina si un elemento aceptará entrada por parte del usuario. `user-focus, `una propiedad similar fue propuesta en [primeros borradores de un predecesor de la especificación CSS3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) pero fue rechazada posteriormente por el grupo de trabajo..
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p><code>-moz-user-input</code> fue was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations).</p>
+`-moz-user-input` fue was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations).
 
-<p>Para elementos que normalmente son receptores de entrada por parte del usuario, como  {{HTMLElement("textarea")}}, el valor inicial de <code>-moz-user-input</code> es <code>enabled</code>.</p>
+Para elementos que normalmente son receptores de entrada por parte del usuario, como {{HTMLElement("textarea")}}, el valor inicial de `-moz-user-input` es `enabled`.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Palabras clave valor */
+```css
+/* Palabras clave valor */
 -moz-user-input: none;
 -moz-user-input: enabled;
 -moz-user-input: disabled;
@@ -30,35 +31,32 @@ translation_of: Web/CSS/-moz-user-input
 -moz-user-input: inherit;
 -moz-user-input: initial;
 -moz-user-input: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>none</dt>
- <dd>El elemento no responde a la entrada de datos por parte del usuario y no estará {{Cssxref(":active")}}.</dd>
- <dt>enabled</dt>
- <dd>El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.</dd>
- <dt>disabled</dt>
- <dd>El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer  {{XULAttr("disabled")}} a true, en ese caso el elemento es dibujado normalmente.</dd>
-</dl>
+- none
+  - : El elemento no responde a la entrada de datos por parte del usuario y no estará {{Cssxref(":active")}}.
+- enabled
+  - : El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.
+- disabled
+  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer {{XULAttr("disabled")}} a true, en ese caso el elemento es dibujado normalmente.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush:css">input.example {
+```css
+input.example {
   /* the user will be able to select the text, but not change it. */
   -moz-user-input: disabled;
 }
-</pre>
+```
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{cssxref("-moz-user-focus")}}</li>
- <li>{{cssxref("-moz-user-modify")}}</li>
- <li>{{cssxref("-moz-user-select")}}</li>
-</ul>
+- {{cssxref("-moz-user-focus")}}
+- {{cssxref("-moz-user-modify")}}
+- {{cssxref("-moz-user-select")}}

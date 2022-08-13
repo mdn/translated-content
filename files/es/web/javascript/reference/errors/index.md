@@ -10,20 +10,18 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors
 ---
-<p>{{jsSidebar("Errors")}}</p>
+{{jsSidebar("Errors")}}
 
-<p>Abajo encontraras una lista de los errores que son generados por JavaScript. Estos errores pueden ser una ayuda útil al depurar, aunque el problema reportado no siempre es precisamente claro. Las paginas de abajo proporcionan detalles adicionales sobre estos errores. Cada error es un objeto basado en el objeto {{jsxref("Error")}} , y tiene un <code>nombre</code> y un <code>mensaje</code>.</p>
+Abajo encontraras una lista de los errores que son generados por JavaScript. Estos errores pueden ser una ayuda útil al depurar, aunque el problema reportado no siempre es precisamente claro. Las paginas de abajo proporcionan detalles adicionales sobre estos errores. Cada error es un objeto basado en el objeto {{jsxref("Error")}} , y tiene un `nombre` y un `mensaje`.
 
-<p>Los errores mostrados en la consola web pueden incluir un link a la pagina debajo correspondiente para ayudarte a comprender rápidamente el problema en tu código.</p>
+Los errores mostrados en la consola web pueden incluir un link a la pagina debajo correspondiente para ayudarte a comprender rápidamente el problema en tu código.
 
-<h2 id="Lista_de_errores">Lista de errores</h2>
+## Lista de errores
 
-<p>En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mensaje (un mensaje de error mas detallado y legible). Juntos,estas dos propiedades proveen un punto de partida hacia el entendimiento y la resolución del problema. Para mas información, ¡Sigue los links abajo!</p>
+En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mensaje (un mensaje de error mas detallado y legible). Juntos,estas dos propiedades proveen un punto de partida hacia el entendimiento y la resolución del problema. Para mas información, ¡Sigue los links abajo!
 
-<p>{{ListSubPages("/en-US/docs/Web/JavaScript/Reference/Errors")}}</p>
+{{ListSubPages("/en-US/docs/Web/JavaScript/Reference/Errors")}}
 
-<h2 id="Ve_también">Ve también</h2>
+## Ve también
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">¿Qué salió mal? Solucionando Javascript</a>: El tutorial introductorio para principiantes sobre la reparación en errores de JavaScript.</li>
-</ul>
+- [¿Qué salió mal? Solucionando Javascript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong): El tutorial introductorio para principiantes sobre la reparación en errores de JavaScript.

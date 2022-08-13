@@ -3,122 +3,126 @@ title: CSS Containment
 slug: Web/CSS/CSS_Containment
 translation_of: Web/CSS/CSS_Containment
 ---
-<div>{{CSSRef}}</div>
-<p>
- El objetivo de la espicificación CSS Containment es mejorar el rendimiento de las páginas web permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.</p>
+{{CSSRef}}
 
-<h2 id="Ejemplo_básico">Ejemplo básico</h2>
+El objetivo de la espicificación CSS Containment es mejorar el rendimiento de las páginas web permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.
 
-<p>Muchas páginas web contienen un número de secciones que don independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.</p>
+## Ejemplo básico
 
-<pre class="brush: html notranslate">&lt;h1&gt;Mi blog&lt;/h1&gt;
-&lt;article&gt;
-  &lt;h2&gt;Encabezado de un bonito artículo&lt;/h2&gt;
-  &lt;p&gt;Contenido del artículo.&lt;/p&gt;
-&lt;/article&gt;
-&lt;article&gt;
-  &lt;h2&gt;Otro encabezado de otro artículo&lt;/h2&gt;
-  &lt;p&gt;Más contenido.&lt;/p&gt;
-&lt;/article&gt;</pre>
+Muchas páginas web contienen un número de secciones que don independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.
 
-<p>Cada artículo tiene la propiedad {{cssxref("contain")}} con valor <code>content</code> aplicado en el CSS.</p>
+```html
+<h1>Mi blog</h1>
+<article>
+  <h2>Encabezado de un bonito artículo</h2>
+  <p>Contenido del artículo.</p>
+</article>
+<article>
+  <h2>Otro encabezado de otro artículo</h2>
+  <p>Más contenido.</p>
+</article>
+```
 
-<pre class="brush: css notranslate">article {
+Cada artículo tiene la propiedad {{cssxref("contain")}} con valor `content` aplicado en el CSS.
+
+```css
+article {
   contain: content;
-}</pre>
+}
+```
 
-<p>Cada artículo es independiente de los demás artículos en la página, y en consecuencia se les ha aplicado <code>contain: content</code> para indicar al navegador que ese es el caso. El navegador puede entonces usar esa información para tomar decisiones sobre cómo renderizar el contenido. Por ejemplo, puede no renderizar artículos que estén fuera del área visible.</p>
+Cada artículo es independiente de los demás artículos en la página, y en consecuencia se les ha aplicado `contain: content` para indicar al navegador que ese es el caso. El navegador puede entonces usar esa información para tomar decisiones sobre cómo renderizar el contenido. Por ejemplo, puede no renderizar artículos que estén fuera del área visible.
 
-<p>Si aplicamos a cada <code>&lt;article&gt;</code> la propiedad <code>contain</code> con el valor <code>content</code>, cuando se inserten nuevos elementos el navegador entiende que no necesita hacer <em>relayout </em>o <em>repaint </em>de ningun área que esté fuera del subárbol que contenga el elemento, aunque si aplicamos estilos al <code>&lt;article&gt;</code> (por ejemplo <code>height: auto</code>), el navegador puede necesitar hacerse cargo de ese cambio de tamaño.</p>
+Si aplicamos a cada `<article>` la propiedad `contain` con el valor `content`, cuando se inserten nuevos elementos el navegador entiende que no necesita hacer _relayout_ o _repaint_ de ningun área que esté fuera del subárbol que contenga el elemento, aunque si aplicamos estilos al `<article>` (por ejemplo `height: auto`), el navegador puede necesitar hacerse cargo de ese cambio de tamaño.
 
-<p>Se nos ha dicho por medio de la propiedad <code>contain</code> que cada artículo es independiente de los demás.</p>
+Se nos ha dicho por medio de la propiedad `contain` que cada artículo es independiente de los demás.
 
-<p>El valor <code>content</code> es una clave para referirse al valor <code>layout paint</code>. Dice al navegador que el <em>layout</em> del elemento está totalmente separado del resto de la página, y que todo lo relacionado con el elemento es pintado dentro de sus límites. Nada puede desbordarse visualmente.</p>
+El valor `content` es una clave para referirse al valor `layout paint`. Dice al navegador que el _layout_ del elemento está totalmente separado del resto de la página, y que todo lo relacionado con el elemento es pintado dentro de sus límites. Nada puede desbordarse visualmente.
 
-<p>Esta información es algo que normalmente es obvio para el desarrollador a la hora de crear la página web. Sin embargo, los navegadores no pueden adivinar las intenciones del desarrollador y no puede asumir que un <code>&lt;article&gt;</code> tenga que ser enteramente autocontenido. Esta propiedad, por lo tanto, provee de una buena forma de explicar este hecho al navegador, permitiendo que haga optimizaciones para el rendimiento basados en ese conocimiento.</p>
+Esta información es algo que normalmente es obvio para el desarrollador a la hora de crear la página web. Sin embargo, los navegadores no pueden adivinar las intenciones del desarrollador y no puede asumir que un `<article>` tenga que ser enteramente autocontenido. Esta propiedad, por lo tanto, provee de una buena forma de explicar este hecho al navegador, permitiendo que haga optimizaciones para el rendimiento basados en ese conocimiento.
 
-<h2 id="Key_concepts_and_terminology">Key concepts and terminology</h2>
+## Key concepts and terminology
 
-<p>This specification defines only one property, the {{cssxref("contain")}} property. The values for this property indicate the type of containment that you want to apply to that element.</p>
+This specification defines only one property, the {{cssxref("contain")}} property. The values for this property indicate the type of containment that you want to apply to that element.
 
-<h3 id="Layout_containment">Layout containment</h3>
+### Layout containment
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: layout;
-}</pre>
+}
+```
 
-<p>Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using <code>contain: layout</code> you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.</p>
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
 
-<p>In addition:</p>
+In addition:
 
-<ul>
- <li><code>float</code> layout will be performed independently.</li>
- <li>Margins won't collapse across a layout containment boundary</li>
- <li>The layout container will be a containing block for <code>absolute</code>/<code>fixed</code> position descendants.</li>
- <li>The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.</li>
-</ul>
+- `float` layout will be performed independently.
+- Margins won't collapse across a layout containment boundary
+- The layout container will be a containing block for `absolute`/`fixed` position descendants.
+- The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
 
-<h3 id="Paint_containment">Paint containment</h3>
+### Paint containment
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: paint;
-}</pre>
+}
+```
 
-<p>Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for <code>paint</code> containment as <code>layout</code> containment (see above).</p>
+Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
 
-<p>Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.</p>
+Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.
 
-<h3 id="Size_containment">Size containment</h3>
+### Size containment
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: size;
-}</pre>
+}
+```
 
-<p>Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.</p>
+Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.
 
-<p>If you turn on <code>contain: size</code> you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.</p>
+If you turn on `contain: size` you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.
 
-<h3 id="Style_containment">Style containment</h3>
+### Style containment
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: style;
-}</pre>
+}
+```
 
-<p>Despite the name, style containment does not provide scoped styles such as you would get with the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. The main use case is to prevent situations where a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS Counter</a> could be changed in an element, which could then affect the rest of the tree. </p>
+Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
-<p>Using <code>contain: style</code> would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.</p>
+Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>style</code> containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).</p>
-</div>
+> **Nota:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
 
-<h3 id="Special_values">Special values</h3>
+### Special values
 
-<p>There are two special values of contain:</p>
+There are two special values of contain:
 
-<ul>
- <li><code>content</code></li>
- <li><code>strict</code></li>
-</ul>
+- `content`
+- `strict`
 
-<p>We encountered the first in the example above. Using <code>contain: content</code> turns on <code>layout</code> and <code>paint</code> containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply <code>size</code> containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.</p>
+We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
 
-<p>To gain as much containment as possible use <code>contain: strict</code>, which behaves the same as <code>contain: size layout paint</code>, or perhaps the following to also add <code>style</code> containment in browsers that support it:</p>
+To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
 
-<pre class="brush: css notranslate">contain: strict;
-contain: strict style;</pre>
+```css
+contain: strict;
+contain: strict style;
+```
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{cssxref("contain")}}</li>
-</ul>
+- {{cssxref("contain")}}
 
-<h2 id="External_resources">External resources</h2>
+## External resources
 
-<ul>
- <li><a href="https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/">An Introduction to CSS Containment</a></li>
- <li><a href="https://dev.opera.com/articles/css-will-change-property">Everything You Need to Know About the CSS <code>will-change</code> Property</a></li>
-</ul>
+- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)

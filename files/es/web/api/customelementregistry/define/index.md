@@ -3,77 +3,50 @@ title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 translation_of: Web/API/CustomElementRegistry/define
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>El método <code><strong>define()</strong></code> de la interfaz {{domxref("CustomElementRegistry")}} define un nuevo elemento personalizado.</p>
+El método **`define()`** de la interfaz {{domxref("CustomElementRegistry")}} define un nuevo elemento personalizado.
 
-<p>Se pueden crear dos tipos de elementos personalizados:</p>
+Se pueden crear dos tipos de elementos personalizados:
 
-<ul>
- <li><strong>Elementos personalizados autónomos</strong>: Elementos autónomos; estos heredan de HTMLElement  (Elemento HTML genérico).</li>
- <li><strong>Elementos personalizados preconstruidos</strong>: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph."><code>&lt;p&gt;</code></a>).</li>
-</ul>
+- **Elementos personalizados autónomos**: Elementos autónomos; estos heredan de HTMLElement (Elemento HTML genérico).
+- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Element/p "The HTML <p> element represents a paragraph.")).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
-</pre>
+    customElements.define(name, constructor, options);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>name</dt>
- <dd>Nombre del nuevo elemento personalizado. Fíjate en que los nombres de elementos personalizados deben contener un guión.</dd>
- <dt>constructor</dt>
- <dd>Constructor para el nuevo elemento personalizado</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Objecto que controla cómo se define el elemento. Actualmente solo se permite una opción:
- <ul>
-  <li><code>extends</code>: Cadena que especifica el nombre del elemento preconstruido del cual se va a extender. Se usa para crear <em>elementos personalizados preconstruidos</em>.</li>
- </ul>
- </dd>
-</dl>
+- name
+  - : Nombre del nuevo elemento personalizado. Fíjate en que los nombres de elementos personalizados deben contener un guión.
+- constructor
+  - : Constructor para el nuevo elemento personalizado
+- options {{optional_inline}}
+  - : Objecto que controla cómo se define el elemento. Actualmente solo se permite una opción:\* `extends`: Cadena que especifica el nombre del elemento preconstruido del cual se va a extender. Se usa para crear _elementos personalizados preconstruidos_.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Void.</p>
+Void.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Excepción</th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NotSupportedError</code></td>
-   <td>El {{domxref("CustomElementRegistry")}} ya contiene una entrada con el mismo nombre o el mismo constructor (o se ha definido ya de alguna otra manera), o se ha especificado <code>extends</code> pero el elemento del que se está intentando extender es desconocido.</td>
-  </tr>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>El nombre proporcionado no es un <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">nombre válido de elemento personalizado</a>.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>El constructor referenciado no es un constructor</td>
-  </tr>
- </tbody>
-</table>
+| Excepción           | Descripción                                                                                                                                                                                                                                                             |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NotSupportedError` | El {{domxref("CustomElementRegistry")}} ya contiene una entrada con el mismo nombre o el mismo constructor (o se ha definido ya de alguna otra manera), o se ha especificado `extends` pero el elemento del que se está intentando extender es desconocido. |
+| `SyntaxError`       | El nombre proporcionado no es un [nombre válido de elemento personalizado](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                                      |
+| `TypeError`         | El constructor referenciado no es un constructor                                                                                                                                                                                                                        |
 
-<div class="note">
-<p><strong>Nota</strong>: A menudo se obtienen excepciones <code>NotSupportedError</code>s cuando el método <code>define()</code> está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.</p>
-</div>
+> **Nota:** A menudo se obtienen excepciones `NotSupportedError`s cuando el método `define()` está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Elemento_personalizado_autónomo">Elemento personalizado autónomo</h3>
+### Elemento personalizado autónomo
 
-<p>El siguiente código está tomado de nuestro ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a>  (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">verlo en vivo</a>).</p>
+El siguiente código está tomado de nuestro ejemplo [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([verlo en vivo](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
 
-<pre class="brush: js">// Crear una clase para el elemento
+```js
+// Crear una clase para el elemento
 class PopUpInfo extends HTMLElement {
   constructor() {
     // Siempre lo primero es llamar a super en el constructor
@@ -153,21 +126,22 @@ class PopUpInfo extends HTMLElement {
 
 // Definir el nuevo elemento
 customElements.define('popup-info', PopUpInfo);
-</pre>
+```
 
-<pre class="brush: html">&lt;popup-info img="img/alt.png" text="Su código de validación de tarjeta (CVC) es una característica
+```html
+<popup-info img="img/alt.png" text="Su código de validación de tarjeta (CVC) es una característica
                                     extra de seguridad — consiste en 3 o 4
-                                    numeros en la parte posterior de su tarjeta."&gt;</pre>
+                                    numeros en la parte posterior de su tarjeta.">
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.</p>
-</div>
+> **Nota:** Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.
 
-<h3 id="Elemento_personalizado_preconstruido">Elemento personalizado preconstruido</h3>
+### Elemento personalizado preconstruido
 
-<p>El siguiente código está tomado de nuestro ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">verlo en vivo</a>).</p>
+El siguiente código está tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([verlo en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
-<pre class="brush: js">// Crear una clase para el elemento
+```js
+// Crear una clase para el elemento
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Siempre lo primero es llamar a super en el constructor
@@ -178,7 +152,7 @@ class WordCount extends HTMLParagraphElement {
 
     // la función countWords cuenta palabras (aunque estén separadas por más de un espacio)
     // que existe en el nodo pasado como parámetro.
-    // innerText está definido para objetos <code>HTMLElement</code>, mientras que textContent para todos los objetos Node
+    // innerText está definido para objetos HTMLElement, mientras que textContent para todos los objetos Node
     // el operador || hace que obtengamos al menos uno de los dos
 
     function countWords(node){
@@ -209,31 +183,19 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                       | Estado                           | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}} | {{Spec2("HTML WHATWG")}} | Initial definition. |
 
-<h2 id="Compatibilidad_navegadores">Compatibilidad navegadores</h2>
+## Compatibilidad navegadores
 
-<div>
-
-
-<p>{{Compat("api.CustomElementRegistry.define")}}</p>
-</div>
+{{Compat("api.CustomElementRegistry.define")}}

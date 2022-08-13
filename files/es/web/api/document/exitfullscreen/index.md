@@ -3,73 +3,55 @@ title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 translation_of: Web/API/Document/exitFullscreen
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p><span class="seoSummary">El método <code><strong>exitFullscreen()</strong></code> de {{domxref("Document")}} </span>solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.</p>
+El método **`exitFullscreen()`** de {{domxref("Document")}} solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.
 
-<p>La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando <code>requestFullscreen()</code>. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un {{interwiki("wikipedia", "Stack_(abstract_data_type)", "stack")}} de elementos de pantalla completa.</p>
+La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un {{interwiki("wikipedia", "Stack_(abstract_data_type)", "stack")}} de elementos de pantalla completa.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>exitPromise</em> = <em>document</em>.exitFullscreen();
-</pre>
+    exitPromise = document.exitFullscreen();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Un {{jsxref("Promise")}} que se resuelve una vez que el {{Glossary("user agent")}} a terminado de salir del modo de pantalla completa. Si se produce un error al intentar salir del modo de pantalla completa, se llama al controlador <code>catch()</code> para la promesa.</p>
+Un {{jsxref("Promise")}} que se resuelve una vez que el {{Glossary("user agent")}} a terminado de salir del modo de pantalla completa. Si se produce un error al intentar salir del modo de pantalla completa, se llama al controlador `catch()` para la promesa.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo hace que el documento actual entre y salga de una presentación a pantalla completa cada vez que se hace clic dentro del botón del mouse.</p>
+Este ejemplo hace que el documento actual entre y salga de una presentación a pantalla completa cada vez que se hace clic dentro del botón del mouse.
 
-<pre class="brush: js">document.onclick = function (event) {
+```js
+document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
   } else {
     document.documentElement.requestFullscreen()
   }
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Nota:</strong> Para un ejemplo más completo, vea {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.</p>
-</div>
+> **Nota:** Para un ejemplo más completo, vea {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                           | Comentarios        |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("api.Document.exitFullscreen")}}
 
+## Ver también
 
-<p>{{Compat("api.Document.exitFullscreen")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{ domxref("Element.requestFullscreen()") }}</li>
- <li>{{ domxref("Document.fullscreenElement") }}</li>
- <li>{{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}</li>
- <li>The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }} attribute</li>
-</ul>
+- [Fullscreen API](/es/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/es/docs/Web/API/Fullscreen_API/Guide)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
+- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }} attribute

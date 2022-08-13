@@ -8,42 +8,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/floor
 ---
-<div>{{JSRef("Objetos_globales", "Math")}}</div>
+{{JSRef("Objetos_globales", "Math")}}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>Devuelve el máximo entero menor o igual a un número.</p>
+Devuelve el máximo entero menor o igual a un número.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate"><code>Math.floor(<em>x</em>) </code></pre>
+    Math.floor(x)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Es número.</dd>
-</dl>
+- `x`
+  - : Es número.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Como <code>floor</code> es un método estático de <code>Math</code>, siempre debe usarse como <code>Math.floor()</code>, en lugar de usarlo como un método de un objeto <code>Math</code> creado.</p>
+Como `floor` es un método estático de `Math`, siempre debe usarse como `Math.floor()`, en lugar de usarlo como un método de un objeto `Math` creado.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example_Using_Math.floor" name="Example:_Using_Math.floor">Ejemplo: Usando <code>Math.floor</code></h3>
+### Ejemplo: Usando `Math.floor`
 
-<p>La siguiente función devuelve el valor entero redondeado más bajo de la variable <code>x</code>:</p>
+La siguiente función devuelve el valor entero redondeado más bajo de la variable `x`:
 
-<pre class="brush:js notranslate">function getFloor(x) {
+```js
+function getFloor(x) {
    return Math.floor(x);
-}</pre>
+}
+```
 
-<p>Si se pasa <code>45.95</code> a <code>getFloor</code>, éste devuelve <code>45</code>; si se le pasa <code>-45.95</code>,  devuelve <code>-46</code>.</p>
+Si se pasa `45.95` a `getFloor`, éste devuelve `45`; si se le pasa `-45.95`, devuelve `-46`.
 
-<h3 id="Example_Decimal_adjustment" name="Example:_Decimal_adjustment">Ejemplo: Ajuste decimal</h3>
+### Ejemplo: Ajuste decimal
 
-<pre class="brush:js notranslate">// Cierre
+```js
+// Cierre
 (function(){
 
 	/**
@@ -62,7 +63,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/floor
 		value = +value;
 		exp = +exp;
 		// Si el valor no es un número o el exp no es un entero...
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Cambio
@@ -113,13 +114,11 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<h2 id="See_also" name="See_also">Ven También</h2>
+## Ven También
 
-<ul>
- <li>El {{jsxref("Math")}} objeto.</li>
- <li>{{jsxref("Math.abs")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- El {{jsxref("Math")}} objeto.
+- {{jsxref("Math.abs")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}

@@ -3,111 +3,79 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 translation_of: Web/CSS/vertical-align
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code>vertical-align</code> de <a href="/en-US/docs/CSS" title="CSS">CSS</a> especifica el alineado vertical de un elemento en línea o una celda de una tabla.</p>
+La propiedad `vertical-align` de [CSS](/es/docs/CSS "CSS") especifica el alineado vertical de un elemento en línea o una celda de una tabla.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>vertical-align:</code> <code>baseline</code> | <code>sub</code> | <code>super</code> | <code>text-top</code> | <code>text-bottom</code> | <code>middle</code> | <code>top</code> | <code>bottom</code> | &lt;percentage&gt; | <a href="/en-US/docs/CSS/length" title="CSS/length">&lt;length&gt;</a></pre>
+    vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>
 
-<h3 id="Valores_(para_elementos_en_línea)">Valores (para elementos en línea)</h3>
+### Valores (para elementos en línea)
 
-<p>La mayoría de los valores de alinean verticalmente el elemento de forma relativa al elemento padre:</p>
+La mayoría de los valores de alinean verticalmente el elemento de forma relativa al elemento padre:
 
-<dl>
- <dt><code>baseline</code></dt>
- <dd>Alinea la línea base del elemento con la línea base del padre. La línea base de algunos <a href="/es/docs/CSS/Replaced_element" title="/es/docs/CSS/Replaced_element">elementos reemplazados</a>, como  {{HTMLElement("textarea")}} no está especificado en la especificación HTML, que significa que su comportamiento puede cambiar en un navegador u otro.</dd>
- <dt><code>sub</code></dt>
- <dd>Alinea la línea base del elemento con la línea subscript del elemento padre.</dd>
- <dt><code>super</code></dt>
- <dd> Alinea la línea base del elemento con la línea superscript del elemento padre.</dd>
- <dt><code>text-top</code></dt>
- <dd>Aligns the top of the element with the top of the parent element's font.</dd>
- <dt><code>text-bottom</code></dt>
- <dd>Aligns the bottom of the element with the bottom of the parent element's font.</dd>
- <dt><code>middle</code></dt>
- <dd>Aligns the middle of the element with the middle of lowercase letters in the parent.</dd>
- <dt><code><a href="/en-US/docs/CSS/length" title="CSS/length">&lt;length&gt;</a></code></dt>
- <dd>Aligns the baseline of the element at the given length above the baseline of its parent.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Like &lt;length&gt; values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.
- <p>For elements that do not have a baseline, the bottom margin edge is used instead.</p>
+- `baseline`
+  - : Alinea la línea base del elemento con la línea base del padre. La línea base de algunos [elementos reemplazados](/es/docs/CSS/Replaced_element), como {{HTMLElement("textarea")}} no está especificado en la especificación HTML, que significa que su comportamiento puede cambiar en un navegador u otro.
+- `sub`
+  - : Alinea la línea base del elemento con la línea subscript del elemento padre.
+- `super`
+  - : Alinea la línea base del elemento con la línea superscript del elemento padre.
+- `text-top`
+  - : Aligns the top of the element with the top of the parent element's font.
+- `text-bottom`
+  - : Aligns the bottom of the element with the bottom of the parent element's font.
+- `middle`
+  - : Aligns the middle of the element with the middle of lowercase letters in the parent.
+- [`<length>`](/en-US/docs/CSS/length "CSS/length")
+  - : Aligns the baseline of the element at the given length above the baseline of its parent.
+- `<percentage>`
+  - : Like \<length> values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.For elements that do not have a baseline, the bottom margin edge is used instead.However, two values vertically align the element relative to the entire line rather than relative to its parent:
+- `top`
+  - : Align the top of the element and its descendants with the top of the entire line.
+- `bottom`
+  - : Align the bottom of the element and its descendants with the bottom of the entire line.
 
- <p>However, two values vertically align the element relative to the entire line rather than relative to its parent:</p>
- </dd>
- <dt><code>top</code></dt>
- <dd>Align the top of the element and its descendants with the top of the entire line.</dd>
- <dt><code>bottom</code></dt>
- <dd>Align the bottom of the element and its descendants with the bottom of the entire line.</dd>
-</dl>
+Negative values are allowed.
 
-<p>Negative values are allowed.</p>
+### Valores (para celdas de tablas)
 
-<h3 id="Valores_(para_celdas_de_tablas)">Valores (para celdas de tablas)</h3>
+- `baseline` (and `sub`, `super`, `text-top`, `text-bottom`, `<length>`, and `<percentage>`)
+  - : Align the baseline of the cell with the baseline of all other cells in the row that are baseline-aligned.
+- `top`
+  - : Align the top padding edge of the cell with the top of the row.
+- `middle`
+  - : Center the padding box of the cell within the row.
+- `bottom`
+  - : Align the bottom padding edge of the cell with the bottom of the row.
 
-<dl>
- <dt><code>baseline</code> (and <code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, and <code>&lt;percentage&gt;</code>)</dt>
- <dd>Align the baseline of the cell with the baseline of all other cells in the row that are baseline-aligned.</dd>
- <dt><code>top</code></dt>
- <dd>Align the top padding edge of the cell with the top of the row.</dd>
- <dt><code>middle</code></dt>
- <dd>Center the padding box of the cell within the row.</dd>
- <dt><code>bottom</code></dt>
- <dd>Align the bottom padding edge of the cell with the bottom of the row.</dd>
-</dl>
+Negative values are allowed.
 
-<p>Negative values are allowed.</p>
+## Ejemplos
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
-
-<pre class="brush: css">img {
+```css
+img {
 	vertical-align: bottom;
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Defines <code>visibility</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Add the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to element with a {{ cssxref("display") }} type of <code>table-cell</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#vertical-align', 'vertical-align') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                                   | Comment                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align') }}             | {{ Spec2('CSS3 Transitions') }} | Defines `visibility` as animatable.                                                                                                                         |
+| {{ SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align') }} | {{ Spec2('CSS2.1') }}             | Add the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to element with a {{ cssxref("display") }} type of `table-cell`. |
+| {{ SpecName('CSS1', '#vertical-align', 'vertical-align') }}                             | {{ Spec2('CSS1') }}                 | Initial definition.                                                                                                                                         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
 {{Compat("css.properties.vertical-align")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ Cssxref("line-height") }}, {{ Cssxref("text-align") }}, {{ Cssxref("margin") }}</li>
- <li>
-  <p><a href="http://phrogz.net/css/vertical-align/index.html">Understanding <code>vertical-align</code>, or "How (Not) To Vertically Center Content"</a></p>
- </li>
-</ul>
+- {{ Cssxref("line-height") }}, {{ Cssxref("text-align") }}, {{ Cssxref("margin") }}
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)

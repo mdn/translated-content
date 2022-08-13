@@ -3,68 +3,48 @@ title: Window.moveBy()
 slug: Web/API/Window/moveBy
 translation_of: Web/API/Window/moveBy
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>Mueve la actual ventana a consecuencia de una cantidad especificada.</p>
+Mueve la actual ventana a consecuencia de una cantidad especificada.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">window.moveBy(<em>deltaX</em>, <em>deltaY</em>)
-</pre>
+    window.moveBy(deltaX, deltaY)
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<ul>
- <li><code>deltaX</code> es la cantidad de pixeles a mover la ventana horizontalmente.</li>
- <li><code>deltaY</code> es la cantidad de pixeles a mover la ventana verticalmente.</li>
-</ul>
+- `deltaX` es la cantidad de pixeles a mover la ventana horizontalmente.
+- `deltaY` es la cantidad de pixeles a mover la ventana verticalmente.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">function budge() {
+```js
+function budge() {
   moveBy(10, -10);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Puedes usar numeros negativos como parametros para esta función. Esta función realiza un movimiento relativo mientras que {{domxref("window.moveTo")}} hace un movimiento absoluto.</p>
+Puedes usar numeros negativos como parametros para esta función. Esta función realiza un movimiento relativo mientras que {{domxref("window.moveTo")}} hace un movimiento absoluto.
 
-<p>Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegador, deacuerdo con las <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">siguientes reglas</a>:</p>
+Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegador, deacuerdo con las [siguientes reglas](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
 
-<ol>
- <li>No puedes mover una ventana o pestaña que no haya sido creada por window.open.</li>
- <li>No puedes mover una ventana o pestaña cuando esta en una ventana con más de una sola pestaña.</li>
-</ol>
+1.  No puedes mover una ventana o pestaña que no haya sido creada por window\.open.
+2.  No puedes mover una ventana o pestaña cuando esta en una ventana con más de una sola pestaña.
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-moveby', 'window.moveBy()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{ SpecName('CSSOM View', '#dom-window-moveby', 'window.moveBy()') }} | {{ Spec2('CSSOM View') }} |            |
 
-<h2 id="Compatilidad_de_Navegador">Compatilidad de Navegador</h2>
+## Compatilidad de Navegador
 
+{{Compat("api.Window.moveBy")}}
 
+## Ver también
 
-<p>{{Compat("api.Window.moveBy")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{domxref("window.moveTo")}}</li>
-</ul>
+- {{domxref("window.moveTo")}}

@@ -3,69 +3,49 @@ title: min-height
 slug: Web/CSS/min-height
 tags:
   - CSS
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/min-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>La propiedad <code>min-height</code> se utiliza para definir la altura mínima de un elemento dado. Impide que el valor de la propiedad {{ Cssxref("height") }} llegue a ser más pequeña que la especificada en la altura mínima (<code>min-height</code>).</p>
+La propiedad `min-height` se utiliza para definir la altura mínima de un elemento dado. Impide que el valor de la propiedad {{ Cssxref("height") }} llegue a ser más pequeña que la especificada en la altura mínima (`min-height`).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
 {{csssyntax}}
 
-<h3 id="Values" name="Values">Values</h3>
+### Values
 
-<ul>
- <li><strong>length</strong> : puede ser en px, cm, in (píxel, centímetro o inches)</li>
- <li><strong>percentage</strong> : % especificado como un porcentaje de la altura del bloque contenedor.</li>
-</ul>
+- **length** : puede ser en px, cm, in (píxel, centímetro o inches)
+- **percentage** : % especificado como un porcentaje de la altura del bloque contenedor.
 
-<h3 id="Examples" name="Examples">Examples</h3>
+### Examples
 
-<pre>table {min-height: 75%;}
+    table {min-height: 75%;}
 
-form {min-height: 0;}
-</pre>
+    form {min-height: 0;}
 
-<h3 id="Notes" name="Notes">Notes</h3>
+### Notes
 
-<p>{{ Cssxref("min-height") }} tiene prioridad sobre los valores {{ Cssxref("max-height") }} y {{ Cssxref("height") }}.</p>
+{{ Cssxref("min-height") }} tiene prioridad sobre los valores {{ Cssxref("max-height") }} y {{ Cssxref("height") }}.
 
-<h3 id="Esdpecificaciones" name="Esdpecificaciones">Esdpecificaciones</h3>
+### Esdpecificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS2/visudet.html#min-max-heights">CSS 2.1</a></li>
-</ul>
+- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-heights)
 
-<h3 id="Compatibilidades" name="Compatibilidades">Compatibilidades</h3>
+### Compatibilidades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión mínima</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>3.5</td>
-  </tr>
- </tbody>
-</table>
+| Navegador         | Versión mínima |
+| ----------------- | -------------- |
+| Internet Explorer | 6              |
+| Netscape          | 6              |
+| Opera             | 3.5            |
 
-<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+### Ver también
 
-<p>{{ Cssxref("Modelo de caja", "modelo de caja") }}, {{ Cssxref("width", "ancho") }}, {{ Cssxref("-moz-box-sizing", "tamaño de cajas -Mozilla") }}, {{ Cssxref("min-height", "altura mínima") }}, {{ Cssxref("max-height", "altura máxima") }}</p>
+{{ Cssxref("Modelo de caja", "modelo de caja") }}, {{ Cssxref("width", "ancho") }}, {{ Cssxref("-moz-box-sizing", "tamaño de cajas -Mozilla") }}, {{ Cssxref("min-height", "altura mínima") }}, {{ Cssxref("max-height", "altura máxima") }}

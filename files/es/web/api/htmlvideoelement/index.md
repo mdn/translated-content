@@ -4,94 +4,65 @@ slug: Web/API/HTMLVideoElement
 translation_of: Web/API/HTMLVideoElement
 original_slug: Web/API/ElementosHTMLparaVideo
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>El interfaz de <strong><code>HTMLVideoElement</code></strong> provee propiedades especiales y metodos para manipular objectos de videos. Tambien, este interfaz hereda propiedades y métodos de {{domxref("HTMLMediaElement")}} y {{domxref("HTMLElement")}}.</p>
+El interfaz de **`HTMLVideoElement`** provee propiedades especiales y metodos para manipular objectos de videos. Tambien, este interfaz hereda propiedades y métodos de {{domxref("HTMLMediaElement")}} y {{domxref("HTMLElement")}}.
 
-<p>La lista de <a href="/en-US/docs/HTML/Supported_media_formats">supported media formats</a> (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.</p>
+La lista de [supported media formats](/es/docs/HTML/Supported_media_formats) (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><em>Hereda las propiedades de los interfaces anteriores, {{domxref("HTMLMediaElement")}}, y </em><em>{{domxref("HTMLElement")}}.</em></p>
+_Hereda las propiedades de los interfaces anteriores, {{domxref("HTMLMediaElement")}}, y_ _{{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.height")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("height", "video")}}, el cual especifica la altura del area mostrada, en pixeles CSS.</dd>
- <dt>{{domxref("HTMLVideoElement.poster")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("poster", "video")}}, el cual especifica que imagen sera mostrada en la ausencia de data de video.</dd>
- <dt>{{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> que contiene la altura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso.  Si el estado disponible del elemento es <code>HAVE_NOTHING</code>, su valor es <code>0</code>.</dd>
- <dt>{{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> que contiene la anchura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso.  Si el estado disponible del elemento es <code>HAVE_NOTHING</code>, su valor es <code>0</code>.</dd>
- <dt>{{domxref("HTMLVideoElement.width")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("width", "video")}}, el cual especifica la anchura del area mostrada, en pixeles CSS.</dd>
-</dl>
+- {{domxref("HTMLVideoElement.height")}}
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("height", "video")}}, el cual especifica la altura del area mostrada, en pixeles CSS.
+- {{domxref("HTMLVideoElement.poster")}}
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("poster", "video")}}, el cual especifica que imagen sera mostrada en la ausencia de data de video.
+- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
+  - : Devuelve un `unsigned long` que contiene la altura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
+- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
+  - : Devuelve un `unsigned long` que contiene la anchura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
+- {{domxref("HTMLVideoElement.width")}}
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("width", "video")}}, el cual especifica la anchura del area mostrada, en pixeles CSS.
 
-<h3 id="Propiedades_especificas_para_Gecko">Propiedades especificas para Gecko</h3>
+### Propiedades especificas para Gecko
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.mozParsedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd><code>Devuelve un unsigned long</code> con el conteo de marcos de video que han sido analizados del recurso de multimedia.</dd>
- <dt>{{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> con el conteo de marcos de video que han sido decifrados como imágines.</dd>
- <dt>{{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> con el conteo de marcos decodificados que han sido  presentados a la canalización de render para pintar.</dd>
- <dt>{{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> con el conteo de marcos presentados que han sido pintados en la pantalla.</dd>
- <dt>{{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Devuelve un <code>double</code> con el tiempo, en segundos, que el último marco de video fue pintado por retrazo.</dd>
- <dt>{{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Devuelve un {{domxref("Boolean")}} indicando si existe algún audio asociado con el video.</dd>
-</dl>
+- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : `Devuelve un unsigned long` con el conteo de marcos de video que han sido analizados del recurso de multimedia.
+- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : Devuelve un `unsigned long` con el conteo de marcos de video que han sido decifrados como imágines.
+- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : Devuelve un `unsigned long` con el conteo de marcos decodificados que han sido presentados a la canalización de render para pintar.
+- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : Devuelve un `unsigned long` con el conteo de marcos presentados que han sido pintados en la pantalla.
+- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
+  - : Devuelve un `double` con el tiempo, en segundos, que el último marco de video fue pintado por retrazo.
+- {{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}
+  - : Devuelve un {{domxref("Boolean")}} indicando si existe algún audio asociado con el video.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Hereda los métodos anteriores de </em><em>{{domxref("HTMLMediaElement")}} y </em><em>{{domxref("HTMLElement")}}.</em></p>
+_Hereda los métodos anteriores de_ _{{domxref("HTMLMediaElement")}} y_ _{{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}</dt>
- <dd>Devuelve un {{domxref("VideoPlaybackQuality")}} para objetos que contienen las medidas de reproducciones actuales.</dd>
-</dl>
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+  - : Devuelve un {{domxref("VideoPlaybackQuality")}} para objetos que contienen las medidas de reproducciones actuales.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-HTMLVideoElement', 'Extensions to HTMLVideoElement')}}</td>
-   <td>{{Spec2("Media Source Extensions")}}</td>
-   <td>Anadio el metodo <code>getVideoPlaybackQuality()</code> .</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-video-element.html#the-video-element", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambios del {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-video-element", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definicion incial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                                                                                                           | Estado                                           | Comentario                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- |
+| {{SpecName('Media Source Extensions', '#idl-def-HTMLVideoElement', 'Extensions to HTMLVideoElement')}} | {{Spec2("Media Source Extensions")}} | Anadio el metodo `getVideoPlaybackQuality()` .    |
+| {{SpecName('HTML WHATWG', "the-video-element.html#the-video-element", "HTMLAreaElement")}}                 | {{Spec2('HTML WHATWG')}}                 | Sin cambios del {{SpecName('HTML5 W3C')}}. |
+| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-video-element", "HTMLAreaElement")}}                 | {{Spec2('HTML5 W3C')}}                     | Definicion incial.                                |
 
-<h2 id="Compatibilidad_con_Navegador">Compatibilidad con Navegador</h2>
+## Compatibilidad con Navegador
 
 {{Compat("api.HTMLVideoElement")}}
 
-<h2 id="Lea_Tambien">Lea Tambien</h2>
+## Lea Tambien
 
-<ul>
- <li>Elemento HTML implementando este interfaz: {{HTMLElement("video")}}.</li>
- <li><a class="external" href="http://people.mozilla.org/~cpearce/paint-stats-demo.html">Demonstracion de estadisticas de pintura de video</a></li>
- <li><a href="/en-US/docs/HTML/Supported_media_formats">Formatos de medios compatibles </a></li>
-</ul>
+- Elemento HTML implementando este interfaz: {{HTMLElement("video")}}.
+- [Demonstracion de estadisticas de pintura de video](http://people.mozilla.org/~cpearce/paint-stats-demo.html)
+- [Formatos de medios compatibles](/es/docs/HTML/Supported_media_formats)

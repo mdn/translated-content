@@ -9,63 +9,33 @@ tags:
   - Referencia
 translation_of: Web/API/Element/id
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+La propiedad **`Element.id`** representa el identificador del elemento, reflejando el atributo global de **[id](/es/docs/Web/HTML/Global_attributes/id)**.
 
-<p>La propiedad <strong><code>Element.id</code></strong> representa el identificador del elemento, reflejando el atributo global de <strong><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></strong>.</p>
+debe ser un único documento, y con frecuencia es utilizado para recuperar el elemento usando {{domxref("document.getElementById", "getElementById")}}. Otros usos comunes de `id` incluyen la utilización de elementos [ID como un selector](/es/docs/Web/CSS/ID_selectors "Web/CSS/ID_selectors") cuando se está estilando el documento con [CSS](/es/docs/Web/CSS "CSS").
 
-<p>debe ser un único documento, y con frecuencia es utilizado para recuperar el elemento usando {{domxref("document.getElementById", "getElementById")}}. Otros usos comunes de <code>id</code> incluyen la utilización de elementos <a href="/en-US/docs/Web/CSS/ID_selectors" title="Web/CSS/ID_selectors">ID como un selector</a> cuando se está estilando el documento con <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a>.</p>
+> **Nota:** los identificadores distinguen mayúsculas y minúsculas, pero se debe evitar la creación de IDs que difieran solamente en la capitalization (ver [diferenciación de mayúsculas y minúsculas en nombres y destacados ](/es/docs/Case_Sensitivity_in_class_and_id_Names "Case_Sensitivity_in_class_and_id_Names")).
 
-<div class="note">
-<p><strong>Nota</strong>: los identificadores distinguen mayúsculas y minúsculas, pero se debe evitar la creación de IDs que difieran solamente en la capitalization (ver <a href="/en-US/docs/Case_Sensitivity_in_class_and_id_Names" title="Case_Sensitivity_in_class_and_id_Names">diferenciación de mayúsculas y minúsculas en nombres y destacados </a>).</p>
-</div>
+## Síntasix
 
-<h2 id="Syntax" name="Syntax">Síntasix</h2>
+    var idStr = elt.id; // Get the id.
+    elt.id = idStr; // Set the id
 
-<pre class="syntaxbox">var <em>idStr</em> = <em>elt</em>.id; // Get the id.
-<em>elt</em>.id = <em>idStr; // Set the id</em>
-</pre>
+- _`idStr`_ es el identificador del elemento.
 
-<ul>
- <li><em><code>idStr</code></em> es el identificador del elemento.</li>
-</ul>
+## Especificaciones
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+| Especificación                                                                   | Estado                           | Comentario                                       |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | No change from {{SpecName('DOM2 HTML')}}. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName('DOM1')}}.     |
+| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Initial definition.                              |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change from {{SpecName('DOM2 HTML')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
 {{Compat("api.Element.id")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>La <a href="/en-US/docs/Web/HTML/Global_attributes/id"><strong>id </strong></a> del atributo global DOM.</li>
-</ul>
+- La [**id** ](/es/docs/Web/HTML/Global_attributes/id)del atributo global DOM.

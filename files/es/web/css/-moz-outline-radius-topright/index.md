@@ -8,12 +8,12 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-outline-radius-topright
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad  <a href="/en-US/docs/Web/CSS">CSS </a><code>-moz-outline-radius-topright</code> establece, en aplicaciones Mozilla, el redondeado de la esquina superior derecha de un contorno.</p>
+La propiedad [CSS ](/es/docs/Web/CSS)`-moz-outline-radius-topright` establece, en aplicaciones Mozilla, el redondeado de la esquina superior derecha de un contorno.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Ver la propiedad  {{cssxref("-moz-outline-radius")}} para más información.</p>
+Ver la propiedad {{cssxref("-moz-outline-radius")}} para más información.

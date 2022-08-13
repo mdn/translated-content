@@ -4,55 +4,54 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/valueOf
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<p>El método <code><strong>valueOf()</strong></code> retorna el valor primitivo del objeto especificado.</p>
+El método **`valueOf()`** retorna el valor primitivo del objeto especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>object</var>.valueOf()</code></pre>
+    object.valueOf()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>El valor primitivo del objeto especificado.</p>
+El valor primitivo del objeto especificado.
 
-<p> </p>
+{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
 
-<p>{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}</p>
+## Descripción
 
-<p> </p>
+JavaScript utiliza el método valueOf para convertir un objeto a un valor primitivo. Raramente usted necesitará invocar el método valueOf por su cuenta; JavaScript lo realizará de forma automática cuando encuentre un objeto, donde un valor primitivo es esperado.
 
-<h2 id="Description" name="Description">Descripción</h2>
+Por defecto, el método valueOf es heredado por cada objeto descendiente de {{jsxref("Object")}}. Cada objeto incorporado en el núcleo del lenguaje sobreescribe este método para retornar un valor apropiado. Si un objeto no tiene un valor primitivo, valueOf devuelve el objeto en sí.
 
-<p>JavaScript utiliza el método <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> para convertir un objeto a un valor primitivo. Raramente usted necesitará invocar el método </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> por su cuenta; JavaScript lo realizará de forma automática cuando encuentre un objeto, donde un valor primitivo es esperado.</span></p>
+Puede utilizar valueOf dentro de su propio código para convertir un objeto incorporado en el núcleo del lenguaje en un valor primitivo. Cuando usted crea un objeto personalizado, puede sobreescribir el comportamiento de Object.prototype.valueOf() para invocar un método personalizado, en vez de utilizar el método por defecto {{jsxref("Object")}}.
 
-<p>Por defecto, el método <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> es heredado por cada objeto descendiente de </span>{{jsxref("Object")}}.<span style="line-height: 1.5;"> Cada objeto incorporado en el núcleo del lenguaje sobreescribe este método para retornar un valor apropiado. Si un objeto no tiene un valor primitivo, </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> devuelve el objeto en sí.</span></p>
+### Sobreescribiendo `valueOf` para objetos personalizados
 
-<p>Puede utilizar <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf </span><span style="line-height: 1.5;">dentro de su propio código para convertir un objeto incorporado en el núcleo del lenguaje en un valor primitivo. Cuando usted crea un objeto personalizado, puede sobreescribir el comportamiento de </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">Object.prototype.valueOf()</span><span style="line-height: 1.5;"> para invocar un método personalizado, en vez de utilizar el método por defecto </span><span style="line-height: 1.5;">{{jsxref("Object")}}.</span></p>
+Puede crear una función para ser invocada en lugar de utilizar el método valueOf por defecto. Su función no debe contener ningún parámetro.
 
-<h3 id="Sobreescribiendo_valueOf_para_objetos_personalizados">Sobreescribiendo <code>valueOf</code> para objetos personalizados</h3>
+Suponga que tiene un objeto de tipo myNumberType y usted quiere crear un método valueOf para este. El código a continuación asigna una función personalizada al método valueOf:
 
-<p>Puede crear una función para ser invocada en lugar de utilizar el método <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> por defecto. Su función no debe contener ningún parámetro.</span></p>
+```js
+myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+```
 
-<p><span style="line-height: 1.5;">Suponga que tiene un objeto de tipo </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">myNumberType</span><span style="line-height: 1.5;"> y usted quiere crear un método </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> para este. El código a continuación asigna una función personalizada al método </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;">:</span></p>
+Al tener el código anterior funcionando, cada vez que un objeto de tipo myNumberType es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.
 
-<pre class="brush: js">myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
+El método valueOf es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:
 
-<p>Al tener el código anterior funcionando, cada vez que un objeto de tipo <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">myNumberType</span><span style="line-height: 1.5;"> es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.</span></p>
+```js
+myNumber.valueOf()
+```
 
-<p><span style="line-height: 1.5;">El método </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;"> es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:</span></p>
+> **Nota:**Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método valueOf. Todos los objetos pueden ser convertidos a string, si solo "\[object _type_]". Pero muchos objetos no se pueden convertir a number, boolean o function.
 
-<pre class="brush: js">myNumber.valueOf()</pre>
+## Ejemplos
 
-<div class="note">
-<p><strong>Nota: </strong>Objetos en contextos de string realizan la conversión a string a través del método <span style="line-height: 1.5;">{{jsxref("Object.toString", "toString()")}} </span><span style="line-height: 1.5;">, el cual, es diferente de </span><span style="line-height: 1.5;">{{jsxref("String")}}</span><span style="line-height: 1.5;"> para convertir objetos a primitivos string utilizando el método </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">valueOf</span><span style="line-height: 1.5;">. Todos los objetos pueden ser convertidos a string, si solo "</span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">[object </span><em>type</em><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">]</span><span style="line-height: 1.5;">". Pero muchos objetos no se pueden convertir a number, boolean o function.</span></p>
-</div>
+### Utilizando `valueOf`
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
-
-<h3 id="Example:_Using_valueOf" name="Example:_Using_valueOf">Utilizando <code>valueOf</code></h3>
-
-<pre class="brush: js">function myNumberType(n) {
+```js
+function myNumberType(n) {
     this.number = n;
 }
 
@@ -62,49 +61,22 @@ myNumberType.prototype.valueOf = function() {
 
 myObj = new myNumberType(4);
 myObj + 3; // 7
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Commentario</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1ra Edición.</td>
-   <td>Estándar</td>
-   <td>Definición inicial. Implementado en JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>
-    <p> </p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}   </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                       | Commentario                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| ECMAScript 1ra Edición.                                                                                          | Estándar                     | Definición inicial. Implementado en JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
 {{Compat("javascript.builtins.Object.valueOf")}}
 
-<h2 id="See_also" name="See_also">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("parseInt", "parseInt()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("parseInt", "parseInt()")}}

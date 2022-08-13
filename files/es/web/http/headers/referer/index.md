@@ -7,76 +7,47 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Referer
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La cabecera de solicitud <code><strong>Referer</strong></code> (‘referente’) contiene la dirección de la página web anterior de la que provenía el enlace a la página actual que se siguió. La cabecera <code>Referer</code> permite a los servidores identificar de dónde los visitan las personas y pueden emplear estos datos para realizar análisis, registros o un almacenamiento en antememoria optimizado, por mencionar algunos ejemplos.</p>
+La cabecera de solicitud **`Referer`** (‘referente’) contiene la dirección de la página web anterior de la que provenía el enlace a la página actual que se siguió. La cabecera `Referer` permite a los servidores identificar de dónde los visitan las personas y pueden emplear estos datos para realizar análisis, registros o un almacenamiento en antememoria optimizado, por mencionar algunos ejemplos.
 
-<p>Observe que <em>referer</em> es una grafía errónea de la palabra <em>referrer</em>. Consulte {{interwiki("wikipedia", "HTTP_referer", "<em>HTTP referer</em> en Wikipedia")}} para obtener más información.</p>
+Observe que _referer_ es una grafía errónea de la palabra _referrer_. Consulte {{interwiki("wikipedia", "HTTP_referer", "<em>HTTP referer</em> en Wikipedia")}} para obtener más información.
 
-<div class="warning">
-<p>La cabecera <code>Referer</code> tiene el potencial de revelar información sobre el histórico de navegación del usuario, lo cual constituye un problema de privacidad.</p>
-</div>
+> **Advertencia:** La cabecera `Referer` tiene el potencial de revelar información sobre el histórico de navegación del usuario, lo cual constituye un problema de privacidad.
 
-<p>Los navegadores no envían ninguna cabecera <code>Referer</code> si:</p>
+Los navegadores no envían ninguna cabecera `Referer` si:
 
-<ul>
- <li>el recurso referente es un URI local «file» o «data»;</li>
- <li>
-  <p>se emplea una solicitud HTTP no segura y la página referente fue recibida a través de un protocolo seguro (HTTPS).</p>
- </li>
-</ul>
+- el recurso referente es un URI local «file» o «data»;
+- se emplea una solicitud HTTP no segura y la página referente fue recibida a través de un protocolo seguro (HTTPS).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabecera</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sí</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabecera                                 | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sí                                       |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">Referer: &lt;url&gt;
-</pre>
+    Referer: <url>
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>Una dirección absoluta o parcial de la página web anterior, la cual contenía un enlace hacia la página solicitada actual que se siguió. No se incluyen los fragmentos de URL (esto es, «#sección») ni los datos de usuario (o sea, «nombredeusuario:contraseña» en URI como «https://nombredeusuario:contraseña@ejemplo.com/equis/ye/»).</dd>
-</dl>
+- \<url>
+  - : Una dirección absoluta o parcial de la página web anterior, la cual contenía un enlace hacia la página solicitada actual que se siguió. No se incluyen los fragmentos de URL (esto es, «#sección») ni los datos de usuario (o sea, «nombredeusuario:contraseña» en URI como «https\://nombredeusuario:contraseña\@ejemplo.com/equis/ye/»).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre>Referer: https://developer.mozilla.org/es/docs/Web/JavaScript</pre>
+    Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Referer", "5.5.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                   | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<p>{{Compat("http.headers.Referer")}}</p>
+{{Compat("http.headers.Referer")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{interwiki("wikipedia", "HTTP_referer", "Referer HTTP en Wikipedia")}}</li>
- <li>{{HTTPHeader("Referrer-Policy")}}</li>
-</ul>
+- {{interwiki("wikipedia", "HTTP_referer", "Referer HTTP en Wikipedia")}}
+- {{HTTPHeader("Referrer-Policy")}}

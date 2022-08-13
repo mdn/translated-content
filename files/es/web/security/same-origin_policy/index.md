@@ -10,261 +10,143 @@ tags:
 translation_of: Web/Security/Same-origin_policy
 original_slug: Web/Security/Same-origin_politica
 ---
-<p>La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.</p>
+La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.
 
-<h2 id="Definición_de_origen">Definición de origen</h2>
+## Definición de origen
 
-<p>Dos páginas tienen el <em>mismo origen</em> si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).</p>
+Dos páginas tienen el _mismo origen_ si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).
 
-<p>La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL <code>http://store.company.com/dir/page.html</code>:</p>
+La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL `http://store.company.com/dir/page.html`:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>URL</th>
-   <th>Resultado</th>
-   <th>Razón</th>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir2/other.html</code></td>
-   <td>Mismo origen</td>
-   <td>Solo la ruta difiere</td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir/inner/another.html</code></td>
-   <td>Mismo origen</td>
-   <td>Solo la ruta difiere</td>
-  </tr>
-  <tr>
-   <td><code>https://store.company.com/secure.html</code></td>
-   <td>Fallo</td>
-   <td>Diferente protocolo</td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com:81/dir/etc.html</code></td>
-   <td>Fallo</td>
-   <td>Diferente puerto</td>
-  </tr>
-  <tr>
-   <td><code>http://news.company.com/dir/other.html</code></td>
-   <td>Fallo</td>
-   <td>Diferente host</td>
-  </tr>
- </tbody>
-</table>
+| URL                                               | Resultado    | Razón                |
+| ------------------------------------------------- | ------------ | -------------------- |
+| `http://store.company.com/dir2/other.html`        | Mismo origen | Solo la ruta difiere |
+| `http://store.company.com/dir/inner/another.html` | Mismo origen | Solo la ruta difiere |
+| `https://store.company.com/secure.html`           | Fallo        | Diferente protocolo  |
+| `http://store.company.com:81/dir/etc.html`        | Fallo        | Diferente puerto     |
+| `http://news.company.com/dir/other.html`          | Fallo        | Diferente host       |
 
-<p>Ver también <a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin_policy_for_file:_URIs">definición de origen para <code>file:</code> URLs</a>, puesto que su comparación es más complicada.</p>
+Ver también [definición de origen para `file:` URLs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin_policy_for_file:_URIs"), puesto que su comparación es más complicada.
 
-<h3 id="Orígenes_heredados">Orígenes heredados</h3>
+### Orígenes heredados
 
-<p>Los scripts ejecutados desde páginas con una URL <code>about:blank</code> o <code>javascript:</code> heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.</p>
+Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.
 
-<div class="blockIndicator note">
-<p>Por ejemplo, <code>about:blank</code> a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.</p>
-</div>
+> **Nota:** Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
 
-<div class="blockIndicator warning">
-<p><code>data:</code> URLs obtienen un nuevo, vacío, contexto de seguridad.</p>
-</div>
+> **Advertencia:** `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
 
-<h3 id="Excepciones_en_Internet_Explorer" style="line-height: 30px;">Excepciones en Internet Explorer</h3>
+### Excepciones en Internet Explorer
 
-<p>Internet Explorer tiene dos excepciones mayores en lo que se refiere a la política same-origin</p>
+Internet Explorer tiene dos excepciones mayores en lo que se refiere a la política same-origin
 
-<ul>
- <li>Zonas de Confianza: si ambos dominios pertenecen a una zona de alta confianza e.g, dominios corporativos, entonces las limitaciones del mismo origen no son aplicadas.</li>
- <li>Puerto: IE no incluye puerto en los componentes de Same Origin, por lo tanto <span style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-size: 12px; line-height: normal;">http://company.com:81/index.html <span style="background-color: #ffffff; font-family: open sans,sans-serif; line-height: 21px;">y </span></span><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-size: 12px; line-height: normal;">http://company.com/index.html </span>se consideran del mismo origen y no se aplican restricciones.</li>
-</ul>
+- Zonas de Confianza: si ambos dominios pertenecen a una zona de alta confianza e.g, dominios corporativos, entonces las limitaciones del mismo origen no son aplicadas.
+- Puerto: IE no incluye puerto en los componentes de Same Origin, por lo tanto http\://company.com:81/index.html y http\://company.com/index.html se consideran del mismo origen y no se aplican restricciones.
 
-<p>Estas excepciones no son estándar y no están soportadas en otro navegador pero son útiles cuando se desarrolla una app para Windows RT (o) basada en IE.</p>
+Estas excepciones no son estándar y no están soportadas en otro navegador pero son útiles cuando se desarrolla una app para Windows RT (o) basada en IE.
 
-<h2 id="Cambiando_el_origen">Cambiando el origen</h2>
+## Cambiando el origen
 
-<p>Una página puede cambiar su propio origen con algunas limitaciones. Un script puede asignar el valor de {{domxref("document.domain")}} al dominio actual o a un superdominio del dominio actual. Si se asigna a un superdominio del dominio actual, el dominio más corto es usado para las posteriores comprobaciones de origen. Por ejemplo, sea un script en <code>http://store.company.com/dir/other.html</code> que ejecuta lo siguiente:</p>
+Una página puede cambiar su propio origen con algunas limitaciones. Un script puede asignar el valor de {{domxref("document.domain")}} al dominio actual o a un superdominio del dominio actual. Si se asigna a un superdominio del dominio actual, el dominio más corto es usado para las posteriores comprobaciones de origen. Por ejemplo, sea un script en `http://store.company.com/dir/other.html` que ejecuta lo siguiente:
 
-<pre class="notranslate">document.domain = "company.com";
-</pre>
+    document.domain = "company.com";
 
-<p>Tras su ejecución, la página puede pasar la comprobación de origen con <code>http://company.com/dir/page.html</code> (asumiendo que <code>http://company.com/dir/page.html</code> asigna su <code>document.domain</code> a "<code>company.com</code>" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, <code>company.com</code> <strong>no</strong> podría asignar <code>document.domain</code> a <code>othercompany.com</code> ya que no es un superdominio de <code>company.com</code>.</p>
+Tras su ejecución, la página puede pasar la comprobación de origen con `http://company.com/dir/page.html` (asumiendo que `http://company.com/dir/page.html` asigna su `document.domain` a "`company.com`" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, `company.com` **no** podría asignar `document.domain` a `othercompany.com` ya que no es un superdominio de `company.com`.
 
-<p>El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo <code>document.domain = document.domain</code> causa que el número del puerto sea sobrescrito con <code>null</code>. Por lo tanto <strong>no se puede</strong> hacer que<code> company.com:8080</code> hable con  <code>company.com</code> solo asignando <code>document.domain = "company.com"</code> en el primero. Tiene que ser asignado en ambos para que los números de puerto sean <code>null</code>.</p>
+El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo `document.domain = document.domain` causa que el número del puerto sea sobrescrito con `null`. Por lo tanto **no se puede** hacer que` company.com:8080` hable con `company.com` solo asignando `document.domain = "company.com"` en el primero. Tiene que ser asignado en ambos para que los números de puerto sean `null`.
 
-<div class="note">
-<p><strong>Nota:</strong> Cuando se use <code>document.domain</code> para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar <code>document.domain</code> al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.</p>
-</div>
+> **Nota:** Cuando se use `document.domain` para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar `document.domain` al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.
 
-<h2 id="Acceso_de_red_de_origen_cruzado">Acceso de red de origen cruzado</h2>
+## Acceso de red de origen cruzado
 
-<p>La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:</p>
+La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
 
-<ul>
- <li>Las escrituras Cross-origin<em> </em>normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren <a href="/en-US/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
- <li>La integración Cross-origin (<em>embedding) </em>normalmente se permite. Los ejemplos se listan debajo.</li>
- <li>Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">disponibilidad de un recurso integrado</a>.</li>
-</ul>
+- Las escrituras Cross-origin\_ \_normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests "HTTP/Access_control_CORS#Preflighted_requests").
+- La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
+- Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
-<p>Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:</p>
+Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:
 
-<ul>
- <li>JavaScript con <code>&lt;script src="..."&gt;&lt;/script&gt;</code>. Los mensajes de error para errores de sintaxis están solo disponibles para scripts de mismo origen.</li>
- <li>CSS con <code>&lt;link rel="stylesheet" href="..."&gt;</code>. Debido a las <a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html" title="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">reglas de sintaxis relajadas</a> de CSS, un CSS de origen cruzado requiere de una cabecera <code>Content-Type</code> correcta. Las restricciones varían según el navegador: <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (bajar hasta CVE-2010-0051) y <a href="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
- <li>Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...</li>
- <li>Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.</li>
- <li>Plug-ins con <a href="/en-US/docs/HTML/Element/object" title="HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/en-US/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> y <a href="/en-US/docs/HTML/Element/applet" title="HTML/Element/applet"><code>&lt;applet&gt;</code></a>.</li>
- <li>Fuentes con <a href="/en-US/docs/CSS/@font-face" title="CSS/@font-face"><code>@font-face</code></a>. Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.</li>
- <li>Cualquiera con <a href="/en-US/docs/HTML/Element/frame" title="HTML/Element/frame"><code>&lt;frame&gt;</code></a> and <a href="/en-US/docs/HTML/Element/iframe" title="HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>. Un sitio puede usar la cabecera <code><a href="/en-US/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a></code> para prevenir este tipo de interacción de orígen cruzado.</li>
-</ul>
+- JavaScript con `<script src="..."></script>`. Los mensajes de error para errores de sintaxis están solo disponibles para scripts de mismo origen.
+- CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](http://www.opera.com/support/kb/view/943/).
+- Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
+- Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
+- Plug-ins con [`<object>`](/es/docs/HTML/Element/object "HTML/Element/object"), [`<embed>`](/es/docs/HTML/Element/embed "HTML/Element/embed") y [`<applet>`](/es/docs/HTML/Element/applet "HTML/Element/applet").
+- Fuentes con [`@font-face`](/es/docs/CSS/@font-face "CSS/@font-face"). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
+- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame "HTML/Element/frame") and [`<iframe>`](/es/docs/HTML/Element/iframe "HTML/Element/iframe"). Un sitio puede usar la cabecera [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options "HTTP/X-Frame-Options") para prevenir este tipo de interacción de orígen cruzado.
 
-<h3 id="Cómo_permitir_el_acceso_de_origen_cruzado">Cómo permitir el acceso de origen cruzado</h3>
+### Cómo permitir el acceso de origen cruzado
 
-<p>Usa <a href="/en-US/docs/HTTP/Access_control_CORS" title="HTTP/Access_control_CORS">CORS</a> para permitir el acceso de origen cruzado.</p>
+Usa [CORS](/es/docs/HTTP/Access_control_CORS "HTTP/Access_control_CORS") para permitir el acceso de origen cruzado.
 
-<h3 id="Cómo_bloquear_el_acceso_de_origen_cruzado">Cómo bloquear el acceso de origen cruzado</h3>
+### Cómo bloquear el acceso de origen cruzado
 
-<ul>
- <li>Para prevenir escrituras de orígen cruzado, comprobar un token imposible de adivinar en la petición, conocido como token <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a>. Debes prevenir lecturas de orígen cruzado de páginas que conozcan este token.</li>
- <li>Para prevenir lecturas de origen cruzado de un recurso, asegurar que no es incrustable. Frecuentemente es necesario prevenir incrustaciones debido a que al incrustar un recurso siempre se filtra alguna información sobre él.</li>
- <li>Para prevenir incrustaciones de origen cruzado, asegurar que tu recurso no puede ser interpretado como uno de los formatos incrustables de arriba. El navegador no respeta el <code>Content-Type</code> en muchos casos. Por ejemplo, si señalas una etiqueta <code>&lt;script&gt;</code> en un documento HTML, el navegador tratará de interpretar el HTML como JavaScript. Cuando tu recurso no es un punto de entrada a tu sitio, puedes usar también un token CSRF para prevenir el incrustamiento.</li>
-</ul>
+- Para prevenir escrituras de orígen cruzado, comprobar un token imposible de adivinar en la petición, conocido como token [Cross-Site Request Forgery (CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29). Debes prevenir lecturas de orígen cruzado de páginas que conozcan este token.
+- Para prevenir lecturas de origen cruzado de un recurso, asegurar que no es incrustable. Frecuentemente es necesario prevenir incrustaciones debido a que al incrustar un recurso siempre se filtra alguna información sobre él.
+- Para prevenir incrustaciones de origen cruzado, asegurar que tu recurso no puede ser interpretado como uno de los formatos incrustables de arriba. El navegador no respeta el `Content-Type` en muchos casos. Por ejemplo, si señalas una etiqueta `<script>` en un documento HTML, el navegador tratará de interpretar el HTML como JavaScript. Cuando tu recurso no es un punto de entrada a tu sitio, puedes usar también un token CSRF para prevenir el incrustamiento.
 
-<h2 id="Acceso_script_API_de_Origen_Cruzado">Acceso script API de Origen Cruzado</h2>
+## Acceso script API de Origen Cruzado
 
-<p>Las APIs de JavaScript APIs tales como <a href="/en-US/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement"><code>iframe.contentWindow</code></a>, {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos <a href="/en-US/docs/Web/API/Window"><code>Window</code></a> y <a href="/en-US/docs/Web/API/Location"><code>Location</code></a>, como se describe en las siguientes dos secciones.</p>
+Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/DOM/HTMLIFrameElement "DOM/HTMLIFrameElement"), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
 
-<p>Para una mayor comunicación entre documentos de origenes diferentes, usar {{domxref("window.postMessage")}}.</p>
+Para una mayor comunicación entre documentos de origenes diferentes, usar {{domxref("window.postMessage")}}.
 
-<h3 id="Window">Window</h3>
+### Window
 
-<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window</a>.</p>
+Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window>.
 
-<p>Los siguientes accesos de origen-cruzado a las propiedades de <code>Window</code> están permitidos:</p>
+Los siguientes accesos de origen-cruzado a las propiedades de `Window` están permitidos:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Métodos</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("window.blur")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.close")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.focus")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.postMessage")}}</td>
-  </tr>
- </tbody>
-</table>
+| Métodos                                      |
+| -------------------------------------------- |
+| {{domxref("window.blur")}}         |
+| {{domxref("window.close")}}         |
+| {{domxref("window.focus")}}         |
+| {{domxref("window.postMessage")}} |
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Atributos</th>
-   <th scope="col"></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("window.closed")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.frames")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.length")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.location")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.opener")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.parent")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.self")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.top")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.window")}}</td>
-   <td>Solo lectura.</td>
-  </tr>
- </tbody>
-</table>
+| Atributos                                |               |
+| ---------------------------------------- | ------------- |
+| {{domxref("window.closed")}}     | Solo lectura. |
+| {{domxref("window.frames")}}     | Solo lectura. |
+| {{domxref("window.length")}}     | Read only.    |
+| {{domxref("window.location")}} | Solo lectura. |
+| {{domxref("window.opener")}}     | Solo lectura. |
+| {{domxref("window.parent")}}     | Solo lectura. |
+| {{domxref("window.self")}}     | Solo lectura. |
+| {{domxref("window.top")}}         | Solo lectura. |
+| {{domxref("window.window")}}     | Solo lectura. |
 
-<p>Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.</p>
+Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
 
-<h3 id="Location">Location</h3>
+### Location
 
-<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location</a>.</p>
+Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location>.
 
-<p>Los siguientes accesos de origen cruzado a las propiedades de <code>Location</code> están permitidos:</p>
+Los siguientes accesos de origen cruzado a las propiedades de `Location` están permitidos:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Métodos</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("location.replace")}}</td>
-  </tr>
- </tbody>
-</table>
+| Métodos                                  |
+| ---------------------------------------- |
+| {{domxref("location.replace")}} |
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Atributos</th>
-   <th scope="col"></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("URLUtils.href")}}</td>
-   <td>Solo escritura.</td>
-  </tr>
- </tbody>
-</table>
+| Atributos                            |                 |
+| ------------------------------------ | --------------- |
+| {{domxref("URLUtils.href")}} | Solo escritura. |
 
-<p>Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.</p>
+Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
 
-<h2 id="Acceso_de_almacenamiento_de_datos_de_origen_cruzado">Acceso de almacenamiento de datos de origen cruzado</h2>
+## Acceso de almacenamiento de datos de origen cruzado
 
-<p>El acceso a datos almacenados en el navegador tales como <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a> y <a href="/en-US/docs/IndexedDB">IndexedDB</a> son separados por origen. Cada origen obtiene su propio almacenamiento separado, y JavaScript en un origen no puede leer desde o escribir al almacenamiento perteneciente a otro origen.</p>
+El acceso a datos almacenados en el navegador tales como [localStorage](/es/docs/Web/Guide/API/DOM/Storage) y [IndexedDB](/es/docs/IndexedDB) son separados por origen. Cada origen obtiene su propio almacenamiento separado, y JavaScript en un origen no puede leer desde o escribir al almacenamiento perteneciente a otro origen.
 
-<p>Las cookies usan una definición separada de orígenes. Una página puede asignar una cookie para su propio dominio o cualquier dominio padre, siempre que el dominio padre no sea un sufijo público. Firefox y Chrome usan la <a href="http://publicsuffix.org/">Lista de Sufijos Públicos</a> para determinar si un dominio es un sufijo público. Internet Explorer usa su propio método interno para determinar si un dominio es un sufijo públicio. El navegador hará disponible una cookie para el dominio dado incluyendo cualquier subdominio, no importa qué protocolo (HTTP/HTTPS) o puerto sea usado. Cuando asignas una cookie, puedes limitar su disponibilidad usando los flags Domain, Path, Secure y Http-Only. Cuando lees una cookie, no puedes ver desde dónde fue asignada. Incluso si sólo usas conexiones HTTPS, cualquier cookie que veas puede haber sido asignada usando una conexión insegura.</p>
+Las cookies usan una definición separada de orígenes. Una página puede asignar una cookie para su propio dominio o cualquier dominio padre, siempre que el dominio padre no sea un sufijo público. Firefox y Chrome usan la [Lista de Sufijos Públicos](http://publicsuffix.org/) para determinar si un dominio es un sufijo público. Internet Explorer usa su propio método interno para determinar si un dominio es un sufijo públicio. El navegador hará disponible una cookie para el dominio dado incluyendo cualquier subdominio, no importa qué protocolo (HTTP/HTTPS) o puerto sea usado. Cuando asignas una cookie, puedes limitar su disponibilidad usando los flags Domain, Path, Secure y Http-Only. Cuando lees una cookie, no puedes ver desde dónde fue asignada. Incluso si sólo usas conexiones HTTPS, cualquier cookie que veas puede haber sido asignada usando una conexión insegura.
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política </a><a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin policy for file: URIs">Same-Origin para file: URIs</a></li>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política Same-Origin en W3C</a></li>
-</ul>
+- [Política ](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")
+- [Política Same-Origin en W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 
-<div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Información de Documento Original</h2>
+## Información de Documento Original
 
-<ul>
- <li>Autor(es): Jesse Ruderman</li>
-</ul>
-</div>
+- Autor(es): Jesse Ruderman
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

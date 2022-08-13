@@ -3,126 +3,103 @@ title: Element.querySelector()
 slug: Web/API/Element/querySelector
 translation_of: Web/API/Element/querySelector
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>El método <code><strong>querySelector() </strong></code>de la intrefaz <strong> </strong>{{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.</p>
+El método **`querySelector() `**de la intrefaz \*\*\*\*{{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
 
-<h2 id="Syntax" name="Syntax">Sintáxis</h2>
+## Sintáxis
 
-<pre class="syntaxbox notranslate"><var>elemento</var> = elementoBase.querySelector(<em>selectore</em>s);
-</pre>
+    elemento = elementoBase.querySelector(selectores);
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>selectores</code></dt>
- <dd>Es el grupo de <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectores</a> que servirán para filtrar los elementos descendientes del  {{domxref("Element")}} <code>elementoBase</code>; debe tener una sintáxis CSS válida o se producirá una excepción <code>SyntaxError</code>. Devuelve el primer elemento que encuentre que coincida con el grupo de selectores.</dd>
-</dl>
+- `selectores`
+  - : Es el grupo de [selectores](/es/docs/Web/Guide/CSS/Getting_Started/Selectors) que servirán para filtrar los elementos descendientes del {{domxref("Element")}} `elementoBase`; debe tener una sintáxis CSS válida o se producirá una excepción `SyntaxError`. Devuelve el primer elemento que encuentre que coincida con el grupo de selectores.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Devolverá el primer descendiente del elemento <code>elementoBase</code> que coincida con el grupo de <code>selectores</code> especificado. Para la comparación se recorrerá la jerarquía completa de elementos, incluyendo a aquellos que no son descendientes del <code>elementoBase</code>; en otras palabras, los <code>selectores</code> se aplican primero al documento completo, no sólo al <code>elementoBase</code>, creando una lista inicial de elementos potencialmente seleccionables. Después se examina dicha lista para comprobar qué elementos son descendientes del <code>elementoBase</code>. El método <code>querySelector()</code> devolverá el primero de dichos elementos descendientes.</p>
+Devolverá el primer descendiente del elemento `elementoBase` que coincida con el grupo de `selectores` especificado. Para la comparación se recorrerá la jerarquía completa de elementos, incluyendo a aquellos que no son descendientes del `elementoBase`; en otras palabras, los `selectores` se aplican primero al documento completo, no sólo al `elementoBase`, creando una lista inicial de elementos potencialmente seleccionables. Después se examina dicha lista para comprobar qué elementos son descendientes del `elementoBase`. El método `querySelector()` devolverá el primero de dichos elementos descendientes.
 
-<p>Si no hubiera coincidencias, devolverá el valor <code>null</code>.</p>
+Si no hubiera coincidencias, devolverá el valor `null`.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>Los <code>selectores</code> especificados no son válidos.</dd>
-</dl>
+- `SyntaxError`
+  - : Los `selectores` especificados no son válidos.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Vamos a ver unos cuantos ejemplos.</p>
+Vamos a ver unos cuantos ejemplos.
 
-<h3 id="Encontrar_un_elemento_a_traves_del_valor_de_sus_atributos">Encontrar un elemento a traves del valor de sus atributos</h3>
+### Encontrar un elemento a traves del valor de sus atributos
 
-<p>En este primer ejemplo, obtendremos el primer elemento {{HTMLElement("style")}} del body del documento HTML que no tenga atributo "type" o cuyo atributo "type" sea igual a "text/css":</p>
+En este primer ejemplo, obtendremos el primer elemento {{HTMLElement("style")}} del body del documento HTML que no tenga atributo "type" o cuyo atributo "type" sea igual a "text/css":
 
-<pre class="brush:js notranslate">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+```js
+var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+```
 
-<h3 id="Toda_la_jerarquía_cuenta">Toda la jerarquía cuenta</h3>
+### Toda la jerarquía cuenta
 
-<p>El ejemplo que mostramos a continuación, demuestra que la jerarquía de todo el documento se tiene en cuenta cuando se aplican los <code>selectores</code>, de modo que se tienen en cuenta todos los niveles que se encuentran fuera de la jerarquía del <code>elementoBase</code> para localizar coincidencias.</p>
+El ejemplo que mostramos a continuación, demuestra que la jerarquía de todo el documento se tiene en cuenta cuando se aplican los `selectores`, de modo que se tienen en cuenta todos los niveles que se encuentran fuera de la jerarquía del `elementoBase` para localizar coincidencias.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;h5&gt;Original content&lt;/h5&gt;
-  &lt;p&gt;
+```html
+<div>
+  <h5>Original content</h5>
+  <p>
     inside paragraph
-    &lt;span&gt;inside span&lt;/span&gt;
+    <span>inside span</span>
     inside paragraph
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;h5&gt;Output&lt;/h5&gt;
-  &lt;div id="output"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+<div>
+  <h5>Output</h5>
+  <div id="output"></div>
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">var baseElement = document.querySelector("p");
+```js
+var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-         (baseElement.querySelector("div span").innerHTML);</pre>
+         (baseElement.querySelector("div span").innerHTML);
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>El resultado es el siguiente:</p>
+El resultado es el siguiente:
 
-<p>{{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}</p>
+{{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}
 
-<p>Podemos ver que el selector <code>"div span"</code> coincide con el elemento {{HTMLElement("span")}}, aunque <code>baseElement</code> excluye el elemento {{domxref("div")}} al no ser parte de su selector.</p>
+Podemos ver que el selector `"div span"` coincide con el elemento {{HTMLElement("span")}}, aunque `baseElement` excluye el elemento {{domxref("div")}} al no ser parte de su selector.
 
-<h3 id="Más_ejemplos">Más ejemplos</h3>
+### Más ejemplos
 
-<p>Puedes ver más ejemplos sobre el formato apropiado para los <code>selectores</code> aquí {{domxref("Document.querySelector()")}}.</p>
+Puedes ver más ejemplos sobre el formato apropiado para los `selectores` aquí {{domxref("Document.querySelector()")}}.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-parentnode-queryselectorallselectors','querySelectorAll()')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                                       | Comentarios |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------- |
+| {{SpecName('DOM4','#dom-parentnode-queryselectorallselectors','querySelectorAll()')}} | {{Spec2('DOM4')}}                     |             |
+| {{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}         | {{Spec2('Selectors API Level 2')}} |             |
+| {{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}         | {{Spec2('Selectors API Level 1')}} |             |
 
-<h2 id="Compatibilidad_en_los_Navegadores">Compatibilidad en los Navegadores</h2>
+## Compatibilidad en los Navegadores
 
 {{Compat("api.Element.querySelector")}}
 
-<h2 id="También_puedes_consultar">También puedes consultar:</h2>
+## También puedes consultar:
 
-<ul>
- <li><a href="/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores">Localizando elementos DOM usando selectores</a></li>
- <li><a href="/es/docs/Web/CSS/Selectores_atributo">Selectores de atributo</a> en la guia de CSS</li>
- <li><a href="/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos">Selectores de atributo</a> en MDN Learning</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}} y {{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
- <li>Otros métodos que toman selectores: {{domxref("element.closest()")}} y {{domxref("element.matches()")}}.</li>
-</ul>
+- [Localizando elementos DOM usando selectores](/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores)
+- [Selectores de atributo](/es/docs/Web/CSS/Selectores_atributo) en la guia de CSS
+- [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos) en MDN Learning
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}} y {{domxref("Document.querySelectorAll()")}}
+- {{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}
+- {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}
+- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector)
+- Otros métodos que toman selectores: {{domxref("element.closest()")}} y {{domxref("element.matches()")}}.

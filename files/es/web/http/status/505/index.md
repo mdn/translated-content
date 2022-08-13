@@ -3,31 +3,20 @@ title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
 translation_of: Web/HTTP/Status/505
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>505 HTTP Version Not Supported</strong></code> response status code indicates that the HTTP version used in the request is not supported by the server.</p>
+The HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** response status code indicates that the HTTP version used in the request is not supported by the server.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">505 HTTP Version Not Supported</pre>
+    505 HTTP Version Not Supported
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Title                                                         |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Upgrade")}}</li>
-</ul>
+- {{HTTPHeader("Upgrade")}}

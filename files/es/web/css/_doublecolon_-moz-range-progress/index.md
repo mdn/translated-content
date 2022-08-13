@@ -1,69 +1,66 @@
 ---
 title: '::-moz-range-progress'
-slug: 'Web/CSS/::-moz-range-progress'
+slug: Web/CSS/::-moz-range-progress
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Pseudo-elemento CSS
   - Referencia
-translation_of: 'Web/CSS/::-moz-range-progress'
+translation_of: Web/CSS/::-moz-range-progress
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El  <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a><a href="/es/docs/Web/CSS">CSS </a><strong><code>::-moz-range-progress</code></strong> representa la parte del "camino" (la ranura sobre la que desliza) de un elemento  {{HTMLElement("input")}} con <code>type="range"</code>, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".</p>
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)[CSS ](/es/docs/Web/CSS)**`::-moz-range-progress`** representa la parte del "camino" (la ranura sobre la que desliza) de un elemento {{HTMLElement("input")}} con `type="range"`, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".
 
-<div class="note">
-<p>Si usamos  <code>::-moz-range-progress</code> con cualquier otra cosa que no sea  <code>&lt;input type="range"&gt;</code> ni seleccionaremos nada ni conseguiremos ningún efecto.</p>
-</div>
+> **Nota:** Si usamos `::-moz-range-progress` con cualquier otra cosa que no sea `<input type="range">` ni seleccionaremos nada ni conseguiremos ningún efecto.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">input[type=range]::-moz-range-progress {
+```css
+input[type=range]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }
-</pre>
+```
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="Salida">Salida</h3>
+### Salida
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Example", 300, 50)}}
 
-<p>Una barra de progreso que utilice este estilo se vería de la siguiente manera:</p>
+Una barra de progreso que utilice este estilo se vería de la siguiente manera:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12041/Screen%20Shot%202015-12-04%20at%2020.14.48.png"></p>
+![](https://mdn.mozillademos.org/files/12041/Screen%20Shot%202015-12-04%20at%2020.14.48.png)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gecko.</p>
+No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gecko.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-moz-range-progress")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>El pseudo-elements que usa Gecko para dar estilo a otras parte de un input con type="range":
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}}</li>
-   <li>{{cssxref("::-moz-range-track")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("::-ms-fill-upper")}}</li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Dando estilo con CSS a input con type="range" en todos los navegadores.</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Dando estilo y usando scripts para elementos deslizantes.</a></li>
-</ul>
+- El pseudo-elements que usa Gecko para dar estilo a otras parte de un input con type="range":
+
+  - {{cssxref("::-moz-range-thumb")}}
+  - {{cssxref("::-moz-range-track")}}
+
+- {{cssxref("::-ms-fill-upper")}}
+- [CSS-Tricks: Dando estilo con CSS a input con type="range" en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Dando estilo y usando scripts para elementos deslizantes.](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

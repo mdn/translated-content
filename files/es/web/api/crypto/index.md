@@ -8,59 +8,36 @@ tags:
   - Web Crypto API
 translation_of: Web/API/Crypto
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>La interfaz <code><strong>Crypto</strong></code> representa las características básicas de criptografía disponibles en el contexto actual. Permite acceder a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos.</p>
+La interfaz **`Crypto`** representa las características básicas de criptografía disponibles en el contexto actual. Permite acceder a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos.
 
-<p>Un objeto con esta interfaz está disponible en el contexto de la Web a través de la propiedad {{domxref("Window.crypto")}}.</p>
+Un objeto con esta interfaz está disponible en el contexto de la Web a través de la propiedad {{domxref("Window.crypto")}}.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><em>Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}.</em></p>
+_Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}._
 
-<dl>
- <dt>{{domxref("Crypto.subtle")}} {{readOnlyInline}}</dt>
- <dd>Retorna un {{domxref("SubtleCrypto")}} objeto proporcionando acceso a primitivos criptográficos comunes, como el hashing, el firmado, cifrado o descifrado.</dd>
-</dl>
+- {{domxref("Crypto.subtle")}} {{readOnlyInline}}
+  - : Retorna un {{domxref("SubtleCrypto")}} objeto proporcionando acceso a primitivos criptográficos comunes, como el hashing, el firmado, cifrado o descifrado.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}.</em></p>
+_Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}._
 
-<dl>
- <dt>{{domxref("Crypto.getRandomValues()")}}</dt>
- <dd>Llena el pasado {{ jsxref("TypedArray") }} valores aleatorio sólidos criptográficamente.</dd>
-</dl>
+- {{domxref("Crypto.getRandomValues()")}}
+  - : Llena el pasado {{ jsxref("TypedArray") }} valores aleatorio sólidos criptográficamente.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}}</td>
-   <td>{{Spec2("Web Crypto API")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                               | Comentario         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
+{{Compat("api.Crypto")}}
 
+## Ver también
 
-<p>{{Compat("api.Crypto")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)

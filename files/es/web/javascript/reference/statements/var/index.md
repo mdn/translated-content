@@ -7,158 +7,176 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/var
 original_slug: Web/JavaScript/Referencia/Sentencias/var
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>La sentencia <strong><code>var</code></strong> declara una variable, opcionalmente inicializándola con un valor.</p>
+La sentencia **`var`** declara una variable, opcionalmente inicializándola con un valor.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><strong>var</strong> <em>nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDeVariableN [=valorN]]]; </em></code></pre>
+    var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDeVariableN [=valorN]]];
 
-<dl>
- <dt><code>nombreDeVariableN</code></dt>
- <dd>Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.</dd>
-</dl>
+- `nombreDeVariableN`
+  - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
 
-<dl>
- <dt><code>valorN</code></dt>
- <dd>Valor inicial de la variable. Puede ser cualquier expresión legal. El valor predeterminado es <em>undefined</em> (en español, <em>indefinida</em>).</dd>
-</dl>
+<!---->
 
-<h2 id="Description" name="Description">Descripción</h2>
+- `valorN`
+  - : Valor inicial de la variable. Puede ser cualquier expresión legal. El valor predeterminado es _undefined_ (en español, _indefinida_).
 
-<p>Las  declaraciones de variables, donde sea que ocurran, son procesadas antes de que cualquier otro código sea ejecutado. El ámbito de una variable declarada con la palabra reservada <strong><code>var</code></strong> es su <em>contexto de ejecución</em> en curso<em>,</em> que puede ser la función que la contiene o, para las variables declaradas afuera de cualquier función, un ámbito global. Si re-declaras una variable Javascript, esta no perderá su valor.</p>
+## Descripción
 
-<p>Asignar un valor a una variable no declarada implica crearla como variable global (se convierte en una propiedad del objeto global) cuando la asignación es ejecutada. Las diferencias entre una variable declarada y otra sin declarar son:</p>
+Las declaraciones de variables, donde sea que ocurran, son procesadas antes de que cualquier otro código sea ejecutado. El ámbito de una variable declarada con la palabra reservada **`var`** es su _contexto de ejecución_ en curso*,* que puede ser la función que la contiene o, para las variables declaradas afuera de cualquier función, un ámbito global. Si re-declaras una variable Javascript, esta no perderá su valor.
 
-<p>1. Las variables declaradas se limitan al contexto de ejecución en el cual son declaradas. Las variables no declaradas siempre son globales.</p>
+Asignar un valor a una variable no declarada implica crearla como variable global (se convierte en una propiedad del objeto global) cuando la asignación es ejecutada. Las diferencias entre una variable declarada y otra sin declarar son:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">x</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  y <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>   <span class="comment token">// Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')</span>
-  <span class="keyword token">var</span> z <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+1\. Las variables declaradas se limitan al contexto de ejecución en el cual son declaradas. Las variables no declaradas siempre son globales.
 
-<span class="function token">x</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+function x() {
+  y = 1;   // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')
+  var z = 2;
+}
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>y<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Imprime "1" </span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>z<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Lanza un error de tipo "ReferenceError": z no está definida afuera de x</span></code></pre>
+x();
 
-<p>2. Las variables declaradas son creadas antes de ejecutar cualquier otro código. Las variables sin declarar no existen hasta que el código que las asigna es ejecutado.</p>
+console.log(y); // Imprime "1"
+console.log(z); // Lanza un error de tipo "ReferenceError": z no está definida afuera de x
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>a<span class="punctuation token">)</span><span class="punctuation token">;</span>                <span class="comment token">// Lanza un error de tipo "ReferenceError".</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'trabajando...'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Nunca se ejecuta.</span></code></pre>
+2\. Las variables declaradas son creadas antes de ejecutar cualquier otro código. Las variables sin declarar no existen hasta que el código que las asigna es ejecutado.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> a<span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>a<span class="punctuation token">)</span><span class="punctuation token">;</span>                <span class="comment token">// Imprime "undefined" o "" dependiendo del navegador.</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'trabajando...'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Imprime "</span><span class="string token">trabajando</span><span class="comment token">...".</span></code></pre>
+```js
+console.log(a);                // Lanza un error de tipo "ReferenceError".
+console.log('trabajando...'); // Nunca se ejecuta.
+```
 
-<p>3. Las variables declaradas son una propiedad no-configurable de su contexto de ejecución (de función o global). Las variables sin declarar son configurables (p. ej. pueden borrarse).</p>
+```js
+var a;
+console.log(a);                // Imprime "undefined" o "" dependiendo del navegador.
+console.log('trabajando...'); // Imprime "trabajando...".
+```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-b <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
+3\. Las variables declaradas son una propiedad no-configurable de su contexto de ejecución (de función o global). Las variables sin declarar son configurables (p. ej. pueden borrarse).
 
-<span class="keyword token">delete</span> <span class="keyword token">this</span><span class="punctuation token">.</span>a<span class="punctuation token">;</span> <span class="comment token">// Lanza un error de tipo "ReferenceError" en modo estricto ('use strict'), de lo contrario falla silenciosamente.</span>
-<span class="keyword token">delete</span> <span class="keyword token">this</span><span class="punctuation token">.</span>b<span class="punctuation token">;</span>
+```js
+var a = 1;
+b = 2;
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span> b<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Lanza un error de tipo "ReferenceError". </span>
-<span class="comment token">// La propiedad 'b' se eliminó y ya no existe.</span></code></pre>
+delete this.a; // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict'), de lo contrario falla silenciosamente.
+delete this.b;
 
-<p>Debido a esas tres diferencias, fallar al declarar variables muy probablemente llevará a resultados inesperados. Por tanto <strong>se recomienda siempre declarar las variables, sin importar si están en una función o un ámbito global</strong>. Y en el modo estricto (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>) de ECMAScript 5, asignar valor a una variable sin declarar lanzará un error.</p>
+console.log(a, b); // Lanza un error de tipo "ReferenceError".
+// La propiedad 'b' se eliminó y ya no existe.
+```
 
-<h3 id="Elevación_de_variables">Elevación de variables</h3>
+Debido a esas tres diferencias, fallar al declarar variables muy probablemente llevará a resultados inesperados. Por tanto **se recomienda siempre declarar las variables, sin importar si están en una función o un ámbito global**. Y en el modo estricto ([strict mode](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) de ECMAScript 5, asignar valor a una variable sin declarar lanzará un error.
 
-<p>Como la declaración de variables (y todas las declaraciones en general) se procesa antes de ejecutar cualquier código, declarar una variable en cualquier parte del código es equivalente a declararla al inicio del mismo. Esto también significa que una variable puede parecer usarse antes de ser declarada. Este comportamiento es llamado <em>hoisting </em>(del inglés "elevación"), ya que la declaración de una variable parecer haber sido movida a la cima de la función o código global.</p>
+### Elevación de variables
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">bla <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> bla<span class="punctuation token">;</span>
-<span class="comment token">// ...</span>
+Como la declaración de variables (y todas las declaraciones en general) se procesa antes de ejecutar cualquier código, declarar una variable en cualquier parte del código es equivalente a declararla al inicio del mismo. Esto también significa que una variable puede parecer usarse antes de ser declarada. Este comportamiento es llamado _hoisting_ (del inglés "elevación"), ya que la declaración de una variable parecer haber sido movida a la cima de la función o código global.
 
-<span class="comment token">// Es entendido implicitamente como:</span>
+```js
+bla = 2;
+var bla;
+// ...
 
-<span class="keyword token">var</span> bla<span class="punctuation token">;</span>
-bla <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span></code></pre>
+// Es entendido implicitamente como:
 
-<p>Por esa razón, se recomienda siempre declarar variables al inicio de su ámbito (la cima del código global y la cima del código de función) para que sea claro cuáles variables pertenecen al ámbito de función (local) y cuáles son resueltas en la cadena de ámbito.</p>
+var bla;
+bla = 2;
+```
 
-<p>Es importante señalar que <strong>la elevación afectará la declaración</strong> de variables, pero <strong>no su inicialización</strong>. El valor será asignado precisamente cuando la sentencia de asignación sea alcanzada:</p>
+Por esa razón, se recomienda siempre declarar variables al inicio de su ámbito (la cima del código global y la cima del código de función) para que sea claro cuáles variables pertenecen al ámbito de función (local) y cuáles son resueltas en la cadena de ámbito.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">haz_algo</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>bar<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// undefined (valor indefinido)</span>
-  <span class="keyword token">var</span> bar <span class="operator token">=</span> <span class="number token">111</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>bar<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 111</span>
-<span class="punctuation token">}</span>
+Es importante señalar que **la elevación afectará la declaración** de variables, pero **no su inicialización**. El valor será asignado precisamente cuando la sentencia de asignación sea alcanzada:
 
-<span class="comment token">// Se entiende implícitamente como: </span>
-<span class="keyword token">function</span> <span class="function token">haz_algo</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> bar<span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>bar<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// undefined (valor indefinido)</span>
-  bar <span class="operator token">=</span> <span class="number token">111</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>bar<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 111</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+function haz_algo() {
+  console.log(bar); // undefined (valor indefinido)
+  var bar = 111;
+  console.log(bar); // 111
+}
 
-<p> </p>
+// Se entiende implícitamente como:
+function haz_algo() {
+  var bar;
+  console.log(bar); // undefined (valor indefinido)
+  bar = 111;
+  console.log(bar); // 111
+}
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Declarando_e_inicializando_dos_variables">Declarando e inicializando dos variables</h3>
+### Declarando e inicializando dos variables
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">,</span> b <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span></code></pre>
+```js
+var a = 0, b = 0;
+```
 
-<h3 id="Asignando_dos_variables_con_un_solo_valor_de_cadena">Asignando dos variables con un solo valor de cadena</h3>
+### Asignando dos variables con un solo valor de cadena
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="string token">'A'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> b <span class="operator token">=</span> a<span class="punctuation token">;</span>
+```js
+var a = 'A';
+var b = a;
 
-<span class="comment token">// Equivalente a:</span>
+// Equivalente a:
 
-<span class="keyword token">var</span> a<span class="punctuation token">,</span> b <span class="operator token">=</span> a <span class="operator token">=</span> <span class="string token">'A'</span><span class="punctuation token">;</span></code></pre>
+var a, b = a = 'A';
+```
 
-<p>Sé consciente del orden:</p>
+Sé consciente del orden:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> x <span class="operator token">=</span> y<span class="punctuation token">,</span> y <span class="operator token">=</span> <span class="string token">'A'</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x <span class="operator token">+</span> y<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Imprimirá "undefinedA"</span></code></pre>
+```js
+var x = y, y = 'A';
+console.log(x + y); // Imprimirá "undefinedA"
+```
 
-<p>Aquí, '<code>x</code>' &amp; '<code>y</code>' son declaradas antes de ejecutarse cualquier código, y la asignación ocurre después. Al momento de evaluar "<code>x = y</code>", '<code>y</code>' existe así que ningún error "<code>ReferenceError</code>" es lanzado y su valor es '<code>undefined</code>', de modo que '<code>x</code>' también tiene asignada el valor '<code>undefined</code>'. Después, a 'y' se le asigna el valor 'A'. Consecuentemente, luego de la primera línea, '<code>x</code>' es exactamente igual a <code>'undefined</code>' &amp; '<code>y</code>' es igual a <code>'A'</code>, de ahí el resultado.</p>
+Aquí, '`x`' & '`y`' son declaradas antes de ejecutarse cualquier código, y la asignación ocurre después. Al momento de evaluar "`x = y`", '`y`' existe así que ningún error "`ReferenceError`" es lanzado y su valor es '`undefined`', de modo que '`x`' también tiene asignada el valor '`undefined`'. Después, a 'y' se le asigna el valor 'A'. Consecuentemente, luego de la primera línea, '`x`' es exactamente igual a `'undefined`' & '`y`' es igual a `'A'`, de ahí el resultado.
 
-<h3 id="Initialización_de_muchas_variables">Initialización de muchas variables</h3>
+### Initialización de muchas variables
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> x <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
+```js
+var x = 0;
 
-<span class="keyword token">function</span> <span class="function token">f</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> x <span class="operator token">=</span> y <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span> <span class="comment token">// 'x' es declarada localmente, ¡'y' no lo es!</span>
-<span class="punctuation token">}</span>
-<span class="function token">f</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+function f() {
+  var x = y = 1; // 'x' es declarada localmente, ¡'y' no lo es!
+}
+f();
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x<span class="punctuation token">,</span> y<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Lanza un error de tipo "ReferenceError" en modo estricto ('y' no está definida). De lo contrario se imprimiría "0, 1".</span>
-<span class="comment token">// En modo no-estricto:</span>
-<span class="comment token">// 'x' es la variable global como se esperaría</span>
-<span class="comment token">// 'y' sin embargo, se sale de la función</span></code></pre>
+console.log(x, y); // Lanza un error de tipo "ReferenceError" en modo estricto ('y' no está definida). De lo contrario se imprimiría "0, 1".
+// En modo no-estricto:
+// 'x' es la variable global como se esperaría
+// 'y' sin embargo, se sale de la función
+```
 
-<h3 id="Globales_implícitas_y_ámbito_externo_a_una_función">Globales implícitas y ámbito externo a una función</h3>
+### Globales implícitas y ámbito externo a una función
 
-<p>Las variables que parecen ser globales implícitas pueden ser referencias a variables en un ámbito externo a  la función:</p>
+Las variables que parecen ser globales implícitas pueden ser referencias a variables en un ámbito externo a la función:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> x <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>  <span class="comment token">// 'x' es declarada globalmente, luego se le asigna el valor 0</span>.
+```js
+var x = 0;  // 'x' es declarada globalmente, luego se le asigna el valor 0.
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">typeof</span> z<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Imprime "undefined", pues 'z' aún no existe</span>.
+console.log(typeof z); // Imprime "undefined", pues 'z' aún no existe.
 
-<span class="keyword token">function</span> <span class="function token">a</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// Cuando 'a()' es invocada,</span>
-  <span class="keyword token">var</span> y <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>   <span class="comment token">// 'y' es declarada localmente en la function 'a()', después se le asigna el valor 2</span>.
+function a() { // Cuando 'a()' es invocada,
+  var y = 2;   // 'y' es declarada localmente en la function 'a()', después se le asigna el valor 2.
 
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x<span class="punctuation token">,</span> y<span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// Imprime "0, 2</span>".
+  console.log(x, y);   // Imprime "0, 2".
 
-  <span class="keyword token">function</span> <span class="function token">b</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>       <span class="comment token">// Cuando 'b()' es invocada,</span>
-    x <span class="operator token">=</span> <span class="number token">3</span><span class="punctuation token">;</span>  <span class="comment token">// Asigna el valor 3 a la global 'x' ya existente, no crea una nueva variable global.</span>
-    y <span class="operator token">=</span> <span class="number token">4</span><span class="punctuation token">;</span>  <span class="comment token">// Asigna 4 a la externa existente 'y', no crea una nueva variable global.</span>
-    z <span class="operator token">=</span> <span class="number token">5</span><span class="punctuation token">;</span>  <span class="comment token">// Crea una nueva variable global 'z' y le asigna un valor de 5. </span>
-  <span class="punctuation token">}</span>         <span class="comment token">// (Lanza un error de tipo "ReferenceError" en modo estricto.)</span>
+  function b() {       // Cuando 'b()' es invocada,
+    x = 3;  // Asigna el valor 3 a la global 'x' ya existente, no crea una nueva variable global.
+    y = 4;  // Asigna 4 a la externa existente 'y', no crea una nueva variable global.
+    z = 5;  // Crea una nueva variable global 'z' y le asigna un valor de 5.
+  }         // (Lanza un error de tipo "ReferenceError" en modo estricto.)
 
-  <span class="function token">b</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Invocar 'b()' crea 'z' como variable global.</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x<span class="punctuation token">,</span> y<span class="punctuation token">,</span> z<span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// Imprime "3, 4, 5</span>".
-<span class="punctuation token">}</span>
+  b();     // Invocar 'b()' crea 'z' como variable global.
+  console.log(x, y, z);  // Imprime "3, 4, 5".
+}
 
-<span class="function token">a</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>                   <span class="comment token">// Invocar 'a()' también llama a 'b</span>()'.
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x<span class="punctuation token">,</span> z<span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Imprime "3, 5</span>", porque 'z' ya es una global.
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">typeof</span> y<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Imprime 'undefined' porque 'y' es local en la función 'a()'</span></code></pre>
+a();                   // Invocar 'a()' también llama a 'b()'.
+console.log(x, z);     // Imprime "3, 5", porque 'z' ya es una global.
+console.log(typeof y); // Imprime 'undefined' porque 'y' es local en la función 'a()'
+```

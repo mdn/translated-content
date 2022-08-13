@@ -3,43 +3,46 @@ title: DOMParser
 slug: Web/API/DOMParser
 translation_of: Web/API/DOMParser
 ---
-<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><code>DOMParser</code> puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un <a href="/es/docs/Web/API/Document">Documento</a> DOM. <code>DOMParser</code> está especificado en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</p>
+`DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-<p>Tener en cuenta que <a href="/en-US/docs/DOM/XMLHttpRequest" title="DOM/XMLHttpRequest">XMLHttpRequest</a> soporta parsear XML y HTML desde recursos direccionables por URL.</p>
+Tener en cuenta que [XMLHttpRequest](/es/docs/DOM/XMLHttpRequest "DOM/XMLHttpRequest") soporta parsear XML y HTML desde recursos direccionables por URL.
 
-<h2 id="Creando_un_DOMParser">Creando un DOMParser</h2>
+## Creando un DOMParser
 
-<p>Para crear un objeto <code>DOMParser </code>simplemente usar <code>new DOMParser()</code>.</p>
+Para crear un objeto `DOMParser `simplemente usar `new DOMParser()`.
 
-<p>Para más información sobre crear un objeto <code>DOMParser</code> en extensiones Firefox, por favor vea la documentación de <a href="/en-US/docs/nsIDOMParser" title="nsIDOMParser"><code>nsIDOMParser</code></a>.</p>
+Para más información sobre crear un objeto `DOMParser` en extensiones Firefox, por favor vea la documentación de [`nsIDOMParser`](/es/docs/nsIDOMParser "nsIDOMParser").
 
-<h2 id="Parseando_XML">Parseando XML</h2>
+## Parseando XML
 
-<p>Una vez creado el objeto parseador, puedes parsear XML desde una cadena de texto usando el método <code>parseFromString:</code></p>
+Una vez creado el objeto parseador, puedes parsear XML desde una cadena de texto usando el método `parseFromString:`
 
-<pre class="brush: js">var parser = new DOMParser();
+```js
+var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-</pre>
+```
 
-<h3 id="Error_handling" name="Error_handling">Manejo de errores</h3>
+### Manejo de errores
 
-<p><code><font face="Open Sans, Arial, sans-serif">Es importante tener en cuenta que si el proceso de parseado falla, actualmente </font>DOMParser</code> no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):</p>
+`Es importante tener en cuenta que si el proceso de parseado falla, actualmente DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):
 
-<pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
+```xml
+<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
 (error description)
-&lt;sourcetext&gt;(a snippet of the source XML)&lt;/sourcetext&gt;
-&lt;/parsererror&gt;
-</pre>
+<sourcetext>(a snippet of the source XML)</sourcetext>
+</parsererror>
+```
 
-<p>Los errores de parseo son reportados también a la <a href="/en-US/docs/Consola_de_errores">Consola de errores</a>, con el URI del documento (ver debajo) como el origen del error.</p>
+Los errores de parseo son reportados también a la [Consola de errores](/es/docs/Consola_de_errores), con el URI del documento (ver debajo) como el origen del error.
 
-<h2 id="Parseando_un_documento_SVG_o_HTML">Parseando un documento SVG o HTML</h2>
+## Parseando un documento SVG o HTML
 
-<p>El <code>DOMParser</code> puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es <code>text/xml</code>, el objeto resultante será un <code>XMLDocument</code>, si el tipo MIME es <code>image/svg+xml</code> será un <code>SVGDocument,</code> y si el tipo MIME es <code>text/html</code> será un <code>HTMLDocument</code>.</p>
+El `DOMParser` puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
 
-<pre class="brush: js">var parser = new DOMParser();
+```js
+var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 // returns a Document, but not a SVGDocument nor a HTMLDocument
 
@@ -50,11 +53,12 @@ doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
 parser = new DOMParser();
 doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 // returns a HTMLDocument, which also is a Document.
-</pre>
+```
 
-<h3 id="Extensión_HTML_DOMParser_para_otros_navegadores">Extensión HTML DOMParser para otros navegadores</h3>
+### Extensión HTML DOMParser para otros navegadores
 
-<pre class="brush: js">/*
+```js
+/*
  * DOMParser HTML extension
  * 2012-09-04
  *
@@ -71,7 +75,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 	var
 	  proto = DOMParser.prototype
-	, nativeParse = <span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString</span>
+	, nativeParse = proto.parseFromString
 	;
 
 	// Firefox/Opera/IE throw errors on unsupported types
@@ -83,12 +87,12 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 		}
 	} catch (ex) {}
 
-	<span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString = function(markup, type) {</span>
+	proto.parseFromString = function(markup, type) {
 		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
 			var
 			  doc = document.implementation.createHTMLDocument("")
 			;
-	      		if (markup.toLowerCase().indexOf('&lt;!doctype') &gt; -1) {
+	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
         			doc.documentElement.innerHTML = markup;
       			}
       			else {
@@ -96,46 +100,31 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
       			}
 			return doc;
 		} else {
-			return <span style="font-size: 1rem;">nativeParse</span><span style="font-size: 1rem;">.apply(this, arguments);</span>
+			return nativeParse.apply(this, arguments);
 		}
 	};
 }(DOMParser));
-</pre>
+```
 
-<h3 id="DOMParser_de_ChromeJSMXPCOMPrivileged_Scope">DOMParser de Chrome/JSM/XPCOM/Privileged Scope</h3>
+### DOMParser de Chrome/JSM/XPCOM/Privileged Scope
 
-<p>Ver artículo aquí: <a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a></p>
+Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}} | {{Spec2('DOM Parsing')}} | Definición inicial |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.DOMParser")}}
 
-<h2 id="See_also" name="See_also"> </h2>
+##
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Parsing_and_serializing_XML" title="Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a href="/en-US/docs/XMLHttpRequest">XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/XMLSerializer" title="XMLSerializer">XMLSerializer</a></li>
- <li><a href="/en-US/Add-ons/Code_snippets/HTML_to_DOM">Parsing HTML to DOM</a></li>
-</ul>
+- [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML "Parsing_and_serializing_XML")
+- [XMLHttpRequest](/es/docs/XMLHttpRequest)
+- [XMLSerializer](/es/docs/XMLSerializer "XMLSerializer")
+- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)

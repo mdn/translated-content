@@ -8,89 +8,72 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-text-stroke
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad  <a href="/es/docs/Web/CSS">CSS </a><strong><code>-webkit-text-stroke</code></strong> especifica la  <a href="/es/docs/Web/CSS/length">anchura</a> y  <a href="/es/docs/Web/CSS/color_value">color</a> del trazo para los caractéres de texto. Esta forma es una manera corta en relación con la forma larga que necesita usar las propiedades{{cssxref("-webkit-text-stroke-width")}} y {{cssxref("-webkit-text-stroke-color")}}.</p>
+La propiedad [CSS ](/es/docs/Web/CSS)**`-webkit-text-stroke`** especifica la [anchura](/es/docs/Web/CSS/length) y [color](/es/docs/Web/CSS/color_value) del trazo para los caractéres de texto. Esta forma es una manera corta en relación con la forma larga que necesita usar las propiedades{{cssxref("-webkit-text-stroke-width")}} y {{cssxref("-webkit-text-stroke-color")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css notranslate">/* Valores anchura y color */
+```css
+/* Valores anchura y color */
 -webkit-text-stroke: 4px navy;
 
 /* Valores globales */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
 -webkit-text-stroke: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>La anchura del trazo.</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>El color del trazo.</dd>
-</dl>
+- `<length>`
+  - : La anchura del trazo.
+- `<color>`
+  - : El color del trazo.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p id="example"&gt;El trazo de este texto es rojo.&lt;/p&gt;</pre>
+```html
+<p id="example">El trazo de este texto es rojo.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">#example {
+```css
+#example {
   font-size: 50px;
   margin: 0;
   -webkit-text-stroke: 2px red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 600, 60)}}</p>
+{{EmbedLiveSample("Example", 600, 60)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#the-webkit-text-stroke', '-webkit-text-stroke')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Estandarización Inicial</td>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_text_stroke" hreflang="en" lang="en">Referencia CSS Safari<br>
-    <small lang="en-US">'-webkit-text-stroke' en ese documento.</small></a></td>
-   <td>Documentación no oficial y no estándar</td>
-   <td>Documentación Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                                                                                                                            | Estado                                 | Comentario              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ----------------------- |
+| {{SpecName('Compat', '#the-webkit-text-stroke', '-webkit-text-stroke')}}                                                                                                                                                          | {{Spec2('Compat')}}               | Estandarización Inicial |
+| [Referencia CSS Safari '-webkit-text-stroke' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_text_stroke) | Documentación no oficial y no estándar | Documentación Inicial   |
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-text-stroke")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Post en el blog Surfin' Safari anunciando esta característica</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">Artículo en CSS-Tricks explicando esta característica</a></li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
-</ul>
+- [Post en el blog Surfin' Safari anunciando esta característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Artículo en CSS-Tricks explicando esta característica](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-fill-color")}}

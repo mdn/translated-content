@@ -7,120 +7,69 @@ tags:
   - Tipo de Dato CSS
 translation_of: Web/CSS/basic-shape
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El tipo <strong><code>&lt;basic-shape&gt;</code></strong> puede ser especificado usando funciones de figura (shape) básicas. Al usar esta sintaxis para definir figuras, la caja de referencia es definida por cada propiedad que usa valores <code>&lt;basic-shape&gt;</code>. El sistema de coordenadas para la figura tiene su origen en la esquina superior izquierda de la caja de referencia, con el eje x corriendo hacia la derecha y el eje y, hacia abajo. Todas las longitudes expresadas en porcentajes son resueltas con base en las dimensiones de la caja de referencia.</p>
+El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (shape) básicas. Al usar esta sintaxis para definir figuras, la caja de referencia es definida por cada propiedad que usa valores `<basic-shape>`. El sistema de coordenadas para la figura tiene su origen en la esquina superior izquierda de la caja de referencia, con el eje x corriendo hacia la derecha y el eje y, hacia abajo. Todas las longitudes expresadas en porcentajes son resueltas con base en las dimensiones de la caja de referencia.
 
-<h2 id="Figuras_posibles">Figuras posibles</h2>
+## Figuras posibles
 
-<p>Las siguientes figuras son soportadas. Todos los valores <code>&lt;basic-shape&gt;</code> usan notación funcional y son definidos aquí usando la <a href="/es/docs/Web/CSS/Sintaxis_definición_de_valor">sintaxis de definición de valor</a>.</p>
+Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/Sintaxis_definición_de_valor).
 
-<dl>
- <dt><code><a name="inset"></a>inset()</code></dt>
- <dd>
- <pre class="syntaxbox"><code>inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</code></pre>
+- `inset()`
+  - : inset( <shape-arg>{1,4} [round <border-radius>]? )Define un rectángulo incrustado.Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
+- `polygon()`
+  - : polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )`<fill-rule>` representa la [regla de llenado](/es/docs/Web/SVG/Attribute/fill-rule) usada para determinar el área interior del polígono. Los valores posibles son `nonzero` y `evenodd`. El valor predeterminado es `nonzero`.Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
+- `circle(`)
+  - : circle( [<shape-radius>]? [at <position>]? )El argumento `<shape-radius>` representa a _r_, el radio del círculo. Los valores negativos son inválidos. Un valor en porcentaje es resuelto de la anchura y altura presentes de la caja de referencia como `sqrt(width^2+height^2)/sqrt(2)`.El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
+- `ellipse()`
+  - : ellipse( [<shape-radius>{2}]? [at <position>]? )El argumento `<shape-radius>` representa a rx y ry, los radios del eje x y del eje y de la elipse, en ese orden. Los valores negativos son inválidos. Los valores en porcentaje son resueltos contra la anchura (para rx) y altura (para ry) presentes en la caja de referencia.El argumento {{cssxref("&lt;position&gt;")}} define el centro de la elipse. Su valor predeterminado es `center`.
 
- <p>Define un rectángulo incrustado.</p>
+Los argumentos no definidos arriba son definidos de esta forma:
 
- <p>Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.</p>
+    <shape-arg> = <length> | <percentage>
+    <shape-radius> = <length> | <percentage> | closest-side | farthest-side
 
- <p>Los argumentos opcionales <a href="/es/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.</p>
+Define un radio para un círculo o elipse. Su valor predeterminado es `closest-side`.
 
- <p>Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.</p>
- </dd>
- <dt><code><a name="polygon"></a>polygon()</code></dt>
- <dd>
- <pre class="syntaxbox"><code>polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</code></pre>
+`closest-side` usa la longitud desde el centro de la figura hasta el borde más cercano de la caja de referencia. Para círculos, es el lado más cercano en cualquier dimensión. Para elipses, es el lado más cercano en la dimensión del radio.
 
- <p><code>&lt;fill-rule&gt;</code> representa la <a href="/es/docs/Web/SVG/Attribute/fill-rule">regla de llenado</a> usada para determinar el área interior del polígono. Los valores posibles son <code>nonzero</code> y <code>evenodd</code>. El valor predeterminado es <code>nonzero</code>.</p>
+`farthest-side` use la longitud desde el centro de la figura hasta el lado más alejado de la caja de referencia. Para círculos, es el lado más alejado en cualquier dimensión. Para elipses, es el lado más alejado en la dimensión del radio.
 
- <p>Cada elemento par de la lista representa <em>x<sub>i</sub></em> y <em>y<sub>i</sub></em> - las coordenadas del eje x y el eje y en el vértice <em>i</em> del polígono.</p>
- </dd>
- <dt><code><a name="circle"></a>circle(</code>)</dt>
- <dd>
- <pre class="syntaxbox"><code><code><code>circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</code></code></code></pre>
+## Valores Calculados de Figuras Básicas
 
- <p>El argumento <code>&lt;shape-radius&gt;</code> representa a <em>r</em>, el radio del círculo. Los valores negativos son inválidos. Un valor en porcentaje es resuelto de la anchura y altura presentes de la caja de referencia como <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
+Los valores en una función `<basic-shape>` son calculados segun se especifica, con estas excepciones:
 
- <p>El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es <code>center</code>.</p>
- </dd>
- <dt><code><a name="ellipse"></a>ellipse()</code></dt>
- <dd>
- <pre class="syntaxbox"><code><code><code>ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</code></code></code></pre>
+- Valores omitidos son incluidos y calculados acorde a su valor predeterminado.
+- Un valor {{cssxref("&lt;position&gt;")}} en `circle()` o `ellipse()` es calculado como un par de separaciones (horizontal y después vertical) desde el origen superior izquierdo, cada uno dado como combinación de una longitud absoluta y un porcentaje.
+- Un valor [`<border-radius>`](/es/docs/Web/CSS/border-radius) en `inset()` es calculado como una lista expandida de ocho valores {{cssxref("length")}} o de porcentaje.
 
- <p>El argumento <code>&lt;shape-radius&gt;</code> representa a r<sub>x</sub> y r<sub>y</sub>, los radios del eje x y del eje y de la elipse, en ese orden. Los valores negativos son inválidos. Los valores en porcentaje son resueltos contra la anchura (para r<sub>x</sub>) y altura (para r<sub>y</sub>) presentes en la caja de referencia.</p>
+## Interpolación de Figuras Básicas
 
- <p>El argumento {{cssxref("&lt;position&gt;")}} define el centro de la elipse. Su valor predeterminado es <code>center</code>.</p>
- </dd>
-</dl>
+Para interpolar dos figuras, se aplican las reglas a continuación. Los valores en la función de figura se interpolan como una lista simple. La lista de valores se interpola como {{cssxref("length", "length")}}, {{cssxref("percentage", "percentage")}}, o {{cssxref("calc", "calc")}} donde sea posible. Si los valores listados no son de los de esos tipos pero son idénticos (por ejemplo, tener `nonzero` en la misma posición en ambas listas), sí se interpolan esos valores.
 
-<p>Los argumentos no definidos arriba son definidos de esta forma:</p>
+- Ambas figuras deben usar la misma figura de referencia.
+- Si ambas figuras son del mismo tipo, `ellipse()` o `circle()`, y ninguno de los radios usa las palabras clave `closest-side` o `farthest-side` keywords, se interpola entre cada valor de las funciones de figura.
+- Si ambas figuras son de tipo `inset()`, se interpola entre cada valor de las funciones de figura.
+- Si ambas figuras son de tipo `polygon()`, ambos polígonos tienen el mismo número de vértices y usan la misma regla [`<fill-rule>`](/es/docs/Web/SVG/Attribute/fill-rule), se interpola entre cada valor de la función de figura.
+- En cualquier otro casa no se especifica la interpolación.
 
-<pre class="syntaxbox"><code>&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
-&lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</code></pre>
+## Ejemplos
 
-<p>Define un radio para un círculo o elipse. Su valor predeterminado es <code>closest-side</code>.</p>
+    TODO
 
-<p><code>closest-side</code> usa la longitud desde el centro de la figura hasta el borde más cercano de la caja de referencia. Para círculos, es el lado más cercano en cualquier dimensión. Para elipses, es el lado más cercano en la dimensión del radio.</p>
+## Especificaciones
 
-<p><code>farthest-side</code> use la longitud desde el centro de la figura hasta el lado más alejado de la caja de referencia. Para círculos, es el lado más alejado en cualquier dimensión. Para elipses, es el lado más alejado en la dimensión del radio.</p>
+| Especificicación                                                                                         | Estatus                          | Comentarios        |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{ SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;') }} | {{ Spec2('CSS Shapes') }} | Definición inicial |
 
-<h2 id="Valores_Calculados_de_Figuras_Básicas">Valores Calculados de Figuras Básicas</h2>
-
-<p>Los valores en una función <code>&lt;basic-shape&gt;</code> son calculados segun se especifica, con estas excepciones:</p>
-
-<ul>
- <li>Valores omitidos son incluidos y calculados acorde a su valor predeterminado.</li>
- <li>Un valor {{cssxref("&lt;position&gt;")}} en <code>circle()</code> o  <code>ellipse()</code> es calculado como un par de separaciones (horizontal y después vertical) desde el origen superior izquierdo, cada uno dado como combinación de una longitud absoluta y un porcentaje.</li>
- <li>Un valor <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> en <code>inset()</code> es calculado como una lista expandida de ocho valores {{cssxref("length")}} o de porcentaje.</li>
-</ul>
-
-<h2 id="Interpolación_de_Figuras_Básicas">Interpolación de Figuras Básicas</h2>
-
-<div>Para interpolar dos figuras, se aplican las reglas a continuación. Los valores en la función de figura se interpolan como una lista simple. La lista de valores se interpola como {{cssxref("length", "length")}}, {{cssxref("percentage", "percentage")}}, o {{cssxref("calc", "calc")}} donde sea posible. Si los valores listados no son de los de esos tipos pero son idénticos (por ejemplo, tener <code>nonzero</code> en la misma posición en ambas listas), sí se interpolan esos valores.</div>
-
-<div> </div>
-
-<ul>
- <li>Ambas figuras deben usar la misma figura de referencia.</li>
- <li>Si ambas figuras son del mismo tipo, <code>ellipse()</code> o <code>circle()</code>, y ninguno de los radios usa las palabras clave <code>closest-side</code> o <code>farthest-side</code> keywords, se interpola entre cada valor de las funciones de figura.</li>
- <li>Si ambas figuras son de tipo <code>inset()</code>, se interpola entre cada valor de las funciones de figura.</li>
- <li>Si ambas figuras son de tipo <code>polygon()</code>, ambos polígonos tienen el mismo número de vértices y usan la misma regla <a href="/es/docs/Web/SVG/Attribute/fill-rule"><code>&lt;fill-rule&gt;</code></a>, se interpola entre cada valor de la función de figura.</li>
- <li>En cualquier otro casa no se especifica la interpolación.</li>
-</ul>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<pre>TODO</pre>
-
-<h2 id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificicación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;') }}</td>
-   <td>{{ Spec2('CSS Shapes') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.types.basic-shape")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><code>{{cssxref("clip-path")}}</code></li>
- <li><code>{{cssxref("shape-outside")}}</code></li>
-</ul>
+- `{{cssxref("clip-path")}}`
+- `{{cssxref("shape-outside")}}`

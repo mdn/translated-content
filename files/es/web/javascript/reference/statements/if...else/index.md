@@ -7,104 +7,102 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/if...else
 original_slug: Web/JavaScript/Referencia/Sentencias/if...else
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>Ejecuta una sentencia si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.</p>
+Ejecuta una sentencia si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">if (<em>condición</em>) <em>sentencia1</em> [else <em>sentencia2</em>]
-</pre>
+    if (condición) sentencia1 [else sentencia2]
 
-<dl>
- <dt><code>condición</code></dt>
- <dd>Una expresión que puede ser evaluada como verdadera o falsa.</dd>
-</dl>
+- `condición`
+  - : Una expresión que puede ser evaluada como verdadera o falsa.
 
-<dl>
- <dt><code>sentencia1</code></dt>
- <dd>Sentencia que se ejecutará si <code>condición</code> es evaluada como verdadera. Puede ser cualquier sentencia, incluyendo otras sentenccias <code>if</code> anidadas. Para ejecutar múltiples sentencias, use una sentencia {{jsxref("Sentencias/block", "block")}} ({ ... }) para agruparlas.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>sentencia2</code></dt>
- <dd>Sentencia que se ejecutará si <code>condición</code> se evalúa como falsa, y exista una cláusula <code>else</code>. Puede ser cualquier sentencia, incluyendo sentencias block y otras sentencias <code>if</code> anidadas.</dd>
-</dl>
+- `sentencia1`
+  - : Sentencia que se ejecutará si `condición` es evaluada como verdadera. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia {{jsxref("Sentencias/block", "block")}} ({ ... }) para agruparlas.
 
-<h2 id="Description" name="Description">Descripción</h2>
+<!---->
 
-<p>Multiples sentencias <code>if...else</code> pueden ser anidadas para crear una cláusula <code>else if</code>:</p>
+- `sentencia2`
+  - : Sentencia que se ejecutará si `condición` se evalúa como falsa, y exista una cláusula `else`. Puede ser cualquier sentencia, incluyendo sentencias block y otras sentencias `if` anidadas.
 
-<pre>if (<em>condición1</em>)
-   <em>sentencia1</em>
-else if (<em>condición2</em>)
-   <em>sentencia2</em>
-else if (<em>condición3</em>)
-   <em>sentencia3</em>
-...
-else
-   <em>sentenciaN</em>
-</pre>
+## Descripción
 
-<p>Para entender como esto funciona, así es como se vería si el anidamiento hubiera sido indentado correctamente:</p>
+Multiples sentencias `if...else` pueden ser anidadas para crear una cláusula `else if`:
 
-<pre>if (<em>condición1</em>)
-   <em>sentencia1</em>
-else
-   if (<em>condición2</em>)
-      <em>sentencia2</em>
-   else
-      if (<em>condición3</em>)
-        ...
-</pre>
+    if (condición1)
+       sentencia1
+    else if (condición2)
+       sentencia2
+    else if (condición3)
+       sentencia3
+    ...
+    else
+       sentenciaN
 
-<p>Para ejecutar varias sentencias en una cláusula, use una sentencia block (<code>{ ... }</code>) para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:</p>
+Para entender como esto funciona, así es como se vería si el anidamiento hubiera sido indentado correctamente:
 
-<pre class="brush: js">if (condición) {
+    if (condición1)
+       sentencia1
+    else
+       if (condición2)
+          sentencia2
+       else
+          if (condición3)
+            ...
+
+Para ejecutar varias sentencias en una cláusula, use una sentencia block (`{ ... }`) para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
+
+```js
+if (condición) {
    sentencia1
 } else {
    sentencia2
 }
-</pre>
+```
 
-<p>No confundir los valores primitivos <code>true</code> y <code>false</code> con los valores true y false del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de <code>undefined</code>, <code>null</code>, <code>0</code>, <code>-0</code>, <code>NaN</code>, o la cadena vacía (<code>""</code>), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional. Por ejemplo:</p>
+No confundir los valores primitivos `true` y `false` con los valores true y false del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de `undefined`, `null`, `0`, `-0`, `NaN`, o la cadena vacía (`""`), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional. Por ejemplo:
 
-<pre class="brush: js">var b = new Boolean(false);
+```js
+var b = new Boolean(false);
 if (b) // Esta condición se evalúa como verdadera
-</pre>
+```
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example:_Using_if...else" name="Example:_Using_if...else">Ejemplo: Uso de <code>if...else</code></h3>
+### Ejemplo: Uso de `if...else`
 
-<pre class="brush: js">if (cipher_char == from_char) {
+```js
+if (cipher_char == from_char) {
    result = result + to_char;
    x++;
 } else
    result = result + clear_char;
-</pre>
+```
 
-<h3 id="Example:_Assignment_within_the_conditional_expression" name="Example:_Assignment_within_the_conditional_expression">Ejemplo: Asignación en una expresión condicional</h3>
+### Ejemplo: Asignación en una expresión condicional
 
-<p>Es aconsejable no usar asignaciones simples en una expresión condicional, porque la asignación puede ser confundida con igualdad (operador relacional) cuando se lee el código. Por ejemplo, no use el siguiente código:</p>
+Es aconsejable no usar asignaciones simples en una expresión condicional, porque la asignación puede ser confundida con igualdad (operador relacional) cuando se lee el código. Por ejemplo, no use el siguiente código:
 
-<pre class="brush: js">if (x = y) {
+```js
+if (x = y) {
    /* sentencia */
 }
-</pre>
+```
 
-<p>Si realmente necesita una asignación dentro de una exprsión condicional, una práctica común es poner paréntesis adicionales alrededor del la asignación, por ejemplo:</p>
+Si realmente necesita una asignación dentro de una exprsión condicional, una práctica común es poner paréntesis adicionales alrededor del la asignación, por ejemplo:
 
-<pre class="brush: js">if ((x = y)) {
+```js
+if ((x = y)) {
    /* sentencia */
 }
-</pre>
+```
 
-<h2 id="Vea_También">Vea También</h2>
+## Vea También
 
-<ul>
- <li>{{jsxref("Sentencias/block", "block")}}</li>
- <li>{{jsxref("Sentencias/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Sentencias/block", "block")}}
+- {{jsxref("Sentencias/switch", "switch")}}

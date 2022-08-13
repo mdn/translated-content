@@ -3,26 +3,23 @@ title: Document.dir
 slug: Web/API/Document/dir
 translation_of: Web/API/Document/dir
 ---
-<p>{{ApiRef("")}}{{non-standard_header}}</p>
+{{ApiRef("")}}{{non-standard_header}}
 
-<p>La propiedad <code><strong>Document.dir</strong></code> es una {{domxref("DOMString")}} que representa la dirección del texto del documento, ya sea de izquierda a derecha o de derecha a izquierda, siendo la primera el valor por defecto. Sus valores posibles son <em>rtl </em>(Right To Left) o <em>ltr </em>(Left To Right).</p>
+La propiedad **`Document.dir`** es una {{domxref("DOMString")}} que representa la dirección del texto del documento, ya sea de izquierda a derecha o de derecha a izquierda, siendo la primera el valor por defecto. Sus valores posibles son _rtl_ (Right To Left) o _ltr_ (Left To Right).
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="syntaxbox"><em>dirStr</em> = <em>document.</em>dir;
-<em>document.dir</em> = <em>dirStr;</em>
-</pre>
+    dirStr = document.dir;
+    document.dir = dirStr;
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>HTML5 WHATWG</p>
+HTML5 WHATWG
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.Document.dir")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533731.aspx" rel="freelink">http://msdn.microsoft.com/en-us/library/ms533731.aspx</a></li>
-</ul>
+- <http://msdn.microsoft.com/en-us/library/ms533731.aspx>

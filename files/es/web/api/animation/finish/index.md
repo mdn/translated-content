@@ -12,39 +12,33 @@ tags:
   - waapi
 translation_of: Web/API/Animation/finish
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<div>
-<p><span class="seoSummary">El método <strong><code>finish()</code> </strong>de la interfaz {{domxref("Animation")}} de la <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>  </span>establece el tiempo de reproducción actual hasta el final de la animación correspondiente a la dirección de reproducción actual. Es decir, si la animación se está reproduciendo hacia adelante, establece el tiempo de reproducción a la longitud de la secuencia de animación, y si la animación se reproduce hacia atras , (habiendo llamado a su método {{domxref("Animation.reverse", "reverse()")}}), establece el tiempo de la reproducción en 0.</p>
-</div>
+El método **`finish()` **de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) establece el tiempo de reproducción actual hasta el final de la animación correspondiente a la dirección de reproducción actual. Es decir, si la animación se está reproduciendo hacia adelante, establece el tiempo de reproducción a la longitud de la secuencia de animación, y si la animación se reproduce hacia atras , (habiendo llamado a su método {{domxref("Animation.reverse", "reverse()")}}), establece el tiempo de la reproducción en 0.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>Animation</em>.finish(); </pre>
+    Animation.finish();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>None.</p>
+None.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>None.</p>
+None.
 
-<dl>
-</dl>
+### Excepciones
 
-<h3 id="Excepciones">Excepciones</h3>
+- `InvalidState`
+  - : La velocidad de reproducción del reproductor es 0 o la velocidad de reproducción de la animación es mayor que 0 y el tiempo de finalización de la animación es infinito.
 
-<dl>
- <dt><code>InvalidState</code></dt>
- <dd>La velocidad de reproducción del reproductor es 0 o la velocidad de reproducción de la animación es mayor que 0 y el tiempo de finalización de la animación es infinito.</dd>
-</dl>
+## Ejemplos
 
-<h2 id="Ejemplos"><strong>Ejemplos</strong></h2>
+El siguiente ejemplo muestra cómo usar el método `finish()` y captura un error `InvalidState`.
 
-<p>El siguiente ejemplo muestra cómo usar el método <code>finish()</code> y captura un error <code>InvalidState</code>.</p>
-
-<pre class="brush: js">interfaceElement.addEventListener("mousedown", function() {
+```js
+interfaceElement.addEventListener("mousedown", function() {
   try {
     player.finish();
   } catch(e if e instanceof InvalidState) {
@@ -53,43 +47,31 @@ translation_of: Web/API/Animation/finish
     logMyErrors(e); //pasa el objeto excepción al manejador de errores.
   }
 });
-</pre>
+```
 
-<p>El siguiente ejemplo finaliza todas las animaciones en un solo elemento, independientemente de su dirección de reproducción.</p>
+El siguiente ejemplo finaliza todas las animaciones en un solo elemento, independientemente de su dirección de reproducción.
 
-<pre class="brush: js">elem.getAnimations().forEach(
+```js
+elem.getAnimations().forEach(
   function(animation){
     return animation.finish();
   }
 );
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-finish', 'finish()')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                               | Comment |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Animations', '#dom-animation-finish', 'finish()')}} | {{Spec2("Web Animations")}} |         |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.finish")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} para otros métodos y propiedades que puede usar para controlar la animación de la página web.</li>
- <li>{{domxref("Animation.play()")}} para reproducir una animación hacia adelante.</li>
- <li>{{domxref("Animation.reverse()")}} para reproducir una animación hacia atrás.</li>
-</ul>
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} para otros métodos y propiedades que puede usar para controlar la animación de la página web.
+- {{domxref("Animation.play()")}} para reproducir una animación hacia adelante.
+- {{domxref("Animation.reverse()")}} para reproducir una animación hacia atrás.

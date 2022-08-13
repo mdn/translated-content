@@ -3,36 +3,33 @@ title: left
 slug: Web/CSS/left
 translation_of: Web/CSS/left
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
+La propiedad `left` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
 
-<p>La propiedad <code>left</code> especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).</p>
+Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.
 
-<p>Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}<code>: absolute</code> ó <code>position: fixed</code>), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.</p>
+{{EmbedInteractiveExample("pages/css/left.html")}}
 
-<div>{{EmbedInteractiveExample("pages/css/left.html")}}</div>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+    left: <length> | <percentage> | auto | inherit ;
 
-<pre class="eval notranslate">left: &lt;length&gt; | &lt;percentage&gt; | auto | inherit ;
-</pre>
+### Valores
 
-<h3 id="Valores">Valores</h3>
+- {{cssxref("&lt;length&gt;")}}
+  - : Una longitud, un valor negativo, cero, un valor positivo.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Un porcentaje del ancho del bloque contenedor.
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Una longitud, un valor negativo, cero, un valor positivo.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Un porcentaje del ancho del bloque contenedor.</dd>
-</dl>
+## Ejemplos
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">#wrap {
+```css
+#wrap {
   width: 700px;
   margin: 0 auto;
   background: #5C5C5C;
@@ -79,66 +76,63 @@ pre {
   bottom:10px;
   right:20px;
   background-color:#FFC7E4;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="wrap"&gt;
-  &lt;div id="example_1"&gt;
-    &lt;pre&gt;
+```html
+<div id="wrap">
+  <div id="example_1">
+    <pre>
       position: absolute;
       left: 20px;
       top: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;The only containing element for this div is the main window, so it positions itself in relation to it.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+  </div>
 
-  &lt;div id="example_2"&gt;
-    &lt;pre&gt;
+  <div id="example_2">
+    <pre>
       position: relative;
       top: 0;
       right: 0;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative position in relation to its siblings.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>Relative position in relation to its siblings.</p>
+  </div>
 
-  &lt;div id="example_3"&gt;
-    &lt;pre&gt;
+  <div id="example_3">
+    <pre>
       float: right;
       position: relative;
       top: 20px;
       left: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative to its sibling div above, but removed from flow of content.&lt;/p&gt;
+    </pre>
+    <p>Relative to its sibling div above, but removed from flow of content.</p>
 
-    &lt;div id="example_4"&gt;
-      &lt;pre&gt;
+    <div id="example_4">
+      <pre>
         position: absolute;
         bottom: 10px;
         right: 20px;
-      &lt;/pre&gt;
-      &lt;p&gt;Absolute position inside of a parent with relative position&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      </pre>
+      <p>Absolute position inside of a parent with relative position</p>
+    </div>
+  </div>
+</div>
+```
 
-<p>{{EmbedLiveSample('Ejemplos',1200,650)}}</p>
+{{EmbedLiveSample('Ejemplos',1200,650)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-left">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/Style/CSS/current-work#positioning">CSS 3</a></li>
-</ul>
+- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-left)
+- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
+{{Compat("css.properties.left")}}
 
-<p>{{Compat("css.properties.left")}}</p>
+## Ver también
 
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}</li>
-</ul>
+- {{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("right") }}, {{ Cssxref("bottom") }}
