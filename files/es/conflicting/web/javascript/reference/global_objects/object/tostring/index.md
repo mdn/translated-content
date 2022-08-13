@@ -35,7 +35,7 @@ Puedes llamar el método `toSource()` durante el depurado para examinar el conte
 
 ### `Sobreescribir el método toSource()`
 
-Es seguro para los objetos sobreescribir el método **toSource()\*\***.\*\* Por ejemplo:
+Es seguro para los objetos sobreescribir el método **toSource()**. Por ejemplo:
 
 ```js
 function Person(name) {
