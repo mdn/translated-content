@@ -7,11 +7,12 @@ tags:
   - Structures
 translation_of: MDN/Writing_guidelines/Page_structures
 original_slug: MDN/Structures
+l10n:
+  sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
-<div>{{MDNSidebar}}</div><div>{{IncludeSubnav("/ja/docs/MDN")}}</div>
 
-<p>MDN 全体で見ると、MDNの記事内で統一的な情報の提示を行うために、繰り返し使われている様々な文書の構造があります。ここにあるのは、それらの構造について述べた記事です。これは文書を書いたり、編集したり、翻訳したりするのにふさわしい構造であると、MDN の執筆者であるあなたが気づき、適用し、そして変更できるものです。</p>
+{{MDNSidebar}}
 
-<p>（訳注：下位の各ページを和訳すると、ここに表示されます）</p>
+MDN 全体を通して、MDN の記事で一貫した情報を表示するために繰り返し使用される様々な文書化構造があります。ここでは、MDN の執筆者として、あなたが書いたり、編集したり、翻訳したりする文書で、これらの構造を認識し、適用し、適切に変更できるように、これらの構造を説明した記事を紹介します。
 
-<p>{{LandingPageListSubPages()}}</p>
+{{LandingPageListSubPages()}}
