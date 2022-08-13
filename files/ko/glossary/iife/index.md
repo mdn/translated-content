@@ -7,53 +7,46 @@ tags:
   - 즉시실행함수
 translation_of: Glossary/IIFE
 ---
-<p><strong>즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)</strong>은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.</p>
+**즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
 
-<pre class="brush: js">(function () {
+```js
+(function () {
     statements
-})();</pre>
+})();
+```
 
-<p>이는 {{glossary("Self-Executing Anonymous Function")}} 으로 알려진 디자인 패턴이고 크게 두 부분으로 구성된다. 첫 번째는 괄호(<code>()</code>, Grouping Operator)로 둘러싸인 익명함수(Anonymous Function)이다. 이는 전역 스코프에 불필요한 변수를 추가해서 오염시키는 것을 방지할 수 있을 뿐 아니라 IIFE 내부안으로 다른 변수들이 접근하는 것을 막을 수 있는 방법이다.</p>
+이는 {{glossary("Self-Executing Anonymous Function")}} 으로 알려진 디자인 패턴이고 크게 두 부분으로 구성된다. 첫 번째는 괄호(`()`, Grouping Operator)로 둘러싸인 익명함수(Anonymous Function)이다. 이는 전역 스코프에 불필요한 변수를 추가해서 오염시키는 것을 방지할 수 있을 뿐 아니라 IIFE 내부안으로 다른 변수들이 접근하는 것을 막을 수 있는 방법이다.
 
-<p>두 번째 부분은 즉시 실행 함수를 생성하는 괄호<code>()</code>이다. 이를 통해 자바스크립트 엔진은 함수를 즉시 해석해서 실행한다.</p>
+두 번째 부분은 즉시 실행 함수를 생성하는 괄호`()`이다. 이를 통해 자바스크립트 엔진은 함수를 즉시 해석해서 실행한다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>아래 함수는 즉시 실행되는 함수 표현이다. 표현 내부의 변수는 외부로부터의 접근이 불가능하다.</p>
+아래 함수는 즉시 실행되는 함수 표현이다. 표현 내부의 변수는 외부로부터의 접근이 불가능하다.
 
-<pre class="brush: js">(function () {
+```js
+(function () {
     var aName = "Barry";
 })();
 // IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
 aName // throws "Uncaught ReferenceError: aName is not defined"
-</pre>
+```
 
-<p>IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.</p>
+IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.
 
-<pre class="brush: js">var result = (function () {
+```js
+var result = (function () {
     var name = "Barry";
     return name;
 })();
 // 즉시 결과를 생성한다.
-result; // "Barry"</pre>
+result; // "Barry"
+```
 
-<section id="Quick_links">
-<ol>
- <li>더 알아보기
-  <ol>
-   <li><a href="/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions">예제</a>("Function" 섹션의 끝, "Custom objects"의 오른쪽 부분)</li>
-  </ol>
- </li>
- <li>Wikipedia 문서
-  <ol>
-   <li><a href="https://ko.wikipedia.org/wiki/%EC%A6%89%EC%8B%9C_%EC%8B%A4%ED%96%89_%ED%95%A8%EC%88%98">즉시 실행 함수</a></li>
-  </ol>
- </li>
- <li><a href="/ko/docs/Glossary">용어</a>
-  <ol>
-   <li>{{Glossary("Function")}}</li>
-   <li>{{Glossary("Self-Executing Anonymous Function")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+## 같이 보기
+
+- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Function")}}
+  - {{Glossary("Self-Executing Anonymous Function")}}
