@@ -16,80 +16,58 @@ tags:
 translation_of: Web/HTML/Element/template
 browser-compat: html.elements.template
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><a href="/en-US/docs/Web/HTML">HTML</a>-элемент шаблона контента <strong><code>&lt;template&gt;</code></strong> — это механизм для отложенного создания клиентского контента, который не отображается во время загрузки страницы, но может быть инициализирован при помощи JavaScript.</p>
+[HTML](/ru/docs/Web/HTML)-элемент шаблона контента **`<template>`** — это механизм для отложенного создания клиентского контента, который не отображается во время загрузки страницы, но может быть инициализирован при помощи JavaScript.
 
-<p>Шаблон можно представить себе как фрагмент контента страницы, сохранённый для последующего использования в документе. Хотя парсер и обрабатывает содержимое элемента <strong><code>&lt;template&gt;</code></strong> во время загрузки страницы, он делает это, только чтобы убедиться в валидности содержимого, само содержимое при этом не отображается.</p>
+Шаблон можно представить себе как фрагмент контента страницы, сохранённый для последующего использования в документе. Хотя парсер и обрабатывает содержимое элемента **`<template>`** во время загрузки страницы, он делает это, только чтобы убедиться в валидности содержимого, само содержимое при этом не отображается.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#метаданные">Метаданные</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#основной_поток">основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content">фразовый контент</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов">элементы поддержки скриптов</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимый контент</th>
-   <td>Нет ограничений</td>
-  </tr>
-  <tr>
-   <th scope="row">Закрывающий тег</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любые элементы, которые могут содержать <a href="/ru/docs/Web/Guide/HTML/Content_categories#метаданные">метаданные</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content">фразовый контент</a> или <a href="/en-US/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов">элементы поддержки скриптов</a>. Допускается вкладывать элемент в {{HTMLElement("colgroup")}}, у которого <em>отсутствует</em> атрибут {{htmlattrxref("span", "colgroup")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Неявные роли ARIA</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Отсутствует</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLTemplateElement")}}</td>
-  </tr>
- </tbody>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content), [элементы поддержки скриптов](/ru/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов)                                                                                                                          |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                               | Нет ограничений                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Закрывающий тег                                                  | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Разрешённые родители                                             | Любые элементы, которые могут содержать [метаданные](/ru/docs/Web/Guide/HTML/Content_categories#метаданные), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content) или [элементы поддержки скриптов](/ru/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов). Допускается вкладывать элемент в {{HTMLElement("colgroup")}}, у которого _отсутствует_ атрибут {{htmlattrxref("span", "colgroup")}}. |
+| Неявные роли ARIA                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                                            |
+| Разрешённые роли ARIA                                            | Отсутствует                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| DOM интерфейс                                                    | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+## Атрибуты
+
+Элемент может иметь [общие атрибуты](/ru/docs/Web/HTML/Global_attributes).
+
+Однако у `{{domxref("HTMLTemplateElement")}}` есть свойство `{{domxref("HTMLTemplateElement.content", "content")}}`, которое возвращает доступный только для чтения `{{domxref("DocumentFragment")}}`, содержащий DOM-поддерево шаблона. Обратите внимание, что прямое использование значения `{{domxref("HTMLTemplateElement.content", "content")}}` может привести к непредсказуемому поведению, см. раздел [ловушка `DocumentFragment`](#avoiding_documentfragment_pitfall) ниже.
+
+## Примеры
+
+Начнём с HTML.
+
+```html
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- данные будут вставлены сюда -->
+  </tbody>
 </table>
 
-<h2 id="Attributes">Атрибуты</h2>
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+```
 
-<p>Элемент может иметь <a href="/en-US/docs/Web/HTML/Global_attributes">общие атрибуты</a>.</p>
+Для начала у нас есть таблица, в которую мы собираемся вставить контент с помощью Javascript. За таблицей следует шаблон, который описывает структуру HTML-фрагмента — строку таблицы.
 
-<p>Однако у <code>{{domxref("HTMLTemplateElement")}}</code> есть свойство <code>{{domxref("HTMLTemplateElement.content", "content")}}</code>, которое возвращает доступный только для чтения <code>{{domxref("DocumentFragment")}}</code>, содержащий DOM-поддерево шаблона. Обратите внимание, что прямое использование значения <code>{{domxref("HTMLTemplateElement.content", "content")}}</code> может привести к непредсказуемому поведению, см. раздел <a href="#avoiding_documentfragment_pitfall">ловушка <code>DocumentFragment</code></a> ниже.</p>
+Теперь, когда таблица была создана, а шаблон определён, используем JavaScript, чтобы вставить строки в таблицу. Каждая строка будет строиться по шаблону.
 
-<h2 id="Examples">Примеры</h2>
-
-<p>Начнём с HTML.</p>
-
-<pre class="brush: html">&lt;table id="producttable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UPC_Code&lt;/td&gt;
-      &lt;td&gt;Product_Name&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;!-- данные будут вставлены сюда --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;template id="productrow"&gt;
-  &lt;tr&gt;
-    &lt;td class="record"&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/template&gt;
-</pre>
-
-<p>Для начала у нас есть таблица, в которую мы собираемся вставить контент с помощью Javascript. За таблицей следует шаблон, который описывает структуру HTML-фрагмента — строку таблицы.</p>
-
-<p>Теперь, когда таблица была создана, а шаблон определён, используем JavaScript, чтобы вставить строки в таблицу. Каждая строка будет строиться по шаблону.</p>
-
-<pre class="brush:js;">// Убеждаемся, что браузер поддерживает тег &lt;template&gt;,
+```js
+// Убеждаемся, что браузер поддерживает тег <template>,
 // проверив наличие атрибута content у элемента template.
 if ('content' in document.createElement('template')) {
 
@@ -118,38 +96,41 @@ if ('content' in document.createElement('template')) {
   // Иной способ заполнить таблицу, потому что
   // HTML-элемент template не поддерживается.
 }
-</pre>
+```
 
-<p>Как результат имеем HTML-таблицу с двумя новыми строками, добавленными с помощью JavaScript:</p>
+Как результат имеем HTML-таблицу с двумя новыми строками, добавленными с помощью JavaScript:
 
-<div class="hidden">
-<pre class="brush: css">table {
+```css hidden
+table {
   background: #000;
 }
 table td {
   background: #fff;
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 500, 120)}}</p>
+{{EmbedLiveSample("Examples", 500, 120)}}
 
-<h2 id="Avoiding_DocumentFragment_pitfall">Ловушка <code>DocumentFragment</code></h2>
+## Ловушка `DocumentFragment`
 
-<p>{{domxref("DocumentFragment")}} не подходит в качестве целевого объекта для многих событий, поэтому предпочтительнее клонировать или ссылаться на элементы внутри него.</p>
+{{domxref("DocumentFragment")}} не подходит в качестве целевого объекта для многих событий, поэтому предпочтительнее клонировать или ссылаться на элементы внутри него.
 
-<p>Рассмотрим следующие HTML-разметку и JavaScript-код:</p>
+Рассмотрим следующие HTML-разметку и JavaScript-код:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;&lt;/div&gt;
+```html
+<div id="container"></div>
 
-&lt;template id="template"&gt;
-  &lt;div&gt;Click me&lt;/div&gt;
-&lt;/template&gt;</pre>
+<template id="template">
+  <div>Click me</div>
+</template>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const container = document.getElementById("container");
+```js
+const container = document.getElementById("container");
 const template = document.getElementById("template");
 
 function clickHandler(event) {
@@ -162,25 +143,24 @@ container.appendChild(firstClone);
 
 const secondClone = template.content.firstElementChild.cloneNode(true);
 secondClone.addEventListener("click", clickHandler);
-container.appendChild(secondClone);</pre>
+container.appendChild(secondClone);
+```
 
-<h3 id="Result">Результат</h3>
+### Результат
 
-<p>В переменной <code>firstClone</code> у нас экземпляр (клон) <code>DocumentFragment</code>, и хотя у нас получилось отрисовать его внутри контейнера, клик по нему не срабатывает. В переменной <code>secondClone</code> у нас экземпляр (клон) <code>{{domxref("HTMLDivElement")}}</code>, клик по которому работает как ожидается.</p>
+В переменной `firstClone` у нас экземпляр (клон) `DocumentFragment`, и хотя у нас получилось отрисовать его внутри контейнера, клик по нему не срабатывает. В переменной `secondClone` у нас экземпляр (клон) `{{domxref("HTMLDivElement")}}`, клик по которому работает как ожидается.
 
-<p>{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}</p>
+{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-  <li>Веб-компоненты: {{HTMLElement("slot")}} (и устаревший: {{HTMLElement("shadow")}})</li>
-  <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Использование шаблонов и слотов</a></li>
-</ul>
+- Веб-компоненты: {{HTMLElement("slot")}} (и устаревший: {{HTMLElement("shadow")}})
+- [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots)

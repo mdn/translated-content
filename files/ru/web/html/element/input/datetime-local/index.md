@@ -3,174 +3,163 @@ title: <input type="datetime-local">
 slug: Web/HTML/Element/Input/datetime-local
 translation_of: Web/HTML/Element/input/datetime-local
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p>{{htmlelement("input")}} элемент типа <strong><code>datetime-local</code></strong> создаёт поля ввода, позволяющие легко ввести дату и время —  год, месяц, день, часы и минуты.</p>
+{{htmlelement("input")}} элемент типа **`datetime-local`** создаёт поля ввода, позволяющие легко ввести дату и время — год, месяц, день, часы и минуты.
 
-<p>Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera  и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
-<div id="Basic_example">
-<pre class="brush: html">&lt;input id="datetime" type="datetime-local"&gt;</pre>
+```html
+<input id="datetime" type="datetime-local">
+```
 
-<p>{{ EmbedLiveSample('Basic_example', 600, 40) }}</p>
-</div>
+{{ EmbedLiveSample('Basic_example', 600, 40) }}
 
-<p>Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.</p>
+Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
+![](https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png)
 
-<p>В Edge <code>datetime-local</code> элемент управления выглядит как на скриншоте ниже. Клик на дате и времени отобразит два отдельных поля выбора, чтобы вы могли легко установить дату и время. То есть, по сути, получаем два элемента <code>date</code> и <code>time</code>, объединённых в один:</p>
+В Edge `datetime-local` элемент управления выглядит как на скриншоте ниже. Клик на дате и времени отобразит два отдельных поля выбора, чтобы вы могли легко установить дату и время. То есть, по сути, получаем два элемента `date` и `time`, объединённых в один:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
+![](https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14955/datetime-local-picker-edge2.png" style="display: block; height: 394px; margin: 0px auto; width: 264px;"></p>
+![](https://mdn.mozillademos.org/files/14955/datetime-local-picker-edge2.png)
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>A {{domxref("DOMString")}} representing a date and time, or empty.</td>
-  </tr>
-  <tr>
-   <td><strong>события</strong></td>
-   <td>{{event("change")}} и {{event("input")}}.</td>
-  </tr>
-  <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}.</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code>.</td>
-  </tr>
-  <tr>
-   <td><strong>методы</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.</td>
-  </tr>
- </tbody>
-</table>
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                            |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **события**                     | {{event("change")}} и {{event("input")}}.                                                                                                                                                                  |
+| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}.           |
+| **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                     |
+| **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}. |
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p> {{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри {{htmlattrxref("value", "input")}} атрибута, как:</p>
+{{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри {{htmlattrxref("value", "input")}} атрибута, как:
 
-<pre class="brush: html">&lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
-&lt;input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"&gt;</pre>
+```html
+<label for="party">Enter a date and time for your party booking:</label>
+<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+```
 
-<p>{{ EmbedLiveSample('Значение', 600, 60) }}</p>
+{{ EmbedLiveSample('Значение', 600, 60) }}
 
-<p>Одна вещь, чтобы отметить, что отображаемый формат даты отличается от фактического <code>значения</code> — отображаемый формат даты будет выбран на основе установленного языкового стандарта операционной системы пользователя, в то время как дата<code>значение</code> всегда форматируется <code>yyyy-MM-ddThh:mm</code>. Когда значение передаётся на сервер, например, это будет выглядеть <code>partydate=2017-06-01T08:30</code>.</p>
+Одна вещь, чтобы отметить, что отображаемый формат даты отличается от фактического `значения` — отображаемый формат даты будет выбран на основе установленного языкового стандарта операционной системы пользователя, в то время как дата`значение` всегда форматируется `yyyy-MM-ddThh:mm`. Когда значение передаётся на сервер, например, это будет выглядеть `partydate=2017-06-01T08:30`.
 
-<div class="note">
-<p><strong>Примечание</strong>: также имейте в виду, что если такие данные поступают через http-запрос Get, двоеточие нужно экранировать для включения в параметры URL, например <code>partydate=2017-06-01T08%3A30</code>.</p>
-</div>
+> **Примечание:** также имейте в виду, что если такие данные поступают через http-запрос Get, двоеточие нужно экранировать для включения в параметры URL, например `partydate=2017-06-01T08%3A30`.
 
-<p>Вы также можете получить и установить значение даты в JavaScript, используя {{domxref("HTMLInputElement.value")}} свойство, например:</p>
+Вы также можете получить и установить значение даты в JavaScript, используя {{domxref("HTMLInputElement.value")}} свойство, например:
 
-<pre class="brush: js">var dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';</pre>
+```js
+var dateControl = document.querySelector('input[type="datetime-local"]');
+dateControl.value = '2017-06-01T08:30';
+```
 
-<h2 id="Использование_локальных_входных_данных_datetime">Использование локальных входных данных datetime</h2>
+## Использование локальных входных данных datetime
 
-<p>Ввод даты и времени выглядит удобно на первый взгляд — он обеспечивает простой пользовательский интерфейс для выбора даты и времени, и они нормализуют формат данных, отправляемых на сервер, независимо от локали пользователя. Тем не менее, есть проблемы с <code>&lt;input type="datetime-local"&gt;</code> из-за ограниченной поддержки браузера.</p>
+Ввод даты и времени выглядит удобно на первый взгляд — он обеспечивает простой пользовательский интерфейс для выбора даты и времени, и они нормализуют формат данных, отправляемых на сервер, независимо от локали пользователя. Тем не менее, есть проблемы с `<input type="datetime-local">` из-за ограниченной поддержки браузера.
 
-<p>Мы рассмотрим основные и более сложные способы использования <code>&lt;input type="datetime-local"&gt;</code>, затем предложим советы по устранению проблемы поддержки браузера позже (see <a href="#handling_browser_support">Handling browser support</a>).</p>
+Мы рассмотрим основные и более сложные способы использования `<input type="datetime-local">`, затем предложим советы по устранению проблемы поддержки браузера позже (see [Handling browser support](#handling_browser_support)).
 
-<h3 id="Базовое_использование_локальных_полей_ввода_datetime">Базовое использование локальных полей ввода datetime</h3>
+### Базовое использование локальных полей ввода datetime
 
-<p>Самое простои использование <code>&lt;input type="datetime-local"&gt;</code> включает комбинацию базового <code>&lt;input&gt;</code> и {{htmlelement("label")}} элемента, как в примере ниже:</p>
+Самое простои использование `<input type="datetime-local">` включает комбинацию базового `<input>` и {{htmlelement("label")}} элемента, как в примере ниже:
 
-<pre class="brush: html">&lt;form&gt;
-    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+    <label for="party">Enter a date and time for your party booking:</label>
+    <input id="party" type="datetime-local" name="partydate">
+</form>
+```
 
-<p>{{ EmbedLiveSample('Базовое_использование_локальных_полей_ввода_datetime', 600, 40) }}</p>
+{{ EmbedLiveSample('Базовое_использование_локальных_полей_ввода_datetime', 600, 40) }}
 
-<h3 id="Установка_максимума_и_минимума_даты_и_времени">Установка максимума и минимума даты и времени</h3>
+### Установка максимума и минимума даты и времени
 
-<p>Вы можете использовать {{htmlattrxref("min", "input")}} и {{htmlattrxref("max", "input")}} атрибуты чтобы ограничить дату/время, которое может выбрать пользователь. В примере ниже мы устанавливает минимальные дату и время в <code>2017-06-01T08:30</code> и максимальные в <code>2017-06-30T16:30</code>:</p>
+Вы можете использовать {{htmlattrxref("min", "input")}} и {{htmlattrxref("max", "input")}} атрибуты чтобы ограничить дату/время, которое может выбрать пользователь. В примере ниже мы устанавливает минимальные дату и время в `2017-06-01T08:30` и максимальные в `2017-06-30T16:30`:
 
-<pre class="brush: html">  &lt;form&gt;
-    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"&gt;
-  &lt;/form&gt;</pre>
+```html
+  <form>
+    <label for="party">Enter a date and time for your party booking:</label>
+    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
+  </form>
+```
 
-<p>{{ EmbedLiveSample('Установка_максимума_и_минимума_даты_и_времени', 600, 40) }}</p>
+{{ EmbedLiveSample('Установка_максимума_и_минимума_даты_и_времени', 600, 40) }}
 
-<p>Как результат:</p>
+Как результат:
 
-<ul>
- <li>Могут быть выбраны только дни из Июня 2017 — только дни, которые входят в заданный диапазон дат доступны для выбора, и в виджете нельзя увидеть даты, не принадлежащие Июню.</li>
- <li>В зависимости от того, какой браузер вы используете, вы можете заметить, что время вне заданного диапазона не доступно к выбору (e.g. Edge), или доступно к выбору(e.g. Chrome) но невалидно (see <a href="#validation">Validation</a>).</li>
-</ul>
+- Могут быть выбраны только дни из Июня 2017 — только дни, которые входят в заданный диапазон дат доступны для выбора, и в виджете нельзя увидеть даты, не принадлежащие Июню.
+- В зависимости от того, какой браузер вы используете, вы можете заметить, что время вне заданного диапазона не доступно к выбору (e.g. Edge), или доступно к выбору(e.g. Chrome) но невалидно (see [Validation](#validation)).
 
-<div class="note">
-<p><strong>Примечание</strong>: Существует возможность использовать {{htmlattrxref("step", "input")}} атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.</p>
-</div>
+> **Примечание:** Существует возможность использовать {{htmlattrxref("step", "input")}} атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.
 
-<h3 id="Controlling_input_size">Controlling input size</h3>
+### Controlling input size
 
-<p><code>&lt;input type="datetime-local"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> for sizing needs.</p>
+`<input type="datetime-local">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
 
-<h3 id="Setting_timezones">Setting timezones</h3>
+### Setting timezones
 
-<p>One thing the <code>datetime-local</code> input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the <code><a href="/en-US/docs/Web/HTML/Element/input/datetime">datetime</a></code> input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.</p>
+One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
-<p>For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a <code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code> input type. For example:</p>
+For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
-<pre class="brush: html">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
+```html
+<input type="hidden" id="timezone" name="timezone" value="-08:00">
+```
 
-<p>On the other hand, if you were required to allow the user to enter a timezone along with a datetime entry, you could provide a means of inputting a timezone, such as a {{htmlelement("select")}} element:</p>
+On the other hand, if you were required to allow the user to enter a timezone along with a datetime entry, you could provide a means of inputting a timezone, such as a {{htmlelement("select")}} element:
 
-<pre class="brush: html">&lt;select name="timezone_offset" id="timezone-offset" class="span5"&gt;
-    &lt;option value="-12:00"&gt;(GMT -12:00) Eniwetok, Kwajalein&lt;/option&gt;
-    &lt;option value="-11:00"&gt;(GMT -11:00) Midway Island, Samoa&lt;/option&gt;
-    &lt;option value="-10:00"&gt;(GMT -10:00) Hawaii&lt;/option&gt;
-    &lt;option value="-09:50"&gt;(GMT -9:30) Taiohae&lt;/option&gt;
-    &lt;option value="-09:00"&gt;(GMT -9:00) Alaska&lt;/option&gt;
-    &lt;option value="-08:00"&gt;(GMT -8:00) Pacific Time (US &amp;amp; Canada)&lt;/option&gt;
+```html
+<select name="timezone_offset" id="timezone-offset" class="span5">
+    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+    <option value="-10:00">(GMT -10:00) Hawaii</option>
+    <option value="-09:50">(GMT -9:30) Taiohae</option>
+    <option value="-09:00">(GMT -9:00) Alaska</option>
+    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
 
   ...
 
-&lt;/select&gt;</pre>
+</select>
+```
 
-<p>In either case, the timedate and timezone values would be submitted to the server as separate data points, and then you'd need to store them appropriately in the database on the server-side.</p>
+In either case, the timedate and timezone values would be submitted to the server as separate data points, and then you'd need to store them appropriately in the database on the server-side.
 
-<div class="note">
-<p><strong>Note</strong>: The above code snippet is taken from <a href="https://gist.github.com/nodesocket/3919205">All world timezones in an HTML select element</a>.</p>
-</div>
+> **Примечание:** The above code snippet is taken from [All world timezones in an HTML select element](https://gist.github.com/nodesocket/3919205).
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>By default, <code>&lt;input type="datetime-local"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a datetime — which is helpful — but you can still fill in no value and submit, or enter an invalid datetime (e.g. the 32th of April).</p>
+By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a datetime — which is helpful — but you can still fill in no value and submit, or enter an invalid datetime (e.g. the 32th of April).
 
-<p>You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
+You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
-<p>Let's look at an example — here we've set minimum and maximum datetimes, and also made the field required:</p>
+Let's look at an example — here we've set minimum and maximum datetimes, and also made the field required:
 
-<pre class="brush: html">&lt;form&gt;
-    &lt;div&gt;
-        &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
-        &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;input type="submit" value="Book party!"&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+    <div>
+        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
+        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
+        <span class="validity"></span>
+    </div>
+    <div>
+        <input type="submit" value="Book party!">
+    </div>
+</form>
+```
 
-<p>If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:</p>
+If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
-<p>{{ EmbedLiveSample('Validation', 600, 120) }}</p>
+{{ EmbedLiveSample('Validation', 600, 120) }}
 
-<p>Here's'a screenshot for those of you who aren't using a supporting browser:</p>
+Here's'a screenshot for those of you who aren't using a supporting browser:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14957/datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
+![](https://mdn.mozillademos.org/files/14957/datetime-local-error.png)
 
-<p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
-<pre class="brush: css">div {
+```css
+div {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -189,59 +178,58 @@ input:invalid+span:after {
 input:valid+span:after {
     content: '✓';
     padding-left: 5px;
-}</pre>
+}
+```
 
-<div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
-</div>
+> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
-<h2 id="Handling_browser_support">Handling browser support</h2>
+## Handling browser support
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
+As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the `datetime-local` picker on Firefox for Android looks like this:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14951/datetime-local-fxa.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+![](https://mdn.mozillademos.org/files/14951/datetime-local-fxa.png)
 
-<p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
+Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
-<p>The second problem is the most serious — as we mentioned earlier, with a <code>datetime-local</code> input the actual value is always normalized to the format <code>yyyy-mm-ddThh:mm</code>. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:</p>
+The second problem is the most serious — as we mentioned earlier, with a `datetime-local` input the actual value is always normalized to the format `yyyy-mm-ddThh:mm`. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:
 
-<ul>
- <li><code>ddmmyyyy</code></li>
- <li><code>dd/mm/yyyy</code></li>
- <li><code>mm/dd/yyyy</code></li>
- <li><code>dd-mm-yyyy</code></li>
- <li><code>mm-dd-yyyy</code></li>
- <li><code>mm-dd-yyyy hh:mm</code> (12 hour clock)</li>
- <li><code>mm-dd-yyyy hh:mm</code> (24 hour clock)</li>
- <li>etc.</li>
-</ul>
+- `ddmmyyyy`
+- `dd/mm/yyyy`
+- `mm/dd/yyyy`
+- `dd-mm-yyyy`
+- `mm-dd-yyyy`
+- `mm-dd-yyyy hh:mm` (12 hour clock)
+- `mm-dd-yyyy hh:mm` (24 hour clock)
+- etc.
 
-<p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your <code>datetime-local</code> input. Even though the <code>datetime-local</code> input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:</p>
+One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate"
+```html
+<form>
+  <div>
+    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
+    <input id="party" type="datetime-local" name="partydate"
            min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="submit" value="Book party!"&gt;
-  &lt;/div&gt;
-  &lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;
-&lt;/form&gt;</pre>
+           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!">
+  </div>
+  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+</form>
+```
 
-<p>{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}</p>
+{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
-<p>If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern <code>nnnn-nn-nnTnn:nn</code>, where <code>n</code> is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates and times.</p>
+If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `nnnn-nn-nnTnn:nn`, where `n` is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates and times.
 
-<p>And what user is going to understand the pattern they need to enter the time and date in?</p>
+And what user is going to understand the pattern they need to enter the time and date in?
 
-<p>We still have a problem.</p>
+We still have a problem.
 
-<div class="hidden">
-<pre class="brush: css">div {
+```css hidden
+div {
   margin-bottom: 10px;
 }
 
@@ -263,75 +251,77 @@ input:valid + span:after {
   content: '✓';
   position: absolute;
   right: -18px;
-}</pre>
-</div>
+}
+```
 
-<p>The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>, and the <a href="http://timepicker.co/">jQuery timepicker plugin</a>.</p>
+The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/), and the [jQuery timepicker plugin](http://timepicker.co/).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create two sets of UI elements for choosing datetimes — a native <code>&lt;input type="datetime-local"&gt;</code> picker, and a set of five {{htmlelement("select")}} elements for choosing dates and times in older browsers that don't support the native input.</p>
+In this example we create two sets of UI elements for choosing datetimes — a native `<input type="datetime-local">` picker, and a set of five {{htmlelement("select")}} elements for choosing dates and times in older browsers that don't support the native input.
 
-<p>{{ EmbedLiveSample('Examples', 600, 140) }}</p>
+{{ EmbedLiveSample('Examples', 600, 140) }}
 
-<p>The HTML looks like so:</p>
+The HTML looks like so:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div class="nativeDateTimePicker"&gt;
-    &lt;label for="party"&gt;Choose a date and time for your party:&lt;/label&gt;
-    &lt;input type="datetime-local" id="party" name="bday"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;p class="fallbackLabel"&gt;Choose a date and time for your party:&lt;/p&gt;
-  &lt;div class="fallbackDateTimePicker"&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="day"&gt;Day:&lt;/label&gt;
-        &lt;select id="day" name="day"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="month"&gt;Month:&lt;/label&gt;
-        &lt;select id="month" name="month"&gt;
-          &lt;option selected&gt;January&lt;/option&gt;
-          &lt;option&gt;February&lt;/option&gt;
-          &lt;option&gt;March&lt;/option&gt;
-          &lt;option&gt;April&lt;/option&gt;
-          &lt;option&gt;May&lt;/option&gt;
-          &lt;option&gt;June&lt;/option&gt;
-          &lt;option&gt;July&lt;/option&gt;
-          &lt;option&gt;August&lt;/option&gt;
-          &lt;option&gt;September&lt;/option&gt;
-          &lt;option&gt;October&lt;/option&gt;
-          &lt;option&gt;November&lt;/option&gt;
-          &lt;option&gt;December&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="hour"&gt;Hour:&lt;/label&gt;
-        &lt;select id="hour" name="hour"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="minute"&gt;Minute:&lt;/label&gt;
-        &lt;select id="minute" name="minute"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div class="nativeDateTimePicker">
+    <label for="party">Choose a date and time for your party:</label>
+    <input type="datetime-local" id="party" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">Choose a date and time for your party:</p>
+  <div class="fallbackDateTimePicker">
+    <div>
+      <span>
+        <label for="day">Day:</label>
+        <select id="day" name="day">
+        </select>
+      </span>
+      <span>
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+          <option selected>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </span>
+      <span>
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+        </select>
+      </span>
+    </div>
+    <div>
+      <span>
+        <label for="hour">Hour:</label>
+        <select id="hour" name="hour">
+        </select>
+      </span>
+      <span>
+        <label for="minute">Minute:</label>
+        <select id="minute" name="minute">
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+```
 
-<p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and months, as there are so many of them!</p>
+The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and months, as there are so many of them!
 
-<div class="hidden">
-<pre class="brush: css">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -354,12 +344,13 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
-</div>
+}
+```
 
-<p>The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports <code>&lt;input type="date"&gt;</code>, we create a new {{htmlelement("input")}} element, set its <code>type</code> to <code>date</code>, then immediately check what its type is set to — non-supporting browsers will return <code>text</code>, because the <code>date</code> type falls back to type <code>text</code>. If <code>&lt;input type="date"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.</p>
+The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="date">`, we create a new {{htmlelement("input")}} element, set its `type` to `date`, then immediately check what its type is set to — non-supporting browsers will return `text`, because the `date` type falls back to type `text`. If `<input type="date">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.
 
-<pre class="brush: js">// define variables
+```js
+// define variables
 var nativePicker = document.querySelector('.nativeDateTimePicker');
 var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -393,8 +384,8 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // delete the current set of &lt;option&gt; elements out of the
-  // day &lt;select&gt;, ready for the next set to be injected
+  // delete the current set of <option> elements out of the
+  // day <select>, ready for the next set to be injected
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
   }
@@ -413,8 +404,8 @@ function populateDays(month) {
     (year - 2016) % 4 === 0 ? dayNum = 29 : dayNum = 28;
   }
 
-  // inject the right number of new &lt;option&gt; elements into the day &lt;select&gt;
-  for(i = 1; i &lt;= dayNum; i++) {
+  // inject the right number of new <option> elements into the day <select>
+  for(i = 1; i <= dayNum; i++) {
     var option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
@@ -449,8 +440,8 @@ function populateYears() {
   var date = new Date();
   var year = date.getFullYear();
 
-  // Make this year, and the 100 years before it available in the year &lt;select&gt;
-  for(var i = 0; i &lt;= 100; i++) {
+  // Make this year, and the 100 years before it available in the year <select>
+  for(var i = 0; i <= 100; i++) {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);
@@ -458,24 +449,24 @@ function populateYears() {
 }
 
 function populateHours() {
-  // populate the hours &lt;select&gt; with the 24 hours of the day
-  for(var i = 0; i &lt;= 23; i++) {
+  // populate the hours <select> with the 24 hours of the day
+  for(var i = 0; i <= 23; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
-  // populate the minutes &lt;select&gt; with the 60 hours of each minute
-  for(var i = 0; i &lt;= 59; i++) {
+  // populate the minutes <select> with the 60 hours of each minute
+  for(var i = 0; i <= 59; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);
   }
 }
 
-// when the month or year &lt;select&gt; values are changed, rerun populateDays()
+// when the month or year <select> values are changed, rerun populateDays()
 // in case the change affected the number of available days
 yearSelect.onchange = function() {
   populateDays(monthSelect.value);
@@ -492,39 +483,21 @@ var previousDay;
 // see end of populateDays() for usage
 daySelect.onchange = function() {
   previousDay = daySelect.value;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                                | Status                           | Comments |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
-</ul>
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)

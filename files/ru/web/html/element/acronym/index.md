@@ -5,70 +5,52 @@ tags:
   - Obsolete
 translation_of: Web/HTML/Element/acronym
 ---
-<div>{{obsolete_header}}</div>
+{{obsolete_header}}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Элемент акронима (<code>&lt;acronym&gt;)</code> позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой.</p>
+Элемент акронима (`<acronym>)` позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой.
 
-<div class="note">
-<p><strong>Примечание: </strong>Этот элемент был убран из спецификации HTML5, поэтому его не рекомендуется использовать.Вместо него используйте элемент {{HTMLElement("abbr")}}.</p>
-</div>
+> **Примечание:**Этот элемент был убран из спецификации HTML5, поэтому его не рекомендуется использовать.Вместо него используйте элемент {{HTMLElement("abbr")}}.
 
-<h2 id="Attributes">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент поддерживает <em>только </em><a class="new " href="/en-US/docs/HTML/global_attributes" rel="internal" title="HTML/global attributes">глобальные атрибуты</a>.</p>
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes "HTML/global attributes").
 
-<h2 id="DOM_Interface">Интерфейс DOM</h2>
+## Интерфейс DOM
 
-<p>Этот элемент реализует интерфейс {{domxref('HTMLElement')}}.</p>
+Этот элемент реализует интерфейс {{domxref('HTMLElement')}}.
 
-<div class="note"><strong>Примечание: </strong>Вплоть до Gecko 1.9.2 Firefox реализует для этого элемента интерфейс {{domxref('HTMLSpanElement')}}.</div>
+> **Примечание:**Вплоть до Gecko 1.9.2 Firefox реализует для этого элемента интерфейс {{domxref('HTMLSpanElement')}}.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:html">&lt;p&gt;The &lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt; is only one component of the Internet.&lt;/p&gt;
-</pre>
+```html
+<p>The <acronym title="World Wide Web">WWW</acronym> is only one component of the Internet.</p>
+```
 
-<h2 id="Default_styling">Стилизация по умолчанию</h2>
+## Стилизация по умолчанию
 
-<p>Хотя этого элемент употребляется чисто для удобств автора, разные браузеры отрисовывают его по-разному:</p>
+Хотя этого элемент употребляется чисто для удобств автора, разные браузеры отрисовывают его по-разному:
 
-<ul>
- <li>Некоторые, например, Internet Explorer, не стилизуют его, и он выглядит неотличимо от обычного {{HTMLElement("span")}}.</li>
- <li>Opera, Firefox и некоторые други браузеры подчёркивают его точками.</li>
- <li>Малая часть браузеров помимо подчёркивания точками также меняют начертание текста на капитель (small caps). Во избежание такого поведения, как вариант, необходимо добавить {{cssxref('font-variant')}}<code>: none</code> в CSS стиль.</li>
-</ul>
+- Некоторые, например, Internet Explorer, не стилизуют его, и он выглядит неотличимо от обычного {{HTMLElement("span")}}.
+- Opera, Firefox и некоторые други браузеры подчёркивают его точками.
+- Малая часть браузеров помимо подчёркивания точками также меняют начертание текста на капитель (small caps). Во избежание такого поведения, как вариант, необходимо добавить {{cssxref('font-variant')}}`: none` в CSS стиль.
 
-<p>Поэтому настоятельно рекомендуется, чтобы веб-авторы не полагались на стиль по умолчанию.</p>
+Поэтому настоятельно рекомендуется, чтобы веб-авторы не полагались на стиль по умолчанию.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#edef-ACRONYM', '&lt;acronym&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                         | Статус                       | Комментарий |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('HTML4.01', 'struct/text.html#edef-ACRONYM', '&lt;acronym&gt;')}} | {{Spec2('HTML4.01')}} |             |
 
-<h2 id="Browser_compatibility">Совместимость</h2>
+## Совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также:</h2>
+## Смотрите также:
 
-<ul>
- <li>{{HTMLElement("abbr")}}</li>
-</ul>
+- {{HTMLElement("abbr")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

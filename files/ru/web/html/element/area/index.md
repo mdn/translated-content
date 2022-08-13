@@ -3,158 +3,117 @@ title: <area>
 slug: Web/HTML/Element/area
 translation_of: Web/HTML/Element/area
 ---
-<div><strong>HTML <code>&lt;area&gt;</code> элемент </strong>определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.</div>
+**HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-<div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
+| [Категории содержимого](en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                      | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                        |
+| Пропуск тегов                                               | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                                  |
+| Допустимые родительские элементы                            | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
+| Разрешённые роли ARIA                                       | Нет                                                                                                                                                                                                                       |
+| DOM интерфейс                                               | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                  |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="en-US/docs/HTML/Content_categories">Категории содержимого</a></th>
-   <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Content_categories#Flow_content" rel="nofollow">Элементы потока</a>, <a href="ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразового контента</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Нет, это {{Glossary("пустой элемент")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>
-    <p>Открывающий тег обязателен, закрывающего быть не должно.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые родительские элементы</th>
-   <td>
-    <p>Любой элемент, допускающий <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>. У элемента <code>&lt;area&gt;</code> должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLAreaElement")}}</td>
-  </tr>
- </tbody>
-</table>
+## Атрибуты
 
-<h2 id="Атрибуты">Атрибуты</h2>
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<p>Этот элемент включает в себя только <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+- {{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} только, {{obsolete_inline("5.0")}}
+  - : Specifies a keyboard navigation accelerator for the element. Pressing ALT or a similar key in association with the specified character selects the form control correlated with that key sequence. Page designers are forewarned to avoid key sequences already bound to browsers. This attribute is global since HTML5.
 
-<dl>
- <dt>{{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} только, {{obsolete_inline("5.0")}}</dt>
- <dd>Specifies a keyboard navigation accelerator for the element. Pressing ALT or a similar key in association with the specified character selects the form control correlated with that key sequence. Page designers are forewarned to avoid key sequences already bound to browsers. This attribute is global since HTML5.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("alt")}}</dt>
- <dd>С помощью этого атрибута задаётся альтернативный текст, описывающий изображение, если оно не доступно. Он должен быть сформулирован так, чтобы предоставить пользователю тот же выбор, что и изображение, которое отрисуется без альтернативного текста. В HTML4 данный атрибут обязателен, но так же может содержать и пустую строку (""). В HTML5 этот атрибут обязателен только при наличии атрибута <strong>href</strong>.</dd>
-</dl>
+- {{htmlattrdef("alt")}}
+  - : С помощью этого атрибута задаётся альтернативный текст, описывающий изображение, если оно не доступно. Он должен быть сформулирован так, чтобы предоставить пользователю тот же выбор, что и изображение, которое отрисуется без альтернативного текста. В HTML4 данный атрибут обязателен, но так же может содержать и пустую строку (""). В HTML5 этот атрибут обязателен только при наличии атрибута **href**.
 
-<dl>
- <dt>{{htmlattrdef("coords")}}</dt>
- <dd>Задаёт значения координат для активной области. Значение и количество значений зависят от значения указанного для атрибута <strong>shape</strong>. Для <code>rect</code> или прямоугольника задаются две пары значений x,y <strong>coords</strong>: лево, верх, право и низ. Для <code>circle</code>, значения <code>x,y,r</code> где <code>x,y</code> координаты центра круга, а <code>r</code> радиус. Для <code>poly</code> или многоугольника, значения задаются парой x и y для каждой вершины многоугольника: <code>x1,y1,x2,y2,x3,y3,</code> и т.д. В HTML4 значения задаются в пикселях или процентах, когда добавлен знак (%); в HTML5, значения — величины в пикселях.</dd>
- <dt>{{htmlattrdef("download")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Этот атрибут, если он добавлен, указывает, что ссылка используется для скачивания файла. Смотри {{HTMLElement("a")}} для полного описания атрибута {{htmlattrxref("download", "a")}}.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>Ссылка для активной области. Это значение действующего URL. В HTML4, этот или <strong>nohref</strong> атрибут обязательный. В HTML5, данный атрибут можно пропустить при условии, что активная область не является ссылкой.</dd>
-</dl>
+- {{htmlattrdef("coords")}}
+  - : Задаёт значения координат для активной области. Значение и количество значений зависят от значения указанного для атрибута **shape**. Для `rect` или прямоугольника задаются две пары значений x,y **coords**: лево, верх, право и низ. Для `circle`, значения `x,y,r` где `x,y` координаты центра круга, а `r` радиус. Для `poly` или многоугольника, значения задаются парой x и y для каждой вершины многоугольника: `x1,y1,x2,y2,x3,y3,` и т.д. В HTML4 значения задаются в пикселях или процентах, когда добавлен знак (%); в HTML5, значения — величины в пикселях.
+- {{htmlattrdef("download")}} {{HTMLVersionInline("5")}}
+  - : Этот атрибут, если он добавлен, указывает, что ссылка используется для скачивания файла. Смотри {{HTMLElement("a")}} для полного описания атрибута {{htmlattrxref("download", "a")}}.
 
-<dl>
- <dt>{{htmlattrdef("hreflang")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Указывает язык связанного ресурса. Допустимые значения определяются <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt" title="Tags for Identifying Languages">BCP47</a>. Используйте данный атрибут при наличии атрибута <strong>href</strong>.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
- <dd>Определяет имя интерактивной области, чтобы оно могло прописаться в старых браузерах.</dd>
-</dl>
+- {{htmlattrdef("href")}}
+  - : Ссылка для активной области. Это значение действующего URL. В HTML4, этот или **nohref** атрибут обязательный. В HTML5, данный атрибут можно пропустить при условии, что активная область не является ссылкой.
 
-<dl>
- <dt>{{htmlattrdef("media")}} {{HTMLVersionInline("5")}}</dt>
- <dd>A hint of the media for which the linked resource was designed, for example <code>print and screen</code>. If omitted, it defaults to <code>all</code>. Use this attribute only if the <strong>href</strong> attribute is present.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("nohref")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
- <dd>Indicates that no hyperlink exists for the associated area. Either this attribute or the <strong>href</strong> attribute must be present in the element.
- <div class="note">
- <p><strong>Usage note: </strong>This attribute is obsolete in HTML5, instead omitting the <strong>href</strong> attribute is sufficient.</p>
- </div>
- </dd>
-</dl>
+- {{htmlattrdef("hreflang")}} {{HTMLVersionInline("5")}}
+  - : Указывает язык связанного ресурса. Допустимые значения определяются [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages"). Используйте данный атрибут при наличии атрибута **href**.
 
-<dl>
- <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
- <dd>A string indicating which referrer to use when fetching the resource:
- <ul>
-  <li><code>"no-referrer"</code> meaning that the <code>Referer:</code> header will not be sent.</li>
-  <li>"<code>no-referrer-when-downgrade</code>" meaning that no <code>Referer:</code> header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.</li>
-  <li><code>"origin"</code> meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.</li>
-  <li>"origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path. </li>
-  <li><code>"unsafe-url"</code> meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("rel")}} {{HTMLVersionInline("5")}}</dt>
- <dd>For anchors containing the <strong>href</strong> attribute, this attribute specifies the relationship of the target object to the link object. The value is a space-separated list of <a href="/en-US/docs/Web/HTML/Link_types">link types values</a>. The values and their semantics will be registered by some authority that might have meaning to the document author. The default relationship, if no other is given, is void. Use this attribute only if the <strong>href</strong> attribute is present.</dd>
- <dt>{{htmlattrdef("shape")}}</dt>
- <dd>The shape of the associated hot spot. The specifications for HTML 5 and HTML 4 define the values <code>rect</code>, which defines a rectangular region; <code>circle</code>, which defines a circular region; <code>poly</code>, which defines a polygon; and <code>default</code>, which indicates the entire region beyond any defined shapes. Many browsers, notably Internet Explorer 4 and higher, support <code>circ</code>, <code>polygon</code>, and <code>rectangle</code> as valid values for <strong>shape</strong>; these values are {{Non-standard_inline}}.</dd>
- <dt>{{htmlattrdef("tabindex")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}</dt>
- <dd>A numeric value specifying the position of the defined area in the browser tabbing order. This attribute is global in HTML5.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd>This attribute specifies where to display the linked resource. In HTML4, this is the name of, or a keyword for, a frame. In HTML5, it is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). The following keywords have special meanings:
- <ul>
-  <li><code>_self</code>: Load the response into the same HTML4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.</li>
-  <li><code>_blank</code>: Load the response into a new unnamed HTML4 window or HTML5 browsing context.</li>
-  <li><code>_parent</code>: Load the response into the HTML4 frameset parent of the current frame or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: In HTML4: Load the response into the full, original window, canceling all other frames. In HTML5: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
- </ul>
- Use this attribute only if the <strong>href</strong> attribute is present.</dd>
- <dt>{{htmlattrdef("type")}} {{obsolete_inline("5.1")}}</dt>
- <dd>This attribute specifies the media type in the form of a MIME type for the link target. Generally, this is provided strictly as advisory information; however, in the future a browser might add a small icon for multimedia types. For example, a browser might add a small speaker icon when type is set to audio/wav. For a complete list of recognized MIME types, see <a href="https://www.w3.org/TR/html4/references.html#ref-MIMETYPES">https://www.w3.org/TR/html4/references.html#ref-MIMETYPES</a>. Use this attribute only if the <strong>href</strong> attribute is present.</dd>
-</dl>
+- {{htmlattrdef("name")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
+  - : Определяет имя интерактивной области, чтобы оно могло прописаться в старых браузерах.
 
-<h2 id="Пример"> Пример</h2>
+<!---->
 
-<pre class="brush: html">&lt;map name="primary"&gt;
-  &lt;area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left"&gt;
-  &lt;area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right"&gt;
-&lt;/map&gt;
-&lt;img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic"&gt;</pre>
+- {{htmlattrdef("media")}} {{HTMLVersionInline("5")}}
+  - : A hint of the media for which the linked resource was designed, for example `print and screen`. If omitted, it defaults to `all`. Use this attribute only if the **href** attribute is present.
 
-<h3 id="Результат">Результат</h3>
+<!---->
 
-<p>{{ EmbedLiveSample('Пример', 360, 160) }}</p>
+- {{htmlattrdef("nohref")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
+  - : Indicates that no hyperlink exists for the associated area. Either this attribute or the **href** attribute must be present in the element.> **Примечание:** **Usage note:** This attribute is obsolete in HTML5, instead omitting the **href** attribute is sufficient.
 
-<h2 id="Notes">Notes</h2>
+<!---->
 
-<p>Under the HTML 3.2, 4.0, and 5 specifications, the closing tag <code>&lt;/area&gt;</code> is forbidden.</p>
+- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+  - : A string indicating which referrer to use when fetching the resource:\* `"no-referrer"` meaning that the `Referer:` header will not be sent.
+    - "`no-referrer-when-downgrade`" meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.
+    - `"origin"` meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.
+    - "origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.
+    - `"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
+- {{htmlattrdef("rel")}} {{HTMLVersionInline("5")}}
+  - : For anchors containing the **href** attribute, this attribute specifies the relationship of the target object to the link object. The value is a space-separated list of [link types values](/ru/docs/Web/HTML/Link_types). The values and their semantics will be registered by some authority that might have meaning to the document author. The default relationship, if no other is given, is void. Use this attribute only if the **href** attribute is present.
+- {{htmlattrdef("shape")}}
+  - : The shape of the associated hot spot. The specifications for HTML 5 and HTML 4 define the values `rect`, which defines a rectangular region; `circle`, which defines a circular region; `poly`, which defines a polygon; and `default`, which indicates the entire region beyond any defined shapes. Many browsers, notably Internet Explorer 4 and higher, support `circ`, `polygon`, and `rectangle` as valid values for **shape**; these values are {{Non-standard_inline}}.
+- {{htmlattrdef("tabindex")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
+  - : A numeric value specifying the position of the defined area in the browser tabbing order. This attribute is global in HTML5.
 
-<p>The XHTML 1.0 specification requires a trailing slash: <code>&lt;area /&gt;</code>.</p>
+<!---->
 
-<p>The <strong>id</strong>, <strong>class</strong>, and <strong>style</strong> attributes have the same meaning as the core attributes defined in the HTML 4 specification, but only Netscape and Microsoft define them.</p>
+- {{htmlattrdef("target")}}
+  - : This attribute specifies where to display the linked resource. In HTML4, this is the name of, or a keyword for, a frame. In HTML5, it is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). The following keywords have special meanings:\* `_self`: Load the response into the same HTML4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.
+    - `_blank`: Load the response into a new unnamed HTML4 window or HTML5 browsing context.
+    - `_parent`: Load the response into the HTML4 frameset parent of the current frame or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+    - `_top`: In HTML4: Load the response into the full, original window, canceling all other frames. In HTML5: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.Use this attribute only if the **href** attribute is present.
+- {{htmlattrdef("type")}} {{obsolete_inline("5.1")}}
+  - : This attribute specifies the media type in the form of a MIME type for the link target. Generally, this is provided strictly as advisory information; however, in the future a browser might add a small icon for multimedia types. For example, a browser might add a small speaker icon when type is set to audio/wav. For a complete list of recognized MIME types, see <https://www.w3.org/TR/html4/references.html#ref-MIMETYPES>. Use this attribute only if the **href** attribute is present.
 
-<p>Netscape 1–level browsers do not understand the <strong>target</strong> attribute as it relates to frames.</p>
+## Пример
 
-<p>HTML 3.2 defines only <strong>alt</strong>, <strong>coords</strong>, <strong>href</strong>, <strong>nohref</strong>, and <strong>shape</strong>.</p>
+```html
+<map name="primary">
+  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
+  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+</map>
+<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+```
 
-<p>HTML 5.1 <a href="https://www.w3.org/TR/html51/obsolete.html#obsolete">defines</a> obsolete the attribute <strong>type</strong> on this tag.</p>
+### Результат
 
-<h2 id="Спецификации">Спецификации</h2>
+{{ EmbedLiveSample('Пример', 360, 160) }}
+
+## Notes
+
+Under the HTML 3.2, 4.0, and 5 specifications, the closing tag `</area>` is forbidden.
+
+The XHTML 1.0 specification requires a trailing slash: `<area />`.
+
+The **id**, **class**, and **style** attributes have the same meaning as the core attributes defined in the HTML 4 specification, but only Netscape and Microsoft define them.
+
+Netscape 1–level browsers do not understand the **target** attribute as it relates to frames.
+
+HTML 3.2 defines only **alt**, **coords**, **href**, **nohref**, and **shape**.
+
+HTML 5.1 [defines](https://www.w3.org/TR/html51/obsolete.html#obsolete) obsolete the attribute **type** on this tag.
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

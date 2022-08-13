@@ -6,70 +6,43 @@ tags:
   - селект
 translation_of: Web/HTML/Element/option
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;option&gt;</code></strong> используется для определения пункта списка контейнера {{HTMLElement("select")}}, элемента {{HTMLElement("optgroup")}}, или элемента {{HTMLElement("datalist")}}. Элемент <code>&lt;option&gt;</code> может представлять раздел меню всплывающих окон и других перечней или списков HTML документа.</span></p>
+**HTML-элемент `<option>`** используется для определения пункта списка контейнера {{HTMLElement("select")}}, элемента {{HTMLElement("optgroup")}}, или элемента {{HTMLElement("datalist")}}. Элемент `<option>` может представлять раздел меню всплывающих окон и других перечней или списков HTML документа.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категория содержимого</a></th>
-   <td>Нет.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Текст, допускаются <span class="short_text" id="result_box" lang="ru"><span>экранированные символы</span></span> (например <code>&amp;eacute;</code>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Открывающий тег обязателен. Закрывающий тег опционален если за этим элементом следует другой элемент <code>&lt;option&gt;</code>, или элемент {{HTMLElement("optgroup")}}, или если родительский элемент не имеет больше содержимого.</td>
-  </tr>
-  <tr>
-   <th scope="row"><span class="short_text" id="result_box" lang="ru"><span>Разрешённые родители</span></span></th>
-   <td>Элемент {{HTMLElement("select")}},  элемент {{HTMLElement("optgroup")}} или элемент {{HTMLElement("datalist")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLOptionElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категория содержимого](/ru/docs/Web/HTML/Content_categories) | Нет.                                                                                                                                                                                                                          |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                        | Текст, допускаются экранированные символы (например `&eacute;`).                                                                                                                                                              |
+| Пропуск тега                                                  | Открывающий тег обязателен. Закрывающий тег опционален если за этим элементом следует другой элемент `<option>`, или элемент {{HTMLElement("optgroup")}}, или если родительский элемент не имеет больше содержимого. |
+| Разрешённые родители                                          | Элемент {{HTMLElement("select")}}, элемент {{HTMLElement("optgroup")}} или элемент {{HTMLElement("datalist")}}.                                                                                      |
+| Permitted ARIA roles                                          | None                                                                                                                                                                                                                          |
+| DOM interface                                                 | {{domxref("HTMLOptionElement")}}                                                                                                                                                                                  |
 
-<h2 id="Attributes">Атрибуты</h2>
+## Атрибуты
 
-<p>Как и все HTML-элементы, этот элемент поддерживает <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">глобальные атрибуты</a>.</p>
+Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("disabled")}} -- отключён(о)</dt>
- <dd>Если этот Boolean атрибут установлен, эта опция недоступна для выделения. Часто браузеры выделяют такой элемент управления серым цветом и ему недоступны любые события браузера, такие как клики мыши или события, связанные с фокусировкой. Если этот атрибут не установлен, этот элемент все ещё можно отключить (может не работать), если отключён внешний(one of its ancestors) элемент {{HTMLElement("optgroup")}}.</dd>
- <dt>{{htmlattrdef("label")}} -- метка, ярлык</dt>
- <dd>Этот атрибут - текст ярлыка, отображающий значение(смысл, описание) опции. Если <code>label</code> не указан (отсутствует), то его значение совпадает с текстовым содержанием элемента <code>&lt;option&gt;</code>.</dd>
- <dt>{{htmlattrdef("selected")}} -- выбран(о)</dt>
- <dd>(Если присутствует,) этот Boolean атрибут отображает то, что опция изначально выделена. Если элемент <code>&lt;option&gt;</code> принадлежит элементу {{HTMLElement("select")}}, чей атрибут {{htmlattrxref("multiple", "select")}} не установлен, только одна-единственная <code>&lt;option&gt;</code> элемента {{HTMLElement("select")}} может иметь атрибут <code>selected</code> .</dd>
- <dt>{{htmlattrdef("value")}} -- значение, величина</dt>
- <dd>Содержимое(содержание) этого атрибута отображает(представляет) значение, отправляемое формой, если выбрана(выделена) данная опция. Если (этот) атрибут value отсутствует, значение берётся из текстового содержания элемента <code>&lt;option&gt;</code>.</dd>
-</dl>
+- {{htmlattrdef("disabled")}} -- отключён(о)
+  - : Если этот Boolean атрибут установлен, эта опция недоступна для выделения. Часто браузеры выделяют такой элемент управления серым цветом и ему недоступны любые события браузера, такие как клики мыши или события, связанные с фокусировкой. Если этот атрибут не установлен, этот элемент все ещё можно отключить (может не работать), если отключён внешний(one of its ancestors) элемент {{HTMLElement("optgroup")}}.
+- {{htmlattrdef("label")}} -- метка, ярлык
+  - : Этот атрибут - текст ярлыка, отображающий значение(смысл, описание) опции. Если `label` не указан (отсутствует), то его значение совпадает с текстовым содержанием элемента `<option>`.
+- {{htmlattrdef("selected")}} -- выбран(о)
+  - : (Если присутствует,) этот Boolean атрибут отображает то, что опция изначально выделена. Если элемент `<option>` принадлежит элементу {{HTMLElement("select")}}, чей атрибут {{htmlattrxref("multiple", "select")}} не установлен, только одна-единственная `<option>` элемента {{HTMLElement("select")}} может иметь атрибут `selected` .
+- {{htmlattrdef("value")}} -- значение, величина
+  - : Содержимое(содержание) этого атрибута отображает(представляет) значение, отправляемое формой, если выбрана(выделена) данная опция. Если (этот) атрибут value отсутствует, значение берётся из текстового содержания элемента `<option>`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>См. {{HTMLElement("select")}} for examples.</p>
+См. {{HTMLElement("select")}} for examples.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
-</ul>
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

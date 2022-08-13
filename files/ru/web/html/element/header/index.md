@@ -10,88 +10,65 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/header
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;header&gt;</code></strong> представляет собой вводный контент, обычно группу вводных или навигационных средств. Он может содержать другие элементы-заголовки, а также логотип, форму поиска, имя автора и другие элементы.</span></p>
+**HTML-элемент `<header>`** представляет собой вводный контент, обычно группу вводных или навигационных средств. Он может содержать другие элементы-заголовки, а также логотип, форму поиска, имя автора и другие элементы.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, кроме <code>&lt;header&gt;</code> и {{HTMLElement("footer")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">контент основного потока</a> в качестве содержимого. Обратите внимание, что элемент <code>&lt;header&gt;</code> не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("footer")}} или другого элемента <code>&lt;header&gt;</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories "HTML/Content_categories") | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                                                     | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), кроме `<header>` и {{HTMLElement("footer")}}                                                                                                                                                                                                  |
+| Пропуск тега                                                                               | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                                           |
+| Разрешённые родительские элементы                                                          | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<header>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("footer")}} или другого элемента `<header>`. |
+| Разрешённые роли ARIA                                                                      | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                                                |
+| DOM-интерфейс                                                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                              |
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Элемент <code>&lt;header&gt;</code> не относится к секционному контенту , а значит не создаёт новый раздел в <a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">структуре HTML-документа</a>. При этом элемент <code>&lt;header&gt;</code> обычно должен содержать заголовок ближайшего раздела (элементы <code>h1</code>-<code>h6</code>), но это <strong>не</strong> обязательно.</p>
+Элемент `<header>` не относится к секционному контенту , а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document). При этом элемент `<header>` обычно должен содержать заголовок ближайшего раздела (элементы `h1`-`h6`), но это **не** обязательно.
 
-<h3 id="Историческое_употребление">Историческое употребление</h3>
+### Историческое употребление
 
-<p>Несмотря на то, что элемент <code>&lt;header&gt;</code> не попал в спецификации до {{glossary("HTML5")}}, на самом деле, он существовал с самого начала HTML. Первоначально, на самом первом веб-сайте он использовался как элемент <code>&lt;head&gt;</code>. В какой-то момент было принято решение использовать другое имя. Позже, это позволило <code>&lt;header&gt;</code> занять другую роль.</p>
+Несмотря на то, что элемент `<header>` не попал в спецификации до {{glossary("HTML5")}}, на самом деле, он существовал с самого начала HTML. Первоначально, на самом первом веб-сайте он использовался как элемент `<head>`. В какой-то момент было принято решение использовать другое имя. Позже, это позволило `<header>` занять другую роль.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>К этому элементу применимы только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Заголовок_страницы">Заголовок страницы</h3>
+### Заголовок страницы
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;h1&gt;Заголовок главной страницы&lt;/h1&gt;
-  &lt;img src="mdn-logo-sm.png" alt="MDN logo"&gt;
-&lt;/header&gt;
-</pre>
+```html
+<header>
+  <h1>Заголовок главной страницы</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
+</header>
+```
 
-<h3 id="Заголовок_статьи">Заголовок статьи</h3>
+### Заголовок статьи
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;header&gt;
-    &lt;h2&gt;Планета Земля&lt;/h2&gt;
-    &lt;p&gt;Опубликовано в среду, 4 октября 2017, Джейн Смит&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;Мы живём на сине-зелёной планете, на которой до сих пор так много неизведанного.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="https://janesmith.com/the-planet-earth/"&gt;Продолжить чтение...&lt;/a&gt;&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <header>
+    <h2>Планета Земля</h2>
+    <p>Опубликовано в среду, 4 октября 2017, Джейн Смит</p>
+  </header>
+  <p>Мы живём на сине-зелёной планете, на которой до сих пор так много неизведанного.</p>
+  <p><a href="https://janesmith.com/the-planet-earth/">Продолжить чтение...</a></p>
+</article>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Разделы и структура документа HTML5</a>.</li>
-</ul>
+- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
+- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).

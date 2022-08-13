@@ -7,91 +7,64 @@ tags:
   - Стилизация
 translation_of: Web/HTML/Element/caption
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML</strong> элемент заголовка таблицы (<strong><code>&lt;caption&gt;</code></strong>) определяет название (заголовок) таблицы. Если этот элемент используется, он <em>всегда</em> должен быть первым вложенным элементом тэга {{HTMLElement("table")}}.</span> Внешний вид и расположение заголовка по отношению к самой таблице может быть изменено с помощью стилей CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}}.</p>
+**HTML** элемент заголовка таблицы (**`<caption>`**) определяет название (заголовок) таблицы. Если этот элемент используется, он _всегда_ должен быть первым вложенным элементом тэга {{HTMLElement("table")}}. Внешний вид и расположение заголовка по отношению к самой таблице может быть изменено с помощью стилей CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
-<table class="properties">
- <tbody>
+| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                 | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content).                               |
+| Парность тегов                                         | Конечный тег может быть опущен, если элемент не следует сразу за ASCII пробелом или комментарием. |
+| Разрешённые родители                                   | Элемент {{HTMLElement("table")}} как его первый потомок                                   |
+| Разрешённые ARIA-роли                                  | Нет                                                                                               |
+| DOM interface                                          | {{domxref("HTMLTableCaptionElement")}}                                              |
+
+## Атрибуты
+
+Этот элемент включает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+
+### Устаревшие атрибуты
+
+Следующие атрибуты устаревшие и не должны использоваться. Они описаны ниже для справки при обновлении кода и для общего сведения.
+
+- {{htmlattrdef("align")}} {{obsolete_inline}}
+  - : Этот пронумерованный атрибут указывает как заголовок должен быть выравнен по отношению к таблице. Он может иметь одно или несколько следующих значений :_ `left`
+    _ : Заголовок отображается слева от таблицы.
+    - `top`
+      - : Заголовок отображается над таблицей.
+    - `right`
+      - : Заголовок отображается справа от таблицы.
+    - `bottom`
+      - : Заголовок отображается под таблицей.> **Примечание:** **Примечание к использованию:** Не используйте этот атрибут, так как он устарел. Элемент {{HTMLElement("caption")}} должен быть стилизован с использованием свойств [CSS](/ru/docs/CSS) {{cssxref("caption-side")}} и{{cssxref("text-align")}}.
+
+## Примечание к использованию
+
+Когда элемент {{HTMLElement("table")}}, содержащий `<caption>` является единственным потомком элемента {{HTMLElement("figure")}}, вам следует использовать элемент {{HTMLElement("figcaption")}} вместо `<caption>`.
+
+## Пример
+
+Просто пример, представляющий таблицу, которая содержит заголовок.
+
+```html
+<table>
+  <caption>Example Caption</caption>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
+    <th>Login</th>
+    <th>Email</th>
   </tr>
   <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Потоковый контент</a>.</td>
+    <td>user1</td>
+    <td>user1@sample.com</td>
   </tr>
   <tr>
-   <th scope="row">Парность тегов</th>
-   <td>Конечный тег может быть опущен, если элемент не следует сразу за ASCII пробелом или комментарием.</td>
+    <td>user2</td>
+    <td>user2@sample.com</td>
   </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Элемент {{HTMLElement("table")}} как его первый потомок</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTableCaptionElement")}}</td>
-  </tr>
- </tbody>
 </table>
+```
 
-<h2 id="Атрибуты">Атрибуты</h2>
-
-<p>Этот элемент включает  <a href="/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</p>
-
-<h3 id="Устаревшие_атрибуты">Устаревшие атрибуты</h3>
-
-<p>Следующие атрибуты устаревшие и не должны использоваться. Они описаны ниже для справки при обновлении кода и для общего сведения.</p>
-
-<dl>
- <dt>{{htmlattrdef("align")}} {{obsolete_inline}}</dt>
- <dd>Этот пронумерованный атрибут указывает как заголовок должен быть выравнен по отношению к таблице. Он может иметь одно или несколько следующих значений :
- <dl>
-  <dt><code>left</code></dt>
-  <dd>Заголовок отображается слева от таблицы.</dd>
-  <dt><code>top</code></dt>
-  <dd>Заголовок отображается над таблицей.</dd>
-  <dt><code>right</code></dt>
-  <dd>Заголовок отображается справа от таблицы.</dd>
-  <dt><code>bottom</code></dt>
-  <dd>Заголовок отображается под таблицей.</dd>
- </dl>
-
- <div class="note"><strong>Примечание к использованию: </strong>Не используйте этот атрибут, так как он устарел. Элемент {{HTMLElement("caption")}} должен быть стилизован с использованием свойств <a href="/en-US/docs/CSS">CSS</a> {{cssxref("caption-side")}} и{{cssxref("text-align")}}.</div>
- </dd>
-</dl>
-
-<h2 id="Примечание_к_использованию">Примечание к использованию</h2>
-
-<p>Когда элемент {{HTMLElement("table")}}, содержащий <code>&lt;caption&gt;</code> является единственным потомком элемента {{HTMLElement("figure")}}, вам следует использовать элемент {{HTMLElement("figcaption")}} вместо <code>&lt;caption&gt;</code>.</p>
-
-<h2 id="Пример">Пример</h2>
-
-<p>Просто пример, представляющий таблицу, которая содержит  заголовок.</p>
-
-<pre class="brush: html">&lt;table&gt;
-  &lt;caption&gt;Example Caption&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Login&lt;/th&gt;
-    &lt;th&gt;Email&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user1&lt;/td&gt;
-    &lt;td&gt;user1@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user2&lt;/td&gt;
-    &lt;td&gt;user2@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-
-<div class="hidden">
-<pre class="brush: css">caption {
+```css hidden
+caption {
   caption-side: top;
   align: right;
 }
@@ -102,28 +75,21 @@ table {
 table, th, td {
   border: 1px solid black;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('Пример', 650, 100)}}</p>
+{{EmbedLiveSample('Пример', 650, 100)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+- Другие связанные с таблицей HTML-элементы: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+- CSS-свойства, которые могут быть применены для стилизации элемента {{HTMLElement("caption")}}:
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Другие связанные с таблицей HTML-элементы: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
- <li>CSS-свойства, которые могут быть применены для стилизации элемента {{HTMLElement("caption")}}:
-  <ul>
-   <li>{{cssxref("text-align")}}, {{cssxref("caption-side")}}.</li>
-  </ul>
- </li>
-</ul>
+  - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.

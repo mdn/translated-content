@@ -14,86 +14,58 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/embed
 ---
-<p><strong>HTML-элемент <code>&lt;embed&gt;</code> </strong>вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например. </p>
+**HTML-элемент `<embed>` **вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-<p>{{Note("Этот раздел посвящён только элементу, который является частью стандарта HTML5, и никак не касается ранних, нестандартизированных его реализаций.")}}</p>
+{{Note("Этот раздел посвящён только элементу, который является частью стандарта HTML5, и никак не касается ранних, нестандартизированных его реализаций.")}}
 
-<p>Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование <code>&lt;embed&gt;</code>, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.</p>
+Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование `<embed>`, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Отсутствует, это {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Должен иметь открывающий тег, закрывающий тег должен быть пропущен</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который допускает встроенный контент</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLEmbedElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                          | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                     |
+| Пропуск тега                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                             |
+| Разрешённые родительские элементы                               | Любой элемент, который допускает встроенный контент                                                                                                                                            |
+| Разрешённые роли ARIA                                           | {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}                                                         |
+| DOM-интерфейс                                                   | {{domxref("HTMLEmbedElement")}}                                                                                                                                                       |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Атрибуты этого элемента включают все <a href="ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Атрибуты этого элемента включают все [глобальные атрибуты](ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Отображает высоту ресурса в <a href="https://drafts.csswg.org/css-values/#px">CSS пикселях</a>. Это должно быть абсолютное значение; проценты <em>не</em> допустимы.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>Ссылка на встраиваемый ресурс.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>MIME-тип, используемый для выбора подключаемого модуля для создания экземпляра.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Отображает ширину ресурса в <a href="https://drafts.csswg.org/css-values/#px">CSS пикселях</a>. Это должно быть абсолютное значение; проценты <em>не</em> допустимы.</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : Отображает высоту ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.
+- {{htmlattrdef("src")}}
+  - : Ссылка на встраиваемый ресурс.
+- {{htmlattrdef("type")}}
+  - : MIME-тип, используемый для выбора подключаемого модуля для создания экземпляра.
+- {{htmlattrdef("width")}}
+  - : Отображает ширину ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Вы можете использовать свойство {{cssxref("object-position")}}, чтобы настроить расположение встроенного объекта в рамке элемента, а также свойство {{cssxref("object-fit")}}, чтобы контролировать регулирование размер объекта в соответствии с рамкой.</p>
+Вы можете использовать свойство {{cssxref("object-position")}}, чтобы настроить расположение встроенного объекта в рамке элемента, а также свойство {{cssxref("object-fit")}}, чтобы контролировать регулирование размер объекта в соответствии с рамкой.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;embed type="video/quicktime" src="movie.mov" width="640" height="480"&gt;
-</pre>
+```html
+<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div class="note">
-<p><strong>Note</strong>: До версии 45, Firefox не отображает содержимое HTML-ресурса, но сообщает о том, что для отображения контента требуется плагин (см. {{Bug("730768")}}).</p>
-</div>
+> **Примечание:** До версии 45, Firefox не отображает содержимое HTML-ресурса, но сообщает о том, что для отображения контента требуется плагин (см. {{Bug("730768")}}).
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+- Другие элементы, используемые для встраивания различного рода контента: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
+- Свойства, для позиционирования и определения размера внедрённого контента в его фрейме: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Другие элементы, используемые для встраивания различного рода контента: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.</li>
- <li>Свойства, для позиционирования и определения размера внедрённого контента в его фрейме: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
-</ul>
-
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

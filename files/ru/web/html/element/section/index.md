@@ -12,108 +12,84 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/section
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;section&gt;</code></strong> представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри HTML-документа.</span> Как правило, но не всегда, разделы имеют заголовок.</p>
+**HTML-элемент `<section>`** представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри HTML-документа. Как правило, но не всегда, разделы имеют заголовок.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
-<p>Например, меню навигации должно быть помещено в элемент {{htmlelement("nav")}}, но список результатов поиска и отображение карты с её элементами управления не имеют специфических элементов и могут быть помещены в <code>&lt;section&gt;</code>.</p>
+Например, меню навигации должно быть помещено в элемент {{htmlelement("nav")}}, но список результатов поиска и отображение карты с её элементами управления не имеют специфических элементов и могут быть помещены в `<section>`.
 
-<div class="note">
-<p><strong>Примечание:</strong> Если содержимое элемента имеет смысл объединить как единое целое (в цельный и независимый блок), то элемент {{HTMLElement("article")}} может стать лучшим выбором.</p>
+> **Примечание:** Если содержимое элемента имеет смысл объединить как единое целое (в цельный и независимый блок), то элемент {{HTMLElement("article")}} может стать лучшим выбором.
+
+| Категории контента                | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                                                                                                                                                                       |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Пропуск тега                      | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Разрешённые родительские элементы | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<section>` не должен быть потомком элемента {{HTMLElement("address")}}.                                                                                                                                                                                                                                                                                   |
+| Разрешённые роли ARIA             | {{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}} |
+| DOM-интерфейс                     | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+
+## Атрибуты
+
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+
+## Примечание
+
+- Каждый элемент `<section>` должен быть идентифицирован, обычно путём добавления заголовка (элементы {{HTMLElement('h1')}}-{{HTMLElement('h6')}}) в качестве дочернего элемента.
+- Если имеет смысл по-особому объединить содержимое элемента `<section>` (например, сделать цельным и независимым разделом HTML-документа), используйте вместо него элемент {{HTMLElement("article")}}.
+- Не используйте элемент `<section>` как общий контейнер; для этого есть {{HTMLElement("div")}}, особенно когда секционирование применяется только для стилизации. На практике раздел должен логически выделяться в структуре документа.
+
+## Пример 1
+
+### До
+
+```html
+<div>
+  <h1>Заголовок</h1>
+  <p>Много замечательного контента</p>
 </div>
+```
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Категории контента</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент">секционный контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">контент основного потока</a> в качестве содержимого. Обратите внимание, что элемент <code>&lt;section&gt;</code> не должен быть потомком элемента {{HTMLElement("address")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+### После
 
-<h2 id="Атрибуты">Атрибуты</h2>
+```html
+<section>
+  <h1>Заголовок</h1>
+  <p>Много замечательного контента</p>
+</section>
+```
 
-<p>К этому элементу применимы только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+## Пример 2
 
-<h2 id="Примечание">Примечание</h2>
+### До
 
-<ul>
- <li>Каждый элемент <code>&lt;section&gt;</code> должен быть идентифицирован, обычно путём добавления заголовка (элементы {{HTMLElement('h1')}}-{{HTMLElement('h6')}}) в качестве дочернего элемента.</li>
- <li>Если имеет смысл по-особому объединить содержимое элемента <code>&lt;section&gt;</code> (например, сделать цельным и независимым разделом HTML-документа), используйте вместо него элемент {{HTMLElement("article")}}.</li>
- <li>Не используйте элемент <code>&lt;section&gt;</code> как общий контейнер; для этого есть {{HTMLElement("div")}}, особенно когда секционирование применяется только для стилизации. На практике раздел должен логически выделяться в структуре документа.</li>
-</ul>
+```html
+<div>
+  <h2>Заголовок</h2>
+  <img src="bird.jpg" alt="птица">
+</div>
+```
 
-<h2 id="Пример_1">Пример 1</h2>
+### После
 
-<h3 id="До">До</h3>
+```html
+<section>
+  <h2>Заголовок</h2>
+  <img src="bird.jpg" alt="птица">
+</section>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h1&gt;Заголовок&lt;/h1&gt;
-  &lt;p&gt;Много замечательного контента&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="После">После</h3>
-
-<pre class="brush: html">&lt;section&gt;
-  &lt;h1&gt;Заголовок&lt;/h1&gt;
-  &lt;p&gt;Много замечательного контента&lt;/p&gt;
-&lt;/section&gt;
-</pre>
-
-<h2 id="Пример_2">Пример 2</h2>
-
-<h3 id="До_2">До</h3>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;Заголовок&lt;/h2&gt;
-  &lt;img src="bird.jpg" alt="птица"&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="После_2">После</h3>
-
-<pre class="brush: html">&lt;section&gt;
-  &lt;h2&gt;Заголовок&lt;/h2&gt;
-  &lt;img src="bird.jpg" alt="птица"&gt;
-&lt;/section&gt;
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Разделы и структура документа HTML5.</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: роль region</a></li>
-</ul>
+- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Разделы и структура документа HTML5.](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
+- [ARIA: роль region](/ru/docs/Web/Accessibility/ARIA/Roles/Region_role)

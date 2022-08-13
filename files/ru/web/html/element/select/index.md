@@ -3,89 +3,67 @@ title: <select>
 slug: Web/HTML/Element/select
 translation_of: Web/HTML/Element/select
 ---
-<p><span class="seoSummary"><strong>HTML тэг <code>&lt;select&gt;</code></strong> представляет собой элемент управления который содержит меню опций:</span></p>
+**HTML тэг `<select>`** представляет собой элемент управления который содержит меню опций:
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории содержимого</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">текстовый контент</a>, <a href="/en-US/docs/HTML/Content_categories#Interactive_content">интерактивный контент</a>, <a href="/en-US/docs/HTML/Content_categories#Form_listed">списочный</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/HTML/Content_categories#Form_resettable">сбрасываемый</a>, и <a href="/en-US/docs/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимое содержимое</th>
-   <td>Ноль или более {{HTMLElement("option")}} или {{HTMLElement("optgroup")}} элементы.</td>
-  </tr>
-  <tr>
-   <th scope="row">Опускание тегов</th>
-   <td>Открывающий и закрывающий теги обязательны.</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые родительские элементы</th>
-   <td>Любые элементы в которых разрешено текстовое содержимое</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённая ARIA роль</th>
-   <td>{{ARIARole("menu")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLSelectElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), [интерактивный контент](/ru/docs/HTML/Content_categories#Interactive_content), [списочный](/ru/docs/HTML/Content_categories#Form_listed), [labelable](/ru/docs/HTML/Content_categories#Form_labelable), [сбрасываемый](/ru/docs/HTML/Content_categories#Form_resettable), и [submittable](/ru/docs/HTML/Content_categories#Form_submittable) [form-associated ](/ru/docs/HTML/Content_categories#Form-associated_)element |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                     | Ноль или более {{HTMLElement("option")}} или {{HTMLElement("optgroup")}} элементы.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Опускание тегов                                           | Открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Допустимые родительские элементы                          | Любые элементы в которых разрешено текстовое содержимое                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Разрешённая ARIA роль                                     | {{ARIARole("menu")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| DOM интерфейс                                             | {{domxref("HTMLSelectElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Элемент включает <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Этот атрибут указывает что при загрузке страницы данный элемент формы должен иметь фокус ввода, пока пользователь не переопределит это, к примеру печатая в разных элементах управления. Только один элемент формы может иметь атрибут <code>autofocus</code>, элемент является логическим (булевым).</dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>Этот логический атрибут указывает что пользователь не может взаимодействовать с элементом управления. Если атрибут не указан, элемент управления наследует настройки от содержащего его элемента, к примеру <code>fieldset</code>; если у родительского элемента не указан атрибут <code>disabled</code>, то элемент управления доступен для взаимодействия.</dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Этот атрибут указывает к какой конкретно форме относится элемент &lt;select&gt; . Если атрибут указан, его значением должно быть ID формы в том же документе. Это позволяет размещать элементы &lt;select&gt; где угодно в документе, а не только как потомки форм.</dd>
- <dt>{{htmlattrdef("multiple")}}</dt>
- <dd>Этот логический атрибут указывает что возможен выбор нескольких опций в списке. Если данный атрибут не указан, то только одна опция может быть выбрана.</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>Этот атрибут используется для указания имени элемента управления.</dd>
- <dt>{{htmlattrdef("required")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Этот логический атрибут указывает что обязательно должна быть выбрана опция и которая содержит не пустую строку.</dd>
- <dt>{{htmlattrdef("size")}}</dt>
- <dd>Если элемент управления представлен как прокручиваемый список, этот атрибут указывает количество строк в списке, которые должны быть видны за раз. Браузеру не требуется представлять &lt;select&gt; в  виде прокручиваемого списка. Значение по умолчанию 0.</dd>
-</dl>
+- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+  - : Этот атрибут указывает что при загрузке страницы данный элемент формы должен иметь фокус ввода, пока пользователь не переопределит это, к примеру печатая в разных элементах управления. Только один элемент формы может иметь атрибут `autofocus`, элемент является логическим (булевым).
+- {{htmlattrdef("disabled")}}
+  - : Этот логический атрибут указывает что пользователь не может взаимодействовать с элементом управления. Если атрибут не указан, элемент управления наследует настройки от содержащего его элемента, к примеру `fieldset`; если у родительского элемента не указан атрибут `disabled`, то элемент управления доступен для взаимодействия.
+- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+  - : Этот атрибут указывает к какой конкретно форме относится элемент \<select> . Если атрибут указан, его значением должно быть ID формы в том же документе. Это позволяет размещать элементы \<select> где угодно в документе, а не только как потомки форм.
+- {{htmlattrdef("multiple")}}
+  - : Этот логический атрибут указывает что возможен выбор нескольких опций в списке. Если данный атрибут не указан, то только одна опция может быть выбрана.
+- {{htmlattrdef("name")}}
+  - : Этот атрибут используется для указания имени элемента управления.
+- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+  - : Этот логический атрибут указывает что обязательно должна быть выбрана опция и которая содержит не пустую строку.
+- {{htmlattrdef("size")}}
+  - : Если элемент управления представлен как прокручиваемый список, этот атрибут указывает количество строк в списке, которые должны быть видны за раз. Браузеру не требуется представлять \<select> в виде прокручиваемого списка. Значение по умолчанию 0.
 
-<div class="note"><strong>Примечания Firefox:</strong> Согласно спецификации HTML5, значение размера по умолчанию должно быть 1; однако на практике, оказывается что это портит некоторые веб сайты, и ни один браузер не придерживается этого на данный момент, поэтому Mozilla предпочла также указать 0 пока что в Firefox.</div>
+> **Примечание:** **Примечания Firefox:** Согласно спецификации HTML5, значение размера по умолчанию должно быть 1; однако на практике, оказывается что это портит некоторые веб сайты, и ни один браузер не придерживается этого на данный момент, поэтому Mozilla предпочла также указать 0 пока что в Firefox.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;!-- Начально будет выбрано второе значение --&gt;
-&lt;select name="select"&gt; &lt;!--Supplement an id here instead of using 'name'--&gt;
-  &lt;option value="value1"&gt;Значение 1&lt;/option&gt;
-  &lt;option value="value2" selected&gt;Значение 2&lt;/option&gt;
-  &lt;option value="value3"&gt;Значение 3&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html
+<!-- Начально будет выбрано второе значение -->
+<select name="select"> <!--Supplement an id here instead of using 'name'-->
+  <option value="value1">Значение 1</option>
+  <option value="value2" selected>Значение 2</option>
+  <option value="value3">Значение 3</option>
+</select>
+```
 
-<h3 id="Результат">Результат</h3>
-<p>{{EmbedLiveSample("")}}</p>
+### Результат
 
-<h3 id="Примечания">Примечания</h3>
+{{EmbedLiveSample("")}}
 
-<p>Контент этого элемента статичен и не <a href="/en-US/docs/HTML/Content_Editable">редактируемый</a>.</p>
+### Примечания
 
-<h2 id="Спецификации">Спецификации</h2>
+Контент этого элемента статичен и не [редактируемый](/ru/docs/HTML/Content_Editable).
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Другие элементы форм: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
- <li>События запускаемые <code>&lt;select&gt;</code>: <a href="/en-US/docs/Web/Events/change">change.</a></li>
-</ul>
+## Смотрите также
 
-<div>{{HTMLRef}}</div>
+- Другие элементы форм: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- События запускаемые `<select>`: [change.](/ru/docs/Web/Events/change)
+
+{{HTMLRef}}

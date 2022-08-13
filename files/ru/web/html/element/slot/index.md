@@ -3,57 +3,31 @@ title: <slot>
 slug: Web/HTML/Element/slot
 translation_of: Web/HTML/Element/slot
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><span class="seoSummary">HTML-элемент <code>&lt;slot&gt;</code> является частью набора технологии <a href="/en-US/docs/Web/Web_Components">Web Components</a>, является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.</span></p>
+HTML-элемент `<slot>` является частью набора технологии [Web Components](/ru/docs/Web/Web_Components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Поток контента</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">содержание формулировки</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">Прозрачный</a></td>
-  </tr>
-  <tr>
-   <th scope="row">События</th>
-   <td>{{event("slotchange")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый родители</th>
-   <td>Любой элемент, который принимает<a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"> содержание формулировки</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Никакой</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс DOM</th>
-   <td>{{domxref("HTMLSlotElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content) |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
+| События                                                    | {{event("slotchange")}}                                                                                                                      |
+| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                              |
+| Разрешённый родители                                       | Любой элемент, который принимает[ содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
+| Разрешённые роли ARIA                                      | Никакой                                                                                                                                               |
+| Интерфейс DOM                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd><p>Название слота.</p>
- <p><dfn><strong>Именованный слот</strong></dfn> это элемент <code>&lt;slot&gt;</code> с атрибутом<code> name</code>.</p></dd>
-</dl>
+- {{htmlattrdef("name")}}
+  - : Название слота._**Именованный слот**_ это элемент `<slot>` с атрибутом` name`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+```html
+<template id="element-details-template">
+  <style>
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
@@ -66,27 +40,27 @@ translation_of: Web/HTML/Element/slot
     }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-      &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;Attributes&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;</pre>
+  </style>
+  <details>
+    <summary>
+      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете увидеть этот полный пример в действии на странице  <a class="external external-icon" href="https://github.com/mdn/web-components-examples/tree/master/element-details" rel="noopener">element-details</a> (смотрите его <a class="external external-icon" href="https://mdn.github.io/web-components-examples/element-details/" rel="noopener">в режиме реального времени</a>). Кроме того, вы можете найти в разделе <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Использование шаблонов и слотов</a>.</p>
-</div>
+> **Примечание:** вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
+
+{{Compat}}

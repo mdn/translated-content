@@ -14,108 +14,84 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/div
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>Элемент разделения контента HTML</strong> (<code><strong>&lt;div&gt;</strong></code>) является универсальным контейнером для <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">потокового контента</a>. Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью {{glossary("CSS")}}.</span></p>
+**Элемент разделения контента HTML** (**`<div>`**) является универсальным контейнером для [потокового контента](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент). Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью {{glossary("CSS")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-<p>Являясь "чистым" контейнером, элемент <code>&lt;div&gt;</code>, по существу, не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя атрибуты {{htmlattrxref("class")}} или {{htmlattrxref("id")}}, помечать раздел документа, написанный на разных языках (используя атрибут {{htmlattrxref("lang")}}), и так далее.</p>
+Являясь "чистым" контейнером, элемент `<div>`, по существу, не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя атрибуты {{htmlattrxref("class")}} или {{htmlattrxref("id")}}, помечать раздел документа, написанный на разных языках (используя атрибут {{htmlattrxref("lang")}}), и так далее.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a> или (в {{glossary("WHATWG")}} HTML), если родительским является элемент {{HTMLElement("dl")}}: один или несколько элементов {{HTMLElement("dt")}}, сопровождаемых одним или более элементами {{HTMLElement("dd")}}, в ряде случаев смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">потоковый контент</a> в качестве содержимого..<br>
-    Или (в {{glossary("WHATWG")}} HTML): элемент {{HTMLElement("dl")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLDivElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент) или (в {{glossary("WHATWG")}} HTML), если родительским является элемент {{HTMLElement("dl")}}: один или несколько элементов {{HTMLElement("dt")}}, сопровождаемых одним или более элементами {{HTMLElement("dd")}}, в ряде случаев смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. |
+| Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                                                                                                                                                         |
+| Разрешённые родительские элементы                                | Любой элемент, который разрешает [потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент) в качестве содержимого.. Или (в {{glossary("WHATWG")}} HTML): элемент {{HTMLElement("dl")}}.                                                                                                                                                                                                                    |
+| Разрешённые роли ARIA                                            | Любые                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| DOM-интерфейс                                                    | {{domxref("HTMLDivElement")}}                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>К этому элементу применимы <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<div class="blockIndicator note">
- <p><strong>Примечание:</strong> Атрибут <code>align</code> устарел и вышел из употребления; не используйте его больше. Вместо этого, вам следует использовать свойства {{glossary("CSS")}} или методы, такие как <a href="/ru/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> или <a href="/ru/docs/Learn/CSS/CSS_layout/Flexbox">CSS Flexbox</a> для выравнивания и изменения положения элементов <code>&lt;div&gt;</code> на странице.</p>
+> **Примечание:** Атрибут `align` устарел и вышел из употребления; не используйте его больше. Вместо этого, вам следует использовать свойства {{glossary("CSS")}} или методы, такие как [CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout) или [CSS Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox) для выравнивания и изменения положения элементов `<div>` на странице.
+
+## Примечание
+
+- Элемент `<div>` следует использовать только в том случае, если никакой другой семантический элемент (такой как {{HTMLElement("article")}} или {{HTMLElement("nav")}}) не подходит.
+
+## Примеры
+
+### Простой пример
+
+```html
+<div>
+  <p>Любой тип контента. Например,
+  &lt;p&gt;, &lt;table&gt;. Все что угодно!</p>
 </div>
+```
 
-<h2 id="Примечание">Примечание</h2>
+Результат будет выглядеть так:
 
-<ul>
- <li>Элемент <code>&lt;div&gt;</code> следует использовать только в том случае, если никакой другой семантический элемент (такой как {{HTMLElement("article")}} или {{HTMLElement("nav")}}) не подходит.</li>
-</ul>
+{{EmbedLiveSample("Простой_пример", 650, 60)}}
 
-<h2 id="Примеры">Примеры</h2>
+### Стилизованный пример
 
-<h3 id="Простой_пример">Простой пример</h3>
+Этот пример создаёт прямоугольник с тенью, применяя стили к `<div>` с помощью CSS. Заметьте, что использование атрибута {{htmlattrxref("class")}} на элементе `<div>` даёт применение стилей `"shadowbox"` (в дословном переводе означает "теневая коробка") к элементу.
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Любой тип контента. Например,
-  &amp;lt;p&amp;gt;, &amp;lt;table&amp;gt;. Все что угодно!&lt;/p&gt;
-&lt;/div&gt; </pre>
+#### HTML
 
-<p>Результат будет выглядеть так:</p>
+```html
+<div class="shadowbox">
+  <p>Вот очень интересная заметка в прекрасном прямоугольнике с тенью.</p>
+</div>
+```
 
-<p>{{EmbedLiveSample("Простой_пример", 650, 60)}}</p>
+#### CSS
 
-<h3 id="Стилизованный_пример">Стилизованный пример</h3>
-
-<p>Этот пример создаёт прямоугольник с тенью, применяя стили к  <code>&lt;div&gt;</code> с помощью CSS. Заметьте, что использование атрибута {{htmlattrxref("class")}} на элементе <code>&lt;div&gt;</code> даёт применение стилей <code>"shadowbox"</code> (в дословном переводе означает "теневая коробка") к элементу.</p>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div class="shadowbox"&gt;
-  &lt;p&gt;Вот очень интересная заметка в прекрасном прямоугольнике с тенью.&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.shadowbox {
+```css
+.shadowbox {
   width: 15em;
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Стилизованный_пример", 650, 120)}}</p>
+{{EmbedLiveSample("Стилизованный_пример", 650, 120)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Семантические секционные элементы: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}</li>
- <li>Элемент {{HTMLElement("span")}} для стилизации фразового контента.</li>
-</ul>
+- Семантические секционные элементы: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
+- Элемент {{HTMLElement("span")}} для стилизации фразового контента.

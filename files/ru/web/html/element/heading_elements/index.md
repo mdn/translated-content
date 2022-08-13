@@ -3,238 +3,173 @@ title: '<h1>–<h6>: HTML-элементы заголовков секций'
 slug: Web/HTML/Element/Heading_Elements
 translation_of: Web/HTML/Element/Heading_Elements
 ---
-<p id="Summary"><span class="seoSummary"><strong>HTML-элементы <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code></strong> представляют собой 6 уровней заголовков секций. <code>&lt;h1&gt;</code> это наибольший заголовок и<code>&lt;h6&gt;</code> - наименьший</span></p>
+**HTML-элементы `<h1>`–`<h6>`** представляют собой 6 уровней заголовков секций. `<h1>` это наибольший заголовок и`<h6>` - наименьший
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Поток контента</a>, заголовок контента, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Фразированное содержание</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любые элементы которые принимают <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Содержание потока</a>; не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ДМИП</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLHeadingElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), заголовок контента, явный контент.                                                                                        |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                        | [Фразированное содержание](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                             |
+| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                                                       |
+| Разрешённые родители                                       | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
+| Разрешённые роли ДМИП                                      | {{ARIARole("tab")}}, {{ARIARole("presentation")}}                                                                                                                                 |
+| DOM интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                   |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Эти элементы включают <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Эти элементы включают [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<div class="note">
-<p>Атрибут <code>align</code> устаревший; не используйте его.</p>
-</div>
+> **Примечание:** Атрибут `align` устаревший; не используйте его.
 
-<h2 id="Примечания_к_использованию">Примечания к использованию</h2>
+## Примечания к использованию
 
-<ul>
- <li>Информация о заголовке может использоваться пользовательскими агентами, например, для автоматического создания оглавления для документа</li>
- <li>Не используйте низкие уровни чтобы снизить размер шрифта: используйте <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font-size")}} вместо.</li>
- <li>Избегайте пропуск уровней заголовков: всегда начинайте с <code>&lt;h1&gt;</code>, потом используйте <code>&lt;h2&gt;</code>, и так далее.</li>
- <li>Вам следует рассмотреть избегание использования &lt;h1&gt; более раза на страницу. Смотрите {{SectionOnPage("/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}.</li>
-</ul>
+- Информация о заголовке может использоваться пользовательскими агентами, например, для автоматического создания оглавления для документа
+- Не используйте низкие уровни чтобы снизить размер шрифта: используйте [CSS](/ru/docs/Web/CSS) {{cssxref("font-size")}} вместо.
+- Избегайте пропуск уровней заголовков: всегда начинайте с `<h1>`, потом используйте `<h2>`, и так далее.
+- Вам следует рассмотреть избегание использования \<h1> более раза на страницу. Смотрите {{SectionOnPage("/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Все_заголовки">Все заголовки</h3>
+### Все заголовки
 
-<p>Следующий код показывает все уровни заголовков в действии</p>
+Следующий код показывает все уровни заголовков в действии
 
-<pre class="brush: html">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-&lt;h5&gt;Heading level 5&lt;/h5&gt;
-&lt;h6&gt;Heading level 6&lt;/h6&gt;
-</pre>
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
 
-<p>Вот результат этого кода:</p>
+Вот результат этого кода:
 
-<p>{{ EmbedLiveSample('Все_заголовки', '280', '300', '') }}</p>
+{{ EmbedLiveSample('Все_заголовки', '280', '300', '') }}
 
-<h3 id="Пример_страницы">Пример страницы</h3>
+### Пример страницы
 
-<p>Следующий код показывает несколько заголовков с некоторым содержанием под ними .</p>
+Следующий код показывает несколько заголовков с некоторым содержанием под ними .
 
-<pre class="brush: html">&lt;h1&gt;Heading elements&lt;/h1&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here...</p>
 
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;h3&gt;Example 1&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here...</p>
 
-&lt;h3&gt;Example 2&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h3>Example 2</h3>
+<p>Some text here...</p>
 
-&lt;h2&gt;See also&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
-</pre>
+<h2>See also</h2>
+<p>Some text here...</p>
+```
 
-<p>Результат кода:</p>
+Результат кода:
 
-<p>{{ EmbedLiveSample('Пример_страницы', '280', '480', '') }}</p>
+{{ EmbedLiveSample('Пример_страницы', '280', '480', '') }}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<h3 id="Навигация">Навигация</h3>
+### Навигация
 
-<p>Обычный метод навигации для пользователей программ чтения с экрана - это переход от заголовка к заголовку для быстрого определения содержимого страницы. Из-за этого важно не пропускать один или несколько уровней заголовка. Это может создать путаницу, так как человеку, который движется по этому пути, может быть интересно узнать, где находится отсутствующий заголовок.</p>
+Обычный метод навигации для пользователей программ чтения с экрана - это переход от заголовка к заголовку для быстрого определения содержимого страницы. Из-за этого важно не пропускать один или несколько уровней заголовка. Это может создать путаницу, так как человеку, который движется по этому пути, может быть интересно узнать, где находится отсутствующий заголовок.
 
-<h4 id="Не_делай">Не делай</h4>
+#### Не делай
 
-<pre>&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-</pre>
+    <h1>Heading level 1</h1>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
 
-<h4 id="Делай">Делай</h4>
+#### Делай
 
-<pre>&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-</pre>
+    <h1>Heading level 1</h1>
+    <h2>Heading level 2</h2>
+    <h3>Heading level 3</h3>
 
-<h4 id="Расположение">Расположение</h4>
+#### Расположение
 
-<p>Заголовки могут быть вложены в подразделы, чтобы отразить организацию содержимого страницы. Большинство программ чтения с экрана также могут создавать упорядоченный список всех заголовков на странице, что может помочь человеку быстро определить иерархию содержимого:</p>
+Заголовки могут быть вложены в подразделы, чтобы отразить организацию содержимого страницы. Большинство программ чтения с экрана также могут создавать упорядоченный список всех заголовков на странице, что может помочь человеку быстро определить иерархию содержимого:
 
-<ol>
- <li><code>h1</code> Жуки
+1.  `h1` Жуки
 
-  <ol>
-   <li><code>h2</code> Этимология</li>
-   <li><code>h2</code> Распределение и разнообразие</li>
-   <li><code>h2</code><span> Эволюция</span>
-    <ol>
-     <li><code>h3</code> Поздний полиозой</li>
-     <li><code>h3</code> Юрский период</li>
-     <li><code>h3</code> Меловойский период</li>
-     <li><code>h3</code><span> К</span>айнозойский период</li>
-    </ol>
-   </li>
-   <li><code>h2</code> Внешняя морфология
-    <ol>
-     <li><code>h3</code> Голова
-      <ol>
-       <li><code>h4</code> Рот</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Туловище
-      <ol>
-       <li><code>h4</code> Передгрудь</li>
-       <li><code>h4</code> Пиероторакс</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Ноги</li>
-     <li><code>h3</code> Крыла</li>
-     <li><code>h3</code> Живот</li>
-    </ol>
-   </li>
-  </ol>
- </li>
-</ol>
+    1.  `h2` Этимология
+    2.  `h2` Распределение и разнообразие
+    3.  `h2` Эволюция
 
-<p>Когда заголовки вложены, уровни заголовков могут быть «пропущены» при закрытии подраздела.</p>
+        1.  `h3` Поздний полиозой
+        2.  `h3` Юрский период
+        3.  `h3` Меловойский период
+        4.  `h3` Кайнозойский период
 
-<ul>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Заголовки • Структура страницы • Обучающие материалы по веб-доступности WAI</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Понимание WCAG, объяснение Руководства 1.3</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Понимание критерия успеха 1.3.1 | W3C Понимание WCAG 2.0</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN Понимание WCAG, Руководство 2.4 пояснения</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Понимание критерия успеха 2.4.1 | W3C Понимание WCAG 2.0 </a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Понимание критерия успеха 2.4.6 | W3C Понимание WCAG 2.0</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Понимание критерия успеха 2.4.10 | W3C Понимание WCAG 2.0</a></li>
-</ul>
+    4.  `h2` Внешняя морфология
 
-<h3 id="Содержание_раздела_маркировки">Содержание раздела маркировки</h3>
+        1.  `h3` Голова
 
-<p>Другим распространённым методом навигации для пользователей программ чтения с экрана является создание списка содержимого секций и использование его для определения макета страницы.</p>
+            1.  `h4` Рот
 
-<p>Содержимое секционирования можно пометить, используя комбинацию <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> и {{htmlattrxref("id")}} атрибута, с ярлыком, кратко описывающим назначение раздела. Этот метод полезен в ситуациях, когда на одной странице имеется более одного элемента секционирования.</p>
+        2.  `h3` Туловище
 
-<h4 id="Пример">Пример</h4>
+            1.  `h4` Передгрудь
+            2.  `h4` Пиероторакс
 
-<pre>&lt;header&gt;
-  &lt;nav aria-labelledby="primary-navigation"&gt;
-    &lt;h2 id="primary-navigation"&gt;Primary navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+        3.  `h3` Ноги
+        4.  `h3` Крыла
+        5.  `h3` Живот
 
-&lt;!-- page content --&gt;
+Когда заголовки вложены, уровни заголовков могут быть «пропущены» при закрытии подраздела.
 
-&lt;footer&gt;
-  &lt;nav aria-labelledby="footer-navigation"&gt;
-    &lt;h2 id="footer-navigation"&gt;Footer navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/footer&gt;
-</pre>
+- [Заголовки • Структура страницы • Обучающие материалы по веб-доступности WAI](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- [MDN Понимание WCAG, объяснение Руководства 1.3](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Понимание критерия успеха 1.3.1 | W3C Понимание WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [MDN Понимание WCAG, Руководство 2.4 пояснения](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Понимание критерия успеха 2.4.1 | W3C Понимание WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Понимание критерия успеха 2.4.6 | W3C Понимание WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+- [Понимание критерия успеха 2.4.10 | W3C Понимание WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
-<p>В этом примере технология чтения с экрана объявила бы, что есть два {{HTMLElement("nav")}} разделы, один называется «Основная навигация», а другой - «Нижний колонтитул». Если ярлыки не были предоставлены, человеку, использующему программное обеспечение для чтения с экрана, возможно, придётся расследовать каждый <code>nav</code> содержание элемента, чтобы определить их назначение.</p>
+### Содержание раздела маркировки
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Использование атрибута aria-labelledby</a></li>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby">Обозначение регионов • Структура страницы • Учебные пособия по WAC WAI</a></li>
-</ul>
+Другим распространённым методом навигации для пользователей программ чтения с экрана является создание списка содержимого секций и использование его для определения макета страницы.
 
-<h2 id="Характеристики">Характеристики</h2>
+Содержимое секционирования можно пометить, используя комбинацию [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) и {{htmlattrxref("id")}} атрибута, с ярлыком, кратко описывающим назначение раздела. Этот метод полезен в ситуациях, когда на одной странице имеется более одного элемента секционирования.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристика</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+#### Пример
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+    <header>
+      <nav aria-labelledby="primary-navigation">
+        <h2 id="primary-navigation">Primary navigation</h2>
+        <!-- navigation items -->
+      </nav>
+    </header>
 
-<p>{{Compat}}</p>
+    <!-- page content -->
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+    <footer>
+      <nav aria-labelledby="footer-navigation">
+        <h2 id="footer-navigation">Footer navigation</h2>
+        <!-- navigation items -->
+      </nav>
+    </footer>
 
-<ul>
- <li>{{HTMLElement("p")}}</li>
- <li>{{HTMLElement("div")}}</li>
- <li>{{HTMLElement("section")}}</li>
-</ul>
+В этом примере технология чтения с экрана объявила бы, что есть два {{HTMLElement("nav")}} разделы, один называется «Основная навигация», а другой - «Нижний колонтитул». Если ярлыки не были предоставлены, человеку, использующему программное обеспечение для чтения с экрана, возможно, придётся расследовать каждый `nav` содержание элемента, чтобы определить их назначение.
 
+- [Использование атрибута aria-labelledby](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Обозначение регионов • Структура страницы • Учебные пособия по WAC WAI](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
+## Характеристики
+
+| Характеристика                                                                                                                                                                                                           | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                                         | {{Spec2('HTML4.01')}}     |             |
+
+## Совместимость с браузером
+
+{{Compat}}
+
+## Смотрите также
+
+- {{HTMLElement("p")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("section")}}

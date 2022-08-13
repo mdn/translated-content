@@ -5,86 +5,60 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/map
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML-элемент <code>&lt;map&gt;</code> </strong>используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).</p>
+**HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Потоковый контент</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">фразовый контент</a>, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td>Любой <a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0">прозрачный</a> элемент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любые элементы, которые принимают <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLMapElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), явный контент.                                                                  |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                    | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                   |
+| Разрешённые родители                                   | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
+| Разрешённые ARIA роли                                  | Нет                                                                                                                                                                                                                        |
+| DOM интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Элемент включает <a href="/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Элемент включает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>Атрибут name даёт карте имя, чтобы на неё можно было ссылаться. Атрибут должен быть определён и иметь не пустое значение без пробелов. Значение атрибута name не должно совпадать с регистром совместимости со значением атрибута name другого элемента карты в том же документе. Если также указан атрибут id, то они оба должны иметь одинаковое значение.</dd>
-</dl>
+- {{htmlattrdef("name")}}
+  - : Атрибут name даёт карте имя, чтобы на неё можно было ссылаться. Атрибут должен быть определён и иметь не пустое значение без пробелов. Значение атрибута name не должно совпадать с регистром совместимости со значением атрибута name другого элемента карты в том же документе. Если также указан атрибут id, то они оба должны иметь одинаковое значение.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;map name="primary"&gt;
-  &lt;area shape="circle" coords="75,75,75" href="left.html"&gt;
-  &lt;area shape="circle" coords="275,75,75" href="right.html"&gt;
-&lt;/map&gt;
-&lt;img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic"&gt;
-</pre>
+```html
+<map name="primary">
+  <area shape="circle" coords="75,75,75" href="left.html">
+  <area shape="circle" coords="275,75,75" href="right.html">
+</map>
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+```
 
-<h2 id="Живой_пример">Живой пример</h2>
+## Живой пример
 
-<p>{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}</p>
+{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}
 
-<h3 id="Ожидаемые_выходные_данные">Ожидаемые выходные данные</h3>
+### Ожидаемые выходные данные
 
-<p>Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):</p>
+Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):
 
-<p><em>Для ссылки <code>left.html</code>:</em><br>
- <img alt="" src="https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png" style="height: 156px; width: 356px;"></p>
+_Для ссылки `left.html`:_
+![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
 
-<p><em>Для ссылки <code>right.html</code>:</em><br>
- <img alt="" src="https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png" style="height: 157px; width: 355px;"></p>
+_Для ссылки `right.html`:_
+![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{HTMLElement("a")}}</li>
- <li>{{HTMLElement("area")}}</li>
-</ul>
+- {{HTMLElement("a")}}
+- {{HTMLElement("area")}}

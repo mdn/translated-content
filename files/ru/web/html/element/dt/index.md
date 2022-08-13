@@ -13,60 +13,38 @@ tags:
   - списки
 translation_of: Web/HTML/Element/dt
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;dt&gt;</code> </strong>который определяет термин в описании или списке определений, как таковой должен использоваться внутри элемента  {{HTMLElement("dl")}} .</span> Обычно за ним следует элемент {{HTMLElement("dd")}}. Кроме того, несколько элементов <code>&lt;dt&gt;</code> идущие друг за другом будут содержать своё определение в следующем идущем за ним элементом{{HTMLElement("dd")}}.</p>
+**HTML-элемент `<dt>` **который определяет термин в описании или списке определений, как таковой должен использоваться внутри элемента {{HTMLElement("dl")}} . Обычно за ним следует элемент {{HTMLElement("dd")}}. Кроме того, несколько элементов `<dt>` идущие друг за другом будут содержать своё определение в следующем идущем за ним элементом{{HTMLElement("dd")}}.
 
-<p>Последующий элемент {{HTMLElement("dd")}} (<em>от англ. Description Details)</em> предоставляет определение или другой связанный текст, относящийся к термину, указанным с помощью <code>&lt;dt&gt;</code>.</p>
+Последующий элемент {{HTMLElement("dd")}} (_от англ. Description Details)_ предоставляет определение или другой связанный текст, относящийся к термину, указанным с помощью `<dt>`.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, но без потомков {{HTMLElement("header")}}, {{HTMLElement("footer")}}, секционного контента или заголовочного контента.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>Открывающий тег обязателен. Конечный тег может быть опущен, если за этим элементом непосредственно следует другой элемент <code>&lt;dt&gt;</code> или {{HTMLElement("dd")}}, или если в родительском элементе нет больше содержимого.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Перед элементом {{HTMLElement("dt")}} или {{HTMLElement("dd")}}, внутри {{HTMLElement("dl")}} или (в <a href="/ru/docs/Glossary/WHATWG">WHATWG</a> HTML) элемента {{HTMLElement("div")}} который внутри {{HTMLElement("dl")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}} До Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует <a href="/ru/docs/Web/API/HTMLSpanElement"><code>HTMLSpanElement</code></a> интерфейс для этого элемента.</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), но без потомков {{HTMLElement("header")}}, {{HTMLElement("footer")}}, секционного контента или заголовочного контента.                               |
+| Пропуск тегов                                                    | Открывающий тег обязателен. Конечный тег может быть опущен, если за этим элементом непосредственно следует другой элемент `<dt>` или {{HTMLElement("dd")}}, или если в родительском элементе нет больше содержимого.                           |
+| Разрешённые родители                                             | Перед элементом {{HTMLElement("dt")}} или {{HTMLElement("dd")}}, внутри {{HTMLElement("dl")}} или (в [WHATWG](/ru/docs/Glossary/WHATWG) HTML) элемента {{HTMLElement("div")}} который внутри {{HTMLElement("dl")}}. |
+| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                                                                                                   |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}} До Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) интерфейс для этого элемента.                                                                   |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Для примера можно использовать <a href="/ru/docs//Web/HTML/Element/dl#Одиночные_термин_и_определение">образец для <code>&lt;dl&gt;</code> элемента</a>.</p>
+Для примера можно использовать [образец для `<dl>` элемента](/ru/docs//Web/HTML/Element/dl#Одиночные_термин_и_определение).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTMLElement("dd")}}, {{HTMLElement("dl")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTMLElement("dd")}}, {{HTMLElement("dl")}}

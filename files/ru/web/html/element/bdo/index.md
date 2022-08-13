@@ -5,81 +5,51 @@ tags:
   - направление текста
 translation_of: Web/HTML/Element/bdo
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент переопределения двунаправленного текста </strong> (<strong><code>&lt;bdo&gt;</code></strong>) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.</span></p>
+**HTML-элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
+Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).
 
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.                           |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                 |
+| Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                               |
+| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
+| Допустимые ARIA-роли                                   | Любый                                                                                                                                                                                  |
+| DOM interface                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
 
-<p>Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).</p>
+## Атрибуты
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Потоковый контент</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">фразовый контент</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимый контент</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Закрывающий тег</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые родители</th>
-   <td>Все элементы, принимающие <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">фразовый контент</a>,</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые ARIA-роли</th>
-   <td>Любый</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс <code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> для этого элемента.</td>
-  </tr>
- </tbody>
-</table>
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<h2 id="Атрибуты">Атрибуты</h2>
+- {{htmlattrdef("dir")}}
+  - : Направление, в котором должен отображаться текст внутри элемента. Возможные значения:\* `ltr`: Указывает, что текст должен идти слева направо.
+    - `rtl`: Указывает, что текст должен идти справа налево.
 
-<p>Этот элемент поддерживает <a href="/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+## Примеры
 
-<dl>
- <dt>{{htmlattrdef("dir")}}</dt>
- <dd>Направление, в котором должен отображаться текст внутри элемента. Возможные значения:
- <ul>
-  <li><code>ltr</code>: Указывает, что текст должен идти слева направо.</li>
-  <li><code>rtl</code>: Указывает, что текст должен идти справа налево.</li>
- </ul>
- </dd>
-</dl>
+```html
+<!-- Переключение направления текста -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right
+to left.</bdo></p>
+```
 
-<h2 id="Примеры">Примеры</h2>
+### Результат
 
-<pre class="brush: html">&lt;!-- Переключение направления текста --&gt;
-&lt;p&gt;This text will go left to right.&lt;/p&gt;
-&lt;p&gt;&lt;bdo dir="rtl"&gt;This text will go right
-to left.&lt;/bdo&gt;&lt;/p&gt;
-</pre>
+{{EmbedLiveSample('Примеры')}}
 
-<h3 id="Результат">Результат</h3>
+## Примечания
 
-<p>{{EmbedLiveSample('Примеры')}}</p>
+Спецификация HTML 4 не указывала события для этого элемента; они были добавлены в XHTML.
 
-<h2 id="Примечания">Примечания</h2>
-
-<p>Спецификация HTML 4 не указывала события для этого элемента; они были добавлены в XHTML.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

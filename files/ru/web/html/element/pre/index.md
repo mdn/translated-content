@@ -8,144 +8,91 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/pre
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>Элемент HTML <code>&lt;pre&gt;</code> </strong> представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле.</span> Текст обычно отображается с использованием непропорционального ("<a href="/ru/docs/XUL/Style/monospace">monospace</a>") шрифта. Пробелы внутри этого элемента отображаются как записанные.</p>
+**Элемент HTML `<pre>` **представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82">Явный контент</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Фразовый контент</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент, который принимает <a href="/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA">содержимое потока</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Неявная роль ARIA</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс DOM</th>
-   <td>{{domxref("HTMLPreElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [Явный контент](/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82) |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                              | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content)                                                                                                                                                                                                     |
+| Tag omission                                                     | {{no_tag_omission}}                                                                                                                                                                                                                                                            |
+| Разрешённые родители                                             | Любой элемент, который принимает [содержимое потока](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)                                                                                                    |
+| Неявная роль ARIA                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                              |
+| Разрешённые роли ARIA                                            | Любые                                                                                                                                                                                                                                                                               |
+| Интерфейс DOM                                                    | {{domxref("HTMLPreElement")}}                                                                                                                                                                                                                                            |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя только <a href="/ru/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}</dt>
- <dd>Содержит <em>предпочтительное</em> количество символов, которое должна иметь строка. Это был нестандартный синоним {{htmlattrxref("width", "pre")}}. Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.</dd>
- <dt>{{htmlattrdef("width")}} {{obsolete_inline}}</dt>
- <dd>Содержит <em>предпочтительное</em> количество символов, которое должна иметь строка. Хотя технически он все ещё реализован, этот атрибут не имеет визуального эффекта; чтобы достичь такого эффекта, используйте CSS {{Cssxref("width")}}.</dd>
- <dt>{{htmlattrdef("wrap")}} {{non-standard_inline}}</dt>
- <dd>Подсказка, указывающая, как должен происходить перенос. В современных браузерах этот атрибут игнорируется, и никакого визуального эффекта не приводит; чтобы достичь такого эффекта, используйте CSS {{Cssxref("white-space")}}.</dd>
-</dl>
+- {{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}
+  - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Это был нестандартный синоним {{htmlattrxref("width", "pre")}}. Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.
+- {{htmlattrdef("width")}} {{obsolete_inline}}
+  - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Хотя технически он все ещё реализован, этот атрибут не имеет визуального эффекта; чтобы достичь такого эффекта, используйте CSS {{Cssxref("width")}}.
+- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+  - : Подсказка, указывающая, как должен происходить перенос. В современных браузерах этот атрибут игнорируется, и никакого визуального эффекта не приводит; чтобы достичь такого эффекта, используйте CSS {{Cssxref("white-space")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Использовать CSS для изменения цвета шрифта легко.&lt;/p&gt;
-&lt;pre&gt;
+```html
+<p>Использовать CSS для изменения цвета шрифта легко.</p>
+<pre>
 body {
   color: red;
 }
-&lt;/pre&gt;
 </pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Важно предоставить альтернативное описание для любых изображений или диаграмм, созданных с использованием предварительно отформатированного текста. Альтернативное описание должно чётко и лаконично описывать содержание изображения или диаграммы.</p>
+Важно предоставить альтернативное описание для любых изображений или диаграмм, созданных с использованием предварительно отформатированного текста. Альтернативное описание должно чётко и лаконично описывать содержание изображения или диаграммы.
 
-<p>Люди, испытывающие проблемы с плохим зрением и просматривающие страницы с помощью вспомогательных технологий, таких как программа чтения с экрана, могут не понимать, что представляют собой предварительно отформатированные текстовые символы, когда они читаются последовательно.</p>
+Люди, испытывающие проблемы с плохим зрением и просматривающие страницы с помощью вспомогательных технологий, таких как программа чтения с экрана, могут не понимать, что представляют собой предварительно отформатированные текстовые символы, когда они читаются последовательно.
 
-<p>Комбинация элементов {{HTMLElement("figure")}} и {{HTMLElement("figcaption")}}, дополненная {{htmlattrxref("id")}} и <a href="/ru/docs/Web/Accessibility/ARIA">ARIA</a> <code>role</code> и <code>aria-labelledby</code>, позволяет объявить предварительно отформатированный текст как изображение, а <code>figcaption</code> служит альтернативным описанием изображения.</p>
+Комбинация элементов {{HTMLElement("figure")}} и {{HTMLElement("figcaption")}}, дополненная {{htmlattrxref("id")}} и [ARIA](/ru/docs/Web/Accessibility/ARIA) `role` и `aria-labelledby`, позволяет объявить предварительно отформатированный текст как изображение, а `figcaption` служит альтернативным описанием изображения.
 
-<h3 id="Пример_2">Пример</h3>
+### Пример
 
-<pre>&lt;figure role="img" aria-labelledby="cow-caption"&gt;
-  &lt;pre&gt;
-  ____________________________
-&lt;  Я эксперт в своей области.  &gt;
-  ----------------------------
-         \   ^__^
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-  &lt;/pre&gt;
-  &lt;figcaption id="cow-caption"&gt;
-     Корова говорит: «Я эксперт в своей области». Корова проиллюстрирована с использованием предварительно отформатированных текстовых символов.
-  &lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+    <figure role="img" aria-labelledby="cow-caption">
+      <pre>
+      ____________________________
+    <  Я эксперт в своей области.  >
+      ----------------------------
+             \   ^__^
+              \  (oo)\_______
+                 (__)\       )\/\
+                     ||----w |
+                     ||     ||
+      </pre>
+      <figcaption id="cow-caption">
+         Корова говорит: «Я эксперт в своей области». Корова проиллюстрирована с использованием предварительно отформатированных текстовых символов.
+      </figcaption>
+    </figure>
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H86.html">H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
+- [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No significant change from {{SpecName("HTML5 W3C")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>No significant change from {{SpecName("HTML4.01")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Deprecated the <code>cols</code> attribute</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                 | Статус                           | Комментарий                                                 |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}         | {{Spec2('HTML WHATWG')}} | No significant change from {{SpecName("HTML5 W3C")}} |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}     | No significant change from {{SpecName("HTML4.01")}} |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}                     | {{Spec2('HTML4.01')}}     | Deprecated the `cols` attribute                             |
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
+{{Compat}}
 
+## Смотреть также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотреть_также">Смотреть также</h2>
-
-<ul>
- <li>CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}</li>
- <li>Связанный элемент: {{HTMLElement("code")}}</li>
-</ul>
+- CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
+- Связанный элемент: {{HTMLElement("code")}}

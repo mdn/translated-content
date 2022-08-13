@@ -4,78 +4,47 @@ slug: Web/HTML/Attributes/crossorigin
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/CORS_settings_attributes
 ---
-<p><span class="seoSummary">В HTML5 некоторые теги поддерживают <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a>, например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут <code>crossorigin</code>  (<code>crossOrigin</code> свойство), которое позволяет настроить CORS запросы для данных получаемых элементом.</span> Эти атрибуты могут иметь следующие значения:</p>
+В HTML5 некоторые теги поддерживают [CORS](/ru/docs/HTTP/Access_control_CORS), например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут `crossorigin` (`crossOrigin` свойство), которое позволяет настроить CORS запросы для данных получаемых элементом. Эти атрибуты могут иметь следующие значения:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Ключевое слово</td>
-   <td class="header">Описание</td>
-  </tr>
-  <tr>
-   <td><code>anonymous</code></td>
-   <td>CORS запросы от этого элемента не будут передавать учётные данные.</td>
-  </tr>
-  <tr>
-   <td><code>use-credentials</code></td>
-   <td>CORS запросы от этого элемента будут передавать учётные данные.</td>
-  </tr>
- </tbody>
-</table>
+| Ключевое слово    | Описание                                                           |
+| ----------------- | ------------------------------------------------------------------ |
+| `anonymous`       | CORS запросы от этого элемента не будут передавать учётные данные. |
+| `use-credentials` | CORS запросы от этого элемента будут передавать учётные данные.    |
 
-<p>По умолчанию (если значение атрибута не задано), CORS не используется вообще. Ключевое слово "anonymous" означает что не будет обмена <strong>учётных данных</strong>(user credentials) через cookies, client-side SSL сертификаты или HTTP аутентификацию как описано в <a class="external" href="http://www.w3.org/TR/cors/#user-credentials">Секции Терминология CORS спецификации</a>.</p>
+По умолчанию (если значение атрибута не задано), CORS не используется вообще. Ключевое слово "anonymous" означает что не будет обмена **учётных данных**(user credentials) через cookies, client-side SSL сертификаты или HTTP аутентификацию как описано в [Секции Терминология CORS спецификации](http://www.w3.org/TR/cors/#user-credentials).
 
-<p>Неправильное ключевое слово или пустая строка, будет обработано как  <code>anonymous</code>.</p>
+Неправильное ключевое слово или пустая строка, будет обработано как `anonymous`.
 
-<h3 id="Пример_crossorigin_с_тегом_script">Пример: crossorigin с тегом script</h3>
+### Пример: crossorigin с тегом script
 
-<p>Используя тег {{HTMLElement("script")}} вы можете указать браузеру выполнять код <code>https://example.com/example-framework.js</code> без передачи user-credentials.</p>
+Используя тег {{HTMLElement("script")}} вы можете указать браузеру выполнять код `https://example.com/example-framework.js` без передачи user-credentials.
 
-<pre class="brush: html">&lt;script src="https://example.com/example-framework.js"
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+```html
+<script src="https://example.com/example-framework.js"
+        crossorigin="anonymous"></script>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td> {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<h3 id="script_crossorigin">script crossorigin</h3>
+### script crossorigin
 
-<p>{{Compat("html.elements.script.crossorigin")}}</p>
+{{Compat("html.elements.script.crossorigin")}}
 
-<h3 id="video_crossorigin">video crossorigin</h3>
+### video crossorigin
 
-<p>{{Compat("html.elements.video.crossorigin")}}</p>
+{{Compat("html.elements.video.crossorigin")}}
 
-<h3 id="link_crossorigin">link crossorigin</h3>
+### link crossorigin
 
-<p>{{Compat("html.elements.link.crossorigin")}}</p>
+{{Compat("html.elements.link.crossorigin")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/En/HTTP_access_control" title="en/HTTP access control">HTTP access control</a></li>
-</ul>
+- [HTTP access control](/En/HTTP_access_control "en/HTTP access control")

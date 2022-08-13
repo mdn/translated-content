@@ -3,102 +3,64 @@ title: Элемент <source>
 slug: Web/HTML/Element/source
 translation_of: Web/HTML/Element/source
 ---
-<p><strong>HTML-элемент <code>&lt;source&gt;</code> </strong> указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">в нескольких форматах, поддерживаемых различными браузерами</a>.</p>
+**HTML-элемент `<source>` **указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td>Нет, это  {{Glossary("пустой элемент")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>Должен иметь открывающий тег; закрывающий тег необязателен.</td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Разрешённые родители</dfn></th>
-   <td>
-    <div>Медиа-элементы —{{HTMLElement("audio")}} или {{HTMLelement("video")}}—должен быть помещён перед любым <a href="/en-US/docs/HTML/Content_categories#Flow_content">потоковым контентом</a> или элементом{{HTMLElement("track")}}.</div>
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                        | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                                                                                                                                        |
+| Пропуск тегов                                              | Должен иметь открывающий тег; закрывающий тег необязателен.                                                                                                                                                                                                                                                                                               |
+| _Разрешённые родители_                                     | Медиа-элементы —{{HTMLElement("audio")}} или {{HTMLelement("video")}}—должен быть помещён перед любым [потоковым контентом](/ru/docs/HTML/Content_categories#Flow_content) или элементом{{HTMLElement("track")}}.Элемент {{HTMLElement("picture")}} , должен быть помещён перед элементом {{HTMLElement("img")}}. |
+| Permitted ARIA roles                                       | Нет                                                                                                                                                                                                                                                                                                                                                       |
+| DOM interface                                              | {{domxref("HTMLSourceElement")}}                                                                                                                                                                                                                                                                                                              |
 
-    <div>Элемент {{HTMLElement("picture")}} , должен быть помещён перед элементом {{HTMLElement("img")}}.</div>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLSourceElement")}}</td>
-  </tr>
- </tbody>
-</table>
+## Атрибуты
 
-<h2 id="Атрибуты">Атрибуты</h2>
+Этот элемент включает в себя [универсальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<p>Этот элемент включает в себя <a href="/en-US/docs/HTML/Global_attributes">универсальные атрибуты</a>.</p>
+1.  адреса изображения (URL);
+2.  дескриптора ширины, представляющего собой целое положительное число, за которым следует `'w'`. Значением по умолчанию, если оно отсутствует, является бесконечность.
+3.  дескриптора плотности пикселей, представляющее собой положительное десятичное число, за которым следует `'x'`. Значением по умолчанию, если оно отсутствует, является `1x`.
 
-<ol>
- <li>адреса изображения (URL);</li>
- <li>дескриптора ширины, представляющего собой целое положительное число, за которым следует <code>'w'</code>.  Значением по умолчанию, если оно отсутствует, является бесконечность.</li>
- <li>дескриптора плотности пикселей, представляющее собой положительное десятичное число, за которым следует <code>'x'</code>. Значением по умолчанию, если оно отсутствует, является <code>1x</code>.</li>
-</ol>
+- {{htmlattrdef("sizes")}} {{experimental_inline}}
+  - : Список размеров изображений для разных размеров страниц. Он состоит из разделённых запятыми медиавыражений со значениями ширины изображения. Эта информация используется браузером перед выкладкой страницы для определения конкретного изображения, заданного в атрибуте {{htmlattrxref("srcset", "source")}}. Атрибут `sizes` работает только тогда, когда элемент {{HTMLElement("source")}} расположен внутри элемента {{HTMLElement("picture")}}.
+- {{htmlattrdef("src")}}
+  - : Требуемый для элементов {{HTMLElement("audio")}} и {{HTMLElement("video")}} адрес медиа-ресурсов. Значение этого атрибута игнорируется браузером, когда элемент `<source>` размещён внутри элемента {{HTMLElement("picture")}}.
+- {{htmlattrdef("srcset")}} {{experimental_inline}}
+  - : Список из одной или нескольких строк, разделённых запятыми, определяющий набор возможных изображений, представленных для отображения в браузере. Каждая строка может состоять из:Каждая строка списка должна содержать по крайней мере дескриптор ширины или дескриптор плотности пикселей.Браузер выбирает самое подходящее изображение для отображения в данный момент времени.Атрибут `srcset` работает только в том случае, когда элемент {{HTMLElement("source")}} находится внутри элемента {{HTMLElement("picture")}}.
+- {{htmlattrdef("type")}}
+  - : MIME-тип ресурса, опционально содержащий параметр `codecs`. Для получения полной информации по указанию кодеков смотрите [RFC 4281](https://tools.ietf.org/html/rfc4281).
+- {{htmlattrdef("media")}} {{experimental_inline}}
+  - : Определяет [медиавыражение](/ru/docs/CSS/Media_queries) , согласно которому будет выводиться изображение. Работает только в элементе {{HTMLElement("picture")}}.
 
-<dl>
- <dt>{{htmlattrdef("sizes")}} {{experimental_inline}}</dt>
- <dd>Список размеров изображений для разных размеров страниц. Он состоит из разделённых запятыми медиавыражений со значениями ширины изображения. Эта информация используется браузером перед выкладкой страницы для определения конкретного изображения, заданного в атрибуте {{htmlattrxref("srcset", "source")}}. Атрибут <code>sizes</code> работает только тогда, когда элемент  {{HTMLElement("source")}} расположен внутри элемента {{HTMLElement("picture")}}.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>Требуемый для элементов  {{HTMLElement("audio")}} и {{HTMLElement("video")}} адрес медиа-ресурсов. Значение этого атрибута игнорируется браузером, когда элемент <code>&lt;source&gt;</code> размещён внутри элемента {{HTMLElement("picture")}}.</dd>
- <dt>{{htmlattrdef("srcset")}} {{experimental_inline}}</dt>
- <dd><p>Список из одной или нескольких строк, разделённых запятыми, определяющий набор возможных изображений, представленных для отображения в браузере. Каждая строка может состоять из:</p>
- <p>Каждая строка списка должна содержать по крайней мере дескриптор ширины или дескриптор плотности пикселей.  </p>
+Если атрибут `type` не указан, то он запрашивается с сервера и проверяется, может ли {{Glossary("user agent")}} его обрабатывать. Если он не может быть обработан, проверяется следующий `<source>`. Если атрибут `type` указан, он сравнивается с типами, которые может поддерживать {{Glossary("user agent")}}​​​​​, и если он не распознан, сервер даже не запрашивается, вместо этого проверяется следующий элемент `<source>`.
 
- <p>Браузер выбирает самое подходящее изображение для отображения в данный момент времени.</p>
+## Примеры
 
- <p>Атрибут <code>srcset</code>  работает только в том случае, когда элемент {{HTMLElement("source")}} находится внутри элемента {{HTMLElement("picture")}}.</p>
- </dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>MIME-тип ресурса, опционально содержащий параметр <code>codecs</code>. Для получения полной информации по указанию кодеков смотрите  <a class="external" href="https://tools.ietf.org/html/rfc4281">RFC 4281</a>. </dd>
- <dt>{{htmlattrdef("media")}} {{experimental_inline}}</dt>
- <dd>Определяет <a class="internal" href="/en-US/docs/CSS/Media_queries">медиавыражение</a> , согласно которому будет выводиться изображение. Работает только в элементе {{HTMLElement("picture")}}.</dd>
-</dl>
+This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. See also the list of [media formats supported by the audio and video elements](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements) in various browsers.
 
-<p>Если атрибут <code>type</code> не указан, то он запрашивается с сервера и проверяется, может ли {{Glossary("user agent")}} его обрабатывать. Если он не может быть обработан, проверяется следующий <code>&lt;source&gt;</code>. Если атрибут <code>type</code> указан, он сравнивается с типами, которые может поддерживать {{Glossary("user agent")}}​​​​​, и если он не распознан, сервер даже не запрашивается, вместо этого проверяется следующий элемент <code>&lt;source&gt;</code>.</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the <code>audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead.  If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. See also the list of <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">media formats supported by the audio and video elements</a> in various browsers.</p>
-
-<pre class="brush: html">&lt;video controls&gt;
-  &lt;source src="foo.webm" type="video/webm"&gt;
-  &lt;source src="foo.ogg" type="video/ogg"&gt;
-  &lt;source src="foo.mov" type="video/quicktime"&gt;
+```html
+<video controls>
+  <source src="foo.webm" type="video/webm">
+  <source src="foo.ogg" type="video/ogg">
+  <source src="foo.mov" type="video/quicktime">
   I'm sorry; your browser doesn't support HTML5 video.
-&lt;/video&gt;
-</pre>
+</video>
+```
 
-<p>For more examples, see <a class="internal" href="/en-US/docs/Using_HTML5_audio_and_video">Using audio and video in Firefox</a>.</p>
+For more examples, see [Using audio and video in Firefox](/ru/docs/Using_HTML5_audio_and_video).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+- Элемент {{HTMLElement("picture")}}
+- Элемент {{HTMLElement("audio")}}
+- Элемент {{HTMLElement("video")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Элемент {{HTMLElement("picture")}} </li>
- <li>Элемент {{HTMLElement("audio")}} </li>
- <li>Элемент {{HTMLElement("video")}} </li>
-</ul>
-
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

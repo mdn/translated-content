@@ -13,84 +13,59 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/aside
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;aside&gt;</code></strong> представляет собой часть документа, чьё содержимое только косвенно связанно с основным содержимым документа.</span> Чаще всего представлен в виде боковой панели, сносок или меток.</p>
+**HTML-элемент `<aside>`** представляет собой часть документа, чьё содержимое только косвенно связанно с основным содержимым документа. Чаще всего представлен в виде боковой панели, сносок или меток.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент">секционный контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">контент основного потока</a> в качестве содержимого. Обратите внимание, что элемент <code>&lt;aside&gt;</code> не должен быть потомком элемента {{HTMLElement("address")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>{{ARIARole("feed")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}, {{ARIARole("search")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                   |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                   |
+| Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                        |
+| Разрешённые родительские элементы                                | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<aside>` не должен быть потомком элемента {{HTMLElement("address")}}. |
+| Разрешённые роли ARIA                                            | {{ARIARole("feed")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}, {{ARIARole("search")}}                                                                                                   |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                           |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>К этому элементу применимы только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<ul>
- <li>Не используйте элемент <code>&lt;aside&gt;</code> для пометки текста в скобках, так как этот вид текста считается частью основного <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">потокового контента</a>.</li>
-</ul>
+- Не используйте элемент `<aside>` для пометки текста в скобках, так как этот вид текста считается частью основного [потокового контента](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;p&gt;
-    Мультфильм студии Уолта Диснея &lt;em&gt;Русалочка&lt;/em&gt;
+```html
+<article>
+  <p>
+    Мультфильм студии Уолта Диснея <em>Русалочка</em>
     был выпущен в 1989.
-  &lt;/p&gt;
-  &lt;aside&gt;
-    &lt;p&gt;
+  </p>
+  <aside>
+    <p>
       Мультфильм заработал $87 миллионов во время первого выпуска.
-    &lt;/p&gt;
-  &lt;/aside&gt;
-  &lt;p&gt;
+    </p>
+  </aside>
+  <p>
     Подробнее об этом мультфильме...
-  &lt;/p&gt;
-&lt;/article&gt;</pre>
+  </p>
+</article>
+```
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}.</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Разделы и структура документа HTML5</a>.</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role">ARIA: роль complementary</a></li>
-</ul>
+- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}.
+- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
+- [ARIA: роль complementary](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role)

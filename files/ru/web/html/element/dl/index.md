@@ -13,181 +13,163 @@ tags:
   - списки
 translation_of: Web/HTML/Element/dl
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML-элемент <code>&lt;dl&gt;</code></strong> (<em>от англ.</em> <em>Description List</em>) представляет собой список описаний. Этот элемент служит контейнером для списка пар терминов (определяемых элементом {{HTMLElement("dt")}}) и их описаний (определяемых элементами {{HTMLElement("dd")}}). Этот элемент обычно используют при создании глоссария или для отображения метаданных (списка пар ключ-значение).</p>
+**HTML-элемент `<dl>`** (_от англ._ _Description List_) представляет собой список описаний. Этот элемент служит контейнером для списка пар терминов (определяемых элементом {{HTMLElement("dt")}}) и их описаний (определяемых элементами {{HTMLElement("dd")}}). Этот элемент обычно используют при создании глоссария или для отображения метаданных (списка пар ключ-значение).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, и если потомки элемента <code>&lt;dl&gt;</code> включают одну группу имя-значение явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Либо: Ноль или более групп каждая из которых состоит из одного или более элементов {{HTMLElement("dt")}} за которым следует один или более элементов {{HTMLElement("dd")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}.<br>
-    Либо: Один или более элементов {{HTMLElement("div")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент который принимает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">потоковый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLDListElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), и если потомки элемента `<dl>` включают одну группу имя-значение явный контент.                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | Либо: Ноль или более групп каждая из которых состоит из одного или более элементов {{HTMLElement("dt")}} за которым следует один или более элементов {{HTMLElement("dd")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. Либо: Один или более элементов {{HTMLElement("div")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Разрешённые родители                                             | Любой элемент который принимает [потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент).                                                                                                                                                                                                                                                                                                                                                                 |
+| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| DOM-интерфейс                                                    | {{domxref("HTMLDListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p><span style="line-height: 21px;">Для данного элемента доступны только </span><a href="/ru/docs/Web/HTML/Общие_атрибуты" style="line-height: 21px;" title="HTML/Global attributes">глобальные атрибуты</a><span style="line-height: 21px;">.</span></p>
+Для данного элемента доступны только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты "HTML/Global attributes").
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Одиночные_термин_и_определение">Одиночные термин и определение</h3>
+### Одиночные термин и определение
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Одиночные_термин_и_определение")}}</p>
+{{EmbedLiveSample("Одиночные_термин_и_определение")}}
 
-<h3 id="Множественные_термины_с_одним_определением">Множественные термины с одним определением</h3>
+### Множественные термины с одним определением
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dt&gt;Mozilla Firefox&lt;/dt&gt;
-  &lt;dt&gt;Fx&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Множественные_термины_с_одним_определением")}}</p>
+{{EmbedLiveSample("Множественные_термины_с_одним_определением")}}
 
-<h3 id="Одиночный_термин_со_множественными_определениями">Одиночный термин со множественными определениями</h3>
+### Одиночный термин со множественными определениями
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
-  &lt;dd&gt;
+  </dd>
+  <dd>
     The Red Panda also known as the Lesser
     Panda, Wah, Bear Cat or Firefox, is a
     mostly herbivorous mammal, slightly larger
     than a domestic cat (60 cm long).
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Одиночный_термин_со_множественными_определениями")}}</p>
+{{EmbedLiveSample("Одиночный_термин_со_множественными_определениями")}}
 
-<h3 id="Множественные_термины_и_определения">Множественные термины и определения</h3>
+### Множественные термины и определения
 
-<p>Кроме того, можно определить несколько терминов с несколькими соответствующими определениями, путём комбинирования приведённых выше примеров.</p>
+Кроме того, можно определить несколько терминов с несколькими соответствующими определениями, путём комбинирования приведённых выше примеров.
 
-<h3 id="Метаданные">Метаданные</h3>
+### Метаданные
 
-<p>Список определений очень полезен для отображения метаданных, как список пар ключ-значение.</p>
+Список определений очень полезен для отображения метаданных, как список пар ключ-значение.
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Name&lt;/dt&gt;
-  &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;dt&gt;Born&lt;/dt&gt;
-  &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;dt&gt;Birthplace&lt;/dt&gt;
-  &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;dt&gt;Color&lt;/dt&gt;
-  &lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+```
 
-<p>Подсказка: Может быть полезно задать разделитель для пары ключ-значение при помощи CSS3, например:</p>
+Подсказка: Может быть полезно задать разделитель для пары ключ-значение при помощи CSS3, например:
 
-<pre class="brush: css">dt:after {
+```css
+dt:after {
   content: ": ";
-}</pre>
+}
+```
 
-<h3 id="Оборачивание_групп_имя-значение_в_HTMLElementdiv_элементы">Оборачивание групп имя-значение в {{HTMLElement("div")}} элементы</h3>
+### Оборачивание групп имя-значение в {{HTMLElement("div")}} элементы
 
-<p><a href="/ru/docs/Glossary/WHATWG">WHATWG</a> HTML разрешает оборачивать каждую группу имя-значение в элементе {{HTMLElement("dl")}} в элемент {{HTMLElement("div")}}. Это может быть полезно, когда используются <a href="/ru/docs/Web/HTML/Microdata">микроданные</a> или когда <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a> применяются к целой группе, или для стилевых целей.</p>
+[WHATWG](/ru/docs/Glossary/WHATWG) HTML разрешает оборачивать каждую группу имя-значение в элементе {{HTMLElement("dl")}} в элемент {{HTMLElement("div")}}. Это может быть полезно, когда используются [микроданные](/ru/docs/Web/HTML/Microdata) или когда [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes) применяются к целой группе, или для стилевых целей.
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Name&lt;/dt&gt;
-    &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Born&lt;/dt&gt;
-    &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Birthplace&lt;/dt&gt;
-    &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Color&lt;/dt&gt;
-    &lt;dd&gt;Green&lt;/dd&gt;
-  &lt;/div&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <div>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+  </div>
+  <div>
+    <dt>Born</dt>
+    <dd>1952</dd>
+  </div>
+  <div>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+  </div>
+  <div>
+    <dt>Color</dt>
+    <dd>Green</dd>
+  </div>
+</dl>
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Не используйте данный элемент (как и элемент {{HTMLElement("ul")}}) просто для создания отступов на странице. Не смотря на то, что это работает, — это является плохой практикой и подменяет семантическое значение списка определений.</p>
+Не используйте данный элемент (как и элемент {{HTMLElement("ul")}}) просто для создания отступов на странице. Не смотря на то, что это работает, — это является плохой практикой и подменяет семантическое значение списка определений.
 
-<p>Чтобы изменить отступ определений терминов, воспользуйтесь <a href="/ru/docs/Web/CSS" title="CSS">CSS</a>-свойством {{cssxref("margin")}}.</p>
+Чтобы изменить отступ определений терминов, воспользуйтесь [CSS](/ru/docs/Web/CSS "CSS")-свойством {{cssxref("margin")}}.
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Каждый скринридер произносит содержимое элемента <code>&lt;dl&gt;</code> по-разному. Некоторые скринридеры, такие как VoiceOver на iOS, не будут озвучивать, что содержимое <code>&lt;dl&gt;</code> это список. В связи с этим, убедитесь, что содержимое каждого элемента списка написано таким образом, что оно сообщает о своём отношении с другими элементами списка в списке группы.</p>
+Каждый скринридер произносит содержимое элемента `<dl>` по-разному. Некоторые скринридеры, такие как VoiceOver на iOS, не будут озвучивать, что содержимое `<dl>` это список. В связи с этим, убедитесь, что содержимое каждого элемента списка написано таким образом, что оно сообщает о своём отношении с другими элементами списка в списке группы.
 
-<ul>
- <li><a href="https://s.codepen.io/aardrian/debug/NzGaKP">CodePen - HTML Buddies: dt &amp; dd</a></li>
-</ul>
+- [CodePen - HTML Buddies: dt & dd](https://s.codepen.io/aardrian/debug/NzGaKP)
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Элемент {{HTMLElement("dt")}}</li>
- <li>Элемент {{HTMLElement("dd")}}</li>
-</ul>
+## Смотрите также
+
+- Элемент {{HTMLElement("dt")}}
+- Элемент {{HTMLElement("dd")}}

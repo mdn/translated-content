@@ -4,49 +4,44 @@ slug: Web/HTML/Inline_elements
 translation_of: Web/HTML/Inline_elements
 original_slug: Web/HTML/Строчные_Элементы
 ---
-<h2 id="Summary">Определение</h2>
+## Определение
 
-<p><span class="seoSummary">В HTML (Языке Гипертекстовой Разметки), строчные элементы это те, которые занимают только то пространство, которое ограничено тегами, определяющими строчный элемент (необходимое для отображения их содержимого) и не нарушая потока содержимого (не требующее новой строки после каждого элемента). В этой статье мы рассмотрим встроенные элементы HTML и то, как они отличаются от  <a href="/ru/docs/Web/HTML/Block-level_elements">блочных элементов</a>.</span></p>
+В HTML (Языке Гипертекстовой Разметки), строчные элементы это те, которые занимают только то пространство, которое ограничено тегами, определяющими строчный элемент (необходимое для отображения их содержимого) и не нарушая потока содержимого (не требующее новой строки после каждого элемента). В этой статье мы рассмотрим встроенные элементы HTML и то, как они отличаются от [блочных элементов](/ru/docs/Web/HTML/Block-level_elements).
 
-<div class="note">
-<p>Строчный элемент не начинается с новой строки и в ширину занимает столько места, сколько это необходимо для его отображения.</p>
-</div>
+> **Примечание:** Строчный элемент не начинается с новой строки и в ширину занимает столько места, сколько это необходимо для его отображения.
 
-<h2 id="Inline_example">Пример строчного элемента</h2>
+## Пример строчного элемента
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Этот элемент &lt;span&gt;span&lt;/span&gt; строчный; цвет его фона изменён, чтобы показать начало и конец элемента.&lt;/p&gt;</pre>
+```html
+<p>Этот элемент <span>span</span> строчный; цвет его фона изменён, чтобы показать начало и конец элемента.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span { background-color: #8ABB55; }
-</pre>
+```css
+span { background-color: #8ABB55; }
+```
 
-<p>{{ EmbedLiveSample('Inline_example') }}</p>
+{{ EmbedLiveSample('Inline_example') }}
 
-<h2 id="Строчные_vs._блочные">Строчные vs. блочные</h2>
+## Строчные vs. блочные
 
-<dl>
- <dt>Модель контента</dt>
- <dd>Как правило, встроенные элементы могут содержать только данные и другие встроенные элементы. Вы не можете помещать элементы блока внутри встроенных элементов.</dd>
- <dt>Форматирование</dt>
- <dd>По умолчанию встроенные элементы не заставляют новую строку начинаться в потоке документа. С другой стороны, элементы блока обычно вызывают разрыв строки (хотя, как обычно, это можно изменить с помощью CSS).</dd>
-</dl>
+- Модель контента
+  - : Как правило, встроенные элементы могут содержать только данные и другие встроенные элементы. Вы не можете помещать элементы блока внутри встроенных элементов.
+- Форматирование
+  - : По умолчанию встроенные элементы не заставляют новую строку начинаться в потоке документа. С другой стороны, элементы блока обычно вызывают разрыв строки (хотя, как обычно, это можно изменить с помощью CSS).
 
-<h2 id="Elements">Элементы</h2>
+## Элементы
 
-<p>Следующие элементы являются строчными:</p>
+Следующие элементы являются строчными:
 
-<ul id="inline-elements">
- <li><a href="/en/HTML/Element/b" title="en/HTML/Element/b">b</a>, <a href="/en/HTML/Element/big" title="en/HTML/Element/big">big</a>, <a href="/en/HTML/Element/i" title="en/HTML/Element/i">i</a>, <a href="/en/HTML/Element/small" title="en/HTML/Element/small">small</a>, <a href="/en/HTML/Element/tt" title="en/HTML/Element/tt">tt</a></li>
- <li><a href="/en/HTML/Element/abbr" title="en/HTML/Element/abbr">abbr</a>, <a href="/en/HTML/Element/acronym" title="en/HTML/Element/acronym">acronym</a>, <a href="/en/HTML/Element/cite" title="en/HTML/Element/cite">cite</a>, <a href="/en/HTML/Element/code" title="en/HTML/Element/code">code</a>, <a href="/en/HTML/Element/dfn" title="en/HTML/Element/dfn">dfn</a>, <a href="/en/HTML/Element/em" title="en/HTML/Element/em">em</a>, <a href="/en/HTML/Element/kbd" title="en/HTML/Element/kbd">kbd</a>, <a href="/en/HTML/Element/strong" title="en/HTML/Element/strong">strong</a>, <a href="/en/HTML/Element/samp" title="en/HTML/Element/samp">samp</a>, <a href="/en/HTML/Element/time">time</a>, <a href="/en/HTML/Element/var" title="en/HTML/Element/var">var</a></li>
- <li><a href="/en/HTML/Element/a" title="en/HTML/Element/a">a</a>, <a href="/en/HTML/Element/bdo" title="en/HTML/Element/bdo">bdo</a>, <a href="/en/HTML/Element/br" title="en/HTML/Element/br">br</a>, <a href="/En/HTML/Element/Img" title="En/HTML/Element/Img">img</a>, <a href="/en/HTML/Element/map" title="en/HTML/Element/map">map</a>, <a href="/en/HTML/Element/object" title="en/HTML/Element/object">object</a>, <a href="/en/HTML/Element/q" title="en/HTML/Element/q">q</a>, <a href="/En/HTML/Element/Script" title="En/HTML/Element/Script">script</a>, <a href="/en/HTML/Element/span" title="en/HTML/Element/span">span</a>, <a href="/en/HTML/Element/sub" title="en/HTML/Element/sub">sub</a>, <a href="/en/HTML/Element/sup" title="en/HTML/Element/sup">sup</a></li>
- <li><a href="/en/HTML/Element/button" title="en/HTML/Element/button">button</a>, <a href="/en/HTML/Element/Input" title="en/HTML/Element/Input">input</a>, <a href="/en/HTML/Element/label" title="en/HTML/Element/label">label</a>, <a href="/en/HTML/Element/select" title="en/HTML/Element/select">select</a>, <a href="/en/HTML/Element/textarea" title="en/HTML/Element/textarea">textarea</a></li>
-</ul>
+- [b](/en/HTML/Element/b "en/HTML/Element/b"), [big](/en/HTML/Element/big "en/HTML/Element/big"), [i](/en/HTML/Element/i "en/HTML/Element/i"), [small](/en/HTML/Element/small "en/HTML/Element/small"), [tt](/en/HTML/Element/tt "en/HTML/Element/tt")
+- [abbr](/en/HTML/Element/abbr "en/HTML/Element/abbr"), [acronym](/en/HTML/Element/acronym "en/HTML/Element/acronym"), [cite](/en/HTML/Element/cite "en/HTML/Element/cite"), [code](/en/HTML/Element/code "en/HTML/Element/code"), [dfn](/en/HTML/Element/dfn "en/HTML/Element/dfn"), [em](/en/HTML/Element/em "en/HTML/Element/em"), [kbd](/en/HTML/Element/kbd "en/HTML/Element/kbd"), [strong](/en/HTML/Element/strong "en/HTML/Element/strong"), [samp](/en/HTML/Element/samp "en/HTML/Element/samp"), [time](/en/HTML/Element/time), [var](/en/HTML/Element/var "en/HTML/Element/var")
+- [a](/en/HTML/Element/a "en/HTML/Element/a"), [bdo](/en/HTML/Element/bdo "en/HTML/Element/bdo"), [br](/en/HTML/Element/br "en/HTML/Element/br"), [img](/En/HTML/Element/Img "En/HTML/Element/Img"), [map](/en/HTML/Element/map "en/HTML/Element/map"), [object](/en/HTML/Element/object "en/HTML/Element/object"), [q](/en/HTML/Element/q "en/HTML/Element/q"), [script](/En/HTML/Element/Script "En/HTML/Element/Script"), [span](/en/HTML/Element/span "en/HTML/Element/span"), [sub](/en/HTML/Element/sub "en/HTML/Element/sub"), [sup](/en/HTML/Element/sup "en/HTML/Element/sup")
+- [button](/en/HTML/Element/button "en/HTML/Element/button"), [input](/en/HTML/Element/Input "en/HTML/Element/Input"), [label](/en/HTML/Element/label "en/HTML/Element/label"), [select](/en/HTML/Element/select "en/HTML/Element/select"), [textarea](/en/HTML/Element/textarea "en/HTML/Element/textarea")
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/HTML/Block-level_elements" title="en/HTML/Block-level_elements">Блочные элементы</a></li>
-</ul>
+- [Блочные элементы](/ru/docs/Web/HTML/Block-level_elements "en/HTML/Block-level_elements")

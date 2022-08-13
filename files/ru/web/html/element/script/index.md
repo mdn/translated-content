@@ -5,156 +5,97 @@ tags:
   - Script
 translation_of: Web/HTML/Element/script
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">HTML Элемент<strong> <code>&lt;script&gt;</code> </strong></span> используется для встраивания или подключения исполняемого JavaScript кода. Элемент <code>&lt;script&gt;</code> также может использоваться с другими языками, такими как <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> от <a href="/ru/docs/Web/API/WebGL_API">WebGL</a>.</p>
+HTML Элемент** `<script>` **используется для встраивания или подключения исполняемого JavaScript кода. Элемент `<script>` также может использоваться с другими языками, такими как [GLSL](/ru/docs/Web/API/WebGL_API/By_example/Hello_GLSL) от [WebGL](/ru/docs/Web/API/WebGL_API).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Метаданные">Метаданные</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Main_content_categories">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td>Динамический скрипт, используя атрибут <code>text/javascript</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>Нет. Открывающий и закрывающий теги обязательны</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>
-    <p>Любые элементы в которых разрешены <a href="/ru/docs/Web/Guide/HTML/Content_categories#Метаданные">метаданные</a> или <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённая ARIA роль</th>
-   <td>Отсутствует</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLScriptElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#Метаданные), [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Main_content_categories), [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                              | Динамический скрипт, используя атрибут `text/javascript`.                                                                                                                                                                                      |
+| Пропуск тегов                                                    | Нет. Открывающий и закрывающий теги обязательны                                                                                                                                                                                                |
+| Разрешённые родительские элементы                                | Любые элементы в которых разрешены [метаданные](/ru/docs/Web/Guide/HTML/Content_categories#Метаданные) или [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content)                                                     |
+| Разрешённая ARIA роль                                            | Отсутствует                                                                                                                                                                                                                                    |
+| DOM интерфейс                                                    | {{domxref("HTMLScriptElement")}}                                                                                                                                                                                                   |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{htmlattrdef("async")}}{{HTMLVersionInline(5)}}</dt>
- <dd><p>Это логический атрибут, указывающий браузеру, если возможно, загружать скрипт, указанный в атрибуте <code>{{htmlattrdef("src")}}</code>, асинхронно.</p>
+- {{htmlattrdef("async")}}{{HTMLVersionInline(5)}}
+  - : Это логический атрибут, указывающий браузеру, если возможно, загружать скрипт, указанный в атрибуте `{{htmlattrdef("src")}}`, асинхронно.> **Предупреждение:** Атрибут `{{htmlattrdef("async")}}` не будет оказывать никакого эффекта, если атрибут `{{htmlattrdef("src")}}` отсутствует.Обычно браузеры загружают `<script>` синхронно, (т.е. `async="false"`) во время разбора документа.Динамически вставленный `<script>` (используя, например, `document.createElement`) по умолчанию загружаются браузером асинхронно, поэтому для включения синхронной загрузки (т.е. когда скрипты загружаются в порядке их вставки) укажите `async="false"`.
+- {{htmlattrdef("crossorigin")}}
+  - : Обычные элементы тега `script` передают мало информации в {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} для скриптов, которые не проходят проверку [CORS](/ru/docs/HTTP_access_control). Чтобы разрешить ведение журнала ошибок сайта, которые используют отдельный домен для статических файлов (например, изображение, видео-файл, CSS-стили или Javascript-код), используйте атрибут `{{htmlattrdef("crossorigin")}}`. Посмотрите статью «[настройки атрибутов CORS](/ru/docs/Web/HTML/CORS_settings_attributes)» для более наглядного объяснения его допустимых аргументов.
+- {{htmlattrdef("defer")}}
+  - : Это логический атрибут, указывающий браузеру, что скрипт должен выполняться после разбора документа, но до события {{event("DOMContentLoaded")}}.Скрипты с атрибутом `{{htmlattrdef("defer")}}` будут предотвращать запуск события {{event("DOMContentLoaded")}} до тех пор, пока скрипт не загрузится полностью и не завершится его инициализация.> **Предупреждение:** Атрибут `{{htmlattrdef("defer")}}` не будет оказывать никакого эффекта, если атрибут `{{htmlattrdef("src")}}` отсутствует.Чтобы достигнуть такого же эффекта для динамически вставленных скриптов используйте `async=false.`Скрипты с атрибутом `{{htmlattrdef("defer")}}` будут выполняться в том порядке, в котором они появились при разборе документа.
+- {{htmlattrdef("integrity")}}
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/ru/docs/Web/Security/Subresource_Integrity).
+- {{htmlattrdef("nomodule")}}
+  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support[ ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
+- {{htmlattrdef("nonce")}}
+  - : A cryptographic nonce (number used once) to whitelist inline scripts in a [script-src Content-Security-Policy](/ru/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+- {{htmlattrdef("src")}}
+  - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.> **Предупреждение:** Если у элемента `script` будет указан атрибут `{{htmlattrdef("src")}}`, то он не должен иметь встроенный скрипт между тегами.
+- {{htmlattrdef("text")}}
+  - : Like the `textContent` attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
+- {{htmlattrdef("type")}}
+  - : Этот атрибут указывает тип представленного скрипта. Значение этого атрибута будет находиться в одной из следующих категорий:\* **Omitted or a JavaScript MIME type:** For HTML5-compliant browsers this indicates the script is JavaScript. HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types).
+    - **`module`:** For HTML5-compliant browsers the code is treated as a JavaScript module. The processing of the script contents is not affected by the `charset` and `{{htmlattrdef("defer")}}` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). Code may behave differently when the `module` keyword is used.
+    - **Any other value:** The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The `src` attribute will be ignored.> **Примечание:**in Firefox you could specify the version of JavaScript contained in a `<script>` element by including a non-standard `version` parameter inside the `type` attribute — for example `type="text/javascript;version=1.8"`. This has been removed in Firefox 59 (see {{bug(1428745)}}).
 
-<div class="warning">
-<p>Атрибут <code>{{htmlattrdef("async")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
-</div>
+### Устаревшие атрибуты
 
- <p>Обычно браузеры загружают <code>&lt;script&gt;</code> синхронно, (т.е. <code>async="false"</code>) во время разбора документа.</p>
- <p>Динамически вставленный <code>&lt;script&gt;</code> (используя, например, <code>document.createElement</code>) по умолчанию загружаются браузером асинхронно, поэтому для включения синхронной загрузки (т.е. когда скрипты загружаются в порядке их вставки) укажите <code>async="false"</code>.</p>
- </dd>
- <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Обычные элементы тега <code>script</code> передают мало информации в {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} для скриптов, которые не проходят проверку <a href="/en-US/docs/HTTP_access_control">CORS</a>. Чтобы разрешить ведение журнала ошибок сайта, которые используют отдельный домен для статических файлов (например, изображение, видео-файл, CSS-стили или Javascript-код), используйте атрибут <code>{{htmlattrdef("crossorigin")}}</code>. Посмотрите статью «<a href="/ru/docs/Web/HTML/CORS_settings_attributes">настройки атрибутов CORS</a>» для более наглядного объяснения его допустимых аргументов.</dd>
- <dt>{{htmlattrdef("defer")}}</dt>
- <dd><p>Это логический атрибут, указывающий браузеру, что скрипт должен выполняться после разбора документа, но до события {{event("DOMContentLoaded")}}.</p>
- <p>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут предотвращать запуск события {{event("DOMContentLoaded")}} до тех пор, пока скрипт не загрузится полностью и не завершится его инициализация.</p>
+- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". Both it’s unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+- {{htmlattrdef("language")}} {{Deprecated_inline}}
+  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute’s possible values were never standardized. The `type` attribute should be used instead.
 
-<div class="warning">
-<p>Атрибут <code>{{htmlattrdef("defer")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
-</div>
+## Примечания
 
- <p>Чтобы достигнуть такого же эффекта для динамически вставленных скриптов используйте <code>async=false.</code></p>
- <p>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут выполняться в том порядке, в котором они появились при разборе документа.</p></dd>
- <dt>{{htmlattrdef("integrity")}}</dt>
- <dd>This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
- <dt>{{htmlattrdef("nomodule")}}</dt>
- <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
- <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) to whitelist inline scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd><p>This attribute specifies the <abbr>URI</abbr> of an external script; this can be used as an alternative to embedding a script directly within a document.</p>
-<div class="warning">
-<p>Если у элемента <code>script</code> будет указан атрибут <code>{{htmlattrdef("src")}}</code>, то он не должен иметь встроенный скрипт между тегами.</p>
-</div>
- <dt>{{htmlattrdef("text")}}</dt>
- <dd>Like the <code>textContent</code> attribute, this attribute sets the text content of the element. Unlike the <code>textContent</code> attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>
- <p>Этот атрибут указывает тип представленного скрипта. Значение этого атрибута будет находиться в одной из следующих категорий:</p>
+Элемент `<script>` без указания атрибутов {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} или `type="module"`, а также встроенный скрипт, загружается и выполняется сразу, до того как браузер продолжит разбор документа.
 
- <ul>
-  <li><strong>Omitted or a JavaScript MIME type:</strong> For HTML5-compliant browsers this indicates the script is JavaScript. HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">listed in the specification</a>.</li>
-  <li><strong><code>module</code>:</strong> For HTML5-compliant browsers the code is treated as a JavaScript module. The processing of the script contents is not affected by the <code>charset</code> and <code>{{htmlattrdef("defer")}}</code> attributes. For information on using <code>module</code>, see <a class="external external-icon" href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>. Code may behave differently when the <code>module</code> keyword is used.</li>
-  <li><strong>Any other value:</strong> The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The <code>src</code> attribute will be ignored.</li>
- </ul>
+Для обработки скрипт должен иметь тип данных `text/javascript`, но браузеры снисходительны и блокируют обработку только в том случае, если скрипт представляет данные одного из типов: изображение (`image/*`); видео (`video/*`); аудио (`audio/*`); или `text/csv`. Если скрипт заблокирован, элементу отправляется событие {{event("error")}}, если не было отправлено событие {{event("load")}}.
 
- <div class="note">
- <p><strong>Note: </strong>in Firefox you could specify the version of JavaScript contained in a <code>&lt;script&gt;</code> element by including a non-standard <code>version</code> parameter inside the <code>type</code> attribute — for example <code>type="text/javascript;version=1.8"</code>. This has been removed in Firefox 59 (see {{bug(1428745)}}).</p>
- </div>
- </dd>
-</dl>
+## Примеры
 
-<h3 id="Устаревшие_атрибуты">Устаревшие атрибуты</h3>
+### Основное использование
 
-<dl>
- <dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
- <dd>If present, its value must be an ASCII case-insensitive match for "<code>utf-8</code>". Both it’s unnecessary to specify the <code>charset</code> attribute, because documents must use UTF-8, and the <code>script</code> element inherits its character encoding from the document.</dd>
- <dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt>
- <dd>Like the <code>type</code> attribute, this attribute identifies the scripting language in use. Unlike the <code>type</code> attribute, however, this attribute’s possible values were never standardized. The <code>type</code> attribute should be used instead.</dd>
-</dl>
+Эти примеры показывают как импортировать скрипт используя элемент `<script>` в HTML4 и HTML5.
 
-<h2 id="Примечания">Примечания</h2>
+```html
+<!-- HTML4 -->
+<script type="text/javascript" src="javascript.js"></script>
 
-<p>Элемент <code>&lt;script&gt;</code> без указания атрибутов {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} или <code>type="module"</code>, а также встроенный скрипт, загружается и выполняется сразу, до того как браузер продолжит разбор документа.</p>
+<!-- HTML5 -->
+<script src="javascript.js"></script>
+```
 
-<p>Для обработки скрипт должен иметь тип данных <code>text/javascript</code>, но браузеры снисходительны и блокируют обработку только в том случае, если скрипт представляет данные одного из типов: изображение (<code>image/*</code>); видео (<code>video/*</code>); аудио (<code>audio/*</code>); или <code>text/csv</code>. Если скрипт заблокирован, элементу отправляется событие {{event("error")}}, если не было отправлено событие {{event("load")}}.</p>
+### Module fallback
 
-<h2 id="Примеры">Примеры</h2>
+Браузеры, поддерживающие использование значения `module` для атрибута `type`, игнорируют любые скрипты с атрибутом `nomodule`. Это разрешает использовать модульные скрипты, и в тот же самый момент позволяет использовать `nomodule-`скрипты для браузеров без поддержки модульных скриптов.
 
-<h3 id="Основное_использование">Основное использование</h3>
+```html
+<script type="module" src="main.mjs"></script>
+<script nomodule src="fallback.js"></script>
+```
 
-<p>Эти примеры показывают как импортировать скрипт используя элемент <code>&lt;script&gt;</code> в HTML4 и HTML5.</p>
-
-<pre class="brush: html">&lt;!-- HTML4 --&gt;
-&lt;script type="text/javascript" src="javascript.js"&gt;&lt;/script&gt;
-
-&lt;!-- HTML5 --&gt;
-&lt;script src="javascript.js"&gt;&lt;/script&gt;
-</pre>
-
-<h3 id="Module_fallback">Module fallback</h3>
-
-<p>Браузеры, поддерживающие использование значения <code>module</code> для атрибута <code>type</code>, игнорируют любые скрипты с атрибутом <code>nomodule</code>. Это разрешает использовать модульные скрипты, и в тот же самый момент позволяет использовать <code>nomodule-</code>скрипты для браузеров без поддержки модульных скриптов.</p>
-
-<pre class="brush: html">&lt;script type="module" src="main.mjs"&gt;&lt;/script&gt;
-&lt;script nomodule src="fallback.js"&gt;&lt;/script&gt;</pre>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
+{{Compat}}
 
+### Примечания по совместимости
 
-<p>{{Compat}}</p>
+In older browsers that don't support the `async` attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the `async` DOM property defaults to `true` for script-created scripts, so the default behaviour matches the behaviour of IE and WebKit.
 
-<h3 id="Примечания_по_совместимости">Примечания по совместимости</h3>
+To request script-inserted external scripts be executed in the insertion order in browsers where the `document.createElement("script").async` evaluates to `true` (such as Firefox 4), set `async=false` on the scripts you want to maintain order.
 
-<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behaviour matches the behaviour of IE and WebKit.</p>
+> **Предупреждение:** Never call `document.write()` from an async script. In Firefox 3.6, calling `document.write()` has an unpredictable effect. In Firefox 4, calling `document.write()` from an async script has no effect (other than printing a warning to the error console).
 
-<p>To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4), set <code>async=false</code> on the scripts you want to maintain order.</p>
+## Смотрите также
 
-<div class="warning">
-<p>Never call <code>document.write()</code> from an async script. In Firefox 3.6, calling <code>document.write()</code> has an unpredictable effect. In Firefox 4, calling <code>document.write()</code> from an async script has no effect (other than printing a warning to the error console).</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("document.currentScript")}}</li>
- <li><a href="https://pie.gd/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
- <li><a href="/en-US/docs/Games/Techniques/Async_scripts">Асинхронные скрипты для asm.js</a></li>
-</ul>
+- {{domxref("document.currentScript")}}
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
+- [Асинхронные скрипты для asm.js](/ru/docs/Games/Techniques/Async_scripts)

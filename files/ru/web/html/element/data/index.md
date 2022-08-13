@@ -10,67 +10,47 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/data
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;data&gt;</code></strong> связывает данное содержимое с машиночитаемым представлением.</span> Если содержимое относится к времени или дате, необходимо использовать элемент {{HTMLElement("time")}}.</p>
+**HTML-элемент `<data>`** связывает данное содержимое с машиночитаемым представлением. Если содержимое относится к времени или дате, необходимо использовать элемент {{HTMLElement("time")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент который принимает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLDataElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                   |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                           |
+| Разрешённые родители                                             | Любой элемент который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataElement")}}                                                                                                                                           |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>Этот атрибут определяет машиночитаемый перевод содержимого элемента.</dd>
-</dl>
+- {{htmlattrdef("value")}}
+  - : Этот атрибут определяет машиночитаемый перевод содержимого элемента.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример отображает названия продуктов, а также связывает каждое имя с номером продукта.</p>
+Следующий пример отображает названия продуктов, а также связывает каждое имя с номером продукта.
 
-<pre class="brush: html">&lt;p&gt;New Products&lt;/p&gt;
-&lt;ul&gt;
- &lt;li&gt;&lt;data value="398"&gt;Mini Ketchup&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="399"&gt;Jumbo Ketchup&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="400"&gt;Mega Jumbo Ketchup&lt;/data&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<p>New Products</p>
+<ul>
+ <li><data value="398">Mini Ketchup</data></li>
+ <li><data value="399">Jumbo Ketchup</data></li>
+ <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>HTML-элемент {{HTMLElement("time")}}.</li>
-</ul>
+## Смотрите также
+
+- HTML-элемент {{HTMLElement("time")}}.

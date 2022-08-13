@@ -7,81 +7,56 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/code
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p id="Summary"><span class="seoSummary"><strong>Элемент HTML <code>&lt;code&gt;</code></strong> отображает его содержимое в стиле, предназначенном для указания на то, что текст является коротким фрагментом компьютерного кода.</span> По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{Glossary("user agent", "пользовательского агента")}}.</p>
+**Элемент HTML `<code>`** отображает его содержимое в стиле, предназначенном для указания на то, что текст является коротким фрагментом компьютерного кода. По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{Glossary("user agent", "пользовательского агента")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content), palpable content.           |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                |
+| Tag omission                                               | {{no_tag_omission}}                                                                                                                                                  |
+| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                       |
+| Implicit ARIA role                                         | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                       |
+| Permitted ARIA roles                                       | Any                                                                                                                                                                       |
+| DOM interface                                              | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element. |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя только <a href="/ru/Web/HTML/Global_attributes" title="HTML/Global attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Текстовый абзац, включающий <code>&lt;code&gt;</code>:</p>
+Текстовый абзац, включающий `<code>`:
 
-<pre class="brush: html">&lt;p&gt;The function &lt;code&gt;selectAll()&lt;/code&gt; highlights all the text in the
-input field so the user can, for example, copy or delete the text.&lt;/p&gt;
-</pre>
+```html
+<p>The function <code>selectAll()</code> highlights all the text in the
+input field so the user can, for example, copy or delete the text.</p>
+```
 
-<p>Вывод, генерируемый этим HTML, выглядит так:</p>
+Вывод, генерируемый этим HTML, выглядит так:
 
-<p>{{EmbedLiveSample("Example", 640, 70)}}</p>
+{{EmbedLiveSample("Example", 640, 70)}}
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Для представления нескольких строк кода, оберните элемент <code>&lt;code&gt;</code> в элемент {{HTMLElement("pre")}}. Элемент <code>&lt;code&gt;</code> сам по себе представляет только один элемент кода или строку кода.</p>
+Для представления нескольких строк кода, оберните элемент `<code>` в элемент {{HTMLElement("pre")}}. Элемент `<code>` сам по себе представляет только один элемент кода или строку кода.
 
-<p>CSS-правило может быть определено для того, чтобы селектор <code>code</code> переопределил шрифт браузера по умолчанию. Предпочтения, установленные пользователем, могут иметь приоритет над указанными CSS.</p>
+CSS-правило может быть определено для того, чтобы селектор `code` переопределил шрифт браузера по умолчанию. Предпочтения, установленные пользователем, могут иметь приоритет над указанными CSS.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("samp")}}</li>
- <li>{{HTMLElement("kbd")}}</li>
- <li>{{HTMLElement("command")}} (deprecated)</li>
- <li>{{HTMLElement("var")}}</li>
- <li>{{HTMLElement("pre")}}</li>
-</ul>
+- {{HTMLElement("samp")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("command")}} (deprecated)
+- {{HTMLElement("var")}}
+- {{HTMLElement("pre")}}

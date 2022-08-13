@@ -13,80 +13,59 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/figure
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;figure&gt;</code> (Иллюстрация с необязательной подписью)</strong> представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента ({{HTMLElement("figcaption")}}).</span> Диаграмма и её подпись представляет собой единое целое.</p>
+**HTML-элемент `<figure>` (Иллюстрация с необязательной подписью)** представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента ({{HTMLElement("figcaption")}}). Диаграмма и её подпись представляет собой единое целое.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток" title="HTML/Content categories#Flow content">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента">секционный корень</a>, явный контент</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Элемент {{HTMLElement("figcaption")}} за которым следует <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток" title="HTML/Content categories#Flow content">основной поток</a>; или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любые элементы принимающие <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток" title="HTML/Content categories#Flow content">основной поток</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content"), [секционный корень](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), явный контент                                                                               |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content"); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                |
+| Разрешённые родители                                             | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content").                                                                                                                                                          |
+| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                      |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                    |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент поддерживает только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примечания_по_использованию">Примечания по использованию</h2>
+## Примечания по использованию
 
-<ul>
- <li>Обычно <code>&lt;figure&gt;</code> это рисунок, иллюстрация, диаграмма, фрагмент кода, и т.д., на который ссылаются в основном потоке документа, но может быть перенесён в другую часть документа или в приложение не нарушив основной поток.</li>
- <li>Являясь <a href="/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента" title="Sections and Outlines of an HTML5 document#Sectioning root">секционным корнем</a>, структура содержимого элемента <code>&lt;figure&gt;</code> исключается из основной структуры документа.</li>
- <li>Подпись может быть связана с элементом <code>&lt;figure&gt;</code> с помощью вставки {{HTMLElement("figcaption")}} внутри него (как первый или последний потомок). Первый элемент <code>&lt;figcaption&gt;</code> в иллюстрации предоставляет её подпись (заголовок).</li>
-</ul>
+- Обычно `<figure>` это рисунок, иллюстрация, диаграмма, фрагмент кода, и т.д., на который ссылаются в основном потоке документа, но может быть перенесён в другую часть документа или в приложение не нарушив основной поток.
+- Являясь [секционным корнем](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента "Sections and Outlines of an HTML5 document#Sectioning root"), структура содержимого элемента `<figure>` исключается из основной структуры документа.
+- Подпись может быть связана с элементом `<figure>` с помощью вставки {{HTMLElement("figcaption")}} внутри него (как первый или последний потомок). Первый элемент `<figcaption>` в иллюстрации предоставляет её подпись (заголовок).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Иллюстрации">Иллюстрации</h3>
+### Иллюстрации
 
-<pre class="brush: html">&lt;!-- Just an image --&gt;
-&lt;figure&gt;
-  &lt;img
+```html
+<!-- Just an image -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="The beautiful MDN logo."&gt;
-&lt;/figure&gt;
+  alt="The beautiful MDN logo.">
+</figure>
 
-&lt;!-- Image with a caption --&gt;
-&lt;figure&gt;
-  &lt;img
+<!-- Image with a caption -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="The beautiful MDN logo."&gt;
-  &lt;figcaption&gt;MDN Logo&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+  alt="The beautiful MDN logo.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Иллюстрации", "100%", 375)}}</div>
+{{EmbedLiveSample("Иллюстрации", "100%", 375)}}
 
-<h3 id="Фрагменты_кода">Фрагменты кода</h3>
+### Фрагменты кода
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;Get browser details using &lt;code&gt;navigator&lt;/code&gt;.&lt;/figcaption&gt;
-  &lt;pre&gt;
+```html
+<figure>
+  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+  <pre>
 function NavigatorExample() {
   var txt;
   txt = "Browser CodeName: " + navigator.appCodeName + "; ";
@@ -97,52 +76,52 @@ function NavigatorExample() {
   txt+= "User-agent header: " + navigator.userAgent  + "; ";
   console.log("NavigatorExample", txt);
 }
-  &lt;/pre&gt;
-&lt;/figure&gt;</pre>
+  </pre>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Фрагменты_кода", "100%", 250)}}</div>
+{{EmbedLiveSample("Фрагменты_кода", "100%", 250)}}
 
-<h3 id="Цитирования">Цитирования</h3>
+### Цитирования
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra:&lt;/cite&gt;&lt;/figcaption&gt;
-  &lt;blockquote&gt;If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.&lt;/blockquote&gt;
-&lt;/figure&gt;
-</pre>
+```html
+<figure>
+  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <blockquote>If debugging is the process of removing software bugs,
+  then programming must be the process of putting them in.</blockquote>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Цитирования")}}</div>
+{{EmbedLiveSample("Цитирования")}}
 
-<blockquote>"Если отладка — процесс удаления ошибок, то программирование должно быть процессом их внесения", — Эдсгер Дейкстра.</blockquote>
+> "Если отладка — процесс удаления ошибок, то программирование должно быть процессом их внесения", — Эдсгер Дейкстра.
 
-<h3 id="Стихи">Стихи</h3>
+### Стихи
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;p style="white-space:pre"&gt;
+```html
+<figure>
+  <p style="white-space:pre">
 Bid me discourse, I will enchant thine ear,
   Or like a fairy trip upon the green,
 Or, like a nymph, with long dishevell'd hair,
   Dance on the sands, and yet no footing seen:
 Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.&lt;/p&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Venus and Adonis&lt;/cite&gt;,
-    by William Shakespeare&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  Not gross to sink, but light, and will aspire.</p>
+  <figcaption><cite>Venus and Adonis</cite>,
+    by William Shakespeare</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Стихи", "100%", 250)}}</div>
+{{EmbedLiveSample("Стихи", "100%", 250)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Элемент {{HTMLElement("figcaption")}}.</li>
-</ul>
+- Элемент {{HTMLElement("figcaption")}}.

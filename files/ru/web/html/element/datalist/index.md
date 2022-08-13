@@ -12,77 +12,56 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/datalist
 ---
-<p><strong>HTML-элемент<code> &lt;datalist&gt;</code></strong> содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.</p>
+**HTML-элемент` <datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категория контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент, который может содержать <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLDataListElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
+| Разрешённые родители                                             | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
+| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                 |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>С данным элементом можно использовать все <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+С данным элементом можно использовать все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
-&lt;input list="browsers" id="myBrowser" name="myBrowser" /&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-  &lt;option value="Microsoft Edge"&gt;
-&lt;/datalist&gt;
-</pre>
+```html
+<label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Полифил">Полифил</h2>
+{{Compat}}
 
-<p>Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифил: <a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a>.</p>
+## Полифил
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифил: [datalist-polyfill](https://github.com/mfranzke/datalist-polyfill).
 
-<ul>
- <li>Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};</li>
- <li>Элемент {{HTMLElement("option")}}.</li>
-</ul>
+## Смотрите также
 
-<p>{{HTMLRef}}</p>
+- Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
+- Элемент {{HTMLElement("option")}}.
+
+{{HTMLRef}}

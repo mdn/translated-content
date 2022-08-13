@@ -11,87 +11,66 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/span
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;span&gt;</code></strong> является основным строковым контейнером для фразового контента, который, по существу, ничего не представляет. Он может использоваться для группировки элементов в целях стилизации (использование атрибутов {{htmlattrxref("class")}} или {{htmlattrxref("id")}}) или потому, что они имеет общие значения атрибутов, например {{htmlattrxref("lang")}}.</span> Он должен быть использован только когда нет другого подходящего по семантике элемента. <code>&lt;span&gt;</code> очень похож на элемент {{HTMLElement("div")}}, но {{HTMLElement("div")}} является <a href="/ru/docs/Web/HTML/Block-level_elements">блочным</a> элементом, в то время как <code>&lt;span&gt;</code> является <a href="/ru/docs/Web/HTML/Строчные_Элементы">строчным</a>.</p>
+**HTML-элемент `<span>`** является основным строковым контейнером для фразового контента, который, по существу, ничего не представляет. Он может использоваться для группировки элементов в целях стилизации (использование атрибутов {{htmlattrxref("class")}} или {{htmlattrxref("id")}}) или потому, что они имеет общие значения атрибутов, например {{htmlattrxref("lang")}}. Он должен быть использован только когда нет другого подходящего по семантике элемента. `<span>` очень похож на элемент {{HTMLElement("div")}}, но {{HTMLElement("div")}} является [блочным](/ru/docs/Web/HTML/Block-level_elements) элементом, в то время как `<span>` является [строчным](/ru/docs/Web/HTML/Строчные_Элементы).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                    |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                                                       |
+| Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                |
+| Разрешённые родительские элементы                                | Любой элемент, который разрешает [фразовый](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) или [потоковый](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент) контент в качестве содержимого. |
+| Разрешённые роли ARIA                                            | Любые                                                                                                                                                                                                                  |
+| DOM-интерфейс                                                    | {{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})                                                                                       |
 
+## Атрибуты
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый</a> или <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">потоковый</a> контент в качестве содержимого.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})</td>
-  </tr>
- </tbody>
-</table>
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Пример 1
 
-<p>К этому элементу применимы только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+### HTML
 
-<h2 id="Пример_1">Пример 1</h2>
+```html
+<p><span>Какой-нибудь текст</span></p>
+```
 
-<h3 id="HTML">HTML</h3>
+### Результат
 
-<pre class="brush:html;">&lt;p&gt;&lt;span&gt;Какой-нибудь текст&lt;/span&gt;&lt;/p&gt;</pre>
+{{EmbedLiveSample('Пример_1')}}
 
-<h3 id="Результат">Результат</h3>
+## Пример 2
 
-<p>{{EmbedLiveSample('Пример_1')}}</p>
+### HTML
 
-<h2 id="Пример_2">Пример 2</h2>
+```html
+<li><span>
+    <a href="portfolio.html" target="_blank">Посмотреть моё портфолио</a>
+</span></li>
+```
 
-<h3 id="HTML_2">HTML</h3>
+### CSS
 
-<pre class="brush:html">&lt;li&gt;&lt;span&gt;
-    &lt;a href="portfolio.html" target="_blank"&gt;Посмотреть моё портфолио&lt;/a&gt;
-&lt;/span&gt;&lt;/li&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">li span {
+```css
+li span {
   background: gold;
  }
-</pre>
+```
 
-<h3 id="Результат_2">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример_2')}}</p>
+{{EmbedLiveSample('Пример_2')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент {{HTMLElement("div")}}</li>
-</ul>
+- HTML-элемент {{HTMLElement("div")}}

@@ -7,182 +7,150 @@ tags:
   - элементы
 translation_of: Web/HTML/Element/ol
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;ol&gt;</code></strong> используется для упорядоченного списка — в частности для пронумерованного списка.</span></p>
+**HTML-элемент `<ol>`** используется для упорядоченного списка — в частности для пронумерованного списка.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Основной поток</a>, и если дочерний элемент <code>&lt;ol&gt;</code> включает в себя хотя бы один элемент {{HTMLElement("li")}}, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Ноль или больше {{HTMLElement("li")}} элементов, которые, в свою очередь, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент, который принимает <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">основной поток</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{DOMxRef("HTMLOListElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                     |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                 | Ноль или больше {{HTMLElement("li")}} элементов, которые, в свою очередь, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                            |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                       |
+| Разрешённые родители                                   | Любой элемент, который принимает [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                    |
+| Разрешённые ARIA-роли                                  | {{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}} |
+| DOM-интерфейс                                          | {{DOMxRef("HTMLOListElement")}}                                                                                                                                                                                                                                                                                                       |
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p>Этот элемент включает <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{HTMLAttrDef("reversed")}}</dt>
- <dd>Атрибут логического значения (bool)  показывает, что предметы указаны по списку в обратном порядке. Пункты в списке будут пронумерованы от большего к меньшему.</dd>
- <dt>{{HTMLAttrDef("start")}}</dt>
- <dd>Нумерация начнётся с указанного числа. Арабскими цифрами (1, 2, 3, и т.д.), даже когда нумерация <code>type</code> в буквах или Римском исчислении. Например, чтобы начать нумерацию с буквы "г" или Римской "iv", используйте <code>start="4"</code>.</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>Задаёт тип нумерации:
- <ul>
-  <li><code>a</code> для строчных букв</li>
-  <li><code>A</code> для заглавных букв</li>
-  <li><code>i</code> для строчной Римской нумерации</li>
-  <li><code>I</code> для заглавной Римской нумерации</li>
-  <li><code>1</code> для цифр (по умолчанию)</li>
- </ul>
+- {{HTMLAttrDef("reversed")}}
+  - : Атрибут логического значения (bool) показывает, что предметы указаны по списку в обратном порядке. Пункты в списке будут пронумерованы от большего к меньшему.
+- {{HTMLAttrDef("start")}}
+  - : Нумерация начнётся с указанного числа. Арабскими цифрами (1, 2, 3, и т.д.), даже когда нумерация `type` в буквах или Римском исчислении. Например, чтобы начать нумерацию с буквы "г" или Римской "iv", используйте `start="4"`.
+- {{HTMLAttrDef("type")}}
+  - : Задаёт тип нумерации:\* `a` для строчных букв
+    - `A` для заглавных букв
+    - `i` для строчной Римской нумерации
+    - `I` для заглавной Римской нумерации
+    - `1` для цифр (по умолчанию)указанный тип используется для всего списка, если только не указан любой другой атрибут {{HTMLAttrxRef("type", "li")}} в элементе {{HTMLElement("li")}}.> **Примечание:** Если тип цифр в списке не имеет значения (к примеру, юридические или технические документы, где элементы обозначены буквами/цифрами), используйте свойство CSS {{CSSxRef("list-style-type")}}.
 
- <p>указанный тип используется для всего списка, если только не указан любой другой атрибут {{HTMLAttrxRef("type", "li")}} в элементе {{HTMLElement("li")}}.</p>
+## Примечания об использовании
 
- <div class="blockIndicator note">
- <p><strong>Note:</strong> Если тип цифр в списке не имеет значения (к примеру,  юридические или технические документы, где элементы обозначены буквами/цифрами), используйте свойство CSS {{CSSxRef("list-style-type")}}.</p>
- </div>
- </dd>
-</dl>
+Обычно, элементы списка отображены с [маркером](/ru/docs/Web/CSS/::marker), предшествующим цифрам или буквам.
 
-<h2 id="Примечания_об_использовании">Примечания об использовании</h2>
+`Элементы <ol>` и {{HTMLElement("ul")}} могут быть вложены (nested) на любом уровне, чередуясь между элементами `<ol>` и `<ul>`.
 
-<p>Обычно, элементы списка отображены с <a href="/en-US/docs/Web/CSS/::marker">маркером</a>, предшествующим цифрам или буквам.</p>
+Оба элемента `<ol>` и {{HTMLElement("ul")}} используются для списков. Различие лишь в том, что в элементе `<ol>` порядок имеет значение, как в данных примерах:
 
-<p><code>Элементы &lt;ol&gt;</code> и {{HTMLElement("ul")}} могут быть вложены (nested) на любом уровне, чередуясь между элементами <code>&lt;ol&gt;</code> и <code>&lt;ul&gt;</code>.</p>
+- Инструкции рецепта
+- Направление по заданному маршруту
+- Список ингредиентов на информации о питании, в убывающих пропорциях.
 
-<p>Оба элемента <code>&lt;ol&gt;</code> и {{HTMLElement("ul")}}  используются для списков. Различие лишь в том, что в элементе <code>&lt;ol&gt;</code> порядок имеет значение, как в данных примерах:</p>
+Чтобы определить, каким списком пользоваться, можно поменять порядок элементов с списке.Если значение меняется, используйте элемент `<ol>` — в противном случае {{HTMLElement("ul")}}.
 
-<ul>
- <li>Инструкции рецепта</li>
- <li>Направление по заданному маршруту</li>
- <li>Список ингредиентов на информации о питании, в убывающих пропорциях.</li>
-</ul>
+## Примеры
 
-<p>Чтобы определить, каким списком пользоваться, можно поменять порядок элементов с списке.Если значение меняется, используйте элемент <code>&lt;ol&gt;</code>  — в противном случае {{HTMLElement("ul")}}.</p>
+### Обычный список
 
-<h2 id="Примеры">Примеры</h2>
+```html
+<ol>
+  <li>Fee</li>
+  <li>Fi</li>
+  <li>Fo</li>
+  <li>Fum</li>
+</ol>
+```
 
-<h3 id="Обычный_список">Обычный список</h3>
+Результат HTML кода выше:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Fee&lt;/li&gt;
-  &lt;li&gt;Fi&lt;/li&gt;
-  &lt;li&gt;Fo&lt;/li&gt;
-  &lt;li&gt;Fum&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+{{EmbedLiveSample("Обычный_список", 400, 100)}}
 
-<p>Результат HTML кода выше:</p>
+### Список с Римскими числами
 
-<p>{{EmbedLiveSample("Обычный_список", 400, 100)}}</p>
+```html
+<ol type="i">
+  <li>Introduction</li>
+  <li>List of Greivances</li>
+  <li>Conclusion</li>
+</ol>
+```
 
-<h3 id="Список_с_Римскими_числами">Список с Римскими числами</h3>
+Результат HTML кода выше:
 
-<pre class="brush: html">&lt;ol type="i"&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;List of Greivances&lt;/li&gt;
-  &lt;li&gt;Conclusion&lt;/li&gt;
-&lt;/ol&gt; </pre>
+{{EmbedLiveSample("Список_с_Римскими_числами", 400, 100)}}
 
-<p>Результат HTML кода выше:</p>
+### Используя свойство `start`
 
-<p>{{EmbedLiveSample("Список_с_Римскими_числами", 400, 100)}}</p>
+```html
+<p>Finishing places of contestants not in the winners’ circle:</p>
 
-<h3 id="Используя_свойство_start">Используя свойство <code>start</code></h3>
+<ol start="4">
+  <li>Speedwalk Stu</li>
+  <li>Saunterin’ Sam</li>
+  <li>Slowpoke Rodriguez</li>
+</ol>
+```
 
-<pre class="brush: html">&lt;p&gt;Finishing places of contestants not in the winners’ circle:&lt;/p&gt;
+Результат HTML кода выше:
 
-&lt;ol start="4"&gt;
-  &lt;li&gt;Speedwalk Stu&lt;/li&gt;
-  &lt;li&gt;Saunterin’ Sam&lt;/li&gt;
-  &lt;li&gt;Slowpoke Rodriguez&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+{{EmbedLiveSample("Используя_свойство_start", 400, 100)}}
 
-<p>Результат HTML кода выше:</p>
+### Вложенный список
 
-<p>{{EmbedLiveSample("Используя_свойство_start", 400, 100)}}</p>
+```html
+<ol>
+  <li>first item</li>
+  <li>second item  <!-- closing </li> tag not here! -->
+    <ol>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ol>
+  </li>            <!-- Here's the closing </li> tag -->
+  <li>third item</li>
+</ol>
+```
 
-<h3 id="Вложенный_список">Вложенный список</h3>
+Результат HTML кода выше:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item  &lt;!-- closing &lt;/li&gt; tag not here! --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem&lt;/li&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;            &lt;!-- Here's the closing &lt;/li&gt; tag --&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+{{EmbedLiveSample("Вложенный_список", 400, 150)}}
 
-<p>Результат HTML кода выше:</p>
+### Неупорядоченный список внутри упорядоченного списка
 
-<p>{{EmbedLiveSample("Вложенный_список", 400, 150)}}</p>
+```html
+<ol>
+  <li>first item</li>
+  <li>second item  <!-- closing </li> tag not here! -->
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ul>
+  </li>            <!-- Here's the closing </li> tag -->
+  <li>third item</li>
+</ol>
+```
 
-<h3 id="Неупорядоченный_список_внутри_упорядоченного_списка">Неупорядоченный список внутри упорядоченного списка</h3>
+Результат HTML кода выше:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item  &lt;!-- closing &lt;/li&gt; tag not here! --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem&lt;/li&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;            &lt;!-- Here's the closing &lt;/li&gt; tag --&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+{{EmbedLiveSample("Неупорядоченный_список_внутри_упорядоченного_списка", 400, 150)}}
 
-<p>Результат HTML кода выше:</p>
-
-<p>{{EmbedLiveSample("Неупорядоченный_список_внутри_упорядоченного_списка", 400, 150)}}</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Другие элементы HTML списка: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}</li>
- <li>CSS-свойства, которые могут быть полезны для стилизации <code>&lt;ol&gt;</code> элемента:
-  <ul>
-   <li>свойство {{CSSxRef("list-style")}}, для порядковых показов</li>
-   <li><a href="/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS счётчики</a>, для более сложных вложенных списков</li>
-   <li>свойство <a href="https://developer.mozilla.org/ru/docs/Web/CSS/line-height">line-height</a>, для замены убранного свойства <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/ol#attr-compact">compact</a></li>
-   <li>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/CSS/margin">margin</a>, для контроля отступа в списке</li>
-  </ul>
- </li>
-</ul>
+## Смотрите также
+
+- Другие элементы HTML списка: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
+- CSS-свойства, которые могут быть полезны для стилизации `<ol>` элемента:
+
+  - свойство {{CSSxRef("list-style")}}, для порядковых показов
+  - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [compact](/ru/docs/Web/HTML/Element/ol#attr-compact)
+  - Свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке

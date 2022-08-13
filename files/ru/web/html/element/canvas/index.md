@@ -3,85 +3,66 @@ title: <canvas>
 slug: Web/HTML/Element/canvas
 translation_of: Web/HTML/Element/canvas
 ---
-<p><strong>HTML <code>&lt;canvas&gt;</code> Элемент </strong>может быть использован для отрисовки графики через скрипты (обычно используется <a href="/en-US/docs/Web/JavaScript">JavaScript</a>). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока <code>&lt;canvas&gt;</code>. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript.</p>
+**HTML `<canvas>` Элемент** может быть использован для отрисовки графики через скрипты (обычно используется [JavaScript](/ru/docs/Web/JavaScript)). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока `<canvas>`. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript.
 
-<p>Больше статей о canvas <a href="/en-US/docs/Web/API/Canvas_API">canvas topic page</a>.</p>
+Больше статей о canvas [canvas topic page](/ru/docs/Web/API/Canvas_API).
 
-<table class="properties" style="height: 537px; width: 437px;">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Embedded_content">embedded content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Transparent но без <a href="/en-US/docs/HTML/Content_categories#Interactive_content">interactive content</a> descendants except(соглашаться?) для {{HTMLElement("a")}} элементы, {{HTMLElement("button")}} элементы, {{HTMLElement("input")}} элементы как {{htmlattrxref("type", "input")}} атрибут is <code>checkbox</code>, <code>radio</code>, или <code>button</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing_content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLCanvasElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), [embedded content](/ru/docs/HTML/Content_categories#Embedded_content), palpable content.                                                                                                                                 |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                      | Transparent но без [interactive content](/ru/docs/HTML/Content_categories#Interactive_content) descendants except(соглашаться?) для {{HTMLElement("a")}} элементы, {{HTMLElement("button")}} элементы, {{HTMLElement("input")}} элементы как {{htmlattrxref("type", "input")}} атрибут is `checkbox`, `radio`, или `button`. |
+| Tag omission                                           | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                       |
+| Permitted parent elements                              | Any element that accepts [phrasing_content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                |
+| DOM interface                                          | {{domxref("HTMLCanvasElement")}}                                                                                                                                                                                                                                                                                                                   |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+Этот элемент включает [global attributes](/ru/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Высота в координатном пространстве в CSS пикселях. По умолчанию 150.</dd>
- <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}}</dt>
- <dd>Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Ширина в координатном пространстве в CSS пикселях. По умолчанию 300.</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : Высота в координатном пространстве в CSS пикселях. По умолчанию 150.
+- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+  - : Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.
+- {{htmlattrdef("width")}}
+  - : Ширина в координатном пространстве в CSS пикселях. По умолчанию 300.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<h3 id="Обязательно_&lt;canvas>_тег">Обязательно <code>&lt;/canvas&gt;</code> тег</h3>
+### Обязательно `</canvas>` тег
 
-<p>В отличии от {{HTMLElement("img")}} элемента, {{HTMLElement("canvas")}} элемент <strong>требует </strong>закрытия тега (<code>&lt;/canvas&gt;</code>).</p>
+В отличии от {{HTMLElement("img")}} элемента, {{HTMLElement("canvas")}} элемент **требует** закрытия тега (`</canvas>`).
 
-<h3 id="Определение_размеров_холста">Определение размеров холста</h3>
+### Определение размеров холста
 
-<p>Отображаемый размер холста может быть изменён используя stylesheet. Изображение масштабируется при рендеринге, чтобы соответствовать стилю размер. Если ваш рендеринг кажется искажённым, попытайтесь указать ваши атрибуты ширины и высоты точно в атрибутах <code>&lt;canvas&gt;</code>, и не используя CSS.</p>
+Отображаемый размер холста может быть изменён используя stylesheet. Изображение масштабируется при рендеринге, чтобы соответствовать стилю размер. Если ваш рендеринг кажется искажённым, попытайтесь указать ваши атрибуты ширины и высоты точно в атрибутах `<canvas>`, и не используя CSS.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;
-  Извините, ваш браузер нет поддерживает&amp;lt;canvas&amp;gt; элемент.
-&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300">
+  Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент.
+</canvas>
+```
 
-<p>Если ваш холст не использует transparency, установите <code>moz-opaque</code> атрибут на canvas теге. Это информация может быть использована для оптимизации рендеринга. Однако, этот атрибут не был стандартизирован и работает только в браузерах основанных на движках рендеринга Mozilla .</p>
+Если ваш холст не использует transparency, установите `moz-opaque` атрибут на canvas теге. Это информация может быть использована для оптимизации рендеринга. Однако, этот атрибут не был стандартизирован и работает только в браузерах основанных на движках рендеринга Mozilla .
 
-<pre class="brush: html">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="mycanvas" moz-opaque></canvas>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API">MDN canvas portal</a></li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></li>
- <li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Canvas cheat sheet</a></li>
- <li><a href="/en-US/demos/tag/tech:canvas">Canvas-related demos</a></li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html">Canvas introduction by Apple</a></li>
-</ul>
+- [MDN canvas portal](/ru/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
+- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

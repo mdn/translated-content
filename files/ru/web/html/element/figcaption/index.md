@@ -8,58 +8,36 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/figcaption
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;figcaption&gt;</code> или элемент подписи иллюстрации</strong> представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}.</span></p>
+**HTML-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Элемент {{HTMLElement("figure")}}; элемент <code>&lt;figcaption&gt;</code> должен быть первым или последним потомком.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                         |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                           |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                    |
+| Разрешённые родители                                             | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком. |
+| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                          |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                        |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент принимает только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Для примеров <code>&lt;figcaption&gt;</code> смотрите {{HTMLElement("figure")}}.</p>
+Для примеров `<figcaption>` смотрите {{HTMLElement("figure")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Элемент {{HTMLElement("figure")}}</li>
-</ul>
+## Смотрите также
+
+- Элемент {{HTMLElement("figure")}}

@@ -5,109 +5,82 @@ tags:
   - доступность
 translation_of: Web/HTML/Element/del
 ---
-<p><span class="seoSummary">Элемент <strong>HTML <code>&lt;del&gt;</code> </strong>представляет диапазон текста, который был удалён из документа. </span>Он может быть использован, например, при отображении "отслеживания изменений" или различий в исходном коде. Элемент {{HTMLElement("ins")}} можно использовать для противоположной цели: указание текста, который был добавлен в документ.</p>
+Элемент **HTML `<del>` **представляет диапазон текста, который был удалён из документа. Он может быть использован, например, при отображении "отслеживания изменений" или различий в исходном коде. Элемент {{HTMLElement("ins")}} можно использовать для противоположной цели: указание текста, который был добавлен в документ.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
 
-<p>Этот элемент часто (но не обязательно) отображается с помощью применения зачёркнутого стиля к тексту.</p>
+Этот элемент часто (но не обязательно) отображается с помощью применения зачёркнутого стиля к тексту.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Фразовый контент</a> или <a href="/en-US/docs/HTML/Content_categories#Flow_content">потоковый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Transparent_content_model">Прозрачный</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые родители</th>
-   <td>Любой элемент, который принимает <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые ARIA роли</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLModElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
+| Пропуск тега                                           | {{no_tag_omission}}                                                                                                                      |
+| Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
+| Допустимые ARIA роли                                   | Любые                                                                                                                                         |
+| DOM интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Атрибуты этого элемента включают <a href="/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Атрибуты этого элемента включают [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>URI для ресурса, который объясняет изменение (например, протоколы соединений).</dd>
- <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}. Формат строки с датой и временем описан в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local date and time string")}}.</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : URI для ресурса, который объясняет изменение (например, протоколы соединений).
+- {{htmlattrdef("datetime")}}
+  - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}. Формат строки с датой и временем описан в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local date and time string")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
-here is the rest of the paragraph.&lt;/p&gt;
-&lt;del&gt;&lt;p&gt;This paragraph has been deleted.&lt;/p&gt;&lt;/del&gt;</pre>
+```html
+<p><del>This text has been deleted</del>,
+here is the rest of the paragraph.</p>
+<del><p>This paragraph has been deleted.</p></del>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+~~This text has been deleted~~, here is the rest of the paragraph.
 
-<p><del>This paragraph has been deleted.</del></p>
+~~This paragraph has been deleted.~~
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Присутствие элемента <code>del</code> не определено в конфигурации по умолчанию большинством технологий чтения с экрана. Его можно задать, используя свойство  CSS {{cssxref("content")}},  а также {{cssxref("::before")}} и с помощью псевдоэлемента {{cssxref("::after")}}.</p>
+Присутствие элемента `del` не определено в конфигурации по умолчанию большинством технологий чтения с экрана. Его можно задать, используя свойство CSS {{cssxref("content")}}, а также {{cssxref("::before")}} и с помощью псевдоэлемента {{cssxref("::after")}}.
 
-<pre>del::before,
-del::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
+    del::before,
+    del::after {
+      clip-path: inset(100%);
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
 
-del::before {
-  content: " [deletion start] ";
-}
+    del::before {
+      content: " [deletion start] ";
+    }
 
-del::after {
-  content: " [deletion end] ";
-}
-</pre>
+    del::after {
+      content: " [deletion end] ";
+    }
 
-<p>Некоторые люди, использующие программы чтения с экрана, сознательно отключают определение контента, что создаёт дополнительную многословность. Поэтому важно не злоупотреблять этой техникой, применяя её только в ситуациях, когда незнание контента, который был удалён, может негативно повлиять на восприятие.</p>
+Некоторые люди, использующие программы чтения с экрана, сознательно отключают определение контента, что создаёт дополнительную многословность. Поэтому важно не злоупотреблять этой техникой, применяя её только в ситуациях, когда незнание контента, который был удалён, может негативно повлиять на восприятие.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/">Короткая заметка о создании своих меток (больше доступности) | The Paciello Group</a></li>
- <li><a href="http://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Тонкая настройка стилей уровня текста | Adrian Roselli</a></li>
-</ul>
+- [Короткая заметка о создании своих меток (больше доступности) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Тонкая настройка стилей уровня текста | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTMLElement("ins")}} элемент для вставки в текст</li>
- <li>
-  <p>{{HTMLElement("s")}} элемент для зачёркивания, отдельный от представления удалённого текста</p>
- </li>
-</ul>
+## Смотрите также
 
-<div>{{HTMLRef}}</div>
+- {{HTMLElement("ins")}} элемент для вставки в текст
+- {{HTMLElement("s")}} элемент для зачёркивания, отдельный от представления удалённого текста
+
+{{HTMLRef}}

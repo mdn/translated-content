@@ -5,80 +5,76 @@ tags:
   - микроданные
 translation_of: Web/HTML/Global_attributes/itemid
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/HTML/Global_attributes">Глобальный атрибут </a><code><strong>itemid</strong></code> предоставляет микроданные в форме уникального глобального идентификатора элемента.</span> Атрибут <code>itemid</code> может быть указан только для элемента, который имеет оба атрибута {{htmlattrxref("itemscope")}} и {{htmlattrxref("itemtype")}}. Также, <code>itemid</code> может быть указан только для элементов, обладающих атрибутом<code>itemscope,</code> соответствующий ссылке<code>itemtype</code> или определяющий словарь, поддерживающий глобальные идентификаторы.</p>
+[Глобальный атрибут ](/ru/docs/Web/HTML/Global_attributes)**`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. Атрибут `itemid` может быть указан только для элемента, который имеет оба атрибута {{htmlattrxref("itemscope")}} и {{htmlattrxref("itemtype")}}. Также, `itemid` может быть указан только для элементов, обладающих атрибутом`itemscope,` соответствующий ссылке`itemtype` или определяющий словарь, поддерживающий глобальные идентификаторы.
 
-<p>Точное значение глобального идентификатора <code>itemtype</code> обеспечивается определением этого идентификатора в пределах указанного словаря. Словарь определяет, могут ли сосуществовать несколько элементов с одним и тем же глобальным идентификатором, и, если да, то как обрабатываются элементы с одним и тем же идентификатором.</p>
+Точное значение глобального идентификатора `itemtype` обеспечивается определением этого идентификатора в пределах указанного словаря. Словарь определяет, могут ли сосуществовать несколько элементов с одним и тем же глобальным идентификатором, и, если да, то как обрабатываются элементы с одним и тем же идентификатором.
 
-<p class="note"><strong>Примечание:</strong> Определение Whatwg.org указывает, что <code>itemid</code> должен быть URL. Однако, следующий пример правильно иллюстрирует, что URN, также может быть использован. Это несоответствие может отражать неполную природу спецификации микроданных.</p>
+> **Примечание:** Определение Whatwg.org указывает, что `itemid` должен быть URL. Однако, следующий пример правильно иллюстрирует, что URN, также может быть использован. Это несоответствие может отражать неполную природу спецификации микроданных.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;dl itemscope
+```html
+<dl itemscope
     itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8"&gt;
-&lt;dt&gt;Title &lt;dd itemprop="title"&gt;The Reality Dysfunction
-&lt;dt&gt;Author &lt;dd itemprop="author"&gt;Peter F. Hamilton
-&lt;dt&gt;Publication date
-&lt;dd&gt;&lt;time itemprop="pubdate" datetime="1996-01-26"&gt;26 January 1996&lt;/time&gt; &lt;/dl&gt;</pre>
+    itemid="urn:isbn:0-330-34032-8">
+<dt>Title <dd itemprop="title">The Reality Dysfunction
+<dt>Author <dd itemprop="author">Peter F. Hamilton
+<dt>Publication date
+<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+```
 
-<h3 id="Структура_данных">Структура данных</h3>
+### Структура данных
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="14">itemscope</td>
-   <td>itemtype: itemid</td>
-   <td colspan="2" rowspan="1">
-    http://vocab.example.net/book: urn:isbn:0-330-34032-8
-   </td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>title</td>
-   <td>The Reality Dysfunction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>author</td>
-   <td>Peter F. Hamilton</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>pubdate</td>
-   <td>1996-01-26</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="14">itemscope</td>
+      <td>itemtype: itemid</td>
+      <td colspan="2" rowspan="1">
+        http://vocab.example.net/book: urn:isbn:0-330-34032-8
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>title</td>
+      <td>The Reality Dysfunction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>author</td>
+      <td>Peter F. Hamilton</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>pubdate</td>
+      <td>1996-01-26</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('HTML', '', '', '', 'Web/HTML/Global_attributes/itemid')}}</p>
+{{EmbedLiveSample('HTML', '', '', '', 'Web/HTML/Global_attributes/itemid')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+- [Другие различные глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
+- Другие глобальные атрибуты, связанные с микроданными
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">Другие различные глобальные атрибуты</a></li>
- <li>Другие глобальные атрибуты, связанные с микроданными
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

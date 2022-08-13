@@ -3,171 +3,150 @@ title: '<u>: Элемент слабой аннотации (подчёркив�
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">The HTML <strong>Unarticulated Annotation Element</strong> (<strong><code>&lt;u&gt;</code></strong>) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</span> This is rendered by default as a simple solid underline, but may be altered using CSS.</p>
+The HTML **Unarticulated Annotation Element** (**`<u>`**) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
 
-<div class="warning">
-<p>This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to <code>underline</code>.</p>
-</div>
+> **Предупреждение:** This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to `underline`.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
+See the [Usage notes](#usage_notes) section for further details on when it's appropriate to use `<u>` and when it isn't.
 
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content), palpable content. |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                      |
+| Tag omission                                               | {{no_tag_omission}}                                                                                                                                        |
+| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                             |
+| Permitted ARIA roles                                       | Any                                                                                                                                                             |
+| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                            |
 
-<p>See the <a href="#usage_notes">Usage notes</a> section for further details on when it's appropriate to use <code>&lt;u&gt;</code> and when it isn't.</p>
+## Атрибуты
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+This element only includes the [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Использование
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+Along with other pure styling elements, the original HTML Underline (`<u>`) element was deprecated in HTML 4; however, `<u>` was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.
 
-<h2 id="Использование">Использование</h2>
+> **Примечание:** Be careful to avoid using the `<u>` element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.
 
-<p>Along with other pure styling elements, the original HTML Underline (<code>&lt;u&gt;</code>) element was deprecated in HTML 4; however, <code>&lt;u&gt;</code> was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.</p>
+### Use cases
 
-<div class="note">
-<p>Be careful to avoid using the <code>&lt;u&gt;</code> element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.</p>
-</div>
+Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
 
-<h3 id="Use_cases">Use cases</h3>
+You should _not_ use `<u>` to simply underline text for presentation purposes, or to denote titles of books.
 
-<p>Valid use cases for the <code>&lt;u&gt;</code> element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.</p>
+### Other elements to consider using
 
-<p>You should <em>not</em> use <code>&lt;u&gt;</code> to simply underline text for presentation purposes, or to denote titles of books.</p>
+In most cases, you should use an element other than `<u>`, such as:
 
-<h3 id="Other_elements_to_consider_using">Other elements to consider using</h3>
+- {{HTMLElement("em")}} to denote stress emphasis
+- {{HTMLElement("b")}} to draw attention to text
+- {{HTMLElement("mark")}} to mark key words or phrases
+- {{HTMLElement("strong")}} to indicate that text has strong importance
+- {{HTMLElement("cite")}} to mark the titles of books or other publications
+- {{HTMLElement("i")}} to denote technical terms, transliterations, thoughts, or names of vessels in Western texts
 
-<p>In most cases, you should use an element other than <code>&lt;u&gt;</code>, such as:</p>
+To provide textual annotations (as opposed to the non-textual annotations created with `<u>`), use the {{HTMLElement("ruby")}} element.
 
-<ul>
- <li>{{HTMLElement("em")}} to denote stress emphasis</li>
- <li>{{HTMLElement("b")}} to draw attention to text</li>
- <li>{{HTMLElement("mark")}} to mark key words or phrases</li>
- <li>{{HTMLElement("strong")}} to indicate that text has strong importance</li>
- <li>{{HTMLElement("cite")}} to mark the titles of books or other publications</li>
- <li>{{HTMLElement("i")}} to denote technical terms, transliterations, thoughts, or names of vessels in Western texts</li>
-</ul>
+To apply an underlined appearance without any semantic meaning, use the {{cssxref("text-decoration")}} property's value `underline`.
 
-<p>To provide textual annotations (as opposed to the non-textual annotations created with <code>&lt;u&gt;</code>), use the {{HTMLElement("ruby")}} element.</p>
+## Примеры
 
-<p>To apply an underlined appearance without any semantic meaning, use the {{cssxref("text-decoration")}} property's value <code>underline</code>.</p>
+### Indicating a spelling error
 
-<h2 id="Примеры">Примеры</h2>
+This example uses the `<u>` element and some CSS to display a paragraph which includes a misspelled error, with the error indicated in the red wavy underline style which is fairly commonly used for this purpose.
 
-<h3 id="Indicating_a_spelling_error">Indicating a spelling error</h3>
+#### HTML
 
-<p>This example uses the <code>&lt;u&gt;</code> element and some CSS to display a paragraph which includes a misspelled error, with the error indicated in the red wavy underline style which is fairly commonly used for this purpose.</p>
+```html
+<p>This paragraph includes a <u class="spelling">wrnogly</u>
+spelled word.</p>
+```
 
-<h4 id="HTML">HTML</h4>
+In the HTML, we see the use of `<u>` with a class, `spelling`, which is used to indicate the misspelling of the word "wrongly".
 
-<pre class="brush: html">&lt;p&gt;This paragraph includes a &lt;u class="spelling"&gt;wrnogly&lt;/u&gt;
-spelled word.&lt;/p&gt;</pre>
+#### CSS
 
-<p>In the HTML, we see the use of <code>&lt;u&gt;</code> with a class, <code>spelling</code>, which is used to indicate the misspelling of the word "wrongly".</p>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">u.spelling {
+```css
+u.spelling {
   text-decoration: red wavy underline;
-}</pre>
+}
+```
 
-<p>This CSS indicates that when the <code>&lt;u&gt;</code> element is styled with the class <code>spelling</code>, it should have a red wavy underline underneath its text. This is a common styling for spelling errors. Another common style can be presented using <code>red dashed underline</code>.</p>
+This CSS indicates that when the `<u>` element is styled with the class `spelling`, it should have a red wavy underline underneath its text. This is a common styling for spelling errors. Another common style can be presented using `red dashed underline`.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The result should be familiar to anyone who has used any of the more popular word processors available today.</p>
+The result should be familiar to anyone who has used any of the more popular word processors available today.
 
-<p>{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}</p>
+{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}
 
-<h3 id="Avoiding_&lt;u>">Avoiding &lt;u&gt;</h3>
+### Avoiding \<u>
 
-<p>Most of the time, you actually don't want to use <code>&lt;u&gt;</code>. Here are some examples that show what you should do instead in several cases.</p>
+Most of the time, you actually don't want to use `<u>`. Here are some examples that show what you should do instead in several cases.
 
-<h4 id="Non-semantic_underlines">Non-semantic underlines</h4>
+#### Non-semantic underlines
 
-<p>To underline text without implying any semantic meaning, use a {{HTMLElement("span")}} element with the {{cssxref("text-decoration")}} property set to <code>"underline"</code>, as shown below.</p>
+To underline text without implying any semantic meaning, use a {{HTMLElement("span")}} element with the {{cssxref("text-decoration")}} property set to `"underline"`, as shown below.
 
-<h5 id="HTML_2">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;span class="underline"&gt;Today's Special&lt;/span&gt;
-&lt;br&gt;
-Chicken Noodle Soup With Carrots</pre>
+```html
+<span class="underline">Today's Special</span>
+<br>
+Chicken Noodle Soup With Carrots
+```
 
-<h5 id="CSS_2">CSS</h5>
+##### CSS
 
-<pre class="brush: css">.underline {
+```css
+.underline {
   text-decoration: underline;
-}</pre>
+}
+```
 
-<h5 id="Result_2">Result</h5>
+##### Result
 
-<p>{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}</p>
+{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}
 
-<h4 id="Presenting_a_book_title">Presenting a book title</h4>
+#### Presenting a book title
 
-<div id="example-unstyled-cite">
-<p>Book titles should be presented using the {{HTMLElement("cite")}} element instead of <code>&lt;u&gt;</code> or even <code>&lt;i&gt;</code>.</p>
+Book titles should be presented using the {{HTMLElement("cite")}} element instead of `<u>` or even `<i>`.
 
-<h5 id="HTML_3">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;p&gt;The class read &lt;cite&gt;Moby Dick&lt;/cite&gt; in the first term.&lt;/p&gt;</pre>
+```html
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
 
-<h5 id="Result_with_default_style">Result with default style</h5>
+##### Result with default style
 
-<p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
-</div>
+{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
 
-<p>Note that the default styling for the <code>&lt;cite&gt;</code> element renders the text in italics. You can, if you wish, override that using CSS:</p>
+Note that the default styling for the `<cite>` element renders the text in italics. You can, if you wish, override that using CSS:
 
-<pre class="brush: css">cite {
+```css
+cite {
   font-style: normal;
   text-decoration: underline;
-}</pre>
+}
+```
 
-<h5 id="Result_with_custom_style">Result with custom style</h5>
+##### Result with custom style
 
-<p>{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}</p>
+{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usuallly be used instead.</li>
- <li>The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.</li>
-</ul>
+- The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usuallly be used instead.
+- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.

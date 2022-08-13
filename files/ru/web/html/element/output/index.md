@@ -7,77 +7,51 @@ tags:
   - вывод
 translation_of: Web/HTML/Element/output
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент вывода </strong>(<strong><code>&lt;output&gt;</code></strong>) является контейнерным элементом, в котором сайт или приложение могут выводить результаты вычислений или действий пользователя.</span></p>
+**HTML-элемент вывода** (**`<output>`**) является контейнерным элементом, в котором сайт или приложение могут выводить результаты вычислений или действий пользователя.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Потоковый контент</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">фразовый контент</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">перечисляемые</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_labelable">лэйбловые</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_resettable">сбрасываемые форма-ассоциированные элементы</a>, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Все элементы, которые принимают <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые ARIA-роли</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLOutputElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), [перечисляемые](/ru/docs/Web/HTML/Content_categories#Form_listed), [лэйбловые](/ru/docs/Web/HTML/Content_categories#Form_labelable), [сбрасываемые форма-ассоциированные элементы](/ru/docs/Web/HTML/Content_categories#Form_resettable), явный контент. |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                  |
+| Tag omission                                               | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                    |
+| Разрешённые родители                                       | Все элементы, которые принимают [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                  |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                                                                                                                                                                                                                       |
+| DOM интерфейс                                              | {{domxref("HTMLOutputElement")}}                                                                                                                                                                                                                                                                                                                                                                |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("for")}}</dt>
- <dd>Пробело-разделяемый список <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code> других элементов, указывающий, что эти элементы предоставили входные значения для (или иным образом повлияли) вычисления.</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd> <a href="/en-US/docs/Web/HTML/Element/form">Элемент формы</a>, с которым связан этот элемент ("владелец формы"). Значением атрибута должен быть <code>id</code> элемента {{HTMLElement("form")}} в том же документе. Этот атрибут не нужен, если элемент  <code>&lt;output&gt;</code> является потомком элемента <code>&lt;form&gt;</code> (в этом случае эта форма является владельцем формы), или, если элемент <code>&lt;output&gt;</code> вообще не связан с формой.</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>Имя элемента; используется для идентификации этого <code>&lt;output&gt;</code> при отправке формы.</dd>
-</dl>
+- {{htmlattrdef("for")}}
+  - : Пробело-разделяемый список [`id`](/en-US/docs/Web/HTML/Global_attributes/id) других элементов, указывающий, что эти элементы предоставили входные значения для (или иным образом повлияли) вычисления.
+- {{htmlattrdef("form")}}
+  - : [Элемент формы](/ru/docs/Web/HTML/Element/form), с которым связан этот элемент ("владелец формы"). Значением атрибута должен быть `id` элемента {{HTMLElement("form")}} в том же документе. Этот атрибут не нужен, если элемент `<output>` является потомком элемента `<form>` (в этом случае эта форма является владельцем формы), или, если элемент `<output>` вообще не связан с формой.
+- {{htmlattrdef("name")}}
+  - : Имя элемента; используется для идентификации этого `<output>` при отправке формы.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Эта форма содержит слайдер, значение которого находится в пределах от 0 до 100, и элемент {{HTMLElement("input")}}, в который можно ввести второе значение. Два числа складываются и результат отображается в элементе <code>&lt;output&gt;</code> каждый раз, когда значение любого управляющего элемента меняется.</p>
+Эта форма содержит слайдер, значение которого находится в пределах от 0 до 100, и элемент {{HTMLElement("input")}}, в который можно ввести второе значение. Два числа складываются и результат отображается в элементе `<output>` каждый раз, когда значение любого управляющего элемента меняется.
 
-<pre class="brush: html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
-  &lt;input type="range" name="b" value="50" /&gt; +
-  &lt;input type="number" name="a" value="10" /&gt; =
-  &lt;output name="result"&gt;60&lt;/output&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" name="b" value="50" /> +
+  <input type="number" name="a" value="10" /> =
+  <output name="result">60</output>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Пример')}}</p>
+{{ EmbedLiveSample('Пример')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Другие элементы, связанные с формой: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
-</ul>
+- Другие элементы, связанные с формой: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -3,127 +3,76 @@ title: '<hr>: The Thematic Break (Horizontal Rule) element'
 slug: Web/HTML/Element/hr
 translation_of: Web/HTML/Element/hr
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;hr&gt;</code> элемент </strong>служит для тематического разделения абзацев.Рисует горизонтальную прямую</span></p>
+**HTML `<hr>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую
 
-<div>{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
 
+Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
 
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                          |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Permitted content                                          | None, it is an {{Glossary("empty element")}}.                                    |
+| Tag omission                                               | It must have start tag, but must not have an end tag.                                       |
+| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content). |
+| Implicit ARIA role                                         | {{ARIARole("separator")}}                                                            |
+| Permitted ARIA roles                                       | {{ARIARole("presentation")}} or {{ARIARole("none")}}                        |
+| DOM interface                                              | {{domxref("HTMLHRElement")}}                                                        |
 
-<p>Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.</p>
+## Attributes
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>None, it is an {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>It must have start tag, but must not have an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("separator")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("presentation")}} or {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLHRElement")}}</td>
-  </tr>
- </tbody>
-</table>
+This element's attributes include the [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
-<h2 id="Attributes">Attributes</h2>
+- {{htmlattrdef("align")}} {{deprecated_inline}}
+  - : Задаёт правило выравнивания.По умолчанию значение выставлено как **left**
+- {{htmlattrdef("color")}} {{Non-standard_inline}}
+  - : Задаёт цвет линии
+- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+  - : Sets the rule to have no shading.
+- {{htmlattrdef("size")}} {{deprecated_inline}}
+  - : Устанавливает высоту в px
+- {{htmlattrdef("width")}} {{deprecated_inline}}
+  - : Задаёт длину линии в px либо в %
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+## Example
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>Задаёт правило выравнивания.По умолчанию значение выставлено как<strong> left</strong></dd>
- <dt>{{htmlattrdef("color")}} {{Non-standard_inline}}</dt>
- <dd>Задаёт цвет линии</dd>
- <dt>{{htmlattrdef("noshade")}} {{deprecated_inline}}</dt>
- <dd>Sets the rule to have no shading.</dd>
- <dt>{{htmlattrdef("size")}} {{deprecated_inline}}</dt>
- <dd>Устанавливает высоту в px</dd>
- <dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt>
- <dd>Задаёт длину линии в px либо в %</dd>
-</dl>
+### HTML
 
-<h2 id="Example">Example</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Это первый параграф текста
   Это первый параграф текста
   Это первый параграф текста
   Это первый параграф текста
-&lt;/p&gt;
+</p>
 
-&lt;hr&gt;
+<hr>
 
-&lt;p&gt;
+<p>
   Это второй параграф текста
   Это второй параграф текста
   Это второй параграф текста
   Это второй параграф текста
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definition of the <code>&lt;hr&gt;</code> element</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>The <code>align</code>, <code>noshade</code>, <code>size</code>, and <code>width</code> attributes are deprecated</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                                               |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML WHATWG')}} | Definition of the `<hr>` element                                      |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                                       |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}             | {{Spec2('HTML4.01')}}     | The `align`, `noshade`, `size`, and `width` attributes are deprecated |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{HTMLElement('p')}}</li>
-</ul>
+- {{HTMLElement('p')}}
