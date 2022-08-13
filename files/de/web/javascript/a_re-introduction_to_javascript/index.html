@@ -607,7 +607,7 @@ avg(2, 3, 4, 5); // 3.5</pre>
 avg(2, 3, 4, 5); // 3.5</pre>
 
 <div class="note">
-<p>Die Variable <code>args</code><strong> </strong>in der oberen Funktion<strong> </strong>enthält alle an die Funktion übergebenen Werte.</p>
+<p>Die Variable <code>args</code> in der oberen Funktion enthält alle an die Funktion übergebenen Werte.</p>
 
 <p>Es ist wichtig zu beachten, dass der Einsatz des <strong>Rest Parameter Operators</strong> in einer Funktionsdeklaration alle Argumente <strong>nach</strong> der Deklaration enthält, jedoch nicht die davor. Z. B. wird bei <code><em>function avg(</em><strong>firstValue</strong><em>, ...args)</em></code> der erste der Funktion übergebene Wert in der Variable <code>firstValue</code> gespeichert und alle folgenden Werte werden in der Variable <code>args</code> gespeichert. Das ist eine sehr nützliche Sprachfunktion, die jedoch ein neues Problem aufwirft. Die Funktion <code>avg()</code> nimmt eine mit Kommata getrennte Liste von Argumenten entgegen — was ist jedoch, wenn man den Durchschnitt eines Arrays haben möchte? Man kann die Funktion folgendermaßen umschreiben:</p>
 </div>

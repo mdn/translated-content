@@ -70,14 +70,8 @@ translation_of: Web/HTML/Element/col
   </li>
   <li><span id="result_box" lang="de"><span>Um den gleichen Effekt wie den <code>char</code>-Wert zu erzielen, können Sie in CSS3 den Wert von </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span>als Wert von </span></span> {{cssxref("text-align")}} <span lang="de"><span> verwenden.</span><span>(Inline nicht implementiert)  .</span></span></li>
  </ul>
-
- <ul>
- </ul>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
  <dd><span id="result_box" lang="de"><span>Dieses Attribut definiert die Hintergrundfarbe jeder Zelle der Spalte</span></span>. <span id="result_box" lang="de"><span>Zugelassene Werte sind jeweils einer der 6-stelligen Hexadezimalcodes, wie in</span></span> <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> definiert wurden, immer mit einem '#' vorangestellt. <span id="result_box" lang="de"><span>Außerdem kann einer der sechzehn vordefinierten Farbstrings verwendet werden:</span></span>
  <table style="width: 80%;">
@@ -133,37 +127,22 @@ translation_of: Web/HTML/Element/col
   </tbody>
  </table>
 
- <div class="note"><span id="result_box" lang="de"><span><u><strong>Hinweis zur Verwendung</strong></u>: Verwenden Sie dieses Attribut nicht, da es nicht standardgemäß ist und nur in einigen Versionen von Microsoft Internet Explorer implementiert ist: Das Element <code>&lt;col&gt;</code> sollte mit CSS formatiert werden.</span> <span>Verwenden Sie die CSS-Eigenschaft </span></span> {{cssxref("background-color")}} <span lang="de"><span> in den relevanten </span></span> {{HTMLElement("td")}}-Elementen<span lang="de"><span>, um einen mit dem <code>bgcolor</code>-Attribut vergleichbaren Effekt zu erzielen.</span></span></div>
+ <div class="note"><span id="result_box" lang="de"><span><strong>Hinweis zur Verwendung</strong>: Verwenden Sie dieses Attribut nicht, da es nicht standardgemäß ist und nur in einigen Versionen von Microsoft Internet Explorer implementiert ist: Das Element <code>&lt;col&gt;</code> sollte mit CSS formatiert werden.</span> <span>Verwenden Sie die CSS-Eigenschaft </span></span> {{cssxref("background-color")}} <span lang="de"><span> in den relevanten </span></span> {{HTMLElement("td")}}-Elementen<span lang="de"><span>, um einen mit dem <code>bgcolor</code>-Attribut vergleichbaren Effekt zu erzielen.</span></span></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dt> </dt>
  <dd>
  <p><span lang="de"><span>Dieses Attribut wird verwendet, um das Zeichen festzulegen, an dem die Zellen in einer Spalte ausgerichtet werden sollen.</span> <span>Typische Werte hierfür sind ein Punkt (.) Beim Ausrichten von Zahlen oder Geldwerten.</span> <span>Wenn </span></span> {{htmlattrxref("align", "col")}} <span lang="de"><span> nicht auf <code>char</code> gesetzt ist, wird dieses Attribut ignoriert</span></span>;</p>
+ <br /><br />
+ <div class="note"><span id="result_box" lang="de"><span><strong>Anmerkung</strong>: Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (und nicht unterstützt) ist.</span> <span>Um den gleichen Effekt wie bei </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span> zu erzielen, können Sie in CSS3 den Zeichensatz mit dem </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span> Attribut als</span> <span>Wert der Eigenschaft </span></span> {{cssxref("text-align")}} <span lang="de"><span> einsetzen.</span></span></div>
  </dd>
- <dd>
- <div class="note"><span id="result_box" lang="de"><span><u><strong>Anmerkung</strong></u>: Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (und nicht unterstützt) ist.</span> <span>Um den gleichen Effekt wie bei </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span> zu erzielen, können Sie in CSS3 den Zeichensatz mit dem </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span> Attribut als</span> <span>Wert der Eigenschaft </span></span> {{cssxref("text-align")}} <span lang="de"><span> einsetzen.</span></span></div>
- </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
  <dd><span id="result_box" lang="de"><span>Dieses Attribut gibt die Anzahl der Zeichen an, die die Spaltendaten von den vom char-Attribut angegebenen Ausrichtungszeichen versetzen sollen</span></span>
- <div class="note"><strong><u>Anmerkung</u>: </strong><span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im aktuellen Standard veraltet (und nicht unterstützt) ist.</span></span></div>
+ <div class="note"><strong>Anmerkung:</strong> <span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im aktuellen Standard veraltet (und nicht unterstützt) ist.</span></span></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("span")}}</dt>
  <dd><span id="result_box" lang="de"><span>Dieses Attribut enthält eine positive ganze Zahl, die die Anzahl aufeinanderfolgender Spalten angibt, die das <code>&lt;col&gt;</code> -Element überspannt.</span> <span>Wenn nicht vorhanden, ist der Standardwert <code>1</code>.</span></span></dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd><span id="result_box" lang="de"><span>Dieses Attribut gibt die vertikale Ausrichtung des Texts in jeder Zelle der Spalte an.</span> <span>Mögliche Werte für dieses Attribut sind:</span></span></dd>
- <dd>
+ <dd><span id="result_box" lang="de"><span>Dieses Attribut gibt die vertikale Ausrichtung des Texts in jeder Zelle der Spalte an.</span> <span>Mögliche Werte für dieses Attribut sind:</span></span>
  <ul>
   <li><code>baseline</code>, <span id="result_box" lang="de"><span>setzt</span></span><span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle , richtet ihn aber an der Grundlinie der Zeichen anstatt am unteren Rand aus.</span> <span>Wenn alle Zeichen dieselbe Größe haben, hat dies den gleichen Effekt wie</span></span> <code>bottom</code></li>
   <li><code>bottom</code>, setzt<span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle</span></span></li>
@@ -171,7 +150,7 @@ translation_of: Web/HTML/Element/col
   <li><code>top</code>, <span id="result_box" lang="de"><span>setzt den Text so nahe wie möglich an den oberen Rand der Zelle</span></span></li>
  </ul>
 
- <div class="note"><strong><u>Anmerkung</u>: </strong><span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (und nicht unterstützt) ist:</span></span>
+ <div class="note"><strong>Anmerkung: </strong><span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (und nicht unterstützt) ist:</span></span>
 
  <ul>
   <li><span id="result_box" lang="de"><span>Versuchen Sie nicht, die Eigenschaft {{cssxref ("vertical-align")}} in einem Selektor festzulegen, der ein HTMLElement &lt;col&gt; enthält.</span> <span>Da das</span></span> {{HTMLElement("td")}}-Element <span lang="de"><span> nicht vom</span></span> {{HTMLElement("col")}}-Element <span lang="de"><span>abhängt, werden sie nicht vererbt</span></span>.</li>
@@ -180,9 +159,6 @@ translation_of: Web/HTML/Element/col
  </ul>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("width")}} {{obsolete_inline("html5")}}</dt>
  <dd><span id="result_box" lang="de"><span>Dieses Attribut gibt eine Standardbreite für jede Spalte in der aktuellen Spaltengruppe an.</span> <span>Zusätzlich zu den Standardpixel- und -prozentwerten kann dieses Attribut das Sonderformat <code>0 *</code> annehmen, was bedeutet, dass die Breite jeder Spalte in der Gruppe die minimale Breite sein sollte, die erforderlich ist, um den Inhalt der Spalte aufzunehmen.</span> <span>Relative Breiten wie <code>0,5 *</code> können ebenfalls verwendet werden.</span></span></dd>
 </dl>

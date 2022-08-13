@@ -67,10 +67,6 @@ try { object_someMethod } catch(e) { console.log(e); }
 
 <p>Man kann den Namen einer Funktion nicht ändern, weil diese Eigenschaft schreibgeschützt ist:</p>
 
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
-
 <pre class="brush: js">var object = {
   // anonyme Funktionsdefinition
   someMethod: function() {}
@@ -97,7 +93,7 @@ o.foo.name; // "foo";
 <pre class="brush: js">function foo() {};
 foo.bind({}).name; // "bound foo"</pre>
 
-<h3 class="brush: js" id="Funktionsnamen_für_Getter_und_Setter">Funktionsnamen für Getter und Setter</h3>
+<h3 id="Funktionsnamen_für_Getter_und_Setter">Funktionsnamen für Getter und Setter</h3>
 
 <p>Beim Einsatz von <code><a href="/de/docs/Web/JavaScript/Reference/Functions/get">get</a></code> und <code><a href="/de/docs/Web/JavaScript/Reference/Functions/set">set</a></code> Zugriffseigenschaften wird "get" oder "set" im Funktionsnamen auftauchen.</p>
 

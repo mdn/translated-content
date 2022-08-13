@@ -111,13 +111,10 @@ translation_of: Web/HTML/Element/input
  <li><code>datetime</code>: {{HTMLVersionInline("5")}} {{deprecated_inline}} {{obsolete_inline}} Ein Bedienelement zum Eingeben eines Datums mit Uhrzeit (Stunde, Minute, Sekunde und Bruchteil einer Sekunde). Diese Eigenschaft wurde <a href="https://github.com/whatwg/html/issues/336">in WHATWG HTML entfernt</a>.</li>
 </ul>
 
-<dl>
- <dt>
- <h2 id="Attribute">Attribute</h2>
 
- <h3 id="Globale_&lt;input>-Attribute">Globale &lt;input&gt;-Attribute</h3>
- </dt>
-</dl>
+<h2 id="Attribute">Attribute</h2>
+
+<h3 id="Globale_&lt;input>-Attribute">Globale &lt;input&gt;-Attribute</h3>
 
 <p>Dieser Abschnitt beschreibt die für alle Arten des <code>input</code>-Elements verfügbaren Attribute. Nicht-globale Attribute – und globale, die sich bei unterschiedlichen <code>input</code>-Elementen anders verhalten – werden bei diesen Elementen behandelt.</p>
 
@@ -153,8 +150,7 @@ translation_of: Web/HTML/Element/input
  </ul>
  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize"><code>autocapitalize</code> documentation</a> in der Safari HTML Reference.</dd>
  <dt>{{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Dieses Attribute gibt an, ob der Browser den Wert des Eingabeelements automatisch vervollständigen kann. </dd>
- <dd>Zulässige Werte sind:
+ <dd>Dieses Attribute gibt an, ob der Browser den Wert des Eingabeelements automatisch vervollständigen kann. <br /><br />Zulässige Werte sind:
  <ul>
   <li><code>off</code>: Der Anwender muss jedesmal einen Wert in dieses Feld eintragen oder das Dokument stellt ein eigenes Verfahren für das Vervollständigen bereit. Der Browser vervollständigt das Feld nicht automatisch.</li>
   <li><code>on</code>: Der Browser kann den Wert automatisch vervollständigen, ausgehend von dem, was der Benutzer in der Vergangenheit eingetragen hat. Dieser Wert gibt jedoch keinen Hinweis über die erwarteten Eingaben.</li>
@@ -351,7 +347,7 @@ e.value = "foo";
 &lt;input type="text" name="input" value="Type here"&gt;
 </pre>
 
-<p><input></p>
+{{EmbedLiveSample("A simple input box", 300, 300)}}
 
 <h3 id="A_common_use-case_scenario">A common use-case scenario</h3>
 

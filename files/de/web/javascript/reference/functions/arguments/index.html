@@ -37,7 +37,7 @@ arguments[2]
 
 <pre class="brush: js notranslate">arguments[1] = 'new value';</pre>
 
-<p>Das <code>arguments</code>-Objekt ist kein {{jsxref("Array")}}. Es ist ähnlich wie ein <code>Array</code>, hat aber keine Eigenschaften eines <code>Array</code>s mit <span class="dpf_sent" id="dpfsent_1">Ausnahme </span>von {{jsxref("Functions/arguments/length", "length")}}. Zum Beispiel ist die {{jsxref("Global_Objects/Array/pop", "pop")}}-Methode nicht vorhanden. Jedoch kann <code>arguments</code> zu einem echten <code>Array</code> konvertiert werden:</p>
+<p>Das <code>arguments</code>-Objekt ist kein {{jsxref("Array")}}. Es ist ähnlich wie ein <code>Array</code>, hat aber keine Eigenschaften eines <code>Array</code>s mit <span>Ausnahme </span>von {{jsxref("Functions/arguments/length", "length")}}. Zum Beispiel ist die {{jsxref("Global_Objects/Array/pop", "pop")}}-Methode nicht vorhanden. Jedoch kann <code>arguments</code> zu einem echten <code>Array</code> konvertiert werden:</p>
 
 <pre class="brush: js notranslate">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
@@ -85,16 +85,16 @@ var args = [...arguments];</pre>
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">Definition einer Funktion, die mehrere Strings <span class="dpf_sent" id="dpfsent_1">konkateniert</span></h3>
+<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">Definition einer Funktion, die mehrere Strings <span>konkateniert</span></h3>
 
-<p>Dieses Beispiel definiert eine Funktion, die mehrere Strings <span class="dpf_sent" id="dpfsent_1">konkateniert</span>. Der einzige formale Parameter der Funktion ist ein String, der die Zeichen enthält, die die einzelnen Elemente trennt. Die Funktion ist wie folgt definiert:</p>
+<p>Dieses Beispiel definiert eine Funktion, die mehrere Strings <span>konkateniert</span>. Der einzige formale Parameter der Funktion ist ein String, der die Zeichen enthält, die die einzelnen Elemente trennt. Die Funktion ist wie folgt definiert:</p>
 
 <pre class="brush:js notranslate">function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
-<p>Man kann eine beliebige Anzahl von Parametern der Funktion <span class="dpf_sent" id="dpfsent_0">übergeben</span> und es wird jedes Argument für den String eingesetzt.</p>
+<p>Man kann eine beliebige Anzahl von Parametern der Funktion <span>übergeben</span> und es wird jedes Argument für den String eingesetzt.</p>
 
 <pre class="brush:js notranslate">// returns "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
