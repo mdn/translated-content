@@ -68,8 +68,8 @@ original_slug: Web/HTML/Element/кнопка
  <p>Firefox по умолчанию, в отличие от прочих браузеров, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">сохраняет назначенное динамически отключённое состояние </a>для элемента <code>&lt;button&gt;</code>, даже при обновлении страницы. Чтобы изменить поведение браузера в этом случае, используйте атрибут {{htmlattrxref("autocomplete","button")}}.</p>
  </dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Атрибут <strong>form</strong> позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение <strong>id</strong> элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент <code>&lt;button&gt;</code> будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.</dd>
- <dd>Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент <code>&lt;button&gt;</code> с формой, даже в случае, если <code>&lt;button&gt;</code> не является наследником элемента {{HTMLElement("form")}}.</dd>
+ <dd><p>Атрибут <strong>form</strong> позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение <strong>id</strong> элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент <code>&lt;button&gt;</code> будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.</p>
+ <p>Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент <code>&lt;button&gt;</code> с формой, даже в случае, если <code>&lt;button&gt;</code> не является наследником элемента {{HTMLElement("form")}}.</p></dd>
  <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Ссылка на обработчик формы. Если атрибут определён — он переопределит атрибут {{htmlattrxref("action","form")}} у формы-родителя.</dd>
  <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}</dt>
@@ -92,11 +92,11 @@ original_slug: Web/HTML/Element/кнопка
  <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("method","form")}} у формы-родителя.</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.</dd>
- <dd>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.</dd>
+ <dd><p>Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.</p>
+ <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.</p></dd>
  <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Если <code>button</code> имеет тип <code>submit</code>, этот атрибут <span style="">является именем или ключевым словом</span>,
- <p dir="ltr" id="tw-target-text">указывающим, где отображать ответ, полученный после отправки формы<span style="">. This is a name of, or keyword for, a </span><em>browsing context</em><span style=""> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:</span></p>
+ <dd><p>Если <code>button</code> имеет тип <code>submit</code>, этот атрибут является именем или ключевым словом,</p>
+ <p>указывающим, где отображать ответ, полученный после отправки формы. This is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:</p>
 
  <ul>
   <li><code>_self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
@@ -144,28 +144,28 @@ original_slug: Web/HTML/Element/кнопка
  <tbody>
   <tr>
    <th>Firefox</th>
-   <td class="bc-supports-yes">Yes - Firefox 30.0</td>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Firefox 63</td>
+   <td>Yes - Firefox 30.0</td>
+   <td>No (even with a <code>tabindex</code>) Firefox 63</td>
   </tr>
   <tr>
    <th>Chrome</th>
-   <td class="bc-supports-yes">Yes - Chrome 35</td>
-   <td class="bc-supports-yes">Yes - Chrome 65</td>
+   <td>Yes - Chrome 35</td>
+   <td>Yes - Chrome 65</td>
   </tr>
   <tr>
    <th>Safari</th>
    <td style="background: #eee;">N/A</td>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
+   <td>No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
   </tr>
   <tr>
    <th>Internet Explorer</th>
-   <td class="bc-supports-yes">Yes - Internet Explorer 11</td>
+   <td>Yes - Internet Explorer 11</td>
    <td style="background: #eee;">N/A</td>
   </tr>
   <tr>
    <th>Presto</th>
-   <td class="bc-supports-yes">Yes - Opera 12</td>
-   <td class="bc-supports-yes">Yes - Opera 12</td>
+   <td>Yes - Opera 12</td>
+   <td>Yes - Opera 12</td>
   </tr>
  </tbody>
 </table>
@@ -182,13 +182,13 @@ original_slug: Web/HTML/Element/кнопка
  <tbody>
   <tr>
    <th>Safari Mobile</th>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
+   <td>No (even with a <code>tabindex</code>)</td>
    <td style="background-color: #eeeeee;">N/A</td>
   </tr>
   <tr>
    <th>Chrome 35</th>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
-   <td class="bc-supports-yes">Yes</td>
+   <td>No (even with a <code>tabindex</code>)</td>
+   <td>Yes</td>
   </tr>
  </tbody>
 </table>

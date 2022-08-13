@@ -15,8 +15,6 @@ original_slug: Web/HTML/Element/ссылка
 
 <div>{{EmbedInteractiveExample("pages/tabbed/link.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>Чтобы подключить таблицу стилей, вы должны включить элемент <code>&lt;link&gt;</code> внутри вашего {{HTMLElement("head")}} следующим образом:</p>
 
 <pre class="brush: html no-line-numbers">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
@@ -77,8 +75,8 @@ original_slug: Web/HTML/Element/ссылка
  <dt>{{HTMLAttrDef("hreflang")}}</dt>
  <dd>Этот атрибут определяет язык, связываемого ресурса. Он является консультативным. Допустимые значения определяются <a href="https://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>. Используйте этот атрибут только если присутствуют атрибуты {{HTMLAttrxRef("href", "a")}}.</dd>
  <dt id="name-attribute">{{HTMLAttrDef("importance")}} {{Experimental_Inline}}</dt>
- <dd>Указывает на относительную важность ресурса. Приоритетные подсказки передаются используя значения:</dd>
- <dd>
+ <dd><p>Указывает на относительную важность ресурса. Приоритетные подсказки передаются используя значения:</p>
+
  <p><strong><code>auto</code></strong>: указывает на <strong>отсутствие предпочтений</strong>. Браузер может использовать собственную эвристику для определения приоритетов ресурсов.</p>
 
  <p><strong><code>high</code></strong>: указывает браузеру, что ресурс находится в <strong>высоком </strong>приоритете.</p>
@@ -162,8 +160,6 @@ original_slug: Web/HTML/Element/ссылка
  <div class="blockIndicator note">
  <p><strong>Примечание:</strong> Этот атрибут считается устаревшим жизненным стандартом WHATWG HTML (который является каноничной спецификацией MDN). Однако, стоит отметить, что <code>rev</code> <em>не</em> считается устаревшим в спецификации W3C. Стоит сказать, учитывая неопределённость, полагаться на <code>rev</code> не стоит.</p>
  </div>
- </dd>
- <dd>
  <div class="blockIndicator note">
  <p>Взамен, вы должны использовать атрибут {{HTMLAttrxRef("rel", "link")}} с противоположным <a href="/en-US/docs/Web/HTML/Link_types">значением типов ссылки</a>. Например, чтобы установить обратную ссылку для <code>made</code>, укажите <code>author</code>.Также, этот атрибут не означает "ревизия" и не должен использоваться с номером версии, даже если многие сайты используют его в этих целях.</p>
  </div>
