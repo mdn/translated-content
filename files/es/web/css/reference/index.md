@@ -176,9 +176,9 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 ### Tipos de objetos principales
 
 - document.[styleSheets](/es/docs/Web/API/Document/styleSheets)
-- styleSheets[i].[cssRules](/es/docs/Web/API/CSSRuleList)
-- cssRules[i].[cssText](/es/docs/Web/API/CSSRule/cssText) (selector y estilo)
-- cssRules[i].[selectorText](/es/docs/Web/API/CSSStyleRule/selectorText)
+- styleSheets\[i].[cssRules](/es/docs/Web/API/CSSRuleList)
+- cssRules\[i].[cssText](/es/docs/Web/API/CSSRule/cssText) (selector y estilo)
+- cssRules\[i].[selectorText](/es/docs/Web/API/CSSStyleRule/selectorText)
 - elem.[style](/es/docs/Web/API/HTMLElement/style)
 - elem.style.[cssText](/es/docs/Web/API/CSSStyleDeclaration/cssText) (solo estilo)
 - elem.[className](/es/docs/Web/API/Element/className)

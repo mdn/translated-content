@@ -66,7 +66,7 @@ delete lenguaje.actual;
 
 ### Definiendo un setter en un objecto existente usando `defineProperty`
 
-Para añadir un setter a un objeto _existente_, use {{jsxref("Object.defineProperty()")}}
+Para añadir un setter a un objeto _existente_,\_ \_use {{jsxref("Object.defineProperty()")}}
 
 ```js
 consr o = {a: 0};

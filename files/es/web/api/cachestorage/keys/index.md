@@ -5,7 +5,7 @@ translation_of: Web/API/CacheStorage/keys
 ---
 {{APIRef ("API de Service Workers")}}
 
-El **`keys()`**método de la interfaz {{domxref ("CacheStorage")}} devuelve un {{jsxref ("Promise")}} que se resolverá con una matriz que contiene las cadenas correspondientes a todos los {{domxref ("Cache")}} objetos rastreados por el objeto {{domxref ("CacheStorage")}} en el orden en que fueron creados. Use este método para iterar sobre una lista de todos los objetos {{domxref ("Cache")}}.
+El **`keys`\*\***`()`\*\*método de la interfaz {{domxref ("CacheStorage")}} devuelve un {{jsxref ("Promise")}} que se resolverá con una matriz que contiene las cadenas correspondientes a todos los {{domxref ("Cache")}} objetos rastreados por el objeto {{domxref ("CacheStorage")}} en el orden en que fueron creados. Use este método para iterar sobre una lista de todos los objetos {{domxref ("Cache")}}.
 
 Puede acceder a `CacheStorage`través de la propiedad global {{domxref ("WindowOrWorkerGlobalScope.caches", "caches")}}.
 

@@ -57,7 +57,7 @@ else {
 }
 ```
 
-> **Nota:** Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.
+> **Nota:** Nota: Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.
 
 ### Typeof operador y `undefined`
 

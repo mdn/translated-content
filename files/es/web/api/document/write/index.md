@@ -13,7 +13,7 @@ translation_of: Web/API/Document/write
 
 Escribe una cadena de texto dentro del hilo de un `document `abierto por [document.open()](/es/docs/Web/API/document.open).
 
-> **Nota:** dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
+> **Nota:** Nota: dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
 
 ## Sintaxis
 
@@ -60,7 +60,7 @@ Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` in
 </script>
 ```
 
-> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") [`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo ](/es/docs/Glossary/MIME_type)`application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo ](/es/docs/Glossary/MIME_type)`application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
 > **Nota:** `document.write` en scripts de modo [diferido](/es/docs/Web/HTML/Element/script#attr-defer) o [asyncrónico](/es/docs/Web/HTML/Element/script#attr-async) serán ignorados, y recibirás un mensaje de error en la consola del tipo "Una llamada a document.write() desde un script cargado asincrónicamente fue ignorado" ("A call to `document.write()` from an asynchronously-loaded external script was ignored").
 

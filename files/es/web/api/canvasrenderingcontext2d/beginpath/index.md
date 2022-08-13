@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
 {{APIRef}}
 
-El método **`CanvasRenderingContext2D.beginPath()`** del API Canvas 2D comienza una nueva ruta vaciando la lista de sub-rutas. Invoca este método cuando quieras crear una nueva ruta.
+El método **`CanvasRenderingContext2D`\*\***`.beginPath() `\*\*del API Canvas 2D comienza una nueva ruta vaciando la lista de sub-rutas. Invoca este método cuando quieras crear una nueva ruta.
 
 ## Sintaxis
 

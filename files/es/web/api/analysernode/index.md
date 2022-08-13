@@ -5,7 +5,7 @@ translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 
-La interfaz **`AnalyserNode`** representa un nodo habilitado para proveer frecuencia en tiempo real y analisis de tiempo-dominio. Es un {{domxref("AudioNode")}} que pasa el flujo de audio sin modificación desde el origen de entrada a la salida, pero, te permite obtener los datos generados, procesarlos, y crear visualizaciones de audio.
+La interfaz **`AnalyserNode`\*\*** \*\*representa un nodo habilitado para proveer frecuencia en tiempo real y analisis de tiempo-dominio. Es un {{domxref("AudioNode")}} que pasa el flujo de audio sin modificación desde el origen de entrada a la salida, pero, te permite obtener los datos generados, procesarlos, y crear visualizaciones de audio.
 
 Un `AnalyzerNode` tiene exactamente una entrada y una salida. El nodo trabaja incluso si la salida no se encuentra conectada.
 

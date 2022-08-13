@@ -26,7 +26,7 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 - **`ms`**
   - : Representa un tiempo en milisegundos. Ejemplos: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Nota:** La conversión entre `s` y `ms` sigue la lógica `1s` = `1000ms`.
+> **Nota:** Nota: La conversión entre `s` y `ms` sigue la lógica `1s` = `1000ms`.
 
 ## Ejemplos
 

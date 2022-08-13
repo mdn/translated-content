@@ -22,7 +22,7 @@ El método **`repeat()`** construye y devuelve una nueva cadena que contiene el 
 ### Parámetros
 
 - `count`
-  - : Un entero entre 0 y +∞: [0, +∞), indicando el número de veces a repetir la cadena en la nueva cadenada creada que será devuelta.
+  - : Un entero entre 0 y +∞: \[0, +∞), indicando el número de veces a repetir la cadena en la nueva cadenada creada que será devuelta.
 
 ### Valor devuelto
 

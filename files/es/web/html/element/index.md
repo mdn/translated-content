@@ -58,7 +58,7 @@ HTML soporta varios recursos multimedia como imágenes, audio, y video.
 
 Además de los contenidos multimedia habituales, HTML puede incluir otra variedad de contenidos, aunque no siempre es fácil de interactuar con ellos.
 
-{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
+{{HTMLRefTable({"include":\["HTML embedded content"], "exclude":\["multimedia"]})}}
 
 ## Scripting
 
@@ -82,7 +82,7 @@ Estos elementos son usados para crear y manejar datos tabulados.
 
 HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar al sitio Web o a una aplicación. Hay una gran cantidad de información acerca de ésto disponible en la [HTML forms guide](/es/docs/Web/Guide/HTML/Forms).
 
-{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
+{{HTMLRefTable({"include": \["HTML forms"], "exclude":\["Deprecated"]})}}
 
 ## Elementos Interactivos
 
@@ -94,10 +94,10 @@ HTML ofrece una selección de elementos que pueden ayudar a crear objetos de int
 
 Los Componentes Web son una tecnología relacionada con HTML que hacen que sea posible, en esencia, crear y personalizar elementos como si fueran HTML normal. Además, pueden crear versiones personalizadas de los elementos HTML estándar.
 
-{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}
+{{HTMLRefTable({"include":\["Web Components"],"elements":\["shadow"]})}}
 
 ## Elementos obsoletos y en desuso
 
 > **Advertencia:** Estos son elementos HTML viejos los cuales están obsoletos y no deben usarse. **Nunca debería usarlos en un nuevo proyecto y debería reemplazarlos en proyectos viejos tan pronto como sea posible.** Se listan aquí solo con propósitos informativos.
 
-{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}
+{{HTMLRefTable({"include":\["Deprecated","Obsolete"]})}}

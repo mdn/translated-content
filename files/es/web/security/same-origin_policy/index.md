@@ -61,7 +61,7 @@ El número de puerto es guardado de forma separada por el navegador. Cualquier l
 
 La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
 
-- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests "HTTP/Access_control_CORS#Preflighted_requests").
+- Las escrituras Cross-origin\_ \_normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests "HTTP/Access_control_CORS#Preflighted_requests").
 - La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
 - Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 

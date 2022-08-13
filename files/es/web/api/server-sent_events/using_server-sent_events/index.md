@@ -121,7 +121,7 @@ El tipo de evento. Si se especifica, un evento se enviará al navegador a la esc
 
 #### data
 
-El campo de datos para el mensaje. Cuando el EventSource recibe múltiples lineas con "`data:`", se concatenara, insertando un caracter de nueva de linea entre cada uno. Se eliminan los saltos de línea al final **[VERIFICAR].**
+El campo de datos para el mensaje. Cuando el EventSource recibe múltiples lineas con "`data:`", se concatenara, insertando un caracter de nueva de linea entre cada uno. Se eliminan los saltos de línea al final **\[VERIFICAR].**
 
 #### id
 
@@ -129,7 +129,7 @@ El ID del evento que establecerá el último ID del objeto EventSource.
 
 #### Retry
 
-El tiempo de reconexión para usar al intentar enviar el evento. [Qué código maneja esto?] Este debe ser un número entero, que especifica el tiempo de reconexion en milisegundos. Si se especifica un valor no entero, el campo se ignora.
+El tiempo de reconexión para usar al intentar enviar el evento. \[Qué código maneja esto?] Este debe ser un número entero, que especifica el tiempo de reconexion en milisegundos. Si se especifica un valor no entero, el campo se ignora.
 
 Se omiten todos los demas nombres de campo.
 

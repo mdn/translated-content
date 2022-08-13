@@ -32,7 +32,7 @@ translation_of: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
   - : Retorna el valor de la propiedad. Ejemplo: _valString_= _styleObj_.getPropertyValue('color')
 - {{domxref("CSSStyleDeclaration.item()")}}
-  - : Retorna un nombre de propiedad. Ejemplo: _nameString_= _styleObj_.item(0) Alternative: _nameString_= _styleObj_[0]
+  - : Retorna un nombre de propiedad. Ejemplo: _nameString_= _styleObj_.item(0) Alternative: _nameString_= _styleObj_\[0]
 - {{domxref("CSSStyleDeclaration.removeProperty()")}}
   - : Retorna el valor borrado. Ejemplo: _valString_= _styleObj_.removeProperty('color')
 - {{domxref("CSSStyleDeclaration.setProperty()")}}

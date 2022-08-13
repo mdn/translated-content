@@ -18,7 +18,7 @@ En este tutorial se describe cómo usar el elemento `<canvas>` para dibujar grá
 
 ## Antes de Empezar
 
-Usar el elemento `<canvas>` no es algo muy díficil pero necesita saber y entender los aspectos básicos del [HTML](/es/docs/HTML "HTML") y [JavaScript](/es/docs/JavaScript "JavaScript"). El elemento `<canvas>` no está soportado en navegadores viejos, pero están soportado en la mayoría de las versiones más recientes de los navegadores. El tamaño por defecto del canvas es 300px \* 150px [ancho (width) \* alto (height)]. Pero se puede personalizar el tamaño usando las propiedades height y width de CSS. Con el fin de dibujar gráficos en el lienzo \<canvas> se utiliza un objeto de contexto de JavaScript que crea gráficos sobre la marcha.
+Usar el elemento `<canvas>` no es algo muy díficil pero necesita saber y entender los aspectos básicos del [HTML](/es/docs/HTML "HTML") y [JavaScript](/es/docs/JavaScript "JavaScript"). El elemento `<canvas>` no está soportado en navegadores viejos, pero están soportado en la mayoría de las versiones más recientes de los navegadores. El tamaño por defecto del canvas es 300px \* 150px \[ancho (width) \* alto (height)]. Pero se puede personalizar el tamaño usando las propiedades height y width de CSS. Con el fin de dibujar gráficos en el lienzo \<canvas> se utiliza un objeto de contexto de JavaScript que crea gráficos sobre la marcha.
 
 ## En este Tutorial
 

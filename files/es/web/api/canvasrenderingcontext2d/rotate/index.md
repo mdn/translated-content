@@ -7,7 +7,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 {{APIRef}}
 
-El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade una rotación a la matriz de transformación.
+El método **`CanvasRenderingContext2D`\*\***`.rotate()`\*\* de la API Canvas 2D añade una rotación a la matriz de transformación.
 
 ## Sintaxis
 

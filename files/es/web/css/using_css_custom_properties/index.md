@@ -11,7 +11,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{cssref}}
 
-En CSS, las **propiedades personalizadas** (también conocidas como **variables**) son entidades definidas por autores de CSS que contienen valores específicos que se pueden volver a utilizar en un documento. Se establecen mediante la notación de propiedades personalizadas (por ejemplo, **`--main-color: black;`**) y se acceden mediante la función {{cssxref("var", "var()")}} (por ejemplo, color: **`var (--main-color);`**).
+En CSS, las **propiedades personalizadas** (también conocidas como **variables**) son entidades definidas por autores de CSS que contienen valores específicos que se pueden volver a utilizar en un documento. Se establecen mediante la notación de propiedades personalizadas (por ejemplo,** \*\***`--main-color: black;`**) y se acceden mediante la función {{cssxref("var", "var()")}} (por ejemplo, color: **`var (--main-color);`\*\*).
 
 Sitios web complejos tienen cantidades muy grandes de CSS, a menudo con una gran cantidad de valores repetidos. Por ejemplo, el mismo color se puede utilizar en cientos de lugares diferentes, lo cual requiere buscar y reemplazar globalmente si necesitamos cambiar ese color. Las variables CSS permiten que un valor se almacene en un lugar y luego se haga referencia en varios otros lugares. Un beneficio adicional son los identificadores semánticos. Por ejemplo **`--main-text-color`** es más fácil de entender que **`#00ff00`**, especialmente si este mismo color también se utiliza en otro contexto.
 

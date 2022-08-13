@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
 {{JSRef}}
 
-El método **`next()`** regresa un objeto con las propiedades `done` y `value`. También puedes pasar un parámetro al método `next` para enviar un valor al generador.
+El método **`next`\*\***`()`\*\* regresa un objeto con las propiedades `done` y `value`. También puedes pasar un parámetro al método `next` para enviar un valor al generador.
 
 ## Sintaxis
 

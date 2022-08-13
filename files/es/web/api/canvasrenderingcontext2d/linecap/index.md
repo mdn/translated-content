@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
 {{APIRef}}
 
-La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.
+La propiedad **`CanvasRenderingContext2D`\*\***`.lineCap`\*\* del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.
 
 > **Nota:** La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
 {{JSRef}}
 
-El método estático **`Reflect.set()`** funciona igual que asignar una propiedad en un objeto.
+El método estático **`Reflect`\*\***`.set()`\*\* funciona igual que asignar una propiedad en un objeto.
 
 ## Sintaxis
 

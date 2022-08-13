@@ -17,7 +17,7 @@ La función CSS `scale()` define una transformación que modifica el tamaño de 
 
 Esta transformación de escalado se caracteriza por un vector bidimensional. Sus coordenadas definen cuanto escalamiento se realiza en cada dirección. Sí ambas coordenadas son iguales, la escala es uniforme (isotrópica) y la relación de aspecto del elemento se conserva (esta es una transformación homotética).
 
-Cuando un valor de coordenadas está fuera del rango [-1, 1], el elemento crece a lo largo de esa dimensión; cuando está dentro, se encoge. Si es negativo, el resultado es un reflejo de punto en esa dimensión. Un valor de 1 no tiene ningún efecto.
+Cuando un valor de coordenadas está fuera del rango \[-1, 1], el elemento crece a lo largo de esa dimensión; cuando está dentro, se encoge. Si es negativo, el resultado es un reflejo de punto en esa dimensión. Un valor de 1 no tiene ningún efecto.
 
 > **Nota:** La función scale() solo se escala en 2d. Para escalar en 3D se utiliza la función scale3d() en su lugar.
 

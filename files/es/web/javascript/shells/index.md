@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Shells
 
 Un shell(\*) JavaScript te permite probar rápidamente fragmentos de código [JavaScript](/es/docs/Web/JavaScript) si tener que recargar un sitio web. Éstos son extremadamente útiles para desarrollar y depurar código.
 
-\*[N. del T.: Un "shell" es una ventana que muestra texto para ejecutar un comando; o en el caso de un lenguaje de programación, funciones en forma de texto, y el resultado se muestra también en formato de texto].
+\*\[N. del T.: Un "shell" es una ventana que muestra texto para ejecutar un comando; o en el caso de un lenguaje de programación, funciones en forma de texto, y el resultado se muestra también en formato de texto].
 
 ## Shells JavaScript autónomas
 

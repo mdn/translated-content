@@ -35,7 +35,7 @@ Con el fin de proporcionar soporte de calidad para usuarios de interfaces tácti
 
 Este ejemplo muestra múltiples puntos de toques al mismo tiempo, permitiendo al usuario dibujar en un {{ HTMLElement("canvas") }} con más de un dedo a la vez. Esto funciona solamente en un navegador que soporte eventos táctiles.
 
-> **Nota:** El texto de abajo usa el término "dedo" cuando describe el contacto con la superficie, pero esto podría ser, por supuesto, también un stylus u otro método de contacto.
+> **Nota:** **Not\*\***a:\*\* El texto de abajo usa el término "dedo" cuando describe el contacto con la superficie, pero esto podría ser, por supuesto, también un stylus u otro método de contacto.
 
 ### Configurando los eventos de manipulación
 

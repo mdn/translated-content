@@ -13,7 +13,7 @@ translation_of: Web/API/Performance/now
 
 El método **`performance.now()`** devuelve un {{domxref("DOMHighResTimeStamp")}}, medido en milisegundos, con una precisión de cinco milésimas de segundo (5 microsegundos).
 
-El valor devuelto representa el tiempo transcurrido desde el **tiempo de origen**(la propiedad {{domxref("PerformanceTiming.navigationStart")}}). En un web worker, el tiempo de origen es el momento en que se crea su contexto de ejecución (ej. hilo o proceso). En una ventana, es el momento en que el usuario navegó (o confirmó la navegación, si la confirmación fue necesaria) al documento actual. Tenga en cuenta los siguientes puntos:
+El valor devuelto representa el tiempo transcurrido desde el **tiempo de origen\*\*** \*\*(la propiedad {{domxref("PerformanceTiming.navigationStart")}}). En un web worker, el tiempo de origen es el momento en que se crea su contexto de ejecución (ej. hilo o proceso). En una ventana, es el momento en que el usuario navegó (o confirmó la navegación, si la confirmación fue necesaria) al documento actual. Tenga en cuenta los siguientes puntos:
 
 - En los workers dedicados creados desde un contexto {{domxref("Window")}}, el valor del worker será inferior a `performance.now()` en la pestaña que generó el worker. Solía ser igual que `t0` del contexto principal, pero fue cambiado.
 - En service workers compartidos, el valor en el worker podría ser superior al del contexto principal debido a que la ventana puede ser creada después de esos workers.

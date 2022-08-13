@@ -14,7 +14,7 @@ translation_of: Web/API/File/lastModifiedDate
 ---
 {{APIRef("File API") }} {{deprecated_header}}
 
-La propiedad de solo lectura **`File.lastModifiedDate`**retorna la fecha de ultima modificacion del archivo. Archivos sin una ultima fecha de modificacion conocida retornan la fecha actual.
+La propiedad de solo lectura **`File.lastModifiedDate`\*\*** \*\*retorna la fecha de ultima modificacion del archivo. Archivos sin una ultima fecha de modificacion conocida retornan la fecha actual.
 
 ## Sintaxis
 

@@ -15,7 +15,7 @@ IndexedDB provee APIs separados para un acceso síncrono o asíncrono. El API s�
 
 Los métodos del API Asíncrono, retornan sin bloquear el hilo de llamada. Para obtener un acceso asíncrono a la base de datos, use [`open`](/en-US/docs/IndexedDB/IDBFactory#open "en-US/docs/IndexedDB/IDBFactory#open")() en el atributo [`indexedDB`](/en-US/docs/IndexedDB/IDBEnvironment#attr_indexedDB "en-US/docs/IndexedDB/IDBEnvironment#attr indexedDB") de un objeto [window](/es/docs/DOM/window "en-US/docs/DOM/window"). Este método retorna un objeto IDBRequest (IDBOpenDBRequest); operaciones asíncronas se comunicarán con la aplicación que llama, disparando eventos en los objetos IDBRequest.
 
-> **Nota:** El objeto `indexedDB` se prefija en las versiones antiguas de los navegadores (propiedad `mozIndexedDB` para Gecko < 16, `webkitIndexedDB` en Chrome, y `msIndexedDB` en IE 10).
+> **Nota:** Nota: El objeto `indexedDB` se prefija en las versiones antiguas de los navegadores (propiedad `mozIndexedDB` para Gecko < 16, `webkitIndexedDB` en Chrome, y `msIndexedDB` en IE 10).
 
 - [`IDBFactory`](/es/docs/IndexedDB/IDBFactory "en-US/docs/IndexedDB/IDBFactory") provee acceso a la base de datos. Esta es la interface implementada por el objeto global `indexedDB` y es el punto de entrada para la API.
 - [`IDBCursor`](/es/docs/IndexedDB/IDBCursor "en-US/docs/IndexedDB/IDBCursor") itera sobre los objetos de almacenamiento y de índices.

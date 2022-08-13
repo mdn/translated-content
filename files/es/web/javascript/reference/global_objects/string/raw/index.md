@@ -21,7 +21,7 @@ El método estatico **`String.raw()` **es una función de [plantilla de literale
 - `...substitutions`
   - : Contiene valores de sustitución.
 - `templateString`
-  - : [opcional] Una [plantilla _string_](/es/docs/Web/JavaScript/Reference/template_strings), con sustituciones (`${...}`).
+  - : \[opcional] Una [plantilla _string_](/es/docs/Web/JavaScript/Reference/template_strings), con sustituciones (`${...}`).
 
 ### Valor de regreso
 
