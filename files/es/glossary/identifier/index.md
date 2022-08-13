@@ -16,6 +16,12 @@ En {{Glossary("JavaScript")}}, los identificadores distinguen entre mayúsculas 
 
 Un identificador se diferencia de una cadena en que una {{Glossary("String", "cadena")}} son datos, mientras que un identificador es parte del código. En JavaScript, no hay forma de convertir identificadores en cadenas, pero a veces es posible procesar cadenas como identificadores.
 
+## Aprende más
+
+### Conocimientos generales
+
+- {{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia
+
 <section id="Quick_links">
  <ol>
   <li><a href="/es/docs/Glossary">Glosario</a>
