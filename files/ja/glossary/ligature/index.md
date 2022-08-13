@@ -8,8 +8,12 @@ tags:
   - 用語集
 translation_of: Glossary/Ligature
 ---
-**合字**は、2 つの文字を 1 つの形に結合したものです。 たとえば、フランス語では "œ" は "oe" の合字です。
+<p><strong>合字</strong>は、2つの文字を1つの形に結合したものです。 たとえば、フランス語では "œ" は "oe" の合字です。</p>
 
-{{cssxref("font-variant-ligatures")}} を使用してウェブページで合字を実装できます。
+<p>{{cssxref("font-variant-ligatures")}} を使用してウェブページで合字を実装できます。</p>
 
-1.  Wikipedia 上の {{Interwiki("wikipedia", "合字")}}
+<section id="Quick_links">
+ <ol>
+  <li>Wikipedia 上の {{Interwiki("wikipedia", "合字")}}</li>
+ </ol>
+</section>

@@ -8,6 +8,6 @@ tags:
 translation_of: Web/XSLT/Index
 original_slug: Web/XSLT/Index
 ---
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
+<p>{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}</p>
 
-{{Index("/ja/docs/XSLT")}}
+<p>{{Index("/ja/docs/XSLT")}}</p>

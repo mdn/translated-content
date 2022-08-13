@@ -6,6 +6,6 @@ tags:
   - Glossary
 translation_of: Glossary/property
 ---
-**プロパティ**という用語はコンテキストに応じて幾つかの意味を持ちます。以下を参照してください：
+<p><strong>プロパティ</strong>という用語はコンテキストに応じて幾つかの意味を持ちます。以下を参照してください：</p>
 
-{{GlossaryDisambiguation}}
+<p>{{GlossaryDisambiguation}}</p>

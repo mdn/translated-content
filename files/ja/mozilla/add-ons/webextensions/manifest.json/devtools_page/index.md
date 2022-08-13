@@ -3,29 +3,38 @@ title: devtools_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-| 型   | `String` |
-| ---- | -------- |
-| 必須 | いいえ   |
-| 例   | ```json  |
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>String</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json no-line-numbers">
+"devtools_page": "devtools/my-page.html"</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-"devtools_page": "devtools/my-page.html"
+<p>このキーを使って拡張機能にブラウザー組み込みの開発ツールを拡張することができます。</p>
 
-````|
+<p>このキーは HTML ファイルの URL として定義されます。その HTML ファイルは拡張機能に同梱し、URL は拡張機能のルートからの相対パスである必要があります。</p>
 
-このキーを使って拡張機能にブラウザー組み込みの開発ツールを拡張することができます。
+<p>詳しくは <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">開発者ツールの拡張</a>を見てください。</p>
 
-このキーは HTML ファイルの URL として定義されます。その HTML ファイルは拡張機能に同梱し、URL は拡張機能のルートからの相対パスである必要があります。
+<h2 id="Example" name="Example">例</h2>
 
-詳しくは [開発者ツールの拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を見てください。
+<pre class="brush: json no-line-numbers">"devtools_page": "devtools/my-page.html"</pre>
 
-## 例
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-```json
-"devtools_page": "devtools/my-page.html"
-````
-
-## ブラウザ実装状況
-
-{{Compat("webextensions.manifest.devtools_page")}}
+<p>{{Compat("webextensions.manifest.devtools_page")}}</p>

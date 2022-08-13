@@ -4,95 +4,92 @@ slug: Learn/Forms/How_to_structure_a_web_form/Example
 translation_of: Learn/Forms/How_to_structure_a_web_form/Example
 original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 ---
-これは記事 [HTML フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)の基本的なお支払いフォームの例です。
+<p>これは記事 <a href="/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">HTML フォームの構築方法</a>の基本的なお支払いフォームの例です。</p>
 
-## お支払いフォーム
+<h2 id="A_payment_form" name="A_payment_form">お支払いフォーム</h2>
 
-### HTML コンテンツ
+<h3 id="HTML_コンテンツ">HTML コンテンツ</h3>
 
-```html
-<form>
-        <h1>Payment form</h1>
-        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-        <section>
-            <h2>Contact information</h2>
-            <fieldset>
-              <legend>Title</legend>
-              <ul>
-                  <li>
-                    <label for="title_1">
-                      <input type="radio" id="title_1" name="title" value="M." >
+<pre class="brush: html notranslate">&lt;form&gt;
+        &lt;h1&gt;Payment form&lt;/h1&gt;
+        &lt;p&gt;Required fields are followed by &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Contact information&lt;/h2&gt;
+            &lt;fieldset&gt;
+              &lt;legend&gt;Title&lt;/legend&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;
+                    &lt;label for="title_1"&gt;
+                      &lt;input type="radio" id="title_1" name="title" value="M." &gt;
                       Mister
-                    </label>
-                  </li>
-                  <li>
-                    <label for="title_2">
-                      <input type="radio" id="title_2" name="title" value="Ms.">
+                    &lt;/label&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;label for="title_2"&gt;
+                      &lt;input type="radio" id="title_2" name="title" value="Ms."&gt;
                       Miss
-                    </label>
-                  </li>
-              </ul>
-            </fieldset>
-            <p>
-              <label for="name">
-                <span>Name: </span>
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-              <input type="text" id="name" name="username">
-            </p>
-            <p>
-              <label for="mail">
-                <span>E-mail: </span>
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-              <input type="email" id="mail" name="usermail">
-            </p>
-            <p>
-              <label for="password">
-                <span>Password: </span>
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-              <input type="password" id="pwd" name="password">
-            </p>
-        </section>
-        <section>
-            <h2>Payment information</h2>
-            <p>
-              <label for="card">
-                <span>Card type:</span>
-              </label>
-              <select id="card" name="usercard">
-                <option value="visa">Visa</option>
-                <option value="mc">Mastercard</option>
-                <option value="amex">American Express</option>
-              </select>
-            </p>
-            <p>
-              <label for="number">
-                <span>Card number:</span>
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-                <input type="number" id="number" name="cardnumber">
-            </p>
-            <p>
-              <label for="date">
-                <span>Expiration date:</span>
-                <strong><abbr title="required">*</abbr></strong>
-                <em>formatted as mm/yy</em>
-              </label>
-              <input type="date" id="date" name="expiration">
-            </p>
-        </section>
-        <section>
-            <p> <button type="submit">Validate the payment</button> </p>
-        </section>
-    </form>
-```
+                    &lt;/label&gt;
+                  &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/fieldset&gt;
+            &lt;p&gt;
+              &lt;label for="name"&gt;
+                &lt;span&gt;Name: &lt;/span&gt;
+                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+              &lt;/label&gt;
+              &lt;input type="text" id="name" name="username"&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;label for="mail"&gt;
+                &lt;span&gt;E-mail: &lt;/span&gt;
+                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+              &lt;/label&gt;
+              &lt;input type="email" id="mail" name="usermail"&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;label for="password"&gt;
+                &lt;span&gt;Password: &lt;/span&gt;
+                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+              &lt;/label&gt;
+              &lt;input type="password" id="pwd" name="password"&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Payment information&lt;/h2&gt;
+            &lt;p&gt;
+              &lt;label for="card"&gt;
+                &lt;span&gt;Card type:&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;select id="card" name="usercard"&gt;
+                &lt;option value="visa"&gt;Visa&lt;/option&gt;
+                &lt;option value="mc"&gt;Mastercard&lt;/option&gt;
+                &lt;option value="amex"&gt;American Express&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;label for="number"&gt;
+                &lt;span&gt;Card number:&lt;/span&gt;
+                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+              &lt;/label&gt;
+                &lt;input type="number" id="number" name="cardnumber"&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;label for="date"&gt;
+                &lt;span&gt;Expiration date:&lt;/span&gt;
+                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+                &lt;em&gt;formatted as mm/yy&lt;/em&gt;
+              &lt;/label&gt;
+              &lt;input type="date" id="date" name="expiration"&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;p&gt; &lt;button type="submit"&gt;Validate the payment&lt;/button&gt; &lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/form&gt;</pre>
 
-### CSS コンテンツ
+<h3 id="CSS_コンテンツ">CSS コンテンツ</h3>
 
-```css
-      h1 {
+<pre class="brush: css notranslate">      h1 {
           margin-top: 0;
       }
 
@@ -161,9 +158,8 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
         position: absolute;
         right: 5px;
         top: 20px;
-      }
-```
+      }</pre>
 
-### 結果
+<h3 id="結果">結果</h3>
 
-{{ EmbedLiveSample('A_payment_form', '100%', 620) }}
+<p>{{ EmbedLiveSample('A_payment_form', '100%', 620) }}</p>

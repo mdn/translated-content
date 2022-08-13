@@ -11,35 +11,34 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/oninput
 original_slug: Web/API/GlobalEventHandlers/oninput
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-{{domxref("GlobalEventHandlers")}} ミックスインの **`oninput`** プロパティは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} の各要素上の {{event("input")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。これは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} または {{domxref("Document.designMode", "designMode")}} が有効になっている要素上のイベントも扱います。
+<p>{{domxref("GlobalEventHandlers")}} ミックスインの <strong><code>oninput</code></strong> プロパティは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} の各要素上の {{event("input")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。これは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} または {{domxref("Document.designMode", "designMode")}} が有効になっている要素上のイベントも扱います。</p>
 
-> **Note:** **注記:** `oninput` と異なり、{{domxref("GlobalEventHandlers.onchange", "onchange")}} イベントハンドラーは、各要素の `value` が変化するたびに呼び出される必要がありません。
+<div class="blockIndicator note">
+<p><strong>注記:</strong> <code>oninput</code> と異なり、{{domxref("GlobalEventHandlers.onchange", "onchange")}} イベントハンドラーは、各要素の <code>value</code> が変化するたびに呼び出される必要がありません。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    target.oninput = functionRef;
+<pre class="syntaxbox"><em>target</em>.oninput = <em>functionRef</em>;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-`functionRef` は関数名または [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function) です。この関数は、{{domxref("KeyboardEvent")}} オブジェクトとその 1 個の引数を受け取ります。
+<p><code>functionRef</code> は関数名または <a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a> です。この関数は、{{domxref("KeyboardEvent")}} オブジェクトとその 1 個の引数を受け取ります。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例は、{{HtmlElement("input")}} 要素のコンテンツを変更する度に、その文字数をログ出力します。
+<p>この例は、{{HtmlElement("input")}} 要素のコンテンツを変更する度に、その文字数をログ出力します。</p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<input type="text" placeholder="ここに何か入力すると、その長さが分かります。" size="50">
-<p id="log"></p>
-```
+<pre class="brush: html">&lt;input type="text" placeholder="ここに何か入力すると、その長さが分かります。" size="50"&gt;
+&lt;p id="log"&gt;&lt;/p&gt;</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-let input = document.querySelector('input');
+<pre class="brush: js">let input = document.querySelector('input');
 let log = document.getElementById('log');
 
 input.oninput = handleInput;
@@ -47,31 +46,49 @@ input.oninput = handleInput;
 function handleInput(e) {
   log.textContent = `フィールドの value は
       ${e.target.value.length} 文字の長さです。`;
-}
-```
+}</pre>
 
-### 実行結果
+<h3 id="Result" name="Result">実行結果</h3>
 
-{{EmbedLiveSample("Example")}}
+<p>{{EmbedLiveSample("Example")}}</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                           | 策定状況                         | 備考     |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#ix-handler-oninput", "oninput")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "#ix-handler-oninput", "oninput")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("api.GlobalEventHandlers.oninput")}}
 
-以下のリンクは、互換性の問題と修正についての議論です。古いブラウザーで動作させる場合に役立つでしょう:
 
-- [A HTML5 Browser maze, oninput support](http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
-- [Fixing oninput in IE Using html5Widgets](http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) includes polyfill for IE6-8
-- Mathias Bynens suggests [binding to both input and keydown](http://mathiasbynens.be/notes/oninput)
-- [oninput event | dottoro](http://help.dottoro.com/ljhxklln.php) has notes about bugginess in IE9
-- [Bug 312094 - Add support for \<select oninput>](https://bugzilla.mozilla.org/show_bug.cgi?id=312094)
+<p>{{Compat("api.GlobalEventHandlers.oninput")}}</p>
 
-## 関連項目
+<p>以下のリンクは、互換性の問題と修正についての議論です。古いブラウザーで動作させる場合に役立つでしょう:</p>
 
-- {{event("input")}} イベント
+<ul>
+ <li><a class="external" href="http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/">A HTML5 Browser maze, oninput support</a></li>
+ <li><a class="external" href="http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/">Fixing oninput in IE Using html5Widgets</a> includes polyfill for IE6-8</li>
+ <li>Mathias Bynens suggests <a class="external" href="http://mathiasbynens.be/notes/oninput">binding to both input and keydown</a></li>
+ <li><a class="external" href="http://help.dottoro.com/ljhxklln.php">oninput event | dottoro</a> has notes about bugginess in IE9</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=312094">Bug 312094 - Add support for &lt;select oninput&gt;</a></li>
+</ul>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li>{{event("input")}} イベント</li>
+</ul>

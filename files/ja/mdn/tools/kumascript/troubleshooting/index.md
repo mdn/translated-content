@@ -9,46 +9,57 @@ tags:
   - ガイド
 translation_of: MDN/Tools/KumaScript/Troubleshooting
 ---
-{{MDNSidebar}}
+<div>{{MDNSidebar}}</div>
 
-ページに出てくる [KumaScript](/ja/docs/MDN/Contribute/Tools/KumaScript) エラーは読み手にとって不快なもので、大きく赤い恐ろしげなボックスですが、幸運なことに MDN アカウントを持つユーザーは誰でも、ドキュメントを直してこうしたエラーを修正できます。ページがエラーを起こしたとき、[エラーのあるドキュメント](/ja/docs/with-errors)リストに追加されます。サイト編集者は通常このリストを検査して、エラーを発見、修正します。この記事では 4 種類の KumaScript エラーと、修正するための対策について詳しく見ます。
+<div class="summary">
+<p>ページに出てくる <a href="/ja/docs/MDN/Contribute/Tools/KumaScript">KumaScript</a> エラーは読み手にとって不快なもので、大きく赤い恐ろしげなボックスですが、幸運なことに MDN アカウントを持つユーザーは誰でも、ドキュメントを直してこうしたエラーを修正できます。ページがエラーを起こしたとき、<a href="/ja/docs/with-errors">エラーのあるドキュメント</a>リストに追加されます。サイト編集者は通常このリストを検査して、エラーを発見、修正します。この記事では4種類の KumaScript エラーと、修正するための対策について詳しく見ます。</p>
+</div>
 
-## DocumentParsingError
+<h2 id="DocumentParsingError">DocumentParsingError</h2>
 
-`DocumentParsingError` のエラーは KumaScript がドキュメント自体を理解できないときに表示されます。最もよくある原因は [macro](/ja/docs/MDN/Contribute/Content/Macros) 内の文法エラーです。
+<p><code>DocumentParsingError</code> のエラーは KumaScript がドキュメント自体を理解できないときに表示されます。最もよくある原因は <a href="/ja/docs/MDN/Contribute/Content/Macros">macro</a> 内の文法エラーです。</p>
 
-以下をチェックします:
+<p>以下をチェックします:</p>
 
-- マクロ呼出しのつもりではない場合に中括弧を使った。
-  - : If you need to write \\{ in a document without calling a macro you can escape it with a \ like this: `\\{`
-- マクロパラメーターに特殊な文字を使った。
-  - : If you need to use a " or a \ inside of a macro parameter they can be escaped with a \ like this: `\\` or `\"`
-- マクロパラメーター間にカンマがない。
-  - : Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example `\{\{compat("html.elements.link", 2)}}`.
-- マクロ呼び出し内に HTML タグがある
-  - : If you apply styling to a macro, it will often break because, for example, a `</code>` tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.
+<dl>
+ <dt>マクロ呼出しのつもりではない場合に中括弧を使った。</dt>
+ <dd>If you need to write  \{ in a document without calling a macro you can escape it with a \ like this: <code>\\{</code></dd>
+ <dt>マクロパラメーターに特殊な文字を使った。</dt>
+ <dd>If you need to use a " or a \  inside of a macro parameter they can be escaped with a \ like this: <code>\\</code> or <code>\"</code></dd>
+ <dt>マクロパラメーター間にカンマがない。</dt>
+ <dd>Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example <code>\{\{compat("html.elements.link", 2)}}</code>.</dd>
+ <dt>マクロ呼び出し内に HTML タグがある</dt>
+ <dd>If you apply styling to a macro, it will often break because, for example, a <code>&lt;/code&gt;</code> tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.</dd>
+</dl>
 
-## TemplateLoadingError
+<ul>
+</ul>
 
-`TemplateLoadingError` のエラーは KumaScript がページにどの [macro](/ja/docs/MDN/Contribute/Content/Macros) を取り込むか探せないときに表示されます。
+<h2 id="TemplateLoadingError">TemplateLoadingError</h2>
 
-以下をチェックします:
+<p><code>TemplateLoadingError</code> のエラーは KumaScript がページにどの <a href="/ja/docs/MDN/Contribute/Content/Macros">macro</a> を取り込むか探せないときに表示されます。</p>
 
-- マクロ名を誤ったり、マクロがリネームされた。
-  - : [GitHub repo](https://github.com/mdn/kumascript/tree/master/macros) で既知のマクロのリストを確認できます。
+<p>以下をチェックします:</p>
 
-> **Note:** **Tip:** You can make it quick and easy to jump to a specific macro by adding a [search keyword](http://kb.mozillazine.org/Using_keyword_searches) to Firefox. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} for a step-by-step guide to creating the search keyword for this.
+<dl>
+ <dt>マクロ名を誤ったり、マクロがリネームされた。</dt>
+ <dd><a href="https://github.com/mdn/kumascript/tree/master/macros">GitHub repo</a> で既知のマクロのリストを確認できます。</dd>
+</dl>
 
-## TemplateExecutionError
+<div class="note">
+<p><strong>Tip:</strong> You can make it quick and easy to jump to a specific macro by adding a <a href="http://kb.mozillazine.org/Using_keyword_searches">search keyword</a> to Firefox. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} for a step-by-step guide to creating the search keyword for this.</p>
+</div>
 
-`TemplateExecutionError` のエラーは KumaScript が macro 内のエラーに遭遇したときに表示されます。このエラーは管理者のみが修正できて、バグとして報告が必要となります。
+<h2 id="TemplateExecutionError">TemplateExecutionError</h2>
 
-エラーを報告する前に、これが修正済みでないことを確認します。KumaScript を強制的にページのフレッシュコピーを読み込ませることでできます。これには <kbd>Shift</kbd> を押しっぱなしでページ再読み込みします (Windows/Linux では <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>R</kbd> 、Mac では <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>R</kbd> )。
+<p><code>TemplateExecutionError</code> のエラーは KumaScript が macro 内のエラーに遭遇したときに表示されます。このエラーは管理者のみが修正できて、バグとして報告が必要となります。</p>
 
-エラーが続く場合、ページの URL とエラーのテキストをつけて[bug 報告します](https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla_Developer_Network&component=General#h=detail|bug)。
+<p>エラーを報告する前に、これが修正済みでないことを確認します。KumaScript を強制的にページのフレッシュコピーを読み込ませることでできます。これには <kbd>Shift</kbd>  を押しっぱなしでページ再読み込みします (Windows/Linux では <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>R</kbd> 、Mac では <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>R</kbd> )。</p>
 
-## Error & Unknown
+<p>エラーが続く場合、ページの URL とエラーのテキストをつけて<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla_Developer_Network&amp;component=General#h=detail|bug">bug 報告します</a>。</p>
 
-これは、エラーがこれ以外の種類にない場合のカテゴリーです。
+<h2 id="Error_Unknown">Error &amp; Unknown</h2>
 
-修正をチェックして、[TemplateExecutionError](#TemplateExecutionError) に記述されるようなしつこいバグとして報告します。
+<p>これは、エラーがこれ以外の種類にない場合のカテゴリーです。</p>
+
+<p>修正をチェックして、<a href="#TemplateExecutionError">TemplateExecutionError</a> に記述されるようなしつこいバグとして報告します。</p>

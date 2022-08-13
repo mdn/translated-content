@@ -8,50 +8,61 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-| 型   | `String` |
-| ---- | -------- |
-| 必須 | いいえ   |
-| 例   | ```json  |
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>String</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json no-line-numbers">
+"incognito": "spanning"</pre>
 
-"incognito": "spanning"
+    <pre class="brush: json no-line-numbers">
+"incognito": "split"</pre>
 
-```````json
-"incognito": "split"
-``````json
-"incognito": "not_allowed"
-``` |
+    <pre class="brush: json no-line-numbers">
+"incognito": "not_allowed"</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-`incognito` キーを使ってプライベートブラウジングウィンドウで機能拡張が動作する方法を管理できます。
+<p><code>incognito</code> キーを使ってプライベートブラウジングウィンドウで機能拡張が動作する方法を管理できます。</p>
 
-This is a string which may take any of the following values:
+<p>This is a string which may take any of the following values:</p>
 
-*   "spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an `incognito` property in the [`Window`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) or [`Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) that represents them. This property indicates whether or not the object is private:
+<ul>
+ <li>
+  <p>"spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an <code>incognito</code> property in the <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window">Window</a></code> or <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">Tab</a></code> that represents them. This property indicates whether or not the object is private:</p>
 
-    ```js
-    browser.windows.getLastFocused().then((windowInfo) => {
-      console.log(`Window is private: ${windowInfo.incognito}`);
-    });
-    ```
-*   "split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/ja/docs/Web/API/Storage/LocalStorage) is not shared). However, the WebExtension API [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared.
-*   "not_allowed": private tabs and windows are invisible to the extension.
+  <pre class="brush: js">browser.windows.getLastFocused().then((windowInfo) =&gt; {
+  console.log(`Window is private: ${windowInfo.incognito}`);
+});</pre>
+ </li>
+ <li>"split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, <code><a href="/ja/docs/Web/API/Storage/LocalStorage">localStorage</a></code> is not shared). However, the WebExtension API <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> is shared.</li>
+ <li>"not_allowed": private tabs and windows are invisible to the extension.</li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```json
-"incognito": "spanning"
-```
+<pre class="brush: json no-line-numbers">"incognito": "spanning"
+</pre>
 
-```json
-"incognito": "split"
-```
+<pre class="brush: json no-line-numbers">"incognito": "split"
+</pre>
 
-```json
-"incognito": "not_allowed"
-```
+<pre class="brush: json no-line-numbers">"incognito": "not_allowed"
+</pre>
 
-## ブラウザ実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-{{Compat("webextensions.manifest.incognito")}}
-```````
+<p>{{Compat("webextensions.manifest.incognito")}}</p>

@@ -4,29 +4,26 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_1
 ---
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)を説明する最初のコード例です。
+<p>これは、<a href="/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">カスタムフォームウィジェットの作成方法</a>を説明する最初のコード例です。</p>
 
-## Basic state
+<h2 id="Basic_state" name="Basic_state">Basic state</h2>
 
-### HTML
+<h3 id="Basic_state_HTML" name="Basic_state_HTML">HTML</h3>
 
-```html
-<div class="select">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
-</div>
-```
+<pre class="brush: html notranslate">&lt;div class="select"&gt;
+  &lt;span class="value"&gt;Cherry&lt;/span&gt;
+  &lt;ul class="optList hidden"&gt;
+    &lt;li class="option"&gt;Cherry&lt;/li&gt;
+    &lt;li class="option"&gt;Lemon&lt;/li&gt;
+    &lt;li class="option"&gt;Banana&lt;/li&gt;
+    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
+    &lt;li class="option"&gt;Apple&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="Basic_state_CSS" name="Basic_state_CSS">CSS</h3>
 
-```css
-/* --------------- */
+<pre class="brush: css notranslate">/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -140,33 +137,30 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_1
   background: #000;
   color: #FFFFFF;
 }
-```
+</pre>
 
-### Result for basic state
+<h3 id="Result_for_basic_state">Result for basic state</h3>
 
-{{ EmbedLiveSample('Basic_state', 120, 130) }}
+<div>{{ EmbedLiveSample('Basic_state', 120, 130) }}</div>
 
-## Active state
+<h2 id="Active_state" name="Active_state">Active state</h2>
 
-### HTML
+<h3 id="Active_state_HTML" name="Active_state_HTML">HTML</h3>
 
-```html
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
-</div>
-```
+<pre class="brush:html notranslate">&lt;div class="select active"&gt;
+  &lt;span class="value"&gt;Cherry&lt;/span&gt;
+  &lt;ul class="optList hidden"&gt;
+    &lt;li class="option"&gt;Cherry&lt;/li&gt;
+    &lt;li class="option"&gt;Lemon&lt;/li&gt;
+    &lt;li class="option"&gt;Banana&lt;/li&gt;
+    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
+    &lt;li class="option"&gt;Apple&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="Active_state_CSS" name="Active_state_CSS">CSS</h3>
 
-```css
-/* --------------- */
+<pre class="brush:css notranslate">/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -279,34 +273,30 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_1
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}
-```
+}</pre>
 
-### Result for active state
+<h3 id="Result_for_active_state">Result for active state</h3>
 
-{{ EmbedLiveSample('Active_state', 120, 130) }}
+<div>{{ EmbedLiveSample('Active_state', 120, 130) }}</div>
 
-## Open state
+<h2 id="Open_state" name="Open_state">Open state</h2>
 
-### HTML
+<h3 id="Open_state_HTML" name="Open_state_HTML">HTML</h3>
 
-```html
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList">
-    <li class="option highlight">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
-</div>
-```
+<pre class="brush:html notranslate">&lt;div class="select active"&gt;
+  &lt;span class="value"&gt;Cherry&lt;/span&gt;
+  &lt;ul class="optList"&gt;
+    &lt;li class="option highlight"&gt;Cherry&lt;/li&gt;
+    &lt;li class="option"&gt;Lemon&lt;/li&gt;
+    &lt;li class="option"&gt;Banana&lt;/li&gt;
+    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
+    &lt;li class="option"&gt;Apple&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="Open_state_CSS" name="Open_state_CSS">CSS</h3>
 
-```css
-/* --------------- */
+<pre class="brush:css notranslate">/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -419,9 +409,8 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_1
 .select .highlight {
   background: #000;
   color: #FFF;
-}
-```
+}</pre>
 
-### Result for open state
+<h3 id="Result_for_open_state">Result for open state</h3>
 
-{{ EmbedLiveSample('Open_state', 120, 130) }}
+<div>{{ EmbedLiveSample('Open_state', 120, 130) }}</div>

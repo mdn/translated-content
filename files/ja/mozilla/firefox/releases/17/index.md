@@ -5,76 +5,91 @@ tags:
   - Firefox
 translation_of: Mozilla/Firefox/Releases/17
 ---
-Gecko 17 を搭載した Firefox 17 は米国時間 2012 年 11 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 17 の変更点をまとめています。
+<p>Gecko 17 を搭載した Firefox 17 は米国時間 2012 年 11 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 17 の変更点をまとめています。</p>
 
-Want to help document Firefox 17? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=17.0) and pitch in!
+<p>Want to help document Firefox 17? See the <a class="external" href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=17.0">list of bugs that need to be written about</a> and pitch in!</p>
 
-## Web 開発者向けの変更点一覧
+<h2 id="Changes_for_Web_developers" name="Changes_for_Web_developers">Web 開発者向けの変更点一覧</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-- {{HTMLElement("iframe")}} 要素で {{htmlattrxref("sandbox", "iframe") }} 属性をサポートしました。({{ bug("341604") }})
-- {{HTMLElement("input")}} 要素で `inputmode` 属性をサポートしました。(注意: 現在 Gecko が提供する値は、WHATWG HTML 仕様書のものと異なります。) ({{bug("746142")}})
+<ul>
+ <li>{{HTMLElement("iframe")}} 要素で {{htmlattrxref("sandbox", "iframe") }} 属性をサポートしました。({{ bug("341604") }})</li>
+ <li>{{HTMLElement("input")}} 要素で <code>inputmode</code> 属性をサポートしました。(注意: 現在 Gecko が提供する値は、WHATWG HTML 仕様書のものと異なります。) ({{bug("746142")}})</li>
+</ul>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-- [CSS3 Conditional Rules 仕様書](http://dev.w3.org/csswg/css3-conditional/)で定義されている {{ cssxref("@supports") }} @-規則をサポートしました。これは既定で無効にされています。開発者の方は、`layout.css.supports-rule.enabled` を true に設定することで試すことができます ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740))。
-- 要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 疑似クラスをサポートしました。([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
-- CSS の{{ cssxref("unicode-bidi") }} プロパティで新たに規定された値である `isolate-override` をサポートしました。([bug 774335](https://bugzilla.mozilla.org/show_bug.cgi?id=774335))
-- {{ cssxref("box-sizing") }} の接頭辞付き実装が、{{ cssxref("min-height") }} および {{ cssxref("max-height") }} を考慮するようになりました。接頭辞が不要な実装に近づくステップのひとつです。({{bug("308801")}})
+<ul>
+ <li><a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ cssxref("@supports") }} @-規則をサポートしました。これは既定で無効にされています。開発者の方は、<code>layout.css.supports-rule.enabled</code> を true に設定することで試すことができます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)。</li>
+ <li>要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 疑似クラスをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
+ <li>CSS の{{ cssxref("unicode-bidi") }} プロパティで新たに規定された値である <code>isolate-override</code> をサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=774335">bug 774335</a>)</li>
+ <li>{{ cssxref("box-sizing") }} の接頭辞付き実装が、{{ cssxref("min-height") }} および {{ cssxref("max-height") }} を考慮するようになりました。接頭辞が不要な実装に近づくステップのひとつです。({{bug("308801")}})</li>
+</ul>
 
-### DOM
+<h3 id="DOM">DOM</h3>
 
-- [CSS3 Conditional Rules 仕様書](http://dev.w3.org/csswg/css3-conditional/)で定義されている {{ domxref("CSSSupportsRule") }} インタフェースをサポートしました。([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740))
-- {{ domxref("WheelEvent") }} オブジェクトおよび `wheel` イベントをサポートしました ({{ bug("719320") }})。
-- Linux において DOM Meta キーを再びサポートしました ({{bug("751749")}})。
-- {{ domxref("HTMLMediaElement") }} で、新たなメソッド `mozGetMetadata` をサポートしました ({{bug("763010")}})。これは、再生しているメディアのリソースから得たメタデータを {key: value} の組として表すプロパティを持つ、JavaScript オブジェクトを返します。
+<ul>
+ <li><a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ domxref("CSSSupportsRule") }} インタフェースをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)</li>
+ <li>{{ domxref("WheelEvent") }} オブジェクトおよび  <code>wheel</code> イベントをサポートしました ({{ bug("719320") }})。</li>
+ <li>Linux において DOM Meta キーを再びサポートしました ({{bug("751749")}})。</li>
+ <li>{{ domxref("HTMLMediaElement") }} で、新たなメソッド <code>mozGetMetadata</code> をサポートしました ({{bug("763010")}})。これは、再生しているメディアのリソースから得たメタデータを {key: value} の組として表すプロパティを持つ、JavaScript オブジェクトを返します。</li>
+</ul>
 
-### JavaScript
 
-- [`String`](/ja/docs/JavaScript/Reference/Global_Objects/String) オブジェクトが Harmony の `startsWith`、`endsWith`、および `contains` メソッドを提供します。([bug 772733](https://bugzilla.mozilla.org/show_bug.cgi?id=772733))
-- strawman [`ParallelArray`](/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray) オブジェクトが試験的に実装されました。({{ bug("778559") }})
-- [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map "/ja/docs/JavaScript/Reference/Global_Objects/Map")/[`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set "/ja/docs/JavaScript/Reference/Global_Objects/Set") のイテレートをサポートしました。({{ bug("725909") }})
-- Web コンテンツでは、デフォルトで [E4X](/ja/docs/E4X) を無効にしました。({{ bug("778851") }})
-- Chrome JavaScript オブジェクトを content に公開するには、`__exposedProps__` の設定が必要になりました。`__exposedProps__` の設定なしに content から Chrome オブジェクトへのアクセスを試みても失敗します ({{ bug("553102") }})。
+<h3 id="JavaScript">JavaScript</h3>
 
-### WebGL
+<ul>
+ <li><a href="/ja/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a> オブジェクトが Harmony の <code>startsWith</code>、<code>endsWith</code>、および <code>contains</code> メソッドを提供します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=772733">bug 772733</a>)</li>
+ <li>strawman <a href="/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray" title="/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray"><code>ParallelArray</code></a> オブジェクトが試験的に実装されました。({{ bug("778559") }})</li>
+ <li><code><a href="/ja/docs/JavaScript/Reference/Global_Objects/Map" title="/ja/docs/JavaScript/Reference/Global_Objects/Map">Map</a></code>/<code><a href="/ja/docs/JavaScript/Reference/Global_Objects/Set" title="/ja/docs/JavaScript/Reference/Global_Objects/Set">Set</a></code> のイテレートをサポートしました。({{ bug("725909") }})</li>
+ <li>Web コンテンツでは、デフォルトで <a href="/ja/docs/E4X" title="/ja/docs/E4X">E4X</a> を無効にしました。({{ bug("778851") }})</li>
+ <li>Chrome JavaScript オブジェクトを content に公開するには、<code>__exposedProps__</code> の設定が必要になりました。<code>__exposedProps__</code> の設定なしに content から Chrome オブジェクトへのアクセスを試みても失敗します ({{ bug("553102") }})。</li>
+</ul>
 
-### SVG
+<h3 id="WebGL">WebGL</h3>
 
-### MathML
+<h3 id="SVG">SVG</h3>
 
-- {{MathMLElement("mtable")}} 要素の `align` 属性のパース処理を、任意のスペースをより正しく扱うように更新しました。
+<h3 id="MathML">MathML</h3>
 
-### XUL
+<ul>
+ <li>{{MathMLElement("mtable")}} 要素の <code>align</code> 属性のパース処理を、任意のスペースをより正しく扱うように更新しました。</li>
+</ul>
 
-- XUL の [key](/ja/docs/XUL/key) 要素で、Win キー (Super または Hyper キー) の "os" モディファイアをサポートしました ({{bug("751749")}})。
+<h3 id="XUL">XUL</h3>
 
-### ネットワーク
+<ul>
+ <li>XUL の <a href="/ja/docs/XUL/key" title="/ja/docs/XUL/key">key</a> 要素で、Win キー (Super または Hyper キー) の "os" モディファイアをサポートしました ({{bug("751749")}})。</li>
+</ul>
 
-### 開発者ツール
+<h3 id="Network" name="Network">ネットワーク</h3>
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+<h3 id="Developer_tools" name="Developer_tools">開発者ツール</h3>
 
-### インタフェースの変更点
+<h2 id="Changes_for_add-on_and_Mozilla_developers" name="Changes_for_add-on_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
 
-- `nsIInputStream`
-  - : `available()` メソッドは 32 ビット長ではなく 64 ビット長で値を返します。({{bug("215450")}})
-- `nsIDOMWindowUtils`
-  - : `sendMouseScrollEvent()` メソッドは `sendWheelEvent()` に置き換えられました。({{bug("719320")}})
-- `nsIFilePicker`
-  - : ファイルダイアログを非同期的に開くための `open()` メソッドを追加し、また `show()` メソッドは非推奨になりました。({{bug("731307")}})
-- `nsIScriptSecurityManager`
-  - : `checkLoadURIStr()` メソッドおよび `checkLoadURI()` メソッドが削除されました。({{bug("327244")}})
-- `nsIRefreshURI`
-  - : `setupRefreshURIFromHeader()` メソッドに引数 `principal` が追加されました。({{bug("327244")}})
+<h3 id="Interface_changes" name="Interface_changes">インタフェースの変更点</h3>
 
-#### 新しいインタフェース
+<dl>
+ <dt><code>nsIInputStream</code></dt>
+ <dd><code>available()</code> メソッドは 32 ビット長ではなく 64 ビット長で値を返します。({{bug("215450")}})</dd>
+ <dt><code>nsIDOMWindowUtils</code></dt>
+ <dd><code>sendMouseScrollEvent()</code> メソッドは <code>sendWheelEvent()</code> に置き換えられました。({{bug("719320")}})</dd>
+ <dt><code>nsIFilePicker</code></dt>
+ <dd>ファイルダイアログを非同期的に開くための <code>open()</code> メソッドを追加し、また <code>show()</code> メソッドは非推奨になりました。({{bug("731307")}})</dd>
+ <dt><code>nsIScriptSecurityManager</code></dt>
+ <dd><code>checkLoadURIStr()</code> メソッドおよび <code>checkLoadURI()</code> メソッドが削除されました。({{bug("327244")}})</dd>
+ <dt><code>nsIRefreshURI</code></dt>
+ <dd><code>setupRefreshURIFromHeader()</code> メソッドに引数 <code>principal</code> が追加されました。({{bug("327244")}})</dd>
+</dl>
 
-#### 削除されたインタフェース
+<h4 id="New_interfaces" name="New_interfaces">新しいインタフェース</h4>
 
-以下のインタフェースが削除されました。
+<h4 id="Removed_interfaces" name="Removed_interfaces">削除されたインタフェース</h4>
 
-## 関連記事
+<p>以下のインタフェースが削除されました。</p>
 
-{{Firefox_for_developers('16')}}
+<h2 id="See_also" name="See_also">関連記事</h2>
+
+<div>{{Firefox_for_developers('16')}}</div>

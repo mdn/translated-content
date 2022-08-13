@@ -7,11 +7,13 @@ tags:
   - TopicStub
 translation_of: Glossary/Signature
 ---
-**シグネチャ**は状況によって色々な意味を持ちます。
-こちらを参照してください。
+<p><strong>シグネチャ</strong>は状況によって色々な意味を持ちます。<br>
+ こちらを参照してください。</p>
 
-{{GlossaryDisambiguation}}
+<p>{{GlossaryDisambiguation}}</p>
 
-## 詳細情報
+<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
 
-- Wikipedia の {{Interwiki("wikipedia", "シグネチャ")}}
+<ul>
+ <li>Wikipedia の {{Interwiki("wikipedia", "シグネチャ")}}</li>
+</ul>

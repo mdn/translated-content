@@ -10,154 +10,140 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
-{{AddonSidebar}}
+<p>{{AddonSidebar}}</p>
 
-ブックマークにより、ユーザーはウェブページのリストを集めたり編集したりできて、お気に入りに簡単に戻ることができます。Bookmarks API を使って、拡張機能はユーザーができるのとほぼ同じ方法でブックマークを操作できます。
+<p>ブックマークにより、ユーザーはウェブページのリストを集めたり編集したりできて、お気に入りに簡単に戻ることができます。Bookmarks API を使って、拡張機能はユーザーができるのとほぼ同じ方法でブックマークを操作できます。</p>
 
-## 権限
+<h2 id="Permissions" name="Permissions">権限</h2>
 
-Bookmarks API を利用するには、拡張機能の manifest.json ファイルで `"bookmarks"` 権限を要求する必要があります:
+<p>Bookmarks API を利用するには、拡張機能の manifest.json ファイルで <code>"bookmarks"</code> 権限を要求する必要があります:</p>
 
-```json
-"permissions": [
+<pre class="brush: json">"permissions": [
   "bookmarks"
-],
-```
+],</pre>
 
-## 機能
+<h2 id="Features" name="Features">機能</h2>
 
-Bookmarks API は、拡張機能にとって、ユーザーがブックマークとその機能でできることを可能にします:
+<p>Bookmarks API は、拡張機能にとって、ユーザーがブックマークとその機能でできることを可能にします:</p>
 
-- 基本的なブックマーク項目の操作:
+<ul>
+ <li>基本的なブックマーク項目の操作:
+  <ul>
+   <li>追加 ({{WebExtAPIRef("bookmarks.create")}}).</li>
+   <li>取得 ({{WebExtAPIRef("bookmarks.get")}}).</li>
+   <li>更新 ({{WebExtAPIRef("bookmarks.update")}}).</li>
+   <li>移動 ({{WebExtAPIRef("bookmarks.move")}}).</li>
+   <li>削除 ({{WebExtAPIRef("bookmarks.remove")}}).</li>
+   <li>検索 ({{WebExtAPIRef("bookmarks.search")}}).</li>
+  </ul>
+ </li>
+ <li>最近追加したブックマークの取得 ({{WebExtAPIRef("bookmarks.getRecent")}}).</li>
+ <li>ブックマークのフォルダーツリー操作:
+  <ul>
+   <li>ツリー情報取得 ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, {{WebExtAPIRef("bookmarks.getSubTree")}}).</li>
+   <li>ブランチの追加 ({{WebExtAPIRef("bookmarks.create")}}).</li>
+   <li>ノードの削除 ({{WebExtAPIRef("bookmarks.removeTree")}}).</li>
+   <li>ノードの移動 ({{WebExtAPIRef("bookmarks.move")}}).</li>
+  </ul>
+ </li>
+ <li>ブックマーク (やブックマークツリーフォルダー) のイベント監視:
+  <ul>
+   <li>追加 ({{WebExtAPIRef("bookmarks.onCreated")}}).</li>
+   <li>変更 ({{WebExtAPIRef("bookmarks.onChanged")}}).</li>
+   <li>移動 ({{WebExtAPIRef("bookmarks.onMoved")}}.</li>
+   <li>並び替え ({{WebExtAPIRef("bookmarks.onChildrenReordered")}}).</li>
+   <li>削除 ({{WebExtAPIRef("bookmarks.onRemoved")}}).</li>
+  </ul>
+ </li>
+ <li>ブックマークインポートの監視、これは他のブックマーク処理をブックマークのインポートが進行する間サスペンドするのに使われます:
+  <ul>
+   <li>インポート開始 ({{WebExtAPIRef("bookmarks.onImportBegan")}}).</li>
+   <li>インポート終了 ({{WebExtAPIRef("bookmarks.onImportEnded")}}).</li>
+  </ul>
+ </li>
+</ul>
 
-  - 追加 ({{WebExtAPIRef("bookmarks.create")}}).
-  - 取得 ({{WebExtAPIRef("bookmarks.get")}}).
-  - 更新 ({{WebExtAPIRef("bookmarks.update")}}).
-  - 移動 ({{WebExtAPIRef("bookmarks.move")}}).
-  - 削除 ({{WebExtAPIRef("bookmarks.remove")}}).
-  - 検索 ({{WebExtAPIRef("bookmarks.search")}}).
+<h2 id="Example_walkthrough" name="Example_walkthrough">実例を一通り見る</h2>
 
-- 最近追加したブックマークの取得 ({{WebExtAPIRef("bookmarks.getRecent")}}).
-- ブックマークのフォルダーツリー操作:
+<p>Bookmarks API の使い方を理解するため、<a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">bookmark-it</a> の例を見てみましょう。この例ではツールバーアイコン ({{WebExtAPIRef("browserAction")}}) を追加し、これがクリックされたときに、ブックマークから現在のページを追加や削除します。ページが他の方法でブックマークされている(または削除されている)場合、ページのブックマーク状態を表示するようにアイコンが更新されます。</p>
 
-  - ツリー情報取得 ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, {{WebExtAPIRef("bookmarks.getSubTree")}}).
-  - ブランチの追加 ({{WebExtAPIRef("bookmarks.create")}}).
-  - ノードの削除 ({{WebExtAPIRef("bookmarks.removeTree")}}).
-  - ノードの移動 ({{WebExtAPIRef("bookmarks.move")}}).
+<p>この動画で拡張機能を表示します:</p>
 
-- ブックマーク (やブックマークツリーフォルダー) のイベント監視:
+<p>{{EmbedYouTube("hCDN0FotiFw")}}</p>
 
-  - 追加 ({{WebExtAPIRef("bookmarks.onCreated")}}).
-  - 変更 ({{WebExtAPIRef("bookmarks.onChanged")}}).
-  - 移動 ({{WebExtAPIRef("bookmarks.onMoved")}}.
-  - 並び替え ({{WebExtAPIRef("bookmarks.onChildrenReordered")}}).
-  - 削除 ({{WebExtAPIRef("bookmarks.onRemoved")}}).
+<h3 id="manifest.json" name="manifest.json">manifest.json</h3>
 
-- ブックマークインポートの監視、これは他のブックマーク処理をブックマークのインポートが進行する間サスペンドするのに使われます:
+<p>拡張機能を記述する <a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json">manifest.json</a>:</p>
 
-  - インポート開始 ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
-  - インポート終了 ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
-
-## 実例を一通り見る
-
-Bookmarks API の使い方を理解するため、[bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) の例を見てみましょう。この例ではツールバーアイコン ({{WebExtAPIRef("browserAction")}}) を追加し、これがクリックされたときに、ブックマークから現在のページを追加や削除します。ページが他の方法でブックマークされている(または削除されている)場合、ページのブックマーク状態を表示するようにアイコンが更新されます。
-
-この動画で拡張機能を表示します:
-
-{{EmbedYouTube("hCDN0FotiFw")}}
-
-### manifest.json
-
-拡張機能を記述する [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json):
-
-```json
-{
+<pre class="brush: json">{
   "manifest_version": 2,
   "name": "Bookmark it!",
   "version": "1.1",
   "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
-```
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",</pre>
 
-アドオンマネージャーの代わりに、拡張機能を表すアイコンを定義します。
+<p>アドオンマネージャーの代わりに、拡張機能を表すアイコンを定義します。</p>
 
-```json
-  "icons": {
+<pre class="brush: json">  "icons": {
     "48": "icons/bookmark-it.png",
     "96": "icons/bookmark-it@2x.png"
-  },
-```
+  },</pre>
 
-権限のリクエスト。`"bookmarks"` は Bookmarks API を利用するのに要求されます。アクティブなタブの URL とタイトルを読み込んだり、ページのブックマークを作成/検索するのに、`"tabs"` が要求されます。こうした詳細にアクセスするのに Tabs API が必要なのは、Bookmark API を Tabs API なしに使うのが考えにくいということです。
+<p>権限のリクエスト。<code>"bookmarks"</code> は Bookmarks API を利用するのに要求されます。アクティブなタブの URL とタイトルを読み込んだり、ページのブックマークを作成/検索するのに、<code>"tabs"</code> が要求されます。こうした詳細にアクセスするのに Tabs API が必要なのは、Bookmark API を Tabs API なしに使うのが考えにくいということです。</p>
 
-```json
-  "permissions": [
+<pre class="brush: json">  "permissions": [
     "bookmarks",
     "tabs"
-  ],
-```
+  ],</pre>
 
-基本的なツールバーボタンの詳細をセットします。ボタン機能の大半は、ページのブックマーク状態が分かった後に、コード内でセットされます。
+<p>基本的なツールバーボタンの詳細をセットします。ボタン機能の大半は、ページのブックマーク状態が分かった後に、コード内でセットされます。</p>
 
-```json
-  "browser_action": {
+<pre class="brush: json">  "browser_action": {
     "default_icon": "icons/star-empty-38.png",
     "default_title": "Bookmark it!"
-  },
-```
+  },</pre>
 
-ページのブックマークを追加/削除してツールバーボタンの特色をセットするバックグラウンドスクリプトを定義します。
+<p>ページのブックマークを追加/削除してツールバーボタンの特色をセットするバックグラウンドスクリプトを定義します。</p>
 
-```json
-  "background": {
+<pre class="brush: json">  "background": {
     "scripts": ["background.js"]
   }
 
-}
-```
+}</pre>
 
-### background.js
+<h3 id="background.js" name="background.js">background.js</h3>
 
-他のバックグラウンドスクリプトと同様に、[background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) は拡張機能が開始してすぐに実行されます。最初にスクリプトは `updateActiveTab()` を呼び出し、ここでは {{WebExtAPIRef("tabs.query")}} を使って現在のタブの `Tabs` オブジェクトを取得して開始し、そのオブジェクトを `updatetab()` に渡します、コードは次の通り:
+<p>他のバックグラウンドスクリプトと同様に、<a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js">background.js</a> は拡張機能が開始してすぐに実行されます。最初にスクリプトは <code>updateActiveTab()</code> を呼び出し、ここでは {{WebExtAPIRef("tabs.query")}} を使って現在のタブの <code>Tabs</code> オブジェクトを取得して開始し、そのオブジェクトを <code>updatetab()</code> に渡します、コードは次の通り:</p>
 
-```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
-```
+<pre class="brush: js">  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  gettingActiveTab.then(updateTab);</pre>
 
-`updatetab()` は 最初にアクティブなタブの URL を `isSupportedProtocol()` に渡します:
+<p><code>updatetab()</code> は 最初にアクティブなタブの URL を <code>isSupportedProtocol()</code> に渡します:</p>
 
-```js
-  function updateTab(tabs) {
+<pre class="brush: js">  function updateTab(tabs) {
     if (tabs[0]) {
       currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
-```
+      if (isSupportedProtocol(currentTab.url)) {</pre>
 
-`isSupportedProtocol()` はアクティブタブに表示される URL がブックマークできるかを決めます。タブの URL からプロトコルを抽出するために、拡張機能は [HTMLHyperlinkElementUtils](/ja/docs/Web/API/HTMLHyperlinkElementUtils) を利用して `<a>` 要素にタブの URL を追加してから、`protocol` プロパティを使ってプロトコルを取得します。
+<p><code>isSupportedProtocol()</code> はアクティブタブに表示される URL がブックマークできるかを決めます。タブの URL からプロトコルを抽出するために、拡張機能は <a href="/ja/docs/Web/API/HTMLHyperlinkElementUtils">HTMLHyperlinkElementUtils</a> を利用して <code>&lt;a&gt;</code> 要素にタブの URL を追加してから、<code>protocol</code> プロパティを使ってプロトコルを取得します。</p>
 
-```js
-  function isSupportedProtocol(urlString) {
+<pre class="brush: js">  function isSupportedProtocol(urlString) {
     var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
     var url = document.createElement('a');
     url.href = urlString;
     return supportedProtocols.indexOf(url.protocol) != -1;
-  }
-```
+  }</pre>
 
-ブックマークがプロトコルをサポートしている場合、拡張機能はタブの URL がブックマーク済みかどうかを決めて、その場合に `updateIcon()` を呼び出します:
+<p>ブックマークがプロトコルをサポートしている場合、拡張機能はタブの URL がブックマーク済みかどうかを決めて、その場合に <code>updateIcon()</code> を呼び出します:</p>
 
-```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
-      searching.then((bookmarks) => {
+<pre class="brush: js">      var searching = browser.bookmarks.search({url: currentTab.url});
+      searching.then((bookmarks) =&gt; {
         currentBookmark = bookmarks[0];
-        updateIcon();
-```
+        updateIcon();</pre>
 
-`updateIcon()` は、URL がブックマーク済みかどうかにより、ツールバーボタンのアイコンとタイトルをセットします。
+<p><code>updateIcon()</code> は、URL がブックマーク済みかどうかにより、ツールバーボタンのアイコンとタイトルをセットします。</p>
 
-```js
-function updateIcon() {
+<pre class="brush: js">function updateIcon() {
   browser.browserAction.setIcon({
     path: currentBookmark ? {
       19: "icons/star-filled-19.png",
@@ -173,50 +159,41 @@ function updateIcon() {
     title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
     tabId: currentTab.id
   });
-}
-```
+}</pre>
 
-ツールバーボタンが初期化されると、拡張機能はツールバーボタンのクリックを、`toggleBookmark()` を呼び出して、監視し始めます
+<p>ツールバーボタンが初期化されると、拡張機能はツールバーボタンのクリックを、<code>toggleBookmark()</code> を呼び出して、監視し始めます</p>
 
-```js
-browser.browserAction.onClicked.addListener(toggleBookmark);
-```
+<pre class="brush: js">browser.browserAction.onClicked.addListener(toggleBookmark);</pre>
 
-`toggleBookmark()` は、URL がブックマークにあるかどうか探す `updateTabs()` の検索結果を使い、現在の URL のブックマークを削除するか、追加するのかを決定します。
+<p><code>toggleBookmark()</code> は、URL がブックマークにあるかどうか探す <code>updateTabs()</code> の検索結果を使い、現在の URL のブックマークを削除するか、追加するのかを決定します。</p>
 
-```js
-function toggleBookmark() {
+<pre class="brush: js">function toggleBookmark() {
   if (currentBookmark) {
     browser.bookmarks.remove(currentBookmark.id);
   } else {
     browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
   }
-}
-```
+}</pre>
 
-ツールバーアイコンを更新するため、拡張機能はブックマークの作成/削除を監視します。この方法の利点は、拡張機能によるブックマーク更新と、拡張機能の外のユーザーの更新の両方を捕捉できることです。
+<p>ツールバーアイコンを更新するため、拡張機能はブックマークの作成/削除を監視します。この方法の利点は、拡張機能によるブックマーク更新と、拡張機能の外のユーザーの更新の両方を捕捉できることです。</p>
 
-```js
-// listen for bookmarks being created
+<pre class="brush: js">// listen for bookmarks being created
 browser.bookmarks.onCreated.addListener(updateActiveTab);
 
 // listen for bookmarks being removed
-browser.bookmarks.onRemoved.addListener(updateActiveTab);
-```
+browser.bookmarks.onRemoved.addListener(updateActiveTab);</pre>
 
-最後に、拡張機能はアクティブなタブの URL 変更や、ユーザーが他のタブやウィンドウに移動するのを監視します。これらの動作は閲覧 URL と、拡張機能のツールバーアイコンを変えることがあります。
+<p>最後に、拡張機能はアクティブなタブの URL変更や、ユーザーが他のタブやウィンドウに移動するのを監視します。これらの動作は閲覧 URL と、拡張機能のツールバーアイコンを変えることがあります。</p>
 
-```js
-// listen to tab URL changes
+<pre class="brush: js">// listen to tab URL changes
 browser.tabs.onUpdated.addListener(updateActiveTab);
 
 // listen to tab switching
 browser.tabs.onActivated.addListener(updateActiveTab);
 
 // listen for window switching
-browser.windows.onFocusChanged.addListener(updateActiveTab);
-```
+browser.windows.onFocusChanged.addListener(updateActiveTab);</pre>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-より詳しく学習するには、[Bookmarks API リファレンス](/ja/Add-ons/WebExtensions/API/bookmarks)を見てみてください。
+<p>より詳しく学習するには、<a href="/ja/Add-ons/WebExtensions/API/bookmarks">Bookmarks API リファレンス</a>を見てみてください。</p>

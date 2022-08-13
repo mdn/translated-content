@@ -1,81 +1,101 @@
 ---
 title: 'スキルテスト: オブジェクトの基本'
-slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
-translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
+slug: 'Learn/JavaScript/Objects/Test_your_skills:_Object_basics'
+translation_of: 'Learn/JavaScript/Objects/Test_your_skills:_Object_basics'
 ---
-{{learnsidebar}}
+<div>{{learnsidebar}}</div>
 
-このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。
+<p>このスキルテストの目的は、<a href="/ja/docs/Learn/JavaScript/Objects/Basics">JavaScript オブジェクトの基本</a>の理解度をテストすることです。</p>
 
-> **Note:** **注意**: 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
->
-> 行き詰まった場合は、助けを求めてください — このページの下部にある評価またはさらなる支援セクションを参照してください。
+<div class="blockIndicator note">
+<p><strong>注意</strong>: 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、<a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>や<a href="https://glitch.com/">Glitch</a>のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。<br>
+ <br>
+ 行き詰まった場合は、助けを求めてください —  このページの下部にある評価またはさらなる支援セクションを参照してください。</p>
+</div>
 
-> **Note:** **注意**: 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
+<div class="blockIndicator note">
+<p><strong>注意</strong>: 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーのJavaScriptコンソールに）</p>
+</div>
 
-## オブジェクトの基本 1
+<h2 id="オブジェクトの基本_1">オブジェクトの基本 1</h2>
 
-このタスクでは、オブジェクトリテラルが与えられます。あなたのタスクは下記です。
+<p>このタスクでは、オブジェクトリテラルが与えられます。あなたのタスクは下記です。</p>
 
-- `catName`変数に、**角括弧記法**を用いて、`name`プロパティの値を保存する
-- **ドット記法**を用いて、`greeting()`メソッドを使う
-- `color`プロパティを`black`に変更する
+<ul>
+ <li><code>catName</code>変数に、<strong>角括弧記法</strong>を用いて、<code>name</code>プロパティの値を保存する</li>
+ <li><strong>ドット記法</strong>を用いて、<code>greeting()</code>メソッドを使う</li>
+ <li><code>color</code>プロパティを<code>black</code>に変更する</li>
+</ul>
 
-以下のライブコードを更新して、完成した例を再現してみてください。
+<p>以下のライブコードを更新して、完成した例を再現してみてください。</p>
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}
+<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}</p>
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+<div class="blockIndicator note">
+<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html">このタスクの開始点をダウンロード</a>して、お好きなエディターまたはオンライン・エディターで作業してください。</p>
+</div>
 
-## オブジェクトの基本 2
+<h2 id="オブジェクトの基本_2">オブジェクトの基本 2</h2>
 
-次のタスクでは、お気に入りのバンドの 1 つを表す、自分だけのオブジェクトリテラルを作成してみましょう。必要な要素は次のとおりです。
+<p>次のタスクでは、お気に入りのバンドの1つを表す、自分だけのオブジェクトリテラルを作成してみましょう。必要な要素は次のとおりです。</p>
 
-- `name`: バンドの名前を表す文字列
-- `nationality`: バンドの出身国を表す文字列
-- `genre`: バンドが演奏する音楽の種類
-- `members`: バンドのメンバー数を表す数字
-- `formed`: バンドが結成した年を表す数字
-- `split`: バンドが解散した年を表す数字、まだ活動している場合は`false`
-- `albums`: そのバンドによってリリースされたアルバムを表す配列。それぞれの配列の要素は、下記の要素を含んだオブジェクトであること
+<ul>
+ <li><code>name</code>: バンドの名前を表す文字列</li>
+ <li><code>nationality</code>: バンドの出身国を表す文字列</li>
+ <li><code>genre</code>: バンドが演奏する音楽の種類</li>
+ <li><code>members</code>: バンドのメンバー数を表す数字</li>
+ <li><code>formed</code>: バンドが結成した年を表す数字</li>
+ <li><code>split</code>: バンドが解散した年を表す数字、まだ活動している場合は<code>false</code></li>
+ <li><code>albums</code>: そのバンドによってリリースされたアルバムを表す配列。それぞれの配列の要素は、下記の要素を含んだオブジェクトであること
+  <ul>
+   <li><code>name</code>: アルバムの名前を表す文字列</li>
+   <li><code>released</code>: リリースされた年を表す数字</li>
+  </ul>
+ </li>
+</ul>
 
-  - `name`: アルバムの名前を表す文字列
-  - `released`: リリースされた年を表す数字
+<p><code>albums</code> 配列には、少なくとも2つのアルバムを含めること。</p>
 
-`albums` 配列には、少なくとも 2 つのアルバムを含めること。
+<p>​これが終わったら、変数<code>bandInfo</code>に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。</p>
 
-​ これが終わったら、変数`bandInfo`に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。
+<p><span style="">以下のライブコードを更新して、完成した例を再現してみてください。</span></p>
 
-以下のライブコードを更新して、完成した例を再現してみてください。
+<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}</p>
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}
+<div class="blockIndicator note">
+<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html">このタスクの開始点をダウンロード</a>して、お好きなエディターまたはオンライン・エディターで作業してください。</p>
+</div>
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+<h2 id="オブジェクトの基本_3">オブジェクトの基本 3</h2>
 
-## オブジェクトの基本 3
+<p>最後に、「オブジェクトの基本」のまとめとして、タスク＃1の<code>cat</code>オブジェクトリテラルに戻りましょう。 「<code>Hello, said Bertie the Cymric.</code>」と記録されるように、<code>greeting（）</code>メソッドを書き直してください。 ブラウザのDevToolsのコンソールにアクセスしますが、名前や品種に関係なく、同じ構造のすべての<code>cat</code>オブジェクトで機能します。</p>
 
-最後に、「オブジェクトの基本」のまとめとして、タスク＃1 の`cat`オブジェクトリテラルに戻りましょう。 「`Hello, said Bertie the Cymric.`」と記録されるように、`greeting（）`メソッドを書き直してください。 ブラウザの DevTools のコンソールにアクセスしますが、名前や品種に関係なく、同じ構造のすべての`cat`オブジェクトで機能します。
+<p>完了したら、<code>cat2</code>という独自のオブジェクトを作成します。このオブジェクトは、同じ構造、まったく同じ<code>greeting（）</code>メソッドを持ちますが、名前、品種、色が異なります。</p>
 
-完了したら、`cat2`という独自のオブジェクトを作成します。このオブジェクトは、同じ構造、まったく同じ`greeting（）`メソッドを持ちますが、名前、品種、色が異なります。
+<p>両方の<code>greeting（）</code>メソッドを呼び出して、適切なあいさつ（greeting）がコンソールに記録されることを確認します。</p>
 
-両方の`greeting（）`メソッドを呼び出して、適切なあいさつ（greeting）がコンソールに記録されることを確認します。
+<p>コードはあまり<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>ではありません（それぞれは1回だけ定義すること）—たとえば、同じメソッドを2回定義しています。 どうすればもっとDRYにすることができますか？ よくわからない場合でも、心配しないでください。これは、シリーズの今後の記事で取り上げる予定です。</p>
 
-コードはあまり[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)ではありません（それぞれは 1 回だけ定義すること）—たとえば、同じメソッドを 2 回定義しています。 どうすればもっと DRY にすることができますか？ よくわからない場合でも、心配しないでください。これは、シリーズの今後の記事で取り上げる予定です。
+<p>以下のライブコードを更新して、完成した例を再現してみてください。</p>
 
-以下のライブコードを更新して、完成した例を再現してみてください。
+<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}</p>
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}
+<div class="blockIndicator note">
+<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html">このタスクの開始点をダウンロード</a>して、お好きなエディターまたはオンライン・エディターで作業してください。</p>
+</div>
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+<h2 id="まとめとヘルプ">まとめとヘルプ</h2>
 
-## まとめとヘルプ
+<p>自分のコードの評価が欲しい、または行き詰まって助けを求めたい場合：</p>
 
-自分のコードの評価が欲しい、または行き詰まって助けを求めたい場合：
+<ol>
+ <li>CodePen、jsFiddle、Glitchなどのオンライン共有可能なエディターで作業をします。コードを自分で作成することも、上記のセクションでリンクされているスターティングポイントファイルを使用することもできます。</li>
+ <li><a href="https://discourse.mozilla.org/c/mdn/learn/250">MDNDiscourseフォーラムの学習カテゴリ</a>で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。</li>
+</ol>
 
-1.  CodePen、jsFiddle、Glitch などのオンライン共有可能なエディターで作業をします。コードを自分で作成することも、上記のセクションでリンクされているスターティングポイントファイルを使用することもできます。
-2.  [MDNDiscourse フォーラムの学習カテゴリ](https://discourse.mozilla.org/c/mdn/learn/250)で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。
-
-- 「オブジェクトの基本 1 の スキルテスト を行ったので評価して欲しい」などの説明的なタイトル。
-- あなたがすでに試したことの詳細、そしてあなたが私たちに何をしてほしいか、例えば行き詰まって助けが必要な場合、または評価が必要な場合。
-- オンラインの共有可能なエディターで、評価したい、または支援が必要な例へのリンク（上記のステップ 1 で説明）。これは入門するのに良い習慣です—あなたが彼らのコードを見ることができないならば、コーディング問題で誰かを助けることは非常に難しいです。
-- 実際のタスクまたは評価ページへのリンク。サポートが必要な質問を見つけることができます。
+<ul>
+ <li>「オブジェクトの基本1 の スキルテスト を行ったので評価して欲しい」などの説明的なタイトル。</li>
+ <li>あなたがすでに試したことの詳細、そしてあなたが私たちに何をしてほしいか、例えば行き詰まって助けが必要な場合、または評価が必要な場合。</li>
+ <li>オンラインの共有可能なエディターで、評価したい、または支援が必要な例へのリンク（上記のステップ1で説明）。これは入門するのに良い習慣です—あなたが彼らのコードを見ることができないならば、コーディング問題で誰かを助けることは非常に難しいです。</li>
+ <li>実際のタスクまたは評価ページへのリンク。サポートが必要な質問を見つけることができます。</li>
+</ul>

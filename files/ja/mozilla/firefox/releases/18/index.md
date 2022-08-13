@@ -6,78 +6,94 @@ tags:
   - Firefox 18
 translation_of: Mozilla/Firefox/Releases/18
 ---
-Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
+<p>Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。</p>
 
-## Web 開発者向けの変更点一覧
+<h2 id="Web開発者向けの変更点一覧">Web開発者向けの変更点一覧</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-- {{HTMLElement("ol")}} 要素の {{htmlattrxref("reversed","ol")}}` 属性をサポートしました。`({{bug("601912")}})
-- {{HTMLElement("link")}} 要素の {{htmlattrxref("crossorigin","link")}} 属性をサポートしました。({{bug("786564")}})
+<ul>
+ <li>{{HTMLElement("ol")}} 要素の {{htmlattrxref("reversed","ol")}}<code> 属性をサポートしました。</code>({{bug("601912")}})</li>
+ <li>{{HTMLElement("link")}} 要素の {{htmlattrxref("crossorigin","link")}} 属性をサポートしました。({{bug("786564")}})</li>
+</ul>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-- {{cssxref("min-width")}} と {{cssxref("min-height")}} の初期値が `auto` へ変更されました。(これは flex アイテムにのみ効果があります。なぜなら、他のアイテムでは従来の初期値である `0` になるためです) ({{bug("763689")}})
-- [CSS animations ](/ja/docs/CSS/Using_CSS_animations)にページ作者 CSS における `!important` が適用されるようになりました。 ({{bug("783714")}})
-- {{cssxref("background")}} プロパティに CSS3 の{{cssxref("background-size")}} プロパティの指定が追加されました。 ({{bug("570326")}})
-- CSS Flexbox モジュールの初期実装が導入されました。デフォルトでは無効化されていますが、`layout.css.flexbox.enabled` 設定を true に設定すると有効化されます。({{bug('666041')}})
+<ul>
+ <li>{{cssxref("min-width")}} と {{cssxref("min-height")}} の初期値が <code>auto</code> へ変更されました。(これは flex アイテムにのみ効果があります。なぜなら、他のアイテムでは従来の初期値である <code>0</code> になるためです) ({{bug("763689")}})</li>
+ <li><a href="/ja/docs/CSS/Using_CSS_animations" title="/ja/docs/CSS/Using_CSS_animations">CSS animations </a>にページ作者CSSにおける <code>!important</code> が適用されるようになりました。 ({{bug("783714")}})</li>
+ <li>{{cssxref("background")}} プロパティに CSS3 の{{cssxref("background-size")}} プロパティの指定が追加されました。 ({{bug("570326")}})</li>
+ <li>CSS Flexbox モジュールの初期実装が導入されました。デフォルトでは無効化されていますが、<code>layout.css.flexbox.enabled</code> 設定を true に設定すると有効化されます。({{bug('666041')}})</li>
+</ul>
 
-### DOM
+<h3 id="DOM">DOM</h3>
 
-- `navigator.mozPay` プロパティがサポートされました。 ({{bug("767818")}})
-- `window.devicePixelRatio` プロパティがサポートされました。 ({{bug("564815")}})
-- MacOS X において `window.navigator.battery` がサポートされました。 ({{bug("696045")}})
-- {{domxref("BlobBuilder", "MozBlobBuilder")}} は削除されました。`Blob` オブジェクトを作るには {{domxref("Blob")}} コンストラクタを使ってください。({{bug("744907")}})
-- {{event("visibilitychange")}} イベントと [Page Visibility API](/ja/docs/DOM/Using_the_Page_Visibility_API) の接頭辞が削除されました。({{bug("812086")}})
-- `TextDecoder` と `TextEncoder` が追加されました。({{bug("764234")}})
-- `HTMLMediaElement.src` が 2 つのプロパティに分離されました: ひとつは標準化された `src` プロパティで、 {{domxref("DOMString")}} を扱います。もうひとつは接頭辞つきの `mozSrcObject` プロパティで、[media streams](/ja/docs/WebRTC/MediaStream_API) を扱います。({{bug("792665")}})
-- [transferable objects](</ja/docs/DOM/Using_web_workers#.E6.89.80.E6.9C.89.E6.A8.A9.E3.81.AE.E8.AD.B2.E6.B8.A1_(Transferable_Objects)_.E3.81.AB.E3.82.88.E3.82.8B.E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E5.BC.95.E3.81.8D.E6.B8.A1.E3.81.97>) をサポートしました。
+<ul>
+ <li><code>navigator.mozPay</code> プロパティがサポートされました。 ({{bug("767818")}})</li>
+ <li><code>window.devicePixelRatio</code> プロパティがサポートされました。 ({{bug("564815")}})</li>
+ <li>MacOS Xにおいて <code>window.navigator.battery</code> がサポートされました。 ({{bug("696045")}})</li>
+ <li>{{domxref("BlobBuilder", "MozBlobBuilder")}} は削除されました。<code>Blob</code> オブジェクトを作るには {{domxref("Blob")}} コンストラクタを使ってください。({{bug("744907")}})</li>
+ <li>{{event("visibilitychange")}} イベントと <a href="/ja/docs/DOM/Using_the_Page_Visibility_API" title="/ja/docs/DOM/Using_the_Page_Visibility_API">Page Visibility API</a> の接頭辞が削除されました。({{bug("812086")}})</li>
+ <li><code>TextDecoder</code> と <code>TextEncoder</code> が追加されました。({{bug("764234")}})</li>
+ <li><code>HTMLMediaElement.src</code> が 2 つのプロパティに分離されました: ひとつは標準化された <code>src</code> プロパティで、 {{domxref("DOMString")}} を扱います。もうひとつは接頭辞つきの <code>mozSrcObject</code> プロパティで、<a href="/ja/docs/WebRTC/MediaStream_API" title="/ja/docs/WebRTC/MediaStream_API">media streams</a> を扱います。({{bug("792665")}})</li>
+ <li><a href="/ja/docs/DOM/Using_web_workers#.E6.89.80.E6.9C.89.E6.A8.A9.E3.81.AE.E8.AD.B2.E6.B8.A1_(Transferable_Objects)_.E3.81.AB.E3.82.88.E3.82.8B.E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E5.BC.95.E3.81.8D.E6.B8.A1.E3.81.97" title="/ja/docs/DOM/Using_web_workers#.E6.89.80.E6.9C.89.E6.A8.A9.E3.81.AE.E8.AD.B2.E6.B8.A1_(Transferable_Objects)_.E3.81.AB.E3.82.88.E3.82.8B.E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E5.BC.95.E3.81.8D.E6.B8.A1.E3.81.97">transferable objects</a> をサポートしました。</li>
+</ul>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-- ECMAScript Harmony (EcmaScript 6) の Direct Proxies がサポートされました。({{bug("703537")}}) 注意: この実装には 2 つの既知の不具合、欠落している機能、現行仕様との不整合が含まれています。これを本番のコードで使用しないようにしてください。
-- ECMAScript 6 の `contains()` メソッドを、string に実装しました。これは残念ながら Mootools 1.2 とは互換性がなく、そして Mootools は string の `contains()` と異なる動作になると考えられますが、それは保証されません。より新しいバージョンの Mootools ではこの問題を修正しています。各サイトでは Mooltools のバージョンを、1.2 より新しいものに更新するとよいでしょう。
+<ul>
+ <li><span class="st">ECMAScript Harmony</span> (EcmaScript 6) の Direct Proxies がサポートされました。({{bug("703537")}}) 注意: この実装には 2 つの既知の不具合、欠落している機能、現行仕様との不整合が含まれています。これを本番のコードで使用しないようにしてください。</li>
+ <li>ECMAScript 6 の <code>contains()</code> メソッドを、string に実装しました。これは残念ながら Mootools 1.2 とは互換性がなく、そして Mootools は string の <code>contains()</code> と異なる動作になると考えられますが、それは保証されません。より新しいバージョンの Mootools ではこの問題を修正しています。各サイトでは Mooltools のバージョンを、1.2 より新しいものに更新するとよいでしょう。</li>
+</ul>
 
-### WebGL
+<h3 id="WebGL">WebGL</h3>
 
-### SVG
+<h3 id="SVG">SVG</h3>
 
-### MathML
+<h3 id="MathML">MathML</h3>
 
-### XUL
+<h3 id="XUL">XUL</h3>
 
-### ネットワーク
+<h3 id="ネットワーク">ネットワーク</h3>
 
-- HTTP `Accept-Language` ヘッダの Quality プロパティ ("q-values") は 2 桁に丸められるようになりました。 ({{bug("672448")}})
-- [`X-FRAME-OPTIONS`](/ja/docs/The_X-FRAME-OPTIONS_response_header) HTTP レスポンスヘッダの `ALLOW-FROM` 構文がサポートされました。({{bug("690168")}})
+<ul>
+ <li>HTTP <code>Accept-Language</code> ヘッダの Quality プロパティ ("q-values") は2桁に丸められるようになりました。 ({{bug("672448")}})</li>
+ <li><a href="/ja/docs/The_X-FRAME-OPTIONS_response_header" title="/ja/docs/The_X-FRAME-OPTIONS_response_header"><code>X-FRAME-OPTIONS</code></a> HTTP レスポンスヘッダの <code>ALLOW-FROM</code> 構文がサポートされました。({{bug("690168")}})</li>
+</ul>
 
-### 開発者ツール
+<h3 id="開発者ツール">開発者ツール</h3>
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+<h2 id="Changes_for_add-on_and_Mozilla_developers" name="Changes_for_add-on_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
 
-### インターフェース
+<h3 id="インターフェース">インターフェース</h3>
 
-- `nsIStreamListener`
-  - : `onDataAvailable()の`4 番目の引数 (aOffset) が unsigned long long 型に変更されました。 ({{bug("784912")}})
-- `nsIUploadChannel`
-  - : `setUploadStream()` が 2GB を超える content-length をサポートしました。({{bug("790617")}})
-- `nsIEditor`
-  - : `addEditorObserver()` が削除されました。代わりに `setEditorObserver()` を使ってください。`removeEditorObserver()` は `nsIEditorObserver` パラメータを受け取らなくなります。({{bug("785091")}})
-- `nsIHttpProtocolHandler`
-  - : `http-on-modify-request` オブザーバが `nsIChannel.asyncOpen() `中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバには新しく `http-on-opening-request` オブザーバトピックが追加されています`。詳細は`({{bug("800799")}})をご覧ください。
+<dl>
+ <dt><code>nsIStreamListener</code></dt>
+ <dd><code>onDataAvailable()の</code>4番目の引数 (aOffset) が unsigned long long 型に変更されました。 ({{bug("784912")}})</dd>
+ <dt><code>nsIUploadChannel</code></dt>
+ <dd><code>setUploadStream()</code> が 2GB を超える content-length をサポートしました。({{bug("790617")}})</dd>
+ <dt><code>nsIEditor</code></dt>
+ <dd><code>addEditorObserver()</code> が削除されました。代わりに <code>setEditorObserver()</code> を使ってください。<code>removeEditorObserver()</code> は <code>nsIEditorObserver</code> パラメータを受け取らなくなります。({{bug("785091")}})</dd>
+ <dt><code>nsIHttpProtocolHandler</code></dt>
+ <dd><code>http-on-modify-request</code> オブザーバが <code>nsIChannel.asyncOpen() </code>中に同期的に呼ばれる保証はなくなります。<code>asyncOpen()</code> 中に呼び出される必要のあるオブザーバには新しく <code>http-on-opening-request</code> オブザーバトピックが追加されています<code>。詳細は</code>({{bug("800799")}})をご覧ください。</dd>
+</dl>
 
-#### 新しいインターフェース
+<h4 id="新しいインターフェース">新しいインターフェース</h4>
 
-#### 削除されたインターフェース
+<h4 id="削除されたインターフェース">削除されたインターフェース</h4>
 
-以下のインターフェースが削除されました:
+<p>以下のインターフェースが削除されました:</p>
 
-- `nsIEditorObserver`
+<ul>
+ <li><code>nsIEditorObserver</code></li>
+</ul>
 
-## 関連記事
+<h2 id="関連記事">関連記事</h2>
 
-- [Firefox 18 リリースノート](http://www.mozilla.jp/firefox/18.0/releasenotes/)
-- [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
-- [Firefox 18 のアドオン互換性に関わる修正のまとめ](https://dev.mozilla.jp/2012/12/firefox-18-addon-compatibility/)
+<ul>
+ <li><a href="http://www.mozilla.jp/firefox/18.0/releasenotes/">Firefox 18 リリースノート</a></li>
+ <li><a href="https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/">Aurora 18: HiDPI &amp; Touch Events</a> (Mozilla Hacks)</li>
+ <li><a href="https://dev.mozilla.jp/2012/12/firefox-18-addon-compatibility/">Firefox 18 のアドオン互換性に関わる修正のまとめ</a></li>
+</ul>
 
-{{Firefox_for_developers('17')}}
+<p>{{Firefox_for_developers('17')}}</p>

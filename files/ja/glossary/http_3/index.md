@@ -7,15 +7,22 @@ tags:
   - NeedsContent
 translation_of: Glossary/HTTP_3
 ---
-**HTTP/3** は {{glossary("HTTP 2", "HTTP/2")}} に続く [HTTP ネットワークプロトコル](/ja/docs/Web/HTTP/Basics_of_HTTP) の今後のメジャーリビジョンです。 HTTP/3 の主なポイントは {{glossary("TCP")}} の代わりに QUIC という新しい {{glossary("UDP")}} プロトコルを使用することです。
+<p><span class="seoSummary"><strong>HTTP/3</strong> は {{glossary("HTTP 2", "HTTP/2")}} に続く <a href="/ja/docs/Web/HTTP/Basics_of_HTTP">HTTP ネットワークプロトコル</a> の今後のメジャーリビジョンです。</span> HTTP/3 の主なポイントは {{glossary("TCP")}} の代わりに QUIC という新しい {{glossary("UDP")}} プロトコルを使用することです。</p>
 
-1.  一般知識
-
-    1.  MDN 上の [HTTP](/ja/docs/Web/HTTP)
-    2.  Wikipedia 上の {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}}
-
-2.  [用語集](/ja/docs/Glossary)
-
-    1.  {{glossary("HTTP")}}
-    2.  {{glossary("HTTP 2", "HTTP/2")}}
-    3.  {{glossary("Latency")}}
+<section id="Quick_links">
+<ol>
+ <li>一般知識
+  <ol>
+   <li>MDN 上の <a href="/ja/docs/Web/HTTP">HTTP</a></li>
+   <li>Wikipedia 上の {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}}</li>
+  </ol>
+ </li>
+ <li><a href="/ja/docs/Glossary">用語集</a>
+  <ol>
+   <li>{{glossary("HTTP")}}</li>
+   <li>{{glossary("HTTP 2", "HTTP/2")}}</li>
+   <li>{{glossary("Latency")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

@@ -7,13 +7,15 @@ tags:
   - typography
 translation_of: Glossary/Glyph
 ---
-**字体**は、1 つ以上の{{Glossary("character", "文字")}}を視覚的に表現するためにタイポグラフィで使用される用語です。
+<p><strong>字体</strong>は、1 つ以上の{{Glossary("character", "文字")}}を視覚的に表現するためにタイポグラフィで使用される用語です。</p>
 
-ウェブサイトで使用されるフォントには、フォントの文字を表すさまざまな字体のセットが含まれています。
+<p>ウェブサイトで使用されるフォントには、フォントの文字を表すさまざまな字体のセットが含まれています。</p>
 
-## 詳細情報
+<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- [字体](https://ja.wikipedia.org/wiki/%E5%AD%97%E4%BD%93) (Wikipedia)
-- [Glyph, character and grapheme](https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney) on Quora
+<ul>
+ <li><a href="https://ja.wikipedia.org/wiki/%E5%AD%97%E4%BD%93">字体</a> (Wikipedia)</li>
+ <li><a href="https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney">Glyph, character and grapheme</a> on Quora</li>
+</ul>

@@ -10,14 +10,16 @@ tags:
   - Mozilla
 translation_of: Glossary/Gecko
 ---
-**Gecko** は Mozilla プロジェクトによって開発された レイアウトエンジンであり、{{glossary("Mozilla Firefox","Firefox")}} や {{glossary("Firefox OS")}} を含む多くのアプリ / デバイスで使用されています。
+<p id="Summary"><span class="seoSummary"><strong>Gecko</strong> は Mozilla プロジェクトによって開発された レイアウトエンジンであり、{{glossary("Mozilla Firefox","Firefox")}} や {{glossary("Firefox OS")}} を含む多くのアプリ / デバイスで使用されています。</span></p>
 
-ウェブブラウザーは HTML、CSS、Javascript、埋め込みコンテンツ（画像など）を解釈して画面に表示するためのレイアウトエンジンと呼ばれるソフトウェアが必要です。また Gecko はサポート対象のすべての OS 上で API と適切に連携し、また適切な API が関連するサポート対象にのみ公開されるようにも動作します。そのため Gecko はネットワークスタック、グラフィックススタック、レイアウトエンジン、JavaScript 仮想マシン、移植レイヤーといった機能などを併せ持っています。
+<p>ウェブブラウザーは HTML、CSS、Javascript、埋め込みコンテンツ（画像など）を解釈して画面に表示するためのレイアウトエンジンと呼ばれるソフトウェアが必要です。また Gecko はサポート対象のすべての OS 上で API と適切に連携し、また適切な API が関連するサポート対象にのみ公開されるようにも動作します。そのため Gecko はネットワークスタック、グラフィックススタック、レイアウトエンジン、JavaScript 仮想マシン、移植レイヤーといった機能などを併せ持っています。</p>
 
-Firefox OS の場合、アプリケーションはすべてウェブアプリケーションなので、Firefox OS は Gecko をアプリケーションランタイムとしても使用しています。
+<p>Firefox OS の場合、アプリケーションはすべてウェブアプリケーションなので、Firefox OS は Gecko をアプリケーションランタイムとしても使用しています。</p>
 
-## 詳細情報
+<h2 id="詳細情報">詳細情報</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- Wikipedia 上の記事： {{interwiki("wikipedia", "Gecko")}}
+<ul>
+ <li>Wikipedia 上の記事： {{interwiki("wikipedia", "Gecko")}}</li>
+</ul>

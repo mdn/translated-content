@@ -3,54 +3,58 @@ title: moment を使用した日付のフォーマット
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
-The default rendering of dates from our models is very ugly: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: December 6th, 2016.
+<p>The default rendering of dates from our models is very ugly: <em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>. In this section we'll show how you can update the <em>BookInstance List</em> page from the previous section to present the <code>due_date</code> field in a more friendly format: December 6th, 2016. </p>
 
-The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using [moment](https://www.npmjs.com/package/moment), a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+<p>The approach we will use is to create a virtual property in our <code>BookInstance</code> model that returns the formatted date. We'll do the actual formatting using <a class="external external-icon" href="https://www.npmjs.com/package/moment" rel="noopener">moment</a>, a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.</p>
 
-> **Note:** It is possible to use _moment_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
+<div class="note">
+<p><strong>Note:</strong> It is possible to use <em>moment</em> to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the <code>due_date</code> currently. </p>
+</div>
 
-## Install moment
+<h2 class="highlight-spanned" id="Install_moment"><span class="highlight-span">Install moment</span></h2>
 
-Enter the following command in the root of the project:
+<p>Enter the following command in the root of the project:</p>
 
-```bash
-npm install moment
-```
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">npm install moment</code></pre>
 
-## Create the virtual property
+<h2 class="highlight-spanned" id="Create_the_virtual_property"><span class="highlight-span">Create the virtual property</span></h2>
 
-1.  Open **./models/bookinstance.js**.
-2.  At the top of the page, import _moment_.
+<ol>
+ <li>Open <strong>./models/bookinstance.js</strong>.</li>
+ <li>At the top of the page, import <em>moment</em>.
+  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> moment <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'moment'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+ </li>
+</ol>
 
-    ```js
-    var moment = require('moment');
-    ```
+<p>Add the virtual property <code>due_back_formatted</code> just after the url property.</p>
 
-Add the virtual property `due_back_formatted` just after the url property.
+<pre class="brush: js line-numbers  language-js"><code class="language-js">BookInstanceSchema
+<span class="punctuation token">.</span><span class="function token">virtual</span><span class="punctuation token">(</span><span class="string token">'due_back_formatted'</span><span class="punctuation token">)</span>
+<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">return</span> <span class="function token">moment</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>due_back<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'MMMM Do, YYYY'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
-  return moment(this.due_back).format('MMMM Do, YYYY');
-});
-```
+<div class="note">
+<p><strong>Note:</strong> The format method can display a date using almost any pattern. The syntax for representing different date components can be found in the <a class="external external-icon" href="http://momentjs.com/docs/#/displaying/" rel="noopener">moment documentation</a>.</p>
+</div>
 
-> **Note:** The format method can display a date using almost any pattern. The syntax for representing different date components can be found in the [moment documentation](http://momentjs.com/docs/#/displaying/).
+<h2 class="highlight-spanned" id="Update_the_view"><span class="highlight-span">Update the view</span></h2>
 
-## Update the view
+<p>Open <strong>/views/bookinstance_list.pug</strong> and replace <code>due_back</code> with <code>due_back_formatted</code>.</p>
 
-Open **/views/bookinstance_list.pug** and replace `due_back` with `due_back_formatted`.
+<pre class="brush: js line-numbers  language-js"><code class="language-js">      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
+        <span class="comment token">//span  (Due: #{val.due_back} )</span>
+        span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back_formatted<span class="punctuation token">}</span> <span class="punctuation token">)</span>       </code></pre>
 
-```js
-      if val.status!='Available'
-        //span  (Due: #{val.due_back} )
-        span  (Due: #{val.due_back_formatted} )
-```
+<p>That's it. If you go to <em>All book-instances</em> in the sidebar, you should now see all the due dates are far more attractive!</p>
 
-That's it. If you go to _All book-instances_ in the sidebar, you should now see all the due dates are far more attractive!
+<p> </p>
 
-## Next steps
+<h2 id="Next_steps">Next steps</h2>
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Author list page and Genre list page challenge](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page).
+<ul>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">Author list page and Genre list page challenge</a>.</li>
+</ul>
+
+<p> </p>

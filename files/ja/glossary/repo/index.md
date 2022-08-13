@@ -9,10 +9,14 @@ tags:
   - Repository
 translation_of: Glossary/Repo
 ---
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}
+<div>{{QuickLinksWithSubpages("/ja/docs/Glossary")}}</div>
 
-{{Glossary("Git")}}、{{Glossary("SVN")}}のようなバージョン管理システムでは、リポジトリ(repo)とはアプリケーションのソースコードと、さまざまなメタデータが一緒にホスティングされる場所です。
+<p class="summary"><span class="seoSummary">{{Glossary("Git")}}、{{Glossary("SVN")}}のようなバージョン管理システムでは、リポジトリ(repo)とはアプリケーションのソースコードと、さまざまなメタデータが一緒にホスティングされる場所です。</span></p>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-- Wikipedia の[リポジトリ](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA)
+<ul>
+ <li>Wikipedia の<a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA">リポジトリ</a></li>
+</ul>
+
+<p> </p>

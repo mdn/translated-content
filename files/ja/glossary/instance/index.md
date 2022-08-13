@@ -10,10 +10,12 @@ tags:
   - OOP
 translation_of: Glossary/Instance
 ---
-{{glossary("constructor", "コンストラクター")}}によって作成された{{glossary("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。
+<p>{{glossary("constructor", "コンストラクター")}}によって作成された{{glossary("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。</p>
 
-## 詳細情報
+<h2 id="Learn_more">詳細情報</h2>
 
-### 一般知識
+<h3 id="General_knowledge">一般知識</h3>
 
-- ウィキペディア上の記事{{interwiki("wikipedia", "インスタンス", "インスタンス")}}
+<ul>
+ <li>ウィキペディア上の記事{{interwiki("wikipedia", "インスタンス", "インスタンス")}}</li>
+</ul>

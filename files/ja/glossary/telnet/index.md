@@ -3,8 +3,10 @@ title: Telnet
 slug: Glossary/Telnet
 translation_of: Glossary/Telnet
 ---
-**Telnet** とはコマンドラインのツールであり、リモートのコンピュータにアクセスするための TCP/IP プロトコルの根底にあるものである。
+<p><strong>Telnet</strong> とはコマンドラインのツールであり、リモートのコンピュータにアクセスするためのTCP/IPプロトコルの根底にあるものである。</p>
 
-## さらに学ぶ
+<h2 id="さらに学ぶ">さらに学ぶ</h2>
 
-- {{interwiki('wikipedia','Telnet')}} (Wikipedia)
+<ul>
+ <li>{{interwiki('wikipedia','Telnet')}} (Wikipedia)</li>
+</ul>

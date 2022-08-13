@@ -7,15 +7,19 @@ tags:
   - Security
 translation_of: Glossary/Cipher_suite
 ---
-暗号スイートは鍵交換アルゴリズム・鍵認証方式・{{glossary("cipher","サイファー")}}・メッセージ認証符号の組み合わせです。
+<p><span class="seoSummary">暗号スイートは鍵交換アルゴリズム・鍵認証方式・{{glossary("cipher","サイファー")}}・メッセージ認証符号の組み合わせです。</span></p>
 
-{{Glossary("TLS")}}のような{{glossary("cryptosystem","暗号システム")}}は、サーバとクライアントは安全な通信を始める前に使用する暗号スイートを決定し、同意します。典型的な暗号スイートには ECDHE_RSA_WITH_AES_128_GCM_SHA256 または ECDHE-RSA-AES128-GCM-SHA256 があり、それぞれの単語の意味は
+<p>{{Glossary("TLS")}}のような{{glossary("cryptosystem","暗号システム")}}は、サーバとクライアントは安全な通信を始める前に使用する暗号スイートを決定し、同意します。典型的な暗号スイートにはECDHE_RSA_WITH_AES_128_GCM_SHA256 または ECDHE-RSA-AES128-GCM-SHA256があり、それぞれの単語の意味は</p>
 
-- ECDHE (elliptic curve Diffie-Hellman ephemeral)を鍵交換アルゴリズムとして使用
-- RSA 暗号を鍵認証方式として使用
-- AES-128 をサイファーとして使用し、暗号利用モードは Galois/Counter Mode (GCM) を使用
-- SHA-256 をメッセージ認証符号(HMAC:hash-based message authentication code)として使用
+<ul>
+ <li>ECDHE (elliptic curve Diffie-Hellman ephemeral)を鍵交換アルゴリズムとして使用</li>
+ <li>RSA 暗号を鍵認証方式として使用</li>
+ <li>AES-128 をサイファーとして使用し、暗号利用モードはGalois/Counter Mode (GCM) を使用</li>
+ <li>SHA-256 をメッセージ認証符号(HMAC:hash-based message authentication code)として使用</li>
+</ul>
 
-## 詳細情報
+<h2 id="詳細情報">詳細情報</h2>
 
-- [Mozilla recommended cipher suite choices for TLS](https://wiki.mozilla.org/Security/Server_Side_TLS)
+<ul>
+ <li><a href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla recommended cipher suite choices for TLS</a></li>
+</ul>

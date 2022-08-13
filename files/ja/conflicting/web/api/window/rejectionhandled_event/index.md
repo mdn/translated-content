@@ -15,29 +15,40 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onrejectionhandled
 original_slug: Web/API/WindowEventHandlers/onrejectionhandled
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-{{domxref("WindowEventHandlers")}} ミックスインの **`onrejectionhandled`** プロパティは、{{event("rejectionhandled")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、{{jsxref("Promise")}} が拒否されたときに発生します。
+<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onrejectionhandled</code></strong> プロパティは、{{event("rejectionhandled")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、{{jsxref("Promise")}} が拒否されたときに発生します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    window.addEventListener("rejectionhandled", function(event) { ... });
-    window.onrejectionhandled = function(event) { ...};
+<pre class="syntaxbox">window.addEventListener("rejectionhandled", function(event) { ... });
+window.onrejectionhandled = function(event) { ...};</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-window.onrejectionhandled = function(e) {
+<pre class="brush: js">window.onrejectionhandled = function(e) {
   console.log(e.reason);
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onrejectionhandled', 'onrejectionhandled')}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onrejectionhandled', 'onrejectionhandled')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WindowEventHandlers.onrejectionhandled")}}
+
+
+<p>{{Compat("api.WindowEventHandlers.onrejectionhandled")}}</p>

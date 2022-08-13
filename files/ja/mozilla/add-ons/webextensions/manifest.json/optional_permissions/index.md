@@ -8,79 +8,89 @@ tags:
   - optional_permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-| 型   | `Array` |
-| ---- | ------- |
-| 必須 | いいえ  |
-| 例   | ```json |
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>Array</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json no-line-numbers">
+"optional_permissions": [
+  "*://developer.mozilla.org/*",
+  "webRequest"
+]</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-"optional_permissions": [ "*://developer.mozilla.org/*", "webRequest" ]
+<p><code>optional_permissions</code> キーを使って、拡張機能がインストールされた後に、実行時に要求するパーミッションを一覧できます。</p>
 
-````|
+<p><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーは拡張機能がインストールされる時に必要とするパーミッションを一覧しますが、<code>optional_permissions</code> は拡張機能のインストール時には必要でないが、インストール後のどこかで要求されることのあるパーミッションを一覧します。パーミッションを要求するには、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions</a></code> API を使います。パーミッションを要求すると、おそらくユーザーに拡張機能にパーミッションを許可しても良いかを尋ねるダイアログが表示されるでしょう。</p>
 
-`optional_permissions` キーを使って、拡張機能がインストールされた後に、実行時に要求するパーミッションを一覧できます。
+<p>このキーは 2種類のパーミッションを含みます: ホストパーミッションと API パーミッションです。</p>
 
-[`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) キーは拡張機能がインストールされる時に必要とするパーミッションを一覧しますが、`optional_permissions` は拡張機能のインストール時には必要でないが、インストール後のどこかで要求されることのあるパーミッションを一覧します。パーミッションを要求するには、[`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/permissions) API を使います。パーミッションを要求すると、おそらくユーザーに拡張機能にパーミッションを許可しても良いかを尋ねるダイアログが表示されるでしょう。
+<h2 id="Host_permissions" name="Host_permissions">ホストパーミッション</h2>
 
-このキーは 2種類のパーミッションを含みます: ホストパーミッションと API パーミッションです。
+<p>これは <code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions</a></code> キーで指定できるホストパーミッションと同じです。</p>
 
-## ホストパーミッション
+<h2 id="API_permissions" name="API_permissions">API パーミッション</h2>
 
-これは [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) キーで指定できるホストパーミッションと同じです。
+<p>下記のいずれも入れることができますが、すべてのブラウザーに入ってはいません: ブラウザー固有の詳細については、互換性テーブルを確認してください:</p>
 
-## API パーミッション
+<ul>
+ <li><code>activeTab</code></li>
+ <li><code>background</code></li>
+ <li><code>bookmarks</code></li>
+ <li><code>browserSettings</code></li>
+ <li><code>clipboardRead</code></li>
+ <li><code>clipboardWrite</code></li>
+ <li><code>contentSettings</code></li>
+ <li><code>contextMenus</code></li>
+ <li><code>cookies</code></li>
+ <li><code>debugger</code></li>
+ <li><code>downloads</code></li>
+ <li><code>downloads.open</code></li>
+ <li><code>geolocation</code></li>
+ <li><code>history</code></li>
+ <li><code>idle</code></li>
+ <li><code>management</code></li>
+ <li><code>notifications</code></li>
+ <li><code>pageCapture</code></li>
+ <li><code>tabs</code></li>
+ <li><code>topSites</code></li>
+ <li><code>webNavigation</code></li>
+ <li><code>webRequest</code></li>
+ <li><code>webRequestBlocking</code></li>
+</ul>
 
-下記のいずれも入れることができますが、すべてのブラウザーに入ってはいません: ブラウザー固有の詳細については、互換性テーブルを確認してください:
+<p>これは <code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions</a></code> で許可される API パーミッションのサブセットです。</p>
 
-*   `activeTab`
-*   `background`
-*   `bookmarks`
-*   `browserSettings`
-*   `clipboardRead`
-*   `clipboardWrite`
-*   `contentSettings`
-*   `contextMenus`
-*   `cookies`
-*   `debugger`
-*   `downloads`
-*   `downloads.open`
-*   `geolocation`
-*   `history`
-*   `idle`
-*   `management`
-*   `notifications`
-*   `pageCapture`
-*   `tabs`
-*   `topSites`
-*   `webNavigation`
-*   `webRequest`
-*   `webRequestBlocking`
+<p>このセットでは、下記のパーミッションが、ユーザープロンプトなしで暗黙的に許可されます<span class="blob-code-inner"><span class="pl-s">:</span></span><span class="blob-code-inner"><span class="pl-s"> activeTab, cookies, idle, webRequest, webRequestBlocking</span></span></p>
 
-これは [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) で許可される API パーミッションのサブセットです。
+<h2 id="Example" name="Example">例</h2>
 
-このセットでは、下記のパーミッションが、ユーザープロンプトなしで暗黙的に許可されます: activeTab, cookies, idle, webRequest, webRequestBlocking
+<pre class="brush: json no-line-numbers"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
 
-## 例
+<p>拡張機能に developer.mozilla.org 以下のページの権限アクセス要求を有効にします。</p>
 
-```json
- "optional_permissions": ["*://developer.mozilla.org/*"]
-````
+<pre class="brush: json no-line-numbers">  "optional_permissions": ["tabs"]</pre>
 
-拡張機能に developer.mozilla.org 以下のページの権限アクセス要求を有効にします。
+<p>拡張機能に <code>tabs</code> API の権限部分へのアクセス要求を有効にします。</p>
 
-```json
-  "optional_permissions": ["tabs"]
-```
+<pre class="brush: json no-line-numbers">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
-拡張機能に `tabs` API の権限部分へのアクセス要求を有効にします。
+<p>拡張機能に上記の両方への要求を有効にします。</p>
 
-```json
-  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
-```
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-拡張機能に上記の両方への要求を有効にします。
-
-## ブラウザー実装状況
-
-{{Compat("webextensions.manifest.optional_permissions")}}
+<p>{{Compat("webextensions.manifest.optional_permissions")}}</p>

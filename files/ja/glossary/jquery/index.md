@@ -7,42 +7,40 @@ tags:
   - JavaScript
 translation_of: Glossary/jQuery
 ---
-**jQuery** は {{Glossary("JavaScript")}} {{Glossary("Library", "ライブラリー")}} であり、{{Glossary("DOM")}} 操作を簡単にすること、{{Glossary("AJAX")}} 呼び出し、{{Glossary("Event", "イベント")}} ハンドリングに注力しています。
+<p><span class="seoSummary"><strong>jQuery</strong> は {{Glossary("JavaScript")}} {{Glossary("Library", "ライブラリー")}} であり、{{Glossary("DOM")}} 操作を簡単にすること、{{Glossary("AJAX")}} 呼び出し、{{Glossary("Event", "イベント")}} ハンドリングに注力しています。</span></p>
 
-jQuery は `$(selector).action()` というフォーマットを使って要素をイベントに割り当てます。詳しく説明すると、`$(selector)` が jQuery を呼び出して `selector` 要素を選択し、 `.action()`というイベント {{Glossary("API")}} に割り当てます。
+<p>jQuery は <code>$(selector).action()</code> というフォーマットを使って要素をイベントに割り当てます。詳しく説明すると、<code>$(selector)</code> が jQuery を呼び出して <code>selector</code> 要素を選択し、  <code>.action()</code>というイベント {{Glossary("API")}} に割り当てます。</p>
 
-```js
-$(document).ready(function(){
+<pre class="brush: js notranslate">$(document).ready(function(){
   alert("Hello World!");
   $("#blackBox").hide();
-});
-```
+});</pre>
 
-上のコードは下のコードと同じ関数を実行します:
+<p>上のコードは下のコードと同じ関数を実行します:</p>
 
-```js
-window.onload = function() {
+<pre class="brush: js notranslate">window.onload = function() {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-};
-```
+};</pre>
 
-または
+<p>または</p>
 
-```js
-window.addEventListener("load", () => {
+<pre class="brush: js notranslate">window.addEventListener("load", () =&gt; {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-});
-```
+});</pre>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- Wikipedia の {{Interwiki("wikipedia", "jQuery")}}
-- [jQuery Official Website](https://jquery.com/)
+<ul>
+ <li>Wikipedia の {{Interwiki("wikipedia", "jQuery")}}</li>
+ <li><a href="https://jquery.com/">jQuery Official Website</a></li>
+</ul>
 
-### 技術情報
+<h3 id="Technical_information" name="Technical_information">技術情報</h3>
 
-- [API リファレンス文書](https://api.jquery.com/)[](https://api.jquery.com/)
+<ul>
+ <li><a href="https://api.jquery.com/">API リファレンス文書</a><a href="https://api.jquery.com/"> </a></li>
+</ul>

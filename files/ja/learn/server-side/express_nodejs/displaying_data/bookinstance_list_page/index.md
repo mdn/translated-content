@@ -3,69 +3,67 @@ title: ブックインスタンスリストページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
-Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.
+<p>Next we'll implement our list of all book copies (<code>BookInstance</code>) in the library. This page needs to include the title of the <code>Book</code> associated with each <code>BookInstance</code> (linked to its detail page) along with other information in the <code>BookInstance</code> model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the <code>BookInstance</code> detail page.</p>
 
-## Controller
+<h2 class="highlight-spanned" id="Controller"><span class="highlight-span">Controller</span></h2>
 
-The `BookInstance` list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.
+<p>The <code>BookInstance</code> list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.</p>
 
-Open **/controllers/bookinstanceController.js**. Find the exported `bookinstance_list()` controller method and replace it with the following code (the changed code is shown in bold).
+<p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
 
-```js
-// Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
+exports<span class="punctuation token">.</span>bookinstance_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
-  BookInstance.find()
-    .populate('book')
-    .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
-      // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
-    });
+  <strong>BookInstance<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
+    <span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'book'</span><span class="punctuation token">)</span>
+    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_bookinstances<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+      <span class="comment token">// Successful, so render</span>
+      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'bookinstance_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Book Instance List'</span><span class="punctuation token">,</span> bookinstance_list<span class="punctuation token">:</span> list_bookinstances <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></strong>
 
-};
-```
+<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-The method uses the model's `find()` function to return all `BookInstance` objects. It then daisy-chains a call to `populate()` with the `book` field—this will replace the book id stored for each `BookInstance` with a full `Book` document.
+<p>The method uses the model's <code>find()</code> function to return all <code>BookInstance</code> objects. It then daisy-chains a call to <code>populate()</code> with the <code>book</code> field—this will replace the book id stored for each <code>BookInstance</code> with a full <code>Book</code> document.</p>
 
-On success, the callback passed to the query renders the **bookinstance_list**(.pug) template, passing the `title` and `bookinstance_list` as variables.
+<p>On success, the callback passed to the query renders the <strong>bookinstance_list</strong>(.pug) template, passing the <code>title</code> and <code>bookinstance_list</code> as variables.</p>
 
-## View
+<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
 
-Create **/views/bookinstance_list.pug** and copy in the text below.
+<p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
 
-```js
-extends layout
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
 
 block content
-  h1= title
+  h1<span class="operator token">=</span> title
 
   ul
-    each val in bookinstance_list
+    each val <span class="keyword token">in</span> bookinstance_list
       li
-        a(href=val.url) #{val.book.title} : #{val.imprint} -
-        if val.status=='Available'
-          span.text-success #{val.status}
-        else if val.status=='Maintenance'
-          span.text-danger #{val.status}
-        else
-          span.text-warning #{val.status}
-        if val.status!='Available'
-          span  (Due: #{val.due_back} )
+        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>val<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>book<span class="punctuation token">.</span>title<span class="punctuation token">}</span> <span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>imprint<span class="punctuation token">}</span> <span class="operator token">-</span>
+        <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Available'</span>
+          span<span class="punctuation token">.</span>text<span class="operator token">-</span>success #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
+        <span class="keyword token">else</span> <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Maintenance'</span>
+          span<span class="punctuation token">.</span>text<span class="operator token">-</span>danger #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
+        <span class="keyword token">else</span>
+          span<span class="punctuation token">.</span>text<span class="operator token">-</span>warning #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
+        <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
+          span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back<span class="punctuation token">}</span> <span class="punctuation token">)</span>
 
-    else
-      li There are no book copies in this library.
-```
+    <span class="keyword token">else</span>
+      li There are no book copies <span class="keyword token">in</span> <span class="keyword token">this</span> library<span class="punctuation token">.</span></code></pre>
 
-This view is much the same as all the others. It extends the layout, replacing the _content_ block, displays the `title` passed in from the controller, and iterates through all the book copies in `bookinstance_list`. For each copy we display its status (colour coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So `span.text-success` will be compiled to `<span class="text-success">` (and might also be written in Pug as `span(class="text-success")`.
+<p>This view is much the same as all the others. It extends the layout, replacing the <em>content</em> block, displays the <code>title</code> passed in from the controller, and iterates through all the book copies in <code>bookinstance_list</code>. For each copy we display its status (colour coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So <code>span.text-success</code> will be compiled to <code>&lt;span class="text-success"&gt;</code> (and might also be written in Pug as <code>span(class="text-success")</code>.</p>
 
-## What does it look like?
+<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
+<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances </em>link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-![BookInstance List Page - Express Local Library site](https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png)
+<p><img alt="BookInstance List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png" style="border-style: solid; border-width: 1px; display: block; height: 322px; margin: 0px auto; width: 1200px;"></p>
 
-## Next steps
+<h2 id="Next_steps">Next steps</h2>
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Date formatting using moment](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment).
+<ul>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">Date formatting using moment</a>.</li>
+</ul>

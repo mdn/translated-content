@@ -7,4 +7,4 @@ tags:
 translation_of: Web/MathML/Index
 original_slug: Web/MathML/Index
 ---
-{{Index("/ja/docs/Web/MathML")}}
+<p>{{Index("/ja/docs/Web/MathML")}}</p>

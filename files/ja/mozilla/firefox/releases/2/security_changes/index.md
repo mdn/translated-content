@@ -3,28 +3,30 @@ title: Firefox 2 のセキュリティ
 slug: Mozilla/Firefox/Releases/2/Security_changes
 translation_of: Mozilla/Firefox/Releases/2/Security_changes
 ---
-{{FirefoxSidebar}}
+<div>{{FirefoxSidebar}}</div>
 
-この記事では、Firefox 2 のセキュリティに影響を与える変更点について説明しています。
+<p>この記事では、Firefox 2 のセキュリティに影響を与える変更点について説明しています。</p>
 
-## Weak ciphers disabled by default
+<h2 id="Weak_ciphers_disabled_by_default" name="Weak_ciphers_disabled_by_default">Weak ciphers disabled by default</h2>
 
-[Firefox 2](/ja/Firefox_2_for_developers "en/Firefox_2_for_developers") disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.
+<p><a href="/ja/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.</p>
 
-The preferred encryption methods are `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Some servers refer to these as `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
+<p>The preferred encryption methods are <code>TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>TLS_RSA_WITH_3DES_EDE_CBC_SHA</code>. Some servers refer to these as <code>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>SSL_RSA_WITH_3DES_EDE_CBC_SHA</code>.</p>
 
-If SSLv2 support must be enabled, it can be by setting the appropriate `security.ssl2.*` user preferences to `true`.
+<p>If SSLv2 support must be enabled, it can be by setting the appropriate <code>security.ssl2.*</code> user preferences to <code>true</code>.</p>
 
-## New features
+<h2 id="New_features" name="New_features">New features</h2>
 
-- Firefox 2 supports [Elliptic Curve Cryptography](http://en.wikipedia.org/wiki/Elliptic_curve_cryptography) in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.
-- Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per [RFC 3546](http://tools.ietf.org/html/rfc3546).
-- When Firefox 2 makes an [OCSP](http://en.wikipedia.org/wiki/Ocsp) request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.
+<ul>
+ <li>Firefox 2 supports <a class="external" href="http://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.</li>
+ <li>Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per <a class="external" href="http://tools.ietf.org/html/rfc3546">RFC 3546</a>.</li>
+ <li>When Firefox 2 makes an <a class="external" href="http://en.wikipedia.org/wiki/Ocsp">OCSP</a> request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.</li>
+</ul>
 
-## Determining what ciphers are available
+<h2 id="Determining_what_ciphers_are_available" name="Determining_what_ciphers_are_available">Determining what ciphers are available</h2>
 
-As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".
+<p>As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".</p>
 
-## Security improved for the jar: protocol
+<h2 id="Security_improved_for_the_jar_protocol">Security improved for the jar: protocol</h2>
 
-In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/ja/Security_and_the_jar_protocol "en/Security and the jar protocol") for further details.
+<p>In order to correct a potential security problem when using the <code>jar:</code> protocol, it's now necessary to serve JAR files with the MIME type <code>application/java-archive</code>. See <a href="/ja/Security_and_the_jar_protocol" title="en/Security and the jar protocol">Security and the jar protocol</a> for further details.</p>

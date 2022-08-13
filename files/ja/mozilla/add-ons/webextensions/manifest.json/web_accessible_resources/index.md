@@ -7,87 +7,92 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
-{{AddonSidebar}}
+<p>{{AddonSidebar}}</p>
 
-| 型   | `Array` |
-| ---- | ------- |
-| 必須 | いいえ  |
-| 例   | ```json |
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>Array</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須</th>
+   <td>
+    <p>いいえ</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json notranslate">
+"web_accessible_resources": [
+  "images/my-image.png"
+]</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-"web_accessible_resources": [ "images/my-image.png" ]
+<h2 id="Description" name="Description">説明</h2>
 
-````|
+<p>ときには、拡張機能に何らかのリソース - たとえば、画像や HTML、CSS、JavaScript - をパッケージして、ウェブページで使用できるようにしたい場合があります。</p>
 
-## 説明
+<p>たとえば、<a href="/ja/Add-ons/WebExtensions/Walkthrough">2 つめの WebExtension</a> で使われている "beastify" 例題エクステンションでは、<code><a href="/ja/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 要素の <code>src</code> 属性を設定することで、ウェブページの画像を動物に置き換えています。画像は拡張機能とともにパッケージ化されており、ウェブページがそれらをロードできるようにするには、ウェブアクセシブルにする必要があります。</p>
 
-ときには、拡張機能に何らかのリソース - たとえば、画像や HTML、CSS、JavaScript - をパッケージして、ウェブページで使用できるようにしたい場合があります。
+<p><code>web_accessible_resources</code> キーは、この方法でウェブページで利用可能にしたいすべてのパッケージされたリソースをリストします。manifest.json ファイルを基準としたパスを指定します。</p>
 
-たとえば、[2 つめの WebExtension](/ja/Add-ons/WebExtensions/Walkthrough) で使われている "beastify" 例題エクステンションでは、[`<img>`](/ja/docs/Web/HTML/Element/img) 要素の `src` 属性を設定することで、ウェブページの画像を動物に置き換えています。画像は拡張機能とともにパッケージ化されており、ウェブページがそれらをロードできるようにするには、ウェブアクセシブルにする必要があります。
+<p>コンテンツスクリプトは、ウェブアクセシブルリソースとしてリストする必要がないことに注意してください。</p>
 
-`web_accessible_resources` キーは、この方法でウェブページで利用可能にしたいすべてのパッケージされたリソースをリストします。manifest.json ファイルを基準としたパスを指定します。
+<p>しかし、拡張機能が {{WebExtAPIRef("webRequest")}} API を使ってパブリックな (例 HTTPS) URL から拡張機能にパッケージされたページにリダイレクトする場合、拡張機能は<code>web_accessible_resources</code> キーにリストしておく必要があります。</p>
 
-コンテンツスクリプトは、ウェブアクセシブルリソースとしてリストする必要がないことに注意してください。
+<h3 id="Using_web_accessible_resources" name="Using_web_accessible_resources">web_accessible_resources を使う</h3>
 
-しかし、拡張機能が {{WebExtAPIRef("webRequest")}} API を使ってパブリックな (例 HTTPS) URL から拡張機能にパッケージされたページにリダイレクトする場合、拡張機能は`web_accessible_resources` キーにリストしておく必要があります。
+<p>例えば、拡張機能に images/my-image.png にある画像ファイルを入れたい場合、このようにします:</p>
 
-### web_accessible_resources を使う
-
-例えば、拡張機能に images/my-image.png にある画像ファイルを入れたい場合、このようにします:
-
-```html
-my-extension-files/
+<pre class="no-line-numbers  language-html notranslate"><code class="language-html">my-extension-files/
     manifest.json
     my-background-script.js
     images/
-        my-image.png
-````
+        my-image.png</code></pre>
 
-ウェブページに、この画像を指す `src` 属性のある [`<img>`](/ja/docs/Web/HTML/Element/img) 要素を入れるには、 "web_accessible_resources" で次のように指定します:
+<p>ウェブページに、この画像を指す <code>src</code> 属性のある <code><a href="/ja/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 要素を入れるには、 "web_accessible_resources" で次のように指定します:</p>
 
-```json
-"web_accessible_resources": ["images/my-image.png"]
-```
+<pre class="brush: json no-line-numbers  language-json notranslate"><code class="language-json"><span class="key token">"web_accessible_resources":</span> <span class="punctuation token">[</span><span class="string token">"images/my-image.png"</span><span class="punctuation token">]</span></code></pre>
 
-このファイルは次の URL で利用できます:
+<p>このファイルは次の URL で利用できます:</p>
 
-```html
-moz-extension://<extension-UUID>/images/my-image.png"
-```
+<pre class="no-line-numbers  language-html notranslate"><code class="language-html">moz-extension://<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>extension-UUID</span><span class="punctuation token">&gt;</span></span>/images/my-image.png"</code></pre>
 
-`<extension-UUID>` は拡張機能の ID **ではありません。**これは各ブラウザーインスタンス用にランダムに生成されます。これはウェブサイトがインストールしている拡張機能を調べることで指紋を取ることを防止します。
+<p><code>&lt;extension-UUID&gt;</code> は拡張機能の ID <strong>ではありません。</strong>これは各ブラウザーインスタンス用にランダムに生成されます。これはウェブサイトがインストールしている拡張機能を調べることで指紋を取ることを防止します。</p>
 
-> **Note:** Chrome では、拡張機能の ID は固定です。リソースを `web_accessible_resouce` に指定すると、`chrome-extension://<your-extension-id>/<path/to/resouce>` でアクセス可能です。
+<div class="blockIndicator note">
+<p>Chrome では、拡張機能の ID は固定です。リソースを <code>web_accessible_resouce</code> に指定すると、<code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resouce&gt;</code> でアクセス可能です。</p>
+</div>
 
-この URL を取得する推奨される方法は、[`browser.runtime.getURL`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) API を使用して、 manifest.json の相対パスとして渡すことです:
+<p>この URL を取得する推奨される方法は、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">browser.runtime.getURL</a></code> API を使用して、 manifest.json の相対パスとして渡すことです:</p>
 
-```js
-browser.runtime.getURL("images/my-image.png");
-// something like:
-// moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
-```
+<pre class="brush: js no-line-numbers  language-js notranslate"><code class="language-js">browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">"images/my-image.png"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="comment token">// something like:</span>
+<span class="comment token">// moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png</span></code></pre>
 
-この方法は拡張機能が実行されているブラウザがなんであれ正しい URL を取得します。
+<p>この方法は拡張機能が実行されているブラウザがなんであれ正しい URL を取得します。</p>
 
-### ワイルドカード
+<h3 id="Wildcards" name="Wildcards">ワイルドカード</h3>
 
-`web_accessible_resources`エントリーにはワイルドカードを含めることができます。たとえば下記のエントリーでも "images/my-image.png" のリソースを入れることができます:
+<p><code>web_accessible_resources</code>エントリーにはワイルドカードを含めることができます。たとえば下記のエントリーでも "images/my-image.png" のリソースを入れることができます:</p>
 
-```json
-"web_accessible_resources": ["images/*.png"]
-```
+<pre class="brush: json no-line-numbers  language-json notranslate"><code class="language-json"><span class="key token">"web_accessible_resources":</span> <span class="punctuation token">[</span><span class="string token">"images/*.png"</span><span class="punctuation token">]</span></code></pre>
 
-### セキュリティ
+<h3 id="Security" name="Security">セキュリティ</h3>
 
-ページを web-accessible にすると、あらゆるウェブサイトからそのページにリンクやリダイレクトができます。このページは、通常のウェブページと同様に、あらゆる入力 (例えば POST データ) を、信頼のないソースから取っときたかのように扱うべきです。
+<p>ページを web-accessible にすると、あらゆるウェブサイトからそのページにリンクやリダイレクトができます。このページは、通常のウェブページと同様に、あらゆる入力 (例えば POST データ) を、信頼のないソースから取っときたかのように扱うべきです。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```json
-"web_accessible_resources": ["images/my-image.png"]
-```
+<pre class="brush: json notranslate">"web_accessible_resources": ["images/my-image.png"]</pre>
 
-"images/my-image.png" のファイルをウェブアクセス可能にしています。
+<p>"images/my-image.png" のファイルをウェブアクセス可能にしています。</p>
 
-## ブラウザ実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-{{Compat("webextensions.manifest.web_accessible_resources")}}
+<p>{{Compat("webextensions.manifest.web_accessible_resources")}}</p>

@@ -5,6 +5,6 @@ tags:
   - privileged
 translation_of: Glossary/privileged_code
 ---
-**Privileged code** - 拡張機能の Javascript コード。例えば、コンテンツスクリプトのコード。
+<p><span class="seoSummary"><strong>Privileged code</strong> - 拡張機能の Javascript コード。例えば、コンテンツスクリプトのコード。</span></p>
 
-**Non-privileged** - Web ページ上の Javascript 。
+<p><strong>Non-privileged</strong> - Webページ上の Javascript 。</p>

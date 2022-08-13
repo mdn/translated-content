@@ -10,14 +10,13 @@ tags:
 translation_of: Web/API/FileReader/onload
 original_slug: Web/API/FileReader/onload
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-**`FileReader.onload`** プロパティは、[readAsArrayBuffer](/ja/docs/Web/API/FileReader/readAsArrayBuffer) や [readAsBinaryString](/ja/docs/Web/API/FileReader/readAsBinaryString)、 [readAsDataURL](/ja/docs/Web/API/FileReader/readAsDataURL)、[readAsText](/ja/docs/Web/API/FileReader/readAsText) でのコンテンツ読み込みが完了して、利用可能になると発火する {{event('load')}} イベント時に実行されるイベントハンドラを含みます。
+<p><strong><code>FileReader.onload</code></strong> プロパティは、<a href="/ja/docs/Web/API/FileReader/readAsArrayBuffer">readAsArrayBuffer</a> や <a href="/ja/docs/Web/API/FileReader/readAsBinaryString">readAsBinaryString</a>、 <a href="/ja/docs/Web/API/FileReader/readAsDataURL">readAsDataURL</a>、<a href="/ja/docs/Web/API/FileReader/readAsText">readAsText</a> でのコンテンツ読み込みが完了して、利用可能になると発火する {{event('load')}} イベント時に実行されるイベントハンドラを含みます。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-// <input type="file" onchange="onChange(event)"> からのコールバック
+<pre class="brush:js; line-numbers  language-js"><code class="language-js">// &lt;input type="file" onchange="onChange(event)"&gt; からのコールバック
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
@@ -28,4 +27,4 @@ function onChange(event) {
 
   reader.readAsText(file);
 }
-```
+</code></pre>

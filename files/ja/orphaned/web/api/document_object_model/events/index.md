@@ -8,24 +8,23 @@ tags:
 translation_of: Web/API/Document_Object_Model/Events
 original_slug: Web/API/Document_Object_Model/Events
 ---
-{{DefaultAPISidebar("DOM")}}
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-## はじめに
+<h2 id="Introduction" name="Introduction">はじめに</h2>
 
-この章では DOM のイベントモデルを説明します。この [Event](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event) インターフェイス自身は、 DOM のノード上にイベントを登録する為のインターフェイスと同様であり、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)であるとも言えます。いくつかの長い例は、様々な Event インターフェイスがどのように他と関連するかを示します。
+<p>この章では DOM のイベントモデルを説明します。この <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event">Event</a> インターフェイス自身は、 DOM のノード上にイベントを登録する為のインターフェイスと同様であり、<a href="/ja/docs/Web/API/EventTarget/addEventListener">イベントリスナー</a>であるとも言えます。いくつかの長い例は、様々な Event インターフェイスがどのように他と関連するかを示します。</p>
 
-[DOM レベル 3 イベントの原案](http://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture)に、DOM を通して 3 つのフェーズから構成されるイベントフローを明確に説明した素晴らしい説明図があります。
+<p><a href="http://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture">DOM レベル 3 イベントの原案</a>に、DOM を通して 3 つのフェーズから構成されるイベントフローを明確に説明した素晴らしい説明図があります。</p>
 
-また、イベントが DOM 内をどのように伝播するかについては更に詳細なコード例、[例 5: イベント伝播 (propagation)](/ja/docs/DOM/DOM_Reference/Examples#Example_5.3A_Event_Propagation) を参照してください。
+<p>また、イベントが DOM 内をどのように伝播するかについては更に詳細なコード例、<a href="/ja/docs/DOM/DOM_Reference/Examples#Example_5.3A_Event_Propagation">例 5: イベント伝播 (propagation)</a> を参照してください。</p>
 
-## イベントリスナーの登録
+<h2 id="DOM_event_handler_List" name="DOM_event_handler_List">イベントリスナーの登録</h2>
 
-DOM の要素にイベントハンドラーを登録する方法は 3 つあります。
+<p>DOM の要素にイベントハンドラーを登録する方法は 3 つあります。</p>
 
-### {{domxref("EventTarget.addEventListener")}}
+<h3 id="EventTarget.addEventListener" name="EventTarget.addEventListener">{{domxref("EventTarget.addEventListener")}}</h3>
 
-```js
-// myButton は button 要素だと仮定します
+<pre class="brush: js notranslate">// myButton は button 要素だと仮定します
 myButton.addEventListener('click', greet, false);
 function greet(event){
     // print and have a look at the event object
@@ -33,43 +32,44 @@ function greet(event){
     console.log('greet:', arguments)
     alert('hello world')
 }
-```
+</pre>
 
-これが最近のウェブページで使われる方法です。
+<p>これが最近のウェブページで使われる方法です。</p>
 
-> **Note:** **注:** Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。
+<div class="blockIndicator note">
+<p><strong>注:</strong> Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。</p>
+</div>
 
-さらに詳細を知りたい場合は {{domxref("EventTarget.addEventListener")}} のリファレンスを参照してください。
+<p>さらに詳細を知りたい場合は {{domxref("EventTarget.addEventListener")}} のリファレンスを参照してください。</p>
 
-### [HTML 属性](/ja/docs/Web/Guide/HTML/Event_attributes)
+<h3 id="HTML_attribute" name="HTML_attribute"><a href="/ja/docs/Web/Guide/HTML/Event_attributes">HTML 属性</a></h3>
 
-```html
-<button onclick="alert('Hello world!')">
-```
+<pre class="brush: html notranslate">&lt;button onclick="alert('Hello world!')"&gt;
+</pre>
 
-HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を通してイベントオブジェクトが渡されます。[返値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
+<p>HTML 属性に書かれたこの JavaScript コードには、 <code>event</code> 引数を通してイベントオブジェクトが渡されます。<a href="http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm">返値は HTML の仕様で定義された特別な方法で処理されます</a>。</p>
 
-> **Warning:** **警告:** この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
+<div class="blockIndicator warning">
+<p><strong>警告:</strong> この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。</p>
+</div>
 
-### DOM 要素のプロパティ
+<h3 id="DOM_element_properties" name="DOM_element_properties">DOM 要素のプロパティ</h3>
 
-```js
-// myButton は button 要素と仮定します
+<pre class="brush: js notranslate">// myButton は button 要素と仮定します
 myButton.onclick = function(event){alert('Hello world')}
-```
+</pre>
 
-この関数は 1 つの `event` 引数を取るように定義できます。[返り値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
+<p>この関数は 1 つの <code>event</code> 引数を取るように定義できます。<a href="http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm">返り値は HTML の仕様で定義された特別な方法で処理されます</a>。</p>
 
-この書き方の問題は、各要素の各イベント毎に 1 つだけしかハンドラーを設定できないことです。
+<p>この書き方の問題は、各要素の各イベント毎に 1 つだけしかハンドラーを設定できないことです。</p>
 
-## Event インターフェイスへのアクセス
+<h2 id="Accessing_Event_interfaces" name="Accessing_Event_interfaces">Event インターフェイスへのアクセス</h2>
 
-イベントハンドラーは (DOM 要素や文書、 {{domxref("window")}} オブジェクト等を含めた) 様々なオブジェクトに追加されるでしょう。イベントが発生すると、イベントオブジェクトが生成され順番にイベントリスナーが呼ばれます。
+<p>イベントハンドラーは (DOM 要素や文書、 {{domxref("window")}} オブジェクト等を含めた) 様々なオブジェクトに追加されるでしょう。イベントが発生すると、イベントオブジェクトが生成され順番にイベントリスナーが呼ばれます。</p>
 
-{{domxref("Event")}} インターフェイスは、イベントハンドラーの内部からアクセス可能で、第 1 引数としてイベントオブジェクトを介して渡されます。以下のシンプルな例は、イベントハンドラーにどのようにイベントオブジェクトが渡され、その中でどのように使われるかを示します。
+<p>{{domxref("Event")}} インターフェイスは、イベントハンドラーの内部からアクセス可能で、第 1 引数としてイベントオブジェクトを介して渡されます。以下のシンプルな例は、イベントハンドラーにどのようにイベントオブジェクトが渡され、その中でどのように使われるかを示します。</p>
 
-```js
-function print(evt) {
+<pre class="brush: js notranslate">function print(evt) {
   // evt 引数は自動的にイベントオブジェクトに割り当てられます
   // console.log と alert の違いに注意してください
   console.log('print:', evt)
@@ -77,11 +77,13 @@ function print(evt) {
 }
 // どの関数も意味を持つ適切な名前を付けてください
 table_el.onclick = print
-```
+</pre>
 
-## Subnav
+<h2 id="Subnav">Subnav</h2>
 
-- [DOM リファレンス](/ja/docs/Web/API/Document_Object_Model)
-- [DOM への導入](/ja/docs/Web/API/Document_Object_Model/Introduction)
-- [イベントと DOM](/ja/docs/Web/API/Document_Object_Model/Events)
-- [例](/ja/docs/Web/API/Document_Object_Model/Examples)
+<ul>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model">DOM リファレンス</a></li>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model/Introduction">DOM への導入</a></li>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model/Events">イベントと DOM</a></li>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model/Examples">例</a></li>
+</ul>

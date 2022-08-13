@@ -13,42 +13,58 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onbeforeprint
 original_slug: Web/API/WindowEventHandlers/onbeforeprint
 ---
-{{ApiRef}}
+<div>{{ApiRef}}</div>
 
-{{domxref("WindowEventHandlers")}} ミックスインの **`onbeforeprint`** プロパティは、現在のウィンドウの {{event("beforeprint")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、印刷ダイアログウィンドウが開く前に発生します。
+<p>{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onbeforeprint</code></strong> プロパティは、現在のウィンドウの {{event("beforeprint")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、印刷ダイアログウィンドウが開く前に発生します。</p>
 
-`beforeprint` イベントと {{event("afterprint")}} イベントを使用すると、印刷を開始する前にページでコンテンツを変更し（例えば、バナーを削除するなど）、印刷の完了後にそれらの変更を元に戻すことができます。 一般に、[`@media print`](/ja/docs/Web/CSS/@media#メディア種別) CSS @-規則の使用を好むはずですが、場合によってはこれらのイベントを使用する必要があるかもしれません。
+<p><code>beforeprint</code> イベントと {{event("afterprint")}} イベントを使用すると、印刷を開始する前にページでコンテンツを変更し（例えば、バナーを削除するなど）、印刷の完了後にそれらの変更を元に戻すことができます。 一般に、<code><a href="/ja/docs/Web/CSS/@media#メディア種別">@media print</a></code> CSS @-規則の使用を好むはずですが、場合によってはこれらのイベントを使用する必要があるかもしれません。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    window.addEventListener("beforeprint", function(event) { ... });
-    window.onbeforeprint = function(event) { ... };
+<pre class="syntaxbox">window.addEventListener("beforeprint", function(event) { ... });
+window.onbeforeprint = function(event) { ... };
+</pre>
 
-## ポリフィル
+<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
-Safari はこれらのイベントを実装していませんが、{{domxref("window.matchMedia")}}`('print')` を使用して `beforeprint` イベントと同等の結果を作成できます。
+<p>Safari はこれらのイベントを実装していませんが、{{domxref("window.matchMedia")}}<code>('print')</code> を使用して <code>beforeprint</code> イベントと同等の結果を作成できます。</p>
 
-```js
-var mediaQueryList = window.matchMedia('print');
+<pre class="brush: js">var mediaQueryList = window.matchMedia('print');
 mediaQueryList.addListener(function(mql) {
   if(mql.matches) {
     console.log('onbeforeprint に相当する webkit');
   }
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-| 仕様                                                                                                     | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WindowEventHandlers.onbeforeprint")}}
 
-## 関連情報
 
-- {{domxref("Window.print()")}}
-- {{domxref("WindowEventHandlers.onafterprint")}}
-- [印刷](/ja/docs/Web/Guide/Printing)
+<p>{{Compat("api.WindowEventHandlers.onbeforeprint")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Window.print()")}}</li>
+ <li>{{domxref("WindowEventHandlers.onafterprint")}}</li>
+ <li><a href="/ja/docs/Web/Guide/Printing">印刷</a></li>
+</ul>

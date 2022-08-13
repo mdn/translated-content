@@ -10,10 +10,8 @@ tags:
 translation_of: Web/API/FileReader/onabort
 original_slug: Web/API/FileReader/onabort
 ---
-**`FileReader.onabort`** プロパティには、[`abort`](/ja/docs/Web/Events/abort) イベントが発生したとき、つまりファイルの読み取り処理が中止されたときに実行されるイベント ハンドラが含まれています。
+<p><strong><code>FileReader.onabort</code></strong> プロパティには、<code><a href="/ja/docs/Web/Events/abort">abort</a></code> イベントが発生したとき、つまりファイルの読み取り処理が中止されたときに実行されるイベント ハンドラが含まれています。</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-reader.onabort = function() { ... };
-```
+<pre class="brush: js notranslate">reader.onabort = function() { ... };</pre>

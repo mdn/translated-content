@@ -6,12 +6,17 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-{{WebExtAllCompatTables}}
+<p>{{WebExtAllCompatTables}}</p>
 
-> **Note:** **謝辞**Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+<div class="note"><strong>謝辞</strong>
 
-## 関連情報
+<p>Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
+</div>
 
-- [Browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">Browser compatibility for manifest.json</a></li>
+</ul>

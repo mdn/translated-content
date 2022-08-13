@@ -5,49 +5,51 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-WebExtension 用の JavaScript API は拡張機能の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、その他の拡張機能にバンドルした文書 ([ブラウザーアクション](/ja/Add-ons/WebExtensions/Browser_action)や[ページアクション](/ja/Add-ons/WebExtensions/Page_actions)ポップアップや[サイドバー](/ja/Add-ons/WebExtensions/Sidebars)や[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)や[新規タブページ](/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)を含む) で使用できます。いくつかの API は拡張機能の[コンテンツスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)からもアクセスできます ([コンテンツスクリプトガイドの表](/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)を見てください)。
+<div>
+<p>WebExtension 用の JavaScript API は拡張機能の<a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>と、その他の拡張機能にバンドルした文書 (<a href="/ja/Add-ons/WebExtensions/Browser_action">ブラウザーアクション</a>や<a href="/ja/Add-ons/WebExtensions/Page_actions">ページアクション</a>ポップアップや<a href="/ja/Add-ons/WebExtensions/Sidebars">サイドバー</a>や<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">オプションページ</a>や<a href="/ja/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">新規タブページ</a>を含む) で使用できます。いくつかの API は拡張機能の<a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">コンテンツスクリプト</a>からもアクセスできます (<a href="/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">コンテンツスクリプトガイドの表</a>を見てください)。</p>
 
-もっと強力な API を使うには、拡張機能の `manifest.json` で[パーミッションをリクエストする](/ja/Add-ons/WebExtensions/manifest.json/permissions)必要があります。
+<p>もっと強力な API を使うには、拡張機能の <code>manifest.json</code> で<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">パーミッションをリクエストする</a>必要があります。</p>
 
-`browser` 名前空間内で API にアクセスできます:
+<p><code>browser</code> 名前空間内で API にアクセスできます:</p>
 
-```js
-function logTabs(tabs) {
-  console.log(tabs);
-}
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logTabs</span><span class="punctuation token">(</span>tabs<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>tabs<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
 
-browser.tabs.query({currentWindow: true}, logTabs);
-```
+browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>currentWindow<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">}</span><span class="punctuation token">,</span> logTabs<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+</div>
 
-API の多くは非同期で、 {{JSxRef("Promise")}} を返します:
+<div>
+<p>API の多くは非同期で、 {{JSxRef("Promise")}} を返します:</p>
 
-```js
-function logCookie(c) {
-  console.log(c);
-}
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logCookie</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
 
-function logError(e) {
-  console.error(e);
-}
+<span class="keyword token">function</span> <span class="function token">logError</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
 
-let setCookie = browser.cookies.set(
-  {url: "/"}
-);
-setCookie.then(logCookie, logError);
-```
+<span class="keyword token">let</span> setCookie <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span>
+  <span class="punctuation token">{</span>url<span class="punctuation token">:</span> <span class="string token">"/"</span><span class="punctuation token">}</span>
+<span class="punctuation token">)</span><span class="punctuation token">;</span>
+setCookie<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logCookie<span class="punctuation token">,</span> logError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+</div>
 
-これは Google Chrome の拡張機能システムでは違っていて、`browser` の代わりに `chrome` 名前空間を使い、promise や非同期関数の代わりにコールバックを使っているのに注意してください。移植の助けとして、WebExtensions API の Firefox 実装は `browser` と promise と同様に `chrome` とコールバックもサポートします。Mozilla は `browser` と promise を使うコードが Chrome で変更なく動作する polyfill も書いています: <https://github.com/mozilla/webextension-polyfill>.
+<div>
+<p>これは Google Chrome の拡張機能システムでは違っていて、<code>browser</code> の代わりに <code>chrome</code> 名前空間を使い、promise や非同期関数の代わりにコールバックを使っているのに注意してください。移植の助けとして、WebExtensions API の Firefox 実装は <code>browser</code> と promise と同様に <code>chrome</code> とコールバックもサポートします。Mozilla は <code>browser</code> と promise を使うコードが Chrome で変更なく動作する polyfill も書いています: <a class="external external-icon" href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
 
-Firefox は `chrome` 名前空間の下でコールバックを使う API も実装しています。これにより Chrome 向けのコードをここに文書化された API を使って、Firefox で大部分変更なしに実行させることができます。
+<p>Firefox は <code>chrome</code> 名前空間の下でコールバックを使う API も実装しています。これにより Chrome 向けのコードをここに文書化された API を使って、Firefox で大部分変更なしに実行させることができます。</p>
 
-Microsoft Edge は `browser` 名前空間を使いますが、promise ベースの非同期 API はサポートされていません。Edge では当面、非同期 API はコールバックを使うのが必須です。
+<p>Microsoft Edge は <code>browser</code> 名前空間を使いますが、promise ベースの非同期 API はサポートされていません。Edge では当面、非同期 API はコールバックを使うのが必須です。</p>
 
-すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは[ JavaScript API のブラウザーサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)をご覧ください。
+<p>すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">  JavaScript API のブラウザーサポート</a>をご覧ください。</p>
 
-## JavaScript API 一覧
+<h2 id="JavaScript_API_listing" name="JavaScript_API_listing">JavaScript API 一覧</h2>
 
-下記の JavaScript API の完全な一覧をご覧ください:
+<p>下記の JavaScript API の完全な一覧をご覧ください:</p>
+</div>
 
-{{LandingPageListSubpages}}
+<div>{{LandingPageListSubpages}}</div>

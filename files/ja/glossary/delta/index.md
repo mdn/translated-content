@@ -8,28 +8,26 @@ tags:
   - value
 translation_of: Glossary/Delta
 ---
-**デルタ**は、2 つの値または状態の差分を表す用語です。
+<p><strong>デルタ</strong>は、2つの値または状態の差分を表す用語です。</p>
 
-名前の由来はギリシャ文字の Δ (delta) で、 ローマ字の _D_ に相当します。*デルタ*は、省略形の文字 Δ を使用して*差分*を表します。
+<p>名前の由来はギリシャ文字の Δ (delta) で、 ローマ字の <em>D</em> に相当します。<em>デルタ</em>は、省略形の文字 Δ を使用して<em>差分</em>を表します。</p>
 
-*デルタ*という語は、一般的に、物理的もしくは仮想的なオブジェクトの速度、位置、加速度の変化を表す時に使われます。また、音波の振幅または周波数の変化を表す時にも使われます。
+<p><em>デルタ</em>という語は、一般的に、物理的もしくは仮想的なオブジェクトの速度、位置、加速度の変化を表す時に使われます。また、音波の振幅または周波数の変化を表す時にも使われます。</p>
 
-例えば、画面上でオブジェクトが左から右へ移動した距離を述べる時には、_delta x_ または _Δx_ という表記が使用できます。
+<p>例えば、画面上でオブジェクトが左から右へ移動した距離を述べる時には、<em>delta x</em> または <em>Δx</em> という表記が使用できます。</p>
 
-同様に、新しい値 _X_ とその古い値が与えられた時、次のようにデルタを計算できます。
+<p>同様に、新しい値 <em>X</em> とその古い値が与えられた時、次のようにデルタを計算できます。</p>
 
-```js
-let deltaX = newX - oldX;
-```
+<pre class="brush: js">let deltaX = newX - oldX;</pre>
 
-より一般的には、デルタを受け取り、その値を使用して保存済みの以前の状態を更新します。
+<p>より一般的には、デルタを受け取り、その値を使用して保存済みの以前の状態を更新します。</p>
 
-```js
-let newX = oldX + deltaX;
-```
+<pre class="brush: js">let newX = oldX + deltaX;</pre>
 
-## 詳細情報
+<h2 id="Learn_more">詳細情報</h2>
 
-### 技術リファレンス
+<h3 id="Technical_reference">技術リファレンス</h3>
 
-- マウスホイールイベント (例として、{{domxref("WheelEvent")}} の {{domxref("WheelEvent.deltaX", "deltaX")}}、{{domxref("WheelEvent.deltaY", "deltaY")}}、{{domxref("WheelEvent.deltaZ", "deltaZ")}} プロパティは、最後のイベントからのホイールの移動量を提供します)
+<ul>
+ <li>マウスホイールイベント (例として、{{domxref("WheelEvent")}} の {{domxref("WheelEvent.deltaX", "deltaX")}}、{{domxref("WheelEvent.deltaY", "deltaY")}}、{{domxref("WheelEvent.deltaZ", "deltaZ")}} プロパティは、最後のイベントからのホイールの移動量を提供します)</li>
+</ul>

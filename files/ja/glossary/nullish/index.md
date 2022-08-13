@@ -9,4 +9,4 @@ tags:
   - undefined
 translation_of: Glossary/Nullish
 ---
-[JavaScript](/ja/docs/Glossary/JavaScript) では Nullish value は {{JSxRef("null")}} または {{JSxRef("undefined")}} のいずれかの値です。Nullish values は常に [falsy](/ja/docs/Glossary/Falsy) です。
+<p><a href="/ja/docs/Glossary/JavaScript">JavaScript</a> では Nullish value は {{JSxRef("null")}} または {{JSxRef("undefined")}} のいずれかの値です。Nullish values は常に <a href="/ja/docs/Glossary/Falsy">falsy</a> です。</p>

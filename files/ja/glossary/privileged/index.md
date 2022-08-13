@@ -6,14 +6,18 @@ tags:
   - Security
 translation_of: Glossary/Privileged
 ---
-ユーザーは、システムに対する追加の権限が付与されている場合、または通常のユーザーと比較してより高い優先度レベルのコンテンツへの最終的なアクセス権が付与されている場合に、**特権がある**と言われます。
+<p>ユーザーは、システムに対する追加の権限が付与されている場合、または通常のユーザーと比較してより高い優先度レベルのコンテンツへの最終的なアクセス権が付与されている場合に、<strong>特権がある</strong>と言われます。 </p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-### 一般知識
+<h3 id="一般知識">一般知識</h3>
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Privilege (computing)")}}
+<ul>
+ <li>Wikipedia 上の {{Interwiki("wikipedia", "Privilege (computing)")}}</li>
+</ul>
 
-### これについて学ぶ
+<h3 id="これについて学ぶ">これについて学ぶ</h3>
 
-- [Information Security Tutorial](/ja/Learn/tutorial/Information_Security_Basics)
+<ul>
+ <li><a href="/ja/Learn/tutorial/Information_Security_Basics">Information Security Tutorial</a></li>
+</ul>

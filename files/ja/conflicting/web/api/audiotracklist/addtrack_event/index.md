@@ -18,43 +18,65 @@ tags:
 translation_of: Web/API/AudioTrackList/onaddtrack
 original_slug: Web/API/AudioTrackList/onaddtrack
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**{{domxref("AudioTrackList")}}** の **`onaddtrack`** プロパティは、{{event("addtrack")}} イベントが発生したときに呼び出されるイベントハンドラで、`AudioTrackList` が表す音声トラックを持つメディア要素に新しい音声トラックが追加されたことを示します。
+<p><span class="seoSummary"><strong>{{domxref("AudioTrackList")}}</strong> の <strong><code>onaddtrack</code></strong> プロパティは、{{event("addtrack")}} イベントが発生したときに呼び出されるイベントハンドラで、<code>AudioTrackList</code> が表す音声トラックを持つメディア要素に新しい音声トラックが追加されたことを示します。</span></p>
 
-イベントは {{domxref("TrackEvent")}} オブジェクトの形でイベントハンドラに渡され、その {{domxref("TrackEvent.track", "track")}} プロパティは新しく追加されたトラックを識別します。
+<p>イベントは {{domxref("TrackEvent")}} オブジェクトの形でイベントハンドラに渡され、その {{domxref("TrackEvent.track", "track")}} プロパティは新しく追加されたトラックを識別します。</p>
 
-> **Note:** **注**: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、`addtrack` イベント用のハンドラを追加することもできます。
+<div class="note">
+<p><strong>注</strong>: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、<code>addtrack</code> イベント用のハンドラを追加することもできます。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    AudioTrackList.onaddtrack = eventHandler;
+<pre class="syntaxbox"><em>AudioTrackList</em>.onaddtrack = <em>eventHandler</em>;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-`onaddtrack` は、 {{domxref("TrackEvent.track", "track")}} プロパティでどの音声トラックがメディアに追加されたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。
+<p><code>onaddtrack</code> は、 {{domxref("TrackEvent.track", "track")}} プロパティでどの音声トラックがメディアに追加されたかを示す {{domxref("TrackEvent")}} オブジェクトを入力として受け取る関数を設定します。</p>
 
-## 使用上の注意
+<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
 
-{{event("addtrack")}} イベントは、音声トラックを `AudioTrackList` オブジェクトで表すメディア要素に新しいトラックが追加されるたびに呼び出されます。 これは、メディアが最初に要素に添付されたときにトラックが要素に追加されたときに発生します。 メディアリソース内の音声トラックごとに 1 つの `addtrack` イベントが発生します。
+<p>{{event("addtrack")}} イベントは、音声トラックを <code>AudioTrackList</code> オブジェクトで表すメディア要素に新しいトラックが追加されるたびに呼び出されます。 これは、メディアが最初に要素に添付されたときにトラックが要素に追加されたときに発生します。 メディアリソース内の音声トラックごとに1つの <code>addtrack</code> イベントが発生します。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-このスニペットは、新しく追加されたトラックを表す {{domxref("AudioTrack")}} オブジェクトを渡して、`addToTrackList()` 関数を呼び出す {{event("addtrack")}} イベントのハンドラを確立します。 このシナリオでは、その関数の役割は、選択可能な音声トラックのリストに新しいトラックを追加することです。
+<p>このスニペットは、新しく追加されたトラックを表す {{domxref("AudioTrack")}} オブジェクトを渡して、<code>addToTrackList()</code> 関数を呼び出す {{event("addtrack")}} イベントのハンドラを確立します。 このシナリオでは、その関数の役割は、選択可能な音声トラックのリストに新しいトラックを追加することです。</p>
 
-```js
-document.querySelector("video").audioTracks.onaddtrack = function(event) {
+<pre class="brush: js">document.querySelector("video").audioTracks.onaddtrack = function(event) {
   addToTrackList(event.track);
 };
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#handler-tracklist-onaddtrack', 'AudioTrackList.onaddtrack')}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onaddtrack', 'AudioTrackList.onaddtrack')}} | {{Spec2('HTML5 W3C')}}     |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onaddtrack', 'AudioTrackList.onaddtrack')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onaddtrack', 'AudioTrackList.onaddtrack')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.AudioTrackList.onaddtrack")}}
+
+
+<p>{{Compat("api.AudioTrackList.onaddtrack")}}</p>
+
+<p> </p>

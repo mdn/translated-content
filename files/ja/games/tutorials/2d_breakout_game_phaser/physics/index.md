@@ -4,55 +4,52 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
 original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
 
-全 16 回の[ゲーム開発チュートリアル](/ja/docs/Games/Workflows/2D_Breakout_game_Phaser) の 5 回目です。 今回終了後のソースコードは [Gamedev-Phaser-Content-Kit/demos/lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html) でご覧になれます。
+<div class="summary">
+<p>全 16回の<a href="/ja/docs/Games/Workflows/2D_Breakout_game_Phaser">ゲーム開発チュートリアル</a> の 5 回目です。 今回終了後のソースコードは <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit/demos/lesson05.html</a> でご覧になれます。</p>
+</div>
 
-モノ同士の衝突を正しく処理するためには、物理演算が必要になります。この文書では、Phaser での実装と、典型的な例を紹介します。
+<p><span class="seoSummary">モノ同士の衝突を正しく処理するためには、物理演算が必要になります。この文書では、Phaser での実装と、典型的な例を紹介します。</span></p>
 
-## 物理演算の追加
+<h2 id="物理演算の追加">物理演算の追加</h2>
 
-Phaser は Arcade Physics、P2、そして Ninja Physics と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。
+<p>Phaser は Arcade Physics、P2、そして Ninja Physics  と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。</p>
 
-まず Arcade Physics engine を初期化します。初期化は `create `関数の先頭で、 `physics.startSystem()` メソッドを呼ぶことで行います：
+<p>まず Arcade Physics engine を初期化します。初期化は <code>create </code>関数の先頭で、 <code>physics.startSystem()</code> メソッドを呼ぶことで行います：</p>
 
-```js
-game.physics.startSystem(Phaser.Physics.ARCADE);
-```
+<pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
+</pre>
 
-標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、`create()` の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：
+<p>標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、<code>create()</code>  の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：</p>
 
-```js
-game.physics.enable(ball, Phaser.Physics.ARCADE);
-```
+<pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
+</pre>
 
-次にボールを動かします。次のように、`create() `末尾で body 属性の持つ `velocity` 属性を設定します：
+<p>次にボールを動かします。次のように、<code>create() </code>末尾で body 属性の持つ <code>velocity</code> 属性を設定します：</p>
 
-```js
-ball.body.velocity.set(150, 150);
-```
+<pre class="brush: js">ball.body.velocity.set(150, 150);
+</pre>
 
-## 以前作成した、更新処理の削除
+<h2 id="以前作成した、更新処理の削除">以前作成した、更新処理の削除</h2>
 
-`update()`関数から忘れずに、x と y の値の更新処理を削除しておきましょう：
+<p><code>update()</code>関数から忘れずに、x と y の値の更新処理を削除しておきましょう：</p>
 
-```js
-function update() {
-    ball.x += 1;
-    ball.y += 1;
+<pre class="brush: js">function update() {
+<s>    ball.x += 1;</s>
+<s>    ball.y += 1;</s>
 }
-```
+</pre>
 
-以上で、物理演算エンジンを組み込むことができました。
+<p>以上で、物理演算エンジンを組み込むことができました。</p>
 
-## 最終的に作成されたコード
+<h2 id="最終的に作成されたコード">最終的に作成されたコード</h2>
 
-最終的に得られたコードは以下の通りです：
+<p>最終的に得られたコードは以下の通りです：</p>
 
-```js
-var ball;
+<pre class="brush: js">var ball;
 
 function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -71,24 +68,24 @@ function create() {
 
 function update() {
 }
-```
+</pre>
 
-`index.html` を再読み込みすると、ボールは 1 方向に進み続けます。現在、物理エンジンには重力加速度も摩擦係数も設定されていません。重力加速度を設定すれば、ボールは落下するようになります。また、摩擦係数を設定すれば、ボールが摩擦で停止するようになります。
+<p><code>index.html</code> を再読み込みすると、ボールは 1 方向に進み続けます。現在、物理エンジンには重力加速度も摩擦係数も設定されていません。重力加速度を設定すれば、ボールは落下するようになります。また、摩擦係数を設定すれば、ボールが摩擦で停止するようになります。</p>
 
-## より進んだ内容
+<h2 id="より進んだ内容">より進んだ内容</h2>
 
-今回扱った内容以外にもできることはたくさんあります。例えば、 `ball.body.gravity.y = 100;` と追加することで、ボールに影響する重力を設定できます。その結果として、ボールが重力に引かれて、落下するようになります。
+<p>今回扱った内容以外にもできることはたくさんあります。例えば、 <code>ball.body.gravity.y = 100;</code> と追加することで、ボールに影響する重力を設定できます。その結果として、ボールが重力に引かれて、落下するようになります。</p>
 
-このような機能はほんの一部分です。[physics documentation](http://phaser.io/docs#physics) には、物理演算に関する数多くの関数と変数が、[Arcade](http://phaser.io/examples/v2/category/arcade-physics) と [P2](http://phaser.io/examples/v2/category/p2-physics) 物理演算エンジンの使用例とともに解説されています。
+<p>このような機能はほんの一部分です。<a href="http://phaser.io/docs#physics">physics documentation</a> には、物理演算に関する数多くの関数と変数が、<a href="http://phaser.io/examples/v2/category/arcade-physics">Arcade</a> と <a href="http://phaser.io/examples/v2/category/p2-physics">P2</a> 物理演算エンジンの使用例とともに解説されています。</p>
 
-## 自分のコードと比較しよう
+<h2 id="自分のコードと比較しよう">自分のコードと比較しよう</h2>
 
-上記のコードや、下記のデモと比較して、どのように動作しているかを理解しましょう。
+<p>上記のコードや、下記のデモと比較して、どのように動作しているかを理解しましょう。</p>
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}
+<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}</p>
 
-## 次のステップ
+<h2 id="次のステップ">次のステップ</h2>
 
-次のステップでは、[ボールの跳ね返り](/ja/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls) を実装します。
+<p>次のステップでは、<a href="/ja/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls">ボールの跳ね返り</a> を実装します。</p>
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>

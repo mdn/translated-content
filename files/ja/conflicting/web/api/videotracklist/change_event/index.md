@@ -18,44 +18,60 @@ tags:
 translation_of: Web/API/VideoTrackList/onchange
 original_slug: Web/API/VideoTrackList/onchange
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**{{domxref("VideoTrackList")}}** の **`onchange`** プロパティは、{{event("change")}} イベントが発生したときに呼び出されるイベントハンドラで、`VideoTrackList` 内の {{domxref("VideoTrack")}} がアクティブになったことを示します。
+<p><span class="seoSummary"><strong>{{domxref("VideoTrackList")}}</strong> の <strong><code>onchange</code></strong> プロパティは、{{event("change")}} イベントが発生したときに呼び出されるイベントハンドラで、<code>VideoTrackList</code> 内の {{domxref("VideoTrack")}} がアクティブになったことを示します。</span></p>
 
-イベントは {{domxref("Event")}} オブジェクトの形式でイベントハンドラに渡されます。 イベントは追加情報を提供しません。 メディアのトラックの新しい状態を判断するには、それらの {{domxref("VideoTrack.selected")}} フラグを確認する必要があります。
+<p>イベントは {{domxref("Event")}} オブジェクトの形式でイベントハンドラに渡されます。 イベントは追加情報を提供しません。 メディアのトラックの新しい状態を判断するには、それらの {{domxref("VideoTrack.selected")}} フラグを確認する必要があります。</p>
 
-> **Note:** **注**: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、`change` イベントのハンドラを追加することもできます。
+<div class="note">
+<p><strong>注</strong>: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、<code>change</code> イベントのハンドラを追加することもできます。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    VideoTrackList.onchange = eventHandler;
+<pre class="syntaxbox"><em>VideoTrackList</em>.onchange = <em>eventHandler</em>;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-`onchange` は、トラックがアクティブになるたびに呼び出されるべき関数を設定します。
+<p><code>onchange</code> は、トラックがアクティブになるたびに呼び出されるべき関数を設定します。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-このスニペットは、リスト内の各トラックを調べる {{event("change")}} イベントのハンドラを確立し、トラックの現在の状態を示すユーザーインターフェイスコントロールの状態を更新する関数を呼び出します。
+<p>このスニペットは、リスト内の各トラックを調べる {{event("change")}} イベントのハンドラを確立し、トラックの現在の状態を示すユーザーインターフェイスコントロールの状態を更新する関数を呼び出します。</p>
 
-```js
-var trackList = document.querySelector("video").videoTracks;
+<pre class="brush: js">var trackList = document.querySelector("video").videoTracks;
 
 trackList.onchange = function(event) {
   trackList.forEach(function(track) {
     updateTrackSelectedButton(track.id, track.selected);
   });
 };
-```
+</pre>
 
-この例の `updateTrackSelectedButton()` は、トラックの {{domxref("VideoTrack.id", "id")}}（おそらくアプリはトラック ID をコントロール要素の ID として使用します）でユーザーインターフェイスコントロールを見つけて、トラックの {{domxref("VideoTrack.selected", "selected")}} フラグを使用してコントロールが現在どの状態にあるべきかを決定する関数です。
+<p>この例の <code>updateTrackSelectedButton()</code> は、トラックの {{domxref("VideoTrack.id", "id")}}（おそらくアプリはトラック ID をコントロール要素の ID として使用します）でユーザーインターフェイスコントロールを見つけて、トラックの {{domxref("VideoTrack.selected", "selected")}} フラグを使用してコントロールが現在どの状態にあるべきかを決定する関数です。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                 | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'VideoTrackList: onchange')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'VideoTrackList: onchange')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.VideoTrackList.onchange")}}
+
+
+<p>{{Compat("api.VideoTrackList.onchange")}}</p>

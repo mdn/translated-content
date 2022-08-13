@@ -8,41 +8,41 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## メッセージ
+<h2 id="メッセージ">メッセージ</h2>
 
-    TypeError: invalid arguments (Firefox)
+<pre class="syntaxbox">TypeError: invalid arguments (Firefox)</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## 何がうまくいかなかったのか？
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-新しい typed array を生成するために、[Typed array](/ja/docs/Web/JavaScript/Typed_arrays) コンストラクターに以下のいずれかの値を渡す必要があります。
+<p>新しい typed array を生成するために、<a href="/ja/docs/Web/JavaScript/Typed_arrays">Typed array</a> コンストラクターに以下のいずれかの値を渡す必要があります。</p>
 
-- 長さ
-- ほかの typed array
-- 配列状オブジェクト
-- 反復可能オブジェクト
-- {{jsxref("ArrayBuffer")}} オブジェクト
+<ul>
+ <li>長さ</li>
+ <li>ほかの typed array</li>
+ <li>配列状オブジェクト</li>
+ <li>反復可能オブジェクト</li>
+ <li>{{jsxref("ArrayBuffer")}} オブジェクト</li>
+</ul>
 
-そのほかのコンストラクター引数では、有効な typed array を生成できません。
+<p>そのほかのコンストラクター引数では、有効な typed array を生成できません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-Typed array、たとえば {{jsxref("Uint8Array")}} は文字列から構成できません。事実、文字列はまったく typed array にすることはできません。
+<p>Typed array、たとえば {{jsxref("Uint8Array")}} は文字列から構成できません。事実、文字列はまったく typed array にすることはできません。</p>
 
-```js example-bad
-var ta = new Uint8Array("nope");
+<pre class="brush: js example-bad">var ta = new Uint8Array("nope");
 // TypeError: invalid arguments
-```
+</pre>
 
-有効な {{jsxref("Uint8Array")}} を生成するほかの方法:
+<p>有効な {{jsxref("Uint8Array")}} を生成するほかの方法:</p>
 
-```js example-good
-// From a length
+<pre class="brush: js example-good">// From a length
 var uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
@@ -66,10 +66,12 @@ var z = new Uint8Array(buffer, 1, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Typed array](/ja/docs/Web/JavaScript/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Uint8Array")}}
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">Typed array</a></li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
+ <li>{{jsxref("Uint8Array")}}</li>
+</ul>

@@ -11,32 +11,50 @@ tags:
 translation_of: Web/API/ServiceWorkerGlobalScope/caches
 original_slug: Web/API/ServiceWorkerGlobalScope/caches
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`caches`** 読み取り専用プロパティは、サービスワーカーに関連する {{domxref("CacheStorage")}} オブジェクトを返します。
+<p><span class="seoSummary">{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの <strong><code>caches</code></strong> 読み取り専用プロパティは、サービスワーカーに関連する {{domxref("CacheStorage")}} オブジェクトを返します。</span></p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var myCacheStorage = self.caches;
+<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches;
+</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("CacheStorage")}} オブジェクト。
+<p>{{domxref("CacheStorage")}} オブジェクト。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                             | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#global-caches', 'ServiceWorkerGlobalScope.caches')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#global-caches', 'ServiceWorkerGlobalScope.caches')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerGlobalScope.caches")}}
+<div>
 
-## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
-- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+<p>{{Compat("api.ServiceWorkerGlobalScope.caches")}}</p>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
+ <li><a href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
+</ul>

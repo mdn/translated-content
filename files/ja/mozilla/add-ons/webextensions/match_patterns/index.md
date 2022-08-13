@@ -5,92 +5,428 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-マッチパターンは URL のグループを指定する方法です。マッチパターンはいくつかの URL にマッチします。マッチパターンは WebExtensions API を使う拡張機能向けに、いくつかの場所で使用されます。特に[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードする文書を指定するときや、[`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) リスナーを追加する URL を指定する時に使用します。
+<p>マッチパターンは URL のグループを指定する方法です。マッチパターンはいくつかの URL にマッチします。マッチパターンは WebExtensions API を使う拡張機能向けに、いくつかの場所で使用されます。特に<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a>をロードする文書を指定するときや、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code> リスナーを追加する URL を指定する時に使用します。</p>
 
-マッチパターンを使用する API は通常マッチパターンのリストを受け取り、URL がパターンのいずれかにマッチする場合は適切なアクションを実行します。たとえば manifest.json 内の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを参照してください。
+<p>マッチパターンを使用する API は通常マッチパターンのリストを受け取り、URL がパターンのいずれかにマッチする場合は適切なアクションを実行します。たとえば manifest.json 内の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを参照してください。</p>
 
-## マッチパターンの構造
+<h2 id="Match_pattern_structure" name="Match_pattern_structure">マッチパターンの構造</h2>
 
-> **Note:** **記:** ブラウザーによってはサポートしていないスキームがあります。
-> 詳しくは[ブラウザー互換性テーブル](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns$edit#Browser_compatibility)を見てください。
+<div class="blockIndicator note">
+<p><strong>記:</strong> ブラウザーによってはサポートしていないスキームがあります。<br>
+ 詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns$edit#Browser_compatibility">ブラウザー互換性テーブル</a>を見てください。</p>
+</div>
 
-すべてのマッチパターンは文字列で指定します。特別な値[ `<all_urls>`](/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) を除き、マッチパターンは３つの部分から成り立っています。 _scheme_, _host_, _path_ です。 scheme と host の間は `://` で句切られます。
+<p>すべてのマッチパターンは文字列で指定します。特別な値<a href="/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E"> <code>&lt;all_urls&gt;</code></a> を除き、マッチパターンは３つの部分から成り立っています。 <em>scheme</em>, <em>host</em>, <em>path</em> です。 scheme と host の間は  <code>://</code> で句切られます。</p>
 
-    <scheme>://<host><path>
+<pre class="notranslate">&lt;scheme&gt;://&lt;host&gt;&lt;path&gt;</pre>
 
-### scheme
+<h3 id="scheme" name="scheme">scheme</h3>
 
-_scheme_ 部は２つの形式のうち、どちらかを指定します。
+<p> <em>scheme</em> 部は２つの形式のうち、どちらかを指定します。</p>
 
-| 形式                                                                          | マッチするもの                                                                                 |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `*`                                                                           | "http"か"https"のみ、いくつかのブラウザーでは ["ws" と "wss"](/ja/docs/Web/API/WebSockets_API) |
-| `http`, `https`, `ws`, `wss`, `ftp`, `ftps`, `data`, `file` のうちどれか 1 つ | 指定したスキームのみ                                                                           |
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 50%;">形式</th>
+   <th scope="col">マッチするもの</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>*</code></td>
+   <td>"http"か"https"のみ、いくつかのブラウザーでは <a href="/ja/docs/Web/API/WebSockets_API">"ws" と "wss"</a></td>
+  </tr>
+  <tr>
+   <td><code>http</code>, <code>https</code>, <code>ws</code>, <code>wss</code>, <code>ftp</code>, <code>ftps</code>, <code>data</code>, <code>file</code> のうちどれか 1 つ</td>
+   <td>指定したスキームのみ</td>
+  </tr>
+ </tbody>
+</table>
 
-### host
+<h3 id="host" name="host">host</h3>
 
-*host*部は３つ形式のうちどれか 1 つを取ります。
+<p><em>host</em>部は３つ形式のうちどれか 1 つを取ります。</p>
 
-| 形式                               | マッチするもの                     |
-| ---------------------------------- | ---------------------------------- |
-| `*`                                | すべてのホスト                     |
-| `*.` に続くホスト名の一部分        | 指定したホストと任意のサブドメイン |
-| ワイルドカード無しの完全なホスト名 | 指定したホストのみ                 |
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 50%;">形式</th>
+   <th scope="col">マッチするもの</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>*</code></td>
+   <td>すべてのホスト</td>
+  </tr>
+  <tr>
+   <td><code>*.</code> に続くホスト名の一部分</td>
+   <td>指定したホストと任意のサブドメイン</td>
+  </tr>
+  <tr>
+   <td>ワイルドカード無しの完全なホスト名</td>
+   <td>指定したホストのみ</td>
+  </tr>
+ </tbody>
+</table>
 
-*host 部*にはポート番号は入りません。
+<p><em>host部</em>にはポート番号は入りません。</p>
 
-"file"スキームだけは、*host*部はオプションです。
+<p>"file"スキームだけは、<em>host</em>部はオプションです。</p>
 
-ワイルドカード "\*" は _host_ の最初のみに適用できることに注意してください。
+<p>ワイルドカード "*" は <em>host</em> の最初のみに適用できることに注意してください。</p>
 
-### path
+<h3 id="path" name="path">path</h3>
 
-パス部は `/` で開始しなければいけません。
+<p>パス部は <code>/</code> で開始しなければいけません。</p>
 
-その後、ワイルドカード `*` と、URL パスとして許可される文字とを組み合わせたものが続けて入るかもしれません。ホスト部と異なり、パス部はワイルドカード `*` を途中や終わりに含むことができて、さらに 2 つ以上の `*` を含められます。
+<p>その後、ワイルドカード <code>*</code> と、URL パスとして許可される文字とを組み合わせたものが続けて入るかもしれません。ホスト部と異なり、パス部はワイルドカード <code>*</code> を途中や終わりに含むことができて、さらに 2 つ以上の <code>*</code> を含められます。</p>
 
-_path_ の値は、URL パスに [URL クエリーストリング](https://en.wikipedia.org/wiki/Query_string)を加えた文字列と一致します。クエリーストリングがある場合、それらの間に `?` を含んでいます。例えば、`foo.bar` で終わる URL パスのあらゆるドメインに URL マッチしたい場合、マッチパターンは `['*://*/*foo.bar', '*://*/*foo.bar?*']`です。単に `bar*` ではなく `?*` は必要で、最後の `*` は URL クエリーストリングにも、URL パスの部分でないものにも適用するためです。
+<p><em>path</em> の値は、URL パスに <a href="https://en.wikipedia.org/wiki/Query_string">URL クエリーストリング</a>を加えた文字列と一致します。クエリーストリングがある場合、それらの間に <code>?</code> を含んでいます。例えば、<code>foo.bar</code> で終わる URL パスのあらゆるドメインに URL マッチしたい場合、マッチパターンは <code>['*://*/*foo.bar', '*://*/*foo.bar?*']</code>です。単に <code>bar*</code> ではなく <code>?*</code> は必要で、最後の <code>*</code> は URL クエリーストリングにも、URL パスの部分でないものにも適用するためです。</p>
 
-[URL フラグメント識別子](https://en.wikipedia.org/wiki/Fragment_identifier)や、`#` の後についているものは、_path_ とみなされません。
+<p><a href="https://en.wikipedia.org/wiki/Fragment_identifier">URL フラグメント識別子</a>や、<code>#</code> の後についているものは、<em>path</em> とみなされません。</p>
 
-> **Note:** **注**: path パターン文字列にポート番号を含めるべきではありません。_"http\://localhost:1234/\*"_ のようにポート番号を追加するとマッチパターンは無視されます。しかし、"_http\://localhost:1234_" は "_http\://localhost/\*_" にマッチします。
+<div class="blockIndicator note">
+<p><strong>注</strong>: path パターン文字列にポート番号を含めるべきではありません。<em>"http://localhost:1234/*" </em>のようにポート番号を追加するとマッチパターンは無視されます。しかし、"<em>http://localhost:1234</em>" は "<em>http://localhost/*</em>" にマッチします。</p>
+</div>
 
-### \<all_urls>
+<h3 id="&lt;all_urls>" name="&lt;all_urls>">&lt;all_urls&gt;</h3>
 
-特殊な値である `<all_urls>` は、サポートしているすべての scheme の URL（ "http", "https", "file", "ftp", "app" ）にマッチします。
+<p>特殊な値である <code>&lt;all_urls&gt;</code> は、サポートしているすべての scheme の URL（ "http", "https", "file", "ftp", "app" ）にマッチします。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-| パターン                                                                                                                                                         | マッチする例                                                                                                                                                                                                          | マッチしない例                                                                                                                                                                                                                                                   |     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| `<all_urls>`すべての URL にマッチ                                                                                                                                | ` http://example.org/``https://a.org/some/path/``ws://sockets.somewhere.org/``wss://ws.example.com/stuff/``ftp://files.somewhere.org/``ftps://files.somewhere.org/ `                                                  | `resource://a/b/c/` (サポートされていないスキーム)                                                                                                                                                                                                               |     |
-| `*://*/*`すべての HTTP, HTTPS, WebSocket URL にマッチ                                                                                                            | ` http://example.org/``https://a.org/some/path/``ws://sockets.somewhere.org/``wss://ws.example.com/stuff/ `                                                                                                           | `ftp://ftp.example.org/` (マッチしないスキーム)`ftps://ftp.example.org/` (マッチしないスキーム)`file:///a/` (マッチしないスキーム)                                                                                                                               |     |
-| `*://*.mozilla.org/*`"mozilla.org" かそのサブドメインでホストされている HTTP, HTTPS, WebSocket の URL にマッチ                                                   | ` http://mozilla.org/``https://mozilla.org/``http://a.mozilla.org/``http://a.b.mozilla.org/``https://b.mozilla.org/path/``ws://ws.mozilla.org/``wss://secure.mozilla.org/something `                                  | `ftp://mozilla.org/` (マッチしないスキーム)`http://mozilla.com/` (マッチしないホスト)`http://firefox.org/` (マッチしないホスト)                                                                                                                                  |     |
-| `*://mozilla.org/`HTTP や HTTPS や WebSocket の"mozilla.org/"のホストのみマッチ                                                                                  | ` http://mozilla.org/``https://mozilla.org/``ws://mozilla.org/``wss://mozilla.org/ `                                                                                                                                  | `ftp://mozilla.org/` (マッチしないスキーム)`http://a.mozilla.org/` (マッチしないホスト)`http://mozilla.org/a` (マッチしないパス)                                                                                                                                 |     |
-| `ftp://mozilla.org/`"ftp\://mozilla.org/"のみマッチ                                                                                                              | `ftp://mozilla.org`                                                                                                                                                                                                   | `http://mozilla.org/` (マッチしないスキーム)`ftp://sub.mozilla.org/` (マッチしないホスト)`ftp://mozilla.org/path` (マッチしないパス)                                                                                                                             |     |
-| `https://*/path`HTTPS URL で path が "path"のホストのみマッチ                                                                                                    | ` https://mozilla.org/path``https://a.mozilla.org/path``https://something.com/path `                                                                                                                                  | `http://mozilla.org/path` (マッチしないスキーム)`https://mozilla.org/path/` (マッチしないパス)`https://mozilla.org/a` (マッチしないパス)`https://mozilla.org/` (マッチしないパス)`https://mozilla.org/path?foo=1` (URL クエリーストリングによりマッチしないパス) |     |
-| `https://*/path/`あらゆるホスト上の HTTPS URL で、パスが "path/" で URL にクエリーストリングのないものにマッチ                                                   | ` https://mozilla.org/path/``https://a.mozilla.org/path/``https://something.com/path `/                                                                                                                               | `http://mozilla.org/path/` (マッチしないスキーム)`https://mozilla.org/path` (マッチしないパス)`https://mozilla.org/a` (マッチしないパス)`https://mozilla.org/` (マッチしないパス)`https://mozilla.org/path?foo=1` (URL クエリーストリングによりマッチしないパス) |     |
-| `https://mozilla.org/*`HTTPS URL のみにマッチで、"mozilla.org"だけ、パスやクエリーストリングは問わない                                                           | ` https://mozilla.org/``https://mozilla.org/path``https://mozilla.org/another``https://mozilla.org/path/to/doc``https://mozilla.org/path/to/doc?foo=1 `                                                               | `http://mozilla.org/path` (マッチしないスキーム)`https://mozilla.com/path` (マッチしないホスト)                                                                                                                                                                  |     |
-| `https://mozilla.org/a/b/c/`この URL 、あるいはフラグメント付きのこの URL にのみマッチ                                                                           | ` https://mozilla.org/a/b/c/``https://mozilla.org/a/b/c/#section1 `                                                                                                                                                   | これ以外のすべて                                                                                                                                                                                                                                                 |     |
-| `https://mozilla.org/*/b/*/`"mozilla.org"でホストされた HTTPS URL で、パスは中間のどこかに "b" を含むもの。クエリーストリングが / で終了していればそれにもマッチ | ` https://mozilla.org/a/b/c/``https://mozilla.org/d/b/f/``https://mozilla.org/a/b/c/d/``https://mozilla.org/a/b/c/d/#section1``https://mozilla.org/a/b/c/d/?foo=/``https://mozilla.org/a?foo=21314&bar=/b/&extra=c/ ` | `https://mozilla.org/b/*/` (マッチしないパス)`https://mozilla.org/a/b/` (マッチしないパス)`https://mozilla.org/a/b/c/d/?foo=bar` (URL クエリーストリングによりマッチしないパス)                                                                                  |     |
-| `file:///blah/*`FILE URL でパスが "blah" で始まるもの                                                                                                            | ` file:///blah/``file://blah/bleh `                                                                                                                                                                                   | `file:///bleh/` (マッチしないパス)                                                                                                                                                                                                                               |     |
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 33%;">パターン</th>
+   <th scope="col" style="width: 33%;">マッチする例</th>
+   <th scope="col" style="width: 33%;">マッチしない例</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <p><code>&lt;all_urls&gt;</code></p>
 
-### 無効なマッチパターン
+    <p>すべての URL にマッチ</p>
+   </td>
+   <td>
+    <p><code>http://example.org/</code></p>
 
-| 無効なパターン           | 理由                                                                |     |
-| ------------------------ | ------------------------------------------------------------------- | --- |
-| `resource://path/`       | サポートされていないスキーム。                                      |     |
-| `https://mozilla.org`    | パスがない。                                                        |     |
-| `https://mozilla.*.org/` | "\*" はホストの先頭に使用する必要があります。                       |     |
-| `https://*zilla.org/`    | ホスト内の "\*" は唯一の文字であるか、"."が続かなければいけません。 |     |
-| `http*://mozilla.org/`   | スキーム内の "\*" は唯一の文字であるべきです。                      |     |
-| `*://*`                  | パスが空: "`*://*/*`"であるべき。                                   |     |
-| `file://*`               | パスが空: "`file:///*`"であるべき 。                                |     |
+    <p><code>https://a.org/some/path/</code></p>
 
-## ブラウザー実装状況
+    <p><code>ws://sockets.somewhere.org/</code></p>
 
-### scheme
+    <p><code>wss://ws.example.com/stuff/</code></p>
 
-{{Compat("webextensions.match_patterns.scheme",10)}}
+    <p><code>ftp://files.somewhere.org/</code></p>
+
+    <p><code>ftps://files.somewhere.org/</code></p>
+   </td>
+   <td>
+    <p><code>resource://a/b/c/</code><br>
+     (サポートされていないスキーム)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>*://*/*</code></p>
+
+    <p>すべての HTTP, HTTPS, WebSocket URL にマッチ</p>
+   </td>
+   <td>
+    <p><code>http://example.org/</code></p>
+
+    <p><code>https://a.org/some/path/</code></p>
+
+    <p><code>ws://sockets.somewhere.org/</code></p>
+
+    <p><code>wss://ws.example.com/stuff/</code></p>
+   </td>
+   <td>
+    <p><code>ftp://ftp.example.org/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>ftps://ftp.example.org/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>file:///a/</code><br>
+     (マッチしないスキーム)</p>
+   </td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>*://*.mozilla.org/*</code></p>
+
+    <p>"mozilla.org" かそのサブドメインでホストされている HTTP, HTTPS, WebSocket の URL にマッチ</p>
+   </td>
+   <td>
+    <p><code>http://mozilla.org/</code></p>
+
+    <p><code>https://mozilla.org/</code></p>
+
+    <p><code>http://a.mozilla.org/</code></p>
+
+    <p><code>http://a.b.mozilla.org/</code></p>
+
+    <p><code>https://b.mozilla.org/path/</code></p>
+
+    <p><code>ws://ws.mozilla.org/</code></p>
+
+    <p><code>wss://secure.mozilla.org/something</code></p>
+   </td>
+   <td>
+    <p><code>ftp://mozilla.org/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>http://mozilla.com/</code><br>
+     (マッチしないホスト)</p>
+
+    <p><code>http://firefox.org/</code><br>
+     (マッチしないホスト)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>*://mozilla.org/</code></p>
+
+    <p>HTTP や HTTPS や WebSocket の"mozilla.org/"のホストのみマッチ</p>
+   </td>
+   <td>
+    <p><code>http://mozilla.org/</code></p>
+
+    <p><code>https://mozilla.org/</code></p>
+
+    <p><code>ws://mozilla.org/</code></p>
+
+    <p><code>wss://mozilla.org/</code></p>
+   </td>
+   <td>
+    <p><code>ftp://mozilla.org/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>http://a.mozilla.org/</code><br>
+     (マッチしないホスト)</p>
+
+    <p><code>http://mozilla.org/a</code><br>
+     (マッチしないパス)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>ftp://mozilla.org/</code></p>
+
+    <p>"ftp://mozilla.org/"のみマッチ</p>
+   </td>
+   <td><code>ftp://mozilla.org</code></td>
+   <td>
+    <p><code>http://mozilla.org/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>ftp://sub.mozilla.org/</code><br>
+     (マッチしないホスト)</p>
+
+    <p><code>ftp://mozilla.org/path</code><br>
+     (マッチしないパス)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>https://*/path</code></p>
+
+    <p> HTTPS URL で path が "path"のホストのみマッチ</p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/path</code></p>
+
+    <p><code>https://a.mozilla.org/path</code></p>
+
+    <p><code>https://something.com/path</code></p>
+   </td>
+   <td>
+    <p><code>http://mozilla.org/path</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>https://mozilla.org/path/</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/a</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/path?foo=1</code><br>
+     (URL クエリーストリングによりマッチしないパス)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>https://*/path/</code></p>
+
+    <p>あらゆるホスト上の HTTPS URL で、パスが "path/" で URL にクエリーストリングのないものにマッチ</p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/path/</code></p>
+
+    <p><code>https://a.mozilla.org/path/</code></p>
+
+    <p><code>https://something.com/path</code>/</p>
+   </td>
+   <td>
+    <p><code>http://mozilla.org/path/</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>https://mozilla.org/path</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/a</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/path?foo=1</code><br>
+     (URL クエリーストリングによりマッチしないパス)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>https://mozilla.org/*</code></p>
+
+    <p>HTTPS URL のみにマッチで、"mozilla.org"だけ、パスやクエリーストリングは問わない</p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/</code></p>
+
+    <p><code>https://mozilla.org/path</code></p>
+
+    <p><code>https://mozilla.org/another</code></p>
+
+    <p><code>https://mozilla.org/path/to/doc</code></p>
+
+    <p><code>https://mozilla.org/path/to/doc?foo=1</code></p>
+   </td>
+   <td>
+    <p><code>http://mozilla.org/path</code><br>
+     (マッチしないスキーム)</p>
+
+    <p><code>https://mozilla.com/path</code><br>
+     (マッチしないホスト)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>https://mozilla.org/a/b/c/</code></p>
+
+    <p>この URL 、あるいはフラグメント付きのこのURLにのみマッチ</p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/a/b/c/</code></p>
+
+    <p><code>https://mozilla.org/a/b/c/#section1</code></p>
+   </td>
+   <td>これ以外のすべて</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>https://mozilla.org/*/b/*/</code></p>
+
+    <p>"mozilla.org"でホストされた HTTPS URL で、パスは中間のどこかに "b" を含むもの。クエリーストリングが / で終了していればそれにもマッチ</p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/a/b/c/</code></p>
+
+    <p><code>https://mozilla.org/d/b/f/</code></p>
+
+    <p><code>https://mozilla.org/a/b/c/d/</code></p>
+
+    <p><code>https://mozilla.org/a/b/c/d/#section1</code></p>
+
+    <p><code>https://mozilla.org/a/b/c/d/?foo=/</code></p>
+
+    <p><code>https://mozilla.org/a?foo=21314&amp;bar=/b/&amp;extra=c/</code></p>
+   </td>
+   <td>
+    <p><code>https://mozilla.org/b/*/</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/a/b/</code><br>
+     (マッチしないパス)</p>
+
+    <p><code>https://mozilla.org/a/b/c/d/?foo=bar</code><br>
+     (URL クエリーストリングによりマッチしないパス)</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>file:///blah/*</code></p>
+
+    <p>FILE URL でパスが "blah" で始まるもの</p>
+   </td>
+   <td>
+    <p><code>file:///blah/</code></p>
+
+    <p><code>file://blah/bleh</code></p>
+   </td>
+   <td><code>file:///bleh/</code><br>
+    (マッチしないパス)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Invalid_match_patterns" name="Invalid_match_patterns">無効なマッチパターン</h3>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">無効なパターン</th>
+   <th scope="col">理由</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>resource://path/</code></td>
+   <td>サポートされていないスキーム。</td>
+  </tr>
+  <tr>
+   <td><code>https://mozilla.org</code></td>
+   <td>パスがない。</td>
+  </tr>
+  <tr>
+   <td><code>https://mozilla.*.org/</code></td>
+   <td>"*" はホストの先頭に使用する必要があります。</td>
+  </tr>
+  <tr>
+   <td><code>https://*zilla.org/</code></td>
+   <td>ホスト内の "*" は唯一の文字であるか、"."が続かなければいけません。</td>
+  </tr>
+  <tr>
+   <td><code>http*://mozilla.org/</code></td>
+   <td>
+    <p>スキーム内の "*" は唯一の文字であるべきです。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>*://*</code></td>
+   <td>パスが空: "<code>*://*/*</code>"であるべき。</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>file://*</code></td>
+   <td>パスが空: "<code>file:///*</code>"であるべき 。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+<h3 id="scheme_2" name="scheme_2">scheme</h3>
+
+
+
+<p>{{Compat("webextensions.match_patterns.scheme",10)}}</p>

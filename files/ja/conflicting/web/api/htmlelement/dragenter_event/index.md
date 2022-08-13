@@ -9,29 +9,31 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ondragenter
 original_slug: Web/API/GlobalEventHandlers/ondragenter
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-{{event("dragenter")}} イベント用の {{domxref("GlobalEventHandlers", "グローバルイベントハンドラ")}}。
+<p>{{event("dragenter")}} イベント用の {{domxref("GlobalEventHandlers", "グローバルイベントハンドラ")}}。</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-    var dragenterHandler = targetElement.ondragenter;
+<pre class="syntaxbox notranslate">var <var>dragenterHandler</var> = <var>targetElement</var>.ondragenter;
+</pre>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-- `dragenterHandler`
-  - : `targetElement` 要素の _dragenter_ イベントハンドラ。
+<dl>
+ <dt><code>dragenterHandler</code></dt>
+ <dd><code>targetElement</code> 要素の <em>dragenter</em> イベントハンドラ。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-この例では、{{domxref("GlobalEventHandlers.ondragenter", "ondragenter")}} 属性ハンドラを使用して、要素の {{event("dragenter")}} イベントハンドラを設定する方法を示します。
+<p>この例では、{{domxref("GlobalEventHandlers.ondragenter", "ondragenter")}} 属性ハンドラを使用して、要素の {{event("dragenter")}} イベントハンドラを設定する方法を示します。</p>
 
-```js
-<!DOCTYPE html>
-<html lang=ja>
-<title>グローバルイベント属性のドラッグ＆ドロップの使用例</title>
-<meta content="width=device-width">
-<style>
+<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
+&lt;html lang=ja&gt;
+&lt;title&gt;グローバルイベント属性のドラッグ＆ドロップの使用例&lt;/title&gt;
+&lt;meta content="width=device-width"&gt;
+&lt;style&gt;
   div {
     margin: 0em;
     padding: 2em;
@@ -43,9 +45,9 @@ original_slug: Web/API/GlobalEventHandlers/ondragenter
   #target {
     border: 1px solid black;
   }
-</style>
-</head>
-<script>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;script&gt;
 function dragstart_handler(ev) {
  console.log("dragStart");
  // ドラッグが開始されたことを示すために、ソース要素の背景色を変更します。
@@ -102,29 +104,46 @@ function init() {
  el.ondragend = dragend_handler;
  el.ondragexit = dragexit_handler;
 }
-</script>
-<body onload="init();">
-<h1><code>ondragenter</code>, <code>ondragleave</code>, <code>ondragend</code>, <code>ondragexit</code> の例</h1>
- <div>
-   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-     この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。</p>
- </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
-</body>
-</html>
-```
+&lt;/script&gt;
+&lt;body onload="init();"&gt;
+&lt;h1&gt;&lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;, &lt;code&gt;ondragexit&lt;/code&gt; の例&lt;/h1&gt;
+ &lt;div&gt;
+   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
+     この要素を選択し、ドロップゾーンにドラッグしてから選択を解除して要素を移動します。&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;ドロップゾーン&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                       | ステータス                       | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragenter", "ondragenter")}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName("HTML5.1", "index.html#ix-handler-ondragenter", "ondragenter")}}         | {{Spec2("HTML5.1")}}     | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragenter", "ondragenter")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondragenter", "ondragenter")}}</td>
+   <td>{{Spec2("HTML5.1")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.ondragenter")}}
+<p>{{Compat("api.GlobalEventHandlers.ondragenter")}}</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- {{event("dragenter")}}
+<ul>
+ <li>{{event("dragenter")}}</li>
+</ul>

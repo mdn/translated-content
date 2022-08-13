@@ -8,18 +8,22 @@ tags:
 translation_of: Web/API/SyncEvent/registration
 original_slug: Web/API/SyncEvent/registration
 ---
-{{Non-standard_header}}{{APIRef("Service Workers API")}}
+<p style="line-height: 19.0909080505371px;">{{Non-standard_header}}{{APIRef("Service Workers API")}}</p>
 
-{{domxref("SyncEvent")}} インターフェイスの登録読み取り専用プロパティは、 {{domxref("SyncRegistration")}} オブジェクトへの参照を返します。
+<p style="line-height: 19.0909080505371px;">{{domxref("SyncEvent")}} インターフェイスの登録読み取り専用プロパティは、 {{domxref("SyncRegistration")}} オブジェクトへの参照を返します。</p>
 
-## 構文
+<h2 id="構文" style="line-height: 19.0909080505371px;">構文</h2>
 
-    var syncReg = SyncEvent.registration
+<pre class="syntaxbox notranslate">var <em>syncReg</em> = SyncEvent.registration</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("SyncRegistration")}} オブジェクト
+<p>{{domxref("SyncRegistration")}} オブジェクト</p>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.SyncEvent.registration")}}
+<div>
+
+
+<p>{{Compat("api.SyncEvent.registration")}}</p>
+</div>

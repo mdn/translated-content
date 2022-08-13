@@ -7,10 +7,12 @@ tags:
   - Glossary
 translation_of: Glossary/Data_structure
 ---
-**データ構造**は、データを効率的に使用できるように整理する特別な方法です。
+<p><strong>データ構造</strong>は、データを効率的に使用できるように整理する特別な方法です。</p>
 
-## より詳しく知る
+<h2 id="Learn_more" name="Learn_more">より詳しく知る</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- Wikipedia 上の {{interwiki("wikipedia", "データ構造")}}
+<ul>
+ <li>Wikipedia 上の {{interwiki("wikipedia", "データ構造")}}</li>
+</ul>

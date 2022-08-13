@@ -10,177 +10,205 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
-{{AddonSidebar}}
+<p>{{AddonSidebar}}</p>
 
-| 型           | `Array` |
-| ------------ | ------- |
-| 必須項目か？ | いいえ  |
-| 例           | ```json |
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>Array</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須項目か？</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json; no-line-numbers">
+"permissions": [
+  "*://developer.mozilla.org/*",
+  "webRequest"
+]</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-"permissions": [ "*://developer.mozilla.org/*", "webRequest" ]
+<p>拡張機能が特別な権限を必要とする際には <code>permissions</code> キーを使用します。このキーには文字列の配列を指定し、各文字列が権限を要求します。</p>
 
-````|
+<p>このキーを使って権限を要求した場合、ブラウザーはインストール時に、拡張機能が特定の権限を要求していることをユーザーに伝え、その権限を許可してもよいかどうかを確認するよう求めることがあります。また、ブラウザーは、インストール後にユーザーが拡張機能の権限を検査できるようにすることもできます。権限付与の要求は、ユーザーが拡張機能をインストールする意欲に影響を与える可能性があるため、権限の要求は慎重に検討する必要があります。たとえば、不要な権限を要求することは避けたいもので、拡張機能のストアの説明に権限を要求する理由についての情報を提供するとよいでしょう。検討すべき事項の詳細については、 <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Request the right permissions</a> の記事にあります。</p>
 
-拡張機能が特別な権限を必要とする際には `permissions` キーを使用します。このキーには文字列の配列を指定し、各文字列が権限を要求します。
+<p>許可証のテストとプレビューの方法については、 Extension Workshop サイトの <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a> を参照してください。</p>
 
-このキーを使って権限を要求した場合、ブラウザーはインストール時に、拡張機能が特定の権限を要求していることをユーザーに伝え、その権限を許可してもよいかどうかを確認するよう求めることがあります。また、ブラウザーは、インストール後にユーザーが拡張機能の権限を検査できるようにすることもできます。権限付与の要求は、ユーザーが拡張機能をインストールする意欲に影響を与える可能性があるため、権限の要求は慎重に検討する必要があります。たとえば、不要な権限を要求することは避けたいもので、拡張機能のストアの説明に権限を要求する理由についての情報を提供するとよいでしょう。検討すべき事項の詳細については、 [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) の記事にあります。
+<p>キーには以下の 3 種類があります。</p>
 
-許可証のテストとプレビューの方法については、 Extension Workshop サイトの [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) を参照してください。
+<ul>
+ <li>host 権限</li>
+ <li>API 権限</li>
+ <li>activeTab 権限</li>
+</ul>
 
-キーには以下の 3 種類があります。
+<h2 id="Host_permissions">host 権限</h2>
 
-*   host 権限
-*   API 権限
-*   activeTab 権限
+<p>host 権限は<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>として指定します。それぞれのパターンによって、アドオンの要求する権限が有効となる URL の範囲を指定します。host 権限の例は <code>"*://developer.mozilla.org/*"</code> のようなものです。</p>
 
-## host 権限
+<p>この権限には以下が含まれます。</p>
 
-host 権限は[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)として指定します。それぞれのパターンによって、アドオンの要求する権限が有効となる URL の範囲を指定します。host 権限の例は `"*://developer.mozilla.org/*"` のようなものです。
+<ul>
+ <li>そのオリジンに対して、クロス-オリジン制約なしに <a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> アクセス、 <a href="/ja/docs/Web/API/Fetch_API">fetch</a> アクセスができる権限 (コンテンツスクリプトからのリクエストによるものも含みます)</li>
+ <li>"tabs" 権限なしに、タブ固有のメタデータを読み取ることができる権限。 {{WebExtAPIRef("tabs.Tab")}} オブジェクトの <code>url</code>, <code>title</code>, <code>favIconUrl</code> などのプロパティです。</li>
+ <li>そのオリジンによるページに ({{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} を用いて) スクリプトをプログラム的に挿入できる権限</li>
+ <li>{{webextAPIref("webrequest")}} API を用いて、そのホストからのイベントを受信できる権限</li>
+ <li>{{webextAPIref("cookies")}} API を用いて、そのホストの Cookie にアクセスできる権限（"cookies" API の権限が指定されている場合）</li>
+ <li>ホストが完全修飾ドメインまたはワイルドカードで指定されている拡張ページのトラッキング防止機能をバイパスすることができます。しかし、コンテンツスクリプトでは、完全修飾ドメインで指定されたホストに対してのみトラッキング防止機能をバイパスすることができます。
+ 
+ ホスト名が完全修飾ドメインであり、ワイルドカードを含まない場合にトラッキング防止を回避。<code>&lt;all_urls&gt;</code> については除外。</li>
+</ul>
 
-この権限には以下が含まれます。
+<p>Firefox では バージョン 56 以降で拡張機能は自動的に自身をオリジンとする host 権限を次の形式で取得します。</p>
 
-*   そのオリジンに対して、クロス-オリジン制約なしに [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) アクセス、 [fetch](/ja/docs/Web/API/Fetch_API) アクセスができる権限 (コンテンツスクリプトからのリクエストによるものも含みます)
-*   "tabs" 権限なしに、タブ固有のメタデータを読み取ることができる権限。 {{WebExtAPIRef("tabs.Tab")}} オブジェクトの `url`, `title`, `favIconUrl` などのプロパティです。
-*   そのオリジンによるページに ({{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} を用いて) スクリプトをプログラム的に挿入できる権限
-*   {{webextAPIref("webrequest")}} API を用いて、そのホストからのイベントを受信できる権限
-*   {{webextAPIref("cookies")}} API を用いて、そのホストの Cookie にアクセスできる権限（"cookies" API の権限が指定されている場合）
-*   ホストが完全修飾ドメインまたはワイルドカードで指定されている拡張ページのトラッキング防止機能をバイパスすることができます。しかし、コンテンツスクリプトでは、完全修飾ドメインで指定されたホストに対してのみトラッキング防止機能をバイパスすることができます。
-    ホスト名が完全修飾ドメインであり、ワイルドカードを含まない場合にトラッキング防止を回避。`<all_urls>` については除外。
+<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
 
-Firefox では バージョン 56 以降で拡張機能は自動的に自身をオリジンとする host 権限を次の形式で取得します。
+<p>ここで <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> は拡張機能の内部 ID です。拡張機能は {{webextAPIref("extension/getURL", "extension.getURL()")}} を呼び出すことでこの URL を取得できます。</p>
 
-    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-
-ここで `60a20a9b-1ad4-af49-9b6c-c64c98c37920` は拡張機能の内部 ID です。拡張機能は {{webextAPIref("extension/getURL", "extension.getURL()")}} を呼び出すことでこの URL を取得できます。
-
-```js
-browser.extension.getURL("");
+<pre class="brush: js">browser.extension.getURL("");
 // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-````
+</pre>
 
-## API 権限
+<h2 id="API_permissions">API 権限</h2>
 
-API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) の名前をキーワードとして指定します。
+<p>API 権限には、拡張機能から使用したい <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a> の名前をキーワードとして指定します。</p>
 
-現時点で使用できるキーワードは以下の通りです。
+<p>現時点で使用できるキーワードは以下の通りです。</p>
+<div class="threecolumns">
+<ul>
+ <li><code>activeTab</code></li>
+ <li><code>alarms</code></li>
+ <li><code>background</code></li>
+ <li><code>bookmarks</code></li>
+ <li><code>browserSettings</code></li>
+ <li><code>browsingData</code></li>
+ <li><code>captivePortal</code></li>
+ <li><code>clipboardRead</code></li>
+ <li><code>clipboardWrite</code></li>
+ <li><code>contentSettings</code></li>
+ <li><code>contextMenus</code></li>
+ <li><code>contextualIdentities</code></li>
+ <li><code>cookies</code></li>
+ <li><code>debugger</code></li>
+ <li><code>dns</code></li>
+ <li><code>downloads</code></li>
+ <li><code>downloads.open</code></li>
+ <li><code>find</code></li>
+ <li><code>geolocation</code></li>
+ <li><code>history</code></li>
+ <li><code>identity</code></li>
+ <li><code>idle</code></li>
+ <li><code>management</code></li>
+ <li><code>menus</code></li>
+ <li><code>menus.overrideContext</code></li>
+ <li><code>nativeMessaging</code></li>
+ <li><code>notifications</code></li>
+ <li><code>pageCapture</code></li>
+ <li><code>pkcs11</code></li>
+ <li><code>privacy</code></li>
+ <li><code>proxy</code></li>
+ <li><code>search</code></li>
+ <li><code>sessions</code></li>
+ <li><code>storage</code></li>
+ <li><code>tabHide</code></li>
+ <li><code>tabs</code></li>
+ <li><code>theme</code></li>
+ <li><code>topSites</code></li>
+ <li><code>unlimitedStorage</code></li>
+ <li><code>webNavigation</code></li>
+ <li><code>webRequest</code></li>
+ <li><code>webRequestBlocking</code></li>
+</ul>
+</div>
 
-- `activeTab`
-- `alarms`
-- `background`
-- `bookmarks`
-- `browserSettings`
-- `browsingData`
-- `captivePortal`
-- `clipboardRead`
-- `clipboardWrite`
-- `contentSettings`
-- `contextMenus`
-- `contextualIdentities`
-- `cookies`
-- `debugger`
-- `dns`
-- `downloads`
-- `downloads.open`
-- `find`
-- `geolocation`
-- `history`
-- `identity`
-- `idle`
-- `management`
-- `menus`
-- `menus.overrideContext`
-- `nativeMessaging`
-- `notifications`
-- `pageCapture`
-- `pkcs11`
-- `privacy`
-- `proxy`
-- `search`
-- `sessions`
-- `storage`
-- `tabHide`
-- `tabs`
-- `theme`
-- `topSites`
-- `unlimitedStorage`
-- `webNavigation`
-- `webRequest`
-- `webRequestBlocking`
+<p>ほとんどの場合、権限はその API へのアクセス権を付与するだけですが、以下のような例外があります。</p>
 
-ほとんどの場合、権限はその API へのアクセス権を付与するだけですが、以下のような例外があります。
+<ul>
+ <li><code>tabs</code> 権限は、 {{webextAPIref("tabs", "<code>tabs</code> API のうち特権が必要なもの")}}に対して、 <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host 権限</a>なしにアクセスできます。対象は <code>Tab.url</code>, <code>Tab.title</code>, <code>Tab.faviconUrl</code> です。
+  <ul>
+  <li>Firefox 85 以前では、 <code>tabs</code> は <code>url</code> を <code>queryInfo</code> 引数に含めて {{webextAPIref("tabs/query", "tabs.query()")}} を呼び出す際にも必要です。 <code>tabs</code> API の他の部分は、権限を要求することなく使用できます。</li>
+  <li>Firefox 86 および Chrome 50 では、 "tabs" 権限の代わりに matching <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host 権限</a>を使用することもできます。</li>
+  </ul>
+ </li>
+ <li><code>webRequestBlocking</code> 権限を指定した場合、"blocking" 引数の使用が許可されます。これによって{{webextAPIref("WebRequest", "リクエストの変更やキャンセル")}}が可能となります。</li>
+ <li><code>downloads.open</code> 権限を指定した場合、{{WebExtAPIRef("downloads.open()")}} API の利用が許可されます。</li>
+ <li><code>tabHide</code> で {{WebExtAPIRef("tabs.hide()")}} API の使用が許可されます。</li>
+</ul>
 
-- `tabs` 権限は、 {{webextAPIref("tabs", "<code>tabs</code> API のうち特権が必要なもの")}}に対して、 [host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)なしにアクセスできます。対象は `Tab.url`, `Tab.title`, `Tab.faviconUrl` です。
+<h2 id="activeTab_permission">activeTab 権限</h2>
 
-  - Firefox 85 以前では、 `tabs` は `url` を `queryInfo` 引数に含めて {{webextAPIref("tabs/query", "tabs.query()")}} を呼び出す際にも必要です。 `tabs` API の他の部分は、権限を要求することなく使用できます。
-  - Firefox 86 および Chrome 50 では、 "tabs" 権限の代わりに matching [host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)を使用することもできます。
+<p>この権限は <code>"activeTab"</code> と指定されます。拡張機能が <code>activeTab</code> 権限を持つなら、ユーザーが拡張機能と相互作用する時に、拡張機能はアクティブなタブ限定の特別な権限が許可されます。</p>
 
-- `webRequestBlocking` 権限を指定した場合、"blocking" 引数の使用が許可されます。これによって{{webextAPIref("WebRequest", "リクエストの変更やキャンセル")}}が可能となります。
-- `downloads.open` 権限を指定した場合、{{WebExtAPIRef("downloads.open()")}} API の利用が許可されます。
-- `tabHide` で {{WebExtAPIRef("tabs.hide()")}} API の使用が許可されます。
+<p>"ユーザーの相互作用" とは次のようなものです。</p>
 
-## activeTab 権限
+<ul>
+ <li>ブラウザーアクションやページアクションをクリック</li>
+ <li>コンテキストメニュー項目を選択</li>
+ <li>拡張機能によって定義されたキーボードショートカットをアクティベート</li>
+</ul>
 
-この権限は `"activeTab"` と指定されます。拡張機能が `activeTab` 権限を持つなら、ユーザーが拡張機能と相互作用する時に、拡張機能はアクティブなタブ限定の特別な権限が許可されます。
+<p>特別な権限とは以下の通りです。</p>
 
-"ユーザーの相互作用" とは次のようなものです。
+<ul>
+ <li>{{webextAPIref("tabs/executeScript", "browser.tabs.executeScript()")}} と {{webextAPIref("tabs/insertCSS", "browser.tabs.insertCSS()")}} を用いてタブに JavaScript や CSS をプログラム的に挿入できる能力</li>
+ <li>現在のタブに、次の一部の tabs API の権限アクセス: <code>Tab.url</code>, <code>Tab.title</code>,  <code>Tab.faviconUrl</code>.</li>
+</ul>
 
-- ブラウザーアクションやページアクションをクリック
-- コンテキストメニュー項目を選択
-- 拡張機能によって定義されたキーボードショートカットをアクティベート
+<p>この権限の意図は、拡張機能によくあるユースケースを、強力すぎる権限を与えずに実行できるようにすることです。多くの拡張機能は「ユーザーが希望したら現在のページで何かをする」ことを希望しています。</p>
 
-特別な権限とは以下の通りです。
+<p>例えば、ユーザーがブラウザーアクションをクリックした時に現在のページでスクリプトを実行する拡張機能を考えます。<code>activeTab</code> 権限がない場合、拡張機能は <code>&lt;all_urls&gt;</code> の host 権限を要求する必要があります。しかし、これは拡張機能に必要以上の力を与えています。アクティブなタブで単にユーザーアクションに応答する代わりに、<em>任意のタブ</em>で、<em>任意の時</em>に、スクリプトを実行できます。</p>
 
-- {{webextAPIref("tabs/executeScript", "browser.tabs.executeScript()")}} と {{webextAPIref("tabs/insertCSS", "browser.tabs.insertCSS()")}} を用いてタブに JavaScript や CSS をプログラム的に挿入できる能力
-- 現在のタブに、次の一部の tabs API の権限アクセス: `Tab.url`, `Tab.title`, `Tab.faviconUrl`.
+<div class="notecard note">
+<p><strong>注:</strong> ユーザー操作 (例：クリック) が発生したときに存在していたタブ／データにのみアクセスできます。アクティブなタブが移動すると (例：読み込みの終了やその他のイベントにより)、権限はそのタブへのアクセスを許可しなくなります。</p>
+</div>
 
-この権限の意図は、拡張機能によくあるユースケースを、強力すぎる権限を与えずに実行できるようにすることです。多くの拡張機能は「ユーザーが希望したら現在のページで何かをする」ことを希望しています。
+<p>通常、 <code>activeTab</code> が付与されるタブは、 1 つのケースを除いて、単に現在アクティブなタブです。 {{webextAPIref("menus")}} API では、ユーザーがタブをコンテキストクリックしたときに表示されるメニュー項目を作成することができます (つまり、ユーザーがあるタブから別のタブに切り替えることができるタブトリップの要素)。</p>
 
-例えば、ユーザーがブラウザーアクションをクリックした時に現在のページでスクリプトを実行する拡張機能を考えます。`activeTab` 権限がない場合、拡張機能は `<all_urls>` の host 権限を要求する必要があります。しかし、これは拡張機能に必要以上の力を与えています。アクティブなタブで単にユーザーアクションに応答する代わりに、*任意のタブ*で、*任意の時*に、スクリプトを実行できます。
+<p>ユーザーがこのような項目をクリックした場合、ユーザーがクリックしたタブが現在のアクティブなタブでなくても、activeTab 権限が付与されます (Firefox 63 以降、{{bug(1446956)}})。</p>
 
-> **Note:** **注:** ユーザー操作 (例：クリック) が発生したときに存在していたタブ／データにのみアクセスできます。アクティブなタブが移動すると (例：読み込みの終了やその他のイベントにより)、権限はそのタブへのアクセスを許可しなくなります。
+<h2 id="Clipboard_access">クリップボードのアクセス</h2>
 
-通常、 `activeTab` が付与されるタブは、 1 つのケースを除いて、単に現在アクティブなタブです。 {{webextAPIref("menus")}} API では、ユーザーがタブをコンテキストクリックしたときに表示されるメニュー項目を作成することができます (つまり、ユーザーがあるタブから別のタブに切り替えることができるタブトリップの要素)。
+<p>拡張機能にクリップボードとやりとりできるようにする、 2 つの権限があります。</p>
 
-ユーザーがこのような項目をクリックした場合、ユーザーがクリックしたタブが現在のアクティブなタブでなくても、activeTab 権限が付与されます (Firefox 63 以降、{{bug(1446956)}})。
+<dl>
+ <dt><code>clipboardWrite</code></dt>
+ <dd>{{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, <code>document.execCommand("copy")</code>, <code>document.execCommand("cut")</code> を用いたクリップボードへの書き込み</dd>
+ <dt><code>clipboardRead</code></dt>
+ <dd>{{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}}, <code>document.execCommand("paste")</code> を用いたクリップボードからの読み込み</dd>
+</dl>
 
-## クリップボードのアクセス
+<p>これについての詳細は<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">クリップボードと相互作用する</a>を見てください。</p>
 
-拡張機能にクリップボードとやりとりできるようにする、 2 つの権限があります。
+<h2 id="Unlimited_storage">Unlimited storage</h2>
 
-- `clipboardWrite`
-  - : {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")`, `document.execCommand("cut")` を用いたクリップボードへの書き込み
-- `clipboardRead`
-  - : {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}}, `document.execCommand("paste")` を用いたクリップボードからの読み込み
+<p><code>unlimitedStorage</code> 権限は以下の通りです。</p>
 
-これについての詳細は[クリップボードと相互作用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)を見てください。
+<ul>
+ <li>拡張機能に {{WebExtAPIRef("storage.local")}} API で制限する容量を超えられるようにする</li>
+ <li>Firefox では<a href="/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#firefox_specifics">「永続的な」IndexedDB データベース</a>の作成を、データベース作成時にブラウザーからユーザーに許可を確認することなく、可能にする</li>
+</ul>
 
-## Unlimited storage
+<h2 id="Example">例</h2>
 
-`unlimitedStorage` 権限は以下の通りです。
+<pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
 
-- 拡張機能に {{WebExtAPIRef("storage.local")}} API で制限する容量を超えられるようにする
-- Firefox では[「永続的な」IndexedDB データベース](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#firefox_specifics)の作成を、データベース作成時にブラウザーからユーザーに許可を確認することなく、可能にする
+<p>これは <code>developer.mozilla.org</code> ドメイン配下のページにアクセスする権限を要求しています。</p>
 
-## 例
+<pre class="brush: json no-line-numbers">  "permissions": ["tabs"]</pre>
 
-```json
- "permissions": ["*://developer.mozilla.org/*"]
-```
+<p><code>tabs</code> API を使用する権限を要求しています。</p>
 
-これは `developer.mozilla.org` ドメイン配下のページにアクセスする権限を要求しています。
+<pre class="brush: json no-line-numbers">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
-```json
-  "permissions": ["tabs"]
-```
+<p>上記の権限を両方ともに要求しています。</p>
 
-`tabs` API を使用する権限を要求しています。
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-```json
-  "permissions": ["*://developer.mozilla.org/*", "tabs"]
-```
-
-上記の権限を両方ともに要求しています。
-
-## ブラウザーの互換性
-
-{{Compat("webextensions.manifest.permissions")}}
+<p>{{Compat("webextensions.manifest.permissions")}}</p>

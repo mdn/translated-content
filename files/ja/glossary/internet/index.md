@@ -12,10 +12,12 @@ tags:
   - WebMechanics
 translation_of: Glossary/Internet
 ---
-インターネットは、インターネット・プロトコル群を使用するネットワークの世界的ネットワークです (最も重要な 2 つの {{glossary("protocol","プロトコル")}} から、 {{glossary("TCP")}}/{{glossary("IPv6","IP")}} とも呼ばれています)。
+<p>インターネットは、インターネット・プロトコル群を使用するネットワークの世界的ネットワークです (最も重要な 2 つの {{glossary("protocol","プロトコル")}} から、 {{glossary("TCP")}}/{{glossary("IPv6","IP")}} とも呼ばれています)。</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-### インターネットについて学ぶ
+<h3 id="インターネットについて学ぶ">インターネットについて学ぶ</h3>
 
-- [インターネットはどのように動くのか](/ja/docs/Learn/Common_questions/How_does_the_Internet_work) (初心者向けの紹介)
+<ul>
+ <li><a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work">インターネットはどのように動くのか</a> (初心者向けの紹介)</li>
+</ul>

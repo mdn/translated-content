@@ -6,49 +6,56 @@ tags:
   - Invisible element
 original_slug: Web/Compatibility_FAQ/No_Border_Line_Shown.html
 ---
-## 概要
+<h2 id="概要">概要</h2>
 
-他ブラウザで表示されている罫線が、Firefox で表示されない場合があります。
+<p>　他ブラウザで表示されている罫線が、Firefoxで表示されない場合があります。</p>
 
-![](https://mdn.mozillademos.org/files/9983/0302.jpg)
+<p><img alt="" src="https://mdn.mozillademos.org/files/9983/0302.jpg" style="width: 468px; height: 250px; margin-right: 50px; margin-left: 50px;"></p>
 
-## 要因
+<h2 id="要因">要因</h2>
 
-要因の代表例として以下があります。
+<p>　要因の代表例として以下があります。</p>
 
-1.  **他ブラウザで独自の CSS が適応されている**
-    例えば、Chrome ではブラウザ独自の CSS にて、hr 要素に[background-color](/ja/docs/Web/CSS/background-color)プロパティを指定することができます。
-    そのため、Firefox で表示されていない罫線が Chrome では表示されるということが起きてしまいます。
-    特に、コンテンツの記述や Firefox の動作が問題になっているわけではありません。
+<ol>
+ <li>
+  <p><strong>他ブラウザで独自のCSSが適応されている</strong><br>
+   例えば、Chromeではブラウザ独自のCSSにて、hr要素に<a href="https://developer.mozilla.org/ja/docs/Web/CSS/background-color">background-color</a>プロパティを指定することができます。<br>
+   そのため、Firefoxで表示されていない罫線がChromeでは表示されるということが起きてしまいます。<br>
+   特に、コンテンツの記述やFirefoxの動作が問題になっているわけではありません。</p>
+ </li>
+</ol>
 
-## 解決策
+<h2 id="解決策">解決策</h2>
 
-要因の解決策の代表例として以下があります。
+<p>　要因の解決策の代表例として以下があります。</p>
 
-1.  **他ブラウザで独自の CSS が適応されている**
-    Firefox 側のコンテンツの記述、動作に問題はありませんが、下記の方法で統一することが可能です。
-    まず、表示させたい要素のインラインに罫線([border-top](/ja/docs/Web/CSS/border-top): thin solid;)を指定します。
-    そして、他ブラウザ(この場合は Chrome)で入っている指定をリセット記述([background-color](/ja/docs/Web/CSS/background-color)プロパティを利用)にて非表示にします。
+<ol>
+ <li>
+  <p><strong>他ブラウザで独自のCSSが適応されている</strong><br>
+   Firefox側のコンテンツの記述、動作に問題はありませんが、下記の方法で統一することが可能です。<br>
+   まず、表示させたい要素のインラインに罫線(<a href="https://developer.mozilla.org/ja/docs/Web/CSS/border-top">border-top</a>: thin solid;)を指定します。<br>
+   そして、他ブラウザ(この場合はChrome)で入っている指定をリセット記述(<a href="https://developer.mozilla.org/ja/docs/Web/CSS/background-color">background-color</a>プロパティを利用)にて非表示にします。</p>
 
-        　　インライン {
-        	border-top: thin solid;
-        　　}
 
-        　　hr {
-        	display: block;
-        	height: 1px;
-        	border: 0;
-        	border-top: 1px solid #cccccc;
-        	margin: 1em 0;
-        	padding: 0;
-        	background-color: rgb(255,255,255);
-        　　}
+  <pre><code><font size="3">　　インライン {
+	<font>border-top</font>: <strong>thin solid;</strong>
+　　}
 
-    上記の修正にて、他ブラウザとの互換がとれるようになります。
+　　hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em 0;
+	padding: 0;
+	<font>background-color</font>: <strong>rgb(255,255,255);</strong>
+　　}				</font></code></pre>
+  上記の修正にて、他ブラウザとの互換がとれるようになります。</li>
+</ol>
 
-## メリット
+<h2 id="メリット">メリット</h2>
 
-・他のブラウザでも互換性を維持することができます。
-　・作成者の把握できていないブラウザ独自の装飾をリセットすることで作成時の想定に近いコンテンツが作成できます。
+<p>　・他のブラウザでも互換性を維持することができます。<br>
+ 　・作成者の把握できていないブラウザ独自の装飾をリセットすることで作成時の想定に近いコンテンツが作成できます。</p>
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+<p><a href="https://developer.mozilla.org/ja/docs/Web/Compatibility_FAQ">戻る</a></p>

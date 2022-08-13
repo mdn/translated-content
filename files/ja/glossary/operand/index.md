@@ -6,8 +6,10 @@ tags:
   - Glossary
 translation_of: Glossary/Operand
 ---
-**オペランド**は{{glossary("operator", "演算子")}}で操作されるデータを表す命令の一部です。例えば、2 つの数字を加算する時、数字はオペランドで "+" が演算子です。
+<p><strong>オペランド</strong>は{{glossary("operator", "演算子")}}で操作されるデータを表す命令の一部です。例えば、2 つの数字を加算する時、数字はオペランドで "+" が演算子です。</p>
 
-## 詳細情報
+<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
 
-- Wikipedia の {{Interwiki("wikipedia", "被演算子")}}
+<ul>
+ <li>Wikipedia の {{Interwiki("wikipedia", "被演算子")}}</li>
+</ul>

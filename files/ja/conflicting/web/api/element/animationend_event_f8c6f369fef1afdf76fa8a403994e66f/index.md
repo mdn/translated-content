@@ -14,53 +14,79 @@ tags:
 translation_of: Web/API/Window/animationend_event
 original_slug: Web/API/Window/animationend_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションがヨウ素から削除されたりした場合、 `animationend` イベントは発生しません。
+<p><strong><code>animationend</code></strong> イベントは、 <a href="/ja/docs/Web/CSS/CSS_Animations">CSS アニメーション</a>が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションがヨウ素から削除されたりした場合、 <code>animationend</code> イベントは発生しません。</p>
 
-| バブリング                   | あり                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                                     |
-| インターフェイス             | {{domxref("AnimationEvent")}}                                                 |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onanimationend","onanimationend")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th>キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th>インターフェイス</th>
+   <td>{{domxref("AnimationEvent")}}</td>
+  </tr>
+  <tr>
+   <th>イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers/onanimationend","onanimationend")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 [HTMLElement: animationend イベント](/ja/docs/Web/API/HTMLElement/animationend_event)を参照してください。
+<p>このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 <a href="/ja/docs/Web/API/HTMLElement/animationend_event">HTMLElement: animationend イベント</a>を参照してください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この例は `animationend` イベントを待ち受けます。
+<p>この例は <code>animationend</code> イベントを待ち受けます。</p>
 
-```js
-window.addEventListener('animationend', () => {
+<pre class="brush: js">window.addEventListener('animationend', () =&gt; {
   console.log('アニメーション終了');
-});
-```
+});</pre>
 
-同様に、 `onanimationend` イベントハンドラープロパティを使用するとこうなります。
+<p>同様に、 <code>onanimationend</code> イベントハンドラープロパティを使用するとこうなります。</p>
 
-```js
-window.onanimationend = () => {
+<pre class="brush: js">window.onanimationend = () =&gt; {
   console.log('アニメーション終了');
-};
-```
+};</pre>
 
-[このイベントのライブデモを参照してください。](/ja/docs/Web/API/HTMLElement/animationend_event#Live_example)
+<p id="Live_example"><a href="/ja/docs/Web/API/HTMLElement/animationend_event#Live_example">このイベントのライブデモを参照してください。</a></p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                           | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName("CSS3 Animations", "#eventdef-animationevent-animationend")}} | {{Spec2("CSS3 Animations")}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS3 Animations", "#eventdef-animationevent-animationend")}}</td>
+   <td>{{Spec2("CSS3 Animations")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.animationend_event")}}
+<p>{{Compat("api.Window.animationend_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- {{domxref("AnimationEvent")}}
-- 関連イベント: {{domxref("Window/animationstart_event", "animationstart")}}, {{domxref("Window/animationcancel_event", "animationcancel")}}, {{domxref("Window/animationiteration_event", "animationiteration")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationend_event", "animationend")}}
-- {{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/animationend_event", "animationend")}}
+<ul>
+ <li><a href="/ja/docs/Web/CSS/CSS_Animations">CSS アニメーション</a></li>
+ <li><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS アニメーションの使用</a></li>
+ <li>{{domxref("AnimationEvent")}}</li>
+ <li>関連イベント: {{domxref("Window/animationstart_event", "animationstart")}}, {{domxref("Window/animationcancel_event", "animationcancel")}}, {{domxref("Window/animationiteration_event", "animationiteration")}}</li>
+ <li>{{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationend_event", "animationend")}}</li>
+ <li>{{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/animationend_event", "animationend")}}</li>
+</ul>

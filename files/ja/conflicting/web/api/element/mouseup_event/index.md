@@ -12,41 +12,39 @@ translation_of: Web/API/GlobalEventHandlers/onmouseup
 original_slug: Web/API/GlobalEventHandlers/onmouseup
 browser-compat: api.GlobalEventHandlers.onmouseup
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`onmouseup`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("mouseup")}} イベントを処理する[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+<p><code><strong>onmouseup</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("mouseup")}} イベントを処理する<a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>です。</p>
 
-`mouseup` イベントは、ユーザーがマウスボタンを離したときに発行されます。
+<p><code>mouseup</code> イベントは、ユーザーがマウスボタンを離したときに発行されます。</p>
 
-> **Note:** **メモ:** `onmouseup` の反対の動作は {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}} です。
-
-## 構文
-
-```js
-target.onmouseup = functionRef;
-```
-
-### 値
-
-`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は、唯一の引数として {{domxref("MouseEvent")}} オブジェクトを受け取ります。
-
-## 例
-
-この例は、マウスでクリックするとトーストが非表示になり、離すと再び表示されます。{{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}} と `onmouseup` イベントハンドラーを使用します。
-
-### HTML
-
-```html
-<div class="container">
-  <div class="toaster"></div>
-  <div class="toast">Hello world!</div>
+<div class="notecard note">
+  <p><strong>メモ:</strong> <code>onmouseup</code> の反対の動作は {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}} です。</p>
 </div>
-```
 
-### CSS
+<h2 id="Syntax">構文</h2>
 
-```css
-.container {
+<pre
+  class="brush: js"><em>target</em>.onmouseup = <var>functionRef</var>;</pre>
+
+<h3 id="Value">値</h3>
+
+<p><code>functionRef</code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、唯一の引数として {{domxref("MouseEvent")}} オブジェクトを受け取ります。</p>
+
+<h2 id="Example">例</h2>
+
+<p>この例は、マウスでクリックするとトーストが非表示になり、離すと再び表示されます。{{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}} と <code>onmouseup</code> イベントハンドラーを使用します。</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;div class="container"&gt;
+  &lt;div class="toaster"&gt;&lt;/div&gt;
+  &lt;div class="toast"&gt;Hello world!&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">.container {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -76,13 +74,11 @@ target.onmouseup = functionRef;
 
 .depressed {
   transform: translate(-50%, -50%);
-}
-```
+}</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-function depress() {
+<pre class="brush: js">function depress() {
   toast.classList.add('depressed');
 }
 
@@ -94,21 +90,22 @@ const toaster = document.querySelector('.toaster');
 const toast = document.querySelector('.toast');
 
 toaster.onmousedown = depress;
-document.onmouseup = release;
-```
+document.onmouseup = release;</pre>
 
-### 結果
+<h3 id="Result">結果</h3>
 
-{{EmbedLiveSample("Example", 700, 200)}}
+<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{event("mouseup")}} イベント
+<ul>
+  <li>{{event("mouseup")}} イベント</li>
+</ul>

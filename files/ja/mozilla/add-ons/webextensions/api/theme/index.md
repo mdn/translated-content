@@ -8,35 +8,43 @@ tags:
   - add-on
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-ブラウザー拡張機能がブラウザーのテーマを更新できるようにします。
+<p>ブラウザー拡張機能がブラウザーのテーマを更新できるようにします。</p>
 
-この API を使用するには、拡張機能の [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "theme" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を要求しなければなりません。
+<p>この API を使用するには、拡張機能の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルで "theme" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> を要求しなければなりません。</p>
 
-> **Note:** 注記: バックグランドファイルでテーマをセットアップする場合、'theme' [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を宣言しなければなりません。さもなければ、manifest の [theme](/ja/Add-ons/WebExtensions/manifest.json/theme) 関数を使用できません。
+<div class="note">
+<p>注記: バックグランドファイルでテーマをセットアップする場合、'theme' <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>を宣言しなければなりません。さもなければ、manifest の <a href="/ja/Add-ons/WebExtensions/manifest.json/theme">theme</a> 関数を使用できません。</p>
+</div>
 
-## 型
+<h2 id="Types" name="Types">型</h2>
 
-- {{WebExtAPIRef("theme.Theme")}}
-  - : テーマのコンテンツを表します。
+<dl>
+ <dt>{{WebExtAPIRef("theme.Theme")}}</dt>
+ <dd>テーマのコンテンツを表します。</dd>
+</dl>
 
-## 関数
+<h2 id="Functions" name="Functions">関数</h2>
 
-- {{WebExtAPIRef("theme.getCurrent()")}}
-  - : 現在のブラウザーテーマを取得します。
-- {{WebExtAPIRef("theme.update()")}}
-  - : ブラウザーのテーマを更新します。
-- {{WebExtAPIRef("theme.reset()")}}
-  - : {{WebExtAPIRef("theme.update()")}} の呼び出しで更新されたテーマをすべて削除します。
+<dl>
+ <dt>{{WebExtAPIRef("theme.getCurrent()")}}</dt>
+ <dd>現在のブラウザーテーマを取得します。</dd>
+ <dt>{{WebExtAPIRef("theme.update()")}}</dt>
+ <dd>ブラウザーのテーマを更新します。</dd>
+ <dt>{{WebExtAPIRef("theme.reset()")}}</dt>
+ <dd>{{WebExtAPIRef("theme.update()")}} の呼び出しで更新されたテーマをすべて削除します。</dd>
+</dl>
 
-## イベント
+<h2 id="Events" name="Events">イベント</h2>
 
-- {{WebExtAPIRef("theme.onUpdated")}}
-  - : ブラウザーテーマが変更された時に発火。
+<dl>
+ <dt>{{WebExtAPIRef("theme.onUpdated")}}</dt>
+ <dd>ブラウザーテーマが変更された時に発火。</dd>
+</dl>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("webextensions.api.theme")}}
+<p>{{Compat("webextensions.api.theme")}}</p>
 
-{{WebExtExamples("h2")}}
+<p>{{WebExtExamples("h2")}}</p>

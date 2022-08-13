@@ -9,56 +9,79 @@ tags:
 translation_of: Web/SVG/Element/animateColor
 original_slug: Web/SVG/Element/animateColor
 ---
-{{SVGRef}}{{deprecated_header}}
+<div>{{SVGRef}}{{deprecated_header}}</div>
 
-> **Warning:** この要素は SVG1.1 仕様（第 2 版）で廃止され、将来の SVG のバージョンで削除される可能性があります。 この要素は {{ SVGElement("animate") }} 要素に置き換えられ、Firefox や Internet Explorer では実装されておりません。SVG ファイル製作者はこの要素の代わりに{{ SVGElement("animate") }}要素を使うべきです。
+<div class="warning">
+<p>この要素はSVG1.1仕様（第2版）で廃止され、将来のSVGのバージョンで削除される可能性があります。 この要素は {{ SVGElement("animate") }} 要素に置き換えられ、FirefoxやInternet Explorerでは実装されておりません。SVGファイル製作者はこの要素の代わりに{{ SVGElement("animate") }}要素を使うべきです。</p>
+</div>
 
-## 概要
+<h2 id="概要">概要</h2>
 
-`animateColor`要素は時間経過による色の変換を指定します。
+<p><code>animateColor</code>要素は時間経過による色の変換を指定します。</p>
 
-## 使用可能な場所
+<h2 id="使用可能な場所">使用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-» [animateColor.svg](/files/3264/animateColor.svg)
+<p>» <a href="/files/3264/animateColor.svg" title="/files/3264/animateColor.svg">animateColor.svg</a></p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#ConditionalProcessing) »
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core) »
-- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#AnimationEvent) »
-- [Xlink 属性](/ja/docs/Web/SVG/Attribute#XLink) »
-- [Animation attribute target attributes](/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#AnimationTiming) »
-- [Animation value attributes](/ja/docs/Web/SVG/Attribute#AnimationValue) »
-- [Animation addition attributes](/ja/docs/Web/SVG/Attribute#AnimationAddition) »
-- {{ SVGAttr("externalResourcesRequired") }}
+<ul>
+ <li><a href="/ja/docs/Web/SVG/Attribute#ConditionalProcessing">条件処理属性</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#Core">コア属性</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#AnimationEvent">アニメーションイベント属性</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#XLink">Xlink属性</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget">Animation attribute target attributes</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#AnimationTiming">アニメーションタイミング属性</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#AnimationValue">Animation value attributes</a> »</li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#AnimationAddition">Animation addition attributes</a> »</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
+<ul>
+ <li>{{ SVGAttr("by") }}</li>
+ <li>{{ SVGAttr("from") }}</li>
+ <li>{{ SVGAttr("to") }}</li>
+</ul>
 
-## DOM インターフェース
+<h2 id="DOM_インターフェース">DOM インターフェース</h2>
 
-この要素は [`SVGAnimateColorElement`](/ja/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement") インターフェースを提供します。
+<p>この要素は <code><a href="/ja/docs/DOM/SVGAnimateColorElement" title="en/DOM/SVGAnimateColorElement">SVGAnimateColorElement</a></code> インターフェースを提供します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                         | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName("SVG1.1", "animate.html#AnimateColorElement", "&lt;animateColor&gt;")}} | {{Spec2("SVG1.1")}} | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG1.1", "animate.html#AnimateColorElement", "&lt;animateColor&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("svg.elements.animateColor")}}
 
-## 関連情報
 
-- {{ SVGElement("animate") }}
+<p>{{Compat("svg.elements.animateColor")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{ SVGElement("animate") }}</li>
+</ul>

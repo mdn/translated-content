@@ -10,21 +10,23 @@ tags:
   - find
 translation_of: Mozilla/Add-ons/WebExtensions/API/find
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-ウェブページのテキストを検索し、マッチしたものをハイライトします。
+<p>ウェブページのテキストを検索し、マッチしたものをハイライトします。</p>
 
-この API を使うには "find" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+<p>この API を使うには "find" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
 
-## 関数
+<h2 id="Functions" name="Functions">関数</h2>
 
-- {{WebExtAPIRef("find.find()")}}
-  - : ウェブページのテキストを検索する
-- {{WebExtAPIRef("find.highlightResults()")}}
-  - : 最後に検索にマッチした集合をハイライトする
-- {{WebExtAPIRef("find.removeHighlighting()")}}
-  - : あらゆるハイライトを削除する
+<dl>
+ <dt>{{WebExtAPIRef("find.find()")}}</dt>
+ <dd>ウェブページのテキストを検索する</dd>
+ <dt>{{WebExtAPIRef("find.highlightResults()")}}</dt>
+ <dd>最後に検索にマッチした集合をハイライトする</dd>
+ <dt>{{WebExtAPIRef("find.removeHighlighting()")}}</dt>
+ <dd>あらゆるハイライトを削除する</dd>
+</dl>
 
-## ブラウザ実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+<p>{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}</p>

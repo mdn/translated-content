@@ -3,66 +3,66 @@ title: ブックリストページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
-Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
+<p>Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.</p>
 
-## Controller
+<h2 class="highlight-spanned" id="Controller"><span class="highlight-span">Controller</span></h2>
 
-The book list controller function needs to get a list of all `Book` objects in the database, and then pass these to the template for rendering.
+<p>The book list controller function needs to get a list of all <code>Book</code> objects in the database, and then pass these to the template for rendering.</p>
 
-Open **/controllers/bookController.js**. Find the exported `book_list()` controller method and replace it with the following code.
+<p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
-```js
-// Display list of all Books.
-exports.book_list = function(req, res, next) {
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all Books.</span>
+exports<span class="punctuation token">.</span>book_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
-  Book.find({}, 'title author')
-    .populate('author')
-    .exec(function (err, list_books) {
-      if (err) { return next(err); }
-      //Successful, so render
-      res.render('book_list', { title: 'Book List', book_list: list_books });
-    });
+  Book<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="string token">'title author'</span><span class="punctuation token">)</span>
+    <span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'author'</span><span class="punctuation token">)</span>
+    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_books<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+      <span class="comment token">//Successful, so render</span>
+      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'book_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Book List'</span><span class="punctuation token">,</span> book_list<span class="punctuation token">:</span> list_books <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
-};
-```
+<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-The method uses the model's `find()` function to return all `Book` objects, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields). Here we also call `populate()` on `Book`, specifying the `author` field—this will replace the stored book author id with the full author details.
+<p>The method uses the model's <code>find()</code> function to return all <code>Book</code> objects, selecting to return only the <code>title</code> and <code>author</code> as we don't need the other fields (it will also return the <code>_id</code> and virtual fields). Here we also call <code>populate()</code> on <code>Book</code>, specifying the <code>author</code> field—this will replace the stored book author id with the full author details.</p>
 
-On success, the callback passed to the query renders the **book_list**(.pug) template, passing the `title` and `book_list` (list of books with authors) as variables.
+<p>On success, the callback passed to the query renders the <strong>book_list</strong>(.pug) template, passing the <code>title</code> and <code>book_list</code> (list of books with authors) as variables.</p>
 
-## View
+<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
 
-Create **/views/book_list.pug** and copy in the text below.
+<p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-```js
-extends layout
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
 
 block content
-  h1= title
+  h1<span class="operator token">=</span> title
 
   ul
-    each book in book_list
+    each book <span class="keyword token">in</span> book_list
       li
-        a(href=book.url) #{book.title}
-        |  (#{book.author.name})
+        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>book<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>book<span class="punctuation token">.</span>title<span class="punctuation token">}</span>
+        <span class="operator token">|</span>  <span class="punctuation token">(</span>#<span class="punctuation token">{</span>book<span class="punctuation token">.</span>author<span class="punctuation token">.</span>name<span class="punctuation token">}</span><span class="punctuation token">)</span>
 
-    else
-      li There are no books.
-```
+    <span class="keyword token">else</span>
+      li There are no books<span class="punctuation token">.</span></code></pre>
 
-The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and then iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books.'
+<p>The view extends the <strong>layout.pug</strong> base template and overrides the <code>block</code> named '<strong>content</strong>'. It displays the <code>title</code> we passed in from the controller (via the <code>render()</code> method) and then iterates through the <code>book_list</code> variable using the <code>each</code>-<code>in</code>-<code>else</code> syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the <code>book_list</code> then the <code>else</code> clause is executed, and displays the text 'There are no books.'</p>
 
-> **Note:** We use `book.url` to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the `Book` model which uses the model instance's `_id` field to produce a unique URL path.
+<div class="note">
+<p><strong>Note:</strong> We use <code>book.url</code> to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the <code>Book</code> model which uses the model instance's <code>_id</code> field to produce a unique URL path.</p>
+</div>
 
-Of interest here is that each book is defined as two lines, using the pipe for the second line (highlighted above). This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.
+<p>Of interest here is that each book is defined as two lines, using the pipe for the second line (highlighted above). This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.</p>
 
-## What does it look like?
+<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-Run the application (see [Testing the routes](/ja/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) for the relevant commands) and open your browser to <http://localhost:3000/>. Then select the _All books_ link. If everything is set up correctly, your site should look something like the following screenshot.
+<p>Run the application (see <a href="/ja/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books </em>link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-![Book List Page - Express Local Library site](https://mdn.mozillademos.org/files/14464/LocalLibary_Express_Book_List.png)
+<p><img alt="Book List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14464/LocalLibary_Express_Book_List.png" style="border-style: solid; border-width: 1px; display: block; height: 387px; margin: 0px auto; width: 918px;"></p>
 
-## Next steps
+<h2 id="Next_steps">Next steps</h2>
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [BookInstance list page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
+<ul>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page">BookInstance list page</a>.</li>
+</ul>

@@ -11,30 +11,46 @@ tags:
 translation_of: Web/API/ServiceWorkerContainer/onmessage
 original_slug: Web/API/ServiceWorkerContainer/onmessage
 ---
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`onmessage`** プロパティは、{{Event("message")}} イベントが発生するたびに発火するイベントハンドラーです。 （例えば、{{domxref("Client.postMessage()")}} 呼び出しを介して）着信メッセージを {{domxref("ServiceWorkerContainer")}} オブジェクトに受信したときに発生します。
+<p><span class="seoSummary">{{domxref("ServiceWorkerContainer")}} インターフェイスの <strong><code>onmessage</code></strong> プロパティは、{{Event("message")}} イベントが発生するたびに発火するイベントハンドラーです。 （例えば、{{domxref("Client.postMessage()")}} 呼び出しを介して）着信メッセージを {{domxref("ServiceWorkerContainer")}} オブジェクトに受信したときに発生します。</span></p>
 
-> **Note:** **注**: 他のウェブメッセージング機能との整合性を保つため、サービスワーカーコンテキストから受信されるメッセージ（`onmessage` のイベントオブジェクトなど）は、最新のブラウザーでは {{domxref("MessageEvent")}} オブジェクトによって表されます。 （これらは、以前は廃止された {{domxref("ServiceWorkerMessageEvent")}} オブジェクトで表されていました。）
+<div class="note">
+<p><strong>注</strong>: 他のウェブメッセージング機能との整合性を保つため、サービスワーカーコンテキストから受信されるメッセージ（<code>onmessage</code> のイベントオブジェクトなど）は、最新のブラウザーでは {{domxref("MessageEvent")}} オブジェクトによって表されます。 （これらは、以前は廃止された {{domxref("ServiceWorkerMessageEvent")}} オブジェクトで表されていました。）</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    serviceWorkerContainer.onmessage = function(messageevent) { ... }
+<pre class="syntaxbox"><em>serviceWorkerContainer</em>.onmessage = function(<em>messageevent</em>) { ... }</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-navigator.serviceWorker.onmessage = function(messageevent) {
+<pre class="brush: js">navigator.serviceWorker.onmessage = function(messageevent) {
   console.log(`received data: ${messageevent.data}`);
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-serviceworkerglobalscope-onmessage', 'ServiceWorkerContainer: onmessage')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-serviceworkerglobalscope-onmessage', 'ServiceWorkerContainer: onmessage')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerContainer.onmessage")}}
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerContainer.onmessage")}}</p>
+</div>

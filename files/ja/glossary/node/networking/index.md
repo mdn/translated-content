@@ -6,10 +6,12 @@ tags:
   - Infrastructure
 translation_of: Glossary/Node/networking
 ---
-ネットワークでは、 **node** はネットワーク内の接続ポイントです。物理ネットワークでは通常、コンピューターやルーターなどのデバイスです。
+<p>ネットワークでは、 <strong>node</strong> はネットワーク内の接続ポイントです。物理ネットワークでは通常、コンピューターやルーターなどのデバイスです。</p>
 
-## 詳細情報
+<h2 id="詳細情報">詳細情報</h2>
 
-### 基礎知識
+<h3 id="基礎知識">基礎知識</h3>
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Node (networking)", "Node")}}」
+<ul>
+ <li>Wikipedia 上の記事「{{Interwiki("wikipedia", "Node (networking)", "Node")}}」</li>
+</ul>

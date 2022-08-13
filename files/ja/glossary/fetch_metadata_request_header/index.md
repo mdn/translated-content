@@ -6,24 +6,33 @@ tags:
   - Glossary
 translation_of: Glossary/Fetch_metadata_request_header
 ---
-**フェッチメタデータリクエストヘッダー**は、リクエストの発信元のコンテキストに関する追加情報を提供する HTTP リクエストヘッダーです。これらのヘッダー名には `Sec-` の接頭辞が付いており、{{Glossary("Forbidden header name", "禁止ヘッダー名")}}であるため、 JavaScript からヘッダーを変更することはできません。
+<p><strong>フェッチメタデータリクエストヘッダー</strong>は、リクエストの発信元のコンテキストに関する追加情報を提供する HTTP リクエストヘッダーです。これらのヘッダー名には <code>Sec-</code> の接頭辞が付いており、{{Glossary("Forbidden header name", "禁止ヘッダー名")}}であるため、 JavaScript からヘッダーを変更することはできません。</p>
 
-フェッチメタデータリクエストヘッダーは、リクエストがどこから来たのかという追加情報をサーバーに提供し、悪意のあるリクエストを無視できるようになります。
+<p>フェッチメタデータリクエストヘッダーは、リクエストがどこから来たのかという追加情報をサーバーに提供し、悪意のあるリクエストを無視できるようになります。</p>
 
-フェッチメタデータリクエストヘッダーには以下のようなものがあります。
+<p>フェッチメタデータリクエストヘッダーには以下のようなものがあります。</p>
 
-- {{HTTPHeader("Sec-Fetch-Site")}}
-- {{HTTPHeader("Sec-Fetch-Mode")}}
-- {{HTTPHeader("Sec-Fetch-User")}}
-- {{HTTPHeader("Sec-Fetch-Dest")}}
+<ul>
+ <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
+ <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
+ <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
+ <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
+</ul>
 
-1.  Fetch Me
-
-    1.  [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
-
-2.  [用語集](/ja/docs/Glossary)
-
-    1.  {{Glossary("Entity header")}}
-    2.  {{Glossary("Header")}}
-    3.  {{Glossary("Response header")}}
-    4.  {{Glossary("Request header")}}
+<section id="Quick_links">
+<ol>
+ <li>Fetch Me
+  <ol>
+   <li><a href="/ja/docs/Web/HTTP/Headers">すべての HTTP ヘッダーの一覧</a></li>
+  </ol>
+ </li>
+ <li><a href="/ja/docs/Glossary">用語集</a>
+  <ol>
+   <li>{{Glossary("Entity header")}}</li>
+   <li>{{Glossary("Header")}}</li>
+   <li>{{Glossary("Response header")}}</li>
+   <li>{{Glossary("Request header")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

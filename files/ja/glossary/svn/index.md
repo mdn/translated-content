@@ -3,15 +3,19 @@ title: SVN
 slug: Glossary/SVN
 translation_of: Glossary/SVN
 ---
-Apache Subversion (**SVN**) は無償のソースコードマネジメント ({{Glossary("SCM")}}) システムです。 開発者はテキストファイルやソースコードの変更履歴を記録できます。SVN はバイナリファイルにも対応していますが、推奨はしていません。
+<p>Apache Subversion (<strong>SVN</strong>) は無償のソースコードマネジメント ({{Glossary("SCM")}}) システムです。 開発者はテキストファイルやソースコードの変更履歴を記録できます。SVNはバイナリファイルにも対応していますが、推奨はしていません。</p>
 
-## 詳細情報
+<h2 id="詳細情報">詳細情報</h2>
 
-### 一般知識
+<h3 id="一般知識">一般知識</h3>
 
-- Wikipedia 上の「{{Interwiki("wikipedia", "Apache Subversion")}}」の記事
-- [公式ウェブサイト](https://subversion.apache.org/)
+<ul>
+ <li>Wikipedia上の「{{Interwiki("wikipedia", "Apache Subversion")}}」の記事</li>
+ <li><a href="https://subversion.apache.org/">公式ウェブサイト</a></li>
+</ul>
 
-### 技術リファレンス
+<h3 id="技術リファレンス">技術リファレンス</h3>
 
-- [MDN 翻訳者向け SVN ガイド](/ja/docs/Mozilla/Localization/SVN_guide_for_localizers)
+<ul>
+ <li><a href="/ja/docs/Mozilla/Localization/SVN_guide_for_localizers">MDN翻訳者向けSVNガイド</a></li>
+</ul>

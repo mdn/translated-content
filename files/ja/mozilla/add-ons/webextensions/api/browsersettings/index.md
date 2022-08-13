@@ -11,27 +11,39 @@ tags:
   - browserSettings
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
-{{AddonSidebar}}拡張機能にグローバルなブラウザー設定の変更を可能にします。この API の各プロパティは {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトで、これはそれぞれの設定の変更能力を提供します。これはグローバルな設定のため、拡張機能で衝突が起きる可能性があります。衝突の処理方法の詳細は [`BrowserSetting.set()`](/ja/Add-ons/WebExtensions/API/types/BrowserSetting/set) の文書を見てください。
+<div>{{AddonSidebar}}</div>
 
-この API を使うには "browserSettings" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。
+<div>拡張機能にグローバルなブラウザー設定の変更を可能にします。この API の各プロパティは {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトで、これはそれぞれの設定の変更能力を提供します。</div>
 
-## プロパティ
+<div> </div>
 
-- {{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}
-  - : ユーザーのイベントに反応して、ウェブページで実行しているコードがポップアップを許可するかどうかを決める
-- {{WebExtAPIRef("browserSettings.cacheEnabled")}}
-  - : ブラウザーキャッシュの有効・無効を決める
-- {{WebExtAPIRef("browserSettings.homepageOverride")}}
-  - : ブラウザーのホームページの値を読む
-- {{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}
-  - : ブラウザーが画像アニメーションをどう扱うのかを決める
-- {{WebExtAPIRef("browserSettings.newTabPageOverride")}}
-  - : ブラウザーの新規タブページ値を読む
-- {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : ウェブサイトが [`Notification`](/ja/docs/Web/API/notification) Web API を使って通知を表示するのを妨げる
+<div>これはグローバルな設定のため、拡張機能で衝突が起きる可能性があります。衝突の処理方法の詳細は <code><a href="/ja/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> の文書を見てください。</div>
 
-## ブラウザ実装状況
+<div> </div>
 
-{{Compat("webextensions.api.browserSettings")}}
+<div>
+<p>この API を使うには "browserSettings" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
+</div>
 
-{{WebExtExamples("h2")}}
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<dl>
+ <dt>{{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}</dt>
+ <dd>ユーザーのイベントに反応して、ウェブページで実行しているコードがポップアップを許可するかどうかを決める</dd>
+ <dt>{{WebExtAPIRef("browserSettings.cacheEnabled")}}</dt>
+ <dd>ブラウザーキャッシュの有効・無効を決める</dd>
+ <dt>{{WebExtAPIRef("browserSettings.homepageOverride")}}</dt>
+ <dd>ブラウザーのホームページの値を読む</dd>
+ <dt>{{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}</dt>
+ <dd>ブラウザーが画像アニメーションをどう扱うのかを決める</dd>
+ <dt>{{WebExtAPIRef("browserSettings.newTabPageOverride")}}</dt>
+ <dd>ブラウザーの新規タブページ値を読む</dd>
+ <dt>{{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}</dt>
+ <dd>ウェブサイトが <code><a href="/ja/docs/Web/API/notification">Notification</a></code> Web API を使って通知を表示するのを妨げる</dd>
+</dl>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<p>{{Compat("webextensions.api.browserSettings")}}</p>
+
+<p>{{WebExtExamples("h2")}}</p>

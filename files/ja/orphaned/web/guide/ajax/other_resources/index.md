@@ -6,15 +6,17 @@ tags:
 translation_of: Web/Guide/AJAX/Other_Resources
 original_slug: Web/Guide/AJAX/Other_Resources
 ---
-- [AJAX Review](http://www.ajaxreview.com/)
-- [mHub : Ajax and rails examples & how-to's](http://www.maxkiesler.com/index.php/mhub/)
-- [AJAX Blog at maxkiesler.com](http://www.maxkiesler.com/)
-- [AJAX Blog](http://ajaxblog.com/)
-- [Ajaxian Blog](http://www.ajaxian.com/)
-- [AJAX Blog at fiftyfoureleven.com](http://www.fiftyfoureleven.com/resources/programming/xmlhttprequest)
-- [AJAX Matters](http://www.ajaxmatters.com/)
-- [AJAX Patterns](http://www.ajaxpatterns.org/Main_Page)
-- [AJAX Today Your ajax tutorials, articles, patterns, blogs](http://www.ajaxtoday.com)
-- [AJAX Lines](http://www.ajaxlines.com/)
-- [eXplash - Ajax and Web 2.0 applications directory](http://explash.com/)
-- [XMLHttpRequest Object](http://www.afterhoursprogramming.com/tutorial/JavaScript/XMLHttpRequest-Object/)
+<ul>
+  <li><a href="http://www.ajaxreview.com/">AJAX Review</a></li>
+  <li><a href="http://www.maxkiesler.com/index.php/mhub/">mHub : Ajax and rails examples &amp; how-to's</a></li>
+  <li><a href="http://www.maxkiesler.com/">AJAX Blog at maxkiesler.com</a></li>
+  <li><a href="http://ajaxblog.com/">AJAX Blog</a></li>
+  <li><a href="http://www.ajaxian.com/">Ajaxian Blog</a></li>
+  <li><a href="http://www.fiftyfoureleven.com/resources/programming/xmlhttprequest">AJAX Blog at fiftyfoureleven.com</a></li>
+  <li><a href="http://www.ajaxmatters.com/">AJAX Matters</a></li>
+  <li><a href="http://www.ajaxpatterns.org/Main_Page">AJAX Patterns</a></li>
+  <li><a href="http://www.ajaxtoday.com">AJAX Today Your ajax tutorials, articles, patterns, blogs</a></li>
+  <li><a href="http://www.ajaxlines.com/">AJAX Lines</a></li>
+  <li><a href="http://explash.com/">eXplash - Ajax and Web 2.0 applications directory</a></li>
+  <li><a href="http://www.afterhoursprogramming.com/tutorial/JavaScript/XMLHttpRequest-Object/">XMLHttpRequest Object</a></li>
+</ul>

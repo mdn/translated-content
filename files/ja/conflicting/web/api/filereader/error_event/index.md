@@ -4,18 +4,16 @@ slug: conflicting/Web/API/FileReader/error_event
 translation_of: Web/API/FileReader/onerror
 original_slug: Web/API/FileReader/onerror
 ---
-[FileReader](/ja/docs/Web/API/FileReader) の onerror ハンドラは、Error オブジェクトではなく Event オブジェクトをパラメータとして受け取りますが、エラーは FileReader オブジェクトから [`instanceOfFileReader.error`](/ja/docs/Web/API/FileReader/error) のようにアクセスすることができます。
+<p><a href="/ja/docs/Web/API/FileReader">FileReader</a> の onerror ハンドラは、Error オブジェクトではなく Event オブジェクトをパラメータとして受け取りますが、エラーは FileReader オブジェクトから <code><a href="/ja/docs/Web/API/FileReader/error">instanceOfFileReader.error</a></code> のようにアクセスすることができます。</p>
 
-```js
-// <input type="file" onchange="onChange(event)"> からのコールバック
-function onChange(event) {
-  var file = event.target.files[0];
-  var reader = new FileReader();
-  reader.onerror = function(event) {
-    alert("ファイルの読み込みに失敗しました。\n\n" + reader.error);
-    reader.abort(); // (...これは onerror ハンドラで何か有用なことをするのでしょうか？)
-  };
+<pre class="brush:js; line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// </span></code>&lt;input type="file" onchange="onChange(event)"&gt; からのコールバック<code class="language-js">
+<span class="keyword token">function</span> <span class="function token">onChange</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">var</span> file <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>files<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+  <span class="keyword token">var</span> reader <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FileReader</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  reader<span class="punctuation token">.onerror </span><span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{
+    alert("</span></code>ファイルの読み込みに失敗しました。<code class="language-js"><span class="punctuation token">\n\n" + reader.error);</span>
+    <span class="punctuation token">reader.abort(); // </span></code>(...これは onerror ハンドラで何か有用なことをするのでしょうか？)<code class="language-js">
+  <span class="punctuation token">}</span><span class="punctuation token">;</span>
 
-  reader.readAsText(file);
-}
-```
+  reader<span class="punctuation token">.</span><span class="function token">readAsText</span><span class="punctuation token">(</span>file<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>

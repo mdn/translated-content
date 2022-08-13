@@ -8,4 +8,4 @@ tags:
 translation_of: Web/HTML/Index
 original_slug: Web/HTML/Index
 ---
-{{Index("/ja/docs/Web/HTML")}} 利用可能なすべての HTML に関する文書の包括的な索引リストです。
+<p>{{Index("/ja/docs/Web/HTML")}} <span class="seoSummary">利用可能なすべての HTML に関する文書の包括的な索引リストです。</span></p>

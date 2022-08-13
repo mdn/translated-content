@@ -4,17 +4,19 @@ slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 translation_of: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 original_slug: Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発
 ---
-{{AddonSidebar}}
+<p>{{AddonSidebar}}</p>
 
-Thunderbird のアドイン開発は Firefox と同様の方法でコーディングすることが可能です。
-テキストエディタや、あなたの選んだコーディングツールで。
+<p class="summary"><span class="seoSummary">Thunderbirdのアドイン開発はFirefoxと同様の方法でコーディングすることが可能です。<br>
+ テキストエディタや、あなたの選んだコーディングツールで。</span></p>
 
-## API の違い
+<h2 id="APIの違い">APIの違い</h2>
 
-両者とも Gecko ベースであるため、いくつかの違いはあるものの、Thunderbird では、Firefox で使える API の多くをサポートしています。
-詳細は、[browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) と [browser support for JavaScript APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)を参照してください。
+<p>両者ともGeckoベースであるため、いくつかの違いはあるものの、Thunderbirdでは、Firefoxで使えるAPIの多くをサポートしています。<br>
+ 詳細は、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">browser compatibility for manifest.json</a> と <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">browser support for JavaScript APIs</a>を参照してください。</p>
 
-## 参考
+<h2 id="参考">参考</h2>
 
-- [Browser support for JavaScript APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+<ul>
+ <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li>
+ <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">Browser compatibility for manifest.json</a></li>
+</ul>

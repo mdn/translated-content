@@ -10,104 +10,105 @@ tags:
   - 拡張機能
 translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-> **Note:** このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)を参照してください。
+<div class="note">
+<p>このページでは、Firefox 55に存在するdevtools APIについて説明しています。このAPIは<a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>に基づいていますが、まだFirefoxでは実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、<a href="/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">devtools APIの制限</a>を参照してください。</p>
+</div>
 
-WebExtensions API を使用して、ブラウザの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
+<p><span class="seoSummary">WebExtensions API を使用して、ブラウザの組み込み開発者ツールを拡張できます。</span> devtools 拡張機能を作成するには、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> に "<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a>" キーを含めます:</p>
 
-```json
-"devtools_page": "devtools/devtools-page.html"
-```
+<pre class="brush: json">"devtools_page": "devtools/devtools-page.html"</pre>
 
-このキーの値は、拡張機能にバンドルされている HTML ファイルを指す URL です。URL は manifest.json ファイル自体に関連する必要があります。
+<p>このキーの値は、拡張機能にバンドルされている HTML ファイルを指す URL です。URL は manifest.json ファイル自体に関連する必要があります。</p>
 
-HTML ファイルは、devtools ページと呼ばれる特別なページを拡張機能で定義します。
+<p>HTML ファイルは、devtools ページと呼ばれる特別なページを拡張機能で定義します。</p>
 
-## devtools ページ
+<h2 id="devtools_ページ">devtools ページ</h2>
 
-devtools ページはブラウザの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
+<p>devtools ページはブラウザの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。</p>
 
-devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Element/Script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
+<p>devtools ページには目に見える DOM はありませんが、<code><a href="/ja/docs/Web/HTML/Element/Script">&lt;script&gt;</a></code> タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:</p>
 
-- グローバル [`window`](/ja/docs/Web/API/Window) オブジェクトを介してアクセス可能な通常の DOM API
-- コンテンツスクリプトと[同じ WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)
-- devtools API:
+<ul>
+ <li>グローバル <code><a href="/ja/docs/Web/API/Window">window</a></code> オブジェクトを介してアクセス可能な通常の DOM API</li>
+ <li>コンテンツスクリプトと<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">同じ WebExtension API</a></li>
+ <li>devtools API:
+  <ul>
+   <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></code></li>
+   <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></code></li>
+   <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code></li>
+  </ul>
+ </li>
+</ul>
 
-  - [`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
-  - [`devtools.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
-  - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
+<p>devtools ページは他の WebExtension API にアクセスできず、バックグラウンドページは devtools API にアクセスできないことに注意してください。代わりに、devtools ページとバックグラウンドページは <code>runtime</code> メッセージング API を使用して通信する必要があります。ここに例があります:</p>
 
-devtools ページは他の WebExtension API にアクセスできず、バックグラウンドページは devtools API にアクセスできないことに注意してください。代わりに、devtools ページとバックグラウンドページは `runtime` メッセージング API を使用して通信する必要があります。ここに例があります:
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script src="devtools.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <script src="devtools.js"></script>
-  </body>
-</html>
-```
+<p>devtools.js ファイルには、開発ツール拡張機能を作成する実際のコードが保持されます。</p>
 
-devtools.js ファイルには、開発ツール拡張機能を作成する実際のコードが保持されます。
+<h2 id="パネルの作成">パネルの作成</h2>
 
-## パネルの作成
+<p>devtools ウィンドウは、JavaScript デバッガ、ネットワークモニターなどの多数の個別ツールをホストします。上部にあるタブの行により、ユーザーはさまざまなツールを切り替えることができます。各ツールのユーザーインターフェイスをホストするウィンドウは「パネル」と呼ばれます。</p>
 
-devtools ウィンドウは、JavaScript デバッガ、ネットワークモニターなどの多数の個別ツールをホストします。上部にあるタブの行により、ユーザーはさまざまなツールを切り替えることができます。各ツールのユーザーインターフェイスをホストするウィンドウは「パネル」と呼ばれます。
+<p><code>devtools.panels.create()</code> API を使用して、devtools ウィンドウに独自のパネルを作成できます:</p>
 
-`devtools.panels.create()` API を使用して、devtools ウィンドウに独自のパネルを作成できます:
-
-```js
-browser.devtools.panels.create(
+<pre class="brush: js">browser.devtools.panels.create(
   "My Panel",                      // title
   "icons/star.png",                // icon
   "devtools/panel/panel.html"      // content
-).then((newPanel) => {
+).then((newPanel) =&gt; {
   newPanel.onShown.addListener(initialisePanel);
   newPanel.onHidden.addListener(unInitialisePanel);
-});
-```
+});</pre>
 
-これにはパネルのタイトル、アイコン、コンテンツの 3 つの引数が必要です。新しいパネルを表す `devtools.panels.ExtensionPanel` オブジェクトに解決される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+<p>これにはパネルのタイトル、アイコン、コンテンツの3つの引数が必要です。新しいパネルを表す <code>devtools.panels.ExtensionPanel</code> オブジェクトに解決される <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
 
-## ターゲットウィンドウとのインタラクション
+<h2 id="ターゲットウィンドウとのインタラクション">ターゲットウィンドウとのインタラクション</h2>
 
-開発者ツールは常に特定のブラウザタブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。[`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow) を使用して、検出されたウィンドウとインタラクションできます。
+<p>開発者ツールは常に特定のブラウザタブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></code> を使用して、検出されたウィンドウとインタラクションできます。</p>
 
-### ターゲットウィンドウでコードを実行する
+<h3 id="ターゲットウィンドウでコードを実行する">ターゲットウィンドウでコードを実行する</h3>
 
-[`devtools.inspectedWindow.eval()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) は、検出されたウィンドウでコードを実行する 1 つの方法を提供します。
+<p><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code> は、検出されたウィンドウでコードを実行する1つの方法を提供します。</p>
 
-これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1 つの重要な違いがあります:
+<p>これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1つの重要な違いがあります:</p>
 
-- コンテンツスクリプトとは異なり、`devtools.inspectedWindow.eval()`\*\* **を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)」を取得**しません\*\*。つまり、ページスクリプトによって行われたページの変更を確認できます。
+<ul>
+ <li>コンテンツスクリプトとは異なり、<code>devtools.inspectedWindow.eval()</code><strong> </strong>を使用してロードされたスクリプトは「<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access">DOM のクリーンビュー</a>」を取得<strong>しません</strong>。つまり、ページスクリプトによって行われたページの変更を確認できます。</li>
+</ul>
 
-> **Note:** DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
+<div class="note">
+<p>DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。</p>
+</div>
 
-`devtools.inspectedWindow.eval()` を使用してロードされたスクリプトも、コンテンツスクリプトで定義された JavaScript 変数を認識しません。
+<p><code>devtools.inspectedWindow.eval()</code> を使用してロードされたスクリプトも、コンテンツスクリプトで定義された JavaScript 変数を認識しません。</p>
 
-### コンテンツスクリプトの使用
+<h3 id="コンテンツスクリプトの使用">コンテンツスクリプトの使用</h3>
 
-devtools ドキュメントは {{WebExtAPIRef("tabs.executeScript()")}} に直接アクセスできません。したがって、コンテンツスクリプトを挿入する必要がある場合、devtools ドキュメントはバックグラウンドスクリプトにメッセージを送信してスクリプトの挿入を要求する必要があります。[`devtools.inspectedWindow.tabId`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId) はターゲットタブの ID を提供します。devtools ドキュメントはこれをバックグラウンドスクリプトに渡すことができ、バックグラウンドスクリプトはそれを {{WebExtAPIRef("tabs.executeScript()")}} に渡すことができます:
+<p>devtoolsドキュメントは {{WebExtAPIRef("tabs.executeScript()")}} に直接アクセスできません。したがって、コンテンツスクリプトを挿入する必要がある場合、devtools ドキュメントはバックグラウンドスクリプトにメッセージを送信してスクリプトの挿入を要求する必要があります。<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId">devtools.inspectedWindow.tabId</a></code> はターゲットタブの ID を提供します。devtools ドキュメントはこれをバックグラウンドスクリプトに渡すことができ、バックグラウンドスクリプトはそれを {{WebExtAPIRef("tabs.executeScript()")}} に渡すことができます:</p>
 
-```js
-// devtools-panel.js
+<pre class="brush: js">// devtools-panel.js
 
 const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 
-window.addEventListener("click", () => {
+window.addEventListener("click", () =&gt; {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
     script: scriptToAttach
   });
-});
-```
+});</pre>
 
-```js
-// background.js
+<pre class="brush: js">// background.js
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
@@ -115,44 +116,51 @@ function handleMessage(request, sender, sendResponse) {
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
-```
+browser.runtime.onMessage.addListener(handleMessage);</pre>
 
-ターゲットウィンドウで実行されているコンテンツスクリプトと devtools ドキュメントの間でメッセージを交換する必要がある場合は、{{WebExtAPIRef("runtime.connect()")}} および {{WebExtAPIRef("runtime.onConnect")}} を使用してバックグラウンドページと devtools ドキュメント間の接続を設定することをお勧めします。バックグラウンドページはタブ ID と {{WebExtAPIRef("runtime.Port")}} オブジェクト間のマッピングを維持し、これを使用して 2 つのスコープ間でメッセージをルーティングできます。
+<p>ターゲットウィンドウで実行されているコンテンツスクリプトとdevtoolsドキュメントの間でメッセージを交換する必要がある場合は、{{WebExtAPIRef("runtime.connect()")}} および {{WebExtAPIRef("runtime.onConnect")}} を使用してバックグラウンドページと devtools ドキュメント間の接続を設定することを<span class="tlid-translation translation" lang="ja"><span title="">お勧め</span></span>します。バックグラウンドページはタブ ID と {{WebExtAPIRef("runtime.Port")}} オブジェクト間のマッピングを維持し、これを使用して2つのスコープ間でメッセージをルーティングできます。</p>
 
-![](https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
-## devtools APIs の制限
+<h2 id="devtools_APIs_の制限">devtools APIs の制限</h2>
 
-これらの API は Chrome devtools API に基づいていますが、Chrome と比較して多くの機能がまだありません。このセクションでは、Firefox 54 の時点でまだ実装されていない機能をリストします。devtools API は活発に開発中であり、将来のリリースでそれらのほとんどのサポートを追加する予定です。
+<p>これらの API は Chrome devtools API に基づいていますが、Chrome と比較して多くの機能がまだありません。このセクションでは、Firefox 54 の時点でまだ実装されていない機能をリストします。devtools API は活発に開発中であり、将来のリリースでそれらのほとんどのサポートを追加する予定です。</p>
 
-### devtools.inspectedWindow
+<h3 id="devtools.inspectedWindow">devtools.inspectedWindow</h3>
 
-以下はサポートされていません:
+<p>以下はサポートされていません:</p>
 
-- `inspectedWindow.getResources()`
-- `inspectedWindow.onResourceAdded`
-- `inspectedWindow.onResourceContentCommitted`
+<ul>
+ <li><code>inspectedWindow.getResources()</code></li>
+ <li><code>inspectedWindow.onResourceAdded</code></li>
+ <li><code>inspectedWindow.onResourceContentCommitted</code></li>
+</ul>
 
-`inspectedWindow.eval()` のオプションはいずれもサポートされていません。
+<p><code>inspectedWindow.eval()</code> のオプションはいずれもサポートされていません。</p>
 
-`inspectedWindow.eval()` を使用して挿入されたスクリプトは、コンソールのすべてのコマンドラインヘルパー関数を使用できませんが、 `$0` と `inspect(...)` の両方がサポートされています (Firefox 55 以降)。
+<p><code>inspectedWindow.eval()</code> を使用して挿入されたスクリプトは、コンソールのすべてのコマンドラインヘルパー関数を使用できませんが、 <code>$0</code> と <code>inspect(...)</code> の両方がサポートされています (Firefox 55 以降)。</p>
 
-### devtools.panels
+<h3 id="devtools.panels">devtools.panels</h3>
 
-以下はサポートされていません:
+<p>以下はサポートされていません:</p>
 
-- `panels.elements`
-- `panels.sources`
-- `panels.setOpenResourceHandler()`
-- `panels.openResource()`
-- `panels.ExtensionPanel.createStatusBarButton()`
-- `panels.Button`
-- `panels.ElementsPanel`
-- `panels.SourcesPanel`
+<ul>
+ <li><code>panels.elements</code></li>
+ <li><code>panels.sources</code></li>
+ <li><code>panels.setOpenResourceHandler()</code></li>
+ <li><code>panels.openResource()</code></li>
+ <li><code>panels.ExtensionPanel.createStatusBarButton()</code></li>
+ <li><code>panels.Button</code></li>
+ <li><code>panels.ElementsPanel</code></li>
+ <li><code>panels.SourcesPanel</code></li>
+</ul>
 
-## 例
+<h2 id="例">例</h2>
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリには、devtools パネルを使用する拡張機能のいくつかの例が含まれています。
+<p>GitHub の <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリには、devtools パネルを使用する拡張機能のいくつかの例が含まれています。</p>
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) は devtools パネルを使用します:
+<ul>
+ <li>
+  <p><a href="https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/">devtools-panels</a> は devtools パネルを使用します:</p>
+ </li>
+</ul>

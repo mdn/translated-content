@@ -6,12 +6,18 @@ tags:
   - Glossary
 translation_of: Glossary/gif
 ---
-GIF (Graphics Interchange Format)は、可逆圧縮とアニメーションに使える画像フォーマットです。GIF は 1 ピクセル毎 8 ビットまでと、24 ビットの色領域から最大 256 色まで扱えます。
+<p>GIF (Graphics Interchange Format)は、可逆圧縮とアニメーションに使える画像フォーマットです。GIFは1ピクセル毎8ビットまでと、24ビットの色領域から最大256色まで扱えます。</p>
 
-## 詳細
+<h2 id="詳細">詳細</h2>
 
-### 基本的な知識
+<h3 id="基本的な知識">基本的な知識</h3>
 
-- Wikipedia 上の {{Interwiki("wikipedia", "GIF")}} 記事
+<ul>
+ <li>Wikipedia 上の {{Interwiki("wikipedia", "GIF")}} 記事</li>
+</ul>
 
-##
+<p> </p>
+
+<p> </p>
+
+<h2 id="sect1"> </h2>

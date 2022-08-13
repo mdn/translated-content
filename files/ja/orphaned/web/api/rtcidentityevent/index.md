@@ -4,44 +4,60 @@ slug: orphaned/Web/API/RTCIdentityEvent
 translation_of: Web/API/RTCIdentityEvent
 original_slug: Web/API/RTCIdentityEvent
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-**`RTCIdentityEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは ID アサーションによって生成されたものです。イベントタイプは{{event("identityresult")}}です。
+<p><strong><code>RTCIdentityEvent</code></strong> インタフェースは、通常 {{domxref("RTCPeerConnection")}}に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これはIDアサーションによって生成されたものです。イベントタイプは{{event("identityresult")}}です。</p>
 
-> **Note:** Firefox implements this interface under the following name: `RTCPeerConnectionIdentityEvent.` It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.
+<div class="note">
+<p>Firefox implements this interface under the following name: <code>RTCPeerConnectionIdentityEvent.</code> It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.</p>
+</div>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_{{domxref("RTCIdentityEvent")}} は {{domxref("Event")}} であり, このイベントは {{domxref("Event")}} のプロパティも実装します。_
+<p><em>{{domxref("RTCIdentityEvent")}} は {{domxref("Event")}} であり, このイベントは {{domxref("Event")}} のプロパティも実装します。</em></p>
 
-- {{domxref("RTCIdentityEvent.assertion")}} {{readOnlyInline}}
-  - : 生成されたアサーションである blob を含む{{domxref("DOMString")}}を返します。
+<dl>
+ <dt>{{domxref("RTCIdentityEvent.assertion")}} {{readOnlyInline}}</dt>
+ <dd>生成されたアサーションであるblobを含む{{domxref("DOMString")}}を返します。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_{{domxref("RTCIdentityEvent")}} は {{domxref("Event")}} であり, このイベントは {{domxref("Event")}} のプロパティも実装します。具体的な_ \__{{domxref("RTCIdentityEvent")}}_ メソッドはありません。\_
+<p><em>{{domxref("RTCIdentityEvent")}} は {{domxref("Event")}} であり, このイベントは {{domxref("Event")}} のプロパティも実装します。具体的な </em><em><em>{{domxref("RTCIdentityEvent")}}</em> メソッドはありません。</em></p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-pc.onidentityresult = function( ev ) {
+<pre class="brush: js">pc.onidentityresult = function( ev ) {
                          alert("A new identity assertion (blob: '" +
                                ev.assertion +
                                "') has been generated.");
                       }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                            | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCIdentityEvent', 'RTCIdentityEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('WebRTC 1.0', '#idl-def-RTCIdentityEvent', 'RTCIdentityEvent') }}</td>
+   <td>{{Spec2('WebRTC 1.0')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.RTCIdentityEvent")}}
+<p>{{Compat("api.RTCIdentityEvent")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/API/WebRTC" title="/en-US/docs/CSS/Using_CSS_animations">WebRTC</a></li>
+ <li>このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.</li>
+</ul>

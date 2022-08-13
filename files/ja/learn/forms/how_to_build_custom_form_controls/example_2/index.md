@@ -7,39 +7,37 @@ tags:
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_2
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 ---
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)を説明する 2 番目の例です。
+<p>これは、<a href="/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">カスタムフォームウィジェットの作成方法</a>を説明する2番目の例です。</p>
 
-## JS
+<h2 id="JS" name="JS">JS</h2>
 
-### HTML コンテンツ
+<h3 id="HTML_コンテンツ">HTML コンテンツ</h3>
 
-```html
-<form class="no-widget">
-  <select name="myFruit">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
-  </select>
+<pre class="brush: html notranslate">&lt;form class="no-widget"&gt;
+  &lt;select name="myFruit"&gt;
+      &lt;option&gt;Cherry&lt;/option&gt;
+      &lt;option&gt;Lemon&lt;/option&gt;
+      &lt;option&gt;Banana&lt;/option&gt;
+      &lt;option&gt;Strawberry&lt;/option&gt;
+      &lt;option&gt;Apple&lt;/option&gt;
+  &lt;/select&gt;
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
-  </div>
-<form>
-```
+  &lt;div class="select"&gt;
+    &lt;span class="value"&gt;Cherry&lt;/span&gt;
+    &lt;ul class="optList hidden"&gt;
+      &lt;li class="option"&gt;Cherry&lt;/li&gt;
+      &lt;li class="option"&gt;Lemon&lt;/li&gt;
+      &lt;li class="option"&gt;Banana&lt;/li&gt;
+      &lt;li class="option"&gt;Strawberry&lt;/li&gt;
+      &lt;li class="option"&gt;Apple&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;form&gt;
+</pre>
 
-### CSS コンテンツ
+<h3 id="CSS_コンテンツ">CSS コンテンツ</h3>
 
-```css
-.widget select,
+<pre class="brush: css notranslate">.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
@@ -160,63 +158,56 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}
-```
+}</pre>
 
-### JavaScript コンテンツ
+<h3 id="JavaScript_コンテンツ">JavaScript コンテンツ</h3>
 
-```js
-window.addEventListener("load", function () {
+<pre class="brush: js notranslate">window.addEventListener("load", function () {
   var form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
-});
-```
+});</pre>
 
-### JS の結果
+<h3 id="JS_の結果">JS の結果</h3>
 
-{{ EmbedLiveSample('JS', 120, 130) }}
+<p>{{ EmbedLiveSample('JS', 120, 130) }}</p>
 
-## No JS
+<h2 id="No_JS" name="No_JS">No JS</h2>
 
-### HTML コンテンツ
+<h3 id="HTML_コンテンツ_2">HTML コンテンツ</h3>
 
-```html
-<form class="no-widget">
-  <select name="myFruit">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
-  </select>
+<pre class="brush: html notranslate">&lt;form class="no-widget"&gt;
+  &lt;select name="myFruit"&gt;
+      &lt;option&gt;Cherry&lt;/option&gt;
+      &lt;option&gt;Lemon&lt;/option&gt;
+      &lt;option&gt;Banana&lt;/option&gt;
+      &lt;option&gt;Strawberry&lt;/option&gt;
+      &lt;option&gt;Apple&lt;/option&gt;
+  &lt;/select&gt;
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
-  </div>
-<form>
-```
+  &lt;div class="select"&gt;
+    &lt;span class="value"&gt;Cherry&lt;/span&gt;
+    &lt;ul class="optList hidden"&gt;
+      &lt;li class="option"&gt;Cherry&lt;/li&gt;
+      &lt;li class="option"&gt;Lemon&lt;/li&gt;
+      &lt;li class="option"&gt;Banana&lt;/li&gt;
+      &lt;li class="option"&gt;Strawberry&lt;/li&gt;
+      &lt;li class="option"&gt;Apple&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;form&gt;</pre>
 
-### CSS コンテンツ
+<h3 id="CSS_コンテンツ_2">CSS コンテンツ</h3>
 
-```css
-.widget select,
+<pre class="brush: css notranslate">.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
   height   : 0;
   overflow : hidden;
-}
-```
+}</pre>
 
-### No JS の結果
+<h3 id="No_JS_の結果">No JS の結果</h3>
 
-{{ EmbedLiveSample('No_JS', 120, 130) }}
+<p>{{ EmbedLiveSample('No_JS', 120, 130) }}</p>

@@ -12,30 +12,36 @@ tags:
   - 拡張機能
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-この API はコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定した URL にマッチするページにそのスクリプトを挿入するようブラウザに指定することができます。
+<p>このAPIはコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定したURLにマッチするページにそのスクリプトを挿入するようブラウザに指定することができます。</p>
 
-この API は`manifest.json`にある"content_scripts"キーと似ていますが、"content_scripts"ではコンテントスクリプトと URL のパターンは**インストールタイム**に固定されます。一方`content_scripts` API は、**ランタイム（実行時）**でスクリプトを登録・登録解除することが可能です。
+<p>このAPIは<code>manifest.json</code>にある"content_scripts"キーと似ていますが、"content_scripts"ではコンテントスクリプトとURLのパターンは<strong>インストールタイム</strong>に固定されます。<span class="seoSummary">一方<code>content_scripts</code> APIは、<strong>ランタイム（実行時）</strong>でスクリプトを登録・登録解除することが可能です。</span></p>
 
-この API は、{{WebExtAPIRef("contentScripts.register()")}} メソッドを呼び出して使用していただけます。その際は、登録するコンテントスクリプト、URL のマッチングパターン、またその他のオプションを実引数(arguments)として渡してください。このメソッドは{{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトが resolve された [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
+<p>このAPIは、{{WebExtAPIRef("contentScripts.register()")}} メソッドを呼び出して使用していただけます。その際は、登録するコンテントスクリプト、URLのマッチングパターン、またその他のオプションを実引数(arguments)として渡してください。このメソッドは{{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトがresolveされた <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
 
-`RegisteredContentScript` オブジェクトは `register()` で登録されたスクリプトを保持し、`unregister()`でそのスクリプトを登録解除(unregister)できます。また、コンテントスクリプトはそれらを作ったページが消された際にも自動的に登録解除されます。例えば、background ページによって登録されたコンテントスクリプトは、background ページが消去された際に自動的に登録解除されます。
+<p><code>RegisteredContentScript</code> オブジェクトは <code>register()</code> で登録されたスクリプトを保持し、<code>unregister()</code>でそのスクリプトを登録解除(unregister)できます。また、コンテントスクリプトはそれらを作ったページが消された際にも自動的に登録解除されます。例えば、backgroundページによって登録されたコンテントスクリプトは、backgroundページが消去された際に自動的に登録解除されます。</p>
 
-`contentScripts` API にパーミッションは存在しませんが、拡張機能は register()でマッチさせる URL においては適切な[host permissions](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)を持っている必要があります。
+<p><code>contentScripts</code> API にパーミッションは存在しませんが、拡張機能はregister()でマッチさせるURLにおいては適切な<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>を持っている必要があります。</p>
 
-## Types
+<h2 id="Types">Types</h2>
 
-- {{WebExtAPIRef("contentScripts.RegisteredContentScript")}}
-  - : このタイプのオブジェクトは{{WebExtAPIRef("contentScripts.register()")}}関数の返り値です。{{WebExtAPIRef("contentScripts.register()")}}関数で登録されたコンテントスクリプトを持ち、このオブジェクトを使ってそれらを登録解除することができます。
+<dl>
+ <dt>{{WebExtAPIRef("contentScripts.RegisteredContentScript")}}</dt>
+ <dd>
+ <p>このタイプのオブジェクトは{{WebExtAPIRef("contentScripts.register()")}}関数の返り値です。{{WebExtAPIRef("contentScripts.register()")}}関数で登録されたコンテントスクリプトを持ち、このオブジェクトを使ってそれらを登録解除することができます。</p>
+ </dd>
+</dl>
 
-## Functions
+<h2 id="Functions">Functions</h2>
 
-- {{WebExtAPIRef("contentScripts.register()")}}
-  - : コンテントスクリプトを登録します。
+<dl>
+ <dt>{{WebExtAPIRef("contentScripts.register()")}}</dt>
+ <dd>コンテントスクリプトを登録します。</dd>
+</dl>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+<p>{{Compat("webextensions.api.contentScripts", 10, 1)}}</p>
 
-{{WebExtExamples("h2")}}
+<p>{{WebExtExamples("h2")}}</p>

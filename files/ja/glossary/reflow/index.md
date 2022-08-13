@@ -6,8 +6,10 @@ tags:
   - WebMechanics
 translation_of: Glossary/Reflow
 ---
-インタラクティブサイトでの更新後など、 {{glossary("browser")}} が Web ページの一部または全てを再度処理して描画する必要がある場合、**リフロー** が発生します。
+<p>インタラクティブサイトでの更新後など、 {{glossary("browser")}} がWebページの一部または全てを再度処理して描画する必要がある場合、<strong>リフロー</strong> が発生します。</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Google article "Minimizing browser reflow"](https://developers.google.com/speed/articles/reflow)
+<ul>
+ <li><a href="https://developers.google.com/speed/articles/reflow">Google article "Minimizing browser reflow"</a></li>
+</ul>

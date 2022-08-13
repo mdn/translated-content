@@ -10,4 +10,6 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Index
 original_slug: Mozilla/Add-ons/WebExtensions/Index
 ---
-{{AddonSidebar}}{{Index("/ja/docs/Mozilla/Add-ons/WebExtensions")}}
+<div>{{AddonSidebar}}</div>
+
+<div style="overflow: auto;">{{Index("/ja/docs/Mozilla/Add-ons/WebExtensions")}}</div>

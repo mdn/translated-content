@@ -9,22 +9,26 @@ tags:
   - programming
 translation_of: Glossary/array
 ---
-*配列*は、データ（言語によって{{Glossary("primitive","プリミティブ")}}または{{Glossary("object","オブジェクト")}}のどちらか）が順序付けされて集まったものです。配列は 1 つの変数に複数の値を格納するために使用されます。これは 1 つしか値を格納できない変数とは対照的です。
+<p><em>配列</em>は、データ（言語によって{{Glossary("primitive","プリミティブ")}}または{{Glossary("object","オブジェクト")}}のどちらか）が順序付けされて集まったものです。配列は1つの変数に複数の値を格納するために使用されます。これは1つしか値を格納できない変数とは対照的です。</p>
 
-配列内のそれぞれの項目には添字と呼ばれる番号が割り当てられており、それによって各項目にアクセスすることができます。 JavaScript では、配列の添字は 0 から始まり、さまざまな{{Glossary("Method", "メソッド")}}で操作することができます。
+<p>配列内のそれぞれの項目には添字と呼ばれる番号が割り当てられており、それによって各項目にアクセスすることができます。 JavaScript では、配列の添字は0から始まり、さまざまな{{Glossary("Method", "メソッド")}}で操作することができます。</p>
 
-JavaScript における配列の利用例は以下の通りです。
+<p>JavaScript における配列の利用例は以下の通りです。</p>
 
-    var myArray = [1, 2, 3, 4];
-    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
-    // JavaScript の配列は、上記のように異なる種類のデータを保持することができます。
+<pre>var myArray = [1, 2, 3, 4];
+var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+// JavaScript の配列は、上記のように異なる種類のデータを保持することができます。</pre>
 
-## 詳細情報
+<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- ウィキペディア上の「{{Interwiki("wikipedia", "配列")}}」の記事
+<ul>
+ <li>ウィキペディア上の「{{Interwiki("wikipedia", "配列")}}」の記事</li>
+</ul>
 
-### 技術リファレンス
+<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
 
-- MDN における JavaScript の{{jsxref("Array","配列")}}
+<ul>
+ <li>MDN における JavaScript の{{jsxref("Array","配列")}}</li>
+</ul>

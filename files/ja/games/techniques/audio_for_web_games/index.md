@@ -8,109 +8,184 @@ tags:
   - audio sprites
 translation_of: Games/Techniques/Audio_for_Web_Games
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ja/docs/Games")}}
+<div>{{GamesSidebar}}</div>
 
-オーディオはゲームの重要部分です。つまりこれはフィードバックと雰囲気を与えます。web ベースのオーディオは早くから成熟していますが、まだ多くのブラウザーに案内すべき違いがあります。ゲームエクスペリエンスにとってどのオーディオパーツが重要で、どれがあっても良いけど不要なものかを決めて、それに従って戦略を決めるのが必要となる事がよくあります。この記事では web ゲーム用のオーディオを実装するための詳細なガイドを提供し、現在なるべく広い範囲のプラットフォームで動作するものを観察します。
+<div>{{IncludeSubnav("/ja/docs/Games")}}</div>
 
-## モバイルオーディオの注意点
+<div class="summary">
+<p>オーディオはゲームの重要部分です。つまりこれはフィードバックと雰囲気を与えます。web ベースのオーディオは早くから成熟していますが、まだ多くのブラウザーに案内すべき違いがあります。ゲームエクスペリエンスにとってどのオーディオパーツが重要で、どれがあっても良いけど不要なものかを決めて、それに従って戦略を決めるのが必要となる事がよくあります。この記事では web ゲーム用のオーディオを実装するための詳細なガイドを提供し、現在なるべく広い範囲のプラットフォームで動作するものを観察します。</p>
+</div>
 
-これまでウェブオーディオのサポートを提供するのに最も難しいプラットフォームはモバイルプラットフォームでした。不幸にもこれはゲームで遊ぶ人が良くいるプラットフォームです。デスクトップとモバイルのブラウザーにはいくつかの違いがあり、それがブラウザーベンダーに、ゲーム開発者が作業するのが難しくなるウェブオーディオの選択を起こすことがありました。これを見ていきましょう。
+<h2 id="モバイルオーディオの注意点">モバイルオーディオの注意点</h2>
 
-### 自動再生
+<p>これまでウェブオーディオのサポートを提供するのに最も難しいプラットフォームはモバイルプラットフォームでした。不幸にもこれはゲームで遊ぶ人が良くいるプラットフォームです。デスクトップとモバイルのブラウザーにはいくつかの違いがあり、それがブラウザーベンダーに、ゲーム開発者が作業するのが難しくなるウェブオーディオの選択を起こすことがありました。これを見ていきましょう。</p>
 
-多くのモバイルブラウザーは、ゲームがオーディオ再生するように要求しても単に無視します。つまりオーディオの再生にはユーザーが開始するイベントが必要です。これはオーディオ再生の構成を考慮する必要があるということです。これは通常、事前にオーディオを読み込んでユーザーが開始するイベントに準備しておくことで守られます。
+<h3 id="自動再生">自動再生</h3>
 
-もっと受け身にオーディオを自動再生するには、例えばゲームがロードするとすぐに始まるバックグラウンドミュージックでは、仕掛けをして \*any\* ユーザー開始イベントを検知して再生を開始します。その他のゲームで使われる予定のアクティブなサウンドについては、スタートボタンのようなものが押されたらすぐに準備しておくよう考慮します。
+<p>多くのモバイルブラウザーは、ゲームがオーディオ再生するように要求しても単に無視します。つまりオーディオの再生にはユーザーが開始するイベントが必要です。これはオーディオ再生の構成を考慮する必要があるということです。これは通常、事前にオーディオを読み込んでユーザーが開始するイベントに準備しておくことで守られます。</p>
 
-このようにオーディオを準備するため、その一部を再生したくなります。つまりこの理由のため、オーディオサンプルの最後に無音期間を入れておくのが便利です。その無音に移動したり、再生や停止することは、JavaScript を使ってファイルの任意の地点を再生できることを意味します。
+<p>もっと受け身にオーディオを自動再生するには、例えばゲームがロードするとすぐに始まるバックグラウンドミュージックでは、仕掛けをして *any* ユーザー開始イベントを検知して再生を開始します。その他のゲームで使われる予定のアクティブなサウンドについては、スタートボタンのようなものが押されたらすぐに準備しておくよう考慮します。</p>
 
-> **Note:** **注**: もしブラウザーがあなたに音量を変更することを許可するならば、ファイルを音量ゼロで再生することも可能でしょう（後述）。また、オーディオを再生後に即時停止することは、オーディオの小さな断片が再生されないことを保証しない、ということにも注意してください。
+<p>このようにオーディオを準備するため、その一部を再生したくなります。つまりこの理由のため、オーディオサンプルの最後に無音期間を入れておくのが便利です。その無音に移動したり、再生や停止することは、JavaScript を使ってファイルの任意の地点を再生できることを意味します。</p>
 
-> **Note:** **注**: モバイルのホーム画面にウェブアプリを追加することで特性が変化してしまうかもしれません。今のところ、iOS 上の自動再生がこのケースに当てはまるようです。可能であれば、いくつかのデバイスとプラットフォームでコードがどう動くか試すべきです。
+<div class="note">
+<p><strong>注</strong>: もしブラウザーがあなたに音量を変更することを許可するならば、ファイルを音量ゼロで再生することも可能でしょう（後述）。また、オーディオを再生後に即時停止することは、オーディオの小さな断片が再生されないことを保証しない、ということにも注意してください。</p>
+</div>
 
-### 音量
+<div class="note">
+<p><strong>注</strong>: モバイルのホーム画面にウェブアプリを追加することで特性が変化してしまうかもしれません。今のところ、iOS上の自動再生がこのケースに当てはまるようです。可能であれば、いくつかのデバイスとプラットフォームでコードがどう動くか試すべきです。</p>
+</div>
 
-ボリュームコントロールのプログラムはモバイルブラウザーで無効化されていることがあります。この理由はしばしばユーザーが OS レベルでボリュームをコントロールし、上書きが禁止されているためです。
+<h3 id="音量">音量</h3>
 
-### バッファリングと先読み
+<p>ボリュームコントロールのプログラムはモバイルブラウザーで無効化されていることがあります。この理由はしばしばユーザーが OS レベルでボリュームをコントロールし、上書きが禁止されているためです。</p>
 
-急騰するモバイルネットワークのデータ使用を軽減するための試みとして、再生開始前のバッファリングができなくなることが恐らくあります。バッファリングとは、ブラウザが前もってメディアのダウンロードをする処理であり、円滑な再生を確実なものにするために度々必要になります。
+<h3 id="バッファリングと先読み">バッファリングと先読み</h3>
 
-{{domxref("HTMLMediaElement")}} インターフェイスが備える [多くのプロパティ](/ja/docs/Web/API/HTMLMediaElement#Properties) はトラックが再生可能な状態にあるかどうかを決定する助けになります。
+<p>急騰するモバイルネットワークのデータ使用を軽減するための試みとして、再生開始前のバッファリングができなくなることが恐らくあります。バッファリングとは、ブラウザが前もってメディアのダウンロードをする処理であり、円滑な再生を確実なものにするために度々必要になります。</p>
 
-> **Note:** **注**: 色々な意味でバッファリングの概念は時代遅れです。バイトレンジリクエストが許容される限り（これが既定の振る舞いです）、先行する内容のダウンロードの必要なしにオーディオの任意の点に飛ぶことができるべきです。しかしながら、先読みは依然として便利です。それなしでは、再生が始められるようになる前に、常にいくらかのクライアント・サーバー間通信が必要になるでしょう。
+<p>{{domxref("HTMLMediaElement")}} インターフェイスが備える <a href="/ja/docs/Web/API/HTMLMediaElement#Properties">多くのプロパティ</a> はトラックが再生可能な状態にあるかどうかを決定する助けになります。</p>
 
-### 並行したオーディオ再生
+<div class="note">
+<p><strong>注</strong>: 色々な意味でバッファリングの概念は時代遅れです。バイトレンジリクエストが許容される限り（これが既定の振る舞いです）、先行する内容のダウンロードの必要なしにオーディオの任意の点に飛ぶことができるべきです。しかしながら、先読みは依然として便利です。それなしでは、再生が始められるようになる前に、常にいくらかのクライアント・サーバー間通信が必要になるでしょう。</p>
+</div>
 
-多くのゲームでは、複数のオーディオを同時に再生することが求められます。例えば、ゲーム内で様々なことが起こるために、バックグラウンドミュージックと効果音を一緒に再生することがあります。この状況は近々、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)の採用でもっと上手くいくようになる予定ですが、現状最も広くサポートされている方法 ― 平凡な{{htmlelement("audio")}}要素を使用すること ― は、モバイルデバイス上では不安定な結果になります。
+<h3 id="並行したオーディオ再生">並行したオーディオ再生</h3>
 
-### テストとサポート
+<p>多くのゲームでは、複数のオーディオを同時に再生することが求められます。例えば、ゲーム内で様々なことが起こるために、バックグラウンドミュージックと効果音を一緒に再生することがあります。この状況は近々、<a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>の採用でもっと上手くいくようになる予定ですが、現状最も広くサポートされている方法 ― 平凡な{{htmlelement("audio")}}要素を使用すること ― は、モバイルデバイス上では不安定な結果になります。</p>
 
-ここでは、どのモバイルプラットフォームが前述した機能をサポートするかを表に示します。
+<h3 id="テストとサポート">テストとサポート</h3>
 
-| モバイルブラウザー | バージョン | 同時再生 | 自動再生 | 音量調整 | 先読み |
-| ------------------ | ---------- | -------- | -------- | -------- | ------ |
-| Chrome (Android)   | 32+        | Y        | N        | N        | N      |
-| Firefox (Android)  | 26+        | Y        | Y        | N        | N      |
-| Firefox OS         | 1.2+       | Y        | Y        | Y        | Y      |
-| IE Mobile          | 11+        | Y        | Y        | N        | Y      |
-| Opera Mobile       | 11+        | N        | N        | N        | N      |
-| Safari (iOS)       | 7+         | Y/N\*    | N        | N        | Y      |
-| Android Browser    | 2.3+       | N        | N        | N        | N      |
+<p>ここでは、どのモバイルプラットフォームが前述した機能をサポートするかを表に示します。</p>
 
-> **Note:** **\* 注**: 同時に全てのオーディオを開始させてみる場合、Safari 7 では再生に問題があります。再生をずらした場合、ある程度は成功するかもしれません。
+<table class="standard-table">
+ <caption>web audio 機能のモバイルサポート</caption>
+ <thead>
+  <tr>
+   <th scope="row">モバイルブラウザー</th>
+   <th scope="col">バージョン</th>
+   <th scope="col">同時再生</th>
+   <th scope="col">自動再生</th>
+   <th scope="col">音量調整</th>
+   <th scope="col">先読み</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Chrome (Android)</th>
+   <td>32+</td>
+   <td>Y</td>
+   <td>N</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox (Android)</th>
+   <td>26+</td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox OS</th>
+   <td>1.2+</td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <th scope="row">IE Mobile</th>
+   <td>11+</td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>N</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <th scope="row">Opera Mobile</th>
+   <td>11+</td>
+   <td>N</td>
+   <td>N</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <th scope="row">Safari (iOS)</th>
+   <td>7+</td>
+   <td>Y/N*</td>
+   <td>N</td>
+   <td>N</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <th scope="row">Android Browser</th>
+   <td>2.3+</td>
+   <td>N</td>
+   <td>N</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+ </tbody>
+</table>
 
-> **Note:** **注**: オーディオの同時再生は私たちの[同時オーディオテストの例](http://jsfiddle.net/dmkyaq0r/)を使ってテストされますが、そこでは標準のオーディオ API を使って３つのオーディオの同時再生を試しています。
+<div class="note">
+<p><strong>* 注</strong>: 同時に全てのオーディオを開始させてみる場合、Safari 7 では再生に問題があります。再生をずらした場合、ある程度は成功するかもしれません。</p>
+</div>
 
-> **Note:** **注**: 単純な自動再生機能は私たちの[自動再生テストの例](http://jsfiddle.net/vpdspp2b/)でテストされます。
+<div class="note">
+<p><strong>注</strong>: オーディオの同時再生は私たちの<a href="http://jsfiddle.net/dmkyaq0r/">同時オーディオテストの例</a>を使ってテストされますが、そこでは標準のオーディオAPIを使って３つのオーディオの同時再生を試しています。</p>
+</div>
 
-> **Note:** **注**: 音量の可変性は私たちの[音量テストの例](http://jsfiddle.net/7ta12vw4/)でテストされます。
+<div class="note">
+<p><strong>注</strong>: 単純な自動再生機能は私たちの<a href="http://jsfiddle.net/vpdspp2b/">自動再生テストの例</a>でテストされます。</p>
+</div>
 
-## モバイルの回避処理
+<div class="note">
+<p><strong>注</strong>: 音量の可変性は私たちの<a href="http://jsfiddle.net/7ta12vw4/">音量テストの例</a>でテストされます。</p>
+</div>
 
-モバイルブラウザーは問題を抱えていますが、上に詳述した問題については回避する方法があります。
+<h2 id="モバイルの回避処理">モバイルの回避処理</h2>
 
-### オーディオスプライト
+<p>モバイルブラウザーは問題を抱えていますが、上に詳述した問題については回避する方法があります。</p>
 
-オーディオスプライトは[CSS スプライト](/ja/docs/Web/Guide/CSS/CSS_Image_Sprites)から名前をとったもので、CSS スプライトとは単一グラフィックリソースを連続したスプライトに分解して使う CSS のための視覚的なテクニックです。同じ原理をオーディオに適用することで、読み込みと再生に時間のかかる小さなオーディオファイルの束ではなく、必要とするオーディオすべてを含む大きなオーディオファイル一つを用いることができます。そのファイルから特定の音を再生するには、各オーディオスプライトの既知の開始・停止時間を指定するだけです。
+<h3 id="オーディオスプライト">オーディオスプライト</h3>
 
-利点は、一つのオーディオを前もって提供しておき、スプライトをすぐ使える状態にできることです。こうすることで、大きな一つのオーディオの再生と即時停止をするだけですみます。また、サーバーリクエスト数を減らすことと、帯域幅を節約することもできます。
+<p>オーディオスプライトは<a href="/ja/docs/Web/Guide/CSS/CSS_Image_Sprites">CSSスプライト</a>から名前をとったもので、CSSスプライトとは単一グラフィックリソースを連続したスプライトに分解して使うCSSのための視覚的なテクニックです。同じ原理をオーディオに適用することで、読み込みと再生に時間のかかる小さなオーディオファイルの束ではなく、必要とするオーディオすべてを含む大きなオーディオファイル一つを用いることができます。そのファイルから特定の音を再生するには、各オーディオスプライトの既知の開始・停止時間を指定するだけです。</p>
 
-```js
-var myAudio = document.createElement("audio");
+<p>利点は、一つのオーディオを前もって提供しておき、スプライトをすぐ使える状態にできることです。こうすることで、大きな一つのオーディオの再生と即時停止をするだけですみます。また、サーバーリクエスト数を減らすことと、帯域幅を節約することもできます。</p>
+
+<pre class="brush: js notranslate">var myAudio = document.createElement("audio");
 myAudio.src = "mysprite.mp3";
 myAudio.play();
-myAudio.pause();
-```
+myAudio.pause();</pre>
 
-停止すべき時間を知るために、現在時間のサンプリングをする必要があるでしょう。もし個々の音声について 500ms 以上の間隔をあけるなら、`timeUpdate`イベント(250ms 毎に発動します）を使うことで事足りるはずです。ファイルは厳密に必要であるよりわずかに長くなりますが、無音部分はよく圧縮されます。
+<p>停止すべき時間を知るために、現在時間のサンプリングをする必要があるでしょう。もし個々の音声について500ms以上の間隔をあけるなら、<code>timeUpdate</code>イベント(250ms毎に発動します）を使うことで事足りるはずです。ファイルは厳密に必要であるよりわずかに長くなりますが、無音部分はよく圧縮されます。</p>
 
-ここにオーディオスプライトプレイヤーの例があります。 ― まずは HTML でユーザーインターフェイスを構築しましょう:
+<p>ここにオーディオスプライトプレイヤーの例があります。 ― まずはHTMLでユーザーインターフェイスを構築しましょう:</p>
 
-```html
-<audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"></audio>
-<button data-start="18" data-stop="19">0</button>
-<button data-start="16" data-stop="17">1</button>
-<button data-start="14" data-stop="15">2</button>
-<button data-start="12" data-stop="13">3</button>
-<button data-start="10" data-stop="11">4</button>
-<button data-start="8"  data-stop="9">5</button>
-<button data-start="6"  data-stop="7">6</button>
-<button data-start="4"  data-stop="5">7</button>
-<button data-start="2"  data-stop="3">8</button>
-<button data-start="0"  data-stop="1">9</button>
-```
+<pre class="brush: html notranslate">&lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"&gt;&lt;/audio&gt;
+&lt;button data-start="18" data-stop="19"&gt;0&lt;/button&gt;
+&lt;button data-start="16" data-stop="17"&gt;1&lt;/button&gt;
+&lt;button data-start="14" data-stop="15"&gt;2&lt;/button&gt;
+&lt;button data-start="12" data-stop="13"&gt;3&lt;/button&gt;
+&lt;button data-start="10" data-stop="11"&gt;4&lt;/button&gt;
+&lt;button data-start="8"  data-stop="9"&gt;5&lt;/button&gt;
+&lt;button data-start="6"  data-stop="7"&gt;6&lt;/button&gt;
+&lt;button data-start="4"  data-stop="5"&gt;7&lt;/button&gt;
+&lt;button data-start="2"  data-stop="3"&gt;8&lt;/button&gt;
+&lt;button data-start="0"  data-stop="1"&gt;9&lt;/button&gt;</pre>
 
-今、開始・停止時間を秒単位で指定したボタンがあります。"countdonw\.mp3" という MP3 ファイルは 2 秒ごとに声に出された数字から成り、ここで意図していることは、対応するボタンが押された時にその数が再生されるということです。
+<p>今、開始・停止時間を秒単位で指定したボタンがあります。"countdonw.mp3" というMP3ファイルは2秒ごとに声に出された数字から成り、ここで意図していることは、対応するボタンが押された時にその数が再生されるということです。</p>
 
-このように動作する JavaScript を追加しましょう:
+<p>このように動作するJavaScriptを追加しましょう:</p>
 
-```js
-var myAudio = document.getElementById('myAudio');
+<pre class="brush: js notranslate">var myAudio = document.getElementById('myAudio');
 var buttons = document.getElementsByTagName('button');
 var stopTime = 0;
 
-for (var i = 0; i < buttons.length; i++) {
+for (var i = 0; i &lt; buttons.length; i++) {
   buttons[i].addEventListener('click', function() {
     myAudio.currentTime = this.getAttribute("data-start");
     stopTime = this.getAttribute("data-stop");
@@ -119,66 +194,70 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 myAudio.addEventListener('timeupdate', function() {
-  if (this.currentTime > stopTime) {
+  if (this.currentTime &gt; stopTime) {
     this.pause();
   }
-}, false);
-```
+}, false);</pre>
 
-> **Note:** **注**: JSFiddle 上で[私たちのオーディオスプライトプレイヤーライブ](http://jsfiddle.net/59vwaame/)を試すことができます。
+<div class="note">
+<p><strong>注</strong>: JSFiddle上で<a href="http://jsfiddle.net/59vwaame/">私たちのオーディオスプライトプレイヤーライブ</a>を試すことができます。</p>
+</div>
 
-> **Note:** **注**: 上に詳述したように、モバイルでは、スタートボタンが押されるといったようなユーザー開始イベントからコードを発動させる必要があるかもしれません。
+<div class="note">
+<p><strong>注</strong>: 上に詳述したように、モバイルでは、スタートボタンが押されるといったようなユーザー開始イベントからコードを発動させる必要があるかもしれません。</p>
+</div>
 
-> **Note:** **注**: ビットレートに気をつけてください。低ビットレートのエンコードではファイルサイズは小さくなりますが、シーク精度も低くなります。
+<div class="note">
+<p><strong>注</strong>: ビットレートに気をつけてください。低ビットレートのエンコードではファイルサイズは小さくなりますが、シーク精度も低くなります。</p>
+</div>
 
-## バックグラウンドミュージック(BGM)
+<h2 id="バックグラウンドミュージックBGM">バックグラウンドミュージック(BGM)</h2>
 
-ゲーム内の音楽は感情に訴える強力な効果があります。あなたは様々な楽曲サンプルを組み合わせることができ、さらに、オーディオ要素のボリュームをコントロールすることができることを想定すれば、異なる楽曲をクロスフェードさせることができます。[`playbackRate()`](/Apps/Build/Audio_and_video_delivery/HTML5_playbackRate_explained)を使うことで、動きにより良く同期させるために、ピッチに影響なく音楽のスピードの調節もできます。
+<p>ゲーム内の音楽は感情に訴える強力な効果があります。あなたは様々な楽曲サンプルを組み合わせることができ、さらに、オーディオ要素のボリュームをコントロールすることができることを想定すれば、異なる楽曲をクロスフェードさせることができます。<code><a href="/Apps/Build/Audio_and_video_delivery/HTML5_playbackRate_explained">playbackRate()</a></code>を使うことで、動きにより良く同期させるために、ピッチに影響なく音楽のスピードの調節もできます。</p>
 
-これは標準の{{HTMLElement("audio")}}要素を使って{{domxref("HTMLMediaElement")}}と連携しさえすれば可能となりますが、より発展した[Web Audio API](/ja/docs/Web/API/Web_Audio_API)を使えばもっと簡単で柔軟になります。次にこれについて見ていきましょう。
+<p>これは標準の{{HTMLElement("audio")}}要素を使って{{domxref("HTMLMediaElement")}}と連携しさえすれば可能となりますが、より発展した<a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>を使えばもっと簡単で柔軟になります。次にこれについて見ていきましょう。</p>
 
-## ゲーム用の Web オーディオ API
+<h2 id="ゲーム用の_Web_オーディオ_API">ゲーム用の Web オーディオ API</h2>
 
-Now that it's supported in all modern browsers except for Opera Mini and Internet Explorer ([although Microsoft is now working on it](https://status.modern.ie/webaudioapi)), an acceptable approach for many situations is to use the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) (see the [Can I use Web Audio API page](http://caniuse.com/#search=web%20audio%20api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
+<p>Now that it's supported in all modern browsers except for Opera Mini and Internet Explorer (<a href="https://status.modern.ie/webaudioapi">although Microsoft is now working on it</a>), an acceptable approach for many situations is to use the <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> (see the <a href="http://caniuse.com/#search=web%20audio%20api">Can I use Web Audio API page</a> for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.</p>
 
-A feasible cross-browser strategy would be to provide basic audio using the standard {{HTMLElement("audio")}} element and, where supported, enhance the experience using the Web Audio API.
+<p>A feasible cross-browser strategy would be to provide basic audio using the standard {{HTMLElement("audio")}} element and, where supported, enhance the experience using the Web Audio API.</p>
 
-> **Note:** **注**: Significantly, iOS Safari now supports the Web Audio API, which means it's now possible to write web-based games with native-quality audio for iOS.
+<div class="note">
+<p><strong>注</strong>: Significantly, iOS Safari now supports the Web Audio API, which means it's now possible to write web-based games with native-quality audio for iOS.</p>
+</div>
 
-As the Web Audio API allows precise timing and control of audio playback, we can use it to play samples at specific moments, which is a crucial immersive aspect of gaming. You want those explosions to be **accompanied** by a thundering boom, not **followed** by one, after all.
+<p>As the Web Audio API allows precise timing and control of audio playback, we can use it to play samples at specific moments, which is a crucial immersive aspect of gaming. You want those explosions to be <strong>accompanied</strong> by a thundering boom, not <strong>followed</strong> by one, after all.</p>
 
-### Web Audio API での BGM
+<h3 id="Web_Audio_API_での_BGM">Web Audio API での BGM</h3>
 
-Although we can use the {{HTMLElement("audio")}} element to deliver linear background music that doesn't change in reaction to the game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.
+<p>Although we can use the {{HTMLElement("audio")}} element to deliver linear background music that doesn't change in reaction to the game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.</p>
 
-One way you can make your music soundtrack more dynamic is by splitting it up into component loops or tracks. This is often the way that musicians compose music anyway, and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.
+<p>One way you can make your music soundtrack more dynamic is by splitting it up into component loops or tracks. This is often the way that musicians compose music anyway, and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.</p>
 
-You can also apply filters or effects to music. Is your character in a cave? Increase the echo. Maybe you have underwater scenes, so apply a filter that muffles the sound.
+<p>You can also apply filters or effects to music. Is your character in a cave? Increase the echo. Maybe you have underwater scenes, so apply a filter that muffles the sound.</p>
 
-Let's look at some Web Audio API techniques for dynamically adjusting music from its base tracks.
+<p>Let's look at some Web Audio API techniques for dynamically adjusting music from its base tracks.</p>
 
-### トラックを読み込む
+<h3 id="トラックを読み込む">トラックを読み込む</h3>
 
-With the Web Audio API you can load separate tracks and loops individually using [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest), which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.
+<p>With the Web Audio API you can load separate tracks and loops individually using <a href="/ja/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.</p>
 
-Either way you may want to synchronize tracks or loops. The Web Audio API contains the notion of an internal clock that starts ticking the moment you create an audio context. You'll need to take account of the time between creating an audio context and when the first audio track starts playing. Recording this offset and querying the playing track's current time gives you enough information to synchronize separate pieces of audio.
+<p>Either way you may want to synchronize tracks or loops. The Web Audio API contains the notion of an internal clock that starts ticking the moment you create an audio context. You'll need to take account of the time between creating an audio context and when the first audio track starts playing. Recording this offset and querying the playing track's current time gives you enough information to synchronize separate pieces of audio.</p>
 
-To see this in action, let's lay out some separate tracks:
+<p>To see this in action, let's lay out some separate tracks:</p>
 
-```html
-<ul>
-  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-leadguitar.mp3">Lead Guitar</a></li>
-  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-drums.mp3">Drums</a></li>
-  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-bassguitar.mp3">Bass Guitar</a></li>
-  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-horns.mp3">Horns</a></li>
-  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-clav.mp3">Clavi</a></li>
-</ul>
-```
+<pre class="brush: html notranslate">&lt;ul&gt;
+  &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-leadguitar.mp3"&gt;Lead Guitar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-drums.mp3"&gt;Drums&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-bassguitar.mp3"&gt;Bass Guitar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-horns.mp3"&gt;Horns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-clav.mp3"&gt;Clavi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
-All of these tracks are the same tempo and are designed to be synchronized with each other.
+<p>All of these tracks are the same tempo and are designed to be synchronized with each other.</p>
 
-```js
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js notranslate">window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var offset = 0;
 var context = new AudioContext();
@@ -220,41 +299,45 @@ function playTrack(url) {
 
 var tracks = document.getElementsByClassName('track');
 
-for (var i = 0, len = tracks.length; i < len; i++) {
+for (var i = 0, len = tracks.length; i &lt; len; i++) {
   tracks[i].addEventListener('click', function(e){
 
     playTrack(this.href);
     e.preventDefault();
   });
-}
-```
+}</pre>
 
-> **Note:** **注**: You can try out our [Web Audio API multitrack demo](http://jsfiddle.net/c87z11jj/1/) live on JSFiddle.
+<div class="note">
+<p><strong>注</strong>: You can try out our <a href="http://jsfiddle.net/c87z11jj/1/">Web Audio API multitrack demo</a> live on JSFiddle.</p>
+</div>
 
-Now let's look over the code. First we set up a new {{domxref("AudioContext")}} and create a function (`playTrack()`) that loads and starts playing a track.
+<p>Now let's look over the code. First we set up a new {{domxref("AudioContext")}} and create a function (<code>playTrack()</code>) that loads and starts playing a track.</p>
 
-`start()` (formerly known as `noteOn()`) will start playing an audio asset. ` start(``) ` asks three (optional) parameters:
+<p><code>start()</code> (formerly known as <code>noteOn()</code>) will start playing an audio asset. <code>start(</code><code>)</code> asks three (optional) parameters:</p>
 
-1.  when: The absolute time to commence playback.
-2.  where (offset): The part of the audio to start playing from.
-3.  how long: The duration to play for.
+<ol>
+ <li>when: The absolute time to commence playback.</li>
+ <li>where (offset): The part of the audio to start playing from.</li>
+ <li>how long: The duration to play for.</li>
+</ol>
 
-`stop()` takes one optional parameter — when — which is the delay before stopping.
+<p><code>stop()</code> takes one optional parameter — when — which is the delay before stopping.<br>
+ <br>
+ If <code>start()</code>'s second parameter — the offset — is zero, we start playing from the start of the given piece of audio, which is what we do in the first instance. We then store the {{domxref("AudioContext.currentTime")}} — the offset of when the first piece began playing, subtract that from any subsequent <code>currentTime</code>s to calculate the actual time, and use that to synchronize our tracks.<br>
+ <br>
+ In the context of your game world you may have loops and samples that are played in different circumstances, and it can be useful to be able to synchronize with other tracks for a more seamless experience.</p>
 
-If `start()`'s second parameter — the offset — is zero, we start playing from the start of the given piece of audio, which is what we do in the first instance. We then store the {{domxref("AudioContext.currentTime")}} — the offset of when the first piece began playing, subtract that from any subsequent `currentTime`s to calculate the actual time, and use that to synchronize our tracks.
+<div class="note">
+<p><strong>注</strong>: This example does not wait for the beat to end before introducing the next piece; we could do this if we knew the BPM (Beats Per Minute) of the tracks.</p>
+</div>
 
-In the context of your game world you may have loops and samples that are played in different circumstances, and it can be useful to be able to synchronize with other tracks for a more seamless experience.
+<p>You may find that the introduction of a new track sounds more natural if it comes in on the beat/bar/phrase or whatever units you want to chunk your background music into.</p>
 
-> **Note:** **注**: This example does not wait for the beat to end before introducing the next piece; we could do this if we knew the BPM (Beats Per Minute) of the tracks.
+<p>To do this before playing the track you want to sync, you should calculate how long it is until the start of the next beat/bar etc.</p>
 
-You may find that the introduction of a new track sounds more natural if it comes in on the beat/bar/phrase or whatever units you want to chunk your background music into.
+<p>Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part — you feed the resulting value to the <code>start()</code> function with the first parameter, which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:</p>
 
-To do this before playing the track you want to sync, you should calculate how long it is until the start of the next beat/bar etc.
-
-Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part — you feed the resulting value to the `start()` function with the first parameter, which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:
-
-```js
-if (offset == 0) {
+<pre class="brush: js notranslate">if (offset == 0) {
   source.start();
   offset = context.currentTime;
 } else {
@@ -263,35 +346,45 @@ if (offset == 0) {
   var remainder = beats - Math.floor(beats);
   var delay = tempo - (remainder*tempo);
   source.start(context.currentTime+delay, relativeTime+delay);
-}
-```
+}</pre>
 
-> **Note:** **注**: You can [try our wait calculator code](http://jsfiddle.net/c87z11jj/2/) here, on JSFiddle (I've synched to the bar in this case).
+<div class="note">
+<p><strong>注</strong>: You can <a href="http://jsfiddle.net/c87z11jj/2/">try our wait calculator code</a> here, on JSFiddle (I've synched to the bar in this case).</p>
+</div>
 
-> **Note:** **注**: If the first parameter is 0 or less than the context `currentTime`, playback will commence immediately.
+<div class="note">
+<p><strong>注</strong>: If the first parameter is 0 or less than the context <code>currentTime</code>, playback will commence immediately.</p>
+</div>
 
-### 場所のオーディオ
+<h3 id="場所のオーディオ">場所のオーディオ</h3>
 
-Positional audio can be an important technique in making audio a key part of an immersive gaming experience. The Web Audio API not only enables us to position a number of audio sources in three-dimensional space but can also allow us to apply filters that make that audio appear more realistic.
+<p>Positional audio can be an important technique in making audio a key part of an immersive gaming experience. The Web Audio API not only enables us to position a number of audio sources in three-dimensional space but can also allow us to apply filters that make that audio appear more realistic.</p>
 
-In short, using the positional capabilities of the Web Audio API we can relate further information about the game world to the player.
+<p>In short, using the positional capabilities of the Web Audio API we can relate further information about the game world to the player.</p>
 
-We can relate:
+<p>We can relate:</p>
 
-- The position of objects
-- The direction of objects (movement of position and recreation of the Doppler effect)
-- The environment (cavernous, underwater, etc.)
+<ul>
+ <li>The position of objects</li>
+ <li>The direction of objects (movement of position and recreation of the Doppler effect)</li>
+ <li>The environment (cavernous, underwater, etc.)</li>
+</ul>
 
-This is especially useful in a three-dimensional environment rendered using [WebGL](/ja/docs/Web/WebGL), where the Web Audio API makes it possible to tie audio to the objects and viewpoints.
+<p>This is especially useful in a three-dimensional environment rendered using <a href="/ja/docs/Web/WebGL">WebGL</a>, where the Web Audio API makes it possible to tie audio to the objects and viewpoints.</p>
 
-> **Note:** **注**: See [Web Audio API Spatialization Basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) for more details.
+<div class="note">
+<p><strong>注</strong>: See <a href="/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio API Spatialization Basics</a> for more details.</p>
+</div>
 
-## こちらも確認
+<h2 id="こちらも確認">こちらも確認</h2>
 
-- [Web Audio API on MDN](/ja/docs/Web/API/Web_Audio_API)
-- [`<audio>` on MDN](/ja/docs/Web/HTML/Element/audio)
-- [Developing Game Audio with the Web Audio API (HTML5Rocks)](http://www.html5rocks.com/en/tutorials/webaudio/games/)
-- [Mixing Positional Audio and WebGL (HTML5Rocks)](http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
-- [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)
-- [Making HTML5 Audio Actually Work on Mobile](http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
-- [Audio Sprites (and fixes for iOS)](http://remysharp.com/2010/12/23/audio-sprites/)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API on MDN</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code> on MDN</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API (HTML5Rocks)</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL (HTML5Rocks)</a></li>
+ <li><a href="https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/">Songs of Diridum: Pushing the Web Audio API to Its Limits</a></li>
+ <li><a href="http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/">Making HTML5 Audio Actually Work on Mobile</a></li>
+ <li><a href="http://remysharp.com/2010/12/23/audio-sprites/">Audio Sprites (and fixes for iOS)</a><br>
+   </li>
+</ul>

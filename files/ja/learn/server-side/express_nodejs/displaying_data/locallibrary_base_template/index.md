@@ -3,12 +3,11 @@ title: LocalLibrary 基本テンプレート
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
-Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.
+<p>Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.</p>
 
-Open **/views/layout.pug** and replace the content with the code below.
+<p>Open<strong> /views/layout.pug</strong> and replace the content with the code below.</p>
 
-```html
-doctype html
+<pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html(lang='en')
   head
     title= title
@@ -46,26 +45,25 @@ html(lang='en')
                 a(href='/catalog/bookinstance/create') Create new book instance (copy)
 
         div(class='col-sm-10')
-          block content
-```
+          block content</code></pre>
 
-The template uses (and includes) JavaScript and CSS from [Bootstrap](http://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
+<p>The template uses (and includes) JavaScript and CSS from <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!</p>
 
-The layout should be fairly obvious if you've read our above [Template primer](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
+<p>The layout should be fairly obvious if you've read our above <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">Template primer</a>. Note the use of <code>block content</code> as a placeholder for where the content for our individual pages will be placed.</p>
 
-The base template also references a local css file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
+<p>The base template also references a local css file (<strong>style.css</strong>) that provides a little additional styling. Open <strong>/public/stylesheets/style.css</strong> and replace its content with the following CSS code:</p>
 
-```css
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-}
-```
+<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token"><span class="class token">.sidebar-nav</span> </span><span class="punctuation token">{</span>
+    <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>
+    <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
+    <span class="property token">list-style</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
 
-When we get round to running our site, we should see the sidebar appear! In the next sections we will use the above layout to define the individual pages.
+<p>When we get round to running our site, we should see the sidebar appear! In the next sections we will use the above layout to define the individual pages.</p>
 
-## Next steps
+<h2 id="Next_steps">Next steps</h2>
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Home page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).
+<ul>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Home page</a>.</li>
+</ul>

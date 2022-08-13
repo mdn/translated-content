@@ -6,18 +6,19 @@ tags:
   - 用語集
 translation_of: Glossary/Grid_Tracks
 ---
-**グリッドトラック**とは、2 本の{{glossary("grid lines", "グリッド線")}}の間の空間のことです。*明示的なグリッド*では、 {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} プロパティ、または一括指定の {{cssxref("grid")}} または {{cssxref("grid-template")}} プロパティを使用して定義します。明示的グリッドで作成したトラックの外側にグリッドアイテムを配置することで、*暗黙的グリッド*にもトラックが生成されます。
+<p><strong>グリッドトラック</strong>とは、2本の{{glossary("grid lines", "グリッド線")}}の間の空間のことです。<em>明示的なグリッド</em>では、 {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} プロパティ、または一括指定の {{cssxref("grid")}} または {{cssxref("grid-template")}} プロパティを使用して定義します。明示的グリッドで作成したトラックの外側にグリッドアイテムを配置することで、<em>暗黙的グリッド</em>にもトラックが生成されます。</p>
 
-次の画像は、グリッドにおける最初の行トラックを表しています。
+<p>次の画像は、グリッドにおける最初の行トラックを表しています。</p>
 
-![Diagram showing a grid track.](https://mdn.mozillademos.org/files/14769/1_Grid_Track.png)
+<p><img alt="Diagram showing a grid track." src="https://mdn.mozillademos.org/files/14769/1_Grid_Track.png" style="height: 222px; width: 333px;"></p>
 
-## 明示的グリッドにおけるトラックの大きさ
+<h2 id="Track_sizing_in_the_explicit_grid" name="Track_sizing_in_the_explicit_grid">明示的グリッドにおけるトラックの大きさ</h2>
 
-{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} プロパティを使ってグリッドトラックを定義する際には、任意の長さ単位もしくは、グリッドコンテナ中で利用可能な領域の一部分を表す柔軟な単位 `fr` を利用できます。次の例は、1 つ目が 200 ピクセルのトラック、2 つ目が 1fr、3 つめが 3fr となる、3 列のトラックから成るグリッドを作っています。グリッドコンテナ中の利用可能な領域のうち 200 ピクセル分を差し引いた残りの領域を 4 分割し、2 つめの列にはその 1 つ分を、3 つめの列には 3 つ分が割り当てられます。
+<p>{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} プロパティを使ってグリッドトラックを定義する際には、任意の長さ単位もしくは、グリッドコンテナ中で利用可能な領域の一部分を表す柔軟な単位 <code>fr</code> を利用できます。次の例は、1 つ目が 200 ピクセルのトラック、2 つ目が 1fr、3 つめが 3fr となる、3 列のトラックから成るグリッドを作っています。グリッドコンテナ中の利用可能な領域のうち 200 ピクセル分を差し引いた残りの領域を 4 分割し、2 つめの列にはその 1 つ分を、3 つめの列には 3 つ分が割り当てられます。</p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="example_1">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -25,44 +26,50 @@ translation_of: Glossary/Grid_Tracks
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
+</pre>
+</div>
 
-```css
-.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 200px 1fr 3fr;
 }
-```
+</pre>
 
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('example_1', '500', '230') }}</p>
 </div>
-```
 
-{{ EmbedLiveSample('example_1', '500', '230') }}
+<h2 id="Track_sizing_in_the_implicit_grid" name="Track_sizing_in_the_implicit_grid">暗黙的グリッドにおけるトラックの大きさ</h2>
 
-## 暗黙的グリッドにおけるトラックの大きさ
+<p>暗黙的グリッドにおけるトラックは、既定では自動的に大きさが決定されますが、 {{cssxref("grid-auto-rows")}} および {{cssxref("grid-auto-columns")}} プロパティでこれらのトラックの大きさを定義することもできます。</p>
 
-暗黙的グリッドにおけるトラックは、既定では自動的に大きさが決定されますが、 {{cssxref("grid-auto-rows")}} および {{cssxref("grid-auto-columns")}} プロパティでこれらのトラックの大きさを定義することもできます。
-
-1.  CSS グリッドレイアウトガイド:
-    _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-2.  [CSS グリッドレイアウト仕様書におけるグリッドトラックの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)
-3.  プロパティリファレンス
-
-    1.  {{cssxref("grid-template-columns")}}
-    2.  {{cssxref("grid-template-rows")}}
-    3.  {{cssxref("grid")}}
-    4.  {{cssxref("grid-template")}}
+<section id="Quick_links">
+<ol>
+ <li>CSS グリッドレイアウトガイド:<br>
+  <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本概念</a></em></li>
+ <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">CSS グリッドレイアウト仕様書におけるグリッドトラックの定義</a></li>
+ <li>プロパティリファレンス
+  <ol>
+   <li>{{cssxref("grid-template-columns")}}</li>
+   <li>{{cssxref("grid-template-rows")}}</li>
+   <li>{{cssxref("grid")}}</li>
+   <li>{{cssxref("grid-template")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

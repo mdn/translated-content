@@ -8,16 +8,20 @@ tags:
   - XPath
 translation_of: Glossary/XPath
 ---
-**XPath** とは{{glossary("XML")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。
+<p><strong>XPath</strong> とは{{glossary("XML")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。</p>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-### 技術リファレンス
+<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
 
-- [MDN の XPath 文書](/ja/docs/Web/XPath)
-- [XPath specification](http://www.w3.org/TR/xpath-30/)
+<ul>
+ <li><a href="/ja/docs/Web/XPath">MDN の XPath 文書</a></li>
+ <li><a href="http://www.w3.org/TR/xpath-30/">XPath specification</a></li>
+</ul>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- [Official website](http://www.w3.org/standards/techs/xpath#w3c_all)
-- Wikipedia の {{interwiki("wikipedia", "XPath")}}
+<ul>
+ <li><a href="http://www.w3.org/standards/techs/xpath#w3c_all">Official website</a></li>
+ <li>Wikipedia の {{interwiki("wikipedia", "XPath")}}</li>
+</ul>

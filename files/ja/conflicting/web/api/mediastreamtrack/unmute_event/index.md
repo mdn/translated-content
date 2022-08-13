@@ -4,34 +4,51 @@ slug: conflicting/Web/API/MediaStreamTrack/unmute_event
 translation_of: Web/API/MediaStreamTrack/onunmute
 original_slug: Web/API/MediaStreamTrack/onunmute
 ---
-{{ APIRef("Media Capture and Streams") }}
+<p>{{ APIRef("Media Capture and Streams") }}</p>
 
-**`MediaStreamTrack.onunmute`**イベントハンドラは{{event("unmute")}}イベントを受け取った時に呼び出されるプロパティです。このイベントは、トラックが再びデータを送信できるようになった時に発生します。
+<p><code><strong>MediaStreamTrack.onunmute</strong></code>イベントハンドラは{{event("unmute")}}イベントを受け取った時に呼び出されるプロパティです。このイベントは、トラックが再びデータを送信できるようになった時に発生します。</p>
 
-## 文法
+<h2 id="文法">文法</h2>
 
-    track.onunmute = function;
+<pre class="eval"><em>track</em>.onunmute = <em>function</em>;
+</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-- `function`はユーザーが定義した関数の名前で末尾の`()`やパラメータを省略したもの、または、`function(event) {...}`の形式で表現された匿名関です。イベントハンドラは常に 、{{domxref("Event")}}型のイベントを含む 1 つのパラメータを持ちます。
+<ul>
+ <li><code>function</code>はユーザーが定義した関数の名前で末尾の<code>()</code>やパラメータを省略したもの、または、<code>function(event) {...}</code>の形式で表現された匿名関です。イベントハンドラは常に 、{{domxref("Event")}}型のイベントを含む1つのパラメータを持ちます。</li>
+</ul>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-dc.onunmute = function(ev) { alert("unmute event detected!"); };
-```
+<pre class="brush: js">dc.onunmute = function(ev) { alert("unmute event detected!"); };
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                             | 状況                                 | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{ SpecName('Media Capture', '#widl-MediaStreamTrack-onunmute', 'MediaStreamTrack.onunmute') }} | {{ Spec2('Media Capture') }} | 初版     |
+<table class="standard-table" style="height: 49px; width: 1000px;">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Media Capture', '#widl-MediaStreamTrack-onunmute', 'MediaStreamTrack.onunmute') }}</td>
+   <td>{{ Spec2('Media Capture') }}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.MediaStreamTrack.onunmute")}}
+<p>{{Compat("api.MediaStreamTrack.onunmute")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{event("unmute")}}イベント、およびその型である{{domxref("Event")}}。
+<ul>
+ <li>{{event("unmute")}}イベント、およびその型である{{domxref("Event")}}。</li>
+</ul>

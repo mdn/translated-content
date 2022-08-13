@@ -15,46 +15,61 @@ tags:
 translation_of: Web/API/Document/onfullscreenerror
 original_slug: Web/API/Document/onfullscreenerror
 ---
-{{ApiRef("Fullscreen API")}}
+<div>{{ApiRef("Fullscreen API")}}</div>
 
-**`Document.onfullscreenerror`** プロパティは、文書が直前の {{domxref("Element.requestFullscreen()")}} の呼び出しの後で全画面モードへの移行に失敗したときに、文書に送信される {{event("fullscreenerror")}} イベントのイベントハンドラーです。
+<p><span class="seoSummary"><code><strong>Document.onfullscreenerror</strong></code> プロパティは、文書が直前の {{domxref("Element.requestFullscreen()")}} の呼び出しの後で全画面モードへの移行に失敗したときに、文書に送信される {{event("fullscreenerror")}} イベントのイベントハンドラーです。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    targetDocument.onfullscreenerror = fullscreenErrorHandler;
+<pre class="syntaxbox"><var>targetDocument</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{event("fullscreenerror")}} イベントのイベントハンドラーです。
+<p>{{event("fullscreenerror")}} イベントのイベントハンドラーです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では `requestFullscreen()` をイベントハンドラーの外で呼び出そうとしています。 `requestFullscreen()` はセキュリティ上の理由から、ユーザー操作への応答の中でしか呼び出せないため、これは失敗し、 `fullscreenerror` が発生して document に送られます。
+<p>この例では <code>requestFullscreen()</code> をイベントハンドラーの外で呼び出そうとしています。 <code>requestFullscreen()</code> はセキュリティ上の理由から、ユーザー操作への応答の中でしか呼び出せないため、これは失敗し、 <code>fullscreenerror</code> が発生して document に送られます。</p>
 
-```js
-document.onfullscreenerror = function ( event ) {
+<pre class="brush: js">document.onfullscreenerror = function ( event ) {
   displayWarning("Unable to switch into full-screen mode.");
 };
 
 //....
 
 document.documentElement.requestFullscreen();
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                               | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("Fullscreen", "#handler-document-onfullscreenerror", "onfullscreenerror")}} | {{Spec2("HTML WHATWG")}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen", "#handler-document-onfullscreenerror", "onfullscreenerror")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.onfullscreenerror")}}
+<p>{{Compat("api.Document.onfullscreenerror")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
-- {{event("fullscreenerror")}}
-- {{domxref("Document.onfullscreenchange")}}
-- {{domxref("Element.onfullscreenerror")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API/Guide">Fullscreen API ガイド</a></li>
+ <li>{{event("fullscreenerror")}}</li>
+ <li>{{domxref("Document.onfullscreenchange")}}</li>
+ <li>{{domxref("Element.onfullscreenerror")}}</li>
+</ul>

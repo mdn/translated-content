@@ -9,4 +9,4 @@ tags:
 translation_of: Glossary/Index
 original_slug: Glossary/Index
 ---
-{{Index("/ja/docs/Glossary")}}
+<p>{{Index("/ja/docs/Glossary")}}</p>

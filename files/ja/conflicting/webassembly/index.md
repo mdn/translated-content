@@ -7,6 +7,6 @@ tags:
 translation_of: WebAssembly/Index
 original_slug: WebAssembly/Index
 ---
-{{WebAssemblySidebar}}
+<div>{{WebAssemblySidebar}}</div>
 
-{{Index("/ja/docs/WebAssembly")}}
+<p>{{Index("/ja/docs/WebAssembly")}}</p>

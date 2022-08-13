@@ -6,29 +6,26 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
-{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 
-この記事では、Firefox 用の拡張機能をどのように作ればよいのか、その初めから最後までを一通り説明します。この拡張機能は "mozilla.org" とそのサブドメインから読み込まれたページに赤い枠を付けるだけです。
+<p>この記事では、Firefox 用の拡張機能をどのように作ればよいのか、その初めから最後までを一通り説明します。この拡張機能は "mozilla.org" とそのサブドメインから読み込まれたページに赤い枠を付けるだけです。</p>
 
-このサンプルのソースコードは GitHub で公開しています（<https://github.com/mdn/webextensions-examples/tree/master/borderify>）。
+<p>このサンプルのソースコードは GitHub で公開しています（<a href="https://github.com/mdn/webextensions-examples/tree/master/borderify">https://github.com/mdn/webextensions-examples/tree/master/borderify</a>）。</p>
 
-これ以降は、バージョン 45 以降の Firefox が必要となります。
+<p>これ以降は、バージョン 45 以降の Firefox が必要となります。</p>
 
-## 拡張機能を書く
+<h2 id="Writing_the_extension" name="Writing_the_extension">拡張機能を書く</h2>
 
-新しいディレクトリーを作成し、そのディレクトリーに移動します。例えば、コマンドライン/ターミナルでは次のようにできます:
+<p>新しいディレクトリーを作成し、そのディレクトリーに移動します。例えば、コマンドライン/ターミナルでは次のようにできます:</p>
 
-```bash
-mkdir borderify
-cd borderify
-```
+<pre class="brush: bash">mkdir borderify
+cd borderify</pre>
 
-### manifest.json
+<h3 id="manifest.json" name="manifest.json">manifest.json</h3>
 
-それでは、"borderify" ディレクトリー配下に新しいファイル "manifest.json" を作成します。以下の内容を書き込んで保存してください。
+<p>それでは、"borderify" ディレクトリー配下に新しいファイル "manifest.json" を作成します。以下の内容を書き込んで保存してください。</p>
 
-```json
-{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "Borderify",
@@ -47,102 +44,110 @@ cd borderify
     }
   ]
 
-}
-```
+}</pre>
 
-- 最初の 3 つのキー [`manifest_version`](/ja/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/ja/Add-ons/WebExtensions/manifest.json/name)、[`version`](/ja/Add-ons/WebExtensions/manifest.json/version) は必須であり、拡張機能の基本的なメタデータを指定します。
-- [`description`](/ja/Add-ons/WebExtensions/manifest.json/description) は省略可能ですが、設定しておくことをお勧めします。この値はアドオンマネージャーに表示されます。
-- [`icons`](/ja/Add-ons/WebExtensions/manifest.json/icons) は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます。
+<ul>
+ <li>最初の 3 つのキー <code><a href="/ja/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="/ja/Add-ons/WebExtensions/manifest.json/name">name</a></code>、<code><a href="/ja/Add-ons/WebExtensions/manifest.json/version">version</a></code> は必須であり、拡張機能の基本的なメタデータを指定します。</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/description">description</a></code> は省略可能ですが、設定しておくことをお勧めします。この値はアドオンマネージャーに表示されます。</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます。</li>
+</ul>
 
-ここで最も興味深いキーは [`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) です。このキーは、指定したパターンにマッチする URL のウェブページにスクリプトを読み込ませるよう Firefox に指示するものです。今回は、"borderify.js" というスクリプトを "mozilla.org" とそのサブドメインの HTTP / HTTPS ページすべてに読み込ませるように指定しています。
+<p>ここで最も興味深いキーは <code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> です。このキーは、指定したパターンにマッチする URL のウェブページにスクリプトを読み込ませるよう Firefox に指示するものです。今回は、"borderify.js" というスクリプトを "mozilla.org" とそのサブドメインの HTTP / HTTPS ページすべてに読み込ませるように指定しています。</p>
 
-- [コンテンツスクリプト関する詳細](/ja/Add-ons/WebExtensions/Content_scripts)
-- [マッチパターンに関する詳細](/ja/Add-ons/WebExtensions/Match_patterns)
+<ul>
+ <li><a href="/ja/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト関する詳細</a></li>
+ <li><a href="/ja/Add-ons/WebExtensions/Match_patterns">マッチパターンに関する詳細</a></li>
+</ul>
 
-> **Warning:** [時折、あなたの拡張機能用に ID を指定する必要があります](/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID)。アドオンの ID が必要なとき、`manifest.json` 内に [`applications`](/ja/Add-ons/WebExtensions/manifest.json/applications) キーを入れて `gecko.id` プロパティをセットします:```json
-> "applications": {
-> "gecko": {
-> "id": "borderify@example.com"
-> }
-> }
->
-> ```
->
-> ```
+<div class="warning">
+<p><a href="/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">時折、あなたの拡張機能用に ID を指定する必要があります</a>。アドオンの ID が必要なとき、<code>manifest.json</code> 内に <code><a href="/ja/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> キーを入れて <code>gecko.id</code> プロパティをセットします:</p>
 
-### icons/border-48.png
+<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"applications":</span> <span class="punctuation token">{</span>
+  <span class="key token">"gecko":</span> <span class="punctuation token">{</span>
+    <span class="key token">"id":</span> <span class="string token">"borderify@example.com"</span>
+  <span class="punctuation token">}</span>
+<span class="punctuation token">}</span></code></pre>
+</div>
 
-拡張機能にはアイコンを用意すると良いでしょう。このアイコンは、アドオンマネージャーでアドオンのリスト横に表示されます。今回の manifest.json では "icons/border-48.png" を用意していると宣言しています。
+<h3 id="iconsborder-48.png" name="iconsborder-48.png">icons/border-48.png</h3>
 
-まずは "borderify" ディレクトリーの下に "icons" ディレクトリーを作成します。次に、アイコンを "border-48.png" という名前で "icons" ディレクトリー内に保存します。必要であれば [サンプルで使用しているアイコン](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png) を利用しても構いません（このアイコンは Google Material Design iconset から引用したものであり、[Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) ライセンスの下で使用しています）。
+<p>拡張機能にはアイコンを用意すると良いでしょう。このアイコンは、アドオンマネージャーでアドオンのリスト横に表示されます。今回の manifest.json では "icons/border-48.png" を用意していると宣言しています。</p>
 
-ここでアイコンを自分で用意する場合は 48x48 ピクセルのサイズにする必要があります。高解像度のディスプレイには 96x96 ピクセルのアイコンを表示させたい場合は、manifest.json の `icons` オブジェクトに `96` というプロパティで設定してください。
+<p>まずは "borderify" ディレクトリーの下に "icons" ディレクトリーを作成します。次に、アイコンを "border-48.png" という名前で "icons" ディレクトリー内に保存します。必要であれば <a href="https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png">サンプルで使用しているアイコン</a> を利用しても構いません（このアイコンは Google Material Design iconset から引用したものであり、<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a> ライセンスの下で使用しています）。</p>
 
-```json
-"icons": {
-  "48": "icons/border-48.png",
-  "96": "icons/border-96.png"
-}
-```
+<p>ここでアイコンを自分で用意する場合は 48x48 ピクセルのサイズにする必要があります。高解像度のディスプレイには 96x96 ピクセルのアイコンを表示させたい場合は、manifest.json の <code>icons</code> オブジェクトに <code>96</code> というプロパティで設定してください。</p>
 
-他の方法として、SVG ファイルを指定すれば正しく拡大・縮小されて表示されます。(しかし、SVG にテキストが含んだアイコンを使っている場合、SVG エディターの "convert to path" ツールでテキストを展開し、適切なサイズ/位置に拡大/縮小したくなるかもしれません。)
+<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
+  <span class="key token">"48":</span> <span class="string token">"icons/border-48.png",
+  "96": "icons/border-96.png"</span>
+<span class="punctuation token">}</span></code></pre>
 
-- [アイコンを指定する方法に関する詳細](/ja/Add-ons/WebExtensions/manifest.json/icons)
+<p>他の方法として、SVG ファイルを指定すれば正しく拡大・縮小されて表示されます。(しかし、SVG にテキストが含んだアイコンを使っている場合、SVG エディターの "convert to path" ツールでテキストを展開し、適切なサイズ/位置に拡大/縮小したくなるかもしれません。)</p>
 
-### borderify.js
+<ul>
+ <li><a href="/ja/Add-ons/WebExtensions/manifest.json/icons">アイコンを指定する方法に関する詳細</a></li>
+</ul>
 
-最後に、"borderify" ディレクトリーの下に "borderify.js" というファイルを作成します。次の内容を書き込んで保存してください。
+<h3 id="borderify.js" name="borderify.js">borderify.js</h3>
 
-```js
-document.body.style.border = "5px solid red";
-```
+<p>最後に、"borderify" ディレクトリーの下に "borderify.js" というファイルを作成します。次の内容を書き込んで保存してください。</p>
 
-このスクリプトは、manifest.json の `content_scripts` キーで指定したパターンにマッチするページに読み込まれます。読み込まれたスクリプトは、そのページ自身のスクリプトと同じようにドキュメントへ直接アクセスします。
+<pre class="brush: js">document.body.style.border = "5px solid red";</pre>
 
-- [コンテンツスクリプトに関する詳細](/ja/Add-ons/WebExtensions/Content_scripts)
+<p>このスクリプトは、manifest.json の <code>content_scripts</code> キーで指定したパターンにマッチするページに読み込まれます。読み込まれたスクリプトは、そのページ自身のスクリプトと同じようにドキュメントへ直接アクセスします。</p>
 
-## 動かしてみよう
+<ul>
+ <li><a href="/ja/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプトに関する詳細</a></li>
+</ul>
 
-ここで、必要なファイルが正しい場所に保存されているか再確認してください。
+<h2 id="Trying_it_out" name="Trying_it_out">動かしてみよう</h2>
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+<p>ここで、必要なファイルが正しい場所に保存されているか再確認してください。</p>
 
-### インストール
+<pre>borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json</pre>
 
-Firefox の場合: [about:debugging](/ja/docs/Tools/about:debugging) ページを開いて、"この Firefox" (Firefox の新しいバージョンで)をクリックし、"一時的なアドオンを読み込む" をクリックし、アドオンのディレクトリーにあるファイルをどれか 1 つ選択します。
+<h3 id="Installing" name="Installing">インストール</h3>
 
-{{EmbedYouTube("cer9EUKegG4")}}
+<p>Firefox の場合: <a href="/ja/docs/Tools/about:debugging">about:debugging</a> ページを開いて、"この Firefox" (Firefox の新しいバージョンで)をクリックし、"一時的なアドオンを読み込む" をクリックし、アドオンのディレクトリーにあるファイルをどれか 1 つ選択します。</p>
 
-ここでインストールされたアドオンは Firefox を再起動するまで有効です。
+<p>{{EmbedYouTube("cer9EUKegG4")}}</p>
 
-あるいは、[web-ext](/ja/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) ツールを使ってコマンドラインから拡張機能を実行することもできます。
+<p>ここでインストールされたアドオンは Firefox を再起動するまで有効です。</p>
 
-### テスト
+<p>あるいは、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> ツールを使ってコマンドラインから拡張機能を実行することもできます。</p>
 
-それでは "mozilla.org" 配下のページを開いてみましょう。ページが赤い枠で囲まれていることを確認できるはずです。
+<h3 id="Testing" name="Testing">テスト</h3>
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+<p>それでは "mozilla.org" 配下のページを開いてみましょう。ページが赤い枠で囲まれていることを確認できるはずです。</p>
 
-> **Note:** ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
+<p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
 
-もう少し実験をします。コンテンツスクリプトを編集して、枠線の色を変更したり、ページのコンテンツに何か他の操作を加えてみましょう。コンテンツスクリプトを保存し、"about:debugging"の"再読み込み"ボタンをクリックして拡張機能ファイルを再読み込みすると、加えた変更がすぐに反映されているはずです。
+<div class="note">
+<p>ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。</p>
+</div>
 
-{{EmbedYouTube("NuajE60jfGY")}}
+<p>もう少し実験をします。コンテンツスクリプトを編集して、枠線の色を変更したり、ページのコンテンツに何か他の操作を加えてみましょう。コンテンツスクリプトを保存し、"about:debugging"の"再読み込み"ボタンをクリックして拡張機能ファイルを再読み込みすると、加えた変更がすぐに反映されているはずです。</p>
 
-- [拡張機能の読み込みに関する詳細](/ja/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk)
+<p>{{EmbedYouTube("NuajE60jfGY")}}</p>
 
-## パッケージ化と公開
+<ul>
+ <li><a href="/ja/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">拡張機能の読み込みに関する詳細</a></li>
+</ul>
 
-自分が作ったアドオンを他の人にも使ってもらうには、アドオンをパッケージとしてまとめた後、署名するために Mozilla へ送信する必要があります。詳細は[拡張機能の公開](/ja/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)を参照してください。
+<h2 id="Packaging_and_publishing" name="Packaging_and_publishing">パッケージ化と公開</h2>
 
-## 次のステップ
+<p>自分が作ったアドオンを他の人にも使ってもらうには、アドオンをパッケージとしてまとめた後、署名するために Mozilla へ送信する必要があります。詳細は<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">拡張機能の公開</a>を参照してください。</p>
 
-これで Firefox 用 WebExtension の開発手順について概念を学ぶことが出来ました。それでは次のステップに進みましょう。
+<h2 id="Whats_next" name="What's_next">次のステップ</h2>
 
-- [拡張機能の中身を詳しく学ぶ](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [より複雑な拡張機能を書いてみる](/ja/Add-ons/WebExtensions/Your_second_WebExtension)
-- [拡張機能で利用できる JavaScript API を詳しく調べる](/ja/Add-ons/WebExtensions/API)
+<p>これで Firefox 用 WebExtension の開発手順について概念を学ぶことが出来ました。それでは次のステップに進みましょう。</p>
+
+<ul>
+ <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">拡張機能の中身を詳しく学ぶ</a></li>
+ <li><a href="/ja/Add-ons/WebExtensions/Your_second_WebExtension">より複雑な拡張機能を書いてみる</a></li>
+ <li><a href="/ja/Add-ons/WebExtensions/API">拡張機能で利用できる JavaScript API を詳しく調べる</a></li>
+</ul>

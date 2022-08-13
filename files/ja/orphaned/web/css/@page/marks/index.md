@@ -13,58 +13,73 @@ tags:
 translation_of: Web/CSS/@page/marks
 original_slug: Web/CSS/@page/marks
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-[CSS](/ja/docs/Web/CSS) の **`marks`** [@-規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} @-規則で使用し、文書の表現に対して裁ち落とし記号や十字記号を追加します。*裁ち落とし記号*はページを切断するべき場所を示します。*十字記号*はシートの配置のために使用します。
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>marks</code></strong> <a href="/ja/docs/Web/CSS/At-rule">@-規則</a>記述子は、 {{cssxref("@page")}} @-規則で使用し、文書の表現に対して裁ち落とし記号や十字記号を追加します。<em>裁ち落とし記号</em>はページを切断するべき場所を示します。<em>十字記号</em>はシートの配置のために使用します。</p>
 
-裁ち落とし記号や十字記号はページボックスの外側に印刷されます。裁ち落とし記号や十字記号を表示する余地を確保するため、最終的なページはページボックスよりいくらか大きくする必要があります。
+<p>裁ち落とし記号や十字記号はページボックスの外側に印刷されます。裁ち落とし記号や十字記号を表示する余地を確保するため、最終的なページはページボックスよりいくらか大きくする必要があります。</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-```css
-/* キーワード値 */
+<pre class="brush:css">/* キーワード値 */
 marks: none;
 marks: crop;
 marks: cross;
 marks: crop cross;
-```
+</pre>
 
-### 値
+<h3 id="Values" name="Values">値</h3>
 
-- `crop`
-  - : 裁ち落とし記号を表示します。
-- `cross`
-  - : 十字記号を表示します。
-- `none`
-  - : 記号を表示しません。
+<dl>
+ <dt><code>crop</code></dt>
+ <dd>裁ち落とし記号を表示します。</dd>
+ <dt><code>cross</code></dt>
+ <dd>十字記号を表示します。</dd>
+ <dt><code>none</code></dt>
+ <dd>記号を表示しません。</dd>
+</dl>
 
-### 形式文法
+<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
 
 {{csssyntax}}
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```css
-@page {
+<pre class="brush: css">@page {
   marks: crop cross;
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                               | 状態                                     | 備考       |
-| -------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{SpecName('CSS3 Paged Media', '#marks', 'marks')}} | {{Spec2('CSS3 Paged Media')}} | 初回定義。 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Paged Media', '#marks', 'marks')}}</td>
+   <td>{{Spec2('CSS3 Paged Media')}}</td>
+   <td>初回定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-この CSS プロパティは当初は CSS Level 2 で提案されましたが、 CSS Level 2 (Revision 1) で落とされました。
+<p>この CSS プロパティは当初は CSS Level 2 で提案されましたが、 CSS Level 2 (Revision 1) で落とされました。</p>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("css.at-rules.page.marks")}}
+<p>{{Compat("css.at-rules.page.marks")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{Cssxref("@page/bleed", "bleed")}}
-- {{Cssxref("@page/size", "size")}}
+<ul>
+ <li>{{Cssxref("@page/bleed", "bleed")}}</li>
+ <li>{{Cssxref("@page/size", "size")}}</li>
+</ul>

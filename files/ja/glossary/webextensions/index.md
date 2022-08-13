@@ -8,10 +8,12 @@ tags:
   - WebExtensions
 translation_of: Glossary/WebExtensions
 ---
-WebExtensions は Firefox でブラウザー拡張機能を開発するためのクロスブラウザーシステムです。このシステムには API が提供され、これはかなりにわたって様々なブラウザー、例えば Mozilla Firefox, Google Chrome, Opera Browser, Microsoft Edge をサポートします。
+<p>WebExtensions はFirefoxでブラウザー拡張機能を開発するためのクロスブラウザーシステムです。このシステムには APIが提供され、これはかなりにわたって様々なブラウザー、例えば Mozilla Firefox, Google Chrome, Opera Browser, Microsoft Edge をサポートします。</p>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-### 技術リファレンス
+<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
 
-- MDN の[ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions)
+<ul>
+ <li>MDN の<a href="/ja/docs/Mozilla/Add-ons/WebExtensions">ブラウザー拡張機能</a></li>
+</ul>

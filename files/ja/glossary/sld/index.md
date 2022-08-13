@@ -8,21 +8,28 @@ tags:
   - 用語集
 translation_of: Glossary/SLD
 ---
-SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD")}} 直下の階層のドメイン名です。
+<p>SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD")}} 直下の階層のドメイン名です。</p>
 
-例えば `mozilla.org` では、 `mozilla` が TLD の `.org` に対するセカンドレベルドメインです。
+<p>例えば <code>mozilla.org</code> では、 <code>mozilla</code> が TLD の <code>.org</code> に対するセカンドレベルドメインです。</p>
 
-ドメイン名は TLD および SLD だけではありません。サーバーの様々な機能についての追加情報を提供するため、またはサブドメイン以下の領域を区切るために、追加のサブドメインを生成することができます。例えば、 `www` はウェブサーバーのドメインポイントを示すサブドメインとしてよく使われます。
+<p>ドメイン名は TLD および SLD だけではありません。サーバーの様々な機能についての追加情報を提供するため、またはサブドメイン以下の領域を区切るために、追加のサブドメインを生成することができます。例えば、 <code>www</code> はウェブサーバーのドメインポイントを示すサブドメインとしてよく使われます。</p>
 
-もう一つの例として、 `developer.mozilla.org` では、 `developer` サブドメインが、 Mozilla ウェブサイトの開発者向け (developer) の章を含むサブドメインを指定するのに使われています。
+<p>もう一つの例として、 <code>developer.mozilla.org</code> では、 <code>developer</code> サブドメインが、 Mozilla ウェブサイトの開発者向け (developer) の章を含むサブドメインを指定するのに使われています。</p>
 
-1.  Wikipedia articles
-
-    1.  {{Interwiki("wikipedia", "セカンドレベルドメイン", "SLD")}}
-
-2.  [用語集](/ja/docs/Glossary)
-
-    1.  {{Glossary("DNS")}}
-    2.  {{Glossary("Domain", "ドメイン")}}
-    3.  {{Glossary("Domain name", "ドメイン名")}}
-    4.  {{Glossary("TLD")}}
+<section id="Quick_links">
+<ol>
+ <li>Wikipedia articles
+  <ol>
+   <li>{{Interwiki("wikipedia", "セカンドレベルドメイン", "SLD")}}</li>
+  </ol>
+ </li>
+ <li><a href="/ja/docs/Glossary">用語集</a>
+  <ol>
+   <li>{{Glossary("DNS")}}</li>
+   <li>{{Glossary("Domain", "ドメイン")}}</li>
+   <li>{{Glossary("Domain name", "ドメイン名")}}</li>
+   <li>{{Glossary("TLD")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

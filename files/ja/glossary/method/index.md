@@ -9,26 +9,38 @@ tags:
   - 用語集
 translation_of: Glossary/Method
 ---
-**メソッド**は{{glossary("object","オブジェクト")}}の{{glossary("property","プロパティ")}}である{{glossary("function", "関数")}}です。メソッドには 2 種類があります。オブジェクトインスタンスごとに内蔵されたタスクとして実行される*インスタンスメソッド*と、オブジェクトのコンストラクターで直接呼び出しを行うタスクである*{{Glossary("static method", "静的メソッド")}}*です。
+<p><strong>メソッド</strong>は{{glossary("object","オブジェクト")}}の{{glossary("property","プロパティ")}}である{{glossary("function", "関数")}}です。メソッドには 2種類があります。オブジェクトインスタンスごとに内蔵されたタスクとして実行される<em>インスタンスメソッド</em>と、オブジェクトのコンストラクターで直接呼び出しを行うタスクである<em>{{Glossary("static method", "静的メソッド")}}</em>です。</p>
 
-> **Note:** **メモ:** JavaScript では、関数自身はオブジェクトです。そういう意味では、メソッドは実際には関数への{{glossary("object reference", "オブジェクト参照")}}です。
+<div class="note">
+<p><strong>メモ:</strong> JavaScript では、関数自身はオブジェクトです。そういう意味では、メソッドは実際には関数への{{glossary("object reference", "オブジェクト参照")}}です。</p>
+</div>
 
-## 詳細情報
+<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
 
-### 参考記事
+<h3 id="Learn_about_it" name="Learn_about_it">参考記事</h3>
 
-- Wikipedia 上の記事「{{InterWiki("wikipedia","メソッド_(計算機科学)")}}」
-- [JavaScript のメソッドの定義方法](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (従来の構文と新しい簡略記法の比較)
+<ul>
+ <li>Wikipedia 上の記事「{{InterWiki("wikipedia","メソッド_(計算機科学)")}}」</li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions">JavaScript のメソッドの定義方法</a> (従来の構文と新しい簡略記法の比較)</li>
+</ul>
 
-### 技術リファレンス
+<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
 
-- [JavaScript 内蔵メソッド一覧](/ja/docs/Web/JavaScript/Reference/Methods_Index)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Methods_Index">JavaScript 内蔵メソッド一覧</a></li>
+</ul>
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+<section id="Quick_links">
+<ul>
+ <li><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a>
 
-  - {{Glossary("function", "関数")}}
-  - {{Glossary("object","オブジェクト")}}
-  - {{Glossary("property","プロパティ")}}
-  - {{Glossary("static method","静的メソッド")}}
-
-- [JavaScript でのメソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+  <ul>
+   <li>{{Glossary("function", "関数")}}</li>
+   <li>{{Glossary("object","オブジェクト")}}</li>
+   <li>{{Glossary("property","プロパティ")}}</li>
+   <li>{{Glossary("static method","静的メソッド")}}</li>
+  </ul>
+ </li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions">JavaScript でのメソッドの定義</a></li>
+</ul>
+</section>

@@ -10,28 +10,32 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ontouchend
 original_slug: Web/API/GlobalEventHandlers/ontouchend
 ---
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
 
-**`ontouchstart`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("touchstart")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。
+<p><strong><code>ontouchstart</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("touchstart")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</p>
 
-> **Note:** **注:** このプロパティは公式には標準化されて*いません*。これは {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} 仕様書で定義されているものであり、 {{SpecName('Touch Events')}} {{Spec2('Touch Events')}} では定義されていません。このプロパティは広く実装されているわけではありません。
+<div class="note">
+<p><strong>注:</strong> このプロパティは公式には標準化されて<em>いません</em>。これは {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} 仕様書で定義されているものであり、 {{SpecName('Touch Events')}} {{Spec2('Touch Events')}} では定義されていません。このプロパティは広く実装されているわけではありません。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var endHandler = targetElement.ontouchend;
+<pre class="syntaxbox notranslate">var <var>endHandler</var> = <var>targetElement</var>.ontouchend;
+</pre>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-- `endHandler`
-  - : 要素 `targetElement` の `touchend` イベントハンドラー。
+<dl>
+ <dt><code><var>endHandler</var></code></dt>
+ <dd>要素 <code><var>targetElement</var></code> の <code>touchend</code> イベントハンドラー。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、`ontouchend` を使用して要素の `touchend` イベントを処理する 2 つの方法を示します。
+<p>この例では、<code>ontouchend</code> を使用して要素の <code>touchend</code> イベントを処理する2つの方法を示します。</p>
 
-```js
-<html>
-<script>
+<pre class="brush: js notranslate">&lt;html&gt;
+&lt;script&gt;
 function endTouch(ev) {
   // イベントの処理
 }
@@ -39,25 +43,40 @@ function init() {
   let el = document.getElementById('target1');
   el.ontouchend = endTouch;
 }
-</script>
+&lt;/script&gt;
 
-<body onload="init();">
-  <div id="target1"> Touch me ... </div>
-  <div id="target2" ontouchend="endTouch(event)"> Touch me ... </div>
-</body>
-</html>
-```
+&lt;body onload="init();"&gt;
+  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+  &lt;div id="target2" ontouchend="endTouch(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                                 | 備考     |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchend')}} | {{Spec2('Touch Events 2')}} | 非安定版 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchend')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>非安定版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.ontouchend")}}
+<p>{{Compat("api.GlobalEventHandlers.ontouchend")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{ event("touchend") }}
+<ul>
+ <li>{{ event("touchend") }}</li>
+</ul>

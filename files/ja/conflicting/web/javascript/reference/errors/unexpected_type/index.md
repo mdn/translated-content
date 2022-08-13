@@ -9,14 +9,13 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
 original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "can't access property" は、 {{jsxref("undefined")}} または {{jsxref("null")}} の値に対してプロパティのアクセスが行われた場合に発生します。
+<p>JavaScript の例外 "can't access property" は、 {{jsxref("undefined")}} または {{jsxref("null")}} の値に対してプロパティのアクセスが行われた場合に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
+<pre class="brush: js">TypeError: Unable to get property {x} of undefined or null reference (Edge)
 TypeError: can't access property {x} of {y} (Firefox)
 TypeError: {y} is undefined, can't access property {x} of it (Firefox)
 TypeError: {y} is null, can't access property {x} of it (Firefox)
@@ -26,40 +25,39 @@ TypeError: x is undefined, can't access property "prop" of it
 TypeError: x is null, can't access property "prop" of it
 TypeError: can't access property "prop" of undefined
 TypeError: can't access property "prop" of null
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-{{jsxref("undefined")}} か {{jsxref("null")}} に対してプロパティアクセスを行いました。
+<p>{{jsxref("undefined")}} か {{jsxref("null")}} に対してプロパティアクセスを行いました。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 無効な場合
+<h3 id="Invalid_cases">無効な場合</h3>
 
-```js example-bad
-// undefined and null cases on which the substring method won't work
+<pre class="brush: js example-bad">// undefined and null cases on which the substring method won't work
 var foo = undefined;
 foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
 
 var foo = null;
 foo.substring(1); // TypeError: x is null, can't access property "substring" of it
-```
+</pre>
 
-### 問題の修正
+<h3 id="Fixing_the_issue">問題の修正</h3>
 
-`undefined` か `null` のヌルポインターアクセスを修正するには、たとえば [typeof](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子を使用することができます。
+<p><code>undefined</code> か <code>null</code> のヌルポインターアクセスを修正するには、たとえば <a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 演算子を使用することができます。</p>
 
-```js
-if (typeof foo !== 'undefined') {
+<pre class="brush: js">if (typeof foo !== 'undefined') {
   // Now we know that foo is defined, we are good to go.
-}
-```
+}</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+<ul>
+  <li>{{jsxref("undefined")}}</li>
+  <li>{{jsxref("null")}}</li>
+</ul>

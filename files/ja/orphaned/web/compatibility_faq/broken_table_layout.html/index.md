@@ -6,51 +6,63 @@ tags:
   - Layout
 original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 ---
-## 概要
+<h2 id="概要">概要</h2>
 
-テーブルのセル幅に統一性がなく、テーブル全体のレイアウトが崩れます。
+<p>　テーブルのセル幅に統一性がなく、テーブル全体のレイアウトが崩れます。</p>
 
-![](https://mdn.mozillademos.org/files/9963/0107_1.jpg)　　![](https://mdn.mozillademos.org/files/9965/0107_2.jpg)
+<div style=""><img alt="" src="https://mdn.mozillademos.org/files/9963/0107_1.jpg" style="width: 266px; height: 500px; margin-right: 10px; margin-left: 10px;">　　<img alt="" src="https://mdn.mozillademos.org/files/9965/0107_2.jpg" style="width: 271px; height: 500px; margin-right: 10px; margin-left: 10px;"></div>
 
-左：Firefox 　右：他ブラウザ
+<p>左：Firefox　右：他ブラウザ</p>
 
-## 要因
+<h2 id="要因">要因</h2>
 
-要因の代表例として以下があります。
+<p>　要因の代表例として以下があります。</p>
 
-1.  **テーブルのセル幅の未指定**
+<ol>
+ <li>
+  <p><strong>テーブルのセル幅の未指定</strong></p>
 
-    テーブルのセル幅が明示的に指定されていないため、セルの横幅がテーブル各行左側のセルのサイズに合わせて伸縮しています。
+  <p>　テーブルのセル幅が明示的に指定されていないため、セルの横幅がテーブル各行左側のセルのサイズに合わせて伸縮しています。</p>
 
-        　　#maincontent section.category .list div{
-        	display: table;
-        	width: 100%;
-        	border-top: #b2b2b2 1px solid;
-        　　}
+  <pre><code><font size="3">　　#maincontent section.category .list div{
+	display: table;
+	width: 100%;
+	border-top: #b2b2b2 1px solid;
+　　}		</font></code></pre>
 
-    上記のようなテーブル指定に加えて、更に横並びのセルが左右均等となるような配置指定が必要となります。
+  <p>　上記のようなテーブル指定に加えて、更に横並びのセルが左右均等となるような配置指定が必要となります。<br>
+    </p>
+ </li>
+</ol>
 
-## 解決策
+<h2 id="解決策">解決策</h2>
 
-解決策の代表例として以下があります。
+<p>　解決策の代表例として以下があります。</p>
 
-1.  **テーブルのセル幅の未指定**
+<ol>
+ <li>
+  <p><strong>テーブルのセル幅の未指定</strong></p>
 
-    テーブルの配置指定に [table-layout](/ja/docs/Web/CSS/table-layout): fixed; を適用させます。
-    [table-layout](/ja/docs/Web/CSS/table-layout): fixed; の指定により、横並びのセル幅が左右均等になります。
+  <p>テーブルの配置指定に <a href="https://developer.mozilla.org/ja/docs/Web/CSS/table-layout">table-layout</a>: fixed; を適用させます。<br>
+   <a href="https://developer.mozilla.org/ja/docs/Web/CSS/table-layout">table-layout</a>: fixed; の指定により、横並びのセル幅が左右均等になります。</p>
 
-        　　#maincontent section.category .list div{
-        	display: table;
-        	table-layout: fixed;
-        	width: 100%;
-        	border-top: #b2b2b2 1px solid;
-        　　}
+  <pre><code><font size="3">　　#maincontent section.category .list div{
+	display: table;
+	<font>table-layout</font>: <b>fixed</b>;
+	width: 100%;
+	border-top: #b2b2b2 1px solid;
+　　}	</font></code></pre>
 
-## メリット
+  <p> </p>
+ </li>
+</ol>
 
-・他のブラウザでも互換性を維持することができます。
-　・細かい px の指定をせずにテーブルの見た目を整えることができます。
-　・また、後続するセルのコンテンツが用意された列幅をオーバーフロー(はみ出し)した場合にも、
-　　発生したセルに対して[overflow](/ja/docs/Web/CSS/overflow)プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。
+<h2 id="メリット">メリット</h2>
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+<p>　・他のブラウザでも互換性を維持することができます。<br>
+ 　・細かいpxの指定をせずにテーブルの見た目を整えることができます。<br>
+ 　・また、後続するセルのコンテンツが用意された列幅をオーバーフロー(はみ出し)した場合にも、<br>
+ 　　発生したセルに対して<a href="https://developer.mozilla.org/ja/docs/Web/CSS/overflow">overflow</a>プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。</p>
+
+<p><br>
+ <a href="https://developer.mozilla.org/ja/docs/Web/Compatibility_FAQ">戻る</a></p>

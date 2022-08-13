@@ -16,44 +16,47 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ontransitionend
 original_slug: Web/API/GlobalEventHandlers/ontransitionend
 ---
-{{APIRef("CSS3 Transitions")}}
+<div>{{APIRef("CSS3 Transitions")}}</div>
 
-**`ontransitionend`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("transitionend")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
+<p><strong><code>ontransitionend</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("transitionend")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
 
-`transitionend` イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)が完了すると発生します。
+<p><code>transitionend</code> イベントは、 <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>が完了すると発生します。</p>
 
-> **Note:** トランジションの実行が完了する前に対象ノードからトランジションが削除された場合、 {{event("transitionend")}} イベントは生成されません。これは、対象に適用される {{cssxref("transition-property")}} 属性の値を変更することで発生します。もう一つは、 {{cssxref("display")}} 属性が `none` に設定されている場合です。
+<div class="note">
+<p>トランジションの実行が完了する前に対象ノードからトランジションが削除された場合、 {{event("transitionend")}} イベントは生成されません。これは、対象に適用される {{cssxref("transition-property")}} 属性の値を変更することで発生します。もう一つは、 {{cssxref("display")}} 属性が <code>none</code> に設定されている場合です。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var transitionEndHandler = target.ontransitionend;
+<pre class="syntaxbox notranslate">var <var>transitionEndHandler</var> = <var>target</var>.ontransitionend;
 
-    target.ontransitionend = {{jsxref("Function")}}
+<var>target</var>.ontransitionend = <var>{{jsxref("Function")}}</var>
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-関数 ({{jsxref("Function")}}) で、 CSS トランジションの完了を示す {{event("transitionend")}} イベントが `target` 上で発生した場合に呼び出されるものです。対象となるオブジェクトは HTML 要素 ({{domxref("HTMLElement")}})、文書 ({{domxref("Document")}})、ウィンドウ ({{domxref("Window")}}) です。この関数は単一の引数、発生したイベントを記述する {{domxref("TransitionEvent")}} を単一の引数として受け取ります。イベントの {{domxref("TransitionEvent.elapsedTime")}} プロパティの値は、 {{cssxref("transition-duration")}} の値と同じでなければなりません。
+<p>関数 ({{jsxref("Function")}}) で、 CSS トランジションの完了を示す {{event("transitionend")}} イベントが <code><var>target</var></code> 上で発生した場合に呼び出されるものです。対象となるオブジェクトは HTML 要素 ({{domxref("HTMLElement")}})、文書 ({{domxref("Document")}})、ウィンドウ ({{domxref("Window")}}) です。この関数は単一の引数、発生したイベントを記述する {{domxref("TransitionEvent")}} を単一の引数として受け取ります。イベントの {{domxref("TransitionEvent.elapsedTime")}} プロパティの値は、 {{cssxref("transition-duration")}} の値と同じでなければなりません。</p>
 
-> **Note:** `elapsedTime` には、トランジション効果が始まる前の時間は含まれていません。つまり、 {{cssxref("transition-delay")}} の値は、待ち時間が終了してアニメーションが始まるまでは 0 である `elapsedTime` の値に影響しません。
+<div class="note">
+<p><code>elapsedTime</code> には、トランジション効果が始まる前の時間は含まれていません。つまり、 {{cssxref("transition-delay")}} の値は、待ち時間が終了してアニメーションが始まるまでは 0 である <code>elapsedTime</code> の値に影響しません。</p>
+</div>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、{{event("transitionrun")}} イベントと {{event("transitionend")}} イベントを使用して、トランジションの開始と終了を検出し、トランジション中にテキスト更新が発生するようにしています。これは、アニメーションやその他のエフェクトを起動して、反応を連鎖させるために使用することもできます。
+<p>この例では、{{event("transitionrun")}} イベントと {{event("transitionend")}} イベントを使用して、トランジションの開始と終了を検出し、トランジション中にテキスト更新が発生するようにしています。これは、アニメーションやその他のエフェクトを起動して、反応を連鎖させるために使用することもできます。</p>
 
-### HTML
+<h3 id="HTML" name="HTML">HTML</h3>
 
-これは単純に {{HTMLElement("div")}} を作成するだけで、以下の CSS でスタイルを変更して、ボックスの大きさを変更したり色を変更したりします。
+<p>これは単純に {{HTMLElement("div")}} を作成するだけで、以下の CSS でスタイルを変更して、ボックスの大きさを変更したり色を変更したりします。</p>
 
-```html
-<div class="box"></div>
-```
+<pre class="brush: html; notranslate">&lt;div class="box"&gt;&lt;/div&gt;
+</pre>
 
-### CSS
+<h3 id="CSS" name="CSS">CSS</h3>
 
-以下の CSS は、ボックスのスタイルを設定し、ボックスの色と大きさを変化させ、マウスカーソルがボックスの上に乗っている間にボックスが回転するようなトランジション効果を適用しています。
+<p>以下の CSS は、ボックスのスタイルを設定し、ボックスの色と大きさを変化させ、マウスカーソルがボックスの上に乗っている間にボックスが回転するようなトランジション効果を適用しています。</p>
 
-```css
-.box {
+<pre class="brush: css; highlight:[13,14] notranslate">.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -75,42 +78,56 @@ original_slug: Web/API/GlobalEventHandlers/ontransitionend
   height: 200px;
   transform: rotate(180deg);
 }
-```
+</pre>
 
-### JavaScript
+<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
 
-次に、トランジションの開始時と終了時にボックスのテキストコンテンツを変更するためにイベントハンドラ－を設定します。
+<p>次に、トランジションの開始時と終了時にボックスのテキストコンテンツを変更するためにイベントハンドラ－を設定します。</p>
 
-```js
-let box = document.querySelector(".box");
+<pre class="brush: js notranslate">let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
   box.innerHTML = "Zooming...";
 }
 box.ontransitionend = function(event) {
   box.innerHTML = "Done!";
 }
-```
+</pre>
 
-### 結果
+<h3 id="Result" name="Result">結果</h3>
 
-結果のコンテンツは次のようになります。
+<p>結果のコンテンツは次のようになります。</p>
 
-{{EmbedLiveSample('Example', 600, 280)}}
+<p>{{EmbedLiveSample('Example', 600, 280)}}</p>
 
-マウスカーソルをボックスの上に置いてから、マウスを移動させるとどうなるかに注目してください。
+<p>マウスカーソルをボックスの上に置いてから、マウスを移動させるとどうなるかに注目してください。</p>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                                                       | 状態                                     | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---- |
-| {{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}} | {{Spec2('CSS3 Transitions')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.ontransitionend")}}
+<p>{{Compat("api.GlobalEventHandlers.ontransitionend")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- このハンドラーを起動する {{event("transitionend")}} イベント
-- {{domxref("TransitionEvent")}}
-- トランジションが開始したときに発生する {{event("transitionrun")}} イベント
+<ul>
+ <li>このハンドラーを起動する {{event("transitionend")}} イベント</li>
+ <li>{{domxref("TransitionEvent")}}</li>
+ <li>トランジションが開始したときに発生する {{event("transitionrun")}} イベント</li>
+</ul>

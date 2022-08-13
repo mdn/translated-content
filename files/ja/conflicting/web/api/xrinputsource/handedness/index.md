@@ -19,25 +19,26 @@ tags:
 translation_of: Web/API/XRHandedness
 original_slug: Web/API/XRHandedness
 ---
-{{APIRef("WebXR")}}
+<p>{{APIRef("WebXR")}}</p>
 
-WebXR の **`XRHandedness`** 列挙型は、使用している XR 入力デバイスに接続された特定の入力コントローラーを操作するために使用しているユーザーの手を識別する値を提供します。 `XRHandedness` は、{{domxref("XRInputSource")}} の {{domxref("XRInputSource.handedness", "handedness")}} プロパティの値として使用されます。
+<p>WebXR の <strong><code>XRHandedness</code></strong> 列挙型は、使用している XR 入力デバイスに接続された特定の入力コントローラーを操作するために使用しているユーザーの手を識別する値を提供します。 <code>XRHandedness</code> は、{{domxref("XRInputSource")}} の {{domxref("XRInputSource.handedness", "handedness")}} プロパティの値として使用されます。</p>
 
-## 値
+<h2 id="Values" name="Values">値</h2>
 
-- `none`
-  - : 入力コントローラーは、ユーザーのいずれの手にも関連付けられていません。
-- `left`
-  - : 入力コントローラーは、ユーザーの左手に握られているか、着用されているか、取り付けられています。
-- `right`
-  - : 入力コントローラーは、ユーザーの右手に握られているか、着用されているか、取り付けられています。
+<dl>
+ <dt><code>none</code></dt>
+ <dd>入力コントローラーは、ユーザーのいずれの手にも関連付けられていません。</dd>
+ <dt><code>left</code></dt>
+ <dd>入力コントローラーは、ユーザーの左手に握られているか、着用されているか、取り付けられています。</dd>
+ <dt><code>right</code></dt>
+ <dd>入力コントローラーは、ユーザーの右手に握られているか、着用されているか、取り付けられています。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`handedness` の重要な使用方法の 1 つは、コントローラーがどちらの手にあるかを判別して、仮想空間でその手（またはその手が制御しているデバイス）の表現を描画できるようにすることです。
+<p><code>handedness</code> の重要な使用方法の1つは、コントローラーがどちらの手にあるかを判別して、仮想空間でその手（またはその手が制御しているデバイス）の表現を描画できるようにすることです。</p>
 
-```js
-function updateInputSources(session, frame, refSpace) {
+<pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
   for (let source of session.inputSources) {
     if (source.gripSpace) {
       let gripPose = frame.getPose(source.gripSpace, refSpace);
@@ -48,25 +49,38 @@ function updateInputSources(session, frame, refSpace) {
     }
   }
 }
-```
+</pre>
 
-この関数は、すべてのアニメーションフレーム（または必要な滑らかさの程度とパフォーマンスの制約に応じて定期的に）で呼ばれ、入力ソースのリストをスキャンして、`null` ではない {{domxref("XRInputSource.gripSpace", "gripSpace")}} を持つものを探します。 `gripSpace` が存在する場合、それは入力ソースが何らかのハンドヘルドデバイスであることを意味するため、可能であれば視覚的にレンダリングする必要があります。
+<p>この関数は、すべてのアニメーションフレーム（または必要な滑らかさの程度とパフォーマンスの制約に応じて定期的に）で呼ばれ、入力ソースのリストをスキャンして、<code>null</code> ではない {{domxref("XRInputSource.gripSpace", "gripSpace")}} を持つものを探します。 <code>gripSpace</code> が存在する場合、それは入力ソースが何らかのハンドヘルドデバイスであることを意味するため、可能であれば視覚的にレンダリングする必要があります。</p>
 
-`gripSpace` が `null` 以外の場合、この関数は、現在の参照空間に変換された `gripSpace` のポーズを取得します。 それが有効であると仮定すると、`myRenderHandObject()` と呼ばれる関数が、グリップのポーズと `handedness` の値を使用して呼び出されます。 これらの値が手元にあれば（しゃれは意図していません）、`myRenderHandObject()` は、正しい手のために配置および形成された適切なモデルを描画できます。
+<p><code>gripSpace</code> が <code>null</code> 以外の場合、この関数は、現在の参照空間に変換された <code>gripSpace</code> のポーズを取得します。 それが有効であると仮定すると、<code>myRenderHandObject()</code> と呼ばれる関数が、グリップのポーズと <code>handedness</code> の値を使用して呼び出されます。 これらの値が手元にあれば（しゃれは意図していません）、<code>myRenderHandObject()</code> は、正しい手のために配置および形成された適切なモデルを描画できます。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                             | 状態                     | コメント |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#enumdef-xrhandedness','XRHandedness')}} | {{Spec2('WebXR')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebXR','#enumdef-xrhandedness','XRHandedness')}}</td>
+   <td>{{Spec2('WebXR')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.XRHandedness")}}
+<p>{{Compat("api.XRHandedness")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
-- [入力と入力ソース](/ja/docs/Web/API/WebXR_Device_API/Inputs)
-- [WebXR アプリケーションでのゲームパッドの使用](/ja/docs/Web/WebXR%20Device%20API/Gamepads)
-- {{domxref("XREye")}}: ビューを表示する対象の目を示します
+<ul>
+ <li><a href="/ja/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
+ <li><a href="/ja/docs/Web/API/WebXR_Device_API/Inputs">入力と入力ソース</a></li>
+ <li><a href="/ja/docs/Web/WebXR%20Device%20API/Gamepads">WebXR アプリケーションでのゲームパッドの使用</a></li>
+ <li>{{domxref("XREye")}}: ビューを表示する対象の目を示します</li>
+</ul>

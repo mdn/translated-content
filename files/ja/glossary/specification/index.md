@@ -7,14 +7,18 @@ tags:
   - Standardization
 translation_of: Glossary/Specification
 ---
-**specification** とは、製品を出荷する前にどのような機能や属性を含める必要があるかを詳しく説明したドキュメントです。 Web を説明する文脈において "specification" という用語 (多くの場合 "spec" と略される) は、一般にオープンな Web テクノロジーの完全なセットを構成する言語、技術、または {{Glossary("API")}} を説明するドキュメントを意味します。
+<p><strong>specification </strong>とは、製品を出荷する前にどのような機能や属性を含める必要があるかを詳しく説明したドキュメントです。 Web を説明する文脈において "specification" という用語 (多くの場合 "spec" と略される) は、一般にオープンな Web テクノロジーの完全なセットを構成する言語、技術、または {{Glossary("API")}} を説明するドキュメントを意味します。</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-### 一般知識
+<h3 id="一般知識">一般知識</h3>
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Specification")}}
+<ul>
+ <li>Wikipedia 上の {{Interwiki("wikipedia", "Specification")}}</li>
+</ul>
 
-### 技術リファレンス
+<h3 id="技術リファレンス">技術リファレンス</h3>
 
-- [Open Web platform specifications](/ja/docs/Web/Specification_list)
+<ul>
+ <li><a href="/ja/docs/Web/Specification_list">Open Web platform specifications</a></li>
+</ul>

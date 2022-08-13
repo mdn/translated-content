@@ -3,42 +3,42 @@ title: テンプレートプライマー
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
-A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
+<p>A template is a text file defining the <em>structure</em> or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in <em>Express</em>, templates are referred to as <em>views</em>).</p>
 
-## Express template choices
+<h2 id="Express_template_choices">Express template choices</h2>
 
-Express can be used with many different [template rendering engines](https://expressjs.com/en/guide/using-template-engines.html). In this tutorial we use [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml](http://haml.info/)".
+<p>Express can be used with many different <a class="external external-icon" href="https://expressjs.com/en/guide/using-template-engines.html" rel="noopener">template rendering engines</a>. In this tutorial we use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> (formerly known as <em>Jade</em>) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>".</p>
 
-Different template languages use different approaches for defining the layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements. The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read.
+<p>Different template languages use different approaches for defining the layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a <em>representation </em>of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements. The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read.</p>
 
-> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.
+<div class="note">
+<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
+</div>
 
-## Template configuration
+<h2 class="highlight-spanned" id="Template_configuration"><span class="highlight-span">Template configuration</span></h2>
 
-The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
+<p>The <em>LocalLibrary</em> was configured to use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> when we <a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
 
-```js
-// View engine setup.
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-```
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
+app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'view engine'</span><span class="punctuation token">,</span> <span class="string token">'pug'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-If you look in the views directory you will see the .pug files for the project's default views. These include the view for the home page (**index.pug**) and base template (**layout.pug**) that we will need to replace with our own content.
+<p>If you look in the views directory you will see the .pug files for the project's default views. These include the view for the home page (<strong>index.pug</strong>) and base template (<strong>layout.pug</strong>) that we will need to replace with our own content.</p>
 
-    /express-locallibrary-tutorial  //the project root
-      /views
-        error.pug
-        index.pug
-        layout.pug
+<pre><code>/express-locallibrary-tutorial  //the project root
+  /views
+    error.pug
+    <strong>index.pug</strong>
+    layout.pug</code>
+</pre>
 
-## Template syntax
+<h2 class="highlight-spanned" id="Template_syntax"><span class="highlight-span">Template syntax</span></h2>
 
-The example template file below shows off many of Pug's most useful features.
+<p>The example template file below shows off many of Pug's most useful features.</p>
 
-The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
+<p>The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the <code>body</code> element is inside an <code>html</code> element, and paragraph elements (<code>p</code>) are within the <code>body</code> element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.</p>
 
-```html
-doctype html
+<pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html(lang="en")
   head
     title= title
@@ -47,11 +47,11 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<em> is emphasised</em>'} and escaped data: #{'<em> is not emphasised</em>'}.
+    p This line has un-escaped data: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'} and escaped data: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}.
       | This line follows on.
-    p= 'Evaluated and <em>escaped expression</em>:' + title
+    p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title
 
-    <!-- You can add HTML comments directly -->
+    <span class="comment token">&lt;!-- You can add HTML comments directly --&gt;</span>
     // You can add single line JavaScript comments and they are generated to HTML comments
     //- Introducing a single line JavaScript comment with "//-" ensures the comment isn't rendered to HTML
 
@@ -72,87 +72,78 @@ html(lang="en")
 
     ul
       each val in [1, 2, 3, 4, 5]
-        li= val
-```
+        li= val</code></pre>
 
-Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:
+<p>Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:</p>
 
-- `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
-- `meta(name='viewport' content='width=device-width initial-scale=1')`
+<ul>
+ <li><code>script(type='text/javascript')</code>, <code>link(rel='stylesheet', href='/stylesheets/style.css')</code></li>
+ <li><code>meta(name='viewport' content='width=device-width initial-scale=1')</code></li>
+</ul>
 
-The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent injection of JavaScript/cross-site scripting attacks.
+<p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent injection of JavaScript/cross-site scripting attacks.</p>
 
-If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the `title` variable. In both cases the default behaviour is to _escape_ the line.
+<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
 
-```html
-h1= title
-p= 'Evaluated and <em>escaped expression</em>:' + title
-```
+<pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
+p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
 
-If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and` !{}` syntax, as shown below. You can also add raw HTML within the plain text.
+<p>If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the <code>#{}</code> and<code> !{}</code> syntax, as shown below. You can also add raw HTML within the plain text.</p>
 
-```html
-p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<em> is emphasised</em>'}, an escaped string: #{'<em> is not emphasised</em>'}, and escaped variables: #{title}.
-```
+<pre class="brush: html line-numbers  language-html"><code class="language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
+p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
 
-> **Note:** **Tip:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
+<div class="note">
+<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
+</div>
 
-You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
+<p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a class="external external-icon" href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
 
-```html
-a(href='http://someurl/') Link text
-| Plain text
-```
+<pre class="brush: html line-numbers  language-html"><code class="language-html">a(href='http://someurl/') Link text
+| Plain text</code></pre>
 
-Pug allows you to perform conditional operations using `if`, `else` , `else if` and `unless`—for example:
+<p>Pug allows you to perform conditional operations using <code>if</code>, <code>else</code> , <code>else if</code> and <code>unless</code>—for example:</p>
 
-```html
-if title
+<pre class="brush: html line-numbers  language-html"><code class="language-html">if title
   p A variable named "title" exists
 else
-  p A variable named "title" does not exist
-```
+  p A variable named "title" does not exist</code></pre>
 
-You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!
+<p>You can also perform loop/iteration operations using <code>each-in</code> or <code>while</code> syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!</p>
 
-```html
-ul
+<pre class="brush: html line-numbers  language-html"><code class="language-html">ul
   each val in [1, 2, 3, 4, 5]
-    li= val
-```
+    li= val</code></pre>
 
-The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see [The Pug docs](https://pugjs.org/api/getting-started.html).
+<p>The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">The Pug docs</a>.</p>
 
-## Extending templates
+<h2 class="highlight-spanned" id="Extending_templates"><span class="highlight-span">Extending templates</span></h2>
 
-Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, _Pug_ allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.
+<p>Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, <em>Pug</em> allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.</p>
 
-For example, the base template **layout.pug** created in our [skeleton project](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website) looks like this:
+<p>For example, the base template <strong>layout.pug</strong> created in our <a href="/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
 
-```html
-doctype html
+<pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
-```
+    block content</code></pre>
 
-The `block` tag is used to mark up sections of content that may be replaced in a derived template (if the block is not redefined then its implementation in the base class is used).
+<p>The <code>block</code> tag is used to mark up sections of content that may be replaced in a derived template (if the block is not redefined then its implementation in the base class is used).</p>
 
-The default **index.pug** (created for our skeleton project) shows how we override the base template. The `extends` tag identifies the base template to use, and then we use `block section_name` to indicate the new content of the section that we will override.
+<p>The default <strong>index.pug</strong> (created for our skeleton project) shows how we override the base template. The <code>extends</code> tag identifies the base template to use, and then we use <code>block <em>section_name</em></code> to indicate the new content of the section that we will override.</p>
 
-```html
-extends layout
+<pre class="brush: html line-numbers  language-html"><code class="language-html">extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-```
+  p Welcome to #{title}</code></pre>
 
-## Next steps
+<h2 id="Next_steps">Next steps</h2>
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).
+<ul>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">The LocalLibrary base template</a>.</li>
+</ul>

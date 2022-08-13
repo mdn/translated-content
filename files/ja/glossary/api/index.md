@@ -7,23 +7,29 @@ tags:
   - Infrastructure
 translation_of: Glossary/API
 ---
-API (Application Programming Interface) とは、あるソフトウェアプログラム(アプリケーション)が、他のソフトウェアやハードウェア等、外部とやりとりをするために備えている機能や規則の集まりです - 人間のユーザーインターフェイスと比較されます。API は、それを提供するアプリケーションと、第 3 者のソフトウェアやハードウェアといった他の項目との間の、単純な契約(インターフェイス)です。
+<p>API (Application Programming Interface) とは、あるソフトウェアプログラム(アプリケーション)が、他のソフトウェアやハードウェア等、外部とやりとりをするために備えている機能や規則の集まりです - 人間のユーザーインターフェイスと比較されます。API は、それを提供するアプリケーションと、第3者のソフトウェアやハードウェアといった他の項目との間の、単純な契約(インターフェイス)です。</p>
 
-Web 開発においては、API と言えば一般的にはコーディング上の取り決めです (例えば {{glossary("method","メソッド")}} 、{{Glossary("property","プロパティ")}} 、 events、{{Glossary("URL","URL")}}) が挙げられます。ブラウザーのコンポーネントやユーザーのコンピューター上にあるソフトやハード、第 3 者のウェブサイトやサービスとやり取りするアプリケーションを開発するには API を使います。
+<p>Web開発においては、API と言えば一般的にはコーディング上の取り決めです (例えば {{glossary("method","メソッド")}} 、{{Glossary("property","プロパティ")}} 、 events、{{Glossary("URL","URL")}}) が挙げられます。ブラウザーのコンポーネントやユーザーのコンピューター上にあるソフトやハード、第3者のウェブサイトやサービスとやり取りするアプリケーションを開発するには API を使います。</p>
 
-例えば:
+<p>例えば:</p>
 
-- [getUserMediaAPI](/ja/docs/Web/API/Navigator/getUserMedia) はユーザーの Webcam から音声やビデオを利用することを可能とし、例えばビデオや音声の記録や、それらを電話会議の他のユーザーに流したり、ビデオから静止画を取り出すなどの方法で開発者の望むままに利用されます。
-- [Geolocation API](/ja/docs/Web/API/Geolocation) はデバイスで有効なあらゆるサービス（例えば GPS など）を用いてユーザーの位置情報を取得でき、例えば [Google Maps API](https://developers.google.com/maps/) と組み合わせることでユーザーの位置をカスタマイズした地図にプロットし、そのエリアにどのような観光名所があるか表示することを可能とします。
-- [Twitter APIs](https://dev.twitter.com/overview/api) はウェブページに最新のツイートを表示するなど、ユーザーの Twitter アカウントからデータを取り出すために利用されています。
-- [Web Animations API](/ja/docs/Web/API/Web_Animations_API) は画像を動かしたり回転させるなど、Web ページの一部をアニメーションにするために利用されています。
+<ul>
+ <li><a href="/ja/docs/Web/API/Navigator/getUserMedia">getUserMediaAPI</a> はユーザーの Webcam から音声やビデオを利用することを可能とし、例えばビデオや音声の記録や、それらを電話会議の他のユーザーに流したり、ビデオから静止画を取り出すなどの方法で開発者の望むままに利用されます。</li>
+ <li><a href="/ja/docs/Web/API/Geolocation">Geolocation API</a> はデバイスで有効なあらゆるサービス（例えば GPS など）を用いてユーザーの位置情報を取得でき、例えば <a href="https://developers.google.com/maps/">Google Maps API</a> と組み合わせることでユーザーの位置をカスタマイズした地図にプロットし、そのエリアにどのような観光名所があるか表示することを可能とします。</li>
+ <li><a href="https://dev.twitter.com/overview/api">Twitter APIs</a> はウェブページに最新のツイートを表示するなど、ユーザーの Twitter アカウントからデータを取り出すために利用されています。</li>
+ <li><a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a> は画像を動かしたり回転させるなど、Web ページの一部をアニメーションにするために利用されています。</li>
+</ul>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-### 一般知識
+<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Application_programming_interface", "API")}} 」
+<ul>
+ <li>Wikipedia 上の記事「{{Interwiki("wikipedia", "Application_programming_interface", "API")}} 」</li>
+</ul>
 
-### 技術リファレンス
+<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
 
-- [Web API リファレンス](/ja/docs/Web/API)
+<ul>
+ <li><a href="/ja/docs/Web/API">Web API リファレンス</a></li>
+</ul>

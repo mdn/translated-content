@@ -9,17 +9,21 @@ tags:
   - 用語集
 translation_of: Glossary/Protocol
 ---
-**プロトコル**は、コンピューター内またはコンピューター間でデータを交換する方法を定義したルールの体系です。機器間の通信では、交換されるデータの形式に機器が対応している必要があります。形式を定義する一連のルールがプロトコルと呼ばれています。
+<p id="Summary"><strong>プロトコル</strong>は、コンピューター内またはコンピューター間でデータを交換する方法を定義したルールの体系です。機器間の通信では、交換されるデータの形式に機器が対応している必要があります。形式を定義する一連のルールがプロトコルと呼ばれています。</p>
 
-## 理解を深める
+<h2 id="Learn_more" name="Learn_more">理解を深める</h2>
 
-### 基礎知識
+<h3 id="General_Knowledge" name="General_Knowledge">基礎知識</h3>
 
-- ウィキペディアの{{Interwiki("wikipedia", "通信プロトコル")}}の記事
-- [RFC 公式インターネットプロトコル標準](http://www.rfc-editor.org/search/standards.php)
+<ul>
+ <li>ウィキペディアの{{Interwiki("wikipedia", "通信プロトコル")}}の記事</li>
+ <li><a href="http://www.rfc-editor.org/search/standards.php">RFC 公式インターネットプロトコル標準</a></li>
+</ul>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{glossary("TCP")}}
-- [HTTP 概要](/ja/docs/Web/HTTP/Overview)
-- {{glossary("Packet")}}
+<ul>
+ <li>{{glossary("TCP")}}</li>
+ <li><a href="/ja/docs/Web/HTTP/Overview">HTTP 概要</a></li>
+ <li>{{glossary("Packet")}}</li>
+</ul>

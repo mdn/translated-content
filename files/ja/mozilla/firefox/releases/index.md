@@ -8,14 +8,16 @@ tags:
   - Release
 translation_of: Mozilla/Firefox/Releases
 ---
-{{FirefoxSidebar}}
+<div>{{FirefoxSidebar}}</div>
 
-以下は、開発者向けの Firefox リリースノートへのリンクです。どの機能や API が追加され、改善されたか、Firefox の各バージョンでどのようなバグが修正されたかについての詳細が、懇切丁寧に記されています。これらは皆さん開発者がほしいかと思って用意したものです。えっへん。
+<p class="summary">以下は、開発者向けの Firefox リリースノートへのリンクです。どの機能や API が追加され、改善されたか、Firefox の各バージョンでどのようなバグが修正されたかについての詳細が、懇切丁寧に記されています。これらは皆さん開発者がほしいかと思って用意したものです。えっへん。</p>
 
-{{ListSubpages("",1,1,1)}}
+<div class="multiColumnList">{{ListSubpages("",1,1,1)}}</div>
 
-Firefox がいっぱい！すごい！
+<p>Firefox がいっぱい！すごい！</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Thunderbird 開発者向けリリースノート](/ja/docs/Mozilla/Thunderbird/Releases)
+<ul>
+ <li><a href="/ja/docs/Mozilla/Thunderbird/Releases">Thunderbird 開発者向けリリースノート</a></li>
+</ul>

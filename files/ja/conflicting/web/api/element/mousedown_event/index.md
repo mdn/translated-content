@@ -12,41 +12,39 @@ translation_of: Web/API/GlobalEventHandlers/onmousedown
 original_slug: Web/API/GlobalEventHandlers/onmousedown
 browser-compat: api.GlobalEventHandlers.onmousedown
 ---
-{{ ApiRef("HTML DOM") }}
+<div>{{ ApiRef("HTML DOM") }}</div>
 
-**`onmousedown`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("mousedown")}} イベントを処理する[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+<p><strong><code>onmousedown</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("mousedown")}} イベントを処理する<a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>です。</p>
 
-`mousedown` イベントは、ユーザーがマウスボタンを押したときに発行されます。
+<p><code>mousedown</code> イベントは、ユーザーがマウスボタンを押したときに発行されます。</p>
 
-> **Note:** **メモ:** `onmousedown` の反対の動作は {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}} です。
-
-## 構文
-
-```js
-target.onmousedown = functionRef;
-```
-
-### 値
-
-`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は、唯一の引数として {{domxref("MouseEvent")}} オブジェクトを受け取ります。
-
-## 例
-
-この例は、マウスボタンを押したままにすると画像の一部を表示します。`onmousedown`, {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}, {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} イベントハンドラーを使用します。
-
-### HTML
-
-```html
-<div class="container">
-  <div class="view" hidden></div>
-  <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
+<div class="notecard note">
+  <p><strong>メモ:</strong> <code>onmousedown</code> の反対の動作は {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}} です。</p>
 </div>
-```
 
-### CSS
+<h2 id="Syntax">構文</h2>
 
-```css
-.container {
+<pre class="brush: js"><em>target</em>.onmousedown = <em>functionRef</em>;
+</pre>
+
+<h3 id="Value">値</h3>
+
+<p><code>functionRef</code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、唯一の引数として {{domxref("MouseEvent")}} オブジェクトを受け取ります。</p>
+
+<h2 id="Example">例</h2>
+
+<p>この例は、マウスボタンを押したままにすると画像の一部を表示します。<code>onmousedown</code>, {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}, {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} イベントハンドラーを使用します。</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;div class="container"&gt;
+  &lt;div class="view" hidden&gt;&lt;/div&gt;
+  &lt;img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg"&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">.container {
   width: 320px;
   height: 213px;
   background: black;
@@ -62,13 +60,11 @@ target.onmousedown = functionRef;
 
 img {
   mix-blend-mode: darken;
-}
-```
+}</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-function showView(event) {
+<pre class="brush: js">function showView(event) {
   view.removeAttribute('hidden');
   view.style.left = event.clientX - 50 + 'px';
   view.style.top = event.clientY - 50 + 'px';
@@ -89,21 +85,22 @@ const view = document.querySelector('.view');
 
 container.onmousedown = showView;
 container.onmousemove = moveView;
-document.onmouseup = hideView;
-```
+document.onmouseup = hideView;</pre>
 
-### 結果
+<h3 id="Result">結果</h3>
 
-{{EmbedLiveSample("Example", 700, 300)}}
+<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{event("mousedown")}} イベント
+<ul>
+  <li>{{event("mousedown")}} イベント</li>
+</ul>

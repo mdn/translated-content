@@ -4,84 +4,84 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ja/docs/Games")}}
+<div>{{GamesSidebar}}</div>
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+<div>{{IncludeSubnav("/ja/docs/Games")}}</div>
 
-これは[ゲーム開発 Canvas チュートリアル](/ja/docs/Games/Workflows/Breakout_game_from_scratch)の 10 ステップのうち**5 番目**のステップです。このレッスンを終えたあとの完成予想のソースコードは[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)で入手できます。
+<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>
 
-ボールが壁で弾むのを見たりパドルを左右雨に動かしたりできるのは楽しいですが、そのことを除くとこのゲームは何もせず、進捗や最終目標といったものが全くありません。ゲームプレイの観点からすると、まず負けることができるようにするのが良いでしょう。ブロック崩しで負けるということの裏にある論理は簡潔です。もしパドルでボールを逃してボールが画面の下端についてしまったらゲームオーバーになるのです。
+<div class="summary">これは<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch">ゲーム開発Canvasチュートリアル</a>の10ステップのうち<strong>5番目</strong>のステップです。このレッスンを終えたあとの完成予想のソースコードは<a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html" rel="noopener">Gamedev-Canvas-workshop/lesson5.html</a>で入手できます。</div>
 
-## ゲームオーバーを実装する
+<p><span class="seoSummary">ボールが壁で弾むのを見たりパドルを左右雨に動かしたりできるのは楽しいですが、そのことを除くとこのゲームは何もせず、進捗や最終目標といったものが全くありません。ゲームプレイの観点からすると、まず負けることができるようにするのが良いでしょう。ブロック崩しで負けるということの裏にある論理は簡潔です。もしパドルでボールを逃してボールが画面の下端についてしまったらゲームオーバーになるのです。</span></p>
 
-自分のゲームにゲームオーバーを実装してみましょう。3 章ではボールを壁で弾むようにしました。以下はその引用です。
+<h2 id="ゲームオーバーを実装する">ゲームオーバーを実装する</h2>
 
-```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+<p>自分のゲームにゲームオーバーを実装してみましょう。3章ではボールを壁で弾むようにしました。以下はその引用です。</p>
+
+<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
     dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
     dy = -dy;
-}
-```
+}</pre>
 
-4 辺全てでボールを弾ませるのではなく、3 辺、すなわち上端と左右のみで弾むようにしましょう。底を打ったときゲームは終わりになります。2 番目の if 節を編集して、ボールがキャンバスの下端で衝突したときにゲームオーバー状態が発動する if else 節にしましょう。ここでは簡単に、アラートメッセージを表示して、ページの再読込によりゲームを再開するだけにしましょう。
+<p>4辺全てでボールを弾ませるのではなく、3辺、すなわち上端と左右のみで弾むようにしましょう。底を打ったときゲームは終わりになります。2番目のif節を編集して、ボールがキャンバスの下端で衝突したときにゲームオーバー状態が発動するif else節にしましょう。ここでは簡単に、アラートメッセージを表示して、ページの再読込によりゲームを再開するだけにしましょう。</p>
 
-まず、 `setInterval()` を最初に呼び出しているところを置き換えます。
+<p>まず、 <code>setInterval()</code> を最初に呼び出しているところを置き換えます。</p>
 
-```html
-setInterval(draw, 10);
-```
+<p> </p>
 
-置き換え後
+<pre class="line-numbers language-html"><code class="language-html">setInterval(draw, 10);</code></pre>
 
-```html
-var interval = setInterval(draw, 10);
-```
+<p> </p>
 
-次に 2 番目の if 節を次の内容で置き換えましょう。
+<p>置き換え後</p>
 
-```js
-if(y + dy < ballRadius) {
+<pre class="line-numbers language-html"><code class="language-html">var interval = setInterval(draw, 10);</code></pre>
+
+<p> </p>
+
+<p>次に2番目のif節を次の内容で置き換えましょう。</p>
+
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">if</span><span class="punctuation token">(</span>y <span class="operator token">+</span> dy <span class="operator token">&lt;</span> ballRadius<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    dy <span class="operator token">=</span> <span class="operator token">-</span>dy<span class="punctuation token">;</span>
+<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span><span class="punctuation token">(</span>y <span class="operator token">+</span> dy <span class="operator token">&gt;</span> canvas<span class="punctuation token">.</span>height<span class="operator token">-</span>ballRadius<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">"GAME OVER"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    document<span class="punctuation token">.</span>location<span class="punctuation token">.</span><span class="function token">reload</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">clearInterval</span><span class="punctuation token">(</span>interval<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Needed for Chrome to end game</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h2 id="パドルをボールに当てる">パドルをボールに当てる</h2>
+
+<p>このレッスンのしあげに、ボールとパドルの衝突検出を作り、ボールが弾んでプレイエリアに戻ってくるようにしましょう。最も簡単なやり方はボールがパドルの左端と右端の間にあるか確認することです。最後に編集したコードを今度は次のように書き換えます。</p>
+
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-```
-
-## パドルをボールに当てる
-
-このレッスンのしあげに、ボールとパドルの衝突検出を作り、ボールが弾んでプレイエリアに戻ってくるようにしましょう。最も簡単なやり方はボールがパドルの左端と右端の間にあるか確認することです。最後に編集したコードを今度は次のように書き換えます。
-
-```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
+} else if(y + dy &gt; canvas.height-ballRadius) {
+    if(x &gt; paddleX &amp;&amp; x &lt; paddleX + paddleWidth) {
         dy = -dy;
     }
     else {
         alert("GAME OVER");
         document.location.reload();
     }
-}
-```
+}</pre>
 
-ボールが Canvas の下端に当たっていたら、パドルにも当たっているかどうか確認します。もしパドルに当たっていたら、思ったとおりにボールは弾みます。当たらなかったら、先ほどと同じようにゲームオーバーになります。
+<p>ボールがCanvasの下端に当たっていたら、パドルにも当たっているかどうか確認します。もしパドルに当たっていたら、思ったとおりにボールは弾みます。当たらなかったら、先ほどと同じようにゲームオーバーになります。</p>
 
-## 自分のコードと比べる
+<h2 id="自分のコードと比べる">自分のコードと比べる</h2>
 
-自分のコードと比べられるように、実際に動くコードを以下に示します。
+<p>自分のコードと比べられるように、実際に動くコードを以下に示します。</p>
 
-{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/L61c9y50/","","395")}}
+<p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/L61c9y50/","","395")}}</p>
 
-> **Note:** **練習**: ボールがパドルに当たったときに速く動くようにしましょう。
+<div class="note">
+<p><strong>練習</strong>: ボールがパドルに当たったときに速く動くようにしましょう。</p>
+</div>
 
-## 次のステップ
+<h2 id="次のステップ">次のステップ</h2>
 
-今のところかなり順調に進歩してきていて、ゲームも負けるようになったことでもっと遊ぶ価値が感じられるようになってきました。第六章[『ブロックのかたまりを作る』](/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)に進み、ボールが壊せるブロックを作りましょう。
+<p>今のところかなり順調に進歩してきていて、ゲームも負けるようになったことでもっと遊ぶ価値が感じられるようになってきました。第六章<a href="/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field">『ブロックのかたまりを作る』</a>に進み、ボールが壊せるブロックを作りましょう。</p>
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>

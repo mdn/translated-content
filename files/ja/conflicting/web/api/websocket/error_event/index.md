@@ -16,34 +16,45 @@ tags:
 translation_of: Web/API/WebSocket/onerror
 original_slug: Web/API/WebSocket/onerror
 ---
-{{APIRef("Web Sockets API")}}
+<div>{{APIRef("Web Sockets API")}}</div>
 
-{{domxref("WebSocket")}} インターフェイスの **`onerror`** イベントハンドラープロパティは、 WebSocket でエラーが発生したときに呼び出される関数です。
+<p><span class="seoSummary">{{domxref("WebSocket")}} インターフェイスの <code><strong>onerror</strong></code> イベントハンドラープロパティは、 WebSocket でエラーが発生したときに呼び出される関数です。</span></p>
 
-`error` イベントハンドラーは {{domxref("EventTarget.addEventListener", "addEventListener()")}} で追加することもできます。
+<p><code>error</code> イベントハンドラーは {{domxref("EventTarget.addEventListener", "addEventListener()")}} で追加することもできます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    webSocket.onerror = eventHandler;
+<pre class="syntaxbox"><em>webSocket</em>.onerror = <em>eventHandler</em>;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-関数または {{event("Event_handlers", "event handler")}} で、 WebSocket コネクションで `error` イベントが発生するたびに呼び出されるものです。
+<p>関数または {{event("Event_handlers", "event handler")}} で、 WebSocket コネクションで <code>error</code> イベントが発生するたびに呼び出されるものです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-webSocket.onerror = function(event) {
+<pre class="brush: js"><em>webSocket</em>.onerror = function(event) {
   console.error("WebSocket error observed:", event);
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WebSocket.onerror")}}
+<p>{{Compat("api.WebSocket.onerror")}}</p>

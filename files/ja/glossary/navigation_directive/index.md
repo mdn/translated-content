@@ -9,30 +9,41 @@ tags:
   - セキュリティ
 translation_of: Glossary/Navigation_directive
 ---
-**{{Glossary("CSP")}} のナビゲーションディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、たとえば、ユーザーがどの場所に移動したり、フォームを送信したりすることができるかを管理します。
+<p><strong>{{Glossary("CSP")}} のナビゲーションディレクティブ</strong>は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、たとえば、ユーザーがどの場所に移動したり、フォームを送信したりすることができるかを管理します。</p>
 
-ナビゲーションディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
+<p>ナビゲーションディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。</p>
 
-完全な一覧は[ナビゲーションディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#Navigation_directives)を参照してください。
+<p>完全な一覧は<a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy#Navigation_directives">ナビゲーションディレクティブ</a>を参照してください。</p>
 
-## 関連項目
+<div>
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-- <https://www.w3.org/TR/CSP/#directives-navigation>
-- 他の種類のディレクティブ:
+<ul>
+ <li><a href="https://www.w3.org/TR/CSP/#directives-navigation">https://www.w3.org/TR/CSP/#directives-navigation</a></li>
+ <li>他の種類のディレクティブ:
+  <ul>
+   <li>{{Glossary("Fetch directive","フェッチディレクティブ")}}</li>
+   <li>{{Glossary("Document directive","文書ディレクティブ")}}</li>
+   <li>{{Glossary("Reporting directive", "報告ディレクティブ")}}</li>
+   <li><code><a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content">block-all-mixed-content</a></code></li>
+   <li><code><a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests">upgrade-insecure-requests</a></code></li>
+   <li><code><a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for">require-sri-for</a></code></li>
+   <li><code><a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">trusted-types</a></code></li>
+  </ul>
+ </li>
+ <li>{{HTTPHeader("Content-Security-Policy")}}</li>
+</ul>
+</div>
 
-  - {{Glossary("Fetch directive","フェッチディレクティブ")}}
-  - {{Glossary("Document directive","文書ディレクティブ")}}
-  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`require-sri-for`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for)
-  - [`trusted-types`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
-
-- {{HTTPHeader("Content-Security-Policy")}}
-
-1.  [用語集](/ja/docs/Glossary)
-
-    1.  {{Glossary("CSP")}}
-    2.  {{Glossary("Fetch directive", "フェッチディレクティブ")}}
-    3.  {{Glossary("Document directive", "文書ディレクティブ")}}
-    4.  {{Glossary("Reporting directive", "報告ディレクティブ")}}
+<section id="Quick_links">
+<ol>
+ <li><a href="/ja/docs/Glossary">用語集</a>
+  <ol>
+   <li>{{Glossary("CSP")}}</li>
+   <li>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</li>
+   <li>{{Glossary("Document directive", "文書ディレクティブ")}}</li>
+   <li>{{Glossary("Reporting directive", "報告ディレクティブ")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

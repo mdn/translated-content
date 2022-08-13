@@ -11,26 +11,43 @@ tags:
 translation_of: Web/API/BroadcastChannel/onmessageerror
 original_slug: Web/API/BroadcastChannel/onmessageerror
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("BroadcastChannel")}} インタフェース の **`onmessageerror`** イベントハンドラは {{domxref("EventListener")}} であり、`messageerror` 型の {{domxref("MessageEvent")}} が `BroadcastChannel` インスタンスで発生するたびに、つまり{{glossary("Deserialization", "逆シリアル化")}}できないメッセージを受信すると呼び出されます。
+<p><span class="seoSummary">{{domxref("BroadcastChannel")}} インタフェース の <strong><code>onmessageerror</code></strong> イベントハンドラは {{domxref("EventListener")}} であり、<code>messageerror</code> 型の {{domxref("MessageEvent")}} が <code>BroadcastChannel</code> インスタンスで発生するたびに、つまり{{glossary("Deserialization", "逆シリアル化")}}できないメッセージを受信すると呼び出されます。</span></p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    bc.onmessageerror = function() { ... };
+<pre class="syntaxbox">bc.onmessageerror = function() { ... };</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                     | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#handler-broadcastchannel-onmessageerror', 'onmessageerror')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-broadcastchannel-onmessageerror', 'onmessageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.BroadcastChannel.onmessageerror")}}
+<div>
 
-## 関連情報
 
-- [Channel Messaging の使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+<p>{{Compat("api.BroadcastChannel.onmessageerror")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Channel Messaging の使用</a></li>
+</ul>

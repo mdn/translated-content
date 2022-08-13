@@ -7,13 +7,17 @@ tags:
   - NeedsContent
 translation_of: Glossary/Global_scope
 ---
-プログラミング環境において、グローバルスコープとは、他のすべてのスコープを含み、他のすべてのスコープからアクセス可能な{{glossary("scope", "スコープ")}}を指します。
+<p>プログラミング環境において、グローバルスコープとは、他のすべてのスコープを含み、他のすべてのスコープからアクセス可能な{{glossary("scope", "スコープ")}}を指します。</p>
 
-クライアントサイド JavaScript においては、一般的にすべてのコードが実行されている Web ページがグローバルスコープとなります。
+<p>クライアントサイド JavaScript においては、一般的にすべてのコードが実行されている Web ページがグローバルスコープとなります。</p>
 
-## 関連項目
+<h2 id="Learn_more" name="Learn_more">関連項目</h2>
 
-### これについて学習する
+<h3 id="Learn_about_it" name="Learn_about_it">これについて学習する</h3>
 
-- [JavaScript の変数スコープ入門](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope)
-- Wikipedia の {{interwiki("wikipedia", "スコープ")}}
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope">JavaScript の変数スコープ入門</a></li>
+ <li>Wikipedia の {{interwiki("wikipedia", "スコープ")}}</li>
+</ul>
+
+<p> </p>

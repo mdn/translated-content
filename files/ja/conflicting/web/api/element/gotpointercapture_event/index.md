@@ -13,22 +13,21 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`ongotpointercapture`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("gotpointercapture")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。
+<p><strong><code>ongotpointercapture</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("gotpointercapture")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    target.ongotpointercapture = functionRef;
+<pre class="syntaxbox notranslate"><var>target</var>.ongotpointercapture = <var>functionRef</var>;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。 関数は {{domxref("PointerEvent")}} オブジェクトを唯一の引数として受け取ります。
+<p><code><var>functionRef</var></code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。 関数は {{domxref("PointerEvent")}} オブジェクトを唯一の引数として受け取ります。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-function overHandler(event) {
+<pre class="brush: js notranslate">function overHandler(event) {
   // ターゲットイベントの gotpointercapture ハンドラを決定します
   let gotCaptureHandler = event.target.ongotpointercapture;
 }
@@ -36,21 +35,35 @@ function overHandler(event) {
 function init() {
   let el = document.getElementById('target');
   el.ongotpointercapture = overHandler;
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                                               | 状態                                     | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---- |
-| {{SpecName('Pointer Events 2', '#the-gotpointercapture-event', 'ongotpointercapture')}} | {{Spec2('Pointer Events 2')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events 2', '#the-gotpointercapture-event', 'ongotpointercapture')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.ongotpointercapture")}}
+<p>{{Compat("api.GlobalEventHandlers.ongotpointercapture")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [`Document: gotpointercapture`](/ja/docs/Web/API/Document/gotpointercapture_event) イベント
-- [`HTMLElement: gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event) イベント
-- {{domxref("Element.setPointerCapture()")}}
+<ul>
+ <li><code><a href="/ja/docs/Web/API/Document/gotpointercapture_event">Document: gotpointercapture</a></code> イベント</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLElement/gotpointercapture_event">HTMLElement: gotpointercapture</a></code> イベント</li>
+ <li>{{domxref("Element.setPointerCapture()")}}</li>
+</ul>

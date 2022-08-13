@@ -8,11 +8,13 @@ tags:
   - Web Performance
 translation_of: Glossary/First_paint
 ---
-FirstPaint は [Paint Timing API](/ja/docs/) の一部です。ナビゲーションからブラウザーが読み込んだ最初のピクセルを画面にレンダリングします。
-ナビゲーション前の画面と視覚的に異なるものをレンダリングすることで「それが起きているのか？」という質問に答えます。
+<p>FirstPaint は <a href="/ja/docs/">Paint Timing API</a> の一部です。ナビゲーションからブラウザーが読み込んだ最初のピクセルを画面にレンダリングします。<br>
+ ナビゲーション前の画面と視覚的に異なるものをレンダリングすることで「それが起きているのか？」という質問に答えます。</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [First meaningful paint](/ja/docs/Glossary/first_meaningful_paint)
-- [First contentful paint](/ja/docs/Glossary/First_contentful_paint)
-- [Paint Timing API](/ja/docs/)
+<ul>
+ <li><a href="/ja/docs/Glossary/first_meaningful_paint">First meaningful paint</a></li>
+ <li><a href="/ja/docs/Glossary/First_contentful_paint">First contentful paint</a></li>
+ <li><a href="/ja/docs/">Paint Timing API</a></li>
+</ul>

@@ -7,152 +7,147 @@ tags:
   - Mozilla
 translation_of: Mozilla/Firefox/Releases/35
 ---
-Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
+<p>Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。</p>
 
-## Web 開発者向けの変更点一覧
+<h2 id="Changes_for_Web_developers" name="Changes_for_Web_developers">Web 開発者向けの変更点一覧</h2>
 
-### 開発者ツール
+<h3 id="Developer_Tools" name="Developer_Tools">開発者ツール</h3>
 
-ハイライト:
+<p>ハイライト:</p>
 
-- [インスペクタで ::before および ::after 疑似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
-- [CSS ソースマップがデフォルトで有効になりました](/ja/docs/Tools/Style_Editor#Source_map_support)。
-- [インスペクタから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
+<ul>
+ <li><a href="/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter">インスペクタで ::before および ::after 疑似要素を確認できるようになりました</a>。</li>
+ <li><a href="/ja/docs/Tools/Style_Editor#Source_map_support">CSS ソースマップがデフォルトで有効になりました</a>。</li>
+ <li><a href="/ja/docs/Tools/Page_Inspector#Element_popup_menu_2">インスペクタから "DOM プロパティの表示" が可能になりました</a>。</li>
+</ul>
 
-[Firefox 34 から Firefox 35 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176)
+<p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-10-13&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-09-02&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">Firefox 34 から Firefox 35 の間に解決した開発ツール関連のバグ一覧</a></p>
 
-### CSS
+<h3 id="CSS" name="CSS">CSS</h3>
 
-- [`mask-type`](/ja/docs/Web/CSS/mask-type "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティをデフォルトで有効にしました ([バグ 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519 "FIXED: Ship mask-type CSS property"))。
-- [`filter`](/ja/docs/Web/CSS/filter "CSS の filter プロパティは、ぼかしや色変化などのグラフィック効果を要素に適用します。フィルターは画像、背景、境界の描画を調整するためによく使われます。") プロパティをデフォルトで有効にしました ([バグ 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180 "FIXED: Turn on CSS Filters by default (by enabling about:config pref)"))。
-- [`@font-face`](/ja/docs/Web/CSS/@font-face "CSS の @font-face @-規則は、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターのどちらかから読み込むことができます。") @ 規則で WOFF2 フォントをサポートしました ([バグ 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737 "FIXED: support WOFF2 fonts via @font-face"))。
-- [`symbols()`](</ja/docs/Web/CSS/symbols()> "この項目についての文書はまだ書かれていません。書いてみませんか？") 関数記法をサポートしました ([バグ 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168 "FIXED: Implement symbols() CSS function"))。
-- CSS Font Loading API を実装しました ([バグ 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497 "FIXED: implement the CSS Font Loading API"))。
-- コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/-moz-appearance "この項目についての文書はまだ書かれていません。書いてみませんか？") に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849 "FIXED: Make -moz-appearance:none on a combobox remove the dropdown button"))。
-- 他ブラウザに合致させるため、プロパティへのアクセス手段である `element.style["css-property-name"]` を追加しました ([バグ 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension'))。
+<ul>
+ <li><a href="/ja/docs/Web/CSS/mask-type" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>mask-type</code></a> プロパティをデフォルトで有効にしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058519" title="FIXED: Ship mask-type CSS property">バグ 1058519</a>)。</li>
+ <li><a href="/ja/docs/Web/CSS/filter" title="CSS の filter プロパティは、ぼかしや色変化などのグラフィック効果を要素に適用します。フィルターは画像、背景、境界の描画を調整するためによく使われます。"><code>filter</code></a> プロパティをデフォルトで有効にしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1057180" title="FIXED: Turn on CSS Filters by default (by enabling about:config pref)">バグ 1057180</a>)。</li>
+ <li><a href="/ja/docs/Web/CSS/@font-face" title="CSS の @font-face @-規則は、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターのどちらかから読み込むことができます。"><code>@font-face</code></a> @ 規則で WOFF2 フォントをサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1064737" title="FIXED: support WOFF2 fonts via @font-face">バグ 1064737</a>)。</li>
+ <li><a href="/ja/docs/Web/CSS/symbols()" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>symbols()</code></a> 関数記法をサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966168" title="FIXED: Implement symbols() CSS function">バグ 966168</a>)。</li>
+ <li>CSS Font Loading API を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1028497" title="FIXED: implement the CSS Font Loading API">バグ 1028497</a>)。</li>
+ <li>コンボボックスで <a href="/ja/docs/Web/CSS/-moz-appearance" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-appearance</code></a> に値 <code>none</code> を指定すると、ドロップダウンボタンを表示しないようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649849" title="FIXED: Make -moz-appearance:none on a combobox remove the dropdown button">バグ 649849</a>)。</li>
+ <li>他ブラウザに合致させるため、プロパティへのアクセス手段である <code>element.style["css-property-name"]</code> を追加しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=958887" title='FIXED: Add support for element.style["css-property-name"] non-standard extension'>バグ 958887</a>)。</li>
+</ul>
 
-### HTML
+<h3 id="HTML" name="HTML">HTML</h3>
 
-- [`<body>`](/ja/docs/Web/HTML/Element/body "HTML の <body> 要素は、HTML 文書のコンテンツを示す要素です。<body> 要素は文書中に一つだけ配置できます。")要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530 "FIXED: topmargin and leftmargin attributes on the BODY element should be honored in all modes (not just Quirks mode)"))。
+<ul>
+ <li><a href="/ja/docs/Web/HTML/Element/body" title="HTML の &lt;body> 要素は、HTML 文書のコンテンツを示す要素です。&lt;body> 要素は文書中に一つだけ配置できます。"><code>&lt;body&gt;</code></a>要素において廃止済みであり仕様に適合しない <code>bottommargin</code>、<code>leftmargin</code>、<code>rightmargin</code>、<code>topmargin</code> の各属性を Quirks モード以外でも有効にしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=95530" title="FIXED: topmargin and leftmargin attributes on the BODY element should be honored in all modes (not just Quirks mode)">バグ 95530</a>)。</li>
+</ul>
 
-### JavaScript
+<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
 
-- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) 宣言の "[temporal dead zone](/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" を実装しました。ES6 の `let` のセマンティクスに合わせて、以下の状況ではエラーが発生します。[ニュースグループでの発表](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)や [バグ 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let') もご覧ください。
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> 宣言の "<a href="/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" を実装しました。ES6 の <code>let</code> のセマンティクスに合わせて、以下の状況ではエラーが発生します。<a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds">ニュースグループでの発表</a>や <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1001090" title='FIXED: Implement ES6 "temporal dead zone" for let'>バグ 1001090</a> もご覧ください。
 
-  - 関数ボディの同一スコープ内で、`let` を使用して既存の変数や引数を再度宣言すると構文エラーになります。
-  - 関数ボディで `let` を使用して宣言した変数を、その宣言に到達して評価される前に使用すると、実行時エラーが発生します。
+  <ul>
+   <li>関数ボディの同一スコープ内で、<code>let</code> を使用して既存の変数や引数を再度宣言すると構文エラーになります。</li>
+   <li>関数ボディで <code>let</code> を使用して宣言した変数を、その宣言に到達して評価される前に使用すると、実行時エラーが発生します。</li>
+  </ul>
+ </li>
+ <li>最近の仕様の変更に合致するよう、ES6 の <a href="/ja/docs/Web/JavaScript/Reference/Symbols" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Symbols</code></a> (Nightly チャンネルのみ有効) を更新しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1042602" title="FIXED: Symbol behavior changes in ES6 draft rev 26">バグ 1042602</a>):
+  <ul>
+   <li><code>String(Symbol("1"))</code> で <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="TypeError オブジェクトは、値が期待される型でない場合のエラーを表します。"><code>TypeError</code></a> が発生しないようになりました。代わりに文字列 (<code>"Symbol(1)"</code>) が返ります (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058396" title="FIXED: String(aSymbol) now returns the symbol’s description in ES6 draft rev 27">バグ 1058396</a>)。</li>
+  </ul>
+ </li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects"><em>TypedArray</em> のさまざまなコンストラクタ</a>が <code>[[Prototype]]</code> として、ES6 で <code>%TypedArray%</code> と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、<code>%TypedArray%.prototype</code> から継承します。(<code>%TypedArray%</code> および <code>%TypedArray%.prototype</code> は、それぞれ <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype"><code>Function.prototype</code></a> および <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype"><code>Object.prototype</code></a> から継承しますので、Typed Array のコンストラクタやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは <code>%TypedArray%.prototype</code> 上に存在して、Typed Array で動作するようになります。詳しくは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description"><em>TypedArray</em></a> や <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=896116" title="FIXED: Implement ES6 %TypedArray% superclass that all ArrayBufferViews inherit from">バグ 896116</a> をご覧ください。</li>
+ <li>ES6 の、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation">オブジェクトリテラルを使用して行うプロトタイプミューテーション</a>を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1061853" title="FIXED: Implement ES6 object-literal __proto__ restrictions/semantics">バグ 1061853</a>)。
+  <ul>
+   <li>オブジェクトリテラル構文内では、<code>__proto__:value</code> として指定するメンバーが 1 つだけであれば <code>[[Prototype]]</code> のミューテーションを行うようになりました。</li>
+   <li><code>__proto__() {}</code> のようなメソッドメンバーは、<code>[[Prototype]]</code> をオーバーライトしないようになりました。</li>
+  </ul>
+ </li>
+</ul>
 
-- 最近の仕様の変更に合致するよう、ES6 の [`Symbols`](/ja/docs/Web/JavaScript/Reference/Symbols "この項目についての文書はまだ書かれていません。書いてみませんか？") (Nightly チャンネルのみ有効) を更新しました ([バグ 1042602](https://bugzilla.mozilla.org/show_bug.cgi?id=1042602 "FIXED: Symbol behavior changes in ES6 draft rev 26")):
+<h3 id="Interfaces.2FAPIs.2FDOM" name="Interfaces.2FAPIs.2FDOM">インターフェイス/API/DOM</h3>
 
-  - `String(Symbol("1"))` で [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError "TypeError オブジェクトは、値が期待される型でない場合のエラーを表します。") が発生しないようになりました。代わりに文字列 (`"Symbol(1)"`) が返ります ([バグ 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396 "FIXED: String(aSymbol) now returns the symbol’s description in ES6 draft rev 27"))。
+<ul>
+ <li><a href="/ja/docs/Web/API/NavigatorLanguage" title="NavigatorLanguage contains methods and properties related to the language of the navigator."><code>NavigatorLanguage</code></a> インターフェイスが、<a href="/ja/docs/Web/API/WorkerNavigator" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>WorkerNavigator</code></a> によって Workers から使用可能になりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=925849" title="FIXED: WorkerNavigator does not implement NavigatorLanguage">バグ 925849</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Element/closest" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Element.closest()</code></a> メソッドは、カレント要素にもっとも近い祖先要素を返します (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055533" title="FIXED: Implement Element.closest()">バグ 1055533</a>)。</li>
+ <li><a href="/ja/docs/Web/API/CanvasRenderingContext2D/filter" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>CanvasRenderingContext2D.filter</code></a> プロパティを実験的にサポートしました。設定項目 <code>canvas.filters.enabled</code> で制御されます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=927892" title="FIXED: Exposing the CSS/SVG Filters as Canvas APIs">バグ 927892</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Animation/target" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Animation.target</code></a> プロパティの実装により、Web Animations の実験的にな実装が進展しました。設定項目 <code>dom.animations-api.core.enabled</code> で制御されており、デフォルトで無効化されています (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1067701" title="FIXED: Implement Animation.target">バグ 1067701</a>)。</li>
+ <li>仕様書の定めにより、<a href="/ja/docs/Web/API/Element/hasAttributes" title="hasAttributes は現在の要素が何らかの属性を持つか否かを示す真偽値を返します。"><code>hasAttributes()</code></a> メソッドを <a href="/ja/docs/Web/API/Node" title="Node はいくつもの DOM API オブジェクトタイプが継承しているインターフェイスで、それらのさまざまなタイプを同じように扱える (同じメソッドのセットを継承する、または同じ方法でテストできる) ようにします。"><code>Node</code></a> から <a href="/ja/docs/Web/API/Element" title="Element は Document の中にあるすべての要素が継承する、もっとも一般的な基底クラスです。このインターフェイスは、すべての種類の要素に共通するメソッドとプロパティを記述するだけのものです。多くの具体的なクラスが Element を継承します。"><code>Element</code></a> に移しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055773" title="FIXED: Move hasAttributes() to Element">バグ 1055773</a>)。</li>
+ <li><a href="/ja/docs/Web/API/HTMLImageElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>HTMLImageElement</code></a>、<a href="/ja/docs/Web/API/HTMLLinkElement" title="HTMLLinkElement インターフェイスは、外部リソースの参照情報、およびそれらのリソースとドキュメントの関係 (またはその逆) を表します。このオブジェクトは、HTMLElement インターフェイスのすべてのプロパティとメソッドを継承します。"><code>HTMLLinkElement</code></a>、<a href="/ja/docs/Web/API/HTMLMediaElement" title="HTMLMediaElement は HTMLElement に音声や動画といったメディア関連機能の属性とメソッドを追加します。HTMLVideoElement と HTMLAudioElement はこのインタフェースを継承しています。"><code>HTMLMediaElement</code></a>、<a href="/ja/docs/Web/API/HTMLScriptElement" title="DOMの ScriptオブジェクトはHTMLScriptElement (または HTML 4 HTMLScriptElement)インターフェイスに具現化されます．それは通常のelementオブジェクトインターフェイスに加えて(継承によって利用可能)，&lt;script> 要素のレイアウトおよび表現を扱う特別なプロパティとメソッドを提供します．"><code>HTMLScriptElement</code></a>、<a href="/ja/docs/Web/API/SVGScriptElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>SVGScriptElement</code></a> の <code>crossOrigin</code> 属性は有効な値のみを受け入れるようになりました。<code>""</code> は有効ではなく、代わりに <code>null</code> を使用します (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=880997" title="FIXED: Reflect crossOrigin as a limited enumerated attribute">バグ 880997</a>)。</li>
+ <li>Resource Timing API をデフォルトで有効にしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1002855" title="FIXED: Turn on Resource Timing">バグ 1002855</a>)。</li>
+ <li>仕様に合致させるため、<a href="/ja/docs/Web/API/Selection/containsNode" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Selection.containsNode()</code></a> の第一引数を <code>null</code> にすることはできなくなりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1068058" title="FIXED: Update Selection.containsNode according to the spec">バグ 1068058</a>)。</li>
+ <li><a href="/ja/docs/Web/API/ImageCapture" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>ImageCapture</code></a> API を新たに実装しました。<a href="/ja/docs/Web/API/ImageCapture/takePhoto" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>ImageCapture.takePhoto()</code></a> を使用できます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916643" title="FIXED: ImageCapture - Implement WebIDL and takePhoto()">バグ 916643</a>)。</li>
+ <li>HTTP 以外の <a href="/ja/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest (XHR) オブジェクトを使用すると、サーバーと対話することができます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。"><code>XMLHttpRequest</code></a> 要求が成功した場合は (誤りである <code>0</code> に代わり) <code>200</code> を返すようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=716491" title="FIXED: Investigate the status code for non-HTTP XHR.">バグ 716491</a>)。</li>
+ <li><a href="/ja/docs/Web/API/XMLHttpRequest/responseURL" title="XMLHttpRequest.responseURL プロパティは読み取り専用で、レスポンスのシリアライズされた URL を返します。 URL が null の場合は、空文字を返します。 URL に存在する URL フラグメントはすべて取り除かれます。 responseURL の値は、任意のリダイレクト後に得られる最後の URL になります。"><code>XMLHttpRequest.responseURL</code></a> を最新の仕様に適合させて、URL のフラグメント (<code>'#xyz'</code>) は存在しても含めないようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1073882" title="FIXED: XMLHttpRequest.prototype.responseURL should not have fragment per latest spec">バグ 1073882</a>)。</li>
+ <li>内部で使用している非標準の <a href="/ja/docs/Web/API/File/mozFullPath" title="File インターフェイスに対する特権的な拡張として、mozFullPath プロパティには、表現されたファイルの絶対パス名が含まれます。"><code>File.mozFullPath</code></a> プロパティは content から参照できなくなりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1048293" title="FIXED: File::mozFullPath attribute should not be exposed to content.">バグ 1048293</a>)。</li>
+ <li><a href="/ja/docs/Web/API/File" title="File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。"><code>File</code></a> のコンストラクタを、仕様に準拠するよう拡張しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1047483" title="FIXED: Porting DOMFile/DOMBlob to WebIDL">バグ 1047483</a>)。</li>
+ <li>自身を生成したものとは別のエンティティによってアボートされることが可能な Promise である、<a href="/ja/docs/Web/API/AbortablePromise" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>AbortablePromise</code></a> を実験的に実装しました。接頭辞 <code>Moz</code> を付加しており、設定項目 <code>dom.abortablepromise.enabled</code> (既定値は <code>false</code>) で制御されます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1035060" title="FIXED: Implement AbortablePromise">バグ 1035060</a>)。</li>
+ <li>非標準の <a href="/ja/docs/Web/API/Navigator/mozIsLocallyAvailable" title="Navigator.mozIsLocallyAvailable() メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。"><code>Navigator.mozIsLocallyAvailable</code></a> プロパティを削除しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1066826" title="FIXED: Remove Navigator::MozisLocallyAvailable API">バグ 1066826</a>)。</li>
+ <li>設定項目 <code>network.websocket.enabled</code> (既定値は <code>true</code>) を削除しました。今後は <a href="/ja/docs/WebSockets">Websocket</a> API を無効化できません (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1091016" title="FIXED: Pref network.websocket.enabled is no longer reasonable">バグ 1091016</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Window/crypto" title="Window.crypto 読み取り専用プロパティは、グローバルオブジェクトに関連付けられた Crypto オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。"><code>Window.crypto</code></a> の非標準メソッドおよび非標準プロパティを削除しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1030963" title="FIXED: remove proprietary window.crypto functions/properties">バグ 1030963</a>)。標準の WebCrypto API で定義されているメソッドおよびプロパティのみが残ります。</li>
+ <li>WebGL 2.0 の実験的な実装を進めています!
+  <ul>
+   <li><a href="/ja/docs/Web/API/WebGL2RenderingContext/copyBufferSubData" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>WebGL2RenderingContext.copyBufferSubData()</code></a> メソッドを実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1048668" title="FIXED: WebGL2 - Implement CopyBufferSubData">バグ 1048668</a>)。</li>
+  </ul>
+ </li>
+</ul>
 
-- [_TypedArray_ のさまざまなコンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) から継承しますので、Typed Array のコンストラクタやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116 "FIXED: Implement ES6 %TypedArray% superclass that all ArrayBufferViews inherit from") をご覧ください。
-- ES6 の、[オブジェクトリテラルを使用して行うプロトタイプミューテーション](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation)を実装しました ([バグ 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853 "FIXED: Implement ES6 object-literal __proto__ restrictions/semantics"))。
+<h3 id="MathML" name="MathML">MathML</h3>
 
-  - オブジェクトリテラル構文内では、`__proto__:value` として指定するメンバーが 1 つだけであれば `[[Prototype]]` のミューテーションを行うようになりました。
-  - `__proto__() {}` のようなメソッドメンバーは、`[[Prototype]]` をオーバーライトしないようになりました。
+<ul>
+ <li>文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の <code>dtls</code> 機能 (デフォルト CSS スタイルシートの <a href="/ja/docs/Web/CSS/font-feature-settings" title="CSS の font-feature-settings プロパティは、 OpenType フォントの拡張タイポグラフィの特性を制御します。"><code>font-feature-settings</code></a> による) が MathML 要素へ自動的に適用されるようになりました。</li>
+</ul>
 
-### インターフェイス/API/DOM
+<h3 id="SVG" name="SVG">SVG</h3>
 
-- [`NavigatorLanguage`](/ja/docs/Web/API/NavigatorLanguage "NavigatorLanguage contains methods and properties related to the language of the navigator.") インターフェイスが、[`WorkerNavigator`](/ja/docs/Web/API/WorkerNavigator "この項目についての文書はまだ書かれていません。書いてみませんか？") によって Workers から使用可能になりました ([バグ 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849 "FIXED: WorkerNavigator does not implement NavigatorLanguage"))。
-- [`Element.closest()`](/ja/docs/Web/API/Element/closest "この項目についての文書はまだ書かれていません。書いてみませんか？") メソッドは、カレント要素にもっとも近い祖先要素を返します ([バグ 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533 "FIXED: Implement Element.closest()"))。
-- [`CanvasRenderingContext2D.filter`](/ja/docs/Web/API/CanvasRenderingContext2D/filter "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティを実験的にサポートしました。設定項目 `canvas.filters.enabled` で制御されます ([バグ 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892 "FIXED: Exposing the CSS/SVG Filters as Canvas APIs"))。
-- [`Animation.target`](/ja/docs/Web/API/Animation/target "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティの実装により、Web Animations の実験的にな実装が進展しました。設定項目 `dom.animations-api.core.enabled` で制御されており、デフォルトで無効化されています ([バグ 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701 "FIXED: Implement Animation.target"))。
-- 仕様書の定めにより、[`hasAttributes()`](/ja/docs/Web/API/Element/hasAttributes "hasAttributes は現在の要素が何らかの属性を持つか否かを示す真偽値を返します。") メソッドを [`Node`](/ja/docs/Web/API/Node "Node はいくつもの DOM API オブジェクトタイプが継承しているインターフェイスで、それらのさまざまなタイプを同じように扱える (同じメソッドのセットを継承する、または同じ方法でテストできる) ようにします。") から [`Element`](/ja/docs/Web/API/Element "Element は Document の中にあるすべての要素が継承する、もっとも一般的な基底クラスです。このインターフェイスは、すべての種類の要素に共通するメソッドとプロパティを記述するだけのものです。多くの具体的なクラスが Element を継承します。") に移しました ([バグ 1055773](https://bugzilla.mozilla.org/show_bug.cgi?id=1055773 "FIXED: Move hasAttributes() to Element"))。
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement "この項目についての文書はまだ書かれていません。書いてみませんか？")、[`HTMLLinkElement`](/ja/docs/Web/API/HTMLLinkElement "HTMLLinkElement インターフェイスは、外部リソースの参照情報、およびそれらのリソースとドキュメントの関係 (またはその逆) を表します。このオブジェクトは、HTMLElement インターフェイスのすべてのプロパティとメソッドを継承します。")、[`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement "HTMLMediaElement は HTMLElement に音声や動画といったメディア関連機能の属性とメソッドを追加します。HTMLVideoElement と HTMLAudioElement はこのインタフェースを継承しています。")、[`HTMLScriptElement`](/ja/docs/Web/API/HTMLScriptElement "DOMの ScriptオブジェクトはHTMLScriptElement (または HTML 4 HTMLScriptElement)インターフェイスに具現化されます．それは通常のelementオブジェクトインターフェイスに加えて(継承によって利用可能)，<script> 要素のレイアウトおよび表現を扱う特別なプロパティとメソッドを提供します．")、[`SVGScriptElement`](/ja/docs/Web/API/SVGScriptElement "この項目についての文書はまだ書かれていません。書いてみませんか？") の `crossOrigin` 属性は有効な値のみを受け入れるようになりました。`""` は有効ではなく、代わりに `null` を使用します ([バグ 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997 "FIXED: Reflect crossOrigin as a limited enumerated attribute"))。
-- Resource Timing API をデフォルトで有効にしました ([バグ 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855 "FIXED: Turn on Resource Timing"))。
-- 仕様に合致させるため、[`Selection.containsNode()`](/ja/docs/Web/API/Selection/containsNode "この項目についての文書はまだ書かれていません。書いてみませんか？") の第一引数を `null` にすることはできなくなりました ([バグ 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058 "FIXED: Update Selection.containsNode according to the spec"))。
-- [`ImageCapture`](/ja/docs/Web/API/ImageCapture "この項目についての文書はまだ書かれていません。書いてみませんか？") API を新たに実装しました。[`ImageCapture.takePhoto()`](/ja/docs/Web/API/ImageCapture/takePhoto "この項目についての文書はまだ書かれていません。書いてみませんか？") を使用できます ([バグ 916643](https://bugzilla.mozilla.org/show_bug.cgi?id=916643 "FIXED: ImageCapture - Implement WebIDL and takePhoto()"))。
-- HTTP 以外の [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest "XMLHttpRequest (XHR) オブジェクトを使用すると、サーバーと対話することができます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。") 要求が成功した場合は (誤りである `0` に代わり) `200` を返すようになりました ([バグ 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491 "FIXED: Investigate the status code for non-HTTP XHR."))。
-- [`XMLHttpRequest.responseURL`](/ja/docs/Web/API/XMLHttpRequest/responseURL "XMLHttpRequest.responseURL プロパティは読み取り専用で、レスポンスのシリアライズされた URL を返します。 URL が null の場合は、空文字を返します。 URL に存在する URL フラグメントはすべて取り除かれます。 responseURL の値は、任意のリダイレクト後に得られる最後の URL になります。") を最新の仕様に適合させて、URL のフラグメント (`'#xyz'`) は存在しても含めないようになりました ([バグ 1073882](https://bugzilla.mozilla.org/show_bug.cgi?id=1073882 "FIXED: XMLHttpRequest.prototype.responseURL should not have fragment per latest spec"))。
-- 内部で使用している非標準の [`File.mozFullPath`](/ja/docs/Web/API/File/mozFullPath "File インターフェイスに対する特権的な拡張として、mozFullPath プロパティには、表現されたファイルの絶対パス名が含まれます。") プロパティは content から参照できなくなりました ([バグ 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293 "FIXED: File::mozFullPath attribute should not be exposed to content."))。
-- [`File`](/ja/docs/Web/API/File "File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。") のコンストラクタを、仕様に準拠するよう拡張しました ([バグ 1047483](https://bugzilla.mozilla.org/show_bug.cgi?id=1047483 "FIXED: Porting DOMFile/DOMBlob to WebIDL"))。
-- 自身を生成したものとは別のエンティティによってアボートされることが可能な Promise である、[`AbortablePromise`](/ja/docs/Web/API/AbortablePromise "この項目についての文書はまだ書かれていません。書いてみませんか？") を実験的に実装しました。接頭辞 `Moz` を付加しており、設定項目 `dom.abortablepromise.enabled` (既定値は `false`) で制御されます ([バグ 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060 "FIXED: Implement AbortablePromise"))。
-- 非標準の [`Navigator.mozIsLocallyAvailable`](/ja/docs/Web/API/Navigator/mozIsLocallyAvailable "Navigator.mozIsLocallyAvailable() メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。") プロパティを削除しました ([バグ 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826 "FIXED: Remove Navigator::MozisLocallyAvailable API"))。
-- 設定項目 `network.websocket.enabled` (既定値は `true`) を削除しました。今後は [Websocket](/ja/docs/WebSockets) API を無効化できません ([バグ 1091016](https://bugzilla.mozilla.org/show_bug.cgi?id=1091016 "FIXED: Pref network.websocket.enabled is no longer reasonable"))。
-- [`Window.crypto`](/ja/docs/Web/API/Window/crypto "Window.crypto 読み取り専用プロパティは、グローバルオブジェクトに関連付けられた Crypto オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。") の非標準メソッドおよび非標準プロパティを削除しました ([バグ 1030963](https://bugzilla.mozilla.org/show_bug.cgi?id=1030963 "FIXED: remove proprietary window.crypto functions/properties"))。標準の WebCrypto API で定義されているメソッドおよびプロパティのみが残ります。
-- WebGL 2.0 の実験的な実装を進めています!
+<p><em>変更なし。</em></p>
 
-  - [`WebGL2RenderingContext.copyBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/copyBufferSubData "この項目についての文書はまだ書かれていません。書いてみませんか？") メソッドを実装しました ([バグ 1048668](https://bugzilla.mozilla.org/show_bug.cgi?id=1048668 "FIXED: WebGL2 - Implement CopyBufferSubData"))。
+<h3 id="Audio.2FVideo" name="Audio.2FVideo">Audio/Video</h3>
 
-### MathML
+<p><em>変更なし。</em></p>
 
-- 文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の `dtls` 機能 (デフォルト CSS スタイルシートの [`font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings "CSS の font-feature-settings プロパティは、 OpenType フォントの拡張タイポグラフィの特性を制御します。") による) が MathML 要素へ自動的に適用されるようになりました。
+<h2 id="Network_.26_Security" name="Network_.26_Security">ネットワークおよびセキュリティ</h2>
 
-### SVG
+<ul>
+ <li>AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1027720" title="FIXED: Restrict HTTP/2 connections to AEAD ciphers only">バグ 1027720</a> および <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1047594" title="FIXED: Enable http/2 (and alpn) by default">バグ 1047594</a>)。</li>
+ <li>HTTP/2 の <code>alt-svc</code> ヘッダをサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1003448" title="FIXED: http/2 alt-svc support">バグ 1003448</a>)。</li>
+ <li>HTTP の <a href="/ja/docs/Web/Security/Public_Key_Pinning">Public Key Pinning</a> 拡張 (HPKP) を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787133" title="FIXED: Implement Public Key Pinning Extension for HTTP (HPKP)">バグ 787133</a>)。</li>
+</ul>
 
-_変更なし。_
+<h2 id="Changes_for_add-on_and_Mozilla_developers" name="Changes_for_add-on_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
 
-### Audio/Video
+<h3 id="XUL_.26_Add-ons" name="XUL_.26_Add-ons">XUL およびアドオン</h3>
 
-_変更なし。_
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> のプライベートなメソッドである <code>_getTabForBrowser()</code> が非推奨になりました。代わりに、パブリックなメソッドである <span id="m-getTabForBrowser"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/getTabForBrowser">getTabForBrowser</a></code></span> を新たに追加しました。予想されているとおり、このメソッドは指定した <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> を包含する <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素を返します。</li>
+ <li><a href="/ja/docs/Web/API/Performance/now" title="performance.now() メソッドは、ミリ秒単位で計測された DOMHighResTimeStamp を返します。"><code>Performance.now()</code></a> と対等である <code>Components.utils.now()</code> を、window 以外の chrome コード向けに実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=969490" title="FIXED: Implement Components.utils.now() to match Performance.now() for non-window chrome code">バグ 969490</a>)。</li>
+</ul>
 
-## ネットワークおよびセキュリティ
+<h3 id="Add-on_SDK" name="Add-on_SDK">Add-on SDK</h3>
 
-- AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720 "FIXED: Restrict HTTP/2 connections to AEAD ciphers only") および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594 "FIXED: Enable http/2 (and alpn) by default"))。
-- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448 "FIXED: http/2 alt-svc support"))。
-- HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133 "FIXED: Implement Public Key Pinning Extension for HTTP (HPKP)"))。
+<h4 id="Highlights" name="Highlights">ハイライト</h4>
 
-## アドオン開発者と Mozilla 開発者向けの変更点
+<ul>
+ <li><a href="/ja/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#Adding_an_access_key">コンテキストメニューのアクセスキー</a>を追加できます。</li>
+ <li><a href="/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow"><code>BrowserWindow</code></a> から <code>isPrivateBrowsing</code> を削除しました。</li>
+</ul>
 
-### XUL およびアドオン
+<h4 id="Details" name="Details">詳細</h4>
 
-- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser "tabbrowser") のプライベートなメソッドである `_getTabForBrowser()` が非推奨になりました。代わりに、パブリックなメソッドである [`getTabForBrowser`](/ja/docs/Mozilla/Tech/XUL/Method/getTabForBrowser) を新たに追加しました。予想されているとおり、このメソッドは指定した [`browser`](/ja/docs/Mozilla/Tech/XUL/browser "browser") を包含する [`tab`](/ja/docs/Mozilla/Tech/XUL/tab "tab") 要素を返します。
-- [`Performance.now()`](/ja/docs/Web/API/Performance/now "performance.now() メソッドは、ミリ秒単位で計測された DOMHighResTimeStamp を返します。") と対等である `Components.utils.now()` を、window 以外の chrome コード向けに実装しました ([バグ 969490](https://bugzilla.mozilla.org/show_bug.cgi?id=969490 "FIXED: Implement Components.utils.now() to match Performance.now() for non-window chrome code"))。
+<p><a class="external external-icon" href="https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35">Firefox 34 から Firefox 35 の間に行われた GitHub コミット</a>。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。</p>
 
-### Add-on SDK
+<p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-10-13&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-09-02&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;product=Add-on%20SDK&amp;list_id=11562840">Firefox 34 から Firefox 35 の間に解決したバグ</a>。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。</p>
 
-#### ハイライト
+<h2 id="関連情報">関連情報</h2>
 
-- [コンテキストメニューのアクセスキー](/ja/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#Adding_an_access_key)を追加できます。
-- [`BrowserWindow`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow) から `isPrivateBrowsing` を削除しました。
+<ul>
+ <li><a href="http://www.mozilla.jp/firefox/35.0/releasenotes/">Firefox 35 リリースノート</a></li>
+ <li><a href="https://dev.mozilla.jp/2014/12/firefox-35-addon-compatibility/">Firefox 35 アドオン互換性情報</a></li>
+</ul>
 
-#### 詳細
+<h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>
 
-[Firefox 34 から Firefox 35 の間に行われた GitHub コミット](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
-
-[Firefox 34 から Firefox 35 の間に解決したバグ](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
-
-## 関連情報
-
-- [Firefox 35 リリースノート](http://www.mozilla.jp/firefox/35.0/releasenotes/)
-- [Firefox 35 アドオン互換性情報](https://dev.mozilla.jp/2014/12/firefox-35-addon-compatibility/)
-
-## 過去のバージョン
-
-- [Firefox 34 for developers](/ja/docs/Mozilla/Firefox/Releases/34)
-- [Firefox 33 for developers](/ja/docs/Mozilla/Firefox/Releases/33)
-- [Firefox 32 for developers](/ja/docs/Mozilla/Firefox/Releases/32)
-- [Firefox 31 for developers](/ja/docs/Mozilla/Firefox/Releases/31)
-- [Firefox 30 for developers](/ja/docs/Mozilla/Firefox/Releases/30)
-- [Firefox 29 for developers](/ja/docs/Mozilla/Firefox/Releases/29)
-- [Firefox 28 for developers](/ja/docs/Mozilla/Firefox/Releases/28)
-- [Firefox 27 for developers](/ja/docs/Mozilla/Firefox/Releases/27)
-- [Firefox 26 for developers](/ja/docs/Mozilla/Firefox/Releases/26)
-- [Firefox 25 for developers](/ja/docs/Mozilla/Firefox/Releases/25)
-- [Firefox 24 for developers](/ja/docs/Mozilla/Firefox/Releases/24)
-- [Firefox 23 for developers](/ja/docs/Mozilla/Firefox/Releases/23)
-- [Firefox 22 for developers](/ja/docs/Mozilla/Firefox/Releases/22)
-- [Firefox 21 for developers](/ja/docs/Mozilla/Firefox/Releases/21)
-- [Firefox 20 for developers](/ja/docs/Mozilla/Firefox/Releases/20)
-- [Firefox 19 for developers](/ja/docs/Mozilla/Firefox/Releases/19)
-- [Firefox 18 for developers](/ja/docs/Mozilla/Firefox/Releases/18)
-- [Firefox 17 for developers](/ja/docs/Mozilla/Firefox/Releases/17)
-- [Firefox 16 for developers](/ja/docs/Mozilla/Firefox/Releases/16)
-- [Firefox 15 for developers](/ja/docs/Mozilla/Firefox/Releases/15)
-- [Firefox 14 for developers](/ja/docs/Mozilla/Firefox/Releases/14)
-- [Firefox 13 for developers](/ja/docs/Mozilla/Firefox/Releases/13)
-- [Firefox 12 for developers](/ja/docs/Mozilla/Firefox/Releases/12)
-- [Firefox 11 for developers](/ja/docs/Mozilla/Firefox/Releases/11)
-- [Firefox 10 for developers](/ja/docs/Mozilla/Firefox/Releases/10)
-- [Firefox 9 for developers](/ja/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 for developers](/ja/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 for developers](/ja/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/ja/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/ja/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/ja/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/ja/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/ja/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/ja/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/ja/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/ja/docs/Mozilla/Firefox/Releases/1.5)
+<div class="multiColumnList">
+<ul>
+<li><a href="/ja/docs/Mozilla/Firefox/Releases/34">Firefox 34 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/33">Firefox 33 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/32">Firefox 32 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/31">Firefox 31 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/30">Firefox 30 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/29">Firefox 29 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/28">Firefox 28 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/27">Firefox 27 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/26">Firefox 26 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/25">Firefox 25 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/24">Firefox 24 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/23">Firefox 23 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/22">Firefox 22 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/21">Firefox 21 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/20">Firefox 20 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/19">Firefox 19 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/18">Firefox 18 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/17">Firefox 17 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/16">Firefox 16 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/15">Firefox 15 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/14">Firefox 14 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/13">Firefox 13 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/12">Firefox 12 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/11">Firefox 11 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/10">Firefox 10 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/9">Firefox 9 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li></ul>
+</div>
