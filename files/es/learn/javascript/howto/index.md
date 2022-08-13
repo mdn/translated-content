@@ -94,9 +94,7 @@ const miObjeto= {
 - [¿Qué es una variable?](/es/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)
 - [¿Qué son los Strings?](/es/docs/Learn/JavaScript/First_steps/Strings)
 - [¿Qué es una matriz?](/es/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
-- [¿Qué es un bucle?](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
+- [¿Qué es un bucle?](/es/docs/Learn/JavaScript/Building_blocks/Looping_code) 
 
 - [¿Qué es una función?](/es/docs/Learn/JavaScript/Building_blocks/Functions)
 - [¿Qué es un evento?](/es/docs/Learn/JavaScript/Building_blocks/Events)
