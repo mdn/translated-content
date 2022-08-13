@@ -5,15 +5,16 @@ tags:
   - CSS
 translation_of: Web/CSS/word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/ru/docs/Web/CSS">CSS</a> <strong> <code>word-break</code></strong> определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока.</p>
+Свойство [CSS](/ru/docs/Web/CSS) **`word-break`** определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока.
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Значения ключевых слов */
+```css
+/* Значения ключевых слов */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -23,58 +24,57 @@ word-break: break-word; /* не включено в стандарт */
 word-break: inherit;
 word-break: initial;
 word-break: unset;
-</pre>
+```
 
-<p>Свойство <code>word-break</code> определяется одним из описанных ниже ключевых слов.</p>
+Свойство `word-break` определяется одним из описанных ниже ключевых слов.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Поведение по умолчанию для расстановки перевода строк.</dd>
- <dt><code>break-all</code></dt>
- <dd>При превышении границ блока, перевод строки будет вставлен между любыми двумя символами (за исключением текста на китайском/японском/корейском языке).</dd>
- <dt><code>keep-all</code></dt>
- <dd>Перевод строки не будет использован в тексте на китайском/японском/корейском языке. Для текста на других языках будет применено поведение по умолчанию (<code>normal</code>).</dd>
- <dt><code>break-word</code> {{Non-standard_Inline}}</dt>
- <dd>При превышении границ блока, обычно остающиеся целыми слова, могут быть разбиты в произвольном месте, если не будет найдено более подходящее для переноса строки место.</dd>
-</dl>
+- `normal`
+  - : Поведение по умолчанию для расстановки перевода строк.
+- `break-all`
+  - : При превышении границ блока, перевод строки будет вставлен между любыми двумя символами (за исключением текста на китайском/японском/корейском языке).
+- `keep-all`
+  - : Перевод строки не будет использован в тексте на китайском/японском/корейском языке. Для текста на других языках будет применено поведение по умолчанию (`normal`).
+- `break-word` {{Non-standard_Inline}}
+  - : При превышении границ блока, обычно остающиеся целыми слова, могут быть разбиты в произвольном месте, если не будет найдено более подходящее для переноса строки место.
 
-<div class="note">
-<p><strong>Примечание:</strong> В отличие от <code>word-break: break-word</code> и <code>overflow-wrap: break-word</code> (смотри {{cssxref("overflow-wrap")}}), <code>word-break: break-all</code> вставит перевод строки в том месте, где текст будет превышать занимаемый им блок (даже в том случае, когда текст можно перенести по словам).</p>
-</div>
+> **Примечание:** В отличие от `word-break: break-word` и `overflow-wrap: break-word` (смотри {{cssxref("overflow-wrap")}}), `word-break: break-all` вставит перевод строки в том месте, где текст будет превышать занимаемый им блок (даже в том случае, когда текст можно перенести по словам).
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;1. &lt;code&gt;word-break: normal&lt;/code&gt;&lt;/p&gt;
-&lt;p class="normal narrow"&gt;This is a long and
+```html
+<p>1. <code>word-break: normal</code></p>
+<p class="normal narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;2. &lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakAll narrow"&gt;This is a long and
+<p>2. <code>word-break: break-all</code></p>
+<p class="breakAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;3. &lt;code&gt;word-break: keep-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="keepAll narrow"&gt;This is a long and
+<p>3. <code>word-break: keep-all</code></p>
+<p class="keepAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;4. &lt;code&gt;word-break: break-word&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakWord narrow"&gt;This is a long and
+<p>4. <code>word-break: break-word</code></p>
+<p class="breakWord narrow">This is a long and
   Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;</pre>
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.narrow {
+```css
+.narrow {
   padding: 5px;
   border: 1px solid;
   display: table;
@@ -96,36 +96,22 @@ word-break: unset;
 .breakWord {
   word-break: break-word;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Примеры', '100%', 600)}}</p>
+{{EmbedLiveSample('Примеры', '100%', 600)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#word-break-property', 'word-break')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment            |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Initial definition |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("overflow-wrap")}}</li>
-</ul>
+## See also
+
+- {{cssxref("overflow-wrap")}}

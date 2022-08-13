@@ -3,113 +3,115 @@ title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 translation_of: Web/CSS/backdrop-filter
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>backdrop-filter</code></strong> позволяет вам использовать визуальные эффекты - такие как размытие или смещение цвета фона - за элементом. Так как это применяется ко всему <em>за</em> элементом, чтобы увидеть эффект, вы должны сделать элемент или его фон по крайней мере частично прозрачными.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`backdrop-filter`** позволяет вам использовать визуальные эффекты - такие как размытие или смещение цвета фона - за элементом. Так как это применяется ко всему _за_ элементом, чтобы увидеть эффект, вы должны сделать элемент или его фон по крайней мере частично прозрачными.
 
-<pre class="brush: css no-line-numbers language-css"><code class="language-css"><span class="comment token">/* Keyword value */</span></code><code class="language-css">
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+```css
+/* Keyword value */
+backdrop-filter: none;
 
-<span class="comment token">/* фильтр URL в SVG */</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="token url">url(commonfilters.svg#filter)</span><span class="punctuation token">;</span>
+/* фильтр URL в SVG */
+backdrop-filter: url(commonfilters.svg#filter);
 
-<span class="comment token">/* значения &lt;filter-function&gt; */</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">blur</span><span class="punctuation token">(</span><span class="number token">2</span><span class="token unit">px</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">brightness</span><span class="punctuation token">(</span><span class="number token">60</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">contrast</span><span class="punctuation token">(</span><span class="number token">40</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">drop-shadow</span><span class="punctuation token">(</span><span class="number token">4</span><span class="token unit">px</span> <span class="number token">4</span><span class="token unit">px</span> <span class="number token">10</span><span class="token unit">px</span> blue<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">grayscale</span><span class="punctuation token">(</span><span class="number token">30</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">hue-rotate</span><span class="punctuation token">(</span><span class="number token">120</span><span class="token unit">deg</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">invert</span><span class="punctuation token">(</span><span class="number token">70</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">opacity</span><span class="punctuation token">(</span><span class="number token">20</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">sepia</span><span class="punctuation token">(</span><span class="number token">90</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">saturate</span><span class="punctuation token">(</span><span class="number token">80</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+/* значения <filter-function> */
+backdrop-filter: blur(2px);
+backdrop-filter: brightness(60%);
+backdrop-filter: contrast(40%);
+backdrop-filter: drop-shadow(4px 4px 10px blue);
+backdrop-filter: grayscale(30%);
+backdrop-filter: hue-rotate(120deg);
+backdrop-filter: invert(70%);
+backdrop-filter: opacity(20%);
+backdrop-filter: sepia(90%);
+backdrop-filter: saturate(80%);
 
-<span class="comment token">/* Несколько фильтров */</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="token url">url(filters.svg#filter)</span> <span class="function token">blur</span><span class="punctuation token">(</span><span class="number token">4</span><span class="token unit">px</span><span class="punctuation token">)</span> <span class="function token">saturate</span><span class="punctuation token">(</span><span class="number token">150</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+/* Несколько фильтров */
+backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 
-<span class="comment token">/* Глобальные значения */</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">backdrop-filter</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+/* Глобальные значения */
+backdrop-filter: inherit;
+backdrop-filter: initial;
+backdrop-filter: unset;
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Фильтр отключён для фона</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>Перечень фильтров, разделённых пробелами функций {{cssxref("&lt;filter-function&gt;")}} или <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">SVG фильтра</a>, которые применены для фона.</dd>
-</dl>
+- `none`
+  - : Фильтр отключён для фона
+- `<filter-function-list>`
+  - : Перечень фильтров, разделённых пробелами функций {{cssxref("&lt;filter-function&gt;")}} или [SVG фильтра](/ru/docs/Web/SVG/Element/filter), которые применены для фона.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.box</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">255</span><span class="punctuation token">,</span> <span class="number token">255</span><span class="punctuation token">,</span> <span class="number token">255</span><span class="punctuation token">,</span> <span class="number token">0.3</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">border-radius</span><span class="punctuation token">:</span> <span class="number token">5</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">font-family</span><span class="punctuation token">:</span> sans-serif<span class="punctuation token">;</span>
-  <span class="property token">text-align</span><span class="punctuation token">:</span> center<span class="punctuation token">;</span>
-  <span class="property token">line-height</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">;</span>
- <span class="property token">-webkit-backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">blur</span><span class="punctuation token">(</span><span class="number token">10</span><span class="token unit">px</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">backdrop-filter</span><span class="punctuation token">:</span> <span class="function token">blur</span><span class="punctuation token">(</span><span class="number token">10</span><span class="token unit">px</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">max-width</span><span class="punctuation token">:</span> <span class="number token">50</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">max-height</span><span class="punctuation token">:</span> <span class="number token">50</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">20</span><span class="token unit">px</span> <span class="number token">40</span><span class="token unit">px</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+.box {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1;
+ -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;
+}
 
-<span class="selector token">html,
-body</span> <span class="punctuation token">{</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
-<span class="selector token">body</span> <span class="punctuation token">{</span>
-  <span class="property token">background-image</span><span class="punctuation token">:</span> <span class="token url">url('https://lorempixel.com/400/200/')</span><span class="punctuation token">;</span>
-  <span class="property token">background-position</span><span class="punctuation token">:</span> center center<span class="punctuation token">;</span>
-  <span class="property token">background-repeat</span><span class="punctuation token">:</span> no-repeat<span class="punctuation token">;</span>
-  <span class="property token">background-size</span><span class="punctuation token">:</span> cover<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+body {
+  background-image: url('https://lorempixel.com/400/200/');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-<span class="selector token"><span class="class token">.container</span></span> <span class="punctuation token">{</span>
-  <span class="property token">align-items</span><span class="punctuation token">:</span> center<span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> flex<span class="punctuation token">;</span>
-  <span class="property token">justify-content</span><span class="punctuation token">:</span> center<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="punctuation token">}</span></code></pre>
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 10}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>container<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>backdrop-filter: blur(10px)<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры", 600, 400)}}</p>
+{{EmbedLiveSample("Примеры", 600, 400)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("filter")}}</li>
- <li><a href="http://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter">Building iOS-like transparency effects in CSS with backdrop-filter</a></li>
-</ul>
+- {{cssxref("filter")}}
+- [Building iOS-like transparency effects in CSS with backdrop-filter](http://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter)

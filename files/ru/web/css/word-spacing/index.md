@@ -6,24 +6,23 @@ tags:
   - форматирование
 translation_of: Web/CSS/word-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>word-spacing</code></strong> устанавливает длину пробела между словами и между тегами.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`word-spacing`** устанавливает длину пробела между словами и между тегами.
 
-<div>{{EmbedInteractiveExample("pages/css/word-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-spacing.html")}}
 
+## Синтаксис
 
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Значение ключевым словом */
+```css
+/* Значение ключевым словом */
 word-spacing: normal;
 
-/* &lt;length&gt; значения */
+/* <length> значения */
 word-spacing: 3px;
 word-spacing: 0.3em;
 
-/* &lt;percentage&gt; значения  */
+/* <percentage> значения  */
 word-spacing: 50%;
 word-spacing: 200%;
 
@@ -31,61 +30,59 @@ word-spacing: 200%;
 word-spacing: inherit;
 word-spacing: initial;
 word-spacing: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Нормальный интервал между словами, определённый текущим шрифтом и/или браузером.</dd>
- <dt>{{cssxref("length")}}</dt>
- <dd>Определяет дополнительный интервал в дополнение к внутреннему интервалу между словами, определяемому шрифтом.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>Определяет дополнительный интервал как процент от предварительной ширины символа.</dd>
-</dl>
+- `normal`
+  - : Нормальный интервал между словами, определённый текущим шрифтом и/или браузером.
+- {{cssxref("length")}}
+  - : Определяет дополнительный интервал в дополнение к внутреннему интервалу между словами, определяемому шрифтом.
+- {{cssxref("percentage")}}
+  - : Определяет дополнительный интервал как процент от предварительной ширины символа.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="mozdiv1"&gt;Here are many words...&lt;/div&gt;
-&lt;div id="mozdiv2"&gt;...and many more!&lt;/div&gt;</pre>
+```html
+<div id="mozdiv1">Here are many words...</div>
+<div id="mozdiv2">...and many more!</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#mozdiv1 {
+```css
+#mozdiv1 {
   word-spacing: 15px;
 }
 
 #mozdiv2 {
   word-spacing: 5em;
-} </pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Большое положительное или отрицательное значение <code>word-spacing</code> может сделать предложения, к которым применяется стиль, нечитаемыми.  Для текста, стилизованного с очень большими положительными значениями, слова будут так далеки друг от друга, что он больше не будет казаться предложением. Для текста, стилизованного с очень большими отрицательными значениями, слова будут перекрывать друг от друга до точки, где начало и конец каждого слова будут неразличимы.</p>
+Большое положительное или отрицательное значение `word-spacing` может сделать предложения, к которым применяется стиль, нечитаемыми. Для текста, стилизованного с очень большими положительными значениями, слова будут так далеки друг от друга, что он больше не будет казаться предложением. Для текста, стилизованного с очень большими отрицательными значениями, слова будут перекрывать друг от друга до точки, где начало и конец каждого слова будут неразличимы.
 
-<p>Разборчивый <code>word-spacing</code> должен быть определён в каждом конкретном случае, так как различные семейства шрифтов имеют различную ширину символов. Нет ни одного значения, которое может обеспечить для всех семейств шрифтов автоматическое сохранение разборчивости.</p>
+Разборчивый `word-spacing` должен быть определён в каждом конкретном случае, так как различные семейства шрифтов имеют различную ширину символов. Нет ни одного значения, которое может обеспечить для всех семейств шрифтов автоматическое сохранение разборчивости.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,19 +3,20 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 translation_of: Web/CSS/border-image-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>The <strong><code>border-image-source</code></strong> CSS property defines the {{cssxref("&lt;image&gt;")}} to use instead of the style of the border. If this property is set to <code>none</code>, the style defined by {{cssxref("border-style")}} is used instead.</p>
+The **`border-image-source`** CSS property defines the {{cssxref("&lt;image&gt;")}} to use instead of the style of the border. If this property is set to `none`, the style defined by {{cssxref("border-style")}} is used instead.
 
-<div class="note"><strong>Предупреждение:</strong> Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the <code>url()</code> functional notation.</div>
+> **Примечание:** **Предупреждение:** Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the `url()` functional notation.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* no border-image, use the specified border-style */
+```css
+/* no border-image, use the specified border-style */
 border-image-source: none;
 
 /* the image.jpg is used as image */
@@ -28,29 +29,27 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Specifies that no image should be used for the border. Instead the style defined by {{cssxref("border-style")}} is used.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>Ссылка на изображение, которое будет использоваться в отрисовке границы.</dd>
-</dl>
+- `none`
+  - : Specifies that no image should be used for the border. Instead the style defined by {{cssxref("border-style")}} is used.
+- `<image>`
+  - : Ссылка на изображение, которое будет использоваться в отрисовке границы.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Specifications">Примеры</h2>
+## Примеры
 
-<p>See {{cssxref("border-image")}} for examples of what the various source values will do.</p>
+See {{cssxref("border-image")}} for examples of what the various source values will do.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

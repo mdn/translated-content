@@ -8,90 +8,84 @@ tags:
   - фрагментация
 translation_of: Web/CSS/orphans
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a> <code>orphans</code> устанавливает <em>минимальное</em> число строк в блочном контейнере, которое должно быть показано <em>внизу</em> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Paged_Media">страницы</a>, региона или <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Columns">столбца</a>.</p>
+Свойство [CSS](/ru/docs/CSS "CSS") `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/Paged_Media), региона или [столбца](/ru/docs/Web/CSS/CSS_Columns).
 
-<pre class="brush:css no-line-numbers language-css"><code class="language-css"><span class="comment token">/* &lt;integer&gt; значения */</span>
-<span class="property token">orphans</span><span class="punctuation token">:</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="property token">orphans</span><span class="punctuation token">:</span> <span class="number token">3</span><span class="punctuation token">;</span>
+```css
+/* <integer> значения */
+orphans: 2;
+orphans: 3;
 
-<span class="comment token">/* Глобальные значения */</span>
-<span class="property token">orphans</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">orphans</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">orphans</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+/* Глобальные значения */
+orphans: inherit;
+orphans: initial;
+orphans: unset;
+```
 
-<div class="note">
-<p>В типографии, <em>orphan</em> это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)</p>
-</div>
+> **Примечание:** В типографии, _orphan_ это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p> </p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+### Значения
 
-<h3 id="Values">Значения</h3>
+- {{cssxref("&lt;integer&gt;")}}
+  - : Минимальное число строк, которое можно оставить внизу фрагмента перед разрывом фрагмента. Значение должно быть положительным.
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Минимальное число строк, которое можно оставить внизу фрагмента перед разрывом фрагмента. Значение должно быть положительным.</dd>
-</dl>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the first paragraph containing some text.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the third paragraph. It has a little bit more text than the first one.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<div>
+  <p>This is the first paragraph containing some text.</p>
+  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
+  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[5] line-numbers language-css"><code class="language-css"><span class="selector token">div</span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#8cffa0</span><span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">150</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">columns</span><span class="punctuation token">:</span> <span class="number token">3</span><span class="punctuation token">;</span>
-  <span class="property token">orphans</span><span class="punctuation token">:</span> <span class="number token">3</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+div {
+  background-color: #8cffa0;
+  height: 150px;
+  columns: 3;
+  orphans: 3;
+}
 
-<span class="selector token">p</span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#8ca0ff</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+p {
+  background-color: #8ca0ff;
+}
 
-<span class="selector token">p<span class="pseudo-class token">:first-child</span></span> <span class="punctuation token">{</span>
-  <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+p:first-child {
+  margin-top: 0;
+}
+```
 
-<pre class="brush: css; highlight[5] line-numbers language-css"> </pre>
+```css
 
-<h3 id="Результат">Результат</h3>
+```
 
-<p>{{EmbedLiveSample("Пример", 380, 150)}}</p>
+### Результат
 
-<div> </div>
+{{EmbedLiveSample("Пример", 380, 150)}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{cssxref("widows")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Paged_Media">Paged media</a></li>
-</ul>
+- {{cssxref("widows")}}
+- [Paged media](/ru/docs/Web/CSS/Paged_Media)

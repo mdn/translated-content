@@ -3,104 +3,96 @@ title: background
 slug: Web/CSS/background
 translation_of: Web/CSS/background
 ---
-<div>{{CSSRef("CSS Background")}}</div>
+{{CSSRef("CSS Background")}}Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
 
-<div>Сокращённое <a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>background</code></strong>  устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.</div>
+Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение..
 
+Свойство является [сокращением,](/ru/docs/Web/CSS/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
 
+Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/Web/CSS/initial_value).
 
-<div>{{EmbedInteractiveExample("pages/css/background.html")}}</div>
+## Синтаксис
 
-<p>Исходный код этого интерактивного примера хранится в репозитории GitHub.  Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на извлечение..</p>
-
-<p>Свойство является <a href="/en-US/docs/Web/CSS/Shorthand_properties">сокращением,</a> которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.</p>
-
-<p>Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои <a href="/en-US/docs/Web/CSS/initial_value">изначальные значения</a>.</p>
-
-
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css">/* Использование свойства &lt;background-color&gt; */
+```css
+/* Использование свойства <background-color> */
 background: green;
 
-/* Использование свойств &lt;bg-image&gt; и &lt;repeat-style&gt; */
+/* Использование свойств <bg-image> и <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* Использование &lt;box&gt; и &lt;background-color&gt; */
+/* Использование <box> и <background-color> */
 background: border-box red;
 
 /* Одно изображение, центрированное и масштабированное */
 background: no-repeat center/80% url("../img/image.png");
-</pre>
+```
 
-<div class="note"><strong>Предупреждение:</strong> {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.</div>
+> **Примечание:** **Предупреждение:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Свойству можно указывать одно или более значений из данного списка в любом порядке:</p>
+Свойству можно указывать одно или более значений из данного списка в любом порядке:
 
-<dl>
- <dt><code>&lt;attachment&gt;</code></dt>
- <dd>Смотри {{cssxref("background-attachment")}}</dd>
- <dt><code>&lt;box&gt;</code></dt>
- <dd>Смотри {{cssxref("background-clip")}}</dd>
- <dt><code>&lt;background-color&gt;</code></dt>
- <dd>Смотри {{cssxref("background-color")}}</dd>
- <dt><code>&lt;bg-image&gt;</code></dt>
- <dd>Смотри {{Cssxref("background-image")}}</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Смотри {{cssxref("background-position")}}</dd>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>Смотри {{cssxref("background-repeat")}}</dd>
- <dt><code>&lt;bg-size&gt;</code></dt>
- <dd>Смотри {{cssxref("background-size")}}. Это свойство должно быть указано после <strong>&lt;position&gt;</strong>, разделённого символом '/'.</dd>
-</dl>
+- `<attachment>`
+  - : Смотри {{cssxref("background-attachment")}}
+- `<box>`
+  - : Смотри {{cssxref("background-clip")}}
+- `<background-color>`
+  - : Смотри {{cssxref("background-color")}}
+- `<bg-image>`
+  - : Смотри {{Cssxref("background-image")}}
+- `<position>`
+  - : Смотри {{cssxref("background-position")}}
+- `<repeat-style>`
+  - : Смотри {{cssxref("background-repeat")}}
+- `<bg-size>`
+  - : Смотри {{cssxref("background-size")}}. Это свойство должно быть указано после **\<position>**, разделённого символом '/'.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="topbanner"&gt;
-  Starry sky&lt;br/&gt;
-  Twinkle twinkle&lt;br/&gt;
+```html
+<p class="topbanner">
+  Starry sky<br/>
+  Twinkle twinkle<br/>
   Starry sky
-&lt;/p&gt;
-&lt;p class="warning"&gt;Here is a paragraph&lt;p&gt;</pre>
+</p>
+<p class="warning">Here is a paragraph<p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.warning {
+```css
+.warning {
   background: red;
 }
 
 .topbanner {
   background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{cssinfo}}</p>
+{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("-moz-background-inline-policy")}}</li>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients">Использование градиентов</a></li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds">Несколько backgrounds</a></li>
-</ul>
+- {{cssxref("-moz-background-inline-policy")}}
+- [Использование градиентов](/ru/docs/CSS/Using_CSS_gradients)
+- [Несколько backgrounds](/ru/docs/CSS/Multiple_backgrounds)

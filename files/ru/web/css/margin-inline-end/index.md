@@ -3,17 +3,16 @@ title: margin-inline-end
 slug: Web/CSS/margin-inline-end
 translation_of: Web/CSS/margin-inline-end
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> Свойство <strong> <code>margin-inline-end </code></strong> определяет отступ логического края  элемента, который сопоставляется с физическим отступом в зависимости от режима написания, направленности и расположения текста. То есть оно соответствует {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} или {{cssxref("margin-left")}} свойству в зависимости от числа определяющего {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.</p>
+[CSS](/ru/docs/Web/CSS "CSS") Свойство **`margin-inline-end `**определяет отступ логического края элемента, который сопоставляется с физическим отступом в зависимости от режима написания, направленности и расположения текста. То есть оно соответствует {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} или {{cssxref("margin-left")}} свойству в зависимости от числа определяющего {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
 
+## Syntax
 
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-inline-end: 10px;   /* An absolute length */
 margin-inline-end: 1em;    /* relative to the text size */
 margin-inline-end: 5%;     /* relative to the nearest block container's width */
@@ -25,32 +24,34 @@ margin-inline-end: auto;
 margin-inline-end: inherit;
 margin-inline-end: initial;
 margin-inline-end: unset;
-</pre>
+```
 
-<p>It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and {{cssxref("margin-inline-start")}}, which define the other margins of the element.</p>
+It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and {{cssxref("margin-inline-start")}}, which define the other margins of the element.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>margin-inline-end</code> property takes the same values as the {{cssxref("margin-left")}} property.</p>
+The `margin-inline-end` property takes the same values as the {{cssxref("margin-left")}} property.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -60,39 +61,23 @@ margin-inline-end: unset;
   writing-mode: vertical-lr;
   margin-inline-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref("margin-inline-start")}}</li>
- <li>The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("margin-inline-start")}}
+- The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

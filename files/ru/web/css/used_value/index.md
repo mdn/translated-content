@@ -6,40 +6,39 @@ tags:
   - Reference
 translation_of: Web/CSS/used_value
 ---
-<div>{{cssref}}</div>
+{{cssref}}**Используемое значение** - [CSS ](/ru/docs/Web/CSS)свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
 
-<div><strong>Используемое значение </strong>- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS </a>свойство, которое используется, когда все вычисления уже выполнены, смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value">вычисленное значение</a>.</div>
+После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
-<p>После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения  (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов  (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.</p>
+> **Примечание:** **Замечание**: {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
 
-<div class="blockIndicator note">
-<p><strong>Замечание</strong>:  {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает <a href="/ru/docs/">решённое значение</a>, которое может быть <a href="/ru/docs/">численным значением</a> или <a href="/ru/docs/">используемым значением</a>, в зависимости от свойства.</p>
+## Пример
+
+Данный пример показывает вычисление и отображение значения `width` трёх элементов (обновление при изменении размера):
+
+### HTML
+
+```html
+<div id="no-width">
+  <p>No explicit width.</p>
+  <p class="show-used-width">..</p>
+
+  <div id="width-50">
+    <p>Explicit width: 50%.</p>
+    <p class="show-used-width">..</p>
+
+    <div id="width-inherit">
+      <p>Explicit width: inherit.</p>
+      <p class="show-used-width">..</p>
+    </div>
+  </div>
 </div>
+```
 
-<h2 id="Пример">Пример</h2>
+### CSS
 
-<p>Данный пример показывает вычисление и отображение значения <code>width</code> трёх элементов (обновление при изменении размера):</p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="no-width"&gt;
-  &lt;p&gt;No explicit width.&lt;/p&gt;
-  &lt;p class="show-used-width"&gt;..&lt;/p&gt;
-
-  &lt;div id="width-50"&gt;
-    &lt;p&gt;Explicit width: 50%.&lt;/p&gt;
-    &lt;p class="show-used-width"&gt;..&lt;/p&gt;
-
-    &lt;div id="width-inherit"&gt;
-      &lt;p&gt;Explicit width: inherit.&lt;/p&gt;
-      &lt;p class="show-used-width"&gt;..&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#no-width {
+```css
+#no-width {
   width: auto;
 }
 
@@ -55,75 +54,51 @@ translation_of: Web/CSS/used_value
 div {
   border: 1px solid red;
   padding: 8px;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre><code>function updateUsedWidth(id) {
-  var div = document.querySelector(`#${id}`);
-  var par = div.querySelector('.show-used-width');
-  var wid = window.getComputedStyle(div)["width"];
-  par.textContent = `Used width: ${wid}.`;
 }
+```
 
-function updateAllUsedWidths() {
-  updateUsedWidth("no-width");
-  updateUsedWidth("width-50");
-  updateUsedWidth("width-inherit");
-}
+### JavaScript
 
-updateAllUsedWidths();
-window.addEventListener('resize', updateAllUsedWidths);</code></pre>
+    function updateUsedWidth(id) {
+      var div = document.querySelector(`#${id}`);
+      var par = div.querySelector('.show-used-width');
+      var wid = window.getComputedStyle(div)["width"];
+      par.textContent = `Used width: ${wid}.`;
+    }
 
-<h3 id="Результат">Результат</h3>
+    function updateAllUsedWidths() {
+      updateUsedWidth("no-width");
+      updateUsedWidth("width-50");
+      updateUsedWidth("width-inherit");
+    }
 
-<p>{{ EmbedLiveSample('Пример', '80%', 372) }}</p>
+    updateAllUsedWidths();
+    window.addEventListener('resize', updateAllUsedWidths);
 
-<h2 id="Difference_from_computed_value">Difference from computed value</h2>
+### Результат
 
-<p>CSS 2.0 defined only <em>computed value</em> as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., <code>display</code>, <code>font-size</code>, or <code>line-height</code>), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from <a href="http://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a>):</p>
+{{ EmbedLiveSample('Пример', '80%', 372) }}
 
-<ul>
- <li><code>background-position</code></li>
- <li><code>bottom</code>, <code>left</code>, <code>right</code>, <code>top</code></li>
- <li><code>height</code>, <code>width</code></li>
- <li><code>margin-bottom</code>, <code>margin-left</code>, <code>margin-right</code>, <code>margin-top</code></li>
- <li><code>min-height</code>, <code>min-width</code></li>
- <li><code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code>, <code>padding-top</code></li>
- <li><code>text-indent</code></li>
-</ul>
+## Difference from computed value
 
-<h2 id="Спецификация">Спецификация</h2>
+CSS 2.0 defined only _computed value_ as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.2")}}</td>
-      <td><p>No change.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+- `background-position`
+- `bottom`, `left`, `right`, `top`
+- `height`, `width`
+- `margin-bottom`, `margin-left`, `margin-right`, `margin-top`
+- `min-height`, `min-width`
+- `padding-bottom`, `padding-left`, `padding-right`, `padding-top`
+- `text-indent`
 
-<h2 id="Смотреть_так_же">Смотреть так же:</h2>
+## Спецификация
 
-<ul>
- <li>{{domxref("window.getComputedStyle")}}</li>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+| Specification                                                                        | Status                   | Comment             |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} | No change.          |
+| {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+
+## Смотреть так же:
+
+- {{domxref("window.getComputedStyle")}}
+- {{CSS_key_concepts}}

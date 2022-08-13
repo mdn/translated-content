@@ -3,19 +3,20 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 translation_of: Web/CSS/animation-play-state
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство <strong><code>animation-play-state</code></strong> определяет состояние анимации, паузы или проигрыша. Это можно использовать, чтобы определить текущее состояние анимации, например, в скриптах.</p>
+Свойство **`animation-play-state`** определяет состояние анимации, паузы или проигрыша. Это можно использовать, чтобы определить текущее состояние анимации, например, в скриптах.
 
-<p>Если возобновить приостановленную анимацию, то она запустит её с того места, где она была поставлена на паузу, а не начнётся с начала.</p>
+Если возобновить приостановленную анимацию, то она запустит её с того места, где она была поставлена на паузу, а не начнётся с начала.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* Одна анимация */
+```css
+/* Одна анимация */
 animation-play-state: running;
 animation-play-state: paused;
 
@@ -26,37 +27,32 @@ animation-play-state: paused, running, running;
 animation-play-state: inherited;
 animation-play-state: initial;
 animation-play-state: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>running</code></dt>
- <dd>Анимация проигрывается.</dd>
- <dt><code>paused</code></dt>
- <dd>Анимация поставлена на паузу.</dd>
-</dl>
+- `running`
+  - : Анимация проигрывается.
+- `paused`
+  - : Анимация поставлена на паузу.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
-<pre class="syntaxbox"><code>{{csssyntax}}</code>
-</pre>
+    {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>См. <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS animations</a>.</p>
+См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations").
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимаций</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- {{domxref("AnimationEvent", "AnimationEvent")}}

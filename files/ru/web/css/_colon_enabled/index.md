@@ -1,55 +1,53 @@
 ---
 title: ':enabled'
-slug: 'Web/CSS/:enabled'
-translation_of: 'Web/CSS/:enabled'
+slug: Web/CSS/:enabled
+translation_of: Web/CSS/:enabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:enabled</code> находит любой включённый элемент. Элемент включён, если его можно активировать (например, выбрать, нажать на него или ввести текст) или поставить фокус. У элемента также есть отключённое состояние, когда его нельзя активировать или сфокусировать.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:enabled` находит любой включённый элемент. Элемент включён, если его можно активировать (например, выбрать, нажать на него или ввести текст) или поставить фокус. У элемента также есть отключённое состояние, когда его нельзя активировать или сфокусировать.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример делает цвет текста средне-зелёного оттенка, когда поле включено, и серым, когда отключено. Это позволяет понимать пользователю какие элементы интерактивны, а какие нет.</p>
+Следующий пример делает цвет текста средне-зелёного оттенка, когда поле включено, и серым, когда отключено. Это позволяет понимать пользователю какие элементы интерактивны, а какие нет.
 
-<div id="Enabled_Disabled_Inputs_Example">
-<p>Следующий HTML...</p>
+Следующий HTML...
 
-<pre class="brush:html">    &lt;form action="url_of_form"&gt;
-      &lt;label for="FirstField"&gt;Первое поле (включено):&lt;/label&gt; &lt;input type="text" id="FirstField" value="Lorem"&gt;&lt;br /&gt;
-      &lt;label for="SecondField"&gt;Второе поле (отключено):&lt;/label&gt; &lt;input type="text" id="SecondField" value="Ipsum" disabled="disabled"&gt;&lt;br /&gt;
-      &lt;input type="button" value="Submit" /&gt;
-    &lt;/form&gt;
-  </pre>
+```html
+    <form action="url_of_form">
+      <label for="FirstField">Первое поле (включено):</label> <input type="text" id="FirstField" value="Lorem"><br />
+      <label for="SecondField">Второе поле (отключено):</label> <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br />
+      <input type="button" value="Submit" />
+    </form>
 
-<p>...используем со следующим CSS...</p>
+```
 
-<pre class="brush:css; highlight:[1,4]">input:enabled {
+...используем со следующим CSS...
+
+```css
+input:enabled {
   color: #22AA22;
 }
 input:disabled {
   color: #D9D9D9;
 }
-  </pre>
 
-<p>...результат:</p>
+```
 
-<div>{{EmbedLiveSample("Enabled_Disabled_Inputs_Example",550,95)}}</div>
+...результат:
 
-<div>Заметьте, цвет текста кнопки также зелёный, так как она тоже включена.</div>
-</div>
+{{EmbedLiveSample("Enabled_Disabled_Inputs_Example",550,95)}}Заметьте, цвет текста кнопки также зелёный, так как она тоже включена.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref(":disabled")}}</li>
-</ul>
+- {{Cssxref(":disabled")}}

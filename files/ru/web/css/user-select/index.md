@@ -6,11 +6,12 @@ tags:
   - Свойство
 translation_of: Web/CSS/user-select
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/en-US/docs/Web/CSS">CSS</a> <code><strong>user-select</strong></code> определяет может ли пользователь выбрать текст.  Оно не влияет на контент, загруженный как {{Glossary("Chrome", "chrome")}}, за исключением текстовых блоков.</p>
+Свойство [CSS](/ru/docs/Web/CSS) **`user-select`** определяет может ли пользователь выбрать текст. Оно не влияет на контент, загруженный как {{Glossary("Chrome", "chrome")}}, за исключением текстовых блоков.
 
-<pre class="brush:css">/* Ключевые слова в значении */
+```css
+/* Ключевые слова в значении */
 user-select: none;
 user-select: auto;
 user-select: text;
@@ -32,63 +33,55 @@ user-select: unset;
 -webkit-user-select: text;
 -webkit-user-select: all; /*Не работает Safari; используйте только
                              "none" или "text", или, в противном случае, оно
-                             будет разрешать ввод в &lt;html&gt; контейнер */
+                             будет разрешать ввод в <html> контейнер */
 
 /* Специфичные для Microsoft значения */
 -ms-user-select: none;
 -ms-user-select: text;
 -ms-user-select: element;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Текст элемента и вложенных в него элементов не выбирается. Обратите внимание, что объект {{domxref("Selection")}} может содержать эти элементы.</dd>
- <dt><code>auto</code></dt>
- <dd>
- <p>Вычисляемое значение, автоматически определяется следующим образом:</p>
+- `none`
+  - : Текст элемента и вложенных в него элементов не выбирается. Обратите внимание, что объект {{domxref("Selection")}} может содержать эти элементы.
+- `auto`
+  - : Вычисляемое значение, автоматически определяется следующим образом:\* Для псевдо-элементов `::before` и `::after` вычисляемое значение - `none`
+    - Если элемент является редактируемым, вычисляемое значение - `contain`
+    - Иначе, если вычисляемое значение `user-select` для родителя этого элемента - `all`, вычисляемое значение - `all`
+    - Иначе, если вычисляемое значение `user-select` для родителя этого элемента - `none`, вычисляемое значение - `none`
+    - Иначе, вычисляемое значение - `text`
+- `text`
+  - : Текст может быть выбран пользователем.
+- `all`
+  - : В HTML-редакторе, если двойной клик или контекстный клик произошёл во вложенном элементе, будет выбрано все содержимое коренного предка с этим значением свойства.
+- `contain`
+  - : Позволяет начать выбор внутри элемента; однако, выбор будет содержаться внутри границ данного элемента.
+- `element`{{non-standard_inline}} (IE-specific alias)
+  - : Аналогичен `contain`. Поддерживается только в Internet Explorer.
 
- <ul>
-  <li>Для псевдо-элементов <code>::before</code> и <code>::after</code> вычисляемое значение -  <code>none</code></li>
-  <li>Если элемент  является редактируемым, вычисляемое значение - <code>contain</code></li>
-  <li>Иначе, если вычисляемое значение <code>user-select</code> для родителя этого элемента - <code>all</code>, вычисляемое значение - <code>all</code></li>
-  <li>Иначе, если вычисляемое значение <code>user-select</code> для родителя этого элемента - <code>none</code>, вычисляемое значение - <code>none</code></li>
-  <li>Иначе, вычисляемое значение - <code>text</code></li>
- </ul>
- </dd>
- <dt><code>text</code></dt>
- <dd>Текст может быть выбран пользователем.</dd>
- <dt><code>all</code></dt>
- <dd>В HTML-редакторе, если двойной клик или контекстный клик произошёл во вложенном элементе, будет выбрано все содержимое коренного предка с этим значением свойства.</dd>
- <dt><code>contain</code></dt>
- <dd>Позволяет начать выбор внутри элемента; однако, выбор будет содержаться внутри границ данного элемента.</dd>
- <dt><code>element</code>{{non-standard_inline}} (IE-specific alias)</dt>
- <dd>Аналогичен <code>contain</code>. Поддерживается только в Internet Explorer.</dd>
-</dl>
+> **Примечание:** CSS UI 4 [renames user-select: element to contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
-<div class="note">
-<p id="Formal_syntax"><strong>Примечание:</strong> CSS UI 4 <a href="https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05">renames user-select: element to contain</a>.</p>
-</div>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;You should be able to select this text.&lt;/p&gt;
-&lt;p class="unselectable"&gt;Hey, you can't select this text!&lt;/p&gt;
-&lt;p class="all"&gt;Clicking once will select all of this text.&lt;/p&gt;
-</pre>
+```html
+<p>You should be able to select this text.</p>
+<p class="unselectable">Hey, you can't select this text!</p>
+<p class="all">Clicking once will select all of this text.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.unselectable {
+```css
+.unselectable {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -101,28 +94,22 @@ user-select: unset;
   -ms-user-select: all;
   user-select: all;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{Cssxref("::selection")}}</li>
- <li>Объект JavaScript {{domxref("Selection")}}.</li>
- <li><a href="http://www.w3.org/TR/css-ui-4/#propdef-user-select">user-select</a> in <a href="http://www.w3.org/TR/css-ui-4/">CSS Basic User Interface Module Level 4</a>.</li>
-</ul>
+- {{Cssxref("::selection")}}
+- Объект JavaScript {{domxref("Selection")}}.
+- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).

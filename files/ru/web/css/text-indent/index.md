@@ -3,21 +3,22 @@ title: text-indent
 slug: Web/CSS/text-indent
 translation_of: Web/CSS/text-indent
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code><font face="Open Sans, Arial, sans-serif">Свойство </font><strong>text-indent</strong></code> определяет размер отступа (пустого места) перед строкой в текстовом блоке. По умолчанию это свойство управляет отступом только первой строкой блока, однако ключевые слова <code>hanging </code>и <code>each-line </code>могут изменить данное поведение.</p>
+`Свойство text-indent` определяет размер отступа (пустого места) перед строкой в текстовом блоке. По умолчанию это свойство управляет отступом только первой строкой блока, однако ключевые слова `hanging `и `each-line `могут изменить данное поведение.
 
-<p>Строка смещается по горизонтали к левому или к правому (при размещении текста справа налево) краю блока, в котором содержится элемент.</p>
+Строка смещается по горизонтали к левому или к правому (при размещении текста справа налево) краю блока, в котором содержится элемент.
 
-<p> {{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* значение &lt;length&gt; */
+```css
+/* значение <length> */
 text-indent: 3mm;
 text-indent: 40px;
 
-/* значение &lt;percentage&gt; зависит от ширины блока*/
+/* значение <percentage> зависит от ширины блока*/
 text-indent: 15%;
 
 /* значения ключевых слов */
@@ -29,66 +30,71 @@ text-indent: 5em hanging each-line;
 text-indent: inherit;
 text-indent: initial;
 text-indent: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;length&gt; </code></dt>
- <dd>Отступ определяется как абсолютная длина ({{cssxref("&lt;length&gt;")}}). Возможны также отрицательные значения. Статья про значение длины ({{cssxref("&lt;length&gt;")}}) расскажет больше про возможные единицы измерения.</dd>
- <dt><code>&lt;percentage&gt; </code></dt>
- <dd>В процентном ({{cssxref("&lt;percentage&gt;")}}) соотношении отступ зависит от ширины всего блока, внутри которого находится строка.</dd>
- <dt><code>each-line</code> {{experimental_inline}} (экспериментальное значение)</dt>
- <dd>Отступ добавляется к первой строке блочного контейнера, а также к каждой строке после принудительного разрыва строки (Enter и br), но не влияет на строки после мягкого переноса. </dd>
- <dt><code>hanging</code> {{experimental_inline}} (экспериментальное значение)</dt>
- <dd>Отступ добавляется ко всем строкам, <em>кроме </em>первой. </dd>
-</dl>
+- `<length>`
+  - : Отступ определяется как абсолютная длина ({{cssxref("&lt;length&gt;")}}). Возможны также отрицательные значения. Статья про значение длины ({{cssxref("&lt;length&gt;")}}) расскажет больше про возможные единицы измерения.
+- `<percentage>`
+  - : В процентном ({{cssxref("&lt;percentage&gt;")}}) соотношении отступ зависит от ширины всего блока, внутри которого находится строка.
+- `each-line` {{experimental_inline}} (экспериментальное значение)
+  - : Отступ добавляется к первой строке блочного контейнера, а также к каждой строке после принудительного разрыва строки (Enter и br), но не влияет на строки после мягкого переноса.
+- `hanging` {{experimental_inline}} (экспериментальное значение)
+  - : Отступ добавляется ко всем строкам, _кроме_ первой.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Simple_indent">Простые примеры отступов</h2>
+## Простые примеры отступов
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 5em;
   background: powderblue;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Simple_indent','100%','100%') }}</p>
+{{ EmbedLiveSample('Simple_indent','100%','100%') }}
 
-<h2 id="Percentage_indent_example">Пример со значением &lt;<code>percentage&gt; </code></h2>
+## Пример со значением <`percentage>`
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt; </pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 30%;
   background: plum;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Percentage_indent_example','100%','100%') }}</p>
+{{ EmbedLiveSample('Percentage_indent_example','100%','100%') }}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

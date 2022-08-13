@@ -1,6 +1,6 @@
 ---
 title: ':root'
-slug: 'Web/CSS/:root'
+slug: Web/CSS/:root
 tags:
   - CSS
   - CSS Pseudo-class
@@ -8,28 +8,29 @@ tags:
   - Reference
   - Web
   - Псевдоклассы
-translation_of: 'Web/CSS/:root'
+translation_of: Web/CSS/:root
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a> <code>:root</code> находит корневой элемент дерева документа. Применимо к HTML, <code>:root</code> находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу <code>html</code>, но его <a href="/ru/docs/Web/CSS/Specificity">специфичность</a> выше.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:root` находит корневой элемент дерева документа. Применимо к HTML, `:root` находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу `html`, но его [специфичность](/ru/docs/Web/CSS/Specificity) выше.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Использование <code>:root</code> полезно для объявления <a href="/ru/docs/Web/CSS/--*">CSS Переменных</a>:</p>
+Использование `:root` полезно для объявления [CSS Переменных](/ru/docs/Web/CSS/--*):
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-color: hotpink;
   --pane-padding: 5px 42px;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

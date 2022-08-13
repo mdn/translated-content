@@ -3,19 +3,20 @@ title: margin-left
 slug: Web/CSS/margin-left
 translation_of: Web/CSS/margin-left
 ---
-<div>{{CSSRef()}}</div>
+{{CSSRef()}}
 
-<p>Свойство <a href="/en/CSS" title="CSS">CSS</a>  <strong><code>margin-left</code></strong> устанавливает <a href="https://developer.mozilla.org/ru/docs/Web/CSS/box_model">внешний отступ</a> слева от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.</p>
+Свойство [CSS](/en/CSS "CSS") **`margin-left`** устанавливает [внешний отступ](/ru/docs/Web/CSS/box_model) слева от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-left.html")}}
 
-<p>Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">схлопыванием внешних отступов</a>.</p>
+Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется [схлопыванием внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
 
-<p>В редких случаях, когда ширина (т.е., когда все значения <code>width</code>, <code>margin-left</code>, <code>border</code>, <code>padding</code>, область содержимого, и <code>margin-right</code> определены), <code>margin-left</code> игнорируется, и будет иметь такое же расчётное значение, как и <code>auto</code> .</p>
+В редких случаях, когда ширина (т.е., когда все значения `width`, `margin-left`, `border`, `padding`, область содержимого, и `margin-right` определены), `margin-left` игнорируется, и будет иметь такое же расчётное значение, как и `auto` .
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;длина&gt; значения */
+```css
+/* <длина> значения */
 margin-left: 10px;  /* абсолютная длина */
 margin-left: 1em;   /* относительно размера текста */
 margin-left: 5%;    /* относительно ширины родительского блока */
@@ -27,95 +28,44 @@ margin-left: auto;
 margin-left: inherit;
 margin-left: initial;
 margin-left: unset;
-</pre>
+```
 
-<p>Свойство <code>margin-left</code> может быть выражено как ключевое слово <code>auto</code>, как <code>&lt;число&gt;</code>, или как <code>&lt;процент&gt;</code>. Значение может быть положительным, нулевым или отрицательным.</p>
+Свойство `margin-left` может быть выражено как ключевое слово `auto`, как `<число>`, или как `<процент>`. Значение может быть положительным, нулевым или отрицательным.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Размер отступа - фиксированная величина.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Размер отступа в процентах - размер относительно длины родительского блока.</dd>
- <dt><code>auto</code></dt>
- <dd>Внешний отступ слева получает долю неиспользованного горизонтального пространства, определяется в основном <a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1_%D1%80%D0%B0%D1%81%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">выбранным способом разметки</a>. Если значения <code>margin-left</code> и <code>margin-right</code> одновременно установлены как <code>auto</code>, расчётное пространство распределяется равномерно. Эта таблица кратко излагает различные:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Значение {{cssxref("display")}}</th>
-    <th scope="col">Значение {{cssxref("float")}}</th>
-    <th scope="col">Значение {{cssxref("position")}}</th>
-    <th scope="col" style="vertical-align: middle;">
-     <p>Расчётное значение <code>auto</code></p>
-    </th>
-    <th scope="col">Комментарий</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <th><code>inline</code>, <code>inline-block</code>, <code>inline-table</code></th>
-    <th><em>любое</em></th>
-    <th><code>static</code> или <code>relative</code></th>
-    <td><code>0</code></td>
-    <td>Строчный способ разметки</td>
-   </tr>
-   <tr>
-    <th><code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>table</code>, <code>inline-table</code>, <code>list-item</code>, <code>table-caption</code></th>
-    <th><em>любое</em></th>
-    <th><code>static</code> или <code>relative</code></th>
-    <td><code>0</code>, кроме случаев, когда <code>margin-left</code> и <code>margin-right</code> установлены как <code>auto</code>. В этом случае устанавливается значение, центрирующее элемент внутри его родителя</td>
-    <td>Блочный способ разметки</td>
-   </tr>
-   <tr>
-    <th><code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>block</code>, <code>table</code>, <code>inline-table</code>, <code>list-item</code>, <code>table-caption</code></th>
-    <th><code>left</code> или <code>right</code></th>
-    <th><code>static</code> или <code>relative</code></th>
-    <td><code>0</code></td>
-    <td>Блочный способ разметки (плавающие элементы)</td>
-   </tr>
-   <tr>
-    <th><em>любое </em><code>table-*</code><em>, кроме </em><code>table-caption</code></th>
-    <th><em>любое</em></th>
-    <th><em>любое</em></th>
-    <td><code>0</code></td>
-    <td>Внутренние <code>table-*</code> элементы не имеют отступов, вместо этого используйте {{ cssxref("border-spacing") }}</td>
-   </tr>
-   <tr>
-    <th><em>любое, кроме <code>flex</code>,</em> <code>inline-flex</code><em>, или </em><code>table-*</code></th>
-    <th><em>любое</em></th>
-    <th><em><code>fixed</code></em> или <code>absolute</code></th>
-    <td><code>0</code>, кроме случаев, когда <code>margin-left</code> и <code>margin-right</code> установлены как <code>auto</code>. В этом случае, устанавливается значение центрирующее границы области внутри доступной  <code>width</code> (ширины), если  значение фиксировано.</td>
-    <td>Способ разметки абсолютным позиционированием</td>
-   </tr>
-   <tr>
-    <th><code>flex</code>, <code>inline-flex</code></th>
-    <th><em>любое</em></th>
-    <th><em>любое</em></th>
-    <td><code>0</code>, кроме случаев, когда есть положительное горизонтальное свободное пространство. В этом случае, распределяется равномерно по всем горизонтальным <code>auto</code> отступам.</td>
-    <td>Способ разметки с помощью flexbox</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Размер отступа - фиксированная величина.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Размер отступа в процентах - размер относительно длины родительского блока.
+- `auto`
+  - | : Внешний отступ слева получает долю неиспользованного горизонтального пространства, определяется в основном [выбранным способом разметки](/ru/docs/Web/CSS/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1_%D1%80%D0%B0%D1%81%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F). Если значения `margin-left` и `margin-right` одновременно установлены как `auto`, расчётное пространство распределяется равномерно. Эта таблица кратко излагает различные: | Значение {{cssxref("display")}} | Значение {{cssxref("float")}} | Значение {{cssxref("position")}}                                                                                                                                                                           | Расчётное значение `auto`                                                                                          | Комментарий |
+    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- |
+    | `inline`, `inline-block`, `inline-table`                                                                                                                                                                                                                                                                                                                                                                                                               | _любое_                               | `static` или `relative`               | `0`                                                                                                                                                                                                                 | Строчный способ разметки                                                                                           |
+    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption`                                                                                                                                                                                                                                                                                                                                                      | _любое_                               | `static` или `relative`               | `0`, кроме случаев, когда `margin-left` и `margin-right` установлены как `auto`. В этом случае устанавливается значение, центрирующее элемент внутри его родителя                                                   | Блочный способ разметки                                                                                            |
+    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption`                                                                                                                                                                                                                                                                                                                                                      | `left` или `right`                    | `static` или `relative`               | `0`                                                                                                                                                                                                                 | Блочный способ разметки (плавающие элементы)                                                                       |
+    | _любое_ `table-*`_, кроме_ `table-caption`                                                                                                                                                                                                                                                                                                                                                                                                             | _любое_                               | _любое_                               | `0`                                                                                                                                                                                                                 | Внутренние `table-*` элементы не имеют отступов, вместо этого используйте {{ cssxref("border-spacing") }} |
+    | _любое, кроме `flex`,_ `inline-flex`_, или_ `table-*`                                                                                                                                                                                                                                                                                                                                                                                                  | _любое_                               | _`fixed`_ или `absolute`              | `0`, кроме случаев, когда `margin-left` и `margin-right` установлены как `auto`. В этом случае, устанавливается значение центрирующее границы области внутри доступной `width` (ширины), если значение фиксировано. | Способ разметки абсолютным позиционированием                                                                       |
+    | `flex`, `inline-flex`                                                                                                                                                                                                                                                                                                                                                                                                                                  | _любое_                               | _любое_                               | `0`, кроме случаев, когда есть положительное горизонтальное свободное пространство. В этом случае, распределяется равномерно по всем горизонтальным `auto` отступам.                                                | Способ разметки с помощью flexbox                                                                                  |
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax()}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">.content { margin-left: 5%; }
+```css
+.content { margin-left: 5%; }
 .sidebox { margin-left: 10px; }
 .logo    { margin-left: -5px; }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
+
+{{Compat}}

@@ -1,85 +1,82 @@
 ---
 title: ':nth-last-child'
-slug: 'Web/CSS/:nth-last-child'
+slug: Web/CSS/:nth-last-child
 tags:
   - Псевдоклассы
-translation_of: 'Web/CSS/:nth-last-child'
+translation_of: Web/CSS/:nth-last-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:nth-last-child(an+b)</code> находит элемент, имеющий <code><em>a</em>n+<em>b</em>-1</code> потомков после данной позиции в дереве документа, значение для <code>n </code>может быть положительным или нулевым, а также имеющий родительский элемент.</p>
+[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:nth-last-child(an+b)` находит элемент, имеющий `an+b-1` потомков после данной позиции в дереве документа, значение для `n `может быть положительным или нулевым, а также имеющий родительский элемент.
 
-<p>В результате, он функционирует так же, как и {{Cssxref(":nth-child")}}, кроме того, что выбирает элементы, считая в обратном порядке, с <strong>конца</strong> списка потомков, не с начала.</p>
+В результате, он функционирует так же, как и {{Cssxref(":nth-child")}}, кроме того, что выбирает элементы, считая в обратном порядке, с **конца** списка потомков, не с начала.
 
-<p>Смотрите {{Cssxref(":nth-child")}} для более тщательного описания синтаксиса его аргументов.</p>
+Смотрите {{Cssxref(":nth-child")}} для более тщательного описания синтаксиса его аргументов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element:nth-last-child(<em>a</em>n + <em>b</em>) {<em>стили</em> }
-</pre>
+    element:nth-last-child(an + b) {стили }
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пример_селекторов">Пример селекторов</h3>
+### Пример селекторов
 
-<dl>
- <dt><code>tr:nth-last-child(-n+4)</code></dt>
- <dd>Находит последние 4 строки HTML таблицы.</dd>
- <dt><code>span:nth-last-child(even)</code></dt>
- <dd>Ищет чётные элементы в родительском элементе, начиная с последнего элемента и работая задом наперёд.</dd>
-</dl>
+- `tr:nth-last-child(-n+4)`
+  - : Находит последние 4 строки HTML таблицы.
+- `span:nth-last-child(even)`
+  - : Ищет чётные элементы в родительском элементе, начиная с последнего элемента и работая задом наперёд.
 
-<h3 id="Использование">Использование</h3>
+### Использование
 
-<p>Этот CSS ...</p>
+Этот CSS ...
 
-<pre class="brush: css">table {
+```css
+table {
   border: 1px solid blue;
 }
 tr:nth-last-child(-n+3) { /* последние 3 потомка */
   background-color: lime;
 }
-</pre>
+```
 
-<p>... с этим HTML ...</p>
+... с этим HTML ...
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Первая&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-       &lt;td&gt;Вторая строка&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-       &lt;td&gt;Третья&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-       &lt;td&gt;Четвёртая&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-       &lt;td&gt;Пятая строчка&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <td>Первая</td>
+    </tr>
+    <tr>
+       <td>Вторая строка</td>
+    </tr>
+    <tr>
+       <td>Третья</td>
+    </tr>
+    <tr>
+       <td>Четвёртая</td>
+    </tr>
+    <tr>
+       <td>Пятая строчка</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<p>... будет выглядеть, как :</p>
+... будет выглядеть, как :
 
-<p>{{EmbedLiveSample('Примеры', '100%', 150)}}</p>
+{{EmbedLiveSample('Примеры', '100%', 150)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref(":nth-child")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}

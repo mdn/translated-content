@@ -10,63 +10,42 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>Способ CSS раскладки Flexible Box</strong> (CSS Flexible Box Layout или <strong>Flexbox</strong>) — это способ CSS раскладки, означающий <a href="/ru/docs/Web/CSS/CSS_Box_Model">блочную модель CSS</a>, оптимизированную для построения пользовательских интерфейсов. Во флекс-модели потомки флекс-контейнера могут выстраиваться в любом направлении (право/лево, верх/низ), растягиваться, заполняя свободное пространство, или сжиматься во избежание переполнения родительского контейнера. Доступно различное выравнивание потомков по горизонтали и вертикали. Комбинация из родительского и вложенных блоков позволяют создавать такой layout, при котором элементы автоматически выстраиваются в столбы или строки.</p>
+**Способ CSS раскладки Flexible Box** (CSS Flexible Box Layout или **Flexbox**) — это способ CSS раскладки, означающий [блочную модель CSS](/ru/docs/Web/CSS/CSS_Box_Model), оптимизированную для построения пользовательских интерфейсов. Во флекс-модели потомки флекс-контейнера могут выстраиваться в любом направлении (право/лево, верх/низ), растягиваться, заполняя свободное пространство, или сжиматься во избежание переполнения родительского контейнера. Доступно различное выравнивание потомков по горизонтали и вертикали. Комбинация из родительского и вложенных блоков позволяют создавать такой layout, при котором элементы автоматически выстраиваются в столбы или строки.
 
-<h2 id="Базовый_пример">Базовый пример</h2>
+## Базовый пример
 
-<p>В следующем примере контейнер объявлен как <code>display:</code><code>flex</code>, таким образом его три потомка становятся флекс-элементами. Свойству <code>justify-content</code> присвоено значение <code>space-between</code> для того, чтобы, во-первых, задать между элементами равные интервалы по основной оси, и, во-вторых, «примагнитить» первый и последний элементы к левому и правому краям контейнера соответственно. Также можно заметить, что флекс-элементы растянуты перпендикулярно оси; это происходит из-за того, что дефолтным значением <code>align-items</code> является <code>stretch</code>. Так как высота родительского контейнера не задана, элементы растягиваются по высоте и принимают значение высоты самого высокого из них.</p>
+В следующем примере контейнер объявлен как ` display:``flex `, таким образом его три потомка становятся флекс-элементами. Свойству `justify-content` присвоено значение `space-between` для того, чтобы, во-первых, задать между элементами равные интервалы по основной оси, и, во-вторых, «примагнитить» первый и последний элементы к левому и правому краям контейнера соответственно. Также можно заметить, что флекс-элементы растянуты перпендикулярно оси; это происходит из-за того, что дефолтным значением `align-items` является `stretch`. Так как высота родительского контейнера не задана, элементы растягиваются по высоте и принимают значение высоты самого высокого из них.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}
 
+## Reference
 
+### CSS Properties
 
-<h2 id="Reference">Reference</h2>
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("order")}}
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+## Guides
 
-<div class="index">
-<ul>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex-flow")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-wrap")}}</li>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
-</div>
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+  - : Step-by-step tutorial about how to build layouts using this feature.
+- [Using flexbox to lay out Web applications](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications)
+  - : Tutorial explaining how to use flexbox in the specific context of Web applications.
 
-<h2 id="Guides">Guides</h2>
+## Спецификации
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></dt>
- <dd>Step-by-step tutorial about how to build layouts using this feature.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications">Using flexbox to lay out Web applications</a></dt>
- <dd>Tutorial explaining how to use flexbox in the specific context of Web applications.</dd>
-</dl>
-
-<h2 id="Спецификации">Спецификации</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('CSS3 Flexbox') }}</td>
-      <td>{{ Spec2('CSS3 Flexbox') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |

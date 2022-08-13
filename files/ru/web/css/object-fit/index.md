@@ -7,73 +7,74 @@ tags:
   - object-fit
 translation_of: Web/CSS/object-fit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство<strong> <code>object-fit</code></strong> определяет, как содержимое заменяемого элемента, такого как <a href="/ru/docs/Web/HTML/Element/img" title="The HTML &lt;img> element embeds an image into the document. It is a replaced element."><code>&lt;img&gt;</code></a> или <code><a href="/ru/docs/Web/HTML/Element/video" title="The HTML Video element (&lt;video>) embeds a media player which supports video playback into the document.">&lt;video&gt;</a></code>, должно заполнять контейнер относительно его высоты и ширины.</p>
+Свойство** `object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img "The HTML <img> element embeds an image into the document. It is a replaced element.") или [`<video>`](/ru/docs/Web/HTML/Element/video "The HTML Video element (<video>) embeds a media player which supports video playback into the document."), должно заполнять контейнер относительно его высоты и ширины.
 
-<p>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</p>
+{{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<p>Для <code>object-fit</code> можно указать одно из нижеперечисленных свойств.</p>
+Для `object-fit` можно указать одно из нижеперечисленных свойств.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>fill</code></dt>
- <dd>Смещаемый контент меняет свой размер таким образом, чтобы заполнить всю область внутри блока: используется вся ширина и высота блока.</dd>
- <dt><code>contain</code></dt>
- <dd>Смещаемый контент меняет свой размер таким образом, чтобы подстроиться под область внутри блока пропорционально собственным параметрам: окончательный размер контента будет определён как "помещённый внутрь" блока, ограничиваясь его шириной и высотой.</dd>
- <dt><code>cover</code></dt>
- <dd>Смещаемый контент меняет свой размер таким образом, чтобы сохранять свои пропорции при заполнении блока: окончательный размер контента будет определён как "покрытие" блока, ограничиваясь его шириной и высотой.</dd>
- <dt><code>none</code></dt>
- <dd>Смещаемый контент не изменяет свой размер с целью заполнить пространство блока: конечный размер контента будет определён с использованием алгоритма изменения размера по умолчанию, а также размер объекта по умолчанию равен ширине и высоте смещаемого контента.</dd>
-</dl>
+- `fill`
+  - : Смещаемый контент меняет свой размер таким образом, чтобы заполнить всю область внутри блока: используется вся ширина и высота блока.
+- `contain`
+  - : Смещаемый контент меняет свой размер таким образом, чтобы подстроиться под область внутри блока пропорционально собственным параметрам: окончательный размер контента будет определён как "помещённый внутрь" блока, ограничиваясь его шириной и высотой.
+- `cover`
+  - : Смещаемый контент меняет свой размер таким образом, чтобы сохранять свои пропорции при заполнении блока: окончательный размер контента будет определён как "покрытие" блока, ограничиваясь его шириной и высотой.
+- `none`
+  - : Смещаемый контент не изменяет свой размер с целью заполнить пространство блока: конечный размер контента будет определён с использованием алгоритма изменения размера по умолчанию, а также размер объекта по умолчанию равен ширине и высоте смещаемого контента.
 
-<dl>
- <dt><code>scale-down</code></dt>
- <dd>Контент изменяет размер, сравнивая разницу между <code>none</code> и <code>contain, </code>для того, чтобы найти наименьший конкретный размер объекта.</dd>
-</dl>
+<!---->
 
-<h3 id="Правильный_синтаксис">Правильный синтаксис</h3>
+- `scale-down`
+  - : Контент изменяет размер, сравнивая разницу между `none` и `contain, `для того, чтобы найти наименьший конкретный размер объекта.
+
+### Правильный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML_Контент">HTML Контент</h3>
+### HTML Контент
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
+```html
+<div>
+  <h2>object-fit: fill</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
+  <h2>object-fit: contain</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
+  <h2>object-fit: cover</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
+  <h2>object-fit: none</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
+  <h2>object-fit: scale-down</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS_Контент">CSS Контент</h3>
+### CSS Контент
 
-<pre class="brush: css">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -118,45 +119,26 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example', 500, 450) }}</p>
+{{ EmbedLiveSample('Example', 500, 450) }}
 
-<h2 id="Specifications">Технические параметры</h2>
+## Технические параметры
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td><code>Добавлены ключевые слова from-image</code> <code>и flip</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment                                        |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
+| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | `Добавлены ключевые слова from-image` `и flip` |
+| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Первоначальное определение                     |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Другие свойства CSS, связанные с изображениями (картинками): {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+- Другие свойства CSS, связанные с изображениями (картинками): {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("background-size")}}

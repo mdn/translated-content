@@ -6,53 +6,53 @@ tags:
   - выравнивание текста
 translation_of: Web/CSS/text-justify
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS-свойство <strong><code>text-justify</code></strong> определяет какой тип выравнивания следует применить к тексту,  когда {{cssxref("text-align")}}<code>: justify;</code> применяется к элементу.</p>
+CSS-свойство **`text-justify`** определяет какой тип выравнивания следует применить к тексту, когда {{cssxref("text-align")}}`: justify;` применяется к элементу.
 
-<pre class="brush: css no-line-numbers">text-justify: none;
+```css
+text-justify: none;
 text-justify: auto;
 text-justify: inter-word;
 text-justify: inter-character;
 text-justify: distribute; /* Устаревшее значение */
-</pre>
+```
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Свойство <code>text-justify</code> указывается как одно ключевое слово, выбранное из нижеследующего списка значений.</p>
+Свойство `text-justify` указывается как одно ключевое слово, выбранное из нижеследующего списка значений.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Выравнивание текста отключено. Оно имеет такой же эффект как отсутствие применение свойства {{cssxref("text-align")}}, хотя оно полезно, если вам нужно включать и выключать выравнивание.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер выбирает лучший тип выравнивания в текущей ситуации, основываясь на балансе между производительностью и качеством, а также на том, что более подходит для языка текста (например, английского, иероглифных языков, и т.п.).  Оно используется по умолчанию, если <code>text-justify</code> не установлен.</dd>
- <dt><code>inter-word</code></dt>
- <dd>Выравнивание текста по средствам добавления пробелов между словами (эффективно варьируя {{cssxref("word-spacing")}}), что наиболее подходит для языков, которые используют разделение слов пробелами, таких как английский или корейский.</dd>
- <dt><code>inter-character</code></dt>
- <dd>Выравнивание текста по средствам добавления пробелов между символами (effectively varying {{cssxref("letter-spacing")}}), что наиболее подходит для таких языков как японский.</dd>
- <dt><code>distribute</code> {{deprecated_inline}}</dt>
- <dd>Показывает тоже поведение, что и <code>inter-character</code>; это значение сохранилось для обратной совместимости.</dd>
-</dl>
+- `none`
+  - : Выравнивание текста отключено. Оно имеет такой же эффект как отсутствие применение свойства {{cssxref("text-align")}}, хотя оно полезно, если вам нужно включать и выключать выравнивание.
+- `auto`
+  - : Браузер выбирает лучший тип выравнивания в текущей ситуации, основываясь на балансе между производительностью и качеством, а также на том, что более подходит для языка текста (например, английского, иероглифных языков, и т.п.). Оно используется по умолчанию, если `text-justify` не установлен.
+- `inter-word`
+  - : Выравнивание текста по средствам добавления пробелов между словами (эффективно варьируя {{cssxref("word-spacing")}}), что наиболее подходит для языков, которые используют разделение слов пробелами, таких как английский или корейский.
+- `inter-character`
+  - : Выравнивание текста по средствам добавления пробелов между символами (effectively varying {{cssxref("letter-spacing")}}), что наиболее подходит для таких языков как японский.
+- `distribute` {{deprecated_inline}}
+  - : Показывает тоже поведение, что и `inter-character`; это значение сохранилось для обратной совместимости.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<div class="hidden">
-<pre class="brush: html">&lt;p class="none"&gt;&lt;code&gt;text-justify: none&lt;/code&gt; —&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.&lt;/p&gt;
-&lt;p class="auto"&gt;&lt;code&gt;text-justify: auto&lt;/code&gt; —&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.&lt;/p&gt;
-&lt;p class="dist"&gt;&lt;code&gt;text-justify: distribute&lt;/code&gt; —&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.&lt;/p&gt;
-&lt;p class="word"&gt;&lt;code&gt;text-justify: inter-word&lt;/code&gt; —&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.&lt;/p&gt;
-&lt;p class="char"&gt;&lt;code&gt;text-justify: inter-character&lt;/code&gt; —&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.&lt;/p&gt;</pre>
-</div>
+```html hidden
+<p class="none"><code>text-justify: none</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="auto"><code>text-justify: auto</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="dist"><code>text-justify: distribute</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="word"><code>text-justify: inter-word</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="char"><code>text-justify: inter-character</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 1.5em;
   border: 1px solid black;
   padding: 10px;
@@ -79,22 +79,19 @@ text-justify: distribute; /* Устаревшее значение */
 
 .char {
   text-justify: inter-character;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Примеры","100%",400)}}</p>
+{{EmbedLiveSample("Примеры","100%",400)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{cssxref("text-align")}}</li>
-</ul>
+- {{cssxref("text-align")}}

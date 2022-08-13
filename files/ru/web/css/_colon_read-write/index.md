@@ -1,67 +1,37 @@
 ---
 title: ':read-write'
-slug: 'Web/CSS/:read-write'
+slug: Web/CSS/:read-write
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:read-write'
+translation_of: Web/CSS/:read-write
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:read-write</code> находит элементы, доступные для редактирования пользователем, такие как текстовые поля.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:read-write` находит элементы, доступные для редактирования пользователем, такие как текстовые поля.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<div style="overflow: hidden;">
-<pre class="brush:css">input:-moz-read-write { background: #eee; }
+```css
+input:-moz-read-write { background: #eee; }
 input:read-write { background: #eee; }
-</pre>
-</div>
+```
 
-<h2 class="editable" id="Specifications">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Определяет семантику в HTML и ограничения проверки.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI', '#pseudo-ro-rw', ':read-write') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Определяет псевдокласс, но не семантику.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификации                                                                                 | Статус                                   | Комментарий                                         |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }} | {{ Spec2('HTML WHATWG') }}     | Без изменений.                                      |
+| {{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}     | {{ Spec2('HTML5 W3C') }}         | Определяет семантику в HTML и ограничения проверки. |
+| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}         | {{ Spec2('CSS4 Selectors') }} | Без изменений.                                      |
+| {{ SpecName('CSS3 Basic UI', '#pseudo-ro-rw', ':read-write') }}         | {{ Spec2('CSS3 Basic UI') }}     | Определяет псевдокласс, но не семантику.            |
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/CSS/:read-only"><code>:read-only</code></a></li>
- <li>HTML атрибут <a href="/ru/docs/HTML/Content_Editable" title="HTML/Content Editable"><code>contenteditable</code></a></li>
-</ul>
+- [`:read-only`](/ru/docs/Web/CSS/:read-only)
+- HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable "HTML/Content Editable")

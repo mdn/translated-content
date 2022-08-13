@@ -9,11 +9,12 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>margin</code></strong> <a href="/ru/CSS" title="CSS">CSS</a> определяет <a href="/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">внешний отступ</a> на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.</p>
+Свойство **`margin`** [CSS](/ru/CSS "CSS") определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
-<pre class="brush:css no-line-numbers">/* Применяется ко всем четырём сторонам */
+```css
+/* Применяется ко всем четырём сторонам */
 margin: 1em;
 
 /* по вертикали | по горизонтали */
@@ -29,31 +30,33 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: unset;
-</pre>
+```
 
-<div class="hidden" id="margin">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="cell"&gt;
-      &lt;div class="m m0"&gt;margin: 0&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &lt;div class="m m1"&gt;margin: 1em&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &lt;div class="m m2"&gt;margin: 5% auto&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &lt;div class="m m3"&gt;margin: 1em auto 2em&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &lt;div class="m m4"&gt;margin: 5px 1em 0 auto&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="note"&gt;Все вышеприведённые блоки имеют одинаковую ширину 50%&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="cell">
+      <div class="m m0">margin: 0</div>
+    </div>
+    <div class="cell">
+      <div class="m m1">margin: 1em</div>
+    </div>
+    <div class="cell">
+      <div class="m m2">margin: 5% auto</div>
+    </div>
+    <div class="cell">
+      <div class="m m3">margin: 1em auto 2em</div>
+    </div>
+    <div class="cell">
+      <div class="m m4">margin: 5px 1em 0 auto</div>
+    </div>
+    <div class="note">Все вышеприведённые блоки имеют одинаковую ширину 50%</div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -103,52 +106,51 @@ margin: unset;
 .m1 { margin: 1em; }
 .m2 { margin: 5% auto; }
 .m3 { margin: 1em auto 2em; }
-.m4 { margin: 5px 1em 0 auto; }</pre>
-</div>
+.m4 { margin: 5px 1em 0 auto; }
+```
 
-<p>{{EmbedLiveSample("margin", "100%", 400, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("margin", "100%", 400, "", "", "example-outcome-frame")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Свойство <code>margin</code> может быть задано с использованием одного, двух, трёх или четырёх значений. Каждое значение имеет тип <code><a href="#&lt;length>">&lt;length&gt;</a></code>, <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code> или является ключевым словом <code><a href="#auto">auto</a></code>. Каждое значение может быть положительным, отрицательным или равным нулю.</p>
+Свойство `margin` может быть задано с использованием одного, двух, трёх или четырёх значений. Каждое значение имеет тип [`<length>`](#<length>), [`<percentage>`](#<percentage>) или является ключевым словом [`auto`](#auto). Каждое значение может быть положительным, отрицательным или равным нулю.
 
-<ul>
- <li>Когда определено <strong>одно</strong> значение, такое значение определено для <strong>всех четырёх сторон</strong>.</li>
- <li>Когда определены <strong>два</strong> значения, то первое значение определяет внешний отступ для <strong>верхней и нижней</strong> стороны, а второе значение определяет отступ для <strong>левой и правой стороны</strong>.</li>
- <li>Когда определены <strong>три</strong> значение, то первое значение определяет внешний отступ для <strong>верхней</strong> стороны, второе значение определяет внешний отступ для <strong>левой и правой стороны</strong>, а третье значение определяет отступ для <strong>нижней</strong> стороны.</li>
- <li>Когда определены <strong>четыре</strong> значения, они определяют внешние отступы для <strong>верхней</strong> стороны, <strong>справа</strong>, <strong>снизу</strong> и <strong>слева</strong> в рассмотренном порядке (по часовой стрелке).</li>
-</ul>
+- Когда определено **одно** значение, такое значение определено для **всех четырёх сторон**.
+- Когда определены **два** значения, то первое значение определяет внешний отступ для **верхней и нижней** стороны, а второе значение определяет отступ для **левой и правой стороны**.
+- Когда определены **три** значение, то первое значение определяет внешний отступ для **верхней** стороны, второе значение определяет внешний отступ для **левой и правой стороны**, а третье значение определяет отступ для **нижней** стороны.
+- Когда определены **четыре** значения, они определяют внешние отступы для **верхней** стороны, **справа**, **снизу** и **слева** в рассмотренном порядке (по часовой стрелке).
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>Размер отступа как фиксированное значение.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>Размер отступа в процентах относительно ширины родительского блока.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер выбирает подходящее значение для использования. Например, в некоторых случаях это значение может быть использовано для центрирования элемента.</dd>
-</dl>
+- **{{cssxref("length")}}**
+  - : Размер отступа как фиксированное значение.
+- {{cssxref("percentage")}}
+  - : Размер отступа в процентах относительно ширины родительского блока.
+- `auto`
+  - : Браузер выбирает подходящее значение для использования. Например, в некоторых случаях это значение может быть использовано для центрирования элемента.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="center"&gt;Этот элемент отцентрирован.&lt;/div&gt;
+```html
+<div class="center">Этот элемент отцентрирован.</div>
 
-&lt;div class="outside"&gt;Этот элемент расположен за пределами своего контейнера.&lt;/div&gt;</pre>
+<div class="outside">Этот элемент расположен за пределами своего контейнера.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2,8]">.center {
+```css
+.center {
   margin: auto;
   background: lime;
   width: 66%;
@@ -158,13 +160,15 @@ margin: unset;
   margin: 3rem 0 0 -3rem;
   background: cyan;
   width: 66%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Простой_пример','100%',120) }}</p>
+{{ EmbedLiveSample('Простой_пример','100%',120) }}
 
-<h3 id="Больше_примеров">Больше примеров</h3>
+### Больше примеров
 
-<pre class="brush: css">margin: 5%;                 /* все стороны:  отступ 5% */
+```css
+margin: 5%;                 /* все стороны:  отступ 5% */
 
 margin: 10px;               /* все стороны:  отступ 10px */
 
@@ -185,30 +189,29 @@ margin: 2em auto;           /* верх и низ: отступ 2em */
 
 margin: auto;               /* верх и низ: отступ 0 */
                             /* блок отцентрирован горизонтально */
-</pre>
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<h3 id="Горизонтальное_выравнивание">Горизонтальное выравнивание</h3>
+### Горизонтальное выравнивание
 
-<p>Чтобы центрировать что-то горизонтально в современных браузерах, вы можете использовать <code><a href="/ru/docs/Web/CSS/display">display</a>: flex; <a href="/ru/docs/Web/CSS/justify-content">justify-content</a>: center;</code> .</p>
+Чтобы центрировать что-то горизонтально в современных браузерах, вы можете использовать `display: flex; justify-content: center;` .
 
-<p>Однако в старых браузерах, таких как IE8-9, которые не поддерживают технологию Flexible Box, они недоступны. Чтобы центрировать элемент внутри своего родителя, используйте <code>margin: 0 auto;</code> .</p>
+Однако в старых браузерах, таких как IE8-9, которые не поддерживают технологию Flexible Box, они недоступны. Чтобы центрировать элемент внутри своего родителя, используйте `margin: 0 auto;` .
 
-<h3 id="Схлопывание_отступов">Схлопывание отступов</h3>
+### Схлопывание отступов
 
-<p>Иногда внешние отступы (margins) для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотри <a href="/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Схлопывание внешних отступов</a> для получения большей информации.</p>
+Иногда внешние отступы (margins) для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотри [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) для получения большей информации.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a class="internal" href="/ru/docs/Web/CSS/box_model" title="en/CSS/box model">CSS Box Model</a></li>
- <li><a class="internal" href="/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" title="en/CSS/margin collapsing">Схлопывание отступов</a></li>
-</ul>
+## Смотрите также
+
+- [CSS Box Model](/ru/docs/Web/CSS/box_model "en/CSS/box model")
+- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing "en/CSS/margin collapsing")

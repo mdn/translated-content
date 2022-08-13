@@ -6,19 +6,20 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a>  <strong><code>margin-bottom</code></strong> устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.</p>
+Свойство [CSS](/ru/docs/CSS "CSS") **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-<p>                        <img alt="Влияние CSS-свойства margin-bottom на блок элемента" src="https://mdn.mozillademos.org/files/16471/margin-bottomru.png" style="border-style: solid; border-width: 1px; font-size: 1rem; height: 150px; letter-spacing: -0.00278rem; width: 459px;"></p>
+![Влияние CSS-свойства margin-bottom на блок элемента](https://mdn.mozillademos.org/files/16471/margin-bottomru.png)
 
-<p>Это свойство не имеет воздействия на незамещаемые элементы, такие как {{HTMLElement("span")}} или {{HTMLElement("code")}}.</p>
+Это свойство не имеет воздействия на незамещаемые элементы, такие как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* числовые значения */
+```css
+/* числовые значения */
 margin-bottom: 10px;  /* Абсолютная длина */
 margin-bottom: 1em;   /* относительно размера текста */
 margin-bottom: 5%;    /* относительно длины родительского блока */
@@ -30,40 +31,41 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: unset;
-</pre>
+```
 
-<p>Свойство <code>margin-bottom</code> может быть выражено как ключевое слово <code>auto</code>, или как <code>&lt;число&gt;</code>, или как <code>&lt;процент&gt;</code>. Значение может быть положительным, нулевым или отрицательным.</p>
+Свойство `margin-bottom` может быть выражено как ключевое слово `auto`, или как `<число>`, или как `<процент>`. Значение может быть положительным, нулевым или отрицательным.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Размер отступа - фиксированная величина.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Размер отступа в процентах - размер относительно длины родительского блока.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер сам выбирает, какое значение использовать. Смотрите {{cssxref("margin")}}.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Размер отступа - фиксированная величина.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Размер отступа в процентах - размер относительно длины родительского блока.
+- `auto`
+  - : Браузер сам выбирает, какое значение использовать. Смотрите {{cssxref("margin")}}.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-&lt;div class="box0"&gt;Блок 0&lt;/div&gt;
-&lt;div class="box1"&gt;Блок 1&lt;/div&gt;
-&lt;div class="box2"&gt;Отрицательное значение <code>margin</code> Блока 1 тянет меня вверх&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+<div class="box0">Блок 0</div>
+<div class="box1">Блок 1</div>
+<div class="box2">Отрицательное значение margin Блока 1 тянет меня вверх</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>CSS устанавливает нижний отступ и высоту для элементов <code>div</code>.</p>
+CSS устанавливает нижний отступ и высоту для элементов `div`.
 
-<pre class="brush: css">.box0 {
+```css
+.box0 {
     margin-bottom:1em;
     height:3em;
 }
@@ -76,12 +78,12 @@ margin-bottom: unset;
     border-width:1px 0;
     margin-bottom:2em;
 }
+```
 
-</pre>
+Несколько дополнений к свойствам элемента `div` и элемента класса container сделают более наглядным эффект использования свойства `margin`.
 
-<p>Несколько дополнений к свойствам элемента <code>div</code> и элемента класса container сделают более наглядным эффект использования свойства <code>margin</code>.</p>
-
-<pre class="brush: css">.container {
+```css
+.container {
     background-color:orange;
     width:320px;
     border:1px solid black;
@@ -89,15 +91,17 @@ margin-bottom: unset;
 div {
     width:320px;
     background-color:gold;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example',350,200) }}</p>
+{{ EmbedLiveSample('Example',350,200) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
+
+{{Compat}}

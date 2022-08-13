@@ -1,52 +1,52 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - Псевдоклассы
-translation_of: 'Web/CSS/:first-of-type'
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:first-of-type</code> находит первого потомка своего типа среди детей родителя.</p>
+[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:first-of-type` находит первого потомка своего типа среди детей родителя.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element:first-of-type { <em>/* стили</em> */ }
-</pre>
+    element:first-of-type { /* стили */ }
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этот пример показывает, как применится универсальный селектор, если простой селектор не написан.</p>
+Этот пример показывает, как применится универсальный селектор, если простой селектор не написан.
 
-<pre class="brush: css">div :first-of-type {
+```css
+div :first-of-type {
   background-color: lime;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Это span первый!&lt;/span&gt;
-  &lt;span&gt;Это span нет. :(&lt;/span&gt;
-  &lt;span&gt;что насчёт этого &lt;em&gt;вложенного элемента&lt;/em&gt;?&lt;/span&gt;
-  &lt;strike&gt;Это другой тег&lt;/strike&gt;
-  &lt;span&gt;Грустно, это тоже нет...&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <span>Это span первый!</span>
+  <span>Это span нет. :(</span>
+  <span>что насчёт этого <em>вложенного элемента</em>?</span>
+  <strike>Это другой тег</strike>
+  <span>Грустно, это тоже нет...</span>
+</div>
+```
 
-<p>...сработает так:</p>
+...сработает так:
 
-<div>{{EmbedLiveSample('Пример','100%', '120')}}</div>
+{{EmbedLiveSample('Пример','100%', '120')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref(":nth-of-type")}}, {{Cssxref(":last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-of-type")}}, {{Cssxref(":last-of-type")}}

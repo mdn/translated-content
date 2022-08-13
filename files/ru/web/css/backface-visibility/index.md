@@ -3,91 +3,94 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 translation_of: Web/CSS/backface-visibility
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>Свойство <strong><code>backface-visibility</code></strong> определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.</p>
+Свойство **`backface-visibility`** определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.
 
-<div>{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
-<p>Задняя поверхность элемента является зеркальным отражением его передней поверхности. Однако невидимая в 2D, задняя грань может быть видимой, когда преобразование вызывает вращение элемента в 3D пространстве. (Это свойство не влияет на 2D-преобразования, которые не имеют перспективы.)</p>
+Задняя поверхность элемента является зеркальным отражением его передней поверхности. Однако невидимая в 2D, задняя грань может быть видимой, когда преобразование вызывает вращение элемента в 3D пространстве. (Это свойство не влияет на 2D-преобразования, которые не имеют перспективы.)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Значения ключевых слов */
+```css
+/* Значения ключевых слов */
 backface-visibility: visible;
 backface-visibility: hidden;
 
 /* Глобальные значения */
 backface-visibility: inherit;
 backface-visibility: initial;
-backface-visibility: unset;</pre>
+backface-visibility: unset;
+```
 
-<p>Свойство <code>backface-visibility</code> указывается в качестве одного из ключевых слов, перечисленных ниже.</p>
+Свойство `backface-visibility` указывается в качестве одного из ключевых слов, перечисленных ниже.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Задняя сторона видна, когда повёрнута к пользователю.</dd>
- <dt><code>hidden</code></dt>
- <dd>Задняя поверхность скрыта, что делает элемент невидимым, когда он повёрнутый от пользователя.</dd>
-</dl>
+- `visible`
+  - : Задняя сторона видна, когда повёрнута к пользователю.
+- `hidden`
+  - : Задняя поверхность скрыта, что делает элемент невидимым, когда он повёрнутый от пользователя.
 
-<h3 id="Официальный_синтаксис">Официальный синтаксис</h3>
+### Официальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере показан куб с прозрачными гранями.</p>
+В этом примере показан куб с прозрачными гранями.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: visible;&lt;/code&gt;&lt;/th&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: hidden;&lt;/code&gt;&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube showbf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+```html
+<table>
+  <tr>
+    <th><code>backface-visibility: visible;</code></th>
+    <th><code>backface-visibility: hidden;</code></th>
+  </tr>
+  <tr>
+    <td>
+      <div class="container">
+        <div class="cube showbf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         Since all faces are partially transparent,
         the back faces (2, 4, 5) are visible
         through the front faces (1, 3, 6).
-      &lt;/p&gt;
-    &lt;/td&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube hidebf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+      </p>
+    </td>
+    <td>
+      <div class="container">
+        <div class="cube hidebf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         The three back faces (2, 4, 5) are
         hidden.
-      &lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+      </p>
+    </td>
+  </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Классы, которые будут показывать или скрывать
+```css
+/* Классы, которые будут показывать или скрывать
    три задние грани "куба" */
 .showbf div {
   backface-visibility: visible;
@@ -165,38 +168,25 @@ th, p, td {
   padding: 6px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример', '100%', 360)}}</p>
+{{EmbedLiveSample('Пример', '100%', 360)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                         | Статус                                   | Комментарий                 |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Первоначальное определение. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Использование CSS преобразований</a></li>
-</ul>
+## Смотрите также
+
+- [Использование CSS преобразований](/ru/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

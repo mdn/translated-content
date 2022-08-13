@@ -3,56 +3,51 @@ title: animation-duration
 slug: Web/CSS/animation-duration
 translation_of: Web/CSS/animation-duration
 ---
-<div>{{CSSRef}} {{ SeeCompatTable() }}</div>
+{{CSSRef}} {{ SeeCompatTable() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство <strong><code>animation-duration</code></strong> устанавливает длительность анимации во времени за один цикл.</p>
+Свойство **`animation-duration`** устанавливает длительность анимации во времени за один цикл.
 
-<p> </p>
+Значение по умолчанию **`0s` **определяет, что анимация не должна выполняться.
 
-<p>Значение по умолчанию <strong><code>0s</code> </strong>определяет, что анимация не должна выполняться.</p>
+Удобно использовать сокращённое свойство {{ cssxref("animation") }} чтобы установить сразу все свойства анимации.
 
-<p>Удобно использовать сокращённое свойство {{ cssxref("animation") }} чтобы установить сразу все свойства анимации.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css">animation-duration: 6s;
+```css
+animation-duration: 6s;
 animation-duration: 120ms;
 animation-duration: 1s, 15s;
 animation-duration: 10s, 30s, 230ms;
-</pre>
+```
 
-<h3 id="Примеры">Примеры</h3>
+### Примеры
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>Длительность анимации определяется в секундах <code>s</code> или в миллисекундах <code>ms</code>. По умолчанию стоит значение <code>0s</code>. Отрицательные значения являются недействительными.</dd>
-</dl>
+- `<time>`
+  - : Длительность анимации определяется в секундах `s` или в миллисекундах `ms`. По умолчанию стоит значение `0s`. Отрицательные значения являются недействительными.
 
-<div class="note"><strong>Предупреждение:</strong> Отрицательные значения являются недействительными и отменяют объявление. Некоторые старые реализации считают отрицательные значения равнозначными <code>0s</code>.</div>
+> **Примечание:** **Предупреждение:** Отрицательные значения являются недействительными и отменяют объявление. Некоторые старые реализации считают отрицательные значения равнозначными `0s`.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры_2">Примеры</h2>
+## Примеры
 
-<p>Смотрите для примеров <a href="/en/CSS/CSS_animations" title="en/CSS/CSS_animations">CSS-анимации</a>.</p>
+Смотрите для примеров [CSS-анимации](/en/CSS/CSS_animations "en/CSS/CSS_animations").
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимации</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

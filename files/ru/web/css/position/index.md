@@ -3,76 +3,62 @@ title: position
 slug: Web/CSS/position
 translation_of: Web/CSS/position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}Свойство {{cssxref('','CSS')}} **`position`** указывает, как элемент позиционируется в документе. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционированных элементов.{{EmbedInteractiveExample("pages/css/position.html")}}
 
-<div>Свойство <font face="Open Sans, Arial, sans-serif">{{cssxref('','CSS')}}</font> <strong><code>position</code></strong> указывает, как элемент позиционируется в документе. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционированных элементов.</div>
+### Типы позиционирования
 
+- **Позиционируемый элемент** — это элемент, у которого {{cssxref('computed_value', 'вычисленное значение')}} `position` является `relative`, `absolute`, `fixed` либо `sticky`. (Другими словами, это все, кроме `static`.)
+- **Относительно позиционируемый элемент** является элементом, {{cssxref('computed_value', 'вычисленное значение')}} `position` которого является `relative`. Свойства {{cssxref('top')}} и {{cssxref('bottom')}} определяют смещение по вертикали от его нормального положения; свойства {{cssxref('left')}} и {{cssxref('right')}} задают горизонтальное смещение.
+- **Абсолютно позиционируемый элемент** — это элемент, чьё {{cssxref('computed_value', 'вычисленное значение')}} `position` является `absolute` или `fixed`. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} задают смещения от краёв {{cssxref('Containing_Block', 'содержащего блок элемента')}}. (Содержащий блок является предком, относительно которого расположен элемент.) Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый [контекст форматирования блока](../Guide/CSS/Block_formatting_context) (BFC) для своего содержимого.
+- **Элемент с липкой позицией** — это элемент, у которого {{cssxref('computed_value', 'значение вычисленного')}} `position` является `sticky`. Он рассматривается как относительно позиционированный до тех пор, пока {{cssxref('Containing_Block', 'содержащий его блок')}} не пересечёт указанный порог (например, установка {{cssxref('top')}} в значение, отличное от `auto`) внутри его корня потока (или в контейнере, в котором он прокручивается), после чего он обрабатывается как «застрявший» до тех пор, пока не встретит противоположный край {{cssxref('Containing_Block', 'содержащего его блока')}}.
 
+В большинстве случаев абсолютно позиционированные элементы, которые имеют {{cssxref('height')}} и {{cssxref('width')}} установленные в `auto`, имеют размер, соответствующий их содержимому. Тем не менее, незамещаемые, абсолютно позиционированные элементы можно сделать такими, чтобы они заполнили доступное вертикальное пространство, указав как {{cssxref('top')}}, так и {{cssxref('bottom')}}, и оставляя {{cssxref('height')}} неопределённым (то есть , `auto`). Ими также можно заполнить доступное горизонтальное пространство, указав как {{cssxref('left')}}, так и {{cssxref('right')}}, и оставляя {{cssxref('width')}} как `auto`.
 
-<div>{{EmbedInteractiveExample("pages/css/position.html")}}</div>
+За исключением только что описанного случая (абсолютно позиционированных элементов, заполняющих доступное пространство):
 
-<h3 id="Типы_позиционирования">Типы позиционирования</h3>
+- Если указаны `top` и `bottom` (технически, не `auto`) — приоритет будет у `top`.
+- Если указаны `left` и `right`: приоритет будет у `left`, когда {{cssxref('direction')}} `ltr` (английский язык, горизонтальный японский и т. д.), приоритет будет у `right`, когда {{cssxref('direction')}} является `rtl` (персидский , Арабский, иврит и т. д.).
 
-<ul>
- <li><strong>Позиционируемый элемент</strong> — это элемент, у которого {{cssxref('computed_value', 'вычисленное значение')}} <code>position</code> является <code>relative</code>, <code>absolute</code>, <code>fixed</code> либо <code>sticky</code>. (Другими словами, это все, кроме <code>static</code>.)</li>
- <li><strong>Относительно позиционируемый элемент</strong> является элементом, {{cssxref('computed_value', 'вычисленное значение')}} <code>position</code> которого является <code>relative</code>. Свойства {{cssxref('top')}} и {{cssxref('bottom')}} определяют смещение по вертикали от его нормального положения; свойства {{cssxref('left')}} и {{cssxref('right')}} задают горизонтальное смещение.</li>
- <li><strong>Абсолютно позиционируемый элемент</strong> — это элемент, чьё {{cssxref('computed_value', 'вычисленное значение')}} <code>position</code> является <code>absolute</code> или <code>fixed</code>. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} задают смещения от краёв {{cssxref('Containing_Block', 'содержащего блок элемента')}}. (Содержащий блок является предком, относительно которого расположен элемент.) Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый <a href="../Guide/CSS/Block_formatting_context">контекст форматирования блока</a> (BFC) для своего содержимого.</li>
- <li><strong>Элемент с липкой позицией</strong> — это элемент, у которого {{cssxref('computed_value', 'значение вычисленного')}} <code>position</code> является <code>sticky</code>. Он рассматривается как относительно позиционированный до тех пор, пока {{cssxref('Containing_Block', 'содержащий его блок')}} не пересечёт указанный порог (например, установка {{cssxref('top')}} в значение, отличное от <code>auto</code>) внутри его корня потока (или в контейнере, в котором он прокручивается), после чего он обрабатывается как «застрявший» до тех пор, пока не встретит противоположный край {{cssxref('Containing_Block', 'содержащего его блока')}}.</li>
-</ul>
+## Синтаксис
 
-<p>В большинстве случаев абсолютно позиционированные элементы, которые имеют {{cssxref('height')}} и {{cssxref('width')}} установленные в <code>auto</code>, имеют размер, соответствующий их содержимому. Тем не менее, незамещаемые, абсолютно позиционированные элементы можно сделать такими, чтобы они заполнили доступное вертикальное пространство, указав как {{cssxref('top')}}, так и {{cssxref('bottom')}}, и оставляя {{cssxref('height')}} неопределённым (то есть , <code>auto</code>). Ими также можно заполнить доступное горизонтальное пространство, указав как {{cssxref('left')}}, так и {{cssxref('right')}}, и оставляя {{cssxref('width')}} как <code>auto</code>.</p>
+Свойство `position` указывается как одно ключевое слово, выбранное из списка значений ниже.
 
-<p>За исключением только что описанного случая (абсолютно позиционированных элементов, заполняющих доступное пространство):</p>
+### Значения
 
-<ul>
- <li>Если указаны <code>top</code> и <code>bottom</code> (технически, не <code>auto</code>) — приоритет будет у <code>top</code>.</li>
- <li>Если указаны <code>left</code> и <code>right</code>: приоритет будет у <code>left</code>, когда {{cssxref('direction')}} <code>ltr</code> (английский язык, горизонтальный японский и т. д.), приоритет будет у <code>right</code>, когда {{cssxref('direction')}} является <code>rtl</code> (персидский , Арабский, иврит и т. д.).</li>
-</ul>
+- `static`
+  - : Это значение позволяет элементу находиться в обычном его состоянии, расположенном на своём месте в документе. Свойства `top`, `right`, `bottom`, `left` и `z-index` _не применяются_ к данному элементу. Это значение по умолчанию.
+- `relative`
+  - : Элемент позиционируется в соответствии с нормальным потоком документа, а затем смещается _относительно себя_ на основе значений `top`, `right`, `bottom` и `left`. Смещение не влияет на положение любых других элементов; таким образом, пространство, заданное для элемента в макете страницы, такое же, как если бы позиция была `static`.Это значение создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context','контекст наложения')}}, когда значение `z-index` не `auto`. Его влияние на элементы `table-*-group`, `table-row`, `table-column`, `table-cell` и `table-caption` не определено.
+- `absolute`
+  - : Элемент удаляется из обычного потока документов, и для элемента в макете страницы не создаётся пробела. Он расположен относительно его ближайшего относительно позиционированного предка, если таковой имеется; в противном случае он помещается относительно исходного {{cssxref('Containing_Block', 'содержащего блока')}}. Его конечная позиция определяется значениями `top`, `right`, `bottom`, и `left`.Это значение создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}, когда значение `z-index` не `auto`. Поля абсолютно позиционированных коробок не {{cssxref('CSS_Box_Model/Mastering_margin_collapsing', 'сворачиваются')}} с другими полями.
+- `fixed`
+  - : Элемент выбивается из обычного потока документа, и для элемента в макете страницы не создаётся пространство. Он позиционируется относительно исходного {{cssxref('Containing_Block', 'содержащего блока')}}, установленного {{glossary("viewport")}}, за исключением случаев, когда один из его предков имеет свойство `transform`, `perspective`, или `filter`, установленное на что-то иное, кроме `none` (см. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), и в этом случае этот предок ведёт себя как содержащий блок. (Обратите внимание, что существуют несогласованности браузера с `perspective` и `filter`, способствующими содержанию формирования блоков.) Его конечная позиция определяется значениями `top`, `right`, `bottom` и `left`.Это значение всегда создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}. В печатных документах элемент помещается в одно и то же положение на _каждой странице_.
+- `sticky`
+  - : Элемент позиционируется в соответствии с нормальным потоком документа, а затем смещается относительно его ближайшего _прокручивающего предка_ и {{cssxref('Containing_Block', 'содержащего блока')}} (ближайший родительский уровень блока), включая элементы, связанные с таблицей, на основе значений `top`, `right`, `bottom`, и `left`. Смещение не влияет на положение любых других элементов.Это значение всегда создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}. Обратите внимание, что липкий элемент «прилипает» к его ближайшему предшественнику, имеющему «механизм прокрутки» (созданный при `overflow` равном `hidden`, `scroll`, `auto` или `overlay`), даже если тот не является ближайшим фактически прокручивающим предком. Это эффективно препятствует любому «липкому» поведению (см. [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<p>Свойство <code>position</code> указывается как одно ключевое слово, выбранное из списка значений ниже.</p>
-
-<h3 id="Значения">Значения</h3>
-
-<dl>
- <dt><code>static</code></dt>
- <dd>Это значение позволяет элементу находиться в обычном его состоянии, расположенном на своём месте в документе. Свойства <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code> <em>не применяются</em> к данному элементу. Это значение по умолчанию.</dd>
- <dt><code>relative</code></dt>
- <dd><p>Элемент позиционируется в соответствии с нормальным потоком документа, а затем смещается <em>относительно себя</em> на основе значений <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>. Смещение не влияет на положение любых других элементов; таким образом, пространство, заданное для элемента в макете страницы, такое же, как если бы позиция была <code>static</code>.</p>
- <p>Это значение создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context','контекст наложения')}}, когда значение <code>z-index</code> не <code>auto</code>. Его влияние на элементы <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code> и <code>table-caption</code> не определено.</p></dd>
- <dt><code>absolute</code></dt>
- <dd><p>Элемент удаляется из обычного потока документов, и для элемента в макете страницы не создаётся пробела. Он расположен относительно его ближайшего относительно позиционированного предка, если таковой имеется; в противном случае он помещается относительно исходного {{cssxref('Containing_Block', 'содержащего блока')}}. Его конечная позиция определяется значениями <code>top</code>, <code>right</code>, <code>bottom</code>, и <code>left</code>.</p>
- <p>Это значение создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}, когда значение <code>z-index</code> не <code>auto</code>. Поля абсолютно позиционированных коробок не {{cssxref('CSS_Box_Model/Mastering_margin_collapsing', 'сворачиваются')}} с другими полями.</p></dd>
- <dt><code>fixed</code></dt>
- <dd><p>Элемент выбивается из обычного потока документа, и для элемента в макете страницы не создаётся пространство. Он позиционируется относительно исходного {{cssxref('Containing_Block', 'содержащего блока')}}, установленного {{glossary("viewport")}}, за исключением случаев, когда один из его предков имеет свойство <code>transform</code>, <code>perspective</code>, или <code>filter</code>, установленное на что-то иное, кроме <code>none</code> (см. <a class="external external-icon" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), и в этом случае этот предок ведёт себя как содержащий блок. (Обратите внимание, что существуют несогласованности браузера с <code>perspective</code> и <code>filter</code>, способствующими содержанию формирования блоков.) Его конечная позиция определяется значениями <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>.</p>
- <p>Это значение всегда создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}. В печатных документах элемент помещается в одно и то же положение на <em>каждой странице</em>.</p></dd>
- <dt><code>sticky</code></dt>
- <dd><p>Элемент позиционируется в соответствии с нормальным потоком документа, а затем смещается относительно его ближайшего <em>прокручивающего предка</em> и {{cssxref('Containing_Block', 'содержащего блока')}} (ближайший родительский уровень блока), включая элементы, связанные с таблицей, на основе значений <code>top</code>, <code>right</code>, <code>bottom</code>, и <code>left</code>. Смещение не влияет на положение любых других элементов.</p>
- <p>Это значение всегда создаёт новый {{cssxref('CSS_Positioning/Understanding_z_index/The_stacking_context', 'контекст наложения')}}. Обратите внимание, что липкий элемент «прилипает» к его ближайшему предшественнику, имеющему «механизм прокрутки» (созданный при <code>overflow</code> равном <code>hidden</code>, <code>scroll</code>, <code>auto</code> или <code>overlay</code>), даже если тот не является ближайшим фактически прокручивающим предком. Это эффективно препятствует любому «липкому» поведению (см. <a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>).</p></dd>
-</dl>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Relative_positioning">Относительное позиционирование</h3>
+### Относительное позиционирование
 
-<p>Относительно позиционированные элементы смещены на определённую величину от их обычной позиции в документе, но без смещения, влияющего на другие элементы. В приведённом ниже примере обратите внимание, как размещаются другие элементы, как если бы «Two» занимало пространство своего обычного расположения.</p>
+Относительно позиционированные элементы смещены на определённую величину от их обычной позиции в документе, но без смещения, влияющего на другие элементы. В приведённом ниже примере обратите внимание, как размещаются другие элементы, как если бы «Two» занимало пространство своего обычного расположения.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
-&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
-&lt;div class="box" id="four"&gt;Four&lt;/div&gt;
-</pre>
+```html
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -86,24 +72,26 @@ translation_of: Web/CSS/position
   left: 20px;
   background: blue;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Relative_positioning', '600px', '200px') }}</p>
+{{ EmbedLiveSample('Relative_positioning', '600px', '200px') }}
 
-<h3 id="Absolute_positioning">Абсолютное позиционирование</h3>
+### Абсолютное позиционирование
 
-<p>Элементы, расположенные относительно друг друга, остаются в нормальном потоке документа. В противоположность этому, элемент с абсолютным позиционированием, выбивается из потока; таким образом, другие элементы располагаются без учёта абсолютных. Абсолютно позиционируемый элемент располагается относительно его ближайшего предка (который не является <code>static</code>). Если такого предка не существует, то абсолютный элемент позиционируется относительно ICB (начальный содержащий блок - см. также <a class="external external-icon" href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details">определение W3C</a>), который содержит блок корневого элемента документа.</p>
+Элементы, расположенные относительно друг друга, остаются в нормальном потоке документа. В противоположность этому, элемент с абсолютным позиционированием, выбивается из потока; таким образом, другие элементы располагаются без учёта абсолютных. Абсолютно позиционируемый элемент располагается относительно его ближайшего предка (который не является `static`). Если такого предка не существует, то абсолютный элемент позиционируется относительно ICB (начальный содержащий блок - см. также [определение W3C](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)), который содержит блок корневого элемента документа.
 
-<p>Простой пример:</p>
+Простой пример:
 
-<pre class="brush: html">&lt;h1&gt;Абсолютное позиционирование&lt;/h1&gt;
-&lt;p&gt;Я базовый элемент уровня блока. Мои соседи сидят на новых строках ниже меня.&lt;/p&gt;
-&lt;p class="positioned"&gt;По умолчанию моя ширина 100% ширины родителя и я достиг такого же высокого уровня, как и весь дочерний контент. Наша общая ширина и высота - это наш контент+заполнение+ширина/высота границы.&lt;/p&gt;
-&lt;p&gt;Мы отделены нашей маржой. Из-за развала края мы отделены шириной одного из наших полей, а не обоих.&lt;/p&gt;
-&lt;p&gt;встроенные элементы &lt;span&gt;как этот&lt;/span&gt; и &lt;span&gt;вот этот&lt;/span&gt; будут сидеть в одной строке друг с другом и соседними текстовыми узлами, если в ней есть место. Переполнение встроенных элементов &lt;span&gt;перейдёт на новую строку, если это возможно, - как содержимое этого текста&lt;/span&gt;, или просто перейдёт к новой строке, а если нет, то встанет, как это изображение:&lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
-</pre>
+```html
+<h1>Абсолютное позиционирование</h1>
+<p>Я базовый элемент уровня блока. Мои соседи сидят на новых строках ниже меня.</p>
+<p class="positioned">По умолчанию моя ширина 100% ширины родителя и я достиг такого же высокого уровня, как и весь дочерний контент. Наша общая ширина и высота - это наш контент+заполнение+ширина/высота границы.</p>
+<p>Мы отделены нашей маржой. Из-за развала края мы отделены шириной одного из наших полей, а не обоих.</p>
+<p>встроенные элементы <span>как этот</span> и <span>вот этот</span> будут сидеть в одной строке друг с другом и соседними текстовыми узлами, если в ней есть место. Переполнение встроенных элементов <span>перейдёт на новую строку, если это возможно, - как содержимое этого текста</span>, или просто перейдёт к новой строке, а если нет, то встанет, как это изображение:<img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   width: 500px;
   margin: 0 auto;
 }
@@ -126,18 +114,19 @@ span {
   top: 30px;
   left: 30px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Absolute_positioning', '100%', 420)}}</p>
+{{EmbedLiveSample('Absolute_positioning', '100%', 420)}}
 
-<h3 id="Fixed_positioning">Фиксированное позиционирование</h3>
+### Фиксированное позиционирование
 
-<p>Фиксированное позиционирование аналогично абсолютному, за исключением того, что блок, содержащий элемент, является начальным содержащим блоком, установленным в окне просмотра, если только у какого-либо предка не было <code>transform</code>, <code>perspective</code>, или свойства <code>filter</code>, отличное от <code>none</code> (см. <a class="external external-icon" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), из-за чего этот предок занимает место элементов, содержащих блок. Это можно использовать для создания «плавающего» элемента, который остаётся в том же положении независимо от прокрутки. В приведённом ниже примере окно c <code>id="one"</code> фиксируется в 80 пикселях от верхней части страницы и в 10 пикселях слева. Даже после прокрутки оно остаётся в том же месте относительно окна просмотра.</p>
+Фиксированное позиционирование аналогично абсолютному, за исключением того, что блок, содержащий элемент, является начальным содержащим блоком, установленным в окне просмотра, если только у какого-либо предка не было `transform`, `perspective`, или свойства `filter`, отличное от `none` (см. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), из-за чего этот предок занимает место элементов, содержащих блок. Это можно использовать для создания «плавающего» элемента, который остаётся в том же положении независимо от прокрутки. В приведённом ниже примере окно c `id="one"` фиксируется в 80 пикселях от верхней части страницы и в 10 пикселях слева. Даже после прокрутки оно остаётся в том же месте относительно окна просмотра.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;p&gt;
+```html
+<div class="outer">
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -145,8 +134,8 @@ span {
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;p&gt;
+  </p>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -154,8 +143,8 @@ span {
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;p&gt;
+  </p>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -163,14 +152,15 @@ span {
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim.
     Sed velit augue, pretium a sem aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id maximus erat aliquet.
     Sed sagittis porta libero sed condimentum. Aliquam finibus lectus nec ante congue rutrum.
-    Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus. &lt;/p&gt;
-  &lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus. </p>
+  <div class="box" id="one">One</div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background: red;
   width: 100px;
   height: 100px;
@@ -188,63 +178,63 @@ span {
   overflow: scroll;
   padding-left: 150px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Fixed_positioning', '800px', '300px')}}</p>
+{{EmbedLiveSample('Fixed_positioning', '800px', '300px')}}
 
-<h3 id="Sticky_positioning">Липкое позиционирование</h3>
+### Липкое позиционирование
 
-<p>Липкое позиционирование можно рассматривать как гибрид относительного и фиксированного позиционирования. Липкий позиционированный элемент обрабатывается как относительно позиционированный до тех пор, пока он не пересечёт заданный порог, после чего он будет считаться фиксированным, пока не достигнет границы его родителя. Например...</p>
+Липкое позиционирование можно рассматривать как гибрид относительного и фиксированного позиционирования. Липкий позиционированный элемент обрабатывается как относительно позиционированный до тех пор, пока он не пересечёт заданный порог, после чего он будет считаться фиксированным, пока не достигнет границы его родителя. Например...
 
-<pre class="brush: css">#one { position: sticky; top: 10px; }</pre>
+```css
+#one { position: sticky; top: 10px; }
+```
 
-<p>... позиционирует элемент с id "one" относительно до тех пор, пока видовой экран не будет прокручен таким образом, чтобы элемент был меньше 10 пикселей от вершины. Помимо этого порога элемент будет зафиксирован на 10 пикселей сверху.</p>
+... позиционирует элемент с id "one" относительно до тех пор, пока видовой экран не будет прокручен таким образом, чтобы элемент был меньше 10 пикселей от вершины. Помимо этого порога элемент будет зафиксирован на 10 пикселей сверху.
 
+Типичное использование для липкого позиционирования - для заголовков в алфавитном списке. Заголовок «B» появится чуть ниже элементов, начинающихся с «A», пока они не будут прокручиваться за кадром. Вместо того, чтобы скользить за кадром с остальной частью содержимого, заголовок «B» затем останется фиксированным в верхней части окна просмотра, пока все элементы «B» не будут прокручиваться на экране, и в этот момент он будет закрыт «C», заголовок и т. д.
+
+Вы должны указать порог с по крайней мере одним из {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}}, или {{cssxref('left')}} для того, чтобы липкое позиционирование могло вести себя так, как ожидалось. В противном случае он будет неотличим от относительного позиционирования.
+
+#### HTML
+
+```html
 <div>
-<p>Типичное использование для липкого позиционирования - для заголовков в алфавитном списке. Заголовок «B» появится чуть ниже элементов, начинающихся с «A», пока они не будут прокручиваться за кадром. Вместо того, чтобы скользить за кадром с остальной частью содержимого, заголовок «B» затем останется фиксированным в верхней части окна просмотра, пока все элементы «B» не будут прокручиваться на экране, и в этот момент он будет закрыт «C», заголовок и т. д.</p>
-
-<p>Вы должны указать порог с по крайней мере одним из <span style="line-height: 1.5;"> {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}}, или {{cssxref('left')}}</span> для того, чтобы липкое позиционирование могло вести себя так, как ожидалось. В противном случае он будет неотличим от относительного позиционирования.</p>
+  <dl>
+    <dt>A</dt>
+    <dd>Andrew W.K.</dd>
+    <dd>Apparat</dd>
+    <dd>Arcade Fire</dd>
+    <dd>At The Drive-In</dd>
+    <dd>Aziz Ansari</dd>
+  </dl>
+  <dl>
+    <dt>C</dt>
+    <dd>Chromeo</dd>
+    <dd>Common</dd>
+    <dd>Converge</dd>
+    <dd>Crystal Castles</dd>
+    <dd>Cursive</dd>
+  </dl>
+  <dl>
+    <dt>E</dt>
+    <dd>Explosions In The Sky</dd>
+  </dl>
+  <dl>
+    <dt>T</dt>
+    <dd>Ted Leo & The Pharmacists</dd>
+    <dd>T-Pain</dd>
+    <dd>Thrice</dd>
+    <dd>TV On The Radio</dd>
+    <dd>Two Gallants</dd>
+  </dl>
 </div>
+```
 
+#### CSS
 
-
-<h4 id="HTML_3">HTML</h4>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;A&lt;/dt&gt;
-    &lt;dd&gt;Andrew W.K.&lt;/dd&gt;
-    &lt;dd&gt;Apparat&lt;/dd&gt;
-    &lt;dd&gt;Arcade Fire&lt;/dd&gt;
-    &lt;dd&gt;At The Drive-In&lt;/dd&gt;
-    &lt;dd&gt;Aziz Ansari&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;C&lt;/dt&gt;
-    &lt;dd&gt;Chromeo&lt;/dd&gt;
-    &lt;dd&gt;Common&lt;/dd&gt;
-    &lt;dd&gt;Converge&lt;/dd&gt;
-    &lt;dd&gt;Crystal Castles&lt;/dd&gt;
-    &lt;dd&gt;Cursive&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;E&lt;/dt&gt;
-    &lt;dd&gt;Explosions In The Sky&lt;/dd&gt;
-  &lt;/dl&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;T&lt;/dt&gt;
-    &lt;dd&gt;Ted Leo &amp; The Pharmacists&lt;/dd&gt;
-    &lt;dd&gt;T-Pain&lt;/dd&gt;
-    &lt;dd&gt;Thrice&lt;/dd&gt;
-    &lt;dd&gt;TV On The Radio&lt;/dd&gt;
-    &lt;dd&gt;Two Gallants&lt;/dd&gt;
-  &lt;/dl&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="CSS_3">CSS</h4>
-
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -276,47 +266,28 @@ dd {
 dd + dd {
   border-top: 1px solid #CCC;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Sticky_positioning', '500px', '300px')}}</p>
+{{EmbedLiveSample('Sticky_positioning', '500px', '300px')}}
 
-<h2 id="Доступность">Доступность</h2>
+## Доступность
 
-<p>Убедитесь, что элементы, расположенные с <code>absolute</code> или <code>fixed</code> значением, не затеняют другой контент при увеличении страницы, увеличивая размер текста.</p>
+Убедитесь, что элементы, расположенные с `absolute` или `fixed` значением, не затеняют другой контент при увеличении страницы, увеличивая размер текста.
 
-<ul>
- <li><a href="../Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](../Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h3 id="Производительность_и_доступность">Производительность и доступность</h3>
+### Производительность и доступность
 
-<p>Элементы прокрутки, содержащие <code>fixed</code> или <code>sticky</code> контент, могут вызвать проблемы с производительностью и доступностью. Когда пользователь прокручивает страницу, браузер должен перерисовать <code>sticky</code> или <code>fixed</code> контент в новом месте. В зависимости от содержимого, которое необходимо перерисовать, производительности браузера и скорости обработки устройства, браузер может не справиться с перерисовкой со скоростью 60 кадров в секунду, что вызывает проблемы с доступностью для людей с чувствительностью и раздражением для всех. Одним из решений является добавление {{cssxref ('will-change', 'will-change: transform')}} к позиционированным элементам для визуализации элемента на его собственном уровне, повышения скорости перерисовки и, следовательно, повышения производительности и доступности.</p>
+Элементы прокрутки, содержащие `fixed` или `sticky` контент, могут вызвать проблемы с производительностью и доступностью. Когда пользователь прокручивает страницу, браузер должен перерисовать `sticky` или `fixed` контент в новом месте. В зависимости от содержимого, которое необходимо перерисовать, производительности браузера и скорости обработки устройства, браузер может не справиться с перерисовкой со скоростью 60 кадров в секунду, что вызывает проблемы с доступностью для людей с чувствительностью и раздражением для всех. Одним из решений является добавление {{cssxref ('will-change', 'will-change: transform')}} к позиционированным элементам для визуализации элемента на его собственном уровне, повышения скорости перерисовки и, следовательно, повышения производительности и доступности.
 
-<h2 id="Specifications">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning','#position-property','position')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>Добавляет значение свойства <code>sticky</code></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                                   | Коммент                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------ |
+| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                                      |
+| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Добавляет значение свойства `sticky` |
 
-<h2 id="Browser_compatibility">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}

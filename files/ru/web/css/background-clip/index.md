@@ -3,56 +3,59 @@ title: background-clip
 slug: Web/CSS/background-clip
 translation_of: Web/CSS/background-clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство CSS <strong><code>background-clip</code></strong> определяет как цвет фона или фоновое изображение будут выводиться под границами блока.</p>
+Свойство CSS **`background-clip`** определяет как цвет фона или фоновое изображение будут выводиться под границами блока.
 
-<p>Если фоновое изображение или цвет не заданы, это свойство будет иметь визуальный эффект, только если у границы есть прозрачные области или частично непрозрачные области (из-за {{cssxref("border-style")}} или {{cssxref("border-image")}}); в противном случае граница скрывает разницу.</p>
+Если фоновое изображение или цвет не заданы, это свойство будет иметь визуальный эффект, только если у границы есть прозрачные области или частично непрозрачные области (из-за {{cssxref("border-style")}} или {{cssxref("border-image")}}); в противном случае граница скрывает разницу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css"><code>/* </code>Значения ключевых слов<code> */
+```css
+/* Значения ключевых слов */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
 background-clip: text;
 
-/* </code>Глобальные значения<code> */
+/* Глобальные значения */
 background-clip: inherit;
 background-clip: initial;
-background-clip: unset;</code></pre>
+background-clip: unset;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>Фон распространяется до внешнего края границы (но под границей в z-порядке).</dd>
- <dt><code>padding-box</code></dt>
- <dd>Фон распространяется до внешнего края отступа. Под границей фон не рисуется.</dd>
- <dt><code>content-box</code></dt>
- <dd>Фон закрашивается внутри (обрезается) поля содержимого.</dd>
- <dt><code>text</code> {{experimental_inline}}</dt>
- <dd>Фон закрашивается внутри (обрезается) текста переднего плана.</dd>
-</dl>
+- `border-box`
+  - : Фон распространяется до внешнего края границы (но под границей в z-порядке).
+- `padding-box`
+  - : Фон распространяется до внешнего края отступа. Под границей фон не рисуется.
+- `content-box`
+  - : Фон закрашивается внутри (обрезается) поля содержимого.
+- `text` {{experimental_inline}}
+  - : Фон закрашивается внутри (обрезается) текста переднего плана.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;p class="border-box"&gt;The background extends behind the border.&lt;/p&gt;
-&lt;p class="padding-box"&gt;The background extends to the inside edge of the border.&lt;/p&gt;
-&lt;p class="content-box"&gt;The background extends only to the edge of the content box.&lt;/p&gt;
-&lt;p class="text"&gt;The background is clipped to the foreground text.&lt;/p&gt;</code></pre>
+```html
+<p class="border-box">The background extends behind the border.</p>
+<p class="padding-box">The background extends to the inside edge of the border.</p>
+<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="text">The background is clipped to the foreground text.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code>p {
+```css
+p {
   border: .8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
@@ -69,46 +72,28 @@ background-clip: unset;</code></pre>
 .text {
   background-clip: text;
   color: rgba(0,0,0,.2);
-}</code></pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Example', 600, 580)}}</p>
+{{EmbedLiveSample('Example', 600, 580)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS4 Backgrounds')}}</td>
-   <td>Добавляет значение <code>text</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                         | Статус                                   | Комментарий                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Первоначальное определение. |
+| {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Добавляет значение `text`.  |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Свойство {{cssxref("clip-path")}} создаёт область отсечения, которая определяет, которая определяет, какая часть целого элемента должна отображаться.</li>
- <li>Свойства фона: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model">Введение в блочную модель CSS</a></li>
-</ul>
+- Свойство {{cssxref("clip-path")}} создаёт область отсечения, которая определяет, которая определяет, какая часть целого элемента должна отображаться.
+- Свойства фона: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
+- [Введение в блочную модель CSS](/ru/docs/Web/CSS/box_model)

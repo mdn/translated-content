@@ -1,55 +1,56 @@
 ---
 title: '::first-line (:first-line)'
-slug: 'Web/CSS/::first-line'
+slug: Web/CSS/::first-line
 tags:
   - CSS
   - Layout
   - Reference
   - Псевдоэлементы
-translation_of: 'Web/CSS/::first-line'
+translation_of: Web/CSS/::first-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a> <strong><code>::first-line</code></strong> применяет стили к первой строке <a href="/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">блочного элемента</a>.</span> Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.</p>
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-line`** применяет стили к первой строке [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes). Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.
 
-<pre class="brush: css no-line-numbers">/* Стили для первой строки элемента &lt;p&gt; */
+```css
+/* Стили для первой строки элемента <p> */
 p::first-line {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p>В CSS3 появилась запись <code>::first-line</code> (с двумя двоеточиями) для различения <a href="/ru/docs/Web/CSS/Pseudo-classes">псевдоклассов</a> и <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлементов</a>. Браузеры также поддерживают запись <code>:first-line</code>, введённую в CSS2.</p>
-</div>
+> **Примечание:** В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
 
-<h2 id="Разрешённые_свойства">Разрешённые свойства</h2>
+## Разрешённые свойства
 
-<p>Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом <code>::first-line</code>:</p>
+Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::first-line`:
 
-<ul>
- <li>Все свойства, связанные с шрифтами: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} и {{Cssxref("font-family")}}</li>
- <li>Все свойства, связанные с фоном: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{Cssxref("background-attachment")}} и {{cssxref("background-blend-mode")}}</li>
- <li>Свойство {{cssxref("color")}}</li>
- <li>{{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} и {{cssxref("line-height")}}</li>
- <li>{{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} и {{cssxref("vertical-align")}}.</li>
-</ul>
+- Все свойства, связанные с шрифтами: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} и {{Cssxref("font-family")}}
+- Все свойства, связанные с фоном: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}} и {{cssxref("background-blend-mode")}}
+- Свойство {{cssxref("color")}}
+- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} и {{cssxref("line-height")}}
+- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} и {{cssxref("vertical-align")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Стили будут применены только к первой строке этого параграфа.
-После этого, весь текст будет отображаться как обычно. Увидели, что я имею в виду?&lt;/p&gt;
+```html
+<p>Стили будут применены только к первой строке этого параграфа.
+После этого, весь текст будет отображаться как обычно. Увидели, что я имею в виду?</p>
 
-&lt;span&gt;Первая строка этого элемента не будет стилизована специальным образом
-потому что это не блочный элемент.&lt;/span&gt;</pre>
+<span>Первая строка этого элемента не будет стилизована специальным образом
+потому что это не блочный элемент.</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::first-line {
+```css
+::first-line {
   color: blue;
   text-transform: uppercase;
 
@@ -58,24 +59,21 @@ p::first-line {
   /* Многие свойства запрещены в псевдоэлементах ::first-line */
   margin-left: 20px;
   text-indent: 20px;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример', 350, 160)}}</p>
+{{EmbedLiveSample('Пример', 350, 160)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("::first-letter")}}</li>
-</ul>
+- {{cssxref("::first-letter")}}

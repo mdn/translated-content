@@ -9,55 +9,50 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-iteration-count
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}{{ SeeCompatTable() }}
 
-<div>{{ SeeCompatTable() }}</div>
+## Обзор
 
-<h2 id="Обзор">Обзор</h2>
+[CSS](/ru/CSS "CSS")` свойство animation-iteration-count` определяет сколько раз будет проигрываться анимационный цикл, перед тем как остановиться.
 
-<p><a href="/ru/CSS" title="CSS">CSS</a><code><font face="Open Sans, Arial, sans-serif"> свойство </font><strong>animation-iteration-count</strong></code> определяет сколько раз будет проигрываться анимационный цикл, перед тем как остановиться.</p>
+Наиболее удобно использовать это свойство в сокращённом варианте {{ cssxref("animation") }}, в котором указываются все анимационные свойства.
 
-<p>Наиболее удобно использовать это свойство в сокращённом варианте {{ cssxref("animation") }}, в котором указываются все анимационные свойства.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css">animation-iteration-count: infinite;
+```css
+animation-iteration-count: infinite;
 animation-iteration-count: 3;
 animation-iteration-count: 2.3;
 
 animation-iteration-count: 2, 0, infinite;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>infinite</code></dt>
- <dd>Анимация повторяется бесконечно.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Сколько раз анимация будет повторяться; по умолчанию 1. Отрицательные значения не используются. Можно использовать не целые значения, для проигрывания части анимационного цикла (например, 0.5 воспроизведёт половину анимационного цикла).</dd>
-</dl>
+- `infinite`
+  - : Анимация повторяется бесконечно.
+- `<number>`
+  - : Сколько раз анимация будет повторяться; по умолчанию 1. Отрицательные значения не используются. Можно использовать не целые значения, для проигрывания части анимационного цикла (например, 0.5 воспроизведёт половину анимационного цикла).
 
-<h3 id="Правила_синтаксиса">Правила синтаксиса</h3>
+### Правила синтаксиса
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Смотрите примеры  <a href="/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy">CSS-анимации</a>.</p>
+Смотрите примеры [CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy).
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Также_смотрите">Также смотрите</h2>
+## Также смотрите
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy" title="Обучение CSS-анимациям">Использование CSS-анимацией</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy "Обучение CSS-анимациям")
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

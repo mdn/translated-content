@@ -6,17 +6,18 @@ tags:
   - шрифт
 translation_of: Web/CSS/font-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>font-style</code></strong> это CSS-свойство определяющее каким образом шрифт должен быть стилизирован, будь то это normal, italic, или oblique face из его {{cssxref("font-family")}}.</p>
+**`font-style`** это CSS-свойство определяющее каким образом шрифт должен быть стилизирован, будь то это normal, italic, или oblique face из его {{cssxref("font-family")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-style.html")}}
 
-<p><strong>Italic</strong> шрифты в общем курсивные по своей сути, обычно занимают меньше горизонтального пространства чем их нестилизированные копии, тогда как <strong>oblique</strong> шрифты обычно просто наклонная версия регулярного шрифта. Когда определённый стиль не доступен, оба italic и oblique шрифты симулируются искусственно наклоняя глифы регулярного шрифта (используйте {{cssxref("font-synthesis")}} для управления этим поведением).</p>
+**Italic** шрифты в общем курсивные по своей сути, обычно занимают меньше горизонтального пространства чем их нестилизированные копии, тогда как **oblique** шрифты обычно просто наклонная версия регулярного шрифта. Когда определённый стиль не доступен, оба italic и oblique шрифты симулируются искусственно наклоняя глифы регулярного шрифта (используйте {{cssxref("font-synthesis")}} для управления этим поведением).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">font-style: normal;
+```css
+font-style: normal;
 font-style: italic;
 font-style: oblique;
 
@@ -24,37 +25,35 @@ font-style: oblique;
 font-style: inherit;
 font-style: initial;
 font-style: unset;
-</pre>
+```
 
-<p>Свойство <code>font-style</code> определяется как единственное ключевое слово выбранное из списка значений внизу.</p>
+Свойство `font-style` определяется как единственное ключевое слово выбранное из списка значений внизу.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Выделяет шрифт который классифицирован как <code>normal</code> в {{Cssxref("font-family")}}.</dd>
- <dt><code>italic</code></dt>
- <dd>Выделяет шрифт который классифицирован как  <code>italic</code>. Если не доступна курсивная версия шрифта, взамен используется <code>oblique</code> классификация. Если не одна версия не доступна, то стиль симулируется искусственно.</dd>
- <dt><code>oblique</code></dt>
- <dd>Выделяет шрифт который классифицирован как  <code>oblique</code>. Если не доступна косая версия шрифта, взамен используется  <code>italic</code> классификация. Если не одна версия не доступна, то стиль симулируется искусственно.</dd>
-</dl>
+- `normal`
+  - : Выделяет шрифт который классифицирован как `normal` в {{Cssxref("font-family")}}.
+- `italic`
+  - : Выделяет шрифт который классифицирован как `italic`. Если не доступна курсивная версия шрифта, взамен используется `oblique` классификация. Если не одна версия не доступна, то стиль симулируется искусственно.
+- `oblique`
+  - : Выделяет шрифт который классифицирован как `oblique`. Если не доступна косая версия шрифта, взамен используется `italic` классификация. Если не одна версия не доступна, то стиль симулируется искусственно.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Font_styles">Font styles</h3>
+### Font styles
 
-<div class="hidden">
-<pre class="brush: html">&lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt;
-&lt;p class="italic"&gt;This paragraph is italic.&lt;/p&gt;
-&lt;p class="oblique"&gt;This paragraph is oblique.&lt;/p&gt;
-</pre>
-</div>
+```html hidden
+<p class="normal">This paragraph is normal.</p>
+<p class="italic">This paragraph is italic.</p>
+<p class="oblique">This paragraph is oblique.</p>
+```
 
-<pre class="brush: css">.normal {
+```css
+.normal {
   font-style: normal;
 }
 
@@ -64,43 +63,21 @@ font-style: unset;
 
 .oblique {
   font-style: oblique;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Font_styles') }}</p>
+{{ EmbedLiveSample('Font_styles') }}
 
-<h2 id="Specific​ations">Specific​ations</h2>
+## Specific​ations
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS3 Fonts')}} | No change          |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}         | No change          |
+| {{SpecName('CSS1', '#font-style', 'font-style')}}                             | {{Spec2('CSS1')}}         | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

@@ -4,207 +4,193 @@ slug: Web/CSS/Visual_formatting_model
 translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><span class="seoSummary"><em>Модель визуального форматирования </em>CSS<em> </em> - это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS</span>. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно <a href="https://developer.mozilla.org/ru/docs/Web/CSS/box_model">боксовой модели CSS</a>. Расположение (layout) каждого бокса определяется:</p>
+_Модель визуального форматирования_ CSS\_ \_- это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно [боксовой модели CSS](/ru/docs/Web/CSS/box_model). Расположение (layout) каждого бокса определяется:
 
-<ul>
- <li>размерами бокса: точно заданными или заданными ограничениями. Если размеры не заданы, это правило игнорируется;</li>
- <li>типом бокса: inline, inline-level, atomic inline-level, block box;</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Box_positioning_scheme">схемой позиционирования</a>: normal flow, float или absolute;</li>
- <li>другими элементами дерева: дочерними и соседними;</li>
- <li>размерами и расположением окна просмотра ({{glossary("viewport")}});</li>
- <li>внутренними размерами содержащихся изображений;</li>
- <li>другой внешней информацией.</li>
-</ul>
+- размерами бокса: точно заданными или заданными ограничениями. Если размеры не заданы, это правило игнорируется;
+- типом бокса: inline, inline-level, atomic inline-level, block box;
+- [схемой позиционирования](/ru/docs/CSS/Box_positioning_scheme): normal flow, float или absolute;
+- другими элементами дерева: дочерними и соседними;
+- размерами и расположением окна просмотра ({{glossary("viewport")}});
+- внутренними размерами содержащихся изображений;
+- другой внешней информацией.
 
-<p>Бокс отображается относительно краёв <em>содержащего его блока. </em>Как правило, бокс определяет родительский блок для своих потомков. Однако, стоит заметить, что бокс не ограничен содержащим его блоком. Такое поведение слоёв, выходящих за пределы своих содержащих блоков, называется <em>переполнением</em> (<em>overflow).</em></p>
+Бокс отображается относительно краёв _содержащего его блока._ Как правило, бокс определяет родительский блок для своих потомков. Однако, стоит заметить, что бокс не ограничен содержащим его блоком. Такое поведение слоёв, выходящих за пределы своих содержащих блоков, называется _переполнением_ (_overflow)._
 
-<h2 id="Генерация_бокса">Генерация бокса</h2>
+## Генерация бокса
 
-<p>Генерация бокса - часть алгоритма модели визуального форматирования, процедура, генерирующая блоки из элементов. Различные типы боксов определяют различное поведение в контексте форматирования. Тип бокса зависит от свойства CSS {{ cssxref("display") }}.</p>
+Генерация бокса - часть алгоритма модели визуального форматирования, процедура, генерирующая блоки из элементов. Различные типы боксов определяют различное поведение в контексте форматирования. Тип бокса зависит от свойства CSS {{ cssxref("display") }}.
 
-<h3 id="Блочные_элементы_и_блок-боксы">Блочные элементы и блок-боксы</h3>
+### Блочные элементы и блок-боксы
 
-<p>Говорят, что элемент является блочным, когда вычисленное значение его CSS-свойства {{ cssxref("display") }} равно: <code>block</code>, <code>list-item</code>, или <code>table</code>. Блочный элемент визуально форматируется как блок (например, параграф), предназначенный для вертикальной компоновки (в столбик).</p>
+Говорят, что элемент является блочным, когда вычисленное значение его CSS-свойства {{ cssxref("display") }} равно: `block`, `list-item`, или `table`. Блочный элемент визуально форматируется как блок (например, параграф), предназначенный для вертикальной компоновки (в столбик).
 
-<p>Каждый элемент блочного уровня участвует в <a href="/ru/docs/CSS/block_formatting_context" title="block formatting context">контексте блочного форматирования</a>. Каждый элемент блочного уровня генерирует как минимум один блок-бокс, названный <em>главным блок-боксом</em>. Некоторые элементы, например, такие как list-item, создают дополнительные боксы для хранения маркеров и других типографических элементов, содержащихся в list item. Большинство блочных элементов генерирует только один, главный блок-бокс.</p>
+Каждый элемент блочного уровня участвует в [контексте блочного форматирования](/ru/docs/CSS/block_formatting_context "block formatting context"). Каждый элемент блочного уровня генерирует как минимум один блок-бокс, названный _главным блок-боксом_. Некоторые элементы, например, такие как list-item, создают дополнительные боксы для хранения маркеров и других типографических элементов, содержащихся в list item. Большинство блочных элементов генерирует только один, главный блок-бокс.
 
-<p>Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. Он так же будет боксом, участвующем в <a href="/en-US/docs/CSS/Positioning_scheme" title="CSS/Positioning scheme">схеме позиционирования</a>.</p>
+Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. Он так же будет боксом, участвующем в [схеме позиционирования](/ru/docs/CSS/Positioning_scheme "CSS/Positioning scheme").
 
-<p><img alt="venn_blocks.png" src="/@api/deki/files/5995/=venn_blocks.png" style="float: left;">Элемент блочного уровня так же может быть блоком-контейнером. Блок-контейнер - это блок, который содержит либо только другие элементы блочного уровня, либо создаёт <a href="/en-US/docs/CSS/Inline_formatting_context" title="CSS/Inline formatting context">контекст инлайнового форматирования</a> и, таким образом, содержит только инлайновые элементы.</p>
+![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)Элемент блочного уровня так же может быть блоком-контейнером. Блок-контейнер - это блок, который содержит либо только другие элементы блочного уровня, либо создаёт [контекст инлайнового форматирования](/ru/docs/CSS/Inline_formatting_context "CSS/Inline formatting context") и, таким образом, содержит только инлайновые элементы.
 
-<p>Важно понимать, что понятие блочного элемента и понятие блочного контейнера - это разные вещи. Первое описывает, как блок будет себя вести по отношению к своему родителю и своим соседям/братьям. А второе - описывает, как блок будет взаимодействовать со своими потомками. Некоторые элементы блочного уровня, например, таблицы, не являются содержащими блоками. И наоборот, некоторые блоки-контейнеры, например, ячейки таблицы, не являются элементами блочного уровня.</p>
+Важно понимать, что понятие блочного элемента и понятие блочного контейнера - это разные вещи. Первое описывает, как блок будет себя вести по отношению к своему родителю и своим соседям/братьям. А второе - описывает, как блок будет взаимодействовать со своими потомками. Некоторые элементы блочного уровня, например, таблицы, не являются содержащими блоками. И наоборот, некоторые блоки-контейнеры, например, ячейки таблицы, не являются элементами блочного уровня.
 
-<p>Элементы блочного уровня, которые так же являются контейнерами, называются <em>блок-боксами</em>.</p>
+Элементы блочного уровня, которые так же являются контейнерами, называются _блок-боксами_.
 
-<h4 id="Анонимные_блок-боксы">Анонимные блок-боксы</h4>
+#### Анонимные блок-боксы
 
-<p>В некоторых случаях алгоритм визуального форматирования  вынужден добавлять дополнительные боксы. Так как эти боксы невозможно как-то переименовать и к ним невозможно применить css-селекторы, поэтому эти боксы называют <em>анонимными</em>.</p>
+В некоторых случаях алгоритм визуального форматирования вынужден добавлять дополнительные боксы. Так как эти боксы невозможно как-то переименовать и к ним невозможно применить css-селекторы, поэтому эти боксы называют _анонимными_.
 
-<p>Из-за того, что к анонимным боксам невозможно применить селекторы, их невозможно изменить с помощью таблицы стилей. Это значит, что все наследуемые CSS-свойства для них будут иметь значение <code>inherit</code>, а все ненаследуемые свойства будут иметь значение <code>initial</code>.</p>
+Из-за того, что к анонимным боксам невозможно применить селекторы, их невозможно изменить с помощью таблицы стилей. Это значит, что все наследуемые CSS-свойства для них будут иметь значение `inherit`, а все ненаследуемые свойства будут иметь значение `initial`.
 
-<p>Блоки-контейнеры содержат либо только инлайн-боксы, либо только элементы блочного уровня. Но, как правило, документ содержит и те и другие. В этом случае анонимные блок-боксы создаются вокруг примыкающих к ним инлайн-боксов.</p>
+Блоки-контейнеры содержат либо только инлайн-боксы, либо только элементы блочного уровня. Но, как правило, документ содержит и те и другие. В этом случае анонимные блок-боксы создаются вокруг примыкающих к ним инлайн-боксов.
 
-<h3 id="Пример">Пример</h3>
+### Пример
 
-<p>Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение <code>display:block</code> :</p>
+Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение `display:block` :
 
-<pre class="syntaxbox"><code>&lt;div&gt;Some inline text &lt;p&gt;followed by a paragraph&lt;/p&gt; followed by more inline text.&lt;/div&gt;</code></pre>
+    <div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
 
-<p>Здесь создались два анонимных блока: один для текста перед параграфом (<code>Some inline text</code>), и второй для текста после параграфа (<code>followed by more inline text.</code>). И у нас получилась вот такая структура:</p>
+Здесь создались два анонимных блока: один для текста перед параграфом (`Some inline text`), и второй для текста после параграфа (`followed by more inline text.`). И у нас получилась вот такая структура:
 
-<p style="text-align: center;"><img alt="anonymous_block-level_boxes.png" class="default internal" src="https://developer.mozilla.org/@api/deki/files/5996/=anonymous_block-level_boxes.png"></p>
+![anonymous_block-level_boxes.png](https://developer.mozilla.org/@api/deki/files/5996/=anonymous_block-level_boxes.png)
 
-<p>Выглядеть это будет так:</p>
+Выглядеть это будет так:
 
-<pre class="line-numbers language-html"><code class="language-html">Some inline text
+```html
+Some inline text
 followed by a paragraph
-followed by more inline text.</code></pre>
+followed by more inline text.
+```
 
-<p>В отличие от параграфа {{ HTMLElement("p") }}, Web разработчик не может напрямую контролировать стили этих двух анонимных боксов. Те свойства, которые наследуются, берут своё значение от элемента {{ HTMLElement("div") }}, например {{ cssxref("color") }}, определяющий цвет текста. А другие значения, ненаследуемые, устанавливаются в значение <code>initial</code>. Например, у них не будет своего свойства {{ cssxref("background-color") }}, он всегда будет в состоянии "прозрачный" (transparent), значении по умолчанию для этого свойства, и поэтому будет видно тот background, который установлен у элемента <code>&lt;div&gt;</code>. А вот для параграфа <code>&lt;p&gt; </code>можно установить своё свойство цвета фона. Таким образом, эти два анонимных бокса будут иметь один и тот же цвет текста.</p>
+В отличие от параграфа {{ HTMLElement("p") }}, Web разработчик не может напрямую контролировать стили этих двух анонимных боксов. Те свойства, которые наследуются, берут своё значение от элемента {{ HTMLElement("div") }}, например {{ cssxref("color") }}, определяющий цвет текста. А другие значения, ненаследуемые, устанавливаются в значение `initial`. Например, у них не будет своего свойства {{ cssxref("background-color") }}, он всегда будет в состоянии "прозрачный" (transparent), значении по умолчанию для этого свойства, и поэтому будет видно тот background, который установлен у элемента `<div>`. А вот для параграфа `<p> `можно установить своё свойство цвета фона. Таким образом, эти два анонимных бокса будут иметь один и тот же цвет текста.
 
-<p>Ещё один случай, который приводит к созданию анонимных блок-боксов, это случай, когда инлайн-бокс содержит один или несколько блок-боксов. В этом случае элемент, содержащий блок-боксы, делится на два инлайн-бокса - один перед, а второй после блок-бокса. И потом инлайн-элементы перед и после блок-бокса дополнительно заключаются в <em>анонимные блок-боксы</em>. Таким образом блок-бокс становится соседом для анонимных блок-боксов, содержащих инлайн-элементы.</p>
+Ещё один случай, который приводит к созданию анонимных блок-боксов, это случай, когда инлайн-бокс содержит один или несколько блок-боксов. В этом случае элемент, содержащий блок-боксы, делится на два инлайн-бокса - один перед, а второй после блок-бокса. И потом инлайн-элементы перед и после блок-бокса дополнительно заключаются в _анонимные блок-боксы_. Таким образом блок-бокс становится соседом для анонимных блок-боксов, содержащих инлайн-элементы.
 
-<p>Если есть несколько блок-боксов, идущих подряд, без инлайн-элементов между ними, то анонимные блок-боксы создаются только перед и после такого набора блок-боксов.</p>
+Если есть несколько блок-боксов, идущих подряд, без инлайн-элементов между ними, то анонимные блок-боксы создаются только перед и после такого набора блок-боксов.
 
-<h3 id="Пример_2">Пример</h3>
+### Пример
 
-<p>Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение <code>display:inline</code> и для элемента {{ HTMLElement("span") }} значение <code>display:block</code> :</p>
+Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение `display:inline` и для элемента {{ HTMLElement("span") }} значение `display:block` :
 
-<pre class="syntaxbox"><code>&lt;p&gt;Some &lt;em&gt;inline&lt;/em&gt; text &lt;span&gt;followed by a paragraph&lt;/span&gt; followed by more inline text.&lt;/p&gt;</code></pre>
+    <p>Some <em>inline</em> text <span>followed by a paragraph</span> followed by more inline text.</p>
 
-<p>Создадутся два анонимных блок-бокса, один для текста перед элементом span (<code>Some <em>inline</em> text</code>) и один для текста после него (<code>followed by more inline text</code>), и у нас получится вот такая структура:</p>
+Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
 
-<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png" style="height: 137px; width: 597px;"></p>
+![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
 
-<p>Выглядеть она будет так:</p>
+Выглядеть она будет так:
 
-<pre class="line-numbers language-html"><code class="language-html">Some inline text
+```html
+Some inline text
 followed by a paragraph
-followed by more inline text.</code></pre>
+followed by more inline text.
+```
 
-<h3 id="Элементы_инлайн-уровня_и_инлайн-боксы">Элементы инлайн-уровня и инлайн-боксы</h3>
+### Элементы инлайн-уровня и инлайн-боксы
 
-<p>Элементы, которые называются <em>элементами инлайн-уровня</em> - это элементы, у которых вычисленное значение CSS-свойства {{ cssxref("display") }} установлено в : <code>inline</code>, <code>inline-block</code> или <code>inline-table</code>. Визуально они не представляют собой какие-то отдельные блоки, но они они располагаются в одну линию с другим контентом инлайн-уровня. Например, содержание параграфа, с различным форматированием, таким как подчёркивание или картинка, состоит из элементов инлайн-уровня.</p>
+Элементы, которые называются _элементами инлайн-уровня_ - это элементы, у которых вычисленное значение CSS-свойства {{ cssxref("display") }} установлено в : `inline`, `inline-block` или `inline-table`. Визуально они не представляют собой какие-то отдельные блоки, но они они располагаются в одну линию с другим контентом инлайн-уровня. Например, содержание параграфа, с различным форматированием, таким как подчёркивание или картинка, состоит из элементов инлайн-уровня.
 
-<p><img alt="venn_inlines.png" src="https://developer.mozilla.org/@api/deki/files/6008/=venn_inlines.png" style="float: left;"></p>
+![venn_inlines.png](https://developer.mozilla.org/@api/deki/files/6008/=venn_inlines.png)
 
-<div class="warning">
-<p>Эта диаграмма использует устаревшую терминологию; см. примечания ниже. К тому же она некорректна, потому что жёлтый эллипс справа по определению должен быть изображён одинаковым по размеру с эллипсом слева или больше него  (it could be a mathematical superset), потому что в спецификации сказано: "Элемент инлайн-уровня генерируют боксы инлайн-уровня, участвующие в форматировании инлайн-уровня", см. CSS 2.2, глава 9.2.2</p>
+> **Предупреждение:** Эта диаграмма использует устаревшую терминологию; см. примечания ниже. К тому же она некорректна, потому что жёлтый эллипс справа по определению должен быть изображён одинаковым по размеру с эллипсом слева или больше него (it could be a mathematical superset), потому что в спецификации сказано: "Элемент инлайн-уровня генерируют боксы инлайн-уровня, участвующие в форматировании инлайн-уровня", см. CSS 2.2, глава 9.2.2
+
+Элементы инлайн-уровня создают _боксы инлайн-уровня_, которые определены как боксы, участвующие в [контексте форматирования инлайн-уровня](/ru/docs/CSS/Inline_formatting_context "CSS/Inline formatting context"). _Inline boxes_ are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with `display:inline`. Inline-level boxes, whose contents do not participate in an inline formatting context, are called _atomic inline-level boxes_. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of `inline-block` or `inline-table`, are never split into several boxes, as is possible with inline boxes.
+
+> **Примечание:** Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are **not** inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.
+
+> **Примечание:** Atomic inline boxes cannot be split into several lines in an inline formatting context.```html
+>
+> <style>
+>   span {
+>     display:inline; /* default value*/
+>   }
+> </style>
+> <div style="width:20em;">
+>    The text in the span <span>can be split in several
+>    lines as it</span> is an inline box.
+> </div>
+> ```
+
+which leads to:
+
+The text in the span can be split into several lines as it is an inline box.
+
+```html
+<style>
+  span {
+    display:inline-block;
+  }
+</style>
+<div style="width:20em;">
+   The text in the span <span>cannot be split in several
+   lines as it</span> is an inline-block box.
 </div>
+```
 
-<p>Элементы инлайн-уровня создают <em>боксы инлайн-уровня</em>, которые определены как боксы, участвующие в <a href="https://developer.mozilla.org/en-US/docs/CSS/Inline_formatting_context" title="CSS/Inline formatting context">контексте форматирования инлайн-уровня</a>. <em>Inline boxes</em> are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with <code>display:inline</code>. Inline-level boxes, whose contents do not participate in an inline formatting context, are called <em>atomic inline-level boxes</em>. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of <code>inline-block</code> or <code>inline-table</code>, are never split into several boxes, as is possible with inline boxes.</p>
+> **Примечание:** which leads to:The text in the span cannot be split into several lines as it is an inline-block box.
 
-<div class="note"><strong>Note:</strong> Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are <strong>not</strong> inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.</div>
+#### Anonymous inline boxes
 
-<div class="note">Atomic inline boxes cannot be split into several lines in an inline formatting context.
-<div style="-moz-column-width: 30em;">
-<pre class="line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>style</span><span class="punctuation token">&gt;</span></span><span class="style token"><span class="language-css token">
-  <span class="selector token">span</span> <span class="punctuation token">{</span>
-    <span class="property token">display</span><span class="punctuation token">:</span>inline<span class="punctuation token">;</span> <span class="comment token">/* default value*/</span>
-  <span class="punctuation token">}</span>
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>style</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">width</span><span class="punctuation token">:</span><span class="number token">20</span><span class="token unit">em</span><span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-   The text in the span <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span><span class="punctuation token">&gt;</span></span>can be split in several
-   lines as it<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span> is an inline box.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
-</div>
-</div>
+As for block boxes, there are a few cases where inline boxes are created automatically by the CSS engine. These inline boxes are also anonymous as they cannot be named by selectors; they inherit the value of all inheritable properties, setting it to `initial` for all others.
 
-<p>which leads to:</p>
+The most common case where an anonymous inline box is created, is when some text is found as a direct child of a block box creating an inline formatting context. In that case, this text is included in the largest possible anonymous inline box. Also, space content, which would be removed by the behavior set in the {{ cssxref("white-space") }} CSS property, does not generate anonymous inline boxes because they would end empty.
 
-<div style="width: 20em;">The text in the span <span>can be split into several lines as it</span> is an inline box.</div>
+> **Примечание:** Example TBD
 
-<pre class="line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>style</span><span class="punctuation token">&gt;</span></span><span class="style token"><span class="language-css token">
-  <span class="selector token">span</span> <span class="punctuation token">{</span>
-    <span class="property token">display</span><span class="punctuation token">:</span>inline-block<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>style</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">width</span><span class="punctuation token">:</span><span class="number token">20</span><span class="token unit">em</span><span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-   The text in the span <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span><span class="punctuation token">&gt;</span></span>cannot be split in several
-   lines as it<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span> is an inline-block box.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+### Other types of boxes
 
-<div class="note">
-<div style="-moz-column-width: 30em;">
-<p>which leads to:</p>
+#### Line boxes
 
-<div style="width: 20em;">The text in the span <span style="display: inline-block;">cannot be split into several lines as it</span> is an inline-block box.</div>
-</div>
-</div>
+_Line boxes_ are generated by the [inline formatting context](/ru/docs/CSS/Inline_formatting_context "block formatting context") to represent a line of text. Inside a block box, a line box extends from one border of the box to the other. When there are [floats](/ru/docs/CSS/float "float"), the line box starts at the rightmost border of the left floats and ends at the leftmost border of the right floats.
 
-<h4 id="Anonymous_inline_boxes">Anonymous inline boxes</h4>
+These boxes are technical, and Web authors do not usually have to bother with them.
 
-<p>As for block boxes, there are a few cases where inline boxes are created automatically by the CSS engine. These inline boxes are also anonymous as they cannot be named by selectors; they inherit the value of all inheritable properties, setting it to <code>initial</code> for all others.</p>
+#### Run-in boxes
 
-<p>The most common case where an anonymous inline box is created, is when some text is found as a direct child of a block box creating an inline formatting context. In that case, this text is included in the largest possible anonymous inline box. Also, space content, which would be removed by the behavior set in the {{ cssxref("white-space") }} CSS property, does not generate anonymous inline boxes because they would end empty.</p>
+_Run-in boxes_, defined using `display:run-in`, are boxes that are either block boxes or inline boxes, depending on the type of the following box. They can be used to create a title that runs inside its first paragraph when possible.
 
-<div class="note">Example TBD</div>
+> **Примечание:** Run-in boxes were removed from the CSS 2.1 standard, as they were insufficiently specified to allow for interoperable implementation. They may reappear in CSS3, but meanwhile, are considered _experimental_. They should not be used in production.
 
-<h3 id="Other_types_of_boxes">Other types of boxes</h3>
+#### Model-induced boxes
 
-<h4 id="Line_boxes">Line boxes</h4>
+Besides the inline and block formatting contexts, CSS specifies several additional _content models_ that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:
 
-<p><em>Line boxes</em> are generated by the <a href="https://developer.mozilla.org/en-US/docs/CSS/Inline_formatting_context" title="block formatting context">inline formatting context</a> to represent a line of text. Inside a block box, a line box extends from one border of the box to the other. When there are <a href="https://developer.mozilla.org/en-US/docs/CSS/float" title="float">floats</a>, the line box starts at the rightmost border of the left floats and ends at the leftmost border of the right floats.</p>
+- The [table content model](/ru/docs/CSS/table-layout "table-layout") may create a _table wrapper box_ and a _table box_, but also specific boxes like _caption boxes_.
+- The [multi-column content model](/ru/docs/CSS/Using_CSS_multi-column_layouts "Using CSS multi-column layouts") may create _column boxes_ between the container box and the content*.*
+- The experimental grid, or flex-box content models, also create additional types of boxes.
 
-<p>These boxes are technical, and Web authors do not usually have to bother with them.</p>
+#### Positioning schemes
 
-<h4 id="Run-in_boxes">Run-in boxes</h4>
+Once boxes are generated, the CSS engine needs to position them on the layout. To do that, it uses one of the following algorithms:
 
-<p><em>Run-in boxes</em>, defined using <code>display:run-in</code>, are boxes that are either block boxes or inline boxes, depending on the type of the following box. They can be used to create a title that runs inside its first paragraph when possible.</p>
+- The _normal flow_ - positions each box one after the other.
+- The _floats_ algorithm - extracts the box from the normal flow and put it to the side of the containing box.
+- The _absolute positioning_ scheme - positions a box within an absolute coordinate system that is established by its containing element. An absolutely positioned element can cover other elements.
 
-<div class="note"><strong>Note:</strong> Run-in boxes were removed from the CSS 2.1 standard, as they were insufficiently specified to allow for interoperable implementation. They may reappear in CSS3, but meanwhile, are considered <em>experimental</em>. They should not be used in production.</div>
+### Normal flow
 
-<h4 id="Model-induced_boxes">Model-induced boxes</h4>
+In the _normal flow_, boxes are laid out one after the other. In a block formatting context, they are laid out vertically; in an inline formatting context, they are laid out horizontally. The normal flow is triggered when the CSS {{ cssxref("position") }} is set to the value `static` or `relative`, and if the CSS {{ cssxref("float") }} is set to the value `none`.
 
-<p>Besides the inline and block formatting contexts, CSS specifies several additional <em>content models</em> that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:</p>
+### Example
 
-<ul>
- <li>The <a href="https://developer.mozilla.org/en-US/docs/CSS/table-layout" title="table-layout">table content model</a> may create a <em>table wrapper box</em> and a <em>table box</em>, but also specific boxes like <em>caption boxes</em>.</li>
- <li>The <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_multi-column_layouts" title="Using CSS multi-column layouts">multi-column content model</a> may create <em>column boxes</em> between the container box and the content<em>.</em></li>
- <li>The experimental grid, or flex-box content models, also create additional types of boxes.</li>
-</ul>
+> **Примечание:** When in the normal flow, in a block formatting context, boxes are laid vertically one after the other out.
+>
+> When in the normal flow, in an inline formatting context, boxes are laid horizontally one after the other out.
 
-<h4 id="Positioning_schemes">Positioning schemes</h4>
+> **Примечание:** There are two sub-cases of the normal flow: static positioning and relative positioning:\* In _static positioning_, triggered by the value `static` of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.
+>
+> - In _relative_ _positioning_, triggered by the value `relative` of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
-<p>Once boxes are generated, the CSS engine needs to position them on the layout. To do that, it uses one of the following algorithms:</p>
+### Floats
 
-<ul>
- <li>The <em>normal flow</em> - positions each box one after the other.</li>
- <li>The <em>floats</em> algorithm - extracts the box from the normal flow and put it to the side of the containing box.</li>
- <li>The <em>absolute positioning</em> scheme - positions a box within an absolute coordinate system that is established by its containing element. An absolutely positioned element can cover other elements.</li>
-</ul>
+In the _float positioning scheme_, specific boxes (called _floating boxes_ or simply _floats)_ are positioned at the beginning, or end of the current line. This leads to the property that text (and more generally anything within the normal flow) flows along the edge of the floating boxes, except if told differently by the {{ cssxref("clear") }} CSS property.
 
-<h3 id="Normal_flow">Normal flow</h3>
+The float positioning scheme for a box is selected, by setting the {{ cssxref("float") }} CSS property on that box to a value different than `none` and {{ cssxref("position") }} to `static` or `relative`. If {{ cssxref("float") }} is set to `left`, the float is positioned at the beginning of the line box. If set to `right`, the float is positioned at the end of the line box. In either case, the line box is shrunk to fit alongside the float.
 
-<p>In the <em>normal flow</em>, boxes are laid out one after the other. In a block formatting context, they are laid out vertically; in an inline formatting context, they are laid out horizontally. The normal flow is triggered when the CSS {{ cssxref("position") }} is set to the value <code>static</code> or <code>relative</code>, and if the CSS {{ cssxref("float") }} is set to the value <code>none</code>.</p>
+### Absolute positioning
 
-<h3 id="Example">Example</h3>
+In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/All_About_The_Containing_Block "CSS/Containing block") using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
-<div class="note">When in the normal flow, in a block formatting context, boxes are laid vertically one after the other out.<br>
-<br>
-When in the normal flow, in an inline formatting context, boxes are laid horizontally one after the other out.</div>
+An element is absolutely positioned if the {{ cssxref("position") }} is set to `absolute` or `fixed`.
 
-<div class="note">
-<p>There are two sub-cases of the normal flow: static positioning and relative positioning:</p>
-
-<ul>
- <li>In <em>static positioning</em>, triggered by the value <code>static</code> of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.</li>
- <li>In <em>relative</em><em> positioning</em>, triggered by the value <code>relative</code> of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</li>
-</ul>
-</div>
-
-<h3 id="Floats">Floats</h3>
-
-<p>In the <em>float positioning scheme</em>, specific boxes (called <em>floating boxes</em> or simply <em>floats)</em> are positioned at the beginning, or end of the current line. This leads to the property that text (and more generally anything within the normal flow) flows along the edge of the floating boxes, except if told differently by the {{ cssxref("clear") }} CSS property.</p>
-
-<p>The float positioning scheme for a box is selected, by setting the {{ cssxref("float") }} CSS property on that box to a value different than <code>none</code> and {{ cssxref("position") }} to <code>static</code> or <code>relative</code>. If {{ cssxref("float") }} is set to <code>left</code>, the float is positioned at the beginning of the line box. If set to <code>right</code>, the float is positioned at the end of the line box. In either case, the line box is shrunk to fit alongside the float.</p>
-
-<h3 id="Absolute_positioning">Absolute positioning</h3>
-
-<p>In the <em>absolute positioning scheme</em>, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/All_About_The_Containing_Block" title="CSS/Containing block">containing block</a> using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</p>
-
-<p>An element is absolutely positioned if the {{ cssxref("position") }} is set to <code>absolute</code> or <code>fixed</code>.</p>
-
-<p>With a <em>fixed positioned element</em>, the containing block is the viewport. The position of the element is absolute within the viewport. Scrolling does not change the position of the element.</p>
+With a _fixed positioned element_, the containing block is the viewport. The position of the element is absolute within the viewport. Scrolling does not change the position of the element.

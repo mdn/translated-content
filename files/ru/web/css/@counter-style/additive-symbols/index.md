@@ -3,62 +3,65 @@ title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 translation_of: Web/CSS/@counter-style/additive-symbols
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Дескриптор аддитивных символов аналогичен дескриптору <span class="seoSummary"> {{cssxref('symbols')}} </span>и позволяет пользователю указывать символы которые будут использоваться для представлений счётчика, когда значение дескриптора<span class="seoSummary"> {{cssxref('system')}}  <em>аддитивное</em>. Дескриптор <code>additive-symbols</code> </span>определяет так называемые аддитивные кортежи<span class="seoSummary">, </span>каждый из которых представляет собой пару, содержащую символ и неотрицательный целочисленный вес<span class="seoSummary">.</span> Аддитивная система используется для построения систем нумерации знаков, таких как римские цифры.</p>
+Дескриптор аддитивных символов аналогичен дескриптору {{cssxref('symbols')}} и позволяет пользователю указывать символы которые будут использоваться для представлений счётчика, когда значение дескриптора {{cssxref('system')}} _аддитивное_. Дескриптор `additive-symbols` определяет так называемые аддитивные кортежи, каждый из которых представляет собой пару, содержащую символ и неотрицательный целочисленный вес. Аддитивная система используется для построения систем нумерации знаков, таких как римские цифры.
 
-<p>Когда значение системного дескриптора является циклическим, числовым, буквенным, символическим или фиксированным, дескриптор <code>symbols</code> используется вместо аддитивных символов для указания символов счётчика.</p>
+Когда значение системного дескриптора является циклическим, числовым, буквенным, символическим или фиксированным, дескриптор `symbols` используется вместо аддитивных символов для указания символов счётчика.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">additive-symbols: 3 "0";
+```css
+additive-symbols: 3 "0";
 additive-symbols: 3 "0", 2 "\2E\20";
 additive-symbols: 3 "0", 2 url(symbol.png);
-</pre>
+```
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="html">&lt;ul class="list"&gt;
-   &lt;li&gt;One&lt;/li&gt;
-   &lt;li&gt;Two&lt;/li&gt;
-   &lt;li&gt;Three&lt;/li&gt;
-   &lt;li&gt;Four&lt;/li&gt;
-   &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+   <li>One</li>
+   <li>Two</li>
+   <li>Three</li>
+   <li>Four</li>
+   <li>Five</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@counter-style additive-symbols-example {
+```css
+@counter-style additive-symbols-example {
   system: additive;
   additive-symbols: I 1;
 }
 .list {
   list-style: additive-symbols-example;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, функциональная запись, создающая анонимные стили счётчиков.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, функциональная запись, создающая анонимные стили счётчиков.

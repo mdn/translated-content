@@ -1,38 +1,38 @@
 ---
 title: ':in-range'
-slug: 'Web/CSS/:in-range'
+slug: Web/CSS/:in-range
 tags:
   - CSS
   - Псевдоклассы
   - Руководство
-translation_of: 'Web/CSS/:in-range'
+translation_of: Web/CSS/:in-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+## Описание
 
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:in-range` находит элементы, значение которых соответствует указанному для них диапазону ограничений. Он позволяет странице показывать, когда значение элемента находится в допустимом диапазоне.
 
-<h2 id="Описание">Описание</h2>
+> **Примечание:** **Замечание:** этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:in-range</code> находит элементы, значение которых соответствует указанному для них диапазону ограничений. Он позволяет странице показывать, когда значение элемента находится в допустимом диапазоне.</p>
+## Пример
 
-<div class="note"><strong>Замечание:</strong> этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".</div>
+### HTML
 
-<h2 id="Пример">Пример</h2>
+```html
+<form action="" id="form1">
+    <ul>Приминаются значения между 1 и 10.
+        <li>
+            <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+            <label for="value1">Ваше значение </label>
+        </li>
+</form>
+```
 
-<div id="example">
-<h3 id="HTML">HTML</h3>
+### CSS
 
-<pre class="brush: html; highlight:[3]">&lt;form action="" id="form1"&gt;
-    &lt;ul&gt;Приминаются значения между 1 и 10.
-        &lt;li&gt;
-            &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
-            &lt;label for="value1"&gt;Ваше значение &lt;/label&gt;
-        &lt;/li&gt;
-&lt;/form&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">li {
+```css
+li {
     list-style: none;
     margin-bottom: 1em;
 }
@@ -51,22 +51,20 @@ input:in-range + label::after {
 }
 input:out-of-range + label::after {
     content:'вне диапазона!';
-}</pre>
-</div>
+}
+```
 
-<div>{{EmbedLiveSample('Пример',600,140)}}</div>
+{{EmbedLiveSample('Пример',600,140)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref(":out-of-range")}}</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Forms/Data_form_validation">Руководство валидации данных в формах</a></li>
-</ul>
+- {{cssxref(":out-of-range")}}
+- [Руководство валидации данных в формах](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)

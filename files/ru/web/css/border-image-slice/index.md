@@ -3,34 +3,35 @@ title: border-image-slice
 slug: Web/CSS/border-image-slice
 translation_of: Web/CSS/border-image-slice
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS-свойство <strong><code>border-image-slice</code></strong>  делит изображение указанное в {{cssxref("border-image-source")}} на девять областей: четыре угла, четыре края и середину. Это происходит путём указания 4 внутренних смещений.</p>
+CSS-свойство **`border-image-slice`** делит изображение указанное в {{cssxref("border-image-source")}} на девять областей: четыре угла, четыре края и середину. Это происходит путём указания 4 внутренних смещений.
 
-<p><a href="/files/3814/border-image-slice.png" style="float: left;"><img alt="The nine slices defined by the CSS border-image shorthand or border-image-slice longhand properties" src="/files/3814/border-image-slice.png" style="height: 132px; margin: 1px; padding: 1em; width: 250px;"></a>Четыре значения управляют положением линий среза. If some are not specified, they are inferred from the other with the usual 4-value syntax of CSS.</p>
+[![The nine slices defined by the CSS border-image shorthand or border-image-slice longhand properties](/files/3814/border-image-slice.png)](/files/3814/border-image-slice.png)Четыре значения управляют положением линий среза. If some are not specified, they are inferred from the other with the usual 4-value syntax of CSS.
 
-<p>The middle is not used by the border itself but is used as a background-image if the keyword <code>fill</code> is set. The keyword can be set at any position in the property (before, after or between the other values).</p>
+The middle is not used by the border itself but is used as a background-image if the keyword `fill` is set. The keyword can be set at any position in the property (before, after or between the other values).
 
-<p>The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} properties define how these images will be used.</p>
+The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} properties define how these images will be used.
 
-<p>The shorthand CSS property {{cssxref("border-image")}} may reset this property to its default value.</p>
+The shorthand CSS property {{cssxref("border-image")}} may reset this property to its default value.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* border-image-slice: <em>slice</em> */
+```css
+/* border-image-slice: slice */
 border-image-slice: 30%;
 
-/* border-image-slice: <em>horizontal</em> <em>vertical</em> */
+/* border-image-slice: horizontal vertical */
 border-image-slice: 10% 30%;
 
-/* border-image-slice: <em>top</em> <em>horizontal</em> <em>bottom</em> */
+/* border-image-slice: top horizontal bottom */
 border-image-slice: 30 30% 45;
 
-/* border-image-slice: <em>top</em> <em>right</em> <em>bottom</em> <em>left</em> */
+/* border-image-slice: top right bottom left */
 border-image-slice: 7 12 14 5;
 
 /* border-image-slice: … fill */
@@ -41,39 +42,37 @@ border-image-slice: 10% fill 7 12;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><em>slice</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the four slicing lines. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>horizontal</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the two horizontal slicing lines, the top and the bottom ones. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>vertical</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the two vertical slicing lines, the right and the left ones. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>top</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the top slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>bottom</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the bottom slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>right</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the right slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><em>left</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the left slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents <em>pixels</em> for raster images and <em>coordinates</em> for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to <code>100%</code>.</dd>
- <dt><code>fill</code></dt>
- <dd>Is a keyword whose presence forces the use of the middle image slice to be displayed over the background image, its size and height are resized like those of the top and left image slices, respectively.</dd>
- <dt><code>inherit</code></dt>
- <dd>Is a keyword indicating that all four values are inherited from their parent's element calculated value.</dd>
-</dl>
+- _slice_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the four slicing lines. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _horizontal_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the two horizontal slicing lines, the top and the bottom ones. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _vertical_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the two vertical slicing lines, the right and the left ones. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _top_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the top slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _bottom_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the bottom slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _right_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the right slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- _left_
+  - : Is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} of the offset for the left slicing line. Note that a {{cssxref("&lt;length&gt;")}} value is not allowed, and therefore invalid. The {{cssxref("&lt;number&gt;")}} represents _pixels_ for raster images and _coordinates_ for vector images. Also, {{cssxref("&lt;percentage&gt;")}} values are relative to the height or width of the image, whichever is adequate. Negative values are invalid and values greater than the relevant size, height or width, are clamped to `100%`.
+- `fill`
+  - : Is a keyword whose presence forces the use of the middle image slice to be displayed over the background image, its size and height are resized like those of the top and left image slices, respectively.
+- `inherit`
+  - : Is a keyword indicating that all four values are inherited from their parent's element calculated value.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

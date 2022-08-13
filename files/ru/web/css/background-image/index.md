@@ -8,63 +8,65 @@ tags:
   - Reference
 translation_of: Web/CSS/background-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Краткое_описание">Краткое описание</h2>
+## Краткое описание
 
-<p>Свойство <a href="/ru/docs/CSS" title="/ru/docs/CSS">CSS</a>  <strong><code>background-image</code></strong> устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.</p>
+Свойство [CSS](/ru/docs/CSS) **`background-image`** устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.
 
-<p><a href="/ru/CSS/border" title="border">Границы</a> {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.</p>
+[Границы](/ru/CSS/border "border") {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.
 
-<p>Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением <code>none</code>.</p>
+Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением `none`.
 
-<div class="note"><strong>Обратите внимание:</strong> Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.</div>
+> **Примечание:** **Обратите внимание:** Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">background-image: none;
+```css
+background-image: none;
 background-image: url(http://www.example.com/bck.png);
 
 background-image: inherit;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Это ключевое слово обозначает отсутствие изображений.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>{{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается<a href="/ru/docs/CSS/Multiple_backgrounds" title="Multiple backgrounds"> несколько фонов</a>.</dd>
-</dl>
+- `none`
+  - : Это ключевое слово обозначает отсутствие изображений.
+- `<image>`
+  - : {{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается[ несколько фонов](/ru/docs/CSS/Multiple_backgrounds "Multiple backgrounds").
 
-<h3 id="Официальный_синтаксис">Официальный синтаксис</h3>
+### Официальный синтаксис
 
 {{csssyntax("background-image")}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Multiple_backgrounds_and_transparency">Несколько фонов и прозрачность</h3>
+### Несколько фонов и прозрачность
 
-<p>Обратите внимание, что изображение звезды частично прозрачно и наложено на изображение кошки.</p>
+Обратите внимание, что изображение звезды частично прозрачно и наложено на изображение кошки.
 
-<h4 id="HTML_содержимое">HTML содержимое</h4>
+#### HTML содержимое
 
-<pre class="brush: html">&lt;div&gt;
-    &lt;p class="catsandstars"&gt;
-        This paragraph is full of cats&lt;br /&gt;and stars.
-    &lt;/p&gt;
-    &lt;p&gt;This paragraph is not.&lt;/p&gt;
-    &lt;p class="catsandstars"&gt;
-        Here are more cats for you.&lt;br /&gt;Look at them!
-    &lt;/p&gt;
-    &lt;p&gt;And no more.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+    <p class="catsandstars">
+        This paragraph is full of cats<br />and stars.
+    </p>
+    <p>This paragraph is not.</p>
+    <p class="catsandstars">
+        Here are more cats for you.<br />Look at them!
+    </p>
+    <p>And no more.</p>
+</div>
+```
 
-<h4 id="CSS_содержимое">CSS содержимое</h4>
+#### CSS содержимое
 
-<pre class="brush: css">pre, p {
+```css
+pre, p {
     font-size: 1.5em;
     color: #FE7F88;
     background-color: transparent;
@@ -83,22 +85,20 @@ p {
                      url("https://mdn.mozillademos.org/files/7693/catfront.png");
   background-color: transparent;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Multiple_backgrounds_and_transparency')}}</p>
+{{EmbedLiveSample('Multiple_backgrounds_and_transparency')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/CSS/CSS_Image_Sprites">CSS спрайты изображений</a></li>
- <li>{{HTMLElement("img")}}</li>
- <li>Статьи, связанные с изображениями:: {{cssxref("&lt;image&gt;")}}, {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}.</li>
-</ul>
+- [CSS спрайты изображений](/ru/docs/Web/Guide/CSS/CSS_Image_Sprites)
+- {{HTMLElement("img")}}
+- Статьи, связанные с изображениями:: {{cssxref("&lt;image&gt;")}}, {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}.

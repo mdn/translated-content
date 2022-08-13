@@ -3,19 +3,18 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 translation_of: Web/CSS/transition-duration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>transition-duration</code></strong> определяет продолжительность выполнения анимации. Значение по умолчанию равняется <code>0s</code>, т.е. отсутствие анимации.</p>
+Свойство **`transition-duration`** определяет продолжительность выполнения анимации. Значение по умолчанию равняется `0s`, т.е. отсутствие анимации.
 
-<p>{{EmbedInteractiveExample("pages/css/transition-duration.html")}}</p>
+{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
+You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is simply truncated to the right size. In both case the CSS declaration stays valid.
 
+## Синтаксис
 
-<p>You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is simply truncated to the right size. In both case the CSS declaration stays valid.</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;time&gt; values */
+```css
+/* <time> values */
 transition-duration: 6s;
 transition-duration: 120ms;
 transition-duration: 1s, 15s;
@@ -25,32 +24,30 @@ transition-duration: 10s, 30s, 230ms;
 transition-duration: inherit;
 transition-duration: initial;
 transition-duration: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>Is a {{cssxref("&lt;time&gt;")}} denoting the amount of time the transition from the old value of a property to the new value should take. A time of <code>0s</code> indicates that no transition will happen, that is the switch between the two states will be instantaneous. A negative value for the time renders the declaration invalid.</dd>
-</dl>
+- `<time>`
+  - : Is a {{cssxref("&lt;time&gt;")}} denoting the amount of time the transition from the old value of a property to the new value should take. A time of `0s` indicates that no transition will happen, that is the switch between the two states will be instantaneous. A negative value for the time renders the declaration invalid.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div>
-<div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 0.5s</code></p>
+`transition-duration: 0.5s`
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -84,9 +81,10 @@ transition-duration: unset;
     transition-duration:0.5s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -100,22 +98,21 @@ transition-duration: unset;
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_0_5s",275,150)}}
+
+`transition-duration: 1s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_0_5s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -149,9 +146,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:1s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -165,22 +163,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_1s",275,150)}}
+
+`transition-duration: 2s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_1s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -214,9 +211,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -230,22 +228,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_2s",275,150)}}
+
+`transition-duration: 4s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_2s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -279,9 +276,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:4s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -295,32 +293,25 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("duration_4s",275,150)}}</div>
-</div>
-</div>
+{{EmbedLiveSample("duration_4s",275,150)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{cssxref('transition')}}</li>
- <li>{{cssxref('transition-property')}}</li>
- <li>{{cssxref('transition-timing-function')}}</li>
- <li>{{cssxref('transition-delay')}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Using CSS transitions](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref('transition')}}
+- {{cssxref('transition-property')}}
+- {{cssxref('transition-timing-function')}}
+- {{cssxref('transition-delay')}}
+- {{domxref("TransitionEvent")}}

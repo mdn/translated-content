@@ -6,95 +6,62 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/padding-left
 ---
-<div><font><font>{{CSSRef}}</font></font></div>
+{{CSSRef}}
 
-<p>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a> <strong><code>padding-left</code></strong> определяет ширину левого внутреннего отступа элемента.</p>
+Свойство [CSS](/ru/docs/Web/CSS) **`padding-left`** определяет ширину левого внутреннего отступа элемента.
 
-<p>{{EmbedInteractiveExample("pages/css/padding-left.html")}}</p>
+{{EmbedInteractiveExample("pages/css/padding-left.html")}}
 
-<p>Внутренний отступ элемента (англ. "padding") - это пространство между его содержимым и его границей.</p>
+Внутренний отступ элемента (англ. "padding") - это пространство между его содержимым и его границей.
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> Свойство {{cssxref ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением.</p>
-</div>
+> **Примечание:** Свойство {{cssxref ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением.
 
-<h2 id="Syntax"><font><font>Синтаксис</font></font></h2>
+## Синтаксис
 
-<pre class="brush:css"><font><font>/ * </font></font><code><font><font>&lt;length&gt;</font></font></code><font><font> значения * /
-padding-left: 0.5em;</font></font><font><font>
-padding-left: 0;</font></font><font><font>
-padding-left: 2cm;</font></font>
-<font><font>
-/ * </font></font><code><font><font>&lt;percentage&gt;</font></font></code><font><font> значение * /
-padding-left: 10%;</font></font>
-<font><font>
+```css
+/ * <length> значения * /
+padding-left: 0.5em;
+padding-left: 0;
+padding-left: 2cm;
+
+/ * <percentage> значение * /
+padding-left: 10%;
+
 / * Глобальные значения * /
-padding-left: inherit;</font></font><font><font>
-padding-left: initial;</font></font><font><font>
-padding-left: unset;</font></font>
-</pre>
+padding-left: inherit;
+padding-left: initial;
+padding-left: unset;
+```
 
-<h3 id="Values"><font><font>Значения</font></font></h3>
+### Значения
 
-<p> </p>
+- {{cssxref("&lt;length&gt;")}}
+  - : Фиксированный размер заполнения отступа. Не может быть отрицательным.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Размер заполнения зависит от ширины блока. Не может быть отрицательным.
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Фиксированный размер заполнения отступа. Не может быть отрицательным.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Размер заполнения зависит от ширины блока. Не может быть отрицательным.</dd>
-</dl>
+### Формальный синтаксис
 
-<p> </p>
+    {{csssyntax}}
 
-<h3 id="Формальный_синтаксис"><font><font>Формальный синтаксис</font></font></h3>
+## Примеры
 
-<pre class="syntaxbox"><font><font>{{csssyntax}}</font></font></pre>
+```css
+.content {padding-left: 5%; }
+.sidebox {padding-left: 10px; }
+```
 
-<h2 id="Examples"><font><font>Примеры</font></font></h2>
+## Определения
 
-<pre class="brush: css"><font><font>.content {padding-left: 5%; </font><font>}</font></font><font><font>
-.sidebox {padding-left: 10px; </font><font>}</font></font>
-</pre>
+| Спецификация                                                                                     | Статус                                   | Комментарий                                             |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------- |
+| {{ SpecName('CSS3 Box', '#the-padding', 'padding-left') }}                     | {{ Spec2('CSS3 Box') }}         | Без изменений.                                          |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-left') }}     | {{ Spec2('CSS3 Transitions') }} | Переопределяет `padding-left` как анимируемое свойство. |
+| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }} | {{ Spec2('CSS2.1') }}             | Без изменений.                                          |
+| {{ Specname('CSS1', '#padding-left', 'padding-left') }}                         | {{ Spec2('CSS1') }}                 | Первоначальное определение.                             |
 
-<h2 id="Определения">Определения</h2>
+{{cssinfo}}
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#the-padding', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Переопределяет <code>padding-left</code> как анимируемое свойство.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ Specname('CSS1', '#padding-left', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+## Совместимость
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_Compatibility"><font><font>Совместимость</font></font></h2>
-
-<p>{{Compat}}</p>
-
-<div id="compat-mobile"> </div>
+{{Compat}}

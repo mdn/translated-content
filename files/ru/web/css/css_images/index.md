@@ -6,93 +6,46 @@ tags:
   - CSS руководство
 translation_of: Web/CSS/CSS_Images
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Images</strong> - модуль в CSS, который определяет, какие типы изображений можно использовать (тип {{cssxref("&lt;image&gt;")}}, содержащий URL, градиенты и другие типы изображений), как изменять их размер и как они, и другие замещённые элементы, взаимодействуют с другими моделями макетов.</p>
+**CSS Images** - модуль в CSS, который определяет, какие типы изображений можно использовать (тип {{cssxref("&lt;image&gt;")}}, содержащий URL, градиенты и другие типы изображений), как изменять их размер и как они, и другие замещённые элементы, взаимодействуют с другими моделями макетов.
 
-<h2 id="Справка">Справка</h2>
+## Справка
 
-<h3 id="Свойства">Свойства</h3>
+### Свойства
 
-<div class="index">
-<ul>
- <li>{{cssxref("image-orientation")}}</li>
- <li>{{cssxref("image-rendering")}}</li>
- <li>{{cssxref("object-fit")}}</li>
- <li>{{cssxref("object-position")}}</li>
-</ul>
-</div>
+- {{cssxref("image-orientation")}}
+- {{cssxref("image-rendering")}}
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
 
-<h3 id="Функции">Функции</h3>
+### Функции
 
-<div class="index">
-<ul>
- <li>{{cssxref("linear-gradient", "linear-gradient()")}}</li>
- <li>{{cssxref("radial-gradient", "radial-gradient()")}}</li>
- <li>{{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}</li>
- <li>{{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}</li>
- <li>{{cssxref("element", "element()")}}</li>
-</ul>
-</div>
+- {{cssxref("linear-gradient", "linear-gradient()")}}
+- {{cssxref("radial-gradient", "radial-gradient()")}}
+- {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
+- {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
+- {{cssxref("element", "element()")}}
 
-<h3 id="Типы_данных">Типы данных</h3>
+### Типы данных
 
-<div class="index">
-<ul>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;uri&gt;")}}</li>
-</ul>
-</div>
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;uri&gt;")}}
 
-<h2 id="Руководства">Руководства</h2>
+## Руководства
 
-<dl>
- <dt><a href="/ru/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Использование CSS градиентов</a></dt>
- <dd>Представляют собой особый тип CSS изображений, <em>градиенты</em>, как создавать и использовать их.</dd>
- <dt><a href="/ru/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">Создание спрайтов в CSS</a></dt>
- <dd>Описывает общую технику группировки нескольких изображений в один документ, чтобы сократить количество запросов и скорость загрузки страницы.</dd>
-</dl>
+- [Использование CSS градиентов](/ru/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+  - : Представляют собой особый тип CSS изображений, _градиенты_, как создавать и использовать их.
+- [Создание спрайтов в CSS](/ru/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+  - : Описывает общую технику группировки нескольких изображений в один документ, чтобы сократить количество запросов и скорость загрузки страницы.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS4 Images")}}</td>
-      <td>{{Spec2("CSS4 Images")}}</td>
-      <td>Added {{CSSxRef("image-resolution")}}, {{CSSxRef("conic-gradient")}}, and {{CSSxRef("_image", "image()")}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Images")}}</td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Added {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}} and {{CSSxRef("object-position")}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}}</td>
-      <td>{{Spec2("Compat")}}</td>
-      <td>Standardizes the <code>-webkit</code> prefixed gradient value functions</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}</td>
-      <td>{{Spec2("CSS3 Values")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS1", "#url", "&lt;url&gt;")}}</td>
-      <td>{{Spec2("CSS1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                                        | Status                           | Comment                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Images")}}                                                 | {{Spec2("CSS4 Images")}} | Added {{CSSxRef("image-resolution")}}, {{CSSxRef("conic-gradient")}}, and {{CSSxRef("_image", "image()")}}                                  |
+| {{SpecName("CSS3 Images")}}                                                 | {{Spec2("CSS3 Images")}} | Added {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}} and {{CSSxRef("object-position")}} |
+| {{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}} | {{Spec2("Compat")}}         | Standardizes the `-webkit` prefixed gradient value functions                                                                                                                |
+| {{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}                 | {{Spec2("CSS3 Values")}} |                                                                                                                                                                             |
+| {{SpecName("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}         | {{Spec2("CSS2.1")}}         |                                                                                                                                                                             |
+| {{SpecName("CSS1", "#url", "&lt;url&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition                                                                                                                                                          |

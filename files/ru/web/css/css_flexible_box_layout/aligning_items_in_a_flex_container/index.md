@@ -4,211 +4,195 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary">Одной из причин быстрого роста популярности flexbox среди веб-разработчиков было то, что впервые были предоставлены адекватные возможности выравнивания. Он предоставил адекватное вертикальное выравнивание, и стало возможным, наконец, легко поместить элемент в центр по вертикали. В этом руководстве детально рассматривается, как выравнивание и распределение работают во Flexbox.</p>
+Одной из причин быстрого роста популярности flexbox среди веб-разработчиков было то, что впервые были предоставлены адекватные возможности выравнивания. Он предоставил адекватное вертикальное выравнивание, и стало возможным, наконец, легко поместить элемент в центр по вертикали. В этом руководстве детально рассматривается, как выравнивание и распределение работают во Flexbox.
 
-<p>Для центрирования элемента по перекрёстной оси (в данном случае - вертикальной) используется свойство <code>align-items</code>. Для центрирования элемента по главной оси (в данном случае - горизонтально), используется свойство <code>justify-content</code>.</p>
+Для центрирования элемента по перекрёстной оси (в данном случае - вертикальной) используется свойство `align-items`. Для центрирования элемента по главной оси (в данном случае - горизонтально), используется свойство `justify-content`.
 
-<p><img alt="A containing element with another box centered inside it." src="https://mdn.mozillademos.org/files/15627/align1.png" style="display: block; height: 357px; margin: 0px auto; width: 616px;"></p>
+![A containing element with another box centered inside it.](https://mdn.mozillademos.org/files/15627/align1.png)
 
+На примере ниже можно изменить размер контейнера или вложенного элемента, но элемент всегда останется по центру.
 
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-<p>На примере ниже можно изменить размер контейнера или вложенного элемента, но элемент всегда останется по центру.</p>
+## Свойства управления выравниванием
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}</p>
+В этом руководстве рассматриваются следующие свойства:
 
-<h2 id="Свойства_управления_выравниванием">Свойства управления выравниванием</h2>
+- {{cssxref("justify-content")}} — управляет выравниванием элементов по главной оси.
+- {{cssxref("align-items")}} — управляет выравниванием элементов по перекрёстной оси.
+- {{cssxref("align-self")}} — управляет выравниванием конкретного flex элемента по перекрёстной оси.
+- {{cssxref("align-content")}} — описывается в спецификации как “упаковка flex строк”; управляет промежутками между flex строками по перекрёстной оси.
 
-<p>В этом руководстве рассматриваются следующие свойства:</p>
+Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 
-<ul>
- <li>{{cssxref("justify-content")}} — управляет выравниванием элементов по главной оси.</li>
- <li>{{cssxref("align-items")}} — управляет выравниванием элементов по перекрёстной оси.</li>
- <li>{{cssxref("align-self")}} — управляет выравниванием конкретного flex элемента по перекрёстной оси.</li>
- <li>{{cssxref("align-content")}} — описывается в спецификации как “упаковка flex строк”; управляет промежутками между flex строками по перекрёстной оси.</li>
-</ul>
+> **Примечание:** **Замечание**: Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
 
-<p>Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.</p>
+## Перекрёстная ось
 
-<div class="note">
-<p><strong>Замечание</strong>: Свойства выравнивания во Flexbox помещены в отдельную спецификацию — <a href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment Level 3</a>. Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.</p>
-</div>
+Свойства `align-items` и `align-self` управляют выравниванием flex элементов по перекрёстной оси: вертикальной для `flex-direction` установленным в `row,` и горизонтальной для `flex-direction` установленным в `column`.
 
-<h2 id="Перекрёстная_ось">Перекрёстная ось</h2>
+Рассмотрим выравнивание по перекрёстной оси на простейшем примере. Если установить `display: flex` у контейнера, все дочерние элементы становятся flex элементами, выстроенными в ряд. Все они по вертикали примут размер самого высокого элемента, который станет определяющим вертикального размера. Если у flex контейнера задана высота, то все элементы растянутся до высоты контейнера, независимо от размера содержимого.
 
-<p>Свойства <code>align-items</code> и <code>align-self</code> управляют выравниванием flex элементов по перекрёстной оси: вертикальной для <code>flex-direction</code> установленным в <code>row,</code> и горизонтальной для <code>flex-direction</code> установленным в <code>column</code>.</p>
+![Three items, one with additional text causing it to be taller than the others.](https://mdn.mozillademos.org/files/15628/align2.png)
 
-<p>Рассмотрим выравнивание по перекрёстной оси на простейшем примере. Если установить <code>display: flex</code> у контейнера, все дочерние элементы становятся flex элементами, выстроенными в ряд. Все они по вертикали примут размер самого высокого элемента, который станет определяющим вертикального размера. Если у flex контейнера задана высота, то все элементы растянутся до высоты контейнера, независимо от размера содержимого.</p>
+![Three items stretched to 200 pixels tall](https://mdn.mozillademos.org/files/15629/align3.png)
 
-<p><img alt="Three items, one with additional text causing it to be taller than the others." src="https://mdn.mozillademos.org/files/15628/align2.png" style="display: block; height: 131px; margin: 0px auto; width: 509px;"></p>
+Все элементы становятся одной высоты, т.к. по умолчанию свойство `align-items` имеет значение `stretch`.
 
-<p><img alt="Three items stretched to 200 pixels tall" src="https://mdn.mozillademos.org/files/15629/align3.png" style="display: block; height: 207px; margin: 0px auto; width: 637px;"></p>
+Другие возможные значения свойства:
 
-<p>Все элементы становятся одной высоты, т.к. по умолчанию свойство <code>align-items</code> имеет значение <code>stretch</code>.</p>
+- `align-items: flex-start`
+- `align-items: flex-end`
+- `align-items: center`
+- `align-items: stretch`
+- `align-items: baseline`
 
-<p>Другие возможные значения свойства:</p>
+В примере ниже значение свойств `align-items` установлено в `stretch`. Попробуйте другие значения для понимания их действия.
 
-<ul>
- <li><code>align-items: flex-start</code></li>
- <li><code>align-items: flex-end</code></li>
- <li><code>align-items: center</code></li>
- <li><code>align-items: stretch</code></li>
- <li><code>align-items: baseline</code></li>
-</ul>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
 
-<p>В примере ниже значение свойств <code>align-items</code> установлено в <code>stretch</code>. Попробуйте другие значения для понимания их действия.</p>
+### Выравнивание одного элемента при помощи `align-self`
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}} </p>
+Свойство `align-items `устанавливает `align-self` для всех flex элементов как для группы. Это означает, что можно явно указать значение `align-self` для конкретного элемента. Свойство `align-self` может принимать все те же значения, что и свойство `align-items, `а так же значение `auto`, которое сбросит значение, установленное в flex контейнере.
 
-<h3 id="Выравнивание_одного_элемента_при_помощи_align-self">Выравнивание одного элемента при помощи <code>align-self</code></h3>
+В следующем примере, у flex контейнера установлено `align-items: flex-start`, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью `first-child` селектора установлено `align-items: stretch`; у следующего элемента с классом `selected` установлено ` align-self: ``center`. Можно изменять значение `align-items` на контейнере или `align-self` на элементе для изучения их работы.8н
 
-<p>Свойство <code>align-items </code>устанавливает <code>align-self</code> для всех flex элементов как для группы. Это означает, что можно явно указать значение <code>align-self</code> для конкретного элемента. Свойство <code>align-self</code> может принимать все те же значения, что и свойство <code>align-items, </code>а так же значение <code>auto</code>, которое сбросит значение, установленное в flex контейнере.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 
-<p>В следующем примере, у flex контейнера установлено <code>align-items: flex-start</code>, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью <code>first-child</code> селектора установлено <code>align-items: stretch</code>; у следующего элемента с классом <code>selected</code> установлено <code>align-self: </code><code>center</code>. Можно изменять значение <code>align-items</code> на контейнере или <code>align-self</code> на элементе для изучения их работы.8н</p>
+### Изменение основной оси
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}} </p>
+До сего момента мы изучали поведение при `flex-direction` установленном в `row`, в языке, использующем написание сверху вниз. Это означает, что основная ось идёт горизонтально, а выравнивание по перекрёстной оси сдвигает элементы вверх или вниз.
 
-<h3 id="Изменение_основной_оси">Изменение основной оси</h3>
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](https://mdn.mozillademos.org/files/15630/align4.png)
 
-<p>До сего момента мы изучали поведение при <code>flex-direction</code> установленном в <code>row</code>, в языке, использующем написание сверху вниз. Это означает, что основная ось идёт горизонтально, а выравнивание по перекрёстной оси сдвигает элементы вверх или вниз.</p>
+Если изменить `flex-direction` на column, `align-items` и `align-self` будут сдвигать элементы влево или вправо.
 
-<p><img alt="Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis." src="https://mdn.mozillademos.org/files/15630/align4.png" style="display: block; height: 204px; margin: 0px auto; width: 671px;"></p>
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](https://mdn.mozillademos.org/files/15631/align5.png)
 
-<p>Если изменить <code>flex-direction</code> на column, <code>align-items</code> и <code>align-self</code> будут сдвигать элементы влево или вправо.</p>
+Можно попробовать пример ниже, где установлено `flex-direction: column`.
 
-<p><img alt="Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis." src="https://mdn.mozillademos.org/files/15631/align5.png" style="display: block; height: 239px; margin: 0px auto; width: 687px;"></p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
 
-<p>Можно попробовать пример ниже, где установлено <code>flex-direction: column</code>.</p>
+## Выравнивание содержимого по перекрёстной оси — свойство align-content
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}} </p>
+До сих пор мы выравнивали элементы внутри flex-контейнера. Если содержимое вашего flex контейнера переносится на несколько строк, используйте свойство `align-content` для управления свободным пространством между строками. В спецификации это описано как [упаковка flex-строк](https://drafts.csswg.org/css-flexbox/#align-content-property).
 
-<h2 id="Выравнивание_содержимого_по_перекрёстной_оси_—_свойство_align-content">Выравнивание содержимого по перекрёстной оси — свойство align-content</h2>
+Чтобы свойство `align-content` работало, необходимо, чтобы в flex-контейнере было больше места, что требуется для отображения всего содержимого. Оно применяется ко всем элементам как группе, и управляет распределением свободного места и положением всей группы элементов внутри контейнера.
 
-<p>До сих пор мы выравнивали элементы внутри flex-контейнера. Если содержимое вашего flex контейнера переносится на несколько строк, используйте свойство <code>align-content</code> для управления свободным пространством между строками. В спецификации это описано как <a href="https://drafts.csswg.org/css-flexbox/#align-content-property">упаковка flex-строк</a>.</p>
+Свойство `align-content` принимает следующие значения:
 
-<p>Чтобы свойство <code>align-content</code> работало, необходимо, чтобы в flex-контейнере было больше места, что требуется для отображения всего содержимого. Оно применяется ко всем элементам как группе, и управляет распределением свободного места и положением всей группы элементов внутри контейнера.</p>
+- `align-content: flex-start`
+- `align-content: flex-end`
+- `align-content: center`
+- `align-content: space-between`
+- `align-content: space-around`
+- `align-content: stretch`
+- `align-content: space-evenly` (не описано в спецификации Flexbox)
 
-<p>Свойство <code>align-content</code> принимает следующие значения:</p>
+В примере ниже flex контейнер имеет высоту 400 пикселей - больше, чем необходимо для отображения всех элементов. Значение `align-content` установлено в `space-between`, означающее, что свободное пространство разделено _между_ строками, расположенными вплотную к началу и концу контейнера по перекрёстной оси.
 
-<ul>
- <li><code>align-content: flex-start</code></li>
- <li><code>align-content: flex-end</code></li>
- <li><code>align-content: center</code></li>
- <li><code>align-content: space-between</code></li>
- <li><code>align-content: space-around</code></li>
- <li><code>align-content: stretch</code></li>
- <li><code>align-content: space-evenly</code> (не описано в спецификации Flexbox)</li>
-</ul>
+Попробуйте другие значения `align-content` для понимания принципа их работы.
 
-<p>В примере ниже flex контейнер имеет высоту 400 пикселей - больше, чем необходимо для отображения всех элементов. Значение <code>align-content</code> установлено в <code>space-between</code>, означающее, что свободное пространство разделено <em>между</em> строками, расположенными вплотную к началу и концу контейнера по перекрёстной оси.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
 
-<p>Попробуйте другие значения <code>align-content</code> для понимания принципа их работы.</p>
+Также можно сменить значение `flex-direction` на `column` и увидеть, как наше свойство работает в режиме колонок. Как и ранее, что увидеть работу свойства, у контейнера должно быть больше свободного места, чем требуется содержимому.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-<p>Также можно сменить значение <code>flex-direction</code> на <code>column</code> и увидеть, как наше свойство работает в режиме колонок. Как и ранее, что увидеть работу свойства, у контейнера должно быть больше свободного места, чем требуется содержимому.</p>
+> **Примечание:** **Замечание**: значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}} </p>
+В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
 
-<div class="note">
-<p><strong>Замечание</strong>: значение <code>space-evenly</code> не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.</p>
-</div>
+## Выравнивание содержимого по главной оси
 
-<p>В <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">документации по <code>justify-content</code> на MDN</a> приведено больше деталей о всех значениях и поддержке браузерами.</p>
+Теперь, когда мы увидели, как работает выравнивание по перекрёстной оси, можно посмотреть на главную ось. Здесь нам доступно только одно свойство — `justify-content`. Это обусловлено тем, что с элементами на главной оси мы работаем только как с группой. Используя свойство `justify-content`, мы контролируем, что происходит со свободным пространством на главной оси, и требуется ли нам больше пространства, чем нужно для отображения наших элементов.
 
-<h2 id="Выравнивание_содержимого_по_главной_оси">Выравнивание содержимого по главной оси</h2>
+В нашем первом примере с использованием свойства `display: flex`, применённым к контейнеру, элементы отображаются как строка и выстраиваются в начале блока. Это обусловлено тем, что свойство `justify-content` имеет начальное значение `flex-start`. Все свободное место располагается в конце контейнера.
 
-<p>Теперь, когда мы увидели, как работает выравнивание по перекрёстной оси, можно посмотреть на главную ось. Здесь нам доступно только одно свойство — <code>justify-content</code>. Это обусловлено тем, что с элементами на  главной оси мы работаем только как с группой. Используя свойство <code>justify-content</code>, мы контролируем, что происходит со свободным пространством на главной оси, и требуется ли нам больше пространства, чем нужно для отображения наших элементов.</p>
+![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](https://mdn.mozillademos.org/files/15632/align6.png)
 
-<p>В нашем первом примере с использованием свойства <code>display: flex</code>, применённым к контейнеру, элементы отображаются как строка и выстраиваются в начале блока. Это обусловлено тем, что свойство <code>justify-content</code> имеет начальное значение <code>flex-start</code>. Все свободное место располагается в конце контейнера.</p>
+Свойство `justify-content` может принимать те же самые значения, что и `align-content`.
 
-<p><img alt="Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items." src="https://mdn.mozillademos.org/files/15632/align6.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+- `justify-content: flex-start`
+- `justify-content: flex-end`
+- `justify-content: center`
+- `justify-content: space-between`
+- `justify-content: space-around`
+- `justify-content: stretch`
+- `justify-content: space-evenly` (не определено в спецификации Flexbox)
 
-<p>Свойство <code>justify-content</code> может принимать те же самые значения, что и <code>align-content</code>.</p>
+В примере ниже, свойству `justify-content` задано значение `space-between`. Все доступное пространство распределяется между элементами после их позиционирования в контейнере. Первый и последний элементы занимают положения в начале и в конце контейнера соответственно.
 
-<ul>
- <li><code>justify-content: flex-start</code></li>
- <li><code>justify-content: flex-end</code></li>
- <li><code>justify-content: center</code></li>
- <li><code>justify-content: space-between</code></li>
- <li><code>justify-content: space-around</code></li>
- <li><code>justify-content: stretch</code></li>
- <li><code>justify-content: space-evenly</code> (не определено в спецификации Flexbox)</li>
-</ul>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
 
-<p>В примере ниже, свойству <code>justify-content</code> задано значение <code>space-between</code>. Все доступное пространство распределяется между элементами после их позиционирования в контейнере. Первый и последний элементы занимают положения в начале и в конце контейнера соответственно.</p>
+Если свойство `flex-direction` имеет значение `column`, то свойство `justify-content` распределит доступное пространство в контейнере между элементами.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}}
 
-<p>Если свойство <code>flex-direction</code> имеет значение <code>column</code>, то свойство <code>justify-content</code> распределит доступное пространство в контейнере между элементами.</p>
+### Выравнивание и режим записи
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}} </p>
+Необходимо помнить, что при использовании свойств `flex-start` и`flex-end` элементы позиционируются в режиме записи. Если свойству `justify-content` задано значение `start` и стоит режим записи left-to-right (слева-направо), как в английском, то элементы выравниваются, начиная с левой стороны контейнера.
 
-<h3 id="Выравнивание_и_режим_записи">Выравнивание и режим записи</h3>
+![Three items lined up on the left](https://mdn.mozillademos.org/files/15638/Basics5.png)
 
-<p>Необходимо помнить, что при использовании свойств <code>flex-start</code> и<code>flex-end</code> элементы позиционируются в режиме записи. Если свойству <code>justify-content</code> задано значение <code>start</code> и стоит режим записи left-to-right (слева-направо), как в английском, то элементы выравниваются, начиная с левой стороны контейнера.</p>
+Однако, если задан режим записи right-to-left (справа-налево), как в арабском языке, то элементы будут выстраиваться с правой стороны контейнера.
 
-<p><img alt="Three items lined up on the left" src="https://mdn.mozillademos.org/files/15638/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+![Three items lined up from the right](https://mdn.mozillademos.org/files/15639/Basics6.png)
 
-<p>Однако, если задан режим записи right-to-left (справа-налево), как в арабском языке, то элементы будут выстраиваться с правой стороны контейнера.</p>
+В примере ниже свойству `property` задано значение `rtl`, которое изменяет порядок наших элементов. Вы можете удалить это свойство или изменить значение свойства `justify-content`, чтобы увидеть, как работает flexbox, когда отображение элементов начинается справа.
 
-<p><img alt="Three items lined up from the right" src="https://mdn.mozillademos.org/files/15639/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}}
 
-<p>В примере ниже свойству <code>property</code> задано значение <code>rtl</code>, которое изменяет порядок наших элементов. Вы можете удалить это свойство или изменить значение свойства <code>justify-content</code>, чтобы увидеть, как работает flexbox, когда отображение элементов начинается справа.</p>
+## Выравнивание и гибкое-направление
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}} </p>
+Начальное положение элементов поменяется, если вы измените значение свойства `flex-direction` — например установите `row-reverse` вместо `row`.
 
-<h2 id="Выравнивание_и_гибкое-направление">Выравнивание и гибкое-направление</h2>
+В следующем примере заданы следующие свойства: `flex-direction: row-reverse` и `justify-content: flex-end`. В языках с параметром записи `ltr` все элементы будут отображаться с левой стороны. Попробуйте изменить свойство `flex-direction: row-reverse` на `flex-direction: row`. Вы увидите, что теперь элементы отображаются реверсивно.
 
-<p>Начальное положение элементов поменяется, если вы измените значение свойства <code>flex-direction</code> — например установите <code>row-reverse</code> вместо <code>row</code>.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
 
-<p>В следующем примере заданы следующие свойства: <code>flex-direction: row-reverse</code> и <code>justify-content: flex-end</code>. В языках с параметром записи <code>ltr</code> все элементы будут отображаться с левой стороны. Попробуйте изменить свойство <code>flex-direction: row-reverse</code> на <code>flex-direction: row</code>. Вы увидите, что теперь элементы отображаются реверсивно.</p>
+Может показаться немного запутанным, но главное правило, которое необходимо запомнить – до тех пор, пока вы не измените свойство `flex-direction`, элементы контейнера выстраиваются в режиме записи вашего языка (`ltr` или `rtl`).
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}} </p>
+![Diagram showing start on the left and end on the right.](https://mdn.mozillademos.org/files/15634/align8.png)
 
-<p>Может показаться немного запутанным, но главное правило, которое необходимо запомнить – до тех пор, пока вы не измените свойство <code>flex-direction</code>, элементы контейнера выстраиваются в режиме записи вашего языка (<code>ltr</code> или <code>rtl</code>). </p>
+Вы можете сделать отображение элементов контейнера блочным, задав свойству `flex-direction` значение `column`. Свойство `flex-start` будет отображать элементы в столбец сверху вниз. Таким образом, первый элемент будет первым параграфом.
 
-<p><img alt="Diagram showing start on the left and end on the right." src="https://mdn.mozillademos.org/files/15634/align8.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+![Diagram showing start at the top and end at the bottom.](https://mdn.mozillademos.org/files/15636/align10.png)
 
-<p>Вы можете сделать отображение элементов контейнера блочным, задав свойству <code>flex-direction</code> значение  <code>column</code>. Свойство <code>flex-start</code> будет отображать элементы в столбец сверху вниз. Таким образом, первый элемент будет первым параграфом.</p>
+Если вы зададите свойству `flex-direction` реверсивное значение, то элементы будут позиционироваться в обратном порядке. Так, свойство `flex-start` будет брать начало в конце контейнера. Первый элемент будет находится в конце строки, если задано строчное отображение элементов или в конце параграфа, если задано блочное отображение.
 
-<p><img alt="Diagram showing start at the top and end at the bottom." src="https://mdn.mozillademos.org/files/15636/align10.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+![Diagram showing start on the right and end on the left.](https://mdn.mozillademos.org/files/15635/align9.png)
 
-<p>Если вы зададите свойству <code>flex-direction</code> реверсивное значение, то элементы будут позиционироваться в обратном порядке. Так, свойство <code>flex-start</code> будет брать начало в конце контейнера. Первый элемент будет находится в конце строки, если задано строчное отображение элементов или в конце параграфа, если задано блочное отображение.   </p>
+![Diagram showing end at the top and start at the bottom](https://mdn.mozillademos.org/files/15637/align11.png)
 
-<p><img alt="Diagram showing start on the right and end on the left." src="https://mdn.mozillademos.org/files/15635/align9.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+## Использование авто отступов для выравнивания по главной оси
 
-<p><img alt="Diagram showing end at the top and start at the bottom" src="https://mdn.mozillademos.org/files/15637/align11.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+Так как элементы, расположенные на главной оси, обрабатываются как группа, свойства `justify-items` или `justify-self` становятся недоступными. Тем не менее, существует способ отделить конкретный элемент или группу элементов от остальных, используя внешний отступ `margin` со значением `auto`.
 
-<h2 id="Использование_авто_отступов_для_выравнивания_по_главной_оси">Использование авто отступов для выравнивания по главной оси</h2>
+Распространённый пример — панель навигации, в которой отдельные важные элементы выровнены по правому краю, а основная группа элементов — по левому.
 
-<p>Так как элементы, расположенные на главной оси, обрабатываются как группа, свойства <code>justify-items</code> или <code>justify-self</code> становятся недоступными. Тем не менее, существует способ отделить конкретный элемент или группу элементов от остальных, используя внешний отступ <code>margin</code> со значением <code>auto</code>. </p>
+На первый взгляд может показаться, что этот пример использования свойства `justify-self`. Однако, рассмотрим следующий ниже пример. Имеется три элемента с одной стороны и два — с другой. Если бы мы могли использовать `justify-self` на элементе _d_, это также изменило бы выравнивание следующего элемента — _e_, что может противоречить первоначальному замыслу.
 
-<p>Распространённый пример — панель навигации, в которой отдельные важные элементы выровнены по правому краю, а основная группа элементов — по левому.</p>
+![Five items, in two groups. Three on the left and two on the right.](https://mdn.mozillademos.org/files/15633/align7.png)
 
-<p>На первый взгляд может показаться, что этот пример использования свойства <code>justify-self</code>. Однако, рассмотрим следующий ниже пример. Имеется три элемента с одной стороны и два — с другой. Если бы мы могли использовать <code>justify-self</code> на элементе <em>d</em>, это также изменило бы выравнивание следующего элемента — <em>e</em>, что может противоречить первоначальному замыслу.</p>
+Вместо этого мы можем выбрать четвёртый элемент (_d_) и отделить его от первых трёх, задав ему значение `auto` для `margin-left`. Авто-margin заполнит всё доступное свободное место по своей оси. Тем же образом работает `margin-right`. Оба свойства со значениями `auto` отцентрируют блок, так как каждый из отступов будет пытаться занять максимум пространства.
 
-<p><img alt="Five items, in two groups. Three on the left and two on the right." src="https://mdn.mozillademos.org/files/15633/align7.png" style="display: block; height: 84px; margin: 0px auto; width: 645px;"></p>
+В интерактивном примере ниже у нас имеется простой ряд из флекс-элементов и класс `push` с заданным `margin-left: auto`. Вы можете, например, попробовать удалить это значение или добавить класс другому элементу, чтобы увидеть, как работает этот метод.
 
-<p>Вместо этого мы можем выбрать четвёртый элемент (<em>d</em>) и отделить его от первых трёх, задав ему значение <code>auto</code> для <code>margin-left</code>. Авто-margin заполнит всё доступное свободное место по своей оси. Тем же образом работает <code>margin-right</code>. Оба свойства со значениями <code>auto</code> отцентрируют блок, так как каждый из отступов будет пытаться занять максимум пространства.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
 
-<p>В интерактивном примере ниже у нас имеется простой ряд из флекс-элементов и класс <code>push</code> с заданным <code>margin-left: auto</code>. Вы можете, например, попробовать удалить это значение или добавить класс другому элементу, чтобы увидеть, как работает этот метод. </p>
+## Будущие функции выравнивания для Flexbox
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}} </p>
+В начале этой статьи объясняется, что свойства выравнивания, которые в настоящее время содержатся в спецификации Flexbox Level 1, также включены в спецификацию Box Alignment Level 3, которая в дальнейшем может расширить эти свойства и значения. Мы уже видели, как это произошло с введением значения `space-evenly` для свойств `align-content` и `justify-content`.
 
-<h2 id="Будущие_функции_выравнивания_для_Flexbox">Будущие функции выравнивания для Flexbox</h2>
+Выравнивание во Flexbox также включает в себя другие методы создания пространства между элементами, такие как `column-gap` and `row-gap`, как показано в макете [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout). Включение этих свойств в Box Alignment означает, что в будущем мы также сможем использовать `column-gap` и `row-gap` во Flexbox разметке. Это означает, что вам не нужно будет использовать отступы, чтобы создать пространство между элементами.
 
-<p>В начале этой статьи объясняется, что свойства выравнивания, которые в настоящее время содержатся в спецификации Flexbox Level 1, также включены в спецификацию Box Alignment Level 3, которая в дальнейшем может расширить эти свойства и значения. Мы уже видели, как это произошло с введением значения <code>space-evenly</code> для свойств <code>align-content</code> и <code>justify-content</code>.</p>
+Моё предложение заключается в том, чтобы при изучении выравнивания во Flexbox, делать это параллельно с выравниванием в Grid Layout. В обеих спецификациях используются свойства выравнивания, подобные Flexbox. Вы можете видеть, как эти свойства ведут себя при работе с сеткой в статье [Box Alignment in Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout), а также рассмотреть как выравнивание работает в этих спецификациях в статье [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
 
-<p>Выравнивание во Flexbox также включает в себя другие методы создания пространства между элементами, такие как <code>column-gap</code> and <code>row-gap</code>, как показано в макете <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. Включение этих свойств в Box Alignment означает, что в будущем мы также сможем использовать <code>column-gap</code> и <code>row-gap</code> во Flexbox разметке. Это означает, что вам не нужно будет использовать отступы, чтобы создать пространство между элементами.</p>
+Смотрите Также
 
-<p>Моё предложение заключается в том, чтобы при изучении выравнивания во Flexbox, делать это параллельно с выравниванием в Grid Layout. В обеих спецификациях используются свойства выравнивания, подобные Flexbox. Вы можете видеть, как эти свойства ведут себя при работе с сеткой в статье <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment in Grid Layout</a>, а также рассмотреть как выравнивание работает в этих спецификациях в статье <a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box Alignment Cheatsheet</a>.</p>
-
-<p>Смотрите Также</p>
-
-<ul>
- <li>Выравнивание Коробки</li>
- <li>Выравнивание Коробки в Flexbox (Гибкая Коробка)</li>
- <li>Выравнивание Коробки в Grid Layout (Макет Сетки)</li>
-</ul>
+- Выравнивание Коробки
+- Выравнивание Коробки в Flexbox (Гибкая Коробка)
+- Выравнивание Коробки в Grid Layout (Макет Сетки)

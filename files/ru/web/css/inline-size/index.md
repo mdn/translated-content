@@ -3,21 +3,20 @@ title: inline-size
 slug: Web/CSS/inline-size
 translation_of: Web/CSS/inline-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>inline-size</code></strong> определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.</p>
+Свойство [CSS](/ru/docs/Web/CSS "CSS") **`inline-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/inline-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
+## Syntax
 
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inline-size: 300px;
 inline-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 inline-size: 75%;
 
 /* Keyword values */
@@ -30,71 +29,57 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: unset;
-</pre>
+```
 
-<p>Если режим написания (writing mode) — вертикальный, значение <code>inline-size</code> относится к высоте элемента; в противном случае, оно относиться к ширине элемента. Связанное свойство — {{cssxref("block-size")}}, которое определяет другие размеры элемента.</p>
+Если режим написания (writing mode) — вертикальный, значение `inline-size` относится к высоте элемента; в противном случае, оно относиться к ширине элемента. Связанное свойство — {{cssxref("block-size")}}, которое определяет другие размеры элемента.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Свойство <code>inline-size</code> принимает те же значения, что и свойства {{cssxref("width")}} и {{cssxref("height")}}.</p>
+Свойство `inline-size` принимает те же значения, что и свойства {{cssxref("width")}} и {{cssxref("height")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_inline_size_in_pixels">Setting inline size in pixels</h3>
+### Setting inline size in pixels
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_inline_size_in_pixels")}}</p>
+{{EmbedLiveSample("Setting_inline_size_in_pixels")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inline-size", "inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                                           | Comment            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Logical Properties", "#propdef-inline-size", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility </h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

@@ -1,59 +1,59 @@
 ---
 title: '::selection'
-slug: 'Web/CSS/::selection'
+slug: Web/CSS/::selection
 tags:
   - CSS
   - Experimental
   - Layoout
   - Reference
   - Псевдоэлементы
-translation_of: 'Web/CSS/::selection'
+translation_of: Web/CSS/::selection
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><span class="seoSummary"><a href="/ru/docs/Web/CSS/Pseudo-elements">Псевдоэлемент</a> <strong><code>::selection</code> </strong>позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).</span></p>
+[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::selection` **позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).
 
-<pre class="brush: css no-line-numbers">::selection {
+```css
+::selection {
   background: cyan;
-}</pre>
+}
+```
 
-<h2 id="Разрешённые_свойства">Разрешённые свойства</h2>
+## Разрешённые свойства
 
-<p>Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом <code>::selection</code> :</p>
+Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::selection` :
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("cursor")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li>{{cssxref("outline")}} и его длинные записи</li>
- <li>{{cssxref("text-decoration")}} и связанные свойства</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
+- {{cssxref("caret-color")}}
+- {{cssxref("outline")}} и его длинные записи
+- {{cssxref("text-decoration")}} и связанные свойства
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-shadow")}}
 
-<div class="warning">
-<p>Заметим, что, в частности, свойство {{cssxref("background-image")}} игнорируется.</p>
-</div>
+> **Предупреждение:** Заметим, что, в частности, свойство {{cssxref("background-image")}} игнорируется.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">/* синтаксис Firefox */
-::-moz-selection
+    /* синтаксис Firefox */
+    ::-moz-selection
 
-{{csssyntax}}
-</pre>
+    {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Этот текст будет стилизован особым образом при выделении.&lt;/div&gt;
-&lt;p&gt;Также попробуйте выделить текст в этом параграфе.&lt;/p&gt;</pre>
+```html
+<div>Этот текст будет стилизован особым образом при выделении.</div>
+<p>Также попробуйте выделить текст в этом параграфе.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Сделаем выделенный текст золотым с красным фоном */
+```css
+/* Сделаем выделенный текст золотым с красным фоном */
 ::-moz-selection {
   color: gold;
   background: red;
@@ -73,37 +73,21 @@ p::-moz-selection {
 p::selection {
   color: white;
   background: blue;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                                       | Комментарий              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------ |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Изначальное определение. |
 
-<div class="note">
-<p><strong>Примечание:</strong> Хотя псевдоэлемент <code>::selection</code> присутствовал в черновиках стандарта CSS Selectors Level 3, он был убран в течение фазы Candidate Recommendation, так как его поведение было недостаточно проработано (особенно с вложенным элементами) и согласованность не была достигнута <a class="external" href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(основываясь на обсуждении в списке рассылки W3C Style)</a>. Этот псевдоэлемент был возвращён в <a href="http://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
-</div>
+> **Примечание:** Хотя псевдоэлемент `::selection` присутствовал в черновиках стандарта CSS Selectors Level 3, он был убран в течение фазы Candidate Recommendation, так как его поведение было недостаточно проработано (особенно с вложенным элементами) и согласованность не была достигнута [(основываясь на обсуждении в списке рассылки W3C Style)](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). Этот псевдоэлемент был возвращён в [Pseudo-Elements Level 4](http://dev.w3.org/csswg/css-pseudo-4/).
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

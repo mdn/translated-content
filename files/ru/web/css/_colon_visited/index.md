@@ -1,40 +1,34 @@
 ---
 title: ':visited'
-slug: 'Web/CSS/:visited'
+slug: Web/CSS/:visited
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:visited'
+translation_of: Web/CSS/:visited
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:visited</code> позволяет вам выбирать ссылки, которые были посещены. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":hover") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вставьте правило <code>:visited</code> после правила <code>:link</code> до правил <code>:hover</code> и <code>:active</code>, как определено <em>LVHA-порядком</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:visited` позволяет вам выбирать ссылки, которые были посещены. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":hover") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вставьте правило `:visited` после правила `:link` до правил `:hover` и `:active`, как определено _LVHA-порядком_: `:link` — `:visited` — `:hover` — `:active`.
 
-<div class="note">
-<p><strong>Замечание: </strong>Из-за причин приватности, браузеры строго ограничивают стили, которые вы можете применить к элементу, используя этот псевдокласс: только {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, <code>fill</code> и <code>stroke</code>. Компонент альфа-канала в доступных стилях будет игнорироваться. Вместо него будет использоваться альфа-канал, используемый для непосещённых ссылок. Если в цвете альфа-канала для посещённых ссылок задан<code>0</code>, то в этом случае будет использоваться цвет непосещённых ссылок.</p>
+> **Примечание:** **Замечание:** Из-за причин приватности, браузеры строго ограничивают стили, которые вы можете применить к элементу, используя этот псевдокласс: только {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("column-rule-color") }}, `fill` и `stroke`. Компонент альфа-канала в доступных стилях будет игнорироваться. Вместо него будет использоваться альфа-канал, используемый для непосещённых ссылок. Если в цвете альфа-канала для посещённых ссылок задан`0`, то в этом случае будет использоваться цвет непосещённых ссылок.Несмотря на то, что цвет может меняться, метод `getComputedStyle` наврёт и всегда будет давать значение цвета непосещённых ссылок.Для дополнительной информации об ограничениях и их причин, смотрите [Приватность и селектор :visited](/ru/docs/CSS/Privacy_and_the_:visited_selector).
 
-<p>Несмотря на то, что цвет может меняться, метод <code>getComputedStyle</code> наврёт и всегда будет давать значение цвета непосещённых ссылок.</p>
+## Примеры
 
-<p>Для дополнительной информации об ограничениях и их причин, смотрите <a href="/ru/docs/CSS/Privacy_and_the_:visited_selector" title="/ru/docs/CSS/Privacy_and_the_:visited_selector">Приватность и селектор :visited</a>.</p>
-</div>
+```css
+a:visited { color: #4b2f89; }
+a:visited { background-color: white }
+```
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: css">a:visited { color: #4b2f89; }
-a:visited { background-color: white } </pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/CSS/Privacy_and_the_:visited_selector" title="/ru/docs/CSS/Privacy_and_the_:visited_selector">Приватность и селектор :visited</a></li>
- <li>Относящиеся к ссылкам псевдоклассы: {{cssxref(":link")}}, {{cssxref(":active")}} и {{cssxref(":hover")}}.</li>
-</ul>
+- [Приватность и селектор :visited](/ru/docs/CSS/Privacy_and_the_:visited_selector)
+- Относящиеся к ссылкам псевдоклассы: {{cssxref(":link")}}, {{cssxref(":active")}} и {{cssxref(":hover")}}.

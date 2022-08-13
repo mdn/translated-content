@@ -3,19 +3,20 @@ title: animation
 slug: Web/CSS/animation
 translation_of: Web/CSS/animation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>animation</code></strong> это <a href="/en-US/docs/Web/CSS/Shorthand_properties">короткая запись</a> для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
 
-<p>{{EmbedInteractiveExample("pages/css/animation.html")}}</p>
+{{EmbedInteractiveExample("pages/css/animation.html")}}
 
-<p><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable">Описание того, какие свойства являются анимируемые</a> доступно; стоит отметить, что это описание также подходит для <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS переходов</a>.</p>
+[Описание того, какие свойства являются анимируемые](/ru/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/Guide/CSS/Using_CSS_transitions).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* @keyframes duration | timing-function | delay |
+```css
+/* @keyframes duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
   animation: 3s ease-in 1s 2 reverse both paused slidein;
 
@@ -24,33 +25,35 @@ translation_of: Web/CSS/animation
 
 /* @keyframes duration | name */
   animation: 3s slidein;
-</pre>
+```
 
-<p>Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxref("&lt;time&gt;")}} присваивается {{cssxref("animation-duration")}}, и второй назначен {{cssxref("animation-delay")}}.</p>
+Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxref("&lt;time&gt;")}} присваивается {{cssxref("animation-duration")}}, и второй назначен {{cssxref("animation-delay")}}.
 
-<p>Note that order is also important within each animation definition for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsing, keywords that are valid for properties other than {{cssxref("animation-name")}} whose values were not found earlier in the shorthand must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.</p>
+Note that order is also important within each animation definition for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsing, keywords that are valid for properties other than {{cssxref("animation-name")}} whose values were not found earlier in the shorthand must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Посмотрите примеры <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS-анимаций.</a></p>
+Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
-<h3 id="Cylon_Eye">Cylon Eye</h3>
+### Cylon Eye
 
-<p>Учитывая все специфичные для браузеров префиксы, вот анимация цилиндрического глаза, включающая линейные градиенты и анимацию, которая работает во всех основных браузерах:</p>
+Учитывая все специфичные для браузеров префиксы, вот анимация цилиндрического глаза, включающая линейные градиенты и анимацию, которая работает во всех основных браузерах:
 
-<pre class="brush: html">&lt;div class="view_port"&gt;
-  &lt;div class="polling_message"&gt;
+```html
+<div class="view_port">
+  <div class="polling_message">
     Listening for dispatches
-  &lt;/div&gt;
-  &lt;div class="cylon_eye"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+  <div class="cylon_eye"></div>
+</div>
+```
 
-<pre class="brush: css">.polling_message {
+```css
+.polling_message {
   color: white;
   float: left;
   margin-right: 2%;
@@ -83,21 +86,19 @@ translation_of: Web/CSS/animation
    @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
      @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
         @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Cylon_Eye')}}</p>
+{{EmbedLiveSample('Cylon_Eye')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Использование  CSS-анимации</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API

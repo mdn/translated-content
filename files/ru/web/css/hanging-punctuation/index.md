@@ -5,11 +5,12 @@ tags:
   - CSS
 translation_of: Web/CSS/hanging-punctuation
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">Свойство <strong><code>hanging-punctuation</code></strong> определяет как браузер будет отображать знаки пунктуации, попадающие в начало или в конец строки. Висячая пунктуация может располагаться за границами контейнера. </span></p>
+Свойство **`hanging-punctuation`** определяет как браузер будет отображать знаки пунктуации, попадающие в начало или в конец строки. Висячая пунктуация может располагаться за границами контейнера.
 
-<pre class="brush:css no-line-numbers">/* Значения ключевых слов */
+```css
+/* Значения ключевых слов */
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
@@ -31,69 +32,67 @@ hanging-punctuation: first allow-end last;
 hanging-punctuation: inherit;
 hanging-punctuation: initial;
 hanging-punctuation: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Свойство <code>hanging-punctuation</code>  может быть определено с помощью одного, двух или трёх ключевых слов.</p>
+Свойство `hanging-punctuation` может быть определено с помощью одного, двух или трёх ключевых слов.
 
-<ul>
- <li>Для <strong>одного значения</strong> может быть использовано любое из описанных ниже значений.</li>
- <li>Для <strong>двух значений</strong> используются следующие варианты:
-  <ul>
-   <li><code>first</code> вместе с одним из <code>last</code>, <code>allow-end</code> или <code>force-end</code></li>
-   <li><code>last</code> вместе с одним из <code>first</code>, <code>allow-end</code> или <code>force-end</code></li>
-  </ul>
- </li>
- <li>Для <strong>трёх значений</strong> используются один из следующих вариантов:
-  <ul>
-   <li><code>first</code>, <code>allow-end</code> и <code>last</code></li>
-   <li><code>first</code>, <code>force-end</code> и <code>last</code></li>
-  </ul>
- </li>
-</ul>
+- Для **одного значения** может быть использовано любое из описанных ниже значений.
+- Для **двух значений** используются следующие варианты:
 
-<h3 id="Значения">Значения</h3>
+  - `first` вместе с одним из `last`, `allow-end` или `force-end`
+  - `last` вместе с одним из `first`, `allow-end` или `force-end`
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Никакие символы не выносятся.</dd>
- <dt><code>first</code></dt>
- <dd>Открывающая скобка или кавычка в начале первой строки выровненного элемента будет вынесена.</dd>
- <dt><code>last</code></dt>
- <dd>Закрывающая скобка или кавычка последней строки выровненного элемента будет вынесена.</dd>
- <dt><code>force-end</code></dt>
- <dd>Точка или запятая в конце строки выносится.</dd>
- <dt><code>allow-end</code></dt>
- <dd>Точка или запятая в конце строки будет вынесена, если нет лучшего варианта для выравнивания.</dd>
-</dl>
+- Для **трёх значений** используются один из следующих вариантов:
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+  - `first`, `allow-end` и `last`
+  - `first`, `force-end` и `last`
+
+### Значения
+
+- `none`
+  - : Никакие символы не выносятся.
+- `first`
+  - : Открывающая скобка или кавычка в начале первой строки выровненного элемента будет вынесена.
+- `last`
+  - : Закрывающая скобка или кавычка последней строки выровненного элемента будет вынесена.
+- `force-end`
+  - : Точка или запятая в конце строки выносится.
+- `allow-end`
+  - : Точка или запятая в конце строки будет вынесена, если нет лучшего варианта для выравнивания.
+
+### Формальный синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html" style="white-space: pre-wrap;">&lt;p&gt;“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”&lt;/p&gt;</pre>
+```html
+<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   hanging-punctuation: first last;
   margin: .5rem;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
+
+{{Compat}}

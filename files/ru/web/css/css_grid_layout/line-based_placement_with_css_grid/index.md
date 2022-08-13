@@ -11,20 +11,20 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 original_slug: >-
   Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid
 ---
-<p>В статье, касавшейся <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">основных понятий позиционирования элементов с помощью гридов</a>, мы кратенько рассмотрели, как располагать элементы в гриде, используя номера линий. Теперь давайте детально исследуем то, как работает эта фундаментальная часть спецификации.</p>
+В статье, касавшейся [основных понятий позиционирования элементов с помощью гридов](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), мы кратенько рассмотрели, как располагать элементы в гриде, используя номера линий. Теперь давайте детально исследуем то, как работает эта фундаментальная часть спецификации.
 
-<p>Собственно, начать квест по гридам со знакомства с пронумерованными линиями - логично, потому что в ситуации, когда вы работаете с гридами, пронумерованные линии у вас есть <strong>всегда</strong>. Линии нумеруются и для колонок, и для строк, отсчёт начинается с 1. Нужно заметить, что грид индексируется в соответствии с режимом написания (writing mode) документа. В языках с написанием слева направо, таких как русский, например, линия 1 - самая левая линия грида. Если написание справа налево, то линия 1 будет, соответственно, самой правой линией в гриде. По ходу изучения недр мы детально узнаем, как гриды взаимодействуют с режимами написания, поэтому не исчезайте, впереди много интересного.</p>
+Собственно, начать квест по гридам со знакомства с пронумерованными линиями - логично, потому что в ситуации, когда вы работаете с гридами, пронумерованные линии у вас есть **всегда**. Линии нумеруются и для колонок, и для строк, отсчёт начинается с 1. Нужно заметить, что грид индексируется в соответствии с режимом написания (writing mode) документа. В языках с написанием слева направо, таких как русский, например, линия 1 - самая левая линия грида. Если написание справа налево, то линия 1 будет, соответственно, самой правой линией в гриде. По ходу изучения недр мы детально узнаем, как гриды взаимодействуют с режимами написания, поэтому не исчезайте, впереди много интересного.
 
-<h2 id="Базовый_пример">Базовый пример</h2>
+## Базовый пример
 
-<p>В качестве крайне простого примера давайте возьмём грид с тремя треками-колонками и тремя треками-строками. Такой грид даёт нам по 4 линии для каждого направления.</p>
+В качестве крайне простого примера давайте возьмём грид с тремя треками-колонками и тремя треками-строками. Такой грид даёт нам по 4 линии для каждого направления.
 
-<p>Внутри нашего грид-контейнера у нас есть четыре дочерних элемента. Если мы не размещаем их явным образом, эти элементы будут расположены в гриде в соответствии с правилами авторазмещения, то есть, по одному элементу - в каждой из четырёх первых ячеек. Если вы воспользуетесь <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> , то увидите, как грид инициирует колонки и строки.</p>
+Внутри нашего грид-контейнера у нас есть четыре дочерних элемента. Если мы не размещаем их явным образом, эти элементы будут расположены в гриде в соответствии с правилами авторазмещения, то есть, по одному элементу - в каждой из четырёх первых ячеек. Если вы воспользуетесь [Firefox Grid Highlighter](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) , то увидите, как грид инициирует колонки и строки.
 
-<p><img alt="Our Grid highlighted in DevTools" src="https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png" style="height: 296px; width: 900px;"></p>
+![Our Grid highlighted in DevTools](https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png)
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -32,52 +32,53 @@ original_slug: >-
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Базовый_пример', '300', '330') }}</p>
+{{ EmbedLiveSample('Базовый_пример', '300', '330') }}
 
-<h2 id="Позиционирование_элементов_по_номерам_линий">Позиционирование элементов по номерам линий</h2>
+## Позиционирование элементов по номерам линий
 
-<p>Мы можем воспользоваться размещением по линиям (line-based placement), чтобы расположить элементы на гриде. Например, нам нужно, чтобы первый элемент начинался от левого края и занимал один трек-колонку. Пусть он также начинается с первой строчной линии,  то есть, от верхнего края грида, и занимает пространство до четвёртой строчной линии.</p>
+Мы можем воспользоваться размещением по линиям (line-based placement), чтобы расположить элементы на гриде. Например, нам нужно, чтобы первый элемент начинался от левого края и занимал один трек-колонку. Пусть он также начинается с первой строчной линии, то есть, от верхнего края грида, и занимает пространство до четвёртой строчной линии.
 
-<div id="Line_Number">
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>Если вы явно позиционируете одни элементы, другие элементы грида по-прежнему размещаются в соответствии с правилами авторазмещения. Дальше мы детально рассмотрим, как это происходит, а пока вы и сами могли заметить, что по мере размещения одних элементов, оставшиеся элементы занимают пустые ячейки грида.</p>
+Если вы явно позиционируете одни элементы, другие элементы грида по-прежнему размещаются в соответствии с правилами авторазмещения. Дальше мы детально рассмотрим, как это происходит, а пока вы и сами могли заметить, что по мере размещения одних элементов, оставшиеся элементы занимают пустые ячейки грида.
 
-<p>Задавая адреса для каждого элемента по отдельности, мы можем разместить все наши четыре элемента по колонкам и строкам. Заметьте, что при желании можно оставить ячейки пустыми. Одна из самых приятных вещей при работе с Grid Layout - возможность создавать негативное пространство (пустые области в макете) без кувырков через голову и прочих хаков.</p>
+Задавая адреса для каждого элемента по отдельности, мы можем разместить все наши четыре элемента по колонкам и строкам. Заметьте, что при желании можно оставить ячейки пустыми. Одна из самых приятных вещей при работе с Grid Layout - возможность создавать негативное пространство (пустые области в макете) без кувырков через голову и прочих хаков.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -88,25 +89,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box2 {
+```css
+.box2 {
    grid-column-start: 3;
    grid-column-end: 4;
    grid-row-start: 1;
@@ -124,18 +126,16 @@ original_slug: >-
    grid-row-start: 3;
    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Line_Number', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Line_Number', '300', '330') }}
 
-<div id="Grid_Shorthands">
-<h2 id="Сокращения_grid-column_и_grid-row">Сокращения <code>grid-column</code> и <code>grid-row</code></h2>
+## Сокращения `grid-column` и `grid-row`
 
-<p>Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует <a href="/ru/docs/Web/CSS/Shorthand_properties">краткая форма записи свойств</a>. {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.</p>
+Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует [краткая форма записи свойств](/ru/docs/Web/CSS/Shorthand_properties). {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -146,25 +146,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 / 2;
    grid-row: 1 / 4;
 }
@@ -180,18 +181,16 @@ original_slug: >-
    grid-column: 2 / 4;
    grid-row: 3 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Grid_Shorthands', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Grid_Shorthands', '300', '330') }}
 
-<h3 id="Расположение_элемента_по_умолчанию">Расположение элемента по умолчанию</h3>
+### Расположение элемента по умолчанию
 
-<p>В примерах выше мы задавали конечную линию для строки и колонки, чтобы продемонстрировать работу свойств, однако, если элемент занимает только один трек, вы можете опустить значение <code>grid-column-end</code> или <code>grid-row-end</code>. Грид по умолчанию размещает элемент таким образом, чтобы он занимал всего один трек. Это значит, что длинная запись свойств в нашем первоначальном примере может выглядеть вот так:</p>
+В примерах выше мы задавали конечную линию для строки и колонки, чтобы продемонстрировать работу свойств, однако, если элемент занимает только один трек, вы можете опустить значение `grid-column-end` или `grid-row-end`. Грид по умолчанию размещает элемент таким образом, чтобы он занимал всего один трек. Это значит, что длинная запись свойств в нашем первоначальном примере может выглядеть вот так:
 
-<div id="End_Lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -202,25 +201,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-row-start: 1;
    grid-row-end: 4;
@@ -239,16 +239,14 @@ original_slug: >-
    grid-column-end: 4;
    grid-row-start: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('End_Lines', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('End_Lines', '300', '330') }}
 
-<p>Поэтому, если мы хотим, чтобы элементы занимали только один трек, наша сокращённая запись будет выглядеть вот так, без слеша и без второго значения:</p>
+Поэтому, если мы хотим, чтобы элементы занимали только один трек, наша сокращённая запись будет выглядеть вот так, без слеша и без второго значения:
 
-<div id="New_Shorthand">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -259,25 +257,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -293,24 +292,21 @@ original_slug: >-
    grid-column: 2 / 4;
    grid-row: 3 ;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('New_Shorthand', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('New_Shorthand', '300', '330') }}
 
-<h2 id="Свойство_grid-area">Свойство <code>grid-area</code></h2>
+## Свойство `grid-area`
 
-<p>Мы можем пойти ещё дальше и определить целую область с помощью одного единственного свойства – {{cssxref("grid-area")}}. Порядок свойств для грид-области следующий:</p>
+Мы можем пойти ещё дальше и определить целую область с помощью одного единственного свойства – {{cssxref("grid-area")}}. Порядок свойств для грид-области следующий:
 
-<ul>
- <li>grid-row-start</li>
- <li>grid-column-start</li>
- <li>grid-row-end</li>
- <li>grid-column-end</li>
-</ul>
+- grid-row-start
+- grid-column-start
+- grid-row-end
+- grid-column-end
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -321,25 +317,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
@@ -351,31 +348,29 @@ original_slug: >-
 .box4 {
    grid-area: 3 / 2 / 4 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Свойство_grid-area', '300', '330') }}</p>
+{{ EmbedLiveSample('Свойство_grid-area', '300', '330') }}
 
-<p>Порядок значений для <code>grid-area</code> может показаться немного странным, он противоположен тому порядку, в котором мы, например, записываем значения для сокращённых свойств margin и padding. Но сделано это потому, что грид работает с направлениями относительно потока, определёнными в спецификации CSS Writing Modes. В дальнейшем мы рассмотрим, как гриды взаимодействуют с режимами написания (writing modes), но пока давайте примем за данность, что мы имеем дело с концепцией четырёх направлений относительно потока:</p>
+Порядок значений для `grid-area` может показаться немного странным, он противоположен тому порядку, в котором мы, например, записываем значения для сокращённых свойств margin и padding. Но сделано это потому, что грид работает с направлениями относительно потока, определёнными в спецификации CSS Writing Modes. В дальнейшем мы рассмотрим, как гриды взаимодействуют с режимами написания (writing modes), но пока давайте примем за данность, что мы имеем дело с концепцией четырёх направлений относительно потока:
 
-<ul>
- <li>block-start (начало блока)</li>
- <li>block-end (конец блока)</li>
- <li>inline-start (начало строки)</li>
- <li>inline-end (конец строки)</li>
-</ul>
+- block-start (начало блока)
+- block-end (конец блока)
+- inline-start (начало строки)
+- inline-end (конец строки)
 
-<p>Мы работаем с русским, языком с написанием слева направо. Начало нашего блока (block-start) - верхняя строчная линия грид-контейнера, конец блока (block-end) - последняя строчная линия контейнера. Начало строки (inline-start) - самая левая колоночная линия, поскольку начало строки - это всегда точка, с которой начинается написание текста в заданном режиме написания. Конец строки (inline-end) - последняя колоночная линия грида.</p>
+Мы работаем с русским, языком с написанием слева направо. Начало нашего блока (block-start) - верхняя строчная линия грид-контейнера, конец блока (block-end) - последняя строчная линия контейнера. Начало строки (inline-start) - самая левая колоночная линия, поскольку начало строки - это всегда точка, с которой начинается написание текста в заданном режиме написания. Конец строки (inline-end) - последняя колоночная линия грида.
 
-<p>Когда мы задаём нашу грид-область с помощью свойства <code>grid-area</code> , мы сначала определяем обе начальные линии <code>block-start</code> и <code>inline-start</code>, а затем обе конечные линии  <code>block-end</code> и <code>inline-end</code>. Поскольку мы давно работаем с физическими свойствами top, right, bottom и left, поначалу это кажется непривычным, но вполне осмысленно, если осознать, что относительно режима написания веб-сайты - многонаправленные структуры.</p>
+Когда мы задаём нашу грид-область с помощью свойства `grid-area` , мы сначала определяем обе начальные линии `block-start` и `inline-start`, а затем обе конечные линии `block-end` и `inline-end`. Поскольку мы давно работаем с физическими свойствами top, right, bottom и left, поначалу это кажется непривычным, но вполне осмысленно, если осознать, что относительно режима написания веб-сайты - многонаправленные структуры.
 
-<h2 id="Считая_с_конца">Считая с конца</h2>
+## Считая с конца
 
-<p>Мы также можем отсчитывать грид-линии с конца, то есть с последней (для русского языка - самой правой) колоночной и последней (самой нижней) строчной линий. Индекс этих линий будет <code>-1</code>, а линий непосредственно перед ними <code>-2,</code> и так далее. Нужно помнить, что под последней линией понимается последняя линия явного грида (<em>explicit grid)</em>, то есть грида, определённого с помощью <code>grid-template-columns</code> и<code>grid-template-rows.</code> Любые линии строк и колонок, добавленные неявным гридом (<em>implicit grid)</em> не считаются.</p>
+Мы также можем отсчитывать грид-линии с конца, то есть с последней (для русского языка - самой правой) колоночной и последней (самой нижней) строчной линий. Индекс этих линий будет `-1`, а линий непосредственно перед ними `-2,` и так далее. Нужно помнить, что под последней линией понимается последняя линия явного грида (_explicit grid)_, то есть грида, определённого с помощью `grid-template-columns` и`grid-template-rows.` Любые линии строк и колонок, добавленные неявным гридом (_implicit grid)_ не считаются.
 
-<p>В примере ниже мы "перевернули" определение нашего грида, при размещении элементов задавая линии с конца, то есть, от правого и нижнего краёв.</p>
+В примере ниже мы "перевернули" определение нашего грида, при размещении элементов задавая линии с конца, то есть, от правого и нижнего краёв.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -386,25 +381,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: -1;
    grid-column-end: -2;
    grid-row-start: -1;
@@ -428,27 +424,28 @@ original_slug: >-
    grid-row-start: -3;
    grid-row-end: -4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Считая_с_конца', '300', '330') }}</p>
+{{ EmbedLiveSample('Считая_с_конца', '300', '330') }}
 
-<h3 id="Как_растянуть_элемент_на_длину_всего_грида">Как растянуть элемент на длину всего грида?</h3>
+### Как растянуть элемент на длину всего грида?
 
-<p>Возможность адресовать и первую, и последнюю линии грида становится крайне полезной, если нам нужно растянуть элемент на всю длину грида. Сделать это можно вот так:</p>
+Возможность адресовать и первую, и последнюю линии грида становится крайне полезной, если нам нужно растянуть элемент на всю длину грида. Сделать это можно вот так:
 
-<pre class="brush: css">.item {
+```css
+.item {
   grid-column: 1 / -1;
 }
-</pre>
+```
 
-<h2 id="Зазоры_Gutters_или_аллеи_Alleys">Зазоры (Gutters) или аллеи (Alleys)</h2>
+## Зазоры (Gutters) или аллеи (Alleys)
 
-<p>Спецификация CSS Grid включает возможность добавлять промежутки (зазоры) между треками-колонками и треками-строками с помощью свойств {{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}. Эти свойства задают промежутки, которые во многом действуют точно так же, как свойство {{cssxref("column-gap")}} в многоколоночных макетах.</p>
+Спецификация CSS Grid включает возможность добавлять промежутки (зазоры) между треками-колонками и треками-строками с помощью свойств {{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}. Эти свойства задают промежутки, которые во многом действуют точно так же, как свойство {{cssxref("column-gap")}} в многоколоночных макетах.
 
-<p>Зазоры появляются только между треками и не добавляют пространство сверху, снизу, справа или слева грид-контейнеру. Мы можем добавить зазоры в предыдущий пример, дописав эти свойства грид-контейнеру.</p>
+Зазоры появляются только между треками и не добавляют пространство сверху, снизу, справа или слева грид-контейнеру. Мы можем добавить зазоры в предыдущий пример, дописав эти свойства грид-контейнеру.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -459,25 +456,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -500,30 +498,31 @@ original_slug: >-
      grid-column-gap: 20px;
      grid-row-gap: 1em;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Зазоры_Gutters_или_аллеи_Alleys', '300', '350') }}</p>
+{{ EmbedLiveSample('Зазоры_Gutters_или_аллеи_Alleys', '300', '350') }}
 
-<h3 id="Сокращённая_запись_для_грид-зазоров">Сокращённая запись для грид-зазоров</h3>
+### Сокращённая запись для грид-зазоров
 
-<p>Оба свойства также можно записать с помощью свойства-сокращения {{cssxref("grid-gap")}}. Если задать только одно значение, то оно определит размер зазоров и между колонками, и между строками. Если мы задаём два значения, то первое используется для <code>grid-row-gap</code> , а второе - для <code>grid-column-gap</code>.</p>
+Оба свойства также можно записать с помощью свойства-сокращения {{cssxref("grid-gap")}}. Если задать только одно значение, то оно определит размер зазоров и между колонками, и между строками. Если мы задаём два значения, то первое используется для `grid-row-gap` , а второе - для `grid-column-gap`.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(3, 100px);
      grid-gap: 1em 20px;
 }
-</pre>
+```
 
-<p>В терминах расположения элементов по грид-линиям (line-based positioning) зазоры ведут себя так, как если бы самой линии была добавлена толщина. Все, что должно было начинаться от линии, начинается от неё на расстоянии зазора, и вы не можете адресовать зазор напрямую или поместить в него что-нибудь. Если вам нужны зазоры, которые ведут себя, как обыкновенные треки, что же - определите трек, а не зазор.</p>
+В терминах расположения элементов по грид-линиям (line-based positioning) зазоры ведут себя так, как если бы самой линии была добавлена толщина. Все, что должно было начинаться от линии, начинается от неё на расстоянии зазора, и вы не можете адресовать зазор напрямую или поместить в него что-нибудь. Если вам нужны зазоры, которые ведут себя, как обыкновенные треки, что же - определите трек, а не зазор.
 
-<h2 id="Использование_ключевого_слова_span">Использование ключевого слова <code>span</code> </h2>
+## Использование ключевого слова `span`
 
-<p>В дополнение к возможности обращаться к начальной и конечной линии по их номерам вы можете задать номер начальной линии, а после - количество треков, которые должен занять элемент.</p>
+В дополнение к возможности обращаться к начальной и конечной линии по их номерам вы можете задать номер начальной линии, а после - количество треков, которые должен занять элемент.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -534,25 +533,26 @@ original_slug: >-
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
   grid-column: 1;
   grid-row: 1 / span 3;
 }
@@ -568,28 +568,26 @@ original_slug: >-
    grid-column: 2 / span 2;
    grid-row: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Использование_ключевого_слова_span', '300', '330') }}</p>
+{{ EmbedLiveSample('Использование_ключевого_слова_span', '300', '330') }}
 
-<p>Ключевое слово  <code>span</code> также можно использовать в качестве значения <code>grid-row-start</code>/<code>grid-row-end</code> и<code>grid-column-start/grid-column-end</code>. Два примера ниже создают одну и ту же грид-область. В первом примере мы задаём начальную строчную линию, а после говорим свойству, отвечающему за конечную линию: эй, мы хотим занять под этот элемент три линии. В итоге, грид-область начинается с первой линии и занимает пространство до 4-ой.</p>
+Ключевое слово `span` также можно использовать в качестве значения `grid-row-start`/`grid-row-end` и`grid-column-start/grid-column-end`. Два примера ниже создают одну и ту же грид-область. В первом примере мы задаём начальную строчную линию, а после говорим свойству, отвечающему за конечную линию: эй, мы хотим занять под этот элемент три линии. В итоге, грид-область начинается с первой линии и занимает пространство до 4-ой.
 
-<pre>.box1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-}
-</pre>
+    .box1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: span 3;
+    }
 
-<p>Во втором примере поступим наоборот: зададим конечную строчную линию, а в значении свойства, отвечающего за начальную линию, напишем <code>span 3</code>. Это значит, что элемент должен занять три трека до заданной конечной линии. Грид-область начинается с линии 4 и занимает три трека до линии 1.</p>
+Во втором примере поступим наоборот: зададим конечную строчную линию, а в значении свойства, отвечающего за начальную линию, напишем `span 3`. Это значит, что элемент должен занять три трека до заданной конечной линии. Грид-область начинается с линии 4 и занимает три трека до линии 1.
 
-<pre>.box1 {
-    grid-column-start: 1;
-    grid-row-start: span 3;
-    grid-row-end: 4;
-}
-</pre>
+    .box1 {
+        grid-column-start: 1;
+        grid-row-start: span 3;
+        grid-row-end: 4;
+    }
 
-<p>Чтобы лучше освоиться с размещением элементов по грид-линиям, попробуйте собрать несколько распространённых макетов, располагая элементы на гридах с различным количеством колонок. Помните, что если вы не размещаете все ваши элементы, оставшиеся располагаются в соответствии с правилами авторазмещения. В результате может получиться как раз тот макет, который вам нужен, но не факт, и если что-то пошло не так, проверьте, определили ли вы позицию для проблемного элемента.</p>
+Чтобы лучше освоиться с размещением элементов по грид-линиям, попробуйте собрать несколько распространённых макетов, располагая элементы на гридах с различным количеством колонок. Помните, что если вы не размещаете все ваши элементы, оставшиеся располагаются в соответствии с правилами авторазмещения. В результате может получиться как раз тот макет, который вам нужен, но не факт, и если что-то пошло не так, проверьте, определили ли вы позицию для проблемного элемента.
 
-<p>Также помните, что элементы на гриде могут перекрывать друг друга, если вы намеренно разместили их так, чтобы они друг друга перекрывали. Подобное поведение позволяет получить интересные эффекты, но, если вы некорректно задали начальные и конечные линии, результат может неприятно вас удивить. <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> будет крайне полезен в процессе обучения, особенно, когда вы строите сложные гриды.</p>
+Также помните, что элементы на гриде могут перекрывать друг друга, если вы намеренно разместили их так, чтобы они друг друга перекрывали. Подобное поведение позволяет получить интересные эффекты, но, если вы некорректно задали начальные и конечные линии, результат может неприятно вас удивить. [Firefox Grid Highlighter](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) будет крайне полезен в процессе обучения, особенно, когда вы строите сложные гриды.

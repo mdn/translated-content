@@ -8,175 +8,141 @@ tags:
   - Углы
 translation_of: Web/CSS/border-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-radius</code></strong> — это <a href="/ru/docs/Web/CSS">CSS</a>-свойство, позволяющее разработчикам определять, как скругляются границы блока. Закруглённость каждого угла определяется с помощью одного или двух радиусов, определяя его форму: круг или эллипс.</p>
+**`border-radius`** — это [CSS](/ru/docs/Web/CSS)-свойство, позволяющее разработчикам определять, как скругляются границы блока. Закруглённость каждого угла определяется с помощью одного или двух радиусов, определяя его форму: круг или эллипс.
 
-<div>{{EmbedInteractiveExample("pages/css/border-radius.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
+Это свойство является [короткой записью](/ru/docs/Web/CSS/Shorthand_properties "ru/CSS/Shorthand_properties") для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
 
+Скругление применяется ко всему {{Cssxref ("background")}}, даже если элемент не имеет границ, точное положение отсечения определяется свойством {{Cssxref ("background-clip")}}.
 
-<p>Это свойство является <a href="/ru/docs/Web/CSS/Shorthand_properties" title="ru/CSS/Shorthand_properties">короткой записью</a> для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.</p>
+Свойство `border-radius` не применяется к элементам таблицы, когда свойство {{Cssxref ("border-collapse")}} имеет значение `collapse`.
 
-<p>Скругление применяется ко всему {{Cssxref ("background")}}, даже если элемент не имеет границ, точное положение отсечения определяется свойством {{Cssxref ("background-clip")}}.</p>
+> **Примечание:** **Замечание:** Как и с любым другим сокращённым свойством, отдельные подсвойства не могут наследоваться. Например, как в `border-radius:0 0 inherit inherit`, что будет частично переопределять существующие определения. Вместо этого должны использоваться отдельные длинные свойства.
 
-<p>Свойство <code>border-radius</code> не применяется к элементам таблицы, когда свойство {{Cssxref ("border-collapse")}} имеет значение <code>collapse</code>.</p>
+## Синтаксис
 
-<div class="note"><strong>Замечание:</strong> Как и с любым другим сокращённым свойством, отдельные подсвойства не могут наследоваться. Например, как в <code>border-radius:0 0 inherit inherit</code>, что будет частично переопределять существующие определения. Вместо этого должны использоваться отдельные длинные свойства.</div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css no-line-numbers"><strong>/* Такой синтаксис позволяет указать всего одно значение, вместе четырёх */</strong>
+```css
+/* Такой синтаксис позволяет указать всего одно значение, вместе четырёх */
 /* Скругление применяется ко всем четырём углам */
 border-radius: 10px;
 
-/* <em>top-left-and-bottom-right</em> | <em>top-right-and-bottom-left</em> */
+/* top-left-and-bottom-right | top-right-and-bottom-left */
 border-radius: 10px 5%;
 
-/* <em>top-left</em> | <em>top-right-and-bottom-left</em> | <em>bottom-right</em> */
+/* top-left | top-right-and-bottom-left | bottom-right */
 border-radius: 2px 4px 2px;
 
-/* <em>top-left</em> | <em>top-right</em> | <em>bottom-right</em> | <em>bottom-left</em> */
+/* top-left | top-right | bottom-right | bottom-left */
 border-radius: 1px 0 3px 4px;
 
-<strong>/* Синтаксис из двух радиусов также может применяться ко всем четырём углам */</strong>
-/* (первые значения радиуса) /<em>радиус</em> */
+/* Синтаксис из двух радиусов также может применяться ко всем четырём углам */
+/* (первые значения радиуса) /радиус */
 border-radius: 10px 5% / 20px;
 
-/* (первые значения радиуса) / <em>top-left-and-bottom-right</em> | <em>top-right-and-bottom-left</em> */
+/* (первые значения радиуса) / top-left-and-bottom-right | top-right-and-bottom-left */
 border-radius: 10px 5% / 20px 30px;
 
-/* (первые значения радиуса) / <em>top-left</em> | <em>top-right-and-bottom-left</em> | <em>bottom-right</em> */
+/* (первые значения радиуса) / top-left | top-right-and-bottom-left | bottom-right */
 border-radius: 10px 5px 2em / 20px 25px 30%;
 
-/* (первые значения радиуса) / <em>top-left</em> | <em>top-right</em> | <em>bottom-right</em> | <em>bottom-left</em> */
+/* (первые значения радиуса) / top-left | top-right | bottom-right | bottom-left */
 border-radius: 10px 5% / 20px 25em 30px 35em;
 
 /* Глобальные значения */
 border-radius: inherit;
 border-radius: initial;
 border-radius: unset;
-</pre>
+```
 
-<p>Свойство <code>border-radius</code> может быть задано как:</p>
+Свойство `border-radius` может быть задано как:
 
-<ul>
- <li>одно, два, три или четыре значения {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Используется для задания обычного радиуса углов.</li>
- <li>одна, две, три или четыре пары значений <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code>, разделённые "/". Используется для задания эллиптического скругления.</li>
-</ul>
+- одно, два, три или четыре значения {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Используется для задания обычного радиуса углов.
+- одна, две, три или четыре пары значений `<length>` or `<percentage>`, разделённые "/". Используется для задания эллиптического скругления.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<table>
- <tbody>
-  <tr>
-   <td style="vertical-align: top;"><em>radius</em></td>
-   <td><img alt="all-corner.png" class="default internal" src="/@api/deki/files/6138/=all-corner.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус скругления для всех углов элемента. Может быть указано только одно значение (или одна пара).</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>top-left-and-bottom-right</em></td>
-   <td><img alt="top-left-bottom-right.png" class="default internal" src="/@api/deki/files/6141/=top-left-bottom-right.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего левого и нижнего правого угла элемента. Следует использовать синтаксис с двумя значениями.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>top-right-and-bottom-left</em></td>
-   <td><img alt="top-right-bottom-left.png" class="default internal" src="/@api/deki/files/6143/=top-right-bottom-left.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего правого и нижнего левого угла элемента. Можно использовать синтаксис с двумя или тремя значениями.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>top-left</em></td>
-   <td><img alt="top-left.png" class="default internal" src="/@api/deki/files/6142/=top-left.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для левого верхнего угла элемента. Можно использовать синтаксис с тремя и четырьмя значениями.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>top-right</em></td>
-   <td style="margin-left: 2px;"><img alt="top-right.png" class="default internal" src="/@api/deki/files/6144/=top-right.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего правого угла элемента. Следует использовать синтаксис с четырьмя значениями.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>bottom-right</em></td>
-   <td style="margin-left: 2px;"><img alt="bottom-rigth.png" class="default internal" src="/@api/deki/files/6140/=bottom-rigth.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для нижнего правого угла элемента. Можно использовать синтаксис с тремя и четырьмя значениями.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><em>bottom-left</em></td>
-   <td><img alt="bottom-left.png" class="default internal" src="/@api/deki/files/6139/=bottom-left.png"></td>
-   <td style="vertical-align: top;">{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для нижнего левого угла элемента. Следует использовать синтаксис с четырьмя значениями.</td>
-  </tr>
- </tbody>
-</table>
+| _radius_                    | ![all-corner.png](/@api/deki/files/6138/=all-corner.png)                       | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус скругления для всех углов элемента. Может быть указано только одно значение (или одна пара).                    |
+| --------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png) | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего левого и нижнего правого угла элемента. Следует использовать синтаксис с двумя значениями.         |
+| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png) | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего правого и нижнего левого угла элемента. Можно использовать синтаксис с двумя или тремя значениями. |
+| _top-left_                  | ![top-left.png](/@api/deki/files/6142/=top-left.png)                           | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для левого верхнего угла элемента. Можно использовать синтаксис с тремя и четырьмя значениями.                  |
+| _top-right_                 | ![top-right.png](/@api/deki/files/6144/=top-right.png)                         | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для верхнего правого угла элемента. Следует использовать синтаксис с четырьмя значениями.                       |
+| _bottom-right_              | ![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)                   | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для нижнего правого угла элемента. Можно использовать синтаксис с тремя и четырьмя значениями.                  |
+| _bottom-left_               | ![bottom-left.png](/@api/deki/files/6139/=bottom-left.png)                     | {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} устанавливает радиус для нижнего левого угла элемента. Следует использовать синтаксис с четырьмя значениями.                         |
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Обозначает размер радиуса окружности или две полуоси эллипса. Может быть выражена в любых единицах CSS. Отрицательные значения не принимаются.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Обозначает размер радиуса окружности, или две полуоси эллипса. Проценты по горизонтальной оси относятся к ширине элемента, проценты по вертикальной оси к высоте. Отрицательные значения недействительны.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Обозначает размер радиуса окружности или две полуоси эллипса. Может быть выражена в любых единицах CSS. Отрицательные значения не принимаются.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Обозначает размер радиуса окружности, или две полуоси эллипса. Проценты по горизонтальной оси относятся к ширине элемента, проценты по вертикальной оси к высоте. Отрицательные значения недействительны.
 
-<p>Например:</p>
+Например:
 
-<pre class="brush: css no-line-numbers">border-radius: 1em/5em;
+```css
+border-radius: 1em/5em;
 
 /* ... эквивалентно этому: */
 border-top-left-radius:     1em 5em;
 border-top-right-radius:    1em 5em;
 border-bottom-right-radius: 1em 5em;
 border-bottom-left-radius:  1em 5em;
-</pre>
+```
 
-<pre class="brush: css no-line-numbers">border-radius: 4px 3px 6px / 2px 4px;
+```css
+border-radius: 4px 3px 6px / 2px 4px;
 
 /* ... эквивалентно этому: */
 border-top-left-radius:     4px 2px;
 border-top-right-radius:    3px 4px;
 border-bottom-right-radius: 6px 2px;
 border-bottom-left-radius:  3px 4px;
-</pre>
+```
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html hidden">
-  &lt;pre id="example-1"&gt;
+```html hidden
+  <pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  &lt;/pre&gt;
-  &lt;pre id="example-2"&gt;
+  </pre>
+  <pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  &lt;/pre&gt;
-  &lt;pre id="example-3"&gt;
+  </pre>
+  <pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  &lt;/pre&gt;
-  &lt;pre id="example-4"&gt;
+  </pre>
+  <pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  &lt;/pre&gt;
-  &lt;pre id="example-5"&gt;
+  </pre>
+  <pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  &lt;/pre&gt;
-  &lt;pre id="example-6"&gt;
+  </pre>
+  <pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  &lt;/pre&gt;
-  &lt;pre id="example-7"&gt;
+  </pre>
+  <pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  &lt;/pre&gt;
-</pre>
+  </pre>
+```
 
-<pre class="brush: css hidden">
+```css hidden
 pre {
   margin: 20px;
   padding: 20px;
@@ -223,49 +189,30 @@ pre#example-7 {
   border-width: 2px 4px;
   border-radius: 40px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("", "200", "1150")}}
 
-<h2 id="Живые_примеры">Живые примеры</h2>
+## Живые примеры
 
-<ul>
- <li>Пример 1: <a href="http://jsfiddle.net/Tripad/qnGKj/2/">http://jsfiddle.net/Tripad/qnGKj/2/</a></li>
- <li>Пример 2: <a href="http://jsfiddle.net/Tripad/qnGKj/3/">http://jsfiddle.net/Tripad/qnGKj/3/</a></li>
- <li>Пример 3: <a href="http://jsfiddle.net/Tripad/qnGKj/4/">http://jsfiddle.net/Tripad/qnGKj/4/</a></li>
- <li>Пример 4: <a href="http://jsfiddle.net/Tripad/qnGKj/5/">http://jsfiddle.net/Tripad/qnGKj/5/</a></li>
- <li>Пример 5: <a href="http://jsfiddle.net/Tripad/qnGKj/6/">http://jsfiddle.net/Tripad/qnGKj/6/</a></li>
-</ul>
+- Пример 1: <http://jsfiddle.net/Tripad/qnGKj/2/>
+- Пример 2: <http://jsfiddle.net/Tripad/qnGKj/3/>
+- Пример 3: <http://jsfiddle.net/Tripad/qnGKj/4/>
+- Пример 4: <http://jsfiddle.net/Tripad/qnGKj/5/>
+- Пример 5: <http://jsfiddle.net/Tripad/qnGKj/6/>
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Backgrounds', '#border-radius', 'border-radius') }}</td>
-   <td>{{ Spec2('CSS3 Backgrounds') }}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                                   | Комментарий             |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
+| {{ SpecName('CSS3 Backgrounds', '#border-radius', 'border-radius') }} | {{ Spec2('CSS3 Backgrounds') }} | Изначальное определение |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Относящиеся к Border-radius CSS-свойства: {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}}, {{Cssxref("border-bottom-left-radius")}}</li>
-</ul>
+- Относящиеся к Border-radius CSS-свойства: {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}}, {{Cssxref("border-bottom-left-radius")}}

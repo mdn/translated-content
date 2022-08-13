@@ -12,66 +12,35 @@ tags:
   - TopicStub
 translation_of: Web/CSS/Media_Queries
 ---
-<div>{{CSSRef("CSS3 Media Queries")}}</div>
+{{CSSRef("CSS3 Media Queries")}}
 
-<p><strong>Медиавыражения (media queries)</strong> являются ключевым компонентом <a href="/en-US/docs/Web/Apps/Progressive/Responsive">отзывчивого дизайна</a>, который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} at-правило используется чтобы задать условия применения стилей к документу.</p>
+**Медиавыражения (media queries)** являются ключевым компонентом [отзывчивого дизайна](/ru/docs/Web/Apps/Progressive/Responsive), который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} at-правило используется чтобы задать условия применения стилей к документу.
 
-<p>Кроме того, синтаксис медиавыражений используется в других контекстах, таких как атрибут {{htmlattrxref("media", "source")}} элемента {{HTMLElement("source")}}, для определения, нужно или нет использовать этот источник, когда выбирается определённое изображение для использования в элементе {{HTMLElement("picture")}}.</p>
+Кроме того, синтаксис медиавыражений используется в других контекстах, таких как атрибут {{htmlattrxref("media", "source")}} элемента {{HTMLElement("source")}}, для определения, нужно или нет использовать этот источник, когда выбирается определённое изображение для использования в элементе {{HTMLElement("picture")}}.
 
-<p>In addition, the {{domxref("Window.matchMedia()")}} method can be used to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of the queries changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.</p>
+In addition, the {{domxref("Window.matchMedia()")}} method can be used to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of the queries changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
 
-<p>You can learn more about programmatically using media queries in <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries</a>.</p>
+You can learn more about programmatically using media queries in [Testing media queries](/ru/docs/Web/CSS/Media_Queries/Testing_media_queries).
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<div class="index">
-<ul>
- <li>{{cssxref("@import")}}</li>
- <li>{{cssxref("@media")}}</li>
-</ul>
-</div>
+- {{cssxref("@import")}}
+- {{cssxref("@media")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></dt>
- <dd>Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries</a></dt>
- <dd>Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).</dd>
-</dl>
+- [Using media queries](/ru/docs/Web/CSS/Media_Queries/Using_media_queries)
+  - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
+- [Testing media queries](/ru/docs/Web/CSS/Media_Queries/Testing_media_queries)
+  - : Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'media.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                    | Status                                   | Comment            |
+| ------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
+| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
+| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
+| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |

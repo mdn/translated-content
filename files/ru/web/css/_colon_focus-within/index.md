@@ -1,42 +1,47 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
-translation_of: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
+translation_of: Web/CSS/:focus-within
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">Псевдо-класс</a> <strong><code>:focus-within</code></strong> соответствует элементу, который либо сам находится в фокусе, либо содержит элемент, который находится в фокусе. Другими словами, он представляет элементу, который соответствует псевдоклассу {{CSSxRef(":focus")}} либо имеет потомка, который соответствует <code>:focus</code>. (Включая потомков в <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
+[CSS](/ru/docs/Web/CSS) [Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) **`:focus-within`** соответствует элементу, который либо сам находится в фокусе, либо содержит элемент, который находится в фокусе. Другими словами, он представляет элементу, который соответствует псевдоклассу {{CSSxRef(":focus")}} либо имеет потомка, который соответствует `:focus`. (Включая потомков в [shadow trees](/ru/docs/Web/Web_Components/Shadow_DOM).)
 
-<pre class="brush: css no-line-numbers">/* Выделяет &lt;div&gt; когда один из его потомков находится в фокусе */
+```css
+/* Выделяет <div> когда один из его потомков находится в фокусе */
 div:focus-within {
   background: cyan;
-}</pre>
+}
+```
 
-<p>Этот селектор может оказаться полезным, например, для подсвечивания всего контейнера {{HTMLElement("form")}}, когда пользователь устанавливает фокус на одном из его полей ввода {{HTMLElement("input")}}.</p>
+Этот селектор может оказаться полезным, например, для подсвечивания всего контейнера {{HTMLElement("form")}}, когда пользователь устанавливает фокус на одном из его полей ввода {{HTMLElement("input")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере форма раскрашивается при помощи специального правила стилей, когда один из её дочерних полей для ввода находится в фокусе.</p>
+В этом примере форма раскрашивается при помощи специального правила стилей, когда один из её дочерних полей для ввода находится в фокусе.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Try typing into this form.&lt;/p&gt;
+```html
+<p>Try typing into this form.</p>
 
-&lt;form&gt;
-  &lt;label for="given_name"&gt;Given Name:&lt;/label&gt;
-  &lt;input id="given_name" type="text"&gt;
-  &lt;br&gt;
-  &lt;label for="family_name"&gt;Family Name:&lt;/label&gt;
-  &lt;input id="family_name" type="text"&gt;
-&lt;/form&gt;</pre>
+<form>
+  <label for="given_name">Given Name:</label>
+  <input id="given_name" type="text">
+  <br>
+  <label for="family_name">Family Name:</label>
+  <input id="family_name" type="text">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">form {
+```css
+form {
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -50,22 +55,21 @@ form:focus-within {
 input {
   margin: 4px;
 }
-</pre>
+```
 
-<h3 id="Итог">Итог</h3>
+### Итог
 
-<p>{{EmbedLiveSample("Пример", 500, 150)}}</p>
+{{EmbedLiveSample("Пример", 500, 150)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
-</ul>
+## See also
+
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}

@@ -8,25 +8,24 @@ tags:
   - семейства-шрифтов
 translation_of: Web/CSS/font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS-свойство <strong><code>font-family</code></strong> определяет приоритетный список из одного или нескольких названий семейства шрифтов и/или общее имя шрифта для выбранного элемента.</p>
+CSS-свойство **`font-family`** определяет приоритетный список из одного или нескольких названий семейства шрифтов и/или общее имя шрифта для выбранного элемента.
 
-<div>{{EmbedInteractiveExample("pages/css/font-family.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-family.html")}}
 
+Значения разделены запятыми, чтобы указать, что они являются альтернативами. Браузер выберет из списка первый шрифт, который установлен или может быть скачан используя правило {{cssxref("@font-face")}} .
 
+Часто удобно использовать сокращённое свойство {{cssxref("font")}}, чтобы задать `font-size` и другие свойства, которые относятся к шрифту.
 
-<p>Значения разделены запятыми, чтобы указать, что они являются альтернативами. Браузер выберет из списка первый шрифт, который установлен или может быть скачан используя правило {{cssxref("@font-face")}} .</p>
+Вы всегда должны добавлять по крайней мере одно имя общего семейства шрифтов, так как нет гарантии, что какой-либо из указанных шрифтов будет доступен. Это позволит браузеру выбрать подходящий запасной шрифт, когда возникнет необходимость.
 
-<p>Часто удобно использовать сокращённое свойство {{cssxref("font")}}, чтобы задать <code>font-size</code> и другие свойства, которые относятся к шрифту.</p>
+Свойство `font-family` определяет список шрифтов в приоритете от высшего к низшему. Процесс выбора шрифта не останавливается после первого шрифта, найденного в системе пользователя. Скорее, выбор шрифта выполняется _по одному символу за раз_, поэтому если в доступном шрифте нет глифы для нужного символа, пробуются следующие по списку шрифты. (Однако, это не работает в Internet Explorer 6 и ранее.) Когда шрифт доступен только в некоторых {{cssxref('font-style','стилях')}}, {{cssxref('font-variant','видах')}} или {{cssxref('font-size','размерах')}}, эти свойства могут так же влиять на выбор шрифта.
 
-<p>Вы всегда должны добавлять по крайней мере одно имя общего семейства шрифтов, так как нет гарантии, что какой-либо из указанных шрифтов будет доступен. Это позволит браузеру выбрать подходящий запасной шрифт, когда возникнет необходимость.</p>
+## Синтаксис
 
-<p>Свойство <code>font-family</code> определяет список шрифтов в приоритете от высшего к низшему. Процесс выбора шрифта не останавливается после первого шрифта, найденного в системе пользователя. Скорее, выбор шрифта выполняется <em>по одному символу за раз</em>, поэтому если в доступном шрифте нет глифы для нужного символа, пробуются следующие по списку шрифты. (Однако, это не работает в Internet Explorer 6 и ранее.) Когда шрифт доступен только в некоторых {{cssxref('font-style','стилях')}}, {{cssxref('font-variant','видах')}} или {{cssxref('font-size','размерах')}}, эти свойства могут так же влиять на выбор шрифта.</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Имя шрифта и общие семейства шрифтов */
+```css
+/* Имя шрифта и общие семейства шрифтов */
 font-family: Gill Sans Extrabold, sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
@@ -45,77 +44,76 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: unset;
-</pre>
+```
 
-<p>Свойство <code>font-family</code> получает список из одного или более семейства шрифтов, разделённые запятыми. Каждое семейство шрифтов определяется как <code><a href="#&lt;family-name>">&lt;family-name&gt;</a></code> или <code><a href="#&lt;generic-name>">&lt;generic-name&gt;</a></code>.</p>
+Свойство `font-family` получает список из одного или более семейства шрифтов, разделённые запятыми. Каждое семейство шрифтов определяется как [`<family-name>`](#<family-name>) или [`<generic-name>`](#<generic-name>).
 
-<p>В приведённом ниже примере перечислены два семейства шрифтов, первое <code><a href="#&lt;family-name>">&lt;family-name&gt;</a></code>, а второе как <code>&lt;generic-name&gt;</code>:</p>
+В приведённом ниже примере перечислены два семейства шрифтов, первое [`<family-name>`](#<family-name>), а второе как `<generic-name>`:
 
-<pre class="brush: css">font-family: Gill Sans Extrabold, sans-serif;</pre>
+```css
+font-family: Gill Sans Extrabold, sans-serif;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>Имя семейства шрифтов. К примеру, "Times" и "Helvetica" это семейства шрифтов. Названия семейства шрифтов, которые содержат пробелы, должны быть взяты в кавычки.</dd>
- <dt><code>&lt;generic-name&gt;</code></dt>
- <dd>
- <p>Общие семейства шрифтов используются как резервный механизм для сохранения некоторого авторского стиля в момент, когда ни один из желаемых шрифтов недоступен. Общие семейства шрифтов являются ключевыми словами и <strong>не</strong> должны браться в кавычки. Общее семейство шрифтов должно определяться последним в списке семейств шрифтов. Определены следующие ключевые слова:</p>
+- `<family-name>`
+  - : Имя семейства шрифтов. К примеру, "Times" и "Helvetica" это семейства шрифтов. Названия семейства шрифтов, которые содержат пробелы, должны быть взяты в кавычки.
+- `<generic-name>`
+  - : Общие семейства шрифтов используются как резервный механизм для сохранения некоторого авторского стиля в момент, когда ни один из желаемых шрифтов недоступен. Общие семейства шрифтов являются ключевыми словами и **не** должны браться в кавычки. Общее семейство шрифтов должно определяться последним в списке семейств шрифтов. Определены следующие ключевые слова:_ `serif`
+    _ : Глифы имеют завершающие штрихи, расширяющиеся или сужающиеся концы, или имеют фактически зазубренные окончания.
+    Например, "Lucida Bright", "Lucida Fax", Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+    - `sans-serif`
+      - : Глифы имеют гладкие окончания.
+        Например, "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+    - `monospace`
+      - : Все глифы имеют одинаковую фиксированную ширину.
+        Например, "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.
+    - `cursive`
+      - : Глифы в курсивных шрифтах обычно имеют либо соединительные штрихи, либо другие рукописные характеристики, отличные от наклонных (italic) шрифтов. Глифы частично или полностью связаны, и результат больше напоминает рукописное перо или кисть, чем печатные буквы. Например, "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+    - `fantasy`
+      - : Фэнтезийные шрифты - это прежде всего декоративные шрифты, которые содержат игривое представление персонажей. Например, Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+    - `system-ui`
+      - : Глифы, взятые из дефолтного шрифта пользовательского интерфейса на данной платформе. Поскольку типографские традиции широко варьируются по всему миру, это общее семейство предназначено для гарнитур, которые не отображаются точно в других общих семействах.
+    - `math`
+      - : Это семейство предназначено для особых стилистических задач представления математики: верхний индекс и нижний индекс, скобки, которые пересекают несколько строк, вложенные выражения и двойные глифы с различными значениями.
+    - `emoji`
+      - : Шрифты, специально предназначенные для отображения эмодзи.
+    - `fangsong`
+      - : Особый стиль китайских иероглифов, который является чем-то средним между стилем с засечками Song и курсивным стилем Кай. Этот стиль часто используется для правительственных документов.
 
- <dl>
-  <dt><code>serif</code></dt>
-  <dd style="font-family: serif;">Глифы имеют завершающие штрихи, расширяющиеся или сужающиеся концы, или имеют фактически зазубренные окончания.<br>
-  Например, "<span style="font-family: lucida bright,serif;">Lucida Bright"</span>, "<span style="font-family: lucida fax,serif;">Lucida Fax"</span>, <span style="font-family: palatino,serif;">Palatino</span>, <span style="font-family: palatino linotype,serif;">"Palatino Linotype"</span>, <span style="font-family: palladio,serif;">Palladio</span>, <span style="font-family: urw palladio,serif;">"URW Palladio"</span>, <span style="font-family: serif;">serif</span>.</dd>
-  <dt><code>sans-serif</code></dt>
-  <dd style="font-family: sans-serif;">Глифы имеют гладкие окончания.<br>
-  Например, <span style="font-family: open sans,sans-serif;">"Open Sans"</span>, <span style="font-family: fira sans,sans-serif;">"Fira Sans"</span>, <span style="font-family: lucida sans,sans-serif;">"Lucida Sans"</span>, <span style="font-family: lucida sans unicode,sans-serif;">"Lucida Sans Unicode"</span>, <span style="font-family: trebuchet ms,sans-serif;">"Trebuchet MS"</span>, <span style="font-family: liberation sans,sans-serif;">"Liberation Sans"</span>, <span style="font-family: nimbus sans l,sans-serif;">"Nimbus Sans L"</span>, <span style="font-family: sans-serif;">sans-serif</span>.</dd>
-  <dt><code>monospace</code></dt>
-  <dd style="font-family: monospace;">Все глифы имеют одинаковую фиксированную ширину.<br>
-  Например, <span style="font-family: fira mono,monospace;">"Fira Mono"</span>, <span style="font-family: dejavu sans mono,monospace;">"DejaVu Sans Mono"</span>, <span style="font-family: menlo,monospace;">Menlo</span>, <span style="font-family: consolas,monospace;">Consolas</span>, <span style="font-family: liberation mono,monospace;">"Liberation Mono"</span>, <span style="font-family: monaco,monospace;">Monaco</span>, <span style="font-family: lucida console,monospace;">"Lucida Console"</span>, <span style="font-family: monospace;">monospace.</span></dd>
-  <dt><code>cursive</code></dt>
-  <dd style="font-family: cursive;">Глифы в курсивных шрифтах обычно имеют либо соединительные штрихи, либо другие рукописные характеристики, отличные от наклонных (italic) шрифтов. Глифы частично или полностью связаны, и результат больше напоминает рукописное перо или кисть, чем печатные буквы. Например, <span style="font-family: brush script mt,cursive;">"Brush Script MT</span>", <span style="font-family: brush script std,cursive;">"Brush Script Std</span>", <span>"Lucida Calligraphy"</span>, <span>"Lucida Handwriting"</span>, <span style="font-family: apple chancery,cursive;">"Apple Chancery"</span>, <span style="font-family: cursive;">cursive</span>.</dd>
-  <dt><code>fantasy</code></dt>
-  <dd style="font-family: fantasy;">Фэнтезийные шрифты - это прежде всего декоративные шрифты, которые содержат игривое представление персонажей. Например, <span style="font-family: papyrus,fantasy;">Papyrus</span>, <span style="font-family: herculanum,fantasy;">Herculanum</span>, <span style="font-family: party let,fantasy;">Party LET</span>, <span style="font-family: curlz mt,fantasy;">Curlz MT</span>, <span style="font-family: harrington,fantasy;">Harrington</span>, <span style="font-family: fantasy;">fantasy</span>.</dd>
-  <dt><code>system-ui</code></dt>
-  <dd>Глифы, взятые из дефолтного шрифта пользовательского интерфейса на данной платформе. Поскольку типографские традиции широко варьируются по всему миру, это общее семейство предназначено для гарнитур, которые не отображаются точно в других общих семействах.</dd>
-  <dt><code>math</code></dt>
-  <dd>Это семейство предназначено для особых стилистических задач представления математики: верхний индекс и нижний индекс, скобки, которые пересекают несколько строк, вложенные выражения и двойные глифы с различными значениями.</dd>
-  <dt><code>emoji</code></dt>
-  <dd>Шрифты, специально предназначенные для отображения эмодзи.</dd>
-  <dt><code>fangsong</code></dt>
-  <dd>Особый стиль китайских иероглифов, который является чем-то средним между стилем с засечками Song и курсивным стилем Кай. Этот стиль часто используется для правительственных документов.</dd>
- </dl>
- </dd>
-</dl>
+### Валидные имена семейства шрифтов
 
-<h3 id="Валидные_имена_семейства_шрифтов">Валидные имена семейства шрифтов</h3>
+Имена семейств шрифтов должны быть указаны либо в виде строк в кавычках, либо в виде последовательности одного или нескольких идентификаторов без кавычек. Если имя семейства шрифтов содержит цифры или знаки пунктуации, такое имя должно быть заключено в кавычки.
 
-<p>Имена семейств шрифтов должны быть указаны либо в виде строк в кавычках, либо в виде последовательности одного или нескольких идентификаторов без кавычек. Если имя семейства шрифтов содержит цифры или знаки пунктуации, такое имя должно быть заключено в кавычки.</p>
+Например, следующие объявления являются валидными:
 
-<p>Например, следующие объявления являются валидными:</p>
+```css
+font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
 
-<pre class="brush:css">font-family: Gill Sans Extrabold, sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;</pre>
+Следующие объявления являются **не валидными**:
 
-<p>Следующие объявления являются <strong>не валидными</strong>:</p>
-
-<pre class="brush:css example-bad">font-family: Goudy Bookletter 1911, sans-serif;
+```css example-bad
+font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
 font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;</pre>
+font-family: Hawaii 5-0, sans-serif;
+```
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Некоторые_общие_семейства_шрифтов">Некоторые общие семейства шрифтов</h3>
+### Некоторые общие семейства шрифтов
 
-<pre class="brush: css;">.serif {
+```css
+.serif {
   font-family: Times, Times New Roman, Georgia, serif;
 }
 
@@ -146,58 +144,56 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 .fangsong {
   font-family: fangsong;
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html;">&lt;div class="serif"&gt;
+```html hidden
+<div class="serif">
   This is an example of a serif font.
-&lt;/div&gt;
-
-&lt;div class="sansserif"&gt;
-  This is an example of a sans-serif font.
-&lt;/div&gt;
-
-&lt;div class="monospace"&gt;
-  This is an example of a monospace font.
-&lt;/div&gt;
-
-&lt;div class="cursive"&gt;
-  This is an example of a cursive font.
-&lt;/div&gt;
-
-&lt;div class="fantasy"&gt;
-  This is an example of a fantasy font.
-&lt;/div&gt;
-
-&lt;div class="math"&gt;
-  This is an example of a math font.
-&lt;/div&gt;
-
-&lt;div class="emoji"&gt;
-  This is an example of an emoji font.
-&lt;/div&gt;
-
-&lt;div class="fangsong"&gt;
-  This is an example of a fangsong font.
-&lt;/div&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Некоторые_общие_семейства_шрифтов','600','120') }}</p>
+<div class="sansserif">
+  This is an example of a sans-serif font.
+</div>
 
-<h2 id="Спецификации">Спецификации</h2>
+<div class="monospace">
+  This is an example of a monospace font.
+</div>
+
+<div class="cursive">
+  This is an example of a cursive font.
+</div>
+
+<div class="fantasy">
+  This is an example of a fantasy font.
+</div>
+
+<div class="math">
+  This is an example of a math font.
+</div>
+
+<div class="emoji">
+  This is an example of an emoji font.
+</div>
+
+<div class="fangsong">
+  This is an example of a fangsong font.
+</div>
+```
+
+{{ EmbedLiveSample('Некоторые_общие_семейства_шрифтов','600','120') }}
+
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+\[1] `system-ui` в данный момент не реализовано, смотри {{bug(1226042)}}.
 
-<p>{{Compat}}</p>
+\[2] `system-ui` реализовано в Safari ([wkbug.com/151493](https://bugs.webkit.org/show_bug.cgi?id=151493)), возможно будет выпущено в ближайшем времени.
 
-<p>[1] <code>system-ui</code> в данный момент не реализовано, смотри {{bug(1226042)}}.</p>
-
-<p>[2] <code>system-ui</code> реализовано в Safari (<a href="https://bugs.webkit.org/show_bug.cgi?id=151493">wkbug.com/151493</a>), возможно будет выпущено в ближайшем времени.</p>
-
-<p>[3] префиксный алиас <code>-apple-system</code> поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ({{bug(1201318)}}).</p>
+\[3] префиксный алиас `-apple-system` поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ({{bug(1201318)}}).

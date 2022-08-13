@@ -1,74 +1,74 @@
 ---
 title: ':nth-last-of-type()'
-slug: 'Web/CSS/:nth-last-of-type'
+slug: Web/CSS/:nth-last-of-type
 tags:
   - CSS
   - Layout
   - Reference
   - Web
   - Псевдоклассы
-translation_of: 'Web/CSS/:nth-last-of-type'
+translation_of: Web/CSS/:nth-last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a> <strong><code>:nth-last-of-type()</code></strong> находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.</p>
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:nth-last-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.
 
-<pre class="brush: css no-line-numbers">/* Выбирает каждый четвёртый элемент &lt;p&gt;
+```css
+/* Выбирает каждый четвёртый элемент <p>
    среди любой группы соседних элементов,
    отсчёт начинается с последнего элемента */
 p:nth-last-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> Этот псевдокласс практически такой же как {{Cssxref(":nth-of-type")}}, за исключением того, что счёт элементов производится в обратном порядке начиная с <em>конца</em>, а не в обычном порядке с начала.</p>
-</div>
+> **Примечание:** Этот псевдокласс практически такой же как {{Cssxref(":nth-of-type")}}, за исключением того, что счёт элементов производится в обратном порядке начиная с _конца_, а не в обычном порядке с начала.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Псевдокласс <code>nth-last-of-type</code> указывается с единственным аргументом, описывающим паттерн для выбирания элементов, начиная с конца.</p>
+Псевдокласс `nth-last-of-type` указывается с единственным аргументом, описывающим паттерн для выбирания элементов, начиная с конца.
 
-<p>Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{Cssxref(":nth-last-child")}}.</p>
+Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{Cssxref(":nth-last-child")}}.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Это span.&lt;/span&gt;
-  &lt;span&gt;Это другой span.&lt;/span&gt;
-  &lt;em&gt;Это текст будет подчёркнут.&lt;/em&gt;
-  &lt;span&gt;Круто, этот span лаймовый!!!&lt;/span&gt;
-  &lt;strike&gt;Это вообще не span.&lt;/strike&gt;
-  &lt;span&gt;Это ещё один последний span.&lt;/span&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <span>Это span.</span>
+  <span>Это другой span.</span>
+  <em>Это текст будет подчёркнут.</em>
+  <span>Круто, этот span лаймовый!!!</span>
+  <strike>Это вообще не span.</strike>
+  <span>Это ещё один последний span.</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span:nth-last-of-type(2) {
+```css
+span:nth-last-of-type(2) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}

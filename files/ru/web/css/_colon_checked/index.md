@@ -1,34 +1,36 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
 tags:
   - CSS
   - Макет
   - Псевдоклассы
   - Руководство
-translation_of: 'Web/CSS/:checked'
+translation_of: Web/CSS/:checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Псевдо-классы" title="Псевдоклассы">псевдоклассы</a> <strong><code>:checked</code></strong> CSS находит любые элементы <strong>radio </strong>(<code>&lt;input type="radio"&gt;</code>), <strong>checkbox </strong>(<code>&lt;input type="checkbox"&gt;</code>) или <strong>option</strong> ({{ HTMLElement("option") }} внутри {{ HTMLElement("select") }}), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае <code>:checked</code> повторно не применится к элементу, а сохранится.</p>
+CSS [псевдоклассы](/ru/docs/Web/CSS/Псевдо-классы "Псевдоклассы") **`:checked`** CSS находит любые элементы **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) или **option** ({{ HTMLElement("option") }} внутри {{ HTMLElement("select") }}), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае `:checked` повторно не применится к элементу, а сохранится.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">input:checked {
+```css
+input:checked {
   margin-left: 25px;
   border: 1px solid blue;
 }
-</pre>
+```
 
-<h3 id="Examples">Формальный синтаксис</h3>
+### Формальный синтаксис
 
-<pre class="syntaxbox">element:checked { стили }</pre>
+    element:checked { стили }
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_selectors">Примеры селекторов</h3>
+### Примеры селекторов
 
-<pre class="brush: css">/* любой "кликабельный" элемент */
+```css
+/* любой "кликабельный" элемент */
 :checked {
   width: 50px;
   height: 50px;
@@ -48,30 +50,29 @@ input[type="checkbox"]:checked {
 option:checked {
   color: red;
 }
-</pre>
+```
 
-<dl>
- <dt><code>input[type="radio"]:checked</code></dt>
- <dd>Находит, все отмеченные на странице, радиокнопки</dd>
-</dl>
+- `input[type="radio"]:checked`
+  - : Находит, все отмеченные на странице, радиокнопки
 
-<dl>
- <dt><code>input[type="checkbox"]:checked</code></dt>
- <dd>Находит все отмеченные чекбоксы</dd>
- <dt><code>option:checked</code></dt>
- <dd>Находит все отмеченные option</dd>
-</dl>
+<!---->
 
-<h3 id="Использование_скрытых_чекбоксов_чтобы_хранить_некоторые_булевские_значения_в_CSS">Использование скрытых чекбоксов, чтобы хранить некоторые булевские значения в CSS</h3>
+- `input[type="checkbox"]:checked`
+  - : Находит все отмеченные чекбоксы
+- `option:checked`
+  - : Находит все отмеченные option
 
-<p>Псевдокласс <code>:checked</code> применяется к скрытым чекбоксам в начале вашей страницы, которые могут использоваться, чтобы хранить некоторые динамические значения, используемые в CSS-правилах. Следующий пример показывает, как скрывать/показывать некоторые расширяемые элементы, нажимая на кнопку (<a class="internal" href="/@api/deki/files/6246/=expandable-elements.html" title="Expandable elements through the :checked pseudoclass">открыть это демо</a>).</p>
+### Использование скрытых чекбоксов, чтобы хранить некоторые булевские значения в CSS
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8" /&gt;
-&lt;title&gt;Расширяемые элементы&lt;/title&gt;
-&lt;style&gt;
+Псевдокласс `:checked` применяется к скрытым чекбоксам в начале вашей страницы, которые могут использоваться, чтобы хранить некоторые динамические значения, используемые в CSS-правилах. Следующий пример показывает, как скрывать/показывать некоторые расширяемые элементы, нажимая на кнопку ([открыть это демо](/@api/deki/files/6246/=expandable-elements.html "Expandable elements through the :checked pseudoclass")).
+
+```html
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Расширяемые элементы</title>
+<style>
 #expand-btn {
     margin: 0 3px;
     display: inline-block;
@@ -104,46 +105,46 @@ option:checked {
     display: block;
     background: #cccccc;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</style>
+</head>
+<body>
 
-&lt;input type="checkbox" id="isexpanded" /&gt;
+<input type="checkbox" id="isexpanded" />
 
-&lt;h1&gt;Расширяемые элементы&lt;/h1&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;&lt;th&gt;Колонка #1&lt;/th&gt;&lt;th&gt;Колонка #2&lt;/th&gt;&lt;th&gt;Колонка #3&lt;/th&gt;&lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;td&gt;[текст ячейки]&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
+<h1>Расширяемые элементы</h1>
+<table>
+    <thead>
+        <tr><th>Колонка #1</th><th>Колонка #2</th><th>Колонка #3</th></tr>
+    </thead>
+    <tbody>
+        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
+        <tr><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
+        <tr><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
+        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
+        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
+    </tbody>
+</table>
 
-&lt;p&gt;[какой-то текст примера]&lt;/p&gt;
-&lt;p&gt;&lt;label for="isexpanded" id="expand-btn"&gt;Показать скрытые элементы&lt;/label&gt;&lt;/p&gt;
-&lt;p class="expandable"&gt;[другой текст для примера]&lt;/p&gt;
-&lt;p&gt;[какой-то текст примера]&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<p>[какой-то текст примера]</p>
+<p><label for="isexpanded" id="expand-btn">Показать скрытые элементы</label></p>
+<p class="expandable">[другой текст для примера]</p>
+<p>[какой-то текст примера]</p>
+</body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Использование_скрытых_чекбоксов_чтобы_хранить_некоторые_булевские_значения_в_CSS', '', '', '', 'Web/CSS/:checked') }}</p>
+{{ EmbedLiveSample('Использование_скрытых_чекбоксов_чтобы_хранить_некоторые_булевские_значения_в_CSS', '', '', '', 'Web/CSS/:checked') }}
 
-<h3 id="Using_hidden_radioboxes_in_order_to_store_some_CSS_boolean_values">Использование скрытых радиокнопок, чтобы хранить некоторые булевские значения в CSS</h3>
+### Использование скрытых радиокнопок, чтобы хранить некоторые булевские значения в CSS
 
-<p>Также вы можете псевдокласс <code>:checked</code>, чтобы скрывать радиокнопки для того, чтобы создать, например, <strong>галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши</strong>. Загрузите <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">это демо</a> как вариант решения.</p>
+Также вы можете псевдокласс `:checked`, чтобы скрывать радиокнопки для того, чтобы создать, например, **галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши**. Загрузите [это демо](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip") как вариант решения.
 
-<div class="note"><strong>Замечание:</strong> Для аналогично эффекта, но основанного на псевдоклассе <a class="internal" href="/ru/docs/CSS/:hover" title="CSS/:hover"><code>:hover</code></a> и без скрытых радиокнопок, смотрите <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">это демо</a>, взятое со страницы <a class="internal" href="/ru/docs/CSS/:hover" title="CSS/:hover">:hover</a>.</div>
+> **Примечание:** **Замечание:** Для аналогично эффекта, но основанного на псевдоклассе [`:hover`](/ru/docs/CSS/:hover "CSS/:hover") и без скрытых радиокнопок, смотрите [это демо](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip"), взятое со страницы [:hover](/ru/docs/CSS/:hover "CSS/:hover").
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

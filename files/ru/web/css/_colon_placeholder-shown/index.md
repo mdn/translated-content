@@ -1,93 +1,102 @@
 ---
 title: ':placeholder-shown'
-slug: 'Web/CSS/:placeholder-shown'
-translation_of: 'Web/CSS/:placeholder-shown'
+slug: Web/CSS/:placeholder-shown
+translation_of: Web/CSS/:placeholder-shown
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент[ текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#attr-placeholder).
 
-<div><a href="/ru/docs/Web/CSS">CSS псевдокласс</a> <strong><code>:placeholder-shown</code></strong> представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент<a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder"> текст заполнитель (плейсхолдер)</a>.</div>
-
-<pre class="brush: css no-line-numbers">/* Выбирает любой элемент с активным плейсхолдером */
+```css
+/* Выбирает любой элемент с активным плейсхолдером */
 :placeholder-shown {
   border: 2px solid silver;
-}</pre>
+}
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Type something here!"&gt;</pre>
+```html
+<input placeholder="Type something here!">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   border-color: silver;
 }
 
 input:-moz-placeholder {
   border-color: silver;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">input {
+```css
+input {
   border: 2px solid black;
   padding: 3px;
 }
 
 input:placeholder-shown {
   border-color: silver;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Простой_пример", 200, 60)}}</p>
+{{EmbedLiveSample("Простой_пример", 200, 60)}}
 
-<h3 id="Переполнение_текстом">Переполнение текстом</h3>
+### Переполнение текстом
 
-<p>На узких экранах, таких как смартфоны, ширина полей поиска и других полей формы может быть значительно сокращена. Это может привести к нежелательному обрезанию текста плейсхолдера. Часто бывает полезно изменить это поведение с помощью свойства {{cssxref("text-overflow")}}.</p>
+На узких экранах, таких как смартфоны, ширина полей поиска и других полей формы может быть значительно сокращена. Это может привести к нежелательному обрезанию текста плейсхолдера. Часто бывает полезно изменить это поведение с помощью свойства {{cssxref("text-overflow")}}.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Enter something into this field, if you please!"&gt;</pre>
+```html
+<input placeholder="Enter something into this field, if you please!">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   text-overflow: ellipsis;
 }
 
 input:-moz-placeholder {
   text-overflow: ellipsis;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">input:placeholder-shown {
+```css
+input:placeholder-shown {
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Переполнение_текстом", 200, 60)}}</p>
+{{EmbedLiveSample("Переполнение_текстом", 200, 60)}}
 
-<h3 id="Цветной_текст">Цветной текст</h3>
+### Цветной текст
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Type something here!"&gt;
-</pre>
+```html
+<input placeholder="Type something here!">
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   color: red;
   font-style: italic;
 }
@@ -95,44 +104,48 @@ input:-moz-placeholder {
 input:-moz-placeholder {
   color: red;
   font-style: italic;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">input:placeholder-shown {
+```css
+input:placeholder-shown {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Результат_3">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Цветной_текст", 200, 60)}}</p>
+{{EmbedLiveSample("Цветной_текст", 200, 60)}}
 
-<h3 id="Кастомизированное_поле_ввода">Кастомизированное поле ввода</h3>
+### Кастомизированное поле ввода
 
-<p>В следующем примере выделены поля Branch и ID с пользовательским стилем.</p>
+В следующем примере выделены поля Branch и ID с пользовательским стилем.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="test"&gt;
-  &lt;p&gt;
-    &lt;label for="name"&gt;Enter Student Name:&lt;/label&gt;
-    &lt;input id="name" placeholder="Student Name"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="branch"&gt;Enter Student Branch:&lt;/label&gt;
-    &lt;input id="branch" placeholder="Student Branch"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="sid"&gt;Enter Student ID:&lt;/label&gt;
-    &lt;input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/&gt;
-  &lt;/p&gt;
-  &lt;input type="submit"/&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="test">
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
+</form>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css">input.studentid:-ms-input-placeholder {
+```css hidden
+input.studentid:-ms-input-placeholder {
   background-color: yellow;
   color: red;
   font-style: italic;
@@ -142,10 +155,11 @@ input.studentid:-moz-placeholder {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css; highlight[6]">input {
+```css
+input {
   background-color: #E8E8E8;
   color: black;
 }
@@ -154,26 +168,23 @@ input.studentid:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Результат_4">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Кастомизированное_поле_ввода", 200, 180)}}</p>
+{{EmbedLiveSample("Кастомизированное_поле_ввода", 200, 180)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к <em>самому себе</em>.</li>
- <li>Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
- <li><a href="/ru/docs/Learn/HTML/Forms">HTML формы</a></li>
-</ul>
+- Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к _самому себе_.
+- Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
+- [HTML формы](/ru/docs/Learn/HTML/Forms)

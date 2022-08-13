@@ -7,19 +7,18 @@ tags:
   - Порядок отрисовки
 translation_of: Web/CSS/isolation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>isolation</code></strong> определяет должен ли элемент создавать новый <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">контекст наложения</a> {{glossary("stacking context")}}.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) {{glossary("stacking context")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/isolation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/isolation.html")}}
 
+Это свойство особенно полезно при использовании совместно с {{cssxref("background-blend-mode")}}.
 
+## Синтаксис
 
-<p>Это свойство особенно полезно при использовании совместно с {{cssxref("background-blend-mode")}}.</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Значения ключевого слова */
+```css
+/* Значения ключевого слова */
 isolation: auto;
 isolation: isolate;
 
@@ -27,36 +26,36 @@ isolation: isolate;
 isolation: inherit;
 isolation: initial;
 isolation: unset;
-</pre>
+```
 
-<p>Свойство <code>isolation</code> указывается в качестве значения одного из нижеследующих ключевых слов.</p>
+Свойство `isolation` указывается в качестве значения одного из нижеследующих ключевых слов.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Новый контекст наложения создаётся только в том случае, если это требуется для одного из свойств, применяемых к элементу.</dd>
- <dt><code>isolate</code></dt>
- <dd>Новый контекст наложения должен быть создан.</dd>
-</dl>
+- `auto`
+  - : Новый контекст наложения создаётся только в том случае, если это требуется для одного из свойств, применяемых к элементу.
+- `isolate`
+  - : Новый контекст наложения должен быть создан.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="b" class="a">
+  <div id="d">
+    <div class="a c">auto</div>
+  </div>
+  <div id="e">
+    <div class="a c">isolate</div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.a {
+```css
+.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -75,25 +74,22 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Примеры', 230, 230) }}</p>
+{{ EmbedLiveSample('Примеры', 230, 230) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}

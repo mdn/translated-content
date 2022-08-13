@@ -1,103 +1,107 @@
 ---
 title: ':first-child'
-slug: 'Web/CSS/:first-child'
+slug: Web/CSS/:first-child
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:first-child'
+translation_of: Web/CSS/:first-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>{{cssxRef('', 'CSS')}} {{cssxRef('Pseudo-classes', 'псевдокласс')}} <strong><code>:first-child</code></strong> находит любой элемент, являющийся первым в своём родителе.</p>
+{{cssxRef('', 'CSS')}} {{cssxRef('Pseudo-classes', 'псевдокласс')}} **`:first-child`** находит любой элемент, являющийся первым в своём родителе.
 
-<pre class="brush: css no-line-numbers">&gt;
-/* Выбирает любой &lt;p&gt;, который является первым элементом
+```css
+>
+/* Выбирает любой <p>, который является первым элементом
    среди своих братьев и сестёр */
 p:first-child {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: Как изначально определено, выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это больше не требуется.</p>
-</div>
+> **Примечание:** Как изначально определено, выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это больше не требуется.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;This text is selected!&lt;/p&gt;
-  &lt;p&gt;This text isn't selected.&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div>
+  <p>This text is selected!</p>
+  <p>This text isn't selected.</p>
+</div>
 
-&lt;div&gt;
-  &lt;h2&gt;This text isn't selected: it's not a `p`.&lt;/h2&gt;
-  &lt;p&gt;This text isn't selected.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+<div>
+  <h2>This text isn't selected: it's not a `p`.</h2>
+  <p>This text isn't selected.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:first-child {
+```css
+p:first-child {
   color: lime;
   background-color: black;
   padding: 5px;
 }
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p><span>{{EmbedLiveSample('Простой_пример', 500, 200)}}</span></p>
+{{EmbedLiveSample('Простой_пример', 500, 200)}}
 
-<h3 id="Стилизация_списка">Стилизация списка</h3>
+### Стилизация списка
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3
-    &lt;ul&gt;
-      &lt;li&gt;Item 3.1&lt;/li&gt;
-      &lt;li&gt;Item 3.2&lt;/li&gt;
-      &lt;li&gt;Item 3.3&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3
+    <ul>
+      <li>Item 3.1</li>
+      <li>Item 3.2</li>
+      <li>Item 3.3</li>
+    </ul>
+  </li>
+</ul>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ul li {
+```css
+ul li {
   color: blue;
 }
 
 ul li:first-child {
   color: red;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Стилизация_списка')}}</p>
+{{EmbedLiveSample('Стилизация_списка')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}</li>
- <li>{{CSSxRef(":first-of-type")}}</li>
- <li>{{CSSxRef(":last-child")}}</li>
- <li>{{CSSxRef(":nth-child", ":nth-child()")}}</li>
-</ul>
+- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":first-of-type")}}
+- {{CSSxRef(":last-child")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}

@@ -3,15 +3,14 @@ title: Layout using named grid lines
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
-<p>В предыдущих руководствах мы рассматривали размещение элементов по линиям, созданным путём определения треков сетки, а также способы размещения элементов с помощью именованных областей шаблона. В этом руководстве мы рассмотрим, как эти две вещи работают вместе, когда мы используем именование линий. Именование линий очень полезно, но  при комбинировании именований и размеров сетки иногда получаются очень запутанный синтаксис. Представленные примеры помогут внести ясность и упростить понимание синтаксиса.</p>
+В предыдущих руководствах мы рассматривали размещение элементов по линиям, созданным путём определения треков сетки, а также способы размещения элементов с помощью именованных областей шаблона. В этом руководстве мы рассмотрим, как эти две вещи работают вместе, когда мы используем именование линий. Именование линий очень полезно, но при комбинировании именований и размеров сетки иногда получаются очень запутанный синтаксис. Представленные примеры помогут внести ясность и упростить понимание синтаксиса.
 
-<h2 id="Именование_линий_при_определении_сетки">Именование линий при определении сетки</h2>
+## Именование линий при определении сетки
 
-<p>Когда вы определяете свою сетку с помощью свойств <code>grid-template-rows </code>и <code>grid-template-columns</code>, вы можете присвоить имя некоторым или всем линиям в вашей сетке. Для демонстрации я использую простой макет, созданный в руководстве по линейному размещению. На этот раз я создам сетку, используя именованные линии.</p>
+Когда вы определяете свою сетку с помощью свойств `grid-template-rows `и `grid-template-columns`, вы можете присвоить имя некоторым или всем линиям в вашей сетке. Для демонстрации я использую простой макет, созданный в руководстве по линейному размещению. На этот раз я создам сетку, используя именованные линии.
 
-<div id="example_named_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -19,28 +18,29 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<p>При определении сетки я задаю линиям имена, помещая их внутри квадратных скобок. Можете использовать любые имена, какие вам нравятся. Я задал имена <code>main-start</code> для начала и <code>main-end</code> для конца контейнера, причём как для строк, так и для столбцов. Затем определил центральный блок сетки как <code>content-start</code> и <code>content-end</code>, опять же как для столбцов, так и для строк. Но вам необязательно именовать все линии в вашей сетке, можете именовать только опорные линии вашего макета.</p>
+При определении сетки я задаю линиям имена, помещая их внутри квадратных скобок. Можете использовать любые имена, какие вам нравятся. Я задал имена `main-start` для начала и `main-end` для конца контейнера, причём как для строк, так и для столбцов. Затем определил центральный блок сетки как `content-start` и `content-end`, опять же как для столбцов, так и для строк. Но вам необязательно именовать все линии в вашей сетке, можете именовать только опорные линии вашего макета.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
-</pre>
+```
 
-<p>Теперь, когда линии имеют свои имена, мы можем использовать эти мена для размещения элементов.</p>
+Теперь, когда линии имеют свои имена, мы можем использовать эти мена для размещения элементов.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
   grid-column-start: main-start;
   grid-row-start: main-start;
   grid-row-end: main-end;
@@ -62,34 +62,33 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   grid-column-end: main-end;
   grid-row-start: content-end;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('example_named_lines', '500', '330') }}</p>
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
+```
 
-<p>Теперь при линейном размещении вы можете смешивать номера строк или их имена. Именование строк полезно при создании адаптивного дизайна, в котором вы переопределяете саму сетку, а не положение содержимого внутри сетки.</p>
+{{ EmbedLiveSample('example_named_lines', '500', '330') }}
 
-<h3 id="Присвоение_линиям_нескольких_имён">Присвоение линиям нескольких имён</h3>
+Теперь при линейном размещении вы можете смешивать номера строк или их имена. Именование строк полезно при создании адаптивного дизайна, в котором вы переопределяете саму сетку, а не положение содержимого внутри сетки.
 
-<p>При необходимости можно присвоить строке более одного имени. Например, <code>sidebar-end</code> для обозначении конца области <code>sidebar</code>, и <code>main-start</code> для начала области <code>main</code>. Укажите имена внутри квадратных скобок через пробел <code>[sidebar-end main-start]</code>. В дальнейшем вы можете обращаться к этой строке по любому из этих имён.</p>
+### Присвоение линиям нескольких имён
 
-<h2 id="Неявные_области_сетки_из_именованных_линий">Неявные области сетки из именованных линий</h2>
+При необходимости можно присвоить строке более одного имени. Например, `sidebar-end` для обозначении конца области `sidebar`, и `main-start` для начала области `main`. Укажите имена внутри квадратных скобок через пробел `[sidebar-end main-start]`. В дальнейшем вы можете обращаться к этой строке по любому из этих имён.
 
-<p>Ранее уже упоминалось, что вы можете выбирать для линий любые имена. Такое имя является <a href="https://drafts.csswg.org/css-values-4/#custom-idents">custom ident</a> - именем, определяемым автором. При выборе имени вам нужно избегать слов, которые могут использоваться в спецификации, что приведёт к путанице - например, <code>span</code>. Идентификаторы не заключаются в кавычки.</p>
+## Неявные области сетки из именованных линий
 
-<p>Хотя вы можете выбрать любые имена, но если вы добавляете <code>-start</code> и <code>-end</code> к линиям вокруг области, как в приведённом выше примере, то сетка создаст вам именованную область основного используемого имени. Возьмём приведённый выше пример, у меня есть <code>content-start</code> и <code>content-end</code> как для строк, так и для столбцов. Это означает, что будет создана также область сетки с именем <code>content</code>, которую можно по своему усмотрению.</p>
+Ранее уже упоминалось, что вы можете выбирать для линий любые имена. Такое имя является [custom ident](https://drafts.csswg.org/css-values-4/#custom-idents) - именем, определяемым автором. При выборе имени вам нужно избегать слов, которые могут использоваться в спецификации, что приведёт к путанице - например, `span`. Идентификаторы не заключаются в кавычки.
 
-<div id="implicit_areas_from_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Хотя вы можете выбрать любые имена, но если вы добавляете `-start` и `-end` к линиям вокруг области, как в приведённом выше примере, то сетка создаст вам именованную область основного используемого имени. Возьмём приведённый выше пример, у меня есть `content-start` и `content-end` как для строк, так и для столбцов. Это означает, что будет создана также область сетки с именем `content`, которую можно по своему усмотрению.
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -97,19 +96,19 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<p>Я использую те же определения сетки, что и выше, однако на этот раз я собираюсь поместить один элемент в содержимое <code>content</code> области.</p>
+Я использую те же определения сетки, что и выше, однако на этот раз я собираюсь поместить один элемент в содержимое `content` области.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
@@ -117,53 +116,48 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 .thing {
   grid-area: content;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="thing"&gt;I am placed in an area named content.&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('implicit_areas_from_lines', '500', '330') }}</p>
+```html
+<div class="wrapper">
+  <div class="thing">I am placed in an area named content.</div>
 </div>
+```
 
-<p>Нам не нужно определять, где находятся наши области с помощью <code>grid-template-areas</code> поскольку наши именованные линии создали для нас эту область.</p>
+{{ EmbedLiveSample('implicit_areas_from_lines', '500', '330') }}
 
-<h2 id="Неявные_линии_сетки_из_именованных_областей">Неявные линии сетки из именованных областей</h2>
+Нам не нужно определять, где находятся наши области с помощью `grid-template-areas` поскольку наши именованные линии создали для нас эту область.
 
-<p>Мы видели, как с помощью именованных линий можно создать именованную область. Это работает и наоборот. Именованные области создают именованные строки, которые можно использовать для размещения элементов. Если мы возьмём макет, созданный в руководстве по областям шаблона сетки, мы можем использовать линии, созданные нашими областями, чтобы увидеть, как это работает.</p>
+## Неявные линии сетки из именованных областей
 
-<p>В этом примере я добавил дополнительный div с классом <code>overlay</code>. Мы назвали области, созданные с помощью свойства grid-area, а затем макет, созданный в grid-template-areas. Именованные области:</p>
+Мы видели, как с помощью именованных линий можно создать именованную область. Это работает и наоборот. Именованные области создают именованные строки, которые можно использовать для размещения элементов. Если мы возьмём макет, созданный в руководстве по областям шаблона сетки, мы можем использовать линии, созданные нашими областями, чтобы увидеть, как это работает.
 
-<ul>
- <li><code>hd</code></li>
- <li><code>ft</code></li>
- <li><code>main</code></li>
- <li><code>sd</code></li>
-</ul>
+В этом примере я добавил дополнительный div с классом `overlay`. Мы назвали области, созданные с помощью свойства grid-area, а затем макет, созданный в grid-template-areas. Именованные области:
 
-<p>Строки и линии:</p>
+- `hd`
+- `ft`
+- `main`
+- `sd`
 
-<ul>
- <li><code>hd-start</code></li>
- <li><code>hd-end</code></li>
- <li><code>sd-start</code></li>
- <li><code>sd-end</code></li>
- <li><code>main-start</code></li>
- <li><code>main-end</code></li>
- <li><code>ft-start</code></li>
- <li><code>ft-end</code></li>
-</ul>
+Строки и линии:
 
-<p>Вы можете видеть именованные строки на рисунке, обратите внимание, что некоторые строки имеют двойное именование - например, <code>sd-end</code> и <code>main-start</code> относящиеся к одной и той же строке столбца.</p>
+- `hd-start`
+- `hd-end`
+- `sd-start`
+- `sd-end`
+- `main-start`
+- `main-end`
+- `ft-start`
+- `ft-end`
 
-<p><img alt="An image showing the implicit line names created by our grid areas." src="https://mdn.mozillademos.org/files/14699/5_multiple_lines_from_areas.png" style="height: 396px; width: 1140px;"></p>
+Вы можете видеть именованные строки на рисунке, обратите внимание, что некоторые строки имеют двойное именование - например, `sd-end` и `main-start` относящиеся к одной и той же строке столбца.
 
-<p>Позиционировать <code>overlay</code> используя неявные именованные линии, это то же самое, что позиционировать элемент с помощью названных нами строк..</p>
+![An image showing the implicit line names created by our grid areas.](https://mdn.mozillademos.org/files/14699/5_multiple_lines_from_areas.png)
 
-<div id="implicit_lines_from_area">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Позиционировать `overlay` используя неявные именованные линии, это то же самое, что позиционировать элемент с помощью названных нами строк..
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -171,17 +165,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -207,7 +201,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   grid-area: sd;
 }
 
-.wrapper &gt; div.overlay {
+.wrapper > div.overlay {
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
@@ -216,31 +210,30 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   color: rgb(92,148,13);
   font-size: 150%;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="header"&gt;Header&lt;/div&gt;
-  &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-  &lt;div class="content"&gt;Content&lt;/div&gt;
-  &lt;div class="footer"&gt;Footer&lt;/div&gt;
-  &lt;div class="overlay"&gt;Overlay&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('implicit_lines_from_area', '500', '330') }}</p>
+```html
+<div class="wrapper">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
+  <div class="overlay">Overlay</div>
 </div>
+```
 
-<p>Учитывая, что у нас есть возможность позиционировать создание линий из именованных областей и областей из именованных линий, стоит потратить время на планирование стратегии именования, когда вы начинаете создавать свой макет. Выбирайте имена, которые будут иметь смысл для вас и вашей команды, это облегчит использование созданных вами макетов.</p>
+{{ EmbedLiveSample('implicit_lines_from_area', '500', '330') }}
 
-<h2 id="Определение_одноимённых_линий_при_помощи_функции_repeat">Определение одноимённых линий при помощи функции repeat()</h2>
+Учитывая, что у нас есть возможность позиционировать создание линий из именованных областей и областей из именованных линий, стоит потратить время на планирование стратегии именования, когда вы начинаете создавать свой макет. Выбирайте имена, которые будут иметь смысл для вас и вашей команды, это облегчит использование созданных вами макетов.
 
-<p>Если вы хотите дать всем линиям в вашей сетке уникальное имя, то вам нужно будет написать длинное определение трека, а не использовать синтаксис повтора, так как вам нужно добавить имя в квадратных скобках при определении треков. Если вы используете синтаксис повтора, то в конечном итоге получите несколько строк с одинаковым именем, однако это тоже может быть очень полезно.</p>
+## Определение одноимённых линий при помощи функции repeat()
 
-<p>В следующем примере я создаю сетку с двенадцатью равными по ширине столбцами. Перед определением размера 1fr трека столбца я также определяю имя строки <code>[col-start]</code>. Это означает, что в конечном итоге мы получим сетку, содержащую 12 строк столбцов с именами <code>col-start</code> перед столбцом шириной <code>1fr</code> .</p>
+Если вы хотите дать всем линиям в вашей сетке уникальное имя, то вам нужно будет написать длинное определение трека, а не использовать синтаксис повтора, так как вам нужно добавить имя в квадратных скобках при определении треков. Если вы используете синтаксис повтора, то в конечном итоге получите несколько строк с одинаковым именем, однако это тоже может быть очень полезно.
 
-<div id="multiple_lines_same_name">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+В следующем примере я создаю сетку с двенадцатью равными по ширине столбцами. Перед определением размера 1fr трека столбца я также определяю имя строки `[col-start]`. Это означает, что в конечном итоге мы получим сетку, содержащую 12 строк столбцов с именами `col-start` перед столбцом шириной `1fr` .
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -248,75 +241,79 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
-</div>
+```
 
-
-
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-}</pre>
+}
+```
 
-<p>После того, как вы создали сетку, вы можете разместить на ней элементы. Поскольку у нас есть несколько строк с именем col-start, если вы размещаете элемент после строки col-start, сетка использует самую первую строку с именем col-start, в нашем случае это будет крайняя левая строка. Чтобы обратиться к другой строке, используйте имя плюс номер для этой строки:</p>
+После того, как вы создали сетку, вы можете разместить на ней элементы. Поскольку у нас есть несколько строк с именем col-start, если вы размещаете элемент после строки col-start, сетка использует самую первую строку с именем col-start, в нашем случае это будет крайняя левая строка. Чтобы обратиться к другой строке, используйте имя плюс номер для этой строки:
 
-<pre class="brush: css">.item1 {
+```css
+.item1 {
   grid-column: col-start / col-start 5
 }
-</pre>
+```
 
-<p>Вы можете использовать ключевое слово <code>span</code>. Следующий элемент будет расположен начиная с седьмой линии и займёт три линии.</p>
+Вы можете использовать ключевое слово `span`. Следующий элемент будет расположен начиная с седьмой линии и займёт три линии.
 
-<pre class="brush: css">.item2 {
+```css
+.item2 {
   grid-column: col-start 7 / span 3;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;I am placed from col-start line 1 to col-start 5&lt;/div&gt;
-  &lt;div class="item2"&gt;I am placed from col-start line 7 spanning 3 lines&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<p>{{ EmbedLiveSample('multiple_lines_same_name', '500', '330') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">I am placed from col-start line 1 to col-start 5</div>
+  <div class="item2">I am placed from col-start line 7 spanning 3 lines</div>
 </div>
+```
 
-<p>Если вы посмотрите на этот макет в Firefox Grid Highlighter вы можете увидеть, как отображаются линии столбцов и как наши элементы помещаются против этих линий..</p>
+{{ EmbedLiveSample('multiple_lines_same_name', '500', '330') }}
 
-<p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="https://mdn.mozillademos.org/files/14695/5_named_lines1.png" style="height: 156px; width: 1958px;"></p>
+Если вы посмотрите на этот макет в Firefox Grid Highlighter вы можете увидеть, как отображаются линии столбцов и как наши элементы помещаются против этих линий..
 
-<p>Синтаксис повтора также может принимать трек-лист , это не просто должен быть один размер трека, который повторяется. Приведённый ниже код создаст сетку из восьми дорожек с более узким столбцом ширины 1fr с именем col1-start и более широким столбцом 3fr с именем col2-start.</p>
+![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](https://mdn.mozillademos.org/files/14695/5_named_lines1.png)
 
-<pre class="brush: css">.wrapper {
+Синтаксис повтора также может принимать трек-лист , это не просто должен быть один размер трека, который повторяется. Приведённый ниже код создаст сетку из восьми дорожек с более узким столбцом ширины 1fr с именем col1-start и более широким столбцом 3fr с именем col2-start.
+
+```css
+.wrapper {
   grid-template-columns: repeat(4, [col1-start] 1fr [col2-start] 3fr);
 }
-</pre>
+```
 
-<p>Если ваш повторяющийся синтаксис помещает две строки рядом друг с другом, то они будут объединены и создадут тот же результат, что и присвоение строке нескольких имён в неповторяющемся определении трека. Следующее определение создаёт четыре трека 1fr, каждый из которых имеет начальную и конечную линии.</p>
+Если ваш повторяющийся синтаксис помещает две строки рядом друг с другом, то они будут объединены и создадут тот же результат, что и присвоение строке нескольких имён в неповторяющемся определении трека. Следующее определение создаёт четыре трека 1fr, каждый из которых имеет начальную и конечную линии.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
 }
-</pre>
+```
 
-<p>Если мы запишем это определение без использования повторяющейся нотации, то оно будет выглядеть следующим образом .</p>
+Если мы запишем это определение без использования повторяющейся нотации, то оно будет выглядеть следующим образом .
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
 }
-</pre>
+```
 
-<p>Если вы использовали список треков, то вы можете использовать ключевое слово <code>span</code> не только для охвата ряда строк, но и для охвата ряда строк с определённым именем..</p>
+Если вы использовали список треков, то вы можете использовать ключевое слово `span` не только для охвата ряда строк, но и для охвата ряда строк с определённым именем..
 
-<div id="span_line_number">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -324,17 +321,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
@@ -347,33 +344,33 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   grid-row: 2;
   grid-column: col1-start 2 / span 2 col1-start;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;I am placed from col1-start line 1 to col2-start line 2&lt;/div&gt;
-  &lt;div class="item2"&gt;I am placed from col1-start line 2 spanning 2 lines named col1-start&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('span_line_number', '500', '330') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
+  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
 </div>
+```
 
-<p>За последние три руководства вы обнаружили, что существует множество различных способов размещения элементов с помощью сетки. На первый взгляд это может показаться чрезмерно сложным, но помните, что вам не нужно использовать их все. На практике я нахожу, что для простых макетов хорошо работает использование именованных областей шаблонов, это даёт хорошее визуальное представление о том, как выглядит ваш макет, и возможность легко перемещать элементы по сетке.</p>
+{{ EmbedLiveSample('span_line_number', '500', '330') }}
 
-<p>Если вы работаете со строгим макетом из нескольких столбцов, например, демонстрация именованных строк в последней части этого руководства работает очень хорошо. Если вы рассматриваете сеточные системы, в таких фреймворках, как Foundation или Bootstrap, которые основаны на сетке из 12 столбцов. Затем фреймворк импортирует код для выполнения всех вычислений, чтобы убедиться, что столбцы складываются до 100%. С помощью Grid layout единственный код, который нам нужен для нашего грид-фреймворка, - это:</p>
+За последние три руководства вы обнаружили, что существует множество различных способов размещения элементов с помощью сетки. На первый взгляд это может показаться чрезмерно сложным, но помните, что вам не нужно использовать их все. На практике я нахожу, что для простых макетов хорошо работает использование именованных областей шаблонов, это даёт хорошее визуальное представление о том, как выглядит ваш макет, и возможность легко перемещать элементы по сетке.
 
-<div id="three_column">
-<pre class="brush: css">.wrapper {
+Если вы работаете со строгим макетом из нескольких столбцов, например, демонстрация именованных строк в последней части этого руководства работает очень хорошо. Если вы рассматриваете сеточные системы, в таких фреймворках, как Foundation или Bootstrap, которые основаны на сетке из 12 столбцов. Затем фреймворк импортирует код для выполнения всех вычислений, чтобы убедиться, что столбцы складываются до 100%. С помощью Grid layout единственный код, который нам нужен для нашего грид-фреймворка, - это:
+
+```css
+.wrapper {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, [col-start] 1fr);
 }
-</pre>
+```
 
-<p>Затем мы можем использовать этот фреймворк для вёрстки нашей страницы. Например, чтобы создать макет из трёх столбцов с верхним и нижним колонтитулами, у меня может быть следующая разметка.</p>
+Затем мы можем использовать этот фреймворк для вёрстки нашей страницы. Например, чтобы создать макет из трёх столбцов с верхним и нижним колонтитулами, у меня может быть следующая разметка.
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -381,28 +378,29 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   background-color: #fff4e6;
 }
 
-.wrapper &gt; * {
+.wrapper > * {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <header class="main-header">I am the header</header>
+  <aside class="side1">I am sidebar 1</aside>
+  <article class="content">I am the main article</article>
+  <aside class="side2">I am sidebar 2</aside>
+  <footer class="main-footer">I am the footer</footer>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;header class="main-header"&gt;I am the header&lt;/header&gt;
-  &lt;aside class="side1"&gt;I am sidebar 1&lt;/aside&gt;
-  &lt;article class="content"&gt;I am the main article&lt;/article&gt;
-  &lt;aside class="side2"&gt;I am sidebar 2&lt;/aside&gt;
-  &lt;footer class="main-footer"&gt;I am the footer&lt;/footer&gt;
-&lt;/div&gt;
-</pre>
+Затем я мог бы разместить это в своей структуре компоновки сетки следующим образом.
 
-<p>Затем я мог бы разместить это в своей структуре компоновки сетки следующим образом.</p>
-
-<pre class="brush: css">.main-header,
+```css
+.main-header,
 .main-footer  {
   grid-column: col-start / span 12;
 }
@@ -421,13 +419,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   grid-column: col-start 10 / span 3;
   grid-row: 2;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('three_column', '500', '330') }}</p>
+{{ EmbedLiveSample('three_column', '500', '330') }}
 
-<p>Опять же , маркер сетки полезен, чтобы показать нам, как работает сетка, в которую мы поместили наши элементы.</p>
+Опять же , маркер сетки полезен, чтобы показать нам, как работает сетка, в которую мы поместили наши элементы.
 
-<p><img alt="The layout with the grid highlighted." src="https://mdn.mozillademos.org/files/14697/5_named_lines2.png" style="height: 378px; width: 1958px;"></p>
-</div>
+![The layout with the grid highlighted.](https://mdn.mozillademos.org/files/14697/5_named_lines2.png)
 
-<p>Это все, что мне нужно. Мне не нужно делать никаких вычислений, сетка автоматически удалила мою 10- пиксельную дорожку желоба, прежде чем назначить пространство для треков столбцов 1fr. Когда вы начнёте создавать свои собственные макеты, вы обнаружите, что синтаксис становится более знакомым, и вы выбираете способы, которые лучше всего подходят для вас, а также тип проектов,которые вам нравятся. Попробуйте построить несколько общих шаблонов с помощью этих различных методов, и вскоре вы найдёте свой самый продуктивный способ работы. В следующем руководстве мы рассмотрим, как сетка может размещать элементы для нас - без необходимости использовать свойства размещения вообще!</p>
+Это все, что мне нужно. Мне не нужно делать никаких вычислений, сетка автоматически удалила мою 10- пиксельную дорожку желоба, прежде чем назначить пространство для треков столбцов 1fr. Когда вы начнёте создавать свои собственные макеты, вы обнаружите, что синтаксис становится более знакомым, и вы выбираете способы, которые лучше всего подходят для вас, а также тип проектов,которые вам нравятся. Попробуйте построить несколько общих шаблонов с помощью этих различных методов, и вскоре вы найдёте свой самый продуктивный способ работы. В следующем руководстве мы рассмотрим, как сетка может размещать элементы для нас - без необходимости использовать свойства размещения вообще!

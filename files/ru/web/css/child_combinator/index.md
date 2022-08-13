@@ -3,39 +3,40 @@ title: Селектор дочерних элементов
 slug: Web/CSS/Child_combinator
 translation_of: Web/CSS/Child_combinator
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p><code>Комбинатор &gt;</code> разделяет 2 селектора, находит элементы заданные вторым селектором, являющие <strong>прямыми </strong>потомками для элементов отобранных первым селектором. Напротив, два селектора в <a href="/ru/docs/Web/CSS/Descendant_selectors">селекторе потомков</a>  находят элементы не обязательно являющиеся прямыми потомками, т.е. несмотря на количество "прыжков" до них в DOM.</p>
+`Комбинатор >` разделяет 2 селектора, находит элементы заданные вторым селектором, являющие **прямыми** потомками для элементов отобранных первым селектором. Напротив, два селектора в [селекторе потомков](/ru/docs/Web/CSS/Descendant_selectors) находят элементы не обязательно являющиеся прямыми потомками, т.е. несмотря на количество "прыжков" до них в DOM.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">selector1 &gt; selector2 { <em>style properties</em> }
-</pre>
+    selector1 > selector2 { style properties }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: css">span { background-color: white; }
-div &gt; span {
+```css
+span { background-color: white; }
+div > span {
   background-color: DodgerBlue;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Span 1 в div
-    &lt;span&gt;Span 2 в span, который в div&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;span&gt;Span 3. Не в div вообще&lt;/span&gt;
-</pre>
+```html
+<div>
+  <span>Span 1 в div
+    <span>Span 2 в span, который в div</span>
+  </span>
+</div>
+<span>Span 3. Не в div вообще</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 200, 100) }}</p>
+{{ EmbedLiveSample('Example', 200, 100) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

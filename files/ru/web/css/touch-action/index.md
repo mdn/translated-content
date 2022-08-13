@@ -3,11 +3,12 @@ title: touch-action
 slug: Web/CSS/touch-action
 translation_of: Web/CSS/touch-action
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Css-свойство touch-action указывает как элемент будет управляться через тачскрин (например, при помощи возможности приближения (zooming), встроенной в браузер).</p>
+Css-свойство touch-action указывает как элемент будет управляться через тачскрин (например, при помощи возможности приближения (zooming), встроенной в браузер).
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 touch-action: auto;
 touch-action: none;
 touch-action: pan-x;
@@ -23,105 +24,81 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: unset;
-</pre>
+```
 
-<p>По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие  {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнёт обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь своё поведение для оставшихся жестов благодаря прослушиванию событий  {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use <code>touch-action</code> to ensure the browser knows the intent of the application before any event listeners have been invoked.</p>
+По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнёт обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь своё поведение для оставшихся жестов благодаря прослушиванию событий {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use `touch-action` to ensure the browser knows the intent of the application before any event listeners have been invoked.
 
-<p>When a gesture is started, the browser intersects the <strong>touch-action</strong> values of the touched element and all its ancestors up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, <strong>touch-action</strong> is typically applied only to individual elements which have some custom behavior, without needing to specify <strong>touch-action</strong> explicitly on any of that element's descendants. After a gesture has started, changes to <strong>touch-action</strong> values will not have any impact on the behavior of the current gesture.</p>
+When a gesture is started, the browser intersects the **touch-action** values of the touched element and all its ancestors up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, **touch-action** is typically applied only to individual elements which have some custom behavior, without needing to specify **touch-action** explicitly on any of that element's descendants. After a gesture has started, changes to **touch-action** values will not have any impact on the behavior of the current gesture.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>touch-action</code> property may be specified as either:</p>
+The `touch-action` property may be specified as either:
 
-<ul>
- <li>any one of the keywords <code><a href="#auto">auto</a></code>, <code><a href="#none">none</a></code>, <code><a href="#manipulation">manipulation</a></code>, <em>or</em></li>
- <li>one of the keywords <code><a href="#pan-x">pan-x</a></code>, <code><a href="#pan-keywords">pan-left</a></code>, <code><a href="#pan-keywords">pan-right</a></code>, and/or one of the keywords <code><a href="#pan-y">pan-y</a></code>, <code><a href="#pan-keywords">pan-up</a></code>, <code><a href="#pan-keywords">pan-down</a></code>, plus optionally the keyword <code><a href="#">pinch-zoom</a></code>.</li>
-</ul>
+- any one of the keywords [`auto`](#auto), [`none`](#none), [`manipulation`](#manipulation), _or_
+- one of the keywords [`pan-x`](#pan-x), [`pan-left`](#pan-keywords), [`pan-right`](#pan-keywords), and/or one of the keywords [`pan-y`](#pan-y), [`pan-up`](#pan-keywords), [`pan-down`](#pan-keywords), plus optionally the keyword [`pinch-zoom`](#).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Enable browser handling of all panning and zooming gestures.</dd>
- <dt><code>none</code></dt>
- <dd>Disable browser handling of all panning and zooming gestures.</dd>
- <dt><code>pan-x</code></dt>
- <dd>Enable single-finger horizontal panning gestures. May be combined with <strong>pan-y, pan-up,</strong> <strong>pan-down </strong>and/or <strong>pinch-zoom</strong>.</dd>
- <dt><code>pan-y</code></dt>
- <dd>Enable single-finger vertical panning gestures. May be combined with <strong>pan-x, pan-left, </strong><strong>pan-right</strong> and/or <strong>pinch-zoom</strong>.</dd>
- <dt><code>manipulation</code></dt>
- <dd>Enable panning and pinch zoom gestures, but disable additional non-standard gestures such as double-tap to zoom. Disabling double-tap to zoom removes the need for browsers to delay the generation of <strong>click</strong> events when the user taps the screen. This is an alias for "<strong>pan-x pan-y pinch-zoom</strong>" (which, for compatibility, is itself still valid).</dd>
- <dt><code>pan-left</code>, <code>pan-right,pan-up,pan-down</code> {{experimental_inline}}</dt>
- <dd>Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (<strong>pan-up</strong>) means that the user is dragging their finger downward on the screen surface, and likewise <strong>pan-left</strong> means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, <strong>"</strong><strong>pan-left pan-right</strong>" is invalid since "<strong>pan-x</strong>" is simpler, but "<strong>pan-left pan-down</strong>" is valid).</dd>
- <dt><code>pinch-zoom</code></dt>
- <dd>Enable multi-finger panning and zooming of the page. This may be combined with any of the <strong>pan-</strong> values.</dd>
-</dl>
+- `auto`
+  - : Enable browser handling of all panning and zooming gestures.
+- `none`
+  - : Disable browser handling of all panning and zooming gestures.
+- `pan-x`
+  - : Enable single-finger horizontal panning gestures. May be combined with **pan-y, pan-up,** **pan-down** and/or **pinch-zoom**.
+- `pan-y`
+  - : Enable single-finger vertical panning gestures. May be combined with **pan-x, pan-left,** **pan-right** and/or **pinch-zoom**.
+- `manipulation`
+  - : Enable panning and pinch zoom gestures, but disable additional non-standard gestures such as double-tap to zoom. Disabling double-tap to zoom removes the need for browsers to delay the generation of **click** events when the user taps the screen. This is an alias for "**pan-x pan-y pinch-zoom**" (which, for compatibility, is itself still valid).
+- `pan-left`, `pan-right,pan-up,pan-down` {{experimental_inline}}
+  - : Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (**pan-up**) means that the user is dragging their finger downward on the screen surface, and likewise **pan-left** means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, **"\*\***pan-left pan-right**" is invalid since "**pan-x**" is simpler, but "**pan-left pan-down\*\*" is valid).
+- `pinch-zoom`
+  - : Enable multi-finger panning and zooming of the page. This may be combined with any of the **pan-** values.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The most common usage is to disable all gestures on an element (and its non-scrollable descendants) that provides its own dragging and zooming behavior – such as a map or game surface. </p>
+The most common usage is to disable all gestures on an element (and its non-scrollable descendants) that provides its own dragging and zooming behavior – such as a map or game surface.
 
-<pre class="brush: css">#map {
+```css
+#map {
   touch-action: none;
 }
-</pre>
+```
 
-<p>Another common pattern is that of an image carousel which uses pointer events to handle horizontal panning, but doesn't want to interfere with vertical scrolling or zooming of the document.</p>
+Another common pattern is that of an image carousel which uses pointer events to handle horizontal panning, but doesn't want to interfere with vertical scrolling or zooming of the document.
 
-<pre class="brush: css">.image-carousel {
+```css
+.image-carousel {
   width: 100%;
   height: 150px;
   touch-action: pan-y pinch-zoom;
 }
-</pre>
+```
 
-<p><strong>touch-action </strong>is also often used to completely disable the delay of <strong>click </strong>events caused by support for the<strong> </strong>double-tap to zoom gesture.</p>
+**touch-action** is also often used to completely disable the delay of **click** events caused by support for the\*\* \*\*double-tap to zoom gesture.
 
-<pre class="brush: css">html {
+```css
+html {
   touch-action: manipulation;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#touch-action', 'touch-action')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Added <code>pinch-zoom</code> property value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Added <code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> property values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                                   | Comment                                                              |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                     | {{Spec2('Compat')}}                 | Added `pinch-zoom` property value.                                   |
+| {{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events 2')}} | Added `pan-left`, `pan-right`, `pan-up`, `pan-down` property values. |
+| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events')}}     | Initial definition                                                   |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{compat("css.properties.touch-action")}}</p>
+{{compat("css.properties.touch-action")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Pointer_events","Pointer Events")}}</li>
- <li>WebKit Blog <a href="https://webkit.org/blog/5610/more-responsive-tapping-on-ios/" rel="bookmark" title="Permanent Link: More Responsive Tapping on iOS">More Responsive Tapping on iOS</a></li>
-</ul>
+- {{domxref("Pointer_events","Pointer Events")}}
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")

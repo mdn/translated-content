@@ -6,17 +6,16 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-count
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS </a>свойство <strong><code>column-count</code></strong> разбивает содержимое элемента на заданное число столбцов.</p>
+[CSS ](/ru/docs/Web/CSS)свойство **`column-count`** разбивает содержимое элемента на заданное число столбцов.
 
-<div>{{EmbedInteractiveExample("pages/css/column-count.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-count.html")}}
 
+## Синтаксис
 
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Значение, заданное ключевым словом */
+```css
+/* Значение, заданное ключевым словом */
 column-count: auto;
 
 /* целое значение */
@@ -25,58 +24,55 @@ column-count: 3;
 /* глобальные значения */
 column-count: inherit;
 column-count: initial;
-column-count: unset;</pre>
+column-count: unset;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Количество столбцов определяется другими свойствами CSS, такими как {{cssxref("column-width")}}.</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Является строго положительным {{cssxref("&lt;integer&gt;")}}, описывающим идеальное число столбцов, в которые будет стекаться содержимое элемента.  Если {{cssxref("column-width")}}. также, не установлено в значение  -<code>auto</code>, оно указывает максимально допустимое число столбцов.</dd>
-</dl>
+- `auto`
+  - : Количество столбцов определяется другими свойствами CSS, такими как {{cssxref("column-width")}}.
+- {{cssxref("&lt;integer&gt;")}}
+  - : Является строго положительным {{cssxref("&lt;integer&gt;")}}, описывающим идеальное число столбцов, в которые будет стекаться содержимое элемента. Если {{cssxref("column-width")}}. также, не установлено в значение -`auto`, оно указывает максимально допустимое число столбцов.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `column-count` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   column-count: 3;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Пример', 'auto', 120)}}</p>
+{{EmbedLiveSample('Пример', 'auto', 120)}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a> (Learn Layout)</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">Basic Concepts of Multicol</a></li>
-</ul>
+- [Multiple-column Layout](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
+- [Basic Concepts of Multicol](/ru/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)

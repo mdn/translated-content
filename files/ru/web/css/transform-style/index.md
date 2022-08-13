@@ -3,19 +3,20 @@ title: transform-style
 slug: Web/CSS/transform-style
 translation_of: Web/CSS/transform-style
 ---
-<div>{{CSSRef("CSS Transforms")}}{{SeeCompatTable}}</div>
+{{CSSRef("CSS Transforms")}}{{SeeCompatTable}}
 
-<p>Свойство <code>transform-style</code> <a href="/en-US/docs/Web/CSS">CSS</a> определяет положение дочернего элемента в 3D-пространстве или в той же плоскости, что и родительский элемент.</p>
+Свойство `transform-style` [CSS](/ru/docs/Web/CSS) определяет положение дочернего элемента в 3D-пространстве или в той же плоскости, что и родительский элемент.
 
-<p>Если flat, то дочерний элемент  не будет существовать в своём собственном 3D-пространстве.</p>
+Если flat, то дочерний элемент не будет существовать в своём собственном 3D-пространстве.
 
-<p>Поскольку это свойство не наследуется, его следует устанавливать для всех не прямых потомков элемента.</p>
+Поскольку это свойство не наследуется, его следует устанавливать для всех не прямых потомков элемента.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 transform-style: preserve-3d;
 transform-style: flat;
 
@@ -23,46 +24,29 @@ transform-style: flat;
 transform-style: inherit;
 transform-style: initial;
 transform-style: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>preserve-3d</code></dt>
- <dd>Показывает, что дочерний элемент должен быть спозиционирован в 3D-пространстве.</dd>
- <dt><code>flat</code></dt>
- <dd>Показывает, что дочерний элемент лежит в той же плоскости, что и родительский.</dd>
-</dl>
+- `preserve-3d`
+  - : Показывает, что дочерний элемент должен быть спозиционирован в 3D-пространстве.
+- `flat`
+  - : Показывает, что дочерний элемент лежит в той же плоскости, что и родительский.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-style', 'transform-style')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Transforms', '#transform-style', 'transform-style')}} | {{Spec2('CSS3 Transforms')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></li>
-</ul>
+- [Using CSS Transforms](/ru/docs/CSS/Using_CSS_transforms)

@@ -5,26 +5,27 @@ tags:
   - Контекст
 translation_of: Web/CSS/content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>content</code></strong> заменяет элемент сгенерированным значением. Объекты, добавленные с помощью свойства <code>content</code> являются <em>анонимными  </em>property are <em>anonymous <a href="/en-US/docs/Web/CSS/Replaced_element">замещаемыми элементами</a>.</em></p>
+[CSS](/ru/docs/Web/CSS)-свойство **`content`** заменяет элемент сгенерированным значением. Объекты, добавленные с помощью свойства `content` являются _анонимными_ property are _anonymous [замещаемыми элементами](/ru/docs/Web/CSS/Replaced_element)._
 
-<pre class="brush:css no-line-numbers">/* Ключевые слова, которые нельзя комбинировать с другими значениями */
+```css
+/* Ключевые слова, которые нельзя комбинировать с другими значениями */
 content: normal;
 content: none;
 
-/* значение &lt;url&gt;  */
+/* значение <url>  */
 content: url("http://www.example.com/test.png");
 
-/* значение <a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a>  */
+/* значение <image>  */
 content: linear-gradient(#e66465, #9198e5);
 
 /* указанные ниже значения могут быть применены только к сгенерированному контенту с использованием ::before и ::after */
 
-/* значение &lt;string&gt;  */
+/* значение <string>  */
 content: "prefix";
 
-/* значения &lt;counter&gt; */
+/* значения <counter> */
 content: counter(chapter_counter);
 content: counters(section_counter, ".");
 
@@ -44,72 +45,69 @@ content: open-quote chapter_counter;
 content: inherit;
 content: initial;
 content: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Псевдоэлемент не генерируется.</dd>
- <dt><code>normal</code></dt>
- <dd>Вычисляется <code>none</code> для псевдоэлементов <code>::before</code> и<code>::after</code>.</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>Любое количество текстовых символов. Нелатинские символы должны быть закодированы с использованием их escape-последовательности Unicode: например, <code>\000A9</code> представляет собой символ авторского права.</dd>
- <dt>{{cssxref("&lt;url&gt;")}}</dt>
- <dd>URL-адрес, указывающий на внешний ресурс (к примеру, изображение). Если ресурс не может быть отображён, он игнорируется или отображается значение по умолчанию.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>{{cssxref("&lt;image&gt;")}}, указанный типом данных {{cssxref("&lt;url&gt;")}} или {{cssxref("&lt;gradient&gt;")}}, или частью веб-страницы, определяемой функцией {{cssxref("element", "element()")}}, указывающей содержимое для обозначения.</dd>
- <dt>{{cssxref("&lt;counter&gt;")}}</dt>
- <dd><p>Значение <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS счётчика</a>, как правило число. Его можно отобразить с помощью функций  {{cssxref("counter()")}} или{{cssxref("counters()")}}.</p>
- <p>Функция <code>counter()</code> имеет две формы записи: 'counter(<var>имя</var>)' или 'counter(<var>имя</var>, <var>стиль</var>)'. Сгенерированный текст - это значение самого вложенного счётчика с заданным именем в области видимости данного элемента. Он отформатирован в указанном стиле (по умолчанию <code>decimal</code>).</p>
+- `none`
+  - : Псевдоэлемент не генерируется.
+- `normal`
+  - : Вычисляется `none` для псевдоэлементов `::before` и`::after`.
+- {{cssxref("&lt;string&gt;")}}
+  - : Любое количество текстовых символов. Нелатинские символы должны быть закодированы с использованием их escape-последовательности Unicode: например, `\000A9` представляет собой символ авторского права.
+- {{cssxref("&lt;url&gt;")}}
+  - : URL-адрес, указывающий на внешний ресурс (к примеру, изображение). Если ресурс не может быть отображён, он игнорируется или отображается значение по умолчанию.
+- {{cssxref("&lt;image&gt;")}}
+  - : {{cssxref("&lt;image&gt;")}}, указанный типом данных {{cssxref("&lt;url&gt;")}} или {{cssxref("&lt;gradient&gt;")}}, или частью веб-страницы, определяемой функцией {{cssxref("element", "element()")}}, указывающей содержимое для обозначения.
+- {{cssxref("&lt;counter&gt;")}}
+  - : Значение [CSS счётчика](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), как правило число. Его можно отобразить с помощью функций {{cssxref("counter()")}} или{{cssxref("counters()")}}.Функция `counter()` имеет две формы записи: 'counter(_имя_)' или 'counter(_имя_, _стиль_)'. Сгенерированный текст - это значение самого вложенного счётчика с заданным именем в области видимости данного элемента. Он отформатирован в указанном стиле (по умолчанию `decimal`).Функция `counters()` также имеет две формы записи: 'counters(_name_, _string_)' или 'counters(_name_, _string_, _style_)'. Сгенерированный текст - это значение всех счётчиков с заданным именем в области видимости данного элемента, от крайнего к вложенному. разделённых указанной строкой. Счётчики отображаются в указанном стиле (по умолчанию `decimal`).
+- `attr(x)`
+  - : Значение атрибута `x` элемента в виде строки. Если атрибут `x` отсутствует, вернётся пустая строка. Чувствительность к регистру в названии атрибута зависит от языка документа.
+- `open-quote` | `close-quote`
+  - : Эти значения заменяются соответствующей строкой из свойства {{cssxref("quotes")}}.
+- `no-open-quote` | `no-close-quote`
+  - : Не вводит никакого содержимого, но увеличивает (уменьшает) уровень вложенности для кавычек.
 
- <p>Функция <code>counters()</code> также имеет две формы записи: 'counters(<var>name</var>, <var>string</var>)' или 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. Сгенерированный текст - это значение всех счётчиков с заданным именем в области видимости данного элемента, от крайнего к вложенному. разделённых указанной строкой. Счётчики отображаются в указанном стиле (по умолчанию <code>decimal</code>).</p>
- </dd>
- <dt><code>attr(x)</code></dt>
- <dd>Значение атрибута <code>x</code> элемента в виде строки. Если атрибут <code>x</code> отсутствует, вернётся пустая строка. Чувствительность к регистру в названии атрибута зависит от языка документа.</dd>
- <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>Эти значения заменяются соответствующей строкой из свойства {{cssxref("quotes")}}.</dd>
- <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
- <dd>Не вводит никакого содержимого, но увеличивает (уменьшает) уровень вложенности для кавычек.</dd>
-</dl>
-
-<h3 id="Синтаксис_2">Синтаксис</h3>
+### Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Заголовки_и_двойные_кавычки">Заголовки и двойные кавычки</h3>
+### Заголовки и двойные кавычки
 
-<p>В этом примере вставляются кавычки вокруг кавычек а добавляет слово  "Глава" перед заголовками.</p>
+В этом примере вставляются кавычки вокруг кавычек а добавляет слово "Глава" перед заголовками.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
-&lt;p&gt;According to Sir Tim Berners-Lee,
-  &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;I was
+```html
+<h1>5</h1>
+<p>According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.&lt;/q&gt;
+    already existed - and had for a decade and a half.</q>
   We must understand that there is nothing fundamentally wrong
   with building on the contributions of others.
-&lt;/p&gt;
+</p>
 
-&lt;h1&gt;6&lt;/h1&gt;
-&lt;p&gt;According to the Mozilla Manifesto,
-  &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;Individuals
+<h1>6</h1>
+<p>According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
     must have the ability to shape the Internet and
-    their own experiences on the Internet.&lt;/q&gt;
+    their own experiences on the Internet.</q>
   Therefore, we can infer that contributing to the open web
   can protect our own individual experiences on it.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   color: blue;
 }
 
@@ -125,75 +123,87 @@ h1::before  {
   content: "Chapter ";  /* Пробел в конце создаёт разделение
                             между добавленным контентом
                            и остальным контентом*/
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Заголовки_и_двойные_кавычки', '100%', 200)}}</p>
+{{EmbedLiveSample('Заголовки_и_двойные_кавычки', '100%', 200)}}
 
-<h3 id="Изображение_в_сочетании_с_текстом">Изображение в сочетании с текстом</h3>
+### Изображение в сочетании с текстом
 
-<p>В этом примере вставляется изображение перед ссылкой. Если изображение не найдено, вставляет текст.</p>
+В этом примере вставляется изображение перед ссылкой. Если изображение не найдено, вставляет текст.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="http://www.mozilla.org/en-US/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
+```html
+<a href="http://www.mozilla.org/en-US/">Mozilla Home Page</a>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a::before {
+```css
+a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Изображение_в_сочетании_с_текстом', '100%', 60)}}</p>
+{{EmbedLiveSample('Изображение_в_сочетании_с_текстом', '100%', 60)}}
 
-<h3 id="Целевые_классы">Целевые классы</h3>
+### Целевые классы
 
-<p>В этом примере вставляется дополнительный текст после указанных элементов списка.</p>
+В этом примере вставляется дополнительный текст после указанных элементов списка.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Paperback Best Sellers&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Political Thriller&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Halloween Stories&lt;/li&gt;
-  &lt;li&gt;My Biography&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Vampire Romance&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<h2>Paperback Best Sellers</h2>
+<ol>
+  <li>Political Thriller</li>
+  <li class="new-entry">Halloween Stories</li>
+  <li>My Biography</li>
+  <li class="new-entry">Vampire Romance</li>
+</ol>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.new-entry::after {
+```css
+.new-entry::after {
   content: " New!";  /* Начальный пробел создаёт разделение
                         между добавленным контентом
                         и остальным контентом */
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Результат_3">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Целевые_классы', '100%', 160)}}</p>
+{{EmbedLiveSample('Целевые_классы', '100%', 160)}}
 
-<h3 id="Атрибуты_изображений_и_элементов">Атрибуты изображений и элементов</h3>
+### Атрибуты изображений и элементов
 
-<p>В этом примере вставляется изображение перед каждой ссылкой и добавляет <code>id</code> атрибут после.</p>
+В этом примере вставляется изображение перед каждой ссылкой и добавляет `id` атрибут после.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
-    Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-    Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a id="moz" href="http://www.mozilla.org/">
+    Mozilla Home Page</a></li>
+  <li><a id="mdn" href="https://developer.mozilla.org/">
+    Mozilla Developer Network</a></li>
+</ul>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   text-decoration: none;
   border-bottom: 3px dotted navy;
 }
@@ -213,59 +223,56 @@ a::after {
 li {
   margin: 1em;
 }
-</pre>
+```
 
-<h4 id="Результат_4">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Атрибуты_изображений_и_элементов', '100%', 160)}}</p>
+{{EmbedLiveSample('Атрибуты_изображений_и_элементов', '100%', 160)}}
 
-<h3 id="Замена_элемента">Замена элемента</h3>
+### Замена элемента
 
-<p>В этом примере содержимое элемента заменяется изображением. Вы можете заменить содержимое элемента либо значением &lt;url&gt; или изменить значение &lt;image&gt; . Содержимое, добавленное с помощью ::before или ::after не будет сгенерировано, поскольку содержимое элемента будет заменено.</p>
+В этом примере содержимое элемента заменяется изображением. Вы можете заменить содержимое элемента либо значением \<url> или изменить значение \<image> . Содержимое, добавленное с помощью ::before или ::after не будет сгенерировано, поскольку содержимое элемента будет заменено.
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="replaced"&gt;Mozilla&lt;/div&gt;
-</pre>
+```html
+<div id="replaced">Mozilla</div>
+```
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#replaced {
+```css
+#replaced {
   content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
 }
 
 #replaced::after { /* не будет отображаться, если замена элемента поддерживается */
   content: " (" attr(id) ")";
-}</pre>
+}
+```
 
-<h4 id="Результат_5">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Замена_элемента', '100%', 160)}}</p>
+{{EmbedLiveSample('Замена_элемента', '100%', 160)}}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Сгенерированный CSS контент не включён в <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Из-за этого он не будет представлен в  <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.</p>
+Сгенерированный CSS контент не включён в [DOM](/ru/docs/Web/API/Document_Object_Model/Introduction). Из-за этого он не будет представлен в [accessibility tree](/ru/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.
 
-<ul>
- <li><a href="https://tink.uk/accessibility-support-for-css-generated-content/">Accessibility support for CSS generated content – Tink</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Explanation of WCAG, Guideline 1.3 – MDN</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
+- [Explanation of WCAG, Guideline 1.3 – MDN](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{Cssxref("::after")}}</li>
- <li>{{Cssxref("::before")}}</li>
- <li>{{Cssxref("quotes")}}</li>
-</ul>
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("quotes")}}

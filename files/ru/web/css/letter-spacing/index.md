@@ -3,18 +3,19 @@ title: letter-spacing
 slug: Web/CSS/letter-spacing
 translation_of: Web/CSS/letter-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>letter-spacing</code></strong> определяет межбуквенное расстояние в тексте.</p>
+Свойство **`letter-spacing`** определяет межбуквенное расстояние в тексте.
 
-<div>{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Значения - ключевые слова */
+```css
+/* Значения - ключевые слова */
 letter-spacing: normal;
 
-/* Значения &lt;length&gt; */
+/* Значения <length> */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
 letter-spacing: .3px;
@@ -23,67 +24,64 @@ letter-spacing: .3px;
 letter-spacing: inherit;
 letter-spacing: initial;
 letter-spacing: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Стандартное межбуквенное расстояние для текущего шрифта. В отличие от значения <code>0</code>, это ключевое слово позволяет {{glossary("User Agent", "агенту пользователя")}} изменить расстояние между буквами для выравнивания текста.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Определяет дополнительное расстояние между буквами <em>добавляющееся</em> к стандартному расстоянию между символами. Значение может быть отрицательным, но при этом могут быть ограничения, зависящие от конкретной реализации. Агент пользователя может не увеличивать или уменьшать межбуквенное расстояние для выравнивания текста.</dd>
-</dl>
+- `normal`
+  - : Стандартное межбуквенное расстояние для текущего шрифта. В отличие от значения `0`, это ключевое слово позволяет {{glossary("User Agent", "агенту пользователя")}} изменить расстояние между буквами для выравнивания текста.
+- {{cssxref("&lt;length&gt;")}}
+  - : Определяет дополнительное расстояние между буквами _добавляющееся_ к стандартному расстоянию между символами. Значение может быть отрицательным, но при этом могут быть ограничения, зависящие от конкретной реализации. Агент пользователя может не увеличивать или уменьшать межбуквенное расстояние для выравнивания текста.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="normal"&gt;letter spacing&lt;/p&gt;
-&lt;p class="em-wide"&gt;letter spacing&lt;/p&gt;
-&lt;p class="em-wider"&gt;letter spacing&lt;/p&gt;
-&lt;p class="em-tight"&gt;letter spacing&lt;/p&gt;
-&lt;p class="px-wide"&gt;letter spacing&lt;/p&gt;
-</pre>
+```html
+<p class="normal">letter spacing</p>
+<p class="em-wide">letter spacing</p>
+<p class="em-wider">letter spacing</p>
+<p class="em-tight">letter spacing</p>
+<p class="px-wide">letter spacing</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.normal   { letter-spacing: normal; }
+```css
+.normal   { letter-spacing: normal; }
 .em-wide  { letter-spacing: 0.4em; }
 .em-wider { letter-spacing: 1em; }
 .em-tight { letter-spacing: -0.05em; }
 .px-wide  { letter-spacing: 6px; }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Примеры', 440, 185) }}</p>
+{{ EmbedLiveSample('Примеры', 440, 185) }}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Большие положительные или отрицательные значения свойства <code>letter-spacing</code> могут сделать текст, к которому применяется форматирование, нечитаемым. При очень больших положительных значениях этого свойства, буквы в тексте будут настолько далеко друг от друга, что не будут восприниматься как цельные слова. При очень больших отрицательных значениях буквы будут перекрываться друг другом до такой степени, что слова могут стать неразличимы.</p>
+Большие положительные или отрицательные значения свойства `letter-spacing` могут сделать текст, к которому применяется форматирование, нечитаемым. При очень больших положительных значениях этого свойства, буквы в тексте будут настолько далеко друг от друга, что не будут восприниматься как цельные слова. При очень больших отрицательных значениях буквы будут перекрываться друг другом до такой степени, что слова могут стать неразличимы.
 
-<p>Межбуквенное расстояние должно быть определено индивидуально для каждого случая, так как в разных семействах шрифтов ширина символов различна. Нет какого-то универсального значения, которое может быть применено для наилучшего отображения во всех семействах шрифтов.</p>
+Межбуквенное расстояние должно быть определено индивидуально для каждого случая, так как в разных семействах шрифтов ширина символов различна. Нет какого-то универсального значения, которое может быть применено для наилучшего отображения во всех семействах шрифтов.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8  | W3C Understanding WCAG 2.0</a> </li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("font-kerning")}}</li>
-</ul>
+## Смотрите также
+
+- {{cssxref("font-kerning")}}

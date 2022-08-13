@@ -10,18 +10,19 @@ tags:
   - Справка
 translation_of: Web/CSS/display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">Свойство <strong><code>display</code></strong> (<a href="/ru/docs/Web/CSS">CSS</a>) определяет <dfn><em>тип отображения (display type)</em> элемента</dfn>, имеющий два основных свойства, определяющих генерацию боксов — <strong>внешний тип отображения</strong> определяет расположение бокса в <a href="/ru/docs/Web/CSS/CSS_Flow_Layout">схеме потока (flow layout)</a> и <strong>внутренний тип отображения</strong> определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).</p>
+Свойство **`display`** ([CSS](/ru/docs/Web/CSS)) определяет \__тип отображения (display type)_ элемента\_, имеющий два основных свойства, определяющих генерацию боксов — **внешний тип отображения** определяет расположение бокса в [схеме потока (flow layout)](/ru/docs/Web/CSS/CSS_Flow_Layout) и **внутренний тип отображения** определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).
 
-<p>Некоторые значения свойства <code>display</code> полностью определены в их индивидуальных спецификациях; смотрите таблицу в конце этого документа со ссылками на все релевантные спецификации. Полный список значений приведён ниже.</p>
+Некоторые значения свойства `display` полностью определены в их индивидуальных спецификациях; смотрите таблицу в конце этого документа со ссылками на все релевантные спецификации. Полный список значений приведён ниже.
 
-<pre class="brush:css no-line-numbers">/* &lt;display-outside&gt; values */
+```css
+/* <display-outside> values */
 display: block;
 display: inline;
 display: run-in;
 
-/* &lt;display-inside&gt; values */
+/* <display-inside> values */
 display: flow;
 display: flow-root;
 display: table;
@@ -29,12 +30,12 @@ display: flex;
 display: grid;
 display: ruby;
 
-/* &lt;display-outside&gt; plus &lt;display-inside&gt; values */
+/* <display-outside> plus <display-inside> values */
 display: block flow;
 display: inline table;
 display: flex run-in;
 
-/* &lt;display-listitem&gt; values */
+/* <display-listitem> values */
 display: list-item;
 display: list-item block;
 display: list-item inline;
@@ -44,7 +45,7 @@ display: list-item block flow;
 display: list-item block flow-root;
 display: flow list-item block;
 
-/* &lt;display-internal&gt; values */
+/* <display-internal> values */
 display: table-row-group;
 display: table-header-group;
 display: table-footer-group;
@@ -58,11 +59,11 @@ display: ruby-text;
 display: ruby-base-container;
 display: ruby-text-container;
 
-/* &lt;display-box&gt; values */
+/* <display-box> values */
 display: contents;
 display: none;
 
-/* &lt;display-legacy&gt; values */
+/* <display-legacy> values */
 display: inline-block;
 display: inline-table;
 display: inline-flex;
@@ -72,104 +73,98 @@ display: inline-grid;
 display: inherit;
 display: initial;
 display: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Свойство <code>display</code> задаётся с помощью ключевых слов. Ключевые слова группируются по шести категориям:</p>
+Свойство `display` задаётся с помощью ключевых слов. Ключевые слова группируются по шести категориям:
 
-<dl>
- <dt>{{CSSxRef("&lt;display-outside&gt;")}}</dt>
- <dd>Эти ключевые слова определяют внешний тип отображения (outer display type) элемента, который играет существенную роль в схеме потока.</dd>
- <dt>{{CSSxRef("&lt;display-inside&gt;")}}</dt>
- <dd>Эти ключевые слова определяют внутренний тип отображения ( inner display type) элемента, который определяет тип контекста форматирования, в котором располагается его содержимое (при условии, что это незаменяемый элемент).</dd>
- <dt>{{CSSxRef("&lt;display-listitem&gt;")}}</dt>
- <dd>Создаёт блоковый бокс для контента и отдельный строковый (inline) бокс для элемента списка.</dd>
- <dt>{{CSSxRef("&lt;display-internal&gt;")}}</dt>
- <dd>Некоторые модели разметки, такие как <code><span class="css">table</span></code> и <code>ruby,</code> имеют сложную внутреннюю структуру с несколькими различными ролями, которые могут выполнять их дочерние элементы и потомки. Этот раздел определяет те "внутренние" значения отображения, которые имеют смысл только в рамках этих конкретных методов разметок.</dd>
- <dt>{{CSSxRef("&lt;display-box&gt;")}}</dt>
- <dd>Эти значения определяют, генерирует ли элемент отображение боксов вообще.</dd>
- <dt>{{CSSxRef("&lt;display-legacy&gt;")}}</dt>
- <dd>В CSS 2 используется синтаксис с одним ключевым словом для свойства <code>display</code>, для которого требуются отдельные ключевые слова для блокового и строкового уровней одного способа разметки.</dd>
- <dt><code><a href="/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul">&lt;display-xul&gt;</a></code> {{Non-standard_Inline}}{{Deprecated_Inline(62)}}</dt>
- <dd>Значения, используемые только в Firefox, в основном, для стилизации. <a href="/ru/docs/Mozilla/Tech/XUL">XUL documents</a>.</dd>
-</dl>
+- {{CSSxRef("&lt;display-outside&gt;")}}
+  - : Эти ключевые слова определяют внешний тип отображения (outer display type) элемента, который играет существенную роль в схеме потока.
+- {{CSSxRef("&lt;display-inside&gt;")}}
+  - : Эти ключевые слова определяют внутренний тип отображения ( inner display type) элемента, который определяет тип контекста форматирования, в котором располагается его содержимое (при условии, что это незаменяемый элемент).
+- {{CSSxRef("&lt;display-listitem&gt;")}}
+  - : Создаёт блоковый бокс для контента и отдельный строковый (inline) бокс для элемента списка.
+- {{CSSxRef("&lt;display-internal&gt;")}}
+  - : Некоторые модели разметки, такие как `table` и `ruby,` имеют сложную внутреннюю структуру с несколькими различными ролями, которые могут выполнять их дочерние элементы и потомки. Этот раздел определяет те "внутренние" значения отображения, которые имеют смысл только в рамках этих конкретных методов разметок.
+- {{CSSxRef("&lt;display-box&gt;")}}
+  - : Эти значения определяют, генерирует ли элемент отображение боксов вообще.
+- {{CSSxRef("&lt;display-legacy&gt;")}}
+  - : В CSS 2 используется синтаксис с одним ключевым словом для свойства `display`, для которого требуются отдельные ключевые слова для блокового и строкового уровней одного способа разметки.
+- [`<display-xul>`](/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul) {{Non-standard_Inline}}{{Deprecated_Inline(62)}}
+  - : Значения, используемые только в Firefox, в основном, для стилизации. [XUL documents](/ru/docs/Mozilla/Tech/XUL).
 
-<h3 id="Наследственные_значения_отображения">"Наследственные" значения отображения</h3>
+### "Наследственные" значения отображения
 
-<p>Спецификация уровня 3 подразумевает два значения для свойства <code>display</code> — позволяет специфицировать внешний и внутренний тип отображения явно — но это поддерживается браузерами пока недостаточно хорошо.</p>
+Спецификация уровня 3 подразумевает два значения для свойства `display` — позволяет специфицировать внешний и внутренний тип отображения явно — но это поддерживается браузерами пока недостаточно хорошо.
 
-<p>Методы display-legacy позволяют получать такие же результаты с одиночными значениями ключевых слов и должны поддерживаться разработчиками до тех пор, пока два значения ключевых слов не будут лучше поддерживаться. Например, используя два значения, вы можете задать строковый (inline) flex контейнер следующим образом:</p>
+Методы display-legacy позволяют получать такие же результаты с одиночными значениями ключевых слов и должны поддерживаться разработчиками до тех пор, пока два значения ключевых слов не будут лучше поддерживаться. Например, используя два значения, вы можете задать строковый (inline) flex контейнер следующим образом:
 
-<pre class="brush: css">.container {
+```css
+.container {
     display: inline flex;
-}</pre>
+}
+```
 
-<p><span id="result_box" lang="ru"><span>В настоящее время это можно задать с помощью одного значения</span></span>.</p>
+В настоящее время это можно задать с помощью одного значения.
 
-<pre class="brush: css">.container {
+```css
+.container {
     display: inline-flex;
 }
-</pre>
+```
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В разделе <a href="#syntax">Syntax</a> содержатся несколько примеров для разных типов значений <code>display</code>, которые это свойство может принимать.</p>
+В разделе [Syntax](#syntax) содержатся несколько примеров для разных типов значений `display`, которые это свойство может принимать.
 
-<p>Кроме того, вы можете найти подробные объяснения способов разметки для определённых значений <code>display</code> в других статьях на MDN:</p>
+Кроме того, вы можете найти подробные объяснения способов разметки для определённых значений `display` в других статьях на MDN:
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/CSS_Grid_Layout">Разметка CSS Grid </a></li>
- <li><a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout">Разметка CSS Flexible box</a></li>
- <li><a href="/ru/docs/Learn/CSS/CSS_layout">Разметка CSS</a> (Модуль обучения для начинающих)</li>
-</ul>
+- [Разметка CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout)
+- [Разметка CSS Flexible box](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Разметка CSS](/ru/docs/Learn/CSS/CSS_layout) (Модуль обучения для начинающих)
 
-<h2 id="Доступность">Доступность</h2>
+## Доступность
 
-<h3 id="display_none"><code>display: none;</code></h3>
+### `display: none;`
 
-<p>Если свойство <code>display</code> принимает значение <code>none</code> на элементе,  то элемент удаляется из <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.</p>
+Если свойство `display` принимает значение `none` на элементе, то элемент удаляется из [дерева доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.
 
-<p>Если вы хотите визуально скрыть элемент, более доступной альтернативой является использование <a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">комбинации свойств</a> для визуального удаления изображения с экрана, но это сохраняет его для синтаксического анализа с помощью вспомогательных технологий, таких как считыватели экрана.</p>
+Если вы хотите визуально скрыть элемент, более доступной альтернативой является использование [комбинации свойств](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) для визуального удаления изображения с экрана, но это сохраняет его для синтаксического анализа с помощью вспомогательных технологий, таких как считыватели экрана.
 
-<h3 id="display_contents"><code>display: contents;</code></h3>
+### `display: contents;`
 
-<p>Браузеры удаляют любой элемент со свойством <code>display,</code> имеющим значение <code>contents</code> из  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. <span id="result_box" lang="ru"><span>Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM</span></span>.</p>
+Браузеры удаляют любой элемент со свойством `display,` имеющим значение `contents` из [дерева доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM.
 
-<ul>
- <li><a class="external" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
- <li><a class="external" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents — hiddedevries.nl</a></li>
-</ul>
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
 
-<h3 id="Таблицы">Таблицы</h3>
+### Таблицы
 
-<p>Если у элемента {{HTMLElement("table")}} изменить значение свойства <code>display на </code><code>block</code>, <code>grid</code> или <code>flex, это изменит</code> его представление в  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дереве доступности</a>. Это приводит к тому, что таблица<span id="result_box" lang="ru"><span> не будет объявлена должным образом с помощью технологии чтения экрана.</span></span></p>
+Если у элемента {{HTMLElement("table")}} изменить значение свойства ` display на ``block`, `grid` или `flex, это изменит` его представление в [дереве доступности](/ru/docs/Learn/Доступность/What_is_accessibility). Это приводит к тому, что таблица не будет объявлена должным образом с помощью технологии чтения экрана.
 
-<ul>
- <li><a class="external" href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
- <li><a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость с браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Блоковая и Inline разметка нормальном потоке</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained">Formatting contexts explained</a></li>
- <li>{{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}</li>
- <li>{{CSSxRef("grid")}}, {{CSSxRef("flex")}}</li>
-</ul>
+## Смотрите также
+
+- [Блоковая и Inline разметка нормальном потоке](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting contexts explained](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
+- {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

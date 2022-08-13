@@ -7,137 +7,117 @@ tags:
   - Reference
 translation_of: Web/CSS/Shorthand_properties
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p class="summary"><strong><dfn>Сокращённые свойства</dfn></strong> - это такие CSS-свойства, которые позволяют одновременно устанавливать значения нескольких других свойств. Используя сокращённое свойство, вы можете писать более сжатые (и часто более читаемые) таблицы стилей, экономя время и энергию.</p>
+**_Сокращённые свойства_** - это такие CSS-свойства, которые позволяют одновременно устанавливать значения нескольких других свойств. Используя сокращённое свойство, вы можете писать более сжатые (и часто более читаемые) таблицы стилей, экономя время и энергию.
 
-<p>The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.</p>
+The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.
 
-<h2 id="Tricky_edge_cases">Tricky edge cases</h2>
+## Tricky edge cases
 
-<p>Even if they are very convenient to use, there are a few edge cases to keep in mind when using them:</p>
+Even if they are very convenient to use, there are a few edge cases to keep in mind when using them:
 
-<ol>
- <li>A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it <strong>overrides</strong> previously set values. Therefore:
+1.  A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it **overrides** previously set values. Therefore:
 
-  <pre class="brush:css">background-color: red;
-background: url(images/bg.gif) no-repeat left top;
-</pre>
-  will not set the color of the background to <code>red</code> but to {{cssxref("background-color")}}'s default, <code>transparent</code>, as the second rule has precedence.</li>
- <li>Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword <code>inherit</code> can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword <code>inherit</code>.</li>
- <li>Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
-  <ol>
-   <li>Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
-    <table>
-     <tbody>
-      <tr>
-       <td style="width: 79px;"><img alt="border1.png" src="/files/3646/border1.png"></td>
-       <td><em>The 1-value syntax</em>: <code>border-width: 1em</code> — The unique value represents all edges</td>
-      </tr>
-      <tr>
-       <td><img alt="border2.png" src="/files/3647/border2.png"></td>
-       <td><em>The 2-value syntax</em>: <code>border-width: 1em 2em</code> — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones.</td>
-      </tr>
-      <tr>
-       <td><img alt="border3.png" src="/files/3648/border3.png"></td>
-       <td><em>The 3-value syntax</em>: <code>border-width: 1em 2em 3em</code> — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge</td>
-      </tr>
-      <tr>
-       <td><img alt="border4.png" src="/files/3649/border4.png"></td>
-       <td>
-        <p><em>The 4-value syntax</em>: <code>border-width: 1em 2em 3em 4em</code> — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top (The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word <em>trouble</em>: TRBL)</p>
-       </td>
-      </tr>
-     </tbody>
-    </table>
-   </li>
-   <li>Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
-    <table>
-     <tbody>
-      <tr>
-       <td style="width: 69px;"><img alt="corner1.png" src="/files/3650/corner1.png"></td>
-       <td><em>The 1-value syntax</em>: <code>border-radius: 1em</code> — The unique value represents all corners</td>
-      </tr>
-      <tr>
-       <td><img alt="corner2.png" src="/files/3651/corner2.png"></td>
-       <td><em>The 2-value syntax</em>: <code>border-radius: 1em 2em</code> — The first value represents the top left and bottom right corner, the second the top right and bottom left ones.</td>
-      </tr>
-      <tr>
-       <td><img alt="corner3.png" src="/files/3652/corner3.png"></td>
-       <td><em>The 3-value syntax</em>: <code>border-radius: 1em 2em 3em</code> — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner</td>
-      </tr>
-      <tr>
-       <td><img alt="corner4.png" src="/files/3653/corner4.png"></td>
-       <td>
-        <p><em>The 4-value syntax</em>: <code>border-radius: 1em 2em 3em 4em</code> — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left.</p>
-       </td>
-      </tr>
-     </tbody>
-    </table>
-   </li>
-  </ol>
- </li>
-</ol>
+    ```css
+    background-color: red;
+    background: url(images/bg.gif) no-repeat left top;
+    ```
 
-<h2 id="Background_Properties">Background properties</h2>
+    will not set the color of the background to `red` but to {{cssxref("background-color")}}'s default, `transparent`, as the second rule has precedence.
 
-<p>A background with the following properties ...</p>
+2.  Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
+3.  Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
 
-<pre class="brush:css">background-color: #000;
+    1.  Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+
+        | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |
+        | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | ![border2.png](/files/3647/border2.png) | _The 2-value syntax_: `border-width: 1em 2em` — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones.                                                                                                                        |
+        | ![border3.png](/files/3648/border3.png) | _The 3-value syntax_: `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge                                                                                                                      |
+        | ![border4.png](/files/3649/border4.png) | _The 4-value syntax_: `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top (The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL) |
+
+    2.  Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+
+        | ![corner1.png](/files/3650/corner1.png) | _The 1-value syntax_: `border-radius: 1em` — The unique value represents all corners                                                                                                                                              |
+        | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | ![corner2.png](/files/3651/corner2.png) | _The 2-value syntax_: `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones.                                                                  |
+        | ![corner3.png](/files/3652/corner3.png) | _The 3-value syntax_: `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner                                   |
+        | ![corner4.png](/files/3653/corner4.png) | _The 4-value syntax_: `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left. |
+
+## Background properties
+
+A background with the following properties ...
+
+```css
+background-color: #000;
 background-image: url(images/bg.gif);
 background-repeat: no-repeat;
-background-position: left top;</pre>
+background-position: left top;
+```
 
-<p>... can be shortened to just one declaration:</p>
+... can be shortened to just one declaration:
 
-<pre class="brush:css">background: #000 url(images/bg.gif) no-repeat left top;</pre>
+```css
+background: #000 url(images/bg.gif) no-repeat left top;
+```
 
-<p>(The shorthand form is actually the equivalent of the longhand properties above plus <code>background-attachment: scroll</code> and, in CSS3, some additional properties.)</p>
+(The shorthand form is actually the equivalent of the longhand properties above plus `background-attachment: scroll` and, in CSS3, some additional properties.)
 
-<h2 id="Font_Properties">Font properties</h2>
+## Font properties
 
-<p>The following declarations ...</p>
+The following declarations ...
 
-<pre class="brush:css">font-style: italic;
+```css
+font-style: italic;
 font-weight: bold;
 font-size: .8em;
 line-height: 1.2;
-font-family: Arial, sans-serif;</pre>
+font-family: Arial, sans-serif;
+```
 
-<p>... can be shortened to the following:</p>
+... can be shortened to the following:
 
-<pre class="brush:css">font: italic bold .8em/1.2 Arial, sans-serif;</pre>
+```css
+font: italic bold .8em/1.2 Arial, sans-serif;
+```
 
-<p>This shorthand declaration is actually equivalent to the longhand declarations above plus <code>font-variant: normal</code> and <code>font-size-adjust: none</code> (CSS2.0 / CSS3), <code>font-stretch: normal</code> (CSS3).</p>
+This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
 
-<h2 id="Border_Properties">Border properties</h2>
+## Border properties
 
-<p>With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...</p>
+With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...
 
-<pre class="brush:css">border-width: 1px;
+```css
+border-width: 1px;
 border-style: solid;
-border-color: #000;</pre>
+border-color: #000;
+```
 
-<p>... can be simplified as:</p>
+... can be simplified as:
 
-<pre class="brush:css">border: 1px solid #000;</pre>
+```css
+border: 1px solid #000;
+```
 
-<h2 id="Margin_and_Padding_Properties">Margin and padding properties</h2>
+## Margin and padding properties
 
-<p>Shorthand versions of margin and padding values work the same way. The following CSS declarations ...</p>
+Shorthand versions of margin and padding values work the same way. The following CSS declarations ...
 
-<pre class="brush:css">margin-top: 10px;
+```css
+margin-top: 10px;
 margin-right: 5px;
 margin-bottom: 10px;
-margin-left: 5px;</pre>
+margin-left: 5px;
+```
 
-<p>... are the same as the following declaration. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").</p>
+... are the same as the following declaration. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
 
-<pre class="brush:css">margin: 10px 5px 10px 5px;</pre>
+```css
+margin: 10px 5px 10px 5px;
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{css_key_concepts}}</li>
- <li>Shorthand properties: {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("text-decoration")}}, {{cssxref("transition")}}</li>
-</ul>
+- {{css_key_concepts}}
+- Shorthand properties: {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("text-decoration")}}, {{cssxref("transition")}}

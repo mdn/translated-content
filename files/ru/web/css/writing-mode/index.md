@@ -3,19 +3,20 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 translation_of: Web/CSS/writing-mode
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Свойство <strong><code>writing-mode</code></strong> устанавливает горизонтальное или вертикальное положение текста также как и направление блока.</p>
+Свойство **`writing-mode`** устанавливает горизонтальное или вертикальное положение текста также как и направление блока.
 
-<p>Свойство определяет направление потока блока, в каком направлении складываются контейнеры уровня блока и направление в котором инлайновый контент находится в родительском блоке. Также свойство <code>writing-mode</code> определяет порядок контента блочного уровня.</p>
+Свойство определяет направление потока блока, в каком направлении складываются контейнеры уровня блока и направление в котором инлайновый контент находится в родительском блоке. Также свойство `writing-mode` определяет порядок контента блочного уровня.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 writing-mode: horizontal-tb;
 writing-mode: horizontal-bt;
 writing-mode: vertical-rl;
@@ -25,73 +26,59 @@ writing-mode: vertical-lr;
 writing-mode: inherit;
 writing-mode: initial;
 writing-mode: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>horizontal-tb</code></dt>
- <dd>Content flows horizontally from left to right, vertically from top to bottom. The next horizontal line is positioned below the previous line.</dd>
- <dt><code>horizontal-bt</code></dt>
- <dd>Content flows horizontally from left to right, vertically from bottom to top. The next horizontal line is positioned above the previous line.</dd>
- <dt><code>vertical-rl</code></dt>
- <dd>Content flows vertically from top to bottom, horizontally from right to left. The next vertical line is positioned to the left of the previous line.</dd>
- <dt><code>vertical-lr</code></dt>
- <dd>Content flows vertically from top to bottom, horizontally from left to right. The next vertical line is positioned to the right of the previous line.</dd>
- <dt><code>lr</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code>.</dd>
- <dt><code>lr-tb</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code>.</dd>
- <dt><code>rl</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code>.</dd>
- <dt><code>tb</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-rl</code>.</dd>
- <dt><code>tb-rl</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-rl</code>.</dd>
-</dl>
+- `horizontal-tb`
+  - : Content flows horizontally from left to right, vertically from top to bottom. The next horizontal line is positioned below the previous line.
+- `horizontal-bt`
+  - : Content flows horizontally from left to right, vertically from bottom to top. The next horizontal line is positioned above the previous line.
+- `vertical-rl`
+  - : Content flows vertically from top to bottom, horizontally from right to left. The next vertical line is positioned to the left of the previous line.
+- `vertical-lr`
+  - : Content flows vertically from top to bottom, horizontally from left to right. The next vertical line is positioned to the right of the previous line.
+- `lr` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
+- `lr-tb` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
+- `rl` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
+- `tb` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl`.
+- `tb-rl` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl`.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Пример", 100, 160)}}</p>
+{{EmbedLiveSample("Пример", 100, 160)}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS3 Writing Modes")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                   | Comment            |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>SVG <code><a href="/en-US/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
- <li>{{Cssxref("direction")}}</li>
- <li>{{Cssxref("unicode-bidi")}}</li>
-</ul>
+- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- {{Cssxref("direction")}}
+- {{Cssxref("unicode-bidi")}}

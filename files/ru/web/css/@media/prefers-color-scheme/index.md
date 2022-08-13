@@ -8,36 +8,37 @@ tags:
   - prefers-color-scheme
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries">медиа функция</a> <strong><code>prefers-color-scheme</code></strong> может использоваться для определения того, светлую или тёмную тему использует пользователь в операционной системе.</p>
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-color-scheme`** может использоваться для определения того, светлую или тёмную тему использует пользователь в операционной системе.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Указывает, что пользователь не сделал никаких предпочтений, известных системе. Значение этого ключевого слова оценивается как <code>false</code> в <a href="https://drafts.csswg.org/mediaqueries-5/#boolean-context">логическом контексте</a>.</dd>
- <dt><code><dfn>light</dfn></code></dt>
- <dd>Указывает, что пользователь выбрал светлую тему в операционной системе.</dd>
- <dt><code><dfn>dark</dfn></code></dt>
- <dd>Указывает, что пользователь выбрал тёмную тему в операционной системе.</dd>
-</dl>
+- `no-preference`
+  - : Указывает, что пользователь не сделал никаких предпочтений, известных системе. Значение этого ключевого слова оценивается как `false` в [логическом контексте](https://drafts.csswg.org/mediaqueries-5/#boolean-context).
+- `light`
+  - : Указывает, что пользователь выбрал светлую тему в операционной системе.
+- `dark`
+  - : Указывает, что пользователь выбрал тёмную тему в операционной системе.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В этом примере используется элемент с черным фоном и белым текстом, если пользователь выбрал светлую тему в операционной системе, то цвета будут инвертированы.</p>
+В этом примере используется элемент с черным фоном и белым текстом, если пользователь выбрал светлую тему в операционной системе, то цвета будут инвертированы.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="day"&gt;Day (initial)&lt;/div&gt;
-&lt;div class="day light-scheme"&gt;Day (changes in light scheme)&lt;/div&gt;
-&lt;div class="day dark-scheme"&gt;Day (changes in dark scheme)&lt;/div&gt; &lt;br&gt;
+```html
+<div class="day">Day (initial)</div>
+<div class="day light-scheme">Day (changes in light scheme)</div>
+<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
 
-&lt;div class="night"&gt;Night (initial)&lt;/div&gt;
-&lt;div class="night light-scheme"&gt;Night (changes in light scheme)&lt;/div&gt;
-&lt;div class="night dark-scheme"&gt;Night (changes in dark scheme)&lt;/div&gt;</pre>
+<div class="night">Night (initial)</div>
+<div class="night light-scheme">Night (changes in light scheme)</div>
+<div class="night dark-scheme">Night (changes in dark scheme)</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.day   { background: #eee; color: black; }
+```css
+.day   { background: #eee; color: black; }
 .night { background: #333; color: white; }
 
 @media (prefers-color-scheme: dark) {
@@ -56,24 +57,23 @@ translation_of: Web/CSS/@media/prefers-color-scheme
   width: 7em;
   height: 2em;
   vertical-align: middle;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">Редизайн вашего продукта и сайта для тёмного режима</a>(en)</li>
-</ul>
+- [Редизайн вашего продукта и сайта для тёмного режима](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)(en)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

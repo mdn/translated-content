@@ -9,139 +9,86 @@ tags:
 translation_of: Web/CSS/Pseudo-classes
 original_slug: Web/CSS/Псевдо-классы
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Псевдокласс</strong> в CSS — <dfn>это ключевое слово, добавленное к селектору,</dfn> которое определяет его особое состояние. Например, {{ Cssxref(":hover") }} может быть использован для изменения цвета кнопки при наведении курсора на неё.</p>
+**Псевдокласс** в CSS — _это ключевое слово, добавленное к селектору,_ которое определяет его особое состояние. Например, {{ Cssxref(":hover") }} может быть использован для изменения цвета кнопки при наведении курсора на неё.
 
-<pre class="brush: css no-line-numbers">div:hover {
+```css
+div:hover {
   background-color: #F89B4D;
-}</pre>
-
-<p>Псевдоклассы дают возможность стилизовать элемент на основе не только отношений в DOM-дереве, но и основываясь на внешних факторах, таких как история посещений (например, {{ cssxref(":visited") }}), состояние содержимого (вроде {{ cssxref(":checked") }} у некоторых элементов формы) или позиции курсора мыши (например, {{ cssxref(":hover") }} определяет, находится ли курсор мыши над элементом).</p>
-
-<div class="note">
-<p><strong>Примечание:</strong> В отличие от псевдоклассов, <a href="/ru/docs/Web/CSS/pseudo-elements">псевдоэлементы</a> могут быть использованы для стилизации <em>определённой части</em> элемента.</p>
-</div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="syntaxbox">selector:pseudo-class {
-  property: value;
 }
-</pre>
+```
 
-<p>Как и с обычными классами, можно совмещать вместе в одном селекторе любое число псевдоклассов.</p>
+Псевдоклассы дают возможность стилизовать элемент на основе не только отношений в DOM-дереве, но и основываясь на внешних факторах, таких как история посещений (например, {{ cssxref(":visited") }}), состояние содержимого (вроде {{ cssxref(":checked") }} у некоторых элементов формы) или позиции курсора мыши (например, {{ cssxref(":hover") }} определяет, находится ли курсор мыши над элементом).
 
-<h2 id="Список_стандартных_псевдоклассов">Список стандартных псевдоклассов</h2>
+> **Примечание:** В отличие от псевдоклассов, [псевдоэлементы](/ru/docs/Web/CSS/pseudo-elements) могут быть использованы для стилизации _определённой части_ элемента.
 
-<div class="index">
-<ul>
- <li>{{ Cssxref(":active") }}</li>
- <li>{{ cssxref(':any')}}</li>
- <li>{{ cssxref(':any-link')}}</li>
- <li>{{ Cssxref(":checked") }}</li>
- <li>{{ Cssxref(":default") }}</li>
- <li>{{ Cssxref(":defined") }}</li>
- <li>{{ Cssxref(":dir", ":dir()")}}</li>
- <li>{{ Cssxref(":disabled") }}</li>
- <li>{{ Cssxref(":empty") }}</li>
- <li>{{ Cssxref(":enabled") }}</li>
- <li>{{ Cssxref(":first") }}</li>
- <li>{{ Cssxref(":first-child") }}</li>
- <li>{{ Cssxref(":first-of-type") }}</li>
- <li>{{ Cssxref(":fullscreen") }}</li>
- <li>{{ Cssxref(":focus") }}</li>
- <li>{{ Cssxref(":hover") }}</li>
- <li>{{ Cssxref(":indeterminate") }}</li>
- <li>{{ Cssxref(":in-range") }}</li>
- <li>{{ Cssxref(":invalid") }}</li>
- <li>{{ Cssxref(":lang", ":lang()") }}</li>
- <li>{{ Cssxref(":last-child") }}</li>
- <li>{{ Cssxref(":last-of-type") }}</li>
- <li>{{ Cssxref(":left") }}</li>
- <li>{{ Cssxref(":link") }}</li>
- <li>{{ Cssxref(":not", ":not()") }}</li>
- <li>{{ Cssxref(":nth-child", ":nth-child()") }}</li>
- <li>{{ Cssxref(":nth-last-child", ":nth-last-child()") }}</li>
- <li>{{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}</li>
- <li>{{ Cssxref(":nth-of-type", ":nth-of-type()") }}</li>
- <li>{{ Cssxref(":only-child") }}</li>
- <li>{{ Cssxref(":only-of-type") }}</li>
- <li>{{ Cssxref(":optional") }}</li>
- <li>{{ Cssxref(":out-of-range") }}</li>
- <li>{{ Cssxref(":read-only") }}</li>
- <li>{{ Cssxref(":read-write") }}</li>
- <li>{{ Cssxref(":required") }}</li>
- <li>{{ Cssxref(":right") }}</li>
- <li>{{ Cssxref(":root") }}</li>
- <li>{{ Cssxref(":scope") }}</li>
- <li>{{ Cssxref(":target") }}</li>
- <li>{{ Cssxref(":valid") }}</li>
- <li>{{ Cssxref(":visited") }}</li>
-</ul>
-</div>
+## Синтаксис
 
-<h2 id="Спецификации">Спецификации</h2>
+    selector:pseudo-class {
+      property: value;
+    }
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Fullscreen') }}</td>
-   <td>{{ Spec2('Fullscreen') }}</td>
-   <td>Определён <code>:fullscreen</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Нет изменений от {{ SpecName('HTML5 W3C') }}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Определены <code>:any-link</code>, <code>:local-link</code>, <code>:scope</code>, <code>:active-drop-target</code>, <code>:valid-drop-target</code>, <code>:invalid-drop-target</code>, <code>:current</code>, <code>:past</code>, <code>:future</code>, <code>:placeholder-shown</code>, <code>:user-error</code>, <code>:blank</code>, <code>:nth-match()</code>, <code>:nth-last-match()</code>, <code>:nth-column()</code>, <code>:nth-last-column()</code> и <code>:matches()</code>.<br>
-    Нет существенных изменений для псевдоклассов, определённых в {{SpecName('CSS3 Selectors')}} и {{SpecName('HTML5 W3C')}} (не рассматривая семантическое значение).</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Определено семантическое значение в HTML контексте для  <code>:link</code>, <code>:visited</code>, <code>:active</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code> и <code>:indeterminate</code>.<br>
-    Определены <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code>, <code>:read-write</code> и <code>:dir()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Определены <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code> и <code>:read-write</code>, но без связанного семантического значения.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Определены <code>:target</code>, <code>:root</code>, <code>:nth-child()</code>, <code>:nth-last-of-child()</code>, <code>:nth-of-type()</code>, <code>:nth-last-of-type()</code>, <code>:last-child</code>, <code>:first-of-type</code>, <code>:last-of-type</code>, <code>:only-child</code>, <code>:only-of-type</code>, <code>:empty</code> и <code>:not()</code>.<br>
-    Определён синтаксис для <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code> и <code>:indeterminate</code>, но без связанного семантического значения.<br>
-    Нет значительных изменений для псевдоклассов, определённых в {{SpecName('CSS2.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Определены <code>:lang()</code>, <code>:first-child</code>, <code>:hover</code> и <code>:focus</code>.<br>
-    Нет значительных изменений для псевдоклассов, определённых в {{SpecName('CSS1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Определены <code>:link</code>, <code>:visited</code> и <code>:active</code>, но без связанного семантического значения.</td>
-  </tr>
- </tbody>
-</table>
+Как и с обычными классами, можно совмещать вместе в одном селекторе любое число псевдоклассов.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Список стандартных псевдоклассов
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/Pseudo-elements">Псевдоэлементы</a></li>
-</ul>
+- {{ Cssxref(":active") }}
+- {{ cssxref(':any')}}
+- {{ cssxref(':any-link')}}
+- {{ Cssxref(":checked") }}
+- {{ Cssxref(":default") }}
+- {{ Cssxref(":defined") }}
+- {{ Cssxref(":dir", ":dir()")}}
+- {{ Cssxref(":disabled") }}
+- {{ Cssxref(":empty") }}
+- {{ Cssxref(":enabled") }}
+- {{ Cssxref(":first") }}
+- {{ Cssxref(":first-child") }}
+- {{ Cssxref(":first-of-type") }}
+- {{ Cssxref(":fullscreen") }}
+- {{ Cssxref(":focus") }}
+- {{ Cssxref(":hover") }}
+- {{ Cssxref(":indeterminate") }}
+- {{ Cssxref(":in-range") }}
+- {{ Cssxref(":invalid") }}
+- {{ Cssxref(":lang", ":lang()") }}
+- {{ Cssxref(":last-child") }}
+- {{ Cssxref(":last-of-type") }}
+- {{ Cssxref(":left") }}
+- {{ Cssxref(":link") }}
+- {{ Cssxref(":not", ":not()") }}
+- {{ Cssxref(":nth-child", ":nth-child()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":only-child") }}
+- {{ Cssxref(":only-of-type") }}
+- {{ Cssxref(":optional") }}
+- {{ Cssxref(":out-of-range") }}
+- {{ Cssxref(":read-only") }}
+- {{ Cssxref(":read-write") }}
+- {{ Cssxref(":required") }}
+- {{ Cssxref(":right") }}
+- {{ Cssxref(":root") }}
+- {{ Cssxref(":scope") }}
+- {{ Cssxref(":target") }}
+- {{ Cssxref(":valid") }}
+- {{ Cssxref(":visited") }}
+
+## Спецификации
+
+| Спецификация                             | Статус                               | Комментарий                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('Fullscreen') }}     | {{ Spec2('Fullscreen') }}     | Определён `:fullscreen`.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| {{ SpecName('HTML WHATWG') }} | {{ Spec2('HTML WHATWG') }} | Нет изменений от {{ SpecName('HTML5 W3C') }}.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| {{SpecName('CSS4 Selectors')}} | {{Spec2('CSS4 Selectors')}} | Определены `:any-link`, `:local-link`, `:scope`, `:active-drop-target`, `:valid-drop-target`, `:invalid-drop-target`, `:current`, `:past`, `:future`, `:placeholder-shown`, `:user-error`, `:blank`, `:nth-match()`, `:nth-last-match()`, `:nth-column()`, `:nth-last-column()` и `:matches()`. Нет существенных изменений для псевдоклассов, определённых в {{SpecName('CSS3 Selectors')}} и {{SpecName('HTML5 W3C')}} (не рассматривая семантическое значение). |
+| {{ SpecName('HTML5 W3C') }}     | {{ Spec2('HTML5 W3C') }}     | Определено семантическое значение в HTML контексте для `:link`, `:visited`, `:active`, `:enabled`, `:disabled`, `:checked` и `:indeterminate`. Определены `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only`, `:read-write` и `:dir()`.                                                                                                                                                                                        |
+| {{ SpecName('CSS3 Basic UI') }} | {{ Spec2('CSS3 Basic UI') }} | Определены `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only` и `:read-write`, но без связанного семантического значения.                                                                                                                                                                                                                                                                                                      |
+| {{SpecName('CSS3 Selectors')}} | {{Spec2('CSS3 Selectors')}} | Определены `:target`, `:root`, `:nth-child()`, `:nth-last-of-child()`, `:nth-of-type()`, `:nth-last-of-type()`, `:last-child`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty` и `:not()`. Определён синтаксис для `:enabled`, `:disabled`, `:checked` и `:indeterminate`, но без связанного семантического значения. Нет значительных изменений для псевдоклассов, определённых в {{SpecName('CSS2.1')}}.                                       |
+| {{SpecName('CSS2.1')}}             | {{Spec2('CSS2.1')}}             | Определены `:lang()`, `:first-child`, `:hover` и `:focus`. Нет значительных изменений для псевдоклассов, определённых в {{SpecName('CSS1')}}.                                                                                                                                                                                                                                                                                                                              |
+| {{SpecName('CSS1')}}             | {{Spec2('CSS1')}}             | Определены `:link`, `:visited` и `:active`, но без связанного семантического значения.                                                                                                                                                                                                                                                                                                                                                                                             |
+
+## Смотрите также
+
+- [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements)

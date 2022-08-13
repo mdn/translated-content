@@ -3,15 +3,16 @@ title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
 translation_of: Web/CSS/CSS_Fonts
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Fonts</strong> - модуль в CSS, который определяет свойства связанные со шрифтами и как шрифтовые ресурсы загружаются. Модуль позволяет вам задать стиль шрифта, вроде font-family, font-size и font-weight, lineheight и варианты отображения знаков, когда для одного доступны сразу несколько</p>
+**CSS Fonts** - модуль в CSS, который определяет свойства связанные со шрифтами и как шрифтовые ресурсы загружаются. Модуль позволяет вам задать стиль шрифта, вроде font-family, font-size и font-weight, lineheight и варианты отображения знаков, когда для одного доступны сразу несколько
 
-<h2 id="Базовый_пример">Базовый пример</h2>
+## Базовый пример
 
-<p>Следующий пример показывает простое использование шрифтовых свойств, стилизующих тэг &lt;p&gt;.</p>
+Следующий пример показывает простое использование шрифтовых свойств, стилизующих тэг \<p>.
 
-<pre class="brush: css">p {
+```css
+p {
   width: 600px;
   margin: 0 auto;
   font-family: "Helvetica Neue", "Arial", sans-serif;
@@ -20,113 +21,77 @@ translation_of: Web/CSS/CSS_Fonts
   font-variant-ligatures: normal;
   font-size: 2rem;
   letter-spacing: 1px;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p&gt;Three hundred years ago&lt;br&gt;
-  I thought I might get some sleep&lt;br&gt;
-  I stretched myself out onna antique bed&lt;br&gt;
-  An' my spirit did a midnite creep&lt;/p&gt;</pre>
+```html
+<p>Three hundred years ago<br>
+  I thought I might get some sleep<br>
+  I stretched myself out onna antique bed<br>
+  An' my spirit did a midnite creep</p>
+```
 
-<p>Вывод на экран будет следующим:</p>
+Вывод на экран будет следующим:
 
-<p>{{EmbedLiveSample('Базовый_пример', '100%', '200')}}</p>
+{{EmbedLiveSample('Базовый_пример', '100%', '200')}}
 
-<h2 id="Различные_примеры_шрифтов">Различные примеры шрифтов</h2>
+## Различные примеры шрифтов
 
-<p>Вы можете найти множество вариантов шрифтов на <a href="https://v-fonts.com/">v-fonts.com</a> и <a href="https://www.axis-praxis.org/">axis-praxis.org</a>; так же смотрите наше руководство <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts</a> для большей информации по использованию.</p>
+Вы можете найти множество вариантов шрифтов на [v-fonts.com](https://v-fonts.com/) и [axis-praxis.org](https://www.axis-praxis.org/); так же смотрите наше руководство [Variable fonts](/ru/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) для большей информации по использованию.
 
-<h2 id="Отсылки">Отсылки</h2>
+## Отсылки
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<div class="index">
-<ul>
- <li>{{cssxref("font")}}</li>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("font-feature-settings")}}</li>
- <li>{{cssxref("font-kerning")}}</li>
- <li>{{cssxref("font-language-override")}}</li>
- <li>{{cssxref("font-optical-sizing")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-size-adjust")}}</li>
- <li>{{cssxref("font-stretch")}}</li>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-synthesis")}}</li>
- <li>{{cssxref("font-variant")}}</li>
- <li>{{cssxref("font-variant-alternates")}}</li>
- <li>{{cssxref("font-variant-caps")}}</li>
- <li>{{cssxref("font-variant-east-asian")}}</li>
- <li>{{cssxref("font-variant-ligatures")}}</li>
- <li>{{cssxref("font-variant-numeric")}}</li>
- <li>{{cssxref("font-variant-position")}}</li>
- <li>{{cssxref("font-variation-settings")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("line-height")}}</li>
-</ul>
-</div>
+- {{cssxref("font")}}
+- {{cssxref("font-family")}}
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<dl>
- <dt>{{cssxref("@font-face")}}</dt>
- <dd>
- <div class="index">
- <ul>
-  <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
-  <li>{{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}</li>
-  <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
-  <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
-  <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
-  <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
-  <li>{{cssxref("@font-face/src", "src")}}</li>
-  <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
-  <li>{{cssxref("@font-feature-values")}}</li>
- </ul>
- </div>
- </dd>
-</dl>
+- {{cssxref("@font-face")}}
+  - : \* {{cssxref("@font-face/font-family", "font-family")}}
+    - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
+    - {{cssxref("@font-face/font-style", "font-style")}}
+    - {{cssxref("@font-face/font-variant", "font-variant")}}
+    - {{cssxref("@font-face/font-weight", "font-weight")}}
+    - {{cssxref("@font-face/font-stretch", "font-stretch")}}
+    - {{cssxref("@font-face/src", "src")}}
+    - {{cssxref("@font-face/unicode-range", "unicode-range")}}
+    - {{cssxref("@font-feature-values")}}
 
-<h2 id="Руководство">Руководство</h2>
+## Руководство
 
-<dl>
- <dt><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></dt>
- <dd>В этой обучающей статье для новичков мы детально описываем основы стилизации текста/шрифта, включая определение жирности начертания, вида шрифта и стилей, рассматриваем сокращённую запись свойства font, декорации текста и другие эффекты, а так же межстрочные и межбуквенные интервалы.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide">OpenType font features guide</a></dt>
- <dd>Особенности шрифтов или их варианты ссылаются на различные стили символов или букв, содержащиеся в OpenType. Руководство описывает такие вещи как лигатура (специальные символы объединяющие буквы вроде 'fi' или 'ffl'), кернинг (то, как свободное место распределяется между различными символами) и другое. Всё перечисленное относится к особенностям OpenType и позволяет использовать в вебе специальные свойства и свойства контроля нижнего уровня {{cssxref("font-feature-settings")}}. В статье есть всё, что вам нужно знать об особенностях OpenType шрифтов в CSS.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide</a></dt>
- <dd><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.</dd>
-</dl>
+- [Fundamental text and font styling](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
+  - : В этой обучающей статье для новичков мы детально описываем основы стилизации текста/шрифта, включая определение жирности начертания, вида шрифта и стилей, рассматриваем сокращённую запись свойства font, декорации текста и другие эффекты, а так же межстрочные и межбуквенные интервалы.
+- [OpenType font features guide](/ru/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
+  - : Особенности шрифтов или их варианты ссылаются на различные стили символов или букв, содержащиеся в OpenType. Руководство описывает такие вещи как лигатура (специальные символы объединяющие буквы вроде 'fi' или 'ffl'), кернинг (то, как свободное место распределяется между различными символами) и другое. Всё перечисленное относится к особенностям OpenType и позволяет использовать в вебе специальные свойства и свойства контроля нижнего уровня {{cssxref("font-feature-settings")}}. В статье есть всё, что вам нужно знать об особенностях OpenType шрифтов в CSS.
+- [Variable fonts guide](/ru/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+  - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Adds <code>font-variation-settings</code> (and related higher-level properties) and <code>font-optical-sizing</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Adds <code>font-feature-settings</code> (and related higher-level properties)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font', '')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           | Comment                                                                                         |
+| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Fonts')}}                                     | {{Spec2('CSS4 Fonts')}} | Adds `font-variation-settings` (and related higher-level properties) and `font-optical-sizing`. |
+| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} | Adds `font-feature-settings` (and related higher-level properties)                              |
+| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                                                                                                 |
+| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Initial definition                                                                              |

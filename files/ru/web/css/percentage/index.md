@@ -3,57 +3,57 @@ title: <percentage>
 slug: Web/CSS/percentage
 translation_of: Web/CSS/percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/CSS_Types">тип данных</a> <strong><code>&lt;percentage&gt;</code></strong> представляет значение в процентах. Оно часто используется, чтобы определить размер относительно родительского элемента. Проценты используются в различных свойствах, таких как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, и {{Cssxref("font-size")}}.</p>
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) **`<percentage>`** представляет значение в процентах. Оно часто используется, чтобы определить размер относительно родительского элемента. Проценты используются в различных свойствах, таких как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, и {{Cssxref("font-size")}}.
 
-<div class="note"><strong>Обратите внимание:</strong> Наследуются рассчитанные значения. Таким образом, даже если процентное значение используется на родительском элементе, настоящее значение (такое, как пиксели для типа данных {{cssxref("&lt;length&gt;")}}) будет доступно в унаследованном свойстве, а не значение в процентах.</div>
+> **Примечание:** **Обратите внимание:** Наследуются рассчитанные значения. Таким образом, даже если процентное значение используется на родительском элементе, настоящее значение (такое, как пиксели для типа данных {{cssxref("&lt;length&gt;")}}) будет доступно в унаследованном свойстве, а не значение в процентах.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Тип данных <code>&lt;percentage&gt;</code> состоит из {{cssxref("&lt;number&gt;")}}, за которым следует знак процента (<code>%</code>). Так же впереди может стоять знак <code>+</code> или <code>-</code>, хотя отрицательные значения допустимы не во всех свойствах. Как и у всех единиц измерения CSS между символом процента и числом нет пробельного символа.</p>
+Тип данных `<percentage>` состоит из {{cssxref("&lt;number&gt;")}}, за которым следует знак процента (`%`). Так же впереди может стоять знак `+` или `-`, хотя отрицательные значения допустимы не во всех свойствах. Как и у всех единиц измерения CSS между символом процента и числом нет пробельного символа.
 
-<h2 id="Интерполяция">Интерполяция</h2>
+## Интерполяция
 
-<p>При анимировании значения типа данных <code>&lt;percentage&gt;</code> интерполируются как настоящие числа с плавающей запятой. Скорость интерполяции зависит от функции времени, с которой используется анимация.</p>
+При анимировании значения типа данных `<percentage>` интерполируются как настоящие числа с плавающей запятой. Скорость интерполяции зависит от функции времени, с которой используется анимация.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Ширина_и_левый_отступ">Ширина и левый отступ</h3>
+### Ширина и левый отступ
 
-<pre class="brush: html">&lt;div style="background-color:blue;"&gt;
-  &lt;div style="width:50%; margin-left:20%; background-color:lime;"&gt;
+```html
+<div style="background-color:blue;">
+  <div style="width:50%; margin-left:20%; background-color:lime;">
     Width: 50%, Left margin: 20%
-  &lt;/div&gt;
-  &lt;div style="width:30%; margin-left:60%; background-color:pink;"&gt;
+  </div>
+  <div style="width:30%; margin-left:60%; background-color:pink;">
     Width: 30%, Left margin: 60%
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<p>HTML код выше будет выглядеть так:</p>
+HTML код выше будет выглядеть так:
 
-<p>{{EmbedLiveSample('Ширина_и_левый_отступ', '600', 140)}}</p>
+{{EmbedLiveSample('Ширина_и_левый_отступ', '600', 140)}}
 
-<h3 id="Размер_шрифта">Размер шрифта</h3>
+### Размер шрифта
 
-<pre class="brush: html">&lt;div style="font-size:18px;"&gt;
-  &lt;p&gt;Full-size text (18px)&lt;/p&gt;
-  &lt;p&gt;&lt;span style="font-size:50%;"&gt;50%&lt;/span&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;span style="font-size:200%;"&gt;200%&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div style="font-size:18px;">
+  <p>Full-size text (18px)</p>
+  <p><span style="font-size:50%;">50%</span></p>
+  <p><span style="font-size:200%;">200%</span></p>
+</div>
+```
 
-<p>HTML код выше будет выглядеть так:</p>
+HTML код выше будет выглядеть так:
 
-<p>{{EmbedLiveSample('Размер_шрифта', 'auto', 160)}}</p>
+{{EmbedLiveSample('Размер_шрифта', 'auto', 160)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

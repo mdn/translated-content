@@ -3,22 +3,23 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><strong><code>flex-flow</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство, которое является сокращением для отдельных свойств <code>flex-direction</code> и <code>flex-wrap</code>.</p>
+**`flex-flow`** [CSS](/ru/docs/CSS "CSS") свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
 
-<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; and &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -27,40 +28,39 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Больше информации и свойств описано в <a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a>.</p>
+Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Смотрите <a href="/en-US/docs/CSS/flex-direction" title="en-US/docs/CSS/flex-direction"><code>flex-direction</code></a> и <a href="/en-US/docs/CSS/flex-wrap" title="flex-wrap"><code>flex-wrap</code></a>.</p>
+Смотрите [`flex-direction`](/ru/docs/CSS/flex-direction "en-US/docs/CSS/flex-direction") и [`flex-wrap`](/ru/docs/CSS/flex-wrap "flex-wrap").
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:css">element {
+```css
+element {
   /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
-</ul>
+- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

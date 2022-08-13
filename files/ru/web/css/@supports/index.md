@@ -3,136 +3,139 @@ title: '@supports'
 slug: Web/CSS/@supports
 translation_of: Web/CSS/@supports
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>The <code>@supports</code> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a <em>supports condition</em>.</p>
+The `@supports` [CSS](/en/CSS "CSS") [at-rule](/en/CSS/At-rule "en/CSS/At-rule") associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
 
-<p><code>@supports</code> gives CSS the ability to perform a <em>feature query</em>.</p>
+`@supports` gives CSS the ability to perform a _feature query_.
 
-<p>The <code>@supports</code> at-rule may be used not only at the top level of a CSS, but also inside any <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a> and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.</p>
+The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules") and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<p>A supports condition consists of one or several declarations combined by different logical operators. Precedence of operators can be overruled by using parentheses.</p>
+A supports condition consists of one or several declarations combined by different logical operators. Precedence of operators can be overruled by using parentheses.
 
-<h3 id="Синтаксис_объявления"><span class="short_text" id="result_box" lang="ru"><span class="hps">Синтаксис объявления</span></span></h3>
+### Синтаксис объявления
 
-<p>The simplest expression is a CSS declaration, that is a CSS property name followed by a value, separated by a colon. The following expression</p>
+The simplest expression is a CSS declaration, that is a CSS property name followed by a value, separated by a colon. The following expression
 
-<pre class="brush:css">( transform-origin: 5% 5% )</pre>
+```css
+( transform-origin: 5% 5% )
+```
 
-<p>returns true if the {{ cssxref("transform-origin") }} implements a syntax considering <code>5% 5%</code> as valid.</p>
+returns true if the {{ cssxref("transform-origin") }} implements a syntax considering `5% 5%` as valid.
 
-<p>A CSS declaration is always surrounded by parentheses.</p>
+A CSS declaration is always surrounded by parentheses.
 
-<h3 id="Оператор_not">Оператор not</h3>
+### Оператор not
 
-<p>The <code>not</code> operator can precede any expression to create a new expression, resulting in the negation of the original expression. The following expression</p>
+The `not` operator can precede any expression to create a new expression, resulting in the negation of the original expression. The following expression
 
-<pre class="brush:css">not ( transform-origin: 10em 10em 10em )</pre>
+```css
+not ( transform-origin: 10em 10em 10em )
+```
 
-<p>returns true if {{ cssxref("transform-origin") }} doesn't implement a syntax considering <code>10em 10em 10em</code> as valid.</p>
+returns true if {{ cssxref("transform-origin") }} doesn't implement a syntax considering `10em 10em 10em` as valid.
 
-<p>Like any operator, the <code>not</code> operator can be applied to a declaration of any complexity. The following examples are all valid expressions:</p>
+Like any operator, the `not` operator can be applied to a declaration of any complexity. The following examples are all valid expressions:
 
-<pre class="brush:css">not ( not ( transform-origin: 2px ) )
-(display: flexbox) and ( not (display: inline-grid) )</pre>
+```css
+not ( not ( transform-origin: 2px ) )
+(display: flexbox) and ( not (display: inline-grid) )
+```
 
-<div class="note">
-<p><strong>Предупреждение:</strong> there is no need to enclose the <code>not</code> operator between two parentheses when at the top level. To combine it with other operators, like <code>and</code> and <code>or</code>, the parentheses are required.</p>
-</div>
+> **Примечание:** **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
 
-<h3 id="Оператор_and">Оператор and</h3>
+### Оператор and
 
-<p>From two expressions, the <code>and</code> operator creates a new expression consisting in the conjunction of the two original ones; the resulting expression is true only if both of the original expressions also resolve to true. In this example, the complete expression resolves to true if and only if the two expressions are simultaneously true:</p>
+From two expressions, the `and` operator creates a new expression consisting in the conjunction of the two original ones; the resulting expression is true only if both of the original expressions also resolve to true. In this example, the complete expression resolves to true if and only if the two expressions are simultaneously true:
 
-<pre class="brush:css">(display: table-cell) and (display: list-item)</pre>
+```css
+(display: table-cell) and (display: list-item)
+```
 
-<p>Several conjunctions can be juxtaposed without the need of more parentheses:</p>
+Several conjunctions can be juxtaposed without the need of more parentheses:
 
-<pre class="brush:css">(display: table-cell) and (display: list-item) and (display:run-in)</pre>
+```css
+(display: table-cell) and (display: list-item) and (display:run-in)
+```
 
-<p>is equivalent to:</p>
+is equivalent to:
 
-<pre class="brush:css">(display: table-cell) and ((display: list-item) and (display:run-in))</pre>
+```css
+(display: table-cell) and ((display: list-item) and (display:run-in))
+```
 
-<h3 id="Оператор_or">Оператор or</h3>
+### Оператор or
 
-<p>From two expressions, the <code>or</code> operator creates a new expression consisting in the disjunction of the two original ones; the resulting expression is true if one, or both, of the original expressions also resolves to true. In this example, the complete expression resolves to true if at least one of the two expressions is true:</p>
+From two expressions, the `or` operator creates a new expression consisting in the disjunction of the two original ones; the resulting expression is true if one, or both, of the original expressions also resolves to true. In this example, the complete expression resolves to true if at least one of the two expressions is true:
 
-<pre class="brush:css;">( transform-style: preserve ) or ( -moz-transform-style: preserve )</pre>
+```css
+( transform-style: preserve ) or ( -moz-transform-style: preserve )
+```
 
-<p>Several disjunctions can be juxtaposed without the need of more parentheses:</p>
+Several disjunctions can be juxtaposed without the need of more parentheses:
 
-<pre class="brush:css">( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
-( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )</pre>
+```css
+( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
+( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )
+```
 
-<p>is equivalent to:</p>
+is equivalent to:
 
-<pre class="brush:css">( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
-(( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))</pre>
+```css
+( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
+(( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
+```
 
-<div class="note">
-<p><strong>Предупреждение</strong>: when using both <code>and</code> and <code>or</code> operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.</p>
-</div>
+> **Примечание:** **Предупреждение**: when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Тестирование_заданного_свойства">Тестирование заданного свойства</h3>
+### Тестирование заданного свойства
 
-<pre class="brush:css;">@supports (animation-name: test) {
+```css
+@supports (animation-name: test) {
     … /* specific CSS applied when animations are supported unprefixed */
     @keyframes { /* @supports being a CSS conditional group at-rule, it can includes other relevant at-rules */
       …
     }
 }
-</pre>
+```
 
-<h3 id="Тестирование_заданного_свойства_или_его_версии_с_префиксом">Тестирование заданного свойства или его версии с префиксом</h3>
+### Тестирование заданного свойства или его версии с префиксом
 
-<pre class="brush:css;">@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
+```css
+@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
             (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
     … /* specific CSS applied when 3D transforms, eventually prefixed, are supported */
 }
-</pre>
+```
 
-<h3 id="Тестирование_неподдерживаемого_или_специфического_свойства">Тестирование неподдерживаемого или специфического свойства</h3>
+### Тестирование неподдерживаемого или специфического свойства
 
-<pre class="brush:css;">@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
+```css
+@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
     … /* specific CSS applied to simulate text-align-last:justify */
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                         | Статус                                   | Комментарий                 |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
+| {{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }} | {{ Spec2('CSS3 Conditional') }} | Первоначальное определение. |
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The CSSOM class {{ domxref("CSSSupportsRule") }}, and the {{ domxref("CSS.supports") }} method that allows to perform the same check via JavaScript.</li>
-</ul>
+- The CSSOM class {{ domxref("CSSSupportsRule") }}, and the {{ domxref("CSS.supports") }} method that allows to perform the same check via JavaScript.

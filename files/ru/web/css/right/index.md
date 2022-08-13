@@ -7,26 +7,25 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS" title="CSS">CSS</a> свойство <strong><code>right</code></strong> частично определяет горизонтальное положение позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. <strong><code>right</code></strong> не применится, если задано <code>position: static</code>).</p>
+[CSS](/ru/docs/Web/CSS "CSS") свойство **`right`** частично определяет горизонтальное положение позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`right`** не применится, если задано `position: static`).
 
-<div>{{EmbedInteractiveExample("pages/css/right.html")}}</div>
+{{EmbedInteractiveExample("pages/css/right.html")}}
 
-<p>Эффект свойства <code>right</code> зависит от того, как позиционируется элемент (то есть от значения свойства {{cssxref("position")}}):</p>
+Эффект свойства `right` зависит от того, как позиционируется элемент (то есть от значения свойства {{cssxref("position")}}):
 
-<ul>
- <li>Когда задано <code>position: absolute</code> или <code>fixed</code> — свойство <code>right</code> устанавливает расстояние между правым краем элемента и правым краем содержащего его блока.</li>
- <li>Когда задано <code>position: relative</code> — свойство <code>right</code> устанавливает расстояние, на которое правый край элемента перемещается влево от его обычной позиции.</li>
- <li>Когда задано <code>position: sticky</code> — свойство <code>right</code> работает так, как при <code>position: relative</code> во время нахождения элемента внутри области просмотра, и как <code>position: fixed</code> вне области просмотра.</li>
- <li>Когда задано <code>position: static</code> — свойство <code>right</code> <em>не имеет никакого эффекта</em>.</li>
-</ul>
+- Когда задано `position: absolute` или `fixed` — свойство `right` устанавливает расстояние между правым краем элемента и правым краем содержащего его блока.
+- Когда задано `position: relative` — свойство `right` устанавливает расстояние, на которое правый край элемента перемещается влево от его обычной позиции.
+- Когда задано `position: sticky` — свойство `right` работает так, как при `position: relative` во время нахождения элемента внутри области просмотра, и как `position: fixed` вне области просмотра.
+- Когда задано `position: static` — свойство `right` _не имеет никакого эффекта_.
 
-<p>Когда заданы оба свойства {{cssxref("left")}} и <code>right</code>, и элемент не может растянуться, чтобы им соответствовать, то позиционированние элемента is<em> overspecified</em>. В этом случае значение <code>left</code> имеет приоритет, when the container is left-to-right; и наоборот, значение <code>right</code> имеет приоритет,  when the container is right-to-left.</p>
+Когда заданы оба свойства {{cssxref("left")}} и `right`, и элемент не может растянуться, чтобы им соответствовать, то позиционированние элемента is _overspecified_. В этом случае значение `left` имеет приоритет, when the container is left-to-right; и наоборот, значение `right` имеет приоритет, when the container is right-to-left.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Значения величин */
+```css
+/* Значения величин */
 right: 3px;
 right: 2.4em;
 
@@ -40,38 +39,29 @@ right: auto;
 right: inherit;
 right: initial;
 right: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Отрицательная, нулевая или положительная величина, которая представляет:
- <ul>
-  <li>for <em>absolutely positioned elements</em>, the distance to the right edge of the containing block.</li>
-  <li>for <em>relatively positioned elements</em>, the distance that the element is moved to the left of its normal position.</li>
- </ul>
- </dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.</dd>
- <dt><code>auto</code></dt>
- <dd>Specifies that:
- <ul>
-  <li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("left")}} property, while <code>width: auto</code> is treated as a width based on the content; or if <code>left</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
-  <li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if <code>left</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the <code>auto</code> keyword.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Отрицательная, нулевая или положительная величина, которая представляет:\* for _absolutely positioned elements_, the distance to the right edge of the containing block.
+    - for _relatively positioned elements_, the distance that the element is moved to the left of its normal position.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
+- `auto`
+  - : Specifies that:\* for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("left")}} property, while `width: auto` is treated as a width based on the content; or if `left` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
+    - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if `left` is also `auto`, the element is not moved horizontally at all.
+- `inherit`
+  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css; highlight:[16]">#example_3 {
+```css
+#example_3 {
   width: 100px;
   height: 100px;
   background-color: #FFC7E4;
@@ -87,28 +77,26 @@ right: unset;
   position: absolute;
   bottom: 10px;
   right: 20px;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div id="example_3"&gt;Example 3&lt;/div&gt;
-&lt;div id="example_4"&gt;Example 4&lt;/div&gt;
-</pre>
+```html
+<div id="example_3">Example 3</div>
+<div id="example_4">Example 4</div>
+```
 
-<p>{{ EmbedLiveSample('Примеры', 500, 220) }}</p>
+{{ EmbedLiveSample('Примеры', 500, 220) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref("position")}}, {{cssxref("left")}}, {{cssxref("top")}}, {{cssxref("bottom")}}</li>
-</ul>
+- {{cssxref("position")}}, {{cssxref("left")}}, {{cssxref("top")}}, {{cssxref("bottom")}}

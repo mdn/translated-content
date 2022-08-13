@@ -1,60 +1,61 @@
 ---
 title: '::cue'
-slug: 'Web/CSS/::cue'
-translation_of: 'Web/CSS/::cue'
+slug: Web/CSS/::cue
+translation_of: Web/CSS/::cue
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ru/docs/Web/CSS/Pseudo-elements">Псевдоэлемент</a> <a href="/ru/docs/Web/CSS">CSS</a> <strong><code>::cue</code></strong> соответствует репликам <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> в выбранном элементе. Он может быть использован для задания <a href="/docs/Web/API/WebVTT_API#Styling_WebTT_cues">стилей титров и других реплик</a> в медиа с VTT треками.</span></p>
+[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) [CSS](/ru/docs/Web/CSS) **`::cue`** соответствует репликам [WebVTT](/ru/docs/Web/API/WebVTT_API) в выбранном элементе. Он может быть использован для задания [стилей титров и других реплик](/docs/Web/API/WebVTT_API#Styling_WebTT_cues) в медиа с VTT треками.
 
-<pre class="brush: css no-line-numbers">::cue {
+```css
+::cue {
   color: yellow;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Разрешённые_свойства">Разрешённые свойства</h2>
+## Разрешённые свойства
 
-<p>Правила с <code>::cue</code> в селекторе ограничены в использовании CSS-свойств следующим списком:</p>
+Правила с `::cue` в селекторе ограничены в использовании CSS-свойств следующим списком:
 
-<ul>
- <li>{{CSSxRef("background")}} и его свойства</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("font")}} и его свойства</li>
- <li>{{CSSxRef("line-height")}}</li>
- <li>{{CSSxRef("opacity")}}</li>
- <li>{{CSSxRef("outline")}} и его свойства</li>
- <li>{{CSSxRef("ruby-position")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}</li>
- <li>{{CSSxRef("text-decoration")}} и его свойства</li>
- <li>{{CSSxRef("text-shadow")}}</li>
- <li>{{CSSxRef("visibility")}}</li>
- <li>{{CSSxRef("white-space")}}</li>
-</ul>
+- {{CSSxRef("background")}} и его свойства
+- {{CSSxRef("color")}}
+- {{CSSxRef("font")}} и его свойства
+- {{CSSxRef("line-height")}}
+- {{CSSxRef("opacity")}}
+- {{CSSxRef("outline")}} и его свойства
+- {{CSSxRef("ruby-position")}}
+- {{CSSxRef("text-combine-upright")}}
+- {{CSSxRef("text-decoration")}} и его свойства
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("visibility")}}
+- {{CSSxRef("white-space")}}
 
-<p>Свойства применяются ко всему набору реплик, как если бы они были единым целым. Единственным исключением является <code>background</code> и его сокращённые свойства, которые применяются к каждой реплике отдельно, чтобы не создавать блоки, которые занимают неожиданно большие области медиа.</p>
+Свойства применяются ко всему набору реплик, как если бы они были единым целым. Единственным исключением является `background` и его сокращённые свойства, которые применяются к каждой реплике отдельно, чтобы не создавать блоки, которые занимают неожиданно большие области медиа.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий CSS устанавливает стили для реплик в виде белого цвета текста и полупрозрачного чёрного фона.</p>
+Следующий CSS устанавливает стили для реплик в виде белого цвета текста и полупрозрачного чёрного фона.
 
-<pre class="brush: css">::cue {
+```css
+::cue {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/API/WebVTT_API">Web Video Tracks Format (WebVTT)</a></li>
-</ul>
+## Смотрите также
+
+- [Web Video Tracks Format (WebVTT)](/ru/docs/Web/API/WebVTT_API)

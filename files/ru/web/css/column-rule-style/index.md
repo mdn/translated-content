@@ -5,17 +5,16 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-rule-style
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>column-rule-style</code></strong> устанавливает стиль линии, расположенной между колонками при мультиколоночной вёрстке.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`column-rule-style`** устанавливает стиль линии, расположенной между колонками при мультиколоночной вёрстке.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
 
+## Синтаксис
 
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; значения */
+```css
+/* <'border-style'> значения */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -31,49 +30,49 @@ column-rule-style: outset;
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: unset;
-</pre>
+```
 
-<p>Свойство <code>column-rule-style</code> указывается как одиночное <code>&lt;'border-style'&gt;</code> значение.</p>
+Свойство `column-rule-style` указывается как одиночное `<'border-style'>` значение.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>Ключевое слово, определяющее  {{ cssxref("border-style") }}, описывающий стиль для линии, разделяющей столбцы. Стилизация должна быть интерпретирована как разрушающая границы модель.</dd>
-</dl>
+- `<'border-style'>`
+  - : Ключевое слово, определяющее {{ cssxref("border-style") }}, описывающий стиль для линии, разделяющей столбцы. Стилизация должна быть интерпретирована как разрушающая границы модель.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-style` property is used to change
    the style of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: dashed;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Пример') }}</p>
+{{ EmbedLiveSample('Пример') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

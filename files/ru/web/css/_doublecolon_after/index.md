@@ -1,75 +1,80 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS
   - Layout
   - Reference
   - Web
   - Псевдоэлементы
-translation_of: 'Web/CSS/::after'
+translation_of: Web/CSS/::after
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">В CSS, <strong><code>::after</code></strong> создаёт <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a>, который является последним потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства {{cssxref("content")}}.</span> По умолчанию является инлайновым.</p>
+В CSS, **`::after`** создаёт [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements), который является последним потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства {{cssxref("content")}}. По умолчанию является инлайновым.
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* Добавить стрелки после ссылок */</span>
-<span class="selector token">a<span class="pseudo-class token">::after</span> </span><span class="punctuation token">{</span>
-  <span class="property token">content: "</span></code>→<code class="language-css"><span class="property token">";</span>
-<span class="punctuation token">}</span></code></pre>
+```css
+/* Добавить стрелки после ссылок */
+a::after {
+  content: "→";
+}
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> Псведоэлементы, созданные с помощью <code>::before</code> и <code>::after</code> <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">содержатся в блоке форматирования элемента</a>, и поэтому не применяются к <em><a href="/ru/docs/Web/CSS/Replaced_element">замещаемым элементам</a></em>, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.</p>
-</div>
+> **Примечание:** Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<div class="note">
-<p>В CSS3 появилась запись <code>::after</code> (с двумя двоеточиями) для различения <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдоклассов</a> и <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлементов</a>. Браузеры также поддерживают запись <code>:after</code>, введённую в CSS2.</p>
-</div>
+> **Примечание:** В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Псевдо-классы) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простое_использование">Простое использование</h3>
+### Простое использование
 
-<p>Давайте создадим два класса, один для скучных параграфов и один для потрясающих. Затем мы сможем отметить каждый параграф добавлением псевдоэлемента в его конец.</p>
+Давайте создадим два класса, один для скучных параграфов и один для потрясающих. Затем мы сможем отметить каждый параграф добавлением псевдоэлемента в его конец.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="boring-text"&gt;Вот простой скучный текст.&lt;/p&gt;
-&lt;p&gt;Вот нормальный текст, который не является ни скучным, ни потрясающим.&lt;/p&gt;
-&lt;p class="exciting-text"&gt;Помогать MDN легко и весело.
-Просто нажмите кнопку редактирования, чтобы добавить новые живые примеры, или улучшить существующие примеры.&lt;/p&gt;</pre>
+```html
+<p class="boring-text">Вот простой скучный текст.</p>
+<p>Вот нормальный текст, который не является ни скучным, ни потрясающим.</p>
+<p class="exciting-text">Помогать MDN легко и весело.
+Просто нажмите кнопку редактирования, чтобы добавить новые живые примеры, или улучшить существующие примеры.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exciting-text::after {
-  content: "&lt;- теперь это *просто* потрясающе!";
+```css
+.exciting-text::after {
+  content: "<- теперь это *просто* потрясающе!";
   color: green;
 }
 
 .boring-text::after {
-   content: "&lt;- СКУЧНО!";
+   content: "<- СКУЧНО!";
    color: red;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Простое_использование', 500, 150)}}</p>
+{{EmbedLiveSample('Простое_использование', 500, 150)}}
 
-<h3 id="Пример_оформления">Пример оформления</h3>
+### Пример оформления
 
-<p>Можно стилизовать текст или изображения в свойстве {{cssxref("content")}} практически любым способом.</p>
+Можно стилизовать текст или изображения в свойстве {{cssxref("content")}} практически любым способом.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;span class="ribbon"&gt;Посмотрите, где находится оранжевый прямоугольник.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Посмотрите, где находится оранжевый прямоугольник.</span>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.ribbon {
+```css
+.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -78,28 +83,31 @@ translation_of: 'Web/CSS/::after'
   background-color: #FFBA10;
   border-color: black;
   border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Пример_оформления', 450, 20)}}</p>
+{{EmbedLiveSample('Пример_оформления', 450, 20)}}
 
-<h3 id="Подсказки">Подсказки</h3>
+### Подсказки
 
-<p>Следующий пример показывает использование <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлемента</a> <code>::after</code> в сочетании с CSS-выражением <a href="/ru/docs/Web/CSS/attr"><code>attr()</code></a> и <a href="/ru/docs/Web/HTML/Global_attributes#attr-dataset">пользовательского <code>data-*</code> атрибута</a> <code>data-descr</code> для создания <em>подсказки</em> на чистом CSS.</p>
+Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` для создания _подсказки_ на чистом CSS.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Здесь находится живой пример вышеприведённого кода.&lt;br /&gt;
-  У нас есть некоторый &lt;span data-descr="коллекция слов и знаков препинаний"&gt;текст&lt;/span&gt; здесь с несколькими
-  &lt;span data-descr="маленькие всплывающие окошки, которые снова исчезают"&gt;подсказками&lt;/span&gt;.&lt;br /&gt;
-  Не стесняйтесь, наводите мышку чтобы &lt;span data-descr="не понимать буквально"&gt;взглянуть&lt;/span&gt;.
-&lt;/p&gt;
-</pre>
+```html
+<p>Здесь находится живой пример вышеприведённого кода.<br />
+  У нас есть некоторый <span data-descr="коллекция слов и знаков препинаний">текст</span> здесь с несколькими
+  <span data-descr="маленькие всплывающие окошки, которые снова исчезают">подсказками</span>.<br />
+  Не стесняйтесь, наводите мышку чтобы <span data-descr="не понимать буквально">взглянуть</span>.
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">span[data-descr] {
+```css
+span[data-descr] {
   position: relative;
   text-decoration: underline;
   color: #00F;
@@ -119,24 +127,21 @@ span[data-descr]:hover::after {
   color: #000000;
   font-size: 14px;
   z-index: 1;
-}</pre>
+}
+```
 
-<h4 id="Результат_3">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Подсказки', 450, 120)}}</p>
+{{EmbedLiveSample('Подсказки', 450, 120)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref("::before")}}, {{cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::before")}}, {{cssxref("content")}}

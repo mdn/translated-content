@@ -10,77 +10,56 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><strong>CSS Scroll Snap</strong> is a module of CSS that introduces scroll snap positions, which enforce the scroll positions that a {{Glossary("scroll container")}}’s {{Glossary("scrollport")}} may end at after a scrolling operation has completed.</p>
+**CSS Scroll Snap** is a module of CSS that introduces scroll snap positions, which enforce the scroll positions that a {{Glossary("scroll container")}}’s {{Glossary("scrollport")}} may end at after a scrolling operation has completed.
 
-<div class="note">
-<p><strong>Note</strong>: The previous version of this module was called Scroll Snap Points and has been deprecated. CSS Scroll Snap is the current implementation.</p>
-</div>
+> **Примечание:** The previous version of this module was called Scroll Snap Points and has been deprecated. CSS Scroll Snap is the current implementation.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties_on_Containers">CSS Properties on Containers</h3>
+### CSS Properties on Containers
 
-<ul>
- <li>{{cssxref("scroll-snap-type")}}</li>
- <li>{{cssxref("scroll-snap-stop")}}</li>
- <li>{{cssxref("scroll-padding")}}</li>
- <li>{{cssxref("scroll-padding-top")}}</li>
- <li>{{cssxref("scroll-padding-right")}}</li>
- <li>{{cssxref("scroll-padding-bottom")}}</li>
- <li>{{cssxref("scroll-padding-left")}}</li>
- <li>{{cssxref("scroll-padding-inline")}}</li>
- <li>{{cssxref("scroll-padding-inline-start")}}</li>
- <li>{{cssxref("scroll-padding-inline-end")}}</li>
- <li>{{cssxref("scroll-padding-block")}}</li>
- <li>{{cssxref("scroll-padding-block-start")}}</li>
- <li>{{cssxref("scroll-padding-block-end")}}</li>
-</ul>
+- {{cssxref("scroll-snap-type")}}
+- {{cssxref("scroll-snap-stop")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-top")}}
+- {{cssxref("scroll-padding-right")}}
+- {{cssxref("scroll-padding-bottom")}}
+- {{cssxref("scroll-padding-left")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-padding-inline-start")}}
+- {{cssxref("scroll-padding-inline-end")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-block-start")}}
+- {{cssxref("scroll-padding-block-end")}}
 
-<h3 id="CSS_Properties_on_Children">CSS Properties on Children</h3>
+### CSS Properties on Children
 
-<ul>
- <li>{{cssxref("scroll-snap-align")}}</li>
- <li>{{cssxref("scroll-margin")}}</li>
- <li>{{cssxref("scroll-margin-top")}}</li>
- <li>{{cssxref("scroll-margin-right")}}</li>
- <li>{{cssxref("scroll-margin-bottom")}}</li>
- <li>{{cssxref("scroll-margin-left")}}</li>
- <li>{{cssxref("scroll-margin-inline")}}</li>
- <li>{{cssxref("scroll-margin-inline-start")}}</li>
- <li>{{cssxref("scroll-margin-inline-end")}}</li>
- <li>{{cssxref("scroll-margin-block")}}</li>
- <li>{{cssxref("scroll-margin-block-start")}}</li>
- <li>{{cssxref("scroll-margin-block-end")}}</li>
-</ul>
+- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-top")}}
+- {{cssxref("scroll-margin-right")}}
+- {{cssxref("scroll-margin-bottom")}}
+- {{cssxref("scroll-margin-left")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-margin-inline-start")}}
+- {{cssxref("scroll-margin-inline-end")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-block-start")}}
+- {{cssxref("scroll-margin-block-end")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">Basic concepts of CSS Scroll Snap</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat">Browser Compatibility and Scroll Snap</a></li>
-</ul>
+- [Basic concepts of CSS Scroll Snap](/ru/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+- [Browser Compatibility and Scroll Snap](/ru/docs/Web/CSS/CSS_Scroll_Snap/compat)
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                           | Comment            |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. <a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat">Read the guide to browser compatibility</a> for an overview of how to support both the old and new specification. </p>
+The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. [Read the guide to browser compatibility](/ru/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to support both the old and new specification.

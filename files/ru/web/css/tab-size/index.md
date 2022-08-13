@@ -3,15 +3,16 @@ title: tab-size
 slug: Web/CSS/tab-size
 translation_of: Web/CSS/tab-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p class="seoSummary">CSS-свойство <strong><code>tab-size</code></strong> используется для настройки ширины символа табуляции (<code>U+0009</code>).</p>
+CSS-свойство **`tab-size`** используется для настройки ширины символа табуляции (`U+0009`).
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; значения */
+```css
+/* <integer> значения */
 tab-size: 4;
 tab-size: 0;
 
-/* &lt;length&gt; значения */
+/* <length> значения */
 tab-size: 10px;
 tab-size: 2em;
 
@@ -19,56 +20,51 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{CSSxRef("&lt;integer&gt;")}}</dt>
- <dd>Количество пробелов в табе. Должно быть неотрицательным.</dd>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>Ширина таба. Должно быть неотрицательным.</dd>
-</dl>
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Количество пробелов в табе. Должно быть неотрицательным.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Ширина таба. Должно быть неотрицательным.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 4; /* Установит размер таба в 4 пробела */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 0; /* Удалит отступ */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 2; /* Установит размер таба в 2 пробела */
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="external" href="https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html"><cite>Управление размером символа табуляции (U+0009)</cite></a>, электронное письмо Anne van Kesteren в CSSWG.</li>
-</ul>
+- [Управление размером символа табуляции (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), электронное письмо Anne van Kesteren в CSSWG.

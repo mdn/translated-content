@@ -3,132 +3,98 @@ title: overflow
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary">Резюме</h2>
+## Резюме
 
-<p>Свойство CSS <code>overflow</code> определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.</p>
+Свойство CSS `overflow` определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.
 
-<p>Использование свойства <code>overflow</code> со значениями, отличными от <code>visible</code>, (значение, принятое по умолчанию), создаёт новый <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">блочный контекст форматирования</a>. Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута <code>scrollTop</code> для соответствующего HTML-элемента, даже если <code>overflow</code> имеет значение <code>hidden</code>, элемент, возможно, придётся прокрутить.</p>
+Использование свойства `overflow` со значениями, отличными от `visible`, (значение, принятое по умолчанию), создаёт новый [блочный контекст форматирования](/ru/docs/CSS/block_formatting_context "CSS/block_formatting_context"). Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута `scrollTop` для соответствующего HTML-элемента, даже если `overflow` имеет значение `hidden`, элемент, возможно, придётся прокрутить.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p><a href="/en-US/docs/CSS/Value_definition_syntax">Формат синтаксиса</a>: {{csssyntax("overflow")}}</p>
+[Формат синтаксиса](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("overflow")}}
 
-<pre>overflow: visible
-overflow: hidden
-overflow: scroll
-overflow: auto
+    overflow: visible
+    overflow: hidden
+    overflow: scroll
+    overflow: auto
 
-overflow: inherit
-</pre>
+    overflow: inherit
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>По умолчанию. Содержимое не обрезается, может отображаться снаружи блока, в котором оно расположено.</dd>
- <dt><code>hidden</code></dt>
- <dd>Контент обрезается, без предоставления прокрутки.</dd>
- <dt><code>scroll</code></dt>
- <dd>Содержимое обрезается и браузер использует элементы прокрутки, не важно было ли обрезано содержимое или нет. Это избегает многих проблем касательно появления прокруток и их исчезновения в динамичной среде. Принтеры могут печатать переполненное содержимое.</dd>
- <dt><code>auto</code></dt>
- <dd>Зависит от агента пользователя. Браузеры такие как Firefox предоставляют прокрутку, если содержимое переполняет блок.</dd>
-</dl>
+- `visible`
+  - : По умолчанию. Содержимое не обрезается, может отображаться снаружи блока, в котором оно расположено.
+- `hidden`
+  - : Контент обрезается, без предоставления прокрутки.
+- `scroll`
+  - : Содержимое обрезается и браузер использует элементы прокрутки, не важно было ли обрезано содержимое или нет. Это избегает многих проблем касательно появления прокруток и их исчезновения в динамичной среде. Принтеры могут печатать переполненное содержимое.
+- `auto`
+  - : Зависит от агента пользователя. Браузеры такие как Firefox предоставляют прокрутку, если содержимое переполняет блок.
 
-<h4 id="Mozilla_Extensions">Расширения Mozilla</h4>
+#### Расширения Mozilla
 
-<dl>
- <dt><code>-moz-scrollbars-none </code>{{ obsolete_inline() }}</dt>
- <dd>Используйте <code>overflow:hidden</code>.</dd>
- <dt><code>-moz-scrollbars-horizontal </code>{{ Deprecated_inline() }}</dt>
- <dd>Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.</dd>
- <dt><code>-moz-scrollbars-vertical </code>{{ Deprecated_inline() }}</dt>
- <dd>Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.</dd>
- <dt>-moz-hidden-unscrollable {{ non-standard_inline() }}</dt>
- <dd>Главным образом предназначен для внутреннего использования и для тем. Отключает прокрутку XML root элементов и <code>&lt;html&gt;</code>, <code> &lt;body&gt;</code> клавишами со стрелками и колесом мыши.</dd>
-</dl>
+- `-moz-scrollbars-none `{{ obsolete_inline() }}
+  - : Используйте `overflow:hidden`.
+- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+  - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.
+- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+  - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.
+- \-moz-hidden-unscrollable {{ non-standard_inline() }}
+  - : Главным образом предназначен для внутреннего использования и для тем. Отключает прокрутку XML root элементов и `<html>`, `<body>` клавишами со стрелками и колесом мыши.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">p {
+```css
+p {
      width: 12em;
      height: 6em;
      border: dotted;
      overflow: visible; /* содержимое не обрезается */
 }
-</pre>
+```
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`visible` (default)
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
-</pre>
+    p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
 
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: hidden`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
-</pre>
+    p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
 
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: scroll`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
-</pre>
+    p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
 
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: auto`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<p> </p>
+| Спецификация                                                                         | Статус                               | Комментарий                                                     |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------- |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Changed syntax to allow one or two keywords instead of only one |
+| {{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}         | {{Spec2('CSS3 Box')}}         | Без изменений                                                   |
+| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Initial definition.                                             |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>
-    <p>Changed syntax to allow one or two keywords instead of only one</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## Совместимость браузера
 
-<h2 id="Browser_compatibility">Совместимость браузера</h2>
+{{Compat}}
 
-<p>{{Compat}} </p>
+### Firefox (Gecko) Примечания
 
-<h3 id="Firefox_(Gecko)_Notes">Firefox (Gecko) Примечания</h3>
+Из-за Firefox 3.6 (Gecko 1.9.2), `свойство overflow неверно применяется к элементам` table-group (`<thead>` , `<tbody>` , `<tfoot>`). Это поведение будет исправлено в следующих версиях.
 
-<p>Из-за Firefox 3.6 (Gecko 1.9.2), <code>свойство overflow неверно применяется к элементам</code> table-group (<code>&lt;thead&gt;</code> , <code>&lt;tbody&gt;</code> , <code>&lt;tfoot&gt;</code>). Это поведение будет исправлено в следующих версиях.</p>
+### Internet Explorer Примечания
 
-<h3 id="Internet_Explorer_Notes">Internet Explorer Примечания</h3>
+Internet Explorer 4 - 6 `увеличивает элемент с overflow:visible `(значение по умолчанию), чтобы заполнить содержимое в нём.` height/width `действуют подобно` min-height/min-width`.
 
-<p>Internet Explorer 4 - 6 <code>увеличивает элемент с overflow:visible </code>(значение по умолчанию), чтобы заполнить содержимое в нём.<code> height/width </code>действуют подобно<code> min-height/min-width</code>.</p>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}

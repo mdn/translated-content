@@ -3,20 +3,18 @@ title: Начальное значение
 slug: Web/CSS/initial_value
 translation_of: Web/CSS/initial_value
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><strong>Начальное значение</strong>, данное в кратком описании <a href="/ru/docs/Web/CSS/Reference" title="en/CSS_Reference">каждого CSS-свойства</a> имеет различное значение для <a href="/ru/docs/Web/CSS/inheritance" title="en/CSS/inheritance">наследуемых и не наследуемых свойств</a>.</p>
+**Начальное значение**, данное в кратком описании [каждого CSS-свойства](/ru/docs/Web/CSS/Reference "en/CSS_Reference") имеет различное значение для [наследуемых и не наследуемых свойств](/ru/docs/Web/CSS/inheritance "en/CSS/inheritance").
 
-<p>Для <a href="/ru/docs/Web/CSS/inheritance#Inherited_properties" title="en/CSS/inheritance#Inherited_properties">наследуемых</a>, начальное значение установлено <strong>только</strong> для корневого элемента, если не указано никакого значения для элемента.</p>
+Для [наследуемых](/ru/docs/Web/CSS/inheritance#Inherited_properties "en/CSS/inheritance#Inherited_properties"), начальное значение установлено **только** для корневого элемента, если не указано никакого значения для элемента.
 
-<p>Для <a href="/ru/docs/Web/CSS/inheritance#Non-inherited_properties" title="en/CSS/inheritance#Non-inherited_properties">ненаследуемых свойств</a> используется начальное значение для <strong>каждого</strong> элемента, даже когда значение для элемента не указано.</p>
+Для [ненаследуемых свойств](/ru/docs/Web/CSS/inheritance#Non-inherited_properties "en/CSS/inheritance#Non-inherited_properties") используется начальное значение для **каждого** элемента, даже когда значение для элемента не указано.
 
-<p>Ключевое слово <code><a href="/ru/docs/Web/CSS/initial" title="en/CSS/initial">initial</a></code> добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.</p>
+Ключевое слово [`initial`](/ru/docs/Web/CSS/initial "en/CSS/initial") добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/Reference" title="CSS Reference">CSS документация</a></li>
- <li>{{ CSS_key_concepts() }}</li>
- <li><code><a href="/ru/docs/Web/CSS/initial" title="en/CSS/initial">initial</a></code></li>
-</ul>
+- [CSS документация](/ru/docs/Web/CSS/Reference "CSS Reference")
+- {{ CSS_key_concepts() }}
+- [`initial`](/ru/docs/Web/CSS/initial "en/CSS/initial")

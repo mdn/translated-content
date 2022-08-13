@@ -1,50 +1,50 @@
 ---
 title: '::-moz-progress-bar'
-slug: 'Web/CSS/::-moz-progress-bar'
-translation_of: 'Web/CSS/::-moz-progress-bar'
+slug: Web/CSS/::-moz-progress-bar
+translation_of: Web/CSS/::-moz-progress-bar
 ---
-<div> </div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+Представляет собой индикатор прогресса внутри {{HTMLElement("progress")}} (Бар, отражающий текущий прогресс).
 
-<p>Представляет собой индикатор прогресса внутри {{HTMLElement("progress")}} (Бар, отражающий текущий прогресс).</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;progress value="30" max="100"&gt;30%&lt;/progress&gt;
-&lt;progress max="100"&gt;Неопределённый бар прогресса&lt;/progress&gt;</pre>
+```html
+<progress value="30" max="100">30%</progress>
+<progress max="100">Неопределённый бар прогресса</progress>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::-moz-progress-bar {
+```css
+::-moz-progress-bar {
   background-color: red;
 }
 
 /* Задаёт неопределённым барам нулевую ширину */
 :indeterminate::-moz-progress-bar {
   width: 0;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Примеры')}}</p>
+{{EmbedLiveSample('Примеры')}}
 
-<p>Первый бар сверху должен выглядеть так:</p>
+Первый бар сверху должен выглядеть так:
 
-<p><img alt="Custom styled progress bar" class="default internal" src="/@api/deki/files/5387/=redbar.png"></p>
+![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("progress")}}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
- <li>{{ cssxref("::-webkit-progress-bar") }}</li>
- <li>{{ cssxref("::-webkit-progress-value") }}</li>
- <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-</ul>
+- {{HTMLElement("progress")}}
+- {{ cssxref("::-ms-fill") }}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

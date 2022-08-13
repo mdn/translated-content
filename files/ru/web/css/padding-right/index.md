@@ -6,83 +6,58 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/padding-right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><a href="https://developer.mozilla.org/en/CSS" title="CSS">CSS</a> свойство <strong><code>padding-right</code></strong> элемента устанавливает значение поля от правого края элемента. Поля элемента (<a href="https://developer.mozilla.org/en/CSS/box_model#padding" title="http://developer.mozilla.org/en/CSS/Box_model#padding">padding area</a>) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.</p>
+[CSS](https://developer.mozilla.org/en/CSS "CSS") свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](https://developer.mozilla.org/en/CSS/box_model#padding "http://developer.mozilla.org/en/CSS/Box_model#padding")) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* &lt;length&gt; значения */
+```css
+/* <length> значения */
 padding-right: 0.5em;
 padding-right: 0;
 padding-right: 2cm;
 
-/* &lt;percentage&gt; значения */
+/* <percentage> значения */
 padding-right: 10%;
 
 /* Общие значения */
 padding-right: inherit;
 padding-right: initial;
 padding-right: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>&lt;length&gt;</dt>
- <dd>Устанавливает положительную фиксированную ширину. Подробнее: {{cssxref("&lt;length&gt;")}}.</dd>
- <dt>&lt;percentage&gt;</dt>
- <dd>Процент по отношению к ширине контейнера.</dd>
-</dl>
+- \<length>
+  - : Устанавливает положительную фиксированную ширину. Подробнее: {{cssxref("&lt;length&gt;")}}.
+- \<percentage>
+  - : Процент по отношению к ширине контейнера.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">.content { padding-right: 5%; }
+```css
+.content { padding-right: 5%; }
 .sidebox { padding-right: 10px; }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Определяет <code>padding-right</code>, как анимируемое свойство.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{ Specname('CSS1', '#padding-right', 'padding-right') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Исходное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                                   | Comment                                               |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
+| {{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}                 | {{ Spec2('CSS3 Box') }}         | Без изменений.                                        |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}     | {{ Spec2('CSS3 Transitions') }} | Определяет `padding-right`, как анимируемое свойство. |
+| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }} | {{ Spec2('CSS2.1') }}             | Без изменений.                                        |
+| {{ Specname('CSS1', '#padding-right', 'padding-right') }}                     | {{ Spec2('CSS1') }}                 | Исходное определение.                                 |
 
-<h2 id="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

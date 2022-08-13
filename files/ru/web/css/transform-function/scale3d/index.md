@@ -4,60 +4,86 @@ slug: Web/CSS/transform-function/scale3d
 translation_of: Web/CSS/transform-function/scale3d()
 original_slug: Web/CSS/transform-function/scale3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>scale3d()</code> CSS функция изменяет размер элемента. Благодаря величине масштабирования определённой вектором, может изменять различные размеры в разных масштабах.</p>
+`scale3d()` CSS функция изменяет размер элемента. Благодаря величине масштабирования определённой вектором, может изменять различные размеры в разных масштабах.
 
-<p>Это преобразование характеризуется вектором, координаты которого определяют, сколько масштабирования выполняется в каждом направлении. Если все три координаты вектора равны, масштабирование равномерно или изотропно, а форма элемента сохраняется. В этом случае функция масштабирования определяет гомотетическое преобразование.</p>
+Это преобразование характеризуется вектором, координаты которого определяют, сколько масштабирования выполняется в каждом направлении. Если все три координаты вектора равны, масштабирование равномерно или изотропно, а форма элемента сохраняется. В этом случае функция масштабирования определяет гомотетическое преобразование.
 
-<p>Когда вне диапазона [-1, 1], масштабирование увеличивает элемент в направлении координаты; Когда внутри диапазона он сжимает элемент в этом направлении. При равном 1 он ничего не делает, а когда отрицательный, он выполняет точечное отражение и модификацию размера.</p>
+Когда вне диапазона \[-1, 1], масштабирование увеличивает элемент в направлении координаты; Когда внутри диапазона он сжимает элемент в этом направлении. При равном 1 он ничего не делает, а когда отрицательный, он выполняет точечное отражение и модификацию размера.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">scale3d(<em>sx</em>, <em>sy</em>, <em>sz</em>)
-</pre>
+    scale3d(sx, sy, sz)
 
-<h2 id="Значения">Значения</h2>
+## Значения
 
-<dl>
- <dt><em>sx</em></dt>
- <dd>Является  {{cssxref("&lt;number&gt;")}} , представляющим абсцисс вектора масштабирования.</dd>
- <dt><em>sy</em></dt>
- <dd>Является  {{cssxref("&lt;number&gt;")}} , представляющим ординату вектора масштабирования.</dd>
- <dt><em>sz</em></dt>
- <dd>Является  {{cssxref("&lt;number&gt;")}}, представляющим z-компонент масштабирующего вектора.</dd>
-</dl>
+- _sx_
+  - : Является {{cssxref("&lt;number&gt;")}} , представляющим абсцисс вектора масштабирования.
+- _sy_
+  - : Является {{cssxref("&lt;number&gt;")}} , представляющим ординату вектора масштабирования.
+- _sz_
+  - : Является {{cssxref("&lt;number&gt;")}}, представляющим z-компонент масштабирующего вектора.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">Это преобразование применяется к пространству 3D и не может быть представлено на плоскости.</td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        Это преобразование применяется к пространству 3D и не может быть
+        представлено на плоскости.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Without_changing_the_origin">Without changing the origin</h3>
+### Without changing the origin
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -67,22 +93,25 @@ original_slug: Web/CSS/transform-function/scale3d()
   transform: perspective(500px) scale3d(0.8, 2, 0.2) translateZ(100px);
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}</p>
+{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}
 
-<h3 id="Translating_the_origin_of_the_transformation">Translating the origin of the transformation</h3>
+### Translating the origin of the transformation
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -93,8 +122,8 @@ original_slug: Web/CSS/transform-function/scale3d()
   transform-origin: center;
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}</p>
+{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}

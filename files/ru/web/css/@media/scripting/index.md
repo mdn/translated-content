@@ -3,35 +3,35 @@ title: scripting
 slug: Web/CSS/@media/scripting
 translation_of: Web/CSS/@media/scripting
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries">медиа функция</a> <code><strong>scripting</strong></code> может использоваться для проверки доступности скриптов (таких как JavaScript)</p>
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Функция <code><strong>scripting</strong></code> указывается в качестве значения ключевого слова, выбранного из списка ниже.</p>
+Функция **`scripting`** указывается в качестве значения ключевого слова, выбранного из списка ниже.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Скрипты полностью недоступны в текущем документе.</dd>
- <dt><code>initial-only</code></dt>
- <dd>Скрипты включаются во время начальной загрузки страницы, но не после.</dd>
- <dt><code>enabled</code></dt>
- <dd>Скрипты поддерживаются и активны в текущем документе.</dd>
-</dl>
+- `none`
+  - : Скрипты полностью недоступны в текущем документе.
+- `initial-only`
+  - : Скрипты включаются во время начальной загрузки страницы, но не после.
+- `enabled`
+  - : Скрипты поддерживаются и активны в текущем документе.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="script-none"&gt;You do not have scripting available. :-(&lt;/p&gt;
-&lt;p class="script-initial-only"&gt;Your scripting is only enabled during the initial page load. Weird.&lt;/p&gt;
-&lt;p class="script-enabled"&gt;You have scripting enabled! :-)&lt;/p&gt;
-</pre>
+```html
+<p class="script-none">You do not have scripting available. :-(</p>
+<p class="script-initial-only">Your scripting is only enabled during the initial page load. Weird.</p>
+<p class="script-enabled">You have scripting enabled! :-)</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: lightgray;
 }
 
@@ -51,18 +51,17 @@ translation_of: Web/CSS/@media/scripting
   .script-enabled {
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

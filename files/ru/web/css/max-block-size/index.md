@@ -3,15 +3,16 @@ title: max-block-size
 slug: Web/CSS/max-block-size
 translation_of: Web/CSS/max-block-size
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> свойство<strong> <code>max-block-size</code></strong> определяет максимальный горизонтальный или вертикальный размер блока в зависимости от вида ориентации экрана. Это свойство соответствует либо {{cssxref("max-width")}}, либо {{cssxref("max-height")}}, в зависимости от значения определённого в {{cssxref("writing-mode")}}. Если последнее свойство вертикально ориентировано, значит значение свойства <code>max-block-size</code> относится к максимальной ширине блока, в противном случае относится к максимальной высоте блока. It relates to {{cssxref("max-inline-size")}}, which defines the other dimension of the element.</p>
+[CSS](/ru/docs/Web/CSS "CSS") свойство** `max-block-size`** определяет максимальный горизонтальный или вертикальный размер блока в зависимости от вида ориентации экрана. Это свойство соответствует либо {{cssxref("max-width")}}, либо {{cssxref("max-height")}}, в зависимости от значения определённого в {{cssxref("writing-mode")}}. Если последнее свойство вертикально ориентировано, значит значение свойства `max-block-size` относится к максимальной ширине блока, в противном случае относится к максимальной высоте блока. It relates to {{cssxref("max-inline-size")}}, which defines the other dimension of the element.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 max-block-size: 75%;
 
 /* Keyword values */
@@ -25,64 +26,52 @@ max-block-size: fill-available;
 max-block-size: inherit;
 max-block-size: initial;
 max-block-size: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>Свойство <code>max-block-size</code> принимает такие же значения как {{cssxref("max-width")}} и {{cssxref("max-height")}} свойства.</p>
+Свойство `max-block-size` принимает такие же значения как {{cssxref("max-width")}} и {{cssxref("max-height")}} свойства.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 100%;
   max-block-size: 200px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-max-block-size", "max-block-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Logical Properties", "#propdef-max-block-size", "max-block-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}
+- {{cssxref("writing-mode")}}

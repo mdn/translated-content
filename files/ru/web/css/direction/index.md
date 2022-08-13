@@ -3,25 +3,24 @@ title: direction
 slug: Web/CSS/direction
 translation_of: Web/CSS/direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">The <strong><code>direction</code></strong> CSS property sets the direction of text, table columns, and horizontal overflow.</span> Use <code>rtl</code> for languages written from right to left (like Hebrew or Arabic), and <code>ltr</code> for those written from left to right (like English and most other languages).</p>
+The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
 
-<div>{{EmbedInteractiveExample("pages/css/direction.html")}}</div>
+{{EmbedInteractiveExample("pages/css/direction.html")}}
 
+Заметьте, что направление текста обычно задано в документе (т.е. с помощью [HTML's `dir` attribute](/ru/docs/Web/HTML/Global_attributes/dir)), а не посредством прямого использования свойства `direction`.
 
+The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table row.
 
-<p>Заметьте, что направление текста обычно задано в документе (т.е. с помощью <a href="/en-US/docs/Web/HTML/Global_attributes/dir">HTML's <code>dir</code> attribute</a>), а не посредством прямого использования свойства <code>direction</code>.</p>
+Unlike the `dir` attribute in HTML, the `direction` property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.
 
-<p>The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table row.</p>
+The `direction` and {{cssxref("unicode-bidi")}} properties are the two only properties which are not affected by the {{cssxref("all")}} shorthand property.
 
-<p>Unlike the <code>dir</code> attribute in HTML, the <code>direction</code> property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.</p>
+## Syntax
 
-<p>The <code>direction</code> and {{cssxref("unicode-bidi")}} properties are the two only properties which are not affected by the {{cssxref("all")}} shorthand property.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 direction: ltr;
 direction: rtl;
 
@@ -29,71 +28,47 @@ direction: rtl;
 direction: inherit;
 direction: initial;
 direction: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>ltr</code></dt>
- <dd>Text and other elements go from left to right. This is the default value.</dd>
- <dt><code>rtl</code></dt>
- <dd>Text and other elements go from right to left.</dd>
-</dl>
+- `ltr`
+  - : Text and other elements go from left to right. This is the default value.
+- `rtl`
+  - : Text and other elements go from right to left.
 
-<p>For the <code>direction</code> property to have any effect on inline-level elements, the {{Cssxref("unicode-bidi")}} property's value must be <code>embed</code> or <code>override</code>.</p>
+For the `direction` property to have any effect on inline-level elements, the {{Cssxref("unicode-bidi")}} property's value must be `embed` or `override`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_right-to-left_direction">Setting right-to-left direction</h3>
+### Setting right-to-left direction
 
-<pre class="brush: css">blockquote {
+```css
+blockquote {
   direction: rtl;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment             |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | No change.          |
+| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("writing-mode")}}</li>
-</ul>
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("writing-mode")}}

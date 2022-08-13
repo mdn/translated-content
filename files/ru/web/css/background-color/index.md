@@ -10,15 +10,16 @@ tags:
   - Раскладка
 translation_of: Web/CSS/background-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a>-свойство <strong><code>background-color</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> устанавливает цвет фона элемента.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS "CSS") устанавливает цвет фона элемента.
 
-<p>{{EmbedInteractiveExample("pages/css/background-color.html")}}</p>
+{{EmbedInteractiveExample("pages/css/background-color.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css no-line-numbers">/* Словесные значения */
+```css
+/* Словесные значения */
 background-color: red;
 
 /* Шестнадцатеричное значение */
@@ -47,40 +48,41 @@ background-color: transparent;
 background-color: inherit;
 background-color: initial;
 background-color: unset;
-</pre>
+```
 
-<div>Свойство <code>background-color</code> определяется единственным значением <code><a href="#&lt;color>">&lt;color&gt;</a></code>.</div>
+Свойство `background-color` определяется единственным значением [`<color>`](#<color>).
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Является CSS {{cssxref("&lt;color&gt;")}}, которое описывает цвет фона. Даже если заданы одно или несколько {{cssxref("background-image")}}, цвет может отрендерится, если изображения прозрачны.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : Является CSS {{cssxref("&lt;color&gt;")}}, которое описывает цвет фона. Даже если заданы одно или несколько {{cssxref("background-image")}}, цвет может отрендерится, если изображения прозрачны.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;
+```html
+<div class="exampleone">
  Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exampletwo"&gt;
+<div class="exampletwo">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplethree"&gt;
+<div class="examplethree">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleone {
+```css
+.exampleone {
   background-color: teal;
   color: white;
 }
@@ -94,42 +96,35 @@ background-color: unset;
   background-color: #777799;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры","200","150")}}</p>
+{{EmbedLiveSample("Примеры","200","150")}}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, чтобы люди со слабым зрением могли его прочитать, но при этом должна быть достаточная разница между введённым текстом и текстом placeholder, чтобы пользователь не путал их.</p>
+Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, чтобы люди со слабым зрением могли его прочитать, но при этом должна быть достаточная разница между введённым текстом и текстом placeholder, чтобы пользователь не путал их.
 
-<p>Коэффициент цветового контраста определяется путём сравнения яркости текста placeholder и цветом фона формы ввода. Чтобы соответствовать рекомендациям <a href="https://www.w3.org/WAI/intro/wcag" rel="noopener">Web Content Accessibility Guidelines (WCAG)</a>, требуется соотношение 4.5:1 для основного текста и 3:1 для более крупного текста, например, заголовков. Крупный текст определяется как 18.66px и больше с жирным начертанием или 24px и больше с обычным начертанием.</p>
+Коэффициент цветового контраста определяется путём сравнения яркости текста placeholder и цветом фона формы ввода. Чтобы соответствовать рекомендациям [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), требуется соотношение 4.5:1 для основного текста и 3:1 для более крупного текста, например, заголовков. Крупный текст определяется как 18.66px и больше с жирным начертанием или 24px и больше с обычным начертанием.
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/" rel="noopener">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noopener">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>
-  <p><a href="/ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны">Множественные фоны</a></p>
- </li>
- <li>
-  <p>Тип данных {{cssxref("&lt;color&gt;")}}</p>
- </li>
- <li>Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, и {{cssxref("column-rule-color")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">Применение цвета к HTML элементам с помощью CSS</a></li>
-</ul>
+## Смотрите также
+
+- [Множественные фоны](/ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны)
+- Тип данных {{cssxref("&lt;color&gt;")}}
+- Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, и {{cssxref("column-rule-color")}}
+- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)

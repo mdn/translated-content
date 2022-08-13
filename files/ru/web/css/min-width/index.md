@@ -3,20 +3,21 @@ title: min-width
 slug: Web/CSS/min-width
 translation_of: Web/CSS/min-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="ru/docs/Web/CSS">CSS</a> <strong><code>min-width</code></strong> устанавливает минимальную ширину элемента. Оно предотвращает <a href="/ru/docs/Web/CSS/used_value">используемое значение</a> свойства {{ Cssxref("width") }}  от становления меньше, чем значение, указанное для <code>min-width</code>.</p>
+Свойство [CSS](ru/docs/Web/CSS) **`min-width`** устанавливает минимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления меньше, чем значение, указанное для `min-width`.
 
-<div>{{EmbedInteractiveExample("pages/css/min-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/min-width.html")}}
 
-<p>Ширина элемента принимает значение <code>min-width</code> когда <code>min-width</code> больше чем {{ Cssxref("max-width") }} или {{Cssxref("width")}}.</p>
+Ширина элемента принимает значение `min-width` когда `min-width` больше чем {{ Cssxref("max-width") }} или {{Cssxref("width")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; значение */
+```css
+/* <length> значение */
 min-width: 3.5em;
 
-/* &lt;percentage&gt; значение */
+/* <percentage> значение */
 min-width: 10%;
 
 /* Значения-ключевые слова */
@@ -29,55 +30,51 @@ min-width: fill-available;
 min-width: inherit;
 min-width: initial;
 min-width: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Минимальная ширина выражается как {{cssxref("&lt;length&gt;")}}. Отрицательные значения делают свойство недействительным.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Минимальная ширина выражается как {{cssxref("&lt;percentage&gt;")}} от ширины родительского блока. Отрицательные значения делают свойство недействительным.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Минимальная ширина выражается как {{cssxref("&lt;length&gt;")}}. Отрицательные значения делают свойство недействительным.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Минимальная ширина выражается как {{cssxref("&lt;percentage&gt;")}} от ширины родительского блока. Отрицательные значения делают свойство недействительным.
 
-<h4 id="Значения-ключевые_слова">Значения-ключевые слова</h4>
+#### Значения-ключевые слова
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Минимальная ширина для flex-элементов по умолчанию, предоставляет более разумное значение по умолчанию, чем 0 для других способов разметки.</dd>
- <dt><code>max-content</code> {{ experimental_inline() }}</dt>
- <dd>Внутренняя предпочтительная ширина.</dd>
- <dt><code>min-content</code> {{ experimental_inline() }}</dt>
- <dd>Внутренняя минимальная ширина.</dd>
- <dt><code>fill-available</code>{{ experimental_inline() }}</dt>
- <dd>Ширина родительского блока минус горизонтальные <code>margin</code>, <code>border</code>, и <code>padding</code>. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., <code>available</code>.)</dd>
- <dt><code>fit-content</code> {{ experimental_inline() }}</dt>
- <dd>Определяет как <code>min(max-content, max(min-content, fill-available))</code>.</dd>
-</dl>
+- `auto`
+  - : Минимальная ширина для flex-элементов по умолчанию, предоставляет более разумное значение по умолчанию, чем 0 для других способов разметки.
+- `max-content` {{ experimental_inline() }}
+  - : Внутренняя предпочтительная ширина.
+- `min-content` {{ experimental_inline() }}
+  - : Внутренняя минимальная ширина.
+- `fill-available`{{ experimental_inline() }}
+  - : Ширина родительского блока минус горизонтальные `margin`, `border`, и `padding`. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `available`.)
+- `fit-content` {{ experimental_inline() }}
+  - : Определяет как `min(max-content, max(min-content, fill-available))`.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:css;">table { min-width: 75%; }
+```css
+table { min-width: 75%; }
 
 form { min-width: 0; }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{ Cssxref("width") }}, {{ Cssxref("max-width") }}</li>
- <li><a href="/en-US/docs/CSS/box_model" title="en/CSS/box_model">Блочная модель</a>, {{ Cssxref("box-sizing") }}</li>
-</ul>
+## See also
+
+- {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}

@@ -4,42 +4,42 @@ slug: Web/CSS/:host_function
 translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+[CSS](/ru/docs/Web/CSS) функция-[псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:host()`** выбирает shadow хоста (носителя) [shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM)-a, который содержит CSS, используемый внутри (так что вы можете выбрать пользовательский элемент изнутри его shadow DOM) — но только если селектор, переданный как параметр функции, соответствует shadow хосту.
 
+Самый очевидный способ использовать его — поставить некоторый класс только на определённые экземпляры пользовательских элементов, а затем передать соответствующий классовый селектор как аргумент функции. Вы не можете использовать псевдокласс c селектором наследника, чтобы выбрать только экземпляры пользовательского элемента, которые находятся внутри определённого предка. Это работа {{CSSxRef(":host-context()")}}.
 
-<p><span class="seoSummary"><a href="/ru/docs/Web/CSS">CSS</a> функция-<a href="/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">псевдокласс</a>  <strong><code>:host()</code></strong> выбирает shadow хоста (носителя) <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>-a, который содержит CSS, используемый внутри (так что вы можете выбрать пользовательский элемент изнутри его shadow DOM) </span>— но<span class="seoSummary"> только если селектор, переданный как параметр функции, соответствует shadow хосту.</span></p>
+> **Примечание:** Псевдокласс не имеет эффекта вне shadow DOM.
 
-<p>Самый очевидный способ использовать его — поставить некоторый класс только на определённые экземпляры пользовательских элементов, а затем передать соответствующий классовый селектор как аргумент функции. Вы не можете использовать псевдокласс c селектором наследника, чтобы выбрать только экземпляры пользовательского элемента, которые находятся внутри определённого предка. Это работа {{CSSxRef(":host-context()")}}.</p>
-
-<div class="note">
-<p><strong>Примечание</strong>: Псевдокласс не имеет эффекта вне shadow DOM.</p>
-</div>
-
-<pre class="brush: css; no-line-numbers">/* Выбирает хоста shadow root, только
+```css
+/* Выбирает хоста shadow root, только
   если он соответствует аргументу селектора */
 :host(.special-custom-element) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Селективная_стилизация_shadow_хостов">Селективная стилизация shadow хостов</h3>
+### Селективная стилизация shadow хостов
 
-<p>Следующие ниже фрагменты взяты из нашего примера <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">host-selectors</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">также смотрите вживую</a>).</p>
+Следующие ниже фрагменты взяты из нашего примера [host-selectors](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([также смотрите вживую](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>В этом примере у нас есть простой пользовательский элемент — <code>&lt;context-span&gt;</code> — который мы оборачиваем вокруг текста:</p>
+В этом примере у нас есть простой пользовательский элемент — `<context-span>` — который мы оборачиваем вокруг текста:
 
-<pre class="brush: html;">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Внутри конструктора элемента мы создаём элементы <code>style</code> и <code>span</code>, заполняем <code>span</code> контентом пользовательского элемента и заполняем элемент <code>style</code> CSS-правилами:</p>
+Внутри конструктора элемента мы создаём элементы `style` и `span`, заполняем `span` контентом пользовательского элемента и заполняем элемент `style` CSS-правилами:
 
-<pre class="brush: js;">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -52,22 +52,21 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>Правило <code>:host(.footer) { color : red; }</code> стилизует все экземпляры элемента <code>&lt;context-span&gt;</code> (shadow хост в данном случае) в документе, которые имеют класс <code>footer</code> — мы использовали его, чтобы дать экземплярам элемента внутри {{htmlelement("footer")}} особый цвет.</p>
+Правило `:host(.footer) { color : red; }` стилизует все экземпляры элемента `<context-span>` (shadow хост в данном случае) в документе, которые имеют класс `footer` — мы использовали его, чтобы дать экземплярам элемента внутри {{htmlelement("footer")}} особый цвет.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Web_Components">Веб-компоненты</a></li>
- <li>{{CSSxRef(":host")}}</li>
- <li>{{CSSxRef(":host-context()")}}</li>
-</ul>
+- [Веб-компоненты](/ru/docs/Web/Web_Components)
+- {{CSSxRef(":host")}}
+- {{CSSxRef(":host-context()")}}

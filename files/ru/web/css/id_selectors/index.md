@@ -3,37 +3,39 @@ title: Селекторы по ID
 slug: Web/CSS/ID_selectors
 translation_of: Web/CSS/ID_selectors
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary">Краткое описание</h2>
+## Краткое описание
 
-<p>В HTML-документах CSS-селекторы по ID производят выборку всех элементов по ID, полностью совпадающих с селектором.</p>
+В HTML-документах CSS-селекторы по ID производят выборку всех элементов по ID, полностью совпадающих с селектором.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">#id_value { <em>style properties</em> }</pre>
+    #id_value { style properties }
 
-<p>То же самое  — {{ Cssxref("Attribute_selectors", "селектор по атрибутам") }}:</p>
+То же самое — {{ Cssxref("Attribute_selectors", "селектор по атрибутам") }}:
 
-<pre class="syntaxbox">[id=id_value] { <em>style properties</em> }</pre>
+    [id=id_value] { style properties }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: css">span#identified {
+```css
+span#identified {
   background-color: DodgerBlue;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;span id="identified"&gt;Тут span с каким-то текстом.&lt;/span&gt;
-&lt;span&gt;Здесь тоже span.&lt;/span&gt;
-</pre>
+```html
+<span id="identified">Тут span с каким-то текстом.</span>
+<span>Здесь тоже span.</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 200, 50) }}</p>
+{{ EmbedLiveSample('Example', 200, 50) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

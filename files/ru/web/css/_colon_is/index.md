@@ -1,19 +1,18 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
-translation_of: 'Web/CSS/:is'
+slug: Web/CSS/:is
+translation_of: Web/CSS/:is
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> <code>:matches()</code> был переименован в <code>:is()</code> в <a href="https://github.com/w3c/csswg-drafts/issues/3258" style="white-space: nowrap;">CSSWG issue #3258</a>.</p>
-</div>
+> **Примечание:** `:matches()` был переименован в `:is()` в [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-<p><strong><code>:is()</code></strong> это функция <a href="/ru/docs/Web/CSS">псевдокласс CSS</a> принимающая список селекторов как аргумент, и выбирает любой элемент, который может быть выбран одним из селекторов в этом списке. Это полезно при переписи огромных селекторов в более компактную форму.</p>
+**`:is()`** это функция [псевдокласс CSS](/ru/docs/Web/CSS) принимающая список селекторов как аргумент, и выбирает любой элемент, который может быть выбран одним из селекторов в этом списке. Это полезно при переписи огромных селекторов в более компактную форму.
 
-<p>Заметьте, что в данный момент браузеры поддерживают её функциональность как <code>:matches()</code>, или даже как более старый, префиксный псевдокласс — <code>:any()</code>, включая старые версии Chrome, Firefox, и Safari. <code>:any()</code> работает точно таким же образом как и <code>:matches()</code>/<code>:is()</code>, за исключением того, что  <code>:any()</code> требует постановку префиксов и не поддерживает <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы">комплексные селекторы</a>.</p>
+Заметьте, что в данный момент браузеры поддерживают её функциональность как `:matches()`, или даже как более старый, префиксный псевдокласс — `:any()`, включая старые версии Chrome, Firefox, и Safari. `:any()` работает точно таким же образом как и `:matches()`/`:is()`, за исключением того, что `:any()` требует постановку префиксов и не поддерживает [комплексные селекторы](/ru/docs/Learn/CSS/Building_blocks/Селекторы).
 
-<pre class="brush: css no-line-numbers">/* Выбирает какой-либо абзац в шапке, основной части или подвале, который зависал */
+```css
+/* Выбирает какой-либо абзац в шапке, основной части или подвале, который зависал */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
@@ -42,32 +41,35 @@ footer p:hover {
   color: red;
   cursor: pointer;
 }
-</pre>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Кроссбраузерный_пример">Кроссбраузерный пример</h3>
+### Кроссбраузерный пример
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;p&gt;Это мой параграф в шапке&lt;/p&gt;
-&lt;/header&gt;
+```html
+<header>
+  <p>Это мой параграф в шапке</p>
+</header>
 
-&lt;main&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;p&gt;Это первый&lt;/p&gt;&lt;p&gt;пункт списка&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;Это второй&lt;/p&gt;&lt;p&gt;пункт списка&lt;/p&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/main&gt;
+<main>
+  <ul>
+    <li><p>Это первый</p><p>пункт списка</p></li>
+    <li><p>Это второй</p><p>пункт списка</p></li>
+  </ul>
+</main>
 
-&lt;footer&gt;
-  &lt;p&gt;Это мой параграф в подвале&lt;/p&gt;
-&lt;/footer&gt;</pre>
+<footer>
+  <p>Это мой параграф в подвале</p>
+</footer>
+```
 
-<pre class="brush: css">:-webkit-any(header, main, footer) p:hover {
+```css
+:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -86,9 +88,10 @@ footer p:hover {
   color: red;
   cursor: pointer;
 }
-</pre>
+```
 
-<pre class="brush: js">let matchedItems;
+```js
+let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -114,15 +117,17 @@ function applyHandler(elem) {
   elem.addEventListener('click', function(e) {
     alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
   });
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Кроссбраузерный_пример", "100%", 300)}}</p>
+{{EmbedLiveSample("Кроссбраузерный_пример", "100%", 300)}}
 
-<h3 id="Упрощение_списка_селекторов">Упрощение списка селекторов</h3>
+### Упрощение списка селекторов
 
-<p>Псевдо-класс <code>:is()</code> может великолепно упрощать ваши CSS селекторы. К примеру, следующий CSS:</p>
+Псевдо-класс `:is()` может великолепно упрощать ваши CSS селекторы. К примеру, следующий CSS:
 
-<pre class="brush: css">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
+```css
+/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -137,24 +142,27 @@ dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
 dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }
-</pre>
+```
 
-<p>... можно заменить на:</p>
+... можно заменить на:
 
-<pre class="brush: css">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
+```css
+/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
   list-style-type: square;
-}</pre>
+}
+```
 
-<h3 id="Упрощение_селекторов_разделов">Упрощение селекторов разделов</h3>
+### Упрощение селекторов разделов
 
-<p>Псевдо-класс <code>:is()</code>  особенно полезен  при работе с <a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">заголовками и разделами</a> HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без <code>:is()</code>, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.</p>
+Псевдо-класс `:is()` особенно полезен при работе с [заголовками и разделами](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без `:is()`, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.
 
-<p>К примеру, без <code>:is()</code>, стилизовать все {{HTMLElement("h1")}} элементы на разных уровнях может бы очень сложно:</p>
+К примеру, без `:is()`, стилизовать все {{HTMLElement("h1")}} элементы на разных уровнях может бы очень сложно:
 
-<pre class="brush: css">/* Уровень 0 */
+```css
+/* Уровень 0 */
 h1 {
   font-size: 30px;
 }
@@ -171,11 +179,12 @@ nav section h1, nav article h1, nav aside h1, nav nav h1 {
 }
 /* Уровень 3 */
 /* ... даже не смей думать об этом! */
-</pre>
+```
 
-<p>Используя <code>:is()</code>, как видно, это гораздо легче:</p>
+Используя `:is()`, как видно, это гораздо легче:
 
-<pre class="brush: css">/* Уровень 0 */
+```css
+/* Уровень 0 */
 h1 {
   font-size: 30px;
 }
@@ -193,42 +202,43 @@ h1 {
 :is(section, article, aside, nav)
 :is(section, article, aside, nav) h1 {
   font-size: 15px;
-}</pre>
+}
+```
 
-<h3 id="Как_избежать_аннулирования_списка_селекторов">Как избежать аннулирования списка селекторов</h3>
+### Как избежать аннулирования списка селекторов
 
-<p>В отличие от <a href="/ru/docs/Web/CSS/Selector_list">списка селекторов</a>, псевдокласс <code>:is()</code> не аннулируется, когда из селекторов, попавший туда не поддерживается браузером.</p>
+В отличие от [списка селекторов](/ru/docs/Web/CSS/Selector_list), псевдокласс `:is()` не аннулируется, когда из селекторов, попавший туда не поддерживается браузером.
 
-<pre class="brush: css">:is(:valid, :unsupported) {
+```css
+:is(:valid, :unsupported) {
   ...
-}</pre>
+}
+```
 
-<p>Будет по прежнему определяться правильно и соответствовать <code>:valid</code> даже в браузерах, которые не поддерживают <code>:unsupported</code>, в то время как:</p>
+Будет по прежнему определяться правильно и соответствовать `:valid` даже в браузерах, которые не поддерживают `:unsupported`, в то время как:
 
-<pre class="brush: css">:valid, :unsupported {
+```css
+:valid, :unsupported {
   ...
-}</pre>
+}
+```
 
-<p>Будет проигнорировано браузерами, которые не поддерживают <code>:unsupported</code> даже если они поддерживают <code>:valid</code>.</p>
+Будет проигнорировано браузерами, которые не поддерживают `:unsupported` даже если они поддерживают `:valid`.
 
-<h3 id="Разница_между_is_и_where">Разница между :is() и :where()</h3>
+### Разница между :is() и :where()
 
-<p>Разница между этими двумя, в том что <code>:is()</code> учитывает спецификацию общего селектора (он принимает специфику своего самого конкретного аргумента), в то же время <code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code> имеет значение спецификации равное 0. Это можно увидеть на <a href="/en-US/docs/Web/CSS/:where#Examples">примере на странице документации <code>:where()</code> </a>.</p>
+Разница между этими двумя, в том что `:is()` учитывает спецификацию общего селектора (он принимает специфику своего самого конкретного аргумента), в то же время [`:where()`](/en-US/docs/Web/CSS/:where) имеет значение спецификации равное 0. Это можно увидеть на [примере на странице документации `:where()` ](/ru/docs/Web/CSS/:where#Examples).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like <code>:is()</code>, but with 0 <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>.</li>
- <li><a href="/ru/docs/Web/CSS/Selector_list">Список селекторов</a></li>
- <li><a href="/ru/docs/Web/Web_Components">Веб компоненты</a></li>
-</ul>
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like `:is()`, but with 0 [specificity](/ru/docs/Web/CSS/Specificity).
+- [Список селекторов](/ru/docs/Web/CSS/Selector_list)
+- [Веб компоненты](/ru/docs/Web/Web_Components)

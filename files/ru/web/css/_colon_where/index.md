@@ -1,19 +1,16 @@
 ---
 title: ':where()'
-slug: 'Web/CSS/:where'
+slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
   - псевдокласс
-translation_of: 'Web/CSS/:where'
+translation_of: Web/CSS/:where
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс ](/ru/docs/Web/CSS/Псевдо-классы)**`:where()` **в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
 
-<div><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс </a><strong><code>:where()</code> </strong>в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.</div>
-
-
-
-<pre class="brush: css"><code>/* Выбирает любой параграф внутри header, main
+```css
+/* Выбирает любой параграф внутри header, main
    или footer на который наведён курсор мыши */
 :where(header, main, footer) p:hover {
   color: red;
@@ -26,71 +23,79 @@ main p:hover,
 footer p:hover {
   color: red;
   cursor: pointer;
-}</code></pre>
+}
+```
 
-<p>Разница между <code>:where()</code> и {{CSSxRef(":is", ":is()")}} заключается в том, что <code>:where()</code> всегда имеет нулевую <a href="ru/docs/Web/CSS/Specificity">специфичность селектора</a>, тогда как специфичность <code>:is()</code> равна самому специфичному селектору из списка переданных аргументов.</p>
+Разница между `:where()` и {{CSSxRef(":is", ":is()")}} заключается в том, что `:where()` всегда имеет нулевую [специфичность селектора](ru/docs/Web/CSS/Specificity), тогда как специфичность `:is()` равна самому специфичному селектору из списка переданных аргументов.
 
-<h3 id="Парсинг_forgiving-селектора">Парсинг forgiving-селектора</h3>
+### Парсинг forgiving-селектора
 
-<p>В спецификации псевдоклассы <code>:is()</code> и <code>:where()</code> относятся к так называемому <a href="https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list">forgiving selector list</a> (прощающий список селекторов).</p>
+В спецификации псевдоклассы `:is()` и `:where()` относятся к так называемому [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list) (прощающий список селекторов).
 
-<p>При использовании списка селекторов в CSS, если один из селекторов невалидный, то весь список селекторов будет считаться невалидным. В то же время при использовании <code>:is()</code> или <code>:where()</code> действует другое правило: если среди переданных аргументов будет некорректный или неподдерживаемый селектор, то он будет проигнорирован, для всех же остальных селекторов будут применены CSS-правила.</p>
+При использовании списка селекторов в CSS, если один из селекторов невалидный, то весь список селекторов будет считаться невалидным. В то же время при использовании `:is()` или `:where()` действует другое правило: если среди переданных аргументов будет некорректный или неподдерживаемый селектор, то он будет проигнорирован, для всех же остальных селекторов будут применены CSS-правила.
 
-<pre class="brush: css">:where(:valid, :unsupported) {
+```css
+:where(:valid, :unsupported) {
   ...
-}</pre>
+}
+```
 
-<p>Пример выше будет успешно распарсен и для <code>:valid</code> будут применены CSS-правила, даже если в браузере не поддерживается <code>:unsupported</code>, в то время как:</p>
+Пример выше будет успешно распарсен и для `:valid` будут применены CSS-правила, даже если в браузере не поддерживается `:unsupported`, в то время как:
 
-<pre class="brush: css">:valid, :unsupported {
+```css
+:valid, :unsupported {
   ...
-}</pre>
+}
+```
 
-<p>Код будет полностью проигнорирован в браузерах, которые не поддерживают <code>:unsupported</code>, даже не смотря на то, что они поддерживают <code>:valid</code>.</p>
+Код будет полностью проигнорирован в браузерах, которые не поддерживают `:unsupported`, даже не смотря на то, что они поддерживают `:valid`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Сравнение_where_и_is">Сравнение :where() и :is()</h3>
+### Сравнение :where() и :is()
 
-<p>В этом примере показывается как работает <code>:where()</code>, а так же демонстрируется разница между <code>:where()</code> и <code>:is()</code>.</p>
+В этом примере показывается как работает `:where()`, а так же демонстрируется разница между `:where()` и `:is()`.
 
-<p>Возьмём следующий HTML-код:</p>
+Возьмём следующий HTML-код:
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h2&gt;:is()-styled links&lt;/h2&gt;
-  &lt;section class="is-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+```html
+<article>
+  <h2>:is()-styled links</h2>
+  <section class="is-styling">
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+  </section>
 
-  &lt;aside class="is-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+  <aside class="is-styling">
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+  </aside>
 
-  &lt;footer class="is-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;
+  <footer class="is-styling">
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+  </footer>
+</article>
 
-&lt;article&gt;
-  &lt;h2&gt;:where()-styled links&lt;/h2&gt;
-  &lt;section class="where-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+<article>
+  <h2>:where()-styled links</h2>
+  <section class="where-styling">
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+  </section>
 
-  &lt;aside class="where-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+  <aside class="where-styling">
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+  </aside>
 
-  &lt;footer class="where-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;</pre>
+  <footer class="where-styling">
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+  </footer>
+</article>
+```
 
-<p>В примере выше у нас представлено две статьи, каждая из которых содержит следующие блоки: <code>section</code>, <code>aside</code> и <code>footer</code>. Каждый из блоков имеет свой CSS-класс.</p>
+В примере выше у нас представлено две статьи, каждая из которых содержит следующие блоки: `section`, `aside` и `footer`. Каждый из блоков имеет свой CSS-класс.
 
-<p>Теперь при помощи псевдоклассов <code>:is()</code> и <code>:where()</code> зададим цвет для ссылок в простой форме, как в примере ниже:</p>
+Теперь при помощи псевдоклассов `:is()` и `:where()` зададим цвет для ссылок в простой форме, как в примере ниже:
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
   font-size: 150%;
 }
@@ -101,40 +106,39 @@ footer p:hover {
 
 :where(section.where-styling, aside.where-styling, footer.where-styling) a {
   color: orange;
-}</pre>
+}
+```
 
-<p>Что если позже мы захотим переопределить цвет ссылок в <code>footer</code>'ах используя простой селектор?</p>
+Что если позже мы захотим переопределить цвет ссылок в `footer`'ах используя простой селектор?
 
-<pre class="brush: css">footer a {
+```css
+footer a {
   color: blue;
-}</pre>
+}
+```
 
-<p>Это не будет работать для ссылок красного цвета, потому что специфичность селекторов внутри <code>:is()</code> выше, чем специфичность селектора вышеприведённого кода. Селектор классов имеет бо́льшую специфичность, чем селектор элемента.</p>
+Это не будет работать для ссылок красного цвета, потому что специфичность селекторов внутри `:is()` выше, чем специфичность селектора вышеприведённого кода. Селектор классов имеет бо́льшую специфичность, чем селектор элемента.
 
-<p>В то время как, селекторы перечисленные внутри <code>:where()</code> имеют нулевую специфичность, поэтому оранжевая ссылка в футере будет переопределена простым селектором и станет синего цвета.</p>
+В то время как, селекторы перечисленные внутри `:where()` имеют нулевую специфичность, поэтому оранжевая ссылка в футере будет переопределена простым селектором и станет синего цвета.
 
-<p><strong>Примечание</strong>: вы так же можете найти этот пример на Github; смотрите <a href="https://mdn.github.io/css-examples/is-where/">is-where</a>.</p>
+**Примечание**: вы так же можете найти этот пример на Github; смотрите [is-where](https://mdn.github.io/css-examples/is-where/).
 
-<p>{{EmbedLiveSample('Примеры', '100%', 600)}}</p>
+{{EmbedLiveSample('Примеры', '100%', 600)}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{CSSSyntax}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{CSSxRef(":is", ":is()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Selector_list">Список селекторов</a></li>
- <li><a href="/ru/docs/Web/Web_Components">Веб-компоненты</a></li>
-</ul>
+- {{CSSxRef(":is", ":is()")}}
+- [Список селекторов](/ru/docs/Web/CSS/Selector_list)
+- [Веб-компоненты](/ru/docs/Web/Web_Components)

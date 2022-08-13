@@ -3,11 +3,12 @@ title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
 translation_of: Web/CSS/text-decoration-skip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">The <strong><code>text-decoration-skip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies what parts of the element’s content any text decoration affecting the element must skip over.</span> It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.</p>
+The **`text-decoration-skip`** [CSS](/ru/docs/Web/CSS) property specifies what parts of the element’s content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
 
-<pre class="brush:css no-line-numbers">/* Single keyword */
+```css
+/* Single keyword */
 text-decoration-skip: none;
 text-decoration-skip: objects;
 text-decoration-skip: spaces;
@@ -23,58 +24,58 @@ text-decoration-skip: ink edges box-decoration;
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Nothing is skipped, i.e. text decoration is drawn for all text content and across atomic inline-level boxes.</dd>
- <dt><code>objects</code></dt>
- <dd>The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.</dd>
- <dt><code>spaces</code></dt>
- <dd>All spacing is skipped, i.e. all <a href="http://www.unicode.org/reports/tr44/#White_Space">Unicode white space characters</a> and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.</dd>
- <dt><code>ink</code></dt>
- <dd><p>The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.</p>
- <img alt='An example of "text-decoration-skip: ink;".' src="https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png"></dd>
- <dt><code>edges</code></dt>
- <dd><p>The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)</p>
- <img alt='An example of "text-decoration-skip: edges;".' src="https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png"></dd>
- <dt><code>box-decoration</code></dt>
- <dd>The text decoration is skipped over the box's margin, border and padding areas. This only has an effect on decorations imposed by an ancestor; a <em>decorating box</em> never draws over its own box decoration.</dd>
-</dl>
+- `none`
+  - : Nothing is skipped, i.e. text decoration is drawn for all text content and across atomic inline-level boxes.
+- `objects`
+  - : The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.
+- `spaces`
+  - : All spacing is skipped, i.e. all [Unicode white space characters](http://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
+- `ink`
+  - : The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.![An example of "text-decoration-skip: ink;".](https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png)
+- `edges`
+  - : The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)![An example of "text-decoration-skip: edges;".](https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png)
+- `box-decoration`
+  - : The text decoration is skipped over the box's margin, border and padding areas. This only has an effect on decorations imposed by an ancestor; a _decorating box_ never draws over its own box decoration.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;p&gt;Hey, grab a cup of coffee!&lt;/p&gt;</pre>
+```html
+<p>Hey, grab a cup of coffee!</p>
+```
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css; highlight[4]">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;
   text-decoration-skip: ink;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры", "100%", 60)}}</p>
+{{EmbedLiveSample("Примеры", "100%", 60)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

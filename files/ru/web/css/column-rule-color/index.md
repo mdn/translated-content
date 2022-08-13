@@ -5,17 +5,16 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-rule-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS </a>свойство<strong> <code>column-rule-color</code></strong> устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке.</p>
+[CSS ](/ru/docs/Web/CSS)свойство** `column-rule-color`** устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 
+## Синтаксис
 
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Значения &lt;color&gt;  */
+```css
+/* Значения <color>  */
 column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;
@@ -25,59 +24,56 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: unset;
-</pre>
+```
 
-<p>Свойство <code>column-rule-color</code> указывает одиночное значение <code>&lt;color&gt;</code>.</p>
+Свойство `column-rule-color` указывает одиночное значение `<color>`.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Цвет линий, разделяющих столбцы.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : Цвет линий, разделяющих столбцы.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-color` property is used to change
    the color of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: solid;
   column-rule-color: blue;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
+- [Applying color to HTML elements using CSS](/ru/docs/Web/HTML/Applying_color)

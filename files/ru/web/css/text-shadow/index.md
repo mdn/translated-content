@@ -3,15 +3,16 @@ title: text-shadow
 slug: Web/CSS/text-shadow
 translation_of: Web/CSS/text-shadow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">CSS-свойство <strong><code>text-shadow</code></strong> добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам <code><a href="/en-US/docs/Web/CSS/text-decoration">decorations</a></code>.</span> Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.</p>
+CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/en-US/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
 
-<div>{{EmbedInteractiveExample("pages/css/text-shadow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
-<h2 id="Syntax_2">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* смещение-x | смещение-y | радиус-размытия | цвет */
+```css
+/* смещение-x | смещение-y | радиус-размытия | цвет */
 text-shadow: 1px 1px 2px black;
 
 /* цвет | смещение-x | смещение-y | радиус-размытия */
@@ -31,103 +32,85 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: unset;
-</pre>
+```
 
-<p>Это свойство определено как разделённый запятыми список теней.</p>
+Это свойство определено как разделённый запятыми список теней.
 
-<p>Каждая тень определена как два или три значения <code>&lt;длина&gt;</code>, за которыми следует необязательное значение <code>&lt;цвет&gt;</code>. Первые два значения <code>&lt;длина&gt;</code> определяют параметры <code>&lt;смещение-x&gt;</code> и <code>&lt;смещение-y&gt;</code>. Третье необязательное значение <code>&lt;длина&gt; задаёт</code> <code>&lt;радиус-размытия&gt;</code>. Значение <code>&lt;цвет&gt;</code> определяет цвет тени.</p>
+Каждая тень определена как два или три значения `<длина>`, за которыми следует необязательное значение `<цвет>`. Первые два значения `<длина>` определяют параметры `<смещение-x>` и `<смещение-y>`. Третье необязательное значение `<длина> задаёт` `<радиус-размытия>`. Значение `<цвет>` определяет цвет тени.
 
-<p>Если определены больше чем одна тень, тени накладываются друг на друга в порядке обратном порядку их определения, что значит, первая тень окажется поверх последующих.</p>
+Если определены больше чем одна тень, тени накладываются друг на друга в порядке обратном порядку их определения, что значит, первая тень окажется поверх последующих.
 
-<p>Это свойство можно применить к <a href="/ru-RU/docs/Web/CSS/Pseudo-elements">псевдо-элементам</a> {{cssxref("::first-line")}} и {{cssxref("::first-letter")}}.</p>
+Это свойство можно применить к [псевдо-элементам](/ru/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} и {{cssxref("::first-letter")}}.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;цвет&gt;")}}</dt>
- <dd>Необязательный. Цвет тени. Параметр может быть определён как до, так и после значений смещений. Если значение не задано, то его цвет будет определяться браузером пользователя, поэтому, для сохранения согласованности в отображении в браузерах, рекомендуется определить значение цвета явно.</dd>
- <dt><code>&lt;смещение-x&gt; &lt;смещение-y&gt;</code></dt>
- <dd>Обязательные. Эти величины {{cssxref("&lt;длина&gt;")}} задают расстояние тени от текста. <code>&lt;смещение-x&gt;</code> определяет горизонтальное расстояние; отрицательное значение размещает тень левее от текста. <code>&lt;смещение-y&gt;</code> определяет вертикальное расстояние; отрицательное значение размещает тень выше текста. Если оба значения заданы в <code>0</code>, тень будет располагаться прямо за текстом, она может быть видна из-за эффекта <code>&lt;радиус-размытия&gt;</code>.</dd>
- <dt><code>&lt;радиус-размытия&gt;</code></dt>
- <dd>Необязательный. Это величина {{cssxref("&lt;длина&gt;")}}. Чем больше значение, тем сильнее задаётся размытие; тень становится шире и светлее. Значение по умолчанию <code>0</code>, в случае когда параметр не определён.</dd>
-</dl>
+- {{cssxref("&lt;цвет&gt;")}}
+  - : Необязательный. Цвет тени. Параметр может быть определён как до, так и после значений смещений. Если значение не задано, то его цвет будет определяться браузером пользователя, поэтому, для сохранения согласованности в отображении в браузерах, рекомендуется определить значение цвета явно.
+- `<смещение-x> <смещение-y>`
+  - : Обязательные. Эти величины {{cssxref("&lt;длина&gt;")}} задают расстояние тени от текста. `<смещение-x>` определяет горизонтальное расстояние; отрицательное значение размещает тень левее от текста. `<смещение-y>` определяет вертикальное расстояние; отрицательное значение размещает тень выше текста. Если оба значения заданы в `0`, тень будет располагаться прямо за текстом, она может быть видна из-за эффекта `<радиус-размытия>`.
+- `<радиус-размытия>`
+  - : Необязательный. Это величина {{cssxref("&lt;длина&gt;")}}. Чем больше значение, тем сильнее задаётся размытие; тень становится шире и светлее. Значение по умолчанию `0`, в случае когда параметр не определён.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простая_тень">Простая тень</h3>
+### Простая тень
 
-<div>
-<pre class="brush: css">.red-text-shadow {
+```css
+.red-text-shadow {
   text-shadow: red 0 -2px;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p class="red-text-shadow"&gt;Sed ut perspiciatis unde omnis iste
+```html
+<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
     natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.&lt;/p&gt;</pre>
-</div>
+    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+```
 
-<p>{{EmbedLiveSample('Простая_тень', '660px', '90px')}}</p>
+{{EmbedLiveSample('Простая_тень', '660px', '90px')}}
 
-<h3 id="Множественные_тени">Множественные тени</h3>
+### Множественные тени
 
-<div>
-<pre class="brush:css">.white-text-with-blue-shadow {
+```css
+.white-text-with-blue-shadow {
   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
   color: white;
   font: 1.5em Georgia, serif;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p class="white-text-with-blue-shadow"&gt;Sed ut perspiciatis unde omnis iste
+```html
+<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
     natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.&lt;/p&gt;</pre>
-</div>
+    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+```
 
-<p>{{EmbedLiveSample('Множественные_тени', '660px', '170px')}}</p>
+{{EmbedLiveSample('Множественные_тени', '660px', '170px')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Определяет <code>text-shadow</code> как анимируемую.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Свойство CSS <code>text-shadow</code> было <a class="external" href="http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props">ошибочно определено в CSS2</a> и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в <a href="https://www.w3.org/TR/css-text-decor-3/">CSS Text Decoration Module Level 3</a>.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                       | Comment                                                                                                                                                                                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}} | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
+| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | Свойство CSS `text-shadow` было [ошибочно определено в CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в [CSS Text Decoration Module Level 3](https://www.w3.org/TR/css-text-decor-3/). |
 
-<p id="Syntax">{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h3 id="Примечание_Quantum_CSS">Примечание Quantum CSS</h3>
+{{Compat}}
 
-<ul>
- <li>В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством <code>text-shadow</code> с заданным цветом к элементу со свойством <code>text-shadow</code> без заданного цвета  ({{bug(726550)}}). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> или <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, выпуск которого запланирован уже в версии Firefox 57).</li>
-</ul>
+### Примечание Quantum CSS
 
-<h2 id="Также_смотрите">Также смотрите</h2>
+- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ({{bug(726550)}}). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
 
-<ul>
- <li><a href="https://cssgenerator.org/text-shadow-css-generator.html">Text Shadow CSS Generator</a> - Интерактивный генератор теней CSS.</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>Тип данных {{cssxref("&lt;color&gt;")}} (для определения цвета теней)</li>
- <li><a href="/ru-RU/docs/Web/HTML/Applying_color">Определение цвета для элемента HTML посредством CSS</a></li>
-</ul>
+## Также смотрите
+
+- [Text Shadow CSS Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Интерактивный генератор теней CSS.
+- {{cssxref("box-shadow")}}
+- Тип данных {{cssxref("&lt;color&gt;")}} (для определения цвета теней)
+- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/HTML/Applying_color)

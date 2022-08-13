@@ -6,32 +6,33 @@ tags:
   - Справка
 translation_of: Web/CSS/clear
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>clear</code></strong> CSS указывает, может ли элемент быть рядом с плавающими  <a href="https://developer.mozilla.org/en-US/docs/CSS/float" title="CSS/float">floating</a> элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство <code>clear</code> применяется как к плавающим, так и к неплавающим элементам.</p>
+Свойство **`clear`** CSS указывает, может ли элемент быть рядом с плавающими [floating](/ru/docs/CSS/float "CSS/float") элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство `clear` применяется как к плавающим, так и к неплавающим элементам.
 
-<div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clear.html")}}
 
-<p>При применении к неплавающим блокам он перемещает границу края <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">border edge</a> элемента до тех пор, пока не окажется ниже края <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.</p>
+При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/CSS/box_model "CSS/box_model") элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/CSS/box_model "CSS/box_model") поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
 
-<p>Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам -  <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> нижнего элемента перемещается ниже <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.</p>
+Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/CSS/box_model "CSS/box_model") нижнего элемента перемещается ниже [margin edge](/ru/docs/CSS/box_model "CSS/box_model") всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
 
-<p>Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">контексте форматирования блоков</a>. </p>
+Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/CSS/block_formatting_context "CSS/block_formatting_context").
 
-<div class="note">
-<p><strong>Примечание:</strong> Если элемент содержит только плавающие элементы, его высота сворачивается в ничто. Если вы хотите, чтобы он всегда мог изменять размер, чтобы он содержал в себе плавающие элементы, вам нужно самоочистить своих детей. Это называется <strong>clearfix,</strong> и один из способов сделать это - это заменит <code>clear</code> заменённый {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a> на нем.</p>
+> **Примечание:** **Примечание:** Если элемент содержит только плавающие элементы, его высота сворачивается в ничто. Если вы хотите, чтобы он всегда мог изменять размер, чтобы он содержал в себе плавающие элементы, вам нужно самоочистить своих детей. Это называется **clearfix,** и один из способов сделать это - это заменит `clear` заменённый {{cssxref("::after")}} [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) на нем.```css
+> #container::after {
+> content: "";
+> display: block;
+> clear: both;
+> }
+>
+> ```
+>
+> ```
 
-<pre class="brush: css">#container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-</pre>
-</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css no-line-numbers">/* Значения ключевых слов */
+```css
+/* Значения ключевых слов */
 clear: none;
 clear: left;
 clear: right;
@@ -43,45 +44,45 @@ clear: inline-end;
 clear: inherit;
 clear: initial;
 clear: unset;
-</pre>
+```
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент не перемещается вниз, чтобы очистить предыдущие плавающие элементы.</dd>
- <dt><code>left</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы очистить <em>левые</em> поплавки.</dd>
- <dt><code>right</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы удалить прошлые <em>правые</em> поплавки.</dd>
- <dt><code>both</code></dt>
- <dd>Это ключевое слово, указывающее, что элемент перемещается вниз, чтобы очистить как левые, так и правые поплавки.</dd>
- <dt><code>inline-start</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в начале содержащего его блока</em>, то есть <em>левые</em> поплавки на скриптах <strong>ltr</strong> и <em>правые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
- <dt><code>inline-end</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в конце содержащего его блока</em>, то есть <em>правые</em> поплавки на скриптах <strong>ltr</strong> и <em>левые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
-</dl>
+- `none`
+  - : Является ключевым словом, указывающим, что элемент не перемещается вниз, чтобы очистить предыдущие плавающие элементы.
+- `left`
+  - : Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы очистить _левые_ поплавки.
+- `right`
+  - : Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы удалить прошлые _правые_ поплавки.
+- `both`
+  - : Это ключевое слово, указывающее, что элемент перемещается вниз, чтобы очистить как левые, так и правые поплавки.
+- `inline-start`
+  - : Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков _в начале содержащего его блока_, то есть _левые_ поплавки на скриптах **ltr** и _правые_ поплавки на скриптах **rtl**.
+- `inline-end`
+  - : Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков _в конце содержащего его блока_, то есть _правые_ поплавки на скриптах **ltr** и _левые_ поплавки на скриптах **rtl**.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="clear_left">clear: left</h3>
+### clear: left
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="left"&gt;Этот абзац очищается слева.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="left">Этот абзац очищается слева.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -105,24 +106,26 @@ clear: unset;
 p {
   width: 50%;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('clear_left','100%','250')}}</p>
+{{EmbedLiveSample('clear_left','100%','250')}}
 
-<h3 id="clear_right">clear: right</h3>
+### clear: right
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="red"&gt;- Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="right"&gt;Этот абзац очищается справа.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="red">- Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="right">Этот абзац очищается справа.</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -145,24 +148,27 @@ p {
 }
 p {
   width: 50%;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('clear_right','100%','250')}}</p>
+{{EmbedLiveSample('clear_right','100%','250')}}
 
-<h3 id="clear_both">clear: both</h3>
+### clear: both
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor".&lt;/p&gt;
-  &lt;p class="both"&gt;Этот абзац очищает оба.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor".</p>
+  <p class="both">Этот абзац очищает оба.</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -185,48 +191,25 @@ p {
 }
 p {
   width: 45%;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('clear_both','100%','300')}}</p>
+{{EmbedLiveSample('clear_both','100%','300')}}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Добавляет значения <code>inline-start</code> и <code>inline-end</code>. </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Никаких существенных изменений, хотя детали уточняются.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#clear', 'clear')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                     | Статус                                           | Коммент                                                 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Добавляет значения `inline-start` и `inline-end`.       |
+| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Никаких существенных изменений, хотя детали уточняются. |
+| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Начальное определение                                   |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<div> </div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/box_model" title="CSS/box_model">Box model</a></li>
-</ul>
+- [Box model](/ru/docs/CSS/box_model "CSS/box_model")
