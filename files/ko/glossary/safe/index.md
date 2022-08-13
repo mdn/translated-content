@@ -6,6 +6,6 @@ tags:
   - Disambiguation
 translation_of: Glossary/Safe
 ---
-<p><strong>안전함</strong>은 맥락에 따라 여러가지를 의미할 수 있습니다. 아래의 용어를 가리키는 경우도 있습니다.</p>
+**안전함**은 맥락에 따라 여러가지를 의미할 수 있습니다. 아래의 용어를 가리키는 경우도 있습니다.
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
