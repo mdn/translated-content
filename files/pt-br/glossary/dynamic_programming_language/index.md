@@ -1,0 +1,21 @@
+---
+title: Linguagem de programação dinâmica
+slug: Glossary/Dynamic_programming_language
+tags:
+  - Glossário
+  - Iniciante
+  - ScriptingDeCodificação
+translation_of: Glossary/Dynamic_programming_language
+original_slug: Glossario/Linguagem_de_programação_dinâmica
+---
+Uma **linguagem de programação dinâmica** é uma linguagem de programação na qual determinadas operações podem ser feitas em tempo de execução em vez de em tempo de compilação. Por exemplo, em JavaScript é possível mudar o tipo de uma variável ou adicionar novas propriedades ou métodos a um objeto enquanto o programa está sendo executado.
+
+Isso é o oposto das linguagens denominadas **linguagens de programação estática**, nas quais tais mudanças normalmente não são possíveis.
+
+> **Note:** Note que, embora exista de fato uma conexão entre essa propriedade dinâmica/estática das linguagens de programação e a tipagem dinâmica/estática, ambas estão longe de serem sinônimas.
+
+## Aprenda mais
+
+### Conhecimento geral
+
+- {{Interwiki("wikipedia", "Linguagem de Programação Dinâmica")}} on Wikipedia

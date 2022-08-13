@@ -1,0 +1,39 @@
+---
+title: Cookie2
+slug: conflicting/Web/HTTP/Headers/Cookie
+tags:
+  - Cabeçalho de requisição
+  - HTTP
+  - Obsoleto
+  - Referencia
+  - cabeçalho
+  - requisição
+translation_of: Web/HTTP/Headers/Cookie2
+original_slug: Web/HTTP/Headers/Cookie2
+---
+{{HTTPSidebar}} {{obsolete_header}}
+
+O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o servidor que o agente de usuário entende _cookies_ de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.
+
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
+
+## Exemplos
+
+    Cookie2: $Version="1"
+
+## Especificações
+
+| Especificação                        | Título                                                                                         |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| {{RFC("2965", "Cookie2")}} | Especificação histórica do HTTP State Management Mechanism, obsoleta pela {{RFC("6265")}} |
+
+## Compatibilidade com navegadores
+
+{{Compat("http.headers.Cookie2")}}
+
+## Veja também
+
+- {{HTTPHeader("Cookie")}}
+- {{domxref("Document.cookie")}}
