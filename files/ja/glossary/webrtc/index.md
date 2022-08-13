@@ -11,23 +11,19 @@ tags:
   - WebRTC
 translation_of: Glossary/WebRTC
 ---
-<p><span class="seoSummary"><strong>WebRTC</strong> (<em>Web Real-Time Communication</em>)はビデオチャット、音声通話、P2P ファイル共有を行うウェブアプリで使われる API です。</span></p>
+**WebRTC** (_Web Real-Time Communication_)はビデオチャット、音声通話、P2P ファイル共有を行うウェブアプリで使われる API です。
 
-<p>WebRTC は主に以下の要素で構成されています:</p>
+WebRTC は主に以下の要素で構成されています:
 
-<dl>
- <dt>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}</dt>
- <dd>端末のカメラとマイクのアクセスを許可し、シグナルと RTC接続を繋ぎます。</dd>
- <dt>{{domxref("RTCPeerConnection")}}</dt>
- <dd>ビデオチャットまたは音声通話を構成するインターフェイスです。</dd>
- <dt> {{domxref("RTCDataChannel")}}</dt>
- <dd>ブラウザー間の{{Glossary("P2P")}} のデータ経路を構成するメソッド。</dd>
-</dl>
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+  - : 端末のカメラとマイクのアクセスを許可し、シグナルと RTC 接続を繋ぎます。
+- {{domxref("RTCPeerConnection")}}
+  - : ビデオチャットまたは音声通話を構成するインターフェイスです。
+- {{domxref("RTCDataChannel")}}
+  - : ブラウザー間の{{Glossary("P2P")}} のデータ経路を構成するメソッド。
 
-<h2 id="詳細情報">詳細情報</h2>
+## 詳細情報
 
-<ul>
- <li>Wikipedia 上の記事「{{Interwiki("wikipedia", "WebRTC")}}」</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API">MDN上の WebRTC の解説</a></li>
- <li><a href="http://caniuse.com/#feat=rtcpeerconnection">WebRTC のブラウザーサポート状況</a></li>
-</ul>
+- Wikipedia 上の記事「{{Interwiki("wikipedia", "WebRTC")}}」
+- [MDN 上の WebRTC の解説](/ja/docs/Web/API/WebRTC_API)
+- [WebRTC のブラウザーサポート状況](http://caniuse.com/#feat=rtcpeerconnection)

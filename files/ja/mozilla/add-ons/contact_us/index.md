@@ -9,33 +9,31 @@ tags:
   - Mozilla
 translation_of: Mozilla/Add-ons/Contact_us
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>サポートを受けたり、アドオン関連の最新ニュースを追いかけたり、ご意見を寄せたりするには、下記のリンクからどうぞ。</p>
+サポートを受けたり、アドオン関連の最新ニュースを追いかけたり、ご意見を寄せたりするには、下記のリンクからどうぞ。
 
-<h3 id="Add-ons_forum">アドオンフォーラム</h3>
+### アドオンフォーラム
 
-<p><a href="https://discourse.mozilla.org/c/add-ons">Add-ons Discourse forum</a> は、アドオン開発全般の議論や質問に使って下さい。</p>
+[Add-ons Discourse forum](https://discourse.mozilla.org/c/add-ons) は、アドオン開発全般の議論や質問に使って下さい。
 
-<h3 id="Mailing_lists">メーリングリスト</h3>
+### メーリングリスト
 
-<p><strong>dev-addons メーリングリスト</strong> は 2020 年 12 月 1 日に廃止されました。  <a href="https://mail.mozilla.org/pipermail/dev-addons/">dev-addons archives</a> で WebExtensions API と addons.mozilla.org に関する過去の議論を参照することができます。</p>
+**dev-addons メーリングリスト** は 2020 年 12 月 1 日に廃止されました。 [dev-addons archives](https://mail.mozilla.org/pipermail/dev-addons/) で WebExtensions API と addons.mozilla.org に関する過去の議論を参照することができます。
 
-<h3 id="Chat">チャット</h3>
+### チャット
 
-<p><a class="external text" href="https://matrix.org/" rel="nofollow">Matrix</a> は、分散型リアルタイム通信のための、オープンで軽量なプロトコルです。 Mozilla の Matrix インスタンスに参加する方法については、 <a href="https://wiki.mozilla.org/Matrix">MozillaWiki の Matrix ページ</a>を参照してください。</p>
+[Matrix](https://matrix.org/) は、分散型リアルタイム通信のための、オープンで軽量なプロトコルです。 Mozilla の Matrix インスタンスに参加する方法については、 [MozillaWiki の Matrix ページ](https://wiki.mozilla.org/Matrix)を参照してください。
 
-<ul>
- <li><a href="https://chat.mozilla.org/#/room/#addons:mozilla.org">Add-ons</a> (拡張機能、テーマ、 WebExtensions API のサポート)</li>
- <li><a href="https://chat.mozilla.org/#/room/#amo:mozilla.org">AMO</a> (addons.mozilla.org に関する議論)</li>
-</ul>
+- [Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org) (拡張機能、テーマ、 WebExtensions API のサポート)
+- [AMO](https://chat.mozilla.org/#/room/#amo:mozilla.org) (addons.mozilla.org に関する議論)
 
-<h3 id="Report_problems">問題を報告する</h3>
+### 問題を報告する
 
-<h4 id="Security_vulnerabilities">セキュリティ欠陥</h4>
+#### セキュリティ欠陥
 
-<p>アドオンのセキュリティ欠陥を見つけた場合は、それが Mozilla のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は<a href="https://www.mozilla.org/projects/security/security-bugs-policy.html">非公開で</a>、 <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&amp;component=Add-on%20Security&amp;maketemplate=Add-on%20Security%20Bug&amp;bit-23=1&amp;rep_platform=All&amp;op_sys=All">Bugzilla</a> または <a href="mailto:amo-admins@mozilla.com">amo-admins@mozilla.com 宛てのメール</a>でお願いします。</p>
+アドオンのセキュリティ欠陥を見つけた場合は、それが Mozilla のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は[非公開で](https://www.mozilla.org/projects/security/security-bugs-policy.html)、 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) または [amo-admins@mozilla.com 宛てのメール](mailto:amo-admins@mozilla.com)でお願いします。
 
-<h4 id="Bugs_on_addons.mozilla.org_AMO">サイト addons.mozilla.org (AMO)のバグ</h4>
+#### サイト addons.mozilla.org (AMO)のバグ
 
-<p>もしサイト自体の問題を見つけたら、是非修正したいと思います。 <a href="https://github.com/mozilla/addons/issues/new">バグ報告して</a>、できるだけ多くの詳細を含めてください。</p>
+もしサイト自体の問題を見つけたら、是非修正したいと思います。 [バグ報告して](https://github.com/mozilla/addons/issues/new)、できるだけ多くの詳細を含めてください。

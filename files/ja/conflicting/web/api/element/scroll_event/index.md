@@ -13,97 +13,77 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><strong><code>onscroll</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 <code>scroll</code> イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
+**`onscroll`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 `scroll` イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
 
-<p><code>scroll</code> イベントは、ユーザー、 <a href="/ja/docs/Web/API">Web API</a>、{{glossary("user agent","ユーザーエージェント")}}の何れかによって文書のビューまたは要素がスクロールしたときに発生します。</p>
+`scroll` イベントは、ユーザー、 [Web API](/ja/docs/Web/API)、{{glossary("user agent","ユーザーエージェント")}}の何れかによって文書のビューまたは要素がスクロールしたときに発生します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>onscroll</code> を {{domxref("GlobalEventHandlers.onwheel", "onwheel")}} と混同しないようにしてください。</p>
+> **Note:** **注:** `onscroll` を {{domxref("GlobalEventHandlers.onwheel", "onwheel")}} と混同しないようにしてください。`onwheel` は一般的なホイールの回転を扱うのに対し、 `onscroll` はオブジェクトの内容のスクロールを扱います。
 
-<p><code>onwheel</code> は一般的なホイールの回転を扱うのに対し、 <code>onscroll</code> はオブジェクトの内容のスクロールを扱います。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+    target.onscroll = functionRef
 
-<pre class="syntaxbox notranslate"><var>target</var>.onscroll = <var>functionRef</var>
-</pre>
+### 値
 
-<h3 id="Value" name="Value">値</h3>
+- `functionRef`
+  - : 関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は引数として一つだけ、 {{domxref("UIEvent")}} オブジェクトを受け取ります。
 
-<dl>
- <dt><code><var>functionRef</var></code></dt>
- <dd>関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は引数として一つだけ、 {{domxref("UIEvent")}} オブジェクトを受け取ります。</dd>
-</dl>
+`onscroll` ハンドラーは同時に 1 つだけ割り当てることができます。
 
-<p><code>onscroll</code> ハンドラーは同時に1つだけ割り当てることができます。</p>
+柔軟性を高めるために、 {{event("scroll")}} イベントを {{domxref("EventTarget.addEventListener()")}} メソッドに渡すことができます。
 
-<p>柔軟性を高めるために、 {{event("scroll")}} イベントを {{domxref("EventTarget.addEventListener()")}} メソッドに渡すことができます。</p>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+この例では {{HtmlElement("textarea")}} のスクロールを監視し、その結果である要素の垂直のスクロール位置をログ出力します。
 
-<p>この例では {{HtmlElement("textarea")}} のスクロールを監視し、その結果である要素の垂直のスクロール位置をログ出力します。</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<textarea>1 2 3 4 5 6 7 8 9</textarea>
+<p id="log"></p>
+```
 
-<pre class="brush: html notranslate">&lt;textarea&gt;1 2 3 4 5 6 7 8 9&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">textarea {
+```css
+textarea {
   width: 4rem;
   height: 8rem;
   font-size: 3rem;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">const textarea = document.querySelector('textarea');
+```js
+const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 
 textarea.onscroll = logScroll;
 
 function logScroll(e) {
   log.textContent = `Scroll position: ${e.target.scrollTop}`;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           | 状態                             | 備考     |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}     | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.onscroll")}}</p>
+{{Compat("api.GlobalEventHandlers.onscroll")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Document/scroll_event">Document: <code>scroll</code> イベント</a></li>
- <li><a href="/ja/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> イベント</a></li>
-</ul>
+- [Document: `scroll` イベント](/ja/docs/Web/API/Document/scroll_event)
+- [Element: `scroll` イベント](/ja/docs/Web/API/Element/scroll_event)

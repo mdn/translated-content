@@ -3,22 +3,18 @@ title: Tree shaking
 slug: Glossary/Tree_shaking
 translation_of: Glossary/Tree_shaking
 ---
-<p><strong>Tree shaking</strong> とは実行されないコードを削除することで、JavaScriptの文脈で利用される用語です。</p>
+**Tree shaking** とは実行されないコードを削除することで、JavaScript の文脈で利用される用語です。
 
-<p>Tree shaking は ES2015 の <a href="/ja/docs/Web/JavaScript/Reference/Statements/import">import</a> 文と <a href="/ja/docs/Web/JavaScript/Reference/Statements/export">export</a> 文を利用して、エクスポートされたコードが他の JavaScript ファイルで利用されているかどうかを判定します。</p>
+Tree shaking は ES2015 の [import](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [export](/ja/docs/Web/JavaScript/Reference/Statements/export) 文を利用して、エクスポートされたコードが他の JavaScript ファイルで利用されているかどうかを判定します。
 
-<p>モダンな JavaScript アプリケーションの開発では、<a href="https://webpack.js.org/">webpack</a> や <a href="https://github.com/rollup/rollup">Rollup</a> のようなモジュールバンドラーが複数の JavaScript ファイルを 1 つにまとめられます。この際に tree shaking が行われます。Tree shaking は、コードの構造を整理してファイルサイズを小さくできる、といった点で製品としてリリースする前の重要な処理となっています。</p>
+モダンな JavaScript アプリケーションの開発では、[webpack](https://webpack.js.org/) や [Rollup](https://github.com/rollup/rollup) のようなモジュールバンドラーが複数の JavaScript ファイルを 1 つにまとめられます。この際に tree shaking が行われます。Tree shaking は、コードの構造を整理してファイルサイズを小さくできる、といった点で製品としてリリースする前の重要な処理となっています。
 
-<h2 id="詳細情報">詳細情報</h2>
+## 詳細情報
 
-<h4 id="一般的な知識">一般的な知識</h4>
+#### 一般的な知識
 
-<ul>
- <li><a href="http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling">"Benefits of dead code elimination during bundling"</a> in Axel Rauschmayer's book: "Exploring JS: Modules"</li>
-</ul>
+- ["Benefits of dead code elimination during bundling"](http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
 
-<h4 id="技術的なレファレンス">技術的なレファレンス</h4>
+#### 技術的なレファレンス
 
-<ul>
- <li><a href="https://webpack.js.org/guides/tree-shaking/">Tree shaking implementation with webpack</a></li>
-</ul>
+- [Tree shaking implementation with webpack](https://webpack.js.org/guides/tree-shaking/)

@@ -6,100 +6,85 @@ tags:
   - Firefox
 translation_of: Mozilla/Firefox/Releases/16
 ---
-<p>Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。</p>
+Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
-<h2 id="Web_開発者向けの変更点一覧">Web 開発者向けの変更点一覧</h2>
+## Web 開発者向けの変更点一覧
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>{{HTMLElement("meter")}} 要素をサポートしました。</li>
+- {{HTMLElement("meter")}} 要素をサポートしました。
+- HTML Microdata API のサポートが追加されました。([bug 591467](https://bugzilla.mozilla.org/show_bug.cgi?id=591467))
+- {{ HTMLElement("canvas") }} が CSS の `currentColor` をすべての場合でサポートするようになりました。({{bug("629882")}})
+- {{HTMLElement("input")}} で、`accept` 属性の任意の MIME タイプに基づくフィルタリングが可能になりました。({{bug("565274")}})
+- 2 個の属性 `width` および `height` が {{HTMLElement("input")}} 要素に追加されました ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
 
- <li>HTML Microdata API のサポートが追加されました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">bug 591467</a>)</li>
- <li>{{ HTMLElement("canvas") }} が CSS の <code>currentColor</code> をすべての場合でサポートするようになりました。({{bug("629882")}})</li>
- <li>{{HTMLElement("input")}} で、<code>accept</code> 属性の任意の MIME タイプに基づくフィルタリングが可能になりました。({{bug("565274")}})</li>
- <li>2 個の属性 <code>width</code> および <code>height</code> が {{HTMLElement("input")}} 要素に追加されました (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=683855">bug 683855</a>)</li>
-</ul>
+### CSS
 
-<h3 id="CSS">CSS</h3>
+- 標準の、接頭辞無しのバージョンの [CSS Animations](/ja/docs/CSS/Using_CSS_Animations) が使えるようになりました。([bug 762302](https://bugzilla.mozilla.org/show_bug.cgi?id=762302))
+- アニメーションの方向の逆転（{{ cssxref("animation-direction") }} プロパティの `reverse` と `alternate-reverse` キーワード）のサポートが追加されました。([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920))
+- CSS の {{cssxref("height")}} および {{cssxref("width")}} プロパティのアニメーションが可能になりました。
+- {{ cssxref("animation-duration") }} および {{ cssxref("transition-duration") }} の CSS プロパティが、負の値を拒絶するようになりました (さらに、そのような値はもはや `0s` として扱われません)。([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102))
+- 標準の、接頭辞無しのバージョンの [CSS Transforms](/ja/docs/CSS/Using_CSS_transforms) が使えるようになりました。([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
+- 標準の、接頭辞無しのバージョンの [CSS Gradients](/ja/docs/CSS/Using_CSS_gradients) が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187))
+- {{ cssxref("box-sizing", "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554))
+- 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
+- {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
+- 画面上で、[メディアクエリ](/ja/docs/CSS/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
+- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの疑似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
+- {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
+- {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。({{bug("763689")}})
 
-<ul>
- <li>標準の、接頭辞無しのバージョンの <a href="/ja/docs/CSS/Using_CSS_Animations" title="/ja/docs/CSS/Using_CSS_Animations">CSS Animations</a> が使えるようになりました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=762302">bug 762302</a>)</li>
- <li>アニメーションの方向の逆転（{{ cssxref("animation-direction") }} プロパティの <code>reverse</code> と <code>alternate-reverse</code> キーワード）のサポートが追加されました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=655920">bug 655920</a>)</li>
- <li>CSS の {{cssxref("height")}} および {{cssxref("width")}} プロパティのアニメーションが可能になりました。</li>
- <li>{{ cssxref("animation-duration") }} および {{ cssxref("transition-duration") }} の CSS プロパティが、負の値を拒絶するようになりました (さらに、そのような値はもはや <code>0s</code> として扱われません)。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773102">bug 773102</a>)</li>
- <li>標準の、接頭辞無しのバージョンの <a href="/ja/docs/CSS/Using_CSS_transforms" title="/ja/docs/CSS/Using_CSS_transforms">CSS Transforms</a> が使えるようになりました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=745523">bug 745523</a>)</li>
- <li>標準の、接頭辞無しのバージョンの <a href="/ja/docs/CSS/Using_CSS_gradients" title="/ja/docs/CSS/Using_CSS_gradients">CSS Gradients</a> が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=752187">bug 752187</a>)</li>
- <li>{{ cssxref("box-sizing", "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=338554">bug 338554</a>)</li>
- <li>標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=771678">bug 771678</a>)</li>
- <li>{{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、<code>dppx</code> がサポートされるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=741644">bug 741644</a>)</li>
- <li>画面上で、<a href="/ja/docs/CSS/Media_queries" title="/ja/docs/CSS/Media_queries">メディアクエリ</a> のために、<code>dppx</code>、<code>dpi</code>、および <code>dpcm</code> が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=771390">bug 771390</a>)</li>
- <li>特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの疑似クラス <code>:-moz-meter-optimum</code>、<code>:-moz-meter-sub-optimum</code>、<code>:-moz-meter-sub-sub-optimum</code> を追加しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=660238">bug 660238</a>)</li>
- <li>{{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : <code>meterbar</code> および <code>meterchunk</code>。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=659999">bug 659999</a>)</li>
- <li>{{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための <code>auto</code> キーワードをサポートしました (他のアイテムでは <code>0</code> と解釈します)。({{bug("763689")}})</li>
-</ul>
+### API/DOM
 
-<h3 id="APIDOM">API/DOM</h3>
+- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インタフェースに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
+- IndexedDB プロパティとメソッドが接頭辞無しになりました。([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
+- [Battery API](/ja/docs/DOM/window.navigator.battery) が接頭辞なしになりました。
+- Vibration API が接頭辞なしになりました。
+- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インタフェースが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
+- `Window.java` および `Window.packages` 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!
+- {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
+- WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
+- 非標準の {{domxref("Element.scrollTopMax")}} および {{domxref("Element.scrollLeftMax")}} 読み取り専用プロパティが追加されました ({{bug(766937)}})。
+- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリとして扱われるようになりました ({{bug(7691119)}})。
 
-<ul>
- <li><code>width</code> と <code>height</code> の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インタフェースに追加されました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=683855">bug 683855</a>)</li>
- <li>IndexedDB プロパティとメソッドが接頭辞無しになりました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=726378">bug 726378</a>)</li>
- <li><a href="/ja/docs/DOM/window.navigator.battery" title="/ja/docs/DOM/window.navigator.battery">Battery API</a> が接頭辞なしになりました。</li>
- <li>Vibration API が接頭辞なしになりました。</li>
- <li>現在も接頭辞付きの <code>mozKeyboard</code> である {{domxref("Keyboard")}} インタフェースが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。</li>
- <li><code>Window.java</code> および <code>Window.packages</code> 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!</li>
- <li>{{ domxref("CSSNamespaceRule") }} に結びつけられている <code>CSSRule.type</code> を、<code>UNKNOWN_RULE</code> (<code>0</code>) から <code>NAMESPACE_RULE</code> (<code>10</code>) に更新しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=765590">bug 765590</a>)</li>
- <li>WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。</li>
- <li>非標準の {{domxref("Element.scrollTopMax")}} および {{domxref("Element.scrollLeftMax")}} 読み取り専用プロパティが追加されました ({{bug(766937)}})。</li>
- <li>{{domxref("Blob.blob", "Blob()")}} の第 2 引数に <code>null</code> または <code>undefined</code> をセットした場合、空ディレクトリとして扱われるようになりました ({{bug(7691119)}})。</li>
-</ul>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+- [`Number`](/ja/docs/JavaScript/Reference/Global_Objects/Number) オブジェクトに `isFinite()`、`toInteger()`、`isInteger()` メソッドを追加しました。([bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=761480), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=761495))
+- Harmony の [spread 演算子](http://wiki.ecmascript.org/doku.php?id=harmony:spread)を [`Array`](/ja/docs/JavaScript/Reference/Global_Objects/Array) オブジェクトに追加しました。([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130))
+- 実験的な {{jsxref("TypedArray.prototype.move()")}} メソッドが追加されました (Aurora および Nightly チャンネルのみで利用可能) ({{bug(730873)}})。
 
-<ul>
- <li><a href="/ja/docs/JavaScript/Reference/Global_Objects/Number" title="/ja/docs/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> オブジェクトに <code>isFinite()</code>、<code>toInteger()</code>、<code>isInteger()</code> メソッドを追加しました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=761480">bug 761480</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug 761495</a>)</li>
- <li>Harmony の <a href="http://wiki.ecmascript.org/doku.php?id=harmony:spread">spread 演算子</a>を <a href="/ja/docs/JavaScript/Reference/Global_Objects/Array" title="/ja/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> オブジェクトに追加しました。(<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=574130">bug 574130</a>)</li>
- <li>実験的な {{jsxref("TypedArray.prototype.move()")}} メソッドが追加されました (Aurora および Nightly チャンネルのみで利用可能) ({{bug(730873)}})。</li>
-</ul>
+### WebGL
 
-<h3 id="WebGL">WebGL</h3>
+_変更なし_
 
-<p><em>変更なし</em></p>
+### SVG
 
-<h3 id="SVG">SVG</h3>
+_変更なし_
 
-<p><em>変更なし</em></p>
+### MathML
 
-<h3 id="MathML">MathML</h3>
+- {{ MathMLElement("mo") }} の `lspace` および `rspace` 属性の初期値が、正しく `thickmathspace` になります。
 
-<ul>
- <li>{{ MathMLElement("mo") }} の <code>lspace</code> および <code>rspace</code> 属性の初期値が、正しく <code>thickmathspace</code> になります。</li>
-</ul>
+### ネットワーク
 
-<h3 id="ネットワーク">ネットワーク</h3>
+### 開発者ツール
 
-<h3 id="Developer_tools" name="Developer_tools">開発者ツール</h3>
+- 便利な開発ツールバーを実装しており、ツール > Web 開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインタフェースを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
+- Web コンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
+- スクラッチパッドが、最近開いたファイルの一覧を提供するようになりました。
 
-<ul>
- <li>便利な開発ツールバーを実装しており、ツール &gt; Web 開発 &gt; 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインタフェースを提供します。Graphical command line interface (<a href="/ja/docs/Tools/GCLI" title="/ja/docs/Tools/GCLI">GCLI</a>) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。</li>
- <li>Web コンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。</li>
- <li>スクラッチパッドが、最近開いたファイルの一覧を提供するようになりました。</li>
-</ul>
+## Open Web App 開発者向けの変更点
 
-<h2 id="Open_Web_App_開発者向けの変更点">Open Web App 開発者向けの変更点</h2>
+- Initial [Open Web App support](/ja/docs/Apps/Getting_Started) has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).
 
-<ul>
- <li>Initial <a href="/ja/docs/Apps/Getting_Started">Open Web App support</a> has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).</li>
-</ul>
+## アドオンと Mozilla 開発者向け
 
-<h2 id="アドオンと_Mozilla_開発者向け">アドオンと Mozilla 開発者向け</h2>
+### インタフェースの変更点
 
-<h3 id="インタフェースの変更点">インタフェースの変更点</h3>
+`nsIPrivateDOMEvent` が `nsIDOMEvent` に併合されました ({{bug("761613")}})。
 
-<p><code>nsIPrivateDOMEvent</code> が <code>nsIDOMEvent</code> に併合されました ({{bug("761613")}})。</p>
+#### 新しいインタフェース
 
-<h4 id="新しいインタフェース">新しいインタフェース</h4>
+#### 削除されたインタフェース
 
-<h4 id="削除されたインタフェース">削除されたインタフェース</h4>
-
-<p>以下のインタフェースが削除されました。</p>
+以下のインタフェースが削除されました。

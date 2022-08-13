@@ -6,10 +6,8 @@ tags:
   - Infrastructure
 translation_of: Glossary/Presto
 ---
-<p>Presto は、バージョン15までの {{Glossary("Opera browser")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の Opera browser は、 {{Glossary('Blink')}} レイアウトエンジンを使用する Chromium をベースにしています。</p>
+Presto は、バージョン 15 までの {{Glossary("Opera browser")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の Opera browser は、 {{Glossary('Blink')}} レイアウトエンジンを使用する Chromium をベースにしています。
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>Wikipedia 上の <a href="http://en.wikipedia.org/wiki/Presto_%28layout_engine%29">Presto layout engine</a></li>
-</ul>
+- Wikipedia 上の [Presto layout engine](http://en.wikipedia.org/wiki/Presto_%28layout_engine%29)

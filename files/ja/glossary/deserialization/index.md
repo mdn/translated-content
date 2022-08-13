@@ -8,14 +8,12 @@ tags:
   - JavaScript
 translation_of: Glossary/Deserialization
 ---
-<p>下位レベルのフォーマット（例えば、ネットワークを介して転送された、またはデータストアに格納された）が、読み取り可能なオブジェクトまたは他のデータ構造に変換されるプロセス。</p>
+下位レベルのフォーマット（例えば、ネットワークを介して転送された、またはデータストアに格納された）が、読み取り可能なオブジェクトまたは他のデータ構造に変換されるプロセス。
 
-<p>たとえば、{{Glossary("JavaScript")}} では、{{jsxref("JSON.parse()")}} {{Glossary("function","関数")}}を呼び出すことで、{{Glossary("JSON")}} {{Glossary("string","文字列")}}をオブジェクトにデシリアライズすることができます。</p>
+たとえば、{{Glossary("JavaScript")}} では、{{jsxref("JSON.parse()")}} {{Glossary("function","関数")}}を呼び出すことで、{{Glossary("JSON")}} {{Glossary("string","文字列")}}をオブジェクトにデシリアライズすることができます。
 
-<h2 id="Learn_more" name="Learn_more">より詳しく知る</h2>
+## より詳しく知る
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipedia 上の {{Interwiki("wikipedia", "シリアライズ")}}</li>
-</ul>
+- Wikipedia 上の {{Interwiki("wikipedia", "シリアライズ")}}

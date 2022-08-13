@@ -9,8 +9,6 @@ tags:
 translation_of: Web/XPath/Index
 original_slug: Web/XPath/Index
 ---
-<p>{{Index("/ja/docs/Web/XPath")}}</p>
+{{Index("/ja/docs/Web/XPath")}}
 
-<div class="boxed translate-rendered text-content">
-<p>{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}</p>
-</div>
+{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}

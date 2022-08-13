@@ -9,31 +9,29 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ondragstart
 original_slug: Web/API/GlobalEventHandlers/ondragstart
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>{{event("dragstart")}} イベントの {{domxref("GlobalEventHandlers","global event handler")}} 。</p>
+{{event("dragstart")}} イベントの {{domxref("GlobalEventHandlers","global event handler")}} 。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>dragstartHandler</var> = <var>targetElement</var>.ondragstart;
-</pre>
+    var dragstartHandler = targetElement.ondragstart;
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<dl>
- <dt><code>dragstartHandler</code></dt>
- <dd>要素 <code>targetElement</code> の <em>dragstart</em> イベントハンドラ。</dd>
-</dl>
+- `dragstartHandler`
+  - : 要素 `targetElement` の _dragstart_ イベントハンドラ。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性ハンドラを使用して、要素 {{event("dragstart")}} イベントハンドラを設定する方法を示します。</p>
+この例では、 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性ハンドラを使用して、要素 {{event("dragstart")}} イベントハンドラを設定する方法を示します。
 
-<pre class="brush: js notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of using the ondrag Global Event Attribute&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of using the ondrag Global Event Attribute</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -45,9 +43,9 @@ original_slug: Web/API/GlobalEventHandlers/ondragstart
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;script&gt;
+</style>
+</head>
+<script>
 function drag_handler(ev) {
  console.log("Drag");
 }
@@ -70,48 +68,29 @@ function dragover_handler(ev) {
  console.log("dragOver");
  ev.preventDefault();
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;ondrag&lt;/code&gt;, &lt;code&gt;ondrop&lt;/code&gt;, &lt;code&gt;ondragstart&lt;/code&gt;, &lt;code&gt;ondragover&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>ondrag</code>, <code>ondrop</code>, <code>ondragstart</code>, <code>ondragover</code></h1>
+ <div>
+   <p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragstart", "ondragstart")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondragstart", "ondragstart")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | ステータス                       | 備考     |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragstart", "ondragstart")}} | {{Spec2("HTML WHATWG")}} |          |
+| {{SpecName("HTML5.1", "index.html#ix-handler-ondragstart", "ondragstart")}}         | {{Spec2("HTML5.1")}}     | 初回定義 |
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.GlobalEventHandlers.ondragstart")}}
 
+## 関連項目
 
-<p>{{Compat("api.GlobalEventHandlers.ondragstart")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{event("dragstart")}}</li>
-</ul>
+- {{event("dragstart")}}

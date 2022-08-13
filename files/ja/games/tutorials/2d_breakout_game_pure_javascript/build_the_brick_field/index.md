@@ -4,51 +4,52 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/ja/docs/Games")}}
 
-<div>{{IncludeSubnav("/ja/docs/Games")}}</div>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}</p>
+これは[ゲーム開発 Canvas チュートリアル](/ja/docs/Games/Workflows/Breakout_game_from_scratch)の 10 ステップのうち**6 番目**のステップです。このレッスンを終えたあとの完成予想のソースコードは[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)で入手できます。
 
-<div class="summary">
-<p>これは<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch">ゲーム開発Canvasチュートリアル</a>の10ステップのうち<strong>6番目</strong>のステップです。このレッスンを終えたあとの完成予想のソースコードは<a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html" rel="noopener">Gamedev-Canvas-workshop/lesson6.html</a>で入手できます。</p>
-</div>
+ゲームプレイ制御を修正することにより負けることができるようになります。この大きな変更により、ついにゲームらしさを感じられるようになりました。ですが、壁とパドルでボールが弾むだけではすぐに空きてしまいます。ブロック崩しで本当に必要な要素、それはボールで崩すことができるブロックです。これが今回作り込んでいく部分になります。
 
-<p><span class="seoSummary">ゲームプレイ制御を修正することにより負けることができるようになります。この大きな変更により、ついにゲームらしさを感じられるようになりました。ですが、壁とパドルでボールが弾むだけではすぐに空きてしまいます。ブロック崩しで本当に必要な要素、それはボールで崩すことができるブロックです。これが今回作り込んでいく部分になります。</span></p>
+## ブロック変数を設定する
 
-<h2 id="ブロック変数を設定する">ブロック変数を設定する</h2>
+このレッスンのおおまかな目標は、ブロックのための、2 次元配列を走査する入れ子のループを使った数行のコードを書き上げることです。しかしその前に幅と高さ、行と列などといった情報を定義するいくつかの変数が必要です。自分のコードの、以前変数を宣言した場所の下に次のコードを追加してください。
 
-<p>このレッスンのおおまかな目標は、ブロックのための、2次元配列を走査する入れ子のループを使った数行のコードを書き上げることです。しかしその前に幅と高さ、行と列などといった情報を定義するいくつかの変数が必要です。自分のコードの、以前変数を宣言した場所の下に次のコードを追加してください。</p>
-
-<pre class="brush: js">var brickRowCount = 3;
+```js
+var brickRowCount = 3;
 var brickColumnCount = 5;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
 var brickOffsetTop = 30;
-var brickOffsetLeft = 30;</pre>
+var brickOffsetLeft = 30;
+```
 
-<p>ここではブロックの行と列の数、幅と高さ、ブロックがくっつかないようにするブロック間の隙間、そしてキャンバスの端に描画されないようにするための上端、左端からの相対位置を定義しました。</p>
+ここではブロックの行と列の数、幅と高さ、ブロックがくっつかないようにするブロック間の隙間、そしてキャンバスの端に描画されないようにするための上端、左端からの相対位置を定義しました。
 
-<p>1つの2次元配列で全てのブロックを記録します。2次元配列はブロックの列 (c) を含んでおり、列は行 (r) を含み、行はそれぞれのブロックが描画される画面上の<code>x</code>座標と<code>y</code>座標をもつオブジェクトを含んでいます。</p>
+1 つの 2 次元配列で全てのブロックを記録します。2 次元配列はブロックの列 (c) を含んでおり、列は行 (r) を含み、行はそれぞれのブロックが描画される画面上の`x`座標と`y`座標をもつオブジェクトを含んでいます。
 
-<pre class="brush: js">var bricks = [];
-for(var c=0; c&lt;brickColumnCount; c++) {
+```js
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
-    for(var r=0; r&lt;brickRowCount; r++) {
+    for(var r=0; r<brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0 };
     }
-}</pre>
+}
+```
 
-<p>上記のコードは行と列を通してループし、新しいブロックを作ります。このブロックオブジェクトは後に<u>衝突検出のためにも使われる</u>ことを覚えておいてください。</p>
+上記のコードは行と列を通してループし、新しいブロックを作ります。このブロックオブジェクトは後に**衝突検出のためにも使われる**ことを覚えておいてください。
 
-<h2 id="ブロック描画ロジック">ブロック描画ロジック</h2>
+## ブロック描画ロジック
 
-<p>配列に含まれる全てのブロックを通してループする関数を作成し、画面上に描画しましょう。コードは次のようになります。</p>
+配列に含まれる全てのブロックを通してループする関数を作成し、画面上に描画しましょう。コードは次のようになります。
 
-<pre class="brush: js">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             bricks[c][r].x = 0;
             bricks[c][r].y = 0;
             ctx.beginPath();
@@ -58,20 +59,24 @@ for(var c=0; c&lt;brickColumnCount; c++) {
             ctx.closePath();
         }
     }
-}</pre>
+}
+```
 
-<p>もう一度、行と列を通してループし、それぞれのブロックの<code>x</code>座標と<code>y</code>座標を設定するとともに、1回ループを回るごとに大きさ<code>brickWidth</code> x <code>brickHeight</code>のブロックをCanvas上に描画しています。問題はそれら全てを1箇所、座標<code>(0,0)</code>に描画していることです。それぞれのブロックの<code>x</code>座標と<code>y</code>座標を導出する計算を一回一回のループに含める必要があります。</p>
+もう一度、行と列を通してループし、それぞれのブロックの`x`座標と`y`座標を設定するとともに、1 回ループを回るごとに大きさ`brickWidth` x `brickHeight`のブロックを Canvas 上に描画しています。問題はそれら全てを 1 箇所、座標`(0,0)`に描画していることです。それぞれのブロックの`x`座標と`y`座標を導出する計算を一回一回のループに含める必要があります。
 
-<pre class="brush: js">var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;</pre>
+```js
+var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+```
 
-<p>それぞれの座標<code>brickX</code>は<code>brickWidth</code> + <code>brickPadding</code>に列番号<code>c</code>をかけ、<code>brickOffsetLeft</code>をたしたものとして導出されます。brickYのロジックも同様ですが、行番号<code>r</code>、<code>brickHeight</code>、そして<code>brickOffsetTop</code>が用いられます。これで、それぞれのブロックは正しい行、列に間隔を空けて置かれ、左上端から一定の位置に描画されるようになりました。</p>
+それぞれの座標`brickX`は`brickWidth` + `brickPadding`に列番号`c`をかけ、`brickOffsetLeft`をたしたものとして導出されます。brickY のロジックも同様ですが、行番号`r`、`brickHeight`、そして`brickOffsetTop`が用いられます。これで、それぞれのブロックは正しい行、列に間隔を空けて置かれ、左上端から一定の位置に描画されるようになりました。
 
-<p>次のように<code>brickX</code>と<code>brickY</code>の値を<code>(0,0)</code>の代わりに座標として代入するようにしたものが<code>drawBricks()</code>の最終版となります。これを<code>drawPaddle()</code>関数の下に追加してください。</p>
+次のように`brickX`と`brickY`の値を`(0,0)`の代わりに座標として代入するようにしたものが`drawBricks()`の最終版となります。これを`drawPaddle()`関数の下に追加してください。
 
-<pre class="brush: js">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
             var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
             bricks[c][r].x = brickX;
@@ -83,31 +88,27 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;</pre>
             ctx.closePath();
         }
     }
-}</pre>
+}
+```
 
-<h2 id="ブロックを描画する">ブロックを描画する</h2>
+## ブロックを描画する
 
-<p><code>drawBricks()</code>へ呼び出しを<code>draw()</code>関数のどこかに追加して、このレッスンの仕上げとしましょう。最初のあたりの、Canvasを消去する部分とボールを描画する部分の間あたりが良いでしょう。<code>drawBall()</code>の呼び出しのすぐ前に次の行を追加してください。</p>
+`drawBricks()`へ呼び出しを`draw()`関数のどこかに追加して、このレッスンの仕上げとしましょう。最初のあたりの、Canvas を消去する部分とボールを描画する部分の間あたりが良いでしょう。`drawBall()`の呼び出しのすぐ前に次の行を追加してください。
 
-<pre class="brush: js">drawBricks();
-</pre>
+```js
+drawBricks();
+```
 
-<h2 id="自分のコードと比べる">自分のコードと比べる</h2>
+## 自分のコードと比べる
 
-<p>ここまででゲームは更にもう少し面白くなりました。</p>
+ここまででゲームは更にもう少し面白くなりました。
 
-<p> </p>
+{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}</p>
+> **Note:** 練習: 行や列にあるブロックの数や位置を替えてみましょう。
 
-<p> </p>
+## 次のステップ
 
-<div class="note">
-<p>練習: 行や列にあるブロックの数や位置を替えてみましょう。</p>
-</div>
+というわけでついにブロックができました。でもボールはブロックに全く反応しません。第 7 章、[衝突検知](/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)ではこれを変えます。
 
-<h2 id="次のステップ">次のステップ</h2>
-
-<p>というわけでついにブロックができました。でもボールはブロックに全く反応しません。第7章、<a href="/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection">衝突検知</a>ではこれを変えます。</p>
-
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

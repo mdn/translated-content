@@ -7,78 +7,56 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p class="summary">このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。</p>
+このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。
 
-<div class="note notecard">
-  <h4>補足</h4>
-  <p>Mozilla Hacks の <a href="https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/">Time for a review of Firefox 92</a> もご覧ください。</p>
-</div>
+> **Note:** #### 補足 Mozilla Hacks の [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) もご覧ください。
 
-<h2 id="Changes_for_web_developers">ウェブ開発者向けの変更点一覧</h2>
+## ウェブ開発者向けの変更点一覧
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>変更なし。</p>
+変更なし。
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
-  <li>{{cssxref("break-inside")}} プロパティの <code>avoid-page</code> および <code>avoid-column</code> キーワードをサポートしました ({{bug(1722945)}})。</li>
-  <li>{{cssxref("font-size-adjust")}} プロパティの二値構文をサポートしました ({{bug(1720131)}})。</li>
-  <li>{{cssxref("@font-face/size-adjust")}} ディスクリプターをサポートしました ({{bug(1720131)}})。</li>
-  <li>{{cssxref("accent-color")}} プロパティをサポートしました ({{bug(1722031)}})。</li>
-  <li>{{cssxref("font-family")}} プロパティの値 <code>system-ui</code> をサポートしました ({{bug(1226042)}})。</li>
-</ul>
+- {{cssxref("break-inside")}} プロパティの `avoid-page` および `avoid-column` キーワードをサポートしました ({{bug(1722945)}})。
+- {{cssxref("font-size-adjust")}} プロパティの二値構文をサポートしました ({{bug(1720131)}})。
+- {{cssxref("@font-face/size-adjust")}} ディスクリプターをサポートしました ({{bug(1720131)}})。
+- {{cssxref("accent-color")}} プロパティをサポートしました ({{bug(1722031)}})。
+- {{cssxref("font-family")}} プロパティの値 `system-ui` をサポートしました ({{bug(1226042)}})。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
-  <li>{{jsxref("Object.hasOwn()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ({{bug(1721149)}})。</li>
-</ul>
+- {{jsxref("Object.hasOwn()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ({{bug(1721149)}})。
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
-  <li>{{Glossary("HTTPS RR")}} が使用可能であるときに、Firefox は自動的に HTTP リクエストを HTTPS にアップグレードします。また、HTTPS コネクションを確立するプロセスを最適化するために、<em>HTTPS RR</em> で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ({{bug(1721132)}})。</li>
-</ul>
+- {{Glossary("HTTPS RR")}} が使用可能であるときに、Firefox は自動的に HTTP リクエストを HTTPS にアップグレードします。また、HTTPS コネクションを確立するプロセスを最適化するために、_HTTPS RR_ で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ({{bug(1721132)}})。
 
-<h3 id="APIs">API</h3>
+### API
 
-<ul>
-  <li>カスタム要素に <code>disabledFeatures</code> 静的プロパティを実装しました ({{bug(1723396)}})。</li>
-</ul>
+- カスタム要素に `disabledFeatures` 静的プロパティを実装しました ({{bug(1723396)}})。
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
-  <li><a href="/ja/docs/Web/API/HTMLSlotElement">Imperative Slotting API</a> (<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow Dom API</a> の一部) を実装しました ({{bug(1705141)}})。</li>
-  <li>{{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の <code>selectionchange</code> イベントをリッスンすることで監視できるようになりました ({{bug(1648944)}})。</li>
-</ul>
+- [Imperative Slotting API](/ja/docs/Web/API/HTMLSlotElement) ([Shadow Dom API](/ja/docs/Web/Web_Components/Using_shadow_DOM) の一部) を実装しました ({{bug(1705141)}})。
+- {{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の `selectionchange` イベントをリッスンすることで監視できるようになりました ({{bug(1648944)}})。
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media、WebRTC、Web Audio</h4>
+#### Media、WebRTC、Web Audio
 
-<ul>
-  <li>スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、<a href="speaker-selection">speaker-selection</a> 機能ポリシーで保護されるようになりました ({{bug(1577199)}})。</li>
-</ul>
+- スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、[speaker-selection](speaker-selection) 機能ポリシーで保護されるようになりました ({{bug(1577199)}})。
 
+### WebDriver conformance (Marionette)
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+- `webSocketUrl` 特性のサポートが向上しました。`true` が渡されて、かつ BiDi がサポートされている場合に、WebDriver BiDi の websocket URL を返すようになりました ({{bug(1692984)}})。
 
-<ul>
-  <li><code>webSocketUrl</code> 特性のサポートが向上しました。<code>true</code> が渡されて、かつ BiDi がサポートされている場合に、WebDriver BiDi の websocket URL を返すようになりました ({{bug(1692984)}})。</li>
-</ul>
+## アドオン開発者向けの変更点
 
+- {{WebExtAPIRef('downloads.download')}}、{{WebExtAPIRef('downloads.DownloadQuery')}}
+  {{WebExtAPIRef('downloads.DownloadItem')}} で `cookieStoreId` をサポートしました。{{WebExtAPIRef('downloads.DownloadQuery')}} および {{WebExtAPIRef('downloads.DownloadItem')}} 型に加えて、{{WebExtAPIRef('downloads.search')}} および {{WebExtAPIRef('downloads.erase')}} でのサポートも提供します。ブラウザー拡張機能が、Container タブ ([contextual identities](/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)) のような特定の Cookie ストアとダウンロードを関連付けできるようになりました ({{bug(1669566)}})。
 
-<h2 id="Changes_for_add-on_developers">アドオン開発者向けの変更点</h2>
+## 過去のバージョン
 
-<ul>
-  <li>{{WebExtAPIRef('downloads.download')}}、{{WebExtAPIRef('downloads.DownloadQuery')}}
-{{WebExtAPIRef('downloads.DownloadItem')}} で <code>cookieStoreId</code> をサポートしました。{{WebExtAPIRef('downloads.DownloadQuery')}} および {{WebExtAPIRef('downloads.DownloadItem')}} 型に加えて、{{WebExtAPIRef('downloads.search')}} および {{WebExtAPIRef('downloads.erase')}} でのサポートも提供します。ブラウザー拡張機能が、Container タブ (<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>) のような特定の Cookie ストアとダウンロードを関連付けできるようになりました ({{bug(1669566)}})。</li>
-</ul>
-
-
-<h2 id="Older_versions">過去のバージョン</h2>
-
-<p>{{Firefox_for_developers(91)}}</p>
+{{Firefox_for_developers(91)}}

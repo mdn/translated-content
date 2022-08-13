@@ -8,4 +8,4 @@ tags:
   - Infrastructure
 translation_of: Glossary/Simple_header
 ---
-<p>{{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}} の古い用語です。</p>
+{{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}} の古い用語です。

@@ -13,74 +13,73 @@ translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 browser-compat: api.GlobalEventHandlers.onload
 ---
-<div>{{ApiRef()}}</div>
+{{ApiRef()}}
 
-<p><strong><code>onload</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{domxref("Window")}}、{{domxref("XMLHttpRequest")}}、{{htmlelement("img")}} 要素などで発生した {{event("load")}} イベントを処理する<a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>です。</p>
+**`onload`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{domxref("Window")}}、{{domxref("XMLHttpRequest")}}、{{htmlelement("img")}} 要素などで発生した {{event("load")}} イベントを処理する[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
 
-<p><code>load</code> イベントは指定されたリソースの読み込みが完了したときに発行されます。</p>
+`load` イベントは指定されたリソースの読み込みが完了したときに発行されます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>target</em>.onload = <em>functionRef</em>;
-</pre>
+```js
+target.onload = functionRef;
+```
 
-<h3 id="Value">値</h3>
+### 値
 
-<p><code>functionRef</code> は、ウィンドウの <code>load</code> イベントが発行されたときに呼び出されるハンドラー関数です。</p>
+`functionRef` は、ウィンドウの `load` イベントが発行されたときに呼び出されるハンドラー関数です。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   init();
   doSomethingElse();
 };
-</pre>
+```
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;onload test&lt;/title&gt;
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>onload test</title>
     // ES5
-    &lt;script&gt;
+    <script>
       function load() {
         console.log("load イベントが検出されました。");
       }
       window.onload = load;
-    &lt;/script&gt;
+    </script>
     // ES2015
-    &lt;script&gt;
-      const load = () =&gt; {
+    <script>
+      const load = () => {
         console.log("load イベントが検出されました。");
       }
       window.onload = load;
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;load イベントは、文書の読み込みが完了したときに発行されます。&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body>
+    <p>load イベントは、文書の読み込みが完了したときに発行されます。</p>
+  </body>
+</html>
+```
 
-<h2 id="Notes">メモ</h2>
+## メモ
 
-<p><code>load</code> イベントは文書の読み込み工程の終了時に発行されます。このイベントが発行された時点で、文書中のすべてのオブジェクトが DOM 内にあり、すべての画像、スクリプト、サブフレームの読み込みが完了しています。</p>
+`load` イベントは文書の読み込み工程の終了時に発行されます。このイベントが発行された時点で、文書中のすべてのオブジェクトが DOM 内にあり、すべての画像、スクリプト、サブフレームの読み込みが完了しています。
 
-<p><code>DOMContentLoaded</code> や <code>DOMFrameContentLoaded</code> のような <a href="/ja/docs/Web/Events">DOM イベント</a> ({{domxref("EventTarget.addEventListener()")}} で扱うことが可能) もありますが、これらはこのページの DOM が構築された後、他のリソースの読み込みが完了する前に発行されます。</p>
+`DOMContentLoaded` や `DOMFrameContentLoaded` のような [DOM イベント](/ja/docs/Web/Events) ({{domxref("EventTarget.addEventListener()")}} で扱うことが可能) もありますが、これらはこのページの DOM が構築された後、他のリソースの読み込みが完了する前に発行されます。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{Event("load")}} イベント</li>
-  <li><code>DOMContentLoaded</code> イベント (<a
-      href="/ja/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events">イベントの待ち受け: 単純な DOM イベント</a>内)</li>
-  <li>IIFE <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression"
-      rel="nofollow noreferrer">Immediately-invoked function expression</a></li>
-</ul>
+- {{Event("load")}} イベント
+- `DOMContentLoaded` イベント ([イベントの待ち受け: 単純な DOM イベント](/ja/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events)内)
+- IIFE [Immediately-invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)

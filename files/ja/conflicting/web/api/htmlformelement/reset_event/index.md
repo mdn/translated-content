@@ -9,25 +9,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onreset
 original_slug: Web/API/GlobalEventHandlers/onreset
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>フォームの <code>reset</code> イベントに対応するイベントハンドラです。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.onreset = <var>funcRef</var>;
-</pre>
-<h3 id="Parameters" name="Parameters">引数</h3>
-<ul>
- <li><var>funcRef</var> : 関数への参照、または関数式</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;onreset のテスト&lt;/title&gt;
+{{ApiRef}}
 
-&lt;script&gt;
+## 概要
+
+フォームの `reset` イベントに対応するイベントハンドラです。
+
+## 構文
+
+    window.onreset = funcRef;
+
+### 引数
+
+- _funcRef_ : 関数への参照、または関数式
+
+## 例
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>onreset のテスト</title>
+
+<script>
 function reg() {
   window.onreset = hit;
 }
@@ -35,24 +40,28 @@ function reg() {
 function hit() {
  alert('リセットイベントが発生しました。');
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body onload="reg();"&gt;
+</head>
+<body onload="reg();">
 
-&lt;form&gt;
-  &lt;div&gt;
-    &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="reset" /&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
+<form>
+  <div>
+    <textarea></textarea>
+  </div>
+  <div>
+    <input type="reset" value="reset" />
+  </div>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>reset イベントは、ユーザがフォーム内のリセットボタン (<code>&lt;input type="reset"/&gt;</code>) をクリックした際に発生します。</p>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>標準仕様書には含まれていません。</p>
+</body>
+</html>
+```
+
+## 注記
+
+reset イベントは、ユーザがフォーム内のリセットボタン (`<input type="reset"/>`) をクリックした際に発生します。
+
+## 仕様
+
+標準仕様書には含まれていません。

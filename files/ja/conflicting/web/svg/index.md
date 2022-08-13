@@ -7,4 +7,4 @@ tags:
 translation_of: Web/SVG/Index
 original_slug: Web/SVG/Index
 ---
-<p>{{Index("/ja/docs/Web/SVG")}}</p>
+{{Index("/ja/docs/Web/SVG")}}

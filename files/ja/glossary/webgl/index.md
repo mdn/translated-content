@@ -9,26 +9,22 @@ tags:
   - WebGL
 translation_of: Glossary/WebGL
 ---
-<p><strong>WebGL</strong> (<em>Web グラフィックライブラリー</em>) は、インタラクティブな2D/3Dグラフィックを描画する {{Glossary("JavaScript")}} {{Glossary("API")}} です。</p>
+**WebGL** (_Web グラフィックライブラリー_) は、インタラクティブな 2D/3D グラフィックを描画する {{Glossary("JavaScript")}} {{Glossary("API")}} です。
 
-<p><a href="https://www.khronos.org/">Khronos グループ</a> が WebGL をメンテナンスしていて、これは {{Glossary("OpenGL")}} ES 2.0 を元にしています。</p>
+[Khronos グループ](https://www.khronos.org/) が WebGL をメンテナンスしていて、これは {{Glossary("OpenGL")}} ES 2.0 を元にしています。
 
-<p>{{Glossary("HTML")}} {{HTMLElement("canvas")}} 要素内で WebGL を実行できて、これがレンダリングサーフェスを提供します。</p>
+{{Glossary("HTML")}} {{HTMLElement("canvas")}} 要素内で WebGL を実行できて、これがレンダリングサーフェスを提供します。
 
-<p>全ての主要{{Glossary("Browser","ブラウザー")}}は現在 WebGL をサポートしていますが、利用性は他の要素 (例 GPU サポート) にも依存します。</p>
+全ての主要{{Glossary("Browser","ブラウザー")}}は現在 WebGL をサポートしていますが、利用性は他の要素 (例 GPU サポート) にも依存します。
 
-<h2 id="詳細">詳細</h2>
+## 詳細
 
-<h3 id="一般情報" style="line-height: 24px;">一般情報</h3>
+### 一般情報
 
-<ul>
- <li>Wikipedia の {{Interwiki("wikipedia", "WebGL")}}</li>
- <li><a href="http://get.webgl.org/">Check for WebGL support</a></li>
-</ul>
+- Wikipedia の {{Interwiki("wikipedia", "WebGL")}}
+- [Check for WebGL support](http://get.webgl.org/)
 
-<h3 id="技術記事" style="line-height: 24px;">技術記事</h3>
+### 技術記事
 
-<ul>
- <li><a href="/ja/docs/Web/WebGL">MDN の WebGL</a></li>
- <li><a href="http://caniuse.com/#feat=webgl">WebGL のサポート表</a></li>
-</ul>
+- [MDN の WebGL](/ja/docs/Web/WebGL)
+- [WebGL のサポート表](http://caniuse.com/#feat=webgl)

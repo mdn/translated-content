@@ -14,79 +14,53 @@ tags:
 translation_of: Web/API/Window/animationcancel_event
 original_slug: Web/API/Window/animationcancel_event
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><strong><code>animationcancel</code></strong> イベントは、 <a href="/ja/docs/Web/CSS/CSS_Animations">CSS アニメーション</a>が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Window/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。</p>
+**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Window/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th>バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th>キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th>インターフェイス</th>
-   <td>{{domxref("AnimationEvent")}}</td>
-  </tr>
-  <tr>
-   <th>イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | あり                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------ |
+| キャンセル                   | 不可                                                                                             |
+| インターフェイス             | {{domxref("AnimationEvent")}}                                                         |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}} |
 
-<p>このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 <a href="/ja/docs/Web/API/HTMLElement/animationcancel_event">HTMLElement: animationcancel イベント</a>を参照してください。</p>
+このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 [HTMLElement: animationcancel イベント](/ja/docs/Web/API/HTMLElement/animationcancel_event)を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードはリスナーに <code>animationcancel</code> イベントを追加します。</p>
+このコードはリスナーに `animationcancel` イベントを追加します。
 
-<pre class="brush: js">window.addEventListener('animationcancel', () =&gt; {
+```js
+window.addEventListener('animationcancel', () => {
   console.log('アニメーションが取り消されました');
-});</pre>
+});
+```
 
-<p>同様に、 {{domxref("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}} プロパティを <code>addEventListener()</code> の代わりに使用するとこうなります。</p>
+同様に、 {{domxref("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}} プロパティを `addEventListener()` の代わりに使用するとこうなります。
 
-<pre class="brush: js">document.onanimationcancel = () =&gt; {
+```js
+document.onanimationcancel = () => {
   console.log('アニメーションが取り消されました');
-};</pre>
+};
+```
 
-<p id="Live_example"><a href="/ja/docs/Web/API/HTMLElement/animationcancel_event#Live_example">このイベントのライブデモを参照してください。</a></p>
+[このイベントのライブデモを参照してください。](/ja/docs/Web/API/HTMLElement/animationcancel_event#Live_example)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Animations", "#eventdef-animationevent-animationcancel")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               | 状態                                 | 備考     |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName("CSS3 Animations", "#eventdef-animationevent-animationcancel")}} | {{Spec2("CSS3 Animations")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.animationcancel_event")}}</p>
+{{Compat("api.Window.animationcancel_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Animations">CSS アニメーション</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS アニメーションの使用</a></li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>関連イベント: {{domxref("Window/animationstart_event", "animationstart")}}, {{domxref("Window/animationend_event", "animationend")}}, {{domxref("Window/animationiteration_event", "animationiteration")}}</li>
- <li>{{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationcancel_event", "animationcancel")}}</li>
- <li>{{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}</li>
-</ul>
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent")}}
+- 関連イベント: {{domxref("Window/animationstart_event", "animationstart")}}, {{domxref("Window/animationend_event", "animationend")}}, {{domxref("Window/animationiteration_event", "animationiteration")}}
+- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationcancel_event", "animationcancel")}}
+- {{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}

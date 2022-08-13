@@ -10,157 +10,185 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/HTML
 original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/ja/docs/MDN")}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ja/docs/MDN")}}
 
-<p class="summary">以下のガイドラインでは、MDN のコードの例で HTML をどのように記述するのかを学習します。</p>
+以下のガイドラインでは、MDN のコードの例で HTML をどのように記述するのかを学習します。
 
-<h2 id="In_this_article" name="In_this_article">この記事について</h2>
+## この記事について
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype_and_metadata">文書型宣言とメタデータ</a>
+- [文書型宣言とメタデータ](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype_and_metadata)
 
-  <ul>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype">Doctype</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_language">文書の言語</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_characterset">文書の文字セット</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Viewport_meta_tag">ビューポートメタタグ</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#General_markup_coding_style">一般的なマークアップコーディングスタイル</a>
-  <ul>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_lowercase">小文字を使う</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Trailing_slashes">末尾のスラッシュ</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Quoting_attributes">属性の引用</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_double_quotes">ダブルクォートを使う</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Boolean_attributes">真偽属性</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Class_and_ID_names">クラス と ID の名前</a></li>
-   <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Entity_references">実体参照</a></li>
-  </ul>
- </li>
-</ul>
+  - [Doctype](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype)
+  - [文書の言語](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_language)
+  - [文書の文字セット](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_characterset)
+  - [ビューポートメタタグ](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Viewport_meta_tag)
 
-<h2 id="Doctype_and_metadata" name="Doctype_and_metadata">Doctype とメタデータ</h2>
+- [一般的なマークアップコーディングスタイル](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#General_markup_coding_style)
 
-<div class="note">
-<p><strong>注記</strong>: このセクションにあるガイドラインは完全な HTML 文書として見せなければならない時だけ適用してください。多くの場合、このようにする必要がありません; スニペット(HTML の断片)で通常は機能を説明するのに十分間に合います。<a href="/ja/docs/MDN/Contribute/Structures/Code_examples#Traditional_live_samples">EmbedLiveSample macro</a> を使うと、スニペットを取り込みます; 表示される際に自動で完全な HTML 文書に挿入されます。</p>
-</div>
+  - [小文字を使う](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_lowercase)
+  - [末尾のスラッシュ](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Trailing_slashes)
+  - [属性の引用](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Quoting_attributes)
+  - [ダブルクォートを使う](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_double_quotes)
+  - [真偽属性](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Boolean_attributes)
+  - [クラス と ID の名前](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Class_and_ID_names)
+  - [実体参照](/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Entity_references)
 
-<h3 id="Doctype" name="Doctype">Doctype</h3>
+## Doctype とメタデータ
 
-<p>HTML5 の Doctype を使わなくてはなりません。短く、覚えやすく、後方互換性があります:</p>
+> **Note:** **注記**: このセクションにあるガイドラインは完全な HTML 文書として見せなければならない時だけ適用してください。多くの場合、このようにする必要がありません; スニペット(HTML の断片)で通常は機能を説明するのに十分間に合います。[EmbedLiveSample macro](/ja/docs/MDN/Contribute/Structures/Code_examples#Traditional_live_samples) を使うと、スニペットを取り込みます; 表示される際に自動で完全な HTML 文書に挿入されます。
 
-<pre class="brush: html example-good notranslate">&lt;!DOCTYPE html&gt;</pre>
+### Doctype
 
-<h3 id="Document_language" name="Document_language">文書の言語</h3>
+HTML5 の Doctype を使わなくてはなりません。短く、覚えやすく、後方互換性があります:
 
-<p>{{htmlelement("html")}} 要素に {{htmlattrxref('lang')}} 属性を使って文書の言語を設定します:</p>
+```html example-good
+<!DOCTYPE html>
+```
 
-<pre class="brush: html example-good notranslate">&lt;html lang="ja"&gt;</pre>
+### 文書の言語
 
-<p>これはアクセシビリティと検索エンジンにとって良いことで、コンテンツのローカライズに役立ち、最良の慣習を使うべきと気づかせます。</p>
+{{htmlelement("html")}} 要素に {{htmlattrxref('lang')}} 属性を使って文書の言語を設定します:
 
-<h3 id="Document_characterset" name="Document_characterset">文書の文字セット</h3>
+```html example-good
+<html lang="ja">
+```
 
-<p>また文書の文字セットを以下のように定義しなければなりません:</p>
+これはアクセシビリティと検索エンジンにとって良いことで、コンテンツのローカライズに役立ち、最良の慣習を使うべきと気づかせます。
 
-<pre class="brush: html example-good notranslate">&lt;meta charset="utf-8"&gt;</pre>
+### 文書の文字セット
 
-<p>UTF-8 を使用しないというとても明白な理由がない限りは使用するべきです; 文書でどんな言語が使われていても必要とする文字を余裕を持って扱えます。加えて、常にできるだけ早く、HTML の {{HTMLElement("head")}} ブロック (先頭の 1 キロバイト内) に文字セットを特定するべきです、かなり <a href="http://support.microsoft.com/kb/928847">不快な Internet Explorer のセキュリティ脆弱性</a> から守ってくれるからです。</p>
+また文書の文字セットを以下のように定義しなければなりません:
 
-<h3 id="Viewport_meta_tag" name="Viewport_meta_tag">ビューポートメタタグ</h3>
+```html example-good
+<meta charset="utf-8">
+```
 
-<p>最後に、HTML {{HTMLElement("head")}} にはビューポートメタタグを追加しなければなりません、例を示してモバイル端末でより良く動作するきっかけとなります。文書に少なくとも以下の内容を含めておき、必要になったら後ほど変更できます:</p>
+UTF-8 を使用しないというとても明白な理由がない限りは使用するべきです; 文書でどんな言語が使われていても必要とする文字を余裕を持って扱えます。加えて、常にできるだけ早く、HTML の {{HTMLElement("head")}} ブロック (先頭の 1 キロバイト内) に文字セットを特定するべきです、かなり [不快な Internet Explorer のセキュリティ脆弱性](http://support.microsoft.com/kb/928847) から守ってくれるからです。
 
-<pre class="brush: html example-good notranslate">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
+### ビューポートメタタグ
 
-<p>より詳しくは <a href="/ja/docs/Mobile/Viewport_meta_tag">モバイルブラウザーでのレイアウトを制御するために meta タグの viewport を使う</a> をご覧ください。</p>
+最後に、HTML {{HTMLElement("head")}} にはビューポートメタタグを追加しなければなりません、例を示してモバイル端末でより良く動作するきっかけとなります。文書に少なくとも以下の内容を含めておき、必要になったら後ほど変更できます:
 
-<h2 id="General_markup_coding_style" name="General_markup_coding_style">一般的なマークアップコーディングスタイル</h2>
+```html example-good
+<meta name="viewport" content="width=device-width">
+```
 
-<h3 id="Use_lowercase" name="Use_lowercase">小文字を使う</h3>
+より詳しくは [モバイルブラウザーでのレイアウトを制御するために meta タグの viewport を使う](/ja/docs/Mobile/Viewport_meta_tag) をご覧ください。
 
-<p>すべての要素の名前と属性の名前/値に小文字を使ってください、綺麗に見えますし、マークアップをより早く書くことができます。</p>
+## 一般的なマークアップコーディングスタイル
 
-<p>良い例:</p>
+### 小文字を使う
 
-<pre class="brush: html example-good notranslate">&lt;p class="nice"&gt;This looks nice and neat&lt;/p&gt;</pre>
+すべての要素の名前と属性の名前/値に小文字を使ってください、綺麗に見えますし、マークアップをより早く書くことができます。
 
-<p>良くない例:</p>
+良い例:
 
-<pre class="brush: html example-bad notranslate">&lt;P CLASS="WHOA-THERE"&gt;Why is my markup shouting?&lt;/P&gt;</pre>
+```html example-good
+<p class="nice">This looks nice and neat</p>
+```
 
-<h3 id="Trailing_slashes" name="Trailing_slashes">末尾のスラッシュ</h3>
+良くない例:
 
-<p>空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし実行速度を遅くします。注意しないと古いブラウザーを中断させます (思い返してみると、Netscape 4 から問題とはなっていませんが)。</p>
+```html example-bad
+<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+```
 
-<p>こちらは良い例:</p>
+### 末尾のスラッシュ
 
-<pre class="brush: html example-good notranslate">&lt;input type="text"&gt;
-&lt;hr&gt;</pre>
+空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし実行速度を遅くします。注意しないと古いブラウザーを中断させます (思い返してみると、Netscape 4 から問題とはなっていませんが)。
 
-<p>スラッシュは必要ありません:</p>
+こちらは良い例:
 
-<pre class="brush: html example-bad notranslate">&lt;input type="text" /&gt;
-&lt;hr /&gt;</pre>
+```html example-good
+<input type="text">
+<hr>
+```
 
-<h3 id="Quoting_attributes" name="Quoting_attributes">属性を引用符で囲む</h3>
+スラッシュは必要ありません:
 
-<p>すべての属性の値はダブルクォートで囲わなければなりません。HTML5 でクオートの省略が許されるようになり、広まっていますが、取り入れるとマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です:</p>
+```html example-bad
+<input type="text" />
+<hr />
+```
 
-<pre class="brush: html example-good notranslate">&lt;img src="images/logo.jpg" alt="A circular globe icon" class="no-border"&gt;</pre>
+### 属性を引用符で囲む
 
-<p>次の例と比べてください。</p>
+すべての属性の値はダブルクォートで囲わなければなりません。HTML5 でクオートの省略が許されるようになり、広まっていますが、取り入れるとマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です:
 
-<pre class="brush: html example-bad notranslate">&lt;img src=images/logo.jpg alt=A circular globe icon class=no-border&gt;</pre>
+```html example-good
+<img src="images/logo.jpg" alt="A circular globe icon" class="no-border">
+```
 
-<p>こちらは問題も引き起こします — 上記の例では <code>alt</code> 属性の部分が複数の属性と解釈されて実行が中断するでしょう、"A circular globe icon" が 1 つの属性の値であると特定するクォートがないためです。</p>
+次の例と比べてください。
 
-<h3 id="Use_double_quotes" name="Use_double_quotes">ダブルクォートを使う</h3>
+```html example-bad
+<img src=images/logo.jpg alt=A circular globe icon class=no-border>
+```
 
-<p>HTML にはシングルクォートでなく、ダブルクォートを使います:</p>
+こちらは問題も引き起こします — 上記の例では `alt` 属性の部分が複数の属性と解釈されて実行が中断するでしょう、"A circular globe icon" が 1 つの属性の値であると特定するクォートがないためです。
 
-<pre class="brush: html example-good notranslate">&lt;p class="important"&gt;Yes&lt;/p&gt;</pre>
+### ダブルクォートを使う
 
-<pre class="brush: html example-bad notranslate">&lt;p class='important'&gt;Nope&lt;/p&gt;</pre>
+HTML にはシングルクォートでなく、ダブルクォートを使います:
 
-<h3 id="Boolean_attributes" name="Boolean_attributes">真偽属性</h3>
+```html example-good
+<p class="important">Yes</p>
+```
 
-<p>真偽属性は完全な形で書かないでください; 設定するには属性の名前だけ書きます。例えば、このように書きます:</p>
+```html example-bad
+<p class='important'>Nope</p>
+```
 
-<pre class="brush: html example-good notranslate">required</pre>
+### 真偽属性
 
-<p>これだけで完全に理解され、うまく動作します。値を含めて書く長い形式、</p>
+真偽属性は完全な形で書かないでください; 設定するには属性の名前だけ書きます。例えば、このように書きます:
 
-<pre class="brush: html example-bad notranslate">required="required" </pre>
+```html example-good
+required
+```
 
-<p>もサポートされるものの必須ではありません。</p>
+これだけで完全に理解され、うまく動作します。値を含めて書く長い形式、
 
-<h3 id="Class_and_ID_names" name="Class_and_ID_names">クラス名と ID 名</h3>
+```html example-bad
+required="required"
+```
 
-<p>意味のあるクラス/ID 名を使い、複数の単語はハイフンで分割します。キャメルケース (camelCase) は使いません。</p>
+もサポートされるものの必須ではありません。
 
-<p>良い:</p>
+### クラス名と ID 名
 
-<pre class="brush: html example-good notranslate">&lt;p class="editorial-summary"&gt;Blah blah blah&lt;/p&gt;</pre>
+意味のあるクラス/ID 名を使い、複数の単語はハイフンで分割します。キャメルケース (camelCase) は使いません。
 
-<p>悪い:</p>
+良い:
 
-<pre class="brush: html example-bad notranslate">&lt;p class="bigRedBox"&gt;Blah blah blah&lt;/p&gt;</pre>
+```html example-good
+<p class="editorial-summary">Blah blah blah</p>
+```
 
-<h3 id="Entity_references" name="Entity_references">実体参照</h3>
+悪い:
 
-<p>実体参照を必要以上に使わない — リテラル文字を可能であれば使いましょう (角括弧や引用符のような記号は、まだエスケープが必要です) 。</p>
+```html example-bad
+<p class="bigRedBox">Blah blah blah</p>
+```
 
-<p>単純に書ける例</p>
+### 実体参照
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;© 2018 Me&lt;/p&gt;</pre>
+実体参照を必要以上に使わない — リテラル文字を可能であれば使いましょう (角括弧や引用符のような記号は、まだエスケープが必要です) 。
 
-<p>以下のようにも書けますが、</p>
+単純に書ける例
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;&amp;copy; 2018 Me&lt;/p&gt;</pre>
+```html example-good
+<p>© 2018 Me</p>
+```
 
-<p>UTF-8 文字セットで記述する限りは問題ありません。</p>
+以下のようにも書けますが、
 
-<h2 id="Good_HTML_examples_on_MDN" name="Good_HTML_examples_on_MDN">MDN での良い HTML の例</h2>
+```html example-bad
+<p>&copy; 2018 Me</p>
+```
 
-<p>優良で、簡潔で、有意義な HTML のスニペットを <a href="/ja/docs/Web/HTML/Reference">HTML リファレンス</a> の先頭で見つけることができます — 対話形式の例は一般的にこれらのガイドラインに従って書かれていますが、ガイドラインが新規に書かれる前に大部分が書かれているので、いくつかの箇所は異なっているのに気をつけてください。</p>
+UTF-8 文字セットで記述する限りは問題ありません。
+
+## MDN での良い HTML の例
+
+優良で、簡潔で、有意義な HTML のスニペットを [HTML リファレンス](/ja/docs/Web/HTML/Reference) の先頭で見つけることができます — 対話形式の例は一般的にこれらのガイドラインに従って書かれていますが、ガイドラインが新規に書かれる前に大部分が書かれているので、いくつかの箇所は異なっているのに気をつけてください。

@@ -6,78 +6,58 @@ tags:
   - Decoration
 original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 ---
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>　枠のシャドウ(影付け装飾)や角丸(アイコンやボタンの角の丸み)が表示されません。</p>
+枠のシャドウ(影付け装飾)や角丸(アイコンやボタンの角の丸み)が表示されません。
 
-<div>
-<p><img alt="" src="https://mdn.mozillademos.org/files/9987/0204.jpg" style="width: 497px; height: 250px; margin-right: 50px; margin-left: 50px;"></p>
-</div>
+![](https://mdn.mozillademos.org/files/9987/0204.jpg)
 
-<h2 id="要因">要因</h2>
+## 要因
 
-<p>　要因の代表例として以下があります。</p>
+要因の代表例として以下があります。
 
-<ol>
- <li>
-  <p><strong>ベンダープレフィックス</strong><br>
-   webkitブラウザ向けの記述がされている場合、この現象が発生します。<br>
-   例えば、以下のような場合です。</p>
+1.  **ベンダープレフィックス**
+    webkit ブラウザ向けの記述がされている場合、この現象が発生します。
+    例えば、以下のような場合です。
 
-  <ul>
-   <li>
-    <p><strong>シャドウの場合</strong></p>
+    - **シャドウの場合**
 
-    <pre><code><font size="3">　　.hoge {
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
-　　}			</font></code></pre>
-   </li>
-   <li>
-    <p><strong>角丸の場合</strong></p>
+          　　.hoge {
+          	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+          　　}
 
-    <pre><code><font size="3">　　.hoge {
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-　　}			</font></code></pre>
-   </li>
-  </ul>
- </li>
-</ol>
+    - **角丸の場合**
 
-<h2 id="解決策">解決策</h2>
+          　　.hoge {
+          	-moz-border-radius: 6px;
+          	-webkit-border-radius: 6px;
+          　　}
 
-<p>　要因の解決策の代表例として以下があります。</p>
+## 解決策
 
-<ol>
- <li>
-  <p><strong>ベンダープレフィックス</strong><br>
-   他ブラウザで互換性を維持する為に、以下のような<a href="https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow">box-shadow</a>プロパティ、<a href="https://developer.mozilla.org/ja/docs/Web/CSS/border-radius">border-radius</a>プロパティの記述を追加します。</p>
+要因の解決策の代表例として以下があります。
 
-  <ul>
-   <li>
-    <p><strong>シャドウの場合</strong></p>
+1.  **ベンダープレフィックス**
+    他ブラウザで互換性を維持する為に、以下のような[box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ、[border-radius](/ja/docs/Web/CSS/border-radius)プロパティの記述を追加します。
 
-    <pre><code><font size="3">　　.hoge {
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
-	<font>box-shadow</font>: <strong>0 1px 2px rgba(0,0,0,.4);</strong>
-　　}			</font></code></pre>
-   </li>
-   <li>
-    <p><strong>角丸の場合</strong></p>
+    - **シャドウの場合**
 
-    <pre><code><font size="3">　　.hoge {
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	<font>border-radius</font>: <strong>6px;</strong>
-　　}			</font></code></pre>
-   </li>
-  </ul>
- </li>
-</ol>
+          　　.hoge {
+          	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+          	box-shadow: 0 1px 2px rgba(0,0,0,.4);
+          　　}
 
-<h2 id="メリット">メリット</h2>
+    - **角丸の場合**
 
-<p>　・他のブラウザでも互換性を維持することができます。<br>
- 　・追記のみの対応のため改修が容易です。</p>
+          　　.hoge {
+          	-moz-border-radius: 6px;
+          	-webkit-border-radius: 6px;
+          	border-radius: 6px;
+          　　}
 
-<p><a href="https://developer.mozilla.org/ja/docs/Web/Compatibility_FAQ">戻る</a></p>
+## メリット
+
+・他のブラウザでも互換性を維持することができます。
+　・追記のみの対応のため改修が容易です。
+
+[戻る](/ja/docs/Web/Compatibility_FAQ)

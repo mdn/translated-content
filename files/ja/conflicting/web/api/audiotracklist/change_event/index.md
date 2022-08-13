@@ -18,65 +18,45 @@ tags:
 translation_of: Web/API/AudioTrackList/onchange
 original_slug: Web/API/AudioTrackList/onchange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong>{{domxref("AudioTrackList")}}</strong> の <strong><code>onchange</code></strong> プロパティは、{{event("change")}} イベントが発生したときに呼び出されるイベントハンドラで、<code>AudioTrackList</code> 内の1つ以上の {{domxref("AudioTrack")}} が有効または無効になっていることを示します。</span></p>
+**{{domxref("AudioTrackList")}}** の **`onchange`** プロパティは、{{event("change")}} イベントが発生したときに呼び出されるイベントハンドラで、`AudioTrackList` 内の 1 つ以上の {{domxref("AudioTrack")}} が有効または無効になっていることを示します。
 
-<p>イベントは {{domxref("Event")}} オブジェクトの形でイベントハンドラに渡されます。 イベントは追加情報を提供しません。 メディアのトラックの新しい状態を判断するには、それらの {{domxref("AudioTrack.enabled")}} フラグを調べる必要があります。</p>
+イベントは {{domxref("Event")}} オブジェクトの形でイベントハンドラに渡されます。 イベントは追加情報を提供しません。 メディアのトラックの新しい状態を判断するには、それらの {{domxref("AudioTrack.enabled")}} フラグを調べる必要があります。
 
-<div class="note">
-<p><strong>注</strong>: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、<code>change</code> イベントのハンドラを追加することもできます。</p>
-</div>
+> **Note:** **注**: {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、`change` イベントのハンドラを追加することもできます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>AudioTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+    AudioTrackList.onchange = eventHandler;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code>onchange</code> は、メディア要素でトラックが有効または無効になったときに必ず呼び出される関数を設定します。</p>
+`onchange` は、メディア要素でトラックが有効または無効になったときに必ず呼び出される関数を設定します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>このスニペットは、リスト内の各トラックを調べる {{event("change")}} イベントのハンドラを確立し、トラックの現在の状態を示すユーザーインターフェイスコントロールの状態を更新する関数を呼び出します。</p>
+このスニペットは、リスト内の各トラックを調べる {{event("change")}} イベントのハンドラを確立し、トラックの現在の状態を示すユーザーインターフェイスコントロールの状態を更新する関数を呼び出します。
 
-<pre class="brush: js">var trackList = document.querySelector("video").audioTracks;
+```js
+var trackList = document.querySelector("video").audioTracks;
 
 trackList.onchange = function(event) {
   trackList.forEach(function(track) {
     updateTrackEnabledButton(track.id, track.enabled);
   });
 };
-</pre>
+```
 
-<p>この例の <code>updateTrackEnabledButton()</code> は、トラックの {{domxref("AudioTrack.id", "id")}}（おそらくアプリはトラック ID をコントロール要素の ID として使用します）でユーザーインターフェイスコントロールを見つけて、トラックの {{domxref("AudioTrack.enabled", "enabled")}} フラグを使用してコントロールが現在どの状態にあるべきかを決定する関数です。</p>
+この例の `updateTrackEnabledButton()` は、トラックの {{domxref("AudioTrack.id", "id")}}（おそらくアプリはトラック ID をコントロール要素の ID として使用します）でユーザーインターフェイスコントロールを見つけて、トラックの {{domxref("AudioTrack.enabled", "enabled")}} フラグを使用してコントロールが現在どの状態にあるべきかを決定する関数です。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'AudioTrackList.onchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onchange', 'AudioTrackList.onchange')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                             | 状態                             | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'AudioTrackList.onchange')}}                                 | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-onchange', 'AudioTrackList.onchange')}} | {{Spec2('HTML5 W3C')}}     |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.AudioTrackList.onchange")}}</p>
+{{Compat("api.AudioTrackList.onchange")}}

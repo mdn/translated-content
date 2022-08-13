@@ -8,17 +8,14 @@ tags:
   - Serialization
 translation_of: Glossary/Serialization
 ---
-<p>オブジェクトまたはデータ構造が、ネットワークまたはストレージ（例えば、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">アレイバッファ</a>またはファイルフォーマット）上の転送に適したフォーマットに変換されるプロセス。<br>
-  </p>
+オブジェクトまたはデータ構造が、ネットワークまたはストレージ（例えば、[アレイバッファ](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)またはファイルフォーマット）上の転送に適したフォーマットに変換されるプロセス。
 
-<p>たとえば {{Glossary("JavaScript")}} では、{{jsxref("JSON.stringify()")}} {{Glossary("function","関数")}}を呼び出して、オブジェクトを {{Glossary("JSON")}} {{Glossary("string","文字列")}}にシリアライズできます。</p>
+たとえば {{Glossary("JavaScript")}} では、{{jsxref("JSON.stringify()")}} {{Glossary("function","関数")}}を呼び出して、オブジェクトを {{Glossary("JSON")}} {{Glossary("string","文字列")}}にシリアライズできます。
 
-<p>{{Glossary("CSS")}} 値は、{{domxref("CSSStyleDeclaration.getPropertyValue()")}} 関数を呼び出すことによってシリアライズされます。</p>
+{{Glossary("CSS")}} 値は、{{domxref("CSSStyleDeclaration.getPropertyValue()")}} 関数を呼び出すことによってシリアライズされます。
 
-<h2 id="Learn_more" name="Learn_more">より詳しく知る</h2>
+## より詳しく知る
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipedia 上の {{Interwiki("wikipedia", "シリアライズ")}}</li>
-</ul>
+- Wikipedia 上の {{Interwiki("wikipedia", "シリアライズ")}}

@@ -8,14 +8,10 @@ tags:
   - Glossary
 translation_of: Glossary/CMS
 ---
-<p>CMS (Content Management System, コンテンツ管理システム) とは、ユーザーに色々な種類のコンテンツ (テキストだけでなく組み込み画像、動画、音声、インタラクティブなコードも) の発行、編集、変更、削除ができるようにするソフトウェアです。</p>
+CMS (Content Management System, コンテンツ管理システム) とは、ユーザーに色々な種類のコンテンツ (テキストだけでなく組み込み画像、動画、音声、インタラクティブなコードも) の発行、編集、変更、削除ができるようにするソフトウェアです。
 
-<h2 id="Learn_More" name="Learn_More">詳細情報</h2>
+## 詳細情報
 
-<h3 id="General_Knowledge" name="General_Knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipedia の {{Interwiki("wikipedia", "Content management system")}}</li>
-</ul>
-
-<p> </p>
+- Wikipedia の {{Interwiki("wikipedia", "Content management system")}}

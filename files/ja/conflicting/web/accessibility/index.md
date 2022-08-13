@@ -7,6 +7,6 @@ tags:
 translation_of: Web/Accessibility/Index
 original_slug: Web/Accessibility/Index
 ---
-<p class="summary"><span class="seoSummary">このドキュメントは、Mozilla Developer Network サイト上の、すべてのアクセシビリティの記事へのリンクの一覧を提供します。</span></p>
+このドキュメントは、Mozilla Developer Network サイト上の、すべてのアクセシビリティの記事へのリンクの一覧を提供します。
 
-<p>{{Index("/ja/docs/Web/Accessibility")}}</p>
+{{Index("/ja/docs/Web/Accessibility")}}

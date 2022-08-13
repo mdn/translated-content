@@ -14,92 +14,100 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>ストレージ領域から1つ以上のアイテムを取得します。</p>
+ストレージ領域から 1 つ以上のアイテムを取得します。
 
-<p>この関数は <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返す非同期関数です。</p>
+この関数は [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">let gettingItem = browser.storage.&lt;storageType&gt;.get(
-  keys    // null, string, object or array of strings
-)
-</pre>
+    let gettingItem = browser.storage.<storageType>.get(
+      keys    // null, string, object or array of strings
+    )
 
-<p><code style="font-size: 16px !important; line-height: 24px !important;">&lt;storageType&gt;</code> は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync" style="font-size: 16px !important; line-height: 24px !important;" title="sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。"><code style="font-size: 16px !important; line-height: 24px !important;">storage.sync</code></a> または <a class="new" href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local" rel="nofollow" style="font-size: 16px !important; line-height: 24px !important;" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code style="font-size: 16px !important; line-height: 24px !important;">storage.local</code></a> の書き込み可能なストレージタイプです。</p>
+`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。") または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local "この項目についての文書はまだ書かれていません。書いてみませんか？") の書き込み可能なストレージタイプです。
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>取得したいアイテムのキー(文字列・文字列の配列またはデフォルト値を指定するオブジェクト)を指定します。空文字列・オブジェクト・配列を指定すると空のオブジェクトが取得できます。 <code>null</code> か未定義の値を指定するとストレージ全体のアイテムが取得できます。</dd>
-</dl>
+- `keys`
+  - : 取得したいアイテムのキー(文字列・文字列の配列またはデフォルト値を指定するオブジェクト)を指定します。空文字列・オブジェクト・配列を指定すると空のオブジェクトが取得できます。 `null` か未定義の値を指定するとストレージ全体のアイテムが取得できます。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>成功時は <code style="font-size: 16px !important; line-height: 24px !important;">keys</code> で指定されたストレージ領域内のアイテム全てを含む <code style="font-size: 16px !important; line-height: 24px !important;">results</code> オブジェクトを引数に持つ <code style="font-size: 16px !important; line-height: 24px !important;"><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="font-size: 16px !important; line-height: 24px !important;">Promise</a></code> を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。</p>
+成功時は `keys` で指定されたストレージ領域内のアイテム全てを含む `results` オブジェクトを引数に持つ [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 失敗した場合 promise はエラーメッセージと共にリジェクトされます。
 
-<div class="warning">
-<p>52 より前の Firefox バージョンのコンテンツスクリプトで使用する場合、 <code>browser.storage.local.get()</code> で返される Promise は1つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の <code>keys</code> を持っています。 The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as <code>chrome.storage.local.get()</code>, it correctly passes an Object to the callback function.</p>
-</div>
+> **Warning:** 52 より前の Firefox バージョンのコンテンツスクリプトで使用する場合、 `browser.storage.local.get()` で返される Promise は 1 つのオブジェクトを持つ配列を引数に持ちます。配列内のオブジェクトは上記に記述したようにストレージ領域内の `keys` を持っています。 The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("webextensions.api.storage.StorageArea.get")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.get")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>あらかじめストレージ領域に2つのアイテムを格納しておきます。</p>
+あらかじめストレージ領域に 2 つのアイテムを格納しておきます。
 
-<pre class="brush: js">// "kitten" と "monster" を格納
+```js
+// "kitten" と "monster" を格納
 browser.storage.local.set({
   kitten:  {name:"Mog", eats:"mice"},
   monster: {name:"Kraken", eats:"people"}
-});</pre>
+});
+```
 
-<p>次に promise で使う成功時と失敗時のハンドラを定義しておきます。</p>
+次に promise で使う成功時と失敗時のハンドラを定義しておきます。
 
-<pre class="brush: js">function onGot(item) {
+```js
+function onGot(item) {
   console.log(item);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
-}</pre>
+}
+```
 
-<p><code>keys</code> を指定せずに呼び出すと全て取得します。</p>
+`keys` を指定せずに呼び出すと全て取得します。
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get();
+```js
+let gettingItem = browser.storage.local.get();
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object }</pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>空のキーを指定すると何も返しません。</p>
+空のキーを指定すると何も返しません。
 
-<pre class="brush: js">// 空の配列を指定すると何も返らない
+```js
+// 空の配列を指定すると何も返らない
 let gettingItem = browser.storage.local.get([]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { }</pre>
+// -> Object { }
+```
 
-<p>オブジェクト名を指定すると、合致するものを返します。</p>
+オブジェクト名を指定すると、合致するものを返します。
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get("kitten");
+```js
+let gettingItem = browser.storage.local.get("kitten");
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object }</pre>
+// -> Object { kitten: Object }
+```
 
-<p>オブジェクト名の配列を指定すると合致するものを全て返します。</p>
+オブジェクト名の配列を指定すると合致するものを全て返します。
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+```js
+let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object } </pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>オブジェクト名をキー、デフォルト値をvalueに指定したオブジェクトを指定する場合</p>
+オブジェクト名をキー、デフォルト値を value に指定したオブジェクトを指定する場合
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get({
+```js
+let gettingItem = browser.storage.local.get({
   kitten: "no kitten",
   monster: "no monster",
   grapefruit: {
@@ -108,26 +116,25 @@ gettingItem.then(onGot, onError);
   }
 });
 
-// -&gt; Object { kitten: Object, monster: Object, grapefruit: Object }
-</pre>
+// -> Object { kitten: Object, monster: Object, grapefruit: Object }
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h3 id="Chrome_での例">Chrome での例</h3>
+### Chrome での例
 
-<pre class="brush: js">chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", function(items){
+  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<p class="brush: js">Or with an arrow function</p>
+Or with an arrow function
 
-<pre class="brush: js">chrome.storage.local.get("kitten", items=&gt;{
-  console.log(items.kitten); // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", items=>{
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<div class="note"><strong>謝辞</strong>
-
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> APIに基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> における Chromium のコードに基づいています。</p>
-
-<p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
-</div>
+> **Note:** **謝辞**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。

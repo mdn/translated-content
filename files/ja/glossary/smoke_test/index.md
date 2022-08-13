@@ -9,22 +9,18 @@ tags:
   - Testing
 translation_of: Glossary/Smoke_Test
 ---
-<p id="Summary">スモークテストは、ソフトウェアの中核機能の機能テストと単体テストから構成され、より詳細なテストの前に実施されます。</p>
+スモークテストは、ソフトウェアの中核機能の機能テストと単体テストから構成され、より詳細なテストの前に実施されます。
 
-<p>スモークテストは次のような疑問に答えてくれます。</p>
+スモークテストは次のような疑問に答えてくれます。
 
-<ul>
- <li>プログラムが正しく起動するか</li>
- <li>メインコントロールボタンは機能するか</li>
- <li>単純なブランクのテストユーザーアカウントを新規に保存できるか</li>
-</ul>
+- プログラムが正しく起動するか
+- メインコントロールボタンは機能するか
+- 単純なブランクのテストユーザーアカウントを新規に保存できるか
 
-<p>これらの基本的な機能のテストに失敗する場合、この段階で、より詳細な品質作業に時間を費やす意味がないことは明らかです。</p>
+これらの基本的な機能のテストに失敗する場合、この段階で、より詳細な品質作業に時間を費やす意味がないことは明らかです。
 
-<h2 id="Learn_more" name="Learn_more">関連情報</h2>
+## 関連情報
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipedia 上の <a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)">Smoke testing (software)</a> (英語)</li>
-</ul>
+- Wikipedia 上の [Smoke testing (software)](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) (英語)

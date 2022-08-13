@@ -18,43 +18,28 @@ tags:
 translation_of: Web/API/Window/ondevicemotion
 original_slug: Web/API/Window/ondevicemotion
 ---
-<div>{{APIRef("Device Orientation Events")}}</div>
+{{APIRef("Device Orientation Events")}}
 
-<p>Windows に対して送信される {{domxref("Window/devicemotion_event", "devicemotion")}} イベントのためのイベントハンドラーです。</p>
+Windows に対して送信される {{domxref("Window/devicemotion_event", "devicemotion")}} イベントのためのイベントハンドラーです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.ondevicemotion = <var>funcRef</var>;</pre>
+    window.ondevicemotion = funcRef;
 
-<p><code>funcRef</code> のところは関数への参照です。この関数は発生した動きを説明する {{DOMxRef("DeviceMotionEvent")}} オブジェクトを受け取ります。</p>
+`funcRef` のところは関数への参照です。この関数は発生した動きを説明する {{DOMxRef("DeviceMotionEvent")}} オブジェクトを受け取ります。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Orientation")}}</td>
-   <td>{{Spec2("Device Orientation")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                       | 状態                                     | 備考                |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName("Device Orientation")}} | {{Spec2("Device Orientation")}} | Initial definition. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.ondevicemotion")}}</p>
+{{Compat("api.Window.ondevicemotion")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Window/devicemotion_event", "devicemotion")}}</li>
- <li>{{DOMxRef("DeviceMotionEvent")}}</li>
- <li><a href="/ja/docs/Web/API/Detecting_device_orientation">端末の向きの検出</a></li>
-</ul>
+- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{DOMxRef("DeviceMotionEvent")}}
+- [端末の向きの検出](/ja/docs/Web/API/Detecting_device_orientation)
