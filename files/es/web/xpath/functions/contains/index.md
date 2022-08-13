@@ -17,8 +17,6 @@ La función `contains` determina si la primera cadena del argumento contiene la 
 - `haystack`
   - : La cadena donde buscar
 
-<!---->
-
 - `needle`
   - : La subcadena a buscar en `haystack`
 

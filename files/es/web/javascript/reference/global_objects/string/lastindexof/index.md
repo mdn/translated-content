@@ -25,8 +25,6 @@ El método **`lastIndexOf() `**`devuelve `la posicion (indice) en la que se encu
 - `valorBusqueda`
   - : Una cadena que representa el valor que se desea buscar.
 
-<!---->
-
 - `indiceDesde`
   - : La localización dentro de la cadena que realiza la llamada desde donde comenzará la búsqueda. Puede ser cualquier entero entre 0 y la longitud de la cadena. El valor predeterminado es la longitud de la cadena.
 

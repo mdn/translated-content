@@ -22,8 +22,6 @@ La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mos
 
     cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | CSS:inherit ;
 
-<!---->
-
     cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 ### Values

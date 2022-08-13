@@ -73,6 +73,4 @@ p {
 
 - [CSS Reference](/es/docs/Web/CSS/Referencia_CSS)
 
-<!---->
-
 - {{css_key_concepts}}

@@ -26,8 +26,6 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
 
-<!---->
-
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 

@@ -27,8 +27,6 @@ Si deseas manipular el almacenamiento de sesión para un dominio, debes llamar a
 - {{domxref("Storage.key()")}}
   - : Cuando se le pasa un número n, éste método retorna el nombre de la enésima clave en el almacenamiento.
 
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Cuando se le pasa un nombre de clave, retorna el valor de esa clave.
 - {{domxref("Storage.setItem()")}}

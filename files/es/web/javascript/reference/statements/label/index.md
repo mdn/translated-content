@@ -22,8 +22,6 @@ Por ejemplo, puede usar una etiqueta para identificar un bucle, y entonces usar 
 - `etiqueta`
   - : Cualquier identificador JavaScript que no sea una palabra reservada.
 
-<!---->
-
 - `sentencia`
   - : Sentencias. `break` puede ser usado con cualquier sentencia etiquetada, y `continue` puede usarse con bucles etiquetados de sentencias.
 

@@ -29,8 +29,6 @@ la propiedad `border-color` es un atajo para definir el color de los cuatro bord
 - \<color>
   - : el color se puede especificar con un valor RGB hexa-decimal o regular, o con el nombre predefinido de ese color.
 
-<!---->
-
 - transparent
   - : el borde no aparece pero ocupa el sitio definido.
 

@@ -26,8 +26,6 @@ El **operador `new`** permite a los desarrolladores crear una instancia de un ti
 - `constructor`
   - : Una clase o función que especifica el tipo de instancia del objeto.
 
-<!---->
-
 - `arguments`
   - : Una lista de valores con los que se llamará al `constructor`.
 

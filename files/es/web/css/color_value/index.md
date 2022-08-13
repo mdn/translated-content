@@ -1011,8 +1011,6 @@ Los colores puede ser definidos usando el modelo RGB (rojo-verde-azul) de dos ma
   - : "`rgb`", seguido por tres valores {{cssxref("&lt;integer&gt;")}} o tres {{cssxref("&lt;percentage&gt;")}} values.
     El número entero 255 representa el 100%, y F o FF en notación hexadecimal.
 
-<!---->
-
     /* Todos estos ejemplos son el mismo color RGB: */
 
      #f03

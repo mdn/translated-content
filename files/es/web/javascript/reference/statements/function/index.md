@@ -22,12 +22,8 @@ Puede también definir funciones usando el constructor {{jsxref("Function")}} y 
 - `nombre`
   - : El nombre de la función.
 
-<!---->
-
 - `parametroN`
   - : El nombre de un argumento que se pasa a la función. Una función puede tener hasta 255 argumentos.
-
-<!---->
 
 - `sentencias`
   - : Las sentencias que comprenden el cuerpo de la función.

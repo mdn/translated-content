@@ -20,12 +20,8 @@ Ejecuta una sentencia si una condición específicada es evaluada como verdadera
 - `condición`
   - : Una expresión que puede ser evaluada como verdadera o falsa.
 
-<!---->
-
 - `sentencia1`
   - : Sentencia que se ejecutará si `condición` es evaluada como verdadera. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia {{jsxref("Sentencias/block", "block")}} ({ ... }) para agruparlas.
-
-<!---->
 
 - `sentencia2`
   - : Sentencia que se ejecutará si `condición` se evalúa como falsa, y exista una cláusula `else`. Puede ser cualquier sentencia, incluyendo sentencias block y otras sentencias `if` anidadas.

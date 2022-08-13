@@ -27,8 +27,6 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
     Gramatica formal: {{csssyntax("animation-duration")}}
 
-<!---->
-
     animation-duration: 6s
     animation-duration: 120ms
     animation-duration: 1s, 15s

@@ -26,12 +26,8 @@ El operador `function` define una función dentro de una expresión.
 - `name`
   - : El nombre de la función. Puede ser omitido, en cuyo caso la función es _anonymous_. El nombre sólo es local para el cuerpo de la función.
 
-<!---->
-
 - `paramN`
   - : El nombre de un argumento que será pasado a la función. Una función puede tener hasta 255 argumentos.
-
-<!---->
 
 - `statements`
   - : Las declaraciones que conforman el cuerpo de la función.

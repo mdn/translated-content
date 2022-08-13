@@ -83,8 +83,6 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 - {{jsxref("Sentencias/label", "label")}}
   - : Provee una instrucción con un identificador que puedes referir usando una instrucción `break` o `continue` .
 
-<!---->
-
 - {{deprecated_inline()}} {{jsxref("Sentencias/with", "with")}}
   - : Extiende la cadena de alcance para una instrucción.
 

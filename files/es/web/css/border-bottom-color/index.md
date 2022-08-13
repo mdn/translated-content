@@ -29,8 +29,6 @@ La propiedad `border-bottom-color` define el color del borde inferior de un elem
 - color
   - : puede especificarse por un valor RGB hexa-decimal o regular o por una palabra clave predefinida (_azul_).
 
-<!---->
-
 - transparent
   - : el elemento no tiene color propio, muestra el color del elemento atrás suyo en el árbol de apilado.
 

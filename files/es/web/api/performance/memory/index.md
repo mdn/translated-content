@@ -16,8 +16,6 @@ translation_of: Web/API/Performance/memory
 - `totalJSHeapSize`
   - : El total del heap asignado, en bytes. The total allocated heap size, in bytes.
 
-<!---->
-
 - usedJSHeapSize
   - : El actualmente activo segmento de heap de JS, en bytes.
 

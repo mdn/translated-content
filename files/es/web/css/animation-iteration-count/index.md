@@ -23,8 +23,6 @@ A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para aj
 
     Sintaxis formal: {{csssyntax("animation-iteration-count")}}
 
-<!---->
-
     animation-iteration-count: infinite;
     animation-iteration-count: 3;
     animation-iteration-count: 2.3;

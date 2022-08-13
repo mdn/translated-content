@@ -26,36 +26,24 @@ La interfaz **`Animation`** de la [Web Animations API](/es/docs/Web/API/Web_Anim
 - {{domxref("Animation.currentTime")}}
   - : El valor del tiempo de la animación actual en milisegundos , ya sea en ejecución o en pausa. Si la animación carece de {{domxref("AnimationTimeline", "timeline")}}, está inactivo, o no se ha reproducido todavía, su valor es `null`.
 
-<!---->
-
 - {{domxref("Animation.effect")}}
   - : Obtiene y establece el {{domxref("AnimationEffectReadOnly")}} asociado con esta animación. Normalmente, este será un objeto {{domxref("KeyframeEffect")}}.
 - {{domxref("Animation.finished")}} {{readOnlyInline}}
   - : Devuelve la Promesa actual terminada para esta animación.
-
-<!---->
 
 - {{domxref("Animation.id")}}
   - : Obtiene y establece la `String` usada para identificar la animación.
 - {{domxref("Animation.playState")}} {{readOnlyInline}}
   - : Devuelve un valor enumerado que describe el estado de la reproducción de una animación.
 
-<!---->
-
 - {{domxref("Animation.playbackRate")}}
   - : Obtiene o establece la velocidad de reproducción de la animación.
-
-<!---->
 
 - {{domxref("Animation.ready")}} {{readOnlyInline}}
   - : Devuelve la Promesa actual lista para esta animación.
 
-<!---->
-
 - {{domxref("Animation.startTime")}}
   - : Obiene o establece la hora programada en la que debe comenzar la reproducción de la animación.
-
-<!---->
 
 - {{domxref("Animation.timeline")}}
   - : Obtiene o establece el {{domxref("AnimationTimeline", "timeline")}} asociado con esta animación.
@@ -72,27 +60,17 @@ La interfaz **`Animation`** de la [Web Animations API](/es/docs/Web/API/Web_Anim
 - {{domxref("Animation.cancel()")}}
   - : Borra todos los {{domxref("KeyframeEffect", "keyframeEffects")}} causados por la animación y aborta su reproducción.
 
-<!---->
-
 - {{domxref("Animation.finish()")}}
   - : Busca cualquier final de una animación, dependiendo de si la animación se está reproduciendo o invirtiendo.
-
-<!---->
 
 - {{domxref("Animation.pause()")}}
   - : Pone la reproducción en pausa.
 
-<!---->
-
 - {{domxref("Animation.play()")}}
   - : Busca el final de una animación, dependiendo de si la animación se está reproduciendo o si se está invirtiendo.
 
-<!---->
-
 - {{domxref("Animation.reverse()")}}
   - : Invierte la dirección de reproducción, deteniéndose al comienzo de la animación. Si la animación finaliza o no se activa, volverá a reproducirse desde el final al principio.
-
-<!---->
 
 - {{domxref("Animation.updatePlaybackRate()")}}
   - : Establece la velocidad de la animación después de sincronizar por primera vez su posición de reproducción.

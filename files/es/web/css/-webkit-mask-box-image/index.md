@@ -44,8 +44,6 @@ Where:
 - none
   - : Para especificar que la caja del borde no va a tener imagen de máscara.
 
-<!---->
-
 - \<length>
   - : El tamaño del desplazamiento de la imagen de máscara. Ver {{cssxref("&lt;length&gt;")}} para posibles unidades.
 - \<percentage>

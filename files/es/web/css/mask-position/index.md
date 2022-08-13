@@ -29,8 +29,6 @@ Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;perc
 - Si sólo se especifica un valor, el segundo valor se supone que es center.
 - El primer valor representa la posición horizontal y el segundo la posición vertical (si al menos un valor no es una palabra clave).
 
-<!---->
-
 - `<percentage>`
   - : Con un par de valores 0% 0%, (es igual a 0 0) la esquina superior izquierda de la imagen se alinea con la esquina superior izquierda del borde del relleno del cuadro. Un valor par de 100% 100% coloca la esquina inferior derecha de la imagen en la esquina inferior derecha del zona del relleno. Con un par de valores de 14% 84%, el punto del 14% a lo largo y el 84% hacia abajo de la imagen son situados el punto del 14% a lo largo y el 84% del área del relleno.
 - `<length>`

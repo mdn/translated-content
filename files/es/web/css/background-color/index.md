@@ -27,8 +27,6 @@ translation_of: Web/CSS/background-color
 - \<color>
   - : Se puede especificar el color de fondo como un valor RGB hexa-decimal o regular, o utilizando una de las palabras claves predefinidas de color.
 
-<!---->
-
 - transparent
   - : El valor por defecto del color de fondo (`background-color`) es `transparent`e tomando así el color del elemento que está justo debajo de él en el apilamiento.
 
