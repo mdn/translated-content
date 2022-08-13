@@ -14,8 +14,8 @@ original_slug: Web/JavaScript/Referencia/Operadores/void
 
 El operador `void` se usa en cualquiera de los siguientes modos:
 
-1. `void (expresion )`
-2. `void expresion`
+1.  `void (expresion )`
+2.  `void expresion`
 
 El operador `void` especifica una expresión que se evalúa sin devolver un valor. `expresion` es una expresión JavaScript para evaluar. El paréntesis rodeando la expresión es opcional, pero usarlos es una buena práctica al programar.
 

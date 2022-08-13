@@ -14,7 +14,7 @@ El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, a
 ### Sintaxis
 
     <xsl:when test=EXPRESIÓN>
-     PLANTILLA
+    	PLANTILLA
     </xsl:when>
 
 ### Atributos requeridos

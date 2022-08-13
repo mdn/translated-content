@@ -74,10 +74,10 @@ A diferencia de las funciones de trazo que veremos en la próxima sección, las 
 
 Crear formas mediante trazos requiere algunos pasos adicionales.
 
-1. Primero, se crea el trazo.
-2. A continuación, se usan [comandos de dibujo](/es/docs/Web/API/CanvasRenderingContext2D#Paths) para dibujar dentro del trazo.
-3. Después, se cierra el trazo.
-4. Una vez el trazo ha sido creado, se le puede dar contorno o relleno para renderizarlo.
+1.  Primero, se crea el trazo.
+2.  A continuación, se usan [comandos de dibujo](/es/docs/Web/API/CanvasRenderingContext2D#Paths) para dibujar dentro del trazo.
+3.  Después, se cierra el trazo.
+4.  Una vez el trazo ha sido creado, se le puede dar contorno o relleno para renderizarlo.
 
 Estas son las funciones que se usan para llevar a cabo estos pasos:
 

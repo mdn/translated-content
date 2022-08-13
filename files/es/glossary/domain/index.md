@@ -15,9 +15,9 @@ Un nombre de dominio completo (FQDN, por sus siglas en inglés) contiene todas l
 
 For example, in "developer.mozilla.org":
 
-1. "org" es llamado un {{interwiki("wikipedia", "Dominio_de_nivel_superior", "dominio de nivel superior")}}. Están registrados como estándar de Internet por la entidad {{interwiki("wikipedia", "Internet_Assigned_Numbers_Authority", "IANA")}} . Aquí, "org" significa "organización" que se define en un _registro de dominio_ de nivel superior.
-2. "mozilla" es el dominio. Si quieres tener un dominio, debes registrarlo con uno de los muchos {{interwiki("wikipedia", "Registrador_de_dominios", "registradores")}} que tienen permiso para hacerlo con un registro de dominios de nivel superior.
-3. "developer" es un "subdominio", algo que usted mismo como propietario de un dominio puede definir usted mismo. Muchos propietarios eligen tener un subdominio "www" para que apunte a su recurso {{Glossary("World_Wide_Web")}}, pero eso no es necesario (e incluso ha caído en desgracia).
+1.  "org" es llamado un {{interwiki("wikipedia", "Dominio_de_nivel_superior", "dominio de nivel superior")}}. Están registrados como estándar de Internet por la entidad {{interwiki("wikipedia", "Internet_Assigned_Numbers_Authority", "IANA")}} . Aquí, "org" significa "organización" que se define en un _registro de dominio_ de nivel superior.
+2.  "mozilla" es el dominio. Si quieres tener un dominio, debes registrarlo con uno de los muchos {{interwiki("wikipedia", "Registrador_de_dominios", "registradores")}} que tienen permiso para hacerlo con un registro de dominios de nivel superior.
+3.  "developer" es un "subdominio", algo que usted mismo como propietario de un dominio puede definir usted mismo. Muchos propietarios eligen tener un subdominio "www" para que apunte a su recurso {{Glossary("World_Wide_Web")}}, pero eso no es necesario (e incluso ha caído en desgracia).
 
 ## Saber más
 

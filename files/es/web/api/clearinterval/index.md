@@ -16,7 +16,7 @@ Cancela una acción reiterativa que se inició mediante una llamada a {{domxref(
 
 ## Ejemplo
 
-Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
+Vea el [ejemplo de` setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
 
 ## Especificación
 

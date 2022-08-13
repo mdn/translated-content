@@ -14,7 +14,7 @@ El elemento `<xsl:call-template>` invoca una plantilla con nombre.
 ### Sintaxis
 
     <xsl:call-template name=NOMBRE>
-     <xsl:with-param> [opcional]
+    	<xsl:with-param> [opcional]
     </xsl:call-template>
 
 ### Atributos requeridos

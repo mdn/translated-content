@@ -24,9 +24,7 @@ El método **`includes()`** determina si una matriz incluye un determinado eleme
 ### Parámetros
 
 - `valueToFind`
-  - : El valor a buscar.
-
-  > **Nota:**Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
+  - : El valor a buscar.> **Nota:**Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
 - `fromIndex` {{optional_inline}}
   - : Posición en la matriz en la cuál se debe comenzar a buscar `valueToFind`; el primer caracter a buscar se encuentra en `fromIndex`. Un valor negativo inicia la búsqueda desde array.length + fromIndex en adelante. El valor por defecto es 0.
 

@@ -18,4 +18,4 @@ En {{Glossary("JavaScript")}}, null es uno de los {{Glossary("Primitivo", "valor
 
 ### Conocimientos generales
 
-- [Puntero Null en Wikipedia](https://es.wikipedia.org/wiki/Puntero_%28inform%C3%A1tica%29#Puntero_nulo)
+- [Puntero Null en Wikipedia](https://es.wikipedia.org/wiki/Puntero_%28inform%C3%A1tica%29#Puntero_nulo) 

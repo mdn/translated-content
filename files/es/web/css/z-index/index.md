@@ -11,8 +11,8 @@ La propiedad CSS `z-index` indica el orden de un elemento [posicionado](/es/docs
 
 Para una caja posicionada (es decir, una con cualquier `position` aparte de `static`), la propiedad `z-index` especifica:
 
-1. El nivel de apilamiento en el actual contexto de apilado.
-2. Si la caja establece un contexto de apilamiento local.
+1.  El nivel de apilamiento en el actual contexto de apilado.
+2.  Si la caja establece un contexto de apilamiento local.
 
 {{cssinfo}}
 

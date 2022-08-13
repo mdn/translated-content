@@ -5,7 +5,7 @@ translation_of: Web/API/FormData/Using_FormData_Objects
 translation_of_original: Web/Guide/Using_FormData_Objects
 original_slug: Web/Guide/Usando_Objetos_FormData
 ---
-Los objetos `FormData`le permiten compilar un conjunto de pares clave/valor para enviar mediante `XMLHttpRequest`. Están destinados principalmente para el envío de los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo formato que usa el método `submit()`del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
+Los objetos `FormData `le permiten compilar un conjunto de pares clave/valor para enviar mediante `XMLHttpRequest`. Están destinados principalmente para el envío de los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo formato que usa el método `submit() `del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
 
 ## Creación de un objeto FormData desde cero
 
@@ -115,7 +115,7 @@ También puede añadir un {{ domxref("File") }} o un {{ domxref("Blob") }} direc
 data.append("myfile", myBlob, "filename.txt");
 ```
 
-Cuando se usa el método `append` es posible usar, de manera opcional, un tercer parámetro para pasarle un nombre de fichero dentro de la cabecera `Content-Disposition`que será enviada al servidor. Cuando no se especifica (o el parámetro no es soportado), el nombre "blob" es el que será utilizado.
+Cuando se usa el método `append` es posible usar, de manera opcional, un tercer parámetro para pasarle un nombre de fichero dentro de la cabecera `Content-Disposition `que será enviada al servidor. Cuando no se especifica (o el parámetro no es soportado), el nombre "blob" es el que será utilizado.
 
 Además, puede usar FormData con jQuery si asigna las opciones correctas:
 

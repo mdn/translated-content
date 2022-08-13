@@ -63,31 +63,31 @@ function genera_tabla() {
 
 Observa cuidadosamente el orden en el que se crearon los elementos en el nodo de texto:
 
-1. Primero se crea el elemento \<table>.
-2. Posteriormente, creamos el elemento \<tbody> , que es el hijo del elemento \<table> .
-3. Después, utilizamos ciclos para crear los elementos \<tr>, que son hijos del elemento \<tbody>.
-4. Para cada elemento \<tr>, utilizamos nuevamente ciclos para generar los elementos \<td> que son hijos de los elementos \<tr>.
-5. Para cada elemento \<td>, creamos nodos de texto con el contenido de cada celda.
+1.  Primero se crea el elemento \<table>.
+2.  Posteriormente, creamos el elemento \<tbody> , que es el hijo del elemento \<table> .
+3.  Después, utilizamos ciclos para crear los elementos \<tr>, que son hijos del elemento \<tbody>.
+4.  Para cada elemento \<tr>, utilizamos nuevamente ciclos para generar los elementos \<td> que son hijos de los elementos \<tr>.
+5.  Para cada elemento \<td>, creamos nodos de texto con el contenido de cada celda.
 
 Una vez creados los elementos \<table>, \<tbody>, \<tr>, y \<td> así como los nodos de texto, adicionamos a cada hijo bajo su padre en el órden opuesto:
 
-1. Primero, anexamos cada nodo de texto a su elemento padre \<td> :
+1.  Primero, anexamos cada nodo de texto a su elemento padre \<td> :
 
         celda.appendChild(textoCelda);
 
-2. Posteriormente, anexamos cada elemento \<td> a su elemento padre \<tr> :
+2.  Posteriormente, anexamos cada elemento \<td> a su elemento padre \<tr> :
 
         hilera.appendChild(celda);
 
-3. Posteriomente, anexamos cada elemento \<tr> a su elemento padre \<tbody>:
+3.  Posteriomente, anexamos cada elemento \<tr> a su elemento padre \<tbody>:
 
         tblBody.appendChild(hilera);
 
-4. Después, anexamos el elemento \<tbody> a su elemento padre \<table>:
+4.  Después, anexamos el elemento \<tbody> a su elemento padre \<table>:
 
         tabla.appendChild(tblBody);
 
-5. Finalmente, anexamos el elemento \<table> a su elemento padre \<body>:
+5.  Finalmente, anexamos el elemento \<table> a su elemento padre \<body>:
 
         body.appendChild(tabla);
 
@@ -147,17 +147,17 @@ function set_background() {
 
 En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento`p` dentro del body:
 
-1. Primero, obtendremos una lista de todos los elementos body mediante
+1.  Primero, obtendremos una lista de todos los elementos body mediante
 
         myBody = document.getElementsByTagName("body")[0]
 
     Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `{{mediawiki.external(0)}}`.
 
-2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
+2.  Luego, obtenemos todos los elementos p que son descendientes del body mediante
 
         myBodyElements = myBody.getElementsByTagName("p");
 
-3. Finalmente, obtenemos el segundo item de la lista de elementos p mediante
+3.  Finalmente, obtenemos el segundo item de la lista de elementos p mediante
 
         myP = myBodyElements[1];
 

@@ -188,8 +188,8 @@ También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [a
 
 Como alternativa, puedes crear un objeto con estos dos pasos:
 
-1. Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
-2. Crear una instancia del objeto con el operador `new`.
+1.  Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
+2.  Crear una instancia del objeto con el operador `new`.
 
 Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre, propiedades y métodos. Por ejemplo, supongamos que deseas crear un tipo de objeto para coches. Quieres llamar `Car` a este tipo de objeto, y deseas que tenga las siguientes propiedades: `make`, `model` y `year`. Para ello, podrías escribir la siguiente función:
 

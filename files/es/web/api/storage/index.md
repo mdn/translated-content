@@ -20,7 +20,7 @@ Si deseas manipular el almacenamiento de sesión para un dominio, debes llamar a
 ## Propiedades
 
 - {{domxref("Storage.length")}} {{readonlyInline}}
-  - : Retorna un entero que representa el número de elementos almacenados en el objeto`Storage`.
+  - : Retorna un entero que representa el número de elementos almacenados en el objeto` Storage`.
 
 ## Métodos
 

@@ -28,7 +28,7 @@ dump(oDOM.documentElement.nodeName == "parsererror" ? "error mientras se codific
 
 ### Creando un documento XML empezando desde un árbol de Objetos JavaScript (JXON)
 
-Por favor vea JXON[algoritmos](/en/JXON#Reverse_Algorithms "en/JXON – Reverse Algorithms")de reversa.
+Por favor vea JXON[ algoritmos ](/en/JXON#Reverse_Algorithms "en/JXON – Reverse Algorithms")de reversa.
 
 ### Codificando rexursos de URL direccionables en árboles del DOM
 

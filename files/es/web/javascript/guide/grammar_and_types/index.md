@@ -51,7 +51,7 @@ La sintaxis de los **comentarios** es la misma que en C++ y en muchos otros leng
 
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
-> **Nota:** También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
+> **Nota:** **Nota**: También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
 
 ## Declaraciones
 
@@ -304,13 +304,13 @@ El último estándar ECMAScript define ocho tipos de datos:
 
 - Siete tipos de datos que son {{Glossary("Primitive", "primitivos")}}:
 
-  1. {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
-  2. {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
-  3. {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
-  4. {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
-  5. {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
-  6. {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
-  7. {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
+  1.  {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
+  2.  {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
+  3.  {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
+  4.  {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
+  5.  {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
+  6.  {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
+  7.  {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
 
 - y {{Glossary("Object")}}
 

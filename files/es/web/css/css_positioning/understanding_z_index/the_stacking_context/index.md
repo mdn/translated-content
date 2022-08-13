@@ -24,7 +24,7 @@ Un contexto de apilamiento es formado, en cualquier lugar del documento, por cua
 - elementos con un valor {{cssxref("perspective")}} distinto de "none",
 - elementos con un valor {{cssxref("isolation")}} igual a "isolate",
 - `position: fixed`
-- especifican cualquier atributo superior en `{{cssxref("will-change")}} incluso si no especificas valores para estos atributos directamente`(Mira [este post](http://dev.opera.com/articles/css-will-change-property/))
+- especifican cualquier atributo superior en `{{cssxref("will-change")}} incluso si no especificas valores para estos atributos directamente `(Mira [este post](http://dev.opera.com/articles/css-will-change-property/))
 - elementos con un valor {{cssxref("-webkit-overflow-scrolling")}} igual a "touch"
 
 Dentro de un contexto de apilamiento, los elementos hijos son apilados de acuerdo a las mismas reglas previamente explicadas. Es importante entender que los valores z-index de los contextos de apilamiento de los hijos solo tienen sentido en el contexto del padre. Los contextos de apilamiento son tratados atómicamente como una sola unidad en el contexto de apilamiento del padre.

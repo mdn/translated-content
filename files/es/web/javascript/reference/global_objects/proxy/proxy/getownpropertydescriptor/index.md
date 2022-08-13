@@ -53,7 +53,7 @@ Si los siguientes invariantes son violados, el proxy lanzará {{jsxref("TypeErro
 - No puede devolver que una propiedad no existe si esta está presente como una propiedad propia del objeto destino y el objeto no es extensible.
 - No puede devolver que una propuedad existe, si esta no está presente en el objeto destino y el objeto no es extensible.
 - No puede devolver que una propiedad es no configurable si esta no existe en el objeto destino o si existe pero sí es configurable.
-- El resultado de `Object.getOwnPropertyDescriptor(target)` puede ser aplicado al objeto destino mediante `Object.defineProperty`y no lanzará ningún tipo de excepción.
+- El resultado de `Object.getOwnPropertyDescriptor(target)` puede ser aplicado al objeto destino mediante `Object.defineProperty `y no lanzará ningún tipo de excepción.
 
 ## Ejemplos
 

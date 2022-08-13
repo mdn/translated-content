@@ -12,7 +12,7 @@ translation_of: Web/CSS/-webkit-touch-callout
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/Web/CSS)`-webkit-touch-callout` controla la visualización de la llamada predeterminada que se muestra cuando se mantiene pulsado un objetivo táctil .
+La propiedad [CSS ](/es/docs/Web/CSS)`-webkit-touch-callout` controla la visualización de la llamada predeterminada que se muestra cuando se mantiene pulsado un objetivo táctil .
 
 Cuando se toca y se mantiene la presión en un objetivo en iPhone OS, Safari muestra un un cuadro con información sobre el enlace. Esta propiedad permite deshabilitar este comportamiento.
 

@@ -36,7 +36,7 @@ El objeto destino.
 
 Las propiedades en el objeto destino serán sobrescritas por las propiedades en las fuentes si tienen la misma clave. Propiedades posteriores de las fuentes podrán sobrescribir las anteriores.
 
-El método `Object.assign()` copia sólo las propiedades _enumerables_ y _propias_ del objeto origen a un objeto destino. Usa `[[Get]]` en la origen y `[[Set]]`en el destino, por lo que invocará los métodos de acceso y establecimiento (_getters_ y _setters_). Por consiguiente _asignará_ propiedades frente a sólo copiar o definir propiedades nuevas. Esto puede hacer que sea inadecuado para fusionar propiedades nuevas en un prototipo si los objetos fuente contienen métodos de acceso (_getters_). Para copiar definiciones de propiedades en prototipos, incluyendo su enumerabilidad, se deben usar {{jsxref("Object.getOwnPropertyDescriptor()")}} y {{jsxref("Object.defineProperty()")}}.
+El método `Object.assign()` copia sólo las propiedades _enumerables_ y _propias_ del objeto origen a un objeto destino. Usa `[[Get]]` en la origen y `[[Set]] `en el destino, por lo que invocará los métodos de acceso y establecimiento (_getters_ y _setters_). Por consiguiente _asignará_ propiedades frente a sólo copiar o definir propiedades nuevas. Esto puede hacer que sea inadecuado para fusionar propiedades nuevas en un prototipo si los objetos fuente contienen métodos de acceso (_getters_). Para copiar definiciones de propiedades en prototipos, incluyendo su enumerabilidad, se deben usar {{jsxref("Object.getOwnPropertyDescriptor()")}} y {{jsxref("Object.defineProperty()")}}.
 
 Tanto las propiedades {{jsxref("String")}} como {{jsxref("Symbol")}} son copiadas.
 

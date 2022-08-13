@@ -27,7 +27,7 @@ El número de milisegundos entre 1 Enero 1970 00:00:00 UTC y a la fecha actualiz
 
 ## Descripción
 
-Si en la invocación al método no se especifican los parámetros `valorMes` y `valorDia, se emplean en su lugar los valores devueltos por`{{jsxref("Date.prototype.getMonth()", "getMonth()")}} y {{jsxref("Date.prototype.getDate()", "getDate()")}}.
+Si en la invocación al método no se especifican los parámetros `valorMes` y `valorDia, se emplean en su lugar los valores devueltos por `{{jsxref("Date.prototype.getMonth()", "getMonth()")}} y {{jsxref("Date.prototype.getDate()", "getDate()")}}.
 
 Si se especifica un parámetro con un valor fuera del rango esperado, `setFullYear()` intenta actualizar el resto de parámetros y la informacion de fecha en el objeto {{jsxref("Date")}} de manera consistente. Por ejemplo, si se especifica el valor 15 para el parametro `valorMes`, el parámetro año se incrementa en 1 (`valorAño+ 1`), y se emplea 3 como valor para el parámetro mes.
 

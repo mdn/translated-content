@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 
 ## Resumen
 
-La función **`Math.sin()`**`devuelve el seno de un número`.
+La función **`Math.sin()`**` devuelve el seno de un número`.
 
 ## Sintaxis
 

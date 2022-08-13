@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 ---
 {{JSRef}} {{deprecated_header}}
 
-`El método`**`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
+`El método `**`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
 
 > **Nota:** **Usage note:** El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
 

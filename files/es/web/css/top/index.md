@@ -20,7 +20,7 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 
 Para los elementos con una posición relativa (aquellos que tienen la propiedad {{ Cssxref("position") }}`: relative`), determina el desplazamiento hacia abajo que tendrá el elemento con respecto a su posición normal.
 
-Cuando se define tanto la propiedad `top`como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto`o 100%, tanto la distancia `top`como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top`tiene precedencia y {{cssxref("bottom")}} será ignorada.
+Cuando se define tanto la propiedad `top `como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto `o 100%, tanto la distancia `top `como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top `tiene precedencia y {{cssxref("bottom")}} será ignorada.
 
 - {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
 - Aplicable a: [Posicionar Elementos](/es/CSS/position "es/CSS/position")

@@ -30,15 +30,15 @@ Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá 
 
 El proceso de renderizado incluye lo siguiente :
 
-1. Comenzamos con el elemento raiz del `svg`:
+1.  Comenzamos con el elemento raiz del `svg`:
 
     - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
-    - En cambio, los atributos `version` y `baseProfile`deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
+    - En cambio, los atributos `version` y `baseProfile `deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
     - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course "en/SVG/Namespaces_Crash_Course").
 
-2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect "en/SVG/Element/rect") que cubre el area de la imagen.
-3. Un circulo verde [`<circle/>`](/en/SVG/Element/circle "en/SVG/Element/circle") con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).
-4. El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
+2.  El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect "en/SVG/Element/rect") que cubre el area de la imagen.
+3.  Un circulo verde [`<circle/>`](/en/SVG/Element/circle "en/SVG/Element/circle") con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).
+4.  El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
 
 ### Basic properties of SVG files
 

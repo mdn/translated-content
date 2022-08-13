@@ -13,7 +13,7 @@ translation_of: Web/CSS/:-moz-window-inactive
 
 ## Resumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS) [](/es/docs/Web/CSS/Pseudo-classes)`:-moz-window-inactive` selecciona cualquier elemento mientras está en una ventana inactiva.
+La [pseudo-clase ](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS) [](/es/docs/Web/CSS/Pseudo-classes)`:-moz-window-inactive` selecciona cualquier elemento mientras está en una ventana inactiva.
 
 > **Nota:** Antes de añadir esta pseudo-clase, dar dieferentes estilos a las ventanas de fondo podría lograrse con el atributo (`active="true"`) en la venta del nivel superior XUL. Este atributo ya no se usa.
 

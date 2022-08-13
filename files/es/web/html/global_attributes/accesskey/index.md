@@ -10,7 +10,7 @@ original_slug: Web/HTML/Atributos_Globales/accesskey
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales)**accesskey** provee un indicio para generar un atajo de teclado para el elemento actual . Este atributo consiste en una lista de caracteres separada por espacios (un único punto de código Unicode). El explorador usa el primero que existe en la distribución del teclado de la computadora .
+El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**accesskey** provee un indicio para generar un atajo de teclado para el elemento actual . Este atributo consiste en una lista de caracteres separada por espacios (un único punto de código Unicode). El explorador usa el primero que existe en la distribución del teclado de la computadora .
 
 La operación para activar el accesskey depende del explorador y su plataforma .
 

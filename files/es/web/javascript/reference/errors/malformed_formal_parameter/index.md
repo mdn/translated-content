@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 
 ## ¿Qué salió mal?
 
-Hay un constructor [`Function()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function)con al menos dos argumentos pasados en el código. El último argumento es el código fuente de la nueva función que está creando. Todo lo demás forma la lista de argumentos de su nueva función.
+Hay un constructor [`Function()` ](/es/docs/Web/JavaScript/Reference/Global_Objects/Function)con al menos dos argumentos pasados en el código. El último argumento es el código fuente de la nueva función que está creando. Todo lo demás forma la lista de argumentos de su nueva función.
 
 La lista de argumentos no es válida de alguna manera. Quizás eligió accidentalmente una palabra clave como `if` o `var` como nombre de argumento, o tal vez haya algún signo de puntuación en su lista de argumentos. O tal vez accidentalmente pasó un valor no válido, como un número u objeto.
 

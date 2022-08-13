@@ -53,7 +53,7 @@ navigator.getMedia (
 
 ### constraints
 
-El parámetro `constraints` es un objeto `MediaStreamConstraints` con dos miembros booleanos: `video` y `audio`. Estos describen el los tipos de multimedia soportados por el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream"). Uno o ambos deben ser especificados para validar el argumento del parametro constraint. Si un constraint especificado no es soportado por el navegador, `getUserMedia`llama a la función `errorCallback`con el error `NOT_SUPPORTED_ERROR`. Si el navegador no puede encontrar ninguna fuente multimedia con el tipo especificado, `getUserMedia`llama a la función `errorCallback`con el error `MANDATORY_UNSATISFIED_ERR`.
+El parámetro `constraints` es un objeto `MediaStreamConstraints` con dos miembros booleanos: `video` y `audio`. Estos describen el los tipos de multimedia soportados por el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream"). Uno o ambos deben ser especificados para validar el argumento del parametro constraint. Si un constraint especificado no es soportado por el navegador, `getUserMedia `llama a la función `errorCallback `con el error `NOT_SUPPORTED_ERROR`. Si el navegador no puede encontrar ninguna fuente multimedia con el tipo especificado, `getUserMedia `llama a la función `errorCallback `con el error `MANDATORY_UNSATISFIED_ERR`.
 
 Si el valor o el miembro no es especificado en el objeto, el valor del miembro por defecto será falso. El siguiente ejemplo muestra como definir el constraints para audio y video:
 
@@ -61,7 +61,7 @@ Si el valor o el miembro no es especificado en el objeto, el valor del miembro p
 
 ### successCallback
 
-La función getUserMedia llamará a la función especificada en el `successCallback`con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream") que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
+La función getUserMedia llamará a la función especificada en el `successCallback `con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream "WebRTC/MediaStream_API#LocalMediaStream") que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
 
     function(localMediaStream) {
        var video = document.querySelector('video');
@@ -73,7 +73,7 @@ La función getUserMedia llamará a la función especificada en el `successCallb
 
 ### errorCallback
 
-La función `getUserMedia`llama a la función indicada en el errorCallback con un `código` como argumento. Los códigos de error se describen a continuación:
+La función `getUserMedia `llama a la función indicada en el errorCallback con un `código` como argumento. Los códigos de error se describen a continuación:
 
 | Error                       | Descripción                                                                                     |
 | --------------------------- | ----------------------------------------------------------------------------------------------- |

@@ -72,3 +72,4 @@ with (obj) {
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
 - Sentencia [`with`](/es/docs/Web/JavaScript/Reference/Statements/with) (no disponible en [Strict mode](/es/docs/Web/JavaScript/Reference/Strict_mode))
+

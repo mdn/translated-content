@@ -16,9 +16,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : Un {{domxref("AudioTrackList")}}} que lista los {{domxref("AudioTrack")}} objetos contenidos en el elemento.
 - {{domxref("HTMLMediaElement.autoplay")}}
-  - : Un {{jsxref("Booleano")}} que refleja el {{htmlattrxref("autoplay", "video")}}. Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
-
-  > **Nota:** Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
+  - : Un {{jsxref("Booleano")}} que refleja el {{htmlattrxref("autoplay", "video")}}. Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.> **Nota:** Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : Devuelve un objeto {{domxref("TimeRanges")}}} que indica los rangos de la fuente de medios que el navegador ha almacenado en el búfer (si existe) en el momento en que se accede a la propiedad almacenada en el búfer.
 - {{domxref("HTMLMediaElement.controller")}}
@@ -88,9 +86,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
   - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
-
-  > **Nota:** Gecko sólo soporta la reproducción de una sola pista, y el análisis de los metadatos de las pistas sólo está disponible para los medios con el formato de contenedor Ogg.
+  - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.> **Nota:** Gecko sólo soporta la reproducción de una sola pista, y el análisis de los metadatos de las pistas sólo está disponible para los medios con el formato de contenedor Ogg.
 - {{domxref("HTMLMediaElement.volume")}}
   - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
 

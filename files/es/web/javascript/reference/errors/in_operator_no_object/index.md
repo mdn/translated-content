@@ -21,13 +21,13 @@ translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 
 ## ¿Qué salió mal?
 
-El [operador `in`](/es/docs/Web/JavaScript/Reference/Operators/in)puede ser usado sólo para verificar si una propiedad se encuentra en un objeto. No puede buscar en cadenas de caracteres, o en números, u otro tipo primitivo.
+El [operador `in` ](/es/docs/Web/JavaScript/Reference/Operators/in)puede ser usado sólo para verificar si una propiedad se encuentra en un objeto. No puede buscar en cadenas de caracteres, o en números, u otro tipo primitivo.
 
 ## Ejemplos
 
 ### Buscando en cadenas de caracteres
 
-A diferencia de otros lenguajes de programación (ej. Python), no puede buscar cadenas de texto usando el[operator](/es/docs/Web/JavaScript/Reference/Operators/in) [`in`](/es/docs/Web/JavaScript/Reference/Operators/in).
+A diferencia de otros lenguajes de programación (ej. Python), no puede buscar cadenas de texto usando el[ operator](/es/docs/Web/JavaScript/Reference/Operators/in) [`in`](/es/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad
 "Hello" in "Hello World";

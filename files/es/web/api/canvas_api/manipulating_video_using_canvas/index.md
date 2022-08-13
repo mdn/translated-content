@@ -56,14 +56,14 @@ El documento XHTML que se utiliza para representar este contenido se muestra a c
 
 Los puntos clave a tener en cuenta son:
 
-1. Este documento establece dos elemento
+1.  Este documento establece dos elemento
 
     `canvas`
 
     , con los identificadores de `c1` y `c2` . Canvas `c1` se utiliza para mostrar la imagen actual del video original, mientras que `c2` se utiliza para mostrar el video después de realizar la manipulación con el efecto croma; `c2` se carga previamente con la imagen fija que se utilizará para sustituir el fondo verde en el video.
 
-2. El código JavaScript es importado de un script llamado `main.js` ; este script utiliza JavaScript 1.8 características, de modo que la versión se especifica en la línea 22 al importar la secuencia de comandos.
-3. Cuando se carga el documento, se ejecuta el método `processor.doLoad()` de `main.js`.
+2.  El código JavaScript es importado de un script llamado `main.js` ; este script utiliza JavaScript 1.8 características, de modo que la versión se especifica en la línea 22 al importar la secuencia de comandos.
+3.  Cuando se carga el documento, se ejecuta el método `processor.doLoad()` de `main.js`.
 
 ## El código JavaScript
 

@@ -14,8 +14,8 @@ El elemento `<xsl:for-each>` selecciona un conjunto de nodos y procesa cada uno 
 ### Sintaxis
 
     <xsl:for-each select=EXPRESIÓN>
-     <xsl:sort> [opcional]
-     PLANTILLA
+    	<xsl:sort> [opcional]
+    	PLANTILLA
     </xsl:for-each>
 
 ### Atributos requeridos

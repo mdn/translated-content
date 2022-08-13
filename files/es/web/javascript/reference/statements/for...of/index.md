@@ -40,7 +40,7 @@ for (let value of iterable) {
 // 31
 ```
 
-Es posible usar `const` en lugar de `let`si no se va a modificar la variable dentro del bloque.
+Es posible usar `const` en lugar de `let `si no se va a modificar la variable dentro del bloque.
 
 ```js
 let iterable = [10, 20, 30];
@@ -224,7 +224,7 @@ for (var value of iterable) {
 
 ### Diferencia entre `for...of` y `for...in`
 
-El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]]`configurada como `true`.
+El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]] `configurada como `true`.
 
 La sintaxis de **`for...of` **es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 

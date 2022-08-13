@@ -76,7 +76,7 @@ Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamen
 
 #### Cómo escribir "\\{\\{"
 
-Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`.
+Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`. 
 
 En este caso, puedes escapar la primer llave con una barra invertida, así: `\\{{`
 
@@ -92,7 +92,7 @@ Las plantillas KumaScript son procesadas por un [motor de plantillas JavaScript 
   - Es un error incluir punto y coma dentro de los bloques.
 
 - Cualquier cosa dentro de un bloque `<% %>` se interpreta como JavaScript. Esto puede incluir bucles, condiciones, etc.
-- No hay nada dentro de un bloque `<% %>` que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando `<% %>`—Por ejemplo:
+- No hay nada dentro de un bloque `<% %>` que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando `<% %> `—Por ejemplo:
 
       <% for (var i = 0; i < $0; i++) { %>
       Hello #<%= i %>

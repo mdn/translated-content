@@ -44,7 +44,7 @@ La propiedad `border-bottom-color` define el color del borde inferior de un elem
 [Ver El Ejemplo Vivo](/samples/cssref/border.html)
 
     element {
-     width: 300px;
+    	width: 300px;
             padding: 15px;
             border-bottom-size: 1px;
             border-bottom-style: solid;

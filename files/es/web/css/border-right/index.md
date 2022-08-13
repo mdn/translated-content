@@ -9,7 +9,7 @@ translation_of: Web/CSS/border-right
 ---
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`border-right`** es un a propiedad rápida para dar valores al {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}} y {{cssxref("border-right-color")}}. Estas propiedades establecen un [borde](/es/docs/Web/CSS/border)derecho del elemento.
+La propiedad [CSS](/es/docs/Web/CSS) **`border-right`** es un a propiedad rápida para dar valores al {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}} y {{cssxref("border-right-color")}}. Estas propiedades establecen un [borde ](/es/docs/Web/CSS/border)derecho del elemento.
 
 {{EmbedInteractiveExample("pages/css/border-right.html")}}
 

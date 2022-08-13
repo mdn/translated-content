@@ -14,7 +14,7 @@ El elemento `<xsl:fallback>` indica la plantilla a usar en caso de que algun ele
 ### Sintaxis
 
     <xsl:fallback>
-     PLANTILLA
+    	PLANTILLA
     </xsl:fallback>
 
 ### Atributos requeridos

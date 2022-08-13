@@ -11,18 +11,18 @@ original_slug: Web/HTML/Atributos_Globales/spellcheck
 ---
 > **Nota:** {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales)**spellcheck** es un atributo enumerado que define si el elemento debe de ser verificado por errores de deletreado. Puede tener los siguientes valores :
+El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**spellcheck** es un atributo enumerado que define si el elemento debe de ser verificado por errores de deletreado. Puede tener los siguientes valores :
 
-- `true ,`que indica que elemento debe de ser checado para errores de deletreado si es posible .
-- `false`, que indica que el elemento no debe de ser checado para errores de deletreado .
+- `true , `que indica que elemento debe de ser checado para errores de deletreado si es posible .
+- `false `, que indica que el elemento no debe de ser checado para errores de deletreado .
 
 Si este atributo no está establecido , su valor por default es de tipo elemento y definido por el explorador . El valor por default puede der _heredado ,_ lo que significa que el contenido del elemento será checado para errores de deletreado solo si el ancestro más cercano tiene un estado de _spellcheck_ con valor `true .`
 
 Puedes consultar [este artículo](/es/docs/Control_de_la_corrección_ortográfica_en_formularios_HTML) para ver un ejemplo comprensivo del uso de este atributo.
 
-Este es un atributo _enumerado_ y no uno*Booleano* . Esto significa que el uso explícito de uno de los valores `true`o `false`es obligatorio y que una escritura como `<label spellcheck>Example Label</label>`no está permitida . El uso correcto es `<label spellcheck="true">Example Label</label>`.
+Este es un atributo _enumerado_ y no uno*Booleano* . Esto significa que el uso explícito de uno de los valores `true `o `false `es obligatorio y que una escritura como `<label spellcheck>Example Label</label> `no está permitida . El uso correcto es `<label spellcheck="true">Example Label</label>`.
 
-Este atributo es meramente un indicio para el explorador : los exploradores no son obligados a tener disponibilidad para verificar los errores de deletreado , incluso si el atributo **spellcheck** es establecido como `true`y el explorador soporta verificación de deletreado .
+Este atributo es meramente un indicio para el explorador : los exploradores no son obligados a tener disponibilidad para verificar los errores de deletreado , incluso si el atributo **spellcheck** es establecido como `true `y el explorador soporta verificación de deletreado .
 
 El valor por default de este atributo es dependiente del explorador y del elemento :
 

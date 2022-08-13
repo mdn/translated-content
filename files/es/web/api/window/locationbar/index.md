@@ -13,7 +13,7 @@ Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
 
 ## Ejemplo
 
-El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad `visible`del objeto `locationbar.`
+El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad `visible `del objeto `locationbar.`
 
 ```html
 <!DOCTYPE html>

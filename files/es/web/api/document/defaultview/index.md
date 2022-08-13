@@ -14,7 +14,7 @@ translation_of: Web/API/Document/defaultView
 
 ## Resumen
 
-En los navegadores devuelve el objeto [window](/es/docs/DOM/window "DOM/window") asociado con el `document`o `null` si no está disponible.
+En los navegadores devuelve el objeto [window](/es/docs/DOM/window "DOM/window") asociado con el `document `o `null` si no está disponible.
 
 ## Sintaxis
 

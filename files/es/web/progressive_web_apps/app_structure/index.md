@@ -76,33 +76,33 @@ Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que es
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <title>js13kGames — Entradas del marco A</title>
- <meta name="description" content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas">
- <meta name="author" content="end3r">
- <meta name="theme-color" content="#B12A34">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta property="og:image" content="icons/icon-512.png">
- <link rel="shortcut icon" href="favicon.ico">
- <link rel="stylesheet" href="style.css">
- <link rel="manifest" href="js13kpwa.webmanifest">
- <script src="data/games.js" defer></script>
- <script src="app.js" defer></script>
+	<meta charset="utf-8">
+	<title>js13kGames — Entradas del marco A</title>
+	<meta name="description" content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas">
+	<meta name="author" content="end3r">
+	<meta name="theme-color" content="#B12A34">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="icons/icon-512.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="js13kpwa.webmanifest">
+	<script src="data/games.js" defer></script>
+	<script src="app.js" defer></script>
 </head>
 <body>
 <header>
- <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
+	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
 </header>
 <main>
- <h1>js13kGames — Entradas del marco A</h1>
- <p class="description">Lista de juegos enviada a <a href="http://js13kgames.com/aframe">categoría Marco A</a> en la competencia de <a href="http://2017.js13kgames.com">js13kGames 2017</a>. Puedes <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">bifurcar js13kPWA en GitHub</a> para revisar su código fuente.</p>
- <button id="notifications">Solicitar notificaciones ficticias</button>
- <section id="content">
-  // Contenido insertado aquí
- </section>
+	<h1>js13kGames — Entradas del marco A</h1>
+	<p class="description">Lista de juegos enviada a <a href="http://js13kgames.com/aframe">categoría Marco A</a> en la competencia de <a href="http://2017.js13kgames.com">js13kGames 2017</a>. Puedes <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">bifurcar js13kPWA en GitHub</a> para revisar su código fuente.</p>
+	<button id="notifications">Solicitar notificaciones ficticias</button>
+	<section id="content">
+		// Contenido insertado aquí
+	</section>
 </main>
 <footer>
- <p>© js13kGames 2012-2020, creado y mantenido por <a href="http://end3r.com">Andrzej Mazur</a> de <a href="http://enclavegames.com">Enclave Games</a>.</p>
+	<p>© js13kGames 2012-2020, creado y mantenido por <a href="http://end3r.com">Andrzej Mazur</a> de <a href="http://enclavegames.com">Enclave Games</a>.</p>
 </footer>
 </body>
 </html>

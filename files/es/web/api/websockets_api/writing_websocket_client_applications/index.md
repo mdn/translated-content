@@ -43,7 +43,7 @@ El constructor puede lanzar excepciones:
 
 ### Errores de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket`(de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") es enviado al objeto `WebSocket`(de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket `(de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") es enviado al objeto `WebSocket `(de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
 
 A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4") a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent").
 

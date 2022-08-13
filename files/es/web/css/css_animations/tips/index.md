@@ -82,9 +82,9 @@ Esto se ve raro, ¿cierto? Esto se debe a que la única forma de volver a reprod
 
 Esto es lo que sucede cuando la función `play()` es llamada:
 
-1. La lista de clases CSS de caja se restablece a `"box"`. Esto tiene el efecto de remover cualquier otra clase recurrente aplicada a la caja, incluida la clase `"changing"` que controla la animación. En otras palabras eliminaremos el efecto de animación de la caja. Sin embargo, los cambios en la lista de clases no tienen efecto hasta que se recalcula completamente el estilo y se ha producido una actualización para reflejar el cambio.
-2. Para estar seguros que los estilos son recalculados, nosotros usamos {{domxref("window.requestAnimationFrame()")}}, especifinado un callback. Nuestro callback se ejecuta justo antes del 'repaint' del documento. El problema para nosotros es que debido a que es antes del repaint, ¡El recalculo del estilo aún no ha suciedo! Por lo tanto...
-3. Nuestro callback habilmente llama a `requestAnimationFrame()` ¡por segunda vez!. En este momento el callback se compila antes del siguiente repaint, después de que se haya producido el recalculo del estilo. El callback añade la clase `"changing"` de nuevo en la caja, para que el repaint inicie la animación una vez más.
+1.  La lista de clases CSS de caja se restablece a `"box"`. Esto tiene el efecto de remover cualquier otra clase recurrente aplicada a la caja, incluida la clase `"changing"` que controla la animación. En otras palabras eliminaremos el efecto de animación de la caja. Sin embargo, los cambios en la lista de clases no tienen efecto hasta que se recalcula completamente el estilo y se ha producido una actualización para reflejar el cambio.
+2.  Para estar seguros que los estilos son recalculados, nosotros usamos {{domxref("window.requestAnimationFrame()")}}, especifinado un callback. Nuestro callback se ejecuta justo antes del 'repaint' del documento. El problema para nosotros es que debido a que es antes del repaint, ¡El recalculo del estilo aún no ha suciedo! Por lo tanto...
+3.  Nuestro callback habilmente llama a `requestAnimationFrame()` ¡por segunda vez!. En este momento el callback se compila antes del siguiente repaint, después de que se haya producido el recalculo del estilo. El callback añade la clase `"changing"` de nuevo en la caja, para que el repaint inicie la animación una vez más.
 
 Por supuesto, también necesitamos agregar un controlador de eventos a nuestro botón "Run" para que en verdad haga algo
 
@@ -100,8 +100,8 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Simplemente removemos {{cssxref("animation-name")}} aplicado al elemento que hace que eso salte o corte a su siguiente estado.Si, en cambio, desea que la animación se complete y luego se detenga, debe probar un enfoque diferente. Los principales trucos son:
 
-1. Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en`animation-direction: alternate`. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.
-2. Use JavaScript y borre la animación que se esta utilizando cuando se activa el evento `animationiteration`.
+1.  Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en`animation-direction: alternate`. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.
+2.  Use JavaScript y borre la animación que se esta utilizando cuando se activa el evento `animationiteration`.
 
 El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionandas anteriormente:
 

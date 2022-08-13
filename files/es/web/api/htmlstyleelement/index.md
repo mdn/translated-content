@@ -21,9 +21,9 @@ Vea las siguientes páginas para información sobre alguno de los objetos utiliz
 
 ### Material que se moverá a otras páginas
 
-El objeto básico `style`, presenta los estilos definidos para el DOM en su especificación de nivel 2. Los estilos se definen mediante `las interfaces StyleSheet`y `CSSStyleSheet`. Estas interfaces contienen miembros tales como `insertRule`, `selectorText`, y `parentStyleSheet` que permiten acceder y manipular las reglas de estilo individuales de que se compone una hoja de estilos CSS.
+El objeto básico `style`, presenta los estilos definidos para el DOM en su especificación de nivel 2. Los estilos se definen mediante `las interfaces StyleSheet `y `CSSStyleSheet`. Estas interfaces contienen miembros tales como `insertRule`, `selectorText`, y `parentStyleSheet` que permiten acceder y manipular las reglas de estilo individuales de que se compone una hoja de estilos CSS.
 
-Para obtener los objetos `style`de un `document`, podemos usar la propiedad `document.styleSheets` y llegar a los distintos objetos por su índice (por ejemplo: `document.styleSheets{{ mediawiki.external(0) }}` es la primer stylesheet definida en el documento, etc.). Aunque hay varias formas y sintaxis para expresar una stylsheet para un documento, Netscape implementa exclusivamente, CSS, de manera que el objeto `style`obtenido por este método, es a la vez StyleSheet y CSSStyleSheet.
+Para obtener los objetos `style `de un `document`, podemos usar la propiedad `document.styleSheets` y llegar a los distintos objetos por su índice (por ejemplo: `document.styleSheets{{ mediawiki.external(0) }}` es la primer stylesheet definida en el documento, etc.). Aunque hay varias formas y sintaxis para expresar una stylsheet para un documento, Netscape implementa exclusivamente, CSS, de manera que el objeto `style `obtenido por este método, es a la vez StyleSheet y CSSStyleSheet.
 
     var ss = document.styleSheets[1];
     ss.cssRules[0].style.backgroundColor="blue";
@@ -77,7 +77,7 @@ El método `getComputedStyle()` en el objeto `document.defaultView` devuelve tod
 
 El objeto `style` representa una sentencia de estilo individual. Al contrario de las reglas individuales disponibles en la colección: [`document.styleSheets`](/Es/DOM/Document.styleSheets "es/DOM/document.styleSheets"), se accede al objeto style a partir del `document` o desde el elemento para el cual se aplica el estilo. Representa pues, el estilo _in-line_ de ese elemento.
 
-Más importante que los dos procedimientos que señalamos aquí, es el uso del objeto `style`para establecer las propiedades de un elemento:
+Más importante que los dos procedimientos que señalamos aquí, es el uso del objeto `style `para establecer las propiedades de un elemento:
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <html>
@@ -103,7 +103,7 @@ Los atributos **media** y **type** de style pueden o no estar presentes. Ten en 
     var el = document.getElementById("some-element");
     el.setAttribute("style", "background-color:darkblue;");
 
-Ten presente, si embargo, que el método `setAttribute`eliminará cualquier otra propiedad que haya podido ser definida en el estilo del objeto. Si el elemento some-element arriba, tenia un atributo de estilo in-line como `style="font-size: 18px"`, ese valor habrá sido eliminado por el uso de `setAttribute`.
+Ten presente, si embargo, que el método `setAttribute `eliminará cualquier otra propiedad que haya podido ser definida en el estilo del objeto. Si el elemento some-element arriba, tenia un atributo de estilo in-line como `style="font-size: 18px"`, ese valor habrá sido eliminado por el uso de `setAttribute`.
 
 ##### Propiedades
 

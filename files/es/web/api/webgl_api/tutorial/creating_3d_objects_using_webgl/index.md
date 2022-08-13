@@ -11,7 +11,7 @@ original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
-Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}``por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
+Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}` `por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
 Considerar: cada cara cuatro vértices para su definición, pero cada vértice es compartido por 3 caras. Realizando una lista con los 24 vértices es como nosotros haremos un menor intercambio de datos, después haremos referencia hacia cada vértic por medio se su índice en la lista en lugar de pasar el juego entero de coordenadas. Si te preguntas por qué necesitamos 24 vértices, y no solo 8, es porque cada esquina pertenece a tres caras de diferente color, y un solo vértice necesita tener un solo color específico, por lo tanto crearemos 3 copias de cada vértice en tres colores diferentes, uno por cada cara.
 

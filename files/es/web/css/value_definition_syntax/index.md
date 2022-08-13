@@ -98,7 +98,7 @@ Pero no con:
 - `bold` porque ambos componentes deben aparecer en el valor
 - `bold 1em bold` porque ambos componentes deben aparecer solo una vez
 
-> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ ``bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length>`` bold thin` pero no a `bold <length>`` thin`.
+> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a ` [ ``bold thin ] && <length>`. Que describe a `bold thin <length>` ó ` <length>`` bold thin  ` pero no a ` bold <length>`` thin  `.
 
 ### Barra doble
 
@@ -117,7 +117,7 @@ Pero no con:
 - `blue yellow` porque un componente debe aparecer al menos una vez.
 - `bold` porque no es una palabra clave permitida como valor de ninguna de las entidades.
 
-> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length>`` bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente`thin && <length>`
+> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no ` bold <length>`` bold thin  ` porque bold, si no es omitido debe colocarse antes o después de el componente` thin && <length>`
 
 ### Barra simple
 
@@ -141,7 +141,7 @@ Pero no
 - `center 3%` porque solo uno de los componentes debe estar presente
 - `3em 4.5em` porque un componente debe estar presente máximo una vez.
 
-> **Nota:** la barra doble tiene precedencia sobre la barra simple, quiere decir que `bold | thin || <length>` es equivalente a `bold | [ thin || <length> ]`. Describe `bold`, `thin`, `<length>`, `<length> thin`, o `thin <length>`pero no `bold <length>`` `porque solo una entidad de cada lado del combinador `|` puede estar presente.
+> **Nota:** la barra doble tiene precedencia sobre la barra simple, quiere decir que `bold | thin || <length>` es equivalente a `bold | [ thin || <length> ]`. Describe `bold`, `thin`, `<length>`, `<length> thin`, o `thin <length> `pero no ` bold <length>``  `porque solo una entidad de cada lado del combinador `|` puede estar presente.
 
 ## Multiplicadores de valores de componentes
 

@@ -41,7 +41,7 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 - `reverse`
   - : Cada ciclo de la animación se reproduce al revés . Cada vez que comienza un ciclo de animación, ésta se posiciona en el estado final y comienza desde ahí.
 - `alternate-reverse`
-  - : Es similar a`alternate` pero la animación se reproduce al revés. Es decir la animación se posiciona en el estado final, comienza a reproducirse al reves y, cuando llega al inicio vuelve a reproducirse de forma normal hasta llegar al final de la secuencia. Y vuelve otra vez a repetirse. El contador que determina si la iteración es par o impar comienza en uno.
+  - : Es similar a` alternate` pero la animación se reproduce al revés. Es decir la animación se posiciona en el estado final, comienza a reproducirse al reves y, cuando llega al inicio vuelve a reproducirse de forma normal hasta llegar al final de la secuencia. Y vuelve otra vez a repetirse. El contador que determina si la iteración es par o impar comienza en uno.
 
 ## Ejemplos
 

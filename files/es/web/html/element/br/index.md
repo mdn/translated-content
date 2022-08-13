@@ -26,9 +26,7 @@ No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes "HTML/Global attributes").
 
 - {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
-  - : Indica donde empieza la siguiente línea después del salto.
-
-  > **Nota:** **Nota de uso:** Este atributo está obsoleot en {{HTMLVersionInline(5)}} y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
+  - : Indica donde empieza la siguiente línea después del salto.> **Nota:** **Nota de uso:** Este atributo está obsoleot en {{HTMLVersionInline(5)}} y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
 
 ## Ejemplo
 

@@ -38,7 +38,7 @@ El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D propor
 - `sy`
   - : La coordenada Y de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
 - `sWidth`
-  - : El ancho del sub-rectangulo de la imagen origen a dibujar en el contexto de destino. Si no se especifica, se utiliza todo el rectangulo entero desde las coordenadas especificadas por `sx` y `sy`hasta la esquina inferior derecha de la imagen.
+  - : El ancho del sub-rectangulo de la imagen origen a dibujar en el contexto de destino. Si no se especifica, se utiliza todo el rectangulo entero desde las coordenadas especificadas por `sx` y `sy `hasta la esquina inferior derecha de la imagen.
 - `sHeight`
   - : La altura del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
 

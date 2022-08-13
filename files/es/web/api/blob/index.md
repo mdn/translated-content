@@ -90,7 +90,7 @@ Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los con
 
 ## Disponilidad del alcance del código en Chrome
 
-El alcance JSM del `Blob`se encuentra disponible sin la necesidad de hacer nada en especial.
+El alcance JSM del `Blob `se encuentra disponible sin la necesidad de hacer nada en especial.
 
 En el alcance de arranque, este debe importarse de igual modo:
 

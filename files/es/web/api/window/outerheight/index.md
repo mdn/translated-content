@@ -11,7 +11,7 @@ translation_of: Web/API/Window/outerHeight
 
 ## Sumario
 
-`Window.outerHeight`obtiene la altura en pixeles de toda la ventana del navegador. Representa el alto de toda la ventana, incluyendo la barra de notificaciones (si se encuentra) y los bordes.
+`Window.outerHeight `obtiene la altura en pixeles de toda la ventana del navegador. Representa el alto de toda la ventana, incluyendo la barra de notificaciones (si se encuentra) y los bordes.
 
 Esta propiedad es de sólo lectura, no tiene valor por defecto
 
@@ -29,7 +29,7 @@ Para obtener la altura interna de una ventana, por ejemplo, el alto de una pági
 
 ### Ejemplo gráfico
 
-La siguiente figura muestra la diferencia entre `innerHeight`y `outerHeight`.
+La siguiente figura muestra la diferencia entre `innerHeight `y `outerHeight`.
 
 ![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
 

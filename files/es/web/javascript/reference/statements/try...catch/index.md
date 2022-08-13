@@ -50,9 +50,9 @@ La declaración **`try...catch`** señala un bloque de instrucciones a intentar 
 
 La sentencia `try` consiste en un bloque `try` que contiene una o más sentencias. Las llaves `{}` se deben utilizar siempre`,` incluso para una bloques de una sola sentencia. Al menos un bloque `catch` o un bloque `finally` debe estar presente. Esto nos da tres formas posibles para la sentencia `try`:
 
-1. `try...catch`
-2. `try...finally`
-3. `try...catch...finally`
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
 Un bloque `catch` contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque `try`. Si cualquier sentencia dentro del bloque `try` (o en una funcion llamada desde dentro del bloque `try`) lanza una excepción, el control cambia inmediatamente al bloque `catch` . Si no se lanza ninguna excepcion en el bloque `try`, el bloque `catch` se omite.
 
@@ -76,7 +76,7 @@ catch (e) {
 }
 ```
 
-El bloque `catch` especifíca un identificador ( `e` en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque`catch`
+El bloque `catch` especifíca un identificador ( `e` en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque` catch`
 
 ### Bloques catch condicionales
 
@@ -100,7 +100,7 @@ try {
 
 ### El identificador de excepciones
 
-Cuando una excepción es lanzada en el bloque `try`, `exception_var` (por ejemplo, la `e` en `catch (e)`) guarda el valor de la excepción. Se puede usar éste identificador para obtener información acerca de la excepción que fue lanzada. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque`catch.`
+Cuando una excepción es lanzada en el bloque `try`, `exception_var` (por ejemplo, la `e` en `catch (e)`) guarda el valor de la excepción. Se puede usar éste identificador para obtener información acerca de la excepción que fue lanzada. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque` catch.`
 
 ```js
 function isValidJSON(text) {

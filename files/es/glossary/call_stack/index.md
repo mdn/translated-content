@@ -35,28 +35,28 @@ saludar();
 
 El código del ejemplo se ejecutaría de la siguiente manera:
 
-1. Ignora todas las funciones hasta que alcanza la invocación de la función `saludar()`.
-2. Añade la función `saludar()` a la lista de la pila de llamadas.
+1.  Ignora todas las funciones hasta que alcanza la invocación de la función `saludar()`.
+2.  Añade la función `saludar()` a la lista de la pila de llamadas.
 
     > **Nota:** Lista de la pila de llamadas:
     > \- saludar
 
-3. Ejecuta todas las líneas de código de dentro de la función `saludar()`.
-4. Llega a la incovación de la función `diHola()`.
-5. Añade la función `diHola()` a la lista de la pila de llamadas.
+3.  Ejecuta todas las líneas de código de dentro de la función `saludar()`.
+4.  Llega a la incovación de la función `diHola()`.
+5.  Añade la función `diHola()` a la lista de la pila de llamadas.
 
     > **Nota:** Lista de la pila de llamadas:
     > \- saludar
     > \- diHola
 
-6. Ejecuta todas las líneas de código de dentro de la función `diHola()` hasta que llega al final.
-7. Devuelve la ejecución a la línea que invocó a la función `diHola()` y continua con la ejecuación del resto de código de la función `saludar()`.
-8. Elimina la función `diHola()` de la lista de la pila de llamadas.
+6.  Ejecuta todas las líneas de código de dentro de la función `diHola()` hasta que llega al final.
+7.  Devuelve la ejecución a la línea que invocó a la función `diHola()` y continua con la ejecuación del resto de código de la función `saludar()`.
+8.  Elimina la función `diHola()` de la lista de la pila de llamadas.
 
     > **Nota:** Lista de la pila de llamadas:
     > \- saludar
 
-9. Cuando todo el código dentro de la función `saludar()` ha sido ejecutado, vuelve a la línea que la invocó y continua ejecutando el resto de código JavaScript.
+9.  Cuando todo el código dentro de la función `saludar()` ha sido ejecutado, vuelve a la línea que la invocó y continua ejecutando el resto de código JavaScript.
 10. Elimina la función `saludar()` de la lista de la pila de llamadas.
 
     > **Nota:** Lista de la pila de llamadas:
@@ -68,7 +68,7 @@ En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia
+- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia 
 
 - [Glosario](/es/docs/Glossary)
 

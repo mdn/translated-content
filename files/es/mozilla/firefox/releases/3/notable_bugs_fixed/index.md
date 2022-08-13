@@ -27,4 +27,4 @@ Este artículo es una lista de correcciones importantes de errores en Firefox 3 
 
 ### Ver también
 
-- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
+- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores) 

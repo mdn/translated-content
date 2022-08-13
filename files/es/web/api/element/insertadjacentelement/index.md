@@ -62,7 +62,7 @@ afterBtn.addEventListener('click', function() {
 });
 ```
 
-Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
+Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[ código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
 
 ## Especificaciones
 

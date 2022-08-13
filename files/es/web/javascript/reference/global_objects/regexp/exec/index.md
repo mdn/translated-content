@@ -150,7 +150,7 @@ Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("Reg
 
 ### Usando `exec()` con `RegExp` literales
 
-También se puede usar `exec() sin crear un objeto de`{{jsxref("RegExp")}}:
+También se puede usar `exec() sin crear un objeto de `{{jsxref("RegExp")}}:
 
 ```js
 var matches = /(hola \S+)/.exec('Esto es un hola mundo!');

@@ -12,7 +12,7 @@ translation_of: Web/CSS/::-webkit-progress-value
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)[CSS](/es/docs/Web/CSS)**`::-webkit-progress-value`** representa la parte rellena de la barra del elemento {{HTMLElement("progress")}}. Es hija del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)[CSS ](/es/docs/Web/CSS)**`::-webkit-progress-value`** representa la parte rellena de la barra del elemento {{HTMLElement("progress")}}. Es hija del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
 
 > **Nota:** para que `::-webkit-progress-value` tenga efecto en el elemento \<progress> {{cssxref("-webkit-appearance")}} deberá tener _none_ como valor.
 

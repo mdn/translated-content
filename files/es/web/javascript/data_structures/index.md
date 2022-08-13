@@ -146,7 +146,7 @@ En JavaScript, los objetos se pueden ver como una colección de propiedades. Con
 
 Hay dos tipos de propiedades de objeto que tienen ciertos atributos: la propiedad _data_ y la propiedad _accessor_.
 
-> **Nota:** Cada propiedad tiene _atributos correspondientes_. Los atributos, internamente los utiliza el motor JavaScript, por lo que no puedes acceder a ellos directamente. Es por eso que los atributos se enumeran entre corchetes dobles, en lugar de simples.Consulta {{jsxref("Object.defineProperty()")}} para obtener más información.
+> **Nota:** **Nota**: Cada propiedad tiene _atributos correspondientes_. Los atributos, internamente los utiliza el motor JavaScript, por lo que no puedes acceder a ellos directamente. Es por eso que los atributos se enumeran entre corchetes dobles, en lugar de simples.Consulta {{jsxref("Object.defineProperty()")}} para obtener más información.
 
 #### Propiedad `Data`
 

@@ -24,9 +24,9 @@ translation_of: Web/EXSLT/set/trailing
 
 ### Devuelve
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1`cuyos valores siguen al primer nodo del `conjuntoNodos2`.
+Un conjunto de nodos que contiene los nodos del `conjuntoNodos1 `cuyos valores siguen al primer nodo del `conjuntoNodos2 `.
 
-{{NoteStart}}Si el primer nodo en `conjuntoNodos2`no está contenido en `conjuntoNodos1`, se devuelve un conjunto de nodos vacío. Si `conjuntoNodos2`está vacío, entonces el resultado es el `conjuntoNodos1`.{{NoteEnd}}
+{{NoteStart}}Si el primer nodo en `conjuntoNodos2 `no está contenido en `conjuntoNodos1 `, se devuelve un conjunto de nodos vacío. Si `conjuntoNodos2 `está vacío, entonces el resultado es el `conjuntoNodos1 `.{{NoteEnd}}
 
 ### Definido en
 

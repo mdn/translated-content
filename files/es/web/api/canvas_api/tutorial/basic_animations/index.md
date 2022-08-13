@@ -20,13 +20,13 @@ Probablemente la mayor limitación es que una vez que se dibuja una forma, se ma
 
 Estos son los pasos que necesitas para dibujar un cuadro:
 
-1. **Limpiar el canvas**
+1.  **Limpiar el canvas**
     A menos que las formas que vas a dibujar llenen el canvas completo (por ejemplo, una imagen de fondo), debes borrar cualquier forma que haya dibujado previamente. La forma más fácil de hacerlo es usar el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}.
-2. **Guardar el estado del canvas**
+2.  **Guardar el estado del canvas**
     Si estás cambiando alguna configuración (como estilos, transformaciones, etc.) que afecte el estado del canvas y deseas asegurarte de que se utiliza el estado original cada vez que se dibuja una figura, debes guardar ese estado original.
-3. **Dibujar formas animadas**
+3.  **Dibujar formas animadas**
     El paso en el que realizas el renderizado del cuadro actual.
-4. **Restaurar el estado del canvas**
+4.  **Restaurar el estado del canvas**
     Si has guardado el estado, restáuralo antes de dibujar un nuevo cuadro.
 
 ## Controlando una animación

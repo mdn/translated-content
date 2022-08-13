@@ -13,7 +13,7 @@ translation_of: Web/CSS/:-moz-only-whitespace
 
 ## Resumen
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS)`:-moz-only-whitespace` selecciona un elemento si no tiene ningún hijo, o bien nodos textos vacíos o bien nodos texto que sólo contienen espacios en blanco. Sólo cuando hay elementos o nodos texto con uno o más caracteres dentro, el elemento no será seleccionado por esta pseudo-clase.
+La [pseudo-class ](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS)`:-moz-only-whitespace` selecciona un elemento si no tiene ningún hijo, o bien nodos textos vacíos o bien nodos texto que sólo contienen espacios en blanco. Sólo cuando hay elementos o nodos texto con uno o más caracteres dentro, el elemento no será seleccionado por esta pseudo-clase.
 
 ## Síntaxis
 

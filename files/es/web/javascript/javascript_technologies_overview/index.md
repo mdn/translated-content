@@ -71,7 +71,7 @@ La especificación HTML también define restricciones en los documentos; por eje
 - Las funciones `setTimeout` `ysetInterval` se especificaron por primera vez en la interfaz de [`Window`](http://www.whatwg.org/html/#window) en HTML Standard.
 - [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) hace posible enviar solicitudes HTTP asincrónicas.
 - EL [Modelo de Objetos CSS](http://dev.w3.org/csswg/cssom/) esume las reglas CSS como objetos.
-- [WebWorkers](http://www.whatwg.org/specs/web-workers/current-work/)permite el cálculo paralelo.
+- [WebWorkers ](http://www.whatwg.org/specs/web-workers/current-work/)permite el cálculo paralelo.
 - [WebSockets](http://www.whatwg.org/C/#network) permite la comunicación bidireccional de bajo nivel.
 - [Canvas 2D Context](http://www.whatwg.org/html/#2dcontext) es una API de dibujo para {{htmlelement("canvas")}}.
 

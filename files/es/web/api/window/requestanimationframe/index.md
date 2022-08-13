@@ -5,7 +5,7 @@ translation_of: Web/API/window/requestAnimationFrame
 ---
 {{APIRef}}El método **`window.requestAnimationFrame`** informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
 
-> **Nota:** Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame()`desde tu callback.
+> **Nota:** Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame() `desde tu callback.
 
 Debes llamar a este método cuando estés preparado para actualizar tu animación en la pantalla para pedir que se programe el repintado. Ésto puede suceder hasta 60 veces por segundo en pestañas en primer plano, pero se puede ver reducido a velocidades inferiores en pestañas en segundo plano.
 

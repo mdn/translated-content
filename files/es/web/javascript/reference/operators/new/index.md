@@ -33,23 +33,23 @@ El **operador `new`** permite a los desarrolladores crear una instancia de un ti
 
 La palabra clave **`new`** hace lo siguiente:
 
-1. Crea un objeto JavaScript simple y en blanco;
-2. Vincula (establece el constructor de) este objeto a otro objeto;
-3. Pasa el objeto recién creado del _Paso 1_ como el contexto `this`;
-4. Devuelve `this` si la función no devuelve un objeto.
+1.  Crea un objeto JavaScript simple y en blanco;
+2.  Vincula (establece el constructor de) este objeto a otro objeto;
+3.  Pasa el objeto recién creado del _Paso 1_ como el contexto `this`;
+4.  Devuelve `this` si la función no devuelve un objeto.
 
 La creación de un objeto definido por el usuario requiere dos pasos:
 
-1. Defina el tipo de objeto escribiendo una función.
-2. Crea una instancia del objeto con `new`.
+1.  Defina el tipo de objeto escribiendo una función.
+2.  Crea una instancia del objeto con `new`.
 
 Para definir un tipo de objeto, crea una función para el tipo de objeto que especifique su nombre y propiedades. Un objeto puede tener una propiedad que en sí misma es otro objeto. Ve los siguientes ejemplos.
 
 Cuando se ejecuta el código `new Foo(...)`, sucede lo siguiente:
 
-1. Se crea un nuevo objeto, heredado de `Foo.prototype`.
-2. La función constructora `Foo` se llama con los argumentos especificados y con {{JSxRef("Operators/this", "this")}} vinculado al objeto recién creado. `new Foo` es equivalente a `new Foo()`, es decir, si no se especifica una lista de argumentos, `Foo` se llama sin argumentos.
-3. El objeto (no nulo, `false`, 3.1415 u otros tipos primitivos) devuelto por la función constructora se convierte en el resultado de toda la expresión `new`. Si la función constructora no devuelve explícitamente un objeto, en su lugar se utiliza el objeto creado en el paso 1. (Normalmente, los constructores no devuelven un valor, pero pueden elegir hacerlo si quieren redefinir el proceso normal de creación de objetos).
+1.  Se crea un nuevo objeto, heredado de `Foo.prototype`.
+2.  La función constructora `Foo` se llama con los argumentos especificados y con {{JSxRef("Operators/this", "this")}} vinculado al objeto recién creado. `new Foo` es equivalente a `new Foo()`, es decir, si no se especifica una lista de argumentos, `Foo` se llama sin argumentos.
+3.  El objeto (no nulo, `false`, 3.1415 u otros tipos primitivos) devuelto por la función constructora se convierte en el resultado de toda la expresión `new`. Si la función constructora no devuelve explícitamente un objeto, en su lugar se utiliza el objeto creado en el paso 1. (Normalmente, los constructores no devuelven un valor, pero pueden elegir hacerlo si quieren redefinir el proceso normal de creación de objetos).
 
 Siempre puedes agregar una propiedad a un objeto definido previamente. Por ejemplo, la instrucción `car1.color = "black"` agrega una propiedad `color` a `car1` y le asigna un valor de "`black`". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, debes agregar la propiedad a la definición del tipo de objeto `Car`.
 

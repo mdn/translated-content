@@ -26,7 +26,7 @@ Codifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI)
 
 Se asume que el URI es un URI completo, a fin de no codificar caracteres reservados que tienen un significado especial en la URI.
 
-`encodeURI`reemplaza todos los caracteres excepto los siguientes con las secuencias de escape UTF-8:
+`encodeURI `reemplaza todos los caracteres excepto los siguientes con las secuencias de escape UTF-8:
 
 | Tipo                  | Incluye                                             |
 | --------------------- | --------------------------------------------------- |

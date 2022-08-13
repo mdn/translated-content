@@ -14,7 +14,7 @@ El elemento `<xsl:attribute>` genera un atributo en el documento de salida, usan
 ### Sintaxis
 
     <xsl:attribute name=NOMBRE namespace=URI>
-     PLANTILLA
+    	PLANTILLA
     </xsl:attribute>
 
 ### Atributos requeridos

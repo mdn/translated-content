@@ -10,7 +10,7 @@ La Transmisión Adaptable y Dinámica sobre HTTP (DASH - _Dynamic Adaptive Strea
 
 Firefox 21 incluye una implementación de DASH para video WebM con HTML5 que está desactivada por defecto. Se puede activar a través de "about:config" activando la opción "media.dash.enabled".
 
-Firefox 23 eliminó el soporte para DASH para WebM con HTML 5. Ésta será reemplazada por una implementación de la [Media Source Extensions API](http://www.w3.org/TR/media-source/)que de soporte a DASH a través de javascript usando librerías como dash.js. Ver el bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) para más detalles.
+Firefox 23 eliminó el soporte para DASH para WebM con HTML 5. Ésta será reemplazada por una implementación de la [Media Source Extensions API ](http://www.w3.org/TR/media-source/)que de soporte a DASH a través de javascript usando librerías como dash.js. Ver el bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) para más detalles.
 
 ## Usando DASH del lado del servidor
 

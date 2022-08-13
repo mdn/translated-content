@@ -11,7 +11,7 @@ Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment "DOM/Documen
 
     var fragment = document.createDocumentFragment();
 
-Se crea un objeto[DocumentFragment](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, el cual queda listo para que pueda insertarseles nodos en el.
+Se crea un objeto[ DocumentFragment](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, el cual queda listo para que pueda insertarseles nodos en el.
 
 ## Notas de uso
 

@@ -14,8 +14,8 @@ translation_of: Web/CSS/visibility
 
 La propiedad `visibility` se usa para dos efectos:
 
-1. El valor `hidden` esconde un elemento, pero deja (vacío) el espacio donde debería aparecer.
-2. El valor `collapse` esconde filas o columnas de una tabla.
+1.  El valor `hidden` esconde un elemento, pero deja (vacío) el espacio donde debería aparecer.
+2.  El valor `collapse` esconde filas o columnas de una tabla.
 
 - {{ Cssxref("initial", "Valor incial") }}: {{ Cssxref("visible") }}
 - Se aplica a: Todos los elementos.

@@ -34,9 +34,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ### Valores
 
 - `auto`
-  - : Los agentes usuarios deberán usar `currentcolor`, pero podrían ajustar automáticamente el color del cursor para asegurar la correcta visibilidad y contraste con el contenido alrededor, posiblemente con base en `currentcolor`, el fondo, sombras, etc.
-
-  > **Nota:** Aunque los agentes usuarios puedan usar `currentcolor` (que usualmente es animable) para el valor `auto`, `auto` no es interpolado en las transiciones/animaciones.
+  - : Los agentes usuarios deberán usar `currentcolor`, pero podrían ajustar automáticamente el color del cursor para asegurar la correcta visibilidad y contraste con el contenido alrededor, posiblemente con base en `currentcolor`, el fondo, sombras, etc.> **Nota:** Aunque los agentes usuarios puedan usar `currentcolor` (que usualmente es animable) para el valor `auto`, `auto` no es interpolado en las transiciones/animaciones.
 - {{cssxref("&lt;color&gt;")}}
   - : Color del cursor de texto.
 

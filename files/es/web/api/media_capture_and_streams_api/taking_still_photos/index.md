@@ -165,7 +165,7 @@ Luego necesitamos configurar el tamaño del video a las dimensiones deseadas.
   }, false);
 ```
 
-Nos subscribimos al evento `canplay`del video y leemos sus dimensiones utilizando `videoHeight` y `videoWidth`. Estas no están disponible realmente hasta que el evento sea iniciado. Establecemos `streaming` a verdadero (true) para que compruebe esto solo una vez, mientras que el evento `canplay` siga en actividad.
+Nos subscribimos al evento `canplay `del video y leemos sus dimensiones utilizando `videoHeight` y `videoWidth`. Estas no están disponible realmente hasta que el evento sea iniciado. Establecemos `streaming` a verdadero (true) para que compruebe esto solo una vez, mientras que el evento `canplay` siga en actividad.
 
 Esto es todo lo que se necesita para que inicie el video.
 

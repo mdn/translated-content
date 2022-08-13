@@ -33,7 +33,7 @@ console.log("La llamada a hacerAlgo tardó " + (t1 - t0) + " milisegundos.");
 
 A diferencia de otros datos de tiempo disponibles en JavaScript (por ejemplo [`Date.now`](/es/docs/JavaScript/Reference/Global_Objects/Date/now)), las marcas de tiempo devueltas por `Performance.now()` no se limitan a resoluciones de un milisegundo. En su lugar, representan tiempos como números en punto flotante con hasta una precisión de microsegundos.
 
-También a diferencia de `Date.now()`, los valores devueltos por `Performance.now()`siempre se incrementan a un ritmo constante, independientemente del sistema de reloj (que podría estar ajustado manualmente o manipulado por software como NTP). De todos modos, `performance.timing.navigationStart + performance.now()`será aproximadamente igual a`Date.now()`.
+También a diferencia de `Date.now()`, los valores devueltos por `Performance.now() `siempre se incrementan a un ritmo constante, independientemente del sistema de reloj (que podría estar ajustado manualmente o manipulado por software como NTP). De todos modos, `performance.timing.navigationStart + performance.now() `será aproximadamente igual a` Date.now()`.
 
 ## Especificaciones
 
@@ -48,4 +48,4 @@ También a diferencia de `Date.now()`, los valores devueltos por `Performance.no
 
 ## Vea también
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)de HTML5 Rocks.
+- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)de HTML5 Rocks.

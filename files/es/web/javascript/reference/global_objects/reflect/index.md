@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ## Descripción
 
-A diferencia de la mayoria de los objetos globales, `Reflect` no es un constructor. No puede ser instanciado con un [operador](/es/docs/Web/JavaScript/Reference/Operators/new) [`new`](/es/docs/Web/JavaScript/Reference/Operators/new)o invocando el objecto `Reflect` como una función. Todas las propiedades y métodos de `Reflect` son estáticos (igual que los del objeto {{jsxref("Math")}}).
+A diferencia de la mayoria de los objetos globales, `Reflect` no es un constructor. No puede ser instanciado con un [operador](/es/docs/Web/JavaScript/Reference/Operators/new) [`new` ](/es/docs/Web/JavaScript/Reference/Operators/new)o invocando el objecto `Reflect` como una función. Todas las propiedades y métodos de `Reflect` son estáticos (igual que los del objeto {{jsxref("Math")}}).
 
 ## Métodos
 

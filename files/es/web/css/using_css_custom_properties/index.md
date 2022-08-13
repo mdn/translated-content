@@ -186,7 +186,7 @@ Utilizando [`var()`](/es/docs/Web/CSS/var) podemos definir múltiples **valores 
 
 > **Nota:** **Los valores de sustitución (fallback) no se usan para arreglar problemas de compatibilidad del navegador.** Si el navegador no tiene soporte para Propiedades Personalizadas de CSS, el valor de fallback no es de ayuda. **Es simplemente un respaldo para que aquellos navegadores que sí soportan Propiedades Personalizadas de CSS** puedan elegir un valor diferente en caso de que la variable no se haya definido o contenga un valor no válido.
 
-El primer argumento a la función es el nombre de la [propiedad personalizada](https://www.w3.org/TR/css-variables/#custom-property)que se va a sustituir. El segundo argumento a la función, si se proporciona, es un valor de reserva, que se utiliza como valor de sustitución cuando la [propiedad personalizada](https://www.w3.org/TR/css-variables/#custom-property)referenciada no es válida. La función solo acepta dos parámetros, asignando todo lo que después de la primera coma como el segundo parámetro. Si ese segundo parámetro es inválido, por ejemplo una lista de valores separados por comas, el fallback fallará. Por ejemplo:
+El primer argumento a la función es el nombre de la [propiedad personalizada ](https://www.w3.org/TR/css-variables/#custom-property)que se va a sustituir. El segundo argumento a la función, si se proporciona, es un valor de reserva, que se utiliza como valor de sustitución cuando la [propiedad personalizada ](https://www.w3.org/TR/css-variables/#custom-property)referenciada no es válida. La función solo acepta dos parámetros, asignando todo lo que después de la primera coma como el segundo parámetro. Si ese segundo parámetro es inválido, por ejemplo una lista de valores separados por comas, el fallback fallará. Por ejemplo:
 
 ```css
 .dos {
@@ -234,8 +234,8 @@ p { color: var(--text-color); }
 
 Como esperaríamos, el navegador sustituye `var(--text-color)` con el valor de `--text-color`, pero `16px` no es un valor válido para la propiedad {{cssxref("color")}}. Después de la sustitución, la propiedad no tiene sentido. El navegador maneja esta situación en dos pasos:
 
-1. Comprueba si la propiedad color se puede heredar. Sí, pero el elemento `<p>` no tiene un padre con una propiedad color. Así que pasamos al siguiente paso.
-2. Toma el valor de su **valor inicial por defecto**.
+1.  Comprueba si la propiedad color se puede heredar. Sí, pero el elemento `<p>` no tiene un padre con una propiedad color. Así que pasamos al siguiente paso.
+2.  Toma el valor de su **valor inicial por defecto**.
 
 ### Resultado
 

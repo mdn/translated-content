@@ -14,11 +14,11 @@ translation_of: Web/CSS/color_value
 
 ## Resumen
 
-`El tipo de datos`[CSS](/es/docs/Web/CSS)`<color>` denota un color en el [sRGB color space](http://en.wikipedia.org/wiki/SRGB). Un color puede ser descrito de cualquiera de las siguiente maneras:
+`El tipo de datos `[CSS](/es/docs/Web/CSS)` <color>` denota un color en el [sRGB color space](http://en.wikipedia.org/wiki/SRGB). Un color puede ser descrito de cualquiera de las siguiente maneras:
 
 - Usando una _palabra clave_.
 - Usando el sistema [RGB cubic-coordinate](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) (usando #-hexadecimal o las notaciones funcionales `rgb()` y `rgba()` )
-- Usando el sistema [HSL cylindrical-coordinate](http://en.wikipedia.org/wiki/HSL_and_HSV) (usando las notaciones funcionales `hsl()` y `hsla()`)
+- Usando el sistema [HSL cylindrical-coordinate](http://en.wikipedia.org/wiki/HSL_and_HSV) (usando las notaciones funcionales `hsl()` y `hsla() `)
 
 Hay que destacar que la lista de valores de color aceptados ha ido creciendo conforme la especificación evolucionaba, para acabar con la lista de colores de CSS3.
 
@@ -30,7 +30,7 @@ Aunque los valores de colores en CSS son definidos de manera precisa existe la p
 
 ## Interpolación
 
-Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>.`En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
+Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>. `En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
 
 ## Valores
 
@@ -964,7 +964,7 @@ La palaba `transparent` representa un color totalmente transparente, es decir, e
 > **Nota:** **Nota histórica**
 > La palabra clave `transparent` no fue un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor \<color> regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.
 >
-> Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent fue redefinido como un color verdadero más en`CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor`<color>` , como la propiedad {{Cssxref("color")}}.
+> Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent fue redefinido como un color verdadero más en `CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor`<color>` , como la propiedad {{Cssxref("color")}}.
 
 ### `Palabra clave currentColor`
 

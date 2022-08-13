@@ -28,7 +28,7 @@ cadena.slice(inicioTrozo[, finTrozo])
   - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
 
 - `finTrozo`
-  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo`es `-3` se trata como `longCadena - 3`).
+  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo `es `-3` se trata como `longCadena - 3`).
 
 ### Valor retornado
 

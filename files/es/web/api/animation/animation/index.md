@@ -23,7 +23,7 @@ El constructor **`Animation()`** de [Web Animations API](/es/docs/Web/API/Web_An
 
 ## Ejemplos
 
-En el ejemplo [Follow the White Rabbit](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), el constructor `Animation()` es usado para crear una `Animation` para el `rabbitDownKeyframes` utilizando el `timeline` del documento:
+En el ejemplo [Follow the White Rabbit ](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), el constructor `Animation()` es usado para crear una `Animation` para el `rabbitDownKeyframes` utilizando el `timeline` del documento:
 
 ```js
 var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);

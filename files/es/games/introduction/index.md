@@ -31,39 +31,39 @@ Puedes pensar en la Web como una mejor opción de plataforma para desarrollar tu
 
 Como un desarrollador de juegos, de forma individual o como un gran studio de juegos, tu quieres por que tiene sentido apuntar a la Web como tu práximo proyecto de juego. Veamos como la Web puede ayudarte.
 
-1. El alcance de la Web es enorme;
+1.  El alcance de la Web es enorme;
 
     está en todas partes.
 
     Los juegos construidos con HTML5 funcionan en smartphones, tablets, PCs y Smart TVs.
 
-2. Se mejoran la comercialización y la detección.
+2.  Se mejoran la comercialización y la detección.
 
     No estás limitado a promocionar tu aplicación en la tienda de aplicaciones de otra persona.
 
     En su lugar, puede anunciar y promover su juego en toda la Web, así como en otros medios, aprovechando la inherente capacidad de enlace y capacidad de compartir de la Web para llegar a nuevos clientes.
 
-3. Usted tiene control donde importa: Pagos.
+3.  Usted tiene control donde importa: Pagos.
 
     Usted no tiene que entregar más del 30% de sus ingresos a otra persona sólo porque su juego está en su ecosistema.
 
     En su lugar, cargue lo que quiera y utilice cualquier servicio de procesamiento de pagos que le guste.
 
-4. Una vez más con más control, puedes actualizar tu juego cuando quieras.
+4.  Una vez más con más control, puedes actualizar tu juego cuando quieras.
 
     No hay que esperar sin aliento para la aprobación, mientras que alguien oculto dentro de otra empresa decide si su solución de error crítico se enviará hoy o mañana.
 
-5. ¡Controla tus análisis!
+5.  ¡Controla tus análisis!
 
     En lugar de confiar en otra persona para tomar todas las decisiones sobre qué analítica necesita, puede recoger su propia o elegir la tercera parte que más le guste para recopilar información sobre sus ventas y el alcance de su juego.
 
-6. Usted consigue manejar su relación del cliente más de cerca, en su propia manera.
+6.  Usted consigue manejar su relación del cliente más de cerca, en su propia manera.
 
     No más tener comentarios de los clientes filtrados a través de los mecanismos limitados de una tienda de aplicaciones.
 
     Involucrarse con sus clientes de la manera que desee, sin un intermediario.
 
-7. Sus jugadores pueden jugar su juego en cualquier lugar, en cualquier momento.
+7.  Sus jugadores pueden jugar su juego en cualquier lugar, en cualquier momento.
 
     Debido a que la Web es omnipresente, sus clientes pueden comprobar el estado de su juego en sus teléfonos, tabletas, computadoras portátiles domésticas, sus escritorios de trabajo o cualquier otra cosa.
 

@@ -131,7 +131,7 @@ Observa que es técnicamente posible usar el elemento {{HTMLElement("slot")}} si
 
 Además, incluso si no está renderizado, el propósito del contenedor como plantilla debería ser semánticamente más claro cuando se usa el elemento {{HTMLElement("template")}}. Además, el elemento {{HTMLElement("template")}} puede tener elementos agregados directamente a él, como {{HTMLElement("td")}}, que desaparecerían al añadirse a un {{HTMLElement ("div")}}.
 
-> **Nota:**Puedes encontrar el ejemplo completo en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details)(también lo puedes[ver en vivo](https://github.com/mdn/web-components-examples/tree/master/element-details))
+> **Nota:**Puedes encontrar el ejemplo completo en [element-details ](https://github.com/mdn/web-components-examples/tree/master/element-details)(también lo puedes[ ver en vivo](https://github.com/mdn/web-components-examples/tree/master/element-details))
 
 ### Creando una plantilla con algunos elementos \<slot>
 
@@ -223,7 +223,7 @@ Ahora tomaremos el elemento **`<element-details>`** para usarlo en nuestro docum
 Observa estos puntos sobre el fragmento anterior:
 
 - El fragento tiene dos instancias de elementos **`<element-details>`** que usan el atributo {{htmlattrxref("slot")}} para referenciar los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"element-name"` y `"description"` que colocamos en el [shadow root](/es/docs/Web/API/ShadowRoot) del `<element-details>`
-- Solo el primero de esos dos elementos **`<element-details>`** hace referencia a los `"attributes"` de [slot con atributo name.](/es/docs/Web/HTML/Element/slot#named-slot)El segundo elemento `<element-details>` carece de cualquier referencia a `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot).
+- Solo el primero de esos dos elementos **`<element-details>`** hace referencia a los `"attributes"` de [slot con atributo name. ](/es/docs/Web/HTML/Element/slot#named-slot)El segundo elemento `<element-details>` carece de cualquier referencia a `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot).
 - El primer elemento `<element-details>` está referenciando los `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) usando un elemento {{HTMLElement("dl")}} con {{HTMLElement("dt")}} y {{HTMLElement("dd")}} como hijos.
 
 ### Añadamos algunos estilos

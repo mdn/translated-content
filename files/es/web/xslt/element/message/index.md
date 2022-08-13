@@ -14,7 +14,7 @@ El elemento `<xsl:message>` muestra un mensaje (en la consola JavaScript en NS) 
 ### Sintaxis
 
     <xsl:message terminate="yes" | "no" >
-     PLANTILLA
+    	PLANTILLA
     </xsl:message>
 
 ### Atributos requeridos

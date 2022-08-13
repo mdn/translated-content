@@ -18,7 +18,7 @@ El método **`toLocaleString()`** devuelve un cadena con la representación al i
 
 Los argumentos `locales` y de `options` personalizan el comportamiento de la función y permiten que las aplicaciones especifiquen el lenguaje cuyas convenciones de formato deben ser utilizadas. En las implementaciones, que ignoran los argumentos, `locales` y `options`, el locale utilizado y la forma de la cadena devuelta dependen totalmente de la implementación.
 
-Vea el [constructor](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) de [`Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat)para detalles en esos parametros y como se usan.
+Vea el [constructor](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) de [`Intl.DateTimeFormat()` ](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat)para detalles en esos parametros y como se usan.
 
 El valor por defecto para cada componente `date-time` es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month`, `day` son todas {{jsxref("undefined")}}, entonces `year`, `month`, y `day` son asumidas como `"numeric"`.
 

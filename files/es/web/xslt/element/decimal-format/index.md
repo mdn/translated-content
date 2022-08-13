@@ -14,17 +14,17 @@ El elemento `<xsl:decimal-format>` define los caracteres y los símbolos que ser
 ### Sintaxis
 
     <xsl:decimal-format
-     name=NOMBRE
-     decimal-separator=CARACTER
-     grouping-separator=CARACTER
-     infinity=TEXTO
-     minus-sign=CARACTER
-     NaN=TEXTO
-     percent=CARACTER
-     per-mille=CARACTER
-     zero-digit=CARACTER
-     digit=CARACTER
-     pattern-separator=CARACTER />
+    	name=NOMBRE
+    	decimal-separator=CARACTER
+    	grouping-separator=CARACTER
+    	infinity=TEXTO
+    	minus-sign=CARACTER
+    	NaN=TEXTO
+    	percent=CARACTER
+    	per-mille=CARACTER
+    	zero-digit=CARACTER
+    	digit=CARACTER
+    	pattern-separator=CARACTER />
 
 ### Atributos requeridos
 

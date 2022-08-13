@@ -37,7 +37,7 @@ Algunos ejemplos:
 
 ## Codificación de datos en formato base64
 
-Esto se puede hacer fácilmente desde la línea de comandos usando `uuencode,`una utilidad disponible en sistemas Linux y Mac OS X:
+Esto se puede hacer fácilmente desde la línea de comandos usando `uuencode, `una utilidad disponible en sistemas Linux y Mac OS X:
 
     uuencode -m infile remotename
 
@@ -66,9 +66,9 @@ Esta sección describe los problemas que comunmente ocurren cuando se crean o se
 - Limitaciones de longitud
   - : Aunque Firefox soporta con URIs de datos de longitud esencialmente ilimitada, los navegadores no estan obligados a apoyar cualquier longitud máxima de datos en particular. Por ejemplo, el navegador Opera 11 limita las URIs de datos cerca de` los `65000 caracteres.
 - Falta de control de errores
-  - : Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen`'base64'`, se ignoran, pero no se proporciona ningún error.
+  - : Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen` 'base64'`, se ignoran, pero no se proporciona ningún error.
 - No hay soporte para consulta de cadenas, etc.
-  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis`<url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo: data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=valEsto representa un recurso HTML cuyo contenido es: lots of text...<p><a name="bottom">bottom</a>?arg=val
+  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis` <url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo: data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=valEsto representa un recurso HTML cuyo contenido es: lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## Especificaciones
 

@@ -240,7 +240,7 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
   </tbody>
 </table>
 
-> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
 
 ## Especificaciones
 

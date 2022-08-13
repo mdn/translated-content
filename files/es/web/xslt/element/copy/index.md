@@ -14,7 +14,7 @@ El elemento `<xsl:copy>` genera una copia superficial (el nodo y cualquier nodo 
 ### Sintaxis
 
     <xsl:copy use-attribute-sets=LISTA-DE-NOMBRES>
-     PLANTILLA
+    	PLANTILLA
     </xsl:copy>
 
 ### Atributos requeridos

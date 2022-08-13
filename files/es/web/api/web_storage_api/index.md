@@ -41,7 +41,7 @@ Estos mecanismos están disponibles mediante las propiedades [`Window.sessionSto
 
 Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/web-storage-demo). La [página de inicio](http://mdn.github.io/web-storage-demo/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
-También creamos una[página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento {{event("StorageEvent")}}.
+También creamos una[ página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento {{event("StorageEvent")}}.
 
 ## Especificaciones
 
@@ -69,7 +69,7 @@ La mayoría de los navegadores de hoy en día soportan una opción de privacidad
 
 La mayoría de los navegadores han optado por una estrategia donde las API de almacenamiento siguen disponibles y aparentemente completamente funcionales, con la única gran diferencia de que todos los datos almacenados son eliminados después de cerrar el navegador. Para estos navegadores aún hay diferentes interpretaciones sobre qué debería hacerse con los datos almacenados existentes (de una sesión de navegación normal). ¿Deberían de estar disponibles para lectura cuando esté en modo privado? Entonces, hay algunos navegadores, sobre todo Safari, que han optado por una solución donde el almacenamiento está disponible, pero vacío, y tiene un cupo de 0 bytes asignado, por lo que se vuelve imposible usar esta memoria para escribir datos.
 
-Los desarrolladores deberían de estar conscientes de estas diferentes implementaciones y tenerlas en cuenta a la hora de desarrollar aplicaciones web que depende de la API de almacenamiento web. Para más información, échale un vistazo a[esta entrada de blog WHATWG](https://blog.whatwg.org/tag/localstorage) que trata específicamente con este tema.
+Los desarrolladores deberían de estar conscientes de estas diferentes implementaciones y tenerlas en cuenta a la hora de desarrollar aplicaciones web que depende de la API de almacenamiento web. Para más información, échale un vistazo a[ esta entrada de blog WHATWG](https://blog.whatwg.org/tag/localstorage) que trata específicamente con este tema.
 
 ## Ver también
 

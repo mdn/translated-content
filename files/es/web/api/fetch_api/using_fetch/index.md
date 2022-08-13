@@ -133,7 +133,7 @@ Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un só
 
 ### Enviar una petición con credenciales incluido
 
-Para producir que los navegadores envien una petición con las credenciales incluidas, incluso para una llamada de origen cruzado, añadimos`credentials: 'include'` en el el objeto `init` que se pasa al método `fetch()`.
+Para producir que los navegadores envien una petición con las credenciales incluidas, incluso para una llamada de origen cruzado, añadimos` credentials: 'include'` en el el objeto `init` que se pasa al método `fetch()`.
 
 ```js
 fetch('https://example.com', {

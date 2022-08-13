@@ -47,7 +47,7 @@ width: unset;
   - : Ver {{cssxref("&lt;length&gt;")}} para unidades disponibles.
 - `<percentage>`
   - : Especificado con el tipo {{cssxref("&lt;percentage&gt;")}} como porcentaje de la anchura del bloque contenedor. Si la anchura del bloque contenedor depende de la anchura del elemento, la presentación resultante es indefinida.
-- `border-box`{{experimental_inline}}
+- `border-box `{{experimental_inline}}
   - : Si está presente, el valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} precedente es aplicado a los límites del borde del elemento.
 - `content-box` {{experimental_inline}}
   - : Si está presente, el valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} precedente será aplicado a los límites de contenido del elemento.

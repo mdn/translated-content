@@ -377,7 +377,7 @@ The embedded worker is now nested into a new custom `document.worker` property.
 
 Los trabajadores pueden usar tiempos fuera e intervalos de la misma forma que el "hilo principal". Esto puede ser útil, por ejemplo, si quieres tener a tu hilo trabajador corriendo codigo periodicamente en lugar de sin parar.
 
-Ver [`setTimeout()`](/en/DOM/window.setTimeout "En/DOM/Window.setTimeout"), [`clearTimeout()`](/en/DOM/window.clearTimeout "En/DOM/Window.clearTimeout"), [`setInterval()`](/en/DOM/window.setInterval "En/DOM/Window.setInterval"), y [`clearInterval()`](/en/DOM/window.clearInterval "En/DOM/Window.clearInterval")para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
+Ver [`setTimeout()` ](/en/DOM/window.setTimeout "En/DOM/Window.setTimeout"), [`clearTimeout()` ](/en/DOM/window.clearTimeout "En/DOM/Window.clearTimeout"), [`setInterval()` ](/en/DOM/window.setInterval "En/DOM/Window.setInterval"), y [`clearInterval()` ](/en/DOM/window.clearInterval "En/DOM/Window.clearInterval")para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
 
 ## Terminating a worker
 
@@ -393,7 +393,7 @@ Workers may close themselves by calling their own `nsIWorkerScope.close()` metho
 
 ## Manejo de errores
 
-When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/en/DOM/event.preventDefault "En/DOM/Event.preventDefault")method.
+When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()` ](/en/DOM/event.preventDefault "En/DOM/Event.preventDefault")method.
 
 The error event has the following three fields that are of interest:
 

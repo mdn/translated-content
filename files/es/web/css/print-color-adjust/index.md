@@ -43,4 +43,4 @@ Aún no es parte de ninguna especificación aunque hay una [propuesta en la wiki
 
 - WebKit [bug 64583](https://bugs.webkit.org/show_bug.cgi?id=64583): "WIP: Añade la propiedad CSS para controlar la impresión de fondos de elementos individuales"
 - CSSWG wiki: [print-backgrounds](http://wiki.csswg.org/ideas/print-backgrounds) - una propuesta para estandarizar esta propiedad
-- Módulo Color CSS Nivel 4: la propiedad `color-adjust`una propuesta más nueva para estandarizar esta propiedad
+- Módulo Color CSS Nivel 4: la propiedad `color-adjust `una propuesta más nueva para estandarizar esta propiedad

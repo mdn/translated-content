@@ -13,7 +13,7 @@ translation_of: Web/CSS/::-moz-range-thumb
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)`CSS`**`::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
+El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS`**` ::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
 
 > **Nota:** Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
 

@@ -17,7 +17,7 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **contenteditable** e
 
 Si este atributo no se establece , el valor de default es _heredado_ de su elemento padre .
 
-Este es un atributo enumerado y no uno _booleano ._ Esto significa que el uso explicito de uno de los valores `true , false`o la cadena vacía es obligatorio y que una código como `<label contenteditable>Example Label</label>` no esta permitido . El uso correcto es `<label contenteditable="true">Example Label</label>`.
+Este es un atributo enumerado y no uno _booleano ._ Esto significa que el uso explicito de uno de los valores `true , false `o la cadena vacía es obligatorio y que una código como `<label contenteditable>Example Label</label>` no esta permitido . El uso correcto es `<label contenteditable="true">Example Label</label>`.
 
 ## Especificaciones
 

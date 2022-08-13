@@ -172,8 +172,8 @@ JavaScript distingue entre {{jsxref("null")}}, que es un valor que indica un no 
 
 JavaScript tiene un tipo booleano, con valores posibles `true` y `false` (ambos son palabras clave). Cualquier valor se puede convertir a booleano de acuerdo con las siguientes reglas:
 
-1. `false`, `0`, cadenas vacías (`""`), `NaN`, `null`, y `undefined` todos se vuelven `false.`
-2. Todos los demás valores se vuelven `true.`
+1.  `false`, `0`, cadenas vacías (`""`), `NaN`, `null`, y `undefined` todos se vuelven `false.`
+2.  Todos los demás valores se vuelven `true.`
 
 Puedes realizar esta conversión explícitamente utilizando la función `Boolean()`:
 
@@ -644,7 +644,7 @@ avg(2, 3, 4, 5); // 3.5
 
 > **Nota:** En el código anterior, la variable **args** contiene todos los valores que se pasaron a la función.
 >
-> Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro `rest` en una declaración de función, almacenará todos los argumentos _después_ de su declaración, pero no antes. _es decir, function_ _avg(_**firstValue,** _...args)_ almacenará el primer valor pasado a la función en la variable **firstValue** y los argumentos restantes en **args**. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función `avg()`toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:
+> Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro `rest` en una declaración de función, almacenará todos los argumentos _después_ de su declaración, pero no antes. _es decir, function_ _avg(_**firstValue,** _...args)_ almacenará el primer valor pasado a la función en la variable **firstValue** y los argumentos restantes en **args**. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función `avg() `toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:
 
 ```js
 function avgArray(arr) {

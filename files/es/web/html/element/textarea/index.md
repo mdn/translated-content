@@ -12,7 +12,7 @@ original_slug: Web/HTML/Elemento/textarea
 ---
 ## Resumen
 
-El **elemento** **HTML `<textarea>`**representa un control para la edición mutilínea de texto sin formato.
+El **elemento** **HTML `<textarea> `**representa un control para la edición mutilínea de texto sin formato.
 
 ## Contenido de Uso
 
@@ -54,7 +54,7 @@ Este elemento contiene [global attributes](/es/docs/HTML/Global_attributes "HTML
 - {{ htmlattrdef("placeholder") }} {{ HTMLVersionInline("5") }}
   - : Se puede añadir un indicación para el usuario que defina que se debe insertar en el control. Los retornos de carro y las nuevas líneas dentro lso marcadores de posición deben ser tratado como nuevas líneas al representar dicha indicación.
 - {{ htmlattrdef("readonly") }}
-  - : Este atributo booleano indica que el usuario no puede modificar el valor del control. Al contrario que el atributo`disable`, el atributo `readonly`no evita que el usuario haga click o seleccione el control. El valor del control read-only si que se envía con el formulario.
+  - : Este atributo booleano indica que el usuario no puede modificar el valor del control. Al contrario que el atributo` disable`, el atributo `readonly `no evita que el usuario haga click o seleccione el control. El valor del control read-only si que se envía con el formulario.
 - {{ htmlattrdef("required") }} {{ HTMLVersionInline("5") }}
   - : Este atributo indica que el usuario debe rellenar el contro con un valor antes de poder enviar el formulario.
 - {{ htmlattrdef("rows") }}

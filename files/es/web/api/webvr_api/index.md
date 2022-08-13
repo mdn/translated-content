@@ -31,10 +31,10 @@ Any VR devices attached to your computer will be returned by the {{domxref("Navi
 
 A typical (simple) WebVR app would work like so:
 
-1. {{domxref("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
-2. {{domxref("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
-3. WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
-4. Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{domxref("VRDisplay.submitFrame()")}}).
+1.  {{domxref("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
+2.  {{domxref("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
+3.  WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
+4.  Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{domxref("VRDisplay.submitFrame()")}}).
 
 In addition, WebVR 1.1 adds a number of events on the {{domxref("Window")}} object to allow JavaScript to respond to changes to the status of the display.
 

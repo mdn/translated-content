@@ -20,13 +20,13 @@ El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "fun
 
 Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto `Generator` puede ser devuelta por una [función generator](/es/docs/Web/JavaScript/Referencia/Sentencias/function*):
 
-     function* gen() {
-       yield 1;
-       yield 2;
-       yield 3;
-     }
+    	function* gen() {
+    	  yield 1;
+    	  yield 2;
+    	  yield 3;
+    	}
 
-     var g = gen(); // "Generator { }"
+    	var g = gen(); // "Generator { }"
 
 ## Métodos de instanciación
 
@@ -54,18 +54,18 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 ### Un iterador infinito
 
 ```js
- function* idMaker() {
-     var index = 0;
-     while(true)
-         yield index++;
- }
+	function* idMaker() {
+	    var index = 0;
+	    while(true)
+	        yield index++;
+	}
 
- var gen = idMaker(); // "Generator { }"
+	var gen = idMaker(); // "Generator { }"
 
- console.log(gen.next().value); // 0
- console.log(gen.next().value); // 1
- console.log(gen.next().value); // 2
- // ...
+	console.log(gen.next().value); // 0
+	console.log(gen.next().value); // 1
+	console.log(gen.next().value); // 2
+	// ...
 ```
 
 ## Objetos generadores legados
@@ -74,7 +74,7 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 
 ### Métodos de generadores legados
 
-- `Generator.prototype.next()`{{non-standard_inline}}
+- `Generator.prototype.next() `{{non-standard_inline}}
 
   Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
 
@@ -91,17 +91,17 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 ### Ejemplo de generador legado
 
 ```js
- function fibonacci() {
-   var a = yield 1;
-   yield a * 2;
- }
+	function fibonacci() {
+	  var a = yield 1;
+	  yield a * 2;
+	}
 
- var it = fibonacci();
- console.log(it);          // "Generator {  }"
- console.log(it.next());   // 1
- console.log(it.send(10)); // 20
- console.log(it.close());  // undefined
- console.log(it.next());   // throws StopIteration (as the generator is now closed)
+	var it = fibonacci();
+	console.log(it);          // "Generator {  }"
+	console.log(it.next());   // 1
+	console.log(it.send(10)); // 20
+	console.log(it.close());  // undefined
+	console.log(it.next());   // throws StopIteration (as the generator is now closed)
 
 ```
 

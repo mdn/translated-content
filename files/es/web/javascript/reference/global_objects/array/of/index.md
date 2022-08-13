@@ -32,9 +32,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 - `elementoN`
   - : Valores con los que se creará el Array en su respectivo indice.
-
 - ### Valor de retorno
-
   - : Una nueva instancia de {{jsxref("Array")}}.
 
 ## Descripción

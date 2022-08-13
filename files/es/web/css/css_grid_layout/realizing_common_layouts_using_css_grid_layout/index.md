@@ -539,34 +539,34 @@ La mejor manera de aprender a usar el diseño de la cuadrícula es continuar con
 - Para inspirarte mira [_Layout Labs_ de Jen Simmons](http://labs.jensimmons.com/), ella ha estado creando diseños basados en una variedad de fuentes.
 - ara obtener patrones de diseño comunes adicionales, consulta _[Grid by Example](http://gridbyexample.com)_, donde hay muchos ejemplos> de diseño de cuadrícula y también algunos patrones de interfaz de usuario más grandes y diseños de página completa.
 
-1. [**CSS**](/es/docs/Web/CSS)
-2. [**CSS Reference**](/es/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
-4. **Guías**
+1.  [**CSS**](/es/docs/Web/CSS)
+2.  [**CSS Reference**](/es/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guías**
 
-    1. [Conceptos básicos del posicionamiento con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relación con otros métodos de posicionamiento](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Áreas de una plantilla de rejilla](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Posicionamiento usando líneas de rejilla con nombres](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Posicionamiento automático en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Alineación de cajas en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout y Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1.  [Conceptos básicos del posicionamiento con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relación con otros métodos de posicionamiento](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Áreas de una plantilla de rejilla](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Posicionamiento usando líneas de rejilla con nombres](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Posicionamiento automático en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Alineación de cajas en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout y Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout y Mejora Progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Layouts comunes utilizando CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5. **Properties**
+5.  **Properties**
 
-    1. [grid](/es/docs/Web/CSS/grid)
-    2. [grid-area](/es/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/es/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
+    1.  [grid](/es/docs/Web/CSS/grid)
+    2.  [grid-area](/es/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/es/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/es/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/es/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/es/docs/Web/CSS/grid-gap)
     11. [grid-row](/es/docs/Web/CSS/grid-row)
     12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
@@ -577,14 +577,14 @@ La mejor manera de aprender a usar el diseño de la cuadrícula es continuar con
     17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
-6. **Glossary**
+6.  **Glossary**
 
-    1. [Rejilla](/es/docs/Glossary/Grid)
-    2. [Líneas de rejilla](/es/docs/Glossary/Grid_lines)
-    3. [Pistas de rejilla](/es/docs/Glossary/Grid_tracks)
-    4. [Celda de rejilla](/es/docs/Glossary/Grid_cell)
-    5. [Áreas de rejilla](/es/docs/Glossary/Grid_areas)
-    6. [Canaletas](/es/docs/Glossary/Gutters)
-    7. [Ejes de rejilla](/es/docs/Glossary/Grid_Axis)
-    8. [Fila de rejilla](/es/docs/Glossary/Grid_rows)
-    9. [Columna de rejilla](/es/docs/Glossary/Grid_column)
+    1.  [Rejilla](/es/docs/Glossary/Grid)
+    2.  [Líneas de rejilla](/es/docs/Glossary/Grid_lines)
+    3.  [Pistas de rejilla](/es/docs/Glossary/Grid_tracks)
+    4.  [Celda de rejilla](/es/docs/Glossary/Grid_cell)
+    5.  [Áreas de rejilla](/es/docs/Glossary/Grid_areas)
+    6.  [Canaletas](/es/docs/Glossary/Gutters)
+    7.  [Ejes de rejilla](/es/docs/Glossary/Grid_Axis)
+    8.  [Fila de rejilla](/es/docs/Glossary/Grid_rows)
+    9.  [Columna de rejilla](/es/docs/Glossary/Grid_column)

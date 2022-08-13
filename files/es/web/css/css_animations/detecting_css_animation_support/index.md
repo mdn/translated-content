@@ -41,7 +41,7 @@ Luego verificamos si la propiedad de CSS {{ cssxref("animation-name") }} esta es
 
 Si el navegador no soporta animaciones sin prefijos, y `animation` sigue siendo `false`, iteramos todos los posibles prefijos, ya que todos los principales navegadores estan anteponiendo esta propiedad y cambiando su nombre a `AnimationName` en su lugar.
 
-Una vez que el código ha terminado de ejecutarse, el valor de _`animation`\_será _`false` _si el soporte de animacion CSS no esta disponible, de otro modo será _`true`_. Si es _`true` _tanto el nombre de las propiedad de `animation` y el el prefijo keyframe serán los correctos. Así que si utilizas un nuevo Firefox, la propiedad será `MozAnimation` y el prefijo keyframe será `-moz-`, mientras en Chrome será `WebkitAnimation` y `-webkit-`. Tenga en cuenta que los navegadores no facilitan el cambio entre \_camelCase_ (Capitalizacion medial) y la _hyphen-ation_ (separación).
+Una vez que el código ha terminado de ejecutarse, el valor de _`animation `\_será _`false` _si el soporte de animacion CSS no esta disponible, de otro modo será _`true`_. Si es _`true` _tanto el nombre de las propiedad de `animation` y el el prefijo keyframe serán los correctos. Así que si utilizas un nuevo Firefox, la propiedad será `MozAnimation` y el prefijo keyframe será `-moz-`, mientras en Chrome será `WebkitAnimation` y `-webkit-`. Tenga en cuenta que los navegadores no facilitan el cambio entre \_camelCase_ (Capitalizacion medial) y la _hyphen-ation_ (separación).
 
 ## Animaciones utilizando la sintaxis correcta para diferentes navegadores
 

@@ -44,7 +44,7 @@ alert(x); // resultado 2
 
 Este obtiene el resultado 2 ya que la sentencia `var x` dentro del grupo block tiene el mismo alcance que la sentencia `var x` antes del mismo. En C o Java, el código equivalente tendría como resultado 1.
 
-#### Con `let`y [const](/es/docs/Web/JavaScript/Referencia/Sentencias/const)
+#### Con `let `y [const](/es/docs/Web/JavaScript/Referencia/Sentencias/const)
 
 Por el contrario, las variables declaradas con `let` y `const` tienen alcance de bloque.
 
@@ -64,7 +64,7 @@ Lo mismo para `const`:
     }
     console.log(c); // logs 1 y no lanza SyntaxError...
 
-Tenga en cuenta que la variable `const c = 2 con alcance de bloque,`**_no_ lanza** un `SyntaxError:`El identificador 'c' ya ha sido declarado. Esto es porque **se puede declarar de forma única** dentro del bloque, sin interferir con la otra que tiene un alcance global.
+Tenga en cuenta que la variable `const c = 2 con alcance de bloque, `**_no_ lanza** un `SyntaxError: `El identificador 'c' ya ha sido declarado. Esto es porque **se puede declarar de forma única** dentro del bloque, sin interferir con la otra que tiene un alcance global.
 
 #### Con `function`
 

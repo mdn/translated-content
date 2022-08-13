@@ -28,13 +28,13 @@ Vas a probarlo: pega estas tres líneas de CSS en un nuevo archivo en tu editor 
 
 Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos) y [HTML básico](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) para averiguar qué necesitas hacer primero.)
 
-1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
+1.  Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2. Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
+2.  Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
 
 ![Un logo de Mozilla y algunos párrafos. El texto del párrafo ha sido estilizado en rojo por nuestro css.](https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png)Si tu texto del párrafo ahora es rojo, ¡felicitaciones, ya has escrito tu primer CSS de forma exitosa!
 
@@ -99,14 +99,14 @@ Existen muchos más selectores para explorar, y podrás encontrar una lista más
 
 Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo `style.css` para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.
 
-1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
+1.  Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
 
     ```html
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css">
     ```
 
-2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
-3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
+2.  Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
+3.  Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
 
     ```css
     html {
@@ -117,7 +117,7 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
 
     > **Nota:** se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
 
-4. Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
+4.  Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
 
     ```css
     h1 {

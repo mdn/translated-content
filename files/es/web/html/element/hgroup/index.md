@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/hgroup
 ---
 ## Resumen
 
-El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document")como el encabezado de la sección implícita o explícita a la que pertenece.
+El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento ](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document")como el encabezado de la sección implícita o explícita a la que pertenece.
 
 Su _text_o para el algoritmo de estructura es el texto del primer elemento de encabezado HTML de más alto rango (ip.ej., el primer {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }} o {{ HTMLElement("h6") }} con el número más pequeño entre sus descendientes) y el \_rango_ es el rango del mismo elemento de encabezado HTML.
 
@@ -34,7 +34,7 @@ Este elemento no tiene más atributos que los [atributos globales](/en/HTML/Glob
 
 ### Interfaz DOM
 
-Este elemento implementa la interfaz`HTMLElement`.
+Este elemento implementa la interfaz` HTMLElement`.
 
 ### Ejemplos
 

@@ -28,7 +28,7 @@ El protocolo HTTP es un protocolo ampliable, es decir se puede añadir "vocabula
   - : Hay un tipo de URIs que permiten integrar directamente el recurso al que señalan. Los URIs de datos, son muy ventajosos, pero también tienen algunas desventajas.
 - [URLs de recursos](/es/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs)
 
-  - : Los recursos URL, prefijados con `resource:` en vez de `http`son usados por Firefox y algunas extensiones del navegador para cargar recursos internamente, pero parte de la información también está disponible para los sitios a los que se conecta el navegador.
+  - : Los recursos URL, prefijados con `resource:` en vez de `http `son usados por Firefox y algunas extensiones del navegador para cargar recursos internamente, pero parte de la información también está disponible para los sitios a los que se conecta el navegador.
 
 - Separación de la identidad y la localización de un recurso: la cabecera Alt-Svc
   - : En la mayoría de los casos, la identidad y localización de un recurso Web, son compartidos, esto se puede modificar con la cabecera de HTTP: {{HTTPHeader("Alt-Svc")}}.

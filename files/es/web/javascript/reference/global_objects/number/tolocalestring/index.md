@@ -60,7 +60,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("Global_Objects/RangeError", "RangeError")}} cuando `toLocaleString`es llamado sin argumentos.
+Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("Global_Objects/RangeError", "RangeError")}} cuando `toLocaleString `es llamado sin argumentos.
 
 Para verificar que funciona todos los navegadores, incluyendo aquellos que soportan ECMA-262, anterior a ES5.1, se puede verificar por las funcionalidades especificadas en ECMA-402 que requieren soportar opciones regionales para `Number.prototype.toLocaleString` directamente:
 

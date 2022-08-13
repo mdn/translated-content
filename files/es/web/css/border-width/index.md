@@ -25,7 +25,7 @@ La propiedad **`border-width`** define el ancho del borde.
 ### Valores
 
 - **\<border-width-value>**
-  - : `thin | medium | thick |`{{ Cssxref("length", "largo") }}
+  - : `thin | medium | thick | `{{ Cssxref("length", "largo") }}
 - thin
   - : Un borde fino.
 - medium

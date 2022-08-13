@@ -59,28 +59,28 @@ Si solo se especifica un valor, se entenderá que es la posición horizontal con
 ## Ejemplos
 
     .exampleone {
-     background-image: url("logo.png");
-     background-position: top center;
+    	background-image: url("logo.png");
+    	background-position: top center;
     }
 
     .exampletwo {
-     background-image: url("logo.png");
-     background-position: 25% 75%;
+    	background-image: url("logo.png");
+    	background-position: 25% 75%;
     }
 
     .examplethree {
-     background-image: url("logo.png");
-     background-position: 2cm bottom;
+    	background-image: url("logo.png");
+    	background-position: 2cm bottom;
     }
 
     .examplefour {
-     background-image: url("logo.png");
-     background-position: center 10%;
+    	background-image: url("logo.png");
+    	background-position: center 10%;
     }
 
     .examplefive {
-     background-image: url("logo.png");
-     background-position: 2cm 50%;
+    	background-image: url("logo.png");
+    	background-position: 2cm 50%;
     }
 
 ## Especificaciones

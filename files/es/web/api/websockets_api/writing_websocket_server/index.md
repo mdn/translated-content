@@ -135,10 +135,10 @@ Esta respuesta es fácil de construir, pero puede ser un poco díficil de entend
 
 Debes:
 
-1. Obtener el valor de "_Sec-WebSocket-Key"_ sin espacios iniciales ni finales de el encabezado de la solicitud
-2. Concatenarlo con "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-3. Calcular el código SHA-1 y Base64
-4. Escribe el valor _Sec-WebSocket-Accept_ en el encabezado como parte de la respuesta HTTP.
+1.  Obtener el valor de "_Sec-WebSocket-Key"_ sin espacios iniciales ni finales de el encabezado de la solicitud
+2.  Concatenarlo con "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+3.  Calcular el código SHA-1 y Base64
+4.  Escribe el valor _Sec-WebSocket-Accept_ en el encabezado como parte de la respuesta HTTP.
 
 ```cpp
 if (new Regex("^GET").IsMatch(data)) {
