@@ -98,8 +98,8 @@ followed by more inline text.
 
 > **Примечание:** Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are **not** inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.
 
-> **Примечание:** Atomic inline boxes cannot be split into several lines in an inline formatting context.```html
->
+> **Примечание:** Atomic inline boxes cannot be split into several lines in an inline formatting context.
+> ```html
 > <style>
 >   span {
 >     display:inline; /* default value*/
