@@ -27,13 +27,17 @@ Los valores de tipo `<length>` pueden ser interpolados para permitir animaciones
 #### Longitudes relativas a la fuente
 
 - `em`
-  - : Esta unidad representa el tamaño calculado de fuente ({{Cssxref("font-size")}}) del elemento. Si se usa dentro de la propiedad {{Cssxref("font-size")}}, representa el tamaño de fuente _heredado_ por el elemento.> **Nota:** Esta unidad se usa por lo general para crear interfaces escalables, que mantengan el [ritmo vertical de la página](http://24ways.org/2006/compose-to-a-vertical-rhythm), aun cuando el usuario cambie el tamaño de las fuentes. Las propiedades CSS {{cssxref("line-height")}}, {{cssxref("font-size")}}, {{cssxref("margin-bottom")}} y {{cssxref("margin-top")}} generalemente tienen valores expresados en **em**.
+  - : Esta unidad representa el tamaño calculado de fuente ({{Cssxref("font-size")}}) del elemento. Si se usa dentro de la propiedad {{Cssxref("font-size")}}, representa el tamaño de fuente _heredado_ por el elemento.
+
+  > **Nota:** Esta unidad se usa por lo general para crear interfaces escalables, que mantengan el [ritmo vertical de la página](http://24ways.org/2006/compose-to-a-vertical-rhythm), aun cuando el usuario cambie el tamaño de las fuentes. Las propiedades CSS {{cssxref("line-height")}}, {{cssxref("font-size")}}, {{cssxref("margin-bottom")}} y {{cssxref("margin-top")}} generalemente tienen valores expresados en **em**.
 - `ex`
-  - : Esta unidad representa la [altura de la x](https://es.wikipedia.org/wiki/Altura_de_la_x) de la fuente ({{Cssxref("font")}}) del elemento. En fuentes que incluyen la letra 'x', es generalmente la altura de letras minúsculas en la fuente; `1ex ≈ 0.5em `en muchas fuentes.
+  - : Esta unidad representa la [altura de la x](https://es.wikipedia.org/wiki/Altura_de_la_x) de la fuente ({{Cssxref("font")}}) del elemento. En fuentes que incluyen la letra 'x', es generalmente la altura de letras minúsculas en la fuente; `1ex ≈ 0.5em`en muchas fuentes.
 - `ch`
   - : Esta unidad representa la anchura, o más precisamente, la medida de avance, del glifo '0' (cero, de caracter Unicode U+0030) en la fuente ({{Cssxref("font")}}) del elemento.
 - `rem`
-  - : Esta unidad representa el tamaño ({{Cssxref("font-size")}}) del elemento raíz (p.ej. el tamaño de fuente del elemento {{HTMLElement("html")}}). Cuando se aplica a {{Cssxref("font-size")}} del elemento raíz, representa su valor inicial.> **Nota:** Esta unidad es práctica para crear interfaces perfectamente escalables. Si no es soportada por los navegadores, se puede recurrir a unidades **em**, aunque estas son ligeramente más complejas.
+  - : Esta unidad representa el tamaño ({{Cssxref("font-size")}}) del elemento raíz (p.ej. el tamaño de fuente del elemento {{HTMLElement("html")}}). Cuando se aplica a {{Cssxref("font-size")}} del elemento raíz, representa su valor inicial.
+
+  > **Nota:** Esta unidad es práctica para crear interfaces perfectamente escalables. Si no es soportada por los navegadores, se puede recurrir a unidades **em**, aunque estas son ligeramente más complejas.
 
 #### Longitudes de porcentaje del viewport
 

@@ -9,7 +9,7 @@ translation_of: Web/API/FileReader
 
 El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.
 
-El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto [`DataTransfer `](/es/docs/Web/API/DataTransfer)`producido por una operación de arrastre (drag and drop) o `desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.
+El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto [`DataTransfer`](/es/docs/Web/API/DataTransfer)`producido por una operación de arrastre (drag and drop) o`desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.
 
 ## Constructor
 
@@ -51,7 +51,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 - {{domxref("FileReader.abort()")}}
   - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result `contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result`contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.
 - {{domxref("FileReader.readAsDataURL()")}}

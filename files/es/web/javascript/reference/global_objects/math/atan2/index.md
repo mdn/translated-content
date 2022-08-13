@@ -25,7 +25,7 @@ La función **`Math.atan2()`** retorna la arcotangente del cociente de los argum
 
 El método `Math.atan2()` retorna un valor númerico entre -π y π representando el ángulo theta de un punto `(x, y)`. Este es un ángulo en sentido antihorario, medido en radianes, entre el eje positivo X, y el punto (`x, y)`. Tenga en cuenta que esta función recibe la coordenada Y como primer argumento y X como segundo.
 
-A la función` Math.atan2()` se le pasan los argumentos `x` y `y` por separado, y a `Math.atan()` se le pasa la relación de los dos argumentos.
+A la función`Math.atan2()` se le pasan los argumentos `x` y `y` por separado, y a `Math.atan()` se le pasa la relación de los dos argumentos.
 
 Debido a que `atan2()` es un método estatico de `Math`, siempre se debe usar `Math.atan2()`, en vez de usarlo como un método creado por el objeto `Math` (`Math` no es un contructor).
 

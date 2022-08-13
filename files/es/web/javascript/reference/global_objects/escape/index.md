@@ -29,7 +29,7 @@ Una nueva cadena en la que ciertos caracteres han sido sustituidos.
 
 ## Descripción
 
-La función `escape `es una propiedad del _objeto global._ SLos caracteres especiales son codificados a excepción de: @\*\_+-./
+La función `escape`es una propiedad del _objeto global._ SLos caracteres especiales son codificados a excepción de: @\*\_+-./
 
 La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuencia de escape de dos digitos: %xx. Para caracteres un valor superior, se usa el fomato de cuatro digitos: %**u**xxxx.
 

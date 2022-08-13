@@ -8,7 +8,7 @@ translation_of: Web/CSS/clear
 ---
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/CSS) **`clear `**especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
+La propiedad [CSS](/es/docs/CSS) **`clear`**especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
 
 Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/CSS/box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/CSS/margin_collapsing) no ocurra.
 
@@ -16,7 +16,7 @@ Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/CSS/box_
 
 Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Nota:** **Nota:** Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.```css
+> **Nota:** Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.```css
 > #container::after {
 > content: "";
 > display: block;

@@ -49,7 +49,7 @@ Este ejemplo inhabilita/desactiva el editor de entradas para este campo. Esto po
 A diferencia de Internet Explorer, la implementación de Firefox de `ime-mode` permite aplicar esta propiedad a los campos de edición de clave de usuario (passwords). Sin embargo, no es la mejor experiencia para el usuario y los campos de clave de usuario deberían desactivar el IME. Los usuarios pueden corregir el comportamiento inapropiado de los sitios que no sigan esta recomendación poniendo la siguiente regla CSS en su archivo de reglas CSS:
 
     input[type=password] {
-    	ime-mode: auto !important;
+     ime-mode: auto !important;
     }
 
 > > **Nota:** En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.

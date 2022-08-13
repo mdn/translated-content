@@ -8,9 +8,9 @@ original_slug: Web/HTTP/Sesión
 
 En los protocolos basados en el modelo cliente-servidor, como es el caso del HTTP, una sesión consta de tres fases:
 
-1.  El cliente establece una conexión TCP (o la conexión correspondiente si la capa de transporte corresponde a otro protocolo).
-2.  El cliente manda su petición, y espera por la respuesta.
-3.  El servidor procesa la petición, y responde con un código de estado y los datos correspondientes.
+1. El cliente establece una conexión TCP (o la conexión correspondiente si la capa de transporte corresponde a otro protocolo).
+2. El cliente manda su petición, y espera por la respuesta.
+3. El servidor procesa la petición, y responde con un código de estado y los datos correspondientes.
 
 A partir del protocolo HTTP/1.1 la conexión, no se cierra al finalizar la tercera fase, y el cliente puede continuar realizando peticiones. Esto significa que la segunda y tercera fase, pueden repetirse cualquier número de veces.
 
@@ -26,13 +26,13 @@ En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puer
 
 Una vez la conexión está establecida, el cliente, puede mandar una petición de datos (normalmente es un navegador, u otra cosa, como una 'araña' ( o 'crawler' en inglés), un sistema de indexación automático de páginas web). La petición de datos de un cliente HTTP, consiste en directivas de texto, separadas mediante CRLF (retorno de carro, y cambio de linea), y se divide en tres partes:
 
-1.  La primera parte, consiste en una linea, que contiene un método, seguido de sus parámetros:
+1. La primera parte, consiste en una linea, que contiene un método, seguido de sus parámetros:
 
     - la dirección del documento pedido: por ejemplo su URL completa, sin indicar el protocolo o el nombre del dominio.
     - la versión del protocolo HTTP
 
-2.  La siguiente parte, está formada por un bloque de líneas consecutivas, que representan las cabeceras de la petición HTTP, y dan información al servidor, sobre que tipo de datos es apropiado (como qué lenguaje usar, o el tipo MIME a usar), u otros datos que modifiquen su comportamiento (como que no envié la respuesta si ya está cacheada). Estas cabeceras HTTP forman un bloque que acaba con una línea en blanco.
-3.  La parte final es un bloque de datos opcional, que puede contener más datos para ser usados por el método POST.
+2. La siguiente parte, está formada por un bloque de líneas consecutivas, que representan las cabeceras de la petición HTTP, y dan información al servidor, sobre que tipo de datos es apropiado (como qué lenguaje usar, o el tipo MIME a usar), u otros datos que modifiquen su comportamiento (como que no envié la respuesta si ya está cacheada). Estas cabeceras HTTP forman un bloque que acaba con una línea en blanco.
+3. La parte final es un bloque de datos opcional, que puede contener más datos para ser usados por el método POST.
 
 ### Ejemplo de peticiones
 
@@ -64,9 +64,9 @@ HTTP define un conjunto de [métodos de peticiones](/es/docs/Web/HTTP/Methods) e
 
 Después de que el agente de usuario envía su petición, el servidor web lo procesa, y a continuación responde. De forma similar a la petición del servidor, la respuesta del servidor está formada por directivas de texto, separadas por el carácter CRLF, y divida en tres bloques.
 
-1.  La primera línea, es la línea de estado, que consiste en una confirmación del la versión de HTTP utilizado, y seguido por el estado de la petición (y una breve descripción de este, en formato de texto, que pueda ser leído por personas).
-2.  Las líneas siguientes representan cabeceras de HTTP concretas, dando al cliente información sobre los datos enviado( por ejemplo, su tipo, su tamaño, algoritmos de compresión utilizados, y sugerencias para el cacheo). Al igual que las cabeceras HTTP de la petición de un cliente, las cabeceras HTTP del servidor, finalizan con una línea vacía.
-3.  El bloque final, es el bloque que puede contener opcionalmente los datos.
+1. La primera línea, es la línea de estado, que consiste en una confirmación del la versión de HTTP utilizado, y seguido por el estado de la petición (y una breve descripción de este, en formato de texto, que pueda ser leído por personas).
+2. Las líneas siguientes representan cabeceras de HTTP concretas, dando al cliente información sobre los datos enviado( por ejemplo, su tipo, su tamaño, algoritmos de compresión utilizados, y sugerencias para el cacheo). Al igual que las cabeceras HTTP de la petición de un cliente, las cabeceras HTTP del servidor, finalizan con una línea vacía.
+3. El bloque final, es el bloque que puede contener opcionalmente los datos.
 
 ### Ejemplos de respuestas
 

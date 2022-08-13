@@ -19,7 +19,7 @@ Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afir
 
 {{AvailableInWorkers}}
 
-> **Nota:** **Nota:** El método `console.assert()` se implementa de diferente manera en Node.js que el mismo método disponible en los navegadores.En los navegadores, llamando `console.assert()` con una falsa afirmación hará que el `message` se imprima por consola sin interrumpir la ejecución del código posterior. En Node.js, sin embargo, una falsa afirmación lanzará un `AssertionError`.
+> **Nota:** El método `console.assert()` se implementa de diferente manera en Node.js que el mismo método disponible en los navegadores.En los navegadores, llamando `console.assert()` con una falsa afirmación hará que el `message` se imprima por consola sin interrumpir la ejecución del código posterior. En Node.js, sin embargo, una falsa afirmación lanzará un `AssertionError`.
 
 ## Sintaxis
 

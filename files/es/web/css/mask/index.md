@@ -14,7 +14,7 @@ original_slug: Web/CSS/-webkit-mask
 
 ## Resumen
 
-La propiedad `-webkit-mask` es una manera corta de establecer, en un único sitio en una hoja de estilos, los valores individuales de máscara. `-webkit-mask `puede ser utilizado para fijar los valores en una o más de las siguiente propiedades: {{Cssxref("-webkit-mask-image")}}, {{Cssxref("-webkit-mask-repeat")}}, {{Cssxref("-webkit-mask-attachment")}}, {{Cssxref("-webkit-mask-position")}}, {{Cssxref("-webkit-mask-origin")}}, y {{Cssxref("-webkit-mask-clip")}}.
+La propiedad `-webkit-mask` es una manera corta de establecer, en un único sitio en una hoja de estilos, los valores individuales de máscara. `-webkit-mask`puede ser utilizado para fijar los valores en una o más de las siguiente propiedades: {{Cssxref("-webkit-mask-image")}}, {{Cssxref("-webkit-mask-repeat")}}, {{Cssxref("-webkit-mask-attachment")}}, {{Cssxref("-webkit-mask-position")}}, {{Cssxref("-webkit-mask-origin")}}, y {{Cssxref("-webkit-mask-clip")}}.
 
 {{cssinfo}}
 

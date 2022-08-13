@@ -48,7 +48,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
 - `Uint8Array.prototype.constructor`
   - : Retorna la función que crea una instancia del prototype. Éste es el constructor por defecto de `Uint8Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
-  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array. `Fijado en el tiempo de construcción y es de **sólo lectura**.
+  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array.`Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
   - : Retorna el tamaño (en bytes) del array `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}

@@ -111,7 +111,7 @@ Sí, ¡es posible! JavaScript retornará a la instancia `default` en caso de no 
         console.log('1');
     }
 
-Al estar el `case 1:` a continuación de `default`, y al no haber un `break `de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+Al estar el `case 1:` a continuación de `default`, y al no haber un `break`de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
 
 ### Metodos para casos con múltiple criterio
 

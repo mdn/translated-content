@@ -39,11 +39,11 @@ Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HT
 
 #### Extensiones de Mozilla
 
-- `-moz-scrollbars-none `{{ obsolete_inline() }}
+- `-moz-scrollbars-none`{{ obsolete_inline() }}
   - : Usar `overflow:hidden`.
-- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+- `-moz-scrollbars-horizontal`{{ Deprecated_inline() }}
   - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
-- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+- `-moz-scrollbars-vertical`{{ Deprecated_inline() }}
   - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
 - \-moz-hidden-unscrollable {{ non-standard_inline() }}
   - : Es usada principalmente para uso interno y por temas. Deshabilita el desplazamiento en elementos XML root y `<html>`, `<body>` usando las flechas del teclado o la rueda del ratón.

@@ -222,7 +222,7 @@ original_slug: Web/JavaScript/Language_Resources
 
 **ES.Next** es un nombre dinámico que hace referencia a cualquiera que sea la próxima versión al momento de escribir. Las características de ES.Next se llaman más correctamente propuestas, porque, por definición, la especificación aún no se ha finalizado.
 
-Vea la entrada en [Wikipedia ECMAScript ](https://en.wikipedia.org/wiki/ECMAScript)para mas información de la historia de ECMAScript.
+Vea la entrada en [Wikipedia ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)para mas información de la historia de ECMAScript.
 
 Puede participar o simplemente rastrear el trabajo en las próximas revisiones de la Especificación del lenguaje ECMAScript, cuyo nombre en código es "Harmony", y la Especificación API de internacionalización de ECMAScript a través de la wiki pública y la [lista de discusión](https://mail.mozilla.org/listinfo/es-discuss) enlazada desde [ecmascript.org](http://www.ecmascript.org/community.php).
 
@@ -231,7 +231,7 @@ Puede participar o simplemente rastrear el trabajo en las próximas revisiones d
 - [SpiderMonkey](/es/docs/SpiderMonkey "SpiderMonkey") - el motor de JavaScript usado en varios productos de Mozilla, incluyendo Firefox;
 - [Rhino](/es/docs/Rhino "Rhino") - El motor de JavaScript escrito en Java;
 - [Tamarin](/es/docs/Tamarin "Tamarin") - La maquina virtual ActionScript (usada en Adobe® Flash® Player);
-- [Otras implementacion ](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)(Wikipedia).
+- [Otras implementacion](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)(Wikipedia).
 
 ## Vea también
 

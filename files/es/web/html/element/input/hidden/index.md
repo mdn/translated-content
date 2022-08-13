@@ -46,9 +46,9 @@ Como se menciono anteriormente, las hidden inputs pueden ser utilizadas donde se
 
 Uno de los usos más comunes para los hidden inputs es mantener un seguimiento de que registros de la base de datos necesitan actualizarse cuando un formulario de actualización es remitido. Un flujo de trabajo tipico se ve como:
 
-1.  El usuario decide editar algún contenido sobre el cual tiene control, como una entrada de blog o la entrada de un producto. Comienza cuando se presiona el botón de editar.
-2.  El contenido ha ser editado es tomado de la base de datos y cargados en un formulario HTML para permitir al usuario hacer cambios.
-3.  Después de editar, el usuario remite el formulario y la información actualizada es envíada de vuelta al servidor para ser actualizada en el servidor.
+1. El usuario decide editar algún contenido sobre el cual tiene control, como una entrada de blog o la entrada de un producto. Comienza cuando se presiona el botón de editar.
+2. El contenido ha ser editado es tomado de la base de datos y cargados en un formulario HTML para permitir al usuario hacer cambios.
+3. Después de editar, el usuario remite el formulario y la información actualizada es envíada de vuelta al servidor para ser actualizada en el servidor.
 
 La idea es que durante el paso 2, el ID del registro que se actualiza se mantenga en un hidden input. Cuando se envía el formulario en el paso 3, el ID se envía automáticamente al servidor con el contenido del registro. El ID permite que el componente de servidor del sitio sepa exactamente qué registro necesita ser actualizado con los datos enviados.
 

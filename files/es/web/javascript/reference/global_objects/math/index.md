@@ -111,7 +111,7 @@ A diferencia de los demás objetos globales, el objeto `Math` no se puede editar
   - : Devuelve la tangente de un número.
 - {{jsxref("Global_Objects/Math/tanh", "Math.tanh(x)")}}
   - : Devuelve la tangente hiperbólica de un número.
--       Math.toSource() {{non-standard_inline}}
+- Math.toSource() {{non-standard_inline}}
   - : Devuelve la cadena "`Math`".
 - {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}}
   - : Devuelve la parte entera del número x, la eliminación de los dígitos fraccionarios.

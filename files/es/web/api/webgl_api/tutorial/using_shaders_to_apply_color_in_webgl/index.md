@@ -66,7 +66,7 @@ Según vayamos tomando el color interpolado para cada pixel, nosotros simplement
 
 ```html
     <script id="shader-fs" type="x-shader/x-fragment">
-    	varying lowp vec4 vColor;
+     varying lowp vec4 vColor;
 
       void main(void) {
         gl_FragColor = vColor;

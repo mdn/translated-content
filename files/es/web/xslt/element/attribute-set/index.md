@@ -14,7 +14,7 @@ El elemento `<xsl:attribute-set>` genera un conjunto con nombre de atributos, el
 ### Sintaxi
 
     <xsl:attribute-set name=NOMBRE use-attribute-sets=LISTA-DE-NOMBRES>
-    	<xsl:attribute>
+     <xsl:attribute>
     </xsl:attribute-set>
 
 ### Atributos requeridos

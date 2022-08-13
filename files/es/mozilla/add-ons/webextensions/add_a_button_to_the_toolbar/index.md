@@ -17,7 +17,7 @@ Con las APIs de WebExtension, este tipo de botón es se llaman "browser actions"
 
 ## Un simple botón
 
-En esta sección vamos a crear una extension que agrega un botón a la barra de herramientas. Cuando el usuario de click en el botón, vamos abrir [https://developer.mozilla.org ](https://developer.mozilla.org)en una nueva pestaña.
+En esta sección vamos a crear una extension que agrega un botón a la barra de herramientas. Cuando el usuario de click en el botón, vamos abrir [https://developer.mozilla.org](https://developer.mozilla.org)en una nueva pestaña.
 
 Primero, crear una nueva carpeta "botón", y crea un archivo con el nombre de "manifest.json" con el siguiente contenido:
 

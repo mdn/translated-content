@@ -13,7 +13,7 @@ translation_of: Web/CSS/::-moz-range-progress
 
 ## Resumen
 
-El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)[CSS ](/es/docs/Web/CSS)**`::-moz-range-progress`** representa la parte del "camino" (la ranura sobre la que desliza) de un elemento {{HTMLElement("input")}} con `type="range"`, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)[CSS](/es/docs/Web/CSS)**`::-moz-range-progress`** representa la parte del "camino" (la ranura sobre la que desliza) de un elemento {{HTMLElement("input")}} con `type="range"`, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".
 
 > **Nota:** Si usamos `::-moz-range-progress` con cualquier otra cosa que no sea `<input type="range">` ni seleccionaremos nada ni conseguiremos ningún efecto.
 

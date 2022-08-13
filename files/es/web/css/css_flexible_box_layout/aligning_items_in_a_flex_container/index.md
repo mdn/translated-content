@@ -68,9 +68,9 @@ En el ejemplo en vivo a continuación, el valor de `align-items` is `stretch`. P
 
 ### Alineando un item individual con align-self
 
-La propiedad align-items establece la propiedad align-self en todos los elementos flexibles como un grupo. Esto significa que puede declarar explícitamente la propiedad `align-self `para apuntar a un solo elemento. La propiedad` align-self `acepta todos los mismos valores que `align-items`, además del valor `auto`, que restablecerá el valor a lo que esté definido en el contenedor flex o flexible..
+La propiedad align-items establece la propiedad align-self en todos los elementos flexibles como un grupo. Esto significa que puede declarar explícitamente la propiedad `align-self`para apuntar a un solo elemento. La propiedad`align-self`acepta todos los mismos valores que `align-items`, además del valor `auto`, que restablecerá el valor a lo que esté definido en el contenedor flex o flexible..
 
-En este siguiente ejemplo en vivo, el contenedor flex tiene el elemento de alineación:` flex-start`, lo que significa que todos los elementos están alineados con el inicio del eje transversal. En este caso se dirige al primer elemento utilizando un selector `first-child`, y se configuró con la propiedad: `strecth`; otro elemento ha sido alineado, utilizando su clase `selected `y dando valor a la propiedad `align-self: center`. Puede cambiar el valor de a`lign-items` o cambiar los valores de `align-self` en los elementos individuales para ver cómo funciona esto.
+En este siguiente ejemplo en vivo, el contenedor flex tiene el elemento de alineación:`flex-start`, lo que significa que todos los elementos están alineados con el inicio del eje transversal. En este caso se dirige al primer elemento utilizando un selector `first-child`, y se configuró con la propiedad: `strecth`; otro elemento ha sido alineado, utilizando su clase `selected`y dando valor a la propiedad `align-self: center`. Puede cambiar el valor de a`lign-items` o cambiar los valores de `align-self` en los elementos individuales para ver cómo funciona esto.
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 
@@ -84,7 +84,7 @@ Si cambiamos nuestra `flex-direction` a columna, `align-items` y `align-self` va
 
 ![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](https://mdn.mozillademos.org/files/15631/align5.png)
 
-Puede probarlo con el siguiente ejemplo, que tiene un contenedor flexible, con `flex-direction: column `, y que de lo contrario seria exactamente igual al ejemplo anterior. .
+Puede probarlo con el siguiente ejemplo, que tiene un contenedor flexible, con `flex-direction: column`, y que de lo contrario seria exactamente igual al ejemplo anterior. .
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
 
@@ -122,7 +122,7 @@ Revise la [documentacion para `justify-content` en MDN](/es/docs/Web/CSS/justify
 
 Ahora que hemos visto como funciona la alineacion en el eje transversal, podemos echar una mirada al eje principal. Aquí solo tendremos una propiedad disponible disponible — `justify-content`. Esto se debe a que solo podemos trabajar con los items como grupos en el eje principal. Con `justify-content` controlamos que sucede con el espacion disponible, en caso de que haya más espacio del que se necesita para mostrar los items
 
-En nuestro ejemplo inicial con `display: flex` en el contenedor, los items se muestran como una fila y todos se alinean al inicio del contenedor. Esto se debe a que el valor inicial de `justify-content `es `flex-star`t. Cualquier espacio disponible se coloca al final de los elementos.
+En nuestro ejemplo inicial con `display: flex` en el contenedor, los items se muestran como una fila y todos se alinean al inicio del contenedor. Esto se debe a que el valor inicial de `justify-content`es `flex-star`t. Cualquier espacio disponible se coloca al final de los elementos.
 
 ![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](https://mdn.mozillademos.org/files/15632/align6.png)
 

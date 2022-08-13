@@ -23,4 +23,4 @@ Firefox 3 ofrece una serie de mejoras sobre el [Modelo de Objetos del Documento 
 
 - [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
 - [Mejoras CSS en Firefox 3](es/Mejoras_CSS_en_Firefox_3)
-- [DOM](es/DOM) 
+- [DOM](es/DOM)

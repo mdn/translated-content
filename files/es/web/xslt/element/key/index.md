@@ -14,7 +14,7 @@ El elemento `<xsl:key>` declara una llave con nombre la cual puede ser usada en 
 ### Sintaxis
 
     <xsl:key name=NOMBRE match=EXPRESIÓN
-    	use=EXPRESIÓN />
+     use=EXPRESIÓN />
 
 ### Atributos requeridos
 

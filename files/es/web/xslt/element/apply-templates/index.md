@@ -14,8 +14,8 @@ El elemento `<xsl:apply-templates>` selecciona un conjunto de nodos del document
 ### Sintaxis
 
     <xsl:apply-templates select=EXPRESION mode=NOMBRE>
-    	<xsl:with-param> [opcional]
-    	<xsl:sort> [opcional]
+     <xsl:with-param> [opcional]
+     <xsl:sort> [opcional]
     </xsl:apply-templates>
 
 ### Atributos requeridos

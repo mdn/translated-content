@@ -39,7 +39,7 @@ copy.setTime(birthday.getTime());
 
 ### Ejemplo: Medir el tiempo de ejecución
 
-Restando dos llamadas `getTime() `subsiguientes en objetos {{jsxref("Global_Objects/Date", "Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.
+Restando dos llamadas `getTime()`subsiguientes en objetos {{jsxref("Global_Objects/Date", "Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.
 
 ```js
 var end, start;

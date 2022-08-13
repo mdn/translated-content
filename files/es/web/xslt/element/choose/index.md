@@ -13,8 +13,8 @@ El elemento `<xsl:choose>` define una elección entre un número de alternativas
 ### Sintaxis
 
     <xsl:choose>
-    	<xsl:when>
-    	<xsl:otherwise> [opcional]
+     <xsl:when>
+     <xsl:otherwise> [opcional]
     </<xsl:choose>
 
 ### Atributos necesarios

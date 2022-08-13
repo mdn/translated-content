@@ -414,10 +414,10 @@ If you want to avoid trouble with legacy browsers, there are two ways to do so: 
 
 The features we plan to use are the following (ordered from the riskiest to the safest):
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (This is not DOM but modern JavaScript)
-4.  {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (This is not DOM but modern JavaScript)
+4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
 
 Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). This is important because `Array` objects support the [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 

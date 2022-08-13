@@ -22,7 +22,7 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 
 ### HTML
 
-- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:`URL ahora son compatibles sin `<meta charset="utf-8"> `la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
+- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:`URL ahora son compatibles sin `<meta charset="utf-8">`la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
 
 #### Removido
 

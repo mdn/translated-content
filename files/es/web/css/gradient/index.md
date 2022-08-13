@@ -77,7 +77,7 @@ Hay tres tipos de gradientes de color:
 
 ## Interpolación
 
-Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent ](/es/docs/Web/CSS/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
+Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent](/es/docs/Web/CSS/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
 
 ## Especificación
 

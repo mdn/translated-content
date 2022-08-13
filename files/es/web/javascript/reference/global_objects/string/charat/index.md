@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 
 ## Resumen
 
-El método **`charAt() `**`de`**` `**{{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
+El método **`charAt()`**`de`**``**{{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
 
 ## Sintaxis
 

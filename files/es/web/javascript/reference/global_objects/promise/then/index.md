@@ -31,12 +31,12 @@ Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funcio
 Retorna un `Promise` el cual es determinado por las funciones input:
 
 - Si alCumplir o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) rechazado, `then` retorna un `Promise` rechazado.
-- Si alCumplir o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise `resuelto.
+- Si alCumplir o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise`resuelto.
 
 - alCumplir {{optional_inline}}
   - : Una [Función](es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa` se cumple. Esta función tiene un argumento, el `valor de` cumplimiento. Si no es una función, se reemplaza internamente con una función de "Identidad" (devuelve el argumento recibido).
 - `enRechazo` {{optional_inline}}
-  - : Una [Función](es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa `es rechazada. Esta función tiene un argumento, la `razón` de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).
+  - : Una [Función](es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa`es rechazada. Esta función tiene un argumento, la `razón` de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).
 
 ### Valor de retorno
 

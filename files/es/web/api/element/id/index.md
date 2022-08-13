@@ -15,7 +15,7 @@ La propiedad **`Element.id`** representa el identificador del elemento, reflejan
 
 debe ser un único documento, y con frecuencia es utilizado para recuperar el elemento usando {{domxref("document.getElementById", "getElementById")}}. Otros usos comunes de `id` incluyen la utilización de elementos [ID como un selector](/es/docs/Web/CSS/ID_selectors "Web/CSS/ID_selectors") cuando se está estilando el documento con [CSS](/es/docs/Web/CSS "CSS").
 
-> **Nota:** los identificadores distinguen mayúsculas y minúsculas, pero se debe evitar la creación de IDs que difieran solamente en la capitalization (ver [diferenciación de mayúsculas y minúsculas en nombres y destacados ](/es/docs/Case_Sensitivity_in_class_and_id_Names "Case_Sensitivity_in_class_and_id_Names")).
+> **Nota:** los identificadores distinguen mayúsculas y minúsculas, pero se debe evitar la creación de IDs que difieran solamente en la capitalization (ver [diferenciación de mayúsculas y minúsculas en nombres y destacados](/es/docs/Case_Sensitivity_in_class_and_id_Names "Case_Sensitivity_in_class_and_id_Names")).
 
 ## Síntasix
 
@@ -38,4 +38,4 @@ debe ser un único documento, y con frecuencia es utilizado para recuperar el el
 
 ## Ver también
 
-- La [**id** ](/es/docs/Web/HTML/Global_attributes/id)del atributo global DOM.
+- La [**id**](/es/docs/Web/HTML/Global_attributes/id)del atributo global DOM.

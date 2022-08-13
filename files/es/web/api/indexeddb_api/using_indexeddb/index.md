@@ -25,11 +25,11 @@ Para la documentación de referencia sobre la API de IndexedDB, vea el artículo
 
 El patrón básico que indexedDB propone es:
 
-1.  Abrir una base de datos.
-2.  Crear un objeto de almacenamiento en la base de datos.
-3.  Iniciar una transacción y hacer una petición para hacer alguna operación de la base de datos, tal como añadir o recuperar datos.
-4.  Espere a que se complete la operación por la escucha de la clase correcta de eventos DOM .
-5.  Hacer algo con el resultado (El cual puede ser encontrado en el objeto de la petición).
+1. Abrir una base de datos.
+2. Crear un objeto de almacenamiento en la base de datos.
+3. Iniciar una transacción y hacer una petición para hacer alguna operación de la base de datos, tal como añadir o recuperar datos.
+4. Espere a que se complete la operación por la escucha de la clase correcta de eventos DOM .
+5. Hacer algo con el resultado (El cual puede ser encontrado en el objeto de la petición).
 
 Con esos grandes rasgos en mente, seremos más concretos.
 
@@ -74,7 +74,7 @@ La solicitud de apertura no abre la base de datos o inicia la transacción de in
 
 El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento `onupgradeneeded` de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en [Actualizando la versión de la base de datos](#Updating_the_version_of_the_database).
 
-> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded `no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:```js
+> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded`no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // Esto no se hace, la versión será redondeada a 2
 >
 > ```
@@ -217,13 +217,13 @@ Como se indicó previamente, `onupgradeneeded` es el único lugar donde se puede
 
 Los almacenes de datos son creados con una llamada a `createObjectStore()`. El método toma como parámetros el nombre del almacén y un objeto. A pesar de que el segundo parámetro es opcional, es muy importante, porque permite definir propiedades opcionales importantes y refinar el tipo de almacén que se desea crear. En este caso, se pregunta por un almacén llamado "customers" y se define la clave, que es la propiedad que indica que un objeto en el almacén es único. La propiedad en este ejemplo es "ssn" (Social Security Number) ya que los números de seguridad social está garantizado que sea único. "ssn" debe estar presente en cada objeto que se guarda al almacén.
 
-También se solicitó crear un índice llamado "name" que se fija en la propiedad `name `de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
+También se solicitó crear un índice llamado "name" que se fija en la propiedad `name`de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
 
 Ahora se pueden obtener los clientes almacenados usando su `ssn` directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección [El uso de un índice](#El_uso_de_un_índice)
 
 ### El uso de un generador de claves
 
-Indicar la bandera `autoIncrement `cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.
+Indicar la bandera `autoIncrement`cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.
 
 Con el generador de claves, la clave será generada automáticamente a medida que se agreguen valores al almacén. El número actual de un generador de claves siempre se establece en 1 cuando se creal el almacén por primera vez. Básicamente la nueva clave autogenerada es incrementada en 1 basada en la llave anterior. El numero actual para un generador de claves nunca disminuye, salvo como resultado de operaciones de base de datos que sean revertidos, por ejemplo, cuando la transacción de base de datos es abortada. Por lo tanto borrar un registro o incluso borrar todos los registros de un almacén nunca afecta al generador de claves
 
@@ -345,7 +345,7 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 
 See how this works? Since there's only one object store, you can avoid passing a list of object stores you need in your transaction and just pass the name as a string. Also, you're only reading from the database, so you don't need a `"readwrite"` transaction. Calling `transaction()` with no mode specified gives you a `"readonly"` transaction. Another subtlety here is that you don't actually save the request object to a variable. Since the DOM event has the request as its target you can use the event to get to the `result` property.
 
-> **Nota:** **Note**: You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:\* When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
+> **Nota:** You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:\* When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
 >
 > - Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for [_transactions_ in the Basic Concepts article](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
@@ -400,7 +400,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The` openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+The`openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
 
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 
@@ -419,7 +419,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-> **Nota:** Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). these aren't part of the IndexedDB standard, so may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); }; `There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
+> **Nota:** Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). these aren't part of the IndexedDB standard, so may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };`There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
 
 ### El uso de un índice
 

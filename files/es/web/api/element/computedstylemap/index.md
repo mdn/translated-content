@@ -63,15 +63,15 @@ const allComputedStyles = myElement.computedStyleMap();
 
 // iteramos a través del mapa de todas las propiedades y valores, añadiendo un <dt> y <dd> para cada mapa
 for (const [prop, val] of allComputedStyles) {
-	// propiedades
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+ // propiedades
+ const cssProperty = document.createElement('dt');
+ cssProperty.appendChild(document.createTextNode(prop));
+ stylesList.appendChild(cssProperty);
 
-	// valores
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+ // valores
+ const cssValue = document.createElement('dd');
+ cssValue.appendChild(document.createTextNode(val));
+ stylesList.appendChild(cssValue);
 }
 ```
 

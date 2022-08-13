@@ -26,8 +26,8 @@ La estructura del documento HTML es muy simple, porque todo el juego se visualiz
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+     * { padding: 0; margin: 0; }
+     canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -35,7 +35,7 @@ La estructura del documento HTML es muy simple, porque todo el juego se visualiz
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+ // JavaScript code goes here
 </script>
 
 </body>

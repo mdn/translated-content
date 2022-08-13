@@ -100,7 +100,7 @@ console.log(o.f()); // logs 37
 
 Esto demuestra que sólo importa que la función fue invocada del elemento `f` de `o`.
 
-Asimismo, el enlace `this` sólo se ve afectado por la referencia del miembro más inmediata. En el siguiente ejemplo, cuando invocamos a la función, lo llamamos como metodo `g` del objeto `o.b`. Esta vez durante la ejecución, `this `dentro de la función se referirá a `o.b`. El hecho de que el objeto es en sí mismo un elemento de `o` no tiene ninguna consecuencia, la referencia más inmediata es todo lo que importa.
+Asimismo, el enlace `this` sólo se ve afectado por la referencia del miembro más inmediata. En el siguiente ejemplo, cuando invocamos a la función, lo llamamos como metodo `g` del objeto `o.b`. Esta vez durante la ejecución, `this`dentro de la función se referirá a `o.b`. El hecho de que el objeto es en sí mismo un elemento de `o` no tiene ninguna consecuencia, la referencia más inmediata es todo lo que importa.
 
 ```js
 o.b = {g: independent, prop: 42};
@@ -120,7 +120,7 @@ p.b = 4;
 console.log(p.f()); // 5
 ```
 
-En este ejemplo, el objeto asignado a la variable `p` no tiene su propia propiedad `f`, esto lo hereda de su prototipo. Pero no importa que la búsqueda de `f` eventualmente encuentre un elemento con ese nombre en `o`; la búsqueda comenzó como una referencia a `p.f`, asi `this `dentro de la funcion toma el valor del objeto referido como `p`. Es decir, desde que `f` es llamado como método de `p`, su `this` refiere a `p`. Esto es una interesante característica de la herencia de prototipo de JavaScript.
+En este ejemplo, el objeto asignado a la variable `p` no tiene su propia propiedad `f`, esto lo hereda de su prototipo. Pero no importa que la búsqueda de `f` eventualmente encuentre un elemento con ese nombre en `o`; la búsqueda comenzó como una referencia a `p.f`, asi `this`dentro de la funcion toma el valor del objeto referido como `p`. Es decir, desde que `f` es llamado como método de `p`, su `this` refiere a `p`. Esto es una interesante característica de la herencia de prototipo de JavaScript.
 
 #### ... o como un getter o setter
 

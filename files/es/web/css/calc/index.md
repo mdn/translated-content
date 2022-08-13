@@ -69,7 +69,7 @@ Los operandos en la expresión pueden ser valores tanto positivos como negativos
 
 ### Entradas de formulario que se ajustan automáticamente al ancho de su contenedor
 
-Otro caso de uso para` calc()` es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.
+Otro caso de uso para`calc()` es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.
 
 Echémosle un vistazo al CSS:
 

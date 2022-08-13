@@ -107,7 +107,7 @@ function toggleFullScreen() {
 }
 ```
 
-En este código, primero se observa si el atributo `fullscreenElement` de {{ domxref("document") }} (comprobando si tiene prefijo `moz`,` ms`, o `webkit`). Si es `null`, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.
+En este código, primero se observa si el atributo `fullscreenElement` de {{ domxref("document") }} (comprobando si tiene prefijo `moz`,`ms`, o `webkit`). Si es `null`, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.
 
 Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`), llamamos a la función {{ domxref("document.exitFullscreen()") }}.
 

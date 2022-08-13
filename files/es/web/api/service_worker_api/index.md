@@ -37,9 +37,9 @@ Un service worker se registra primero mediante el método {{domxref("ServiceWork
 
 En este punto, su service worker observará el siguiente ciclo de vida:
 
-1.  Descarga
-2.  Instalación
-3.  Activación
+1. Descarga
+2. Instalación
+3. Activación
 
 El service worker se descaga inmediatamente cuando un usuario accede por primera vez a un sitio controlado por el mismo.
 

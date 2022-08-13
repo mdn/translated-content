@@ -88,7 +88,7 @@ Si eres un fan de IRC, puedes ponerte en contacto:
 
 #### Vulnerabilidades de seguridad
 
-Si descubre una vulnerabilidad de segurida en un complemento, incluso si no está hospedado en un sitio de Mozilla, permítanos saberlo y trabajaremos con el desarrollador para corregir el problema. Por favor, infórmelos [confidencialmente ](http://www.mozilla.org/projects/security/security-bugs-policy.html)en [Bugzilla ](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All)o enviando un correo a <amo-admins@mozilla.org>.
+Si descubre una vulnerabilidad de segurida en un complemento, incluso si no está hospedado en un sitio de Mozilla, permítanos saberlo y trabajaremos con el desarrollador para corregir el problema. Por favor, infórmelos [confidencialmente](http://www.mozilla.org/projects/security/security-bugs-policy.html)en [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All)o enviando un correo a <amo-admins@mozilla.org>.
 
 #### Errores en addons.mozilla.org (AMO)
 

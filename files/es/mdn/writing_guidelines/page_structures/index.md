@@ -48,25 +48,25 @@ git remote -v
 
 Ahora, siempre que desees actualizar tu bifurcación, lo puedes hacer mediante:
 
-1.  Asegúrate de que estas en la rama `master`:
+1. Asegúrate de que estas en la rama `master`:
 
     ```bash
     git checkout master
     ```
 
-2.  obtén el contenido actualizado del repositorio utilizando lo siguiente:
+2. obtén el contenido actualizado del repositorio utilizando lo siguiente:
 
     ```bash
     git fetch upstream
     ```
 
-3.  rebasa el contenido de tu `master` con el contenido del repositorio principal:
+3. rebasa el contenido de tu `master` con el contenido del repositorio principal:
 
     ```bash
     git rebase upstream/master
     ```
 
-4.  empuja estas actualizaciones a tu bifurcación remota usando lo siguiente:
+4. empuja estas actualizaciones a tu bifurcación remota usando lo siguiente:
 
     ```bash
     git push
@@ -76,9 +76,9 @@ Ahora, siempre que desees actualizar tu bifurcación, lo puedes hacer mediante:
 
 A continuación, ve a tu bifurcación remota (estará en `https://github.com/tu-nombre-de-usuario/browser-compat-data`) y crea una nueva rama para almacenar tus cambios para esta adición de datos. Esto lo puedes hacer mediante:
 
-1.  Un clic en el botón "Rama: Master".
-2.  Ingresa un nuevo nombre para la rama en el campo de texto "Buscar o crear una rama...".
-3.  Presiona el botón resultante "Crear rama _nombre-de-rama_ desde Master".
+1. Un clic en el botón "Rama: Master".
+2. Ingresa un nuevo nombre para la rama en el campo de texto "Buscar o crear una rama...".
+3. Presiona el botón resultante "Crear rama _nombre-de-rama_ desde Master".
 
 Por ejemplo, si quisieras agregar datos para la API WebVR, crearías una rama llamada algo así como "webvr".
 

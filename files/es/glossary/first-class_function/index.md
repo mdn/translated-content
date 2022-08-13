@@ -92,8 +92,8 @@ Usamos parétesis dobre `()()` para invocar también a la función retornada.
 
 ### Conocimiento general
 
-1.  {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia
-2.  [MDN Web Docs Glossary](/es/docs/Glossary)
+1. {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia
+2. [MDN Web Docs Glossary](/es/docs/Glossary)
 
     - {{glossary("Callback function")}}
     - {{glossary("Function")}}

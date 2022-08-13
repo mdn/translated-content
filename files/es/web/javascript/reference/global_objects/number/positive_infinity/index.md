@@ -39,7 +39,7 @@ Podrías utilizar la propiedad `Number.POSITIVE_INFINITY` para indicar una condi
 
 ## Ejemplo
 
-En el siguiente ejemplo, a la variable `bigNumber `se le asigna un valor mucho mayor al valor máximo. Cuando la sentencia `if` es ejecutada, `bigNumber `tiene el valor "`Infinity`", por lo cual a `bigNumber` le es asignado un valor mas manejable antes de continuar.
+En el siguiente ejemplo, a la variable `bigNumber`se le asigna un valor mucho mayor al valor máximo. Cuando la sentencia `if` es ejecutada, `bigNumber`tiene el valor "`Infinity`", por lo cual a `bigNumber` le es asignado un valor mas manejable antes de continuar.
 
 ```js
 var bigNumber = Number.MAX_VALUE * 2;

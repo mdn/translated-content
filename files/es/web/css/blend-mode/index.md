@@ -282,7 +282,6 @@ Un modo de mezcla (blend mode) es un método para calcular el color final de un 
 
 {{ EmbedLiveSample('luminosity', "300", "300") }}
 
-
 ## Interpolación de modos de mezcla
 
 Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrirá abruptamente.

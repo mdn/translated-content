@@ -5,9 +5,9 @@ translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
 El evento canplay es lanzado cuando el elemento [\<video>](/es/docs/Web/HTML/Elemento/video) o [\<audio>](/es/docs/Web/HTML/Elemento/Audio) puede ser iniciado o fue iniciado satisfactoriamente.
 
-Lo que puede evitar que el evento `canplay `se dispare puede ser por alguna de estás razones:
+Lo que puede evitar que el evento `canplay`se dispare puede ser por alguna de estás razones:
 
-- El ruta del `audio` o `video `están mal especificadas.
+- El ruta del `audio` o `video`están mal especificadas.
 - El navegador no soporta la etiqueta.``
 
 ```html
@@ -32,7 +32,7 @@ Lo que puede evitar que el evento `canplay `se dispare puede ser por alguna de e
 </html>
 ```
 
-Intente especificar mal la ruta del `src `y comprobrará que el evento no funciona.
+Intente especificar mal la ruta del `src`y comprobrará que el evento no funciona.
 
 ## General info
 

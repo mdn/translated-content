@@ -39,7 +39,7 @@ Esto genera una confusión para usuarios que solo usen el teclado cuando el orde
 
 Si a un elemento se le puede hacer click con un dispositivo apuntador, como un ratón, entonces también debería enfocable utilizando el teclado, y el usuario debería ser capaz de hacer algo al interactuar con este.
 
-A un elemento se le puede hacer click si tiene in manejador de evento` onclick` definido. Se puede hacer enfocable al añadir un atributo-valor `tabindex=0`. Se puede hacer que se opere con un teclado al definir un manejador de evento `onkeydown`; en la mayoría de los casos, la acción tomada por el manejador de eventos debería ser la misma para los dos tipos de eventos
+A un elemento se le puede hacer click si tiene in manejador de evento`onclick` definido. Se puede hacer enfocable al añadir un atributo-valor `tabindex=0`. Se puede hacer que se opere con un teclado al definir un manejador de evento `onkeydown`; en la mayoría de los casos, la acción tomada por el manejador de eventos debería ser la misma para los dos tipos de eventos
 
 ### Ver también
 
@@ -58,7 +58,7 @@ Si el usuario puede interactuar con un elemento utilizando el tacto o un disposi
 
 ## Los elementos interactivos deben ser enfocables
 
-Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o con un dispositivo apuntador) entonces debería ser enfocable utilizando el teclado. Puede hacerse enfocable al añadirle el atributo-valor` tabindex=0`. Eso añadirá el elemento a la lista de elementos que pueden ser enfocados al presionar la tecla <kbd>Tab</kbd>, en la secuencia en que dichos elementos se encuentran definidos en el documento HTML.
+Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o con un dispositivo apuntador) entonces debería ser enfocable utilizando el teclado. Puede hacerse enfocable al añadirle el atributo-valor`tabindex=0`. Eso añadirá el elemento a la lista de elementos que pueden ser enfocados al presionar la tecla <kbd>Tab</kbd>, en la secuencia en que dichos elementos se encuentran definidos en el documento HTML.
 
 ### Ver también
 

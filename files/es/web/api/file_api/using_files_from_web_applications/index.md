@@ -23,15 +23,15 @@ Seleccionar solo un fichero usando la API File es sencillo:
 
     <input type="file" id="input" onchange="handleFiles(this.files)">
 
-Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList `](/en/DOM/FileList "en/DOM/FileList")el cual a su vez contiene un objeto [`File`](/en/DOM/File "en/DOM/File") que representa el fichero elegido por el usuario.
+Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList`](/en/DOM/FileList "en/DOM/FileList")el cual a su vez contiene un objeto [`File`](/en/DOM/File "en/DOM/File") que representa el fichero elegido por el usuario.
 
-Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple `en el elemento `input:`
+Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple`en el elemento `input:`
 
     <input type="file" id="input" multiple="true" onchange="handleFiles(this.files)">
 
-En este caso, la lista de ficheros pasada a la función `handleFiles() `contiene un objeto [`File `](/en/DOM/File "en/DOM/File")por cada fichero seleccionado por el usuario.
+En este caso, la lista de ficheros pasada a la función `handleFiles()`contiene un objeto [`File`](/en/DOM/File "en/DOM/File")por cada fichero seleccionado por el usuario.
 
-Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click() `del elemento {{ HTMLElement("input") }}.
+Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()`del elemento {{ HTMLElement("input") }}.
 
 Como aparece en este HTML:
 
@@ -65,15 +65,15 @@ Si tu campo input ha sido creado usando una libreria JavaScript como [jQuery](ht
       /* now you can work with the file list */
     }
 
-Nota: en este caso, la función `handleFiles() `mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
+Nota: en este caso, la función `handleFiles()`mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
 
 Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/en/DOM/File "en/DOM/File") DOM, esto incluye los ficheros locales del usuario del dispositivo.
 
-Cuando tienes un objeto[` File`](/en/DOM/File "en/DOM/File") te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
+Cuando tienes un objeto[`File`](/en/DOM/File "en/DOM/File") te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
 
     var blobURL = window.createBlobURL(fileObj);
 
-El blob URL es un string que identifica el objeto[` File`](/en/DOM/File "en/DOM/File"). Cada vez que se llama a {{ domxref("window.createBlobURL()") }}, un único blob URL se crea. Cada vez que esto pasa debe de ser liberado. Cuando el documento se cierra, se libera automáticamente, pero si tu página lo usa dinámicamente deberás liberarlos explicitamente llamando a {{ domxref("window.revokeBlobURL()") }}:
+El blob URL es un string que identifica el objeto[`File`](/en/DOM/File "en/DOM/File"). Cada vez que se llama a {{ domxref("window.createBlobURL()") }}, un único blob URL se crea. Cada vez que esto pasa debe de ser liberado. Cuando el documento se cierra, se libera automáticamente, pero si tu página lo usa dinámicamente deberás liberarlos explicitamente llamando a {{ domxref("window.revokeBlobURL()") }}:
 
     window.revokeBlobURL(blobURL);
 
@@ -168,7 +168,7 @@ Digamos que usted esta desarrollando el próximo gran sitio web para compartir f
 
 Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo `type` de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.\*"). Para cada archivo que sea una imagen, creamos un nuevo elemento `img`. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.
 
-Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo` file` a cada imagen especificando el [`Fichero`](/en/DOM/File "en/DOM/File") para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
+Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo`file` a cada imagen especificando el [`Fichero`](/en/DOM/File "en/DOM/File") para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
 
 A continuación establecemos el [`FileReader`](/en/DOM/FileReader "en/DOM/FileReader") para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento `img`. Después de crear el nuevo objeto `FileReader`, configuramos su función `onload`, luego llamamos a `readAsDataURL()` para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a `data:` URL, el cuál es pasado al callback `onload`. Nuestra implementación de esta rutina simplemente establece el atributo `src` del elemento `img` cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.
 
@@ -218,16 +218,16 @@ Esto comienza buscando la URL del {{ HTMLElement("div") }} con la ID "fileList".
 
 Si el objeto {{ domxref("FileList") }} pasado a `handleFiles()` es `null`, simplemente establecemos el bloque inner HTML para mostrar "¡No se han seleccionado archivos!". En caso contrario, comenzamos a construir nuestra lista de archivos como sigue:
 
-1.  Un nuevo elemento de lista desordenada ({{ HTMLElement("ul") }} es creado.
-2.  El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
-3.  Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
+1. Un nuevo elemento de lista desordenada ({{ HTMLElement("ul") }} es creado.
+2. El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
+3. Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
 
-    1.  Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
-    2.  Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
-    3.  Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
-    4.  Se establece el alto de la imagen en 60 pixels.
-    5.  Se configura el controlador para el evento load para liberar el blob URL, puesto que ya no es necesario una vez que la imagen ha sido cargada. Esto se hace llamando al método {{ domxref("window.revokeBlobURL()") }}, pasando la cadena en el blob URL como se ha especificado para `img.src`.
-    6.  Se añade el nuevo elemento de la lista a la lista.
+    1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
+    2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
+    3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
+    4. Se establece el alto de la imagen en 60 pixels.
+    5. Se configura el controlador para el evento load para liberar el blob URL, puesto que ya no es necesario una vez que la imagen ha sido cargada. Esto se hace llamando al método {{ domxref("window.revokeBlobURL()") }}, pasando la cadena en el blob URL como se ha especificado para `img.src`.
+    6. Se añade el nuevo elemento de la lista a la lista.
 
 ## Ejemplo: Subiendo un archivo seleccionado por el usuario
 
@@ -245,7 +245,7 @@ Continuando con el código que contruye las miniaturas en el ejemplo anterior, h
       }
     }
 
-La segunda línea crea un array, llamado` imgs`, de todos los elementos en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista, of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de `FileUpload` por cada una. Subiendo el correspondiente archivo por cada uno de ellos.
+La segunda línea crea un array, llamado`imgs`, de todos los elementos en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista, of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de `FileUpload` por cada una. Subiendo el correspondiente archivo por cada uno de ellos.
 
 ### Manipulando el proceso de carga de un archivo
 
@@ -279,11 +279,11 @@ La función `FileUpload()` mostrada arriba crea un throbber, el cual es usado pa
 
 Antes de subir los datos de hecho, se toman varias medidas preparatorias:
 
-1.  El listener del progreso de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con una nueva información de porcentaje, por lo que a medida que progresa la carga, el throbber será actualizado en base a la última información.
-2.  El evento "load" de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con el 100% como la información de progreso (para asegurar que el indicador de progreso realmente alcanza el 100%, en caso de las peculiaridades de granularidad durante el proceso). Entoces se elimina el throbber, puesto que ya no es necesario. Esto causa que el throbber desaparezca una vez la carga está completa.
-3.  La petición para cargar la imagen se inicia llamando al método `XMLHttpRequest`'s `open()` para comenzar a generar una petición de tipo POST.
-4.  El MIME type para la carga se establece llamando a la función `deXMLHttpRequest` `overrideMimeType()`. En este caso, estamos usando un MIME type genérico; usted puede o no puede necesitar establecer MIME type en absoluto, dependiendo de su necesidad.
-5.  Finalmente, se llama a la función `sendAsBinary()` del `XMLHttpRequest` es llamada para subir el contenido del archivo. _TEsto es necesario ser revisado, actualmete se está usando la rutina sincronizada en desuso getAsBinary() para extraer los datos del archivo.._
+1. El listener del progreso de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con una nueva información de porcentaje, por lo que a medida que progresa la carga, el throbber será actualizado en base a la última información.
+2. El evento "load" de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con el 100% como la información de progreso (para asegurar que el indicador de progreso realmente alcanza el 100%, en caso de las peculiaridades de granularidad durante el proceso). Entoces se elimina el throbber, puesto que ya no es necesario. Esto causa que el throbber desaparezca una vez la carga está completa.
+3. La petición para cargar la imagen se inicia llamando al método `XMLHttpRequest`'s `open()` para comenzar a generar una petición de tipo POST.
+4. El MIME type para la carga se establece llamando a la función `deXMLHttpRequest` `overrideMimeType()`. En este caso, estamos usando un MIME type genérico; usted puede o no puede necesitar establecer MIME type en absoluto, dependiendo de su necesidad.
+5. Finalmente, se llama a la función `sendAsBinary()` del `XMLHttpRequest` es llamada para subir el contenido del archivo. _TEsto es necesario ser revisado, actualmete se está usando la rutina sincronizada en desuso getAsBinary() para extraer los datos del archivo.._
 
 ### Manipulación del proceso de carga para un archivo, de forma asíncrona
 

@@ -28,4 +28,4 @@ Actualmente se encuentra en desarrollo [XHTML 2](http://www.w3.org/TR/xhtml2/), 
 
 Categorías
 
-Interwiki enlaces a otros idiomas 
+Interwiki enlaces a otros idiomas

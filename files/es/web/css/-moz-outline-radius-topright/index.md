@@ -12,7 +12,7 @@ translation_of: Web/CSS/-moz-outline-radius-topright
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-outline-radius-topright` establece, en aplicaciones Mozilla, el redondeado de la esquina superior derecha de un contorno.
+La propiedad [CSS](/es/docs/Web/CSS)`-moz-outline-radius-topright` establece, en aplicaciones Mozilla, el redondeado de la esquina superior derecha de un contorno.
 
 {{cssinfo}}
 

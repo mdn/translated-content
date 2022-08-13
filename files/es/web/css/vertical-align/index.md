@@ -59,7 +59,7 @@ Negative values are allowed.
 
 ```css
 img {
-	vertical-align: bottom;
+ vertical-align: bottom;
 }
 ```
 

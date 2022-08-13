@@ -17,7 +17,7 @@ admi{{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
 
-El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS `**`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)`CSS`**`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
 
 ## Especificaciones
 

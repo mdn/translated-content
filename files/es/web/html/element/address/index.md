@@ -12,7 +12,7 @@ original_slug: Web/HTML/Elemento/address
 
 El **elemento HTML `<address>`** aporta información de contacto para su {{HTMLElement("article")}} más cercano o ancestro {{HTMLElement("body")}}; en el último caso lo aplica a todo el documento.
 
-> **Nota:** **Notas de uso:\*** Para representar una dirección arbitraria, una que no esté relacionada con la información de contacto, utiliza un elemento {{HTMLElement("p")}} en lugar del elemento `<address>`.
+> **Nota:** Para representar una dirección arbitraria, una que no esté relacionada con la información de contacto, utiliza un elemento {{HTMLElement("p")}} en lugar del elemento `<address>`.
 >
 > - Este elemento no debe contener más información que la información de contacto, como una fecha de publicación (que pertenece al elemento {{HTMLElement("time")}}).
 > - Normalmente un elemento `<address>` puede ser colocado dentro del elemento {{HTMLElement("footer")}} de la sección actual, si lo hay.

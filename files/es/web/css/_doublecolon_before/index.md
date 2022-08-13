@@ -32,7 +32,7 @@ a::before {
 
 ### Añadiendo comillas
 
-Un ejemplo simple del uso del pseudoelemento `::before` es el proporcionar comillas. Aquí, usamos `::before `y `{{Cssxref("::after")}}` para insertar caracteres de comillas.
+Un ejemplo simple del uso del pseudoelemento `::before` es el proporcionar comillas. Aquí, usamos `::before`y `{{Cssxref("::after")}}` para insertar caracteres de comillas.
 
 #### HTML
 

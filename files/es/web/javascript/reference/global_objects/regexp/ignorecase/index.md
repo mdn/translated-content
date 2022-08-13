@@ -12,7 +12,7 @@ La propiedad **`ignoreCase`** indica si la expresión regular está usando la ba
 
 ## Descripción
 
-El valor de `ignoreCase es un `{{jsxref("Boolean")}} y `true si la bandera "i" fue usada. De otra manera es false. La bandera "i" indica que el se debe ignorar la capitalización al tratar de encontrar los equivalentes en un texto.`
+El valor de `ignoreCase es un`{{jsxref("Boolean")}} y `true si la bandera "i" fue usada. De otra manera es false. La bandera "i" indica que el se debe ignorar la capitalización al tratar de encontrar los equivalentes en un texto.`
 
 No se puede cambiar esta propiedad directamente.
 

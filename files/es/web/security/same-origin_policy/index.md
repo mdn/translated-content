@@ -53,7 +53,7 @@ Una página puede cambiar su propio origen con algunas limitaciones. Un script p
 
 Tras su ejecución, la página puede pasar la comprobación de origen con `http://company.com/dir/page.html` (asumiendo que `http://company.com/dir/page.html` asigna su `document.domain` a "`company.com`" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, `company.com` **no** podría asignar `document.domain` a `othercompany.com` ya que no es un superdominio de `company.com`.
 
-El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo `document.domain = document.domain` causa que el número del puerto sea sobrescrito con `null`. Por lo tanto **no se puede** hacer que` company.com:8080` hable con `company.com` solo asignando `document.domain = "company.com"` en el primero. Tiene que ser asignado en ambos para que los números de puerto sean `null`.
+El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo `document.domain = document.domain` causa que el número del puerto sea sobrescrito con `null`. Por lo tanto **no se puede** hacer que`company.com:8080` hable con `company.com` solo asignando `document.domain = "company.com"` en el primero. Tiene que ser asignado en ambos para que los números de puerto sean `null`.
 
 > **Nota:** Cuando se use `document.domain` para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar `document.domain` al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.
 
@@ -142,7 +142,7 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 ## Ver también
 
-- [Política ](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")
+- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)[Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")
 - [Política Same-Origin en W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 
 ## Información de Documento Original

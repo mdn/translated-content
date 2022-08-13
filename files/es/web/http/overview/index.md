@@ -99,8 +99,8 @@ Se presenta a continuación una lista con los elementos que se pueden controlar 
 
 Cuando el cliente quiere comunicarse con el servidor, tanto si es directamente con él, o a través de un proxy intermedio, realiza los siguientes pasos:
 
-1.  Abre una conexión TCP: la conexión TCP se usará para hacer una petición, o varias, y recibir la respuesta. El cliente pude abrir una conexión nueva, reusar una existente, o abrir varias a la vez hacia el servidor.
-2.  Hacer una petición HTTP: Los mensajes HTTP (previos a HTTP/2) son legibles en texto plano. A partir de la versión del protocolo HTTP/2, los mensajes se encapsulan en franjas, haciendo que no sean directamente interpretables, aunque el principio de operación es el mismo.
+1. Abre una conexión TCP: la conexión TCP se usará para hacer una petición, o varias, y recibir la respuesta. El cliente pude abrir una conexión nueva, reusar una existente, o abrir varias a la vez hacia el servidor.
+2. Hacer una petición HTTP: Los mensajes HTTP (previos a HTTP/2) son legibles en texto plano. A partir de la versión del protocolo HTTP/2, los mensajes se encapsulan en franjas, haciendo que no sean directamente interpretables, aunque el principio de operación es el mismo.
 
     ```html
     GET / HTTP/1.1
@@ -108,7 +108,7 @@ Cuando el cliente quiere comunicarse con el servidor, tanto si es directamente c
     Accept-Language: fr
     ```
 
-3.  Leer la respuesta enviada por el servidor:
+3. Leer la respuesta enviada por el servidor:
 
     ```html
     HTTP/1.1 200 OK
@@ -123,7 +123,7 @@ Cuando el cliente quiere comunicarse con el servidor, tanto si es directamente c
     <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
     ```
 
-4.  Cierre o reuso de la conexión para futuras peticiones.
+4. Cierre o reuso de la conexión para futuras peticiones.
 
 Si está activado el HTTP _pipelining_, varias peticiones pueden enviarse sin tener que esperar que la primera respuesta haya sido satisfecha. Este procedimiento es difícil de implementar en las redes de computadores actuales, donde se mezclan software antiguos y modernos. Así que el HTTP _pipelining_ ha sido substituido en HTTP/2 por el multiplexado de varias peticiones en una sola trama
 
@@ -141,7 +141,7 @@ Un ejemplo de petición HTTP:
 
 Una petición de HTTP, está formado por los siguientes campos:
 
-- Un [método ](/es/docs/Web/HTTP/Methods)HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Web/Guide/HTML/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
+- Un [método](/es/docs/Web/HTTP/Methods)HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Web/Guide/HTML/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
 - La dirección del recurso pedido; la URL del recurso, sin los elementos obvios por el contexto, como pueden ser: sin el {{glossary("protocol","protocolo")}} (`http://`), el {{glossary("domain","dominio")}} (aquí `developer.mozilla.org`), o el {{glossary("port","puerto")}} TCP (aquí el 80).
 - La versión del protocolo HTTP.
 - Cabeceras HTTP opcionales, que pueden aportar información adicional a los servidores.

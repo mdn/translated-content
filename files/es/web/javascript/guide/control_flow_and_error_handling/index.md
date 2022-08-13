@@ -46,7 +46,7 @@ while (x < 10) {
 
 Aquí, `{ x++; }` es la declaración de bloque.
 
-> **Nota:** **Importante**: JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:`js var x = 1; { var x = 2; } console.log(x); // muestra 2 `Esto muestra `2` porque la instrucción `var x` dentro del bloque está en el mismo ámbito que la instrucción `var x` anterior del bloque. (En C o Java, el código equivalente habría generado `1`).**A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Sentencias/let", "let")}} y {{JSxRef("Sentencias/const", "const")}} para obtener más información.
+> **Nota:** **Importante**: JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:`js var x = 1; { var x = 2; } console.log(x); // muestra 2`Esto muestra `2` porque la instrucción `var x` dentro del bloque está en el mismo ámbito que la instrucción `var x` anterior del bloque. (En C o Java, el código equivalente habría generado `1`).**A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Sentencias/let", "let")}} y {{JSxRef("Sentencias/const", "const")}} para obtener más información.
 
 ## Expresiones condicionales
 
@@ -399,8 +399,8 @@ Puedes anidar una o más declaraciones `try...catch`.
 
 Si un bloque `try` interno _no_ tiene un bloque `catch` correspondiente:
 
-1.  _debe_ contener un bloque `finally`, y
-2.  el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
+1. _debe_ contener un bloque `finally`, y
+2. el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
 
 Para obtener más información, consulta {{JSxRef("Sentencias/try...catch", "bloques try anidados", "#Nested_try-blocks")}} en la una página de referencia {{JSxRef("Sentencias/try...catch", "try...catch")}}.
 

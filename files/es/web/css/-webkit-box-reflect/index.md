@@ -12,7 +12,7 @@ translation_of: Web/CSS/-webkit-box-reflect
 
 ## Resumen
 
-`La propiedad `[CSS ](/es/docs/Web/CSS)`-webkit-box-reflect` permite reflejar el contenido del elemento en una dirección específica.
+`La propiedad`[CSS](/es/docs/Web/CSS)`-webkit-box-reflect` permite reflejar el contenido del elemento en una dirección específica.
 
 > **Advertencia:** **Nota:** Esta característica **no está pensada para ser usada en páginas Web** .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .
 
@@ -63,5 +63,5 @@ Esta propiedad no está entre los objetivos de la especificación estándar y no
 ## Ver además
 
 - La [documentación](http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16) de Apple.
-- La [especificación ](https://www.webkit.org/blog/182/css-reflections/)de Webkit.
+- La [especificación](https://www.webkit.org/blog/182/css-reflections/)de Webkit.
 - El artículo de Lea Verou sobre reflexión usando [característica CSS que están en el estándar](http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).

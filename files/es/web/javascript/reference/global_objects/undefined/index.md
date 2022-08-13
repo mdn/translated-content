@@ -22,13 +22,13 @@ La propiedad global **undefined** representa el valor primitivo `{{Glossary("Und
 
 `undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`.this needs clarification, but that would require explaining primitive values
 
-En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined `es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
+En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined`es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
 Una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe) son de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
 
 > **Nota:** Ten en cuenta que si no se ha declarado una variable ni explícita ni implícitamente, no puedes compararla con **undefined** ya que obtendrías un **[ReferenceError](/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError),** pero puedes comparar su tipo con la cadena ([String](/es/docs/Web/JavaScript/Referencia/Objetos_globales/String)) "undefined". En el ejemplo más abajo se podrá ver cómo conseguir esto usando el operador [typeof](/es/docs/Web/JavaScript/Referencia/Operadores/typeof).
 
-> **Advertencia:** Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined `no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.```js
+> **Advertencia:** Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined`no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.```js
 > //NO HAGAS ESTO
 >
 > // registra "foo string"

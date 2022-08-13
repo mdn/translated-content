@@ -87,10 +87,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) es de alguna forma más viejo que Fetch, pero se puede utilizar aún para obtener un arreglo de tipos. De nuevo, los pasos para utilizarlo, asumiendo que nuestro módulo se llama `simple.wasm`:
 
-1.  Crear una instancia nueva de {{domxref("XMLHttpRequest()")}} y utilizar su método {{domxref("XMLHttpRequest.open","open()")}} para abrir una petición, dejando el método de petición en `GET`, y declarando la ruta al alrchivo que queremos traer.
-2.  La parte clave de esto es poner el tipo de respuesta al uso de `'arraybuffer'` por medio de la propiedad {{domxref("XMLHttpRequest.responseType","responseType")}}.
-3.  Luego, enviar la petición utilizando {{domxref("XMLHttpRequest.send()")}}.
-4.  Cuando luego se utilice el manejador de evento {{domxref("XMLHttpRequest.onload", "onload")}} para invocar una función cuando la respuesta haya terminado de descargar — en esta función tomamos el arreglo de la propiedad {{domxref("XMLHttpRequest.response", "response")}} y luego lo mandamos a nuestro método {{jsxref("WebAssembly.instantiate()")}} como hicimos con Fetch.
+1. Crear una instancia nueva de {{domxref("XMLHttpRequest()")}} y utilizar su método {{domxref("XMLHttpRequest.open","open()")}} para abrir una petición, dejando el método de petición en `GET`, y declarando la ruta al alrchivo que queremos traer.
+2. La parte clave de esto es poner el tipo de respuesta al uso de `'arraybuffer'` por medio de la propiedad {{domxref("XMLHttpRequest.responseType","responseType")}}.
+3. Luego, enviar la petición utilizando {{domxref("XMLHttpRequest.send()")}}.
+4. Cuando luego se utilice el manejador de evento {{domxref("XMLHttpRequest.onload", "onload")}} para invocar una función cuando la respuesta haya terminado de descargar — en esta función tomamos el arreglo de la propiedad {{domxref("XMLHttpRequest.response", "response")}} y luego lo mandamos a nuestro método {{jsxref("WebAssembly.instantiate()")}} como hicimos con Fetch.
 
 El código final queda:
 

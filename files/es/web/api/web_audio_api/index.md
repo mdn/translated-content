@@ -18,11 +18,11 @@ Los resultados de éstos nodos podrían ser enlazados a las entradas de otros, q
 
 Un diagrama de flujo simple y típico para el audio web se vería algo como esto:
 
-1.  Crear contexto de audio
-2.  Dentro del contexto, crear fuentes — como `<audio>`, oscillator, stream
-3.  Crear nodos de efectos, tales como reverberación, filtro biquad, panner, compresor
-4.  Ecoge el destino final del audio, por ejemplo tu sistema de altavoces
-5.  Conecta las fuentes a los efectos, y los efectos al destino.
+1. Crear contexto de audio
+2. Dentro del contexto, crear fuentes — como `<audio>`, oscillator, stream
+3. Crear nodos de efectos, tales como reverberación, filtro biquad, panner, compresor
+4. Ecoge el destino final del audio, por ejemplo tu sistema de altavoces
+5. Conecta las fuentes a los efectos, y los efectos al destino.
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
 
@@ -361,31 +361,31 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 ### Enlaces rápidos
 
-1.  **Guíass**
+1. **Guíass**
 
-    1.  [Conceptos básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-    2.  [Usando el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-    3.  [Visualizaciones con el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-    4.  [Bases de la espacialización de audio Web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-    5.  [Portando código de webkitAudioContext a estándares basados en AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext "/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext")
+    1. [Conceptos básicos detrás del API de Audio Web](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+    2. [Usando el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+    3. [Visualizaciones con el API de Audio Web](/es/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+    4. [Bases de la espacialización de audio Web](/es/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+    5. [Portando código de webkitAudioContext a estándares basados en AudioContext](/es/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext "/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext")
 
-2.  **Ejemplos**
+2. **Ejemplos**
 
-    1.  [Teclado sintetizador sencillo](/es/docs/Web/API/Web_Audio_API/Simple_synth)
-    2.  [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    3.  [Violent Theremin](http://mdn.github.io/violent-theremin/)
+    1. [Teclado sintetizador sencillo](/es/docs/Web/API/Web_Audio_API/Simple_synth)
+    2. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
+    3. [Violent Theremin](http://mdn.github.io/violent-theremin/)
 
-3.  **Interfaces**
+3. **Interfaces**
 
-    1.  {{domxref("AnalyserNode")}}
-    2.  {{domxref("AudioBuffer")}}
-    3.  {{domxref("AudioScheduledSourceNode")}}
-    4.  {{domxref("AudioBufferSourceNode")}}
-    5.  {{domxref("AudioContext")}}
-    6.  {{domxref("AudioDestinationNode")}}
-    7.  {{domxref("AudioListener")}}
-    8.  {{domxref("AudioNode")}}
-    9.  {{domxref("AudioParam")}}
+    1. {{domxref("AnalyserNode")}}
+    2. {{domxref("AudioBuffer")}}
+    3. {{domxref("AudioScheduledSourceNode")}}
+    4. {{domxref("AudioBufferSourceNode")}}
+    5. {{domxref("AudioContext")}}
+    6. {{domxref("AudioDestinationNode")}}
+    7. {{domxref("AudioListener")}}
+    8. {{domxref("AudioNode")}}
+    9. {{domxref("AudioParam")}}
     10. {{event("audioprocess")}} (event)
     11. {{domxref("AudioProcessingEvent")}}
     12. {{domxref("BiquadFilterNode")}}

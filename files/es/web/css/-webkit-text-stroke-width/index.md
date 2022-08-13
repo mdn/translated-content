@@ -12,7 +12,7 @@ translation_of: Web/CSS/-webkit-text-stroke-width
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)**`-webkit-text-stroke-width`** especifica la anchura del trazo de texto.
+La propiedad [CSS](/es/docs/Web/CSS)**`-webkit-text-stroke-width`** especifica la anchura del trazo de texto.
 
 {{cssinfo}}
 

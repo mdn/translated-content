@@ -13,7 +13,7 @@ translation_of: Web/CSS/:-moz-list-number
 
 ## Resumen
 
-El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)[CSS ](/es/docs/Web/CSS)`::-moz-list-number` te permite personalizar la apariencia de los números de los elementos de lista ({{HTMLElement("li")}}) en listas que sean listas ordenadas ({{HTMLElement("ol")}}).
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)[CSS](/es/docs/Web/CSS)`::-moz-list-number` te permite personalizar la apariencia de los números de los elementos de lista ({{HTMLElement("li")}}) en listas que sean listas ordenadas ({{HTMLElement("ol")}}).
 
 ## Síntaxis
 

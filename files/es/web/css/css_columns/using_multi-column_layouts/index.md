@@ -13,7 +13,7 @@ Cuando leemos un texto, las líneas muy largas resultan incómodas. Si son demas
 
 [El borrador de CSS-3](http://www.w3.org/TR/css3-multicol/) propone algunas nuevas propiedades para dar respuesta a esta necesidad. En Firefox 1.5 y superior hemos implementado algunas de estas propiedades para comportarnos según lo descrito en el borrador de CSS-3 (con una excepción explicada abajo)
 
-[El blog de Robert O'Callahan ](http://weblogs.mozillazine.org/roc/)usa columnas CSS, pruébalo con Firefox 1.5
+[El blog de Robert O'Callahan](http://weblogs.mozillazine.org/roc/)usa columnas CSS, pruébalo con Firefox 1.5
 
 ### Usar Columnas
 

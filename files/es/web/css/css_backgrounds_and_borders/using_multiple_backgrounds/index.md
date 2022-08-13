@@ -23,7 +23,7 @@ Especificar fondos múltiples es fácil:
 }
 ```
 
-Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las propiedades individuales, excepto {{ cssxref("background-color") }}. Es decir, las siguientes propiedades pueden ser especificadas como lista, una por cada fondo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},` `{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las propiedades individuales, excepto {{ cssxref("background-color") }}. Es decir, las siguientes propiedades pueden ser especificadas como lista, una por cada fondo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},``{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Ejemplo
 

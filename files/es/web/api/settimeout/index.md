@@ -163,7 +163,7 @@ Cuando pasa un método a `setTimeout()` (o cualquier otra función , por el esti
 
 ### Explicación
 
-El código ejecutado por `setTimeout()` corre en un contexto de ejecución diferente al de la función por la que fue llamado. Como consecuencia, la palabra clave `this para la función llamada `será asignado al objeto `window` (o `global`); no tendrá el mismo valor del `this` de la función que llamó al `setTimeout`. Vea el siguiente ejemplo:
+El código ejecutado por `setTimeout()` corre en un contexto de ejecución diferente al de la función por la que fue llamado. Como consecuencia, la palabra clave `this para la función llamada`será asignado al objeto `window` (o `global`); no tendrá el mismo valor del `this` de la función que llamó al `setTimeout`. Vea el siguiente ejemplo:
 
 ```js
 myArray = ["cero", "uno", "dos"];
@@ -184,7 +184,7 @@ Como puedes ver no hay forma de pasar el objeto `this` a la función callback.
 
 ### Una posible solución
 
-Una posible forma de resolver el problema del "`this`" es reemplazar las dos funciones globales nativas `setTimeout()` or `setInterval()por dos no-nativas `que permitan su invocación a través del método [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call). El siguiente ejemplo muestra un posible reemplazo:
+Una posible forma de resolver el problema del "`this`" es reemplazar las dos funciones globales nativas `setTimeout()` or `setInterval()por dos no-nativas`que permitan su invocación a través del método [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call). El siguiente ejemplo muestra un posible reemplazo:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers

@@ -20,10 +20,10 @@ El método **`reduce()`** ejecuta una función **reductora** sobre cada elemento
 
 La función **reductora** recibe cuatro argumentos:
 
-1.  Acumulador (`acc`)
-2.  Valor Actual (`cur`)
-3.  Índice Actual (_`idx`_)
-4.  Array (_`src`_)
+1. Acumulador (`acc`)
+2. Valor Actual (`cur`)
+3. Índice Actual (_`idx`_)
+4. Array (_`src`_)
 
 El valor devuelto de la función **reductora** se asigna al acumulador, cuyo valor se recuerda en cada iteración de la matriz y, en última instancia, se convierte en el valor final, único y resultante.
 

@@ -11,7 +11,7 @@ translation_of: Web/CSS/-moz-user-focus
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
+La propiedad [CSS](/es/docs/Web/CSS)`-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
 
 Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el elemento pueda obtener el foco lo que significa que el usuario no podrá activar el elemento. Se saltará el elemento es un secuncia de tabuladores.
 

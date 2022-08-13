@@ -289,7 +289,7 @@ La bandera `m` se utiliza para especificar que una cadena de entrada de varias l
 
 ## Ejemplos
 
-> **Nota:** **Nota**: También hay varios ejemplos disponibles en:\* Las páginas de referencia para {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
+> **Nota:** También hay varios ejemplos disponibles en:\* Las páginas de referencia para {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
 >
 > - Artículos de esta guía: [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 

@@ -39,13 +39,13 @@ Las propiedades del objeto `icons` especifican el tamaño del icono en px, los v
 
 Puede usar SVG y el navegador escalará su icono adecuadamente. Sin embargo, hay dos advertencias:
 
-1.  Necesitas especificar un viewBox en la imagen. E.g.:
+1. Necesitas especificar un viewBox en la imagen. E.g.:
 
     ```html
     <svg viewBox="0 0 48 48" width="48" height="48" ...
     ```
 
-2.  Aunque puedes usar un archivo, todavía necesitas especificar varios tamaños del icono en tu manifiesto. E.g.:
+2. Aunque puedes usar un archivo, todavía necesitas especificar varios tamaños del icono en tu manifiesto. E.g.:
 
     ```json
     "icons": {

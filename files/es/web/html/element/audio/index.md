@@ -36,8 +36,12 @@ Puedes usar las características API de audio mejoradas - que son específicas d
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que proporcionará la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:\* none: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video;
     - metadata: sugiere que aunque el autor piensa que el usuario no tendrá que consultar ese video, es razonable capturar los metadatos (p. ej. longitud);
     - auto: sugiere que el usuario necesita tener prioridad; es decir, esta sugerencia indica que, si es necesario, se puede descargar el video completo, incluso aunque el usuario no vaya a usarlo;
-    - the _empty string_: que es sinónimo del valor auto.Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadatos.> **Nota:** **Observaciones sobre uso:\*** El atributo **autoplay** tiene prioridad sobre éste puesto que si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
+    - the _empty string_: que es sinónimo del valor auto.Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadatos.
+
+  > **Nota:** **Observaciones sobre uso:\*** El atributo **autoplay** tiene prioridad sobre éste puesto que si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
+      >
       > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
+      >
 - src
   - : La URL del audio que se va a insertar. Está sujeta a los [Controles de acceso HTTP](/En/HTTP_access_control "En/HTTP access control"). Es opcional; en su lugar puedes usar el elemento [`source`](/en/HTML/Element/Source "En/HTML/Element/Source") dentro del bloque de audio para especificar el audio que se va a insertar.
 

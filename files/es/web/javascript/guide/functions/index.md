@@ -148,7 +148,7 @@ function square(n) { return n * n }
 
 El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
 
-> **Nota:** **Nota**: Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.```js example-bad
+> **Nota:** Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.```js example-bad
 > console.log(square) // square se eleva con un valor inicial undefined.
 > console.log(square(5)) // Error de tipo no detectado: square no es una función
 > const square = function(n) {
@@ -227,9 +227,9 @@ getScore(); // Devuelve "Chamahk anotó 5"
 
 Una función se puede referir y llamarse a sí misma. Hay tres formas de que una función se refiera a sí misma:
 
-1.  El nombre de la función
-2.  {{JSxRef("Funciones/arguments/callee", "arguments.callee")}}
-3.  Una variable dentro del ámbito que se refiere a la función
+1. El nombre de la función
+2. {{JSxRef("Funciones/arguments/callee", "arguments.callee")}}
+3. Una variable dentro del ámbito que se refiere a la función
 
 Por ejemplo, considera la siguiente definición de función:
 
@@ -241,9 +241,9 @@ var foo = function bar() {
 
 Dentro del cuerpo de la función, todos los siguientes son equivalentes:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Una función que se llama a sí misma se conoce como una _función recursiva_. En cierto modo, la recursividad es análoga a un bucle. Ambas ejecutan el mismo código varias veces y ambas requieren una condición (para evitar un bucle infinito, o más bien, una recursividad infinita en este caso).
 
@@ -389,9 +389,9 @@ En este ejemplo, `C` accede a `y` de `B` y a `x` de `A`.
 
 Esto se puede hacer porque:
 
-1.  `B` forma un cierre que incluye a `A` (es decir, `B` puede acceder a los argumentos y variables de `A`).
-2.  `C` forma un cierre que incluye a `B`.
-3.  Debido a que el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos _y variables_ de `B` _y_ de `A`. En otras palabras, `C` _encadena_ los ámbitos de `B` y `A`, _en ese orden_.
+1. `B` forma un cierre que incluye a `A` (es decir, `B` puede acceder a los argumentos y variables de `A`).
+2. `C` forma un cierre que incluye a `B`.
+3. Debido a que el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos _y variables_ de `B` _y_ de `A`. En otras palabras, `C` _encadena_ los ámbitos de `B` y `A`, _en ese orden_.
 
 Sin embargo, lo contrario no es cierto. `A` no puede acceder a `C`, porque `A` no puede acceder a ningún argumento o variable de `B`, del que `C` es una variable. Por lo tanto, `C` permanece privado solo para `B`.
 

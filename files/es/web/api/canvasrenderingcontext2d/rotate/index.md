@@ -68,9 +68,9 @@ El centro de rotación es azul. El rectángulo no rotado es gris, y el rectángu
 
 Este ejemplo rota una figura alrededor del punto central de ésta. Para realizarlo se aplican estos pasos a la matriz de transformación:
 
-1.  Primero, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} mueve el orígen de la matriz hacia el centro de la figura.
-2.  `rotate()` rota la matriz la cantidad deseada.
-3.  Finalmente, `translate()` mueve el origen de la matriz de nuevo a su punto inicial. Esto se realiza utilizando los valores del centro de coordenadas de la figura en dirección negativa.
+1. Primero, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} mueve el orígen de la matriz hacia el centro de la figura.
+2. `rotate()` rota la matriz la cantidad deseada.
+3. Finalmente, `translate()` mueve el origen de la matriz de nuevo a su punto inicial. Esto se realiza utilizando los valores del centro de coordenadas de la figura en dirección negativa.
 
 #### HTML
 

@@ -62,5 +62,5 @@ En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada 
 ## Ver también
 
 - Otros elementos relacionados con la sección: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Secciones y esquema de un documento HTML5 ](/es/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
+- [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
 - [ARIA: Rol de navegación](/es/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

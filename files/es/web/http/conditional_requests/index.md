@@ -76,7 +76,7 @@ Si el recurso no ha cambiado, el servidor envía una respuesta {{HTTPStatus("304
 
 ![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](https://mdn.mozillademos.org/files/13731/HTTPCache2.png)
 
-Si el recurso ha cambiado, el servidor simplemente envía una respuesta {{HTTPStatus("200")}}` OK`, con la nueva versión del recurso, como si la petición no fuera condicional y el cliente usara este nuevo recurso (y lo almacena en caché).
+Si el recurso ha cambiado, el servidor simplemente envía una respuesta {{HTTPStatus("200")}}`OK`, con la nueva versión del recurso, como si la petición no fuera condicional y el cliente usara este nuevo recurso (y lo almacena en caché).
 
 ![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](https://mdn.mozillademos.org/files/13733/HTTPCache3.png)
 

@@ -12,7 +12,7 @@ translation_of: Web/CSS/-webkit-text-stroke
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)**`-webkit-text-stroke`** especifica la [anchura](/es/docs/Web/CSS/length) y [color](/es/docs/Web/CSS/color_value) del trazo para los caractéres de texto. Esta forma es una manera corta en relación con la forma larga que necesita usar las propiedades{{cssxref("-webkit-text-stroke-width")}} y {{cssxref("-webkit-text-stroke-color")}}.
+La propiedad [CSS](/es/docs/Web/CSS)**`-webkit-text-stroke`** especifica la [anchura](/es/docs/Web/CSS/length) y [color](/es/docs/Web/CSS/color_value) del trazo para los caractéres de texto. Esta forma es una manera corta en relación con la forma larga que necesita usar las propiedades{{cssxref("-webkit-text-stroke-width")}} y {{cssxref("-webkit-text-stroke-color")}}.
 
 {{cssinfo}}
 

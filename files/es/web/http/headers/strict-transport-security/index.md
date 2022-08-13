@@ -44,7 +44,7 @@ Strict Transport Security resuelve este problema; siempre que hayas ingresado al
 
 ### Como el navegador lo maneja
 
-La primera vez que accediste al sitio usando HTTPS y este retornó el encabezado `Strict-Transport-Security, `el navegador registra esta información, de tal manera que en futuros intentos para cargar el sitio usando HTTP va a usar en su lugar HTTPS automáticamente.``
+La primera vez que accediste al sitio usando HTTPS y este retornó el encabezado `Strict-Transport-Security,`el navegador registra esta información, de tal manera que en futuros intentos para cargar el sitio usando HTTP va a usar en su lugar HTTPS automáticamente.``
 
 Cuando el tiempo de expiración especificado por el encabezado Strict-Transport-Security haya pasado, el siguiente intento de cargar el sitio a través de HTTP se va a procesar de forma normal.
 

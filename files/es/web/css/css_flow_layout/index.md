@@ -31,5 +31,5 @@ The first sentence also includes a span element with a blue background. This is 
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/es/docs/Web/CSS)
-2.  [**CSS Reference**](/es/docs/Web/CSS/Reference)
+1. [**CSS**](/es/docs/Web/CSS)
+2. [**CSS Reference**](/es/docs/Web/CSS/Reference)

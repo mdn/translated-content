@@ -12,7 +12,7 @@ translation_of: Web/CSS/-moz-outline-radius-topleft
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-outline-radius-topleft` establece, en aplicaciones Mozilla, el redondeado de la esquina superior izquierda de un contorno.
+La propiedad [CSS](/es/docs/Web/CSS)`-moz-outline-radius-topleft` establece, en aplicaciones Mozilla, el redondeado de la esquina superior izquierda de un contorno.
 
 {{cssinfo}}
 

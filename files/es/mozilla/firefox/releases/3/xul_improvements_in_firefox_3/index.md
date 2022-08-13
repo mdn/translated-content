@@ -78,4 +78,4 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además d
 
 ### Ver también
 
-- [XUL](/es/XUL "es/XUL") 
+- [XUL](/es/XUL "es/XUL")

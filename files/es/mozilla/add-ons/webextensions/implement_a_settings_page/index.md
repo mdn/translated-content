@@ -13,7 +13,7 @@ Con WebExtensions, los ajustes generalmente se almacenan utilizando la API [`sto
 
 - Escribir un archivo HTML que muestre los ajustes y permita al usuario cambiarlos.
 - Escribir un script, incluido desde el archivo HTML , que establece la página de configuración desde su almacenamiento y actualiza los ajustes seleccionados cuando el usuario los modifica.
-- Establecer la ruta al archivo HTML como la clave [`options_ui `](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
+- Establecer la ruta al archivo HTML como la clave [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
 
 > **Nota:** También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
 

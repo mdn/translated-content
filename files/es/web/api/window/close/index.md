@@ -17,7 +17,7 @@ Cierra la ventana actual, o la ventana en la cual fue llamada.
 
 Cuando este método es llamado, la ventana referenciada es cerrada.
 
-Este método solo se permite ser llamado por ventanas que fueron abiertas por un script utilizando el método {{domxref("window.open()")}}. Si la ventana no fue abierta por un script, el siguiente error aparece en la consola de JavaScript: S` cripts`` may not close windows that were not opened by script.  `
+Este método solo se permite ser llamado por ventanas que fueron abiertas por un script utilizando el método {{domxref("window.open()")}}. Si la ventana no fue abierta por un script, el siguiente error aparece en la consola de JavaScript: S`cripts`` may not close windows that were not opened by script.`
 
 ## Ejemplos
 

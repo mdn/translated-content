@@ -9,7 +9,7 @@ La propiedad de solo lectura **`HTMLElement.offsetLeft`** devuelve el número de
 
 Para los elementos de bloque, `offsetTop`, `offsetLeft`, `offsetWidth`, y `offsetHeight` determina el borde de la caja del elemento relativo al `offsetParent.`
 
-Sin embargo, para los elementos inline (por ejemplo **span**), que puede ser cortado de un línea a otra, `offsetTop,` and `offsetLeft `describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que `offsetWidth `y `offsetHeight `describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight`, no definirá los límites para un span con texto que continúa en otra línea.
+Sin embargo, para los elementos inline (por ejemplo **span**), que puede ser cortado de un línea a otra, `offsetTop,` and `offsetLeft`describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que `offsetWidth`y `offsetHeight`describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight`, no definirá los límites para un span con texto que continúa en otra línea.
 
 ## Sintaxis
 

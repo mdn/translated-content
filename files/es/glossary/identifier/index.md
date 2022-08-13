@@ -22,11 +22,11 @@ Un identificador se diferencia de una cadena en que una {{Glossary("String", "ca
 
 - {{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia
 
-1.  [Glosario](/es/docs/Glossary)
+1. [Glosario](/es/docs/Glossary)
 
-    1.  {{Glossary("Identifier", "Identificador")}}
-    2.  {{Glossary("Scope", "Alcance")}}
-    3.  {{Glossary("String", "Cadena")}}
-    4.  {{Glossary("Unicode")}}
+    1. {{Glossary("Identifier", "Identificador")}}
+    2. {{Glossary("Scope", "Alcance")}}
+    3. {{Glossary("String", "Cadena")}}
+    4. {{Glossary("Unicode")}}
 
-2.  {{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia
+2. {{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia

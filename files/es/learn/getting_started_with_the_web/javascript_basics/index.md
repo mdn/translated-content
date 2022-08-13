@@ -39,24 +39,24 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 
 > **Advertencia:** **Importante**: si no has venido siguiendo el resto de nuestro curso, [descarga este código de ejemplo](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) y úsalo como punto de partida.
 
-1.  Primero, ve a tu sitio de pruebas y crea una carpeta llamada `scripts`. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado `main.js` y guárdalo.
-2.  A continuación, abre tu archivo `index.html` e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre `</body>`:
+1. Primero, ve a tu sitio de pruebas y crea una carpeta llamada `scripts`. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado `main.js` y guárdalo.
+2. A continuación, abre tu archivo `index.html` e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre `</body>`:
 
     ```html
     <script src="scripts/main.js"></script>
     ```
 
-3.  Esto hace básicamente el mismo trabajo que el elemento {{htmlelement("link")}} para CSS: aplica el código JavaScript a la página, para que pueda actuar sobre el HTML (y CSS, o cualquier cosa en la página).
-4.  Ahora añade el siguiente código al archivo `main.js`:
+3. Esto hace básicamente el mismo trabajo que el elemento {{htmlelement("link")}} para CSS: aplica el código JavaScript a la página, para que pueda actuar sobre el HTML (y CSS, o cualquier cosa en la página).
+4. Ahora añade el siguiente código al archivo `main.js`:
 
     ```js
     const miTitulo = document.querySelector('h1');
     miTitulo.textContent = '¡Hola mundo!';
     ```
 
-5.  Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
+5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
 
-> **Nota:** **Nota**: la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
+> **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
 
 ### ¿Qué ha ocurrido?
 
@@ -177,10 +177,11 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
-1.  ```js
+1. ```js
     let nombreDeLaVariable = document.querySelector('h1');
     ```
-2.  ```js
+
+2. ```js
     alert('¡Hola!');
     ```
 
@@ -244,10 +245,10 @@ Ahora vas a repasar un poco lo básico de JavaScript. Añadirás un par de funci
 
 En esta sección añadirás otra imagen a tu sitio usando la DOM API y agregarás un poco de código para cambiar entre imágenes al hacer clic.
 
-1.  Primero que todo, busca una imagen que te guste para tu sitio. Asegúrate que sea del mismo tamaño que la primera, o lo más cerca posible.
-2.  Guarda tu imagen en tu carpeta `images`.
-3.  Renombra esta imagen «firefox2.png» (sin las comillas).
-4.  Ve a tu archivo `main.js` y agrega el siguiente JavaScript (si tu JavaScript de _«Hola Mundo»_ está aún allí, bórralo).
+1. Primero que todo, busca una imagen que te guste para tu sitio. Asegúrate que sea del mismo tamaño que la primera, o lo más cerca posible.
+2. Guarda tu imagen en tu carpeta `images`.
+3. Renombra esta imagen «firefox2.png» (sin las comillas).
+4. Ve a tu archivo `main.js` y agrega el siguiente JavaScript (si tu JavaScript de _«Hola Mundo»_ está aún allí, bórralo).
 
     ```js
     let miImage = document.querySelector('img');
@@ -261,34 +262,34 @@ En esta sección añadirás otra imagen a tu sitio usando la DOM API y agregará
     }
     ```
 
-5.  Guarda todos los archivos y carga `index.html` en tu navegador. Ahora cuando hagas clic en la imagen, ¡esta debe cambiar por otra!
+5. Guarda todos los archivos y carga `index.html` en tu navegador. Ahora cuando hagas clic en la imagen, ¡esta debe cambiar por otra!
 
 Esto fue lo que sucedió: se almacena una referencia a tu elemento {{htmlelement("img")}} en la variable `miImage`. Luego, haces que esta propiedad del manejador de evento `onclick` de la variable sea igual a una función sin nombre (una función «anónima»). Ahora, cada vez que se haga clic en la imagen:
 
-1.  El código recupera el valor del atributo `src` de la imagen.
-2.  El código usa una condicional para comprobar si el valor `src` es igual a la ruta de la imagen original:
+1. El código recupera el valor del atributo `src` de la imagen.
+2. El código usa una condicional para comprobar si el valor `src` es igual a la ruta de la imagen original:
 
-    1.  Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
-    2.  Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
+    1. Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
+    2. Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
 
 ### Añadir un mensaje de bienvenida personalizado
 
 Ahora añadirás un poco más de código, para cambiar el título de la página o incluir un mensaje personalizado de bienvenida para cuando el usuario ingrese por primera vez. Este mensaje de bienvenida permanecerá luego de que el usuario abandone la página y estará disponible para cuando regrese. Lo guardarás usando [Web Storage API](/es/docs/Web/API/Web_Storage_API). También se incluirá una opción para cambiar el usuario y por lo tanto también el mensaje de bienvenida en cualquier momento que se requiera.
 
-1.  En `index.html`, agrega el siguiente código antes del elemento {{htmlelement("script")}}:
+1. En `index.html`, agrega el siguiente código antes del elemento {{htmlelement("script")}}:
 
     ```html
     <button>Cambiar de usuario</button>
     ```
 
-2.  En `main.js`, agrega el siguiente código al final del archivo, exactamente como está escrito. Esto toma referencia al nuevo botón que se agregó y al título y los almacena en variables:
+2. En `main.js`, agrega el siguiente código al final del archivo, exactamente como está escrito. Esto toma referencia al nuevo botón que se agregó y al título y los almacena en variables:
 
     ```js
     let miBoton = document.querySelector('button');
     let miTitulo = document.querySelector( 'h1');
     ```
 
-3.  Ahora agrega la siguiente función para poner el saludo personalizado, lo que no causará nada aún, pero arreglarás esto en un momento:
+3. Ahora agrega la siguiente función para poner el saludo personalizado, lo que no causará nada aún, pero arreglarás esto en un momento:
 
     ```js
     function estableceNombreUsuario() {
@@ -300,7 +301,7 @@ Ahora añadirás un poco más de código, para cambiar el título de la página 
 
     La función `estableceNombreUsuario()` contiene una función [`prompt()`](/es/docs/Web/API/Window/prompt), que crea un cuadro de diálogo como lo hace `alert()`; la diferencia es que `prompt()` pide al usuario un dato, y almacena este dato en una variable cuando el botón **Aceptar** del cuadro de diálogo es presionado. En este caso, pedirás al usuario que ingrese su nombre. Luego, llamarás la API `localStorage`, que nos permite almacenar datos en el navegador y recuperarlos luego. Usarás la función `setItem()` de localStorage, que crea y almacena un dato en el elemento llamado `'nombre'`, y coloca este valor en la variable `miNombre` que contiene el nombre que el usuario ingresó. Finalmente, establecerás el `textContent` del título a una cadena, más el nombre de usuario recientemente almacenado.
 
-4.  Luego, agregarás este bloque `if ... else`. Se podría llamar a esto el código de inicialización, como se ha establecido para cuando carga la app por primera vez:
+4. Luego, agregarás este bloque `if ... else`. Se podría llamar a esto el código de inicialización, como se ha establecido para cuando carga la app por primera vez:
 
     ```js
     if (!localStorage.getItem('nombre')) {
@@ -314,7 +315,7 @@ Ahora añadirás un poco más de código, para cambiar el título de la página 
 
     La primera línea de este bloque usa el operador de negación (NO lógico representado por `!`) para comprobar si el elemento `'nombre'` existe. Si no existe, la función `estableceNombreUsuario()` se iniciará para crearlo. Si ya existe (como por ejemplo cuando el usuario ya ingresó al sitio), se recupera el dato del nombre usando `getItem()` y se fija mediante `textContent` del título a la cadena, más el nombre del usuario, como hiciste dentro de `estableceNombreUsuario()`.
 
-5.  Finalmente, agrega abajo el evento `onclick` que manipulará el botón, de modo que cuando sea pulsado se inicie la función `estableceNombreUsuario()`. Esto permitirá al usuario establecer un nuevo nombre cada vez que lo desee al pulsar el botón:
+5. Finalmente, agrega abajo el evento `onclick` que manipulará el botón, de modo que cuando sea pulsado se inicie la función `estableceNombreUsuario()`. Esto permitirá al usuario establecer un nuevo nombre cada vez que lo desee al pulsar el botón:
 
     ```js
     miBoton.onclick = function() {

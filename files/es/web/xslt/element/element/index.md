@@ -13,7 +13,7 @@ El elemento `<xsl:element>` genera un elemento en el documento de salida.
 ### Sintaxis
 
     <xsl:element name=NOMBRE namespace=URI use-attribute-sets=LISTA-DE-NOMBRES >
-    	PLANTILLA
+     PLANTILLA
     </xsl:template>
 
 ### Atributos requeridos

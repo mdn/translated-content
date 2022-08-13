@@ -15,8 +15,8 @@ original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 
 Para poder construir una aplicación web offline-funcional, necesitas conocer cuándo está tu aplicación realmente offline. Además, también necesitas conocer cuándo vuelve la aplicación al estado 'online' nuevamente. A efectos prácticos, los requisitos son los siguientes:
 
-1.  Necesitas conocer cuándo el usuario vuelve a estar online, para que puedas re-sincronizar con el servidor.
-2.  Necesitas conocer cuándo el usuario está offline, para así estar seguro de poner en cola las peticiones al servidor para más tarde.
+1. Necesitas conocer cuándo el usuario vuelve a estar online, para que puedas re-sincronizar con el servidor.
+2. Necesitas conocer cuándo el usuario está offline, para así estar seguro de poner en cola las peticiones al servidor para más tarde.
 
 Es este proceso el que los eventos online/offline ayudan a trivializar.
 
@@ -88,6 +88,6 @@ Hay una [prueba sencilla](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
 ### Referencias
 
 - [Sección 'Eventos Online/Offline ' de la especificación WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/#offline)
-- [El bug que documenta la implementación de los eventos online/offline en Firefox ](https://bugzilla.mozilla.org/show_bug.cgi?id=336359)y un enlace [con una modificación posterior](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
+- [El bug que documenta la implementación de los eventos online/offline en Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=336359)y un enlace [con una modificación posterior](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
 - [Un ejemplo sencillo](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
-- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/) 
+- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/)

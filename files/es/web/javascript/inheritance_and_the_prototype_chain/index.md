@@ -320,7 +320,7 @@ El tiempo de búsqueda para las propiedades que están en lo alto de la cadena d
 
 También, cuando iteramos sobre las propiedades de un objeto, cada propiedad enumerable que se encuentra en la cadena de prototipo será enumerada.
 
-Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") que todos los objetos heredan de` Object.prototype`.
+Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") que todos los objetos heredan de`Object.prototype`.
 
 [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") es la única cosa en JavaScript que se ocupa de las propiedades y no atraviesa la cadena de prototipos.
 
@@ -399,7 +399,7 @@ Si, en el ejemplo de arriba, pones `var a1 = new A(); var a2 = new A();` entonce
 
 resumiendo, `prototype` es para tipos, mientras que `Object.getPrototypeOf()` es lo mismo para instancias.
 
-`[[Prototype]]` es visto como _recursivo_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., hasta que se encuentra o `Object.getPrototypeOf `retornará null.
+`[[Prototype]]` es visto como _recursivo_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., hasta que se encuentra o `Object.getPrototypeOf`retornará null.
 
 Entonces, cuando llamas
 

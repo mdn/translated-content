@@ -15,9 +15,9 @@ El modo estricto de [ECMAScript 5](http://www.ecma-international.org/publication
 
 El modo estricto tiene varios cambios en la semántica normal de JavaScript:
 
-1.  Elimina algunos errores silenciosos de JavaScript cambiándolos para que lancen errores.
-2.  Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
-3.  Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
+1. Elimina algunos errores silenciosos de JavaScript cambiándolos para que lancen errores.
+2. Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
+3. Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
 
 Ve [transición a modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode), si deseas cambiar tu código para trabajar en la variante estricta de JavaScript.
 

@@ -5,7 +5,7 @@ translation_of: Web/API/CSSRule
 ---
 {{ ApiRef("CSSOM") }}
 
-El objeto `CSSRule `representa una única regla de estilo CSS. Puede ser parte de una lista [cssRules](/Es/DOM/Stylesheet.cssRules "es/DOM/stylesheet.cssRules") de hojas de estilo ([stylesheet](/Es/DOM/Stylesheet "es/DOM/stylesheet")).
+El objeto `CSSRule`representa una única regla de estilo CSS. Puede ser parte de una lista [cssRules](/Es/DOM/Stylesheet.cssRules "es/DOM/stylesheet.cssRules") de hojas de estilo ([stylesheet](/Es/DOM/Stylesheet "es/DOM/stylesheet")).
 
 Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades comunes en el interface [CSSRule](#cssrule) y la mayor parte de ellas son propiedades específicas de un tipo particular de reglas.
 
