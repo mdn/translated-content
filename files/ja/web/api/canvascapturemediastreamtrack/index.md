@@ -14,59 +14,36 @@ tags:
   - Web
 translation_of: Web/API/CanvasCaptureMediaStreamTrack
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary">The <strong><code>CanvasCaptureMediaStreamTrack</code></strong> interface represents the video track contained in a {{domxref("MediaStream")}} being generated from a {{HTMLElement("canvas")}} following a call to {{domxref("HTMLCanvasElement.captureStream()")}}.</span></p>
+The **`CanvasCaptureMediaStreamTrack`** interface represents the video track contained in a {{domxref("MediaStream")}} being generated from a {{HTMLElement("canvas")}} following a call to {{domxref("HTMLCanvasElement.captureStream()")}}.
 
-<p>Part of the <a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
+Part of the [Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}.</em></p>
+_This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref("CanvasCaptureMediaStreamTrack.canvas")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("HTMLCanvasElement")}} object whose surface is captured in real-time.</dd>
-</dl>
+- {{domxref("CanvasCaptureMediaStreamTrack.canvas")}} {{readonlyInline}}
+  - : Returns the {{domxref("HTMLCanvasElement")}} object whose surface is captured in real-time.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of its parent, {{domxref("MediaStreamTrack")}}.</em></p>
+_This interface inherits the methods of its parent, {{domxref("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref("CanvasCaptureMediaStreamTrack.requestFrame()")}}</dt>
- <dd>Manually forces a frame to be captured and sent to the stream. This lets applications that wish to specify the frame capture times directly do so, if they specified a <code>frameRate</code> of 0 when calling {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}.</dd>
-</dl>
+- {{domxref("CanvasCaptureMediaStreamTrack.requestFrame()")}}
+  - : Manually forces a frame to be captured and sent to the stream. This lets applications that wish to specify the frame capture times directly do so, if they specified a `frameRate` of 0 when calling {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                            | Status                                               | Comment            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------ |
+| {{SpecName('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}} | {{Spec2('Media Capture DOM Elements')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.CanvasCaptureMediaStreamTrack")}}
 
+## See also
 
-<p>{{Compat("api.CanvasCaptureMediaStreamTrack")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}} to begin capturing frames from a canvas</li>
-</ul>
+- {{domxref("HTMLCanvasElement.captureStream()")}} to begin capturing frames from a canvas

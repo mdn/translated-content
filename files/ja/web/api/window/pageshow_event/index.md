@@ -19,54 +19,36 @@ tags:
   - 履歴
 translation_of: Web/API/Window/pageshow_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>pageshow</code></strong> イベントは、操作によってブラウザーがウィンドウの文書を表示したときに {{domxref("Window")}} へ送られます。</span>これには以下のようなものがあります。</p>
+**`pageshow`** イベントは、操作によってブラウザーがウィンドウの文書を表示したときに {{domxref("Window")}} へ送られます。これには以下のようなものがあります。
 
-<ul>
- <li>最初にページを読み込んだとき</li>
- <li>同じウィンドウまたはタブの中で、他のページからそのページへ移動してきたとき</li>
- <li>モバイル OS で凍結されたページを復元したとき</li>
- <li>ブラウザーの進む、戻るボタンを利用してこのページに戻ったとき</li>
-</ul>
+- 最初にページを読み込んだとき
+- 同じウィンドウまたはタブの中で、他のページからそのページへ移動してきたとき
+- モバイル OS で凍結されたページを復元したとき
+- ブラウザーの進む、戻るボタンを利用してこのページに戻ったとき
 
-<div class="blockIndicator note">
-<p>最初にページを読み込んでいる間、 <code>pageshow</code> イベントは {{domxref("Window/load_event", "load")}} イベントの<em>後で</em>発生します。</p>
-</div>
+> **Note:** 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("PageTransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("Window.onpageshow", "onpageshow")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | なし                                                         |
+| ---------------------------- | ------------------------------------------------------------ |
+| キャンセル                   | 不可                                                         |
+| インターフェイス             | {{domxref("PageTransitionEvent")}}                 |
+| イベントハンドラープロパティ | {{domxref("Window.onpageshow", "onpageshow")}} |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例は配列 <code>events</code> の中に列挙されたイベントのイベントハンドラーを設定します。ハンドラーである <code>eventLogger()</code> は、発生したイベントの種類と、 {{domxref("PageTransitionEvent.persisted", "persisted")}} フラグの値を <code>pageshow</code> および <code>pagehide</code> イベントの場合に含めてコンソールに出力します。</p>
+この例は配列 `events` の中に列挙されたイベントのイベントハンドラーを設定します。ハンドラーである `eventLogger()` は、発生したイベントの種類と、 {{domxref("PageTransitionEvent.persisted", "persisted")}} フラグの値を `pageshow` および `pagehide` イベントの場合に含めてコンソールに出力します。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const events = [
+```js
+const events = [
   "pagehide", "pageshow",
   "unload", "load"
 ];
 
-const eventLogger = event =&gt; {
+const eventLogger = event => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
@@ -79,52 +61,35 @@ const eventLogger = event =&gt; {
   }
 };
 
-events.forEach(eventName =&gt;
+events.forEach(eventName =>
   window.addEventListener(eventName, eventLogger)
-);</pre>
+);
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;コンソールを開き、このページに出入りしたときの出力を見てください。
+```html
+<p>コンソールを開き、このページに出入りしたときの出力を見てください。
 このタブに新しいページを読み込んだり、履歴で前後に移動したりして、
-イベントのログへの出力を見てください。&lt;/p&gt;
-</pre>
+イベントのログへの出力を見てください。</p>
+```
 
-<h3 id="Results" name="Results">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 640, 250)}}</p>
+{{EmbedLiveSample("Example", 640, 250)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pageshow', 'pageshow')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#event-pageshow', 'pageshow')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pageshow', 'pageshow')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+| {{SpecName('HTML5 W3C', 'browsers.html#event-pageshow', 'pageshow')}}             | {{Spec2('HTML5 W3C')}}     |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.pageshow_event")}}</p>
+{{Compat("api.Window.pageshow_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Window.onpageshow", "onpageshow")}} イベントハンドラープロパティ</li>
- <li>{{domxref("Window.pagehide_event", "pagehide")}}</li>
-</ul>
+- {{domxref("Window.onpageshow", "onpageshow")}} イベントハンドラープロパティ
+- {{domxref("Window.pagehide_event", "pagehide")}}

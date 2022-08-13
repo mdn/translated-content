@@ -11,28 +11,28 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceObserver/takeRecords
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>{{domxref('PerformanceObserver')}} インターフェイスの <strong><code>takeRecords()</code></strong> メソッドは、パフォーマンスオブザーバーに格納されている{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の現在のリストを空にして返します。</p>
+{{domxref('PerformanceObserver')}} インターフェイスの **`takeRecords()`** メソッドは、パフォーマンスオブザーバーに格納されている{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の現在のリストを空にして返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var PerformanceEntry[] = <em>performanceObserver</em>.takeRecords();
-</pre>
+    var PerformanceEntry[] = performanceObserver.takeRecords();
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<p>なし</p>
+なし
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("PerformanceEntry")}} オブジェクトのリスト</p>
+{{domxref("PerformanceEntry")}} オブジェクトのリスト
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -41,27 +41,14 @@ var records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-takerecords', 'takeRecords()')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td><code>takeRecords()</code> メソッドの初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                   | ステータス                                               | コメント                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-takerecords', 'takeRecords()')}} | {{Spec2('Performance Timeline Level 2')}} | `takeRecords()` メソッドの初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<div>
-<p>{{Compat("api.PerformanceObserver.takeRecords")}}</p>
-</div>
+{{Compat("api.PerformanceObserver.takeRecords")}}

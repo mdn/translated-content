@@ -9,66 +9,47 @@ tags:
   - Window
 translation_of: Web/API/Window/requestIdleCallback
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>window.requestIdleCallback()</code></strong> メソッドを利用すると、ブラウザーがアイドル状態の時に実行される関数をキューに登録できます。これにより、アニメーションや入力への応答など、遅延が問題となる処理に影響を与えることなく、優先度の低いバックグラウンド処理をメインスレッド内で実行させられます。キューに登録された関数は、関数登録時に設定したタイムアウト時間（<code>timeout</code>）に達していない限り、登録順に呼び出されます。</p>
+**`window.requestIdleCallback()`** メソッドを利用すると、ブラウザーがアイドル状態の時に実行される関数をキューに登録できます。これにより、アニメーションや入力への応答など、遅延が問題となる処理に影響を与えることなく、優先度の低いバックグラウンド処理をメインスレッド内で実行させられます。キューに登録された関数は、関数登録時に設定したタイムアウト時間（`timeout`）に達していない限り、登録順に呼び出されます。
 
-<p><code>requestIdleCallback()</code> をアイドルコールバック関数からコールし、次のイベントループ以降で実行されるようにスケジュールもできます。</p>
+`requestIdleCallback()` をアイドルコールバック関数からコールし、次のイベントループ以降で実行されるようにスケジュールもできます。
 
-<div class="note"><code>timeout</code> は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。</div>
+> **Note:** `timeout` は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+    var handle = window.requestIdleCallback(callback[, options])
 
-<h3 id="Returns" name="Returns">返り値</h3>
+### 返り値
 
-<p>{{domxref("Window.cancelIdleCallback()")}} メソッドで、実行をキャンセルする際に使用するIDを返します。</p>
+{{domxref("Window.cancelIdleCallback()")}} メソッドで、実行をキャンセルする際に使用する ID を返します。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>イベントループがアイドル状態のときに実行したい関数への参照。コールバック関数には {{domxref("IdleDeadline")}} オブジェクトが渡されます。これはアイドル状態の際に余っている時間と、コールバックが実行されたかされていないかを示します。コールバックの実行有無は、タイムアウト期間が終了してしまったかどうかに左右されます。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>任意の設定パラメータです。現在はひとつのプロパティのみ定義されています。
- <ul>
-  <li><code>timeout</code>：<code>timeout</code> に正の値が指定され、かつコールバックがその値の期間（ミリ秒）内に実行されていない場合、コールバックは次のアイドル期間に実行されます。それがパフォーマンスに悪影響があったとしても、それを加味することはありません。</li>
- </ul>
- </dd>
-</dl>
+- `callback`
+  - : イベントループがアイドル状態のときに実行したい関数への参照。コールバック関数には {{domxref("IdleDeadline")}} オブジェクトが渡されます。これはアイドル状態の際に余っている時間と、コールバックが実行されたかされていないかを示します。コールバックの実行有無は、タイムアウト期間が終了してしまったかどうかに左右されます。
+- `options` {{optional_inline}}
+  - : 任意の設定パラメータです。現在はひとつのプロパティのみ定義されています。\* `timeout`：`timeout` に正の値が指定され、かつコールバックがその値の期間（ミリ秒）内に実行されていない場合、コールバックは次のアイドル期間に実行されます。それがパフォーマンスに悪影響があったとしても、それを加味することはありません。
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<p><a href="/ja/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>の記事で、<a href="/ja/docs/Web/API/Background_Tasks_API#Example">例を一式</a>紹介しています。</p>
+[Cooperative Scheduling of Background Tasks API](/ja/docs/Web/API/Background_Tasks_API)の記事で、[例を一式](/ja/docs/Web/API/Background_Tasks_API#Example)紹介しています。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>状態</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                         | 状態                                     | コメント |
+| -------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<p>{{Compat("api.Window.requestIdleCallback")}}</p>
+{{Compat("api.Window.requestIdleCallback")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("window.cancelIdleCallback()")}}</li>
- <li>{{domxref("IdleDeadline")}}</li>
- <li>{{domxref("window.setTimeout()")}}</li>
- <li>{{domxref("window.setInterval()")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
-</ul>
+- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("IdleDeadline")}}
+- {{domxref("window.setTimeout()")}}
+- {{domxref("window.setInterval()")}}
+- {{domxref("window.requestAnimationFrame")}}

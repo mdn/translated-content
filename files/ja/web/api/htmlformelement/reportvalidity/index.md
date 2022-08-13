@@ -6,34 +6,37 @@ tags:
   - HTMLFormElement
   - Method
   - Reference
-browser-compat: api.HTMLFormElement.reportValidity
 translation_of: Web/API/HTMLFormElement/reportValidity
+browser-compat: api.HTMLFormElement.reportValidity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLFormElement.reportValidity()</code></strong> メソッドは、この要素の子コントロールが制約の検証を満たしていれば <code>true</code> を返します。
-  <code>false</code> が返された場合、キャンセル可能な
-  <code><a href="/ja/docs/Web/API/HTMLInputElement/invalid_event">invalid</a></code> イベントが無効な子それぞれについて発行され、ユーザーに検証の問題を報告します。</p>
+**`HTMLFormElement.reportValidity()`** メソッドは、この要素の子コントロールが制約の検証を満たしていれば `true` を返します。
+`false` が返された場合、キャンセル可能な
+[`invalid`](/ja/docs/Web/API/HTMLInputElement/invalid_event) イベントが無効な子それぞれについて発行され、ユーザーに検証の問題を報告します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>HTMLFormElement</em>.reportValidity()
-</pre>
+```js
+HTMLFormElement.reportValidity()
+```
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p><code>true</code> または <code>false</code></p>
+`true` または `false`
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush: js">document.forms['myform'].addEventListener('submit', function() {
+```js
+document.forms['myform'].addEventListener('submit', function() {
   document.forms['myform'].reportValidity();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

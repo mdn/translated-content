@@ -14,49 +14,32 @@ tags:
 translation_of: Web/API/SpeechRecognition/onspeechstart
 original_slug: Web/API/SpeechRecognition/onspeechstart
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>{{domxref("SpeechRecognition")}} インターフェイスの <strong><code>onspeechstart</code></strong> プロパティは、認識できる音声が検出できた時に(<code><a href="/ja/docs/Web/API/SpeechRecognition/speechstart_event">speechstart</a></code> イベントが発生した時)、実行されるイベントハンドラーになります。</p>
+{{domxref("SpeechRecognition")}} インターフェイスの **`onspeechstart`** プロパティは、認識できる音声が検出できた時に([`speechstart`](/ja/docs/Web/API/SpeechRecognition/speechstart_event) イベントが発生した時)、実行されるイベントハンドラーになります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">mySpeechRecognition.onspeechstart = function() { ... };
-</pre>
+    mySpeechRecognition.onspeechstart = function() { ... };
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">recognition.onspeechstart = function() {
+```js
+recognition.onspeechstart = function() {
   console.log('音声が検出できました。');
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onspeechstart', 'onspeechstart')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                                 | コメント |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Speech API', '#dfn-onspeechstart', 'onspeechstart')}} | {{Spec2('Web Speech API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
+{{Compat("api.SpeechRecognition.onspeechstart")}}
 
+## 関連情報
 
-<p>{{Compat("api.SpeechRecognition.onspeechstart")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)

@@ -12,38 +12,42 @@ translation_of: Web/API/Response/arrayBuffer
 original_slug: Web/API/Body/arrayBuffer
 browser-compat: api.Response.arrayBuffer
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>arrayBuffer()</code></strong> は {{domxref("Response")}} インターフェイスのメソッドで、リクエストの本文を読み取り、 {{jsxref("ArrayBuffer")}} で解決されるプロミスを返します。</p>
+**`arrayBuffer()`** は {{domxref("Response")}} インターフェイスのメソッドで、リクエストの本文を読み取り、 {{jsxref("ArrayBuffer")}} で解決されるプロミスを返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>response</em>.arrayBuffer().then(function(<em>buffer</em>) {
+```js
+response.arrayBuffer().then(function(buffer) {
   // buffer を使用した何らかの処理
-});</pre>
+});
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("ArrayBuffer")}} で解決されるプロミス。</p>
+{{jsxref("ArrayBuffer")}} で解決されるプロミス。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Playing_music">音楽の演奏</h3>
+### 音楽の演奏
 
-<p><a href="https://mdn.github.io/fetch-examples/fetch-array-buffer/">fetch array buffer のライブ</a>では、Play ボタンを配置して、押下されると <code>getData()</code> 関数が実行されるようになっています。 再生する前に音声ファイル全体をダウンロードすることに注意してください。ダウンロード中に演奏を開始したい (つまりストリーム再生したい) 場合は、次のように {{domxref("HTMLAudioElement")}} を使いましょう。</p>
+[fetch array buffer のライブ](https://mdn.github.io/fetch-examples/fetch-array-buffer/)では、Play ボタンを配置して、押下されると `getData()` 関数が実行されるようになっています。 再生する前に音声ファイル全体をダウンロードすることに注意してください。ダウンロード中に演奏を開始したい (つまりストリーム再生したい) 場合は、次のように {{domxref("HTMLAudioElement")}} を使いましょう。
 
-<pre class="brush: js">new Audio("music.ogg").play();
-</pre>
+```js
+new Audio("music.ogg").play();
+```
 
-<p><code>getData()</code> 関数内では、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して OGG 音声トラックを読み取ります。 また、{{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource")}} を使用して、音声バッファーソースを作成します。 読み取りが成功したら、<code>arrayBuffer()</code> を使用してレスポンスから {{jsxref("ArrayBuffer")}} を読み取り、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} を使用して音声データをデコードし、デコードされたデータを音声バッファーソースのバッファー（<code>source.buffer</code>）として設定し、それから {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} にソースを接続します。</p>
+`getData()` 関数内では、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して OGG 音声トラックを読み取ります。 また、{{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource")}} を使用して、音声バッファーソースを作成します。 読み取りが成功したら、`arrayBuffer()` を使用してレスポンスから {{jsxref("ArrayBuffer")}} を読み取り、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} を使用して音声データをデコードし、デコードされたデータを音声バッファーソースのバッファー（`source.buffer`）として設定し、それから {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} にソースを接続します。
 
-<p><code>getData()</code> の実行が完了すると、<code>start(0)</code> で音声ソースの再生を開始し、それから再生中に再度再生ボタンをクリックできないようにするために（これはしばしばエラーの原因になります）ボタンを無効化しています。</p>
+`getData()` の実行が完了すると、`start(0)` で音声ソースの再生を開始し、それから再生中に再度再生ボタンをクリックできないようにするために（これはしばしばエラーの原因になります）ボタンを無効化しています。
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
 
   var myRequest = new Request('viper.ogg');
@@ -64,32 +68,33 @@ play.onclick = function() {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
-}</pre>
+}
+```
 
-<h3 id="Reading_files">ファイルを読む</h3>
+### ファイルを読む
 
-<p>{{domxref("Response.Response","Response()")}} コンストラクターは、 {{domxref("File")}} と {{domxref("Blob")}} を受け入れるため、 {{domxref("File")}} を他の形式に読み込むために使用することができます。</p>
+{{domxref("Response.Response","Response()")}} コンストラクターは、 {{domxref("File")}} と {{domxref("Blob")}} を受け入れるため、 {{domxref("File")}} を他の形式に読み込むために使用することができます。
 
-<pre class="brush: js">function readFile(file) {
+```js
+function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-</pre>
+```
 
-<pre
-  class="brush: html">&lt;input type="file" onchange="readFile(this.files[0])"&gt;</pre>
+```html
+<input type="file" onchange="readFile(this.files[0])">
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-	<li><a href="/ja/docs/Web/HTTP/CORS">HTTP アクセス制御 (CORS)</a></li>
-	<li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)

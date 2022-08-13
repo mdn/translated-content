@@ -11,81 +11,70 @@ tags:
   - Reference
 translation_of: Web/API/Headers
 ---
-<p>{{ APIRef("Fetch") }}</p>
+{{ APIRef("Fetch") }}
 
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の <strong><code>Headers</code></strong> インターフェースは、HTTP リクエストとレスポンスのヘッダ上のさまざまなアクションを実行します。これらのアクションには、取得や設定、追加、削除が含まれます。<code>Headers</code> オブジェクトは、最初は空で 0 個以上の名前と値のペアで構成される関連するヘッダリストを持っています。<span style="line-height: 19.0909080505371px;">追加には {{domxref("Headers.append","append()")}}（<a href="#例">例</a> を見てください）のようなメソッドを使用できます。</span>このインタフェースのすべてのメソッドで、ヘッダ名は大文字と小文字を区別しないバイトシーケンスにマッチしています。</p>
+[Fetch API](/ja/docs/Web/API/Fetch_API) の **`Headers`** インターフェースは、HTTP リクエストとレスポンスのヘッダ上のさまざまなアクションを実行します。これらのアクションには、取得や設定、追加、削除が含まれます。`Headers` オブジェクトは、最初は空で 0 個以上の名前と値のペアで構成される関連するヘッダリストを持っています。追加には {{domxref("Headers.append","append()")}}（[例](#例) を見てください）のようなメソッドを使用できます。このインタフェースのすべてのメソッドで、ヘッダ名は大文字と小文字を区別しないバイトシーケンスにマッチしています。
 
-<p>セキュリティ上の理由から、いくつかのヘッダはユーザーエージェントでしか制御できません。それらのヘッダには、{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} と {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}} が含まれます。</p>
+セキュリティ上の理由から、いくつかのヘッダはユーザーエージェントでしか制御できません。それらのヘッダには、{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} と {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}} が含まれます。
 
-<p>ヘッダは関連するガードも持っています。ガードは <code>immutable</code> か <code>request</code>、<code>request-no-cors</code>、<code>response</code>、<code>none</code> のいずれかの値を取ります。これはヘッダを変更する {{domxref("Headers.set","set()")}} メソッドと {{domxref("Headers.delete","delete()")}} メソッド、{{domxref("Headers.append","append()")}} メソッドに影響を与えます。詳細は {{Glossary("Guard")}} を見てください。</p>
+ヘッダは関連するガードも持っています。ガードは `immutable` か `request`、`request-no-cors`、`response`、`none` のいずれかの値を取ります。これはヘッダを変更する {{domxref("Headers.set","set()")}} メソッドと {{domxref("Headers.delete","delete()")}} メソッド、{{domxref("Headers.append","append()")}} メソッドに影響を与えます。詳細は {{Glossary("Guard")}} を見てください。
 
-<p>{{domxref("Request.headers")}} プロパティと {{domxref("Response.headers")}} プロパティ経由で <code>Headers</code> オブジェクトを取得することも、{{domxref("Headers.Headers()")}} コンストラクタを使用して新しい <code>Headers</code> オブジェクトを生成することもできます。</p>
+{{domxref("Request.headers")}} プロパティと {{domxref("Response.headers")}} プロパティ経由で `Headers` オブジェクトを取得することも、{{domxref("Headers.Headers()")}} コンストラクタを使用して新しい `Headers` オブジェクトを生成することもできます。
 
-<p><code>Headers</code> を実装したオブジェクトは、{{domxref('Headers.entries()', 'entries()')}} の代わりに直接 {{jsxref("Statements/for...of", "for...of")}} 構文で使用できます： <code>for (var p of myHeaders)</code> と <code>for (var p of myHeaders.entries())</code> は同等です。</p>
+`Headers` を実装したオブジェクトは、{{domxref('Headers.entries()', 'entries()')}} の代わりに直接 {{jsxref("Statements/for...of", "for...of")}} 構文で使用できます： `for (var p of myHeaders)` と `for (var p of myHeaders.entries())` は同等です。
 
-<div class="note">
-<p><strong>ノート</strong>： 利用できるヘッダについては<a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダ</a> を参照してください。</p>
-</div>
+> **Note:** **ノート**： 利用できるヘッダについては[HTTP ヘッダ](/ja/docs/Web/HTTP/Headers) を参照してください。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+## コンストラクタ
 
-<dl>
- <dt>{{domxref("Headers.Headers()")}}</dt>
- <dd>新しい <code>Headers</code> オブジェクトを生成する。</dd>
-</dl>
+- {{domxref("Headers.Headers()")}}
+  - : 新しい `Headers` オブジェクトを生成する。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Headers.append()")}}</dt>
- <dd><code>Headers</code> オブジェクト内の既存のヘッダに新しい値を追加するか、まだ存在しない場合はヘッダを追加する。</dd>
- <dt>{{domxref("Headers.delete()")}}</dt>
- <dd><code>Headers</code> オブジェクトからヘッダを削除する。</dd>
- <dt>{{domxref("Headers.entries()")}}</dt>
- <dd>このオブジェクトに含まれるすべてのキー/値 ペアを通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。</dd>
- <dt>{{domxref("Headers.get()")}}</dt>
- <dd><code>Headers</code> オブジェクト内から指定したヘッダのすべての値の {{domxref("ByteString")}} を返す。</dd>
- <dt>{{domxref("Headers.has()")}}</dt>
- <dd><code>Headers</code> オブジェクトが特定のヘッダを含むかどうかを示す boolean 値を返す。</dd>
- <dt>{{domxref("Headers.keys()")}}</dt>
- <dd>このオブジェクトに含まれるキー/値 ペアのすべてのキーを通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。</dd>
- <dt>{{domxref("Headers.set()")}}</dt>
- <dd>オブジェクト内の既存のヘッダに新しい値を設定するか、まだ存在しない場合はヘッダを追加する。</dd>
- <dt>{{domxref("Headers.values()")}}</dt>
- <dd>このオブジェクトに含まれるキー/値 ペアのすべての値を通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。</dd>
-</dl>
+- {{domxref("Headers.append()")}}
+  - : `Headers` オブジェクト内の既存のヘッダに新しい値を追加するか、まだ存在しない場合はヘッダを追加する。
+- {{domxref("Headers.delete()")}}
+  - : `Headers` オブジェクトからヘッダを削除する。
+- {{domxref("Headers.entries()")}}
+  - : このオブジェクトに含まれるすべてのキー/値 ペアを通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。
+- {{domxref("Headers.get()")}}
+  - : `Headers` オブジェクト内から指定したヘッダのすべての値の {{domxref("ByteString")}} を返す。
+- {{domxref("Headers.has()")}}
+  - : `Headers` オブジェクトが特定のヘッダを含むかどうかを示す boolean 値を返す。
+- {{domxref("Headers.keys()")}}
+  - : このオブジェクトに含まれるキー/値 ペアのすべてのキーを通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。
+- {{domxref("Headers.set()")}}
+  - : オブジェクト内の既存のヘッダに新しい値を設定するか、まだ存在しない場合はヘッダを追加する。
+- {{domxref("Headers.values()")}}
+  - : このオブジェクトに含まれるキー/値 ペアのすべての値を通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。
 
-<div class="note">
-<p><strong>ノート</strong>： {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。</p>
-</div>
+> **Note:** **ノート**： {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
 
-<div class="note">
-<p><strong>ノート</strong>： <a href="https://fetch.spec.whatwg.org/#concept-header-name">有効な HTTP ヘッダ名</a> ではない名前の参照を渡そうとすると、すべての Headers メソッドは <code>TypeError</code> をスローします。ヘッダに immutable {{Glossary("Guard")}} がある場合、変更操作は <code>TypeError</code> をスローします。そのほかの場外の場合は、単にに失敗します。</p>
-</div>
+> **Note:** **ノート**： [有効な HTTP ヘッダ名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると、すべての Headers メソッドは `TypeError` をスローします。ヘッダに immutable {{Glossary("Guard")}} がある場合、変更操作は `TypeError` をスローします。そのほかの場外の場合は、単にに失敗します。
 
-<div class="note">
-<p><strong>ノート</strong>：ヘッダーをイテレートする時、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。</p>
-</div>
+> **Note:** **ノート**：ヘッダーをイテレートする時、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
 
-<h3 id="廃止になった機能">廃止になった機能</h3>
+### 廃止になった機能
 
-<dl>
- <dt>{{domxref("Headers.getAll()")}}</dt>
- <dd><code>Headers</code> オブジェクト内で指定されたヘッダのすべての値を配列として返す。このメソッドは規格から削除されており、 {{domxref("Headers.get()")}} は現在では与えられた名前に一致する最初のものを返します。</dd>
-</dl>
+- {{domxref("Headers.getAll()")}}
+  - : `Headers` オブジェクト内で指定されたヘッダのすべての値を配列として返す。このメソッドは規格から削除されており、 {{domxref("Headers.get()")}} は現在では与えられた名前に一致する最初のものを返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のコードスニペットでは、<code>Headers()</code> コンストラクタを使用して新しいヘッダを生成し、<code>append()</code> を使用して新しいヘッダを追加しています。その後、<code>get()</code> を使用してヘッダの値を返しています：</p>
+次のコードスニペットでは、`Headers()` コンストラクタを使用して新しいヘッダを生成し、`append()` を使用して新しいヘッダを追加しています。その後、`get()` を使用してヘッダの値を返しています：
 
-<pre class="brush: js notranslate">var myHeaders = new Headers();
+```js
+var myHeaders = new Headers();
 
 myHeaders.append('Content-Type', 'text/xml');
-myHeaders.get('Content-Type') // 'text/xml' を返す。</pre>
+myHeaders.get('Content-Type') // 'text/xml' を返す。
+```
 
-<p>同じことがコンストラクタにオブジェクトリテラルか配列リテラルの配列リテラルを渡すことでできます。</p>
+同じことがコンストラクタにオブジェクトリテラルか配列リテラルの配列リテラルを渡すことでできます。
 
-<pre class="brush: js notranslate">var myHeaders = new Headers({
+```js
+var myHeaders = new Headers({
     'Content-Type': 'text/xml'
 });
 
@@ -94,35 +83,21 @@ myHeaders = new Headers([
     ['Content-Type', 'text/xml']
 ]);
 
-myHeaders.get('Content-Type') // should return 'text/xml'</pre>
+myHeaders.get('Content-Type') // should return 'text/xml'
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#headers-class','Headers')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                             | 状態                     | コメント |
+| ---------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('Fetch','#headers-class','Headers')}} | {{Spec2('Fetch')}} |          |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
+{{Compat("api.Headers")}}
 
+## 関連項目
 
-<p>{{Compat("api.Headers")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

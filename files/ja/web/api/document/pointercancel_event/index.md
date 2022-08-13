@@ -11,95 +11,66 @@ tags:
   - イベント
 translation_of: Web/API/Document/pointercancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>pointercancel</code></strong> イベントは、ブラウザーがもうポインターイベントが存在しないと判断したとき、または {{event("pointerdown")}} イベントが発生した後で、ポインターがビューポートのパン、ズーム、スクロールを操作するために使用されたときに発生します。</span></p>
+**`pointercancel`** イベントは、ブラウザーがもうポインターイベントが存在しないと判断したとき、または {{event("pointerdown")}} イベントが発生した後で、ポインターがビューポートのパン、ズーム、スクロールを操作するために使用されたときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onpointercancel", "onpointercancel")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | あり                                                                                         |
+| ---------------------------- | -------------------------------------------------------------------------------------------- |
+| キャンセル可能               | いいえ                                                                                       |
+| インターフェイス             | {{domxref("PointerEvent")}}                                                         |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onpointercancel", "onpointercancel")}} |
 
-<p><code>pointercancel</code> イベントが発生する状況の例をいくつか示します。</p>
+`pointercancel` イベントが発生する状況の例をいくつか示します。
 
-<ul>
- <li>ポインターの操作を中止するハードウェアイベントが発生した場合。例えば、アプリケーションスイッチャーインターフェイスやモバイル端末の「ホーム」ボタンを使用してアプリケーションを切り替えた場合などです。</li>
- <li>ポインターが活動中に端末の画面の向きが変化した場合。</li>
- <li>ユーザーが突然、ポインターの入力を始めたとブラウザーが判断した場合。これが発生するのは、例えば、スタイラスを使用中に画面上で手が反応するのを防ぐために掌を除外して予期せずイベントを起動することを防ぐことに、ハードウェアが対応している場合などです。</li>
- <li>CSS の {{cssxref("touch-action")}} プロパティが、入力の継続を防止している場合。</li>
-</ul>
+- ポインターの操作を中止するハードウェアイベントが発生した場合。例えば、アプリケーションスイッチャーインターフェイスやモバイル端末の「ホーム」ボタンを使用してアプリケーションを切り替えた場合などです。
+- ポインターが活動中に端末の画面の向きが変化した場合。
+- ユーザーが突然、ポインターの入力を始めたとブラウザーが判断した場合。これが発生するのは、例えば、スタイラスを使用中に画面上で手が反応するのを防ぐために掌を除外して予期せずイベントを起動することを防ぐことに、ハードウェアが対応している場合などです。
+- CSS の {{cssxref("touch-action")}} プロパティが、入力の継続を防止している場合。
 
-<div class="note">
-<p><code>pointercancel</code> イベントの発生後、ブラウザーは {{event("pointerout")}} イベントと、続いて {{event("pointerleave")}} イベントを送信します。</p>
-</div>
+> **Note:** `pointercancel` イベントの発生後、ブラウザーは {{event("pointerout")}} イベントと、続いて {{event("pointerleave")}} イベントを送信します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p><code>addEventListener()</code> の使用例:</p>
+`addEventListener()` の使用例:
 
-<pre class="brush: js">document.addEventListener('pointercancel', (event) =&gt; {
+```js
+document.addEventListener('pointercancel', (event) => {
   console.log('Pointer event cancelled')
-});</pre>
+});
+```
 
-<p><code>onpointercancel</code> イベントハンドラープロパティの使用例:</p>
+`onpointercancel` イベントハンドラープロパティの使用例:
 
-<pre class="brush: js">document.onpointercancel = (event) =&gt; {
+```js
+document.onpointercancel = (event) => {
   console.log('Pointer event cancelled')
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-pointercancel-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 状態                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-pointercancel-event')}} | {{Spec2('Pointer Events')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.pointercancel_event")}}</p>
+{{Compat("api.Document.pointercancel_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント
-  <ul>
-   <li>{{domxref("Document/gotpointercapture_event", "gotpointercapture")}}</li>
-   <li>{{domxref("Document/lostpointercapture_event", "lostpointercapture")}}</li>
-   <li>{{domxref("Document/pointerover_event", "pointerover")}}</li>
-   <li>{{domxref("Document/pointerenter_event", "pointerenter")}}</li>
-   <li>{{domxref("Document/pointerdown_event", "pointerdown")}}</li>
-   <li>{{domxref("Document/pointermove_event", "pointermove")}}</li>
-   <li>{{domxref("Document/pointerup_event", "pointerup")}}</li>
-   <li>{{domxref("Document/pointerout_event", "pointerout")}}</li>
-   <li>{{domxref("Document/pointerleave_event", "pointerleave")}}</li>
-  </ul>
- </li>
- <li>{{domxref("GlobalEventHandlers.onpointercancel")}} イベントハンドラープロパティ</li>
- <li><code>HTMLElement</code> を対象としたこのイベント: {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベント</li>
-</ul>
+- 関連イベント
+
+  - {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+  - {{domxref("Document/pointerover_event", "pointerover")}}
+  - {{domxref("Document/pointerenter_event", "pointerenter")}}
+  - {{domxref("Document/pointerdown_event", "pointerdown")}}
+  - {{domxref("Document/pointermove_event", "pointermove")}}
+  - {{domxref("Document/pointerup_event", "pointerup")}}
+  - {{domxref("Document/pointerout_event", "pointerout")}}
+  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+
+- {{domxref("GlobalEventHandlers.onpointercancel")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベント

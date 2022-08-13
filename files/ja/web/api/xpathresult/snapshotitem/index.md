@@ -11,73 +11,59 @@ tags:
   - メソッド
 translation_of: Web/API/XPathResult/snapshotItem
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p><strong><code>snapshotItem()</code></strong> は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットのコレクション、または添字がノードの範囲を外れている場合は <code>null</code> を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。</p>
+**`snapshotItem()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットのコレクション、または添字がノードの範囲を外れている場合は `null` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>node</var> = <var>result</var>.snapshotItem(i);
-</pre>
+    var node = result.snapshotItem(i);
 
-<h3 id="Return_Value" name="Return_Value">返値</h3>
+### 返値
 
-<p><code>XPathResult</code> のノードセット内の指定された添字の {{domxref("Node")}} です。</p>
+`XPathResult` のノードセット内の指定された添字の {{domxref("Node")}} です。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>{{domxref("XPathResult.resultType")}} が <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> または <code>ORDERED_NODE_SNAPSHOT_TYPE</code> でない場合、 {{domxref("XPathException")}} による例外が <code>TYPE_ERR</code> 型で発生します。</p>
+{{domxref("XPathResult.resultType")}} が `UNORDERED_NODE_SNAPSHOT_TYPE` または `ORDERED_NODE_SNAPSHOT_TYPE` でない場合、 {{domxref("XPathException")}} による例外が `TYPE_ERR` 型で発生します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>以下の例は <code>snapshotItem()</code> メソッドの使用例を表しています。</p>
+以下の例は `snapshotItem()` メソッドの使用例を表しています。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Tag names of the matched nodes: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Tag names of the matched nodes: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 var node = null;
 var tagNames = [];
-for(var i = 0; i &lt; result.snapshotLength; i++) {
+for(var i = 0; i < result.snapshotLength; i++) {
   var node = result.snapshotItem(i);
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-snapshotItem", "XPathResult.snapshotItem()")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("DOM3 XPath", "xpath.html#XPathResult-snapshotItem", "XPathResult.snapshotItem()")}} | {{Spec2("DOM3 XPath")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}</p>
-</div>
+{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}

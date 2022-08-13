@@ -11,46 +11,28 @@ tags:
   - UIEvent
 translation_of: Web/API/Document/scroll_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>scroll</code></strong> イベントは、ドキュメントのビューまたは要素がスクロールされたときに生じます。</p>
+**`scroll`** イベントは、ドキュメントのビューまたは要素がスクロールされたときに生じます。
 
-<table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>バブリング</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th>キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th>インターフェイス</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>イベントハンドラープロパティ</th>
-   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | はい                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| キャンセル可能               | いいえ                                                                   |
+| インターフェイス             | {{DOMxRef("Event")}}                                             |
+| イベントハンドラープロパティ | {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} |
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> iOS UIWebViews では、スクロールされている最中は <code>scroll</code> イベントは生じません。スクロールが完了したあとにのみ生じます。 詳しくは <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a> をご覧ください。 Safari と WKWebViews ではこのバグは起きません。</p>
-</div>
+> **Note:** **注:** iOS UIWebViews では、スクロールされている最中は `scroll` イベントは生じません。スクロールが完了したあとにのみ生じます。 詳しくは [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) をご覧ください。 Safari と WKWebViews ではこのバグは起きません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Scroll_event_throttling" name="Scroll_event_throttling">スクロールイベントを抑制する</h3>
+### スクロールイベントを抑制する
 
-<p><code>scroll</code> イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように、 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}} や、 {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 、または {{DOMxRef("CustomEvent")}} を使ってイベントを抑制することが推奨されます。</p>
+`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように、 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}} や、 {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 、または {{DOMxRef("CustomEvent")}} を使ってイベントを抑制することが推奨されます。
 
-<p>ただし、インプットイベントやアニメーションフレームは同じような確率で生じ、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では <code>requestAnimationFrame</code> の <code>scroll</code> を最適化しています。</p>
+ただし、インプットイベントやアニメーションフレームは同じような確率で生じ、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では `requestAnimationFrame` の `scroll` を最適化しています。
 
-<pre class="brush: js notranslate">// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -70,31 +52,21 @@ window.addEventListener('scroll', function(e) {
 
     ticking = true;
   }
-});</pre>
+});
+```
 
-<p>その他の類似の例を見るには、 <code><a href="/ja/docs/Web/API/Document/defaultView/resize_event">resize</a></code> イベントページをご覧ください。</p>
+その他の類似の例を見るには、 [`resize`](/ja/docs/Web/API/Document/defaultView/resize_event) イベントページをご覧ください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 策定状況                         |
+| ---------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('CSSOM View', '#scrolling-events')}} | {{Spec2('CSSOM View')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.Document.scroll_event")}}</p>
+{{Compat("api.Document.scroll_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> event</a></li>
-</ul>
+- [Element: `scroll` event](/ja/docs/Web/API/Element/scroll_event)

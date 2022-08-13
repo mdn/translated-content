@@ -10,46 +10,46 @@ tags:
   - deadline
 translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
-<div>{{DefaultAPISidebar("IndexedDB")}}</div><div class="summary">
-<p>この記事では、 IndexedDB で保存された期限と現在の日時を照合する複雑な例を見てみましょう。ここでの主な課題は、保存されている期限情報 (月、時、日など) を、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> オブジェクトから取得した現在の日時と照合することです。</p>
-</div>
+{{DefaultAPISidebar("IndexedDB")}}
 
-<img alt="サンプルアプリのスクリーンショット。赤いメインタイトルの「To do app」、テスト用の To Do 項目、ユーザーが新しいタスクを入力するための赤いフォーム。" src="to-do-app.png">
+この記事では、 IndexedDB で保存された期限と現在の日時を照合する複雑な例を見てみましょう。ここでの主な課題は、保存されている期限情報 (月、時、日など) を、[Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) オブジェクトから取得した現在の日時と照合することです。
 
-<p>この記事で紹介するアプリケーションの例は、 <strong>To-do リスト通知</strong>です。これは、タスクのタイトルと期限を <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> に格納し、期限になったときに <a href="/ja/docs/Web/API/Notification">Notification</a> および <a href="/ja/docs/Web/API/Vibration_API">Vibration</a> API を使ってユーザーに通知を行う、シンプルな To-do リストアプリケーションです。 <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do リスト通知アプリは GitHub ダウンロード</a>してソースコードをいじったり、<a href="https://mdn.github.io/to-do-notifications/">アプリの動作をライブで閲覧</a>したりすることができます。</p>
+![サンプルアプリのスクリーンショット。赤いメインタイトルの「To do app」、テスト用の To Do 項目、ユーザーが新しいタスクを入力するための赤いフォーム。](to-do-app.png)
 
-<h2 id="The_basic_problem">基本的な問題点</h2>
+この記事で紹介するアプリケーションの例は、 **To-do リスト通知**です。これは、タスクのタイトルと期限を [IndexedDB](/ja/docs/Web/API/IndexedDB_API) に格納し、期限になったときに [Notification](/ja/docs/Web/API/Notification) および [Vibration](/ja/docs/Web/API/Vibration_API) API を使ってユーザーに通知を行う、シンプルな To-do リストアプリケーションです。 [To-do リスト通知アプリは GitHub ダウンロード](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)してソースコードをいじったり、[アプリの動作をライブで閲覧](https://mdn.github.io/to-do-notifications/)したりすることができます。
 
-<p>この ToDo アプリでは、まず時間と日付の情報を、機械が読め、表示されたときに人間が理解できる形式で記録し、次にそれぞれの時間と日付が現在の時点で発生しているかどうかをチェックしたいと考えました。基本的には、現在の時刻と日付を確認し、保存されている各イベントの締め切りが現在の時刻と日付に一致するかどうかを確認します。もし一致していれば、ユーザーに何らかの通知をしたいと考えています。</p>
+## 基本的な問題点
 
-<p>2 つの {{jsxref("Global_Objects/Date", "Date")}} オブジェクトを比較するだけなら簡単ですが、もちろん人間は JavaScript が理解できるような形式で期限を入力したいわけではありません。人間が読むことのできる日付はかなり違っていて、いくつもの異なる表現があります。</p>
+この ToDo アプリでは、まず時間と日付の情報を、機械が読め、表示されたときに人間が理解できる形式で記録し、次にそれぞれの時間と日付が現在の時点で発生しているかどうかをチェックしたいと考えました。基本的には、現在の時刻と日付を確認し、保存されている各イベントの締め切りが現在の時刻と日付に一致するかどうかを確認します。もし一致していれば、ユーザーに何らかの通知をしたいと考えています。
 
-<h3 id="Recording_the_date_information">日付情報の記録</h3>
+2 つの {{jsxref("Global_Objects/Date", "Date")}} オブジェクトを比較するだけなら簡単ですが、もちろん人間は JavaScript が理解できるような形式で期限を入力したいわけではありません。人間が読むことのできる日付はかなり違っていて、いくつもの異なる表現があります。
 
-<p>モバイル端末での合理的な使い勝手を提供するために、そして曖昧さを減らすために、 HTML フォームを作成することにしました。</p>
+### 日付情報の記録
 
-<img alt="この ToDo アプリのフォームで、タスクのタイトルを入力するフィールドと、期限の年、月、日、時、分の値が入っています。" src="to-do-app-form2.png">
+モバイル端末での合理的な使い勝手を提供するために、そして曖昧さを減らすために、 HTML フォームを作成することにしました。
 
-<ul>
- <li>ToDo リストのタイトルを入力するためのテキスト入力です。これはユーザーの入力作業の中で最も避けられないものです。</li>
- <li>期限の「時」と「分」を入力するための数値入力。 <code>type="number"</code> に対応しているブラウザーでは、小さな上下矢印の数字ピッカーが表示されます。モバイルプラットフォームでは、データを入力するためのテンキーが用意されていることが多く、これは便利です。他のプラットフォームでは、標準的なテキスト入力になりますが、これは問題ありません。</li>
- <li>期限の日、月、年を入力するための {{HTMLElement("select")}} 要素。これらの値は、ユーザーにとって最も曖昧な入力となるため (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?) 日は数値で、月は月名で、年は 4 桁の年号で記録されます。</li>
-</ul>
+![この ToDo アプリのフォームで、タスクのタイトルを入力するフィールドと、期限の年、月、日、時、分の値が入っています。](to-do-app-form2.png)
 
-<p>フォームの送信ボタンが押されると、 <code>addData()</code> 関数が実行され、次のように始まります。</p>
+- ToDo リストのタイトルを入力するためのテキスト入力です。これはユーザーの入力作業の中で最も避けられないものです。
+- 期限の「時」と「分」を入力するための数値入力。 `type="number"` に対応しているブラウザーでは、小さな上下矢印の数字ピッカーが表示されます。モバイルプラットフォームでは、データを入力するためのテンキーが用意されていることが多く、これは便利です。他のプラットフォームでは、標準的なテキスト入力になりますが、これは問題ありません。
+- 期限の日、月、年を入力するための {{HTMLElement("select")}} 要素。これらの値は、ユーザーにとって最も曖昧な入力となるため (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?) 日は数値で、月は月名で、年は 4 桁の年号で記録されます。
 
-<pre class="brush: js">function addData(e) {
+フォームの送信ボタンが押されると、 `addData()` 関数が実行され、次のように始まります。
+
+```js
+function addData(e) {
   e.preventDefault();
 
   if(title.value == '' || hours.value == null || minutes.value == null || day.value == '' || month.value == '' || year.value == null) {
-    note.innerHTML += '&lt;li&gt;Data not submitted — form incomplete.&lt;/li&gt;';
+    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
     return;
   }
-</pre>
+```
 
-<p>この部分では、フォームのフィールドにすべての情報が入力されているかどうかを確認します。記入されていない場合は、開発者通知ペイン (アプリの UI の左下を参照) にメッセージを表示して、何が起こっているのかをユーザーに伝え、機能を終了します。このステップは、主に HTML フォームの検証に対応していないブラウザーのためのものです (検証に対応しているブラウザーでは、 HTML で required 属性を使用して検証を強制しています)。</p>
+この部分では、フォームのフィールドにすべての情報が入力されているかどうかを確認します。記入されていない場合は、開発者通知ペイン (アプリの UI の左下を参照) にメッセージを表示して、何が起こっているのかをユーザーに伝え、機能を終了します。このステップは、主に HTML フォームの検証に対応していないブラウザーのためのものです (検証に対応しているブラウザーでは、 HTML で required 属性を使用して検証を強制しています)。
 
-<pre class="brush: js">   else {
+```js
+   else {
     var newItem = [
       {
         taskTitle: title.value,
@@ -67,29 +67,28 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 
     // report on the success of opening the transaction
     transaction.oncomplete = function(event) {
-      note.innerHTML += '&lt;li&gt;Transaction opened for task addition.&lt;/li&gt;';
+      note.innerHTML += '<li>Transaction opened for task addition.</li>';
     };
 
     transaction.onerror = function(event) {
-      note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
     };
 
     // create an object store on the transaction
     var objectStore = transaction.objectStore("toDoList");
 
     // add our newItem object to the object store
-    var request = objectStore.add(newItem[0]); </pre>
+    var request = objectStore.add(newItem[0]);
+```
 
-<p>この部分では、データベースへの挿入に必要な形式でデータを保存する <code>newItem</code> というオブジェクトを作成します。次の数行では、データベーストランザクションを開き、これが成功したか失敗したかをユーザーに通知するメッセージを提供しています。そして、新しい項目が追加される <code>objectStore</code> が生成されます。データオブジェクトの <code>notified</code> プロパティは、 To-do リストの項目の期限がまだ来ておらず、通知されていないことを示しています。これについては後ほど説明します。</p>
+この部分では、データベースへの挿入に必要な形式でデータを保存する `newItem` というオブジェクトを作成します。次の数行では、データベーストランザクションを開き、これが成功したか失敗したかをユーザーに通知するメッセージを提供しています。そして、新しい項目が追加される `objectStore` が生成されます。データオブジェクトの `notified` プロパティは、 To-do リストの項目の期限がまだ来ておらず、通知されていないことを示しています。これについては後ほど説明します。
 
-<div class="note">
-<p><strong>メモ:</strong> 変数 <code>db</code> には IndexedDB のデータベースインスタンスへの参照が格納されています。この変数の様々なプロパティを使用してデータを操作することができます。</p>
-</div>
+> **Note:** **メモ:** 変数 `db` には IndexedDB のデータベースインスタンスへの参照が格納されています。この変数の様々なプロパティを使用してデータを操作することができます。
 
-<pre class="brush: js">
+```js
     request.onsuccess = function(event) {
 
-      note.innerHTML += '&lt;li&gt;New item added to database.&lt;/li&gt;';
+      note.innerHTML += '<li>New item added to database.</li>';
 
       title.value = '';
       hours.value = null;
@@ -98,45 +97,53 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
       month.value = 'January';
       year.value = 2020;
     };
-  }</pre>
+  }
+```
 
-<p>次の部分では、新しい項目の追加が成功したことを示すログメッセージを作成し、次のタスクが入力できるようにフォームをリセットします。</p>
+次の部分では、新しい項目の追加が成功したことを示すログメッセージを作成し、次のタスクが入力できるようにフォームをリセットします。
 
-<pre class="brush: js">
+```js
   // update the display of data to show the newly added item, by running displayData() again.
   displayData();
-};</pre>
+};
+```
 
-<p>最後に <code>displayData()</code> 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。</p>
+最後に `displayData()` 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。
 
-<h3 id="Checking_whether_a_deadline_has_been_reached">期限に達したかどうかの確認</h3>
+### 期限に達したかどうかの確認
 
-<p>この時点でデータはデータベースに入っていますが、今度は期限に達しているかどうかをチェックしたいと思います。これを行うのが <code>checkDeadlines()</code> 関数です。</p>
+この時点でデータはデータベースに入っていますが、今度は期限に達しているかどうかをチェックしたいと思います。これを行うのが `checkDeadlines()` 関数です。
 
-<pre class="brush: js">function checkDeadlines() {
-  var now = new Date();</pre>
+```js
+function checkDeadlines() {
+  var now = new Date();
+```
 
-<p>まず、空の <code>Date</code> オブジェクトを作成して、現在の日付と時刻を取得します。簡単でしょう？ここからは少し複雑な話になります。</p>
+まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。簡単でしょう？ここからは少し複雑な話になります。
 
-<pre class="brush: js">  var minuteCheck  = now.getMinutes();
+```js
+  var minuteCheck  = now.getMinutes();
   var hourCheck    = now.getHours();
   var dayCheck     = now.getDate();
   var monthCheck   = now.getMonth();
   var yearCheck    = now.getFullYear();
-</pre>
+```
 
-<p><code>Date</code> オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは <code>getDate()</code> が必要、 <code>getDay()</code> は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (<code>getFullYear()</code> が必要、<code>getYear()</code> は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。</p>
+`Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
 
-<pre class="brush: js">   var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+```js
+   var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
   objectStore.openCursor().onsuccess = function(event) {
     var cursor = event.target.result;
 
-    if(cursor) {</pre>
+    if(cursor) {
+```
 
-<p>次にもう一つ、 IndexedDB の <code>objectStore</code> を生成し、 <code>openCursor()</code> メソッドを使用してカーソルを開きます。これは基本的に IndexedDB がストア内のすべての項目を反復処理する方法です。そして、カーソル内に有効な項目が残っている限り、カーソル内のすべての項目をループします。</p>
+次にもう一つ、 IndexedDB の `objectStore` を生成し、 `openCursor()` メソッドを使用してカーソルを開きます。これは基本的に IndexedDB がストア内のすべての項目を反復処理する方法です。そして、カーソル内に有効な項目が残っている限り、カーソル内のすべての項目をループします。
 
-<pre class="brush: js">      switch(cursor.value.month) {
+```js
+      switch(cursor.value.month) {
         case "January":
           var monthNumber = 0;
           break;
@@ -151,29 +158,33 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
           break;
         default:
           alert('Incorrect month entered in database.');
-      }</pre>
+      }
+```
 
-<p>まず最初に行うことは、データベースに保存されている月名を、 JavaScript が理解できる月の数値に変換することです。前に見たように、 JavaScript の Date オブジェクトは月の値を 0 から 11 までの数値として生成します。</p>
+まず最初に行うことは、データベースに保存されている月名を、 JavaScript が理解できる月の数値に変換することです。前に見たように、 JavaScript の Date オブジェクトは月の値を 0 から 11 までの数値として生成します。
 
-<pre class="brush: js">      if(+(cursor.value.hours) == hourCheck &amp;&amp;
-         +(cursor.value.minutes) == minuteCheck &amp;&amp;
-         +(cursor.value.day) == dayCheck &amp;&amp;
-         monthNumber == monthCheck &amp;&amp;
-         cursor.value.year == yearCheck &amp;&amp;
+```js
+      if(+(cursor.value.hours) == hourCheck &&
+         +(cursor.value.minutes) == minuteCheck &&
+         +(cursor.value.day) == dayCheck &&
+         monthNumber == monthCheck &&
+         cursor.value.year == yearCheck &&
          notified == "no") {
 
         // If the numbers all do match, run the createNotification()
         // function to create a system notification
         createNotification(cursor.value.taskTitle);
-      }</pre>
+      }
+```
 
-<p>IndexedDB に格納された値と照合したい現在の時刻と日付の部分がすべて組み立てられたので、いよいよチェックを実行します。ユーザーに期限切れを知らせる何らかの通知を行う前に、すべての値が一致している必要があります。</p>
+IndexedDB に格納された値と照合したい現在の時刻と日付の部分がすべて組み立てられたので、いよいよチェックを実行します。ユーザーに期限切れを知らせる何らかの通知を行う前に、すべての値が一致している必要があります。
 
-<p>ここでの <code>+</code> 演算子は、先頭にゼロが付いている数字を、先頭にゼロが付いていない同等の数字に変換します (例えば 09 -&gt; 9)。これが必要なのは、 JavaScript の Date の数値には先頭にゼロがないが、データにはあるかもしれないからです。</p>
+ここでの `+` 演算子は、先頭にゼロが付いている数字を、先頭にゼロが付いていない同等の数字に変換します (例えば 09 -> 9)。これが必要なのは、 JavaScript の Date の数値には先頭にゼロがないが、データにはあるかもしれないからです。
 
-<p><code>notified == "no"</code> のチェックは、 1 つの To-Do アイテムに対して 1 つの通知しか受け取れないようにするためのものです。各項目のオブジェクトに対して通知が発生すると、その <code>notification</code> プロパティが <code>"yes"</code> に設定されるので、次の繰り返しではこのチェックが通らないようにするために、 <code>createNotification()</code> 関数の中に次のようなコードを入れています (詳しくは <a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB の使用</a>を読んでください)。</p>
+`notified == "no"` のチェックは、 1 つの To-Do アイテムに対して 1 つの通知しか受け取れないようにするためのものです。各項目のオブジェクトに対して通知が発生すると、その `notification` プロパティが `"yes"` に設定されるので、次の繰り返しではこのチェックが通らないようにするために、 `createNotification()` 関数の中に次のようなコードを入れています (詳しくは [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)を読んでください)。
 
-<pre class="brush: js">    // now we need to update the value of notified to "yes" in this particular data object, so the
+```js
+    // now we need to update the value of notified to "yes" in this particular data object, so the
     // notification won't be set off on it again
 
     // first open up a transaction as usual
@@ -195,19 +206,24 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
       // when this new request succeeds, run the displayData() function again to update the display
       requestUpdate.onsuccess = function() {
         displayData();
-      }</pre>
+      }
+```
 
-<p>すべてのチェックが一致した場合は、 <code>createNotification()</code> 関数を実行して、ユーザーに通知を行います。</p>
+すべてのチェックが一致した場合は、 `createNotification()` 関数を実行して、ユーザーに通知を行います。
 
-<pre class="brush: js">       cursor.continue();
+```js
+       cursor.continue();
     }
   }
-}</pre>
+}
+```
 
-<p>この関数の最後の行では、カーソルが上に移動し、 IndexedDB に格納されている次のタスクに対して、上記の期限チェックの仕組みが実行されます。</p>
+この関数の最後の行では、カーソルが上に移動し、 IndexedDB に格納されている次のタスクに対して、上記の期限チェックの仕組みが実行されます。
 
-<h3 id="Keep_on_checking!">チェックし続ける</h3>
+### チェックし続ける
 
-<p>もちろん、上記の期限チェック機能を一度実行するだけでは意味がありません。すべての締切に達していないかどうかを常にチェックし続けたいのです。そのために、 <code>setInterval()</code> を使って 1 秒に 1 回 <code>checkDeadlines()</code> を実行します。</p>
+もちろん、上記の期限チェック機能を一度実行するだけでは意味がありません。すべての締切に達していないかどうかを常にチェックし続けたいのです。そのために、 `setInterval()` を使って 1 秒に 1 回 `checkDeadlines()` を実行します。
 
-<pre class="brush: js">setInterval(checkDeadlines, 1000);</pre>
+```js
+setInterval(checkDeadlines, 1000);
+```

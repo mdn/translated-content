@@ -7,36 +7,35 @@ tags:
   - Method
   - Element
   - Reference
-browser-compat: api.Element.replaceWith
 translation_of: Web/API/Element/replaceWith
 original_slug: Web/API/ChildNode/replaceWith
+browser-compat: api.Element.replaceWith
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.replaceWith()</strong></code> メソッドは、この <code>Element</code> を親の子リストの中で一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトに置換します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+**`Element.replaceWith()`** メソッドは、この `Element` を親の子リストの中で一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトに置換します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">replaceWith(...nodes)</pre>
+```js
+replaceWith(...nodes)
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-	<dt><code>nodes</code></dt>
-	<dd>一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトで置換します。</dd>
-</dl>
+- `nodes`
+  - : 一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトで置換します。
 
-<h3 id="Exceptions">例外</h3>
+### 例外
 
-<ul>
-	<li>{{domxref("HierarchyRequestError")}}: 階層の指定の位置にはノードを挿入できません。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: 階層の指定の位置にはノードを挿入できません。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Using_replaceWith"><code>replaceWith()</code> の使用</h3>
+### `replaceWith()` の使用
 
-<pre class="brush: js">const div = document.createElement("div");
+```js
+const div = document.createElement("div");
 const p = document.createElement("p");
 div.appendChild(p);
 const span = document.createElement("span");
@@ -44,30 +43,29 @@ const span = document.createElement("span");
 p.replaceWith(span);
 
 console.log(div.outerHTML);
-// "&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
-</pre>
+// "<div><span></span></div>"
+```
 
-<h3 id="replaceWith_is_unscopable"><code>replaceWith()</code> はスコーピングに非対応</h3>
+### `replaceWith()` はスコーピングに非対応
 
-<p><code>replaceWith()</code> メソッドは <code>with</code> 文でのスコーピングに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。</p>
+`replaceWith()` メソッドは `with` 文でのスコーピングに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。
 
-<pre class="brush: js">with(node) {
+```js
+with(node) {
   replaceWith("foo");
 }
-// ReferenceError: replaceWith is not defined </pre>
+// ReferenceError: replaceWith is not defined
+```
 
-<h2 id="Specification">仕様書</h2>
+## 仕様書
 
-<p>{{Specifications}}
+{{Specifications}}
 
-</p>
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Node.replaceChild()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("NodeList")}}

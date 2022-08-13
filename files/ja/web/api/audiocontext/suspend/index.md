@@ -3,27 +3,29 @@ title: AudioContext.suspend()
 slug: Web/API/AudioContext/suspend
 translation_of: Web/API/AudioContext/suspend
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p><code>suspend()</code>メソッドは、オーディオコンテキストの時間の流れを一時停止します。音声ハードウェアへのアクセスを一時的に停止し、処理に必要だったCPU/バッテリーの使用を減らすことが出来ます。これは、アプリケーションがしばらくの間オーディオを扱わない間に、音声ハードウェアに電源を供給しないようにしたいときに便利です。</p>
+`suspend()`メソッドは、オーディオコンテキストの時間の流れを一時停止します。音声ハードウェアへのアクセスを一時的に停止し、処理に必要だった CPU/バッテリーの使用を減らすことが出来ます。これは、アプリケーションがしばらくの間オーディオを扱わない間に、音声ハードウェアに電源を供給しないようにしたいときに便利です。
 
-<p>{{domxref("OfflineAudioContext")}}でこのメソッドを呼ぶと<code>INVALID_STATE_ERR</code>例外が発生します。</p>
+{{domxref("OfflineAudioContext")}}でこのメソッドを呼ぶと`INVALID_STATE_ERR`例外が発生します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 audioCtx.suspend().then(function() { ... });
-</pre>
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>voidで完了する{{jsxref("Promise")}}。コンテキストが既に閉じている場合、プロミスは失敗します。</p>
+void で完了する{{jsxref("Promise")}}。コンテキストが既に閉じている場合、プロミスは失敗します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次のスニペットは<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states デモ</a>(<a href="http://mdn.github.io/audiocontext-states/">すぐ実行</a>)から取ったものです。suspend/resumeボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし<code>running</code>ならば、<code>suspend()</code>が呼ばれます。<code>suspended</code>ならば、{{domxref("resume")}}が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。</p>
+次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし`running`ならば、`suspend()`が呼ばれます。`suspended`ならば、{{domxref("resume")}}が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。
 
-<pre class="brush: js">susresBtn.onclick = function() {
+```js
+susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -34,36 +36,19 @@ audioCtx.suspend().then(function() { ... });
     });
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<div>
+{{Compat("api.AudioContext.suspend")}}
 
+## 参考
 
-<p>{{Compat("api.AudioContext.suspend")}}</p>
-</div>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)

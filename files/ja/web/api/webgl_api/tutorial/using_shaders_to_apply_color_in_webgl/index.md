@@ -6,17 +6,18 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-<p><a href="/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">前のデモンストレーション</a>で正方形を作り出すことができたら、次に明らかなステップは、それに色をつけることです。これは、シェーダーを変更することで実現できます。</p>
+[前のデモンストレーション](/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)で正方形を作り出すことができたら、次に明らかなステップは、それに色をつけることです。これは、シェーダーを変更することで実現できます。
 
-<h2 id="Applying_color_to_the_vertices" name="Applying_color_to_the_vertices">頂点に色を適用する</h2>
+## 頂点に色を適用する
 
-<p>GL ではオブジェクトは頂点のセットを用いて構築され、各頂点は位置と色の情報を持っています。デフォルトでは、他のピクセルの色 (および位置など、その他の属性すべて) は線形補完法を用いて計算され、自動的になめらかなグラデーションを生成します。前に使用したバーテックスシェーダーでは頂点に色の情報を適用していませんでした。バーテックスシェーダーとフラグメントシェーダーで各ピクセルに白色を固定で割り当てており、正方形全体が白一色で描画されました。</p>
+GL ではオブジェクトは頂点のセットを用いて構築され、各頂点は位置と色の情報を持っています。デフォルトでは、他のピクセルの色 (および位置など、その他の属性すべて) は線形補完法を用いて計算され、自動的になめらかなグラデーションを生成します。前に使用したバーテックスシェーダーでは頂点に色の情報を適用していませんでした。バーテックスシェーダーとフラグメントシェーダーで各ピクセルに白色を固定で割り当てており、正方形全体が白一色で描画されました。
 
-<p>例えば、四隅が異なる色 (赤、青、緑、白) である正方形にグラデーションを作成したいとします。始めに行うことは、4 つの頂点にこれらの色を設定することです。これを行うには、まず頂点の色の配列を作成し、次にその配列を WebGL のバッファに格納します。これらは、以下に挙げるコードを <code>initBuffers()</code> 関数に追加することで実行します:</p>
+例えば、四隅が異なる色 (赤、青、緑、白) である正方形にグラデーションを作成したいとします。始めに行うことは、4 つの頂点にこれらの色を設定することです。これを行うには、まず頂点の色の配列を作成し、次にその配列を WebGL のバッファに格納します。これらは、以下に挙げるコードを `initBuffers()` 関数に追加することで実行します:
 
-<pre class="brush: js">  var colors = [
+```js
+  var colors = [
     1.0,  1.0,  1.0,  1.0,    // 白
     1.0,  0.0,  0.0,  1.0,    // 赤
     0.0,  1.0,  0.0,  1.0,    // 緑
@@ -27,13 +28,14 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
   gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
 }
-</pre>
+```
 
-<p>このコードは 4 つの値が 4 組含まれている JavaScript の配列を作成することから始まります。各組は、それぞれの頂点の色を示します。続いてこれらの色情報を格納する WebGL バッファを新たに割り当てます。そして、配列を WebGL 浮動小数点数に変換してバッファに格納します。</p>
+このコードは 4 つの値が 4 組含まれている JavaScript の配列を作成することから始まります。各組は、それぞれの頂点の色を示します。続いてこれらの色情報を格納する WebGL バッファを新たに割り当てます。そして、配列を WebGL 浮動小数点数に変換してバッファに格納します。
 
-<p>これらの色情報を実際に使うためには、カラーバッファから適切な色情報を取り出すようにバーテックスシェーダーを変更しなければなりません:</p>
+これらの色情報を実際に使うためには、カラーバッファから適切な色情報を取り出すようにバーテックスシェーダーを変更しなければなりません:
 
-<pre class="brush: html">    &lt;script id="shader-vs" type="x-shader/x-vertex"&gt;
+```html
+    <script id="shader-vs" type="x-shader/x-vertex">
       attribute vec3 aVertexPosition;
       attribute vec4 aVertexColor;
 
@@ -46,51 +48,55 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
         gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
         vColor = aVertexColor;
       }
-    &lt;/script&gt;
-</pre>
+    </script>
+```
 
-<p>ここでの各頂点に関する重要な違いは、色の配列内で対応する値を、頂点の色情報として設定していることです。</p>
+ここでの各頂点に関する重要な違いは、色の配列内で対応する値を、頂点の色情報として設定していることです。
 
-<h2 id="Coloring_the_fragments" name="Coloring_the_fragments">フラグメントに色をつける</h2>
+## フラグメントに色をつける
 
-<p>復習として、以前はフラグメントシェーダーを以下のようにしていました:</p>
+復習として、以前はフラグメントシェーダーを以下のようにしていました:
 
-<pre class="brush: html">    &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
+```html
+    <script id="shader-fs" type="x-shader/x-fragment">
       void main(void) {
         gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
       }
-    &lt;/script&gt;
-</pre>
+    </script>
+```
 
-<p>各ピクセルが補完された色を取り込むようにするため、<code>vColor</code> 変数から値を取り出すようにシェーダーを変更しなければなりません:</p>
+各ピクセルが補完された色を取り込むようにするため、`vColor` 変数から値を取り出すようにシェーダーを変更しなければなりません:
 
-<pre class="brush: html">    &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
+```html
+    <script id="shader-fs" type="x-shader/x-fragment">
     	varying lowp vec4 vColor;
 
       void main(void) {
         gl_FragColor = vColor;
       }
-    &lt;/script&gt;
-</pre>
+    </script>
+```
 
-<p>これは単純な変更です。これにより各フラグメントは固定値ではなく、頂点からの相対的な位置に基づいて補完された色情報を受け取ります。</p>
+これは単純な変更です。これにより各フラグメントは固定値ではなく、頂点からの相対的な位置に基づいて補完された色情報を受け取ります。
 
-<h2 id="Drawing_using_the_colors" name="Drawing_using_the_colors">色情報を用いて描画する</h2>
+## 色情報を用いて描画する
 
-<p>次に、シェーダープログラムの色属性を初期化するコードを <code>initShaders()</code> ルーチンに追加しなければなりません:</p>
+次に、シェーダープログラムの色属性を初期化するコードを `initShaders()` ルーチンに追加しなければなりません:
 
-<pre class="brush: js">  vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+```js
+  vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
   gl.enableVertexAttribArray(vertexColorAttribute);
-</pre>
+```
 
-<p>そして、実際に色情報を用いて正方形を描画するように drawScene() を変更することが可能になります:</p>
+そして、実際に色情報を用いて正方形を描画するように drawScene() を変更することが可能になります:
 
-<pre class="brush: js">  gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
+```js
+  gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
   gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
-</pre>
+```
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510)}}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510)}}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3">コードを確認する</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample3/">新しいページでデモを開く</a></p>
+[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample3/)
 
-<div>{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}</div>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

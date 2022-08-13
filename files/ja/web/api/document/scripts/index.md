@@ -11,49 +11,36 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/scripts
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} インターフェイスの <strong><code>scripts</code></strong> プロパティは、<span class="seosummary">文書中の {{HTMLElement("script")}} 要素のリストを返します。</span>返されるオブジェクトは単一の {{domxref("HTMLCollection")}} オブジェクトです。</p>
+{{domxref("Document")}} インターフェイスの **`scripts`** プロパティは、文書中の {{HTMLElement("script")}} 要素のリストを返します。返されるオブジェクトは単一の {{domxref("HTMLCollection")}} オブジェクトです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>scriptList</var> = <var>document</var>.scripts;
-</pre>
+    var scriptList = document.scripts;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("HTMLCollection")}} です。これを使用して、リスト中のすべての要素を配列のように取得することができます。</p>
+{{domxref("HTMLCollection")}} です。これを使用して、リスト中のすべての要素を配列のように取得することができます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>ページ内の {{HTMLElement("script")}} 要素の存在を確認する例を以下に示します。</p>
+ページ内の {{HTMLElement("script")}} 要素の存在を確認する例を以下に示します。
 
-<pre class="brush:js">let scripts = document.scripts;
+```js
+let scripts = document.scripts;
 
 if (scripts.length) {
   alert("このページには script 要素があります。");
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                                 | 備考 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
+| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>{{Compat("api.Document.scripts")}}</div>
+{{Compat("api.Document.scripts")}}

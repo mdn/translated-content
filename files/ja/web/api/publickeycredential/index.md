@@ -12,43 +12,38 @@ tags:
   - インターフェイス
 translation_of: Web/API/PublicKeyCredential
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><code><strong>PublicKeyCredential</strong></code> インターフェイスは、パスワードの代わりにフィッシングやデータ消去に耐性のある非対称の鍵ペアを使用してサービスにログインするための資格情報である、公開鍵と秘密鍵のペアについての情報を提供します。これは {{domxref("Credential")}} を継承しており、 <a href="/ja/docs/Web/API/Web_Authentication_API">Web Authentication API</a> が <a href="/ja/docs/Web/API/Credential_Management_API">Credential Management API</a> へ拡張された際に作成されました。 {{domxref("Credential")}} を継承している他のインターフェイスとしては、 {{domxref("PasswordCredential")}} や {{domxref("FederatedCredential")}} があります。</p>
+**`PublicKeyCredential`** インターフェイスは、パスワードの代わりにフィッシングやデータ消去に耐性のある非対称の鍵ペアを使用してサービスにログインするための資格情報である、公開鍵と秘密鍵のペアについての情報を提供します。これは {{domxref("Credential")}} を継承しており、 [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) が [Credential Management API](/ja/docs/Web/API/Credential_Management_API) へ拡張された際に作成されました。 {{domxref("Credential")}} を継承している他のインターフェイスとしては、 {{domxref("PasswordCredential")}} や {{domxref("FederatedCredential")}} があります。
 
-<div class="note">
-<p><strong>メモ:</strong> このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。</p>
-</div>
+> **Note:** **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt><code>PublicKeyCredential.type</code> {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>{{domxref("Credential")}} から継承しています。 <code>PublicKeyCredential</code> の場合は、常に <code>public-key</code> に設定されています。</dd>
- <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>{{domxref("Credential")}} から継承しており、 {{domxref("PublicKeyCredential.rawId")}} の <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url 符号化</a>になるようオーバーライドしています。</dd>
- <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>{{domxref("ArrayBuffer")}} 型で、この <code>PublicKeyCredential</code> のグローバルに固有な識別子を保持します。この識別子は今後の {{domxref("CredentialsContainer.get")}} の呼び出しにおいて、資格情報を検索するのに使用することができます。</dd>
- <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
- <dd>{{domxref("AuthenticatorResponse")}} オブジェクトのインスタンスです。これは <code>PublicKeyCredential</code> が {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} の呼び出しの結果だった場合であった場合は {{domxref("AuthenticatorAttestationResponse")}} 型に、 <code>PublicKeyCredential</code> が {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} の呼び出しの結果であった場合は {{domxref("AuthenticatorAssertionResponse")}} 型になります。</dd>
-</dl>
+- `PublicKeyCredential.type` {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : {{domxref("Credential")}} から継承しています。 `PublicKeyCredential` の場合は、常に `public-key` に設定されています。
+- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : {{domxref("Credential")}} から継承しており、 {{domxref("PublicKeyCredential.rawId")}} の [base64url 符号化](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)になるようオーバーライドしています。
+- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : {{domxref("ArrayBuffer")}} 型で、この `PublicKeyCredential` のグローバルに固有な識別子を保持します。この識別子は今後の {{domxref("CredentialsContainer.get")}} の呼び出しにおいて、資格情報を検索するのに使用することができます。
+- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+  - : {{domxref("AuthenticatorResponse")}} オブジェクトのインスタンスです。これは `PublicKeyCredential` が {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} の呼び出しの結果だった場合であった場合は {{domxref("AuthenticatorAttestationResponse")}} 型に、 `PublicKeyCredential` が {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} の呼び出しの結果であった場合は {{domxref("AuthenticatorAssertionResponse")}} 型になります。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("PublicKeyCredential.getClientExtensionResults()")}}{{securecontext_inline}}</dt>
- <dd>何らかの拡張機能がリクエストされた場合、このメソッドはその拡張機能が処理した結果を返します。</dd>
- <dt>{{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}{{securecontext_inline}}</dt>
- <dd>静的メソッドで、認証機器が所属するプラットフォームがユーザーを<em>検証</em>する能力を持っているならば <code>true</code> で解決する {{jsxref("Promise")}} を返します。現在の実装状況では、このメソッドは <a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication">Windows Hello</a> がシステムで利用可能な場合のみ <code>true</code> で解決します。</dd>
-</dl>
+- {{domxref("PublicKeyCredential.getClientExtensionResults()")}}{{securecontext_inline}}
+  - : 何らかの拡張機能がリクエストされた場合、このメソッドはその拡張機能が処理した結果を返します。
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}{{securecontext_inline}}
+  - : 静的メソッドで、認証機器が所属するプラットフォームがユーザーを*検証*する能力を持っているならば `true` で解決する {{jsxref("Promise")}} を返します。現在の実装状況では、このメソッドは [Windows Hello](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication) がシステムで利用可能な場合のみ `true` で解決します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Creating_a_new_instance_of_PublicKeyCredential" name="Creating_a_new_instance_of_PublicKeyCredential">PublicKeyCredential の新しいインスタンスを生成</h3>
+### PublicKeyCredential の新しいインスタンスを生成
 
-<p>ここでは、 {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} を用いて新しい資格情報を生成します。</p>
+ここでは、 {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} を用いて新しい資格情報を生成します。
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -73,13 +68,15 @@ navigator.credentials.create({ publicKey })
     var clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h3 id="Getting_an_existing_instance_of_PublicKeyCredential" name="Getting_an_existing_instance_of_PublicKeyCredential">PublicKeyCredential の既存のインスタンスを取得</h3>
+### PublicKeyCredential の既存のインスタンスを取得
 
-<p>ここでは、 {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} を用いて認証機器から既存の資格情報を読み取ります。</p>
+ここでは、 {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} を用いて認証機器から既存の資格情報を読み取ります。
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
@@ -90,34 +87,18 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+| 仕様書                                                                                                   | 状態                         | 備考     |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('WebAuthn','#iface-pkcredential','PublicKeyCredential interface')}} | {{Spec2('WebAuthn')}} | 初回定義 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#iface-pkcredential','PublicKeyCredential interface')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat("api.PublicKeyCredential")}}
 
-<p>{{Compat("api.PublicKeyCredential")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>親インターフェイスの {{domxref("Credential")}}</li>
-</ul>
+- 親インターフェイスの {{domxref("Credential")}}

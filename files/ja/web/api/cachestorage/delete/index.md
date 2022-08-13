@@ -12,35 +12,33 @@ tags:
   - delete
 translation_of: Web/API/CacheStorage/delete
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("CacheStorage")}} インターフェイスの <strong><code>delete()</code></strong> メソッドは、<code>cacheName</code> に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、<code>true</code> に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} オブジェクトが見つからない場合、<code>false</code> に解決されます。</span></p>
+{{domxref("CacheStorage")}} インターフェイスの **`delete()`** メソッドは、`cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、`true` に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} オブジェクトが見つからない場合、`false` に解決されます。
 
-<p>グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して <code>CacheStorage</code> にアクセスできます。</p>
+グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">caches.delete(<em>cacheName</em>).then(function(<em>boolean</em>) {
-  // キャッシュが削除されました
-});
-</pre>
+    caches.delete(cacheName).then(function(boolean) {
+      // キャッシュが削除されました
+    });
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>cacheName</code></dt>
- <dd>削除するキャッシュの名前。</dd>
-</dl>
+- `cacheName`
+  - : 削除するキャッシュの名前。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("Cache")}} オブジェクトが見つかって削除された場合は <code>true</code>、そうでない場合は <code>false</code> に解決される {{jsxref("Promise")}}。</p>
+{{domxref("Cache")}} オブジェクトが見つかって削除された場合は `true`、そうでない場合は `false` に解決される {{jsxref("Promise")}}。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードスニペットでは、<code>activate</code> イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列（<code>cachesToKeep</code>）があります。 {{domxref("CacheStorage.keys")}} を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、<code>delete()</code> を使用して削除します。</p>
+このコードスニペットでは、`activate` イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列（`cachesToKeep`）があります。 {{domxref("CacheStorage.keys")}} を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、`delete()` を使用して削除します。
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cachesToKeep = ['v2'];
 
   event.waitUntil(
@@ -52,35 +50,21 @@ translation_of: Web/API/CacheStorage/delete
       }));
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | 状態                                 | コメント |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat("api.CacheStorage.delete")}}
 
+## 関連情報
 
-<p>{{Compat("api.CacheStorage.delete")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

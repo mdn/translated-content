@@ -10,51 +10,34 @@ tags:
   - グラデーション
 translation_of: Web/API/CanvasGradient
 ---
-<p><code><strong>CanvasGradient</strong></code> インターフェイスは、グラデーションを記述する<a href="https://en.wikipedia.org/wiki/Opaque_data_type">不透明オブジェクト</a>を表します。 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} または {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} メソッドから返されます。</p>
+**`CanvasGradient`** インターフェイスは、グラデーションを記述する[不透明オブジェクト](https://en.wikipedia.org/wiki/Opaque_data_type)を表します。 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} または {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} メソッドから返されます。
 
-<p>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} として使用することができます。</p>
+{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} として使用することができます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>不透明オブジェクトとして、公開されているプロパティはありません。</em></p>
+_不透明オブジェクトとして、公開されているプロパティはありません。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em>継承されたメソッドはありません。</em></p>
+_継承されたメソッドはありません。_
 
-<dl>
- <dt>{{domxref("CanvasGradient.addColorStop()")}}</dt>
- <dd><code>offset</code> および <code>color</code> で定義される、グラデーションの新しい停止点を追加します。オフセットが <code>0</code> と <code>1</code> の間でなければ <code>INDEX_SIZE_ERR</code> が発生し、色が CSS の {{cssxref("&lt;color&gt;")}} として解釈できない場合は <code>SYNTAX_ERR</code> が発生します。</dd>
-</dl>
+- {{domxref("CanvasGradient.addColorStop()")}}
+  - : `offset` および `color` で定義される、グラデーションの新しい停止点を追加します。オフセットが `0` と `1` の間でなければ `INDEX_SIZE_ERR` が発生し、色が CSS の {{cssxref("&lt;color&gt;")}} として解釈できない場合は `SYNTAX_ERR` が発生します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.CanvasGradient")}}</p>
+{{Compat("api.CanvasGradient")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}} のクリエイターメソッド</li>
- <li>{{HTMLElement("canvas")}} 要素と関連する {{domxref("HTMLCanvasElement")}} インターフェイス</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}} のクリエイターメソッド
+- {{HTMLElement("canvas")}} 要素と関連する {{domxref("HTMLCanvasElement")}} インターフェイス
 
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}

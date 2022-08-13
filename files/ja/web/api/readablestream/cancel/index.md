@@ -10,39 +10,36 @@ tags:
   - cancel
 translation_of: Web/API/ReadableStream/cancel
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p class="summary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>cancel()</code></strong> メソッドは、関連付けられたストリームをキャンセルします。 提供された <code>reason</code> パラメーターは、基になるソースに与えられ、使用する場合と使用しない場合があります。</p>
+{{domxref("ReadableStream")}} インターフェイスの **`cancel()`** メソッドは、関連付けられたストリームをキャンセルします。 提供された `reason` パラメーターは、基になるソースに与えられ、使用する場合と使用しない場合があります。
 
-<p>キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入れられている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、{{domxref("ReadableStreamDefaultController.close()")}} を使用します。</p>
+キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入れられている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、{{domxref("ReadableStreamDefaultController.close()")}} を使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>promise</em> = <em>readableStream</em>.cancel(reason);</pre>
+    var promise = readableStream.cancel(reason);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>reason</dt>
- <dd>人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。</dd>
-</dl>
+- reason
+  - : 人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref("Promise")}}。 <code>reason</code> パラメーターで指定された値で満たされます。</p>
+{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>キャンセルしようとしているストリームは {{domxref("ReadableStream")}} ではないか、ロックされています。</dd>
-</dl>
+- TypeError
+  - : キャンセルしようとしているストリームは {{domxref("ReadableStream")}} ではないか、ロックされています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>Jake Archibald による<a href="https://jsbin.com/gameboy/edit?js,console">フェッチのキャンセル</a>の例では、ストリームを使用して、チャンクごとに WHATWG HTML 仕様をフェッチします。 各チャンクで文字列 "service workers" を検索します。 検索用語が見つかると、<code>cancel()</code> を使用してストリームをキャンセルします — 仕事は終了しているため、ストリームは不要になります。</p>
+Jake Archibald による[フェッチのキャンセル](https://jsbin.com/gameboy/edit?js,console)の例では、ストリームを使用して、チャンクごとに WHATWG HTML 仕様をフェッチします。 各チャンクで文字列 "service workers" を検索します。 検索用語が見つかると、`cancel()` を使用してストリームをキャンセルします — 仕事は終了しているため、ストリームは不要になります。
 
-<pre class="brush: js">var searchTerm = "service workers";
+```js
+var searchTerm = "service workers";
 // 一致した結果の両側を表示する文字数
 var contextBefore = 30;
 var contextAfter = 30;
@@ -51,7 +48,7 @@ var url = 'https://html.spec.whatwg.org/';
 
 console.log(`'${searchTerm}' を '${url}' で検索`);
 
-fetch(url).then(response =&gt; {
+fetch(url).then(response => {
   console.log('ヘッダーを受信しました');
 
   var decoder = new TextDecoder();
@@ -82,7 +79,7 @@ fetch(url).then(response =&gt; {
     if (matchFoundAt === -1) {
       buffer = buffer.slice(-bufferSize);
     }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length &gt;= contextAfter) {
+    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
       console.log("これが一致したものです:")
       console.log(buffer.slice(
         Math.max(0, matchFoundAt - contextBefore),
@@ -99,28 +96,18 @@ fetch(url).then(response =&gt; {
     // 読み続けます
     return reader.read().then(process);
   });
-}).catch(err =&gt; {
+}).catch(err => {
   console.log("何かがおかしかった。 詳細については、開発ツールを参照してください。 応答に CORS ヘッダーがありませんか？");
   throw err;
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-cancel","cancel()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                             | 状態                         | コメント |
+| ---------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-cancel","cancel()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStream.cancel")}}</p>
+{{Compat("api.ReadableStream.cancel")}}

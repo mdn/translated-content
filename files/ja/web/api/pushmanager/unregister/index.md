@@ -10,41 +10,38 @@ tags:
   - メソッド
 translation_of: Web/API/PushManager/unregister
 ---
-<div>{{deprecated_header}}{{ ApiRef("Push API")}}</div>
+{{deprecated_header}}{{ ApiRef("Push API")}}
 
-<p><strong><code>unregister()</code></strong> メソッドは、システムに特定の端点の登録を解除して削除するよう依頼するために使用していました。更新された API では、加入は {{domxref("PushSubscription.unsubscribe()")}} メソッドで登録解除することができます。</p>
+**`unregister()`** メソッドは、システムに特定の端点の登録を解除して削除するよう依頼するために使用していました。更新された API では、加入は {{domxref("PushSubscription.unsubscribe()")}} メソッドで登録解除することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>request</var> = navigator.push.unregister(<var>pushEndpoint</var>);</pre>
+    var request = navigator.push.unregister(pushEndpoint);
 
-<h3 id="Properties" name="Properties">プロパティ</h3>
+### プロパティ
 
-<dl>
- <dt>pushEndpoint</dt>
- <dd>登録解除する端点です。</dd>
-</dl>
+- pushEndpoint
+  - : 登録解除する端点です。
 
-<h3 id="Return" name="Return">返値</h3>
+### 返値
 
-<p>{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。</p>
+{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-<p>メソッドの呼び出しが成功した場合、リクエストの <code>result</code> が登録解除された端点を表す <a href="#pushregistration">PushRegistration</a> オブジェクトになります。</p>
+メソッドの呼び出しが成功した場合、リクエストの `result` が登録解除された端点を表す [PushRegistration](#pushregistration) オブジェクトになります。
 
-<h3 id="PushRegistration">PushRegistration</h3>
+### PushRegistration
 
-<p>このオブジェクトは無名の JavaScript オブジェクトで、以下のプロパティがあります。</p>
+このオブジェクトは無名の JavaScript オブジェクトで、以下のプロパティがあります。
 
-<dl>
- <dt><code>pushEndpoint</code></dt>
- <dd>端点の URL を表す文字列です。</dd>
- <dt><code>version</code></dt>
- <dd>プッシュ通知の端点の現在のバージョンです。</dd>
-</dl>
+- `pushEndpoint`
+  - : 端点の URL を表す文字列です。
+- `version`
+  - : プッシュ通知の端点の現在のバージョンです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">var req = navigator.push.unregister(pushEndpoint);
+```js
+var req = navigator.push.unregister(pushEndpoint);
 
 req.onsuccess = function(e) {
   var endpoint = req.result;
@@ -54,34 +51,19 @@ req.onsuccess = function(e) {
 req.onerror = function(e) {
   debug("Error unregistering the endpoint: " + JSON.stringify(e));
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Push API')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td><code>PushManager</code> インターフェイスを定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                           | 状態                         | 備考                                 |
+| -------------------------------- | ---------------------------- | ------------------------------------ |
+| {{SpecName('Push API')}} | {{Spec2('Push API')}} | `PushManager` インターフェイスを定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PushManager.register")}}</p>
+{{Compat("api.PushManager.register")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("PushManager")}}</li>
- <li>{{domxref("DOMRequest")}}</li>
-</ul>
+- {{domxref("PushManager")}}
+- {{domxref("DOMRequest")}}

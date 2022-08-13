@@ -13,62 +13,39 @@ tags:
   - Video
 translation_of: Web/API/TrackEvent/TrackEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><code>TrackEvent()</code> コンストラクタは、トラックのリスト（{{domxref("AudioTrackList")}}、{{domxref("VideoTrackList")}}、または {{domxref("TextTrackList")}}）で発生したイベントを記述する新しい {{domxref("TrackEvent")}} オブジェクトを作成して返します。</span></p>
+`TrackEvent()` コンストラクタは、トラックのリスト（{{domxref("AudioTrackList")}}、{{domxref("VideoTrackList")}}、または {{domxref("TextTrackList")}}）で発生したイベントを記述する新しい {{domxref("TrackEvent")}} オブジェクトを作成して返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>trackEvent</em> = new TrackEvent(<em>type</em>, <em>eventInfo</em>);</pre>
+    trackEvent = new TrackEvent(type, eventInfo);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>type</code></dt>
- <dd>オブジェクトによって記述されるトラックイベントの種類: <code>"addtrack"</code> または <code>"removetrack"</code>。</dd>
- <dt><code>eventInfo</code> {{optional_inline}}</dt>
- <dd>新しいイベントを構成する追加情報を提供するオプションの辞書。 次のフィールドを自由に組み合わせて含めることができます。
- <dl>
-  <dt><code>track</code> {{optional_inline}}</dt>
-  <dd>イベントが参照するトラック。 これはデフォルトでは <code>null</code> ですが、トラックの種類に応じて {{domxref("VideoTrack")}}、{{domxref("AudioTrack")}}、または {{domxref("TextTrack")}} に設定する必要があります。</dd>
-  <dt><code>bubbles</code> {{optional_inline}}</dt>
-  <dd>イベントをバブリングするかどうかを示す Boolean。</dd>
-  <dt><code>cancelable</code> {{optional_inline}}</dt>
-  <dd>イベントをキャンセルできるかどうかを示す Boolean。</dd>
-  <dt><code>composed</code> {{optional_inline}}</dt>
-  <dd>イベントがシャドウルートの外側でリスナーをトリガーするかどうかを示す Boolean。 詳細については {{domxref("Event.composed")}} をご覧ください。</dd>
- </dl>
- </dd>
-</dl>
+- `type`
+  - : オブジェクトによって記述されるトラックイベントの種類: `"addtrack"` または `"removetrack"`。
+- `eventInfo` {{optional_inline}}
+  - : 新しいイベントを構成する追加情報を提供するオプションの辞書。 次のフィールドを自由に組み合わせて含めることができます。_ `track` {{optional_inline}}
+    _ : イベントが参照するトラック。 これはデフォルトでは `null` ですが、トラックの種類に応じて {{domxref("VideoTrack")}}、{{domxref("AudioTrack")}}、または {{domxref("TextTrack")}} に設定する必要があります。
+    - `bubbles` {{optional_inline}}
+      - : イベントをバブリングするかどうかを示す Boolean。
+    - `cancelable` {{optional_inline}}
+      - : イベントをキャンセルできるかどうかを示す Boolean。
+    - `composed` {{optional_inline}}
+      - : イベントがシャドウルートの外側でリスナーをトリガーするかどうかを示す Boolean。 詳細については {{domxref("Event.composed")}} をご覧ください。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>新しく作成された {{domxref("TrackEvent")}} オブジェクト。 コンストラクタへの入力の説明に従って初期化されます。</p>
+新しく作成された {{domxref("TrackEvent")}} オブジェクト。 コンストラクタへの入力の説明に従って初期化されます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#dom-trackevent-trackevent", "TrackEvent()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "semantics-embedded-content.html#dom-trackevent-trackevent", "TrackEvent()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                     | 状態                             | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-trackevent", "TrackEvent()")}}                         | {{Spec2('HTML WHATWG')}} | 初期定義 |
+| {{SpecName('HTML5 W3C', "semantics-embedded-content.html#dom-trackevent-trackevent", "TrackEvent()")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.TrackEvent.TrackEvent")}}</p>
+{{Compat("api.TrackEvent.TrackEvent")}}

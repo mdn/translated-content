@@ -9,72 +9,53 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><strong><code>FormData</code></strong> インターフェイスは、{{domxref("XMLHttpRequest.send()")}} メソッドを用いることで簡単に送信が可能な、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは、エンコーディングタイプを <code>"multipart/form-data"</code> に設定した場合にフォームが使用するものと同じ形式を使用します。</p>
+**`FormData`** インターフェイスは、{{domxref("XMLHttpRequest.send()")}} メソッドを用いることで簡単に送信が可能な、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは、エンコーディングタイプを `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。
 
-<p><code>FormData</code> を実装したオブジェクトは、{{domxref('FormData.entries()', 'entries()')}} の代わりに {{jsxref("Statements/for...of", "for...of")}} 構造の内部で直接使用できます。<code>for (var p of myFormData)</code> は <code>for (var p of myFormData.entries())</code> と等価です。</p>
+`FormData` を実装したオブジェクトは、{{domxref('FormData.entries()', 'entries()')}} の代わりに {{jsxref("Statements/for...of", "for...of")}} 構造の内部で直接使用できます。`for (var p of myFormData)` は `for (var p of myFormData.entries())` と等価です。
 
-<div class="note">
-<p><strong>注記</strong>: この機能は <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> で使用できます。</p>
-</div>
+> **Note:** **注記**: この機能は [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
-<h2 id="Constructor" name="Constructor">コンストラクタ</h2>
+## コンストラクタ
 
-<dl>
- <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>新しい <code>FormData</code> オブジェクトを作成します。</dd>
-</dl>
+- {{domxref("FormData.FormData","FormData()")}}
+  - : 新しい `FormData` オブジェクトを作成します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("FormData.append()")}}</dt>
- <dd><code>FormData</code> オブジェクト内の既存のキーに新たな値を追加するか、キーが存在しない場合はキーを追加します。</dd>
- <dt>{{domxref("FormData.delete()")}}</dt>
- <dd><code>FormData</code> オブジェクトからキーと値のペアを削除します。</dd>
- <dt>{{domxref("FormData.entries()")}}</dt>
- <dd>オブジェクトに含まれているすべてのキーと値のペアを走査できるようにするため、{{jsxref("Iteration_protocols","iterator")}} を返します。</dd>
- <dt>{{domxref("FormData.get()")}}</dt>
- <dd><code>FormData</code> オブジェクトから、指定したキーに関連付けられた最初の値を返します。</dd>
- <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd><code>FormData</code> から、指定したキーに関連付けられたすべての値の配列を返します。</dd>
- <dt>{{domxref("FormData.has()")}}</dt>
- <dd><code>FormData</code> オブジェクトがあるキーと値のペアを持っているかを示す真偽値を返します。</dd>
- <dt>{{domxref("FormData.keys()")}}</dt>
- <dd>オブジェクト内に存在するキーと値のペアから、すべてのキーを走査できるようにするための {{jsxref("Iteration_protocols", "iterator")}} を返します。</dd>
- <dt>{{domxref("FormData.set()")}}</dt>
- <dd><code>FormData</code> オブジェクト内の既存のキーに新たな値を設定するか、キーが存在しない場合はキーと値のペアを追加します。</dd>
- <dt>{{domxref("FormData.values()")}}</dt>
- <dd>オブジェクト内に存在するキーと値のペアから、すべての値を走査できるようにするための {{jsxref("Iteration_protocols", "iterator")}} を返します。</dd>
-</dl>
+- {{domxref("FormData.append()")}}
+  - : `FormData` オブジェクト内の既存のキーに新たな値を追加するか、キーが存在しない場合はキーを追加します。
+- {{domxref("FormData.delete()")}}
+  - : `FormData` オブジェクトからキーと値のペアを削除します。
+- {{domxref("FormData.entries()")}}
+  - : オブジェクトに含まれているすべてのキーと値のペアを走査できるようにするため、{{jsxref("Iteration_protocols","iterator")}} を返します。
+- {{domxref("FormData.get()")}}
+  - : `FormData` オブジェクトから、指定したキーに関連付けられた最初の値を返します。
+- {{domxref("FormData.getAll()")}}
+  - : `FormData` から、指定したキーに関連付けられたすべての値の配列を返します。
+- {{domxref("FormData.has()")}}
+  - : `FormData` オブジェクトがあるキーと値のペアを持っているかを示す真偽値を返します。
+- {{domxref("FormData.keys()")}}
+  - : オブジェクト内に存在するキーと値のペアから、すべてのキーを走査できるようにするための {{jsxref("Iteration_protocols", "iterator")}} を返します。
+- {{domxref("FormData.set()")}}
+  - : `FormData` オブジェクト内の既存のキーに新たな値を設定するか、キーが存在しない場合はキーと値のペアを追加します。
+- {{domxref("FormData.values()")}}
+  - : オブジェクト内に存在するキーと値のペアから、すべての値を走査できるようにするための {{jsxref("Iteration_protocols", "iterator")}} を返します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#interface-formdata','FormData')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>XHR 仕様書で FormData を定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 策定状況                             | コメント                     |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------- |
+| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | XHR 仕様書で FormData を定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.FormData")}}</p>
+{{Compat("api.FormData")}}
 
-<h2 id="See_also" name="See_also">関連文書</h2>
+## 関連文書
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の利用</a></li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects">FormData オブジェクトの利用</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [XMLHttpRequest の利用](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [FormData オブジェクトの利用](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects)
+- {{HTMLElement("Form")}}

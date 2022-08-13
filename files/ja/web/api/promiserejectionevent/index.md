@@ -13,74 +13,55 @@ tags:
   - イベント
 translation_of: Web/API/PromiseRejectionEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>PromiseRejectionEvent</code></strong> インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。</span>これらのイベントは、測定やデバッグ目的に使用すると特に有益です。</p>
+**`PromiseRejectionEvent`** インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}</dt>
- <dd>指定したパラメータで <code>PromiseRejectionEvent</code> イベントを生成する。</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
+  - : 指定したパラメータで `PromiseRejectionEvent` イベントを生成する。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>親である {{domxref("Event")}} のプロパティも継承しています。</em></p>
+_親である {{domxref("Event")}} のプロパティも継承しています。_
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}</dt>
- <dd>拒否された JavaScript の {{jsxref("Promise")}}。</dd>
- <dt>{{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>{{jsxref("Promise.reject()")}} に渡される Promise が拒否された理由を示す値、または {{jsxref("Object")}}。</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+  - : 拒否された JavaScript の {{jsxref("Promise")}}。
+- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+  - : {{jsxref("Promise.reject()")}} に渡される Promise が拒否された理由を示す値、または {{jsxref("Object")}}。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em>このインターフェイスには固有のメソッドはありません。親である {{domxref("Event")}} からメソッドを継承しています。</em></p>
+_このインターフェイスには固有のメソッドはありません。親である {{domxref("Event")}} からメソッドを継承しています。_
 
-<h2 id="Events" name="Events">イベント</h2>
+## イベント
 
-<dl>
- <dt>{{Event("rejectionhandled")}}</dt>
- <dd>JavaScript の {{jsxref("Promise")}} が拒否され、promise の reject イベントハンドラーのコードが実行された後に発生する。</dd>
- <dt>{{Event("unhandledrejection")}}</dt>
- <dd>reject に対するイベントハンドラーがない状態で JavaScript の {{jsxref("Promise")}} が拒否されたときに発生する。</dd>
-</dl>
+- {{Event("rejectionhandled")}}
+  - : JavaScript の {{jsxref("Promise")}} が拒否され、promise の reject イベントハンドラーのコードが実行された後に発生する。
+- {{Event("unhandledrejection")}}
+  - : reject に対するイベントハンドラーがない状態で JavaScript の {{jsxref("Promise")}} が拒否されたときに発生する。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">window.onunhandledrejection = function(e) {
+```js
+window.onunhandledrejection = function(e) {
   console.log(e.reason);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#promiserejectionevent', 'PromiseRejectionEvent')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       | 状態                                 | 備考     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#promiserejectionevent', 'PromiseRejectionEvent')}} | {{ Spec2('HTML WHATWG') }} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.PromiseRejectionEvent")}}</p>
+{{Compat("api.PromiseRejectionEvent")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{domxref("WindowEventHandlers.onrejectionhandled")}}</li>
- <li>{{domxref("WindowEventHandlers.onunhandledrejection")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{domxref("WindowEventHandlers.onrejectionhandled")}}
+- {{domxref("WindowEventHandlers.onunhandledrejection")}}

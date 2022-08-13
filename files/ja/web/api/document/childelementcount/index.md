@@ -6,41 +6,40 @@ tags:
   - DOM
   - Property
   - Reference
-browser-compat: api.Document.childElementCount
 translation_of: Web/API/Document/childElementCount
+browser-compat: api.Document.childElementCount
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><code><strong>Document.childElementCount</strong></code> は読み取り専用のプロパティで、文書の子要素の数を返します。</p>
+**`Document.childElementCount`** は読み取り専用のプロパティで、文書の子要素の数を返します。
 
-<p>特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。</p>
+特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><em>document</em>.childElementCount;
-</pre>
+```js
+document.childElementCount;
+```
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush:js">
+```js
 document.children;
-// HTMLCollection で、ふつうは &lt;html&gt; 要素をこの文書の唯一の子として含んでいる
+// HTMLCollection で、ふつうは <html> 要素をこの文書の唯一の子として含んでいる
 
 document.childElementCount;
 // 1
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Element.childElementCount")}}</li>
-  <li>{{domxref("DocumentFragment.childElementCount")}}</li>
-</ul>
+- {{domxref("Element.childElementCount")}}
+- {{domxref("DocumentFragment.childElementCount")}}

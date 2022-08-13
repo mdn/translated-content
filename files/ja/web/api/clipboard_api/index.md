@@ -12,62 +12,47 @@ tags:
   - Reference
 translation_of: Web/API/Clipboard_API
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p><strong>クリップボード API</strong> は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。クリップボードの内容へのアクセスは、 <a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> によって制限されています。ユーザーの許可がなければ、クリップボードの内容の読み取りや変更は許可されません。</p>
+**クリップボード API** は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。クリップボードの内容へのアクセスは、 [Permissions API](/ja/docs/Web/API/Permissions_API) によって制限されています。ユーザーの許可がなければ、クリップボードの内容の読み取りや変更は許可されません。
 
-<p>この API は、 {{domxref("document.execCommand()")}} を使用したクリップボードへのアクセスに取って代わるように設計されています。</p>
+この API は、 {{domxref("document.execCommand()")}} を使用したクリップボードへのアクセスに取って代わるように設計されています。
 
-<h2 id="Accessing_the_clipboard" name="Accessing_the_clipboard">クリップボードへのアクセス</h2>
+## クリップボードへのアクセス
 
-<p><code>Clipboard</code> オブジェクトをインスタンス化して生成するのではなく、システムクリップボードにはグローバル変数の {{domxref("Navigator.clipboard")}} を通してアクセスすることができます。</p>
+`Clipboard` オブジェクトをインスタンス化して生成するのではなく、システムクリップボードにはグローバル変数の {{domxref("Navigator.clipboard")}} を通してアクセスすることができます。
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
+```js
+navigator.clipboard.readText().then(
+  clipText => document.querySelector(".editor").innerText += clipText);
+```
 
-<p>このスニペットはクリップボードからテキストを読み取り、最初に見つかった <code>editor</code> クラスを持つ要素に追加します。 {{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。</p>
+このスニペットはクリップボードからテキストを読み取り、最初に見つかった `editor` クラスを持つ要素に追加します。 {{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+## インターフェイス
 
-<dl>
- <dt>{{domxref("Clipboard")}} {{securecontext_inline}}</dt>
- <dd>システムクリップボードに対してテキストやデータを読み書きするインターフェイスを提供します。これは仕様書では 'Async Clipboard API' と呼ばれています。</dd>
- <dt>{{domxref("ClipboardEvent")}} {{securecontext_inline}}</dt>
- <dd>クリップボードの変更に関する情報を提供するイベント、すなわち {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}} イベントを表します。これは仕様書では 'Clipboard Event API' と呼ばれています。</dd>
-</dl>
+- {{domxref("Clipboard")}} {{securecontext_inline}}
+  - : システムクリップボードに対してテキストやデータを読み書きするインターフェイスを提供します。これは仕様書では 'Async Clipboard API' と呼ばれています。
+- {{domxref("ClipboardEvent")}} {{securecontext_inline}}
+  - : クリップボードの変更に関する情報を提供するイベント、すなわち {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}} イベントを表します。これは仕様書では 'Clipboard Event API' と呼ばれています。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                   | 状態                                 | 備考     |
+| ---------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Clipboard API')}} | {{Spec2('Clipboard API')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<h3 id="Clipboard" name="Clipboard"><code>Clipboard</code></h3>
+### `Clipboard`
 
-<div>
-<p>{{Compat("api.Clipboard")}}</p>
+{{Compat("api.Clipboard")}}
 
-<h3 id="ClipboardEvent" name="ClipboardEvent"><code>ClipboardEvent</code></h3>
+### `ClipboardEvent`
 
-<p>{{Compat("api.ClipboardEvent")}}</p>
+{{Compat("api.ClipboardEvent")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Permissions_API">Permissions API</a></li>
- <li><a href="/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API">Permissions API の利用</a></li>
-</ul>
-</div>
+- [Permissions API](/ja/docs/Web/API/Permissions_API)
+- [Permissions API の利用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)

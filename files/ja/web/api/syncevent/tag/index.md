@@ -12,37 +12,24 @@ tags:
   - tag
 translation_of: Web/API/SyncEvent/tag
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>{{domxref("SyncEvent")}} インターフェイスの <strong><code>SyncEvent.tag</code></strong> 読み取り専用プロパティは、この <code>SyncEvent</code> の開発者定義の識別子を返します。これは、 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} コンストラクタの <code>tag</code> パラメータで渡される値です。</p>
+{{domxref("SyncEvent")}} インターフェイスの **`SyncEvent.tag`** 読み取り専用プロパティは、この `SyncEvent` の開発者定義の識別子を返します。これは、 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} コンストラクタの `tag` パラメータで渡される値です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>tag</em> = SyncEvent.tag</pre>
+    var tag = SyncEvent.tag
 
-<h3 id="値">値</h3>
+### 値
 
-<p>この <code>SyncEvent</code> の開発者定義の識別子。</p>
+この `SyncEvent` の開発者定義の識別子。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>ステータス</th>
-   <th>備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Sync','#sync-event', 'tag')}}</td>
-   <td>{{Spec2('Background Sync')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                 | ステータス                           | 備考       |
+| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Background Sync','#sync-event', 'tag')}} | {{Spec2('Background Sync')}} | 初回定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.SyncEvent.tag")}}</p>
+{{Compat("api.SyncEvent.tag")}}

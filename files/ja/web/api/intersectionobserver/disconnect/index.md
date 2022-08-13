@@ -12,48 +12,33 @@ tags:
   - メソッド
 translation_of: Web/API/IntersectionObserver/disconnect
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p><span class="seoSummary">{{domxref("IntersectionObserver")}} の <code><strong>disconnect()</strong></code> メソッドは、すべての対象要素について、表示状態の変化の監視を停止します。</span></p>
+{{domxref("IntersectionObserver")}} の **`disconnect()`** メソッドは、すべての対象要素について、表示状態の変化の監視を停止します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>intersectionObserver</em>.disconnect();</pre>
+    intersectionObserver.disconnect();
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                               | 状態                                         | 備考     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
+| {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}} | {{Spec2('IntersectionObserver')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.IntersectionObserver.disconnect")}}</p>
+{{Compat("api.IntersectionObserver.disconnect")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("IntersectionObserver.observe", "observe()")}}</li>
- <li>{{domxref("IntersectionObserver.unobserve", "unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.observe", "observe()")}}
+- {{domxref("IntersectionObserver.unobserve", "unobserve()")}}

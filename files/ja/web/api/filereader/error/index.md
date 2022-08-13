@@ -9,44 +9,28 @@ tags:
   - プロパティ
 translation_of: Web/API/FileReader/error
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>{{domxref("FileReader")}} の <code><strong>error</strong></code> プロパティは、ファイルの読み取り中に発生したエラーを返します。</p>
+{{domxref("FileReader")}} の **`error`** プロパティは、ファイルの読み取り中に発生したエラーを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>error</var> = <var>instanceOfFileReader</var>.error
-</pre>
+    var error = instanceOfFileReader.error
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p>{{domxref("DOMError")}} に関連するエラーが含まれています。 Chrome 48+/Firefox 58+ では、 <code>DOMError</code> が DOM 標準から削除されているため、このプロパティは {{domxref("DOMException")}} を返します。</p>
+{{domxref("DOMError")}} に関連するエラーが含まれています。 Chrome 48+/Firefox 58+ では、 `DOMError` が DOM 標準から削除されているため、このプロパティは {{domxref("DOMException")}} を返します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                         | 備考     |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.FileReader.error")}}</p>
+{{Compat("api.FileReader.error")}}
 
-<h2 id="See_also" name="See_also">あわせて参照</h2>
+## あわせて参照
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

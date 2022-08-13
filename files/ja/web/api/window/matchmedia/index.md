@@ -10,59 +10,45 @@ tags:
   - Reference
 translation_of: Web/API/Window/matchMedia
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+## 概要
 
-<p>指定された <a href="/ja/docs/Web/Guide/CSS/Media_queries">メディアクエリ</a>文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。</p>
+指定された [メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>mql</var> = window.matchMedia(<em>mediaQueryString</em>)</pre>
+    mql = window.matchMedia(mediaQueryString)
 
-<p><code>mediaQueryString</code> は、新しい {{domxref("MediaQueryList")}} オブジェクトを返すための、メディアクエリ文字列です。</p>
+`mediaQueryString` は、新しい {{domxref("MediaQueryList")}} オブジェクトを返すための、メディアクエリ文字列です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">if (window.matchMedia( "(min-width: 400px)" ).matches) {
+```js
+if (window.matchMedia( "(min-width: 400px)" ).matches) {
   /* ビューポートの幅が 400 ピクセル以上の場合のコードをここに */
 } else {
   /* ビューポートの幅は 400 ピクセル未満の場合のコードをここに */
 }
-</pre>
+```
 
-<p>このコードでは、ウィンドウが非常に狭いときに、何か別の処理を行うことができます。</p>
+このコードでは、ウィンドウが非常に狭いときに、何か別の処理を行うことができます。
 
-<p>他にも『<a href="/ja/docs/Web/Guide/CSS/Testing_media_queries">コード内でのメディアクエリの使用</a>』にいくつか例があります。</p>
+他にも『[コード内でのメディアクエリの使用](/ja/docs/Web/Guide/CSS/Testing_media_queries)』にいくつか例があります。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               | 策定状況                         | コメント |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<div>{{Compat("api.Window.matchMedia")}}</div>
+{{Compat("api.Window.matchMedia")}}
 
-<h2 id="See_also" name="See_also">関連記事</h2>
+## 関連記事
 
-<ul>
- <li><a href="/ja/docs/Web/Guide/CSS/Media_queries">メディアクエリ</a></li>
- <li><a href="/ja/docs/Web/CSS/Using_media_queries_from_code">コード内でのメディアクエリの使用</a></li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
-</ul>
+- [メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)
+- [コード内でのメディアクエリの使用](/ja/docs/Web/CSS/Using_media_queries_from_code)
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListListener")}}

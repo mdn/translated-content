@@ -8,39 +8,38 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceEntry/startTime
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>startTime</code></strong> プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。</p>
+**`startTime`** プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。</p>
+このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。
 
-<ul>
- <li>"<code>frame</code>" - フレームが開始されたときに{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
- <li>"<code>mark</code>" - マークが{{domxref("Performance.mark","performance.mark()")}} の呼び出しによって作成された場合は、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
- <li>"<code>measure</code>" - メジャーが　{{domxref("Performance.measure","performance.measure()")}} の呼び出しによって作成された場合、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
- <li>"<code>navigation</code>" - "<code>0</code>" の値を持つ{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
- <li>"<code>resource</code>" - ブラウザ{{domxref( "PerformanceEntry.fetchStart","リソースの取得")}}の直前に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
-</ul>
+- "`frame`" - フレームが開始されたときに{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
+- "`mark`" - マークが{{domxref("Performance.mark","performance.mark()")}} の呼び出しによって作成された場合は、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
+- "`measure`" - メジャーが　{{domxref("Performance.measure","performance.measure()")}} の呼び出しによって作成された場合、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
+- "`navigation`" - "`0`" の値を持つ{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
+- "`resource`" - ブラウザ{{domxref( "PerformanceEntry.fetchStart","リソースの取得")}}の直前に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
 
-<p>このプロパティは {{readonlyInline}} です。</p>
+このプロパティは {{readonlyInline}} です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>entry</em>.startTime;</pre>
+    entry.startTime;
 
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。</p>
+{{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。
 
-<p class="note">メモ: パフォーマンスエントリが "<code>resource</code>" の {{domxref("PerformanceEntry.entryType","entryType")}}  を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。</p>
+> **Note:** メモ: パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例は、<code>startTime</code> プロパティの使用方法を示しています。</p>
+次の例は、`startTime` プロパティの使用方法を示しています。
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -55,7 +54,7 @@ translation_of: Web/API/PerformanceEntry/startTime
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -64,7 +63,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -72,7 +71,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -83,32 +82,15 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime', 'startTime')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-starttime', 'startTime')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       | ステータス                                               | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime', 'startTime')}} | {{Spec2('Performance Timeline Level 2')}} |          |
+| {{SpecName('Performance Timeline', '#dom-performanceentry-starttime', 'startTime')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<div>
-<p>{{Compat("api.PerformanceEntry.startTime")}}</p>
-</div>
+{{Compat("api.PerformanceEntry.startTime")}}

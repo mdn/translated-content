@@ -12,47 +12,36 @@ tags:
   - searchParams
 translation_of: Web/API/URL/searchParams
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p><span class="seoSummary">{{domxref("URL")}} インターフェイスの <strong><code>searchParams</code></strong> 読み取り専用プロパティは、URL に含まれる GET デコードされたクエリー引数へのアクセスを可能にする {{domxref("URLSearchParams")}} オブジェクトを返します。</span></p>
+{{domxref("URL")}} インターフェイスの **`searchParams`** 読み取り専用プロパティは、URL に含まれる GET デコードされたクエリー引数へのアクセスを可能にする {{domxref("URLSearchParams")}} オブジェクトを返します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var urlSearchParams = URL.searchParams;</pre>
+    var urlSearchParams = URL.searchParams;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("URLSearchParams")}} オブジェクト。</p>
+{{domxref("URLSearchParams")}} オブジェクト。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>ページの URL が <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> の場合、次を使用して 'name' および 'age' パラメーターを解析できます。</p>
+ページの URL が `https://example.com/?name=Jonathan%20Smith&age=18` の場合、次を使用して 'name' および 'age' パラメーターを解析できます。
 
-<pre class="brush: js">let params = (new URL(document.location)).searchParams;
+```js
+let params = (new URL(document.location)).searchParams;
 let name = params.get('name'); // 文字列 "Jonathan Smith" です。
-let age = parseInt(params.get('age')); // 数値 18 です。</pre>
+let age = parseInt(params.get('age')); // 数値 18 です。
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-searchparams', 'searchParams')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                 | コメント |
+| -------------------------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#dom-url-searchparams', 'searchParams')}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.URL.searchParams")}}</p>
+{{Compat("api.URL.searchParams")}}

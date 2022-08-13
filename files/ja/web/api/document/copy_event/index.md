@@ -11,64 +11,38 @@ tags:
   - copy
 translation_of: Web/API/Document/copy_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>copy</code></strong> イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。</span></p>
+**`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | あり                                                     |
+| ---------------------------- | -------------------------------------------------------- |
+| キャンセル                   | 可                                                       |
+| インターフェイス             | {{domxref("ClipboardEvent")}}                 |
+| イベントハンドラープロパティ | {{domxref("HTMLElement/oncopy", "oncopy")}} |
 
-<p>このイベントの本来の対象は、コピー操作の意図の対象である {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 <a href="/ja/docs/Web/API/Element/copy_event">Element: copy イベント</a>を参照してください。</p>
+このイベントの本来の対象は、コピー操作の意図の対象である {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [Element: copy イベント](/ja/docs/Web/API/Element/copy_event)を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">document.addEventListener('copy', (event) =&gt; {
+```js
+document.addEventListener('copy', (event) => {
     console.log('copy action initiated')
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Clipboard API', '#clipboard-event-copy')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | 状態                                 |
+| ------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.copy_event")}}</p>
+{{Compat("api.Document.copy_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}</li>
- <li>{{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/copy_event", "copy")}}</li>
- <li>{{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/copy_event", "copy")}}</li>
-</ul>
+- 関連イベント: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}
+- {{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/copy_event", "copy")}}
+- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/copy_event", "copy")}}

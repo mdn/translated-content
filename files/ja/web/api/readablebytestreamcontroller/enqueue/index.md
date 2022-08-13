@@ -11,53 +11,38 @@ tags:
   - enqueue
 translation_of: Web/API/ReadableByteStreamController/enqueue
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableByteStreamController")}} インターフェイスの <strong><code>enqueue()</code></strong> メソッドは、所与のチャンクを関連するストリームのキューに入れます。</span></p>
+{{domxref("ReadableByteStreamController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>readableByteStreamController</em>.enqueue(<em>chunk</em>);</pre>
+    readableByteStreamController.enqueue(chunk);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><em>chunk</em></dt>
- <dd>キューに入れるチャンク。</dd>
-</dl>
+- _chunk_
+  - : キューに入れるチャンク。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースオブジェクトが <code>ReadableByteStreamController</code> ではないか、何らかの理由でストリームを読み取れないか、チャンクがオブジェクトではないか、チャンクの内部配列バッファーが存在しないか、切り離されています。</dd>
-</dl>
+- TypeError
+  - : ソースオブジェクトが `ReadableByteStreamController` ではないか、何らかの理由でストリームを読み取れないか、チャンクがオブジェクトではないか、チャンクの内部配列バッファーが存在しないか、切り離されています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rbs-controller-enqueue","enqueue()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                         | コメント |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rbs-controller-enqueue","enqueue()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableByteStreamController.enqueue")}}</p>
+{{Compat("api.ReadableByteStreamController.enqueue")}}

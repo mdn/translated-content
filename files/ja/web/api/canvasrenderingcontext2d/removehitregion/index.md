@@ -3,36 +3,35 @@ title: CanvasRenderingContext2D.removeHitRegion()
 slug: Web/API/CanvasRenderingContext2D/removeHitRegion
 translation_of: Web/API/CanvasRenderingContext2D/removeHitRegion
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>Canvas 2D APIの<code><strong>CanvasRenderingContext2D</strong></code><strong><code>.removeHitRegion()</code></strong> メソッドは、canvasから与えられたヒット領域を削除します。</p>
+Canvas 2D API の**`CanvasRenderingContext2D`\*\***`.removeHitRegion()`\*\* メソッドは、canvas から与えられたヒット領域を削除します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var><em>ctx</em>.removeHitRegion(id);</var>
-</pre>
+    void ctx.removeHitRegion(id);
 
-<h3 id="パラメータ">パラメータ</h3>
+### パラメータ
 
-<dl>
- <dt>id</dt>
- <dd>削除する領域の<code>id</code>をあらわす{{domxref("DOMString")}}。</dd>
-</dl>
+- id
+  - : 削除する領域の`id`をあらわす{{domxref("DOMString")}}。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="removeHitRegionメソッドを使う"><code>removeHitRegion</code>メソッドを使う</h3>
+### `removeHitRegion`メソッドを使う
 
-<p>これは、<code>removeHitRegion</code>を使った簡単なコードです。</p>
+これは、`removeHitRegion`を使った簡単なコードです。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[8]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // ヒット領域を指定
@@ -40,32 +39,19 @@ ctx.addHitRegion({id: "eyes"});
 
 // canvasからヒット領域を削除
 ctx.removeHitRegion("eyes");
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-removehitregion", "CanvasRenderingContext2D.removeHitRegion")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                             | 策定状況                         | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-removehitregion", "CanvasRenderingContext2D.removeHitRegion")}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.CanvasRenderingContext2D.removeHitRegion")}}</p>
+{{Compat("api.CanvasRenderingContext2D.removeHitRegion")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}

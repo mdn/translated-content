@@ -11,54 +11,41 @@ tags:
   - releaseLock
 translation_of: Web/API/ReadableStreamBYOBReader/releaseLock
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamBYOBReader")}} インターフェイスの <strong><code>releaseLock()</code></strong> メソッドは、ストリーム上のリーダーのロックを解除します。 ロックを解除すると、リーダーはアクティブではなくなります。</span></p>
+{{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`releaseLock()`** メソッドは、ストリーム上のリーダーのロックを解除します。 ロックを解除すると、リーダーはアクティブではなくなります。
 
-<p>ロックを解除したときに関連するストリームにエラーが発生した場合、リーダーはその後同様にエラーが発生したようになります。 そうでない場合、リーダーは閉じた状態になります。</p>
+ロックを解除したときに関連するストリームにエラーが発生した場合、リーダーはその後同様にエラーが発生したようになります。 そうでない場合、リーダーは閉じた状態になります。
 
-<p>リーダーのロックは、保留中の読み取り要求が残っている間、つまり、リーダーの {{domxref("ReadableStreamBYOBReader.read()")}} メソッドによって返された promise が終了していない場合、解除できません。 これにより、<code>TypeError</code> がスローされます。</p>
+リーダーのロックは、保留中の読み取り要求が残っている間、つまり、リーダーの {{domxref("ReadableStreamBYOBReader.read()")}} メソッドによって返された promise が終了していない場合、解除できません。 これにより、`TypeError` がスローされます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>readableStreamBYOBReader</em>.releaseLock();</pre>
+    readableStreamBYOBReader.releaseLock();
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>ソースオブジェクトが <code>ReadableStreamBYOBReader</code> でないか、読み取り要求が保留中です。</dd>
-</dl>
+- TypeError
+  - : ソースオブジェクトが `ReadableStreamBYOBReader` でないか、読み取り要求が保留中です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#byob-reader-release-lock","releaseLock()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | 状態                         | コメント |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#byob-reader-release-lock","releaseLock()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStreamBYOBReader.releaseLock")}}</p>
+{{Compat("api.ReadableStreamBYOBReader.releaseLock")}}

@@ -9,45 +9,26 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSStyleRule</code></strong> は、単一の CSS スタイル規則を表します。これは、型定数の値が <code>1</code> (<code>CSSRule.STYLE_RULE</code>) の {{domxref("CSSRule")}} インターフェイスを実装します。</p>
+**`CSSStyleRule`** は、単一の CSS スタイル規則を表します。これは、型定数の値が `1` (`CSSRule.STYLE_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt id="selectorText">{{domxref("CSSStyleRule.selectorText")}}</dt>
- <dd>この規則のセレクターのテキスト表現を返します。例: <code>"h1,h2"</code></dd>
- <dt id="style">{{domxref("CSSStyleRule.style")}} {{readonlyinline}}</dt>
- <dd>この規則の {{domxref("CSSStyleDeclaration")}} オブジェクトを返します。</dd>
- <dt>{{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}</dt>
- <dd>{{domxref('StylePropertyMap')}} オブジェクトを返し、これによってこの規則のプロパティと値の組へアクセスできます。</dd>
-</dl>
+- {{domxref("CSSStyleRule.selectorText")}}
+  - : この規則のセレクターのテキスト表現を返します。例: `"h1,h2"`
+- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
+  - : この規則の {{domxref("CSSStyleDeclaration")}} オブジェクトを返します。
+- {{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}
+  - : {{domxref('StylePropertyMap')}} オブジェクトを返し、これによってこの規則のプロパティと値の組へアクセスできます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }}</td>
-   <td>{{ Spec2('CSSOM') }}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }}</td>
-   <td>{{ Spec2('DOM2 Style') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | 変更なし |
+| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.CSSStyleRule")}}</p>
+{{Compat("api.CSSStyleRule")}}

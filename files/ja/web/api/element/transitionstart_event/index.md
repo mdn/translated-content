@@ -14,81 +14,55 @@ tags:
 translation_of: Web/API/Document/transitionstart_event
 original_slug: Web/API/Document/transitionstart_event
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><strong><code>transitionstart</code></strong> イベントは、 <a href="/ja/docs/CSS/Using_CSS_transitions">CSS トランジション</a>が実際に始まったとき、すなわち {{cssxref("transition-delay")}} が終了した後に発生します。</p>
+**`transitionstart`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が実際に始まったとき、すなわち {{cssxref("transition-delay")}} が終了した後に発生します。
 
-<p><code>transitionstart</code> と <code>transitionrun</code> の違いは、 <code>transitionrun</code> がトランジションが生成されたとき (すなわち、待ち時間の開始) に発生するのに対し、 <code>transitionstart</code> は実際にアニメーションが始まったとき (すなわち、待ち時間の終了) に発生することです。</p>
+`transitionstart` と `transitionrun` の違いは、 `transitionrun` がトランジションが生成されたとき (すなわち、待ち時間の開始) に発生するのに対し、 `transitionstart` は実際にアニメーションが始まったとき (すなわち、待ち時間の終了) に発生することです。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("TransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.ontransitionstart")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | あり                                                                 |
+| ---------------------------- | -------------------------------------------------------------------- |
+| キャンセル                   | 不可                                                                 |
+| インターフェイス             | {{domxref("TransitionEvent")}}                             |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.ontransitionstart")}} |
 
-<p>このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 <a href="/ja/docs/Web/API/HTMLElement/transitionstart_event">HTMLElement: transitionstart イベント</a>を参照してください。</p>
+このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 [HTMLElement: transitionstart イベント](/ja/docs/Web/API/HTMLElement/transitionstart_event)を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次のコードは <code>transitionstart</code> イベントにリスナーを追加します。</p>
+次のコードは `transitionstart` イベントにリスナーを追加します。
 
-<pre class="brush: js">document.addEventListener('transitionrun', () =&gt; {
+```js
+document.addEventListener('transitionrun', () => {
   console.log('Transition is running but hasn't necessarily started transitioning yet');
-});</pre>
+});
+```
 
-<p>同じですが、 {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} を <code>addEventListener()</code> の代わりに使用すると次のようになります。</p>
+同じですが、 {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} を `addEventListener()` の代わりに使用すると次のようになります。
 
-<pre class="brush: js">document.ontransitionrun = () =&gt; {
+```js
+document.ontransitionrun = () => {
   console.log('Transition started running');
-};</pre>
+};
+```
 
-<p><a href="/ja/docs/Web/API/HTMLElement/transitionstart_event#Live_example">このイベントのライブデモを参照してください。</a></p>
+[このイベントのライブデモを参照してください。](/ja/docs/Web/API/HTMLElement/transitionstart_event#Live_example)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transitionstart', 'transitionstart')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                                     | 備考     |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
+| {{SpecName('CSS3 Transitions', '#transitionstart', 'transitionstart')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.transitionstart_event")}}</p>
+{{Compat("api.Document.transitionstart_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.ontransitionstart")}} イベントハンドラー</li>
- <li>{{domxref("TransitionEvent")}} インターフェイス</li>
- <li>CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>関連イベント: {{domxref("Document/transitionend_event", "transitionend")}}, {{domxref("Document/transitionrun_event", "transitionrun")}}, {{domxref("Document/transitioncancel_event", "transitioncancel")}}</li>
- <li>{{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}</li>
- <li>{{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/transitionstart_event", "transitionstart")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.ontransitionstart")}} イベントハンドラー
+- {{domxref("TransitionEvent")}} インターフェイス
+- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- 関連イベント: {{domxref("Document/transitionend_event", "transitionend")}}, {{domxref("Document/transitionrun_event", "transitionrun")}}, {{domxref("Document/transitioncancel_event", "transitioncancel")}}
+- {{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}
+- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/transitionstart_event", "transitionstart")}}

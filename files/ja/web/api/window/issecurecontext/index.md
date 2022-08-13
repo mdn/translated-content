@@ -9,50 +9,39 @@ tags:
   - Window
 translation_of: Web/API/Window/isSecureContext
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><code><strong>window.isSecureContext</strong></code> 読み取り専用プロパティは、コンテキストが <a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテキスト</a> を必要とする機能を使用できるかどうかを示します。</p>
+**`window.isSecureContext`** 読み取り専用プロパティは、コンテキストが [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を必要とする機能を使用できるかどうかを示します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>isSecure</em> = window.isSecureContext</pre>
+    var isSecure = window.isSecureContext
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="機能検出">機能検出</h3>
+### 機能検出
 
-<p>グローバルスコープの <code>isSecureContext</code> の真偽値を用いることで、安全なコンテクストかどうかをチェックすることで機能検出できます。</p>
+グローバルスコープの `isSecureContext` の真偽値を用いることで、安全なコンテクストかどうかをチェックすることで機能検出できます。
 
-<pre class="brush: js">if (window.isSecureContext) {
+```js
+if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...
   });
-}</pre>
+}
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>ステータス</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Secure Contexts')}}</td>
-   <td>{{Spec2('Secure Contexts','#monkey-patching-global-object','isSecureContext')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                     | ステータス                                                                                               | コメント   |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------- |
+| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts','#monkey-patching-global-object','isSecureContext')}} | 初期定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("api.Window.isSecureContext")}}</p>
+{{Compat("api.Window.isSecureContext")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテクスト</a></li>
-</ul>
+- [安全なコンテクスト](/ja/docs/Web/Security/Secure_Contexts)

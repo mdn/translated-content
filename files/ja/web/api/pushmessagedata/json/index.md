@@ -12,59 +12,44 @@ tags:
   - Service Workers
 translation_of: Web/API/PushMessageData/json
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>{{domxref("PushMessageData")}} インターフェースの <code><strong>json()</strong></code>メソッドは、プッシュメッセージデータを <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> オブジェクトとして抜き出します。</p>
+{{domxref("PushMessageData")}} インターフェースの **`json()`**メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var myJson = PushEvent.data.json();</pre>
+```js
+var myJson = PushEvent.data.json();
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> オブジェクト。</p>
+[JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクト。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var jsonObj = event.data.json();
 
   // JSON を使って何かを実行する
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#widl-PushMessageData-json-JSON', 'json()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                         | コメント   |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('Push API', '#widl-PushMessageData-json-JSON', 'json()')}} | {{Spec2('Push API')}} | 初期定義。 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<div>
-<div>
+{{Compat("api.PushMessageData.json")}}
 
+## 関連項目
 
-<p>{{Compat("api.PushMessageData.json")}}</p>
-</div>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)

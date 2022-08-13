@@ -2,29 +2,30 @@
 title: Document.defaultView
 slug: Web/API/Document/defaultView
 tags:
-- API
-- Document
-- HTML DOM
-- Property
-- Reference
-browser-compat: api.Document.defaultView
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 translation_of: Web/API/Document/defaultView
+browser-compat: api.Document.defaultView
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>ブラウザーにおいて、<strong><code>document.defaultView</code></strong> はドキュメントに関連付けられている {{domxref("Window", "window")}} オブジェクトを返します。もし存在しない場合は <code>null</code> を返します。</p>
+ブラウザーにおいて、**`document.defaultView`** はドキュメントに関連付けられている {{domxref("Window", "window")}} オブジェクトを返します。もし存在しない場合は `null` を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js">var <var>win</var> = document.defaultView;</pre>
+```js
+var win = document.defaultView;
+```
 
-<p>このプロパティは読み取り専用です。</p>
+このプロパティは読み取り専用です。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

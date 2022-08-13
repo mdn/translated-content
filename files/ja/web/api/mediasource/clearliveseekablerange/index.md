@@ -14,41 +14,28 @@ tags:
   - clearLiveSeekableRange()
 translation_of: Web/API/MediaSource/clearLiveSeekableRange
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">{{domxref("MediaSource")}} インターフェイスの <strong><code>clearLiveSeekableRange()</code></strong> メソッドは、{{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。</span></p>
+{{domxref("MediaSource")}} インターフェイスの **`clearLiveSeekableRange()`** メソッドは、{{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>mediaSource</var>.clearLiveSeekableRange()</pre>
+    mediaSource.clearLiveSeekableRange()
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions','#dom-mediasource-clearliveseekablerange','clearLiveSeekableRange()')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                             | 状態                                             | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
+| {{SpecName('Media Source Extensions','#dom-mediasource-clearliveseekablerange','clearLiveSeekableRange()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.MediaSource.clearLiveSeekableRange")}}</p>
+{{Compat("api.MediaSource.clearLiveSeekableRange")}}

@@ -11,39 +11,28 @@ tags:
   - Reference
 translation_of: Web/API/PointerEvent/getCoalescedEvents
 ---
-<p>{{APIRef("Pointer Events")}}{{seecompattable}}</p>
+{{APIRef("Pointer Events")}}{{seecompattable}}
 
-<p>{{domxref("PointerEvent")}} インターフェイスの <strong><code>getCoalescedEvents()</code></strong> メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての <code>PointerEvent</code> インスタンスのシーケンスを返します。</p>
+{{domxref("PointerEvent")}} インターフェイスの **`getCoalescedEvents()`** メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての `PointerEvent` インスタンスのシーケンスを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>pointerEvents[]</em> = <em>PointerEvent</em>.getCoalescedEvents()</pre>
+    var pointerEvents[] = PointerEvent.getCoalescedEvents()
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Returns" name="Returns">Returns</h3>
+### Returns
 
-<p>{{domxref("PointerEvent")}} インスタンスのシーケンス。</p>
+{{domxref("PointerEvent")}} インスタンスのシーケンス。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2 Ext','#dom-pointerevent-getcoalescedevents','getCoalescedEvents()')}}</td>
-   <td>{{Spec2('Pointer Events 2 Ext')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                 | 状態                                         | コメント |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2 Ext','#dom-pointerevent-getcoalescedevents','getCoalescedEvents()')}} | {{Spec2('Pointer Events 2 Ext')}} | 初期定義 |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PointerEvent.getCoalescedEvents")}}</p>
+{{Compat("api.PointerEvent.getCoalescedEvents")}}

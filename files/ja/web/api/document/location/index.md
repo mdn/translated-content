@@ -11,61 +11,42 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/location
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Document.location</code></strong> は読み取り専用のプロパティで、この文書の URL に関する情報を持った {{domxref("Location")}} オブジェクトを返します。これはその URL を変更したり他の URL を読み込んだりするためのメソッドも提供しています。</p>
+**`Document.location`** は読み取り専用のプロパティで、この文書の URL に関する情報を持った {{domxref("Location")}} オブジェクトを返します。これはその URL を変更したり他の URL を読み込んだりするためのメソッドも提供しています。
 
-<p><code>Document.location</code> は<em>読み取り専用</em>の <code>Location</code> オブジェクトですが、 {{domxref("DOMString")}} を代入することができます。つまり、 document.location が文字列であるかのように扱うことができます。 <code>document.location = 'http://www.example.com'</code> は <code>document.location.href = 'http://www.example.com'</code> の別名です。</p>
+`Document.location` は*読み取り専用*の `Location` オブジェクトですが、 {{domxref("DOMString")}} を代入することができます。つまり、 document.location が文字列であるかのように扱うことができます。 `document.location = 'http://www.example.com'` は `document.location.href = 'http://www.example.com'` の別名です。
 
-<p>URL を文字列として受け取るだけであれば、読み取り専用の {{domxref("document.URL")}} プロパティも利用することができます。</p>
+URL を文字列として受け取るだけであれば、読み取り専用の {{domxref("document.URL")}} プロパティも利用することができます。
 
-<p>現在の文書が閲覧コンテキスト内にない場合、返値は <code>null</code> となります。</p>
+現在の文書が閲覧コンテキスト内にない場合、返値は `null` となります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>s</p>
+s
 
-<pre class="syntaxbox notranslate"><var>locationObj</var> = document.location
-document.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'
-</pre>
+    locationObj = document.location
+    document.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js notranslate">console.log(document.location);
+```js
+console.log(document.location);
 // Location オブジェクトをコンソールへ表示
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                             | 備考                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} から変更なし |
+| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.location")}}</p>
+{{Compat("api.Document.location")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>返値のインターフェイスである {{domxref("Location")}}</li>
- <li>同様の情報で{{Glossary("browsing context", "閲覧コンテキスト")}}に結びつけられている {{domxref("Window.location")}}</li>
-</ul>
+- 返値のインターフェイスである {{domxref("Location")}}
+- 同様の情報で{{Glossary("browsing context", "閲覧コンテキスト")}}に結びつけられている {{domxref("Window.location")}}

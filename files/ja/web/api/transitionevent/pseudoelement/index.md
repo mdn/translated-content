@@ -12,42 +12,25 @@ tags:
   - TransitionEvent
 translation_of: Web/API/TransitionEvent/pseudoElement
 ---
-<p>{{ apiref("CSSOM") }} {{SeeCompatTable}}</p>
+{{ apiref("CSSOM") }} {{SeeCompatTable}}
 
-<p><code><strong>TransitionEvent.pseudoElement</strong></code> 読み取り専用プロパティは、 {{domxref("DOMString")}} であり、 <code>'::'</code> で始まり、アニメーションが実行される<a href="/ja/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">疑似要素</a>の名前が含まれています。トランジションが擬似要素で実行されない場合は、要素は空文字です: <code>''</code> 。</p>
+**`TransitionEvent.pseudoElement`** 読み取り専用プロパティは、 {{domxref("DOMString")}} であり、 `'::'` で始まり、アニメーションが実行される[疑似要素](/ja/docs/Web/CSS/Pseudo-elements "/en-US/docs/Web/CSS/Pseudo-elements")の名前が含まれています。トランジションが擬似要素で実行されない場合は、要素は空文字です: `''` 。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>name</em> = <em>TransitionEvent</em>.pseudoElement</pre>
+    name = TransitionEvent.pseudoElement
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#Events-TransitionEvent-pseudoElement', 'TransitionEvent.pseudoElement') }}</td>
-   <td>{{ Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                             | ステータス                               | 備考       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Transitions', '#Events-TransitionEvent-pseudoElement', 'TransitionEvent.pseudoElement') }} | {{ Spec2('CSS3 Transitions')}} | 初回定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.TransitionEvent.pseudoElement")}}
 
+## 関連項目
 
-<p>{{Compat("api.TransitionEvent.pseudoElement")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/Guide/CSS/Using_CSS_transitions">CSS トランジションの使用</a></li>
- <li>{{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.</li>
-</ul>
+- [CSS トランジションの使用](/ja/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

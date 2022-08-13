@@ -2,46 +2,44 @@
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 tags:
-- API
-- CSSOM
-- Method
-- Reference
-browser-compat: api.CSSStyleDeclaration.getPropertyPriority
+  - API
+  - CSSOM
+  - Method
+  - Reference
 translation_of: Web/API/CSSStyleDeclaration/getPropertyPriority
+browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong>CSSStyleDeclaration.getPropertyPriority()</strong> メソッドインターフェイスは、 {{domxref('DOMString')}} でその CSS プロパティに明示的に設定されたすべての優先度を返します。</p>
+**CSSStyleDeclaration.getPropertyPriority()** メソッドインターフェイスは、 {{domxref('DOMString')}} でその CSS プロパティに明示的に設定されたすべての優先度を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js">var <em>priority</em> = <em>style</em>.getPropertyPriority(<em>property</em>);</pre>
+```js
+var priority = style.getPropertyPriority(property);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<ul>
-  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、チェックするプロパティ名を表します。</li>
-</ul>
+- _`property`_ は {{domxref('DOMString')}} で、チェックするプロパティ名を表します。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<ul>
-  <li><code><em>priority</em></code> は {{domxref('DOMString')}} で、存在する場合は優先度 (<code>"important"</code> など) を表します。存在しない場合は、空文字列を返します。</li>
-</ul>
+- `priority` は {{domxref('DOMString')}} で、存在する場合は優先度 (`"important"` など) を表します。存在しない場合は、空文字列を返します。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>以下の JavaScript コードは、 <code>margin</code> が CSS セレクターの規則で important と記されているかどうかをチェックします。</p>
+以下の JavaScript コードは、 `margin` が CSS セレクターの規則で important と記されているかどうかをチェックします。
 
-<pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
+```js
+var declaration = document.styleSheets[0].cssRules[0].style;
 var isImportant = declaration.getPropertyPriority('margin') === 'important';
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,71 +13,48 @@ tags:
   - Video
 translation_of: Web/API/SourceBufferList
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><strong><code>SourceBufferList</code></strong> インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナリストを表します。</p>
+**`SourceBufferList`** インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナリストを表します。
 
-<p>特定の <code>MediaSource</code> に追加された <code>SourceBuffer</code> を含むソースバッファのリストは、{{domxref("MediaSource.sourceBuffers")}} プロパティを使用して取得できます。 個々のソースバッファは、配列演算子（つまり <code>[]</code>）または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用してアクセスできます。</p>
+特定の `MediaSource` に追加された `SourceBuffer` を含むソースバッファのリストは、{{domxref("MediaSource.sourceBuffers")}} プロパティを使用して取得できます。 個々のソースバッファは、配列演算子（つまり `[]`）または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用してアクセスできます。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("SourceBufferList.length")}} {{readonlyInline}}</dt>
- <dd>リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。</dd>
-</dl>
+- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
+  - : リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。
 
-<h3 id="Event_handlers" name="Event_handlers">イベントハンドラ</h3>
+### イベントハンドラ
 
-<dl>
- <dt>{{domxref("SourceBufferList.onaddsourcebuffer")}}</dt>
- <dd><code>addsourcebuffer</code> イベントのイベントハンドラ。</dd>
- <dt>{{domxref("SourceBufferList.onremovesourcebuffer")}}</dt>
- <dd><code>removesourcebuffer</code> イベントのイベントハンドラ。</dd>
-</dl>
+- {{domxref("SourceBufferList.onaddsourcebuffer")}}
+  - : `addsourcebuffer` イベントのイベントハンドラ。
+- {{domxref("SourceBufferList.onremovesourcebuffer")}}
+  - : `removesourcebuffer` イベントのイベントハンドラ。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em>親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承します。</em></p>
+_親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承します。_
 
-<dl>
- <dt><a href="/ja/docs/Web/API/SourceBufferList/SourceBuffer"><code>SourceBufferList</code>: indexed property getter</a></dt>
- <dd>このゲッターにより、リスト内の <code>SourceBuffer</code> オブジェクトに配列演算子（つまり <code>[]</code>）でアクセスできます。</dd>
-</dl>
+- [`SourceBufferList`: indexed property getter](/ja/docs/Web/API/SourceBufferList/SourceBuffer)
+  - : このゲッターにより、リスト内の `SourceBuffer` オブジェクトに配列演算子（つまり `[]`）でアクセスできます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定</p>
+未定
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#sourcebufferlist', 'SourceBufferList')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | 状態                                             | コメント |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
+| {{SpecName('Media Source Extensions', '#sourcebufferlist', 'SourceBufferList')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.SourceBufferList")}}
 
+## 関連情報
 
-<p>{{Compat("api.SourceBufferList")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

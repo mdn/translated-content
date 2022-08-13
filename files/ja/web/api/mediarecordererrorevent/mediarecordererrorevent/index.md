@@ -15,53 +15,30 @@ tags:
   - Video
 translation_of: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p><span class="seoSummary"><strong><code>MediaRecorderErrorEvent()</code></strong> コンストラクタは、<a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> によるメディアの記録中に発生したエラーを表す新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトを作成します。</span></p>
+**`MediaRecorderErrorEvent()`** コンストラクタは、[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) によるメディアの記録中に発生したエラーを表す新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトを作成します。
 
-<div class="note">
-<p>一般に、あなたはこれらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、それらは {{domxref("MediaRecorder.onerror")}} の実装に配信されます。</p>
-</div>
+> **Note:** 一般に、あなたはこれらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、それらは {{domxref("MediaRecorder.onerror")}} の実装に配信されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>errorEvent</em> = new MediaRecorderErrorEvent(<em>errorInfo</em>)</pre>
+    var errorEvent = new MediaRecorderErrorEvent(errorInfo)
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>errorInfo</code></dt>
- <dd>作成する error オブジェクトを記述するオブジェクト。 最低でも <code>error</code> プロパティを含める<em>必要</em>があります。
- <dl>
-  <dt><code>error</code></dt>
-  <dd>発生したエラーを説明する {{domxref("DOMException")}}。 このオブジェクトの {{domxref("DOMException.name", "name")}} プロパティは、発生したエラーの名前を示すべきです。 他のフィールドは存在する場合と存在しない場合があります。</dd>
- </dl>
- </dd>
-</dl>
+- `errorInfo`
+  - : 作成する error オブジェクトを記述するオブジェクト。 最低でも `error` プロパティを含める*必要*があります。_ `error`
+    _ : 発生したエラーを説明する {{domxref("DOMException")}}。 このオブジェクトの {{domxref("DOMException.name", "name")}} プロパティは、発生したエラーの名前を示すべきです。 他のフィールドは存在する場合と存在しない場合があります。
 
-<div class="note">
-<p>一部の{{Glossary("user agent", "ユーザーエージェント")}}は、スタックダンプ、JavaScript ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを <code>error</code> オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。</p>
-</div>
+> **Note:** 一部の{{Glossary("user agent", "ユーザーエージェント")}}は、スタックダンプ、JavaScript ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを `error` オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Recording','#dom-mediarecordererrorevent-mediarecordererrorevent','MediaRecorderErrorEvent()')}}</td>
-   <td>{{Spec2('MediaStream Recording')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                             | 状態                                         | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
+| {{SpecName('MediaStream Recording','#dom-mediarecordererrorevent-mediarecordererrorevent','MediaRecorderErrorEvent()')}} | {{Spec2('MediaStream Recording')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaRecorderErrorEvent.MediaRecorderErrorEvent")}}</p>
-
-<p> </p>
+{{Compat("api.MediaRecorderErrorEvent.MediaRecorderErrorEvent")}}

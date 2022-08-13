@@ -10,35 +10,26 @@ tags:
   - Window
 translation_of: Web/API/Window/applicationCache
 ---
-<div class="warning">
-<p><strong>重要</strong>: アプリケーションキャッシュは Firefox 44 で非推奨となり、 Firefox 60 以降では安全ではないコンテキストでは利用できなくなりました ({{bug(1354175)}}、現在は Nightly/Beta のみ)。ウェブサイトをオフラインで利用するために使用しないでください。 — 代わりに<a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a>の利用を検討してください。</p>
-</div>
+> **Warning:** **重要**: アプリケーションキャッシュは Firefox 44 で非推奨となり、 Firefox 60 以降では安全ではないコンテキストでは利用できなくなりました ({{bug(1354175)}}、現在は Nightly/Beta のみ)。ウェブサイトをオフラインで利用するために使用しないでください。 — 代わりに[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の利用を検討してください。
 
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+## 概要
 
-<p>ウィンドウのアプリケーションキャッシュオブジェクトへの参照を返します。</p>
+ウィンドウのアプリケーションキャッシュオブジェクトへの参照を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>cache</var> = window.applicationCache
-</pre>
+    cache = window.applicationCache
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>cache</code> : <code>OfflineResourceList</code> へのオブジェクト参照です。</li>
-</ul>
+- `cache` : `OfflineResourceList` へのオブジェクト参照です。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}</li>
-</ul>
+- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/HTML/Using_the_application_cache">アプリケーションキャッシュの使用</a></li>
-</ul>
+- [アプリケーションキャッシュの使用](/ja/docs/HTML/Using_the_application_cache)

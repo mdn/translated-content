@@ -9,19 +9,20 @@ tags:
   - WebAPI
 translation_of: Web/API/Network_Information_API
 ---
-<p>{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-<p>Network Information API はシステムのネットワーク接続に関する情報を、一般的な接続タイプ (例: 'wifi' や 'cellular' など) の観点から提供します。これは、ユーザーの接続を元に高解像度コンテンツまたは低解像度コンテンツを選択するために使用することができます。API の全体像は {{domxref("NetworkInformation")}} インターフェイスの追加と、{{domxref("Navigator")}} インターフェイスに追加された 1 個のプロパティ {{domxref("Navigator.connection")}} で構成されます。</p>
+Network Information API はシステムのネットワーク接続に関する情報を、一般的な接続タイプ (例: 'wifi' や 'cellular' など) の観点から提供します。これは、ユーザーの接続を元に高解像度コンテンツまたは低解像度コンテンツを選択するために使用することができます。API の全体像は {{domxref("NetworkInformation")}} インターフェイスの追加と、{{domxref("Navigator")}} インターフェイスに追加された 1 個のプロパティ {{domxref("Navigator.connection")}} で構成されます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Detect_connection_changes" name="Detect_connection_changes">接続の変化の検出</h3>
+### 接続の変化の検出
 
-<p>以下の例では、ユーザーの接続の変化を監視します。</p>
+以下の例では、ユーザーの接続の変化を監視します。
 
-<pre class="brush: js notranslate">var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+```js
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.effectiveType;
 
 function updateConnectionStatus() {
@@ -30,60 +31,45 @@ function updateConnectionStatus() {
 }
 
 connection.addEventListener('change', updateConnectionStatus);
-</pre>
+```
 
-<h3 id="Preload_large_resources" name="Preload_large_resources">大きなリソースを事前読み込み</h3>
+### 大きなリソースを事前読み込み
 
-<p>接続オブジェクトは、大きな帯域幅やメモリが使われるリソースを事前読み込みするかどうか決める場合に便利です。以下の例は、ページの読み込み直後に呼び出され、動画の事前読み込みが望ましくない場合の接続タイプを確かめます。携帯電話回線接続が見つかると、 <code>preloadVideo</code> フラグは <code>false</code> に設定されます。コードをわかりやすくするために、この例ではひとつの接続タイプだけをテストしました。実際に使う場合には、 <code>switch</code> 文その他のやり方で、 {{domxref("NetworkInformation.type")}} の可能な値すべてを確かめることになるでしょう。 <code>type</code> の値にかかわらず、 {{domxref("NetworkInformation.effectiveType")}} プロパティを用いて接続速度を見積もることができます。</p>
+接続オブジェクトは、大きな帯域幅やメモリが使われるリソースを事前読み込みするかどうか決める場合に便利です。以下の例は、ページの読み込み直後に呼び出され、動画の事前読み込みが望ましくない場合の接続タイプを確かめます。携帯電話回線接続が見つかると、 `preloadVideo` フラグは `false` に設定されます。コードをわかりやすくするために、この例ではひとつの接続タイプだけをテストしました。実際に使う場合には、 `switch` 文その他のやり方で、 {{domxref("NetworkInformation.type")}} の可能な値すべてを確かめることになるでしょう。 `type` の値にかかわらず、 {{domxref("NetworkInformation.effectiveType")}} プロパティを用いて接続速度を見積もることができます。
 
-<pre class="brush: js notranslate">let preloadVideo = true;
+```js
+let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
     preloadVideo = false;
   }
-}</pre>
+}
+```
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+## インターフェイス
 
-<dl>
- <dt>{{domxref("NetworkInformation")}}</dt>
- <dd>端末がネットワーク通信に使用している接続方法の情報を提供します。また、接続タイプが変更された場合に、スクリプトへ通知する手段も提供します。 <code>NetworkInformation</code> インターフェイスはインスタンス化できません。代わりに、 {{domxref("Navigator")}} インターフェイスを通してアクセスします。</dd>
-</dl>
+- {{domxref("NetworkInformation")}}
+  - : 端末がネットワーク通信に使用している接続方法の情報を提供します。また、接続タイプが変更された場合に、スクリプトへ通知する手段も提供します。 `NetworkInformation` インターフェイスはインスタンス化できません。代わりに、 {{domxref("Navigator")}} インターフェイスを通してアクセスします。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information', '', 'Network Information API')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   | 状態                                         | 備考     |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
+| {{SpecName('Network Information', '', 'Network Information API')}} | {{Spec2('Network Information')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<h3 id="NetworkInformation">NetworkInformation</h3>
+### NetworkInformation
 
-<p>{{Compat("api.NetworkInformation")}}</p>
+{{Compat("api.NetworkInformation")}}
 
-<h3 id="Navigator.connection">Navigator.connection</h3>
+### Navigator.connection
 
-<p>{{Compat("api.Navigator.connection")}}</p>
+{{Compat("api.Navigator.connection")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}</li>
- <li><a href="/ja/docs/Online_and_offline_events">Online and offline events</a></li>
- <li>{{domxref("Navigator.connection", "window.navigator.connection")}}</li>
-</ul>
+- {{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
+- [Online and offline events](/ja/docs/Online_and_offline_events)
+- {{domxref("Navigator.connection", "window.navigator.connection")}}

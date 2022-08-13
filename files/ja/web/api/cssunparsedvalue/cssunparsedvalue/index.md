@@ -12,38 +12,25 @@ tags:
   - Reference
 translation_of: Web/API/CSSUnparsedValue/CSSUnparsedValue
 ---
-<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p class="summary"><strong><code>CSSUnparsedValue()</code></strong> はコンストラクターで、カスタムプロパティのプロパティ値を表す新しい {{domxref("CSSUnparsedValue")}} オブジェクトを生成します。</p>
+**`CSSUnparsedValue()`** はコンストラクターで、カスタムプロパティのプロパティ値を表す新しい {{domxref("CSSUnparsedValue")}} オブジェクトを生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>CSSUnparsedValue</var> = new CSSUnparsedValue(<var>members</var>)</pre>
+    var CSSUnparsedValue = new CSSUnparsedValue(members)
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><var>members</var></dt>
- <dd>{{domxref('USVString')}} または {{domxref('CSSVariableReferenceValue')}} のどちらかの値を持つ配列です。</dd>
-</dl>
+- _members_
+  - : {{domxref('USVString')}} または {{domxref('CSSVariableReferenceValue')}} のどちらかの値を持つ配列です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM','#dom-cssunparsedvalue-cssunparsedvalue-members-members','CSSUnparsedValue')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           | 状態                     | 備考     |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('CSSOM','#dom-cssunparsedvalue-cssunparsedvalue-members-members','CSSUnparsedValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.CSSUnparsedValue.CSSUnparsedValue")}}</p>
+{{Compat("api.CSSUnparsedValue.CSSUnparsedValue")}}

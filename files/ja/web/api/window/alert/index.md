@@ -11,59 +11,46 @@ tags:
   - alert
 translation_of: Web/API/Window/alert
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p><strong><code>Window.alert()</code></strong> メソッドは、オプションの指定されたコンテンツと OK ボタンを持つ警告ダイアログを表示します。</p>
+**`Window.alert()`** メソッドは、オプションの指定されたコンテンツと OK ボタンを持つ警告ダイアログを表示します。
 
-<p>一部の条件下（ユーザーがタブを切り替えた場合など）では、ブラウザーが実際にダイアログを表示しない場合や、ユーザーがダイアログを閉じるのを待たない場合があります。</p>
+一部の条件下（ユーザーがタブを切り替えた場合など）では、ブラウザーが実際にダイアログを表示しない場合や、ユーザーがダイアログを閉じるのを待たない場合があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><code>window.alert(<em>message</em>);</code></pre>
+    window.alert(message);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
-  <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>警告ダイアログに表示したいオプションの文字列または、文字列に変換されて表示されるオブジェクトです。</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : 警告ダイアログに表示したいオプションの文字列または、文字列に変換されて表示されるオブジェクトです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">window.alert("Hello world!");
-alert("Hello world!");</pre>
+```js
+window.alert("Hello world!");
+alert("Hello world!");
+```
 
-<p>いずれも、以下のように表示されます。</p>
+いずれも、以下のように表示されます。
 
-<p><img alt="Image:AlertHelloWorld.png" src="/files/130/AlertHelloWorld.png"></p>
+![Image:AlertHelloWorld.png](/files/130/AlertHelloWorld.png)
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 注記
 
-<p>警告ダイアログは、メッセージの確認応答以外に、ユーザ側で応答を必要としないメッセージのために使われるべきです。</p>
+警告ダイアログは、メッセージの確認応答以外に、ユーザ側で応答を必要としないメッセージのために使われるべきです。
 
-<p>この記事では、 DOM:window.prompt と DOM：window.confirm のテキストが共有されています。ダイアログボックスはモーダルウィンドウです。つまり、ユーザーはこれを閉じないとプログラムの他のインターフェイス部分にアクセスする事ができません。ですから、ダイアログボックス (もしくは、モーダルウィンドウ) を生成する関数を過度に使用すべきではありません。</p>
+この記事では、 DOM:window\.prompt と DOM：window\.confirm のテキストが共有されています。ダイアログボックスはモーダルウィンドウです。つまり、ユーザーはこれを閉じないとプログラムの他のインターフェイス部分にアクセスする事ができません。ですから、ダイアログボックス (もしくは、モーダルウィンドウ) を生成する関数を過度に使用すべきではありません。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | 状態                             | コメント |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("window.confirm","confirm")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
- <li><a href="/ja/docs/Chrome">Mozilla Chrome</a> については、<code>nsIPromptService.alert</code> と <code>nsIPromptService.alertCheck</code> を参照してください。</li>
-</ul>
+- {{domxref("window.confirm","confirm")}}
+- {{domxref("window.prompt","prompt")}}
+- [Mozilla Chrome](/ja/docs/Chrome) については、`nsIPromptService.alert` と `nsIPromptService.alertCheck` を参照してください。

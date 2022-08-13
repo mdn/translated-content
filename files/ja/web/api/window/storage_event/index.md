@@ -3,80 +3,33 @@ title: storage
 slug: Web/API/Window/storage_event
 translation_of: Web/API/Window/storage_event
 ---
-<p><code>storage</code> イベントは、ストレージエリア (<code>localStorage</code> または <code>sessionStorage</code>) が変更されたときに発生します。詳しくは <a href="/ja/docs/Web/API/Web_Storage_API">Web Storage API</a> をご覧ください。</p>
+`storage` イベントは、ストレージエリア (`localStorage` または `sessionStorage`) が変更されたときに発生します。詳しくは [Web Storage API](/ja/docs/Web/API/Web_Storage_API) をご覧ください。
 
-<h2 id="General_info" name="General_info">一般情報</h2>
+## 一般情報
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">仕様</dt>
- <dd style="margin: 0 0 0 120px;"><em><a href="http://www.w3.org/TR/webstorage/#the-storage-event">Web Storage</a></em></dd>
- <dt style="float: left; text-align: right; width: 120px;">インターフェイス</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("StorageEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">バブリング</dt>
- <dd style="margin: 0 0 0 120px;">不可</dd>
- <dt style="float: left; text-align: right; width: 120px;">キャンセル可能か</dt>
- <dd style="margin: 0 0 0 120px;">不可</dd>
- <dt style="float: left; text-align: right; width: 120px;">ターゲット</dt>
- <dd style="margin: 0 0 0 120px;">DefaultView (<code>&lt;window&gt;</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">既定のアクション</dt>
- <dd style="margin: 0 0 0 120px;">なし</dd>
-</dl>
+- 仕様
+  - : _[Web Storage](http://www.w3.org/TR/webstorage/#the-storage-event)_
+- インターフェイス
+  - : {{domxref("StorageEvent")}}
+- バブリング
+  - : 不可
+- キャンセル可能か
+  - : 不可
+- ターゲット
+  - : DefaultView (`<window>`)
+- 既定のアクション
+  - : なし
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>key</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>The key being changed.</td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>The old value of the key being changed.</td>
-  </tr>
-  <tr>
-   <td><code>newValue</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>The new value of the key being changed.</td>
-  </tr>
-  <tr>
-   <td><code>url</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}} (string)</td>
-   <td>The address of the document whose key changed.</td>
-  </tr>
-  <tr>
-   <td><code>storageArea</code> {{readonlyInline}}</td>
-   <td>{{domxref("Storage")}}</td>
-   <td>The Storage object that was affected.</td>
-  </tr>
- </tbody>
-</table>
+| Property                               | Type                                      | Description                                            |
+| -------------------------------------- | ----------------------------------------- | ------------------------------------------------------ |
+| `target` {{readonlyInline}}      | {{domxref("EventTarget")}}      | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}        | {{domxref("DOMString")}}          | The type of event.                                     |
+| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}              | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}              | Whether the event is cancellable or not.               |
+| `key` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | The key being changed.                                 |
+| `oldValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | The old value of the key being changed.                |
+| `newValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | The new value of the key being changed.                |
+| `url` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | The address of the document whose key changed.         |
+| `storageArea` {{readonlyInline}} | {{domxref("Storage")}}              | The Storage object that was affected.                  |

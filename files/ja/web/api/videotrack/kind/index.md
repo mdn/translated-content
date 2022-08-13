@@ -15,60 +15,43 @@ tags:
   - track
 translation_of: Web/API/VideoTrack/kind
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>kind</code></strong> プロパティには、<strong>{{domxref("VideoTrack")}}</strong> に含まれる動画のカテゴリを示す文字列が含まれています。</span> この <code>kind</code> を使用して、特定のトラックを有効または無効にするシナリオを決定できます。 動画トラックで利用可能な kind の一覧については、<a href="#video_track_kind_strings">動画トラックの kind 文字列</a>を参照してください。</p>
+**`kind`** プロパティには、**{{domxref("VideoTrack")}}** に含まれる動画のカテゴリを示す文字列が含まれています。 この `kind` を使用して、特定のトラックを有効または無効にするシナリオを決定できます。 動画トラックで利用可能な kind の一覧については、[動画トラックの kind 文字列](#video_track_kind_strings)を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>trackKind</em> = <em>VideoTrack</em>.kind;</pre>
+    var trackKind = VideoTrack.kind;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>メディアが表すコンテンツの種類を指定する {{domxref("DOMString")}}。 この文字列は、以下の<a href="#video_track_kind_strings">動画トラックの kind 文字列</a>にあるもののうちの1つです。</p>
+メディアが表すコンテンツの種類を指定する {{domxref("DOMString")}}。 この文字列は、以下の[動画トラックの kind 文字列](#video_track_kind_strings)にあるもののうちの 1 つです。
 
-<h2 id="Video_track_kind_strings" name="Video_track_kind_strings">動画トラックの kind 文字列</h2>
+## 動画トラックの kind 文字列
 
-<p>動画トラックで利用可能な kind は次のとおりです。</p>
+動画トラックで利用可能な kind は次のとおりです。
 
-<dl>
- <dt><code>"alternative"</code></dt>
- <dd>メイントラックに代わる可能性のあるもの。 例えば、異なる動画テイクや、音楽だけで会話がないサウンドトラックのバージョンなど。</dd>
- <dt><code>"captions"</code></dt>
- <dd>キャプション付きのメイン動画トラックのバージョン。</dd>
- <dt><code>"main"</code></dt>
- <dd>プライマリ動画トラック。</dd>
- <dt><code>"sign"</code></dt>
- <dd>音声トラックの手話による通訳。</dd>
- <dt><code>"subtitles"</code></dt>
- <dd>字幕付きのメイン動画トラックのバージョン。</dd>
- <dt><code>"commentary"</code></dt>
- <dd>解説を含む動画トラック。 これは、例えば映画で監督の解説トラックを含めるために使用される場合があります。</dd>
- <dt><code>""</code>（空の文字列）</dt>
- <dd>トラックに明確な kind がない、またはトラックのメタデータによって提供された kind が{{Glossary("user agent","ユーザーエージェント")}}に認識されていません。</dd>
-</dl>
+- `"alternative"`
+  - : メイントラックに代わる可能性のあるもの。 例えば、異なる動画テイクや、音楽だけで会話がないサウンドトラックのバージョンなど。
+- `"captions"`
+  - : キャプション付きのメイン動画トラックのバージョン。
+- `"main"`
+  - : プライマリ動画トラック。
+- `"sign"`
+  - : 音声トラックの手話による通訳。
+- `"subtitles"`
+  - : 字幕付きのメイン動画トラックのバージョン。
+- `"commentary"`
+  - : 解説を含む動画トラック。 これは、例えば映画で監督の解説トラックを含めるために使用される場合があります。
+- `""`（空の文字列）
+  - : トラックに明確な kind がない、またはトラックのメタデータによって提供された kind が{{Glossary("user agent","ユーザーエージェント")}}に認識されていません。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-videotrack-kind', 'VideoTrack: kind')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                             | 状態                             | コメント |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#dom-videotrack-kind', 'VideoTrack: kind')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.VideoTrack.kind")}}</p>
+{{Compat("api.VideoTrack.kind")}}

@@ -9,58 +9,41 @@ tags:
   - delete
 translation_of: Web/API/URLSearchParams/delete
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary">{{domxref("URLSearchParams")}} インターフェイスの <strong><code>delete()</code></strong> メソッドは、すべての検索パラメーターのリストから、指定された検索パラメーターとそれに関連するすべての値を削除します。</span></p>
+{{domxref("URLSearchParams")}} インターフェイスの **`delete()`** メソッドは、すべての検索パラメーターのリストから、指定された検索パラメーターとそれに関連するすべての値を削除します。
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">URLSearchParams.delete(<em>name</em>)</pre>
+    URLSearchParams.delete(name)
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>name</dt>
- <dd>削除するパラメーターの名前。</dd>
-</dl>
+- name
+  - : 削除するパラメーターの名前。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>無効</p>
+無効
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2&amp;foo=3');
+```js
+let url = new URL('https://example.com?foo=1&bar=2&foo=3');
 let params = new URLSearchParams(url.search.slice(1));
 
 // foo パラメーターを削除します。
-params.delete('foo'); // クエリー文字列は現在: 'bar=2'</pre>
+params.delete('foo'); // クエリー文字列は現在: 'bar=2'
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-delete', "delete()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                 | 状態                 | コメント |
+| ------------------------------------------------------------------------------------ | -------------------- | -------- |
+| {{SpecName('URL', '#dom-urlsearchparams-delete', "delete()")}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.delete")}}</p>
-</div>
+{{Compat("api.URLSearchParams.delete")}}
