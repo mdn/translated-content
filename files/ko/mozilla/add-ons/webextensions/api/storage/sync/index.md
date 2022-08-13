@@ -3,48 +3,38 @@ title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div> </div>
+`sync` 저장 공간을 의미합니다. `sync` 저장 공간에 있는 데이터는 브라우저 사이에서 동기화되며 서로 다른 기기 간에 사용자가 브라우저에 로그인 한 경우 언제든지 접근 가능합니다.
 
-<p><code>sync</code> 저장 공간을 의미합니다. <code>sync</code> 저장 공간에 있는 데이터는 브라우저 사이에서 동기화되며 서로 다른 기기 간에 사용자가 브라우저에 로그인 한 경우 언제든지 접근 가능합니다.</p>
+Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖고 동작합니다. `sync.storage`, 를 사용하신다면 [`어플리케이션`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json 파일에 있는 키를 통해 여러분의 부가기능에 고유한 ID를 부여해야 합니다.
 
-<p>Firefox에서 <code>sync.storage</code> 는 고유한 부가기능 ID에 의존성을 갖고 동작합니다. <code>sync.storage</code>, 를 사용하신다면 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">어플리케이션</a></code> manifest.json 파일에 있는 키를 통해 여러분의 부가기능에 고유한 ID를 부여해야 합니다.</p>
+이 API는 주로 여러분의 부가기능에 사용자 설정 정보를 저장하고 서로 다른 프로필 간에 설정을 동기화 할 수 있도록 사용됩니다. 이 API는 100KB까지 저장할 수 있습니다. 이보다 더 큰 데이터를 저장하려고 하는 경우, API 요청은 특정한 에러 메시지를 반환할 것입니다. 이 API는 아쉽게도 현재까지 특정한 성능을 보장하진 않습니다.
 
-<p>이 API는 주로 여러분의 부가기능에 사용자 설정 정보를 저장하고 서로 다른 프로필 간에 설정을 동기화 할 수 있도록 사용됩니다. 이 API는 100KB까지 저장할 수 있습니다.  이보다 더 큰 데이터를 저장하려고 하는 경우, API 요청은 특정한 에러 메시지를 반환할 것입니다. 이 API는 아쉽게도 현재까지 특정한 성능을 보장하진 않습니다.</p>
+## 메소드
 
-<h2 id="메소드">메소드</h2>
+`sync` 객체는 {{WebExtAPIRef("storage.StorageArea")}} 타입에 정의 된 메소드를 제공합니다:
 
-<p><code>sync</code> 객체는 {{WebExtAPIRef("storage.StorageArea")}} 타입에 정의 된 메소드를 제공합니다:</p>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : 저장소 영역에서 하나 이상의 항목을 가져온다.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : 저장소의 사용된 크기를 바이트단위로 얻는다.
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : 저장소에 하나 이상의 항목을 설정한다. 이미 있는 항목은 교체된다.
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : 저장소에서 하나 이상의 값을 지운다.
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : 저장소의 모든 항목을 지워서 비운다.
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>저장소 영역에서 하나 이상의 항목을 가져온다.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>저장소의 사용된 크기를 바이트단위로 얻는다.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>저장소에 하나 이상의 항목을 설정한다. 이미 있는 항목은 교체된다.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>저장소에서 하나 이상의 값을 지운다.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>저장소의 모든 항목을 지워서 비운다.</dd>
-</dl>
+## Browser 호환성
 
-<h2 id="Browser_호환성">Browser 호환성</h2>
+{{Compat("webextensions.api.storage.sync")}}
 
-<p>{{Compat("webextensions.api.storage.sync")}}</p>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#property-sync"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,4 +62,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

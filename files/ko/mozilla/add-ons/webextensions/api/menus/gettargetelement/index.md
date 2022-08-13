@@ -4,33 +4,31 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p class="summary">주어진 <code>targetElementId</code>에 해당하는 요소를 돌려준다.</p>
+주어진 `targetElementId`에 해당하는 요소를 돌려준다.
 
-<p>이 함수는 오직 클릭된 요소가 있는 문서에서만 동작한다. so everywhere but in the background page.</p>
+이 함수는 오직 클릭된 요소가 있는 문서에서만 동작한다. so everywhere but in the background page.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">let elem = browser.menus.getTargetElement(targetElementId);
-</pre>
+    let elem = browser.menus.getTargetElement(targetElementId);
 
-<h3 id="파라메터">파라메터</h3>
+### 파라메터
 
-<dl>
- <dt><code>targetElementId</code></dt>
- <dd><code>{{WebExtAPIRef("menus.onClicked")}}</code> 핸들러 또는 <code>{{WebExtAPIRef("menus.onShown")}}</code> 이벤트에 전달된 <code>{{WebExtAPIRef("menus.OnClickData")}}</code> 객체의 속성</dd>
-</dl>
+- `targetElementId`
+  - : `{{WebExtAPIRef("menus.onClicked")}}` 핸들러 또는 `{{WebExtAPIRef("menus.onShown")}}` 이벤트에 전달된 `{{WebExtAPIRef("menus.OnClickData")}}` 객체의 속성
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p><code>targetElementId</code>로 참조되는 요소를 반환한다. <code>targetElementId</code>가 유효하지 않으면 <code>null</code>를 반환한다.</p>
+`targetElementId`로 참조되는 요소를 반환한다. `targetElementId`가 유효하지 않으면 `null`를 반환한다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>아래 예제는 인수로 전달된 <code>info.targetElementId</code> 값으로 요소를 구하고, 그것을 지운다. 하지만 <code>getTargetElement</code>는 요소가 있는 문서에서만 동작하므로 문서가 있는 탭에 스크립트를 주입하는 형태로 처리하고 있다. </p>
+아래 예제는 인수로 전달된 `info.targetElementId` 값으로 요소를 구하고, 그것을 지운다. 하지만 `getTargetElement`는 요소가 있는 문서에서만 동작하므로 문서가 있는 탭에 스크립트를 주입하는 형태로 처리하고 있다.
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
   contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
@@ -41,19 +39,15 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
     });
   },
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
+{{Compat("webextensions.api.menus.getTargetElement")}}
 
+## 같이 보기
 
-<p>{{Compat("webextensions.api.menus.getTargetElement")}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li>{{WebExtAPIRef("menus.create")}}</li>
- <li>{{WebExtAPIRef("menus.OnClickData")}}</li>
-</ul>
+- {{WebExtAPIRef("menus.create")}}
+- {{WebExtAPIRef("menus.OnClickData")}}

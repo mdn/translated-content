@@ -14,175 +14,149 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Interact with the browser's tab system.</p>
+Interact with the browser's tab system.
 
-<p>브라우저의 탭 시스템과의 상호작용.</p>
+브라우저의 탭 시스템과의 상호작용.
 
-<p>You can use this API to get a list of opened tabs, filtered by various criteria, and to open, update, move, reload, and remove tabs. You can't directly access the content hosted by tabs using this API, but you can insert JavaScript and CSS into tabs using the {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} APIs.</p>
+You can use this API to get a list of opened tabs, filtered by various criteria, and to open, update, move, reload, and remove tabs. You can't directly access the content hosted by tabs using this API, but you can insert JavaScript and CSS into tabs using the {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} APIs.
 
-<p>이 API는 열려있는 탭의 목록을 얻는데, 다양한 기준으로 걸러내는데, 그리고 탭을 열고, 고치고, 옮기고, 다시 싣고, 없애는데 사용할 수 있다. 이 API로 탭에 열린 콘텐트를 직접 다룰 수는 없지만, {{WebExtAPIRef("tabs.executeScript()")}}나 {{WebExtAPIRef("tabs.insertCSS()")}} API로 탭에 자바스크립트와 CSS를 끼워 넣을 수는 있다.</p>
+이 API는 열려있는 탭의 목록을 얻는데, 다양한 기준으로 걸러내는데, 그리고 탭을 열고, 고치고, 옮기고, 다시 싣고, 없애는데 사용할 수 있다. 이 API로 탭에 열린 콘텐트를 직접 다룰 수는 없지만, {{WebExtAPIRef("tabs.executeScript()")}}나 {{WebExtAPIRef("tabs.insertCSS()")}} API로 탭에 자바스크립트와 CSS를 끼워 넣을 수는 있다.
 
-<p>You can use most of this API without any special permission. However:</p>
+You can use most of this API without any special permission. However:
 
-<p>특별한 권한없이 이 API의 대부분을 사용할 수 있지만:</p>
+특별한 권한없이 이 API의 대부분을 사용할 수 있지만:
 
-<ul>
- <li>to access <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, you need to have the "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. In Firefox this also means you need "tabs" to {{WebExtAPIRef("tabs.query", "query")}} by URL.</li>
- <li>to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the tab</li>
-</ul>
+- to access `Tab.url`, `Tab.title`, and `Tab.favIconUrl`, you need to have the "tabs" [permission](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In Firefox this also means you need "tabs" to {{WebExtAPIRef("tabs.query", "query")}} by URL.
+- to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} you must have the [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) for the tab
 
-<p> </p>
+- `Tab.url`, `Tab.title`, and `Tab.favIconUrl`에 접근하려면 "tabs" [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 가져야 한다. 파이어폭스에서 이 말은 URL로 {{WebExtAPIRef("tabs.query", "query")}} 하는데도 "tabs"가 필요하다는 뜻이다.
+- {{WebExtAPIRef("tabs.executeScript()")}}나 {{WebExtAPIRef("tabs.insertCSS()")}}를 사용하려면 탭에 대한 [host 권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)을 가져야 한다.
 
-<ul>
- <li><code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>에 접근하려면 "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">권한</a>을 가져야 한다. 파이어폭스에서 이 말은 URL로 {{WebExtAPIRef("tabs.query", "query")}} 하는데도 "tabs"가 필요하다는 뜻이다.</li>
- <li>{{WebExtAPIRef("tabs.executeScript()")}}나 {{WebExtAPIRef("tabs.insertCSS()")}}를 사용하려면 탭에 대한 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 권한</a>을 가져야 한다.</li>
-</ul>
+또는 이런 권한을 일시적으로 얻는 방법도 있다. 현재 활성 탭이거나 명시적인 사용자 동작의 응답이라면 ["activeTab" 권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)을 요청하면 된다.
 
-<p> </p>
+많은 탭 작업은 탭 ID를 사용한다. 탭 ID는 브라우저 세션 내에서 탭마다 고유하도록 보장된다. 브라우저가 다시 시작되면, 탭 ID를 재사용할 수 있고 그럴 것이다. 다시 시작하는 브라우저에 걸쳐서 탭에 정보를 연관시키려면 {{WebExtAPIRef("sessions.setTabValue()")}}를 사용해라.
 
-<p>또는 이런 권한을 일시적으로 얻는 방법도 있다. 현재 활성 탭이거나 명시적인 사용자 동작의 응답이라면 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" 권한</a>을 요청하면 된다.</p>
+## Types
 
-<p>많은 탭 작업은 탭 ID를 사용한다. 탭 ID는 브라우저 세션 내에서 탭마다 고유하도록 보장된다. 브라우저가 다시 시작되면, 탭 ID를 재사용할 수 있고 그럴 것이다. 다시 시작하는 브라우저에 걸쳐서 탭에 정보를 연관시키려면 {{WebExtAPIRef("sessions.setTabValue()")}}를 사용해라.</p>
+- {{WebExtAPIRef("tabs.MutedInfoReason")}}
+  - : Specifies the reason a tab was muted or unmuted.
+- {{WebExtAPIRef("tabs.MutedInfo")}}
+  - : This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
+- {{WebExtAPIRef("tabs.Tab")}}
+  - : This type contains information about a tab.
+- {{WebExtAPIRef("tabs.TabStatus")}}
+  - : Indicates whether the tab has finished loading.
+- {{WebExtAPIRef("tabs.WindowType")}}
+  - : The type of window that hosts this tab.
+- {{WebExtAPIRef("tabs.ZoomSettingsMode")}}
+  - : Defines whether zoom changes are handled by the browser, by the add-on, or are disabled.
+- {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
+  - : Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
+- {{WebExtAPIRef("tabs.ZoomSettings")}}
+  - : Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
 
-<h2 id="Types">Types</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.MutedInfoReason")}}</dt>
- <dd>Specifies the reason a tab was muted or unmuted.</dd>
- <dt>{{WebExtAPIRef("tabs.MutedInfo")}}</dt>
- <dd>This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.</dd>
- <dt>{{WebExtAPIRef("tabs.Tab")}}</dt>
- <dd>This type contains information about a tab.</dd>
- <dt>{{WebExtAPIRef("tabs.TabStatus")}}</dt>
- <dd>Indicates whether the tab has finished loading.</dd>
- <dt>{{WebExtAPIRef("tabs.WindowType")}}</dt>
- <dd>The type of window that hosts this tab.</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsMode")}}</dt>
- <dd>Defines whether zoom changes are handled by the browser, by the add-on, or are disabled.</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsScope")}}</dt>
- <dd>Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettings")}}</dt>
- <dd>Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.</dd>
-</dl>
+- {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
+  - : A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
 
-<h2 id="Properties">Properties</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.TAB_ID_NONE")}}</dt>
- <dd>A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).</dd>
-</dl>
+- {{WebExtAPIRef("tabs.connect()")}}
+  - : Sets up a messaging connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
+- {{WebExtAPIRef("tabs.create()")}}
+  - : Creates a new tab.
+- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
+  - : Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.
+- {{WebExtAPIRef("tabs.detectLanguage()")}}
+  - : Detects the primary language of the content in a tab.
+- {{WebExtAPIRef("tabs.duplicate()")}}
+  - : Duplicates a tab.
+- {{WebExtAPIRef("tabs.executeScript()")}}
+  - : Injects JavaScript code into a page.
+- {{WebExtAPIRef("tabs.get()")}}
+  - : Retrieves details about the specified tab.
+- {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
+  - : Gets details about all tabs in the specified window.
+- {{WebExtAPIRef("tabs.getCurrent()")}}
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") object.
+- {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
+  - : Gets the tab that is selected in the specified window.
+- {{WebExtAPIRef("tabs.getZoom()")}}
+  - : Gets the current zoom factor of the specified tab.
+- {{WebExtAPIRef("tabs.getZoomSettings()")}}
+  - : Gets the current zoom settings for the specified tab.
+- {{WebExtAPIRef("tabs.highlight()")}}
+  - : Highlights one or more tabs.
+- {{WebExtAPIRef("tabs.insertCSS()")}}
+  - : Injects CSS into a page.
+- {{WebExtAPIRef("tabs.removeCSS()")}}
+  - : Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
+- {{WebExtAPIRef("tabs.move()")}}
+  - : Moves one or more tabs to a new position in the same window or to a different window.
+- {{WebExtAPIRef("tabs.query()")}}
+  - : Gets all tabs that have the specified properties, or all tabs if no properties are specified.
+- {{WebExtAPIRef("tabs.reload()")}}
+  - : Reload a tab, optionally bypassing the local web cache.
+- {{WebExtAPIRef("tabs.remove()")}}
+  - : Closes one or more tabs.
+- {{WebExtAPIRef("tabs.sendMessage()")}}
+  - : Sends a single message to the content script(s) in the specified tab.
+- {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
+  - : Sends a single request to the content script(s) in the specified tab. **Deprecated**: use {{WebExtAPIRef("tabs.sendMessage()")}} instead.
+- {{WebExtAPIRef("tabs.setZoom()")}}
+  - : Zooms the specified tab.
+- {{WebExtAPIRef("tabs.setZoomSettings()")}}
+  - : Sets the zoom settings for the specified tab.
+- {{WebExtAPIRef("tabs.update()")}}
+  - : Navigate the tab to a new URL, or modify other properties of the tab.
 
-<h2 id="Functions">Functions</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.connect()")}}</dt>
- <dd>Sets up a messaging connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> running in the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.create()")}}</dt>
- <dd>Creates a new tab.</dd>
- <dt>{{WebExtAPIRef("tabs.captureVisibleTab()")}}</dt>
- <dd>Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.</dd>
- <dt>{{WebExtAPIRef("tabs.detectLanguage()")}}</dt>
- <dd>Detects the primary language of the content in a tab.</dd>
- <dt>{{WebExtAPIRef("tabs.duplicate()")}}</dt>
- <dd>Duplicates a tab.</dd>
- <dt>{{WebExtAPIRef("tabs.executeScript()")}}</dt>
- <dd>Injects JavaScript code into a page.</dd>
- <dt>{{WebExtAPIRef("tabs.get()")}}</dt>
- <dd>Retrieves details about the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}</dt>
- <dd>Gets details about all tabs in the specified window.</dd>
- <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
- <dd>Gets information about the tab that this script is running in, as a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab" title="This type contains information about a tab."><code>tabs.Tab</code></a> object.</dd>
- <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
- <dd>Gets the tab that is selected in the specified window.</dd>
- <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>
- <dd>Gets the current zoom factor of the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.getZoomSettings()")}}</dt>
- <dd>Gets the current zoom settings for the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.highlight()")}}</dt>
- <dd>Highlights one or more tabs.</dd>
- <dt>{{WebExtAPIRef("tabs.insertCSS()")}}</dt>
- <dd>Injects CSS into a page.</dd>
- <dt>{{WebExtAPIRef("tabs.removeCSS()")}}</dt>
- <dd>Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.</dd>
- <dt>{{WebExtAPIRef("tabs.move()")}}</dt>
- <dd>Moves one or more tabs to a new position in the same window or to a different window.</dd>
- <dt>{{WebExtAPIRef("tabs.query()")}}</dt>
- <dd>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</dd>
- <dt>{{WebExtAPIRef("tabs.reload()")}}</dt>
- <dd>Reload a tab, optionally bypassing the local web cache.</dd>
- <dt>{{WebExtAPIRef("tabs.remove()")}}</dt>
- <dd>Closes one or more tabs.</dd>
- <dt>{{WebExtAPIRef("tabs.sendMessage()")}}</dt>
- <dd>Sends a single message to the content script(s) in the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}</dt>
- <dd>Sends a single request to the content script(s) in the specified tab. <strong>Deprecated</strong>: use {{WebExtAPIRef("tabs.sendMessage()")}} instead.</dd>
- <dt>{{WebExtAPIRef("tabs.setZoom()")}}</dt>
- <dd>Zooms the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.setZoomSettings()")}}</dt>
- <dd>Sets the zoom settings for the specified tab.</dd>
- <dt>{{WebExtAPIRef("tabs.update()")}}</dt>
- <dd>Navigate the tab to a new URL, or modify other properties of the tab.</dd>
-</dl>
+- {{WebExtAPIRef("tabs.onActivated")}}
+  - : Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired.
+- {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
+  - : Fires when the selected tab in a window changes. **Deprecated:** use {{WebExtAPIRef("tabs.onActivated")}} instead.
+- {{WebExtAPIRef("tabs.onAttached")}}
+  - : Fired when a tab is attached to a window, for example because it was moved between windows.
+- {{WebExtAPIRef("tabs.onCreated")}}
+  - : Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired.
+- {{WebExtAPIRef("tabs.onDetached")}}
+  - : Fired when a tab is detached from a window, for example because it is being moved between windows.
+- {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
+  - : Fired when the highlighted or selected tabs in a window change. **Deprecated:** use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
+- {{WebExtAPIRef("tabs.onHighlighted")}}
+  - : Fired when the highlighted or selected tabs in a window change.
+- {{WebExtAPIRef("tabs.onMoved")}}
+  - : Fired when a tab is moved within a window.
+- {{WebExtAPIRef("tabs.onRemoved")}}
+  - : Fired when a tab is closed.
+- {{WebExtAPIRef("tabs.onReplaced")}}
+  - : Fired when a tab is replaced with another tab due to prerendering.
+- {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
+  - : Fires when the selected tab in a window changes. **Deprecated:** use {{WebExtAPIRef("tabs.onActivated")}} instead.
+- {{WebExtAPIRef("tabs.onUpdated")}}
+  - : Fired when a tab is updated.
+- {{WebExtAPIRef("tabs.onZoomChange")}}
+  - : Fired when a tab is zoomed.
 
-<h2 id="Events">Events</h2>
+## Browser compatibility
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.onActivated")}}</dt>
- <dd>Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired.</dd>
- <dt>{{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}</dt>
- <dd>Fires when the selected tab in a window changes. <strong>Deprecated:</strong> use {{WebExtAPIRef("tabs.onActivated")}} instead.</dd>
- <dt>{{WebExtAPIRef("tabs.onAttached")}}</dt>
- <dd>Fired when a tab is attached to a window, for example because it was moved between windows.</dd>
- <dt>{{WebExtAPIRef("tabs.onCreated")}}</dt>
- <dd>Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired.</dd>
- <dt>{{WebExtAPIRef("tabs.onDetached")}}</dt>
- <dd>Fired when a tab is detached from a window, for example because it is being moved between windows.</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}</dt>
- <dd>Fired when the highlighted or selected tabs in a window change. <strong>Deprecated:</strong> use {{WebExtAPIRef("tabs.onHighlighted")}} instead.</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlighted")}}</dt>
- <dd>Fired when the highlighted or selected tabs in a window change.</dd>
- <dt>{{WebExtAPIRef("tabs.onMoved")}}</dt>
- <dd>Fired when a tab is moved within a window.</dd>
- <dt>{{WebExtAPIRef("tabs.onRemoved")}}</dt>
- <dd>Fired when a tab is closed.</dd>
- <dt>{{WebExtAPIRef("tabs.onReplaced")}}</dt>
- <dd>Fired when a tab is replaced with another tab due to prerendering.</dd>
- <dt>{{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}</dt>
- <dd>Fires when the selected tab in a window changes. <strong>Deprecated:</strong> use {{WebExtAPIRef("tabs.onActivated")}} instead.</dd>
- <dt>{{WebExtAPIRef("tabs.onUpdated")}}</dt>
- <dd>Fired when a tab is updated.</dd>
- <dt>{{WebExtAPIRef("tabs.onZoomChange")}}</dt>
- <dd>Fired when a tab is zoomed.</dd>
-</dl>
+{{Compat("webextensions.api.tabs")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+> 참고: The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro. If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
-<p>{{Compat("webextensions.api.tabs")}}</p>
+### Edge incompatibilities
 
-<div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+Promises are not supported in Edge. Use callbacks instead.
 
-<p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
+{{WebExtExamples("h2")}}
 
-<h3 id="Edge_incompatibilities">Edge incompatibilities</h3>
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Promises are not supported in Edge. Use callbacks instead.</p>
-
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -210,4 +184,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>
