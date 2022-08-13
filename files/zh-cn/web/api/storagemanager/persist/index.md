@@ -1,7 +1,6 @@
 ---
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
-translation_of: Web/API/StorageManager/persist
 ---
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: window.print
 slug: Web/API/Window/print
-translation_of: Web/API/Window/print
 ---
 {{ ApiRef() }}
 

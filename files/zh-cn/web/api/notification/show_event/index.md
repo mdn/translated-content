@@ -1,10 +1,6 @@
 ---
 title: Notification.onshow
 slug: Web/API/Notification/show_event
-tags:
-  - Notification.onshow
-translation_of: Web/API/Notification/onshow
-original_slug: Web/API/notification/onshow
 ---
 {{APIRef("Web Notifications")}}
 

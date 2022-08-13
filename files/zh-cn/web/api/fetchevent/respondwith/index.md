@@ -1,7 +1,6 @@
 ---
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
-translation_of: Web/API/FetchEvent/respondWith
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 

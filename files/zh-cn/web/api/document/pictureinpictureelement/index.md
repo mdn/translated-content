@@ -1,19 +1,6 @@
 ---
 title: Document.pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
-page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Graphics
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - pictureInPictureElement
-  - pip
-translation_of: Web/API/Document/pictureInPictureElement
 ---
 {{ApiRef("Fullscreen API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WaveShaperNode.oversample
 slug: Web/API/WaveShaperNode/oversample
-translation_of: Web/API/WaveShaperNode/oversample
 ---
 {{ APIRef("Web Audio API") }}
 

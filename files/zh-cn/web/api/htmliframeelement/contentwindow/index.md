@@ -1,7 +1,6 @@
 ---
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
-translation_of: Web/API/HTMLIFrameElement/contentWindow
 ---
 {{APIRef("HTML DOM")}}
 

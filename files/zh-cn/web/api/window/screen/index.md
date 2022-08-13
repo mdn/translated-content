@@ -1,9 +1,6 @@
 ---
 title: Window.screen
 slug: Web/API/Window/screen
-tags:
-  - screen
-translation_of: Web/API/Window/screen
 ---
 {{APIRef("CSSOM View")}}
 

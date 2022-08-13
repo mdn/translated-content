@@ -1,15 +1,6 @@
 ---
 title: TextDecoder.encoding
 slug: Web/API/TextDecoder/encoding
-page-type: web-api-instance-property
-tags:
-  - API
-  - Encoding
-  - Experimental
-  - Property
-  - Read-only
-  - TextDecoder
-translation_of: Web/api/TextDecoder/encoding
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 

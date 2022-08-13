@@ -1,9 +1,6 @@
 ---
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
-tags:
-  - 范围对象
-translation_of: Web/API/Range/setEnd
 ---
 **`Range.setEnd()`**方法用于设置 [`Range`](https://developer.mozilla.org/zh-CN/docs/Web/API/Range)的结束位置。
 

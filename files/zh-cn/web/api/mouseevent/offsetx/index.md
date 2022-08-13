@@ -1,12 +1,6 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
-tags:
-  - API
-  - 只读
-  - 属性
-  - 鼠标事件
-translation_of: Web/API/MouseEvent/offsetX
 ---
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 

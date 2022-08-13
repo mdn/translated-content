@@ -1,12 +1,6 @@
 ---
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
-tags:
-  - API
-  - Fonts
-  - Reference
-  - 字体
-translation_of: Web/API/CSS_Font_Loading_API
 ---
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 

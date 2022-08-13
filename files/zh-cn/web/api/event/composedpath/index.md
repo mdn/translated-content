@@ -1,9 +1,6 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
-tags:
-  - API
-translation_of: Web/API/Event/composedPath
 ---
 {{APIRef("Shadow DOM")}}
 

@@ -1,8 +1,6 @@
 ---
 title: MediaStream.addTrack()
 slug: Web/API/MediaStream/addTrack
-translation_of: Web/API/MediaStream/addTrack
-original_slug: Web/API/MediaStream.addTrack
 ---
 {{APIRef("Media Capture and Streams")}}
 

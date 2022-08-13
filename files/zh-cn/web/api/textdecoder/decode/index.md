@@ -1,14 +1,6 @@
 ---
 title: TextDecoder.decode()
 slug: Web/API/TextDecoder/decode
-page-type: web-api-instance-method
-tags:
-  - API
-  - Encoding
-  - Experimental
-  - Method
-  - TextDecoder
-translation_of: Web/api/TextDecoder/decode
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 

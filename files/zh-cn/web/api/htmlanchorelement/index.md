@@ -1,7 +1,6 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-translation_of: Web/API/HTMLAnchorElement
 ---
 {{APIRef("HTML DOM")}}
 

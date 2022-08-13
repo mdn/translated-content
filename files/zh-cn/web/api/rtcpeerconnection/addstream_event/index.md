@@ -1,8 +1,6 @@
 ---
 title: RTCPeerConnection.onaddstream
 slug: Web/API/RTCPeerConnection/addstream_event
-translation_of: Web/API/RTCPeerConnection/onaddstream
-original_slug: Web/API/RTCPeerConnection/onaddstream
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

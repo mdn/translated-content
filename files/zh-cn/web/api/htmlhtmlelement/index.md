@@ -1,10 +1,6 @@
 ---
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
-tags:
-  - 参考
-  - 接口
-translation_of: Web/API/HTMLHtmlElement
 ---
 {{ APIRef("HTML DOM") }}
 

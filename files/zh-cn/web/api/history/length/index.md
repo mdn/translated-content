@@ -1,7 +1,6 @@
 ---
 title: History.length
 slug: Web/API/History/length
-translation_of: Web/API/History/length
 ---
 {{ APIRef("HTML DOM") }}
 

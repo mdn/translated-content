@@ -1,7 +1,6 @@
 ---
 title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
-translation_of: Web/API/GamepadButton/pressed
 ---
 {{APIRef("Gamepad API")}}
 

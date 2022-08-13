@@ -1,7 +1,6 @@
 ---
 title: CSS Object Model
 slug: Web/API/CSS_Object_Model
-translation_of: Web/API/CSS_Object_Model
 ---
 **CSS Object Model** 是一组允许用 JavaScript 操纵 CSS 的 API。 它是继 DOM 和 HTML API 之后，又一个操纵 CSS 的接口，从而能够动态地读取和修改 CSS 样式。
 

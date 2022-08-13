@@ -1,13 +1,6 @@
 ---
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - scrollBy
-translation_of: Web/API/Element/scrollBy
 ---
 {{ APIRef() }}
 

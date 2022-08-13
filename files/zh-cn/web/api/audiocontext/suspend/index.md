@@ -1,7 +1,6 @@
 ---
 title: AudioContext.suspend()
 slug: Web/API/AudioContext/suspend
-translation_of: Web/API/AudioContext/suspend
 ---
 {{ APIRef("Web Audio API") }}
 

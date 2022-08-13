@@ -1,12 +1,6 @@
 ---
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Selection
-translation_of: Web/API/Selection/collapse
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 

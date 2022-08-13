@@ -1,7 +1,6 @@
 ---
 title: FontFace
 slug: Web/API/FontFace
-translation_of: Web/API/FontFace
 ---
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
-translation_of: Web/API/HTMLImageElement/srcset
 ---
 {{APIRef("HTML DOM")}}
 

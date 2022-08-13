@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
-translation_of: Web/API/ReadableStream/pipeThrough
 ---
 {{APIRef("Streams")}}
 

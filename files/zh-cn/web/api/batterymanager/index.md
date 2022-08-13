@@ -1,7 +1,6 @@
 ---
 title: BatteryManager（电源管理）
 slug: Web/API/BatteryManager
-translation_of: Web/API/BatteryManager
 ---
 {{APIRef}}
 

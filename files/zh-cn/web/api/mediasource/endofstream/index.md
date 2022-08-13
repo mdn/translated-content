@@ -1,7 +1,6 @@
 ---
 title: MediaSource.endOfStream()
 slug: Web/API/MediaSource/endOfStream
-translation_of: Web/API/MediaSource/endOfStream
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

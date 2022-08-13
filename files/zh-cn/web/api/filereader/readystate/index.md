@@ -1,7 +1,6 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
-translation_of: Web/API/FileReader/readyState
 ---
 {{APIRef("File API")}}
 

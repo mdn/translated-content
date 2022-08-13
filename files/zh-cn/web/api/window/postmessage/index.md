@@ -1,16 +1,6 @@
 ---
 title: window.postMessage
 slug: Web/API/Window/postMessage
-tags:
-  - AJAX
-  - API
-  - CORS
-  - DOM
-  - Window.postMessage()
-  - postMessage()
-  - 参考
-  - 方法
-translation_of: Web/API/Window/postMessage
 ---
 {{ApiRef("HTML DOM")}}
 

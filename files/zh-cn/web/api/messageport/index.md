@@ -1,15 +1,6 @@
 ---
 title: MessagePort
 slug: Web/API/MessagePort
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - Interface
-  - MessagePort
-  - Reference
-  - TopicStub
-translation_of: Web/API/MessagePort
 ---
 {{APIRef("HTML DOM")}}
 

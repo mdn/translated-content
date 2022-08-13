@@ -1,7 +1,6 @@
 ---
 title: Element.removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
-translation_of: Web/API/Element/removeAttributeNode
 ---
 {{ APIRef("DOM") }}
 

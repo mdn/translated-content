@@ -1,8 +1,6 @@
 ---
 title: AudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
-translation_of: Web/API/BaseAudioContext/createConvolver
-original_slug: Web/API/AudioContext/createConvolver
 ---
 {{ APIRef("Web Audio API") }}
 

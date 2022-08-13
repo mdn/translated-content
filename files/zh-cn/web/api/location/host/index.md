@@ -1,7 +1,6 @@
 ---
 title: 'Location: host'
 slug: Web/API/Location/host
-translation_of: Web/API/Location/host
 ---
 {{ApiRef("Location")}}
 

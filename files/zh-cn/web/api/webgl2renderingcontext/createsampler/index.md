@@ -1,7 +1,6 @@
 ---
 title: WebGL2RenderingContext.createSampler()
 slug: Web/API/WebGL2RenderingContext/createSampler
-translation_of: Web/API/WebGL2RenderingContext/createSampler
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

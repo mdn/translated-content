@@ -1,15 +1,6 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
-tags:
-  - API
-  - Audio
-  - DOM
-  - 参考
-  - 多媒体
-  - 构造器
-  - 音频
-translation_of: Web/API/HTMLAudioElement/Audio
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
-translation_of: Web/API/WebGLRenderingContext/createRenderbuffer
 ---
 {{APIRef("WebGL")}}
 

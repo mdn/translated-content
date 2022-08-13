@@ -1,14 +1,6 @@
 ---
 title: TextDecoder.fatal
 slug: Web/API/TextDecoder/fatal
-page-type: web-api-instance-property
-tags:
-  - API
-  - TextDecoder
-  - fatal
-  - Property
-  - Reference
-translation_of: Web/api/TextDecoder/fatal
 ---
 {{DefaultAPISidebar("")}}
 

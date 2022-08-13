@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
-translation_of: Web/API/DataTransfer/types
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

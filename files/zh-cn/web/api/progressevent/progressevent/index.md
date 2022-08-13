@@ -1,13 +1,6 @@
 ---
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - ProgressEvent
-translation_of: Web/api/ProgressEvent/ProgressEvent
 ---
 {{APIRef("XMLHttpRequest")}}
 

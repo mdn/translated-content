@@ -1,20 +1,6 @@
 ---
 title: VideoTrackList
 slug: Web/API/VideoTrackList
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - list
-translation_of: Web/API/VideoTrackList
 ---
 {{APIRef("HTML DOM")}}
 

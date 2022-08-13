@@ -1,7 +1,6 @@
 ---
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
-translation_of: Web/API/Navigator/deviceMemory
 ---
 {{SeeCompatTable}}{{APIRef("Device Memory")}}
 

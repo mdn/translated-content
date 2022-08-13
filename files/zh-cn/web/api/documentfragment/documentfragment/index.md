@@ -1,7 +1,6 @@
 ---
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
 {{ApiRef("DOM")}}{{seeCompatTable}}
 

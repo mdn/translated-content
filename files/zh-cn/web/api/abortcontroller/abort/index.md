@@ -1,16 +1,6 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
-page-type: web-api-instance-method
-tags:
-  - API
-  - AbortController
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - abort()
-translation_of: Web/API/AbortController/abort
 ---
 {{APIRef("DOM")}}
 

@@ -1,9 +1,6 @@
 ---
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
-tags:
-  - WebGL
-translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
 {{APIRef("WebGL")}}
 

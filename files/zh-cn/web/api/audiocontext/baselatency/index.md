@@ -1,7 +1,6 @@
 ---
 title: AudioContext.baseLatency
 slug: Web/API/AudioContext/baseLatency
-translation_of: Web/API/AudioContext/baseLatency
 ---
 {{SeeCompatTable}}{{APIRef("Web Audio API")}}
 

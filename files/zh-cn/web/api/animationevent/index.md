@@ -1,9 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - AnimationEvent
-translation_of: Web/API/AnimationEvent
 ---
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 

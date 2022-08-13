@@ -1,17 +1,6 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Ready
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-  - WritableStreamDefaultWriter
-translation_of: Web/API/WritableStreamDefaultWriter/ready
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

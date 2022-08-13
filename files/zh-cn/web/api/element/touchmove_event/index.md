@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.ontouchmove
 slug: Web/API/Element/touchmove_event
-translation_of: Web/API/GlobalEventHandlers/ontouchmove
-original_slug: Web/API/GlobalEventHandlers/ontouchmove
 ---
 {{ApiRef("HTML DOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-tags:
-  - API
-  - Base64
-  - Web
-  - 参考
-  - 字符串
-  - 数据
-  - 方法
-translation_of: Web/API/btoa
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Window.resizeTo
 slug: Web/API/Window/resizeTo
-translation_of: Web/API/Window/resizeTo
 ---
 {{APIRef}}
 

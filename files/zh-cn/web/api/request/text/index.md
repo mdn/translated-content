@@ -1,15 +1,6 @@
 ---
 title: Request.text()
 slug: Web/API/Request/text
-page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - Text
-  - Request
-translation_of: Web/API/Request/text
 ---
 {{APIRef("Fetch")}}
 

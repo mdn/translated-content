@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
-translation_of: Web/API/MouseEvent/shiftKey
 ---
 {{APIRef("DOM Events")}}
 

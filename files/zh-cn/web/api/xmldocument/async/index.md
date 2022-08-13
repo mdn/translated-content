@@ -1,7 +1,6 @@
 ---
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
-translation_of: Web/API/XMLDocument/async
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}
 

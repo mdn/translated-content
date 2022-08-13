@@ -1,10 +1,6 @@
 ---
 title: Notification.onclick
 slug: Web/API/Notification/click_event
-tags:
-  - Notification.onclick
-translation_of: Web/API/Notification/onclick
-original_slug: Web/API/notification/onclick
 ---
 {{APIRef("Web Notifications")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
-tags:
-  - API
-  - Geolocation API
-translation_of: Web/API/GeolocationCoordinates
 ---
 {{APIRef("Geolocation API")}}
 

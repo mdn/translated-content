@@ -1,9 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawWidgetAsOnScreen()
 slug: Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen
-tags:
-  - CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen
 ---
 {{APIRef}} {{non-standard_header}}这个内部使用非标准的 Canvas 2D API 的方法**`CanvasRenderingContext2D.drawWidgetAsOnScreen() 为 Canvas（画布）上的窗口提供了根部件。不像`**{{domxref("CanvasRenderingContext2D.drawWindow", "drawWindow()")}}这个 API，它使用操作系统来获取屏幕上部件的快照而不是从 Gecko 自己的组合中读取
 

@@ -1,15 +1,6 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-tags:
-  - API
-  - 参考
-  - 合成
-  - 实验性的
-  - 网页语音 API
-  - 识别
-  - 语音
-translation_of: Web/API/Web_Speech_API
 ---
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 

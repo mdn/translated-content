@@ -1,14 +1,6 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
-tags:
-  - 参考
-  - 属性
-  - 应用编程接口
-  - 网页套接字
-  - 网页接口
-translation_of: Web/API/WebSocket/binaryType
-original_slug: Web/API/WebSocket/二进制类型
 ---
 {{APIRef("Web Sockets API")}}
 

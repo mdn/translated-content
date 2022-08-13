@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.getReader()
 slug: Web/API/ReadableStream/getReader
-tags:
-  - API
-  - getReader
-  - 参考
-  - 可读取流
-  - 方法
-  - 流
-translation_of: Web/API/ReadableStream/getReader
 ---
 {{APIRef("Streams")}}
 

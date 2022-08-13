@@ -1,7 +1,6 @@
 ---
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
-translation_of: Web/API/ReadableStreamDefaultReader
 ---
 {{APIRef("Streams")}}{{SeeCompatTable}}
 

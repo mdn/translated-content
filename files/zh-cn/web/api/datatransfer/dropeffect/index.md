@@ -1,13 +1,6 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-translation_of: Web/API/DataTransfer/dropEffect
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

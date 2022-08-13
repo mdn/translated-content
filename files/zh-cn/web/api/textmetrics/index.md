@@ -1,7 +1,6 @@
 ---
 title: TextMetrics
 slug: Web/API/TextMetrics
-translation_of: Web/API/TextMetrics
 ---
 {{APIRef("Canvas API")}}
 

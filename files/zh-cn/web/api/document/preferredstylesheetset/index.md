@@ -1,7 +1,6 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
-translation_of: Web/API/Document/preferredStyleSheetSet
 ---
 {{APIRef("DOM")}}
 

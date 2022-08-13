@@ -1,15 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - DOM
-  - Document
-  - 参考
-  - 同源策略
-  - 属性
-  - 跨域
-translation_of: Web/API/Document/domain
 ---
 {{ApiRef}}{{Deprecated_Header}}
 

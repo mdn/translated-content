@@ -1,10 +1,6 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
-tags:
-  - API
-  - Event
-translation_of: Web/API/ErrorEvent
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,8 +1,6 @@
 ---
 title: element.onpaste
 slug: Web/API/HTMLElement/paste_event
-translation_of: Web/API/HTMLElement/onpaste
-original_slug: Web/API/HTMLElement/onpaste
 ---
 {{ ApiRef() }}
 

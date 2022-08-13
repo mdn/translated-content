@@ -1,7 +1,6 @@
 ---
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
-translation_of: Web/API/FileReader/abort
 ---
 {{APIRef("File API")}}
 

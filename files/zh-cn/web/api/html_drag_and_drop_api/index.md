@@ -1,16 +1,6 @@
 ---
 title: HTML 拖放 API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-  - drag and drop
-  - 事件
-  - 总览
-  - 拖放
-  - 指南
-  - 进阶
-translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 

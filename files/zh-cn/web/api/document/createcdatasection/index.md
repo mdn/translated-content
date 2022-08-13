@@ -1,12 +1,6 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
-tags:
-  - API
-  - DOM
-  - 参考
-  - 方法
-translation_of: Web/API/Document/createCDATASection
 ---
 {{APIRef("DOM")}}
 

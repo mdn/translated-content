@@ -1,7 +1,6 @@
 ---
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
-translation_of: Web/API/Navigator/keyboard
 ---
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 

@@ -1,11 +1,6 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
-tags:
-  - API
-  - DOM
-  - Mobile
-translation_of: Web/API/TouchList
 ---
 {{ ApiRef("Touch Events") }}
 

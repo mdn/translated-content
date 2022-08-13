@@ -1,19 +1,6 @@
 ---
 title: Window
 slug: Web/API/Window
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - Window
-  - global
-  - 作用域
-  - 全局
-  - 参考
-  - 接口
-  - 标签页
-  - 浏览器
-translation_of: Web/API/Window
 ---
 {{APIRef("DOM")}}
 

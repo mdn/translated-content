@@ -1,14 +1,6 @@
 ---
 title: ProgressEvent.total
 slug: Web/API/ProgressEvent/total
-page-type: web-api-instance-property
-tags:
-  - API
-  - Progress Event
-  - ProgressEvent
-  - Property
-  - Reference
-translation_of: Web/api/ProgressEvent/total
 ---
 {{APIRef("XMLHttpRequest")}}
 

@@ -1,7 +1,6 @@
 ---
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
-translation_of: Web/API/AuthenticatorResponse/clientDataJSON
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

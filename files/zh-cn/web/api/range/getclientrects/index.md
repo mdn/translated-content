@@ -1,14 +1,6 @@
 ---
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
-tags:
-  - API
-  - CSSOM
-  - 参考
-  - 实验性
-  - 方法
-  - 范围
-translation_of: Web/API/Range/getClientRects
 ---
 {{ApiRef("DOM")}}
 

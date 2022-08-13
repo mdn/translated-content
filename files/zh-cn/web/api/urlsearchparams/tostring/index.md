@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
-translation_of: Web/API/URLSearchParams/toString
 ---
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 

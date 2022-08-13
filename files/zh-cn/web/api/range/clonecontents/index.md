@@ -1,12 +1,6 @@
 ---
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-translation_of: Web/API/Range/cloneContents
 ---
 {{ APIRef("DOM") }}
 

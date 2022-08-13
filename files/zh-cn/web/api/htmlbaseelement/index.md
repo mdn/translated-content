@@ -1,9 +1,6 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
-tags:
-  - 接口
-translation_of: Web/API/HTMLBaseElement
 ---
 {{APIRef("HTML DOM")}}
 

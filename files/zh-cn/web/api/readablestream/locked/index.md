@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
-tags:
-  - API
-  - Property
-  - ReadableStream
-  - Reference
-  - Streams
-  - locked
-translation_of: Web/API/ReadableStream/locked
 ---
 {{APIRef("Streams")}}
 

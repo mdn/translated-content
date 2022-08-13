@@ -1,14 +1,6 @@
 ---
 title: event.type
 slug: Web/API/Event/type
-tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - 参考
-  - 属性
-translation_of: Web/API/Event/type
 ---
 {{APIRef("DOM")}}
 

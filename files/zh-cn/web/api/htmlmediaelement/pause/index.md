@@ -1,11 +1,6 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
-tags:
-  - 媒体
-  - 视频
-  - 音频
-translation_of: Web/API/HTMLMediaElement/pause
 ---
 {{APIRef("HTML DOM")}}
 

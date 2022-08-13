@@ -1,7 +1,6 @@
 ---
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
-translation_of: Web/API/HTMLParagraphElement
 ---
 {{ APIRef("HTML DOM") }}
 

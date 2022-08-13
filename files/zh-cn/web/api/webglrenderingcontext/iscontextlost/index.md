@@ -1,9 +1,6 @@
 ---
 title: WebGLRenderingContext.isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
-tags:
-  - WebGL 上下文丢失
-translation_of: Web/API/WebGLRenderingContext/isContextLost
 ---
 {{APIRef("WebGL")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
-translation_of: Web/API/WebGLRenderingContext/useProgram
 ---
 {{APIRef("WebGL")}}
 

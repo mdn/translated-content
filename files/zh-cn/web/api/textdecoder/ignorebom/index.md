@@ -1,14 +1,6 @@
 ---
 title: TextDecoder.ignoreBOM
 slug: Web/API/TextDecoder/ignoreBOM
-page-type: web-api-instance-property
-tags:
-  - API
-  - TextDecoder
-  - ignoreBOM
-  - Property
-  - Reference
-translation_of: Web/api/TextDecoder/ignoreBOM
 ---
 {{DefaultAPISidebar("")}}
 

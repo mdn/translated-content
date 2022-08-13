@@ -1,7 +1,6 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
-translation_of: Web/API/Window/resizeBy
 ---
 {{APIRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
-translation_of: Web/API/HTMLMediaElement/audioTracks
 ---
 {{APIRef("HTML DOM")}}
 

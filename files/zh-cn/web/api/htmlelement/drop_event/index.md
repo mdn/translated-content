@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.ondrop
 slug: Web/API/HTMLElement/drop_event
-translation_of: Web/API/GlobalEventHandlers/ondrop
-original_slug: Web/API/GlobalEventHandlers/ondrop
 ---
 drop 事件的全局处理函数
 

@@ -1,19 +1,6 @@
 ---
 title: MediaKeySession
 slug: Web/API/MediaKeySession
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeySession
-  - NeedsExample
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Video
-translation_of: Web/API/MediaKeySession
 ---
 {{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 

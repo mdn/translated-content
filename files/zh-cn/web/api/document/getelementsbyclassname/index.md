@@ -1,11 +1,6 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - HTML5
-translation_of: Web/API/Document/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 

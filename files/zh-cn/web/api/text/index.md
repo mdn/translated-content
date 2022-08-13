@@ -1,7 +1,6 @@
 ---
 title: Text
 slug: Web/API/Text
-translation_of: Web/API/Text
 ---
 {{ ApiRef() }}
 

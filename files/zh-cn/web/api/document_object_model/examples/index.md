@@ -1,10 +1,6 @@
 ---
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - DOM 参考
-translation_of: Web/API/Document_Object_Model/Examples
 ---
 本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。
 

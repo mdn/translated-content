@@ -1,8 +1,6 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
-translation_of: Web/API/Slottable/assignedSlot
-translation_of_original: Web/API/Element/assignedSlot
 ---
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGL2RenderingContext.drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
-translation_of: Web/API/WebGL2RenderingContext/drawBuffers
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

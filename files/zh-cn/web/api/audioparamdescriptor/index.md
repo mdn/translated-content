@@ -1,7 +1,6 @@
 ---
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
-translation_of: Web/API/AudioParamDescriptor
 ---
 {{APIRef("Web Audio API")}}
 

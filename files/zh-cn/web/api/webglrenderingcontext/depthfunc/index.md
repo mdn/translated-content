@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
-translation_of: Web/API/WebGLRenderingContext/depthFunc
 ---
 {{APIRef("WebGL")}}
 

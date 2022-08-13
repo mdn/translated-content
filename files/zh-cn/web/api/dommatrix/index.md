@@ -1,7 +1,6 @@
 ---
 title: DOMMatrix
 slug: Web/API/DOMMatrix
-translation_of: Web/API/DOMMatrix
 ---
 {{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
 

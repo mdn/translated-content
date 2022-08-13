@@ -1,13 +1,6 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-tags:
-  - API
-  - DOM
-  - Window
-  - 属性
-  - 接口
-translation_of: Web/API/Window/scrollMaxX
 ---
 {{APIRef}} {{Non-standard_header}}
 

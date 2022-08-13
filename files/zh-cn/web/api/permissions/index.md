@@ -1,7 +1,6 @@
 ---
 title: Permissions
 slug: Web/API/Permissions
-translation_of: Web/API/Permissions
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

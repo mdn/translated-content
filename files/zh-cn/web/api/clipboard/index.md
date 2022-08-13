@@ -1,18 +1,6 @@
 ---
 title: Clipboard
 slug: Web/API/Clipboard
-tags:
-  - API
-  - Clipboard
-  - 剪切
-  - 剪切板
-  - 剪贴板
-  - 参考
-  - 复制
-  - 接口
-  - 粘贴
-  - 编辑
-translation_of: Web/API/Clipboard
 ---
 {{APIRef("Clipboard API")}} {{SecureContext_Header}}
 

@@ -1,12 +1,6 @@
 ---
 title: Element.hasAttributeNS()
 slug: Web/API/Element/hasAttributeNS
-tags:
-  - API
-  - 元素
-  - 属性
-  - 方法
-translation_of: Web/API/Element/hasAttributeNS
 ---
 {{ APIRef("DOM") }}
 

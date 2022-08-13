@@ -1,7 +1,6 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-translation_of: Web/API/Document/caretRangeFromPoint
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 

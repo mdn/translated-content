@@ -1,7 +1,6 @@
 ---
 title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
-translation_of: Web/API/Selection/removeAllRanges
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

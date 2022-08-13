@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
-translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
 {{APIRef("WebGL")}}
 

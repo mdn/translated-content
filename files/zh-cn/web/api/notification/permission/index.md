@@ -1,7 +1,6 @@
 ---
 title: Notification.permission
 slug: Web/API/notification/permission
-translation_of: Web/API/Notification/permission
 ---
 {{APIRef("Web Notifications")}}
 

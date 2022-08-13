@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
-translation_of: Web/API/WebGLRenderingContext/getProgramInfoLog
 ---
 {{APIRef("WebGL")}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
-translation_of: Web/API/HTMLElement/isContentEditable
 ---
 {{ APIRef("HTML DOM") }}
 

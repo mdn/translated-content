@@ -1,7 +1,6 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-translation_of: Web/API/Channel_Messaging_API
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 

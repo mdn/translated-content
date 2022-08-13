@@ -1,10 +1,6 @@
 ---
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
-tags:
-  - API
-  - DataTransferItem
-translation_of: Web/API/DataTransferItem/getAsFile
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

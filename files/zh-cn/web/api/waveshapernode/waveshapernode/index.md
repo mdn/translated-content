@@ -1,10 +1,6 @@
 ---
 title: WaveShaperNode.WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
-tags:
-  - API
-  - 构造方法
-translation_of: Web/API/WaveShaperNode/WaveShaperNode
 ---
 {{APIRef("Web Audio API")}}
 

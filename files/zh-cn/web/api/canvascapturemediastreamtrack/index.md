@@ -1,8 +1,6 @@
 ---
 title: CanvasCaptureMediaStream
 slug: Web/API/CanvasCaptureMediaStreamTrack
-translation_of: Web/API/CanvasCaptureMediaStreamTrack
-original_slug: Web/API/CanvasCaptureMediaStream
 ---
 {{APIRef}}{{SeeCompatTable}}
 

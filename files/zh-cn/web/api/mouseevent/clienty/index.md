@@ -1,10 +1,6 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - CSSOM View
-  - MouseEvent
-translation_of: Web/API/MouseEvent/clientY
 ---
 {{APIRef("DOM Events")}}
 

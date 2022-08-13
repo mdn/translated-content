@@ -1,15 +1,6 @@
 ---
 title: Response.blob()
 slug: Web/API/Response/blob
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Response
-translation_of: Web/API/Response/blob
-browser-compat: api.Response.blob
 ---
 {{APIRef("Fetch")}}
 

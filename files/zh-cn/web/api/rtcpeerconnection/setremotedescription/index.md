@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
-translation_of: Web/API/RTCPeerConnection/setRemoteDescription
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: ImageBitmap.width
 slug: Web/API/ImageBitmap/width
-translation_of: Web/API/ImageBitmap/width
 ---
 {{APIRef("Canvas API")}}
 

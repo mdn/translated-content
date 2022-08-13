@@ -1,17 +1,6 @@
 ---
 title: HTMLElement.nonce
 slug: Web/API/HTMLElement/nonce
-tags:
-  - API
-  - Content Security Policy
-  - Experimental
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - nonce
-translation_of: Web/API/HTMLElement/nonce
-browser-compat: api.HTMLElement.nonce
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 

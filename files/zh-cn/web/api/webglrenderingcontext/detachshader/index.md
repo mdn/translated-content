@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.detachShader()
 slug: Web/API/WebGLRenderingContext/detachShader
-translation_of: Web/API/WebGLRenderingContext/detachShader
 ---
 {{APIRef("WebGL")}}
 

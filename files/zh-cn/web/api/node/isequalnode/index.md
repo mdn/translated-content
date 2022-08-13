@@ -1,14 +1,6 @@
 ---
 title: Node.isEqualNode
 slug: Web/API/Node/isEqualNode
-tags:
-  - API
-  - DOM
-  - Node
-  - 参考
-  - 方法
-  - 节点
-translation_of: Web/API/Node/isEqualNode
 ---
 {{ ApiRef("DOM") }}
 

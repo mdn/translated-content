@@ -1,8 +1,6 @@
 ---
 title: element.oncut
 slug: Web/API/HTMLElement/cut_event
-translation_of: Web/API/HTMLElement/oncut
-original_slug: Web/API/HTMLElement/oncut
 ---
 {{ ApiRef() }}
 

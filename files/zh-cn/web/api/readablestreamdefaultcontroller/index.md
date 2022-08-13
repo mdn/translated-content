@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultController
 ---
 {{APIRef("Streams")}}
 

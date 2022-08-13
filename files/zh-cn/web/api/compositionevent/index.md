@@ -1,13 +1,6 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
-tags:
-  - API
-  - CompositionEvent
-  - DOM
-  - 事件
-  - 参考
-translation_of: Web/API/CompositionEvent
 ---
 {{APIRef("DOM Events")}}
 

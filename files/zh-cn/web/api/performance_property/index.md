@@ -1,12 +1,6 @@
 ---
 title: Window.performance
 slug: Web/API/performance_property
-tags:
-  - Window.performance
-  - analytics
-  - 前端代码埋点
-translation_of: Web/API/Window/performance
-original_slug: Web/API/Window/performance
 ---
 {{APIREf}}Web Performance API 允许网页访问某些函数来测量网页和 Web 应用程序的性能，包括 [Navigation Timing](/en-US/docs/Navigation_timing) API 和高分辨率时间数据。
 

@@ -1,13 +1,6 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
-tags:
-  - API
-  - Fetch
-  - 参考
-  - 属性
-  - 请求
-translation_of: Web/API/Request/mode
 ---
 {{APIRef("Fetch")}}
 

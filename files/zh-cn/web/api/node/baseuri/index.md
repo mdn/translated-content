@@ -1,14 +1,6 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-tags:
-  - <base>
-  - API
-  - HTML
-  - Node.baseURI
-  - Property
-  - base
-translation_of: Web/API/Node/baseURI
 ---
 {{APIRef("DOM")}}
 

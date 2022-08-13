@@ -1,7 +1,6 @@
 ---
 title: UIEvent.detail
 slug: Web/API/UIEvent/detail
-translation_of: Web/API/UIEvent/detail
 ---
 {{APIRef("DOM Events")}}
 

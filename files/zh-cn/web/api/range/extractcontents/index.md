@@ -1,7 +1,6 @@
 ---
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
-translation_of: Web/API/Range/extractContents
 ---
 {{ApiRef("DOM")}}
 

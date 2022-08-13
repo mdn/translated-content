@@ -1,22 +1,6 @@
 ---
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
-tags:
-  - API
-  - 会谈
-  - 分享
-  - 参考
-  - 多媒体
-  - 多媒体设备
-  - 屏幕
-  - 屏幕捕捉
-  - 屏幕捕捉 API
-  - 捕捉
-  - 方法
-  - 显示
-  - 获取显示多媒体
-  - 视频
-translation_of: Web/API/MediaDevices/getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 

@@ -1,12 +1,6 @@
 ---
 title: Selection.focusOffset
 slug: Web/API/Selection/focusOffset
-tags:
-  - HTML 编辑
-  - 只读
-  - 属性
-  - 选区
-translation_of: Web/API/Selection/focusOffset
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

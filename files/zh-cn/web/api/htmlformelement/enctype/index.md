@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
-translation_of: Web/API/HTMLFormElement/enctype
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,13 +1,6 @@
 ---
 title: location.reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
-browser-compat: api.Location.reload
 ---
 {{ APIRef("HTML DOM") }}
 

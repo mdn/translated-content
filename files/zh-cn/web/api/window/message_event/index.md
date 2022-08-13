@@ -1,8 +1,6 @@
 ---
 title: onmessage
 slug: Web/API/Window/message_event
-translation_of: Web/API/WindowEventHandlers/onmessage
-original_slug: Web/API/WindowEventHandlers/onmessage
 ---
 {{APIRef("HTML DOM")}}{{ SeeCompatTable() }}
 

@@ -1,9 +1,6 @@
 ---
 title: Touch.force
 slug: Web/API/Touch/force
-tags:
-  - touch
-translation_of: Web/API/Touch/force
 ---
 {{ ApiRef() }}
 

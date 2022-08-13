@@ -1,7 +1,6 @@
 ---
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
-translation_of: Web/API/WebGLContextEvent
 ---
 {{APIRef("WebGL")}}
 

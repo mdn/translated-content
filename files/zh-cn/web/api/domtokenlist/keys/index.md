@@ -1,15 +1,6 @@
 ---
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
-tags:
-  - DOM
-  - DOMTokenList
-  - Iterable
-  - Method
-  - Reference
-  - Web
-  - keys
-translation_of: Web/API/DOMTokenList/keys
 ---
 {{APIRef("DOM")}}
 

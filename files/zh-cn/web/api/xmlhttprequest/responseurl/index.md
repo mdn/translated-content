@@ -1,9 +1,6 @@
 ---
 title: XMLHttpRequest.responseURL
 slug: Web/API/XMLHttpRequest/responseURL
-tags:
-  - XMLHttpRequest.responseURL
-translation_of: Web/API/XMLHttpRequest/responseURL
 ---
 {{APIRef('XMLHttpRequest')}}
 

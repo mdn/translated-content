@@ -1,12 +1,6 @@
 ---
 title: BeforeInstallPrompt
 slug: Web/API/BeforeInstallPromptEvent
-tags:
-  - PWA
-  - beforeinstallprompt
-  - 添加到主屏幕
-  - 添加快捷方式
-translation_of: Web/API/BeforeInstallPromptEvent
 ---
 {{ ApiRef() }} {{ Non-standard_header }}
 
