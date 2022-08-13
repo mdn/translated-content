@@ -7,78 +7,57 @@ tags:
   - 请求方法
 translation_of: Web/HTTP/Methods/POST
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>POST</code> 方法</strong> 发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。</p>
+**HTTP `POST` 方法** 发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。
 
-<p>PUT 和{{HTTPMethod("POST")}}方法的区别是，PUT 方法是幂等的：连续调用一次或者多次的效果相同（无副作用）。连续调用同一个 POST 可能会带来额外的影响，比如多次提交订单。</p>
+PUT 和{{HTTPMethod("POST")}}方法的区别是，PUT 方法是幂等的：连续调用一次或者多次的效果相同（无副作用）。连续调用同一个 POST 可能会带来额外的影响，比如多次提交订单。
 
-<p>一个 <code>POST</code> 请求通常是通过 <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 表单</a>发送，并返回服务器的修改结果。在这种情况下，content type 是通过在 <dfn>{{HTMLElement("form")}} 元素中设置正确的 {{htmlattrxref("enctype", "form")}} 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 {{htmlattrxref("formenctype", "input")}} 属性来选择的</dfn>:</p>
+一个 `POST` 请求通常是通过 [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)发送，并返回服务器的修改结果。在这种情况下，content type 是通过在 _{{HTMLElement("form")}} 元素中设置正确的 {{htmlattrxref("enctype", "form")}} 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 {{htmlattrxref("formenctype", "input")}} 属性来选择的_:
 
-<ul>
- <li><code>application/</code><dfn><code>x-www-form-urlencoded</code>: 数据被编码成以 <code>'&amp;'</code> 分隔的键 - 值对，同时以 <code>'='</code> 分隔键和值。非字母或数字的字符会被 </dfn>{{glossary("percent-encoding")}}<dfn>: 这也就是为什么这种类型不支持二进制数据 (应使用 <code>multipart/form-data</code> 代替).</dfn></li>
- <li><dfn><code>multipart/form-data</code></dfn></li>
- <li><dfn><code>text/plain</code></dfn></li>
-</ul>
+- `application/`_`x-www-form-urlencoded`: 数据被编码成以 `'&'` 分隔的键 - 值对，同时以 `'='` 分隔键和值。非字母或数字的字符会被 _{{glossary("percent-encoding")}}_: 这也就是为什么这种类型不支持二进制数据 (应使用 `multipart/form-data` 代替)._
+- _`multipart/form-data`_
+- _`text/plain`_
 
-<p>当 POST 请求是通过除 HTML 表单之外的方式发送时，例如使用 {{domxref("XMLHttpRequest")}}, 那么请求主体可以是任何类型。按 HTTP 1.1 规范中描述，POST 为了以统一的方法来涵盖以下功能：</p>
+当 POST 请求是通过除 HTML 表单之外的方式发送时，例如使用 {{domxref("XMLHttpRequest")}}, 那么请求主体可以是任何类型。按 HTTP 1.1 规范中描述，POST 为了以统一的方法来涵盖以下功能：
 
-<ul>
- <li>注释已有的资源</li>
- <li>在公告板，新闻组，邮件列表或类似的文章组中发布消息;</li>
- <li>通过注册新增用户;</li>
- <li>向数据处理程序提供一批数据，例如提交一个表单;</li>
- <li>通过追加操作，扩展数据库数据。</li>
-</ul>
+- 注释已有的资源
+- 在公告板，新闻组，邮件列表或类似的文章组中发布消息;
+- 通过注册新增用户;
+- 向数据处理程序提供一批数据，例如提交一个表单;
+- 通过追加操作，扩展数据库数据。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">请求是否有主体</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">成功的响应是否有主体</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("安全")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("幂等")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("可缓存")}}</th>
-   <td>Only if freshness information is included</td>
-  </tr>
-  <tr>
-   <th scope="row">HTML 表单是否支持</th>
-   <td>是</td>
-  </tr>
- </tbody>
-</table>
+| 请求是否有主体                   | 是                                        |
+| -------------------------------- | ----------------------------------------- |
+| 成功的响应是否有主体             | 是                                        |
+| {{Glossary("安全")}}     | 否                                        |
+| {{Glossary("幂等")}}     | 否                                        |
+| {{Glossary("可缓存")}} | Only if freshness information is included |
+| HTML 表单是否支持                | 是                                        |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">POST /index.html
-</pre>
+```plain
+POST /index.html
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>使用默认的 <code>application/x-www-form-urlencoded</code> 做为 content type 的简单表单：</p>
+使用默认的 `application/x-www-form-urlencoded` 做为 content type 的简单表单：
 
-<pre>POST / HTTP/1.1
+```plain
+POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
-say=Hi&amp;to=Mom</pre>
+say=Hi&to=Mom
+```
 
-<p>使用 <code>multipart/form-data</code> 作为 content type 的表单：</p>
+使用 `multipart/form-data` 作为 content type 的表单：
 
-<pre>POST /test.html HTTP/1.1
+```plain
+POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 
@@ -89,19 +68,18 @@ value1
 --boundary
 Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-value2</pre>
+value2
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Disposition")}}

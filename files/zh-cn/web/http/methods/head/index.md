@@ -7,58 +7,36 @@ tags:
   - 请求方法
 translation_of: Web/HTTP/Methods/HEAD
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>HEAD</code> 方法</strong> 请求资源的头部信息，并且这些头部与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先获取其大小再决定是否要下载，以此可以节约带宽资源。</p>
+**HTTP `HEAD` 方法** 请求资源的头部信息，并且这些头部与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先获取其大小再决定是否要下载，以此可以节约带宽资源。
 
-<p><code>HEAD</code> 方法的响应不应包含响应正文。即使包含了正文也必须忽略掉. 虽然描述正文信息的 {{glossary("Entity header", "entity headers")}}, 例如 {{HTTPHeader("Content-Length")}} 可能会包含在响应中，但它们并不是用来描述 <code>HEAD</code> 响应本身的，而是用来描述同样情况下的 {{HTTPMethod("GET")}} 请求应该返回的响应。</p>
+`HEAD` 方法的响应不应包含响应正文。即使包含了正文也必须忽略掉. 虽然描述正文信息的 {{glossary("Entity header", "entity headers")}}, 例如 {{HTTPHeader("Content-Length")}} 可能会包含在响应中，但它们并不是用来描述 `HEAD` 响应本身的，而是用来描述同样情况下的 {{HTTPMethod("GET")}} 请求应该返回的响应。
 
-<p>如果 <code>HEAD</code> 请求的结果显示在上一次 {{HTTPMethod("GET")}} 请求后缓存的资源已经过期了，即使没有发出{{HTTPMethod("GET")}}请求，缓存也会失效</p>
+如果 `HEAD` 请求的结果显示在上一次 {{HTTPMethod("GET")}} 请求后缓存的资源已经过期了，即使没有发出{{HTTPMethod("GET")}}请求，缓存也会失效
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">请求是否有正文</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">成功的响应是否有正文</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("安全")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("幂等")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("可缓存")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 表单</a> 是否支持</th>
-   <td>否</td>
-  </tr>
- </tbody>
-</table>
+| 请求是否有正文                                         | 否  |
+| ------------------------------------------------------ | --- |
+| 成功的响应是否有正文                                   | 否  |
+| {{Glossary("安全")}}                           | 是  |
+| {{Glossary("幂等")}}                           | 是  |
+| {{Glossary("可缓存")}}                       | 是  |
+| [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms) 是否支持 | 否  |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">HEAD /index.html
-</pre>
+```plain
+HEAD /index.html
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">?另见</h2>
+## ?另见
 
-<ul>
- <li>{{HTTPMethod("GET")}}</li>
-</ul>
+- {{HTTPMethod("GET")}}

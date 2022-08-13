@@ -10,82 +10,83 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Save-Data
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。 这可能是传输成本高，连接速度慢等原因。</p>
+Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。 这可能是传输成本高，连接速度慢等原因。
 
-<p>值为 on 时，明确表示用户选择使用客户端简化数据使用模式，并且当与源进行通信时允许他们提供替代内容以减少下载的数据，例如较小的图像和视频资源，不同的标记和样式，禁用轮询和自动更新等。</p>
+值为 on 时，明确表示用户选择使用客户端简化数据使用模式，并且当与源进行通信时允许他们提供替代内容以减少下载的数据，例如较小的图像和视频资源，不同的标记和样式，禁用轮询和自动更新等。
 
-<div class="blockIndicator note">
-<p><strong>提示</strong>: 禁用 HTTP/2 服务器端推送 ({{RFC("7540", "Server Push", "8.2")}}) 也可以用于减少数据下载。</p>
-</div>
+> **备注：** 禁用 HTTP/2 服务器端推送 ({{RFC("7540", "Server Push", "8.2")}}) 也可以用于减少数据下载。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Save-Data: &lt;sd-token&gt;</pre>
+```plain
+Save-Data: <sd-token>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;<code>sd-token</code>&gt;</dt>
- <dd>一个数值，表示客户端是否想要选择简化数据使用模式。 on 表示是，而 off（默认值）表示不。</dd>
-</dl>
+- <`sd-token`>
+  - : 一个数值，表示客户端是否想要选择简化数据使用模式。 on 表示是，而 off（默认值）表示不。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>请求头{{HTTPHeader("Vary")}} 确保正确缓存内容（例如，当 Save-Data 标头不再存在时，确保不从缓存向用户提供较低质量的图像 [例如在从蜂窝网络切换到 Wi-Fi 后]）</p>
+请求头{{HTTPHeader("Vary")}} 确保正确缓存内容（例如，当 Save-Data 标头不再存在时，确保不从缓存向用户提供较低质量的图像 \[例如在从蜂窝网络切换到 Wi-Fi 后]）
 
-<h3 id="携带_Save-Data_on_请求头">携带 <code>Save-Data: on</code> 请求头</h3>
+### 携带 `Save-Data: on` 请求头
 
-<p>请求示例：</p>
+请求示例：
 
-<pre>GET /image.jpg HTTP/1.0
+```plain
+GET /image.jpg HTTP/1.0
 Host: example.com
-Save-Data: on</pre>
+Save-Data: on
+```
 
-<p>响应示例：</p>
+响应示例：
 
-<pre>HTTP/1.0 200 OK
+```plain
+HTTP/1.0 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 
 [...]
-</pre>
+```
 
-<h3 id="不携带_Save-Data请求头">不携带 <code>Save-Data 请求头</code></h3>
+### 不携带 `Save-Data 请求头`
 
-<p>请求示例：</p>
+请求示例：
 
-<pre>GET /image.jpg HTTP/1.0
+```plain
+GET /image.jpg HTTP/1.0
 Host: example.com
-</pre>
+```
 
-<p>响应示例：</p>
+响应示例：
 
-<pre>HTTP/1.0 200 OK
+```plain
+HTTP/1.0 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 
 [...]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://css-tricks.com/help-users-save-data/">Help Your Users `Save-Data` - CSS Tricks</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/">Delivering Fast and Light Applications with Save-Data - Google Developers</a></li>
- <li><a href="https://wicg.github.io/netinfo/#save-data-request-header-field">Network Information API - WICG</a></li>
- <li>Header to indicate that the content served varies by <code>Save-Data</code>: {{HTTPHeader("Vary")}}</li>
-</ul>
+- [Help Your Users \`Save-Data\` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
+- [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
+- [Network Information API - WICG](https://wicg.github.io/netinfo/#save-data-request-header-field)
+- Header to indicate that the content served varies by `Save-Data`: {{HTTPHeader("Vary")}}

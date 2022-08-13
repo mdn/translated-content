@@ -8,66 +8,54 @@ tags:
   - 隐私
 translation_of: Web/HTTP/Headers/DNT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>请求首部 <strong><code>DNT</code></strong> (<strong>D</strong>o <strong>N</strong>ot <strong>T</strong>rack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。</p>
+请求首部 **`DNT`** (**D**o **N**ot **T**rack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">DNT: 0
+```plain
+DNT: 0
 DNT: 1
-</pre>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>0</dt>
- <dd>表示用户愿意目标站点追踪用户个人信息。</dd>
- <dt>1</dt>
- <dd>表示用户不愿意目标站点追踪用户个人信息。</dd>
-</dl>
+- 0
+  - : 表示用户愿意目标站点追踪用户个人信息。
+- 1
+  - : 表示用户不愿意目标站点追踪用户个人信息。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_JavaScript_读取_“不追踪”_（Do_Not_Track）状态">使用 JavaScript 读取 “不追踪”（Do Not Track）状态</h3>
+### 使用 JavaScript 读取 “不追踪”（Do Not Track）状态
 
-<p>用户对 DNT 的设置还可以使用 {{domxref("Navigator.doNotTrack")}} 属性进行读取：</p>
+用户对 DNT 的设置还可以使用 {{domxref("Navigator.doNotTrack")}} 属性进行读取：
 
-<pre class="brush: js">navigator.doNotTrack; // "0" or "1"</pre>
+```js
+navigator.doNotTrack; // "0" or "1"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("Navigator.doNotTrack")}}</li>
- <li>{{HTTPHeader("Tk")}} header</li>
- <li><a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</a></li>
- <li><a href="https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean">"Do Not Track"中的"Track"指什么？– EFF</a></li>
- <li><a href="http://donottrack.us/">donottrack.us</a></li>
- <li>DNT 浏览器设置帮助：
-  <ul>
-   <li><a href="https://www.mozilla.org/en-US/firefox/dnt/">Firefox</a></li>
-   <li><a href="https://support.google.com/chrome/answer/2790761">Chrome</a></li>
-  </ul>
- </li>
-</ul>
+- {{domxref("Navigator.doNotTrack")}}
+- {{HTTPHeader("Tk")}} header
+- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
+- ["Do Not Track"中的"Track"指什么？– EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
+- [donottrack.us](http://donottrack.us/)
+- DNT 浏览器设置帮助：
+
+  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Chrome](https://support.google.com/chrome/answer/2790761)

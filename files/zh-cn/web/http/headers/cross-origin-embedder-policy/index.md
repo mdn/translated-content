@@ -3,76 +3,67 @@ title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 translation_of: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>Cross-Origin-Embedder-Policy</code></strong> (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 <a href="/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">CORP</a>或者 <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) 的任何跨域资源 。</p>
+HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 [CORP](</zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)或者 [CORS](/zh-CN/docs/Web/HTTP/CORS)) 的任何跨域资源 。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Cross-Origin-Embedder-Policy: unsafe-none | require-corp
-</pre>
+```plain
+Cross-Origin-Embedder-Policy: unsafe-none | require-corp
+```
 
-<h3 id="指令">指令</h3>
+### 指令
 
-<dl>
- <dt><code>unsafe-none</code></dt>
- <dd>这是默认值。允许文档获取跨源资源，而无需通过 CORS 协议或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头。</dd>
- <dt><code>require-corp</code></dt>
- <dd>文档只能从相同的源加载资源，或显式标记为可从另一个源加载的资源。<br>
- 如果跨源资源支持 CORS，则 <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被 COEP 阻止。</dd>
-</dl>
+- `unsafe-none`
+  - : 这是默认值。允许文档获取跨源资源，而无需通过 CORS 协议或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头。
+- `require-corp`
+  - : 文档只能从相同的源加载资源，或显式标记为可从另一个源加载的资源。
+    如果跨源资源支持 CORS，则 [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被 COEP 阻止。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="某些功能取决于跨域隔离">某些功能取决于跨域隔离</h3>
+### 某些功能取决于跨域隔离
 
-<p>为了节省时间你可以只接受类似于{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象，只要你的文档有一个值被设置为<code>require-corp</code> 的 COEP 头部。</p>
+为了节省时间你可以只接受类似于{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象，只要你的文档有一个值被设置为`require-corp` 的 COEP 头部。
 
-<pre class="notranslate">Cross-Origin-Embedder-Policy: require-corp
+```plain
+Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
-</pre>
+```
 
-<p>你可以看看这个头部 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ，这样你设置起来会做的更好。</p>
+你可以看看这个头部 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ，这样你设置起来会做的更好。
 
-<p>检查 cross origin isolation 是否成功，你可以再次测试<code><a href="/en-US/docs/Web/API/crossOriginIsolated">crossOriginIsolated</a></code> 这个属性 是否对窗口和工作的上下文有效：</p>
+检查 cross origin isolation 是否成功，你可以再次测试[`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) 这个属性 是否对窗口和工作的上下文有效：
 
-<pre class="brush: js notranslate">if (crossOriginIsolated) {
+```js
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
-}</pre>
+}
+```
 
-<h3 id="避免CORS阻塞COEP">避免 CORS 阻塞 COEP</h3>
+### 避免 CORS 阻塞 COEP
 
-<p>If you enable COEP using <code>require-corp</code> and have a cross origin resource that needs to be loaded, it needs to support <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute for this image from a third-party site:</p>
+If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/zh-CN/docs/Web/HTTP/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute for this image from a third-party site:
 
-<pre class="brush: html notranslate">&lt;img src="https://thirdparty.com/img.png" crossorigin&gt;</pre>
+```html
+<img src="https://thirdparty.com/img.png" crossorigin>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li>{{httpheader("Cross-Origin-Opener-Policy")}}</li>
-</ul>
+- {{httpheader("Cross-Origin-Opener-Policy")}}

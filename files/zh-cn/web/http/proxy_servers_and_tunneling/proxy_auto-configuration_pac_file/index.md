@@ -4,469 +4,463 @@ slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 translation_of: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>代理自动配置（PAC）</strong>文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：</p>
+**代理自动配置（PAC）**文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   // ...
-}</pre>
+}
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">function FindProxyForURL(<var>url</var>, <var>host</var>)</pre>
+```plain
+function FindProxyForURL(url, host)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>url</var></code></dt>
- <dd>要访问的 URL。URL 中类似 <code>https://</code> 这样的的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 <code>PacHttpsUrlStrippingEnabled</code> 为 <code>false</code> 来禁止这种行为，或者以 <code>--unsafe-pac-url</code> 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 <code>network.proxy.autoconfig_url.include_path</code>。</dd>
- <dt><code><var>host</var></code></dt>
- <dd>从 URL 中提取得到的主机名。这只是为了方便；它与 <code>://</code> 之后到第一个 <code>:</code> 或 <code>/</code> 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。</dd>
-</dl>
+- `url`
+  - : 要访问的 URL。URL 中类似 `https://` 这样的的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 `PacHttpsUrlStrippingEnabled` 为 `false` 来禁止这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
+- `host`
+  - : 从 URL 中提取得到的主机名。这只是为了方便；它与 `://` 之后到第一个 `:` 或 `/` 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>返回一个描述了代理设置的字符串。字符串的格式按照返回值格式进行定义。</p>
+返回一个描述了代理设置的字符串。字符串的格式按照返回值格式进行定义。
 
-<h3 id="返回值格式">返回值格式</h3>
+### 返回值格式
 
-<ul>
- <li><code>FindProxyForURL()</code> 函数返回一个字符串</li>
- <li>如果那个字符串为空，则不使用任何代理</li>
- <li>字符串中可以包含如下任意数量的“代理配置块”（building blocks），用分号分隔：</li>
-</ul>
+- `FindProxyForURL()` 函数返回一个字符串
+- 如果那个字符串为空，则不使用任何代理
+- 字符串中可以包含如下任意数量的“代理配置块”（building blocks），用分号分隔：
 
-<dl>
- <dt><code>DIRECT</code></dt>
- <dd>直连，不经过任何代理</dd>
- <dt><code>PROXY <em>host:port</em></code></dt>
- <dd>HTTP 代理</dd>
- <dt><code>SOCKS <em>host:port</em></code></dt>
- <dd>SOCKS 代理</dd>
-</dl>
+<!---->
 
-<p>最近版本的 Firefox 同时还支持：</p>
+- `DIRECT`
+  - : 直连，不经过任何代理
+- `PROXY host:port`
+  - : HTTP 代理
+- `SOCKS host:port`
+  - : SOCKS 代理
 
-<dl>
- <dt><code>HTTP <em>host:port</em></code></dt>
- <dd>HTTP 代理</dd>
- <dt><code>HTTPS <em>host:port</em></code></dt>
- <dd>HTTPS 代理</dd>
- <dt><code>SOCKS4 <em>host:port</em></code></dt>
- <dt><code>SOCKS5 <em>host:port</em></code></dt>
- <dd>SOCKS 代理（同时指定 SOCKS 版本）</dd>
-</dl>
+最近版本的 Firefox 同时还支持：
 
-<p>如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。</p>
+- `HTTP host:port`
+  - : HTTP 代理
+- `HTTPS host:port`
+  - : HTTPS 代理
+- `SOCKS4 host:port`
 
-<p>30 分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，再下一次是一个半小时。每次尝试后，间隔会增加 30 分钟。</p>
+  `SOCKS5 host:port`
 
-<p>如果所有代理都挂了，并且最后没有指定直连配置项（<code>DIRECT</code>），浏览器将询问是否应该暂时忽略代理，并尝试直接连接。20 分钟后，浏览器会再次询问是否应该重试代理，40 分钟后会再问一次。每次询问后，间隔会增加 20 分钟。</p>
+  - : SOCKS 代理（同时指定 SOCKS 版本）
 
-<h4 id="例子">例子</h4>
+如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
 
-<dl>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081</code></dt>
- <dd>主代理是 <code>w3proxy:8080</code>；如果它出现故障，则使用 <code>mozilla:8081</code>，直到主代理恢复。</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT</code></dt>
- <dd>和上面的基本一样，但如果两个代理都挂了，则自动改为直连。（在上面的例子中，Netscape 浏览器将询问用户是否要改用直接连接；在本例中，则不需要用户干预。）</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; SOCKS socks:1080</code></dt>
- <dd>如果主代理出现问题，则使用 SOCKS 连接。</dd>
-</dl>
+30 分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，再下一次是一个半小时。每次尝试后，间隔会增加 30 分钟。
 
-<p>自动配置文件应当被保存为一个以 .pac 作为文件拓展名的文件，比如：</p>
+如果所有代理都挂了，并且最后没有指定直连配置项（`DIRECT`），浏览器将询问是否应该暂时忽略代理，并尝试直接连接。20 分钟后，浏览器会再次询问是否应该重试代理，40 分钟后会再问一次。每次询问后，间隔会增加 20 分钟。
 
-<pre class="syntaxbox notranslate">proxy.pac</pre>
+#### 例子
 
-<p>其 MIME 类型应被设置为：</p>
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081`
+  - : 主代理是 `w3proxy:8080`；如果它出现故障，则使用 `mozilla:8081`，直到主代理恢复。
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT`
+  - : 和上面的基本一样，但如果两个代理都挂了，则自动改为直连。（在上面的例子中，Netscape 浏览器将询问用户是否要改用直接连接；在本例中，则不需要用户干预。）
+- `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
+  - : 如果主代理出现问题，则使用 SOCKS 连接。
 
-<pre class="syntaxbox notranslate">application/x-ns-proxy-autoconfig</pre>
+自动配置文件应当被保存为一个以 .pac 作为文件拓展名的文件，比如：
 
-<p>接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 MIME 类型。</p>
+```plain
+proxy.pac
+```
 
-<div class="note">
-<p><strong>注意：</strong></p>
+其 MIME 类型应被设置为：
 
-<ul>
- <li>PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。</li>
- <li>本文档末尾的示例都是完整的，使用时不需要增加任何其它代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）</li>
-</ul>
-</div>
+```plain
+application/x-ns-proxy-autoconfig
+```
 
-<h2 id="预定义的函数与环境">预定义的函数与环境</h2>
+接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 MIME 类型。
 
-<p>这些函数可以在 PAC 文件中使用：</p>
+> **备注：** PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
+>
+> - 本文档末尾的示例都是完整的，使用时不需要增加任何其它代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
 
-<ul>
- <li>基于主机名的判断函数
-  <ul>
-   <li><code><a href="#isPlainHostName">isPlainHostName()</a></code></li>
-   <li><code><a href="#dnsDomainIs">dnsDomainIs()</a></code></li>
-   <li><code><a href="#localHostOrDomainIs">localHostOrDomainIs()</a></code></li>
-   <li><code><a href="#isResolvable">isResolvable()</a></code></li>
-   <li><code><a href="#isInNet">isInNet()</a></code></li>
-  </ul>
- </li>
- <li>和代理相关的功能函数
-  <ul>
-   <li><code><a href="#dnsResolve">dnsResolve()</a></code></li>
-   <li><code><a href="#convert_addr">convert_addr()</a></code></li>
-   <li><code><a href="#myIpAddress">myIpAddress()</a></code></li>
-   <li><code><a href="#dnsDomainLevels">dnsDomainLevels()</a></code></li>
-  </ul>
- </li>
- <li>基于 URL 或主机名的判断函数
-  <ul>
-   <li><code><a href="#shExpMatch(str, shexp)">shExpMatch()</a></code></li>
-  </ul>
- </li>
- <li>基于时间的判断函数
-  <ul>
-   <li><code><a href="#weekdayRange">weekdayRange()</a></code></li>
-   <li><code><a href="#dateRange">dateRange()</a></code></li>
-   <li><code><a href="#timeRange">timeRange()</a></code></li>
-  </ul>
- </li>
- <li>日志记录功能函数
-  <ul>
-   <li><code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code></li>
-  </ul>
- </li>
- <li>同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
-  <ul>
-   <li><code>ProxyConfig.bindings </code> {{Deprecated_Inline}}</li>
-  </ul>
- </li>
-</ul>
+## 预定义的函数与环境
 
-<div class="note">
-<p><strong>注意：</strong> pactester ( <a href="https://github.com/pacparser/pacparser">pacparser </a>的一部分) 可以用来检测语法是否符合要求，使用方法如下：</p>
+这些函数可以在 PAC 文件中使用：
 
-<ul>
- <li>PAC 文件保存为 <code>proxy.pac</code></li>
- <li>命令行输入：<code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。</code>
-  <ul>
-   <li>该命令中， <code>host</code> 参数为 <code>www.mozilla.org</code> ， <code>url</code> 参数为<code>http://www.mozilla.org</code>。</li>
-  </ul>
- </li>
-</ul>
-</div>
+- 基于主机名的判断函数
 
-<h3 id="isPlainHostName">isPlainHostName()</h3>
+  - [`isPlainHostName()`](#isPlainHostName)
+  - [`dnsDomainIs()`](#dnsDomainIs)
+  - [`localHostOrDomainIs()`](#localHostOrDomainIs)
+  - [`isResolvable()`](#isResolvable)
+  - [`isInNet()`](#isInNet)
 
-<h4 id="语法_2">语法</h4>
+- 和代理相关的功能函数
 
-<pre class="syntaxbox notranslate">isPlainHostName(<var>host</var>)</pre>
+  - [`dnsResolve()`](#dnsResolve)
+  - [`convert_addr()`](#convert_addr)
+  - [`myIpAddress()`](#myIpAddress)
+  - [`dnsDomainLevels()`](#dnsDomainLevels)
 
-<h4 id="参数_2">参数</h4>
+- 基于 URL 或主机名的判断函数
 
-<dl>
- <dt>host</dt>
- <dd>从 URL 中得到的主机名（端口除外）。</dd>
-</dl>
+  - [`shExpMatch()`](<#shExpMatch(str, shexp)>)
 
-<h4 id="描述_2">描述</h4>
+- 基于时间的判断函数
 
-<p>当且仅当主机名中没有域名时为真（没有分隔域名的点）。</p>
+  - [`weekdayRange()`](#weekdayRange)
+  - [`dateRange()`](#dateRange)
+  - [`timeRange()`](#timeRange)
 
-<h4 id="例子_2">例子</h4>
+- 日志记录功能函数
 
-<pre class="brush: js notranslate">isPlainHostName("www.mozilla.org") // false
+  - [`alert()`](/en-US/docs/Web/API/Window/alert)
+
+- 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
+
+  - `ProxyConfig.bindings `{{Deprecated_Inline}}
+
+> **备注：** pactester ( [pacparser ](https://github.com/pacparser/pacparser)的一部分) 可以用来检测语法是否符合要求，使用方法如下：
+>
+> - PAC 文件保存为 `proxy.pac`
+> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
+>
+>   - 该命令中， `host` 参数为 `www.mozilla.org` ， `url` 参数为`http://www.mozilla.org`。
+
+### isPlainHostName()
+
+#### 语法
+
+```plain
+isPlainHostName(host)
+```
+
+#### 参数
+
+- host
+  - : 从 URL 中得到的主机名（端口除外）。
+
+#### 描述
+
+当且仅当主机名中没有域名时为真（没有分隔域名的点）。
+
+#### 例子
+
+```js
+isPlainHostName("www.mozilla.org") // false
 isPlainHostName("www") // true
-</pre>
+```
 
-<h3 id="dnsDomainIs">dnsDomainIs()</h3>
+### dnsDomainIs()
 
-<h4 id="语法_3">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">dnsDomainIs(<var>host</var>, <var>domain</var>)</pre>
+```plain
+dnsDomainIs(host, domain)
+```
 
-<h4 id="参数_3">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>从 URL 中得到的主机名。</dd>
- <dt>domain</dt>
- <dd>域名/部分域名</dd>
-</dl>
+- host
+  - : 从 URL 中得到的主机名。
+- domain
+  - : 域名/部分域名
 
-<h4 id="描述_3">描述</h4>
+#### 描述
 
-<p>如果匹配，返回 true。</p>
+如果匹配，返回 true。
 
-<h4 id="例子_3">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
+```js
+dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
 dnsDomainIs("www", ".mozilla.org") // false
-</pre>
+```
 
-<h3 id="localHostOrDomainIs">localHostOrDomainIs()</h3>
+### localHostOrDomainIs()
 
-<h4 id="语法_4">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">localHostOrDomainIs(<var>host</var>, <var>hostdom</var>)</pre>
+```plain
+localHostOrDomainIs(host, hostdom)
+```
 
-<h4 id="参数_4">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>从 URL 中得到的主机名。</dd>
- <dt>hostdom</dt>
- <dd>完整域名</dd>
-</dl>
+- host
+  - : 从 URL 中得到的主机名。
+- hostdom
+  - : 完整域名
 
-<h4 id="描述_4">描述</h4>
+#### 描述
 
-<p>完整域名匹配或主机名（如<code>www</code>）匹配时返回 true。</p>
+完整域名匹配或主机名（如`www`）匹配时返回 true。
 
-<h4 id="例子_4">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
+```js
+localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
 localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
 localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)</pre>
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+```
 
-<h3 id="isResolvable">isResolvable()</h3>
+### isResolvable()
 
-<h4 id="语法_5">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">isResolvable(<var>host</var>)</pre>
+```plain
+isResolvable(host)
+```
 
-<h4 id="参数_5">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>从 URL 中得到的主机名。</dd>
-</dl>
+- host
+  - : 从 URL 中得到的主机名。
 
-<p>尝试解析主机名。如果成功，则返回 true。</p>
+尝试解析主机名。如果成功，则返回 true。
 
-<h4 id="例子：">例子：</h4>
+#### 例子：
 
-<pre class="brush: js notranslate">isResolvable("www.mozilla.org") // true
-</pre>
+```js
+isResolvable("www.mozilla.org") // true
+```
 
-<h3 id="isInNet">isInNet()</h3>
+### isInNet()
 
-<h4 id="语法_6">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">isInNet(<var>host</var>, <var>pattern</var>, <var>mask</var>)</pre>
+```plain
+isInNet(host, pattern, mask)
+```
 
-<h4 id="参数_6">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>一个 DNS 主机名，或者一个 IP 地址。如果传入了主机名，则会被此函数解析为 IP 地址，再进行判断。</dd>
- <dt>pattern</dt>
- <dd>点号（.）分隔的 IP 地址。</dd>
- <dt>mask</dt>
- <dd>子网掩码，0 代表忽略，255 代表完全匹配。</dd>
-</dl>
+- host
+  - : 一个 DNS 主机名，或者一个 IP 地址。如果传入了主机名，则会被此函数解析为 IP 地址，再进行判断。
+- pattern
+  - : 点号（.）分隔的 IP 地址。
+- mask
+  - : 子网掩码，0 代表忽略，255 代表完全匹配。
 
-<p>仅在 host 属于由 pattern 和 mask 指定的 ip 地址段时返回 true。</p>
+仅在 host 属于由 pattern 和 mask 指定的 ip 地址段时返回 true。
 
-<p>Pattern and mask specification is done the same way as for SOCKS configuration.</p>
+Pattern and mask specification is done the same way as for SOCKS configuration.
 
-<h4 id="例子：_2">例子：</h4>
+#### 例子：
 
-<pre class="brush: js notranslate">function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+```js
+function alert_eval(str) { alert(str + ' is ' + eval(str)) }
 function FindProxyForURL(url, host) {
   alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
-</pre>
+```
 
-<h3 id="dnsResolve">dnsResolve()</h3>
+### dnsResolve()
 
-<pre class="syntaxbox notranslate">dnsResolve(<em>host</em>)</pre>
+```plain
+dnsResolve(host)
+```
 
-<h4 id="参数_7">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>要解析的主机名。</dd>
-</dl>
+- host
+  - : 要解析的主机名。
 
-<p>将给定的 DNS 主机名解析为 IP 地址并返回为标准格式的 IP 地址字符串。</p>
+将给定的 DNS 主机名解析为 IP 地址并返回为标准格式的 IP 地址字符串。
 
-<h4 id="例子_5">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"</pre>
+```js
+dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
+```
 
-<h3 id="convert_addr">convert_addr()</h3>
+### convert_addr()
 
-<h4 id="语法_7">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">convert_addr(ipaddr)</pre>
+```plain
+convert_addr(ipaddr)
+```
 
-<h4 id="参数_8">参数</h4>
+#### 参数
 
-<dl>
- <dt>ipaddr</dt>
- <dd>点号（.）分隔的 IP 地址或子网掩码。</dd>
-</dl>
+- ipaddr
+  - : 点号（.）分隔的 IP 地址或子网掩码。
 
-<p>将 IP 地址转换为 32 位整数地址。</p>
+将 IP 地址转换为 32 位整数地址。
 
-<h4 id="例子_6">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">convert_addr("104.16.41.2"); // returns the decimal number 1745889538</pre>
+```js
+convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+```
 
-<h3 id="myIpAddress">myIpAddress()</h3>
+### myIpAddress()
 
-<h4 id="语法_8">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">myIpAddress()</pre>
+```plain
+myIpAddress()
+```
 
-<h4 id="参数_9">参数</h4>
+#### 参数
 
-<p><strong>（无）</strong></p>
+**（无）**
 
-<p>获取当前 Firefox 所在设备的 IP 地址，并返回为标准格式的 IP 地址字符串。</p>
+获取当前 Firefox 所在设备的 IP 地址，并返回为标准格式的 IP 地址字符串。
 
-<div class="warning">
-<p>myIpAddress() 返回与 <strong><code>nslookup localhost</code> </strong>命令在 Linux 主机上的执行结果相同的 IP 地址。不会返回公网 IP 地址。</p>
-</div>
+> **警告：** myIpAddress() 返回与 **`nslookup localhost` **命令在 Linux 主机上的执行结果相同的 IP 地址。不会返回公网 IP 地址。
 
-<h4 id="例子_7">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost</pre>
+```js
+myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+```
 
-<h3 id="dnsDomainLevels">dnsDomainLevels()</h3>
+### dnsDomainLevels()
 
-<h4 id="语法_9">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">dnsDomainLevels(<var>host</var>)</pre>
+```plain
+dnsDomainLevels(host)
+```
 
-<h4 id="参数_10">参数</h4>
+#### 参数
 
-<dl>
- <dt>host</dt>
- <dd>从 URL 中得到的主机名。</dd>
-</dl>
+- host
+  - : 从 URL 中得到的主机名。
 
-<p>返回主机名中 DNS 域名级别的整数数量（域名中包含点的个数）。</p>
+返回主机名中 DNS 域名级别的整数数量（域名中包含点的个数）。
 
-<h4 id="例子：_3">例子：</h4>
+#### 例子：
 
-<pre class="brush: js notranslate">dnsDomainLevels("www");             // 0
+```js
+dnsDomainLevels("www");             // 0
 dnsDomainLevels("mozilla.org");     // 1
 dnsDomainLevels("www.mozilla.org"); // 2
-</pre>
+```
 
-<h3 id="shExpMatch">shExpMatch()</h3>
+### shExpMatch()
 
-<h4 id="语法_10">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">shExpMatch(<var>str</var>, <var>shexp</var>)</pre>
+```plain
+shExpMatch(str, shexp)
+```
 
-<h4 id="参数_11">参数</h4>
+#### 参数
 
-<dl>
- <dt>str</dt>
- <dd>任何要比较的字符串（如 URL 或主机名）。</dd>
- <dt>shexp</dt>
- <dd>要用来对比的 Shell 表达式。</dd>
-</dl>
+- str
+  - : 任何要比较的字符串（如 URL 或主机名）。
+- shexp
+  - : 要用来对比的 Shell 表达式。
 
-<p>如果字符串匹配指定的 Shell 表达式则返回 true。</p>
+如果字符串匹配指定的 Shell 表达式则返回 true。
 
-<p><strong>注意，本函数接收 shell glob 表达式而非正则表达式。</strong><code>*</code> 和 <code>?</code> 始终被支持，<code>[characters]</code> 和 <code>[^characters]</code> 只在包括 Firefox 在内的某些实现上被支持。这主要是由于 glob 表达式在内部被翻译为正则表达式。如要使用正则表达式语法，请直接使用 RegExp 类。</p>
+**注意，本函数接收 shell glob 表达式而非正则表达式。**`*` 和 `?` 始终被支持，`[characters]` 和 `[^characters]` 只在包括 Firefox 在内的某些实现上被支持。这主要是由于 glob 表达式在内部被翻译为正则表达式。如要使用正则表达式语法，请直接使用 RegExp 类。
 
-<h4 id="例子_8">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
-shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false</pre>
+```js
+shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
+shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false
+```
 
-<h3 id="weekdayRange">weekdayRange()</h3>
+### weekdayRange()
 
-<h4 id="语法_11">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
+```plain
+weekdayRange(wd1, wd2, [gmt])
+```
 
-<div class="note">
-<p><strong>注意：</strong> (Before Firefox 49) <code><var>wd1</var></code> must be less than <code><var>wd2</var></code> if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **备注：** (Before Firefox 49) `wd1` must be less than `wd2` if you want the function to evaluate these parameters as a range. See the warning below.
 
-<h4 id="参数_12">参数</h4>
+#### 参数
 
-<dl>
- <dt>wd1 和 wd2</dt>
- <dd>One of the ordered weekday strings:</dd>
- <dt>
- <pre class="syntaxbox notranslate">"SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"</pre>
- </dt>
- <dt>gmt</dt>
- <dd>可以指定为字符串 "<code>GMT</code>"，或留白不指定。</dd>
-</dl>
+- wd1 和 wd2
+  - : One of the ordered weekday strings:
+- ```plain
+  "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"
+  ```
 
-<p>Only the first parameter is mandatory. Either the second, the third, or both may be left out.</p>
+  gmt
 
-<p>If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.</p>
+  - : 可以指定为字符串 "`GMT`"，或留白不指定。
 
-<p>If both <strong>wd1 </strong>and <strong>wd1 </strong>are defined, the condition is true if the current weekday is in between those two <em>ordered </em>weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. 如果指定了 "<code>GMT</code>" 参数，则使用 GMT 时区，否则使用浏览器获取到的平台本地时区。</p>
+Only the first parameter is mandatory. Either the second, the third, or both may be left out.
 
-<div class="warning">
-<p><strong>The order of the days matters</strong>; Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to true. Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate true if the current day is Wednesday or Sunday.</p>
-</div>
+If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-<h4 id="例子_9">例子</h4>
+If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. 如果指定了 "`GMT`" 参数，则使用 GMT 时区，否则使用浏览器获取到的平台本地时区。
 
-<pre class="brush: js notranslate">weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+> **警告：** **The order of the days matters**; Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to true. Now `weekdayRange("WED", "SUN")` will only evaluate true if the current day is Wednesday or Sunday.
+
+#### 例子
+
+```js
+weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
 weekdayRange("SAT");               // returns true on Saturdays local time
 weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)</pre>
+weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+```
 
-<h3 id="dateRange">dateRange()</h3>
+### dateRange()
 
-<h4 id="语法_12">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">dateRange(&lt;day&gt; | &lt;month&gt; | &lt;year&gt;, [gmt])  // ambiguity is resolved by assuming year is greater than 31
-dateRange(&lt;day1&gt;, &lt;day2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;year1&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;day2&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
+```plain
+dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
+dateRange(<day1>, <day2>, [gmt])
+dateRange(<month1>, <month2>, [gmt])
+dateRange(<year1>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <day2>, <month2>, [gmt])
+dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
+```
 
-<div class="note">
-<p><strong>注意：</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **备注：** (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
 
-<h4 id="参数_13">参数</h4>
+#### 参数
 
-<dl>
- <dt>day</dt>
- <dd>Is the ordered day of the month between 1 and 31 (as an integer).</dd>
-</dl>
+- day
+  - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-<pre class="syntaxbox notranslate">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31</pre>
+```plain
+1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+```
 
-<dl>
- <dt>month</dt>
- <dd>Is one of the ordered month strings below.</dd>
-</dl>
+- month
+  - : Is one of the ordered month strings below.
 
-<pre class="syntaxbox notranslate">"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"</pre>
+```plain
+"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
+```
 
-<dl>
- <dt>year</dt>
- <dd>Is the ordered full year integer number. For example, 2016 (<strong>not</strong> 16).</dd>
- <dt>gmt</dt>
- <dd>可以指定为字符串 "<code>GMT</code>"，代表使用 GMT 时区进行比较；或者留白不指定，代表使用浏览器获取到的平台本地时区。</dd>
-</dl>
+- year
+  - : Is the ordered full year integer number. For example, 2016 (**not** 16).
+- gmt
+  - : 可以指定为字符串 "`GMT`"，代表使用 GMT 时区进行比较；或者留白不指定，代表使用浏览器获取到的平台本地时区。
 
-<p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-<div class="warning">
-<p><strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
-</div>
+> **警告：** **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
 
-<h4 id="例子_10">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">dateRange(1);            // returns true on the first day of each month, local timezone
+```js
+dateRange(1);            // returns true on the first day of each month, local timezone
 dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
 dateRange(1, 15);        // returns true on the first half of each month
 dateRange(24, "DEC");    // returns true on 24th of December each year
@@ -487,109 +481,109 @@ dateRange(1995);
 // returns true during the entire year of 1995
 
 dateRange(1995, 1997);
-// returns true from beginning of year 1995 until the end of year 1997</pre>
+// returns true from beginning of year 1995 until the end of year 1997
+```
 
-<h3 id="timeRange">timeRange()</h3>
+### timeRange()
 
-<h4 id="语法_13">语法</h4>
+#### 语法
 
-<pre class="syntaxbox notranslate">// The full range of expansions is analogous to dateRange.
-timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
+```plain
+// The full range of expansions is analogous to dateRange.
+timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
+```
 
-<div class="note">
-<p><strong>注意：</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **备注：** (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
 
-<h4 id="参数_14">参数</h4>
+#### 参数
 
-<dl>
- <dt>hour</dt>
- <dd>小时，区间为 0 到 23。（0 是午夜 0 点，1 是上午 1 点，11 是正午 12 点，23 是下午 11 点。）</dd>
- <dt>min</dt>
- <dd>分钟，区间为 0 到 59。</dd>
- <dt>sec</dt>
- <dd>秒，区间为 0 到 59。</dd>
- <dt>gmt</dt>
- <dd>可以指定为字符串 "<code>GMT</code>"，代表使用 GMT 时区，或者留白不指定，代表使用浏览器获取到的平台本地时区。</dd>
-</dl>
+- hour
+  - : 小时，区间为 0 到 23。（0 是午夜 0 点，1 是上午 1 点，11 是正午 12 点，23 是下午 11 点。）
+- min
+  - : 分钟，区间为 0 到 59。
+- sec
+  - : 秒，区间为 0 到 59。
+- gmt
+  - : 可以指定为字符串 "`GMT`"，代表使用 GMT 时区，或者留白不指定，代表使用浏览器获取到的平台本地时区。
 
-<p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-<div class="warning">
-<p><strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
-</div>
+> **警告：** **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
 
-<h4 id="例子_11">例子</h4>
+#### 例子
 
-<pre class="brush: js notranslate">timerange(12);                // returns true from noon to 1pm
+```js
+timerange(12);                // returns true from noon to 1pm
 timerange(12, 13);            // returns true from noon to 1pm
 timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
 timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight</pre>
+timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+```
 
-<h2 id="例_1">例 1</h2>
+## 例 1
 
-<h3 id="对除本地主机以外的所有连接使用代理">对除本地主机以外的所有连接使用代理</h3>
+### 对除本地主机以外的所有连接使用代理
 
-<div class="note">
-<p><strong>注意：</strong> 以下所有示例都只针对特定需求并未经测试</p>
-</div>
+> **备注：** 以下所有示例都只针对特定需求并未经测试
 
-<p>所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3proxy:8080 连接。如果代理不可用，则自动回退到直连。</p>
+所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3proxy:8080 连接。如果代理不可用，则自动回退到直连。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
     return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意：</strong> 这是只有一个代理服务器情况下最简单高效的自动配置脚本。</p>
-</div>
+> **备注：** 这是只有一个代理服务器情况下最简单高效的自动配置脚本。
 
-<h2 id="例_2">例 2</h2>
+## 例 2
 
-<h3 id="和例_1_一样，但是对防火墙外的本地服务器使用代理">和例 1 一样，但是对防火墙外的本地服务器使用代理</h3>
+### 和例 1 一样，但是对防火墙外的本地服务器使用代理
 
-<p>如果有主机（例如生产环境中的 Web 服务器）属于本地域但在防火墙外，仅可通过代理访问，可以通过 <code>localHostOrDomainIs()</code> 来为上述主机添加例外：</p>
+如果有主机（例如生产环境中的 Web 服务器）属于本地域但在防火墙外，仅可通过代理访问，可以通过 `localHostOrDomainIs()` 来为上述主机添加例外：
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
-    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &amp;&amp;
-    !localHostOrDomainIs(host, "www.mozilla.org") &amp;&amp;
+    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
+    !localHostOrDomainIs(host, "www.mozilla.org") &&
     !localHostOrDoaminIs(host, "merchant.mozilla.org")
   ) {
         return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<p>以上示例为 mozilla.org 域外所有主机使用代理，同时添加了例外使 <code>www.mozilla.org</code> 和 <code>merchant.mozilla.org</code> 也使用代理。</p>
+以上示例为 mozilla.org 域外所有主机使用代理，同时添加了例外使 `www.mozilla.org` 和 `merchant.mozilla.org` 也使用代理。
 
-<div class="note">
-<p><strong>注意：</strong>以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和  &amp;&amp; 前的括号。</p>
-</div>
+> **备注：** 以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和 && 前的括号。
 
-<h2 id="例_3">例 3</h2>
+## 例 3
 
-<h3 id="如果无法解析域名，则使用代理">如果无法解析域名，则使用代理</h3>
+### 如果无法解析域名，则使用代理
 
-<p>这个示例可用于网络中的 DNS 服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。</p>
+这个示例可用于网络中的 DNS 服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isResolvable(host))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>以上代码每一次均会进行 DNS 查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行 DNS 查询来解决：</p>
+以上代码每一次均会进行 DNS 查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行 DNS 查询来解决：
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -599,24 +593,28 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="例_4">例 4</h2>
+## 例 4
 
-<h3 id="基于网域（Subnet）的选择方案">基于网域（Subnet）的选择方案</h3>
+### 基于网域（Subnet）的选择方案
 
-<p>在此示例中，所有同一子网内的主机均直接连接，其他主机则通过代理连接：</p>
+在此示例中，所有同一子网内的主机均直接连接，其他主机则通过代理连接：
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isInNet(host, "198.95.0.0", "255.255.0.0"))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>同样的，对 DNS 的使用可以通过添加冗余的规则来最小化：</p>
+同样的，对 DNS 的使用可以通过添加冗余的规则来最小化：
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -626,42 +624,26 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="例_5">例 5</h2>
+## 例 5
 
-<h3 id="负载均衡_基于_URL_模式（pattern）的路由规划">负载均衡 / 基于 URL 模式（pattern）的路由规划</h3>
+### 负载均衡 / 基于 URL 模式（pattern）的路由规划
 
-<p>This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:</p>
+This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:
 
-<table>
- <tbody>
-  <tr>
-   <th>代理</th>
-   <th>用途</th>
-  </tr>
-  <tr>
-   <td>#1</td>
-   <td>.com 域名</td>
-  </tr>
-  <tr>
-   <td>#2</td>
-   <td>.edu 域名</td>
-  </tr>
-  <tr>
-   <td>#3</td>
-   <td>所有其他域名</td>
-  </tr>
-  <tr>
-   <td>#4</td>
-   <td>备用（原文：hot stand-by，活跃备用、热备用）</td>
-  </tr>
- </tbody>
-</table>
+| 代理 | 用途                                         |
+| ---- | -------------------------------------------- |
+| #1   | .com 域名                                    |
+| #2   | .edu 域名                                    |
+| #3   | 所有其他域名                                 |
+| #4   | 备用（原文：hot stand-by，活跃备用、热备用） |
 
-<p>All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the <code><strong>+</strong></code> operator in JavaScript.</p>
+All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the **`+`** operator in JavaScript.
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
@@ -677,15 +659,17 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   else
     return "PROXY proxy3.mydomain.com:8080; " +
            "PROXY proxy4.mydomain.com:8080";
-}</pre>
+}
+```
 
-<h2 id="例_6">例 6</h2>
+## 例 6
 
-<h3 id="为特定协议设置代理">为特定协议设置代理</h3>
+### 为特定协议设置代理
 
-<p>大多数 JavaScript 标准功能在 <code>FindProxyForURL()</code> 中可用。作为例子，我们通过{{jsxref("String.prototype.startsWith()", "startsWith()")}} 为不同的协议设置不同的代理。</p>
+大多数 JavaScript 标准功能在 `FindProxyForURL()` 中可用。作为例子，我们通过{{jsxref("String.prototype.startsWith()", "startsWith()")}} 为不同的协议设置不同的代理。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (url.startsWith("http:"))
     return "PROXY http-proxy.mydomain.com:8080";
@@ -702,29 +686,26 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   else
     return "DIRECT";
 
-}</pre>
-
-<div class="note">
-<p><strong>注意：</strong> <code><a href="#">shExpMatch()</a></code> 也可以做到，例如：</p>
-
-<pre class="brush: js notranslate">// ...
-if (shExpMatch(url, "http:*")) {
-  return "PROXY http-proxy.mydomain.com:8080";
 }
-// ...
-</pre>
-</div>
+```
 
-<div class="note">
-<p>自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。</p>
+> **备注：** `shExpMatch()` 也可以做到，例如：
+>
+> ```js
+> // ...
+> if (shExpMatch(url, "http:\*")) {
+> return "PROXY http-proxy.mydomain.com:8080";
+> }
+> // ...
+>
+> ```
 
-<p><code>isInNet()</code>， <code>isResolvable()</code> 和 <code>dnsResolve()</code> 应该谨慎使用，这些函数会进行  DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。</p>
-</div>
+> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
-<h2 id="历史与实现">历史与实现</h2>
+## 历史与实现
 
-<p>Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.</p>
+Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
 
-<p>The most "original" implementation of PAC and its JavaScript libraries is, therefore, <code>nsProxyAutoConfig.js</code> found in early versions of Firefox. These utilities are found in many other open-source systems including Chromium. Firefox later integrated the file into <code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp">ProxyAutoConfig.cpp</a></code> as a string literal.</p>
+The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including Chromium. Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a string literal.
 
-<p>Microsoft in general made its own implementation. There used to be <a href="https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems">some problems with their libraries</a>, but most are resolved by now. They have defined <a href="https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format">some new "Ex" suffixed functions</a> around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=558253">bugzilla #558253</a>).</p>
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).

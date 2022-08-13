@@ -6,67 +6,47 @@ tags:
   - 隧道
 translation_of: Web/HTTP/Methods/CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>在 HTTP 协议中，<strong><code>CONNECT</code> </strong>方法可以开启一个客户端与所请求资源之间的双向沟通的通道。它可以用来创建隧道（tunnel）。</p>
+在 HTTP 协议中，**`CONNECT` **方法可以开启一个客户端与所请求资源之间的双向沟通的通道。它可以用来创建隧道（tunnel）。
 
-<p>例如，<strong><code>CONNECT</code> </strong>可以用来访问采用了 {{Glossary("SSL")}} ({{Glossary("HTTPS")}})  协议的站点。客户端要求代理服务器将 TCP 连接作为通往目的主机隧道。之后该服务器会代替客户端与目的主机建立连接。连接建立好之后，代理服务器会面向客户端发送或接收 TCP 消息流。</p>
+例如，**`CONNECT` **可以用来访问采用了 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 协议的站点。客户端要求代理服务器将 TCP 连接作为通往目的主机隧道。之后该服务器会代替客户端与目的主机建立连接。连接建立好之后，代理服务器会面向客户端发送或接收 TCP 消息流。
 
-<p><code>CONNECT</code> 是一个应用范围为点到点的方法。</p>
+`CONNECT` 是一个应用范围为点到点的方法。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Request has body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Successful response has body</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Request has body                                          | No  |
+| --------------------------------------------------------- | --- |
+| Successful response has body                              | Yes |
+| {{Glossary("Safe")}}                              | No  |
+| {{Glossary("Idempotent")}}                      | No  |
+| {{Glossary("Cacheable")}}                          | No  |
+| Allowed in [HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms) | No  |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">CONNECT www.example.com:443 HTTP/1.1
-</pre>
+```plain
+CONNECT www.example.com:443 HTTP/1.1
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>一些代理服务器在创建隧道时会要求进行身份验证。参见  {{HTTPHeader("Proxy-Authorization")}} 首部。</p>
+一些代理服务器在创建隧道时会要求进行身份验证。参见 {{HTTPHeader("Proxy-Authorization")}} 首部。
 
-<pre class="brush: plain">CONNECT server.example.com:80 HTTP/1.1
+```plain
+CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Proxy-Authorization")}}

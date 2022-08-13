@@ -3,59 +3,45 @@ title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>服务器使用 HTTP 响应头 <code><strong>Accept-Ranges</strong></code> 标识自身支持范围请求 (partial requests)。字段的具体值用于定义范围请求的单位。</p>
+服务器使用 HTTP 响应头 **`Accept-Ranges`** 标识自身支持范围请求 (partial requests)。字段的具体值用于定义范围请求的单位。
 
-<p>当浏览器发现<code> Accept-Ranges </code>头时，可以尝试<em>继续</em>中断了的下载，而不是重新开始。</p>
+当浏览器发现` Accept-Ranges `头时，可以尝试*继续*中断了的下载，而不是重新开始。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">头部类型</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">
-    <p>{{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头）</p>
-   </th>
-   <td>否</td>
-  </tr>
- </tbody>
-</table>
+| 头部类型                                                               | {{Glossary("Response header")}} |
+| ---------------------------------------------------------------------- | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | 否                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Accept-Ranges: bytes
-Accept-Ranges: none</pre>
+```plain
+Accept-Ranges: bytes
+Accept-Ranges: none
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>none</code></dt>
- <dd>不支持任何范围请求单位，由于其等同于没有返回此头部，因此很少使用。不过一些浏览器，比如 IE9，会依据该头部去禁用或者移除下载管理器的暂停按钮。</dd>
- <dt><code>bytes</code></dt>
- <dd>
- <p>范围请求的单位是 bytes（字节）。</p>
- </dd>
-</dl>
+- `none`
+  - : 不支持任何范围请求单位，由于其等同于没有返回此头部，因此很少使用。不过一些浏览器，比如 IE9，会依据该头部去禁用或者移除下载管理器的暂停按钮。
+- `bytes`
+  - : 范围请求的单位是 bytes（字节）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Accept-Ranges: bytes
-</pre>
+```plain
+Accept-Ranges: bytes
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}

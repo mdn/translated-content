@@ -6,55 +6,43 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/From
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>请求首部 <code><strong>From</strong></code> 中包含一个电子邮箱地址，这个电子邮箱地址属于发送请求的用户代理的实际掌控者的人类用户。</p>
+请求首部 **`From`** 中包含一个电子邮箱地址，这个电子邮箱地址属于发送请求的用户代理的实际掌控者的人类用户。
 
-<p>如果你在运行一个机器人代理程序（比如爬虫），那么 Form 首部应该随请求一起发送，这样的话，在服务器遇到问题的时候，例如机器人代理发送了过量的、不希望收到的或者不合法的请求，站点管理员可以联系到你。</p>
+如果你在运行一个机器人代理程序（比如爬虫），那么 Form 首部应该随请求一起发送，这样的话，在服务器遇到问题的时候，例如机器人代理发送了过量的、不希望收到的或者不合法的请求，站点管理员可以联系到你。
 
-<div class="warning">
-<p>不可以将 From 首部用于访问控制或者身份验证。</p>
-</div>
+> **警告：** 不可以将 From 首部用于访问控制或者身份验证。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">From: &lt;email&gt;
-</pre>
+```plain
+From: <email>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;email&gt;</dt>
- <dd>一个机器可识别的电子邮箱地址。</dd>
-</dl>
+- \<email>
+  - : 一个机器可识别的电子邮箱地址。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>From: webmaster@example.org</pre>
+```plain
+From: webmaster@example.org
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
-</ul>
+- {{HTTPHeader("Host")}}

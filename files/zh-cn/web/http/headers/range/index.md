@@ -8,63 +8,53 @@ tags:
   - 请求首部
 translation_of: Web/HTTP/Headers/Range
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Range</code></strong> 是一个请求首部，告知服务器返回文件的哪一部分。在一个  <code>Range</code> 首部中，可以一次性请求多个部分，服务器会以 multipart 文件的形式将其返回。如果服务器返回的是范围响应，需要使用 {{HTTPStatus("206")}} <code>Partial Content</code> 状态码。假如所请求的范围不合法，那么服务器会返回  {{HTTPStatus("416")}} <code>Range Not Satisfiable</code> 状态码，表示客户端错误。服务器允许忽略  <code>Range</code>  首部，从而返回整个文件，状态码用 {{HTTPStatus("200")}} 。</p>
+The **`Range`** 是一个请求首部，告知服务器返回文件的哪一部分。在一个 `Range` 首部中，可以一次性请求多个部分，服务器会以 multipart 文件的形式将其返回。如果服务器返回的是范围响应，需要使用 {{HTTPStatus("206")}} `Partial Content` 状态码。假如所请求的范围不合法，那么服务器会返回 {{HTTPStatus("416")}} `Range Not Satisfiable` 状态码，表示客户端错误。服务器允许忽略 `Range` 首部，从而返回整个文件，状态码用 {{HTTPStatus("200")}} 。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Range: &lt;unit&gt;=&lt;range-start&gt;-
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;</pre>
+```plain
+Range: <unit>=<range-start>-
+Range: <unit>=<range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;unit&gt;</dt>
- <dd>范围所采用的单位，通常是字节（bytes）。</dd>
-</dl>
+- \<unit>
+  - : 范围所采用的单位，通常是字节（bytes）。
 
-<dl>
- <dt>&lt;range-start&gt;</dt>
- <dd>一个整数，表示在特定单位下，范围的起始值。</dd>
- <dt>&lt;range-end&gt;</dt>
- <dd>一个整数，表示在特定单位下，范围的结束值。这个值是可选的，如果不存在，表示此范围一直延伸到文档结束。</dd>
-</dl>
+<!---->
 
-<h2 id="示例">示例</h2>
+- \<range-start>
+  - : 一个整数，表示在特定单位下，范围的起始值。
+- \<range-end>
+  - : 一个整数，表示在特定单位下，范围的结束值。这个值是可选的，如果不存在，表示此范围一直延伸到文档结束。
 
-<pre>Range: bytes=200-1000, 2000-6576, 19000-
-</pre>
+## 示例
 
-<h2 id="规范">规范</h2>
+```plain
+Range: bytes=200-1000, 2000-6576, 19000-
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPStatus("206")}} <code>Partial Content</code></li>
- <li>{{HTTPStatus("416")}} <code>Range Not Satisfiable</code></li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`

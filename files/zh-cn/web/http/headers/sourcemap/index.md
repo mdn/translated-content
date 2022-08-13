@@ -3,50 +3,40 @@ title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
 translation_of: Web/HTTP/Headers/SourceMap
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>SourceMap</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> 响应头链接生成的代码到一个 <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">source map</a>，使浏览器能够重建原始的资源然后显示在调试器里。</p>
+**`SourceMap`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头链接生成的代码到一个 [source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)，使浏览器能够重建原始的资源然后显示在调试器里。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header 类型</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header 类型                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">SourceMap: &lt;url&gt;
-X-SourceMap: &lt;url&gt; (deprecated)
-</pre>
+```plain
+SourceMap: <url>
+X-SourceMap: <url> (deprecated)
+```
 
-<h3 id="指令">指令</h3>
+### 指令
 
-<dl>
- <dt><code>&lt;url&gt;</code></dt>
- <dd>指向一个 source map 文件的一个相对（于请求的 URL）或者一个绝对的 URL。</dd>
-</dl>
+- `<url>`
+  - : 指向一个 source map 文件的一个相对（于请求的 URL）或者一个绝对的 URL。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre>SourceMap: /path/to/file.js.map</pre>
+```plain
+SourceMap: /path/to/file.js.map
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">Firefox Developer Tools: using a source map</a></li>
-</ul>
+- [Firefox Developer Tools: using a source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)

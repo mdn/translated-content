@@ -3,72 +3,55 @@ title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
 translation_of: Web/HTTP/Headers/Sec-Fetch-Mode
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>Sec-Fetch-Mode</code></strong> 获取元数据标头表明了一个请求的模式。</p>
+**`Sec-Fetch-Mode`** 获取元数据标头表明了一个请求的模式。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>只要包含前缀 <code>Sec-</code> 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                  | {{Glossary("Fetch Metadata Request Header")}}                             |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}             | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
+| {{Glossary("CORS-safelisted request header")}} |                                                                                          |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Sec-Fetch-Mode: cors
+```plain
+Sec-Fetch-Mode: cors
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Mode: nested-navigate
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Mode: same-origin
 Sec-Fetch-Mode: websocket
-</pre>
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<dl>
- <dt><code>cors</code></dt>
- <dd>TBD</dd>
- <dt><code>navigate</code></dt>
- <dd>TBD</dd>
- <dt><code>nested-navigate</code></dt>
- <dd>TBD</dd>
- <dt><code>no-cors</code></dt>
- <dd>TBD</dd>
- <dt><code>same-origin</code></dt>
- <dd>TBD</dd>
- <dt><code>websocket</code></dt>
- <dd>TBD</dd>
-</dl>
+- `cors`
+  - : TBD
+- `navigate`
+  - : TBD
+- `nested-navigate`
+  - : TBD
+- `no-cors`
+  - : TBD
+- `same-origin`
+  - : TBD
+- `websocket`
+  - : TBD
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>暂时没有内容</p>
+暂时没有内容
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另请参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
-</ul>
+- {{HTTPHeader("Sec-Fetch-Site")}}
+- {{HTTPHeader("Sec-Fetch-User")}}
+- {{HTTPHeader("Sec-Fetch-Dest")}}

@@ -7,68 +7,55 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Content-Range
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>在 HTTP 协议中，响应首部 <strong><code>Content-Range</code></strong> 显示的是一个数据片段在整个文件中的位置。</p>
+在 HTTP 协议中，响应首部 **`Content-Range`** 显示的是一个数据片段在整个文件中的位置。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}                                                 | no                                       |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/&lt;size&gt;
-Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/*
-Content-Range: &lt;unit&gt; */&lt;size&gt;</pre>
+```plain
+Content-Range: <unit> <range-start>-<range-end>/<size>
+Content-Range: <unit> <range-start>-<range-end>/*
+Content-Range: <unit> */<size>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;unit&gt;</dt>
- <dd>数据区间所采用的单位。通常是字节（byte）。</dd>
-</dl>
+- \<unit>
+  - : 数据区间所采用的单位。通常是字节（byte）。
 
-<dl>
- <dt>&lt;range-start&gt;</dt>
- <dd>一个整数，表示在给定单位下，区间的起始值。</dd>
- <dt>&lt;range-end&gt;</dt>
- <dd>一个整数，表示在给定单位下，区间的结束值。</dd>
- <dt>&lt;size&gt;</dt>
- <dd>整个文件的大小（如果大小未知则用"*"表示）。</dd>
-</dl>
+<!---->
 
-<h2 id="示例">示例</h2>
+- \<range-start>
+  - : 一个整数，表示在给定单位下，区间的起始值。
+- \<range-end>
+  - : 一个整数，表示在给定单位下，区间的结束值。
+- \<size>
+  - : 整个文件的大小（如果大小未知则用"\*"表示）。
 
-<pre>Content-Range: bytes 200-1000/67589
-</pre>
+## 示例
 
-<h2 id="规范">规范</h2>
+```plain
+Content-Range: bytes 200-1000/67589
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPStatus("206")}} <code>Partial Content</code></li>
- <li>{{HTTPStatus("416")}} <code>Range Not Satisfiable</code></li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`

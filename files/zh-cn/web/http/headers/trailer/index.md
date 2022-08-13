@@ -3,53 +3,41 @@ title: Trailer
 slug: Web/HTTP/Headers/Trailer
 translation_of: Web/HTTP/Headers/Trailer
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>Trailer</strong> 是一个响应首部，允许发送方在分块发送的消息后面添加额外的元信息，这些元信息可能是随着消息主体的发送动态生成的，比如消息的完整性校验，消息的数字签名，或者消息经过处理之后的最终状态等。</p>
+**Trailer** 是一个响应首部，允许发送方在分块发送的消息后面添加额外的元信息，这些元信息可能是随着消息主体的发送动态生成的，比如消息的完整性校验，消息的数字签名，或者消息经过处理之后的最终状态等。
 
-<div class="note">
-<p>请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。</p>
-</div>
+> **备注：** 请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Trailer: header-names</pre>
+```plain
+Trailer: header-names
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt><code>header-names</code></dt>
- <dd>出现在分块信息挂载部分的消息首部。以下首部字段<strong>不允许</strong>出现：
- <ul>
-  <li>用于信息分帧的首部 (例如{{HTTPHeader("Transfer-Encoding")}} 和  {{HTTPHeader("Content-Length")}}),</li>
-  <li>用于路由用途的首部 (例如 {{HTTPHeader("Host")}})，</li>
-  <li>请求修饰首部 (例如控制类和条件类的，如{{HTTPHeader("Cache-Control")}}，{{HTTPHeader("Max-Forwards")}}，或者 {{HTTPHeader("TE")}})，</li>
-  <li>身份验证首部 (例如 {{HTTPHeader("Authorization")}} 或者 {{HTTPHeader("Set-Cookie")}})，</li>
-  <li>{{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}，以及 <code>Trailer</code> 自身。</li>
- </ul>
- </dd>
-</dl>
+- `header-names`
+  - : 出现在分块信息挂载部分的消息首部。以下首部字段**不允许**出现：
 
-<h2 id="示例">示例</h2>
+    - 用于信息分帧的首部 (例如{{HTTPHeader("Transfer-Encoding")}} 和 {{HTTPHeader("Content-Length")}}),
+    - 用于路由用途的首部 (例如 {{HTTPHeader("Host")}})，
+    - 请求修饰首部 (例如控制类和条件类的，如{{HTTPHeader("Cache-Control")}}，{{HTTPHeader("Max-Forwards")}}，或者 {{HTTPHeader("TE")}})，
+    - 身份验证首部 (例如 {{HTTPHeader("Authorization")}} 或者 {{HTTPHeader("Set-Cookie")}})，
+    - {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}，以及 `Trailer` 自身。
 
-<h3 id="在分块传输编码中使用挂载（trailer）首部">在分块传输编码中使用挂载（trailer）首部</h3>
+## 示例
 
-<p>在这个例子中，{{HTTPHeader("Expires")}} 首部出现在分块信息的结尾，作为挂载（trailer）首部。</p>
+### 在分块传输编码中使用挂载（trailer）首部
 
-<pre>HTTP/1.1 200 OK
+在这个例子中，{{HTTPHeader("Expires")}} 首部出现在分块信息的结尾，作为挂载（trailer）首部。
+
+```plain
+HTTP/1.1 200 OK
 Content-Type: text/plain
 Transfer-Encoding: chunked
 Trailer: Expires
@@ -63,22 +51,18 @@ Network\r\n
 0\r\n
 Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 \r\n
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
- <li>{{HTTPHeader("TE")}}</li>
- <li>
-  <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer encoding</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("TE")}}
+- [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

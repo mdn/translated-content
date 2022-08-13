@@ -8,30 +8,22 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Server-Timing
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>Server-Timing</code></strong> 标头传达在一个给定请求 - 响应周期中的一个或多个参数和描述。它用于在用户浏览器的开发工具或 {{domxref("PerformanceServerTiming")}} 接口中显示任何后端服务器定时参数（例如，数据库读/写、CPU 时间、文件系统访问等）。</p>
+**`Server-Timing`** 标头传达在一个给定请求 - 响应周期中的一个或多个参数和描述。它用于在用户浏览器的开发工具或 {{domxref("PerformanceServerTiming")}} 接口中显示任何后端服务器定时参数（例如，数据库读/写、CPU 时间、文件系统访问等）。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>Server-Timing</code> 头的语法允许您以不同方式传达参数：仅服务器参数名称，具有值的参数，具有值和描述的度参数以及具有描述的参数。</p>
+`Server-Timing` 头的语法允许您以不同方式传达参数：仅服务器参数名称，具有值的参数，具有值和描述的度参数以及具有描述的参数。
 
-<p>规范建议名称和描述应尽可能短（使用缩写并在可能的情况下省略可选值）以最小化 HTTP 开销。</p>
+规范建议名称和描述应尽可能短（使用缩写并在可能的情况下省略可选值）以最小化 HTTP 开销。
 
-<pre>// Single metric without value
+```plain
+// Single metric without value
 Server-Timing: missedCache
 
 // Single metric with value
@@ -47,26 +39,24 @@ Server-Timing: db;dur=53, app;dur=47.2
 Trailer: Server-Timing
 --- response body ---
 Server-Timing: total;dur=123.4
-</pre>
+```
 
-<h2 id="保密性与安全性"><strong>保密性与安全性</strong></h2>
+## 保密性与安全性
 
-<p><code>Server-Timing</code> 头可能会暴露潜在的敏感应用程序和基础设备信息。请考虑在服务器端控制何时向谁返回哪些参数信息。例如，您只能向经过身份验证的用户显示参数信息，而不能向公众显示。</p>
+`Server-Timing` 头可能会暴露潜在的敏感应用程序和基础设备信息。请考虑在服务器端控制何时向谁返回哪些参数信息。例如，您只能向经过身份验证的用户显示参数信息，而不能向公众显示。
 
-<h2 id="PerformanceServerTiming_接口">PerformanceServerTiming 接口</h2>
+## PerformanceServerTiming 接口
 
-<p>除了在浏览器的开发工具中显示 <code>Server-Timing</code> 外，{{domxref("PerformanceServerTiming")}} 接口允许工具自动收集和处理 JavaScript 中的参数。此接口仅限于相同的源下使用，但您可以使用 {{HTTPHeader("Timing-Allow-Origin")}} 头指定允许访问服务器参数的域。该接口仅在某些浏览器中的安全上下文（HTTPS）中可用。</p>
+除了在浏览器的开发工具中显示 `Server-Timing` 外，{{domxref("PerformanceServerTiming")}} 接口允许工具自动收集和处理 JavaScript 中的参数。此接口仅限于相同的源下使用，但您可以使用 {{HTTPHeader("Timing-Allow-Origin")}} 头指定允许访问服务器参数的域。该接口仅在某些浏览器中的安全上下文（HTTPS）中可用。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("PerformanceServerTiming")}}</li>
-</ul>
+- {{domxref("PerformanceServerTiming")}}

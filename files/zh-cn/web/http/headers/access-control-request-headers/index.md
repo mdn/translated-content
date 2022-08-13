@@ -5,49 +5,39 @@ tags:
   - 跨域资源共享
 translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>请求头  <strong><code>Access-Control-Request-Headers </code></strong>出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。</p>
+请求头 **`Access-Control-Request-Headers `**出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">报头类型</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| 报头类型                                         | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Access-Control-Request-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```plain
+Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>在实际请求中将要包含的一系列 <a href="/en-US/docs/Web/HTTP/Headers">HTTP </a>头，以逗号分隔。</dd>
-</dl>
+- \<header-name>
+  - : 在实际请求中将要包含的一系列 [HTTP ](/zh-CN/docs/Web/HTTP/Headers)头，以逗号分隔。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+```plain
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Method")}}

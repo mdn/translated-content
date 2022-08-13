@@ -3,61 +3,52 @@ title: Timing-Allow-Origin
 slug: Web/HTTP/Headers/Timing-Allow-Origin
 translation_of: Web/HTTP/Headers/Timing-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>响应头<code><strong>Timing-Allow-Origin</strong></code>用于指定特定站点，以允许其访问<a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>提供的相关信息，否则这些信息会由于跨源限制将被报告为零</p>
+响应头**`Timing-Allow-Origin`**用于指定特定站点，以允许其访问[Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)提供的相关信息，否则这些信息会由于跨源限制将被报告为零
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Timing-Allow-Origin: *
-Timing-Allow-Origin: &lt;origin&gt;[, &lt;origin&gt;]*
-</pre>
+```plain
+Timing-Allow-Origin: *
+Timing-Allow-Origin: <origin>[, <origin>]*
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>*</dt>
- <dd>服务器可以以“<code>*</code>”作为通配符，从而允许所有域都具有访问定时信息的权限。</dd>
- <dt>&lt;origin&gt;</dt>
- <dd>指定一个可以访问资源的 URI。你也可以通过逗号隔开，指定多个 URI。</dd>
-</dl>
+- \*
+  - : 服务器可以以“`*`”作为通配符，从而允许所有域都具有访问定时信息的权限。
+- \<origin>
+  - : 指定一个可以访问资源的 URI。你也可以通过逗号隔开，指定多个 URI。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>如需允许任何资源都可以看到的计时 (timing) 信息，你可以如此设置：</p>
+如需允许任何资源都可以看到的计时 (timing) 信息，你可以如此设置：
 
-<pre>Timing-Allow-Origin: *
-</pre>
+```plain
+Timing-Allow-Origin: *
+```
 
-<p>如需允许<code>https://developer.mozilla.org</code>查看你的计时信息，你可以设置：</p>
+如需允许`https://developer.mozilla.org`查看你的计时信息，你可以设置：
 
-<pre>Timing-Allow-Origin: https://developer.mozilla.org</pre>
+```plain
+Timing-Allow-Origin: https://developer.mozilla.org
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a></li>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Using the Resource Timing API</a></li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)
+- [Using the Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- {{HTTPHeader("Vary")}}

@@ -3,60 +3,36 @@ title: TRACE
 slug: Web/HTTP/Methods/TRACE
 translation_of: Web/HTTP/Methods/TRACE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>TRACE</code> 方法</strong> 实现沿通向目标资源的路径的消息环回（loop-back）测试 ，提供了一种实用的 debug 机制。</p>
+**HTTP `TRACE` 方法** 实现沿通向目标资源的路径的消息环回（loop-back）测试 ，提供了一种实用的 debug 机制。
 
-<p>请求的最终接收者应当原样反射（reflect）它接收到的消息，除了以下字段部分，作为一个{{httpheader("Content-Type")}} 为 <code>message/http</code>  的 200（OK）响应的消息的主体（body）返回给客户端 。</p>
+请求的最终接收者应当原样反射（reflect）它接收到的消息，除了以下字段部分，作为一个{{httpheader("Content-Type")}} 为 `message/http` 的 200（OK）响应的消息的主体（body）返回给客户端 。
 
-<p>最终接收者是指初始（origin）服务器，或者第一个接收到 {{httpheader("Max-Forwards")}} 值为 0 的请求的服务器。</p>
+最终接收者是指初始（origin）服务器，或者第一个接收到 {{httpheader("Max-Forwards")}} 值为 0 的请求的服务器。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">有主体（body）的请求（request）</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">包含主体（body）的成功的响应（response）</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">允许用于 HTML 表单（form）</th>
-   <td>否</td>
-  </tr>
- </tbody>
-</table>
+| 有主体（body）的请求（request）          | 否  |
+| ---------------------------------------- | --- |
+| 包含主体（body）的成功的响应（response） | 否  |
+| {{Glossary("Safe")}}             | 否  |
+| {{Glossary("Idempotent")}}     | 是  |
+| {{Glossary("Cacheable")}}         | 否  |
+| 允许用于 HTML 表单（form）               | 否  |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">TRACE /index.html
-</pre>
+```plain
+TRACE /index.html
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP methods</a></li>
-</ul>
-
-<p> </p>
+- [HTTP methods](/zh-CN/docs/Web/HTTP/Methods)

@@ -8,81 +8,64 @@ tags:
   - put
 translation_of: Web/HTTP/Methods/PUT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP PUT 请求方法</strong>使用请求中的负载创建或者替换目标资源。</p>
+**HTTP PUT 请求方法**使用请求中的负载创建或者替换目标资源。
 
-<p><code>PUT</code> 与 {{HTTPMethod("POST")}} 方法的区别在于，PUT 方法是幂等的：调用一次与连续调用多次是等价的（即没有副作用），而连续调用多次 POST 方法可能会有副作用，比如将一个订单重复提交多次。</p>
+`PUT` 与 {{HTTPMethod("POST")}} 方法的区别在于，PUT 方法是幂等的：调用一次与连续调用多次是等价的（即没有副作用），而连续调用多次 POST 方法可能会有副作用，比如将一个订单重复提交多次。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Request has body</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Successful response has body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Request has body                                          | Yes |
+| --------------------------------------------------------- | --- |
+| Successful response has body                              | No  |
+| {{Glossary("Safe")}}                              | No  |
+| {{Glossary("Idempotent")}}                      | Yes |
+| {{Glossary("Cacheable")}}                          | No  |
+| Allowed in [HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms) | No  |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">PUT /new.html HTTP/1.1
-</pre>
+```plain
+PUT /new.html HTTP/1.1
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="请求">请求</h3>
+### 请求
 
-<pre>PUT /new.html HTTP/1.1
+```plain
+PUT /new.html HTTP/1.1
 Host: example.com
 Content-type: text/html
 Content-length: 16
 
-&lt;p&gt;New File&lt;/p&gt;</pre>
+<p>New File</p>
+```
 
-<h3 id="应答">应答</h3>
+### 应答
 
-<p>如果目标资源不存在，并且 PUT 方法成功创建了一份，那么源头服务器必须返回{{HTTPStatus("201")}} (<code>Created</code>) 来通知客户端资源已创建。</p>
+如果目标资源不存在，并且 PUT 方法成功创建了一份，那么源头服务器必须返回{{HTTPStatus("201")}} (`Created`) 来通知客户端资源已创建。
 
-<pre>HTTP/1.1 201 Created
-Content-Location: /new.html</pre>
+```plain
+HTTP/1.1 201 Created
+Content-Location: /new.html
+```
 
-<p>如果目标资源已经存在，并且依照请求中封装的表现形式成功进行了更新，那么，源头服务器必须返回{{HTTPStatus("200")}} (<code>OK</code>) 或者{{HTTPStatus("204")}} (<code>No Content</code>) 来表示请求的成功完成。</p>
+如果目标资源已经存在，并且依照请求中封装的表现形式成功进行了更新，那么，源头服务器必须返回{{HTTPStatus("200")}} (`OK`) 或者{{HTTPStatus("204")}} (`No Content`) 来表示请求的成功完成。
 
-<pre>HTTP/1.1 204 No Content
+```plain
+HTTP/1.1 204 No Content
 Content-Location: /existing.html
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPStatus("201")}}</li>
- <li>{{HTTPStatus("204")}}</li>
-</ul>
+- {{HTTPStatus("201")}}
+- {{HTTPStatus("204")}}

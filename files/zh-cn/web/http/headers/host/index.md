@@ -5,56 +5,46 @@ tags:
   - header http 参考 host
 translation_of: Web/HTTP/Headers/Host
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>Host </strong>请求头指明了请求将要发送到的服务器主机名和端口号。</p>
+**Host** 请求头指明了请求将要发送到的服务器主机名和端口号。
 
-<p>如果没有包含端口号，会自动使用被请求服务的默认端口（比如 HTTPS URL 使用 443 端口，HTTP URL 使用 80 端口）。</p>
+如果没有包含端口号，会自动使用被请求服务的默认端口（比如 HTTPS URL 使用 443 端口，HTTP URL 使用 80 端口）。
 
-<p>所有 HTTP/1.1 请求报文中必须包含一个<code>Host</code>头字段。对于缺少<code>Host</code>头或者含有超过一个<code>Host</code>头的 HTTP/1.1 请求，可能会收到{{HTTPStatus("400")}}（Bad Request）状态码。</p>
+所有 HTTP/1.1 请求报文中必须包含一个`Host`头字段。对于缺少`Host`头或者含有超过一个`Host`头的 HTTP/1.1 请求，可能会收到{{HTTPStatus("400")}}（Bad Request）状态码。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">Host: &lt;host&gt;:&lt;port&gt;
-</pre>
+```plain
+Host: <host>:<port>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>&lt;host&gt;</dt>
- <dd>服务器的域名（用于虚拟主机）。</dd>
- <dt>&lt;port&gt; {{optional_inline}}</dt>
- <dd>服务器监听的 TCP 端口号。</dd>
-</dl>
+- \<host>
+  - : 服务器的域名（用于虚拟主机）。
+- \<port> {{optional_inline}}
+  - : 服务器监听的 TCP 端口号。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="notranslate">Host: developer.mozilla.org</pre>
+```plain
+Host: developer.mozilla.org
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{HTTPStatus("400")}}</li>
- <li>{{HTMLElement("base")}}</li>
-</ul>
+- {{HTTPStatus("400")}}
+- {{HTMLElement("base")}}
