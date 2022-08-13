@@ -547,8 +547,6 @@
 /ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
-/ko/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ko/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-/ko/docs/Web/Accessibility/ARIA/forms/alerts	/ko/docs/conflicting/Web/Accessibility/ARIA
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
@@ -710,7 +708,6 @@
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ko/docs/Web/JavaScript/Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
-/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Date/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -723,10 +720,8 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError
 /ko/docs/Web/JavaScript/Reference/Global_Objects/null	/ko/docs/Web/JavaScript/Reference/Operators/null
-/ko/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Global_Properties	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Methods_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects
