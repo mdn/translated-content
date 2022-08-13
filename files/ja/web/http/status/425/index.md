@@ -9,31 +9,20 @@ tags:
   - ブラウザー
 translation_of: Web/HTTP/Status/425
 ---
-<div>{{SeeCompatTable}}{{HTTPSidebar}}</div>
+{{SeeCompatTable}}{{HTTPSidebar}}
 
-<p>HTTP (HyperText Transfer Protocol) の <code><strong>425 Too Early</strong></code> レスポンスステータスコードは、サーバーがリプレイ攻撃の可能性を生み出すリプレイされた要求を処理するリスクを負わないことを示します。</p>
+HTTP (HyperText Transfer Protocol) の **`425 Too Early`** レスポンスステータスコードは、サーバーがリプレイ攻撃の可能性を生み出すリプレイされた要求を処理するリスクを負わないことを示します。
 
-<h2 id="Status" name="Status">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">425 Too Early</pre>
+    425 Too Early
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("8470", "425: Early Data", "5.2")}}</td>
-   <td>Using Early Data in HTTP</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                   | 題名                     |
+| -------------------------------------------------------- | ------------------------ |
+| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("http.status.425")}}</p>
+{{Compat("http.status.425")}}

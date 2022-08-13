@@ -7,157 +7,153 @@ tags:
   - Link
   - Link types
   - Reference
-browser-compat: html.elements.link.rel.preload
 translation_of: Web/HTML/Link_types/preload
+browser-compat: html.elements.link.rel.preload
 ---
-<div>{{HTMLSidebar}}</div>
+{{HTMLSidebar}}
 
-<p><code>preload</code> の値を {{htmlelement("link")}} 要素の {{htmlattrxref("rel", "link")}} 属性に設定すると、 HTML の {{htmlelement("head")}} の中で読み込みリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み込みを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。</p>
+`preload` の値を {{htmlelement("link")}} 要素の {{htmlattrxref("rel", "link")}} 属性に設定すると、 HTML の {{htmlelement("head")}} の中で読み込みリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み込みを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。
 
+## 基本概念
 
-<h2 id="The_basics" name="The_basics">基本概念</h2>
+多くの場合は以下のように、 `<link>` を使用して CSS ファイルを読み込み、ページにスタイルを適用します。
 
-<p>多くの場合は以下のように、 <code>&lt;link&gt;</code> を使用して CSS ファイルを読み込み、ページにスタイルを適用します。</p>
+```html
+<link rel="stylesheet" href="styles/main.css">
+```
 
-<pre class="brush: html">&lt;link rel="stylesheet" href="styles/main.css"&gt;</pre>
+しかしここで、 `rel` の値に `preload` を使用すると、 `<link>` 要素は利用したいあらゆるリソースの先読み指示になります。以下のものも指定する必要があります。
 
-<p>しかしここで、 <code>rel</code> の値に <code>preload</code> を使用すると、 <code>&lt;link&gt;</code> 要素は利用したいあらゆるリソースの先読み指示になります。以下のものも指定する必要があります。</p>
+- リソースのパスを {{htmlattrxref("href", "link")}} 属性へ
+- リソースの種類を {{htmlattrxref("as", "link")}} 属性へ
 
-<ul>
-	<li>リソースのパスを {{htmlattrxref("href", "link")}} 属性へ</li>
-	<li>リソースの種類を {{htmlattrxref("as", "link")}} 属性へ</li>
-</ul>
+簡単な例を示すと、次のようになります ([JS と CSS の例のソース](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css)および[ライブ](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/))。
 
-<p>簡単な例を示すと、次のようになります (<a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">JS と CSS の例のソース</a>および<a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">ライブ</a>)。</p>
+```html
+<head>
+  <meta charset="utf-8">
+  <title>JS and CSS preload example</title>
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;JS and CSS preload example&lt;/title&gt;
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="main.js" as="script">
 
-  &lt;link rel="preload" href="style.css" as="style"&gt;
-  &lt;link rel="preload" href="main.js" as="script"&gt;
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
+<body>
+  <h1>bouncing balls</h1>
+  <canvas></canvas>
 
-&lt;body&gt;
-  &lt;h1&gt;bouncing balls&lt;/h1&gt;
-  &lt;canvas&gt;&lt;/canvas&gt;
+  <script src="main.js" defer></script>
+</body>
+```
 
-  &lt;script src="main.js" defer&gt;&lt;/script&gt;
-&lt;/body&gt;</pre>
+ここで CSS ファイルと JavaScript ファイルを先読みするので、その後のページのレンダリングで必要な時には、すぐに利用できるようになります。ブラウザーはおそらく、 `<link rel="stylesheet">` と `<script>` 要素を HTML 内の同じチャンクで見つけるので、この例は極端ですが、後に現れるリソースであるほど、また大きいリソースであるほど効果が見られる可能性があります。例えば以下の場合です。
 
-<p>ここで CSS ファイルと JavaScript ファイルを先読みするので、その後のページのレンダリングで必要な時には、すぐに利用できるようになります。ブラウザーはおそらく、 <code>&lt;link rel="stylesheet"&gt;</code> と <code>&lt;script&gt;</code> 要素を HTML 内の同じチャンクで見つけるので、この例は極端ですが、後に現れるリソースであるほど、また大きいリソースであるほど効果が見られる可能性があります。例えば以下の場合です。</p>
+- フォントや画像など、 CSS の中から指しているリソース
+- JSON やインポートされたスクリプト、ウェブワーカーなどの JavaScript がリクエストする可能性があるリソース
+- より大きな画像や動画ファイル。
 
-<ul>
- <li>フォントや画像など、 CSS の中から指しているリソース</li>
- <li>JSON やインポートされたスクリプト、ウェブワーカーなどの JavaScript がリクエストする可能性があるリソース</li>
- <li>より大きな画像や動画ファイル。</li>
-</ul>
+`preload` には他の利点もあります。 `as` によって先読みされるコンテンツの種類をブラウザーに指示することで、以下のようなことが実現できます。
 
-<p><code>preload</code> には他の利点もあります。 <code>as</code> によって先読みされるコンテンツの種類をブラウザーに指示することで、以下のようなことが実現できます。</p>
+- リソースの読み込みの優先付けがより正確にできます。
+- 可能であれば、将来のリクエストのためにキャッシュに格納してリソースを再利用します。
+- リソースに対して正しく[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)を適用できます。
+- 正しい {{HTTPHeader("Accept")}} リクエストヘッダーを設定できます。
 
-<ul>
- <li>リソースの読み込みの優先付けがより正確にできます。</li>
- <li>可能であれば、将来のリクエストのためにキャッシュに格納してリソースを再利用します。</li>
- <li>リソースに対して正しく<a href="/ja/docs/Web/HTTP/CSP">コンテンツセキュリティポリシー</a>を適用できます。</li>
- <li>正しい {{HTTPHeader("Accept")}} リクエストヘッダーを設定できます。</li>
-</ul>
+### 先読みできるコンテンツの種類
 
-<h3 id="What_types_of_content_can_be_preloaded">先読みできるコンテンツの種類</h3>
+さまざまな種類のコンテンツが先読みできます。 `as` 属性で使用できる値は以下の通りです。
 
-<p>さまざまな種類のコンテンツが先読みできます。 <code>as</code> 属性で使用できる値は以下の通りです。</p>
+- `audio`: 通常は {{htmlelement("audio")}} で使用される音声ファイル。
+- `document`: {{htmlelement("frame")}} や {{htmlelement("iframe")}} に埋め込まれる HTML 文書。
+- `embed`: {{htmlelement("embed")}} 要素の中に埋め込まれるリソース。
+- `fetch`: ArrayBuffer や JSON ファイルのような、フェッチまたは XHR 要求でアクセスされるリソース。
+- `font`: フォントファイル。
+- `image`: 画像ファイル。
+- `object`: {{htmlelement("object")}} 要素の中に埋め込まれるリソース。
+- `script`: JavaScript ファイル。
+- `style`: CSS スタイルシート。
+- `track`: WebVTT ファイル。
+- `worker`: JavaScript ウェブワーカーまたは共有ワーカー。
+- `video`: 通常は {{htmlelement("video")}} で使用される動画ファイル。
 
-<ul>
-	<li><code>audio</code>: 通常は {{htmlelement("audio")}} で使用される音声ファイル。</li>
-	<li><code>document</code>: {{htmlelement("frame")}} や {{htmlelement("iframe")}} に埋め込まれる HTML 文書。</li>
-	<li><code>embed</code>: {{htmlelement("embed")}} 要素の中に埋め込まれるリソース。</li>
-	<li><code>fetch</code>: ArrayBuffer や JSON ファイルのような、フェッチまたは XHR 要求でアクセスされるリソース。</li>
-	<li><code>font</code>: フォントファイル。</li>
-	<li><code>image</code>: 画像ファイル。</li>
-	<li><code>object</code>: {{htmlelement("object")}} 要素の中に埋め込まれるリソース。</li>
-	<li><code>script</code>: JavaScript ファイル。</li>
-	<li><code>style</code>: CSS スタイルシート。</li>
-	<li><code>track</code>: WebVTT ファイル。</li>
-	<li><code>worker</code>: JavaScript ウェブワーカーまたは共有ワーカー。</li>
-	<li><code>video</code>: 通常は {{htmlelement("video")}} で使用される動画ファイル。</li>
-</ul>
+> **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
 
-<div class="note">
-<p><strong>Note</strong>: <code>video</code> preloading is included in the Preload spec, but is not currently implemented by browsers.</p>
-</div>
+> **Note:** **注**: 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
 
-<div class="note">
-<p><strong>注</strong>: 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — <a href="https://w3c.github.io/preload/#link-element-extensions">link element extensions</a> を参照してください。また、フェッチの仕様書で管理されている <code>as</code> 属性の値の完全な一覧は、 <a href="https://fetch.spec.whatwg.org/#concept-request-destination">request destinations</a> を参照してください。</p>
-</div>
+## MIME タイプを含める
 
-<h2 id="Including_a_MIME_type">MIME タイプを含める</h2>
+`<link>` 要素は {{htmlattrxref("type", "link")}} 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの先読み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
 
-<p><code>&lt;link&gt;</code> 要素は {{htmlattrxref("type", "link")}} 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの先読み時に便利です。 — ブラウザーは <code>type</code> 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。</p>
+この例を動画のデモで見ることができます ([ソースコード全体](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。)。
 
-<p>この例を動画のデモで見ることができます (<a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">ソースコード全体</a>と<a href="https://mdn.github.io/html-examples/link-rel-preload/video/">デモ版</a>もご覧ください。)。</p>
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Video preload example</title>
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Video preload example&lt;/title&gt;
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="sintel-short.webm" as="video" type="video/webm">
+</head>
+<body>
+  <video controls>
+    <source src="sintel-short.mp4" type="video/mp4">
+    <source src="sintel-short.webm" type="video/webm">
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="sintel-short.mp4">link to the video</a> instead.</p>
+  </video>
+</body>
+```
 
-  &lt;link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4"&gt;
-  &lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;video controls&gt;
-    &lt;source src="sintel-short.mp4" type="video/mp4"&gt;
-    &lt;source src="sintel-short.webm" type="video/webm"&gt;
-    &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="sintel-short.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
-  &lt;/video&gt;
-&lt;/body&gt;</pre>
+この場合、MP4 に対応しているブラウザーは MP4 を先読みして使用し、ユーザーにとって動画プレイヤーをよりスムーズまたはレスポンシブにできるでしょう。ブラウザーが MP4 に対応していない場合は WebM バージョンを読み込みますが、先読みの利点は得られません。これは、どのように先読みコンテンツがプログレッシブエンハンスメントの哲学と結ばれているかを示しています。
 
-<p>この場合、MP4 に対応しているブラウザーは MP4 を先読みして使用し、ユーザーにとって動画プレイヤーをよりスムーズまたはレスポンシブにできるでしょう。ブラウザーが MP4 に対応していない場合は WebM バージョンを読み込みますが、先読みの利点は得られません。これは、どのように先読みコンテンツがプログレッシブエンハンスメントの哲学と結ばれているかを示しています。</p>
+## CORS を使用したフェッチ
 
-<h2 id="CORS-enabled_fetches">CORS を使用したフェッチ</h2>
+[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを先読みする場合 ([`fetch()`](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の {{htmlattrxref("crossorigin","link")}} 属性の設定に特別な注意を払う必要があります。この属性は、取得がクロスオリジンでない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
-<p><a href="/ja/docs/Web/HTTP/CORS">CORS</a> を有効にして取得したリソースを先読みする場合 (<code><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>、<code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>、<a href="/ja/docs/Web/CSS/@font-face">フォント</a>など)、 <code><a href="/ja/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> 要素の {{htmlattrxref("crossorigin","link")}} 属性の設定に特別な注意を払う必要があります。この属性は、取得がクロスオリジンでない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。</p>
+上記のように、これが当てはまる興味深いケースの 1 つは、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります ([Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照)。
 
-<p>上記のように、これが当てはまる興味深いケースの 1 つは、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります (<a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>参照)。</p>
+このケースを例として使用してみましょう。完全なサンプルソースコードは [GitHub のソースコード例](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([およびライブ盤](https://mdn.github.io/html-examples/link-rel-preload/fonts/)) にあります。
 
-<p>このケースを例として使用してみましょう。完全なサンプルソースコードは <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">GitHub のソースコード例</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">およびライブ盤</a>) にあります。</p>
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Web font example</title>
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Web font example&lt;/title&gt;
+  <link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin>
 
-  &lt;link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
-  &lt;link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
-
-  &lt;link href="style.css" rel="stylesheet"&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
   …
-&lt;/body&gt;</pre>
+</body>
+```
 
-<p><code>type</code>属性に MIME タイプのヒントを提供するだけでなく、先読みの CORS モードが最終的なフォントリソースリクエストと一致することを確認するために、 <code>crossorigin</code> 属性も提供しています。</p>
+`type`属性に MIME タイプのヒントを提供するだけでなく、先読みの CORS モードが最終的なフォントリソースリクエストと一致することを確認するために、 `crossorigin` 属性も提供しています。
 
-<h2 id="Including_media">media を含める</h2>
+## media を含める
 
-<p><code>&lt;link&gt;</code> 要素の優れた機能のひとつが、 {{htmlattrxref("media", "link")}} 属性を受け入れることができることです。この属性は、<a href="/docs/Web/CSS/@media#メディア種別">メディア種別</a>や本格的な<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディアクエリー</a>を受け付けることができるので、レスポンシブな先読みを行うことができます。</p>
+`<link>` 要素の優れた機能のひとつが、 {{htmlattrxref("media", "link")}} 属性を受け入れることができることです。この属性は、[メディア種別](/docs/Web/CSS/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を受け付けることができるので、レスポンシブな先読みを行うことができます。
 
-<p>例を見てみましょう (GitHub 上の<a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">ソースコード</a>、<a href="https://mdn.github.io/html-examples/link-rel-preload/media/">デモ</a>)。</p>
+例を見てみましょう (GitHub 上の[ソースコード](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)、[デモ](https://mdn.github.io/html-examples/link-rel-preload/media/))。
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Responsive preload example&lt;/title&gt;
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Responsive preload example</title>
 
-  &lt;link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)"&gt;
-  &lt;link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)"&gt;
+  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
+  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
 
-  &lt;link rel="stylesheet" href="main.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;
-    &lt;h1&gt;My site&lt;/h1&gt;
-  &lt;/header&gt;
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>My site</h1>
+  </header>
 
-  &lt;script&gt;
+  <script>
     var mediaQueryList = window.matchMedia("(max-width: 600px)");
     var header = document.querySelector('header');
 
@@ -166,57 +162,55 @@ translation_of: Web/HTML/Link_types/preload
     } else {
       header.style.backgroundImage = 'url(bg-image-wide.png)';
     }
-  &lt;/script&gt;
-&lt;/body&gt;</pre>
+  </script>
+</body>
+```
 
-<p><code>media</code> 属性を <code>&lt;link&gt;</code> 要素に設定することで、ビューポートが狭い場合は幅の狭い画像を、ビューポートが広い場合は幅の広い画像を先読みするようにします。このために {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} を使用しています (詳しくは<a href="/ja/docs/Web/CSS/Media_Queries/Testing_media_queries">メディアクエリーのテスト</a>を参照)。</p>
+`media` 属性を `<link>` 要素に設定することで、ビューポートが狭い場合は幅の狭い画像を、ビューポートが広い場合は幅の広い画像を先読みするようにします。このために {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} を使用しています (詳しくは[メディアクエリーのテスト](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)を参照)。
 
-<p>これにより、ページのレンダリング時にそのフォントが利用できる可能性が高くなり、 FOUT (スタイル付け前のテキストの点滅) を減らすことができます。</p>
+これにより、ページのレンダリング時にそのフォントが利用できる可能性が高くなり、 FOUT (スタイル付け前のテキストの点滅) を減らすことができます。
 
-<p>これは、画像に限らず、同じ種類のファイルであっても、大きな意味を持ちます。帯域幅や CPU が限られている狭い画面では、シンプルな SVG の図を先読みして表示したり、ユーザーのリソースに余裕がある場合は、複雑な JavaScript を先読みし、それを使ってインタラクティブな 3D モデルをレンダリングしたりすることができるでしょう。</p>
+これは、画像に限らず、同じ種類のファイルであっても、大きな意味を持ちます。帯域幅や CPU が限られている狭い画面では、シンプルな SVG の図を先読みして表示したり、ユーザーのリソースに余裕がある場合は、複雑な JavaScript を先読みし、それを使ってインタラクティブな 3D モデルをレンダリングしたりすることができるでしょう。
 
-<h2 id="Scripting_and_preloads">スクリプトと先読み</h2>
+## スクリプトと先読み
 
-<p>これらの先読みに関するもう一つの良い点として、スクリプトを使って実行できることが挙げられます。例えば、ここでは {{domxref("HTMLLinkElement")}} インスタンスを作成し、それを DOM に適用させています。</p>
+これらの先読みに関するもう一つの良い点として、スクリプトを使って実行できることが挙げられます。例えば、ここでは {{domxref("HTMLLinkElement")}} インスタンスを作成し、それを DOM に適用させています。
 
-<pre class="brush: js">var preloadLink = document.createElement(&quot;link&quot;);
-preloadLink.href = &quot;myscript.js&quot;;
-preloadLink.rel = &quot;preload&quot;;
-preloadLink.as = &quot;script&quot;;
+```js
+var preloadLink = document.createElement("link");
+preloadLink.href = "myscript.js";
+preloadLink.rel = "preload";
+preloadLink.as = "script";
 document.head.appendChild(preloadLink);
-</pre>
+```
 
-<p>これは、ブラウザーは <code>myscript.js</code> ファイルを先読みしますが、実際はまだ使用されていません。これを使用するには、以下のようにします。</p>
+これは、ブラウザーは `myscript.js` ファイルを先読みしますが、実際はまだ使用されていません。これを使用するには、以下のようにします。
 
-<pre class="brush: js">var preloadedScript = document.createElement(&quot;script&quot;);
-preloadedScript.src = &quot;myscript.js&quot;;
+```js
+var preloadedScript = document.createElement("script");
+preloadedScript.src = "myscript.js";
 document.body.appendChild(preloadedScript);
-</pre>
+```
 
-<p>これは、スクリプトを先読みしたいが、必要なときまで実行を延期する場合に便利です。</p>
+これは、スクリプトを先読みしたいが、必要なときまで実行を延期する場合に便利です。
 
-<h2 id="Other_resource_preloading_mechanisms">その他のリソース先読み機構</h2>
+## その他のリソース先読み機構
 
-<p>先読み機能は他にもありますが、 <code>&lt;link rel="preload"&gt;</code> ほど目的に合ったものはありません。</p>
+先読み機能は他にもありますが、 `<link rel="preload">` ほど目的に合ったものはありません。
 
-<ul>
-	<li><code>&lt;link rel="prefetch"&gt;</code> は長い間ブラウザーで対応されてきましたが、これは<strong><em>次の</em></strong>操作やページ読み込み (次のページに移動するときなど) で使用されるリソースを先読みするためのものです。これはこれで良いのですが、現在のページには役に立ちません。さらに、ブラウザーは <code>prefetch</code> のリソースを <code>preload</code> リソースよりも低い優先度で表示します。現在のページは次のページよりも重要なのです。詳しくは<a href="/ja/docs/Web/HTTP/Link_prefetching_FAQ">リンク先読みの FAQ</a> を参照してください。</li>
-	<li>
-	<code>&lt;link rel="prerender"&gt;</code> は、指定されたウェブページをバックグラウンドでレンダリングし、ユーザーがそのページに移動した場合のロードを高速化します。ユーザーの帯域幅を浪費する可能性があるため、 Chrome は prerender を代わりに <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState 先読み</a>として扱います。</li>
-	<li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} は、しばらく前に Chrome が対応しており、 <code>preload</code> と同じ問題に取り組むことを目的としていましたが、問題がありました。項目の優先順位を計算する方法がなかったため (当時は <code>as</code> が存在しなかったため)、すべての項目がかなり低い優先順位で取得されてしまいました。</li>
-	<li>スクリプトベースのリソースローダーは数多く存在しますが、ブラウザーの取得優先度キューを制御することはできず、同様のパフォーマンスの問題があります。</li>
-</ul>
+- `<link rel="prefetch">` は長い間ブラウザーで対応されてきましたが、これは**_次の_**操作やページ読み込み (次のページに移動するときなど) で使用されるリソースを先読みするためのものです。これはこれで良いのですが、現在のページには役に立ちません。さらに、ブラウザーは `prefetch` のリソースを `preload` リソースよりも低い優先度で表示します。現在のページは次のページよりも重要なのです。詳しくは[リンク先読みの FAQ](/ja/docs/Web/HTTP/Link_prefetching_FAQ) を参照してください。
+- `<link rel="prerender">` は、指定されたウェブページをバックグラウンドでレンダリングし、ユーザーがそのページに移動した場合のロードを高速化します。ユーザーの帯域幅を浪費する可能性があるため、 Chrome は prerender を代わりに [NoState 先読み](https://developers.google.com/web/updates/2018/07/nostate-prefetch)として扱います。
+- `<link rel="subresource">` {{non-standard_inline}} は、しばらく前に Chrome が対応しており、 `preload` と同じ問題に取り組むことを目的としていましたが、問題がありました。項目の優先順位を計算する方法がなかったため (当時は `as` が存在しなかったため)、すべての項目がかなり低い優先順位で取得されてしまいました。
+- スクリプトベースのリソースローダーは数多く存在しますが、ブラウザーの取得優先度キューを制御することはできず、同様のパフォーマンスの問題があります。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li><a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</a> by Yoav Weiss</li>
-</ul>
+- [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

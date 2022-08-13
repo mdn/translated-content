@@ -8,55 +8,55 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の例外 "redeclaration of formal parameter" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxref("Statements/let", "let")}} 代入文を使用して同じ変数名を再度宣言すると発生します。</p>
+JavaScript の例外 "redeclaration of formal parameter" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxref("Statements/let", "let")}} 代入文を使用して同じ変数名を再度宣言すると発生します。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">SyntaxError: Let/Const redeclaration (Edge)
+```js
+SyntaxError: Let/Const redeclaration (Edge)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Identifier "x" has already been declared (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">エラーの原因</h2>
+## エラーの原因
 
-<p>関数の引数と同名の変数があり、関数内で再度 {{jsxref("Statements/let", "let")}} 代入文を使用して再宣言しています。 JavaScript では、同じ関数内やブロックスコープ内で <code>let</code> を使用して同じ変数を再宣言できません。</p>
+関数の引数と同名の変数があり、関数内で再度 {{jsxref("Statements/let", "let")}} 代入文を使用して再宣言しています。 JavaScript では、同じ関数内やブロックスコープ内で `let` を使用して同じ変数を再宣言できません。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Redeclared_argument">再宣言した引数</h3>
+### 再宣言した引数
 
-<p>この場合、変数 "arg" は、引数を再宣言しています。</p>
+この場合、変数 "arg" は、引数を再宣言しています。
 
-<pre class="brush: js example-bad">function f(arg) {
+```js example-bad
+function f(arg) {
   let arg = 'foo';
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
-</pre>
+```
 
-<p>関数の本体内で "arg" の値を変更したい場合、これを行うことはできますが、再び同じ変数を宣言する必要はありません。言い換えれば、 <code>let</code> キーワードを省略することができます。新しい変数を生成する場合は、既存の関数の引数と競合するので、変数名を変更する必要があります。</p>
+関数の本体内で "arg" の値を変更したい場合、これを行うことはできますが、再び同じ変数を宣言する必要はありません。言い換えれば、 `let` キーワードを省略することができます。新しい変数を生成する場合は、既存の関数の引数と競合するので、変数名を変更する必要があります。
 
-<pre class="brush: js example-good">function f(arg) {
+```js example-good
+function f(arg) {
   arg = 'foo';
 }
 
 function f(arg) {
   let bar = 'foo';
 }
-</pre>
+```
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{jsxref("Statements/let", "let")}}</li>
-  <li>{{jsxref("Statements/const", "const")}}</li>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li><a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a> 内の <a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations">宣言</a>
-  </li>
-</ul>
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/var", "var")}}
+- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide) 内の [宣言](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

@@ -7,112 +7,83 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/animateMotion
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG の <strong><code>&lt;animateMotion&gt;</code></strong> 要素は、ある要素がモーションパスに沿って移動する方法を定義します。</p>
+SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> 既存のパスを再利用するには、 <code>&lt;animateMotion&gt;</code> 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。</p>
-</div>
+> **Note:** **注:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100%; margin: 0; padding: 0; display:block; }</pre>
-</div>
+```css hidden
+html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+```
 
-<pre class="brush: html; highlight[6,7] notranslate">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="lightgrey"
-    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
-  &lt;circle r="5" fill="red"&gt;
-    &lt;animateMotion dur="10s" repeatCount="indefinite"
-      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+  <circle r="5" fill="red">
+    <animateMotion dur="10s" repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
-</div>
+{{EmbedLiveSample('Exemple', 150, '100%')}}
 
-<h2 id="Usage_context" name="Usage_context">使用場面</h2>
+## 使用場面
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<dl>
- <dt id="attr-cx">{{SVGAttr("keyPoints")}}</dt>
- <dd>この属性は [0,1] の範囲で、それぞれの {{SVGAttr("keyTimes")}} に関連付けられた値に対して、パスに沿ってオブジェクトがどのくらいの距離にあるかを示します。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>*; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("path")}}</dt>
- <dd>この属性は、 {{SVGAttr('d')}} 属性と同じ構文を使用して、モーションパスを定義します。<br>
- <small><em>値の型</em>: <strong>&lt;string&gt;</strong>; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("rotate")}}</dt>
- <dd>この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>|<code>auto</code>|<code>auto-reverse</code>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
-</dl>
+- {{SVGAttr("keyPoints")}}
+  - : この属性は \[0,1] の範囲で、それぞれの {{SVGAttr("keyTimes")}} に関連付けられた値に対して、パスに沿ってオブジェクトがどのくらいの距離にあるかを示します。
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number)\*; _Default value_: none; _Animatable_: **no**
+- {{SVGAttr("path")}}
+  - : この属性は、 {{SVGAttr('d')}} 属性と同じ構文を使用して、モーションパスを定義します。
+    _値の型_: **\<string>**; _Default value_: none; _Animatable_: **no**
+- {{SVGAttr("rotate")}}
+  - : この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>&lt;animateMotion&gt;</code> においては、 {{SVGAttr("calcMode")}} 属性の既定値は <code>paced</code> です。</p>
-</div>
+> **Note:** **注:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
 
-<h3 id="Animation_Attributes" name="Animation_Attributes">アニメーション属性</h3>
+### アニメーション属性
 
-<dl>
- <dt><a href="/ja/docs/Web/SVG/Attribute#Animation_Timing_Attributes">アニメーションタイミング属性</a></dt>
- <dd><small>{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute#Animation_Value_Attributes">アニメーション値属性</a></dt>
- <dd><small>{{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute#Animation_Attributes">他のアニメーション属性</a></dt>
- <dd><small>特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes">アニメーションイベント属性</a></dt>
- <dd><small>特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}</small></dd>
-</dl>
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+- [アニメーション値属性](/ja/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
+- [他のアニメーション属性](/ja/docs/Web/SVG/Attribute#Animation_Attributes)
+  - : 特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+  - : 特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+### グローバル属性
 
-<dl>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Core">コア属性</a></dt>
- <dd><small>特に重要なもの: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Styling">スタイル付け属性</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>イベント属性</dt>
- <dd><small><a href="/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">グローバルイベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes">文書要素イベント属性</a></small></dd>
-</dl>
+- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+  - : 特に重要なもの: {{SVGAttr('id')}}
+- [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- イベント属性
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p>この要素は {{domxref("SVGAnimateMotionElement")}} インターフェイスを実装しています。</p>
+この要素は {{domxref("SVGAnimateMotionElement")}} インターフェイスを実装しています。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                                     | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
+| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("svg.elements.animateMotion")}}</p>
+{{Compat("svg.elements.animateMotion")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{SVGElement("mpath")}}</li>
-</ul>
+- {{SVGElement("mpath")}}

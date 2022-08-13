@@ -1,5 +1,5 @@
 ---
-title: '<xsl:choose>'
+title: <xsl:choose>
 slug: Web/XSLT/Element/choose
 tags:
   - XSLT
@@ -8,34 +8,34 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/choose
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:choose&gt;</code> 要素はいくつかの選択肢の中から選択肢を定義します。 手続き型言語の switch 文のように振る舞います。</p>
+`<xsl:choose>` 要素はいくつかの選択肢の中から選択肢を定義します。 手続き型言語の switch 文のように振る舞います。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:choose&gt;
-    &lt;xsl:when test="[whatever to test1]"&gt;&lt;/xsl:when&gt;
-    &lt;xsl:when test="[whatever to test2]"&gt;&lt;/xsl:when&gt;
-    &lt;xsl:otherwise&gt;&lt;/xsl:otherwise&gt; [optional]
-&lt;/xsl:choose&gt;</pre>
+    <xsl:choose>
+        <xsl:when test="[whatever to test1]"></xsl:when>
+        <xsl:when test="[whatever to test2]"></xsl:when>
+        <xsl:otherwise></xsl:otherwise> [optional]
+    </xsl:choose>
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>インストラクションはテンプレートとともに表示されます。1つまたは複数の <code>&lt;xsl:when&gt;</code> 要素と、オプションで最後の <code>&lt;xsl:otherwise&gt;</code> 要素を含みます。</p>
+インストラクションはテンプレートとともに表示されます。1 つまたは複数の `<xsl:when>` 要素と、オプションで最後の `<xsl:otherwise>` 要素を含みます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 9.2.</p>
+XSLT, section 9.2.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

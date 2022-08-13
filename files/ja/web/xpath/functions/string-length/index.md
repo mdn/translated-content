@@ -6,30 +6,27 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/string-length
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>string-length</code> 関数は、与えられた文字列の文字数に等しい数値を返します。</p>
+`string-length` 関数は、与えられた文字列の文字数に等しい数値を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">string-length( [<em>string</em>] )
-</pre>
+    string-length( [string] )
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><em><code>string</code></em>(省略可)</dt>
- <dd>評価する文字列。省略すると、コンテキストノードを文字列に変換したものが使用されます。</dd>
-</dl>
+- _`string`_(省略可)
+  - : 評価する文字列。省略すると、コンテキストノードを文字列に変換したものが使用されます。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>文字列の文字数に等しい整数。</p>
+文字列の文字数に等しい整数。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-string-length">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string-length)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

@@ -2,53 +2,53 @@
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- メソッド
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <strong><code>Reflect.get()</code></strong> メソッドは、オブジェクト (<code>target[propertyKey]</code>) からプロパティを関数として取得するように動作します。</p>
+静的な **`Reflect.get()`** メソッドは、オブジェクト (`target[propertyKey]`) からプロパティを関数として取得するように動作します。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])
-</pre>
+```js
+Reflect.get(target, propertyKey[, receiver])
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>プロパティを取得する対象のオブジェクト。</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>設定するプロパティ名。</dd>
-  <dt><code><var>receiver</var></code> {{optional_inline}}</dt>
-  <dd>ゲッターがあった場合、 <code><var>target</var></code> への呼び出しで使用する <code>this</code> の値を提供します。 {{jsxref("Proxy")}} とともに使用すると、 <code><var>target</var></code> から継承しているオブジェクトにすることができます。</dd>
-</dl>
+- `target`
+  - : プロパティを取得する対象のオブジェクト。
+- `propertyKey`
+  - : 設定するプロパティ名。
+- `receiver` {{optional_inline}}
+  - : ゲッターがあった場合、 `target` への呼び出しで使用する `this` の値を提供します。 {{jsxref("Proxy")}} とともに使用すると、 `target` から継承しているオブジェクトにすることができます。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>プロパティの値です。</p>
+プロパティの値です。
 
-<h3 id="Exceptions">例外</h3>
+### 例外
 
-<p><code><var>target</var></code> が {{jsxref("Object")}} でなかった場合、 {{jsxref("TypeError")}} が発生します。</p>
+`target` が {{jsxref("Object")}} でなかった場合、 {{jsxref("TypeError")}} が発生します。
 
-<h2 id="Description">解説</h2>
+## 解説
 
-<p><code>Reflect.get</code> メソッドはオブジェクトのプロパティを取得します。機能としては<a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">プロパティアクセサー</a>構文と似ています。</p>
+`Reflect.get` メソッドはオブジェクトのプロパティを取得します。機能としては[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)構文と似ています。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Using_Reflect.get"><code>Reflect.get()</code> の使用</h3>
+### `Reflect.get()` の使用
 
-<pre class="brush: js">// オブジェクト
+```js
+// オブジェクト
 let obj = { x: 1, y: 2 }
 Reflect.get(obj, 'x')  // 1
 
@@ -75,30 +75,19 @@ let obj = new Proxy(x, {
   }
 })
 Reflect.get(obj, 'foo', y) // "3bar"
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}}</td>
-    </tr>
-  </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Reflect.get")}}</p>
+{{Compat("javascript.builtins.Reflect.get")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{jsxref("Reflect")}}</li>
-  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">プロパティアクセサー</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

@@ -10,58 +10,48 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>italics()</code></strong> メソッドは、文字列がイタリックになるように HTML の {{HTMLElement("i")}} 要素を生成します。</p>
+**`italics()`** メソッドは、文字列がイタリックになるように HTML の {{HTMLElement("i")}} 要素を生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>str</var>.italics()</pre>
+    str.italics()
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>HTML の {{HTMLElement("i")}} 要素を含む文字列です。</p>
+HTML の {{HTMLElement("i")}} 要素を含む文字列です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>italics()</code> メソッドは、文字列を <code>&lt;i&gt;</code> 要素の中に、 "<code>&lt;i&gt;str&lt;/i&gt;</code>" のように埋め込みます。</p>
+`italics()` メソッドは、文字列を `<i>` 要素の中に、 "`<i>str</i>`" のように埋め込みます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="italics_の使用">italics() の使用</h3>
+### italics() の使用
 
-<p>以下の例では文字列のメソッドを使用して、文字列を整形しています。</p>
+以下の例では文字列のメソッドを使用して、文字列を整形しています。
 
-<pre class="brush: js notranslate">var worldString = 'Hello, world';
-console.log(worldString.blink());  // &lt;blink&gt;Hello, world&lt;/blink&gt;
-console.log(worldString.bold());  // &lt;b&gt;Hello, world&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Hello, world&lt;/i&gt;
-console.log(worldString.strike());  // &lt;strike&gt;Hello, world&lt;/strike&gt;
-</pre>
+```js
+var worldString = 'Hello, world';
+console.log(worldString.blink());  // <blink>Hello, world</blink>
+console.log(worldString.bold());  // <b>Hello, world</b>
+console.log(worldString.italics()); // <i>Hello, world</i>
+console.log(worldString.strike());  // <strike>Hello, world</strike>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.italics")}}</p>
+{{Compat("javascript.builtins.String.italics")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("String.prototype.blink()")}}</li>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.strike()")}}

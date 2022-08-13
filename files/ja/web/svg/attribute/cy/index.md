@@ -6,167 +6,104 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/cy
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>cy</code></strong>属性は中心のy-座標を定義します。</p>
+**`cy`**属性は中心の y-座標を定義します。
 
-<p>3つの要素がこの属性を用います: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("radialGradient")}}</p>
+3 つの要素がこの属性を用います: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("radialGradient")}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;radialGradient cy="25%" id="myGradient"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient cy="25%" id="myGradient">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
 
-  &lt;circle  cy="50"  cx="50" r="45"/&gt;
-  &lt;ellipse cy="150" cx="50" rx="45" ry="25" /&gt;
-  &lt;rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle  cy="50"  cx="50" r="45"/>
+  <ellipse cy="150" cx="50" rx="45" ry="25" />
+  <rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 300)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 300)}}
 
-<h2 id="circle" name="circle">circle</h2>
+## circle
 
-<p>{{SVGElement('circle')}}に対して、<code>cy</code>は、図形のy-軸の中心を定義します。</p>
+{{SVGElement('circle')}}に対して、`cy`は、図形の y-軸の中心を定義します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">既定値</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可否</th>
-   <td>はい</td>
-  </tr>
- </tbody>
-</table>
+| 値                 | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 既定値             | `0`                                                                                                                  |
+| アニメーション可否 | はい                                                                                                                 |
 
-<p class="note"><strong>注:</strong> SVG2として開始する場合には、<code>cy</code>は<em>ジオメトリプロパティ</em>です。これは本属性が円へのCSSプロパティとしても利用可能であることを意味します。</p>
+> **Note:** **注:** SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
-<h2 id="ellipse" name="ellipse">ellipse</h2>
+## ellipse
 
-<p>{{SVGElement('ellipse')}}に対して、<code>cy</code>は図形中心のy-座標を定義します。</p>
+{{SVGElement('ellipse')}}に対して、`cy`は図形中心の y-座標を定義します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">既定値</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可否</th>
-   <td>はい</td>
-  </tr>
- </tbody>
-</table>
+| 値                 | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 既定値             | `0`                                                                                                                  |
+| アニメーション可否 | はい                                                                                                                 |
 
-<p class="note"><strong>注:</strong> SVG2として開始する場合には、<code>cy</code>は<em>ジオメトリプロパティ</em>です。これは本属性が円へのCSSプロパティとしても利用可能であることを意味します。</p>
+> **Note:** **注:** SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
-<h2 id="radialGradient" name="radialGradient">radialGradient</h2>
+## radialGradient
 
-<p>{{SVGElement('radialGradient')}}に対して、<code>cy</code>は、放射状勾配の終端円のy-座標を定義します。</p>
+{{SVGElement('radialGradient')}}に対して、`cy`は、放射状勾配の終端円の y-座標を定義します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">既定値</th>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可否</th>
-   <td>はい</td>
-  </tr>
- </tbody>
-</table>
+| 値                 | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** |
+| ------------------ | ---------------------------------------------------- |
+| 既定値             | `50%`                                                |
+| アニメーション可否 | はい                                                 |
 
-<h4 id="Example" name="Example">例</h4>
+#### 例
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;radialGradient cy="0" id="myGradient000"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
+```html
+<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient cy="0" id="myGradient000">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
 
-    &lt;radialGradient cy="50%" id="myGradient050"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
+    <radialGradient cy="50%" id="myGradient050">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
 
-    &lt;radialGradient cy="100%" id="myGradient100"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+    <radialGradient cy="100%" id="myGradient100">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+  </defs>
 
-  &lt;rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" /&gt;
-  &lt;rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" /&gt;
-  &lt;rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" />
+  <rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" />
+  <rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('radialGradient', 150, '100%')}}</p>
+{{EmbedLiveSample('radialGradient', 150, '100%')}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "geometry.html#CY", "cy")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>ジオメトリプロパティとしての定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>SVG2ペイントサーバに対する定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td><code>&lt;radialGradient&gt;</code>に対する初期定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td><code>&lt;ellipse&gt;</code>に対する初期定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td><code>&lt;circle&gt;</code>に対する初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 策定状況                 | コメント                           |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------- |
+| {{SpecName("SVG2", "geometry.html#CY", "cy")}}                                             | {{Spec2("SVG2")}} | ジオメトリプロパティとしての定義   |
+| {{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}     | {{Spec2("SVG2")}} | SVG2 ペイントサーバに対する定義    |
+| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}} | {{Spec2("SVG1.1")}} | `<radialGradient>`に対する初期定義 |
+| {{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | `<ellipse>`に対する初期定義        |
+| {{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | `<circle>`に対する初期定義         |

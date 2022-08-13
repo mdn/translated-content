@@ -11,55 +11,43 @@ tags:
   - Regular Expressions
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>標準外の <strong>lastMatch</strong> プロパティは、最後に一致した文字列を含む正規表現の静的で読み取り専用のプロパティです。 <code>RegExp.$&amp;</code> はこのプロパティに対するエイリアスです。</p>
+標準外の **lastMatch** プロパティは、最後に一致した文字列を含む正規表現の静的で読み取り専用のプロパティです。 `RegExp.$&` はこのプロパティに対するエイリアスです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>lastMatch</code> プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。そのかわりに、常に、<code>RegExp.lastMatch</code>または<code>RegExp['$&amp;'].</code>として使用してください。</p>
+`lastMatch` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。そのかわりに、常に、`RegExp.lastMatch`または`RegExp['$&'].`として使用してください。
 
-<p><code>lastMatch</code> プロパティの値は、読み取り専用で、一致に成功するたびに変更されます。</p>
+`lastMatch` プロパティの値は、読み取り専用で、一致に成功するたびに変更されます。
 
-<p>ドットプロパティアクセサー (<code>RegExp.$&amp;</code>) で短縮エイリアスを使用することはできません。その場合、パーサーは "&amp;" という表現を期待して {{jsxref("SyntaxError")}} が発生します。<a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">プロパティへのアクセスにはブラケット表記法</a>を使用してください。</p>
+ドットプロパティアクセサー (`RegExp.$&`) で短縮エイリアスを使用することはできません。その場合、パーサーは "&" という表現を期待して {{jsxref("SyntaxError")}} が発生します。[プロパティへのアクセスにはブラケット表記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_lastMatch_and" name="Using_lastMatch_and">lastMatch と $&amp; の使用</h3>
+### lastMatch と $& の使用
 
-<pre class="brush: js notranslate">var re = /hi/g;
+```js
+var re = /hi/g;
 re.test('hi there!');
 RegExp.lastMatch; // "hi"
-RegExp['$&amp;'];     // "hi"
-</pre>
+RegExp['$&'];     // "hi"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Legacy RegExp features')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                               |
+| ---------------------------------------------------- |
+| {{SpecName('Legacy RegExp features')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.RegExp.lastMatch")}}</p>
-</div>
+{{Compat("javascript.builtins.RegExp.lastMatch")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("RegExp.input", "RegExp.input ($_)")}}</li>
- <li>{{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp.n", "RegExp.$1-$9")}}

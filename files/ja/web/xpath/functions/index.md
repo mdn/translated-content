@@ -9,47 +9,45 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>以下はコア <a href="/ja/docs/XPath">XPath</a> 関数及び <a href="/ja/docs/XSLT">XSLT</a> 固有の追加 XPath 関数の、解説、構文、引数一覧、返される型、該当する W3C 勧告の原典、及び <a href="/ja/docs/Gecko">Gecko</a> での現在の対応状況を含む注釈付きの一覧です。 XPath/XSLT 関数の使用に関するより詳しい情報は、<a href="/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading">より詳しい読み物</a>のページをご覧ください。</p>
+以下はコア [XPath](/ja/docs/XPath) 関数及び [XSLT](/ja/docs/XSLT) 固有の追加 XPath 関数の、解説、構文、引数一覧、返される型、該当する W3C 勧告の原典、及び [Gecko](/ja/docs/Gecko) での現在の対応状況を含む注釈付きの一覧です。 XPath/XSLT 関数の使用に関するより詳しい情報は、[より詳しい読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)のページをご覧ください。
 
-<ul>
- <li><a href="/ja/docs/XPath/Functions/boolean">boolean()</a></li>
- <li><a href="/ja/docs/ja/XPath/Functions/ceiling">ceiling()</a></li>
- <li><a href="/ja/docs/ja/XPath/Functions/concat">concat()</a></li>
- <li><a href="/ja/docs/XPath/Functions/contains">contains()</a></li>
- <li><a href="/ja/docs/XPath/Functions/count">count()</a></li>
- <li><a href="/ja/docs/XPath/Functions/current">current()</a><em>XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/document">document()</a><em>XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/element-available">element-available()</a></li>
- <li><a href="/ja/docs/XPath/Functions/false">false()</a></li>
- <li><a href="/ja/docs/XPath/Functions/floor">floor()</a></li>
- <li><a href="/ja/docs/XPath/Functions/format-number">format-number()</a><em> XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/function-available">function-available()</a></li>
- <li><a href="/ja/docs/XPath/Functions/generate-id">generate-id()</a><em> XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/id">id()</a><em> (一部対応)</em></li>
- <li><a href="/ja/docs/XPath/Functions/key">key() </a><em>XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/lang">lang()</a></li>
- <li><a href="/ja/docs/XPath/Functions/last">last()</a></li>
- <li><a href="/ja/docs/XPath/Functions/local-name">local-name()</a></li>
- <li><a href="/ja/docs/XPath/Functions/name">name()</a></li>
- <li><a href="/ja/docs/XPath/Functions/namespace-uri">namespace-uri()</a></li>
- <li><a href="/ja/docs/XPath/Functions/normalize-space">normalize-space()</a></li>
- <li><a href="/ja/docs/XPath/Functions/not">not()</a></li>
- <li><a href="/ja/docs/XPath/Functions/number">number()</a></li>
- <li><a href="/ja/docs/XPath/Functions/position">position()</a></li>
- <li><a href="/ja/docs/XPath/Functions/round">round()</a></li>
- <li><a href="/ja/docs/XPath/Functions/starts-with">starts-with()</a></li>
- <li><a href="/ja/docs/XPath/Functions/string">string()</a></li>
- <li><a href="/ja/docs/XPath/Functions/string-length">string-length()</a></li>
- <li><a href="/ja/docs/XPath/Functions/substring">substring()</a></li>
- <li><a href="/ja/docs/XPath/Functions/substring-after">substring-after()</a></li>
- <li><a href="/ja/docs/XPath/Functions/substring-before">substring-before()</a></li>
- <li><a href="/ja/docs/XPath/Functions/sum">sum()</a></li>
- <li><a href="/ja/docs/XPath/Functions/system-property">system-property()</a><em> XSLT 固有</em></li>
- <li><a href="/ja/docs/XPath/Functions/translate">translate()</a></li>
- <li><a href="/ja/docs/XPath/Functions/true">true()</a></li>
- <li><a href="/ja/docs/XPath/Functions/unparsed-entity-url">unparsed-entity-url()</a><em> XSLT 固有</em><em>(未対応)</em></li>
-</ul>
+- [boolean()](/ja/docs/XPath/Functions/boolean)
+- [ceiling()](/ja/docs/ja/XPath/Functions/ceiling)
+- [concat()](/ja/docs/ja/XPath/Functions/concat)
+- [contains()](/ja/docs/XPath/Functions/contains)
+- [count()](/ja/docs/XPath/Functions/count)
+- [current()](/ja/docs/XPath/Functions/current)_XSLT 固有_
+- [document()](/ja/docs/XPath/Functions/document)_XSLT 固有_
+- [element-available()](/ja/docs/XPath/Functions/element-available)
+- [false()](/ja/docs/XPath/Functions/false)
+- [floor()](/ja/docs/XPath/Functions/floor)
+- [format-number()](/ja/docs/XPath/Functions/format-number) _XSLT 固有_
+- [function-available()](/ja/docs/XPath/Functions/function-available)
+- [generate-id()](/ja/docs/XPath/Functions/generate-id) _XSLT 固有_
+- [id()](/ja/docs/XPath/Functions/id) _(一部対応)_
+- [key() ](/ja/docs/XPath/Functions/key)_XSLT 固有_
+- [lang()](/ja/docs/XPath/Functions/lang)
+- [last()](/ja/docs/XPath/Functions/last)
+- [local-name()](/ja/docs/XPath/Functions/local-name)
+- [name()](/ja/docs/XPath/Functions/name)
+- [namespace-uri()](/ja/docs/XPath/Functions/namespace-uri)
+- [normalize-space()](/ja/docs/XPath/Functions/normalize-space)
+- [not()](/ja/docs/XPath/Functions/not)
+- [number()](/ja/docs/XPath/Functions/number)
+- [position()](/ja/docs/XPath/Functions/position)
+- [round()](/ja/docs/XPath/Functions/round)
+- [starts-with()](/ja/docs/XPath/Functions/starts-with)
+- [string()](/ja/docs/XPath/Functions/string)
+- [string-length()](/ja/docs/XPath/Functions/string-length)
+- [substring()](/ja/docs/XPath/Functions/substring)
+- [substring-after()](/ja/docs/XPath/Functions/substring-after)
+- [substring-before()](/ja/docs/XPath/Functions/substring-before)
+- [sum()](/ja/docs/XPath/Functions/sum)
+- [system-property()](/ja/docs/XPath/Functions/system-property) _XSLT 固有_
+- [translate()](/ja/docs/XPath/Functions/translate)
+- [true()](/ja/docs/XPath/Functions/true)
+- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _XSLT 固有\_\_(未対応)_
 
-<p>{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}</p>
+{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}

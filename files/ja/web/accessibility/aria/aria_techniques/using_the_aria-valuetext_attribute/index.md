@@ -7,58 +7,51 @@ tags:
   - Attribute
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute
 ---
-<p><span class="seoSummary"><code><a class="external" href="http://www.w3.org/TR/wai-aria/#aria-valuetext" rel="external">aria-valuetext</a></code> 属性は、プログレスバー、スピンボタン、スライダーなどの範囲ウィジェットの <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute">aria-valuenow</a></code> に対する人間が読める代替テキストを定義するために使用されます。</span></p>
+[`aria-valuetext`](http://www.w3.org/TR/wai-aria/#aria-valuetext) 属性は、プログレスバー、スピンボタン、スライダーなどの範囲ウィジェットの [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute) に対する人間が読める代替テキストを定義するために使用されます。
 
-<p>作成者は、レンダリングされた値を数値として正確に表現できない場合にのみ、<code>aria-valuetext</code> 属性を設定する<strong>べき</strong>です（SHOULD）。 たとえば、スライダーのレンダリング値が<code>小</code>、<code>中</code>、<code>大</code>の場合があります。 この場合、<code>aria-valuenow</code> の値は 1 〜 3 の範囲で値空間内の各値の位置を示しますが、<code>aria-valuetext</code> は、<code>小</code>、<code>中</code>、<code>大</code>のいずれかの文字列になります。</p>
+作成者は、レンダリングされた値を数値として正確に表現できない場合にのみ、`aria-valuetext` 属性を設定する**べき**です（SHOULD）。 たとえば、スライダーのレンダリング値が`小`、`中`、`大`の場合があります。 この場合、`aria-valuenow` の値は 1 〜 3 の範囲で値空間内の各値の位置を示しますが、`aria-valuetext` は、`小`、`中`、`大`のいずれかの文字列になります。
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>数値の文字列表現</p>
+数値の文字列表現
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p><code>aria-valuetext</code> 属性がない場合、支援技術は現在の値の <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute">aria-valuenow</a></code> 属性のみに依存します。 <code>aria-valuetext</code> が指定されている場合、支援技術は <code>aria-valuenow</code> の値の代わりにその値をレンダリングする<strong>べき</strong>です（SHOULD）。</p>
+`aria-valuetext` 属性がない場合、支援技術は現在の値の [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute) 属性のみに依存します。 `aria-valuetext` が指定されている場合、支援技術は `aria-valuenow` の値の代わりにその値をレンダリングする**べき**です（SHOULD）。
 
-<div class="note"><strong>注</strong>: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+> **Note:** **注**: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<h3 id="Examples" name="Examples">例</h3>
+### 例
 
-<h4 id="Example_1.3A" name="Example_1.3A">例 1:</h4>
+#### 例 1:
 
-<p>下のスニペットは、曜日を選択するための簡単なスライダーを示しています。 スライダーの値は数値で、<code>aria-valuetext</code> 属性を使用してその日の名前を指定します。 アプリケーションは、<code>aria-valuenow</code> に応じてプログラムで <code>aria-valuetext</code> を更新します。</p>
+下のスニペットは、曜日を選択するための簡単なスライダーを示しています。 スライダーの値は数値で、`aria-valuetext` 属性を使用してその日の名前を指定します。 アプリケーションは、`aria-valuenow` に応じてプログラムで `aria-valuetext` を更新します。
 
-<pre class="brush: html"><span class="tag">&lt;div role=<span class="str">"slider"</span> aria-valuenow=<span class="str">"1"</span>
-	aria-valuemin=<span class="str">"1"</span> aria-valuemax=<span class="str">"7"</span>
-	aria-valuetext=<span class="str">"</span></span>日曜日<span class="tag"><span class="str">"</span>&gt;</span>
-</pre>
+```html
+<div role="slider" aria-valuenow="1"
+	aria-valuemin="1" aria-valuemax="7"
+	aria-valuetext="日曜日">
+```
 
-<h4 id="Working_Examples.3A" name="Working_Examples.3A">動作する例</h4>
+#### 動作する例
 
-<h3 id="Notes" name="Notes">注 </h3>
+### 注
 
-<h3 id="Used_With_ARIA_Roles" name="Used_With_ARIA_Roles">ARIA ロールで使用</h3>
+### ARIA ロールで使用
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></li>
- <li>scrollbar</li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role">slider</a></li>
- <li>spinbutton</li>
-</ul>
+- [progressbar](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
+- scrollbar
+- [slider](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
+- spinbutton
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術 </h3>
+### 関連する ARIA 技術
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute">aria-valuenow</a></li>
-</ul>
+- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+### 互換性
 
-<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/#aria-valuetext">aria-valuetext の WAI-ARIA 仕様</a>（英語）</li>
-</ul>
-
-<p> </p>
+- [aria-valuetext の WAI-ARIA 仕様](http://www.w3.org/TR/wai-aria/#aria-valuetext)（英語）

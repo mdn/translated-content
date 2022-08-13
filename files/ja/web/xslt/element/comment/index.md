@@ -1,5 +1,5 @@
 ---
-title: '<xsl:comment>'
+title: <xsl:comment>
 slug: Web/XSLT/Element/comment
 tags:
   - Comment
@@ -8,32 +8,32 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/comment
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:comment&gt;</code> 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。</p>
+`<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:comment&gt;
-	TEMPLATE
-&lt;/xsl:comment&gt; </pre>
+    <xsl:comment>
+    	TEMPLATE
+    </xsl:comment>
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<p>なし</p>
+なし
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 7.4.</p>
+XSLT, section 7.4.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

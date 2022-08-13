@@ -9,58 +9,56 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>unshift()</strong></code> メソッドは、配列の最初に 1 つ以上の要素を追加し、新しい配列の長さを返します。</p>
+**`unshift()`** メソッドは、配列の最初に 1 つ以上の要素を追加し、新しい配列の長さを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/array-unshift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>arr</var>.unshift(<var>element1</var>[, ...[, <var>elementN</var>]])</pre>
+    arr.unshift(element1[, ...[, elementN]])
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd><code><var>arr</var></code> の先頭に追加する要素。</dd>
-</dl>
+- `elementN`
+  - : `arr` の先頭に追加する要素。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>メソッドを呼び出した後のオブジェクトの新しい {{jsxref("Array.length", "length")}} プロパティの値です。</p>
+メソッドを呼び出した後のオブジェクトの新しい {{jsxref("Array.length", "length")}} プロパティの値です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>unshift</code> メソッドは、与えられた要素を配列のようなオブジェクトの一番最初に挿入します。</p>
+`unshift` メソッドは、与えられた要素を配列のようなオブジェクトの一番最初に挿入します。
 
-<p><code>unshift</code> は意図して汎用的です。このメソッドは，配列に類似したオブジェクトに対して{{jsxref("Function.call", "呼び出し", "", 1)}}たり，{{jsxref("Function.apply", "適用し", "", 1)}}たりすることができます。 <code>length</code> プロパティ、すなわち連続の最後を示すゼロベースの数値プロパティ、を反映しているため、意味のある振る舞いができない可能性があります。</p>
+`unshift` は意図して汎用的です。このメソッドは，配列に類似したオブジェクトに対して{{jsxref("Function.call", "呼び出し", "", 1)}}たり，{{jsxref("Function.apply", "適用し", "", 1)}}たりすることができます。 `length` プロパティ、すなわち連続の最後を示すゼロベースの数値プロパティ、を反映しているため、意味のある振る舞いができない可能性があります。
 
-<p>複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 <code>unshift</code> を <code><var>n</var></code> 個の引数で1回呼び出すのと、1個の引数で <code><var>n</var></code> 回 (例えばループを使って) 呼び出すのとでは同じ結果にはなりません。</p>
+複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 `unshift` を `n` 個の引数で 1 回呼び出すのと、1 個の引数で `n` 回 (例えばループを使って) 呼び出すのとでは同じ結果にはなりません。
 
-<p>例をご覧ください。</p>
+例をご覧ください。
 
-<pre class="syntaxbox notranslate">let arr = [4, 5, 6]
+    let arr = [4, 5, 6]
 
-arr.unshift(1, 2, 3)
-console.log(arr);
-// [<strong>1, 2, 3</strong>, 4, 5, 6]
+    arr.unshift(1, 2, 3)
+    console.log(arr);
+    // [1, 2, 3, 4, 5, 6]
 
-arr = [4, 5, 6] // 配列をリセット
+    arr = [4, 5, 6] // 配列をリセット
 
-arr.unshift(1)
-arr.unshift(2)
-arr.unshift(3)
+    arr.unshift(1)
+    arr.unshift(2)
+    arr.unshift(3)
 
-console.log(arr)
-// [<strong>3, 2, 1</strong>, 4, 5, 6]
-</pre>
+    console.log(arr)
+    // [3, 2, 1, 4, 5, 6]
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_unshift" name="Using_unshift">unshift の使用</h3>
+### unshift の使用
 
-<pre class="brush: js notranslate">let arr = [1, 2]
+```js
+let arr = [1, 2]
 
 arr.unshift(0)               // 呼び出しの返値は 3、新しい配列の長さ
 // arr is [0, 1, 2]
@@ -73,34 +71,21 @@ arr.unshift([-4, -3])        // 新しい配列の長さは 6
 
 arr.unshift([-7, -6], [-5])  // 新しい配列の長さは 8
 // arr is [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.unshift")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.unshift")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.pop()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.concat()")}}

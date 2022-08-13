@@ -10,31 +10,30 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toLocaleString()</code></strong> メソッドは、型付き配列の要素を表す文字列を返します。要素は文字列に変換され、ロケール固有の文字列 (カンマ "," など) で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムを持ち、型付き配列の要素は数値なので、各要素に対して {{jsxref("Number.prototype.toLocaleString()")}} と同じアルゴリズムが適用されます。ここで <em>TypedArray</em> は<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">型指定された</a>配列型の1つです。</p>
+**`toLocaleString()`** メソッドは、型付き配列の要素を表す文字列を返します。要素は文字列に変換され、ロケール固有の文字列 (カンマ "," など) で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムを持ち、型付き配列の要素は数値なので、各要素に対して {{jsxref("Number.prototype.toLocaleString()")}} と同じアルゴリズムが適用されます。ここで _TypedArray_ は[型指定された](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)配列型の 1 つです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>typedarr</var>ay.toLocaleString([locales [, options]]);</pre>
+    typedarray.toLocaleString([locales [, options]]);
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<div>
-<p><code>locales</code> と <code>options</code> の引数は、関数の動作をカスタマイズし、アプリケーションがフォーマット規則を使用する言語を指定できるようにします。 <code>locales</code> と <code>options</code> の引数を無視する実装では、使用されるロケールと返される文字列の形式は完全に実装に依存します。</p>
+`locales` と `options` の引数は、関数の動作をカスタマイズし、アプリケーションがフォーマット規則を使用する言語を指定できるようにします。 `locales` と `options` の引数を無視する実装では、使用されるロケールと返される文字列の形式は完全に実装に依存します。
 
-<div>これらの引数の詳細および使用方法については、 {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}} コンストラクターを参照してください。</div>
-</div>
+これらの引数の詳細および使用方法については、 {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}} コンストラクターを参照してください。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>型付き配列の要素を表す文字列。</p>
+型付き配列の要素を表す文字列。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_toLocaleString" name="Using_toLocaleString">toLocaleString の使用</h3>
+### toLocaleString の使用
 
-<pre class="brush: js notranslate">var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+```js
+var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
 // if run in a de-DE locale
@@ -45,32 +44,19 @@ uint.toLocaleString('en-US');
 
 uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.TypedArray.toLocaleString")}}</p>
-</div>
+{{Compat("javascript.builtins.TypedArray.toLocaleString")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

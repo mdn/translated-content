@@ -7,77 +7,58 @@ tags:
   - Attribute
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute
 ---
-<p><span class="seoSummary"><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-orientation" rel="external">aria-orientation</a> 属性は、要素が水平方向か垂直方向かを示すために使用されます。</span></p>
+[aria-orientation](https://www.w3.org/TR/wai-aria/#aria-orientation) 属性は、要素が水平方向か垂直方向かを示すために使用されます。
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>語彙</p>
+語彙
 
-<table style="width: 50%;">
- <tbody>
-  <tr>
-   <td>vertical</td>
-   <td>要素は垂直方向です。</td>
-  </tr>
-  <tr>
-   <td>horizontal</td>
-   <td>要素は水平方向です。</td>
-  </tr>
-  <tr>
-   <td>undefined（デフォルト）</td>
-   <td>要素の方向は不明または曖昧です。</td>
-  </tr>
- </tbody>
-</table>
+| vertical                | 要素は垂直方向です。             |
+| ----------------------- | -------------------------------- |
+| horizontal              | 要素は水平方向です。             |
+| undefined（デフォルト） | 要素の方向は不明または曖昧です。 |
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+### ユーザーエージェントと支援技術への影響
 
-<p> </p>
+> **Note:** **注**: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
-<div class="note"><strong>注</strong>: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+### 例
 
-<h3 id="Examples" name="Examples">例</h3>
+#### 例 1:
 
-<h4 id="Example_1" name="Example_1">例 1:</h4>
+下のスニペットは、垂直方向に向けられた単純なスライダを示しています。
 
-<p>下のスニペットは、垂直方向に向けられた単純なスライダを示しています。</p>
-
-<pre class="brush: html">&lt;a href="#" id="handle_zoomSlider"
+```html
+<a href="#" id="handle_zoomSlider"
         role="slider"
         aria-orientation="vertical"
         aria-valuemin="0"
         aria-valuemax="17"
-        aria-valuenow="14" &gt;
-    &lt;span&gt;11&lt;/span&gt;
-&lt;/a&gt;
-</pre>
+        aria-valuenow="14" >
+    <span>11</span>
+</a>
+```
 
-<h3 id="Notes" name="Notes">注</h3>
+### 注
 
-<h3 id="Used_With_ARIA_Roles" name="Used_With_ARIA_Roles">ARIA ロールで使用</h3>
+### ARIA ロールで使用
 
-<ul>
- <li>scrollbar</li>
- <li>listbox</li>
- <li>combobox</li>
- <li>menu</li>
- <li>tree</li>
- <li>separator</li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="Using the slider role">slider</a></li>
- <li>tablist</li>
- <li>toolbar</li>
-</ul>
+- scrollbar
+- listbox
+- combobox
+- menu
+- tree
+- separator
+- [slider](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role "Using the slider role")
+- tablist
+- toolbar
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+### 関連する ARIA 技術
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+### 互換性
 
-<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-orientation">aria-orientation の WAI-ARIA 仕様</a>（英語）</li>
-</ul>
-
-<p> </p>
+- [aria-orientation の WAI-ARIA 仕様](https://www.w3.org/TR/wai-aria/#aria-orientation)（英語）

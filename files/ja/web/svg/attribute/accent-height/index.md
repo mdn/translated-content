@@ -8,61 +8,32 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/accent-height
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p><strong><code>accent-height</code></strong>属性は原点からアクセント文字の上端までの距離を定義します。これはフォント座標系で測られる距離です。</p>
+**`accent-height`**属性は原点からアクセント文字の上端までの距離を定義します。これはフォント座標系で測られる距離です。
 
-<p>1つの要素のみがこの属性を使用します: {{SVGElement("font-face")}}</p>
+1 つの要素のみがこの属性を使用します: {{SVGElement("font-face")}}
 
-<h2 id="font-face" name="font-face">font-face</h2>
+## font-face
 
-<p>{{SVGElement("font-face")}}に対して、<code>accent-height</code>は原点からアクセント文字の上端までの距離を定義します。これはフォント座標系で測られる距離です。</p>
+{{SVGElement("font-face")}}に対して、`accent-height`は原点からアクセント文字の上端までの距離を定義します。これはフォント座標系で測られる距離です。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><a href="/ja/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">既定値</th>
-   <td>Value of {{SVGAttr("ascent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可否</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
-</table>
+| 値                 | [<number>](/ja/docs/Web/SVG/Content_type#Number) |
+| ------------------ | ------------------------------------------------ |
+| 既定値             | Value of {{SVGAttr("ascent")}}            |
+| アニメーション可否 | いいえ                                           |
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 策定状況                 | コメント |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
+| {{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}} | {{Spec2("SVG1.1")}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("svg.elements.font-face.accent-height")}}
 
+## 関連情報
 
-<p>{{Compat("svg.elements.font-face.accent-height")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{SVGAttr("cap-height")}}</li>
- <li>{{SVGAttr("x-height")}}</li>
-</ul>
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("x-height")}}

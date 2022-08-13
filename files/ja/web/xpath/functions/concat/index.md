@@ -6,30 +6,27 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/concat
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>concat</code> 関数は 2 つ以上の文字列を連結し、その結果として得られる文字列を返します。</p>
+`concat` 関数は 2 つ以上の文字列を連結し、その結果として得られる文字列を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">concat(<em>string<sub>1</sub></em> ,<em>string<sub>2</sub></em> [,<em>string<sub>n</sub></em>]* )
-</pre>
+    concat(string1 ,string2 [,stringn]* )
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>string<sub>n</sub></em></code></dt>
- <dd>この関数は 2 つ以上の引数を受け入れます。それぞれの引数は文字列です。</dd>
-</dl>
+- `stringn`
+  - : この関数は 2 つ以上の引数を受け入れます。それぞれの引数は文字列です。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>関数に引数として渡されたすべての文字列を連結した、単一の文字列。</p>
+関数に引数として渡されたすべての文字列を連結した、単一の文字列。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-concat">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-concat)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

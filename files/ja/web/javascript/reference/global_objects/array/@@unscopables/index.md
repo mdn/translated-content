@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@unscopables]'
+title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 tags:
   - Array
@@ -9,36 +9,35 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@unscopable</strong></code> シンボルプロパティには、 ES2015 以前の ECMAScript 標準には含まれていないプロパティ名があります。それらのプロパティは、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/with">with</a></code> 文のバインディングから除外されます。</p>
+**`@@unscopable`** シンボルプロパティには、 ES2015 以前の ECMAScript 標準には含まれていないプロパティ名があります。それらのプロパティは、[`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインディングから除外されます。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>with</code> バインディングから除外される既定の配列プロパティは次のとおりです。</p>
+`with` バインディングから除外される既定の配列プロパティは次のとおりです。
 
-<ul>
- <li>{{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}</li>
- <li>{{jsxref("Array.prototype.entries()", "entries()")}}</li>
- <li>{{jsxref("Array.prototype.fill()", "fill()")}}</li>
- <li>{{jsxref("Array.prototype.find()", "find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()", "findIndex()")}}</li>
- <li>{{jsxref("Array.prototype.includes()", "includes()")}}</li>
- <li>{{jsxref("Array.prototype.keys()", "keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()", "values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}
+- {{jsxref("Array.prototype.entries()", "entries()")}}
+- {{jsxref("Array.prototype.fill()", "fill()")}}
+- {{jsxref("Array.prototype.find()", "find()")}}
+- {{jsxref("Array.prototype.findIndex()", "findIndex()")}}
+- {{jsxref("Array.prototype.includes()", "includes()")}}
+- {{jsxref("Array.prototype.keys()", "keys()")}}
+- {{jsxref("Array.prototype.values()", "values()")}}
 
-<p>自作オブジェクトに <code>unscopables</code> を設定する方法については、 {{jsxref("Symbol.unscopables")}} を見てください。</p>
+自作オブジェクトに `unscopables` を設定する方法については、 {{jsxref("Symbol.unscopables")}} を見てください。
 
-<p>{{js_property_attributes(0,0,1)}}</p>
+{{js_property_attributes(0,0,1)}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Use_in_with_environments" name="Use_in_with_environments">with 環境内での使用</h3>
+### with 環境内での使用
 
-<p>次のコードは、 ES5 以下であれば正常に動作します。しかし、 ECMAScript 2015 以降では {{jsxref("Array.prototype.keys()")}} メソッドが導入されました。つまり、<code>with</code> 環境内では、 "keys" はメソッドであり、変数ではありません。ここが組込み <code>@@unscopables</code> の役立つ場所です。<code>Array.prototype[@@unscopables]</code> シンボルプロパティが使用されると、配列のいくつかのメソッドが <code>with</code> 文のスコープに入ることを防ぎます。</p>
+次のコードは、 ES5 以下であれば正常に動作します。しかし、 ECMAScript 2015 以降では {{jsxref("Array.prototype.keys()")}} メソッドが導入されました。つまり、`with` 環境内では、 "keys" はメソッドであり、変数ではありません。ここが組込み `@@unscopables` の役立つ場所です。`Array.prototype[@@unscopables]` シンボルプロパティが使用されると、配列のいくつかのメソッドが `with` 文のスコープに入ることを防ぎます。
 
-<pre class="brush: js notranslate">var keys = [];
+```js
+var keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -46,31 +45,19 @@ with (Array.prototype) {
 
 Object.keys(Array.prototype[Symbol.unscopables]);
 // ["copyWithin", "entries", "fill", "find", "findIndex",
-//  "includes", "keys", "values"]</pre>
+//  "includes", "keys", "values"]
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Array.@@unscopables")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.@@unscopables")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Symbol.unscopables")}}</li>
-</ul>
+- {{jsxref("Symbol.unscopables")}}

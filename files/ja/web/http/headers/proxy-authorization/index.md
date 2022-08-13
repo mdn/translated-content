@@ -3,75 +3,41 @@ title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
 translation_of: Web/HTTP/Headers/Proxy-Authorization
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>Proxy-Authorization</code></strong> リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} <code>Proxy Authentication Required</code> ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。</p>
+HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Request header","リクエストヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name","禁止ヘッダー名")}}</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
-</table>
+| ヘッダー種別                                                                     | {{Glossary("Request header","リクエストヘッダー")}} |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name","禁止ヘッダー名")}} | いいえ                                                                           |
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;</pre>
+    Proxy-Authorization: <type> <credentials>
 
-<h2 id="ディレクティブ">ディレクティブ</h2>
+## ディレクティブ
 
-<dl>
- <dt>&lt;type&gt;</dt>
- <dd><a href="/ja/docs/Web/HTTP/Authentication#認証方式">認証方式</a>。一般的には <a href="/ja/docs/Web/HTTP/Authentication#basic_認証方式">"Basic"</a> です。<a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">認証方式の IANA レジストリ</a>も参照してください。</dd>
- <dt>&lt;credentials&gt;</dt>
- <dd>"Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
- <ul>
-  <li>コロンで結合したユーザー名とパスワード (<code>aladdin:opensesame</code>)。</li>
-  <li>結果の文字列は <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64</a> でエンコードされます (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
- </ul>
+- \<type>
+  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
+- \<credentials>
+  - : "Basic" 認証方式を使用している場合、認証情報は次のように構築されます。\* コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
+    - 結果の文字列は [Base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。> **Note:** **メモ**: Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
 
- <div class="note">
- <p><strong>メモ</strong>: Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。</p>
- </div>
- </dd>
-</dl>
+## 例
 
-<h2 id="例">例</h2>
+    Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
-<pre class="notranslate">Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
-</pre>
+## 仕様書
 
-<h2 id="仕様書">仕様書</h2>
+| 仕様書                                                       | 題名                                   |
+| ------------------------------------------------------------ | -------------------------------------- |
+| {{RFC("7235", "Proxy-Authorization", "4.4")}} | HTTP/1.1: Authentication               |
+| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "Proxy-Authorization", "4.4")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7617")}}</td>
-   <td>The 'Basic' HTTP Authentication Scheme</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a></li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

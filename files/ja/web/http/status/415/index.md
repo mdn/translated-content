@@ -9,35 +9,24 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/415
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>415 Unsupported Media Type</strong></code> クライアントエラーレスポンスコードは、ペイロードフォーマットがサポートされていないフォーマットであるため、サーバーがリクエストの受け入れを拒否することを示します。</p>
+HTTP **`415 Unsupported Media Type`** クライアントエラーレスポンスコードは、ペイロードフォーマットがサポートされていないフォーマットであるため、サーバーがリクエストの受け入れを拒否することを示します。
 
-<p>フォーマットの問題はリクエストされた {{HTTPHeader("Content-Type")}} または {{HTTPHeader("Content-Encoding")}} によるものか、または直接データを検査した結果に起因する可能性があります。</p>
+フォーマットの問題はリクエストされた {{HTTPHeader("Content-Type")}} または {{HTTPHeader("Content-Encoding")}} によるものか、または直接データを検査した結果に起因する可能性があります。
 
-<h2 id="ステータス">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">415 Unsupported Media Type</pre>
+    415 Unsupported Media Type
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | タイトル                                                      |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Encoding")}}</li>
- <li>{{HTTPHeader("Accept")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Accept")}}

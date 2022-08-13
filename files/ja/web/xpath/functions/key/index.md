@@ -6,43 +6,38 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/key
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>key</code>関数は、与えられたキーに対して与えられた値を持つノードのノード集合を返します。</p>
+`key`関数は、与えられたキーに対して与えられた値を持つノードのノード集合を返します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">key(<em>keyname</em> ,<em>value</em> )
-</pre>
+    key(keyname ,value )
 
-<h3 id="Arguments" name="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>keyname</em></code></dt>
- <dd>使用される<code><a href="/ja/docs/XSLT/Elements/key">xsl:key</a></code>要素の名前を含む文字列。</dd>
-</dl>
+- `keyname`
+  - : 使用される[`xsl:key`](/ja/docs/XSLT/Elements/key)要素の名前を含む文字列。
 
-<dl>
- <dt><code><em>value</em></code></dt>
- <dd>返されるノード集合には、与えられたキーに対してこの値を持つすべてのノードが含まれます。</dd>
-</dl>
+<!---->
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+- `value`
+  - : 返されるノード集合には、与えられたキーに対してこの値を持つすべてのノードが含まれます。
 
-<p>ノード集合。</p>
+### 戻り値
 
-<h3 id="Notes" name="Notes">注記</h3>
+ノード集合。
 
-<ul>
- <li><code><a href="/ja/docs/XSLT/Elements/key">xsl:key</a></code>要素は、指定された要素がキーと一致するために使用される属性を定義します</li>
-</ul>
+### 注記
 
-<p>この関数はXPathへのXSLT固有の追加です。コアXPath関数ライブラリの一部ではありません。</p>
+- [`xsl:key`](/ja/docs/XSLT/Elements/key)要素は、指定された要素がキーと一致するために使用される属性を定義します
 
-<h3 id="Defined" name="Defined">定義</h3>
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
 
-<p><a class="external" href="http://www.w3.org/TR/xslt#function-key">XSLT 1.0 12.2</a></p>
+### 定義
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+[XSLT 1.0 12.2](http://www.w3.org/TR/xslt#function-key)
 
-<p>サポート済み</p>
+### Gecko のサポート
+
+サポート済み

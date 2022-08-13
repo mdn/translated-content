@@ -3,88 +3,62 @@ title: circle
 slug: Web/SVG/Element/circle
 translation_of: Web/SVG/Element/circle
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code><strong>&lt;circle&gt;</strong></code> <a href="/ja/docs/Web/SVG">SVG</a> 要素は SVG の基本的な図形を表すものであり、中心座標と半径を指定して円を描画します。</p>
+**`<circle>`** [SVG](/ja/docs/Web/SVG) 要素は SVG の基本的な図形を表すものであり、中心座標と半径を指定して円を描画します。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性値">属性値</h2>
+## 属性値
 
-<h3 id="グローバル属性">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/SVG/Attribute#Conditional_processing_attributes">条件処理属性</a></li>
- <li><a href="/ja/SVG/Attribute#Core_attributes">コア属性</a></li>
- <li><a href="/ja/SVG/Attribute#Graphical_event_attributes">グラフィカルイベント属性</a></li>
- <li><a href="/ja/SVG/Attribute#Presentation_attributes">プレゼンテーション属性</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件処理属性](/ja/SVG/Attribute#Conditional_processing_attributes)
+- [コア属性](/ja/SVG/Attribute#Core_attributes)
+- [グラフィカルイベント属性](/ja/SVG/Attribute#Graphical_event_attributes)
+- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="専用属性">専用属性</h3>
+### 専用属性
 
-<ul>
- <li>{{SVGAttr("cx")}}</li>
- <li>{{SVGAttr("cy")}}</li>
- <li>{{SVGAttr("r")}}</li>
-</ul>
+- {{SVGAttr("cx")}}
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}
 
-<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は <a href="/ja/docs/Web/API/SVGCircleElement">SVGCircleElement</a> インターフェイスを実装しています。</p>
+この要素は [SVGCircleElement](/ja/docs/Web/API/SVGCircleElement) インターフェイスを実装しています。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<div id="Example">
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100"/&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100"/>
+</svg>
+```
 
-<h3 id="出力">出力</h3>
+### 出力
 
-<p>{{EmbedLiveSample('Example', 200, 200)}}</p>
+{{EmbedLiveSample('Example', 200, 200)}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#CircleElement", "&lt;circle&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 策定状況                 | 備考     |
+| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}     | {{Spec2("SVG2")}} |          |
+| {{SpecName("SVG1.1", "shapes.html#CircleElement", "&lt;circle&gt;")}} | {{Spec2("SVG1.1")}} | 初期定義 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
+{{Compat("svg.elements.circle")}}
 
+## 関連情報
 
-<p>{{Compat("svg.elements.circle")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{ SVGElement("ellipse") }}</li>
-</ul>
+- {{ SVGElement("ellipse") }}

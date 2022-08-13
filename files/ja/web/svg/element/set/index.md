@@ -8,74 +8,49 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/set
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><code>set</code> 要素は指定された時間の間の属性の値を設定します。この要素はすべての属性タイプをサポートしており、合理的に補間することができないものも含みます。例えば、文字列や論理型といった値です。<code>set</code> 要素は非加算的要素です。additive 属性とaccumulate 属性は許可されておらず、指定されても無視されます。</p>
+`set` 要素は指定された時間の間の属性の値を設定します。この要素はすべての属性タイプをサポートしており、合理的に補間することができないものも含みます。例えば、文字列や論理型といった値です。`set` 要素は非加算的要素です。additive 属性と accumulate 属性は許可されておらず、指定されても無視されます。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="例">例</h2>
+## 例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="グローバル属性">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/Web/SVG/Attribute#ConditionalProcessing">条件処理属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#Core">コア属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#AnimationEvent">アニメーションイベント属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#XLink">Xlink属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#AnimationAttributeTarget">Animation attribute target attributes</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#AnimationTiming">アニメーションタイミング属性</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件処理属性](/ja/Web/SVG/Attribute#ConditionalProcessing) »
+- [コア属性](/ja/Web/SVG/Attribute#Core) »
+- [アニメーションイベント属性](/ja/Web/SVG/Attribute#AnimationEvent) »
+- [Xlink 属性](/ja/Web/SVG/Attribute#XLink) »
+- [Animation attribute target attributes](/ja/Web/SVG/Attribute#AnimationAttributeTarget) »
+- [アニメーションタイミング属性](/ja/Web/SVG/Attribute#AnimationTiming) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="専用属性">専用属性</h3>
+### 専用属性
 
-<ul>
- <li>{{ SVGAttr("to") }}</li>
-</ul>
+- {{ SVGAttr("to") }}
 
-<h2 id="DOM_インターフェース">DOM インターフェース</h2>
+## DOM インターフェース
 
-<p>この要素は <code><a href="/ja/DOM/SVGSetElement" title="en/DOM/SVGSetElement">SVGSetElement</a></code> インターフェースを提供します。</p>
+この要素は [`SVGSetElement`](/ja/DOM/SVGSetElement "en/DOM/SVGSetElement") インターフェースを提供します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#SetElement", "&lt;set&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#SetElement', '&lt;set&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                                   | Comment    |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
+| {{SpecName("SVG Animations 2", "#SetElement", "&lt;set&gt;")}} | {{Spec2("SVG Animations 2")}} |            |
+| {{SpecName('SVG1.1', 'animate.html#SetElement', '&lt;set&gt;')}} | {{Spec2('SVG1.1')}}                 | 最初の定義 |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
+{{Compat("svg.elements.set")}}
 
+## 関連情報
 
-<p>{{Compat("svg.elements.set")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{ SVGElement("animate") }}</li>
-</ul>
+- {{ SVGElement("animate") }}

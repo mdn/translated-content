@@ -7,320 +7,244 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 ---
-<p><span class="seoSummary">グリッド (<code>grid</code>) ロールは、1つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。</span></p>
+グリッド (`grid`) ロールは、1 つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。
 
-<pre class="brush: html">&lt;table role="grid" aria-labelledby="id-select-your-seat"&gt;
-  &lt;caption id="id-select-your-seat"&gt;座席を選んでください&lt;/caption&gt;
-  &lt;tbody role="presentation"&gt;
-    &lt;tr role="presentation"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th&gt;列 A&lt;/th&gt;
-      &lt;th&gt;列 B&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;通路 1&lt;/th&gt;
-      &lt;td tabindex="0"&gt;
-        &lt;button id="1a" tabindex="-1"&gt;1A&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="1b" tabindex="-1"&gt;1B&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;!-- その他の列 --&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;通路 2&lt;/th&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="2a" tabindex="-1"&gt;2A&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="2b" tabindex="-1"&gt;2B&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;!-- その他の列 --&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
-
-<h2 id="Description" name="Description">説明</h2>
-
-<p>グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの1つ以上のセルを持つ1つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の2つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ ARIA のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、<a href="https://www.w3.org/TR/wai-aria-practices-1.2/#grid">WAI-ARIA Authoring Practices</a> を参照してください。</p>
-
-<p>セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code>) ロールと列ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>) ロールがあります。 セル要素は、行 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code>) ロールを持つ要素によって所有される必要があります。 行は行グループ (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>) を使用してグループ化できます。</p>
-
-<p>グリッドをインタラクティブなウィジェットとして使用する場合は、<a href="#keyboard_interactions">キーボードインタラクション</a>を実装する必要があります。</p>
-
-<p> </p>
-
-<h3 id="Associated_ARIA_roles_states_and_properties" name="Associated_ARIA_roles_states_and_properties">関連する ARIA のロール、ステート、プロパティ</h3>
-
-<h4 id="Roles" name="Roles">ロール</h4>
-
-<dl>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a> (サブクラス)</dt>
- <dd>グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。</dd>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></dt>
- <dd>グリッド内の行。</dd>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></dt>
- <dd>1つ以上の行 (<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a>) を含むグループ。</dd>
-</dl>
-
-<h4 id="States_and_Properties" name="States_and_Properties">ステートとプロパティ</h4>
-
-<dl>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute">aria-level</a></dt>
- <dd>他の構造内でのグリッドの階層レベルを示します。 (訳注: この属性は、グリッドロールでは、ARIA 1.2 で、サポートされなくなる予定です。 行ロールでは、引き続きサポートされています。)</dd>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute">aria-multiselectable</a></dt>
- <dd><code>aria-multiselectable</code> が <code>true</code> に設定されている場合、グリッド内の複数の項目を選択できます。 デフォルト値は <code>false</code> です。</dd>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute">aria-readonly</a></dt>
- <dd>ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、<code>aria-readonly</code> を <code>true</code> に設定するべきです。 デフォルト値は <code>false</code> です。</dd>
-</dl>
-
-<div class="note">
-<p>多くのユースケースでは、HTML の表 (<code><a href="/ja/docs/Web/HTML/Element/table">table</a></code>) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。</p>
-</div>
-
-<h3 id="Keyboard_interactions" name="Keyboard_interactions">キーボードインタラクション</h3>
-
-<p>キーボードユーザーはグリッドに出会うと、<kbd>左</kbd>、<kbd>右</kbd>、<kbd>上</kbd>、<kbd>下</kbd>のキーを使用して行と列をナビゲートします。 インタラクティブなコンポーネントをアクティブ化するには、<kbd>リターン</kbd>キーと<kbd>スペース</kbd>キーを使用します。</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">キー</th>
-   <th scope="col">アクション</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><kbd>→</kbd></td>
-   <td>1セル右にフォーカスを移動します。 フォーカスが行の右端のセルにある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>←</kbd></td>
-   <td>1セル左にフォーカスを移動します。 フォーカスが行の左端のセルにある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>↓</kbd></td>
-   <td>1セル下にフォーカスを移動します。 フォーカスが列の最下部のセルにある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>↑</kbd></td>
-   <td>1セル上にフォーカスを移動します。 フォーカスが列の最上部のセルにある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>Page Down</kbd></td>
-   <td>作成者が決定した行数だけ下にフォーカスを移動します。 通常、現在表示されている行セットの一番下の行が最初に表示される行の1つになるようにスクロールします。 フォーカスがグリッドの最後の行にある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>Page Up</kbd></td>
-   <td>作成者が決定した行数だけ上にフォーカスを移動します。通常、現在表示されている行セットの一番上の行が最後に表示される行の1つになるようにスクロールします。 フォーカスがグリッドの最初の行にある場合、フォーカスは移動しません。</td>
-  </tr>
-  <tr>
-   <td><kbd>Home</kbd></td>
-   <td>フォーカスを含む行の最初のセルにフォーカスを移動します。</td>
-  </tr>
-  <tr>
-   <td><kbd>End</kbd></td>
-   <td>フォーカスを含む行の最後のセルにフォーカスを移動します。</td>
-  </tr>
-  <tr>
-   <td><kbd>ctrl</kbd> + <kbd>Home</kbd></td>
-   <td>最初の行の最初のセルにフォーカスを移動します。</td>
-  </tr>
-  <tr>
-   <td><kbd>ctrl</kbd> + <kbd>End</kbd></td>
-   <td>最後の行の最後のセルにフォーカスを移動します。</td>
-  </tr>
- </tbody>
+```html
+<table role="grid" aria-labelledby="id-select-your-seat">
+  <caption id="id-select-your-seat">座席を選んでください</caption>
+  <tbody role="presentation">
+    <tr role="presentation">
+      <td></td>
+      <th>列 A</th>
+      <th>列 B</th>
+    </tr>
+    <tr>
+      <th scope="row">通路 1</th>
+      <td tabindex="0">
+        <button id="1a" tabindex="-1">1A</button>
+      </td>
+      <td tabindex="-1">
+        <button id="1b" tabindex="-1">1B</button>
+      </td>
+      <!-- その他の列 -->
+    </tr>
+    <tr>
+      <th scope="row">通路 2</th>
+      <td tabindex="-1">
+        <button id="2a" tabindex="-1">2A</button>
+      </td>
+      <td tabindex="-1">
+        <button id="2b" tabindex="-1">2B</button>
+      </td>
+      <!-- その他の列 -->
+    </tr>
+  </tbody>
 </table>
+```
 
-<p>セル、行、列を複数選択できる場合は、次のキーの組み合わせが一般的に使用されます。</p>
+## 説明
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">キーの組み合わせ</th>
-   <th scope="col">アクション</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><kbd>ctrl</kbd> + <kbd>Space</kbd></td>
-   <td>フォーカスを含む列を選択します。</td>
-  </tr>
-  <tr>
-   <td><kbd>shift</kbd> + <kbd>Space</kbd></td>
-   <td>フォーカスを含む行を選択します。 グリッドに行を選択するためのチェックボックス付きの列が含まれている場合、このキーの組み合わせを使用して、フォーカスがチェックボックスにない場合でもそのボックスをチェックできます。</td>
-  </tr>
-  <tr>
-   <td><kbd>ctrl</kbd> + <kbd>A</kbd></td>
-   <td>すべてのセルを選択します。</td>
-  </tr>
-  <tr>
-   <td><kbd>shift</kbd> + <kbd>→</kbd></td>
-   <td>選択範囲を1セル右側に拡張します。</td>
-  </tr>
-  <tr>
-   <td><kbd>shift</kbd> + <kbd>←</kbd></td>
-   <td>選択範囲を1セル左側に拡張します。</td>
-  </tr>
-  <tr>
-   <td><kbd>shift</kbd> + <kbd>↓</kbd></td>
-   <td>選択範囲を1セル下側に拡張します。</td>
-  </tr>
-  <tr>
-   <td><kbd>shift</kbd> + <kbd>↑</kbd></td>
-   <td>選択範囲を1セル上側に拡張します。</td>
-  </tr>
- </tbody>
-</table>
+グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの 1 つ以上のセルを持つ 1 つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の 2 つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ ARIA のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、[WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)) ロールと列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)) ロールがあります。 セル要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)) ロールを持つ要素によって所有される必要があります。 行は行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)) を使用してグループ化できます。
 
-<h3 id="Calendar_example" name="Calendar_example">カレンダーの例</h3>
+グリッドをインタラクティブなウィジェットとして使用する場合は、[キーボードインタラクション](#keyboard_interactions)を実装する必要があります。
 
-<div class="hidden">
-<h4 id="HTML" name="HTML">HTML</h4>
+### 関連する ARIA のロール、ステート、プロパティ
 
-<pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader" aria-readonly=true&gt;
-  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
-      &lt;td&gt;26&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;28&lt;/td&gt;
-      &lt;td&gt;29&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;31&lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+#### ロール
+
+- [treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role) (サブクラス)
+  - : グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。
+- [row](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+  - : グリッド内の行。
+- [rowgroup](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+  - : 1 つ以上の行 ([row](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)) を含むグループ。
+
+#### ステートとプロパティ
+
+- [aria-level](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute)
+  - : 他の構造内でのグリッドの階層レベルを示します。 (訳注: この属性は、グリッドロールでは、ARIA 1.2 で、サポートされなくなる予定です。 行ロールでは、引き続きサポートされています。)
+- [aria-multiselectable](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
+  - : `aria-multiselectable` が `true` に設定されている場合、グリッド内の複数の項目を選択できます。 デフォルト値は `false` です。
+- [aria-readonly](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
+  - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`aria-readonly` を `true` に設定するべきです。 デフォルト値は `false` です。
+
+> **Note:** 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
+
+### キーボードインタラクション
+
+キーボードユーザーはグリッドに出会うと、<kbd>左</kbd>、<kbd>右</kbd>、<kbd>上</kbd>、<kbd>下</kbd>のキーを使用して行と列をナビゲートします。 インタラクティブなコンポーネントをアクティブ化するには、<kbd>リターン</kbd>キーと<kbd>スペース</kbd>キーを使用します。
+
+| キー                              | アクション                                                                                                                                                                                                                      |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>→</kbd>                      | 1 セル右にフォーカスを移動します。 フォーカスが行の右端のセルにある場合、フォーカスは移動しません。                                                                                                                             |
+| <kbd>←</kbd>                      | 1 セル左にフォーカスを移動します。 フォーカスが行の左端のセルにある場合、フォーカスは移動しません。                                                                                                                             |
+| <kbd>↓</kbd>                      | 1 セル下にフォーカスを移動します。 フォーカスが列の最下部のセルにある場合、フォーカスは移動しません。                                                                                                                           |
+| <kbd>↑</kbd>                      | 1 セル上にフォーカスを移動します。 フォーカスが列の最上部のセルにある場合、フォーカスは移動しません。                                                                                                                           |
+| <kbd>Page Down</kbd>              | 作成者が決定した行数だけ下にフォーカスを移動します。 通常、現在表示されている行セットの一番下の行が最初に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最後の行にある場合、フォーカスは移動しません。 |
+| <kbd>Page Up</kbd>                | 作成者が決定した行数だけ上にフォーカスを移動します。通常、現在表示されている行セットの一番上の行が最後に表示される行の 1 つになるようにスクロールします。 フォーカスがグリッドの最初の行にある場合、フォーカスは移動しません。  |
+| <kbd>Home</kbd>                   | フォーカスを含む行の最初のセルにフォーカスを移動します。                                                                                                                                                                        |
+| <kbd>End</kbd>                    | フォーカスを含む行の最後のセルにフォーカスを移動します。                                                                                                                                                                        |
+| <kbd>ctrl</kbd> + <kbd>Home</kbd> | 最初の行の最初のセルにフォーカスを移動します。                                                                                                                                                                                  |
+| <kbd>ctrl</kbd> + <kbd>End</kbd>  | 最後の行の最後のセルにフォーカスを移動します。                                                                                                                                                                                  |
+
+セル、行、列を複数選択できる場合は、次のキーの組み合わせが一般的に使用されます。
+
+| キーの組み合わせ                    | アクション                                                                                                                                                                                                          |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>ctrl</kbd> + <kbd>Space</kbd>  | フォーカスを含む列を選択します。                                                                                                                                                                                    |
+| <kbd>shift</kbd> + <kbd>Space</kbd> | フォーカスを含む行を選択します。 グリッドに行を選択するためのチェックボックス付きの列が含まれている場合、このキーの組み合わせを使用して、フォーカスがチェックボックスにない場合でもそのボックスをチェックできます。 |
+| <kbd>ctrl</kbd> + <kbd>A</kbd>      | すべてのセルを選択します。                                                                                                                                                                                          |
+| <kbd>shift</kbd> + <kbd>→</kbd>     | 選択範囲を 1 セル右側に拡張します。                                                                                                                                                                                 |
+| <kbd>shift</kbd> + <kbd>←</kbd>     | 選択範囲を 1 セル左側に拡張します。                                                                                                                                                                                 |
+| <kbd>shift</kbd> + <kbd>↓</kbd>     | 選択範囲を 1 セル下側に拡張します。                                                                                                                                                                                 |
+| <kbd>shift</kbd> + <kbd>↑</kbd>     | 選択範囲を 1 セル上側に拡張します。                                                                                                                                                                                 |
+
+## 例
+
+### カレンダーの例
+
+```html hidden
+<table role="grid" aria-labelledby="calendarheader" aria-readonly=true>
+  <caption id="calendarheader">September 2018</caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <td></td>
+      <th role="columnheader" aria-label="Sunday">S</th>
+      <th role="columnheader" aria-label="Monday">M</th>
+      <th role="columnheader" aria-label="Tuesday">T</th>
+      <th role="columnheader" aria-label="Wednesday">W</th>
+      <th role="columnheader" aria-label="Thursday">T</th>
+      <th role="columnheader" aria-label="Friday">F</th>
+      <th role="columnheader" aria-label="Saturday">S</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 35</th>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td role="gridcell" tabindex="-1">1</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
         2
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         3
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         4
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         5
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         6
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         7
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         8
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 37&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 37</th>
+      <td role="gridcell" tabindex="-1">
         9
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         10
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         11
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         12
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         13
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         14
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         15
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 38&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 38</th>
+      <td role="gridcell" tabindex="-1">
         16
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         17
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         18
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         19
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         20
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         21
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         22
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 39&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 39</th>
+      <td role="gridcell" tabindex="-1">
         23
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         24
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         25
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         26
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         27
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         28
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         29
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 40&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 40</th>
+      <td role="gridcell" tabindex="-1">
         30
-      &lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+      </td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS" name="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   margin: 2rem;
   font-family: "Helvetica Neue", sans-serif;
 }
@@ -349,11 +273,11 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
     background-color: #f6f6f6;
     outline: 3px solid blue;
   }
-}</pre>
+}
+```
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
+```js hidden
+var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
@@ -369,14 +293,14 @@ Array.prototype.forEach.call(trs, function(gridrow, i){
     el.dataset.col = col;
     col = col + 1;
   });
-  if (col&gt;maxcol) { maxcol = col - 1; }
+  if (col>maxcol) { maxcol = col - 1; }
   col = 0;
   row = row + 1;
 });
 
 function moveto(newrow, newcol) {
   var tgt = document.querySelector('[data-row="' + newrow + '"][data-col="' + newcol + '"]');
-  if (tgt &amp;&amp; (tgt.getAttribute('role')==='gridcell') ) {
+  if (tgt && (tgt.getAttribute('role')==='gridcell') ) {
     Array.prototype.forEach.call(document.querySelectorAll('[role=gridcell]'), function(el, i){
       el.setAttribute('tabindex', '-1');
     });
@@ -457,69 +381,71 @@ document.querySelector('table').addEventListener("keydown", function(event) {
   }
   event.preventDefault();
 });
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("Calendar_example", "100%", "300")}}</p>
+{{EmbedLiveSample("Calendar_example", "100%", "300")}}
 
-<h4 id="HTML_2" name="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
-  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
-      &lt;td&gt;26&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;28&lt;/td&gt;
-      &lt;td&gt;29&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;31&lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+```html
+<table role="grid" aria-labelledby="calendarheader">
+  <caption id="calendarheader">September 2018</caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <td></td>
+      <th role="columnheader" aria-label="Sunday">S</th>
+      <th role="columnheader" aria-label="Monday">M</th>
+      <th role="columnheader" aria-label="Tuesday">T</th>
+      <th role="columnheader" aria-label="Wednesday">W</th>
+      <th role="columnheader" aria-label="Thursday">T</th>
+      <th role="columnheader" aria-label="Friday">F</th>
+      <th role="columnheader" aria-label="Saturday">S</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 35</th>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>30</td>
+      <td>31</td>
+      <td role="gridcell" tabindex="-1">1</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader">Week 36</th>
+      <td role="gridcell" tabindex="-1">
         2
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         3
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         4
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         5
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         6
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         7
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
+      </td>
+      <td role="gridcell" tabindex="-1">
         8
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;!-- … Additional Rows … --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+      </td>
+    </tr>
+    <!-- … Additional Rows … -->
+  </tbody>
+</table>
+```
 
-<h4 id="CSS_2" name="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   margin: 0;
   border-collapse: collapse;
   font-variant-numeric: tabular-nums;
@@ -542,11 +468,12 @@ tbody td[role="gridcell"] {
 tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
   background-color: #f6f6f6; outline: 3px solid blue;
 }
-</pre>
+```
 
-<h4 id="JavaScript_2" name="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
+```js
+var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
@@ -562,14 +489,14 @@ Array.prototype.forEach.call(trs, function(gridrow, i){
     el.dataset.col = col;
     col = col + 1;
   });
-  if (col&gt;maxcol) { maxcol = col - 1; }
+  if (col>maxcol) { maxcol = col - 1; }
   col = 0;
   row = row + 1;
 });
 
 function moveto(newrow, newcol) {
   var tgt = document.querySelector('[data-row="' + newrow + '"][data-col="' + newcol + '"]');
-  if (tgt &amp;&amp; (tgt.getAttribute('role')==='gridcell') ) {
+  if (tgt && (tgt.getAttribute('role')==='gridcell') ) {
     Array.prototype.forEach.call(document.querySelectorAll('[role=gridcell]'), function(el, i){
       el.setAttribute('tabindex', '-1');
     });
@@ -649,62 +576,43 @@ document.querySelector('table').addEventListener("keydown", function(event) {
       break;
   }
   event.preventDefault();
-});</pre>
+});
+```
 
-<h3 id="More_examples" name="More_examples">より多くの例</h3>
+### より多くの例
 
-<ul>
- <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html">データグリッドの例</a> (英語)</li>
- <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">レイアウトグリッドの例</a> (英語)</li>
- <li><a href="https://www.w3.org/WAI/tutorials/tables/">W3C/WAI チュートリアル: 表</a> (英語)</li>
-</ul>
+- [データグリッドの例](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html) (英語)
+- [レイアウトグリッドの例](https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html) (英語)
+- [W3C/WAI チュートリアル: 表](https://www.w3.org/WAI/tutorials/tables/) (英語)
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティに関する懸念</h2>
+## アクセシビリティに関する懸念
 
-<p><a href="#keyboard_interactions">キーボードインタラクション</a>が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (<code>grid</code>) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。</p>
+[キーボードインタラクション](#keyboard_interactions)が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (`grid`) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA","#grid","Role Grid")}}</td>
-   <td>{{Spec2('ARIA')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA Authoring Practices","#grid","Role Grid")}}</td>
-   <td>{{Spec2('ARIA Authoring Practices')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                                             |
+| -------------------------------------------------------------------------------- | ------------------------------------------------ |
+| {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA Authoring Practices","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices')}} |
 
-<h2 id="Screen_reader_support" name="Screen_reader_support">スクリーンリーダーのサポート</h2>
+## スクリーンリーダーのサポート
 
-<p>TBD</p>
+TBD
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/composite_Role">ARIA composite ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA table ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_Role">ARIA treegrid ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">ARIA row ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">ARIA rowgroup ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">ARIA: gridcell ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">ARIA: rowheader ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">ARIA: columnheader ロール</a></li>
- <li><a href="/ja/docs/Web/HTML/Element/table">HTML の表要素</a></li>
- <li>aria-level</li>
- <li>aria-multiselectable</li>
- <li>aria-readonly</li>
-</ul>
+- [ARIA composite ロール](/ja/docs/Web/Accessibility/ARIA/Roles/composite_Role)
+- [ARIA table ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_Role)
+- [ARIA row ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [ARIA rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+- [ARIA: gridcell ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
+- [ARIA: rowheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)
+- [ARIA: columnheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)
+- [HTML の表要素](/ja/docs/Web/HTML/Element/table)
+- aria-level
+- aria-multiselectable
+- aria-readonly
 
-<section id="Quick_links">
-    <ol>
-        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
-    </ol>
-</section>
+1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -6,30 +6,27 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/count
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>count</code> 関数はノード集合に含まれるノードの数を数え、その整数を返します。</p>
+`count` 関数はノード集合に含まれるノードの数を数え、その整数を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">count(<em>node-set</em> )
-</pre>
+    count(node-set )
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>node-set</em></code></dt>
- <dd>カウント対象のノード集合。</dd>
-</dl>
+- `node-set`
+  - : カウント対象のノード集合。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>ノード集合に含まれるノードの数を表す整数。</p>
+ノード集合に含まれるノードの数を表す整数。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-count">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-count)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

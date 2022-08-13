@@ -10,93 +10,68 @@ tags:
   - 条件リクエスト
 translation_of: Web/HTTP/Headers/If-Range
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><strong><code>If-Range</code></strong> HTTP リクエストヘッダはレンジリクエストを条件付きにします：条件が満たされれば、レンジリクエストが発行され、サーバは適切なボディを持つ {{HTTPStatus("206")}} <code>Partial Content</code> 回答を返します。条件が満たされていない場合、 {{HTTPStatus("200")}} の状態でリソース全体が返送されます。</p>
+**`If-Range`** HTTP リクエストヘッダはレンジリクエストを条件付きにします：条件が満たされれば、レンジリクエストが発行され、サーバは適切なボディを持つ {{HTTPStatus("206")}} `Partial Content` 回答を返します。条件が満たされていない場合、 {{HTTPStatus("200")}} の状態でリソース全体が返送されます。
 
-<p>このヘッダは {{HTTPHeader("Last-Modified")}} バリデータ、または {{HTTPHeader("ETag")}} のいずれかで使用できますが、両方では使用できません。</p>
+このヘッダは {{HTTPHeader("Last-Modified")}} バリデータ、または {{HTTPHeader("ETag")}} のいずれかで使用できますが、両方では使用できません。
 
-<p>最も一般的な使用事例は、最後のフラグメントが受信されてから格納されたリソースが変更されていないことを保証するために、ダウンロードを再開することです。</p>
+最も一般的な使用事例は、最後のフラグメントが受信されてから格納されたリソースが変更されていないことを保証するために、ダウンロードを再開することです。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダータイプ</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
-</table>
+| ヘッダータイプ                                   | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | いいえ                                   |
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">If-Range: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-If-Range: &lt;etag&gt;</pre>
+    If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+    If-Range: <etag>
 
-<h2 id="ディレクティブ">ディレクティブ</h2>
+## ディレクティブ
 
-<dl>
- <dt>&lt;etag&gt;</dt>
- <dd>リクエストされたリソースを表すエンティティータグです。これは <code>"675af34563dc-tr34"</code> のようにダブルクオートに囲まれたASCIIの文字列で、弱い比較アルゴリズムを使うことを示すために <code>W/</code> がプレフィックスとしてつくことがあります。</dd>
-</dl>
+- \<etag>
+  - : リクエストされたリソースを表すエンティティータグです。これは `"675af34563dc-tr34"` のようにダブルクオートに囲まれた ASCII の文字列で、弱い比較アルゴリズムを使うことを示すために `W/` がプレフィックスとしてつくことがあります。
 
-<dl>
- <dt>&lt;day-name&gt;</dt>
- <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
- <dt>&lt;day&gt;</dt>
- <dd>2 digit day number, e.g. "04" or "23".</dd>
- <dt>&lt;month&gt;</dt>
- <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).</dd>
- <dt>&lt;year&gt;</dt>
- <dd>4 digit year number, e.g. "1990" or "2016".</dd>
- <dt>&lt;hour&gt;</dt>
- <dd>2 digit hour number, e.g. "09" or "23".</dd>
- <dt>&lt;minute&gt;</dt>
- <dd>2 digit minute number, e.g. "04" or "59".</dd>
- <dt>&lt;second&gt;</dt>
- <dd>2 digit second number, e.g. "04" or "59".</dd>
- <dt><code>GMT</code></dt>
- <dd>
- <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.</p>
- </dd>
-</dl>
+<!---->
 
-<h2 id="例">例</h2>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<pre class="notranslate">If-Range: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+## 例
 
-<h2 id="仕様">仕様</h2>
+    If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "If-Range", "3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+## 仕様
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+| 仕様書                                       | タイトル                                               |
+| -------------------------------------------- | ------------------------------------------------------ |
+| {{RFC("7233", "If-Range", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<p>{{Compat("http.headers.If-Range")}}</p>
+## ブラウザの互換性
 
-<h2 id="関連情報">関連情報</h2>
+{{Compat("http.headers.If-Range")}}
 
-<ul>
- <li>{{HTTPHeader("ETag")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
- <li>{{HTTPStatus("206")}}<code> Partial Content</code></li>
- <li><a href="/ja/docs/Web/HTTP/Conditional_requests">HTTP Conditional Requests</a></li>
-</ul>
+## 関連情報
+
+- {{HTTPHeader("ETag")}}
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("206")}}` Partial Content`
+- [HTTP Conditional Requests](/ja/docs/Web/HTTP/Conditional_requests)

@@ -6,4 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/ancestor
 ---
-<p><code>ancestor</code>の軸は、親ノードで始まりルートノードに移動するコンテキストノードのすべての祖先を示します。</p>
+`ancestor`の軸は、親ノードで始まりルートノードに移動するコンテキストノードのすべての祖先を示します。

@@ -6,34 +6,31 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/sum
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>sum</code> 関数は、与えられたノード集合内のそれぞれのノードの数値としての値を合計した数値を返します。</p>
+`sum` 関数は、与えられたノード集合内のそれぞれのノードの数値としての値を合計した数値を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">sum(<em>node-set</em> )
-</pre>
+    sum(node-set )
 
-<h3 id="Arguments">引数</h3>
+### 引数
 
-<dl>
- <dt><em><code>node-set</code></em></dt>
- <dd>評価されるノード集合。 このノード集合内のそれぞれのノードが <a href="/ja/XPath/Functions/number">number()</a> 関数に渡されたかのように評価され、その結果として得られた数値の合計が返される。</dd>
-</dl>
+- _`node-set`_
+  - : 評価されるノード集合。 このノード集合内のそれぞれのノードが [number()](/ja/XPath/Functions/number) 関数に渡されたかのように評価され、その結果として得られた数値の合計が返される。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>数値。</p>
+数値。
 
-<h3 id="Notes">注</h3>
+### 注
 
-<p><em>(なし)</em></p>
+_(なし)_
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-sum">XPath 1.0 4.3</a></p>
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

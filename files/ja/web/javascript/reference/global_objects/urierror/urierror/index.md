@@ -8,30 +8,29 @@ tags:
   - URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>URIError</code></strong> コンストラクターは、グローバルの URI 操作関数が間違った方法で使用された場合のエラーを生成します。</p>
+**`URIError`** コンストラクターは、グローバルの URI 操作関数が間違った方法で使用された場合のエラーを生成します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+    new URIError([message[, fileName[, lineNumber]]])
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>message</var></code> {{optional_inline}}</dt>
- <dd>人間が読むためのエラーの説明です。</dd>
- <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
- <dd>例外が発生したコードを含むファイルの名前です。</dd>
- <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
- <dd>例外が発生したコードの行番号です。</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : 人間が読むためのエラーの説明です。
+- `fileName` {{optional_inline}}
+  - : 例外が発生したコードを含むファイルの名前です。
+- `lineNumber` {{optional_inline}}
+  - : 例外が発生したコードの行番号です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Catching_a_URIError" name="Catching_a_URIError">URIError の捕捉</h3>
+### URIError の捕捉
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -42,11 +41,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
   console.log(e.columnNumber)         // 2
   console.log(e.stack)                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_a_URIError" name="Creating_a_URIError">URIError の生成</h3>
+### URIError の生成
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -57,35 +57,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
   console.log(e.columnNumber)         // 0
   console.log(e.stack)                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.URIError.URIError")}}</p>
-</div>
+{{Compat("javascript.builtins.URIError.URIError")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

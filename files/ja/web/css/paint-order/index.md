@@ -10,13 +10,14 @@ tags:
   - 描画順序
 translation_of: Web/CSS/paint-order
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p> <strong><code>paint-order</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、テキストコンテンツやシェイプが描画されるときの塗りつぶしと輪郭 (およびマーカーの描画) の順序を制御することができます。</p>
+**`paint-order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストコンテンツやシェイプが描画されるときの塗りつぶしと輪郭 (およびマーカーの描画) の順序を制御することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css no-line-numbers">/* 通常 */
+```css
+/* 通常 */
 paint-order: normal;
 
 /* 単一の値 */
@@ -26,43 +27,42 @@ paint-order: markers; /* 最初にマーカー、それから塗りつぶしと�
 /* 複数の値 */
 paint-order: stroke fill; /* 最初に輪郭を、それから塗りつぶしを、そしてマーカーを描く */
 paint-order: markers stroke fill; /* マーカー、輪郭、塗りつぶしの順に描く */
-</pre>
+```
 
-<p>値が指定されない場合、既定の描画順序は <code>fill</code>, <code>stroke</code>, <code>markers</code> です。</p>
+値が指定されない場合、既定の描画順序は `fill`, `stroke`, `markers` です。
 
-<p>一つの値で指定されると、それが最初に描画され、続いて他の二つが互いの既定の順序で描画されます。二つの値が指定されると、指定された順序で描画を行い、続いて指定されなかった一つが描画されます。</p>
+一つの値で指定されると、それが最初に描画され、続いて他の二つが互いの既定の順序で描画されます。二つの値が指定されると、指定された順序で描画を行い、続いて指定されなかった一つが描画されます。
 
-<div class="note">
-<p><strong>メモ</strong>: このプロパティの場合、マーカーは <code>marker-*</code> プロパティ (例えば <code><a href="/ja/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) および <code><a href="/ja/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> 要素を使用した SVG 図形を描く場合のみ適用されます。 HTML テキストには適用されませんので、その場合は <code>stroke</code> および <code>fill</code> の順序のみが指定できます。</p>
-</div>
+> **Note:** **メモ**: このプロパティの場合、マーカーは `marker-*` プロパティ (例えば [`marker-start`](/ja/docs/Web/SVG/Attribute/marker-start)) および [`<marker>`](/ja/docs/Web/SVG/Element/marker) 要素を使用した SVG 図形を描く場合のみ適用されます。 HTML テキストには適用されませんので、その場合は `stroke` および `fill` の順序のみが指定できます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>様々なアイテムを通常の描画順で描画します。</dd>
- <dt><code>stroke</code> (輪郭),<br>
- <code>fill</code> (塗りつぶし),<br>
- <code>markers</code> (マーカー)</dt>
- <dd>これらの一部またはすべての値を用いて、描画したい順序を指定します。</dd>
-</dl>
+- `normal`
+  - : 様々なアイテムを通常の描画順で描画します。
+- `stroke` (輪郭),
+  `fill` (塗りつぶし),
+  `markers` (マーカー)
+  - : これらの一部またはすべての値を用いて、描画したい順序を指定します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
-  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <text x="10" y="75">stroke in front</text>
+  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+</svg>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">text {
+```css
+text {
   font-family: sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -73,33 +73,21 @@ paint-order: markers stroke fill; /* マーカー、輪郭、塗りつぶしの�
 
 .stroke-behind {
   paint-order: stroke fill;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", "100%", 165)}}</p>
+{{EmbedLiveSample("Examples", "100%", 165)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#PaintOrder", "paint-order")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                     | 備考     |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
+| {{SpecName("SVG2", "painting.html#PaintOrder", "paint-order")}} | {{Spec2("SVG2")}} | 初回定義 |
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.paint-order")}}</p>
+{{Compat("css.properties.paint-order")}}

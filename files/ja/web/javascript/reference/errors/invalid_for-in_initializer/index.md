@@ -8,30 +8,32 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>専用の例外である "for-in loop head declarations may not have initializers" は、 <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> の先頭に初期化構文が含まれていた場合、例えば |<code>for (var i = 0 in obj)</code>| のような場合に発生します。これは strict モードの for-in ループでは許可されていません。</p>
+JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外である "for-in loop head declarations may not have initializers" は、 [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) の先頭に初期化構文が含まれていた場合、例えば |`for (var i = 0 in obj)`| のような場合に発生します。これは strict モードの for-in ループでは許可されていません。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
+```js
+SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
 SyntaxError: for-in loop head declarations may not have initializers (Firefox)
 SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
-</pre>
+```
 
-<h2 id="エラータイプ">エラータイプ</h2>
+## エラータイプ
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>でのみ、{{jsxref("SyntaxError")}}。</p>
+[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ、{{jsxref("SyntaxError")}}。
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+## 何がうまくいかなかったのか？
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> ループの先頭に初期化式が含まれています。つまり、 |<code>for (var i = 0 in obj)</code>| のように変数を宣言して値を代入しています。 strict モードでない場合は、このヘッダー宣言は暗黙に無視され、<code>|for (var i in obj)|</code> のように動作します。しかし、<a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>では <code>SyntaxError</code> が発生します。</p>
+[for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループの先頭に初期化式が含まれています。つまり、 |`for (var i = 0 in obj)`| のように変数を宣言して値を代入しています。 strict モードでない場合は、このヘッダー宣言は暗黙に無視され、`|for (var i in obj)|` のように動作します。しかし、[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では `SyntaxError` が発生します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では <code>SyntaxError</code> が発生します。</p>
+この例では `SyntaxError` が発生します。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 var obj = {a: 1, b: 2, c: 3 };
 
@@ -40,40 +42,38 @@ for (var i = 0 in obj) {
 }
 
 // SyntaxError: for-in loop head declarations may not have initializers
-</pre>
+```
 
-<h3 id="Valid_for-in_loop">有効な for-in ループ</h3>
+### 有効な for-in ループ
 
-<p>for-in ループのヘッダーから初期化子 (<code>i = 0</code>) を削除してください。</p>
+for-in ループのヘッダーから初期化子 (`i = 0`) を削除してください。
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 
 var obj = {a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
 }
-</pre>
+```
 
-<h3 id="Array_iteration">Array の反復処理</h3>
+### Array の反復処理
 
-<p>for...in ループは <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in">Array の反復処理で使用すべきではありません</a>。 {{jsxref("Array")}} を反復するのに、 <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a></code> ループを <code>for-in</code> ループの代わりに使うつもりだったのでしょうか。 <code>for</code> ループならば、初期化子を設定することができます。</p>
+for...in ループは [Array の反復処理で使用すべきではありません](/ja/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in)。 {{jsxref("Array")}} を反復するのに、 [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループを `for-in` ループの代わりに使うつもりだったのでしょうか。 `for` ループならば、初期化子を設定することができます。
 
-<pre class="brush: js example-good">var arr = [ "a", "b", "c" ]
+```js example-good
+var arr = [ "a", "b", "c" ]
 
-for (var i = 2; i &lt; arr.length; i++) {
+for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
-// "c"</pre>
+// "c"
+```
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
-  <li>
-    <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code>
-  </li>
-  <li>
-    <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> – こちらも strict モードであろうとなかろうと初期化子が使用できない。</li>
-  <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a></code> – 配列の反復処理に向いており、初期化子を定義できる。</li>
-</ul>
+- [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) – こちらも strict モードであろうとなかろうと初期化子が使用できない。
+- [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) – 配列の反復処理に向いており、初期化子を定義できる。

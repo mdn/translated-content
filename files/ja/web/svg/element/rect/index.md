@@ -8,88 +8,63 @@ tags:
   - SVG Graphics
 translation_of: Web/SVG/Element/rect
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><code>rect</code> 要素はSVGの基本図形であり、四角形を生成する際の基準となる座標と、そこからの幅と高さを指定します。また、角の丸まった四角形を作ります。</p>
+`rect` 要素は SVG の基本図形であり、四角形を生成する際の基準となる座標と、そこからの幅と高さを指定します。また、角の丸まった四角形を作ります。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="シンプルな_rect_要素の使い方">シンプルな <code>rect 要素の使い方</code></h3>
+### シンプルな `rect 要素の使い方`
 
-<p>» <a href="/files/3247/rect-1.svg" title="https://developer.mozilla.org/files/3247/rect-1.svg">rect-1.svg</a></p>
+» [rect-1.svg](/files/3247/rect-1.svg "https://developer.mozilla.org/files/3247/rect-1.svg")
 
-<h3 id="角の丸い_rect_要素"><code>角の丸い rect</code> 要素</h3>
+### `角の丸い rect` 要素
 
-<p>» <a href="/files/3248/rect-2.svg" title="https://developer.mozilla.org/files/3248/rect-2.svg">rect-2.svg</a></p>
+» [rect-2.svg](/files/3248/rect-2.svg "https://developer.mozilla.org/files/3248/rect-2.svg")
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="グローバル属性">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/Web/SVG/Attribute#ConditionalProcessing">条件処理属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#Core">コア属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#GraphicalEvent">グラフィカルイベント属性</a> »</li>
- <li><a href="/ja/Web/SVG/Attribute#Presentation">プレゼンテーション属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件処理属性](/ja/Web/SVG/Attribute#ConditionalProcessing) »
+- [コア属性](/ja/Web/SVG/Attribute#Core) »
+- [グラフィカルイベント属性](/ja/Web/SVG/Attribute#GraphicalEvent) »
+- [プレゼンテーション属性](/ja/Web/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="専用属性">専用属性</h3>
+### 専用属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("rx") }}</li>
- <li>{{ SVGAttr("ry") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("rx") }}
+- {{ SVGAttr("ry") }}
 
-<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は <code><a href="/ja/DOM/SVGRectElement" title="en/DOM/SVGRectElement">SVGRectElement</a></code> インターフェイスを提供します。</p>
+この要素は [`SVGRectElement`](/ja/DOM/SVGRectElement "en/DOM/SVGRectElement") インターフェイスを提供します。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'shapes.html#RectElement', '&lt;rect&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'shapes.html#RectElement', '&lt;rect&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                     | 状態                     | コメント   |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('SVG2', 'shapes.html#RectElement', '&lt;rect&gt;')}}     | {{Spec2('SVG2')}} |            |
+| {{SpecName('SVG1.1', 'shapes.html#RectElement', '&lt;rect&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義 |
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザー互換性
 
+{{Compat("svg.elements.rect")}}
 
+## 関連情報
 
-<p>{{Compat("svg.elements.rect")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{ SVGElement("path") }}</li>
-</ul>
+- {{ SVGElement("path") }}

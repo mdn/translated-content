@@ -6,125 +6,98 @@ tags:
   - Experimental
   - HTML
   - HTML 対話操作
-  - 'HTML:フローコンテンツ'
-  - 'HTML:区分化ルート'
+  - HTML:フローコンテンツ
+  - HTML:区分化ルート
   - Reference
   - ウェブ
   - ダイアログ
   - 要素
 translation_of: Web/HTML/Element/dialog
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;dialog&gt;</code> 要素</strong>は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。</span></p>
+**HTML の `<dialog>` 要素**は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots">区分化ルート</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可された内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可された親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるあらゆる要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可された ARIA ロール</th>
-   <td>{{ARIARole("alertdialog")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLDialogElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [コンテンツカテゴリ](/ja/docs/Web/HTML/Content_categories) | [フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ), [区分化ルート](/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots) |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 許可された内容                                             | [フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)                                                                                                |
+| タグの省略                                                 | {{no_tag_omission}}                                                                                                                                                 |
+| 許可された親要素                                           | [フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)を受け入れるあらゆる要素                                                                        |
+| 暗黙の ARIA ロール                                         | [dialog](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)                                                                                                              |
+| 許可された ARIA ロール                                     | {{ARIARole("alertdialog")}}                                                                                                                                     |
+| DOM インターフェイス                                       | {{domxref("HTMLDialogElement")}}                                                                                                                             |
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<div class="blockIndicator warning">
-<p><code>tabindex</code> 属性を <code>&lt;dialog&gt;</code> 要素で使用してはいけません。</p>
-</div>
+> **Warning:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>ダイアログがアクティブで操作で使用できることを示します。 <code>open</code> 属性が設定されていないときは、ダイアログはユーザーに表示する<em>べきではありません</em>。</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : ダイアログがアクティブで操作で使用できることを示します。 `open` 属性が設定されていないときは、ダイアログはユーザーに表示する*べきではありません*。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<ul>
- <li>{{HTMLElement("form")}} 要素は <code>method="dialog"</code> 属性が指定されていれば、ダイアログを閉じることができます。そのようなフォームが送信されると、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティにフォーム送信するために使用されたボタンの <code>value</code> が設定されて、ダイアログが閉じられます。</li>
- <li>CSS の {{cssxref('::backdrop')}} 擬似要素を使用して、 <code>&lt;dialog&gt;</code> 要素が {{domxref("HTMLDialogElement.showModal()")}} で表示されたときの背後のスタイルを設定することができます。例えば、モーダルダイアログの背後にある操作できないコンテンツを暗くするなどです。</li>
-</ul>
+- {{HTMLElement("form")}} 要素は `method="dialog"` 属性が指定されていれば、ダイアログを閉じることができます。そのようなフォームが送信されると、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティにフォーム送信するために使用されたボタンの `value` が設定されて、ダイアログが閉じられます。
+- CSS の {{cssxref('::backdrop')}} 擬似要素を使用して、 `<dialog>` 要素が {{domxref("HTMLDialogElement.showModal()")}} で表示されたときの背後のスタイルを設定することができます。例えば、モーダルダイアログの背後にある操作できないコンテンツを暗くするなどです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Simple_example" name="Simple_example">シンプルな例</h3>
+### シンプルな例
 
-<pre class="brush: html">&lt;dialog open&gt;
-  &lt;p&gt;Greetings, one and all!&lt;/p&gt;
-&lt;/dialog&gt;
-</pre>
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+</dialog>
+```
 
-<h3 id="Advanced_example" name="Advanced_example">応用的な例</h3>
+### 応用的な例
 
-<p>この例では、 "Update details" ボタンをクリックすると、フォームを含むポップアップダイアログボックスが開きます。</p>
+この例では、 "Update details" ボタンをクリックすると、フォームを含むポップアップダイアログボックスが開きます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;!-- Simple pop-up dialog box containing a form --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;p&gt;&lt;label&gt;Favorite animal:
-      &lt;select&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/label&gt;&lt;/p&gt;
-    &lt;menu&gt;
-      &lt;button value="cancel"&gt;Cancel&lt;/button&gt;
-      &lt;button id="confirmBtn" value="default"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+```html
+<!-- Simple pop-up dialog box containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p><label>Favorite animal:
+      <select>
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </label></p>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-&lt;output aria-live="polite"&gt;&lt;/output&gt;
-</pre>
+<output aria-live="polite"></output>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var updateButton = document.getElementById('updateDetails');
+```js
+var updateButton = document.getElementById('updateDetails');
 var favDialog = document.getElementById('favDialog');
 var outputBox = document.querySelector('output');
 var selectEl = document.querySelector('select');
 var confirmBtn = document.getElementById('confirmBtn');
 
-// "Update details" button opens the &lt;dialog&gt; modally
+// "Update details" button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    alert("The &lt;dialog&gt; API is not supported by this browser");
+    alert("The <dialog> API is not supported by this browser");
   }
 });
 // "Favorite animal" input sets the value of the submit button
@@ -134,51 +107,33 @@ selectEl.addEventListener('change', function onSelect(e) {
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', function onClose() {
   outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
-});</pre>
+});
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Advanced_example", "100%", 300)}}</p>
+{{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}                 | {{Spec2('HTML WHATWG')}} |          |
+| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.dialog")}}</p>
+{{Compat("html.elements.dialog")}}
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><code>&lt;dialog&gt;</code> 要素のないブラウザーには、このポリフィルを含めてください。</p>
+`<dialog>` 要素のないブラウザーには、このポリフィルを含めてください。
 
-<p><a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a></p>
+[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLDialogElement/close_event", "close")}} イベント</li>
- <li>{{domxref("HTMLDialogElement/cancel_event", "cancel")}} イベント</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Forms">HTML フォームガイド</a></li>
- <li>{{cssxref("::backdrop")}} 擬似要素</li>
-</ul>
+- {{domxref("HTMLDialogElement/close_event", "close")}} イベント
+- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} イベント
+- [HTML フォームガイド](/ja/docs/Web/Guide/HTML/Forms)
+- {{cssxref("::backdrop")}} 擬似要素
