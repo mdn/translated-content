@@ -41,14 +41,10 @@ Preguntas relacionadas con las herramientas/software que puedes usar para hacer 
 - ### [¿Qué programas necesito para crear un sitio web?](/es/docs/Learn/Common_questions/What_software_do_I_need)
   - : En este artículo explicamos qué componentes software necesitas para editar, subir o ver un sitio web.
 - ### [¿Qué editores hay disponibles?](/es/docs/Learn/Common_questions/Available_text_editors)
-  - : En este artículo nos centramos en algunas cosas para reflexionar cuando elegimos e instalamos un editor de texto para el desarrollo web.
-
-<!---->
+  - : En este artículo nos centramos en algunas cosas para reflexionar cuando elegimos e instalamos un editor de texto para el desarrollo web. 
 
 - ### [¿Qué son las herramientas de desarrollador del navegador?](/es/docs/Learn/Common_questions/What_are_browser_developer_tools)
-  - : Todos los navegadores proveen un set de herramientas de desarrollo para depurar HTML, CSS y otros códigos web. Este artículo explica cómo usar las funciones básicas de herramientas de desarrollador de tu navegador.
-
-<!---->
+  - : Todos los navegadores proveen un set de herramientas de desarrollo para depurar HTML, CSS y otros códigos web. Este artículo explica cómo usar las funciones básicas de herramientas de desarrollador de tu navegador. 
 
 - ### [¿Cómo configuro un ambiente de trabajo básico?](/es/docs/Learn/Common_questions/Set_up_a_basic_working_environment)
   - : Cuado trabaje en un proyecto web, querrá probarlo localmente antes de mostrarlo al mundo. Alguno tipos de código requieren un servidor para probarlos, y en este artículo le mostraremos cómo configurar uno. También cubriremos cómo implementar una estructura escalable para que sus archivos se mantengan organizados, incluso cuando su proyecto crezca.

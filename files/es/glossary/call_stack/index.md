@@ -68,9 +68,7 @@ En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia
-
-<!---->
+- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia 
 
 - [Glosario](/es/docs/Glossary)
 
