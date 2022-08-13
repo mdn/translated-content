@@ -8,74 +8,43 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O header de resposta HTTP <strong>X-Content-Type-Options</strong> é um marcador usado pelo servidor para indicar que os <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">MIME Type Sniffing</a> ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.</p>
+O header de resposta HTTP **X-Content-Type-Options** é um marcador usado pelo servidor para indicar que os [MIME types](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado [MIME Type Sniffing](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing) ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.
 
-<p>Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters serem capazes de bloquear o <em>sniffing</em> de conteúdo que acontecia na época, e podia transformar tipos MIME não executáveis em tipos executáveis. Desde então, outros browsers acataram a ideia mesmo que seus algoritmos de definição de MIME fossem menos agressivos.</p>
+Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters serem capazes de bloquear o _sniffing_ de conteúdo que acontecia na época, e podia transformar tipos MIME não executáveis em tipos executáveis. Desde então, outros browsers acataram a ideia mesmo que seus algoritmos de definição de MIME fossem menos agressivos.
 
-<p>Experts em segurança da informação geralmente esperam que este header esteja presente.</p>
+Experts em segurança da informação geralmente esperam que este header esteja presente.
 
-<p class="note">Nota: <code>nosniff</code> só se aplica para tipos "script" e "style". Também, aplicar <code>nosniff</code> em tipos de imagem provou-se ser <a href="https://github.com/whatwg/fetch/issues/395">incompatível com sites existentes</a>.</p>
+> **Note:** Nota: `nosniff` só se aplica para tipos "script" e "style". Também, aplicar `nosniff` em tipos de imagem provou-se ser [incompatível com sites existentes](https://github.com/whatwg/fetch/issues/395).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo do header</th>
-   <td>{{Glossary("Header de resposta")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Alteração de nome proibida")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo do header                                               | {{Glossary("Header de resposta")}} |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| {{Glossary("Alteração de nome proibida")}} | não                                          |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">X-Content-Type-Options: nosniff
-</pre>
+    X-Content-Type-Options: nosniff
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>nosniff</code></dt>
- <dd>Bloqueia uma requisição se o tipo for:
- <ul>
-  <li>"<code>style</code>" e o tipo MIME não é "<code>text/css</code>", ou</li>
-  <li>"<code>script</code>" e o tipo MIME não é um tipo <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript</a>.</li>
- </ul>
- </dd>
-</dl>
+- `nosniff`
+  - : Bloqueia uma requisição se o tipo for:\* "`style`" e o tipo MIME não é "`text/css`", ou
+    - "`script`" e o tipo MIME não é um tipo [JavaScript](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                   | Comentário        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.X-Content-Type-Options")}}</p>
+{{Compat("http.headers.X-Content-Type-Options")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>A <a href="https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/">definição original</a> do X-Content-Type-Options pela Microsoft.</li>
- <li>A ferramenta <a href="https://mozilla.github.io/http-observatory-website/">Mozilla Observatory</a> testando a configuração (incluindo este header) de páginas por segurança e precaução.</li>
- <li>
-  <p><a href="https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/">Mitigando ataques de confusão de MIME no Firefox</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- A [definição original](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) do X-Content-Type-Options pela Microsoft.
+- A ferramenta [Mozilla Observatory](https://mozilla.github.io/http-observatory-website/) testando a configuração (incluindo este header) de páginas por segurança e precaução.
+- [Mitigando ataques de confusão de MIME no Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)

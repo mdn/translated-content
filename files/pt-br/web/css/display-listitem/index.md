@@ -3,59 +3,55 @@ title: <display-listitem>
 slug: Web/CSS/display-listitem
 translation_of: Web/CSS/display-listitem
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">O <code style="white-space: nowrap;">list-item</code> palavra-chave faz com que o elemento gere um<code>::marker</code> pseudoelemento com o conteúdo especificado por sua {{CSSxRef("list-style")}} propriedades (por exemplo, um marcador) junto com uma caixa principal do tipo especificado para seu próprio conteúdo.</p>
+O `list-item` palavra-chave faz com que o elemento gere um`::marker` pseudoelemento com o conteúdo especificado por sua {{CSSxRef("list-style")}} propriedades (por exemplo, um marcador) junto com uma caixa principal do tipo especificado para seu próprio conteúdo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>Um valor único de <code style="white-space: nowrap;">list-item</code> fará com que o elemento se comporte como um item da lista. Isso pode ser usado junto com{{CSSxRef("list-style-type")}} e {{CSSxRef("list-style-position")}}.</p>
+Um valor único de `list-item` fará com que o elemento se comporte como um item da lista. Isso pode ser usado junto com{{CSSxRef("list-style-type")}} e {{CSSxRef("list-style-position")}}.
 
-<p><code style="white-space: nowrap;">list-item</code> também pode ser combinado com qualquer {{CSSxRef("&lt;display-outside&gt;")}} palavra-chave e o <code>flow</code> ou <code style="white-space: nowrap;">flow-root</code> {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.</p>
+`list-item` também pode ser combinado com qualquer {{CSSxRef("&lt;display-outside&gt;")}} palavra-chave e o `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
 
-<div class="note">
-<p><strong>Nota: Nos navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será</strong><code>flow</code>. Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externo de<code>block</code>.</p>
-</div>
+> **Note:** **Nota: Nos navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será**`flow`. Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externo de`block`.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{CSSSyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;div class="fake-list"&gt;I will display as a list item&lt;/div&gt;
-</pre>
+```html
+<div class="fake-list">I will display as a list item</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">.fake-list {
+```css
+.fake-list {
   display: list-item;
   list-style-position: inside;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", "100%", 150)}}</p>
+{{EmbedLiveSample("Example", "100%", 150)}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<h3 id="Suporte_delist-item">Suporte de<code>list-item</code></h3>
+### Suporte de`list-item`
 
-<p>{{Compat("css.properties.display.list-item", 10)}}</p>
+{{Compat("css.properties.display.list-item", 10)}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

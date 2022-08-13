@@ -7,27 +7,25 @@ tags:
   - Propriedade
 translation_of: Web/API/BatteryManager/charging
 ---
-<p>{{APIRef("Battery API")}}</p>
+{{APIRef("Battery API")}}
 
-<p>Um valor Booleano que indica se a bateria está sendo ou não carregada no momento.</p>
+Um valor Booleano que indica se a bateria está sendo ou não carregada no momento.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>charging</em> = navigator.battery.charging</pre>
+    var charging = navigator.battery.charging
 
-<p>No retorno, <code>charging</code> indica se a bateria está sendo carregada no momento; se a bateria está carregando (ou se não há bateria), este valor é  <code>true</code>. Caso contrário, o valor é <code>false</code>.</p>
+No retorno, `charging` indica se a bateria está sendo carregada no momento; se a bateria está carregando (ou se não há bateria), este valor é `true`. Caso contrário, o valor é `false`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.battery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.battery")}}

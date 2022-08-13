@@ -7,54 +7,41 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/406
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta do erro de cliente <code><strong>406 Not Acceptable</strong></code> indica que o servidor não pode produzir uma resposta que combine com a lista de valores aceitáveis definidas nos cabeçalhos de negociação de conteúdo da requisição proativa, e o servidor é incapaz de produzir uma representação padrão.</p>
+O código de resposta do erro de cliente **`406 Not Acceptable`** indica que o servidor não pode produzir uma resposta que combine com a lista de valores aceitáveis definidas nos cabeçalhos de negociação de conteúdo da requisição proativa, e o servidor é incapaz de produzir uma representação padrão.
 
-<p>Negociação de conteúdo proativa incluem:</p>
+Negociação de conteúdo proativa incluem:
 
-<ul>
- <li>{{HTTPHeader("Accept")}}</li>
- <li>{{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Accept-Encoding")}}</li>
- <li>{{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
 
-<p>Na prática, esse erro é raramente usado. Ao invés de responder usando esse código de erro, o que poderia ser enigmático ao usuário final e difícil de arrumar, servidores ignoram o cabeçalho relevante e servem a página atual ao usuário. Se assume que mesmo que o usuário não fique completamente feliz, ele irá preferir isso ao invés do código de erro.</p>
+Na prática, esse erro é raramente usado. Ao invés de responder usando esse código de erro, o que poderia ser enigmático ao usuário final e difícil de arrumar, servidores ignoram o cabeçalho relevante e servem a página atual ao usuário. Se assume que mesmo que o usuário não fique completamente feliz, ele irá preferir isso ao invés do código de erro.
 
-<p>Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a lista disponíveis de representações do recurso, possibilitando ao usuário escolher entre elas.</p>
+Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a lista disponíveis de representações do recurso, possibilitando ao usuário escolher entre elas.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">406 Not Acceptable</pre>
+    406 Not Acceptable
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "406 Not Acceptable" , "6.5.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Título                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>A informação mostrada abaixo foi buscada do MDN's GitHub (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+A informação mostrada abaixo foi buscada do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.406")}}</p>
+{{Compat("http.status.406")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept")}}</li>
- <li>{{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Accept-Encoding")}}</li>
- <li>{{HTTPHeader("Accept-Language")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Content_negotiation">Negociação de conteúdo</a> HTTP</li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP

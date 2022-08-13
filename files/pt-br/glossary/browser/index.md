@@ -7,22 +7,18 @@ tags:
 translation_of: Glossary/Browser
 original_slug: Glossario/Navegador
 ---
-<p>Um navegador <em>Web</em> é um programa que obtém e exibe páginas da {{Glossary("World Wide Web","Web")}}, e permite que os usuários acessem outras páginas através de {{Glossary("hyperlink","hyperlinks")}}.</p>
+Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("World Wide Web","Web")}}, e permite que os usuários acessem outras páginas através de {{Glossary("hyperlink","hyperlinks")}}.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Navegador web")}} na Wikipedia</li>
- <li><a href="http://www.evolutionoftheweb.com/" rel="external">The evolution of the web</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Navegador web")}} na Wikipedia
+- [The evolution of the web](http://www.evolutionoftheweb.com/)
 
-<h3 id="Baixar_um_navegador">Baixar um navegador</h3>
+### Baixar um navegador
 
-<ul>
- <li><a href="http://www.mozilla.org/en-US/firefox/features/">Mozilla Firefox</a></li>
- <li><a href="http://www.google.com/chrome/" rel="external">Google Chrome</a></li>
- <li><a href="http://windows.microsoft.com/en-US/internet-explorer/browser-ie" rel="external">Microsoft Internet Explorer</a></li>
- <li><a href="http://www.opera.com/" rel="external">Opera Browser</a></li>
-</ul>
+- [Mozilla Firefox](http://www.mozilla.org/en-US/firefox/features/)
+- [Google Chrome](http://www.google.com/chrome/)
+- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/browser-ie)
+- [Opera Browser](http://www.opera.com/)

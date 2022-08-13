@@ -3,92 +3,74 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.sinh()</code></strong> retorna o seno hiperbólico de um número, que pode ser expresso usando a {{jsxref("Math.E", "constante e", "", 1)}}:</p>
+A função **`Math.sinh()`** retorna o seno hiperbólico de um número, que pode ser expresso usando a {{jsxref("Math.E", "constante e", "", 1)}}:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-sinh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sinh.html")}}
 
+## Sintáxe
 
+    Math.sinh(x)
 
-<h2 id="Sintáxe">Sintáxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>Math.sinh(<var>x</var>)</code></pre>
+- `x`
+  - : Um número.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor retornado
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+O seno hiperbólico do número dado.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Descrição
 
-<p>O seno hiperbólico do número dado.</p>
+Como `sinh()` é um método estático de `Math`, você sempre deve usar como `Math.sinh()`, ao invés de um novo objeto instanciado `Math` (`Math` não é um construtor).
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Como <code>sinh()</code> é um método estático de <code>Math</code>, você sempre deve usar como <code>Math.sinh()</code>, ao invés de um novo objeto instanciado <code>Math</code> (<code>Math</code> não é um construtor).</p>
+### Usando `Math.sinh()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_Math.sinh()">Usando <code>Math.sinh()</code></h3>
-
-<pre class="brush: js">Math.sinh(0); // 0
+```js
+Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Isso pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:</p>
+Isso pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
+```js
+Math.sinh = Math.sinh || function(x) {
   return (Math.exp(x) - Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>ou usando apenas uma chamada para a função {{jsxref("Math.exp()")}}:</p>
+ou usando apenas uma chamada para a função {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
+```js
+Math.sinh = Math.sinh || function(x) {
   var y = Math.exp(x);
   return (y - 1 / y) / 2;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário         |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.sinh")}}</p>
+{{Compat("javascript.builtins.Math.sinh")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.tanh()")}}

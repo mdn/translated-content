@@ -14,143 +14,146 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.</p>
+[Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy) allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.
 
-<p>For each policy-controlled feature, the browser maintains a list of origins for which the feature is enabled, known as an allowlist. If you do not specify a policy for a feature, then a default allowlist will be used. The default allowlist is specific to each feature.</p>
+For each policy-controlled feature, the browser maintains a list of origins for which the feature is enabled, known as an allowlist. If you do not specify a policy for a feature, then a default allowlist will be used. The default allowlist is specific to each feature.
 
-<div class="note">
-<p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
-</div>
+> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
 
-<h2 id="Escrevendo_a_política">Escrevendo a política</h2>
+## Escrevendo a política
 
-<p>A política é descrita usando um conjunto de diretivas de políticas individuais. A diretiva de política é uma combinação de uma funcionalidade com nome definido, e uma lista de origens que possuem permissão para usar esta política. Funcionalidades dentro de uma política são separadas por ponto e vírgula.</p>
+A política é descrita usando um conjunto de diretivas de políticas individuais. A diretiva de política é uma combinação de uma funcionalidade com nome definido, e uma lista de origens que possuem permissão para usar esta política. Funcionalidades dentro de uma política são separadas por ponto e vírgula.
 
-<h3 id="allowlist">allowlist</h3>
+### allowlist
 
-<p>Uma lista de permissão é a lista de origens que pega um ou mais dos seguintes valores, separados por espaços:</p>
+Uma lista de permissão é a lista de origens que pega um ou mais dos seguintes valores, separados por espaços:
 
-<ul>
- <li><code>*</code>: A funcionalidade será permitida neste documento, e todos os contextos de navegação aninhados (<em>iframes</em>) independente de sua origem.</li>
- <li><code>'self'</code>: A funcionalidade será permitida no contexto, e em todos os contextos de navegação aninhados (<em>iframes</em>) de mesma origem.</li>
- <li><code>'src'</code>: (Em um <em>iframe</em> com atributo <em>allow</em> somente) A funcionalidade será permitida neste enquadramento, enquanto o documento carregado nele venha da mesma origem da URL no atributo {{HTMLElement('iframe','src','#Attributes')}} do enquadramento .</li>
- <li><code>'none'</code>: A funcionalidade é desabilitada em alto nível e nos contextos de navegação aninhados.</li>
- <li>&lt;origin(s)&gt;: A funcionalidade é permitida em origens especificas (por exemplo, https://example.com). Origens devem ser separadas por um espaço.</li>
-</ul>
+- `*`: A funcionalidade será permitida neste documento, e todos os contextos de navegação aninhados (_iframes_) independente de sua origem.
+- `'self'`: A funcionalidade será permitida no contexto, e em todos os contextos de navegação aninhados (_iframes_) de mesma origem.
+- `'src'`: (Em um _iframe_ com atributo _allow_ somente) A funcionalidade será permitida neste enquadramento, enquanto o documento carregado nele venha da mesma origem da URL no atributo {{HTMLElement('iframe','src','#Attributes')}} do enquadramento .
+- `'none'`: A funcionalidade é desabilitada em alto nível e nos contextos de navegação aninhados.
+- \<origin(s)>: A funcionalidade é permitida em origens especificas (por exemplo, https\://example.com). Origens devem ser separadas por um espaço.
 
-<p>Os valores <code>*</code> (permitido para todas as origens) ou <code>'none'</code> (desabilitado para todas as origens) podem ser usados sozinhos, enquanto <code>'self'</code> e <code>'src'</code> podem ser usados com uma ou mais origens.</p>
+Os valores `*` (permitido para todas as origens) ou `'none'` (desabilitado para todas as origens) podem ser usados sozinhos, enquanto `'self'` e `'src'` podem ser usados com uma ou mais origens.
 
-<p>Funcionalidade são definidas para cada uma ter uma lista de permissão padrão, que é uma das:</p>
+Funcionalidade são definidas para cada uma ter uma lista de permissão padrão, que é uma das:
 
-<ul>
- <li><code>*</code>: A funcionalidade é permitida por padrão em alto nível em contextos de navegação e todos os contextos de navegação aninhados (<em>iframes</em>).</li>
- <li><code>'self'</code>: A funcionalidade é permitida por padrão em contextos de navegação de alto nível e em contextos de navegação aninhados (<em>iframes</em>) na mesma origem. A funcionalidade não é permitida em documentos entre origens em contextos de navegação aninhados.</li>
- <li><code>'none'</code>: A funcionalidade é desabilitada em alto nível e em contextos de navegação aninhados.</li>
-</ul>
+- `*`: A funcionalidade é permitida por padrão em alto nível em contextos de navegação e todos os contextos de navegação aninhados (_iframes_).
+- `'self'`: A funcionalidade é permitida por padrão em contextos de navegação de alto nível e em contextos de navegação aninhados (_iframes_) na mesma origem. A funcionalidade não é permitida em documentos entre origens em contextos de navegação aninhados.
+- `'none'`: A funcionalidade é desabilitada em alto nível e em contextos de navegação aninhados.
 
-<h2 id="Especificando_sua_política">Especificando sua política</h2>
+## Especificando sua política
 
-<p>Feature Policy provides two ways to specify policies to control features:</p>
+Feature Policy provides two ways to specify policies to control features:
 
-<ul>
- <li>The {{httpheader('Feature-Policy')}} HTTP header.</li>
- <li>The {{htmlattrxref("allow", "iframe")}} attribute on {{htmlelement("iframe")}}s.</li>
-</ul>
+- The {{httpheader('Feature-Policy')}} HTTP header.
+- The {{htmlattrxref("allow", "iframe")}} attribute on {{htmlelement("iframe")}}s.
 
-<p>The primary difference between the HTTP header and the <code>allow</code> attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.</p>
+The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
 
-<h3 id="The_Feature-Policy_HTTP_header">The Feature-Policy HTTP header</h3>
+### The Feature-Policy HTTP header
 
-<p>You can send the <code>Feature-Policy</code> HTTP header with the response of a page. The value of this header is a policy to be enforced by the browser for the given page. It has the following structure.</p>
+You can send the `Feature-Policy` HTTP header with the response of a page. The value of this header is a policy to be enforced by the browser for the given page. It has the following structure.
 
-<pre class="brush: bash notranslate">Feature-Policy: &lt;feature name&gt; &lt;allowlist of origin(s)&gt;</pre>
+```bash
+Feature-Policy: <feature name> <allowlist of origin(s)>
+```
 
-<p>For example, to block all content from using the Geolocation API across your site:</p>
+For example, to block all content from using the Geolocation API across your site:
 
-<pre class="brush: bash notranslate">Feature-Policy: geolocation 'none'</pre>
+```bash
+Feature-Policy: geolocation 'none'
+```
 
-<p>Several features can be controlled at the same time by sending the HTTP header with a semicolon-separated list of policy directives, or by sending a separate header for each policy.</p>
+Several features can be controlled at the same time by sending the HTTP header with a semicolon-separated list of policy directives, or by sending a separate header for each policy.
 
-<p>For example, the following are equivalent:</p>
+For example, the following are equivalent:
 
-<pre class="brush: bash notranslate">Feature-Policy: unsized-media 'none'; geolocation 'self' https://example.com; camera *;
+```bash
+Feature-Policy: unsized-media 'none'; geolocation 'self' https://example.com; camera *;
 
 Feature-Policy: unsized-media 'none'
 Feature-Policy: geolocation 'self' https://example.com
 Feature-Policy: camera *;
-</pre>
+```
 
-<h3 id="The_iframe_allow_attribute">The iframe allow attribute</h3>
+### The iframe allow attribute
 
-<p>The second way to use Feature Policy is for controlling content within an iframe. Use the <code>allow</code> attribute to specify a policy list for embedded content.</p>
+The second way to use Feature Policy is for controlling content within an iframe. Use the `allow` attribute to specify a policy list for embedded content.
 
-<p>For example, allow all browsing contexts within this iframe to use fullscreen:</p>
+For example, allow all browsing contexts within this iframe to use fullscreen:
 
-<pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
+```html
+<iframe src="https://example.com..." allow="fullscreen"></iframe>
+```
 
-<p>This is equivalent to:</p>
+This is equivalent to:
 
-<pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen 'src'"&gt;&lt;/iframe&gt;</pre>
+```html
+<iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>
+```
 
-<p>This example allows <code>&lt;iframe&gt;</code> content on a particular origin to access the user's location:</p>
+This example allows `<iframe>` content on a particular origin to access the user's location:
 
-<pre class="brush: html notranslate">&lt;iframe src="https://google-developers.appspot.com/demos/..."
-        allow="geolocation https://google-developers.appspot.com"&gt;&lt;/iframe&gt;
-</pre>
+```html
+<iframe src="https://google-developers.appspot.com/demos/..."
+        allow="geolocation https://google-developers.appspot.com"></iframe>
+```
 
-<p>Similar to the HTTP header, several features can be controlled at the same time by specifying a semicolon-separated list of policy directives.</p>
+Similar to the HTTP header, several features can be controlled at the same time by specifying a semicolon-separated list of policy directives.
 
-<p>For example, this blocks the <code>&lt;iframe&gt;</code> from using the camera and microphone:</p>
+For example, this blocks the `<iframe>` from using the camera and microphone:
 
-<pre class="brush: html notranslate">&lt;iframe allow="camera 'none'; microphone 'none'"&gt;
-</pre>
+```html
+<iframe allow="camera 'none'; microphone 'none'">
+```
 
-<h2 id="Inheritance_of_policy_for_embedded_content">Inheritance of policy for embedded content</h2>
+## Inheritance of policy for embedded content
 
-<p>Scripts inherit the policy of their browsing context, regardless of their origin. That means that top-level scripts inherit the policy from the main document.</p>
+Scripts inherit the policy of their browsing context, regardless of their origin. That means that top-level scripts inherit the policy from the main document.
 
-<p>All iframes inherit the policy of their parent page. If the iframe has an <code>allow</code> attribute, the policies of the parent page and the <code>allow</code> attribute are combined, using the most restrictive subset. For an iframe to have a feature enabled, the origin must be in the allowlist for both the parent page and the allow attribute.</p>
+All iframes inherit the policy of their parent page. If the iframe has an `allow` attribute, the policies of the parent page and the `allow` attribute are combined, using the most restrictive subset. For an iframe to have a feature enabled, the origin must be in the allowlist for both the parent page and the allow attribute.
 
-<p>Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.</p>
+Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.
 
-<h2 id="Enforcing_best_practices_for_good_user_experiences">Enforcing best practices for good user experiences</h2>
+## Enforcing best practices for good user experiences
 
-<p>It's difficult to build a website that uses all the latest best practices and provides great performance and user experiences. As the website evolves, it can become even harder to maintain the user experience over time. You can use feature policies to specify the desired best practices, and rely on the browser to enforce the policies to prevent regressions.</p>
+It's difficult to build a website that uses all the latest best practices and provides great performance and user experiences. As the website evolves, it can become even harder to maintain the user experience over time. You can use feature policies to specify the desired best practices, and rely on the browser to enforce the policies to prevent regressions.
 
-<p>There are several policy-controlled features designed to represent functionality that can negatively impact the user experience. These features include:</p>
+There are several policy-controlled features designed to represent functionality that can negatively impact the user experience. These features include:
 
-<ul>
- <li>Layout-inducing Animations</li>
- <li>Unoptimized (poorly compressed) images</li>
- <li>Oversized images</li>
- <li>Synchronous scripts</li>
- <li>Synchronous XMLHttpRequest</li>
- <li>Unsized media</li>
-</ul>
+- Layout-inducing Animations
+- Unoptimized (poorly compressed) images
+- Oversized images
+- Synchronous scripts
+- Synchronous XMLHttpRequest
+- Unsized media
 
-<p>To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. That is, the default allowlist is <code>'*'</code> for each feature. Preventing the use of the sub-optimal functionality requires explicitly specifying a policy that disables the features.</p>
+To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. That is, the default allowlist is `'*'` for each feature. Preventing the use of the sub-optimal functionality requires explicitly specifying a policy that disables the features.
 
-<p>For new content, you can start developing with a policy that disables all the features. This approach ensures that none of the functionality is introduced. When applying a policy to existing content, testing is likely required to verify it continues to work as expected. This is especially important for embedded or third-party content that you do not control.</p>
+For new content, you can start developing with a policy that disables all the features. This approach ensures that none of the functionality is introduced. When applying a policy to existing content, testing is likely required to verify it continues to work as expected. This is especially important for embedded or third-party content that you do not control.
 
-<p>To turn on the enforcement of all the best practices, specify the policy as below.</p>
+To turn on the enforcement of all the best practices, specify the policy as below.
 
-<p>Send the following the HTTP header:</p>
+Send the following the HTTP header:
 
-<pre class="brush: bash notranslate">Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';</pre>
+```bash
+Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';
+```
 
-<p>Using the <code>&lt;iframe&gt;</code> <code>allow</code> attribute:</p>
+Using the `<iframe>` `allow` attribute:
 
-<pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"&gt;&lt;/iframe&gt;</pre>
+```html
+<iframe src="https://example.com..." allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li>{{HTMLElement('iframe','allow','#Attributes')}} attribute on iframes</li>
- <li>{{HTTPHeader("Content-Security-Policy")}} header</li>
- <li>{{HTTPHeader("Referrer-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a></li>
-</ul>
+- [Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy)
+- {{HTTPHeader("Feature-Policy")}} header
+- {{HTMLElement('iframe','allow','#Attributes')}} attribute on iframes
+- {{HTTPHeader("Content-Security-Policy")}} header
+- {{HTTPHeader("Referrer-Policy")}} header
+- [Privacy, permissions, and information security](/pt-BR/docs/Web/Privacy)

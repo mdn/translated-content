@@ -8,103 +8,61 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Expect-CT
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">O cabeçalho <code>Expect-CT</code> deixa sites optarem em reportar e/ou forçar requirimentos do <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificado de Transparência</a>, para previnir o uso incorreto de certificados do site passar despercebido.</span></p>
+O cabeçalho `Expect-CT` deixa sites optarem em reportar e/ou forçar requirimentos do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency), para previnir o uso incorreto de certificados do site passar despercebido.
 
-<p>Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguintes mecanismos:</p>
+Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguintes mecanismos:
 
-<ul>
- <li>A extensão do certificado X.509v3 permite embebedar uma marcação de data e hora de certificados assinados reportados por <em>logs</em> individuais.</li>
- <li>A extensão TLS do tipo <code>signed_certificate_timestamp</code> enviada durante um <em>handshake</em>.</li>
- <li>Dando suporte a OCSP (que é, a extensão TLS <code>status_request</code>) e provendo uma <code>SignedCertificateTimestampList</code></li>
-</ul>
+- A extensão do certificado X.509v3 permite embebedar uma marcação de data e hora de certificados assinados reportados por _logs_ individuais.
+- A extensão TLS do tipo `signed_certificate_timestamp` enviada durante um _handshake_.
+- Dando suporte a OCSP (que é, a extensão TLS `status_request`) e provendo uma `SignedCertificateTimestampList`
 
-<div class="note">
-<p>Quando um site habilita o cabeçalho <code>Expect-CT</code>, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em <strong><a href="https://www.certificate-transparency.org/known-logs"><em>logs</em> CT públicos </a></strong>.</p>
-</div>
+> **Note:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos ](https://www.certificate-transparency.org/known-logs)**.
 
-<div class="note">
-<p><strong>Navegadores ignoram</strong> o cabeçalho <code>Expect-CT</code> através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.</p>
-</div>
+> **Note:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
 
-<div class="note">
-<p>O <code>Expect-CT</code> provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.</p>
-</div>
+> **Note:** O `Expect-CT` provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="notranslate">Expect-CT: report-uri="&lt;uri&gt;",
-           enforce,
-           max-age=&lt;age&gt;</pre>
+    Expect-CT: report-uri="<uri>",
+               enforce,
+               max-age=<age>
 
-<h2 id="Diretivas"> Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>max-age</code></dt>
- <dd>
- <p>O número de segundos depois da recepção do cabeçalho <code>Expect-CT</code> durante o qual o agente de usuário deve identificar o hospedeiro da mensagem recebida como um hospedeiro <code>Expect-CT</code> conhecido.</p>
+- `max-age`
+  - : O número de segundos depois da recepção do cabeçalho `Expect-CT` durante o qual o agente de usuário deve identificar o hospedeiro da mensagem recebida como um hospedeiro `Expect-CT` conhecido.Se o cache receber um valor maior do que ele pode representar, or se qualquer um dos seus cálculos subsequentes estourar o limite, o cache vai considerar este valor a ser 2,147,483,648 (231) ou o maior inteiro positivo que ele pode representar.
+- `report-uri="<uri>"` {{optional_inline}}
+  - : A URI onde o agente de usuário deve reportar falhas `Expect-CT`.Quando presente com a diretiva `enforce`, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário\_ _que ambos o \_compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
+- `enforce` {{optional_inline}}
+  - : Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.Quando ambas as diretivas `enforce` e `report-uri` estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário\_ _que ambos o \_compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
 
- <p>Se o cache receber um valor maior do que ele pode representar, or se qualquer um dos seus cálculos subsequentes estourar o limite, o cache vai considerar este valor a ser 2,147,483,648 (2<sup>31</sup>) ou o maior inteiro positivo que ele pode representar.</p>
- </dd>
- <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
- <dd>
- <p>A URI onde o agente de usuário deve reportar falhas <code>Expect-CT</code>.</p>
- Quando presente com a diretiva <code>enforce</code>, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário<em> </em>que ambos o <em>compliance</em> da política do Certificado de Transparência deve ser executado <em>e</em> que as violações devem ser reportadas.</dd>
- <dt><code>enforce</code> {{optional_inline}}</dt>
- <dd>
- <p>Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.</p>
+## Exemplo
 
- <p>Quando ambas as diretivas <code>enforce</code> e <code>report-uri</code> estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário<em> </em>que ambos o <em>compliance</em> da política do Certificado de Transparência deve ser executado <em>e</em> que as violações devem ser reportadas.</p>
- </dd>
-</dl>
+O seguinte exemplo especifica uma execução do Certificado de Transparência por 24 horas e reporta violações para `foo.example`.
 
-<h2 id="Exemplo">Exemplo</h2>
+    Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
-<p>O seguinte exemplo especifica uma execução do Certificado de Transparência por 24 horas e reporta violações para <code>foo.example</code>.</p>
+## Notas
 
-<pre class="notranslate">Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"</pre>
+Certificados de Autoridade Raiz (_Root CAs_) manualmente adicionados para a loja de confiança, sobrescrevendo e suprimindo relatórios e execuções do `Expect-CT`.
 
-<h2 id="Notas">Notas</h2>
+Navegadores não vão lembrar de uma política `Expect-CT`, a menos que o site tenha "provado" que ele pode servir um certificado satisfazendo os requerimentos do certificado de transparência. Navegadores implementam seus próprios modelos em relação a quais _logs_ CT são considerados confiáveis para o certificado logar.
 
-<p>Certificados de Autoridade Raiz (<em>Root CAs</em>) manualmente adicionados para a loja de confiança, sobrescrevendo e suprimindo relatórios e execuções do <code>Expect-CT</code>.</p>
+Versões do Chrome são desenvolvidas para parar execução de políticas de `Expect-CT` 10 semanas depois da data de instalação da versão.
 
-<p>Navegadores não vão lembrar de uma política <code>Expect-CT</code>, a menos que o site tenha "provado" que ele pode servir um certificado satisfazendo os requerimentos do certificado de transparência. Navegadores implementam seus próprios modelos em relação a quais <em>logs</em> CT são considerados confiáveis para o certificado logar.</p>
+## Especificações
 
-<p>Versões do Chrome são desenvolvidas para parar execução de políticas de <code>Expect-CT</code> 10 semanas depois da data de instalação da versão.</p>
+| Especificação                                                                 | Título                       |
+| ----------------------------------------------------------------------------- | ---------------------------- |
+| [Internet Draft](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08) | Expect-CT Extension for HTTP |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08">Internet Draft</a></td>
-   <td>Expect-CT Extension for HTTP</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-
-
-<p>{{Compat("http.headers.Expect-CT")}}</p>
+{{Compat("http.headers.Expect-CT")}}

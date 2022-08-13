@@ -7,74 +7,63 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required
 ---
-<div>
-<div>
-<h3 id="Descrição">Descrição</h3>
+### Descrição
 
-<p><span class="seoSummary">O atributo <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required"><code>aria-required</code></a> é usado para indicar que a entrada do usuário é obrigatória em um elemento antes que um formulário possa ser enviado. Este atributo pode ser usado com qualquer elemento de formulário HTML típico; não se limita a elementos que têm uma  <code>role</code> atribuída.</span></p>
+O atributo [`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) é usado para indicar que a entrada do usuário é obrigatória em um elemento antes que um formulário possa ser enviado. Este atributo pode ser usado com qualquer elemento de formulário HTML típico; não se limita a elementos que têm uma `role` atribuída.
 
-<p>{{ HTMLVersionInline("5") }} agora tem o atributo <code>required</code>, mas aria-required ainda é útil para agentes de usuário que não suportam ainda HTML5.</p>
+{{ HTMLVersionInline("5") }} agora tem o atributo `required`, mas aria-required ainda é útil para agentes de usuário que não suportam ainda HTML5.
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p><code>true</code> ou <code>false</code> (Padrão: <code>false</code>)</p>
+`true` ou `false` (Padrão: `false`)
 
-<h3 id="Possíveis_efeitos_nos_agentes_de_usuários_e_tecnologia_assistiva">Possíveis efeitos nos agentes de usuários e tecnologia assistiva </h3>
+### Possíveis efeitos nos agentes de usuários e tecnologia assistiva
 
-<p>Os leitores de tela devem anunciar o campo como obrigatório.</p>
+Os leitores de tela devem anunciar o campo como obrigatório.
 
-<p>Observe que esse atributo não alterará automaticamente a apresentação do campo.</p>
+Observe que esse atributo não alterará automaticamente a apresentação do campo.
 
-<div class="note"><strong>Nota:</strong> Opiniões podem diferir em como a tecnologia assistiva deve lidar com esta técnica. A informação fornecida acima é uma dessas opiniões e, portanto, não é normativa.</div>
+> **Note:** **Nota:** Opiniões podem diferir em como a tecnologia assistiva deve lidar com esta técnica. A informação fornecida acima é uma dessas opiniões e, portanto, não é normativa.
 
-<h3 id="Exemplos">Exemplos</h3>
+### Exemplos
 
-<h4 id="Exemplo_1_Um_simples_formulário">Exemplo 1: Um simples formulário</h4>
+#### Exemplo 1: Um simples formulário
 
-<p> </p>
+```html
+ <form action="post">
+     <label for="firstName">First name:</label>
+     <input id="firstName" type="text" aria-required="true" />
+     <br/>
+     <label for="lastName">Last name:</label>
+     <input id="lastName" type="text" aria-required="true" />
+     <br/>
+     <label for="streetAddress">Street address:</label>
+     <input id="streetAddress" type="text" />
+ </form>
+```
 
-<pre class="brush: html"> &lt;form action="post"&gt;
-     &lt;label for="firstName"&gt;First name:&lt;/label&gt;
-     &lt;input id="firstName" type="text" aria-required="true" /&gt;
-     &lt;br/&gt;
-     &lt;label for="lastName"&gt;Last name:&lt;/label&gt;
-     &lt;input id="lastName" type="text" aria-required="true" /&gt;
-     &lt;br/&gt;
-     &lt;label for="streetAddress"&gt;Street address:&lt;/label&gt;
-     &lt;input id="streetAddress" type="text" /&gt;
- &lt;/form&gt;
-</pre>
+### Notas
 
-<h3 id="Notas">Notas </h3>
+### Usado em ARIA roles
 
-<h3 id="Usado_em_ARIA_roles">Usado em ARIA roles</h3>
+- Combobox
+- Gridcell
+- Listbox
+- Radiogroup
+- Spinbutton
+- [Textbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role "Using the textbox role")
+- Tree
 
-<ul>
- <li>Combobox</li>
- <li>Gridcell</li>
- <li>Listbox</li>
- <li>Radiogroup</li>
- <li>Spinbutton</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role" title="Using the textbox role">Textbox</a></li>
- <li>Tree</li>
-</ul>
+### Técnicas relacionadas com ARIA
 
-<h3 id="Técnicas_relacionadas_com_ARIA">Técnicas relacionadas com ARIA</h3>
+- [Usando o atributo aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute "Using the aria-invalid property")
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute" title="Using the aria-invalid property">Usando o atributo aria-invalid</a></li>
-</ul>
+### Compatibilidade
 
-<h3 id="Compatibilidade">Compatibilidade</h3>
+TBD: Add support information for common UA and AT product combinations
 
-<p class="comment">TBD: Add support information for common UA and AT product combinations</p>
+### Recursos adicionais
 
-<h3 id="Recursos_adicionais">Recursos adicionais</h3>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">Especificação WAI-ARIA para<code>aria-required</code></a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria-practices/#ariaform">WAI-ARIA Authoring Practices for forms</a></li>
- <li><a href="/en/HTML/HTML5/Constraint_validation" title="Constraint validation">Constraint validation</a> in {{ HTMLVersionInline("5") }}</li>
-</ul>
-</div>
-</div>
+- [Especificação WAI-ARIA para`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
+- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform)
+- [Constraint validation](/en/HTML/HTML5/Constraint_validation "Constraint validation") in {{ HTMLVersionInline("5") }}

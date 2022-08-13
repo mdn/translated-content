@@ -12,35 +12,22 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/400
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de status de resposta HTTP <code><strong>400 Bad Request</strong></code> indica que o servidor não pode ou não irá processar a requisição devido a alguma coisa que foi entendida como um erro do cliente (por exemplo, sintaxe de requisição mal formada, enquadramento de mensagem de requisição inválida ou requisição de roteamento enganosa).</p>
+O código de status de resposta HTTP **`400 Bad Request`** indica que o servidor não pode ou não irá processar a requisição devido a alguma coisa que foi entendida como um erro do cliente (por exemplo, sintaxe de requisição mal formada, enquadramento de mensagem de requisição inválida ou requisição de roteamento enganosa).
 
-<div class="blockIndicator warning">
-<p>O cliente não deve repetir essa requisição sem modificá-la.</p>
-</div>
+> **Warning:** O cliente não deve repetir essa requisição sem modificá-la.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">400 Bad Request </pre>
+    400 Bad Request
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "400 Bad Request" , "6.5.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semânticas e conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semânticas e conteúdo |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://www.exai.com/blog/400-bad-request-error">400 Bad Request</a></li>
-</ul>
+- [400 Bad Request](https://www.exai.com/blog/400-bad-request-error)

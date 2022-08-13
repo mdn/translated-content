@@ -11,83 +11,67 @@ tags:
   - toLocaleUpperCase()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>toLocaleUpperCase()</code> retorna o valor da string em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.</p>
+O método `toLocaleUpperCase()` retorna o valor da string em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
 
+## Sintaxe
 
+    str.toLocaleUpperCase()
+    str.toLocaleUpperCase(locale)
+    str.toLocaleUpperCase([locale, locale, ...])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><var>str</var>.toLocaleUpperCase()
-<var>str</var>.toLocaleUpperCase(locale)
-<var>str</var>.toLocaleUpperCase([locale, locale, ...])
-</pre>
+- `locale`
+  - : Opcional. O parâmetro `locale` indica a localização a ser usada para converter para maiúsculas de acordo com qualquer mapeamento de caixa de texto específico da localidade. Se vários locais forem fornecidos em um {{jsxref("Array")}}, a [melhor localidade disponível](https://tc39.es/ecma402/#sec-bestavailablelocale) é usada. A localidade padrão é a localidade atual do ambiente do host.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor retornado
 
-<dl>
- <dt><code>locale</code></dt>
- <dd>Opcional. O parâmetro <code>locale</code> indica a localização a ser usada para converter para maiúsculas de acordo com qualquer mapeamento de caixa de texto específico da localidade. Se vários locais forem fornecidos em um {{jsxref("Array")}}, a <a href="https://tc39.es/ecma402/#sec-bestavailablelocale">melhor localidade disponível</a> é usada. A localidade padrão é a localidade atual do ambiente do host.</dd>
-</dl>
+Uma nova string que representa a string original convertida em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Exceções
 
-<p>Uma nova string que representa a string original convertida em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.</p>
+- Um {{jsxref("RangeError")}} ("invalid language tag: xx_yy") é lançado se um argumento `locale` não for uma tag de idioma válido.
+- Um {{jsxref("TypeError")}} ("invalid element in locales argument") é lançado se um elemento do array não for do tipo string.
 
-<h3 id="Exceções">Exceções</h3>
+## Descrição
 
-<ul>
- <li>Um {{jsxref("RangeError")}} ("invalid language tag: xx_yy") é lançado se um argumento <code>locale</code> não for uma tag de idioma válido.</li>
- <li>Um {{jsxref("TypeError")}} ("invalid element in locales argument") é lançado se um elemento do array não for do tipo string.</li>
-</ul>
+O método `toLocaleUpperCase()` retorna o valor da string convertida em maiúsculas de acordo com qualquer mapeamento de caixa de texto específico da localidade. `toLocaleUpperCase()` não afeta o valor da string em si. Na maioria dos casos, ele produzirá o mesmo resultado que {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, mas para alguns locais, como turco, cujos mapeamentos de caixa de texto não seguem o mapeamento de caixa de texto padrão em Unicode, pode haver um resultado diferente.
 
-<h2 id="Descrição">Descrição</h2>
+Observe também que a conversão não é necessariamente um mapeamento de caracteres 1:1, pois alguns caracteres podem resultar em dois (ou até mais) caracteres quando transformados em maiúsculas. Portanto, o comprimento da string resultante pode ser diferente do comprimento da string de entrada. Isso também implica que a conversão não é estável, então, por exemplo, o seguinte pode retornar `false`:
+`x.toLocaleLowerCase() === x.toLocaleUpperCase(). toLocaleLowerCase()`
 
-<p>O método <code>toLocaleUpperCase()</code> retorna o valor da string convertida em maiúsculas de acordo com qualquer mapeamento de caixa de texto específico da localidade. <code>toLocaleUpperCase()</code> não afeta o valor da string em si. Na maioria dos casos, ele produzirá o mesmo resultado que {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, mas para alguns locais, como turco, cujos mapeamentos de caixa de texto não seguem o mapeamento de caixa de texto padrão em Unicode, pode haver um resultado diferente.</p>
+## Exemplos
 
-<p>Observe também que a conversão não é necessariamente um mapeamento de caracteres 1:1, pois alguns caracteres podem resultar em dois (ou até mais) caracteres quando transformados em maiúsculas. Portanto, o comprimento da string resultante pode ser diferente do comprimento da string de entrada. Isso também implica que a conversão não é estável, então, por exemplo, o seguinte pode retornar <code>false</code>:<br>
- <code>x.toLocaleLowerCase() === x.toLocaleUpperCase(). toLocaleLowerCase()</code></p>
+### Usando `toLocaleUpperCase()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_toLocaleUpperCase">Usando <code>toLocaleUpperCase()</code></h3>
-
-<pre class="brush: js notranslate">'alfabeto'.toLocaleUpperCase(); // 'ALFABETO'
+```js
+'alfabeto'.toLocaleUpperCase(); // 'ALFABETO'
 
 'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
 
 'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
 
 let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'</pre>
+'i\u0307'.toLocaleUpperCase(locales); // 'I'
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     |
+| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.toLocaleUpperCase")}}</p>
+{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

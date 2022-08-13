@@ -7,25 +7,19 @@ tags:
 translation_of: Web/CSS/Tools
 original_slug: Web/CSS/Tools
 ---
-<div></div>
+O CSS oferece diversos recursos poderosos e um grande número de parâmetros que, às vezes, podem ser difíceis de usar. Então, é bem melhor quando você pode visualizá-los enquanto trabalha com eles.
 
-<p>O CSS oferece diversos recursos poderosos e um grande número de parâmetros que, às vezes, podem ser difíceis de usar. Então, é bem melhor quando você pode visualizá-los enquanto trabalha com eles.</p>
+Esta página oferece links para várias ferramentas úteis que irão te ajudar a criar o CSS para estilizar seu conteúdo usando esses recursos.
 
-<p>Esta página oferece links para várias ferramentas úteis que irão te ajudar a criar o CSS para estilizar seu conteúdo usando esses recursos.</p>
+{{LandingPageListSubpages}}
 
-<p>{{LandingPageListSubpages}}</p>
+## Outras ferramentas
 
-<h2 id="Outras_ferramentas">Outras ferramentas</h2>
+- Animação em CSS - [Stylie](http://jeremyckahn.github.io/stylie/)
+- Para verificar as informações de exibição do dispositivo (útil para {{Glossary("web design responsivo")}}) - [mydevice.io](http://mydevice.io/)
+- Menus CSS - [cssmenumaker.com](http://cssmenumaker.com/)
+- Um poderoso e moderno _linter_ CSS que ajuda a impor convenções consistentes e evitar erros em suas folhas de estilo - [stylelint](https://stylelint.io/)
 
-<ul>
- <li>Animação em CSS - <a href="http://jeremyckahn.github.io/stylie/">Stylie</a></li>
- <li>Para verificar as informações de exibição do dispositivo (útil para {{Glossary("web design responsivo")}}) - <a href="http://mydevice.io/">mydevice.io</a></li>
- <li>Menus CSS - <a href="http://cssmenumaker.com/">cssmenumaker.com</a></li>
- <li>Um poderoso e moderno <em>linter</em> CSS que ajuda a impor convenções consistentes e evitar erros em suas folhas de estilo - <a href="https://stylelint.io/">stylelint</a></li>
-</ul>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a></li>
-</ul>
+- [CSS](/pt-BR/docs/Web/CSS)

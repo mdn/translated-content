@@ -7,101 +7,78 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/view
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Uma <code><strong>view</strong></code> é uma maneira definida de visualizar a imagem, como um nível de zoom ou uma visualização de detalhes.</p>
+Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de zoom ou uma visualização de detalhes.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Aria_attributes" title="en/SVG/Attribute#Core">Aria attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes" title="en/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Global_event_attributes" title="en/SVG/Attribute#Core">Global event attributes</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes "en/SVG/Attribute#Core") »
+- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
+- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes "en/SVG/Attribute#Core") »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("viewBox")}}</li>
- <li>{{SVGAttr("preserveAspectRatio")}}</li>
- <li>{{SVGAttr("zoomAndPan")}}</li>
- <li>{{SVGAttr("viewTarget")}}</li>
-</ul>
+- {{SVGAttr("viewBox")}}
+- {{SVGAttr("preserveAspectRatio")}}
+- {{SVGAttr("zoomAndPan")}}
+- {{SVGAttr("viewTarget")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="600" height="200" viewBox="0 0 600 200"
+```html
+<svg width="600" height="200" viewBox="0 0 600 200"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;radialGradient id="gradient"&gt;
-      &lt;stop offset="0%" stop-color="#8cffa0" /&gt;
-      &lt;stop offset="100%" stop-color="#8ca0ff" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="gradient">
+      <stop offset="0%" stop-color="#8cffa0" />
+      <stop offset="100%" stop-color="#8ca0ff" />
+    </radialGradient>
+  </defs>
 
-  &lt;circle r="50" cx="180" cy="50" style="fill:url(#gradient)"/&gt;
+  <circle r="50" cx="180" cy="50" style="fill:url(#gradient)"/>
 
-  &lt;view id="halfSizeView" viewBox="0 0 1200 400"/&gt;
-  &lt;view id="normalSizeView" viewBox="0 0 600 200"/&gt;
-  &lt;view id="doubleSizeView" viewBox="0 0 300 100"/&gt;
+  <view id="halfSizeView" viewBox="0 0 1200 400"/>
+  <view id="normalSizeView" viewBox="0 0 600 200"/>
+  <view id="doubleSizeView" viewBox="0 0 300 100"/>
 
-  &lt;a xlink:href="#halfSizeView"&gt;
-    &lt;text x="5" y="20" font-size="20"&gt;half size&lt;/text&gt;
-  &lt;/a&gt;
-  &lt;a xlink:href="#normalSizeView"&gt;
-    &lt;text x="5" y="40" font-size="20"&gt;normal size&lt;/text&gt;
-  &lt;/a&gt;
-  &lt;a xlink:href="#doubleSizeView"&gt;
-    &lt;text x="5" y="60" font-size="20"&gt;double size&lt;/text&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;</pre>
+  <a xlink:href="#halfSizeView">
+    <text x="5" y="20" font-size="20">half size</text>
+  </a>
+  <a xlink:href="#normalSizeView">
+    <text x="5" y="40" font-size="20">normal size</text>
+  </a>
+  <a xlink:href="#doubleSizeView">
+    <text x="5" y="60" font-size="20">double size</text>
+  </a>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 600, 200)}}</p>
+{{EmbedLiveSample("Example", 600, 200)}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGViewElement")}} interface.</p>
+This element implements the {{domxref("SVGViewElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'linking.html#ViewElement', '&lt;view&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'linking.html#ViewElement', '&lt;view&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('SVG2', 'linking.html#ViewElement', '&lt;view&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG1.1', 'linking.html#ViewElement', '&lt;view&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-
-
-<p>{{Compat("svg.elements.view")}}</p>
+{{Compat("svg.elements.view")}}

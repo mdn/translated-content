@@ -8,37 +8,26 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/303
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>O código de resposta de status de redirecionamento do HyperText Transfer Protocol (HTTP) <code><strong>303 See Other</strong></code> indica que o direcionamento não une a um recurso carregado novo, mas a outra página, com uma página de confirmação ou de progresso de carregamento. Este código de resposta normalmente é retornado como resultado de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}. O método usado para mostrar esta página redirecionada é sempre {{HTTPMethod("GET")}}. </p>
+O código de resposta de status de redirecionamento do HyperText Transfer Protocol (HTTP) **`303 See Other`** indica que o direcionamento não une a um recurso carregado novo, mas a outra página, com uma página de confirmação ou de progresso de carregamento. Este código de resposta normalmente é retornado como resultado de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}. O método usado para mostrar esta página redirecionada é sempre {{HTTPMethod("GET")}}.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">303 See Other</pre>
+    303 See Other
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "303 See Other" , "6.4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "303 See Other" , "6.4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>A informação mostrada abaixo foi retirada do Github da MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+A informação mostrada abaixo foi retirada do Github da MDN (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.303")}}</p>
+{{Compat("http.status.303")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus("302")}} <code>Found</code>, the temporary redirect</li>
-</ul>
+- {{HTTPStatus("302")}} `Found`, the temporary redirect

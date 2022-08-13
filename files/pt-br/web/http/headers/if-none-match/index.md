@@ -9,86 +9,61 @@ tags:
   - Requisições Condicionais
 translation_of: Web/HTTP/Headers/If-None-Match
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de requisição HTTP <strong><code>If-None-Match</code></strong> faz uma requisição condicional. Para os métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado, com um código de status {{HTTPStatus("200")}}, somente se ele não tiver um {{HTTPHeader("ETag")}} correspondendo as <em>tags</em> dadas pela requisição. Para outros métodos, a requisição será processada somente o recurso existente eventualmente não possuir nenhuma<em> </em>{{HTTPHeader("ETag")}} correspondente nos valores listados.</p>
+O cabeçalho de requisição HTTP **`If-None-Match`** faz uma requisição condicional. Para os métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado, com um código de status {{HTTPStatus("200")}}, somente se ele não tiver um {{HTTPHeader("ETag")}} correspondendo as _tags_ dadas pela requisição. Para outros métodos, a requisição será processada somente o recurso existente eventualmente não possuir nenhuma\_ \_{{HTTPHeader("ETag")}} correspondente nos valores listados.
 
-<p>Quando a condição falha para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, então o servidor deve retornar um código de status HTTP 304 (Not Modified). Para outros métodos que aplicam mudanças no lado do servidor, o código de status 412 (Precondition Failed) é utilizado. Note que o servidor gerando uma resposta 304 DEVE gerar qualquer um dos seguintes cabeçalhos que seriam enviados em uma resposta 200 (OK) para a mesma requisição: Cache-Control, Content-Location, Date, ETag, Expires, and Vary.</p>
+Quando a condição falha para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, então o servidor deve retornar um código de status HTTP 304 (Not Modified). Para outros métodos que aplicam mudanças no lado do servidor, o código de status 412 (Precondition Failed) é utilizado. Note que o servidor gerando uma resposta 304 DEVE gerar qualquer um dos seguintes cabeçalhos que seriam enviados em uma resposta 200 (OK) para a mesma requisição: Cache-Control, Content-Location, Date, ETag, Expires, and Vary.
 
-<p>A comparação com a {{HTTPHeader("ETag")}} guardada usa o <em>algoritmo de comparação fraco</em>, significa que dois arquivos são considerados idênticos se o conteúdo é equivalente — eles não precisam ser idênticos <em>byte</em> por <em>byte</em>. Por exemplo, duas páginas que diferem pela data de sua geração no rodapé ainda assim serão consideradas como idênticas.</p>
+A comparação com a {{HTTPHeader("ETag")}} guardada usa o _algoritmo de comparação fraco_, significa que dois arquivos são considerados idênticos se o conteúdo é equivalente — eles não precisam ser idênticos _byte_ por _byte_. Por exemplo, duas páginas que diferem pela data de sua geração no rodapé ainda assim serão consideradas como idênticas.
 
-<p>Quando usado em combinação com {{HTTPHeader("If-Modified-Since")}}, <strong><code>If-None-Match</code></strong> tem precedência (se o servidor suporta isso).</p>
+Quando usado em combinação com {{HTTPHeader("If-Modified-Since")}}, **`If-None-Match`** tem precedência (se o servidor suporta isso).
 
-<p>Existem dois casos de uso comuns:</p>
+Existem dois casos de uso comuns:
 
-<ul>
- <li>Para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, para atualizar uma entidade cacheada que possui um {{HTTPHeader("ETag")}} associado.</li>
- <li>Para outros métodos, e em particular para {{HTTPMethod("PUT")}}, <code>If-None-Match</code> usado com o valor <code>*</code> pode ser utilizado para salvar um arquivo que não se sabia existir, garantindo que outro <em>upload</em> não tenha acontecido anteriormente, perdendo os dados do <em>PUT</em> anterior; esse problema é uma variação do <a href="https://www.w3.org/1999/04/Editing/#3.1">problema de perda de atualização</a>.</li>
-</ul>
+- Para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, para atualizar uma entidade cacheada que possui um {{HTTPHeader("ETag")}} associado.
+- Para outros métodos, e em particular para {{HTTPMethod("PUT")}}, `If-None-Match` usado com o valor `*` pode ser utilizado para salvar um arquivo que não se sabia existir, garantindo que outro _upload_ não tenha acontecido anteriormente, perdendo os dados do _PUT_ anterior; esse problema é uma variação do [problema de perda de atualização](https://www.w3.org/1999/04/Editing/#3.1).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">If-None-Match: "&lt;etag_value&gt;"
-If-None-Match: "&lt;etag_value&gt;", "&lt;etag_value&gt;", …
-If-None-Match: *</pre>
+    If-None-Match: "<etag_value>"
+    If-None-Match: "<etag_value>", "<etag_value>", …
+    If-None-Match: *
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;etag_value&gt;</dt>
- <dd><em>Tags</em> de entidade que representam unicamente os recursos requisitados. Eles são uma cadeia de caracteres ASCII colocados entre aspas duplas (como <code>"675af34563dc-tr34"</code>). Elas podem ser prefixadas por <code>W/</code> para indicar que o <em>algoritmo de comparação fraco</em> deve ser utilizado (Isso é inútil com <code>If-None-Match</code> por ele utilizar somente este algoritmo).</dd>
- <dt><code>*</code></dt>
- <dd>O asterísco é um valor especial representando qualquer recurso. Eles somente são úteis quando fazendo o <em>upload</em> de um recurso, geralmente com {{HTTPMethod("PUT")}}, para checar se outro recurso com a identidade já teve seu <em>upload</em> feito anteriormente.</dd>
-</dl>
+- \<etag_value>
+  - : _Tags_ de entidade que representam unicamente os recursos requisitados. Eles são uma cadeia de caracteres ASCII colocados entre aspas duplas (como `"675af34563dc-tr34"`). Elas podem ser prefixadas por `W/` para indicar que o _algoritmo de comparação fraco_ deve ser utilizado (Isso é inútil com `If-None-Match` por ele utilizar somente este algoritmo).
+- `*`
+  - : O asterísco é um valor especial representando qualquer recurso. Eles somente são úteis quando fazendo o _upload_ de um recurso, geralmente com {{HTTPMethod("PUT")}}, para checar se outro recurso com a identidade já teve seu _upload_ feito anteriormente.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="notranslate">If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+    If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
-If-None-Match: W/"67ab43", "54ed21", "7892dd"
+    If-None-Match: W/"67ab43", "54ed21", "7892dd"
 
-If-None-Match: *
-</pre>
+    If-None-Match: *
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "If-None-Match", "3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                        | Título                                                       |
+| ---------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "If-None-Match", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.If-None-Match")}}</p>
+{{Compat("http.headers.If-None-Match")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("ETag")}}</li>
- <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPStatus("304")}}<code> Not Modified</code></li>
- <li>{{HTTPStatus("412")}}<code> Precondition Failed</code></li>
-</ul>
+- {{HTTPHeader("ETag")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("412")}}` Precondition Failed`

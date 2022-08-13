@@ -14,57 +14,34 @@ tags:
 translation_of: Web/API/NavigatorPlugins
 original_slug: Web/API/NavigatorPlugins
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>O <code><strong>NavigatorPlugins</strong></code> {{Glossary("mixin")}}<span class="tlid-translation translation" lang="pt"><span title=""> adiciona na interface do {{domxref ("Navigator")}} métodos e propriedades para descobrir e interagir com plugins instalados no navegador.</span></span></p>
+O **`NavigatorPlugins`** {{Glossary("mixin")}} adiciona na interface do {{domxref ("Navigator")}} métodos e propriedades para descobrir e interagir com plugins instalados no navegador.
 
-<p> </p>
+## Propriedades
 
-<h2 id="Propriedades"><span class="tlid-translation translation" lang="pt"><span title="">Propriedades</span></span></h2>
+- {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
+  - : Retorna um {{domxref ("MimeTypeArray")}} listando os tipos MIME suportados pelo navegador.
+- {{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}
+  - : Retorna um {{domxref ("PluginArray")}} listando os plugins instalados no navegador.
 
-<dl>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd><span class="tlid-translation translation" lang="pt"><span title="">Retorna um {{domxref ("MimeTypeArray")}} listando os tipos MIME suportados pelo navegador.</span></span></dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd><span class="tlid-translation translation" lang="pt"><span title="">Retorna um {{domxref ("PluginArray")}} listando os plugins instalados no</span></span> <span class="tlid-translation translation" lang="pt"><span title="">navegador</span></span>.</dd>
-</dl>
+## Métodos
 
-<h2 id="Métodos"><span class="tlid-translation translation" lang="pt"><span title="">Métodos</span></span></h2>
+A interface NavigatorPlugins* `NavigatorPlugins`* não herda nenhum método.
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">A interface NavigatorPlugins</span></span><em> <code>NavigatorPlugins</code></em><span class="tlid-translation translation" lang="pt"><span title=""> não herda nenhum método.</span></span></p>
+- {{domxref("NavigatorPlugins.javaEnabled", "NavigatorPlugins.javaEnabled()")}} {{readonlyInline}}{{experimental_inline}}
+  - : Retorna uma flag {{domxref ("Boolean")}} indicando se o navegador do host tem o Java ativo ou não.
 
-<dl>
- <dt>{{domxref("NavigatorPlugins.javaEnabled", "NavigatorPlugins.javaEnabled()")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd><span class="tlid-translation translation" lang="pt"><span title="">Retorna uma flag {{domxref ("Boolean")}} indicando se o navegador do host tem o Java ativo ou não.</span></span></dd>
-</dl>
+## Especificações
 
-<h2 id="Especificações"><span class="tlid-translation translation" lang="pt"><span title="">Especificações</span></span></h2>
+| Especificação                                                                                | Estado                           | Comentário         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><span class="tlid-translation translation" lang="pt"><span title="">Especificação</span></span></th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><span class="tlid-translation translation" lang="pt"><span title="">Definição inicial.</span></span></td>
-  </tr>
- </tbody>
-</table>
+## Navegador compativeis
 
-<h2 id="Navegador_compativeis">Navegador compativeis</h2>
+{{Compat("api.NavigatorPlugins")}}
 
+## Veja também
 
-
-<p>{{Compat("api.NavigatorPlugins")}}</p>
-
-<h2 id="Veja_também"><span class="tlid-translation translation" lang="pt"><span title="">Veja também</span></span></h2>
-
-<ul>
- <li><span class="tlid-translation translation" lang="pt"><span title="">A interface {{domxref ("Navigator")}} é a que a implementa.</span></span></li>
-</ul>
+- A interface {{domxref ("Navigator")}} é a que a implementa.

@@ -3,33 +3,22 @@ title: 409 Conflict
 slug: Web/HTTP/Status/409
 translation_of: Web/HTTP/Status/409
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O status de resposta <code><strong>409 Conflict</strong></code> indica que a solicitação atual conflitou com o recurso que está no servidor.</p>
+O status de resposta **`409 Conflict`** indica que a solicitação atual conflitou com o recurso que está no servidor.
 
-<p>Conflitos são mais frequentes quando usado o método {{HTTPMethod("PUT")}}. Por exemplo, você pode receber uma resposta 409 quando fizer upload de um arquivo que é mais antigo do que já existe no servidor, resultando em conflito de versão.</p>
+Conflitos são mais frequentes quando usado o método {{HTTPMethod("PUT")}}. Por exemplo, você pode receber uma resposta 409 quando fizer upload de um arquivo que é mais antigo do que já existe no servidor, resultando em conflito de versão.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">409 Conflito</pre>
+    409 Conflito
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "409 Conflict" , "6.5.8")}}</td>
-   <td>Protocolo de Transferência de Hypertexto (HTTP/1.1): Semântica e Conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                                                                    |
+| -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| {{RFC("7231", "409 Conflict" , "6.5.8")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Semântica e Conteúdo |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPMethod("PUT")}}</li>
-</ul>
+- {{HTTPMethod("PUT")}}

@@ -3,139 +3,135 @@ title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>As declarações <strong>try...catch</strong> marcam um bloco de declarações para testar (<strong>try</strong>),  e especifica uma resposta, caso uma exceção seja lançada.</p>
+As declarações **try...catch** marcam um bloco de declarações para testar (**try**), e especifica uma resposta, caso uma exceção seja lançada.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">try {
-   <em>try_statements</em>
-}
-[catch (<em>exception_var_1</em> if <em>condition_1</em>) {
-   <em>catch_statements_1</em>
-}]
-...
-[catch (<em>exception_var_2</em>) {
-   <em>catch_statements_2</em>
-}]
-[finally {
-   <em>finally_statements</em>
-}]
-</pre>
+    try {
+       try_statements
+    }
+    [catch (exception_var_1 if condition_1) {
+       catch_statements_1
+    }]
+    ...
+    [catch (exception_var_2) {
+       catch_statements_2
+    }]
+    [finally {
+       finally_statements
+    }]
 
-<dl>
- <dt><code>try_statements</code></dt>
- <dd>Declarações (statements) a serem executadas.</dd>
-</dl>
+- `try_statements`
+  - : Declarações (statements) a serem executadas.
 
-<dl>
- <dt><code>catch_statements_1</code>, <code>catch_statements_2</code></dt>
- <dd>Declarações que são executadas se uma exceção é lançada no bloco <code style="font-style: normal; line-height: 1.5;">try.</code></dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
- <dd>Um indentificador que leva um objeto exceção para uma cláusula <code>catch</code>  associada.</dd>
-</dl>
+- `catch_statements_1`, `catch_statements_2`
+  - : Declarações que são executadas se uma exceção é lançada no bloco `try.`
 
-<dl>
- <dt><code>condition_1</code></dt>
- <dd>Uma expressão condicional.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>finally_statements</code></dt>
- <dd>Declarações que são executadas depois que a declaração <code>try</code> é completada. Essas declarações são executadas independetemente se uma exceção foi ou não lançada ou capturada.</dd>
-</dl>
+- `exception_var_1`, `exception_var_2`
+  - : Um indentificador que leva um objeto exceção para uma cláusula `catch` associada.
 
-<h2 id="Description" name="Description">Descrição</h2>
+<!---->
 
-<p>A declaração <code>try</code> consiste  em um bloco <code>try</code>, que contém uma ou mais declarações, e ao menos uma cláusula <code>catch</code>  ou uma cláusula <code>finally</code>,  ou ambas. Ou seja, há 3 formas de declarações <code>try</code> :</p>
+- `condition_1`
+  - : Uma expressão condicional.
 
-<ol>
- <li><code>try...catch</code></li>
- <li><code>try...finally</code></li>
- <li><code>try...catch...finally</code></li>
-</ol>
+<!---->
 
-<p>Uma cláusula <code>catch</code> contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco <code>try</code>. Ou seja, se você quer que o bloco <code>try </code>tenha êxito, e caso não tenha, você quer que o controle passe para o bloco <code>catch</code>. Caso qualquer declaração dentro do bloco <code>try</code>  (ou em uma função chamada no interior do bloco <code>try</code>) lançar uma exceção o controle imediatamente muda para a cláusula <code>catch</code>. Se nenhuma exceção for lançada no bloco <code>try</code> a cláusula <code>catch</code> é ignorada.</p>
+- `finally_statements`
+  - : Declarações que são executadas depois que a declaração `try` é completada. Essas declarações são executadas independetemente se uma exceção foi ou não lançada ou capturada.
 
-<p>A cláusula <code>finally</code> é executada após a excecução do bloco <code>try</code> e da(s) cláusula(s) <code>catch </code>porém antes das declarações seguintes ao <code>try</code>. Ela sempre é executada, independente se uma exceção for lançada ou capturada.</p>
+## Descrição
 
-<p>Você pode aninhar uma ou mais declarações <code>try</code>. Caso uma declaração <code>try</code> interior não tenha uma cláusula <code>catch</code>, a cláusula catch pertencente a declaração <code>try</code> que a envolve é introduzida. </p>
+A declaração `try` consiste em um bloco `try`, que contém uma ou mais declarações, e ao menos uma cláusula `catch` ou uma cláusula `finally`, ou ambas. Ou seja, há 3 formas de declarações `try` :
 
-<p>Você pode usar a declaração try para manipular exceções em JavaScript. Veja o <a href="/pt-BR/docs/Web/JavaScript/Guide">Guia Javascript</a> para informações sobre exceções em JavaScript.</p>
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
-<h3 id="Unconditional_catch_clause" name="Unconditional_catch_clause">Cláusula catch incondicional</h3>
+Uma cláusula `catch` contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco `try`. Ou seja, se você quer que o bloco `try `tenha êxito, e caso não tenha, você quer que o controle passe para o bloco `catch`. Caso qualquer declaração dentro do bloco `try` (ou em uma função chamada no interior do bloco `try`) lançar uma exceção o controle imediatamente muda para a cláusula `catch`. Se nenhuma exceção for lançada no bloco `try` a cláusula `catch` é ignorada.
 
-<p>Quando uma única, incondicional cláusula <code>catch</code> é utilizada, o bloco <code>catch</code>  é inserido quando qualquer exceção for lançada. Por exemplo, quando a exceção ocorre no código a seguir, o controle é transferido para a cláusula <code>catch</code>.</p>
+A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes ao `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
 
-<pre class="brush: js">try {
+Você pode aninhar uma ou mais declarações `try`. Caso uma declaração `try` interior não tenha uma cláusula `catch`, a cláusula catch pertencente a declaração `try` que a envolve é introduzida.
+
+Você pode usar a declaração try para manipular exceções em JavaScript. Veja o [Guia Javascript](/pt-BR/docs/Web/JavaScript/Guide) para informações sobre exceções em JavaScript.
+
+### Cláusula catch incondicional
+
+Quando uma única, incondicional cláusula `catch` é utilizada, o bloco `catch` é inserido quando qualquer exceção for lançada. Por exemplo, quando a exceção ocorre no código a seguir, o controle é transferido para a cláusula `catch`.
+
+```js
+try {
    throw "myException"; // gera uma exceção
 }
 catch (e) {
    // declarações para manipular quaisquer exceções
-   logMyErrors(e); // <code>passa o objeto de exceção para o manipulador de erro</code>
+   logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
 }
-</pre>
+```
 
-<h3 id="Conditional_catch_clauses" name="Conditional_catch_clauses">Cláusulas <code>catch</code> condicionais</h3>
+### Cláusulas `catch` condicionais
 
-<p>{{non-standard_header}}</p>
+{{non-standard_header}}
 
-<p>Você pode utilizar uma ou mais cláusulas <code>catch</code> condicionals para manipular exceções específicas. Nesse caso a cláusula <code>catch</code> apropriada será inserida quando a exceção espeficica for lançada. No exemplo a seguir, o código no bloco <code>try</code> pode potencialmente jogar três exceções: <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RangeError"><code>RangeError</code></a>, e <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError"><code>EvalError</code></a>. Quando a exceção ocorre, o controle transfere para a cláusula <code>catch</code> apropriada. Caso a exceção não seja uma das especificadas e uma cláusula <code>catch</code> incondicional for encontrada, o controle é transferido para essa cláusula <code>catch</code>.</p>
+Você pode utilizar uma ou mais cláusulas `catch` condicionals para manipular exceções específicas. Nesse caso a cláusula `catch` apropriada será inserida quando a exceção espeficica for lançada. No exemplo a seguir, o código no bloco `try` pode potencialmente jogar três exceções: [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError), [`RangeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RangeError), e [`EvalError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError). Quando a exceção ocorre, o controle transfere para a cláusula `catch` apropriada. Caso a exceção não seja uma das especificadas e uma cláusula `catch` incondicional for encontrada, o controle é transferido para essa cláusula `catch`.
 
-<p>Se utilizar uma cláusula <code>catch</code> incondicional com uma ou mais cláusulas <code>catch</code> condicionais, o catch incondicional deve ser especificado por último. Caso contrário, o catch incondicional interceptará todos os tipos de exceção antes que eles alcancem os condicionais.</p>
+Se utilizar uma cláusula `catch` incondicional com uma ou mais cláusulas `catch` condicionais, o catch incondicional deve ser especificado por último. Caso contrário, o catch incondicional interceptará todos os tipos de exceção antes que eles alcancem os condicionais.
 
-<p>Nota: Essa funcionalidade não é parte da especificação ECMAScript.</p>
+Nota: Essa funcionalidade não é parte da especificação ECMAScript.
 
-<pre><code>try {
-    myroutine(); // </code>pode lançar três tipos de exceções<code>
-} catch (e if e instanceof TypeError) {
-    // declarações para manipular exceções TypeError
-} catch (e if e instanceof RangeError) {
-    // declarações para manipular exceções RangeError
-} catch (e if e instanceof EvalError) {
-    // declarações para manipular exceções EvalError
-} catch (e) {
-    // declarações para manipular quaisquer exceções não especificadas
-    logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
-}</code></pre>
-
-<p>E aqui temos como implementar as mesmas "cláusulas <code>catch</code> condicionais" utilizando apenas JavaScript puro conforme a especificação ECMAScript (obviamente é mais verboso, porém, funciona em qualquer lugar):</p>
-
-<pre><code>try {
-    myroutine(); </code>// pode lançar três tipos de exceções<code>
-} catch (e) {
-    if (e instanceof TypeError) {
+    try {
+        myroutine(); // pode lançar três tipos de exceções
+    } catch (e if e instanceof TypeError) {
         // declarações para manipular exceções TypeError
-    } else if (e instanceof RangeError) {
+    } catch (e if e instanceof RangeError) {
         // declarações para manipular exceções RangeError
-    } else if (e instanceof EvalError) {
+    } catch (e if e instanceof EvalError) {
         // declarações para manipular exceções EvalError
-    } else {
-       // declarações para manipular quaisquer exceções não especificadas
-       logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+    } catch (e) {
+        // declarações para manipular quaisquer exceções não especificadas
+        logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
     }
-}</code>
-</pre>
 
-<h3 id="The_exception_identifier" name="The_exception_identifier">O identificador de exceção</h3>
+E aqui temos como implementar as mesmas "cláusulas `catch` condicionais" utilizando apenas JavaScript puro conforme a especificação ECMAScript (obviamente é mais verboso, porém, funciona em qualquer lugar):
 
-<p>Quando uma exceção é lançada no bloco <code>try</code>, <em><code>exception_var</code></em> (ex. o <code>e</code> dentro de <code>catch (e)</code>) armazena o valor especificado pela declaração <code>throw</code>. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.</p>
+    try {
+        myroutine(); // pode lançar três tipos de exceções
+    } catch (e) {
+        if (e instanceof TypeError) {
+            // declarações para manipular exceções TypeError
+        } else if (e instanceof RangeError) {
+            // declarações para manipular exceções RangeError
+        } else if (e instanceof EvalError) {
+            // declarações para manipular exceções EvalError
+        } else {
+           // declarações para manipular quaisquer exceções não especificadas
+           logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+        }
+    }
 
-<p>Esse identificador é local para a cláusula <code>catch</code>. Ou seja, é criado quando a cláusula <code>catch</code> é introduzida e após terminar sua excecução o identificador não se torna mais disponível.</p>
+### O identificador de exceção
 
-<h3 id="The_finally_clause" name="The_finally_clause">A cláusula <code>finally</code></h3>
+Quando uma exceção é lançada no bloco `try`, _`exception_var`_ (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
 
-<p>A cláusula <code>finally</code> é executada após a excecução do bloco <code>try</code> e da(s) cláusula(s) <code>catch </code>porém antes das declarações seguintes a declaração <code>try</code>. Ela sempre é executada, independente se uma exceção for lançada ou capturada.</p>
+Esse identificador é local para a cláusula `catch`. Ou seja, é criado quando a cláusula `catch` é introduzida e após terminar sua excecução o identificador não se torna mais disponível.
 
-<p>A cláusula <code>finally</code> contém declarações para executarem após a execução do bloco <code>try</code>  e da(s) cláusula(s) <code>catch </code> porém antes das declarações seguintes a declaração <code>try</code>. A cláusula <code>finally</code> é excutada independente se uma exceção for lançada ou não. Caso uma exceção seja lançada, as declarações no interior da cláusula <code>finally</code> são executadas mesmo que nenhum <code>catch</code> manipule a exceção.</p>
+### A cláusula `finally`
 
-<p>Você pode utilizar a cláusula <code>finally</code> para fazer seu script falhar graciosamente quando uma exceção ocorrer; por exemplo, você pode precisar liberar um recurso que seu script possui vinculado. O exemplo seguinte abre um aquivo e então executa declarações que utilizam o arquivo (server-side JavaScript permite que você acesse arquivos). Se uma exceção for lançada enquanto o arquivo estiver aberto, a cláusula <code>finally</code> fecha o arquivo antes que o script falhe.</p>
+A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes a declaração `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
 
-<pre class="brush: js">openMyFile()
+A cláusula `finally` contém declarações para executarem após a execução do bloco `try` e da(s) cláusula(s) `catch `porém antes das declarações seguintes a declaração `try`. A cláusula `finally` é excutada independente se uma exceção for lançada ou não. Caso uma exceção seja lançada, as declarações no interior da cláusula `finally` são executadas mesmo que nenhum `catch` manipule a exceção.
+
+Você pode utilizar a cláusula `finally` para fazer seu script falhar graciosamente quando uma exceção ocorrer; por exemplo, você pode precisar liberar um recurso que seu script possui vinculado. O exemplo seguinte abre um aquivo e então executa declarações que utilizam o arquivo (server-side JavaScript permite que você acesse arquivos). Se uma exceção for lançada enquanto o arquivo estiver aberto, a cláusula `finally` fecha o arquivo antes que o script falhe.
+
+```js
+openMyFile()
 try {
    // vincula o recurso
    writeMyFile(theData);
@@ -143,107 +139,104 @@ try {
 finally {
    closeMyFile(); // sempre fecha o recurso
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Blocos_try_aninhados">Blocos try aninhados</h3>
+### Blocos try aninhados
 
-<p>Primeiro vamos ver o que acontece com isso:</p>
+Primeiro vamos ver o que acontece com isso:
 
-<pre><code><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">"oops"</span><span class="brush: js">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">finally</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"finally"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
-</span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"outer"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">}</span></code>
+    try {
+      try {
+        throw new Error("oops");
+      }
+      finally {
+        console.log("finally");
+      }
+    }
+    catch (ex) {
+      console.error("outer", ex.message);
+    }
 
-// Resultado
-<code><span class="str">// "finally"<span class="pln">
-</span>// "outer"</span><span class="pln"> </span><span class="str">"oops"</span></code></pre>
+    // Resultado
+    // "finally"
+    // "outer" "oops"
 
-<p>Agora, caso nós já capturamos a exceção no bloco <code>try</code> interno adicionando um bloco <code>catch</code></p>
+Agora, caso nós já capturamos a exceção no bloco `try` interno adicionando um bloco `catch`
 
-<pre><code><span class="kwd"><code><span class="kwd">try {
-  try {
-    throw new Error("oops");
-  }
-  catch (ex) {
-    console.error("inner", ex.message);
-  }
-  finally {
-    console.log("finally");
-  }
-}
-catch (ex) {
-  console.error("outer", ex.message);
-}</span></code></span></code>
+    try {
+      try {
+        throw new Error("oops");
+      }
+      catch (ex) {
+        console.error("inner", ex.message);
+      }
+      finally {
+        console.log("finally");
+      }
+    }
+    catch (ex) {
+      console.error("outer", ex.message);
+    }
 
-// Resultado:
-<code><span class="str">// "inner"<span class="pln"> </span>"oops"</span><span class="pln">
-</span><span class="str">// "finally"</span></code></pre>
+    // Resultado:
+    // "inner" "oops"
+    // "finally"
 
-<p>E agora, vamos relançar o erro.</p>
+E agora, vamos relançar o erro.
 
-<pre><code><span class="kwd"><code><span class="kwd"><code><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">"oops"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"inner"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-    </span><span class="kwd">throw</span><span class="pln"> ex</span><span class="pun">;</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  </span><span class="kwd">finally</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"finally"</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
-</span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ex</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"outer"</span><span class="pun">,</span><span class="pln"> ex</span><span class="pun">.</span><span class="pln">message</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">}</span></code></span></code></span>
+    try {
+      try {
+        throw new Error("oops");
+      }
+      catch (ex) {
+        console.error("inner", ex.message);
+        throw ex;
+      }
+      finally {
+        console.log("finally");
+      }
+    }
+    catch (ex) {
+      console.error("outer", ex.message);
+    }
 
-// Resultado:</code>
-<code><span class="str">// "inner"</span><span class="pln"> </span><span class="str">"oops"</span></code>
-<code><span class="str">// "finally"</span></code>
-<code><span class="str">// "outer"</span><span class="pln"> </span><span class="str">"oops"</span></code>
-</pre>
+    // Resultado:
+    // "inner" "oops"
+    // "finally"
+    // "outer" "oops"
 
-<p>Qualquer exceção lançada será capturada apenas uma vez pelo bloco <code>catch</code> envolvente mais próximo, a não ser que seja relançada. Obviamente qualquer nova exceção elevada no bloco "interno" (pois código em um bloco <code>catch</code> pode fazer algo que lance), será capturado pelo bloco "externo".</p>
+Qualquer exceção lançada será capturada apenas uma vez pelo bloco `catch` envolvente mais próximo, a não ser que seja relançada. Obviamente qualquer nova exceção elevada no bloco "interno" (pois código em um bloco `catch` pode fazer algo que lance), será capturado pelo bloco "externo".
 
-<h3 id="Retornando_de_um_bloco_finnaly">Retornando de um bloco <code>finally</code></h3>
+### Retornando de um bloco `finally`
 
-<p>Caso o bloco <code>finally</code> retorne um valor, esse valor torna-se o valor de retorno do produto de <code>try-catch-finally </code>inteiro, independente de qualquer declaração return nos blocos <code>try</code> e <code>catch</code>. Isso inclui exceções lançadas dentro do bloco <code>catch</code>:</p>
+Caso o bloco `finally` retorne um valor, esse valor torna-se o valor de retorno do produto de `try-catch-finally `inteiro, independente de qualquer declaração return nos blocos `try` e `catch`. Isso inclui exceções lançadas dentro do bloco `catch`:
 
-<pre><code>try {
-  try {
-    throw new Error("oops");
-  }
-  catch (ex) {
-    console.error("inner", ex.message);
-    throw ex;
-  }
-  finally {
-    console.log("finally");
-    return;
-  }
-}
-catch (ex) {
-  console.error("outer", ex.message);
-}</code>
+    try {
+      try {
+        throw new Error("oops");
+      }
+      catch (ex) {
+        console.error("inner", ex.message);
+        throw ex;
+      }
+      finally {
+        console.log("finally");
+        return;
+      }
+    }
+    catch (ex) {
+      console.error("outer", ex.message);
+    }
 
-// Resultado:
-// "inner" "oops"
-// "finally"</pre>
+    // Resultado:
+    // "inner" "oops"
+    // "finally"
 
-<p>O "oops" externo não é lançado devido ao retorno do bloco <code>finally</code>. O mesmo se aplicaria a qualquer valor retornado do bloco <code>catch</code>.</p>
+O "oops" externo não é lançado devido ao retorno do bloco `finally`. O mesmo se aplicaria a qualquer valor retornado do bloco `catch`.
 
-<h2 id="See_also" name="See_also">Vejam também</h2>
+## Vejam também
 
-<ul>
- <li><a href="/en/JavaScript/Reference/Statements/throw" title="en/JavaScript/Reference/Statements/throw">throw</a></li>
- <li><a href="/en/JavaScript/Reference/Global_Objects/Error" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error">Error</a></li>
-</ul>
+- [throw](/en/JavaScript/Reference/Statements/throw "en/JavaScript/Reference/Statements/throw")
+- [Error](/en/JavaScript/Reference/Global_Objects/Error "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error")

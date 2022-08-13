@@ -10,17 +10,15 @@ tags:
 translation_of: Glossary/Server
 original_slug: Glossario/Servidor
 ---
-<p>Um servidor hardware é um computador compartilhado em uma rede que provê serviços a clientes. Um servidor software é um programa que provê serviços a programas clientes.</p>
+Um servidor hardware é um computador compartilhado em uma rede que provê serviços a clientes. Um servidor software é um programa que provê serviços a programas clientes.
 
-<p>Os serviços são providos normalmente pela rede local ou por redes remotas. Programas cliente e servidor tradicionalmente se conectam enviando mensagens por meio de um {{glossary("protocolo")}}.</p>
+Os serviços são providos normalmente pela rede local ou por redes remotas. Programas cliente e servidor tradicionalmente se conectam enviando mensagens por meio de um {{glossary("protocolo")}}.
 
-<p>Os servidores mais comuns numa rede local são os de arquivos, nomes, emails, impressoras e fax. Outro exemplo comum de servidor é o de páginas da web conectado à Internet. Os minicomputadores, mainframes e super computadores nas centrais de dados também são servidores.</p>
+Os servidores mais comuns numa rede local são os de arquivos, nomes, emails, impressoras e fax. Outro exemplo comum de servidor é o de páginas da web conectado à Internet. Os minicomputadores, mainframes e super computadores nas centrais de dados também são servidores.
 
-<h2 id="Aprenda_mais"><strong>Aprenda mais</strong></h2>
+## Aprenda mais
 
-<h3 id="Conhecimentos_Gerais">Conhecimentos Gerais</h3>
+### Conhecimentos Gerais
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/Learn/What_is_a_web_server">Introdução aos servidores</a></li>
- <li>{{Interwiki("wikipedia", "Servidor")}} na Wikipedia</li>
-</ul>
+- [Introdução aos servidores](https://developer.mozilla.org/en-US/Learn/What_is_a_web_server)
+- {{Interwiki("wikipedia", "Servidor")}} na Wikipedia

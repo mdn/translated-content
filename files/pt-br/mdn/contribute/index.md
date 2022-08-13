@@ -7,14 +7,12 @@ tags:
   - Página de destino
 translation_of: MDN/Contribute
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/pt-BR/docs/MDN")}}
 
-<div>{{IncludeSubnav("/pt-BR/docs/MDN")}}</div>
+Bem-vindo! Ao visitar esta página, você deu o primeiro passo para se tornar um colaborador da MDN.
 
-<p>Bem-vindo! Ao visitar esta página, você deu o primeiro passo para se tornar um colaborador da MDN.</p>
+Os guias listados aqui cobrem todos os aspectos de contribuição para a MDN, incluindo guias de estilo, guia de utilização do nosso editor e ferramentas e muito mais. Por favor, assegure-se de ler (e estar em conformidade) com os [Termos da Mozilla](https://www.mozilla.org/en-US/about/legal/terms/mozilla/) antes de editar ou criar qualquer página.
 
-<p><span class="seoSummary">Os guias listados aqui cobrem todos os aspectos de contribuição para a MDN, incluindo guias de estilo, guia de utilização do nosso editor e ferramentas e muito mais. Por favor, assegure-se de ler (e estar em conformidade) com os <a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/">Termos da Mozilla</a> antes de editar ou criar qualquer página.</span></p>
+Se você não contribuiu com a MDN anteriormente, o guia de [primeiros passos](/pt-BR/docs/MDN/Primeiros_Passos) pode lhe ajudar a selecionar uma tarefa para começar a ajudar.
 
-<p>Se você não contribuiu com a MDN anteriormente, o guia de <a href="https://developer.mozilla.org/pt-BR/docs/MDN/Primeiros_Passos">primeiros passos</a> pode lhe ajudar a selecionar uma tarefa para começar a ajudar.</p>
-
-<p>{{LandingPageListSubPages()}}</p>
+{{LandingPageListSubPages()}}

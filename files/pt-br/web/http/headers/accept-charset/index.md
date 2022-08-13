@@ -13,84 +13,55 @@ tags:
   - Request header
 translation_of: Web/HTTP/Headers/Accept-Charset
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">O cabeçalho de requisição HTTP <strong><code>Accept-Charset</code></strong> anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende.</span> Usando <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociação de conteúdo</a>, o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro <code>charset=</code>. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir <a href="/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection">fingerprinting</a>.</p>
+O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro `charset=`. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir [fingerprinting](/pt-BR/docs/Mozilla/Firefox/Privacy/Tracking_Protection).
 
-<p>Se o servidor não pode servir nenhum codificação de caracteres vindo deste cabeçalho de requisição, ele pode teoricamente manda de volta um código de erro {{HTTPStatus("406", "406 Not Acceptable")}}. Mas para uma melhor experiência de usuário, isso raramente é feito e o cabeçalho <code>Accept-Charset</code> é ignorado.</p>
+Se o servidor não pode servir nenhum codificação de caracteres vindo deste cabeçalho de requisição, ele pode teoricamente manda de volta um código de erro {{HTTPStatus("406", "406 Not Acceptable")}}. Mas para uma melhor experiência de usuário, isso raramente é feito e o cabeçalho `Accept-Charset` é ignorado.
 
-<div class="note">
-<p>Nas versões mais antigas do HTTP/1.1, a codificação de caracteres definida era: ISO-8859-1. Isto não é mais recomendado, e agora todo tipo de conteúdo tem o seu próprio padrão.</p>
-O UTF-8 é agora muito bem suportado e extremamente recomendado como codificação de caracteres preferida. Para <a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">garantir melhor privacidade e através de menor entropia com base em configuração</a>, todos os navegadores omitem o cabeçalho <code>Accept-Charset</code>: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ e Chrome 27+ não o enviam mais.</div>
+> **Note:** Nas versões mais antigas do HTTP/1.1, a codificação de caracteres definida era: ISO-8859-1. Isto não é mais recomendado, e agora todo tipo de conteúdo tem o seu próprio padrão.O UTF-8 é agora muito bem suportado e extremamente recomendado como codificação de caracteres preferida. Para [garantir melhor privacidade e através de menor entropia com base em configuração](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), todos os navegadores omitem o cabeçalho `Accept-Charset`: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ e Chrome 27+ não o enviam mais.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Accept-Charset: &lt;charset&gt;
+    Accept-Charset: <charset>
 
-// Múltiplos tipos, com pesos baseados na sintaxe de {{glossary("quality values", "quality value")}}:
-Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
+    // Múltiplos tipos, com pesos baseados na sintaxe de {{glossary("quality values", "quality value")}}:
+    Accept-Charset: utf-8, iso-8859-1;q=0.5
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code><var>&lt;charset&gt;</var></code></dt>
- <dd>O nome da codificação de caracteres, como <code>utf-8</code> ou <code>iso-8859-15.</code></dd>
- <dt><code>*</code></dt>
- <dd>Qualquer codificação de caracteres não mencionada em qualquer lugar no cabeçalho; <code>*</code> é usado como coringa.</dd>
- <dt><code>;q=<var>&lt;weight&gt;</var></code></dt>
- <dd>Qualquer codificação de caracteres é colocado na ordem de preferência, expresso usando um {{glossary("quality values", "quality value")}} relativo chamado de <em>peso</em>.</dd>
-</dl>
+- `<charset>`
+  - : O nome da codificação de caracteres, como `utf-8` ou `iso-8859-15.`
+- `*`
+  - : Qualquer codificação de caracteres não mencionada em qualquer lugar no cabeçalho; `*` é usado como coringa.
+- `;q=<weight>`
+  - : Qualquer codificação de caracteres é colocado na ordem de preferência, expresso usando um {{glossary("quality values", "quality value")}} relativo chamado de _peso_.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Accept-Charset: iso-8859-1
+    Accept-Charset: iso-8859-1
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5
+    Accept-Charset: utf-8, iso-8859-1;q=0.5
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
-</pre>
+    Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "Accept-Charset", "5.3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Accept-Charset", "5.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.Accept-Charset")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.Accept-Charset")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Content_negotiation">Negociação de conteúdo</a> HTTP</li>
- <li><a href="https://hsivonen.fi/accept-charset/">Nunca mais Accept-Charset</a></li>
- <li>Cabeçalho com a resposta do conteúdo de negociação: {{HTTPHeader("Content-Type")}}</li>
- <li>Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}</li>
-</ul>
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
+- [Nunca mais Accept-Charset](https://hsivonen.fi/accept-charset/)
+- Cabeçalho com a resposta do conteúdo de negociação: {{HTTPHeader("Content-Type")}}
+- Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

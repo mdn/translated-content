@@ -10,27 +10,25 @@ tags:
 translation_of: Web/API/BatteryManager/onchargingtimechange
 original_slug: Web/API/BatteryManager/onchargingtimechange
 ---
-<p>{{APIRef("Battery API")}}</p>
+{{APIRef("Battery API")}}
 
-<p>Especifica um <em>event listener</em> para receber eventos {{event("chargingtimechange")}}. Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.chargingTime","chargingTime")}} (tempo de carregamento) da bateria é atualizada.</p>
+Especifica um _event listener_ para receber eventos {{event("chargingtimechange")}}. Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.chargingTime","chargingTime")}} (tempo de carregamento) da bateria é atualizada.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">navigator.battery.onchargingtimechange = funcRef</pre>
+    navigator.battery.onchargingtimechange = funcRef
 
-<p>Onde <code><em>funcRef</em></code> é uma função para ser chamada quando o evento {{event("chargingtimechange")}} ocorre.</p>
+Onde `funcRef` é uma função para ser chamada quando o evento {{event("chargingtimechange")}} ocorre.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.battery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.battery")}}

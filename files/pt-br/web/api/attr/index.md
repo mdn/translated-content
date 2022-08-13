@@ -8,125 +8,102 @@ tags:
   - JavaScript
 translation_of: Web/API/Attr
 ---
-<p>{{APIRef("DOM")}}<br>
- Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos métodos DOM, você provavelmente irá retornar diretamente o atributo como uma string (e.g., {{domxref("Element.getAttribute()")}}, mas certas funções (e.g., {{domxref("Element.getAttributeNode()")}}) ou meios de iteração retornam tipos <code>Attr</code>.</p>
+{{APIRef("DOM")}}
+Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos métodos DOM, você provavelmente irá retornar diretamente o atributo como uma string (e.g., {{domxref("Element.getAttribute()")}}, mas certas funções (e.g., {{domxref("Element.getAttributeNode()")}}) ou meios de iteração retornam tipos `Attr`.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<div class="warning"><strong>Aviso:</strong> Começando no Gecko 7.0 {{geckoRelease("7.0")}}, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Attr$edit#Deprecated_properties_and_methods">métodos e propriedades descontinuadas</a> para uma lista completa.</div>
+> **Warning:** **Aviso:** Começando no Gecko 7.0 {{geckoRelease("7.0")}}, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](/pt-BR/docs/Web/API/Attr$edit#Deprecated_properties_and_methods) para uma lista completa.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p> </p>
+- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
 
-<dl>
- <dt>{{domxref("Attr.name", "name")}} {{readOnlyInline}}</dt>
- <dd>O nome do Atributo.</dd>
-</dl>
+  - : O nome do Atributo.
 
-<p> </p>
+- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
+  - : Uma {{domxref("DOMString")}} representando o namespace URI do atributo, ou `null` se não há namespace
+- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
+  - : Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
+- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
+  - : Uma {{domxref("DOMString")}} representando o prefixo do namespace do atributo ou `null` se nenhum prefixo foi especificado.
+- {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
+  - : O elemento que possui o atributo.
 
-<p> </p>
+> **Note:** **Nota:** DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto `Attr` de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.
+> Como isto não é sempre verdadeiro em casos como objetos `Attr` sendo retornados pelo {{domxref("Document.evaluate")}}, o DOM Living Standard reintroduziu a propriedade.Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0 {{geckoRelease("7.0")}}. Esta mensagem foi removida novamente no Gecko 49.0 {{geckoRelease("49.0")}}.
 
-<dl>
- <dt>{{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}</dt>
- <dd>Uma {{domxref("DOMString")}} representando o namespace URI do atributo, ou <code>null</code> se não há namespace</dd>
- <dt>{{domxref("Attr.localName", "localName")}} {{readOnlyInline}}</dt>
- <dd>Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.</dd>
- <dt>{{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}</dt>
- <dd>Uma {{domxref("DOMString")}} representando o prefixo do namespace do atributo ou <code>null</code> se nenhum prefixo foi especificado.</dd>
- <dt>{{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}</dt>
- <dd>
- <p>O elemento que possui o atributo.</p>
- </dd>
-</dl>
+## Propriedades e métodos descontinuados
 
-<p> </p>
+As seguintes propriedades e métodos foram descontinuados. Quando disponíveis, são substituidas adequadamente.
 
-<div class="note">
-<p><strong>Nota:</strong> DOM Level 4 removeu esta propriedade. Foi suposto que como você recebe um objeto <code>Attr</code> de um {{domxref("Element")}}, você já deve saber qual é o elemento associado.<br>
- Como isto não é sempre verdadeiro em casos como objetos <code>Attr</code> sendo retornados pelo {{domxref("Document.evaluate")}}, o DOM Living Standard reintroduziu a propriedade.</p>
+- `attributes`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `childNodes`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `firstChild`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `lastChild`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `nextSibling`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `nodeName`
+  - : Use {{domxref("Attr.name")}} no lugar.
+- `nodeType`
+  - : Esta propriedade agora sempre retorna 2 (`ATTRIBUTE_NODE`).
+- `nodeValue`
+  - : Use {{domxref("Attr.value")}} no lugar.
+- `ownerDocument`
+  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
+- `ownerElement`
+  - : Desde que você obtenha o objeto `Attr` de um {{domxref("Element")}}, você já conhece os elementos associados.
+- `parentNode`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `previousSibling`
+  - : Esta propriedade agora sempre retorna `NULL`.
+- `specified`
+  - : Esta propriedade agora sempre retorna `true`.
+- `textContent`
+  - : Use {{domxref("Attr.value")}} no lugar.
 
-<p>Gecko mostra uma mensagem de descontinuação começando no Gecko 7.0 {{geckoRelease("7.0")}}. Esta mensagem foi removida novamente no Gecko 49.0 {{geckoRelease("49.0")}}.</p>
-</div>
+Os seguintes métodos foram reprovados:
 
-<h2 id="Propriedades_e_métodos_descontinuados">Propriedades e métodos descontinuados</h2>
+- `appendChild()`
+  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
+- `cloneNode()`
+  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
+- `createAttribute()`
+  - : Use {{domxref("Element.setAttribute()")}} no lugar.
+- `createAttributeNS()`
+  - : Use {{domxref("Element.setAttributeNS()")}} no lugar.
+- `getAttributeNode()`
+  - : Use {{domxref("Element.getAttribute()")}} no lugar.
+- `getAttributeNodeNS()`
+  - : Use {{domxref("Element.getAttributeNS()")}} no lugar.
+- `hasAttributes() `{{obsolete_inline("21.0")}}
+  - : Este método agora sempre retorna false.
+- `hasChildNodes()`
+  - : Este método agora sempre retorna false.
+- `insertBefore()`
+  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
+- `isSupported()`
+  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
+- `isEqualNode()`
+  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
+- `normalize()`
+  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
+- `removeAttributeNode()`
+  - : Use {{domxref("Element.removeAttribute()")}} no lugar.
+- `removeChild()`
+  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
+- `replaceChild()`
+  - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
+- `setAttributeNode()`
+  - : Use {{domxref("Element.setAttribute()")}} no lugar.
+- `setAttributeNodeNS()`
+  - : Use {{domxref("Element.setAttributeNS()")}} no lugar.
 
-<p>As seguintes propriedades e métodos foram descontinuados. Quando disponíveis, são substituidas adequadamente.</p>
+## Especificações
 
-<dl>
- <dt><code>attributes</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>childNodes</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>firstChild</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>lastChild</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>nextSibling</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>nodeName</code></dt>
- <dd>Use {{domxref("Attr.name")}} no lugar.</dd>
- <dt><code>nodeType</code></dt>
- <dd>Esta propriedade agora sempre retorna 2 (<code>ATTRIBUTE_NODE</code>).</dd>
- <dt><code>nodeValue</code></dt>
- <dd>Use {{domxref("Attr.value")}} no lugar.</dd>
- <dt><code>ownerDocument</code></dt>
- <dd>Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.</dd>
- <dt><code>ownerElement</code></dt>
- <dd>Desde que você obtenha o objeto <code>Attr</code> de um {{domxref("Element")}}, você já conhece os elementos associados.</dd>
- <dt><code>parentNode</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>previousSibling</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>NULL</code>.</dd>
- <dt><code>specified</code></dt>
- <dd>Esta propriedade agora sempre retorna <code>true</code>.</dd>
- <dt><code>textContent</code></dt>
- <dd>Use {{domxref("Attr.value")}} no lugar.</dd>
-</dl>
-
-<p>Os seguintes métodos foram reprovados:</p>
-
-<dl>
- <dt><code>appendChild()</code></dt>
- <dd>Modifique o valor de {{domxref("Attr.value")}} no lugar.</dd>
- <dt><code>cloneNode()</code></dt>
- <dd>Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.</dd>
- <dt><code>createAttribute()</code></dt>
- <dd>Use {{domxref("Element.setAttribute()")}} no lugar.</dd>
- <dt><code>createAttributeNS()</code></dt>
- <dd>Use {{domxref("Element.setAttributeNS()")}} no lugar.</dd>
- <dt><code>getAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.getAttribute()")}} no lugar.</dd>
- <dt><code>getAttributeNodeNS()</code></dt>
- <dd>Use {{domxref("Element.getAttributeNS()")}} no lugar.</dd>
- <dt><code>hasAttributes() </code>{{obsolete_inline("21.0")}}</dt>
- <dd>Este método agora sempre retorna false.</dd>
- <dt><code>hasChildNodes()</code></dt>
- <dd>Este método agora sempre retorna false.</dd>
- <dt><code>insertBefore()</code></dt>
- <dd>Modifique o valor de  {{domxref("Attr.value")}} no lugar.</dd>
- <dt><code>isSupported()</code></dt>
- <dd>Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.</dd>
- <dt><code>isEqualNode()</code></dt>
- <dd>Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.</dd>
- <dt><code>normalize()</code></dt>
- <dd>Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.</dd>
- <dt><code>removeAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.removeAttribute()")}} no lugar.</dd>
- <dt><code>removeChild()</code></dt>
- <dd>Modifique o valor de {{domxref("Attr.value")}} no lugar.</dd>
- <dt><code>replaceChild()</code></dt>
- <dd>Modifique o valor de {{domxref("Attr.value")}} no lugar.</dd>
- <dt><code>setAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.setAttribute()")}} no lugar.</dd>
- <dt><code>setAttributeNodeNS()</code></dt>
- <dd>Use {{domxref("Element.setAttributeNS()")}} no lugar.</dd>
-</dl>
-
-<h2 id="Especificações">Especificações</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024">Document Object Model Core level 3: Interface Attr</a></li>
- <li><a class="external" href="http://www.w3.org/TR/dom/#interface-attr">Document Object Model 4: Interface Attr</a></li>
-</ul>
+- [Document Object Model Core level 3: Interface Attr](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024)
+- [Document Object Model 4: Interface Attr](http://www.w3.org/TR/dom/#interface-attr)

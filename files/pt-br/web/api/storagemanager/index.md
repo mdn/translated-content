@@ -14,38 +14,25 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
-<p><strong><code>StorageManager</code></strong> é uma inteface da <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.</p>
+**`StorageManager`** é uma inteface da [Storage API](/pt-BR/docs/Web/API/Storage_API) que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("StorageManager.estimate()")}} {{securecontext_inline}}</dt>
- <dd>Retorna um objeto {{domxref("StorageEstimate")}} contendo números de uso e cota para sua origem.</dd>
- <dt>{{domxref("StorageManager.persist()")}} {{securecontext_inline}}</dt>
- <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se o agente de usuário for capaz de gravar o armazenamento do seu site.</dd>
- <dt>{{domxref("StorageManager.persisted()")}} {{securecontext_inline}}</dt>
- <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se alguma gravação já foi concedida para o armazenamento do seu site.</dd>
-</dl>
+- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
+  - : Retorna um objeto {{domxref("StorageEstimate")}} contendo números de uso e cota para sua origem.
+- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
+  - : Retorna uma {{jsxref('Promise')}} que resolve como `true` se o agente de usuário for capaz de gravar o armazenamento do seu site.
+- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
+  - : Retorna uma {{jsxref('Promise')}} que resolve como `true` se alguma gravação já foi concedida para o armazenamento do seu site.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Storage','#storagemanager','StorageManger')}}</td>
-   <td>{{Spec2('Storage')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.StorageManager")}}</p>
+{{Compat("api.StorageManager")}}

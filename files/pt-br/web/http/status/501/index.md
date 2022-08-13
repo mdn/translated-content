@@ -3,42 +3,26 @@ title: 501 Not Implemented
 slug: Web/HTTP/Status/501
 translation_of: Web/HTTP/Status/501
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta HTTP <code><strong>501 Not Implemented</strong></code> indica que o servidor não suporta a funcionalidade requerida para completar a requisição. Esta é a resposta apropriada para quando o servidor não reconhece o método requisitado e não tem capacidade de suporta-lo  para nenhum recurso. Os únicos métodos de requisição que os servidores suportam obrigatóriamente ( e, portanto, isso não deve retornar este código) são {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}.</p>
+O código de resposta HTTP **`501 Not Implemented`** indica que o servidor não suporta a funcionalidade requerida para completar a requisição. Esta é a resposta apropriada para quando o servidor não reconhece o método requisitado e não tem capacidade de suporta-lo para nenhum recurso. Os únicos métodos de requisição que os servidores suportam obrigatóriamente ( e, portanto, isso não deve retornar este código) são {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}.
 
-<div class="note">
-<p><strong>Notas:</strong></p>
+> **Note:** **Notas:\*** A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.
+>
+> - Uma resposta 501 é cacheada por padrão, ou seja, a menos que os cabeçalhos de cache indiquem outra forma.
 
-<ul>
- <li>A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.</li>
- <li>Uma resposta 501 é cacheada por padrão, ou seja, a menos que os cabeçalhos de cache indiquem outra forma.</li>
-</ul>
-</div>
+## Status
 
-<h2 id="Status">Status</h2>
+    501 Not Implemented
 
-<pre class="syntaxbox">501 Not Implemented</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                    | Título                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "501 Not Implemented" , "6.6.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "501 Not Implemented" , "6.6.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-<p>The information shown below has been pulled from MDN's GitHub (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
-
-<p>{{Compat("http.status.501")}}</p>
+{{Compat("http.status.501")}}

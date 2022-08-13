@@ -12,61 +12,49 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>setUTCMilliseconds()</code></strong> atribui os milissegundos para a data especificada de acordo com o horário universal.</p>
+O método **`setUTCMilliseconds()`** atribui os milissegundos para a data especificada de acordo com o horário universal.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}
 
+## Sintaxe
 
+    dateObj.setUTCMilliseconds(millisecondsValue)
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setUTCMilliseconds(<var>millisecondsValue</var>)</code></pre>
+- `millisecondsValue`
+  - : Um número entre 0 e 999, representando os milissegundos.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>millisecondsValue</code></dt>
- <dd>Um número entre 0 e 999, representando os milissegundos.</dd>
-</dl>
+O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.</p>
+Se o parâmetro que você especificou estiver fora do alcance esperado, `setUTCMilliseconds()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 1100 para `millisecondsValue`, os segundos guardados no objeto {{jsxref("Date")}} serão incrementados em 1, e 100 serão usados para os milissegundos.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Se o parâmetro que você especificou estiver fora do alcance esperado, <code>setUTCMilliseconds()</code> tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 1100 para <code>millisecondsValue</code>, os segundos guardados no objeto {{jsxref("Date")}} serão incrementados em 1, e 100 serão usados para os milissegundos.</p>
+### Usando `setUTCMilliseconds()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setUTCMilliseconds">Usando <code>setUTCMilliseconds()</code></h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCMilliseconds(500);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setUTCMilliseconds")}}</p>
+{{Compat("javascript.builtins.Date.setUTCMilliseconds")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

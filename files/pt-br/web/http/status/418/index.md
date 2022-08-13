@@ -3,37 +3,24 @@ title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
 translation_of: Web/HTTP/Status/418
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de erro HTTP para o cliente <strong><code>418 I'm a teapot</code></strong> indica que o servidor se recusa a preparar café por ser um bule de chá. Este erro é uma referência ao <em lang="en">Hyper Text Coffee Pot Control Protocol</em>, que foi uma piada de 1º de abril de 1998.</p>
+O código de erro HTTP para o cliente **`418 I'm a teapot`** indica que o servidor se recusa a preparar café por ser um bule de chá. Este erro é uma referência ao _Hyper Text Coffee Pot Control Protocol_, que foi uma piada de 1º de abril de 1998.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">418 I'm a teapot</pre>
+    418 I'm a teapot
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("2324", "418 I'm a teapot" , "2.3.2")}}</td>
-   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                                                     |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.418")}}</p>
+{{Compat("http.status.418")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}</li>
-</ul>
+- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}

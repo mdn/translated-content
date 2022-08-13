@@ -8,51 +8,34 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Accept-CH
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>O cabeçalho <code><strong>Accept-CH</strong></code> é colocado pelo servidor para especificar quais cabeçalhos <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> o cliente deve incluir nas requisições subsequentes.</p>
+O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) o cliente deve incluir nas requisições subsequentes.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.</p>
-</div>
+> **Note:** **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Accept-CH: &lt;lista de client hints&gt;
-</pre>
+    Accept-CH: <lista de client hints>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Accept-CH: DPR, Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
-Vary: DPR, Viewport-Width, Width
-</pre>
+    Accept-CH: DPR, Viewport-Width
+    Accept-CH: Width
+    Accept-CH-Lifetime: 86400
+    Vary: DPR, Viewport-Width, Width
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Lembre de <a href="https://developer.mozilla.org/en-US/docs/Glossary/Client_hints#Varying_Client_Hints">variar a resposta</a> baseado nos client hints aceitos.</p>
-</div>
+> **Note:** **Nota:** Lembre de [variar a resposta](/pt-BR/docs/Glossary/Client_hints#Varying_Client_Hints) baseado nos client hints aceitos.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Accept-CH")}}</p>
+{{Compat("http.headers.Accept-CH")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Accept-CH-Lifetime")}}
+- {{HTTPHeader("Vary")}}

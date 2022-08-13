@@ -9,61 +9,52 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code><strong>blink()</strong></code> cria um elemento HTML <a href="/pt-BR/docs/Web/HTML/Element/blink">&lt;blink&gt;</a> que faz uma string piscar.</p>
+O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.
 
-<div class="warning">
-<p><strong>Aviso:</strong> A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento <code>&lt;blink&gt;</code> não é padrão e está obsoleto!</p>
-</div>
+> **Warning:** **Aviso:** A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.blink()</code></pre>
+    str.blink()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <a href="/pt-BR/docs/Web/HTML/Element/blink">&lt;blink&gt;</a>.</p>
+Uma string contendo um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>blink()</code> cria uma string dentro de uma tag <code>&lt;blink&gt;</code>:<br>
- <code>"&lt;blink&gt;str&lt;/blink&gt;"</code>.</p>
+O método `blink()` cria uma string dentro de uma tag `<blink>`:
+`"<blink>str</blink>"`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_blink">Usando <code>blink()</code></h3>
+### Usando `blink()`
 
-<p>Os exemplos abaixo usam métodos do objeto <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings" title="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings">String </a>para alterar a formatação de uma string:</p>
+Os exemplos abaixo usam métodos do objeto [String ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings)para alterar a formatação de uma string:
 
-<pre class="brush: js notranslate">var worldString = 'Olá, mundo';
+```js
+var worldString = 'Olá, mundo';
 
-console.log(worldString.blink());   // &lt;blink&gt;Olá, mundo&lt;/blink&gt;
-console.log(worldString.bold());    // &lt;b&gt;Olá, mundo&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Olá, mundo&lt;/i&gt;
-console.log(worldString.strike());  // &lt;strike&gt;Olá, mundo&lt;/strike&gt;</pre>
+console.log(worldString.blink());   // <blink>Olá, mundo</blink>
+console.log(worldString.bold());    // <b>Olá, mundo</b>
+console.log(worldString.italics()); // <i>Olá, mundo</i>
+console.log(worldString.strike());  // <strike>Olá, mundo</strike>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.blink")}}</p>
+{{Compat("javascript.builtins.String.blink")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

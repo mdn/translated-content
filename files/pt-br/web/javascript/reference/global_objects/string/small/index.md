@@ -11,60 +11,53 @@ tags:
   - small()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/small
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code>small()</code> cria um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/small">&lt;small&gt;</a></code> que faz com que uma string seja exibida em uma fonte pequena.</p>
+O método `small()` cria um elemento HTML [`<small>`](/en-US/docs/Web/HTML/Element/small) que faz com que uma string seja exibida em uma fonte pequena.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.small()</code></pre>
+    str.small()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/small">&lt;small&gt;</a></code>.</p>
+Uma string contendo um elemento HTML [`<small>`](/en-US/docs/Web/HTML/Element/small).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>small()</code> cria uma string dentro de uma tag <code>&lt;small&gt;</code>: <code>"&lt;small&gt;str&lt;/small&gt;"</code>.</p>
+O método `small()` cria uma string dentro de uma tag `<small>`: `"<small>str</small>"`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_small">Usando <code>small()</code></h3>
+### Usando `small()`
 
-<p>O exemplo a seguir usa métodos do objeto global String para alterar o tamanho da string:</p>
+O exemplo a seguir usa métodos do objeto global String para alterar o tamanho da string:
 
-<pre class="brush: js notranslate">var worldString = 'Olá, mundo';
+```js
+var worldString = 'Olá, mundo';
 
-console.log(worldString.small());     // &lt;small&gt;Olá, mundo&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Olá, mundo&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Olá, mundo&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Olá, mundo</small>
+console.log(worldString.big());       // <big>Olá, mundo</big>
+console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
+```
 
-<p>Com o objeto <a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style</a> você pode pegar o atributo de estilo do elemento e manipulá-lo de forma mais genérica, por exemplo:</p>
+Com o objeto [element.style](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode pegar o atributo de estilo do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
-<pre class="brush: js notranslate">document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.small', 'String.prototype.small')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.small', 'String.prototype.small')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.small")}}</p>
+{{Compat("javascript.builtins.String.small")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.fontsize()")}}</li>
- <li>{{jsxref("String.prototype.big()")}}</li>
-</ul>
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.big()")}}

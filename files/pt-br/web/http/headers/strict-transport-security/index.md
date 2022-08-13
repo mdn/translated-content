@@ -9,112 +9,77 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong>HTTP <code>Strict-Transport-Security</code></strong> (geralmente abreviado como {{Glossary("HSTS")}}) permite que um site informe aos navegadores que ele deve ser acessado apenas por HTTPS, em vez de usar HTTP.</p>
+O cabeçalho de resposta **HTTP `Strict-Transport-Security`** (geralmente abreviado como {{Glossary("HSTS")}}) permite que um site informe aos navegadores que ele deve ser acessado apenas por HTTPS, em vez de usar HTTP.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de Cabeçalho</th>
-   <td>{{Glossary("Cabeçalho de Resposta")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Nome do cabeçalho proibido")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de Cabeçalho                                        | {{Glossary("Cabeçalho de Resposta")}} |
+| -------------------------------------------------------- | ---------------------------------------------------- |
+| {{Glossary("Nome do cabeçalho proibido")}} | não                                                  |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Strict-Transport-Security: max-age=&lt;expire-time&gt;
-Strict-Transport-Security: max-age=&lt;expire-time&gt;; includeSubDomains
-Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
-</pre>
+    Strict-Transport-Security: max-age=<expire-time>
+    Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
+    Strict-Transport-Security: max-age=<expire-time>; preload
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>max-age=&lt;expire-time&gt;</code></dt>
- <dd>O tempo, em segundos, que o navegador deve lembrar que um site só pode ser acessado usando HTTPS.</dd>
- <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
- <dd>Se este parâmetro opcional for especificado, esta regra também será aplicada a todos os subdomínios do site.</dd>
- <dt><code>preload</code> {{optional_inline}}</dt>
- <dd>Consulte <a href="#preloading_strict_transport_security">Preloading Strict Transport Security</a> <font>para detalhes. </font><font>Não faz parte da especificação.</font></dd>
-</dl>
+- `max-age=<expire-time>`
+  - : O tempo, em segundos, que o navegador deve lembrar que um site só pode ser acessado usando HTTPS.
+- `includeSubDomains` {{optional_inline}}
+  - : Se este parâmetro opcional for especificado, esta regra também será aplicada a todos os subdomínios do site.
+- `preload` {{optional_inline}}
+  - : Consulte [Preloading Strict Transport Security](#preloading_strict_transport_security) para detalhes. Não faz parte da especificação.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><font>Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os visitantes poderão se comunicar inicialmente com a versão não criptografada do site antes de serem redirecionados, se, por exemplo, o visitante digitar http://www.foo.com/ ou até mesmo apenas foo.com </font><font>Isso cria uma oportunidade para um ataque man-in-the-middle. </font><font>O redirecionamento pode ser explorado para direcionar os visitantes a um site mal-intencionado em vez da versão segura do site original.</font></p>
+Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os visitantes poderão se comunicar inicialmente com a versão não criptografada do site antes de serem redirecionados, se, por exemplo, o visitante digitar http\://www\.foo.com/ ou até mesmo apenas foo.com Isso cria uma oportunidade para um ataque man-in-the-middle. O redirecionamento pode ser explorado para direcionar os visitantes a um site mal-intencionado em vez da versão segura do site original.
 
-<p>O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.</p>
+O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.
 
-<div class="note"><strong>Nota:</strong> O cabeçalho <code>Strict-Transport-Security</code> <font><font>é </font></font><strong><font><font>ignorado</font></font></strong><font><font> pelo navegador quando seu site é acessado usando HTTP; </font><font>isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. </font><font>Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o </font></font><code>Strict-Transport-Security</code><font><font>cabeçalho.</font></font></div>
+> **Note:** **Nota:** O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
 
-<h3 id="Um_cenário_de_exemplo"><font><font>Um cenário de exemplo</font></font></h3>
+### Um cenário de exemplo
 
-<p> </p>
+Você faz login em um ponto de acesso Wi-Fi gratuito em um aeroporto e começa a navegar na Web, visitando seu serviço bancário on-line para verificar seu saldo e pagar algumas contas. Infelizmente, o ponto de acesso que você está usando é, na verdade, o laptop de um hacker, e ele está interceptando sua solicitação HTTP original e redirecionando você para um clone do site do seu banco, em vez do real. Agora seus dados privados são expostos ao hacker.
 
-<p><font><font>Você faz login em um ponto de acesso Wi-Fi gratuito em um aeroporto e começa a navegar na Web, visitando seu serviço bancário on-line para verificar seu saldo e pagar algumas contas. </font><font>Infelizmente, o ponto de acesso que você está usando é, na verdade, o laptop de um hacker, e ele está interceptando sua solicitação HTTP original e redirecionando você para um clone do site do seu banco, em vez do real. </font><font>Agora seus dados privados são expostos ao hacker.</font></font></p>
+Segurança de Transporte Estrito (Strict Transport Security) resolve esse problema; desde que você tenha acessado o site do seu banco uma vez usando HTTPS, e o site do banco use o Strict Transport Security, seu navegador saberá usar automaticamente apenas HTTPS, o que impede que os hackers realizem um ataque man-in-the-middle.
 
-<p><font><font>Segurança de Transporte Estrito (</font></font>Strict Transport Security<font><font>) resolve esse problema; d</font><font>esde que você tenha acessado o site do seu banco uma vez usando HTTPS, e o site do banco use o Strict Transport Security, seu navegador saberá usar automaticamente apenas HTTPS, o que impede que os hackers realizem um ataque man-in-the-middle.</font></font></p>
+### Como o navegador lida com isso
 
-<p> </p>
+Na primeira vez em que seu site é acessado usando HTTPS e retorna o cabeçalho `Strict-Transport-Security`, o navegador registra essas informações, para que futuras tentativas de carregar o site usando HTTP usem o HTTPS automaticamente.
 
-<h3 id="Como_o_navegador_lida_com_isso"><font><font> Como o navegador lida com isso</font></font></h3>
+Quando o tempo de expiração especificado pelo cabeçalho Strict-Transport-Security expirar, a próxima tentativa de carregar o site via HTTP prosseguirá normalmente, em vez de usar automaticamente o HTTPS.
 
-<p> </p>
+Sempre que o cabeçalho Strict-Transport-Security for entregue ao navegador, ele atualizará o tempo de expiração desse site, para que os sites possam atualizar essas informações e impedir que o tempo limite expire. Caso seja necessário desativar a Segurança de Transporte Restrita, a configuração da duração máxima para 0 (através de uma conexão https) expirará imediatamente o cabeçalho `Strict-Transport-Security`, permitindo o acesso via http.
 
-<p><font><font>Na primeira vez em que seu site é acessado usando HTTPS e retorna o cabeçalho </font></font><code>Strict-Transport-Security</code><font><font>, o navegador registra essas informações, para que futuras tentativas de carregar o site usando HTTP usem o HTTPS automaticamente.</font></font></p>
+## Pré-Carregamento - Strict Transport Security
 
-<p><font><font>Quando o tempo de expiração especificado pelo cabeçalho Strict-Transport-Security expirar, a próxima tentativa de carregar o site via HTTP prosseguirá normalmente, em vez de usar automaticamente o HTTPS.</font></font></p>
+O Google mantém [um serviço de pré-carregamento de HSTS](https://hstspreload.appspot.com/). Ao seguir as diretrizes e enviar seu domínio com sucesso, os navegadores nunca se conectarão ao seu domínio usando uma conexão insegura. Enquanto o serviço é hospedado pelo Google, todos os navegadores declararam a intenção de usar (ou de fato começaram a usar) a lista de pré-carregamento. No entanto, não faz parte da especificação da HSTS e não deve ser tratada como oficial.
 
-<p><font><font>Sempre que o cabeçalho Strict-Transport-Security for entregue ao navegador, ele atualizará o tempo de expiração desse site, para que os sites possam atualizar essas informações e impedir que o tempo limite expire. </font><font>Caso seja necessário desativar a Segurança de Transporte Restrita, a configuração da duração máxima para 0 (através de uma conexão https) expirará imediatamente o cabeçalho </font></font><code>Strict-Transport-Security</code><font><font>, permitindo o acesso via http.</font></font></p>
+- Informações sobre a lista de pré-carregamento de HSTS no Chrome: <https://www.chromium.org/hsts>
+- Consulta da lista de pré-carregamento do Firefox HSTS: [nsSTSPreloadList.inc](https://dxr.mozilla.org/comm-central/source/mozilla/security/manager/ssl/nsSTSPreloadList.inc)
 
-<p> </p>
+## Exemplos
 
-<h2 id="Pré-Carregamento_-_Strict_Transport_Security">Pré-Carregamento - Strict Transport Security</h2>
+Todos os subdomínios presentes e futuros serão HTTPS para uma idade máxima de 1 ano. Isso bloqueia o acesso a páginas ou subdomínios que só podem ser veiculados por HTTP.
 
-<p><font><font>O Google mantém </font></font><a href="https://hstspreload.appspot.com/" rel="noopener"><font><font>um serviço de pré-carregamento de HSTS</font></font></a><font><font>. </font><font>Ao seguir as diretrizes e enviar seu domínio com sucesso, os navegadores nunca se conectarão ao seu domínio usando uma conexão insegura. </font><font>Enquanto o serviço é hospedado pelo Google, todos os navegadores declararam a intenção de usar (ou de fato começaram a usar) a lista de pré-carregamento. </font><font>No entanto, não faz parte da especificação da HSTS e não deve ser tratada como oficial.</font></font></p>
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-<ul>
- <li>Informações sobre a lista de pré-carregamento de HSTS no Chrome:  <a href="https://www.chromium.org/hsts">https://www.chromium.org/hsts</a></li>
- <li>Consulta da lista de pré-carregamento do Firefox HSTS: <a href="https://dxr.mozilla.org/comm-central/source/mozilla/security/manager/ssl/nsSTSPreloadList.inc">nsSTSPreloadList.inc</a></li>
-</ul>
+## Especificações
 
-<h2 id="Exemplos">Exemplos</h2>
+| Especificação                | Status                   | Comentário         |
+| ---------------------------- | ------------------------ | ------------------ |
+| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | Initial definition |
 
-<p><font>Todos os subdomínios presentes e futuros serão HTTPS para uma idade máxima de 1 ano. </font><font>Isso bloqueia o acesso a páginas ou subdomínios que só podem ser veiculados por HTTP.</font></p>
+## Compatibilidade com navegadores
 
-<pre>Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
+{{Compat("http.headers.Strict-Transport-Security")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Veja também
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HSTS')}}</td>
-   <td>{{Spec2('HSTS')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-<p>{{Compat("http.headers.Strict-Transport-Security")}}</p>
-
-<h2 id="Veja_também"><font><font>Veja também</font></font></h2>
-
-<ul>
- <li>Postagem no blog: <a class="external" href="http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html">HTTP Strict Transport Security has landed!</a></li>
- <li>Postagem no blog: <a class="external" href="http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/">HTTP Strict Transport Security (force HTTPS)</a></li>
- <li>Artigo OWASP: <a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
- <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
-</ul>
+- Postagem no blog: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
+- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- Artigo OWASP: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
+- Wikipedia: [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)

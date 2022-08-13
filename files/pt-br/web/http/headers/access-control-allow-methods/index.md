@@ -10,72 +10,44 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Access-Control-Allow-Methods</code></strong> especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.</p>
+O cabeçalho de resposta **`Access-Control-Allow-Methods`** especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Allow-Methods: &lt;método&gt;, &lt;método&gt;, ...
-Access-Control-Allow-Methods: *
-</pre>
+    Access-Control-Allow-Methods: <método>, <método>, ...
+    Access-Control-Allow-Methods: *
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;método&gt;</dt>
- <dd>Lista separada por vírgula com os <a href="/en-US/docs/Web/HTTP/Methods">métodos de requisição HTTP</a>.</dd>
- <dt><code>*</code> (coringa)</dt>
- <dd>O valor "<code>*</code>" só conta como valor coringa para requisições sem credenciais (requisições sem <a href="/en-US/docs/Web/HTTP/Cookies">cookies HTTP</a> ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de método literal "<code>*</code>" sem qualquer semântica especial.</dd>
-</dl>
+- \<método>
+  - : Lista separada por vírgula com os [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods).
+- `*` (coringa)
+  - : O valor "`*`" só conta como valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de método literal "`*`" sem qualquer semântica especial.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Methods: *
-</pre>
+    Access-Control-Allow-Methods: POST, GET, OPTIONS
+    Access-Control-Allow-Methods: *
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                   | Comentário        |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
+| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Allow-Methods")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Methods")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Request-Method")}}

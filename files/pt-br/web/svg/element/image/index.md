@@ -8,95 +8,71 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento SVG <code><strong>&lt;image&gt;</strong></code> carrega imagens dentro de documentos SVG. Ele pode exibir arquivos {{glossary("raster image")}} ou outros arquivos SVG.</p>
+O elemento SVG **`<image>`** carrega imagens dentro de documentos SVG. Ele pode exibir arquivos {{glossary("raster image")}} ou outros arquivos SVG.
 
-<p>The only image formats SVG software must support are <a href="/en-US/docs/Glossary/jpeg">JPEG</a>, <a href="/en-US/docs/Glossary/PNG">PNG</a>, and other SVG files. Animated <a href="/en-US/docs/Glossary/gif">GIF</a> behavior is undefined.</p>
+The only image formats SVG software must support are [JPEG](/pt-BR/docs/Glossary/jpeg), [PNG](/pt-BR/docs/Glossary/PNG), and other SVG files. Animated [GIF](/pt-BR/docs/Glossary/gif) behavior is undefined.
 
-<p>SVG files displayed with <code>&lt;image&gt;</code> are <a href="/en-US/docs/Web/SVG/SVG_as_an_Image">treated as an image</a>: external resources aren't loaded, <a href="/en-US/docs/Web/CSS/:visited">:visited</a> styles <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">aren't applied</a>, and they cannot be interactive. To include dynamic SVG elements, try <a href="/en-US/docs/Web/SVG/Element/use">&lt;use&gt;</a> with an external URL. To include SVG files and run scripts inside them, try <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> inside of <a href="/en-US/docs/Web/SVG/Element/foreignObject">&lt;foreignObject&gt;</a>.</p>
+SVG files displayed with `<image>` are [treated as an image](/pt-BR/docs/Web/SVG/SVG_as_an_Image): external resources aren't loaded, [:visited](/pt-BR/docs/Web/CSS/:visited) styles [aren't applied](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector), and they cannot be interactive. To include dynamic SVG elements, try [\<use>](/pt-BR/docs/Web/SVG/Element/use) with an external URL. To include SVG files and run scripts inside them, try [\<object>](/pt-BR/docs/Web/HTML/Element/object) inside of [\<foreignObject>](/pt-BR/docs/Web/SVG/Element/foreignObject).
 
-<div class="note">
-<p><strong>Note:</strong> The HTML spec defines <code>&lt;image&gt;</code> as a synonym for <a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a> while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/SVG_In_HTML_Introduction">inline SVG</a>.</p>
-</div>
+> **Note:** The HTML spec defines `<image>` as a synonym for [\<img>](/pt-BR/docs/Web/HTML/Element/img) while parsing HTML. This specific element and its behavior only apply inside SVG documents or [inline SVG](/pt-BR/docs/SVG_In_HTML_Introduction).
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Graphical_event_attributes">Graphical event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Xlink_attributes">Xlink attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Conditional processing attributes](/pt-BR/docs/Web/SVG/Attribute#Conditional_processing_attributes)
+- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes)
+- [Graphical event attributes](/pt-BR/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [Presentation attributes](/pt-BR/docs/Web/SVG/Attribute#Presentation_attributes)
+- [Xlink attributes](/pt-BR/docs/Web/SVG/Attribute#Xlink_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("x")}}: Positions the image horizontally from the origin.</li>
- <li>{{SVGAttr("y")}}: Positions the image vertically from the origin.</li>
- <li>{{SVGAttr("width")}}: The width the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
- <li>{{SVGAttr("height")}}: The height the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
- <li>{{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.</li>
- <li>{{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.</li>
-</ul>
+- {{SVGAttr("x")}}: Positions the image horizontally from the origin.
+- {{SVGAttr("y")}}: Positions the image vertically from the origin.
+- {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
+- {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
+- {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
+- {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p><code>&lt;image&gt;</code> implements the {{domxref("SVGImageElement")}} interface.</p>
+`<image>` implements the {{domxref("SVGImageElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Basic rendering of a PNG image in SVG:</p>
+Basic rendering of a PNG image in SVG:
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="200" height="200"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 250, 260)}}</p>
+{{EmbedLiveSample("Example", 250, 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Allows omitting <code>height</code> and <code>width</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                   | Comment                              |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------ |
+| {{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG2')}} | Allows omitting `height` and `width` |
+| {{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-<p>{{Compat("svg.elements.image")}}</p>
+{{Compat("svg.elements.image")}}

@@ -9,51 +9,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>O método <code><strong>toSource()</strong></code> retorna código que pode resultar no mesmo erro.</p>
+O método **`toSource()`** retorna código que pode resultar no mesmo erro.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>e</var>.toSource()</pre>
+    e.toSource()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma string contendo o código fonte do erro.</p>
+Uma string contendo o código fonte do erro.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toSource">Usando toSource</h3>
+### Usando toSource
 
-<p>Chamando método <code>toSource</code> de uma instância {{jsxref("Error")}} (incluindo<em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types"> NativeErrors</a></em>) irá retornar uma string contendo o código fonte do erro. Essa string pode ser avaliada para criar (aproximadamente) um objeto igual. Naturalmente, a string contendo o fonte segue a estrutura do construtor {{jsxref("Error")}}. Por exemplo:</p>
+Chamando método `toSource` de uma instância {{jsxref("Error")}} (incluindo*[ NativeErrors](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)*) irá retornar uma string contendo o código fonte do erro. Essa string pode ser avaliada para criar (aproximadamente) um objeto igual. Naturalmente, a string contendo o fonte segue a estrutura do construtor {{jsxref("Error")}}. Por exemplo:
 
-<pre class="brush: js notranslate">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
-</pre>
+```js
+(newname(message ,fileName,lineNumber))
+```
 
-<p>onde estes atributos correspondem as respectivas propriedades da instância do erro.</p>
+onde estes atributos correspondem as respectivas propriedades da instância do erro.
 
-<div class="note">
-<p><strong>Nota:</strong> Fique alerta que as propriedades usadas pelo método <code>toSource</code> na criação da string são mutáveis e podem não refletir precisamente a função utilizada para criar a instância do erro ou nome de arquivo ou número de linha onde o erro atual ocorreu.</p>
-</div>
+> **Note:** **Nota:** Fique alerta que as propriedades usadas pelo método `toSource` na criação da string são mutáveis e podem não refletir precisamente a função utilizada para criar a instância do erro ou nome de arquivo ou número de linha onde o erro atual ocorreu.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhum padrão.</p>
+Não faz parte de nenhum padrão.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Error.toSource")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Error.toSource")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Error.prototype.fileName")}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}}</li>
- <li>{{jsxref("Error.prototype.message")}}</li>
- <li>{{jsxref("Error.prototype.name")}}</li>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.fileName")}}
+- {{jsxref("Error.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.message")}}
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Object.prototype.toSource()")}}

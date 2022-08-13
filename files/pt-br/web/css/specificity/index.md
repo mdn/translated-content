@@ -3,119 +3,121 @@ title: Especificidade
 slug: Web/CSS/Specificity
 translation_of: Web/CSS/Specificity
 ---
-<h2 id="O_Conceito">O Conceito</h2>
+## O Conceito
 
-<p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de <a href="/en/CSS/CSS_Reference#Selectors" title="en/CSS/CSS_Reference#Selectors">seletores</a>.</p>
+A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de [seletores](/en/CSS/CSS_Reference#Selectors "en/CSS/CSS_Reference#Selectors").
 
-<h2 id="Como_isso_é_calculado">Como isso é calculado?</h2>
+## Como isso é calculado?
 
-<p>A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.</p>
+A espeficicação é calculada na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão correspondente.
 
-<p>No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.</p>
+No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
 
-<div class="note">Note: O fato de<span id="result_box" lang="pt"><span class="hps"> elementos estarem próximos na</span> <span class="hps">árvore do documento</span> <span class="hps">não tem efeito sobre</span> <span class="hps">a especificação</span><span>.</span></span></div>
+> **Note:** Note: O fato de elementos estarem próximos na árvore do documento não tem efeito sobre a especificação.
 
-<h3 id="Ordem_crescente_de_especificação">Ordem crescente de especificação</h3>
+### Ordem crescente de especificação
 
-<p>A seguinte lista de seletores está incluida na especificação:</p>
+A seguinte lista de seletores está incluida na especificação:
 
-<ul>
- <li>Seletores Universais</li>
- <li>Tipo de Seletores</li>
- <li>Classes seletoras</li>
- <li>Atributos Seletores</li>
- <li>Pseudo-classes</li>
- <li>Seletores ID</li>
- <li>Estilo Inline</li>
-</ul>
+- Seletores Universais
+- Tipo de Seletores
+- Classes seletoras
+- Atributos Seletores
+- Pseudo-classes
+- Seletores ID
+- Estilo Inline
 
-<h3 id="A_exceção_!important">A <span class="short_text" id="result_box" lang="pt"><span class="hps">exceção</span></span> <code>!important</code></h3>
+### A exceção `!important`
 
-<p>Quando a regra <code>!important</code> é utilizada na declaração do estilo substitui qualquer outra declaração feita no CSS, onde quer que esteja na lista de declaração. Contudo, <code>!important</code> não tem nada a ver com especificação. </p>
+Quando a regra `!important` é utilizada na declaração do estilo substitui qualquer outra declaração feita no CSS, onde quer que esteja na lista de declaração. Contudo, `!important` não tem nada a ver com especificação.
 
-<h3 id="A_exceção_not">A exceção <code>:not</code></h3>
+### A exceção `:not`
 
-<p>A pseudo-classe de negação <code>:not</code> não é considerada uma pseudo-classe no cálculo de especificação. Contudo, seletores colocados na pseudo-class de negação são entendidos como seletores normais.</p>
+A pseudo-classe de negação `:not` não é considerada uma pseudo-classe no cálculo de especificação. Contudo, seletores colocados na pseudo-class de negação são entendidos como seletores normais.
 
-<p>Aqui está um trecho de CSS:</p>
+Aqui está um trecho de CSS:
 
-<pre class="brush: css">div.outer p {
+```css
+div.outer p {
   color:orange;
 }
 div:not(.outer) p {
   color: lime;
 }
-</pre>
+```
 
-<p>Usado com o seguindo código HTML:</p>
+Usado com o seguindo código HTML:
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;p&gt;Esta é a div outer.&lt;/p&gt;
-  &lt;div class="inner"&gt;
-    &lt;p&gt;Este texto está na div inner.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="outer">
+  <p>Esta é a div outer.</p>
+  <div class="inner">
+    <p>Este texto está na div inner.</p>
+  </div>
+</div>
+```
 
-<p>Irá aparecer na tela assim:</p>
+Irá aparecer na tela assim:
 
-<p><span style="color: #ffa500;">Esta é a div outer.</span></p>
+Esta é a div outer.
 
-<p><span style="color: #00ff00;">Este texto está na div inner.</span></p>
+Este texto está na div inner.
 
-<h3 id="Especificação_Form-based">Especificação Form-based</h3>
+### Especificação Form-based
 
-<p>A especificação é baseada na forma de um seletor. No seguinte caso, o seletor contém os atributos <span id="result_box" lang="pt"><span class="hps">no</span> <span class="hps">algoritmo de determinação de</span> especificação<span>, embora</span> <span class="hps">ele selecione</span> <span class="hps">um ID</span></span>.</p>
+A especificação é baseada na forma de um seletor. No seguinte caso, o seletor contém os atributos no algoritmo de determinação de especificação, embora ele selecione um ID.
 
-<p>A seguir veja as declarações de estilo:</p>
+A seguir veja as declarações de estilo:
 
-<pre class="brush: css">* #foo {
+```css
+* #foo {
   color: green;
 }
 *[id="foo"] {
   background: purple;
 }
-</pre>
+```
 
-<p>Usado com esta marcação:</p>
+Usado com esta marcação:
 
-<pre class="brush: html">&lt;p id="foo"&gt;Eu sou um simples texto.&lt;/p&gt;
-</pre>
+```html
+<p id="foo">Eu sou um simples texto.</p>
+```
 
-<p>Vai acabar parecendo algo como:</p>
+Vai acabar parecendo algo como:
 
-<p><span style="color: #008000;">Eu sou um simples texto.</span></p>
+Eu sou um simples texto.
 
-<p><span id="result_box" lang="pt"><span class="hps">Porque coincide com o</span> <span class="hps">mesmo elemento</span><span>, mas</span> <span class="hps">o seletor de</span> <span class="hps">ID</span> <span class="hps">tem uma especificação</span> <span class="hps">superior.</span></span></p>
+Porque coincide com o mesmo elemento, mas o seletor de ID tem uma especificação superior.
 
-<h3 id="Estrutura_aproximada">Estrutura aproximada</h3>
+### Estrutura aproximada
 
-<p>A seguir a declaração do estilo:</p>
+A seguir a declaração do estilo:
 
-<pre class="brush: css">body h1 {
+```css
+body h1 {
   color: green;
 }
 html h1 {
   color: purple;
 }
-</pre>
+```
 
-<p>Com o HTML seguinte::</p>
+Com o HTML seguinte::
 
-<pre class="brush: html">&lt;html&gt;
-&lt;body&gt;
-  &lt;h1&gt;Aqui está o título!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+<body>
+  <h1>Aqui está o título!</h1>
+</body>
+</html>
+```
 
-<p>Vamos ter algo como:</p>
+Vamos ter algo como:
 
-<p><span style="color: #800080;">Aqui está o título!</span></p>
+Aqui está o título!
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>Espcificação de Seletores CSS - <a class="external" href="http://www.w3.org/TR/selectors/#specificity" rel="freelink">http://www.w3.org/TR/selectors/#specificity</a></li>
- <li>{{ CSS_key_concepts() }}</li>
-</ul>
+- Espcificação de Seletores CSS - <http://www.w3.org/TR/selectors/#specificity>
+- {{ CSS_key_concepts() }}

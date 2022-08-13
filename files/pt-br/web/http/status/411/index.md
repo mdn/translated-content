@@ -8,36 +8,23 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/411
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta <code><strong>411 Length Required</strong></code> de erro de cliente do Protocolo de Transferência de HyperTexto (HTTP) indica que o servidor se nega a aceitar a requisição sem um cabeçalho {{HTTPHeader("Content-Length")}} definido.</p>
+O código de resposta **`411 Length Required`** de erro de cliente do Protocolo de Transferência de HyperTexto (HTTP) indica que o servidor se nega a aceitar a requisição sem um cabeçalho {{HTTPHeader("Content-Length")}} definido.
 
-<div class="note">
-<p><strong>Nota: </strong>pela especificação, quando envia dados em uma série de blocos, o cabeçalho <code>Content-Length</code> é omitido e no início de cada bloco você precisa adicionar o tamanho do bloco corrente no formato hexadecimal. Veja {{HTTPHeader("Transfer-Encoding")}} para mais detalhes.</p>
-</div>
+> **Note:** **Nota:** pela especificação, quando envia dados em uma série de blocos, o cabeçalho `Content-Length` é omitido e no início de cada bloco você precisa adicionar o tamanho do bloco corrente no formato hexadecimal. Veja {{HTTPHeader("Transfer-Encoding")}} para mais detalhes.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">411 Length Required</pre>
+    411 Length Required
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "411 Length Required" , "6.5.10")}}</td>
-   <td>Protocolo de transferência de Hipertexto (HTTP/1.1): Semântica e Conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Title                                                                     |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Protocolo de transferência de Hipertexto (HTTP/1.1): Semântica e Conteúdo |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Transfer-Encoding")}}

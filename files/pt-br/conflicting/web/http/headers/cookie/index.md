@@ -11,49 +11,29 @@ tags:
 translation_of: Web/HTTP/Headers/Cookie2
 original_slug: Web/HTTP/Headers/Cookie2
 ---
-<div>{{HTTPSidebar}} {{obsolete_header}}</div>
+{{HTTPSidebar}} {{obsolete_header}}
 
-<p>O obsoleto cabeçalho de requisição HTTP <strong><code>Cookie2</code></strong> costumava aconselhar o servidor que o agente de usuário entende <em>cookies</em> de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.</p>
+O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o servidor que o agente de usuário entende _cookies_ de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Cookie2: $Version="1"</pre>
+    Cookie2: $Version="1"
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("2965", "Cookie2")}}</td>
-   <td>Especificação histórica do HTTP State Management Mechanism, obsoleta pela {{RFC("6265")}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                        | Título                                                                                         |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| {{RFC("2965", "Cookie2")}} | Especificação histórica do HTTP State Management Mechanism, obsoleta pela {{RFC("6265")}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Cookie2")}}</p>
+{{Compat("http.headers.Cookie2")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Cookie")}}
+- {{domxref("Document.cookie")}}

@@ -3,33 +3,32 @@ title: Event.type
 slug: Web/API/Event/type
 translation_of: Web/API/Event/type
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Retorna uma string contendo o tipo de evento.</p>
+Retorna uma string contendo o tipo de evento.
 
-<p>O argumento do evento {{ domxref("EventTarget.addEventListener()") }} e {{ domxref("EventTarget.removeEventListener()") }} é caso insensível(case insensitive).</p>
+O argumento do evento {{ domxref("EventTarget.addEventListener()") }} e {{ domxref("EventTarget.removeEventListener()") }} é caso insensível(case insensitive).
 
-<p>Veja <a href="/en-US/docs/Mozilla_event_reference" title="Mozilla event reference">Mozilla event reference</a> para obter a lista de tipos de evento disponíveis</p>
+Veja [Mozilla event reference](/pt-BR/docs/Mozilla_event_reference "Mozilla event reference") para obter a lista de tipos de evento disponíveis
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">event.type
-</pre>
+    event.type
 
-<h2 id="Example" name="Example">Exemplos</h2>
+## Exemplos
 
-<pre><code><em>var string</em> = event.type;</code>
-</pre>
+    var string = event.type;
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-br"&gt;
-&lt;head&gt;
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
 
-&lt;title&gt;exemplo de tipo&lt;/title&gt;
+<title>exemplo de tipo</title>
 
-&lt;script&gt;
+<script>
 var currEvent = null;
 
 function getEvtType(evt) {
@@ -37,24 +36,22 @@ function getEvtType(evt) {
   document.getElementById("Etype").firstChild.nodeValue = currEvent;
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body
+<body
   onkeydown="getEvtType(event)"
   onkeyup="getEvtType(event)"
   onmousedown="getEvtType(event)"
-  onmouseup="getEvtType(event)"&gt;
+  onmouseup="getEvtType(event)">
 
-&lt;p&gt;Pressione uma tecla ou clique com o mouse para obter o tipo de evento.&lt;/p&gt;
-&lt;p&gt;Tipo de evento: &lt;span id="Etype"&gt;-&lt;/span&gt;&lt;/p&gt;
+<p>Pressione uma tecla ou clique com o mouse para obter o tipo de evento.</p>
+<p>Tipo de evento: <span id="Etype">-</span></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type">type </a></li>
-</ul>
+- [type](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)

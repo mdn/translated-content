@@ -3,35 +3,24 @@ title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
 translation_of: Web/HTTP/Status/203
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>A resposta com status HTTP <strong><code>203 Non-Authoritative Information</code></strong> indica que a requisição foi realizada com sucesso porém o conteúdo foi modificado por um {{Glossary("Proxy server", "proxy")}} da resposta com status {{HTTPStatus("200")}} (<code>OK</code>) do servidor de origem.</p>
+A resposta com status HTTP **`203 Non-Authoritative Information`** indica que a requisição foi realizada com sucesso porém o conteúdo foi modificado por um {{Glossary("Proxy server", "proxy")}} da resposta com status {{HTTPStatus("200")}} (`OK`) do servidor de origem.
 
-<p>A resposta <code>203</code> é similar a resposta com cabeçalho de {{HTTPHeader("Warning")}} <code><a href="/en-US/docs/Web/HTTP/Headers/Warning#Warning_codes">214</a></code>, significando <code>Transformação Aplicada</code>, o qual tem uma vantagem adicional que pode ser aplicado a respostas com qualquer código de status.</p>
+A resposta `203` é similar a resposta com cabeçalho de {{HTTPHeader("Warning")}} [`214`](/en-US/docs/Web/HTTP/Headers/Warning#Warning_codes), significando `Transformação Aplicada`, o qual tem uma vantagem adicional que pode ser aplicado a respostas com qualquer código de status.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">203 Non-Authoritative Information</pre>
+    203 Non-Authoritative Information
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Title                                                         |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("200")}}</li>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Warning")}}</li>
-</ul>
+- {{HTTPStatus("200")}}
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Warning")}}

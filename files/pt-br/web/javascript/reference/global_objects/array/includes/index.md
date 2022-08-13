@@ -10,37 +10,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/contains
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p><span class="seoSummary">O método includes<code>()</code> determina se um array contém um determinado elemento, retornando <code>true</code> ou <code>false</code> apropriadamente.</span></p>
+O método includes`()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
 
-<p><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Sintaxe</strong></p>
+**Sintaxe**
 
-<pre class="syntaxbox"><code><var>array</var>.includes(<var>searchElement</var>[, <var>fromIndex</var>])</code></pre>
+    array.includes(searchElement[, fromIndex])
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>O elemento a buscar</dd>
- <dt><code>fromIndex</code></dt>
- <dd>Opcional. A posição no array de onde a busca pelo <code>searchElement </code>se iniciará. Por padrão, 0.</dd>
-</dl>
+- `searchElement`
+  - : O elemento a buscar
+- `fromIndex`
+  - : Opcional. A posição no array de onde a busca pelo `searchElement `se iniciará. Por padrão, 0.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">[1, 2, 3].includes(2);     // true
+```js
+[1, 2, 3].includes(2);     // true
 [1, 2, 3].includes(4);     // false
 [1, 2, 3].includes(3, 3);  // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.includes
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
   Object.defineProperty(Array.prototype, 'includes', {
     value: function(searchElement, fromIndex) {
@@ -53,7 +53,7 @@ if (!Array.prototype.includes) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If len is 0, return false.
       if (len === 0) {
@@ -66,13 +66,13 @@ if (!Array.prototype.includes) {
 
       // 5. If n ≥ 0, then
       //  a. Let k be n.
-      // 6. Else n &lt; 0,
+      // 6. Else n < 0,
       //  a. Let k be len + n.
-      //  b. If k &lt; 0, let k be 0.
-      var k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+      //  b. If k < 0, let k be 0.
+      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
-      // 7. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 7. Repeat, while k < len
+      while (k < len) {
         // a. Let elementK be the result of ? Get(O, ! ToString(k)).
         // b. If SameValueZero(searchElement, elementK) is true, return true.
         // c. Increase k by 1.
@@ -88,20 +88,18 @@ if (!Array.prototype.includes) {
     }
   });
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Proposta ES7: <a href="https://github.com/domenic/Array.prototype.contains/blob/master/spec.md">https://github.com/domenic/Array.prototype.contains/blob/master/spec.md</a></p>
+Proposta ES7: <https://github.com/domenic/Array.prototype.contains/blob/master/spec.md>
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
-<div>{{Compat("javascript.builtins.Array.includes")}}</div>
+{{Compat("javascript.builtins.Array.includes")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

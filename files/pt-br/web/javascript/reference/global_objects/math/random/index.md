@@ -8,95 +8,78 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A função <code><strong>Math.random()</strong></code> retorna um número pseudo-aleatório no intervalo <code>[0, 1[</code>, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado.  A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.</p>
+A função **`Math.random()`** retorna um número pseudo-aleatório no intervalo `[0, 1[`, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado. A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.
 
-<div class="note">
-<p><code><strong>Math.random()</strong></code> não gera números criptograficamente seguros. Não a use para nada relacionado a segurança. Use a API Web Crypto, mais precisamente o método {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.</p>
-</div>
+> **Note:** **`Math.random()`** não gera números criptograficamente seguros. Não a use para nada relacionado a segurança. Use a API Web Crypto, mais precisamente o método {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.random()</code></pre>
+    Math.random()
 
-<h3 id="Parameters" name="Parameters">Valor retornado</h3>
+### Valor retornado
 
-<p>Um número pseudo-aleatório entre 0 (inclusivo) e 1 (exclusivo).</p>
+Um número pseudo-aleatório entre 0 (inclusivo) e 1 (exclusivo).
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<p>Note que os números em JavaScript são pontos flutuantes que seguem o padrão IEEE 754 com comportamento <em>arredondar-para-o-par-mais-próximo</em>, os intervalos que serão citados nos exemplos a seguir (exceto o exemplo do <code>Math.random()</code>), não são exatas. Se limites extremamente grandes forem escolhidos (2<sup>53</sup> ou maior), em raros casos é possível que o limite superior (que seria exclusivo) seja retornado.</p>
+Note que os números em JavaScript são pontos flutuantes que seguem o padrão IEEE 754 com comportamento _arredondar-para-o-par-mais-próximo_, os intervalos que serão citados nos exemplos a seguir (exceto o exemplo do `Math.random()`), não são exatas. Se limites extremamente grandes forem escolhidos (253 ou maior), em raros casos é possível que o limite superior (que seria exclusivo) seja retornado.
 
-<h3 id="Gerando_um_número_aleatório_entre_0_(inclusivo)_e_1_(exclusivo)">Gerando um número aleatório entre 0 (inclusivo) e 1 (exclusivo)</h3>
+### Gerando um número aleatório entre 0 (inclusivo) e 1 (exclusivo)
 
-<pre class="brush: js">function getRandom() {
+```js
+function getRandom() {
   return Math.random();
-}</pre>
+}
+```
 
-<h3 id="Gerando_um_número_aleatório_entre_dois_valores">Gerando um número aleatório entre dois valores</h3>
+### Gerando um número aleatório entre dois valores
 
-<p>Este exemplo retorna um número entre dois valores definidos. O valor retornado será maior ou igual a <code>min,</code> e menor que <code>max</code>.</p>
+Este exemplo retorna um número entre dois valores definidos. O valor retornado será maior ou igual a `min,` e menor que `max`.
 
-<pre class="brush: js">function getRandomArbitrary(min, max) {
+```js
+function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
-}</pre>
+}
+```
 
-<h3 id="Gerando_um_número_inteiro_aleatório_entre_dois_valores">Gerando um número inteiro aleatório entre dois valores</h3>
+### Gerando um número inteiro aleatório entre dois valores
 
-<p>Este exemplo retorna um número <em>inteiro</em> entre dois valores definidos. O valor não poderá ser menor que <code>min</code> (ou do próximo inteiro maior que <code>min,</code> caso <code>min</code> não seja inteiro), e será menor (mas não igual) a <code>max</code>.</p>
+Este exemplo retorna um número _inteiro_ entre dois valores definidos. O valor não poderá ser menor que `min` (ou do próximo inteiro maior que `min,` caso `min` não seja inteiro), e será menor (mas não igual) a `max`.
 
-<pre class="brush: js">function getRandomInt(min, max) {
+```js
+function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min);
-}</pre>
+}
+```
 
+> **Note:** Pode ser tentandor usar `Math.round()` para arredondar `min` e `max,` mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
 
+### Gerando um número inteiro aleatório entre dois valores, inclusive
 
-<div class="note">
-<p>Pode ser tentandor usar <code>Math.round()</code> para arredondar <code>min</code> e <code>max,</code> mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.</p>
-</div>
+A função `getRandomInt()` acima tem intervalo com o valor mínimo incluído e o máximo excluído. Mas se você precisar que a função inclua, tanto o mínimo quanto o máximo, em seus resultados? A função `getRandomIntInclusive()` abaixo faz isso.
 
-<h3 id="Gerando_um_número_inteiro_aleatório_entre_dois_valores_inclusive">Gerando um número inteiro aleatório entre dois valores, inclusive</h3>
+```js
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+```
 
-<p>A função <code>getRandomInt()</code> acima tem intervalo com o valor mínimo incluído e o máximo excluído. Mas se você precisar que a função inclua, tanto o mínimo quanto o máximo, em seus resultados? A função <code>getRandomIntInclusive()</code> abaixo faz isso.</p>
+## Especificações
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getRandomIntInclusive</span><span class="punctuation token">(</span>min<span class="punctuation token">,</span> max<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  min <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">ceil</span><span class="punctuation token">(</span>min<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  max <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>max<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">return</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="punctuation token">(</span>max <span class="operator token">-</span> min <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="operator token">+</span> min<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+| Especificação                                                            | Status                   | Comentário                                                                          |
+| ------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definição inicial. JavaScript 1.0 (UNIX Only) / JavaScript 1.1 (Todas plataformas). |
+| {{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}} | {{Spec2('ES5.1')}} |                                                                                     |
+| {{SpecName('ES6', '#sec-math.random', 'Math.random')}} | {{Spec2('ES6')}}     |                                                                                     |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. JavaScript 1.0 (UNIX Only) / JavaScript 1.1 (Todas plataformas).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.random', 'Math.random')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-<p>{{Compat("javascript.builtins.Math.random")}}</p>
+{{Compat("javascript.builtins.Math.random")}}

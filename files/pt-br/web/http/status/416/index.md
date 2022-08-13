@@ -9,43 +9,32 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/416
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de erro de resposta HTTP <code><strong>416 Range Not Satisfiable</strong></code> indica que o servidor não pode servir as sequências solicitadas. A razão mais provável é que o documento não contenha tais sequências, ou que o valor do cabeçalho {{HTTPHeader("Range")}}, apesar de sintaticamente correto, não faça sentido.</p>
+O código de erro de resposta HTTP **`416 Range Not Satisfiable`** indica que o servidor não pode servir as sequências solicitadas. A razão mais provável é que o documento não contenha tais sequências, ou que o valor do cabeçalho {{HTTPHeader("Range")}}, apesar de sintaticamente correto, não faça sentido.
 
-<p>A mensagem de resposta <code>416</code> contém um cabeçalho {{HTTPHeader("Content-Range")}} indicando uma sequência insatisfatória  (que é um <code>'*'</code>) seguido por uma <code>'/'</code> e o tamanho atual do recurso. E.g. <code>Content-Range: bytes */12777</code></p>
+A mensagem de resposta `416` contém um cabeçalho {{HTTPHeader("Content-Range")}} indicando uma sequência insatisfatória (que é um `'*'`) seguido por uma `'/'` e o tamanho atual do recurso. E.g. `Content-Range: bytes */12777`
 
-<p>Observando este erro, os navegadores geralmente, ou abortam a operação (por exemplo, o download será considerado não recuperável) ou requisitar o documento inteiro novamente.</p>
+Observando este erro, os navegadores geralmente, ou abortam a operação (por exemplo, o download será considerado não recuperável) ou requisitar o documento inteiro novamente.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">416 Range Not Satisfiable</pre>
+    416 Range Not Satisfiable
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "416 Request Not Satisfiable" , "4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Título                                                 |
+| ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| {{RFC("7233", "416 Request Not Satisfiable" , "4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>A informação abaixo foi buscada do GitHub da MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>). </p>
+A informação abaixo foi buscada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.416")}}</p>
+{{Compat("http.status.416")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus(206)}} <code>Partial Content</code></li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPStatus(206)}} `Partial Content`
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Range")}}

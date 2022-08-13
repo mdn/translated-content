@@ -7,74 +7,70 @@ tags:
   - atributo
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 ---
-<h3 id="Descrição">Descrição</h3>
+### Descrição
 
-<p><span class="seoSummary">O atributo <code><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-describedby" rel="external">aria-describedby</a></code> é usado para indicar os IDs dos elementos que descrevem o objeto. Isso é usado para estabelecer um relacionamento entre widgets ou grupos e texto que descrevem eles. Isso é muito similar ao <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="Using the aria-labelledby attribute">aria-labelledby</a>: um rótulo (label) que descreve a essência de um objeto, enquanto a descrição fornece mais informação do que o usuário pode precisar.</span></p>
+O atributo [`aria-describedby`](https://www.w3.org/TR/wai-aria/#aria-describedby) é usado para indicar os IDs dos elementos que descrevem o objeto. Isso é usado para estabelecer um relacionamento entre widgets ou grupos e texto que descrevem eles. Isso é muito similar ao [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute"): um rótulo (label) que descreve a essência de um objeto, enquanto a descrição fornece mais informação do que o usuário pode precisar.
 
-<p>O atributo <code>aria-describedby</code> não é usado apenas para elementos de formulário; ele também é usado para associar texto estático com widgets, grupos de elementos, paineis, regiões que tem um cabeçalho, definiões e mais. A seção abaixo fornece mais informação sobre como usar o atributo nesses casos.</p>
+O atributo `aria-describedby` não é usado apenas para elementos de formulário; ele também é usado para associar texto estático com widgets, grupos de elementos, paineis, regiões que tem um cabeçalho, definiões e mais. A seção abaixo fornece mais informação sobre como usar o atributo nesses casos.
 
-<p>O atributo pode ser usando em qualquer elemento típico de um formulário HTML; isso não é limitado a elementos que tem um <code>role</code> ARIA atribuído.</p>
+O atributo pode ser usando em qualquer elemento típico de um formulário HTML; isso não é limitado a elementos que tem um `role` ARIA atribuído.
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>uma lista de IDs de elementos separados por um espaço</p>
+uma lista de IDs de elementos separados por um espaço
 
-<h3 id="Efeitos_possíveis_em_user_agents_e_tecnologia_assistiva">Efeitos possíveis em user agents e tecnologia assistiva</h3>
+### Efeitos possíveis em user agents e tecnologia assistiva
 
-<div class="note"><strong>Nota: </strong>Opiniões podem difererir em como a tecnologia assistiva deve lidar com essa técnica. A informação fornecida abaixo é uma dessas opiniões e, portanto, não normativa.</div>
+> **Note:** **Nota:** Opiniões podem difererir em como a tecnologia assistiva deve lidar com essa técnica. A informação fornecida abaixo é uma dessas opiniões e, portanto, não normativa.
 
-<h3 id="Exemplos">Exemplos</h3>
+### Exemplos
 
-<h4 id="Exemplo_1_Descrições_do_ponto_de_referência_do_aplicativo">Exemplo 1: Descrições do ponto de referência do aplicativo</h4>
+#### Exemplo 1: Descrições do ponto de referência do aplicativo
 
-<p>No exemplo abaixo, um parágrafo introdutório descreve uma aplicação de calendário. O <code>aria-describedby</code> é usado para associar o parágrado com o container da aplicação.</p>
+No exemplo abaixo, um parágrafo introdutório descreve uma aplicação de calendário. O `aria-describedby` é usado para associar o parágrado com o container da aplicação.
 
-<pre class="brush: html">&lt;div role="application" aria-labelledby="calendar" aria-describedby="info"&gt;
-    &lt;h1 id="calendar"&gt;Calendário&lt;/h1&gt;
-    &lt;p id="info"&gt;
+```html
+<div role="application" aria-labelledby="calendar" aria-describedby="info">
+    <h1 id="calendar">Calendário</h1>
+    <p id="info">
         Esse calendário mostra a data do jogo do Boston Red Sox.
-    &lt;/p&gt;
-    &lt;div role="grid"&gt;
+    </p>
+    <div role="grid">
         ...
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<h4 id="Exemplo_2_Um_botão_de_fechar">Exemplo 2: Um botão de fechar</h4>
+#### Exemplo 2: Um botão de fechar
 
-<p>No exemplo abaixo, um link que funciona como um botão de "fechar" num diálogo é descrito em outro lugar do documento.O atributo aria-describedby é usado para associar a descrição com o link.</p>
+No exemplo abaixo, um link que funciona como um botão de "fechar" num diálogo é descrito em outro lugar do documento.O atributo aria-describedby é usado para associar a descrição com o link.
 
-<pre class="brush: html">&lt;button aria-label="Close" aria-describedby="descriptionClose"
-    onclick="myDialog.close()"&gt;X&lt;/button&gt;
+```html
+<button aria-label="Close" aria-describedby="descriptionClose"
+    onclick="myDialog.close()">X</button>
 
 ...
 
-&lt;div id="descriptionClose"&gt;Fechar esta janela irá descartar qualquer informação inserida e
-retornará você para a página principal&lt;/div&gt;
-</pre>
+<div id="descriptionClose">Fechar esta janela irá descartar qualquer informação inserida e
+retornará você para a página principal</div>
+```
 
-<h3 id="Notas">Notas</h3>
+### Notas
 
-<ul>
- <li>O <code>aria-describedby</code> atribuido não é designado para referenciar descrições de um recurso externo — já que é um ID, ele deve referenciar um elemento do mesmo documento DOM.</li>
-</ul>
+- O `aria-describedby` atribuido não é designado para referenciar descrições de um recurso externo — já que é um ID, ele deve referenciar um elemento do mesmo documento DOM.
 
-<h3 id="Usado_pelos_roles_de_ARIA">Usado pelos roles de ARIA</h3>
+### Usado pelos roles de ARIA
 
-<p>todos os elementos do markup base</p>
+todos os elementos do markup base
 
-<h3 id="Técnicas_relacionadas_ao_ARIA">Técnicas relacionadas ao ARIA</h3>
+### Técnicas relacionadas ao ARIA
 
-<ul>
- <li><a href="/en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Usando o atributo aria-labelledby</a></li>
-</ul>
+- [Usando o atributo aria-labelledby](/en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
 
-<h3 id="Compatibilidade">Compatibilidade</h3>
+### Compatibilidade
 
-<p class="comment">Ainda não foi definido: Adicionar suporte a informação comum de combinações de produtos UA e AT</p>
+Ainda não foi definido: Adicionar suporte a informação comum de combinações de produtos UA e AT
 
-<h3 id="Recursos_adicionais">Recursos adicionais</h3>
+### Recursos adicionais
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-describedby">WAI-ARIA especificação para aria-describedby</a></li>
-</ul>
+- [WAI-ARIA especificação para aria-describedby](https://www.w3.org/TR/wai-aria/#aria-describedby)

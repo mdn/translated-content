@@ -6,110 +6,35 @@ tags:
 translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p><font><font>Ao aprender a web, é importante confiar no </font></font>conteúdo <font><font>da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis ​​em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.</font></font></p>
+Ao aprender a web, é importante confiar no conteúdo da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis ​​em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.
 
-<p><font><font>Não existe uma maneira direta para criar esse conteúdo. Por exemplo, existem muitas ferramentas de terceiros que podem ajudar-lo a criar exemplos em tempo real (ver: </font></font><a href="https://jsfiddle.net/" rel="external"><font><font>JSFiddle</font></font></a><font><font> , </font></font><a href="https://codepen.io/"><font><font>CodePen</font></font></a><font><font> , </font></font><a href="http://dabblet.com/"><font><font>Dabblet</font></font></a><font><font> , etc.) que você pode vincular a partir de artigos MDN. </font><font>Se Você Quiser CRIAR Exercícios Mais AVANÇADOS e compreensíveis, rápido Você PODE USAR fácilmente o </font></font><a href="https://thimble.mozilla.org" rel="external"><font><font>dedal</font></font></a><font><font>  DO PROJETO WebMaker.</font></font></p>
+Não existe uma maneira direta para criar esse conteúdo. Por exemplo, existem muitas ferramentas de terceiros que podem ajudar-lo a criar exemplos em tempo real (ver: [JSFiddle](https://jsfiddle.net/) , [CodePen](https://codepen.io/) , [Dabblet](http://dabblet.com/) , etc.) que você pode vincular a partir de artigos MDN. Se Você Quiser CRIAR Exercícios Mais AVANÇADOS e compreensíveis, rápido Você PODE USAR fácilmente o [dedal](https://thimble.mozilla.org) DO PROJETO WebMaker.
 
-<p><font><font>Atualmente, o MDN não é uma ferramenta fácil para autorizar esse conteúdo ativo. No entanto, você é um codificador, pode usar os recursos MDN atuais para criar o conteúdo de aprendizagem ativo personalizado. </font><font>Leia mais para ver como fazer isso.</font></font></p>
+Atualmente, o MDN não é uma ferramenta fácil para autorizar esse conteúdo ativo. No entanto, você é um codificador, pode usar os recursos MDN atuais para criar o conteúdo de aprendizagem ativo personalizado. Leia mais para ver como fazer isso.
 
-<h2 id="MDN_amostras_ao_vivo"><font><font>MDN amostras ao vivo</font></font></h2>
+## MDN amostras ao vivo
 
-<p>O MDN possui um recurso muito legal chamado <strong>live samples</strong>. É um mecanismo que transforma qualquer código HTML, CSS e JavaScript dentro de uma página MDN em seu equivalente executado. Antes de usá-lo, você deve ler <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Usando o sistema de amostra ao vivo</a>,qual é a nossa documentação completa para construí-los. Embora sejam fáceis de fazer, há peculiaridades e truques que você aprenderá ao longo do caminho.</p>
+O MDN possui um recurso muito legal chamado **live samples**. É um mecanismo que transforma qualquer código HTML, CSS e JavaScript dentro de uma página MDN em seu equivalente executado. Antes de usá-lo, você deve ler [Usando o sistema de amostra ao vivo](/pt-BR/docs/MDN/Contribute/Editor/Live_samples),qual é a nossa documentação completa para construí-los. Embora sejam fáceis de fazer, há peculiaridades e truques que você aprenderá ao longo do caminho.
 
-<p>O que é interessante é que é realmente fácil ajustar esse recurso para usá-lo para incorporar qualquer tipo de ferramenta ou utilitário que você deseja em uma página MDN.</p>
+O que é interessante é que é realmente fácil ajustar esse recurso para usá-lo para incorporar qualquer tipo de ferramenta ou utilitário que você deseja em uma página MDN.
 
-<h3 id="Código_oculto">Código oculto</h3>
+### Código oculto
 
-<p>A primeira maneira de usar um exemplo de código para criar conteúdo de aprendizagem ativo é editar a página onde deseja adicionar seu conteúdo. Use o recurso Live Sample para criar seu conteúdo conforme desejar. Não se preocupe com a complexidade do código que você poderia escrever; apenas crie o que você precisa. Uma vez que o seu conteúdo esteja pronto, basta mudar para a visualização do código do editor e cercar seu código com um simples {{HTMLElement('div')}} elemento com a classe<code>escondida</code>. Ao fazê-lo, seu código não será exibido, mas sua amostra ao vivo permanece acessível e exibível.</p>
+A primeira maneira de usar um exemplo de código para criar conteúdo de aprendizagem ativo é editar a página onde deseja adicionar seu conteúdo. Use o recurso Live Sample para criar seu conteúdo conforme desejar. Não se preocupe com a complexidade do código que você poderia escrever; apenas crie o que você precisa. Uma vez que o seu conteúdo esteja pronto, basta mudar para a visualização do código do editor e cercar seu código com um simples {{HTMLElement('div')}} elemento com a classe`escondida`. Ao fazê-lo, seu código não será exibido, mas sua amostra ao vivo permanece acessível e exibível.
 
-<h3 dir="ltr" id="Vamos_ver_um_exemplo_simples">Vamos ver um exemplo simples:</h3>
+### Vamos ver um exemplo simples:
 
-<div class="moreinfo">
-<p>Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal</p>
+Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal
 
-<div class="hidden">
-<h4 id="hidden_code_example">hidden code example</h4>
-
-<h5 id="HTML">HTML</h5>
-
-<pre class="brush: html">&lt;div class="square"&gt;
-  #&lt;input class="color"&gt;
-&lt;/div&gt;</pre>
-
-<h5 id="CSS">CSS</h5>
-
-<pre class="brush: css">body {
-  padding: 10px;
-  margin : 0;
-}
-
-.square {
-  width  : 80px;
-  height : 80px;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-
-.color {
-  width: 60px;
-  text-transform: uppercase;
-}
-</pre>
-
-<h5 id="JS">JS</h5>
-
-<pre class="brush: js">function setColor(color) {
-  document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
-}
-
-function getRandomColor() {
-  var color = Math.floor(Math.random() * 16777215);
-  return color.toString(16);
-}
-
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
-  }
-  return value;
-}
-
-document.addEventListener('click', function () {
-  setColor(getRandomColor());
-});
-
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
-});
-</pre>
+```html hidden
+<div class="square">
+  #<input class="color">
 </div>
-{{EmbedLiveSample('hidden_code_example', 120, 120)}}</div>
+```
 
-<p>Se você olhar para o código HTML dessa página com o editor MDN, você verá o código HTML seguinte:</p>
-
-<pre class="brush: html">&lt;div class="moreinfo"&gt;
-&lt;p&gt;Click on the following square to randomly change its color or just type an hexadecimal code color&lt;/p&gt;
-
-&lt;div class="hidden"&gt;
-&lt;h4 id="hidden_code_example"&gt;hidden code example&lt;/h4&gt;
-
-&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
-
-&lt;pre class="brush: html"&gt;
-&amp;lt;div class="square"&amp;gt;
-  #&amp;lt;input class="color"&amp;gt;
-&amp;lt;/div&amp;gt;&lt;/pre&gt;
-
-&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
-
-&lt;pre class="brush: css"&gt;
+```css hidden
 body {
   padding: 10px;
   margin : 0;
@@ -128,11 +53,9 @@ body {
   width: 60px;
   text-transform: uppercase;
 }
-&lt;/pre&gt;
+```
 
-&lt;h5 id="JS"&gt;JS&lt;/h5&gt;
-
-&lt;pre class="brush: js"&gt;
+```js hidden
 function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').value = color;
@@ -159,28 +82,99 @@ document.addEventListener('click', function () {
 document.addEventListener('keyup', function () {
   setColor(getInputColor());
 });
-&lt;/pre&gt;
-&lt;/div&gt;
+```
 
-\{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+
+Se você olhar para o código HTML dessa página com o editor MDN, você verá o código HTML seguinte:
+
+```html
+<div class="moreinfo">
+<p>Click on the following square to randomly change its color or just type an hexadecimal code color</p>
+
+<div class="hidden">
+<h4 id="hidden_code_example">hidden code example</h4>
+
+<h5 id="HTML">HTML</h5>
+
+<pre class="brush: html">
+&lt;div class="square"&gt;
+  #&lt;input class="color"&gt;
 &lt;/div&gt;</pre>
 
-<p>Você pode ver um exemplo mais avançado de tal ajuste sobre <a href="/en-US/docs/Web/API/Canvas_API#JavaScript">a página API do Canvas.</a></p>
+<h5 id="CSS">CSS</h5>
 
-<h3 id="Código_de_fora_da_página">Código de fora da página</h3>
+<pre class="brush: css">
+body {
+  padding: 10px;
+  margin : 0;
+}
 
-<p>O exemplo anterior está certo se você deseja incorporar conteúdo básico de aprendizagem ativa. No entanto, se você quiser lidar com um código complexo, pode tornar-se um pouco estranho para lidar com esse wrapper de classe <code>oculto</code>.</p>
+.square {
+  width  : 80px;
+  height : 80px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 
-<p><font><font>Então, outra opção e escreva o código do seu conteúdo de aprendizagem em uma página MDN e, em seguida, incorpora-lo em outra página. Para fazer isso, podemos usar o {{TemplateLink ("EmbedDistLiveSample")}} macro em vez de {{TemplateLink ("EmbedLiveSample")}} macro.</font></font></p>
+.color {
+  width: 60px;
+  text-transform: uppercase;
+}
+</pre>
 
-<p><font><font>Vamos ver como esse exemplo quando configurado como se estivesse sendo incorporado de uma origem remota:</font></font></p>
+<h5 id="JS">JS</h5>
 
-<div class="moreinfo">
-<p><font><font>Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal</font></font></p>
+<pre class="brush: js">
+function setColor(color) {
+  document.querySelector('.square').style.backgroundColor = '#' + color;
+  document.querySelector('.color').value = color;
+}
 
-<p>{{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}</p>
+function getRandomColor() {
+  var color = Math.floor(Math.random() * 16777215);
+  return color.toString(16);
+}
+
+function getInputColor() {
+  var value = document.querySelector('.color').value;
+  var color = Number('0x' + color);
+  if (color === +color) {
+    return color.toString(16);
+  }
+  return value;
+}
+
+document.addEventListener('click', function () {
+  setColor(getRandomColor());
+});
+
+document.addEventListener('keyup', function () {
+  setColor(getInputColor());
+});
+</pre>
 </div>
 
-<p><font><font>Desta vez, </font></font><a href="/en-US/docs/MDN/Contribute/Editor/Source_mode"><font><font>se você olhar para o HTML da página usando o editor MDN</font></font></a><font><font> , você não está a ver o código oculto. </font><font>Se você quiser ver o código, vá para uma </font></font><a href="/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example"><font><font>página que o hospeda.</font></font></a></p>
+\{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+</div>
+```
 
-<p><font><font>Você pode ver um exemplo mais avançado do uso em nosso </font></font><a href="/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets"><font><font>tutorial HTML Form</font></font></a><font><font> , que usa essa técnica para permitir uma experiência com formulários.</font></font></p>
+Você pode ver um exemplo mais avançado de tal ajuste sobre [a página API do Canvas.](/pt-BR/docs/Web/API/Canvas_API#JavaScript)
+
+### Código de fora da página
+
+O exemplo anterior está certo se você deseja incorporar conteúdo básico de aprendizagem ativa. No entanto, se você quiser lidar com um código complexo, pode tornar-se um pouco estranho para lidar com esse wrapper de classe `oculto`.
+
+Então, outra opção e escreva o código do seu conteúdo de aprendizagem em uma página MDN e, em seguida, incorpora-lo em outra página. Para fazer isso, podemos usar o {{TemplateLink ("EmbedDistLiveSample")}} macro em vez de {{TemplateLink ("EmbedLiveSample")}} macro.
+
+Vamos ver como esse exemplo quando configurado como se estivesse sendo incorporado de uma origem remota:
+
+Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal
+
+{{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
+
+Desta vez, [se você olhar para o HTML da página usando o editor MDN](/pt-BR/docs/MDN/Contribute/Editor/Source_mode) , você não está a ver o código oculto. Se você quiser ver o código, vá para uma [página que o hospeda.](/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example)
+
+Você pode ver um exemplo mais avançado do uso em nosso [tutorial HTML Form](/pt-BR/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets) , que usa essa técnica para permitir uma experiência com formulários.

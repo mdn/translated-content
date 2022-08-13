@@ -10,36 +10,21 @@ tags:
   - WebRTC
 translation_of: Web/API/RTCCertificate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>A interface da <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> fornece um objeto representando um certificado que uma {{domxref("RTCPeerConnection")}} usa para autênticar.</p>
+A interface da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) fornece um objeto representando um certificado que uma {{domxref("RTCPeerConnection")}} usa para autênticar.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("RTCCertificate.expires")}} {{readonlyinline}}</dt>
- <dd>Retorna a data de expiração do certificado.</dd>
-</dl>
+- {{domxref("RTCCertificate.expires")}} {{readonlyinline}}
+  - : Retorna a data de expiração do certificado.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                        | Status                           | Comentário         |
+| ------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('WebRTC 1.0')}} | {{Spec2('WebRTC 1.0')}} | definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("api.RTCCertificate")}}</p>
-</div>
+{{Compat("api.RTCCertificate")}}

@@ -8,45 +8,33 @@ tags:
   - Navegador
 translation_of: Web/HTTP/Status/402
 ---
-<div>{{HTTPSidebar}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-<p>O código de status HTTP <strong><code>402 Payment Required</code></strong> é um termo despadronizado para respostas de Status, podendo-se ter usos futuros.</p>
+O código de status HTTP **`402 Payment Required`** é um termo despadronizado para respostas de Status, podendo-se ter usos futuros.
 
-<p>Às vezes, este comando indica que o processo não pôde ser realizado em função de um pagamento não realizado. Originalmente, foi criado para validar uma micro ou grande transação e pode indicar que o método não se realiza até que o cliente efetue o pagamento. Contudo, não existem usos convecionais fixos e sua inserção varia, dependendo do contexto que é posto.</p>
+Às vezes, este comando indica que o processo não pôde ser realizado em função de um pagamento não realizado. Originalmente, foi criado para validar uma micro ou grande transação e pode indicar que o método não se realiza até que o cliente efetue o pagamento. Contudo, não existem usos convecionais fixos e sua inserção varia, dependendo do contexto que é posto.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">402 Payment Required</pre>
+    402 Payment Required
 
-<h2 id="Exemplos_de_resposta">Exemplos de resposta</h2>
+## Exemplos de resposta
 
-<pre class="brush: bash notranslate">HTTP/1.1 402 Payment Required
+```bash
+HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "402 Payment Required" , "6.5.2")}}</td>
-   <td>HTTP/1.1: Semântica e contexto</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Título                         |
+| ---------------------------------------------------------------- | ------------------------------ |
+| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semântica e contexto |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.402")}}</p>
+{{Compat("http.status.402")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP autenticação</a></li>
-</ul>
+- [HTTP autenticação](/pt-BR/docs/Web/HTTP/Authentication)

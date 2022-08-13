@@ -3,48 +3,33 @@ title: 200 OK
 slug: Web/HTTP/Status/200
 translation_of: Web/HTTP/Status/200
 ---
-<div>
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>O código HTTP <strong><code>200 OK</code></strong> é a resposta de status de sucesso que indica que a requisição foi bem sucedida. Uma resposta 200 é cacheável por padrão.</p>
-</div>
+O código HTTP **`200 OK`** é a resposta de status de sucesso que indica que a requisição foi bem sucedida. Uma resposta 200 é cacheável por padrão.
 
-<p>O significado de sucesso depende do método de requisição HTTP: </p>
+O significado de sucesso depende do método de requisição HTTP:
 
-<ul>
- <li>{{HTTPMethod("GET")}}: O recurso foi carregado e transmitido no corpo da mensagem.</li>
- <li>{{HTTPMethod("HEAD")}}: Os cabeçalhos da entidade estão no corpo da mensagem.</li>
- <li>{{HTTPMethod("POST")}}: O recurso descrevendo o resultado da ação é transmitido no corpo da mensagem.</li>
- <li>{{HTTPMethod("TRACE")}}: O corpo da mensagem contém a mensagem da requisição tal qual foi recebida pelo servidor.</li>
-</ul>
+- {{HTTPMethod("GET")}}: O recurso foi carregado e transmitido no corpo da mensagem.
+- {{HTTPMethod("HEAD")}}: Os cabeçalhos da entidade estão no corpo da mensagem.
+- {{HTTPMethod("POST")}}: O recurso descrevendo o resultado da ação é transmitido no corpo da mensagem.
+- {{HTTPMethod("TRACE")}}: O corpo da mensagem contém a mensagem da requisição tal qual foi recebida pelo servidor.
 
-<p>O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} geralmente não são <code>200 </code><code>OK</code>, e sim {{HTTPStatus("204")}} <code>No Content</code> (ou {{HTTPStatus("201")}} <code>Created</code> quando o recurso é carregado pela primeira vez).</p>
+O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} geralmente não são ` 200 ``OK`, e sim {{HTTPStatus("204")}} `No Content` (ou {{HTTPStatus("201")}} `Created` quando o recurso é carregado pela primeira vez).
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">200 OK</pre>
+    200 OK
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "200 OK" , "6.3.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.200")}}</p>
+{{Compat("http.status.200")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)

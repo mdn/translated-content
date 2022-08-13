@@ -3,86 +3,59 @@ title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 translation_of: Web/API/Document/getElementsByName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">O método<strong><code>getElementsByName()</code></strong> do objeto {{domxref("Document")}} retorna uma coleção de elementos {{domxref("NodeList")}} com um dado {{domxref("element.name","name")}} no documento.</span></p>
+O método**`getElementsByName()`** do objeto {{domxref("Document")}} retorna uma coleção de elementos {{domxref("NodeList")}} com um dado {{domxref("element.name","name")}} no documento.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <var>elementos</var> = document.getElementsByName(<var>nome</var>);
-</pre>
+    var elementos = document.getElementsByName(nome);
 
-<ul>
- <li><var>elementos</var> é uma coleção ativa de {{domxref("NodeList")}}, significando que ele atualiza automaticamente com os novos elementos com o mesmo <code>nome</code> que são adicionados/removidos do documento.</li>
- <li><var>nome</var> é um valor do atributo <code>nome</code> dos elemento(s).</li>
-</ul>
+- _elementos_ é uma coleção ativa de {{domxref("NodeList")}}, significando que ele atualiza automaticamente com os novos elementos com o mesmo `nome` que são adicionados/removidos do documento.
+- _nome_ é um valor do atributo `nome` dos elemento(s).
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;title&gt;Exemplo: usando document.getElementsByName&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<title>Exemplo: usando document.getElementsByName</title>
 
-&lt;input type="hidden" name="up"&gt;
-&lt;input type="hidden" name="down"&gt;
+<input type="hidden" name="up">
+<input type="hidden" name="down">
 
-&lt;script&gt;
+<script>
   var up_nomes = document.getElementsByName("up");
   console.log(up_nomes[0].tagName); // exibindo o campo "INPUT"
-&lt;/script&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O atributo {{domxref("element.name","name")}} pode somente ser aplicado nos documentos (X)HTML.</p>
+O atributo {{domxref("element.name","name")}} pode somente ser aplicado nos documentos (X)HTML.
 
-<p>A coleção retornada {{domxref("NodeList")}} contém <em>todos</em> os elementos com o respectivo <code>nome</code>, tal como {{htmlelement("meta")}}, {{htmlelement("object")}}, e até os elementos o qual não suporta o atributo <code>nome</code> para todos.</p>
+A coleção retornada {{domxref("NodeList")}} contém _todos_ os elementos com o respectivo `nome`, tal como {{htmlelement("meta")}}, {{htmlelement("object")}}, e até os elementos o qual não suporta o atributo `nome` para todos.
 
-<div class="warning">
-<p>O método <strong>getElementsByName</strong> trabalha diferentemente em IE10 e anteriores. Além de que, <code>getElementsByName()</code> também retorna elementos que tem um <a href="/pt-BR/docs/Web/HTML/Global_attributes/id">atributo <code>id</code></a> com o valor especificado. Seja cuidadoso para não usar a mesma string como ambos <code>nome</code> e <code>id</code>.</p>
-</div>
+> **Warning:** O método **getElementsByName** trabalha diferentemente em IE10 e anteriores. Além de que, `getElementsByName()` também retorna elementos que tem um [atributo `id`](/pt-BR/docs/Web/HTML/Global_attributes/id) com o valor especificado. Seja cuidadoso para não usar a mesma string como ambos `nome` e `id`.
 
-<div class="warning">
-<p>O método <strong>getElementsByName</strong> trabalha diferentemente no IE. Portanto, <code>getElementsByName()</code> não retorna todos os elementos no qual não pode ter um atributo <code>nome</code> (tal como <code>&lt;span&gt;</code>).</p>
-</div>
+> **Warning:** O método **getElementsByName** trabalha diferentemente no IE. Portanto, `getElementsByName()` não retorna todos os elementos no qual não pode ter um atributo `nome` (tal como `<span>`).
 
-<div class="warning">
-<p>Ambos IE e Edge retorna um {{domxref("HTMLCollection")}}, e não um {{domxref("NodeList")}}</p>
-</div>
+> **Warning:** Ambos IE e Edge retorna um {{domxref("HTMLCollection")}}, e não um {{domxref("NodeList")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Epecificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Epecificação                                                                                                                 | Status                               | Comentário        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                   |
+| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Definição Inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Document.getElementsByName")}}</p>
+{{Compat("api.Document.getElementsByName")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("document.getElementById()")}} para retornar uma referência para um elemento por um único <code>id</code></li>
- <li>{{domxref("document.getElementsByTagName()")}} para retornar referências para elementos com o mesmo <a href="/en-US/docs/Web/API/Element/tagName">nome</a> <a href="/en-US/docs/Web/API/Element/tagName">tag </a></li>
- <li>{{domxref("document.querySelector()")}} para retornar referências para elementos via seletores CSS como <code>'div.myclass'</code></li>
-</ul>
+- {{domxref("document.getElementById()")}} para retornar uma referência para um elemento por um único `id`
+- {{domxref("document.getElementsByTagName()")}} para retornar referências para elementos com o mesmo [nome](/pt-BR/docs/Web/API/Element/tagName) [tag](/pt-BR/docs/Web/API/Element/tagName)
+- {{domxref("document.querySelector()")}} para retornar referências para elementos via seletores CSS como `'div.myclass'`

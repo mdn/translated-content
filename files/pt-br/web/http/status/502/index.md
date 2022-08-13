@@ -9,41 +9,28 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/502
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de erro HTTP <code><strong>502 Bad Gateway</strong></code> retornado pelo servidor indica que ele, enquanto atuando como um servidor intermediário (<em>gateway</em> ou <em>proxy</em>), recebeu uma resposta inválida do servidor para o qual a requisição foi encaminhada (<em>upstream server</em>).</p>
+O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que ele, enquanto atuando como um servidor intermediário (_gateway_ ou _proxy_), recebeu uma resposta inválida do servidor para o qual a requisição foi encaminhada (_upstream server_).
 
-<div class="note">
-<p><strong>Nota: </strong>Um {{interwiki("wikipedia", "Gateway_(telecommunications)", "<em>Gateway</em>")}} pode se referir a coisas diferentes na rede e um erro 502 geralmente não é algo que você possa corrigir, mas requer uma correção por parte do servidor web ou dos proxies através dos quais você está tentando obter acesso.</p>
-</div>
+> **Note:** **Nota:** Um {{interwiki("wikipedia", "Gateway_(telecommunications)", "<em>Gateway</em>")}} pode se referir a coisas diferentes na rede e um erro 502 geralmente não é algo que você possa corrigir, mas requer uma correção por parte do servidor web ou dos proxies através dos quais você está tentando obter acesso.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">502 Bad Gateway</pre>
+    502 Bad Gateway
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "502 Bad Gateway" , "6.6.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>As informações mostradas acima foram extraídas do GitHub do MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+As informações mostradas acima foram extraídas do GitHub do MDN (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.502")}}</p>
+{{Compat("http.status.502")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus(504)}}</li>
-</ul>
+- {{HTTPStatus(504)}}

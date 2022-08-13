@@ -3,62 +3,39 @@ title: Server
 slug: Web/HTTP/Headers/Server
 translation_of: Web/HTTP/Headers/Server
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho <code><strong>Server</strong></code> contem informação sobre o <span id="result_box" lang="pt"><span>software usado pelo servidor de origem para manipular a solicitação.</span></span></p>
+O cabeçalho **`Server`** contem informação sobre o software usado pelo servidor de origem para manipular a solicitação.
 
-<p><span id="result_box" lang="pt"><span>Valores excessivamente longos e detalhados do Servidor devem ser evitados, já que eles potencialmente revelam detalhes internos de implementação que podem tornar (um pouco) mais fácil para os invasores encontrarem e explorarem falhas de segurança conhecidas.</span></span></p>
+Valores excessivamente longos e detalhados do Servidor devem ser evitados, já que eles potencialmente revelam detalhes internos de implementação que podem tornar (um pouco) mais fácil para os invasores encontrarem e explorarem falhas de segurança conhecidas.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Server: &lt;product&gt;
-</pre>
+    Server: <product>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;product&gt;</dt>
- <dd><span id="result_box" lang="pt"><span>O nome do software ou (sub) produto que manipula as solicitações.</span></span></dd>
-</dl>
+- \<product>
+  - : O nome do software ou (sub) produto que manipula as solicitações.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Server: Apache/2.4.1 (Unix)</pre>
+    Server: Apache/2.4.1 (Unix)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Server", "7.4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Title                                                        |
+| -------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Server")}}</p>
+{{Compat("http.headers.Server")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Allow")}}</li>
-</ul>
+- {{HTTPHeader("Allow")}}

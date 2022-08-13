@@ -7,97 +7,63 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Trailer
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong>Trailer</strong> permite o remetente incluir campos adicionais ao final de mensagens fragmentadas visando prover metadados que podem ser dinamicamente gerados enquanto o corpo da mensagem é enviado, como a mensagem de checagem de integridade, assinatura digital, ou status de pós-processamento.</p>
+O cabeçalho de resposta **Trailer** permite o remetente incluir campos adicionais ao final de mensagens fragmentadas visando prover metadados que podem ser dinamicamente gerados enquanto o corpo da mensagem é enviado, como a mensagem de checagem de integridade, assinatura digital, ou status de pós-processamento.
 
-<div class="note">
-<p>O cabeçalho de requisição {{HTTPHeader("TE")}} precisa ser colocado como "trailers" para permitir campos de reboque (<em>trailers</em>).</p>
-</div>
+> **Note:** O cabeçalho de requisição {{HTTPHeader("TE")}} precisa ser colocado como "trailers" para permitir campos de reboque (_trailers_).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Trailer: header-names</pre>
+    Trailer: header-names
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>header-names</code></dt>
- <dd>Cabeçalhos HTTP que estarão presentes na parte de reboque das mensagens fragmentadas. Estes campos de cabeçalhos <strong>não</strong> estão permitidos:
- <ul>
-  <li>cabeçalhos de enquadramento de mensagem (e.g., {{HTTPHeader("Transfer-Encoding")}} e {{HTTPHeader("Content-Length")}}),</li>
-  <li>Cabeçalhos de roteamento (e.g., {{HTTPHeader("Host")}}),</li>
-  <li>Modificadores de requisição (e.g., controles e condicionais, como {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, ou {{HTTPHeader("TE")}}), </li>
-  <li>cabeçalhos de autenticação (e.g., {{HTTPHeader("Authorization")}} ou {{HTTPHeader("Set-Cookie")}}),</li>
-  <li>ou {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, e <code>Trailer</code> em si.</li>
- </ul>
- </dd>
-</dl>
+- `header-names`
+  - : Cabeçalhos HTTP que estarão presentes na parte de reboque das mensagens fragmentadas. Estes campos de cabeçalhos **não** estão permitidos:\* cabeçalhos de enquadramento de mensagem (e.g., {{HTTPHeader("Transfer-Encoding")}} e {{HTTPHeader("Content-Length")}}),
+    - Cabeçalhos de roteamento (e.g., {{HTTPHeader("Host")}}),
+    - Modificadores de requisição (e.g., controles e condicionais, como {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, ou {{HTTPHeader("TE")}}),
+    - cabeçalhos de autenticação (e.g., {{HTTPHeader("Authorization")}} ou {{HTTPHeader("Set-Cookie")}}),
+    - ou {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, e `Trailer` em si.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Codificação_de_transferência_fragmentada_usando_cabeçalho_de_reboque">Codificação de transferência fragmentada usando cabeçalho de reboque</h3>
+### Codificação de transferência fragmentada usando cabeçalho de reboque
 
-<p>Neste exemplo, o cabeçalho {{HTTPHeader("Expires")}} é usado no fim da mensagem fragmentada e serve como cabeçalho de reboque.</p>
+Neste exemplo, o cabeçalho {{HTTPHeader("Expires")}} é usado no fim da mensagem fragmentada e serve como cabeçalho de reboque.
 
-<pre class="notranslate">HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-Trailer: Expires
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Transfer-Encoding: chunked
+    Trailer: Expires
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-\r\n
-</pre>
+    7\r\n
+    Mozilla\r\n
+    9\r\n
+    Developer\r\n
+    7\r\n
+    Network\r\n
+    0\r\n
+    Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
+    \r\n
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Trailer", "4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Chunked trailer part", "4.1.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Título                                                             |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Trailer", "4.4")}}                     | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{RFC("7230", "Chunked trailer part", "4.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Trailer")}}</p>
+{{Compat("http.headers.Trailer")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
- <li>{{HTTPHeader("TE")}}</li>
- <li>
-  <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Codificação de transferência fragmentada</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("TE")}}
+- [Codificação de transferência fragmentada](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

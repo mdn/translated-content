@@ -8,10 +8,8 @@ tags:
 translation_of: Glossary/Chrome
 original_slug: Glossario/Chrome
 ---
-<p>Em um navegador, o chrome é qualquer aspecto visível do navegador aparte das páginas web (ex., barra de ferramentas, menus, abas). Não deve ser confundido com o {{glossary("Google Chrome")}} navegador.</p>
+Em um navegador, o chrome é qualquer aspecto visível do navegador aparte das páginas web (ex., barra de ferramentas, menus, abas). Não deve ser confundido com o {{glossary("Google Chrome")}} navegador.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<ul>
- <li><a href="http://www.nngroup.com/articles/browser-and-gui-chrome/">Browser and GUI Chrome</a></li>
-</ul>
+- [Browser and GUI Chrome](http://www.nngroup.com/articles/browser-and-gui-chrome/)

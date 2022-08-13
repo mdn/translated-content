@@ -9,85 +9,82 @@ tags:
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Escrevendo_aplicacoes_cliente_WebSocket
 ---
-<p><span style="line-height: 1.5;">Aplicações cliente usam o </span><a href="/en-US/docs/Web/API/Websockets_API">WebSocket API</a> para se comunicar com <a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">WebSocket servers</a> sob o protocolo WebSocket.</p>
+Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) para se comunicar com [WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) sob o protocolo WebSocket.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="warning">
-<p>O fragmento de código neste artigo foi tomado de um exemplo de chat usando WebSocket. <a href="https://github.com/mdn/samples-server/tree/master/s/websocket-chat">v</a>eja o código, então experimente o exemplo. <strong>O exemplo atual possui um bug; ele está tentando usar WebSockets inseguro e precisa ser atualizado para usar WebSocokets seguro. Iremos arrumar isso em breve!</strong></p>
-</div>
+> **Warning:** O fragmento de código neste artigo foi tomado de um exemplo de chat usando WebSocket. [v](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)eja o código, então experimente o exemplo. **O exemplo atual possui um bug; ele está tentando usar WebSockets inseguro e precisa ser atualizado para usar WebSocokets seguro. Iremos arrumar isso em breve!**
 
-<h2 id="Criando_um_objeto_WebSocket">Criando um objeto WebSocket </h2>
+## Criando um objeto WebSocket
 
-<p>Para se comunicar utilizando o protocolo WebSocket, você precisa criar um objeto <code><a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket">WebSocket</a>,</code> que automaticamente tentará abrir a conexão com o servidor.</p>
+Para se comunicar utilizando o protocolo WebSocket, você precisa criar um objeto `WebSocket,` que automaticamente tentará abrir a conexão com o servidor.
 
-<p>O construtor WebSocket aceita dois campos, um obrigatório e um opcional:</p>
+O construtor WebSocket aceita dois campos, um obrigatório e um opcional:
 
-<pre class="notranslate">WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
-);
-</pre>
+    WebSocket WebSocket(
+      in DOMString url,
+      in optional DOMString protocols
+    );
 
-<dl>
- <dt><code>url</code></dt>
- <dd>A URL para se conectar. Esta deve ser a URL para qual o WebSocket irá responder.</dd>
- <dt><code>protocols</code> {{ optional_inline() }}</dt>
- <dd>Uma única string indicando o protocolo ou uma <em>array </em>de strings de protocolos. Estas strings são usadas para indicar sub-protocolos, de forma que um único servidor pode implementar múltiplos sub-protocolos WebSocket (por exemplo, você pode querer que um servidor seja capaz de lidar com diferentes tipos de interações a depender do <code>protocol</code> especificado). Se não especificar uma string de protocolo, uma string vazia é assumida.</dd>
-</dl>
+- `url`
+  - : A URL para se conectar. Esta deve ser a URL para qual o WebSocket irá responder.
+- `protocols` {{ optional_inline() }}
+  - : Uma única string indicando o protocolo ou uma _array_ de strings de protocolos. Estas strings são usadas para indicar sub-protocolos, de forma que um único servidor pode implementar múltiplos sub-protocolos WebSocket (por exemplo, você pode querer que um servidor seja capaz de lidar com diferentes tipos de interações a depender do `protocol` especificado). Se não especificar uma string de protocolo, uma string vazia é assumida.
 
-<p>O construtor lançará a exceção <strong><code>SECURITY_ERR</code></strong> se o destino não permitir acesso. Isso pode acontecer se você tentar utilizar uma conexão insegura (a maioria dos {{Glossary("user agent", "user agents")}} agora necessitam de um link seguro para todas as conexões WebSocket, a menos que estejam no mesmo dispositivo ou na mesma rede).</p>
+O construtor lançará a exceção **`SECURITY_ERR`** se o destino não permitir acesso. Isso pode acontecer se você tentar utilizar uma conexão insegura (a maioria dos {{Glossary("user agent", "user agents")}} agora necessitam de um link seguro para todas as conexões WebSocket, a menos que estejam no mesmo dispositivo ou na mesma rede).
 
-<dl>
-</dl>
+### Erros de Conexão
 
-<h3 id="Erros_de_Conexão">Erros de Conexão</h3>
+Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket "WebSocket") (invocando, assim, seu manipulador `onerror`), e então o [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket "WebSocket") (invocando o manipulador `onclose`) para indicar a razão pela qual a conexão foi fechada.
 
-<p>Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> (invocando, assim, seu manipulador <code>onerror</code>), e então o <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a> é enviado ao objeto <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> (invocando o manipulador <code>onclose</code>) para indicar a razão pela qual a conexão foi fechada.</p>
+O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4") através do [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent"). Está implementado a partir do Firefox 11.
 
-<p>O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> através do <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>. Está implementado a partir do Firefox 11.</p>
+### Exemplos
 
-<h3 id="Exemplos">Exemplos</h3>
+Neste simples exemplo, criaremos um novo WebSocket, conectando ao servidor em `ws://www.example.com/socketserver`. Neste exemplo utilizaremos um protocolo customizado denominado "protocolOne", embora possa ser omitido.
 
-<p>Neste simples exemplo, criaremos um novo WebSocket, conectando ao servidor em <code><span class="nowiki">ws://www.example.com/socketserver</span></code>. Neste exemplo utilizaremos um protocolo customizado denominado "protocolOne", embora possa ser omitido.</p>
+```js
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+```
 
-<pre class="brush: js notranslate">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
-</pre>
+No retorno, `exampleSocket.readyState` está como `CONNECTING`. O `readyState` se tornará `OPEN` quando a conexão estiver pronta para transferir dados.
 
-<p>No retorno, <code>exampleSocket.readyState</code> está como <code>CONNECTING</code>. O <code>readyState</code> se tornará <code>OPEN</code> quando a conexão estiver pronta para transferir dados.</p>
+Se quiser abrir uma conexão e for flexível quanto aos protocolos suportados, você pode especificar um array de protocolos:
 
-<p>Se quiser abrir uma conexão e for flexível quanto aos protocolos suportados, você pode especificar um array de protocolos:</p>
+```js
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+```
 
-<pre class="brush: js notranslate">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
-</pre>
+Uma vez que a conexão for estabelecida (isso é, `readyState` está `OPEN`), `exampleSocket.protocol` informará qual protocolo o servidor selecionou.
 
-<p>Uma vez que a conexão for estabelecida (isso é, <code>readyState</code> está <code>OPEN</code>), <code>exampleSocket.protocol</code> informará qual protocolo o servidor selecionou.</p>
+Nos exemplos acima, `ws` foi substituído por `http`, de forma similar `wss` substitui `https`. Estabelecer uma conexão WebSocket depende do [Mecanismo de Aprimoramento HTTP](/pt-BR/docs/Web/HTTP/Protocol_upgrade_mechanism), de forma que o pedido para atualização de protocolo está implícito quando endereçamos o servidor HTTP como `ws://www.example.com` ou `wss://www.example.com`.
 
-<p>Nos exemplos acima, <code>ws</code> foi substituído por <code>http</code>, de forma similar <code>wss</code> substitui <code>https</code>. Estabelecer uma conexão WebSocket depende do <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Mecanismo de Aprimoramento HTTP</a>, de forma que o pedido para atualização de protocolo está implícito quando endereçamos o servidor HTTP como <code><span class="nowiki">ws://www.example.com</span></code> ou <code><span class="nowiki">wss://www.example.com</span></code>.</p>
+## Enviando dados ao servidor
 
-<h2 id="Enviando_dados_ao_servidor">Enviando dados ao servidor</h2>
+Uma vez a conexão aberta, você pode iniciar a transmisão de dados ao servidor. Para tanto, chame o método [`send()`](</en/WebSockets/WebSockets_reference/WebSocket#send()> "en/WebSockets/WebSockets reference/WebSocket#send()") do `WebSocket` para cada mensagem que queira enviar:
 
-<p>Uma vez a conexão aberta, você pode iniciar a transmisão de dados ao servidor. Para tanto, chame o método <code><a href="/en/WebSockets/WebSockets_reference/WebSocket#send()" title="en/WebSockets/WebSockets reference/WebSocket#send()">send()</a></code> do <code>WebSocket</code> para cada mensagem que queira enviar:</p>
+```js
+exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
+```
 
-<pre class="brush: js notranslate">exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
-</pre>
+Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer").
 
-<p>Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>.</p>
+> **Note:** Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
 
-<div class="note"><strong>Note:</strong> Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.</div>
+Visto que estabelecer uma conexão funciona de forma assícrona e, consequentemente, propensa a erros, não há garantia de sucesso ao chamar o método `send()` imediatamente após criar um objeto WebSocket. Podemos, pelo menos, ter certeza de que a tentativa de envio dos dados apenas ocorre quando uma conexão é estabelecida definindo um manipulador de eventos `onopen`:
 
-<p>Visto que estabelecer uma conexão funciona de forma assícrona e, consequentemente, propensa a erros, não há garantia de sucesso ao chamar o método <code>send()</code> imediatamente após criar um objeto WebSocket. Podemos, pelo menos, ter certeza de que a tentativa de envio dos dados apenas ocorre quando uma conexão é estabelecida definindo um manipulador de eventos <code>onopen</code>:</p>
-
-<pre class="brush: js notranslate">exampleSocket.onopen = function (event) {
+```js
+exampleSocket.onopen = function (event) {
   exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
 };
-</pre>
+```
 
-<h3 id="Utilizando_JSON_para_transmitir_objetos">Utilizando JSON para transmitir objetos</h3>
+### Utilizando JSON para transmitir objetos
 
-<p>Uma forma conveniente é usar <a href="/en/JSON" title="en/JSON">JSON</a> para enviar dados razoavelmente complexos ao servidor. Por exemplo, um aplicação de chat pode interagir  com o servidor empregando um protocolo que utilize pacotes de dados  JSON encapsulados:</p>
+Uma forma conveniente é usar [JSON](/en/JSON "en/JSON") para enviar dados razoavelmente complexos ao servidor. Por exemplo, um aplicação de chat pode interagir com o servidor empregando um protocolo que utilize pacotes de dados JSON encapsulados:
 
-<pre class="brush: js notranslate">// Enviar texto para todos os usuarios atraves do servidor
+```js
+// Enviar texto para todos os usuarios atraves do servidor
 function sendText() {
   // Construir um objeto do tipo msg contendo o dado que o servidor precisa processar a partir do cliente de chat.
   var msg = {
@@ -103,30 +100,30 @@ function sendText() {
   // Esvaziar o campo input do elemento text, pronto pra receber a próxima linha de texto do usuário.
   document.getElementById("text").value = "";
 }
-</pre>
+```
 
-<h2 id="Recebendo_mensagens_do_servidor">Recebendo mensagens do servidor</h2>
+## Recebendo mensagens do servidor
 
-<p>A API WebSockets é dirigida por <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/Events/Overview_of_Events_and_Handlers">eventos</a>; quando mensagens são recebidas, um evento de "mensagem" é entregue à função <code>onmessage</code>. Para começar a ouvir os dados de entrada, você pode fazer algo conforme o exemplo abaixo:</p>
+A API WebSockets é dirigida por [eventos](/pt-BR/docs/Web/Guide/Events/Overview_of_Events_and_Handlers); quando mensagens são recebidas, um evento de "mensagem" é entregue à função `onmessage`. Para começar a ouvir os dados de entrada, você pode fazer algo conforme o exemplo abaixo:
 
-<pre class="brush: js notranslate">exampleSocket.onmessage = function (event) {
+```js
+exampleSocket.onmessage = function (event) {
   console.log(event.data);
 }
-</pre>
+```
 
-<h3 id="Recebendo_e_interpretando_objetos_JSON">Recebendo e interpretando objetos JSON</h3>
+### Recebendo e interpretando objetos JSON
 
-<p>Vamos considerar que a aplicação cliente de chat remete o envio de dados <a href="#utilizando_json_para_transmitir_objetos">Utilizando JSON para transmitir objetos</a>. Existem diversos tipos de pacotes de dados que o cliente pode receber, tais como:</p>
+Vamos considerar que a aplicação cliente de chat remete o envio de dados [Utilizando JSON para transmitir objetos](#utilizando_json_para_transmitir_objetos). Existem diversos tipos de pacotes de dados que o cliente pode receber, tais como:
 
-<ul>
- <li>Handshake de login</li>
- <li>Messagem de texto</li>
- <li>Atualizações da lista de usuários</li>
-</ul>
+- Handshake de login
+- Messagem de texto
+- Atualizações da lista de usuários
 
-<p>O código que interpreta as mensagens de entrada se parecerá com esse:</p>
+O código que interpreta as mensagens de entrada se parecerá com esse:
 
-<pre class="brush: js notranslate">exampleSocket.onmessage = function(event) {
+```js
+exampleSocket.onmessage = function(event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
@@ -139,18 +136,18 @@ function sendText() {
       setUsername();
       break;
     case "username":
-      text = "&lt;b&gt;User &lt;em&gt;" + msg.name + "&lt;/em&gt; signed in at " + timeStr + "&lt;/b&gt;&lt;br&gt;";
+      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
       break;
     case "message":
-      text = "(" + timeStr + ") &lt;b&gt;" + msg.name + "&lt;/b&gt;: " + msg.text + "&lt;br&gt;";
+      text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "&lt;b&gt;Seu usuario foi configurado como &lt;em&gt;" + msg.name + "&lt;/em&gt; porque o nome que você escolheu está em uso.&lt;/b&gt;&lt;br&gt;"
+      text = "<b>Seu usuario foi configurado como <em>" + msg.name + "</em> porque o nome que você escolheu está em uso.</b><br>"
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i &lt; msg.users.length; i++) {
-        ul += msg.users[i] + "&lt;br&gt;";
+      for (i=0; i < msg.users.length; i++) {
+        ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
       break;
@@ -161,23 +158,24 @@ function sendText() {
     document.getElementById("chatbox").contentWindow.scrollByPages(1);
   }
 };
-</pre>
+```
 
-<p>Aqui utilizamos <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.</p>
+Aqui utilizamos [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse "en/JavaScript/Reference/Global Objects/JSON/parse") para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
 
-<h3 id="Formato_de_dados_de_texto">Formato de dados de texto</h3>
+### Formato de dados de texto
 
-<p>O formato de Texto recebido através de uma conexão WebSocket está no formato UTF-8.</p>
+O formato de Texto recebido através de uma conexão WebSocket está no formato UTF-8.
 
-<h2 id="Fechando_a_conexão">Fechando a conexão</h2>
+## Fechando a conexão
 
-<p>Quando finalizar o uso da conexão WebSocket, invoque o método <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>:</p>
+Quando finalizar o uso da conexão WebSocket, invoque o método [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()> "en/WebSockets/WebSockets reference/WebSocket#close()"):
 
-<pre class="brush: js notranslate">exampleSocket.close();
-</pre>
+```js
+exampleSocket.close();
+```
 
-<p>Pode ser útil examinar o atributo <code>bufferedAmount</code> do socket  antes de tentar fechar a conexão para determinar se qualquer dado ainda está pendente de transmissão na rede. </p>
+Pode ser útil examinar o atributo `bufferedAmount` do socket antes de tentar fechar a conexão para determinar se qualquer dado ainda está pendente de transmissão na rede.
 
-<h2 id="Considerações_de_segurança">Considerações de segurança</h2>
+## Considerações de segurança
 
-<p>WebSockets não devem ser utilizados em um contexto de um ambiente misto, isto é, você não deveria abrir uma conexão não-segura a partir de uma página previamente carregada utilizando HTTPS, ou vice-versa. A maioria dos browsers atuamente apenas permitem conexões seguras pelo Websocket, e não mais suportam contextos diferentes desse.</p>
+WebSockets não devem ser utilizados em um contexto de um ambiente misto, isto é, você não deveria abrir uma conexão não-segura a partir de uma página previamente carregada utilizando HTTPS, ou vice-versa. A maioria dos browsers atuamente apenas permitem conexões seguras pelo Websocket, e não mais suportam contextos diferentes desse.

@@ -9,24 +9,22 @@ tags:
   - Web
 translation_of: Web/API
 ---
-<p>Ao escrever código para a Web, há muitas APIs da Web disponíveis. Abaixo está uma lista de todas as APIs e interfaces (tipos de objeto) que você pode usar ao desenvolver seu aplicativo ou site da Web.</p>
+Ao escrever código para a Web, há muitas APIs da Web disponíveis. Abaixo está uma lista de todas as APIs e interfaces (tipos de objeto) que você pode usar ao desenvolver seu aplicativo ou site da Web.
 
-<p>As APIs da Web são normalmente usadas com JavaScript, embora isso nem sempre tenha que ser o caso.</p>
+As APIs da Web são normalmente usadas com JavaScript, embora isso nem sempre tenha que ser o caso.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Esta é uma lista de todas as APIs disponíveis.</p>
+Esta é uma lista de todas as APIs disponíveis.
 
-<p>{{ListGroups}}</p>
+{{ListGroups}}
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<p>Esta é uma lista de todas as interfaces (isto é, tipos de objetos) disponíveis.</p>
+Esta é uma lista de todas as interfaces (isto é, tipos de objetos) disponíveis.
 
-<div>{{APIListAlpha}}</div>
+{{APIListAlpha}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">Referência de evento de API da Web</a></li>
-</ul>
+- [Referência de evento de API da Web](/pt-BR/docs/Web/Events)

@@ -6,32 +6,31 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>Number.isFinite()</code></strong>  determina se o valor passado é um número finito.</p>
+O método **`Number.isFinite()`** determina se o valor passado é um número finito.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Number.isFinite(v<var>alor</var>)</pre>
+    Number.isFinite(valor)
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>O valor a ser testado.</dd>
-</dl>
+- `valor`
+  - : O valor a ser testado.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{jsxref("Boolean")}} indicando se o valor passado é ou não um número finito.</p>
+Um {{jsxref("Boolean")}} indicando se o valor passado é ou não um número finito.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Em comparação com a função global {{jsxref("isFinite", "isFinite()")}}, esse método não força a conversão do parâmetro para número. Isso significa que só valores do tipo número, que são também finitos, retornam <code>true</code>.</p>
+Em comparação com a função global {{jsxref("isFinite", "isFinite()")}}, esse método não força a conversão do parâmetro para número. Isso significa que só valores do tipo número, que são também finitos, retornam `true`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -42,43 +41,27 @@ Number.isFinite('0');       // false, teria sido true com a função
                             // global isFinite('0')
 Number.isFinite(null);      // false, teria sido true com a função
                             // global isFinite(null)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+```js
+Number.isFinite = Number.isFinite || function(value) {
+    return typeof value === 'number' && isFinite(value);
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.isFinite")}}</p>
+{{Compat("javascript.builtins.Number.isFinite")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto {{jsxref("Number")}} ao qual pertence.</li>
-</ul>
+- O objeto {{jsxref("Number")}} ao qual pertence.

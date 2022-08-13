@@ -7,27 +7,21 @@ tags:
 translation_of: Glossary/Accessibility
 original_slug: Glossario/Acessibilidade
 ---
-<p><em>Acessibilidade na Web (</em><em>Web Accessibility)</em> (<strong>A11Y</strong>) <span id="result_box" lang="pt"><span>refere-se às melhores práticas para manter um site útil, apesar das restrições físicas e técnicas.</span> <span>A acessibilidade da Web é formalmente definida e discutida no</span></span> {{Glossary("W3C")}} através de {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).</p>
+_Acessibilidade na Web (\_\_Web Accessibility)_ (**A11Y**) refere-se às melhores práticas para manter um site útil, apesar das restrições físicas e técnicas. A acessibilidade da Web é formalmente definida e discutida no {{Glossary("W3C")}} através de {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).
 
-<h2 id="Leia_Mais">Leia Mais</h2>
+## Leia Mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility resources at MDN</a></li>
- <li>{{Interwiki("wikipedia", "Web accessibility")}} na Wikipedia</li>
-</ul>
+- [Accessibility resources at MDN](/pt-BR/docs/Web/Accessibility)
+- {{Interwiki("wikipedia", "Web accessibility")}} na Wikipedia
 
-<h3 id="Aprenda_sobre_acessibilidade_na_web">Aprenda sobre acessibilidade na web</h3>
+### Aprenda sobre acessibilidade na web
 
-<ul>
- <li><a href="http://webaim.org/" rel="external">Web Accessibility In Mind</a></li>
-</ul>
+- [Web Accessibility In Mind](http://webaim.org/)
 
-<h3 id="Referências_Técnicas">Referências Técnicas</h3>
+### Referências Técnicas
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA">The ARIA documentation on MDN</a></li>
- <li><a href="http://www.w3.org/WAI/" rel="external">The Web Accessibility Initiative homepage</a></li>
- <li><a href="http://www.w3.org/TR/wai-aria/" rel="external">The WAI-ARIA recommendation</a></li>
-</ul>
+- [The ARIA documentation on MDN](/pt-BR/docs/Web/Accessibility/ARIA)
+- [The Web Accessibility Initiative homepage](http://www.w3.org/WAI/)
+- [The WAI-ARIA recommendation](http://www.w3.org/TR/wai-aria/)

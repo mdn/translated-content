@@ -3,36 +3,32 @@ title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração</strong> <strong><code>for await...of</code> </strong>cria um loop que itera sobre objetos iteráveis ​​assíncronos, bem como sobre iteráveis ​​síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.</p>
+A **declaração** **`for await...of` **cria um loop que itera sobre objetos iteráveis ​​assíncronos, bem como sobre iteráveis ​​síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.
 
+## Sintaxe
 
+    for await (variável of iterável) {
+      // declaração
+    }
 
-<h2 id="Sintaxe">Sintaxe</h2>
+- `variável`
+  - : Em cada iteração, o valor de uma propriedade diferente é atribuído à _variável_. A _variável_ pode ser declarada como `const`, `let` ou `var`.
+- `iterável`
+  - : Objeto cujas propriedades iteráveis devem ser iteradas.
 
-<pre class="syntaxbox">for await (<code>variável</code> of <code>iterável</code>) {
-  <em>// declaração
-</em>}
-</pre>
+### Iterando sobre iteráveis assíncronos
 
-<dl>
- <dt><code>variável</code></dt>
- <dd>Em cada iteração, o valor de uma propriedade diferente é atribuído à <em>variável</em>. A <em>variável</em> pode ser declarada como <code>const</code>, <code>let</code> ou <code>var</code>.</dd>
- <dt><code>iterável</code></dt>
- <dd>Objeto cujas propriedades iteráveis devem ser iteradas.</dd>
-</dl>
+Você também pode iterar sobre um objeto que explicidamente implementa protocolo iterável assíncrono(_async iterable protocol_):
 
-<h3 id="Iterando_sobre_iteráveis_assíncronos">Iterando sobre iteráveis assíncronos</h3>
-
-<p>Você também pode iterar sobre um objeto que explicidamente implementa protocolo iterável assíncrono(<em>async iterable protocol</em>):</p>
-
-<pre class="brush:js">var asyncIterable = {
+```js
+var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -51,15 +47,16 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Iterando_sobre_generators_assíncronos">Iterando sobre generators assíncronos</h3>
+### Iterando sobre generators assíncronos
 
-<p>Como os geradores assíncronos implementam o protocolo assíncrono Iterator, eles podem fazer um loop usando <code>for await... of</code></p>
+Como os geradores assíncronos implementam o protocolo assíncrono Iterator, eles podem fazer um loop usando `for await... of`
 
-<pre class="brush: js">async function* asyncGenerator() {
+```js
+async function* asyncGenerator() {
   var i = 0;
-  while (i &lt; 3) {
+  while (i < 3) {
     yield i++;
   }
 }
@@ -71,11 +68,13 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 })();
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<p>Para termos um exemplo mais concreto de iteração sobre um generator assíncrono usando <code>for await... of</code>, considere iterar sobre dados obtidos através de um fecth de uma API. Este exemplo cria primeiro um iterador assíncrono para um stream de dados e depois usa-o para encontrar o tamanho da resposta da API. </p>
+Para termos um exemplo mais concreto de iteração sobre um generator assíncrono usando `for await... of`, considere iterar sobre dados obtidos através de um fecth de uma API. Este exemplo cria primeiro um iterador assíncrono para um stream de dados e depois usa-o para encontrar o tamanho da resposta da API.
 
-<pre class="brush: js">async function* streamAsyncIterator(stream) {
+```js
+async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -104,31 +103,19 @@ async function getResponseSize(url) {
   // output esperado:"Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h2 id="Especificações">Especificações </h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                                    | Status                       | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.statements.for_await_of")}}</p>
+{{Compat("javascript.statements.for_await_of")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/for...of")}}</li>
-</ul>
+- {{jsxref("Statements/for...of")}}

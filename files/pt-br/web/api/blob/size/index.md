@@ -3,56 +3,42 @@ title: Blob.size
 slug: Web/API/Blob/size
 translation_of: Web/API/Blob/size
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>A propriedade <strong><code>Blob.size</code></strong> retorna o tamanho em bytes de {{domxref("Blob")}} ou um {{domxref("File")}}.</p>
+A propriedade **`Blob.size`** retorna o tamanho em bytes de {{domxref("Blob")}} ou um {{domxref("File")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var sizeInBytes = <em>blob</em>.size
-</pre>
+    var sizeInBytes = blob.size
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um número.</p>
+Um número.
 
-<h2 id="Exempl0">Exempl0</h2>
+## Exempl0
 
-<pre class="brush:js">// fileInput é um HTMLInputElement: &lt;input type="file" multiple id="myfileinput"&gt;
+```js
+// fileInput é um HTMLInputElement: <input type="file" multiple id="myfileinput">
 var fileInput = document.getElementById("myfileinput");
 
 // files é um objeto FileList (similiar ao NodeList)
 var files = fileInput.files;
 
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
   console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-size', 'size')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Status                       | Comentário         |
+| ------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('File API', '#dfn-size', 'size')}} | {{Spec2('File API')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("api.Blob.size")}}</p>
-</div>
+{{Compat("api.Blob.size")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

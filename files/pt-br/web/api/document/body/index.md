@@ -3,18 +3,19 @@ title: Document.body
 slug: Web/API/Document/body
 translation_of: Web/API/Document/body
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Retorna o elemento {{HTMLElement("body")}} ou o {{HTMLElement("frameset")}} do documento atual, ou <code>null</code> se nenhum destes elementos existir.</p>
+Retorna o elemento {{HTMLElement("body")}} ou o {{HTMLElement("frameset")}} do documento atual, ou `null` se nenhum destes elementos existir.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>var objRef</em> = document.body;
-document.body = <em>objRef;</em></pre>
+    var objRef = document.body;
+    document.body = objRef;
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">// No HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+```js
+// No HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
 var aNewBodyElement = document.createElement("body");
@@ -22,23 +23,19 @@ var aNewBodyElement = document.createElement("body");
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
-</pre>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>document.body</code> é o elemento que envolve o conteúdo do documento. Em documentos com conteúdo no <code>&lt;body&gt;</code>, retorna o elemento <code>&lt;body&gt;</code>, e em documentos que usam frameset, retorna o elemento <code>&lt;frameset&gt;</code> mais periférico.</p>
+`document.body` é o elemento que envolve o conteúdo do documento. Em documentos com conteúdo no `<body>`, retorna o elemento `<body>`, e em documentos que usam frameset, retorna o elemento `<frameset>` mais periférico.
 
-<p>Apesar do <code>body</code> ser configurável, definir um novo <code>body</code> em um documento irá remover todos os elementos contidos no elemento <code>&lt;body&gt;</code> existente.</p>
+Apesar do `body` ser configurável, definir um novo `body` em um documento irá remover todos os elementos contidos no elemento `<body>` existente.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201">DOM Level 2 HTML: HTMLDocument.body</a></li>
- <li><a class="external" href="http://www.w3.org/TR/html5/dom.html#dom-tree-accessors">HTML5: DOM Tree Accessors</a></li>
-</ul>
+- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+- [HTML5: DOM Tree Accessors](http://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{domxref("document.head")}}</li>
-</ul>
+- {{domxref("document.head")}}

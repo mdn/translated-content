@@ -9,73 +9,48 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Timing-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <code><strong>Timing-Allow-Origin</strong></code> especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>, na qual caso contrário será reportada como zero dada as restrições entre origens.</p>
+O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API), na qual caso contrário será reportada como zero dada as restrições entre origens.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Timing-Allow-Origin: *
-Timing-Allow-Origin: &lt;origin&gt;[, &lt;origin&gt;]*
-</pre>
+    Timing-Allow-Origin: *
+    Timing-Allow-Origin: <origin>[, <origin>]*
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>*</dt>
- <dd>O servidor pode especificar "*" como um coringa, sendo assim permitindo qualquer origem de ver os tempos dos recursos.</dd>
- <dt>&lt;origin&gt;</dt>
- <dd>Especifica uma URI que pode ver os tempos dos recursos. Você pode especificar várias origens, separadas por vírgulas.</dd>
-</dl>
+- \*
+  - : O servidor pode especificar "\*" como um coringa, sendo assim permitindo qualquer origem de ver os tempos dos recursos.
+- \<origin>
+  - : Especifica uma URI que pode ver os tempos dos recursos. Você pode especificar várias origens, separadas por vírgulas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Para permitir qualquer recurso veja os tempos dos recursos:</p>
+Para permitir qualquer recurso veja os tempos dos recursos:
 
-<pre class="notranslate">Timing-Allow-Origin: *</pre>
+    Timing-Allow-Origin: *
 
-<p>Para permitir <code>https://developer.mozilla.org</code> de ver os tempos de recursos de, você pode especificar:</p>
+Para permitir `https://developer.mozilla.org` de ver os tempos de recursos de, você pode especificar:
 
-<pre class="notranslate">Timing-Allow-Origin: https://developer.mozilla.org</pre>
+    Timing-Allow-Origin: https://developer.mozilla.org
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing 3', '#sec-timing-allow-origin', 'Timing-Allow-Origin')}}</td>
-   <td>{{Spec2("Resource Timing 3")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                                   | Comentário         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('Resource Timing 3', '#sec-timing-allow-origin', 'Timing-Allow-Origin')}} | {{Spec2("Resource Timing 3")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Timing-Allow-Origin")}}</p>
+{{Compat("http.headers.Timing-Allow-Origin")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a></li>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Usando a Resource Timing API</a></li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API)
+- [Usando a Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- {{HTTPHeader("Vary")}}

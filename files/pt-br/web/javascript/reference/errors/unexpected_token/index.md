@@ -8,44 +8,43 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=&gt;' after argument list, got "x"
-</pre>
+    SyntaxError: expected expression, got "x"
+    SyntaxError: expected property name, got "x"
+    SyntaxError: expected target, got "x"
+    SyntaxError: expected rest argument name, got "x"
+    SyntaxError: expected closing parenthesis, got "x"
+    SyntaxError: expected '=>' after argument list, got "x"
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Uma construção específica da linguagem era esperada, mas algo não foi fornecido. Isto deve ser um simples erro de digitação.</p>
+Uma construção específica da linguagem era esperada, mas algo não foi fornecido. Isto deve ser um simples erro de digitação.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Expressão_esperada">Expressão esperada</h3>
+### Expressão esperada
 
-<p>Por exemplo, quando funções são chamadas, vírgulas sem um valor na sequência não são permitidas. O JavaScript esperarará outro argumento, como pode ser qualquer expressão.</p>
+Por exemplo, quando funções são chamadas, vírgulas sem um valor na sequência não são permitidas. O JavaScript esperarará outro argumento, como pode ser qualquer expressão.
 
-<pre class="brush: js example-bad">Math.max(2, 42,);
+```js example-bad
+Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
-</pre>
+```
 
-<p>O correto é omitir a vírgula ou adicionar outro argumento:</p>
+O correto é omitir a vírgula ou adicionar outro argumento:
 
-<pre class="brush: js example-good">Math.max(2, 42);
+```js example-good
+Math.max(2, 42);
 Math.max(2, 42, 13 + 37);
-</pre>
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.max()")}}</li>
-</ul>
+- {{jsxref("Math.max()")}}

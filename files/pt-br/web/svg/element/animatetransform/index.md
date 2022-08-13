@@ -7,61 +7,59 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animateTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>animateTransform</code> anima a transformação de um atributo em um elemento alvo, permitindo assim as animações controlarem a movimentação, escala, rotação e/ou inclinação.</p>
+O elemento `animateTransform` anima a transformação de um atributo em um elemento alvo, permitindo assim as animações controlarem a movimentação, escala, rotação e/ou inclinação.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"  viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    &lt;polygon points="60,30 90,90 30,90"&gt;
-        &lt;animateTransform attributeName="transform"
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
                           attributeType="XML"
                           type="rotate"
                           from="0 60 70"
                           to="360 60 70"
                           dur="10s"
-                          repeatCount="indefinite"/&gt;
-    &lt;/polygon&gt;
-&lt;/svg&gt;</pre>
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+```
 
-<p><strong>Resultado</strong></p>
+**Resultado**
 
-<p>{{ EmbedLiveSample('Exemplo','120','120') }}</p>
+{{ EmbedLiveSample('Exemplo','120','120') }}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de processamento condicional" title="en-US/docs/Web/SVG/Attribute#Atributos de processamento condicional">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos principais" title="en-US/docs/Web/SVG/Attribute#Atributos principais">Atributos principais</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de eventos da animação" title="en-US/docs/Web/SVG/Attribute#Atributos de eventos da animação">Atributos de eventos da animação</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos XLink" title="en-US/docs/Web/SVG/Attribute#Atributos XLink">Atributos XLink</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação" title="en-US/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação">Atributos de destino do atributo da animação</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de cronometragem da animação" title="en-US/docs/Web/SVG/Attribute#Atributos de cronometragem da animação">Atributos de cronometragem da animação</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de valor de animação" title="en-US/docs/Web/SVG/Attribute#Atributos de valor de animação">Atributos de valor de animação</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Atributos de animação adicionais" title="en-US/docs/Web/SVG/Attribute#Atributos de animação adicionais">Atributos de animação adicionais</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos de processamento condicional](</pt-BR/docs/Web/SVG/Attribute#Atributos de processamento condicional> "en-US/docs/Web/SVG/Attribute#Atributos de processamento condicional") »
+- [Atributos principais](</pt-BR/docs/Web/SVG/Attribute#Atributos principais> "en-US/docs/Web/SVG/Attribute#Atributos principais") »
+- [Atributos de eventos da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de eventos da animação> "en-US/docs/Web/SVG/Attribute#Atributos de eventos da animação") »
+- [Atributos XLink](</pt-BR/docs/Web/SVG/Attribute#Atributos XLink> "en-US/docs/Web/SVG/Attribute#Atributos XLink") »
+- [Atributos de destino do atributo da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação> "en-US/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação") »
+- [Atributos de cronometragem da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de cronometragem da animação> "en-US/docs/Web/SVG/Attribute#Atributos de cronometragem da animação") »
+- [Atributos de valor de animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de valor de animação> "en-US/docs/Web/SVG/Attribute#Atributos de valor de animação") »
+- [Atributos de animação adicionais](</pt-BR/docs/Web/SVG/Attribute#Atributos de animação adicionais> "en-US/docs/Web/SVG/Attribute#Atributos de animação adicionais") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
- <li>{{ SVGAttr("type") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
+- {{ SVGAttr("type") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/docs/DOM/SVGAnimateTransformElement" title="en/DOM/SVGAnimateTransformElement">SVGAnimateTransformElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGAnimateTransformElement`](/pt-BR/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement").

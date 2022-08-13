@@ -9,79 +9,53 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Content-Range
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <strong><code>Content-Range</code></strong> indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.</p>
+O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                                                                | {{Glossary("Response header")}} |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}                                                 | não                                      |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/&lt;size&gt;
-Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/*
-Content-Range: &lt;unit&gt; */&lt;size&gt;</pre>
+    Content-Range: <unit> <range-start>-<range-end>/<size>
+    Content-Range: <unit> <range-start>-<range-end>/*
+    Content-Range: <unit> */<size>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;unit&gt;</dt>
- <dd>A unidade nos quais a variação é especificada. Geralmente em <code>bytes</code>.</dd>
-</dl>
+- \<unit>
+  - : A unidade nos quais a variação é especificada. Geralmente em `bytes`.
 
-<dl>
- <dt>&lt;range-start&gt;</dt>
- <dd>Um inteiro na dada unidade indicando o começo da variação da requisitada.</dd>
- <dt>&lt;range-end&gt;</dt>
- <dd>Um inteiro na dada unidade indicando o fim da variação requisitada.</dd>
- <dt>&lt;size&gt;</dt>
- <dd>O tamanho total do documento (ou <code>'*'</code> se desconhecido).</dd>
-</dl>
+<!---->
 
-<h2 id="Exemplos">Exemplos</h2>
+- \<range-start>
+  - : Um inteiro na dada unidade indicando o começo da variação da requisitada.
+- \<range-end>
+  - : Um inteiro na dada unidade indicando o fim da variação requisitada.
+- \<size>
+  - : O tamanho total do documento (ou `'*'` se desconhecido).
 
-<pre>Content-Range: bytes 200-1000/67589
-</pre>
+## Exemplos
 
-<h2 id="Especificações">Especificações</h2>
+    Content-Range: bytes 200-1000/67589
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "Content-Range", "4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Especificação                                        | Título                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<p>{{Compat("http.headers.Content-Range")}}</p>
+## Compatibilidade com navegadores
 
-<h2 id="Veja_também">Veja também</h2>
+{{Compat("http.headers.Content-Range")}}
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPStatus("206")}} <code>Partial Content</code></li>
- <li>{{HTTPStatus("416")}} <code>Range Not Satisfiable</code></li>
-</ul>
+## Veja também
+
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`

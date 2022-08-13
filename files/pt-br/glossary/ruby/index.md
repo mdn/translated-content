@@ -7,19 +7,15 @@ tags:
 translation_of: Glossary/Ruby
 original_slug: Glossario/Ruby
 ---
-<p><em>Ruby</em> é uma linguagem de programação de código aberto. Em um contexto {{glossary("world wide web","Web")}}, Ruby é geralmente usado em servidores com o framework <em>Ruby On Rails</em> (ROR) para produzir websites/apps.</p>
+_Ruby_ é uma linguagem de programação de código aberto. Em um contexto {{glossary("world wide web","Web")}}, Ruby é geralmente usado em servidores com o framework _Ruby On Rails_ (ROR) para produzir websites/apps.
 
-<h2 id="Aprenda_Mais">Aprenda Mais</h2>
+## Aprenda Mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Ruby_%28programming_language%29">Ruby</a> on Wikipedia</li>
-</ul>
+- [Ruby](https://en.wikipedia.org/wiki/Ruby_%28programming_language%29) on Wikipedia
 
-<h3 id="Referência_técnica">Referência técnica</h3>
+### Referência técnica
 
-<ul>
- <li><a href="https://www.ruby-lang.org">Site oficial do Ruby</a></li>
- <li><a href="http://rubyonrails.org/">Site oficial do Ruby On Rails</a></li>
-</ul>
+- [Site oficial do Ruby](https://www.ruby-lang.org)
+- [Site oficial do Ruby On Rails](http://rubyonrails.org/)

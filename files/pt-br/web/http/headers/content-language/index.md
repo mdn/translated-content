@@ -7,96 +7,67 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Content-Language
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <a href="/pt-BR/docs/Glossario/Entity_header">cabeçalho de entidade</a> <strong><code>Content-Language</code></strong>  é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.</p>
+O [cabeçalho de entidade](/pt-BR/docs/Glossario/Entity_header) **`Content-Language`** é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.
 
-<p>Por exemplo, se "<code>Content-Language: de-DE</code>" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).</p>
+Por exemplo, se "`Content-Language: de-DE`" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).
 
-<p>Se nenhum <code>Content-Language</code> é especificado, o padrão é que o conteúdo é destinado para todas as línguas. Múltiplas tags de língua também podem ser usada, assim como usar o header <code>Content-Language</code> com varios tipos de mídia e não apenas para documentos de texto.</p>
+Se nenhum `Content-Language` é especificado, o padrão é que o conteúdo é destinado para todas as línguas. Múltiplas tags de língua também podem ser usada, assim como usar o header `Content-Language` com varios tipos de mídia e não apenas para documentos de texto.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>sim</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple header", "CORS-safelisted request-header")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                                                      | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}                                                 | não                                      |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | sim                                      |
+| {{Glossary("Simple header", "CORS-safelisted request-header")}}             | sim                                      |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Content-Language: de-DE
-Content-Language: en-US
-Content-Language: de-DE, en-CA
-</pre>
+    Content-Language: de-DE
+    Content-Language: en-US
+    Content-Language: de-DE, en-CA
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>language-tag</code></dt>
- <dd>Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("<code>-</code>", <code>%x2D</code>). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "<code>en</code>" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "<code>en-CA</code>" =  variedade de Inglês como comunicado no Canadá).</dd>
-</dl>
+- `language-tag`
+  - : Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("`-`", `%x2D`). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "`en`" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "`en-CA`" = variedade de Inglês como comunicado no Canadá).
 
-<div class="note">
-<p><strong>Nota:</strong> Tags de língua são formalmente deifnidas em <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>, que depende do padrão <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> (muitas vezes o <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code list</a>) para <a href="https://en.wikipedia.org/wiki/Language_code">language codes</a> serem usados.</p>
-</div>
+> **Note:** **Nota:** Tags de língua são formalmente deifnidas em [RFC 5646](https://tools.ietf.org/html/rfc5646), que depende do padrão [ISO 639](https://en.wikipedia.org/wiki/ISO_639) (muitas vezes o [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) para [language codes](https://en.wikipedia.org/wiki/Language_code) serem usados.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Indicando_a_língua_que_um_documento_está_escrito">Indicando a língua que um documento está escrito</h3>
+### Indicando a língua que um documento está escrito
 
-<p>O atributo global <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a></code> é usado em elementos HTML para indicar a língua de um documento <a href="/en-US/docs/Web/HTML">HTML</a> ou partes dele.</p>
+O atributo global [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang) é usado em elementos HTML para indicar a língua de um documento [HTML](/pt-BR/docs/Web/HTML) ou partes dele.
 
-<pre class="brush: html">&lt;html lang="de"&gt;</pre>
+```html
+<html lang="de">
+```
 
-<p>Não use este elemento meta como o abaixo para definir a língua de um documento:</p>
+Não use este elemento meta como o abaixo para definir a língua de um documento:
 
-<pre class="brush: html example-bad">&lt;!-- /!\ Esta prática é ruim --&gt;
-&lt;meta http-equiv="content-language" content="de"&gt;</pre>
+```html example-bad
+<!-- /!\ Esta prática é ruim -->
+<meta http-equiv="content-language" content="de">
+```
 
-<h3 id="Indicando_uma_audiência_destinada_para_um_documento">Indicando uma audiência destinada para um documento</h3>
+### Indicando uma audiência destinada para um documento
 
-<p>O header <code>Content-Language</code> é usado para especificar a <strong>audiência destinada da página</strong>, e pode indicar que é mais de uma língua.</p>
+O header `Content-Language` é usado para especificar a **audiência destinada da página**, e pode indicar que é mais de uma língua.
 
-<pre>Content-Language: de, en</pre>
+    Content-Language: de, en
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Content-Language", "3.1.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                | Title                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Content-Language")}}</p>
+{{Compat("http.headers.Content-Language")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept-Language")}}</li>
- <li>
-  <p><a href="https://www.w3.org/International/questions/qa-http-and-lang.en">HTTP headers, meta elements and language information</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Accept-Language")}}
+- [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)

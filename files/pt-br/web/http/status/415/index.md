@@ -9,37 +9,24 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/415
 ---
-<p> </p>
+{{HTTPSidebar}}
 
-<p>{{HTTPSidebar}}</p>
+O erro HTTP **`415 Unsupported Media Type`** do cliente indica que o servidor se recusou a aceitar a requisição porque o formato do payload não é um formato suportado.
 
-<p>O erro HTTP <code><strong>415 Unsupported Media Type</strong></code> do cliente indica que o servidor se recusou a aceitar a requisição porque o formato do payload não é um formato suportado.</p>
+O problema do formato por ter ocorrido pelos valores indicados no {{HTTPHeader("Content-Type")}} ou {{HTTPHeader("Content-Encoding")}}, ou pelo resultado da inspeção do dado em si.
 
-<p>O problema do formato por ter ocorrido pelos valores indicados no {{HTTPHeader("Content-Type")}} ou {{HTTPHeader("Content-Encoding")}}, ou pelo resultado da inspeção do dado em si.</p>
+## Status
 
-<h2 id="Status">Status</h2>
+    415 Unsupported Media Type
 
-<pre class="syntaxbox">415 Unsupported Media Type</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificações                                                               | Título                                                        |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Encoding")}}</li>
- <li>{{HTTPHeader("Accept")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Accept")}}

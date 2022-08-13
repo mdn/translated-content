@@ -8,71 +8,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Math.LN2</code></strong> representa o logaritmo natural (também conhecido como logaritmo neperiano) de 2, que é aproximadamente 0.693:</p>
+A propriedade **`Math.LN2`** representa o logaritmo natural (também conhecido como logaritmo neperiano) de 2, que é aproximadamente 0.693:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Por <code>LN2</code> ser uma propriedade estática de <code>Math</code>, deve-se sempre usá-la como <code>Math.LN2</code>, e não como uma propriedade de um objeto <code>Math</code> que você criou.</p>
+Por `LN2` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.LN2`, e não como uma propriedade de um objeto `Math` que você criou.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.LN2">Usando <code>Math.LN2</code></h3>
+### Usando `Math.LN2`
 
-<p>A função a seguir retorna o logaritmo natural de 2:</p>
+A função a seguir retorna o logaritmo natural de 2:
 
-<pre class="brush:js">function getNatLog2() {
+```js
+function getNatLog2() {
   return Math.LN2;
 }
 
 getNatLog2(); // 0.6931471805599453
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}} | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.LN2")}}</p>
+{{Compat("javascript.builtins.Math.LN2")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

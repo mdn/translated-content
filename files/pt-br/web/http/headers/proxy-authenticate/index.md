@@ -9,77 +9,48 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Proxy-Authenticate
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <strong><code>Proxy-Authenticate</code></strong> define o método de autenticação que deve ser utilizado para conseguir acesso ao recurso por trás de um {{Glossary("proxy server")}}. Ele autentica a requisição ao servidor proxy, permitindo que transmita a requisição em frente.</p>
+O cabeçalho de resposta HTTP **`Proxy-Authenticate`** define o método de autenticação que deve ser utilizado para conseguir acesso ao recurso por trás de um {{Glossary("proxy server")}}. Ele autentica a requisição ao servidor proxy, permitindo que transmita a requisição em frente.
 
-<p>O cabeçalho <code>Proxy-Authenticate</code> é enviado junto com um {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>.</p>
+O cabeçalho `Proxy-Authenticate` é enviado junto com um {{HTTPStatus("407")}} `Proxy Authentication Required`.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-</pre>
+    Proxy-Authenticate: <type> realm=<realm>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;type&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de autenticação</a>. Um tipo comum é <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. A IANA mantém uma <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">lista de esquemas de autenticação</a>.</dd>
- <dt>realm=&lt;realm&gt;</dt>
- <dd>A descrição da área protegida, o reino. Se um reino não foi especificado, clientes geralmente mostram um nome de <em>host</em> formatado.</dd>
-</dl>
+- \<type>
+  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+- realm=\<realm>
+  - : A descrição da área protegida, o reino. Se um reino não foi especificado, clientes geralmente mostram um nome de _host_ formatado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="notranslate">Proxy-Authenticate: Basic
+    Proxy-Authenticate: Basic
 
-Proxy-Authenticate: Basic realm="Access to the internal site"
-</pre>
+    Proxy-Authenticate: Basic realm="Access to the internal site"
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "Proxy-Authenticate", "4.3")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7617")}}</td>
-   <td>The 'Basic' HTTP Authentication Scheme</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                 |
+| ------------------------------------------------------------ | -------------------------------------- |
+| {{RFC("7235", "Proxy-Authenticate", "4.3")}} | HTTP/1.1: Authentication               |
+| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.Proxy-Authenticate")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.Proxy-Authenticate")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">Autenticação HTTP</a></li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

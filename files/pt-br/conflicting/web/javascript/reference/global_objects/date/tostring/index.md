@@ -13,40 +13,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+{{JSRef}} {{obsolete_header}}
 
-<p>O método <strong><code>toSource()</code></strong> retorna uma cadeia de caracteres (<em>string</em>) representando o código fonte do objeto.</p>
+O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.toSource()
-Date.toSource()</pre>
+    dateObj.toSource()
+    Date.toSource()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma <em>string </em>representando o código fonte do objeto {{jsxref("Global_Objects/Date", "Date")}}.</p>
+Uma _string_ representando o código fonte do objeto {{jsxref("Global_Objects/Date", "Date")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Função_nativa">Função nativa</h3>
+### Função nativa
 
-<p>Para o objeto {{jsxref("Date")}} embutido, <code>toSource()</code> retorna a seguinte <em>string</em> indicando que o código fonte não está disponível:</p>
+Para o objeto {{jsxref("Date")}} embutido, `toSource()` retorna a seguinte _string_ indicando que o código fonte não está disponível:
 
-<pre class="brush: js notranslate">function Date() {
+```js
+function Date() {
     [native code]
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhum padrão.</p>
+Não faz parte de nenhum padrão.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.toSource")}}</p>
+{{Compat("javascript.builtins.Date.toSource")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

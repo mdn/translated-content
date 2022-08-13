@@ -9,53 +9,37 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Headers/DPR
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>O cabeçalho <code><strong>DPR</strong></code> é um cabeçalho de requisição <em><a href="/en-US/docs/Glossary/Client_hints">Client Hints</a></em> que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(<em>device pixel ratio</em>), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.</p>
+O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Glossary/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> <em>Client Hints</em> são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho <code>DPR</code> do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
-</div>
+> **Note:** **Nota:** _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">DPR: &lt;number&gt;
-</pre>
+    DPR: <number>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O servidor primeiro optar por receber o cabeçalho <code>DPR</code> enviando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo <code>DPR</code> e {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
+O servidor primeiro optar por receber o cabeçalho `DPR` enviando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo `DPR` e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
-<pre>Accept-CH: DPR
-Accept-CH-Lifetime: 86400
-</pre>
+    Accept-CH: DPR
+    Accept-CH-Lifetime: 86400
 
-<p>Então as requisições subsequentes do cliente podem enviar o cabeçalho <code>DPR</code> de volta:</p>
+Então as requisições subsequentes do cliente podem enviar o cabeçalho `DPR` de volta:
 
-<pre>DPR: 1.0
-</pre>
+    DPR: 1.0
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.DPR")}}</p>
+{{Compat("http.headers.DPR")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Accept-CH")}}
+- {{HTTPHeader("Accept-CH-Lifetime")}}
+- {{HTTPHeader("Vary")}}

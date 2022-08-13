@@ -11,46 +11,40 @@ tags:
 translation_of: Glossary/CORS
 original_slug: Glossario/CORS
 ---
-<p><strong>CORS</strong> (Cross-Origin Resource Sharing) é um sistema que consiste na transmissão de {{Glossary("Header", "HTTP headers")}}, que determina se navegadores vão bloquear código JavaScript de acessarem respostas provindas de requisições entre origens.</p>
+**CORS** (Cross-Origin Resource Sharing) é um sistema que consiste na transmissão de {{Glossary("Header", "HTTP headers")}}, que determina se navegadores vão bloquear código JavaScript de acessarem respostas provindas de requisições entre origens.
 
-<p>A <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin security policy</a> proíbe acesso aos recursos entre origens. Mas CORS dá aos servidores web a habilidade de dizer quando eles querem optar em permitir o acesso aos seus recursos entre origens.</p>
+A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) proíbe acesso aos recursos entre origens. Mas CORS dá aos servidores web a habilidade de dizer quando eles querem optar em permitir o acesso aos seus recursos entre origens.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a> na MDN</li>
- <li>{{Interwiki("wikipedia", "Cross-origin resource sharing")}} na Wikipedia</li>
-</ul>
+- [Cross-Origin Resource Sharing (CORS)](/pt-BR/docs/Web/HTTP/CORS) na MDN
+- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} na Wikipedia
 
-<h3 id="Cabeçalhos_CORS">Cabeçalhos CORS</h3>
+### Cabeçalhos CORS
 
-<dl>
- <dt>{{HTTPHeader("Access-Control-Allow-Origin")}}</dt>
- <dd>Indica quando uma resposta pode ser compartilhada.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Credentials")}}</dt>
- <dd>Indica quando uma resposta a uma requisição pode ou não ser exposta quando a bandeira de credenciais é verdadeira.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Headers")}}</dt>
- <dd>Usado na resposta a uma requisição <em>on-the-fly</em> que indica quais cabeçalhos HTTP podem ser usados quando a requisição verdadeira for feita.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Methods")}}</dt>
- <dd>Especifica o método ou métodos de acesso ao recurso na requisição <em>on-the-fly.</em></dd>
- <dt>{{HTTPHeader("Access-Control-Expose-Headers")}}</dt>
- <dd>Indica quais cabeçalhos podem ser expostos como parte da resposta listando seus nomes.</dd>
- <dt>{{HTTPHeader("Access-Control-Max-Age")}}</dt>
- <dd>Indica quanto tempo os resultados da requisição <em>on-the-fly</em> podem ser cacheados.</dd>
- <dt>{{HTTPHeader("Access-Control-Request-Headers")}}</dt>
- <dd>Usado ao emitir uma requisição <em>on-the-fly</em> para deixar o servidor sabendo quais cabeçalhos HTTP serão utilizados quando a requisição verdadeira for feita.</dd>
- <dt>{{HTTPHeader("Access-Control-Request-Method")}}</dt>
- <dd>Usado ao emitir uma requisição <em>on-the-fly</em> para deixar o servidor sabendo qual <a href="/pt-BR/docs/Web/HTTP/Methods"> método HTTP</a> será usado quando a requisição verdadeira for feita.</dd>
- <dt>{{HTTPHeader("Origin")}}</dt>
- <dd>Indica de onde uma busca se origina.</dd>
-</dl>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+  - : Indica quando uma resposta pode ser compartilhada.
+- {{HTTPHeader("Access-Control-Allow-Credentials")}}
+  - : Indica quando uma resposta a uma requisição pode ou não ser exposta quando a bandeira de credenciais é verdadeira.
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+  - : Usado na resposta a uma requisição _on-the-fly_ que indica quais cabeçalhos HTTP podem ser usados quando a requisição verdadeira for feita.
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+  - : Especifica o método ou métodos de acesso ao recurso na requisição _on-the-fly._
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+  - : Indica quais cabeçalhos podem ser expostos como parte da resposta listando seus nomes.
+- {{HTTPHeader("Access-Control-Max-Age")}}
+  - : Indica quanto tempo os resultados da requisição _on-the-fly_ podem ser cacheados.
+- {{HTTPHeader("Access-Control-Request-Headers")}}
+  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo quais cabeçalhos HTTP serão utilizados quando a requisição verdadeira for feita.
+- {{HTTPHeader("Access-Control-Request-Method")}}
+  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo qual [método HTTP](/pt-BR/docs/Web/HTTP/Methods) será usado quando a requisição verdadeira for feita.
+- {{HTTPHeader("Origin")}}
+  - : Indica de onde uma busca se origina.
 
-<h3 id="Referência_técnica">Referência técnica</h3>
+### Referência técnica
 
-<ul>
- <li><a href="https://fetch.spec.whatwg.org">Especificação Fetch</a></li>
-</ul>
+- [Especificação Fetch](https://fetch.spec.whatwg.org)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}

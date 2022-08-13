@@ -7,104 +7,78 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho <strong><code>Transfer-Encoding</code></strong> especifica a forma de codificação usada para transferir seguramente o corpo da mensagem ({{Glossary("Payload body","payload body")}}) para o usuário.</p>
+O cabeçalho **`Transfer-Encoding`** especifica a forma de codificação usada para transferir seguramente o corpo da mensagem ({{Glossary("Payload body","payload body")}}) para o usuário.
 
-<div class="note"><a href="https://wikipedia.org/wiki/HTTP/2">HTTP/2</a> não suporta o mecanismo de codificação de trasferência fragmentada do HTTP 1.1, já que ele provém o próprio, e mais eficiente, mecanismo para <em>streaming</em> de dados.</div>
+> **Note:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) não suporta o mecanismo de codificação de trasferência fragmentada do HTTP 1.1, já que ele provém o próprio, e mais eficiente, mecanismo para _streaming_ de dados.
 
-<p><code>Transfer-Encoding</code> é um cabeçalho salto-por-salto (<em><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop header</a></em>), que é aplicado a uma mensagem entre dois nós, não ao recurso em si. Cada segmento da conexão multi-nós pode usar diferentes valores <code>Transfer-Encoding</code>. Se você quer comprimir dados através da conexão inteira, use o cabeçalho {{HTTPHeader("Content-Encoding")}} ao invés disso.</p>
+`Transfer-Encoding` é um cabeçalho salto-por-salto (_[hop-by-hop header](/pt-BR/docs/Web/HTTP/Headers#hbh)_), que é aplicado a uma mensagem entre dois nós, não ao recurso em si. Cada segmento da conexão multi-nós pode usar diferentes valores `Transfer-Encoding`. Se você quer comprimir dados através da conexão inteira, use o cabeçalho {{HTTPHeader("Content-Encoding")}} ao invés disso.
 
-<p>Quando presente em uma resposta para uma requisição {{HTTPMethod("HEAD")}} que não tem corpo, ele indica o valor que seria aplicado a mensagem {{HTTPMethod("GET")}} correspondente.</p>
+Quando presente em uma resposta para uma requisição {{HTTPMethod("HEAD")}} que não tem corpo, ele indica o valor que seria aplicado a mensagem {{HTTPMethod("GET")}} correspondente.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Transfer-Encoding: chunked
-Transfer-Encoding: compress
-Transfer-Encoding: deflate
-Transfer-Encoding: gzip
-Transfer-Encoding: identity
+    Transfer-Encoding: chunked
+    Transfer-Encoding: compress
+    Transfer-Encoding: deflate
+    Transfer-Encoding: gzip
+    Transfer-Encoding: identity
 
-<em>// Diversos valores podem ser listados, separados por vírgula</em>
-Transfer-Encoding: gzip, chunked</pre>
+    // Diversos valores podem ser listados, separados por vírgula
+    Transfer-Encoding: gzip, chunked
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>chunked</code></dt>
- <dd>Dados enviados em uma série de fragmentos. O cabeçalho {{HTTPHeader("Content-Length")}} é omitido neste caso e no começo de cada fragmento, você precisa adicionar o tamanho do fragmento atual em formato hexadecimal, seguido por '<code>\r\n</code>' e o fragmento em si, seguido por outro '<code>\r\n</code>'. O fragmento final é um fragmento normal, com exceção que seu tamanho é zero. Ele é seguido por um reboque, que consiste de uma (possívelmente vazia) sequência de cabeçalhos de entidade.</dd>
- <dt><code>compress</code></dt>
- <dd>Um formato usando o algoritmo <a class="external" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW). O nome do valor foi pego do programa UNIX <em>compress</em>, que implementa o algoritmo.<br>
- Como o programa de compressão, que desapareceu da maioria das distribuições UNIX, esta codificação de conteúdo não é usada por quase nenhum navegador atualmente, em partes por causa do seu problema de patente (que expirou em 2003).</dd>
- <dt><code>deflate</code></dt>
- <dd>Usando a estrutura <a class="external" href="http://en.wikipedia.org/wiki/Zlib">zlib</a> (definida na <a class="external" href="http://tools.ietf.org/html/rfc1950">RFC 1950</a>), com o algoritmo de compressão <a class="external" href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> (definido em <a class="external" href="http://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
- <dt><code>gzip</code></dt>
- <dd>O formato usando a <a class="external" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">codificação Lempel-Ziv</a> (LZ77), com CRC 32-bit. Este é originalmente o formato do programa UNIX <em>gzip</em>. O padrão HTTP/1.1 também recomenda que os servidores que suportem esta codificação de conteúdo devem reconhecer <code>x-gzip</code> como um pseudônimo, para propósitos de compatibilidade.</dd>
- <dt><code>identity</code></dt>
- <dd>Indica a função de identidade (i.e. sem compressão, nem modificação). Este <em>token</em>, exceto se explicitamente especificado, é sempre considerado aceitável.</dd>
-</dl>
+- `chunked`
+  - : Dados enviados em uma série de fragmentos. O cabeçalho {{HTTPHeader("Content-Length")}} é omitido neste caso e no começo de cada fragmento, você precisa adicionar o tamanho do fragmento atual em formato hexadecimal, seguido por '`\r\n`' e o fragmento em si, seguido por outro '`\r\n`'. O fragmento final é um fragmento normal, com exceção que seu tamanho é zero. Ele é seguido por um reboque, que consiste de uma (possívelmente vazia) sequência de cabeçalhos de entidade.
+- `compress`
+  - : Um formato usando o algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). O nome do valor foi pego do programa UNIX _compress_, que implementa o algoritmo.
+    Como o programa de compressão, que desapareceu da maioria das distribuições UNIX, esta codificação de conteúdo não é usada por quase nenhum navegador atualmente, em partes por causa do seu problema de patente (que expirou em 2003).
+- `deflate`
+  - : Usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida na [RFC 1950](http://tools.ietf.org/html/rfc1950)), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido em [RFC 1951](http://tools.ietf.org/html/rfc1952)).
+- `gzip`
+  - : O formato usando a [codificação Lempel-Ziv](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC 32-bit. Este é originalmente o formato do programa UNIX _gzip_. O padrão HTTP/1.1 também recomenda que os servidores que suportem esta codificação de conteúdo devem reconhecer `x-gzip` como um pseudônimo, para propósitos de compatibilidade.
+- `identity`
+  - : Indica a função de identidade (i.e. sem compressão, nem modificação). Este _token_, exceto se explicitamente especificado, é sempre considerado aceitável.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Codificação_fragmentada">Codificação fragmentada</h3>
+### Codificação fragmentada
 
-<p>Codificação fragmentada é útil quando grandes quantidade de dados estão sendo enviados para o cliente e o tamanho total da resposta pode não ser conhecido até que a requisição seja totalmente processada. Por exemplo, quando gerando uma grande tabela HTML resultante de uma consulta no banco de dados ou transmitindo grandes imagens. A resposta fragmentada se parece com isto:</p>
+Codificação fragmentada é útil quando grandes quantidade de dados estão sendo enviados para o cliente e o tamanho total da resposta pode não ser conhecido até que a requisição seja totalmente processada. Por exemplo, quando gerando uma grande tabela HTML resultante de uma consulta no banco de dados ou transmitindo grandes imagens. A resposta fragmentada se parece com isto:
 
-<pre class="notranslate">HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Transfer-Encoding: chunked
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n</pre>
+    7\r\n
+    Mozilla\r\n
+    9\r\n
+    Developer\r\n
+    7\r\n
+    Network\r\n
+    0\r\n
+    \r\n
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7230", "Transfer-Encoding", "3.3.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| {{RFC("7230", "Transfer-Encoding", "3.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Transfer-Encoding")}}</p>
+{{Compat("http.headers.Transfer-Encoding")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept-Encoding")}}</li>
- <li>{{HTTPHeader("Content-Encoding")}}</li>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>Cabeçalho que regulam o uso de reboques: {{HTTPHeader("TE")}} (requisições) e {{HTTPHeader("Trailer")}} (respostas).</li>
- <li>
-  <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Codificação de transferência fragmentada</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Content-Length")}}
+- Cabeçalho que regulam o uso de reboques: {{HTTPHeader("TE")}} (requisições) e {{HTTPHeader("Trailer")}} (respostas).
+- [Codificação de transferência fragmentada](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

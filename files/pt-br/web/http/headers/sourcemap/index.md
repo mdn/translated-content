@@ -3,61 +3,38 @@ title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
 translation_of: Web/HTTP/Headers/SourceMap
 ---
-<div> {{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>SourceMap</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> response header links generated code to a <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">source map</a>, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.</p>
+The **`SourceMap`** [HTTP](/pt-BR/docs/Web/HTTP) response header links generated code to a [source map](/pt-BR/docs/Tools/Debugger/How_to/Use_a_source_map), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">SourceMap: &lt;url&gt;
-X-SourceMap: &lt;url&gt; (deprecated)
-</pre>
+    SourceMap: <url>
+    X-SourceMap: <url> (deprecated)
 
-<h3 id="Diretivas">Diretivas</h3>
+### Diretivas
 
-<dl>
- <dt><code>&lt;url&gt;</code></dt>
- <dd>A relative (to the request URL) or absolute URL pointing to a source map file.</dd>
-</dl>
+- `<url>`
+  - : A relative (to the request URL) or absolute URL pointing to a source map file.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>SourceMap: /path/to/file.js.map</pre>
+    SourceMap: /path/to/file.js.map
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Titulo</th>
-  </tr>
-  <tr>
-   <td><a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k">Draft document</a></td>
-   <td>Source Map Revision 3 Proposal</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                     | Titulo                         |
+| ------------------------------------------------------------------------------------------------- | ------------------------------ |
+| [Draft document](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k) | Source Map Revision 3 Proposal |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.SourceMap")}}</p>
+{{Compat("http.headers.SourceMap")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">Firefox Developer Tools: using a source map</a></li>
-</ul>
+- [Firefox Developer Tools: using a source map](/pt-BR/docs/Tools/Debugger/How_to/Use_a_source_map)

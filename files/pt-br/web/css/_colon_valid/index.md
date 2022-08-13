@@ -1,6 +1,6 @@
 ---
 title: ':valid'
-slug: 'Web/CSS/:valid'
+slug: Web/CSS/:valid
 tags:
   - CSS
   - Layout
@@ -8,67 +8,42 @@ tags:
   - Referencia
   - Validação
   - Web
-translation_of: 'Web/CSS/:valid'
+translation_of: Web/CSS/:valid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A pseudo-classe CSS <strong><code>:valid</code></strong> representa qualquer {{HTMLElement("input")}} ou outro elemento do {{HTMLElement("form")}} cujo conteúdo foi validado com sucesso. Isso permite, facilmente, adicionar uma aparência que ajude o usuário a identificar os campos validados.</p>
+A pseudo-classe CSS **`:valid`** representa qualquer {{HTMLElement("input")}} ou outro elemento do {{HTMLElement("form")}} cujo conteúdo foi validado com sucesso. Isso permite, facilmente, adicionar uma aparência que ajude o usuário a identificar os campos validados.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer input válido */
+```css
+/* Seleciona qualquer input válido */
 input:valid {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<p>Essa pseudo-classe é útil para realçar os campos válidos para o usuário.</p>
+Essa pseudo-classe é útil para realçar os campos válidos para o usuário.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Veja {{cssxref(":invalid")}} para um exemplo.</p>
+Veja {{cssxref(":invalid")}} para um exemplo.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sem alterações.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Define a semântica do HTML e a validação de restrições.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                               | Comment                                                 |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}     | {{Spec2('HTML WHATWG')}}     | Sem alterações.                                         |
+| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}         | {{Spec2('HTML5 W3C')}}         | Define a semântica do HTML e a validação de restrições. |
+| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Definição inicial                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("css.selectors.valid")}}
 
+## Veja também
 
-<p>{{Compat("css.selectors.valid")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Outras pseudo-classe relacionada com validação: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- Outras pseudo-classe relacionada com validação: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
+- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)

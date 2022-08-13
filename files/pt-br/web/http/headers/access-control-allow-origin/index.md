@@ -11,79 +11,54 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <code><strong>Access-Control-Allow-Origin</strong></code> cabeçalho de resposta indica se os recursos da resposta podem ser compartilhados com a {{glossary("origin")}} dada.</p>
+O **`Access-Control-Allow-Origin`** cabeçalho de resposta indica se os recursos da resposta podem ser compartilhados com a {{glossary("origin")}} dada.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origin&gt;
-</pre>
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Origin: <origin>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>*</code></dt>
- <dd>Para as requisições sem credenciais, o servidor pode especificar "*" como um curinga, permitindo assim que qualquer origem acesse o recurso.</dd>
- <dt><code>&lt;origin&gt;</code></dt>
- <dd>Especifica a URI que pode acessar o recurso.</dd>
-</dl>
+- `*`
+  - : Para as requisições sem credenciais, o servidor pode especificar "\*" como um curinga, permitindo assim que qualquer origem acesse o recurso.
+- `<origin>`
+  - : Especifica a URI que pode acessar o recurso.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Para permitir que qualquer origin acesse o seu recurso, você pode especificar desta forma:</p>
+Para permitir que qualquer origin acesse o seu recurso, você pode especificar desta forma:
 
-<pre>Access-Control-Allow-Origin: *</pre>
+    Access-Control-Allow-Origin: *
 
-<p>Para permitir que <code>https://developer.mozilla.org</code> acesse seu recurso, você pode especificar:</p>
+Para permitir que `https://developer.mozilla.org` acesse seu recurso, você pode especificar:
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+    Access-Control-Allow-Origin: https://developer.mozilla.org
 
-<h3 id="CORS_e_caching">CORS e caching</h3>
+### CORS e caching
 
-<p><span id="result_box" lang="pt"><span>Se o servidor especificar um host de origem em vez de "*", ele também deverá incluir "Origin" no cabeçalho de resposta {{HTTPHeader ("Vary")}} para indicar aos clientes que as respostas do servidor serão diferentes com base no valor da solicitação Origin</span> <span>cabeçalho.</span></span></p>
+Se o servidor especificar um host de origem em vez de "\*", ele também deverá incluir "Origin" no cabeçalho de resposta {{HTTPHeader ("Vary")}} para indicar aos clientes que as respostas do servidor serão diferentes com base no valor da solicitação Origin cabeçalho.
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
+    Access-Control-Allow-Origin: https://developer.mozilla.org
+    Vary: Origin
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                   | Comment             |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Origin")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}

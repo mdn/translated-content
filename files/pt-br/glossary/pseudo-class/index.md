@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/Pseudo-class
 original_slug: Glossario/Pseudo-class
 ---
-<p>No CSS, um seletor do tipo <strong>pseudo-classe </strong>referencia um elemento dependendo do seu estado e não de informações da arvore do documento. Por exemplo, o seletor <font face="Courier New">a</font>{{ cssxref(":visited") }} aplica estilo somente aos links que o usuário já visitou</p>
+No CSS, um seletor do tipo **pseudo-classe** referencia um elemento dependendo do seu estado e não de informações da arvore do documento. Por exemplo, o seletor a{{ cssxref(":visited") }} aplica estilo somente aos links que o usuário já visitou
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Referencia_técnica">Referencia técnica</h3>
+### Referencia técnica
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Documentação de pseudo-class </a></li>
-</ul>
+- [Documentação de pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes)

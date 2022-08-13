@@ -1,41 +1,46 @@
 ---
 title: ':empty'
-slug: 'Web/CSS/:empty'
-translation_of: 'Web/CSS/:empty'
+slug: Web/CSS/:empty
+translation_of: Web/CSS/:empty
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>A <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/pt-BR/docs/Web/CSS">CSS</a> <strong><code>:empty</code></strong> representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:empty`** representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer &lt;div&gt; que não tenha conteúdo */
+```css
+/* Seleciona qualquer <div> que não tenha conteúdo */
 div:empty {
   background: lime;
-}</pre>
+}
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;!-- Eu serei verde. --&gt;&lt;/div&gt;
-&lt;div class="box"&gt;Eu serei rosa.&lt;/div&gt;
-&lt;div class="box"&gt;
-    &lt;!-- Eu serei rosa por causa do espaço em branco em volta desse comantário --&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box"><!-- Eu serei verde. --></div>
+<div class="box">Eu serei rosa.</div>
+<div class="box">
+    <!-- Eu serei rosa por causa do espaço em branco em volta desse comantário -->
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<div class="hidden">
-<pre class="brush: css">body {
+```css hidden
+body {
   display: flex;
   justify-content: space-around;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">.box {
+```css
+.box {
   background: pink;
   height: 80px;
   width: 80px;
@@ -43,53 +48,31 @@ div:empty {
 
 .box:empty {
   background: lime;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Examples', 300, 80)}}</p>
+{{EmbedLiveSample('Examples', 300, 80)}}
 
-<h2 id="Questões_de_acessibilidade">Questões de acessibilidade</h2>
+## Questões de acessibilidade
 
-<p>Tecnologias assistivas como leitores de tela não conseguem identificar e processar conteúdos interativos que estejam vazios. Todo conteúdo interativo deve ter um nome acessível, que é criado ao fornecer um valor de texto para o elemento pai do controle interativo (<a href="/pt-BR/docs/Web/HTML/Element/a">âncoras</a>, <a href="/pt-BR/docs/Web/HTML/Element/button">botões</a>, etc.). Nomes acessíveis expõem o controle interativo à <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">árvore de acessibilidade</a>, uma API que comunica informações importantes úteis para tecnologias assistivas.</p>
+Tecnologias assistivas como leitores de tela não conseguem identificar e processar conteúdos interativos que estejam vazios. Todo conteúdo interativo deve ter um nome acessível, que é criado ao fornecer um valor de texto para o elemento pai do controle interativo ([âncoras](/pt-BR/docs/Web/HTML/Element/a), [botões](/pt-BR/docs/Web/HTML/Element/button), etc.). Nomes acessíveis expõem o controle interativo à [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), uma API que comunica informações importantes úteis para tecnologias assistivas.
 
-<p>The text that provides the interactive control's accessible name can be hidden using <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link" rel="noopener">a combination of properties</a> that remove it visually from the screen but keep it parseable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.</p>
+The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parseable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" rel="noopener">What is an accessible name? | The Paciello Group</a></li>
- <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN Understanding WCAG, Guideline 2.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">Understanding Success Criterion 2.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment            |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS4 Selectors') }} | No change          |
+| {{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS3 Selectors') }} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-
-
-<p>{{Compat("css.selectors.empty")}}</p>
-</div>
+{{Compat("css.selectors.empty")}}

@@ -9,15 +9,13 @@ tags:
 translation_of: Glossary/String
 original_slug: Glossario/String
 ---
-<p id="Summary">Em qualquer linguagem de programação, uma string é uma sequência de {{Glossary("character","caracteres")}} usados para representar texto</p>
+Em qualquer linguagem de programação, uma string é uma sequência de {{Glossary("character","caracteres")}} usados para representar texto
 
-<p>Em {{Glossary("JavaScript")}}, uma String é um dos {{Glossary("Primitive", "valores primitivos")}} e o objeto {{jsxref("String")}} é um {{Glossary("wrapper")}} em cima do tipo primitivo string.</p>
+Em {{Glossary("JavaScript")}}, uma String é um dos {{Glossary("Primitive", "valores primitivos")}} e o objeto {{jsxref("String")}} é um {{Glossary("wrapper")}} em cima do tipo primitivo string.
 
-<h2 id="Leia_mais">Leia mais</h2>
+## Leia mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "String (computer science)")}} (em inglês) na Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures#String_type">Estruturas e tipos de dados em JavaScript</a></li>
-</ul>
+- {{Interwiki("wikipedia", "String (computer science)")}} (em inglês) na Wikipedia
+- [Estruturas e tipos de dados em JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#String_type)

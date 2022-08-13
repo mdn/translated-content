@@ -7,29 +7,25 @@ tags:
   - Referencia
 translation_of: Web/API/Document/bgColor
 ---
-<p>{{APIRef("DOM")}} {{ Deprecated_header() }}</p>
+{{APIRef("DOM")}} {{ Deprecated_header() }}
 
-<p>A propriedade obsoleta <code>bgColor</code> obtém ou atribue a cor de fundo do documento atual.</p>
+A propriedade obsoleta `bgColor` obtém ou atribue a cor de fundo do documento atual.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>color</em> = document.bgColor
-document.bgColor = <em>color</em>
-</pre>
+    color = document.bgColor
+    document.bgColor = color
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code>color</code> é uma sequência de caracteres representando a cor como uma palavra (p. ex. "red") ou um valor hexadecimal (p. ex. "<code>#ff0000</code>").</li>
-</ul>
+- `color` é uma sequência de caracteres representando a cor como uma palavra (p. ex. "red") ou um valor hexadecimal (p. ex. "`#ff0000`").
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="eval">document.bgColor = "darkblue";
-</pre>
+    document.bgColor = "darkblue";
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O valor padrão para esta propriedade no Firefox é branco (<code>#ffffff</code> em hexadecimal).</p>
+O valor padrão para esta propriedade no Firefox é branco (`#ffffff` em hexadecimal).
 
-<p><code>document.bgColor</code> está obsoleto no <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML</a>. A alternativa recomendada é fazer uso do atributo CSS {{Cssxref("background-color")}} que pode ser acessado através do DOM com <code>document.body.style.backgroundColor</code>. Uma outra alternativa é o <code>document.body.bgColor</code>, apesar dessa também estar obsoleta no HTML 4.01 em funcão da alternativa do CSS.</p>
+`document.bgColor` está obsoleto no [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). A alternativa recomendada é fazer uso do atributo CSS {{Cssxref("background-color")}} que pode ser acessado através do DOM com `document.body.style.backgroundColor`. Uma outra alternativa é o `document.body.bgColor`, apesar dessa também estar obsoleta no HTML 4.01 em funcão da alternativa do CSS.

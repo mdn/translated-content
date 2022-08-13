@@ -3,23 +3,22 @@ title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade leitura somente <code><strong>description</strong></code> é uma string que retorna a descrição opcional de objetos {{JSxRef("Symbol")}}.</p>
+A propriedade leitura somente **`description`** é uma string que retorna a descrição opcional de objetos {{JSxRef("Symbol")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
 
+## Descrição
 
+{{JSxRef("Symbol")}} objetos podem ser criados com uma uma descrição opcional na qual podem ser usados para debbuging mas não para acessar o próprio símbolo. A `Symbol.prototype.description` propriedade pode ser usada para ler essa descrição. É diferente do `Symbol.prototype.toString()` pois não contém a string incluida "`Symbol()`". Veja os exemplos.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>{{JSxRef("Symbol")}} objetos podem ser criados com uma uma descrição opcional na qual podem ser usados para debbuging mas não para acessar o próprio símbolo. A <code>Symbol.prototype.description</code> propriedade pode ser usada para ler essa descrição. É diferente do <code>Symbol.prototype.toString()</code> pois não contém a string incluida "<code>Symbol()</code>". Veja os exemplos.</p>
+### Usando descrição
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_descrição">Usando descrição</h3>
-
-<pre class="brush: js notranslate">Symbol('desc').toString();   // "Symbol(desc)"
+```js
+Symbol('desc').toString();   // "Symbol(desc)"
 Symbol('desc').description;  // "desc"
 Symbol('').description;      // ""
 Symbol().description;        // undefined
@@ -31,31 +30,19 @@ Symbol.iterator.description; // "Symbol.iterator"
 // símbolos globais
 Symbol.for('foo').toString();  // "Symbol(foo)"
 Symbol.for('foo').description; // "foo"
+```
 
-</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("ESDraft", "#sec-symbol.prototype.description", "get Symbol.prototype.description")}} |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-symbol.prototype.description", "get Symbol.prototype.description")}}</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("javascript.builtins.Symbol.description")}}
 
+## Veja também
 
-
-<p>{{Compat("javascript.builtins.Symbol.description")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{JSxRef("Symbol.prototype.toString()")}}</li>
- <li>Polyfill: <a href="https://npmjs.com/symbol.prototype.description">https://npmjs.com/symbol.prototype.description</a></li>
-</ul>
+- {{JSxRef("Symbol.prototype.toString()")}}
+- Polyfill: <https://npmjs.com/symbol.prototype.description>

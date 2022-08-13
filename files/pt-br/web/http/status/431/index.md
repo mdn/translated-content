@@ -12,43 +12,28 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/431
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span class="seoSummary">O código de stauts de resposta HTTP <code><strong>431 Request Header Fields Too Large</strong></code> indica que o servidor se recusou a processar a requisição por que os <a href="/en-US/docs/Web/HTTP/Headers">cabeçalhos HTTP</a> da mesma são muito grandes. </span> A requisição <em>pode </em>ser resubmetida depois de o tamanho dos cabeçalhos serem reduzidos.</p>
+O código de stauts de resposta HTTP **`431 Request Header Fields Too Large`** indica que o servidor se recusou a processar a requisição por que os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) da mesma são muito grandes. A requisição _pode_ ser resubmetida depois de o tamanho dos cabeçalhos serem reduzidos.
 
-<p><strong><code>431</code></strong> pode ser usado quando o <strong>tamanho total </strong>dos cabeçalhos da requisição são muito grandes, ou quando um <strong>único</strong> cabeçalho da requisição é muito grande. Para ajudar aqueles que estão encontrando esse erro, indicar quais dos dois é o problema através do corpo da resposta - idealmente inclua quais são os cabeçalhos que são muito grandes. Isso permite aos usuários a possibilidade de poder arrumar o problema, como limpando os <em>cookies</em> deles.</p>
+**`431`** pode ser usado quando o **tamanho total** dos cabeçalhos da requisição são muito grandes, ou quando um **único** cabeçalho da requisição é muito grande. Para ajudar aqueles que estão encontrando esse erro, indicar quais dos dois é o problema através do corpo da resposta - idealmente inclua quais são os cabeçalhos que são muito grandes. Isso permite aos usuários a possibilidade de poder arrumar o problema, como limpando os _cookies_ deles.
 
-<p>Servidores vão produzir esse status frequentemente se:</p>
+Servidores vão produzir esse status frequentemente se:
 
-<ul>
- <li>O cabeçalho {{HttpHeader("Referer")}} URL é muito longo;</li>
- <li>Existem muitos  <a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a> sendo enviados na requisição</li>
-</ul>
+- O cabeçalho {{HttpHeader("Referer")}} URL é muito longo;
+- Existem muitos [Cookies](/pt-BR/docs/Web/HTTP/Cookies) sendo enviados na requisição
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">431 Request Header Fields Too Large</pre>
+    431 Request Header Fields Too Large
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("6585", "431 Request Header Fields Too Large" , "5")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Título                       |
+| -------------------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus(414, "414 URI Too Long")}}</li>
- <li>{{Glossary("Request header")}}</li>
-</ul>
+- {{HTTPStatus(414, "414 URI Too Long")}}
+- {{Glossary("Request header")}}

@@ -11,36 +11,37 @@ tags:
   - trimStart()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>trimStart()</code> remove espaços do começo de uma <em>string</em>. <code>trimLeft()</code> é um apelido para este método.</p>
+O método `trimStart()` remove espaços do começo de uma _string_. `trimLeft()` é um apelido para este método.
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
+## Sintaxe
 
+    str.trimStart();
+    str.trimLeft();
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor retornado
 
-<pre class="syntaxbox notranslate"><var>str</var>.trimStart();
-<var>str</var>.trimLeft();</pre>
+Uma nova _string_ representando a _string_ original sem os espaços no começo (fim à esquerda).
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Descrição
 
-<p>Uma nova <em>string</em> representando a <em>string</em> original sem os espaços no começo (fim à esquerda).</p>
+Os métodos `trimStart()` / `trimLeft()` retornam a _string_ sem os espaços no fim à esquerda. `trimLeft()` ou `trimStart()` não altera o valor da _string_ original.
 
-<h2 id="Descrição">Descrição</h2>
+### _Aliasing_
 
-<p>Os métodos <code>trimStart()</code> / <code>trimLeft()</code> retornam a <em>string</em> sem os espaços no fim à esquerda. <code>trimLeft()</code> ou <code>trimStart()</code> não altera o valor da <em>string</em> original.</p>
+Para consistência com funções como {{jsxref("String.prototype.padStart")}} o nome padrão do método é `trimStart`. Entretanto, por razões de compatibilidade na _web_, `trimLeft` permanece como um apelido para `trimStart`. Em alguns motores isso significa:
 
-<h3 id="Aliasing"><em>Aliasing</em></h3>
+```js
+String.prototype.trimLeft.name === "trimStart";
+```
 
-<p>Para consistência com funções como {{jsxref("String.prototype.padStart")}} o nome padrão do método é <code>trimStart</code>. Entretanto, por razões de compatibilidade na <em>web</em>, <code>trimLeft</code> permanece como um apelido para <code>trimStart</code>. Em alguns motores isso significa:</p>
+## Polyfill
 
-<pre class="brush: js notranslate">String.prototype.trimLeft.name === "trimStart";</pre>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js; highlight: [5] notranslate">//https://github.com/FabioVergani/js-Polyfill_String-trimStart
+```js
+//https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
     var String=w.String, Proto=String.prototype;
@@ -59,10 +60,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 
 /*
 ES6:
-(w=&gt;{
+(w=>{
     const String=w.String, Proto=String.prototype;
 
-    ((o,p)=&gt;{
+    ((o,p)=>{
         if(p in o?o[p]?false:true:true){
             const r=/^\s+/;
             o[p]=o.trimLeft||function(){
@@ -72,45 +73,36 @@ ES6:
     })(Proto,'trimStart');
 
 })(window);
-*/</pre>
+*/
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_trimStart">Usando <code>trimStart()</code></h3>
+### Usando `trimStart()`
 
-<p>O seguinte exemplo mostra uma <em>string</em> em caixa baixa <code>'foo  '</code>:</p>
+O seguinte exemplo mostra uma _string_ em caixa baixa `'foo '`:
 
-<pre class="brush: js; highlight: [5] notranslate">var str = '   foo  ';
+```js
+var str = '   foo  ';
 
 console.log(str.length); // retorna 8
 
 str = str.trimStart();
 console.log(str.length); // retorna 5
 console.log(str);        // retorna 'foo  '
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.trimStart")}}</p>
+{{Compat("javascript.builtins.String.trimStart")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

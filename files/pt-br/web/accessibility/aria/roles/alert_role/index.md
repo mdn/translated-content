@@ -20,120 +20,113 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
-<h3 id="Descrição">Descrição</h3>
+### Descrição
 
-<div class="summary">
-<p>Esta técnica mostra como utilizar o atributo <em>role</em> <a class="external" href="http://www.w3.org/TR/wai-aria/roles#alert">alert</a> e demonstra seu efeito em navegadores e tecnologias assistivas.</p>
-</div>
+Esta técnica mostra como utilizar o atributo _role_ [alert](http://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
 
-<p>O atributo de alerta é utilizado para comunicar alguma mensagem importante e, frequentemente, <span class="short_text" id="result_box" lang="pt"><span>urgente.</span></span> Quando este atributo (<em>role</em>) estiver ligado a um elemento, o navegador vai enviar <span class="short_text" id="result_box" lang="pt"><span>um evento acessível de alerta</span> </span><span id="result_box" lang="pt"><span>aos</span> <span>produtos de tecnologia assistiva que, então, poderão notificar seus utilizadores sobre o que estiver acontecendo. O atributo <em>alert</em> é mais útil para as</span> <span>informações</span> <span>que requerem a atenção imediata</span><span> na tela.</span></span><span lang="pt"><span> Por exemplo:</span></span></p>
+O atributo de alerta é utilizado para comunicar alguma mensagem importante e, frequentemente, urgente. Quando este atributo (_role_) estiver ligado a um elemento, o navegador vai enviar um evento acessível de alerta aos produtos de tecnologia assistiva que, então, poderão notificar seus utilizadores sobre o que estiver acontecendo. O atributo _alert_ é mais útil para as informações que requerem a atenção imediata na tela. Por exemplo:
 
-<ul>
- <li>Um valor inválido foi inserido em um campo de um formulário</li>
- <li>A sessão atual expirou</li>
- <li>a conexão com o servidor foi perdida, as mudanças locais não serão salvas.</li>
-</ul>
+- Um valor inválido foi inserido em um campo de um formulário
+- A sessão atual expirou
+- a conexão com o servidor foi perdida, as mudanças locais não serão salvas.
 
-<p>Por causa da sua natureza intrusiva, o atributo de alerta deve ser usado moderadamente e, apenas, nas situações que exigirem atenção imediata. Mudanças dinâmicas que são menos urgentes devem receber um método menos agressivo, tal como a aria-live="polite", ou outros atributos (<em>roles</em>) para regiões dinâmicas.</p>
+Por causa da sua natureza intrusiva, o atributo de alerta deve ser usado moderadamente e, apenas, nas situações que exigirem atenção imediata. Mudanças dinâmicas que são menos urgentes devem receber um método menos agressivo, tal como a aria-live="polite", ou outros atributos (_roles_) para regiões dinâmicas.
 
-<h3 id="Efeitos_possíveis_sobre_as_tecnologias_assistivas_e_seus_utilizadores">Efeitos possíveis sobre as tecnologias assistivas e seus utilizadores</h3>
+### Efeitos possíveis sobre as tecnologias assistivas e seus utilizadores
 
-<p>Quando o atributo (<em>role</em>) alerta é adicionado a um elemento, ou este se torna visível, o identificador de navegação (<em>user agent</em>) deve fazer o seguinte:</p>
+Quando o atributo (_role_) alerta é adicionado a um elemento, ou este se torna visível, o identificador de navegação (_user agent_) deve fazer o seguinte:
 
-<ul>
- <li>Exibir o elemento como tendo uma função de alerta (<em>alert role</em>) na API de acessibilidade do sistema operacional.</li>
- <li>Disparar um evento de alerta acessível, usando a API de acessibilidade do sistema operacional, se houver suporte para tal.</li>
-</ul>
+- Exibir o elemento como tendo uma função de alerta (_alert role_) na API de acessibilidade do sistema operacional.
+- Disparar um evento de alerta acessível, usando a API de acessibilidade do sistema operacional, se houver suporte para tal.
 
-<p>Os produtos de tecnologias assistivas devem atender tal evento <span id="result_box" lang="pt"><span>e</span> <span>notificar</span> seus utilizadores, <span>em conformidade.</span></span></p>
+Os produtos de tecnologias assistivas devem atender tal evento e notificar seus utilizadores, em conformidade.
 
-<ul>
- <li>Leitores de tela podem interromper a <span class="short_text" id="result_box" lang="pt"><span>produção corrente (</span></span>quer sejam a fala, ou o braille) e, imediatamente, anunciar, ou exibir, a mensagem de alerta.</li>
- <li>Ampliadores de tela podem, visualmente, indicar que houve um alerta e qual era o seu texto.</li>
-</ul>
+- Leitores de tela podem interromper a produção corrente (quer sejam a fala, ou o braille) e, imediatamente, anunciar, ou exibir, a mensagem de alerta.
+- Ampliadores de tela podem, visualmente, indicar que houve um alerta e qual era o seu texto.
 
-<div class="note"><strong>Nota:</strong> As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.</div>
+> **Note:** **Nota:** As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
 
-<h3 id="Exemplos">Exemplos</h3>
+### Exemplos
 
-<h4 id="Exemplo_1_Adicionando_o_atributo_(role)_no_código_HTML">Exemplo 1: Adicionando o atributo (<em>role</em>) no código HTML:</h4>
+#### Exemplo 1: Adicionando o atributo (_role_) no código HTML:
 
-<p>O trecho abaixo mostra como o atributo <em>role alert</em> é inserido, diretamente, no código-fonte HTML. No momento em que o elemento <span class="short_text" id="result_box" lang="pt"><span>termina de carregar,</span> <span>o leitor de tela deve ser notificado do alerta. Se o elemento já estiver no código-fonte original</span></span> quando a página carregar, o leitor de tela vai anunciar o erro imediatamente após a apresentação do título da página<span id="result_box" lang="pt"><span>.</span></span></p>
+O trecho abaixo mostra como o atributo _role alert_ é inserido, diretamente, no código-fonte HTML. No momento em que o elemento termina de carregar, o leitor de tela deve ser notificado do alerta. Se o elemento já estiver no código-fonte original quando a página carregar, o leitor de tela vai anunciar o erro imediatamente após a apresentação do título da página.
 
-<pre class="brush: html">&lt;h2 role="alert"&gt;Your form could not be submitted because of 3 validation errors.(Seu formulário não pode ser submetido devido a 3 erros de validação)&lt;/h2&gt;</pre>
+```html
+<h2 role="alert">Your form could not be submitted because of 3 validation errors.(Seu formulário não pode ser submetido devido a 3 erros de validação)</h2>
+```
 
-<h4 id="Exemplo_2_Adicionando_dinamicamente_um_elemento_com_a_função_de_alerta">Exemplo 2: Adicionando, dinamicamente, um elemento com a função de alerta:</h4>
+#### Exemplo 2: Adicionando, dinamicamente, um elemento com a função de alerta:
 
-<p>Esta parte mostra como criar, de forma dinâmica, um elemento com uma função de alerta e como adicioná-lo à estrutura do documento:</p>
+Esta parte mostra como criar, de forma dinâmica, um elemento com uma função de alerta e como adicioná-lo à estrutura do documento:
 
-<pre class="brush: js">var myAlert = document.createElement("p");
+```js
+var myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
 var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço, a fim de criar uma conta)");
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlertText);
-</pre>
+```
 
-<p><strong>Nota: </strong>O mesmo resultado pode ser obtido com menos código, <span id="result_box" lang="pt"><span>quando se utiliza</span></span> uma biblioteca de <em>script</em>, como jQuery:</p>
+**Nota:** O mesmo resultado pode ser obtido com menos código, quando se utiliza uma biblioteca de _script_, como jQuery:
 
-<pre class="brush: js">$("&lt;p role='alert'&gt;You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço para criar uma conta)&lt;/p&gt;").appendTo(document.body);
-</pre>
+```js
+$("<p role='alert'>You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço para criar uma conta)</p>").appendTo(document.body);
+```
 
-<h4 id="Exemplo_3_Adicionando_a_função_de_alerta_a_um_elemento_existente">Exemplo 3: Adicionando a função de alerta a um elemento <span class="short_text" id="result_box" lang="pt"><span>existente</span></span>:</h4>
+#### Exemplo 3: Adicionando a função de alerta a um elemento existente:
 
-<p>Às vezes é preferível adicionar uma função de alerta a um elemento que já está visível na página, a criar um novo elemento. Isto possibilita que os desenvolvedores reiterem a informação que virá a ser mais importante, ou urgente, para os utilizadores. Por exemplo, um controle de formulário pode ter uma instrução sobre o valor esperado. Caso um valor diferente seja inserido, o<code> role="alert" </code>pode ser <span class="short_text" id="result_box" lang="pt"><span>adicionado ao</span> <span>texto de instrução e, então, o leitor de tela o anuncia como um alerta. O pseudo código, no fragmento abaixo, ilustra esta abordagem:</span></span></p>
+Às vezes é preferível adicionar uma função de alerta a um elemento que já está visível na página, a criar um novo elemento. Isto possibilita que os desenvolvedores reiterem a informação que virá a ser mais importante, ou urgente, para os utilizadores. Por exemplo, um controle de formulário pode ter uma instrução sobre o valor esperado. Caso um valor diferente seja inserido, o` role="alert" `pode ser adicionado ao texto de instrução e, então, o leitor de tela o anuncia como um alerta. O pseudo código, no fragmento abaixo, ilustra esta abordagem:
 
-<pre class="brush: html">&lt;p id="formInstruction"&gt;You must select at least 3 options&lt;/p&gt;
-</pre>
+```html
+<p id="formInstruction">You must select at least 3 options</p>
+```
 
-<pre class="brush: js">// When the user tries to submit the form with less than 3 checkboxes selected (Quando houver a tentativa de submissão do formulário com menos de 3 caixas de seleção marcadas):
-document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
+```js
+// When the user tries to submit the form with less than 3 checkboxes selected (Quando houver a tentativa de submissão do formulário com menos de 3 caixas de seleção marcadas):
+document.getElementById("formInstruction").setAttribute("role", "alert");
+```
 
-<h4 id="Exemplo_4_Construindo_um_elemento_com_uma_função_de_alerta_visível">Exemplo 4: Construindo um elemento com uma função de alerta visível:</h4>
+#### Exemplo 4: Construindo um elemento com uma função de alerta visível:
 
-<p>Se um elemento já tem o atributo<code> role="alert" </code>e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes. </p>
+Se um elemento já tem o atributo` role="alert" `e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes.
 
-<p><strong>Nota: </strong>Na maioria dos casos, esta abordagem não é recomendada, porque não é a ideal para esconder erro, ou alerta de texto, que não for aplicável no momento. Utilizadores de tecnologias assistivas antigas podem, ainda, perceber o texto de alerta, mesmo quando este não devesse ser aplicado, fazendo com que acreditem, incorretamente, que há um problema.</p>
+**Nota:** Na maioria dos casos, esta abordagem não é recomendada, porque não é a ideal para esconder erro, ou alerta de texto, que não for aplicável no momento. Utilizadores de tecnologias assistivas antigas podem, ainda, perceber o texto de alerta, mesmo quando este não devesse ser aplicado, fazendo com que acreditem, incorretamente, que há um problema.
 
-<pre class="brush: css">.hidden {
+```css
+.hidden {
   display:none;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p id="expirationWarning" role="alert" class="hidden"&gt;Your log in session will expire in 2 minutes(A sua sessão vai expirar em 2 minutos)&lt;/p&gt;
-</pre>
+```html
+<p id="expirationWarning" role="alert" class="hidden">Your log in session will expire in 2 minutes(A sua sessão vai expirar em 2 minutos)</p>
+```
 
-<pre class="brush: js">// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:(Remover a classe "<em>hidden</em>" faz o leitor de tela anunciar o alerta)
-document.getElementById("expirationWarning").className = ""; </pre>
+```js
+// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:(Remover a classe "hidden" faz o leitor de tela anunciar o alerta)
+document.getElementById("expirationWarning").className = "";
+```
 
-<h3 id="Notas">Notas:</h3>
+### Notas:
 
-<ul>
- <li>A utilização da função alerta em um elemento implica que ele tenha a<code> aria-live="assertive".</code></li>
- <li>O atributo <em>alert role</em>  deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, <span class="short_text" id="result_box" lang="pt"><span>independentemente de onde o foco do teclado esteja localizado no momento.</span></span></li>
- <li>Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK"  que descarte o alerta), em seu lugar deve-se utilizar um <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alert role"><em>alertdialog</em> (diálogo de alerta)</a><span class="short_text" id="result_box" lang="pt"><span>.</span></span></li>
-</ul>
+- A utilização da função alerta em um elemento implica que ele tenha a` aria-live="assertive".`
+- O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.
+- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role").
 
-<h3 id="Atributos_ARIA_utilizados">Atributos ARIA utilizados</h3>
+### Atributos ARIA utilizados
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#alert">alert</a></li>
-</ul>
+- [alert](http://www.w3.org/TR/wai-aria/roles#alert)
 
-<h3 id="Técnicas_ARIA_relacionadas">Técnicas ARIA relacionadas</h3>
+### Técnicas ARIA relacionadas
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="en/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Utilizando a função alertdialog</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property" title="Using the aria-invalid property">Utilizando a propriedade aria-invalid</a></li>
-</ul>
+- [Utilizando a função alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "en/ARIA/ARIA_Techniques/Using_the_alertdialog_role")
+- [Utilizando a propriedade aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property "Using the aria-invalid property")
 
-<h3 id="Compatibilidade">Compatibilidade</h3>
+### Compatibilidade
 
-<p class="comment">TBD: <span id="result_box" lang="pt"><span>Adicionar</span> <span>informações de suporte para</span> <span>UA</span> <span>comum e combinações de produtos</span></span><span lang="pt"> <span>TA</span> <span>/ AT</span></span></p>
+TBD: Adicionar informações de suporte para UA comum e combinações de produtos TA / AT
 
-<h3 id="Recursos_Adicionais">Recursos Adicionais</h3>
+### Recursos Adicionais
 
-<ul>
- <li>Melhores práticas ARIA - Alert Role: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert</a></li>
-</ul>
-
-<p> </p>
+- Melhores práticas ARIA - Alert Role: <http://www.w3.org/TR/wai-aria-practices/#alert>

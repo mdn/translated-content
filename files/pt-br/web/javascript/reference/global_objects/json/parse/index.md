@@ -6,53 +6,51 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">O método <strong><code>JSON.parse()</code></strong> analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função <strong>reviver</strong> opcional pode ser fornecida para executar uma transformação no objeto que será retornado.</span></p>
+O método **`JSON.parse()`** analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função **reviver** opcional pode ser fornecida para executar uma transformação no objeto que será retornado.
 
-<div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-parse.html")}}
 
+## Sintaxe
 
+    JSON.parse(text[, reviver])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox">JSON.parse(<var>text</var>[, <var>reviver</var>])</pre>
+- `text`
+  - : A string para analisar como JSON. Veja o objeto {{jsxref("JSON")}} para uma descrição da sintaxe JSON.
+- `reviver` {{optional_inline}}
+  - : Se for uma função, prescreve como o valor originalmente produzido pela análise será transformado antes de ser retornado.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor retornado
 
-<dl>
- <dt><code>text</code></dt>
- <dd>A string para analisar como JSON. Veja o objeto {{jsxref("JSON")}} para uma descrição da sintaxe JSON.</dd>
- <dt><code>reviver</code> {{optional_inline}}</dt>
- <dd>Se for uma função, prescreve como o valor originalmente produzido pela análise será transformado antes de ser retornado.</dd>
-</dl>
+O {{jsxref("Object")}} correspondente ao `text` JSON fornecido.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Exceções
 
-<p>O {{jsxref("Object")}} correspondente ao <code>text</code> JSON fornecido.</p>
+Lança uma exceção {{jsxref("SyntaxError")}} se a string a ser analisada não for um JSON válido.
 
-<h3 id="Exceções">Exceções</h3>
+## Exemplos
 
-<p>Lança uma exceção {{jsxref("SyntaxError")}} se a string a ser analisada não for um JSON válido.</p>
+### Usando `JSON.parse()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_JSON.parse()">Usando <code>JSON.parse()</code></h3>
-
-<pre class="brush: js">JSON.parse('{}');              // {}
+```js
+JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-</pre>
+```
 
-<h3 id="Usando_o_parâmetro_reviver">Usando o parâmetro <code>reviver</code></h3>
+### Usando o parâmetro `reviver`
 
-<p>Se um <code>reviver</code> for especificado, o valor calculado pela análise será <em>transformado</em> antes de ser retornado. Especificamente, o valor computado e todas as suas propriedades (começando com as propriedades mais aninhadas e prosseguindo para o próprio valor original) são executadas individualmente através do <code>reviver</code>. Em seguida, ele é chamado, com o objeto contendo a propriedade sendo processada como <code>this</code>, e com o nome da propriedade como uma string, e o valor da propriedade como argumentos. Se a função  <code>reviver</code> retornar {{jsxref("undefined")}} (ou não retornar nenhum valor, por exemplo, se a execução cair no final da função), a propriedade será excluída do objeto. Caso contrário, a propriedade é redefinida para ser o valor de retorno.</p>
+Se um `reviver` for especificado, o valor calculado pela análise será _transformado_ antes de ser retornado. Especificamente, o valor computado e todas as suas propriedades (começando com as propriedades mais aninhadas e prosseguindo para o próprio valor original) são executadas individualmente através do `reviver`. Em seguida, ele é chamado, com o objeto contendo a propriedade sendo processada como `this`, e com o nome da propriedade como uma string, e o valor da propriedade como argumentos. Se a função `reviver` retornar {{jsxref("undefined")}} (ou não retornar nenhum valor, por exemplo, se a execução cair no final da função), a propriedade será excluída do objeto. Caso contrário, a propriedade é redefinida para ser o valor de retorno.
 
-<p>Se o <code>reviver</code> apenas transformar alguns valores e não outros, certifique-se de retornar todos os valores não transformados como estão, caso contrário, eles serão excluídos do objeto resultante.</p>
+Se o `reviver` apenas transformar alguns valores e não outros, certifique-se de retornar todos os valores não transformados como estão, caso contrário, eles serão excluídos do objeto resultante.
 
-<pre class="brush: js">JSON.parse('{"p": 5}', (key, value) =&gt;
+```js
+JSON.parse('{"p": 5}', (key, value) =>
   typeof value === 'number'
     ? value * 2 // retorna o valor * 2 para números
     : value     // retorna tudo sem alteração
@@ -60,7 +58,7 @@ JSON.parse('null');            // null
 
 // { p: 10 }
 
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; {
+JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
   console.log(key); // mostra o nome da propriedade atual, o último é "".
   return value;     // retorna o valor da propriedade inalterada.
 });
@@ -72,52 +70,28 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; 
 // 5
 // 3
 // ""
-</pre>
+```
 
-<h3 id="JSON.parse()_não_é_permitido_vírgulas_à_direta"><code>JSON.parse()</code> não permite vírgulas à direta</h3>
+### `JSON.parse()` não permite vírgulas à direta
 
-<pre class="example-bad brush: js example-bad">// ambos retornarão um SyntaxError
+```js example-bad example-bad
+// ambos retornarão um SyntaxError
 JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                               | Status                       | Comentário                                         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.JSON.parse")}}
 
+## Veja Também
 
-<p>{{Compat("javascript.builtins.JSON.parse")}}</p>
-</div>
-
-<h2 id="Veja_Também">Veja Também</h2>
-
-<ul>
- <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON.stringify()")}}

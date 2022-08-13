@@ -9,55 +9,51 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/About_JavaScript
 ---
-<div>{{JsSidebar}}</div>
+{{JsSidebar}}
 
-<h2 id="O_que_é_JavaScript">O que é JavaScript?</h2>
+## O que é JavaScript?
 
-<p><strong>JavaScript</strong><sup>®</sup> (frequentemente abreviado como <strong>JS</strong>) é uma linguagem de programação leve, interpretada e orientada a objetos com <a href="https://en.wikipedia.org/wiki/First-class_functions">funções de primeira classe</a>, conhecida como a linguagem de scripting para páginas Web, mas também <a class="external" href="https://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages">utilizada em muitos ambientes fora dos navegadores</a>. Ela é uma linguagem de scripting <a class="mw-redirect" href="https://en.wikipedia.org/wiki/Prototype-based_programming" title="Prototype-based">baseada em protótipos</a>, multi-paradigma e dinâmica, suportando os estilos orientado a objetos, imperativo e funcional.</p>
+**JavaScript**® (frequentemente abreviado como **JS**) é uma linguagem de programação leve, interpretada e orientada a objetos com [funções de primeira classe](https://en.wikipedia.org/wiki/First-class_functions), conhecida como a linguagem de scripting para páginas Web, mas também [utilizada em muitos ambientes fora dos navegadores](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages). Ela é uma linguagem de scripting [baseada em protótipos](https://en.wikipedia.org/wiki/Prototype-based_programming "Prototype-based"), multi-paradigma e dinâmica, suportando os estilos orientado a objetos, imperativo e funcional.
 
-<p>JavaScript roda no <em>client side</em> da web, o que pode ser usado para projetar / programar o comportamento de uma página web a partir da ocorrência de um evento. JavaScript é uma linguagem fácil de se aprender mas que também é poderosa, sendo amplamente utilizada para controlar o comportamento de páginas web.</p>
+JavaScript roda no _client side_ da web, o que pode ser usado para projetar / programar o comportamento de uma página web a partir da ocorrência de um evento. JavaScript é uma linguagem fácil de se aprender mas que também é poderosa, sendo amplamente utilizada para controlar o comportamento de páginas web.
 
-<p>Diferente do que é dito popularmente, <strong>JavaScript <em>não é</em> "Java Interpretado"</strong>. Em poucas palavras, JavaScript é uma linguagem de scripting dinâmica que suporta a construção de objetos <a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-Based_vs._Prototype-Based_Languages" title="en-US/docs/JavaScript/Guide/Details_of_the_Object_Model#Class-Based_vs._Prototype-Based_Languages">baseada em protótipos</a>. A sintaxe básica é intencionalmente similar tanto a Java quanto a C++, com o intuito de diminuir o número de conceitos exigidos para se aprender a linguagem. Estruturas da linguagem, como <code>if</code>,  <code>for, while</code>,  <code>switch</code> e <code>try ... catch</code> funcionam da mesma maneira do que nestas linguagens (ou quase.)</p>
+Diferente do que é dito popularmente, **JavaScript _não é_ "Java Interpretado"**. Em poucas palavras, JavaScript é uma linguagem de scripting dinâmica que suporta a construção de objetos [baseada em protótipos](/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-Based_vs._Prototype-Based_Languages "en-US/docs/JavaScript/Guide/Details_of_the_Object_Model#Class-Based_vs._Prototype-Based_Languages"). A sintaxe básica é intencionalmente similar tanto a Java quanto a C++, com o intuito de diminuir o número de conceitos exigidos para se aprender a linguagem. Estruturas da linguagem, como `if`, `for, while`, `switch` e `try ... catch` funcionam da mesma maneira do que nestas linguagens (ou quase.)
 
-<p>JavaScript pode funcionar tanto como uma linguagem <a class="external" href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> como uma linguagem <a class="external" href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" title="https://developer.mozilla.org/en-US/docs/Introduction_to_Object-Oriented_JavaScript">orientada a objetos</a>. Objetos são criados programaticamente em JavaScript, onde métodos e propriedades são anexados a objetos vazios <strong>em tempo de execução</strong>, ao invés das definições sintáticas de classe normalmente encontradas em linguagens compiladas como C++ e Java. Assim que um objeto é construído, ele pode ser usado como um esquema (ou protótipo) para se criar objetos similares.</p>
+JavaScript pode funcionar tanto como uma linguagem [procedural](https://en.wikipedia.org/wiki/Procedural_programming) como uma linguagem [orientada a objetos](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript "https://developer.mozilla.org/en-US/docs/Introduction_to_Object-Oriented_JavaScript"). Objetos são criados programaticamente em JavaScript, onde métodos e propriedades são anexados a objetos vazios **em tempo de execução**, ao invés das definições sintáticas de classe normalmente encontradas em linguagens compiladas como C++ e Java. Assim que um objeto é construído, ele pode ser usado como um esquema (ou protótipo) para se criar objetos similares.
 
-<p>As capacidades dinâmicas de JavaScript incluem a construção de objetos em tempo de execução, listas variáveis de parâmetros, variáveis de funções, criação dinâmica de scripts (através da função <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval">eval</a></code>), introspecção de objetos (através da estrutura <code>for ... in</code>), e recuperação de código fonte (programas escritos em JavaScript podem descompilar funções de volta a seus textos originais).</p>
+As capacidades dinâmicas de JavaScript incluem a construção de objetos em tempo de execução, listas variáveis de parâmetros, variáveis de funções, criação dinâmica de scripts (através da função [`eval`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval")), introspecção de objetos (através da estrutura `for ... in`), e recuperação de código fonte (programas escritos em JavaScript podem descompilar funções de volta a seus textos originais).
 
-<p>Para uma discussão mais aprofundada sobre programação em JavaScript, siga os links da seção <a href="#Recursos_para_JavaScript">Recursos para JavaScript</a>.</p>
+Para uma discussão mais aprofundada sobre programação em JavaScript, siga os links da seção [Recursos para JavaScript](#Recursos_para_JavaScript).
 
-<h2 id="Que_implementações_de_JavaScript_estão_disponíveis">Que implementações de JavaScript estão disponíveis?</h2>
+## Que implementações de JavaScript estão disponíveis?
 
-<p>O projeto Mozilla oferece duas implementações de JavaScript. A implementação <strong>original</strong> de JavaScript foi criada por Brendan Eich enquanto trabalhava na Netscape, e desde então foi atualizada para conformar-se ao padrão <em>ECMA-262 Edition 5</em> e suas versões mais recentes. Esta <em>engine</em>, de codinome <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey" title="en-US/docs/SpiderMonkey">SpiderMonkey</a>, foi implementada em C/C++. A <em>engine</em> <a href="/en-US/docs/Rhino" title="en-US/docs/Rhino">Rhino</a>, criada predominantemente por Norris Boyd (também na Netscape) é uma implementação de JavaScript escrita em Java. Assim como SpiderMonkey, Rhino é compátivel com o padrão <em>ECMA-262 Edition 5</em>.</p>
+O projeto Mozilla oferece duas implementações de JavaScript. A implementação **original** de JavaScript foi criada por Brendan Eich enquanto trabalhava na Netscape, e desde então foi atualizada para conformar-se ao padrão _ECMA-262 Edition 5_ e suas versões mais recentes. Esta _engine_, de codinome [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey "en-US/docs/SpiderMonkey"), foi implementada em C/C++. A _engine_ [Rhino](/pt-BR/docs/Rhino "en-US/docs/Rhino"), criada predominantemente por Norris Boyd (também na Netscape) é uma implementação de JavaScript escrita em Java. Assim como SpiderMonkey, Rhino é compátivel com o padrão _ECMA-262 Edition 5_.
 
-<p>Muitas optimizações significantes no tempo de execução, como TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) e IonMonkey, foram adicionadas à <em>engine</em> de JavaScript SpiderMonkey com o passar do tempo. Há sempre trabalho sendo feito para melhorar a performance de execução do JavaScript.</p>
+Muitas optimizações significantes no tempo de execução, como TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) e IonMonkey, foram adicionadas à _engine_ de JavaScript SpiderMonkey com o passar do tempo. Há sempre trabalho sendo feito para melhorar a performance de execução do JavaScript.
 
-<p>Além das implementações citadas anteriormente, existem ainda outras <em>engines</em> populares de JavaScript como:-</p>
+Além das implementações citadas anteriormente, existem ainda outras _engines_ populares de JavaScript como:-
 
-<ul>
- <li>A <a class="external" href="https://code.google.com/p/v8/">V8</a> da Google, que é utilizada pelo navegador Google Chrome e as versões mais recentes do navegador Opera. Ela também é usada como a <em>engine</em> do <a href="http://nodejs.org">Node.js</a>.</li>
- <li>O <a class="external" href="https://www.webkit.org/projects/javascript/index.html">JavaScriptCore</a> (SquirrelFish/Nitro) utilizado em alguns navegadores WebKit como Apple Safari.</li>
- <li><a class="external" href="http://my.opera.com/ODIN/blog/carakan-faq">Carakan</a>, usado em versões antigas do navegador Opera.</li>
- <li>A <em>engine</em> <a class="external" href="http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29">Chakra</a> utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de <em>trademark</em>).</li>
-</ul>
+- A [V8](https://code.google.com/p/v8/) da Google, que é utilizada pelo navegador Google Chrome e as versões mais recentes do navegador Opera. Ela também é usada como a _engine_ do [Node.js](http://nodejs.org).
+- O [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilizado em alguns navegadores WebKit como Apple Safari.
+- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq), usado em versões antigas do navegador Opera.
+- A _engine_ [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de _trademark_).
 
-<p>Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente <em>host</em> mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar <strong>objetos de <em>host</em></strong> responsáveis pelo trabalho de refletir o <a class="external" href="http://www.w3.org/DOM/">DOM</a> no JavaScript.</p>
+Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](http://www.w3.org/DOM/) no JavaScript.
 
-<p>Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o <em>server side</em> (da Web). Um servidor web de JavaScript expõe objetos de <em>host</em> que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. <a href="http://nodejs.org">Node.js</a> é um exemplo popular deste tipo de uso.</p>
+Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o _server side_ (da Web). Um servidor web de JavaScript expõe objetos de _host_ que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. [Node.js](http://nodejs.org) é um exemplo popular deste tipo de uso.
 
-<h2 id="Recursos_para_JavaScript">Recursos para JavaScript</h2>
+## Recursos para JavaScript
 
-<dl>
- <dt><a href="/pt-BR/docs/Mozilla/Projects/SpiderMonkey" title="/pt-BR/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a></dt>
- <dd>Informações pertinentes à implementação de JavaScript em C/C++ criada pela Mozilla (SpiderMonkey), incluindo como integra-la em aplicativos.</dd>
-</dl>
+- [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey)
+  - : Informações pertinentes à implementação de JavaScript em C/C++ criada pela Mozilla (SpiderMonkey), incluindo como integra-la em aplicativos.
 
-<dl>
- <dt><a href="/pt-BR/docs/Mozilla/Projects/Rhino" title="/pt-BR/docs/Mozilla/Projects/Rhino">Rhino</a></dt>
- <dd>Informações pertinentes à implementação de JavaScript em Java (Rhino).</dd>
- <dt><a href="/pt-BR/docs/Web/JavaScript/Language_Resources" title="/pt-BR/docs/Web/JavaScript/Language_Resources">Recursos da linguagem</a></dt>
- <dd>Indicações para os padrões publicados de JavaScript.</dd>
- <dt><a href="/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript" title="/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript">Uma reintrodução ao JavaScript</a></dt>
- <dd><a href="/pt-BR/docs/Web/JavaScript/Guide" title="/pt-BR/docs/Web/JavaScript/Guide">O guia de JavaScript</a> e a <a href="/pt-BR/docs/Web/JavaScript/Reference" title="/pt-BR/docs/Web/JavaScript/Reference">referência para JavaScript</a>.</dd>
-</dl>
+<!---->
 
-<p>JavaScript® é uma marca ou marca registrada pertencente à Oracle nos E.U.A. e outros países.</p>
+- [Rhino](/pt-BR/docs/Mozilla/Projects/Rhino)
+  - : Informações pertinentes à implementação de JavaScript em Java (Rhino).
+- [Recursos da linguagem](/pt-BR/docs/Web/JavaScript/Language_Resources)
+  - : Indicações para os padrões publicados de JavaScript.
+- [Uma reintrodução ao JavaScript](/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+  - : [O guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) e a [referência para JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+
+JavaScript® é uma marca ou marca registrada pertencente à Oracle nos E.U.A. e outros países.

@@ -3,40 +3,39 @@ title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">Error: Permission denied to access property "x"
-</pre>
+    Error: Permission denied to access property "x"
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("Error")}}.</p>
+{{jsxref("Error")}}.
 
-<h2 id="O_que_houve_de_errado">O que houve de errado?</h2>
+## O que houve de errado?
 
-<p><span class="seoSummary">Tentativa de acessar um objeto no qual você não possui permissões. Provavelmente um {{HTMLElement("iframe")}} carregado de um dominio diferente no qual foi violado o <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</span></p>
+Tentativa de acessar um objeto no qual você não possui permissões. Provavelmente um {{HTMLElement("iframe")}} carregado de um dominio diferente no qual foi violado o [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body></body>
+</html>
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTMLElement("iframe")}}</li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-</ul>
+- {{HTMLElement("iframe")}}
+- [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy)

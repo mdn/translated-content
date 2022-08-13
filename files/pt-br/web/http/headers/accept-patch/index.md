@@ -9,79 +9,51 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Accept-Patch
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <strong><code>Accept-Patch</code></strong> indica qual tipo de mídia o servidor está apto a entender.</p>
+O cabeçalho de resposta HTTP **`Accept-Patch`** indica qual tipo de mídia o servidor está apto a entender.
 
-<p><strong><code>Accept-Patch</code></strong> na resposta de qualquer método significa que o PATCH é permitido no recurso identificado pela Request-URI. Dois casos comuns que levam a isso:</p>
+**`Accept-Patch`** na resposta de qualquer método significa que o PATCH é permitido no recurso identificado pela Request-URI. Dois casos comuns que levam a isso:
 
-<p>O servidor recebendo uma requisição PATCH com um tipo de mídia não suportado pode responder com {{HTTPStatus("415")}} <code>Unsupported Media Type</code> e um cabeçalho Accept-Patch referenciando um ou mais tipos de mídia suportados.</p>
+O servidor recebendo uma requisição PATCH com um tipo de mídia não suportado pode responder com {{HTTPStatus("415")}} `Unsupported Media Type` e um cabeçalho Accept-Patch referenciando um ou mais tipos de mídia suportados.
 
-<div class="note"><strong>Notas:</strong>
+> **Note:** **Notas:\*** Um registro da IANA mantém [uma lista oficial completa das codificações de conteúdo](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+>
+> - Duas outras codificações de conteúdo, `bzip` e `bzip2`, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.
 
-<ul>
- <li>
-  <p>Um registro da IANA mantém <a class="external" href="http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">uma lista oficial completa das codificações de conteúdo</a>.</p>
- </li>
- <li>Duas outras codificações de conteúdo, <code>bzip</code> e <code>bzip2</code>, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.</li>
-</ul>
-</div>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    Accept-Patch: application/example, text/example
+    Accept-Patch: text/example;charset=utf-8
+    Accept-Patch: application/merge-patch+json
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
-Accept-Patch: text/example;charset=utf-8
-Accept-Patch: application/merge-patch+json
-</pre>
+## Diretivas
 
-<h2 id="Diretivas">Diretivas</h2>
+Nenhuma.
 
-<p>Nenhuma.</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+    Accept-Patch: application/example, text/example
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+    Accept-Patch: text/example;charset=utf-8
 
-Accept-Patch: text/example;charset=utf-8
+    Accept-Patch: application/merge-patch+json
 
-Accept-Patch: application/merge-patch+json
-</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Specification                                        | Título     |
+| ---------------------------------------------------- | ---------- |
+| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "Accept-Patch", "3.1")}}</td>
-   <td>HTTP PATCH</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("http.headers.Accept-Patch")}}
 
-<p>{{Compat("http.headers.Accept-Patch")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Método HTTP {{HTTPMethod("PATCH")}}</li>
- <li>Semântica e contexto HTTP {{RFC("7231", "PUT", "4.3.4")}}</li>
-</ul>
+- Método HTTP {{HTTPMethod("PATCH")}}
+- Semântica e contexto HTTP {{RFC("7231", "PUT", "4.3.4")}}

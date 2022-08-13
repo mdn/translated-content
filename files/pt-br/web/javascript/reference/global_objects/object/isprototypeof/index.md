@@ -6,49 +6,42 @@ tags:
   - Prototipo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>isPrototypeOf()</strong></code> checa se um objeto existe em na cadeia de protótipos de um outro objeto.</p>
+O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
 
-<div class="note">
-<p><code>isPrototypeOf()</code> difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "<code>objeto instanceof UmaFuncaoQualquer</code>", a cadeia de protótipos do <code>objeto</code> é comparada com <code>UmaFuncaoQualquer.prototype</code>, e não com a própria função <code>UmaFuncaoQualquer</code>.</p>
-</div>
+> **Note:** `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>objeto</var>)</code></pre>
+    prototypeObj.isPrototypeOf(objeto)
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>objeto</code></dt>
- <dd>Objeto no qual será feito uma busca na cadeia de protótipos.</dd>
-</dl>
+- `objeto`
+  - : Objeto no qual será feito uma busca na cadeia de protótipos.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{jsxref("Boolean")}} indicando se prototypeObj está na cadeia de protótipos do objeto.</p>
+Um {{jsxref("Boolean")}} indicando se prototypeObj está na cadeia de protótipos do objeto.
 
-<h3 id="Erros_possíveis">Erros possíveis</h3>
+### Erros possíveis
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Um {{jsxref("TypeError")}} é mostrado se <code><var>prototypeObj</var></code> é <em>undefined </em>ou <em>null</em>.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Um {{jsxref("TypeError")}} é mostrado se `prototypeObj` é _undefined_ ou _null_.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>isPrototypeOf()</code> lhe permite checar se um objeto está ou não na cadeia de protótipos (cadeia hieráquica) de um outro objeto.</p>
+O método `isPrototypeOf()` lhe permite checar se um objeto está ou não na cadeia de protótipos (cadeia hieráquica) de um outro objeto.
 
-<p>Em outras palavras, você pode descobrir se um objeto x (já instanciado) é herdeiro de um objeto y.</p>
+Em outras palavras, você pode descobrir se um objeto x (já instanciado) é herdeiro de um objeto y.
 
-<p> </p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+Este exemplo demonstra que `Baz.prototype`, `Bar.prototype`, `Foo.prototype` e`Object.prototype` estão na cadeia de protótipos de `baz` , ou seja, baz herda atributos de Baz, Bar e Foo:
 
-<p>Este exemplo demonstra que <code>Baz.prototype</code>, <code>Bar.prototype</code>, <code>Foo.prototype</code> e<code>Object.prototype</code> estão na cadeia de protótipos de  <code>baz</code> , ou seja, baz herda atributos de Baz, Bar e Foo:</p>
-
-<pre class="brush: js">function Foo() {}
+```js
+function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -61,62 +54,34 @@ console.log(Baz.prototype.isPrototypeOf(baz)); // true
 console.log(Bar.prototype.isPrototypeOf(baz)); // true
 console.log(Foo.prototype.isPrototypeOf(baz)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
-</pre>
+```
 
-<p>O método<code>isPrototypeOf()</code>, junto com o operador {{jsxref("Operators/instanceof", "instanceof")}} vêm a ser útil se você tem um código que só pode funcionar quando estiver lidando com objetos que descendem de uma cadeia de protótipos específicos, por exemplo, para garantir que certos métodos ou propriedades estarão presentes naquele objeto que você precisa. </p>
+O método`isPrototypeOf()`, junto com o operador {{jsxref("Operators/instanceof", "instanceof")}} vêm a ser útil se você tem um código que só pode funcionar quando estiver lidando com objetos que descendem de uma cadeia de protótipos específicos, por exemplo, para garantir que certos métodos ou propriedades estarão presentes naquele objeto que você precisa.
 
-<p>Por exemplo, checar se o objeto <code>baz</code> descende de <code>Foo.prototype</code>:</p>
+Por exemplo, checar se o objeto `baz` descende de `Foo.prototype`:
 
-<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
+```js
+if (Foo.prototype.isPrototypeOf(baz)) {
   // fazer algo seguramente
 }
-</pre>
+```
 
-<h2 id="Specificações">Specificações</h2>
+## Specificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.6', 'Object.prototype.isPrototypeOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.2.4.6', 'Object.prototype.isPrototypeOf')}}                                 | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES6', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.Object.isPrototypeOf")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.isPrototypeOf")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>
-  <div>{{jsxref("Object.setPrototypeOf()")}}</div>
- </li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

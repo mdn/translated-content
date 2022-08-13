@@ -3,31 +3,29 @@ title: localStorage.getItem()
 slug: Web/API/Storage/getItem
 translation_of: Web/API/Storage/getItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Passar o nome da chave para o método <code>getItem()</code> da interface {{domxref("Storage")}} retornará o seu valor.</p>
+Passar o nome da chave para o método `getItem()` da interface {{domxref("Storage")}} retornará o seu valor.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>aValue</em> = localStorage.getItem(<em>keyName</em>);
-</pre>
+    var aValue = localStorage.getItem(keyName);
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em><code>keyName</code></em></dt>
- <dd>Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.</dd>
-</dl>
+- _`keyName`_
+  - : Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, <font face="Consolas, Liberation Mono, Courier, monospace">é retornado null</font>.</p>
+Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, é retornado null.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A função seguinte recupera três itens armazenados no local storage e usa-os para definir estilos customizados em uma página.</p>
+A função seguinte recupera três itens armazenados no local storage e usa-os para definir estilos customizados em uma página.
 
-<pre class="brush: js">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -39,41 +37,25 @@ translation_of: Web/API/Storage/getItem
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Para ver essa funcionalidade aplicada a um exemplo real, veja nossa <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
-</div>
+> **Note:** **Nota**: Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comment |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |         |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
-<div id="compat-desktop">{{Compat("api.Storage.getItem")}}</div>
+{{Compat("api.Storage.getItem")}}
 
-<div id="compat-mobile"></div>
+Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos [estatísticas detalhadas dos níveis de compatibilidade para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
 
-<p>Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">estatísticas detalhadas dos níveis de compatibilidade para vários navegadores</a>.</p>
+> **Note:** **Nota:** A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.
 
-<div class="note">
-<p><strong>Nota: </strong>A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.</p>
-</div>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando a API Web Storage</a></p>
+[Usando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

@@ -3,196 +3,109 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O método <code><strong>reduceRight()</strong></code> aplica à uma função um acumulador e cada valor do array (da direita para esquerda) é reduzido para um valor único.</p>
+O método **`reduceRight()`** aplica à uma função um acumulador e cada valor do array (da direita para esquerda) é reduzido para um valor único.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.reduceRight(<var>callback</var>[, <var>initialValue</var>])</code></pre>
+    arr.reduceRight(callback[, initialValue])
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Função para executar em cada valor do array, recebendo quatro argumentos:
- <dl>
-  <dt><code>previousValue</code></dt>
-  <dd>O valor anteriormente retornado na ultima invocação do callback, ou o <code>initialValue</code>, se este for o recebido. (Ver abaixo.)</dd>
-  <dt><code>currentValue</code></dt>
-  <dd>O valor atualmente sendo processado no array.</dd>
-  <dt><code>index</code></dt>
-  <dd>O índice do valor atualmente sendo processado no array.</dd>
-  <dt><code>array</code></dt>
-  <dd>O array que foi chamado para ser reduzido.</dd>
- </dl>
- </dd>
- <dt><code>initialValue</code></dt>
- <dd>Opcional. Objeto para ser usado como argumento inicial da primeria chamada do callback.</dd>
-</dl>
+- `callback`
+  - : Função para executar em cada valor do array, recebendo quatro argumentos:_ `previousValue`
+    _ : O valor anteriormente retornado na ultima invocação do callback, ou o `initialValue`, se este for o recebido. (Ver abaixo.)
+    - `currentValue`
+      - : O valor atualmente sendo processado no array.
+    - `index`
+      - : O índice do valor atualmente sendo processado no array.
+    - `array`
+      - : O array que foi chamado para ser reduzido.
+- `initialValue`
+  - : Opcional. Objeto para ser usado como argumento inicial da primeria chamada do callback.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p><code>reduceRight</code> executa a função callback uma vez para cada elemento presente no array, excluindo buracos no array, recebendo quatro argumentos: o valor inicial (ou o valor da chamada anterior do callback), o valor do elemento atual, o índice do elemento atual, e o array onde a operação está acontecendo.</p>
+`reduceRight` executa a função callback uma vez para cada elemento presente no array, excluindo buracos no array, recebendo quatro argumentos: o valor inicial (ou o valor da chamada anterior do callback), o valor do elemento atual, o índice do elemento atual, e o array onde a operação está acontecendo.
 
-<p>A chamada ao callback reduceRight <font face="Consolas, Liberation Mono, Courier, monospace">irá parecer com uma chamada assim</font>:</p>
+A chamada ao callback reduceRight irá parecer com uma chamada assim:
 
-<pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
+```js
+array.reduceRight(function(previousValue, currentValue, index, array) {
   // ...
 });
-</pre>
+```
 
-<p>A primeira vez que a função é chamada, o <code>previousValue</code> e o <code>currentValue</code> podem ser um de dois valores. Se um <code>initialValue</code> foi recebido na chamada do <code>reduceRight</code>, então o <code>previousValue</code> sera iqual ao <code>initialValue</code> e o <code>currentValue</code> será igual ao ultimo valor no array. Se o <code>initialValue</code> não foi recebido, então o <code>previousValue será igual ao ultimo valor no array e o </code><code>currentValue</code> será igual ao penultimo valor no array.</p>
+A primeira vez que a função é chamada, o `previousValue` e o `currentValue` podem ser um de dois valores. Se um `initialValue` foi recebido na chamada do `reduceRight`, então o `previousValue` sera iqual ao `initialValue` e o `currentValue` será igual ao ultimo valor no array. Se o `initialValue` não foi recebido, então o ` previousValue será igual ao ultimo valor no array e o ``currentValue` será igual ao penultimo valor no array.
 
-<p>Se o array é vazio e nenhum <code>initialValue </code>foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o <code>initialValue </code>não foi recebido, ou se o <code>initialValue</code> foi recebido mas o array é vazio, o valor em si será retornado sem chamar o <code>callback</code>.</p>
+Se o array é vazio e nenhum `initialValue `foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o `initialValue `não foi recebido, ou se o `initialValue` foi recebido mas o array é vazio, o valor em si será retornado sem chamar o `callback`.
 
-<p>Alguns exemplos de execuções da função e como será parecida a chamada:</p>
+Alguns exemplos de execuções da função e como será parecida a chamada:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+```js
+[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;
 });
-</pre>
+```
 
-<p>O callback será invocado quatro vezes, com os argumentos e valores de retornos em cada chamada será como o seguinte:</p>
+O callback será invocado quatro vezes, com os argumentos e valores de retornos em cada chamada será como o seguinte:
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col"><code>previousValue</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">return value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Primeira chamada</th>
-   <td><code>4</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>7</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Segunda chamada</th>
-   <td><code>7</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>9</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Terceira chamada</th>
-   <td><code>9</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Quarta chamada</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
-</table>
+|                  | `previousValue` | `currentValue` | `index` | `array`           | return value |
+| ---------------- | --------------- | -------------- | ------- | ----------------- | ------------ |
+| Primeira chamada | `4`             | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `7`          |
+| Segunda chamada  | `7`             | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `9`          |
+| Terceira chamada | `9`             | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `10`         |
+| Quarta chamada   | `10`            | `0`            | `0`     | `[0, 1, 2, 3, 4]` | `10`         |
 
-<p>O valor retornado pelo <code>reduceRight</code> será o valor retornado pela ultima chamada ao callback(<code>10</code>).</p>
+O valor retornado pelo `reduceRight` será o valor retornado pela ultima chamada ao callback(`10`).
 
-<p>E se você também passou um <code>initialValue</code>, o resultado irá ser como a seguir:</p>
+E se você também passou um `initialValue`, o resultado irá ser como a seguir:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+```js
+[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;
 }, 10);
-</pre>
+```
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col"><code>previousValue</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">return value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Primeira chamada</th>
-   <td><code>10</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>14</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Segunda chamada</th>
-   <td><code>14</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>17</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Terceira chamada</th>
-   <td><code>17</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>19</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Quarta chamada</th>
-   <td><code>19</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Quinta chamada</th>
-   <td><code>20</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
-</table>
+|                  | `previousValue` | `currentValue` | `index` | `array`           | return value |
+| ---------------- | --------------- | -------------- | ------- | ----------------- | ------------ |
+| Primeira chamada | `10`            | `4`            | `4`     | `[0, 1, 2, 3, 4]` | `14`         |
+| Segunda chamada  | `14`            | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `17`         |
+| Terceira chamada | `17`            | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `19`         |
+| Quarta chamada   | `19`            | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `20`         |
+| Quinta chamada   | `20`            | `0`            | `0`     | `[0, 1, 2, 3, 4]` | `20`         |
 
-<p>O valor retornado pelo <code>reduceRight</code> desta vez será, obviamente, <code>20</code>.</p>
+O valor retornado pelo `reduceRight` desta vez será, obviamente, `20`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Sum_up_all_values_within_an_array" name="Example:_Sum_up_all_values_within_an_array">Exemplo: Somando todos os valores presente em um array</h3>
+### Exemplo: Somando todos os valores presente em um array
 
-<pre class="brush: js">var total = [0, 1, 2, 3].reduceRight(function(a, b) {
+```js
+var total = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // total == 6
-</pre>
+```
 
-<h3 id="Example_Flatten_an_array_of_arrays" name="Example:_Flatten_an_array_of_arrays">Exemplo: Juntando um array de arrays</h3>
+### Exemplo: Juntando um array de arrays
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+```js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>reduceRight</code> foi adicionado no padrão ECMA-262 em sua Quinta edição; sendo assim pode não estar presente em todas as implementações deste padrão. Você pode contornar isso adicionando o seguinte codigo ao inicio do seu script, adicionando a possibilidade de uso do <code>reduceRight</code> em implementações que não o suportam nativamente.</p>
+`reduceRight` foi adicionado no padrão ECMA-262 em sua Quinta edição; sendo assim pode não estar presente em todas as implementações deste padrão. Você pode contornar isso adicionando o seguinte codigo ao inicio do seu script, adicionando a possibilidade de uso do `reduceRight` em implementações que não o suportam nativamente.
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.22
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: http://es5.github.io/#x15.4.4.22
 if ('function' !== typeof Array.prototype.reduceRight) {
   Array.prototype.reduceRight = function(callback /*, initialValue*/) {
@@ -203,19 +116,19 @@ if ('function' !== typeof Array.prototype.reduceRight) {
     if ('function' !== typeof callback) {
       throw new TypeError(callback + ' is not a function');
     }
-    var t = Object(this), len = t.length &gt;&gt;&gt; 0, k = len - 1, value;
-    if (arguments.length &gt;= 2) {
+    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k &gt;= 0 &amp;&amp; !(k in t)) {
+      while (k >= 0 && !(k in t)) {
         k--;
       }
-      if (k &lt; 0) {
+      if (k < 0) {
         throw new TypeError('Reduce of empty array with no initial value');
       }
       value = t[k--];
     }
-    for (; k &gt;= 0; k--) {
+    for (; k >= 0; k--) {
       if (k in t) {
         value = callback(value, t[k], k, t);
       }
@@ -223,36 +136,19 @@ if ('function' !== typeof Array.prototype.reduceRight) {
     return value;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.8.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                         | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8. |
+| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com os navegadores</h2>
+## Compatibilidade com os navegadores
 
-<div>{{Compat("javascript.builtins.Array.reduceRight")}}</div>
+{{Compat("javascript.builtins.Array.reduceRight")}}
 
-<h2 id="See_also" name="See_also">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reduce()")}}

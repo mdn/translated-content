@@ -10,44 +10,30 @@ tags:
 translation_of: Web/HTTP/Headers/Connection
 original_slug: Web/HTTP/Headers/Conexão
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho <strong><code>Connection</code></strong> controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for <code>keep-alive</code>, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.</p>
+O cabeçalho **`Connection`** controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for `keep-alive`, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.</a></p>
-</div>
+> **Note:** **Nota:** [Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
-<p>Exceto pelos cabeçalhos padrões <em>hop-by-hop </em>(salto-por-salto)  ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} e {{HTTPHeader("Proxy-Authenticate")}}), quaisquer cabeçalhos <em>hop-by-hop</em> usados pela mensagem devem estar listados no cabeçalho <code>Connection</code>, para que o primeiro proxy saiba que tem que consumi-los e não repassá-los além. Os cabeçalhos <em>hop-by-hop </em>padrões podem ser listados também (como é o caso do {{HTTPHeader("Keep-Alive")}}, mas não é obrigatório).</p>
+Exceto pelos cabeçalhos padrões _hop-by-hop_ (salto-por-salto) ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} e {{HTTPHeader("Proxy-Authenticate")}}), quaisquer cabeçalhos _hop-by-hop_ usados pela mensagem devem estar listados no cabeçalho `Connection`, para que o primeiro proxy saiba que tem que consumi-los e não repassá-los além. Os cabeçalhos _hop-by-hop_ padrões podem ser listados também (como é o caso do {{HTTPHeader("Keep-Alive")}}, mas não é obrigatório).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("General header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("General header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Connection: keep-alive
-Connection: close
-</pre>
+    Connection: keep-alive
+    Connection: close
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>close</code></dt>
- <dd>Indica que ou o cliente, ou o servidor querem fechar a conexão. Este é o valor padrão em requisições HTTP/1.0.</dd>
- <dt>qualquer lista de cabelhaços HTTP separados por vírgulas [Geralmente apenas o <code>keep-alive</code> ]</dt>
- <dd>Indica que o cliente gostaria de manter a ligação aberta. Ter uma conexão persistente é o valor padrão das requisições HTTP/1.1. A lista de cabeçalhos são os nomes dos cabeçalhos a serem removidos pelo primeiro proxy não-transparente ou com "cache no meio": estes cabeçalhos definem a conexão entre o emissor e a primeira entidade, não o nó destinatário.</dd>
-</dl>
+- `close`
+  - : Indica que ou o cliente, ou o servidor querem fechar a conexão. Este é o valor padrão em requisições HTTP/1.0.
+- qualquer lista de cabelhaços HTTP separados por vírgulas \[Geralmente apenas o `keep-alive` ]
+  - : Indica que o cliente gostaria de manter a ligação aberta. Ter uma conexão persistente é o valor padrão das requisições HTTP/1.1. A lista de cabeçalhos são os nomes dos cabeçalhos a serem removidos pelo primeiro proxy não-transparente ou com "cache no meio": estes cabeçalhos definem a conexão entre o emissor e a primeira entidade, não o nó destinatário.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Connection")}}</p>
+{{Compat("http.headers.Connection")}}

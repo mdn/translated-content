@@ -9,40 +9,39 @@ tags:
   - prefers-color-scheme
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-<div class="blockIndicator note">
-<p>Se você definiu <code>privacy.resistFingerprinting</code> como <strong>true</strong>, <code><a href="https://developer.mozilla.org/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> será substituída pela <code>light</code>.</p>
-</div>
+> **Note:** Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-color-scheme) será substituída pela `light`.
 
-<p>O <strong><code>prefers-color-scheme</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> é usado para detectar se o usuário solicitou que o sistema use um tema de cores claras ou escuras.</p>
+O **`prefers-color-scheme`** [CSS](/pt-BR/docs/CSS) [media feature](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) é usado para detectar se o usuário solicitou que o sistema use um tema de cores claras ou escuras.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Indica que o usuário não fez nenhuma preferência conhecida pelo sistema. Este valor da palavra-chave é avaliado como <code>false</code> no <a href="https://drafts.csswg.org/mediaqueries-5/#boolean-context" id="ref-for-boolean-context④">contexo booleano</a>.</dd>
- <dt><code><dfn>light</dfn></code></dt>
- <dd>Indica que o usuário notificou o sistema de que prefere uma interface com um tema claro.</dd>
- <dt><code><dfn>dark</dfn></code></dt>
- <dd>Indica que o usuário notificou o sistema de que prefere uma interface com um tema escuro.</dd>
-</dl>
+- `no-preference`
+  - : Indica que o usuário não fez nenhuma preferência conhecida pelo sistema. Este valor da palavra-chave é avaliado como `false` no [contexo booleano](https://drafts.csswg.org/mediaqueries-5/#boolean-context).
+- `light`
+  - : Indica que o usuário notificou o sistema de que prefere uma interface com um tema claro.
+- `dark`
+  - : Indica que o usuário notificou o sistema de que prefere uma interface com um tema escuro.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Os elementos abaixo têm um tema de cores inicial. Eles podem ser mais temáticos de acordo com a preferência do esquema de cores do usuário.</p>
+Os elementos abaixo têm um tema de cores inicial. Eles podem ser mais temáticos de acordo com a preferência do esquema de cores do usuário.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="day"&gt;Dia (inicial)&lt;/div&gt;
-&lt;div class="day light-scheme"&gt;Dia (modificar e utilizar um tema claro)&lt;/div&gt;
-&lt;div class="day dark-scheme"&gt;Dia (modificar e utilizar um tema escuro)&lt;/div&gt; &lt;br&gt;
+```html
+<div class="day">Dia (inicial)</div>
+<div class="day light-scheme">Dia (modificar e utilizar um tema claro)</div>
+<div class="day dark-scheme">Dia (modificar e utilizar um tema escuro)</div> <br>
 
-&lt;div class="night"&gt;Noite (inicial)&lt;/div&gt;
-&lt;div class="night light-scheme"&gt;Noite (modificar e utilizar um tema claro)&lt;/div&gt;
-&lt;div class="night dark-scheme"&gt;Noite (modificar e utilizar um tema escuro)&lt;/div&gt;</pre>
+<div class="night">Noite (inicial)</div>
+<div class="night light-scheme">Noite (modificar e utilizar um tema claro)</div>
+<div class="night dark-scheme">Noite (modificar e utilizar um tema escuro)</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.day   { background: #eee; color: black; }
+```css
+.day   { background: #eee; color: black; }
 .night { background: #333; color: white; }
 
 @media (prefers-color-scheme: dark) {
@@ -62,41 +61,26 @@ translation_of: Web/CSS/@media/prefers-color-scheme
   height: 2em;
   vertical-align: middle;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Estado                                   | Comentários        |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}} | {{Spec2('CSS5 Media Queries')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.at-rules.media.prefers-color-scheme")}}</p>
+{{Compat("css.at-rules.media.prefers-color-scheme")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://www.youtube.com/watch?v=jmepqJ5UbuM">Video tutorial: Coding a Dark Mode for your Website</a></li>
- <li><a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">Redesigning your product and website for dark mode</a></li>
- <li>Changing color schemes in <a href="https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/">Windows</a>, <a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS</a> and <a href="https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019">Android</a>.</li>
-</ul>
+- [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
+- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) and [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019).
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

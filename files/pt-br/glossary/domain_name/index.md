@@ -9,13 +9,11 @@ tags:
 translation_of: Glossary/Domain_name
 original_slug: Glossario/Nome_de_domínio
 ---
-<p>Um nome de domínio é um endereço de uma página na {{Glossary("Internet")}}. Nomes de domínios são usados em {{Glossary("URL","URLs")}} para identificar a qual servidor uma página específica pertence. O domínio consiste de uma sequência hierárquica de nomes (rótulo) separados por períodos (pontos) e terminando com uma {{Glossary("TLD","extensão")}}.</p>
+Um nome de domínio é um endereço de uma página na {{Glossary("Internet")}}. Nomes de domínios são usados em {{Glossary("URL","URLs")}} para identificar a qual servidor uma página específica pertence. O domínio consiste de uma sequência hierárquica de nomes (rótulo) separados por períodos (pontos) e terminando com uma {{Glossary("TLD","extensão")}}.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_geral"><strong>Conhecimento geral</strong></h3>
+### Conhecimento geral
 
-<ul>
- <li>{{interwiki("wikipedia", "Domínio", "Domínio")}} na Wikipedia</li>
- <li><a href="/en-US/Learn/Understanding_domain_names">Understanding domain names</a></li>
-</ul>
+- {{interwiki("wikipedia", "Domínio", "Domínio")}} na Wikipedia
+- [Understanding domain names](/en-US/Learn/Understanding_domain_names)

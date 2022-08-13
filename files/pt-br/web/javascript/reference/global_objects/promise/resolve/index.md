@@ -9,66 +9,66 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Promise.resolve(value)</strong></code> retorna um objeto {{jsxref("Promise")}} que é resolvido com o valor passado. Se o valor for <em>thenable</em> (ex: tiver um método {{jsxref("Promise.then", "\"then\"")}}), a promise retornada irá "seguir" esse <em>thenable</em>, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.</p>
+O método **`Promise.resolve(value)`** retorna um objeto {{jsxref("Promise")}} que é resolvido com o valor passado. Se o valor for _thenable_ (ex: tiver um método {{jsxref("Promise.then", "\"then\"")}}), a promise retornada irá "seguir" esse _thenable_, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>Promise.resolve(value)</var>;
-Promise.resolve(promise);
-Promise.resolve(thenable);
-</pre>
+    Promise.resolve(value);
+    Promise.resolve(promise);
+    Promise.resolve(thenable);
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt>value</dt>
- <dd>Argumento a ser resolvido <font face="Consolas, Liberation Mono, Courier, monospace">pela <code>Promise</code></font>. Pode também ser uma <code>Promise</code> ou um thenable a resolver.</dd>
-</dl>
+- value
+  - : Argumento a ser resolvido pela `Promise`. Pode também ser uma `Promise` ou um thenable a resolver.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>A {{jsxref("Promise")}} que será resolvida com o valor passado ou com a {{jsxref("Promise")}} passada como valor, caso o valor seja um objeto {{jsxref("Promise")}} </p>
+A {{jsxref("Promise")}} que será resolvida com o valor passado ou com a {{jsxref("Promise")}} passada como valor, caso o valor seja um objeto {{jsxref("Promise")}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A função estática <code>Promise.resolve</code> retorna uma <code>Promise</code> de que será resolvida.</p>
+A função estática `Promise.resolve` retorna uma `Promise` de que será resolvida.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Usando_o_método_estático_Promise.resolve">Usando o método estático <code>Promise.resolve</code></h3>
+### Usando o método estático `Promise.resolve`
 
-<pre class="brush: js">Promise.resolve("Success").then(function(value) {
+```js
+Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // not called
 });
-</pre>
+```
 
-<h3 id="Resolvendo_um_array">Resolvendo um array</h3>
+### Resolvendo um array
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="Resolvendo_outra_Promise">Resolvendo outra <code>Promise</code></h3>
+### Resolvendo outra `Promise`
 
-<pre class="brush: js">var original = Promise.resolve(true);
+```js
+var original = Promise.resolve(true);
 var cast = Promise.resolve(original);
 cast.then(function(v) {
   console.log(v); // true
 });
+```
 
-</pre>
+A ordem invertida dos logs acontece devido ao fato de que os handlers são chamados assincronamente. Veja como o `then` funciona [aqui](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
 
-<p>A ordem invertida dos logs acontece devido ao fato de que os handlers são chamados assincronamente. Veja como o <code>then</code> funciona <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">aqui</a>.</p>
+### Resolvendo thenables e disparando Errors
 
-<h3 id="Resolvendo_thenables_e_disparando_Errors">Resolvendo thenables e disparando Errors</h3>
-
-<pre class="brush: js">// Resolving a thenable object
+```js
+// Resolving a thenable object
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill("fulfilled!"); }
 });
@@ -107,36 +107,19 @@ p3.then(function(v) {
 }, function(e) {
   // not called
 });
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial no padrão ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                       | Comentário                        |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------- |
+| {{SpecName('ES6', '#sec-promise.resolve', 'Promise.resolve')}}     | {{Spec2('ES2015')}}     | Definição inicial no padrão ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Promise.resolve")}}</p>
+{{Compat("javascript.builtins.Promise.resolve")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

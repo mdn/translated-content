@@ -3,37 +3,26 @@ title: 201 Created
 slug: Web/HTTP/Status/201
 translation_of: Web/HTTP/Status/201
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O status HTTP "<strong>201 Created</strong>" é utilizado como resposta de sucesso, indica que a requisição foi bem sucedida e que um novo recurso foi criado. Este novo recurso é efetivamente criado antes do retorno da resposta e o novo recurso é enviado no corpo da mensagem (pode vir na URL ou na header  {{HTTPHeader("Location")}}).</p>
+O status HTTP "**201 Created**" é utilizado como resposta de sucesso, indica que a requisição foi bem sucedida e que um novo recurso foi criado. Este novo recurso é efetivamente criado antes do retorno da resposta e o novo recurso é enviado no corpo da mensagem (pode vir na URL ou na header {{HTTPHeader("Location")}}).
 
-<p>Comumente, este status é utilizado em requisições do tipo {{HTTPMethod("POST")}}.</p>
+Comumente, este status é utilizado em requisições do tipo {{HTTPMethod("POST")}}.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">201 Created</pre>
+    201 Created
 
-<h2 id="Especificações">Especificações </h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "201 Created" , "6.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                        | Título                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "201 Created" , "6.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.201")}}</p>
+{{Compat("http.status.201")}}
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)

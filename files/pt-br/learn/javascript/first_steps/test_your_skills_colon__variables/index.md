@@ -11,76 +11,60 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
 original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis">Armazenando as informações que você precisa — Variáveis</a>.</p>
+O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis).
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, ou <a href="https://glitch.com/">Glitch</a> para realizar as tarefas.<br>
- <br>
- Se você travar, peça ajuda — veja a seção <a href="#assessment_or_further_help">Assessment or further help</a> na parte inferior desta página.</p>
-</div>
+> **Note:** **Nota**: Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
+>
+> Se você travar, peça ajuda — veja a seção [Assessment or further help](#assessment_or_further_help) na parte inferior desta página.
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).</p>
-</div>
+> **Note:** Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).
 
-<h2 id="Variáveis_1">Variáveis 1</h2>
+## Variáveis 1
 
-<p>Nesta tarefa, queremos que você:</p>
+Nesta tarefa, queremos que você:
 
-<ul>
- <li>Declare uma variável chamada <code>meuNome</code>.</li>
- <li>Inicialize <code>meuNome</code> com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).</li>
- <li>Declare uma variável chamada <code>minhaIdade</code> e inicialize-a com um valor, na mesma linha.</li>
-</ul>
+- Declare uma variável chamada `meuNome`.
+- Inicialize `meuNome` com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).
+- Declare uma variável chamada `minhaIdade` e inicialize-a com um valor, na mesma linha.
 
-<p>Tente atualizar o código ativo abaixo para recriar o exemplo final:</p>
+Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
 
-<div class="blockIndicator note">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html">Faça o download do ponto de partida</a> para esta tarefa funcionar em seu próprio editor ou em um editor online.</p>
-</div>
+> **Note:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
-<h2 id="Variáveis_2">Variáveis 2</h2>
+## Variáveis 2
 
-<p>Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável <code>meuNome</code> existente para seu próprio nome.</p>
+Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável `meuNome` existente para seu próprio nome.
 
-<p>Tente atualizar o código ativo abaixo para recriar o exemplo final:</p>
+Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
 
-<div class="blockIndicator note">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html">Faça o download do ponto de partida</a> para esta tarefa funcionar em seu próprio editor ou em um editor online.</p>
-</div>
+> **Note:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
-<h2 id="Variáveis_3">Variáveis 3</h2>
+## Variáveis 3
 
-<p>A tarefa final por enquanto — neste caso, você recebe um código existente, que possui dois erros. O painel de resultados deve exibir o nome <code>Chris</code>, e uma declaração sobre quantos anos Chris terá daqui a 20 anos. Como você pode corrigir o problema e corrigir a saída?</p>
+A tarefa final por enquanto — neste caso, você recebe um código existente, que possui dois erros. O painel de resultados deve exibir o nome `Chris`, e uma declaração sobre quantos anos Chris terá daqui a 20 anos. Como você pode corrigir o problema e corrigir a saída?
 
-<p>Tente atualizar o código ativo abaixo para recriar o exemplo final:</p>
+Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
 
-<div class="blockIndicator note">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html">Faça o download do ponto de partida</a> para esta tarefa funcionar em seu próprio editor ou em um editor online.</p>
-</div>
+> **Note:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
-<h2 id="Avaliação_ou_ajuda_adicional">Avaliação ou ajuda adicional</h2>
+## Avaliação ou ajuda adicional
 
-<p>Você pode praticar esses exemplos nos editores interativos acima.</p>
+Você pode praticar esses exemplos nos editores interativos acima.
 
-<p>Se você gostaria que seu trabalho fosse avaliado, ou está travado e quer pedir ajuda:</p>
+Se você gostaria que seu trabalho fosse avaliado, ou está travado e quer pedir ajuda:
 
-<ol>
- <li>Coloque seu trabalho em um editor compartilhável on-line, como <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, ou <a href="https://glitch.com/">Glitch</a>. Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.</li>
- <li>Escreva um post pedindo avaliação e/ou ajuda na categoria <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning</a>. Seu post deve incluir:
-  <ul>
-   <li>Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".</li>
-   <li>Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.</li>
-   <li>Um link para o exemplo que você deseja que seja avaliado ou precisa de ajuda, em um editor compartilhável online (conforme mencionado na etapa 1 acima). Esta é uma boa prática para entrar - é muito difícil ajudar alguém com um problema de codificação se você não conseguir ver o código.</li>
-   <li>Um link para a página real de tarefas ou avaliações, para que possamos encontrar a pergunta com a qual você deseja ajuda.</li>
-  </ul>
- </li>
-</ol>
+1.  Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
+2.  Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
+
+    - Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".
+    - Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.
+    - Um link para o exemplo que você deseja que seja avaliado ou precisa de ajuda, em um editor compartilhável online (conforme mencionado na etapa 1 acima). Esta é uma boa prática para entrar - é muito difícil ajudar alguém com um problema de codificação se você não conseguir ver o código.
+    - Um link para a página real de tarefas ou avaliações, para que possamos encontrar a pergunta com a qual você deseja ajuda.

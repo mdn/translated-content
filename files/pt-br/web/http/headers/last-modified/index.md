@@ -3,83 +3,54 @@ title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
 translation_of: Web/HTTP/Headers/Last-Modified
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>A linha de cabeçalho <strong><code>Last-Modified</code></strong> do cabeçalho de resposta HTTP contém a data e a hora em que o servidor de origem acredita que o recurso foi modificado pela última vez. É usado como um validador para determinar se um recurso recebido ou armazenado é o mesmo. Menos preciso do que um cabeçalho {{HTTPHeader("ETag")}}, é um mecanismo de retorno. Os pedidos condicionais {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}} fazem uso deste campo.</p>
+A linha de cabeçalho **`Last-Modified`** do cabeçalho de resposta HTTP contém a data e a hora em que o servidor de origem acredita que o recurso foi modificado pela última vez. É usado como um validador para determinar se um recurso recebido ou armazenado é o mesmo. Menos preciso do que um cabeçalho {{HTTPHeader("ETag")}}, é um mecanismo de retorno. Os pedidos condicionais {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}} fazem uso deste campo.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                                                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}}                                                 | no                                       |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                                      |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Last-Modified: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+    Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;day-name&gt;</dt>
- <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
- <dt>&lt;day&gt;</dt>
- <dd>2 digit day number, e.g. "04" or "23".</dd>
- <dt>&lt;month&gt;</dt>
- <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).</dd>
- <dt>&lt;year&gt;</dt>
- <dd>4 digit year number, e.g. "1990" or "2016".</dd>
- <dt>&lt;hour&gt;</dt>
- <dd>2 digit hour number, e.g. "09" or "23".</dd>
- <dt>&lt;minute&gt;</dt>
- <dd>2 digit minute number, e.g. "04" or "59".</dd>
- <dt>&lt;second&gt;</dt>
- <dd>2 digit second number, e.g. "04" or "59".</dd>
- <dt><code>GMT</code></dt>
- <dd>
- <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.</p>
- </dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "Last-Modified", "2.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Title                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Last-Modified")}}</p>
+{{Compat("http.headers.Last-Modified")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
- <li>{{HTTPHeader("Etag")}}</li>
-</ul>
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("Etag")}}

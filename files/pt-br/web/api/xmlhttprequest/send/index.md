@@ -14,116 +14,80 @@ tags:
   - send
 translation_of: Web/API/XMLHttpRequest/send
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>O método <code><strong>send()</strong></code>, do {{domxref("XMLHttpRequest")}}, envia uma requisição para o servidor.Se a solicitação for assíncrona (que é o padrão), esse método retornará assim que a solicitação for enviada e o resultado for entregue usando eventos. Se a solicitação for síncrona, esse método não retornará até que a resposta chegue.</p>
+O método **`send()`**, do {{domxref("XMLHttpRequest")}}, envia uma requisição para o servidor.Se a solicitação for assíncrona (que é o padrão), esse método retornará assim que a solicitação for enviada e o resultado for entregue usando eventos. Se a solicitação for síncrona, esse método não retornará até que a resposta chegue.
 
-<p><code>send()</code> aceita um parâmetro opcional que permite especificar o corpo da solicitação; isso é usado principalmente para solicitações como {{HTTPMethod("PUT")}}. Se o método de solicitação for {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, o parâmetro <code>body</code> será ignorado e o corpo da solicitação será definido como <code>null</code>.</p>
+`send()` aceita um parâmetro opcional que permite especificar o corpo da solicitação; isso é usado principalmente para solicitações como {{HTTPMethod("PUT")}}. Se o método de solicitação for {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, o parâmetro `body` será ignorado e o corpo da solicitação será definido como `null`.
 
-<p>Se nenhum cabeçalho {{HTTPHeader("Accept")}} tiver sido definido usando {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, um cabeçalho <code>Accept</code> com o tipo <code>"*/*"</code> (qualquer tipo) é enviado.</p>
+Se nenhum cabeçalho {{HTTPHeader("Accept")}} tiver sido definido usando {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, um cabeçalho `Accept` com o tipo `"*/*"` (qualquer tipo) é enviado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>XMLHttpRequest</var>.send(<var>body</var>)
-</pre>
+    XMLHttpRequest.send(body)
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>body</code> {{optional_inline}}</dt>
- <dd>Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:
- <ul>
-  <li>Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.</li>
-  <li>Um <code>BodyInit</code>, que <a href="https://fetch.spec.whatwg.org/#bodyinit">conforme a espeficicação Fetch</a>, pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.</li>
- </ul>
- Se nenhum valor for  espeficicado para o corpo, o valor padrão de <code>null</code> é usado.</dd>
-</dl>
+- `body` {{optional_inline}}
+  - : Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:\* Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.
+    - Um `BodyInit`, que [conforme a espeficicação Fetch](https://fetch.spec.whatwg.org/#bodyinit), pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.Se nenhum valor for espeficicado para o corpo, o valor padrão de `null` é usado.
 
-<p>A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método <code>send()</code>.</p>
+A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p><code>undefined.</code></p>
+`undefined.`
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exceção</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td><code>send()</code> já foi invocado para a requisição, e/ou a requisição está completa.</td>
-  </tr>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>O tipo de recurso a ser buscada é um {{domxref("Blob")}} e o método não é <code>GET</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Exceção             | Descrição                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.          |
+| `NetworkError`      | O tipo de recurso a ser buscada é um {{domxref("Blob")}} e o método não é `GET`. |
 
-<h2 id="Exemplo_GET">Exemplo: GET</h2>
+## Exemplo: GET
 
-<pre class="syntaxbox">var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/server', true);
 
-xhr.onload = function () {
-  // Requisição finalizada. Faça o processamento aqui.
-};
+    xhr.onload = function () {
+      // Requisição finalizada. Faça o processamento aqui.
+    };
 
-xhr.send(null);
-// xhr.send('string');
-// xhr.send(new Blob());
-// xhr.send(new Int8Array());
-// xhr.send(document);</pre>
+    xhr.send(null);
+    // xhr.send('string');
+    // xhr.send(new Blob());
+    // xhr.send(new Int8Array());
+    // xhr.send(document);
 
-<h2 id="Exemplo_POST">Exemplo: POST</h2>
+## Exemplo: POST
 
-<pre class="syntaxbox">var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/server', true);
 
-// Envia a informação do cabeçalho junto com a requisição.
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    // Envia a informação do cabeçalho junto com a requisição.
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { // Chama a função quando o estado mudar.
-    if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
-        // Requisição finalizada. Faça o processamento aqui.
+    xhr.onreadystatechange = function() { // Chama a função quando o estado mudar.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Requisição finalizada. Faça o processamento aqui.
+        }
     }
-}
-xhr.send("foo=bar&amp;lorem=ipsum");
-// xhr.send(new Int8Array());
-// xhr.send(document);</pre>
+    xhr.send("foo=bar&lorem=ipsum");
+    // xhr.send(new Int8Array());
+    // xhr.send(document);
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                               | Comentário             |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("api.XMLHttpRequest.send")}}</div>
+{{Compat("api.XMLHttpRequest.send")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest">Usando XMLHttpRequest</a></li>
- <li><a href="/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">Obter arquivo HTML usando XMLHttpRequest</a></li>
-</ul>
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest)
+- [Obter arquivo HTML usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

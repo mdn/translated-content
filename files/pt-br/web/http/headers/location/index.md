@@ -8,74 +8,49 @@ tags:
 translation_of: Web/HTTP/Headers/Location
 original_slug: Web/HTTP/Headers/Localização
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Location</code></strong> indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status <code>3xx</code> (redirecionamento) ou <code>201</code> (criado).</p>
+O cabeçalho de resposta **`Location`** indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status `3xx` (redirecionamento) ou `201` (criado).
 
-<p>Em casos de redirecionamento, o método HTTP utilizado para fazer a nova requisição à página apontada pelo cabeçalho <code>Location</code> depende do método original e do tipo de redirecionamento:</p>
+Em casos de redirecionamento, o método HTTP utilizado para fazer a nova requisição à página apontada pelo cabeçalho `Location` depende do método original e do tipo de redirecionamento:
 
-<ul>
- <li>Se respostas com status {{HTTPStatus("303")}} (Veja também) sempre levam ao uso do método {{HTTPMethod("GET")}}, {{HTTPStatus("307")}} (Redirecionamento Temporário) e {{HTTPStatus("308")}} (Redirecionamento Permanente) não mudam o método utilizado na requisição original;</li>
- <li>{{HTTPStatus("301")}} (Movido Permanentemente) e {{HTTPStatus("302")}} (Encontrado) não mudam o método na maior parte das vezes, entretanto agentes de usuário antigos talvez mudem (basicamente você não sabe se eles farão isso).</li>
-</ul>
+- Se respostas com status {{HTTPStatus("303")}} (Veja também) sempre levam ao uso do método {{HTTPMethod("GET")}}, {{HTTPStatus("307")}} (Redirecionamento Temporário) e {{HTTPStatus("308")}} (Redirecionamento Permanente) não mudam o método utilizado na requisição original;
+- {{HTTPStatus("301")}} (Movido Permanentemente) e {{HTTPStatus("302")}} (Encontrado) não mudam o método na maior parte das vezes, entretanto agentes de usuário antigos talvez mudem (basicamente você não sabe se eles farão isso).
 
-<p>Todas as respostas com um desses códigos de status enviam um cabeçalho <code>Location</code>.</p>
+Todas as respostas com um desses códigos de status enviam um cabeçalho `Location`.
 
-<p>Em casos de recursos de criação, ele indica o URL para o novo recurso criado.</p>
+Em casos de recursos de criação, ele indica o URL para o novo recurso criado.
 
-<p><code>Location</code> e {{HTTPHeader("Content-Location")}} são diferentes: <code>Location</code> indica o alvo de redirecionamento (ou URL do novo recurso criado), enquanto {{HTTPHeader("Content-Location")}} indica o URL direto para ter acesso ao recurso quando <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociação de conteúdo</a> acontecer, sem a necessidade de futura negociação de conteúdo. <code>Location</code> é um cabeçalho associado com a resposta, enquanto {{HTTPHeader("Content-Location")}} é associado com a entidade retornada.</p>
+`Location` e {{HTTPHeader("Content-Location")}} são diferentes: `Location` indica o alvo de redirecionamento (ou URL do novo recurso criado), enquanto {{HTTPHeader("Content-Location")}} indica o URL direto para ter acesso ao recurso quando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) acontecer, sem a necessidade de futura negociação de conteúdo. `Location` é um cabeçalho associado com a resposta, enquanto {{HTTPHeader("Content-Location")}} é associado com a entidade retornada.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Location: &lt;url&gt;
-</pre>
+    Location: <url>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>Uma URL relativa (ao URL de requisição) ou absoluta.</dd>
-</dl>
+- \<url>
+  - : Uma URL relativa (ao URL de requisição) ou absoluta.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Location: /index.html</pre>
+    Location: /index.html
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Location", "7.1.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Location")}}</p>
+{{Compat("http.headers.Location")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Content-Location")}}</li>
- <li>Código de status de respostas que incluem o cabeçalho <code>Location</code>: {{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.</li>
-</ul>
+- {{HTTPHeader("Content-Location")}}
+- Código de status de respostas que incluem o cabeçalho `Location`: {{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.

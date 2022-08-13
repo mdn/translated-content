@@ -3,58 +3,61 @@ title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
-<p>{{DefaultAPISidebar("Server Sent Events")}}</p>
+{{DefaultAPISidebar("Server Sent Events")}}
 
-<div class="summary">
-<p>É fácil desenvolver um aplicativo Web que usa <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica aos <a href="/pt-BR/docs/Web/API/WebSockets_API">websockets</a> em questão de tratamento de eventos recebidos. Essa é uma conexão unidirecional, portanto você não pode enviar eventos de um cliente para um servidor.</p>
-</div>
+É fácil desenvolver um aplicativo Web que usa [server-sent events](/pt-BR/docs/Web/API/Server-sent_events). Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica aos [websockets](/pt-BR/docs/Web/API/WebSockets_API) em questão de tratamento de eventos recebidos. Essa é uma conexão unidirecional, portanto você não pode enviar eventos de um cliente para um servidor.
 
-<h2 id="Receiving_events_from_the_server">Receiving events from the server</h2>
+## Receiving events from the server
 
-<p>The server-sent event API is contained in the {{domxref("EventSource")}} interface; to open a connection to the server to begin receiving events from it, create a new <code>EventSource</code> object with the URL of a script that generates the events. For example:</p>
+The server-sent event API is contained in the {{domxref("EventSource")}} interface; to open a connection to the server to begin receiving events from it, create a new `EventSource` object with the URL of a script that generates the events. For example:
 
-<pre class="brush: js notranslate">const evtSource = new EventSource("ssedemo.php");</pre>
+```js
+const evtSource = new EventSource("ssedemo.php");
+```
 
-<p>If the event generator script is hosted on a different origin, a new <code>EventSource</code> object should be created with both the URL and an options dictionary. For example, assuming the client script is on <code>example.com</code>:</p>
+If the event generator script is hosted on a different origin, a new `EventSource` object should be created with both the URL and an options dictionary. For example, assuming the client script is on `example.com`:
 
-<pre class="brush: js notranslate">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
+```js
+const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+```
 
-<p>Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:</p>
+Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:
 
-<pre class="brush: js notranslate">evtSource.onmessage = function(event) {
+```js
+evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
   newElement.innerHTML = "message: " + event.data;
   eventList.appendChild(newElement);
 }
-</pre>
+```
 
-<p>This code listens for incoming messages (that is, notices from the server that do not have an <code>event</code> field on them) and appends the message text to a list in the document's HTML.</p>
+This code listens for incoming messages (that is, notices from the server that do not have an `event` field on them) and appends the message text to a list in the document's HTML.
 
-<p>You can also listen for events with <code>addEventListener()</code>:</p>
+You can also listen for events with `addEventListener()`:
 
-<pre class="brush: js notranslate">evtSource.addEventListener("ping", function(event) {
+```js
+evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
   newElement.innerHTML = "ping at " + time;
   eventList.appendChild(newElement);
 });
-</pre>
+```
 
-<p>This code is similar, except that it will be called automatically whenever the server sends a message with the <code>event</code> field set to "ping"; it then parses the JSON in the <code>data</code> field and outputs that information.</p>
+This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
 
-<div class="blockIndicator warning">
-<p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is <em>per browser</em> and set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com.</code> (from <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
-</div>
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is _per browser_ and set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com.` (from [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
-<h2 id="Sending_events_from_the_server">Sending events from the server</h2>
+## Sending events from the server
 
-<p>The server-side script that sends events needs to respond using the MIME type <code>text/event-stream</code>. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see <a href="#event_stream_format">Event stream format</a>.</p>
+The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see [Event stream format](#event_stream_format).
 
-<p>The {{Glossary("PHP")}} code for the example we're using here follows:</p>
+The {{Glossary("PHP")}} code for the example we're using here follows:
 
-<pre class="brush: php notranslate">date_default_timezone_set("America/New_York");
+```php
+date_default_timezone_set("America/New_York");
 header("Cache-Control: no-cache");
 header("Content-Type: text/event-stream");
 
@@ -80,110 +83,99 @@ while (true) {
   flush();
   sleep(1);
 }
-</pre>
+```
 
-<p>The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.</p>
+The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.
 
-<div class="note">
-<p><strong>Note</strong>: You can find a full example that uses the code shown in this article on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Error_handling">Error handling</h2>
+## Error handling
 
-<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
+When problems occur (such as a network timeout or issues pertaining to [access control](/pt-BR/docs/HTTP/Access_control_CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
-<pre class="brush: js notranslate">evtSource.onerror = function(err) {
+```js
+evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
 };
-</pre>
+```
 
-<h2 id="Closing_event_streams">Closing event streams</h2>
+## Closing event streams
 
-<p>By default, if the connection between the client and server closes, the connection is restarted. The connection is terminated with the <code>.close()</code> method.</p>
+By default, if the connection between the client and server closes, the connection is restarted. The connection is terminated with the `.close()` method.
 
-<pre class="notranslate">evtSource.close();</pre>
+    evtSource.close();
 
-<h2 id="Event_stream_format">Event stream format</h2>
+## Event stream format
 
-<p>The event stream is a simple stream of text data which must be encoded using <a href="/en-US/docs/Glossary/UTF-8">UTF-8</a>. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.</p>
+The event stream is a simple stream of text data which must be encoded using [UTF-8](/pt-BR/docs/Glossary/UTF-8). Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.
 
-<div class="note"><strong>Note:</strong> The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.</div>
+> **Note:** The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.
 
-<p>Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.</p>
+Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.
 
-<h3 id="Fields">Fields</h3>
+### Fields
 
-<p>Each message received has some combination of the following fields, one per line:</p>
+Each message received has some combination of the following fields, one per line:
 
-<dl>
- <dt><code>event</code></dt>
- <dd>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</dd>
- <dt><code>data</code></dt>
- <dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">it will concatenate them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
- <dt><code>id</code></dt>
- <dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
- <dt><code>retry</code></dt>
- <dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
-</dl>
+- `event`
+  - : A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use `addEventListener()` to listen for named events. The `onmessage` handler is called if no event name is specified for a message.
+- `data`
+  - : The data field for the message. When the `EventSource` receives multiple consecutive lines that begin with `data:`, [it will concatenate them](http://www.w3.org/TR/eventsource/#dispatchMessage), inserting a newline character between each one. Trailing newlines are removed.
+- `id`
+  - : The event ID to set the [`EventSource`](/en/Server-sent_events/EventSource "en/Server-sent events/EventSource") object's last event ID value.
+- `retry`
+  - : The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
 
-<p>All other field names are ignored.</p>
+All other field names are ignored.
 
-<div class="note"><strong>Note:</strong> If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.</div>
+> **Note:** If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.
 
-<h3 id="Examples">Examples</h3>
+### Examples
 
-<h4 id="Data-only_messages">Data-only messages</h4>
+#### Data-only messages
 
-<p>In the following example, there are three messages sent. The first is just a comment, since it starts with a colon character. As mentioned previously, this can be useful as a keep-alive if messages may not be sent regularly.</p>
+In the following example, there are three messages sent. The first is just a comment, since it starts with a colon character. As mentioned previously, this can be useful as a keep-alive if messages may not be sent regularly.
 
-<p>The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline special character in the value.</p>
+The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline special character in the value.
 
-<pre class="notranslate">: this is a test stream
+    : this is a test stream
 
-data: some text
+    data: some text
 
-data: another message
-data: with two lines
-</pre>
+    data: another message
+    data: with two lines
 
-<h4 id="Named_events">Named events</h4>
+#### Named events
 
-<p>This example sends some named events. Each has an event name specified by the <code>event</code> field, and a <code>data</code> field whose value is an appropriate JSON string with the data needed for the client to act on the event. The <code>data</code> field could, of course, have any string data; it doesn't have to be JSON.</p>
+This example sends some named events. Each has an event name specified by the `event` field, and a `data` field whose value is an appropriate JSON string with the data needed for the client to act on the event. The `data` field could, of course, have any string data; it doesn't have to be JSON.
 
-<pre class="notranslate">event: userconnect
-data: {"username": "bobby", "time": "02:33:48"}
+    event: userconnect
+    data: {"username": "bobby", "time": "02:33:48"}
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+    event: usermessage
+    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-event: userdisconnect
-data: {"username": "bobby", "time": "02:34:23"}
+    event: userdisconnect
+    data: {"username": "bobby", "time": "02:34:23"}
 
-event: usermessage
-data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
-</pre>
+    event: usermessage
+    data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 
-<h4 id="Mixing_and_matching">Mixing and matching</h4>
+#### Mixing and matching
 
-<p>You don't have to use just unnamed messages or typed events; you can mix them together in a single event stream.</p>
+You don't have to use just unnamed messages or typed events; you can mix them together in a single event stream.
 
-<pre class="notranslate">event: userconnect
-data: {"username": "bobby", "time": "02:33:48"}
+    event: userconnect
+    data: {"username": "bobby", "time": "02:33:48"}
 
-data: Here's a system message of some kind that will get used
-data: to accomplish some task.
+    data: Here's a system message of some kind that will get used
+    data: to accomplish some task.
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}</pre>
+    event: usermessage
+    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-<h3 id="EventSource"><code>EventSource</code></h3>
+### `EventSource`
 
-<div>
-
-
-<p>{{Compat("api.EventSource")}}</p>
-</div>
-</div>
+{{Compat("api.EventSource")}}

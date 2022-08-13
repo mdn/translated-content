@@ -4,51 +4,51 @@ slug: conflicting/Web/Accessibility/ARIA
 translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
-<h2 id="O_problema">O problema</h2>
+## O problema
 
-<p>Você tem um formulário — um formulário de contato, por exemplo — no qual você deseja inserir algum that you want to put some accessible error checking into. Examples of common problems include e-mail addresses which are not valid, or a name field which does not contain at least a first name or a surname.</p>
+Você tem um formulário — um formulário de contato, por exemplo — no qual você deseja inserir algum that you want to put some accessible error checking into. Examples of common problems include e-mail addresses which are not valid, or a name field which does not contain at least a first name or a surname.
 
-<h2 id="O_formulário">O formulário</h2>
+## O formulário
 
-<p>Primeiro, por favor leia sobre a técnica de <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields" title="/en/Web/Accessibility/ARIA/forms/Basic_form_hints"><code>aria-required</code> </a> if you have not done so, as this technique expands upon that.</p>
+Primeiro, por favor leia sobre a técnica de [`aria-required` ](/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields "/en/Web/Accessibility/ARIA/forms/Basic_form_hints")if you have not done so, as this technique expands upon that.
 
-<p>Here is a simple form:</p>
+Here is a simple form:
 
-<pre class="brush: html"> &lt;form method="post" action="post.php"&gt;
-   &lt;fieldset&gt;
-     &lt;legend&gt;Please enter your contact details&lt;/legend&gt;
-     &lt;label for="name"&gt;Your name (required):&lt;/label&gt;
-     &lt;input name="name" id="name" aria-required="true"/&gt;
-     &lt;br /&gt;
-     &lt;label for="email"&gt;E-Mail address (required):&lt;/label&gt;
-     &lt;input name="email" id="email" aria-required="true"/&gt;
-     &lt;br /&gt;
-     &lt;label for="website"&gt;Website (optional):&lt;/label&gt;
-     &lt;input name="website" id="website"/&gt;
-   &lt;/fieldset&gt;
-   &lt;label for="message"&gt;Please enter your message (required):&lt;/label&gt;
-   &lt;br /&gt;
-   &lt;textarea name="message" id="message" rows="5" cols="80"
-             aria-required="true"&gt;&lt;/textarea&gt;
-   &lt;br /&gt;
-   &lt;input type="submit" name="submit" value="Send message"/&gt;
-   &lt;input type="reset" name="reset" value="Reset form"/&gt;
- &lt;/form&gt;
-</pre>
+```html
+ <form method="post" action="post.php">
+   <fieldset>
+     <legend>Please enter your contact details</legend>
+     <label for="name">Your name (required):</label>
+     <input name="name" id="name" aria-required="true"/>
+     <br />
+     <label for="email">E-Mail address (required):</label>
+     <input name="email" id="email" aria-required="true"/>
+     <br />
+     <label for="website">Website (optional):</label>
+     <input name="website" id="website"/>
+   </fieldset>
+   <label for="message">Please enter your message (required):</label>
+   <br />
+   <textarea name="message" id="message" rows="5" cols="80"
+             aria-required="true"></textarea>
+   <br />
+   <input type="submit" name="submit" value="Send message"/>
+   <input type="reset" name="reset" value="Reset form"/>
+ </form>
+```
 
-<h2 id="Checking_for_validity_and_notifying_the_user_2"><span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">Checking for validity and notifying the user</span></h2>
+## Checking for validity and notifying the user
 
-<p>Form validations consists of several steps:</p>
+Form validations consists of several steps:
 
-<ol>
- <li>Checking if the e-mail address or entered name are valid. Each field has a set of criteria which must be met in order to pass validation.  In order to simplify this example, we’ll check whether the e-mail address contains the “@” symbol, and if the name entry contains at least 1 character.</li>
- <li>If the above criteria is not met, the field’s <code>aria-invalid</code> attribute will be given a value of “<code>true</code>”.</li>
- <li>If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘<code>alert</code>’ function, we’ll use a simple WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus (caused by the “<code>onblur</code>” handler in JavaScript's default ‘<code>alert</code>’ function).</li>
-</ol>
+1.  Checking if the e-mail address or entered name are valid. Each field has a set of criteria which must be met in order to pass validation. In order to simplify this example, we’ll check whether the e-mail address contains the “@” symbol, and if the name entry contains at least 1 character.
+2.  If the above criteria is not met, the field’s `aria-invalid` attribute will be given a value of “`true`”.
+3.  If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘`alert`’ function, we’ll use a simple WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus (caused by the “`onblur`” handler in JavaScript's default ‘`alert`’ function).
 
-<p>Below is example JavaScript code which could be inserted above the closing “<code>head</code>” tag:</p>
+Below is example JavaScript code which could be inserted above the closing “`head`” tag:
 
-<pre class="brush: js"> &lt;script type="application/javascript"&gt;
+```js
+ <script type="application/javascript">
  function removeOldAlert()
  {
    var oldAlert = document.getElementById("alert");
@@ -71,7 +71,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
  function checkValidity(aID, aSearchTerm, aMsg)
  {
    var elem = document.getElementById(aID);
-   var invalid = (elem.value.indexOf(aSearchTerm) &lt; 0);
+   var invalid = (elem.value.indexOf(aSearchTerm) < 0);
    if (invalid) {
      elem.setAttribute("aria-invalid", "true");
      addAlert(aMsg);
@@ -80,63 +80,58 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
      removeOldAlert();
    }
  }
- &lt;/script&gt;
-</pre>
+ </script>
+```
 
-<h2 id="The_checkValidity_function_2"><span class="mw-headline" id="The_checkValidity_function">The <code>checkValidity</code> function</span></h2>
+## The `checkValidity` function
 
-<p>The primary method in JavaScript used for form validation is the <code>checkValidity</code> function. This method takes three parameters: The ID of the <code>input</code> that is to be validated, the term to search for to ensure validity, and the error message to be inserted into the alert.</p>
+The primary method in JavaScript used for form validation is the `checkValidity` function. This method takes three parameters: The ID of the `input` that is to be validated, the term to search for to ensure validity, and the error message to be inserted into the alert.
 
-<p>To see if it is valid, the function checks whether the <code>indexOf</code> the <code>input</code>’s value is anything greater than <code>-1</code>. A value of <code>-1</code> or less is returned if the index of the search term could not be found within the value.</p>
+To see if it is valid, the function checks whether the `indexOf` the `input`’s value is anything greater than `-1`. A value of `-1` or less is returned if the index of the search term could not be found within the value.
 
-<p>If invalid, the function does two things:</p>
+If invalid, the function does two things:
 
-<ol>
- <li>It sets the element’s <code>aria-invalid</code> attribute to “<code>true</code>”, which will indicate to screen readers that there is invalid content in here.</li>
- <li>It will call the <code>addAlert</code> function to add the alert with the provided error message.</li>
-</ol>
+1.  It sets the element’s `aria-invalid` attribute to “`true`”, which will indicate to screen readers that there is invalid content in here.
+2.  It will call the `addAlert` function to add the alert with the provided error message.
 
-<p>If the search term is found, the <code>aria-invalid</code> attribute is reset to “<code>false</code>”. In addition, any leftover alerts are removed.</p>
+If the search term is found, the `aria-invalid` attribute is reset to “`false`”. In addition, any leftover alerts are removed.
 
-<h2 id="The_addAlert_function_2"><span class="mw-headline" id="The_addAlert_function">The <code>addAlert</code> function</span></h2>
+## The `addAlert` function
 
-<p>This function first removes any old alerts. The function is simple: It looks for an element with id “<code>alert</code>”, and if found, removes that from the <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">document object model</a>.</p>
+This function first removes any old alerts. The function is simple: It looks for an element with id “`alert`”, and if found, removes that from the [document object model](/pt-BR/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-<p>Next, the function creates a <code>div</code> element to hold the alert text. It gets an ID of “<code>alert</code>”. And it gets a role set of “alert”. This is actually ARIA-inspired, even though it doesn’t say “aria” in the attribute name. This is because that role is based on the <a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="XHTML Role Attribute Module">XHTML Role Attribute Module</a> that was simply ported to HTML for simplicity.</p>
+Next, the function creates a `div` element to hold the alert text. It gets an ID of “`alert`”. And it gets a role set of “alert”. This is actually ARIA-inspired, even though it doesn’t say “aria” in the attribute name. This is because that role is based on the [XHTML Role Attribute Module](http://www.w3.org/TR/xhtml-role/ "XHTML Role Attribute Module") that was simply ported to HTML for simplicity.
 
-<p>The text is added to the <code>div</code> element, and the <code>div</code> element is added to the document.</p>
+The text is added to the `div` element, and the `div` element is added to the document.
 
-<p>The moment this happens, Firefox will fire an “alert” event to assistive technologies when this <code>div</code> appears. Most screen readers will pick this one up automatically and speak it. This is similar to the Notification Bar in Firefox that prompts you whether you want to save a password. The alert we just created does not have any buttons to press, it just tells us what’s wrong.</p>
+The moment this happens, Firefox will fire an “alert” event to assistive technologies when this `div` appears. Most screen readers will pick this one up automatically and speak it. This is similar to the Notification Bar in Firefox that prompts you whether you want to save a password. The alert we just created does not have any buttons to press, it just tells us what’s wrong.
 
-<h2 id="Modifying_the_“onblur”_event"><span class="mw-headline" id="Adding_the_magic_to_the_.E2.80.9Conblur.E2.80.9D_event">Modifying the “<code>onblur</code>” event</span></h2>
+## Modifying the “`onblur`” event
 
-<p>All that’s left now is add the event handler. We need to change the two inputs for e-mail and name for this:</p>
+All that’s left now is add the event handler. We need to change the two inputs for e-mail and name for this:
 
-<pre class="brush: html"> &lt;input name="name" id="name" aria-required="true"
-        onblur="checkValidity('name', ' ', 'Invalid name entered!');"/&gt;
- &lt;br /&gt;
- &lt;input name="email" id="email" aria-required="true"
-        onblur="checkValidity('email', '@', 'Invalid e-mail address');"/&gt;
-</pre>
+```html
+ <input name="name" id="name" aria-required="true"
+        onblur="checkValidity('name', ' ', 'Invalid name entered!');"/>
+ <br />
+ <input name="email" id="email" aria-required="true"
+        onblur="checkValidity('email', '@', 'Invalid e-mail address');"/>
+```
 
-<p><strong>Testing the example</strong></p>
+**Testing the example**
 
-<p>If you use Firefox 3 and a currently-supported screen reader, try the following:</p>
+If you use Firefox 3 and a currently-supported screen reader, try the following:
 
-<ol>
- <li>Enter only your first name as the name. When tabbing, you’ll hear an alert that tells you you’ve entered an invalid name. You can then shift-tab back and correct the error.</li>
- <li>Enter an e-mail address without the “@” symbol. When tabbing out of this field, you should hear a warning that says you didn’t enter a valid e-mail address.</li>
-</ol>
+1.  Enter only your first name as the name. When tabbing, you’ll hear an alert that tells you you’ve entered an invalid name. You can then shift-tab back and correct the error.
+2.  Enter an e-mail address without the “@” symbol. When tabbing out of this field, you should hear a warning that says you didn’t enter a valid e-mail address.
 
-<p>In both cases, when returning focus to the field in question, your screen reader should tell you that this field is invalid. JAWS 9 supports this, but JAWS 8 does not, so this may not work in all versions of the screen readers supported.</p>
+In both cases, when returning focus to the field in question, your screen reader should tell you that this field is invalid. JAWS 9 supports this, but JAWS 8 does not, so this may not work in all versions of the screen readers supported.
 
-<h2 id="A_few_questions_that_you_might_have_2"><span class="mw-headline" id="A_few_questions_that_you_might_have">A few questions that you might have</span></h2>
+## A few questions that you might have
 
-<dl>
- <dt>Q. Why did you put both “<code>(required)</code>” in the label text and the <code>aria-required</code> attribute on some of the inputs?</dt>
- <dd>A. If this were a real live form, and the site was being visited by a browser that does not yet support ARIA, we’d still want to give an indication that this is a required field.</dd>
- <dt>Q. Why don’t you set focus back to the invalid field automatically?</dt>
- <dd>A. Because this is not allowed by the Windows API specs, and possibly others. Also, letting the focus jump around without real user interaction too often is not a nice thing to do in general. </dd>
-</dl>
+- Q. Why did you put both “`(required)`” in the label text and the `aria-required` attribute on some of the inputs?
+  - : A. If this were a real live form, and the site was being visited by a browser that does not yet support ARIA, we’d still want to give an indication that this is a required field.
+- Q. Why don’t you set focus back to the invalid field automatically?
+  - : A. Because this is not allowed by the Windows API specs, and possibly others. Also, letting the focus jump around without real user interaction too often is not a nice thing to do in general.
 
-<div class="warning">TBD: let's rethink this -- personally, I think setting focus might be good if done without causing a keyboard trap.</div>
+> **Warning:** TBD: let's rethink this -- personally, I think setting focus might be good if done without causing a keyboard trap.

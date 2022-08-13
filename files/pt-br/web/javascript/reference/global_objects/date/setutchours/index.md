@@ -12,69 +12,57 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>setUTCHours()</code></strong> atribui a hora para a data especificada de acordo com o horário universal, e retorna o número de milissegundos desde 1 de Janeiro de 1970 00:00:00 UTC até o horário representado pela instância {{jsxref("Date")}} atualizada.</p>
+O método **`setUTCHours()`** atribui a hora para a data especificada de acordo com o horário universal, e retorna o número de milissegundos desde 1 de Janeiro de 1970 00:00:00 UTC até o horário representado pela instância {{jsxref("Date")}} atualizada.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
 
+## Sintaxe
 
+    dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setUTCHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</code></pre>
+- `hoursValue`
+  - : Um inteiro entre 0 e 23, representando a hora.
+- `minutesValue`
+  - : Opcional. Um inteiro entre 0 e 59, representando os minutos.
+- `secondsValue`
+  - : Opcional. Um inteiro entre 0 e 59, representando os segundos. Se você especificar o parâmetro `secondsValue`, você também deve especificar `minutesValue`.
+- `msValue`
+  - : Opcional. Um número entre 0 e 999, representando os milissegundos. Se você especificar o parâmetro `msValue`, você também deve especificar `minutesValue` e `secondsValue`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>hoursValue</code></dt>
- <dd>Um inteiro entre 0 e 23, representando a hora.</dd>
- <dt><code>minutesValue</code></dt>
- <dd>Opcional. Um inteiro entre 0 e 59, representando os minutos.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>Opcional. Um inteiro entre 0 e 59, representando os segundos. Se você especificar o parâmetro <code>secondsValue</code>, você também deve especificar <code>minutesValue</code>.</dd>
- <dt><code>msValue</code></dt>
- <dd>Opcional. Um número entre 0 e 999, representando os milissegundos. Se você especificar o parâmetro <code>msValue</code>, você também deve especificar <code>minutesValue</code> e <code>secondsValue</code>.</dd>
-</dl>
+O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.</p>
+Se você não especificar os parâmetros `minutesValue`, `secondsValue`, e `msValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}, e {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} serão utilizados.
 
-<h2 id="Descrição">Descrição</h2>
+Se o parâmetro que você especificou estiver fora do alcance esperado, `setUTCHours()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para `secondsValue`, os minutos serão incrementados em 1 (`minutesValue + 1`), e 40 será usado para os segundos.
 
-<p>Se você não especificar os parâmetros <code>minutesValue</code>, <code>secondsValue</code>, e <code>msValue</code>, os valores retornados dos métodos {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}, e {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} serão utilizados.</p>
+## Exemplos
 
-<p>Se o parâmetro que você especificou estiver fora do alcance esperado, <code>setUTCHours()</code> tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para <code>secondsValue</code>, os minutos serão incrementados em 1 (<code>minutesValue + 1</code>), e 40 será usado para os segundos.</p>
+### Usando `setUTCHours()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setUTCHours">Usando <code>setUTCHours()</code></h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCHours(8);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setUTCHours")}}</p>
+{{Compat("javascript.builtins.Date.setUTCHours")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>
- <li>{{jsxref("Date.prototype.setHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCHours()")}}
+- {{jsxref("Date.prototype.setHours()")}}

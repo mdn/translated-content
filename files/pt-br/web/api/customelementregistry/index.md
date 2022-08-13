@@ -3,26 +3,25 @@ title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
 translation_of: Web/API/CustomElementRegistry
 ---
-<p>{{DefaultAPISidebar("Web Components")}}</p>
+{{DefaultAPISidebar("Web Components")}}
 
-<p><span class="seoSummary">A interface <strong><code>CustomElementRegistry</code></strong> provê métodos para registro de elementos customizados e busca de elementos registrados. Para instancia-lo, use a propriedade {{domxref("window.customElements")}}. </span></p>
+A interface **`CustomElementRegistry`** provê métodos para registro de elementos customizados e busca de elementos registrados. Para instancia-lo, use a propriedade {{domxref("window.customElements")}}.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>Define um novo <a href="/en-US/docs/Web/Web_Components/Custom_Elements">elemento customizado</a>.</dd>
- <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>Retorna o construtor do nome do elemento informado, ou <code>undefined</code> caso não tenha sido definido.</dd>
- <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
- <dd>Retorna um {{jsxref("Promise", "promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.</dd>
-</dl>
+- {{domxref("CustomElementRegistry.define()")}}
+  - : Define um novo [elemento customizado](/pt-BR/docs/Web/Web_Components/Custom_Elements).
+- {{domxref("CustomElementRegistry.get()")}}
+  - : Retorna o construtor do nome do elemento informado, ou `undefined` caso não tenha sido definido.
+- {{domxref("CustomElementRegistry.whenDefined()")}}
+  - : Retorna um {{jsxref("Promise", "promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O código a seguir foi pego do nosso <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> exemplo (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">veja em ação</a>). Perceba que usamos o método {{domxref("CustomElementRegistry.define()")}} para definir um elemento customizado.</p>
+O código a seguir foi pego do nosso [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) exemplo ([veja em ação](https://mdn.github.io/web-components-examples/word-count-web-component/)). Perceba que usamos o método {{domxref("CustomElementRegistry.define()")}} para definir um elemento customizado.
 
-<pre class="brush: js">// Cria uma classe para o elemento
+```js
+// Cria uma classe para o elemento
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Sempre execute primeiro o método super
@@ -59,35 +58,17 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define um novo elemento
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<div class="note">
-<p>Note: The CustomElementsRegistry is available through the {{domxref("Window.customElements")}} property.</p>
-</div>
+> **Note:** Note: The CustomElementsRegistry is available through the {{domxref("Window.customElements")}} property.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment           |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| {{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}} | {{Spec2("HTML WHATWG")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p> </p>
-
-
-
-<p>{{Compat("api.CustomElementRegistry")}}</p>
-
-<p> </p>
+{{Compat("api.CustomElementRegistry")}}

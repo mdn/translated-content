@@ -7,31 +7,32 @@ tags:
   - Pop
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <code><strong>pop()</strong></code> remove o <strong>último</strong> elemento de um array e retorna aquele elemento.</p>
+O método **`pop()`** remove o **último** elemento de um array e retorna aquele elemento.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.pop()</code></pre>
+    arr.pop()
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>O método <code>pop</code> remove o último elemento de um array e retorna aquele valor.</p>
+O método `pop` remove o último elemento de um array e retorna aquele valor.
 
-<p>Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call", "", 1)}} ou {{jsxref("Function.apply", "apply", "", 1)}} em objetos que implementam arrays.</p>
+Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call", "", 1)}} ou {{jsxref("Function.apply", "apply", "", 1)}} em objetos que implementam arrays.
 
-<p>Se você chamar <code>pop()</code> em um array vazio, ele retorna o valor {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+Se você chamar `pop()` em um array vazio, ele retorna o valor {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Removing_the_last_element_of_an_array" name="Example:_Removing_the_last_element_of_an_array">Exemplo: Removendo o último elemento de um array</h3>
+### Exemplo: Removendo o último elemento de um array
 
-<p>O código seguinte cria o array <code>meuPeixe </code>contendo quatro elementos e então remove seu último elemento.</p>
+O código seguinte cria o array `meuPeixe `contendo quatro elementos e então remove seu último elemento.
 
-<pre class="brush: js notranslate">var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];
+```js
+var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];
 
 console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao']
 
@@ -39,43 +40,23 @@ var meuPeixePop = meuPeixe.pop();
 
 console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim' ]
 
-console.log(meuPeixePop); // 'esturjao'</pre>
+console.log(meuPeixePop); // 'esturjao'
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3ª Edição</td>
-   <td>Padrão</td>
-   <td>Definição inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Estado                   | Comentário                                         |
+| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 3ª Edição                                                                         | Padrão                   | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}             | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade nos Navegadores</h2>
+## Compatibilidade nos Navegadores
 
-<div>{{Compat("javascript.builtins.Array.pop")}}</div>
+{{Compat("javascript.builtins.Array.pop")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.unshift()")}}

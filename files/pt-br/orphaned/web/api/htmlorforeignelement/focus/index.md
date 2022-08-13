@@ -4,60 +4,29 @@ slug: orphaned/Web/API/HTMLOrForeignElement/focus
 translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>O método <strong><code>HTMLElement.focus()</code></strong>  seta o foco em um determinado elemento em especifico, caso esse elemento permita ter o foco neste elemento.</p>
+O método **`HTMLElement.focus()`** seta o foco em um determinado elemento em especifico, caso esse elemento permita ter o foco neste elemento.
 
-<h2 id="Syntax" name="Syntax">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox">element.focus()</pre>
+    element.focus()
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}     | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}             | {{Spec2('HTML5.1')}}     |            |
+| {{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}         | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}         | {{Spec2('DOM2 HTML')}}     |            |
+| {{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}} | {{Spec2('DOM1')}}         |            |
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Caso você utilize o <code>HTMLElement.focus()</code> por meio da manipulação de um evento mousedown , você deve utilizar o evento <code>event.preventDefault()</code> a fim de o foco não sair do arquivo <code>HTMLElement</code>.</p>
+Caso você utilize o `HTMLElement.focus()` por meio da manipulação de um evento mousedown , você deve utilizar o evento `event.preventDefault()` a fim de o foco não sair do arquivo `HTMLElement`.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Método DOM {{domxref("HTMLElement.blur()")}} para remover o foco de um determinado elemento.</li>
- <li>{{ domxref("document.activeElement") }} para saber qual elemento do html que está com o foco. </li>
-</ul>
+- Método DOM {{domxref("HTMLElement.blur()")}} para remover o foco de um determinado elemento.
+- {{ domxref("document.activeElement") }} para saber qual elemento do html que está com o foco.

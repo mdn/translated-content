@@ -3,198 +3,121 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 translation_of: Web/SVG/Attribute/viewBox
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O atributo <code><strong>viewBox</strong></code> define a posição e a dimensão, no espaço do usuário, de uma viewport SVG.</p>
+O atributo **`viewBox`** define a posição e a dimensão, no espaço do usuário, de uma viewport SVG.
 
-<p>The value of the <code>viewBox</code> attribute is a list of four numbers: <code><var>min-x</var></code>, <code><var>min-y</var></code>, <code><var>width</var></code> and <code><var>height</var></code>. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the <a href="/en-US/docs/Glossary/viewport">browser viewport</a>).</p>
+The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/pt-BR/docs/Glossary/viewport)).
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }
-svg:not(:root) { display: inline-block; }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+svg:not(:root) { display: inline-block; }
+```
 
-<pre class="brush: xml">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```xml
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   with a large viewBox the circle looks small
   as it is using user units for the r attribute:
   4 resolved against 100 as set in the viewBox
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox`
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   with a small viewBox the circle looks large
   as it is using user units for the r attribute:
   4 resolved against 10 as set in the viewBox
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   The point of coordinate 0,0 is now in the center of the viewport,
   and 100% is still resolve to a width or height of 10 user units so
   the rectangle looks shifted to the bottom/right corner of the viewport
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   With the point of coordinate 0,0 in the center of the viewport the
   value 50% is resolve to 5 which means the center of the circle is
   in the bottom/right corner of the viewport.
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<p>The exact effect of this attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.</p>
+The exact effect of this attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.
 
-<p class="note"><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p>
+> **Note:** Values for `width` or `height` lower or equal to `0` disable rendering of the element.
 
-<p>Five elements are using this attribute: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, and {{ SVGElement("view") }}.</p>
+Five elements are using this attribute: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, and {{ SVGElement("view") }}.
 
-<h2 id="marker">marker</h2>
+## marker
 
-<p>For {{SVGElement('marker')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;marker&gt;</code> element.</p>
+For {{SVGElement('marker')}}, `viewBox` defines the position and dimension for the content of the `<marker>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default value | _none_                                                                                                                                                                                                        |
+| Animatable    | Yes                                                                                                                                                                                                           |
 
-<h2 id="pattern">pattern</h2>
+## pattern
 
-<p>For {{SVGElement('pattern')}}, <code>viewBox</code> defines the position and dimension for the content of the pattern tile.</p>
+For {{SVGElement('pattern')}}, `viewBox` defines the position and dimension for the content of the pattern tile.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default value | _none_                                                                                                                                                                                                        |
+| Animatable    | Yes                                                                                                                                                                                                           |
 
-<h2 id="svg">svg</h2>
+## svg
 
-<p>For {{SVGElement('svg')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;svg&gt;</code> element.</p>
+For {{SVGElement('svg')}}, `viewBox` defines the position and dimension for the content of the `<svg>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default value | _none_                                                                                                                                                                                                        |
+| Animatable    | Yes                                                                                                                                                                                                           |
 
-<h2 id="symbol">symbol</h2>
+## symbol
 
-<p>For {{SVGElement('symbol')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;symbol&gt;</code> element.</p>
+For {{SVGElement('symbol')}}, `viewBox` defines the position and dimension for the content of the `<symbol>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default value | _none_                                                                                                                                                                                                        |
+| Animatable    | Yes                                                                                                                                                                                                           |
 
-<h2 id="view">view</h2>
+## view
 
-<p>For {{SVGElement('view')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;view&gt;</code> element.</p>
+For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the content of the `<view>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong>?, <strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)**?, **[<number>](/docs/Web/SVG/Content_type#Number)** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default value | _none_                                                                                                                                                                                                        |
+| Animatable    | Yes                                                                                                                                                                                                           |
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "coords.html#ViewBoxAttribute", "viewBox")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}     | {{Spec2("SVG2")}} |                    |
+| {{SpecName("SVG1.1", "coords.html#ViewBoxAttribute", "viewBox")}} | {{Spec2("SVG1.1")}} | Initial definition |

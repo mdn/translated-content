@@ -8,99 +8,81 @@ tags:
   - Reference
 translation_of: Web/API/Document/write
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>O método <strong><code>Document.write()</code></strong> grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.</p>
+O método **`Document.write()`** grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.
 
-<div class="note"><strong>Nota</strong>: à medida que <code>document.write</code> grava no <strong>fluxo</strong> de documentos, chamando <code>document.write</code> em um documento fechado (carregado) invoca automaticamente <code>document.open</code>, <a href="/en-US/docs/Web/API/document.open#Notes">que limpará o documento</a>.</div>
+> **Note:** **Nota**: à medida que `document.write` grava no **fluxo** de documentos, chamando `document.write` em um documento fechado (carregado) invoca automaticamente `document.open`, [que limpará o documento](/pt-BR/docs/Web/API/document.open#Notes).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js notranslate"><var>document</var>.write(<var>markup</var>);
-</pre>
+```js
+document.write(markup);
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><var>markup</var></dt>
- <dd>Uma string contendo o texto a ser gravado no documento.</dd>
-</dl>
+- _markup_
+  - : Uma string contendo o texto a ser gravado no documento.
 
-<h3 id="Exemplo">Exemplo</h3>
+### Exemplo
 
-<pre class="brush: html notranslate">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-  &lt;title&gt;Escreva exemplo&lt;/title&gt;
+<head>
+  <title>Escreva exemplo</title>
 
-  &lt;script&gt;
+  <script>
     function newContent() {
       document.open();
-      document.write("&lt;h1&gt;Sair com o velho - entrar com o novo!&lt;/h1&gt;");
+      document.write("<h1>Sair com o velho - entrar com o novo!</h1>");
       document.close();
     }
-  &lt;/script&gt;
-&lt;/head&gt;
+  </script>
+</head>
 
-&lt;body onload="newContent();"&gt;
-  &lt;p&gt;Algum conteúdo do documento original.&lt;/p&gt;
-&lt;/body&gt;
+<body onload="newContent();">
+  <p>Algum conteúdo do documento original.</p>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<p>{{EmbedLiveSample("Syntax")}}</p>
+{{EmbedLiveSample("Syntax")}}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Escrevendo em um documento que já foi carregado sem chamar {{domxref("document.open()")}} automaticamente vai chamar <code>document.open</code>. Ao términno da escrita, é recomendável chamar {{domxref("document.close()")}} para dizer ao navegador para encerrar o carregamento da página. O texto que você escreve é analisado no modelo de estrutura do documento. No exemplo acima, o elemento <code>h1</code> se torna um nó (node) no documento.</p>
+Escrevendo em um documento que já foi carregado sem chamar {{domxref("document.open()")}} automaticamente vai chamar `document.open`. Ao términno da escrita, é recomendável chamar {{domxref("document.close()")}} para dizer ao navegador para encerrar o carregamento da página. O texto que você escreve é analisado no modelo de estrutura do documento. No exemplo acima, o elemento `h1` se torna um nó (node) no documento.
 
-<p>Se chamar <code>document.write()</code> incorporada em uma tag HTML <code>&lt;script&gt;</code> embutida, então <code>document.open()</code> não será chamada. Por exemplo:</p>
+Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, então `document.open()` não será chamada. Por exemplo:
 
-<pre class="brush: html notranslate">&lt;script&gt;
-  document.write("&lt;h1&gt;Título principal&lt;/h1&gt;")
-&lt;/script&gt;
-</pre>
+```html
+<script>
+  document.write("<h1>Título principal</h1>")
+</script>
+```
 
-<div class="note"><strong>Nota</strong>: <code>document.write</code> e {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">não funcionam em documentos XHTML</a> (você receberá o erro "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. Mais informações disponíveis em <a class="external" href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</div>
+> **Note:** **Nota**: `document.write` e {{domxref("document.writeln")}} [não funcionam em documentos XHTML](/pt-BR/docs/Archive/Web/Writing_JavaScript_for_HTML) (você receberá o erro "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type `application/xhtml+xml` {{Glossary("MIME type")}}. Mais informações disponíveis em [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-<div class="note"><strong>Nota</strong>: <code>document.write</code> em <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> ou <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts será ignorado, e você receberá uma mensagem como "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" no console de erros.</div>
+> **Note:** **Nota**: `document.write` em [deferred](/pt-BR/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous](/pt-BR/docs/Web/HTML/Element/script#attr-async) scripts será ignorado, e você receberá uma mensagem como "A call to `document.write()` from an asynchronously-loaded external script was ignored" no console de erros.
 
-<div class="note"><strong>Nota</strong>: Somente no Edge, chamando <code>document.write</code> mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".</div>
+> **Note:** **Nota**: Somente no Edge, chamando `document.write` mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".
 
-<div class="note"><strong>Nota</strong>: A partir de 55, Chrome não executará elementos <code>&lt;script&gt;</code> injetados via <code>document.write()</code> caso haja falta de cache HTTP para usuários em uma conexão 2G. Há <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">uma lista de condições </a>que precisam ser atendidas para que isso seja verdade.</div>
+> **Note:** **Nota**: A partir de 55, Chrome não executará elementos `<script>` injetados via `document.write()` caso haja falta de cache HTTP para usuários em uma conexão 2G. Há [uma lista de condições ](https://developers.google.com/web/updates/2016/08/removing-document-write)que precisam ser atendidas para que isso seja verdade.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Status                           | Comentario |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}} | {{Spec2("HTML WHATWG")}} |            |
+| {{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}} | {{Spec2("DOM2 HTML")}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("api.Document.write")}}</div>
+{{Compat("api.Document.write")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("element.innerHTML")}}</li>
- <li>{{domxref("document.createElement()")}}</li>
-</ul>
+- {{domxref("element.innerHTML")}}
+- {{domxref("document.createElement()")}}

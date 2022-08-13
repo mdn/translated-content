@@ -9,32 +9,31 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>O método <code><strong>Object.entries()</strong></code> retorna uma array dos próprios pares  <code>[key, value] </code>enumeráveis de um dado objeto, na mesma ordem dos objetos providos através do loop {{jsxref("Statements/for...in", "for...in")}} (sendo a diferença que o for-in loop enumera também propriedades dispostas na cadeia de prototipagem - <em>prototype chain</em>).</p>
+O método **`Object.entries()`** retorna uma array dos próprios pares `[key, value] `enumeráveis de um dado objeto, na mesma ordem dos objetos providos através do loop {{jsxref("Statements/for...in", "for...in")}} (sendo a diferença que o for-in loop enumera também propriedades dispostas na cadeia de prototipagem - _prototype chain_).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Object.entries(<var>obj</var>)</pre>
+    Object.entries(obj)
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto cujos próprios pares <code>[key, value] </code>de propriedades enumeráveis deverão ser retornados.</dd>
-</dl>
+- `obj`
+  - : O objeto cujos próprios pares `[key, value] `de propriedades enumeráveis deverão ser retornados.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma array de pares <code>[key, value] </code>enumeráveis de propriedades de um dado objeto.</p>
+Uma array de pares `[key, value] `enumeráveis de propriedades de um dado objeto.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>Object.entries()</code> retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades <code>[key, value] </code>enumeráveis encontrados diretamente sobre o objeto. A ordem das propriedades é a mesma que seria se fossem iteradas as propriedades do objeto manualmente.</p>
+`Object.entries()` retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades `[key, value] `enumeráveis encontrados diretamente sobre o objeto. A ordem das propriedades é a mesma que seria se fossem iteradas as propriedades do objeto manualmente.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js notranslate">var obj = { foo: 'bar', baz: 42 };
+```js
+var obj = { foo: 'bar', baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // objeto array-like
@@ -60,51 +59,40 @@ for (var [key, value] of Object.entries(obj)) {
 }
 
 // Ou, usando array extras
-Object.entries(obj).forEach(([key, value]) =&gt; {
+Object.entries(obj).forEach(([key, value]) => {
     console.log(key + ' ' + value); // "a 5", "b 7", "c 9"
 });
-</pre>
+```
 
-<h3 id="Convertendo_um_Object_em_um_Map">Convertendo um <code>Object</code> em um <code>Map</code></h3>
+### Convertendo um `Object` em um `Map`
 
-<p>O construtor {{jsxref("Map", "new Map()")}} aceita entradas iteráveis. Com o <code>Object.entries</code>, você pode facilmente converter de {{jsxref("Object")}} para {{jsxref("Map")}}:</p>
+O construtor {{jsxref("Map", "new Map()")}} aceita entradas iteráveis. Com o `Object.entries`, você pode facilmente converter de {{jsxref("Object")}} para {{jsxref("Map")}}:
 
-<pre class="brush: js notranslate">var obj = { foo: 'bar', baz: 42 };
+```js
+var obj = { foo: 'bar', baz: 42 };
 var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }</pre>
+console.log(map); // Map { foo: "bar", baz: 42 }
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para incluir suporte ao <code>Object.entries</code> em ambientes mais antigos, você pode achar um Polyfill nos repositórios: <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> e <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a>.</p>
+Para incluir suporte ao `Object.entries` em ambientes mais antigos, você pode achar um Polyfill nos repositórios: [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) e [es-shims/Object.entries](https://github.com/es-shims/Object.entries).
 
-<h2 id="Especificaçōes">Especificaçōes</h2>
+## Especificaçōes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Comentário         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.builtins.Object.entries")}}</div>
+{{Compat("javascript.builtins.Object.entries")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerabilidade e posse de propriedades</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

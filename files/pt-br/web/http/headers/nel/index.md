@@ -10,43 +10,24 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/NEL
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <strong><code>NEL</code></strong> é usado para configurar o registro de <em>logs</em> de requisição na rede.</p>
+O cabeçalho de resposta HTTP **`NEL`** é usado para configurar o registro de _logs_ de requisição na rede.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
-</pre>
+    NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/network-error-logging/#nel-response-header">Registro de Erros de Rede</a></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                 |
+| --------------------------------------------------------------------------------------------- |
+| [Registro de Erros de Rede](https://w3c.github.io/network-error-logging/#nel-response-header) |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Network_Error_Logging">Explicação do Registro de Redes de Log [Network Error Logging (NEL)]</a></li>
-</ul>
+- [Explicação do Registro de Redes de Log \[Network Error Logging (NEL)\]](/pt-BR/docs/Web/HTTP/Network_Error_Logging)

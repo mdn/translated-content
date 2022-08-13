@@ -3,104 +3,59 @@ title: '<code>: O Elemento Inline Code'
 slug: Web/HTML/Element/code
 translation_of: Web/HTML/Element/code
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p id="Summary"><span class="seoSummary">O <strong>elemento</strong> <strong>HTML <code>&lt;code&gt;</code>  </strong>apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão</span>, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.</p>
+O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
 
+| [Content categories](/pt-BR/docs/Web/HTML/Content_categories) | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), palpable content.     |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                             | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                             |
+| Tag omission                                                  | {{no_tag_omission}}                                                                                                                                                  |
+| Permitted parents                                             | Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).                                                                    |
+| Permitted ARIA roles                                          | Any                                                                                                                                                                       |
+| DOM interface                                                 | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element. |
 
+## Atributos
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
-  </tr>
- </tbody>
-</table>
+Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes "HTML/Atributos Globais").
 
-<h2 id="Atributos">Atributos</h2>
+## Exemplo
 
-<p>Esse elemento inclui apenas os <a href="/pt-BR/docs/Web/HTML/Global_attributes" title="HTML/Atributos Globais">global attributes</a>.</p>
+Um parágrafo que inlcui `<code>`:
 
-<h2 id="Exemplo">Exemplo</h2>
+```html
+<p>A função <code>selectAll()</code> destaca todo o texto no
+campo de entrada então o usuário pode, por exemplo, copiar ou deletar o texto.</p>
+```
 
-<p>Um parágrafo que inlcui <code>&lt;code&gt;</code>:</p>
+A sainda gerada por esse trecho HTML se parece com isso:
 
-<pre class="brush: html">&lt;p&gt;A função &lt;code&gt;selectAll()&lt;/code&gt; destaca todo o texto no
-campo de entrada então o usuário pode, por exemplo, copiar ou deletar o texto.&lt;/p&gt;
-</pre>
+{{EmbedLiveSample("Example", 640, 70)}}
 
-<p>A sainda gerada por esse trecho HTML se parece com isso:</p>
+## Notas
 
-<p>{{EmbedLiveSample("Example", 640, 70)}}</p>
+Para representar múltiplas linha de código, envolva o elemento `<code>` dentro do elemento {{HTMLElement("pre")}}. O elemento `<code>` por si só representa somente uma única senteça ou linha de código.
 
-<h2 id="Notas">Notas</h2>
+Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte padrão do navegador. Preferências definidas pelo usuário podem ter precedência sore o CSS especifciado.
 
-<p>Para representar múltiplas linha de código,  envolva o elemento <code>&lt;code&gt;</code>  dentro do elemento {{HTMLElement("pre")}}. O elemento <code>&lt;code&gt;</code>  por si só representa somente uma única senteça ou linha de código.</p>
+## Especificações
 
-<p>Uma regra CSS pode ser definida para o seletor <code>code</code> para sobrescrever a fonte padrão do navegador. Preferências definidas pelo usuário podem ter precedência sore o CSS especifciado.</p>
+| Especificação                                                                                                        | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-code-element', '&lt;code&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-code-element', '&lt;code&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Compat("html.elements.code")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Veja também
 
-<p>{{Compat("html.elements.code")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTMLElement("samp")}}</li>
- <li>{{HTMLElement("kbd")}}</li>
- <li>{{HTMLElement("command")}} (deprecated)</li>
- <li>{{HTMLElement("var")}}</li>
- <li>{{HTMLElement("pre")}}</li>
-</ul>
+- {{HTMLElement("samp")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("command")}} (deprecated)
+- {{HTMLElement("var")}}
+- {{HTMLElement("pre")}}

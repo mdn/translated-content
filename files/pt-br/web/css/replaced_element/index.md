@@ -4,38 +4,32 @@ slug: Web/CSS/Replaced_element
 translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Elemento_substituido
 ---
-<div>{{CSSRef()}}</div>
+{{CSSRef()}}
 
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p>In CSS, a <strong>replaced element</strong> is an element whose representation is outside the scope of CSS. These are a type of external object whose representation is independent of the CSS. Typical replaced elements are:</p>
+In CSS, a **replaced element** is an element whose representation is outside the scope of CSS. These are a type of external object whose representation is independent of the CSS. Typical replaced elements are:
 
-<ul>
- <li>{{HTMLElement("iframe")}}</li>
- <li>{{HTMLElement("video")}}</li>
- <li>{{HTMLElement("embed")}}</li>
- <li>{{HTMLElement("img")}}</li>
-</ul>
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("img")}}
 
-<p>Some elements are treated as replaced elements only in specific cases:</p>
+Some elements are treated as replaced elements only in specific cases:
 
-<ul>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("canvas")}}</li>
- <li>{{HTMLElement("object")}}</li>
- <li>{{HTMLElement("applet")}}</li>
-</ul>
+- {{HTMLElement("audio")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("applet")}}
 
-<p>The only form control that is also a replaced element is {{HTMLElement("input")}} of the image type. All other form controls are non-replaced elements.</p>
+The only form control that is also a replaced element is {{HTMLElement("input")}} of the image type. All other form controls are non-replaced elements.
 
-<p>Objects inserted using the CSS {{cssxref("content")}} properties are <em>anonymous replaced elements</em>.</p>
+Objects inserted using the CSS {{cssxref("content")}} properties are _anonymous replaced elements_.
 
-<p>CSS handles replaced elements specifically in some cases, like when calculating margins and some <code>auto</code> values.</p>
+CSS handles replaced elements specifically in some cases, like when calculating margins and some `auto` values.
 
-<p>Note that some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties like {{cssxref("vertical-align")}}.</p>
+Note that some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties like {{cssxref("vertical-align")}}.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSS_key_concepts()}}</li>
-</ul>
+- {{CSS_key_concepts()}}

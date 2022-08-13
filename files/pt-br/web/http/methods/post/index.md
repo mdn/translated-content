@@ -7,114 +7,77 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/POST
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <strong>método HTTP <code>POST</code></strong> envia dados ao servidor. O tipo do corpo da solicitação é indicado pelo cabeçalho {{HTTPHeader("Content-Type")}}.</p>
+O **método HTTP `POST`** envia dados ao servidor. O tipo do corpo da solicitação é indicado pelo cabeçalho {{HTTPHeader("Content-Type")}}.
 
-<p>A diferença entre <code>PUT</code> e {{HTTPMethod("POST")}} é que <code>PUT</code> é idempotente: chamá-lo uma vez ou várias vezes sucessivamente tem o mesmo efeito (ou seja, nenhum efeito colateral), onde sucessivos POST idênticos podem ter efeitos adicionais, assim como passando uma ordem várias vezes.</p>
+A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: chamá-lo uma vez ou várias vezes sucessivamente tem o mesmo efeito (ou seja, nenhum efeito colateral), onde sucessivos POST idênticos podem ter efeitos adicionais, assim como passando uma ordem várias vezes.
 
-<p>Uma solicitação <code>POST</code> geralmente é enviada por meio de um <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulário HTML</a> e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo {{htmlattrxref("enctype", "form")}} do elemento {{HTMLElement("form")}} ou o atributo {{htmlattrxref("formenctype", "input")}} dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:</p>
+Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo {{htmlattrxref("enctype", "form")}} do elemento {{HTMLElement("form")}} ou o atributo {{htmlattrxref("formenctype", "input")}} dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
 
-<ul>
- <li><code>application/x-www-form-urlencoded</code>: as chaves e valores são codificados em tuplas de valor-chave separadas por <code>'&amp;'</code>, com um <code>'='</code>  entre a chave e o valor. Caracteres não alfanuméricos em chaves e valores são {{glossary ("percent-encoding", "percent encoded")}}: este é o motivo pelo qual esse tipo não é adequado para uso com dados binários (ao invés disso, use <code>multipart/form-data</code>)</li>
- <li><code>multipart/form-data</code></li>
- <li><code>text/plain</code></li>
-</ul>
+- `application/x-www-form-urlencoded`: as chaves e valores são codificados em tuplas de valor-chave separadas por `'&'`, com um `'='` entre a chave e o valor. Caracteres não alfanuméricos em chaves e valores são {{glossary ("percent-encoding", "percent encoded")}}: este é o motivo pelo qual esse tipo não é adequado para uso com dados binários (ao invés disso, use `multipart/form-data`)
+- `multipart/form-data`
+- `text/plain`
 
-<p>Quando a requisição <code>POST</code> é enviada através de um método diferente de um formulário HTML - como por meio de um {{domxref("XMLHttpRequest")}} - o corpo pode assumir qualquer tipo. Conforme descrito na especificação HTTP 1.1, o <code>POST</code> é projetado para permitir que um método uniforme cubra as seguintes funções:</p>
+Quando a requisição `POST` é enviada através de um método diferente de um formulário HTML - como por meio de um {{domxref("XMLHttpRequest")}} - o corpo pode assumir qualquer tipo. Conforme descrito na especificação HTTP 1.1, o `POST` é projetado para permitir que um método uniforme cubra as seguintes funções:
 
-<ul>
- <li>Anotação de recursos existentes</li>
- <li>Postar uma mensagem em um quadro de avisos, newsgroup, lista de emails ou grupo similar de artigos;</li>
- <li>Adicionando um novo usuário através de um modal de inscrição;</li>
- <li>Fornecendo um bloco de dados, como o resultado do envio de um formulário, para um processo de manipulação de dados;</li>
- <li>Estendendo um banco de dados por meio de uma operação de <em>append</em>.</li>
-</ul>
+- Anotação de recursos existentes
+- Postar uma mensagem em um quadro de avisos, newsgroup, lista de emails ou grupo similar de artigos;
+- Adicionando um novo usuário através de um modal de inscrição;
+- Fornecendo um bloco de dados, como o resultado do envio de um formulário, para um processo de manipulação de dados;
+- Estendendo um banco de dados por meio de uma operação de _append_.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Requisição tem corpo</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">Resposta bem-sucedida tem corpo</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe">Seguro</a></th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent">Idempotente</a></th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Cacheable">Cacheável</a></th>
-   <td>Somente se as informações de atualização estiverem incluídas</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido em <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a></th>
-   <td>Sim</td>
-  </tr>
- </tbody>
-</table>
+| Requisição tem corpo                                              | Sim                                                          |
+| ----------------------------------------------------------------- | ------------------------------------------------------------ |
+| Resposta bem-sucedida tem corpo                                   | Sim                                                          |
+| [Seguro](/pt-BR/docs/Glossary/Safe)                               | Não                                                          |
+| [Idempotente](/pt-BR/docs/Glossary/Idempotent)                    | Não                                                          |
+| [Cacheável](/pt-BR/docs/Glossary/Cacheable)                       | Somente se as informações de atualização estiverem incluídas |
+| Permitido em [formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms) | Sim                                                          |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">POST /index.html
-</pre>
+    POST /index.html
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Um simples formulário utilizando o padrão <em>content type</em> <code>application/x-www-form-urlencoded</code>:</p>
+Um simples formulário utilizando o padrão _content type_ `application/x-www-form-urlencoded`:
 
-<pre class="line-numbers  language-html">POST / HTTP/1.1
+```html
+POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
-say=Hi&amp;to=Mom</pre>
+say=Hi&to=Mom
+```
 
-<p>Um formulário utilizando o <em>content type</em> <code>multipart/form-data</code>:</p>
+Um formulário utilizando o _content type_ `multipart/form-data`:
 
-<pre>POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+    POST /test.html HTTP/1.1
+    Host: example.org
+    Content-Type: multipart/form-data;boundary="boundary"
 
---boundary
-Content-Disposition: form-data; name="field1"
+    --boundary
+    Content-Disposition: form-data; name="field1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+    value1
+    --boundary
+    Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-value2</pre>
+    value2
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "POST", "4.3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.methods.POST")}}</p>
+{{Compat("http.methods.POST")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Disposition")}}

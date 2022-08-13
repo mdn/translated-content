@@ -3,33 +3,24 @@ title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
 translation_of: Web/HTTP/Status/500
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><span id="result_box" lang="pt"><span>Quando o servidor retorna um código de erro (HTTP) 500, indica que  encontrou uma condição inesperada e que o impediu de atender à solicitação.</span><br>
- <br>
- <span>Essa resposta de erro é uma resposta genérica "abrangente".</span> <span>Às vezes, os arquivos log de servidores podem responder com um status code 500 acompanhado de mais detalhes sobre o request para evitar que no futuro erros desse tipo possam voltar a acontecer.</span></span></p>
+Quando o servidor retorna um código de erro (HTTP) 500, indica que encontrou uma condição inesperada e que o impediu de atender à solicitação.
 
-<p>Status</p>
+Essa resposta de erro é uma resposta genérica "abrangente". Às vezes, os arquivos log de servidores podem responder com um status code 500 acompanhado de mais detalhes sobre o request para evitar que no futuro erros desse tipo possam voltar a acontecer.
 
-<pre class="syntaxbox notranslate">500 Internal Server Error</pre>
+Status
 
-<h2 id="Especificações">Especificações</h2>
+    500 Internal Server Error
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "500 Internal Server Error" , "6.6.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Specification                                                            | Title                                                         |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<p>As informações mostradas acima foram extraídas do GitHub da MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.500")}}</p>
+As informações mostradas acima foram extraídas do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
+
+{{Compat("http.status.500")}}

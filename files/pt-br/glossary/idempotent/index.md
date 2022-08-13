@@ -9,44 +9,38 @@ tags:
 translation_of: Glossary/Idempotent
 original_slug: Glossario/Idempotente
 ---
-<p>Um método HTTP é <strong>idempotente</strong> se uma requisição idêntica pode ser feita uma ou mais vezes em sequência com o mesmo efeito enquanto deixa o servidor no mesmo estado. Em outras palavras, um método idempotente não deveria possuir nenhum efeito colateral (exceto para manter estatísticas). Implementados corretamente, o {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, e {{HTTPMethod("DELETE")}} são métodos <strong>idempotentes</strong>, mas não o método {{HTTPMethod("POST")}}. Todos os métodos  {{glossary("seguro")}}s também são idempotentes.</p>
+Um método HTTP é **idempotente** se uma requisição idêntica pode ser feita uma ou mais vezes em sequência com o mesmo efeito enquanto deixa o servidor no mesmo estado. Em outras palavras, um método idempotente não deveria possuir nenhum efeito colateral (exceto para manter estatísticas). Implementados corretamente, o {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, e {{HTTPMethod("DELETE")}} são métodos **idempotentes**, mas não o método {{HTTPMethod("POST")}}. Todos os métodos {{glossary("seguro")}}s também são idempotentes.
 
-<p>Para ser idempotente, somente o estado atual do <em>back-end</em> de um servidor deve ser considerado, o código de status retornado por cada requisição pode variar: a primeira chamada de um {{HTTPMethod("DELETE")}} vai provavelmente retornar um {{HTTPStatus("200")}}, enquanto as chamadas sucessivas vão provavelmente retornar {{HTTPStatus("404")}}. Outra implicação do {{HTTPMethod("DELETE")}} ser idempotente é de que os desenvolvedores não deveriam implementar APIs RESTful com a<em> </em>funcionalidade de deleção de última entrada usando o método <code>DELETE</code>.</p>
+Para ser idempotente, somente o estado atual do _back-end_ de um servidor deve ser considerado, o código de status retornado por cada requisição pode variar: a primeira chamada de um {{HTTPMethod("DELETE")}} vai provavelmente retornar um {{HTTPStatus("200")}}, enquanto as chamadas sucessivas vão provavelmente retornar {{HTTPStatus("404")}}. Outra implicação do {{HTTPMethod("DELETE")}} ser idempotente é de que os desenvolvedores não deveriam implementar APIs RESTful com a\_ \_funcionalidade de deleção de última entrada usando o método `DELETE`.
 
-<p>Note que a idempotência de um método não é garantida pelo servidor, algumas aplicações também podem quebrar a constante de idempotência.</p>
+Note que a idempotência de um método não é garantida pelo servidor, algumas aplicações também podem quebrar a constante de idempotência.
 
-<p><code>GET /pageX HTTP/1.1</code> é idempotente. Chamado diversas vezes em sequência, ele vai retornar o mesmo resultado:</p>
+`GET /pageX HTTP/1.1` é idempotente. Chamado diversas vezes em sequência, ele vai retornar o mesmo resultado:
 
-<pre>GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-</pre>
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
 
-<p><code>POST /add_row HTTP/1.1</code> não é idempotente. Se ele for chamado diversas vezes, ele adicionará novas entradas:</p>
+`POST /add_row HTTP/1.1` não é idempotente. Se ele for chamado diversas vezes, ele adicionará novas entradas:
 
-<pre>POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -&gt; Adiciona a 2ª linha
-POST /add_row HTTP/1.1   -&gt; Adiciona a 3ª linha
-</pre>
+    POST /add_row HTTP/1.1
+    POST /add_row HTTP/1.1   -> Adiciona a 2ª linha
+    POST /add_row HTTP/1.1   -> Adiciona a 3ª linha
 
-<p><code>DELETE /idX/delete HTTP/1.1</code> é idempotente, mesmo que o código de status mude entre requisições:</p>
+`DELETE /idX/delete HTTP/1.1` é idempotente, mesmo que o código de status mude entre requisições:
 
-<pre>DELETE /idX/delete HTTP/1.1   -&gt; Retorna 200 se idX existe
-DELETE /idX/delete HTTP/1.1   -&gt; Retorna 404 como ele acabou de ser deletado
-DELETE /idX/delete HTTP/1.1   -&gt; Retorna 404</pre>
+    DELETE /idX/delete HTTP/1.1   -> Retorna 200 se idX existe
+    DELETE /idX/delete HTTP/1.1   -> Retorna 404 como ele acabou de ser deletado
+    DELETE /idX/delete HTTP/1.1   -> Retorna 404
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>Definição de <a href="https://tools.ietf.org/html/rfc7231#section-4.2.2">idempotente</a> na especificação HTTP.</li>
-</ul>
+- Definição de [idempotente](https://tools.ietf.org/html/rfc7231#section-4.2.2) na especificação HTTP.
 
-<h3 id="Conhecimento_técnico">Conhecimento técnico</h3>
+### Conhecimento técnico
 
-<ul>
- <li>Descrição de métodos idempotentes comuns: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}</li>
- <li>Descrição de métodos não-idempotentes comuns: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}</li>
-</ul>
+- Descrição de métodos idempotentes comuns: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}
+- Descrição de métodos não-idempotentes comuns: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}

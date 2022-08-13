@@ -7,72 +7,48 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Via
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho geral <code><strong>Via</strong></code> é adicionado por proxies, ambos diretos e reversos, e pode aparecer em cabeçalhos de requisição e de cabeçalhos de resposta. Ele é usado para rastrear mensagens direcionadas, evitando laços de requisição, e identificando as capacidades dos protocolos dos remetentes ao longo da cadeia de requisição/resposta.</p>
+O cabeçalho geral **`Via`** é adicionado por proxies, ambos diretos e reversos, e pode aparecer em cabeçalhos de requisição e de cabeçalhos de resposta. Ele é usado para rastrear mensagens direcionadas, evitando laços de requisição, e identificando as capacidades dos protocolos dos remetentes ao longo da cadeia de requisição/resposta.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("General header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("General header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Via: [ &lt;protocol-name&gt; "/" ] &lt;protocol-version&gt; &lt;host&gt; [ ":" &lt;port&gt; ]
-or
-Via: [ &lt;protocol-name&gt; "/" ] &lt;protocol-version&gt; &lt;pseudonym&gt;
-</pre>
+    Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
+    or
+    Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;protocol-name&gt;</dt>
- <dd>Opcional. O nome do protocolo usado, como "HTTP".</dd>
- <dt>&lt;protocol-version&gt;</dt>
- <dd>A versão do protocolo usado, como "1.1".</dd>
- <dt>&lt;host&gt; e &lt;port&gt;</dt>
- <dd>URL pública do proxy e sua porta.</dd>
- <dt>&lt;pseudonym&gt;</dt>
- <dd>Nome/pseudônimo de um proxy interno.</dd>
-</dl>
+- \<protocol-name>
+  - : Opcional. O nome do protocolo usado, como "HTTP".
+- \<protocol-version>
+  - : A versão do protocolo usado, como "1.1".
+- \<host> e \<port>
+  - : URL pública do proxy e sua porta.
+- \<pseudonym>
+  - : Nome/pseudônimo de um proxy interno.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="notranslate">Via: 1.1 vegur
-Via: HTTP/1.1 GWA
-Via: 1.0 fred, 1.1 p.example.net
-</pre>
+    Via: 1.1 vegur
+    Via: HTTP/1.1 GWA
+    Via: 1.0 fred, 1.1 p.example.net
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Via", "5.7.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                            | Título                                                             |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Via", "5.7.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Via")}}</p>
+{{Compat("http.headers.Via")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("X-Forwarded-For")}}</li>
- <li><a href="https://github.com/heroku/vegur">Biblioteca proxy Vegur do Heroku</a></li>
-</ul>
+- {{HTTPHeader("X-Forwarded-For")}}
+- [Biblioteca proxy Vegur do Heroku](https://github.com/heroku/vegur)

@@ -3,72 +3,61 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 translation_of: Web/API/FormData/getAll
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>O metodo <code><strong>getAll()</strong></code> do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro <code>de um objeto FormData</code>.</p>
+O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
 
-<div class="note">
-<p><strong>Nota</strong>: Este metodo esta disponivel no <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** **Nota**: Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.getAll(name);</pre>
+```js
+formData.getAll(name);
+```
 
-<h3 id="append()_Parameters" name="append()_Parameters">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>O {{domxref("USVString")}} representa o mome da chave que você quer pegar.</dd>
-</dl>
+- `nome`
+  - : O {{domxref("USVString")}} representa o mome da chave que você quer pegar.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um array de {{domxref("FormDataEntryValue")}}s.</p>
+Um array de {{domxref("FormDataEntryValue")}}s.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A seguinte linha cria um objeto <code>FormData</code> vazio:</p>
+A seguinte linha cria um objeto `FormData` vazio:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>Se nos adicionarmos dois valores oara <code>username</code> {{domxref("FormData.append")}}:</p>
+Se nos adicionarmos dois valores oara `username` {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p>A seguinte função <code>getAll()</code> retornara um arrat com os valore dentro de <code>username</code>:</p>
+A seguinte função `getAll()` retornara um arrat com os valore dentro de `username`:
 
-<pre class="brush: js">formData.getAll('username'); // Returns ["Chris", "Bob"]</pre>
+```js
+formData.getAll('username'); // Returns ["Chris", "Bob"]
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}} | {{Spec2('XMLHttpRequest')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.FormData.getAll")}}
 
+## Veja também
 
-<p>{{Compat("api.FormData.getAll")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

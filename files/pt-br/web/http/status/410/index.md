@@ -3,43 +3,30 @@ title: 410 Gone
 slug: Web/HTTP/Status/410
 translation_of: Web/HTTP/Status/410
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta HTTP <code><strong>410 Gone</strong></code> de erro do cliente indica que o acesso ao recurso não está mais disponível no servidor de origem, e que esta condição tende a ser permanente.</p>
+O código de resposta HTTP **`410 Gone`** de erro do cliente indica que o acesso ao recurso não está mais disponível no servidor de origem, e que esta condição tende a ser permanente.
 
-<p>Se você não sabe se a ausência do recurso é temporária ou permanente, o código de status {{HTTPStatus(404)}} deverá ser utilizado.</p>
+Se você não sabe se a ausência do recurso é temporária ou permanente, o código de status {{HTTPStatus(404)}} deverá ser utilizado.
 
-<div class="note">
-<p><strong>Nota: </strong>Uma resposta 410 response é armazenada em cache por default.</p>
-</div>
+> **Note:** **Nota:** Uma resposta 410 response é armazenada em cache por default.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">410 Gone</pre>
+    410 Gone
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "410 Gone" , "6.5.9")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>A informação mostrada abaixo está sendo servida do MDN's GitHub (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+A informação mostrada abaixo está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.410")}}</p>
+{{Compat("http.status.410")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus(404)}}</li>
-</ul>
+- {{HTTPStatus(404)}}

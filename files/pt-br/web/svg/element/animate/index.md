@@ -7,96 +7,69 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animate
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento SVG <code><strong>&lt;animate&gt;</strong></code> fornece uma maneira de animar um atributo de um elemento ao longo do tempo.</p>
+O elemento SVG **`<animate>`** fornece uma maneira de animar um atributo de um elemento ao longo do tempo.
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100%; margin:0; padding:0; }</pre>
-</div>
+```css hidden
+html,body,svg { height:100%; margin:0; padding:0; }
+```
 
-<pre class="brush: html; highlight[2]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect width="10" height="10"&gt;
-    &lt;animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" /&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <rect width="10" height="10">
+    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
-</div>
+{{EmbedLiveSample('Exemple', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Animation_Attributes">Animation Attributes</h3>
+### Animation Attributes
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute#Animation_Timing_Attributes">Animation timing attributes</a></dt>
- <dd><small>{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute#Animation_Value_Attributes">Animation value attributes</a></dt>
- <dd><small>{{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute#Animation_Attributes">Other Animation attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes">Animation event attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}</small></dd>
-</dl>
+- [Animation timing attributes](/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+- [Animation value attributes](/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
+- [Other Animation attributes](/docs/Web/SVG/Attribute#Animation_Attributes)
+  - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+- [Animation event attributes](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Global event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes">Document element event attributes</a></small></dd>
-</dl>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Event Attributes
+  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This element implements the {{domxref("SVGAnimateElement")}} interface.</p>
+This element implements the {{domxref("SVGAnimateElement")}} interface.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.</p>
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-<p>Consider providing a mechanism for pausing or disabling animation, as well as using the <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query</a> to create a complimentary experience for users who have expressed a preference for no animated experiences.</p>
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/pt-BR/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
-<ul>
- <li><a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article </a></li>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query | CSS-Tricks</a></li>
- <li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion | WebKit</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                                   | Comment            |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-
-
-<p>{{Compat("svg.elements.animate")}}</p>
-</div>
+{{Compat("svg.elements.animate")}}

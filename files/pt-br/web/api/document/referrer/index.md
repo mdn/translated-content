@@ -13,21 +13,18 @@ tags:
   - Referência(2)
 translation_of: Web/API/Document/referrer
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Retorna o <a href="http://www.w3.org/Addressing/#background">URI</a> da página que continha o <em>link</em> para a página atual.</p>
+Retorna o [URI](http://www.w3.org/Addressing/#background) da página que continha o _link_ para a página atual.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>string</var> = document.referrer;
-</pre>
+    string = document.referrer;
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>O valor retornado será uma <em>string</em> vazia se o usuário tiver chegado na página diretamente (digitando o endereço no navegador ou como um item "Favorito"). Como essa propriedade retorna apenas uma <em>string</em>, ela não dá acesso DOM à página que fez a referência.</p>
+O valor retornado será uma _string_ vazia se o usuário tiver chegado na página diretamente (digitando o endereço no navegador ou como um item "Favorito"). Como essa propriedade retorna apenas uma _string_, ela não dá acesso DOM à página que fez a referência.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140">DOM Level 2: referrer</a></li>
-</ul>
+- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

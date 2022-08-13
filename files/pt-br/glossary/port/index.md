@@ -8,21 +8,19 @@ tags:
 translation_of: Glossary/Port
 original_slug: Glossario/Port
 ---
-<p>Porta</p>
+Porta
 
-<p>Para um computador se conectar à rede mundial de computadores com um endereço de IP(Protocolo de internet - Internet Protocol),<br>
- uma porta é um ponto terminal de comunicação.<br>
- Portas são designadas por números, e abaixo são especificados 1024 portas que é associado por padrão com um protocolo específico.</p>
+Para um computador se conectar à rede mundial de computadores com um endereço de IP(Protocolo de internet - Internet Protocol),
+uma porta é um ponto terminal de comunicação.
+Portas são designadas por números, e abaixo são especificados 1024 portas que é associado por padrão com um protocolo específico.
 
-<p>Por exemplo, a porta padrão para a HTTP (Protocolo de transferência de hiper texto - Hyper Text Transfer Protocol) é 80 e o <br>
- padrão para o HTTPS (Protocolo de transferência de hiper texto Seguro - Hyper Text Transfer Protocol Secure) é 443,<br>
- então um http servidor espera pelas requisições naquelas portas.Cada protocolo de internet está associado com uma porta padrão:<br>
- SMTP(25), POP3(110), IMAP(143), IRC(194) e assim em diante.</p>
+Por exemplo, a porta padrão para a HTTP (Protocolo de transferência de hiper texto - Hyper Text Transfer Protocol) é 80 e o
+padrão para o HTTPS (Protocolo de transferência de hiper texto Seguro - Hyper Text Transfer Protocol Secure) é 443,
+então um http servidor espera pelas requisições naquelas portas.Cada protocolo de internet está associado com uma porta padrão:
+SMTP(25), POP3(110), IMAP(143), IRC(194) e assim em diante.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} no Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} no Wikipedia

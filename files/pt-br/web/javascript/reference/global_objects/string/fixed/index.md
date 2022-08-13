@@ -11,54 +11,46 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <strong><code>fixed()</code></strong> cria um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/tt">&lt;tt&gt;</a></code> que faz com que uma string seja exibida em uma fonte de densidade fixa.</p>
+O método **`fixed()`** cria um elemento HTML [`<tt>`](/en-US/docs/Web/HTML/Element/tt) que faz com que uma string seja exibida em uma fonte de densidade fixa.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.fixed()</code></pre>
+    str.fixed()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string que representa o elemento HTML <a href="/en-US/docs/Web/HTML/Element/tt">&lt;tt&gt;</a>.</p>
+Uma string que representa o elemento HTML [\<tt>](/pt-BR/docs/Web/HTML/Element/tt).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método<strong> </strong><code>fixed()</code> cria uma string dentro de uma tag <code>&lt;tt&gt;</code>:<br>
- <code>"&lt;tt&gt;str&lt;/tt&gt;"</code>.</p>
+O método\*\* \*\*`fixed()` cria uma string dentro de uma tag `<tt>`:
+`"<tt>str</tt>"`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_fixed">Usando <code>fixed()</code></h3>
+### Usando `fixed()`
 
-<p>O exemplo a seguir usa o método <code>fixed()</code> para alterar a formatação de uma string:</p>
+O exemplo a seguir usa o método `fixed()` para alterar a formatação de uma string:
 
-<pre class="brush: js notranslate">var worldString = 'Olá, mundo';
-console.log(worldString.fixed()); // "&lt;tt&gt;Olá, mundo&lt;/tt&gt;"
-</pre>
+```js
+var worldString = 'Olá, mundo';
+console.log(worldString.fixed()); // "<tt>Olá, mundo</tt>"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.fixed")}}</p>
+{{Compat("javascript.builtins.String.fixed")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

@@ -9,96 +9,67 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Access-Control-Expose-Headers</code></strong> indica quais cabeçalhos podem ser expostos como parte da resposta listando os seus nomes.</p>
+O cabeçalho de resposta **`Access-Control-Expose-Headers`** indica quais cabeçalhos podem ser expostos como parte da resposta listando os seus nomes.
 
-<p>Por padrão, somente os 6 {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} são expostos:</p>
+Por padrão, somente os 6 {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} são expostos:
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Content-Language")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("Pragma")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Expires")}}
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("Pragma")}}
 
-<p>Se você quiser que clientes tenham acesso a outros cabeçalhos, você deve listá-los usando o cabeçalho <code>Access-Control-Expose-Headers</code>.</p>
+Se você quiser que clientes tenham acesso a outros cabeçalhos, você deve listá-los usando o cabeçalho `Access-Control-Expose-Headers`.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Expose-Headers: &lt;nome-do-cabeçalho&gt;, &lt;nome-do-cabeçalho&gt;, ...
-Access-Control-Expose-Headers: *
-</pre>
+    Access-Control-Expose-Headers: <nome-do-cabeçalho>, <nome-do-cabeçalho>, ...
+    Access-Control-Expose-Headers: *
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;nome-do-cabeçalho&gt;</dt>
- <dd>Uma lista dos cabeçalhos expostos contendo zero ou mais <a href="/en-US/docs/Web/HTTP/Headers">nomes de cabeçalhos</a> além dos {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} que o recurso pode usar e expor.</dd>
- <dt><code>*</code> (coringa)</dt>
- <dd>O valor "<code>*</code>" conta somente como um valor coringa para requisições sem credenciais (requisições sem <a href="/en-US/docs/Web/HTTP/Cookies">cookies HTTP</a> ou informação de autenticação HTTP). Em requisições com credenciais, ele é tratado como o nome de cabeçalho literal "<code>*</code>" sem qualquer semântica.<br>
- Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode ter valor coringa e sempre precisa ser listado explicitamente.</dd>
-</dl>
+- \<nome-do-cabeçalho>
+  - : Uma lista dos cabeçalhos expostos contendo zero ou mais [nomes de cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) além dos {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} que o recurso pode usar e expor.
+- `*` (coringa)
+  - : O valor "`*`" conta somente como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, ele é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica.
+    Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode ter valor coringa e sempre precisa ser listado explicitamente.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Para expor um cabeçalho de requisição não-CORS-seguro, você pode especificar:</p>
+Para expor um cabeçalho de requisição não-CORS-seguro, você pode especificar:
 
-<pre>Access-Control-Expose-Headers: Content-Length</pre>
+    Access-Control-Expose-Headers: Content-Length
 
-<p>Para expor um cabeçalho customizado adicionalmente, como <code>X-Kuma-Revision</code>, você pode adicionar múltiplos cabeçalhos separados por vírgula:</p>
+Para expor um cabeçalho customizado adicionalmente, como `X-Kuma-Revision`, você pode adicionar múltiplos cabeçalhos separados por vírgula:
 
-<pre>Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
+    Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
 
-<p>Em requisições sem credênciais, você também pode usar um valor coringa:</p>
+Em requisições sem credênciais, você também pode usar um valor coringa:
 
-<pre>Access-Control-Expose-Headers: *</pre>
+    Access-Control-Expose-Headers: *
 
-<p>Entretanto, isso não irá colocar um valor coringa para o cabeçalho {{HTTPHeader("Authorization")}}, então caso você precise que ele seja exposto, você precisa listá-lo explicitamente:</p>
+Entretanto, isso não irá colocar um valor coringa para o cabeçalho {{HTTPHeader("Authorization")}}, então caso você precise que ele seja exposto, você precisa listá-lo explicitamente:
 
-<pre>Access-Control-Expose-Headers: *, Authorization</pre>
+    Access-Control-Expose-Headers: *, Authorization
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                   | Comentário |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Expose-Headers")}}</p>
+{{Compat("http.headers.Access-Control-Expose-Headers")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}

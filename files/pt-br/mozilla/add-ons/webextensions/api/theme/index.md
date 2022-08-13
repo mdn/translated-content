@@ -12,43 +12,35 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 original_slug: Mozilla/Add-ons/WebExtensions/API/tema
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Permite que extensões do navegador alterem seu tema.</p>
+Permite que extensões do navegador alterem seu tema.
 
-<p>Para usar esta API, uma extensão deve solicitar a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> (permissão) de "tema" em seu arquivo<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a>.</p>
+Para usar esta API, uma extensão deve solicitar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" em seu arquivo[ manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
-<div class="note">
-<p><strong>Nota:</strong> Quando configuramos um arquivo de plano de fundo, devemos declarar a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> (permissão) de "tema" e, assim sendo, nós não poderemos usar a função <a href="/en-US/Add-ons/WebExtensions/manifest.json/theme">theme</a>  (de tema), se esta for incompatível.</p>
-</div>
+> **Note:** **Nota:** Quando configuramos um arquivo de plano de fundo, devemos declarar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" e, assim sendo, nós não poderemos usar a função [theme](/en-US/Add-ons/WebExtensions/manifest.json/theme) (de tema), se esta for incompatível.
 
-<h2 id="Tipo">Tipo</h2>
+## Tipo
 
-<dl>
- <dt>{{WebExtAPIRef("theme.Theme")}}</dt>
- <dd>Representa o conteúdo de um tema.</dd>
-</dl>
+- {{WebExtAPIRef("theme.Theme")}}
+  - : Representa o conteúdo de um tema.
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("theme.getCurrent()")}}</dt>
- <dd>Obtém o tema atual do navegador.</dd>
- <dt>{{WebExtAPIRef("theme.update()")}}</dt>
- <dd>Atualiza o tema do navegador.</dd>
- <dt>{{WebExtAPIRef("theme.reset()")}}</dt>
- <dd>Remove quaisquer atualizações de temas feitas em uma chamada para {{WebExtAPIRef("theme.update()")}}.</dd>
-</dl>
+- {{WebExtAPIRef("theme.getCurrent()")}}
+  - : Obtém o tema atual do navegador.
+- {{WebExtAPIRef("theme.update()")}}
+  - : Atualiza o tema do navegador.
+- {{WebExtAPIRef("theme.reset()")}}
+  - : Remove quaisquer atualizações de temas feitas em uma chamada para {{WebExtAPIRef("theme.update()")}}.
 
-<h2 id="Evento">Evento</h2>
+## Evento
 
-<dl>
- <dt>{{WebExtAPIRef("theme.onUpdated")}}</dt>
- <dd>Disparada<em> </em>quando o navegador tiver sido alterado.</dd>
-</dl>
+- {{WebExtAPIRef("theme.onUpdated")}}
+  - : Disparada\_ \_quando o navegador tiver sido alterado.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.theme")}}</p>
+{{Compat("webextensions.api.theme")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}

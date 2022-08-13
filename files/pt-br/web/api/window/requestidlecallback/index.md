@@ -3,68 +3,47 @@ title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 translation_of: Web/API/Window/requestIdleCallback
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>O método <code><strong>window.requestIdleCallback()</strong></code> enfileira uma função para ser executado durante períodos onde o navegador está ocioso. Isso permite que desenvolvedores realizem tarefas de baixa prioridade em relação a o event loop em segundo plano. As funções são geralmente chamadas na ordem first-in-first-out (primeiro-a-entrar-primeiro-a-sair); Contudo, callbacks nos quais tem um timeout especificado, podem ser chamados na ordem out-of-order (fora-de-ordem) se necessário, afim de executar antes do tempo limite.</p>
+O método **`window.requestIdleCallback()`** enfileira uma função para ser executado durante períodos onde o navegador está ocioso. Isso permite que desenvolvedores realizem tarefas de baixa prioridade em relação a o event loop em segundo plano. As funções são geralmente chamadas na ordem first-in-first-out (primeiro-a-entrar-primeiro-a-sair); Contudo, callbacks nos quais tem um timeout especificado, podem ser chamados na ordem out-of-order (fora-de-ordem) se necessário, afim de executar antes do tempo limite.
 
-<p>Você pode chamar <code>requestIdleCallback()</code> com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.</p>
+Você pode chamar `requestIdleCallback()` com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.
 
-<div class="note">Um <code>timeout</code> é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.</div>
+> **Note:** Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+    var handle = window.requestIdleCallback(callback[, options])
 
-<h3 id="Returns" name="Returns">Return value</h3>
+### Return value
 
-<p>An ID which can be used to cancel the callback by passing it into the {{domxref("window.cancelIdleCallback()")}} method.</p>
+An ID which can be used to cancel the callback by passing it into the {{domxref("window.cancelIdleCallback()")}} method.
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>A reference to a function that should be called in the near future, when the event loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object describing the amount of time available and whether or not the callback has been run because the timeout period expired.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Contains optional configuration parameters. Currently only one property is defined:
- <ul>
-  <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive value, and the callback has not already been called by the time <em>timeout</em> milliseconds have passed, the callback will be called during the next idle period, even if doing so risks causing a negative performance impact.</li>
- </ul>
- </dd>
-</dl>
+- `callback`
+  - : A reference to a function that should be called in the near future, when the event loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object describing the amount of time available and whether or not the callback has been run because the timeout period expired.
+- `options` {{optional_inline}}
+  - : Contains optional configuration parameters. Currently only one property is defined:\* `timeout`: If `timeout` is specified and has a positive value, and the callback has not already been called by the time _timeout_ milliseconds have passed, the callback will be called during the next idle period, even if doing so risks causing a negative performance impact.
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+See our [complete example](/pt-BR/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/pt-BR/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment             |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Initial definition. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Window.requestIdleCallback")}}
 
+## See also
 
-<p>{{Compat("api.Window.requestIdleCallback")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("window.cancelIdleCallback()")}}</li>
- <li>{{domxref("IdleDeadline")}}</li>
- <li>{{domxref("window.setTimeout()")}}</li>
- <li>{{domxref("window.setInterval()")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
-</ul>
+- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("IdleDeadline")}}
+- {{domxref("window.setTimeout()")}}
+- {{domxref("window.setInterval()")}}
+- {{domxref("window.requestAnimationFrame")}}

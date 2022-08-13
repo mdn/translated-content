@@ -3,31 +3,18 @@ title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
 translation_of: Web/HTTP/Status/422
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>O codigo de resposta HTTP <code><strong>422 Unprocessable Entity</strong></code> indica que o servidor entende o tipo de conteúdo da entidade da requisição, e a sintaxe da requisição esta correta, mas não foi possível processar as instruções presentes.</p>
+O codigo de resposta HTTP **`422 Unprocessable Entity`** indica que o servidor entende o tipo de conteúdo da entidade da requisição, e a sintaxe da requisição esta correta, mas não foi possível processar as instruções presentes.
 
-<div class="warning">
-<p><strong>Importante</strong>: O cliente não deve repetir esta requisição sem modificações.</p>
-</div>
+> **Warning:** **Importante**: O cliente não deve repetir esta requisição sem modificações.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">422 Unprocessable Entity</pre>
+    422 Unprocessable Entity
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("4918", "422 Unprocessable Entity" , "11.2")}}</td>
-   <td>HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Título                                                                |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| {{RFC("4918", "422 Unprocessable Entity" , "11.2")}} | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |

@@ -12,100 +12,59 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toUTCString()</code></strong> converte uma data para uma cadeia de caracteres (<em>string</em>), usando o fuso horário UTC.</p>
+O método **`toUTCString()`** converte uma data para uma cadeia de caracteres (_string_), usando o fuso horário UTC.
 
-<p>Baseado na <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.1">RFC7231</a> e modificado de acordo com a <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring">ECMA-262 toUTCString</a>, ele pode ter valores negativos na <a href="https://tc39.es/ecma262/#sec-date.prototype.toutcstring">versão de 2021</a>.</p>
+Baseado na [RFC7231](https://tools.ietf.org/html/rfc7231#section-7.1.1.1) e modificado de acordo com a [ECMA-262 toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring), ele pode ter valores negativos na [versão de 2021](https://tc39.es/ecma262/#sec-date.prototype.toutcstring).
 
-<div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
 
+## Sintaxe
 
+    dateObj.toUTCString()
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor de retorno
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.toUTCString()</code></pre>
+Uma _string_ representando a data usando o fuso horário UTC.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>Uma <em>string</em> representando a data usando o fuso horário UTC.</p>
+O valor retornado por `toUTCString()` é uma _string_ no formato `Www, dd Mmm yyyy hh:mm:ss GMT`, onde:
 
-<h2 id="Descrição">Descrição</h2>
+| Formato da String | Descrição                                                        |
+| ----------------- | ---------------------------------------------------------------- |
+| `Www`             | Dia da semana, em três letras (e.g. Sun, Mon, ...)               |
+| `dd`              | Dia do mês, como dois dígitos com zero à esquerda se requisitado |
+| `Mmm`             | Mês, em três letras (e.g. Jan, Feb, ...)                         |
+| `yyyy`            | Ano, como 4 ou mais dígitos com zeros à esquerda se requisitado  |
+| `hh`              | Hora, como dois dígitos com zero à esquerda se requisitado       |
+| `mm`              | Minutos, como dois dígitos com zero à esquerda se requisitado    |
+| `ss`              | Segundos, como dois dígitos com zero à esquerda se requisitado   |
 
-<p>O valor retornado por <code>toUTCString()</code> é uma <em>string</em> no formato <code><var>Www</var>, <var>dd</var> <var>Mmm</var> <var>yyyy</var> <var>hh</var>:<var>mm</var>:<var>ss</var> GMT</code>, onde:</p>
+Antes do ECMAScript 2018, o formato do valor de retorno variava de acordo com a plataforma. O valor de retorno mais comum era um carimbo de data formatada na RFC-1123, que é uma versão relativamente atualizada dos carimbos de data da RFC-822.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Formato da String</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><var>Www</var></code></td>
-   <td>Dia da semana, em três letras (e.g. Sun, Mon, ...)</td>
-  </tr>
-  <tr>
-   <td><code><var>dd</var></code></td>
-   <td>Dia do mês, como dois dígitos com zero à esquerda se requisitado</td>
-  </tr>
-  <tr>
-   <td><code><var>Mmm</var></code></td>
-   <td>Mês, em três letras (e.g. Jan, Feb, ...)</td>
-  </tr>
-  <tr>
-   <td><code><var>yyyy</var></code></td>
-   <td>Ano, como 4 ou mais dígitos com zeros à esquerda se requisitado</td>
-  </tr>
-  <tr>
-   <td><code><var>hh</var></code></td>
-   <td>Hora, como dois dígitos com zero à esquerda se requisitado</td>
-  </tr>
-  <tr>
-   <td><code><var>mm</var></code></td>
-   <td>Minutos, como dois dígitos com zero à esquerda se requisitado</td>
-  </tr>
-  <tr>
-   <td><code><var>ss</var></code></td>
-   <td>Segundos, como dois dígitos com zero à esquerda se requisitado</td>
-  </tr>
- </tbody>
-</table>
+## Exemplos
 
-<p>Antes do ECMAScript 2018, o formato do valor de retorno variava de acordo com a plataforma. O valor de retorno mais comum era um carimbo de data formatada na  RFC-1123, que é uma versão relativamente atualizada dos carimbos de data da RFC-822.</p>
+### Usando `toUTCString()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_toUTCString">Usando <code>toUTCString()</code></h3>
-
-<pre class="brush: js notranslate">let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+```js
+let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.toUTCString")}}</p>
+{{Compat("javascript.builtins.Date.toUTCString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

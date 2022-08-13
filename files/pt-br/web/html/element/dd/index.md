@@ -16,95 +16,41 @@ tags:
   - lista descritiva
 translation_of: Web/HTML/Element/dd
 ---
-<div>O <strong>elemento HTML &lt;dd&gt;</strong> fornece detalhes ou uma definição mais completa do termo precedente (definido por {{HTMLElement("dt")}}) numa lista de descrições ({{HTMLElement("dl")}}).</div>
+O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do termo precedente (definido por {{HTMLElement("dt")}}) numa lista de descrições ({{HTMLElement("dl")}}).
 
-<div> </div>
+| [Categorias de conteúdo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo) | Nenhuma.                                                                                                                                                                                                                  |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido                                                          | [Conteúdo de fluxo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo).                                                                                                                            |
+| Omissão de Tag                                                              | A Tag inicial ({{HTMLElement("dd")}}) é obrigatória. A Tag final (\</dd>) pode ser omitida se seguida imediatamente por outro elemento {{HTMLElement("dd")}}, ou se o elemento pai não tiver mais conteúdo. |
+| Ancestrais permitidos                                                       | {{HTMLElement("dl")}} ou (em [WHATWG](/pt-BR/docs/Glossary/WHATWG) HTML) uma {{HTMLElement("div")}} que está dentro de uma {{HTMLElement("dl")}}.                                                     |
+| Tags irmãs                                                                  | {{HTMLElement("dt")}} ou outro elemento {{HTMLElement("dd")}} .                                                                                                                                             |
+| Papeis ARIA permitidos                                                      | Nenhum.                                                                                                                                                                                                                   |
+| Tipo de elemento DOM                                                        | {{domxref("HTMLElement")}}                                                                                                                                                                                      |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo">Categorias de conteúdo</a></th>
-   <td>Nenhuma.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo">Conteúdo de fluxo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de Tag</th>
-   <td>
-    <p>A Tag inicial ({{HTMLElement("dd")}}) é obrigatória.<br>
-     A Tag final (&lt;/dd&gt;) pode ser omitida se seguida imediatamente por outro elemento {{HTMLElement("dd")}}, ou se o elemento pai não tiver mais conteúdo.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Ancestrais permitidos</th>
-   <td>{{HTMLElement("dl")}} ou (em <a href="/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML) uma {{HTMLElement("div")}} que está dentro de uma {{HTMLElement("dl")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tags irmãs</th>
-   <td>{{HTMLElement("dt")}} ou outro elemento {{HTMLElement("dd")}} .</td>
-  </tr>
-  <tr>
-   <th scope="row">Papeis ARIA permitidos</th>
-   <td>Nenhum.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tipo de elemento DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) como seus.
 
-<p>Este elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a> como seus.</p>
+- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+  - : Se o valor deste atributo for `yes`, o texto de definição não será envolvido. O valor padrão é `no`.
 
-<dl>
- <dt>{{htmlattrdef("nowrap")}} {{Non-standard_inline}}</dt>
- <dd>Se o valor deste atributo for <code>yes</code>, o texto de definição não será envolvido. O valor padrão é <code>no</code>.</dd>
-</dl>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#Exemplos).
 
-<p>Para exemplos, veja <a href="/pt-BR/docs/Web/HTML/Element/dl#Exemplos">os exemplos de &lt;dl&gt;</a>.</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                                            | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("html.elements.dd")}}
 
-<p>{{Compat("html.elements.dd")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTMLELement("dl")}}</li>
- <li>{{HTMLElement("dt")}}</li>
-</ul>
+- {{HTMLELement("dl")}}
+- {{HTMLElement("dt")}}

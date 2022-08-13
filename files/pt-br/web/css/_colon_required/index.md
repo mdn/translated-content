@@ -1,85 +1,54 @@
 ---
 title: ':required'
-slug: 'Web/CSS/:required'
-translation_of: 'Web/CSS/:required'
+slug: Web/CSS/:required
+translation_of: Web/CSS/:required
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:required</code></strong> representa qualquer {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} contendo o atributo {{ htmlattrxref("required", "input") }}.</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:required`** representa qualquer {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} contendo o atributo {{ htmlattrxref("required", "input") }}.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer &lt;input&gt; requerido */
+```css
+/* Seleciona qualquer <input> requerido */
 input:required {
   border: 1px dashed red;
-}</pre>
+}
+```
 
-<p>Esta pseudo-classe é utilizada para destacar campos que devem ter dados válidos antes do formulário ser submetido.</p>
+Esta pseudo-classe é utilizada para destacar campos que devem ter dados válidos antes do formulário ser submetido.
 
-<div class="note">
-<p><strong>Nota:</strong> A pseudo-classe {{cssxref(":optional")}} seleciona campos do formulário que são <em>opcionais</em>.</p>
-</div>
+> **Note:** **Nota:** A pseudo-classe {{cssxref(":optional")}} seleciona campos do formulário que são _opcionais_.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Veja {{cssxref(":invalid")}} como exemplo.</p>
+Veja {{cssxref(":invalid")}} como exemplo.
 
-<h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
+## Preocupações com acessibilidade
 
-<p>Elementos {{htmlelement("input")}} obrigatórios devem ter o  atributo {{ htmlattrxref("required", "input") }} atribuídos. Isso garante que pessoas que navegam com auxílio de recursos de acessibilidade, como o leitor de tela, possam entender quais campos precisam ter conteúdos válidos para garantir a submissão dos dados .</p>
+Elementos {{htmlelement("input")}} obrigatórios devem ter o atributo {{ htmlattrxref("required", "input") }} atribuídos. Isso garante que pessoas que navegam com auxílio de recursos de acessibilidade, como o leitor de tela, possam entender quais campos precisam ter conteúdos válidos para garantir a submissão dos dados .
 
-<p>Se o formulário também possui campos <a href="/en-US/docs/Web/CSS/:optional">opcionais</a>, entradas requeridas devem ser indicadas visualmente usando um tratamento que não seja apenas a cor para passar o significado. Usualmente, textos descritivos e/ou um ícone são utilizados.</p>
+Se o formulário também possui campos [opcionais](/pt-BR/docs/Web/CSS/:optional), entradas requeridas devem ser indicadas visualmente usando um tratamento que não seja apenas a cor para passar o significado. Usualmente, textos descritivos e/ou um ícone são utilizados.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html" rel="noopener">Understanding Success Criterion 3.3.2  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 3.3 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes)
+- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-required', ':required') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Sem mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-required', ':required') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define a semântica de validação e de restrição HTML.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Sem mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':required') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Define a pseudo-classe, mas não a semântica associada.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                   | Comentário                                             |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
+| {{ SpecName('HTML WHATWG', '#selector-required', ':required') }}         | {{ Spec2('HTML WHATWG') }}     | Sem mudança.                                           |
+| {{ SpecName('HTML5 W3C', '#selector-required', ':required') }}         | {{ Spec2('HTML5 W3C') }}         | Define a semântica de validação e de restrição HTML.   |
+| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}             | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                           |
+| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':required') }} | {{ Spec2('CSS3 Basic UI') }}     | Define a pseudo-classe, mas não a semântica associada. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("css.selectors.required")}}
 
+## Veja também
 
-<p>{{Compat("css.selectors.required")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Outras pseudo-classe relacionadas a validação: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Validação de dados de formulário</a></li>
-</ul>
+- Outras pseudo-classe relacionadas a validação: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
+- [Validação de dados de formulário](/pt-BR/docs/Learn/HTML/Forms/Form_validation)

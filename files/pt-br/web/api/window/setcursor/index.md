@@ -3,26 +3,24 @@ title: Window.setCursor()
 slug: Web/API/Window/setCursor
 translation_of: Web/API/Window/setCursor
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div> </div>
+## Sumário
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+Altera o cursor para a janela atual.
 
-<p>Altera o cursor para a janela atual.</p>
+## Exemplo
 
-<h2 id="Example" name="Example">Exemplo</h2>
+    function setBusyCursor(enable) {
+      window.setCursor(enable ? "wait" : "auto");
+    }
 
-<pre class="syntaxbox">function setBusyCursor(enable) {
-  window.setCursor(enable ? "wait" : "auto");
-}</pre>
+## Notas
 
-<h2 id="Notes" name="Notes">Notas</h2>
+O cursor não retornará ao seu padrão até que seja definido novamente para `auto`.
 
-<p>O cursor não retornará ao seu padrão até que seja definido novamente para <code>auto</code>.</p>
+Esta função é parte do [ChromeWindow interface](/pt-BR/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow). Esta função não está habilitada para páginas web, que podem usar a propriedade CSS {{cssxref("cursor")}} em seu lugar.
 
-<p>Esta função é parte do <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow">ChromeWindow interface</a>. Esta função não está habilitada para páginas web, que podem usar a propriedade CSS {{cssxref("cursor")}} em seu lugar.</p>
+## Especificação
 
-<h2 id="Especificação">Especificação</h2>
-
-<p>{{dom0}}</p>
+{{dom0}}

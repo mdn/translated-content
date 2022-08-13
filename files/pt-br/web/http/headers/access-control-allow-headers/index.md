@@ -10,116 +10,89 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Access-Control-Allow-Headers</code></strong> é usado na resposta à uma {{glossary("preflight request")}} na qual incluí o cabeçalho  {{HTTPHeader("Access-Control-Request-Headers")}} para indicar quais cabeçalhos HTTP podem ser utilizados durante a requisição efetiva.</p>
+O cabeçalho de resposta **`Access-Control-Allow-Headers`** é usado na resposta à uma {{glossary("preflight request")}} na qual incluí o cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} para indicar quais cabeçalhos HTTP podem ser utilizados durante a requisição efetiva.
 
-<p>Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}}.</p>
+Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}}.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Allow-Headers: <em>&lt;nome-do-cabeçalho&gt;</em>[, <em>&lt;nome-do-cabeçalho&gt;</em>]*
-Access-Control-Allow-Headers: *
-</pre>
+    Access-Control-Allow-Headers: <nome-do-cabeçalho>[, <nome-do-cabeçalho>]*
+    Access-Control-Allow-Headers: *
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>&lt;nome-do-cabeçalho&gt;</code></dt>
- <dd>O nome de um cabeçalho suportado. O cabeçalho pode listar qualquer quantidade de cabeçalhos, desde que sejam separados por vírgula.</dd>
- <dt><code>*</code> (coringa)</dt>
- <dd>O valor "<code>*</code>" só conta como um valor coringa para requisições sem credenciais (requisições sem <a href="/en-US/docs/Web/HTTP/Cookies">cookies HTTP</a> ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de cabeçalho literal "<code>*</code>" sem qualquer semântica especial. Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode utilizar um coringa e sempre precisa ser listado explicitamente.</dd>
-</dl>
+- `<nome-do-cabeçalho>`
+  - : O nome de um cabeçalho suportado. O cabeçalho pode listar qualquer quantidade de cabeçalhos, desde que sejam separados por vírgula.
+- `*` (coringa)
+  - : O valor "`*`" só conta como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica especial. Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode utilizar um coringa e sempre precisa ser listado explicitamente.
 
-<p>Os cabeçalhos {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} são sempre permitidos e não precisam ser listados por este cabeçalho necessariamente. Entretanto, note que restrições adicionais são aplicadas com estes cabeçalhos envolvidos por listar estes cabeçalhos no cabeçalho <code>Access-Control-Allow-Headers</code> também.</p>
+Os cabeçalhos {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} são sempre permitidos e não precisam ser listados por este cabeçalho necessariamente. Entretanto, note que restrições adicionais são aplicadas com estes cabeçalhos envolvidos por listar estes cabeçalhos no cabeçalho `Access-Control-Allow-Headers` também.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Um_cabeçalho_customizado">Um cabeçalho customizado</h3>
+### Um cabeçalho customizado
 
-<p>Aqui está um exemplos de como um cabeçalho <code>Access-Control-Allow-Headers</code> pode se parecer. Isso indica que em adição aos <em>CORS-safelisted request headers</em>, um cabeçalho customizado chamado <code>X-Custom-Header</code> é suportado por requisições CORS pelo servidor.</p>
+Aqui está um exemplos de como um cabeçalho `Access-Control-Allow-Headers` pode se parecer. Isso indica que em adição aos _CORS-safelisted request headers_, um cabeçalho customizado chamado `X-Custom-Header` é suportado por requisições CORS pelo servidor.
 
-<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
+    Access-Control-Allow-Headers: X-Custom-Header
 
-<h3 id="Múltiplos_cabeçalhos">Múltiplos cabeçalhos</h3>
+### Múltiplos cabeçalhos
 
-<p>Este exemplo mostra o cabeçalho <code>Access-Control-Allow-Headers</code> quando é especificado para suportar diversos cabeçalhos.</p>
+Este exemplo mostra o cabeçalho `Access-Control-Allow-Headers` quando é especificado para suportar diversos cabeçalhos.
 
-<pre>Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests</pre>
+    Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 
-<h3 id="Burlando_restrições_adicionais">Burlando restrições adicionais</h3>
+### Burlando restrições adicionais
 
-<p>Apesar de que {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} são sempre permitidos e geralmente não precisam ser listados no cabeçalho <code>Access-Control-Allow-Headers</code>, listá-los de qualquer forma irá envolver as <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">restrições adicionais</a> que são aplicadas.</p>
+Apesar de que {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} são sempre permitidos e geralmente não precisam ser listados no cabeçalho `Access-Control-Allow-Headers`, listá-los de qualquer forma irá envolver as [restrições adicionais](/pt-BR/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions) que são aplicadas.
 
-<pre>Access-Control-Allow-Headers: Accept</pre>
+    Access-Control-Allow-Headers: Accept
 
-<h3 id="Exemplo_de_requisição_pré-vôo">Exemplo de requisição pré-vôo</h3>
+### Exemplo de requisição pré-vôo
 
-<p>Vamos dar uma olhada em um exemplo de requisição pré-vôo envolvendo o cabeçalho <code>Access-Control-Allow-Headers</code>.</p>
+Vamos dar uma olhada em um exemplo de requisição pré-vôo envolvendo o cabeçalho `Access-Control-Allow-Headers`.
 
-<h4 id="Requisição">Requisição</h4>
+#### Requisição
 
-<p>Primeiro, a requisição. A requisição pré-vôo é uma requisição {{HTTPMethod("OPTIONS")}} que inclui algumas combinações de três cabeçalhos de requisições pré-vôo: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e {{HTTPHeader("Origin")}}, como por exemplo:</p>
+Primeiro, a requisição. A requisição pré-vôo é uma requisição {{HTTPMethod("OPTIONS")}} que inclui algumas combinações de três cabeçalhos de requisições pré-vôo: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e {{HTTPHeader("Origin")}}, como por exemplo:
 
-<pre>OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org</pre>
+    OPTIONS /resource/foo
+    Access-Control-Request-Method: DELETE
+    Access-Control-Request-Headers: origin, x-requested-with
+    Origin: https://foo.bar.org
 
-<h4 id="Resposta">Resposta</h4>
+#### Resposta
 
-<p>Se o servidor permite requisições CORS para usar o método {{HTTPMethod("DELETE")}}, ele responde com um cabeçalho de resposta {{HTTPHeader("Access-Control-Allow-Methods")}}, no qual lista <code>DELETE</code> junto à outros métodos suportados:</p>
+Se o servidor permite requisições CORS para usar o método {{HTTPMethod("DELETE")}}, ele responde com um cabeçalho de resposta {{HTTPHeader("Access-Control-Allow-Methods")}}, no qual lista `DELETE` junto à outros métodos suportados:
 
-<pre>HTTP/1.1 200 OK
-Content-Length: 0
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400</pre>
+    HTTP/1.1 200 OK
+    Content-Length: 0
+    Connection: keep-alive
+    Access-Control-Allow-Origin: https://foo.bar.org
+    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+    Access-Control-Max-Age: 86400
 
-<p>Se o método requisitado não é suportado, o servidor irá responder com um erro.</p>
+Se o método requisitado não é suportado, o servidor irá responder com um erro.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                   | Comentário        |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
+| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Allow-Headers")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Headers")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Access-Control-Request-Headers")}}

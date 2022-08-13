@@ -3,55 +3,54 @@ title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <strong><code>Symbol.isConcatSpreadable</code></strong> é um símbolo conhecido que é usado para configurar se um objeto deve ser achatado para um elemento da array quando usado o método {{jsxref("Array.prototype.concat()")}}.</p>
+O **`Symbol.isConcatSpreadable`** é um símbolo conhecido que é usado para configurar se um objeto deve ser achatado para um elemento da array quando usado o método {{jsxref("Array.prototype.concat()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
 
+## Descrição
 
+O `@@isConcatSpreadable` símbolo (`Symbol.isConcatSpreadable`) pode também ser definido como uma propriedade própria ou herdada e seu valor é um booleano. Ele consegue controlar o comportamento das arrays e objetos semelhantes a array:
 
-<h2 id="Descrição">Descrição</h2>
+- For array objects, the default behavior is to spread (flatten) elements. `Symbol.isConcatSpreadable` can avoid flattening in these cases.
+- For array-like objects, the default behavior is no spreading or flattening. `Symbol.isConcatSpreadable` can force flattening in these cases.
 
-<p>O <code>@@isConcatSpreadable</code> símbolo (<code>Symbol.isConcatSpreadable</code>) pode também ser definido como uma propriedade própria ou herdada e seu valor é um booleano. Ele consegue controlar o comportamento das arrays e objetos semelhantes a array:</p>
+{{js_property_attributes(0,0,0)}}
 
-<ul>
- <li>For array objects, the default behavior is to spread (flatten) elements. <code>Symbol.isConcatSpreadable</code> can avoid flattening in these cases.</li>
- <li>For array-like objects, the default behavior is no spreading or flattening. <code>Symbol.isConcatSpreadable</code> can force flattening in these cases.</li>
-</ul>
+## Exemplos
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+### Arrays
 
-<h2 id="Exemplos">Exemplos</h2>
+Por padrão, o {{jsxref("Array.prototype.concat()")}} espalha (alinha) arrays no seus resultados:
 
-<h3 id="Arrays">Arrays</h3>
-
-<p>Por padrão, o {{jsxref("Array.prototype.concat()")}} espalha (alinha) arrays no seus resultados:</p>
-
-<pre class="brush: js notranslate">let alpha = ['a', 'b', 'c'],
+```js
+let alpha = ['a', 'b', 'c'],
 let numeric = [1, 2, 3]
 
 let alphaNumeric = alpha.concat(numeric)
 
 console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<p>Quando configurando o <code>Symbol.isConcatSpreadable</code> para <code>false</code>, o comportamento padrão dele:</p>
+Quando configurando o `Symbol.isConcatSpreadable` para `false`, o comportamento padrão dele:
 
-<pre class="brush: js notranslate">let alpha = ['a', 'b', 'c'],
+```js
+let alpha = ['a', 'b', 'c'],
 let numeric = [1, 2, 3]
 
 numeric[Symbol.isConcatSpreadable] = false
 let alphaNumeric = alpha.concat(numeric)
 
 console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
-</pre>
+```
 
-<h3 id="Objetos_de_array_semelhantes">Objetos de array semelhantes </h3>
+### Objetos de array semelhantes
 
-<p>Para objetos de array semelhantes, o padrão não é espalhado. <code>Symbol.isConcatSpreadable</code>precisa ser configurado para <code>true</code> para poder conseguir um a array alinhada:</p>
+Para objetos de array semelhantes, o padrão não é espalhado. `Symbol.isConcatSpreadable`precisa ser configurado para `true` para poder conseguir um a array alinhada:
 
-<pre class="brush: js notranslate">let x = [1, 2, 3]
+```js
+let x = [1, 2, 3]
 
 let fakeArray = {
   [Symbol.isConcatSpreadable]: true,
@@ -61,33 +60,20 @@ let fakeArray = {
 }
 
 x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> A propriedade <code>length</code> é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, <code>length:2</code> indica que duas propriedades tem de ser adicionado.</p>
-</div>
+> **Note:** A propriedade `length` é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, `length:2` indica que duas propriedades tem de ser adicionado.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}

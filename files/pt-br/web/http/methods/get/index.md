@@ -8,69 +8,30 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/GET
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
 
-<div>O <strong>método HTTP GET</strong> solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.</div>
+| Requisição tem corpo                           | Não |
+| ---------------------------------------------- | --- |
+| Resposta bem-sucedida tem corpo                | Sim |
+| [Seguro](/pt-BR/docs/Glossary/Safe)            | Sim |
+| [Idempotente](/pt-BR/docs/Glossary/Idempotent) | Sim |
+| [Cacheável](/pt-BR/docs/Glossary/Cacheable)    | Sim |
+| Permitido em formulários HTML                  | SIm |
 
-<div> </div>
+## Sintaxe
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Requisição tem corpo</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">Resposta bem-sucedida tem corpo</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe">Seguro</a></th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent">Idempotente</a></th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Cacheable">Cacheável</a></th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido em formulários HTML</th>
-   <td>SIm</td>
-  </tr>
- </tbody>
-</table>
+    GET /index.html
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Especificações
 
-<pre class="syntaxbox">GET /index.html
-</pre>
+| Especificação                            | Título                                                        |
+| ---------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "GET", "4.3.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("http.methods.GET")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Veja também
 
-<p>{{Compat("http.methods.GET")}}</p>
-
-<p> </p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPHeader("Range")}}

@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/Abstraction
 original_slug: Glossario/Abstração
 ---
-<p>Abstração em {{Glossary("programação de computadores")}} é uma forma de reduzir a complexidade e tornar o projeto e a implementação mais eficientes em sistemas complexos de software. Ela esconde a complexidade técnica de um sistema por trás de uma {{Glossary("API", "APIs")}} mais simples.</p>
+Abstração em {{Glossary("programação de computadores")}} é uma forma de reduzir a complexidade e tornar o projeto e a implementação mais eficientes em sistemas complexos de software. Ela esconde a complexidade técnica de um sistema por trás de uma {{Glossary("API", "APIs")}} mais simples.
 
-<h2 id="Saiba_mais"><strong>Saiba mais</strong></h2>
+## Saiba mais
 
-<h3 id="Conhecimentos_gerais"><strong>Conhecimentos gerais</strong></h3>
+### Conhecimentos gerais
 
-<ul>
- <li>{{interwiki("wikipedia", "Abstração (programação)", "Abstração")}} na Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Abstração (programação)", "Abstração")}} na Wikipédia

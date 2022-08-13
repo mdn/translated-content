@@ -8,90 +8,55 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/DELETE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
 
-<div>O <strong>método de requisição HTTP DELETE</strong> remove o recurso especificado.</div>
+| Requisição tem corpo                                            | Talvez |
+| --------------------------------------------------------------- | ------ |
+| A resposta bem sucedida tem corpo                               | Talvez |
+| {{Glossary("Seguro")}}                                    | Não    |
+| {{Glossary("Idempotente")}}                            | Sim    |
+| {{Glossary("Cacheável")}}                            | Não    |
+| Aceito nos [formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms) | Não    |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Requisição tem corpo</th>
-   <td>Talvez</td>
-  </tr>
-  <tr>
-   <th scope="row">A resposta bem sucedida tem corpo</th>
-   <td>Talvez</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Seguro")}}</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheável")}}</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">Aceito nos <a href="/en-US/docs/Web/Guide/HTML/Forms">formulários HTML</a></th>
-   <td>Não</td>
-  </tr>
- </tbody>
-</table>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    DELETE /arquivo.html HTTP/1.1
 
-<pre class="syntaxbox notranslate">DELETE /arquivo.html HTTP/1.1
-</pre>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+### Requisição
 
-<h3 id="Requisição">Requisição</h3>
+    DELETE /arquivo.html HTTP/1.1
 
-<pre class="notranslate">DELETE /arquivo.html HTTP/1.1</pre>
+### Respostas
 
-<h3 id="Respostas">Respostas</h3>
+Se um método `DELETE` for aplicado com sucesso, há muitos códigos de status de resposta possíveis:
 
-<p>Se um método <code>DELETE</code> for aplicado com sucesso, há muitos códigos de status de resposta possíveis:</p>
+- Um código de status {{HTTPStatus("202")}} (`Accepted`) se a ação provavelmente teve sucesso, porém ainda não foi realizada.
+- Um código de status {{HTTPStatus("204")}} (`No Content`) se a ação foi realizada e nenhuma outra informação deve ser fornecida.
+- Um código de status {{HTTPStatus("200")}} (`OK`) se a ação foi realizada e a mensagem de resposta inclui uma representação descrevendo o status.
 
-<ul>
- <li> Um código de status {{HTTPStatus("202")}} (<code>Accepted</code>) se a ação provavelmente teve sucesso, porém ainda não foi realizada.</li>
- <li>Um código de status {{HTTPStatus("204")}} (<code>No Content</code>) se a ação foi realizada e nenhuma outra informação deve ser fornecida.</li>
- <li>Um código de status {{HTTPStatus("200")}} (<code>OK</code>) se a ação foi realizada e a mensagem de resposta inclui uma representação descrevendo o status.</li>
-</ul>
+<!---->
 
-<pre class="notranslate">HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+    HTTP/1.1 200 OK
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Arquivo removido.&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    <html>
+      <body>
+        <h1>Arquivo removido.</h1>
+      </body>
+    </html>
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "DELETE", "4.3.5")}}</td>
-   <td>Protocolo de Transferência de Hipertexto (HTTP/1.1): Semântica e conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Título                                                                    |
+| -------------------------------------------- | ------------------------------------------------------------------------- |
+| {{RFC("7231", "DELETE", "4.3.5")}} | Protocolo de Transferência de Hipertexto (HTTP/1.1): Semântica e conteúdo |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.methods.DELETE")}}</p>
+{{Compat("http.methods.DELETE")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}</li>
-</ul>
+- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}

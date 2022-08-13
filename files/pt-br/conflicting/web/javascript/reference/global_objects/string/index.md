@@ -4,50 +4,25 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 translation_of: Web/API/DOMString
 original_slug: Web/API/DOMString
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>DOMString</code></strong> é uma String UTF-16. Como o JavaScript já usa tais strings, uma <code>DOMString</code> é mapeada diretamente a uma {{jsxref("String")}}.</p>
+**`DOMString`** é uma String UTF-16. Como o JavaScript já usa tais strings, uma `DOMString` é mapeada diretamente a uma {{jsxref("String")}}.
 
-<p>Passando <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> para um método ou parâmetro que aceite uma <code>DOMString</code>, tal valor é convertido para a string <code>"null"</code>.</p>
+Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para um método ou parâmetro que aceite uma `DOMString`, tal valor é convertido para a string `"null"`.
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Reformulação da definição para remover alguns casos estranhos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Nenhuma mudança da {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Nenhuma mudança da {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment                                                        |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------- |
+| {{SpecName('WebIDL', '#idl-DOMString', 'DOMString')}}                     | {{Spec2('WebIDL')}}     | Reformulação da definição para remover alguns casos estranhos. |
+| {{SpecName('DOM3 Core', 'core.html#DOMString', 'DOMString')}}             | {{Spec2('DOM3 Core')}} | Nenhuma mudança da {{SpecName('DOM2 Core')}}            |
+| {{SpecName('DOM2 Core', 'core.html#ID-C74D1578', 'DOMString')}}         | {{Spec2('DOM2 Core')}} | Nenhuma mudança da {{SpecName('DOM1')}}                |
+| {{SpecName('DOM1', 'level-one-core.html#ID-C74D1578', 'DOMString')}} | {{Spec2('DOM1')}}     | Definição inicial.                                             |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
- <li>{{domxref("USVString")}}</li>
- <li>{{domxref("CSSOMString")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/String_view" title="/en-US/docs/Web/JavaScript/Typed_arrays/String_view"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
- <li><a href="/pt-BR/docs/Web/API/DOMString/Binary">Binary strings</a></li>
-</ul>
+- [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- {{domxref("USVString")}}
+- {{domxref("CSSOMString")}}
+- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/String_view)
+- [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)

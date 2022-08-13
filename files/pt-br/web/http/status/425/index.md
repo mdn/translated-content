@@ -3,31 +3,20 @@ title: 425 Too Early
 slug: Web/HTTP/Status/425
 translation_of: Web/HTTP/Status/425
 ---
-<div>{{SeeCompatTable}}{{HTTPSidebar}}</div>
+{{SeeCompatTable}}{{HTTPSidebar}}
 
-<p>O status HTTP <code><strong>425 Too Early</strong></code> indica que o servidor não quer correr o risco de processar uma requisição que pode ser repetida, o que cria um potencial risco para ataques de repetição.</p>
+O status HTTP **`425 Too Early`** indica que o servidor não quer correr o risco de processar uma requisição que pode ser repetida, o que cria um potencial risco para ataques de repetição.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">425 Too Early</pre>
+    425 Too Early
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("8470", "425: Early Data", "5.2")}}</td>
-   <td>Using Early Data in HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                   |
+| -------------------------------------------------------- | ------------------------ |
+| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.425")}}</p>
+{{Compat("http.status.425")}}

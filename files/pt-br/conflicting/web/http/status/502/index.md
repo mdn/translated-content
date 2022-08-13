@@ -4,14 +4,12 @@ slug: conflicting/Web/HTTP/Status/502
 translation_of: Glossary/502
 original_slug: Glossary/502
 ---
-<p>Um erro {{Glossary("HTTP")}}  que significa "Bad Gateway".</p>
+Um erro {{Glossary("HTTP")}} que significa "Bad Gateway".
 
-<p>O {{Glossary("Servidor","Servidor")}} pode agir como um gateway ou proxy (go-between) entre um cliente  (como seu navegador web) ou outro, servidor de upstream. Quando sua requisição tenta acessar uma {{Glossary("URL")}}, o servidor de gateway pode retransmitir sua requisição para o servidor de upstream. "502" significa que o servidor de upstream retorou uma resposta inválida.</p>
+O {{Glossary("Servidor","Servidor")}} pode agir como um gateway ou proxy (go-between) entre um cliente (como seu navegador web) ou outro, servidor de upstream. Quando sua requisição tenta acessar uma {{Glossary("URL")}}, o servidor de gateway pode retransmitir sua requisição para o servidor de upstream. "502" significa que o servidor de upstream retorou uma resposta inválida.
 
-<p>Normalmente o servidor de upstream não esta fora (ou seja, não fornece resposta ao gateway/proxy), mas simplesmente não entende o mesmo protocolo de troca de dados(data-exchange) como o gateway/proxy. Os {{Glossary("Protocol", "protocols")}} de Internet são bem explícitos, então um 502 normalmente significa que uma ou ambas as maquinas estão programadas incorretamente ou parcialmente.</p>
+Normalmente o servidor de upstream não esta fora (ou seja, não fornece resposta ao gateway/proxy), mas simplesmente não entende o mesmo protocolo de troca de dados(data-exchange) como o gateway/proxy. Os {{Glossary("Protocol", "protocols")}} de Internet são bem explícitos, então um 502 normalmente significa que uma ou ambas as maquinas estão programadas incorretamente ou parcialmente.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes">list of HTTP response codes</a></li>
-</ul>
+- [list of HTTP response codes](/pt-BR/docs/Web/HTTP/Response_codes)

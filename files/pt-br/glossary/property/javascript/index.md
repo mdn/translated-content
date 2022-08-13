@@ -7,22 +7,18 @@ tags:
 translation_of: Glossary/property/JavaScript
 original_slug: Glossario/property/JavaScript
 ---
-<p>Uma <strong>propriedade Javascript</strong> é uma característica de um objeto, frequentemente descrita como atributos associados à uma estrutura de dados.</p>
+Uma **propriedade Javascript** é uma característica de um objeto, frequentemente descrita como atributos associados à uma estrutura de dados.
 
-<p>Há dois tipos de propriedades: </p>
+Há dois tipos de propriedades:
 
-<ul>
- <li><em>Propriedades de instâncias </em>que contém informação específica para dada instância de objeto, e </li>
- <li><em>Propriedades estáticas </em>que contém informação compartilhada com todas as instâncias de objetos.</li>
-</ul>
+- _Propriedades de instâncias_ que contém informação específica para dada instância de objeto, e
+- _Propriedades estáticas_ que contém informação compartilhada com todas as instâncias de objetos.
 
-<p>Uma propriedade tem nome (uma {{glossary("string")}}) e um valor ({{glossary("primitive", "primitivo")}}, {{glossary("method", "método")}} ou uma {{glossary("object reference", "referência a um objeto")}}). Perceba que quando dizemos que "uma propriedade contém um objeto", é apenas um atalho para "uma propriedade contém uma <em>referência</em> a um objeto". Essa distinção é importante porque o objeto referenciado original continua inalterado quando você altera o valor da propriedade.</p>
+Uma propriedade tem nome (uma {{glossary("string")}}) e um valor ({{glossary("primitive", "primitivo")}}, {{glossary("method", "método")}} ou uma {{glossary("object reference", "referência a um objeto")}}). Perceba que quando dizemos que "uma propriedade contém um objeto", é apenas um atalho para "uma propriedade contém uma _referência_ a um objeto". Essa distinção é importante porque o objeto referenciado original continua inalterado quando você altera o valor da propriedade.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{InterWiki('wikipedia','Property (programming)')}} on Wikipedia</li>
- <li><a href="/pt-BR/docs/Aprender/JavaScript/Objetos">Introdução a objetos em JavaScript</a></li>
-</ul>
+- {{InterWiki('wikipedia','Property (programming)')}} on Wikipedia
+- [Introdução a objetos em JavaScript](/pt-BR/docs/Aprender/JavaScript/Objetos)

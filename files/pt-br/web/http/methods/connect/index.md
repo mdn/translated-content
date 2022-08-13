@@ -7,78 +7,47 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <strong>médoto HTTP <code>CONNECT</code> </strong>começa a comunicação bidirecional com o recurso solicitado. Ele pode ser usado para abrir um túnel.</p>
+O **médoto HTTP `CONNECT` **começa a comunicação bidirecional com o recurso solicitado. Ele pode ser usado para abrir um túnel.
 
-<p>Por exemplo, o método <code>CONNECT</code> pode ser utilizado para acessar websites que usam {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). O cliente solicita a um servidor proxy HTTP que tunelize a conexão TCP para o destino desejado. O servidor então procede para fazer a conexão em nome do cliente. Uma vez que a conexão foi estabelecida pelo servidor, o servidor Proxy continua a proxy do fluxo TCP para e do cliente.</p>
+Por exemplo, o método `CONNECT` pode ser utilizado para acessar websites que usam {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). O cliente solicita a um servidor proxy HTTP que tunelize a conexão TCP para o destino desejado. O servidor então procede para fazer a conexão em nome do cliente. Uma vez que a conexão foi estabelecida pelo servidor, o servidor Proxy continua a proxy do fluxo TCP para e do cliente.
 
-<p><code>CONNECT</code> é um método hop-by-hop.</p>
+`CONNECT` é um método hop-by-hop.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Requisição tem corpo</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">Resposta bem sucedida tem corpo</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Seguro")}}</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheável")}}</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido em formulários HTML</th>
-   <td>Não</td>
-  </tr>
- </tbody>
-</table>
+| Requisição tem corpo                 | Sim |
+| ------------------------------------ | --- |
+| Resposta bem sucedida tem corpo      | Sim |
+| {{Glossary("Seguro")}}         | Não |
+| {{Glossary("Idempotente")}} | Não |
+| {{Glossary("Cacheável")}} | Não |
+| Permitido em formulários HTML        | Não |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">CONNECT www.exemplo.com:443 HTTP/1.1
-</pre>
+    CONNECT www.exemplo.com:443 HTTP/1.1
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Alguns servidores de proxy podem precisar de autoridade para criar um túnel. Veja mais no header {{HTTPHeader("Proxy-Authorization")}}</p>
+Alguns servidores de proxy podem precisar de autoridade para criar um túnel. Veja mais no header {{HTTPHeader("Proxy-Authorization")}}
 
-<pre class="line-numbers  language-html">CONNECT server.exemplo.com:80 HTTP/1.1
+```html
+CONNECT server.exemplo.com:80 HTTP/1.1
 Host: server.exemplo.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "CONNECT", "4.3.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Título                                                       |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.methods.CONNECT")}}</p>
+{{Compat("http.methods.CONNECT")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Glossary("Servidor proxy")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Servidor proxy")}}
+- {{HTTPHeader("Proxy-Authorization")}}

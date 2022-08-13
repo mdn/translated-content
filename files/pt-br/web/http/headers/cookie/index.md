@@ -10,64 +10,40 @@ tags:
   - requisição
 translation_of: Web/HTTP/Headers/Cookie
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de requisição HTTP <strong><code>Cookie</code></strong> contém <a href="/en-US/docs/Web/HTTP/Cookies">cookies HTTP</a> armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.</p>
+O cabeçalho de requisição HTTP **`Cookie`** contém [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 
-<p>O cabeçalho <code>Cookie</code> é opicional e pode ser omitido se, por exemplo, as configurações de privacidade do navegador bloqueiam <em>cookies</em>.</p>
+O cabeçalho `Cookie` é opicional e pode ser omitido se, por exemplo, as configurações de privacidade do navegador bloqueiam _cookies_.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sim</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | sim                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Cookie: &lt;cookie-list&gt;
-Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3</pre>
+    Cookie: <cookie-list>
+    Cookie: name=value
+    Cookie: name=value; name2=value2; name3=value3
 
-<dl>
- <dt>&lt;cookie-list&gt;</dt>
- <dd>Uma lista de pares nome-valor na forma de <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code>. Pares na lista são separados por ponto e vírgula e um espaço (<code>'; '</code>).</dd>
-</dl>
+- \<cookie-list>
+  - : Uma lista de pares nome-valor na forma de `<cookie-name>=<cookie-value>`. Pares na lista são separados por ponto e vírgula e um espaço (`'; '`).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;</pre>
+    Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("6265", "Cookie", "5.4")}}</td>
-   <td>HTTP State Management Mechanism</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Título                          |
+| -------------------------------------------- | ------------------------------- |
+| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Cookie")}}</p>
+{{Compat("http.headers.Cookie")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Set-Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Set-Cookie")}}
+- {{domxref("Document.cookie")}}

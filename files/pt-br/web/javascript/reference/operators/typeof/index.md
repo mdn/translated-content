@@ -7,82 +7,45 @@ tags:
   - unário
 translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O operador <code>typeof</code> retorna uma string indicando o tipo de um operando.</p>
+O operador `typeof` retorna uma string indicando o tipo de um operando.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>O operador <code>typeof</code> pode ser utilizado das seguintes maneiras:</p>
+O operador `typeof` pode ser utilizado das seguintes maneiras:
 
-<pre class="syntaxbox"><code>typeof <code><em>operando</em></code></code></pre>
+    typeof operando
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p><code><em>operand</em></code>o é a string, variável, keyword, ou objeto para que o tipo do mesmo seja retornado. O uso de parênteses é opcional.</p>
+`operand`o é a string, variável, keyword, ou objeto para que o tipo do mesmo seja retornado. O uso de parênteses é opcional.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Esta tabela resume os possíveis valores que são retornados pelo <code>typeof</code>:</p>
+Esta tabela resume os possíveis valores que são retornados pelo `typeof`:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Tipo</th>
-   <th scope="col">Resultado</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Undefined</td>
-   <td><code>"undefined"</code></td>
-  </tr>
-  <tr>
-   <td>Null</td>
-   <td><code>"object"</code></td>
-  </tr>
-  <tr>
-   <td>Boolean</td>
-   <td><code>"boolean"</code></td>
-  </tr>
-  <tr>
-   <td>Number</td>
-   <td><code>"number"</code></td>
-  </tr>
-  <tr>
-   <td>String</td>
-   <td><code>"string"</code></td>
-  </tr>
-  <tr>
-   <td>Host object (provided by the JS environment)</td>
-   <td><em>Implementation-dependent</em></td>
-  </tr>
-  <tr>
-   <td>Function object (implements [[Call]] in ECMA-262 terms)</td>
-   <td><code>"function"</code></td>
-  </tr>
-  <tr>
-   <td>E4X XML object</td>
-   <td>"xml"</td>
-  </tr>
-  <tr>
-   <td>E4X XMLList object</td>
-   <td>"xml"</td>
-  </tr>
-  <tr>
-   <td>Qualquer outro objeto</td>
-   <td><code>"object"</code></td>
-  </tr>
- </tbody>
-</table>
+| Tipo                                                    | Resultado                  |
+| ------------------------------------------------------- | -------------------------- |
+| Undefined                                               | `"undefined"`              |
+| Null                                                    | `"object"`                 |
+| Boolean                                                 | `"boolean"`                |
+| Number                                                  | `"number"`                 |
+| String                                                  | `"string"`                 |
+| Host object (provided by the JS environment)            | _Implementation-dependent_ |
+| Function object (implements [[Call]] in ECMA-262 terms) | `"function"`               |
+| E4X XML object                                          | "xml"                      |
+| E4X XMLList object                                      | "xml"                      |
+| Qualquer outro objeto                                   | `"object"`                 |
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Casos_comuns">Casos comuns</h3>
+### Casos comuns
 
-<pre class="brush:js">// Números - Numéricos
+```js
+// Números - Numéricos
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof Math.LN2 === 'number';
@@ -117,38 +80,38 @@ typeof new String("abc") === 'object';  // isso também é confuso, assim evite 
 // Funções
 typeof function(){} === 'function';
 typeof Math.sin === 'function';
-</pre>
+```
 
-<h3 id="null"><code>null</code></h3>
+### `null`
 
-<pre class="brush:js">// Desde os primóridos do JavaScript
+```js
+// Desde os primóridos do JavaScript
 typeof null === 'object';
-</pre>
+```
 
-<p>Na primeira implementação do JavaScript, valores em JavaScript foram representados com uma tag (etiqueta) de tipo e um valor. A tag de tipo para objetos foi 0. <code>null</code> foi representada com o ponteiro NULL (0x00 na maioria das plataformas). Consequentemente, null teve 0 como sua tag de tipo, portanto o <code>typeof</code> retorna esse valor. (necessário referência)</p>
+Na primeira implementação do JavaScript, valores em JavaScript foram representados com uma tag (etiqueta) de tipo e um valor. A tag de tipo para objetos foi 0. `null` foi representada com o ponteiro NULL (0x00 na maioria das plataformas). Consequentemente, null teve 0 como sua tag de tipo, portanto o `typeof` retorna esse valor. (necessário referência)
 
-<p>Está previsto <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">para ser corrigido na próxima versão do ECMAScript</a> (que estará disponível através de um opt-in). Isso resultará em um <code>typeof null === 'null'</code>.</p>
+Está previsto [para ser corrigido na próxima versão do ECMAScript](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (que estará disponível através de um opt-in). Isso resultará em um `typeof null === 'null'`.
 
-<h3 id="Expressões_regulares">Expressões regulares</h3>
+### Expressões regulares
 
-<p>Expressões regulares que podem ser chamadas foram uma adição não-padrão em alguns browsers (<span id="result_box" lang="pt"><span class="hps">necessidade</span> <span class="hps">de referência</span> <span class="hps">para dizer</span> <span class="hps">qual</span></span>).</p>
+Expressões regulares que podem ser chamadas foram uma adição não-padrão em alguns browsers (necessidade de referência para dizer qual).
 
-<pre class="brush:js">typeof /s/ === 'function'; // Chrome 1-12 ... // Não-conforme no ECMAScript 5.1
+```js
+typeof /s/ === 'function'; // Chrome 1-12 ... // Não-conforme no ECMAScript 5.1
 typeof /s/ === 'object'; // Firefox 5+ ...    // Conforme no ECMAScript 5.1
-</pre>
+```
 
-<h3 id="Outras_peculiaridades">Outras peculiaridades</h3>
+### Outras peculiaridades
 
-<h4 id="alert_versões_antigas_do_Internet_Explorer"><code>alert</code> versões antigas do Internet Explorer</h4>
+#### `alert` versões antigas do Internet Explorer
 
-<p>No IE 6, 7 e 8, <code>typeof alert === 'object'</code></p>
+No IE 6, 7 e 8, `typeof alert === 'object'`
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p><a class="external" href="http://ecma-international.org/ecma-262/5.1/#sec-11.4.3">ECMA-262 section 11.4.3</a></p>
+[ECMA-262 section 11.4.3](http://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Operators/instanceof" title="/en-US/docs/JavaScript/Reference/Operators/instanceof">instanceof</a></li>
-</ul>
+- [instanceof](/pt-BR/docs/JavaScript/Reference/Operators/instanceof)

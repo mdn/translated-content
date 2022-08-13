@@ -3,15 +3,16 @@ title: inline-size
 slug: Web/CSS/inline-size
 translation_of: Web/CSS/inline-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>A propriedade do <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>inline-size</code></strong> define o tamanho horizontal e vertical de um elemento bloco. Ele é correspondente a cada propriedade {{cssxref("width")}} ou a {{cssxref("height")}}, dependendo do valor de {{cssxref("writing-mode")}}.</p>
+A propriedade do [CSS](/pt-BR/docs/Web/CSS "CSS") **`inline-size`** define o tamanho horizontal e vertical de um elemento bloco. Ele é correspondente a cada propriedade {{cssxref("width")}} ou a {{cssxref("height")}}, dependendo do valor de {{cssxref("writing-mode")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inline-size: 300px;
 inline-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 inline-size: 75%;
 
 /* Keyword values */
@@ -27,65 +28,53 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: unset;
-</pre>
+```
 
-<p>Se o writing mode é orientado verticalmente, o valor de <code>inline-size</code> relaciona a altura do elemento; ao contrário, está relacionado a largura do elemento. A propriedade relacionada é a {{cssxref("block-size")}}, no qual define a outra dimensão do elemento.</p>
+Se o writing mode é orientado verticalmente, o valor de `inline-size` relaciona a altura do elemento; ao contrário, está relacionado a largura do elemento. A propriedade relacionada é a {{cssxref("block-size")}}, no qual define a outra dimensão do elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>A propriedade <code>inline-size</code> aproveita os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.</p>
+A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Texto de Exemplo&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Texto de Exemplo</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleText{
+```css
+.exampleText{
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                                           | Comentário        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definição Inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.inline-size")}}</p>
+{{Compat("css.properties.inline-size")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>As propriedades físicas mapeadas: {{cssxref("width")}} e {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- As propriedades físicas mapeadas: {{cssxref("width")}} e {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

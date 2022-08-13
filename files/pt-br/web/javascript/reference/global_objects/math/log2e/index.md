@@ -10,71 +10,47 @@ tags:
   - Referência(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Math.LOG2E</code></strong> representa o logaritmo com base 2 de <code>e</code>, aproximadamente 1.442:</p>
+A propriedade **`Math.LOG2E`** representa o logaritmo com base 2 de `e`, aproximadamente 1.442:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Por <code>LOG2E</code> ser uma propriedade estática de <code>Math</code>, deve-se sempre usá-la como <code>Math.LOG2E</code>, e não como propriedade de um objeto <code>Math</code> criado por você (<code>Math</code> não é um construtor).</p>
+Por `LOG2E` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.LOG2E`, e não como propriedade de um objeto `Math` criado por você (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.LOG2E">Usando <code>Math.LOG2E</code></h3>
+### Usando `Math.LOG2E`
 
-<p>A função a seguir retorna o logaritmo com base 2 de <code>e</code>:</p>
+A função a seguir retorna o logaritmo com base 2 de `e`:
 
-<pre class="brush: js">function getLog2e() {
+```js
+function getLog2e() {
   return Math.LOG2E;
 }
 
 getLog2e(); // 1.4426950408889634
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.4', 'Math.LOG2E')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.log2e', 'Math.LOG2E')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log2e', 'Math.LOG2E')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment                                            |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.4', 'Math.LOG2E')}}         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.log2e', 'Math.LOG2E')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.log2e', 'Math.LOG2E')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.LOG2E")}}</p>
+{{Compat("javascript.builtins.Math.LOG2E")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

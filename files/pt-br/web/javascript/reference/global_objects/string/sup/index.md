@@ -11,57 +11,49 @@ tags:
   - sup()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code>sup()</code> cria um elemento HTML <code><a class="external external-icon" href="/en-US/docs/Web/HTML/Element/sup" rel="noopener">&lt;sup&gt;</a></code> que faz com que uma string seja exibida como sobrescrito.</p>
+O método `sup()` cria um elemento HTML [`<sup>`](/en-US/docs/Web/HTML/Element/sup) que faz com que uma string seja exibida como sobrescrito.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.sup()</code></pre>
+    str.sup()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <code><a class="external external-icon" href="/pt-BR/docs/Web/HTML/Element/sup" rel="noopener">&lt;sup&gt;</a></code>.</p>
+Uma string contendo um elemento HTML [`<sup>`](/pt-BR/docs/Web/HTML/Element/sup).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>sup()</code> cria uma string dentro de uma tag <code>&lt;sup&gt;</code>: <code>"&lt;sup&gt;str&lt;/sup&gt;"</code></p>
+O método `sup()` cria uma string dentro de uma tag `<sup>`: `"<sup>str</sup>"`
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_os_métodos_sub_e_sup">Usando os métodos <code>sub()</code> e <code>sup()</code></h3>
+### Usando os métodos `sub()` e `sup()`
 
-<p>O exemplo a seguir usa os métodos {{jsxref("String.prototype.sub()", "sub()")}} e <code>sup()</code> para formatar uma string:</p>
+O exemplo a seguir usa os métodos {{jsxref("String.prototype.sub()", "sub()")}} e `sup()` para formatar uma string:
 
-<pre class="brush: js notranslate">var superText = 'superscript';
+```js
+var superText = 'superscript';
 var supText = 'supscript';
 
 console.log('This is what a ' + superText.sup() + ' looks like.');
-// "This is what a &lt;sup&gt;superscript&lt;/sup&gt; looks like."
+// "This is what a <sup>superscript</sup> looks like."
 
 console.log('This is what a ' + supText.sup() + ' looks like.');
-// "This is what a &lt;sup&gt;supscript&lt;/sup&gt; looks like."
-</pre>
+// "This is what a <sup>supscript</sup> looks like."
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.sup")}}</p>
+{{Compat("javascript.builtins.String.sup")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.sup()")}}</li>
-</ul>
+- {{jsxref("String.prototype.sup()")}}

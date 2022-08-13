@@ -3,40 +3,39 @@ title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <code><strong>Object.getOwnPropertySymbols()</strong></code> método retorna uma array com todas propriedades de símbolo encontradas diretamente em um determinado objeto dado.</p>
+O **`Object.getOwnPropertySymbols()`** método retorna uma array com todas propriedades de símbolo encontradas diretamente em um determinado objeto dado.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
+## Sintaxe
 
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetro
 
-<pre class="brush: js notranslate"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
+- `obj`
+  - : O objeto pelo qual as propriedades de símbolos são retornas.
 
-<h3 id="Parâmetro"><span><span>Parâmetro</span></span></h3>
+### Valor retornado
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto pelo qual as propriedades de símbolos são retornas.</dd>
-</dl>
+Uma array com todas as propriedades de símbolos encontradas diretamente pelo o objeto dado.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Descrição
 
-<p>Uma array com todas as propriedades de símbolos encontradas diretamente pelo o objeto dado.</p>
+Similar do {{jsxref("Object.getOwnPropertyNames()")}}, você pode obter todas as propriedades de símbolo de um objeto dado como um array de símbolos. Lembre que o próprio {{jsxref("Object.getOwnPropertyNames()")}} não contém as propriedades de símbolo de um objeto e somente as propriedades de string.
 
-<h2 id="Descrição">Descrição</h2>
+Como todos os objetos não possuem símbolos próprios inicialmente, o `Object.getOwnPropertySymbols()` retorna uma array vazia a menos que você tenha definido as propriedades de símbolo do seu objeto .
 
-<p>Similar do {{jsxref("Object.getOwnPropertyNames()")}}, você pode obter todas as propriedades de símbolo de um objeto dado como um array de símbolos. Lembre que o próprio {{jsxref("Object.getOwnPropertyNames()")}} não contém as propriedades de símbolo de um objeto e somente as propriedades de string.</p>
+## Exemplos
 
-<p>Como todos os objetos não possuem símbolos próprios inicialmente, o <code>Object.getOwnPropertySymbols()</code> retorna uma array vazia a menos que você tenha definido as propriedades de símbolo do seu objeto .</p>
+### Usando getOwnPropertySymbols
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_getOwnPropertySymbols">Usando getOwnPropertySymbols</h3>
-
-<pre class="brush: js notranslate">var obj = {};
+```js
+var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -48,30 +47,19 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // retorno esperado 2
 console.log(objectSymbols);        // retorno esperado (2) [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0]);     // retorno esperado Symbol(a)
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

@@ -8,42 +8,32 @@ tags:
 translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<h2 id="Method_overview" name="Method_overview">Visão Geral</h2>
+## Visão Geral
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#handleEvent()">handleEvent</a>(in Event event);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void handleEvent(in Event event);` |
+| ----------------------------------- |
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+## Métodos
 
-<h3 id="handleEvent()" name="handleEvent()">handleEvent()</h3>
+### handleEvent()
 
-<p>Este método é chamado sempre que ocorrer o evento para qual a interface do  <code>EventListener for registrada</code>.</p>
+Este método é chamado sempre que ocorrer o evento para qual a interface do `EventListener for registrada`.
 
-<pre class="eval">void handleEvent(
-  in Event event
-);
-</pre>
+    void handleEvent(
+      in Event event
+    );
 
-<h5 id="Parameters" name="Parameters">Parâmetros</h5>
+##### Parâmetros
 
-<dl>
- <dt><code>event</code></dt>
- <dd>O {{ domxref("Evento") }} DOM que foi acionado.</dd>
-</dl>
+- `event`
+  - : O {{ domxref("Evento") }} DOM que foi acionado.
 
-<h3 id="Remarks" name="Remarks">Observaçōes</h3>
+### Observaçōes
 
-<p>Conforme a interface for marcada com a flag <code><span class="nowiki">[function]</span></code>, todos os objetos <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a> automaticamente implementtam essa interface. Chamar o método <a href="#handleevent">handleEvent</a> em uma dessas implementaçōes automaticamente invoca a função.</p>
+Conforme a interface for marcada com a flag `[function]`, todos os objetos [Function](/en/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function") automaticamente implementtam essa interface. Chamar o método [handleEvent](#handleevent) em uma dessas implementaçōes automaticamente invoca a função.
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}</li>
-</ul>
+- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}

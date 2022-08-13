@@ -3,62 +3,37 @@ title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
 translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho da solicitação <strong><code>Access-Control-Request-Headers</code></strong> é usado ao emitir um {{glossary("preflight request")}} para permitir que o servidor saiba quais cabeçalhos HTTP serão usados quando a solicitação real for feita.</p>
+O cabeçalho da solicitação **`Access-Control-Request-Headers`** é usado ao emitir um {{glossary("preflight request")}} para permitir que o servidor saiba quais cabeçalhos HTTP serão usados quando a solicitação real for feita.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Request-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+    Access-Control-Request-Headers: <header-name>, <header-name>, ...
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>Uma lista delimitada por vírgula <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> incluídos na solicitação.</dd>
-</dl>
+- \<header-name>
+  - : Uma lista delimitada por vírgula [HTTP headers](/pt-BR/docs/Web/HTTP/Headers) incluídos na solicitação.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-request-headers', 'Access-Control-Request-Headers')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#http-access-control-request-headers', 'Access-Control-Request-Headers')}} | {{Spec2("Fetch")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Request-Headers")}}</p>
+{{Compat("http.headers.Access-Control-Request-Headers")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Method")}}

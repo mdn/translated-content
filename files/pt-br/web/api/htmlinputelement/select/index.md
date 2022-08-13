@@ -11,42 +11,27 @@ tags:
   - metodo
 translation_of: Web/API/HTMLInputElement/select
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>O método <strong><code>HTMLInputElement.select()</code></strong> seleciona todo o texto em um elemento {{HTMLElement("textarea")}} ou em um elemento {{HTMLElement("input")}} do tipo <em>text</em>.</p>
+O método **`HTMLInputElement.select()`** seleciona todo o texto em um elemento {{HTMLElement("textarea")}} ou em um elemento {{HTMLElement("input")}} do tipo _text_.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">element.select()</pre>
+    element.select()
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select', 'select')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Estado                           | Comentário |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select', 'select')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Executar <code>element.select()</code> não irá necessariamente focar o <em>input</em>, por isso é frequentemente usado em conjunto com {{domxref("HTMLElement.focus()")}}.</p>
+Executar `element.select()` não irá necessariamente focar o _input_, por isso é frequentemente usado em conjunto com {{domxref("HTMLElement.focus()")}}.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ HTMLElement("input") }}</li>
- <li>{{ HTMLElement("textarea") }}</li>
- <li>{{ domxref("HTMLInputElement") }}</li>
- <li>{{ domxref("HTMLInputElement.setSelectionRange") }}</li>
-</ul>
+- {{ HTMLElement("input") }}
+- {{ HTMLElement("textarea") }}
+- {{ domxref("HTMLInputElement") }}
+- {{ domxref("HTMLInputElement.setSelectionRange") }}

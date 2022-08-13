@@ -7,19 +7,15 @@ tags:
 translation_of: Glossary/Variable
 original_slug: Glossario/Variável
 ---
-<p>Uma<strong> variável (variable) </strong>é um local nomeado para armazenar um {{Glossary("Valor", "valor")}}. Dessa forma, um valor pode ser acessado através de um nome predeterminado.</p>
+Uma **variável (variable)** é um local nomeado para armazenar um {{Glossary("Valor", "valor")}}. Dessa forma, um valor pode ser acessado através de um nome predeterminado.
 
-<h2 id="Leia_mais">Leia mais</h2>
+## Leia mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Variável_(programação)")}} no Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Variável_(programação)")}} no Wikipédia
 
-<h3 id="Referências_técnicas">Referências técnicas</h3>
+### Referências técnicas
 
-<ul>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">Declarando Variáveis no JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var"><strong><code>var</code></strong> <strong>statement</strong> no JavaScript</a></li>
-</ul>
+- [Declarando Variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [**`var`** **statement** no JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)

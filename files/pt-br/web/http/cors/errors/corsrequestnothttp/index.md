@@ -15,29 +15,27 @@ tags:
   - console
 translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Razão">Razão</h2>
+## Razão
 
-<pre class="syntaxbox notranslate">Razão: Requisição CORS não é HTTP</pre>
+    Razão: Requisição CORS não é HTTP
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Requisições {{Glossary("CORS")}} devem apenas usar o esquema de URL HTTPS, mas a URL especificada pela requisição é de um tipo diferente. Isso geralmente ocorre se a URL especifica um arquivo local, usando uma URL<code> file:///</code>.</p>
+Requisições {{Glossary("CORS")}} devem apenas usar o esquema de URL HTTPS, mas a URL especificada pela requisição é de um tipo diferente. Isso geralmente ocorre se a URL especifica um arquivo local, usando uma URL` file:///`.
 
-<p>Para consertar esse problema, apenas certifique-se que você está usando URLs HTTPS quando emitir requisições que envolvam CORS.</p>
+Para consertar esse problema, apenas certifique-se que você está usando URLs HTTPS quando emitir requisições que envolvam CORS.
 
-<h3 id="Segurança_de_Arquivos_Locais_no_Firefox_68">Segurança de Arquivos Locais no Firefox 68</h3>
+### Segurança de Arquivos Locais no Firefox 68
 
-<p>Quando um usuário abria uma página usando uma URI <code>file:///</code> no Firefox 67 ou anterior, a origem da página era definida como sendo o diretório do qual a página era aberta. Recursos existentes no mesmo diretório e nos subdiretórios eram tratados como tendo a mesma origem de acordo com a regra de mesma-origem do {{Glossary("CORS")}}.</p>
+Quando um usuário abria uma página usando uma URI `file:///` no Firefox 67 ou anterior, a origem da página era definida como sendo o diretório do qual a página era aberta. Recursos existentes no mesmo diretório e nos subdiretórios eram tratados como tendo a mesma origem de acordo com a regra de mesma-origem do {{Glossary("CORS")}}.
 
-<p>Em resposta ao <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730">CVE-2019-11730</a>, o Firefox, a partir da versão 68, define a origem da página aberta pela URI  <code>file:///</code> como única. Desta maneira, outros recursos do mesmo diretório ou subdiretório não satisfazem mais à regra de mesma-origem do CORS. Este novo comportamento está habilitado por padrão pela preferência de nome <code>privacy.file_unique_origin</code>.</p>
+Em resposta ao [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), o Firefox, a partir da versão 68, define a origem da página aberta pela URI `file:///` como única. Desta maneira, outros recursos do mesmo diretório ou subdiretório não satisfazem mais à regra de mesma-origem do CORS. Este novo comportamento está habilitado por padrão pela preferência de nome `privacy.file_unique_origin`.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
- <li>Glossário: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
-</ul>
+- [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
+- Glossário: {{Glossary("CORS")}}
+- [CORS introduction](/pt-BR/docs/Web/HTTP/CORS)
+- [What is a URL?](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)

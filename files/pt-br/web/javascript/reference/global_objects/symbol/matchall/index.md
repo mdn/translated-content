@@ -3,33 +3,32 @@ title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo <code><strong>Symbol.matchAll</strong></code> é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.</p>
+O símbolo **`Symbol.matchAll`** é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
 
+## Descrição
 
+Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
 
-<h2 id="Descrição">Descrição</h2>
+```js
+'abc'.matchAll(/a/);
 
-<div>
-<p>Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:</p>
+/a/[Symbol.matchAll]('abc');
+```
 
-<pre class="brush: js notranslate">'abc'.matchAll(/a/);
+Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.
 
-/a/[Symbol.matchAll]('abc');</pre>
+{{js_property_attributes(0,0,0)}}
 
-<p>Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.</p>
+## Exemplos
 
-<p>{{js_property_attributes(0,0,0)}}</p>
-</div>
+### Usuando Symbol.matchAll
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usuando_Symbol.matchAll">Usuando Symbol.matchAll</h3>
-
-<pre class="brush: js notranslate">let re = /[0-9]+/g;
+```js
+let re = /[0-9]+/g;
 let str = '2016-01-02|2019-03-07';
 
 const numbers = {
@@ -41,32 +40,21 @@ const numbers = {
 
 console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
-</pre>
+```
 
-<p>Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.</p>
+Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.matchAll")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.matchAll")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.matchAll()")}}</li>
- <li>{{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}</li>
-</ul>
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}

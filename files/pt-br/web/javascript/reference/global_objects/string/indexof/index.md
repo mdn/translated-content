@@ -10,51 +10,52 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
-<p>{{JSRef("Global_Objects", "String")}}</p>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O método <code>indexOf()</code> retorna o índice da primeira ocorrência do valor fornecido em searchValue, começando a busca a partir de <code>fromIndex</code>. Retorna <code>-1</code> se o valor não for encontrado.</p>
+O método `indexOf()` retorna o índice da primeira ocorrência do valor fornecido em searchValue, começando a busca a partir de `fromIndex`. Retorna `-1` se o valor não for encontrado.
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Para o método de Array, veja {{jsxref("Array.prototype.indexOf()")}}.</p>
-</div>
+> **Note:** **Nota:** Para o método de Array, veja {{jsxref("Array.prototype.indexOf()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.indexOf(<em>searchValue</em>[, <em>fromIndex</em>]</code>)</pre>
+    str.indexOf(searchValue[, fromIndex])
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>searchValue</code></dt>
- <dd>Uma string representando o valor a ser buscado. Se nenhuma string for fornecida explicitamente, <code>searchValue</code> terá o valor de <code>undefined</code>, e esse valor será buscado na string atual. Por exemplo, <code>'undefined'.indexOf()</code> retornará <code>0</code>, já que <code>undefined</code> é encontrado na posição <code>0</code>. Já <code>'undefine'.indexOf()</code> retornará <code>-1</code>, já que <code>undefined</code> não pôde ser encontrado.</dd>
- <dt><code>fromIndex</code></dt>
- <dd>Um número inteiro representando um índice da string original a partir da qual a busca deve começar. Por padrão é <code>0</code>. Se <code>fromIndex &lt; 0</code>, a string toda é percorrida (equivale a passar 0). Se <code>fromIndex</code> <code>&gt;=</code> <code>str.length</code>, o método retornará <code>-1</code>, já que a busca será iniciada após o final da string.</dd>
-</dl>
+- `searchValue`
+  - : Uma string representando o valor a ser buscado. Se nenhuma string for fornecida explicitamente, `searchValue` terá o valor de `undefined`, e esse valor será buscado na string atual. Por exemplo, `'undefined'.indexOf()` retornará `0`, já que `undefined` é encontrado na posição `0`. Já `'undefine'.indexOf()` retornará `-1`, já que `undefined` não pôde ser encontrado.
+- `fromIndex`
+  - : Um número inteiro representando um índice da string original a partir da qual a busca deve começar. Por padrão é `0`. Se `fromIndex < 0`, a string toda é percorrida (equivale a passar 0). Se `fromIndex` `>=` `str.length`, o método retornará `-1`, já que a busca será iniciada após o final da string.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O índice da primeira ocorrência de <em>searchValue</em>, ou <code>-1</code> se não for encontrado.</p>
+O índice da primeira ocorrência de _searchValue_, ou `-1` se não for encontrado.
 
-<p>Uma string vazia no <em>searchValue</em> produz resultados estranhos. Sem <code>fromIndex</code>, ou com qualquer <code>fromIndex</code> menor que o comprimento da string, o valor retornado é o próprio <code>fromIndex</code>:</p>
+Uma string vazia no _searchValue_ produz resultados estranhos. Sem `fromIndex`, ou com qualquer `fromIndex` menor que o comprimento da string, o valor retornado é o próprio `fromIndex`:
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span> <span class="comment token">// retorna 0</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span> <span class="comment token">// retorna 0</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">)</span> <span class="comment token">// retorna 3</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">8</span><span class="punctuation token">)</span> <span class="comment token">// retorna 8</span></code></pre>
+```js
+'Olá, mundo'.indexOf('') // retorna 0
+'Olá, mundo'.indexOf('', 0) // retorna 0
+'Olá, mundo'.indexOf('', 3) // retorna 3
+'Olá, mundo'.indexOf('', 8) // retorna 8
+```
 
-<p>Entretanto, com qualquer <code>fromIndex</code> igual ou maior que o comprimento da string, o valor retornado é o comprimento da string:</p>
+Entretanto, com qualquer `fromIndex` igual ou maior que o comprimento da string, o valor retornado é o comprimento da string:
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">11</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">22</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span></code></pre>
+```js
+'Olá, mundo'.indexOf('', 11) // retorna 10
+'Olá, mundo'.indexOf('', 13) // retorna 10
+'Olá, mundo'.indexOf('', 22) // retorna 10
+```
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code>, e o índice do último caractere de uma string chamada <code>stringName</code> é <code>stringName.length - 1</code>.</p>
+Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`, e o índice do último caractere de uma string chamada `stringName` é `stringName.length - 1`.
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("Blue");     // retorna  0
+```js
+"Blue Whale".indexOf("Blue");     // retorna  0
 "Blue Whale".indexOf("Whale");    // retorna  5
 "Blue Whale".indexOf("Blute");    // retorna -1
 "Blue Whale".indexOf("Whale", 0); // retorna  5
@@ -63,47 +64,54 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 "Blue Whale".indexOf("");         // retorna  0
 "Blue Whale".indexOf("", 9);      // retorna  9
 "Blue Whale".indexOf("", 10);     // retorna 10
-"Blue Whale".indexOf("", 11);     // retorna 10</pre>
+"Blue Whale".indexOf("", 11);     // retorna 10
+```
 
-<h3 id="Verificando_ocorrências">Verificando ocorrências</h3>
+### Verificando ocorrências
 
-<p>Note que um retorno <code>0</code> não implica em <code>true</code>, e <code>-1</code> não implica em <code>false</code>. Portanto, a maneira correta de se verificar se uma string específica está contida em outra string seria:</p>
+Note que um retorno `0` não implica em `true`, e `-1` não implica em `false`. Portanto, a maneira correta de se verificar se uma string específica está contida em outra string seria:
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("Blue") !== -1; // true
-"Blue Whale".indexOf("Bloe") !== -1; // false</pre>
+```js
+"Blue Whale".indexOf("Blue") !== -1; // true
+"Blue Whale".indexOf("Bloe") !== -1; // false
+```
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Using_indexOf_and_lastIndexOf" name="Example:_Using_indexOf_and_lastIndexOf">Usando <code>indexOf()</code></h3>
+### Usando `indexOf()`
 
-<p>O exemplo a seguir usa <code>indexOf()</code> para localizar valores dentro da string "<code>Brave new world</code>".</p>
+O exemplo a seguir usa `indexOf()` para localizar valores dentro da string "`Brave new world`".
 
-<pre class="brush: js notranslate">var anyString = "Brave new world";
+```js
+var anyString = "Brave new world";
 
 console.log("O índice do primeiro w partindo do começo é " + anyString.indexOf("w"));
 // Exibe 8
 
 console.log("O índice de 'new' partindo do começo é " + anyString.indexOf("new"));
 // Exibe 6
-</pre>
+```
 
-<h3 id="Example_indexOf_and_case-sensitivity" name="Example:_indexOf_and_case-sensitivity"><code>indexOf()</code> e sensibilidade a maiúsculas e minúsculas</h3>
+### `indexOf()` e sensibilidade a maiúsculas e minúsculas
 
-<p>O exemplo a seguir define duas variáveis string. Ambas contém a mesma string, exceto que a segunda string tem letras maiúsculas. O primeiro método {{domxref("console.log()")}} exibe <code>19</code>. Porém, como o método <code>indexOf</code> é sensível a letras maiúsculas e minúsculas, a string <code>"cheddar"</code> não é encontrada em <code>myCapString</code>, portanto, o segundo método {{domxref("console.log()")}} exibe <code>-1</code>.</p>
+O exemplo a seguir define duas variáveis string. Ambas contém a mesma string, exceto que a segunda string tem letras maiúsculas. O primeiro método {{domxref("console.log()")}} exibe `19`. Porém, como o método `indexOf` é sensível a letras maiúsculas e minúsculas, a string `"cheddar"` não é encontrada em `myCapString`, portanto, o segundo método {{domxref("console.log()")}} exibe `-1`.
 
-<pre class="brush: js notranslate">var myString    = "brie, pepper jack, cheddar";
+```js
+var myString    = "brie, pepper jack, cheddar";
 var myCapString = "Brie, Pepper Jack, Cheddar";
 
 console.log('myString.indexOf("cheddar") é ' + myString.indexOf("cheddar"));
 // Exibe 19
 console.log('myCapString.indexOf("cheddar") é ' + myCapString.indexOf("cheddar"));
-// Exibe -1</pre>
+// Exibe -1
+```
 
-<h3 id="Example_Using_indexOf_to_count_occurrences_of_a_letter_in_a_string" name="Example:_Using_indexOf_to_count_occurrences_of_a_letter_in_a_string">Usando <code>indexOf()</code> para contar as ocorrências de uma letra numa string</h3>
+### Usando `indexOf()` para contar as ocorrências de uma letra numa string
 
-<p>O exemplo a seguir atribui à variável <code>count</code> o número de ocorrências da letra <code>x</code> na string <code>str</code>:</p>
+O exemplo a seguir atribui à variável `count` o número de ocorrências da letra `x` na string `str`:
 
-<pre class="brush: js notranslate">const str = 'Serx ou não ser, eisx a questão'
+```js
+const str = 'Serx ou não ser, eisx a questão'
 count = 0;
 pos = str.indexOf("x"); // retorna 3
 
@@ -112,47 +120,27 @@ while ( pos != -1 ) {
    pos = str.indexOf( "x", pos + 1 /* o mesmo que 3 + 1 */ );
 }
 
-console.log(count);</pre>
+console.log(count);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Situação                 | Comentário         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                     | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
-<p>{{Compat("javascript.builtins.String.indexOf")}}</p>
+{{Compat("javascript.builtins.String.indexOf")}}
 
-<h2 id="See_also" name="See_also"></h2>
+##
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

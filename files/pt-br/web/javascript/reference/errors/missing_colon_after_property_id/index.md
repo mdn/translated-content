@@ -3,70 +3,76 @@ title: 'Erro de Sintaxe: faltando : depois da propriedade id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">SyntaxError: missing : after property id
-</pre>
+    SyntaxError: missing : after property id
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Ao criar objetos com a sintaxe do <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">iniciador do objeto</a>, dois pontos (<code>:</code>) separam chaves e valores para as propriedades do objeto.</p>
+Ao criar objetos com a sintaxe do [iniciador do objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer), dois pontos (`:`) separam chaves e valores para as propriedades do objeto.
 
-<pre class="brush: js">var obj = { propertyKey: 'value' };
-</pre>
+```js
+var obj = { propertyKey: 'value' };
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Dois-pontos_contra_sinal_de_igualdade">Dois-pontos contra sinal de igualdade</h3>
+### Dois-pontos contra sinal de igualdade
 
-<p>Este código falha, pois o sinal de igualdade não pode ser usado dessa maneira nesta sintaxe do iniciador do objeto.</p>
+Este código falha, pois o sinal de igualdade não pode ser usado dessa maneira nesta sintaxe do iniciador do objeto.
 
-<pre class="brush: js example-bad">var obj = { propertyKey = 'value' };
+```js example-bad
+var obj = { propertyKey = 'value' };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>Correto seria usar um dois-pontos, ou usar colchetes para atribuir uma nova propriedade depois que o objeto já foi criado.</p>
+Correto seria usar um dois-pontos, ou usar colchetes para atribuir uma nova propriedade depois que o objeto já foi criado.
 
-<pre class="brush: js example-good">var obj = { propertyKey: 'value' };
+```js example-good
+var obj = { propertyKey: 'value' };
 
 // or alternatively
 
 var obj = { };
 obj['propertyKey'] = 'value';
-</pre>
+```
 
-<h3 id="Propriedades_vazia">Propriedades vazia</h3>
+### Propriedades vazia
 
-<p>Você não pode criar propriedades vazias como esta:</p>
+Você não pode criar propriedades vazias como esta:
 
-<pre class="brush: js example-bad">var obj = { propertyKey; };
+```js example-bad
+var obj = { propertyKey; };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>Se você precisa definir uma propriedade sem um valor, você pode usar {{jsxref("null")}} como um valor.</p>
+Se você precisa definir uma propriedade sem um valor, você pode usar {{jsxref("null")}} como um valor.
 
-<pre class="brush: js example-good">var obj = { propertyKey: null };</pre>
+```js example-good
+var obj = { propertyKey: null };
+```
 
-<h3 id="Propriedades_computadas">Propriedades computadas</h3>
+### Propriedades computadas
 
-<p>Se você criar uma chave de propriedade de uma expressão, você precisa usar colchetes. Caso contrário, o nome da propriedade não pode ser computado:</p>
+Se você criar uma chave de propriedade de uma expressão, você precisa usar colchetes. Caso contrário, o nome da propriedade não pode ser computado:
 
-<pre class="brush: js example-bad">var obj = { 'b'+'ar': 'foo' };
+```js example-bad
+var obj = { 'b'+'ar': 'foo' };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>Coloque a expressão entre parênteses <code>[]</code>:</p>
+Coloque a expressão entre parênteses `[]`:
 
-<pre class="brush: js example-good">var obj = { ['b'+'ar']: 'foo' };</pre>
+```js example-good
+var obj = { ['b'+'ar']: 'foo' };
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Inicializador de objeto</a></li>
-</ul>
+- [Inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)

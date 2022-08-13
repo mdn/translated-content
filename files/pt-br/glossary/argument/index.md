@@ -8,18 +8,14 @@ tags:
 translation_of: Glossary/Argument
 original_slug: Glossario/Argument
 ---
-<p>Um <strong>argumento</strong> é um {{glossary("valor")}} ({{Glossary("primitivo")}} ou um {{Glossary("objeto")}})  passado como um input (entrada) para uma {{Glossary("função")}}.</p>
+Um **argumento** é um {{glossary("valor")}} ({{Glossary("primitivo")}} ou um {{Glossary("objeto")}}) passado como um input (entrada) para uma {{Glossary("função")}}.
 
-<h2 id="Leia_mais">Leia mais</h2>
+## Leia mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Parâmetro_(ciência_da_computação)", "Diferenças de Parâmetro e Argumento")}} no Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Parâmetro_(ciência_da_computação)", "Diferenças de Parâmetro e Argumento")}} no Wikipédia
 
-<h3 id="Referencia_Técnica">Referencia Técnica</h3>
+### Referencia Técnica
 
-<ul>
- <li>Os {{jsxref("Functions/arguments","arguments")}} de objeto no {{glossary("JavaScript")}}</li>
-</ul>
+- Os {{jsxref("Functions/arguments","arguments")}} de objeto no {{glossary("JavaScript")}}

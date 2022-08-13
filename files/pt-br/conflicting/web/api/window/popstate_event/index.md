@@ -4,32 +4,30 @@ slug: conflicting/Web/API/Window/popstate_event
 translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
-<div>{{APIRef}} {{gecko_minversion_header("2")}}</div>
+{{APIRef}} {{gecko_minversion_header("2")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Um evento manipulador para um evento <code>popstate</code> na janela</p>
+Um evento manipulador para um evento `popstate` na janela
 
-<p>Um evento popstate é disparado para a janela toda vez que o histórico de atividades mudar entre dois históricos de entradas para o mesmo documento. Se o histórico de entrada a ser ativo for criado por uma chamada para <code>history.pushState()</code> ou for afetado por um chamada <code>history.replaceState()</code>, o estado do evento <code>popstate </code>contém uma cópia do histórico do estado de entrada do objeto.</p>
+Um evento popstate é disparado para a janela toda vez que o histórico de atividades mudar entre dois históricos de entradas para o mesmo documento. Se o histórico de entrada a ser ativo for criado por uma chamada para `history.pushState()` ou for afetado por um chamada `history.replaceState()`, o estado do evento `popstate `contém uma cópia do histórico do estado de entrada do objeto.
 
-<p>Note que apenas chamando <code>history.pushState()</code> ou <code>history.replaceState() </code>não irá desencadear um evento<code> popstate. </code>O evento <code>popstate </code>é apenas desencadeado  por uma ação do navegador com clicar em um botão de voltar (ou chamar <code>history.back() </code>em JavaScript). E o evento é apenas desencadeado quando o usuário navega entre dois históricos de entrada do mesmo documento.<br>
- <br>
- Navegadores tendem a lidar com o evento <code>popstate </code>diferente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emite um evento <code>popstate</code> no carregamento da página, mas Firefox não.</p>
+Note que apenas chamando `history.pushState()` ou `history.replaceState() `não irá desencadear um evento` popstate. `O evento `popstate `é apenas desencadeado por uma ação do navegador com clicar em um botão de voltar (ou chamar `history.back() `em JavaScript). E o evento é apenas desencadeado quando o usuário navega entre dois históricos de entrada do mesmo documento.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+Navegadores tendem a lidar com o evento `popstate `diferente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emite um evento `popstate` no carregamento da página, mas Firefox não.
 
-<pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
-</pre>
+## Sintaxe
 
-<ul>
- <li><var>funcRef</var> é uma função de manipulador.</li>
-</ul>
+    window.onpopstate = funcRef;
 
-<h2 id="The_popstate_event" name="The_popstate_event">O evento popstate</h2>
+- _funcRef_ é uma função de manipulador.
 
-<p>Como um exemplo, a página no <code><var>http://example.com/example.html</var></code> roda o seguinte código que vai gerar alertas conforme indicado:</p>
+## O evento popstate
 
-<pre class="brush:js">window.onpopstate = function(event) {
+Como um exemplo, a página no `http://example.com/example.html` roda o seguinte código que vai gerar alertas conforme indicado:
+
+```js
+window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
@@ -39,24 +37,16 @@ history.replaceState({page: 3}, "title 3", "?page=3");
 history.back(); // alertas "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // alertas "location: http://example.com/example.html, state: null
 history.go(2);  // alertas "location: http://example.com/example.html?page=3, state: {"page":3}
-</pre>
+```
 
-<div id="gt-src-tools">
-<div dir="ltr" style="zoom: 1;"><span id="result_box" lang="pt"><span class="hps">Observe que mesmo que</span> <span class="hps">a entrada do histórico</span> <span class="hps">inicial (para </span></span><code><var>http://example.com/example.html</var></code><span lang="pt"><span class="hps">) </span></span>não tem objeto estado associado com ele, um evento <code>popstate</code> é ainda disparado quando nós ativamos essa entrada depois da segunda chamada do <code>history.back()</code>.<br>
-<br>
- </div>
-</div>
+Observe que mesmo que a entrada do histórico inicial (para `http://example.com/example.html`) não tem objeto estado associado com ele, um evento `popstate` é ainda disparado quando nós ativamos essa entrada depois da segunda chamada do `history.back()`.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
-</ul>
+- [HTML5 popstate event](http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("window.history")}}</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history">Manipulating the browser history</a></li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">Ajax navigation example</a></li>
-</ul>
+- {{domxref("window.history")}}
+- [Manipulating the browser history](/pt-BR/docs/Web/Guide/DOM/Manipulating_the_browser_history)
+- [Ajax navigation example](/pt-BR/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)

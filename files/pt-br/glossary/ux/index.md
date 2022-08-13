@@ -10,14 +10,12 @@ tags:
 translation_of: Glossary/UX
 original_slug: Glossario/UX
 ---
-<p><strong>UX</strong> é um acrônimo que significa experiência do usuário (User eXperience). É o estudo da interação entre usuários e um sistema. Seu objetivo é tornar um sistema fácil de interagir do ponto de vista do usuário.</p>
+**UX** é um acrônimo que significa experiência do usuário (User eXperience). É o estudo da interação entre usuários e um sistema. Seu objetivo é tornar um sistema fácil de interagir do ponto de vista do usuário.
 
-<p>O sistema pode ser qualquer produto ou aplicativo com o qual um usuário final deve interagir. Os estudos de UX realizados em uma página da web podem demostrar, por exemplo, se é fácil para os usuários entenderem a página, navegarem para diferentes áreas e concluírem tarefas comuns, e onde tais processos poderiam ter menos fricção.</p>
+O sistema pode ser qualquer produto ou aplicativo com o qual um usuário final deve interagir. Os estudos de UX realizados em uma página da web podem demostrar, por exemplo, se é fácil para os usuários entenderem a página, navegarem para diferentes áreas e concluírem tarefas comuns, e onde tais processos poderiam ter menos fricção.
 
-<h2 id="Saber_mais">Saber mais</h2>
+## Saber mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Experiência do Usuário")}} na Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Experiência do Usuário")}} na Wikipédia

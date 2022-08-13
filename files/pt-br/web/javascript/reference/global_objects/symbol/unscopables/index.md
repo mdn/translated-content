@@ -3,29 +3,28 @@ title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo <strong><code>Symbol.unscopables</code></strong> é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> o objeto associado. </p>
+O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 
+## Descrição
 
+O `@@unscopables` símbolo (`Symbol.unscopables`) pode ser definido em qualquer objeto para impedir que os nomes da propriedade sejam expostos como variavéis lexicais [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) ligações de ambiente. Note que se usar o [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), `with` as declarações não estão disponíveis e provavelmente não haverá necessidade desse símbolo.
 
-<h2 id="Descrição">Descrição</h2>
+Configurando a propriedade para `true` em um objeto `unscopables` tornará ele não _unscopable_ e portanto não irá apareer nas variavéis de escopo lexicais. Configurando uma propriedade para `false` o tornará `scopable` e portanto irá aparecer no escopo de variavéis lexicais.
 
-<p>O <code>@@unscopables</code> símbolo (<code>Symbol.unscopables</code>) pode ser definido em qualquer objeto para impedir que os nomes da propriedade sejam expostos como variavéis lexicais <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> ligações de ambiente. Note que se usar o  <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a>, <code>with</code> as declarações não estão disponíveis e provavelmente não haverá necessidade desse símbolo.</p>
+{{js_property_attributes(0,0,0)}}
 
-<p>Configurando a propriedade para <code>true</code> em um objeto <code>unscopables</code> tornará ele não <em>unscopable</em> e portanto não irá apareer nas variavéis de escopo lexicais. Configurando uma propriedade para <code>false</code> o tornará <code>scopable</code> e portanto irá aparecer no escopo de variavéis lexicais.</p>
+## Exemplos
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+### Escopo com declarações
 
-<h2 id="Exemplos">Exemplos</h2>
+O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMAScript 2015 e superiores, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro do ambiente `with` "chaves" seria agora o método e não as variavéis. Isso qunado os símbolos `unscopable`s foram introduzidos. Uma confiração built-in `unscopables` é implementada como {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} para prevenir que alguns métodos de Array tenham escopo definido na desclaração `with`.
 
-<h3 id="Escopo_com_declarações">Escopo com declarações</h3>
-
-<p>O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMAScript 2015 e superiores, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro do ambiente <code>with</code>  "chaves" seria agora o método e não as variavéis. Isso qunado os símbolos <code>unscopable</code>s foram introduzidos. Uma confiração built-in <code>unscopables</code> é implementada como {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} para prevenir que alguns métodos de Array tenham escopo definido na desclaração <code>with</code>.</p>
-
-<pre class="brush: js notranslate">var keys = [];
+```js
+var keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -34,13 +33,14 @@ with (Array.prototype) {
 Object.keys(Array.prototype[Symbol.unscopables]);
 // ["copyWithin", "entries", "fill", "find", "findIndex",
 //  "includes", "keys", "values"]
-</pre>
+```
 
-<h3 id="Objetos_não_escopáveis">Objetos não escopáveis</h3>
+### Objetos não escopáveis
 
-<p>Você também pode configurar <code>unscopables</code> para seu próprio objeot.</p>
+Você também pode configurar `unscopables` para seu próprio objeot.
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
   foo: 1,
   bar: 2
 };
@@ -54,30 +54,19 @@ with (obj) {
   console.log(foo); // 1
   console.log(bar); // ReferenceError: bar is not defined
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.unscopables")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.unscopables")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> statement (not available in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a>)</li>
-</ul>
+- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))

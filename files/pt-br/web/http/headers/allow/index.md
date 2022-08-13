@@ -9,59 +9,36 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Allow
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <code><strong>Allow</strong></code> lista um conjunto de métodos suportados pelo recurso.</p>
+O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.
 
-<p>O cabeçalho deve ser enviado se o servidor responde com um código de resposta {{HTTPStatus("405")}} <code>Method Not Allowed</code>, para indicar quais métodos de requisição podem ser utilizados. Um cabeçalho <code>Allow</code> vazio indica que o recurso não permite cabeçalhos de requisição, o que pode acontecer temporariamente para um dado recurso, por exemplo.</p>
+O cabeçalho deve ser enviado se o servidor responde com um código de resposta {{HTTPStatus("405")}} `Method Not Allowed`, para indicar quais métodos de requisição podem ser utilizados. Um cabeçalho `Allow` vazio indica que o recurso não permite cabeçalhos de requisição, o que pode acontecer temporariamente para um dado recurso, por exemplo.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Entity header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Allow: &lt;métodos-http&gt;
-</pre>
+    Allow: <métodos-http>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;métodos-http&gt;</dt>
- <dd>Uma lista de <a href="/en-US/docs/Web/HTTP/Methods">métodos de requisição HTTP</a> separados por vírgula.</dd>
-</dl>
+- \<métodos-http>
+  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) separados por vírgula.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Allow: GET, POST, HEAD</pre>
+    Allow: GET, POST, HEAD
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Allow", "7.4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPStatus("405")}}</li>
- <li>{{HTTPHeader("Server")}}</li>
-</ul>
+- {{HTTPStatus("405")}}
+- {{HTTPHeader("Server")}}

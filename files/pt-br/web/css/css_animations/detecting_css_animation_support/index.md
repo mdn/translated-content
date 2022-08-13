@@ -11,15 +11,16 @@ tags:
   - Referencia
 translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Animações CSS torna possível a criação de conteúdo animado e criativo utilizando nada além de CSS. No entando, haverá momentos em que este recurso não estará disponível, e você pode querer lidar com isso utilizando um código JavaScript que simule um efeito semelhante. Este artigo, baseado <a href="http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/">neste post do blog</a> de Chris Heilmann, demonstra uma técnica para fazer isso.</p>
+Animações CSS torna possível a criação de conteúdo animado e criativo utilizando nada além de CSS. No entando, haverá momentos em que este recurso não estará disponível, e você pode querer lidar com isso utilizando um código JavaScript que simule um efeito semelhante. Este artigo, baseado [neste post do blog](http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) de Chris Heilmann, demonstra uma técnica para fazer isso.
 
-<h2 id="Testando_por_suporte_de_animação_CSS">Testando por suporte de animação CSS</h2>
+## Testando por suporte de animação CSS
 
-<p>Este código irá verificar se o suporte a animação CSS está disponível:</p>
+Este código irá verificar se o suporte a animação CSS está disponível:
 
-<pre class="brush: js">var animation = false,
+```js
+var animation = false,
     animationstring = 'animation',
     keyframeprefix = '',
     domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
@@ -29,7 +30,7 @@ translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 if( elem.style.animationName !== undefined ) { animation = true; }
 
 if( animation === false ) {
-  for( var i = 0; i &lt; domPrefixes.length; i++ ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
     if( elem.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
       pfx = domPrefixes[ i ];
       animationstring = pfx + 'Animation';
@@ -39,21 +40,22 @@ if( animation === false ) {
     }
   }
 }
-</pre>
+```
 
-<p>Para iniciantes definimos algumas variáveis. Assumimos que a animação não é suportada iniciando <code>animation</code> com <code>false</code>. Setamos <code>animationstring</code> com <code>animation</code> que é a propriedade que desejamos setar posteriormente para com <code>true</code>. Criamos um <em>array</em> de prefixos de navegadores para percorrê-lo e setamos <code>pfx</code> com uma <em>string</em> vazia.</p>
+Para iniciantes definimos algumas variáveis. Assumimos que a animação não é suportada iniciando `animation` com `false`. Setamos `animationstring` com `animation` que é a propriedade que desejamos setar posteriormente para com `true`. Criamos um _array_ de prefixos de navegadores para percorrê-lo e setamos `pfx` com uma _string_ vazia.
 
-<p>Então verificamos se a propriedade CSS {{ cssxref("animation-name") }} na coleção de estilo do elemento especificado pelo nome <code>elem</code> está definido. Isto significa que o navegador suporta animação CSS sem nenhum prefixo.</p>
+Então verificamos se a propriedade CSS {{ cssxref("animation-name") }} na coleção de estilo do elemento especificado pelo nome `elem` está definido. Isto significa que o navegador suporta animação CSS sem nenhum prefixo.
 
-<p>Se o navegador não suporta animação não prefixada e <code>animation</code> permanece <code>falso</code>, iteramos através de todas as possibilidade de prefixos dos principais navegadores que prefixam esta propriedade e acrescentamos este prefixo ao atributo <code>AnimationName</code>.</p>
+Se o navegador não suporta animação não prefixada e `animation` permanece `falso`, iteramos através de todas as possibilidade de prefixos dos principais navegadores que prefixam esta propriedade e acrescentamos este prefixo ao atributo `AnimationName`.
 
-<p>Quando a execução deste código termina, o valor de <code>animation</code> será <code>false</code> se não houver suporte a animação CSS, ou <code>true</code> no caso contrário. Se seja <code>true</code> tanto a propriedade de nome de animação quanto o prefixo de <em>keyframe</em> estarão corretos. Se utiliza o novo Firefox, a propriedade será <code>MozAnimation</code> e o prefixo de <em>keyframe</em> <code>-moz-</code>, para o Chrome será <code>WebkitAnimation</code> e <code>-webkit-</code>. Observe que os navegadores não deixam fácil a adoção de <em>camelCase</em> ou hifenização.</p>
+Quando a execução deste código termina, o valor de `animation` será `false` se não houver suporte a animação CSS, ou `true` no caso contrário. Se seja `true` tanto a propriedade de nome de animação quanto o prefixo de _keyframe_ estarão corretos. Se utiliza o novo Firefox, a propriedade será `MozAnimation` e o prefixo de _keyframe_ `-moz-`, para o Chrome será `WebkitAnimation` e `-webkit-`. Observe que os navegadores não deixam fácil a adoção de _camelCase_ ou hifenização.
 
-<h2 id="Animando_utilizando_a_sintaxe_correta_para_navegadores_diferentes">Animando utilizando a sintaxe correta para navegadores diferentes</h2>
+## Animando utilizando a sintaxe correta para navegadores diferentes
 
-<p>Agora que sabe se a animação CSS é suportada ou não, nós iremos animar.</p>
+Agora que sabe se a animação CSS é suportada ou não, nós iremos animar.
 
-<pre class="brush: js">if( animation === false ) {
+```js
+if( animation === false ) {
 
   // chamada para a animação em JavaScript
 
@@ -65,7 +67,7 @@ if( animation === false ) {
                     'to {' + keyframeprefix + 'transform:rotate( 360deg ) }'+
                   '}';
 
-  if( document.styleSheets &amp;&amp; document.styleSheets.length ) {
+  if( document.styleSheets && document.styleSheets.length ) {
 
       document.styleSheets[0].insertRule( keyframes, 0 );
 
@@ -78,22 +80,20 @@ if( animation === false ) {
   }
 
 }
-</pre>
+```
 
-<p>Este código analisa o valor de <code>animation</code>; se é <code>false</code>, saberemos que precisaremos utilizar nosso código JavaScript para executar a animação. Por outro lado, podemos usar o JavaScript para criar um efeito de animação CSS desejado.</p>
+Este código analisa o valor de `animation`; se é `false`, saberemos que precisaremos utilizar nosso código JavaScript para executar a animação. Por outro lado, podemos usar o JavaScript para criar um efeito de animação CSS desejado.
 
-<p>Modificar a propriedade de animação é fácil; basta atualizar seu valor na coleção de estilos. No entanto, adicionar <em>keyframes</em> é mais difícil, pois não é definito utilizando a sintaxe tradicional do CSS (que torna-o mais flexível, mas difícil em definir de um script).</p>
+Modificar a propriedade de animação é fácil; basta atualizar seu valor na coleção de estilos. No entanto, adicionar _keyframes_ é mais difícil, pois não é definito utilizando a sintaxe tradicional do CSS (que torna-o mais flexível, mas difícil em definir de um script).
 
-<p>Para definir nosso <em>keyframes</em> usando JavaScript, precisamos escrevê-lo como uma <em>string</em> CSS. Tudo que precisamos é setar a variável <code>keyframes</code>, prefixando cada atributo que será construído. Esta variável, uma vez construída, contém a descrição completa de todos os <em>keyframes</em> necessários pela nossa sequência de animação.</p>
+Para definir nosso _keyframes_ usando JavaScript, precisamos escrevê-lo como uma _string_ CSS. Tudo que precisamos é setar a variável `keyframes`, prefixando cada atributo que será construído. Esta variável, uma vez construída, contém a descrição completa de todos os _keyframes_ necessários pela nossa sequência de animação.
 
-<p>A tarefa seguinte é adicionar os <em>keyframes</em> ao CSS da página. A primeira coisa a se fazer é procurar se existe uma folha de estilos no documento; caso exista, inserimos a descrição do <em>keyframe</em> nesta folha de estilo; isto é feito nas linhas 13-15.</p>
+A tarefa seguinte é adicionar os _keyframes_ ao CSS da página. A primeira coisa a se fazer é procurar se existe uma folha de estilos no documento; caso exista, inserimos a descrição do _keyframe_ nesta folha de estilo; isto é feito nas linhas 13-15.
 
-<p>Se não existe uma folha de estilos, um novo elemento {{ HTMLElement("style") }} é criado, e seu conteúdo é setado com o valor dos <em>keyframes</em>. Então o novo elemento {{ HTMLElement("style") }} é inserido no {{ HTMLElement("head") }} do documento, adicionando assim uma nova folha de estilos ao documento.</p>
+Se não existe uma folha de estilos, um novo elemento {{ HTMLElement("style") }} é criado, e seu conteúdo é setado com o valor dos _keyframes_. Então o novo elemento {{ HTMLElement("style") }} é inserido no {{ HTMLElement("head") }} do documento, adicionando assim uma nova folha de estilos ao documento.
 
-<p><a href="https://jsfiddle.net/codepo8/ATS2S/8/embedded/result">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/codepo8/ATS2S/8/embedded/result)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en/CSS/CSS_animations">Animações CSS</a></li>
-</ul>
+- [Animações CSS](/en/CSS/CSS_animations)

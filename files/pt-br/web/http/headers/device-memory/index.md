@@ -9,74 +9,47 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Device-Memory
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>O cabeçalho <code><strong>Device-Memory</strong></code> é um cabeçalho da <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a> que funciona como os cabeçalhos <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.</p>
+O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API) que funciona como os cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho <code>Device-Memory</code> do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
-</div>
+> **Note:** **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A quantidade de RAM no dispositivo pode ser usada como variável de pegada, The amount of device RAM can be used as a fingerprinting variable, então os valores para este cabeçalho são intencionalmente grosseiros para reduzir potenciais usos indesejados. O cabeçalho pode ter os seguintes valores: <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>.</p>
+A quantidade de RAM no dispositivo pode ser usada como variável de pegada, The amount of device RAM can be used as a fingerprinting variable, então os valores para este cabeçalho são intencionalmente grosseiros para reduzir potenciais usos indesejados. O cabeçalho pode ter os seguintes valores: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
-<pre class="syntaxbox notranslate">Device-Memory: &lt;number&gt;
-</pre>
+    Device-Memory: <number>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O servidor precisa primeiro optar por aceitar o cabeçalho <code>Device-Memory</code> mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo <code>Device-Memory</code> e {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
+O servidor precisa primeiro optar por aceitar o cabeçalho `Device-Memory` mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo `Device-Memory` e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
-<pre class="notranslate">Accept-CH: Device-Memory
-Accept-CH-Lifetime: 86400
-</pre>
+    Accept-CH: Device-Memory
+    Accept-CH-Lifetime: 86400
 
-<p>Então nas requisições subsequentes, o cliente enviará o cabeçalho <code>Device-Memory</code> de volta:</p>
+Então nas requisições subsequentes, o cliente enviará o cabeçalho `Device-Memory` de volta:
 
-<pre class="notranslate">Device-Memory: 1
-</pre>
+    Device-Memory: 1
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}}</td>
-   <td>{{Spec2('Device Memory')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                               | Comentário         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}} | {{Spec2('Device Memory')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Device-Memory")}}</p>
+{{Compat("http.headers.Device-Memory")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
-</ul>
+- [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API)
+- {{HTTPHeader("Accept-CH")}}
+- {{HTTPHeader("Accept-CH-Lifetime")}}
+- {{HTTPHeader("Vary")}}
+- {{DOMxRef("Navigator.deviceMemory")}}

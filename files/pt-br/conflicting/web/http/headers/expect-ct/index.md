@@ -12,83 +12,59 @@ tags:
 translation_of: Web/HTTP/Headers/Public-Key-Pins
 original_slug: Web/HTTP/Headers/Public-Key-Pins
 ---
-<div>{{HTTPSidebar}}{{deprecated_header}}</div>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<div class="blockIndicator note"><strong>Nota:</strong> O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificado de Transparência</a> e do cabeçalho {{HTTPHeader("Expect-CT")}}.</div>
+> **Note:** **Nota:** O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
 
-<p>O cabeçalho de resposta HTTP <code><strong>Public-Key-Pins</strong></code> usado para associar uma {{Glossary("key")}} pública criptográfica especifica com um certo servidor web para reduzir o risco de ataques {{Glossary("MITM")}} com certificados forjados, entretanto, ele foi removido em navegadores modernos e não é mais suportado. Use <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificado de Transparência</a> e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.</p>
+O cabeçalho de resposta HTTP **`Public-Key-Pins`** usado para associar uma {{Glossary("key")}} pública criptográfica especifica com um certo servidor web para reduzir o risco de ataques {{Glossary("MITM")}} com certificados forjados, entretanto, ele foi removido em navegadores modernos e não é mais suportado. Use [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.
 
-<p>Para mais informação, veja o artigo <em><a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a></em>.</p>
+Para mais informação, veja o artigo _[HTTP Public Key Pinning](/pt-BR/docs/Web/HTTP/Public_Key_Pinning)_.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Public-Key-Pins: pin-sha256="&lt;pin-value&gt;";
-                 max-age=&lt;expire-time&gt;;
-                 includeSubDomains;
-                 report-uri="&lt;uri&gt;"</pre>
+    Public-Key-Pins: pin-sha256="<pin-value>";
+                     max-age=<expire-time>;
+                     includeSubDomains;
+                     report-uri="<uri>"
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt><code>pin-sha256="&lt;pin-value&gt;"</code></dt>
- <dd>A cadeia de caracteres entre aspas duplas é a impressão digital da Informação da Chave Pública do Sujeito [<em>Subject Public Key Information</em> ({{Glossary("SPKI")}})] codificada em Base64. É possível especificar múltiplos <em>pins</em> para diferentes chaves públicas. Alguns navegadores podem permitir outros algoritmos de hasheamento além do SHA-256 no futuro.</dd>
- <dt><code>max-age=&lt;expire-time&gt;</code></dt>
- <dd>O tempo, em segundos, que o navegador deve lembrar que o site só deve ser acessado usando uma das chaves definidas.</dd>
- <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
- <dd>Se este parâmetro opcional é especificado, este regra vale para todos os subdomínios do site também.</dd>
- <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
- <dd>Se este parâmetro opcional é especificado, validações de <em>pin</em> que falharam são reportadas ao URL dado.</dd>
-</dl>
+- `pin-sha256="<pin-value>"`
+  - : A cadeia de caracteres entre aspas duplas é a impressão digital da Informação da Chave Pública do Sujeito \[_Subject Public Key Information_ ({{Glossary("SPKI")}})] codificada em Base64. É possível especificar múltiplos _pins_ para diferentes chaves públicas. Alguns navegadores podem permitir outros algoritmos de hasheamento além do SHA-256 no futuro.
+- `max-age=<expire-time>`
+  - : O tempo, em segundos, que o navegador deve lembrar que o site só deve ser acessado usando uma das chaves definidas.
+- `includeSubDomains` {{optional_inline}}
+  - : Se este parâmetro opcional é especificado, este regra vale para todos os subdomínios do site também.
+- `report-uri="<uri>"` {{optional_inline}}
+  - : Se este parâmetro opcional é especificado, validações de _pin_ que falharam são reportadas ao URL dado.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<div class="warning">
-<p id="HPKP_has_the_potential_to_lock_out_users_for_a_long_time_if_used_incorrectly!_The_use_of_backup_certificates_andor_pinning_the_CA_certificate_is_recommend.">HPKP tem o potencial de bloquear usuários por um longo período de tempo de usado incorretamente! O uso de <em>backup</em> de certificados e/ou fixação do Autoridade de Certificados é recomendado.</p>
-</div>
+> **Warning:** HPKP tem o potencial de bloquear usuários por um longo período de tempo de usado incorretamente! O uso de _backup_ de certificados e/ou fixação do Autoridade de Certificados é recomendado.
 
-<pre class="notranslate">Public-Key-Pins:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  max-age=5184000; includeSubDomains;
-  report-uri="https://www.example.org/hpkp-report"</pre>
+    Public-Key-Pins:
+      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+      max-age=5184000; includeSubDomains;
+      report-uri="https://www.example.org/hpkp-report"
 
-<p>Neste exemplo, <strong>pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="</strong> fixa a chave pública do servidor usada em produção. A segunda declaração de fixação <strong>pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="</strong> também fixa a chave de <em>backup</em>. <strong>max-age=5184000</strong> diz ao cliente para guardar esta informação por dois meses, que é um tempo limite razoável de acordo com a IETF RFC. Esta fixação de chave também é valida para todos os subdomínios, que é dito pela declaração do <strong>includeSubDomains</strong>. Finalmente, <strong>report-uri="https://www.example.org/hpkp-report"</strong> diz para onde reportar as validação de fixação que falharam.</p>
+Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fixa a chave pública do servidor usada em produção. A segunda declaração de fixação **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** também fixa a chave de _backup_. **max-age=5184000** diz ao cliente para guardar esta informação por dois meses, que é um tempo limite razoável de acordo com a IETF RFC. Esta fixação de chave também é valida para todos os subdomínios, que é dito pela declaração do **includeSubDomains**. Finalmente, **report-uri="https\://www\.example.org/hpkp-report"** diz para onde reportar as validação de fixação que falharam.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7469", "Public-Key-Pins", "2.1")}}</td>
-   <td>Public Key Pinning Extension for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                                |
+| -------------------------------------------------------- | ------------------------------------- |
+| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Public Key Pinning Extension for HTTP |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Public-Key-Pins")}}</p>
+{{Compat("http.headers.Public-Key-Pins")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
- <li>{{HTTPHeader("Expect-CT")}}</li>
-</ul>
+- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
+- {{HTTPHeader("Expect-CT")}}

@@ -8,69 +8,47 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p><span class="seoSummary"><code>getAttribute()</code> retorna o valor de um argumento específico do elemento.</span> Se o atributo não existir, o valor retornado será <code>null</code> ou <code>""</code> (string vazia). Veja <a href="#notas">Notas</a> para mais detalhes.</p>
+`getAttribute()` retorna o valor de um argumento específico do elemento. Se o atributo não existir, o valor retornado será `null` ou `""` (string vazia). Veja [Notas](#notas) para mais detalhes.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>var atributo</em> = element.getAttribute(<em>nomeDoAtributo</em>);
-</pre>
+    var atributo = element.getAttribute(nomeDoAtributo);
 
-<p>onde</p>
+onde
 
-<ul>
- <li><code><em>atributo</em></code> é uma string contendo o valor do <code><em>nomeDoAtributo</em></code>.</li>
- <li><code><em>nomeDoAtributo</em></code> é o nome do atributo cujo deseja se obter o valor.</li>
-</ul>
+- `atributo` é uma string contendo o valor do `nomeDoAtributo`.
+- `nomeDoAtributo` é o nome do atributo cujo deseja se obter o valor.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">var div1 = document.getElementById("div1");
+```js
+var div1 = document.getElementById("div1");
 var align = div1.getAttribute("align");
 
-alert(align); // mostra o valor do atributo "align" do elemento com id="div1"</pre>
+alert(align); // mostra o valor do atributo "align" do elemento com id="div1"
+```
 
-<h2 id="Notas" name="Notas">Notas</h2>
+## Notas
 
-<p>Quando for utilizado para um elemento HTML num DOM sinalizado como documento HTML,  <code>getAttribute()</code> troca de caixa alta para caixa baixa (maiúscula para minúscula) seu argumento antes de prosseguir.</p>
+Quando for utilizado para um elemento HTML num DOM sinalizado como documento HTML, `getAttribute()` troca de caixa alta para caixa baixa (maiúscula para minúscula) seu argumento antes de prosseguir.
 
-<p>Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes do Opera, Safari, Konqueror, e iCab, por exemplo) retornam <code>null</code> quando o atributo especificado não existe no elemento em questão, seguindo que <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">o esboço atual de especificações DOM</a> diz. A velha especificação do DOM 3 Core, por sua vez, diz que correto é retornar uma <em>string vazia</em> e algumas implementações de DOM se comportam dessa forma. Por exemplo, a implementação do getAttribute no XUL (Gecko) segue as especificações do DOM 3 Core e retorna uma string vazia. Consequentemente, deve-se usar {{domxref("Element.hasAttribute()")}} para checar a existência do atributo antes de utilizar o <code>getAttribute()</code>caso exista a possibilidade do argumento inexistir.</p>
+Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes do Opera, Safari, Konqueror, e iCab, por exemplo) retornam `null` quando o atributo especificado não existe no elemento em questão, seguindo que [o esboço atual de especificações DOM](http://dom.spec.whatwg.org/#dom-element-getattribute) diz. A velha especificação do DOM 3 Core, por sua vez, diz que correto é retornar uma _string vazia_ e algumas implementações de DOM se comportam dessa forma. Por exemplo, a implementação do getAttribute no XUL (Gecko) segue as especificações do DOM 3 Core e retorna uma string vazia. Consequentemente, deve-se usar {{domxref("Element.hasAttribute()")}} para checar a existência do atributo antes de utilizar o `getAttribute()`caso exista a possibilidade do argumento inexistir.
 
-<div>
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{CompatibilityTable}}</p>
+{{CompatibilityTable}}
 
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>29</td>
-   <td>23</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>6</td>
-  </tr>
- </tbody>
-</table>
+| Feature        | Chrome | Firefox (Gecko) | Internet Explorer                | Opera                            | Safari |
+| -------------- | ------ | --------------- | -------------------------------- | -------------------------------- | ------ |
+| Suporte Básico | 29     | 23              | {{CompatVersionUnknown}} | {{CompatVersionUnknown}} | 6      |
 
-<p>{{DOMAttributeMethods}}</p>
-</div>
+{{DOMAttributeMethods}}
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (introduzido em <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs nos documentos HTML</a></li>
-</ul>
+- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (introduzido em [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
+- [HTML 5: APIs nos documentos HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

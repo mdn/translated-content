@@ -7,46 +7,26 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>O atributo <code>stroke-dashoffset</code> especifica a distância entre o inicio traço e o fim.</p>
+O atributo `stroke-dashoffset` especifica a distância entre o inicio traço e o fim.
 
-<p>Se a <a href="/en/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> for usada, o valor representará a porcentagem do viewport atual.</p>
+Se a [\<percentage>](/en/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") for usada, o valor representará a porcentagem do viewport atual.
 
-<p>O valor pode ser negativo.</p>
+O valor pode ser negativo.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categorias</th>
-   <td>Atributo de Apresentação</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> | <a href="/en/SVG/Content_type#Length" title="en/SVG/Content_type#Length"><span>&lt;length&gt;</span></a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Valor inicial</th>
-   <td>0</td>
-  </tr>
-  <tr>
-   <th scope="row">Animação</th>
-   <td>Sim</td>
-  </tr>
-  <tr>
-   <th scope="row">Documento Normativo</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categorias          | Atributo de Apresentação                                                                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value               | [<percentage>](/en/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") \| [<length>](/en/SVG/Content_type#Length "en/SVG/Content_type#Length") \| inherit |
+| Valor inicial       | 0                                                                                                                                                                   |
+| Animação            | Sim                                                                                                                                                                 |
+| Documento Normativo | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                                                                          |
 
-<h2 id="Elementos">Elementos</h2>
+## Elementos
 
-<p>Os seguintes elementos podem utilizar o atributo <code>stroke-dashoffset</code></p>
+Os seguintes elementos podem utilizar o atributo `stroke-dashoffset`
 
-<ul>
- <li><a href="/en/SVG/Element#Shape" title="en/SVG/Element#Shape">Shape elements</a> »</li>
- <li><a href="/en/SVG/Element#TextContent" title="en/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
+- [Text content elements](/en/SVG/Element#TextContent "en/SVG/Element#TextContent") »

@@ -4,36 +4,36 @@ slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 original_slug: Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">Erro de sintaxe: Falta ) depois da lista de argumento
-</pre>
+    Erro de sintaxe: Falta ) depois da lista de argumento
 
-<h2 id="Tipo_de_Erro">Tipo de Erro</h2>
+## Tipo de Erro
 
-<p>{{jsxref("Erro de sintaxe")}}.</p>
+{{jsxref("Erro de sintaxe")}}.
 
-<h2 id="O_que_houve_de_errado">O que houve de errado?</h2>
+## O que houve de errado?
 
-<p>Ocorreu um erro quando a função foi chamada. Pode ter sido um erro de escrita, falta de operador, ou uma string fora das aspas, por exemplo.</p>
+Ocorreu um erro quando a função foi chamada. Pode ter sido um erro de escrita, falta de operador, ou uma string fora das aspas, por exemplo.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Pela falta do operador "+" para fazer a concatenação da string, o JavaScript esperou um argumento para a função log ser "PI: ". Nesse caso, deveria ser finalizado com parênteses de fechamento ')'.</p>
+Pela falta do operador "+" para fazer a concatenação da string, o JavaScript esperou um argumento para a função log ser "PI: ". Nesse caso, deveria ser finalizado com parênteses de fechamento ')'.
 
-<pre class="brush: js example-bad">console.log("PI: " Math.PI);
+```js example-bad
+console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
-</pre>
+```
 
-<p>Você pode corrigir a chamada do log adicionand o operador "+":</p>
+Você pode corrigir a chamada do log adicionand o operador "+":
 
-<pre class="brush: js example-good">console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"</pre>
+```js example-good
+console.log("PI: " + Math.PI);
+// "PI: 3.141592653589793"
+```
 
-<h2 id="Veja_também">Veja também:</h2>
+## Veja também:
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Funções</a></li>
-</ul>
+- [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)

@@ -3,69 +3,43 @@ title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração debug</strong> invoca qualquer funcionalidade de depuração disponivel, como definir um breakpoint. Se nenhuma funcionalidade de depuração estiver disponivel, essa declaração não tem nenhum efeito.</p>
+A **declaração debug** invoca qualquer funcionalidade de depuração disponivel, como definir um breakpoint. Se nenhuma funcionalidade de depuração estiver disponivel, essa declaração não tem nenhum efeito.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>debugger;</code></pre>
+    debugger;
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O exemplo a seguir mostra o código onde uma declaração debugger foi inserida para invocar um depurador (se um existir) quando a função for chamada.</p>
+O exemplo a seguir mostra o código onde uma declaração debugger foi inserida para invocar um depurador (se um existir) quando a função for chamada.
 
-<pre class="brush:js">function codigoPotencialmenteBugado() {
+```js
+function codigoPotencialmenteBugado() {
     debugger;
     // faça atividades de depuração como examinar, pular um passo etc.
 }
-</pre>
+```
 
-<p>Quando o depurador é invocado, a execução é parada na declaração debugger. É como um breakpoint no código-fonte.</p>
+Quando o depurador é invocado, a execução é parada na declaração debugger. É como um breakpoint no código-fonte.
 
-<p><a href="https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png"><img alt="Paused at a debugger statement." src="https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png" style="height: 371px; width: 700px;"></a></p>
+[![Paused at a debugger statement.](https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png)](<https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png>)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-debugger-statement', 'Debugger statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.15', 'Debugger statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição Inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-7.5.3', 'Debugger statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-7.4.3', 'Debugger statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>
-    <p>Apenas mencioado como uma palavra reservada.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                   | Comentário                                   |
+| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------- |
+| {{SpecName('ES6', '#sec-debugger-statement', 'Debugger statement')}} | {{Spec2('ES6')}}     |                                              |
+| {{SpecName('ES5.1', '#sec-12.15', 'Debugger statement')}}                 | {{Spec2('ES5.1')}} | Definição Inicial                            |
+| {{SpecName('ES3', '#sec-7.5.3', 'Debugger statement')}}                     | {{Spec2('ES3')}}     |                                              |
+| {{SpecName('ES1', '#sec-7.4.3', 'Debugger statement')}}                     | {{Spec2('ES1')}}     | Apenas mencioado como uma palavra reservada. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.statements.debugger")}}</p>
+{{Compat("javascript.statements.debugger")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Debugging_JavaScript">Depurando JavaScript </a></li>
- <li><a href="/en-US/docs/Tools/Debugger">O Depurador nas Ferramentas de Desenvolvedor do Firefox </a></li>
-</ul>
+- [Depurando JavaScript](/pt-BR/docs/Debugging_JavaScript)
+- [O Depurador nas Ferramentas de Desenvolvedor do Firefox](/pt-BR/docs/Tools/Debugger)

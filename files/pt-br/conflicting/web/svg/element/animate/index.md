@@ -9,52 +9,44 @@ tags:
 translation_of: Web/SVG/Element/animateColor
 original_slug: Web/SVG/Element/animateColor
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<div class="warning">
-<p>Este elemento ficou obsoleto na Segunda Edição do SVG 1.1 e deverá ser removida das futuras versões do SVG. Este elemento fornece recursos ainda não disponíveis utilizando o elemento {{ SVGElement("animate") }} e não está implementado no Firefox e no Internet Explorer. Os autores devem utilizar o elemento {{ SVGElement("animate") }} em seu lugar.</p>
-</div>
+> **Warning:** Este elemento ficou obsoleto na Segunda Edição do SVG 1.1 e deverá ser removida das futuras versões do SVG. Este elemento fornece recursos ainda não disponíveis utilizando o elemento {{ SVGElement("animate") }} e não está implementado no Firefox e no Internet Explorer. Os autores devem utilizar o elemento {{ SVGElement("animate") }} em seu lugar.
 
-<p>O elemento <code>animateColor</code> especifica uma transformação de cor ao longo do tempo.</p>
+O elemento `animateColor` especifica uma transformação de cor ao longo do tempo.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="/files/3264/animateColor.svg" title="/files/3264/animateColor.svg">animateColor.svg</a></p>
+» [animateColor.svg](/files/3264/animateColor.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/docs/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#AnimationEvent" title="en/SVG/Attribute#AnimationEvent">Atributos de eventos da animação</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#AnimationAttributeTarget" title="en/SVG/Attribute#AnimationAttributeTarget">Atributos de destino do atributo da animação</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#AnimationTiming" title="en/SVG/Attribute#AnimationTiming">Atributos de cronometragem da animação</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#AnimationValue" title="en/SVG/Attribute#AnimationValue">Atributos de valor de animação</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#AnimationAddition" title="en/SVG/Attribute#AnimationAddition">Atributos de animação adicionais</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
+- [Atributos XLink](/pt-BR/docs/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de destino do atributo da animação](/pt-BR/docs/SVG/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
+- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
+- [Atributos de valor de animação](/pt-BR/docs/SVG/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
+- [Atributos de animação adicionais](/pt-BR/docs/SVG/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/docs/DOM/SVGAnimateColorElement" title="en/DOM/SVGAnimateColorElement">SVGAnimateColorElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGAnimateColorElement`](/pt-BR/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement").
 
-<h2 id="Related">Related</h2>
+## Related
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
-</ul>
+- {{ SVGElement("animate") }}

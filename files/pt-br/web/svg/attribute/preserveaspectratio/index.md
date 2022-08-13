@@ -3,165 +3,168 @@ title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O atributo <code><strong>preserveAspectRatio</strong></code> indica como um elemento com uma viewBox, fornecendo uma determinada proporção deve se ajustar a uma viewport com uma proporção diferente.</p>
+O atributo **`preserveAspectRatio`** indica como um elemento com uma viewBox, fornecendo uma determinada proporção deve se ajustar a uma viewport com uma proporção diferente.
 
-<p>Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the <code>preserveAspectRatio</code> attribute has no effect (<em>with one exception, the {{SVGElement('image')}} element, as described below</em>).</p>
+Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the `preserveAspectRatio` attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-     &lt;path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" /&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+     <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs>
 
-  &lt;!-- (width&gt;height) meet --&gt;
-  &lt;svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
+  <!-- (width>height) meet -->
+  <svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
 
-  &lt;!-- (width&gt;height) slice --&gt;
-  &lt;svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
+  <!-- (width>height) slice -->
+  <svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
 
-  &lt;!-- (width&lt;height) meet --&gt;
-  &lt;svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
+  <!-- (width<height) meet -->
+  <svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
 
-  &lt;!-- (width&lt;height) slice --&gt;
-  &lt;svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
+  <!-- (width<height) slice -->
+  <svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+  <svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
 
-  &lt;!-- none --&gt;
-  &lt;svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="160" height="60"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-&lt;/svg&gt;</pre>
+  <!-- none -->
+  <svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="160" height="60"><use href="#smiley" /></svg>
+</svg>
+```
 
-<div class="hidden">
-<h6 id="topExample">topExample</h6>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: css">html,body,svg { height:100% }
-</pre>
+```html hidden
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+     <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs>
 
-<pre class="brush: html">&lt;svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-     &lt;path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" /&gt;
-  &lt;/defs&gt;
+  <!-- (width>height) meet -->
+  <rect x="0" y="0" width="20" height="10">
+    <title>xMidYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMid meet" x="0" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (width&gt;height) meet --&gt;
-  &lt;rect x="0" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid meet" x="0" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="25" y="0" width="20" height="10">
+    <title>xMinYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMinYMid meet" x="25" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="25" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMinYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMinYMid meet" x="25" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="50" y="0" width="20" height="10">
+    <title>xMaxYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMaxYMid meet" x="50" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="50" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMaxYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMaxYMid meet" x="50" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (width>height) slice -->
+  <rect x="0" y="15" width="20" height="10">
+    <title>xMidYMin slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMin slice" x="0" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (width&gt;height) slice --&gt;
-  &lt;rect x="0" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMin slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMin slice" x="0" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="25" y="15" width="20" height="10">
+    <title>xMidYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMid slice" x="25" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="25" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid slice" x="25" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="50" y="15" width="20" height="10">
+    <title>xMidYMax slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMax slice" x="50" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="50" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMax slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMax slice" x="50" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (width<height) meet -->
+  <rect x="75" y="0" width="10" height="25">
+    <title>xMidYMin meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMin meet" x="75" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (width&lt;height) meet --&gt;
-  &lt;rect x="75" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMin meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMin meet" x="75" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="90" y="0" width="10" height="25">
+    <title>xMidYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMid meet" x="90" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="90" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid meet" x="90" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="105" y="0" width="10" height="25">
+    <title>xMidYMax meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMax meet" x="105" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="105" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMax meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMax meet" x="105" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (width<height) slice -->
+  <rect x="120" y="0" width="10" height="25">
+    <title>xMinYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMinYMid slice" x="120" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (width&lt;height) slice --&gt;
-  &lt;rect x="120" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMinYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMinYMid slice" x="120" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="135" y="0" width="10" height="25">
+    <title>xMidYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMid slice" x="135" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="135" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid slice" x="135" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="150" y="0" width="10" height="25">
+    <title>xMaxYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMaxYMid slice" x="150" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="150" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMaxYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMaxYMid slice" x="150" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- none -->
+  <rect x="0" y="30" width="160" height="60">
+    <title>none</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="160" height="60"
+       preserveAspectRatio="none" x="0" y="30">
+    <use href="#smiley" />
+  </svg>
+</svg>
+```
 
-  &lt;!-- none --&gt;
-  &lt;rect x="0" y="30" width="160" height="60"&gt;
-    &lt;title&gt;none&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="160" height="60"
-       preserveAspectRatio="none" x="0" y="30"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;</pre>
-
-<pre class="brush: css">path {
+```css hidden
+path {
   fill: yellow;
   stroke: black;
   stroke-width: 8px;
@@ -172,249 +175,136 @@ translation_of: Web/SVG/Attribute/preserveAspectRatio
 
 rect:hover, rect:active {
   outline: 1px solid red;
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">preserveAspectRatio="&lt;align&gt; [&lt;meetOrSlice&gt;]"</pre>
+    preserveAspectRatio="<align> [<meetOrSlice>]"
 
-<p>Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:</p>
+Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
 
-<dl>
- <dt>Alignment value</dt>
- <dd>The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
- <ul>
-  <li><strong>none</strong><br>
-   Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. <em>Note that if </em><code>&lt;align&gt;</code><em> is </em><code>none</code><em>, then the optional </em><code>&lt;meetOrSlice&gt;</code><em> value is ignored</em>.</li>
-  <li><strong>xMinYMin</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.</li>
-  <li><strong>xMidYMin</strong> - Force uniform scaling.<br>
-   Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.</li>
-  <li><strong>xMaxYMin</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;+&lt;width&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.</li>
-  <li><strong>xMinYMid</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.<br>
-   Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.</li>
-  <li><strong>xMidYMid</strong> (the default) - Force uniform scaling.<br>
-   Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.<br>
-   Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.</li>
-  <li><strong>xMaxYMid</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;+&lt;width&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.<br>
-   Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.</li>
-  <li><strong>xMinYMax</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;+&lt;height&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.</li>
-  <li><strong>xMidYMax</strong> - Force uniform scaling.<br>
-   Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;+&lt;height&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.</li>
-  <li><strong>xMaxYMax</strong> - Force uniform scaling.<br>
-   Align the <code>&lt;min-x&gt;+&lt;width&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.<br>
-   Align the <code>&lt;min-y&gt;+&lt;height&gt;</code> of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.</li>
- </ul>
- </dd>
- <dt>Meet or slice reference</dt>
- <dd>The meet or slice reference is optional and, if provided, must be one of the following keywords:
- <ul>
-  <li><strong>meet</strong> (<em>the default</em>) - Scale the graphic such that:
-   <ul>
-    <li>aspect ratio is preserved</li>
-    <li>the entire {{ SVGAttr("viewBox") }} is visible within the viewport</li>
-    <li>the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria</li>
-   </ul>
-   In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).</li>
-  <li><strong>slice</strong> - Scale the graphic such that:
-   <ul>
-    <li>aspect ratio is preserved</li>
-    <li>the entire viewport is covered by the {{ SVGAttr("viewBox") }}</li>
-    <li>the {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria</li>
-   </ul>
-   In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).</li>
- </ul>
- </dd>
-</dl>
+- Alignment value
+  - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:\* **none**
+    Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. _Note that if_ `<align>` _is_ `none`_, then the optional_ `<meetOrSlice>` _value is ignored_.
+    - **xMinYMin** - Force uniform scaling.
+      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+    - **xMidYMin** - Force uniform scaling.
+      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+    - **xMaxYMin** - Force uniform scaling.
+      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+    - **xMinYMid** - Force uniform scaling.
+      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
+    - **xMidYMid** (the default) - Force uniform scaling.
+      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
+    - **xMaxYMid** - Force uniform scaling.
+      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
+    - **xMinYMax** - Force uniform scaling.
+      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+    - **xMidYMax** - Force uniform scaling.
+      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+    - **xMaxYMax** - Force uniform scaling.
+      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+- Meet or slice reference
 
-<h2 id="Elements">Elements</h2>
+  - : The meet or slice reference is optional and, if provided, must be one of the following keywords:\* **meet** (_the default_) - Scale the graphic such that:
 
-<p>Seven elements are using this attribute: {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("image")}}, {{SVGElement("feImage")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, and {{SVGElement("view")}}.</p>
+        *   aspect ratio is preserved
+        *   the entire {{ SVGAttr("viewBox") }} is visible within the viewport
+        *   the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
 
-<h3 id="feImage">feImage</h3>
+        In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
 
-<p>For {{SVGElement('feImage')}}, <code>preserveAspectRatio</code> defines how the referenced image should fit in the rectangle define by the <code>&lt;feImage&gt;</code> element.</p>
+    - **slice** - Scale the graphic such that:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+      - aspect ratio is preserved
+      - the entire viewport is covered by the {{ SVGAttr("viewBox") }}
+      - the {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria
 
-<h3 id="image">image</h3>
+      In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
 
-<p>For {{SVGElement('image')}}, <code>preserveAspectRatio</code> defines how the referenced image should fit in the rectangle define by the <code>&lt;image&gt;</code> element.</p>
+## Elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+Seven elements are using this attribute: {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("image")}}, {{SVGElement("feImage")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, and {{SVGElement("view")}}.
 
-<h3 id="marker">marker</h3>
+### feImage
 
-<p>For {{SVGElement('marker')}}, <code>preserveAspectRatio</code> indicates if a uniform scaling must be performed to fit the element viewport.</p>
+For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<feImage>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
 
-<h3 id="pattern">pattern</h3>
+### image
 
-<p>For {{SVGElement('pattern')}}, <code>preserveAspectRatio</code> indicates if a uniform scaling must be performed to fit the element viewport.</p>
+For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<image>` element.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
 
-<h3 id="svg">svg</h3>
+### marker
 
-<p>For {{SVGElement('svg')}}, <code>preserveAspectRatio</code> indicates if a uniform scaling must be performed to fit the element viewport.</p>
+For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
 
-<h3 id="symbol">symbol</h3>
+### pattern
 
-<p>For {{SVGElement('symbol')}}, <code>preserveAspectRatio</code> indicates if a uniform scaling must be performed to fit the element viewport.</p>
+For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
 
-<h3 id="view">view</h3>
+### svg
 
-<p>For {{SVGElement('view')}}, <code>preserveAspectRatio</code> indicates if a uniform scaling must be performed to fit the element viewport.</p>
+For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
 
-<h2 id="Specification">Specification</h2>
+### symbol
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
+
+### view
+
+For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
+
+| Value         | **<align> <meetOrSlice>?** |
+| ------------- | -------------------------- |
+| Default value | `xMidYMid` `meet`          |
+| Animatable    | Yes                        |
+
+## Specification
+
+| Specification                                                                                                                        | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                    |
+| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}                 | {{Spec2("SVG2")}}         |                    |
+| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}             | {{Spec2("SVG1.1")}}         | Initial definition |

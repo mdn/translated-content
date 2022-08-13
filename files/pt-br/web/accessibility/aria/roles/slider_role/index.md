@@ -4,53 +4,35 @@ slug: Web/Accessibility/ARIA/Roles/slider_role
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
-<h3 id="Descrição">Descrição</h3>
+### Descrição
 
-<p>Essa técnica demosntrará como usar o <a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider" rel="external">slider</a> role. </p>
+Essa técnica demosntrará como usar o [slider](http://www.w3.org/TR/wai-aria/roles#slider) role.
 
-<p>The<code> slider</code><code> </code>role is used for markup that allows a user to select a value from within a given range. The slider role is assigned to the "thumb," the control that is adjusted to change the value. Typically, another element is styled to visually represent the range of possible valued, and the thumb positioned visually to represent the value within that range. As the user interacts with the thumb, the application must programmatically adjust the slider's <code>aria-valuenow</code> (and possible <code>aria-valuetext</code>) attribute to reflect the current value. See the <a href="#examples">Examples</a> section below for more information.</p>
+The` slider ```role is used for markup that allows a user to select a value from within a given range. The slider role is assigned to the "thumb," the control that is adjusted to change the value. Typically, another element is styled to visually represent the range of possible valued, and the thumb positioned visually to represent the value within that range. As the user interacts with the thumb, the application must programmatically adjust the slider's `aria-valuenow` (and possible `aria-valuetext`) attribute to reflect the current value. See the [Examples](#examples) section below for more information.
 
-<h4 id="Keyboard_And_Focus">Keyboard And Focus</h4>
+#### Keyboard And Focus
 
-<p>The slider should be keyboard focusable and operable. When the user tabs focus to the slider, it should land on the thumb: the control a mouse user would drag. Arrow keys should operate as follows (localization for right-to-left languages should reverse the direction of the arrows):</p>
+The slider should be keyboard focusable and operable. When the user tabs focus to the slider, it should land on the thumb: the control a mouse user would drag. Arrow keys should operate as follows (localization for right-to-left languages should reverse the direction of the arrows):
 
-<table style="width: 70%;">
- <thead>
-  <tr>
-   <th scope="col">Tecla(s)</th>
-   <th scope="col">Ação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Setas para direita e para cima </td>
-   <td>Incrementa o valor selecionado</td>
-  </tr>
-  <tr>
-   <td>Setas para esquerda e para baixo</td>
-   <td>Decrementa o valor selecionado</td>
-  </tr>
-  <tr>
-   <td>Page Up and Page Down</td>
-   <td>Optionally increase and decrease the value by a set amount (e.g. by 10 on a range from 0 to 100)</td>
-  </tr>
- </tbody>
-</table>
+| Tecla(s)                         | Ação                                                                                             |
+| -------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Setas para direita e para cima   | Incrementa o valor selecionado                                                                   |
+| Setas para esquerda e para baixo | Decrementa o valor selecionado                                                                   |
+| Page Up and Page Down            | Optionally increase and decrease the value by a set amount (e.g. by 10 on a range from 0 to 100) |
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
+### Possible effects on user agents and assistive technology
 
-<p> </p>
+> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+Exemplos
 
-<p id="Examples">Exemplos</p>
+#### Exemplo 1: Escala numérica simples
 
-<h4 id="Exemplo_1_Escala_numérica_simples">Exemplo 1: Escala numérica simples</h4>
+In the example below, a simple slider is used to select a value between 1 and 100. The current volume is 50. The application will programmatically update the value of `aria-valuenow` in response to user input.
 
-<p>In the example below, a simple slider is used to select a value between 1 and 100. The current volume is 50. The application will programmatically update the value of <code>aria-valuenow</code> in response to user input.</p>
-
-<pre class="brush: html">&lt;label for="fader"&gt;Volume&lt;/label&gt;
-&lt;input type="range"
+```html
+<label for="fader">Volume</label>
+<input type="range"
   id="fader"
   min="1"
   max="100"
@@ -59,62 +41,59 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
   aria-valuemin="1"
   aria-valuemax="100"
   aria-valuenow="50"
-  oninput="outputUpdate(value)"&gt;
-&lt;output for="fader" id="volume"&gt;50&lt;/output&gt;
-</pre>
+  oninput="outputUpdate(value)">
+<output for="fader" id="volume">50</output>
+```
 
-<p>The following code snippet allows you to return the output as it is updated by user input:</p>
+The following code snippet allows you to return the output as it is updated by user input:
 
-<pre>function outputUpdate(vol) {
-  document.querySelector('#volume').value = vol;
-}
-</pre>
+    function outputUpdate(vol) {
+      document.querySelector('#volume').value = vol;
+    }
 
-<h4 id="Exemplo_2_Valores_de_texto">Exemplo 2: Valores de texto</h4>
+#### Exemplo 2: Valores de texto
 
-<p>Sometimes, a slider is used to choose a value that is not, semantically, a number. In these cases, the <code>aria-valuetext</code> attribute is used to provide the appropriate text name for the currently selected value. In the example below, the slider is used to select a day of the week.</p>
+Sometimes, a slider is used to choose a value that is not, semantically, a number. In these cases, the `aria-valuetext` attribute is used to provide the appropriate text name for the currently selected value. In the example below, the slider is used to select a day of the week.
 
-<pre class="brush: html">&lt;label for="day-handle"&gt;Days&lt;/label&gt;
-&lt;div class="day-slider"&gt;
-  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-handle"
+```html
+<label for="day-handle">Days</label>
+<div class="day-slider">
+  <div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-handle"
      aria-valuemin="1"
      aria-valuemax="7"
      aria-valuenow="2"
-     aria-valuetext="Monday"&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+     aria-valuetext="Monday">
+ </div>
+</div>
+```
 
-<p>The code snippet below shows a function that responds to user input and updates the <code>aria-valuenow</code> and <code>aria-valuetext</code> attributes:</p>
+The code snippet below shows a function that responds to user input and updates the `aria-valuenow` and `aria-valuetext` attributes:
 
-<pre class="brush: js">var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+```js
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
-    handle<span>.setAttribute(<span class="string">"aria-valuenow"</span><span>, </span><span class="string">newValue.toString()</span><span>);</span></span>
+    handle.setAttribute("aria-valuenow", newValue.toString());
     handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
-</pre>
+```
 
-<h3 id="Notas">Notas </h3>
+### Notas
 
-<h3 id="Atributos_ARIA_usados">Atributos ARIA usados</h3>
+### Atributos ARIA usados
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute" title="Using the aria-label attribute">aria-valuenow</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="Using the aria-required attribute">aria-valuetext</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
-</ul>
+- [aria-valuemin](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute")
+- [aria-valuemax](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute")
+- [aria-valuenow](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute "Using the aria-label attribute")
+- [aria-valuetext](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute "Using the aria-required attribute")
+- [aria-orientation](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute")
 
-<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
+### Related ARIA techniques
 
-<h3 id="Compatibility">Compatibility</h3>
+### Compatibility
 
-<p class="comment">TBD: Add support information for common UA and AT product combinations</p>
+TBD: Add support information for common UA and AT product combinations
 
-<h3 id="Recursos_Adicionais">Recursos Adicionais</h3>
+### Recursos Adicionais
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider">WAI-ARIA specification for the <code>slider</code> role</a></li>
-</ul>
+- [WAI-ARIA specification for the `slider` role](http://www.w3.org/TR/wai-aria/roles#slider)

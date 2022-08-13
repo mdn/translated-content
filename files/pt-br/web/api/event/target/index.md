@@ -6,64 +6,43 @@ tags:
   - pt-br
 translation_of: Web/API/Event/target
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Uma referência ao objeto que enviou o evento. É diferente de {{domxref ("event.currentTarget")}} quando o manipulador de eventos é chamado durante a fase de borbulhagem ou captura do evento.</p>
+Uma referência ao objeto que enviou o evento. É diferente de {{domxref ("event.currentTarget")}} quando o manipulador de eventos é chamado durante a fase de borbulhagem ou captura do evento.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">theTarget = event.target</pre>
+    theTarget = event.target
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A propriedade <strong><code>event.target</code></strong> pode ser usada para implementar a delegação de eventos.</p>
+A propriedade **`event.target`** pode ser usada para implementar a delegação de eventos.
 
-<pre class="brush: js notranslate">// Assumindo que existe uma variável 'list' contendo uma instância de um elemento ul de HTML.
+```js
+// Assumindo que existe uma variável 'list' contendo uma instância de um elemento ul de HTML.
 function hide(e) {
-  // A menos que os itens da lista sejam separados por uma margem, <em>e.target</em> deve ser diferente de <em>e.currentTarget</em>
+  // A menos que os itens da lista sejam separados por uma margem, e.target deve ser diferente de e.currentTarget
   e.target.style.visibility = 'hidden';
 }
 
 list.addEventListener('click', hide, false);
 
-// Se algum elemento (elemento &lt;li&gt; ou um link dentro de um elemento &lt;li&gt; por exemplo) for clicado, ele desaparecerá.
+// Se algum elemento (elemento <li> ou um link dentro de um elemento <li> por exemplo) for clicado, ele desaparecerá.
 // Só requer um único listener para fazer isso.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}     | {{Spec2("DOM WHATWG")}} |                    |
+| {{SpecName("DOM4", "#dom-event-target", "Event.target")}}             | {{Spec2("DOM4")}}         |                    |
+| {{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}} | {{Spec2("DOM2 Events")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Event.target")}}
 
-<p>{{Compat("api.Event.target")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
-</ul>
+- [Comparison of Event Targets](/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets)

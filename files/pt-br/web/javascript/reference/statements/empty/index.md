@@ -3,47 +3,47 @@ title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
 translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Uma <strong>declaração vazia</strong> é usada para fornecer nenhuma declaração, embora a sintaxe do JavaScript esperasse uma.</p>
+Uma **declaração vazia** é usada para fornecer nenhuma declaração, embora a sintaxe do JavaScript esperasse uma.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-empty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
 
+## Sintaxe
 
+    ;
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Descrição
 
-<pre class="syntaxbox notranslate">;
-</pre>
+A instrução vazia é um ponto-e-vírgula (;) indicando que nenhuma instrução será executada, mesmo se a sintaxe do JavaScript exigir uma.
 
-<h2 id="Descrição">Descrição</h2>
+O comportamento oposto, em que você deseja várias instruções, mas o JavaScript permite apenas uma única, é possível usando uma [instrução de bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ; combina várias declarações em uma única.
 
-<p>A instrução vazia é um ponto-e-vírgula (;) indicando que nenhuma instrução será executada, mesmo se a sintaxe do JavaScript exigir uma.</p>
+## Exemplos
 
-<p>O comportamento oposto, em que você deseja várias instruções, mas o JavaScript permite apenas uma única, é possível usando uma <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block">instrução de bloco</a> ; combina várias declarações em uma única.</p>
+A instrução vazia às vezes é usada com instruções de loop. Veja o exemplo a seguir com um corpo de loop vazio:
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<p>A instrução vazia às vezes é usada com instruções de loop. Veja o exemplo a seguir com um corpo de loop vazio:</p>
-
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (i = 0; i &lt; arr.length; arr[i++] = 0) /* empty statement */ ;
+for (i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
 
 console.log(arr)
 // [0, 0, 0]
-</pre>
+```
 
-<p><strong>Nota:</strong> É uma boa ideia comentar o uso intencional da declaração vazia, pois não é realmente óbvio distinguir entre um ponto e vírgula normal. No exemplo a seguir, o uso provavelmente não é intencional:</p>
+**Nota:** É uma boa ideia comentar o uso intencional da declaração vazia, pois não é realmente óbvio distinguir entre um ponto e vírgula normal. No exemplo a seguir, o uso provavelmente não é intencional:
 
-<pre class="brush: js notranslate">if (condition);       // Caution, this "if" does nothing!
+```js
+if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this gets always executed!!!
-</pre>
+```
 
-<p>Outro Exemplo: Uma declaração <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a> declaração sem chaves ({ }). Se três for verdadeiro, nada acontecerá, quatro não importa e também a função launchRocket ( ) no caso contrário não será executada.</p>
+Outro Exemplo: Uma declaração [`if...else`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else) declaração sem chaves ({ }). Se três for verdadeiro, nada acontecerá, quatro não importa e também a função launchRocket ( ) no caso contrário não será executada.
 
-<pre class="brush: js notranslate">if (one)
+```js
+if (one)
   doOne();
 else if (two)
   doTwo();
@@ -52,29 +52,19 @@ else if (three)
 else if (four)
   doFour();
 else
-  launchRocket();</pre>
+  launchRocket();
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                           |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} |
 
-<h2 id="Browsers_compatíveis">Browsers compatíveis</h2>
+## Browsers compatíveis
 
+{{Compat("javascript.statements.empty")}}
 
+## Veja também
 
-<p>{{Compat("javascript.statements.empty")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Statements/block", "Block statement")}}</li>
-</ul>
+- {{jsxref("Statements/block", "Block statement")}}

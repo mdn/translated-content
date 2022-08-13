@@ -3,190 +3,104 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 translation_of: Web/API/MutationObserver
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><span style="font-family: consolas,monaco,andale mono,monospace;">MutationObserver</span> fornece aos desenvolvedores uma maneira de reagir a mudanças em um <a href="/en-US/docs/DOM">DOM</a>. Ele é concebido como um substituto para <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> definido na especificação de eventos DOM nível 3.</p>
+MutationObserver fornece aos desenvolvedores uma maneira de reagir a mudanças em um [DOM](/pt-BR/docs/DOM). Ele é concebido como um substituto para [Mutation Events](/pt-BR/docs/DOM/Mutation_events) definido na especificação de eventos DOM nível 3.
 
-<h2 id="Constructor" name="Constructor">Constructor</h2>
+## Constructor
 
-<h3 id="MutationObserver" name="MutationObserver()"><code>MutationObserver()</code></h3>
+### `MutationObserver()`
 
-<p>Construtor para instanciar novos observadores de mutação do DOM.</p>
+Construtor para instanciar novos observadores de mutação do DOM.
 
-<pre class="eval notranslate">MutationObserver(
-  function callback
-);
-</pre>
+    MutationObserver(
+      function callback
+    );
 
-<h6 id="Parameters" name="Parameters">Parâmetros</h6>
+###### Parâmetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>A função que será chamada em cada mutação do DOM. O observador irá chamar esta função com dois argumentos. O primeiro é um array de objetos, cada um do tipo <a href="#MutationRecord"><code>MutationRecord</code></a>. O segundo é a essa instância <span style="font-family: consolas,monaco,andale mono,monospace;">MutationObserver</span>.</dd>
-</dl>
+- `callback`
+  - : A função que será chamada em cada mutação do DOM. O observador irá chamar esta função com dois argumentos. O primeiro é um array de objetos, cada um do tipo [`MutationRecord`](#MutationRecord). O segundo é a essa instância MutationObserver.
 
-<h2 id="Instance_methods" name="Instance_methods">Métodos da instância</h2>
+## Métodos da instância
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#observe()">observe</a>( {{domxref("Node")}} target, <a href="#MutationObserverInit">MutationObserverInit</a> options );</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#disconnect()">disconnect</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>Array <a href="#takeRecords()">takeRecords</a>();</code></td>
-  </tr>
- </tbody>
-</table>
+| `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
+| -------------------------------------------------------------------------------- |
+| `void disconnect();`                                                             |
+| `Array takeRecords();`                                                           |
 
-<h3 id="observe" name="observe()"><code>observe()</code></h3>
+### `observe()`
 
-<p>Registra a instância <span style="font-family: consolas,monaco,andale mono,monospace;">MutationObserver</span> para receber notificações das mutações do DOM no nó especificado.</p>
+Registra a instância MutationObserver para receber notificações das mutações do DOM no nó especificado.
 
-<pre class="eval notranslate">void observe(
-  {{domxref("Node")}} target,
-  <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> options
-);
-</pre>
+    void observe(
+      {{domxref("Node")}} target,
+      MutationObserverInit options
+    );
 
-<h6 id="Parameters" name="Parameters"><strong style="font-size: 9px; font-weight: bold; line-height: 14.0699996948242px;">Parâmetros</strong></h6>
+###### Parâmetros
 
-<dl>
- <dt><code>target</code></dt>
- <dd>O {{domxref("Node")}} no qual é observadas as mutações do DOM.</dd>
- <dt><code>options</code></dt>
- <dd>Um objeto <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> especifica quais mutações DOM devem ser reportadas.</dd>
-</dl>
+- `target`
+  - : O {{domxref("Node")}} no qual é observadas as mutações do DOM.
+- `options`
+  - : Um objeto [`MutationObserverInit`](#MutationObserverInit) especifica quais mutações DOM devem ser reportadas.
 
-<div class="note">NOTA: Adicionar um observador para um elemento é como utilizar o addEventListener, se você observar o elemento várias vezes não faz diferença. Ou seja, se você observar um elemento duas vezes, o callback do observador não disparará duas vezes, nem você deverá executar duas vezes o disconnect(). Em outras palavras, uma vez que um elemento é observado, observá-lo novamento com a mesma instância do observador não fará nada. No entanto, se o objeto callback for diferente, ele, é claro, adicionará outro observador para isso.</div>
+> **Note:** NOTA: Adicionar um observador para um elemento é como utilizar o addEventListener, se você observar o elemento várias vezes não faz diferença. Ou seja, se você observar um elemento duas vezes, o callback do observador não disparará duas vezes, nem você deverá executar duas vezes o disconnect(). Em outras palavras, uma vez que um elemento é observado, observá-lo novamento com a mesma instância do observador não fará nada. No entanto, se o objeto callback for diferente, ele, é claro, adicionará outro observador para isso.
 
-<h3 id="disconnect" name="disconnect()"><code>disconnect()</code></h3>
+### `disconnect()`
 
-<p>Pára o rebimento de notificações das mutações do DOM na instância <code>MutationObserver.</code> O callback do observador não será invocado até que método <a href="#observe()"><code>observe()</code></a> seja novamente utilizado.</p>
+Pára o rebimento de notificações das mutações do DOM na instância `MutationObserver.` O callback do observador não será invocado até que método [`observe()`](<#observe()>) seja novamente utilizado.
 
-<pre class="eval notranslate">void disconnect();
-</pre>
+    void disconnect();
 
-<h3 id="takeRecords" name="takeRecords()"><code>takeRecords()</code></h3>
+### `takeRecords()`
 
-<p>Esvazia a fila de registro da instância <code>MutationObserver</code> e retorna o que estava nela.</p>
+Esvazia a fila de registro da instância `MutationObserver` e retorna o que estava nela.
 
-<pre class="eval notranslate">Array takeRecords();
-</pre>
+    Array takeRecords();
 
-<h6 id="Return_value" name="Return_value">Valor de retorno</h6>
+###### Valor de retorno
 
-<p>Retorna um Array de <a href="#MutationRecord"><code>MutationRecord</code>s</a>.</p>
+Retorna um Array de [`MutationRecord`s](#MutationRecord).
 
-<h2 id="MutationObserverInit" name="MutationObserverInit"><code>MutationObserverInit</code></h2>
+## `MutationObserverInit`
 
-<p><code>MutationObserverInit</code> é um objeto que pode especificar as seguintes propriedades:</p>
+`MutationObserverInit` é um objeto que pode especificar as seguintes propriedades:
 
-<div class="note">NOTA: No mínimo <code>childList</code>, <code>attributes</code>, ou <code>characterData</code> devem ser definidos como <code>true</code>. Caso contrário o erro "An invalid or illegal string was specified" é lançado.</div>
+> **Note:** NOTA: No mínimo `childList`, `attributes`, ou `characterData` devem ser definidos como `true`. Caso contrário o erro "An invalid or illegal string was specified" é lançado.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>childList</code></td>
-   <td>Defina como <code style="font-style: normal;">true</code> se adições e remoções dos elementos filho do nó alvo (incluindo nós de texto) devem ser observadas.</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>Defina como <code>true</code> se mutações dos atributos do alvo devem ser observadas.</td>
-  </tr>
-  <tr>
-   <td><code>characterData</code></td>
-   <td>Defina como <code>true</code> se mutações dos dados do alvo devem ser observadas.</td>
-  </tr>
-  <tr>
-   <td><code>subtree</code></td>
-   <td>Defina como <code>true</code> se mutações não apenas do alvo, mas também dos descendentes do alvo devem ser observadas.</td>
-  </tr>
-  <tr>
-   <td><code>attributeOldValue</code></td>
-   <td>Defina como <code>true</code> se <code>attributes</code> é definido como <code>true</code> e o valor do atributo do alvo antes da mutação precisa ser gravado.</td>
-  </tr>
-  <tr>
-   <td><code>characterDataOldValue</code></td>
-   <td>Defina como <code>true</code> se <code>characterData</code> é definido como <code>true</code> e os dados do alvo antes da mutação precisam ser gravados.</td>
-  </tr>
-  <tr>
-   <td><code>attributeFilter</code></td>
-   <td>Defina como um array de nomes locais de atributo (sem namespace) se nem todas mutações de atributo precisam ser observadas.</td>
-  </tr>
- </tbody>
-</table>
+| Property                | Description                                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `childList`             | Defina como `true` se adições e remoções dos elementos filho do nó alvo (incluindo nós de texto) devem ser observadas.        |
+| `attributes`            | Defina como `true` se mutações dos atributos do alvo devem ser observadas.                                                    |
+| `characterData`         | Defina como `true` se mutações dos dados do alvo devem ser observadas.                                                        |
+| `subtree`               | Defina como `true` se mutações não apenas do alvo, mas também dos descendentes do alvo devem ser observadas.                  |
+| `attributeOldValue`     | Defina como `true` se `attributes` é definido como `true` e o valor do atributo do alvo antes da mutação precisa ser gravado. |
+| `characterDataOldValue` | Defina como `true` se `characterData` é definido como `true` e os dados do alvo antes da mutação precisam ser gravados.       |
+| `attributeFilter`       | Defina como um array de nomes locais de atributo (sem namespace) se nem todas mutações de atributo precisam ser observadas.   |
 
-<h2 id="MutationRecord" name="MutationRecord"><code>MutationRecord</code></h2>
+## `MutationRecord`
 
-<p><code>MutationRecord</code> é um objeto que será passado para o callback do observador. Tem as seguintes propriedades:</p>
+`MutationRecord` é um objeto que será passado para o callback do observador. Tem as seguintes propriedades:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td><code>String</code></td>
-   <td>Retorna <code>attributes</code> se a mutação foi a de um atributo, <code>characterData</code> se foi de um nó <code>CharacterData</code>, e <code>childList</code> se foi a mutação para uma árvore de nós.</td>
-  </tr>
-  <tr>
-   <td><code>target</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Retorna o nó que a mutação afetou, dependendo do <code>type</code>. Para <code>attributes </code>é o elemento cujo atributo mudou. Para <code>characterData </code>é o nó <code>CharacterData</code>. Para <code>childList</code> é o nó cujos filhos mudaram.</td>
-  </tr>
-  <tr>
-   <td><code>addedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>Retorna os nós adicionados. Será uma <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vazia se nenhum nó foi adicionado.</td>
-  </tr>
-  <tr>
-   <td><code>removedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>Retorna os nós removidos. Será uma <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vazia se nenhum nó foi removido.</td>
-  </tr>
-  <tr>
-   <td><code>previousSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Retorna o irmão anterior dos nós adicionados ou removidos, ou <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>nextSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Retorna o próximo irmão dos nós adicionados ou removidos, ou <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>attributeName</code></td>
-   <td><code>String</code></td>
-   <td>Retorna o nome local do atributo modificado, ou <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>attributeNamespace</code></td>
-   <td><code>String</code></td>
-   <td>Retorna o namespace do atributo modificado, ou <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code></td>
-   <td><code>String</code></td>
-   <td>O valor retornado depende do <code>type</code>. Para <code>attributes</code>, é o valor do atributo modificado antes da troca. Para <code>characterData</code>, são os dados do nó modificado antes da troca. Para <code>childList </code>é <code>null</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Property             | Type                               | Description                                                                                                                                                                                             |
+| -------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`               | `String`                           | Retorna `attributes` se a mutação foi a de um atributo, `characterData` se foi de um nó `CharacterData`, e `childList` se foi a mutação para uma árvore de nós.                                         |
+| `target`             | `{{domxref("Node")}}`         | Retorna o nó que a mutação afetou, dependendo do `type`. Para `attributes `é o elemento cujo atributo mudou. Para `characterData `é o nó `CharacterData`. Para `childList` é o nó cujos filhos mudaram. |
+| `addedNodes`         | `{{domxref("NodeList")}}` | Retorna os nós adicionados. Será uma NodeList vazia se nenhum nó foi adicionado.                                                                                                                        |
+| `removedNodes`       | `{{domxref("NodeList")}}` | Retorna os nós removidos. Será uma NodeList vazia se nenhum nó foi removido.                                                                                                                            |
+| `previousSibling`    | `{{domxref("Node")}}`         | Retorna o irmão anterior dos nós adicionados ou removidos, ou `null`.                                                                                                                                   |
+| `nextSibling`        | `{{domxref("Node")}}`         | Retorna o próximo irmão dos nós adicionados ou removidos, ou `null`.                                                                                                                                    |
+| `attributeName`      | `String`                           | Retorna o nome local do atributo modificado, ou `null`.                                                                                                                                                 |
+| `attributeNamespace` | `String`                           | Retorna o namespace do atributo modificado, ou `null`.                                                                                                                                                  |
+| `oldValue`           | `String`                           | O valor retornado depende do `type`. Para `attributes`, é o valor do atributo modificado antes da troca. Para `characterData`, são os dados do nó modificado antes da troca. Para `childList `é `null`. |
 
-<h2 id="Example_usage" name="Example_usage">Exemplo de uso</h2>
+## Exemplo de uso
 
-<p>O exemplo a seguir foi retirado <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">deste post</a>.</p>
+O exemplo a seguir foi retirado [deste post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
-<pre class="brush: js notranslate">// seleciona o nó alvo
+```js
+// seleciona o nó alvo
 var target = document.querySelector('#some-id');
 
 // cria uma nova instância de observador
@@ -204,18 +118,16 @@ observer.observe(target, config);
 
 // mais tarde você pode parar de observar
 observer.disconnect();
-</pre>
+```
 
-<h2 id="Additional_reading" name="Additional_reading">Leitura adicional</h2>
+## Leitura adicional
 
-<ul>
- <li><a class="external" href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers" rel="freelink">A brief overview</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">A more in-depth discussion</a></li>
- <li><a class="external" href="http://www.youtube.com/watch?v=eRZ4pO0gVWw" rel="freelink">A screencast by Chromium developer Rafael Weinstein</a></li>
- <li><a class="external" href="http://code.google.com/p/mutation-summary/" rel="freelink">The mutation summary library</a></li>
- <li><a href="http://dom.spec.whatwg.org/#mutation-observers">The DOM standard</a> que define a interface do <code>MutationObserver</code></li>
-</ul>
+- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](http://code.google.com/p/mutation-summary/)
+- [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.MutationObserver")}}</p>
+{{Compat("api.MutationObserver")}}

@@ -11,76 +11,58 @@ tags:
   - Web Animations
 translation_of: Web/API/Web_Animations_API
 ---
-<p>{{DefaultAPISidebar("Web Animations")}}</p>
+{{DefaultAPISidebar("Web Animations")}}
 
-<p>The <strong>Web Animations API</strong> allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.</p>
+The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>The Web Animations API provides a common language for browsers and developers to describe animations on DOM elements. To get more information on the concepts behind the API and how to use it, read <a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Using the Web Animations API</a>.</p>
+The Web Animations API provides a common language for browsers and developers to describe animations on DOM elements. To get more information on the concepts behind the API and how to use it, read [Using the Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
 
-<h2 id="Web_Animations_interfaces">Web Animations interfaces</h2>
+## Web Animations interfaces
 
-<dl>
- <dt>{{domxref("Animation")}}</dt>
- <dd>Provides playback controls and a timeline for an animation node or source. Can take an object created with the {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} constructor.</dd>
- <dt>{{domxref("KeyframeEffect")}}</dt>
- <dd>Describes sets of animatable properties and values, called <strong>keyframes </strong>and their <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">timing options</a>. These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.</dd>
- <dt>{{domxref("AnimationTimeline")}}</dt>
- <dd>Represents the timeline of animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline objects) and is not itself accessed by developers.</dd>
- <dt>{{domxref("AnimationEvent")}}</dt>
- <dd>Actually part of CSS Animations.</dd>
- <dt>{{domxref("DocumentTimeline")}}</dt>
- <dd>Represents animation timelines, including the default document timeline (accessed using the {{domxref("Document.timeline")}} property).</dd>
- <dt>{{domxref("EffectTiming")}}</dt>
- <dd>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect()")}} all accept an optional dictionary object of timing properties.</dd>
-</dl>
+- {{domxref("Animation")}}
+  - : Provides playback controls and a timeline for an animation node or source. Can take an object created with the {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} constructor.
+- {{domxref("KeyframeEffect")}}
+  - : Describes sets of animatable properties and values, called **keyframes** and their [timing options](/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_options). These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
+- {{domxref("AnimationTimeline")}}
+  - : Represents the timeline of animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline objects) and is not itself accessed by developers.
+- {{domxref("AnimationEvent")}}
+  - : Actually part of CSS Animations.
+- {{domxref("DocumentTimeline")}}
+  - : Represents animation timelines, including the default document timeline (accessed using the {{domxref("Document.timeline")}} property).
+- {{domxref("EffectTiming")}}
+  - : {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect()")}} all accept an optional dictionary object of timing properties.
 
-<h2 id="Extensions_to_other_interfaces">Extensions to other interfaces</h2>
+## Extensions to other interfaces
 
-<p>The Web Animations API adds some new features to {{domxref("document")}} and {{domxref("element")}}.</p>
+The Web Animations API adds some new features to {{domxref("document")}} and {{domxref("element")}}.
 
-<h3 id="Extensions_to_the_Document_interface">Extensions to the <code>Document</code> interface</h3>
+### Extensions to the `Document` interface
 
-<dl>
- <dt>{{domxref("document.timeline")}}</dt>
- <dd>The <code>DocumentTimeline</code> object representing the default document timeline.</dd>
- <dt>{{domxref("document.getAnimations()")}}</dt>
- <dd>Returns an Array of {{domxref("Animation")}} objects currently in effect on elements in the <code>document</code>.</dd>
- <dt>
- <h3 id="Extensions_to_the_Element_interface">Extensions to the <code>Element</code> interface</h3>
- </dt>
- <dt>{{domxref("Element.animate()")}}</dt>
- <dd>A shortcut method for creating and playing an animation on an element. It returns the created {{domxref("Animation")}} object instance.</dd>
- <dt>{{domxref("Element.getAnimations()")}}</dt>
- <dd>Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.</dd>
-</dl>
+- {{domxref("document.timeline")}}
+  - : The `DocumentTimeline` object representing the default document timeline.
+- {{domxref("document.getAnimations()")}}
+  - : Returns an Array of {{domxref("Animation")}} objects currently in effect on elements in the `document`.
+- ### Extensions to the `Element` interface
 
-<h2 id="Specifications">Specifications</h2>
+  {{domxref("Element.animate()")}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations')}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+  - : A shortcut method for creating and playing an animation on an element. It returns the created {{domxref("Animation")}} object instance.
 
-<h2 id="See_also">See also</h2>
+- {{domxref("Element.getAnimations()")}}
+  - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Using the Web Animations API</a></li>
- <li><a href="https://mozdevs.github.io/Animation-examples/">Web Animations demos</a></li>
- <li><a href="https://github.com/web-animations/web-animations-js">Polyfill</a></li>
- <li>Firefox's current implementation: <a href="https://birtles.github.io/areweanimatedyet/">AreWeAnimatedYet</a></li>
- <li>
-  <p><a href="http://codepen.io/danwilson/pen/xGBKVq">Browser support test</a></p>
- </li>
-</ul>
+## Specifications
+
+| Specification                            | Status                               | Comment            |
+| ---------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Web Animations')}} | {{Spec2('Web Animations')}} | Initial definition |
+
+## See also
+
+- [Using the Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
+- [Web Animations demos](https://mozdevs.github.io/Animation-examples/)
+- [Polyfill](https://github.com/web-animations/web-animations-js)
+- Firefox's current implementation: [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)
+- [Browser support test](http://codepen.io/danwilson/pen/xGBKVq)

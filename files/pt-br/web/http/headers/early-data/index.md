@@ -9,55 +9,32 @@ tags:
   - requisição
 translation_of: Web/HTTP/Headers/Early-Data
 ---
-<div>{{SeeCompatTable}}{{HTTPSidebar}}</div>
+{{SeeCompatTable}}{{HTTPSidebar}}
 
-<p><span class="seoSummary">O cabeçalho <code><strong>Early-Data</strong></code> é colocado por um intermediário para indicar que a requisição foi transportada em <a href="/en-US/docs/Web/Security/Transport_Layer_Security#TLS_1.3">dados precoces do TLS (TLS <em>early data</em>)</a>, e também indica que o intermediário entende o código de status {{HTTPStatus("425", "425 (Too Early)")}}.</span></p>
+O cabeçalho **`Early-Data`** é colocado por um intermediário para indicar que a requisição foi transportada em [dados precoces do TLS (TLS _early data_)](/pt-BR/docs/Web/Security/Transport_Layer_Security#TLS_1.3), e também indica que o intermediário entende o código de status {{HTTPStatus("425", "425 (Too Early)")}}.
 
-<p>O cabeçalho <code>Early-Data</code> <strong>não é</strong> definido pelo gerador da requisição (i.e., um navegador).</p>
+O cabeçalho `Early-Data` **não é** definido pelo gerador da requisição (i.e., um navegador).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sitnaxe">Sitnaxe</h2>
+## Sitnaxe
 
-<pre class="syntaxbox notranslate">Early-Data: 1
-</pre>
+    Early-Data: 1
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="notranslate">GET /resource HTTP/1.0
-Host: example.com
-Early-Data: 1</pre>
+    GET /resource HTTP/1.0
+    Host: example.com
+    Early-Data: 1
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("8470", "The Early-Data Header Field", "5.1")}}</td>
-   <td>Using Early Data in HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Título                   |
+| ------------------------------------------------------------------------ | ------------------------ |
+| {{RFC("8470", "The Early-Data Header Field", "5.1")}} | Using Early Data in HTTP |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-<p>{{Compat("http.headers.Early-Data")}}</p>
+{{Compat("http.headers.Early-Data")}}

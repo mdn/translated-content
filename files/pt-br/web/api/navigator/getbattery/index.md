@@ -8,34 +8,32 @@ tags:
 translation_of: Web/API/Navigator/battery
 original_slug: Web/API/Navigator/battery
 ---
-<p>{{ ApiRef("Battery API") }}</p>
+{{ ApiRef("Battery API") }}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O objeto <code>battery</code> fornece informações sobre o nível de carga da bateria do sistema; você pode também escutar eventos enviados por ele que fornecem atualizações sobre o status atual da carga. Isso implementa a <a href="/pt-BR/docs/WebAPI/Battery_Status" title="/pt-BR/docs/WebAPI/Battery_Status">Battery Status API</a>; consulte essa documentação para mais detalhes, um guia de utilização da API e códigos de exemplo.</p>
+O objeto `battery` fornece informações sobre o nível de carga da bateria do sistema; você pode também escutar eventos enviados por ele que fornecem atualizações sobre o status atual da carga. Isso implementa a [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status); consulte essa documentação para mais detalhes, um guia de utilização da API e códigos de exemplo.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var battery = window.navigator.battery;</pre>
+    var battery = window.navigator.battery;
 
-<h2 id="Valor">Valor</h2>
+## Valor
 
-<p><code>navigator.battery</code> é um objeto do tipo {{domxref("BatteryManager")}}.</p>
+`navigator.battery` é um objeto do tipo {{domxref("BatteryManager")}}.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>the <a href="/pt-BR/docs/WebAPI/Battery_Status" title="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a> article</li>
- <li><a class="external" href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Blog post - Using the Battery API</a></li>
- <li><a class="external" href="http://davidwalsh.name/battery-api">David Walsh on the JavaScript Battery Api</a></li>
- <li><a href="https://github.com/pstadler/battery.js">battery.js - a tiny cross-browser wrapper</a></li>
-</ul>
+- {{domxref("BatteryManager")}}
+- the [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status "/en-US/docs/WebAPI/Battery_Status") article
+- [Blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [David Walsh on the JavaScript Battery Api](http://davidwalsh.name/battery-api)
+- [battery.js - a tiny cross-browser wrapper](https://github.com/pstadler/battery.js)

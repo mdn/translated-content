@@ -3,85 +3,59 @@ title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
 translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>A requisição do cabeçalho HTTP <strong><code>If-Modified-Since</code></strong> torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since </code>pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.</p>
+A requisição do cabeçalho HTTP **`If-Modified-Since`** torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since `pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.
 
-<p>Quando utilizado em combinação com {{HTTPHeader("If-None-Match")}}, é ignorado, a menos que não suporte <code>If-None-Match</code>.</p>
+Quando utilizado em combinação com {{HTTPHeader("If-None-Match")}}, é ignorado, a menos que não suporte `If-None-Match`.
 
-<p>O uso mais comum é para atualizar uma entidade em cache que não tem um {{HTTPHeader("ETag")}} associado.</p>
+O uso mais comum é para atualizar uma entidade em cache que não tem um {{HTTPHeader("ETag")}} associado.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">If-Modified-Since: &lt;nome-dia&gt;, &lt;dia&gt; &lt;mês&gt; &lt;ano&gt; &lt;hora&gt;:&lt;minuto&gt;:&lt;segundo&gt; GMT
-</pre>
+    If-Modified-Since: <nome-dia>, <dia> <mês> <ano> <hora>:<minuto>:<segundo> GMT
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;nome-dia&gt;</dt>
- <dd>Um entre "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (sensível ao caso).</dd>
- <dt>&lt;dia&gt;</dt>
- <dd>2 digitos, número do dia. Por exemplo "04" ou "23".</dd>
- <dt>&lt;mês&gt;</dt>
- <dd>Um entre "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensível ao caso).</dd>
- <dt>&lt;ano&gt;</dt>
- <dd>4 digitos, número do ano,. Por exemplo. "1990" ou "2016".</dd>
- <dt>&lt;hora&gt;</dt>
- <dd>2 digitos, número da hora. Por exemplo. "09" ou "23".</dd>
- <dt>&lt;minuto&gt;</dt>
- <dd>2 digiitos, número do minuto. Por exemplo. "04" ou "59".</dd>
- <dt>&lt;segundos&gt;</dt>
- <dd>2 digitos, número dos segundos, Por exemplo. "04" ou "59".</dd>
- <dt><code>GMT</code></dt>
- <dd>
- <p>Horário de Greenwich (Greenwich Mean Time).  Datas HTTP sempre são expressas em  GMT, nunca em tempo local.</p>
- </dd>
-</dl>
+- \<nome-dia>
+  - : Um entre "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (sensível ao caso).
+- \<dia>
+  - : 2 digitos, número do dia. Por exemplo "04" ou "23".
+- \<mês>
+  - : Um entre "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensível ao caso).
+- \<ano>
+  - : 4 digitos, número do ano,. Por exemplo. "1990" ou "2016".
+- \<hora>
+  - : 2 digitos, número da hora. Por exemplo. "09" ou "23".
+- \<minuto>
+  - : 2 digiitos, número do minuto. Por exemplo. "04" ou "59".
+- \<segundos>
+  - : 2 digitos, número dos segundos, Por exemplo. "04" ou "59".
+- `GMT`
+  - : Horário de Greenwich (Greenwich Mean Time). Datas HTTP sempre são expressas em GMT, nunca em tempo local.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "If-Modified-Since", "3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Título                                                       |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.If-Modified-Since")}}</p>
+{{Compat("http.headers.If-Modified-Since")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("ETag")}}</li>
- <li>{{HTTPHeader("If-Unmodified-since")}}</li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
- <li>{{HTTPStatus("304")}}<code> Not Modified</code></li>
-</ul>
+- {{HTTPHeader("ETag")}}
+- {{HTTPHeader("If-Unmodified-since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("304")}}` Not Modified`

@@ -12,149 +12,116 @@ tags:
   - nginx
 translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <a href="/en-US/docs/Web/HTTP">HTTP</a> <strong><code>X-Frame-Options</code></strong> pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques <em><a href="/en-US/docs/Web/Security/Types_of_attacks#Click-jacking">click-jacking</a></em>, assegurando que seus conteúdos não sejam embebedados em outros sites.</p>
+O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques _[click-jacking](/pt-BR/docs/Web/Security/Types_of_attacks#Click-jacking)_, assegurando que seus conteúdos não sejam embebedados em outros sites.
 
-<p>A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte <code>X-Frame-Options</code>.</p>
+A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte `X-Frame-Options`.
 
-<div class="note">
-<p><strong>Nota:</strong> O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva <code><a href="/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">frame-ancestors</a></code> que torna este cabeçalho obsoleto para navegadores que o suportam.</p>
-</div>
+> **Note:** **Nota:** O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>Existem duas diretivas possíveis para <code>X-Frame-Options</code>:</p>
+Existem duas diretivas possíveis para `X-Frame-Options`:
 
-<pre class="syntaxbox notranslate">X-Frame-Options: DENY
-X-Frame-Options: SAMEORIGIN
-</pre>
+    X-Frame-Options: DENY
+    X-Frame-Options: SAMEORIGIN
 
-<h3 id="Diretivas">Diretivas</h3>
+### Diretivas
 
-<p>Se você especifica <code>DENY</code>, não somente tentativas em carregar a página em um enquadramento irão falhar quando carregadas de outros sites, mas irão falhar também se forem carregadas do mesmo site. Por outro lado, se você especifica <code>SAMEORIGIN</code>, você ainda pode usar a página em um enquadramento enquanto o site que o está incluindo no enquadramento seja o mesmo servindo a página.</p>
+Se você especifica `DENY`, não somente tentativas em carregar a página em um enquadramento irão falhar quando carregadas de outros sites, mas irão falhar também se forem carregadas do mesmo site. Por outro lado, se você especifica `SAMEORIGIN`, você ainda pode usar a página em um enquadramento enquanto o site que o está incluindo no enquadramento seja o mesmo servindo a página.
 
-<dl>
- <dt><code>DENY</code></dt>
- <dd>A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.</dd>
- <dt><code>SAMEORIGIN</code></dt>
- <dd>A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também <a href="#browser_compatibility">Browser compatibility</a> para mais detalhes de suporte.</dd>
- <dt><code>ALLOW-FROM <em>uri</em></code><em> </em>{{obsolete_inline()}}</dt>
- <dd>Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a <code>SAMEORIGIN</code> sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva <code>frame-ancestors</code> que você pode usar ao invés disso.</dd>
-</dl>
+- `DENY`
+  - : A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.
+- `SAMEORIGIN`
+  - : A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também [Browser compatibility](#browser_compatibility) para mais detalhes de suporte.
+- `ALLOW-FROM uri`\_ \_{{obsolete_inline()}}
+  - : Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a `SAMEORIGIN` sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva `frame-ancestors` que você pode usar ao invés disso.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<div class="note">
-<p><strong>Nota:</strong> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> não tem nenhum efeito. Não o utilize!  <code>X-Frame-Options</code> funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.</p>
-</div>
+> **Note:** **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
 
-<h3 id="Configurando_o_Apache">Configurando o Apache</h3>
+### Configurando o Apache
 
-<p>Para configurar o Apache para que ele envie o cabeçalho <code>X-Frame-Options</code> para todas as páginas, adicione isto nas configurações do seu site:</p>
+Para configurar o Apache para que ele envie o cabeçalho `X-Frame-Options` para todas as páginas, adicione isto nas configurações do seu site:
 
-<pre class="notranslate">Header always set X-Frame-Options "SAMEORIGIN"
-</pre>
+    Header always set X-Frame-Options "SAMEORIGIN"
 
-<p>Para configurar o Apache para colocar o <code>X-Frame-Options</code> como DENY, adicione isto nas configurações do seu site:</p>
+Para configurar o Apache para colocar o `X-Frame-Options` como DENY, adicione isto nas configurações do seu site:
 
-<pre class="notranslate">Header set X-Frame-Options "DENY"
-</pre>
+    Header set X-Frame-Options "DENY"
 
-<h3 id="Configurando_o_nginx">Configurando o nginx</h3>
+### Configurando o nginx
 
-<p>Para configurar o nginx para enviar o cabeçalho <code>X-Frame-Options</code>, adicione isto na configuração do seu http, servidor ou localização:</p>
+Para configurar o nginx para enviar o cabeçalho `X-Frame-Options`, adicione isto na configuração do seu http, servidor ou localização:
 
-<pre class="notranslate">add_header X-Frame-Options SAMEORIGIN always;
-</pre>
+    add_header X-Frame-Options SAMEORIGIN always;
 
-<h3 id="Configurando_o_IIS">Configurando o IIS</h3>
+### Configurando o IIS
 
-<p>Para configurar o IIS para enviar o cabeçalho <code>X-Frame-Options</code>, adicione isto no arquivo <code>Web.config</code> do seu site:</p>
+Para configurar o IIS para enviar o cabeçalho `X-Frame-Options`, adicione isto no arquivo `Web.config` do seu site:
 
-<pre class="brush: xml notranslate">&lt;system.webServer&gt;
+```xml
+<system.webServer>
   ...
 
-  &lt;httpProtocol&gt;
-    &lt;customHeaders&gt;
-      &lt;add name="X-Frame-Options" value="SAMEORIGIN" /&gt;
-    &lt;/customHeaders&gt;
-  &lt;/httpProtocol&gt;
+  <httpProtocol>
+    <customHeaders>
+      <add name="X-Frame-Options" value="SAMEORIGIN" />
+    </customHeaders>
+  </httpProtocol>
 
   ...
-&lt;/system.webServer&gt;
-</pre>
+</system.webServer>
+```
 
-<p>Ou veja este <a href="https://support.office.com/en-us/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79">artigo de suporte de configuração da Microsoft utilizando a interface de usuário IIS Manager</a>.</p>
+Ou veja este [artigo de suporte de configuração da Microsoft utilizando a interface de usuário IIS Manager](https://support.office.com/en-us/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79).
 
-<h3 id="Configurando_o_HAProxy">Configurando o HAProxy</h3>
+### Configurando o HAProxy
 
-<p>Para configurar o HAProxy para enviar o cabeçalho <code>X-Frame-Options</code>, adicione isto na sua configuração do seu <em>front-end</em>, <em>listen</em>, ou <em>backend</em>:</p>
+Para configurar o HAProxy para enviar o cabeçalho `X-Frame-Options`, adicione isto na sua configuração do seu _front-end_, _listen_, ou _backend_:
 
-<pre class="notranslate">rspadd X-Frame-Options:\ SAMEORIGIN
-</pre>
+    rspadd X-Frame-Options:\ SAMEORIGIN
 
-<p>Alternativamente, em versões mais novas:</p>
+Alternativamente, em versões mais novas:
 
-<pre class="notranslate">http-response set-header X-Frame-Options SAMEORIGIN
-</pre>
+    http-response set-header X-Frame-Options SAMEORIGIN
 
-<h3 id="Configurando_o_Express">Configurando o Express</h3>
+### Configurando o Express
 
-<p>Para configurar o Express para enviar o cabeçalho <code>X-Frame-Options</code>, você pode usar o <a href="https://helmetjs.github.io/">helmet</a> que utiliza o <a href="https://helmetjs.github.io/docs/frameguard/">frameguard</a> para colocar o cabeçalho. Adicione isto na configuração do seu servidor:</p>
+Para configurar o Express para enviar o cabeçalho `X-Frame-Options`, você pode usar o [helmet](https://helmetjs.github.io/) que utiliza o [frameguard](https://helmetjs.github.io/docs/frameguard/) para colocar o cabeçalho. Adicione isto na configuração do seu servidor:
 
-<pre class="brush: js notranslate">const helmet = require('helmet');
+```js
+const helmet = require('helmet');
 const app = express();
 app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
-</pre>
+```
 
-<p>Alternativamente, você pode usar o <em>frameguard</em> diretamente:</p>
+Alternativamente, você pode usar o _frameguard_ diretamente:
 
-<pre class="brush: js notranslate">const frameguard = require('frameguard')
+```js
+const frameguard = require('frameguard')
 app.use(frameguard({ action: 'SAMEORIGIN' }))
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7034")}}</td>
-   <td>HTTP Header Field X-Frame-Options</td>
-  </tr>
- </tbody>
-</table>
+| Especificação        | Título                            |
+| -------------------- | --------------------------------- |
+| {{RFC("7034")}} | HTTP Header Field X-Frame-Options |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.X-Frame-Options")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.X-Frame-Options")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code> (CSP)</a></li>
- <li><a href="https://tools.ietf.org/html/rfc7034">Cabeçalho HTTP X-Frame-Options (HTTP Header Field X-Frame-Options) - RFC 7034</a></li>
- <li><a class="external" href="https://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx">Defesas contra ClickJacking (ClickJacking Defenses) - IEBlog</a></li>
- <li><a href="https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx">Combatendo ClickJacking com X-Frame-Options (Combating ClickJacking with X-Frame-Options) - IEInternals</a></li>
-</ul>
+- [`frame-ancestors` (CSP)](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [Cabeçalho HTTP X-Frame-Options (HTTP Header Field X-Frame-Options) - RFC 7034](https://tools.ietf.org/html/rfc7034)
+- [Defesas contra ClickJacking (ClickJacking Defenses) - IEBlog](https://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx)
+- [Combatendo ClickJacking com X-Frame-Options (Combating ClickJacking with X-Frame-Options) - IEInternals](https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx)

@@ -5,21 +5,20 @@ translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade CSS <code>transform</code><span style="line-height: 21px;"> permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.</span></p>
+A propriedade CSS `transform` permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<p><span style="line-height: 21px;">Se a propriedade tem um valor diferente de </span><code>none, </code><span style="line-height: 21px;">um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para  </span><code>position: fixed</code><span style="line-height: 21px;"> para os elementos que estão contidos.</span></p>
+Se a propriedade tem um valor diferente de `none, `um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
 
+## Sintaxe
 
-<h2 id="Sintaxe" style="padding: 0px;">Sintaxe</h2>
+    Gramática Formal: <transform-função> [<transform-função>]* | none
 
-<pre class="twopartsyntaxbox">Gramática Formal: &lt;transform-função&gt; [&lt;transform-função&gt;]* | none
-</pre>
-
-<pre class="brush: css">transform: none
+```css
+transform: none
 transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
 transform: translate(12px, 50%)
 transform: translateX(2em)
@@ -42,28 +41,27 @@ transform: rotateZ(10deg)
 transform: perspective(17px)
 
 transform: translateX(10px) rotate(10deg) translateY(5px)
-</pre>
+```
 
-<p>A propriedade transform pode ser especificada com a palavra reservada <code>none</code> ou com uma das várias funções disponíveis.</p>
+A propriedade transform pode ser especificada com a palavra reservada `none` ou com uma das várias funções disponíveis.
 
-<p>Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das múltiplas funções atribuídas à transform, então ela obrigatoriamente deve ser a primeira.</p>
+Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das múltiplas funções atribuídas à transform, então ela obrigatoriamente deve ser a primeira.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;transform-função&gt;</code></dt>
- <dd>Uma ou mais das  <a href="#funções_css_transform">funções CSS transform</a> para serem aplicadas, veja abaixo.</dd>
- <dt><code>none</code></dt>
- <dd>Especifica que nenhuma função transform deve ser aplicada.</dd>
-</dl>
+- `<transform-função>`
+  - : Uma ou mais das [funções CSS transform](#funções_css_transform) para serem aplicadas, veja abaixo.
+- `none`
+  - : Especifica que nenhuma função transform deve ser aplicada.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Veja <a href="/En/CSS/Using_CSS_transforms" title="En/CSS/Using_CSS_transforms">Using CSS transforms</a>.</p>
+Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms "En/CSS/Using_CSS_transforms").
 
-<h3 id="Exemplo_ao_vivo">Exemplo ao vivo:</h3>
+### Exemplo ao vivo:
 
-<pre class="brush: css">pre {
+```css
+pre {
      width: 33em;
      border: solid red;
 
@@ -76,147 +74,128 @@ transform: translateX(10px) rotate(10deg) translateY(5px)
     transform: translate(100px) rotate(20deg);
     transform-origin: 60% 100%;
 }
-</pre>
+```
 
-<h2 id="CSS_transform_functions">CSS transform functions</h2>
+## CSS transform functions
 
-<p>The <code>transform</code> CSS property allows the coordinate system used by an element to be manipulated using <strong>transform functions</strong>. These functions are described below.</p>
+The `transform` CSS property allows the coordinate system used by an element to be manipulated using **transform functions**. These functions are described below.
 
-<h3 id="matrix">matrix</h3>
+### matrix
 
-<pre>transform:  matrix(a, c, b, d, tx, ty)
+    transform:  matrix(a, c, b, d, tx, ty)
 
-/* Where a, b, c, d build the transformation matrix
-   ┌     ┐
-   │ a b │
-   │ c d │
-   └     ┘
-   and tx, ty are the translate values.  */
-</pre>
+    /* Where a, b, c, d build the transformation matrix
+       ┌     ┐
+       │ a b │
+       │ c d │
+       └     ┘
+       and tx, ty are the translate values.  */
 
-<p>Specifies a 2D transformation matrix comprised of the specified six values. This is the equivalent to applying the transformation <strong>matrix [a b c d tx ty]</strong>.</p>
+Specifies a 2D transformation matrix comprised of the specified six values. This is the equivalent to applying the transformation **matrix \[a b c d tx ty]**.
 
-<div class="note"><strong>Note:</strong> Gecko (Firefox) accepts a {{cssxref("&lt;length&gt;")}} value for <strong>tx</strong> and <strong>ty</strong>. Webkit (Safari, Chrome) and Opera currently support a unitless {{cssxref("&lt;number&gt;")}} for <strong>tx</strong> and <strong>ty</strong>.</div>
+> **Note:** Gecko (Firefox) accepts a {{cssxref("&lt;length&gt;")}} value for **tx** and **ty**. Webkit (Safari, Chrome) and Opera currently support a unitless {{cssxref("&lt;number&gt;")}} for **tx** and **ty**.
 
-<h4 id="Live_examples">Live examples</h4>
+#### Live examples
 
-<pre style=""> background: gold;  width: 30em;
+     background: gold;  width: 30em;
 
- -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
-      -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
-         transform: matrix(1, -0.2, 0, 1, 0, 0);
-</pre>
+     -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
+          -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
+             transform: matrix(1, -0.2, 0, 1, 0, 0);
 
-<pre style=""> background: wheat;
- max-width: intrinsic;
+<!---->
 
- -webkit-transform: matrix(1, 0, 0.6, 1,  250, 0);
-      -o-transform: matrix(1, 0, 0.6, 1,  250, 0);
-         transform: matrix(1, 0, 0.6, 1,  250, 0);
-</pre>
+     background: wheat;
+     max-width: intrinsic;
 
-<h4 id="See_also"><br>
- See also</h4>
+     -webkit-transform: matrix(1, 0, 0.6, 1,  250, 0);
+          -o-transform: matrix(1, 0, 0.6, 1,  250, 0);
+             transform: matrix(1, 0, 0.6, 1,  250, 0);
 
-<ul>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices">Examples of linear transformation matrices</a> Wikipedia</li>
- <li><a class="external" href="http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html">Coordinate transformation matrices</a> mathamazement.com</li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx">Microsoft's matrix filter</a> MSDN</li>
-</ul>
+#### <br>See also
 
-<h3 id="rotate">rotate</h3>
+- [Examples of linear transformation matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
+- [Coordinate transformation matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html) mathamazement.com
+- [Microsoft's matrix filter](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
 
-<pre class="eval">transform:  rotate(angle);       /* an &lt;angle&gt;, e.g.  rotate(30deg) */</pre>
+### rotate
 
-<p>Rotates the element clockwise around its origin (as specified by the {{ Cssxref("transform-origin") }} property) by the specified <code>angle</code>. The operation corresponds to the matrix <strong>[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]</strong>.</p>
+    transform:  rotate(angle);       /* an <angle>, e.g.  rotate(30deg) */
 
-<h3 id="scale">scale</h3>
+Rotates the element clockwise around its origin (as specified by the {{ Cssxref("transform-origin") }} property) by the specified `angle`. The operation corresponds to the matrix **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
 
-<pre class="eval">transform:  scale(sx[, sy]);     /* one or two unitless &lt;number&gt;s, e.g.  scale(2.1,4) */</pre>
+### scale
 
-<p>Specifies a 2D scaling operation described by <strong>[sx, sy]</strong>. If <code>sy</code> isn't specified, it is assumed to be equal to <code>sx</code>.</p>
+    transform:  scale(sx[, sy]);     /* one or two unitless <number>s, e.g.  scale(2.1,4) */
 
-<h3 id="scaleX">scaleX</h3>
+Specifies a 2D scaling operation described by **\[sx, sy]**. If `sy` isn't specified, it is assumed to be equal to `sx`.
 
-<pre class="eval">transform:  scaleX(sx);          /* a unitless &lt;number&gt;, e.g.  scaleX(2.7) */</pre>
+### scaleX
 
-<p>Specifies a scale operation using the vector <strong>[sx, 1]</strong>.</p>
+    transform:  scaleX(sx);          /* a unitless <number>, e.g.  scaleX(2.7) */
 
-<h3 id="scaleY">scaleY</h3>
+Specifies a scale operation using the vector **\[sx, 1]**.
 
-<pre class="eval">transform:  scaleY(sy)           /* a unitless &lt;number&gt;, e.g.  scaleY(0.3) */</pre>
+### scaleY
 
-<p>Specifies a scale operation using the vector <strong>[1, sy]</strong>.</p>
+    transform:  scaleY(sy)           /* a unitless <number>, e.g.  scaleY(0.3) */
 
-<h3 id="skew">skew</h3>
+Specifies a scale operation using the vector **\[1, sy]**.
 
-<p>{{ non-standard_header() }}</p>
+### skew
 
-<pre class="eval">transform:  skew(ax[, ay])       /* one or two &lt;angle&gt;s, e.g.  skew(30deg,-10deg) */</pre>
+{{ non-standard_header() }}
 
-<p>Skews the element around the X and Y axes by the specified angles. If <code>ay</code> isn't provided, no skew is performed on the Y axis.</p>
+    transform:  skew(ax[, ay])       /* one or two <angle>s, e.g.  skew(30deg,-10deg) */
 
-<div class="note"><strong>Note:</strong> The <code>skew()</code> function was present in early drafts. It has been removed but is still present in some implementations. Do not use it.<br>
-<br>
-To achieve the same effect, use <code>skewX()</code> if you were using <code>skew()</code> with one parameter or <code>matrix(1, <em>tan(</em>ax<em>)</em></code><em>, </em><code><em>tan(</em>ay<em>)</em>, 1, 0, 0)</code> for the general way. Note that <em>tan()</em> isn't a CSS function and you have to precalculate it yourself.</div>
+Skews the element around the X and Y axes by the specified angles. If `ay` isn't provided, no skew is performed on the Y axis.
 
-<h3 id="skewX">skewX</h3>
+> **Note:** The `skew()` function was present in early drafts. It has been removed but is still present in some implementations. Do not use it.
+>
+> To achieve the same effect, use `skewX()` if you were using `skew()` with one parameter or `matrix(1, tan(ax)`_,_ `tan(ay), 1, 0, 0)` for the general way. Note that _tan()_ isn't a CSS function and you have to precalculate it yourself.
 
-<pre class="eval">transform:  skewX(angle)         /* an &lt;angle&gt;, e.g.  skewX(-30deg) */</pre>
+### skewX
 
-<p>Skews the element around the X axis by the given <code>angle</code>.</p>
+    transform:  skewX(angle)         /* an <angle>, e.g.  skewX(-30deg) */
 
-<h3 id="skewY">skewY</h3>
+Skews the element around the X axis by the given `angle`.
 
-<pre class="eval">transform:  skewY(angle)         /* an &lt;angle&gt;, e.g.  skewY(4deg) */</pre>
+### skewY
 
-<p>Skews the element around the Y axis by the given <code>angle</code>.</p>
+    transform:  skewY(angle)         /* an <angle>, e.g.  skewY(4deg) */
 
-<h3 id="translate">translate</h3>
+Skews the element around the Y axis by the given `angle`.
 
-<pre class="eval">transform:  translate(tx[, ty])  /* one or two &lt;length&gt; values */</pre>
+### translate
 
-<p>Specifies a 2D translation by the vector <strong>[tx, ty]</strong>. If <code>ty</code> isn't specified, its value is assumed to be zero.</p>
+    transform:  translate(tx[, ty])  /* one or two <length> values */
 
-<h3 id="translateX">translateX</h3>
+Specifies a 2D translation by the vector **\[tx, ty]**. If `ty` isn't specified, its value is assumed to be zero.
 
-<pre class="eval">transform:  translateX(tx)       /* see &lt;length&gt; for possible values */</pre>
+### translateX
 
-<p>Translates the element by the given amount along the X axis.</p>
+    transform:  translateX(tx)       /* see <length> for possible values */
 
-<h3 id="translateY">translateY</h3>
+Translates the element by the given amount along the X axis.
 
-<pre class="eval">transform:  translateY(ty)       /* see &lt;length&gt; for possible values */</pre>
+### translateY
 
-<p>Translates the element by the given amount along the Y axis.</p>
+    transform:  translateY(ty)       /* see <length> for possible values */
 
-<h2 id="Specifications">Specifications</h2>
+Translates the element by the given amount along the Y axis.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transforms', '#transform', 'transform') }}</td>
-   <td>{{ Spec2('CSS3 Transforms') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Specification                                                                    | Status                                   | Comment |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
+| {{ SpecName('CSS3 Transforms', '#transform', 'transform') }} | {{ Spec2('CSS3 Transforms') }} |         |
+
+## Compatibilidade com navegadores
+
 {{Compat}}
 
+## See also
 
-<h2 id="See_also_2">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></li>
- <li><a class="external" href="http://paulirish.com/2010/introducing-css3please/#comment-36380">More info</a> on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.</li>
- <li>A cross-browser 2D <a class="external" href="http://plugins.jquery.com/project/jquery-transform">transform plugin for jQuery</a></li>
-</ul>
+- [Using CSS Transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
+- [More info](http://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
+- A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)

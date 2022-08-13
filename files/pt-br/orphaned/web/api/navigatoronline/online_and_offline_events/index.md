@@ -4,55 +4,52 @@ slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
-<p>IAlguns navegadores utilizam <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> relacionados à <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
+IAlguns navegadores utilizam [Online/Offline events](http://www.whatwg.org/specs/web-apps/current-work/#offline) relacionados à [WHATWG Web Applications 1.0 specification](http://www.whatwg.org/specs/web-apps/current-work/).
 
-<h3 id="Overview" name="Overview">Introdução</h3>
+### Introdução
 
-<p>Para criar um bom aplicativo off-line, primeiramente é necessário que você saiba quando o aplicativo está off-line. Consequentemente, você também precisará saber quando seu aplicativo retorna ao estado on-line novamente, ou seja, os eventos são:</p>
+Para criar um bom aplicativo off-line, primeiramente é necessário que você saiba quando o aplicativo está off-line. Consequentemente, você também precisará saber quando seu aplicativo retorna ao estado on-line novamente, ou seja, os eventos são:
 
-<ol>
- <li>Você precisa saber quando o usuário está on-line novamente, assim você pode sincronizar novamente com o servidor.</li>
- <li>Você precisa saber quando o usuário está off-line, então você deverá agendar os acessos ao servidor para mais tarde.</li>
-</ol>
+1.  Você precisa saber quando o usuário está on-line novamente, assim você pode sincronizar novamente com o servidor.
+2.  Você precisa saber quando o usuário está off-line, então você deverá agendar os acessos ao servidor para mais tarde.
 
-<p>Este é o processo que os eventos on-line/off-line ajudam a facilitar.</p>
+Este é o processo que os eventos on-line/off-line ajudam a facilitar.
 
-<p>Seu aplicativo também poderá precisar estabelecer que certos documentos deverão ser mantidos em um cache off-line. Você pode saber mais sobre isso no artigo <a href="/en/Offline_resources_in_Firefox" title="en/Offline_resources_in_Firefox">Offline resources in Firefox</a>.</p>
+Seu aplicativo também poderá precisar estabelecer que certos documentos deverão ser mantidos em um cache off-line. Você pode saber mais sobre isso no artigo [Offline resources in Firefox](/en/Offline_resources_in_Firefox "en/Offline_resources_in_Firefox").
 
-<h3 id="API" name="API">API</h3>
+### API
 
-<h4 id="navigator.onLine" name="navigator.onLine"><code>navigator.onLine</code></h4>
+#### `navigator.onLine`
 
-<p><code><a href="/en/DOM/window.navigator.onLine" title="en/DOM/window.navigator.onLine">navigator.onLine</a></code> é uma propriedade que mantém valores <code>true</code>/<code>false</code> (<code>true</code> para on-line, <code>false</code> para off-line). Esta propriedade é atualizada quando o usuário entra em "Modo Off-line" clicando no item de menu correspondente (Arquivo -&gt; Modo Off-line).</p>
+[`navigator.onLine`](/en/DOM/window.navigator.onLine "en/DOM/window.navigator.onLine") é uma propriedade que mantém valores `true`/`false` (`true` para on-line, `false` para off-line). Esta propriedade é atualizada quando o usuário entra em "Modo Off-line" clicando no item de menu correspondente (Arquivo -> Modo Off-line).
 
-<p>Essa propriedade também deverá ser atualizada toda vez que o navegador perde a conexão com a Internet. De acordo com a especificação:</p>
+Essa propriedade também deverá ser atualizada toda vez que o navegador perde a conexão com a Internet. De acordo com a especificação:
 
-<blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/#offline">A propriedade <code>navigator.onLine</code> deve retornar false se o usuário clicar num link ou se um aplicativo tentar contatar uma página remota e não estiver conectado à Internet ou se o navegador souber que a tentativa irá falhar por qualquer motivo...</blockquote>
+> A propriedade `navigator.onLine` deve retornar false se o usuário clicar num link ou se um aplicativo tentar contatar uma página remota e não estiver conectado à Internet ou se o navegador souber que a tentativa irá falhar por qualquer motivo...
 
-<p>O Firefox 2 atualiza esta propriedade quando se entra em Modo Off-line ou sai do mesmo e também quando a conexão com a Internet é perdida ou reestabelecida no Windows e no Linux.</p>
+O Firefox 2 atualiza esta propriedade quando se entra em Modo Off-line ou sai do mesmo e também quando a conexão com a Internet é perdida ou reestabelecida no Windows e no Linux.
 
-<p>Essa propriedade existiu em versões mais antigas do Firefox e do Internet Explorer (a especificação acima foi baseada nestas implementações anteriores), então você pode começar a utilizá-la imediatamente. A auto-detecção de estado de rede foi implementada no Firefox 2.</p>
+Essa propriedade existiu em versões mais antigas do Firefox e do Internet Explorer (a especificação acima foi baseada nestas implementações anteriores), então você pode começar a utilizá-la imediatamente. A auto-detecção de estado de rede foi implementada no Firefox 2.
 
-<h4 id=".22online.22_and_.22offline.22_events" name=".22online.22_and_.22offline.22_events">Eventos "<code>on-line</code>" e "<code>off-line</code>"</h4>
+#### Eventos "`on-line`" e "`off-line`"
 
-<p>O <a href="/en/Firefox_3_for_developers" title="en/Firefox_3_for_developers">Firefox 3</a> implementou dois novos eventos: "<code>on-line</code>" e "<code>off-line</code>". Estes dois eventos são chamados na tag <code>&lt;body&gt;</code> de cada página quando o navegador muda entre os modos on e off-line. Também, esses eventos são propagados a partir do <code>document.body</code>, para <code>document</code>, terminando em <code>window</code>. Ambos eventos não podem ser interrompidos (você não pode prevenir que o usuário fique on-line ou off-line).</p>
+O [Firefox 3](/en/Firefox_3_for_developers "en/Firefox_3_for_developers") implementou dois novos eventos: "`on-line`" e "`off-line`". Estes dois eventos são chamados na tag `<body>` de cada página quando o navegador muda entre os modos on e off-line. Também, esses eventos são propagados a partir do `document.body`, para `document`, terminando em `window`. Ambos eventos não podem ser interrompidos (você não pode prevenir que o usuário fique on-line ou off-line).
 
-<p>Você pode resgistrar <em>listeners</em> para esses eventos em caminhos conhecidos:</p>
+Você pode resgistrar _listeners_ para esses eventos em caminhos conhecidos:
 
-<ul>
- <li>usando <code><a href="/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener">addEventListener</a></code> em <code>window</code>, <code>document</code>, ou <code>document.body</code></li>
- <li>configurando propriedades <code>.ononline</code> ou <code>.onoffline</code> em <code>document</code> ou <code>document.body</code> para um objeto <code>Function</code> em JavaScript. (<strong>Obs.:</strong> <code>window.ononline</code> ou <code>window.onoffline</code> não funcionarão por questões de compatibilidade.)</li>
- <li>especificando atributos <code>ononline="..."</code> or <code>onoffline="..."</code>  na tag <code>&lt;body&gt;</code> do HTML.</li>
-</ul>
+- usando [`addEventListener`](/en/DOM/element.addEventListener "en/DOM/element.addEventListener") em `window`, `document`, ou `document.body`
+- configurando propriedades `.ononline` ou `.onoffline` em `document` ou `document.body` para um objeto `Function` em JavaScript. (**Obs.:** `window.ononline` ou `window.onoffline` não funcionarão por questões de compatibilidade.)
+- especificando atributos `ononline="..."` or `onoffline="..."` na tag `<body>` do HTML.
 
-<h3 id="Example" name="Example">Example</h3>
+### Example
 
-<p>Há <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">a simple test case</a> que você pode rodar para ver como esses eventos funcionam. XXX Quando os testes para isso forem criados, redirecione para eles e atualize este exemplo -nickolay</p>
+Há [a simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609) que você pode rodar para ver como esses eventos funcionam. XXX Quando os testes para isso forem criados, redirecione para eles e atualize este exemplo -nickolay
 
-<pre class="brush: html"> &lt;!doctype html&gt;
- &lt;html&gt;
- &lt;head&gt;
-   &lt;script&gt;
+```html
+ <!doctype html>
+ <html>
+ <head>
+   <script>
      function updateOnlineStatus(msg) {
        var status = document.getElementById("status");
        var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
@@ -71,26 +68,24 @@ original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
          updateOnlineStatus("online")
        }, false);
      }
-   &lt;/script&gt;
-   &lt;style&gt;...&lt;/style&gt;
- &lt;/head&gt;
- &lt;body onload="loaded()"&gt;
-   &lt;div id="status"&gt;&lt;p id="state"&gt;&lt;/p&gt;&lt;/div&gt;
-   &lt;div id="log"&gt;&lt;/div&gt;
- &lt;/body&gt;
- &lt;/html&gt;
-</pre>
+   </script>
+   <style>...</style>
+ </head>
+ <body onload="loaded()">
+   <div id="status"><p id="state"></p></div>
+   <div id="log"></div>
+ </body>
+ </html>
+```
 
-<h3 id="References" name="References">Notas</h3>
+### Notas
 
-<p>Se a API não estiver implementada no navegador, você pode usar outros sinais para detectar quando se está off-line, inclusive receber <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-appcache">AppCache error events</a> e <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+Se a API não estiver implementada no navegador, você pode usar outros sinais para detectar quando se está off-line, inclusive receber [AppCache error events](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-appcache) e [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
 
-<h3 id="References" name="References">Referências</h3>
+### Referências
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">follow-up</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">A simple test case</a></li>
- <li><a class="external" href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2010/01/offline-web-applications/">offline web applications</a> em hacks.mozilla.org - mostra um aplicativo off-line e explica como funciona.</li>
-</ul>
+- ['Online/Offline events' section from the WHATWG Web Applications 1.0 Specification](http://www.whatwg.org/specs/web-apps/current-work/#offline)
+- [The bug tracking online/offline events implementation in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=336359) and a [follow-up](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
+- [A simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
+- [An explanation of Online/Offline events](http://ejohn.org/blog/offline-events/)
+- [offline web applications](http://hacks.mozilla.org/2010/01/offline-web-applications/) em hacks.mozilla.org - mostra um aplicativo off-line e explica como funciona.

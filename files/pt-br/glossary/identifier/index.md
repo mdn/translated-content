@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/Identifier
 original_slug: Glossario/Identificador
 ---
-<p>Uma sequência de caracteres no código, que identifica uma <strong>{{glossary("variável")}}, {{glossary("função")}}, ou {{glossary("propriedade")}}</strong>.</p>
+Uma sequência de caracteres no código, que identifica uma **{{glossary("variável")}}, {{glossary("função")}}, ou {{glossary("propriedade")}}**.
 
-<p>Em {{glossary("JavaScript")}}, identificadores podem conter somente caracteres alfanuméricos (ou "$" ou "_"), e não podem iniciar com um dígito. Um identificador difere de uma <strong>string</strong> no sentido de que uma string é informação, enquanto um identificador é parte do código. Em JavaScript, não existe uma forma de converter identificadores para strings, mas as vezes é possível converter strings em identificadores.</p>
+Em {{glossary("JavaScript")}}, identificadores podem conter somente caracteres alfanuméricos (ou "$" ou "\_"), e não podem iniciar com um dígito. Um identificador difere de uma **string** no sentido de que uma string é informação, enquanto um identificador é parte do código. Em JavaScript, não existe uma forma de converter identificadores para strings, mas as vezes é possível converter strings em identificadores.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{interwiki("wikipedia", "Identificador", "Identificador")}} no Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Identificador", "Identificador")}} no Wikipédia

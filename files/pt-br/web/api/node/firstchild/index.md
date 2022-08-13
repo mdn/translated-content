@@ -8,59 +8,55 @@ tags:
   - Node.firstChild
 translation_of: Web/API/Node/firstChild
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.firstChild</strong></code> é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children). </p>
+**`Node.firstChild`** é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children).
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>var childNode</em> = <em>node</em>.firstChild;
-</pre>
+    var childNode = node.firstChild;
 
-<p><strong>node:</strong> elemento node (nó pai) de referência para busca do seu primeiro filho (firstChild) considerada a estrutura DOM.</p>
+**node:** elemento node (nó pai) de referência para busca do seu primeiro filho (firstChild) considerada a estrutura DOM.
 
-<p><strong>childNode:</strong> elemento node (nó filho) considerado como primeiro filho (firstChild) de node (pai).</p>
+**childNode:** elemento node (nó filho) considerado como primeiro filho (firstChild) de node (pai).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>childNode é uma referência para o primeiro filho (node) de uma estrutura DOM, um node (nó) que não tem filhos retornará null.</p>
+childNode é uma referência para o primeiro filho (node) de uma estrutura DOM, um node (nó) que não tem filhos retornará null.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitespace" de um node (nó) podem interferir. </p>
+Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitespace" de um node (nó) podem interferir.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;
-  &lt;span&gt;First span&lt;/span&gt;
-&lt;/p&gt;
+```html
+<p id="para-01">
+  <span>First span</span>
+</p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag &lt;p id="para-01"&gt; e a tag &lt;span&gt;. Qualquer espaço em branco poderá causar '#text'.</p>
+No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag \<p id="para-01"> e a tag \<span>. Qualquer espaço em branco poderá causar '#text'.
 
-<div class="note">
-<p>"Tabs" também podem causar esse comportamento.</p>
-</div>
+> **Note:** "Tabs" também podem causar esse comportamento.
 
-<p>Se os espaços em branco for removidos do código, o '#text' não será mais considerado e a tag &lt;span&gt; se tornará o primeiro filho firstChild do parágrafo, conforme exemplo abaixo.</p>
+Se os espaços em branco for removidos do código, o '#text' não será mais considerado e a tag \<span> se tornará o primeiro filho firstChild do parágrafo, conforme exemplo abaixo.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;&lt;span&gt;First span&lt;/span&gt;&lt;/p&gt;
+```html
+<p id="para-01"><span>First span</span></p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName)
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Agora o console.log() irá exibir 'SPAN'.</p>
+Agora o console.log() irá exibir 'SPAN'.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild">DOM nível 1 Core: firstChild</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388">DOM nível 2 Core: firstChild</a></li>
-</ul>
+- [DOM nível 1 Core: firstChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
+- [DOM nível 2 Core: firstChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)

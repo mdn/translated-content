@@ -7,50 +7,37 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/407
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p> </p>
+O código de resposta HTTP **`407 Proxy Authentication Required` **indica um erro do lado cliente, informando que uma solicitação não está sendo bem aplicada. Isso ocorre porque falta a validar as credencias de autenticação para um {{Glossary("proxy server")}} que intermedia o navegador e o servidor que pode acessar o recurso solicitado.
 
-<p>O código de resposta HTTP <strong><code>407 Proxy Authentication Required</code> </strong>indica um erro do lado cliente, informando que uma solicitação não está sendo bem aplicada. Isso ocorre porque falta a validar as credencias de autenticação para um {{Glossary("proxy server")}} que intermedia o navegador e o servidor que pode acessar o recurso solicitado.</p>
+Este erro é enviado com um cabeçalho {{HTTPHeader("Proxy-Authenticate")}} que contém informações de como fazer uma autorização correta.
 
-<p>Este erro é enviado com um cabeçalho {{HTTPHeader("Proxy-Authenticate")}} que contém informações de como fazer uma autorização correta.</p>
+## Status
 
-<h2 id="Status">Status</h2>
+    407 Proxy Authentication Required
 
-<pre class="syntaxbox">407 Proxy Authentication Required </pre>
+## Exemplo de resposta
 
-<h2 id="Exemplo_de_resposta">Exemplo de resposta</h2>
+    HTTP/1.1 407 Proxy Authentication Required
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    Proxy-Authenticate: Basic realm="Access to internal site"
 
-<pre>HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Epecificação                                                                     | Título                   |
+| -------------------------------------------------------------------------------- | ------------------------ |
+| {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Epecificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "407 Proxy Authentication Required" , "3.2")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("http.status.407")}}
 
-<p>{{Compat("http.status.407")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/pt-BR/docs/Web/HTTP/Authentication">Autenticação HTTP</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}</li>
-</ul>
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}

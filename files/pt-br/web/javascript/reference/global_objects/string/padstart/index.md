@@ -10,96 +10,74 @@ tags:
   - padStart()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>padStart()</code> preenche a string original com um determinado caractere, ou conjunto de caracteres, (várias vezes, se necessário) até que a string resultante atinja o comprimento fornecido. O preenchimento é aplicado antes do primeiro caractere da string original. A string original não é modificada.</p>
+O método `padStart()` preenche a string original com um determinado caractere, ou conjunto de caracteres, (várias vezes, se necessário) até que a string resultante atinja o comprimento fornecido. O preenchimento é aplicado antes do primeiro caractere da string original. A string original não é modificada.
 
+{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
 
+## Sintaxe
 
-<div>{{EmbedInteractiveExample("pages/js/string-padstart.html")}}</div>
+    str.padStart(targetLength [, padString])
 
+### Parâmetros
 
+- `targetLength`
+  - : O comprimento da string resultante uma vez que a string alvo tenha sido preenchida. Caso seu valor seja menor do que o comprimento da string alvo, é retornado a própria string alvo, sem alterações.
+- `padString`
+  - : Opcional. O caractere, ou caracteres, que deve preencher a string alvo. Caso o comprimento dessa essa string de preenchimento seja superior ao `targetLength`, ela será truncada a partir da direita. O valor padrão é `" "` (`U+0020 'SPACE'`).
 
+### Valor de retorno
 
+Uma {{jsxref("String")}} de comprimento específico com uma string de preenchimento aplicada a partir do seu início.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Exemplos
 
-<pre class="syntaxbox notranslate"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+### Exemplos básicos
 
-<h3 id="Parâmetros">Parâmetros</h3>
-
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>O comprimento da string resultante uma vez que a string alvo tenha sido preenchida. Caso seu valor seja menor do que o comprimento da string alvo, é retornado a própria string alvo, sem alterações.</dd>
- <dt><code>padString</code></dt>
- <dd>Opcional. O caractere, ou caracteres, que deve preencher a string alvo. Caso o comprimento dessa essa string de preenchimento seja superior ao <code>targetLength</code>, ela será truncada a partir da direita. O valor padrão é <code>" "</code> (<code>U+0020 'SPACE'</code>).</dd>
-</dl>
-
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
-
-<p>Uma {{jsxref("String")}} de comprimento específico com uma string de preenchimento aplicada a partir do seu início.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Exemplos_básicos">Exemplos básicos</h3>
-
-<pre class="brush: js notranslate">'abc'.padStart(10);         // "       abc"
+```js
+'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"</pre>
+'abc'.padStart(1);          // "abc"
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Ao executar o seguinte código antes de qualquer outro código é criado o método <code>String.prototype.padStart()</code>, em casos onde ele não está disponível nativamente:</p>
+Ao executar o seguinte código antes de qualquer outro código é criado o método `String.prototype.padStart()`, em casos onde ele não está disponível nativamente:
 
-<pre class="brush: js notranslate">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+```js
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
     String.prototype.padStart = function padStart(targetLength, padString) {
-        targetLength = targetLength &gt;&gt; 0; //truncate if number, or convert non-number to 0;
+        targetLength = targetLength >> 0; //truncate if number, or convert non-number to 0;
         padString = String(typeof padString !== 'undefined' ? padString : ' ');
-        if (this.length &gt;= targetLength) {
+        if (this.length >= targetLength) {
             return String(this);
         } else {
             targetLength = targetLength - this.length;
-            if (targetLength &gt; padString.length) {
+            if (targetLength > padString.length) {
                 padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
             }
             return padString.slice(0, targetLength) + String(this);
         }
     };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Implementação inical no ECMAScript 2017.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                       | Comentário                               |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} | {{Spec2('ESDraft')}} | Implementação inical no ECMAScript 2017. |
+| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}         | {{Spec2('ES8')}}         |                                          |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.padStart")}}</p>
+{{Compat("javascript.builtins.String.padStart")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.padEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.padEnd()")}}

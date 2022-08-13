@@ -9,20 +9,16 @@ tags:
 translation_of: Glossary/Node.js
 original_slug: Glossario/Node.js
 ---
-<p>Node.js é um ambiente de execução multi-plataforma em {{Glossary("JavaScript")}} que permite aos desenvolvedores produzirem aplicações para rede e {{Glossary("Servidor","server-side")}} usando o JavaScript.</p>
+Node.js é um ambiente de execução multi-plataforma em {{Glossary("JavaScript")}} que permite aos desenvolvedores produzirem aplicações para rede e {{Glossary("Servidor","server-side")}} usando o JavaScript.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimentos_gerais">Conhecimentos gerais</h3>
+### Conhecimentos gerais
 
-<ul>
- <li>{{Interwiki("wikipedia", "Node.js")}} no Wikipédia</li>
- <li><a href="https://nodejs.org/">Site do Node.js</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Node.js")}} no Wikipédia
+- [Site do Node.js](https://nodejs.org/)
 
-<h3 id="Referência_técnica">Referência técnica</h3>
+### Referência técnica
 
-<ul>
- <li><a href="https://nodejs.org/api/">Documentação da API</a></li>
- <li><a href="https://nodejs.org/documentation/tutorials/">Tutoriais</a></li>
-</ul>
+- [Documentação da API](https://nodejs.org/api/)
+- [Tutoriais](https://nodejs.org/documentation/tutorials/)

@@ -4,70 +4,80 @@ slug: Web/JavaScript/Reference/Template_literals
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
-<div>{{JsSidebar("More")}}</div>
+{{JsSidebar("More")}}
 
-<p><em>Template </em><span style="color: #57606f;">Strings</span> são <em>string</em>s que permitem expressões embutidas. Você pode <em>utilizar string</em> multi-linhas e interpolação de <em>string </em>com elas.</p>
+_Template_ Strings são _string_s que permitem expressões embutidas. Você pode \_utilizar string_ multi-linhas e interpolação de _string_ com elas.
 
-<p>Basicamente é uma nova forma de criar strings e tornar o seu código um pouco mais legível.</p>
+Basicamente é uma nova forma de criar strings e tornar o seu código um pouco mais legível.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">`corpo de texto`
+    `corpo de texto`
 
-`texto linha 1
- texto linha 2`
+    `texto linha 1
+     texto linha 2`
 
-`texto string ${expression} texto string`
+    `texto string ${expression} texto string`
 
-tag `texto string ${expression} texto string`
-</pre>
+    tag `texto string ${expression} texto string`
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><em>Template strings</em> são envolvidas por (<a href="https://pt.wikipedia.org/wiki/Acento_grave">acentos graves</a>) (` `) em vez de aspas simples ou duplas. <em>Template strings</em> podem possuir <em>placeholders</em>. Estes são indicados por um cifrão seguido de chaves (<code>${expression}</code>). As expressões nos <em>placeholders</em>, bem como o texto em volta delas são passados a uma função. A função padrão apenas concatena as partes em uma <em>string</em> única. Se existir uma expressão precedendo a <em>template string</em> (função <code>tag</code> exemplo), a <em>template string </em>é definida como "<em>tagged template string</em>". No caso, a expressão <em>tag</em> (geralmente uma função) é chamada pela <em>template string</em> processada, que você pode manipular antes de produzir o resultado.</p>
+_Template strings_ são envolvidas por ([acentos graves](https://pt.wikipedia.org/wiki/Acento_grave)) (\` \`) em vez de aspas simples ou duplas. _Template strings_ podem possuir _placeholders_. Estes são indicados por um cifrão seguido de chaves (`${expression}`). As expressões nos _placeholders_, bem como o texto em volta delas são passados a uma função. A função padrão apenas concatena as partes em uma _string_ única. Se existir uma expressão precedendo a _template string_ (função `tag` exemplo), a _template string_ é definida como "_tagged template string_". No caso, a expressão _tag_ (geralmente uma função) é chamada pela _template string_ processada, que você pode manipular antes de produzir o resultado.
 
-<pre class="brush: js notranslate">`\`` === '`' // --&gt; true</pre>
+```js
+`\`` === '`' // --> true
+```
 
-<h3 id="Strings_multi-linhas">Strings multi-linhas</h3>
+### Strings multi-linhas
 
-<p>Qualquer caracter de nova linha inserido no código é parte da <em>template string</em>. Utilizando <em>strings</em> normais, você teria de usar a síntaxe a seguir para obter strings multi-linhas:</p>
+Qualquer caracter de nova linha inserido no código é parte da _template string_. Utilizando _strings_ normais, você teria de usar a síntaxe a seguir para obter strings multi-linhas:
 
-<pre class="brush: js notranslate">console.log('texto string linha 1\n' +
+```js
+console.log('texto string linha 1\n' +
 'texto string linha 2');
 // "texto string linha 1
-// texto string linha 2"</pre>
+// texto string linha 2"
+```
 
-<p>Para obter o mesmo efeito com strings multi-linhas, você agora pode escrever:</p>
+Para obter o mesmo efeito com strings multi-linhas, você agora pode escrever:
 
-<pre class="brush: js notranslate">console.log(`texto string linha 1
+```js
+console.log(`texto string linha 1
 texto string linha 2`);
 // "texto string linha 1
-//  texto string linha 2"</pre>
+//  texto string linha 2"
+```
 
-<h3 id="Interpolação_de_Expressões">Interpolação de Expressões</h3>
+### Interpolação de Expressões
 
-<p>Para encapsular expressões dentro de strings, você precisava utilizar a seguinte sintaxe:</p>
+Para encapsular expressões dentro de strings, você precisava utilizar a seguinte sintaxe:
 
-<pre class="brush: js notranslate">var a = 5;
+```js
+var a = 5;
 var b = 10;
 console.log('Quinze é ' + (a + b) + ' e\nnão ' + (2 * a + b) + '.');
 // "Quinze é 15 e
-// não 20."</pre>
+// não 20."
+```
 
-<p>Agora, com template strings, você pode utilizar as substituições sintáticas tornando o código mais legível:</p>
+Agora, com template strings, você pode utilizar as substituições sintáticas tornando o código mais legível:
 
-<pre class="brush: js notranslate">var a = 5;
+```js
+var a = 5;
 var b = 10;
 console.log(`Quinze é ${a + b} e
 não ${2 * a + b}.`);
 // "Quinze é 15 e
-// não 20."</pre>
+// não 20."
+```
 
-<h3 id="Tagged_template_strings">Tagged template strings</h3>
+### Tagged template strings
 
-<p>Uma forma mais avançada dos <em>template string</em> são os <em>template strings</em> com marcações ou tags, ou <em>tagged template strings</em>. Com eles, você tem a possibilidade de modificar a saída dos <em>template strings</em> usando uma função. O primeiro argumento contém um array de literais ("Hello" e "World" neste exemplo). Do segundo em diante e cada argumento subsequente contém valores previamente processados (algumas vezes chamados <em>cooked</em>) pelas expressões de substituição ("15" e "50" no caso do exemplo). No final, a função retorna a string ja manipulada:</p>
+Uma forma mais avançada dos _template string_ são os _template strings_ com marcações ou tags, ou _tagged template strings_. Com eles, você tem a possibilidade de modificar a saída dos _template strings_ usando uma função. O primeiro argumento contém um array de literais ("Hello" e "World" neste exemplo). Do segundo em diante e cada argumento subsequente contém valores previamente processados (algumas vezes chamados _cooked_) pelas expressões de substituição ("15" e "50" no caso do exemplo). No final, a função retorna a string ja manipulada:
 
-<pre class="brush: js notranslate">var a = 5;
+```js
+var a = 5;
 var b = 10;
 
 function tag(strings, ...values) {
@@ -81,59 +91,43 @@ function tag(strings, ...values) {
 
 tag`Hello ${ a + b } world ${ a * b}`;
 // "Bazinga!"
-</pre>
+```
 
-<h3 id="Strings_Raw">Strings <em>Raw</em></h3>
+### Strings _Raw_
 
-<p>A propriedade especial <code>raw</code>, disponível no primeiro argumento da função da <em>tagged template string</em> acima, permite o acesso as strings de maneira pura (<em>raw</em>) exatamente como elas foram especificadas:</p>
+A propriedade especial `raw`, disponível no primeiro argumento da função da _tagged template string_ acima, permite o acesso as strings de maneira pura (_raw_) exatamente como elas foram especificadas:
 
-<pre class="brush: js notranslate">function tag(strings, ...values) {
+```js
+function tag(strings, ...values) {
   return strings.raw[0];
 }
 
 tag`string text line 1 \n string text line 2`;
 // "string text line 1 \\n string text line 2"
-</pre>
+```
 
-<p>Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as <em>template functions</em> e as concatenações deveram criar.</p>
+Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as _template functions_ e as concatenações deveram criar.
 
-<pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`; // "Hi\\n5!"</pre>
+```js
+String.raw`Hi\n${2+3}!`; // "Hi\\n5!"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-template-literals', 'Template Literals')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial. Definido em várias seções da especificação: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals">Template Literals</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates">Tagged Templates</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-template-literals', 'Template Literals')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definido em várias seções da especificação: <a href="https://tc39.github.io/ecma262/#sec-template-literals">Template Literals</a>, <a href="https://tc39.github.io/ecma262/#sec-tagged-templates">Tagged Templates</a></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                       | Comentário                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES2015', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ES2015')}}     | Definição inicial. Definido em várias seções da especificação: [Template Literals](http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals), [Tagged Templates](http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates) |
+| {{SpecName('ESDraft', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ESDraft')}} | Definido em várias seções da especificação: [Template Literals](https://tc39.github.io/ecma262/#sec-template-literals), [Tagged Templates](https://tc39.github.io/ecma262/#sec-tagged-templates)                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-<p>{{Compat("javascript.grammar.template_literals")}}</p>
-</div>
+{{Compat("javascript.grammar.template_literals")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("String.raw()")}}</li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar">Gramática léxica</a></li>
- <li><a href="https://gist.github.com/WebReflection/8f227532143e63649804">Template-like strings in ES3 compatible syntax</a></li>
- <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/">"ES6 in Depth: Template strings" on hacks.mozilla.org</a></li>
- <li><a href="https://styled-components.com/">https://styled-components.com/</a></li>
-</ul>
+- {{jsxref("String")}}
+- {{jsxref("String.raw()")}}
+- [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- <https://styled-components.com/>

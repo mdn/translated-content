@@ -3,66 +3,49 @@ title: Console API
 slug: Web/API/Console_API
 translation_of: Web/API/Console_API
 ---
-<div>{{DefaultAPISidebar("Console API")}}</div>
+{{DefaultAPISidebar("Console API")}}
 
-<p>O Console API  traz funcionalidades que permitem desenvolvedores realizar tarefas de debug, como registrar mensagens or os valores das variáveis em sertoes pontos do código, or cronometrar quanto tempo uma operação leva para concluir.</p>
+O Console API traz funcionalidades que permitem desenvolvedores realizar tarefas de debug, como registrar mensagens or os valores das variáveis em sertoes pontos do código, or cronometrar quanto tempo uma operação leva para concluir.
 
-<h2 id="Conceitos_e_uso">Conceitos e uso</h2>
+## Conceitos e uso
 
-<p>O Console API começou como uma API proprietária, com diferentes navegadores a implementando. <a href="https://console.spec.whatwg.org/"> A especificação do Console API</a> foi criado para definir um comportamento consistente, e todos o navegadores atuais ventualmente foram implementando a funconalidade — Apsar de algumas implementações ainda terem funções adicionais proprietárias. Veja mais sobre isso em:</p>
+O Console API começou como uma API proprietária, com diferentes navegadores a implementando. [A especificação do Console API](https://console.spec.whatwg.org/) foi criado para definir um comportamento consistente, e todos o navegadores atuais ventualmente foram implementando a funconalidade — Apsar de algumas implementações ainda terem funções adicionais proprietárias. Veja mais sobre isso em:
 
-<ul>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Google Chrome DevTools implementação</a></li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html">Safari DevTools implementação</a></li>
-</ul>
+- [Google Chrome DevTools implementação](https://developers.google.com/chrome-developer-tools/docs/console-api)
+- [Safari DevTools implementação](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
-<p>Uso é bastante simples — o objeto {{domxref("console")}} — disponível via {{domxref("window.console")}}, ou {{domxref("WorkerGlobalScope.console")}} em workers; acessível apenas usando <code>console</code> — contém vários métodos que você pode chamar para executar tarefas de depuração, geralmente focado no registro de vários valores no navegador <a href="/en-US/docs/Tools/Web_Console">Web Console</a>.</p>
+Uso é bastante simples — o objeto {{domxref("console")}} — disponível via {{domxref("window.console")}}, ou {{domxref("WorkerGlobalScope.console")}} em workers; acessível apenas usando `console` — contém vários métodos que você pode chamar para executar tarefas de depuração, geralmente focado no registro de vários valores no navegador [Web Console](/pt-BR/docs/Tools/Web_Console).
 
-<p>De longe o método mais comum usado é o {{domxref("console.log")}}, que é usado para mostrar o valor atual contido em uma variável específica.</p>
+De longe o método mais comum usado é o {{domxref("console.log")}}, que é usado para mostrar o valor atual contido em uma variável específica.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("console")}}</dt>
- <dd>Provides rudimentary debugging functionality, including logging, stack traces, timers, and counters.</dd>
-</dl>
+- {{domxref("console")}}
+  - : Provides rudimentary debugging functionality, including logging, stack traces, timers, and counters.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let myString = 'Hello world';
+```js
+let myString = 'Hello world';
 
 // Output "Hello world" to the console
-console.log(myString)</pre>
+console.log(myString)
+```
 
-<p>See the <a href="/en-US/docs/Web/API/Console#Usage">Console reference page</a> for more examples.</p>
+See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Console API')}}</td>
-   <td>{{Spec2('Console API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Console")}}
 
+## See also
 
-<p>{{Compat("api.Console")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Tools" title="Tools">Tools</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> — how the Web Console in Firefox handles console API calls</li>
- <li><a href="/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> — how to see console output when the debugging target is a mobile device</li>
-</ul>
+- [Tools](/pt-BR/docs/Tools "Tools")
+- [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console") — how the Web Console in Firefox handles console API calls
+- [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device

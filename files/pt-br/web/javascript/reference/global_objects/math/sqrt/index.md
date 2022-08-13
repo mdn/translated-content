@@ -8,80 +8,59 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A função <strong>Math.sqrt()</strong> retorna a raiz quadrada <span style="color: #4d4e53; line-height: 1.5;">de um número (</span><math><semantics><msqrt><mi>x</mi></msqrt><annotation encoding="TeX">\sqrt{x}</annotation></semantics></math><span style="color: #4d4e53; line-height: 1.5;">) .</span></p>
+A função **Math.sqrt()** retorna a raiz quadrada de um número (<math><semantics><msqrt><mi>x</mi></msqrt><annotation encoding="TeX">\sqrt{x}</annotation></semantics></math>) .
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.sqrt(<em>x</em>) </code></pre>
+    Math.sqrt(x)
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>A raiz quadrada do número recebido. Se o número for negativo, a função retornará {{jsxref("NaN")}}.</p>
+A raiz quadrada do número recebido. Se o número for negativo, a função retornará {{jsxref("NaN")}}.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Se o valor de <code>x</code> for negativo, <code>Math.sqrt()</code> retorna {{jsxref("NaN")}}.</p>
+Se o valor de `x` for negativo, `Math.sqrt()` retorna {{jsxref("NaN")}}.
 
-<p>Por <code>sqrt</code> ser um método estático de <code>Math</code>, deve-se sempre usá-lo como <code>Math.sqrt()</code>, e não como um método de um objeto <code>Math</code> que você criou.</p>
+Por `sqrt` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.sqrt()`, e não como um método de um objeto `Math` que você criou.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_Math.sqrt" name="Example:_Using_Math.sqrt">Exemplo: Usando <code>Math.sqrt</code></h3>
+### Exemplo: Usando `Math.sqrt`
 
-<pre class="brush:js">Math.sqrt(9); // 3
+```js
+Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
 Math.sqrt(1);  // 1
 Math.sqrt(0);  // 0
-Math.sqrt(-1); // NaN</pre>
+Math.sqrt(-1); // NaN
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}} | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.sqrt")}}</p>
+{{Compat("javascript.builtins.Math.sqrt")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.pow()")}}

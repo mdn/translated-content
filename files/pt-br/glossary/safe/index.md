@@ -9,38 +9,33 @@ tags:
 translation_of: Glossary/safe
 original_slug: Glossario/seguro
 ---
-<p>Um método HTTP é <strong>seguro</strong> se ele não altera o estado do servidor. Em outras palavras, um método é seguro se ele leva a uma operação de somente leitura. Diversos métodos de HTTP são seguros: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, ou {{HTTPMethod("OPTIONS")}}. Todos os métodos seguros também são {{glossary("idempotente")}}s, mas nem todos os métodos idempotentes são seguros. Por exemplo, {{HTTPMethod("PUT")}} e {{HTTPMethod("DELETE")}} são ambos idempotentes, entretanto são inseguros.</p>
+Um método HTTP é **seguro** se ele não altera o estado do servidor. Em outras palavras, um método é seguro se ele leva a uma operação de somente leitura. Diversos métodos de HTTP são seguros: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, ou {{HTTPMethod("OPTIONS")}}. Todos os métodos seguros também são {{glossary("idempotente")}}s, mas nem todos os métodos idempotentes são seguros. Por exemplo, {{HTTPMethod("PUT")}} e {{HTTPMethod("DELETE")}} são ambos idempotentes, entretanto são inseguros.
 
-<p>Mesmo se métodos seguros possuem a semântica de somente leitura, servidores podem alterar o seu estado (e.g., eles podem manter <em>log</em> ou estatísticas). O que é importante aqui, é de que chamando um método seguro, o cliente não requer que o servidor mude seu estado, e portanto não gerará carga desnecessária ao servidor. Navegadores podem chamar métodos seguros sem medo de causarem nenhum dano ao servidor: isso permite a eles a possibilidade de fazer atividades como pré-carregamento sem nenhum risco. <em>Web crawlers</em> também usam métodos seguros.</p>
+Mesmo se métodos seguros possuem a semântica de somente leitura, servidores podem alterar o seu estado (e.g., eles podem manter _log_ ou estatísticas). O que é importante aqui, é de que chamando um método seguro, o cliente não requer que o servidor mude seu estado, e portanto não gerará carga desnecessária ao servidor. Navegadores podem chamar métodos seguros sem medo de causarem nenhum dano ao servidor: isso permite a eles a possibilidade de fazer atividades como pré-carregamento sem nenhum risco. _Web crawlers_ também usam métodos seguros.
 
-<p>Métodos seguros não servem somente para buscar arquivos estáticos, o servidor pode gerar uma resposta para um método seguro no voô, enquanto o <em>script</em> gerador garantir segurança: ele não deve ativar gatilhos externos, como ativar um pedido de compras em um site.</p>
+Métodos seguros não servem somente para buscar arquivos estáticos, o servidor pode gerar uma resposta para um método seguro no voô, enquanto o _script_ gerador garantir segurança: ele não deve ativar gatilhos externos, como ativar um pedido de compras em um site.
 
-<p>É responsabilidade da aplicação no servidor implementar a semântica segura corretamente, o servidor <em>web</em> em si, sendo Apache, nginx ou IIS, não pode forçar ela por si só. Em particular, a aplicação não deve permitir que requisições {{HTTPMethod("GET")}} alterem seu estado.</p>
+É responsabilidade da aplicação no servidor implementar a semântica segura corretamente, o servidor _web_ em si, sendo Apache, nginx ou IIS, não pode forçar ela por si só. Em particular, a aplicação não deve permitir que requisições {{HTTPMethod("GET")}} alterem seu estado.
 
-<p>Uma chamada a um método seguro, não alterando o estado do servidor:</p>
+Uma chamada a um método seguro, não alterando o estado do servidor:
 
-<pre>GET /pageX.html HTTP/1.1
-</pre>
+    GET /pageX.html HTTP/1.1
 
-<p>Uma chamada a um método não seguro, que pode alterar o estado do servidor:</p>
+Uma chamada a um método não seguro, que pode alterar o estado do servidor:
 
-<pre>POST /pageX.html HTTP/1.1 </pre>
+    POST /pageX.html HTTP/1.1
 
-<p>Uma chamada a um método idempotente, mas não seguro:</p>
+Uma chamada a um método idempotente, mas não seguro:
 
-<pre>DELETE /idX/delete HTTP/1.1</pre>
+    DELETE /idX/delete HTTP/1.1
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>Definição de <a href="https://tools.ietf.org/html/rfc7231#section-4.2.1">seguro</a> na especificação HTTP.</li>
-</ul>
+- Definição de [seguro](https://tools.ietf.org/html/rfc7231#section-4.2.1) na especificação HTTP.
 
-<h3 id="Conhecimento_técnico">Conhecimento técnico</h3>
+### Conhecimento técnico
 
-<ul>
- <li>Descrição de métodos seguros comuns: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}</li>
- <li>Descrição de métodos inseguros comuns: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}</li>
-</ul>
+- Descrição de métodos seguros comuns: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
+- Descrição de métodos inseguros comuns: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}

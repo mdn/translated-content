@@ -7,8 +7,8 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Errors
 ---
-<p>{{jsSidebar("Errors")}}</p>
+{{jsSidebar("Errors")}}
 
-<p>Lista de erros "globais".</p>
+Lista de erros "globais".
 
-<p>{{ListSubPages("/pt-BR/docs/Web/JavaScript/Reference/Errors")}}</p>
+{{ListSubPages("/pt-BR/docs/Web/JavaScript/Reference/Errors")}}

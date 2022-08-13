@@ -11,70 +11,45 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Access-Control-Max-Age</code></strong> indica por quanto tempo os resultados de uma {{glossary("preflight request")}} (que é a informação contida nos cabeçalhos {{HTTPHeader("Access-Control-Allow-Methods")}} e {{HTTPHeader("Access-Control-Allow-Headers")}}) pode ser cacheada (mantida).</p>
+O cabeçalho de resposta **`Access-Control-Max-Age`** indica por quanto tempo os resultados de uma {{glossary("preflight request")}} (que é a informação contida nos cabeçalhos {{HTTPHeader("Access-Control-Allow-Methods")}} e {{HTTPHeader("Access-Control-Allow-Headers")}}) pode ser cacheada (mantida).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Access-Control-Max-Age: &lt;delta-segundos&gt;
-</pre>
+    Access-Control-Max-Age: <delta-segundos>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;delta-segundos&gt;</dt>
- <dd>Número máximo de segundos que os resultados podem ser cacheados.<br>
- Firefox <a href="https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131">limita isso em 24 horas</a> (86400 segundos).<br>
- Chromium (anterior à v76) <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&amp;rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e">limita isso à 10 minutos</a> (600 segundos).<br>
- Chromium (começando na v76) <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&amp;rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa">limita isso à 2 horas</a> (7200 segundos).<br>
- Chromium também especifica o valor padrão de 5 segundos.<br>
- O valor de <strong>-1</strong> irá desabilitar o cacheamento, requerendo uma requisição de checagem pré-vôo OPTIONS para todas as chamadas.</dd>
-</dl>
+- \<delta-segundos>
+  - : Número máximo de segundos que os resultados podem ser cacheados.
+    Firefox [limita isso em 24 horas](https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131) (86400 segundos).
+    Chromium (anterior à v76) [limita isso à 10 minutos](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e) (600 segundos).
+    Chromium (começando na v76) [limita isso à 2 horas](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa) (7200 segundos).
+    Chromium também especifica o valor padrão de 5 segundos.
+    O valor de **-1** irá desabilitar o cacheamento, requerendo uma requisição de checagem pré-vôo OPTIONS para todas as chamadas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Resultados cacheados para uma requisição pré-vôo por 10 minutos:</p>
+Resultados cacheados para uma requisição pré-vôo por 10 minutos:
 
-<pre>Access-Control-Max-Age: 600 </pre>
+    Access-Control-Max-Age: 600
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-max-age', 'Access-Control-Max-Age')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                   | Comentários         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('Fetch','#http-access-control-max-age', 'Access-Control-Max-Age')}} | {{Spec2("Fetch")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Access-Control-Max-Age")}}</p>
+{{Compat("http.headers.Access-Control-Max-Age")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Methods")}}

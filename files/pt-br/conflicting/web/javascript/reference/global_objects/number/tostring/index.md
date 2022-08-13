@@ -4,44 +4,43 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Number/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>O método <strong><code>toSource()</code></strong> retorna uma string contendo o código fonte do objeto.</p>
+O método **`toSource()`** retorna uma string contendo o código fonte do objeto.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>numObj</var>.toSource()
-Number.toSource()</pre>
+    numObj.toSource()
+    Number.toSource()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo o código fonte do objeto.</p>
+Uma string contendo o código fonte do objeto.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>toSource()</code> retorna os seguintes valores:</p>
+O método `toSource()` retorna os seguintes valores:
 
-<p>Para o objeto built-in {{jsxref("Number")}}, o método <code>toSource()</code> retorna a seguinte string indicando que o código fonte do objeto não está disponível:</p>
+Para o objeto built-in {{jsxref("Number")}}, o método `toSource()` retorna a seguinte string indicando que o código fonte do objeto não está disponível:
 
-<pre class="brush: js">function Number() {
+```js
+function Number() {
     [native code]
 }
-</pre>
+```
 
-<p>Para instâncias do objeto {{jsxref("Number")}}, <code>toSource()</code> retorna uma string contendo o código fonte.</p>
+Para instâncias do objeto {{jsxref("Number")}}, `toSource()` retorna uma string contendo o código fonte.
 
-<p>Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.</p>
+Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não é parte de nenhuma especificação padrão. Implementado no JavaScript 1.3.</p>
+Não é parte de nenhuma especificação padrão. Implementado no JavaScript 1.3.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.toSource")}}</p>
+{{Compat("javascript.builtins.Number.toSource")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

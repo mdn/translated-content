@@ -11,84 +11,44 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Authorization
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de requisição HTTP <strong><code>Authorization</code></strong> contém as credenciais para autenticar o agente de usuário com o servidor, geralmente o servidor responderá com um status {{HTTPStatus("401")}} <code>Unauthorized</code> se não for possível fazer a autenticação, e com o cabeçalho {{HTTPHeader("WWW-Authenticate")}}.</p>
+O cabeçalho de requisição HTTP **`Authorization`** contém as credenciais para autenticar o agente de usuário com o servidor, geralmente o servidor responderá com um status {{HTTPStatus("401")}} `Unauthorized` se não for possível fazer a autenticação, e com o cabeçalho {{HTTPHeader("WWW-Authenticate")}}.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Authorization: &lt;tipo&gt; &lt;credenciais&gt;</pre>
+    Authorization: <tipo> <credenciais>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;tipo&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de autenticação</a>. Um tipo comum é o <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. Outros tipos:
- <ul>
-  <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">Registro do IANA dos esquemas de Autenticação</a></li>
-  <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Autenticação para servidores AWS (<code>AWS4-HMAC-SHA256</code>)</a></li>
- </ul>
- </dd>
- <dt>&lt;credenciais&gt;</dt>
- <dd>Se a autenticação "Basic" é utilizada, as credenciais construção são parecidas com isto:
- <ul>
-  <li>O nome de usuário com a senha combinados por dois pontos (<code>aladdin:opensesame</code>).</li>
-  <li>A cadeia de caracteres resultante é uma codificação <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
- </ul>
+- \<tipo>
+  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#Authentication_schemes). Um tipo comum é o ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#Basic_authentication_scheme). Outros tipos:\* [Registro do IANA dos esquemas de Autenticação](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [Autenticação para servidores AWS (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+- \<credenciais>
+  - : Se a autenticação "Basic" é utilizada, as credenciais construção são parecidas com isto:\* O nome de usuário com a senha combinados por dois pontos (`aladdin:opensesame`).
+    - A cadeia de caracteres resultante é uma codificação [base64](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) (`YWxhZGRpbjpvcGVuc2VzYW1l`).> **Note:** **Nota**: Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro como mandar em texto limpo (base64 é uma codificação que pode ser revertida). Use o HTTPS em conjunto com a Autenticação Basic.
 
- <div class="note">
- <p><strong>Nota</strong>: Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro como mandar em texto limpo (base64 é uma codificação que pode ser revertida). Use o HTTPS em conjunto com a Autenticação Basic.</p>
- </div>
- </dd>
-</dl>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+    Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
-<pre>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
-</pre>
+Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exemplos em como configurar os servidores Apache ou nginx para proteger seu site com autenticação básica HTTP.
 
-<p>Veja também <a href="/en-US/docs/Web/HTTP/Authentication">autenticação HTTP</a> para exemplos em como configurar os servidores Apache ou nginx para proteger seu site com autenticação básica HTTP.</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                        | Título                                 |
+| ---------------------------------------------------- | -------------------------------------- |
+| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
+| {{RFC("7617")}}                                 | O esquema de autenticação HTTP 'Basic' |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7235", "Authorization", "4.2")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7617")}}</td>
-   <td>O esquema de autenticação HTTP 'Basic'</td>
-  </tr>
- </tbody>
-</table>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">Autenticação HTTP</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

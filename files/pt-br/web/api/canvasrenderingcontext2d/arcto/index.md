@@ -3,54 +3,51 @@ title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p> </p>
+O método **`CanvasRenderingContext2D`\*\***`.arcTo()`\*\* da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong> da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.</p>
+O arco será parte de um círculo, nunca de uma elipse. Frequentemente é usado para fazer cantos arredoondados.
 
-<p>O arco será parte de um círculo, nunca de uma elipse. Frequentemente é usado para fazer cantos arredoondados.</p>
+Pode-se imaginar o arco como dois segmentos de reta, partindo de um ponto inicial (ponto mais recente definido no caminho) até o primeiro ponto de controle e, em seguida, do primeiro ponto de controle até o segundo ponto de controle. Esses dois segmentos de reta formam um angulo, com o primeiro ponto de controle sendo a curva. Usando arcTo, o ângulo será formado de acordo com o raio fornecido.
 
-<p>Pode-se imaginar o arco como dois segmentos de reta, partindo de um ponto inicial (ponto mais recente definido no caminho) até o primeiro ponto de controle e, em seguida, do primeiro ponto de controle até o segundo ponto de controle. Esses dois segmentos de reta formam um angulo, com o primeiro ponto de controle sendo a curva. Usando arcTo, o ângulo será formado de acordo com o raio fornecido.</p>
+O arco é tangencial ao dois segmentos de reta, e por vezes, pode produzir resultados inesperados se, por exemplo, o raio fornecido for maior que a distância entre o ponto inicial e o primeiro ponto de controle.
 
-<p>O arco é tangencial ao dois segmentos de reta, e por vezes, pode produzir resultados inesperados se, por exemplo, o raio fornecido for maior que a distância entre o ponto inicial e o primeiro ponto de controle.</p>
+Se o raio fornecido não atingir o ponto inicial (ponto mais recente definido no caminho), o ponto inicial é conectado ao arco por um segmento de reta.
 
-<p>Se o raio fornecido não atingir o ponto inicial (ponto mais recente definido no caminho), o ponto inicial é conectado ao arco por um segmento de reta.</p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    void ctx.arcTo(x1, y1, x2, y2, radius);
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arcTo(x1, y1, x2, y2, radius);</var>
-</pre>
+### Parâmetros
 
-<h3 id="Parâmetros">Parâmetros</h3>
+- `x1`
+  - : coordenada do eixo x para o primeiro ponto de controle.
+- `y1`
+  - : coordenada do eixo y para o primeiro ponto de controle.
+- `x2`
+  - : coordenada do eixo x para o segundo ponto de controle.
+- `y2`
+  - : coordenada do eixo y para o segundo ponto de controle.
+- `radius`
+  - : O raio do arco.
 
-<dl>
- <dt><code>x1</code></dt>
- <dd>coordenada do eixo x para o primeiro ponto de controle.</dd>
- <dt><code>y1</code></dt>
- <dd>coordenada do eixo y para o primeiro ponto de controle.</dd>
- <dt><code>x2</code></dt>
- <dd>coordenada do eixo x para o segundo ponto de controle.</dd>
- <dt><code>y2</code></dt>
- <dd>coordenada do eixo y para o segundo ponto de controle.</dd>
- <dt><code>radius</code></dt>
- <dd>O raio do arco.</dd>
-</dl>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Usando o método `arcTo`
 
-<h3 id="Using_the_arc_method" name="Using_the_arc_method">Usando o método <code>arcTo</code> </h3>
+Esse é um trecho simples de código que desenha um arco. O ponto de partida é azul e os pontos de controls são vermelhos.
 
-<p>Esse é um trecho simples de código que desenha um arco. O ponto de partida é azul e os pontos de controls são vermelhos.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -68,28 +65,29 @@ ctx.fillStyle = 'red';
 ctx.fillRect(150, 100, 10, 10);
 // control point two
 ctx.fillRect(50, 20, 10, 10);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}</p>
+{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}
 
-<h3 id="Trying_the_arcTo_parameters" name="Trying_the_arcTo_parameters">Treinando os parâmetros do  <code>arcTo</code> </h3>
+### Treinando os parâmetros do `arcTo`
 
-<p>Altere o código abaixo e veja suas alterações atualizadas na tela:</p>
+Altere o código abaixo e veja suas alterações atualizadas na tela:
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" class="playable-canvas" height="200" width="400"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" class="playable-canvas" height="200" width="400"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(150, 20);
 ctx.arcTo(150,100,50,100,20);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -112,34 +110,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}</p>
+{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}
 
-<h2 id="Espeficicações">Espeficicações</h2>
+## Espeficicações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto", "CanvasRenderingContext2D.arcTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto", "CanvasRenderingContext2D.arcTo")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.CanvasRenderingContext2D.arcTo")}}</p>
+{{Compat("api.CanvasRenderingContext2D.arcTo")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>The interface defining it, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining it, {{domxref("CanvasRenderingContext2D")}}

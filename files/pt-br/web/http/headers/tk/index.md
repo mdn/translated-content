@@ -10,91 +10,64 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/Tk
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta <strong><code>Tk</code></strong> indica o status de rastreamento que foi aplicado à requisição correspondente.</p>
+O cabeçalho de resposta **`Tk`** indica o status de rastreamento que foi aplicado à requisição correspondente.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">Tk: !  (em construção)
-Tk: ?  (dinâmico)
-Tk: G  (portão ou múltiplas partes)
-Tk: N  (não está rastreando)
-Tk: T  (rastreando)
-Tk: C  (rastreando com consentimento)
-Tk: P  (potencial consentimento)
-Tk: D  (desconsiderando DNT)
-Tk: U  (atualizado)
-</pre>
+    Tk: !  (em construção)
+    Tk: ?  (dinâmico)
+    Tk: G  (portão ou múltiplas partes)
+    Tk: N  (não está rastreando)
+    Tk: T  (rastreando)
+    Tk: C  (rastreando com consentimento)
+    Tk: P  (potencial consentimento)
+    Tk: D  (desconsiderando DNT)
+    Tk: U  (atualizado)
 
-<h3 id="Diretivas">Diretivas</h3>
+### Diretivas
 
-<dl>
- <dt>!</dt>
- <dd>Em construção. O servidor de origem está atualmente testando sua comunicação de status de rastreamento.</dd>
- <dt>?</dt>
- <dd>Dinâmico. O servidor de origem precisa de mais informação para determinar o status de rastreamento.</dd>
- <dt>G</dt>
- <dd>Portão ou múltiplas partes. O servidor está agindo como um portão para uma troca envolvendo várias múltiplas partes.</dd>
- <dt>N</dt>
- <dd>Não está rastreando.</dd>
- <dt>T</dt>
- <dd>Rastreando.</dd>
- <dt>C</dt>
- <dd>Rastreamento com consentimento. O servidor de origem acredita que ele recebeu consentimento a priori para rastrear o usuário, agente de usuário ou dispositivo.</dd>
- <dt>P</dt>
- <dd>Potencial consentimento. O servidor origem não conhece, em tempo real, se ele recebeu consentimento a priori para rastrear o usuário, o agente de usuário ou dispositivo, mas promete não usar ou compartilhar qualquer dado <code>DNT:1</code> até que o consentimento seja determinado, e promete futuramente deletar ou permanentemente sumir com a identidade em até 48 horas para qualquer dado <code>DNT:1</code> recebido para qual o consentimento não tenha sido recebido.</dd>
- <dt>D</dt>
- <dd>Desconsiderando DNT. O servidor de origem está incapacitado ou relutante em respeitar uma preferência de rastreamento recebida do agente de usuário requisitante.</dd>
- <dt>U</dt>
- <dd>Atualizado. A requisição resultou em uma potencial mudança no status de rastreamento aplicado ao usuário, agente de usuário ou dispositivo.</dd>
-</dl>
+- !
+  - : Em construção. O servidor de origem está atualmente testando sua comunicação de status de rastreamento.
+- ?
+  - : Dinâmico. O servidor de origem precisa de mais informação para determinar o status de rastreamento.
+- G
+  - : Portão ou múltiplas partes. O servidor está agindo como um portão para uma troca envolvendo várias múltiplas partes.
+- N
+  - : Não está rastreando.
+- T
+  - : Rastreando.
+- C
+  - : Rastreamento com consentimento. O servidor de origem acredita que ele recebeu consentimento a priori para rastrear o usuário, agente de usuário ou dispositivo.
+- P
+  - : Potencial consentimento. O servidor origem não conhece, em tempo real, se ele recebeu consentimento a priori para rastrear o usuário, o agente de usuário ou dispositivo, mas promete não usar ou compartilhar qualquer dado `DNT:1` até que o consentimento seja determinado, e promete futuramente deletar ou permanentemente sumir com a identidade em até 48 horas para qualquer dado `DNT:1` recebido para qual o consentimento não tenha sido recebido.
+- D
+  - : Desconsiderando DNT. O servidor de origem está incapacitado ou relutante em respeitar uma preferência de rastreamento recebida do agente de usuário requisitante.
+- U
+  - : Atualizado. A requisição resultou em uma potencial mudança no status de rastreamento aplicado ao usuário, agente de usuário ou dispositivo.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O cabeçalho <code>Tk</code> para um recurso que diz não querer ser rastreado se parece com isso:</p>
+O cabeçalho `Tk` para um recurso que diz não querer ser rastreado se parece com isso:
 
-<pre class="notranslate">Tk: N</pre>
+    Tk: N
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Tracking','#Tk-header-defn', 'Tk header field')}}</td>
-   <td>{{Spec2("Tracking")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                       | Comentário         |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('Tracking','#Tk-header-defn', 'Tk header field')}} | {{Spec2("Tracking")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.Tk")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.Tk")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Cabeçalho {{HTTPHeader("DNT")}}</li>
- <li>{{domxref("Navigator.doNotTrack")}}</li>
-</ul>
+- Cabeçalho {{HTTPHeader("DNT")}}
+- {{domxref("Navigator.doNotTrack")}}

@@ -3,42 +3,37 @@ title: Document.height
 slug: Web/API/Document/height
 translation_of: Web/API/Document/height
 ---
-<div>{{APIRef("DOM")}} {{Obsolete_header}}</div>
+{{APIRef("DOM")}} {{Obsolete_header}}
 
-<div class="note">
-<p><strong>Nota:</strong> A partir do {{Gecko("6.0")}},<code> document.height </code> não é mais suportado. Em seu lugar use <code>document.body.clientHeight</code>. Veja {{domxref("element.clientHeight")}}.</p>
-</div>
+> **Note:** **Nota:** A partir do {{Gecko("6.0")}},` document.height `não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>Retorna a altura do objeto {{domxref("document")}}. Em muitos casos, isto é igual à do elemento {{HTMLElement("body")}} do documento atual.</p>
+Retorna a altura do objeto {{domxref("document")}}. Em muitos casos, isto é igual à do elemento {{HTMLElement("body")}} do documento atual.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>height_value</em> = document.height
-</pre>
+    height_value = document.height
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">// alert document height
+```js
+// alert document height
 alert(document.height);
-</pre>
+```
 
-<h2 id="Alternativas">Alternativas</h2>
+## Alternativas
 
-<pre class="syntaxbox">document.body.clientHeight
-document.documentElement.clientHeight
-document.documentElement.scrollHeight
-</pre>
+    document.body.clientHeight
+    document.documentElement.clientHeight
+    document.documentElement.scrollHeight
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("document.width")}}</li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
-</ul>
+- {{domxref("document.width")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollHeight")}}

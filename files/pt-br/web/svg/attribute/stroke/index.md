@@ -6,88 +6,55 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/stroke
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O atributo <code><strong>stroke</strong></code> é um atributo de apresentação que define a cor <em>(ou qualquer SVG</em> <em>paint servers, como gradientes ou </em> <em>patterns</em><em>)</em> usado para pintar o contorno da forma;</p>
+O atributo **`stroke`** é um atributo de apresentação que define a cor _(ou qualquer SVG_ _paint servers, como gradientes ou_ _patterns\_\_)_ usado para pintar o contorno da forma;
 
-<p class="note"><strong>Note:</strong> As a presentation attribute <code>stroke</code> can be used as a CSS property.</p>
+> **Note:** As a presentation attribute `stroke` can be used as a CSS property.
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following twelve elements: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+As a presentation attribute, it can be applied to any element but it has effect only on the following twelve elements: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Simple color stroke --&gt;
-  &lt;circle cx="5" cy="5" r="4" fill="none"
-          stroke="green" /&gt;
+```html
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple color stroke -->
+  <circle cx="5" cy="5" r="4" fill="none"
+          stroke="green" />
 
-  &lt;!-- Stroke a circle with a gradient --&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="myGradient"&gt;
-      &lt;stop offset="0%"   stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <!-- Stroke a circle with a gradient -->
+  <defs>
+    <linearGradient id="myGradient">
+      <stop offset="0%"   stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
 
-  &lt;circle cx="15" cy="5" r="4" fill="none"
-          stroke="url(#myGradient)" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="15" cy="5" r="4" fill="none"
+          stroke="url(#myGradient)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | **[<paint>](/docs/Web/SVG/Content_type#Paint)** |
+| ------------- | ----------------------------------------------- |
+| Default value | `none`                                          |
+| Animatable    | Yes                                             |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeProperty", "stroke")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts.<br>
-    Adds <code style="white-space: nowrap;">context-fill</code> and <code style="white-space: nowrap;">context-stroke</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeProperty", "stroke")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                   | Comment                                                                    |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "painting.html#StrokeProperty", "stroke")}} | {{Spec2("SVG2")}} | Definition for shapes and texts. Adds `context-fill` and `context-stroke`. |
+| {{SpecName("SVG1.1", "painting.html#StrokeProperty", "stroke")}} | {{Spec2("SVG1.1")}} | Initial definition for shapes and texts                                    |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("svg.attributes.presentation.stroke")}}
 
-
-<p>{{Compat("svg.attributes.presentation.stroke")}}</p>
-
-<p class="note"><strong>Note:</strong> For information on using the <code style="white-space: nowrap;">context-stroke</code> (and <code style="white-space: nowrap;">context-fill</code>) values from HTML documents, see the documentation for the non-standard <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> property.</p>
+> **Note:** For information on using the `context-stroke` (and `context-fill`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

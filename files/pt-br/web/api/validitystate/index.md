@@ -10,74 +10,51 @@ tags:
   - Validation
 translation_of: Web/API/ValidityState
 ---
-<div>{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}</div>
+{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}
 
-<p>A interface <strong><code>ValidityState</code></strong> representa os estados de validação que um elemento<em> </em><br>
- pode conter de acordo com as propriedades de validação abaixo. Juntas, elas podem explicar porque um elemento é inválido (caso seja) ao ser validado.</p>
+A interface **`ValidityState`** representa os estados de validação que um elemento\_\_
+pode conter de acordo com as propriedades de validação abaixo. Juntas, elas podem explicar porque um elemento é inválido (caso seja) ao ser validado.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p>Para cada uma das propriedades Booleanas abaixo, caso retorne <code><strong>true</strong></code>, isso indica a razão específica porque a validação falhou, exceto no caso da propriedade <em>valid</em>, que retorna <strong><code>true</code></strong> no caso do elemento ser completamente válido e <strong><code>false</code></strong> caso contrário.</p>
+Para cada uma das propriedades Booleanas abaixo, caso retorne **`true`**, isso indica a razão específica porque a validação falhou, exceto no caso da propriedade _valid_, que retorna **`true`** no caso do elemento ser completamente válido e **`false`** caso contrário.
 
-<dl>
- <dt>{{domxref("ValidityState.badInput")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o usuário inseriu um valor que o navegador é incapaz de converter.</dd>
- <dt>{{domxref("ValidityState.customError")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o elemento possui uma mensagem de validação definida por <code>setCustomValidity()</code> para um valor não vázio.</dd>
- <dt>{{domxref("ValidityState.patternMismatch")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor não combina com o padrão ({{htmlattrxref("pattern", "input")}}) especificado.</dd>
- <dt>{{domxref("ValidityState.rangeOverflow")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor é maior do que o máximo especificado pelo atributo {{htmlattrxref("max", "input")}}.</dd>
- <dt>{{domxref("ValidityState.rangeUnderflow")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor é menor do que o mínimo especificado pelo atributo {{htmlattrxref("min", "input")}}.</dd>
- <dt>{{domxref("ValidityState.stepMismatch")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor não segue a regra definida pelo atributo {{htmlattrxref("step", "input")}}.</dd>
- <dt>{{domxref("ValidityState.tooLong")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor ultrapassa o especificado pelo atributo <code>maxlength</code> para {{domxref("HTMLInputElement")}} ou {{domxref("HTMLTextAreaElement")}}. <em><strong>OBS:</strong> Isso nunca será <code>true</code> em navegadores como o Firefox, pois a inserção de valores não é permitida ao alcançar o valor definido em <code>maxlength</code>.</em></dd>
- <dt>{{domxref("ValidityState.tooShort")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor não corresponde ao especificado no atributo <code>minlength</code> para {{domxref("HTMLInputElement")}} ou {{domxref("HTMLTextAreaElement")}}.</dd>
- <dt>{{domxref("ValidityState.typeMismatch")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o valor não corresponde ao tipo de entrada definida. (Um exemplo é quando {{htmlattrxref("type", "input")}} é <code>email</code> ou <code>url</code>).</dd>
- <dt>{{domxref("ValidityState.valid")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando se o elemento é completamente válido.</dd>
- <dt>{{domxref("ValidityState.valueMissing")}} {{ReadOnlyInline}}</dt>
- <dd>É um {{jsxref("Boolean")}} informando que o elemento tem o atributo {{htmlattrxref("required", "input")}}, mas não tem {{htmlattrxref("value", "input")}}.</dd>
-</dl>
+- {{domxref("ValidityState.badInput")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o usuário inseriu um valor que o navegador é incapaz de converter.
+- {{domxref("ValidityState.customError")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o elemento possui uma mensagem de validação definida por `setCustomValidity()` para um valor não vázio.
+- {{domxref("ValidityState.patternMismatch")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor não combina com o padrão ({{htmlattrxref("pattern", "input")}}) especificado.
+- {{domxref("ValidityState.rangeOverflow")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor é maior do que o máximo especificado pelo atributo {{htmlattrxref("max", "input")}}.
+- {{domxref("ValidityState.rangeUnderflow")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor é menor do que o mínimo especificado pelo atributo {{htmlattrxref("min", "input")}}.
+- {{domxref("ValidityState.stepMismatch")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor não segue a regra definida pelo atributo {{htmlattrxref("step", "input")}}.
+- {{domxref("ValidityState.tooLong")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor ultrapassa o especificado pelo atributo `maxlength` para {{domxref("HTMLInputElement")}} ou {{domxref("HTMLTextAreaElement")}}. _**OBS:** Isso nunca será `true` em navegadores como o Firefox, pois a inserção de valores não é permitida ao alcançar o valor definido em `maxlength`._
+- {{domxref("ValidityState.tooShort")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor não corresponde ao especificado no atributo `minlength` para {{domxref("HTMLInputElement")}} ou {{domxref("HTMLTextAreaElement")}}.
+- {{domxref("ValidityState.typeMismatch")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o valor não corresponde ao tipo de entrada definida. (Um exemplo é quando {{htmlattrxref("type", "input")}} é `email` ou `url`).
+- {{domxref("ValidityState.valid")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando se o elemento é completamente válido.
+- {{domxref("ValidityState.valueMissing")}} {{ReadOnlyInline}}
+  - : É um {{jsxref("Boolean")}} informando que o elemento tem o atributo {{htmlattrxref("required", "input")}}, mas não tem {{htmlattrxref("value", "input")}}.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Live Standard</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', '#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No change from the previous snapshot {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>First snapshot of  {{SpecName('HTML WHATWG')}} containing this interface.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                           | Comentário                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'ValidityState') }} | {{Spec2('HTML WHATWG')}} | Live Standard                                                                     |
+| {{ SpecName('HTML5.1', '#the-constraint-validation-api', 'ValidityState') }}                     | {{Spec2('HTML5.1')}}     | No change from the previous snapshot {{SpecName('HTML5 W3C')}}.            |
+| {{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'ValidityState') }}     | {{Spec2('HTML5 W3C')}}     | First snapshot of {{SpecName('HTML WHATWG')}} containing this interface. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.ValidityState")}}</p>
+{{Compat("api.ValidityState")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">Forms: Data form validation</a></li>
-</ul>
+- [Constraint validation](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/pt-BR/docs/Web/Guide/HTML/Forms/Data_form_validation)

@@ -7,22 +7,18 @@ tags:
 translation_of: Glossary/URL
 original_slug: Glossario/URL
 ---
-<p><em>Uniform Resource Locator</em> (<strong>URL</strong>) é uma sequência de texto que especifica onde um recurso pode ser encontrado na Internet.</p>
+_Uniform Resource Locator_ (**URL**) é uma sequência de texto que especifica onde um recurso pode ser encontrado na Internet.
 
-<p>No contexto de {{Glossary("HTTP")}}, URLs são chamadas de "Endereços web" ou "link". Seu navegador exibe as URLs na barra de endereços, por exemplo <code>https://developer.mozilla.org</code></p>
+No contexto de {{Glossary("HTTP")}}, URLs são chamadas de "Endereços web" ou "link". Seu navegador exibe as URLs na barra de endereços, por exemplo `https://developer.mozilla.org`
 
-<p>URLs também podem ser usadas para transferir arquivos por ({{Glossary("FTP")}}) , emails ({{Glossary("SMTP")}}), e outras aplicações.</p>
+URLs também podem ser usadas para transferir arquivos por ({{Glossary("FTP")}}) , emails ({{Glossary("SMTP")}}), e outras aplicações.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_Geral"><strong>Conhecimento Geral</strong></h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "URL")}} na Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "URL")}} na Wikipedia
 
-<h3 id="Saiba_mais">Saiba mais</h3>
+### Saiba mais
 
-<ul>
- <li><a href="/en-US/Learn/Understanding_URLs">Entendendo URLs e sua estrutura</a></li>
-</ul>
+- [Entendendo URLs e sua estrutura](/en-US/Learn/Understanding_URLs)

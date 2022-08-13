@@ -8,40 +8,42 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p>A propriedade <code>new.target</code> permite que você detecte quando uma função ou construtor foi chamado utilizando o operador new. Em construtores e funções instaciadas com o  operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> , <code>new.target</code> retorna a referência ao  construtor ou função. Em chamadas normais de funções , <code>new.target</code> é {{jsxref("undefined")}}.</p>
+A propriedade `new.target` permite que você detecte quando uma função ou construtor foi chamado utilizando o operador new. Em construtores e funções instaciadas com o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) , `new.target` retorna a referência ao construtor ou função. Em chamadas normais de funções , `new.target` é {{jsxref("undefined")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">new.target</pre>
+    new.target
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A sintaxe <code>new.target</code> consiste na palavra- chave <code>"new</code>", o ponto, e o nome da propriedade <code>"target"</code>. Normalmente "<code>new."</code> serve como um contexto para a propriedade de acesso, mas aqui  <code>"new."</code> não é exatamente um objeto. Em chamadas de construtores, entretanto, <code>new.target</code> se refere ao construtor invocado pelo <code>new</code> e então "<code>new.</code>" se torna um contexto virtual.</p>
+A sintaxe `new.target` consiste na palavra- chave `"new`", o ponto, e o nome da propriedade `"target"`. Normalmente "`new."` serve como um contexto para a propriedade de acesso, mas aqui `"new."` não é exatamente um objeto. Em chamadas de construtores, entretanto, `new.target` se refere ao construtor invocado pelo `new` e então "`new.`" se torna um contexto virtual.
 
-<p><code>new.target</code>  é uma propriedade meta que é disponibilizada para todas as funções. Em funções do tipo flecha <code>=&gt;</code>, <code>new.target</code> se refere ao <code>new.target</code> em torno da função.</p>
+`new.target` é uma propriedade meta que é disponibilizada para todas as funções. Em funções do tipo flecha `=>`, `new.target` se refere ao `new.target` em torno da função.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="new.target_em_chamadas_de_Função">new.target em chamadas de Função</h3>
+### new\.target em chamadas de Função
 
-<p>Em chamadas normais de função  (diferente de chamadas a funções do tipo construtor), <code>new.target</code> é {{jsxref("undefined")}}. Isso permite que você detecte se a função foi chamada como um novo construtor.</p>
+Em chamadas normais de função (diferente de chamadas a funções do tipo construtor), `new.target` é {{jsxref("undefined")}}. Isso permite que você detecte se a função foi chamada como um novo construtor.
 
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   if (!new.target) throw 'Foo() must be called with new';
   console.log('Foo instanciado com new');
 }
 
 Foo(); // throws "Foo() must be called with new"
 new Foo(); // logs "Foo instanciado com new"
-</pre>
+```
 
-<h3 id="new.target_em_Construtores">new.target em Construtores</h3>
+### new\.target em Construtores
 
-<p>Em classes construtoras, <code>new.target</code> se refere ao construtor que foi diretamente invocado pelo <code>new</code>. Isto também é o caso se o construtor é uma classe pai e foi delegado pelo construtor de um filho.</p>
+Em classes construtoras, `new.target` se refere ao construtor que foi diretamente invocado pelo `new`. Isto também é o caso se o construtor é uma classe pai e foi delegado pelo construtor de um filho.
 
-<pre class="brush: js">class A {
+```js
+class A {
   constructor() {
     console.log(new.target.name);
   }
@@ -56,41 +58,25 @@ class C { constructor() { console.log(new.target); } }
 class D extends C { constructor() { super(); } }
 
 var c = new C(); // logs class C{constructor(){console.log(new.target);}}
-var d = new D(); // logs class D extends C{constructor(){super();}}</pre>
+var d = new D(); // logs class D extends C{constructor(){super();}}
+```
 
-<p class="summary">A partir do exemplo acima das classes C e D, mostra que new.target aponta para a definição da classe na qual foi inicializada. Exemplo, quando D foi inicializado utilizando new, a definição da classe D foi impressa e similiarmente ao caso de C, a classe C foi impressa.</p>
+A partir do exemplo acima das classes C e D, mostra que new\.target aponta para a definição da classe na qual foi inicializada. Exemplo, quando D foi inicializado utilizando new, a definição da classe D foi impressa e similiarmente ao caso de C, a classe C foi impressa.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment            |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.operators.new_target")}}</p>
+{{Compat("javascript.operators.new_target")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">funções</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></li>
-</ul>
+- [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
+- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)

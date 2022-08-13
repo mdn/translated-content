@@ -8,45 +8,30 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>O cabeçalho <code><strong>Accept-CH-Lifetime</strong></code> é colocado pelo servidor para especificar a persistência do valor do cabeçalho {{HTTPHeader("Accept-CH")}}, que especifica para quais cabeçalhos <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> o cliente deve incluir nas suas requisições subsequentes.</p>
+O cabeçalho **`Accept-CH-Lifetime`** é colocado pelo servidor para especificar a persistência do valor do cabeçalho {{HTTPHeader("Accept-CH")}}, que especifica para quais cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) o cliente deve incluir nas suas requisições subsequentes.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | ?                                        |
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.</p>
-</div>
+> **Note:** **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Accept-CH-Lifetime: &lt;age&gt;
-</pre>
+    Accept-CH-Lifetime: <age>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre>Accept-CH: Viewport-Width, DPR
-Accept-CH-Lifetime: 86400
-</pre>
+    Accept-CH: Viewport-Width, DPR
+    Accept-CH-Lifetime: 86400
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Accept-CH-Lifetime")}}</p>
+{{Compat("http.headers.Accept-CH-Lifetime")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Accept-CH")}}
+- {{HTTPHeader("Vary")}}

@@ -3,39 +3,35 @@ title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
 translation_of: Web/API/Window/scrollByPages
 ---
-<p>{{ ApiRef() }}{{Non-standard_header}}</p>
+{{ ApiRef() }}{{Non-standard_header}}
 
-<h3 id="Summary" name="Summary">Resumo</h3>
+### Resumo
 
-<p>Rola o documento atual para a página especificada.</p>
+Rola o documento atual para a página especificada.
 
-<h3 id="Syntax" name="Syntax">Sintaxe</h3>
+### Sintaxe
 
-<pre class="eval">window.scrollByPages(<em>pages</em>)
-</pre>
+    window.scrollByPages(pages)
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><strong><code>pages</code> </strong>é o número de páginas a serem roladas.</li>
- <li><strong><code>pages</code></strong> pode ser um número inteiro positivo ou negativo.</li>
-</ul>
+- **`pages` **é o número de páginas a serem roladas.
+- **`pages`** pode ser um número inteiro positivo ou negativo.
 
-<h3 id="Example" name="Example">Exemplo</h3>
+### Exemplo
 
-<pre>// rola o documento para baixo até a página 1
-window.scrollByPages(1);
+    // rola o documento para baixo até a página 1
+    window.scrollByPages(1);
 
-// rola o documento para cima até a página 1
-window.scrollByPages(-1);
-</pre>
+    // rola o documento para cima até a página 1
+    window.scrollByPages(-1);
 
-<h3 id="Notes" name="Notes">Notas</h3>
+### Notas
 
-<p>Veja também <a href="/en/DOM/window.scrollBy" title="en/DOM/window.scrollBy">window.scrollBy</a>, <a href="/en/DOM/window.scrollByLines" title="en/DOM/window.scrollByLines">window.scrollByLines</a>, <a href="/en/DOM/window.scroll" title="en/DOM/window.scroll">window.scroll</a>, <a href="/en/DOM/window.scrollTo" title="en/DOM/window.scrollTo">window.scrollTo</a>.</p>
+Veja também [window.scrollBy](/en/DOM/window.scrollBy "en/DOM/window.scrollBy"), [window.scrollByLines](/en/DOM/window.scrollByLines "en/DOM/window.scrollByLines"), [window.scroll](/en/DOM/window.scroll "en/DOM/window.scroll"), [window.scrollTo](/en/DOM/window.scrollTo "en/DOM/window.scrollTo").
 
-<h3 id="Specification" name="Specification">Specification</h3>
+### Specification
 
-<p>DOM Level 0. Not part of specification.</p>
+DOM Level 0. Not part of specification.
 
-<p>{{ languages( { "ja": "ja/DOM/window.scrollByPages", "pl": "pl/DOM/window.scrollByPages", "zh-cn": "zh-cn/DOM/window.scrollByPages" } ) }}</p>
+{{ languages( { "ja": "ja/DOM/window\.scrollByPages", "pl": "pl/DOM/window\.scrollByPages", "zh-cn": "zh-cn/DOM/window\.scrollByPages" } ) }}

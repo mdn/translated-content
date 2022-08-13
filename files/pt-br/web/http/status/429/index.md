@@ -10,39 +10,28 @@ tags:
   - Status HTTP
 translation_of: Web/HTTP/Status/429
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta HTTP <code><strong>429 Too Many Requests</strong></code> indica que o usuário enviou muitos pedidos em um determinado período de tempo.</p>
+O código de resposta HTTP **`429 Too Many Requests`** indica que o usuário enviou muitos pedidos em um determinado período de tempo.
 
-<p>Um header {{HTTPHeader("Retry-After")}} pode ser incluído na resposta indicando quanto tempo o usuário deve esperar antes de fazer um novo pedido.</p>
+Um header {{HTTPHeader("Retry-After")}} pode ser incluído na resposta indicando quanto tempo o usuário deve esperar antes de fazer um novo pedido.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">429 Too Many Requests</pre>
+    429 Too Many Requests
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre>HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600</pre>
+    HTTP/1.1 429 Too Many Requests
+    Content-Type: text/html
+    Retry-After: 3600
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "429 Too Many Requests" , "4")}}</td>
-   <td>Status HTTP adicionais</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                               | Título                 |
+| ------------------------------------------------------------ | ---------------------- |
+| {{RFC("6585", "429 Too Many Requests" , "4")}} | Status HTTP adicionais |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Retry-After")}}</li>
-</ul>
+- {{HTTPHeader("Retry-After")}}

@@ -12,163 +12,106 @@ tags:
   - replaceAll()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>replaceAll()</code> retorna uma nova string com todas as ocorrências de um padrão substituídas por uma substituição. O padrão pode ser uma string ou uma {{jsxref ("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada ocorrência.<br>
- <br>
- A <em>string</em> original é mantida sem modificação.</p>
+O método `replaceAll()` retorna uma nova string com todas as ocorrências de um padrão substituídas por uma substituição. O padrão pode ser uma string ou uma {{jsxref ("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada ocorrência.
 
-<div>{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}</div>
+A _string_ original é mantida sem modificação.
 
+{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
 
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
-<pre class="syntaxbox notranslate">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
-</pre>
+> **Note:** **Nota**: quando usar uma \`_regexp_\`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: quando usar uma `<var>regexp</var>`, você deve colocar o sinalizador (flag) global "<code>g</code>". Do contrário, será retornado um <code>TypeError</code>: "<em>replaceAll must be called with a global RegExp</em>".</p>
-</div>
+### Parâmetros
 
-<h3 id="Parâmetros">Parâmetros</h3>
+- `regexp` (padrão)
+  - : Uma {{jsxref ("RegExp")}} ou literal com o sinalizador (flag) global. As ocorrências serão substituídas por _`newSubstr`_ ou pelo valor retornado da _`function`_ (função) especificada.
+- `substr`\_ \_(padrão)
+  - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
+- `newSubstr` (substituição)
+  - : É a {{jsxref("String")}} que substitui a `substring` especificada pelo parâmetro `regexp` ou `substr`. Um número de padrões especiais para substituição são suportados; veja a seção "Especificando uma string como parâmetro" abaixo.
+- `function` (substituição)
+  - : Uma função a ser chamada retornando a nova `substring` a ser usada para substituir as correspondências para a dada `regexp` ou `substr`. Os argumentos passados para esta função são descritos na seção "[Especificando uma função como parâmetro](<#Especificando uma função como parâmetro>)" abaixo.
 
-<dl>
- <dt><code><var>regexp</var></code> (padrão)</dt>
- <dd>Uma {{jsxref ("RegExp")}} ou literal com o sinalizador (flag) global. As ocorrências serão substituídas por <em><code>newSubstr</code></em> ou pelo valor retornado da <em><code>function</code></em> (função) especificada.</dd>
- <dt><code><var>substr</var></code><var> </var>(padrão)</dt>
- <dd>Uma {{jsxref ("String")}} que deve ser substituída por <code>newSubstr</code>. É tratada como uma string literal e não é interpretada como uma expressão regular (<em><code>RegExp</code></em>).</dd>
- <dt><code><var>newSubstr</var></code> (substituição)</dt>
- <dd>É a {{jsxref("String")}} que substitui a <code><em>substring</em></code> especificada pelo parâmetro <code><var>regexp</var></code> ou <code><var>substr</var></code>. Um número de padrões especiais para substituição são suportados; veja a seção "<a href="#">Especificando uma string como parâmetro</a>" abaixo.</dd>
- <dt><code><var>function</var></code> (substituição)</dt>
- <dd>Uma função a ser chamada retornando a nova <code><em>substring</em></code> a ser usada para substituir as correspondências para a dada <code><var>regexp</var></code> ou <code><var>substr</var></code>. Os argumentos passados para esta função são descritos na seção "<a href="#Especificando uma função como parâmetro">Especificando uma função como parâmetro</a>" abaixo.</dd>
-</dl>
+### Valor de retorno
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+Um nova _string_, com todas as ocorrências de um padrão substituído por uma substituição.
 
-<p>Um nova <em>string</em>, com todas as ocorrências de um padrão substituído por uma substituição.</p>
+## Descrição
 
-<h2 id="Descrição">Descrição</h2>
+Este método não muda o objeto {{jsxref("String")}} original. Ele simplesmente retorna uma nova _string_.
 
-<p>Este método não muda o objeto {{jsxref("String")}} original. Ele simplesmente retorna uma nova <em>string</em>.</p>
+### Especificando uma string como parâmetro
 
-<h3 id="Especificando_uma_string_como_parâmetro"><a id="Especificando uma string como parâmetro" name="Especificando uma string como parâmetro">Especificando uma string como parâmetro</a></h3>
+A _string_ de substituição pode incluir os seguimentos padrões especiais de substituição:
 
-<p>A <em>string</em> de substituição pode incluir os seguimentos padrões especiais de substituição:</p>
+| Padrão   | Insere                                                                                                                                                                                                                          |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`     | Insere um `"$"`.                                                                                                                                                                                                                |
+| `$&`     | Insere a _substring_ correspondente.                                                                                                                                                                                            |
+| `` $` `` | Insere a porção da _string_ que precede a _substring_ correspondente.                                                                                                                                                           |
+| `$'`     | Insere a porção da _string_ que sucede a _substring_ correspondente.                                                                                                                                                            |
+| `$n`     | Onde `n` é um inteiro positivo menor que 100, insere a _`n`_-ésima _string_ submatch entre parênteses, desde que o primeiro argumento seja um objeto {{jsxref("RegExp")}}. Note que isso é indexado começando pelo `1`. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">Padrão</th>
-   <th class="header" scope="col">Insere</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>$$</code></td>
-   <td>Insere um <code>"$"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>$&amp;</code></td>
-   <td>Insere a <em>substring</em> correspondente.</td>
-  </tr>
-  <tr>
-   <td><code>$`</code></td>
-   <td>Insere a porção da <em>string</em> que precede a <em>substring</em> correspondente.</td>
-  </tr>
-  <tr>
-   <td><code>$'</code></td>
-   <td>Insere a porção da <em>string</em> que sucede a <em>substring</em> correspondente.</td>
-  </tr>
-  <tr>
-   <td><code>$<var>n</var></code></td>
-   <td>Onde <code><var>n</var></code> é um inteiro positivo menor que 100, insere a <var><code>n</code></var>-ésima <em>string</em> submatch entre parênteses, desde que o primeiro argumento seja um objeto {{jsxref("RegExp")}}. Note que isso é indexado começando pelo <code>1</code>.</td>
-  </tr>
- </tbody>
-</table>
+### Especificando uma função como parâmetro
 
-<h3 id="Especificando_uma_função_como_parâmetro"><a id="Especificando uma função como parâmetro" name="Especificando uma função como parâmetro">Especificando uma função como parâmetro</a></h3>
+Você pode especificar uma função como segundo parâmetro. Neste caso, a função será chamada depois da ocorrência ter sido encontrada. O resultado da função (valor de retorno) será usado como uma _string_ para substituição. (**Nota:** Os padrões especiais mencionados acima **não se aplicam** neste caso.)
 
-<p>Você pode especificar uma função como segundo parâmetro. Neste caso, a função será chamada depois da ocorrência ter sido encontrada. O resultado da função (valor de retorno) será usado como uma <em>string</em> para substituição. (<strong>Nota:</strong> Os padrões especiais mencionados acima <strong>não se aplicam </strong>neste caso.)</p>
+Note que a função será chamada múltiplas vezes para cada ocorrência a ser substituída se a expressão regular no primeiro parâmetro for global "`g`".
 
-<p>Note que a função será chamada múltiplas vezes para cada ocorrência a ser substituída se a expressão regular no primeiro parâmetro for global "<code>g</code>".</p>
+Os argumentos para funções são os seguintes:
 
-<p>Os argumentos para funções são os seguintes:</p>
+| Nome possível | Valor fornecido                                                                                                                                                                                                                                                                                          |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | A _substring_ correspondida. (Corresponde ao `$&` acima.)                                                                                                                                                                                                                                                |
+| `p1, p2, ...` | A _n_-ésima string encontrada por um grupo de captura entre parênteses, desde que o primeiro argumento para `replace()` seja uma {{jsxref("RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, foi dado, `p1` é a correspondência para `\a+`, e `p2` para `\b+`. |
+| `offset`      | O deslocamento da substring correspondente em toda a string sendo examinada. (Por exemplo, se toda a string for '`abcd`' e a substring correspondente for '`bc`', este argumento será `1`.)                                                                                                              |
+| `string`      | A _string_ inteira será examinada.                                                                                                                                                                                                                                                                       |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">Nome possível</th>
-   <th class="header" scope="col">Valor fornecido</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>match</code></td>
-   <td>A <em>substring</em> correspondida. (Corresponde ao <code>$&amp;</code> acima.)</td>
-  </tr>
-  <tr>
-   <td><code>p1, p2, ...</code></td>
-   <td>A <var>n</var>-ésima string encontrada por um grupo de captura entre parênteses, desde que o primeiro argumento para <code>replace()</code> seja uma {{jsxref("RegExp")}}. (Corresponde a <code>$1</code>, <code>$2</code>, etc. acima.) Por exemplo, se <code>/(\a+)(\b+)/</code>, foi dado, <code>p1</code> é a correspondência para <code>\a+</code>, e <code>p2</code> para <code>\b+</code>.</td>
-  </tr>
-  <tr>
-   <td><code>offset</code></td>
-   <td>O deslocamento da substring correspondente em toda a string sendo examinada. (Por exemplo, se toda a string for '<code>abcd</code>' e a substring correspondente for '<code>bc</code>', este argumento será <code>1</code>.)</td>
-  </tr>
-  <tr>
-   <td><code>string</code></td>
-   <td>A <em>string</em> inteira será examinada.</td>
-  </tr>
- </tbody>
-</table>
+(O número exato de argumentos depende se o primeiro argumento é um objeto {{jsxref("RegExp")}} — e, se então, quantas _subcorrespondências_ entre parênteses são especificadas.)
 
-<p>(O número exato de argumentos depende se o primeiro argumento é um objeto {{jsxref("RegExp")}} — e, se então, quantas <em>subcorrespondências </em>entre parênteses são especificadas.)</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Usando `replaceAll()`
 
-<h3 id="Usando_replaceAll">Usando <code>replaceAll()</code></h3>
+```js
+'aabbcc'.replaceAll('b', '.');
+// 'aa..cc'
+```
 
-<pre class="brush: js notranslate">'aabbcc'.replaceAll('b', '.');
-// 'aa..cc'</pre>
+### RegExp sem flag "g" retorando erro
 
-<h3 id="RegExp_sem_flag_g_retorando_erro">RegExp sem flag "g" retorando erro</h3>
+Ao usar uma expressão regular para realizar uma pesquisa, a mesma deve conter a flag global "`g`". O código abaixo não irá funcionar:
 
-<p>Ao usar uma expressão regular para realizar uma pesquisa, a mesma deve conter a flag global "<code>g</code>". O código abaixo não irá funcionar:</p>
-
-<pre class="brush: js; example-bad notranslate">'aabbcc'.replaceAll(/b/, '.');
+```js example-bad
+'aabbcc'.replaceAll(/b/, '.');
 TypeError: replaceAll must be called with a global RegExp
-</pre>
+```
 
-<p>Já o código abaixo vai funcionar:</p>
+Já o código abaixo vai funcionar:
 
-<pre class="brush: js; example-good notranslate">'aabbcc'.replaceAll(/b/g, '.');
+```js example-good
+'aabbcc'.replaceAll(/b/g, '.');
 "aa..cc"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.replaceAll")}}</p>
+{{Compat("javascript.builtins.String.replaceAll")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.replace", "String.prototype.replace()")}}</li>
- <li>{{jsxref("String.prototype.match", "String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
+- {{jsxref("String.prototype.match", "String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}

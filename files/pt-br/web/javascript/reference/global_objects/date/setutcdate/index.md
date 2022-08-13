@@ -12,61 +12,49 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>setUTCDate()</code></strong> atribui o dia do mês para uma data especifica de acordo com o horário universal.</p>
+O método **`setUTCDate()`** atribui o dia do mês para uma data especifica de acordo com o horário universal.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
 
+## Sintaxe
 
+    dateObj.setUTCDate(dayValue)
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setUTCDate(<var>dayValue</var>)</code></pre>
+- `dayValue`
+  - : Um inteiro entre 1 e 31, representando o dia do mês.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>dayValue</code></dt>
- <dd>Um inteiro entre 1 e 31, representando o dia do mês.</dd>
-</dl>
+O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.</p>
+Se um parâmetro que você especificou está fora do alcance esperado, `setUTCDate()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 40 para `dayValue`, e o mês guardado no objeto {{jsxref("Date")}} é Junho, o dia será trocado para 10 e o mês será incrementado para Julho.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Se um parâmetro que você especificou está fora do alcance esperado, <code>setUTCDate()</code> tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 40 para <code>dayValue</code>, e o mês guardado no objeto {{jsxref("Date")}} é Junho, o dia será trocado para 10 e o mês será incrementado para Julho.</p>
+### Usando `setUTCDate()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setUTCDate">Usando <code>setUTCDate()</code></h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCDate(20);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setUTCDate")}}</p>
+{{Compat("javascript.builtins.Date.setUTCDate")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.setDate()")}}

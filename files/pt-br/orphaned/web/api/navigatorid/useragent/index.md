@@ -10,81 +10,56 @@ tags:
 translation_of: Web/API/NavigatorID/userAgent
 original_slug: Web/API/NavigatorID/userAgent
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade read-only (apenas leitura) <code><strong>NavigatorID.userAgent</strong></code> retorna a string do agente do usuário (user agent) para o browser atual.</p>
+A propriedade read-only (apenas leitura) **`NavigatorID.userAgent`** retorna a string do agente do usuário (user agent) para o browser atual.
 
-<div class="note">
-<p> A especifícação demanda que os navegadores forneçam, nessa propriedade, a menor quantidade de informações posssível. Nunca assuma que o valor dessa propriedade permanecerá o mesmo em verções futuras de um mesmo navegador. Tente não utiliza-la, ou ultileze-a somente para verções presentes ou passadas de um navegador. Novos navegadores podem utilizar-se do mesmo agente do usuário, ou parte dele, que navegadores mais aintigos: não existe qualquer garantia de que o agente do navegador é de fato o enunciado por essa propriedade.<br>
- <br>
- Além disso, tenha em mente que os usuários do navegador podem manipular o valor dessa propriedade caso queiram (UA spoofing).</p>
-</div>
+> **Note:** A especifícação demanda que os navegadores forneçam, nessa propriedade, a menor quantidade de informações posssível. Nunca assuma que o valor dessa propriedade permanecerá o mesmo em verções futuras de um mesmo navegador. Tente não utiliza-la, ou ultileze-a somente para verções presentes ou passadas de um navegador. Novos navegadores podem utilizar-se do mesmo agente do usuário, ou parte dele, que navegadores mais aintigos: não existe qualquer garantia de que o agente do navegador é de fato o enunciado por essa propriedade.
+>
+> Além disso, tenha em mente que os usuários do navegador podem manipular o valor dessa propriedade caso queiram (UA spoofing).
 
-<p>A idenficação de browsers baseada na detecção de sua string de agente de usuário <strong>não é confiável</strong> e <strong>não é recomendável</strong>, pois a string de agente de usuário pode ser configurada pelo usuário. Por exemplo:</p>
+A idenficação de browsers baseada na detecção de sua string de agente de usuário **não é confiável** e **não é recomendável**, pois a string de agente de usuário pode ser configurada pelo usuário. Por exemplo:
 
-<ul>
- <li>No Firefox, você pode alterar a preferência <code>general.useragent.override</code> em <code>about:config</code>. Algumas extenções do Firefox fazem isso. No entanto, isso altera somente o header HTTP que é enviado ao servidor, não afetando a detecção de browser efetuada por código JavaScript.</li>
- <li>O Opera 6+ permite aos usuários configurar a string de identificação do browser através de um menu.</li>
- <li>O Microsoft Internet Explorer faz uso de registros do Windows.</li>
- <li>O Safari e o iCab permitem aos usuários alterar, através de um menu, a string de agente do usuário para os valores predefinidos do Internet Explorer ou Netscape.</li>
-</ul>
+- No Firefox, você pode alterar a preferência `general.useragent.override` em `about:config`. Algumas extenções do Firefox fazem isso. No entanto, isso altera somente o header HTTP que é enviado ao servidor, não afetando a detecção de browser efetuada por código JavaScript.
+- O Opera 6+ permite aos usuários configurar a string de identificação do browser através de um menu.
+- O Microsoft Internet Explorer faz uso de registros do Windows.
+- O Safari e o iCab permitem aos usuários alterar, através de um menu, a string de agente do usuário para os valores predefinidos do Internet Explorer ou Netscape.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <var>au</var> = window.navigator.userAgent;
-</pre>
+    var au = window.navigator.userAgent;
 
-<h3 id="Value" name="Value">Valor</h3>
+### Valor
 
-<p><code>au</code> guarda o valor da string de agente de usuário do browser atual.</p>
+`au` guarda o valor da string de agente de usuário do browser atual.
 
-<p>A string de agente de usuário é contruida em uma estrutura formal que pode ser decomposta em diferentes informações. Cada uma dessas informações é provinda de outras propriedades de <code>window.navigator</code>, que também podem ser configuradas pelo usuário. Navegadores baseados na engine Gecko seguem a seguinte estrutura:</p>
+A string de agente de usuário é contruida em uma estrutura formal que pode ser decomposta em diferentes informações. Cada uma dessas informações é provinda de outras propriedades de `window.navigator`, que também podem ser configuradas pelo usuário. Navegadores baseados na engine Gecko seguem a seguinte estrutura:
 
-<pre>ageteDeUsuário = códigoDoNomeDoAplicativo/versãoDoAplicativo número (Plataforma; Segurança; OS-ou-CPU;
-Localização; rv: número-da-verção-de-revisão) produto/produtoSub
-Nome-do-Aplicativo versão-do-Nome-do-Aplicativo
-</pre>
+    ageteDeUsuário = códigoDoNomeDoAplicativo/versãoDoAplicativo número (Plataforma; Segurança; OS-ou-CPU;
+    Localização; rv: número-da-verção-de-revisão) produto/produtoSub
+    Nome-do-Aplicativo versão-do-Nome-do-Aplicativo
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">alert(window.navigator.userAgent)
+```js
+alert(window.navigator.userAgent)
 // alerta "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
-</pre>
+```
 
-<ul>
-</ul>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                                                | Status                           | Comentário         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', '#dom-navigator-useragent', 'NavigatorID.userAgent')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-useragent', 'NavigatorID.userAgent')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+{{Compat("api.NavigatorID.userAgent")}}
 
+## Veja também
 
-
-<p>{{Compat("api.NavigatorID.userAgent")}}</p>
-
-<h2 id="See_also" name="See_also">Veja também</h2>
-
-<ul>
- <li><a href="/pt-BR/docs/Gecko_user_agent_string_reference">Referência da string de agente usuário no Gecko</a></li>
- <li><a href="/pt-BR/docs/Using_Web_Standards_in_your_Web_Pages/Developing_cross-browser_and_cross-platform_pages" title="Using_Web_Standards_in_your_Web_Pages/Developing_cross-browser_and_cross-platform_pages">Browser identification (aka "browser sniffing"): not best, not reliable approach</a></li>
- <li><a href="/pt-BR/docs/Browser_Detection_and_Cross_Browser_Support#Limit_the_use_of_User_Agent_String_based_Detection" title="Browser_Detection_and_Cross_Browser_Support#Limit_the_use_of_User_Agent_String_based_Detection">Limit the use of User Agent String based Detection</a></li>
- <li><a href="/pt-BR/docs/Browser_Detection_and_Cross_Browser_Support#Use_feature_oriented_object_detection" title="Browser_Detection_and_Cross_Browser_Support#Use_feature_oriented_object_detection">Use feature oriented object detection</a></li>
- <li><a href="http://www.gtalbot.org/DHTMLSection/ListAllAttributesAndMethodsOfObjects.html">Demo interativa das probriadades do navegador</a></li>
-</ul>
+- [Referência da string de agente usuário no Gecko](/pt-BR/docs/Gecko_user_agent_string_reference)
+- [Browser identification (aka "browser sniffing"): not best, not reliable approach](/pt-BR/docs/Using_Web_Standards_in_your_Web_Pages/Developing_cross-browser_and_cross-platform_pages "Using_Web_Standards_in_your_Web_Pages/Developing_cross-browser_and_cross-platform_pages")
+- [Limit the use of User Agent String based Detection](/pt-BR/docs/Browser_Detection_and_Cross_Browser_Support#Limit_the_use_of_User_Agent_String_based_Detection "Browser_Detection_and_Cross_Browser_Support#Limit_the_use_of_User_Agent_String_based_Detection")
+- [Use feature oriented object detection](/pt-BR/docs/Browser_Detection_and_Cross_Browser_Support#Use_feature_oriented_object_detection "Browser_Detection_and_Cross_Browser_Support#Use_feature_oriented_object_detection")
+- [Demo interativa das probriadades do navegador](http://www.gtalbot.org/DHTMLSection/ListAllAttributesAndMethodsOfObjects.html)

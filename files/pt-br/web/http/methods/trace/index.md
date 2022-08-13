@@ -3,71 +3,34 @@ title: TRACE
 slug: Web/HTTP/Methods/TRACE
 translation_of: Web/HTTP/Methods/TRACE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O <strong>método</strong> <strong>HTTP <code>TRACE</code> </strong>realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.</p>
+O **método** **HTTP `TRACE` **realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.
 
-<p>O destinatário final deve responder a mensagem recebida, excluindo alguns campos descritos abaixo, de volta para o client com um status code 200 (OK) e um cabeçalho {{httpheader("Content-Type")}}. O destinatário final pode ser o servidor de origem ou o primeiro servidor a receber a requisição com o cabeçalho {{httpheader("Max-Forwards")}} com valor 0.</p>
+O destinatário final deve responder a mensagem recebida, excluindo alguns campos descritos abaixo, de volta para o client com um status code 200 (OK) e um cabeçalho {{httpheader("Content-Type")}}. O destinatário final pode ser o servidor de origem ou o primeiro servidor a receber a requisição com o cabeçalho {{httpheader("Max-Forwards")}} com valor 0.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Requisição possui body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Resposta com sucesso possui body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Seguro")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheavel")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitido nos formatos HTML</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Requisição possui body               | No  |
+| ------------------------------------ | --- |
+| Resposta com sucesso possui body     | No  |
+| {{Glossary("Seguro")}}         | No  |
+| {{Glossary("Idempotent")}} | Yes |
+| {{Glossary("Cacheavel")}}     | No  |
+| Permitido nos formatos HTML          | No  |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">TRACE /index.html
-</pre>
+    TRACE /index.html
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "TRACE", "4.3.8")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Title                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.methods.TRACE")}}</p>
+{{Compat("http.methods.TRACE")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP methods</a></li>
-</ul>
-
-<p> </p>
+- [HTTP methods](/pt-BR/docs/Web/HTTP/Methods)

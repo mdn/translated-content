@@ -4,82 +4,76 @@ slug: Glossary/XHTML
 translation_of: Glossary/XHTML
 original_slug: XHTML
 ---
-<p>O <a href="/pt-BR/docs/HTML" title="HTML">HTML</a> pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe <a href="/pt-BR/docs/XML" title="XML">XML</a>, também conhecido como XHTML.</p>
+O [HTML](/pt-BR/docs/HTML "HTML") pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML "XML"), também conhecido como XHTML.
 
-<h2 id="HTML5_e_HTMLXHTML">HTML5 e HTML/XHTML</h2>
+## HTML5 e HTML/XHTML
 
-<p>Ambas as sintaxes são definidas através do padrão <a href="/pt-BR/docs/HTML/HTML5" title="HTML5">HTML5</a>. A escolha da sintaxe é dedicada ao tipo MIME, que é enviado no cabeçalho HTTP <code>Content-Type</code> . O tipo MIME para sintaxe HTML é <code>text/html</code>, e o tipo MIME para sintaxe XHTML é <code>aplication/xhtml+xml</code>.</p>
+Ambas as sintaxes são definidas através do padrão [HTML5](/pt-BR/docs/HTML/HTML5 "HTML5"). A escolha da sintaxe é dedicada ao tipo MIME, que é enviado no cabeçalho HTTP `Content-Type` . O tipo MIME para sintaxe HTML é `text/html`, e o tipo MIME para sintaxe XHTML é `aplication/xhtml+xml`.
 
-<p>O exemplo mostra um documento HTML e um XHTML incluindo  os cabeçalhos relevantes do HTTP.</p>
+O exemplo mostra um documento HTML e um XHTML incluindo os cabeçalhos relevantes do HTTP.
 
-<h3 id="Documento_HTML">Documento HTML</h3>
+### Documento HTML
 
-<pre class="brush: html">HTTP/1.1 200 OK
+```html
+HTTP/1.1 200 OK
 Content-Type: text/html
 
-&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-  &lt;head&gt;
-    &lt;meta charset=utf-8&gt;
-    &lt;title&gt;HTML&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Eu sou um documento HTML
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>HTML</title>
+  </head>
+  <body>
+    <p>Eu sou um documento HTML
+  </body>
+</html>
+```
 
-<h3 id="Documento_XHTML">Documento XHTML</h3>
+### Documento XHTML
 
-<pre>HTTP/1.1 200 OK
-Content-Type: application/xhtml+xml
+    HTTP/1.1 200 OK
+    Content-Type: application/xhtml+xml
 
-&lt;html xml:lang="en" xmlns="<code>http://www.w3.org/1999/xhtml</code>"&gt;
-  &lt;head&gt;
-    &lt;title&gt;XHTML&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Eu sou um documento XHTML&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title>XHTML</title>
+      </head>
+      <body>
+        <p>Eu sou um documento XHTML</p>
+      </body>
+    </html>
 
-<h2 id="Tipo_MIME_contra_DOCTYPE">Tipo MIME contra DOCTYPE</h2>
+## Tipo MIME contra DOCTYPE
 
-<p>Antes do HTML5, as duas sintaxes eram definidas por duas especificações diferentes: <a class="external" href="http://www.w3.org/TR/html4/">HTML 4.01</a> e <a class="external" href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>. O padrão XHTML1 afirma que você poderia usar XHTML declarando um DOCTYPE especial. Porém, isso nunca foi implementado por nenhum navegador,e tem sido trocado pelo padrão HTML5.<strong> Se sua página é enviada como <code>text/html</code>, você não pode usar XHTML</strong>.</p>
+Antes do HTML5, as duas sintaxes eram definidas por duas especificações diferentes: [HTML 4.01](http://www.w3.org/TR/html4/) e [XHTML 1.0](http://www.w3.org/TR/xhtml1/). O padrão XHTML1 afirma que você poderia usar XHTML declarando um DOCTYPE especial. Porém, isso nunca foi implementado por nenhum navegador,e tem sido trocado pelo padrão HTML5. **Se sua página é enviada como `text/html` você não pode usar XHTML**.
 
-<p>Observe que o tipo MIME deve ser declarado no <code>Content-Type</code> HTTP header. Se você apenas inseriu a meta tag no HTML como <code>&lt;meta http-equiv=…&gt;</code>, ele será ignorado e tratado como <code>text/html</code>.</p>
+Observe que o tipo MIME deve ser declarado no `Content-Type` HTTP header. Se você apenas inseriu a meta tag no HTML como `<meta http-equiv=…>`, ele será ignorado e tratado como `text/html`.
 
-<p>Se você apresentar suas páginas <code>text/html</code> e acreditar que você está escrevendo XHTML, você poderá enfrentar vários problemas, tal como descritos nos seguintes artigos:</p>
+Se você apresentar suas páginas `text/html` e acreditar que você está escrevendo XHTML, você poderá enfrentar vários problemas, tal como descritos nos seguintes artigos:
 
-<ul>
- <li><a class="external" href="http://www.spartanicus.utvinternet.ie/no-xhtml.htm">No to XHTML</a> um artigo excelente do Spartanicus</li>
- <li><a class="external" href="http://www.webdevout.net/articles/beware-of-xhtml">Beware of XHTML</a> por David Hammond</li>
- <li><a class="external" href="http://www.hixie.ch/advocacy/xhtml">Sending XHTML as text/html Considered Harmful</a> por Ian Hickson</li>
- <li><a class="external" href="http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html">XHTML's Dirty Little Secret</a> por Mark Pilgrim</li>
- <li><a class="external" href="http://hsivonen.iki.fi/xhtml-the-point/">XHTML - What's the Point?</a> por Henri Sivonen</li>
- <li><a class="external" href="http://lachy.id.au/log/2005/12/xhtml-beginners">XHTML is not for Beginners</a> por Lachlan Hunt</li>
-</ul>
+- [No to XHTML](http://www.spartanicus.utvinternet.ie/no-xhtml.htm) um artigo excelente do Spartanicus
+- [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) por David Hammond
+- [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) por Ian Hickson
+- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) por Mark Pilgrim
+- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) por Henri Sivonen
+- [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) por Lachlan Hunt
 
-<h2 id="Suporte">Suporte</h2>
+## Suporte
 
-<p>O XHTML é suportado pela maioria dos navegadores modernos, incluindo Firefox, Chrome, Safari, e Opera. Entretanto, o Internet Explorer suporta XHTML somente a partir da versão 9. O Internet Explorer 8 e suas versões mais antigas mostrarão uma mensagem de tipo de arquivo desconhecido quando aberto um documento XHTML com o tipo XHTML MIME correto.</p>
+O XHTML é suportado pela maioria dos navegadores modernos, incluindo Firefox, Chrome, Safari, e Opera. Entretanto, o Internet Explorer suporta XHTML somente a partir da versão 9. O Internet Explorer 8 e suas versões mais antigas mostrarão uma mensagem de tipo de arquivo desconhecido quando aberto um documento XHTML com o tipo XHTML MIME correto.
 
-<p>Também é bom observar que muitas bibliotecas populars de JavaScript e ferramentas para desenvolvedores não suportam XHTML ou tem suporte limitado.</p>
+Também é bom observar que muitas bibliotecas populars de JavaScript e ferramentas para desenvolvedores não suportam XHTML ou tem suporte limitado.
 
-<h2 id="Diferenças_entre_HTML">Diferenças entre HTML</h2>
+## Diferenças entre HTML
 
-<p>Veja <a href="/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents" title="Properly Using CSS and JavaScript in XHTML Documents">Properly Using CSS and JavaScript in XHTML Documents</a> para uma lista com algumas das diferenças entre HTML e XHTML.</p>
+Veja [Properly Using CSS and JavaScript in XHTML Documents](/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents "Properly Using CSS and JavaScript in XHTML Documents") para uma lista com algumas das diferenças entre HTML e XHTML.
 
-<h2 id="Ferramentas" name="Ferramentas">Ferramentas</h2>
+## Ferramentas
 
-<ul>
- <li><a href="/pt-BR/docs/Standards-Compliant_Authoring_Tools" title="en/Standards-Compliant_Authoring_Tools">Standards-Compliant Authoring Tools</a></li>
-</ul>
+- [Standards-Compliant Authoring Tools](/pt-BR/docs/Standards-Compliant_Authoring_Tools "en/Standards-Compliant_Authoring_Tools")
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/HTML" title="en/HTML">HTML</a></li>
- <li><a href="/pt-BR/docs/Namespaces" title="en/Namespaces">Namespaces</a></li>
-</ul>
+- [HTML](/pt-BR/docs/HTML "en/HTML")
+- [Namespaces](/pt-BR/docs/Namespaces "en/Namespaces")

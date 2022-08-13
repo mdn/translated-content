@@ -3,152 +3,108 @@ title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 translation_of: Web/HTTP/Headers/Content-Location
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho <strong><code>Content-Location</code></strong> indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociação de conteúdo</a>.</p>
+O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
 
-<p>{{HTTPHeader("Location")}} e <code>Content-Location</code> são diferentes. <code>Location</code> indica o URL de um redirecionamento, enquanto <code>Content-Location</code> indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. <code>Location</code> é um cabeçalho associado com a resposta, enquanto <code>Content-Location</code> é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem <a href="#Exemplos">exemplos</a>.</p>
+{{HTTPHeader("Location")}} e `Content-Location` são diferentes. `Location` indica o URL de um redirecionamento, enquanto `Content-Location` indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. `Location` é um cabeçalho associado com a resposta, enquanto `Content-Location` é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem [exemplos](#Exemplos).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Entity header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Content-Location: &lt;url&gt;
-</pre>
+    Content-Location: <url>
 
-<h2 id="Diretivas">Diretivas</h2>
+## Diretivas
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>Uma URL <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">relativa</a> (à URL da requisição) ou URL <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">absoluta</a>.</dd>
-</dl>
+- \<url>
+  - : Uma URL [relativa](/pt-BR/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs) (à URL da requisição) ou URL [absoluta](/pt-BR/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs).
 
-<h2 id="Exemplos_2"><a name="Exemplos">Exemplos</a></h2>
+## Exemplos
 
-<h3 id="Requerindo_dados_de_um_servidor_em_diferentes_formatos">Requerindo dados de um servidor em diferentes formatos</h3>
+### Requerindo dados de um servidor em diferentes formatos
 
-<p>Digamos que uma API de um site pode retornar dados em formatos {{glossary("JSON")}}, {{glossary("XML")}}, ou <a href="https://en.wikipedia.org/wiki/Comma-separated_values" rel="external" title="Comma-separated values">CSV</a>. Se a URL para um documento em particular está em <code>https://example.com/documents/foo</code>, o site pode retornar diferentes URLs para <code>Content-Location</code> dependendo do cabeçalho {{HTTPHeader("Accept")}} nas requisições:</p>
+Digamos que uma API de um site pode retornar dados em formatos {{glossary("JSON")}}, {{glossary("XML")}}, ou [CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values"). Se a URL para um documento em particular está em `https://example.com/documents/foo`, o site pode retornar diferentes URLs para `Content-Location` dependendo do cabeçalho {{HTTPHeader("Accept")}} nas requisições:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cabeçalho de requisição</th>
-   <th scope="col">Cabeçalho de resposta</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>Accept: application/json, text/json</code></td>
-   <td><code>Content-Location: /documents/foo.json</code></td>
-  </tr>
-  <tr>
-   <td><code>Accept: application/xml, text/xml</code></td>
-   <td><code>Content-Location: /documents/foo.xml</code></td>
-  </tr>
-  <tr>
-   <td><code>Accept: text/plain, text/*</code></td>
-   <td><code>Content-Location: /documents/foo.txt</code></td>
-  </tr>
- </tbody>
-</table>
+| Cabeçalho de requisição               | Cabeçalho de resposta                   |
+| ------------------------------------- | --------------------------------------- |
+| `Accept: application/json, text/json` | `Content-Location: /documents/foo.json` |
+| `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
+| `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-<p>Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos com qualquer padrão URL que ele deseje, como por exemplo, um <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">query string parameter</a>: <code>/documents/foo?format=json</code>, <code>/documents/foo?format=xml</code>, entre outros.</p>
+Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos com qualquer padrão URL que ele deseje, como por exemplo, um [query string parameter](/pt-BR/docs/Web/API/HTMLHyperlinkElementUtils/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, entre outros.
 
-<p>Então o cliente pode lembrar que a versão JSON está disponível em uma URL em particular, evitando negociação de conteúdo da próxima vez que ele requerer aquele documento.</p>
+Então o cliente pode lembrar que a versão JSON está disponível em uma URL em particular, evitando negociação de conteúdo da próxima vez que ele requerer aquele documento.
 
-<p>O servidor também pode considerar outros cabeçalhos de <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociação de conteúdo</a>, como o {{HTTPHeader("Accept-Language")}}.</p>
+O servidor também pode considerar outros cabeçalhos de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), como o {{HTTPHeader("Accept-Language")}}.
 
-<h3 id="Apontando_para_um_novo_documento_HTTP_201_Created">Apontando para um novo documento (HTTP 201 Created)</h3>
+### Apontando para um novo documento (HTTP 201 Created)
 
-<p>Digamos que você está criando um novo <em>post </em>no blog através da API do site:</p>
+Digamos que você está criando um novo _post_ no blog através da API do site:
 
-<pre>PUT /new/post
-Host: example.com
-Content-Type: text/markdown
+    PUT /new/post
+    Host: example.com
+    Content-Type: text/markdown
 
-# Meu primeiro post no blog!
+    # Meu primeiro post no blog!
 
-Eu fiz através da API do `example.com`. Espero que ele tenha funcionado.
-</pre>
+    Eu fiz através da API do `example.com`. Espero que ele tenha funcionado.
 
-<p>O site retorna uma mensagem de sucesso genérica confirmando que o <em>post</em> foi publicado. O servidor especifica onde o novo <em>post</em> está com <code>Content-Location</code>:</p>
+O site retorna uma mensagem de sucesso genérica confirmando que o _post_ foi publicado. O servidor especifica onde o novo _post_ está com `Content-Location`:
 
-<pre>HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
-Content-Location: /meu-primeiro-post-no-blog
+    HTTP/1.1 201 Created
+    Content-Type: text/plain; charset=utf-8
+    Content-Location: /meu-primeiro-post-no-blog
 
-✅ Sucesso!
-</pre>
+    ✅ Sucesso!
 
-<h3 id="Indicando_a_URL_do_resultado_de_uma_transação">Indicando a URL do resultado de uma transação</h3>
+### Indicando a URL do resultado de uma transação
 
-<p>Digamos que você tem um <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> para enviar dinheiro para outro usuário do de um site.</p>
+Digamos que você tem um [`<form>`](/en-US/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
 
-<pre class="brush: html">&lt;form action="/mandar-pagamento" method="post"&gt;
-  &lt;p&gt;
-    &lt;label&gt;Para quem você quer enviar o dinheiro?
-      &lt;input type="text" name="destinatario"&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
+```html
+<form action="/mandar-pagamento" method="post">
+  <p>
+    <label>Para quem você quer enviar o dinheiro?
+      <input type="text" name="destinatario">
+    </label>
+  </p>
 
-  &lt;p&gt;
-    &lt;label&gt;Quanto?
-      &lt;input type="number" name="quantidade"&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
+  <p>
+    <label>Quanto?
+      <input type="number" name="quantidade">
+    </label>
+  </p>
 
-  &lt;button type="submit"&gt;Enviar Dinheiro&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+  <button type="submit">Enviar Dinheiro</button>
+</form>
+```
 
-<p>Quando o formulário é submetido, o site gera um recibo para a transação. O servidor pode usar <code>Content-Location</code> para indicar a URL do recibo para acesso futuro.</p>
+Quando o formulário é submetido, o site gera um recibo para a transação. O servidor pode usar `Content-Location` para indicar a URL do recibo para acesso futuro.
 
-<pre>HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Content-Location: /meus-recibos/38
+    HTTP/1.1 200 OK
+    Content-Type: text/html; charset=utf-8
+    Content-Location: /meus-recibos/38
 
-&lt;!doctype html&gt;
-<em>(Um monte de HTML…)</em>
+    <!doctype html>
+    (Um monte de HTML…)
 
-&lt;p&gt;Você mandou R$38.00 para UsuárioExemplo.&lt;/p&gt;
+    <p>Você mandou R$38.00 para UsuárioExemplo.</p>
 
-<em>(Mais um monte de HTML…)</em>
-</pre>
+    (Mais um monte de HTML…)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "Content-Location", "3.1.4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.Content-Location")}}</p>
+{{Compat("http.headers.Content-Location")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Location")}}</li>
-</ul>
+- {{HTTPHeader("Location")}}

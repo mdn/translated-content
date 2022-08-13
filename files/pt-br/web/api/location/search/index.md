@@ -8,46 +8,35 @@ tags:
   - Search
 translation_of: Web/API/Location/search
 ---
-<div>{{ApiRef("Location")}}</div>
+{{ApiRef("Location")}}
 
-<p>A propriedade <strong><code>search</code></strong> da interface {{domxref("Location")}} é um texto de busca, também chamado de <em>query string</em> ou <em>querystring</em>; isso é, uma {{domxref("USVString")}} contendo um <code>'?'</code> seguido pelos parâmetros da URL.</p>
+A propriedade **`search`** da interface {{domxref("Location")}} é um texto de busca, também chamado de _query string_ ou _querystring_; isso é, uma {{domxref("USVString")}} contendo um `'?'` seguido pelos parâmetros da URL.
 
-<p>Os navegadores modernos fornecem o <code><a href="/en-US/docs/Web/API/URLSearchParams/get#Examples">URLSearchParams</a></code> e o <code><a href="/en-US/docs/Web/API/URL/searchParams#Examples">URL.searchParams</a></code> para facilitar a análise dos parâmetros da querystring.</p>
+Os navegadores modernos fornecem o [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#Examples) e o [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#Examples) para facilitar a análise dos parâmetros da querystring.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+    string = object.search;
+    object.search = string;
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">// Seleciona o elemento &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.search?q=123"&gt;
+```js
+// Seleciona o elemento <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.search?q=123">
 var anchor = document.getElementById("myAnchor");
 var queryString = anchor.search; // Retorna:'?q=123'
 
 // Análise adicional:
 let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q")<span class="kwd">); // é o número 123</span>
-</pre>
+let q = parseInt(params.get("q")); // é o número 123
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-location-search', 'search')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', '#dom-location-search', 'search')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Location.search")}}</p>
+{{Compat("api.Location.search")}}

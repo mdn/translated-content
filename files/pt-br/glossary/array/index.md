@@ -7,30 +7,26 @@ tags:
 translation_of: Glossary/array
 original_slug: Glossario/array
 ---
-<p>Um <em>array (arranjo ou vetor) </em>é um conjunto de dados (que pode assumir os mais diversos tipos, desde do tipo {{Glossary("primitivo")}}, a {{Glossary("objeto")}} dependendo da linguagem de programação). Arrays são utilizados para armazenar mais de um valor em uma única variável. <span lang="pt">Isso é comparável a uma variável que pode armazenar apenas um valor. </span></p>
+Um _array (arranjo ou vetor)_ é um conjunto de dados (que pode assumir os mais diversos tipos, desde do tipo {{Glossary("primitivo")}}, a {{Glossary("objeto")}} dependendo da linguagem de programação). Arrays são utilizados para armazenar mais de um valor em uma única variável. Isso é comparável a uma variável que pode armazenar apenas um valor.
 
-<p><span lang="pt">Cada item do array tem um número ligado a ele, chamado de <span>índice numérico</span>, que permite acesso a cada "valor" armazenado na váriavel.</span></p>
+Cada item do array tem um número ligado a ele, chamado de índice numérico, que permite acesso a cada "valor" armazenado na váriavel.
 
-<p><span lang="pt"><span>Em </span></span>{{glossary("JavaScript")}}, um {{jsxref("array")}} começa no índice zero e pode ser manipulado a partir de vários {{Glossary("Method", "métodos")}}.</p>
+Em {{glossary("JavaScript")}}, um {{jsxref("array")}} começa no índice zero e pode ser manipulado a partir de vários {{Glossary("Method", "métodos")}}.
 
-<p>Um exemplo simples de Array em Javascript: </p>
+Um exemplo simples de Array em Javascript:
 
-<pre><code>var myArray = [1, 2, 3, 4];
+    var myArray = [1, 2, 3, 4];
 
-var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
-//Um array em JavaScript pode conter vários tipos de dados, como mostrado acima.</code></pre>
+    //Um array em JavaScript pode conter vários tipos de dados, como mostrado acima.
 
-<h2 id="Saiba_mais" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimentos_Gerais" style="line-height: 24px; font-size: 1.71428571428571rem;">Conhecimentos Gerais</h3>
+### Conhecimentos Gerais
 
-<ul>
- <li>{{Interwiki("wikipedia", "Arranjo (computação)", "Array")}} no Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Arranjo (computação)", "Array")}} no Wikipedia
 
-<h3 id="Referência_técnica" style="line-height: 24px; font-size: 1.71428571428571rem;">Referência técnica</h3>
+### Referência técnica
 
-<ul>
- <li>{{jsxref("Array")}} Javascript no MDN</li>
-</ul>
+- {{jsxref("Array")}} Javascript no MDN

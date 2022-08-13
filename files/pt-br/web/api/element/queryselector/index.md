@@ -8,87 +8,54 @@ tags:
   - Referencia
 translation_of: Web/API/Element/querySelector
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Retorna o primeiro elemento descendente do elemento em que a função foi invocada e que corresponde aos seletores especificado. </p>
+Retorna o primeiro elemento descendente do elemento em que a função foi invocada e que corresponde aos seletores especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>elemento</var> = elementoBase.querySelector(seletores);
-</pre>
+    elemento = elementoBase.querySelector(seletores);
 
-<ul>
- <li><code>elemento</code> e<code> elementoBase</code> são objetos {{domxref("element")}}.</li>
- <li><code>selectores</code> é um grupo de  <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectores</a>.</li>
-</ul>
+- `elemento` e` elementoBase` são objetos {{domxref("element")}}.
+- `selectores` é um grupo de [selectores](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Selectors).
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Neste exemplo é retornado o primeiro elemento <code>style</code> que, ou não tem nenhum atributo type, ou tem o atributo type igual a  <code>text/css</code>:</p>
+Neste exemplo é retornado o primeiro elemento `style` que, ou não tem nenhum atributo type, ou tem o atributo type igual a `text/css`:
 
-<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+```js
+var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Retorna <code>null </code>se nenhum elemento for encontrado; caso contrário retorna o primeiro elemento; </p>
+Retorna `null `se nenhum elemento for encontrado; caso contrário retorna o primeiro elemento;
 
-<p>Lança uma exceção <code>SYNTAX_ERR</code> se o grupo de seletores é inválido.</p>
+Lança uma exceção `SYNTAX_ERR` se o grupo de seletores é inválido.
 
-<p><span style="font-family: courier new;"><span>querySelector()</span></span> foi introduzido em WebApps API.</p>
+querySelector() foi introduzido em WebApps API.
 
-<p>O argumento de string do <code>querySelector</code> deve seguir a sintaxe CSS. Veja exemplos concretos em {{domxref("document.querySelector")}}</p>
+O argumento de string do `querySelector` deve seguir a sintaxe CSS. Veja exemplos concretos em {{domxref("document.querySelector")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Browser</th>
-   <th>Suporte</th>
-   <th>Notas</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>8</td>
-   <td>(IE8) apenas selectores CSS 2.1</td>
-  </tr>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td><strong>3.5</strong> (1.9.1)</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>10</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Chrome</td>
-   <td>1</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Safari (webkit)</td>
-   <td>3.2 (525.3)</td>
-   <td><a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=16587">webk.it/16587</a></td>
-  </tr>
- </tbody>
-</table>
+| Browser           | Suporte         | Notas                                                          |
+| ----------------- | --------------- | -------------------------------------------------------------- |
+| Internet Explorer | 8               | (IE8) apenas selectores CSS 2.1                                |
+| Firefox (Gecko)   | **3.5** (1.9.1) |                                                                |
+| Opera             | 10              |                                                                |
+| Chrome            | 1               |                                                                |
+| Safari (webkit)   | 3.2 (525.3)     | [webk.it/16587](https://bugs.webkit.org/show_bug.cgi?id=16587) |
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/selectors-api/","Selectors API Level 1","rec")}}</li>
- <li>{{spec("http://www.w3.org/TR/selectors-api2/","Selectors API Level 2","wd")}}</li>
- <li>{{spec("http://dev.w3.org/2006/webapi/selectors-api2/","Selectors API Level 2","ed")}}</li>
-</ul>
+- {{spec("http://www.w3.org/TR/selectors-api/","Selectors API Level 1","rec")}}
+- {{spec("http://www.w3.org/TR/selectors-api2/","Selectors API Level 2","wd")}}
+- {{spec("http://dev.w3.org/2006/webapi/selectors-api2/","Selectors API Level 2","ed")}}
 
-<h2 id="See_also" name="See_also">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="/en-US/docs/DOM/Element.querySelectorAll"><code>element.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+- [`element.querySelectorAll`](/pt-BR/docs/DOM/Element.querySelectorAll)
+- [`document.querySelector`](/pt-BR/docs/DOM/Document.querySelector)
+- [`document.querySelectorAll`](/pt-BR/docs/DOM/Document.querySelectorAll)
+- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)

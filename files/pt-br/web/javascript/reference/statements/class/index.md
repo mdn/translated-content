@@ -11,34 +11,32 @@ tags:
   - Static
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}A **declaração class** cria uma nova classe com dado **nome** usando a herança do protótipo base.
 
-<div>A <strong>declaração class</strong> cria uma nova classe com dado <strong>nome </strong>usando a herança do protótipo base.</div>
+Você também pode definir uma classe usando {{jsxref("Operators/class", "class expression", "", 1)}}.
 
-<p> </p>
+## Sintaxe
 
-<p>Você também pode definir uma classe usando {{jsxref("Operators/class", "class expression", "", 1)}}.</p>
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: js">class <em>name</em> [extends] {
+```js
+class name [extends] {
   // class body
 }
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Assim como as expressões de classe, o corpo de uma declaração de classe é executado em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
+Assim como as expressões de classe, o corpo de uma declaração de classe é executado em [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode).
 
-<p>Declarações de classe não são {{Glossary("Hoisting", "hoisted")}} (ao contrário de <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">function declarations</a>).</p>
+Declarações de classe não são {{Glossary("Hoisting", "hoisted")}} (ao contrário de [function declarations](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Declaração_simples_de_classe">Declaração simples de classe</h3>
+### Declaração simples de classe
 
-<p>No exemplo a seguir, primeiro definimos uma classe chamada <em>Polygon</em>, então extendemos essa classe para criar uma classe chamada <em>Square</em>. Note que <em>super()</em>, usada no construtor, só pode ser usada em construtores e deve ser chamada antes da chave <em>this</em> ser usada.</p>
+No exemplo a seguir, primeiro definimos uma classe chamada _Polygon_, então extendemos essa classe para criar uma classe chamada _Square_. Note que _super()_, usada no construtor, só pode ser usada em construtores e deve ser chamada antes da chave _this_ ser usada.
 
-<pre class="brush: js">class Poligono {
+```js
+class Poligono {
   constructor(altura, largura) {
     this.nome = 'Polígono';
     this.altura = altura;
@@ -51,35 +49,21 @@ class Quadrado extends Poligono {
     super(altura, altura);
     this.nome = 'Quadrado';
   }
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.statements.class")}}
 
+## Veja também
 
-<p>{{Compat("javascript.statements.class")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`function` declaration](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)

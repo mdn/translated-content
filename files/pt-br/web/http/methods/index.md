@@ -7,79 +7,42 @@ tags:
   - Verbos
 translation_of: Web/HTTP/Methods
 ---
-<div>
-<div>
-<dl>
-</dl>
-</div>
+> _Nota: O conteúdo original publicado em inglês no Mozilla Developer Network utiliza o termo "resource", mantido na tradução, que refere-se a qualquer destino válido ao executar uma conexão usando o protocolo HTTP. Na língua portuguesa, ao falar sobre requisições, o termo é pouco usado com essa finalidade ou contexto._
 
-<blockquote>
-<p><em>Nota: O conteúdo original publicado em inglês no Mozilla Developer Network utiliza o termo "resource", mantido na tradução, que refere-se a qualquer destino válido ao executar uma conexão usando o protocolo HTTP. Na língua portuguesa, ao falar sobre requisições, o termo é pouco usado com essa finalidade ou contexto.</em></p>
-</blockquote>
+{{HTTPSidebar}}
 
-<dl>
-</dl>
+O protocolo HTTP define um conjunto de **métodos de requisição** responsáveis por indicar a ação a ser executada para um dado recurso. Embora esses métodos possam ser descritos como substantivos, eles também são comumente referenciados como **_HTTP Verbs (Verbos HTTP)_**.**\_ \_**Cada um deles implementa uma semântica diferente, mas alguns recursos são compartilhados por um grupo deles, como por exemplo, qualquer método de requisição pode ser do tipo {{glossary("safe")}}, {{glossary("idempotent")}} ou {{glossary("cacheable")}}.
 
-<p>{{HTTPSidebar}}</p>
+- [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET)
+  - : O método `GET` solicita a representação de um recurso específico. Requisições utilizando o método `GET` devem retornar apenas dados.
+- [`HEAD`](/pt-BR/docs/Web/HTTP/Methods/HEAD)
+  - : O método `HEAD` solicita uma resposta de forma idêntica ao método `GET`, porém sem conter o corpo da resposta.
+- [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST)
+  - : O método `POST` é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor.
+- [`PUT`](/pt-BR/docs/Web/HTTP/Methods/PUT)
+  - : O método `PUT` substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.
+- [`DELETE`](/pt-BR/docs/Web/HTTP/Methods/DELETE)
+  - : O método `DELETE` remove um recurso específico.
+- [`CONNECT`](/pt-BR/docs/Web/HTTP/Methods/CONNECT)
+  - : O método `CONNECT` estabelece um túnel para o servidor identificado pelo recurso de destino.
+- [`OPTIONS`](/pt-BR/docs/Web/HTTP/Methods/OPTIONS)
+  - : O método `OPTIONS` é usado para descrever as opções de comunicação com o recurso de destino.
+- [`TRACE`](/pt-BR/docs/Web/HTTP/Methods/TRACE)
+  - : O método `TRACE` executa um teste de chamada _loop-back_ junto com o caminho para o recurso de destino.
+- [`PATCH`](/pt-BR/docs/Web/HTTP/Methods/PATCH)
+  - : O método `PATCH` é utilizado para aplicar modificações parciais em um recurso.
 
-<p>O protocolo HTTP define um conjunto de <strong>métodos de requisição</strong> responsáveis por indicar a ação a ser executada para um dado recurso. Embora esses métodos possam ser descritos como substantivos, eles também são comumente referenciados como <strong><em>HTTP Verbs (Verbos HTTP)</em></strong>.<strong><em> </em></strong>Cada um deles implementa uma semântica diferente, mas alguns recursos são compartilhados por um grupo deles, como por exemplo, qualquer método de requisição pode ser do tipo <span style="line-height: 1.5;">{{glossary("safe")}}, {{glossary("idempotent")}} ou {{glossary("cacheable")}}.</span></p>
-</div>
+## Especificações
 
-<dl>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/GET">GET</a></code></dt>
- <dd>O método <code>GET</code> solicita a representação de um recurso específico. Requisições utilizando o método <code>GET</code> devem retornar apenas dados.</dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/HEAD">HEAD</a></code></dt>
- <dd> O método <code>HEAD</code> solicita uma resposta de forma idêntica ao método <code>GET</code>, porém sem conter o corpo da resposta.</dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/POST">POST</a></code></dt>
- <dd>O método <code>POST</code> é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor.</dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/PUT">PUT</a></code></dt>
- <dd>
- <p>O método <code>PUT</code> substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.</p>
- </dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/DELETE">DELETE</a></code></dt>
- <dd>O método <code>DELETE</code> remove um recurso específico.</dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/CONNECT">CONNECT</a></code></dt>
- <dd>
- <p>O método <code>CONNECT</code> estabelece um túnel para o servidor identificado pelo recurso de destino.</p>
- </dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/OPTIONS">OPTIONS</a></code></dt>
- <dd>O método <code>OPTIONS</code> é usado para descrever as opções de comunicação com o recurso de destino.</dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/TRACE">TRACE</a></code></dt>
- <dd>
- <p>O método <code>TRACE</code> executa um teste de chamada <em>loop-back</em> junto com o caminho para o recurso de destino.</p>
- </dd>
- <dt><code><a href="/pt-BR/docs/Web/HTTP/Methods/PATCH">PATCH</a></code></dt>
- <dd>O método <code>PATCH</code> é utilizado para aplicar modificações parciais em um recurso.</dd>
-</dl>
+| Especificação                                        | Título                                                        | Comentário                                                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Especifica os métodos GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
+| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Especifica o método PATCH.                                                   |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Request methods", "4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-   <td>Especifica os métodos GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE.</td>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "Patch method", "2")}}</td>
-   <td>PATCH Method for HTTP</td>
-   <td>Especifica o método PATCH.</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("http/methods")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Veja também
 
-<p>{{Compat("http/methods")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers">Cabeçalhos HTTP</a></li>
-</ul>
+- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)

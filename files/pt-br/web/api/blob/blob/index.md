@@ -3,61 +3,41 @@ title: Blob
 slug: Web/API/Blob/Blob
 translation_of: Web/API/Blob/Blob
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>Blob()</p>
+Blob()
 
-<p> </p>
+Retorna um novo objeto Blob criado, cujo o conteúdo consiste na concatenação de um array de valores estabelecidos no parâmetro da função.
 
-<p>Retorna um novo objeto <font>Blob</font> criado, cujo o conteúdo consiste na concatenação de um array de valores estabelecidos no parâmetro da função.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    var aBlob = new Blob( array[, options]);
 
-<pre class="syntaxbox">var aBlob = new Blob(<em> array[</em>, <em>options]</em>);
-</pre>
+### Parâmetros
 
-<h3 id="Parâmetros">Parâmetros</h3>
+- _array_ é um {{jsxref("Array")}} de objetos {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou uma combinação de quaisquer um destes objetos, que serão colocados dentro do {{domxref("Blob")}}. DOMStrings são codificadas como UTF-8.
+- _option\_\_s_ é um dicionário opcional `BlobPropertyBag` que pode especificar os dois atributos seguintes:
 
-<ul>
- <li><em>array</em> é um {{jsxref("Array")}} de objetos {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou uma combinação de quaisquer um destes objetos, que serão colocados dentro do {{domxref("Blob")}}. DOMStrings são codificadas como UTF-8.</li>
- <li><em>option</em><em>s</em> é um dicionário opcional <code>BlobPropertyBag</code> que pode especificar os dois atributos seguintes:
-  <ul>
-   <li><code>type</code>, com um valor padrão de <code>""</code>, que representa o MIME type do conteúdo do array que será inserido no blob.</li>
-   <li><code>endings</code>, com um valor padrão de <code>"transparent"</code>, especifica como strings contendo o caracter de final de linha <code>\n</code> deverão ser escritos. Tem um dos dois valores: <code>"native"</code>, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou <code>"transparent", </code>indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}</li>
-  </ul>
- </li>
-</ul>
+  - `type`, com um valor padrão de `""`, que representa o MIME type do conteúdo do array que será inserido no blob.
+  - `endings`, com um valor padrão de `"transparent"`, especifica como strings contendo o caracter de final de linha `\n` deverão ser escritos. Tem um dos dois valores: `"native"`, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou `"transparent", `indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js  language-js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
+```js
+var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
+var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#constructorBlob', 'Blob()')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário         |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Blob.Blob")}}</p>
+{{Compat("api.Blob.Blob")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A versão descontinuada que o construtor {{domxref("BlobBuilder")}} substitui.</li>
-</ul>
-
-<p> </p>
+- A versão descontinuada que o construtor {{domxref("BlobBuilder")}} substitui.

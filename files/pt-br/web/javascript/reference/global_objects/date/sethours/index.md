@@ -11,73 +11,61 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>setHours()</code></strong> atribui as horas para uma data especificada de acordo com a hora local e retorna o número de milissegundos desde do dia 1 de Janeiro de 1970 00:00:00 UTC até o tempo representado pela instância {{jsxref("Date")}} atualizada.</p>
+O método **`setHours()`** atribui as horas para uma data especificada de acordo com a hora local e retorna o número de milissegundos desde do dia 1 de Janeiro de 1970 00:00:00 UTC até o tempo representado pela instância {{jsxref("Date")}} atualizada.
 
-<div>{{EmbedInteractiveExample("pages/js/date-sethours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
 
+## Sintaxe
 
+    dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Versões anteriores ao JavaScript 1.3
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</code></pre>
+    dateObj.setHours(hoursValue)
 
-<h3 id="Versões_anteriores_ao_JavaScript_1.3">Versões anteriores ao JavaScript 1.3</h3>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setHours(<var>hoursValue</var>)</code></pre>
+- `hoursValue`
+  - : Idealmente, um número inteiro entre 0 e 23, representando a hora. Se um valor maior que 23 for fornecido, a data e hora será incrementada pelas horas extras.
+- `minutesValue`
+  - : Opcional. Idealmente, um número inteiro entre 0 e 59, representando os minutos. Se um valor maior que 59 for fornecido, a data e hora será incrementada em minutos extras.
+- `secondsValue`
+  - : Opcional. Idealmente, um número inteiro entre 0 e 59, representando os segundos. Se um valor maior que 59 for fornecido, a data e hora será incrementada em segundos extras. Se você especificar o parâmetro `secondsValue`, também deverá especificar parâmetro `minutesValue`.
+- `msValue`
+  - : Opcional. Idealmente, um número entre 0 e 999, representando os milissegundos. Se um valor maior que 999 for fornecido, a data e hora será incrementada em milissegundos extras. Se você especificar o parâmetro `msValue`, você também deve especificar `minutesValue` e `secondsValue`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>hoursValue</code></dt>
- <dd>Idealmente, um número inteiro entre 0 e 23, representando a hora. Se um valor maior que 23 for fornecido, a data e hora será incrementada pelas horas extras.</dd>
- <dt><code>minutesValue</code></dt>
- <dd>Opcional. Idealmente, um número inteiro entre 0 e 59, representando os minutos. Se um valor maior que 59 for fornecido, a data e hora será incrementada em minutos extras.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>Opcional. Idealmente, um número inteiro entre 0 e 59, representando os segundos. Se um valor maior que 59 for fornecido, a data e hora será incrementada em segundos extras. Se você especificar o parâmetro <code>secondsValue</code>, também deverá especificar parâmetro <code>minutesValue</code>.</dd>
- <dt><code>msValue</code></dt>
- <dd>Opcional. Idealmente, um número entre 0 e 999, representando os milissegundos. Se um valor maior que 999 for fornecido, a data e hora será incrementada em milissegundos extras. Se você especificar o parâmetro <code>msValue</code>, você também deve especificar <code>minutesValue</code> e <code>secondsValue</code>.</dd>
-</dl>
+O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.</p>
+Se você não especifica os parâmetros `minutesValue`, `secondsValue`, e `msValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}, e {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} são usados.
 
-<h2 id="Descrição">Descrição</h2>
+Se um parâmetro que você especificar estiver fora do intervalo esperado, `setHours()` tenta atualizar as informações de data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para `secondsValue`, os minutos serão incrementados em 1 (`minutesValue + 1`), e 40 serão usados para os segundos.
 
-<p>Se você não especifica os parâmetros <code>minutesValue</code>, <code>secondsValue</code>, e <code>msValue</code>, os valores retornados dos métodos {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}, e {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} são usados.</p>
+## Exemplos
 
-<p>Se um parâmetro que você especificar estiver fora do intervalo esperado, <code>setHours()</code> tenta atualizar as informações de data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para <code>secondsValue</code>, os minutos serão incrementados em 1 (<code>minutesValue + 1</code>), e 40 serão usados para os segundos.</p>
+### Usando `setHours()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setHours">Usando <code>setHours()</code></h3>
-
-<pre class="brush:js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setHours(7);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setHours")}}</p>
+{{Compat("javascript.builtins.Date.setHours")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

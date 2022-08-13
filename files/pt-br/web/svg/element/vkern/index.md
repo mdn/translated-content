@@ -8,43 +8,37 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/vkern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem otimizadas com um elemento <code>vkern</code>. Esse processo é conhecido como <a class="external" href="http://en.wikipedia.org/wiki/Kerning">Kerning</a>.</p>
+A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem otimizadas com um elemento `vkern`. Esse processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("u1") }}</li>
- <li>{{ SVGAttr("g1") }}</li>
- <li>{{ SVGAttr("u2") }}</li>
- <li>{{ SVGAttr("g2") }}</li>
- <li>{{ SVGAttr("k") }}</li>
-</ul>
+- {{ SVGAttr("u1") }}
+- {{ SVGAttr("g1") }}
+- {{ SVGAttr("u2") }}
+- {{ SVGAttr("g2") }}
+- {{ SVGAttr("k") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGVKernElement" title="en/DOM/SVGVKernElement">SVGVKernElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGVKernElement`](/pt-BR/DOM/SVGVKernElement "en/DOM/SVGVKernElement").
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("hkern") }}</li>
- <li><a href="/pt-BR/SVG/Tutorial/SVG_fonts" title="en/SVG/Tutorial/SVG_Fonts">Tutorial SVG: SVG fonts</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("hkern") }}
+- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")

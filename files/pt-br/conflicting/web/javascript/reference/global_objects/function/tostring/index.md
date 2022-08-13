@@ -8,49 +8,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>O método <code><strong>toSource()</strong></code> retorna uma string que representa o código-fonte do objeto.</p>
+O método **`toSource()`** retorna uma string que representa o código-fonte do objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>function</var>.toSource();
-Function.toSource();
-</pre>
+    function.toSource();
+    Function.toSource();
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
-<p>Uma string representa o código-fonte de um objeto.</p>
+Uma string representa o código-fonte de um objeto.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método<code>toSource</code> retorna os seguintes valores:</p>
+O método`toSource` retorna os seguintes valores:
 
-<ul>
- <li>Para objetos nativos {{jsxref("Function")}} , <code>toSource()</code> retorna a seguinte string indicando que o código-fonte não está disponível:
+- Para objetos nativos {{jsxref("Function")}} , `toSource()` retorna a seguinte string indicando que o código-fonte não está disponível:
 
-  <pre class="brush: js">function Function() {
-    [native code]
-}
-</pre>
- </li>
- <li>Para funções personalizadas, <code>toSource()</code> retorna a fonte JavaScript que define o objeto como uma string.</li>
-</ul>
+  ```js
+  function Function() {
+      [native code]
+  }
+  ```
 
-<p>Esse método, normalmente é chamado internamente pelo JavaScript e não explicitamente no código. Você pode chamar <code>toSource</code> enquanto depura para examinar o conteúdo de um objeto.</p>
+- Para funções personalizadas, `toSource()` retorna a fonte JavaScript que define o objeto como uma string.
 
-<h2 id="Especificações">Especificações</h2>
+Esse método, normalmente é chamado internamente pelo JavaScript e não explicitamente no código. Você pode chamar `toSource` enquanto depura para examinar o conteúdo de um objeto.
 
-<p>Não faz parte de nenhum padrão. Implementado no JavaScript 1.3.</p>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+Não faz parte de nenhum padrão. Implementado no JavaScript 1.3.
 
-<div>
-  <p>{{Compat("javascript.builtins.Function.toSource")}}</p>
-</div>
+## Compatibilidade com navegadores
 
-<h2 id="Veja_Também">Veja Também</h2>
+{{Compat("javascript.builtins.Function.toSource")}}
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+## Veja Também
+
+- {{jsxref("Object.prototype.toSource()")}}

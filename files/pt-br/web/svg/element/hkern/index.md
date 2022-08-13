@@ -8,41 +8,35 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/hkern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A distância horizontal entre dois glifos podem ser bem ajustados com um elemento <code>hkern</code>. Este processo é conhecido como <a class="external" href="http://en.wikipedia.org/wiki/Kerning">Kerning</a>.</p>
+A distância horizontal entre dois glifos podem ser bem ajustados com um elemento `hkern`. Este processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("u1") }}</li>
- <li>{{ SVGAttr("g1") }}</li>
- <li>{{ SVGAttr("u2") }}</li>
- <li>{{ SVGAttr("g2") }}</li>
- <li>{{ SVGAttr("k") }}</li>
-</ul>
+- {{ SVGAttr("u1") }}
+- {{ SVGAttr("g1") }}
+- {{ SVGAttr("u2") }}
+- {{ SVGAttr("g2") }}
+- {{ SVGAttr("k") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGHKernElement" title="en/DOM/SVGHKernElement">SVGHKernElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGHKernElement`](/pt-BR/DOM/SVGHKernElement "en/DOM/SVGHKernElement").
 
-<h2 id="Relacionado">Relacionado</h2>
+## Relacionado
 
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("vkern") }}</li>
- <li><a href="/pt-BR/SVG/Tutorial/SVG_fonts" title="en/SVG/Tutorial/SVG_Fonts">Tutorial SVG: SVG fonts</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("vkern") }}
+- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")

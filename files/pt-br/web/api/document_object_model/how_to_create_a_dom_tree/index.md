@@ -4,31 +4,32 @@ slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 original_slug: DOM/Referencia_do_DOM/How_to_create_a_DOM_tree
 ---
+Esta página descreve como usar [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) API DOM em JavaScript para criar e modificar objetos do DOM. Aplica-se a todas as aplicações baseadas em Gecko (como o Firefox), tanto em código privilegiado (extensões) como em código não privilegiado (páginas web)
 
-<p>Esta página descreve como usar <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API DOM em JavaScript para criar e modificar objetos do DOM. Aplica-se a todas as aplicações baseadas em Gecko (como o Firefox), tanto em código privilegiado (extensões) como em código não privilegiado (páginas web)</p>
+### Criando uma árvore DOM dinamicamente
 
-<h3 id="Dynamically_creating_a_DOM_tree" name="Dynamically_creating_a_DOM_tree">Criando uma árvore DOM dinamicamente</h3>
+Considere o seguinte documento XML:
 
-<p>Considere o seguinte documento XML:</p>
+```xml
+<?xml version="1.0"?>
+<people>
+  <person first-name="eric" middle-initial="H" last-name="jung">
+    <address street="321 south st" city="denver" state="co" country="usa"/>
+    <address street="123 main st" city="arlington" state="ma" country="usa"/>
+  </person>
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;people&gt;
-  &lt;person first-name="eric" middle-initial="H" last-name="jung"&gt;
-    &lt;address street="321 south st" city="denver" state="co" country="usa"/&gt;
-    &lt;address street="123 main st" city="arlington" state="ma" country="usa"/&gt;
-  &lt;/person&gt;
+  <person first-name="jed" last-name="brown">
+    <address street="321 north st" city="atlanta" state="ga" country="usa"/>
+    <address street="123 west st" city="seattle" state="wa" country="usa"/>
+    <address street="321 south avenue" city="denver" state="co" country="usa"/>
+  </person>
+</people>
+```
 
-  &lt;person first-name="jed" last-name="brown"&gt;
-    &lt;address street="321 north st" city="atlanta" state="ga" country="usa"/&gt;
-    &lt;address street="123 west st" city="seattle" state="wa" country="usa"/&gt;
-    &lt;address street="321 south avenue" city="denver" state="co" country="usa"/&gt;
-  &lt;/person&gt;
-&lt;/people&gt;
-</pre>
+A W3C DOM API, suportada pelo Mozilla, pode ser usada para criar uma representação na memória deste documento, da seguinte forma:
 
-<p>A W3C DOM API, suportada pelo Mozilla, pode ser usada para criar uma representação na memória deste documento, da seguinte forma:</p>
-
-<pre class="brush: js">var doc = document.implementation.createDocument("", "", null);
+```js
+var doc = document.implementation.createDocument("", "", null);
 var peopleElem = doc.createElement("people");
 
 var personElem1 = doc.createElement("person");
@@ -78,13 +79,14 @@ personElem2.appendChild(addressElem5);
 peopleElem.appendChild(personElem1);
 peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
-</pre>
+```
 
-<p>Veja também o capítulo <a href="/en/XUL_Tutorial/Document_Object_Model" title="en/XUL_Tutorial/Document_Object_Model">DOM chapter of the XUL Tutorial</a>.</p>
+Veja também o capítulo [DOM chapter of the XUL Tutorial](/en/XUL_Tutorial/Document_Object_Model "en/XUL_Tutorial/Document_Object_Model").
 
-<p>Você pode automatizar a criação de uma árvore DOM usando um <a href="/en/JXON#JXON_reverse_algorithms">algoritmo reverso JXON</a> em associação com a seguinte representação JSON:</p>
+Você pode automatizar a criação de uma árvore DOM usando um [algoritmo reverso JXON](/en/JXON#JXON_reverse_algorithms) em associação com a seguinte representação JSON:
 
-<pre class="brush: js">{
+```js
+{
   "people": {
     "person": [{
       "address": [{
@@ -123,23 +125,21 @@ doc.appendChild(peopleElem);
     }]
   }
 }
-</pre>
+```
 
-<h3 id="So_what.3F" name="So_what.3F">E daí?</h3>
+### E daí?
 
-<p>As árvores DOM podem ser consultadas <a href="/en/Using_XPath">usando expressões XPath</a>, convertidas em strings ou gravadas em arquivos locais ou remotos usando <a href="/en/Parsing_and_serializing_XML">XMLSerializer</a> (sem ter que primeiro converter para uma string), <a href="/en/DOM/XMLHttpRequest">POSTed para um servidor web</a> (via XMLHttpRequest), transformado usando <a href="/en/XSLT" title="en/XSLT">XSLT</a>, <a href="/en/XLink" title="en/XLink">XLink</a>, convertido para um objeto JavaScript através de um <a href="/en/JXON">algoritmo JXON</a>, etc.</p>
+As árvores DOM podem ser consultadas [usando expressões XPath](/en/Using_XPath), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/en/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed para um servidor web](/en/DOM/XMLHttpRequest) (via XMLHttpRequest), transformado usando [XSLT](/en/XSLT "en/XSLT"), [XLink](/en/XLink "en/XLink"), convertido para um objeto JavaScript através de um [algoritmo JXON](/en/JXON), etc.
 
-<p>Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, uma vez que XUL é XML, a UI de sua aplicação pode ser manipulada, baixada, carregada, salva, carregada, convertida ou transformada de forma bastante fácil.</p>
+Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, uma vez que XUL é XML, a UI de sua aplicação pode ser manipulada, baixada, carregada, salva, carregada, convertida ou transformada de forma bastante fácil.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="internal" href="/en/XML" title="en/XML">XML</a></li>
- <li><a class="internal" href="/en/JXON" title="en/JXON">JXON</a></li>
- <li><a class="internal" href="/en/XPath" title="en/XPath">XPath</a></li>
- <li><a class="internal" href="/en/E4X" title="en/E4X">E4X (ECMAScript for XML)</a></li>
- <li><a class="internal" href="/en/Parsing_and_serializing_XML" title="en/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a class="internal" href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></li>
-</ul>
+- [XML](/en/XML "en/XML")
+- [JXON](/en/JXON "en/JXON")
+- [XPath](/en/XPath "en/XPath")
+- [E4X (ECMAScript for XML)](/en/E4X "en/E4X")
+- [Parsing and serializing XML](/en/Parsing_and_serializing_XML "en/Parsing_and_serializing_XML")
+- [XMLHttpRequest](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
 
-<p>{{ languages( { "fr": "fr/Comment_cr\u00e9er_un_arbre_DOM", "ja": "ja/How_to_create_a_DOM_tree", "zh-cn": "zh-cn/How_to_create_a_DOM_tree" } ) }}</p>
+{{ languages( { "fr": "fr/Comment_cr\u00e9er_un_arbre_DOM", "ja": "ja/How_to_create_a_DOM_tree", "zh-cn": "zh-cn/How_to_create_a_DOM_tree" } ) }}

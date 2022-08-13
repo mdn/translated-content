@@ -4,180 +4,158 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Tipo</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obrigatório</th>
-   <td>Não</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemplo</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"permissions": [
-  "*://developer.mozilla.org/*",
-  "webRequest"
-]</pre>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Tipo        | `Array` |
+| ----------- | ------- |
+| Obrigatório | Não     |
+| Exemplo     | ```json |
 
-<p>Use a chave <code>permissions</code> para solicitar privilégios especiais para sua extensão. Esta chave é um array de strings, onde cada string é uma solicitação para uma permissão.</p>
+"permissions": [ "*://developer.mozilla.org/*", "webRequest" ]
 
-<p>Se você solicitar permissões usando esta chave, o navegador poderá informar ao usuário que a extensão a ser instalada está solicitando certos privilégios, e perguntar se aceita ou não conceder esses privilégios. O navegador também poderá permitir que o usuário inspecione os privilégios de uma extensão depois que essa for instalada.</p>
+````|
 
-<p>A chave pode conter três tipos de permissões:</p>
+Use a chave `permissions` para solicitar privilégios especiais para sua extensão. Esta chave é um array de strings, onde cada string é uma solicitação para uma permissão.
 
-<ul>
- <li>permissões de servidor (host)</li>
- <li>permissões de API</li>
- <li>a permissão activeTab (aba ativa)</li>
-</ul>
+Se você solicitar permissões usando esta chave, o navegador poderá informar ao usuário que a extensão a ser instalada está solicitando certos privilégios, e perguntar se aceita ou não conceder esses privilégios. O navegador também poderá permitir que o usuário inspecione os privilégios de uma extensão depois que essa for instalada.
 
-<h2 id="Permissões_de_servidor_(host)">Permissões de servidor (host)</h2>
+A chave pode conter três tipos de permissões:
 
-<p>Permissões de servidor são espscificadas como <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Cada <em>pattern</em> identifica um grupo de URLs para os quais a extensão solicita privilégios adicionais. Por exemplo, uma permissão de servidor poderia ser <code>"*://developer.mozilla.org/*"</code>.</p>
+*   permissões de servidor (host)
+*   permissões de API
+*   a permissão activeTab (aba ativa)
 
-<p>Os privilégios adicionais incluem:</p>
+## Permissões de servidor (host)
 
-<ul>
- <li>acesso <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> e <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> para aquelas origens sem restrições <em>cross-origin</em> (mesmo para requisições feitas a partir de <em>content scripts</em>)</li>
- <li>habilidade de injetar scripts programaticamente (usando <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript</a>) em páginas servidas a partir daquelas origens</li>
- <li>habilidade de receber eventos a partir da API <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a> para aqueles servidores</li>
- <li>habilidade de acessar cookies daquele servidor usando a API <a href="/en-US/Add-ons/WebExtensions/API/cookies">cookies</a>, caso a permissão de API "cookies" também esteja incluída.</li>
- <li>desconsiderar a proteção contra rastreamento se o servidor for um domínio completo sem asteriscos. Não funciona com <code>&lt;all_urls&gt;</code>.</li>
-</ul>
+Permissões de servidor são espscificadas como [match patterns](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Cada _pattern_ identifica um grupo de URLs para os quais a extensão solicita privilégios adicionais. Por exemplo, uma permissão de servidor poderia ser `"*://developer.mozilla.org/*"`.
 
-<p>No Firefox, da versão 56 em diante, extensões recebem automaticamente permissões de servidor para sua própria origem, que é na forma:</p>
+Os privilégios adicionais incluem:
 
-<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+*   acesso [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) e [fetch](/pt-BR/docs/Web/API/Fetch_API) para aquelas origens sem restrições _cross-origin_ (mesmo para requisições feitas a partir de _content scripts_)
+*   habilidade de injetar scripts programaticamente (usando [tabs.executeScript](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)) em páginas servidas a partir daquelas origens
+*   habilidade de receber eventos a partir da API [webRequest](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) para aqueles servidores
+*   habilidade de acessar cookies daquele servidor usando a API [cookies](/en-US/Add-ons/WebExtensions/API/cookies), caso a permissão de API "cookies" também esteja incluída.
+*   desconsiderar a proteção contra rastreamento se o servidor for um domínio completo sem asteriscos. Não funciona com `<all_urls>`.
 
-<p>onde <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> é o ID interno da extensão. A extensão pode obter essa URL programaticamente chamando <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">extension.getURL()</a>:</p>
+No Firefox, da versão 56 em diante, extensões recebem automaticamente permissões de servidor para sua própria origem, que é na forma:
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>extension<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">""</span><span class="punctuation token">);</span>
-// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 
-<h2 id="Permissões_de_API">Permissões de API</h2>
+onde `60a20a9b-1ad4-af49-9b6c-c64c98c37920` é o ID interno da extensão. A extensão pode obter essa URL programaticamente chamando [extension.getURL()](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL):
 
-<p>Permissões de API são especificadas como palavras-chave. Cada palavra-chave nomeia uma API WebExtension que a extensão gostaria de usar.</p>
+```js
+browser.extension.getURL("");
+// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+````
 
-<p>As seguintes palavras-chave estão atualmente disponíveis:</p>
+## Permissões de API
 
-<ul>
- <li><code>activeTab</code></li>
- <li><code>alarms</code></li>
- <li><code>background</code></li>
- <li><code>bookmarks</code></li>
- <li><code>browserSettings</code></li>
- <li><code>browsingData</code></li>
- <li><code>contentSettings</code></li>
- <li><code>contextMenus</code></li>
- <li><code>contextualIdentities</code></li>
- <li><code>cookies</code></li>
- <li><code>debugger</code></li>
- <li><code>dns</code></li>
- <li><code>downloads</code></li>
- <li><code>downloads.open</code></li>
- <li><code>find</code></li>
- <li><code>geolocation</code></li>
- <li><code>history</code></li>
- <li><code>identity</code></li>
- <li><code>idle</code></li>
- <li><code>management</code></li>
- <li><code>menus</code></li>
- <li><code>nativeMessaging</code></li>
- <li><code>notifications</code></li>
- <li><code>pageCapture</code></li>
- <li><code>pkcs11</code></li>
- <li><code>privacy</code></li>
- <li><code>proxy</code></li>
- <li><code>search</code></li>
- <li><code>sessions</code></li>
- <li><code>storage</code></li>
- <li><code>tabHide</code></li>
- <li><code>tabs</code></li>
- <li><code>theme</code></li>
- <li><code>topSites</code></li>
- <li><code>webNavigation</code></li>
- <li><code>webRequest</code></li>
- <li><code>webRequestBlocking</code></li>
-</ul>
+Permissões de API são especificadas como palavras-chave. Cada palavra-chave nomeia uma API WebExtension que a extensão gostaria de usar.
 
-<p>Na maioria dos casos, a permissão apenas concede acesso à API, com as seguintes exceções:</p>
+As seguintes palavras-chave estão atualmente disponíveis:
 
-<ul>
- <li> <code>tabs</code> dá acesso a <a href="/en-US/Add-ons/WebExtensions/API/tabs">partes privilagiadas da API <code>tabs</code></a>: <code>Tab.url</code>, <code>Tab.title</code> e <code>Tab.faviconUrl</code>. No Firefox, você também precisa <code>tabs</code> se quiser incluir <code>url</code> no parâmetro <code>queryInfo</code> para  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code>. O resto ad API <code>tabs</code> pode ser usado sem solicitar nenhuma permissão.</li>
- <li><code>webRequestBlocking</code> permite usar o argumento "blocking", assim você pode <a href="/en-US/Add-ons/WebExtensions/API/WebRequest">modificar e cancelar requisições</a>.</li>
- <li><code>downloads.open</code> permite usar a API {{WebExtAPIRef("downloads.open()")}}.</li>
- <li><code>tabHide</code> permite usar a API {{WebExtAPIRef("tabs.hide()")}}.</li>
-</ul>
+- `activeTab`
+- `alarms`
+- `background`
+- `bookmarks`
+- `browserSettings`
+- `browsingData`
+- `contentSettings`
+- `contextMenus`
+- `contextualIdentities`
+- `cookies`
+- `debugger`
+- `dns`
+- `downloads`
+- `downloads.open`
+- `find`
+- `geolocation`
+- `history`
+- `identity`
+- `idle`
+- `management`
+- `menus`
+- `nativeMessaging`
+- `notifications`
+- `pageCapture`
+- `pkcs11`
+- `privacy`
+- `proxy`
+- `search`
+- `sessions`
+- `storage`
+- `tabHide`
+- `tabs`
+- `theme`
+- `topSites`
+- `webNavigation`
+- `webRequest`
+- `webRequestBlocking`
 
-<h2 id="Permissão_activeTab_(aba_ativa)">Permissão activeTab (aba ativa)</h2>
+Na maioria dos casos, a permissão apenas concede acesso à API, com as seguintes exceções:
 
-<p>Esta permissão é especificada como <code>"activeTab"</code>. Se uma extensão tem a permissão <code>activeTab</code>, quando o usuário interage com a extensão, a extensão recebe privilégios adicionais somente para a aba ativa.</p>
+- `tabs` dá acesso a [partes privilagiadas da API `tabs`](/en-US/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title` e `Tab.faviconUrl`. No Firefox, você também precisa `tabs` se quiser incluir `url` no parâmetro `queryInfo` para [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). O resto ad API `tabs` pode ser usado sem solicitar nenhuma permissão.
+- `webRequestBlocking` permite usar o argumento "blocking", assim você pode [modificar e cancelar requisições](/en-US/Add-ons/WebExtensions/API/WebRequest).
+- `downloads.open` permite usar a API {{WebExtAPIRef("downloads.open()")}}.
+- `tabHide` permite usar a API {{WebExtAPIRef("tabs.hide()")}}.
 
-<p>"Interação do usuário" inclui:</p>
+## Permissão activeTab (aba ativa)
 
-<ul>
- <li>o usuário clica na ação da extensão, no navegador ou na página</li>
- <li>o usuário seleciona um item da extensão no menu de contexto</li>
- <li>o usuário ativa um atalho de teclado definido pela extensão</li>
-</ul>
+Esta permissão é especificada como `"activeTab"`. Se uma extensão tem a permissão `activeTab`, quando o usuário interage com a extensão, a extensão recebe privilégios adicionais somente para a aba ativa.
 
-<p>Os privilégios adicionais são:</p>
+"Interação do usuário" inclui:
 
-<ul>
- <li>habilidade de injetar JavaScript ou CSS na aba programaticamente, usando <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript</a></code> e <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS</a></code></li>
- <li>acesso a essas partes privilegiadas da API <em>tabs</em> na aba atual: <code>Tab.url</code>, <code>Tab.title</code> e <code>Tab.faviconUrl</code>.</li>
-</ul>
+- o usuário clica na ação da extensão, no navegador ou na página
+- o usuário seleciona um item da extensão no menu de contexto
+- o usuário ativa um atalho de teclado definido pela extensão
 
-<p>A intenção desta permissão é permitir que extensões executem um caso de uso comum, sem ter que lhes dar permissões poderosas demais. Muitas extensões querem "fazer alguma coisa com a página atual quando o usuário pede". Por exemplo, considere uma extensão que queira executar um script na página atual quando o usuário clicar em uma ação do navegador. Se a permissão  <code>activeTab</code> não existisse, a extensão precisaria pedir a permissão de servidor <code>&lt;all_urls&gt;</code>. Mas isso daria à extensão mais poder que o necessário: ela poderia executar scripts em qualquer aba e quando quisesse, em vez de apenas na aba atual e somente em resposta a uma ação do usuário.</p>
+Os privilégios adicionais são:
 
-<p>Note que você só pode ter acesso à aba ou dado que estava ali, quando a interação do usuário ocorreu (por exemplo, um clique do mouse). Quando a aba ativa muda para outra página, por exemplo devido a concluir o carregamento ou algum outro evento, a permissão não lhe concede mais acesso à aba.</p>
+- habilidade de injetar JavaScript ou CSS na aba programaticamente, usando [`browser.tabs.executeScript`](/en-US/Add-ons/WebExtensions/API/tabs/executeScript) e [`browser.tabs.insertCSS`](/en-US/Add-ons/WebExtensions/API/tabs/insertCSS)
+- acesso a essas partes privilegiadas da API _tabs_ na aba atual: `Tab.url`, `Tab.title` e `Tab.faviconUrl`.
 
-<p>Normalmente, a aba a qual foi concedido <code>activeTab</code> é somente a aba ativa atual, exceto em um caso. A API <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code> permite a uma extensão criar um item de menu que é exibido se o usuário abrir o menu de contexto sobre uma aba (ou seja, no elemento na lista de abas que permite ao usuário mudar de uma aba para outra). Se o usuário clicar em um item desses, a permissão <code>activeTab</code> é concedida para a aba em que o usuário clicou, mesmo que essa não seja a aba ativa no momento (de acordo com Firefox 63, {{bug(1446956)}}).</p>
+A intenção desta permissão é permitir que extensões executem um caso de uso comum, sem ter que lhes dar permissões poderosas demais. Muitas extensões querem "fazer alguma coisa com a página atual quando o usuário pede". Por exemplo, considere uma extensão que queira executar um script na página atual quando o usuário clicar em uma ação do navegador. Se a permissão `activeTab` não existisse, a extensão precisaria pedir a permissão de servidor `<all_urls>`. Mas isso daria à extensão mais poder que o necessário: ela poderia executar scripts em qualquer aba e quando quisesse, em vez de apenas na aba atual e somente em resposta a uma ação do usuário.
 
-<h2 id="Acesso_à_área_de_transferência">Acesso à área de transferência</h2>
+Note que você só pode ter acesso à aba ou dado que estava ali, quando a interação do usuário ocorreu (por exemplo, um clique do mouse). Quando a aba ativa muda para outra página, por exemplo devido a concluir o carregamento ou algum outro evento, a permissão não lhe concede mais acesso à aba.
 
-<p>Existem duas permissões que permitem à extensão interagir com a área de transferência:</p>
+Normalmente, a aba a qual foi concedido `activeTab` é somente a aba ativa atual, exceto em um caso. A API [`menus`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) permite a uma extensão criar um item de menu que é exibido se o usuário abrir o menu de contexto sobre uma aba (ou seja, no elemento na lista de abas que permite ao usuário mudar de uma aba para outra). Se o usuário clicar em um item desses, a permissão `activeTab` é concedida para a aba em que o usuário clicou, mesmo que essa não seja a aba ativa no momento (de acordo com Firefox 63, {{bug(1446956)}}).
 
-<ul>
- <li><code>clipboardWrite</code>: escrever para a área de transferência usando <code>document.execCommand("copy")</code> ou <code>document.execCommand("cut")</code></li>
- <li><code>clipboardRead</code>: ler da área de transferência usando <code>document.execCommand("paste")</code></li>
-</ul>
+## Acesso à área de transferência
 
-<p>Consulte <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">Interação com a área de transferência</a> para saber todos os detalhes sobre isso.</p>
+Existem duas permissões que permitem à extensão interagir com a área de transferência:
 
-<h2 id="Armazenamento_ilimitado">Armazenamento ilimitado</h2>
+- `clipboardWrite`: escrever para a área de transferência usando `document.execCommand("copy")` ou `document.execCommand("cut")`
+- `clipboardRead`: ler da área de transferência usando `document.execCommand("paste")`
 
-<p>A permissão <code>unlimitedStorage</code>:</p>
+Consulte [Interação com a área de transferência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) para saber todos os detalhes sobre isso.
 
-<ul>
- <li>permite que extensões exceder qualquer quota imposta pela API {{WebExtAPIRef("storage.local")}}</li>
- <li>no Firefox, permite que extensões criem um <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">banco de dados IndexedDB "persistente"</a>, sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.</li>
-</ul>
+## Armazenamento ilimitado
 
-<h2 id="Exemplos">Exemplos</h2>
+A permissão `unlimitedStorage`:
 
-<pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
+- permite que extensões exceder qualquer quota imposta pela API {{WebExtAPIRef("storage.local")}}
+- no Firefox, permite que extensões criem um [banco de dados IndexedDB "persistente"](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics), sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.
 
-<p>Solicita acesso privilegiado a páginas sob developer.mozilla.org.</p>
+## Exemplos
 
-<pre class="brush: json no-line-numbers">  "permissions": ["tabs"]</pre>
+```json
+ "permissions": ["*://developer.mozilla.org/*"]
+```
 
-<p>Solicita acesso a partes privilegiadas da API <code>tabs</code>.</p>
+Solicita acesso privilegiado a páginas sob developer.mozilla.org.
 
-<pre class="brush: json no-line-numbers">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+```json
+  "permissions": ["tabs"]
+```
 
-<p>Solicita ambas as permissões anteriores.</p>
+Solicita acesso a partes privilegiadas da API `tabs`.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+```json
+  "permissions": ["*://developer.mozilla.org/*", "tabs"]
+```
 
-<p>{{Compat("webextensions.manifest.permissions")}}</p>
+Solicita ambas as permissões anteriores.
+
+## Compatibilidade com navegadores
+
+{{Compat("webextensions.manifest.permissions")}}

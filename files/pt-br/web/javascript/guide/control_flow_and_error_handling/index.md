@@ -10,131 +10,130 @@ tags:
 translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Declarações
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-<p class="summary">O JavaScript suporta um conjunto compacto de<strong> </strong>declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.</p>
+O JavaScript suporta um conjunto compacto de\*\* \*\*declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.
 
-<p>Veja a <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements">Referência do JavaScript</a> para detalhes sobre as declarações mostradas neste capítulo. No código em JavaScript, o caractere ponto e vírgula (<code>;</code>) é utilizado para separar declarações.</p>
+Veja a [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements) para detalhes sobre as declarações mostradas neste capítulo. No código em JavaScript, o caractere ponto e vírgula (`;`) é utilizado para separar declarações.
 
-<p>Toda expressão também é uma declaração. Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressões e Operadores</a> para informações completas sobre expressões.</p>
+Toda expressão também é uma declaração. Veja [Expressões e Operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) para informações completas sobre expressões.
 
-<h2 id="Declaração_em_bloco">Declaração em bloco</h2>
+## Declaração em bloco
 
-<p>Uma declaração em bloco é utilizada para agrupar declarações. O bloco é delimitado por um par de chaves:</p>
+Uma declaração em bloco é utilizada para agrupar declarações. O bloco é delimitado por um par de chaves:
 
-<pre class="syntaxbox">{
-   declaracao_1;
-   declaracao_2;
-   .
-   .
-   .
-   declaracao_n;
-}
-</pre>
+    {
+       declaracao_1;
+       declaracao_2;
+       .
+       .
+       .
+       declaracao_n;
+    }
 
-<h3 id="Exemplo"><strong>Exemplo</strong></h3>
+### Exemplo
 
-<p>Declarações em bloco são utilizadas geralmente com declarações de fluxo de controle (ex. <code>if</code>, <code>for</code>, <code>while</code>).</p>
+Declarações em bloco são utilizadas geralmente com declarações de fluxo de controle (ex. `if`, `for`, `while`).
 
-<pre class="brush: js">while (x &lt; 10) {
+```js
+while (x < 10) {
   x++;
 }
-</pre>
+```
 
-<p>Aqui, <code>{ x++; }</code> é a declaração de bloco.</p>
+Aqui, `{ x++; }` é a declaração de bloco.
 
-<p><strong>Importante</strong>: <span class="short_text" id="result_box" lang="pt"><span class="hps">Antes de</span> <span class="hps">ECMAScript</span> <span class="hps">6 o </span></span><span style="line-height: 1.5;">JavaScript <strong>não</strong> possuía escopo de bloco. Variáveis introduzidas dentro de um bloco possuem como escopo a função ou o script em que o bloco está contido, e, definir tais variáveis tem efeito muito além do bloco em si. Em outras palavras, declarações de bloco não introduzem um escopo. Embora blocos "padrão" sejam uma sintaxe válida não utilize-os, em JavaScript, pensando que funcionam como em C ou Java porque eles não funcionam da maneira que você acredita. Por exemplo:</span></p>
+**Importante**: Antes de ECMAScript 6 o JavaScript **não** possuía escopo de bloco. Variáveis introduzidas dentro de um bloco possuem como escopo a função ou o script em que o bloco está contido, e, definir tais variáveis tem efeito muito além do bloco em si. Em outras palavras, declarações de bloco não introduzem um escopo. Embora blocos "padrão" sejam uma sintaxe válida não utilize-os, em JavaScript, pensando que funcionam como em C ou Java porque eles não funcionam da maneira que você acredita. Por exemplo:
 
-<pre class="brush: js">var x = 1;
+```js
+var x = 1;
 {
   var x = 2;
 }
 console.log(x); // exibe 2
-</pre>
+```
 
-<p>Este código exibe 2 porque a declaração <code>var x</code> dentro do bloco possui o mesmo escopo que a declaração <code>var x</code> antes do bloco. Em C ou Java, o código equivalente exibiria 1.</p>
+Este código exibe 2 porque a declaração `var x` dentro do bloco possui o mesmo escopo que a declaração `var x` antes do bloco. Em C ou Java, o código equivalente exibiria 1.
 
-<h2 id="Declarações_condicionais">Declarações condicionais</h2>
+## Declarações condicionais
 
-<p>Uma declaração condicional é um conjunto de comandos que são executados caso uma condição especificada seja verdadeira. O JavaScript suporta duas declarações condicionais: <code>if...else</code> e <code>switch</code>.</p>
+Uma declaração condicional é um conjunto de comandos que são executados caso uma condição especificada seja verdadeira. O JavaScript suporta duas declarações condicionais: `if...else` e `switch`.
 
-<h3 id="if...else_statement" name="if...else_statement">Declaração if...else</h3>
+### Declaração if...else
 
-<p>Use a declaração <code>if</code> para executar alguma declaração caso a condição lógica for verdadeira. Use a cláusula opcional <code>else</code> para executar alguma declaração caso a condição lógica for falsa. Uma declaração <code>if</code> é declarada da seguinte maneira:</p>
+Use a declaração `if` para executar alguma declaração caso a condição lógica for verdadeira. Use a cláusula opcional `else` para executar alguma declaração caso a condição lógica for falsa. Uma declaração `if` é declarada da seguinte maneira:
 
-<pre class="syntaxbox">if (condicao) {
-  declaracao_1;
-} else {
-  declaracao_2;
-}</pre>
+    if (condicao) {
+      declaracao_1;
+    } else {
+      declaracao_2;
+    }
 
-<p>onde <code>condicao</code> pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a> para uma explicação sobre o que é avaliado como <code>true</code> e <code>false</code>. <span style="line-height: 1.5;">Se <code>condicao</code> for avaliada como verdadeira, declaracao<code>_1</code> é executada; caso contrário, <code>declaracao_2</code> é executada. <code>declaracao_1</code> e <code>declaracao_2</code> podem ser qualquer declaração, incluindo declarações <code>if</code> aninhadas.</span></p>
+onde `condicao` pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) para uma explicação sobre o que é avaliado como `true` e `false`. Se `condicao` for avaliada como verdadeira, declaracao`_1` é executada; caso contrário, `declaracao_2` é executada. `declaracao_1` e `declaracao_2` podem ser qualquer declaração, incluindo declarações `if` aninhadas.
 
-<p>Você pode também combinar declarações utilizando <code>else if</code> para obter várias condições testadas em sequência, como o seguinte:</p>
+Você pode também combinar declarações utilizando `else if` para obter várias condições testadas em sequência, como o seguinte:
 
-<pre class="syntaxbox">if (condicao) {
-  declaracao_1;
-} else if (condicao_2) {
-  declaracao_2;
-} else if (condicao_n) {
-  declaracao_n;
-} else {
-  declaracao_final;
-}</pre>
+    if (condicao) {
+      declaracao_1;
+    } else if (condicao_2) {
+      declaracao_2;
+    } else if (condicao_n) {
+      declaracao_n;
+    } else {
+      declaracao_final;
+    }
 
-<p>Para executar várias declarações, agrupe-as em uma declaração em bloco (<code>{ ... }</code>). Em geral, é uma boa prática sempre utilizar declarações em bloco, especialmente ao aninhar declarações <code>if</code>:</p>
+Para executar várias declarações, agrupe-as em uma declaração em bloco (`{ ... }`). Em geral, é uma boa prática sempre utilizar declarações em bloco, especialmente ao aninhar declarações `if`:
 
-<pre class="syntaxbox">if (condicao) {
-    declaracao_1_executada_se_condicao_for_verdadeira;
-    declaracao_2_executada_se_condicao_for_verdadeira;
-} else {
-    declaracao_3_executada_se_condicao_for_falsa;
-    <span style="font-size: 1rem;">declaracao_4_executada_se_condicao_for_falsa</span>;
-}
-</pre>
+    if (condicao) {
+        declaracao_1_executada_se_condicao_for_verdadeira;
+        declaracao_2_executada_se_condicao_for_verdadeira;
+    } else {
+        declaracao_3_executada_se_condicao_for_falsa;
+        declaracao_4_executada_se_condicao_for_falsa;
+    }
 
-<div>Recomenda-se não utilizar atribuições simples em uma expressão condicional porque o símbolo de atribuição poderia ser confundido com o de igualdade ao dar uma olhada no código. Por exemplo, não utilize o seguinte código:</div>
+Recomenda-se não utilizar atribuições simples em uma expressão condicional porque o símbolo de atribuição poderia ser confundido com o de igualdade ao dar uma olhada no código. Por exemplo, não utilize o seguinte código:
 
-<pre class="example-bad brush: js">if (x = y) {
+```js example-bad
+if (x = y) {
   /* faça a coisa certa */
 }
-</pre>
+```
 
-<p>Caso tenha que utilizar uma atribuição em uma expressão condicional, uma prática comum é colocar parênteses adicionais em volta da atribuição. Por exemplo:</p>
+Caso tenha que utilizar uma atribuição em uma expressão condicional, uma prática comum é colocar parênteses adicionais em volta da atribuição. Por exemplo:
 
-<pre class="brush: js">if ((x = y)) {
+```js
+if ((x = y)) {
   /* faça a coisa certa */
 }
-</pre>
+```
 
-<h4 id="Valores_avaliados_como_falsos">Valores avaliados como falsos</h4>
+#### Valores avaliados como falsos
 
-<p>Os seguintes valores são avaliados como falsos:</p>
+Os seguintes valores são avaliados como falsos:
 
-<ul>
- <li><code>false</code></li>
- <li><code>undefined</code></li>
- <li><code>null</code></li>
- <li><code>0</code></li>
- <li><code>NaN</code></li>
- <li>string vazia (<code>""</code>)</li>
-</ul>
+- `false`
+- `undefined`
+- `null`
+- `0`
+- `NaN`
+- string vazia (`""`)
 
-<p>Todos os outros valores, incluindo todos os objetos, são avaliados como verdadeiros quando passados para uma declaração condicional.</p>
+Todos os outros valores, incluindo todos os objetos, são avaliados como verdadeiros quando passados para uma declaração condicional.
 
-<p>Não confunda os valores booleanos primitivos <code>true</code> e <code>false</code> com os valores de <code>true</code> e <code>false</code> do objeto <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a>. Por exemplo:</p>
+Não confunda os valores booleanos primitivos `true` e `false` com os valores de `true` e `false` do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Por exemplo:
 
-<pre>var b = new Boolean(false);
-if (b) // esta condição é avaliada como verdadeira
-if (b == true) // esta condição é avaliada como falsa </pre>
+    var b = new Boolean(false);
+    if (b) // esta condição é avaliada como verdadeira
+    if (b == true) // esta condição é avaliada como falsa
 
-<p> </p>
+#### Exemplo
 
-<h4 id="Exemplo_2"><strong>Exemplo</strong></h4>
+No exemplo a seguir, a função `verifiqueDados` retorna verdadeiro se o número de caracteres em um objeto `Text` for três; caso contrário, exibe um alerta e retorna `falso`.
 
-<p>No exemplo a seguir, a função <code>verifiqueDados</code> retorna verdadeiro se o número de caracteres em um objeto <code>Text</code> for três; caso contrário, exibe um alerta e retorna <code>falso</code>.</p>
-
-<pre class="brush: js">function verifiqueDados() {
+```js
+function verifiqueDados() {
   if (document.form1.tresCaracteres.value.length == 3) {
     return true;
   } else {
@@ -143,94 +142,92 @@ if (b == true) // esta condição é avaliada como falsa </pre>
     return false;
   }
 }
-</pre>
+```
 
-<h3 id="switch_statement" name="switch_statement">Declaração switch</h3>
+### Declaração switch
 
-<p>Uma declaração <code>switch</code> permite que um programa avalie uma expressão e tente associar o valor da expressão ao rótulo de um <code>case</code>. Se uma correspondência é encontrada, o programa executa a declaração associada. Uma declaração <code>switch</code> se parece com o seguinte:</p>
+Uma declaração `switch` permite que um programa avalie uma expressão e tente associar o valor da expressão ao rótulo de um `case`. Se uma correspondência é encontrada, o programa executa a declaração associada. Uma declaração `switch` se parece com o seguinte:
 
-<pre class="syntaxbox">switch (expressao) {
-   case rotulo_1:
-      declaracoes_1
-      [break;]
-   case rotulo_2:
-      declaracoes_2
-      [break;]
-   ...
-   default:
-      declaracoes_padrao
-      [break;]
-}
-</pre>
+    switch (expressao) {
+       case rotulo_1:
+          declaracoes_1
+          [break;]
+       case rotulo_2:
+          declaracoes_2
+          [break;]
+       ...
+       default:
+          declaracoes_padrao
+          [break;]
+    }
 
-<p>O programa primeiramente procura por uma cláusula <code>case</code> com um rótulo que corresponda ao valor da expressão e então transfere o controle para aquela cláusula, executando as declaracoes associadas. Se nenhum rótulo correspondente é encontrado, o programa procura pela cláusula opcional <code>default</code> e, se encontrada, transfere o controle àquela cláusula, executando as declarações associadas. Se nenhuma cláusula <code>default</code> é encontrada, o programa continua a execução a partir da declaracao seguinte ao <code>switch</code>. Por convenção, a cláusula <code>default</code> é a última, mas não é necessário que seja assim.</p>
+O programa primeiramente procura por uma cláusula `case` com um rótulo que corresponda ao valor da expressão e então transfere o controle para aquela cláusula, executando as declaracoes associadas. Se nenhum rótulo correspondente é encontrado, o programa procura pela cláusula opcional `default` e, se encontrada, transfere o controle àquela cláusula, executando as declarações associadas. Se nenhuma cláusula `default` é encontrada, o programa continua a execução a partir da declaracao seguinte ao `switch`. Por convenção, a cláusula `default` é a última, mas não é necessário que seja assim.
 
-<p>A instrução <code>break</code> associada a cada cláusula <code>case,</code> garante que o programa sairá do <code>switch</code> assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao <code>switch</code>. Se a declaração <code>break</code> for omitida, o programa continua a execução a partir da próxima declaração dentro do <code>switch</code>.</p>
+A instrução `break` associada a cada cláusula `case,` garante que o programa sairá do `switch` assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao `switch`. Se a declaração `break` for omitida, o programa continua a execução a partir da próxima declaração dentro do `switch`.
 
-<h4 id="Exemplo_3"><strong>Exemplo</strong></h4>
+#### Exemplo
 
-<p>No exemplo a seguir, se <code>tipofruta</code> for avaliada como "<code>Banana</code>", o programa faz a correspondência do valor com <code>case </code>"<code>Banana</code>" e executa a declaração associada. Quando o <code>break</code> é encontrado, o programa termina o <code>switch</code> e executa a declaração seguinte ao condicional. Se o <code>break</code> fosse omitido, a declaração de <code>case </code>"<code>Cereja</code>" também seria executada.</p>
+No exemplo a seguir, se `tipofruta` for avaliada como "`Banana`", o programa faz a correspondência do valor com `case `"`Banana`" e executa a declaração associada. Quando o `break` é encontrado, o programa termina o `switch` e executa a declaração seguinte ao condicional. Se o `break` fosse omitido, a declaração de `case `"`Cereja`" também seria executada.
 
-<pre class="brush: js">switch (tipofruta) {
+```js
+switch (tipofruta) {
    case "Laranja":
-      console.log("O quilo da laranja está R$0,59.&lt;br&gt;");
+      console.log("O quilo da laranja está R$0,59.<br>");
       break;
    case "Maçã":
-      console.log("O quilo da maçã está R$0,32.&lt;br&gt;");
+      console.log("O quilo da maçã está R$0,32.<br>");
       break;
    case "Banana":
-      console.log("O quilo da banana está R$0,48.&lt;br&gt;");
+      console.log("O quilo da banana está R$0,48.<br>");
       break;
    case "Cereja":
-      console.log("O quilo da cereja está R$3,00.&lt;br&gt;");
+      console.log("O quilo da cereja está R$3,00.<br>");
       break;
    case "Manga":
-      console.log("O quilo da manga está R$0,56.&lt;br&gt;");
+      console.log("O quilo da manga está R$0,56.<br>");
        break;
    case "Mamão":
-      console.log("O quilo do mamão está R$2,23.&lt;br&gt;");
+      console.log("O quilo do mamão está R$2,23.<br>");
       break;
    default:
-      console.log("Desculpe, não temos " + tipofruta + ".&lt;br&gt;");
+      console.log("Desculpe, não temos " + tipofruta + ".<br>");
 }
-console.log("Gostaria de mais alguma coisa?&lt;br&gt;");</pre>
+console.log("Gostaria de mais alguma coisa?<br>");
+```
 
-<h2 id="Declarações_de_Manipulação_de_Error">Declarações de Manipulação de Error</h2>
+## Declarações de Manipulação de Error
 
-<p>Você pode chamar uma exceção usando a declaração <code>throw</code> e manipulá-la usando a declaração <code>try...catch</code>.</p>
+Você pode chamar uma exceção usando a declaração `throw` e manipulá-la usando a declaração `try...catch`.
 
-<ul>
- <li><a href="#">Declaração throw</a></li>
- <li><a href="#try_catch_statement">Declaração <code>try...catch</code> </a></li>
-</ul>
+- Declaração throw
+- [Declaração `try...catch`](#try_catch_statement)
 
-<h3 id="Tipos_de_exceções">Tipos de exceções</h3>
+### Tipos de exceções
 
-<p>Praticamente pode-se utilizar <code>throw</code> em qualquer objeto de JavaScript. Todavia, nem todos os objetos ativados por <code>throw</code> são igualmente criados. Embora seja bastante comum tratar números ou strings como erros usando <code>throw</code>, é frequentemente mais eficiente usar alguns tipos de exceções especificamente criadas para esses propósitos:</p>
+Praticamente pode-se utilizar `throw` em qualquer objeto de JavaScript. Todavia, nem todos os objetos ativados por `throw` são igualmente criados. Embora seja bastante comum tratar números ou strings como erros usando `throw`, é frequentemente mais eficiente usar alguns tipos de exceções especificamente criadas para esses propósitos:
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">ECMAScript exceptions</a></li>
- <li>{{domxref("DOMException")}} and {{domxref("DOMError")}}</li>
-</ul>
+- [ECMAScript exceptions](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
+- {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
-<h3 id="Declaração_throw"><code>Declaração throw</code></h3>
+### `Declaração throw`
 
-<p>Use a declaração <code>throw</code> para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:</p>
+Use a declaração `throw` para lançar uma exceção. Quando você lança uma exceção, você especifica a expressão contendo o valor a ser lançado:
 
-<pre class="syntaxbox">throw expressão;
-</pre>
+    throw expressão;
 
-<p>Você pode lançar qualquer expressão, não apenas expressões de um tipo específico. O código a seguir lança várias exceções de diferentes tipos:</p>
+Você pode lançar qualquer expressão, não apenas expressões de um tipo específico. O código a seguir lança várias exceções de diferentes tipos:
 
-<pre class="brush: js">throw "Error2";   // tipo string
+```js
+throw "Error2";   // tipo string
 throw 42;         // tipo numérico
 throw true;       // tipo booleano
 throw {toString: function() { return "Eu sou um objeto!"; } };
-</pre>
+```
 
-<div class="note"><strong>Nota: </strong> Você pode especificar um objeto quando você lança uma exceção. Você pode então, referenciar as propriedades de um objeto no bloco catch.  O exemplo a seguir cria um objeto myUserException do tipo userException e o usa em uma declaração throw.</div>
+> **Note:** **Nota:** Você pode especificar um objeto quando você lança uma exceção. Você pode então, referenciar as propriedades de um objeto no bloco catch. O exemplo a seguir cria um objeto myUserException do tipo userException e o usa em uma declaração throw.
 
-<pre class="brush: js">// Cria um objeto do tipo UserException
+```js
+// Cria um objeto do tipo UserException
 function UserException(mensagem) {
   this.mensagem = mensagem;
   this.nome = "UserException";
@@ -243,17 +240,19 @@ UserException.prototype.toString = function() {
 }
 
 // Cria uma instância de um tipo de objeto e lança ela
-throw new UserException("Valor muito alto");</pre>
+throw new UserException("Valor muito alto");
+```
 
-<h3 id="Exception_handling_statements" name="Exception_handling_statements"><code>Declaração try...catch</code></h3>
+### `Declaração try...catch`
 
-<p>A declaração <code>try...catch</code> coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração <code>try...catch</code> pegá-a.</p>
+A declaração `try...catch` coloca um bloco de declarações em try, e especifica uma ou mais respostas para uma exceção lançada. Se uma exceção é lançada, a declaração `try...catch` pegá-a.
 
-<p>A declaração <code>try...catch</code> é composta por um bloco <code>try</code>, que contém uma ou mais declarações, e zero ou mais blocos <code>catch</code>, contendo declarações que especificam o que fazer se uma exceção é lançada no bloco <code>try</code>. Ou seja, você deseja que o bloco <code>try</code>  tenha sucesso, e se ele não tiver êxito, você quer o controle passado para o bloco <code>catch</code>. Se qualquer declaração do bloco <code>try</code> (ou em uma função chamada dentro do bloco <code>try</code>) lança uma exceção, o controle é imediatamente mudado para o bloco <code>catch</code>. Se nenhuma exceção é lançada no bloco <code>try</code>, o bloco <code>catch</code> é ignorado. O bloco <code>finally</code> executa após os blocos <code>try</code> e <code>catch</code> executarem, mas antes das declarações seguinte ao bloco<code> try...catch.</code></p>
+A declaração `try...catch` é composta por um bloco `try`, que contém uma ou mais declarações, e zero ou mais blocos `catch`, contendo declarações que especificam o que fazer se uma exceção é lançada no bloco `try`. Ou seja, você deseja que o bloco `try` tenha sucesso, e se ele não tiver êxito, você quer o controle passado para o bloco `catch`. Se qualquer declaração do bloco `try` (ou em uma função chamada dentro do bloco `try`) lança uma exceção, o controle é imediatamente mudado para o bloco `catch`. Se nenhuma exceção é lançada no bloco `try`, o bloco `catch` é ignorado. O bloco `finally` executa após os blocos `try` e `catch` executarem, mas antes das declarações seguinte ao bloco` try...catch.`
 
-<p>O exemplo a seguir usa a declaração <code>try...catch</code>. O exemplo chama uma função que recupera o nome de um mês no array com base no valor passado para a função. Se o valor não corresponde ao número de um mês (1-12), uma exceção é lançada com o valor "<code>InvalidMonthNo</code>" e as declarações no bloco <code>catch</code> define a váriavel <code>monthName</code> para <code>unknown</code>.</p>
+O exemplo a seguir usa a declaração `try...catch`. O exemplo chama uma função que recupera o nome de um mês no array com base no valor passado para a função. Se o valor não corresponde ao número de um mês (1-12), uma exceção é lançada com o valor "`InvalidMonthNo`" e as declarações no bloco `catch` define a váriavel `monthName` para `unknown`.
 
-<pre class="brush: js">function getMonthName(mo) {
+```js
+function getMonthName(mo) {
   mo = mo - 1; // Ajusta o número do mês para o índice do array (1 = Jan, 12 = Dec)
   var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
                 "Aug","Sep","Oct","Nov","Dec"];
@@ -269,39 +268,40 @@ try { // statements to try
 }
 catch (e) {
   monthName = "unknown";
-  logMyErrors(e); // passa a exceção para o manipulador de erro -&gt; sua função local.
+  logMyErrors(e); // passa a exceção para o manipulador de erro -> sua função local.
 }
-</pre>
+```
 
-<h4 id="The_catch_Block" name="The_catch_Block">O bloco <code>catch</code></h4>
+#### O bloco `catch`
 
-<p>Você pode usar um bloco <code>catch</code> para lidar com todas as exceções que podem ser geradas no bloco <code>try</code>.</p>
+Você pode usar um bloco `catch` para lidar com todas as exceções que podem ser geradas no bloco `try`.
 
-<pre class="syntaxbox">catch (catchID) {
-  declaracoes
-}
-</pre>
+    catch (catchID) {
+      declaracoes
+    }
 
-<p>O bloco <code>catch</code> específica um identificador (<code>catchID</code> na sintaxe anterior), que contém o valor especificado pela declaração <code>throw</code>; você pode usar esse identificador para obter informações sobre a exceção que foi lançada. JavaScript cria este identificador quando o bloco <code>catch</code> é inserido; o identificador dura enquanto o bloco <code>catch</code> está em execução, depois que termina a execução do bloco <code>catch</code>, o identificador não estará mais disponível.</p>
+O bloco `catch` específica um identificador (`catchID` na sintaxe anterior), que contém o valor especificado pela declaração `throw`; você pode usar esse identificador para obter informações sobre a exceção que foi lançada. JavaScript cria este identificador quando o bloco `catch` é inserido; o identificador dura enquanto o bloco `catch` está em execução, depois que termina a execução do bloco `catch`, o identificador não estará mais disponível.
 
-<p>Por exemplo, o seguinte código lança uma exceção. Quando a exceção ocorre, o controle é transferido para o bloco <code>catch</code>.</p>
+Por exemplo, o seguinte código lança uma exceção. Quando a exceção ocorre, o controle é transferido para o bloco `catch`.
 
-<pre class="brush: js">try {
+```js
+try {
   throw "myException"; // lança  uma exceção
 }
 catch (e) {
   // declarações de lidar com as exceções
   logMyErrors(e); // passar a exceção para o manipulador de erro
 }
-</pre>
+```
 
-<h4 id="O_bloco_finally">O bloco <code>finally</code></h4>
+#### O bloco `finally`
 
-<p>O bloco <code>finally</code> contém instruções para executar após os blocos <code>try</code> e <code>catch</code>, mas antes das declarações seguinte a declaração <code>try...catch</code>. O bloco <code>finally</code> é executado com ou sem o lançamento de uma exceção. Se uma exceção é lançada, a declaração no bloco <code>finally</code> executa, mesmo que nenhum bloco <code>catch</code> processe a exceção.</p>
+O bloco `finally` contém instruções para executar após os blocos `try` e `catch`, mas antes das declarações seguinte a declaração `try...catch`. O bloco `finally` é executado com ou sem o lançamento de uma exceção. Se uma exceção é lançada, a declaração no bloco `finally` executa, mesmo que nenhum bloco `catch` processe a exceção.
 
-<p>Você pode usar bloco <code>finally</code> para deixar a falha de seu script agradável quando uma exceção ocorre; por exemplo, você pode precisar liberar um recurso que seu script tem amarrado. O exemplo a seguir abre um arquivo e então executa instruções que usam o arquivo (JavaScript do lado do servidor permite que você acesse arquivos). Se um exceção é lançada enquanto o arquivo é aberto, o bloco <code>finally</code> fecha o arquivo antes do script falhar.</p>
+Você pode usar bloco `finally` para deixar a falha de seu script agradável quando uma exceção ocorre; por exemplo, você pode precisar liberar um recurso que seu script tem amarrado. O exemplo a seguir abre um arquivo e então executa instruções que usam o arquivo (JavaScript do lado do servidor permite que você acesse arquivos). Se um exceção é lançada enquanto o arquivo é aberto, o bloco `finally` fecha o arquivo antes do script falhar.
 
-<pre class="brush: js">openMyFile();
+```js
+openMyFile();
 try {
   writeMyFile(theData); //Isso pode lançar um erro
 } catch(e) {
@@ -309,11 +309,12 @@ try {
 } finally {
   closeMyFile(); // Sempre feche o recurso
 }
-</pre>
+```
 
-<p>Se o bloco <code>finally</code> retornar um valor, este valor se torna o valor de toda a entrada <code>try-catch-finally</code>, independente de quaisquer declarações de retorno nos blocos <code>try</code> e <code>catch</code>:</p>
+Se o bloco `finally` retornar um valor, este valor se torna o valor de toda a entrada `try-catch-finally`, independente de quaisquer declarações de retorno nos blocos `try` e `catch`:
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   try {
     console.log(0);
     throw "bogus";
@@ -331,11 +332,12 @@ try {
   console.log(5); // não executa
 }
 f(); // exibe 0, 1, 3; retorna false
-</pre>
+```
 
-<p>Substituições de valores de retorno pelo bloco <code>finally</code> também se aplica a exceções lançadas ou re-lançadas dentro do bloco <code>catch</code>:</p>
+Substituições de valores de retorno pelo bloco `finally` também se aplica a exceções lançadas ou re-lançadas dentro do bloco `catch`:
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   try {
     throw "bogus";
   } catch(e) {
@@ -358,19 +360,21 @@ try {
 }
 
 // SAIDA
-// captura interior "falso"</pre>
+// captura interior "falso"
+```
 
-<h4 id="Nesting_try...catch_Statements" name="Nesting_try...catch_Statements">Aninhando declarações try...catch</h4>
+#### Aninhando declarações try...catch
 
-<p>Você pode aninhar uma ou mais declarações <code>try...catch</code>. Se uma declaração <code>try...catch</code> interior não tem um bloco <code>catch</code>, o delimitador do bloco <code>try...catch</code> da declaração <code>catch</code> é verificado por uma correspondência.</p>
+Você pode aninhar uma ou mais declarações `try...catch`. Se uma declaração `try...catch` interior não tem um bloco `catch`, o delimitador do bloco `try...catch` da declaração `catch` é verificado por uma correspondência.
 
-<h3 id="Utilizing_Error_objects" name="Utilizing_Error_objects">Utilizando objetos de <code>erro</code></h3>
+### Utilizando objetos de `erro`
 
-<p>Dependendo do tipo de erro, você pode ser capaz de usar as propriedade 'name' e 'message' para pegar uma mensagem mais refinada. A propriedade 'name' fornece a classe geral de erro (ex., 'DOMException' ou 'Error'), enquanto 'message' geralmente oferece uma mensagem mais sucinta do que se poderia obter através da conversão do objeto de erro para uma string.</p>
+Dependendo do tipo de erro, você pode ser capaz de usar as propriedade 'name' e 'message' para pegar uma mensagem mais refinada. A propriedade 'name' fornece a classe geral de erro (ex., 'DOMException' ou 'Error'), enquanto 'message' geralmente oferece uma mensagem mais sucinta do que se poderia obter através da conversão do objeto de erro para uma string.
 
-<p>Se você está lançando suas próprias exceções, a fim de tirar proveito dessas propriedades (como o seu bloco catch não discrimina entre suas próprias exceções e as exceções próprias da linguagem), você pode usar o construtor Error. Por exemplo:</p>
+Se você está lançando suas próprias exceções, a fim de tirar proveito dessas propriedades (como o seu bloco catch não discrimina entre suas próprias exceções e as exceções próprias da linguagem), você pode usar o construtor Error. Por exemplo:
 
-<pre class="brush: js">function doSomethingErrorProne () {
+```js
+function doSomethingErrorProne () {
   if (ourCodeMakesAMistake()) {
     throw (new Error('A mensagem'));
   } else {
@@ -384,28 +388,28 @@ try {
 catch (e) {
   console.log(e.name); // exibe 'Error'
   console.log(e.message); // exibe 'A mensagem' ou uma mensagem de erro em JavaScript
-}</pre>
+}
+```
 
-<h2 id="Promises">Promises</h2>
+## Promises
 
-<p>Começando com ECMAScript 6, JavaScript ganha suporte para objetos {{jsxref("Promise")}} que lhe permite controlar o fluxo de operações diferídas e assíncronas.</p>
+Começando com ECMAScript 6, JavaScript ganha suporte para objetos {{jsxref("Promise")}} que lhe permite controlar o fluxo de operações diferídas e assíncronas.
 
-<p>Uma Promise assume um destes estados:</p>
+Uma Promise assume um destes estados:
 
-<ul>
- <li><em>pending</em>: estado inicial, não <code>fulfilled</code>, ou <code>rejected</code>.</li>
- <li><em>fulfilled</em>: operação bem sucedida.</li>
- <li><em>rejected</em>: operação falha.</li>
- <li><em>settled</em>: A Promise é fulfilled ou rejected, mas não pending.</li>
-</ul>
+- _pending_: estado inicial, não `fulfilled`, ou `rejected`.
+- _fulfilled_: operação bem sucedida.
+- _rejected_: operação falha.
+- _settled_: A Promise é fulfilled ou rejected, mas não pending.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+![](https://mdn.mozillademos.org/files/8633/promises.png)
 
-<h3 id="Carregando_uma_imagem_com_XHR">Carregando uma imagem com XHR</h3>
+### Carregando uma imagem com XHR
 
-<p>Um exemplo simples usando Promise e <code><a href="/pt-BR/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> para carregar uma imagem disponível no repositório MDN GitHub </code><a href="https://github.com/mdn/promises-test/blob/gh-pages/index.html">promise-test</a>. Você também pode <a href="http://mdn.github.io/promises-test/">vê-lo executando</a>. Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo <code>Promise</code> para que você possa ter uma ideia:</p>
+Um exemplo simples usando Promise e `XMLHttpRequest para carregar uma imagem disponível no repositório MDN GitHub `[promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
 
-<pre class="brush: js">function imgLoad(url) {
+```js
+function imgLoad(url) {
   return new Promise(function(resolve, reject) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -423,8 +427,9 @@ catch (e) {
     };
     request.send();
   });
-}</pre>
+}
+```
 
-<p>Para uma informação mais detalhada, consulte a página de referência {{jsxref("Promise")}}.</p>
+Para uma informação mais detalhada, consulte a página de referência {{jsxref("Promise")}}.
 
-<div>{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

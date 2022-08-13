@@ -3,30 +3,29 @@ title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Promise.reject(motivo)</strong></code> retorna um objeto Promise que é rejeitada com um dado motivo.</p>
+O método **`Promise.reject(motivo)`** retorna um objeto Promise que é rejeitada com um dado motivo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>Promise.reject(motivo)</var>;</pre>
+    Promise.reject(motivo);
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>motivo</dt>
- <dd>Motivo pelo qual este Promise foi rejeitado.</dd>
-</dl>
+- motivo
+  - : Motivo pelo qual este Promise foi rejeitado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método estático <code>Promise.reject</code> retorna uma <code>Promise</code> que é rejeitada. Para fins de debug e captura de erros seletiva, é útil que o motivo seja uma <code>instanceof</code> {{jsxref("Error")}}.</p>
+O método estático `Promise.reject` retorna uma `Promise` que é rejeitada. Para fins de debug e captura de erros seletiva, é útil que o motivo seja uma `instanceof` {{jsxref("Error")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_estático_Promise.reject()">Usando o método estático Promise.reject()</h3>
+### Usando o método estático Promise.reject()
 
-<pre class="brush: js">Promise.reject("Testando reject estático").then(function(motivo) {
+```js
+Promise.reject("Testando reject estático").then(function(motivo) {
   // não executado
 }, function(motivo) {
   console.log(motivo); // "Testando reject estático"
@@ -36,39 +35,21 @@ Promise.reject(new Error("falha")).then(function(erro) {
   // não executado
 }, function(erro) {
   console.log(erro); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial em um padrão ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Situação                     | Comentário                           |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------ |
+| {{SpecName('ES6', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES6')}}         | Definição inicial em um padrão ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+{{Compat("javascript.builtins.Promise.reject")}}
 
-<p> </p>
+## Ver também
 
-<h2 id="Ver_também">Ver também</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://github.com/petkaantonov/bluebird#error-handling">Captura de erros seletiva com a biblioteca de Promise BlueBird</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Captura de erros seletiva com a biblioteca de Promise BlueBird](https://github.com/petkaantonov/bluebird#error-handling)

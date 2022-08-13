@@ -12,61 +12,49 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>setMilliseconds()</code></strong> atribui os milissegundos para a data específica de acordo com a hora local.</p>
+O método **`setMilliseconds()`** atribui os milissegundos para a data específica de acordo com a hora local.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
 
+## Sintaxe
 
+    dateObj.setMilliseconds(millisecondsValue)
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setMilliseconds(<var>millisecondsValue</var>)</code></pre>
+- `millisecondsValue`
+  - : Um número entre 0 e 999, representando os milissegundos.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>millisecondsValue</code></dt>
- <dd>Um número entre 0 e 999, representando os milissegundos.</dd>
-</dl>
+O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.</p>
+Se você especifica um número fora do alcance esperado, a informação de data no objeto {{jsxref("Date")}} é atualizado de acordo. Por exemplo, se você especifica 1005, o número de segundos é incrementado em 1, e 5 é utilizado para os milissegundos.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Se você especifica um número fora do alcance esperado, a informação de data no objeto {{jsxref("Date")}} é atualizado de acordo. Por exemplo, se você especifica 1005, o número de segundos é incrementado em 1, e 5 é utilizado para os milissegundos.</p>
+### Usando `setMilliseconds()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setMilliseconds">Usando <code>setMilliseconds()</code></h3>
-
-<pre class="brush: js notranslate">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMilliseconds(100);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setMilliseconds")}}</p>
+{{Compat("javascript.builtins.Date.setMilliseconds")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}

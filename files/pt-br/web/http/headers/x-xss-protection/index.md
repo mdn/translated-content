@@ -9,89 +9,74 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de resposta HTTP <strong><code>X-XSS-Protection</code></strong> é uma funcionalidade do Internet Explorer, Chrome e Safari que impede páginas de carregarem quando eles detectam ataques de scripting entre sites ({{Glossary("XSS")}}) refletidos. Apesar destas proteções serem majoritariamente desnecessárias em navegadores modernos em sites utilizando uma forte {{HTTPHeader("Content-Security-Policy")}} que desabilita o uso de JavaScript <em>inline</em> (<code>'unsafe-inline'</code>), eles ainda podem oferecer proteções para usuários de navegadores mais antigos que ainda não suportam {{Glossary("CSP")}}.</p>
+O cabeçalho de resposta HTTP **`X-XSS-Protection`** é uma funcionalidade do Internet Explorer, Chrome e Safari que impede páginas de carregarem quando eles detectam ataques de scripting entre sites ({{Glossary("XSS")}}) refletidos. Apesar destas proteções serem majoritariamente desnecessárias em navegadores modernos em sites utilizando uma forte {{HTTPHeader("Content-Security-Policy")}} que desabilita o uso de JavaScript _inline_ (`'unsafe-inline'`), eles ainda podem oferecer proteções para usuários de navegadores mais antigos que ainda não suportam {{Glossary("CSP")}}.
 
-<div class="note">
-<ul>
- <li>Chrome <a href="https://www.chromestatus.com/feature/5021976655560704">removeu o XSS Auditor deles</a></li>
- <li>Firefox não tem, e <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528661">não irá implementar <code>X-XSS-Protection</code></a></li>
- <li>Edge <a href="https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/">aposentou o filtro XSS deles</a></li>
-</ul>
+> **Note:** \* Chrome [removeu o XSS Auditor deles](https://www.chromestatus.com/feature/5021976655560704)
+>
+> - Firefox não tem, e [não irá implementar `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
+> - Edge [aposentou o filtro XSS deles](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) sem permitir scripts `unsafe-inline` ao invés disso.
 
-<p>Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a></code> sem permitir scripts <code>unsafe-inline</code> ao invés disso.</p>
-</div>
+| Tipo de cabeçalho                                | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    X-XSS-Protection: 0
+    X-XSS-Protection: 1
+    X-XSS-Protection: 1; mode=block
+    X-XSS-Protection: 1; report=<reporting-uri>
 
-<pre class="syntaxbox notranslate">X-XSS-Protection: 0
-X-XSS-Protection: 1
+- 0
+  - : Desabilita filtragem XSS.
+- 1
+  - : Habilita filtragem XSS (geralmente padrão em navegadores). Se um ataque de scripting entre sites é detectado, o navegador irá higienizar a página (remover as partes inseguras).
+- 1; mode=block
+  - : Habilita filtragem XSS. Ao invés de higienizar a página, o navegador irá impedir a renderização da página em que o ataque foi detectado.
+- 1; report=\<reporting-URI> (Chromium somente)
+  - : Habilita filtragem XSS. Se o ataque de scripting entre sites é detectado, o navegador irá higienizar a página e reportar a violação. Isso utiliza a funcionalidade da diretiva CSP {{CSP("report-uri")}} para enviar o relatório.
+
+## Exemplos
+
+Bloqueia páginas de carregarem quando elas detectam ataques XSS refletidos:
+
+```bash
 X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
-</pre>
+```
 
-<dl>
- <dt>0</dt>
- <dd>Desabilita filtragem XSS.</dd>
- <dt>1</dt>
- <dd>Habilita filtragem XSS (geralmente padrão em navegadores). Se um ataque de scripting entre sites é detectado, o navegador irá higienizar a página (remover as partes inseguras).</dd>
- <dt>1; mode=block</dt>
- <dd>Habilita filtragem XSS. Ao invés de higienizar a página, o navegador irá impedir a renderização da página em que o ataque foi detectado.</dd>
- <dt>1; report=&lt;reporting-URI&gt; (Chromium somente)</dt>
- <dd>Habilita filtragem XSS. Se o ataque de scripting entre sites é detectado, o navegador irá higienizar a página e reportar a violação. Isso utiliza a funcionalidade da diretiva CSP {{CSP("report-uri")}} para enviar o relatório.</dd>
-</dl>
+PHP
 
-<h2 id="Exemplos">Exemplos</h2>
+```php
+header("X-XSS-Protection: 1; mode=block");
+```
 
-<p>Bloqueia páginas de carregarem quando elas detectam ataques XSS refletidos:</p>
+Apache (.htaccess)
 
-<pre class="brush: bash notranslate">X-XSS-Protection: 1; mode=block</pre>
-
-<p>PHP</p>
-
-<pre class="brush: php notranslate">header("X-XSS-Protection: 1; mode=block");</pre>
-
-<p>Apache (.htaccess)</p>
-
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<p>Nginx</p>
+Nginx
 
-<pre class="brush: bash notranslate">add_header "X-XSS-Protection" "1; mode=block";</pre>
+```bash
+add_header "X-XSS-Protection" "1; mode=block";
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhuma especificação ou rascunho.</p>
+Não faz parte de nenhuma especificação ou rascunho.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("http.headers.X-XSS-Protection")}}
 
+## Veja também
 
-<p>{{Compat("http.headers.X-XSS-Protection")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/">Controlando o XSS Filter (Controlling the XSS Filter) – Microsoft</a></li>
- <li><a href="https://www.virtuesecurity.com/blog/understanding-xss-auditor/">Entendendo o XSS Auditor (Understanding XSS Auditor) – Virtue Security</a></li>
- <li>
-  <p><a href="https://blog.innerht.ml/the-misunderstood-x-xss-protection/">O mal-entendido X-XSS-Protection (The misunderstood X-XSS-Protection) – blog.innerht.ml</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Controlando o XSS Filter (Controlling the XSS Filter) – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
+- [Entendendo o XSS Auditor (Understanding XSS Auditor) – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
+- [O mal-entendido X-XSS-Protection (The misunderstood X-XSS-Protection) – blog.innerht.ml](https://blog.innerht.ml/the-misunderstood-x-xss-protection/)

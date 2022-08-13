@@ -7,30 +7,30 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">ReferenceError: Use before delaration (Edge)
-ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
-</pre>
+    ReferenceError: Use before delaration (Edge)
+    ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+    ReferenceError: 'x' is not defined (Chrome)
 
-<h2 id="Tipo_de_Erro">Tipo de Erro</h2>
+## Tipo de Erro
 
-<p>{{jsxref("ReferenceError")}}</p>
+{{jsxref("ReferenceError")}}
 
-<h2 id="O_que_está_errado">O  que está errado:</h2>
+## O que está errado:
 
-<p>Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações <code>let</code> ou <code>const</code> são acessadas antes de serem definidas.</p>
+Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações `let` ou `const` são acessadas antes de serem definidas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Errado">Errado</h3>
+### Errado
 
-<p>Neste caso, a variável "foo" é redeclarada usando <code>let</code>.</p>
+Neste caso, a variável "foo" é redeclarada usando `let`.
 
-<pre class="brush: js example-bad">function test() {
+```js example-bad
+function test() {
   let foo = 33;
   if (true) {
     let foo = (foo + 55);
@@ -39,23 +39,22 @@ ReferenceError: 'x' is not defined (Chrome)
   }
 }
 test();
-</pre>
+```
 
-<h3 id="Certo">Certo</h3>
+### Certo
 
-<p>Para mudar "foo" dentro do bloco if você precisa remover o <code>let</code> que causa a redeclaração.</p>
+Para mudar "foo" dentro do bloco if você precisa remover o `let` que causa a redeclaração.
 
-<pre class="brush: js example-good">function test(){
+```js example-good
+function test(){
    let foo = 33;
    if (true) {
       foo = (foo + 55);
    }
 }
 test();
-</pre>
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">Temporal Dead Zone e erros com let.</a></li>
-</ul>
+- [Temporal Dead Zone e erros com let.](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)

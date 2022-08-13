@@ -7,66 +7,41 @@ tags:
   - cabeçalho
 translation_of: Web/HTTP/Headers/From
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O cabeçalho de requisição <code><strong>From</strong></code> contém um endereço de email da Internet para um usuário humano que controla o agente de usuário requisitante poder enviar uma mensagem.</p>
+O cabeçalho de requisição **`From`** contém um endereço de email da Internet para um usuário humano que controla o agente de usuário requisitante poder enviar uma mensagem.
 
-<p>Se você está rodando um agente de usuário robótico (e.g. um <em>crawler</em>), o cabeçalho <code>From</code> deve ser enviado, para que você possa contatar se problemas ocorrerem em servidores, como por exemplo, o robô estar enviando requisições excessivas, não desejadas ou inválidas.</p>
+Se você está rodando um agente de usuário robótico (e.g. um _crawler_), o cabeçalho `From` deve ser enviado, para que você possa contatar se problemas ocorrerem em servidores, como por exemplo, o robô estar enviando requisições excessivas, não desejadas ou inválidas.
 
-<div class="warning">
-<p>Você não deve usar o cabeçalho <code>From</code> para controle de acesso ou autenticação.</p>
-</div>
+> **Warning:** Você não deve usar o cabeçalho `From` para controle de acesso ou autenticação.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de cabeçalho</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>não</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de cabeçalho                                | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | não                                      |
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">From: &lt;email&gt;
-</pre>
+    From: <email>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;email&gt;</dt>
- <dd>Um endereço de email utilizável para mensagens serem enviadas.</dd>
-</dl>
+- \<email>
+  - : Um endereço de email utilizável para mensagens serem enviadas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="notranslate">From: webmaster@example.org</pre>
+    From: webmaster@example.org
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "From", "5.5.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "From", "5.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.headers.From")}}</p>
+{{Compat("http.headers.From")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
-</ul>
+- {{HTTPHeader("Host")}}

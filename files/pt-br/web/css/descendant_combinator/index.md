@@ -7,102 +7,77 @@ tags:
   - Selectors
 translation_of: Web/CSS/Descendant_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">O <strong>combinador descendente</strong> - normalmente representado por um caractere de espaço simples </span></span>(<code> </code>)<span class="tlid-translation translation" lang="pt"><span title=""> - combina dois seletores para que os elementos correspondidos pelo segundo seletor sejam selecionados se eles tiverem um elemento ancestral (pai, pai ou mãe, pai ou mãe, etc.) correspondente ao primeiro seletor.</span> <span title="">Os seletores que utilizam um combinador descendente são chamados de seletores descendentes.</span></span></p>
+O **combinador descendente** - normalmente representado por um caractere de espaço simples (` `) - combina dois seletores para que os elementos correspondidos pelo segundo seletor sejam selecionados se eles tiverem um elemento ancestral (pai, pai ou mãe, pai ou mãe, etc.) correspondente ao primeiro seletor. Os seletores que utilizam um combinador descendente são chamados de seletores descendentes.
 
-<pre class="brush: css no-line-numbers">/* <span class="tlid-translation translation" lang="pt"><span title="">Listar itens descendentes da lista</span></span> "my-things" */
+```css
+/* Listar itens descendentes da lista "my-things" */
 ul.my-things li {
   margin: 2em;
-}</pre>
+}
+```
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">O combinador descendente é tecnicamente um ou mais caracteres de espaço em branco do {{Glossary ("CSS")}} -</span></span> <span class="tlid-translation translation" lang="pt"><span title="">o caractere de espaço e/ou um dos quatro caracteres de controle: </span></span> <span class="tlid-translation translation" lang="pt"><span title="">retorno de carro (</span></span>carriage return<span class="tlid-translation translation" lang="pt"><span title="">), </span></span> <span>Quebra de página</span> ( form feed)<span class="tlid-translation translation" lang="pt"><span title="">, nova linha e caracteres de tabulação </span></span>— <span class="tlid-translation translation" lang="pt"><span title="">entre dois seletores na ausência de outro combinador. </span></span> <span class="tlid-translation translation" lang="pt"><span title="">Além disso, os caracteres de espaço em branco dos quais o combinador é composto podem conter qualquer número de comentários CSS.</span></span></p>
+O combinador descendente é tecnicamente um ou mais caracteres de espaço em branco do {{Glossary ("CSS")}} - o caractere de espaço e/ou um dos quatro caracteres de controle: retorno de carro (carriage return), Quebra de página ( form feed), nova linha e caracteres de tabulação — entre dois seletores na ausência de outro combinador. Além disso, os caracteres de espaço em branco dos quais o combinador é composto podem conter qualquer número de comentários CSS.
 
-<h2 id="Sintaxe"><span class="tlid-translation translation" lang="pt"><span title="">Sintaxe</span></span></h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>selector1</var> <var>selector2</var> {
-  <var>/* </var> <span class="tlid-translation translation" lang="pt"><span title="">declarações de propriedade</span></span> <var> */</var>
-}</pre>
+    selector1 selector2 {
+      /*  declarações de propriedade  */
+    }
 
-<h2 id="Exemplo"><span class="tlid-translation translation" lang="pt"><span title="">Exemplo</span></span></h2>
+## Exemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li {
+```css
+li {
   list-style-type: disc;
 }
 
 li li {
   list-style-type: circle;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 1&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 2&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h3 id="Resultado"><span class="tlid-translation translation" lang="pt"><span title="">Resultado</span></span></h3>
-
-<p>{{EmbedLiveSample("Example", "100%", 160)}}</p>
-
-<h2 id="Especificações"><span class="tlid-translation translation" lang="pt"><span title="">Especificações</span></span></h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><span class="tlid-translation translation" lang="pt"><span title="">Especificação</span></span></th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#descendant-combinators", "descendant combinator")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#descendant-selectors", "descendant selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#contextual-selectors", "contextual selectors")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-
-
-<p>{{Compat("css.selectors.descendant")}}</p>
-
-<h2 id="Veja_também"><span class="tlid-translation translation" lang="pt"><span title="">Veja também</span></span></h2>
-
+```html
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Child_combinator">Child combinator</a></li>
+  <li>
+    <div>Item 1</div>
+    <ul>
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li>
+    <div>Item 2</div>
+    <ul>
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
 </ul>
+```
+
+### Resultado
+
+{{EmbedLiveSample("Example", "100%", 160)}}
+
+## Especificações
+
+| Especificação                                                                                                    | Status                               | Comment            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}     | {{Spec2("CSS4 Selectors")}} |                    |
+| {{SpecName("CSS3 Selectors", "#descendant-combinators", "descendant combinator")}}     | {{Spec2("CSS3 Selectors")}} |                    |
+| {{SpecName("CSS2.1", "selector.html#descendant-selectors", "descendant selectors")}} | {{Spec2("CSS2.1")}}             |                    |
+| {{SpecName("CSS1", "#contextual-selectors", "contextual selectors")}}                     | {{Spec2("CSS1")}}             | Initial definition |
+
+## Compatibilidade com navegadores
+
+{{Compat("css.selectors.descendant")}}
+
+## Veja também
+
+- [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)

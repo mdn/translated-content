@@ -11,71 +11,40 @@ tags:
   - TopicStub
 translation_of: Web/API/DOMImplementation
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>DOMImplementation</strong></code> interface represent an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.</p>
+The **`DOMImplementation`** interface represent an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.
 
-<h2 id="Property">Property</h2>
+## Property
 
-<p><em>This interface has no specific property and doesn't inherit any.</em></p>
+_This interface has no specific property and doesn't inherit any._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No inherited method.</em></p>
+_No inherited method._
 
-<dl>
-	<dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
-	<dd>Creates and returns an {{domxref("XMLDocument")}}.</dd>
-	<dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
-	<dd>Creates and returns a {{domxref("DocumentType")}}.</dd>
-	<dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
-	<dd>Creates and returns an HTML {{domxref("Document")}}.</dd>
-	<dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
-	<dd>Returns a {{domxref("Boolean")}} indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns <code>true</code>. Old browsers are very inconsistent in their behavior.</dd>
-</dl>
+- {{domxref("DOMImplementation.createDocument()")}}
+  - : Creates and returns an {{domxref("XMLDocument")}}.
+- {{domxref("DOMImplementation.createDocumentType()")}}
+  - : Creates and returns a {{domxref("DocumentType")}}.
+- {{domxref("DOMImplementation.createHTMLDocument()")}}
+  - : Creates and returns an HTML {{domxref("Document")}}.
+- {{domxref("DOMImplementation.hasFeature()")}}
+  - : Returns a {{domxref("Boolean")}} indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns `true`. Old browsers are very inconsistent in their behavior.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Removed the <code>getFeature()</code> method.<br>
-			Added the <code>createHTMLDocument()</code> method.<br>
-			Modified the return type of <code>createDocument()</code> from {{domxref("Document")}} to {{domxref("XMLDocument")}}.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-			<td>{{Spec2('DOM3 Core')}}</td>
-			<td>Added the <code>getFeature()</code> method (never implemented by any user agent).</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-			<td>{{Spec2('DOM2 Core')}}</td>
-			<td>Added the <code>createDocument()</code> and <code>createDocumentType()</code> methods.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}}</td>
-			<td>{{Spec2('DOM1')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | Removed the `getFeature()` method. Added the `createHTMLDocument()` method. Modified the return type of `createDocument()` from {{domxref("Document")}} to {{domxref("XMLDocument")}}. |
+| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | Added the `getFeature()` method (never implemented by any user agent).                                                                                                                                    |
+| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | Added the `createDocument()` and `createDocumentType()` methods.                                                                                                                                          |
+| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.DOMImplementation")}}
 
+## See also
 
-<p>{{Compat("api.DOMImplementation")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/pt-BR/docs/DOM/DOM_Reference)

@@ -11,93 +11,74 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.log1p()</code></strong>  retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é</p>
+A função **`Math.log1p()`** retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x &gt; -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-log1p.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-log1p.html")}}
 
+## Sintaxe
 
+    Math.log1p(x)
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>Math.log1p(<var>x</var>)</code></pre>
+- `x`
+  - : Um número.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+O logaritmo natural (base {{jsxref("Math.E", "e")}}) de **1** mais o número fornecido. Se o número for menor que **-1**, {{jsxref("NaN")}} será retornado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O logaritmo natural (base {{jsxref("Math.E", "e")}}) de <strong>1</strong> mais o número fornecido. Se o número for menor que <strong>-1</strong>, {{jsxref("NaN")}} será retornado.</p>
+Para valores muito pequenos de _x_, adicionando 1 pode reduzir ou eliminar precisão. Valores double floats costuman te dar em torno de 15 digitos de precisão no JavaScript. 1 + 1e-15 = 1.000000000000001, porém, 1 + 1e-16 = 1.000000000000000 e portanto, exatamente 1.0 naquele resultado, porque os números que passam de 15 digitos são arredondados.
 
-<h2 id="Descrição">Descrição</h2>
+Quando você calcula log(1 + x), você obterá um resultado muito perto de x, se x for um valor pequeno (isto é, porque eles são chamados logaritmos 'naturais'). Se você calcular Math.log(1 + 1.1111111111e-15) você obterá uma resposta perto de1.1111111111e-15. Ao invés, você vai acabar obtendo o logaritmo de 1.00000000000000111022 (o arrendondamento é feito em binário, portanto, as vezes isso pode parecer estranho), então você obterá o resultado 1.11022...e-15, com somente 3 digitos corretos. Se, ao invés, você calcular Math.log1p(1.1111111111e-15) você terá um retorno mais preciso de 1.1111111110999995e-15 com 15 digitos corretos de precisão (na verdade 16 nesse caso).
 
-<p>Para valores muito pequenos de <em>x</em>, adicionando 1 pode reduzir ou eliminar precisão. Valores double floats costuman te dar em torno de 15 digitos de precisão no JavaScript. 1 + 1e-15 = 1.000000000000001, porém, 1 + 1e-16 = 1.000000000000000 e portanto, exatamente 1.0 naquele resultado, porque os números que passam de 15 digitos são arredondados.</p>
+Se o valor de `x` for menor que -1, o valor retornado será sempre {{jsxref("NaN")}}.
 
-<p>Quando você calcula log(1 + x), você obterá um resultado muito perto de x, se x for um valor pequeno (isto é, porque eles são chamados logaritmos 'naturais'). Se você calcular Math.log(1 + 1.1111111111e-15) você obterá uma resposta perto de1.1111111111e-15. Ao invés, você vai acabar obtendo o logaritmo de<span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">1.00000000000000111022 (o arrendondamento é feito em binário, portanto, as vezes isso pode parecer estranho)</span><span style="line-height: 1.5;">, então você obterá o resultado</span><span style="line-height: 1.5;"> 1.11022...e-15, com somente 3 digitos corretos. Se, ao invés, você calcular  Math.log1p(</span>1.1111111111e-15<span style="line-height: 1.5;">) você terá um retorno mais preciso de 1.1111111110999995e-15 com 15 digitos corretos de precisão (na verdade 16 nesse caso).</span></p>
+Por conta do `log1p()` ser um metódo estático de `Math`, você sempre chamará como `Math.log1p()`, ao invés de chamar como um método de um objeto `Math` que você tenha criado (`Math` não é um construtor).
 
-<p>Se o valor de <code>x</code> for menor que -1, o valor retornado será sempre {{jsxref("NaN")}}.</p>
+## Exemplos
 
-<p>Por conta do <code>log1p()</code> ser um metódo estático de <code>Math</code>, você sempre chamará como <code>Math.log1p()</code>, ao invés de chamar como um método de um objeto <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
+### Usando `Math.log1p()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_Math.log1p()">Usando <code>Math.log1p()</code></h3>
-
-<pre class="brush: js">Math.log1p(1);  // 0.6931471805599453
+```js
+Math.log1p(1);  // 0.6931471805599453
 Math.log1p(0);  // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Isto pode ser implementado com a seguinte função:</p>
+Isto pode ser implementado com a seguinte função:
 
-<pre class="brush: js">Math.log1p = Math.log1p || function(x) {
+```js
+Math.log1p = Math.log1p || function(x) {
   return Math.log(1 + x);
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-math.log1p', 'Math.log1p')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário          |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-math.log1p', 'Math.log1p')}}     | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.log1p")}}</p>
+{{Compat("javascript.builtins.Math.log1p")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.expm1()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.expm1()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

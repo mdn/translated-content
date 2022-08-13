@@ -8,54 +8,54 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
 original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: can't access property {x} of {y} (Firefox)
-TypeError: {y} is undefined, can't access property {x} of it (Firefox)
-TypeError: {y} is null, can't access property {x} of it (Firefox)
+    TypeError: Unable to get property {x} of undefined or null reference (Edge)
+    TypeError: can't access property {x} of {y} (Firefox)
+    TypeError: {y} is undefined, can't access property {x} of it (Firefox)
+    TypeError: {y} is null, can't access property {x} of it (Firefox)
 
-Exemplos:
-TypeError: x is undefined, can't access property "prop" of it
-TypeError: x is null, can't access property "prop" of it
-TypeError: can't access property "prop" of undefined
-TypeError: can't access property "prop" of null
-</pre>
+    Exemplos:
+    TypeError: x is undefined, can't access property "prop" of it
+    TypeError: x is null, can't access property "prop" of it
+    TypeError: can't access property "prop" of undefined
+    TypeError: can't access property "prop" of null
 
-<h2 id="Tipo_de_Erro">Tipo de Erro</h2>
+## Tipo de Erro
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>O acesso a propriedade foi realizado com um valor {{jsxref("undefined")}} ou {{jsxref("null")}}.</p>
+O acesso a propriedade foi realizado com um valor {{jsxref("undefined")}} ou {{jsxref("null")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Casos_inválidos">Casos inválidos</h3>
+### Casos inválidos
 
-<pre class="brush: js example-bad">// casos undefined e null, onde o metódo substring não irá funcionar
+```js example-bad
+// casos undefined e null, onde o metódo substring não irá funcionar
 
 var foo = undefined;
 foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
 
 var foo = null;
 foo.substring(1); // TypeError: x is null, can't access property "substring" of it
-</pre>
+```
 
-<h3 id="Corrigindo_o_problema">Corrigindo o problema</h3>
+### Corrigindo o problema
 
-<p>Para corrigir o problema de valores <code>undefined</code> ou <code>null</code>,  você pode usar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a>, como no exemplo abaixo.</p>
+Para corrigir o problema de valores `undefined` ou `null`, você pode usar o operador [typeof](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof), como no exemplo abaixo.
 
-<pre class="brush: js">if (typeof foo !== 'undefined') {
-  // Agora que sabemos que <em>foo</em> está definida, podemos prosseguir
-}</pre>
+```js
+if (typeof foo !== 'undefined') {
+  // Agora que sabemos que foo está definida, podemos prosseguir
+}
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("undefined")}}</li>
- <li>{{jsxref("null")}}</li>
-</ul>
+- {{jsxref("undefined")}}
+- {{jsxref("null")}}

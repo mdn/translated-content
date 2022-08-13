@@ -13,31 +13,30 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toISOString()</code></strong> retorna uma cadeia de caracteres (<em>string</em>) simplificada no formato ISO extendido (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), que é sempre 24 ou 27 caracteres de tamanho (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code> ou <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>, respectivamente). O fuso horário é sempre o deslocamento zero UTC, como denotado pelo sufixo "<code>Z</code>".</p>
+O método **`toISOString()`** retorna uma cadeia de caracteres (_string_) simplificada no formato ISO extendido ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que é sempre 24 ou 27 caracteres de tamanho (`YYYY-MM-DDTHH:mm:ss.sssZ` ou `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). O fuso horário é sempre o deslocamento zero UTC, como denotado pelo sufixo "`Z`".
 
-<div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
 
+## Sintaxe
 
+    dateObj.toISOString()
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor de retorno
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.toISOString()</code></pre>
+Uma _string_ representando a data no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) de acordo com o horário universal.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Polyfill
 
-<p>Uma <em>string</em> representando a data no formato <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> de acordo com o horário universal.</p>
+Este método foi padronizado na quinta edição da ECMA-262. Motores que não foram atualizados para suportar este método podem funcionar com uma gambiarra na ausência deste método da seguinte forma:
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Este método foi padronizado na quinta edição da ECMA-262. Motores que não foram atualizados para suportar este método podem funcionar com uma gambiarra na ausência deste método da seguinte forma:</p>
-
-<pre class="brush: js notranslate">if (!Date.prototype.toISOString) {
+```js
+if (!Date.prototype.toISOString) {
   (function() {
 
     function pad(number) {
-      if (number &lt; 10) {
+      if (number < 10) {
         return '0' + number;
       }
       return number;
@@ -56,40 +55,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 
   })();
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toISOString">Usando <code>toISOString()</code></h3>
+### Usando `toISOString()`
 
-<pre class="brush: js notranslate">let today = new Date('05 October 2011 14:48 UTC')
+```js
+let today = new Date('05 October 2011 14:48 UTC')
 
 console.log(today.toISOString())  // Retorna 2011-10-05T14:48:00.000Z
-</pre>
+```
 
-<p>O exemplo acima usa uma conversão de uma <em>string</em> não-padrão que pode não ser convertida corretamente em navegadores que não sejam da Mozilla..</p>
+O exemplo acima usa uma conversão de uma _string_ não-padrão que pode não ser convertida corretamente em navegadores que não sejam da Mozilla..
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
+{{Compat("javascript.builtins.Date.toISOString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

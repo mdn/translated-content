@@ -10,70 +10,52 @@ tags:
   - Reference
 translation_of: Web/API/BroadcastChannel
 ---
-<p>{{APIRef("Broadcast Channel API")}}</p>
+{{APIRef("Broadcast Channel API")}}
 
-<p>A interface <code><strong>BroadcastChannel</strong></code><strong> </strong>(canal de transmissão)<strong> </strong>representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma <em>origin</em>. As mensagens são transmitidas através de um evento {{event("message")}} acionado em todos objetos do tipo <code>BroadcastChannel</code> que estão ouvindo o canal.</p>
+A interface **`BroadcastChannel`\*\*** **(canal de transmissão)** \*\*representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma _origin_. As mensagens são transmitidas através de um evento {{event("message")}} acionado em todos objetos do tipo `BroadcastChannel` que estão ouvindo o canal.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}</dt>
- <dd>Cria um objeto, no qual faz o vínculo com um canal nomeado.</dd>
-</dl>
+- {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+  - : Cria um objeto, no qual faz o vínculo com um canal nomeado.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}}.</em></p>
+_Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("BroadcastChannel.name")}}</dt>
- <dd>Retorna um {{domxref("DOMString")}}, o nome do canal.</dd>
- <dt>
- <h3 id="Event_handlers">Event handlers</h3>
- </dt>
- <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>Uma propriedade {{event("Event_handlers", "event handler")}} que específica a função a ser executada quando um evento {{event("message")}} é acionado a este objeto.</dd>
- <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>Uma chamada {{event("Event_handlers", "event handler")}} quando um {{domxref("MessageEvent")}} do tipo {{domxref("MessageError")}} é disparado - isto é, quando recebe uma mensagem que não pode ser desserializada.</dd>
-</dl>
+- {{domxref("BroadcastChannel.name")}}
+  - : Retorna um {{domxref("DOMString")}}, o nome do canal.
+- ### Event handlers
 
-<h2 id="Métodos">Métodos</h2>
+  {{domxref("BroadcastChannel.onmessage")}}
 
-<p><em>Essa interface também herda métodos de seu pai, {{domxref("EventTarget")}}.</em></p>
+  - : Uma propriedade {{event("Event_handlers", "event handler")}} que específica a função a ser executada quando um evento {{event("message")}} é acionado a este objeto.
 
-<dl>
- <dt>{{domxref("BroadcastChannel.postMessage()")}}</dt>
- <dd>Envia a mensagem, de qualquer tipo de objeto, para cada objeto <code>BroadcastChannel</code> ouvindo o mesmo canal.</dd>
- <dt>{{domxref("BroadcastChannel.close()")}}</dt>
- <dd>Fecha o objeto do canal, indicando que ele não receberá novas mensagens e eventualmente será descartado.</dd>
-</dl>
+- {{domxref("BroadcastChannel.onmessageerror")}}
+  - : Uma chamada {{event("Event_handlers", "event handler")}} quando um {{domxref("MessageEvent")}} do tipo {{domxref("MessageError")}} é disparado - isto é, quando recebe uma mensagem que não pode ser desserializada.
 
-<h2 id="Especificações">Especificações</h2>
+## Métodos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+_Essa interface também herda métodos de seu pai, {{domxref("EventTarget")}}._
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+- {{domxref("BroadcastChannel.postMessage()")}}
+  - : Envia a mensagem, de qualquer tipo de objeto, para cada objeto `BroadcastChannel` ouvindo o mesmo canal.
+- {{domxref("BroadcastChannel.close()")}}
+  - : Fecha o objeto do canal, indicando que ele não receberá novas mensagens e eventualmente será descartado.
 
-<p>{{Compat("api.BroadcastChannel")}}</p>
+## Especificações
 
-<h2 id="Veja_também">Veja também</h2>
+| Especificação                                                                                            | Status                           | Comentário         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
 
-<ul>
- <li>Outra forma mais pesada de comunicação entre <em>browser contexts</em>: {{domxref("ServiceWorker")}}.</li>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Visão geral de Broadcast Channel API</a></li>
-</ul>
+## Compatibilidade com navegadores
+
+{{Compat("api.BroadcastChannel")}}
+
+## Veja também
+
+- Outra forma mais pesada de comunicação entre _browser contexts_: {{domxref("ServiceWorker")}}.
+- [Visão geral de Broadcast Channel API](/pt-BR/docs/Web/API/Broadcast_Channel_API)

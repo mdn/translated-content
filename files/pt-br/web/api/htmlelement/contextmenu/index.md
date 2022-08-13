@@ -12,31 +12,29 @@ tags:
   - UX
 translation_of: Web/API/HTMLElement/contextMenu
 ---
-<div>{{APIRef("HTML DOM")}}{{deprecated_header()}}
-<p>A propriedade <code><strong>HTMLElement.contextMenu</strong></code> refere-se ao menu de contexo atribuído aum elemento usando o {{htmlattrxref("contextmenu")}} atributo. O menu em sí é criado usando o {{HTMLElement("menu")}} elemento.</p>
+{{APIRef("HTML DOM")}}{{deprecated_header()}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+A propriedade **`HTMLElement.contextMenu`** refere-se ao menu de contexo atribuído aum elemento usando o {{htmlattrxref("contextmenu")}} atributo. O menu em sí é criado usando o {{HTMLElement("menu")}} elemento.
 
-<pre class="syntaxbox">var <var>elementContextMenu</var> = <var>element</var>.contextMenu;
-</pre>
+## Sintaxe
 
-<h2 id="Exemplo">Exemplo</h2>
+    var elementContextMenu = element.contextMenu;
 
-<pre class="brush: js">var contextMenu = document.getElementById("element").contextMenu;
+## Exemplo
+
+```js
+var contextMenu = document.getElementById("element").contextMenu;
 
 // Altere o label da primeira entrada do menu
 contextMenu.firstElementChild.label = "New label";
-</pre>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.HTMLElement.contextMenu")}}</p>
+{{Compat("api.HTMLElement.contextMenu")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{htmlattrxref("contextmenu")}}</li>
- <li>{{HTMLElement("menu")}}</li>
- <li>{{HTMLElement("menuitem")}}</li>
-</ul>
-</div>
+- {{htmlattrxref("contextmenu")}}
+- {{HTMLElement("menu")}}
+- {{HTMLElement("menuitem")}}

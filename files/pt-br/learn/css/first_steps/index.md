@@ -13,44 +13,36 @@ tags:
   - first steps
 translation_of: Learn/CSS/First_steps
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">CSS ( Planilhas de estilo em cascata) é usada para estilizar e arranjar páginas web — por exemplo, para alterar a fonte, cor, tamanho e espaçamento do seu conteúdo, separá-lo em multiplas colunas, ou então adicionar animações e outras implementações decorativas. Esse módulo provê um começo sutil em seu caminho pelo domínio do CSS com o básico de como ele funciona, como é a aparência da sintaxe e como você pode começar a utilizá-lo para estilizar seu HTML.</p>
+CSS ( Planilhas de estilo em cascata) é usada para estilizar e arranjar páginas web — por exemplo, para alterar a fonte, cor, tamanho e espaçamento do seu conteúdo, separá-lo em multiplas colunas, ou então adicionar animações e outras implementações decorativas. Esse módulo provê um começo sutil em seu caminho pelo domínio do CSS com o básico de como ele funciona, como é a aparência da sintaxe e como você pode começar a utilizá-lo para estilizar seu HTML.
 
-<h2 id="Pré-requisitos">Pré-requisitos</h2>
+## Pré-requisitos
 
-<p>Antes de iniciar este módulo, você deve ter:</p>
+Antes de iniciar este módulo, você deve ter:
 
-<ol>
- <li>Familiaridade básica com o uso de computadores e utilização da internet passivamente (Ex: vendo e consumindo o conteúdo.)</li>
- <li>Um ambiente de trabalho básico configurado conforme detalhado em <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software/pt-BR/docs/">Instalando Software Básico</a> e um entendimento de como criar e gerenciar arquivos, conforme detalhado em <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Lidando com Arquivos</a>.</li>
- <li>Familiaridade básica com HTML, como discutido no módulo <a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML">Introdução ao HTML</a>.</li>
-</ol>
+1.  Familiaridade básica com o uso de computadores e utilização da internet passivamente (Ex: vendo e consumindo o conteúdo.)
+2.  Um ambiente de trabalho básico configurado conforme detalhado em [Instalando Software Básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software/pt-BR/docs/) e um entendimento de como criar e gerenciar arquivos, conforme detalhado em [Lidando com Arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3.  Familiaridade básica com HTML, como discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
 
-<div class="note">
-<p><strong>Nota</strong>: Se você está trabalhando em um computador/tablet/ou outro dispostivo onde você não tem habilidade para criar seus próprios arquivos, você poderá tentar (a maioria) os exemplos de códigos em um programa online de codificação como <a href="http://jsbin.com/">JSBin</a> ou <a href="https://thimble.mozilla.org/">Thimble</a>.</p>
-</div>
+> **Note:** **Nota**: Se você está trabalhando em um computador/tablet/ou outro dispostivo onde você não tem habilidade para criar seus próprios arquivos, você poderá tentar (a maioria) os exemplos de códigos em um programa online de codificação como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
-<h2 id="Guias">Guias</h2>
+## Guias
 
-<p>Este módulo contém os seguintes artigos, que o guiarão através de toda a teoria básica do CSS e fornecerão oportunidades para você testar algumas habilidades.</p>
+Este módulo contém os seguintes artigos, que o guiarão através de toda a teoria básica do CSS e fornecerão oportunidades para você testar algumas habilidades.
 
-<dl>
- <dt><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">O que é CSS?</a></dt>
- <dd><strong>{{Glossary("CSS")}}</strong> (Cascading Style Sheets) permite que você crie páginas web com ótima aparência. Mas como isso funciona por debaixo dos panos? Este artigo explica o que é CSS, com um exemplo simples de sintaxe, e também cobre alguns termos importantes sobre a linguagem.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Iniciando com CSS</a></dt>
- <dd>Neste artigo, pegaremos um documento HTML simples e aplicaremos CSS, aprendendo algumas coisas práticas sobre a linguagem ao longo do caminho.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Como CSS é estruturado</a></dt>
- <dd>Agora que você tem uma idéia sobre o que é CSS e o básico sobre como usá-lo, é hora de analisar um pouco mais a fundo a estrutura da própria linguagem. Já conhecemos muitos dos conceitos discutidos aqui; você pode retornar a este para recapitular se achar confusos os conceitos posteriores.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Como CSS funciona</a></dt>
- <dd>Aprendemos o básico do CSS, para que serve e como escrever folhas de estilo simples(Cascading Style Sheets - CSS). Neste exercício, veremos como um navegador utiliza CSS e HTML, e os transforma em uma página da web.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Usando seu novo conhecimento</a></dt>
- <dd>Com o que aprendeu nas poucas lições anteriores, você já deve estar achando que pode formatar simples documentos de textos usando CSS, para adicionar seu próprio estilo neles. Este artigo te dará a chance de fazê-lo.</dd>
-</dl>
+- [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
+  - : **{{Glossary("CSS")}}** (Cascading Style Sheets) permite que você crie páginas web com ótima aparência. Mas como isso funciona por debaixo dos panos? Este artigo explica o que é CSS, com um exemplo simples de sintaxe, e também cobre alguns termos importantes sobre a linguagem.
+- [Iniciando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
+  - : Neste artigo, pegaremos um documento HTML simples e aplicaremos CSS, aprendendo algumas coisas práticas sobre a linguagem ao longo do caminho.
+- [Como CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+  - : Agora que você tem uma idéia sobre o que é CSS e o básico sobre como usá-lo, é hora de analisar um pouco mais a fundo a estrutura da própria linguagem. Já conhecemos muitos dos conceitos discutidos aqui; você pode retornar a este para recapitular se achar confusos os conceitos posteriores.
+- [Como CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+  - : Aprendemos o básico do CSS, para que serve e como escrever folhas de estilo simples(Cascading Style Sheets - CSS). Neste exercício, veremos como um navegador utiliza CSS e HTML, e os transforma em uma página da web.
+- [Usando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+  - : Com o que aprendeu nas poucas lições anteriores, você já deve estar achando que pode formatar simples documentos de textos usando CSS, para adicionar seu próprio estilo neles. Este artigo te dará a chance de fazê-lo.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<dl>
- <dt><a href="https://teach.mozilla.org/activities/intermediate-web-lit/">Conhecimento Intermerdiário da Web 1: Introdução ao CSS</a></dt>
- <dd>Um excelente curso básico da Mozilla que explora e testa muitas das habilidades mencionadas no módulo Introdução ao CSS. Aprenda sobre o estilo de elementos HTML em uma página web, seletores de CSS, atributos e valores.</dd>
-</dl>
+- [Conhecimento Intermerdiário da Web 1: Introdução ao CSS](https://teach.mozilla.org/activities/intermediate-web-lit/)
+  - : Um excelente curso básico da Mozilla que explora e testa muitas das habilidades mencionadas no módulo Introdução ao CSS. Aprenda sobre o estilo de elementos HTML em uma página web, seletores de CSS, atributos e valores.

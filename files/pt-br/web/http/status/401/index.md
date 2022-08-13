@@ -8,50 +8,39 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>O código de resposta de status de erro do cliente HTTP <strong><code>401 Unauthorized</code></strong>  indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.</p>
+O código de resposta de status de erro do cliente HTTP **`401 Unauthorized`** indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.
 
-<p>Esse status é enviado com um cabeçalho {{HTTPHeader("WWW-Authenticate")}} que contém informações sobre como autorizar corretamente.</p>
+Esse status é enviado com um cabeçalho {{HTTPHeader("WWW-Authenticate")}} que contém informações sobre como autorizar corretamente.
 
-<p>Esse status é semelhante a {{HTTPStatus("403")}}, mas neste caso, a autenticação é possível.</p>
+Esse status é semelhante a {{HTTPStatus("403")}}, mas neste caso, a autenticação é possível.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox notranslate">401 Unauthorized</pre>
+    401 Unauthorized
 
-<h2 id="Exemplo_de_resposta">Exemplo de resposta</h2>
+## Exemplo de resposta
 
-<pre class="notranslate">HTTP/1.1 401 Não autorizado
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Acesso intermediário ao site"</pre>
+    HTTP/1.1 401 Não autorizado
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    WWW-Authenticate: Basic realm="Acesso intermediário ao site"
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "401 Não autorizado" , "3.1")}}</td>
-   <td>HTTP/1.1: Autenticação</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                | Título                 |
+| ------------------------------------------------------------ | ---------------------- |
+| {{RFC("7235", "401 Não autorizado" , "3.1")}} | HTTP/1.1: Autenticação |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("http.status.401")}}</p>
+{{Compat("http.status.401")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/pt-BR/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

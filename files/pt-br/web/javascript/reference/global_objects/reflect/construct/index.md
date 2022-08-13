@@ -3,53 +3,48 @@ title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <code><strong>Reflect</strong></code><strong><code>.construct()</code></strong> method acts like the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, but as a function. It is equivalent to calling <code>new target(...args)</code>. It gives also the added option to specify a different prototype.</p>
+The static **`Reflect`\*\***`.construct()`\*\* method acts like the [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different prototype.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 
+## Sintaxe
 
+    Reflect.construct(target, argumentsList[, newTarget])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parametros
 
-<pre class="syntaxbox">Reflect.construct(target, argumentsList[, newTarget])
-</pre>
+- `target`
+  - : A função alvo à ser chamada.
+- `argumentsList`
+  - : Um objeto tipo array que especifica com quais argumentos `target` deveria ser chamada.
+- `newTarget` {{optional_inline}}
+  - : O construtor de quem o protótipo deveria ser usado. Veja também o [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) operador. Se `newTarget` não estiver presente, será `target`.
 
-<h3 id="Parametros">Parametros</h3>
+### Return value
 
-<dl>
- <dt><code>target</code></dt>
- <dd>A função alvo à ser chamada.</dd>
- <dt><code>argumentsList</code></dt>
- <dd>Um objeto tipo array que especifica com quais argumentos <code>target</code> deveria ser chamada.</dd>
- <dt><code>newTarget</code> {{optional_inline}}</dt>
- <dd>O construtor de quem o protótipo deveria ser usado. Veja também o <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> operador. Se <code>newTarget</code> não estiver presente, será <code>target</code>.</dd>
-</dl>
+A new instance of `target` (or `newTarget`, if present), initialized by `target` as a constructor with the given arguments.
 
-<h3 id="Return_value">Return value</h3>
+### Exceptions
 
-<p>A new instance of <code>target</code> (or <code>newTarget</code>, if present), initialized by <code>target</code> as a constructor with the given arguments.</p>
+A {{jsxref("TypeError")}}, if `target` or `newTarget` are not constructors.
 
-<h3 id="Exceptions">Exceptions</h3>
+## Description
 
-<p>A {{jsxref("TypeError")}}, if <code>target</code> or <code>newTarget</code> are not constructors.</p>
+`Reflect.construct` allows you to invoke a constructor with a variable number of arguments (which would also be possible by using the [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) combined with the [new operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)).
 
-<h2 id="Description">Description</h2>
-
-<p><code>Reflect.construct</code> allows you to invoke a constructor with a variable number of arguments (which would also be possible by using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> combined with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>).</p>
-
-<pre class="brush: js">var obj = new Foo(...args);
+```js
+var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args);
-</pre>
+```
 
-<p> </p>
+### `Reflect.construct()` vs `Object.create()`
 
-<h3 id="Reflect.construct()_vs_Object.create()"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
+Prior to the introduction of `Reflect`, objects could be constructed using an arbitrary combination of constructor and prototype by using `Object.create()`.
 
-<p>Prior to the introduction of <code>Reflect</code>, objects could be constructed using an arbitrary combination of constructor and prototype by using <code>Object.create()</code>.</p>
-
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     this.name = 'one';
 }
 
@@ -72,13 +67,14 @@ console.log(obj2 instanceof OneClass); // false
 
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
-</pre>
+```
 
-<p>However, while the end result is the same, there is one important difference in the process. When using <code>Object.create()</code> and <code>Function.prototype.apply()</code>, the <code>new.target</code> operator will point to <code>undefined</code> within the function used as the constructor, since the <code>new</code> keyword is not being used to create the object.</p>
+However, while the end result is the same, there is one important difference in the process. When using `Object.create()` and `Function.prototype.apply()`, the `new.target` operator will point to `undefined` within the function used as the constructor, since the `new` keyword is not being used to create the object.
 
-<p>When invoking <code>Reflect.construct()</code>, on the other hand, the <code>new.target</code> operator will point to the <code>newTarget</code> parameter if supplied, or <code>target</code> if not.</p>
+When invoking `Reflect.construct()`, on the other hand, the `new.target` operator will point to the `newTarget` parameter if supplied, or `target` if not.
 
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     console.log('OneClass');
     console.log(new.target);
 }
@@ -101,51 +97,32 @@ var obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
 // Output:
 //     OneClass
-//     undefined</pre>
+//     undefined
+```
 
-<p> </p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using `Reflect.construct()`
 
-<h3 id="Using_Reflect.construct()">Using <code>Reflect.construct()</code></h3>
-
-<pre class="brush: js">var d = Reflect.construct(Date, [1776, 6, 4]);
+```js
+var d = Reflect.construct(Date, [1776, 6, 4]);
 d instanceof Date; // true
 d.getFullYear(); // 1776
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Reflect.construct")}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.Reflect.construct")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
+- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)

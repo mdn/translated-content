@@ -7,62 +7,42 @@ tags:
   - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}O atributo **`ignoreCase`** indica se a flag "i" foi ou não utilizada com a expressão regular.`ignoreCase` é um atributo somente leitura de uma instância individual de expressãoregular.
 
-<div>O atributo <strong><code>ignoreCase</code></strong> indica se a flag "i" foi ou não utilizada com a expressão regular.</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}
 
-<div><code>ignoreCase</code> é um atributo somente leitura de uma instância individual de expressão</div>
+{{js_property_attributes(0, 0, 1)}}
 
-<div>regular. </div>
+## Descrição
 
+O valor de `ignoreCase` é um {{jsxref("Boolean")}} e`true` se a flag "`i`" foi usada; `false` caso contrário. A flag "i" indica que maiúsculas e minúsculas são equivalentes ao se tentar casar uma string com a expressão regular.
 
+Você não pode alterar essa propriedade diretamente.
 
-<p>{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}</p>
+## Exemplos
 
+### Usando `ignoreCase`
 
-
-<div>{{js_property_attributes(0, 0, 1)}}</div>
-
-<h2 id="Descrição">Descrição</h2>
-
-<p>O valor de <code>ignoreCase</code> é um {{jsxref("Boolean")}} e<code>true</code> se a flag "<code>i</code>" foi usada; <code>false</code> caso contrário. A flag "i" indica que maiúsculas e minúsculas são equivalentes ao se tentar casar uma string com a expressão regular.</p>
-
-<p>Você não pode alterar essa propriedade diretamente.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_ignoreCase">Usando <code>ignoreCase</code></h3>
-
-<pre class="brush: js notranslate">var regex = new RegExp('foo', 'i');
+```js
+var regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.RegExp.ignoreCase")}}</p>
-</div>
+{{Compat("javascript.builtins.RegExp.ignoreCase")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

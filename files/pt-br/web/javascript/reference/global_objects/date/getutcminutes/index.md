@@ -11,50 +11,42 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>getUTCMinutes()</code></strong> retorna os minutos na data especificada de acordo com o tempo universal.</p>
+O método **`getUTCMinutes()`** retorna os minutos na data especificada de acordo com o tempo universal.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getUTCMinutes()</code></pre>
+    dateObj.getUTCMinutes()
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Um número inteiro, entre 0 e 59, representando os minutos na data especificada de acordo com o horário universal (UTC).</p>
+Um número inteiro, entre 0 e 59, representando os minutos na data especificada de acordo com o horário universal (UTC).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_getUTCMinutes">Usando <code>getUTCMinutes()</code></h3>
+### Usando `getUTCMinutes()`
 
-<p>O seguinte exemplo atribui a parte dos minutos do tempo atual para a variável <code>minutes</code>.</p>
+O seguinte exemplo atribui a parte dos minutos do tempo atual para a variável `minutes`.
 
-<pre class="brush: js notranslate">var today = new Date();
+```js
+var today = new Date();
 var minutes = today.getUTCMinutes();
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.getUTCMinutes")}}</p>
+{{Compat("javascript.builtins.Date.getUTCMinutes")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

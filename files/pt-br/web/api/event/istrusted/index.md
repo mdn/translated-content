@@ -3,53 +3,34 @@ title: Event.isTrusted
 slug: Web/API/Event/isTrusted
 translation_of: Web/API/Event/isTrusted
 ---
-<div>{{APIRef("DOM")}}<br>
-A propriedade  <strong><code>isTrusted</code></strong> da interface {{domxref("Event")}}, exclusiva para leitura, é uma booleana ({{domxref("Boolean")}}) de valor verdadeiro (<code>true</code>) se tal evento é disparado pela ação do usuário. Retorna falso (<code>false</code>) caso o acionamento do evento seja ocasionado pelo método {{domxref("EventTarget.dispatchEvent()")}} ou tenha sido criado ou modificado por um script.</div>
+{{APIRef("DOM")}}
+A propriedade **`isTrusted`** da interface {{domxref("Event")}}, exclusiva para leitura, é uma booleana ({{domxref("Boolean")}}) de valor verdadeiro (`true`) se tal evento é disparado pela ação do usuário. Retorna falso (`false`) caso o acionamento do evento seja ocasionado pelo método {{domxref("EventTarget.dispatchEvent()")}} ou tenha sido criado ou modificado por um script.
 
-<div> </div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+    var eventIsTrusted = event.isTrusted;
 
-<pre class="syntaxbox">var <em>eventIsTrusted</em> = <em>event</em>.isTrusted;
-</pre>
+### Valor
 
-<h3 id="Valor">Valor</h3>
+{{domxref("Boolean")}}
 
-<p>{{domxref("Boolean")}}</p>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
-
-<pre class="brush: js">if (e.isTrusted) {
+```js
+if (e.isTrusted) {
   /* The event is trusted */
 } else {
   /* The event is not trusted */
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especifiação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-istrusted', 'Event.isTrusted')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#trusted-events', 'Trusted events')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Amplia requisito para confiabilidade de um evento, embora isto não defina por si só a propriedade <code>isTrusted</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Especifiação                                                                                 | Status                           | Comentário                                                                                                     |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-istrusted', 'Event.isTrusted')}} | {{ Spec2('DOM WHATWG') }} |                                                                                                                |
+| {{SpecName('DOM3 Events', '#trusted-events', 'Trusted events')}}         | {{Spec2('DOM3 Events')}} | Amplia requisito para confiabilidade de um evento, embora isto não defina por si só a propriedade `isTrusted`. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("api.Event.isTrusted")}}</p>
-</div>
+{{Compat("api.Event.isTrusted")}}

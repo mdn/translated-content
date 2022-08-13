@@ -8,58 +8,53 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Array.of()</strong></code> cria um nova instância de <code>Array</code> com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.</p>
+O método **`Array.of()`** cria um nova instância de `Array` com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.
 
-<p>A diferença entre o <code><strong>Array.of()</strong></code> e o construtor de <code><strong>Array</strong></code> é no tratamento dos argumentos inteiros: <code><strong>Array.of(7)</strong></code> cria um array com um único elemento, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>, enquanto <code><strong>Array(7)</strong></code> cria um array vazio de propriedade <code>length</code> igual a <code>7</code> (<strong>Nota</strong>: isso quer dizer um array com <code>7</code> espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).</p>
+A diferença entre o **`Array.of()`** e o construtor de **`Array`** é no tratamento dos argumentos inteiros: **`Array.of(7)`** cria um array com um único elemento, 7, enquanto **`Array(7)`** cria um array vazio de propriedade `length` igual a `7` (**Nota**: isso quer dizer um array com `7` espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).
 
-<pre>Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
+    Array.of(7);       // [7]
+    Array.of(1, 2, 3); // [1, 2, 3]
 
-Array(7);          // array com 7 espaços vazios
-Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+    Array(7);          // array com 7 espaços vazios
+    Array(1, 2, 3);    // [1, 2, 3]
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code>Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</code></pre>
+    Array.of(element0[, element1[, ...[, elementN]]])
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>Elementos usados para criar o <code>array</code>.</dd>
- <dt>
- <h3 id="Valor_de_retorno">Valor de retorno</h3>
- </dt>
- <dd>Uma nova instância de {{jsxref("Array")}}. </dd>
-</dl>
+- `elementN`
+  - : Elementos usados para criar o `array`.
+- ### Valor de retorno
+  - : Uma nova instância de {{jsxref("Array")}}.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Esta função é parte do padrão ECMAScript 6 (ou ECMAScript 2015).</p>
+Esta função é parte do padrão ECMAScript 6 (ou ECMAScript 2015).
 
-<p>Para maiores informações veja:</p>
+Para maiores informações veja:
 
-<ul>
- <li><a href="https://gist.github.com/rwaldron/1074126"><code>Array.of</code> </a></li>
- <li><a href="https://gist.github.com/rwaldron/1074126"><code>Array.from</code> proposal</a></li>
- <li><a href="https://gist.github.com/rwaldron/3186576"><code>Array.of</code> polyfill</a>.</li>
-</ul>
+- [`Array.of`](https://gist.github.com/rwaldron/1074126)
+- [`Array.from` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Executando o seguinte código antes de qualquer outro c[odigo criará o <code>Array.of()</code> se ele não for disponível nativamente.</p>
+Executando o seguinte código antes de qualquer outro c\[odigo criará o `Array.of()` se ele não for disponível nativamente.
 
-<pre class="brush: js">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
     // Or
@@ -70,35 +65,20 @@ Array.of(undefined); // [undefined]
     return vals;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.of', 'Array.of')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Status               | Comentário         |
+| ---------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.of', 'Array.of')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div id="compat-mobile">
-  <p>{{Compat("javascript.builtins.Array.of")}}</p>
-</div>
+{{Compat("javascript.builtins.Array.of")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

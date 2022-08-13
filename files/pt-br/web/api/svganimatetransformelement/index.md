@@ -3,46 +3,27 @@ title: SVGAnimateTransformElement
 slug: Web/API/SVGAnimateTransformElement
 translation_of: Web/API/SVGAnimateTransformElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>A interface <code>SVGAnimateTransformElement</code> corresponde ao elemento {{SVGElement("animateTransform")}}.</p>
+A interface `SVGAnimateTransformElement` corresponde ao elemento {{SVGElement("animateTransform")}}.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Essa interface não possui propriedades próprias mas as herda do seu pai,       {{domxref("SVGAnimationElement")}}.</em></p>
+_Essa interface não possui propriedades próprias mas as herda do seu pai, {{domxref("SVGAnimationElement")}}._
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Essa interface não possui métodos próprios mas os herda do seu pai, {{domxref("SVGAnimationElement")}}.</em></p>
+_Essa interface não possui métodos próprios mas os herda do seu pai, {{domxref("SVGAnimationElement")}}._
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Especificação</td>
-   <td>Status</td>
-   <td>Comentário</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                | Status                                   | Comentário         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}}     | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#InterfaceSVGAnimateTransformElement", "SVGAnimateTransformElement")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
-
-
-
-
-<p>{{Compat("api.SVGAnimateTransformElement")}}</p>
+{{Compat("api.SVGAnimateTransformElement")}}

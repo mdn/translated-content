@@ -4,15 +4,13 @@ slug: Glossary/UTF-8
 translation_of: Glossary/UTF-8
 original_slug: Glossario/UTF-8
 ---
-<p>UTF-8 (UCS Transformation Format 8) é a <a href="/pt-BR/docs/Glossario/character_encoding">codificação de caracteres</a> mais comum da World Wide Web. Cada caractere é representado por um a quatro bytes. UTF-8 é compatível com versões anteriores do <a href="https://developer.mozilla.org/pt-BR/docs/Glossario/ASCII">ASCII</a> e pode representar qualquer caractere Unicode padrão.</p>
+UTF-8 (UCS Transformation Format 8) é a [codificação de caracteres](/pt-BR/docs/Glossario/character_encoding) mais comum da World Wide Web. Cada caractere é representado por um a quatro bytes. UTF-8 é compatível com versões anteriores do [ASCII](/pt-BR/docs/Glossario/ASCII) e pode representar qualquer caractere Unicode padrão.
 
-<p>Os primeiros 128 caracteres UTF-8 correspondem exatamente aos primeiros 128 caracteres ASCII (numerados de 0 a 127), o que significa que o texto ASCII existente já é UTF-8 válido. Todos os outros caracteres usam dois a quatro bytes. Cada byte tem alguns bits reservados para fins de codificação. Como caracteres não ASCII requerem mais de um byte para armazenamento, eles correm o risco de serem corrompidos se os bytes forem separados e não forem recombinados.</p>
+Os primeiros 128 caracteres UTF-8 correspondem exatamente aos primeiros 128 caracteres ASCII (numerados de 0 a 127), o que significa que o texto ASCII existente já é UTF-8 válido. Todos os outros caracteres usam dois a quatro bytes. Cada byte tem alguns bits reservados para fins de codificação. Como caracteres não ASCII requerem mais de um byte para armazenamento, eles correm o risco de serem corrompidos se os bytes forem separados e não forem recombinados.
 
-<h2 id="Leia_mais" style="line-height: 18px; font-size: 1.28571rem;"><strong style="font-size: 1.71428571428571rem;">Leia mais</strong></h2>
+## Leia mais
 
-<h3 id="Conhecimento_Geral"><strong>Conhecimento Geral</strong></h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "UTF-8")}} no Wikipedia</li>
- <li><a href="http://www.unicode.org/faq/utf_bom.html#UTF8">Perguntas frequentes sobre o UTF-8 no site Unicode</a></li>
-</ul>
+- {{Interwiki("wikipedia", "UTF-8")}} no Wikipedia
+- [Perguntas frequentes sobre o UTF-8 no site Unicode](http://www.unicode.org/faq/utf_bom.html#UTF8)

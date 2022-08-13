@@ -3,32 +3,31 @@ title: NotificationAction
 slug: Web/API/NotificationAction
 translation_of: Web/API/NotificationAction
 ---
-<div>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</div>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><span class="seoSummary">A interface <code>NotificationAction</code> de <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> é usada para representar botões de ação que o usuário pode clicar para intergair com as notificações. As aparências e as funcionalidades específicas dos botões variam entre plataformas, mas geralmente providenciam maneiras de mostrar ações assincronamente ao usuário, em forma de notificações.</span></p>
+A interface `NotificationAction` de [Notifications API](/pt-BR/docs/Web/API/Notifications_API) é usada para representar botões de ação que o usuário pode clicar para intergair com as notificações. As aparências e as funcionalidades específicas dos botões variam entre plataformas, mas geralmente providenciam maneiras de mostrar ações assincronamente ao usuário, em forma de notificações.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<h3 id="Propriedades_de_instância">Propriedades de instância</h3>
+### Propriedades de instância
 
-<p>Essas propriedades estão disponíveis somente para instâncias do objeto <code>Notification</code>.</p>
+Essas propriedades estão disponíveis somente para instâncias do objeto `Notification`.
 
-<dl>
- <dt>{{domxref("NotificationAction.action")}} {{readonlyinline}}</dt>
- <dd>O nome da ação, que pode ser usado para identificar a ação clicada, similiar a <a href="/en-US/docs/Web/API/Element/name">input names</a>.</dd>
- <dt>{{domxref("NotificationAction.title")}} {{readonlyinline}}</dt>
- <dd>Uma string descrevendo a ação que sera mosrada ao usuário.</dd>
- <dt>{{domxref("NotificationAction.icon")}} {{readonlyinline}}</dt>
- <dd>O URL da imagem usado para representar a notificação quando não houver espaço suficiente para mostrar a propria notificação.</dd>
-</dl>
+- {{domxref("NotificationAction.action")}} {{readonlyinline}}
+  - : O nome da ação, que pode ser usado para identificar a ação clicada, similiar a [input names](/pt-BR/docs/Web/API/Element/name).
+- {{domxref("NotificationAction.title")}} {{readonlyinline}}
+  - : Uma string descrevendo a ação que sera mosrada ao usuário.
+- {{domxref("NotificationAction.icon")}} {{readonlyinline}}
+  - : O URL da imagem usado para representar a notificação quando não houver espaço suficiente para mostrar a propria notificação.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Notifications can fire {{Event("notificationclick")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.</p>
+Notifications can fire {{Event("notificationclick")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
 
-<p>Here a service worker shows a notification with a single "Archive" action, allowing users to perform this common task from the notification without having to open the website. The user can also click the main body of the notification to open their inbox instead.</p>
+Here a service worker shows a notification with a single "Archive" action, allowing users to perform this common task from the notification without having to open the website. The user can also click the main body of the notification to open their inbox instead.
 
-<pre class="brush: js">self.registration.showNotification("New mail from Alice", {
+```js
+self.registration.showNotification("New mail from Alice", {
   actions: [
     {
       action: 'archive',
@@ -47,33 +46,18 @@ self.addEventListener('notificationclick', function(event) {
     clients.openWindow('/inbox');
   }
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment         |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Notification")}}
 
+## See also
 
-<p>{{Compat("api.Notification")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/pt-BR/docs/Web/API/Notifications_API/Using_the_Notifications_API)

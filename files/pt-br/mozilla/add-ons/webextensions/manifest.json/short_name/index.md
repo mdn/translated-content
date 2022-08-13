@@ -6,36 +6,27 @@ tags:
   - Sort name
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Tipo</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obrigatório</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemplo</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"short_name": "Minha Extensão"</pre>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Tipo        | `String` |
+| ----------- | -------- |
+| Obrigatório | No       |
+| Exemplo     | ```json  |
 
-<p>Nome abreviado (short name) da extensão. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres. Se o campo do nome abreviado não for incluído no manifest.json, então o nome será usado em vez disso e pode ser truncado. </p>
+"short_name": "Minha Extensão"
 
-<p>Isto é um <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriedade localizável</a>.</p>
+````|
 
-<h2 id="Exemplo">Exemplo</h2>
+Nome abreviado (short name) da extensão. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres. Se o campo do nome abreviado não for incluído no manifest.json, então o nome será usado em vez disso e pode ser truncado.
 
-<pre class="brush: json no-line-numbers">"short_name": "Minha Extensão"</pre>
+Isto é um [propriedade localizável](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Exemplo
 
-<p>{{Compat("webextensions.manifest.short_name")}}</p>
+```json
+"short_name": "Minha Extensão"
+````
+
+## Compatibilidade com navegadores
+
+{{Compat("webextensions.manifest.short_name")}}

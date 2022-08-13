@@ -3,43 +3,38 @@ title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+O método **`toPrecision()`** retorna uma string que representa o valor do objeto {{jsxref("Number")}} com uma precisão específica.
 
+{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
 
-<p>O método <strong><code>toPrecision()</code></strong> retorna uma string que representa o valor do objeto {{jsxref("Number")}} com uma precisão específica.</p>
+## Sintaxe
 
-<div>{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}</div>
+    numObj.toPrecision([precisão])
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><var>numObj</var>.toPrecision([<var>precisão</var>])</pre>
+- `precisão`
+  - : Opcional. Um inteiro especificando o número de algarismos significativos.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Retorno
 
-<dl>
- <dt><code>precisão</code></dt>
- <dd>Opcional. Um inteiro especificando o número de algarismos significativos.</dd>
-</dl>
+Uma string representando um objeto {{jsxref("Number")}} em notação de ponto fixo ou exponencial arredondada segundo o parâmetro `precisão`. Veja a discussão sobre arredondamento feita na documentação do método {{jsxref("Number.prototype.toFixed()")}}, que também se aplica ao método `toPrecision()`.
 
-<h3 id="Retorno">Retorno</h3>
+Se o parâmetro `precisão` for omitido, este método terá o mesmo comportamento de {{jsxref("Number.prototype.toString()")}}. Se o parâmetro `precisão` for um valor não inteiro, ele será arredondado para a sua representação mais próxima em inteiro.
 
-<p>Uma string representando um objeto {{jsxref("Number")}} em notação de ponto fixo ou exponencial arredondada segundo o parâmetro <code>precisão</code>. Veja a discussão sobre arredondamento feita na documentação do método {{jsxref("Number.prototype.toFixed()")}}, que também se aplica ao método <code>toPrecision()</code>.</p>
+### Exceções
 
-<p>Se o parâmetro <code>precisão</code> for omitido, este método terá o mesmo comportamento de {{jsxref("Number.prototype.toString()")}}. Se o parâmetro <code>precisão</code> for um valor não inteiro, ele será arredondado para a sua representação mais próxima em inteiro.</p>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : Se o valor de `precisão` não estiver compreendido entre 1 e 100 (inclusive), um {{jsxref("RangeError")}} será lançado. É permitido às implementações suportar valores menores e maiores que esses, sendo um requisito do ECMA-262 que seja dado suporte a uma precisão de até 21 algarismos significativos.
 
-<h3 id="Exceções">Exceções</h3>
+## Exemplos
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>Se o valor de <code>precisão</code> não estiver compreendido entre 1 e 100 (inclusive), um  {{jsxref("RangeError")}} será lançado. É permitido às implementações suportar valores menores e maiores que esses, sendo um requisito do ECMA-262 que seja dado suporte a uma precisão de até 21 algarismos significativos.</dd>
-</dl>
+### Utilizando `toPrecision`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Utilizando_toPrecision">Utilizando <code>toPrecision</code></h3>
-
-<pre class="brush: js">var numObj = 5.123456;
+```js
+var numObj = 5.123456;
 
 console.log(numObj.toPrecision());    // logs '5.123456'
 console.log(numObj.toPrecision(5));   // logs '5.1235'
@@ -55,48 +50,23 @@ console.log(numObj.toPrecision(1));   // logs '0.0001'
 
 // observe que a notação exponencial pode ser retornado em alguns casos
 console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Estado                       | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Definição inicial. Implementada no JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}                                 | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.toPrecision")}}</p>
+{{Compat("javascript.builtins.Number.toPrecision")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toString()")}}
