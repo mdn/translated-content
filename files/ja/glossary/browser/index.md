@@ -7,37 +7,26 @@ tags:
   - 用語集
 translation_of: Glossary/Browser
 ---
-<p><strong>ウェブブラウザー</strong>または<strong>ブラウザー</strong>は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。</p>
+**ウェブブラウザー**または**ブラウザー**は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="Download_a_browser" name="Download_a_browser">ブラウザーをダウンロードする</h3>
+### ブラウザーをダウンロードする
 
-<ul>
- <li><a href="https://www.mozilla.org/ja/firefox/">Mozilla Firefox</a></li>
- <li><a href="https://www.google.com/chrome/" rel="external">Google Chrome</a></li>
- <li><a href="https://www.microsoft.com/ja-JP/edge" rel="external">Microsoft Edge</a></li>
- <li><a href="https://www.opera.com/" rel="external">Opera ブラウザー</a></li>
-</ul>
+- [Mozilla Firefox](https://www.mozilla.org/ja/firefox/)
+- [Google Chrome](https://www.google.com/chrome/)
+- [Microsoft Edge](https://www.microsoft.com/ja-JP/edge)
+- [Opera ブラウザー](https://www.opera.com/)
 
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Glossary">MDN Web Docs 用語集</a>
+1.  [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-  <ol>
-   <li>{{Glossary("user agent", "ユーザーエージェント")}}</li>
-  </ol>
- </li>
- <li>一般知識
-  <ol>
-   <li>Wikipedia 上の記事: {{Interwiki("wikipedia", "ウェブブラウザー")}}</li>
-   <li><a href="http://www.evolutionoftheweb.com/" rel="external">ウェブの進化</a></li>
-  </ol>
- </li>
- <li>HTTP ヘッダー
-  <ol>
-   <li>{{HTTPHeader("User-agent")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+    1.  {{Glossary("user agent", "ユーザーエージェント")}}
+
+2.  一般知識
+
+    1.  Wikipedia 上の記事: {{Interwiki("wikipedia", "ウェブブラウザー")}}
+    2.  [ウェブの進化](http://www.evolutionoftheweb.com/)
+
+3.  HTTP ヘッダー
+
+    1.  {{HTTPHeader("User-agent")}}

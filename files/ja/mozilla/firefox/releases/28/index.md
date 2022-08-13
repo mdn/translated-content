@@ -8,115 +8,91 @@ tags:
   - Mozilla
 translation_of: Mozilla/Firefox/Releases/28
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。</p>
+Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
-<h2 id="Changes_for_Web_developers">ウェブ開発者向けの変更点</h2>
+## ウェブ開発者向けの変更点
 
-<h3 id="Developer_Tools">開発者ツール</h3>
+### 開発者ツール
 
-<ul>
- <li>{{domxref("console.exception")}} プロパティを追加しました ({{bug("922214")}})。</li>
- <li>{{domxref("console.assert")}} プロパティを追加しました ({{bug("760193")}})。</li>
- <li>アプリマネージャー: 新しいマニフェストエディタを追加しました。</li>
- <li>アプリマネージャー: アプリのデバッグ用のツールボックスを、アプリマネージャーの UI 内に組み込みました。</li>
- <li>ウェブコンソール: "スプリットコンソール" モードを追加しました。Escape キーを押すと、他のツール内にコンソールをすばやく開きます。</li>
- <li>ウェブコンソール: 出力エリア用の Dark テーマを追加しました。</li>
- <li>デバッガー: ミニファイされた JavaScript の整形。</li>
- <li>デバッガー: 変数にマウスポインターを乗せるか変数をクリックすると、現在の値をポップアップで表示します。</li>
- <li>インスペクター: ルールビューでのカラーピッカーや、さまざまなツールチップを追加しました。</li>
- <li>ブラウザツールボックス: アドオンやプラットフォームの開発者が、ブラウザ自身を対象にしてほぼすべての開発ツールを使用できるようになりました。</li>
-</ul>
+- {{domxref("console.exception")}} プロパティを追加しました ({{bug("922214")}})。
+- {{domxref("console.assert")}} プロパティを追加しました ({{bug("760193")}})。
+- アプリマネージャー: 新しいマニフェストエディタを追加しました。
+- アプリマネージャー: アプリのデバッグ用のツールボックスを、アプリマネージャーの UI 内に組み込みました。
+- ウェブコンソール: "スプリットコンソール" モードを追加しました。Escape キーを押すと、他のツール内にコンソールをすばやく開きます。
+- ウェブコンソール: 出力エリア用の Dark テーマを追加しました。
+- デバッガー: ミニファイされた JavaScript の整形。
+- デバッガー: 変数にマウスポインターを乗せるか変数をクリックすると、現在の値をポップアップで表示します。
+- インスペクター: ルールビューでのカラーピッカーや、さまざまなツールチップを追加しました。
+- ブラウザツールボックス: アドオンやプラットフォームの開発者が、ブラウザ自身を対象にしてほぼすべての開発ツールを使用できるようになりました。
 
-<p>詳しくは<a href="https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/" title="Split console, pretty-print minified JS and more – Firefox Developer Tools Episode 28">こちらの投稿</a>をご覧ください。</p>
+詳しくは[こちらの投稿](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/ "Split console, pretty-print minified JS and more – Firefox Developer Tools Episode 28")をご覧ください。
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>複数行の <a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> をサポートしました ({{bug("939901")}})。</li>
- <li>東アジア言語における長い表記のの<a href="/ja/docs/Web/CSS/list-style-type">カウンタースタイル</a>を実装しました ({{bug("934072")}})。</li>
- <li>{{cssxref("background-blend-mode")}} プロパティをサポートしました ({{bug("841601")}})。</li>
- <li>{{cssxref("font-variant-ligatures")}} プロパティに値 <code>none</code> を追加しました ({{bug("913264")}})。</li>
- <li>疑似要素で {{cssxref(":hover")}} ユーザーアクション疑似クラスをサポートしました ({{bug("922669")}})。</li>
-</ul>
+- 複数行の [flexbox](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) をサポートしました ({{bug("939901")}})。
+- 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/Web/CSS/list-style-type)を実装しました ({{bug("934072")}})。
+- {{cssxref("background-blend-mode")}} プロパティをサポートしました ({{bug("841601")}})。
+- {{cssxref("font-variant-ligatures")}} プロパティに値 `none` を追加しました ({{bug("913264")}})。
+- 疑似要素で {{cssxref(":hover")}} ユーザーアクション疑似クラスをサポートしました ({{bug("922669")}})。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li><code>&lt;input type=color&gt;</code> および <code>&lt;input type=number&gt;</code> を実装しましたが、デフォルトでは無効です。</li>
-</ul>
+- `<input type=color>` および `<input type=number>` を実装しましたが、デフォルトでは無効です。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a> の実装が続いています。
+- [ECMAScript 2015](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) の実装が続いています。
 
-  <ul>
-   <li><code>Array</code> の新たなメソッド、 {{jsxref("Array.prototype.entries()")}} および {{jsxref("Array.prototype.keys()")}} を実装しました ({{bug("894658")}})。</li>
-  </ul>
- </li>
- <li>A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ({{bug("724768")}}).</li>
-</ul>
+  - `Array` の新たなメソッド、 {{jsxref("Array.prototype.entries()")}} および {{jsxref("Array.prototype.keys()")}} を実装しました ({{bug("894658")}})。
 
-<h3 id="InterfacesAPIsDOM">インターフェイス/API/DOM</h3>
+- A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ({{bug("724768")}}).
 
-<ul>
- <li><code>HTMLVideoElement.canPlayType('video/webm')</code> が <code>maybe</code> を返すようになりました ({{bug("884275")}})。</li>
- <li>{{domxref("DocumentFragment.getElementById()")}} メソッドを実装しました。例: <code>document.createDocumentFragment().getElementById()</code> ({{bug("933193")}})</li>
- <li>{{domxref("KeyboardEvent.repeat")}} 属性を実装しました ({{bug("600117")}})。</li>
- <li>{{domxref("File")}} コンストラクターを実装しました。例: <code>new File(["foo"], "foo.txt")</code> ({{bug("819900")}})</li>
- <li>プライバシーの理由により、{{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} が enumerable ではなくなりました ({{bug(757726)}})。</li>
- <li>{{domxref("Window.screenX")}} 属性および {{domxref("Window.screenY")}} 属性が CSS ピクセル値を返すようになりました (デバイスピクセル値は返しません) ({{bug(943668)}})。</li>
- <li>{{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} メソッドを実装しました。これらを有効にするには、設定項目 <code>canvas.focusring.enabled</code> を <code>true</code> に設定しなければなりません ({{bug(540456)}})。</li>
- <li><code>willReadFrequently</code> コンテキスト属性が "<code>2d</code>" キャンバスコンテキストで実装されました ({{domxref("HTMLCanvasElement.getContext()")}} を参照) ({{bug(884226)}})。</li>
- <li>{{domxref("NavigatorID")}} の属性やメソッドのうち、 {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} が {{domxref("WorkerNavigator")}} に実装され、ワーカーで利用できるようになりました。 ({{bug(925847)}})。</li>
- <li>{{domxref("Element/previousElementSibling" , "previousElementSibling")}} および {{domxref("Element/nextElementSibling" , "nextElementSibling")}} の各プロパティが互換性の問題により、 {{domxref("DocumentType")}} から削除されました ({{bug(932501)}})。</li>
-</ul>
+### インターフェイス/API/DOM
 
-<h3 id="MathML">MathML</h3>
+- `HTMLVideoElement.canPlayType('video/webm')` が `maybe` を返すようになりました ({{bug("884275")}})。
+- {{domxref("DocumentFragment.getElementById()")}} メソッドを実装しました。例: `document.createDocumentFragment().getElementById()` ({{bug("933193")}})
+- {{domxref("KeyboardEvent.repeat")}} 属性を実装しました ({{bug("600117")}})。
+- {{domxref("File")}} コンストラクターを実装しました。例: `new File(["foo"], "foo.txt")` ({{bug("819900")}})
+- プライバシーの理由により、{{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} が enumerable ではなくなりました ({{bug(757726)}})。
+- {{domxref("Window.screenX")}} 属性および {{domxref("Window.screenY")}} 属性が CSS ピクセル値を返すようになりました (デバイスピクセル値は返しません) ({{bug(943668)}})。
+- {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} メソッドを実装しました。これらを有効にするには、設定項目 `canvas.focusring.enabled` を `true` に設定しなければなりません ({{bug(540456)}})。
+- `willReadFrequently` コンテキスト属性が "`2d`" キャンバスコンテキストで実装されました ({{domxref("HTMLCanvasElement.getContext()")}} を参照) ({{bug(884226)}})。
+- {{domxref("NavigatorID")}} の属性やメソッドのうち、 {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} が {{domxref("WorkerNavigator")}} に実装され、ワーカーで利用できるようになりました。 ({{bug(925847)}})。
+- {{domxref("Element/previousElementSibling" , "previousElementSibling")}} および {{domxref("Element/nextElementSibling" , "nextElementSibling")}} の各プロパティが互換性の問題により、 {{domxref("DocumentType")}} から削除されました ({{bug(932501)}})。
 
-<ul>
- <li><code>mathvariant</code> 属性をサポートしました ({{bug("114365")}})。</li>
-</ul>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+- `mathvariant` 属性をサポートしました ({{bug("114365")}})。
 
-<p><em>変更なし。</em></p>
+### SVG
 
-<h3 id="AudioVideo">Audio/Video</h3>
+_変更なし。_
 
-<ul>
- <li>WebM で Opus をサポートしました ({{bug("938686")}})。</li>
- <li>VP9 ビデオデコーダをサポートしました ({{bug("833023")}})。</li>
-</ul>
+### Audio/Video
 
-<h3 id="Network">ネットワーク</h3>
+- WebM で Opus をサポートしました ({{bug("938686")}})。
+- VP9 ビデオデコーダをサポートしました ({{bug("833023")}})。
 
-<ul>
- <li><code>SPDY/2</code> のサポートを廃止しました。</li>
-</ul>
+### ネットワーク
 
-<h2 id="Changes_for_addon_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
+- `SPDY/2` のサポートを廃止しました。
 
-<ul>
- <li><a href="/ja/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm">DeferredTask.jsm</a> のインターフェイスを変更しました。また <code>isPending()</code>、<code>start()</code>、<code>flush()</code>、<code>cancel()</code> の各メソッドを削除しました ({{bug("940408")}})。</li>
-</ul>
+## アドオン開発者と Mozilla 開発者向けの変更点
 
-<h2 id="Security">セキュリティ</h2>
+- [DeferredTask.jsm](/ja/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) のインターフェイスを変更しました。また `isPending()`、`start()`、`flush()`、`cancel()` の各メソッドを削除しました ({{bug("940408")}})。
 
-<ul>
- <li>sandbox 化した iframe では、CSP が適用されていませんでした。これを修正しました ({{bug(886164)}})。</li>
- <li>CSP 1.1 の試験的なディレクティブ <code>script-nonce</code> を実装しました。この機能を有効にするには、設定項目 <code>security.csp.experimentalEnabled</code> を <code>true</code> に設定してください ({{bug(855326)}})。</li>
-</ul>
+## セキュリティ
 
-<h2 id="See_also">関連情報</h2>
+- sandbox 化した iframe では、CSP が適用されていませんでした。これを修正しました ({{bug(886164)}})。
+- CSP 1.1 の試験的なディレクティブ `script-nonce` を実装しました。この機能を有効にするには、設定項目 `security.csp.experimentalEnabled` を `true` に設定してください ({{bug(855326)}})。
 
-<ul>
- <li><a href="http://www.mozilla.jp/firefox/28.0/releasenotes/">Firefox 28 リリースノート</a></li>
- <li><a href="https://dev.mozilla.jp/2014/02/firefox-28-addon-compatibility/">Firefox 28 アドオン互換性情報</a></li>
-</ul>
+## 関連情報
 
-<h3 id="Older_versions">過去のバージョン</h3>
+- [Firefox 28 リリースノート](http://www.mozilla.jp/firefox/28.0/releasenotes/)
+- [Firefox 28 アドオン互換性情報](https://dev.mozilla.jp/2014/02/firefox-28-addon-compatibility/)
 
-<p>{{Firefox_for_developers('27')}}</p>
+### 過去のバージョン
+
+{{Firefox_for_developers('27')}}

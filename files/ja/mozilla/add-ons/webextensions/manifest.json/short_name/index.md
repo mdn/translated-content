@@ -7,36 +7,27 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">型</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">必須</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">例</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"short_name": "My Extension"</pre>
-   </td>
-  </tr>
- </tbody>
-</table>
+| 型   | `String` |
+| ---- | -------- |
+| 必須 | No       |
+| 例   | ```json  |
 
-<p>拡張機能の短い名前。与えられた場合、これは <a href="/ja/Add-ons/WebExtensions/manifest.json/name">name</a> 項目が長過ぎるコンテキストで使われます。短い名前は 12 文字を超えないことが推奨されます。manifest.json に短い名前が入ってない場合、name が代わりに使われて切り捨てられることがあります。</p>
+"short_name": "My Extension"
 
-<p>これは<a href="/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">ローカライズ可能なプロパティ</a>です。</p>
+````|
 
-<h2 id="Example" name="Example">例</h2>
+拡張機能の短い名前。与えられた場合、これは [name](/ja/Add-ons/WebExtensions/manifest.json/name) 項目が長過ぎるコンテキストで使われます。短い名前は 12 文字を超えないことが推奨されます。manifest.json に短い名前が入ってない場合、name が代わりに使われて切り捨てられることがあります。
 
-<pre class="brush: json no-line-numbers">"short_name": "My Extension"</pre>
+これは[ローカライズ可能なプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## 例
 
-<p>{{Compat("webextensions.manifest.short_name")}}</p>
+```json
+"short_name": "My Extension"
+````
+
+## ブラウザ実装状況
+
+{{Compat("webextensions.manifest.short_name")}}

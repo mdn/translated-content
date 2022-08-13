@@ -5,17 +5,16 @@ tags:
   - CSS Grids
 translation_of: Glossary/Grid_Cell
 ---
-<p><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a>に於ける CSS グリッドの最小単位が<strong>グリッドセル</strong>です。四つの交差する {{glossary("grid lines", "グリッドライン")}} に囲まれた領域のことで、表に於けるセルと考え方はほぼ同じです。</p>
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)に於ける CSS グリッドの最小単位が**グリッドセル**です。四つの交差する {{glossary("grid lines", "グリッドライン")}} に囲まれた領域のことで、表に於けるセルと考え方はほぼ同じです。
 
-<p><img alt="Diagram showing an individual cell on the grid." src="https://mdn.mozillademos.org/files/14767/1_Grid_Cell.png" style="height: 221px; width: 332px;"></p>
+![Diagram showing an individual cell on the grid.](https://mdn.mozillademos.org/files/14767/1_Grid_Cell.png)
 
-<p>各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナ直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行もしくは列 {{glossary("grid tracks", "トラック")}} が自動的に追加されます。</p>
+各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナ直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行もしくは列 {{glossary("grid tracks", "トラック")}} が自動的に追加されます。
 
-<p>この例では 3 列のトラックグリッドを作成しています。5 つのアイテムはまず最初の行の 3 つのグリッドセルに配置され、新しい行を作って残りの 2 つのアイテムが配置されます。</p>
+この例では 3 列のトラックグリッドを作成しています。5 つのアイテムはまず最初の行の 3 つのグリッドセルに配置され、新しい行を作って残りの 2 つのアイテムが配置されます。
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -23,49 +22,45 @@ translation_of: Glossary/Grid_Cell
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-auto-rows: 100px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('example_1', '300', '280') }}</p>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
 </div>
+```
 
-<h2 id="より詳しく">より詳しく</h2>
+{{ EmbedLiveSample('example_1', '300', '280') }}
 
-<h3 id="プロパティリファレンス">プロパティリファレンス</h3>
+## より詳しく
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
-</ul>
+### プロパティリファレンス
 
-<h3 id="さらに詳しい説明">さらに詳しい説明</h3>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
 
-<ul>
- <li>CSS グリッドレイアウトガイド: <a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本コンセプト</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">CSS グリッドレイアウト仕様に於けるグリッドセルの定義</a></li>
-</ul>
+### さらに詳しい説明
+
+- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [CSS グリッドレイアウト仕様に於けるグリッドセルの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)

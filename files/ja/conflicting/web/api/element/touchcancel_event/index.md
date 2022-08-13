@@ -12,32 +12,28 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ontouchcancel
 original_slug: Web/API/GlobalEventHandlers/ontouchcancel
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p><strong><code>ontouchcancel</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("touchcancel")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</p>
+**`ontouchcancel`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("touchcancel")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。
 
-<div class="note">
-<p><strong>注:</strong> このプロパティは公式には標準化されて<em>いません</em>。これは {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} 仕様書で定義されているものであり、 {{SpecName('Touch Events')}} {{Spec2('Touch Events')}} では定義されていません。このプロパティは広く実装されているわけではありません。</p>
-</div>
+> **Note:** **注:** このプロパティは公式には標準化されて*いません*。これは {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} 仕様書で定義されているものであり、 {{SpecName('Touch Events')}} {{Spec2('Touch Events')}} では定義されていません。このプロパティは広く実装されているわけではありません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>cancelHandler</var> = <var>someElement</var>.ontouchcancel;
-</pre>
+    var cancelHandler = someElement.ontouchcancel;
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<dl>
- <dt><code><var>cancelHandler</var></code></dt>
- <dd>要素 <code><var>someElement</var></code> の <code>touchcancel</code> イベントハンドラー。</dd>
-</dl>
+- `cancelHandler`
+  - : 要素 `someElement` の `touchcancel` イベントハンドラー。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、<code>touchcancel</code> を使用して要素の <code>touchcancel</code> イベントを処理する2つの方法を示します。</p>
+この例では、`touchcancel` を使用して要素の `touchcancel` イベントを処理する 2 つの方法を示します。
 
-<pre class="brush: js notranslate">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function cancelTouch(ev) {
   // イベントの処理
 }
@@ -45,40 +41,25 @@ function init() {
   let el = document.getElementById('target1');
   el.ontouchcancel = cancelTouch;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" ontouchcancel="cancelTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" ontouchcancel="cancelTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchcancel')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>非安定版</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           | 状態                                 | 備考     |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchcancel')}} | {{Spec2('Touch Events 2')}} | 非安定版 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.ontouchcancel")}}</p>
+{{Compat("api.GlobalEventHandlers.ontouchcancel")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ event("touchcancel") }}</li>
-</ul>
+- {{ event("touchcancel") }}

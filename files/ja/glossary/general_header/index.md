@@ -6,6 +6,6 @@ tags:
   - 用語集
 translation_of: Glossary/General_header
 ---
-<p><strong>一般ヘッダー</strong>は、リクエスト及びレスポンスメッセージの両方で使用できるものの、内容物そのものには適用されない {{glossary('Header', 'HTTP ヘッダー')}}です。使用されている文脈に応じて、一般ヘッダーは{{glossary("Response header", "レスポンスヘッダー")}}又は{{glossary("request header", "リクエストヘッダー")}}のどちらかになります。しかし、{{glossary("entity header", "エンティティヘッダー")}}ではありません。</p>
+**一般ヘッダー**は、リクエスト及びレスポンスメッセージの両方で使用できるものの、内容物そのものには適用されない {{glossary('Header', 'HTTP ヘッダー')}}です。使用されている文脈に応じて、一般ヘッダーは{{glossary("Response header", "レスポンスヘッダー")}}又は{{glossary("request header", "リクエストヘッダー")}}のどちらかになります。しかし、{{glossary("entity header", "エンティティヘッダー")}}ではありません。
 
-<p>最も一般的な一般的なヘッダーは、 {{HTTPHeader('Date')}}, {{HTTPheader("Cache-Control")}}, {{HTTPHeader("Connection")}} です。</p>
+最も一般的な一般的なヘッダーは、 {{HTTPHeader('Date')}}, {{HTTPheader("Cache-Control")}}, {{HTTPHeader("Connection")}} です。

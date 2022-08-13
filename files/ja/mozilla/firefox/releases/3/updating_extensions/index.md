@@ -6,153 +6,129 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3
 ---
-<p> このドキュメントは、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。</p>
+このドキュメントは、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。
 
-<p>読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストール定義ファイル内の <code>maxVersion</code> 項目の更新だけで、なおかつ <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a> に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って <code>maxVersion</code> を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。</p>
+読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストール定義ファイル内の `maxVersion` 項目の更新だけで、なおかつ [addons.mozilla.org](https://addons.mozilla.org) に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って `maxVersion` を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。
 
-<h3 id="Step_1_.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E6.9B.B4.E6.96.B0.E3.81.99.E3.82.8B" name="Step_1:_.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E6.9B.B4.E6.96.B0.E3.81.99.E3.82.8B">Step 1: インストール定義ファイルを更新する</h3>
+### Step 1: インストール定義ファイルを更新する
 
-<p>最初のステップ、そして、ほとんどの拡張機能にとって必要となるたったひとつのステップは、Firefox 3 との互換性を示すために <a href="/ja/Install_Manifests">インストール定義ファイル</a> (<code>install.rdf</code>) を更新する作業です。</p>
+最初のステップ、そして、ほとんどの拡張機能にとって必要となるたったひとつのステップは、Firefox 3 との互換性を示すために [インストール定義ファイル](/ja/Install_Manifests) (`install.rdf`) を更新する作業です。
 
-<p>ファイルを開いて、互換性がある Firefox の最高バージョンを示す行を見つけます。Firefox 2 向けの拡張機能であれば、以下のように書かれているはずです。</p>
+ファイルを開いて、互換性がある Firefox の最高バージョンを示す行を見つけます。Firefox 2 向けの拡張機能であれば、以下のように書かれているはずです。
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;</span>
-</pre>
+     <em:maxVersion>2.0.*</em:maxVersion>
 
-<p>これを Firefox 3 との互換性を示すように変更します。</p>
+これを Firefox 3 との互換性を示すように変更します。
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;</span>
-</pre>
+     <em:maxVersion>3.0.*</em:maxVersion>
 
-<p>次にアドオンを再インストールします。</p>
+次にアドオンを再インストールします。
 
-<p>なお、Firefox 3 ではバージョン番号の余計な「.0」が廃止されますので、「3.0.0.*」の代わりに「3.0.*」と書くだけで済みます。</p>
+なお、Firefox 3 ではバージョン番号の余計な「.0」が廃止されますので、「3.0.0.\*」の代わりに「3.0.\*」と書くだけで済みます。
 
-<p>これまでに、一部の拡張機能に影響すると思われる API の変更がいくつも行われています (まだ今後も変更は行われるでしょう)。私たちは現在、これらの変更の完全なリストを作成中です。</p>
+これまでに、一部の拡張機能に影響すると思われる API の変更がいくつも行われています (まだ今後も変更は行われるでしょう)。私たちは現在、これらの変更の完全なリストを作成中です。
 
-<div class="note"><span class="lang lang-ja"><strong>註:</strong> もしあなたの拡張機能が、<a href="../../../../ja/Install_Manifests" rel="internal">インストール定義ファイル</a> の代わりに、まだ <code><a class="new" href="../../../../ja/Install.js" rel="internal">Install.js</a></code> スクリプトを使っている場合は、今回インストール定義ファイルに移行していただく必要があります。Firefox 3 は XPI ファイル内の <code>install.js</code> スクリプトをサポートしません。</span></div>
+> **Note:** **註:** もしあなたの拡張機能が、[インストール定義ファイル](../../../../ja/Install_Manifests) の代わりに、まだ [`Install.js`](../../../../ja/Install.js) スクリプトを使っている場合は、今回インストール定義ファイルに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
 
-<h4 id=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E7.BF.BB.E8.A8.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E5.AE.9A.E7.BE.A9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E7.BF.BB.E8.A8.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">インストール定義ファイルに翻訳を追加する</h4>
+#### インストール定義ファイルに翻訳を追加する
 
-<p>Firefox 3 は、翻訳された説明文を指定するための新しいプロパティを、インストール定義ファイル内でサポートしています。今までの方法も引き続き動作しますが、この新しい方法を利用すれば、アドオンが無効化されていたりインストールが保留されている場合も、各言語で説明文を表示できるようになります。詳しくは <a href="/ja/Localizing_extension_descriptions">拡張機能の説明の翻訳</a> をご覧ください。</p>
+Firefox 3 は、翻訳された説明文を指定するための新しいプロパティを、インストール定義ファイル内でサポートしています。今までの方法も引き続き動作しますが、この新しい方法を利用すれば、アドオンが無効化されていたりインストールが保留されている場合も、各言語で説明文を表示できるようになります。詳しくは [拡張機能の説明の翻訳](/ja/Localizing_extension_descriptions) をご覧ください。
 
-<h3 id="Step_2_.E5.AE.89.E5.85.A8.E3.81.AA.E6.9B.B4.E6.96.B0.E3.82.92.E6.8F.90.E4.BE.9B.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.8B.E7.A2.BA.E8.AA.8D.E3.81.99.E3.82.8B" name="Step_2:_.E5.AE.89.E5.85.A8.E3.81.AA.E6.9B.B4.E6.96.B0.E3.82.92.E6.8F.90.E4.BE.9B.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.8B.E7.A2.BA.E8.AA.8D.E3.81.99.E3.82.8B">Step 2: 安全な更新を提供しているか確認する</h3>
+### Step 2: 安全な更新を提供しているか確認する
 
-<p>あなたが独自にアドオンを配布していて、<a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a> のような安全なアドオン提供サービスを利用していない場合、アドオンの更新に安全な方法を用いる必要があります。つまり、SSL を利用した Web サイト上で更新を提供するか、暗号鍵を使って更新情報に署名する必要があります。詳しくは <a href="/ja/Extension_Versioning,_Update_and_Compatibility#Securing_Updates">安全な更新</a> をご覧ください。</p>
+あなたが独自にアドオンを配布していて、[addons.mozilla.org](https://addons.mozilla.org) のような安全なアドオン提供サービスを利用していない場合、アドオンの更新に安全な方法を用いる必要があります。つまり、SSL を利用した Web サイト上で更新を提供するか、暗号鍵を使って更新情報に署名する必要があります。詳しくは [安全な更新](/ja/Extension_Versioning,_Update_and_Compatibility#Securing_Updates) をご覧ください。
 
-<h3 id="Step_3_.E5.A4.89.E6.9B.B4.E3.81.95.E3.82.8C.E3.81.9F_API_.E3.81.AB.E5.AF.BE.E5.BF.9C.E3.81.99.E3.82.8B" name="Step_3:_.E5.A4.89.E6.9B.B4.E3.81.95.E3.82.8C.E3.81.9F_API_.E3.81.AB.E5.AF.BE.E5.BF.9C.E3.81.99.E3.82.8B">Step 3: 変更された API に対応する</h3>
+### Step 3: 変更された API に対応する
 
-<p>いくつかの API は様々な方法で変更が行われています。それらの中で、多くの拡張機能に影響を与えることが予想される最も大幅な変更を以下にまとめました。</p>
+いくつかの API は様々な方法で変更が行われています。それらの中で、多くの拡張機能に影響を与えることが予想される最も大幅な変更を以下にまとめました。
 
-<h4 id="DOM" name="DOM">DOM</h4>
+#### DOM
 
-<p>外部ドキュメントからのノードは、現在のドキュメントに挿入する前に <a href="/ja/docs/Web/API/Document/importNode" title="外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。"><code>document.importNode()</code></a> を使ってクローンを作る (あるいは
-    <a href="/ja/docs/Web/API/Document/adoptNode" title="外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。"><code>document.adoptNode()</code></a> を使って取り込む) べきです。<a href="/ja/docs/Web/API/Node/ownerDocument" title="ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。"><code>Node.ownerDocument</code></a> 問題の詳細については
-    <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a> を参照してください。</p>
+外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode "外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。") を使ってクローンを作る (あるいは
+[`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode "外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。") を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument "ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。") 問題の詳細については
+[W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
 
-    <p>Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
-    将来的な互換性を高めるため、Web 開発者にはこのルールに従ってコードを修正することを推奨します。</p>
+Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
+将来的な互換性を高めるため、Web 開発者にはこのルールに従ってコードを修正することを推奨します。
 
-<h4 id=".E3.83.96.E3.83.83.E3.82.AF.E3.83.9E.E3.83.BC.E3.82.AF.E3.81.A8.E5.B1.A5.E6.AD.B4" name=".E3.83.96.E3.83.83.E3.82.AF.E3.83.9E.E3.83.BC.E3.82.AF.E3.81.A8.E5.B1.A5.E6.AD.B4">ブックマークと履歴</h4>
+#### ブックマークと履歴
 
-<p>あなたの拡張機能から何らかの方法でブックマークや履歴のデータにアクセスしている場合、Firefox 3 と互換性を持たせるには多くの作業が必要です。これらの情報にアクセスするための古い API は、<a href="/ja/Places">Places</a> という新しいアーキテクチャに置き換えられました。既存の拡張機能を Places API に対応させる方法については、<a href="/ja/Places_migration_guide">Places への移行ガイド</a> で詳しく解説しています。</p>
+あなたの拡張機能から何らかの方法でブックマークや履歴のデータにアクセスしている場合、Firefox 3 と互換性を持たせるには多くの作業が必要です。これらの情報にアクセスするための古い API は、[Places](/ja/Places) という新しいアーキテクチャに置き換えられました。既存の拡張機能を Places API に対応させる方法については、[Places への移行ガイド](/ja/Places_migration_guide) で詳しく解説しています。
 
-<h4 id=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3" name=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3">ダウンロードマネージャ</h4>
+#### ダウンロードマネージャ
 
-<p>RDF データ形式から <a href="/ja/Storage">Storage</a> API への移行にあたって、ダウンロードマネージャの API にも若干変更が加えられました。これに関する移行作業は非常に簡単なはずです。また、複数のダウンロードマネージャリスナーをサポートするため、ダウンロードの進捗状況を監視する API にも変更がありました。詳しくは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code>、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code>、<a href="/ja/Monitoring_downloads">ダウンロードの監視</a> を参照してください。</p>
+RDF データ形式から [Storage](/ja/Storage) API への移行にあたって、ダウンロードマネージャの API にも若干変更が加えられました。これに関する移行作業は非常に簡単なはずです。また、複数のダウンロードマネージャリスナーをサポートするため、ダウンロードの進捗状況を監視する API にも変更がありました。詳しくは [`nsIDownloadManager`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager)、[`nsIDownloadProgressListener`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener)、[ダウンロードの監視](/ja/Monitoring_downloads) を参照してください。
 
-<h4 id=".E3.83.91.E3.82.B9.E3.83.AF.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3" name=".E3.83.91.E3.82.B9.E3.83.AF.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3">パスワードマネージャ</h4>
+#### パスワードマネージャ
 
-<p>あなたの拡張機能からパスワードマネージャを利用してユーザのログイン情報にアクセスしている場合、新しいログインマネージャ API を利用するように更新する必要があります。</p>
+あなたの拡張機能からパスワードマネージャを利用してユーザのログイン情報にアクセスしている場合、新しいログインマネージャ API を利用するように更新する必要があります。
 
-<ul>
- <li><a href="/ja/Using_nsILoginManager">nsILoginManager の使い方</a> という記事には、パスワードマネージャとログインマネージャの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。</li>
- <li><code><a href="/ja/nsILoginInfo">nsILoginInfo</a></code></li>
- <li><code><a href="/ja/nsILoginManager">nsILoginManager</a></code></li>
-</ul>
+- [nsILoginManager の使い方](/ja/Using_nsILoginManager) という記事には、パスワードマネージャとログインマネージャの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。
+- [`nsILoginInfo`](/ja/nsILoginInfo)
+- [`nsILoginManager`](/ja/nsILoginManager)
 
-<p>あなたが拡張機能の中で独自のパスワードストレージを提供したい場合は、組み込みのパスワードマネージャストレージを上書きすることもできます。詳しくは <a href="/ja/Creating_a_Login_Manager_storage_module">ログインマネージャ用ストレージモジュールの作成</a> をご覧ください。</p>
+あなたが拡張機能の中で独自のパスワードストレージを提供したい場合は、組み込みのパスワードマネージャストレージを上書きすることもできます。詳しくは [ログインマネージャ用ストレージモジュールの作成](/ja/Creating_a_Login_Manager_storage_module) をご覧ください。
 
-<h4 id=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97_.28.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.80.81.E3.82.B3.E3.83.B3.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.80.81.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.80.81.E3.83.91.E3.83.8D.E3.83.AB.29" name=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97_.28.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.80.81.E3.82.B3.E3.83.B3.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.80.81.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.80.81.E3.83.91.E3.83.8D.E3.83.AB.29">ポップアップ (メニュー、コンテキストメニュー、ツールチップ、パネル)</h4>
+#### ポップアップ (メニュー、コンテキストメニュー、ツールチップ、パネル)
 
-<p>XUL のポップアップシステムは Firefox 3 で大幅に変更されました。ポップアップシステムには、メインメニュー、コンテキストメニュー、ポップアップパネルが含まれます。新しいシステムの仕組みについては <a href="/ja/XUL/PopupGuide">ポップアップの使用</a> ガイドをご覧ください。特筆すべき点は、<code>popup.<span id="m-showPopup"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span></code> が非推奨となり、新しい <code>popup.<span id="m-openPopup"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span></code> と <code>popup.<span id="m-openPopupAtScreen"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></span></code> に置き換えられたことです。</p>
+XUL のポップアップシステムは Firefox 3 で大幅に変更されました。ポップアップシステムには、メインメニュー、コンテキストメニュー、ポップアップパネルが含まれます。新しいシステムの仕組みについては [ポップアップの使用](/ja/XUL/PopupGuide) ガイドをご覧ください。特筆すべき点は、`popup.showPopup` が非推奨となり、新しい `popup.openPopup` と `popup.openPopupAtScreen` に置き換えられたことです。
 
-<h4 id=".E8.87.AA.E5.8B.95.E8.A3.9C.E5.AE.8C" name=".E8.87.AA.E5.8B.95.E8.A3.9C.E5.AE.8C">自動補完</h4>
+#### 自動補完
 
-<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController" title="">nsIAutoCompleteController</a></code> インタフェースの <code><a href="/ja/NsIAutoCompleteController#handleEnter.28.29">handleEnter()</a></code> メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。</p>
+[`nsIAutoCompleteController`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController) インタフェースの [`handleEnter()`](/ja/NsIAutoCompleteController#handleEnter.28.29) メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。
 
-<h4 id="DOMParser" name="DOMParser">DOMParser</h4>
+#### DOMParser
 
-<ul>
- <li>When a <code>DOMParser</code> is instantiated, it inherits the calling code's principal and the <code>documentURI</code> and <code>baseURI</code> of the window the constructor came from.</li>
- <li>If the caller has UniversalXPConnect privileges, it can pass parameters to <code>new DOMParser()</code>. If fewer than three parameters are passed, the remaining parameters will default to <code>null</code>.
-  <ul>
-   <li>The first parameter is the principal to use; this overrides the default principal normally inherited.</li>
-   <li>The second parameter is the <code>documentURI</code> to use.</li>
-   <li>The third parameter is the <code>baseURI</code> to use.</li>
-  </ul>
- </li>
- <li>If you initialize a <code>DOMParser</code> using a contract, such as by calling <code>createInstance()</code>, and you don't call the <code>DOMParser</code>'s <code>init()</code> method, attempting to initiate a parsing operation will automatically create and initialize the <code>DOMParser</code> with a null principal and <code>null</code> pointers for <code>documentURI</code> and <code>baseURI</code>.</li>
-</ul>
+- When a `DOMParser` is instantiated, it inherits the calling code's principal and the `documentURI` and `baseURI` of the window the constructor came from.
+- If the caller has UniversalXPConnect privileges, it can pass parameters to `new DOMParser()`. If fewer than three parameters are passed, the remaining parameters will default to `null`.
 
-<h4 id=".E5.89.8A.E9.99.A4.E3.81.95.E3.82.8C.E3.81.9F.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E5.89.8A.E9.99.A4.E3.81.95.E3.82.8C.E3.81.9F.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">削除されたインタフェース</h4>
+  - The first parameter is the principal to use; this overrides the default principal normally inherited.
+  - The second parameter is the `documentURI` to use.
+  - The third parameter is the `baseURI` to use.
 
-<p>以下のインタフェースは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。</p>
+- If you initialize a `DOMParser` using a contract, such as by calling `createInstance()`, and you don't call the `DOMParser`'s `init()` method, attempting to initiate a parsing operation will automatically create and initialize the `DOMParser` with a null principal and `null` pointers for `documentURI` and `baseURI`.
 
-<ul>
- <li><code>nsIDOMPaintListener</code></li>
- <li><code>nsIDOMScrollListener</code></li>
- <li><code>nsIDOMMutationListener</code></li>
- <li><code>nsIDOMPageTransitionListener</code></li>
- <li><code>nsICloseAllWindows</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=386200" title='FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'>バグ 386200</a> 参照)</li>
-</ul>
+#### 削除されたインタフェース
 
-<h3 id="Step_4_.E9.96.A2.E9.80.A3.E3.81.99.E3.82.8B.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.A0.E5.91.A8.E3.82.8A.E3.81.AE.E5.A4.89.E6.9B.B4.E3.82.92.E7.A2.BA.E8.AA.8D.E3.81.99.E3.82.8B" name="Step_4:_.E9.96.A2.E9.80.A3.E3.81.99.E3.82.8B.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.A0.E5.91.A8.E3.82.8A.E3.81.AE.E5.A4.89.E6.9B.B4.E3.82.92.E7.A2.BA.E8.AA.8D.E3.81.99.E3.82.8B">Step 4: 関連するクローム周りの変更を確認する</h3>
+以下のインタフェースは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。
 
-<p>あなたのコードに修正を加える必要があるかもしれない小さな変更がクロームに対して行われました。「browser-bottombox」と呼ばれる新しい <code>vbox</code> が追加されました。これは、ブラウザウィンドウの下部にあるページ内検索バーとステータスバーを含むものです。この変更は見た目には影響しませんが、あなたの拡張機能がこれらの要素に関するクロームにオーバーレイを行っている場合、影響を受ける可能性があります。</p>
+- `nsIDOMPaintListener`
+- `nsIDOMScrollListener`
+- `nsIDOMMutationListener`
+- `nsIDOMPageTransitionListener`
+- `nsICloseAllWindows` ([バグ 386200](https://bugzilla.mozilla.org/show_bug.cgi?id=386200 'FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog') 参照)
 
-<p>例えばこれまで、次のように、ステータスバーの直前にクロームをオーバーレイしていた場合、</p>
+### Step 4: 関連するクローム周りの変更を確認する
 
-<pre>&lt;window id="main-window"&gt;
-&lt;something insertbefore="status-bar" /&gt;
-&lt;/window&gt;
-</pre>
+あなたのコードに修正を加える必要があるかもしれない小さな変更がクロームに対して行われました。「browser-bottombox」と呼ばれる新しい `vbox` が追加されました。これは、ブラウザウィンドウの下部にあるページ内検索バーとステータスバーを含むものです。この変更は見た目には影響しませんが、あなたの拡張機能がこれらの要素に関するクロームにオーバーレイを行っている場合、影響を受ける可能性があります。
 
-<p>今後は次のようにオーバーレイを行う必要があります。</p>
+例えばこれまで、次のように、ステータスバーの直前にクロームをオーバーレイしていた場合、
 
-<pre>&lt;vbox id="browser-bottombox"&gt;
-&lt;something insertbefore="status-bar" /&gt;
-&lt;/vbox&gt;
-</pre>
+    <window id="main-window">
+    <something insertbefore="status-bar" />
+    </window>
 
-<h3 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.A4.89.E6.9B.B4" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.A4.89.E6.9B.B4">その他の変更</h3>
+今後は次のようにオーバーレイを行う必要があります。
 
-<p><em>もし、拡張機能を Firefox 3 対応にするために必要な小さい変更があったら、ここに追加してください。</em></p>
+    <vbox id="browser-bottombox">
+    <something insertbefore="status-bar" />
+    </vbox>
 
-<ul>
- <li><code><a class="external" rel="freelink">chrome://browser/base/utilityOverlay.js</a></code> は、セキュリティ上の理由からサポートされなくなりました。これまでこのスクリプトを利用していた場合は、<code><a class="external" rel="freelink">chrome://browser/content/utilityOverlay.js</a></code> へ切り替えてください。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule" title="">nsIAboutModule</a></code> の実装には、<code>getURIFlags</code> メソッドのサポートが必要になりました。詳しくは <a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl" rel="custom">nsIAboutModule.idl</a> を参照してください。これは新しい <code>about:</code> URI を提供する拡張機能に影響します (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337746" title='FIXED: [FIX]Move "safe about" hardcoding out of security manager'>バグ 337746</a>)。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 要素は「ツールキット」の一部ではなくなりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339964" title="FIXED: move tabbrowser.xml out of mozilla/toolkit and into mozilla/browser">バグ 339964</a>)。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。</li>
- <li><a href="/ja/nsISupports_proxies">nsISupports プロキシ</a> の変更と、おそらくスレッド関連インタフェースへの変更については、ドキュメントを用意する必要があります。</li>
- <li>XUL ファイル内で <code>&lt;?xml-stylesheet ?&gt;</code> などの XML 処理命令を用いている場合、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=319654" title="FIXED: Processing instructions in XUL are not added to the content model">バグ 319654</a> で行われた以下の変更に注意してください。
-  <ol>
-   <li>XML PI が XUL ドキュメントの DOM に追加されました。これは、<a href="/ja/docs/Web/API/Document/firstChild" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>document.firstChild</code></a> が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに <a href="/ja/docs/Web/API/Document/documentElement" title="Document.documentElement は、その document のルート要素 (例えば、 HTML 文書の場合は &lt;html> 要素) である Element を返します。"><code>document.documentElement</code></a> を用いてください。</li>
-   <li><code>&lt;?xml-stylesheet ?&gt;</code> と <code>&lt;?xul-overlay ?&gt;</code> 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。</li>
-  </ol>
- </li>
- <li><code>window.addEventListener("load", myFunc, true)</code> が、Web コンテンツが読み込まれた際 (ブラウザのページ読み込み時) に呼び出されなくなりました。これは、inner ウィンドウと outer ウィンドウの関係が変わったことによります (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=296639" title="FIXED: Split windows into an inner and outer object">バグ 296639</a>)。簡単な修正方法は、<a href="/ja/Code_snippets/Tabbed_browser#Detecting_page_load">ここ</a> に書かれているように <code>gBrowser.addEventListener("load", myFunc, true)</code> を使うことです。この方法は Firefox 2 でも有効です。</li>
- <li><code>content.window.getSelection()</code> は、文字列を返す、非推奨となった <code>content.document.getSelection()</code> とは異なり、オブジェクトを返します (<code>toString()</code> を使えば文字列に変換できます)。</li>
- <li><code>event.preventBubble()</code> は Firefox 3 で非推奨となり、Firefox 3 で削除されました。Firefox 2 でも動作する <a href="/ja/DOM/event.stopPropagation"><code>event.stopPropagation()</code></a> を使ってください。</li>
- <li><code>setTimeout()</code> を使って開始されるタイマーは、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=52209" title="FIXED: JS timers can fire while a modal dialog is open">バグ 52209</a> のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimer" title="">nsITimer</a></code> を使ってください。</li>
- <li>信頼できないソース（例：Web サイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい <a href="../../../../ja/Chrome_Registration#contentaccessible" rel="internal"><code>contentaccessible</code> フラグ</a> を使わなければなりません。</li>
-</ul>
+### その他の変更
 
-<p>  </p>
+_もし、拡張機能を Firefox 3 対応にするために必要な小さい変更があったら、ここに追加してください。_
 
-<p>  </p>
+- [`chrome://browser/base/utilityOverlay.js`]() は、セキュリティ上の理由からサポートされなくなりました。これまでこのスクリプトを利用していた場合は、[`chrome://browser/content/utilityOverlay.js`]() へ切り替えてください。
+- [`nsIAboutModule`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します ([バグ 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))。
+- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser "tabbrowser") 要素は「ツールキット」の一部ではなくなりました ([バグ 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964 "FIXED: move tabbrowser.xml out of mozilla/toolkit and into mozilla/browser"))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
+- [nsISupports プロキシ](/ja/nsISupports_proxies) の変更と、おそらくスレッド関連インタフェースへの変更については、ドキュメントを用意する必要があります。
+- XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、[バグ 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654 "FIXED: Processing instructions in XUL are not added to the content model") で行われた以下の変更に注意してください。
 
-<div class="noinclude">
+  1.  XML PI が XUL ドキュメントの DOM に追加されました。これは、[`document.firstChild`](/ja/docs/Web/API/Document/firstChild "この項目についての文書はまだ書かれていません。書いてみませんか？") が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに [`document.documentElement`](/ja/docs/Web/API/Document/documentElement "Document.documentElement は、その document のルート要素 (例えば、 HTML 文書の場合は <html> 要素) である Element を返します。") を用いてください。
+  2.  `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 
-</div>
-
-<p> </p>
+- `window.addEventListener("load", myFunc, true)` が、Web コンテンツが読み込まれた際 (ブラウザのページ読み込み時) に呼び出されなくなりました。これは、inner ウィンドウと outer ウィンドウの関係が変わったことによります ([バグ 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639 "FIXED: Split windows into an inner and outer object"))。簡単な修正方法は、[ここ](/ja/Code_snippets/Tabbed_browser#Detecting_page_load) に書かれているように `gBrowser.addEventListener("load", myFunc, true)` を使うことです。この方法は Firefox 2 でも有効です。
+- `content.window.getSelection()` は、文字列を返す、非推奨となった `content.document.getSelection()` とは異なり、オブジェクトを返します (`toString()` を使えば文字列に変換できます)。
+- `event.preventBubble()` は Firefox 3 で非推奨となり、Firefox 3 で削除されました。Firefox 2 でも動作する [`event.stopPropagation()`](/ja/DOM/event.stopPropagation) を使ってください。
+- `setTimeout()` を使って開始されるタイマーは、[バグ 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209 "FIXED: JS timers can fire while a modal dialog is open") のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに [`nsITimer`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimer) を使ってください。
+- 信頼できないソース（例：Web サイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい [`contentaccessible` フラグ](../../../../ja/Chrome_Registration#contentaccessible) を使わなければなりません。

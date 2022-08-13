@@ -14,28 +14,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onloadend
 original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p><strong><code>onloadend</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントが発行されたとき (リソースの読み取り中に進捗が停止したとき) に呼び出されるコードを表すイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
+**`onloadend`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントが発行されたとき (リソースの読み取り中に進捗が停止したとき) に呼び出されるコードを表すイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>img</var>.onloadend = <var>funcRef</var>;
-</pre>
+    img.onloadend = funcRef;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code><var>funcRef</var></code> はリソースの <code>loadend</code> イベントが発行されたときに呼び出されるハンドラー関数です。</p>
+`funcRef` はリソースの `loadend` イベントが発行されたときに呼び出されるハンドラー関数です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;img src="myImage.jpg"&gt;</pre>
+```html
+<img src="myImage.jpg">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">// 'loadstart' が最初に発行され、次に 'load'、その次に 'loadend'
+```js
+// 'loadstart' が最初に発行され、次に 'load'、その次に 'loadend'
 
 image.addEventListener('load', function(e) {
   console.log('Image loaded');
@@ -47,10 +49,9 @@ image.addEventListener('loadstart', function(e) {
 
 image.addEventListener('loadend', function(e) {
   console.log('Image load finished');
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.GlobalEventHandlers.onloadend")}}</p>
-</div>
+{{Compat("api.GlobalEventHandlers.onloadend")}}

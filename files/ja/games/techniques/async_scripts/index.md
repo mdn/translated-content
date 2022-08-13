@@ -8,47 +8,55 @@ tags:
   - async
 translation_of: Games/Techniques/Async_scripts
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/ja/docs/Games")}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/ja/docs/Games")}}
 
-<div class="summary">
-<p><span class="seoSummary">全ての中~大規模ゲームでは、コンパイル処理を最適化してブラウザを最大限柔軟にする、非同期スクリプトとして <a href="/ja/docs/Games/Tools/asm.js">asm.js</a> コードをコンパイルします。Gecko では、非同期コンパイルによって、ゲームのロード時に JavaScript エンジンがメインスレッド外で asm.js をコンパイルし、生成した機械語コードをキャッシュしてそれ以降のロード時にコンパイル不要となります(Firefox 28から)。違いを見るには、<code>about:config</code> で <code>javascript.options.parallel_parsing</code> を反転させてください。</span></p>
-</div>
+全ての中\~大規模ゲームでは、コンパイル処理を最適化してブラウザを最大限柔軟にする、非同期スクリプトとして [asm.js](/ja/docs/Games/Tools/asm.js) コードをコンパイルします。Gecko では、非同期コンパイルによって、ゲームのロード時に JavaScript エンジンがメインスレッド外で asm.js をコンパイルし、生成した機械語コードをキャッシュしてそれ以降のロード時にコンパイル不要となります(Firefox 28 から)。違いを見るには、`about:config` で `javascript.options.parallel_parsing` を反転させてください。
 
-<h2 id="非同期を動作させる">非同期を動作させる</h2>
+## 非同期を動作させる
 
-<p>非同期のコンパイルは簡単です: JavaScript を書く時に、単に<code> async</code> 属性を使います:</p>
+非同期のコンパイルは簡単です: JavaScript を書く時に、単に` async` 属性を使います:
 
-<pre class="brush: js">&lt;script async src="file.js"&gt;&lt;/script&gt;</pre>
+```js
+<script async src="file.js"></script>
+```
 
-<p>あるいは、スクリプトで同じことを行います:</p>
+あるいは、スクリプトで同じことを行います:
 
-<pre class="brush: js">var script = document.createElement('script');
+```js
+var script = document.createElement('script');
 script.src = "file.js";
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p>(スクリプトによって生成されるスクリプトはデフォルトで非同期です。)  デフォルトの HTML シェル Emscripten は、後者を生成します。</p>
+(スクリプトによって生成されるスクリプトはデフォルトで非同期です。) デフォルトの HTML シェル Emscripten は、後者を生成します。
 
-<h2 id="非同期とそうでない時">非同期とそうでない時?</h2>
+## 非同期とそうでない時?
 
-<p>スクリプトが非同期で *ない* 、よく似た状況 (<a href="http://www.w3.org/TR/html5/scripting-1.html">仕様に定義されている</a>通り) では次の通りです:</p>
+スクリプトが非同期で \*ない\* 、よく似た状況 ([仕様に定義されている](http://www.w3.org/TR/html5/scripting-1.html)通り) では次の通りです:
 
-<pre class="brush: js">&lt;script async&gt;code&lt;/script&gt;</pre>
+```js
+<script async>code</script>
+```
 
-<p>および</p>
+および
 
-<pre class="brush: js">var script = document.createElement('script');
+```js
+var script = document.createElement('script');
 script.innerHTML = "code";
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p>両方とも 'インライン' スクリプトと考えられ、コンパイルされて、すぐに実行されます。</p>
+両方とも 'インライン' スクリプトと考えられ、コンパイルされて、すぐに実行されます。
 
-<p>コードが JS 文字列内にあった場合はどうでしょう? <code>eval</code> や <code>innerHTML</code>(両方とも同期コンパイルを起動します)を使う代わりに、 オブジェクトURLと一緒の Blob を使います:</p>
+コードが JS 文字列内にあった場合はどうでしょう? `eval` や `innerHTML`(両方とも同期コンパイルを起動します)を使う代わりに、 オブジェクト URL と一緒の Blob を使います:
 
-<pre class="brush: js">var blob = new Blob([codeString]);
+```js
+var blob = new Blob([codeString]);
 var script = document.createElement('script');
 var url = URL.createObjectURL(blob);
 script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
 script.src = url;
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p><code>innerHTML</code> ではなく <code>src</code>　をセットすると、スクリプトが非同期になります。</p>
+`innerHTML` ではなく `src`　をセットすると、スクリプトが非同期になります。

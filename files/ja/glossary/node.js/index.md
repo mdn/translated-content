@@ -5,26 +5,22 @@ tags:
   - Glossary
   - Infrastructure
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
   - node.js
 translation_of: Glossary/Node.js
 ---
-<p>Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} 実行環境であり、サーバー側アプリケーションやネットワークアプリケーションを JavaScript で構築することができます。</p>
+Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} 実行環境であり、サーバー側アプリケーションやネットワークアプリケーションを JavaScript で構築することができます。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+### 一般知識
 
-<ul>
- <li>Wikipedia 上の{{Interwiki("wikipedia", "Node.js")}}</li>
- <li><a href="https://nodejs.org/ja/">Node.js のウェブサイト</a></li>
-</ul>
+- Wikipedia 上の{{Interwiki("wikipedia", "Node.js")}}
+- [Node.js のウェブサイト](https://nodejs.org/ja/)
 
-<h3 id="Technical_information" name="Technical_information">技術的情報</h3>
+### 技術的情報
 
-<ul>
- <li><a href="https://nodejs.org/api/">API 文書</a></li>
- <li><a href="https://nodejs.org/ja/docs/guides/">チュートリアル</a></li>
-</ul>
+- [API 文書](https://nodejs.org/api/)
+- [チュートリアル](https://nodejs.org/ja/docs/guides/)
 
-<div>{{QuickLinksWithSubpages("/ja/docs/Glossary")}}</div>
+{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

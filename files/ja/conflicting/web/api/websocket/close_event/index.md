@@ -4,35 +4,22 @@ slug: conflicting/Web/API/WebSocket/close_event
 translation_of: Web/API/WebSocket/onclose
 original_slug: Web/API/WebSocket/onclose
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><code><strong>WebSocket.onclose</strong></code> プロパティは、WebSocket コネクションの {{domxref("WebSocket.readyState","readyState")}} が {{domxref("WebSocket.readyState","CLOSED")}} に変わったときに呼ばれる {{event("Event_handlers", "event handler")}} です。{{domxref("CloseEvent")}} と一緒に呼び出されます。</p>
+**`WebSocket.onclose`** プロパティは、WebSocket コネクションの {{domxref("WebSocket.readyState","readyState")}} が {{domxref("WebSocket.readyState","CLOSED")}} に変わったときに呼ばれる {{event("Event_handlers", "event handler")}} です。{{domxref("CloseEvent")}} と一緒に呼び出されます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>aWebSocket</em>.onclose = function(event) {
-  console.log("WebSocket is closed now.");
-};</pre>
+    aWebSocket.onclose = function(event) {
+      console.log("WebSocket is closed now.");
+    };
 
-<h2 id="値">値</h2>
+## 値
 
-<p>{{domxref("EventListener")}}.</p>
+{{domxref("EventListener")}}.
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onclose', 'WebSocket: onclose')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', '#handler-websocket-onclose', 'WebSocket: onclose')}} | {{Spec2('HTML WHATWG')}} | Initial definition |

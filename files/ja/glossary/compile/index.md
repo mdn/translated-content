@@ -6,25 +6,21 @@ tags:
   - Glossary
 translation_of: Glossary/Compile
 ---
-<p>コンパイルとは、特定の{{Glossary("computer programming", "プログラミング言語")}}を用いて記述されたコンピュータープログラムを他の言語 (普通はコンピューターが実行できるバイナリ言語) を用いて記述された同じプログラムに形を変えることである。コンパイラーはこのタスクを実行するソフトウェアです。時々、このタスクは "アセンブル" や "ビルド" とも呼ばれて、典型的には単なるコンパイルの完了以上のことを示します。例えば、あるバイナリーフォーマットにパッケージするなど。</p>
+コンパイルとは、特定の{{Glossary("computer programming", "プログラミング言語")}}を用いて記述されたコンピュータープログラムを他の言語 (普通はコンピューターが実行できるバイナリ言語) を用いて記述された同じプログラムに形を変えることである。コンパイラーはこのタスクを実行するソフトウェアです。時々、このタスクは "アセンブル" や "ビルド" とも呼ばれて、典型的には単なるコンパイルの完了以上のことを示します。例えば、あるバイナリーフォーマットにパッケージするなど。
 
-<p>通常、コンパイラーは C や{{Glossary("Java")}} のように人間が理解しやすい高級言語をアセンブリのような CPU が理解できる機械語に変換します。TypeScript を {{Glossary("JavaScript")}} にコンパイルするような、同レベル間の言語を翻訳するコンパイラーはトランスパイラやクロスコンパイラーと呼ばれます。これらはプロダクティビティツールと考えられています。</p>
+通常、コンパイラーは C や{{Glossary("Java")}} のように人間が理解しやすい高級言語をアセンブリのような CPU が理解できる機械語に変換します。TypeScript を {{Glossary("JavaScript")}} にコンパイルするような、同レベル間の言語を翻訳するコンパイラーはトランスパイラやクロスコンパイラーと呼ばれます。これらはプロダクティビティツールと考えられています。
 
-<p>ほとんどのコンパイラーは、ahead-of-time (AOT) か just-in-time (JIT) で動きます。プログラマーは、たいていコマンドラインか使用している {{Glossary("IDE")}} から AOT コンパイラーを起動します。最も有名なコンパイラーである "gcc" はその一例です。<br>
- JIT コンパイラーはたいてい透過的であり、性能のために使用されます。例えばブラウザーの場合、Firefox の <a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript エンジンは組み込み JIT コンパイラーを持っています。これは、ウェブサイトを閲覧中にウェブサイトの JavaScript がより速く実行できるように機械語のコードにコンパイルします。<a href="/ja/docs/WebAssembly">WebAssembly</a> のようなプロジェクトはこれをより良く行えるようにします。</p>
+ほとんどのコンパイラーは、ahead-of-time (AOT) か just-in-time (JIT) で動きます。プログラマーは、たいていコマンドラインか使用している {{Glossary("IDE")}} から AOT コンパイラーを起動します。最も有名なコンパイラーである "gcc" はその一例です。
+JIT コンパイラーはたいてい透過的であり、性能のために使用されます。例えばブラウザーの場合、Firefox の [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) JavaScript エンジンは組み込み JIT コンパイラーを持っています。これは、ウェブサイトを閲覧中にウェブサイトの JavaScript がより速く実行できるように機械語のコードにコンパイルします。[WebAssembly](/ja/docs/WebAssembly) のようなプロジェクトはこれをより良く行えるようにします。
 
-<h2 id="Learn_more" name="Learn_more">さらに学ぶ</h2>
+## さらに学ぶ
 
-<h3 id="General_knowledge" name="General_knowledge">一般的な知識</h3>
+### 一般的な知識
 
-<ul>
- <li>{{Interwiki("wikipedia", "コンパイラ")}} (Wikipedia)</li>
- <li><a href="https://gcc.gnu.org">GNU Compiler Collection (GCC)</a></li>
-</ul>
+- {{Interwiki("wikipedia", "コンパイラ")}} (Wikipedia)
+- [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
 
-<h3 id="Learning_resources" name="Learning_resources">学習資料</h3>
+### 学習資料
 
-<ul>
- <li><a href="https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842">Base CS Introduction on Compilers</a></li>
- <li><a href="http://stackoverflow.com/a/1672/133203">A big list of learning material on StackOverflow</a></li>
-</ul>
+- [Base CS Introduction on Compilers](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
+- [A big list of learning material on StackOverflow](http://stackoverflow.com/a/1672/133203)

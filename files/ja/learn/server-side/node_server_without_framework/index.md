@@ -9,27 +9,26 @@ tags:
   - フレームワークなし
 translation_of: Learn/Server-side/Node_server_without_framework
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">この記事では、フレームワークを使用せずに、Node.jsだけで構築された単純な静的ファイルサーバを紹介します。</p>
+この記事では、フレームワークを使用せずに、Node.js だけで構築された単純な静的ファイルサーバを紹介します。
 
-<p><a href="https://nodejs.org/en/">Node.js</a>用に、サーバを稼働させるのに役立つ多くのフレームワークがあります。</p>
+[Node.js](https://nodejs.org/en/)用に、サーバを稼働させるのに役立つ多くのフレームワークがあります。
 
-<p>最も人気があるのは、次のようなものです：</p>
+最も人気があるのは、次のようなものです：
 
-<ul>
- <li><a href="http://expressjs.com/">Express</a>: 広く使われているフレームワーク</li>
- <li><a href="https://hapijs.com/">Hapi.js</a>: アプリケーションとサービスを構築するための豊富なフレームワーク</li>
- <li><a href="https://www.totaljs.com/">Total</a>: 他のフレームワークやモジュールに依存しない、オールインワンのNode.jsフレームワーク。</li>
-</ul>
+- [Express](http://expressjs.com/): 広く使われているフレームワーク
+- [Hapi.js](https://hapijs.com/): アプリケーションとサービスを構築するための豊富なフレームワーク
+- [Total](https://www.totaljs.com/): 他のフレームワークやモジュールに依存しない、オールインワンの Node.js フレームワーク。
 
-<p>これらは、どんな状況にも適しているというわけではありません。開発者は既存のフレームワークに依存することなく、独自のサーバを構築する必要があることもあるでしょう。</p>
+これらは、どんな状況にも適しているというわけではありません。開発者は既存のフレームワークに依存することなく、独自のサーバを構築する必要があることもあるでしょう。
 
-<h2 id="静的ファイルサーバーの例">静的ファイルサーバーの例</h2>
+## 静的ファイルサーバーの例
 
-<p>Node.jsで構築された、簡単な静的ファイルサーバの例を以下に示します。</p>
+Node.js で構築された、簡単な静的ファイルサーバの例を以下に示します。
 
-<pre class="brush: js line-numbers language-js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -82,39 +81,44 @@ http.createServer(function (request, response) {
     });
 
 }).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');</pre>
+console.log('Server running at http://127.0.0.1:8125/');
+```
 
-<h3 id="各部の説明">各部の説明</h3>
+### 各部の説明
 
-<p>第1行から第3行までは、Node.jsが提供するモジュールを組み込みます。おおむね「インポート」に似たような手続きです。</p>
+第 1 行から第 3 行までは、Node.js が提供するモジュールを組み込みます。おおむね「インポート」に似たような手続きです。
 
-<pre class="brush: js language-js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
-</pre>
+```
 
-<p>次にある関数で、サーバーを生成します。 <code>https.createServer</code>は、サーバーオブジェクトを返しますが、下の例ではポート8125で要求の受付を開始します。</p>
+次にある関数で、サーバーを生成します。 `https.createServer`は、サーバーオブジェクトを返しますが、下の例ではポート 8125 で要求の受付を開始します。
 
-<pre class="brush: js language-js">http.createServer(function (request, response) {
+```js
+http.createServer(function (request, response) {
     ...
 }).listen(8125);
 console.log('Server running at http://127.0.0.1:8125/');
-</pre>
+```
 
-<p>次の4行では、要求があったURLから、ファイルへのパスを決定します。ファイル名が明示されていないときは、デフォルト名を使うようにします。</p>
+次の 4 行では、要求があった URL から、ファイルへのパスを決定します。ファイル名が明示されていないときは、デフォルト名を使うようにします。
 
-<pre class="brush: js">console.log('request ', request.url);
+```js
+console.log('request ', request.url);
 var filePath = '.' + request.url;
 if (filePath == './') {
     filePath = './index.html';
 }
-</pre>
+```
 
-<p>例えば、<code>example.org</code>というURLを要求されたときは、<code>example.org/index.html</code>.のことだと解釈します。</p>
+例えば、`example.org`という URL を要求されたときは、`example.org/index.html`.のことだと解釈します。
 
-<p>次に、要求されたファイルの拡張子を調べ、以下に定義する<a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIMEタイプ</a>のどれかと一致したら、そのタイプを使います。一致しない場合には、デフォルトのタイプ<code>application/octet-stream</code>を使うようにします。.</p>
+次に、要求されたファイルの拡張子を調べ、以下に定義する[MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)のどれかと一致したら、そのタイプを使います。一致しない場合には、デフォルトのタイプ`application/octet-stream`を使うようにします。.
 
-<pre class="brush: js">var extname = String(path.extname(filePath)).toLowerCase();
+```js
+var extname = String(path.extname(filePath)).toLowerCase();
 var mimeTypes = {
     '.html': 'text/html',
     '.js': 'text/javascript',
@@ -134,27 +138,30 @@ var mimeTypes = {
 };
 
 var contentType = mimeTypes[extname] || 'application/octet-stream';
-</pre>
+```
 
-<p>最後に、ファイルの情報をクライアントに返送します。この関数では、あらかじめ用意してあった<code>filePath</code>変数を使ってファイルを読み込みます。</p>
+最後に、ファイルの情報をクライアントに返送します。この関数では、あらかじめ用意してあった`filePath`変数を使ってファイルを読み込みます。
 
-<pre class="brush: js">fs.readFile(filePath, function(error, content) {
+```js
+fs.readFile(filePath, function(error, content) {
     ...
 });
-</pre>
+```
 
-<p>関数のなかで最初にやることは、起こりうるエラーへの対応です。</p>
+関数のなかで最初にやることは、起こりうるエラーへの対応です。
 
-<pre class="brush: js">if (error) {
+```js
+if (error) {
   ..
 } else {
   ..
 }
-</pre>
+```
 
-<p>一番多いのは、存在しないファイルを要求された場合（<code>ENOENT</code>）で、エラーコード404に対応するページを返してやります。</p>
+一番多いのは、存在しないファイルを要求された場合（`ENOENT`）で、エラーコード 404 に対応するページを返してやります。
 
-<pre class="brush: js">if(error.code == 'ENOENT') {
+```js
+if(error.code == 'ENOENT') {
     fs.readFile('./404.html', function(error, content) {
         response.writeHead(404, { 'Content-Type': 'text/html' });
         response.end(content, 'utf-8');
@@ -163,13 +170,16 @@ var contentType = mimeTypes[extname] || 'application/octet-stream';
 else {
     response.writeHead(500);
     response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
-}</pre>
+}
+```
 
-<p>何もエラーが検出されなかったら、MIME型をヘッダーに付けて、要求されたファイルを返してやります。</p>
+何もエラーが検出されなかったら、MIME 型をヘッダーに付けて、要求されたファイルを返してやります。
 
-<pre class="brush: js">response.writeHead(200, { 'Content-Type': contentType });
-response.end(content, 'utf-8');</pre>
+```js
+response.writeHead(200, { 'Content-Type': contentType });
+response.end(content, 'utf-8');
+```
 
-<h2 id="拡張の検討">拡張の検討</h2>
+## 拡張の検討
 
-<p>静的なファイルの返送機能だけでなく、要求の度にページを動的に生成する機能を付け加えることを考えてみてください。</p>
+静的なファイルの返送機能だけでなく、要求の度にページを動的に生成する機能を付け加えることを考えてみてください。

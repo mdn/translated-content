@@ -7,18 +7,14 @@ tags:
   - 用語集
 translation_of: Glossary/Operator
 ---
-<p>記号や英数字によって構成された<strong>予約語</strong>で、内蔵の機能を実行します。例えば、 JavaScript では加算演算子（"+"）は複数の数値を加算したり文字列を結合したりします。「否定」演算子（"!"）は式を否定し、例えば、 <code>true</code> を表す式では <code>false</code> を返します。</p>
+記号や英数字によって構成された**予約語**で、内蔵の機能を実行します。例えば、 JavaScript では加算演算子（"+"）は複数の数値を加算したり文字列を結合したりします。「否定」演算子（"!"）は式を否定し、例えば、 `true` を表す式では `false` を返します。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+## 詳細情報
 
-<h3 id="一般的な知識">一般的な知識</h3>
+### 一般的な知識
 
-<ul>
- <li>Wikipedia の{{Interwiki("wikipedia", "ja:演算子")}}の記事</li>
-</ul>
+- Wikipedia の{{Interwiki("wikipedia", "ja:演算子")}}の記事
 
-<h3 id="Technical_reference" name="Technical_reference">技術リファレンス</h3>
+### 技術リファレンス
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators">JavaScript の演算子</a></li>
-</ul>
+- [JavaScript の演算子](/ja/docs/Web/JavaScript/Reference/Operators)

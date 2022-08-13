@@ -4,45 +4,33 @@ slug: conflicting/Web/API/MediaDevices/getUserMedia
 translation_of: Web/API/MediaStreamConstraints
 original_slug: Web/API/MediaStreamConstraints
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}**`MediaStreamConstraints`**のオブジェクトは、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}を呼び出した時に返される{{domxref("MediaStream")}}に含まれるトラックの種類が何であるかを知るため、また、これらのトラック設定の制約を確立するために使用されます。制約がどのようにして動作するのかについての詳細は、[Capabilities, constraints, and settings](/ja/docs/Web/API/Media_Streams_API/Constraints) (英語)をお読みください。
 
-<div><strong><code>MediaStreamConstraints</code></strong>のオブジェクトは、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}を呼び出した時に返される{{domxref("MediaStream")}}に含まれるトラックの種類が何であるかを知るため、また、これらのトラック設定の制約を確立するために使用されます。</div>
+## プロパティ
 
-<div> </div>
+以下のプロパティの組み合わせ(全ては必要ありません)がこのオブジェクトに存在するのでしょう。
 
-<div>制約がどのようにして動作するのかについての詳細は、<a href="/ja/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a> (英語)をお読みください。</div>
+### トラック制約
 
-<h2 id="プロパティ">プロパティ</h2>
+- {{domxref("MediaStreamConstraints.video", "video")}}
+  - : ビデオトラックを必須とするかどうかを示す Boolean の値または、返される{{domxref("MediaStream")}}に含まれるビデオトラックの制約を示すための{{domxref("MediaTrackConstraints")}}オブジェクトのどちらかです。制約が与えられている場合は、ビデオトラックは要求されることになります。
+- {{domxref("MediaStreamConstraints.audio", "audio")}}
+  - : オーディオトラックを必須とするかどうかを示す Boolean の値または、返される{{domxref("MediaStream")}}に含まれるオーディオトラックの制約を示すための{{domxref("MediaTrackConstraints")}}オブジェクトのどちらかです。制約が与えられている場合は、オーディオトラックは要求されることになります。
 
-<p>以下のプロパティの組み合わせ(全ては必要ありません)がこのオブジェクトに存在するのでしょう。</p>
+### セキュリティ
 
-<h3 id="トラック制約">トラック制約</h3>
+- {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}}
+  - : {{domxref("DOMString")}}は、ストリームへアクセスしているピアを識別します。このプロパティが指定されている場合は、特定のピアだけがこのストリームを受信して使用することができます。この方法で隔離されたストリームは、メディア要素(({{HTMLElement("audio")}}または{{HTMLElement("video")}}))でのみ再生可能です。{{Glossary("CORS")}}クロスオリジン規則の影響下にある場合、このコンテンツはその規則の下に保護されます。
 
-<dl>
- <dt>{{domxref("MediaStreamConstraints.video", "video")}}</dt>
- <dd>ビデオトラックを必須とするかどうかを示すBooleanの値または、返される{{domxref("MediaStream")}}に含まれるビデオトラックの制約を示すための{{domxref("MediaTrackConstraints")}}オブジェクトのどちらかです。制約が与えられている場合は、ビデオトラックは要求されることになります。</dd>
- <dt>{{domxref("MediaStreamConstraints.audio", "audio")}}</dt>
- <dd>オーディオトラックを必須とするかどうかを示すBooleanの値または、返される{{domxref("MediaStream")}}に含まれるオーディオトラックの制約を示すための{{domxref("MediaTrackConstraints")}}オブジェクトのどちらかです。制約が与えられている場合は、オーディオトラックは要求されることになります。</dd>
-</dl>
+## ブラウザ互換性
 
-<h3 id="セキュリティ">セキュリティ</h3>
+{{Compat("api.MediaStreamConstraints")}}
 
-<dl>
- <dt>{{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}}</dt>
- <dd>{{domxref("DOMString")}}は、ストリームへアクセスしているピアを識別します。このプロパティが指定されている場合は、特定のピアだけがこのストリームを受信して使用することができます。この方法で隔離されたストリームは、メディア要素(({{HTMLElement("audio")}}または{{HTMLElement("video")}}))でのみ再生可能です。{{Glossary("CORS")}}クロスオリジン規則の影響下にある場合、このコンテンツはその規則の下に保護されます。</dd>
-</dl>
+## 関連項目
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
-
-<p>{{Compat("api.MediaStreamConstraints")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{domxref("MediaDevices.getUserMedia()")}}</li>
- <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
- <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
- <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

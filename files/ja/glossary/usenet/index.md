@@ -6,14 +6,10 @@ tags:
   - WebMechanics
 translation_of: Glossary/Usenet
 ---
-<p>Usenet は、各投稿が多数のサーバーで複製されるインターネットディスカッションシステムです。当時のインターネットフォーラムに相当する Usenet は、掲示板システムの様に機能していました。</p>
+Usenet は、各投稿が多数のサーバーで複製されるインターネットディスカッションシステムです。当時のインターネットフォーラムに相当する Usenet は、掲示板システムの様に機能していました。
 
-<h2 id="詳細情報" style="line-height: 30px;">詳細情報</h2>
+## 詳細情報
 
-<h3 id="基礎知識" style="line-height: 24px;"><strong>基礎知識</strong></h3>
+### 基礎知識
 
-
-
-<ul>
- <li>Wikipedia 上の記事「{{Interwiki("wikipedia", "Usenet")}}」</li>
-</ul>
+- Wikipedia 上の記事「{{Interwiki("wikipedia", "Usenet")}}」

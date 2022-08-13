@@ -10,31 +10,29 @@ tags:
 translation_of: Web/API/File_Handle_API
 original_slug: Web/API/File_Handle_API
 ---
-<p>{{non-standard_header}}</p>
+{{non-standard_header}}
 
-<p>FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です (<a href="/ja/docs/DOM/File" title="DOM/File">File API</a> とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。</p>
+FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です ([File API](/ja/docs/DOM/File "DOM/File") とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。
 
-<h2 id="API_概観">API 概観</h2>
+## API 概観
 
-<p>この API は、次のインターフェースを基にしています:</p>
+この API は、次のインターフェースを基にしています:
 
-<ul>
- <li>{{domxref("IDBDatabase.mozCreateFileHandle")}}</li>
- <li>{{domxref("FileHandle")}}</li>
- <li>{{domxref("LockedFile")}}</li>
- <li>{{domxref("FileRequest")}}</li>
-</ul>
+- {{domxref("IDBDatabase.mozCreateFileHandle")}}
+- {{domxref("FileHandle")}}
+- {{domxref("LockedFile")}}
+- {{domxref("FileRequest")}}
 
-<p>これは、File API の {{domxref("File")}} インターフェースおよび {{domxref("Blob")}} インターフェースとも接続しています。</p>
+これは、File API の {{domxref("File")}} インターフェースおよび {{domxref("Blob")}} インターフェースとも接続しています。
 
-<h2 id="基本的な操作">基本的な操作</h2>
+## 基本的な操作
 
-<h3 id="FileHandle_インスタンスの作成">FileHandle インスタンスの作成</h3>
+### FileHandle インスタンスの作成
 
-<p>このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに <a href="/ja/docs/IndexedDB/IDBFactory#open" title="IndexedDB/IDBFactory#open">IndexedDB Database</a> が必要です。</p>
+このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに [IndexedDB Database](/ja/docs/IndexedDB/IDBFactory#open "IndexedDB/IDBFactory#open") が必要です。
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var IDBReq = indexedDB.open("myFileStorageDataBase");
+```js
+var IDBReq = indexedDB.open("myFileStorageDataBase");
 
 IDBReq.onsuccess = function(){
   var DB = this.result;
@@ -45,30 +43,26 @@ IDBReq.onsuccess = function(){
     console.log('handle', myFileHandle);
   };
 };
-</pre>
-</div>
+```
 
-<p>{{domxref("IDBDatabase.mozCreateFileHandle","mozCreateFileHandle()")}} は、ファイル名と任意の形式の 2 個の引数を取ります。これらは説明のためのものであり、データベースには使用されません。しかし、これらの値から {{domxref("File")}} オブジェクトの {{domxref("File.name","name")}} と {{domxref("File.type","type")}} に継承して生成するため、{{domxref("FileHandle")}} オブジェクトにとって重要です。つまり、例えば空文字にすると実際に存在するファイルと一致しないため、ユニークな名前にしなくてもよいです。</p>
+{{domxref("IDBDatabase.mozCreateFileHandle","mozCreateFileHandle()")}} は、ファイル名と任意の形式の 2 個の引数を取ります。これらは説明のためのものであり、データベースには使用されません。しかし、これらの値から {{domxref("File")}} オブジェクトの {{domxref("File.name","name")}} と {{domxref("File.type","type")}} に継承して生成するため、{{domxref("FileHandle")}} オブジェクトにとって重要です。つまり、例えば空文字にすると実際に存在するファイルと一致しないため、ユニークな名前にしなくてもよいです。
 
-<div class="note">
-<p><strong>補足:</strong> 上記のコードは、{{domxref("FileHandle")}} インスタンスを保持している間のみ存在する「一時ファイル」を作成するだけです。ページ更新やアプリ再起動に遭遇するファイルを扱いたい場合は、データベース自身など、ファイルハンドルを永続的な場所に格納する必要があります。詳しくは、後述の <a href="#file_storage">File storage</a> を参照してください。</p>
-</div>
+> **Note:** **補足:** 上記のコードは、{{domxref("FileHandle")}} インスタンスを保持している間のみ存在する「一時ファイル」を作成するだけです。ページ更新やアプリ再起動に遭遇するファイルを扱いたい場合は、データベース自身など、ファイルハンドルを永続的な場所に格納する必要があります。詳しくは、後述の [File storage](#file_storage) を参照してください。
 
-<h3 id="ファイルの読み書き操作">ファイルの読み書き操作</h3>
+### ファイルの読み書き操作
 
-<p>ハンドルしたファイルを読んだり書いたりするには、{{domxref("LockedFile")}} を取得する必要があります。{{domxref("FileHandle.open()")}} メソッドがこの操作のためのオブジェクトを提供しており、<code>readonly</code> または <code>readwrite</code> が可能です。<code>readonly</code> の {{domxref("LockedFile")}} に書き込みを行おうとすると失敗します。</p>
+ハンドルしたファイルを読んだり書いたりするには、{{domxref("LockedFile")}} を取得する必要があります。{{domxref("FileHandle.open()")}} メソッドがこの操作のためのオブジェクトを提供しており、`readonly` または `readwrite` が可能です。`readonly` の {{domxref("LockedFile")}} に書き込みを行おうとすると失敗します。
 
-<h4 id="書き込み">書き込み</h4>
+#### 書き込み
 
-<p>locked ファイルには 3 通りの書込み操作があります:</p>
+locked ファイルには 3 通りの書込み操作があります:
 
-<ul>
- <li>{{domxref("LockedFile.write","write")}} : これは、ファイル内の {{domxref("LockedFile.location")}} byte の位置から書き込みを開始するメソッドです。</li>
- <li>{{domxref("LockedFile.append","append")}} : これは、常にファイル末尾にコンテンツを追加するメソッドです。</li>
- <li>{{domxref("LockedFile.truncate","truncate")}} : これは、ファイルの最初の nth-first byte までを維持してそれ以降を削除するメソッドです。</li>
-</ul>
+- {{domxref("LockedFile.write","write")}} : これは、ファイル内の {{domxref("LockedFile.location")}} byte の位置から書き込みを開始するメソッドです。
+- {{domxref("LockedFile.append","append")}} : これは、常にファイル末尾にコンテンツを追加するメソッドです。
+- {{domxref("LockedFile.truncate","truncate")}} : これは、ファイルの最初の nth-first byte までを維持してそれ以降を削除するメソッドです。
 
-<pre class="brush: js">// Get a LockedFile object from the handle
+```js
+// Get a LockedFile object from the handle
 var myFile = myFileHandle.open('readwrite');
 
 // Start a writing operation
@@ -81,17 +75,18 @@ writing.onsuccess = function () {
 writing.onerror = function () {
   console.log('Something goes wrong in the writing process: ' + this.error);
 }
-</pre>
+```
 
-<h4 id="読み込み">読み込み</h4>
+#### 読み込み
 
-<p>中間の {{domxref("File")}} オブジェクトや {{domxref("FileReader")}} オブジェクトを使用せずに、{{domxref("LockedFile")}} オブジェクトのコンテンツを直接読み込むことが可能です。{{domxref("LockedFile")}} インターフェースは、{{domxref("LockedFile.readAsText","readAsText")}} メソッドと {{domxref("LockedFile.readAsArrayBuffer","readAsArrayBuffer")}} メソッドを提供しています。</p>
+中間の {{domxref("File")}} オブジェクトや {{domxref("FileReader")}} オブジェクトを使用せずに、{{domxref("LockedFile")}} オブジェクトのコンテンツを直接読み込むことが可能です。{{domxref("LockedFile")}} インターフェースは、{{domxref("LockedFile.readAsText","readAsText")}} メソッドと {{domxref("LockedFile.readAsArrayBuffer","readAsArrayBuffer")}} メソッドを提供しています。
 
-<p>これら 2 個のメソッドは、ファイル開始位置からの読み込むサイズを {{domxref("LockedFile.location")}} byte で指定して読み込みます。示すサイズを指定します。</p>
+これら 2 個のメソッドは、ファイル開始位置からの読み込むサイズを {{domxref("LockedFile.location")}} byte で指定して読み込みます。示すサイズを指定します。
 
-<p>ファイル全体を読み込むには、そのサイズを知る必要があります。この情報 (および最終変更日の日付) は、{{domxref("LockedFile.getMetadata()")}} メソッドを通して取得できます。</p>
+ファイル全体を読み込むには、そのサイズを知る必要があります。この情報 (および最終変更日の日付) は、{{domxref("LockedFile.getMetadata()")}} メソッドを通して取得できます。
 
-<pre class="brush: js">// Get a LockedFile object from the handle
+```js
+// Get a LockedFile object from the handle
 var myFile = myFileHandle.open('readwrite');
 
 // Retrieve the size of the file
@@ -115,27 +110,29 @@ getmeta.onsuccess = function () {
     console.log('Something goes wrong in the reading process: ' + this.error);
   }
 }
-</pre>
+```
 
-<h3 id="File_スナップショット">File スナップショット</h3>
+### File スナップショット
 
-<p>In many cases it can be handy to get a snapshot of the file. For example, there are many APIs that expect {{domxref("Blob")}} or {{domxref("File")}} objects such as domxref("FileReader")}} (which can be easier to use to read the whole file) or {{domxref("XMLHttpRequest")}}.</p>
+In many cases it can be handy to get a snapshot of the file. For example, there are many APIs that expect {{domxref("Blob")}} or {{domxref("File")}} objects such as domxref("FileReader")}} (which can be easier to use to read the whole file) or {{domxref("XMLHttpRequest")}}.
 
-<p>It's possible to get a {{domxref("File")}} object representing the current state of the file handled by the {{domxref("FileHandle")}} object by using the {{domxref("FileHandle.getFile","getFile")}} method. Such a {{domxref("File")}} object is completely desynchronized from the original file, which means any change made to that object will never be reflected to the handled file as well as any change made to the handled file will never be pushed to the {{domxref("File")}} object.</p>
+It's possible to get a {{domxref("File")}} object representing the current state of the file handled by the {{domxref("FileHandle")}} object by using the {{domxref("FileHandle.getFile","getFile")}} method. Such a {{domxref("File")}} object is completely desynchronized from the original file, which means any change made to that object will never be reflected to the handled file as well as any change made to the handled file will never be pushed to the {{domxref("File")}} object.
 
-<pre class="brush: js">var mySnapshot = null;
+```js
+var mySnapshot = null;
 var request = myFileHandle.getFile();
 
 request.onsuccess = function () {
   mySnapshot = this.result;
 }
-</pre>
+```
 
-<h3 id="進捗の管理">進捗の管理</h3>
+### 進捗の管理
 
-<p>All the methods from the {{domxref("LockedFile")}} interface return a {{domxref("FileRequest")}} object. Such an object is basically a {{domxref("DOMRequest")}} with an extra power: it allows to monitor the progress of an operation. Sometimes writing and reading operations can be very long, therefore it is a good idea to monitor the operation to provide feedback to the user. Such monitoring can be done using the {{domxref("FileRequest.onprogress")}} event handler.</p>
+All the methods from the {{domxref("LockedFile")}} interface return a {{domxref("FileRequest")}} object. Such an object is basically a {{domxref("DOMRequest")}} with an extra power: it allows to monitor the progress of an operation. Sometimes writing and reading operations can be very long, therefore it is a good idea to monitor the operation to provide feedback to the user. Such monitoring can be done using the {{domxref("FileRequest.onprogress")}} event handler.
 
-<pre class="brush: js">var progress = document.querySelector('progress');
+```js
+var progress = document.querySelector('progress');
 var myFile   = myFileHandle.open('readonly');
 
 // Let's read a 1GB file
@@ -155,13 +152,14 @@ action.onsuccess = function () {
 action.onerror = function () {
   console.log('Oups :( Unable to read a 1GB file')
 }
-</pre>
+```
 
-<h2 id="File_ストレージ">File ストレージ</h2>
+## File ストレージ
 
-<p>When a file handle is created, the associated file only exists as a "temporary file" as long as you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a database (not necessarily the one used to create the {{domxref("FileHandle")}} object).</p>
+When a file handle is created, the associated file only exists as a "temporary file" as long as you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a database (not necessarily the one used to create the {{domxref("FileHandle")}} object).
 
-<pre class="brush: js">var IDBReq = window.indexedDB.open('myFileStorageDataBase');
+```js
+var IDBReq = window.indexedDB.open('myFileStorageDataBase');
 
 // If necessary, let's create a datastore for the files
 IDBReq.onupgradeneeded = function () {
@@ -187,15 +185,16 @@ IDBReq.onsuccess = function () {
     }
   }
 }
-</pre>
+```
 
-<p>A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a>, meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.</p>
+A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in [isolation](http://en.wikipedia.org/wiki/Isolation_%28database_systems%29), meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.
 
-<h3 id="安全な書込み操作">安全な書込み操作</h3>
+### 安全な書込み操作
 
-<p>For performance reasons, write (and read) operations are done in memory. Periodically, the results of those operation are asynchronously flushed to the device storage area. If for some reason a problem occurs before that, you can lose the results of some operations. To avoid that problem, you can force the data to be flushed by using the {{domxref("LockedFile.flush()")}} method. Once this method has been successfully called, you can be sure your change on the file will be safe.</p>
+For performance reasons, write (and read) operations are done in memory. Periodically, the results of those operation are asynchronously flushed to the device storage area. If for some reason a problem occurs before that, you can lose the results of some operations. To avoid that problem, you can force the data to be flushed by using the {{domxref("LockedFile.flush()")}} method. Once this method has been successfully called, you can be sure your change on the file will be safe.
 
-<pre class="brush: js">// Get a LockedFile object from the handle
+```js
+// Get a LockedFile object from the handle
 var myFile = myFileHandle.open('readwrite');
 
 // Start a writing operation
@@ -213,35 +212,23 @@ writing.onsuccess = function () {
 
 writing.onerror = function () {
   console.log('Something goes wrong in the writing process: ' + this.error);
-}</pre>
+}
+```
 
-<h2 id="API_の互換性">API の互換性</h2>
+## API の互換性
 
-<h3 id="FileWriter_と_API_が異なるのはなぜですか？">FileWriter と API が異なるのはなぜですか？</h3>
+### FileWriter と API が異なるのはなぜですか？
 
-<p>The <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter specification</a> defines FileWriters, objects aiming at representing editable files. <a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Discussions on public-webapps</a> led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.</p>
+The [FileWriter specification](http://dev.w3.org/2009/dap/file-system/file-writer.html) defines FileWriters, objects aiming at representing editable files. [Discussions on public-webapps](http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html) led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.
 
-<h3 id="Browser_Compatibility" name="Browser_Compatibility">仕様書</h3>
+### 仕様書
 
-<p>A formal specification draft is being written. As it does not fully match the current implementation, be warned that the implementation and/or the specification will be subject to changes.</p>
+A formal specification draft is being written. As it does not fully match the current implementation, be warned that the implementation and/or the specification will be subject to changes.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">実装状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('FileSystem')}}</td>
-   <td>{{Spec2('FileSystem')}}</td>
-   <td>Draft proposal.</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                 | 実装状況                         | コメント        |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal. |
 
-<h3 id="ブラウザの互換性">ブラウザの互換性</h3>
+### ブラウザの互換性
 
-<div>
-<div>Supported in Firefox 15.</div>
-</div>
+Supported in Firefox 15.

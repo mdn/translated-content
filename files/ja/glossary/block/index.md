@@ -7,6 +7,6 @@ tags:
   - TopicStub
 translation_of: Glossary/Block
 ---
-<p><strong>ブロック</strong>という用語は、文脈に応じていくつかの意味を持つことができます。それは次を参照してください。</p>
+**ブロック**という用語は、文脈に応じていくつかの意味を持つことができます。それは次を参照してください。
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

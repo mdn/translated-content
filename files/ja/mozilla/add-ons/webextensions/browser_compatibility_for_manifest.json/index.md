@@ -7,17 +7,12 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>{{Compat("webextensions.manifest",2)}}</p>
+{{Compat("webextensions.manifest",2)}}
 
-<div class="note"><strong>謝辞</strong>
+> **Note:** **謝辞**Microsoft Edge の互換性データは Microsoft Corporation により提供され、Creative Commons Attribution 3.0 United States License の下でこのページに含めています。
 
-<p>Microsoft Edge の互換性データは Microsoft Corporation により提供され、Creative Commons Attribution 3.0 United States License の下でこのページに含めています。</p>
-</div>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">JavaScript API へのブラウザーのサポート</a></li>
-</ul>
+- [JavaScript API へのブラウザーのサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)

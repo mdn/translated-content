@@ -9,33 +9,30 @@ tags:
   - request
 translation_of: Glossary/Preflight_request
 ---
-<p>CORS のプリフライトリクエストは {{Glossary("CORS")}} のリクエストの一つであり、サーバーが CORS プロトコルを理解していて準備がされていることを、特定のメソッドとヘッダーを使用してチェックします。</p>
+CORS のプリフライトリクエストは {{Glossary("CORS")}} のリクエストの一つであり、サーバーが CORS プロトコルを理解していて準備がされていることを、特定のメソッドとヘッダーを使用してチェックします。
 
-<p>これは {{HTTPMethod("OPTIONS")}} リクエストであり、 {{HTTPHeader("Access-Control-Request-Method")}},{{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の3つの HTTP リクエストヘッダー使用します。</p>
+これは {{HTTPMethod("OPTIONS")}} リクエストであり、 {{HTTPHeader("Access-Control-Request-Method")}},{{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の 3 つの HTTP リクエストヘッダー使用します。
 
-<p>プリフライトリクエストはブラウザーが自動的に発行するものであり、通常は、フロントエンドの開発者が自分でそのようなリクエストを作成する必要はありません。これはリクエストが<a href="/ja/docs/Web/HTTP/CORS#Preflighted_requests">"to be preflighted"</a>と修飾されている場合に現れ、<a href="/ja/docs/Web/HTTP/CORS#Simple_requests">単純リクエスト</a>の場合は省略されます。</p>
+プリフライトリクエストはブラウザーが自動的に発行するものであり、通常は、フロントエンドの開発者が自分でそのようなリクエストを作成する必要はありません。これはリクエストが["to be preflighted"](/ja/docs/Web/HTTP/CORS#Preflighted_requests)と修飾されている場合に現れ、[単純リクエスト](/ja/docs/Web/HTTP/CORS#Simple_requests)の場合は省略されます。
 
-<p>例えば、クライアントはプリフライトリクエストを使用して、 {{HTTPMethod("DELETE")}} リクエストを送信する前に、 <code>DELETE</code> リクエストを許可するかどうかをサーバーに尋ねるかもしれません。</p>
+例えば、クライアントはプリフライトリクエストを使用して、 {{HTTPMethod("DELETE")}} リクエストを送信する前に、 `DELETE` リクエストを許可するかどうかをサーバーに尋ねるかもしれません。
 
-<pre class="notranslate">OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org</pre>
+    OPTIONS /resource/foo
+    Access-Control-Request-Method: DELETE
+    Access-Control-Request-Headers: origin, x-requested-with
+    Origin: https://foo.bar.org
 
-<p>サーバーが許可している場合は、プリフライトリクエストへのレスポンスで、 {{HTTPHeader("Access-Control-Allow-Methods")}} レスポンスヘッダーに <code>DELETE</code> を含めます。</p>
+サーバーが許可している場合は、プリフライトリクエストへのレスポンスで、 {{HTTPHeader("Access-Control-Allow-Methods")}} レスポンスヘッダーに `DELETE` を含めます。
 
-<pre class="notranslate">HTTP/1.1 204 No Content
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400
-</pre>
+    HTTP/1.1 204 No Content
+    Connection: keep-alive
+    Access-Control-Allow-Origin: https://foo.bar.org
+    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+    Access-Control-Max-Age: 86400
 
-<p>プリフライトレスポンスは、上記の例のように {{HTTPHeader("Access-Control-Max-Age")}} ヘッダを使用して同じ URL で作成されたリクエストに対して、オプションでキャッシュすることができます。</p>
+プリフライトレスポンスは、上記の例のように {{HTTPHeader("Access-Control-Max-Age")}} ヘッダを使用して同じ URL で作成されたリクエストに対して、オプションでキャッシュすることができます。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{Glossary("CORS")}}</li>
- <li>{{HTTPMethod("OPTIONS")}}</li>
-</ul>
+- {{Glossary("CORS")}}
+- {{HTTPMethod("OPTIONS")}}

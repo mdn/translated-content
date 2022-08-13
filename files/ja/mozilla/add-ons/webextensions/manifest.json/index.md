@@ -7,43 +7,42 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>manifest.json ファイルは、WebExtension API を使う拡張機能に必ず含めなければならない唯一のファイルです。</p>
+manifest.json ファイルは、WebExtension API を使う拡張機能に必ず含めなければならない唯一のファイルです。
 
-<p>manifest.json を使うことで、拡張機能の名前やバージョンといった基本的なメタデータを指定したり、拡張機能の機能的な側面として、例えばバックグラウンドスクリプトやコンテンツスクリプト、ブラウザーアクションを指定することもできます。</p>
+manifest.json を使うことで、拡張機能の名前やバージョンといった基本的なメタデータを指定したり、拡張機能の機能的な側面として、例えばバックグラウンドスクリプトやコンテンツスクリプト、ブラウザーアクションを指定することもできます。
 
-<p>これは <a href="/ja/docs/Glossary/JSON">JSON</a>形式のファイルですが、１つ例外があります: "<code>//</code>"-形式のコメントが許可されています。</p>
+これは [JSON](/ja/docs/Glossary/JSON)形式のファイルですが、１つ例外があります: "`//`"-形式のコメントが許可されています。
 
-<p>manifest.json のキー一覧は次の通り:</p>
+manifest.json のキー一覧は次の通り:
 
-<p>{{ListSubpages("/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}</p>
+{{ListSubpages("/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
 
-<h3 class="index" id="manifest.json_のキーの注意点">manifest.json のキーの注意点</h3>
+### manifest.json のキーの注意点
 
-<ul>
- <li>必須のキーは、<code>"manifest_version"</code>, <code>"version"</code>, <code>"name"</code> だけです。</li>
- <li><code>"default_locale"</code> は <code>"_locales"</code> ディレクトリーが存在する場合は必要ですが、そうでない場合は不要です。</li>
- <li><code>"applications"</code> は Google Chrome でサポートされていません。</li>
-</ul>
+- 必須のキーは、`"manifest_version"`, `"version"`, `"name"` だけです。
+- `"default_locale"` は `"_locales"` ディレクトリーが存在する場合は必要ですが、そうでない場合は不要です。
+- `"applications"` は Google Chrome でサポートされていません。
 
-<h3 id="manifest.json_の情報を実行時に参照する">manifest.json の情報を実行時に参照する</h3>
+### manifest.json の情報を実行時に参照する
 
-<p>拡張機能の manifest には、拡張機能の JavaScript から {{WebExtAPIRef("runtime.getManifest()")}} 関数を使ってアクセスできます:</p>
+拡張機能の manifest には、拡張機能の JavaScript から {{WebExtAPIRef("runtime.getManifest()")}} 関数を使ってアクセスできます:
 
-<pre class="brush: js">browser.runtime.getManifest().version;</pre>
+```js
+browser.runtime.getManifest().version;
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>下記のブロックには一般的な manifest keys の基本文法を示します。</p>
+下記のブロックには一般的な manifest keys の基本文法を示します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。</p>
-</div>
+> **Note:** **注:** これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
 
-<p>完全な例は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a> を見てください。</p>
+完全な例は [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) を見てください。
 
-<pre class="brush: json">{
+```json
+{
   "applications": {
     "gecko": {
       "id": "addon@example.com",
@@ -112,12 +111,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   "version": "0.1",
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの実装状況
 
-<p>マニフェストキーとサブキーのすべてを見るには、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">完全な manifest.json ブラウザー互換テーブルを見てください。</a></p>
+マニフェストキーとサブキーのすべてを見るには、[完全な manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
-
-
-<p>{{Compat("webextensions.manifest")}}</p>
+{{Compat("webextensions.manifest")}}

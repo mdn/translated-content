@@ -9,4 +9,4 @@ tags:
   - tests
 translation_of: Glossary/GIJ
 ---
-<p>Gaia 結合テスト (<em>G</em>aia <em>I</em>ntegration <em>T</em>esting)。Marionette と JavaScript に基づいています。詳しくは、<a href="/ja/docs/Mozilla/QA/Automated_testing">GIJ</a> の記事をご覧ください。</p>
+Gaia 結合テスト (\_G_aia \_I_ntegration \_T_esting)。Marionette と JavaScript に基づいています。詳しくは、[GIJ](/ja/docs/Mozilla/QA/Automated_testing) の記事をご覧ください。
