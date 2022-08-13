@@ -3,90 +3,83 @@ title: <progress>：进度指示元素
 slug: Web/HTML/Element/progress
 translation_of: Web/HTML/Element/progress
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong>HTML</strong>中的<strong><code>&lt;progress&gt;</code></strong>元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。</p>
+**HTML**中的**`<progress>`**元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
-<h2 id="使用上下文">使用上下文</h2>
+## 使用上下文
 
-<pre class="syntaxbox notranslate"><strong>使用策略                </strong>流文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>), 短文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>)
-<strong><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a>     </strong>可标记内容，可触摸内容
+```plain
+使用策略                流文本 (Flow content), 短文本 (phrasing content)
+Content categories     可标记内容，可触摸内容
 
-<strong>有效内容                </strong><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, 其中在它的后代中不能包含
-<strong>Permitted content</strong>      <code>&lt;progress&gt;</code>元素。
+有效内容                Phrasing content, 其中在它的后代中不能包含
+Permitted content      <progress>元素。
 
-<strong>标签省略                </strong>不可以，{{no_tag_omission}}
-<strong>Tag omission</strong>
+标签省略                不可以，{{no_tag_omission}}
+Tag omission
 
-<strong>有效的父元素</strong>             任何可以包裹短文本 (<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>) 的元素。
+有效的父元素             任何可以包裹短文本 (phrasing content) 的元素。
 
-<strong>隐式元素                </strong>{{ARIARole("progressbar")}}
-<strong>ARIA role</strong>
+隐式元素                {{ARIARole("progressbar")}}
+ARIA role
 
-<strong>有效的辅助元素            </strong>无
-<strong>ARIA roles</strong>
+有效的辅助元素            无
+ARIA roles
 
-<strong>DOM 接口</strong>                {{domxref("HTMLProgressElement")}}
-</pre>
+DOM 接口                {{domxref("HTMLProgressElement")}}
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>和其他的 HTML 元素一样，该元素具有<a href="/zh-cn/HTML/Global_attributes">全局属性</a>.</p>
+和其他的 HTML 元素一样，该元素具有[全局属性](/zh-cn/HTML/Global_attributes).
 
-<dl>
- <dt>{{ htmlattrdef("max") }}</dt>
- <dd>该属性描述了这个<code>progress</code>元素所表示的任务一共需要完成多少工作。</dd>
- <dt>{{ htmlattrdef("value") }}</dt>
- <dd>该属性用来指定该进度条已完成的工作量。如果没有<code>value 属性</code>,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).</dd>
-</dl>
+- {{ htmlattrdef("max") }}
+  - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
+- {{ htmlattrdef("value") }}
+  - : 该属性用来指定该进度条已完成的工作量。如果没有`value 属性`,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).
 
-<div class="blockIndicator note">
-<p><strong>Note: </strong>你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。</p>
-</div>
+> **备注：** 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。
 
-<dl>
-</dl>
+## DOM 接口
 
-<h2 id="DOM_接口">DOM 接口</h2>
+该元素实现了[`HTMLProgressElement`](/zh-cn/DOM/HTMLProgressElement)接口。
 
-<p>该元素实现了<code><a href="/zh-cn/DOM/HTMLProgressElement">HTMLProgressElement</a></code>接口。</p>
+## 例子
 
-<h2 id="例子">例子</h2>
+```html
+<progress value="70" max="100">70 %</progress>
+```
 
-<pre class="brush: html notranslate">&lt;progress value="70" max="100"&gt;70 %&lt;/progress&gt;
-</pre>
+### 结果
 
-<h3 id="结果">结果</h3>
+{{ EmbedLiveSample("Examples", 200, 50) }}
 
-<p>{{ EmbedLiveSample("Examples", 200, 50) }}</p>
+在 Mac OS X 上，显示的进度条如下：
 
-<p>在 Mac OS X 上，显示的进度条如下：</p>
+![progress-1.png](/@api/deki/files/4946/=progress-1.png)
 
-<p><img alt="progress-1.png" class="default internal" src="/@api/deki/files/4946/=progress-1.png"></p>
+在 Windows 上，显示的进度条如下：
 
-<p>在 Windows 上，显示的进度条如下：</p>
+![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
 
-<p><img alt="progress-firefox.JPG" class="default internal" src="/@api/deki/files/6031/=progress-firefox.JPG"></p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{htmlelement("meter")}}</li>
- <li>{{ cssxref(":indeterminate") }}</li>
- <li>{{ cssxref("-moz-orient") }}</li>
- <li>{{ cssxref("::-moz-progress-bar") }}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
- <li>{{ cssxref("::-webkit-progress-bar") }}</li>
- <li>{{ cssxref("::-webkit-progress-value") }}</li>
- <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-</ul>
+- {{htmlelement("meter")}}
+- {{ cssxref(":indeterminate") }}
+- {{ cssxref("-moz-orient") }}
+- {{ cssxref("::-moz-progress-bar") }}
+- {{ cssxref("::-ms-fill") }}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

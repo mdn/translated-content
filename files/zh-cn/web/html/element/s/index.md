@@ -3,19 +3,19 @@ title: <s>
 slug: Web/HTML/Element/s
 translation_of: Web/HTML/Element/s
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;s&gt;</code> 元素 </strong>使用删除线来渲染文本。使用 <code>&lt;s&gt;</code> 元素来表示不再相关，或者不再准确的事情。但是当表示文档编辑时，不提倡使用 <code>&lt;s&gt;</code> ；为此，提倡使用 {{ HTMLElement("del") }} 和 {{ HTMLElement("ins") }} 元素。</p>
+**HTML `<s>` 元素** 使用删除线来渲染文本。使用 `<s>` 元素来表示不再相关，或者不再准确的事情。但是当表示文档编辑时，不提倡使用 `<s>` ；为此，提倡使用 {{ HTMLElement("del") }} 和 {{ HTMLElement("ins") }} 元素。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a> or <a href="/en-US/docs/HTML/Content_categories#Flow_content">流式内容</a></td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a> or <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a></td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/s
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任何接受<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素</td>
+   <td>任何接受<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
@@ -36,28 +36,31 @@ translation_of: Web/HTML/Element/s
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素仅仅包含 <a href="/en-US/docs/HTML/Global_attributes">全局属性</a></p>
+这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-<div class="note"><strong>实现注解</strong>： 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 <code><a href="/en-US/docs/DOM/span">HTMLSpanElement</a> </code>接口。</div>
+> **备注：** 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement `接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:xml">&lt;s&gt;Today's Special: Salmon&lt;/s&gt; SOLD OUT&lt;br&gt;
-&lt;span style="text-decoration:line-through;"&gt;Today's Special:
-  Salmon&lt;/span&gt; SOLD OUT</pre>
+```xml
+<s>Today's Special: Salmon</s> SOLD OUT<br>
+<span style="text-decoration:line-through;">Today's Special:
+  Salmon</span> SOLD OUT
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p><s>Today's Special: Salmon</s> SOLD OUT<br>
- <s style="text-decoration: line-through;">Today's Special: Salmon</s> SOLD OUT</p>
+~~Today's Special: Salmon~~ SOLD OUT
+~~Today's Special: Salmon~~ SOLD OUT
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The presence of the <code>s</code> element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.</p>
+The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
 
-<pre><code>s::before,
+```plain
+s::before,
 s::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -74,27 +77,24 @@ s::before {
 
 s::after {
   content: " [end of stricken text] ";
-}</code></pre>
+}
+```
 
-<p>Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.</p>
+Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/">Short note on making your mark (more accessible) | The Paciello Group</a></li>
- <li><a href="http://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Tweaking Text Level Styles | Adrian Roselli</a></li>
-</ul>
+- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.s")}}</p>
+{{Compat("html.elements.s")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ HTMLElement("strike") }} 元素，另一个 {{ HTMLElement("s") }} 元素，已经废除并且不应再用于 Web 站点。</li>
- <li>{{ HTMLElement("del") }} 元素用于代替，如果数据已经删除了。</li>
- <li>CSS {{ cssxref("text-decoration") }}-line-through 属性也用于为 {{ HTMLElement("s") }} 元素实现前者的视觉效果。</li>
-</ul>
+- {{ HTMLElement("strike") }} 元素，另一个 {{ HTMLElement("s") }} 元素，已经废除并且不应再用于 Web 站点。
+- {{ HTMLElement("del") }} 元素用于代替，如果数据已经删除了。
+- CSS {{ cssxref("text-decoration") }}-line-through 属性也用于为 {{ HTMLElement("s") }} 元素实现前者的视觉效果。

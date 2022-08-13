@@ -9,15 +9,15 @@ tags:
   - Web
 translation_of: Web/HTML/Element/wbr
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;wbr&gt;</code> 元素  </strong>— 一个文本中的位置，其中浏览器可以选择来换行，虽然它的换行规则可能不会在这里换行。</p>
+**HTML `<wbr>` 元素** — 一个文本中的位置，其中浏览器可以选择来换行，虽然它的换行规则可能不会在这里换行。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/wbr
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -42,33 +42,32 @@ translation_of: Web/HTML/Element/wbr
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素仅仅包含 <a href="/en-US/docs/HTML/Global_attributes">全局属性</a></p>
+这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>在 UTF-8 编码的页面中， <code>&lt;wbr&gt;</code> 表现为 <code>U+200B ZERO-WIDTH SPACE</code> （零宽空格）代码点。特别是，它表现为 Unicode bidi BN 代码点，也就是说，它对 bidi-ordering 没有影响：<code>&lt;</code><code>div dir=rtl&gt;123,&lt;wbr&gt;456&lt;/div&gt;</code> 展示 <code>123,456</code> 而不是 <code>456,123</code>，当不拆成的两行时候。</p>
+在 UTF-8 编码的页面中， `<wbr>` 表现为 `U+200B ZERO-WIDTH SPACE` （零宽空格）代码点。特别是，它表现为 Unicode bidi BN 代码点，也就是说，它对 bidi-ordering 没有影响：` <``div dir=rtl>123,<wbr>456</div> ` 展示 `123,456` 而不是 `456,123`，当不拆成的两行时候。
 
-<p>出于相同原因， <code>&lt;﻿wbr﻿&gt;</code>元素不会在换行的地方引入连字符。为了使连字符仅仅在行尾出现，使用连字符软实体 (<code>&amp;﻿shy;</code>) 来代替。</p>
+出于相同原因， `< wbr >`元素不会在换行的地方引入连字符。为了使连字符仅仅在行尾出现，使用连字符软实体 (`& shy;`) 来代替。
 
-<p>这个元素首先在 Internet Explorer 5.5 中实现，并且在 HTML5 中官方定义。</p>
+这个元素首先在 Internet Explorer 5.5 中实现，并且在 HTML5 中官方定义。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><em><a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/">Yahoo 代码规范</a> </em>推荐 <a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses">在标点之前为 URL 换行</a>，以便避免将标点符号留在行尾，这会让读者将 URL 的末尾搞错。</p>
+*[Yahoo 代码规范](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/) *推荐 [在标点之前为 URL 换行](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以便避免将标点符号留在行尾，这会让读者将 URL 的末尾搞错。
 
-<pre class="brush: html">&lt;p&gt;http://this&lt;wbr&gt;.is&lt;wbr&gt;.a&lt;wbr&gt;.really&lt;wbr&gt;.long&lt;wbr&gt;.example&lt;wbr&gt;.com/With&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;/p&gt;
-</pre>
+```html
+<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+```
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,21 +8,21 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/figure
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;figure&gt;</code> 元素</strong>代表一段独立的内容，经常与说明（caption）{{HTMLElement("figcaption")}} 配合使用，并且作为一个独立的引用单元。当它属于主内容流（main flow）时，它的位置独立于主体。这个标签经常是在主文中引用的图片，插图，表格，代码段等等，当这部分转移到附录中或者其他页面时不会影响到主体。</p>
+**HTML `<figure>` 元素**代表一段独立的内容，经常与说明（caption）{{HTMLElement("figcaption")}} 配合使用，并且作为一个独立的引用单元。当它属于主内容流（main flow）时，它的位置独立于主体。这个标签经常是在主文中引用的图片，插图，表格，代码段等等，当这部分转移到附录中或者其他页面时不会影响到主体。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots">sectioning root</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots">sectioning root</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td>A {{HTMLElement("figcaption")}} element, followed by <a href="/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>; or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.</td>
+   <td>A {{HTMLElement("figcaption")}} element, followed by <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>; or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/figure
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>所有接受 <a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a> 的元素</td>
+   <td>所有接受 <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a> 的元素</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
@@ -43,45 +43,45 @@ translation_of: Web/HTML/Element/figure
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素只包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+此元素只包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<ul>
- <li>通常，<code>&lt;figure&gt;</code>是图像，插图，图表，代码片段等，在文档的主流程中引用，但可以移动到文档的另一部分或附录而不影响主流程。</li>
- <li>作为<a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots">sectioning root</a>，<code>&lt;figure&gt;</code>元素的内容轮廓将从文档的主要轮廓中排除。</li>
- <li>通过在其中插入{{HTMLElement("figcaption")}}（作为第一个或最后一个子元素），可以将标题与<code>&lt;figure&gt;</code>元素相关联。图中找到的第一个<code>&lt;figcaption&gt;</code>元素显示为图的标题。</li>
-</ul>
+- 通常，`<figure>`是图像，插图，图表，代码片段等，在文档的主流程中引用，但可以移动到文档的另一部分或附录而不影响主流程。
+- 作为[sectioning root](/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots)，`<figure>`元素的内容轮廓将从文档的主要轮廓中排除。
+- 通过在其中插入{{HTMLElement("figcaption")}}（作为第一个或最后一个子元素），可以将标题与`<figure>`元素相关联。图中找到的第一个`<figcaption>`元素显示为图的标题。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="图像">图像</h3>
+### 图像
 
-<pre class="brush: html">&lt;!-- Just an image --&gt;
-&lt;figure&gt;
-  &lt;img
+```html
+<!-- Just an image -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN."&gt;
-&lt;/figure&gt;
+  alt="A robotic monster over the letters MDN.">
+</figure>
 
-&lt;!-- Image with a caption --&gt;
-&lt;figure&gt;
-  &lt;img
+<!-- Image with a caption -->
+<figure>
+  <img
   src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN."&gt;
-  &lt;figcaption&gt;MDN Logo&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+  alt="A robotic monster over the letters MDN.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Images", "100%", 250)}}</div>
+{{EmbedLiveSample("Images", "100%", 250)}}
 
-<h3 id="代码段">代码段</h3>
+### 代码段
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;Get browser details using &lt;code&gt;navigator&lt;/code&gt;.&lt;/figcaption&gt;
-  &lt;pre&gt;
+```html
+<figure>
+  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+  <pre>
 function NavigatorExample() {
   var txt;
   txt = "Browser CodeName: " + navigator.appCodeName;
@@ -90,50 +90,50 @@ function NavigatorExample() {
   txt+= "Cookies Enabled: " + navigator.cookieEnabled;
   txt+= "Platform: " + navigator.platform;
   txt+= "User-agent header: " + navigator.userAgent;
-}&lt;/pre&gt;
-&lt;/figure&gt;</pre>
+}</pre>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Code_snippets", "100%", 250)}}</div>
+{{EmbedLiveSample("Code_snippets", "100%", 250)}}
 
-<h3 id="引用内容">引用内容</h3>
+### 引用内容
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra:&lt;/cite&gt;&lt;/figcaption&gt;
-  &lt;blockquote&gt;If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.&lt;/blockquote&gt;
-&lt;/figure&gt;
-</pre>
+```html
+<figure>
+  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <blockquote>If debugging is the process of removing software bugs,
+  then programming must be the process of putting them in.</blockquote>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Quotations")}}</div>
+{{EmbedLiveSample("Quotations")}}
 
-<h3 id="诗歌">诗歌</h3>
+### 诗歌
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;p style="white-space:pre"&gt;
+```html
+<figure>
+  <p style="white-space:pre">
 Bid me discourse, I will enchant thine ear,
   Or like a fairy trip upon the green,
 Or, like a nymph, with long dishevell'd hair,
   Dance on the sands, and yet no footing seen:
 Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.&lt;/p&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Venus and Adonis&lt;/cite&gt;,
-    by William Shakespeare&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  Not gross to sink, but light, and will aspire.</p>
+  <figcaption><cite>Venus and Adonis</cite>,
+    by William Shakespeare</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Poems", "100%", 250)}}</div>
+{{EmbedLiveSample("Poems", "100%", 250)}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.figure")}}
 
+## 参见
 
-<p>{{Compat("html.elements.figure")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>The {{HTMLElement("figcaption")}} element.</li>
-</ul>
+- The {{HTMLElement("figcaption")}} element.

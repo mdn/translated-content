@@ -10,29 +10,26 @@ tags:
   - 引用
 translation_of: Web/HTML/Element/picture
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;picture&gt;</code> 元素</strong>通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 <code>&lt;source&gt;</code> 元素，如果没有匹配的，就选择 <code>&lt;img&gt;</code> 元素的 {{htmlattrxref("src", "img")}} 属性中的 URL。然后，所选图像呈现在&lt;img&gt;元素占据的空间中。</p>
+**HTML `<picture>` 元素**通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 `<source>` 元素，如果没有匹配的，就选择 `<img>` 元素的 {{htmlattrxref("src", "img")}} 属性中的 URL。然后，所选图像呈现在\<img>元素占据的空间中。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
+要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 `<source>` 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 和 {{htmlattrxref("type", "source")}} 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。
 
-<p>要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 <code>&lt;source&gt;</code> 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 和 {{htmlattrxref("type", "source")}} 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。</p>
+`<picture>` 的常见使用场景：
 
-<p><code>&lt;picture&gt;</code> 的常见使用场景：</p>
+- 艺术指导 (Art direction) —— 针对不同 `media` 条件裁剪或修改图像
+- 遇到所有浏览器都不支持的特定格式时，提供不同的图像格式
 
-<ul>
- <li>艺术指导 (Art direction) —— 针对不同 <code>media</code> 条件裁剪或修改图像</li>
- <li>遇到所有浏览器都不支持的特定格式时，提供不同的图像格式</li>
-</ul>
-
-<p>如果要为高 DPI (Retina) 显示提供更高像素密度的图像版本，请在 <code>&lt;img&gt;</code> 元素上使用 {{htmlattrxref("srcset", "img")}} 。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要您编写明确的 <code>media</code> 条件。</p>
+如果要为高 DPI (Retina) 显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 {{htmlattrxref("srcset", "img")}} 。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要您编写明确的 `media` 条件。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流内容</a>，表述内容，嵌入内容。</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流内容</a>，表述内容，嵌入内容。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -57,56 +54,52 @@ translation_of: Web/HTML/Element/picture
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素只包含<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<h2 id="用法提示">用法提示</h2>
+## 用法提示
 
-<p>你可以使用 {{cssxref("object-position")}} 属性调整元素框架内图像的位置，用 {{cssxref("object-fit")}} 属性控制图片如何调整大小来适应框架。</p>
+你可以使用 {{cssxref("object-position")}} 属性调整元素框架内图像的位置，用 {{cssxref("object-fit")}} 属性控制图片如何调整大小来适应框架。
 
-<div class="note">
-<p><strong>提示：</strong>在子 <code>&lt;img&gt;</code> 元素上使用这些属性，不是 <code>&lt;picture&gt;</code> 元素。</p>
-</div>
+> **备注：** 在子 `<img>` 元素上使用这些属性，不是 `<picture>` 元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这些示例演示了 {{HTMLElement("source")}} 元素的不同属性如何更改<code>&lt;picture&gt;</code>中图像的选择。</p>
+这些示例演示了 {{HTMLElement("source")}} 元素的不同属性如何更改`<picture>`中图像的选择。
 
-<h3 id="media_属性"><code>media</code> 属性</h3>
+### `media` 属性
 
-<p><code>media</code> 属性允许你提供一个用于给用户代理作为选择 {{HTMLElement("source")}} 元素的依据的媒体条件 (media condition)（类似于媒体查询）。如果这个媒体条件匹配结果为 <code>false</code>，那么这个 {{HTMLElement("source")}} 元素会被跳过。</p>
+`media` 属性允许你提供一个用于给用户代理作为选择 {{HTMLElement("source")}} 元素的依据的媒体条件 (media condition)（类似于媒体查询）。如果这个媒体条件匹配结果为 `false`，那么这个 {{HTMLElement("source")}} 元素会被跳过。
 
-<pre class="brush: html">&lt;picture&gt;
-  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
-  &lt;img src="mdn-logo-narrow.png" alt="MDN"&gt;
-&lt;/picture&gt;
-</pre>
+```html
+<picture>
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+  <img src="mdn-logo-narrow.png" alt="MDN">
+</picture>
+```
 
-<h3 id="type_属性"><code>type</code> 属性</h3>
+### `type` 属性
 
-<p><code>type</code> 属性允许你为 {{HTMLElement("source")}} 元素的 <code>srcset</code> 属性指向的资源指定一个 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 类型</a>。如果用户代理不支持指定的类型，那么这个 {{HTMLElement("source")}} 元素会被跳过。</p>
+`type` 属性允许你为 {{HTMLElement("source")}} 元素的 `srcset` 属性指向的资源指定一个 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。如果用户代理不支持指定的类型，那么这个 {{HTMLElement("source")}} 元素会被跳过。
 
-<pre class="brush: html">​&lt;picture&gt;
-  &lt;source srcset="mdn-logo.svg" type="image/svg+xml"&gt;
-  &lt;img src="mdn-logo.png" alt="MDN"&gt;
-&lt;/picture&gt;
-</pre>
+```html
+​<picture>
+  <source srcset="mdn-logo.svg" type="image/svg+xml">
+  <img src="mdn-logo.png" alt="MDN">
+</picture>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.picture")}}
 
+## 参考链接
 
-<p>{{Compat("html.elements.picture")}}</p>
-
-<h2 id="参考链接">参考链接</h2>
-
-<ul>
- <li>{{HTMLElement("img")}} 元素</li>
- <li>{{HTMLElement("source")}} 元素</li>
- <li>在其框架内定位和缩放图片：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}</li>
-</ul>
+- {{HTMLElement("img")}} 元素
+- {{HTMLElement("source")}} 元素
+- 在其框架内定位和缩放图片：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}

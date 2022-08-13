@@ -3,258 +3,257 @@ title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 translation_of: Web/HTML/Global_attributes/itemscope
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><code><strong>itemscope</strong></code> 是一个布尔值的 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 。它定义了一个与元数据关联的数据项。就是说一个元素的 <code><strong>itemscope</strong></code> 属性会创建一个项，包含了一组与元素相关的键值对。 相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 <a href="http://schema.org/">schema.org</a>） 来表述项目和上下文。下面每个例子中的概念表都来自 <a href="https://schema.org/">schema.org</a>.</p>
+**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。 相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 [schema.org](http://schema.org/)） 来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
 
-<p>每个 HTML 元素都可以有指定的 <code>itemscope</code> 属性。一个具有 <code>itemscope</code> 属性的元素可以没有关联的 <code>itemtype</code> ，但必须有相关的 <code>itemref</code>。</p>
+每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
 
-<div class="note">
-<p><strong>译者注：</strong> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎： Google， Microsoft， Yandex 和 Yahoo！所支持。</p>
+> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎： Google， Microsoft， Yandex 和 Yahoo！所支持。
+
+> **备注：** 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
+
+### 简单示例
+
+#### HTML
+
+下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"， 并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
+
+```html
+<div itemscope itemtype ="http://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span itemprop="genre">Science fiction</span>
+  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
+```
 
-<div class="note">
-<p><strong>提示：</strong> 获取更多关于 <code>itemtype</code> 属性的信息： <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
-</div>
+####
 
-<h3 id="简单示例">简单示例</h3>
+#### 结构化数据
 
-<h4 id="HTML">HTML</h4>
-
-<p>下面一个例子指定的 <code>itemscope</code> 属性，设置了 <code>itemtype</code> 为 "http://schema.org/Movie"， 并且有 3 个关联的 <code>itemprop</code> 属性（name、director、genre）。</p>
-
-<pre class="brush:html">&lt;div itemscope itemtype ="http://schema.org/Movie"&gt;
-  &lt;h1 itemprop="name"&gt;Avatar&lt;/h1&gt;
-  &lt;span&gt;Director: &lt;span itemprop="director"&gt;James Cameron&lt;/span&gt; (born August 16, 1954)&lt;/span&gt;
-  &lt;span itemprop="genre"&gt;Science fiction&lt;/span&gt;
-  &lt;a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer"&gt;Trailer&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="sect1"> </h4>
-
-<h4 id="结构化数据">结构化数据</h4>
-
-<p>下表展示了上面例子当中的结构化数据。</p>
+下表展示了上面例子当中的结构化数据。
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="6">itemscope</td>
-   <td>Itemtype</td>
-   <td colspan="2">Movie</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>(itemprop name)</td>
-   <td>(itemprop value)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>director</td>
-   <td>James Cameron</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>genre</td>
-   <td>Science Fiction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Avatar</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>https://youtu.be/0AY1XIkX7bY</td>
-   <td>Trailer</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="6">itemscope</td>
+      <td>Itemtype</td>
+      <td colspan="2">Movie</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>(itemprop name)</td>
+      <td>(itemprop value)</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>director</td>
+      <td>James Cameron</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>genre</td>
+      <td>Science Fiction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Avatar</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>https://youtu.be/0AY1XIkX7bY</td>
+      <td>Trailer</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="itemscope_id_属性"><code>itemscope</code> id 属性</h3>
+### `itemscope` id 属性
 
-<p>当你表述一个元素的 <code>itemscope</code> 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 <code>itemscope</code> 和 <code>itemtype</code> 属性，你同时也就阐述了一个 {{htmlattrxref("id")}} 属性。你可以用 <code>id</code> 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。</p>
+当你表述一个元素的 `itemscope` 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 `itemscope` 和 `itemtype` 属性，你同时也就阐述了一个 {{htmlattrxref("id")}} 属性。你可以用 `id` 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。
 
-<h3 id="示例">示例</h3>
+### 示例
 
-<p>下面示例中有 4 个 <code>itemscope</code> 属性。每一个 <code>itemscope</code> 设置了相应的 <code>itemptype</code> 属性。例子中<code>itemtype</code>，<code>Recipe</code>，<code>AggregateRating</code>，以及 <code>NutritionInformation</code> 通过指定了 <code>itemptype</code>，也就是“http://schema.org/Recipe”，也都是 <a href="www.schema.org">schema.org</a> 提供的一个食谱的结构化数据的一部分。</p>
+下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是“http\://schema.org/Recipe”，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
 
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
-&lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
-&lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/&gt;
-&lt;p&gt;By &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person"&gt;
-&lt;span itemprop="name"&gt;Carol Smith&lt;/p&gt;&lt;/span&gt;
-&lt;/span&gt;
-&lt;p&gt;Published: &lt;time datetime="2009-11-05" itemprop="datePublished"&gt;
-November 5, 2009&lt;/p&gt;&lt;/time&gt;
-&lt;span itemprop="description"&gt;This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.&lt;br&gt;&lt;/span&gt;
- &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
- &lt;span itemprop="ratingValue"&gt;4.0&lt;/span&gt; stars based on &lt;span itemprop="reviewCount"&gt;35&lt;/span&gt; reviews&lt;br&gt;&lt;/span&gt;
-Prep time: &lt;time datetime="PT30M" itemprop="prepTime"&gt;30 min&lt;br&gt;&lt;/time&gt;
- Cook time: &lt;time datetime="PT1H" itemprop="cookTime"&gt;1 hour&lt;br&gt;&lt;/time&gt;
- Total time: &lt;time datetime="PT1H30M" itemprop="totalTime"&gt;1 hour 30 min&lt;br&gt;&lt;/time&gt;
- Yield: &lt;span itemprop="recipeYield"&gt;1 9" pie (8 servings)&lt;br&gt;&lt;/span&gt;
- &lt;span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"&gt;
- Serving size: &lt;span itemprop="servingSize"&gt;1 medium slice&lt;br&gt;&lt;/span&gt;
- Calories per serving: &lt;span itemprop="calories"&gt;250 cal&lt;br&gt;&lt;/span&gt;
- Fat per serving: &lt;span itemprop="fatContent"&gt;12 g&lt;br&gt;&lt;/span&gt;
-&lt;/span&gt;
-&lt;p&gt;Ingredients:&lt;br&gt;
-  &lt;span itemprop="recipeIngredient"&gt;Thinly-sliced apples: 6 cups&lt;br&gt;&lt;/span&gt;
-  &lt;span itemprop="recipeIngredient"&gt;White sugar: 3/4 cup&lt;br&gt;&lt;/span&gt;
- ... &lt;/p&gt;
+```html
+<div itemscope itemtype="http://schema.org/Recipe">
+<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+<img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
+<p>By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+<span itemprop="name">Carol Smith</p></span>
+</span>
+<p>Published: <time datetime="2009-11-05" itemprop="datePublished">
+November 5, 2009</p></time>
+<span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.<br></span>
+ <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+ <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews<br></span>
+Prep time: <time datetime="PT30M" itemprop="prepTime">30 min<br></time>
+ Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour<br></time>
+ Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min<br></time>
+ Yield: <span itemprop="recipeYield">1 9" pie (8 servings)<br></span>
+ <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+ Serving size: <span itemprop="servingSize">1 medium slice<br></span>
+ Calories per serving: <span itemprop="calories">250 cal<br></span>
+ Fat per serving: <span itemprop="fatContent">12 g<br></span>
+</span>
+<p>Ingredients:<br>
+  <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
+  <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+ ... </p>
 
-Directions: &lt;br&gt;
-  &lt;div itemprop="recipeInstructions"&gt;
-    1. Cut and peel apples&lt;br&gt;
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. &lt;br&gt;
+Directions: <br>
+  <div itemprop="recipeInstructions">
+    1. Cut and peel apples<br>
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
     ...
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+  </div>
+</div>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<p>下面例子是上述例子的补充：</p>
+下面例子是上述例子的补充：
 
-<p>{{EmbedLiveSample('示例', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}</p>
+{{EmbedLiveSample('示例', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}
 
-<h4 id="结构化数据_2">结构化数据</h4>
+#### 结构化数据
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="14">itemscope</td>
-   <td>itemtype</td>
-   <td colspan="2" rowspan="1">Recipe</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Grandma's Holiday Apple Pie</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>image</td>
-   <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>datePublished</td>
-   <td>2009-11-05</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>description</td>
-   <td>This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>prepTime</td>
-   <td>PT30M</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>cookTime</td>
-   <td>PT1H</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>totalTime</td>
-   <td>PT1H30M</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeYield</td>
-   <td>1 9" pie (8 servings)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeIngredient</td>
-   <td>Thinly-sliced apples: 6 cups</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeIngredient</td>
-   <td>White sugar: 3/4 cup</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>recipeInstructions</td>
-   <td>1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar for tart apples .</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td colspan="2" rowspan="1">author [Person]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Carol Smith</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="3">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>ratingValue</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>reviewCount</td>
-   <td>35</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="4">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>servingSize</td>
-   <td>1 medium slice</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>calories</td>
-   <td>250 cal</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>fatContent</td>
-   <td>12 g</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="14">itemscope</td>
+      <td>itemtype</td>
+      <td colspan="2" rowspan="1">Recipe</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Grandma's Holiday Apple Pie</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>image</td>
+      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>datePublished</td>
+      <td>2009-11-05</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>description</td>
+      <td>
+        This is my grandmother's apple pie recipe. I like to add a dash of
+        nutmeg.
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>prepTime</td>
+      <td>PT30M</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>cookTime</td>
+      <td>PT1H</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>totalTime</td>
+      <td>PT1H30M</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeYield</td>
+      <td>1 9" pie (8 servings)</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeIngredient</td>
+      <td>Thinly-sliced apples: 6 cups</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeIngredient</td>
+      <td>White sugar: 3/4 cup</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>recipeInstructions</td>
+      <td>
+        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
+        for tart apples .
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td colspan="2" rowspan="1">author [Person]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Carol Smith</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="3">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>ratingValue</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>reviewCount</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="4">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>servingSize</td>
+      <td>1 medium slice</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>calories</td>
+      <td>250 cal</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>fatContent</td>
+      <td>12 g</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>提示</strong>: Google 提供了一个方便地从 HTML 提取微数据结构的工具：<a href="https://developers.google.com/structured-data/testing-tool/"> Structured Data Testing Tool</a>。你可以通过上面的 HTML 试一下。</p>
-</div>
+> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">其它不同的全局属性</a></li>
- <li>其他 microdata 相关的全局熟悉
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 其他 microdata 相关的全局熟悉
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

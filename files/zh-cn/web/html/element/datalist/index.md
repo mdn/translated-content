@@ -6,54 +6,52 @@ tags:
   - HTML
 translation_of: Web/HTML/Element/datalist
 ---
-<p><strong><em>HTML </em><code>&lt;datalist&gt;</code><em>元素</em></strong>包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。</p>
+**_HTML_ `<datalist>`_元素_**包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
-<ul>
- <li><dfn><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories">内容范畴</a></dfn><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">流内容</a>，<a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">段落内容</a>。</li>
- <li><dfn>允许内容</dfn>要么 <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">段落内容</a> 要么 0 个或多个 {{HTMLElement("option")}}元素。</li>
- <li><dfn>遗漏标签</dfn>{{no_tag_omission}}</li>
- <li><dfn>允许父级元素</dfn>任何接受<a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">段落内容</a>的元素。</li>
- <li><dfn>Permitted ARIA roles</dfn>None</li>
- <li><dfn>DOM 接口</dfn>{{domxref("HTMLDataListElement")}}</li>
-</ul>
+- _[内容范畴](/zh-CN/docs/HTML/Content_categories)_[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)，[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)。
+- *允许内容*要么 [段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
+- _遗漏标签_{{no_tag_omission}}
+- *允许父级元素*任何接受[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)的元素。
+- \_Permitted ARIA roles_None
+- _DOM 接口_{{domxref("HTMLDataListElement")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素除了公用的<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>之外，没有其他属性。</p>
+该元素除了公用的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)之外，没有其他属性。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;label&gt;Choose a browser from this list:
-&lt;input list="browsers" name="myBrowser" /&gt;&lt;/label&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-&lt;/datalist&gt;</pre>
+```html
+<label>Choose a browser from this list:
+<input list="browsers" name="myBrowser" /></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.datalist")}}</p>
+{{Compat("html.elements.datalist")}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>以下 Polyfill 旨在支持旧的或者目前不兼容的浏览器：<a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a></p>
+以下 Polyfill 旨在支持旧的或者目前不兼容的浏览器：[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ HTMLElement("input") }} 元素，它更特殊的 {{ htmlattrxref("list", "input") }} 属性;</li>
- <li> {{ HTMLElement("option") }}元素。</li>
-</ul>
+- {{ HTMLElement("input") }} 元素，它更特殊的 {{ htmlattrxref("list", "input") }} 属性;
+- {{ HTMLElement("option") }}元素。

@@ -3,53 +3,53 @@ title: <big>
 slug: Web/HTML/Element/big
 translation_of: Web/HTML/Element/big
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>The HTML Big Element (<code>&lt;big&gt;</code>) 会使字体加大一号（例如从小号 (small) 到中号 (medium)，从大号 (large) 到加大 (x-large)），最大不超过浏览器的最大字体。</p>
+The HTML Big Element (`<big>`) 会使字体加大一号（例如从小号 (small) 到中号 (medium)，从大号 (large) 到加大 (x-large)），最大不超过浏览器的最大字体。
 
-<div class="note">
-<p><strong>使用备注：</strong>由于它是纯显示性的，该元素在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>中已经被移除，不应当再使用。取而代之，网页开发者应当使用 CSS 属性。 </p>
-</div>
+> **备注：** 由于它是纯显示性的，该元素在[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)中已经被移除，不应当再使用。取而代之，网页开发者应当使用 CSS 属性。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>只包含 <a href="/en-US/docs/HTML/global_attributes">全局属性</a></p>
+只包含 [全局属性](/zh-CN/docs/HTML/global_attributes)
 
-<h2 id="示例_1">示例 1</h2>
+## 示例 1
 
-<pre class="brush:xml">&lt;p&gt;
-  This is the first sentence. &lt;big&gt;This whole
-  sentence is in bigger letters.&lt;/big&gt;
-&lt;/p&gt;</pre>
+```xml
+<p>
+  This is the first sentence. <big>This whole
+  sentence is in bigger letters.</big>
+</p>
+```
 
-<h2 id="示例_2_(CSS_版)">示例 2 (CSS 版)</h2>
+## 示例 2 (CSS 版)
 
-<pre class="brush:xml">&lt;p&gt;
-  This is the first sentence. &lt;span style="font-size:1.2em"&gt;This whole
-  sentence is in bigger letters.&lt;/span&gt;
-&lt;/p&gt;</pre>
+```xml
+<p>
+  This is the first sentence. <span style="font-size:1.2em">This whole
+  sentence is in bigger letters.</span>
+</p>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>This is the first sentence. This whole sentence is in bigger letters.</p>
+This is the first sentence. This whole sentence is in bigger letters.
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了 {{domxref('HTMLElement')}}接口。</p>
+该元素实现了 {{domxref('HTMLElement')}}接口。
 
-<div class="note"><strong>实现备注：直到</strong> Gecko 1.9.2, Firefox 为该元素实现了{{domxref('HTMLSpanElement')}}接口。</div>
+> **备注：** 直到 Gecko 1.9.2, Firefox 为该元素实现了{{domxref('HTMLSpanElement')}}接口。
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("html.elements.big")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}</li>
- <li>HTML 4.01 Specification: <a href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">Font Styles</a></li>
-</ul>
+- {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
+- HTML 4.01 Specification: [Font Styles](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -8,23 +8,21 @@ tags:
   - 参考
 translation_of: Web/HTML/Element/data
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;data&gt;</code> 元素</strong>将一个指定内容和机器可读的翻译联系在一起。但是，如果内容是与时间或者日期相关的，则一定要使用 {{HTMLElement("time")}}。</p>
+**HTML `<data>` 元素**将一个指定内容和机器可读的翻译联系在一起。但是，如果内容是与时间或者日期相关的，则一定要使用 {{HTMLElement("time")}}。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}</div>
-
-
+{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -32,7 +30,7 @@ translation_of: Web/HTML/Element/data
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -41,39 +39,34 @@ translation_of: Web/HTML/Element/data
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素支持<a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>该属性指定元素内容所对应的数据，或者说 “机器可读的翻译”。</dd>
-</dl>
+- {{htmlattrdef("value")}}
+  - : 该属性指定元素内容所对应的数据，或者说 “机器可读的翻译”。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的示例展示了一些产品名称，而且每个名称都和一个产品编码相关联。</p>
+下面的示例展示了一些产品名称，而且每个名称都和一个产品编码相关联。
 
-<pre class="brush: html">&lt;p&gt;新产品&lt;/p&gt;
-&lt;ul&gt;
- &lt;li&gt;&lt;data value="398"&gt;迷你番茄酱&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="399"&gt;巨无霸番茄酱&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="400"&gt;超级巨无霸番茄酱&lt;/data&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<p>新产品</p>
+<ul>
+ <li><data value="398">迷你番茄酱</data></li>
+ <li><data value="399">巨无霸番茄酱</data></li>
+ <li><data value="400">超级巨无霸番茄酱</data></li>
+</ul>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.data")}}
 
+## 参见
 
-<p>{{Compat("html.elements.data")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>HTML {{HTMLElement("time")}} 元素。</li>
-</ul>
+- HTML {{HTMLElement("time")}} 元素。

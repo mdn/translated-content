@@ -3,23 +3,17 @@ title: <dfn>
 slug: Web/HTML/Element/dfn
 translation_of: Web/HTML/Element/dfn
 ---
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><em>HTML 定义元素</em> (<strong>&lt;dfn&gt;</strong>) 表示术语的一个定义。</p>
+_HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
-<div class="note"><strong>HTML5 使用说明：</strong>
-
-<ul>
- <li><code>&lt;dfn&gt;</code> 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。</li>
- <li>被定义术语的值由下列规则确定：
-  <ol>
-   <li>如果 <code>&lt;dfn&gt;</code> 元素有一个 <code><strong>title</strong></code> 属性，那么该术语的值就是该属性的值。</li>
-   <li>否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 {{htmlattrxref("title", "abbr")}} 属性，那么该术语的值就是该属性的值。</li>
-   <li>否则，<code>&lt;dfn&gt;</code> 元素的文本内容就是该术语的值。</li>
-  </ol>
- </li>
-</ul>
-</div>
+> **备注：** `<dfn>` 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。
+>
+> - 被定义术语的值由下列规则确定：
+>
+>   1.  如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
+>   2.  否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 {{htmlattrxref("title", "abbr")}} 属性，那么该术语的值就是该属性的值。
+>   3.  否则，`<dfn>` 元素的文本内容就是该术语的值。
 
 <table class="properties">
  <tbody>
@@ -46,50 +40,50 @@ translation_of: Web/HTML/Element/dfn
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素包括 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<p>在 HTML5 中，<code><strong>title</strong></code> 属性拥有特殊含义，见上文。</p>
+在 HTML5 中，**`title`** 属性拥有特殊含义，见上文。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下列示例是合法的 HTML5。</p>
+下列示例是合法的 HTML5。
 
-<pre class="brush: html">&lt;!-- Define "The Internet" --&gt;
-&lt;p&gt;&lt;dfn id="def-internet"&gt;The Internet&lt;/dfn&gt; is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.&lt;/p&gt;
-</pre>
+```html
+<!-- Define "The Internet" -->
+<p><dfn id="def-internet">The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+```
 
-<p>在同一文档的后面：</p>
+在同一文档的后面：
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;!-- Define "World-Wide Web" and reference definition for "the Internet" --&gt;
-  &lt;dt&gt;
-    &lt;dfn&gt;
-      &lt;abbr title="World-Wide Web"&gt;WWW&lt;/abbr&gt;
-    &lt;/dfn&gt;
-  &lt;/dt&gt;
-  &lt;dd&gt;The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on &lt;a href="#def-internet"&gt;the Internet&lt;/a&gt;.&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <!-- Define "World-Wide Web" and reference definition for "the Internet" -->
+  <dt>
+    <dfn>
+      <abbr title="World-Wide Web">WWW</abbr>
+    </dfn>
+  </dt>
+  <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the Internet</a>.</dd>
+</dl>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Examples', '600', '150', '', 'Web/HTML/Element/dfn') }}</p>
+{{ EmbedLiveSample('Examples', '600', '150', '', 'Web/HTML/Element/dfn') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.dfn")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>定义列表的相关元素：{{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}</li>
- <li>{{HTMLElement("abbr")}}</li>
-</ul>
+- 定义列表的相关元素：{{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
+- {{HTMLElement("abbr")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

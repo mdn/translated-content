@@ -9,22 +9,21 @@ tags:
   - 表格
 translation_of: Web/HTML/Element/td
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;td&gt;</code> 元素</strong> 定义了一个包含数据的表格单元格。It participates in the <em>table model</em>.</p>
+**HTML `<td>` 元素** 定义了一个包含数据的表格单元格。It participates in the _table model_.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}</div>
-
+{{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
    <td>Sectioning root.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -46,152 +45,84 @@ translation_of: Web/HTML/Element/td
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素支持<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+该元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("abbr")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute contains a short abbreviated description of the cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard. Alternatively, you can put the abbreviated description inside the cell and place the long content in the <strong>title</strong> attribute.</div>
- </dd>
- <dt>{{htmlattrdef("align")}} {{Deprecated_Inline}}</dt>
- <dd>This enumerated attribute specifies how the cell content's horizontal alignment will be handled. Possible values are:
- <ul>
-  <li><code>left</code>: The content is aligned to the left of the cell.</li>
-  <li><code>center</code>: The content is centered in the cell.</li>
-  <li><code>right</code>: The content is aligned to the right of the cell.</li>
-  <li><code>justify</code> (with text only): The content is stretched out inside the cell so that it covers its entire width.</li>
-  <li><code>char</code> (with text only): The content is aligned to a character inside the <code>&lt;th&gt;</code> element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes {{unimplemented_inline(2212)}}.</li>
- </ul>
+- {{htmlattrdef("abbr")}} {{Deprecated_Inline}}
+  - : This attribute contains a short abbreviated description of the cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
 
- <p>The default value when this attribute is not specified is <code>left</code>.</p>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard. Alternatively, you can put the abbreviated description inside the cell and place the long content in the **title** attribute.
+- {{htmlattrdef("align")}} {{Deprecated_Inline}}
+  - : This enumerated attribute specifies how the cell content's horizontal alignment will be handled. Possible values are:
 
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete in the latest standard.
+    - `left`: The content is aligned to the left of the cell.
+    - `center`: The content is centered in the cell.
+    - `right`: The content is aligned to the right of the cell.
+    - `justify` (with text only): The content is stretched out inside the cell so that it covers its entire width.
+    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes {{unimplemented_inline(2212)}}.The default value when this attribute is not specified is `left`.
 
- <ul>
-  <li>To achieve the same effect as the <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code> values, apply the CSS {{cssxref("text-align")}} property to the element.</li>
-  <li>To achieve the same effect as the <code>char</code> value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "td")}}. {{unimplemented_inline}} in CSS3.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("axis")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute contains a list of space-separated strings. Each string is the <code>id</code> of a group of cells that this header applies to.
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard.</div>
- </dd>
- <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings:
- <table>
-  <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>green</code> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>lime</code> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>olive</code> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>yellow</code> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>navy</code> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>blue</code> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>teal</code> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border: 1px solid black;"></td>
-    <td><code>aqua</code> = "#00FFFF"</td>
-   </tr>
-  </tbody>
- </table>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard. 
+    >
+    > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, apply the CSS {{cssxref("text-align")}} property to the element.
+    > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "td")}}. {{unimplemented_inline}} in CSS3.
+- {{htmlattrdef("axis")}} {{Deprecated_Inline}}
+  - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
 
- <div class="note"><strong>Note:</strong> Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("td")}} element should be styled using <a href="/en-US/docs/CSS">CSS</a>. To create a similar effect use the {{cssxref("background-color")}} property in <a href="/en-US/docs/CSS">CSS</a> instead.</div>
- </dd>
-</dl>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard.
+- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+  - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings.
 
-<dl>
- <dt>{{htmlattrdef("char")}} {{Deprecated_Inline}}</dt>
- <dd>The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If {{htmlattrxref("align", "td")}} is not set to <code>char</code>, this attribute is ignored.
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard. To achieve the same effect, you can specify the character as the first value of the {{cssxref("text-align")}} property, {{unimplemented_inline}} in CSS3.</div>
- </dd>
- <dt>{{htmlattrdef("charoff")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute is used to shift column data to the right of the character specified by the <strong>char</strong> attribute. Its value specifies the length of this shift.
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete in the latest standard.</div>
- </dd>
- <dt>{{htmlattrdef("colspan")}}</dt>
- <dd>This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is <code>1</code>. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).</dd>
- <dt>{{htmlattrdef("headers")}}</dt>
- <dd>This attribute contains a list of space-separated strings, each corresponding to the <strong>id</strong> attribute of the {{HTMLElement("th")}} elements that apply to this element.</dd>
- <dt>{{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}</dt>
- <dd>This attribute is used to define a recommended cell height.
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("height")}} property instead.</div>
- </dd>
- <dt>{{htmlattrdef("rowspan")}}</dt>
- <dd>This attribute contains a non-negative integer value that indicates for how many rows the cell extends. Its default value is <code>1</code>; if its value is set to <code>0</code>, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.</dd>
- <dt>{{htmlattrdef("scope")}} {{Deprecated_Inline}}</dt>
- <dd>This enumerated attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to.
- <div class="note"><strong>Note:</strong> Using this attribute with a table cell element is obsolete in the latest standard. Use this attribute only with the {{HTMLElement("th")}} element to define the row or column for which it is a header.</div>
- </dd>
- <dt>{{htmlattrdef("valign")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute specifies how a text is vertically aligned inside a cell. Possible values for this attribute are:
- <ul>
-  <li><code>baseline</code>: Positions the text near the bottom of the cell and aligns it with the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom. If characters don't descend below the baseline, the baseline value achieves the same effect as <code>bottom</code>.</li>
-  <li><code>bottom</code>: Positions the text near the bottom of the cell.</li>
-  <li><code>middle</code>: Centers the text in the cell.</li>
-  <li>and <code>top</code>: Positions the text near the top of the cell.</li>
- </ul>
+    > **备注：** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("td")}} element should be styled using [CSS](/zh-CN/docs/CSS). To create a similar effect use the {{cssxref("background-color")}} property in [CSS](/zh-CN/docs/CSS) instead.
 
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.</div>
- </dd>
- <dt>{{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}</dt>
- <dd>This attribute is used to define a recommended cell width. Additional space can be added with the <a href="/en-US/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a> and <a href="/en-US/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a> properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
- <div class="note"><strong>Note:</strong> Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("width")}} property instead.</div>
- </dd>
-</dl>
+- {{htmlattrdef("char")}} {{Deprecated_Inline}}
+  - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If {{htmlattrxref("align", "td")}} is not set to `char`, this attribute is ignored.
 
-<h2 id="例子">例子</h2>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard. To achieve the same effect, you can specify the character as the first value of the {{cssxref("text-align")}} property, {{unimplemented_inline}} in CSS3.
+- {{htmlattrdef("charoff")}} {{Deprecated_Inline}}
+  - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
 
-<p>请在 {{HTMLElement("table")}} 上查看 <code>&lt;td&gt;</code> 的例子。</p>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard.
+- {{htmlattrdef("colspan")}}
+  - : This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
+- {{htmlattrdef("headers")}}
+  - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the {{HTMLElement("th")}} elements that apply to this element.
+- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}
+  - : This attribute is used to define a recommended cell height.
 
-<h2 id="规范">规范</h2>
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("height")}} property instead.
+- {{htmlattrdef("rowspan")}}
+  - : This attribute contains a non-negative integer value that indicates for how many rows the cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
+- {{htmlattrdef("scope")}} {{Deprecated_Inline}}
+  - : This enumerated attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to.
+
+    > **备注：** Using this attribute with a table cell element is obsolete in the latest standard. Use this attribute only with the {{HTMLElement("th")}} element to define the row or column for which it is a header.
+- {{htmlattrdef("valign")}} {{Deprecated_Inline}}
+  - : This attribute specifies how a text is vertically aligned inside a cell. Possible values for this attribute are:
+
+    - `baseline`: Positions the text near the bottom of the cell and aligns it with the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom. If characters don't descend below the baseline, the baseline value achieves the same effect as `bottom`.
+    - `bottom`: Positions the text near the bottom of the cell.
+    - `middle`: Centers the text in the cell.
+    - and `top`: Positions the text near the top of the cell.
+
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}
+  - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/zh-CN/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/zh-CN/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
+
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("width")}} property instead.
+
+## 例子
+
+请在 {{HTMLElement("table")}} 上查看 `<td>` 的例子。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.td")}}</p>
+{{Compat("html.elements.td")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>其他与表格有关的 HTML 元素：{{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}。</li>
-</ul>
+- 其他与表格有关的 HTML 元素：{{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}。

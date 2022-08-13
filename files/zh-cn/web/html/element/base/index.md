@@ -7,11 +7,11 @@ tags:
   - 文档
 translation_of: Web/HTML/Element/base
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML &lt;base&gt; 元素</strong> 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 &lt;base&gt; 元素。</p>
+**HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
 
-<p>一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 <code>&lt;base&gt;</code> 元素，<code>baseURI</code> 默认为 <code>{{domxref("document.location.href")}}</code>。</p>
+一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 `<base>` 元素，`baseURI` 默认为 `{{domxref("document.location.href")}}`。
 
 <table class="properties">
  <tbody>
@@ -42,59 +42,58 @@ translation_of: Web/HTML/Element/base
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该标签包含<a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
+该标签包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<p>如果指定了以下任一属性，这个元素<strong>必须</strong>在其他任何属性是 URL 的元素之前。例如：<code>{{HTMLElement("link")}}</code> 的 <code>href</code> 属性。</p>
+如果指定了以下任一属性，这个元素**必须**在其他任何属性是 URL 的元素之前。例如：`{{HTMLElement("link")}}` 的 `href` 属性。
 
-<dl>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>用于文档中相对 URL 地址的基础 URL。允许绝对和相对 URL。</dd>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd>默认浏览上下文的关键字或作者定义的名称，当没有明确目标的链接 <code>{{HTMLElement("a")}}</code> 或表单 <code>{{HTMLElement("form")}}</code> 导致导航被激活时显示其结果。该属性值定位到<em>浏览上下文</em>（例如选项卡，窗口或内联框 <code>{{HTMLElement("iframe")}}</code> ）。以下的关键字指定特殊的意思：
- <ul>
-  <li><code>_self</code>: 载入结果到当前浏览上下文中。（该值是元素的默认值）。</li>
-  <li><code>_blank</code>: 载入结果到一个新的未命名的浏览上下文。</li>
-  <li><code>_parent</code>: 载入结果到父级浏览上下文（如果当前页是内联框）。如果没有父级结构，该选项的行为和<code>_self</code>一样。</li>
-  <li><code>_top</code>: 载入结果到顶级浏览上下文（该浏览上下文是当前上下文的最顶级上下文）。如果没有父级，该选项的行为和_self 一样。</li>
- </ul>
- </dd>
-</dl>
+- {{htmlattrdef("href")}}
+  - : 用于文档中相对 URL 地址的基础 URL。允许绝对和相对 URL。
+- {{htmlattrdef("target")}}
+  - : 默认浏览上下文的关键字或作者定义的名称，当没有明确目标的链接 `{{HTMLElement("a")}}` 或表单 `{{HTMLElement("form")}}` 导致导航被激活时显示其结果。该属性值定位到*浏览上下文*（例如选项卡，窗口或内联框 `{{HTMLElement("iframe")}}` ）。以下的关键字指定特殊的意思：
 
-<h2 id="使用说明">使用说明</h2>
+    - `_self`: 载入结果到当前浏览上下文中。（该值是元素的默认值）。
+    - `_blank`: 载入结果到一个新的未命名的浏览上下文。
+    - `_parent`: 载入结果到父级浏览上下文（如果当前页是内联框）。如果没有父级结构，该选项的行为和`_self`一样。
+    - `_top`: 载入结果到顶级浏览上下文（该浏览上下文是当前上下文的最顶级上下文）。如果没有父级，该选项的行为和\_self 一样。
 
-<h3 id="多个_&lt;base>_元素">多个 <code>&lt;base&gt;</code> 元素</h3>
+## 使用说明
 
-<p>如果指定了多个 <code>&lt;base&gt;</code> 元素，只会使用第一个 <code>href </code>和 <code>target </code>值，其余都会被忽略。</p>
+### 多个 `<base>` 元素
 
-<h3 id="页内锚">页内锚</h3>
+如果指定了多个 `<base>` 元素，只会使用第一个 `href `和 `target `值，其余都会被忽略。
 
-<p>指向文档中某个片段的链接，例如 <code>&lt;a href="#some-id"&gt;</code> 用 <code>&lt;base&gt;</code> 解析，触发对带有附加片段的基本 URL 的 HTTP 请求。</p>
+### 页内锚
 
-<p>例如：给定 <code>&lt;base href="https://example.com"&gt;</code></p>
+指向文档中某个片段的链接，例如 `<a href="#some-id">` 用 `<base>` 解析，触发对带有附加片段的基本 URL 的 HTTP 请求。
 
-<p>以及此链接 <code>&lt;a href="#anchor"&gt;Anker&lt;/a&gt;</code></p>
+例如：给定 `<base href="https://example.com">`
 
-<p>链接指向 <code>https://example.com/#anchor</code></p>
+以及此链接 `<a href="#anchor">Anker</a>`
 
-<h3 id="Open_Graph">Open Graph</h3>
+链接指向 `https://example.com/#anchor`
 
-<p><a href="https://ogp.me">Open Graph</a> 标签不接受 <code>&lt;base&gt;</code>，并且应该始终具有完整的绝对 URL。例如：</p>
+### Open Graph
 
-<pre><code>&lt;meta property="og:image" content="https://example.com/thumbnail.jpg"&gt;</code></pre>
+[Open Graph](https://ogp.me) 标签不接受 `<base>`，并且应该始终具有完整的绝对 URL。例如：
 
-<h2 id="示例">示例</h2>
+```plain
+<meta property="og:image" content="https://example.com/thumbnail.jpg">
+```
 
-<pre class="brush: html">&lt;base href="http://www.example.com/"&gt;
-&lt;base target="_blank"&gt;
-&lt;base target="_top" href="http://www.example.com/"&gt;
-</pre>
+## 示例
 
-<h2 id="规范">规范</h2>
+```html
+<base href="http://www.example.com/">
+<base target="_blank">
+<base target="_top" href="http://www.example.com/">
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.base")}}</p>
+{{Compat("html.elements.base")}}

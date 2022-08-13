@@ -7,15 +7,15 @@ tags:
   - 元素
 translation_of: Web/HTML/Element/aside
 ---
-<p><strong>HTML <code>&lt;aside&gt;</code> 元素</strong>表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。</p>
+**HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#章节元素（Sectioning_content）">章节元素</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">可触摸内容</a>.</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式元素</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#章节元素（Sectioning_content）">章节元素</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">可触摸内容</a>。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -40,45 +40,43 @@ translation_of: Web/HTML/Element/aside
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素只有<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
+此元素只有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<ul>
- <li>不要使用 <code>&lt;aside&gt;</code> 元素去尾随括号内的文本 ，因为这种文本被认为是主要流内容的一部分。</li>
-</ul>
+- 不要使用 `<aside>` 元素去尾随括号内的文本 ，因为这种文本被认为是主要流内容的一部分。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;p&gt;
-    迪斯尼电影&lt;cite&gt;海的女儿&lt;/cite&gt;（&lt;cite&gt;The Little Mermaid&lt;/cite&gt;）于 1989 年首次登上银幕。
-  &lt;/p&gt;
-  &lt;aside&gt;
+```html
+<article>
+  <p>
+    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989 年首次登上银幕。
+  </p>
+  <aside>
     在首次发行期间，该片便收获了 8700 万美元的票房。
-  &lt;/aside&gt;
-  &lt;p&gt;
+  </aside>
+  <p>
     更多有关该电影的信息…
-  &lt;/p&gt;
-&lt;/article&gt;</pre>
+  </p>
+</article>
+```
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">使用 HTML 章节与大纲</a></li>
-</ul>
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [使用 HTML 章节与大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

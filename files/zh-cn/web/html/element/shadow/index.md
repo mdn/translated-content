@@ -3,19 +3,19 @@ title: <shadow>
 slug: Web/HTML/Element/Shadow
 translation_of: Web/HTML/Element/shadow
 ---
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p><strong>HTML <code>&lt;shadow&gt;</code> 元素 </strong>— <a href="/en-US/docs/Web/Web_Components">Web 组件</a>技术套件的废弃部分 — 目的是用作 Shadow DOM {{glossary("insertion point")}}。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。</p>
+**HTML `<shadow>` 元素** — [Web 组件](/zh-CN/docs/Web/Web_Components)技术套件的废弃部分 — 目的是用作 Shadow DOM {{glossary("insertion point")}}。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">透明内容</a></td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Transparent_content_model">透明内容</a></td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -36,30 +36,29 @@ translation_of: Web/HTML/Element/shadow
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素支持 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个元素支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这里是一个使用 <code>&lt;shadow&gt;</code> 元素的简单示例。它是个包含所有所需东西的 HTML 文件。</p>
+这里是一个使用 `<shadow>` 元素的简单示例。它是个包含所有所需东西的 HTML 文件。
 
-<div class="note">
-<p><strong>注：</strong>这是个实验性的技术。为了使这个代码有效，你使用的浏览器必须支持 Web 组件。请见<a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">在 Firefox 中开启 Web 组件</a>。</p>
-</div>
+> **备注：** 这是个实验性的技术。为了使这个代码有效，你使用的浏览器必须支持 Web 组件。请见[在 Firefox 中开启 Web 组件](/zh-CN/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)。
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;&lt;/head&gt;
-  &lt;body&gt;
+```html
+<html>
+  <head></head>
+  <body>
 
-  &lt;!-- This &lt;div&gt; will hold the shadow roots. --&gt;
-  &lt;div&gt;
-    &lt;!-- This heading will not be displayed --&gt;
-    &lt;h4&gt;My Original Heading&lt;/h4&gt;
-  &lt;/div&gt;
+  <!-- This <div> will hold the shadow roots. -->
+  <div>
+    <!-- This heading will not be displayed -->
+    <h4>My Original Heading</h4>
+  </div>
 
-  &lt;script&gt;
-    // Get the &lt;div&gt; above with its content
+  <script>
+    // Get the <div> above with its content
     var origContent = document.querySelector('div');
     // Create the first shadow root
     var shadowroot1 = origContent.createShadowRoot();
@@ -68,37 +67,35 @@ translation_of: Web/HTML/Element/shadow
 
     // Insert something into the older shadow root
     shadowroot1.innerHTML =
-      '&lt;p&gt;Older shadow root inserted by
-          &amp;lt;shadow&amp;gt;&lt;/p&gt;';
-    // Insert into younger shadow root, including &lt;shadow&gt;.
+      '<p>Older shadow root inserted by
+          &lt;shadow&gt;</p>';
+    // Insert into younger shadow root, including <shadow>.
     // The previous markup will not be displayed unless
-    // &lt;shadow&gt; is used below.
+    // <shadow> is used below.
     shadowroot2.innerHTML =
-      '&lt;shadow&gt;&lt;/shadow&gt; &lt;p&gt;Younger shadow
-       root, displayed because it is the youngest.&lt;/p&gt;';
-  &lt;/script&gt;
+      '<shadow></shadow> <p>Younger shadow
+       root, displayed because it is the youngest.</p>';
+  </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </body>
+</html>
+```
 
-<p>如果你在 Web 浏览器中展示它，它应该是这样：</p>
+如果你在 Web 浏览器中展示它，它应该是这样：
 
-<p><img alt="shadow example" src="shadow-example.png"></p>
+![shadow example](shadow-example.png)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何现行的规范。</p>
+不属于任何现行的规范。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web 组件</a></li>
- <li>{{HTMLElement("content")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
-</ul>
+- [Web 组件](/zh-CN/docs/Web/Web_Components)
+- {{HTMLElement("content")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

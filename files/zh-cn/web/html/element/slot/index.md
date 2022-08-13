@@ -8,23 +8,21 @@ tags:
   - 插槽
 translation_of: Web/HTML/Element/slot
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<div class="note">
-<p><strong>译者注：</strong> 本翻译的一些术语参考了<a href="https://cn.vuejs.org/v2/guide/components-slots.html">Vuejs-中文</a>页面。</p>
-</div>
+> **备注：** 本翻译的一些术语参考了[Vuejs-中文](https://cn.vuejs.org/v2/guide/components-slots.html)页面。
 
-<p><strong>HTML <code> &lt;slot&gt; </code> 元素 ，</strong>作为 <a href="/en-US/docs/Web/Web_Components">Web Components</a> 技术套件的一部分，是 Web 组件内的一个占位符。该占位符可以在后期使用自己的标记语言填充，这样您就可以创建单独的 DOM 树，并将它与其它的组件组合在一起。</p>
+**HTML `<slot> `元素 ，**作为 [Web Components](/zh-CN/docs/Web/Web_Components) 技术套件的一部分，是 Web 组件内的一个占位符。该占位符可以在后期使用自己的标记语言填充，这样您就可以创建单独的 DOM 树，并将它与其它的组件组合在一起。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">Transparent</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Transparent_content_model">Transparent</a></td>
   </tr>
   <tr>
    <th scope="row">Events</th>
@@ -36,7 +34,7 @@ translation_of: Web/HTML/Element/slot
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -49,19 +47,18 @@ translation_of: Web/HTML/Element/slot
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素有<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+此元素有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>插槽的名字。拥有 name 属性的插槽叫<strong>具名插槽</strong>。</dd>
-</dl>
+- {{htmlattrdef("name")}}
+  - : 插槽的名字。拥有 name 属性的插槽叫**具名插槽**。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+```html
+<template id="element-details-template">
+  <style>
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
@@ -74,30 +71,27 @@ translation_of: Web/HTML/Element/slot
     }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-      &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;Attributes&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;</pre>
+  </style>
+  <details>
+    <summary>
+      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<div class="note">
-<p><strong>Note</strong>: 您可以在 <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">element-details</a> (see it <a href="https://mdn.github.io/web-components-examples/element-details/">running live</a>) 找到这个示例的完整演示版。另外，您也可以在<a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a>这里找到具体的解释。</p>
-</div>
+> **备注：** 您可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)) 找到这个示例的完整演示版。另外，您也可以在[Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)这里找到具体的解释。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("html.elements.slot")}}</p>
+{{Compat("html.elements.slot")}}

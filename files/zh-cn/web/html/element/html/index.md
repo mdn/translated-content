@@ -8,9 +8,9 @@ tags:
   - 顶级元素
 translation_of: Web/HTML/Element/html
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;html&gt;</code> 元素 </strong>表示一个 HTML 文档的根（顶级元素），所以它也被称为<em>根元素</em>。所有其他元素必须是此元素的后代。</p>
+**HTML `<html>` 元素** 表示一个 HTML 文档的根（顶级元素），所以它也被称为*根元素*。所有其他元素必须是此元素的后代。
 
 <table class="properties">
  <tbody>
@@ -41,53 +41,45 @@ translation_of: Web/HTML/Element/html
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>元素包含 <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("manifest")}} {{Deprecated_Inline}}</dt>
- <dd>指定一个 资源清单的 URI，指示应在本地缓存的资源。请参阅 <a href="/zh-CN/docs/HTML/Using_the_application_cache">使用应用程序缓存</a> 获取详细信息。</dd>
- <dt>{{htmlattrdef("version")}} {{Deprecated_Inline}}</dt>
- <dd>指定控制当前文档的 HTML 版本{{glossary("DTD", "文档类型定义")}} 。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。</dd>
- <dt>{{htmlattrdef("xmlns")}} </dt>
- <dd>
- <p>指派文档的 XML 命名空间。默认的值是<code>"http://www.w3.org/1999/xhtml"</code>。这在 XHTML 中是必要的，而在 HTML 中则是可选的。</p>
- </dd>
-</dl>
+- {{htmlattrdef("manifest")}} {{Deprecated_Inline}}
+  - : 指定一个 资源清单的 URI，指示应在本地缓存的资源。请参阅 [使用应用程序缓存](/zh-CN/docs/HTML/Using_the_application_cache) 获取详细信息。
+- {{htmlattrdef("version")}} {{Deprecated_Inline}}
+  - : 指定控制当前文档的 HTML 版本{{glossary("DTD", "文档类型定义")}} 。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。
+- {{htmlattrdef("xmlns")}}
+  - : 指派文档的 XML 命名空间。默认的值是`"http://www.w3.org/1999/xhtml"`。这在 XHTML 中是必要的，而在 HTML 中则是可选的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="zh"&gt;
-  &lt;head&gt;...&lt;/head&gt;
-  &lt;body&gt;...&lt;/body&gt;
-&lt;/html&gt;
+```html
+<!DOCTYPE html>
+<html lang="zh">
+  <head>...</head>
+  <body>...</body>
+</html>
+```
 
-</pre>
+## 可访问性
 
-<h2 id="可访问性">可访问性</h2>
+在`html`元素上提供具有[有效 IETF 标识语言标记](https://www.ietf.org/rfc/bcp/bcp47.txt)的[`lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-lang)属性，将有助于屏幕阅读技术确定要陈述的正确语言。标识语言标签应描述页面大部分内容使用的语言。没有它，屏幕阅读器通常会默认使用操作系统的设置语言，这可能会导致错误陈述。
 
-<p>在<code>html</code>元素上提供具有<a href="https://www.ietf.org/rfc/bcp/bcp47.txt">有效 IETF 标识语言标记</a>的<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-lang">lang</a></code>属性，将有助于屏幕阅读技术确定要陈述的正确语言。标识语言标签应描述页面大部分内容使用的语言。没有它，屏幕阅读器通常会默认使用操作系统的设置语言，这可能会导致错误陈述。</p>
-
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="注意事项">注意事项</h2>
+## 注意事项
 
-<ul>
- <li>尽管在 {{glossary("HTML")}} 里&lt;html&gt;元素不是必需的，可以是隐含的，但是在 {{glossary("XHTML")}} 里必须明确给出它的开标签和闭标签。</li>
- <li>严格意义上，<strong>标签</strong>是指开始标签（例如 &lt;p&gt; 标签）或结束标签（例如 &lt;/p&gt; 标签）；<strong>元素</strong>（例如 p 元素或者称为<code>&lt;p&gt;</code>元素）则包括开始标签（自然也包括标签中定义的属性）、结束标签以及中间的内容（<code>Content</code>）。<img alt="标签和元素的区别" src="https://mdn.mozillademos.org/files/16129/et.PNG" style="height: 168px; width: 412px;"></li>
-</ul>
+- 尽管在 {{glossary("HTML")}} 里\<html>元素不是必需的，可以是隐含的，但是在 {{glossary("XHTML")}} 里必须明确给出它的开标签和闭标签。
+- 严格意义上，**标签**是指开始标签（例如 \<p> 标签）或结束标签（例如 \</p> 标签）；**元素**（例如 p 元素或者称为`<p>`元素）则包括开始标签（自然也包括标签中定义的属性）、结束标签以及中间的内容（`Content`）。![标签和元素的区别](https://mdn.mozillademos.org/files/16129/et.PNG)
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>MathML 顶级元素: {{MathMLElement("math")}}</li>
- <li>SVG 顶级元素: {{SVGElement("svg")}}</li>
-</ul>
+- MathML 顶级元素: {{MathMLElement("math")}}
+- SVG 顶级元素: {{SVGElement("svg")}}

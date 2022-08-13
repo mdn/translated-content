@@ -8,56 +8,54 @@ tags:
   - 参考
 translation_of: Web/HTML/Global_attributes/contextmenu
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<div class="warning">
-<p><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu">contextmenu</a> 属性已经过时，将从所有浏览器中删除。</p>
-</div>
+> **警告：** [contextmenu](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) 属性已经过时，将从所有浏览器中删除。
 
-<div><code><strong>contextmenu</strong></code><a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>是指用于某个元素的“上下文菜单”的{{HTMLElement("menu")}}的<a href="/en-US/docs/Web/HTML/Global_attributes/id">ID</a>属性。</div>
+**`contextmenu`**[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是指用于某个元素的“上下文菜单”的{{HTMLElement("menu")}}的[ID](/zh-CN/docs/Web/HTML/Global_attributes/id)属性。上下文菜单是指在用户交互（例如右键点击）时出现的菜单。 HTML5 允许我们自定义此菜单。 这里有一些实现示例，包括嵌套菜单。
 
-<div>上下文菜单是指在用户交互（例如右键点击）时出现的菜单。 HTML5 允许我们自定义此菜单。 这里有一些实现示例，包括嵌套菜单。</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;body contextmenu="share"&gt;
-  &lt;menu type="context" id="share"&gt;
-    &lt;menu label="share"&gt;
-      &lt;menuitem label="Twitter" onclick="shareViaTwitter()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Facebook" onclick="shareViaFacebook()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-  &lt;/menu&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
+```html
+<body contextmenu="share">
+  <menu type="context" id="share">
+    <menu label="share">
+      <menuitem label="Twitter" onclick="shareViaTwitter()"></menuitem>
+      <menuitem label="Facebook" onclick="shareViaFacebook()"></menuitem>
+    </menu>
+  </menu>
+  <ol>
+    <li>
       Anywhere in the example you can share the page on Twitter and
       Facebook using the Share menu from your context menu.
-    &lt;/li&gt;
-    &lt;li contextmenu="changeFont" id="fontSizing"&gt;
+    </li>
+    <li contextmenu="changeFont" id="fontSizing">
       On this specific list element, you can change the size of the text
       by using the "Increase/Decrease font" actions from your context menu
-    &lt;/li&gt;
-    &lt;menu type="context" id="changeFont"&gt;
-      &lt;menuitem label="Increase Font" onclick="incFont()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Decrease Font" onclick="decFont()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-    &lt;li contextmenu="ChangeImage" id="changeImage"&gt;
+    </li>
+    <menu type="context" id="changeFont">
+      <menuitem label="Increase Font" onclick="incFont()"></menuitem>
+      <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
+    </menu>
+    <li contextmenu="ChangeImage" id="changeImage">
       On the image below, you can fire the "Change Image" action
-      in your Context Menu.&lt;br /&gt;
-      &lt;img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png"
-          contextmenu="ChangeImage" id="promoButton" /&gt;
-      &lt;menu type="context" id="ChangeImage"&gt;
-        &lt;menuitem label="Change Image" onclick="changeImage()"&gt;&lt;/menuitem&gt;
-      &lt;/menu&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/body&gt;
-</pre>
+      in your Context Menu.<br />
+      <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png"
+          contextmenu="ChangeImage" id="promoButton" />
+      <menu type="context" id="ChangeImage">
+        <menuitem label="Change Image" onclick="changeImage()"></menuitem>
+      </menu>
+    </li>
+  </ol>
+</body>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function shareViaTwitter() {
+```js
+function shareViaTwitter() {
   window.open("https://twitter.com/intent/tweet?text=" +
       "Hurray! I am learning ContextMenu from MDN via Mozilla");
 }
@@ -81,23 +79,21 @@ function changeImage() {
       "https://developer.mozilla.org/media/img/promote/promobutton_mdn" +
       index + ".png";
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', "100%", 400)}}</p>
+{{EmbedLiveSample('示例', "100%", 400)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu">contextmenu</a> 属性已经过时，将从所有浏览器中删除。</p>
+[contextmenu](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) 属性已经过时，将从所有浏览器中删除。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="推荐阅读">推荐阅读</h2>
+## 推荐阅读
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a></li>
- <li>{{domxref("HTMLElement.contextMenu")}}</li>
-</ul>
+- All [global attributes](/zh-CN/docs/Web/HTML/Global_attributes)
+- {{domxref("HTMLElement.contextMenu")}}

@@ -10,26 +10,23 @@ tags:
   - abbr
 translation_of: Web/HTML/Element/abbr
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML 缩写元素</strong>（<strong><code>&lt;abbr&gt;</code></strong>）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 <code>title</code> 属性，则它必须且仅可包含完整的描述内容。</p>
+**HTML 缩写元素**（**`<abbr>`**）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 `title` 属性，则它必须且仅可包含完整的描述内容。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
-
-
-
-<p>这篇文章： <em><a href="/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable">How to mark abbreviations and make them understandable</a></em> 是一份学习使用 <code>&lt;abbr&gt;</code> 与其他相关元素的指南。</p>
+这篇文章： _[How to mark abbreviations and make them understandable](/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a></td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a></td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -37,7 +34,7 @@ translation_of: Web/HTML/Element/abbr
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -50,138 +47,137 @@ translation_of: Web/HTML/Element/abbr
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素只有<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。在同 <code>&lt;abbr&gt;</code> 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。</p>
+这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在同 `<abbr>` 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。
 
-<p>你使用的每一个 <code>&lt;abbr&gt;</code>  元素与其它同类元素都是相互独立的，为其中一个提供 <code>title</code> 不会自动把相同的附加文字依附到其它内容文字相同的元素上。</p>
+你使用的每一个 `<abbr>` 元素与其它同类元素都是相互独立的，为其中一个提供 `title` 不会自动把相同的附加文字依附到其它内容文字相同的元素上。
 
-<h2 id="用法注解">用法注解</h2>
+## 用法注解
 
-<h3 id="典型使用场景">典型使用场景</h3>
+### 典型使用场景
 
-<p>当然，我们不是所有的缩写都要使用<code>&lt;abbr&gt;</code>标记。但是其在下面一些场景很有帮助：</p>
+当然，我们不是所有的缩写都要使用`<abbr>`标记。但是其在下面一些场景很有帮助：
 
-<ul>
- <li>当你想为缩写在文档流外提供一段扩展或定义的时候，为 <code>&lt;abbr&gt;</code> 设置一个合适的{{htmlattrxref("title")}}。</li>
- <li>在定义一个读者可能不太熟悉的缩写时，使用 <code>&lt;abbr&gt;</code> 和<code>title</code>属性或内联的文本来表现这个术语。</li>
- <li>当文本中出现需要进行语义上的标注的缩写词时，<code>&lt;abbr&gt;</code>元素可用于依次将其作用样式和脚本。</li>
- <li>可以将 <code>&lt;abbr&gt;</code> 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。 请参阅下面的示例 <a href="#定义一个缩写">定义一个缩写</a>。</li>
-</ul>
+- 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的{{htmlattrxref("title")}}。
+- 在定义一个读者可能不太熟悉的缩写时，使用 `<abbr>` 和`title`属性或内联的文本来表现这个术语。
+- 当文本中出现需要进行语义上的标注的缩写词时，`<abbr>`元素可用于依次将其作用样式和脚本。
+- 可以将 `<abbr>` 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。 请参阅下面的示例 [定义一个缩写](#定义一个缩写)。
 
-<h3 id="语法注意事项">语法注意事项</h3>
+### 语法注意事项
 
-<p>在有 <a href="https://zh.wikipedia.org/wiki/单复数">单复数</a> 的语言中（即物体数量会影响句子语法的语言），  <code>&lt;abbr&gt;</code> 元素和其中的 <code>title</code> 属性应当单复数一致。这在阿拉伯语这样超过二数的语言中非常重要，在英语中也有一定的影响。</p>
+在有 [单复数](https://zh.wikipedia.org/wiki/单复数) 的语言中（即物体数量会影响句子语法的语言）， `<abbr>` 元素和其中的 `title` 属性应当单复数一致。这在阿拉伯语这样超过二数的语言中非常重要，在英语中也有一定的影响。
 
-<h2 id="默认样式">默认样式</h2>
+## 默认样式
 
-<p>虽然完全为了网站制作者的方便，所有的浏览器都默认把这个元素显示为行内元素 ({{cssxref('display')}}<code>: inline</code>) ，但是默认样式在不同浏览器中存在差别：</p>
+虽然完全为了网站制作者的方便，所有的浏览器都默认把这个元素显示为行内元素 ({{cssxref('display')}}`: inline`) ，但是默认样式在不同浏览器中存在差别：
 
-<ul>
- <li>一些浏览器，比如 IE，对它的添加的样式和{{HTMLElement("span")}} 元素的样式完全相同。</li>
- <li>Opera、Firefox 和其他一些浏览器给这个元素的内容添加一条点状下划线 。</li>
- <li>一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。若要避免这种样式，在 CSS 中添加 {{cssxref('font-variant')}}<code>: none</code> 。</li>
-</ul>
+- 一些浏览器，比如 IE，对它的添加的样式和{{HTMLElement("span")}} 元素的样式完全相同。
+- Opera、Firefox 和其他一些浏览器给这个元素的内容添加一条点状下划线 。
+- 一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。若要避免这种样式，在 CSS 中添加 {{cssxref('font-variant')}}`: none` 。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="创建语义化的缩写">创建语义化的缩写</h3>
+### 创建语义化的缩写
 
-<p> 想要创建不含解释或描述性的缩写，就直接用<code>&lt;abbr&gt;</code>不添加任何属性。请看下面的例子。</p>
+想要创建不含解释或描述性的缩写，就直接用`<abbr>`不添加任何属性。请看下面的例子。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Using &lt;abbr&gt;HTML&lt;/abbr&gt; is fun and easy!&lt;/p&gt;</pre>
+```html
+<p>Using <abbr>HTML</abbr> is fun and easy!</p>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Marking_up_an_abbreviation_semantically")}}</p>
+{{EmbedLiveSample("Marking_up_an_abbreviation_semantically")}}
 
-<h3 id="缩写样式">缩写样式</h3>
+### 缩写样式
 
-<p>你可以像这个简单的例子一样，用 CSS 来为缩写做一个样式。</p>
+你可以像这个简单的例子一样，用 CSS 来为缩写做一个样式。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Using &lt;abbr&gt;CSS&lt;/abbr&gt;, you can style your abbreviations!&lt;/p&gt;</pre>
+```html
+<p>Using <abbr>CSS</abbr>, you can style your abbreviations!</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">abbr {
+```css
+abbr {
   font-variant: all-small-caps;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Styling_abbreviations")}}</p>
+{{EmbedLiveSample("Styling_abbreviations")}}
 
-<h3 id="提供扩展">提供扩展</h3>
+### 提供扩展
 
-<p>Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or definition for the abbreviation or acronym.</p>
+Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or definition for the abbreviation or acronym.
 
-<p>添加一个 {{htmlattrxref("title")}} 属性，为缩写提供定义或拓展。</p>
+添加一个 {{htmlattrxref("title")}} 属性，为缩写提供定义或拓展。
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Ashok's joke made me &lt;abbr title="Laugh Out Loud"&gt;LOL&lt;/abbr&gt; big
-time.&lt;/p&gt;</pre>
+```html
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
+time.</p>
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Providing_an_expansion")}}</p>
+{{EmbedLiveSample("Providing_an_expansion")}}
 
-<h3 id="定义一个缩写">定义一个缩写</h3>
+### 定义一个缩写
 
-<p>You can use <code>&lt;abbr&gt;</code> in tandem with {{HTMLElement("dfn")}} to more formally define an abbreviation, as shown here.</p>
+You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally define an abbreviation, as shown here.
 
-<p><code>&lt;abbr&gt;</code> 与 {{HTMLElement("dfn")}} 联合使用可以定义一个更加正式的缩写，如下：</p>
+`<abbr>` 与 {{HTMLElement("dfn")}} 联合使用可以定义一个更加正式的缩写，如下：
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;dfn id="html"&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
-&lt;/dfn&gt; is a markup language used to create the semantics and structure
-of a web page.&lt;/p&gt;
+```html
+<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
+</dfn> is a markup language used to create the semantics and structure
+of a web page.</p>
 
-&lt;p&gt;A &lt;dfn id="spec"&gt;Specification&lt;/dfn&gt;
-(&lt;abbr title="Specification"&gt;spec&lt;/abbr&gt;) is a document that outlines
+<p>A <dfn id="spec">Specification</dfn>
+(<abbr title="Specification">spec</abbr>) is a document that outlines
 in detail how a technology or API is intended to function and how it is
-accessed.&lt;/p&gt;</pre>
+accessed.</p>
+```
 
-<h4 id="结果_3">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}</p>
+{{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
 
-<p>可以在 <em><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">How to mark abbreviations and make them understandable</a></em> 中浏览更多深层次的实例。</p>
+可以在 _[How to mark abbreviations and make them understandable](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)_ 中浏览更多深层次的实例。
 
-<h2 id="可访问性问题">可访问性问题</h2>
+## 可访问性问题
 
-<p>在缩略词第一次出现在页面的时候，将它书写完整对帮助人们理解很有用处的，特别是内容是技术或者工业术语</p>
+在缩略词第一次出现在页面的时候，将它书写完整对帮助人们理解很有用处的，特别是内容是技术或者工业术语
 
-<h4 id="Example">Example</h4>
+#### Example
 
-<pre class="brush: html notranslate">&lt;p&gt;JavaScript Object Notation (&lt;abbr&gt;JSON&lt;/abbr&gt;) is a lightweight data-interchange format.&lt;/p&gt;
+```html
+<p>JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight data-interchange format.</p>
+```
 
-</pre>
+这对于不熟悉内容中讨论的术语或概念的人，对语言不熟悉的人以及具有认知问题的人特别有用。
 
-<p>这对于不熟悉内容中讨论的术语或概念的人，对语言不熟悉的人以及具有认知问题的人特别有用。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.abbr")}}
 
+## 参见
 
-<p>{{Compat("html.elements.abbr")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Advanced_text_formatting#%E7%BC%A9%E7%95%A5%E8%AF%AD">高级文字格式 - 使用 <code>&lt;abbr&gt;</code> 元素</a></li>
-</ul>
-
-<ul>
- <li>其他传达文本级语义的元素：{{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
- <li>已被弃用的 {{HTMLElement("acronym")}} 元素，原被用于展示首字母缩写。其作用被归入了 <code>&lt;abbr&gt;</code> 的作用中。</li>
-</ul>
+- [高级文字格式 - 使用 `<abbr>` 元素](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Advanced_text_formatting#%E7%BC%A9%E7%95%A5%E8%AF%AD)
+- 其他传达文本级语义的元素：{{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- 已被弃用的 {{HTMLElement("acronym")}} 元素，原被用于展示首字母缩写。其作用被归入了 `<abbr>` 的作用中。

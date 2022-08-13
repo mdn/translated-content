@@ -3,12 +3,12 @@ title: <sub>
 slug: Web/HTML/Element/sub
 translation_of: Web/HTML/Element/sub
 ---
-<p><strong>HTML <code>&lt;sub&gt;</code> 元素</strong>定义了一个文本区域，出于排版的原因，与主要的文本相比，应该展示得更低并且更小。</p>
+**HTML `<sub>` 元素**定义了一个文本区域，出于排版的原因，与主要的文本相比，应该展示得更低并且更小。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>流式内容和短语内容</td>
   </tr>
   <tr>
@@ -34,33 +34,30 @@ translation_of: Web/HTML/Element/sub
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素仅仅包含<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+这个元素仅仅包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="用法注解">用法注解</h2>
+## 用法注解
 
-<ul>
- <li>这个元素应该只用于排版目的，也就是改变文本的位置会改变含义，例如在数学中（<var>t<sub>2</sub></var>，也可以考虑使用 <a href="/en-US/docs/MathML">MathML</a> 公式）或者化学符号（ <code>H<sub>2</sub>O</code>）。</li>
- <li>这个元素不能用于样式上的目的，比如产品名称 LaTeX 的样式，这时应该使用 <a href="/en-US/docs/CSS">CSS</a>样式： {{ cssxref("vertical-align") }} 属性的 <code>sub</code> 值能实现相同效果。</li>
-</ul>
+- 这个元素应该只用于排版目的，也就是改变文本的位置会改变含义，例如在数学中（_t2_，也可以考虑使用 [MathML](/zh-CN/docs/MathML) 公式）或者化学符号（ `H2O`）。
+- 这个元素不能用于样式上的目的，比如产品名称 LaTeX 的样式，这时应该使用 [CSS](/zh-CN/docs/CSS)样式： {{ cssxref("vertical-align") }} 属性的 `sub` 值能实现相同效果。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;p&gt;The chemical formula of water: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
-</pre>
-
-<h4 id="结果">结果</h4>
-
+```html
 <p>The chemical formula of water: H<sub>2</sub>O</p>
+```
 
-<h2 id="规范">规范</h2>
+#### 结果
+
+The chemical formula of water: H2O
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{ HTMLElement("sup") }} HTML 元素会产生上标。要注意，你不能同时使用它们，你需要 <a href="/en-US/docs/MathML">MathML</a> 来同时产生化学符号旁边的下标和上标，代表它的序号和核子数。</li>
- <li><a href="/en-US/docs/MathML/Element/msub"><code>&lt;msub&gt;</code></a>, <a href="/en-US/docs/MathML/Element/msup"><code>&lt;msup&gt;</code></a>, 和 <a href="/en-US/docs/MathML/Element/msubsup"><code>&lt;msubsup&gt;</code></a> MathML 元素。</li>
-</ul>
+- {{ HTMLElement("sup") }} HTML 元素会产生上标。要注意，你不能同时使用它们，你需要 [MathML](/zh-CN/docs/MathML) 来同时产生化学符号旁边的下标和上标，代表它的序号和核子数。
+- [`<msub>`](/zh-CN/docs/MathML/Element/msub), [`<msup>`](/zh-CN/docs/MathML/Element/msup), 和 [`<msubsup>`](/zh-CN/docs/MathML/Element/msubsup) MathML 元素。

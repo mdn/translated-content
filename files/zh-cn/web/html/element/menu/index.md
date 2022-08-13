@@ -11,19 +11,19 @@ tags:
   - 菜单
 translation_of: Web/HTML/Element/menu
 ---
-<div>{{HTMLRef}}{{SeeCompatTable}}</div>
+{{HTMLRef}}{{SeeCompatTable}}
 
-<p><strong>HTML <code>&lt;menu&gt;</code> 元素</strong>呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。</p>
+**HTML `<menu>` 元素**呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>. Additionally, if in the <em>list menu</em> state, palpable content. (<em>list menu</em> is the default state, unless the parent element is a {{HTMLElement("menu")}} in the <em>context menu</em> state.)</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>. Additionally, if in the <em>list menu</em> state, palpable content. (<em>list menu</em> is the default state, unless the parent element is a {{HTMLElement("menu")}} in the <em>context menu</em> state.)</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td>If the element is in the <em>list menu</em> state: <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, or alternatively, zero or more occurrences of {{HTMLElement("li")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.<br>
+   <td>If the element is in the <em>list menu</em> state: <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, or alternatively, zero or more occurrences of {{HTMLElement("li")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.<br>
     If the element is in the <em>context menu</em> state: zero or more occurrences, in any order, of {{HTMLElement("menu")}} (<em>context menu</em> state only), {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.</td>
   </tr>
   <tr>
@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/menu
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -45,145 +45,135 @@ translation_of: Web/HTML/Element/menu
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素支持<a href="/en-US/HTML/Global_attributes">全局属性</a>，以及以下属性。</p>
+该元素支持[全局属性](/en-US/HTML/Global_attributes)，以及以下属性。
 
-<dl>
- <dt>{{HTMLAttrDef("label")}} {{Deprecated_inline}}</dt>
- <dd>The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the <em>context menu</em> state.</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>This attribute indicates the kind of menu being declared, and can be one of two values.
- <ul>
-  <li><code>context</code> {{Deprecated_inline}} : Indicates the <em>popup menu</em> state, which represents a group of commands activated through another element. This might be as a button menu referenced by a {{HTMLAttrxRef("menu", "button")}} attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a <a href="/en-US/docs/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> attribute. This value is the default if the attribute is missing and the parent element is also a <code>&lt;menu&gt;</code> element.</li>
-  <li><code>toolbar</code>: Indicates the <em>toolbar</em> state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no <code>&lt;li&gt;</code> element children, flow content describing available commands. This value is the default if the attribute is missing.</li>
- </ul>
- </dd>
-</dl>
+- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+  - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
+- {{HTMLAttrDef("type")}}
+  - : This attribute indicates the kind of menu being declared, and can be one of two values.
 
-<h2 id="使用备注">使用备注</h2>
+    - `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a {{HTMLAttrxRef("menu", "button")}} attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/zh-CN/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
+    - `toolbar`: Indicates the _toolbar_ state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no `<li>` element children, flow content describing available commands. This value is the default if the attribute is missing.
 
-<p>{{HTMLElement("menu")}} 和 {{HTMLElement("ul")}} 元素都呈现了无序列表元素。最主要的区别是，{{HTMLElement("ul")}} 主要是为了展示选项，而 {{HTMLElement("menu")}} 则是为了交互。</p>
+## 使用备注
 
-<p>An HTML menu can be used to create context menus (typically activated by right-clicking another element) or toolbars.</p>
+{{HTMLElement("menu")}} 和 {{HTMLElement("ul")}} 元素都呈现了无序列表元素。最主要的区别是，{{HTMLElement("ul")}} 主要是为了展示选项，而 {{HTMLElement("menu")}} 则是为了交互。
 
-<p><a href="#右键菜单"><strong>Context menus</strong></a> consist of a <code>&lt;menu&gt;</code> element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, <code>&lt;menu&gt;</code> elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for <a href="#菜单按钮">button-activated menus</a> attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.</p>
+An HTML menu can be used to create context menus (typically activated by right-clicking another element) or toolbars.
 
-<p><a href="#toolbar"><strong></strong>Toolbar menus</strong></a> consist of a <code>&lt;menu&gt;</code> element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no <code>&lt;li&gt;</code> elements), <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> describing the available commands and options.</p>
+[**Context menus**](#右键菜单) consist of a `<menu>` element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, `<menu>` elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for [button-activated menus](#菜单按钮) attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.
 
-<p>这个元素在 HTML4 中被弃用，但在 HTML 5.1 和 HTML living standard 中被重新推荐使用。 这份文档描述的是当前 Firefox 上的实现。根据 HTML 5.1 的规定，{{HTMLElement("list")}} 元素的类型可能会更改为{{HTMLElement("toolbar")}}。</p>
+[Toolbar menus](#toolbar) consist of a `<menu>` element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no `<li>` elements), [flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content) describing the available commands and options.
 
-<h2 id="例子">例子</h2>
+这个元素在 HTML4 中被弃用，但在 HTML 5.1 和 HTML living standard 中被重新推荐使用。 这份文档描述的是当前 Firefox 上的实现。根据 HTML 5.1 的规定，{{HTMLElement("list")}} 元素的类型可能会更改为{{HTMLElement("toolbar")}}。
 
-<h3 id="右键菜单">右键菜单</h3>
+## 例子
 
-<p>{{Deprecated_header}}</p>
+### 右键菜单
 
-<h4 id="HTML">HTML</h4>
+{{Deprecated_header}}
 
-<pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
-&lt;div contextmenu="popup-menu"&gt;
+#### HTML
+
+```html
+<!-- A <div> element with a context menu -->
+<div contextmenu="popup-menu">
   Right-click to see the adjusted context menu
-&lt;/div&gt;
+</div>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+<menu type="context" id="popup-menu">
+  <menuitem>Action</menuitem>
+  <menuitem>Another action</menuitem>
+  <hr/>
+  <menuitem>Separated action</menuitem>
+</menu>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">div {
+```css
+div {
   width: 300px;
   height: 80px;
   background-color: lightgreen;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Context_menu", "100%", 80)}}</p>
+{{EmbedLiveSample("Context_menu", "100%", 80)}}
 
-<h3 id="菜单按钮">菜单按钮</h3>
+### 菜单按钮
 
-<div class="blockIndicator warning">
-<p>Menu buttons haven't been implemented in any known browsers yet. The {{HTMLAttrxRef("type", "menu")}} attribute on the <code>&lt;menu&gt;</code> element is now obsolete.</p>
-</div>
+> **警告：** Menu buttons haven't been implemented in any known browsers yet. The {{HTMLAttrxRef("type", "menu")}} attribute on the `<menu>` element is now obsolete.
 
-<div class="blockIndicator warning">
-<p>{{HTMLElement("menuitem")}} element is obsolete.</p>
-</div>
+> **警告：** {{HTMLElement("menuitem")}} element is obsolete.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;!-- A button, which displays a menu when clicked. --&gt;
-&lt;button type="menu" menu="popup-menu"&gt;
+```html
+<!-- A button, which displays a menu when clicked. -->
+<button type="menu" menu="popup-menu">
   Dropdown
-&lt;/button&gt;
+</button>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+<menu type="context" id="popup-menu">
+  <menuitem>Action</menuitem>
+  <menuitem>Another action</menuitem>
+  <hr/>
+  <menuitem>Separated action</menuitem>
+</menu>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Menu_button", "100%", 50)}}</p>
+{{EmbedLiveSample("Menu_button", "100%", 50)}}
 
-<h3 id="Toolbar">Toolbar</h3>
+### Toolbar
 
-<div class="blockIndicator warning">
-<p>Toolbar menus haven't been implemented in any known browsers yet.</p>
-</div>
+> **警告：** Toolbar menus haven't been implemented in any known browsers yet.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;!-- A context menu for a simple editor,
-   - containing two menu buttons. --&gt;
-&lt;menu type="toolbar"&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
-    &lt;menu type="context" id="file-menu"&gt;
-      &lt;menuitem label="New..." onclick="newFile()"&gt;
-      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
-    &lt;menu type="context" id="edit-menu"&gt;
-      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
-      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
-      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-&lt;/menu&gt;
-</pre>
+```html
+<!-- A context menu for a simple editor,
+   - containing two menu buttons. -->
+<menu type="toolbar">
+  <li>
+    <button type="menu" menu="file-menu">File</button>
+    <menu type="context" id="file-menu">
+      <menuitem label="New..." onclick="newFile()">
+      <menuitem label="Save..." onclick="saveFile()">
+    </menu>
+  </li>
+  <li>
+    <button type="menu" menu="edit-menu">Edit</button>
+    <menu type="context" id="edit-menu">
+      <menuitem label="Cut..." onclick="cutEdit()">
+      <menuitem label="Copy..." onclick="copyEdit()">
+      <menuitem label="Paste..." onclick="pasteEdit()">
+    </menu>
+  </li>
+</menu>
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Toolbar", "100%", 100)}}</p>
+{{EmbedLiveSample("Toolbar", "100%", 100)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.menu")}}
 
+## 参见
 
-<p>{{Compat("html.elements.menu")}}</p>
+- Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
+- The [`contextmenu`](/zh-CN/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.</li>
- <li>The <a href="/en-US/docs/Web/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> can be used on an element to refer to the <code>id</code> of a <code>menu</code> with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.</li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

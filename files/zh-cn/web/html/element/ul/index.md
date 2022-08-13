@@ -7,9 +7,9 @@ tags:
   - 列表
 translation_of: Web/HTML/Element/ul
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;ul&gt;</code> 元素</strong>（或称 HTML 无序列表元素）表示一个内可含多个元素的无序列表或项目符号列表。</p>
+**HTML `<ul>` 元素**（或称 HTML 无序列表元素）表示一个内可含多个元素的无序列表或项目符号列表。
 
 <table class="properties">
  <tbody>
@@ -42,151 +42,127 @@ translation_of: Web/HTML/Element/ul
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
-</dl>
+此元素仅含有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<p>此元素仅含有<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+- {{ htmlattrdef("compact") }}{{ Deprecated_inline() }}
+  - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。用户代理决定如何解释这个属性，且并非所有浏览器都支持它。
 
-<dl>
- <dt>{{ htmlattrdef("compact") }}{{ Deprecated_inline() }}</dt>
- <dd>此布尔属性提示列表是否需要被渲染为更紧凑的样式。用户代理决定如何解释这个属性，且并非所有浏览器都支持它。
- <div class="note"><strong>使用说明：</strong>不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 <a href="/zh-CN/docs/CSS">CSS</a> 来更改样式。（CSS）可以提供与<code> compact</code> 属性相同的效果，将  <a href="/zh-CN/docs/CSS">CSS</a> 属性 <a href="/zh-CN/docs/CSS/line-height">line-height</a> 的值设为 <code>80%</code> 即可。</div>
- </dd>
-</dl>
+    > **备注：** 不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 [CSS](/zh-CN/docs/CSS) 来更改样式。（CSS）可以提供与` compact` 属性相同的效果，将 [CSS](/zh-CN/docs/CSS) 属性 [line-height](/zh-CN/docs/CSS/line-height) 的值设为 `80%` 即可。
 
-<dl>
- <dt>{{ htmlattrdef("type") }}{{ Deprecated_inline() }}</dt>
- <dd>用于设置列表的着重号样式 ，被定义在 <a href="/en/HTML3.2">HTML3.2</a> 和过渡版本  <a href="/en/HTML4.01">HTML 4.0/4.01</a> 中的可用值有：
- <ul>
-  <li><code>circle</code></li>
-  <li><code>disc</code></li>
-  <li><code>square</code></li>
- </ul>
+- {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
+  - : 用于设置列表的着重号样式 ，被定义在 [HTML3.2](/en/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/en/HTML4.01) 中的可用值有：
 
- <p>第四种着重号样式被定义在 WebTV 接口中，但并不是所有浏览器都支持：<code>triangle</code></p>
+    - `circle`
+    - `disc`
+    - `square`第四种着重号样式被定义在 WebTV 接口中，但并不是所有浏览器都支持：`triangle`如果未设置此 HTML 属性且没有 [CSS](/en/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
 
- <p>如果未设置此 HTML 属性且没有 <a href="/en/CSS">CSS</a> {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。</p>
+    > **备注：** 不要使用这个属性，它已经被废弃了：使用 [CSS](/en/CSS) {{ cssxref("list-style-type") }} 属性作为代替。
 
- <div class="note"><strong>使用说明：</strong> 不要使用这个属性，它已经被废弃了：使用 <a href="/en/CSS">CSS</a> {{ cssxref("list-style-type") }} 属性作为代替。</div>
- </dd>
-</dl>
+## 使用说明
 
-<h2 id="使用说明">使用说明</h2>
+- `<ul>` 元素用来将没有数字顺序的一组数据进行分组，并且它们的数字顺序是没有意义的。举个例子，无序列表的列表项通常通过一个字符进行装饰，这些字符的形式可以是点，圆乃至方形．虽然这个字符没有直接在页面上定义，但是可以用与之相关的 CSS 对其进行操作，例如使用 {{cssxref("list-style-type")}} 属性。
+- 在 {{ HTMLElement("ol") }} 和 {{ HTMLElement("ul") }} 元素中，嵌套列表没有深度和嵌套顺序的限制。
+- {{ HTMLElement("ol") }} 和 {{ HTMLElement("ul") }} 元素二者都代表一组数据，不过它们彼此是有区别的，ol 元素中的顺序是有意义的。如果想确定你到底需要使用哪一个列表元素，你可以试着去改变数据的顺序。如果想表达的语义改变了，你就需要使用 ol 元素，否则你该使用 ul 元素。
 
+## 实例
+
+### 简单的例子
+
+```html
 <ul>
- <li><code>&lt;ul&gt;</code> 元素用来将没有数字顺序的一组数据进行分组，并且它们的数字顺序是没有意义的。举个例子，无序列表的列表项通常通过一个字符进行装饰，这些字符的形式可以是点，圆乃至方形．虽然这个字符没有直接在页面上定义，但是可以用与之相关的 CSS 对其进行操作，例如使用 {{cssxref("list-style-type")}} 属性。</li>
- <li>在 {{ HTMLElement("ol") }} 和 {{ HTMLElement("ul") }} 元素中，嵌套列表没有深度和嵌套顺序的限制。</li>
- <li>{{ HTMLElement("ol") }} 和 {{ HTMLElement("ul") }} 元素二者都代表一组数据，不过它们彼此是有区别的，ol 元素中的顺序是有意义的。如果想确定你到底需要使用哪一个列表元素，你可以试着去改变数据的顺序。如果想表达的语义改变了，你就需要使用 ol 元素，否则你该使用 ul 元素。</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
+```
 
-<h2 id="实例">实例</h2>
+以上 HTML 输出：
 
-<h3 id="简单的例子">简单的例子</h3>
+- first item
+- second item
+- third item
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item&lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+### 嵌套列表
 
-<p>以上 HTML 输出：</p>
-
+```html
 <ul>
- <li>first item</li>
- <li>second item</li>
- <li>third item</li>
-</ul>
-
-<h3 id="嵌套列表">嵌套列表</h3>
-
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item      &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem      &lt;!-- Same for the second nested unordered list! --&gt;
-        &lt;ul&gt;
-          &lt;li&gt;second item second subitem first sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem second sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem third sub-subitem&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;           &lt;!-- Closing &lt;/li&gt; tag for the li that contains the third unordered list --&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;               &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>以上 HTML 输出：</p>
-
-<ul>
- <li>first item</li>
- <li>second item
-  <ul>
-   <li>second item first subitem</li>
-   <li>second item second subitem
+  <li>first item</li>
+  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
-     <li>second item second subitem first sub-subitem</li>
-     <li>second item second subitem second sub-subitem</li>
-     <li>second item second subitem third sub-subitem</li>
+      <li>second item first subitem</li>
+      <li>second item second subitem      <!-- Same for the second nested unordered list! -->
+        <ul>
+          <li>second item second subitem first sub-subitem</li>
+          <li>second item second subitem second sub-subitem</li>
+          <li>second item second subitem third sub-subitem</li>
+        </ul>
+      </li>           <!-- Closing </li> tag for the li that contains the third unordered list -->
+      <li>second item third subitem</li>
     </ul>
-   </li>
-   <li>second item third subitem</li>
-  </ul>
- </li>
- <li>third item</li>
+  </li>               <!-- Here is the closing </li> tag -->
+  <li>third item</li>
 </ul>
+```
 
-<h3 id="嵌套_&lt;ul>_和_&lt;ol>">嵌套 &lt;ul&gt; 和 &lt;ol&gt;</h3>
+以上 HTML 输出：
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item      &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem&lt;/li&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;                &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+- first item
+- second item
 
-<p>以上 HTML 输出：</p>
+  - second item first subitem
+  - second item second subitem
 
+    - second item second subitem first sub-subitem
+    - second item second subitem second sub-subitem
+    - second item second subitem third sub-subitem
+
+  - second item third subitem
+
+- third item
+
+### 嵌套 \<ul> 和 \<ol>
+
+```html
 <ul>
- <li>first item</li>
- <li>second item
-  <ol>
-   <li>second item first subitem</li>
-   <li>second item second subitem</li>
-   <li>second item third subitem</li>
-  </ol>
- </li>
- <li>third item</li>
+  <li>first item</li>
+  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+    <ol>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ol>
+  </li>                <!-- Here is the closing </li> tag -->
+  <li>third item</li>
 </ul>
+```
 
-<h2 id="规范">规范</h2>
+以上 HTML 输出：
+
+- first item
+- second item
+
+  1.  second item first subitem
+  2.  second item second subitem
+  3.  second item third subitem
+
+- third item
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>其他列表相关的 HTML 元素: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};</li>
- <li>特别作用于 &lt;ul&gt;元素的 CSS 属性：
-  <ul>
-   <li> <a href="/en/CSS/list-style">list-style</a> 属性，作用于选择哪种序数的样式来显示，</li>
-   <li><a href="/en/CSS_Counters">CSS counters</a>, 作用于操作复杂的嵌套列表，</li>
-   <li> <a href="/en/CSS/line-height">line-height</a> 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，</li>
-   <li> <a href="/en/CSS/margin">margin</a> 属性，作用于控制列表的缩进。</li>
-  </ul>
- </li>
-</ul>
+- 其他列表相关的 HTML 元素: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};
+- 特别作用于 \<ul>元素的 CSS 属性：
+
+  - [list-style](/en/CSS/list-style) 属性，作用于选择哪种序数的样式来显示，
+  - [CSS counters](/en/CSS_Counters), 作用于操作复杂的嵌套列表，
+  - [line-height](/en/CSS/line-height) 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，
+  - [margin](/en/CSS/margin) 属性，作用于控制列表的缩进。

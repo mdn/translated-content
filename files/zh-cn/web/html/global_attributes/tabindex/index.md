@@ -6,40 +6,34 @@ tags:
   - HTML
 translation_of: Web/HTML/Global_attributes/tabindex
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><strong>tabindex</strong> <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用<kbd>Tab</kbd>键，因此得名）。</p>
+**tabindex** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用<kbd>Tab</kbd>键，因此得名）。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
 
-<p>它接受一个整数作为值，具有不同的结果，具体取决于整数的值：</p>
+它接受一个整数作为值，具有不同的结果，具体取决于整数的值：
 
-<ul>
- <li>tabindex=负值 (通常是 tabindex=“-1”)，表示元素是可聚焦的，但是不能通过键盘导航来访问到该元素，用 JS 做页面小组件内部键盘导航的时候非常有用。</li>
- <li><code>tabindex="0"</code> ，表示元素是可聚焦的，并且可以通过键盘导航来聚焦到该元素，它的相对顺序是当前处于的 DOM 结构来决定的。</li>
- <li>tabindex=正值，表示元素是可聚焦的，并且可以通过键盘导航来访问到该元素；它的相对顺序按照<strong>tabindex</strong> 的数值递增而滞后获焦。如果多个元素拥有相同的 <strong>tabindex</strong>，它们的相对顺序按照他们在当前 DOM 中的先后顺序决定。</li>
-</ul>
+- tabindex=负值 (通常是 tabindex=“-1”)，表示元素是可聚焦的，但是不能通过键盘导航来访问到该元素，用 JS 做页面小组件内部键盘导航的时候非常有用。
+- `tabindex="0"` ，表示元素是可聚焦的，并且可以通过键盘导航来聚焦到该元素，它的相对顺序是当前处于的 DOM 结构来决定的。
+- tabindex=正值，表示元素是可聚焦的，并且可以通过键盘导航来访问到该元素；它的相对顺序按照**tabindex** 的数值递增而滞后获焦。如果多个元素拥有相同的 **tabindex**，它们的相对顺序按照他们在当前 DOM 中的先后顺序决定。
 
-<p>根据键盘序列导航的顺序，值为 <code>0</code> 、非法值、或者没有 <strong>tabindex</strong> 值的元素应该放置在 <strong>tabindex</strong> 值为正值的元素后面。</p>
+根据键盘序列导航的顺序，值为 `0` 、非法值、或者没有 **tabindex** 值的元素应该放置在 **tabindex** 值为正值的元素后面。
 
-<p>如果我们在 {{htmlelement("div")}} 上设置了 <code>tabindex</code> 属性，它的子元素内容不能使用箭头键来滚动，除非我们在内容上也设置 <code>tabindex</code>。<a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">查看这篇 fiddle 来理解 tabindex 的滚动影响</a>。</p>
+如果我们在 {{htmlelement("div")}} 上设置了 `tabindex` 属性，它的子元素内容不能使用箭头键来滚动，除非我们在内容上也设置 `tabindex`。[查看这篇 fiddle 来理解 tabindex 的滚动影响](https://jsfiddle.net/jainakshay/0b2q4Lgv/)。
 
-<div class="note">
-<p><strong>注：</strong>tabindex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。</p>
-</div>
+> **备注：** tabindex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>所有<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a></li>
- <li>反映这个属性的 {{domxref("HTMLElement.tabIndex")}} </li>
- <li>tabindex 的可访问性问题：请见 <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html">不要使用大于 0 的 Tabindex | Adrian Roselli</a>。</li>
-</ul>
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 反映这个属性的 {{domxref("HTMLElement.tabIndex")}}
+- tabindex 的可访问性问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。

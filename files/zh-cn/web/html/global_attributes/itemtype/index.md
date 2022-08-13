@@ -3,226 +3,225 @@ title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
 translation_of: Web/HTML/Global_attributes/itemtype
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><strong><code>itemtype</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 指定了词汇的 URL，它将会用于定义数据结构中的 <code>itemprop</code>（条目属性）。{{htmlattrxref("itemscope")}} 用于设置词汇的生效范围，其中词汇在数据结构中由 <code>itemtype</code> 设置。</p>
+**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。{{htmlattrxref("itemscope")}} 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
 
-<p>Google 和其它主流搜索引擎支持 <a href="http://schema.org/">schema.org</a> 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，<code><a href="http://schema.org/MusicEvent">MusicEvent</a></code> 表示音乐会的名称，<code><a href="http://schema.org/startDate">startDate</a></code> 和 <code><a href="http://schema.org/location">location</a></code> 属性指定了音乐会的关键信息。这里，<a href="http://schema.org/MusicEvent"><code>MusicEvent</code> </a>应该是用于 <code>itemtype</code> 的 URL，而 <code>startDate</code> 和 location 作为 <code><a href="http://schema.org/MusicEvent">MusicEvent</a></code> 所定义的 <code>itemprop。</code></p>
+Google 和其它主流搜索引擎支持 [schema.org](http://schema.org/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`MusicEvent`](http://schema.org/MusicEvent) 表示音乐会的名称，[`startDate`](http://schema.org/startDate) 和 [`location`](http://schema.org/location) 属性指定了音乐会的关键信息。这里，[`MusicEvent` ](http://schema.org/MusicEvent)应该是用于 `itemtype` 的 URL，而 `startDate` 和 location 作为 [`MusicEvent`](http://schema.org/MusicEvent) 所定义的 `itemprop。`
 
-<div class="note">
-<p><strong>注：</strong>更多 <code>itemtype</code> 属性的信息请见 <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
+> **备注：** 更多 `itemtype` 属性的信息请见 <http://schema.org/Thing>
+
+- **itemtype** 属性必须拥有这样的值，它是唯一标识的无序集合，这些标识是大小写敏感的，每个标识都是有效的绝对 URL，并且所有都使用相同词汇定义。属性的值必须至少拥有一个标识。
+- 条目的类型必须全部为定义在适用规范（例如 [schema.org](http://schema.org/)）中的类型，并且必须使用相同词汇定义。
+- itemtype 属性只能在指定了 itemscope 属性的元素上指定。
+- itemid 属性只能在同时指定了 itemscope 和 itemtype 属性的元素上指定。它们必须仅仅在拥有 itemscope 属性的元素上指定，它的 itemtype 属性指定了不支持全局标识符的词汇，根据该词汇规范的定义。
+- 全局标识符的准确含义，由词汇的规范决定。它留给这种规范，来定义全局标识符相同的多个条目（位于相同页面或不同页面）是否允许存在，以及对于处理 ID 相同的多个条目，使用什么处理规则。
+
+### 简单示例
+
+#### HTML
+
+```html
+<div itemscope itemtype="http://schema.org/Product">
+  <span itemprop="brand">ACME</span>
+  <span itemprop="name">Executive Anvil</span>
 </div>
+```
 
-<ul>
- <li><strong>itemtype</strong> 属性必须拥有这样的值，它是唯一标识的无序集合，这些标识是大小写敏感的，每个标识都是有效的绝对 URL，并且所有都使用相同词汇定义。属性的值必须至少拥有一个标识。</li>
- <li>条目的类型必须全部为定义在适用规范（例如 <a href="http://schema.org/">schema.org</a>）中的类型，并且必须使用相同词汇定义。</li>
- <li>itemtype 属性只能在指定了 itemscope 属性的元素上指定。</li>
- <li>itemid 属性只能在同时指定了 itemscope 和 itemtype 属性的元素上指定。它们必须仅仅在拥有 itemscope 属性的元素上指定，它的 itemtype 属性指定了不支持全局标识符的词汇，根据该词汇规范的定义。</li>
- <li>全局标识符的准确含义，由词汇的规范决定。它留给这种规范，来定义全局标识符相同的多个条目（位于相同页面或不同页面）是否允许存在，以及对于处理 ID 相同的多个条目，使用什么处理规则。</li>
-</ul>
-
-<h3 id="简单示例">简单示例</h3>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;span itemprop="brand"&gt;ACME&lt;/span&gt;
-  &lt;span itemprop="name"&gt;Executive Anvil&lt;/span&gt;
-&lt;/div&gt;</pre>
-
-<h4 id="结构化数据">结构化数据</h4>
+#### 结构化数据
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="4">itemscope</td>
-   <td>itemtype</td>
-   <td colspan="2" rowspan="1">schema.org Product</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Executive Anvil</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td colspan="2" rowspan="1">brand [Thing]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>ACME</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="4">itemscope</td>
+      <td>itemtype</td>
+      <td colspan="2" rowspan="1">schema.org Product</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Executive Anvil</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td colspan="2" rowspan="1">brand [Thing]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>ACME</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;span itemprop="brand"&gt;ACME&lt;br&gt;&lt;/span&gt;
-  &lt;span itemprop="name"&gt;Executive Anvil&lt;br&gt;&lt;/span&gt;
-  &lt;img itemprop="image" src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" alt="Executive Anvil logo" /&gt;&lt;br&gt;
+```html
+<div itemscope itemtype="http://schema.org/Product">
+  <span itemprop="brand">ACME<br></span>
+  <span itemprop="name">Executive Anvil<br></span>
+  <img itemprop="image" src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" alt="Executive Anvil logo" /><br>
 
-&lt;span itemprop="description"&gt;Sleeker than ACME's Classic Anvil, the
+<span itemprop="description">Sleeker than ACME's Classic Anvil, the
     Executive Anvil is perfect for the business traveler
     looking for something to drop from a height.
-  &lt;br&gt;
-&lt;/span&gt;
+  <br>
+</span>
 
-  Product #: &lt;span itemprop="mpn"&gt;925872&lt;br&gt;&lt;/span&gt;
-  &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
-    Rating: &lt;span itemprop="ratingValue"&gt;4.4&lt;/span&gt; stars, based on &lt;span itemprop="reviewCount"&gt;89
-      &lt;/span&gt; reviews&lt;p&gt;
-  &lt;/span&gt;
+  Product #: <span itemprop="mpn">925872<br></span>
+  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    Rating: <span itemprop="ratingValue">4.4</span> stars, based on <span itemprop="reviewCount">89
+      </span> reviews<p>
+  </span>
 
-&lt;span itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
-    Regular price: $179.99&lt;br&gt;
-    &lt;meta itemprop="priceCurrency" content="USD" /&gt;
-    &lt;span itemprop="price"&gt;Sale price: $119.99&lt;br&gt;&lt;/span&gt;
-    (Sale ends &lt;time itemprop="priceValidUntil" datetime="2020-11-05"&gt;
-      5 November!&lt;/time&gt;)&lt;br&gt;
-    Available from: &lt;span itemprop="seller" itemscope itemtype="http://schema.org/Organization"&gt;
-                      &lt;span itemprop="name"&gt;Executive Objects&lt;br&gt;&lt;/span&gt;
-                    &lt;/span&gt;
-    Condition: &lt;link itemprop="itemCondition" href="http://schema.org/UsedCondition"/&gt;Previously owned,
-      in excellent condition&lt;br&gt;
-    &lt;link itemprop="availability" href="http://schema.org/InStock"/&gt;In stock! Order now!
-&lt;/span&gt;
+<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    Regular price: $179.99<br>
+    <meta itemprop="priceCurrency" content="USD" />
+    <span itemprop="price">Sale price: $119.99<br></span>
+    (Sale ends <time itemprop="priceValidUntil" datetime="2020-11-05">
+      5 November!</time>)<br>
+    Available from: <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                      <span itemprop="name">Executive Objects<br></span>
+                    </span>
+    Condition: <link itemprop="itemCondition" href="http://schema.org/UsedCondition"/>Previously owned,
+      in excellent condition<br>
+    <link itemprop="availability" href="http://schema.org/InStock"/>In stock! Order now!
+</span>
 
-  &lt;/span&gt;
+  </span>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<p>{{EmbedLiveSample('HTML_2', '300', '400', '', 'Web/HTML/Global_attributes/itemtype')}}</p>
+{{EmbedLiveSample('HTML_2', '300', '400', '', 'Web/HTML/Global_attributes/itemtype')}}
 
-<h4 id="结构化数据_2">结构化数据</h4>
+#### 结构化数据
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="7">itemscope</td>
-   <td>itemtype</td>
-   <td colspan="2" rowspan="1">Product (http://schema.org/Product)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Executive Anvil</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>image</td>
-   <td>https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>description</td>
-   <td>Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>mpn</td>
-   <td>925872</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>brand [Thing]</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>ACME</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="9">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td>aggregateRating[AggregateRating]</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>ratingValue</td>
-   <td>4.4</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>reviewCount</td>
-   <td>89</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>offers [Offer]</td>
-   <td>http://schema.org/Offer</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>priceCurrency</td>
-   <td>USD</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>price</td>
-   <td>119.99</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>priceValidUntil</td>
-   <td>2020-11-05</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>itemCondition</td>
-   <td>http://schema.org/UsedCondition</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>availability</td>
-   <td>http://schema.org/InStock</td>
-  </tr>
-  <tr>
-   <td colspan="1" rowspan="2">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td>seller [Organization]</td>
-   <td>http://schema.org/Organization</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Executive Objects</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="7">itemscope</td>
+      <td>itemtype</td>
+      <td colspan="2" rowspan="1">Product (http://schema.org/Product)</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Executive Anvil</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>image</td>
+      <td>
+        https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>description</td>
+      <td>
+        Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for
+        the business traveler looking for something to drop from a height.
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>mpn</td>
+      <td>925872</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>brand [Thing]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>ACME</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="9">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td>aggregateRating[AggregateRating]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>ratingValue</td>
+      <td>4.4</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>reviewCount</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>offers [Offer]</td>
+      <td>http://schema.org/Offer</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>priceCurrency</td>
+      <td>USD</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>price</td>
+      <td>119.99</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>priceValidUntil</td>
+      <td>2020-11-05</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>itemCondition</td>
+      <td>http://schema.org/UsedCondition</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>availability</td>
+      <td>http://schema.org/InStock</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="2">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td>seller [Organization]</td>
+      <td>http://schema.org/Organization</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Executive Objects</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>注：</strong> 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的 <a href="https://developers.google.com/structured-data/testing-tool/">结构化数据测试工具</a>。在上面展示的 HTML 上尝试吧。</p>
-</div>
+> **备注：** 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的 [结构化数据测试工具](https://developers.google.com/structured-data/testing-tool/)。在上面展示的 HTML 上尝试吧。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">其它不同的全局属性</a></li>
- <li>其它 microdata 相关的全局属性
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 其它 microdata 相关的全局属性
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

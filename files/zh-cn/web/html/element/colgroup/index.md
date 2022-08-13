@@ -9,12 +9,11 @@ tags:
   - 表格
 translation_of: Web/HTML/Element/colgroup
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>HTML 中的 表格列组（<em>Column Group </em><strong>&lt;colgroup&gt;</strong>）标签用来定义表中的一组列表。</p>
+HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义表中的一组列表。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}</div>
-
+{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
 
 <table class="properties">
  <tbody>
@@ -47,174 +46,80 @@ translation_of: Web/HTML/Element/colgroup
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此标签支持 <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+此标签支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}</dt>
- <dd>这个可枚举的属性定义每一列的元素内容的水平对齐方式，支持的值有：
- <ul>
-  <li><code>left</code>，元素中的内容左对齐</li>
-  <li><code>center</code>，元素中的内容居中对齐</li>
-  <li><code>right</code>，元素中的内容右对齐</li>
-  <li><code>justify</code>，插入空格，使元素中内容两端对齐</li>
-  <li><code>char</code>，针对确定的字符，设置一个最小偏移量，来进行布局，通过 {{htmlattrxref("char", "col")}} 和 {{htmlattrxref("charoff", "col")}} 属性进行定义 {{unimplemented_inline(2212)}}。</li>
- </ul>
+- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}
+  - : 这个可枚举的属性定义每一列的元素内容的水平对齐方式，支持的值有：
 
- <p>此属性的默认值为 <code>left</code>。后代 {{HTMLElement("col")}} 元素可以用它们自己的 {{htmlattrxref("align", "col")}} 属性值来重写该属性。</p>
+    - `left`，元素中的内容左对齐
+    - `center`，元素中的内容居中对齐
+    - `right`，元素中的内容右对齐
+    - `justify`，插入空格，使元素中内容两端对齐
+    - `char`，针对确定的字符，设置一个最小偏移量，来进行布局，通过 {{htmlattrxref("char", "col")}} 和 {{htmlattrxref("charoff", "col")}} 属性进行定义 {{unimplemented_inline(2212)}}。此属性的默认值为 `left`。后代 {{HTMLElement("col")}} 元素可以用它们自己的 {{htmlattrxref("align", "col")}} 属性值来重写该属性。
 
- <div class="note">不要使用这个属性，它在最新的标准中已经不被支持。
+    > **备注：** 不要使用这个属性，它在最新的标准中已经不被支持。
+    >
+    > - 若要实现与 `left`, `center`, `right` 或 `justify` 相同的效果：
+    > - 不要为一个 {{HTMLElement("colgroup")}} 元素选择器设置 {{cssxref("text-align")}} 属性.，因为{{HTMLElement("td")}} 元素并不是 {{HTMLElement("colgroup")}} 元素的后代，不继承于它。
+    > - 如果表格不使用 {{htmlattrxref("colspan", "td")}} 属性，每列用一个 `td:nth-child(an+b)` 的 CSS 选择器，a 是表格中列的总数，b 是当前列在表格中的位列次序号。只有在这个选择器之后， {{cssxref("text-align")}} 属性可以使用。
+    > - 如果表格使用了 {{htmlattrxref("colspan", "td")}} 属性，可以通过合并足够多的属性选择器来实现同样的效果，比如 `[colspan=n]，但这不常用。`
+    > - 若要实现与 `char` 相同的效果：在 CSS3 中，你可以使用 {{htmlattrxref("char", "colgroup")}} 作为 {{cssxref("text-align")}} 的属性值。 {{unimplemented_inline}}
 
- <ul>
-  <li>若要实现与 <code>left</code>, <code>center</code>, <code>right</code> 或 <code>justify</code> 相同的效果：
+- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+  - : 这个属性用于定义列组中的每一个列成员的背景颜色。在 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用
 
-   <ul>
-    <li>不要为一个 {{HTMLElement("colgroup")}} 元素选择器设置 {{cssxref("text-align")}} 属性.，因为{{HTMLElement("td")}} 元素并不是 {{HTMLElement("colgroup")}} 元素的后代，不继承于它。</li>
-    <li>如果表格不使用 {{htmlattrxref("colspan", "td")}} 属性，每列用一个 <code>td:nth-child(an+b)</code> 的 CSS 选择器，a 是表格中列的总数，b 是当前列在表格中的位列次序号。只有在这个选择器之后， {{cssxref("text-align")}} 属性可以使用。</li>
-    <li>如果表格使用了 {{htmlattrxref("colspan", "td")}} 属性，可以通过合并足够多的属性选择器来实现同样的效果，比如 <code>[colspan=n]，但这不常用。</code></li>
-   </ul>
-  </li>
-  <li>若要实现与 <code>char</code> 相同的效果：在 CSS3 中，你可以使用 {{htmlattrxref("char", "colgroup")}} 作为 {{cssxref("text-align")}} 的属性值。 {{unimplemented_inline}}</li>
- </ul>
- </div>
- </dd>
-</dl>
+    > **备注：** 不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 **bgcolor** 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。 |
 
-<dl>
- <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>这个属性用于定义列组中的每一个列成员的背景颜色。在 <a href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a> 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用，如下所示：
- <table>
-  <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  black = "#000000"</code></td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code> green = "#008000"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code> silver = "#C0C0C0"</code></td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  lime = "#00FF00"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>   gray = "#808080"</code></td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code> olive = "#808000"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  white = "#FFFFFF"</code></td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>yellow = "#FFFF00"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code> maroon = "#800000"</code></td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  navy = "#000080"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>    red = "#FF0000"</code></td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  blue = "#0000FF"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code> purple = "#800080"</code></td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  teal = "#008080"</code></td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>fuchsia = "#FF00FF"</code></td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>  aqua = "#00FFFF"</code></td>
-   </tr>
-  </tbody>
- </table>
+- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}
+  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
 
- <div class="note"><strong>小贴士：</strong><strong> </strong>不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 <strong>bgcolor</strong> 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。</div>
- </dd>
-</dl>
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "colgroup")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "colgroup")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}
+  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the **char** attribute.
 
-<dl>
- <dt>{{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}</dt>
- <dd>This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to <code>char</code>, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "colgroup")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "colgroup")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.</div>
- </dd>
-</dl>
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-<dl>
- <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}</dt>
- <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the <strong>char</strong> attribute.
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard.</div>
- </dd>
-</dl>
+- {{htmlattrdef("span")}}
+  - : This attribute contains a positive integer indicating the number of consecutive columns the `<colgroup>` element spans. If not present, its default value is `1`.
 
-<dl>
- <dt>{{htmlattrdef("span")}}</dt>
- <dd>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;colgroup&gt;</code> element spans. If not present, its default value is <code>1</code>.
- <div class="note"><strong>Note: </strong>This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.
- <ul>
-  <li>The <code>span</code> attribute is not permitted if there are one or more <code>&lt;col&gt;</code> elements within the <code>&lt;colgroup&gt;</code>.</li>
- </ul>
- </div>
- </dd>
-</dl>
+    > **备注：** This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group. The `span` attribute is not permitted if there are one or more `<col>` elements within the `<colgroup>`.
 
-<dl>
- <dt>{{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}</dt>
- <dd>This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
- <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
-  <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
-  <li><code>middle</code>, which will center the text in the cell;</li>
-  <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
- </ul>
+- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}
+  - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard:
+    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+    - `middle`, which will center the text in the cell;
+    - and `top`, which will put the text as close to the top of the cell as it is possible.
 
- <ul>
-  <li>Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.</li>
-  <li>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.</li>
-  <li>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</li>
- </ul>
- </div>
- </dd>
-</dl>
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
+    >
+    > - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.
+    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
+    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-<dl>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form <code>0*</code>, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as <code>0.5*</code> also can be used.</dd>
-</dl>
+- {{htmlattrdef("width")}}
+  - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>请参考 {{HTMLElement("table")}} 页面以查看 <code>&lt;colgroup&gt;</code> 的示例。</p>
+请参考 {{HTMLElement("table")}} 页面以查看 `<colgroup>` 的示例。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.colgroup")}}
 
+## 参见
 
-<p>{{Compat("html.elements.colgroup")}}</p>
+- 其他与表格有关的 HTML 元素：{{HTMLElement("caption")}}，{{HTMLElement("col")}}，{{HTMLElement("table")}}，{{HTMLElement("tbody")}}，{{HTMLElement("td")}}，{{HTMLElement("tfoot")}}，{{HTMLElement("th")}}，{{HTMLElement("thead")}}，{{HTMLElement("tr")}}；
+- 对 `<col>` 元素编写样式时特别有用的 CSS 属性和伪类：
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>其他与表格有关的 HTML 元素：{{HTMLElement("caption")}}，{{HTMLElement("col")}}，{{HTMLElement("table")}}，{{HTMLElement("tbody")}}，{{HTMLElement("td")}}，{{HTMLElement("tfoot")}}，{{HTMLElement("th")}}，{{HTMLElement("thead")}}，{{HTMLElement("tr")}}；</li>
- <li>对 <code>&lt;col&gt;</code> 元素编写样式时特别有用的 CSS 属性和伪类：
-  <ul>
-   <li>{{cssxref("width")}} 属性可用于控制列宽；</li>
-   <li>{{cssxref(":nth-child")}} 伪类可用于针对特定单元格设置对齐方式；</li>
-   <li>{{cssxref("text-align")}} 属性可用于按照某一个字符对齐所有单元格的内容，例如 '.'。</li>
-  </ul>
- </li>
-</ul>
+  - {{cssxref("width")}} 属性可用于控制列宽；
+  - {{cssxref(":nth-child")}} 伪类可用于针对特定单元格设置对齐方式；
+  - {{cssxref("text-align")}} 属性可用于按照某一个字符对齐所有单元格的内容，例如 '.'。

@@ -9,16 +9,16 @@ tags:
   - 表单
 translation_of: Web/HTML/Element/optgroup
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML 元素 <code>&lt;optgroup&gt;</code> </strong>为{{HTMLElement("select")}} 元素中的选项创建分组。</p>
+**HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无</td>
   </tr>
   <tr>
@@ -48,53 +48,48 @@ translation_of: Web/HTML/Element/optgroup
  </tbody>
 </table>
 
-<div class="note">
- <p><strong>备注：</strong>Optgroup elements may not be nested.</p>
-</div>
+> **备注：** Optgroup elements may not be nested.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">global attributes</a>。</p>
+这个元素包含 [global attributes](/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。</dd>
- <dt>{{htmlattrdef("label")}}</dt>
- <dd>选项组的名字，浏览器用以在用户界面中标记选项。使用这个元素时必须加上这个属性。</dd>
-</dl>
+- {{htmlattrdef("disabled")}}
+  - : 如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。
+- {{htmlattrdef("label")}}
+  - : 选项组的名字，浏览器用以在用户界面中标记选项。使用这个元素时必须加上这个属性。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;select&gt;
-  &lt;optgroup label="Group 1"&gt;
-    &lt;option&gt;Option 1.1&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Group 2"&gt;
-    &lt;option&gt;Option 2.1&lt;/option&gt;
-    &lt;option&gt;Option 2.2&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Group 3" disabled&gt;
-    &lt;option&gt;Option 3.1&lt;/option&gt;
-    &lt;option&gt;Option 3.2&lt;/option&gt;
-    &lt;option&gt;Option 3.3&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;
-</pre>
+```html
+<select>
+  <optgroup label="Group 1">
+    <option>Option 1.1</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option>Option 2.1</option>
+    <option>Option 2.2</option>
+  </optgroup>
+  <optgroup label="Group 3" disabled>
+    <option>Option 3.1</option>
+    <option>Option 3.2</option>
+    <option>Option 3.3</option>
+  </optgroup>
+</select>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>其他表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。</li>
-</ul>
+- 其他表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。

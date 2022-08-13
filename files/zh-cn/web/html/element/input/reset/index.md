@@ -12,14 +12,11 @@ tags:
   - reset
 translation_of: Web/HTML/Element/input/reset
 ---
-<p><code>{{HTMLElement("input")}}</code> type 类型为 <strong><code>"reset"</code></strong> 元素呈现为按钮，且带有默认的 <code>{{event("click")}}</code> 事件，用于将表单中的所有输入重置为其初始值。</p>
+`{{HTMLElement("input")}}` type 类型为 **`"reset"`** 元素呈现为按钮，且带有默认的 `{{event("click")}}` 事件，用于将表单中的所有输入重置为其初始值。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-
-<div class="note">
-<p>您通常应该尽量避免在表单中包含重置按钮。 它们很少有实用性，事实上更有可能使用户误点而感到沮丧（通常是在尝试单击 “<a href="/zh-CN/docs/Web/HTML/Element/Input/submit">提交</a>” 按钮时）。</p>
-</div>
+> **备注：** 您通常应该尽量避免在表单中包含重置按钮。 它们很少有实用性，事实上更有可能使用户误点而感到沮丧（通常是在尝试单击 “[提交](/zh-CN/docs/Web/HTML/Element/Input/submit)” 按钮时）。
 
 <table class="properties">
  <tbody>
@@ -46,106 +43,105 @@ translation_of: Web/HTML/Element/input/reset
  </tbody>
 </table>
 
-<h2 id="值">值</h2>
+## 值
 
-<p><code>&lt;input type="reset"&gt;</code> 元素的 <code>{{htmlattrxref("value", "input")}}</code> 属性包含一个用做按钮标签的 <code>{{domxref("DOMString")}}</code>，诸如 <code>reset</code>之类的按钮没有其他值。</p>
+`<input type="reset">` 元素的 `{{htmlattrxref("value", "input")}}` 属性包含一个用做按钮标签的 `{{domxref("DOMString")}}`，诸如 `reset`之类的按钮没有其他值。
 
-<div id="summary-example3">
-<pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
-</div>
+```html
+<input type="reset" value="Reset the form">
+```
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example3", 650, 30)}}
 
-<p>如果您未指定 <code>value</code>，则会获得一个带有默认标签的按钮（通常为 “重置”，但这将根据 {{Glossary("user agent")}} 而有所不同：</p>
+如果您未指定 `value`，则会获得一个带有默认标签的按钮（通常为 “重置”，但这将根据 {{Glossary("user agent")}} 而有所不同：
 
-<div id="summary-example1">
-<pre class="brush: html">&lt;input type="reset"&gt;</pre>
-</div>
+```html
+<input type="reset">
+```
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+{{EmbedLiveSample("summary-example1", 650, 30)}}
 
-<h2 id="使用重置按钮">使用重置按钮</h2>
+## 使用重置按钮
 
-<p><code>&lt;input type =“ reset”&gt;</code> 按钮用于重置表单。 如果您要创建自定义按钮，则使用 JavaScript 自定义行为，您需要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/Input/button">&lt;input type="button"&gt;</a></code>，或者最好使用 <code>{{htmlelement("button")}}</code> 元素。</p>
+`<input type =“ reset”>` 按钮用于重置表单。 如果您要创建自定义按钮，则使用 JavaScript 自定义行为，您需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/Input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
 
-<h3 id="一个简单的重置按钮">一个简单的重置按钮</h3>
+### 一个简单的重置按钮
 
-<p>我们将从创建一个简单的重置按钮开始：</p>
+我们将从创建一个简单的重置按钮开始：
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="Reset the form"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="Reset the form">
+  </div>
+</form>
+```
 
-<p>如下所示：</p>
+如下所示：
 
-<p>{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}</p>
+{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}
 
-<p>尝试在文本字段中输入一些文本，然后点击重置按钮。</p>
+尝试在文本字段中输入一些文本，然后点击重置按钮。
 
-<h3 id="添加重置键盘快捷键">添加重置键盘快捷键</h3>
+### 添加重置键盘快捷键
 
-<p>添加键盘快捷键到提交按钮 — 就像您使用 <code>{{HTMLElement("input")}}</code> 一样做一些事情 — 请使用 <code>{{htmlattrxref("accesskey")}}</code> 全局属性。</p>
+添加键盘快捷键到提交按钮 — 就像您使用 `{{HTMLElement("input")}}` 一样做一些事情 — 请使用 `{{htmlattrxref("accesskey")}}` 全局属性。
 
-<p>在这个例子中， <kbd>r</kbd> 被指定为访问键（您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 <code>{{htmlattrxref("accesskey")}}</code> ）。</p>
+在这个例子中， <kbd>r</kbd> 被指定为访问键（您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 `{{htmlattrxref("accesskey")}}` ）。
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="Reset the form"
-     accesskey="r"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="Reset the form"
+     accesskey="r">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}</p>
+{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-<p>上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的以避免与系统和软件快捷键冲突。 在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 <code>{{htmlattrxref("title")}}</code> 属性）, 尽管这并不是出于可访问性目的的完善的解决方案。</p>
+上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的以避免与系统和软件快捷键冲突。 在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 `{{htmlattrxref("title")}}` 属性）, 尽管这并不是出于可访问性目的的完善的解决方案。
 
-<h3 id="禁用和启用重置按钮">禁用和启用重置按钮</h3>
+### 禁用和启用重置按钮
 
-<p>要禁用重置按钮，只需在其上指定 <code>{{htmlattrxref("disabled")}}</code> 的全局属性，如下所示：</p>
+要禁用重置按钮，只需在其上指定 `{{htmlattrxref("disabled")}}` 的全局属性，如下所示：
 
-<div id="disable-example1">
-<pre class="brush: html">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
-</div>
+```html
+<input type="reset" value="Disabled" disabled>
+```
 
-<p>您可以在运行时通过简单地将 <code>disable</code> 设置为 <code>true</code> 或 <code>false</code> 来启用和禁用按钮。在 JavaScript 中，使用<code>btn.disabled = true</code> 或 <code>btn.disabled = false</code>。</p>
+您可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用`btn.disabled = true` 或 `btn.disabled = false`。
 
-<div class="note">
-<p>注意：有关启用和禁用按钮的更多想法，请参见 <code><a href="/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> 页面。</p>
-</div>
+> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 页面。
 
-<h2 id="验证方式"><strong>验证方式</strong></h2>
+## 验证方式
 
-<p>按钮并不参与约束性验证；他们并没有实际的约束价值。</p>
+按钮并不参与约束性验证；他们并没有实际的约束价值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>我们在上面已经提供了一些简单的示例。 实际上关于重置按钮并没有更多的内容了。</p>
+我们在上面已经提供了一些简单的示例。 实际上关于重置按钮并没有更多的内容了。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 实现接口</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms_and_buttons">Forms and buttons</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms (accessibility)</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
- <li>The {{HTMLElement("button")}} element</li>
-</ul>
+- {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 实现接口
+- [Forms and buttons](/zh-CN/docs/Learn/HTML/Forms_and_buttons)
+- [Forms (accessibility)](/zh-CN/docs/Web/Accessibility/ARIA/forms)
+- [HTML forms](/zh-CN/docs/Learn/HTML/Forms)
+- The {{HTMLElement("button")}} element

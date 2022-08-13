@@ -3,14 +3,14 @@ title: <param>
 slug: Web/HTML/Element/param
 translation_of: Web/HTML/Element/param
 ---
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong>HTML <code>&lt;param&gt;元素</code></strong>为{{ HTMLElement("object") }}元素定义参数</p>
+**HTML `<param>元素`**为{{ HTMLElement("object") }}元素定义参数
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><dfn><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories">内容分类</a></dfn></th>
+   <th scope="row"><dfn><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></dfn></th>
    <td>无</td>
   </tr>
   <tr>
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/param
   </tr>
   <tr>
    <th scope="row"><dfn>允许的父级元素</dfn></th>
-   <td>任何<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content#Flow_content">以下内容</a>（<a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>）都可以在{{ HTMLElement("object") }}元素的前面作为它的父元素。</td>
+   <td>任何<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content#Flow_content">以下内容</a>（<a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>）都可以在{{ HTMLElement("object") }}元素的前面作为它的父元素。</td>
   </tr>
   <tr>
    <th scope="row"><dfn>DOM 接口</dfn></th>
@@ -32,43 +32,37 @@ translation_of: Web/HTML/Element/param
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+这个元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{ htmlattrdef("name") }}</dt>
- <dd>参数的名字。</dd>
- <dt>{{ htmlattrdef("type") }} {{Deprecated_Inline}}</dt>
- <dd>仅当 valuetype 设置为 “ref” 时才使用。根据 URI 中给定的数据确定 MIME 类型。</dd>
- <dt>{{ htmlattrdef("value") }}</dt>
- <dd>确定参数的值。</dd>
- <dt>{{ htmlattrdef("valuetype") }} {{Deprecated_Inline}}</dt>
- <dd>确定参数的类型。可选值如下：
- <ul>
-  <li>data: 默认值。该值作为字符串变量传递给对象实例。</li>
-  <li>ref: 该值是存储运行时变量的资源的 URI。</li>
-  <li>object: 同一页面（document）中另一个{{HTMLElement("object")}}的 ID。</li>
- </ul>
- </dd>
-</dl>
+- {{ htmlattrdef("name") }}
+  - : 参数的名字。
+- {{ htmlattrdef("type") }} {{Deprecated_Inline}}
+  - : 仅当 valuetype 设置为 “ref” 时才使用。根据 URI 中给定的数据确定 MIME 类型。
+- {{ htmlattrdef("value") }}
+  - : 确定参数的值。
+- {{ htmlattrdef("valuetype") }} {{Deprecated_Inline}}
+  - : 确定参数的类型。可选值如下：
 
-<h2 id="示例">示例</h2>
+    - data: 默认值。该值作为字符串变量传递给对象实例。
+    - ref: 该值是存储运行时变量的资源的 URI。
+    - object: 同一页面（document）中另一个{{HTMLElement("object")}}的 ID。
 
-<p>请在{{ HTMLElement("object") }}页面中查看&lt;param&gt;的示例。</p>
+## 示例
 
-<h2 id="Specifications">规范</h2>
+请在{{ HTMLElement("object") }}页面中查看\<param>的示例。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{ HTMLElement("object") }}</li>
-</ul>
+- {{ HTMLElement("object") }}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

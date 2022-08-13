@@ -3,50 +3,45 @@ title: <tt>
 slug: Web/HTML/Element/tt
 translation_of: Web/HTML/Element/tt
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>HTML 电报文本元素 (<code>&lt;tt&gt;</code>) 产生一个内联元素，使用浏览器内置的 monotype 字体展示。这个元素用于给文本排版，使其等宽展示，就像电报那样。使用 {{ HTMLElement("code") }} 元素来展示等宽文本可能更加普遍。</p>
+HTML 电报文本元素 (`<tt>`) 产生一个内联元素，使用浏览器内置的 monotype 字体展示。这个元素用于给文本排版，使其等宽展示，就像电报那样。使用 {{ HTMLElement("code") }} 元素来展示等宽文本可能更加普遍。
 
-<div class="note">这个元素已废弃。使用更加适当的元素，例如带有 <a href="/fr/docs/CSS">CSS</a> 的 {{ HTMLElement("code") }} 或者 {{ HTMLElement("span") }} 来代替。</div>
+> **备注：** 这个元素已废弃。使用更加适当的元素，例如带有 [CSS](/zh-CN/docs/CSS) 的 {{ HTMLElement("code") }} 或者 {{ HTMLElement("span") }} 来代替。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素除了<a href="/en-US/docs/Web/HTML/global_attributes">全局属性</a>之外，没有其它属性，所有元素都一样。</p>
+这个元素除了[全局属性](/zh-CN/docs/Web/HTML/global_attributes)之外，没有其它属性，所有元素都一样。
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>这个元素实现了 {{domxref('HTMLElement')}} 接口。</p>
+这个元素实现了 {{domxref('HTMLElement')}} 接口。
 
-<div class="note">
-<p><strong>实现注解： </strong>Gecko 1.9.2（包含）之前， Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。</p>
-</div>
+> **备注：** Gecko 1.9.2（包含）之前， Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:html">&lt;p&gt;Enter the following at the telnet command prompt: &lt;code&gt;set localecho&lt;/code&gt;&lt;br /&gt;
+```html
+<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
 
-The telnet client should display: &lt;tt&gt;Local Echo is on&lt;/tt&gt;&lt;/p&gt;
-</pre>
+The telnet client should display: <tt>Local Echo is on</tt></p>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br>
- The telnet client should display: <code>Local Echo is on</code></p>
+Enter the following at the telnet command prompt: `set localecho`
+The telnet client should display: `Local Echo is on`
 
-<h2 id="Notes">注</h2>
+## 注
 
-<ul>
- <li>CSS 规范可以为 <code>tt</code> 选择器定义，来覆盖浏览器的默认字体。用于设置的偏好可能优先于指定的 CSS。</li>
- <li>虽然这个元素没有在 HTML 4.01 规范中废弃，为了支持样式表，不建议使用它。</li>
-</ul>
+- CSS 规范可以为 `tt` 选择器定义，来覆盖浏览器的默认字体。用于设置的偏好可能优先于指定的 CSS。
+- 虽然这个元素没有在 HTML 4.01 规范中废弃，为了支持样式表，不建议使用它。
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
- <li>{{ HTMLElement("code") }}</li>
- <li>HTML 4.01 规范：<a href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">字体样式</a></li>
-</ul>
+- {{ HTMLElement("code") }}
+- HTML 4.01 规范：[字体样式](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-<div>{{ HTMLRef }}</div>
+{{ HTMLRef }}

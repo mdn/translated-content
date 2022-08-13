@@ -6,14 +6,11 @@ tags:
   - Web
 translation_of: Web/HTML/Element/var
 ---
+{{HTMLRef}}HTML Variable 元素（\<var>）表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。
 
-<div>{{HTMLRef}}</div>
+## 概述
 
-<div>HTML Variable 元素（&lt;var&gt;）表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。</div>
-
-<h2 id="概述">概述</h2>
-
-<p><strong>&lt;var&gt; 标签</strong>表示变量的名称，或者由用户提供的值。</p>
+**\<var> 标签**表示变量的名称，或者由用户提供的值。
 
 <table class="standard-table">
  <tbody>
@@ -36,64 +33,66 @@ translation_of: Web/HTML/Element/var
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>本元素仅支持 <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>.</p>
+本元素仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>本元素支持 <code><a href="/zh-CN/docs/Web/API/Element">HTMLElement</a></code> 接口</p>
+本元素支持 [`HTMLElement`](/zh-CN/docs/Web/API/Element) 接口
 
-<div class="note">
-<p><strong>提示：</strong>Gecko 1.9.2 开始，Firefox 支持本元素使用 <a href="/zh-CN/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a> 接口。</p>
-</div>
+> **备注：** Gecko 1.9.2 开始，Firefox 支持本元素使用 [HTMLSpanElement](/zh-CN/docs/Web/API/HTMLSpanElement) 接口。
 
-<h2 id="默认样式">默认样式</h2>
+## 默认样式
 
-<pre class="brush:css">var {
+```css
+var {
   font-style: italic;
 }
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:html">&lt;p&gt; A simple equation: &lt;var&gt;x&lt;/var&gt; = &lt;var&gt;y&lt;/var&gt; + 2 &lt;/p&gt;
-</pre>
+```html
+<p> A simple equation: <var>x</var> = <var>y</var> + 2 </p>
+```
 
-<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
+A simple equation: _x_ = _y_ + 2
 
-<div>
-<p>The output:</p>
+The output:
 
-<p>{{EmbedLiveSample("Basic_example", 650,80)}}</p>
-</div>
+{{EmbedLiveSample("Basic_example", 650,80)}}
 
-<h3 id="Overriding_the_default_style">Overriding the default style</h3>
+### Overriding the default style
 
-<p>Using CSS, you can override the default style for the <code>&lt;var&gt;</code> element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.</p>
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">var {
+```css
+var {
   font: bold 15px "Courier", "Courier New", monospace;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p&gt;The variables &lt;var&gt;minSpeed&lt;/var&gt; and &lt;var&gt;maxSpeed&lt;/var&gt; control
+```html
+<p>The variables <var>minSpeed</var> and <var>maxSpeed</var> control
    the minimum and maximum speed of the apparatus in revolutions
-   per minute (RPM).&lt;/p&gt;</pre>
+   per minute (RPM).</p>
+```
 
-<p>This HTML uses <code>&lt;var&gt;</code> to enclose the names of two variables.</p>
+This HTML uses `<var>` to enclose the names of two variables.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}</p>
+{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

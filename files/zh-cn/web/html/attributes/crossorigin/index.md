@@ -14,69 +14,56 @@ tags:
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/CORS_settings_attributes
 ---
-<p>在 HTML5 中，一些 HTML 元素提供了对 <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a> 的支持， 例如 {{ HTMLElement("audio") }}、{{ HTMLElement("img") }}、{{ HTMLElement("link") }}、{{ HTMLElement("script") }} 和 {{ HTMLElement("video") }} 均有一个跨域属性 (<code>crossOrigin</code> property)，它允许你配置元素获取数据的 CORS 请求。 </p>
+在 HTML5 中，一些 HTML 元素提供了对 [CORS](/zh-CN/docs/HTTP/Access_control_CORS) 的支持， 例如 {{ HTMLElement("audio") }}、{{ HTMLElement("img") }}、{{ HTMLElement("link") }}、{{ HTMLElement("script") }} 和 {{ HTMLElement("video") }} 均有一个跨域属性 (`crossOrigin` property)，它允许你配置元素获取数据的 CORS 请求。
 
-<p>在媒体元素上被使用的 <code>crossorigin</code> 内容属性是一个 CORS 设置属性。</p>
+在媒体元素上被使用的 `crossorigin` 内容属性是一个 CORS 设置属性。
 
-<p>这些属性是枚举的，并具有以下可能的值：</p>
+这些属性是枚举的，并具有以下可能的值：
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">关键字</td>
-   <td class="header">描述</td>
-  </tr>
-  <tr>
-   <td><code>anonymous</code></td>
-   <td>对此元素的 CORS 请求将不设置凭据标志。</td>
-  </tr>
-  <tr>
-   <td><code>use-credentials</code></td>
-   <td>对此元素的 CORS 请求将设置凭证标志；这意味着请求将提供凭据。</td>
-  </tr>
-  <tr>
-   <td><code>""</code></td>
-   <td>设置一个空的值，如 <code>crossorigin</code> 或 <code>crossorigin=""</code>，和设置 <code>anonymous</code> 的效果一样。</td>
-  </tr>
- </tbody>
-</table>
+| 关键字            | 描述                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------- |
+| `anonymous`       | 对此元素的 CORS 请求将不设置凭据标志。                                                |
+| `use-credentials` | 对此元素的 CORS 请求将设置凭证标志；这意味着请求将提供凭据。                          |
+| `""`              | 设置一个空的值，如 `crossorigin` 或 `crossorigin=""`，和设置 `anonymous` 的效果一样。 |
 
-<p>默认情况下（即未指定 crossOrigin 属性时），CORS 根本不会使用。如 <a href="http://www.w3.org/TR/cors/#user-credentials">Terminology section of the CORS specification</a> 中的描述，在非同源情况下，设置 "anonymous" 关键字将不会通过 cookies，客户端 SSL 证书或 HTTP 认证交换用户凭据。</p>
+默认情况下（即未指定 crossOrigin 属性时），CORS 根本不会使用。如 [Terminology section of the CORS specification](http://www.w3.org/TR/cors/#user-credentials) 中的描述，在非同源情况下，设置 "anonymous" 关键字将不会通过 cookies，客户端 SSL 证书或 HTTP 认证交换用户凭据。
 
-<p>即使是无效的关键字和空字符串也会被当作 <code>anonymous</code> 关键字使用。</p>
+即使是无效的关键字和空字符串也会被当作 `anonymous` 关键字使用。
 
-<h3 id="示例：使用_crossorigin_的_script_元素">示例：使用 crossorigin 的 script 元素</h3>
+### 示例：使用 crossorigin 的 script 元素
 
-<p>你可以使用下面的 {{HTMLElement("script")}} 元素告诉浏览器执行来自 <code>https://example.com/example-framework.js</code> 的脚本且不发送用户凭据。</p>
+你可以使用下面的 {{HTMLElement("script")}} 元素告诉浏览器执行来自 `https://example.com/example-framework.js` 的脚本且不发送用户凭据。
 
-<pre class="brush: html">&lt;script src="https://example.com/example-framework.js" crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+```html
+<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+```
 
-<h3 id="示例：Webmanifest_with_credentials">示例：Webmanifest with credentials</h3>
+### 示例：Webmanifest with credentials
 
-<p>在获取需要用户凭据的 <a href="/zh-CN/docs/Web/Manifest">manifest</a> 时，属性值必须设置为 <code>use-credentials</code>。即使是同源的情况。</p>
+在获取需要用户凭据的 [manifest](/zh-CN/docs/Web/Manifest) 时，属性值必须设置为 `use-credentials`。即使是同源的情况。
 
-<pre class="brush: html">&lt;link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials"&gt;</pre>
+```html
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<h3>script crossorigin</h3>
+### script crossorigin
 
 {{Compat("html.elements.script.crossorigin")}}
 
-<h3>video crossorigin</h3>
+### video crossorigin
 
 {{Compat("html.elements.video.crossorigin")}}
 
-<h3>link crossorigin</h3>
+### link crossorigin
 
 {{Compat("html.elements.link.crossorigin")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP access control</a>（HTTP 访问控制）</li>
-</ul>
+- [HTTP access control](/zh-CN/docs/Web/HTTP/Access_control_CORS)（HTTP 访问控制）
