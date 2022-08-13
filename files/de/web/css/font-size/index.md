@@ -181,7 +181,7 @@ Das Festlegen der Schriftgröße in Pixel-Werten (`px`) ist eine gute Wahl, wenn
 
 Verschiedene Schriftgrößeneinstellungen können auch kombiniert werden. Zum Beispiel, wenn ein Elternelement `16px` festlegt und sein Kindelement `larger` spezifiziert, dann wird das Kindelement größer dargestellt als das Elternelement auf der Seite.
 
-> **Note:** **Anmerkung:** Die Schriftgröße in Pixeln festzulegen, ist _[nicht barrierefrei](https://de.wikipedia.org/wiki/Barrierefreies_Internet)_, weil der Benutzer infolge dessen die Schriftgröße nicht über den Browser ändern kann. Zum Beispiel möchten Benutzer mit Sehschwäche die Schriftgröße vielleicht viel größer einstellen als vom Web-Designer ausgewählt. Die Benutzung von Pixeln für Schriftgrößen sollte vermieden werden, wenn ein allumfassendes Design gefordert ist.
+> **Hinweis:** Die Schriftgröße in Pixeln festzulegen, ist _[nicht barrierefrei](https://de.wikipedia.org/wiki/Barrierefreies_Internet)_, weil der Benutzer infolge dessen die Schriftgröße nicht über den Browser ändern kann. Zum Beispiel möchten Benutzer mit Sehschwäche die Schriftgröße vielleicht viel größer einstellen als vom Web-Designer ausgewählt. Die Benutzung von Pixeln für Schriftgrößen sollte vermieden werden, wenn ein allumfassendes Design gefordert ist.
 
 ### Ems
 

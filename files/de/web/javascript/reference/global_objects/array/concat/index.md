@@ -37,7 +37,7 @@ Die `concat`Methode verändert nicht das `this` Objekt oder eines der übergeben
 - Objektreferenzen (und nicht das eigentliche Objekt): `concat` kopiert Objektreferenzen in das neue Array. Sowohl das ursprüngliche Array als auch das neue Array zeigen auf das gleiche Objekt. Das heißt, wenn ein referiertes Objekt verändert wird, sind diese Änderungen sowohl im neuen als auch in den ursprünglichen Arrays sichtbar.
 - Zeichenketten (Strings), Zahlen und Booleane (nicht {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}} und {{jsxref("Global_Objects/Boolean", "Boolean")}} Objekte): `concat` kopiert die Werte von Strings und Zahlen in das neue Array.
 
-> **Note:** **Anmerkung:** Die Zusammenführung von Arrays und Werten verändert die Ausgangswerte und -objekte nicht. Etwaige weitere Operationen auf dem neuen Array (nur wenn Elemente keine Objekt-Referenz sind) haben keine Auswirkungen auf die Ausgangsarrays und umgekehrt.
+> **Hinweis:** Die Zusammenführung von Arrays und Werten verändert die Ausgangswerte und -objekte nicht. Etwaige weitere Operationen auf dem neuen Array (nur wenn Elemente keine Objekt-Referenz sind) haben keine Auswirkungen auf die Ausgangsarrays und umgekehrt.
 
 ## Beispiele
 

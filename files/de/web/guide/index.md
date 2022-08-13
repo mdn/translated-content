@@ -10,7 +10,7 @@ translation_of: Web/Guide
 ---
 Diese Artikel stellen Ihnen praktische Informationen zum Gebrauch von bestimmten Technologien und Programmierschnittstellen bereit.
 
-> **Note:** **Anmerkung:** Bis wir alle Inhalte umgezogen haben, wird diese Seite für kurze Zeit etwas unorganisiert wirken. Wir entschuldigen uns dafür!
+> **Hinweis:** Bis wir alle Inhalte umgezogen haben, wird diese Seite für kurze Zeit etwas unorganisiert wirken. Wir entschuldigen uns dafür!
 
 {{LandingPageListSubpages}}
 

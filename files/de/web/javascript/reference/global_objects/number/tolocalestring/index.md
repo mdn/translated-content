@@ -25,7 +25,7 @@ Die neuen `locales` und `options` Argumente ermöglichen es Anwendungen, sprach�
 
 Prüfe die [Browserkompatibilität](#Browserkompatibilität), um zu sehen, welcher Browser den `locales` und `options` Parameter unterstützt, und das Beispiel [Unterstützung für `locales` und `options` Argumente prüfen](#Example:_Checking_for_support_for_locales_and_options_arguments) für eine Funktionalitätsprüfung.
 
-> **Note:** **Anmerkung:** Die ECMAScript Internationalization API, implementiert in Firefox 29, fügte das Argument `locales` zur Methode `Number.toLocaleString()` zu. Wenn das Argument {{jsxref("undefined")}} ist, arbeitet die Methode nach der Lokalisierung des OS, während Vorgängerversionen von Firefox [Western Arabic](https://en.wikipedia.org/wiki/Arabic_numerals) zurück geben. Diese Änderung wurde als eine Rückwärtskompatibilität gemeldet. Das Problem wurde bereits behoben ({{bug(999003)}}).
+> **Hinweis:** Die ECMAScript Internationalization API, implementiert in Firefox 29, fügte das Argument `locales` zur Methode `Number.toLocaleString()` zu. Wenn das Argument {{jsxref("undefined")}} ist, arbeitet die Methode nach der Lokalisierung des OS, während Vorgängerversionen von Firefox [Western Arabic](https://en.wikipedia.org/wiki/Arabic_numerals) zurück geben. Diese Änderung wurde als eine Rückwärtskompatibilität gemeldet. Das Problem wurde bereits behoben ({{bug(999003)}}).
 
 {{page('/de/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameter')}}
 

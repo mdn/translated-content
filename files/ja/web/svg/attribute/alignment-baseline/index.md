@@ -30,7 +30,9 @@ translation_of: Web/SVG/Attribute/alignment-baseline
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent’s content area.
 - `text-before-edge`
-  - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.> **Note:** This keyword may be mapped to `text-top`.
+  - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
+
+  > **Note:** This keyword may be mapped to `text-top`.
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
 - `central`
@@ -40,7 +42,9 @@ translation_of: Web/SVG/Attribute/alignment-baseline
 - `text-top`
   - : Matches the top of the box to the top of the parent’s content area.
 - `text-after-edge`
-  - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.> **Note:** This keyword may be mapped to `text-bottom`.
+  - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
+
+  > **Note:** This keyword may be mapped to `text-bottom`.
 - `ideographic`
   - : Matches the box’s ideographic character face under-side baseline to that of its parent.
 - `alphabetic`

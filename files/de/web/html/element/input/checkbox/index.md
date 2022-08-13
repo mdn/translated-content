@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> **Note:** **Anmerkung**: [Radio buttons](/de/docs/Web/HTML/Element/input/radio) sind Checkboxen ähnlich, jedoch mit einer wichtigen Ausnahme - Radiobuttons sind in einem Satz gruppiert, in dem nur ein Radiobutton aktiviert sein kann, während Checkboxen es erlauben, einen einzelnen Wert an- und auszuschalten. Dort wo mehrere Steuerelemente exisiteren, erlauben es Radiobuttons, eines davon zu selektieren, während Checkboxen mehrere Werte setzen können.
+> **Hinweis:** [Radio buttons](/de/docs/Web/HTML/Element/input/radio) sind Checkboxen ähnlich, jedoch mit einer wichtigen Ausnahme - Radiobuttons sind in einem Satz gruppiert, in dem nur ein Radiobutton aktiviert sein kann, während Checkboxen es erlauben, einen einzelnen Wert an- und auszuschalten. Dort wo mehrere Steuerelemente exisiteren, erlauben es Radiobuttons, eines davon zu selektieren, während Checkboxen mehrere Werte setzen können.
 
 | **[Value](#value)**             | Ein {{domxref("DOMString")}} der den Wert der Checkbox repräsentiert. |
 | ------------------------------- | ----------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ In diesem Beispiel haben wir einen Namen `subscribe` und einen Wert `newsletter`
 
 Wird das `value`-Attribut weggelassen, ist der default value für die Checkbox `on`, in diesem Fall würden also die übertragenen Daten `subscribe=on` sein.
 
-> **Note:** **Anmerkung**: Wenn beim Übertragen der Form eine Checkbox nicht angeklickt (unchecked) ist, so wird kein Wert vorgesehen, der den unchecked-Status repräsentiert (z.B. `value=unchecked`); der Wert wird überhaupt nicht zum Server übertragen. Wenn Sie einen default-Wert für die Checkbox übertrgen wollen, können Sie - eventuell durch JavaScript generiert - ein {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} in die Form einbauen, das den selben `name` and `value` wie die Checkbox hat.
+> **Hinweis:** Wenn beim Übertragen der Form eine Checkbox nicht angeklickt (unchecked) ist, so wird kein Wert vorgesehen, der den unchecked-Status repräsentiert (z.B. `value=unchecked`); der Wert wird überhaupt nicht zum Server übertragen. Wenn Sie einen default-Wert für die Checkbox übertrgen wollen, können Sie - eventuell durch JavaScript generiert - ein {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} in die Form einbauen, das den selben `name` and `value` wie die Checkbox hat.
 
 ## Zusätzliche Attribute
 
@@ -65,7 +65,7 @@ Zusätzlich zu den allgemeinen Attributen, die von allen {{HTMLElement("input")}
 
 Ein Boolean-Attribut, das angibt, ob die Checkbox standardmäßig `checked` ist oder nicht (wenn die Seite gelaoden wird). Es gibt nicht an, ob diese Checkbox aktuell den Status checked hat: Wenn der Status der Checkbox sich ändert, gibt dieses Content Attribut die Änderung nicht wieder. (Nur das {{domxref("HTMLInputElement")}}’s `checked` IDL Attribut wird aktualisiert)
 
-> **Note:** **Anmerkung:** Anders als andere Eingabe-Steuerelemente ist eine Checkbox nur dann in den übermittelten Daten vorhanden, wenn die Checkbox angeklickt (`checked`) ist. Wenn das der Fall ist, wird der Wert der Checkbox (`value`) als die Eingabe übermittelt.
+> **Hinweis:** Anders als andere Eingabe-Steuerelemente ist eine Checkbox nur dann in den übermittelten Daten vorhanden, wenn die Checkbox angeklickt (`checked`) ist. Wenn das der Fall ist, wird der Wert der Checkbox (`value`) als die Eingabe übermittelt.
 
 Anders als andere Browser, [speichert](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)Firefox standardmäßig den dynamischen Status von `<input>` zwischen mehreren Seitenaufrufen. Benutzen Sie das {{htmlattrxref("autocomplete","input")}}-Attribut, um dieses Feature zu steuern.
 
@@ -186,7 +186,7 @@ In diesem Fall wird also der `indeterminate`-Status benutzt, um anzuzeigen, dass
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **Note:** **Anmerkung**: Wenn Sie eine From mit einer indeterminate Checkbox übermitteln, passiert dasselbe, wie wenn die Checkbox den Status unchecked hat - es werden keine Daten übermittelt, die die Checkbox repräsentieren.
+> **Hinweis:** Wenn Sie eine From mit einer indeterminate Checkbox übermitteln, passiert dasselbe, wie wenn die Checkbox den Status unchecked hat - es werden keine Daten übermittelt, die die Checkbox repräsentieren.
 
 ## Gültigkeitsprüfung
 

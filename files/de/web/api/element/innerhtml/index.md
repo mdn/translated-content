@@ -96,7 +96,7 @@ el.innerHTML = name; // zeigt den alert
 
 Aus diesem Grund wird empfohlen, `innerHTML` nicht zum Einfügen von reinem Text zu verwenden. Verwenden Sie stattdessen {{domxref("Node.textContent", "textContent")}}. Der übergebene Inhalt wird nicht als HTML-Code analysiert, sondern als reiner Text eingefügt.
 
-> **Warning:** **Warnung:** Wenn Ihr Projekt einer Sicherheitsüberprüfung unterzogen wird, führt die Verwendung von `innerHTML` höchstwahrscheinlich dazu, dass Ihr Code abgelehnt wird. [Wenn Sie beispielsweise `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in einer [Browsererweiterung](/de/docs/Mozilla/Add-ons/WebExtensions) verwenden und die Erweiterung bei [addons.mozilla.org](https://addons.mozilla.org/) einreichen, wird sie den automatisierten Überprüfungsprozess nicht bestehen.
+> **Warnung:** Wenn Ihr Projekt einer Sicherheitsüberprüfung unterzogen wird, führt die Verwendung von `innerHTML` höchstwahrscheinlich dazu, dass Ihr Code abgelehnt wird. [Wenn Sie beispielsweise `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in einer [Browsererweiterung](/de/docs/Mozilla/Add-ons/WebExtensions) verwenden und die Erweiterung bei [addons.mozilla.org](https://addons.mozilla.org/) einreichen, wird sie den automatisierten Überprüfungsprozess nicht bestehen.
 
 ## Beispiel
 

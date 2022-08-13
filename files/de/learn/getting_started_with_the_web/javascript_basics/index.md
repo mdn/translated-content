@@ -79,11 +79,11 @@ Es folgt eine Beschreibung einiger Basis-Eigenschaften der Sprache JavaScript, u
 var myVariable;
 ```
 
-> **Note:** **Anmerkung**: Jede Befehlszeile in JavaScript muss mit einem Semikolon abgeschlossen werden, um das Ende der Befehlszeile zu markieren. Tun Sie dies nicht, erwarten Sie unerwartete Ergebnisse.
+> **Hinweis:** Jede Befehlszeile in JavaScript muss mit einem Semikolon abgeschlossen werden, um das Ende der Befehlszeile zu markieren. Tun Sie dies nicht, erwarten Sie unerwartete Ergebnisse.
 
-> **Note:** **Anmerkung**: Sie können eine Variable fast beliebig benennen, allerdings gibt es einige Restriktionen zu beachten (siehe [diesen Artikel über die Regeln von Benennung von Variablen](http://www.codelifter.com/main/tips/tip_020.shtml).) Wenn Sie unsicher sind, können Sie [den Variablennamen prüfen](https://mothereff.in/js-variables), um die Gültigkeit zu prüfen.
+> **Hinweis:** Sie können eine Variable fast beliebig benennen, allerdings gibt es einige Restriktionen zu beachten (siehe [diesen Artikel über die Regeln von Benennung von Variablen](http://www.codelifter.com/main/tips/tip_020.shtml).) Wenn Sie unsicher sind, können Sie [den Variablennamen prüfen](https://mothereff.in/js-variables), um die Gültigkeit zu prüfen.
 
-> **Note:** **Anmerkung**: JavaScript beachtet Groß-/Kleinschrift — `myVariable` ist unterschiedlich zur Variablen `myvariable`. Falls Sie in Ihrem Programmcode Probleme bekommen sollten, prüfen Sie zuerst die Groß-/Kleinschreibung!
+> **Hinweis:** JavaScript beachtet Groß-/Kleinschrift — `myVariable` ist unterschiedlich zur Variablen `myvariable`. Falls Sie in Ihrem Programmcode Probleme bekommen sollten, prüfen Sie zuerst die Groß-/Kleinschreibung!
 
 Nachdem eine Variable deklariert wurde, können Sie ihr einen Wert geben:
 
@@ -150,7 +150,7 @@ Ein {{Glossary("operator")}} ist ein mathematisches Symbol, das ein Ergebnis erz
 
 Es gibt noch viele weitere Operatoren zu entdecken, aber es reicht für jetzt. Eine komplette Liste finden Sie in [Ausdrücke und Operatoren](/de/docs/Web/JavaScript/Reference/Operators).
 
-> **Note:** **Anmerkung**: Das Vermischen von Datentypen kann bei Berechnungen unerwartete Ergebnisse liefern. Achten Sie darauf, die Variablen korrekt zu verwenden und prüfen Sie, ob das erwartete Ergebnis zurückgegeben wird. Tippen Sie beispielsweise "35" + "25" in die Konsole ein und schauen sich das Ergebnis an. Haben Sie dies erwartet? Aufgrund der Anführungszeichen werden die Werte als Strings behandelt und somit verbunden, statt addiert. Wenn Sie 35 + 25 eintippen, erhalten Sie das erwartete Ergebnis.
+> **Hinweis:** Das Vermischen von Datentypen kann bei Berechnungen unerwartete Ergebnisse liefern. Achten Sie darauf, die Variablen korrekt zu verwenden und prüfen Sie, ob das erwartete Ergebnis zurückgegeben wird. Tippen Sie beispielsweise "35" + "25" in die Konsole ein und schauen sich das Ergebnis an. Haben Sie dies erwartet? Aufgrund der Anführungszeichen werden die Werte als Strings behandelt und somit verbunden, statt addiert. Wenn Sie 35 + 25 eintippen, erhalten Sie das erwartete Ergebnis.
 
 ### Bedingungen
 
@@ -202,7 +202,7 @@ multiply(20,20);
 multiply(0.5,3);
 ```
 
-> **Note:** **Anmerkung**: Das [`return`](/de/docs/Web/JavaScript/Reference/Statements/return) Kommando teilt dem Browser mit, die Variable `result` aus der Funktion zurückzuliefern. Somit ist es möglich, diese zu benutzen. Dies ist notwendig, weil Variablen, die innerhalb der Funktion verwendet werden, nur dort gültig sind. Diese Verhaltensweise wird {{Glossary("Scope", "scoping")}} genannt. (Lesen Sie [mehr über den Gültigkeitsbereich von Variablen](/de/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope).)
+> **Hinweis:** Das [`return`](/de/docs/Web/JavaScript/Reference/Statements/return) Kommando teilt dem Browser mit, die Variable `result` aus der Funktion zurückzuliefern. Somit ist es möglich, diese zu benutzen. Dies ist notwendig, weil Variablen, die innerhalb der Funktion verwendet werden, nur dort gültig sind. Diese Verhaltensweise wird {{Glossary("Scope", "scoping")}} genannt. (Lesen Sie [mehr über den Gültigkeitsbereich von Variablen](/de/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope).)
 
 ### Ereignisse (Events)
 

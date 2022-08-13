@@ -15,9 +15,9 @@ Das **HTML \<fieldset> -Element** wird verwendet, um mehrere Steuerelemente sowi
 | Zulässige ARIA-Rollen | ARIARole("group"), ARIARole("presentation")                                              |
 | DOM Schnittstelle     | {{domxref("HTMLFieldSetElement")}}                                             |
 
-> **Note:** **Anmerkung:** Im Gegensatz zu fast jedem anderen Element schlägt die WHATWG-HTML-Rendering-Spezifikation cssxref ("min-width") vor: min-content als Teil des Standardstils für HTMLElement ("fieldset") und viele Browser implementieren solches Styling (oder etwas, das es annähert).
+> **Hinweis:** Im Gegensatz zu fast jedem anderen Element schlägt die WHATWG-HTML-Rendering-Spezifikation cssxref ("min-width") vor: min-content als Teil des Standardstils für HTMLElement ("fieldset") und viele Browser implementieren solches Styling (oder etwas, das es annähert).
 
-> **Note:** **Anmerkung:** Mit dem Element HTMLElement ("fieldset") wird erwartet, dass es einen neuen Kontext für die Blockformatierung herstellt (siehe HTML5-Spezifikation).
+> **Hinweis:** Mit dem Element HTMLElement ("fieldset") wird erwartet, dass es einen neuen Kontext für die Blockformatierung herstellt (siehe HTML5-Spezifikation).
 
 ## Attribute
 

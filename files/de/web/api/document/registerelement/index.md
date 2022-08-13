@@ -10,7 +10,7 @@ translation_of: Web/API/Document/registerElement
 ---
 {{APIRef("DOM")}}
 
-> **Warning:** **Warnung:** document.registerElement() läuft zu Gunsten von [customElements.define()](/de/docs/Web/API/CustomElementRegistry/define) aus.
+> **Warnung:** document.registerElement() läuft zu Gunsten von [customElements.define()](/de/docs/Web/API/CustomElementRegistry/define) aus.
 
 Die **`document.registerElement()`**-Methode registriert ein neues [benutzerdefiniertes Element](/de/docs/Web/Web_Components/Custom_Elements) im Browser und gibt einen Konstruktor für das neue Element zurück.
 

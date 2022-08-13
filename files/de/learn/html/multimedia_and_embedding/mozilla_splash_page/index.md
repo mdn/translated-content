@@ -50,7 +50,7 @@ Um diese Aufgabe zu beginnen, holen Sie sich die HTML und alle Bilder aus dem [m
 
 Speichern Sie auf dieselbe Weise, aber zunächst in einem anderen Verzeichnis, auch die anderen Bilder aus dem [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals)-Verzeichnis; Sie werden einige der Bilder noch mit einem Bildbearbeitungsprogramm verändern müssen, bevor sie einsatzbereit sind.
 
-> **Note:** **Anmerkung**: Das HTML-Beispiel beinhaltet ein recht umfangreiches CSS, um die Seite zu stylen. Sie brauchen das CSS nicht zu touchieren, sondern lediglich die HTML innerhalb des {{htmlelement("body")}}-Elementes — solange Sie die korrekten Auszeichnungen verwenden, wird das Styling ebenfalls korrekt aussehen.
+> **Hinweis:** Das HTML-Beispiel beinhaltet ein recht umfangreiches CSS, um die Seite zu stylen. Sie brauchen das CSS nicht zu touchieren, sondern lediglich die HTML innerhalb des {{htmlelement("body")}}-Elementes — solange Sie die korrekten Auszeichnungen verwenden, wird das Styling ebenfalls korrekt aussehen.
 
 ## Projekt: Kurzbeschreibung
 
@@ -70,7 +70,7 @@ Gemeinsam mit `mdn.svg` werden diese Bilder Ihre Icons sein, mit denen Sie auf w
 
 Haben Sie dies abgeschlossen, erzeugen Sie eine 1200px-breite Landscape-Version von `red-panda.jpg` und eine 600px-breite Version, die den Panda in einem Close-Up-Shot zeigt. Geben Sie auch diesen Bildern sprechende Namen, damit Sie sie leicht wiederfinden. Speichern Sie eine Kopie davon im selben Verzeichnis, in dem sich `index.html` befindet.
 
-> **Note:** **Anmerkung**: Sie sollten Ihre JPG- und PNG-Bilder am besten auf eine Weise komprimieren, auf die sie so klein wie möglich sind und dabei dennoch gut aussehen. [tinypng.com](https://tinypng.com/) ist ein toller Service, um dies einfach zu erreichen.
+> **Hinweis:** Sie sollten Ihre JPG- und PNG-Bilder am besten auf eine Weise komprimieren, auf die sie so klein wie möglich sind und dabei dennoch gut aussehen. [tinypng.com](https://tinypng.com/) ist ein toller Service, um dies einfach zu erreichen.
 
 ### Dem Header ein Logo hinzufügen
 
@@ -88,7 +88,7 @@ In jedem Fall (außer einem — der von sich aus responsiv ist?) möchten wir, d
 
 Stellen Sie sicher, dass die richtigen Bilder mit den richtigen Links verbunden sind!
 
-> **Note:** **Anmerkung**: Um die `srcset`/`sizes`-Beispiele zu testen, müssen Sie Ihre Seite auf einen Server uploaden ([Github pages](/de/docs/Learn/Common_questions/Using_Github_pages) ist eine einfache und freie Lösung). Von dort aus können Sie testen, ob sie korrekt funktionieren, indem Sie Browser-Entwicklertools verwenden, wie in [Responsive images: useful developer tools](/de/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools) beschrieben.
+> **Hinweis:** Um die `srcset`/`sizes`-Beispiele zu testen, müssen Sie Ihre Seite auf einen Server uploaden ([Github pages](/de/docs/Learn/Common_questions/Using_Github_pages) ist eine einfache und freie Lösung). Von dort aus können Sie testen, ob sie korrekt funktionieren, indem Sie Browser-Entwicklertools verwenden, wie in [Responsive images: useful developer tools](/de/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools) beschrieben.
 
 ### Ein art directed Roter Panda
 
@@ -106,7 +106,7 @@ Die nachfolgenden Screenshots zeigen, wie die Startseite nach der korrekten Ausz
 
 Falls Sie diesen Test im Rahmen eines organisierten Kurses absolvieren, sollten Sie Ihre Arbeit Ihrem/r Mentor\*in/Lehrkraft zur Bewertung überreichen können. Falls Sie selbstständig lernen, können Sie die Bewertungskriterien sehr einfach erhalten, indem Sie im [Diskussionsthread zu dieser Übung](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679) nachfragen oder im [#mdn](irc://irc.mozilla.org/mdn) IRC-Channel auf [Mozilla IRC](https://wiki.mozilla.org/IRC).Versuchen Sie es zunächst selbst — mit Mogeleien ist nichts gewonnen!
 
-> **Note:** **Anmerkung**: Falls Sie ihre Aufgabe mit den Developer-Tools des im Chrome-Browsers überprüfen, kann es sein, dass der Browser nicht die richtigen Bilder lädt, egal, wie klein Sie die Breite unter 'responsive view' auswählen. Es scheint sich hierbei um eine Eigenart von Chrome zu handeln. Der Firefox-Browser sollte das richtige Bild laden (sofern Ihre HTML korrekt ist).
+> **Hinweis:** Falls Sie ihre Aufgabe mit den Developer-Tools des im Chrome-Browsers überprüfen, kann es sein, dass der Browser nicht die richtigen Bilder lädt, egal, wie klein Sie die Breite unter 'responsive view' auswählen. Es scheint sich hierbei um eine Eigenart von Chrome zu handeln. Der Firefox-Browser sollte das richtige Bild laden (sofern Ihre HTML korrekt ist).
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

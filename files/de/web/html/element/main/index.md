@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/main
 
 Das _HTML Main Element_ (**\<main>**) kann als ein Container für den leitenden Inhalt benutzt werden. Der Hauptteil besteht aus Inhalt, der direkt bezogen oder auf das zentrale Thema eines Bereichs oder der zentralen Funktionalität einer Applikation aufbaut. Der Inhalt sollte zum Dokument einzigartig sein, ausgenommen jeglicher Inhalt, welcher auf dem gesamten Dokument wiederholt ist wie zum Beispiel Seitenleisten, Navigationlinks, Information über das Urheberrecht, Seitenlogos, und Sucheingaben (augenommen, wenn die Hauptfunktion eine Sucheingabe ist). Anders als {{HTMLElement("article")}} und {{HTMLElement("section")}}, trägt dieses Element dem Entwurf des Dokuments nicht bei.
 
-> **Note:** **Hinweis:\*** `<main>` **darf kein** Nachfolger eines {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}} oder {{HTMLElement("nav")}} Elements sein.
+> **Hinweis:** `<main>` **darf kein** Nachfolger eines {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}} oder {{HTMLElement("nav")}} Elements sein.
 >
 > - **Nur ein** [main](http://www.w3.org/TR/html51/semantics.html#the-main-element) Element kann pro Dokument verwendet werden.
 

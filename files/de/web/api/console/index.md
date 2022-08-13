@@ -34,7 +34,9 @@ Diese Seite dokumentiert die [Methoden](#methods), die für das `Console` Objekt
 - {{domxref("Console.countReset()")}}
   - : Setzt den Wert des Zählers mit der angegebenen Bezeichnung zurück.
 - {{domxref("Console.debug()")}}
-  - : Gibt eine Nachricht mit der Protokollebene `"debug"` in der Konsole aus.> **Hinweis:** Ab Chromium 58 wird diese Methode nur in Chromium-Browserkonsolen angezeigt, wenn die Stufe "Verbose" ausgewählt ist.
+  - : Gibt eine Nachricht mit der Protokollebene `"debug"` in der Konsole aus.
+
+  > **Hinweis:** Ab Chromium 58 wird diese Methode nur in Chromium-Browserkonsolen angezeigt, wenn die Stufe "Verbose" ausgewählt ist.
 - {{domxref("Console.dir()")}}
   - : Zeigt eine interaktive Auflistung der Eigenschaften eines angegebenen JavaScript-Objekts an. In dieser Auflistung können Sie Offenlegungsdreiecke verwenden, um den Inhalt untergeordneter Objekte zu untersuchen.
 - {{domxref("Console.dirxml()")}}

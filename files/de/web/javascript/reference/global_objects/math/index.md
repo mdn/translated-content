@@ -37,9 +37,9 @@ Im Unterschied zu den anderen globalen Objekten hat `Math` keinen Konstruktor. A
 
 ## Methoden
 
-> **Note:** **Anmerkung**: Die trigonometrischen Funktionen (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) erwarten Parameter und geben Rückgabewerte im Bogenmaß zurück. Um dieses in das Gradmaß umzurechnen, teilt man durch `(Math.PI / 180)` und multipliziert das Ergebnis mit der Bogenmaß.
+> **Hinweis:** Die trigonometrischen Funktionen (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) erwarten Parameter und geben Rückgabewerte im Bogenmaß zurück. Um dieses in das Gradmaß umzurechnen, teilt man durch `(Math.PI / 180)` und multipliziert das Ergebnis mit der Bogenmaß.
 
-> **Note:** **Anmerkung:** Bei vielen mathematischen Funktionen ist die Präzision implementationsabhängig. Das bedeutet, dass es bei verschiedenen Browsern verschiedene Ergebnisse geben kann. Auch in der gleichen JavaScript-Umgebung auf verschiedenen Betriebssystemen oder Architekturen können Abweichungen entstehen.
+> **Hinweis:** Bei vielen mathematischen Funktionen ist die Präzision implementationsabhängig. Das bedeutet, dass es bei verschiedenen Browsern verschiedene Ergebnisse geben kann. Auch in der gleichen JavaScript-Umgebung auf verschiedenen Betriebssystemen oder Architekturen können Abweichungen entstehen.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : Gibt den Betrag einer Zahl zurück.

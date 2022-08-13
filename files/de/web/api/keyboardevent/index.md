@@ -7,7 +7,7 @@ translation_of: Web/API/KeyboardEvent
 
 **`KeyboardEvent`** Objekte beschreiben eine Benutzerinteraktion mit dem Keyboard. Jedes Event beschreibt eine Taste. Der Eventtyp (`keydown`, `keypress`, oder `keyup`) identifiziert welche Art von Aktivität ausgeführt wurde.
 
-> **Note:** **Anmerkung:** Das `KeyboardEvent` deutet nur an was mit einer Taste passiert. Wenn Sie Texteingaben behandeln müssen, verwenden sie stattdessen das HTML5 [`input`](/en-US/docs/DOM/DOM_event_reference/input) Event. Beispiel: Wenn ein Benutzer Text über ein Handschriftsystem - wie auf einem Tablet - eingibt, werden Tastenevents möglicherweise nicht ausgelöst.
+> **Hinweis:** Das `KeyboardEvent` deutet nur an was mit einer Taste passiert. Wenn Sie Texteingaben behandeln müssen, verwenden sie stattdessen das HTML5 [`input`](/en-US/docs/DOM/DOM_event_reference/input) Event. Beispiel: Wenn ein Benutzer Text über ein Handschriftsystem - wie auf einem Tablet - eingibt, werden Tastenevents möglicherweise nicht ausgelöst.
 
 ## Konstruktor
 
@@ -32,9 +32,15 @@ _Diese Schnittstelle erbt auch Methoden seiner Eltern {{domxref("UIEvent")}} und
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
   - : Liefert einen {{jsxref("Boolean")}} Wert der `true` ist falls die <kbd>Alt</kbd> ( <kbd>Option</kbd> oder <kbd>⌥</kbd> unter OS X) Taste aktiv war, als das Tastenevent erzeugt wurde.
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
-  - : Liefert einen {{domxref("DOMString")}} der das Zeichen der Taste repräsentiert. Wenn die Taste einem druckbaren Zeichen entspricht, ist dieser Wert eine nicht-leere Unicode-Zeichenkette die dieses Zeichen enthält. Fall die Taste keine druckbare Darstellung besitzt, ist der Wert eine leere Zeichenkette.> **Note:** **Anmerkung:** Falls die Taste als Makro verwendet wird, das mehrere Zeichen einfügt, ist der Wert dieses Attributs die gesamte Zeichenkette, nicht nur das erste Zeichen.> **Warning:** **Warnung:** Dies wurde aus den DOM Level 3 Events entfernt. Es wird nur von IE9+ und Microsoft Edge unterstützt.
+  - : Liefert einen {{domxref("DOMString")}} der das Zeichen der Taste repräsentiert. Wenn die Taste einem druckbaren Zeichen entspricht, ist dieser Wert eine nicht-leere Unicode-Zeichenkette die dieses Zeichen enthält. Fall die Taste keine druckbare Darstellung besitzt, ist der Wert eine leere Zeichenkette.
+
+  > **Hinweis:** Falls die Taste als Makro verwendet wird, das mehrere Zeichen einfügt, ist der Wert dieses Attributs die gesamte Zeichenkette, nicht nur das erste Zeichen.
+
+  > **Warnung:** Dies wurde aus den DOM Level 3 Events entfernt. Es wird nur von IE9+ und Microsoft Edge unterstützt.
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
-  - : Liefert einen {{jsxref("Number")}} Wert der die Unicode-Kennziffer der Taste repräsentiert; dieses Attribut wird nur vom `keypress` Event verwendet. Für Tasten deren `char` Attribut mehrere Zeichen enthält ist der Wert dieses Attributs der Unicode-Wert des ersten Zeichens . In Firefox 26 liefert dies Codes für druckbare Zeichen.> **Warning:** **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
+  - : Liefert einen {{jsxref("Number")}} Wert der die Unicode-Kennziffer der Taste repräsentiert; dieses Attribut wird nur vom `keypress` Event verwendet. Für Tasten deren `char` Attribut mehrere Zeichen enthält ist der Wert dieses Attributs der Unicode-Wert des ersten Zeichens . In Firefox 26 liefert dies Codes für druckbare Zeichen.
+
+  > **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : Liefert einen {{domxref("DOMString")}} mit dem Codewert der Taste, welche durch das Event repräsentiert wird.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
@@ -44,13 +50,17 @@ _Diese Schnittstelle erbt auch Methoden seiner Eltern {{domxref("UIEvent")}} und
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
   - : Liefert einen {{domxref("DOMString")}} der den Wert der Taste darstellt die durch das Event repräsentiert wird.
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
-  - : Liefert einen {{jsxref("Number")}} Wert der einen system- und implementationsabhängigen Zahlencode darstellt, der den unmodifizierten Wert der gedrückten Taste repräsentiert.> **Warning:** **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
+  - : Liefert einen {{jsxref("Number")}} Wert der einen system- und implementationsabhängigen Zahlencode darstellt, der den unmodifizierten Wert der gedrückten Taste repräsentiert.
+
+  > **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : Diese Eigenschaft ist nicht standardisiert und veraltet. Es sollte stattdessen {{domxref("KeyboardEvent.key")}} verwendet werden. Sie war Teil einer alten Version von DOM Level 3 Events.
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : Dies ist ein nicht-standardisierter Alias für {{domxref("KeyboardEvent.location")}}. Sie war Teil einer alten Version von DOM Level 3 Events.
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-  - : Liefert einen {{domxref("DOMString")}} der das Gebietsschema identifiziert für die das Keyboard konfiguriert ist. Diese Zeichenkette kann leer sein, wenn der Browser oder das Gerät das Gebietsschema des Keyboards nicht kennt.> **Note:** **Anmerkung:** Dies beschreibt nicht das Gebietsschema der eingegebenen Daten. Ein Benutzer könnte ein Tastaturlayout nutzen während er Text in einer anderen Sprache eingibt.
+  - : Liefert einen {{domxref("DOMString")}} der das Gebietsschema identifiziert für die das Keyboard konfiguriert ist. Diese Zeichenkette kann leer sein, wenn der Browser oder das Gerät das Gebietsschema des Keyboards nicht kennt.
+
+  > **Hinweis:** Dies beschreibt nicht das Gebietsschema der eingegebenen Daten. Ein Benutzer könnte ein Tastaturlayout nutzen während er Text in einer anderen Sprache eingibt.
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : Liefert einen {{jsxref("Number")}} Wert der die Lage der Taste auf der Tastatur oder einem anderen Eingabegerät repräsentiert.
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
@@ -60,7 +70,9 @@ _Diese Schnittstelle erbt auch Methoden seiner Eltern {{domxref("UIEvent")}} und
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
   - : Liefert einen {{jsxref("Boolean")}} Wert der `true` ist, falls die <kbd>Shift</kbd> Taste aktiv war, als das Key-Event erzeugt wurde.
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
-  - : Liefert einen {{jsxref("Number")}} Wert der einen system- und implementationsabhängigen Zahlencode darstellt, der den unmodifizierten Wert der gedrückten Taste repräsentiert; das ist gewöhnlich das Gleiche wie `keyCode`.> **Warning:** **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
+  - : Liefert einen {{jsxref("Number")}} Wert der einen system- und implementationsabhängigen Zahlencode darstellt, der den unmodifizierten Wert der gedrückten Taste repräsentiert; das ist gewöhnlich das Gleiche wie `keyCode`.
+
+  > **Warnung:** Dieses Attribut ist veraltet; Sie sollten stattdessen - wenn vorhanden - {{domxref("KeyboardEvent.key")}} verwenden.
 
 ## Anmerkungen
 
@@ -117,7 +129,7 @@ Vor Gecko 5.0 {{geckoRelease('5.0')}} war platformübergreifendes Tastatur-Handl
 - Linux
   - : Das Event-Verhalten hängt von der spezifischen Platform ab. Es wird sich entweder so verhalten wie Windows oder Mac, abhängig davon was das native Event-Modell macht.
 
-> **Note:** **Anmerkung:** manuelles Auslösen eines Events erzeugt _nicht_ die mit dem Event verbundene Standard-Aktion. Zum Beispiel: manuelles Auslösen eines KeyEvent führt nicht dazu, dass der Buchstabe in einem fokussierten Eingabefeld auftaucht. Im Fall von UI-Events ist dies aus Sicherheitsgründen wichtig, da es verhindert, dass Skripte Benutzeraktionen simulieren, die mit dem Browser selbst interagieren.
+> **Hinweis:** manuelles Auslösen eines Events erzeugt _nicht_ die mit dem Event verbundene Standard-Aktion. Zum Beispiel: manuelles Auslösen eines KeyEvent führt nicht dazu, dass der Buchstabe in einem fokussierten Eingabefeld auftaucht. Im Fall von UI-Events ist dies aus Sicherheitsgründen wichtig, da es verhindert, dass Skripte Benutzeraktionen simulieren, die mit dem Browser selbst interagieren.
 
 ## Beispiel
 

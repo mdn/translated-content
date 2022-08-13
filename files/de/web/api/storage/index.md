@@ -62,7 +62,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** **Anmerkung**: Dieses Beispiel kann unter [Web Storage Demo](https://github.com/mdn/web-storage-demo) ausprobiert werden.
+> **Hinweis:** Dieses Beispiel kann unter [Web Storage Demo](https://github.com/mdn/web-storage-demo) ausprobiert werden.
 
 ## Spezifikationen
 

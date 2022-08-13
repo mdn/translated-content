@@ -119,7 +119,7 @@ flower.bloom();
 
 ### Gebunden Funktion mit einem Konstruktor
 
-> **Warning:** **Warnung:** Dieses Kapitel demonstriert JavaScript-möglichkeiten und dokumentiert Randfälle der `bind()` Methode. Die Methoden, die unten gezeigt werden, sind nicht die Besten, um Dinge zu lösen, weshalb sie nicht in einem Produktivsystem eingesetzt werden sollten.
+> **Warnung:** Dieses Kapitel demonstriert JavaScript-möglichkeiten und dokumentiert Randfälle der `bind()` Methode. Die Methoden, die unten gezeigt werden, sind nicht die Besten, um Dinge zu lösen, weshalb sie nicht in einem Produktivsystem eingesetzt werden sollten.
 
 Gebundene Funktion sind automatisch verfügbar für den Einsatz mit dem {{jsxref("Operators/new", "new")}} Operator, um eine neue Instanz von einer Zielfunktion zu erstellen. Wenn eine gebundene Funktion eingesetzt wird, um einen Wert zu erstellen, wird das unterstützte `this` Argument ignoriert. Dahingegen werden unterstützte Argumente vor den Konstruktoraufrufe vorgehängt:
 

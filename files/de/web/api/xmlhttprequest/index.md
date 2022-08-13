@@ -491,9 +491,9 @@ Liefert den String mit dem Text des angegebenen Headers, oder `null` falls die A
 
 ### open()
 
-Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript Code; um eine Anfrage aus nativem Code zu initialisieren, ist stattdessen``[`openRequest()`](</de/docs/nsIXMLHttpRequest#openRequest()> "XMLHttpRequest#openRequest()") zu benutzen.
+Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript Code; um eine Anfrage aus nativem Code zu initialisieren, ist stattdessen [`openRequest()`](</de/docs/nsIXMLHttpRequest#openRequest()> "XMLHttpRequest#openRequest()") zu benutzen.
 
-> **Note:** **Anmerkung:** Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die `open()`oder `openRequest()`schon ausgeführt wurde) ist gleichwertig mit dem Aufruf von `abort()`.
+> **Hinweis:** Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die `open()`oder `openRequest()`schon ausgeführt wurde) ist gleichwertig mit dem Aufruf von `abort()`.
 
     void open(
        DOMString method,
@@ -526,7 +526,7 @@ Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript C
 
 Sendet die Anfrage. Falls die Anfage asynchron ist (was der Default ist), kehrt diese Methode zurück, sobald die Anfrage gesendet ist. Ist die Anfrage synchron, kehrt diese Methode nicht zurück, bis die Antwort angekommen (oder ein Timeout aufgetreten) ist.
 
-> **Note:** **Anmerkung:** Jegliche zu setzende Event Handler / Listener müssen vor dem Aufruf von `send()` gesetzt werden.
+> **Hinweis:** Jegliche zu setzende Event Handler / Listener müssen vor dem Aufruf von `send()` gesetzt werden.
 
     void send();
     void send(ArrayBuffer data);
@@ -565,7 +565,7 @@ Setzt den Wert eines HTTP Anfrage-Headers. Aufrufe von `setRequestHeader()` müs
 
 Initialisiert das Objekt für die Verwendung aus C++ Code.
 
-> **Warning:** **Warnung:** Diese Methode darf _nicht_ aus JavaScript heraus aufgerufen werden.
+> **Warnung:** Diese Methode darf _nicht_ aus JavaScript heraus aufgerufen werden.
 
     [noscript] void init(
        in nsIPrincipal principal,
@@ -627,7 +627,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 }
 ```
 
-> **Note:** **Anmerkung:** Dieses Polyfill kann mit zwei Datentypen als Argument für `send()` gebaut werden: einem [`ArrayBuffer`](/de/docs/JavaScript/Typed_arrays/ArrayBuffer "JavaScript/Typed_arrays/ArrayBuffer") (`ui8Data.buffer` – kommentierter Code) oder einer [`ArrayBufferView`](/de/docs/JavaScript/Typed_arrays/ArrayBufferView "JavaScript/Typed_arrays/ArrayBufferView") (`ui8Data`, das ist ein [typisiertes Array von 8-bit Ganzzahlen ohne Vorzeichen](/de/docs/JavaScript/Typed_arrays/Uint8Array "JavaScript/Typed_arrays/Uint8Array") – unkommentierter Code). Wenn man jedoch in Google Chrome versucht, einen `ArrayBuffer` zu senden, erscheint die folgende Warnmeldung: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.`
+> **Hinweis:** Dieses Polyfill kann mit zwei Datentypen als Argument für `send()` gebaut werden: einem [`ArrayBuffer`](/de/docs/JavaScript/Typed_arrays/ArrayBuffer "JavaScript/Typed_arrays/ArrayBuffer") (`ui8Data.buffer` – kommentierter Code) oder einer [`ArrayBufferView`](/de/docs/JavaScript/Typed_arrays/ArrayBufferView "JavaScript/Typed_arrays/ArrayBufferView") (`ui8Data`, das ist ein [typisiertes Array von 8-bit Ganzzahlen ohne Vorzeichen](/de/docs/JavaScript/Typed_arrays/Uint8Array "JavaScript/Typed_arrays/Uint8Array") – unkommentierter Code). Wenn man jedoch in Google Chrome versucht, einen `ArrayBuffer` zu senden, erscheint die folgende Warnmeldung: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.`
 
 ## Anmerkungen
 

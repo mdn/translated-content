@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/FormData
 
 Der **`FormData()`** Konstruktor erzeugt ein neues {{domxref("FormData")}}-Objekt.
 
-> **Note:** **Anmerkung:** Dieses Feature is verfügbar auf [Web Workers](/de/docs/Web/API/Web_Workers_API).
+> **Hinweis:** Dieses Feature is verfügbar auf [Web Workers](/de/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
@@ -54,7 +54,7 @@ Oder man gibt das optionale `form` Argument an, um es direkt mit dessen Werten z
 </form>
 ```
 
-> **Note:** **Anmerkung**: Alle input-Elemente haben das 'name'-Attribut. Das ist notwendig um die Werte auszuwerten.
+> **Hinweis:** Alle input-Elemente haben das 'name'-Attribut. Das ist notwendig um die Werte auszuwerten.
 
 ```js
 var myForm = document.getElementById('myForm');

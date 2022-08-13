@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLTableElement/createCaption
 
 Die **`HTMLTableElement.createCaption()`** Methode gibt das {{HtmlElement("caption")}} Element zurück, das einer {{HtmlElement("table")}} zugeordnet ist. Wenn in der Tabelle noch kein `<caption>` Element existiert, wird es durch diese Methode erzeugt und dann zurückgegeben..
 
-> **Note:** **Anmerkung:** Wenn noch keine Überschrift vorhanden ist, fügt `createCaption()` sie direkt in die Tabelle ein. Die Überschrift muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das `<caption>` Element mittels {{domxref("Document.createElement()")}} erzeugt hätte.
+> **Hinweis:** Wenn noch keine Überschrift vorhanden ist, fügt `createCaption()` sie direkt in die Tabelle ein. Die Überschrift muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das `<caption>` Element mittels {{domxref("Document.createElement()")}} erzeugt hätte.
 
 ## Syntax
 

@@ -20,7 +20,9 @@ Das HTML Element _line break_ `<br>` produziert einen Zeilenumbruch in (Fließ-)
 Wie alle anderen HTML Elemente besitzt dieses Element die [globalen Attribute](/de/docs/HTML/Global_attributes "HTML/Global attributes").
 
 - {{ htmlattrdef("clear") }} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
-  - : Zeigt an, wo die nächste Zeile nach dem Zeilenumbruch beginnt.> **Note:** **Gebrauchshinweis:** Dieses Attribut ist veraltet in {{ HTMLVersionInline(5) }} und **sollte nicht verwendet werden**. Stattdessen sollte die CSS-Eigenschaft {{CSSxref('clear')}} verwendet werden.
+  - : Zeigt an, wo die nächste Zeile nach dem Zeilenumbruch beginnt.
+
+  > **Hinweis:** Dieses Attribut ist veraltet in {{ HTMLVersionInline(5) }} und **sollte nicht verwendet werden**. Stattdessen sollte die CSS-Eigenschaft {{CSSxref('clear')}} verwendet werden.
 
 ## Beispiel
 

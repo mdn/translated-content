@@ -20,7 +20,7 @@ let bestimmter_tbody = document.getElementById(tbody_id);
 let zeile = bestimmter_tbody.insertRow(index)
 ```
 
-> **Note:** **Anmerkung:** `insertRow()` fügt die Zeile direkt in die Tabelle ein. Die Zeile muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das `<tr>` Element mittels [`Document.createElement()`](/de/docs/Web/API/Document/createElement) erzeugt hätte.
+> **Hinweis:** `insertRow()` fügt die Zeile direkt in die Tabelle ein. Die Zeile muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das `<tr>` Element mittels [`Document.createElement()`](/de/docs/Web/API/Document/createElement) erzeugt hätte.
 
 ## Syntax
 
