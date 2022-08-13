@@ -16,7 +16,6 @@ Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimens
 
 Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
 
-
 ## Syntaxe
 
 ```css

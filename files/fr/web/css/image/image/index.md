@@ -91,7 +91,6 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 
 ### Afficher une section de l'image
 
-
 ```html
 <div class="box">Vous pouvez survoler cet élément pour voir un autre curseur</div>
 ```
