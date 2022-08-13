@@ -16,9 +16,9 @@ Las interfaces Drag-and-Drop posibilitan arrastrar y soltar archivos en una pág
 
 Los pasos principales para configurar Drag-and-drop son: 1) definir una "zona drop (_drop zone),_ es decir, definir un elemento donde se podrá soltar el archivo; y 2) definir funciones para la gestión de los eventos {{event("drop")}} y {{event("dragover")}}. Estos pasos se describen a continuación, tambien se incluyen ejemplos snippets de código. El código fuente completo está disponible en el [repositorio drag-and-drop de MDN](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (cualquier sugerencia o tema que revisar es bienvenido).
 
-> **Nota:** Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} define 2 diferentes APIs para soportar drag and drop de archivos. Una API es la interfaz {{domxref("DataTransfer")}} y la segunda API son las interfaces {{domxref("DataTransferItem")}} y {{domxref("DataTransferItemList")}}. Este ejemplo ilustra el uso de ambas APIs (y no usa ninguna interfaz específica de Gecko).
+> **Nota:** {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} define 2 diferentes APIs para soportar drag and drop de archivos. Una API es la interfaz {{domxref("DataTransfer")}} y la segunda API son las interfaces {{domxref("DataTransferItem")}} y {{domxref("DataTransferItemList")}}. Este ejemplo ilustra el uso de ambas APIs (y no usa ninguna interfaz específica de Gecko).
 
-## Define la zona "drop" \[drop _zone_]
+## Define la zona "drop" [drop _zone_]
 
 Es necesario configurar un evento {{event("drop")}} en el objeto sobre el cual se soltará el objeto arrastrado. Este evento llamará una función global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} que recibe los datos del objeto arrastrado. El siguiente código muestra cómo se hace con un elemento {{HTMLelement("div")}}:
 
@@ -48,7 +48,7 @@ Por último, puede que una aplicación quiera personalizar el estilo del element
 
 > **Nota:** Fíjese que los eventos `dragstart` y `dragend` no son activados cuando se arrastra un archivo al browser desde el SO.
 
-## Procesar la acción de soltar \[drop]
+## Procesar la acción de soltar [drop]
 
 El evento {{event("drop")}} se ejecuta cuando el usuario suelta el o los archivos. En el siguiente manejador, si el navegador sorporta la interfaz {{domxref("DataTransferItemList")}} , el método {{domxref("DataTransferItem.getAsFile","getAsFile()")}} se utiliza para acceder cada fichero; de lo contrario la propiedad {{domxref("DataTransfer")}} de la interfaz {{domxref("DataTransfer.files","files")}} es usada para acceder cada archivo.
 

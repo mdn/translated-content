@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
 {{JSRef}}
 
-El método **`Object.values()`\*\*** **devuelve un array con los valores correspondientes a las propiedades **enumerables\*\* de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
+El método **`Object.values()`** devuelve un array con los valores correspondientes a las propiedades **enumerables** de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
 
 {{EmbedInteractiveExample("pages/js/object-values.html")}}
 
@@ -26,11 +26,11 @@ El método **`Object.values()`\*\*** **devuelve un array con los valores corresp
 
 ### Valor devuelto
 
-Un `array`\*\* \*\*con las propiedades enumerables del objeto pasado como parámetro.
+Un `array` con las propiedades enumerables del objeto pasado como parámetro.
 
 ## Descripción
 
-El método `Object.values()`\*\* \*\*devuelve un array cuyos elementos son valores de propiedades enumarables que se encuentran en el objeto. El orden de las propiedades es el mismo que el dado cuando se recorre el objeto de forma manual.
+El método `Object.values()` devuelve un array cuyos elementos son valores de propiedades enumarables que se encuentran en el objeto. El orden de las propiedades es el mismo que el dado cuando se recorre el objeto de forma manual.
 
 ## Ejemplos
 
@@ -57,7 +57,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ## Polyfill
 
-Para dar soporte compatible con `Object.values()` a entornos antiguos que no la soportan de forma nativa, puedes encontrar un Polyfill\*\* \*\*en [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) o en los repositorios [es-shims/Object.values](https://github.com/es-shims/Object.values).
+Para dar soporte compatible con `Object.values()` a entornos antiguos que no la soportan de forma nativa, puedes encontrar un Polyfill en [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) o en los repositorios [es-shims/Object.values](https://github.com/es-shims/Object.values).
 
 ## Especificaciones
 

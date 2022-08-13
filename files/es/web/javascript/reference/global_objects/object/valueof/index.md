@@ -44,7 +44,7 @@ El método valueOf es invocado usualmente por JavaScript pero usted puede invoca
 myNumber.valueOf()
 ```
 
-> **Nota:**Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método valueOf. Todos los objetos pueden ser convertidos a string, si solo "\[object _type_]". Pero muchos objetos no se pueden convertir a number, boolean o function.
+> **Nota:**Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método valueOf. Todos los objetos pueden ser convertidos a string, si solo "[object _type_]". Pero muchos objetos no se pueden convertir a number, boolean o function.
 
 ## Ejemplos
 

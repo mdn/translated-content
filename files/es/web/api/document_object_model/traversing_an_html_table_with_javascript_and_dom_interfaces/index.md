@@ -114,7 +114,7 @@ En el árbol del elemento \<table> de la Figura 1, el elemento \<table> tiene so
 
 ## Ejemplo: Configuración del color de fondo de un párrafo
 
-`getElementsByTagName(tagNameValue)` es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición \[0] de la matriz.
+`getElementsByTagName(tagNameValue)` es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición [0] de la matriz.
 
 ### HTML Content
 

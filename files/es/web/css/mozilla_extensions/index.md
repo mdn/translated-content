@@ -131,16 +131,16 @@ W—Z
 
 ## Propiedades prefijadas anteriormente, ahora estándar
 
-- {{Cssxref("animation", "-moz-animation")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-delay", "-moz-animation-delay")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-direction", "-moz-animation-direction")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-duration", "-moz-animation-duration")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-fill-mode", "-moz-animation-fill-mode")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-iteration-count", "-moz-animation-iteration-count")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-name", "-moz-animation-name")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-play-state", "-moz-animation-play-state")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("animation-timing-function","-moz-animation-timing-function")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("backface-visibility", "-moz-backface-visibility")}} \[Aún se acepta la versión con prefijo]
+- {{Cssxref("animation", "-moz-animation")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-delay", "-moz-animation-delay")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-direction", "-moz-animation-direction")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-duration", "-moz-animation-duration")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-fill-mode", "-moz-animation-fill-mode")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-iteration-count", "-moz-animation-iteration-count")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-name", "-moz-animation-name")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-play-state", "-moz-animation-play-state")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("animation-timing-function","-moz-animation-timing-function")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("backface-visibility", "-moz-backface-visibility")}} [Aún se acepta la versión con prefijo]
 - {{Cssxref("background-clip", "-moz-background-clip")}}
 - {{Cssxref("background-origin", "-moz-background-origin")}}
 - {{Cssxref("background-size", "-moz-background-size")}}
@@ -151,16 +151,16 @@ W—Z
 - {{Cssxref("outline-offset","-moz-outline-offset")}}
 - {{Cssxref("outline-style","-moz-outline-style")}}
 - {{Cssxref("outline-width","-moz-outline-width")}}
-- {{Cssxref("perspective", "-moz-perspective")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("perspective-origin","-moz-perspective-origin")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform", "-moz-transform")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform-origin", "-moz-transform-origin")}} \[Aún se acepta la versión con prefijo]
-- {{Cssxref("transform-style", "-moz-transform-style")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition", "-moz-transition")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-delay", "-moz-transition-delay")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-duration", "-moz-transition-duration")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-property", "-moz-transition-property")}} \[Aún se acepta la versión con prefijo]
-- {{cssxref("transition-timing-function", "-moz-transition-timing-function")}} \[Aún se acepta la versión con prefijo]
+- {{Cssxref("perspective", "-moz-perspective")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("perspective-origin","-moz-perspective-origin")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("transform", "-moz-transform")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("transform-origin", "-moz-transform-origin")}} [Aún se acepta la versión con prefijo]
+- {{Cssxref("transform-style", "-moz-transform-style")}} [Aún se acepta la versión con prefijo]
+- {{cssxref("transition", "-moz-transition")}} [Aún se acepta la versión con prefijo]
+- {{cssxref("transition-delay", "-moz-transition-delay")}} [Aún se acepta la versión con prefijo]
+- {{cssxref("transition-duration", "-moz-transition-duration")}} [Aún se acepta la versión con prefijo]
+- {{cssxref("transition-property", "-moz-transition-property")}} [Aún se acepta la versión con prefijo]
+- {{cssxref("transition-timing-function", "-moz-transition-timing-function")}} [Aún se acepta la versión con prefijo]
 
 ## Valores
 

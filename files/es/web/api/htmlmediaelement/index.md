@@ -22,7 +22,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.controller")}}
   - : Es un objeto {{domxref("MediaController")}}} que representa el controlador de medios asignado al elemento, o nulo si no se asigna ninguno.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : Es un {{jsxref('booleano')}} que refleja el {{htmlattrxref("controles", "vídeo")}}}\[1]. Atributo HTML, que indica si deben visualizarse las posiciones de la interfase de usuario para controlar el recurso.
+  - : Es un {{jsxref('booleano')}} que refleja el {{htmlattrxref("controles", "vídeo")}}}[1]. Atributo HTML, que indica si deben visualizarse las posiciones de la interfase de usuario para controlar el recurso.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : Devuelve un {{domxref("DOMTokenList")}} que ayuda al agente de usuario a seleccionar qué controles mostrar en el elemento multimedia cuando el agente de usuario muestra su propio conjunto de controles. La DOMTokenList toma uno o más de los tres valores posibles: nodownload, nofullscreen y noremoteplayback.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -130,9 +130,9 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.load()")}}
   - : Resets the media to the beginning and selects the best available source from the sources provided using the {{htmlattrxref("src", "video")}} attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
-  - : \[enter description]
+  - : [enter description]
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
-  - : \[enter description]
+  - : [enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
   - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/es/docs/Web/Events/loadedmetadata) event fires.
 - {{domxref("HTMLMediaElement.pause()")}}

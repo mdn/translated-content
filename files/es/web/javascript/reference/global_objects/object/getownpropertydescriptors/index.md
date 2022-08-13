@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyD
 ---
 {{JSRef}}
 
-El método**`Object.getOwnPropertyDescriptors()`\*\*** \*\*regresa todos los descriptores de propiedad propios de un objeto dado.
+El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptores de propiedad propios de un objeto dado.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
 

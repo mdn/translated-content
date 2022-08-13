@@ -210,7 +210,7 @@ En ausencia de un tipo MIME, o en algunos otros casos en los que un cliente cree
 Los tipos MIME no son la única forma de transmitir la información del tipo de documento:
 
 - Los sufijos de nombre a veces se usan, especialmente en los sistemas de Microsoft Windows. No todos los sistemas operativos consideran significativos estos sufijos (especialmente Linux y Mac OS), y al igual que un tipo MIME externo, no hay garantía de que sean correctos.
-- Números mágicos. La sintaxis de los diferentes tipos de archivos permite la inferencia del tipo de archivo al observar la estructura. P.ej. cada archivo GIF comienza con el valor hexadecimal 47 49 46 38 39 \[GIF89] o archivos PNG con 89 50 4E 47 \[.PNG]. No todos los tipos de archivos tienen números mágicos, por lo que este tampoco es un sistema 100% confiable.
+- Números mágicos. La sintaxis de los diferentes tipos de archivos permite la inferencia del tipo de archivo al observar la estructura. P.ej. cada archivo GIF comienza con el valor hexadecimal 47 49 46 38 39 [GIF89] o archivos PNG con 89 50 4E 47 [.PNG]. No todos los tipos de archivos tienen números mágicos, por lo que este tampoco es un sistema 100% confiable.
 
 ## Ver también
 

@@ -12,7 +12,7 @@ tags:
 translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
-La función **`minmax`\*\***`()`\*\* [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
+La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
 
 ```css
 /* valores <ancho no-flexible>, <ancho de la banda> */

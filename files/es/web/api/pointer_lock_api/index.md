@@ -14,7 +14,7 @@ Por ejemplo, puedes crear aplicaciones que permiten a los usuarios controlar el 
 
 ## Conceptos Básicos
 
-**Pointer Lock\*\*** **está relacionado con la _mouse capture_. _mouse capture_ proporciona la entrega continua de eventos a un elemento de destino, mientras que el _mouse_ se arrastra, pero se detiene cuando se suelta el clic. **Pointer Lock\*\* es diferente de _mouse capture_ en las siguientes maneras:
+**Pointer Lock** está relacionado con la _mouse capture_. _mouse capture_ proporciona la entrega continua de eventos a un elemento de destino, mientras que el _mouse_ se arrastra, pero se detiene cuando se suelta el clic. **Pointer Lock** es diferente de _mouse capture_ en las siguientes maneras:
 
 - Es persistente. **Pointer Lock** no libera el _mouse_ hasta que se haga una llamada explícita a la API o el usuario utilize un gesto concreto de lanzamiento.
 - No está limitado por los limites del navegador o la pantalla.

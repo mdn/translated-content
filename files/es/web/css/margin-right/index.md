@@ -25,4 +25,4 @@ CSS propiedades también se puede cambiar dinámicamente con una JavaScript. Scr
     margin-right: -20px
     }
 
-- Fuente: \[[\]](http://www.w3schools.com/css/pr_margin-right.asp)
+- Fuente: [[\]](http://www.w3schools.com/css/pr_margin-right.asp)
