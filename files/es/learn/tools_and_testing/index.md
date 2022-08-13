@@ -29,7 +29,7 @@ La industria de la web es un lugar emocionante para trabajar, pero no está exen
 
 Determinar qué herramientas debería usar puede ser un proceso difícil, por lo que hemos escrito este conjunto de artículos para informarle qué tipos de herramientas están disponibles, qué pueden hacer por usted y cómo hacer uso de los favoritos actuales de la industria.
 
-> **Nota:** Nota: Debido a que aparecen nuevas herramientas y las antiguas pasan de moda todo el tiempo, hemos redactado deliberadamente este material para que sea lo más neutral posible. Queremos enfocarnos ante todo en los tipos generales de tareas que estas herramientas lo ayudarán a lograr. y seguir prescribiendo herramientas específicas al mínimo. Obviamente, necesitamos mostrar el uso de las herramientas para demostrar técnicas específicas, pero ten en cuenta que no necesariamente recomendamos estas herramientas como la mejor o la única forma de hacer las cosas; en la mayoría de los casos, existen otras formas, pero queremos brindarte una idea clara. Metodología que funciona.
+> **Nota:** Debido a que aparecen nuevas herramientas y las antiguas pasan de moda todo el tiempo, hemos redactado deliberadamente este material para que sea lo más neutral posible. Queremos enfocarnos ante todo en los tipos generales de tareas que estas herramientas lo ayudarán a lograr. y seguir prescribiendo herramientas específicas al mínimo. Obviamente, necesitamos mostrar el uso de las herramientas para demostrar técnicas específicas, pero ten en cuenta que no necesariamente recomendamos estas herramientas como la mejor o la única forma de hacer las cosas; en la mayoría de los casos, existen otras formas, pero queremos brindarte una idea clara. Metodología que funciona.
 
 ## Camino de aprendizaje
 
