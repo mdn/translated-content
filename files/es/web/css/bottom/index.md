@@ -52,28 +52,26 @@ El siguiente ejemplo permite contrastar entre `position:absolute` y `position:fi
 
 - **Atención**: IE6 **no** soporta el código `position:fixed`.
 
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<title>Position at bottom, absolute or fixed</title>
-<style type="text/css">
-p {font-size:30px; line-height:3em;}
-div.pos {width:49%; text-align:center; border:2px solid #00f;}
-div#abs {position:absolute; bottom:0; left:0;}
-div#fix {position:fixed; bottom:0; right:0;}
-</style>
-</head>
-<body>
-  <p>Esto<br>es<br>un texto<br>alto,<br>alto,
-    <br>alto,<br>alto,<br>alto<br>de prueba.</p>
-  <div id="fix" class="pos"><p>Fixed</p></div>
-  <div id="abs" class="pos"><p>Absolute</p></div>
-</body>
-</html>
-```
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+       "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <title>Position at bottom, absolute or fixed</title>
+    <style type="text/css">
+    p {font-size:30px; line-height:3em;}
+    div.pos {width:49%; text-align:center; border:2px solid #00f;}
+    div#abs {position:absolute; bottom:0; left:0;}
+    div#fix {position:fixed; bottom:0; right:0;}
+    </style>
+    </head>
+    <body>
+      <p>Esto<br>es<br>un texto<br>alto,<br>alto,
+        <br>alto,<br>alto,<br>alto<br>de prueba.</p>
+      <div id="fix" class="pos"><p>Fixed</p></div>
+      <div id="abs" class="pos"><p>Absolute</p></div>
+    </body>
+    </html>
 
 ### Notas
 
