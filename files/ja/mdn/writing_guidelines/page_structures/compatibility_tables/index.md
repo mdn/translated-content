@@ -1,24 +1,23 @@
 ---
 title: 互換性一覧表とブラウザー互換性データリポジトリー (BCD)
-slug: >-
-  MDN/Writing_guidelines/Page_structures/Compatibility_tables
+slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
+page-type: mdn-writing-guide
 tags:
-  - ガイド
-  - MDN メタ
-  - 構造
-  - ブラウザーの互換性
-  - 互換性一覧表
+  - meta
+  - writing-guide
 translation_of: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 browser-compat: api.AbortController
+l10n:
+  sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
 {{MDNSidebar}}
 
-MDN には、オープンなウェブ文書のための互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。
+MDN には、オープンウェブのドキュメントにおいて、互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。
 
 より高度なドキュメントや、データを表現するために使用される手続きや JSON スキーマの最新の変更点については、データリポジトリーの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)をご覧ください。
 
-質問や問題が見つかった場合は、[助けを求める](/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)をご利用ください。
+質問や問題が見つかった場合は、[助けを求める](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)をご利用ください。
 
 ## データリポジトリーにアクセスする方法
 
@@ -74,7 +73,7 @@ git remote -v
 
 ### 作業用の新しいブランチの作成
 
-次に、自分のリモートフォーク（`https://github.com/ユーザー名/browser-compat-data`となる）へ行き、以下の手順で新しいブランチを作成します。変更したい内容をここに追加していくことになります。
+次に、自分のリモートフォーク（`https://github.com/ユーザー名/browser-compat-data` となる）へ行き、以下の手順で新しいブランチを作成します。変更したい内容をここに追加していくことになります。
 
 1. "Branch: Main" ボタンをクリックします。
 2. 新しいブランチの名前を "Find or create a branch..." と書かれたところに入力します。
@@ -129,7 +128,7 @@ git checkout ブランチ名
 
 まず `css` オブジェクトがあります。その中に `properties` オブジェクトがあります。 `properties` オブジェクトの中には、互換性データとして定義したい特定の機能につき一つのメンバーが必要です。それぞれのメンバーは `__compat` をメンバーに持ち、この中に実際のデータを記述します。
 
-上記のデータは [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json) にあります。 [MDN で表示された border-width の表](/ja/docs/Web/CSS/border-width#browser_compatibility)と見比べてみてください。
+上記のデータは [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json) にあります。 [MDN で表示された border-width の表](/ja/docs/Web/CSS/border-width#ブラウザーの互換性)と見比べてみてください。
 
 他の種類の機能についても同様ですが、オブジェクトの名前が異なります。
 
@@ -473,7 +472,7 @@ git push
 - {{domxref("VRDisplay.capabilities")}} プロパティの互換性データは [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) で定義されており、 `api.VRDisplay.capabilities` で問い合わせすることができます。
 
 互換性データのクエリーは、ページの先頭部分で `browser-compat` キーを使用して指定する必要があります。
-例えば、 {{domxref("AbortController")}} の場合、以下のように追加します
+例えば、 {{domxref("AbortController")}} の場合、以下のように追加します。
 
 ```plain
 ---
