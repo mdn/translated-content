@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/style
 
 <p>{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}</p>
 
-<ul class="htmlelt">
+<ul>
  <li><dfn><a href="/zh_CN/docs/HTML/Content_categories">内容类别</a></dfn><a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">元数据内容</a>，如果指定了 <code>scoped</code> 属性：<a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流内容</a></li>
  <li><dfn>允许的内容</dfn>与 <code>type</code> 属性相匹配的文本内容，也就是 <code>text/css</code></li>
  <li><dfn>标签忽略</dfn> {{no_tag_omission}}</li>
@@ -32,23 +32,23 @@ translation_of: Web/HTML/Element/style
  <dd>该属性以 MIME 类型（不应该指定字符集）定义样式语言。如果该属性未指定，则默认为 <code>text/css</code>。</dd>
  <dt>{{htmlattrdef("media")}}</dt>
  <dd>该属性规定该样式适用于哪个媒体。属性的取值<a href="/zh-CN/docs/Web/Guide/CSS/Media_queries">CSS 媒体查询</a>，默认值为 <code>all</code>。</dd>
- <dt>
- <p>{{htmlattrdef("nonce")}}</p>
- </dt>
+ <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>一种加密的随机数（一次使用的数字），用于在<a href="/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src">style-src Content-Security-Policy</a>中将内联样式列入白名单。 服务器每次发送策略时都必须生成一个唯一的随机数值。 提供一个无法猜测的随机数非常重要，因为绕开资源策略是微不足道的。</dd>
  <dt>{{htmlattrdef("title")}}</dt>
  <dd>指定可选的样式表。</dd>
- <dt>
- <h3 id="已淘汰属性">已淘汰属性</h3>
+</dl>
 
- <p>{{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}</p>
+<h3 id="已淘汰属性">已淘汰属性</h3>
 
- <p>此属性指定样式仅适用于其父项和子项的元素。</p>
+<dl>
+ <dt>{{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
+
+ <dd>此属性指定样式仅适用于其父项和子项的元素。<br />
 
  <div class="blockIndicator note">
  <p>以后可能会根据<a href="https://github.com/w3c/csswg-drafts/issues/3547">https://github.com/w3c/csswg-drafts/issues/3547</a>重新引入此属性。 如果要立即使用该属性，则可以使用<a href="https://github.com/samthor/scoped">polyfill</a>。</p>
  </div>
- </dt>
+ </dd>
 </dl>
 
 <h2 id="示例">示例</h2>

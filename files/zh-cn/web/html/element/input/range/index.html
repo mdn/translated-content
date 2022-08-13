@@ -319,18 +319,15 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h3 id="改变方向">改变方向</h3>
 
-<div class="xhidden">
 <p>使旋钮向左和向右滑动。 如果支持，我们将能够声明垂直高度，并通过声明高度值大于宽度值来使用 CSS 上下滑动。 任何主要的浏览器实际上尚未实现此功能。（请参阅{{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>)。也许它仍在讨论中。</p>
 
 <p>同时，我们可以通过使用 CSS 变换旋转范围来使范围垂直，或者通过使用各自的方法定位每个浏览器引擎，包括通过将 {{cssxref('appearance')}} 设置为 <code>slider-vertical</code>, 在 Firefox 中使用非标准的<code>orient</code> 属性，或通过更改 Internet Explorer 和 Edge 的文本方向。</p>
 
 <p>考虑以下范围控制：</p>
 
-<div id="Orientation_sample1">
 <pre class="brush: html notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
+<p>{{EmbedLiveSample("改变方向", 200, 200)}}</p>
 
 <p>此控件是水平的（至少对大多数主要浏览器（至少，如果不是全部）；其他控件可能有所不同）。</p>
 

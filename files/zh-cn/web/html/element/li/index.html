@@ -60,11 +60,13 @@ translation_of: Web/HTML/Element/li
  </ul>
  本属性值将覆盖 {{HTMLElement("ol")}} 元素中的同名属性值（若存在）。
 
- <div class="note"><strong>使用注解：</strong> 本属性已废弃：使用 CSS {{cssxref("list-style-type")}} 属性来代替。</div>
+ <div class="note">本属性已废弃：使用 CSS {{cssxref("list-style-type")}} 属性来代替。</div>
  </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
+
+<h3>有序列表</h3>
 
 <pre class="brush: html">&lt;ol&gt;
     &lt;li&gt;first item&lt;/li&gt;
@@ -75,26 +77,9 @@ translation_of: Web/HTML/Element/li
 
 <p>上面的 HTML 会输出：</p>
 
-<ol>
- <li>first item</li>
- <li>second item</li>
- <li>third item</li>
-</ol>
+{{EmbedLiveSample("有序列表")}}
 
-<pre class="brush: html">&lt;ol type="I"&gt;
-    &lt;li value="3"&gt;third item&lt;/li&gt;
-    &lt;li&gt;fourth item&lt;/li&gt;
-    &lt;li&gt;fifth item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-
-<p>上面的 HTML 会输出：</p>
-
-<ol start="3" style="list-style-type: upper-roman;">
- <li>third item</li>
- <li>fourth item</li>
- <li>fifth item</li>
-</ol>
+<h3>无序列表</h3>
 
 <pre class="brush: html">&lt;ul&gt;
     &lt;li&gt;first item&lt;/li&gt;
@@ -102,11 +87,7 @@ translation_of: Web/HTML/Element/li
     &lt;li&gt;third item&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<ul>
- <li>first item</li>
- <li>second item</li>
- <li>third item</li>
-</ul>
+{{EmbedLiveSample("无序列表")}}
 
 <p>更多具体示例请见 <a href="/en-US/docs/Web/HTML/Element/ol#Examples">&lt;ol&gt;</a> 和 <a href="/en-US/docs/Web/HTML/Element/ul#Examples">&lt;ul&gt;</a> 页面。</p>
 
