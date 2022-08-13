@@ -59,13 +59,13 @@ original_slug: Web/HTTP/Caching_FAQ
 
 <p>缓存中不得存储任何关于客户端请求和服务端响应的内容。每次由客户端发起的请求都会下载完整的响应内容。</p>
 
-<pre class="line-numbers language-html notranslate"><code class="language-html">Cache-Control: no-store</code></pre>
+<pre class="brush: http"><code class="language-html">Cache-Control: no-store</code></pre>
 
 <h4 id="缓存但重新验证">缓存但重新验证</h4>
 
 <p>如下头部定义，此方式下，每次有请求发出时，缓存会将此请求发到服务器（译者注：该请求应该会带有与本地缓存相关的验证字段），服务器端会验证请求中所描述的缓存是否过期，若未过期（注：实际就是返回 304），则缓存才使用本地缓存副本。</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">Cache-Control: no-cache</code></pre>
+<pre class="brush: http"><code class="language-html">Cache-Control: no-cache</code></pre>
 
 <h4 id="私有和公共缓存">私有和公共缓存</h4>
 
@@ -73,7 +73,7 @@ original_slug: Web/HTTP/Caching_FAQ
 
 <p>而 "private" 则表示该响应是专用于某单个用户的，中间人不能缓存此响应，该响应只能应用于浏览器私有缓存中。</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">Cache-Control: private
+<pre class="brush: http"><code class="language-html">Cache-Control: private
 Cache-Control: public</code></pre>
 
 <h4 id="过期">过期</h4>
@@ -82,13 +82,13 @@ Cache-Control: public</code></pre>
 
 <p>详情看下文关于<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching_FAQ#Freshness">缓存有效性</a>的内容。</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">Cache-Control: max-age=31536000</code></pre>
+<pre class="brush: http"><code class="language-html">Cache-Control: max-age=31536000</code></pre>
 
 <h4 id="验证方式">验证方式</h4>
 
 <p>当使用了 "<code>must-revalidate</code>" 指令，那就意味着缓存在考虑使用一个陈旧的资源时，必须先验证它的状态，已过期的缓存将不被使用。详情看下文关于<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching_FAQ#Cache_validation">缓存校验</a>的内容。</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">Cache-Control: must-revalidate</code></pre>
+<pre class="brush: http"><code class="language-html">Cache-Control: must-revalidate</code></pre>
 
 <h3 id="Pragma_头"><code>Pragma</code> 头</h3>
 
@@ -146,7 +146,7 @@ Cache-Control: public</code></pre>
 
 <p>使用 vary 头有利于内容服务的动态多样性。例如，使用 Vary: User-Agent 头，缓存服务器需要通过 UA 判断是否使用缓存的页面。如果需要区分移动端和桌面端的展示内容，利用这种方式就能避免在不同的终端展示错误的布局。另外，它可以帮助 Google 或者其他搜索引擎更好地发现页面的移动版本，并且告诉搜索引擎没有引入<a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>。</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">Vary: User-Agent</code></pre>
+<pre class="brush: http"><code class="language-html">Vary: User-Agent</code></pre>
 
 <p>因为移动版和桌面的客户端的请求头中的 User-Agent 不同，缓存服务器不会错误地把移动端的内容输出到桌面端到用户。</p>
 
@@ -158,7 +158,3 @@ Cache-Control: public</code></pre>
  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP caching – Ilya Grigorik</a></li>
  <li><a href="https://redbot.org/">RedBot</a>, 检查缓存相关的 HTTP 头的工具。</li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 216px; top: 6947.98px;">
-<div class="gtx-trans-icon"></div>
-</div>

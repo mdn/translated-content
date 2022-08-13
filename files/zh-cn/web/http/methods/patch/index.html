@@ -57,7 +57,7 @@ translation_of: Web/HTTP/Methods/PATCH
 
 <h3 id="请求">请求</h3>
 
-<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
+<pre>PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -69,7 +69,7 @@ Content-Length: 100
 
 <p> {{HTTPStatus("204")}} 状态码表示这是一个操作成功的响应，因为响应中不带有消息主体。</p>
 
-<pre class="newpage">HTTP/1.1 204 No Content
+<pre>HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

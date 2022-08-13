@@ -35,7 +35,6 @@ Large-Allocation: &lt;megabytes&gt;
  <dd>0 是一个特殊的值，代表给它分配的大小是不确定的 (动态允许).</dd>
  <dt><code>&lt;megabytes&gt;</code></dt>
  <dd>预期需要申请的内存大小，以 M 为单位</dd>
- <dt></dt>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -51,7 +50,7 @@ Large-Allocation: 500
 <dl>
  <dt>由于<code>Large-Allocation 报头存在，这个页面会在一个新的进程处理和加载</code></dt>
  <dd>This message means that the browser saw the <code>Large-Allocation</code> header, and was able to reload the page into a new process which should have more available contiguous memory.</dd>
- <dt> <code>Large-Allocation</code> 报头由于非<code>non-GET 请求而直接忽略</code></dt>
+ <dt><code>Large-Allocation</code> 报头由于非<code>non-GET 请求而直接忽略</code></dt>
  <dd>当一个 {{HTTPMethod("POST")}} 请求用语加载文档，that load cannot currently be redirected into a new process. This error is displayed when loading a document with a <code>Large-Allocation</code> header with a non-GET HTTP method. This could be caused due to the document being loaded by a form submission, for example.</dd>
  <dt>A <code>Large-Allocation</code> header was ignored due to the presence of windows which have a reference to this browsing context through the frame hierarchy or {{domxref("window.opener")}}.</dt>
  <dd>
@@ -67,7 +66,6 @@ Large-Allocation: 500
  <dd>Firefox has moved to a <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess architecture</a>, and this architecture is required in order to support the <code>Large-Allocation</code> header. Some <a href="/en-US/docs/Mozilla/Add-ons/SDK">legacy Addons</a> can prevent Firefox from using this new, faster, multiprocess architecture. If you have one of these Addons installed, then we will continue to use the old single process architecuture for compatibility, and cannot handle the <code>Large-Allocation</code> header.</dd>
  <dt>由于<code>Large-Allocation</code>头部，此页面应将被加载到新进程中，但是在非 Win32 平台上禁用此选项。</dt>
  <dd>由于在 64 位系统里内存碎片不是问题，Firefox 只在 32 位系统支持<code>Large-Allocation</code>头部。如果你运行一个非 32 位的程序，这类信息就会出现。可以设置 about:config 里面的"dom.largeAllocation.forceEnable"布尔值来关闭此检查。</dd>
- <dd></dd>
 </dl>
 
 <h2 id="规范">规范</h2>
