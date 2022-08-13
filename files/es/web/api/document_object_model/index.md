@@ -98,5 +98,3 @@ Aquí está la tabla de contenido para la referencia [DOM](es/DOM) de [Gecko](es
 ### Información sobre el documento original
 
 - Última actualización: 22 de Octubre de 2006
-
-{{ languages( { "en": "en/Gecko_DOM_Reference", "fr": "fr/R\u00e9f\u00e9rence_du_DOM_Gecko", "it": "it/Reference_del_DOM_di_Gecko", "ja": "ja/Gecko_DOM_Reference", "ko": "ko/Gecko_DOM_Reference", "pl": "pl/Dokumentacja_Gecko_DOM", "zh-cn": "cn/Gecko_DOM\_\u53c2\u8003" } ) }}
