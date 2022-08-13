@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/iframe
 
 <div>{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}</div>
 
-<div class="hidden">这个示例的源代码存储在 GitHub 仓库中。如果你想给这个项目贡献代码，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>仓库并给我们提交 pull request。</div>
-
 <p>每个嵌入的浏览上下文（embedded browsing context）都有自己的<a href="/zh-CN/docs/Web/API/History">会话历史记录 (session history)</a>和<a href="/zh-CN/docs/Web/API/Document">DOM 树</a>。包含嵌入内容的浏览上下文称为<em><dfn>父级</dfn>浏览上下文</em>。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。</p>
 
 <div class="blockIndicator warning">
@@ -34,13 +32,11 @@ translation_of: Web/HTML/Element/iframe
 
 <dl>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
- <dd>设置为<code>true</code>时，可以通过调用 <code>&lt;iframe&gt;</code> 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。</dd>
- <dd>
+ <dd>设置为<code>true</code>时，可以通过调用 <code>&lt;iframe&gt;</code> 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
  <div class="note">这是一个历史遗留属性，已经被重新定义为 <code>allow="fullscreen"</code>。</div>
  </dd>
  <dt>{{htmlattrdef("allowpaymentrequest")}}</dt>
- <dd>设置为<code>true</code>时，跨域的 <code>&lt;iframe&gt;</code> 就可以调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>。</dd>
- <dd>
+ <dd>设置为<code>true</code>时，跨域的 <code>&lt;iframe&gt;</code> 就可以调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>。
  <div class="note">这是一个历史遗留属性，已经被重新定义为 <code>allow="payment"</code>.</div>
  </dd>
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
@@ -138,13 +134,12 @@ translation_of: Web/HTML/Element/iframe
 
 <dl>
  <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong></dt>
+ <dd>这个属性可以让 <code>&lt;iframe&gt;</code> 变得像顶级浏览器窗口，详情请参看 <a href="/zh-CN/docs/Web/API/Using_the_Browser_API">Browser API</a>。这个属性<strong>只能</strong>在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> 中使用。</dd>
 </dl>
 
 <div class="blockIndicator note">
 <p>查看 {{bug(1318532)}} 了解如何在 Firefox 的 WebExtensions 中使用此属性。</p>
 </div>
-
-<p>这个属性可以让 <code>&lt;iframe&gt;</code> 变得像顶级浏览器窗口，详情请参看 <a href="/zh-CN/docs/Web/API/Using_the_Browser_API">Browser API</a>。这个属性<strong>只能</strong>在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> 中使用。</p>
 
 <h2 id="脚本">脚本</h2>
 

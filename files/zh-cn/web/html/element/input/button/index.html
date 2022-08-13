@@ -46,8 +46,6 @@ translation_of: Web/HTML/Element/input/button
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
  <p>This Boolean attribute indicates that the user cannot interact with the button. If this attribute is not specified, the button inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the <code><strong>disabled</strong></code> attribute set, then the button is enabled. The disabled control's value isn't submitted with the form and the <code>click</code> event <a href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute">will not be dispatched</a> on disabled controls.</p>
- </dd>
- <dd>
  <p>Firefox will, unlike other browsers, by default, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
  </dd>
  <dt>{{htmlattrdef("autofocus")}}</dt>

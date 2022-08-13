@@ -7,10 +7,6 @@ translation_of: Web/HTML/Element/rb
 
 <p><strong>HTML Ruby Base</strong>（<code>&lt;rb&gt;</code>）元素用于分隔{{HTMLElement("ruby")}}注释的基本文本组件（即正在注释的文本）。一个<code>&lt;rb&gt;</code>元素应该包装基本文本的每个单独的原子段。</p>
 
-<div class="hidden">\{{EmbedInteractiveExample("pages/tabbed/rb.html", "tabbed-standard")}}</div>
-
-
-
 <table class="properties">
  <tbody>
   <tr>
@@ -65,40 +61,33 @@ translation_of: Web/HTML/Element/rb
 
 <p>请注意，我们也可以使用完全单独注释的两个基本文本部分来编写此示例。 在这种情况下，我们不需要包含<code>&lt;rb&gt;</code>元素：</p>
 
+<h3>支持 ruby</h3>
+
 <pre class="brush: html">&lt;ruby&gt;
   漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;han&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
   字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;zi&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
 &lt;/ruby&gt;</pre>
 
-<div class="hidden">
-<div id="with-ruby">
-<pre class="brush: html">&lt;ruby&gt; &lt;rb&gt;漢&lt;rb&gt;字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;han&lt;rt&gt;zi&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt;
-</pre>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-size: 22px;
 }</pre>
-</div>
-</div>
 
 <p>输出看起来像这样：</p>
 
-<p>{{EmbedLiveSample("with-ruby", "100%", 60)}}</p>
+<p>{{EmbedLiveSample("支持 ruby", "100%", 60)}}</p>
+
+<h3>不支持 ruby</h3>
 
 <p>当在不支持 ruby 的浏览器中呈现时，上面的 HTML 可能看起来像这样：</p>
 
-<div id="without-ruby">
-<div class="hidden">
-<pre class="brush: html">漢字 (han zi)</pre>
+<pre class="brush: html hidden">漢字 (han zi)</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-size: 22px;
 }
 </pre>
-</div>
-</div>
 
-<p>{{EmbedLiveSample("without-ruby", "100%", 60)}}</p>
+<p>{{EmbedLiveSample("不支持 ruby", "100%", 60)}}</p>
 
 <div class="note">
 <p><strong>提示</strong>: 有关更多示例，请参阅有关{{HTMLElement("ruby")}}元素的文章。</p>

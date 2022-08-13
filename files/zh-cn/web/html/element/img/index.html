@@ -19,8 +19,6 @@ translation_of: Web/HTML/Element/img
 
 <div>{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
-
 <p>上面的例子展示了 <code>&lt;img&gt;</code> 元素的用法：</p>
 
 <ul>
@@ -94,13 +92,7 @@ translation_of: Web/HTML/Element/img
  <dl>
   <dt><code>sync</code></dt>
   <dd>同步解码图像，实现与其他内容的显示相互斥的原子显示。
-  <div class="standardNoteBlock">
-  <p><strong>译者注：</strong>这里的原文是：</p>
-
-  <p>Decode the image synchronously, for atomic presentation with other content.</p>
-
   <p>此图像的解码将是一个原子操作，在完成解码显示之前，不被其他内容的显示而打断，因此其他内容的显示会被延迟。</p>
-  </div>
   </dd>
   <dt><code>async</code></dt>
   <dd>异步解码图像，以减少其他内容的显示延迟。</dd>
@@ -233,8 +225,8 @@ translation_of: Web/HTML/Element/img
 
 <p>根据图像文件的类型，图像可能会有一个原始分辨率（intrinsic dimension）或者叫原始宽高。对于一些类型的图像，原始分辨率并不是必要的。比如说，{{glossary("SVG")}} 图像，如果它们的根 {{SVGElement("svg")}} 元素没有 <code>width</code> 或 <code>height</code> 属性，SVG 图像就可以没有原始分辨率。</p>
 
-<div class="standardNoteBlock">
-<p><strong>译者注：</strong>原始分辨率/原始宽高是图像的固有属性，基本上就是图像本身的分辨率/宽高。只与图像本身有关，与 <code>&lt;img&gt;</code> 元素的属性、显示分辨率等等无关。点阵图像通常有且只有一个随图片宽高变化的原始分辨率，而矢量图像可以没有。不过，编辑矢量图像时，通常可以手动/编辑器自动为其设置原始分辨率。</p>
+<div class="note">
+<p>原始分辨率/原始宽高是图像的固有属性，基本上就是图像本身的分辨率/宽高。只与图像本身有关，与 <code>&lt;img&gt;</code> 元素的属性、显示分辨率等等无关。点阵图像通常有且只有一个随图片宽高变化的原始分辨率，而矢量图像可以没有。不过，编辑矢量图像时，通常可以手动/编辑器自动为其设置原始分辨率。</p>
 </div>
 
 <h2 id="示例">示例</h2>
