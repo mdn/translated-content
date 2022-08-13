@@ -8,12 +8,10 @@ tags:
   - TopicStub
 translation_of: Glossary/Signature
 ---
-<p>The term <strong>signature</strong> can have several meanings depending on the context. It may refer to:</p>
+The term **signature** can have several meanings depending on the context. It may refer to:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Signature">Signature</a> on Wikipedia</li>
-</ul>
+- [Signature](https://en.wikipedia.org/wiki/Signature) on Wikipedia
