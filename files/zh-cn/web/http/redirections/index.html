@@ -66,7 +66,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr1" name="attr1"></a>[1] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 308 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
+<p><a id="attr1" name="attr1">[1]</a> 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 308 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
 
 <h3 id="临时重定向">临时重定向</h3>
 
@@ -105,7 +105,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr2" name="attr2"></a>[2] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 307 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
+<p><a id="attr2" name="attr2">[2]</a> 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 307 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
 
 <h3 id="特殊重定向">特殊重定向</h3>
 
@@ -196,10 +196,9 @@ translation_of: Web/HTTP/Redirections
  <dd>例如，公司改名后，你希望用户在搜索旧名称的时候，依然可以访问到应用了新名称的站点。</dd>
  <dt>强制使用 HTTPS 协议。</dt>
  <dd>对于 HTTP 版本站点的请求会被重定向至采用了 HTTPS 协议的版本。</dd>
- <dt>
- <h3 id="保持链接有效">保持链接有效</h3>
- </dt>
 </dl>
+
+<h3 id="保持链接有效">保持链接有效</h3>
 
 <p>当你重构 Web 站点的时候，资源的 URL 会发生改变。即便是你可以更新站点内部的链接来适应新的命名体系，但无法控制被外部资源使用的 URL 。</p>
 
@@ -279,7 +278,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 <p>有时候，服务器端无法对其进行检测：重定向循环发生于多台服务器之间，对于每一台服务器来说，都无法获得一个全景图。在这种情况下，浏览器会负责进行检测，然后返回错误信息。Firefox 会呈现如下信息：</p>
 
-<pre class="bz_comment_text notranslate" id="comment_text_0">Firefox has detected that the server is redirecting the request for this address in a way that will never complete.
+<pre>Firefox has detected that the server is redirecting the request for this address in a way that will never complete.
 Firefox 检测到服务器正在试图将请求进行重定向，而这种重定向永远不会完结。
 </pre>
 

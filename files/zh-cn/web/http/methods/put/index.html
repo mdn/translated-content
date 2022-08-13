@@ -63,7 +63,7 @@ Content-length: 16
 
 <p>如果目标资源不存在，并且 PUT 方法成功创建了一份，那么源头服务器必须返回{{HTTPStatus("201")}} (<code>Created</code>) 来通知客户端资源已创建。</p>
 
-<pre class="newpage">HTTP/1.1 201 Created
+<pre>HTTP/1.1 201 Created
 Content-Location: /new.html</pre>
 
 <p>如果目标资源已经存在，并且依照请求中封装的表现形式成功进行了更新，那么，源头服务器必须返回{{HTTPStatus("200")}} (<code>OK</code>) 或者{{HTTPStatus("204")}} (<code>No Content</code>) 来表示请求的成功完成。</p>
