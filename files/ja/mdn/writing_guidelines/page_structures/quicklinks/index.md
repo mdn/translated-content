@@ -1,12 +1,11 @@
 ---
 title: クイックリンク
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_beab16e4cec4868f7c665da1b19be9a5
+slug: MDN/Writing_guidelines/Page_structures/Quicklinks
 tags:
   - ガイド
   - MDN メタ
   - 構造
-translation_of: MDN/Structures/Quicklinks
+translation_of: MDN/Writing_guidelines/Page_structures/Quicklinks
 original_slug: MDN/Structures/Quicklinks
 ---
 {{MDNSidebar}}

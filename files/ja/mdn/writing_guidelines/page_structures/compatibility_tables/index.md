@@ -1,14 +1,14 @@
 ---
 title: 互換性一覧表とブラウザー互換性データリポジトリー (BCD)
 slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_14063d8b7b9e2a0af40881138426a86b
+  MDN/Writing_guidelines/Page_structures/Compatibility_tables
 tags:
   - ガイド
   - MDN メタ
   - 構造
   - ブラウザーの互換性
   - 互換性一覧表
-translation_of: MDN/Structures/Compatibility_tables
+translation_of: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 browser-compat: api.AbortController
 ---

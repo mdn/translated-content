@@ -1,7 +1,7 @@
 ---
 title: 構文の節
 slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_bc39394e4b9b43957d7f149e90441e51
+  MDN/Writing_guidelines/Page_structures/Syntax_sections
 tags:
   - API
   - CSS
@@ -10,7 +10,7 @@ tags:
   - 構造
   - 構文
   - 進行中
-translation_of: MDN/Structures/Syntax_sections
+translation_of: MDN/Writing_guidelines/Page_structures/Syntax_sections
 original_slug: MDN/Structures/Syntax_sections
 ---
 {{MDNSidebar}}

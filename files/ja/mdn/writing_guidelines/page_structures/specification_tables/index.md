@@ -1,12 +1,12 @@
 ---
 title: 仕様書一覧表
 slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_5ea871ce36d498595dfc8b64cac16ee9
+  MDN/Writing_guidelines/Page_structures/Specification_tables
 tags:
   - ガイド
   - MDN メタ
   - 構造
-translation_of: MDN/Structures/Specification_tables
+translation_of: MDN/Writing_guidelines/Page_structures/Specification_tables
 original_slug: MDN/Structures/Specification_tables
 ---
 {{MDNSidebar}}
