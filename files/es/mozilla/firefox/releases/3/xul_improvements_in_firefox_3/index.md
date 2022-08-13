@@ -78,6 +78,4 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además d
 
 ### Ver también
 
-- [XUL](/es/XUL "es/XUL")
-
-{{ languages( { "en": "en/XUL_improvements_in_Firefox\_3", "fr": "fr/Am\u00e9liorations_XUL_dans_Firefox\_3", "ja": "ja/XUL_improvements_in_Firefox\_3", "pl": "pl/Poprawki_XUL_w_Firefoksie\_3" } ) }}
+- [XUL](/es/XUL "es/XUL") 

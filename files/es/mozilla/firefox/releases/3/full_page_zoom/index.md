@@ -30,6 +30,4 @@ Puedes usar la característica de zoom completo incluso para un xul:iframe. Sin 
 
 - Extensión Page zoom de Ted Mielczarek [fullpagezoom.xpi](http://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) para los últimos releases nocturnos de Firefox 3.0
 - El [bug en bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) sobre zoom completo (fullZoom).
-- La documentación de la interface [nsIMarkupDocumentViewer](http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html) (actualmente no menciona zoom completo).
-
-{{ languages( { "fr": "fr/Zoom_pleine_page", "ja": "ja/Full_page_zoom", "en": "en/Full_page_zoom" } ) }}
+- La documentación de la interface [nsIMarkupDocumentViewer](http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html) (actualmente no menciona zoom completo). 

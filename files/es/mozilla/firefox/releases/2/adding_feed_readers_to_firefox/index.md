@@ -42,6 +42,4 @@ El código JavaScript en la web puede añadir un lector de canales fácilmente, 
 
 La manera más sencilla de hacer esto es simplemente usar la interfaz de usuario disponible, usando el panel Canales en la ventana de preferencias (u opciones, dependiendo de su plataforma).
 
-También se puede hacer programáticamente mediante una extensión, lo cual se hace estableciendo el valor de la opción `browser.feeds.handlers.application` a la ruta de la aplicación a usar para leer los canales.
-
-{{ languages( { "en": "en/Adding_feed_readers_to_Firefox", "ja": "ja/Adding_feed_readers_to_Firefox", "zh-tw": "zh_tw/\u65b0\u589e\u6d88\u606f\u4f86\u6e90\u95b1\u8b80\u5de5\u5177" } ) }}
+También se puede hacer programáticamente mediante una extensión, lo cual se hace estableciendo el valor de la opción `browser.feeds.handlers.application` a la ruta de la aplicación a usar para leer los canales. 
