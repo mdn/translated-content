@@ -13,43 +13,54 @@ tags:
   - toJSON
 translation_of: Web/API/PushSubscription/toJSON
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
 
-{{domxref("PushSubscription")}} インターフェースの `toJSON()` メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。
+<p>{{domxref("PushSubscription")}} インターフェースの <code>toJSON()</code> メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    ​mySubscription = subscription.toJSON()
+<pre class="syntaxbox">​mySubscription = subscription.toJSON()</pre>
 
-### パラメーター
+<h3 id="パラメーター">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-JSON オブジェクト。現在、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
+<p>JSON オブジェクト。現在、<code>endpoint</code> メンバーとしてサブスクリプションエンドポイントのみを含みます。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-navigator.serviceWorker.ready.then(function(reg) {
+<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     var mySubscription = subscription.toJSON();
     // サブスクリプションの詳細を使用して何かを実行する。
   })
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#pushsubscription-interface','PushSubscription (see serializer listed in the WebIDL)')}} | {{Spec2('Push API')}} | 初期定義。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Push API','#pushsubscription-interface','PushSubscription (see serializer listed in the WebIDL)')}}</td>
+   <td>{{Spec2('Push API')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.PushSubscription.toJSON")}}
+<p>{{Compat("api.PushSubscription.toJSON")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
+</ul>

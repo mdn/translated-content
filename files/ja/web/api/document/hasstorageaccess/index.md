@@ -11,47 +11,45 @@ tags:
   - メソッド
 translation_of: Web/API/Document/hasStorageAccess
 ---
-{{APIRef}}{{seecompattable}}
+<div>{{APIRef}}{{seecompattable}}</div>
 
-{{domxref("Document")}} インターフェイスの **`hasStorageAccess()`** メソッドは、文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} を返します。
+<p>{{domxref("Document")}} インターフェイスの <strong><code>hasStorageAccess()</code></strong> メソッドは、文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} を返します。</p>
 
-詳しくは [Storage Access API](/ja/docs/Web/API/Storage_Access_API) を参照してください。
+<p>詳しくは <a href="/ja/docs/Web/API/Storage_Access_API">Storage Access API</a> を参照してください。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = document.hasStorageAccess();
+<pre class="syntaxbox">var <em>promise</em> = document.hasStorageAccess();</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-なし。
+<p>なし。</p>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} です。
+<p>文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} です。</p>
 
-Promise が解決され、関数が最初に呼び出されたときにユーザージェスチャーイベントを処理していた場合、解決ハンドラーはユーザージェスチャーが処理されているかのように実行されるため、ユーザーによるアクティベーションを必要とする API を呼び出すことができます。
+<p>Promise が解決され、関数が最初に呼び出されたときにユーザージェスチャーイベントを処理していた場合、解決ハンドラーはユーザージェスチャーが処理されているかのように実行されるため、ユーザーによるアクティベーションを必要とする API を呼び出すことができます。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-document.hasStorageAccess().then(hasAccess => {
+<pre class="brush: js">document.hasStorageAccess().then(hasAccess =&gt; {
   if (hasAccess) {
     // ストレージへのアクセスはすでに許可されています。
   } else {
     // ストレージへのアクセスはまだ許可されていません。
     // requestStorageAccess() を呼び出す必要があります。
   }
-});
-```
+});</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-この API はまだ提案段階にあります。 — 標準化プロセスはまだ始まっていません。現在のところ、この API の詳細の仕様書は、アップルのブログ投稿の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/)、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で見ることができます。
+<p>この API はまだ提案段階にあります。 — 標準化プロセスはまだ始まっていません。現在のところ、この API の詳細の仕様書は、アップルのブログ投稿の <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</a>、および <a href="https://github.com/whatwg/html/issues/3338">WHATWG HTML issue 3338 — Proposal: Storage Access API</a> で見ることができます。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.hasStorageAccess")}}
+<p>{{Compat("api.Document.hasStorageAccess")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-[Storage Access API](/ja/docs/Web/API/Storage_Access_API)
+<p><a href="/ja/docs/Web/API/Storage_Access_API">Storage Access API</a></p>

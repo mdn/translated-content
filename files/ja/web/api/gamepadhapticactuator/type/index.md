@@ -12,36 +12,49 @@ tags:
   - Type
 translation_of: Web/API/GamepadHapticActuator/type
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
 
-{{domxref("GamepadHapticActuator")}} インターフェイスの **`type`** 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。
+<p>{{domxref("GamepadHapticActuator")}} インターフェイスの <strong><code>type</code></strong> 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var myActuatorType = gamepadHapticActuatorInstance.type;
-```
+<pre class="brush: js notranslate">var myActuatorType = gamepadHapticActuatorInstance.type;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-列挙型 [`GamepadHapticActuatorType`](https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum); 現在利用な型は次の通りです:
+<p>列挙型 <code><a href="https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum">GamepadHapticActuatorType</a></code>; 現在利用な型は次の通りです:</p>
 
-- `vibration` — 振動のハードウェアで、ゴロゴロとした効果を生み出します。
+<ul>
+ <li><code>vibration</code> — 振動のハードウェアで、ゴロゴロとした効果を生み出します。</li>
+</ul>
 
-## 例
+<h2 id="例">例</h2>
 
-TBC
+<p>TBC</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                             | ステータス                               | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuatortype', 'GamepadHapticActuatorType')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#dom-gamepadhapticactuatortype', 'GamepadHapticActuatorType')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.GamepadHapticActuator.type")}}
+<p>{{Compat("api.GamepadHapticActuator.type")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+</ul>

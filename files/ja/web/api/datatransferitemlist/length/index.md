@@ -12,31 +12,31 @@ tags:
   - ドラッグアンドドロップ
 translation_of: Web/API/DataTransferItemList/length
 ---
-{{domxref("DataTransferItemList")}} インターフェイスの **`length`** プロパティは読み取り専用で、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
+<p>{{domxref("DataTransferItemList")}} インターフェイスの <code><strong>length</strong></code> プロパティは読み取り専用で、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    length = DataTransferItemList.length;
+<pre class="syntaxbox"><em>length</em> = <em>DataTransferItemList</em>.length;
+</pre>
 
-### 返値
+<h3 id="Return_Value" name="Return_Value">返値</h3>
 
-リスト中のドラッグデータアイテムの数で、もしリストが空か無効であれば 0 です。アイテムリストの {{domxref("DataTransfer")}} オブジェクトがドラッグデータストアに関連付けられていない場合は、ドラッグアイテムリストは無効とみなされます。
+<p>リスト中のドラッグデータアイテムの数で、もしリストが空か無効であれば 0 です。アイテムリストの {{domxref("DataTransfer")}} オブジェクトがドラッグデータストアに関連付けられていない場合は、ドラッグアイテムリストは無効とみなされます。</p>
 
-## 例
+<h2 id="Example_Drag_and_Drop" name="Example_Drag_and_Drop">例</h2>
 
-この例は `length` プロパティの使い方を示しています。
+<p>この例は <code>length</code> プロパティの使い方を示しています。</p>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-function dragstart_handler(ev) {
+<pre class="brush: js">function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   var dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
+  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -45,18 +45,18 @@ function drop_handler(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (var i = 0; i &lt; data.length; i++) {
+    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
       // This item is the target node
       data[i].getAsString(function (s){
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
         console.log("... Drop: HTML = " + s);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
         console.log("... Drop: URI = " + s);
@@ -78,22 +78,21 @@ function dragend_handler(ev) {
   // Clear any remaining drag data
   dataList.clear();
 }
-```
 
-### HTML
+</pre>
 
-```html
-<div>
-  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
-</div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
-```
+<h3 id="HTML">HTML</h3>
 
-### CSS
+<pre class="brush: html">&lt;div&gt;
+  &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
+</pre>
 
-```css
-div {
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">div {
   margin: 0em;
   padding: 2em;
 }
@@ -106,24 +105,42 @@ div {
 #target {
   border: 1px solid black;
 }
-```
+</pre>
 
-### 結果
+<h3 id="Result" name="Result">結果</h3>
 
-{{EmbedLiveSample('Example_Drag_and_Drop')}}
+<p>{{EmbedLiveSample('Example_Drag_and_Drop')}}</p>
 
-{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}
+<p>{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                               | 状態                             | 備考                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-length','length')}} | {{Spec2('HTML WHATWG')}} |                                                           |
-| {{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}         | {{Spec2('HTML5.1')}}     | W3C HTML5 {{Spec2('HTML5 W3C')}} には含まれていない |
-|                                                                                                                      |                                  |                                                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-length','length')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>W3C HTML5 {{Spec2('HTML5 W3C')}} には含まれていない</td>
+  </tr>
+  <tr>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.DataTransferItemList.length")}}
+<p>{{Compat("api.DataTransferItemList.length")}}</p>
 
-{{APIRef("HTML Drag and Drop API")}}
+<div>{{APIRef("HTML Drag and Drop API")}}</div>

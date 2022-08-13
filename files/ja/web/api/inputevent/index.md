@@ -7,39 +7,58 @@ tags:
   - Interface
 translation_of: Web/API/InputEvent
 ---
-{{APIRef("DOM Events")}}
+<p>{{APIRef("DOM Events")}}</p>
 
-**`InputEvent`** インターフェイスは、編集可能なコンテンツが変更されたことを通知するイベントを表します。
+<p><strong><code>InputEvent</code></strong> インターフェイスは、編集可能なコンテンツが変更されたことを通知するイベントを表します。</p>
 
-## コンストラクタ
+<h2 id="Constructor" name="Constructor">コンストラクタ</h2>
 
-- {{domxref("InputEvent.InputEvent", "InputEvent()")}}
-  - : `InputEvent` オブジェクトを作成します。
+<dl>
+ <dt>{{domxref("InputEvent.InputEvent", "InputEvent()")}}</dt>
+ <dd><code>InputEvent</code> オブジェクトを作成します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}}、{{domxref("Event")}} のプロパティを継承します。_
+<p><em>このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}}、{{domxref("Event")}} のプロパティを継承します。</em></p>
 
-- {{domxref("InputEvent.data")}} {{readOnlyInline}}
-  - : 挿入された文字を {{domxref("DOMString")}} で返します。変更により挿入されたテキストがない (例えば文字を削除する) 場合は、空文字列になるでしょう。
-- {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : イベントが {{event("compositionstart")}} の後かつ {{event("compositionend")}} の前に発生したかを示す {{jsxref("Boolean")}} 値を返します。
+<dl>
+ <dt>{{domxref("InputEvent.data")}} {{readOnlyInline}}</dt>
+ <dd>挿入された文字を {{domxref("DOMString")}} で返します。変更により挿入されたテキストがない (例えば文字を削除する) 場合は、空文字列になるでしょう。</dd>
+ <dt>{{domxref("InputEvent.isComposing")}}{{readOnlyInline}}</dt>
+ <dd>イベントが {{event("compositionstart")}} の後かつ {{event("compositionend")}} の前に発生したかを示す {{jsxref("Boolean")}} 値を返します。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_このインターフェイスではメソッドが定義されていませんが、親インターフェイスである {{domxref("UIEvent")}}、{{domxref("Event")}} のメソッドを継承します。_
+<p><em>このインターフェイスではメソッドが定義されていませんが、親インターフェイスである {{domxref("UIEvent")}}、{{domxref("Event")}} のメソッドを継承します。</em></p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                               | 策定状況                         | コメント     |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('DOM3 Events','#interface-InputEvent','InputEvent')}} | {{Spec2('DOM3 Events')}} | 最初期の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM3 Events','#interface-InputEvent','InputEvent')}}</td>
+   <td>{{Spec2('DOM3 Events')}}</td>
+   <td>最初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-{{Compat("api.InputEvent")}}
+<p>{{Compat("api.InputEvent")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{event("beforeinput")}}
-- {{event("input")}}
+<ul>
+ <li>{{event("beforeinput")}}</li>
+ <li>{{event("input")}}</li>
+</ul>

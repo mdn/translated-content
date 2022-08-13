@@ -9,40 +9,51 @@ tags:
   - persisted()
 translation_of: Web/API/StorageManager/persisted
 ---
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+<p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-{{domxref("StorageManager")}} インターフェイスの **`persisted()`** メソッドは、サイトのストレージに対してボックスモードが永続的であれば `true` に解決される {{jsxref("Promise")}} を返します。
+<p><span class="seoSummary">{{domxref("StorageManager")}} インターフェイスの <strong><code>persisted()</code></strong> メソッドは、サイトのストレージに対してボックスモードが永続的であれば <code>true</code> に解決される {{jsxref("Promise")}} を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    navigator.storage.persisted().then(function(persistent) { ... })
+<pre class="syntaxbox">navigator.storage.persisted().then(function(persistent) { ... })</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="Returns" name="Returns">戻り値</h3>
 
-{{jsxref('Boolean')}} に解決される {{jsxref("Promise")}}。
+<p>{{jsxref('Boolean')}} に解決される {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-if (navigator.storage && navigator.storage.persist)
+<pre class="brush: js"><code>if (navigator.storage &amp;&amp; navigator.storage.persist)
   navigator.storage.persisted().then(function(persistent) {
     if (persistent)
       console.log("明示的なユーザー操作以外では、ストレージは消去されません。");
     else
       console.log("ストレージは UA によってストレージの圧力により消去されるかもしれません。");
-  });
-```
+  });</code></pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Storage','#dom-storagemanager-persisted','persisted')}}</td>
+   <td>{{Spec2('Storage')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.StorageManager.persisted")}}
+
+
+<p>{{Compat("api.StorageManager.persisted")}}</p>

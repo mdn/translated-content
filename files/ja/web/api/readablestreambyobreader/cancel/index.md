@@ -11,40 +11,57 @@ tags:
   - cancel
 translation_of: Web/API/ReadableStreamBYOBReader/cancel
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`cancel()`** メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された `reason` パラメーターは、基になるソースに与えられ、使用する場合もしない場合もあります。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamBYOBReader")}} インターフェイスの <strong><code>cancel()</code></strong> メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された <code>reason</code> パラメーターは、基になるソースに与えられ、使用する場合もしない場合もあります。</span></p>
 
-> **Note:** **注**：リーダーがアクティブな場合、`cancel()` メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
+<div class="note">
+<p><strong>注</strong>：リーダーがアクティブな場合、<code>cancel()</code> メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = readableStreamBYOBReader.cancel(reason);
+<pre class="syntaxbox">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- reason
-  - : 人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。
+<dl>
+ <dt>reason</dt>
+ <dd>人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
+<p>{{jsxref("Promise")}}。 <code>reason</code> パラメーターで指定された値で満たされます。</p>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-- TypeError
-  - : ソースオブジェクトが `ReadableStreamBYOBReader` ではないか、ストリームに所有者がいません。
+<dl>
+ <dt>TypeError</dt>
+ <dd>ソースオブジェクトが <code>ReadableStreamBYOBReader</code> ではないか、ストリームに所有者がいません。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-未定。
+<p>未定。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-cancel","cancel()")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#byob-reader-cancel","cancel()")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStreamBYOBReader.cancel")}}
+<p>{{Compat("api.ReadableStreamBYOBReader.cancel")}}</p>

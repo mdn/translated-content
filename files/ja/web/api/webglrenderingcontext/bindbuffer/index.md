@@ -3,80 +3,119 @@ title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
-{{APIRef("WebGL")}}
+<div>{{APIRef("WebGL")}}</div>
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.bindBuffer()`** メソッドは、与えられた {{domxref("WebGLBuffer")}} をターゲットに結合します。
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.bindBuffer()</code></strong> メソッドは、与えられた {{domxref("WebGLBuffer")}} をターゲットに結合します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    void gl.bindBuffer(target, buffer);
+<pre class="syntaxbox">void <var>gl</var>.bindBuffer(<var>target</var>, <var>buffer</var>);
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-- target
+<dl>
+ <dt>target</dt>
+ <dd>結合する場所 (ターゲット) の {{domxref("GLenum")}} です。以下の値を与えることができます。
+ <ul>
+  <li><code>gl.ARRAY_BUFFER</code>: 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。</li>
+  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 要素の位置指定に使われるバッファーです。</li>
+  <li>{{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合は、更に以下の値を利用することができます。
+   <ul>
+    <li><code>gl.COPY_READ_BUFFER</code>: バッファーオブジェクトを他へコピーするためのバッファーです。</li>
+    <li><code>gl.COPY_WRITE_BUFFER</code>: バッファーオブジェクトを他へコピーするためのバッファーです。</li>
+    <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: 書き戻し操作を変換するバッファーです。</li>
+    <li><code>gl.UNIFORM_BUFFER</code>: ユニフォームブロックの格納に使われるバッファーです。</li>
+    <li><code>gl.PIXEL_PACK_BUFFER</code>: ピクセル移動操作に使われるバッファーです。</li>
+    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: ピクセル移動操作に使われるバッファーです。</li>
+   </ul>
+  </li>
+ </ul>
+ </dd>
+ <dt>buffer</dt>
+ <dd>結合する {{domxref("WebGLBuffer")}} です。</dd>
+</dl>
 
-  - : 結合する場所 (ターゲット) の {{domxref("GLenum")}} です。以下の値を与えることができます。\* `gl.ARRAY_BUFFER`: 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
+<h3 id="返り値">返り値</h3>
 
-    - `gl.ELEMENT_ARRAY_BUFFER`: 要素の位置指定に使われるバッファーです。
-    - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合は、更に以下の値を利用することができます。
+<p>ありません。</p>
 
-      - `gl.COPY_READ_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。
-      - `gl.COPY_WRITE_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: 書き戻し操作を変換するバッファーです。
-      - `gl.UNIFORM_BUFFER`: ユニフォームブロックの格納に使われるバッファーです。
-      - `gl.PIXEL_PACK_BUFFER`: ピクセル移動操作に使われるバッファーです。
-      - `gl.PIXEL_UNPACK_BUFFER`: ピクセル移動操作に使われるバッファーです。
+<h3 id="例外">例外</h3>
 
-- buffer
-  - : 結合する {{domxref("WebGLBuffer")}} です。
+<p>一つのターゲットにのみ {{domxref("WebGLBuffer")}} を結合できます。バッファーを他のターゲットに結合しようとすると、<code>INVALID_OPERATION</code> エラーをスローして現在のバッファ結合を同じままにします。</p>
 
-### 返り値
+<p>{{domxref("WebGLBuffer")}} が {{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} によって削除されるようにマークされると、(再び) 結合できなくなります。そうしようとしても <code>INVALID_OPERATION</code> エラーが生成されて、現在の結合は変更されません。</p>
 
-ありません。
+<h2 id="例">例</h2>
 
-### 例外
+<h3 id="バッファーをターゲットに結合">バッファーをターゲットに結合</h3>
 
-一つのターゲットにのみ {{domxref("WebGLBuffer")}} を結合できます。バッファーを他のターゲットに結合しようとすると、`INVALID_OPERATION` エラーをスローして現在のバッファ結合を同じままにします。
-
-{{domxref("WebGLBuffer")}} が {{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} によって削除されるようにマークされると、(再び) 結合できなくなります。そうしようとしても `INVALID_OPERATION` エラーが生成されて、現在の結合は変更されません。
-
-## 例
-
-### バッファーをターゲットに結合
-
-```js
-var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-```
+</pre>
 
-### 現在結合されているものの取得
+<h3 id="現在結合されているものの取得">現在結合されているものの取得</h3>
 
-現在のバッファー結合を確認するには、`ARRAY_BUFFER_BINDING` や `ELEMENT_ARRAY_BUFFER_BINDING` の定数で問い合わせます。
+<p>現在のバッファー結合を確認するには、<code>ARRAY_BUFFER_BINDING</code> や <code>ELEMENT_ARRAY_BUFFER_BINDING</code> の定数で問い合わせます。</p>
 
-```js
-gl.getParameter(gl.ARRAY_BUFFER_BINDING);
+<pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
-```
+</pre>
 
-## 仕様策定状況
+<h2 id="仕様策定状況">仕様策定状況</h2>
 
-| 仕様                                                                                     | 策定状況                             | コメント                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "bindBuffer")}}                             | {{Spec2('WebGL')}}             | WebGL 初回定義。                                                                                                                                                                                                          |
-| {{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL ES 2 API (と同様な) マニュアルページ。                                                                                                                                                                             |
-| {{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}                             | {{Spec2('WebGL2')}}             | WebGL 2 のために定義を更新。以下の新しい `target` バッファーを追加。 `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` |
-| {{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}} | {{Spec2('OpenGL ES 3.0')}} | OpenGL ES 3 API (と同様な) マニュアルページ。                                                                                                                                                                             |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.5", "bindBuffer")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>WebGL 初回定義。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>OpenGL ES 2 API (と同様な) マニュアルページ。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}</td>
+   <td>{{Spec2('WebGL2')}}</td>
+   <td>
+    <p>WebGL 2 のために定義を更新。</p>
 
-## ブラウザーの対応
+    <p>以下の新しい <code>target</code> バッファーを追加。<br>
+     <code>gl.COPY_READ_BUFFER</code>,<br>
+     <code>gl.COPY_WRITE_BUFFER</code>,<br>
+     <code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>
+     <code>gl.UNIFORM_BUFFER</code>,<br>
+     <code>gl.PIXEL_PACK_BUFFER</code>,<br>
+     <code>gl.PIXEL_UNPACK_BUFFER</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}}</td>
+   <td>{{Spec2('OpenGL ES 3.0')}}</td>
+   <td>OpenGL ES 3 API (と同様な) マニュアルページ。</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.WebGLRenderingContext.bindBuffer")}}
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-## 関連項目
+<p>{{Compat("api.WebGLRenderingContext.bindBuffer")}}</p>
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- 他のバッファ: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
+ <li>他のバッファ: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
+</ul>

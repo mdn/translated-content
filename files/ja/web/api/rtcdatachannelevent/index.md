@@ -3,47 +3,63 @@ title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 translation_of: Web/API/RTCDataChannelEvent
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-**`RTCDataChannelEvent`** インタフェースは{{domxref("RTCPeerConnection")}}へ{{domxref("RTCDataChannel")}}をアタッチしている時に発生するイベントを表現します。イベントタイプは、{{event("datachannel")}}です。
+<p><code><strong>RTCDataChannelEvent</strong></code> インタフェースは{{domxref("RTCPeerConnection")}}へ{{domxref("RTCDataChannel")}}をアタッチしている時に発生するイベントを表現します。イベントタイプは、{{event("datachannel")}}です。</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。_
+<p><em>{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。</em></p>
 
-- {{domxref("RTCDataChannelEvent.channel")}} {{readOnlyInline}}
-  - : このイベントに関連付けられたデータチャンネルを含む{{domxref("RTCDataChannel")}}を含みます。
+<dl>
+ <dt>{{domxref("RTCDataChannelEvent.channel")}} {{readOnlyInline}}</dt>
+ <dd>このイベントに関連付けられたデータチャンネルを含む{{domxref("RTCDataChannel")}}を含みます。</dd>
+</dl>
 
-## コンストラクタ
+<h2 id="コンストラクタ">コンストラクタ</h2>
 
-- {{domxref("RTCDataChannelEvent.RTCDataChannelEvent()", "RTCDataChannelEvent()")}}
-  - : `新しいRTCDataChannelEvent`を返します。このコンストラクタは 2 つの引数を持ち、最初の引数は、イベントタイプを表す {{domxref("DOMString")}} で、2 つ目の引数は{{domxref("RTCDataChannel")}}を含むディクショナリです。
+<dl>
+ <dt>{{domxref("RTCDataChannelEvent.RTCDataChannelEvent()", "RTCDataChannelEvent()")}}</dt>
+ <dd><code><font face="Open Sans, Arial, sans-serif">新しい</font>RTCDataChannelEvent</code>を返します。このコンストラクタは2つの引数を持ち、最初の引数は、イベントタイプを表す {{domxref("DOMString")}} で、2つ目の引数は{{domxref("RTCDataChannel")}}を含むディクショナリです。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。_ 具体的な {{domxref("RTCDataChannelEvent")}} メソッドはありません。\_\_
+<p><em>{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。</em> 具体的な<em> <em>{{domxref("RTCDataChannelEvent")}} メソッドはありません。</em></em></p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-pc.ondatachannel = function( ev ) {
+<pre class="brush: js">pc.ondatachannel = function( ev ) {
                       alert("The data channel " +
                             ev.channel.label +
                             " has been added to this connection.");
                    }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannelEvent', 'RTCDataChannelEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannelEvent', 'RTCDataChannelEvent') }}</td>
+   <td>{{Spec2('WebRTC 1.0')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.RTCDataChannelEvent")}}
+<p>{{Compat("api.RTCDataChannelEvent")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.
+<ul>
+ <li><a href="/ja/docs/Web/Guide/API/WebRTC" title="/en-US/docs/CSS/Using_CSS_animations">WebRTC</a></li>
+ <li>このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.</li>
+</ul>

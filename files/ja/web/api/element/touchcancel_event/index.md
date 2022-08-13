@@ -11,31 +11,61 @@ tags:
   - touch
 translation_of: Web/API/Element/touchcancel_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`touchcancel` イベントは、１つ以上のタッチポイントが実装固有の方法で中断されたときに発生します(例えば、タッチポイントが多すぎるとき)。
 
-| Bubbles                | Yes                                                                                      |
-| ---------------------- | ---------------------------------------------------------------------------------------- |
-| Cancelable             | No                                                                                       |
-| Interface              | {{domxref("TouchEvent")}}                                                         |
-| Event handler property | {{ DOMxRef("GlobalEventHandlers.ontouchcancel","ontouchcancel")}} |
 
-## 例
+<p><span class="seoSummary"><code>touchcancel</code> イベントは、１つ以上のタッチポイントが実装固有の方法で中断されたときに発生します(例えば、タッチポイントが多すぎるとき)。</span></p>
 
-サンプルコードはこちらです。 [Touch events](/ja/DOM/Touch_events).
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>Bubbles</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th>Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th>Interface</th>
+   <td>{{domxref("TouchEvent")}}</td>
+  </tr>
+  <tr>
+   <th>Event handler property</th>
+   <td>{{ DOMxRef("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 仕様
+<h2 id="例">例</h2>
 
-| Specification                                                        | Status                           |
-| -------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchcancel')}} | {{Spec2('Touch Events')}} |
+<p>サンプルコードはこちらです。 <a href="/ja/DOM/Touch_events">Touch events</a>.</p>
 
-## ブラウザ互換性
+<h2 id="仕様">仕様</h2>
 
-{{Compat("api.Element.touchcancel_event")}}
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events', '#event-touchcancel')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 参照
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-- {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
-- This event on [`Document`](/ja/docs/Web/API/Document) targets: [`touchcancel`](/ja/docs/Web/API/Document/touchcancel_event)
+
+
+<p>{{Compat("api.Element.touchcancel_event")}}</p>
+
+<h2 id="参照">参照</h2>
+
+<ul>
+ <li>{{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</li>
+ <li>This event on <code><a href="/ja/docs/Web/API/Document">Document</a></code> targets: <code><a href="/ja/docs/Web/API/Document/touchcancel_event">touchcancel</a> </code></li>
+</ul>

@@ -10,22 +10,22 @@ tags:
 translation_of: Web/API/MessagePort/onmessage
 original_slug: Web/API/MessagePort/onmessage
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("MessagePort")}} インターフェイスの **`onmessage`** イベントハンドラは、{{domxref("EventListener")}} であり、ポート上で `message` 型の {{domxref("MessageEvent")}} が発動した時に呼び出されます。つまり、ポートがメッセージを受信した時に呼び出されます。
+<p>{{domxref("MessagePort")}} インターフェイスの <code><strong>onmessage</strong></code> イベントハンドラは、{{domxref("EventListener")}} であり、ポート上で <code>message</code> 型の {{domxref("MessageEvent")}} が発動した時に呼び出されます。つまり、ポートがメッセージを受信した時に呼び出されます。
+</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    channel.onmessage = function() { ... };
+<pre class="syntaxbox">channel.onmessage = function() { ... };</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-次のコードブロックには、{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} コンストラクタで作成された新しいチャンネルがあります。IFrame が読み込まれた時、{{domxref("MessagePort.postMessage")}} を使用してメッセージと {{domxref("MessageChannel.port2")}} が IFrame へ渡されます。すると、`handleMessage` ハンドラが `onmessage` によって IFrame から返されたメッセージに応答し、そのメッセージを段落に出力します。ここで、{{domxref("MessageChannel.port1")}} は、メッセージが到着したときに確認するための待機状態にあります。
+<p>次のコードブロックには、{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} コンストラクタで作成された新しいチャンネルがあります。IFrame が読み込まれた時、{{domxref("MessagePort.postMessage")}} を使用してメッセージと {{domxref("MessageChannel.port2")}} が IFrame へ渡されます。すると、<code>handleMessage</code> ハンドラが <code>onmessage</code> によって IFrame から返されたメッセージに応答し、そのメッセージを段落に出力します。ここで、{{domxref("MessageChannel.port1")}} は、メッセージが到着したときに確認するための待機状態にあります。</p>
 
-```js
-var channel = new MessageChannel();
+<pre class="brush: js">var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -40,22 +40,38 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}
-```
+}   </pre>
 
-完全に動作する例は、Github 上の [チャンネルメッセージ送信の基本デモ](https://github.com/mdn/channel-messaging-basic-demo) を見てください ([実際の動作も確認できます](http://mdn.github.io/channel-messaging-basic-demo/))。
+<p>完全に動作する例は、Github 上の <a class="external external-icon" href="https://github.com/mdn/channel-messaging-basic-demo">チャンネルメッセージ送信の基本デモ</a> を見てください (<a class="external external-icon" href="http://mdn.github.io/channel-messaging-basic-demo/">実際の動作も確認できます</a>)。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                       | 策定状況                                     | 備考                                                            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#handler-messageport-onmessage','onmessage')}}             | {{Spec2('HTML WHATWG')}}             | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
-| {{SpecName('HTML5 Web Messaging', '#handler-messageport-onmessage','onmessage')}} | {{Spec2('HTML5 Web Messaging')}} | 仕様の W3C バージョン。                                         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-messageport-onmessage','onmessage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>{{SpecName("HTML5 Web Messaging")}} との差異なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 Web Messaging', '#handler-messageport-onmessage','onmessage')}}</td>
+   <td>{{Spec2('HTML5 Web Messaging')}}</td>
+   <td>仕様の W3C バージョン。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの実装状況</h2>
 
-{{Compat("api.MessagePort.onmessage")}}
+<p>{{Compat("api.MessagePort.onmessage")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

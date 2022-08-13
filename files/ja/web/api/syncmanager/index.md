@@ -3,27 +3,44 @@ title: SyncManager
 slug: Web/API/SyncManager
 translation_of: Web/API/SyncManager
 ---
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+<p>{{APIRef("Service Workers API")}}{{Non-standard_header}}</p>
 
-[ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) の **`SyncManager`** インターフェイスは同期登録を登録、及び一覧表示のインターフェイスを提供します。
+<p><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> の <strong><code>SyncManager</code></strong> インターフェイスは同期登録を登録、及び一覧表示のインターフェイスを提供します。</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-無し
+<p>無し</p>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-- {{domxref("SyncManager.register")}}
-  - : 新規の同期登録を作成し {{jsxref("Promise")}} を返します。
-- {{domxref("SyncManager.getTags")}}
-  - : SyncManager 登録の為にデベロッパーが定義した識別子リストを返します。
+<dl>
+ <dt>{{domxref("SyncManager.register")}}</dt>
+ <dd>新規の同期登録を作成し {{jsxref("Promise")}} を返します。</dd>
+ <dt>{{domxref("SyncManager.getTags")}}</dt>
+ <dd>SyncManager 登録の為にデベロッパーが定義した識別子リストを返します。</dd>
+</dl>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                             | 状態                                 | コメント            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Background Sync','#sync-manager-interface','SyncManager')}} | {{Spec2('Background Sync')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Background Sync','#sync-manager-interface','SyncManager')}}</td>
+   <td>{{Spec2('Background Sync')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性"><span style="font-size: 2.14285714285714rem;">ブラウザの互換性</span></h2>
 
-{{Compat("api.SyncManager")}}
+<div>
+
+
+<p>{{Compat("api.SyncManager")}}</p>
+</div>

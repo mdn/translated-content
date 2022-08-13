@@ -9,41 +9,60 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleSheet/deleteRule
 ---
-{{APIRef("CSSOM")}}
+<p>{{APIRef("CSSOM")}}</p>
 
-**`CSSStyleSheet.deleteRule()`** メソッドは、スタイル規則を現在のスタイルシートオブジェクトから削除します。
+<p><code><strong>CSSStyleSheet.deleteRule()</strong></code> メソッドは、スタイル規則を現在のスタイルシートオブジェクトから削除します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    stylesheet.deleteRule(index)
+<pre class="syntaxbox">stylesheet.deleteRule(<em>index</em>)
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `index` は、規則の位置を表す倍精度整数値。
+<ul>
+ <li><code>index</code> は、規則の位置を表す倍精度整数値。</li>
+</ul>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-_無効。_
+<p><em>無効。</em></p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
- myStyles.deleteRule(0);
-```
+<pre class="brush:js"> myStyles.deleteRule(0);
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                                           | 策定状況                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM", "#dom-cssstylesheet-deleterule", 'CSSStyleSheet.deleteRule()')}}                 | {{Spec2("CSSOM")}}         |          |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet-deleteRule", "CSSStyleSheet.deleteRule()")}} | {{Spec2("DOM2 Style")}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>仕様書</th>
+   <th>策定状況</th>
+   <th>備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM", "#dom-cssstylesheet-deleterule", 'CSSStyleSheet.deleteRule()')}}</td>
+   <td>{{Spec2("CSSOM")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet-deleteRule", "CSSStyleSheet.deleteRule()")}}</td>
+   <td>{{Spec2("DOM2 Style")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.CSSStyleSheet.deleteRule")}}
+<p>{{Compat("api.CSSStyleSheet.deleteRule")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("CSSStyleSheet.insertRule")}}
-- [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)
+<ul>
+ <li>{{domxref("CSSStyleSheet.insertRule")}}</li>
+ <li><a class="external" href="http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority">Cross-Browser CSS-rules ordering (CSS1)</a></li>
+ <li><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html">Quirksmode - CSS</a></li>
+</ul>

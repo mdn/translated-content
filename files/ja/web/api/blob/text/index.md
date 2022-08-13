@@ -14,45 +14,64 @@ tags:
   - read
 translation_of: Web/API/Blob/text
 ---
-{{APIRef("File API")}}
+<div>{{APIRef("File API")}}</div>
 
-{{domxref("Blob")}} インターフェイスの **`text()`** メソッドは {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、UTF-8 として解釈されます。
+<p><span class="seoSummary">{{domxref("Blob")}} インターフェイスの <code><strong>text()</strong></code> メソッドは {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、UTF-8 として解釈されます。</span></p>
 
-## シンタックス
+<ul>
+</ul>
 
-    var textPromise = blob.text();
+<h2 id="シンタックス">シンタックス</h2>
 
-    blob.text().then(text => /* テキストに対して処理をする */);
+<pre class="syntaxbox notranslate">var <em>textPromise</em> = <em>blob</em>.text();
 
-    var text = await blob.text();
+<em>blob</em>.text().then(<em>text</em> =&gt; /* テキストに対して処理をする */);
 
-### パラメータ
+var <em>text</em> = await <em>blob</em>.text();
+</pre>
 
-なし
+<h3 id="パラメータ">パラメータ</h3>
 
-### 戻り値
+<p>なし</p>
 
-Blob のデータをテキスト文字列として含む {{domxref("USVString")}} で解決する Promise。データは*常に* UTF-8 形式であると推定されます。
+<h3 id="戻り値">戻り値</h3>
 
-## 使用上のメモ
+<p>Blob のデータをテキスト文字列として含む {{domxref("USVString")}} で解決する Promise。データは<em>常に</em> UTF-8 形式であると推定されます。</p>
 
-{{domxref("FileReader")}} メソッド {{domxref("FileReader.readAsText", "readAsText()")}} は、同様の機能を実行する古いメソッドです。これは、`Blob` と {{domxref("File")}} オブジェクトの両方で動作します。主な違いは 2 つあります。
+<h2 id="使用上のメモ">使用上のメモ</h2>
 
-- `Blob.text()` が Promise を返すのに対し、`FileReader.readAsText()` はイベントベースの API です
-- `Blob.text()` は常にエンコーディングとして UTF-8 を使用しますが、`FileReader.readAsText()` は Blob のタイプと指定されたエンコーディング名に応じて異なるエンコーディングを使用することができます
+<p>{{domxref("FileReader")}} メソッド {{domxref("FileReader.readAsText", "readAsText()")}} は、同様の機能を実行する古いメソッドです。これは、<code>Blob</code> と {{domxref("File")}} オブジェクトの両方で動作します。主な違いは2つあります。</p>
 
-## 仕様
+<ul>
+ <li><code>Blob.text()</code> が Promise を返すのに対し、<code>FileReader.readAsText()</code> はイベントベースの API です</li>
+ <li><code>Blob.text()</code> は常にエンコーディングとして UTF-8 を使用しますが、<code>FileReader.readAsText()</code> は Blob のタイプと指定されたエンコーディング名に応じて異なるエンコーディングを使用することができます</li>
+</ul>
 
-| 仕様書                                                                       | ステータス                   | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("File API", "#dom-blob-text", "Blob.text()")}} | {{Spec2("File API")}} |          |
+<h2 id="仕様">仕様</h2>
 
-## ブラウザの互換性
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("File API", "#dom-blob-text", "Blob.text()")}}</td>
+   <td>{{Spec2("File API")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.Blob.text")}}
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-## あわせて参照
+<p>{{Compat("api.Blob.text")}}</p>
 
-- {{domxref("Body.text()")}}
-- [Streams API](/ja/docs/Web/API/Streams_API)
-- {{domxref("FileReader.readAsText()")}}
+<h2 id="あわせて参照">あわせて参照</h2>
+
+<ul>
+ <li>{{domxref("Body.text()")}}</li>
+ <li><a href="/ja/docs/Web/API/Streams_API">Streams API</a></li>
+ <li>{{domxref("FileReader.readAsText()")}}</li>
+</ul>

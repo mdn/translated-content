@@ -12,24 +12,23 @@ tags:
   - WritableStreamDefaultWriter
 translation_of: Web/API/WritableStreamDefaultWriter/ready
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`ready`** 読み取り専用プロパティは、ストリームの内部キューの目的のサイズが非正から正に移行したときに解決する {{jsxref("Promise")}} を返し、バックプレッシャーが適用されなくなったことを通知します。
+<p>{{domxref("WritableStreamDefaultWriter")}} インターフェイスの <strong><code>ready</code></strong> 読み取り専用プロパティは、ストリームの内部キューの目的のサイズが非正から正に移行したときに解決する {{jsxref("Promise")}} を返し、バックプレッシャーが適用されなくなったことを通知します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = writableStreamDefaultWriter.ready;
+<pre class="syntaxbox">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.ready;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{jsxref("Promise")}}。
+<p>{{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-次の例は、`ready` プロパティの 2 つの使用法を示しています。 最初は `ready` を使用して、`WritableStream` が書き込みを完了し、バイナリチャンクを送信する前にデータを受信できるようにします。 2 番目も、`WritableStream` の書き込みが完了しているかどうかをチェックしますが、今度はライターを閉じる前に書き込みを終了する必要があるためです。
+<p>次の例は、<code>ready</code> プロパティの2つの使用法を示しています。 最初は <code>ready</code> を使用して、<code>WritableStream</code> が書き込みを完了し、バイナリチャンクを送信する前にデータを受信できるようにします。 2番目も、<code>WritableStream</code> の書き込みが完了しているかどうかをチェックしますが、今度はライターを閉じる前に書き込みを終了する必要があるためです。</p>
 
-```js
-function sendMessage(message, writableStream) {
+<pre class="brush: js">function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
   var defaultWriter = writableStream.getWriter();
   var encoder = new TextEncoder();
@@ -60,15 +59,27 @@ function sendMessage(message, writableStream) {
       });
     });
   });
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Streams','#default-writer-ready','ready')}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Streams','#default-writer-ready','ready')}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WritableStreamDefaultWriter.ready")}}
+
+
+<p>{{Compat("api.WritableStreamDefaultWriter.ready")}}</p>

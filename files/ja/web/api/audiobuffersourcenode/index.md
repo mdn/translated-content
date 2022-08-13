@@ -3,123 +3,164 @@ title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 translation_of: Web/API/AudioBufferSourceNode
 ---
-{{APIRef("Web Audio API")}}
+<p>{{APIRef("Web Audio API")}}</p>
 
-**`AudioBufferSourceNode`**は{{domxref("AudioScheduledSourceNode")}}を継承するインタフェースで、{{domxref("AudioBuffer")}}に保存されたインメモリ音声データからなるオーディオソースを表します。`AudioBufferSourceNode`は、再生するタイミングに高い正確性が求められる音声を繰り返し再生する場合特に有益です。例えば、特定のリズムに合わせて、ディスクやネットワークからではなくメモリから読みだした音声を再生するといった場合です。正確なタイミングで音声を再生したいものの、音声データがディスクやネットワークから読み込まれる必要がある場合は{{domxref("AudioWorkletNode")}}を使用してください。
+<div class="summary">
+<p><span class="seoSummary"><strong><code>AudioBufferSourceNode</code></strong>は{{domxref("AudioScheduledSourceNode")}}を継承するインタフェースで、{{domxref("AudioBuffer")}}に保存されたインメモリ音声データからなるオーディオソースを表します。<code>AudioBufferSourceNode</code>は、再生するタイミングに高い正確性が求められる音声を繰り返し再生する場合特に有益です。例えば、特定のリズムに合わせて、ディスクやネットワークからではなくメモリから読みだした音声を再生するといった場合です。正確なタイミングで音声を再生したいものの、音声データがディスクやネットワークから読み込まれる必要がある場合は{{domxref("AudioWorkletNode")}}を使用してください。</span></p>
 
-{{InheritanceDiagram(600, 140)}}
+<p>{{InheritanceDiagram(600, 140)}}</p>
 
-`AudioBufferSourceNode` は入力がなく、その出力は 1 つで、出力されるチャンネル数は AudioBufferSourceNode.buffer で参照される {{domxref("AudioBuffer")}} のチャンネル数によって決まります。この属性値が NULL の場合、つまりバッファがセットされていない場合、無音が出力されます。{{domxref("AudioBufferSourceNode")}}は一度しか再生できません。つまり、`AudioBufferSourceNode.start()`の呼び出しは一度しかできません。もし、再び再生するならば、別の`AudioBufferSourceNode`を生成する必要があります。これらのノードは安価に生成でき、`AudioBuffer`は何度も再生できます。よく`AudioBufferSourceNode`は「撃ちっぱなし」で使わなければならない、と言われます。つまり、一度再生を始めると、そのノードへの参照はなくなり、自動的にガベージコレクトされます。
+<p><code>AudioBufferSourceNode</code> は入力がなく、その出力は 1 つで、出力されるチャンネル数は AudioBufferSourceNode.buffer で参照される {{domxref("AudioBuffer")}} のチャンネル数によって決まります。この属性値が NULL の場合、つまりバッファがセットされていない場合、無音が出力されます。{{domxref("AudioBufferSourceNode")}}は一度しか再生できません。つまり、<code>AudioBufferSourceNode.start()</code>の呼び出しは一度しかできません。もし、再び再生するならば、別の<code>AudioBufferSourceNode</code>を生成する必要があります。これらのノードは安価に生成でき、<code>AudioBuffer</code>は何度も再生できます。よく<code>AudioBufferSourceNode</code>は「撃ちっぱなし」で使わなければならない、と言われます。つまり、一度再生を始めると、そのノードへの参照はなくなり、自動的にガベージコレクトされます。</p>
+</div>
 
-`AudioBufferSourceNode.stop()`は何度も呼ぶことができます。`AudioBufferSourceNode`がバッファの最後に達していないならば、最後の呼び出しがその前の呼び出しを上書きします。
+<p><code>AudioBufferSourceNode.stop()</code>は何度も呼ぶことができます。<code>AudioBufferSourceNode</code>がバッファの最後に達していないならば、最後の呼び出しがその前の呼び出しを上書きします。</p>
 
-![The AudioBufferSourceNode takes the content of an AudioBuffer and m](https://mdn.mozillademos.org/files/5155/WebAudioAudioBufferSourceNode.png)
+<p><br>
+ <img alt="The AudioBufferSourceNode takes the content of an AudioBuffer and m" src="https://mdn.mozillademos.org/files/5155/WebAudioAudioBufferSourceNode.png" style="display: block; height: 200px; margin: 0px auto; width: 376px;"></p>
 
-| Number of inputs  | `0`                                                            |
-| ----------------- | -------------------------------------------------------------- |
-| Number of outputs | `1`                                                            |
-| Channel count     | defined by the associated {{domxref("AudioBuffer")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Number of inputs</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Number of outputs</th>
+   <td><code>1</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Channel count</th>
+   <td>defined by the associated {{domxref("AudioBuffer")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## コンストラクタ
+<h2 id="コンストラクタ">コンストラクタ</h2>
 
-- {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
-  - : `AudioBufferSourceNode` オブジェクトを新しく作成して返します。{{domxref("AudioBufferSourceNode")}}は{{domxref("AudioContext.createBufferSource()")}}メソッドを用いてインスタンス化することができます。
+<dl>
+ <dt>{{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}</dt>
+ <dd><code>AudioBufferSourceNode</code> オブジェクトを新しく作成して返します。{{domxref("AudioBufferSourceNode")}}は{{domxref("AudioContext.createBufferSource()")}}メソッドを用いてインスタンス化することができます。</dd>
+</dl>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_親である{{domxref("AudioNode")}}のプロパティを継承しています。_
+<p><em>親である{{domxref("AudioNode")}}のプロパティを継承しています。</em></p>
 
-- {{domxref("AudioBufferSourceNode.buffer")}}
-  - : 再生される音声の{{domxref("AudioBuffer")}}です。NULL の場合 1 チャンネルからなる無音の音声（すべてのサンプルが 0.0）です。
-- {{domxref("AudioBufferSourceNode.detune")}}
-  - : [セント](https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%B3%E3%83%88_%28%E9%9F%B3%E6%A5%BD%29)単位のデチューンを表す[k-rate](/ja/docs/DOM/AudioParam#k-rate){{domxref("AudioParam")}}です。この値と`playbackRate`の組み合わせで音声が再生される速度が決定されます。デフォルト値は 0（デチューンなし）で、公称範囲は -∞ から ∞ です。
-- {{domxref("AudioBufferSourceNode.loop")}}
-  - : {{domxref("AudioBuffer")}}の最後に達したとき再び再生するかを表すブール値です。デフォルトは`false`です。
-- {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}
-  - : `loop`が`true`のとき、{{domxref("AudioBuffer")}}を再び再生する位置(秒単位)を表す浮動小数点数です。デフォルトは 0 で、これは音声の初めからループが始まることを意味します。
-- {{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}
-  - : `loop`が`true`のとき、{{domxref("AudioBuffer")}}の再生を停止して`loopStart`の地点に戻る位置(秒単位)を表す浮動小数点数です。デフォルトは 0 です。
-- {{domxref("AudioBufferSourceNode.playbackRate")}}
-  - : 再生される音声の速度要素を表す[a-rate](/ja/docs/Web/API/AudioParam#a-rate){{domxref("AudioParam")}}です。この値が 1.0 のとき通常のサンプリングレートで出力されます。出力にピッチの修正が適用されない場合は、サンプルのピッチの変更に使うことができます。この値と`detune`の組み合わせで音声が再生される速度が決定されます。
+<dl>
+ <dt>{{domxref("AudioBufferSourceNode.buffer")}}</dt>
+ <dd>再生される音声の{{domxref("AudioBuffer")}}です。NULLの場合1チャンネルからなる無音の音声（すべてのサンプルが0.0）です。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.detune")}}</dt>
+ <dd><a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%B3%E3%83%88_%28%E9%9F%B3%E6%A5%BD%29">セント</a>単位のデチューンを表す<a href="/ja/docs/DOM/AudioParam#k-rate">k-rate</a>{{domxref("AudioParam")}}です。この値と<code>playbackRate</code>の組み合わせで音声が再生される速度が決定されます。デフォルト値は0（デチューンなし）で、公称範囲は -∞ から ∞ です。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.loop")}}</dt>
+ <dd>{{domxref("AudioBuffer")}}の最後に達したとき再び再生するかを表すブール値です。デフォルトは<code>false</code>です。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}</dt>
+ <dd><code>loop</code>が<code>true</code>のとき、{{domxref("AudioBuffer")}}を再び再生する位置(秒単位)を表す浮動小数点数です。デフォルトは0で、これは音声の初めからループが始まることを意味します。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}</dt>
+ <dd><code>loop</code>が<code>true</code>のとき、{{domxref("AudioBuffer")}}の再生を停止して<code>loopStart</code>の地点に戻る位置(秒単位)を表す浮動小数点数です。デフォルトは0です。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.playbackRate")}}</dt>
+ <dd>再生される音声の速度要素を表す<a href="/ja/docs/Web/API/AudioParam#a-rate">a-rate</a>{{domxref("AudioParam")}}です。この値が1.0のとき通常のサンプリングレートで出力されます。出力にピッチの修正が適用されない場合は、サンプルのピッチの変更に使うことができます。この値と<code>detune</code>の組み合わせで音声が再生される速度が決定されます。</dd>
+</dl>
 
-### イベントハンドラ
+<h3 id="イベントハンドラ">イベントハンドラ</h3>
 
-_親である{{domxref("AudioScheduledSourceNode")}}のイベントハンドラを継承しています。_
+<p><em>親である{{domxref("AudioScheduledSourceNode")}}のイベントハンドラを継承しています。</em></p>
 
-- {{domxref("AudioBufferSourceNode.onended")}}
-  - : {{event("ended_(Web_Audio)", "ended")}}イベントに関するコールバックを格納したイベントハンドラです。
+<dl>
+ <dt>{{domxref("AudioBufferSourceNode.onended")}}</dt>
+ <dd>{{event("ended_(Web_Audio)", "ended")}}イベントに関するコールバックを格納したイベントハンドラです。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_親である{{domxref("AudioNode")}}のメソッドを継承しています。_
+<p><em>親である{{domxref("AudioNode")}}のメソッドを継承しています。</em></p>
 
-- {{domxref("AudioBufferSourceNode.start()")}}
-  - : 設定された音声の再生をスケジュールするか、直ちに再生します。
-- {{domxref("AudioBufferSourceNode.stop()")}}
-  - : 設定された音声の再生の停止をスケジュールするか、直ちに停止します。
+<dl>
+ <dt>{{domxref("AudioBufferSourceNode.start()")}}</dt>
+ <dd>設定された音声の再生をスケジュールするか、直ちに再生します。</dd>
+ <dt>{{domxref("AudioBufferSourceNode.stop()")}}</dt>
+ <dd>設定された音声の再生の停止をスケジュールするか、直ちに停止します。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例は、2 秒間のバッファを生成し、ホワイトノイズを書き込み、[`AudioBufferSourceNode`](/ja/docs/Web/API/AudioBufferSourceNode "The AudioBufferSourceNode インタフェーエスはメモリ上にある音声データ (AudioBuffer) を扱うオーディオソースを表します。このオブジェクトはオーディオソースとなる AudioNode です。")で再生します。コメントは何をしているかを簡単に説明しています。
+<p>次の例は、2秒間のバッファを生成し、ホワイトノイズを書き込み、<a href="/ja/docs/Web/API/AudioBufferSourceNode" title="The AudioBufferSourceNode インタフェーエスはメモリ上にある音声データ (AudioBuffer) を扱うオーディオソースを表します。このオブジェクトはオーディオソースとなる AudioNode です。"><code>AudioBufferSourceNode</code></a>で再生します。コメントは何をしているかを簡単に説明しています。</p>
 
-> **Note:** **注:** [コードをすぐに実行する](https://mdn.github.io/webaudio-examples/audio-buffer/)ことや、[ソースコードを閲覧する](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)こともできます。
+<div class="note">
+<p><strong>注: </strong><a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/">コードをすぐに実行する</a>ことや、<a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">ソースコードを閲覧する</a>こともできます。</p>
+</div>
 
-```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">var</span> audioCtx <span class="operator token">=</span> <span class="keyword token">new</span> <span class="punctuation token">(</span>window<span class="punctuation token">.</span>AudioContext <span class="operator token">||</span> window<span class="punctuation token">.</span>webkitAudioContext<span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> button <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector<span class="punctuation token">(</span></span><span class="string token">'button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> pre <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector<span class="punctuation token">(</span></span><span class="string token">'pre'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> myScript <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector<span class="punctuation token">(</span></span><span class="string token">'script'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
-pre.innerHTML = myScript.innerHTML;
+pre<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> myScript<span class="punctuation token">.</span>innerHTML<span class="punctuation token">;</span>
+<span class="comment token">
+// </span></code>ステレオ<code class="language-js"><span class="comment token">
+</span><span class="keyword token">var</span> channels <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span><span class="comment token">
+// </span></code>AudioContextのサンプルレートで2秒間の空のステレオバッファを生成する<code class="language-js"><span class="comment token">
+</span><span class="keyword token">var</span> frameCount <span class="operator token">=</span> audioCtx<span class="punctuation token">.</span>sampleRate <span class="operator token">*</span> <span class="number token">2.0</span><span class="punctuation token">;</span>
 
-// ステレオ
-var channels = 2;
-// AudioContextのサンプルレートで2秒間の空のステレオバッファを生成する
-var frameCount = audioCtx.sampleRate * 2.0;
+<span class="keyword token">var</span> myArrayBuffer <span class="operator token">=</span> audioCtx<span class="punctuation token">.</span><span class="function token">createBuffer<span class="punctuation token">(</span></span><span class="number token">2</span><span class="punctuation token">,</span> frameCount<span class="punctuation token">,</span> audioCtx<span class="punctuation token">.</span>sampleRate<span class="punctuation token">)</span><span class="punctuation token">;</span>
 
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+button<span class="punctuation token">.</span>onclick <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+ <span class="comment token"> // </span></code>バッファにホワイトノイズを書き込む;
+  // 単なる-1.0から1.0の間の乱数の値である<code class="language-js"><span class="comment token">
+</span>  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> channel <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> channel <span class="operator token">&lt;</span> channels<span class="punctuation token">;</span> channel<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="comment token"> // </span></code>実際のデータの配列を得る<code class="language-js"><span class="comment token">
+</span>   <span class="keyword token">var</span> nowBuffering <span class="operator token">=</span> myArrayBuffer<span class="punctuation token">.</span><span class="function token">getChannelData<span class="punctuation token">(</span></span>channel<span class="punctuation token">)</span><span class="punctuation token">;</span>
+   <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> frameCount<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="comment token"> // </span></code>Math.random()は[0; 1.0]である
+     // 音声は[-1.0; 1.0]である必要がある<code class="language-js"><span class="comment token">
+</span>     nowBuffering<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">random<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="number token">2</span> <span class="operator token">-</span> <span class="number token">1</span><span class="punctuation token">;</span>
+   <span class="punctuation token">}</span>
+  <span class="punctuation token">}</span>
 
-button.onclick = function() {
-  // バッファにホワイトノイズを書き込む;
-  // 単なる-1.0から1.0の間の乱数の値である
-  for (var channel = 0; channel < channels; channel++) {
-   // 実際のデータの配列を得る
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random()は[0; 1.0]である
-     // 音声は[-1.0; 1.0]である必要がある
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
-  }
+ <span class="comment token"> // </span></code>AudioBufferSourceNodeを得る
+  // これはAudioBufferを再生するときに使うAudioNodeである<code class="language-js"><span class="comment token">
+</span>  <span class="keyword token">var</span> source <span class="operator token">=</span> audioCtx<span class="punctuation token">.</span><span class="function token">createBufferSource<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+ <span class="comment token"> // </span></code>AudioBufferSourceNodeにバッファを設定する<code class="language-js"><span class="comment token">
+</span>  source<span class="punctuation token">.</span>buffer <span class="operator token">=</span> myArrayBuffer<span class="punctuation token">;</span>
+ <span class="comment token"> // </span></code>AudioBufferSourceNodeを出力先に接続すると音声が聞こえるようになる<code class="language-js"><span class="comment token">
+</span>  source<span class="punctuation token">.</span><span class="function token">connect<span class="punctuation token">(</span></span>audioCtx<span class="punctuation token">.</span>destination<span class="punctuation token">)</span><span class="punctuation token">;</span>
+ <span class="comment token"> // </span></code>音源の再生を始める<code class="language-js"><span class="comment token">
+</span>  source<span class="punctuation token">.</span><span class="function token">start<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
 
-  // AudioBufferSourceNodeを得る
-  // これはAudioBufferを再生するときに使うAudioNodeである
-  var source = audioCtx.createBufferSource();
-  // AudioBufferSourceNodeにバッファを設定する
-  source.buffer = myArrayBuffer;
-  // AudioBufferSourceNodeを出力先に接続すると音声が聞こえるようになる
-  source.connect(audioCtx.destination);
-  // 音源の再生を始める
-  source.start();
-}
-```
+<div class="note">
+<p><strong>注:</strong> <code>decodeAudioData</code>の例は、{{domxref("AudioContext.decodeAudioData")}}のページを参照してください。</p>
+</div>
 
-> **Note:** **注:** `decodeAudioData`の例は、{{domxref("AudioContext.decodeAudioData")}}のページを参照してください。
+<h2 id="仕様">仕様</h2>
 
-## 仕様
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-| Specification                                                                                                        | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-## ブラウザ互換性
+<p>{{Compat("api.AudioBufferSourceNode")}}</p>
 
-{{Compat("api.AudioBufferSourceNode")}}
+<h3 id="Chrome_notes">Chrome notes</h3>
 
-### Chrome notes
+<p>The buffer property was removed in {{CompatChrome(44.0)}}.</p>
+</div>
 
-The buffer property was removed in {{CompatChrome(44.0)}}.
+<p> </p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

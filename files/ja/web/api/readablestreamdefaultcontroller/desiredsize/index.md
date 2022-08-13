@@ -10,28 +10,39 @@ tags:
   - desiredSize
 translation_of: Web/API/ReadableStreamDefaultController/desiredSize
 ---
-{{APIRef("Streams")}}
+<div>{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStreamDefaultController")}} インターフェイスの **`desiredSize`** 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamDefaultController")}} インターフェイスの <strong><code>desiredSize</code></strong> 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var desiredSize = readableStreamDefaultController.desiredSize;
+<pre class="syntaxbox"><var><code>var <em>desiredSize</em> = </code>readableStreamDefaultController</var>.desiredSize;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-整数。 キューがいっぱいになった場合、これは負になる可能性があることに注意してください。
+<p>整数。 キューがいっぱいになった場合、これは負になる可能性があることに注意してください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-仕様にある[基になるプッシュソースとバックプレッシャーサポートのある読み取り可能なストリーム](https://streams.spec.whatwg.org/#example-rs-push-backpressure)の例は、`desiredSize` を使用してストリームがいっぱいになったことを手動で検出し、バックプレッシャーを適用する良い例を示しています。 また、{{domxref("ReadablestreamDefaultController.error()")}} を使用して、依存しているシステムの別の部分に障害が発生した場合に手動でストリームのエラーをトリガーします。
+<p>仕様にある<a href="https://streams.spec.whatwg.org/#example-rs-push-backpressure">基になるプッシュソースとバックプレッシャーサポートのある読み取り可能なストリーム</a>の例は、<code>desiredSize</code> を使用してストリームがいっぱいになったことを手動で検出し、バックプレッシャーを適用する良い例を示しています。 また、{{domxref("ReadablestreamDefaultController.error()")}} を使用して、依存しているシステムの別の部分に障害が発生した場合に手動でストリームのエラーをトリガーします。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                 | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-default-controller-desired-size","desiredSize")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#rs-default-controller-desired-size","desiredSize")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStreamDefaultController.desiredSize")}}
+<p>{{Compat("api.ReadableStreamDefaultController.desiredSize")}}</p>

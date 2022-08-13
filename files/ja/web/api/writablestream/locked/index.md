@@ -11,47 +11,56 @@ tags:
   - locked
 translation_of: Web/API/WritableStream/locked
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-{{domxref("WritableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、`WritableStream` がライターにロックされているかどうかを示すブール値を返します。
+<p class="summary"><span class="seoSummary">{{domxref("WritableStream")}} インターフェイスの <strong><code>locked</code></strong> 読み取り専用プロパティは、<code>WritableStream</code> がライターにロックされているかどうかを示すブール値を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var locked = writableStream.locked;
+<pre class="syntaxbox"><var><code>var <em>locked</em> = </code>writableStream</var>.locked;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-書き込み可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。
+<p>書き込み可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    ...
-  },
-  close() {
-    ...
-  },
-  abort(err) {
-    ...
-  }
-}, queuingStrategy);
+<pre class="brush: js"><code class="language-js"><span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  <span class="function token">close</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  <span class="punctuation token">}</span>
+<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
 
-...
+<span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span></code>
 
 const writer = writableStream.getWriter();
 
 writableStream.locked
-// ストリームがライターにロックされているため、true を返すべきです
-```
+// ストリームがライターにロックされているため、true を返すべきです</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                         | 状態                         | コメント |
-| ------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#ws-locked","locked")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#ws-locked","locked")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WritableStream.locked")}}
+<p>{{Compat("api.WritableStream.locked")}}</p>

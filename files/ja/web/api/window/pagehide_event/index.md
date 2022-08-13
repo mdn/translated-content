@@ -13,50 +13,82 @@ tags:
   - 履歴
 translation_of: Web/API/Window/pagehide_event
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**`pagehide`** イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxref("Window")}} へ送られます。例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に `pagehide` イベントを受け取ります。
+<p><span class="seoSummary"><strong><code>pagehide</code></strong> イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxref("Window")}} へ送られます。</span>例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に <code>pagehide</code> イベントを受け取ります。</p>
 
-| バブリング                   | なし                                                         |
-| ---------------------------- | ------------------------------------------------------------ |
-| キャンセル                   | 不可                                                         |
-| インターフェイス             | {{domxref("PageTransitionEvent")}}                 |
-| イベントハンドラープロパティ | {{domxref("Window.onpagehide", "onpagehide")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("PageTransitionEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("Window.onpagehide", "onpagehide")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この例では、イベントハンドラーが `pagehide` イベントを監視するために確立され、ページが再利用できるように保存されようとするときに特殊な扱いを行います。
+<p>この例では、イベントハンドラーが <code>pagehide</code> イベントを監視するために確立され、ページが再利用できるように保存されようとするときに特殊な扱いを行います。</p>
 
-```js
-window.addEventListener("pagehide", event => {
+<pre class="brush: js">window.addEventListener("pagehide", event =&gt; {
   if (event.persisted) {
     /* このページは破棄されないので、後で再利用することができます */
   }
 }, false);
-```
+</pre>
 
-これは {{domxref("Window.onpagehide", "onpagehide")}} イベントハンドラープロパティを {{domxref("Window")}} 上で利用することで書くこともできます。
+<p>これは {{domxref("Window.onpagehide", "onpagehide")}} イベントハンドラープロパティを {{domxref("Window")}} 上で利用することで書くこともできます。</p>
 
-```js
-window.onpagehide = event => {
+<pre class="brush: js">window.onpagehide = event =&gt; {
   if (event.persisted) {
     /* このページは破棄されないので、後で再利用することができます */
   }
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pagehide', 'pagehide')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pagehide', 'pagehide')}}             | {{Spec2('HTML5 W3C')}}     |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pagehide', 'pagehide')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初回定義</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'browsers.html#event-pagehide', 'pagehide')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.pagehide_event")}}
+<p>{{Compat("api.Window.pagehide_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Window.onpageshow", "onpageshow")}} イベントハンドラープロパティ
-- {{domxref("Window.pageshow_event", "pageshow")}} イベント
+<ul>
+ <li>{{domxref("Window.onpageshow", "onpageshow")}} イベントハンドラープロパティ</li>
+ <li>{{domxref("Window.pageshow_event", "pageshow")}} イベント</li>
+</ul>

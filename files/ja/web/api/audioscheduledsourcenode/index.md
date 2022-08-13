@@ -13,42 +13,65 @@ tags:
   - インターフェイス
 translation_of: Web/API/AudioScheduledSourceNode
 ---
-{{APIRef("Web Audio API")}}AudioScheduledSourceNode インターフェース (Web Audio API の一部分) は、オーディオソースノード各種の親インターフェースであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインタフェースでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.onended", "onended")}} イベントハンドラーを定義しています。
+<div>{{APIRef("Web Audio API")}}</div>
 
-> **Note:** AudioScheduledSourceNode オブジェクトは、直接作成することはできません。
-> かわりに、{{domxref("AudioBufferSourceNode")}} や、{{domxref("OscillatorNode")}}、または {{domxref("ConstantSourceNode")}} を使用してください。
+<div>AudioScheduledSourceNode インターフェース (Web Audio APIの一部分) は、オーディオソースノード各種の親インターフェースであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインタフェースでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.onended", "onended")}} イベントハンドラーを定義しています。</div>
 
-特に明記しない限り、AudioScheduledSourceNode をベースにしたノードは、再生されていない時 (つまり、start() の前や、stop() の後) は、無音を出力します。無音は、値がゼロ (0) であるサンプルストリームを、常に流し続けることで表現されています。
+<div> </div>
 
-## プロパティ
+<div class="note">
+<p>AudioScheduledSourceNode オブジェクトは、直接作成することはできません。<br>
+ かわりに、{{domxref("AudioBufferSourceNode")}} や、{{domxref("OscillatorNode")}}、または {{domxref("ConstantSourceNode")}} を使用してください。</p>
+</div>
 
-親インターフェース、_{{domxref("AudioNode")}}_ のプロパティ継承に加え、以下のプロパティがあります。
+<p>特に明記しない限り、AudioScheduledSourceNode をベースにしたノードは、再生されていない時 (つまり、start() の前や、stop() の後) は、無音を出力します。無音は、値がゼロ (0) であるサンプルストリームを、常に流し続けることで表現されています。</p>
 
-### イベントハンドラ
+<h2 id="プロパティ">プロパティ</h2>
 
-- {{domxref("AudioScheduledSourceNode.onended", "onended")}}
-  - : {{event("ended")}} イベントが発生したときに呼び出されるメソッドです。ノードが再生を終えたことを示します。
+<p>親インターフェース、<em>{{domxref("AudioNode")}}</em> のプロパティ継承に加え、以下のプロパティがあります。</p>
 
-## メソッド
+<h3 id="イベントハンドラ">イベントハンドラ</h3>
 
-親インターフェース、_{{domxref("AudioNode")}}_ のメソッド継承に加え、以下のメソッドがあります。
+<dl>
+ <dt>{{domxref("AudioScheduledSourceNode.onended", "onended")}}</dt>
+ <dd>{{event("ended")}} イベントが発生したときに呼び出されるメソッドです。ノードが再生を終えたことを示します。</dd>
+</dl>
 
-- {{domxref("AudioScheduledSourceNode.start", "start()")}}
-  - : 指定した時刻に、ノードが特定の音を再生するよう、スケジュールします。時間を指定しない場合、ノードはすぐに再生を開始します。
-- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
-  - : 指定した時刻に、ノードの再生を停止するよう、スケジュールします。時間を指定しない場合、ノードはすぐに停止します。
+<h2 id="メソッド">メソッド</h2>
 
-## Specification
+<p>親インターフェース、<em>{{domxref("AudioNode")}}</em> のメソッド継承に加え、以下のメソッドがあります。</p>
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#idl-def-AudioScheduledSourceNode', 'AudioScheduledSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+<dl>
+ <dt>{{domxref("AudioScheduledSourceNode.start", "start()")}}</dt>
+ <dd>指定した時刻に、ノードが特定の音を再生するよう、スケジュールします。時間を指定しない場合、ノードはすぐに再生を開始します。</dd>
+ <dt>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</dt>
+ <dd>指定した時刻に、ノードの再生を停止するよう、スケジュールします。時間を指定しない場合、ノードはすぐに停止します。</dd>
+</dl>
 
-## Browser compatibility
+<h2 id="Specification">Specification</h2>
 
-{{Compat("api.AudioScheduledSourceNode")}}
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#idl-def-AudioScheduledSourceNode', 'AudioScheduledSourceNode')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## See also
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("AudioNode")}}
+<p>{{Compat("api.AudioScheduledSourceNode")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li>{{domxref("AudioNode")}}</li>
+</ul>

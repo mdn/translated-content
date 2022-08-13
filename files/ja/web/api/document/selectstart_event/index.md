@@ -3,42 +3,71 @@ title: 'Document: selectstart event'
 slug: Web/API/Document/selectstart_event
 translation_of: Web/API/Document/selectstart_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-[Selection API](/ja/docs/Web/API/Selection) の **`selectstart`** イベントは新しい選択範囲をユーザが指定した際に発火します。
+<div>
+<p><a href="/ja/docs/Web/API/Selection">Selection API</a> の <code><strong>selectstart</strong></code> イベントは新しい選択範囲をユーザが指定した際に発火します。</p>
 
-イベントがキャンセルされた場合、選択範囲は変更されません。
+<p>イベントがキャンセルされた場合、選択範囲は変更されません。</p>
+</div>
 
-| Bubbles                | 有効                                                                                     |
-| ---------------------- | ---------------------------------------------------------------------------------------- |
-| Cancelable             | 有効                                                                                     |
-| Interface              | {{domxref("Event")}}                                                             |
-| Event handler property | {{domxref("GlobalEventHandlers.onselectstart", "onselectstart")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>Bubbles</th>
+   <td>有効</td>
+  </tr>
+  <tr>
+   <th>Cancelable</th>
+   <td>有効</td>
+  </tr>
+  <tr>
+   <th>Interface</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th>Event handler property</th>
+   <td>{{domxref("GlobalEventHandlers.onselectstart", "onselectstart")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-// addEventListener version
-document.addEventListener('selectstart', () => {
+<pre class="brush: js">// addEventListener version
+document.addEventListener('selectstart', () =&gt; {
   console.log('Selection started');
 });
 
 // onselectstart version
-document.onselectstart = () => {
+document.onselectstart = () =&gt; {
   console.log('Selection changed.');
 };
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                            | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#selectstart-event', 'selectstart')}} | {{Spec2('Selection API')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selection API', '#selectstart-event', 'selectstart')}}</td>
+   <td>{{Spec2('Selection API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.Document.selectstart_event")}}
+<p>{{Compat("api.Document.selectstart_event")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- {{domxref("Document/selectionchange_event", "selectionchange")}}
+<ul>
+ <li>{{domxref("Document/selectionchange_event", "selectionchange")}}</li>
+</ul>

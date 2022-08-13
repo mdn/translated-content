@@ -11,35 +11,48 @@ tags:
   - Range
 translation_of: Web/API/Document/createRange
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-**`Document.createRange()`** メソッドは、新しい {{domxref("Range")}} オブジェクトを返します。
+<p><code><strong>Document.createRange()</strong></code> メソッドは、新しい {{domxref("Range")}} オブジェクトを返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    range = document.createRange();
+<pre class="syntaxbox notranslate"><var>range</var> = document.createRange();
+</pre>
 
-_range_ は生成された {{domxref("Range")}} オブジェクトです。
+<p><var>range</var> は生成された {{domxref("Range")}} オブジェクトです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-let range = document.createRange();
+<pre class="brush:js notranslate">let range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-```
+</pre>
 
-## 注
+<h2 id="Notes" name="Notes">注</h2>
 
-`Range` を生成したあと、大部分のメソッドを使用するには境界を設定する必要があります。
+<p><code>Range</code> を生成したあと、大部分のメソッドを使用するには境界を設定する必要があります。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createrange', 'document.createRange')}} | {{Spec2('DOM WHATWG')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-document-createrange', 'document.createRange')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.createRange")}}
+<div>{{Compat("api.Document.createRange")}}</div>

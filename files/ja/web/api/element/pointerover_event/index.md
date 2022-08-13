@@ -12,28 +12,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointerover
 original_slug: Web/API/GlobalEventHandlers/onpointerover
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`onpointerover`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointerover")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
+<p><strong><code>onpointerover</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointerover")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    targetElement.onpointerover = overHandler;
+<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointerover = <var>overHandler</var>;
 
-    var overHandler = targetElement.onpointerover;
+var <var>overHandler</var> = <var>targetElement</var>.onpointerover;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-- `overHandler`
-  - : `targetElement` 要素の `pointerover` イベントハンドラー。
+<dl>
+ <dt><code><var>overHandler</var></code></dt>
+ <dd><code><var>targetElement</var></code> 要素の <code>pointerover</code> イベントハンドラー。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、`onpointerover` を使用して要素の `onpointerover` イベントハンドラーを設定する 2 つの方法を示します。
+<p>この例では、<code>onpointerover</code> を使用して要素の <code>onpointerover</code> イベントハンドラーを設定する2つの方法を示します。</p>
 
-```js
-<html>
-<script>
+<pre class="brush: js notranslate">&lt;html&gt;
+&lt;script&gt;
 function overHandler(ev) {
   // pointerenter イベントの処理
 }
@@ -41,27 +43,46 @@ function init() {
   let el = document.getElementById('target1');
   el.onpointerover = overHandler;
 }
-</script>
+&lt;/script&gt;
 
-<body onload="init();">
-  <div id="target1"> Touch me ... </div>
-  <div id="target2" onpointerover="overHandler(event)"> Touch me ... </div>
-</body>
-</html>
-```
+&lt;body onload="init();"&gt;
+  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+  &lt;div id="target2" onpointerover="overHandler(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                                                   | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerover', 'onpointerover')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerover', 'onpointerover')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerover', 'onpointerover')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerover', 'onpointerover')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.onpointerover")}}
+<p>{{Compat("api.GlobalEventHandlers.onpointerover")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [`Document: pointerover`](/ja/docs/Web/API/Document/pointerover_event) イベント
-- [`HTMLElement: pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event) イベント
+<ul>
+ <li><code><a href="/ja/docs/Web/API/Document/pointerover_event">Document: pointerover</a></code> イベント</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerover_event">HTMLElement: pointerover</a></code> イベント</li>
+</ul>

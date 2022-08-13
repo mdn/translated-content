@@ -10,22 +10,21 @@ tags:
   - URL
 translation_of: Web/API/Client/url
 ---
-{{APIRef("Service Workers API")}}
+<div>{{APIRef("Service Workers API")}}</div>
 
-{{domxref("Client")}} インターフェイスの **`url`** 読み取り専用プロパティは、現在のサービスワーカークライアントの URL を返します。
+<p><span class="seoSummary">{{domxref("Client")}} インターフェイスの <strong><code>url</code></strong> 読み取り専用プロパティは、現在のサービスワーカークライアントの URL を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var clientUrl = client.url;
+<pre class="syntaxbox">var <em>clientUrl</em> = <em>client</em>.url;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("USVString")}}。
+<p>{{domxref("USVString")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-self.addEventListener('notificationclick', function(event) {
+<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -34,23 +33,37 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: 'window'
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
+    for (var i = 0; i &lt; clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
+      if (client.url == '/' &amp;&amp; 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#client-url', 'url')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#client-url', 'url')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Client.url")}}
+<div>
+
+
+<p>{{Compat("api.Client.url")}}</p>
+</div>

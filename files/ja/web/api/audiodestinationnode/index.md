@@ -3,55 +3,88 @@ title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 translation_of: Web/API/AudioDestinationNode
 ---
-{{APIRef("Web Audio API")}}
+<p>{{APIRef("Web Audio API")}}</p>
 
-`AudioDestinationNode`インターフェースは、指定のコンテキストの音声の最後の目的地 - 通常はあなたのデバイスのスピーカーを表します。`OfflineAudioContext`と共に使えば、オーディオデータを「録音」するノードにもできます。
+<div>
+<p><code>AudioDestinationNode</code>インターフェースは、指定のコンテキストの音声の最後の目的地 - 通常はあなたのデバイスのスピーカーを表します。<code>OfflineAudioContext</code>と共に使えば、オーディオデータを「録音」するノードにもできます。</p>
+</div>
 
-`AudioDestinationNode`には出力はなく(出力が**あれば**、これ以上 AudioNode に音声を結びつけることができません)、入力が 1 つあります。入力チャンネルの数は、0 から`maxChannelCount`変数の間である必要があり、そうでなければ例外が発生します。
+<p><code>AudioDestinationNode</code>には出力はなく(出力が<strong>あれば</strong>、これ以上AudioNodeに音声を結びつけることができません)、入力が1つあります。入力チャンネルの数は、0から<code>maxChannelCount</code>変数の間である必要があり、そうでなければ例外が発生します。</p>
 
-指定の`AudioContext`の`AudioDestinationNode`は{{domxref("AudioContext.destination")}}プロパティで取得できます。
+<p>指定の<code>AudioContext</code>の<code>AudioDestinationNode</code>は{{domxref("AudioContext.destination")}}プロパティで取得できます。</p>
 
-| Number of inputs       | `1`          |
-| ---------------------- | ------------ |
-| Number of outputs      | `0`          |
-| Channel count mode     | `"explicit"` |
-| Channel count          | `2`          |
-| Channel interpretation | `"speakers"` |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Number of inputs</th>
+   <td><code>1</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Number of outputs</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Channel count mode</th>
+   <td><code>"explicit"</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Channel count</th>
+   <td><code>2</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Channel interpretation</th>
+   <td><code>"speakers"</code></td>
+  </tr>
+ </tbody>
+</table>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_親の{{domxref("AudioNode")}}のプロパティを継承しています。_
+<p><em>親の{{domxref("AudioNode")}}のプロパティを継承しています。</em></p>
 
-- {{domxref("AudioDestinationNode.maxChannelCount")}}
-  - : `unsigned long`で表された物理的なデバイスが扱えるチャンネルの最大数
+<dl>
+ <dt>{{domxref("AudioDestinationNode.maxChannelCount")}}</dt>
+ <dd><code>unsigned long</code>で表された物理的なデバイスが扱えるチャンネルの最大数</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-*固有のメソッドはありません。親の\_\_{{domxref("AudioNode")}}*のメソッドを継承しています。
+<p><em>固有のメソッドはありません。親の</em><em>{{domxref("AudioNode")}}</em>のメソッドを継承しています。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-`AudioDestinationNode`の設定には複雑なことはありません - デフォルトでユーザのシステム(例:スピーカー)を表しています。よって、数行のコードを書くだけで内部の音声を接続することができます:
+<p><code>AudioDestinationNode</code>の設定には複雑なことはありません - デフォルトでユーザのシステム(例:スピーカー)を表しています。よって、数行のコードを書くだけで内部の音声を接続することができます:</p>
 
-```js
-var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
-```
+gainNode.connect(audioCtx.destination);</pre>
 
-完全な実装は、MDN Web Audio の[Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/)や[Violent Theremin](http://mdn.github.io/violent-theremin/)のようなサンプルを参考にしてください。
+<p>完全な実装は、MDN Web Audioの<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a>や<a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>のようなサンプルを参考にしてください。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}} | {{Spec2('Web Audio API')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.AudioDestinationNode")}}
+<p>{{Compat("api.AudioDestinationNode")}}</p>
 
-## 参考
+<h2 id="参考">参考</h2>
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

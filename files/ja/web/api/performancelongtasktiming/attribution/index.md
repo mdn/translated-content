@@ -3,24 +3,37 @@ title: PerformanceLongTaskTiming.attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
 translation_of: Web/API/PerformanceLongTaskTiming/attribution
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
 
-{{domxref("PerformanceLongTaskTiming")}} インターフェイスの **`attribution`** 読み取り専用プロパティは、{{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。
+<p><span class="seoSummary">{{domxref("PerformanceLongTaskTiming")}} インターフェイスの <strong><code>attribution</code></strong> 読み取り専用プロパティは、{{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
+<pre class="syntaxbox">var <em>taskAttributeTiming</em> = PerformanceLongTaskTiming.attribution;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref('TaskAttributionTiming')}} インスタンスのシーケンス。
+<p>{{domxref('TaskAttributionTiming')}} インスタンスのシーケンス。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-performanceentry-attribution','attribution')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Long Tasks','#dom-performanceentry-attribution','attribution')}}</td>
+   <td>{{Spec2('Long Tasks')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.PerformanceLongTaskTiming.attribution")}}
+
+
+<p>{{Compat("api.PerformanceLongTaskTiming.attribution")}}</p>

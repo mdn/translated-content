@@ -10,64 +10,79 @@ tags:
   - Reference
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
-{{ApiRef("DOM")}}
+<div>{{ApiRef("DOM")}}</div>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-`insertAdjacentHTML()` は、第二引数で指定するテキストを HTML または XML としてパースし、その結果であるノードを DOM ツリー内の指定された位置（第一引数で指定）に挿入します。これは挿入先の要素を再度パースするものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、 `innerHTML` への代入による直接的な操作よりもはるかに高速な動作となります。
+<p><code>insertAdjacentHTML()</code> は、第二引数で指定するテキストを HTML または XML としてパースし、その結果であるノードを DOM ツリー内の指定された位置（第一引数で指定）に挿入します。これは挿入先の要素を再度パースするものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、 <code>innerHTML</code> への代入による直接的な操作よりもはるかに高速な動作となります。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    element.insertAdjacentHTML(position, text);
+<pre class="syntaxbox"><em>element</em>.insertAdjacentHTML(<em>position</em>, <em>text</em>);</pre>
 
-`position` には `element` に対する相対位置を、以下に示す文字列の 1 つで指定します。
+<p><code>position</code> には <code>element</code> に対する相対位置を、以下に示す文字列の1つで指定します。</p>
 
-- `'beforebegin'`
-  - : element の直前に挿入
-- `'afterbegin'`
-  - : `element` 内部の、最初の子要素の前に挿入
-- `'beforeend'`
-  - : `element` 内部の、最後の子要素の後に挿入
-- `'afterend'`
-  - : `element` の直後に挿入
+<dl>
+ <dt><code style="color: red;">'beforebegin'</code></dt>
+ <dd>element の直前に挿入</dd>
+ <dt><code style="color: green;">'afterbegin'</code></dt>
+ <dd><code>element</code> 内部の、最初の子要素の前に挿入</dd>
+ <dt><code style="color: blue;">'beforeend'</code></dt>
+ <dd><code>element</code> 内部の、最後の子要素の後に挿入</dd>
+ <dt><code style="color: magenta;">'afterend'</code></dt>
+ <dd><code>element</code> の直後に挿入</dd>
+</dl>
 
-`text` には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
+<p><code>text</code><em> </em>には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。</p>
 
-### ポジション名の可視化
+<h3 id="Visualization_of_position_names" name="Visualization_of_position_names">ポジション名の可視化</h3>
 
-    <!-- beforebegin -->
-    <p>
-    <!-- afterbegin -->
-    foo
-    <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
+<code style="font-weight: bold;">&lt;p&gt;</code>
+&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+foo
+&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
+<code style="font-weight: bold;">&lt;/p&gt;</code>
+&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-> **Note:** **注記:** `beforebegin` および `afterend` の位置指定で動作するのは、ノードがツリー内にあり、かつ親要素が存在する場合のみとなります。
+<div class="note"><strong>注記:</strong> <code>beforebegin</code> および <code>afterend</code> の位置指定で動作するのは、ノードがツリー内にあり、かつ親要素が存在する場合のみとなります。</div>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-// <div id="one">one</div>
+<pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 // 挿入位置および挿入後の構造は、以下のようになります。
-// <div id="one">one</div><div id="two">two</div>
-```
+// &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-| 仕様                                                                                                                                                                                 | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}}</td>
+   <td>{{ Spec2('DOM Parsing') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザ実装状況</h2>
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+<p>{{Compat("api.Element.insertAdjacentHTML")}}</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- Henri Sivonen 氏による [hacks.mozilla.org へのゲストポスト](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) には、幾つかのケースでは insertAdjacentHTML がより速い方法であることを示すベンチマークが含まれています。
+<ul>
+ <li>{{domxref("Element.insertAdjacentElement()")}}</li>
+ <li>{{domxref("Element.insertAdjacentText()")}}</li>
+ <li>Henri Sivonen 氏による <a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org へのゲストポスト</a><span class="external"> には、幾つかのケースでは insertAdjacentHTML  がより速い方法であることを示すベンチマークが含まれています。</span></li>
+</ul>

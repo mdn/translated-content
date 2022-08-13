@@ -11,28 +11,39 @@ tags:
   - Reference
 translation_of: Web/API/PointerEvent/getCoalescedEvents
 ---
-{{APIRef("Pointer Events")}}{{seecompattable}}
+<p>{{APIRef("Pointer Events")}}{{seecompattable}}</p>
 
-{{domxref("PointerEvent")}} インターフェイスの **`getCoalescedEvents()`** メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての `PointerEvent` インスタンスのシーケンスを返します。
+<p>{{domxref("PointerEvent")}} インターフェイスの <strong><code>getCoalescedEvents()</code></strong> メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての <code>PointerEvent</code> インスタンスのシーケンスを返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var pointerEvents[] = PointerEvent.getCoalescedEvents()
+<pre class="syntaxbox">var <em>pointerEvents[]</em> = <em>PointerEvent</em>.getCoalescedEvents()</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### Returns
+<h3 id="Returns" name="Returns">Returns</h3>
 
-{{domxref("PointerEvent")}} インスタンスのシーケンス。
+<p>{{domxref("PointerEvent")}} インスタンスのシーケンス。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                 | 状態                                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2 Ext','#dom-pointerevent-getcoalescedevents','getCoalescedEvents()')}} | {{Spec2('Pointer Events 2 Ext')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2 Ext','#dom-pointerevent-getcoalescedevents','getCoalescedEvents()')}}</td>
+   <td>{{Spec2('Pointer Events 2 Ext')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.PointerEvent.getCoalescedEvents")}}
+<p>{{Compat("api.PointerEvent.getCoalescedEvents")}}</p>

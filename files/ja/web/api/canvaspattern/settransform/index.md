@@ -10,36 +10,37 @@ tags:
   - Reference
 translation_of: Web/API/CanvasPattern/setTransform
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-**`CanvasPattern.setTransform()`** メソッドは、パターンの変換マトリックスとして {{domxref("SVGMatrix")}} オブジェクトを使用し、パターンにこれを実行します。
+<p><code><strong>CanvasPattern</strong></code><strong><code>.setTransform()</code></strong> メソッドは、パターンの変換マトリックスとして {{domxref("SVGMatrix")}} オブジェクトを使用し、パターンにこれを実行します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    void pattern.setTransform(matrix);
+<pre class="syntaxbox">void <var><em>pattern</em>.setTransform(matrix);</var>
+</pre>
 
-### パラメータ
+<h3 id="パラメータ">パラメータ</h3>
 
-- `matrix`
-  - : パターンの変換行列として使用する {{domxref("SVGMatrix")}}。
+<dl>
+ <dt><code>matrix</code></dt>
+ <dd>パターンの変換行列として使用する {{domxref("SVGMatrix")}}。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-### `setTransform` メソッドを使用する
+<h3 id="setTransform_メソッドを使用する"><code>setTransform</code> メソッドを使用する</h3>
 
-これは `setTransform` メソッドを使用して {{domxref("SVGMatrix")}} によるパターン変形を指定して {{domxref("CanvasPattern")}} を生成する簡単なコードスニペットです。たとえば、パターンが現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} として適用され、{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} メソッドを使用すると、 canvas に描画されます。
+<p>これは <code>setTransform</code> メソッドを使用して {{domxref("SVGMatrix")}} によるパターン変形を指定して {{domxref("CanvasPattern")}} を生成する簡単なコードスニペットです。たとえば、パターンが現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} として適用され、{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} メソッドを使用すると、 canvas に描画されます。</p>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<canvas id="canvas"></canvas>
-<svg id="svg1"></svg>
-```
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+&lt;svg id="svg1"&gt;&lt;/svg&gt;
+</pre>
 
-#### JavaScript
+<h4 id="JavaScript">JavaScript</h4>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js; highlight:[12]">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var svg1 = document.getElementById("svg1");
@@ -54,18 +55,20 @@ img.onload = function() {
   ctx.fillStyle = pattern;
   ctx.fillRect(0,0,400,400);
 };
-```
+</pre>
 
-以下のコードを編集して、canvas 上での変化を確認してください：
+<p>以下のコードを編集して、canvas 上での変化を確認してください：</p>
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<svg id="svg1" style="display:none"></svg>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:120px">
+<div class="hidden">
+<h6 id="Playable_code">Playable code</h6>
+
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+&lt;svg id="svg1" style="display:none"&gt;&lt;/svg&gt;
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
+&lt;/div&gt;
+&lt;textarea id="code" class="playable-code" style="height:120px"&gt;
 var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
 img.onload = function() {
@@ -73,11 +76,10 @@ img.onload = function() {
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0,0,400,400);
-};</textarea>
-```
+};&lt;/textarea&gt;
+</pre>
 
-```js hidden
-var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -103,21 +105,35 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-```
+</pre>
+</div>
 
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
+<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                                         | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform", "CanvasPattern.setTransform")}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform", "CanvasPattern.setTransform")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.CanvasPattern.setTransform")}}
+<p>{{Compat("api.CanvasPattern.setTransform")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- これを定義しているインターフェース：{{domxref("CanvasPattern")}}
-- {{domxref("SVGMatrix")}}
+<ul>
+ <li>これを定義しているインターフェース：{{domxref("CanvasPattern")}}</li>
+ <li>{{domxref("SVGMatrix")}}</li>
+</ul>

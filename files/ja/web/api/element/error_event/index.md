@@ -18,38 +18,53 @@ tags:
   - イベント
 translation_of: Web/API/Element/error_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に {{domxref("Element")}} オブジェクトに発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
+<p><code>error</code> イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に {{domxref("Element")}} オブジェクトに発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。</p>
 
-| バブリング                   | なし                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                     |
-| インターフェイス             | {{domxref("Event")}} または {{domxref("UIEvent")}}         |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onerror", "onerror")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}} または {{domxref("UIEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers/onerror", "onerror")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxref("UIEvent")}} のインスタンスとなり、それ以外の場合は {{domxref("Event")}} となります。
+<p>イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxref("UIEvent")}} のインスタンスとなり、それ以外の場合は {{domxref("Event")}} となります。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### ライブデモ
+<h3 id="Live_example" name="Live_example">ライブデモ</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="controls">
-  <button id="img-error" type="button">Generate image error</button>
-  <img class="bad-img" />
-</div>
+<pre class="brush: html">&lt;div class="controls"&gt;
+  &lt;button id="img-error" type="button"&gt;Generate image error&lt;/button&gt;
+  &lt;img class="bad-img" /&gt;
+&lt;/div&gt;
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
-</div>
-```
+&lt;div class="event-log"&gt;
+  &lt;label&gt;Event log:&lt;/label&gt;
+  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
 
-```css hidden
-body {
+<div class="hidden">
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -82,39 +97,52 @@ img {
   width: 0;
   height: 0;
 }
-```
+</pre>
+</div>
 
-#### JS
+<h4 id="JS">JS</h4>
 
-```js
-const log = document.querySelector('.event-log-contents');
+<pre class="brush: js">const log = document.querySelector('.event-log-contents');
 
 const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) => {
+badImg.addEventListener('error', (event) =&gt; {
     log.textContent = log.textContent + `${event.type}: Loading image\n`;
     console.log(event)
 });
 
 const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () => {
+imgError.addEventListener('click', () =&gt; {
     badImg.setAttribute('src', 'i-dont-exist');
 });
-```
+</pre>
 
-#### 結果
+<h4 id="Result" name="Result">結果</h4>
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-error')}} | {{Spec2('UI Events')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-error')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.HTMLMediaElement.error_event")}}
+<p>{{Compat("api.HTMLMediaElement.error_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- `Window` を対象としたこのイベント: {{domxref("Window/error_event", "error")}} イベント
+<ul>
+ <li><code>Window</code> を対象としたこのイベント: {{domxref("Window/error_event", "error")}} イベント</li>
+</ul>

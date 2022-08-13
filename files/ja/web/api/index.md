@@ -9,22 +9,24 @@ tags:
   - ウェブ
 translation_of: Web/API
 ---
-ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス (オブジェクト型) のリストを挙げます。
+<p><span class="seoSummary">ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス (オブジェクト型) のリストを挙げます。</span></p>
 
-Web API は通常 JavaScript とともに使用されますが、常にそうとは限りません。
+<p>Web API は通常 JavaScript とともに使用されますが、常にそうとは限りません。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-利用可能なすべての API の一覧です。
+<p>利用可能なすべての API の一覧です。</p>
 
-{{ListGroups}}
+<div>{{ListGroups}}</div>
 
-## インターフェイス
+<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
 
-利用可能なすべてのインターフェイス (すなわちオブジェクトの型) の一覧です。
+<p>利用可能なすべてのインターフェイス (すなわちオブジェクトの型) の一覧です。</p>
 
-{{APIListAlpha}}
+<div>{{APIListAlpha}}</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Web API イベントリファレンス](/ja/docs/Web/Events)
+<ul>
+ <li><a href="/ja/docs/Web/Events">Web API イベントリファレンス</a></li>
+</ul>

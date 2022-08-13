@@ -8,36 +8,49 @@ tags:
   - WebVTT
 translation_of: Web/API/VTTCue/VTTCue
 ---
-{{APIRef("WebVTT")}}
+<p>{{APIRef("WebVTT")}}</p>
 
-**`VTTCue()`** コンストラクタは新しい {{domxref("VTTCue")}} オブジェクトを返します。
+<p><span class="seoSummary"><strong><code>VTTCue()</code></strong> コンストラクタは新しい {{domxref("VTTCue")}} オブジェクトを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-     vttCue = new VTTCue(startTime, endTime, text);
+<pre class="syntaxbox"> <em>vttCue</em> = new VTTCue(<em>startTime</em>, <em>endTime</em>, <em>text</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- _startTime_
-  - : これは、キューを表示し始める動画の時間を表す `double` 型です。
-- _endTime_
-  - : これは、キューを表示しなくなる動画の時間を表す `double` 型です。
-- _text_
-  - : これは表示するテキストを表す {{domxref("DOMString")}} です。
+<dl>
+ <dt><em>startTime</em></dt>
+ <dd>これは、キューを表示し始める動画の時間を表す <code>double</code> 型です。</dd>
+ <dt><em>endTime</em></dt>
+ <dd>これは、キューを表示しなくなる動画の時間を表す <code>double</code> 型です。</dd>
+ <dt><em>text</em></dt>
+ <dd>これは表示するテキストを表す {{domxref("DOMString")}} です。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-// 2から3秒の間に表示するキューを作成し、指定されたテキストを使用します。
-var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
-```
+<pre class="brush: js  language-js">// 2から3秒の間に表示するキューを作成し、指定されたテキストを使用します。
+var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                     | コメント |
-| ---------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT", "#dom-vttcue-vttcue", "VTTCue()")}} | {{Spec2("WebVTT")}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("WebVTT", "#dom-vttcue-vttcue", "VTTCue()")}}</td>
+   <td>{{Spec2("WebVTT")}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.VTTCue.VTTCue")}}
+
+
+<p>{{Compat("api.VTTCue.VTTCue")}}</p>

@@ -9,22 +9,37 @@ translation_of: Web/API/DOMMatrix
 translation_of_original: Web/API/CSSMatrix
 original_slug: Web/API/CSSMatrix
 ---
-{{APIRef("CSSOM")}}{{Non-standard_header}}
+<div>{{APIRef("CSSOM")}}{{Non-standard_header}}</div>
 
-**`CSSMatrix`** は、2D または 3D の変形が適用できる同次の 4x4 行列を表しています。このクラスは、ある時点で CSS Transitions モジュールレベル 3 の一部ということになっていましたが、現在のワーキングドラフトで存在しません。代わりに [`DOMMatrix`](/ja/docs/Web/API/DOMMatrix) を使用してください。
+<p><strong><code>CSSMatrix</code></strong> は、2D または 3D の変形が適用できる同次の 4x4 行列を表しています。このクラスは、ある時点で CSS Transitions モジュールレベル 3 の一部ということになっていましたが、現在のワーキングドラフトで存在しません。代わりに <a href="/ja/docs/Web/API/DOMMatrix"><code>DOMMatrix</code></a> を使用してください。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                             | ステータス               | コメント                                                                |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------- |
-| {{SpecName('Compat', '#webkitcssmatrix-interface', 'WebKitCSSMatrix')}} | {{Spec2('Compat')}} | WebKit プレフィックス付きバージョン、`WebKitCSSMatrix` の初期の標準化。 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Compat', '#webkitcssmatrix-interface', 'WebKitCSSMatrix')}}</td>
+   <td>{{Spec2('Compat')}}</td>
+   <td>WebKit プレフィックス付きバージョン、<code>WebKitCSSMatrix</code> の初期の標準化。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("api.DOMMatrix")}}
+<p>{{Compat("api.DOMMatrix")}}</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- [`MSCSSMatrix` documentation on MSDN](<https://msdn.microsoft.com/en-us/library/ie/hh772390(v=vs.85).aspx>)
-- [`WebKitCSSMatrix` documentation at Safari Developer Library](https://developer.apple.com/library/safari/documentation/AudioVideo/Reference/WebKitCSSMatrixClassReference/index.html)
-- [Mozilla bug 717722: implement `(WebKit)CSSMatrix()`](https://bugzilla.mozilla.org/show_bug.cgi?id=717722)
+<ul>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ie/hh772390(v=vs.85).aspx"><code>MSCSSMatrix</code> documentation on MSDN</a></li>
+ <li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Reference/WebKitCSSMatrixClassReference/index.html"><code>WebKitCSSMatrix</code> documentation at Safari Developer Library</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=717722">Mozilla bug 717722: implement <code>(WebKit)CSSMatrix()</code></a></li>
+</ul>

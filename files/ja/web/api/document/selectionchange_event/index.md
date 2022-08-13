@@ -9,42 +9,73 @@ tags:
   - selectionchange
 translation_of: Web/API/Document/selectionchange_event
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-**`selectionchange`** イベントは [Selection API](/ja/docs/Web/API/Selection_API) の一部で、文書における現在のテキストの選択が変更された際に発生します。
+<div>
+<p><code><strong>selectionchange</strong></code> イベントは <a href="/ja/docs/Web/API/Selection_API">Selection API</a> の一部で、文書における現在のテキストの選択が変更された際に発生します。</p>
+</div>
 
-| バブリング                   | なし                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                                             |
-| インターフェイス             | {{domxref("Event")}}                                                                     |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-// addEventListener version
-document.addEventListener('selectionchange', () => {
+<pre class="brush: js notranslate">// addEventListener version
+document.addEventListener('selectionchange', () =&gt; {
   console.log(document.getSelection());
 });
 
 // onselectionchange version
-document.onselectionchange = () => {
+document.onselectionchange = () =&gt; {
   console.log(document.getSelection());
 };
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Selection API', '#selectionchange-event', 'selectionchange')}} | {{Spec2('Selection API')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Selection API', '#selectionchange-event', 'selectionchange')}}</td>
+   <td>{{Spec2('Selection API')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.selectionchange_event")}}
+<p>{{Compat("api.Document.selectionchange_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Document/selectstart_event", "selectstart")}}
-- {{domxref("Document/getSelection", "Document.getSelection")}}
-- {{domxref("Selection", "Selection")}}
+<ul>
+ <li>{{domxref("Document/selectstart_event", "selectstart")}}</li>
+ <li>{{domxref("Document/getSelection", "Document.getSelection")}}</li>
+ <li>{{domxref("Selection", "Selection")}}</li>
+</ul>

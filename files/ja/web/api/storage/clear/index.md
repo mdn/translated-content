@@ -9,44 +9,57 @@ tags:
   - Web Storage
 translation_of: Web/API/Storage/clear
 ---
-{{APIRef("Web Storage API")}}
+<p>{{APIRef("Web Storage API")}}</p>
 
-**`clear()`** は {{domxref("Storage")}} インターフェイスのメソッドで、指定された `Storage` オブジェクトに格納されているすべてのキーを消去します。
+<p><strong><code>clear()</code></strong> は {{domxref("Storage")}} インターフェイスのメソッドで、指定された <code>Storage</code> オブジェクトに格納されているすべてのキーを消去します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    storage.clear();
+<pre class="syntaxbox notranslate"><var>storage</var>.clear();</pre>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-{{jsxref("undefined")}} です。
+<p>{{jsxref("undefined")}} です。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-以下の関数はローカルストレージに 3 個のデータアイテムを作成して、 `clear()` を使用してすべて削除します。
+<p>以下の関数はローカルストレージに 3 個のデータアイテムを作成して、 <code>clear()</code> を使用してすべて削除します。</p>
 
-```js
-function populateStorage() {
+<pre class="brush: js notranslate">function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'miGato.png');
 
   localStorage.clear();
-}
-```
+}</pre>
 
-> **Note:** **注**: 実際の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+<div class="note">
+<p><strong>注</strong>: 実際の例としては、 <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a> をご覧ください。</p>
+</div>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}} | {{Spec2('HTML WHATWG')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Storage.clear")}}
+<p>{{Compat("api.Storage.clear")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-[Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+<p><a href="/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API の使用</a></p>

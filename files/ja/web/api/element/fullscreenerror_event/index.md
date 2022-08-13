@@ -10,45 +10,71 @@ tags:
   - イベント
 translation_of: Web/API/Element/fullscreenerror_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`fullscreenerror` イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。
+<p><span class="seoSummary"><code>fullscreenerror</code> イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。</span></p>
 
-| バブリング                   | あり                                                                             |
-| ---------------------------- | -------------------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                             |
-| インターフェイス             | {{domxref("Event")}}                                                     |
-| イベントハンドラープロパティ | {{domxref("Element.onfullscreenerror", "onfullscreenerror")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("Element.onfullscreenerror", "onfullscreenerror")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-{{domxref("Element/fullscreenchange_event", "fullscreenchange")}} イベントと同様に、2 つの `fullscreenerror` イベントが発生します。1 つ目はモード切替に失敗した {{domxref("Element")}} に送られ、2 つ目はその要素を含む {{domxref("Document")}} に送られます。
+<p>{{domxref("Element/fullscreenchange_event", "fullscreenchange")}} イベントと同様に、2つの <code>fullscreenerror</code> イベントが発生します。1つ目はモード切替に失敗した {{domxref("Element")}} に送られ、2つ目はその要素を含む {{domxref("Document")}} に送られます。</p>
 
-全画面モードへの切り替えが失敗する理由の一部は、 [Fullscreen API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)をお読みください。
+<p>全画面モードへの切り替えが失敗する理由の一部は、 <a href="/ja/docs/Web/API/Fullscreen_API/Guide">Fullscreen API のガイド</a>をお読みください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-const requestor = document.querySelector('div');
+<pre class="brush: js">const requestor = document.querySelector('div');
 
-requestor.addEventListener('fullscreenerror', (event) => {
+requestor.addEventListener('fullscreenerror', (event) =&gt; {
   console.error('an error occurred changing into fullscreen');
   console.log(event);
 });
 
-requestor.requestFullscreen();
-```
+requestor.requestFullscreen();</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                               | 状態                             |
-| ------------------------------------ | -------------------------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen")}}</td>
+   <td>{{Spec2("Fullscreen")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Element.fullscreenerror_event")}}
+<p>{{Compat("api.Element.fullscreenerror_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [`fullscreenchange`](/ja/docs/Web/API/Element/fullscreenchange_event)
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+<ul>
+ <li><a href="/ja/docs/Web/API/Element/fullscreenchange_event"><code>fullscreenchange</code></a></li>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API/Guide">Fullscreen API のガイド</a></li>
+</ul>

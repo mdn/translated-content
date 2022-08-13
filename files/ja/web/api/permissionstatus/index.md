@@ -11,39 +11,54 @@ tags:
   - Reference
 translation_of: Web/API/PermissionStatus
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+<div>{{APIRef("Permissions API")}}{{SeeCompatTable}}</div>
 
-[Permissions API](/ja/docs/Web/API/Permissions_API) の **`PermissionStatus`** インターフェイスは、オブジェクトの状態と、その状態への変更を監視するためのイベントハンドラを提供します。
+<p><span class="seoSummary"><a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> の <strong><code>PermissionStatus</code></strong> インターフェイスは、オブジェクトの状態と、その状態への変更を監視するためのイベントハンドラを提供します。</span></p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-- {{domxref("PermissionStatus.state")}} {{readonlyinline}}
-  - : 要求されたパーミッションの状態を返します。 `'granted'`（付与）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかです。
-- {{domxref("PermissionStatus.status")}}{{readonlyinline}} {{deprecated_inline()}}
-  - : 要求されたパーミッションの状態を返します。 `'granted'`、`'denied'`、`'prompt'` のいずれかです。 仕様の今後のバージョンは、これを {{domxref("PermissionStatus.state")}} に置き換えます。
+<dl>
+ <dt>{{domxref("PermissionStatus.state")}} {{readonlyinline}}</dt>
+ <dd>要求されたパーミッションの状態を返します。 <code>'granted'</code>（付与）、<code>'denied'</code>（拒否）、<code>'prompt'</code>（プロンプト）のいずれかです。</dd>
+ <dt>{{domxref("PermissionStatus.status")}}{{readonlyinline}} {{deprecated_inline()}}</dt>
+ <dd>要求されたパーミッションの状態を返します。 <code>'granted'</code>、<code>'denied'</code>、<code>'prompt'</code> のいずれかです。 仕様の今後のバージョンは、これを {{domxref("PermissionStatus.state")}} に置き換えます。</dd>
+</dl>
 
-### イベントハンドラ
+<h3 id="Event_Handler" name="Event_Handler">イベントハンドラ</h3>
 
-- {{domxref("PermissionStatus.onchange")}}
-  - : `PermissionStatus.status` が変わるたびに呼び出されるイベント。
+<dl>
+ <dt>{{domxref("PermissionStatus.onchange")}}</dt>
+ <dd><code>PermissionStatus.status</code> が変わるたびに呼び出されるイベント。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
+<pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
   console.log('位置情報のパーミッションの状態は ' + permissionStatus.state + ' です。');
   permissionStatus.onchange = function() {
     console.log('位置情報のパーミッションの状態が ' + this.state + ' に変更されました。');
   };
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API', '#status-of-a-permission', 'PermissionStatus')}} | {{Spec2('Permissions API')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Permissions API', '#status-of-a-permission', 'PermissionStatus')}}</td>
+   <td>{{Spec2('Permissions API')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.PermissionStatus")}}
+
+
+<p>{{Compat("api.PermissionStatus")}}</p>

@@ -9,50 +9,63 @@ tags:
   - compositionstart
   - イベント
   - 入力メソッド
-translation_of: Web/API/Element/compositionstart_event
 browser-compat: api.Element.compositionstart_event
+translation_of: Web/API/Element/compositionstart_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`compositionstart`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムが新しい変換セッションを開始した時に発生します。
+<p><strong><code>compositionstart</code></strong> イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムが新しい変換セッションを開始した時に発生します。</p>
 
-例えば、このイベントはユーザーが[ピン音](https://ja.wikipedia.org/wiki/ピン音) IME を使用して漢字の入力を開始した後に発生します。
+<p>例えば、このイベントはユーザーが<a href="https://ja.wikipedia.org/wiki/ピン音">ピン音</a> IME を使用して漢字の入力を開始した後に発生します。</p>
 
-| バブリング                   | あり                                     |
-| ---------------------------- | ---------------------------------------- |
-| キャンセル                   | 可                                       |
-| インターフェイス             | {{domxref("CompositionEvent")}} |
-| イベントハンドラープロパティ | なし                                     |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th>キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th>インターフェイス</th>
+   <td>{{domxref("CompositionEvent")}}</td>
+  </tr>
+  <tr>
+   <th>イベントハンドラープロパティ</th>
+   <td>なし</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples">例</h2>
 
-```js
-const inputElement = document.querySelector('input[type="text"]');
+<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionstart', (event) => {
+inputElement.addEventListener('compositionstart', (event) =&gt; {
   console.log(`generated characters were: ${event.data}`);
-});
-```
+});</pre>
 
-### 実行例
+<h3 id="Live_example">実行例</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="control">
-  <label for="name">On macOS, click in the textbox below,<br> then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label>
-  <input type="text" id="example" name="example">
-</div>
+<pre class="brush: html">&lt;div class="control"&gt;
+  &lt;label for="name"&gt;On macOS, click in the textbox below,&lt;br&gt; then type &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, then &lt;kbd&gt;a&lt;/kbd&gt;:&lt;/label&gt;
+  &lt;input type="text" id="example" name="example"&gt;
+&lt;/div&gt;
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
-  <button class="clear-log">Clear</button>
-</div>
-```
+&lt;div class="event-log"&gt;
+  &lt;label&gt;Event log:&lt;/label&gt;
+  &lt;textarea readonly class="event-log-contents" rows="8" cols="25"&gt;&lt;/textarea&gt;
+  &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
+&lt;/div&gt;</pre>
 
-```css hidden
-body {
+<div class="hidden">
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -83,16 +96,16 @@ kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-```
+</pre>
+</div>
 
-#### JS
+<h4 id="JS">JS</h4>
 
-```js
-const inputElement = document.querySelector('input[type="text"]');
+<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
-clearLog.addEventListener('click', () => {
+clearLog.addEventListener('click', () =&gt; {
     log.textContent = '';
 });
 
@@ -103,20 +116,22 @@ function handleEvent(event) {
 inputElement.addEventListener('compositionstart', handleEvent);
 inputElement.addEventListener('compositionupdate', handleEvent);
 inputElement.addEventListener('compositionend', handleEvent);
-```
+</pre>
 
-#### 結果
+<h4 id="Result">結果</h4>
 
-{{ EmbedLiveSample('Live_example', '100%', '180px') }}
+<p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}。
+<ul>
+ <li>関連イベント: {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}。</li>
+</ul>

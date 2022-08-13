@@ -14,25 +14,40 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
+<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}</p>
 
-[Storage API](/ja/docs/Web/API/Storage_API) の **`StorageManager`** インターフェイスは、永続性のパーミッションの管理と、利用可能なストレージの見積もりのインターフェイスを提供します。{{domxref("navigator.storage")}} か {{domxref("WorkerNavigator.storage")}} のいずれかを使用して、このインターフェイスへの参照を取得できます。
+<p><span class="seoSummary"><a href="/ja/docs/Web/API/Storage_API">Storage API</a> の <strong><code>StorageManager</code></strong> インターフェイスは、永続性のパーミッションの管理と、利用可能なストレージの見積もりのインターフェイスを提供します。{{domxref("navigator.storage")}} か {{domxref("WorkerNavigator.storage")}} のいずれかを使用して、このインターフェイスへの参照を取得できます。</span></p>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
-  - : オリジンの使用量とクォータを含む {{domxref("StorageEstimate")}} オブジェクトを返します。
-- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
-  - : ユーザーエージェントがサイトのストレージを永続化できる場合に `true` に解決される {{jsxref('Promise')}} を返します。
-- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
-  - : サイトのストレージに永続性がすでに付与されている場合に `true` に解決される {{jsxref('Promise')}} を返します。
+<dl>
+ <dt>{{domxref("StorageManager.estimate()")}} {{securecontext_inline}}</dt>
+ <dd>オリジンの使用量とクォータを含む {{domxref("StorageEstimate")}} オブジェクトを返します。</dd>
+ <dt>{{domxref("StorageManager.persist()")}} {{securecontext_inline}}</dt>
+ <dd>ユーザーエージェントがサイトのストレージを永続化できる場合に <code>true</code> に解決される {{jsxref('Promise')}} を返します。</dd>
+ <dt>{{domxref("StorageManager.persisted()")}} {{securecontext_inline}}</dt>
+ <dd>サイトのストレージに永続性がすでに付与されている場合に <code>true</code> に解決される {{jsxref('Promise')}} を返します。</dd>
+</dl>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Storage','#storagemanager','StorageManger')}}</td>
+   <td>{{Spec2('Storage')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.StorageManager")}}
+
+
+<p>{{Compat("api.StorageManager")}}</p>

@@ -3,35 +3,46 @@ title: VREyeParameters.fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
 translation_of: Web/API/VREyeParameters/fieldOfView
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
 
-{{domxref("VREyeParameters")}} インターフェイスの **`fieldOfView`** 読取専用プロパティは，現在の眼の視野角(field of view)を表します．この値は瞳孔間距離(IPD)をユーザが調整するとそれに応じて変化します．
+<p>{{domxref("VREyeParameters")}} インターフェイスの <strong><code>fieldOfView</code></strong> 読取専用プロパティは，現在の眼の視野角(field of view)を表します．この値は瞳孔間距離(IPD)をユーザが調整するとそれに応じて変化します．</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-var curFOV = myVRDisplay.getEyeParameters('left').fieldOfView;
-```
+<pre class="brush: js">var curFOV = myVRDisplay.getEyeParameters('left').fieldOfView;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("VRFieldOfView")}} オブジェクト．
+<p>{{domxref("VRFieldOfView")}} オブジェクト．</p>
 
-## 例
+<h2 id="例">例</h2>
 
-    TBD.
+<pre>TBD.</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                    | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vreyeparameters-fieldofview', 'fieldOfView')}} | {{Spec2('WebVR')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vreyeparameters-fieldofview', 'fieldOfView')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.VREyeParameters.fieldOfView")}}
+<p>{{Compat("api.VREyeParameters.fieldOfView")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

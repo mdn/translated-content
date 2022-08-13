@@ -8,39 +8,55 @@ tags:
   - Web Crypto API
 translation_of: Web/API/CryptoKey
 ---
-{{APIRef("Web Crypto API")}}
+<p>{{APIRef("Web Crypto API")}}</p>
 
-**`CryptoKey`** インターフェイスは、特定の鍵アルゴリズムによりもたらされる暗号鍵 ({{glossary("key")}}) を表します。
+<p><strong><code>CryptoKey</code></strong> インターフェイスは、特定の鍵アルゴリズムによりもたらされる暗号鍵 ({{glossary("key")}}) を表します。</p>
 
-`CryptoKey` オブジェクトは、{{domxref("SubtleCrypto.generateKey()")}} または {{domxref("SubtleCrypto.deriveKey()")}}、{{domxref("SubtleCrypto.importKey()")}} を使用して取得できます。
+<p><code>CryptoKey</code> オブジェクトは、{{domxref("SubtleCrypto.generateKey()")}} または {{domxref("SubtleCrypto.deriveKey()")}}、{{domxref("SubtleCrypto.importKey()")}} を使用して取得できます。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_このインターフェイスはどのプロパティも継承しません。_
+<p><em>このインターフェイスはどのプロパティも継承しません。</em></p>
 
-- {{domxref("CryptoKey.type")}}
-  - : 鍵の種類と、(対称アルゴリズムでは) 秘密鍵、(非対称アルゴリズムでは) 公開鍵またはプライベートキーを表す列挙値を返します。
-- {{domxref("CryptoKey.extractable")}}
-  - : 生の情報がアプリケーションにエクスポートされるかどうかを示す {{jsxref("Boolean")}} を返します。
-- {{domxref("CryptoKey.algorithm")}}
-  - : 鍵が使用される特定の暗号法を表す透過オブジェクトを返します。
-- {{domxref("CryptoKey.usages")}}
-  - : どの用途で使用される鍵かを示す列挙値の配列を返します。
+<dl>
+ <dt>{{domxref("CryptoKey.type")}}</dt>
+ <dd>鍵の種類と、(対称アルゴリズムでは) 秘密鍵、(非対称アルゴリズムでは) 公開鍵またはプライベートキーを表す列挙値を返します。</dd>
+ <dt>{{domxref("CryptoKey.extractable")}}</dt>
+ <dd>生の情報がアプリケーションにエクスポートされるかどうかを示す {{jsxref("Boolean")}} を返します。</dd>
+ <dt>{{domxref("CryptoKey.algorithm")}}</dt>
+ <dd>鍵が使用される特定の暗号法を表す透過オブジェクトを返します。</dd>
+ <dt>{{domxref("CryptoKey.usages")}}</dt>
+ <dd>どの用途で使用される鍵かを示す列挙値の配列を返します。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_このインターフェイスはどのメソッドも定義または継承しません。_
+<p><em>このインターフェイスはどのメソッドも定義または継承しません。</em></p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                               | 策定状況                                 | 備考       |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }} | {{ Spec2('Web Crypto API') }} | 初期定義。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }}</td>
+   <td>{{ Spec2('Web Crypto API') }}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.CryptoKey")}}
 
-## 関連情報
 
-- {{domxref("Crypto")}} および {{domxref("Crypto.subtle")}}。
+<p>{{Compat("api.CryptoKey")}}</p>
+<h2 id="See_Also" name="See_Also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Crypto")}} および {{domxref("Crypto.subtle")}}。</li>
+</ul>

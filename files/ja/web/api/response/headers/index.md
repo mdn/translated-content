@@ -11,26 +11,25 @@ tags:
   - Response
 translation_of: Web/API/Response/headers
 ---
-{{APIRef("Fetch")}}
+<div>{{APIRef("Fetch")}}</div>
 
-{{domxref("Response")}} インターフェイスの **`headers`** 読み取り専用プロパティはレスポンスに関連付けられた {{domxref("Headers")}} オブジェクトが含まれています。
+<p>{{domxref("Response")}} インターフェイスの <code><strong>headers</strong></code> 読み取り専用プロパティはレスポンスに関連付けられた {{domxref("Headers")}} オブジェクトが含まれています。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var myHeaders = response.headers;
+<pre class="syntaxbox notranslate">var <var>myHeaders</var> = <var>response</var>.headers;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("Headers")}} オブジェクト
+<p>{{domxref("Headers")}} オブジェクト</p>
 
-## 例
+<h2 id="例">例</h2>
 
-[Fetch Response の例](https://github.com/mdn/fetch-examples/tree/master/fetch-response) ( [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/) を参照) では、 {{domxref("Request.Request","Request()")}} コンストラクタを使用して新しい {{domxref("Request")}} オブジェクトを作成し、 JPG のパスを渡します。次に {{domxref("GlobalFetch.fetch","fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Body.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+<p><a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response の例</a> ( <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a> を参照) では、 {{domxref("Request.Request","Request()")}} コンストラクタを使用して新しい {{domxref("Request")}} オブジェクトを作成し、 JPG のパスを渡します。次に {{domxref("GlobalFetch.fetch","fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Body.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL")}} を使用してオブジェクトURLを作成し、これを {{htmlelement("img")}} に表示します。</p>
 
-`fetch()` ブロックの上部でレスポンス `headers` の値をコンソールに記録している事に注意して下さい。
+<p><code>fetch()</code> ブロックの上部でレスポンス <code>headers</code> の値をコンソールに記録している事に注意して下さい。</p>
 
-```js
-var myImage = document.querySelector('img');
+<pre class="brush: js notranslate">var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -40,21 +39,35 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                     | ステータス               | 備考     |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#dom-response-headers','headers')}} | {{Spec2('Fetch')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-response-headers','headers')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.Response.headers")}}
 
-## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+<p>{{Compat("api.Response.headers")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
+</ul>

@@ -12,28 +12,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointercancel
 original_slug: Web/API/GlobalEventHandlers/onpointercancel
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`onpointercancel`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointercancel")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。
+<p><span class="seoSummary"><strong><code>onpointercancel</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointercancel")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    targetElement.onpointercancel = cancelHandler;
+<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointercancel = <var>cancelHandler</var>;
 
-    var cancelHandler = targetElement.onpointercancel;
+var <var>cancelHandler</var> = <var>targetElement</var>.onpointercancel;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-- `cancelHandler`
-  - : 要素 `targetElement` の `pointercancel` イベントハンドラ。
+<dl>
+ <dt><code>cancelHandler</code></dt>
+ <dd>要素 <code>targetElement</code> の <code>pointercancel</code> イベントハンドラ。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、`onpointercancel` を使用して要素の `pointercancel` イベントを処理する 2 つの方法を示します。
+<p>この例では、<code>onpointercancel</code> を使用して要素の <code>pointercancel</code> イベントを処理する2つの方法を示します。</p>
 
-```js
-<html>
-<script>
+<pre class="brush: js notranslate">&lt;html&gt;
+&lt;script&gt;
 function cancelHandler(ev) {
   // pointercancel イベントの処理
 }
@@ -41,28 +43,47 @@ function init() {
   var el = document.getElementById('target1');
   el.onpointercancel = cancelHandler;
 }
-</script>
+&lt;/script&gt;
 
-<body onload="init();">
-  <div id="target1"> Touch me ... </div>
-  <div id="target2" onpointercancel="cancelHandler(event)"> Touch me ... </div>
-</body>
-</html>
-```
+&lt;body onload="init();"&gt;
+  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+  &lt;div id="target2" onpointercancel="cancelHandler(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointercancel', 'onpointercancel')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointercancel', 'onpointercancel')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointercancel', 'onpointercancel')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointercancel', 'onpointercancel')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.onpointercancel")}}
+<p>{{Compat("api.GlobalEventHandlers.onpointercancel")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [`Document: pointercancel`](/ja/docs/Web/API/Document/pointercancel_event) イベント
-- [`HTMLElement: pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event) イベント
-- {{domxref("Element.setPointerCapture()")}}
+<ul>
+ <li><code><a href="/ja/docs/Web/API/Document/pointercancel_event">Document: pointercancel</a></code> イベント</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLElement/pointercancel_event">HTMLElement: pointercancel</a></code> イベント</li>
+ <li>{{domxref("Element.setPointerCapture()")}}</li>
+</ul>

@@ -9,33 +9,50 @@ tags:
   - プロパティ
 translation_of: Web/API/Navigator/vendor
 ---
-{{ APIRef("HTML DOM") }}
+<p>{{ APIRef("HTML DOM") }}</p>
 
-現在のブラウザーのブラウザーベンダーの名前を返します。
+<p>現在のブラウザーのブラウザーベンダーの名前を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    venString = window.navigator.vendor
+<pre class="eval"><var>venString</var> = window.navigator.vendor
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-- _venString_ は、 {{domxref("DOMString")}} です。
+<ul>
+ <li><var>venString</var> は、 {{domxref("DOMString")}} です。</li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-    window.navigator.vendor
-    // "Netscape6" などの文字列が返る
+<pre>window.navigator.vendor
+// "Netscape6" などの文字列が返る
+</pre>
 
-## メモ
+<h2 id="Notes" name="Notes">メモ</h2>
 
-`vendor` は、ユーザエージェントを表す文字列の内の一部分です。 product と vendor は異なる可能性があります。例えば、Netscape 6.1 の場合、レンダリングに Gecko product を利用しています。 [navigator.product](/ja/docs/DOM/window.navigator.product)、[navigator.userAgent](/ja/docs/DOM/window.navigator.userAgent) も参照してください。
+<p><code>vendor</code> は、ユーザエージェントを表す文字列の内の一部分です。 product と vendor は異なる可能性があります。例えば、Netscape 6.1 の場合、レンダリングに Gecko product を利用しています。 <a href="/ja/docs/DOM/window.navigator.product">navigator.product</a>、<a href="/ja/docs/DOM/window.navigator.userAgent">navigator.userAgent</a> も参照してください。</p>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-vendor', 'NavigatorID: vendor')}} | {{Spec2('HTML WHATWG')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-navigator-vendor', 'NavigatorID: vendor')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Navigator.vendor")}}
+<p>{{Compat("api.Navigator.vendor")}}</p>

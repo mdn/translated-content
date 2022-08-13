@@ -14,44 +14,68 @@ tags:
   - マニフェスト
 translation_of: Web/API/Window/appinstalled_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`appinstalled`** は [Web Manifest API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
+<div>
+<p><strong><code>appinstalled</code></strong> は <a href="/ja/docs/Web/Manifest">Web Manifest API</a> のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。</p>
+</div>
 
-| バブリング         | なし                                                                     |
-| ------------------ | ------------------------------------------------------------------------ |
-| キャンセル         | 不可                                                                     |
-| インターフェイス   | {{domxref("Event")}}                                             |
-| イベントハンドラー | {{domxref("Window/onappinstalled", "onappinstalled")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラー</th>
+   <td>{{domxref("Window/onappinstalled", "onappinstalled")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`appinstalled` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+<p><code>appinstalled</code> イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。</p>
 
-```js
-window.addEventListener('appinstalled', function() {
+<pre class="brush: js">window.addEventListener('appinstalled', function() {
   console.log('アプリをインストールしてくれてありがとう！');
-});
-```
+});</pre>
 
-または {{domxref("Window/onappinstalled", "onappinstalled")}} イベントハンドラープロパティを使用してください。
+<p>または {{domxref("Window/onappinstalled", "onappinstalled")}} イベントハンドラープロパティを使用してください。</p>
 
-```js
-window.onappinstalled = function() {
+<pre class="brush: js">window.onappinstalled = function() {
   console.log('アプリをインストールしてくれてありがとう！');
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                           | 状態                         |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('Manifest', '#dfn-appinstalled', 'appinstalled')}} | {{Spec2('Manifest')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Manifest', '#dfn-appinstalled', 'appinstalled')}}</td>
+   <td>{{Spec2('Manifest')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Window.onappinstalled")}}
+<p>{{Compat("api.Window.onappinstalled")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連するイベントハンドラー、 {{domxref("Window.onappinstalled")}}
+<ul>
+ <li>関連するイベントハンドラー、 {{domxref("Window.onappinstalled")}}</li>
+</ul>

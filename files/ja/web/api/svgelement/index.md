@@ -10,67 +10,90 @@ tags:
   - SVGElement
 translation_of: Web/API/SVGElement
 ---
-{{APIRef("SVG")}}
+<div>{{APIRef("SVG")}}</div>
 
-SVG 言語における要素に直接対応する SVG DOM インタフェースのすべては、`SVGElement` インタフェースから派生しています。
+<p>SVG 言語における要素に直接対応する SVG DOM インタフェースのすべては、<code>SVGElement</code> インタフェースから派生しています。</p>
 
-{{InheritanceDiagram}}
+<p>{{InheritanceDiagram}}</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-_Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeignElement")}}_
+<p><em>Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeignElement")}}</em></p>
 
-- {{domxref("SVGElement.dataset")}}{{ ReadOnlyInline }}
-  - : 要素に付与された[カスタム・データ属性](/ja/docs/Web/Guide/HTML/Using_data_attributes)に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで `*` は、その対のキーの名前です。これは、HTML の {{domxref("HTMLElement.dataset")}} 属性および HTML の {{htmlattrxref("data-*")}} グローバル属性とちょうど同様に、うまく機能します。
-- {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if `class` is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.
-- {{domxref("SVGElement.ownerSVGElement")}}{{ ReadOnlyInline }}
-  - : 直近の先祖の {{SVGElement("svg")}} 要素を参照する {{domxref("SVGSVGElement")}} です。もし、与えられた要素が最も外側の `<svg>` 要素であれば、`null` です。
-- {{domxref("SVGElement.viewportElement")}}{{ ReadOnlyInline }}
-  - : 現在のビューポートを確立した {{domxref("SVGElement")}} です。多くの場合は、直近の先祖の {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の `<svg>` 要素であれば、`null` です。
+<dl>
+ <dt>{{domxref("SVGElement.dataset")}}{{ ReadOnlyInline }}</dt>
+ <dd>要素に付与された<a href="/ja/docs/Web/Guide/HTML/Using_data_attributes">カスタム・データ属性</a>に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで <code>*</code> は、その対のキーの名前です。これは、HTML の  {{domxref("HTMLElement.dataset")}} 属性および HTML の {{htmlattrxref("data-*")}} グローバル属性とちょうど同様に、うまく機能します。</dd>
+ <dt>{{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if <code>class</code> is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.</dd>
+ <dt>{{domxref("SVGElement.ownerSVGElement")}}{{ ReadOnlyInline }}</dt>
+ <dd>直近の先祖の  {{SVGElement("svg")}} 要素を参照する {{domxref("SVGSVGElement")}} です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
+ <dt>{{domxref("SVGElement.viewportElement")}}{{ ReadOnlyInline }}</dt>
+ <dd>現在のビューポートを確立した  {{domxref("SVGElement")}} です。多くの場合は、直近の先祖の  {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-*`SVGElement` *インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち _{{domxref("Element")}},_ _{{DOMxRef("HTMLOrForeignElement")}}_ *から、*メソッドを継承しています。
+<p><em><code>SVGElement</code> </em>インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち <em> {{domxref("Element")}}, </em><em>{{DOMxRef("HTMLOrForeignElement")}}</em> <em> から、</em>メソッドを継承しています。</p>
 
-## イベント
+<h2 id="イベント">イベント</h2>
 
-## Events
+<h2 id="Events">Events</h2>
 
-Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.
+<p>Listen to these events using <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the equivalent <code>on...</code> handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.</p>
 
-- [`abort`](/ja/docs/Web/API/SVGElement/abort_event)
-  - : Fired when page loading is stopped before an SVG element has been allowed to load completely.
-    Also available via the [`onabort`](/ja/docs/Web/API/GlobalEventHandlers/onabort) property.
-- [`error`](/ja/docs/Web/API/SVGElement/error_event)
-  - : Fired when an SVG element does not load properly or when an error occurs during script execution.
-    Also available via the [`onerror`](/ja/docs/Web/API/GlobalEventHandlers/onerror) property.
-- [`load`](/ja/docs/Web/API/SVGElement/load_event)
-  - : Fires on an `SVGElement` when it is loaded in the browser.
-    Also available via the [`onload`](/ja/docs/Web/API/GlobalEventHandlers/onload) property.
-- [`resize`](/ja/docs/Web/API/SVGElement/resize_event)
-  - : Fired when an SVG document is being resized.
-    Also available via the [`onresize`](/ja/docs/Web/API/GlobalEventHandlers/onresize) property.
-- [`scroll`](/ja/docs/Web/API/SVGElement/scroll_event)
-  - : Fired when an SVG document view is being shifted along the X and/or Y axes.
-    Also available via the [`onscroll`](/ja/docs/Web/API/GlobalEventHandlers/onscroll) property.
-- [`unload`](/ja/docs/Web/API/SVGElement/unload_event)
-  - : Fired when the DOM implementation removes an SVG document from a window or frame.
-    Also available via the [`onunload`](/ja/docs/Web/API/WindowEventHandlers/onunload) property.
+<dl>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/abort_event">abort</a></code></dt>
+ <dd>Fired when page loading is stopped before an SVG element has been allowed to load completely.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onabort">onabort</a></code> property.</dd>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/error_event">error</a></code></dt>
+ <dd>Fired when an SVG element does not load properly or when an error occurs during script execution.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onerror">onerror</a></code> property.</dd>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/load_event">load</a></code></dt>
+ <dd>Fires on an <code>SVGElement</code> when it is loaded in the browser.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onload">onload</a></code> property.</dd>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/resize_event">resize</a></code></dt>
+ <dd>Fired when an SVG document is being resized.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onresize">onresize</a></code> property.</dd>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/scroll_event">scroll</a></code></dt>
+ <dd>Fired when an SVG document view is being shifted along the X and/or Y axes.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onscroll">onscroll</a></code> property.</dd>
+ <dt><code><a href="/ja/docs/Web/API/SVGElement/unload_event">unload</a></code></dt>
+ <dd>Fired when the DOM implementation removes an SVG document from a window or frame.<br>
+ Also available via the <code><a href="/ja/docs/Web/API/WindowEventHandlers/onunload">onunload</a></code> property.</dd>
+</dl>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                | Status                   | Comment                                                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "types.html#InterfaceSVGElement", "SVGElement")}} | {{Spec2("SVG2")}} | Adds the {{domxref("SVGElement.dataset", "dataset")}} property. |
-| {{SpecName("SVG1.1", "types.html#InterfaceSVGElement", "SVGElement")}} | {{Spec2("SVG1.1")}} | Initial definition                                                              |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Adds the {{domxref("SVGElement.dataset", "dataset")}} property.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.SVGElement")}}
 
-## 参照
 
-- HTML {{htmlattrxref("data-*")}} attribute
-- SVG {{SVGAttr("data-*")}} attribute
-- [Using custom data attributes in HTML](/ja/docs/Web/Guide/HTML/Using_data_attributes)
+<p>{{Compat("api.SVGElement")}}</p>
+
+<h2 id="参照">参照</h2>
+
+<ul>
+ <li>HTML {{htmlattrxref("data-*")}} attribute</li>
+ <li>SVG {{SVGAttr("data-*")}} attribute</li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Using_data_attributes">Using custom data attributes in HTML</a></li>
+</ul>

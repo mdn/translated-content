@@ -11,27 +11,26 @@ tags:
   - visibilityState
 translation_of: Web/API/WindowClient/visibilityState
 ---
-{{APIRef("Service Workers API")}}
+<div>{{APIRef("Service Workers API")}}</div>
 
-{{domxref("WindowClient")}} インターフェイスの **`visibilityState`** 読み取り専用プロパティは、現在のクライアントの可視性を示します。 この値は、`"hidden"`、`"visible"`、`"prerender"` のいずれかです。
+<p><span class="seoSummary">{{domxref("WindowClient")}} インターフェイスの <strong><code>visibilityState</code></strong> 読み取り専用プロパティは、現在のクライアントの可視性を示します。 この値は、<code>"hidden"</code>、<code>"visible"</code>、<code>"prerender"</code> のいずれかです。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var myVisState = windowClient.visibilityState;
+<pre class="syntaxbox">var <em>myVisState</em> = <em>windowClient</em>.visibilityState;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("DOMString")}}（値については、{{domxref("Document.visibilityState")}} を参照）。
+<p>{{domxref("DOMString")}}（値については、{{domxref("Document.visibilityState")}} を参照）。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-event.waitUntil(clients.matchAll({
+<pre class="brush: js">event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (let i = 0; i < clientList.length; i++) {
+    for (let i = 0; i &lt; clientList.length; i++) {
       let client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
+      if (client.url == '/' &amp;&amp; 'focus' in client) {
         if (client.visibilityState === 'hidden')
           return client.focus();
         }
@@ -42,15 +41,29 @@ event.waitUntil(clients.matchAll({
       return clients.openWindow('/');
     }
   }));
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                 | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-windowclient-visibilitystate', 'visibilityState')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table" style="line-height: 19.0909080505371px;">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-windowclient-visibilitystate', 'visibilityState')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WindowClient.visibilityState")}}
+<div>
+
+
+<p>{{Compat("api.WindowClient.visibilityState")}}</p>
+</div>

@@ -9,63 +9,88 @@ tags:
   - HTML API
 translation_of: Web/API/AudioTrackList/change_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`change` イベントは、音声トラックが有効または無効になったとき（トラックの [`enabled`](/ja/docs/Web/API/AudioTrack/enabled) プロパティを変更したときなど）に発生します。
+<p><code>change</code> イベントは、音声トラックが有効または無効になったとき（トラックの <code><a href="/ja/docs/Web/API/AudioTrack/enabled">enabled</a></code> プロパティを変更したときなど）に発生します。</p>
 
-| バブリング                 | なし                                                                 |
-| -------------------------- | -------------------------------------------------------------------- |
-| キャンセル                 | 不可                                                                 |
-| インターフェイス           | {{domxref("Event")}}                                         |
-| イベントハンドラプロパティ | {{domxref("AudioTrackList/onchange", "onchange")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラプロパティ</th>
+   <td>{{domxref("AudioTrackList/onchange", "onchange")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`addEventListener()` を使用する場合
+<p><code>addEventListener()</code> を使用する場合</p>
 
-```js
-const videoElement = document.querySelector('video');
-videoElement.audioTracks.addEventListener('change', (event) => {
+<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+videoElement.audioTracks.addEventListener('change', (event) =&gt; {
     console.log(`'${event.type}' イベント発生`);
 });
 
 // `enabled` の値を変更すると `change` イベントを引き起こします
 const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+toggleTrackButton.addEventListener('click', () =&gt; {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });
-```
+</pre>
 
-`onchange` イベントハンドラプロパティを使用する場合
+<p><code>onchange</code> イベントハンドラプロパティを使用する場合</p>
 
-```js
-const videoElement = document.querySelector('video');
-videoElement.audioTracks.onchange = (event) => {
+<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+videoElement.audioTracks.onchange = (event) =&gt; {
     console.log(`'${event.type}' イベント発生`);
 };
 
 // `enabled` の値を変更すると `change` イベントを引き起こします
 const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+toggleTrackButton.addEventListener('click', () =&gt; {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
-});
-```
+});</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}} | {{Spec2('HTML WHATWG')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.AudioTrackList.change_event")}}
+<p>{{Compat("api.AudioTrackList.change_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event), [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event)
-- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) 対象でのこのイベント: [`change`](/ja/docs/Web/API/VideoTrackList/change_event)
-- [Media Streams API](/ja/docs/Web/API/Media_Streams_API)
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+<ul>
+ <li>関連イベント: <code><a href="/ja/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code>, <code><a href="/ja/docs/Web/API/AudioTrackList/removetrack_event">removetrack</a></code></li>
+ <li><code><a href="/ja/docs/Web/API/VideoTrackList">VideoTrackList</a></code> 対象でのこのイベント: <code><a href="/ja/docs/Web/API/VideoTrackList/change_event">change</a></code></li>
+ <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
+ <li><a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+</ul>

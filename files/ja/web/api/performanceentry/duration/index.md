@@ -8,38 +8,39 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceEntry/duration
 ---
-{{APIRef("Performance Timeline API")}}
+<div>{{APIRef("Performance Timeline API")}}</div>
 
-**`duration`** プロパティは、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+<p><strong><code>duration</code></strong> プロパティは、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。
+<p>このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。</p>
 
-- "`frame`" - 連続する 2 つのフレームの `startTime` 間の差を示す{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`mark`" - "`0`" を返します (マークには長さがありません)
-- "`measure`" - メジャーの期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`navigation`" - それぞれ {{domxref("PerformanceNavigationTiming.loadEventEnd")}} と {{domxref("PerformanceEntry.startTime")}} のプロパティの差である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`resource`" - リソースの {{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}とその {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}の差を返します
+<ul>
+ <li>"<code>frame</code>" - 連続する2つのフレームの <code>startTime</code> 間の差を示す{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
+ <li>"<code>mark</code>" - "<code>0</code>" を返します (マークには長さがありません)</li>
+ <li>"<code>measure</code>" - メジャーの期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
+ <li>"<code>navigation</code>" - それぞれ {{domxref("PerformanceNavigationTiming.loadEventEnd")}} と {{domxref("PerformanceEntry.startTime")}} のプロパティの差である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します</li>
+ <li>"<code>resource</code>" - リソースの {{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}とその {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}の差を返します</li>
+</ul>
 
-このプロパティは {{readonlyInline}} です。
+<p>このプロパティは {{readonlyInline}} です。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    entry.duration;
+<pre class="syntaxbox"><em>entry</em>.duration;</pre>
 
-### 戻り値
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
 
-{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の長さを表す {{domxref("DOMHighResTimeStamp")}}。期間の概念が特定のパフォーマンスメトリックに適用されない場合、ブラウザは期間 0 を返すように選択することがあります。
+<p>{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の長さを表す {{domxref("DOMHighResTimeStamp")}}。期間の概念が特定のパフォーマンスメトリックに適用されない場合、ブラウザは期間 0 を返すように選択することがあります。</p>
 
-> **Note:** メモ: パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが {{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは {{domxref("PerformanceEntry.responseEnd")}} と {{domxref("PerformanceEntry.startTime")}} の差の{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+<p class="note">メモ: パフォーマンスエントリが "<code>resource</code>" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが {{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、<span class="tlid-translation translation" lang="ja"><span title="">このプロパティは</span></span> {{domxref("PerformanceEntry.responseEnd")}} <span class="tlid-translation translation" lang="ja"><span title="">と</span></span> {{domxref("PerformanceEntry.startTime")}} <span class="tlid-translation translation" lang="ja"><span title="">の差</span></span>の{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}<span class="tlid-translation translation" lang="ja"><span title="">を返します。</span></span></p>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例は、`duration` プロパティの使用方法を示しています。
+<p>次の例は、<code>duration</code> プロパティの使用方法を示しています。</p>
 
-```js
-function run_PerformanceEntry() {
+<pre class="brush: js">function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -54,7 +55,7 @@ function run_PerformanceEntry() {
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i=0; i &lt; p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -63,7 +64,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (var i=0; i &lt; properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -71,7 +72,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i < methods.length; i++) {
+  for (var i=0; i &lt; methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -82,15 +83,32 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                   | ステータス                                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-duration', 'duration')}} | {{Spec2('Performance Timeline Level 2')}} |          |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-duration', 'duration')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-duration', 'duration')}}</td>
+   <td>{{Spec2('Performance Timeline Level 2')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-duration', 'duration')}}</td>
+   <td>{{Spec2('Performance Timeline')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceEntry.duration")}}
+<div>
+<p>{{Compat("api.PerformanceEntry.duration")}}</p>
+</div>

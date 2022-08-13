@@ -7,35 +7,39 @@ tags:
   - 翻訳中
 translation_of: Web/API/Element/removeAttributeNode
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Summary
+<h3 id="Summary" name="Summary">Summary</h3>
 
-`removeAttributeNode` removes the specified attribute from the current element.
+<p><code>removeAttributeNode</code> removes the specified attribute from the current element.</p>
 
-### Syntax
+<h3 id="Syntax" name="Syntax">Syntax</h3>
 
-    removedAttr =element.removeAttributeNode(attributeNode)
+<pre class="eval"><em>removedAttr</em> =<em>element</em>.removeAttributeNode(<em>attributeNode</em>)
+</pre>
 
-- `attributeNode` is the `Attr` node that needs to be removed.
-- `removedAttr` is the removed `Attr` node.
+<ul>
+ <li><code>attributeNode</code> is the <code>Attr</code> node that needs to be removed.</li>
+ <li><code>removedAttr</code> is the removed <code>Attr</code> node.</li>
+</ul>
 
-### Example
+<h3 id="Example" name="Example">Example</h3>
 
-    // <div id="top" align="center" />
-    var d = document.getElementById("top");
-    var d_align = d.getAttributeNode("align");
-    d.removeAttributeNode(d_align);
-    // align has a default value, center,
-    // so the removed attribute is immediately
-    // replaced: <div id="top" align="center" />
+<pre>// &lt;div id="top" align="center" /&gt;
+var d = document.getElementById("top");
+var d_align = d.getAttributeNode("align");
+d.removeAttributeNode(d_align);
+// align has a default value, center,
+// so the removed attribute is immediately
+// replaced: &lt;div id="top" align="center" /&gt;
+</pre>
 
-### Notes
+<h3 id="Notes" name="Notes">Notes</h3>
 
-If the removed Attribute has a default value it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.
+<p>If the removed Attribute has a default value it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.</p>
 
-{{ DOMAttributeMethods() }}
+<p>{{ DOMAttributeMethods() }}</p>
 
-### Specification
+<h3 id="Specification" name="Specification">Specification</h3>
 
-[DOM Level 2 Core: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode))
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198">DOM Level 2 Core: removeAttributeNode</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode">DOM Level 1 Core</a>)</p>

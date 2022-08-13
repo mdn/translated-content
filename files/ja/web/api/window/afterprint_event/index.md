@@ -7,45 +7,70 @@ tags:
   - イベント
 translation_of: Web/API/Window/afterprint_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`afterprint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。
+<p><strong><code>afterprint</code></strong> イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。</p>
 
-| バブリング                   | いいえ                                                                               |
-| ---------------------------- | ------------------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                                 |
-| インターフェイス             | {{domxref("Event")}}                                                         |
-| イベントハンドラープロパティ | {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("WindowEventHandlers/onafterprint", "onafterprint")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`addEventListener()` の使用例:
+<p><code>addEventListener()</code> の使用例:</p>
 
-```js
-window.addEventListener('afterprint', (event) => {
+<pre class="brush: js">window.addEventListener('afterprint', (event) =&gt; {
   console.log('After print');
-});
-```
+});</pre>
 
-`onafterprint` イベントハンドラープロパティの使用例:
+<p><code>onafterprint</code> イベントハンドラープロパティの使用例:</p>
 
-```js
-window.onafterprint = (event) => {
+<pre class="brush: js">window.onafterprint = (event) =&gt; {
   console.log('After print');
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-|                                                                  |                                  |
-| {{SpecName('HTML WHATWG', '#event-afterprint')}} | {{Spec2('HTML WHATWG')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#event-afterprint')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.afterprint_event")}}
+<p>{{Compat("api.Window.afterprint_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("Window/beforeprint_event", "beforeprint")}}
+<ul>
+ <li>関連イベント: {{domxref("Window/beforeprint_event", "beforeprint")}}</li>
+</ul>

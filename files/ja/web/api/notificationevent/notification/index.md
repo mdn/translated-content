@@ -14,18 +14,17 @@ tags:
   - 通知
 translation_of: Web/API/NotificationEvent/notification
 ---
-{{APIRef("Web Notifications")}}
+<p>{{APIRef("Web Notifications")}}</p>
 
-`notification` は {{domxref("NotificationEvent")}} インターフェイスの読取専用プロパティで、クリックされてイベントを発行した {{domxref("Notification")}} のインスタンスを返します。 {{domxref("Notification")}} は `tag` や `data` 属性など、 Notification のインスタンス化時に設定された多くのプロパティへの読み取り専用アクセスを提供しており、あとで `notificationclick` イベントで使用するための情報を保存することができます。
+<p><code>notification</code> は {{domxref("NotificationEvent")}} インターフェイスの読取専用プロパティで、クリックされてイベントを発行した {{domxref("Notification")}} のインスタンスを返します。 {{domxref("Notification")}} は <code>tag</code> や <code>data</code> 属性など、 Notification のインスタンス化時に設定された多くのプロパティへの読み取り専用アクセスを提供しており、あとで <code>notificationclick</code> イベントで使用するための情報を保存することができます。</p>
 
-## 返値
+<h2 id="Returns" name="Returns">返値</h2>
 
-{{domxref("Notification")}} オブジェクト。
+<p>{{domxref("Notification")}} オブジェクト。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-self.addEventListener('notificationclick', function(event) {
+<pre class="brush: js notranslate">self.addEventListener('notificationclick', function(event) {
   console.log('On notification click');
 
   // Data can be attached to the notification so that you
@@ -39,23 +38,36 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
+    for (var i = 0; i &lt; clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
+      if (client.url == '/' &amp;&amp; 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                               | 状態                                     | 備考            |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notificationevent-notification','notification')}} | {{Spec2('Web Notifications')}} | Living standard |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Web Notifications','#dom-notificationevent-notification','notification')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>Living standard</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.NotificationEvent.notification")}}
+<p>{{Compat("api.NotificationEvent.notification")}}</p>

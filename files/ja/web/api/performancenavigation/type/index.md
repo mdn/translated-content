@@ -12,33 +12,73 @@ tags:
   - 非推奨
 translation_of: Web/API/PerformanceNavigation/type
 ---
-{{APIRef("Navigation Timing")}}
+<p>{{APIRef("Navigation Timing")}}</p>
 
-> **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+<div class="warning">
+<p>このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。</p>
+</div>
 
-従来の **`PerformanceNavigation.type`** 読み取り専用プロパティは、このページへの移動方法を説明する定数を含む `unsigned short` を返します。可能な値は次のとおりです:
+<p>従来の <code><strong>PerformanceNavigation</strong></code><strong><code>.type</code></strong> 読み取り専用プロパティは、このページへの移動方法を説明する定数を含む <code>unsigned short</code> を返します。可能な値は次のとおりです:</p>
 
-| 値    | 定数名              | 意味                                                                                                                                 |
-| ----- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `0`   | `TYPE_NAVIGATE`     | リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに URL を入力してページにアクセスしました。                        |
-| `1`   | `TYPE_RELOAD`       | このページには、[再読み込み] ボタンをクリックするか、{{domxref("Location.reload()")}} メソッドを介してアクセスしました。 |
-| `2`   | `TYPE_BACK_FORWARD` | このページには履歴をたどってアクセスしました。                                                                                       |
-| `255` | `TYPE_RESERVED`     | その他の方法。                                                                                                                       |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">値</th>
+   <th scope="col">定数名</th>
+   <th scope="col">意味</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>0</code></td>
+   <td><code>TYPE_NAVIGATE</code></td>
+   <td>リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに URL を入力してページにアクセスしました。</td>
+  </tr>
+  <tr>
+   <td><code>1</code></td>
+   <td><code>TYPE_RELOAD</code></td>
+   <td>このページには、[再読み込み] ボタンをクリックするか、{{domxref("Location.reload()")}} メソッドを介してアクセスしました。</td>
+  </tr>
+  <tr>
+   <td><code>2</code></td>
+   <td><code>TYPE_BACK_FORWARD</code></td>
+   <td>このページには履歴をたどってアクセスしました。</td>
+  </tr>
+  <tr>
+   <td><code>255</code></td>
+   <td><code>TYPE_RESERVED</code></td>
+   <td>その他の方法。</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    type = performanceNavigation.type;
+<pre class="syntaxbox"><em>type</em> = <em>performanceNavigation</em>.type;</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                               | ステータス                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}} | {{Spec2('Navigation Timing')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}}</td>
+   <td>{{Spec2('Navigation Timing')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceNavigation.type")}}
+<p>{{Compat("api.PerformanceNavigation.type")}}</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- 所属する {{domxref("PerformanceNavigation")}} インターフェイス
+<ul>
+ <li>所属する {{domxref("PerformanceNavigation")}} インターフェイス</li>
+</ul>

@@ -8,40 +8,52 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/FileReader
 ---
-**`FileReader()`** コンストラクタは、新しい FileReader を作成します。
+<p><strong><code>FileReader()</code></strong> コンストラクタは、新しい FileReader を作成します。</p>
 
-`FileReader` の使用方法の詳細については、[Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications) を参照してください。
+<p><code>FileReader</code> の使用方法の詳細については、<a href="/ja/docs/Web/API/File/Using_files_from_web_applications">Web アプリケーションからのファイルの使用</a> を参照してください。</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-var reader = new FileReader();
-```
+<pre class="brush: js notranslate">var reader = new FileReader();</pre>
 
-### パラメータ
+<h3 id="パラメータ">パラメータ</h3>
 
-なし
+<p>なし</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次のコードスニペットは、`FileReader()` コンストラクタを使用した [`FileReader`](/ja/docs/Web/API/FileReader) オブジェクトの作成と、その後のオブジェクトの使用法を示しています。
+<p>次のコードスニペットは、<code>FileReader()</code> コンストラクタを使用した <code><a href="/ja/docs/Web/API/FileReader">FileReader</a></code> オブジェクトの作成と、その後のオブジェクトの使用法を示しています。</p>
 
-```js
-function printFile(file) {
+<pre class="brush: js notranslate">function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                           | ステータス                   | コメント |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | 初期定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('File API')}}</td>
+   <td>{{Spec2('File API')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+<ul>
+ <li><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">Web アプリケーションからのファイルの使用</a></li>
+</ul>

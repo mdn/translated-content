@@ -11,63 +11,79 @@ tags:
   - get
 translation_of: Web/API/Headers/get
 ---
-{{APIRef("Fetch")}}
+<div>{{APIRef("Fetch")}}</div>
 
-{{domxref("Headers")}} インターフェイスの **`get()`** メソッドは、指定された名前の `Headers` オブジェクト内のヘッダーのすべての値の ByteString を返します。要求されたヘッダーが `Headers` オブジェクトに存在しない場合、`null` を返します。
+<p>{{domxref("Headers")}} インターフェイスの <strong><code>get()</code></strong> メソッドは、指定された名前の <code>Headers</code> オブジェクト内のヘッダーのすべての値の ByteString を返します。要求されたヘッダーが <code>Headers</code> オブジェクトに存在しない場合、<code>null</code> を返します。</p>
 
-セキュリティ上の理由から、一部のヘッダーはユーザーエージェントによってのみ制御できます。これらのヘッダーには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスンポンスヘッダー名", 1)}} が含まれます。
+<p>セキュリティ上の理由から、一部のヘッダーはユーザーエージェントによってのみ制御できます。これらのヘッダーには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスンポンスヘッダー名", 1)}} が含まれます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    myHeaders.get(name);
+<pre class="syntaxbox notranslate"><em>myHeaders</em>.get(<em>name</em>);</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-- `name`
-  - : `Headers` オブジェクトから値を取得する HTTP ヘッダーの名前。指定された名前が HTTP ヘッダーの名前でない場合、このメソッドは {{jsxref("TypeError")}} を返します。名前は大文字と小文字を区別しません。
+<dl>
+ <dt><code>name</code></dt>
+ <dd><code>Headers</code> オブジェクトから値を取得する HTTP ヘッダーの名前。指定された名前が HTTP ヘッダーの名前でない場合、このメソッドは {{jsxref("TypeError")}} を返します。名前は大文字と小文字を区別しません。</dd>
+</dl>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-取得したヘッダーの値を表す {{domxref("ByteString")}} シーケンス。このヘッダーが設定されていない場合は `null` を返します。
+<p>取得したヘッダーの値を表す {{domxref("ByteString")}} シーケンス。このヘッダーが設定されていない場合は <code>null</code> を返します。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-空の `Headers` オブジェクトの作成は簡単です。
+<p>空の <code>Headers</code> オブジェクトの作成は簡単です。</p>
 
-```js
-var myHeaders = new Headers(); // 現在空です
+<pre class="brush: js notranslate">var myHeaders = new Headers(); // 現在空です
 myHeaders.get('Not-Set'); // null を返します
-```
+</pre>
 
-{{domxref("Headers.append")}} を使用してヘッダーを追加し、`get()` を使用してヘッダーを取得できます。
+<p>{{domxref("Headers.append")}} を使用してヘッダーを追加し、<code>get()</code> を使用してヘッダーを取得できます。</p>
 
-```js
-myHeaders.append('Content-Type', 'image/jpeg');
+<pre class="brush: js notranslate">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // "image/jpeg" を返します
-```
+</pre>
 
-ヘッダーに複数の値が関連付けられている場合、ByteString には、`Headers` オブジェクトに追加された順序ですべての値が含まれます。
+<p>ヘッダーに複数の値が関連付けられている場合、ByteString には、<code>Headers</code> オブジェクトに追加された順序ですべての値が含まれます。</p>
 
-```js
-myHeaders.append('Accept-Encoding', 'deflate');
+<pre class="brush: js notranslate">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // "deflate,gzip" を返します
-```
+</pre>
 
-> **Note:** **注**: {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は `Headers` オブジェクトに追加された最初の値のみを返します。最新の仕様では `getAll()` が削除され、すべての値を返すように `get()` が更新されました。
+<div class="note">
+<p><strong>注</strong>: {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は <code>Headers</code> オブジェクトに追加された最初の値のみを返します。最新の仕様では <code>getAll()</code> が削除され、すべての値を返すように <code>get()</code> が更新されました。</p>
+</div>
 
-## 仕様書
+<h2 id="仕様書">仕様書</h2>
 
-| 仕様書                                                           | Status                   | Comment |
-| ---------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('Fetch','#dom-headers-get','get()')}} | {{Spec2('Fetch')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-headers-get','get()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.Headers.get")}}
 
-## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+<p>{{Compat("api.Headers.get")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
+</ul>

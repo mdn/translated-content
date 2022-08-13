@@ -11,31 +11,28 @@ tags:
   - request
 translation_of: Web/API/Request/headers
 ---
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+<div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-{{domxref("Request")}} のインターフェースの **`headers`** 読み取り専用プロパティは、リクエストに関連する {{domxref("Headers")}} オブジェクトを含みます。
+<p>{{domxref("Request")}} のインターフェースの <strong><code>headers</code></strong> 読み取り専用プロパティは、リクエストに関連する {{domxref("Headers")}} オブジェクトを含みます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var myHeaders = request.headers;
+<pre class="syntaxbox">var <var>myHeaders</var> = <var>request</var>.headers;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("Headers")}} オブジェクト。
+<p>{{domxref("Headers")}} オブジェクト。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています：
+<p>次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headersを変数に保存しています：</p>
 
-```js
-var myRequest = new Request('flowers.jpg');
-var myHeaders = myRequest.headers; // Headers {}
-```
+<pre class="brush: js">var myRequest = new Request('flowers.jpg');
+var myHeaders = myRequest.headers; // Headers {}</pre>
 
-{{domxref("Headers")}} オブジェクトにヘッダを追加するためには、{{domxref("Headers.append")}} を使用します。初期化オプションとしてのヘッダを渡し、 2 番目の初期化パラメータと一緒に新しい request を生成ます：
+<p>{{domxref("Headers")}} オブジェクトにヘッダを追加するためには、{{domxref("Headers.append")}} を使用します。初期化オプションとしてのヘッダを渡し、 2番目の初期化パラメータと一緒に新しい request を生成ます：</p>
 
-```js
-var myHeaders = new Headers();
+<pre class="brush: js">var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
 var myInit = { method: 'GET',
@@ -45,21 +42,33 @@ var myInit = { method: 'GET',
 
 var myRequest = new Request('flowers.jpg',myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // 'image/jpeg' を返す。
-```
+myContentType = myRequest.headers.get('Content-Type'); // 'image/jpeg' を返す。</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                     | 状態                     | コメント           |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-headers','headers')}} | {{Spec2('Fetch')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-request-headers','headers')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.Request.headers")}}
+<p>{{Compat("api.Request.headers")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
+</ul>

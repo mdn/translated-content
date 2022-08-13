@@ -10,27 +10,30 @@ tags:
   - Référence(2)
 translation_of: Web/API/GamepadButton
 ---
-{{APIRef("Gamepad API")}}
+<div>{{APIRef("Gamepad API")}}</div>
 
-**`GamepadButton`** インタフェースはゲームパッドやその他のコントローラーの各ボタンを定義します。このインタフェースによって、コントローラー上で使用できるボタンの状態を確認することができます。
+<p><strong><code>GamepadButton</code></strong> インタフェースはゲームパッドやその他のコントローラーの各ボタンを定義します。このインタフェースによって、コントローラー上で使用できるボタンの状態を確認することができます。</p>
 
-`GamepadButton`オブジェクトは、{{domxref("Gamepad")}}インタフェースの`buttons` プロパティから取得できます。
+<p><code>GamepadButton</code>オブジェクトは、{{domxref("Gamepad")}}インタフェースの<code>buttons</code> プロパティから取得できます。</p>
 
-> **Note:** **注釈**: これは Firefox Gecko 28 以降の場合の説明であり、Chrome と以前の Firefox のバージョンでは、浮動小数点数の配列が返されます。
+<div class="note">
+<p><strong>注釈</strong>: これはFirefox Gecko 28以降の場合の説明であり、Chrome と以前のFirefoxのバージョンでは、浮動小数点数の配列が返されます。</p>
+</div>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-- {{domxref("GamepadButton.value")}} {{readonlyInline}}
-  - : 多くのモダンなゲームパッドにあるトリガーなどのアナログボタンの現在の状態を示す浮動小数点数です。この値は 0.0 から 1.0 までの値に正規化されており、0.0 はボタンが押されていない状態で、1.0 はボタンが完全に押されている状態を示します。
-- {{domxref("GamepadButton.pressed")}} {{readonlyInline}}
-  - : ボタンが押されているかどうかを示す boolean 型の値です。ボタンが押されている場合は`true`、押されていない場合は`false`になります。
+<dl>
+ <dt>{{domxref("GamepadButton.value")}} {{readonlyInline}}</dt>
+ <dd>多くのモダンなゲームパッドにあるトリガーなどのアナログボタンの現在の状態を示す浮動小数点数です。この値は0.0から1.0までの値に正規化されており、0.0はボタンが押されていない状態で、1.0はボタンが完全に押されている状態を示します。</dd>
+ <dt>{{domxref("GamepadButton.pressed")}} {{readonlyInline}}</dt>
+ <dd>ボタンが押されているかどうかを示すboolean型の値です。ボタンが押されている場合は<code>true</code>、押されていない場合は<code>false</code>になります。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-次のコードは、Gamepad API ボタンのデモです。Chrome では、{{domxref("Navigator.getGamepads")}}には`webkit`プレフィックスが必要であり、各ボタンの値は浮動小数点数の配列として格納されます。Firefox では、{{domxref("Navigator.getGamepads")}}にはプレフィックスは不要で、各ボタンの値は{{domxref("GamepadButton")}}オブジェクトの配列に格納されます。使用するプロパティはこのオブジェクトの{{domxref("GamepadButton.value")}}または{{domxref("GamepadButton.pressed")}}プロパティのどちらかであり、どちらを使用すればいいかはボタンの種類に依存します。この例ではどちらにも対応しています。
+<p>次のコードは、Gamepad API ボタンのデモです。Chromeでは、{{domxref("Navigator.getGamepads")}}には<code>webkit</code>プレフィックスが必要であり、各ボタンの値は浮動小数点数の配列として格納されます。Firefoxでは、{{domxref("Navigator.getGamepads")}}にはプレフィックスは不要で、各ボタンの値は{{domxref("GamepadButton")}}オブジェクトの配列に格納されます。使用するプロパティはこのオブジェクトの{{domxref("GamepadButton.value")}}または{{domxref("GamepadButton.pressed")}}プロパティのどちらかであり、どちらを使用すればいいかはボタンの種類に依存します。この例ではどちらにも対応しています。</p>
 
-```js
-function gameLoop() {
+<pre class="brush: js">function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
@@ -46,13 +49,13 @@ function gameLoop() {
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if(gp.buttons[0].value &gt; 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if(gp.buttons[1].value &gt; 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if(gp.buttons[2].value &gt; 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if(gp.buttons[3].value &gt; 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
@@ -61,19 +64,29 @@ function gameLoop() {
   ball.style.top = b*2 + "px";
 
   var start = rAF(gameLoop);
-};
-```
+};</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | 初版     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}}</td>
+   <td>{{Spec2("Gamepad")}}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.GamepadButton")}}
+<p>{{Compat("api.GamepadButton")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-[Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)
+<p><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API の利用</a></p>

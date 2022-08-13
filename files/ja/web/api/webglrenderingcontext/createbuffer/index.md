@@ -3,46 +3,63 @@ title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
 translation_of: Web/API/WebGLRenderingContext/createBuffer
 ---
-{{APIRef("WebGL")}}
+<div>{{APIRef("WebGL")}}</div>
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createBuffer()`** メソッドは、頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} を作成、初期化します。
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.createBuffer()</code></strong> メソッドは、頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} を作成、初期化します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    WebGLBuffer gl.createBuffer();
+<pre class="syntaxbox">WebGLBuffer <var>gl</var>.createBuffer();
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-ありません。
+<p>ありません。</p>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} です。
+<p>頂点や色といったデータを格納する {{domxref("WebGLBuffer")}} です。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### バッファーの作成
+<h3 id="バッファーの作成">バッファーの作成</h3>
 
-```js
-var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
-```
+</pre>
 
-## 仕様策定状況
+<h2 id="仕様策定状況">仕様策定状況</h2>
 
-| 仕様                                                                                     | 策定状況                             | コメント                               |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "createBuffer")}}                         | {{Spec2('WebGL')}}             | 初回定義。                             |
-| {{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API (と同様な) マニュアルページ |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.5", "createBuffer")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>初回定義。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>OpenGL API (と同様な) マニュアルページ</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+<p>{{Compat("api.WebGLRenderingContext.createBuffer")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- 他のバッファー : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+<ul>
+ <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
+ <li>他のバッファー : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
+</ul>

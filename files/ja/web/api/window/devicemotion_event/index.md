@@ -8,20 +8,34 @@ tags:
   - events
 translation_of: Web/API/Window/devicemotion_event
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-`devicemotion` イベントは、一定の間隔で発行され、その時点で端末が受けている加速度の物理的な力の量を示します。また、利用可能であれば、回転率に関する情報も提供します。
+<p><span class="seoSummary"><code>devicemotion</code> イベントは、一定の間隔で発行され、その時点で端末が受けている加速度の物理的な力の量を示します。また、利用可能であれば、回転率に関する情報も提供します。</span></p>
 
-| バブリング                   | いいえ                                           |
-| ---------------------------- | ------------------------------------------------ |
-| キャンセル                   | 不可                                             |
-| インターフェイス             | {{domxref("DeviceMotionEvent")}}     |
-| イベントハンドラープロパティ | {{domxref("Window.ondevicemotion")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("DeviceMotionEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("Window.ondevicemotion")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-function handleMotionEvent(event) {
+<pre class="brush: js notranslate">function handleMotionEvent(event) {
 
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
@@ -31,19 +45,32 @@ function handleMotionEvent(event) {
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                           | 状態                                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#devicemotion", "DeviceMotion event")}} | {{Spec2("Device Orientation")}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Device Orientation", "#devicemotion", "DeviceMotion event")}}</td>
+   <td>{{Spec2("Device Orientation")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.devicemotion_event")}}
+<p>{{Compat("api.Window.devicemotion_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
-- [DeviceOrientation Event](http://www.w3.org/TR/orientation-event/#devicemotion)
+<ul>
+ <li>{{domxref("Window/deviceorientation_event", "deviceorientation")}}</li>
+ <li><a class="external" href="http://www.w3.org/TR/orientation-event/#devicemotion">DeviceOrientation Event</a></li>
+</ul>

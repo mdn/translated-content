@@ -12,20 +12,20 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceObserver/disconnect
 ---
-{{APIRef("Performance Timeline API")}}
+<div>{{APIRef("Performance Timeline API")}}</div>
 
-{{domxref('PerformanceObserver')}} インターフェイスの **`disconnect()`** メソッドは、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンスエントリ", '', 'true')}}イベントを受け取らないようにするために使用されます。
+<p>{{domxref('PerformanceObserver')}} インターフェイスの <strong><code>disconnect()</code></strong> メソッドは、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンスエントリ", '', 'true')}}イベントを受け取らないようにするために使用されます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    performanceObserver.disconnect();
+<pre class="syntaxbox"><em>performanceObserver</em>.disconnect();
+</pre>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-var observer = new PerformanceObserver(function(list, obj) {
+<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i=0; i &lt; entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -39,14 +39,27 @@ function perf_observer(list, observer) {
 }
 var observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                               | ステータス                                               | コメント                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | --------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}} | {{Spec2('Performance Timeline Level 2')}} | `disconnect()` メソッドの初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}}</td>
+   <td>{{Spec2('Performance Timeline Level 2')}}</td>
+   <td><code>disconnect()</code> メソッドの初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceObserver.disconnect")}}
+<div>
+<p>{{Compat("api.PerformanceObserver.disconnect")}}</p>
+</div>

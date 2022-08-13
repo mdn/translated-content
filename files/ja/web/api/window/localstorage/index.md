@@ -13,62 +13,71 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
-{{APIRef()}}
+<p>{{APIRef()}}</p>
 
-`localStorage` プロパティはローカルの {{domxref("Storage")}} オブジェクトにアクセスすることができます。 `localStorage` は [`sessionStorage`](/ja/docs/Web/API/Window.sessionStorage) によく似ています。唯一の違いは、`localStorage` に保存されたデータには保持期間の制限はなく、`sessionStorage` に保存されたデータはセッションが終わると同時に（ブラウザが閉じられたときに）クリアされてしまうことです。
+<p><code>localStorage</code> プロパティはローカルの {{domxref("Storage")}} オブジェクトにアクセスすることができます。 <code>localStorage</code> は <code><a href="/ja/docs/Web/API/Window.sessionStorage">sessionStorage</a></code> によく似ています。唯一の違いは、<code>localStorage</code> に保存されたデータには保持期間の制限はなく、<code>sessionStorage</code> に保存されたデータはセッションが終わると同時に（ブラウザが閉じられたときに）クリアされてしまうことです。</p>
 
-`localStorageまたはsessionStorage`に保存されるデータは**そのページのプロトコル固有である**ことに注意する必要があります。
+<p><code>localStorage<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">または</span></font>sessionStorage</code>に保存されるデータは<strong>そのページのプロトコル固有である</strong>ことに注意する必要があります。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-```js
-myStorage = localStorage;
-```
+<pre class="brush: js notranslate">myStorage = localStorage;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-現在のオリジンの local storage スペースにアクセスするのに使用できる {{domxref("Storage")}} オブジェクトを返します。
+<p>現在のオリジンの local storageスペースにアクセスするのに使用できる {{domxref("Storage")}} オブジェクトを返します。</p>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-- `SecurityError`
-  - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
+<dl>
+ <dt><code>SecurityError</code></dt>
+ <dd>リクエストがポリシーの決定に反している、またはオリジンが<a href="/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">妥当な scheme/host/port tuple</a>でない (これは例えば、オリジンが <code>file:</code> や <code>data:</code> スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-以下のスニペットでは現在のドメインのローカル {{domxref("Storage")}} オブジェクトにアクセスし、{{domxref("Storage.setItem()")}} を利用してデータを追加しています。
+<p>以下のスニペットでは現在のドメインのローカル {{domxref("Storage")}} オブジェクトにアクセスし、{{domxref("Storage.setItem()")}} を利用してデータを追加しています。</p>
 
-```js
-localStorage.setItem('myCat', 'Tom');
-```
+<pre class="brush: js notranslate">localStorage.setItem('myCat', 'Tom');</pre>
 
-localStorage 項目の読み込みの文法は以下の通り:
+<p>localStorage 項目の読み込みの文法は以下の通り:</p>
 
-```js
-var cat = localStorage.getItem("myCat");
-```
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> cat <span class="operator token">=</span> localStorage<span class="punctuation token">.</span><span class="function token">getItem</span><span class="punctuation token">(</span><span class="string token">"myCat"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-localStorage 項目の削除の文法は以下の通り:
+<p>localStorage 項目の削除の文法は以下の通り:</p>
 
-```js
-localStorage.removeItem("myCat");
-```
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">localStorage<span class="punctuation token">.</span><span class="function token">removeItem</span><span class="punctuation token">(</span><span class="string token">"myCat"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-> **Note:** **注**: 詳細な使用例は [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+<div class="note">
+<p><strong>注</strong>: 詳細な使用例は <a href="/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> の記事を参照してください。</p>
+</div>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-localstorage', 'localStorage')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-localstorage', 'localStorage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
 
-{{Compat("api.Window.localStorage")}}
+<p>{{Compat("api.Window.localStorage")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("LocalStorage")}}
-- {{domxref("SessionStorage")}}
-- {{domxref("Window.sessionStorage")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
+ <li>{{domxref("LocalStorage")}}</li>
+ <li>{{domxref("SessionStorage")}}</li>
+ <li>{{domxref("Window.sessionStorage")}}</li>
+</ul>

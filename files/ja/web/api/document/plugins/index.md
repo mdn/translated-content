@@ -11,30 +11,45 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/plugins
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-{{domxref("Document")}} インターフェイスの **`plugins`** プロパティは読み取り専用で、現在の文書内にある {{HTMLElement("embed")}} 要素を表す 1 つ以上の {{domxref("HTMLEmbedElement")}} を含んだ {{domxref("HTMLCollection")}} オブジェクトを返します。
+<p>{{domxref("Document")}} インターフェイスの <strong><code>plugins</code></strong> プロパティは読み取り専用で、現在の文書内にある {{HTMLElement("embed")}} 要素を表す1つ以上の {{domxref("HTMLEmbedElement")}} を含んだ {{domxref("HTMLCollection")}} オブジェクトを返します。</p>
 
-> **Note:** インストールされているプラグインの一覧には、このメソッドでなく {{domxref("window.navigator.plugins")}} を使用してください。
+<div class="note">インストールされているプラグインの一覧には、このメソッドでなく {{domxref("window.navigator.plugins")}} を使用してください。</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    embedArrayObj = document.plugins
+<pre class="syntaxbox"><var>embedArrayObj</var> = <var>document</var>.plugins</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("HTMLCollection")}}、または文書内に embed がなければ `null` です。
+<p>{{domxref("HTMLCollection")}}、または文書内に embed がなければ <code>null</code> です。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                           | 状態                                 | 備考 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('HTML WHATWG', '#dom-document-plugins', 'Document.plugins')}} | {{ Spec2('HTML WHATWG') }} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-plugins', 'Document.plugins')}}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.plugins")}}
+<p>{{Compat("api.Document.plugins")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [MSDN documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
+<ul>
+ <li><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)">MSDN documentation</a></li>
+</ul>

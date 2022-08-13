@@ -12,40 +12,43 @@ tags:
   - register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
-{{APIRef("Service Workers API")}}
+<div>{{APIRef("Service Workers API")}}</div>
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`register()`** メソッドは、所与の `scriptURL` の {{domxref("ServiceWorkerRegistration")}} を作成または更新します。
+<p><span class="seoSummary">{{domxref("ServiceWorkerContainer")}} インターフェイスの <strong><code>register()</code></strong> メソッドは、所与の <code>scriptURL</code> の {{domxref("ServiceWorkerRegistration")}} を作成または更新します。</span></p>
 
-成功した場合、サービスワーカー登録は、提供されたスクリプト URL（`scriptURL`）を*スコープ*（`scope`）に結び付け、その後スコープをナビゲーションでの照合に使用します。 このメソッドは、制御されたページから無条件に呼び出すことができます。 つまり、アクティブな登録があるかどうかを最初に確認する必要はありません。
+<p>成功した場合、サービスワーカー登録は、提供されたスクリプト URL（<code>scriptURL</code>）を<em>スコープ</em>（<code>scope</code>）に結び付け、その後スコープをナビゲーションでの照合に使用します。 このメソッドは、制御されたページから無条件に呼び出すことができます。 つまり、アクティブな登録があるかどうかを最初に確認する必要はありません。</p>
 
-*スコープ*の意味と使用法についてはしばしば混乱があります。 サービスワーカーは自身の場所よりも広いスコープを持つことはできないため、デフォルトよりも狭いスコープが必要な場合にのみ、`scope` オプションを使用してください。
+<p><em>スコープ</em>の意味と使用法についてはしばしば混乱があります。 サービスワーカーは自身の場所よりも広いスコープを持つことはできないため、デフォルトよりも狭いスコープが必要な場合にのみ、<code>scope</code> オプションを使用してください。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-```js
-serviceWorkerContainer.register(scriptURL, options)
-  .then(function(serviceWorkerRegistration) { ... });
-```
+<pre class="brush: js">serviceWorkerContainer.register(scriptURL, options)
+  .then(function(serviceWorkerRegistration) { ... });</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- `scriptURL`
-  - : サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な [JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)が必要です。
-- `options` {{optional_inline}}
-  - : 登録オプションを含むオブジェクト。 現在利用可能なオプションは次のとおりです。\* `scope`: サービスワーカーの登録スコープを定義する URL を表す {{domxref("USVString")}}。 つまり、サービスワーカーが制御できる URL の範囲です。 これは通常、相対 URL です。 これは、アプリケーションのベース URL を基準にしています。 デフォルトでは、サービスワーカー登録の `scope` 値は、サービスワーカースクリプトが配置されているディレクトリになります。 動作の詳細については、[例](#Examples)のセクションを参照してください。
+<dl>
+ <dt><code>scriptURL</code></dt>
+ <dd>サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript">JavaScript の MIME タイプ</a>が必要です。</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>登録オプションを含むオブジェクト。 現在利用可能なオプションは次のとおりです。
+ <ul>
+  <li><code>scope</code>: サービスワーカーの登録スコープを定義する URL を表す {{domxref("USVString")}}。 つまり、サービスワーカーが制御できる URL の範囲です。 これは通常、相対 URL です。 これは、アプリケーションのベース URL を基準にしています。 デフォルトでは、サービスワーカー登録の <code>scope</code> 値は、サービスワーカースクリプトが配置されているディレクトリになります。 動作の詳細については、<a href="#Examples">例</a>のセクションを参照してください。</li>
+ </ul>
+ </dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{domxref("ServiceWorkerRegistration")}} オブジェクトで解決する {{jsxref("Promise")}}。
+<p>{{domxref("ServiceWorkerRegistration")}} オブジェクトで解決する {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-ここで説明する例は、サービスワーカーのスコープがページにどのように適用されるかをよりよく理解するために、まとめて理解する必要があります。
+<p>ここで説明する例は、サービスワーカーのスコープがページにどのように適用されるかをよりよく理解するために、まとめて理解する必要があります。</p>
 
-次の例では、`scope`（を省略した場合）のデフォルト値を使用しています。 この場合、サービスワーカーは `example.com/index.html` とその下のページ（`example.com/product/description.html` など）を制御します。
+<p>次の例では、<code>scope</code>（を省略した場合）のデフォルト値を使用しています。 この場合、サービスワーカーは <code>example.com/index.html</code> とその下のページ（<code>example.com/product/description.html</code> など）を制御します。</p>
 
-```js
-if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // デフォルトのスコープを使用して、
   // サイトのルートでホストされるサービスワーカーを登録します。
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -55,13 +58,11 @@ if ('serviceWorker' in navigator) {
   });
 } else {
   console.log('サービスワーカーをサポートしていません。');
-}
-```
+}</pre>
 
-次のコードは、サイトのルートにあるページに含まれている場合、上記の例とまったく同じページに適用されます。 スコープが含まれている場合は、ページの場所をベースとして使用することに注意してください。 あるいは、このコードが `example.com/product/description.html` のページに含まれている場合、`'./'` のスコープは、サービスワーカーが `example.com/product` の下のリソースにのみ適用されることを意味します。 `example.com` のすべてに適用されるサービスワーカーを `example.com/product/description.html` で登録する必要がある場合は、上記のようにスコープを省略します。
+<p>次のコードは、サイトのルートにあるページに含まれている場合、上記の例とまったく同じページに適用されます。 スコープが含まれている場合は、ページの場所をベースとして使用することに注意してください。 あるいは、このコードが <code>example.com/product/description.html</code> のページに含まれている場合、<code>'./'</code> のスコープは、サービスワーカーが <code>example.com/product</code> の下のリソースにのみ適用されることを意味します。 <code>example.com</code> のすべてに適用されるサービスワーカーを <code>example.com/product/description.html</code> で登録する必要がある場合は、上記のようにスコープを省略します。</p>
 
-```js
-if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // より限定的なスコープを使用して、
   // サイトのルートでホストされるサービスワーカーを登録します。
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
@@ -72,14 +73,29 @@ if ('serviceWorker' in navigator) {
 } else {
   console.log('サービスワーカーをサポートしていません。');
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerContainer.register")}}</p>
+</div>

@@ -13,24 +13,35 @@ tags:
   - length
 translation_of: Web/API/CSSUnparsedValue/length
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
-**`length`** は {{domxref("CSSUnparsedValue")}} インターフェイスの読み取り専用プロパティで、オブジェクト内の項目の数を返します。
+<p class="summary"><strong><code>length</code></strong> は {{domxref("CSSUnparsedValue")}} インターフェイスの読み取り専用プロパティで、オブジェクト内の項目の数を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var length = CSSUnparsedValue.length;
+<pre class="syntaxbox">var <var>length</var> = CSSUnparsedValue.length;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-整数。
+<p>整数。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                           | 状態                     | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssunparsedvalue-length','length')}} | {{Spec2('CSSOM')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM','#dom-cssunparsedvalue-length','length')}}</td>
+   <td>{{Spec2('CSSOM')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.CSSUnparsedValue.length")}}
+<p>{{Compat("api.CSSUnparsedValue.length")}}</p>

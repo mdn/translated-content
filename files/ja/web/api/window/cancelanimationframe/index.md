@@ -7,25 +7,27 @@ tags:
   - Method
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-{{domxref("window.requestAnimationFrame()")}} の呼び出しによりスケジュールされたフレームアニメーションのリクエストをキャンセルします。
+<p>{{domxref("window.requestAnimationFrame()")}} の呼び出しによりスケジュールされたフレームアニメーションのリクエストをキャンセルします。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    window.cancelAnimationFrame(requestID);
+<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `requestID`
-  - : コールバックがリクエストした {{domxref("window.requestAnimationFrame()")}} の呼び出しにより返された ID 値。
+<dl>
+ <dt><code>requestID</code></dt>
+ <dd>コールバックがリクエストした {{domxref("window.requestAnimationFrame()")}} の呼び出しにより返された ID 値。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -37,24 +39,28 @@ var myReq;
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress / 10, 200) + 'px';
-  if (progress < 2000) {
+  if (progress &lt; 2000) {
     myReq = requestAnimationFrame(step);
   }
 }
 myReq = requestAnimationFrame(step);
 
 cancelAnimationFrame(myReq);
-```
+</pre>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.Window.cancelAnimationFrame")}}
+<p>{{Compat("api.Window.cancelAnimationFrame")}}</p>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-- {{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
+<ul>
+ <li>{{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}</li>
+</ul>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("window.mozAnimationStartTime")}}
-- {{domxref("window.requestAnimationFrame()")}}
+<ul>
+ <li>{{domxref("window.mozAnimationStartTime")}}</li>
+ <li>{{domxref("window.requestAnimationFrame()")}}</li>
+</ul>

@@ -3,149 +3,151 @@ title: Ajax ナビゲーションの例
 slug: Web/API/History_API/Example
 translation_of: Web/API/History_API/Example
 ---
-これは 3 ページ (first_page.php、second_page.php、third_page.php) で構成された AJAX Web サイトの例です。どのように動作するかを確認するには、以下のファイル (または git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example "/en-US/docs/")) を作成してください：
+<p>これは3ページ (first_page.php、second_page.php、third_page.php) で構成された AJAX Web サイトの例です。どのように動作するかを確認するには、以下のファイル (またはgit clone <a href="https://github.com/giabao/mdn-ajax-nav-example" title="/en-US/docs/">https://github.com/giabao/mdn-ajax-nav-example.git</a>) を作成してください：</p>
 
-> **Note:** **メモ:** このメカニズム内の {{HTMLElement("form")}} 要素を完全に統合するには、[フォームの送信とファイルのアップロード](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)の段落を見てください。
+<div class="note" id="const_compatibility"><strong>メモ:</strong> このメカニズム内の {{HTMLElement("form")}} 要素を完全に統合するには、<a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">フォームの送信とファイルのアップロード</a>の段落を見てください。</div>
 
-**first_page.php**:
+<p><strong>first_page.php</strong>:</p>
 
-```php
-<?php
+<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
+<pre class="brush: php">&lt;?php
     $page_title = "First page";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
+    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
+?&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php
         include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
+        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
+?&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<?php include "include/before_content.php"; ?>
+&lt;?php include "include/before_content.php"; ?&gt;
 
-<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
 
-<div id="ajax-content">
-<?php } ?>
+&lt;div id="ajax-content"&gt;
+&lt;?php } ?&gt;
 
-    <p>This is the content of <strong>first_page.php</strong>.</p>
+    &lt;p&gt;This is the content of &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
 
-<?php
+&lt;?php
     if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
+        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; ob_get_clean()));
     } else {
-?>
+?&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;?php
+        include "include/after_content.php";
+        echo "&lt;/body&gt;\n&lt;/html&gt;";
+    }
+?&gt;
+</pre>
 </div>
 
-<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
+<p><strong>second_page.php</strong>:</p>
 
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
-
-**second_page.php**:
-
-```php
-<?php
+<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
+<pre class="brush: php">&lt;?php
     $page_title = "Second page";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
+    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
+?&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php
         include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
+        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
+?&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<?php include "include/before_content.php"; ?>
+&lt;?php include "include/before_content.php"; ?&gt;
 
-<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
 
-<div id="ajax-content">
-<?php } ?>
+&lt;div id="ajax-content"&gt;
+&lt;?php } ?&gt;
 
-    <p>This is the content of <strong>second_page.php</strong>.</p>
+    &lt;p&gt;This is the content of &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
 
-<?php
+&lt;?php
     if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
+        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; ob_get_clean()));
     } else {
-?>
+?&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;?php
+        include "include/after_content.php";
+        echo "&lt;/body&gt;\n&lt;/html&gt;";
+    }
+?&gt;
+</pre>
 </div>
 
-<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
+<p><strong>third_page.php</strong>:</p>
 
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
-
-**third_page.php**:
-
-```php
-<?php
+<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
+<pre class="brush: php">&lt;?php
     $page_title = "Third page";
-    $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a php variable.</p>";
+    $page_content = "&lt;p&gt;This is the content of &lt;strong&gt;third_page.php&lt;/strong&gt;. This content is stored into a php variable.&lt;/p&gt;";
 
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
-        echo json_encode(array("page" => $page_title, "content" => $page_content));
+    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
+        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; $page_content));
     } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
+?&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php
         include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
+        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
+?&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<?php include "include/before_content.php"; ?>
+&lt;?php include "include/before_content.php"; ?&gt;
 
-<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;third_page.php&lt;/strong&gt;.&lt;/p&gt;
 
-<div id="ajax-content">
-<?php echo $page_content; ?>
+&lt;div id="ajax-content"&gt;
+&lt;?php echo $page_content; ?&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;third_page.php&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;?php
+        include "include/after_content.php";
+        echo "&lt;/body&gt;\n&lt;/html&gt;";
+    }
+?&gt;
+</pre>
 </div>
 
-<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
+<p><strong>css/style.css</strong>:</p>
 
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
-
-**css/style.css**:
-
-```css
-#ajax-loader {
+<pre class="brush: css">#ajax-loader {
     position: fixed;
     display: table;
     top: 0;
@@ -154,7 +156,7 @@ translation_of: Web/API/History_API/Example
     height: 100%;
 }
 
-#ajax-loader > div {
+#ajax-loader &gt; div {
     display: table-cell;
     width: 100%;
     height: 100%;
@@ -163,42 +165,40 @@ translation_of: Web/API/History_API/Example
     background-color: #000000;
     opacity: 0.65;
 }
-```
+</pre>
 
-**include/after_content.php**:
+<p><strong>include/after_content.php</strong>:</p>
 
-```php
-<p>This is the footer. It is shared between all ajax pages.</p>
-```
+<pre class="brush: php">&lt;p&gt;This is the footer. It is shared between all ajax pages.&lt;/p&gt;
+</pre>
 
-**include/before_content.php**:
+<p><strong>include/before_content.php</strong>:</p>
 
-```php
-<p>
-[ <a class="ajax-nav" href="first_page.php">First example</a>
-| <a class="ajax-nav" href="second_page.php">Second example</a>
-| <a class="ajax-nav" href="third_page.php">Third example</a>
-| <a class="ajax-nav" href="unexisting.php">Unexisting page</a> ]
-</p>
-```
+<pre class="brush: php">&lt;p&gt;
+[ &lt;a class="ajax-nav" href="first_page.php"&gt;First example&lt;/a&gt;
+| &lt;a class="ajax-nav" href="second_page.php"&gt;Second example&lt;/a&gt;
+| &lt;a class="ajax-nav" href="third_page.php"&gt;Third example&lt;/a&gt;
+| &lt;a class="ajax-nav" href="unexisting.php"&gt;Unexisting page&lt;/a&gt; ]
+&lt;/p&gt;
 
-**include/header.php**:
+</pre>
 
-```php
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
-<link rel="stylesheet" href="css/style.css" />
-```
+<p><strong>include/header.php</strong>:</p>
 
-**js/ajax_nav.js**:
+<pre class="brush: php">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;script type="text/javascript" src="js/ajax_nav.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="css/style.css" /&gt;
+</pre>
 
-```js
-"use strict";
+<p><strong>js/ajax_nav.js</strong>:</p>
+
+<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
+<pre class="brush: js">"use strict";
 
 const ajaxRequest = new (function () {
 
     function closeReq () {
-        oLoadingBox.parentNode && document.body.removeChild(oLoadingBox);
+        oLoadingBox.parentNode &amp;&amp; document.body.removeChild(oLoadingBox);
         bIsLoading = false;
     }
 
@@ -258,7 +258,7 @@ const ajaxRequest = new (function () {
     }
 
     function filterURL (sURL, sViewMode) {
-        return sURL.replace(rSearch, "") + ("?" + sURL.replace(rHost, "&").replace(rView, sViewMode ? "&" + sViewKey + "=" + sViewMode : "").slice(1)).replace(rEndQstMark, "");
+        return sURL.replace(rSearch, "") + ("?" + sURL.replace(rHost, "&amp;").replace(rView, sViewMode ? "&amp;" + sViewKey + "=" + sViewMode : "").slice(1)).replace(rEndQstMark, "");
     }
 
     function getPage (sPage) {
@@ -294,7 +294,7 @@ const ajaxRequest = new (function () {
     function init () {
         oPageInfo.title = document.title;
         history.replaceState(oPageInfo, oPageInfo.title, oPageInfo.url);
-        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
+        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx &lt; nLen; document.links[nIdx++].onclick = processLink);
     }
 
     const
@@ -303,7 +303,7 @@ const ajaxRequest = new (function () {
         sTargetId = "ajax-content", sViewKey = "view_as", sAjaxClass = "ajax-nav",
 
         /* not customizable constants */
-        rSearch = /\?.*$/, rHost = /^[^\?]*\?*&*/, rView = new RegExp("&" + sViewKey + "\\=[^&]*|&*$", "i"), rEndQstMark = /\?$/,
+        rSearch = /\?.*$/, rHost = /^[^\?]*\?*&amp;*/, rView = new RegExp("&amp;" + sViewKey + "\\=[^&amp;]*|&amp;*$", "i"), rEndQstMark = /\?$/,
         oLoadingBox = document.createElement("div"), oCover = document.createElement("div"), oLoadingImg = new Image(),
         oPageInfo = {
             title: null,
@@ -399,11 +399,14 @@ const ajaxRequest = new (function () {
     this.rebuildLinks = init;
 
 })();
-```
+</pre>
+</div>
 
-詳細は、[ブラウザの履歴を操作する](/ja/docs/Web/API/History_API)を参照してください。
+<p>詳細は、<a href="/ja/docs/Web/API/History_API">ブラウザの履歴を操作する</a>を参照してください。</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- {{ domxref("window.history") }}
-- {{ domxref("window.onpopstate") }}
+<ul>
+ <li>{{ domxref("window.history") }}</li>
+ <li>{{ domxref("window.onpopstate") }}</li>
+</ul>

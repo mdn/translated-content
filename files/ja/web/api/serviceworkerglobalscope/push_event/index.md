@@ -17,22 +17,36 @@ tags:
   - イベント
 translation_of: Web/API/ServiceWorkerGlobalScope/push_event
 ---
-{{APIRef("Push API")}}
+<div>{{APIRef("Push API")}}</div>
 
-`push` イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。
+<p><span class="seoSummary"><code>push</code> イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。</span></p>
 
-| バブリング                   | なし                                                                         |
-| ---------------------------- | ---------------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                         |
-| インターフェイス             | {{domxref("PushEvent")}}                                             |
-| イベントハンドラープロパティ | {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("PushEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この例は `push` イベントのハンドラーを設定して、 {{Glossary("JSON")}} データを取り、解析し、メッセージ内に含まれる情報に基づいて扱うためにメッセージを仕分けします。
+<p>この例は <code>push</code> イベントのハンドラーを設定して、 {{Glossary("JSON")}} データを取り、解析し、メッセージ内に含まれる情報に基づいて扱うためにメッセージを仕分けします。</p>
 
-```js
-self.addEventListener("push", event => {
+<pre class="brush: js">self.addEventListener("push", event =&gt; {
   let message = event.data.json();
 
   switch(message.type) {
@@ -43,21 +57,35 @@ self.addEventListener("push", event => {
       doShutdown();
       break;
   }
-}, false);
-```
+}, false);</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                   | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Push API', '#extensions-to-the-serviceworkerglobalscope-interface', 'push')}} | {{Spec2('Push API')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Push API', '#extensions-to-the-serviceworkerglobalscope-interface', 'push')}}</td>
+   <td>{{Spec2('Push API')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerGlobalScope.push_event")}}
+<p>{{Compat("api.ServiceWorkerGlobalScope.push_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Push API の使用](/ja/docs/Web/API/Push_API/Using_the_Push_API)
-- {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} イベントハンドラープロパティ
-- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} イベント
+<ul>
+ <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Push API の使用</a></li>
+ <li>{{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} イベントハンドラープロパティ</li>
+ <li>{{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} イベント</li>
+</ul>

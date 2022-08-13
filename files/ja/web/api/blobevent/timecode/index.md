@@ -10,24 +10,39 @@ tags:
   - Reference
 translation_of: Web/API/BlobEvent/timecode
 ---
-{{SeeCompatTable}}{{APIRef("Media Capture and Streams")}}
+<p>{{SeeCompatTable}}{{APIRef("Media Capture and Streams")}}</p>
 
-{{domxref("BlobEvent")}} インタフェースの **`timecode`** 読み取り専用プロパティは、データ内の最初のチャンクのタイムスタンプと、このレコーダによって生成された最初の `BlobEvent` 内の最初のチャンクのタイムスタンプとの差を示す {{domxref("DOMHighResTimeStamp")}} です。 最初に生成された `BlobEvent` の `timecode` はゼロである必要はないことに注意してください。
+<p><span class="seoSummary">{{domxref("BlobEvent")}} インタフェースの <strong><code>timecode</code></strong> 読み取り専用プロパティは、データ内の最初のチャンクのタイムスタンプと、このレコーダによって生成された最初の <code>BlobEvent</code> 内の最初のチャンクのタイムスタンプとの差を示す {{domxref("DOMHighResTimeStamp")}} です。</span> 最初に生成された <code>BlobEvent</code> の <code>timecode</code> はゼロである必要はないことに注意してください。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var timecode = BlobEvent.timecode
+<pre class="syntaxbox">var timecode = BlobEvent.timecode</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("DOMHighResTimeStamp")}}。
+<p>{{domxref("DOMHighResTimeStamp")}}。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                               | 策定状況                                     | 備考       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording','#dom-blobevent-timecode','timecode')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('MediaStream Recording','#dom-blobevent-timecode','timecode')}}</td>
+   <td>{{Spec2('MediaStream Recording')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.BlobEvent.timecode")}}
+<div>
+
+
+<p>{{Compat("api.BlobEvent.timecode")}}</p>
+</div>

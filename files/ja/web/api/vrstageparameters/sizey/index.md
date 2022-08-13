@@ -3,37 +3,48 @@ title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
 translation_of: Web/API/VRStageParameters/sizeY
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-{{domxref("VRStageParameters")}} インターフェイスの **`sizeY`** 読取専用プロパティはプレイエリア境界の奥行きをメートル単位で返します．
+<p>{{domxref("VRStageParameters")}} インターフェイスの <strong><code>sizeY</code></strong> 読取専用プロパティはプレイエリア境界の奥行きをメートル単位で返します．</p>
 
-境界は，安全性を目的として，床の平面上に軸に沿った矩形として定義されています．コンテンツは，この境界を超えてユーザが動いてしまうような動作をすべてきではありません; しかし，ユーザは境界を無視して動くこと自体は可能で，ユーザ位置がこの矩形境界の外側になることもあります．矩形の中心は，立位空間座標における (0,0,0) です．
+<p>境界は，安全性を目的として，床の平面上に軸に沿った矩形として定義されています．コンテンツは，この境界を超えてユーザが動いてしまうような動作をすべてきではありません; しかし，ユーザは境界を無視して動くこと自体は可能で，ユーザ位置がこの矩形境界の外側になることもあります．矩形の中心は，立位空間座標における (0,0,0) です．</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-var mySizeY = vrStageParametersInstance.sizeY;
-```
+<pre class="brush: js">var mySizeY = vrStageParametersInstance.<code>sizeY</code>;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-float で表現された奥行き（メートル単位）．
+<p>floatで表現された奥行き（メートル単位）．</p>
 
-## 例
+<h2 id="例">例</h2>
 
-    TBD.
+<pre>TBD.</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vrstageparameters-sizey', 'sizeY')}} | {{Spec2('WebVR')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vrstageparameters-sizey', 'sizeY')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.VRStageParameters.sizeY")}}
+<p>{{Compat("api.VRStageParameters.sizeY")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

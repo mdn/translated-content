@@ -16,29 +16,30 @@ tags:
   - appendBufferAsync
 translation_of: Web/API/SourceBuffer/appendBufferAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+<div>{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}</div>
 
-{{domxref("SourceBuffer")}} インターフェイスの **`appendBufferAsync()`** メソッドは、{{jsxref("ArrayBuffer")}} または {{domxref("ArrayBufferView")}} オブジェクトから `SourceBuffer` にメディアセグメントデータを非同期的に追加するプロセスを開始します。 バッファが追加されると満たされる {{jsxref("Promise")}} を返します。
+<p><span class="seoSummary">{{domxref("SourceBuffer")}} インターフェイスの <strong><code>appendBufferAsync()</code></strong> メソッドは、{{jsxref("ArrayBuffer")}} または {{domxref("ArrayBufferView")}} オブジェクトから <code>SourceBuffer</code> にメディアセグメントデータを非同期的に追加するプロセスを開始します。</span> バッファが追加されると満たされる {{jsxref("Promise")}} を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    appendPromise = sourceBuffer.appendBufferAsync(source);
+<pre class="syntaxbox"><em>appendPromise</em> = <em>sourceBuffer</em>.appendBufferAsync(<em>source</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- `source`
-  - : `SourceBuffer` に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。
+<dl>
+ <dt><code>source</code></dt>
+ <dd><code>SourceBuffer</code> に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-バッファが `SourceBuffer` に正常に追加されたときに満たされる {{jsxref("Promise")}}、または要求を開始できなかった場合は `null`。
+<p>バッファが <code>SourceBuffer</code> に正常に追加されたときに満たされる {{jsxref("Promise")}}、または要求を開始できなかった場合は <code>null</code>。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この単純化された非同期関数の例 `fillSourceBuffer()` は、入力パラメーターとして {{domxref("BufferSource")}} の `buffer`、およびバッファからソースメディアを追加する `SourceBuffer` を受け取ります。
+<p>この単純化された非同期関数の例 <code>fillSourceBuffer()</code> は、入力パラメーターとして {{domxref("BufferSource")}} の <code>buffer</code>、およびバッファからソースメディアを追加する <code>SourceBuffer</code> を受け取ります。</p>
 
-```js
-async function fillSourceBuffer(buffer, msBuffer) {
+<pre class="brush: js">async function fillSourceBuffer(buffer, msBuffer) {
   try {
     while(true) {
       await msBuffer.appendBufferAsync(buffer);
@@ -47,23 +48,40 @@ async function fillSourceBuffer(buffer, msBuffer) {
     handleException(e);
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-現在、仕様の一部ではありません。 これは、**Web Platform Incubator Community Group**（WICG）の後援の下で実験されています。
+<p>現在、仕様の一部ではありません。 これは、<strong>Web Platform Incubator Community Group</strong>（WICG）の後援の下で実験されています。</p>
 
-| 仕様                                                 | 状態                                             | コメント                               |
-| ---------------------------------------------------- | ------------------------------------------------ | -------------------------------------- |
-| {{SpecName('Media Source Extensions')}} | {{Spec2('Media Source Extensions')}} | 初期定義、このメソッドは含まれません。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>初期定義、このメソッドは含まれません。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.SourceBuffer.appendBufferAsync")}}
+<div>
 
-## 関連情報
 
-- [Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)
-- {{domxref("SourceBuffer.appendBuffer()")}}
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+<p>{{Compat("api.SourceBuffer.appendBufferAsync")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a></li>
+ <li>{{domxref("SourceBuffer.appendBuffer()")}}</li>
+ <li>{{domxref("MediaSource")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

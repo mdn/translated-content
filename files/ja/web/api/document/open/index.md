@@ -11,85 +11,102 @@ tags:
   - メソッド
 translation_of: Web/API/Document/open
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-**`Document.open()`** メソッドは、{{domxref("Document.write", "書き込み", "", "1")}}のために文書を開きます。
+<p><strong><code>Document.open()</code></strong> メソッドは、{{domxref("Document.write", "書き込み", "", "1")}}のために文書を開きます。</p>
 
-これはいくらかの副作用を招きます。例を挙げます。
+<p>これはいくらかの副作用を招きます。例を挙げます。</p>
 
-- 文書、文書内のノード、文書のウィンドウに現在登録されているイベントリスナーがすべて除去されます。
-- すべての既存のノードが文書から除去されます。
+<ul>
+ <li>文書、文書内のノード、文書のウィンドウに現在登録されているイベントリスナーがすべて除去されます。</li>
+ <li>すべての既存のノードが文書から除去されます。</li>
+</ul>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    document.open();
+<pre class="syntaxbox notranslate">document.open();
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-なし。
+<p>なし。</p>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-`Document` オブジェクトインスタンスです。
+<p><code>Document</code> オブジェクトインスタンスです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-以下の簡単なコードは、文書を開き、その内容をいくつかの異なる HTML の断片に置き換えてから、再び閉じます。
+<p>以下の簡単なコードは、文書を開き、その内容をいくつかの異なる HTML の断片に置き換えてから、再び閉じます。</p>
 
-```js
-document.open();
-document.write("<p>Hello world!</p>");
-document.write("<p>I am a fish</p>");
-document.write("<p>The number is 42</p>");
+<pre class="brush: js notranslate">document.open();
+document.write("&lt;p&gt;Hello world!&lt;/p&gt;");
+document.write("&lt;p&gt;I am a fish&lt;/p&gt;");
+document.write("&lt;p&gt;The number is 42&lt;/p&gt;");
 document.close();
-```
+</pre>
 
-## 注
+<h2 id="Notes" name="Notes">注</h2>
 
-ページが読み込まれたあとで {{domxref("document.write()")}} が呼び出されると、自動的に `document.open()` が呼び出されます。
+<p>ページが読み込まれたあとで {{domxref("document.write()")}} が呼び出されると、自動的に <code>document.open()</code> が呼び出されます。</p>
 
-Firefox や Internet Explorer では何年も前から、すべてのノードの削除に加えて、 JavaScript の変数なども追加で消去していました。今はそうではありません。document non-spec'ed parameters to document.open
+<p>Firefox や Internet Explorer では何年も前から、すべてのノードの削除に加えて、 JavaScript の変数なども追加で消去していました。今はそうではありません。<span class="comment">document non-spec'ed parameters to document.open</span></p>
 
-### Gecko 固有のメモ
+<h3 id="Gecko-specific_notes" name="Gecko-specific_notes">Gecko 固有のメモ</h3>
 
-Gecko 1.9 以降、このメソッドは他のプロパティと同一オリジンポリシーが同じになるようになり、文書のオリジンを変更しようとした場合に動作しません。
+<p>Gecko 1.9 以降、このメソッドは他のプロパティと同一オリジンポリシーが同じになるようになり、文書のオリジンを変更しようとした場合に動作しません。</p>
 
-Gecko 1.9.2 以降、 `document.open()` は[プリンシパル](/ja/docs/Security_check_basics)をスタックからフェッチするのではなく、 URI を使用する文書のプリンシパルを使用します。その結果、 [`wrappedJSObject`](/ja/wrappedJSObject) を使用しても、 {{domxref("document.write()")}} を{{Glossary("chrome", "クローム")}}からの信頼できない文書に呼び出すことはできません。考え方については[セキュリティチェックの基本](/ja/Security_check_basics)を参照してください。
+<p>Gecko 1.9.2 以降、 <code>document.open()</code> は<a href="/ja/docs/Security_check_basics">プリンシパル</a>をスタックからフェッチするのではなく、 URI を使用する文書のプリンシパルを使用します。その結果、 <a class="internal" href="/ja/wrappedJSObject"><code>wrappedJSObject</code></a> を使用しても、 {{domxref("document.write()")}} を{{Glossary("chrome", "クローム")}}からの信頼できない文書に呼び出すことはできません。考え方については<a href="/ja/Security_check_basics">セキュリティチェックの基本</a>を参照してください。</p>
 
-## 引数 3 つの document.open()
+<h2 id="Three-argument_document.open" name="Three-argument_document.open">引数3つの document.open()</h2>
 
-あまり知られていませんが、あまり使われていない引数 3 つ版の `document.open()` があり、これは {{domxref("Window.open()")}} のエイリアスです (詳細はそのページを参照してください)。
+<p>あまり知られていませんが、あまり使われていない引数3つ版の <code>document.open()</code> があり、これは {{domxref("Window.open()")}} のエイリアスです (詳細はそのページを参照してください)。</p>
 
-この呼び出しは、例えば github.com を新しいウィンドウで開き、オープナーは `null` に設定してみます。
+<p>この呼び出しは、例えば github.com を新しいウィンドウで開き、オープナーは <code>null</code> に設定してみます。</p>
 
-```js
-document.open('https://www.github.com','', 'noopener=true')
-```
+<pre class="brush: js notranslate">document.open('https://www.github.com','', 'noopener=true')</pre>
 
-## 引数 2 つの document.open()
+<h2 id="Two-argument_document.open" name="Two-argument_document.open">引数2つの document.open()</h2>
 
-ブラウザーは以下の形で、引数 2 つの `document.open()` に対応してきました。
+<p>ブラウザーは以下の形で、引数2つの <code>document.open()</code> に対応してきました。</p>
 
-```js
-document.open(type, replace)
-```
+<pre class="brush: js notranslate">document.open(<var>type</var>, <var>replace</var>)</pre>
 
-`type` は書き込もうとしているデータの MIME タイプ (`text/html` など) を指定し、 replace が設定されていれば (すなわち "replace" の文字列)、新しい文書の履歴エントリが書き込まれている文書の現在の履歴エントリを置き換えることを指定していました。
+<p><code><var>type</var></code> は書き込もうとしているデータの MIME タイプ (<code>text/html</code> など) を指定し、 replace が設定されていれば (すなわち "replace" の文字列)、新しい文書の履歴エントリが書き込まれている文書の現在の履歴エントリを置き換えることを指定していました。</p>
 
-この形式は現在では廃止されています。エラーは発生せず、代わりに `document.open()` に転送されます (つまり、引数なしで実行した場合と同等です)。 履歴の置換動作は常に行われるようになりました。
+<p>この形式は現在では廃止されています。エラーは発生せず、代わりに <code>document.open()</code> に転送されます (つまり、引数なしで実行した場合と同等です)。 履歴の置換動作は常に行われるようになりました。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |      |
-| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.open")}}
+<p>{{Compat("api.Document.open")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{domxref("Document")}}
-- {{domxref("Window.open()")}}
+<ul>
+ <li>{{domxref("Document")}}</li>
+ <li>{{domxref("Window.open()")}}</li>
+</ul>

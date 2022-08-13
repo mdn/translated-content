@@ -3,46 +3,110 @@ title: 構造化複製アルゴリズム
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-**構造化複製アルゴリズム** は複雑な JavaScript オブジェクトをコピーするためのアルゴリズムです。これは {{domxref("Worker.postMessage()", "postMessage()")}} を介して [Worker](/ja/docs/Web/API/Worker) と送受信するとき、[IndexedDB](/ja/docs/Glossary/IndexedDB) にオブジェクトを格納するとき、[他の API](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit#See_Also) のためにオブジェクトをコピーするときなど、データ転送時に内部で用いられています。無限ループを避けるため、以前にアクセスした参照のマップを保持しながら、入力オブジェクトを再帰処理することで複製していきます。
+<p><strong>構造化複製アルゴリズム </strong>は複雑な JavaScript オブジェクトをコピーするためのアルゴリズムです。これは {{domxref("Worker.postMessage()", "postMessage()")}} を介して <a href="/ja/docs/Web/API/Worker">Worker</a> と送受信するとき、<a href="/ja/docs/Glossary/IndexedDB">IndexedDB</a> にオブジェクトを格納するとき、<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit#See_Also">他の API</a> のためにオブジェクトをコピーするときなど、データ転送時に内部で用いられています。無限ループを避けるため、以前にアクセスした参照のマップを保持しながら、入力オブジェクトを再帰処理することで複製していきます。</p>
 
-## 構造化複製で動作しないもの
+<h2 id="構造化複製で動作しないもの">構造化複製で動作しないもの</h2>
 
-- [`Function`](/ja/JavaScript/Reference/Global_Objects/Function "en/JavaScript/Reference/Global Objects/Function") オブジェクトは構造化複製アルゴリズムでは複製されません。複製しようとすると `DATA_CLONE_ERR` 例外が送出されます。
-- DOM ノードを複製するときも同様に `DATA_CLONE_ERR` 例外が送出されます。
-- 以下に挙げるオブジェクトのパラメーターは保持されません。
+<ul>
+ <li><a href="/ja/JavaScript/Reference/Global_Objects/Function" title="en/JavaScript/Reference/Global Objects/Function"><code>Function</code></a> オブジェクトは構造化複製アルゴリズムでは複製されません。複製しようとすると <code>DATA_CLONE_ERR</code> 例外が送出されます。</li>
+ <li>DOM ノードを複製するときも同様に <code>DATA_CLONE_ERR</code> 例外が送出されます。</li>
+ <li>以下に挙げるオブジェクトのパラメーターは保持されません。
+  <ul>
+   <li><a href="/ja/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> オブジェクトの <code>lastIndex</code> フィールドは保持されません。</li>
+   <li>プロパティ記述子、セッター、ゲッター (もしくは同様のメタデータ系機能) は複製されません。たとえば、オブジェクトに <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">プロパティ記述子</a> を使用して読み取り専用にしている場合でも、複製したものではデフォルトの条件である読み取り/書き込みに変わります。</li>
+   <li>プロトタイプチェーンは探索、複製されません。</li>
+  </ul>
+ </li>
+</ul>
 
-  - [`RegExp`](/ja/JavaScript/Reference/Global_Objects/RegExp "en/JavaScript/Reference/Global Objects/regexp") オブジェクトの `lastIndex` フィールドは保持されません。
-  - プロパティ記述子、セッター、ゲッター (もしくは同様のメタデータ系機能) は複製されません。たとえば、オブジェクトに [プロパティ記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) を使用して読み取り専用にしている場合でも、複製したものではデフォルトの条件である読み取り/書き込みに変わります。
-  - プロトタイプチェーンは探索、複製されません。
+<div class="blockIndicator note">
+<p><strong>メモ</strong>: ネイティブの <a href="/ja/JavaScript/Reference/Global_Objects/Error" title="en/JavaScript/Reference/Global Objects/Error"><code>Error</code></a> 型は Chrome では複製できます。Firefox は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1556604">対応中</a> です。</p>
+</div>
 
-> **Note:** **メモ**: ネイティブの [`Error`](/ja/JavaScript/Reference/Global_Objects/Error "en/JavaScript/Reference/Global Objects/Error") 型は Chrome では複製できます。Firefox は [対応中](https://bugzilla.mozilla.org/show_bug.cgi?id=1556604) です。
+<h2 id="サポート済みの型">サポート済みの型</h2>
 
-## サポート済みの型
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">オブジェクトの型</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Data_structures#Primitive_values">すべてのプリミティブ型</a></td>
+   <td>symbol を除く</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> オブジェクト</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String">String</a> オブジェクト</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></td>
+   <td><code>lastIndex</code> フィールドは保持されません。</td>
+  </tr>
+  <tr>
+   <td>{{ domxref("Blob") }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{ domxref("File") }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{ domxref("FileList") }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/API/ArrayBuffer">ArrayBuffer</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/API/ArrayBufferView">ArrayBufferView</a></td>
+   <td>他の <a href="/ja/docs/Web/JavaScript/Typed_arrays">型付き配列</a> を含む</td>
+  </tr>
+  <tr>
+   <td>{{ domxref("ImageBitmap") }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{ domxref("ImageData") }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></td>
+   <td>これはプレーンオブジェクト (オブジェクトリテラルなど) <strong>のみ </strong>を含みます</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-| オブジェクトの型                                                                      | 備考                                                                      |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [すべてのプリミティブ型](/ja/docs/Web/JavaScript/Data_structures#Primitive_values)    | symbol を除く                                                             |
-| [Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean) オブジェクト      |                                                                           |
-| [String](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String) オブジェクト |                                                                           |
-| [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)                         |                                                                           |
-| [RegExp](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                     | `lastIndex` フィールドは保持されません。                                  |
-| {{ domxref("Blob") }}                                                          |                                                                           |
-| {{ domxref("File") }}                                                          |                                                                           |
-| {{ domxref("FileList") }}                                                      |                                                                           |
-| [ArrayBuffer](/ja/docs/Web/API/ArrayBuffer)                                           |                                                                           |
-| [ArrayBufferView](/ja/docs/Web/API/ArrayBufferView)                                   | 他の [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) を含む            |
-| {{ domxref("ImageBitmap") }}                                                  |                                                                           |
-| {{ domxref("ImageData") }}                                                  |                                                                           |
-| [Array](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)                       |                                                                           |
-| [Object](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)                     | これはプレーンオブジェクト (オブジェクトリテラルなど) **のみ** を含みます |
-| [Map](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map)                           |                                                                           |
-| [Set](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)                           |                                                                           |
+<h2 id="関連情報">関連情報</h2>
 
-## 関連情報
-
-- [HTML Specification: Safe passing of structured data](http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
-- {{ domxref("window.history") }}
-- {{ domxref("window.postMessage()") }}
-- [Web Workers](/ja/docs/Web/API/Web_Workers_API)
-- [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
-- [Components.utils.cloneInto](/ja/docs/Components.utils.cloneInto)
+<ul>
+ <li><a href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML Specification: Safe passing of structured data</a></li>
+ <li>{{ domxref("window.history") }}</li>
+ <li>{{ domxref("window.postMessage()") }}</li>
+ <li><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
+ <li><a href="/ja/docs/Components.utils.cloneInto">Components.utils.cloneInto</a></li>
+</ul>

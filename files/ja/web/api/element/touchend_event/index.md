@@ -13,32 +13,60 @@ tags:
   - touchstart
 translation_of: Web/API/Element/touchend_event
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-`touchend` イベントは、タッチ面から 1 つ以上のタッチ点が取り除かれた場合に発生します。
+<p><span class="seoSummary"><code>touchend</code> イベントは、タッチ面から1つ以上のタッチ点が取り除かれた場合に発生します。</span></p>
 
-| バブリング                   | あり                                                                             |
-| ---------------------------- | -------------------------------------------------------------------------------- |
-| キャンセル                   | 可                                                                               |
-| インターフェイス             | {{domxref("TouchEvent")}}                                                 |
-| イベントハンドラープロパティ | {{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("TouchEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-これらのイベントのコード例は、専用のページ「[タッチイベント](/ja/docs/Web/API/Touch_events)」にあります。
+<p>これらのイベントのコード例は、専用のページ「<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>」にあります。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchend')}} | {{Spec2('Touch Events')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Touch Events', '#event-touchend')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Element.touchend_event")}}
+<p>{{Compat("api.Element.touchend_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
-- {{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}
-- {{domxref("Document")}} をターゲットとしたこのイベント: {{domxref("Document/touchend_event", "touchend")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
+ <li>{{ domxref("GlobalEventHandlers.ontouchend","ontouchend")}}</li>
+ <li>{{domxref("Document")}} をターゲットとしたこのイベント: {{domxref("Document/touchend_event", "touchend")}}</li>
+</ul>

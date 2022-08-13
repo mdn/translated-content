@@ -10,39 +10,52 @@ tags:
   - port
 translation_of: Web/API/SharedWorker/port
 ---
-{{APIRef("Web Workers API")}}
+<div>{{APIRef("Web Workers API")}}</div>
 
-{{domxref("SharedWorker")}} インターフェースの **`port`** プロパティは、shared worker を制御したり通信したりするために使用する {{domxref("MessagePort")}} オブジェクトを返します。
+<p>{{domxref("SharedWorker")}} インターフェースの <code><strong>port</strong></code> プロパティは、shared worker を制御したり通信したりするために使用する {{domxref("MessagePort")}} オブジェクトを返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    myWorker.port;
+<pre class="syntaxbox">myWorker.port;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("MessagePort")}} オブジェクト
+<p>{{domxref("MessagePort")}} オブジェクト</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次のコードスニペットでは、{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して `SharedWorker` オブジェクトを生成しています。`SharedWorker.port` プロパティ経由で {{domxref("MessagePort")}} オブジェクトを使用して、複数のスクリプトから worker にアクセスできます — port は `start()` メソッドを使用して開始します:
+<p>次のコードスニペットでは、{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して <code>SharedWorker</code> オブジェクトを生成しています。<code>SharedWorker.port</code> プロパティ経由で {{domxref("MessagePort")}} オブジェクトを使用して、複数のスクリプトから worker にアクセスできます — port は <code>start()</code> メソッドを使用して開始します:</p>
 
-```js
-var myWorker = new SharedWorker('worker.js');
-myWorker.port.start();
-```
+<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
+myWorker.port.start();</pre>
 
-完全なサンプルについては、[Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) を参照してください。
+<p>完全なサンプルについては、<a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>) を参照してください。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                     | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.SharedWorker.port")}}
 
-## 関連項目
 
-- {{domxref("SharedWorker")}} インターフェース
+<p>{{Compat("api.SharedWorker.port")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{domxref("SharedWorker")}} インターフェース</li>
+</ul>

@@ -12,97 +12,115 @@ tags:
   - リファレンス
 translation_of: Web/API/Document/forms
 ---
-{{domxref("Document")}} インターフェイスの **`forms`** プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
+<p><span class="seoSummary">{{domxref("Document")}} インターフェイスの <strong><code>forms</code></strong> プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。</span></p>
 
-> **Note:** **メモ:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
+<div class="note">
+<p><strong>メモ:</strong> 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    collection = document.forms;
+<pre class="syntaxbox"><var>collection</var> = <em>document</em>.forms;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-文書のすべてのフォームを列挙する {{domxref("HTMLCollection")}} オブジェクトです。コレクションのそれぞれの項目は、単一の `<form>` 要素を表す {{domxref("HTMLFormElement")}} です。
+<p>文書のすべてのフォームを列挙する {{domxref("HTMLCollection")}} オブジェクトです。コレクションのそれぞれの項目は、単一の <code>&lt;form&gt;</code> 要素を表す {{domxref("HTMLFormElement")}} です。</p>
 
-文書にフォームがない場合、返されるコレクションは空で、長さはゼロです。
+<p>文書にフォームがない場合、返されるコレクションは空で、長さはゼロです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-### フォーム情報の取得
+<h3 id="Getting_form_information" name="Getting_form_information">フォーム情報の取得</h3>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
 
-<head>
-<title>document.forms example</title>
-</head>
+&lt;head&gt;
+&lt;title&gt;document.forms example&lt;/title&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<form id="robby">
-  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
-</form>
+&lt;form id="robby"&gt;
+  &lt;input type="button" onclick="alert(document.forms[0].id);" value="robby's form" /&gt;
+&lt;/form&gt;
 
-<form id="dave">
-  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
-</form>
+&lt;form id="dave"&gt;
+  &lt;input type="button" onclick="alert(document.forms[1].id);" value="dave's form" /&gt;
+&lt;/form&gt;
 
-<form id="paul">
-  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
-</form>
+&lt;form id="paul"&gt;
+  &lt;input type="button" onclick="alert(document.forms[2].id);" value="paul's form" /&gt;
+&lt;/form&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-### フォーム内要素の取得
+<h3 id="Getting_an_element_from_within_a_form" name="Getting_an_element_from_within_a_form">フォーム内要素の取得</h3>
 
-```js
-var selectForm = document.forms[index];
+<pre class="brush: js">var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
-```
+</pre>
 
-### 名前付きフォームへのアクセス
+<h3 id="Named_form_access" name="Named_form_access">名前付きフォームへのアクセス</h3>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>document.forms example</title>
-</head>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;document.forms example&lt;/title&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<form name="login">
-  <input name="email" type="email">
-  <input name="password" type="password">
-  <button type="submit">Log in</button>
-</form>
+&lt;form name="login"&gt;
+  &lt;input name="email" type="email"&gt;
+  &lt;input name="password" type="password"&gt;
+  &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;
 
-<script>
+&lt;script&gt;
   var loginForm = document.forms.login; // Or document.forms['login']
   loginForm.elements.email.placeholder = 'test@example.com';
   loginForm.elements.password.placeholder = 'password';
-</script>
-</body>
-</html>
-```
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |          |
-| {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}</td>
+   <td>{{ Spec2('DOM2 Events') }}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.forms")}}
+<p>{{Compat("api.Document.forms")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [HTML forms](/ja/docs/Learn/HTML/Forms)
-- {{HTMLElement("form")}} および {{domxref("HTMLFormElement")}} インターフェイス
+<ul>
+ <li><a href="/ja/docs/Learn/HTML/Forms">HTML forms</a></li>
+ <li>{{HTMLElement("form")}} および {{domxref("HTMLFormElement")}} インターフェイス</li>
+</ul>
 
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>

@@ -8,12 +8,12 @@ tags:
   - Window
 translation_of: Web/API/Window/dialogArguments
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-`dialogArguments` プロパティは、 {{domxref("window.showModalDialog()")}} メソッドに渡されたパラメータを返します。モーダルダイアログボックスの作成時に、引数にどのようなパラメータが指定されたを判断することができます。
+<p><code>dialogArguments</code> プロパティは、 {{domxref("window.showModalDialog()")}} メソッドに渡されたパラメータを返します。モーダルダイアログボックスの作成時に、引数にどのようなパラメータが指定されたを判断することができます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    value = window.dialogArguments;
+<pre class="syntaxbox"><var>value</var> = window.dialogArguments;</pre>

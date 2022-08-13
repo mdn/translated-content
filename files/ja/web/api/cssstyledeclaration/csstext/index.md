@@ -6,32 +6,31 @@ tags:
   - CSSOM
   - NeedsSpecTable
   - Reference
-translation_of: Web/API/CSSStyleDeclaration/cssText
 browser-compat: api.CSSStyleDeclaration.cssText
+translation_of: Web/API/CSSStyleDeclaration/cssText
 ---
-{{APIRef("CSSOM")}}
+<div>{{APIRef("CSSOM")}}</div>
 
-**`cssText`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、その要素の**インライン**スタイル宣言のみのテキストを返したり設定したりします。**スタイルシート**の規則を動的に設定するためには、[動的なスタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)を参照してください。
+<p><span class="seoSummary"><code><strong>cssText</strong></code> は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、その要素の<strong>インライン</strong>スタイル宣言のみのテキストを返したり設定したりします。</span><strong>スタイルシート</strong>の規則を動的に設定するためには、<a href="/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">動的なスタイル情報の利用</a>を参照してください。</p>
 
-スタイルシートのスタイル規則である {{domxref("CSSRule.cssText")}} と混同しないようにしてください。
+<p>スタイルシートのスタイル規則である {{domxref("CSSRule.cssText")}} と混同しないようにしてください。</p>
 
-## 例
+<h2 id="Example">例</h2>
 
-```html
-<span id="s1" style="color: red;">
+<pre class="brush: html">&lt;span id=&quot;s1&quot; style=&quot;color: red;&quot;&gt;
   Some text
-</span>
+&lt;/span&gt;
 
-<script>
-  var elem = document.getElementById("s1");
-  alert(elem.style.cssText); // "color: red;"
-</script>
-```
+&lt;script&gt;
+  var elem = document.getElementById(&quot;s1&quot;);
+  alert(elem.style.cssText); // &quot;color: red;&quot;
+&lt;/script&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

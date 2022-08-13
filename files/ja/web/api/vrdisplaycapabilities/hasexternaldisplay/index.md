@@ -3,37 +3,52 @@ title: VRDisplayCapabilities.hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 translation_of: Web/API/VRDisplayCapabilities/hasExternalDisplay
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-{{domxref("VRDisplayCapabilities")}} インターフェイスの **`hasExternalDisplay`** 読取専用プロパティは，デバイスのプライマリディスプレイから分離した VR ディスプレイかどうかを示す {{domxref("Boolean")}} を返します．
+<p>{{domxref("VRDisplayCapabilities")}} インターフェイスの <strong><code>hasExternalDisplay</code></strong> 読取専用プロパティは，デバイスのプライマリディスプレイから分離したVRディスプレイかどうかを示す {{domxref("Boolean")}} を返します．</p>
 
-> **Note:** **注記**: 表示中の VR コンテンツがそのデバイスの他のコンテンツを隠してしまう場合 `false` を返します．この場合，表示されないので，アプリは VR コンテンツのミラリングしようとしたり非 VR な UI を更新しようとするべきではありません．**訳注**: スマートフォンの VR を考えるとわかりやすいと思います．Oculus Rift のような PC 接続の VR 専用のディスプレイを持たない環境の場合，このプロパティは `false` になります．
+<div class="note">
+<p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>: 表示中のVRコンテンツがそのデバイスの他のコンテンツを隠してしまう場合 <code>false</code> を返します．この場合，表示されないので，アプリはVRコンテンツのミラリングしようとしたり非VRなUIを更新しようとするべきではありません．</p>
 
-## シンタックス
+<p><span style="font-size: 14px; line-height: 21px;"><strong>訳注</strong></span>: スマートフォンのVRを考えるとわかりやすいと思います．Oculus RiftのようなPC接続のVR専用のディスプレイを持たない環境の場合，このプロパティは <code>false</code> になります．</p>
+</div>
 
-```js
-var hasAnExternalDisplay = vrDisplayCapabilitiesInstance.hasExternalDisplay;
-```
+<h2 id="シンタックス">シンタックス</h2>
 
-### 値
+<pre class="brush: js">var hasAnExternalDisplay = vrDisplayCapabilitiesInstance.<code>hasExternalDisplay</code>;</pre>
 
-{{domxref("Boolean")}} の値．
+<h3 id="値">値</h3>
 
-## 例
+<p>{{domxref("Boolean")}} の値．</p>
 
-    TBD.
+<h2 id="例">例</h2>
 
-## 仕様
+<pre>TBD.</pre>
 
-| Specification                                                                                                                | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vrdisplaycapabilities-hasexternaldisplay', 'hasExternalDisplay')}} | {{Spec2('WebVR')}} | Initial definition |
+<h2 id="仕様">仕様</h2>
 
-## ブラウザの互換性
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vrdisplaycapabilities-hasexternaldisplay', 'hasExternalDisplay')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.VRDisplayCapabilities.hasExternalDisplay")}}
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-## 参照
+<p>{{Compat("api.VRDisplayCapabilities.hasExternalDisplay")}}</p>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<h2 id="参照">参照</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

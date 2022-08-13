@@ -11,37 +11,41 @@ tags:
 translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
-{{ApiRef("DOM")}}{{non-standard_header}}
+<div>{{ApiRef("DOM")}}{{non-standard_header}}</div>
 
-**`Document.onafterscriptexecute`** プロパティは、静的な {{HTMLElement("script")}} 要素のスクリプトの実行が終了したときに呼び出される関数を参照します。要素が {{domxref("Node.appendChild()", "appendChild()")}} などで動的に追加された場合には呼び出されません。
+<p><strong><code>Document.onafterscriptexecute</code></strong> プロパティは、静的な {{HTMLElement("script")}} 要素のスクリプトの実行が終了したときに呼び出される関数を参照します。要素が {{domxref("Node.appendChild()", "appendChild()")}} などで動的に追加された場合には呼び出されません。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    document.onafterscriptexecute = funcRef;
+<pre class="syntaxbox"><var>document</var>.onafterscriptexecute = <var>funcRef</var>;
+</pre>
 
-_funcRef_ は関数の参照で、イベントが発行されると呼び出されます。イベントの `target` 属性が、実行が完了した {{HTMLElement("script")}} 要素に設定されます。
+<p><var>funcRef</var> は関数の参照で、イベントが発行されると呼び出されます。イベントの <code>target</code> 属性が、実行が完了した {{HTMLElement("script")}} 要素に設定されます。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-function finished(e) {
+<pre class="brush: js">function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
 document.addEventListener('afterscriptexecute', finished, true);
-```
+</pre>
 
-[ライブ例を表示](/samples/html/currentScript.html)
+<p><a href="/samples/html/currentScript.html">ライブ例を表示</a></p>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+<ul>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#the-script-element">HTML5</a></li>
+</ul>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.onafterscriptexecute")}}
+<p>{{Compat("api.Document.onafterscriptexecute")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Document.onbeforescriptexecute")}}
-- {{domxref("Document.currentScript")}}
+<ul>
+ <li>{{domxref("Document.onbeforescriptexecute")}}</li>
+ <li>{{domxref("Document.currentScript")}}</li>
+</ul>

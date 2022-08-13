@@ -3,52 +3,83 @@ title: Response.redirect()
 slug: Web/API/Response/redirect
 translation_of: Web/API/Response/redirect
 ---
-{{APIRef("Fetch")}}
+<div>{{APIRef("Fetch")}}</div>
 
-{{domxref("Response")}} インターフェイスの **`redirect()`** メソッドは、指定された URL へのレダイレクトをもたらす `Response` を返します。
+<p>{{domxref("Response")}} インターフェイスの <strong><code>redirect()</code></strong> メソッドは、指定されたURLへのレダイレクトをもたらす <code>Response</code> を返します。</p>
 
-> **Note:** これは主に [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) に関連しています。制御 service worker は、ページのリクエストを中断し、必要に応じてリダイレクトできます。もし Service worker が上流に送信を行うと、実際に本当のリダイレクトが発生します。
+<div class="note">
+<p><strong>Note</strong>: これは主に <a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> に関連しています。制御service worker は、ページのリクエストを中断し、必要に応じてリダイレクトできます。もし Service worker が上流に送信を行うと、実際に本当のリダイレクトが発生します。</p>
+</div>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var response = Response.redirect(url, status);
+<pre class="syntaxbox notranslate">var <em>response</em> = Response.redirect(<em>url</em>, <em>status</em>);</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-- `url`
-  - : 新しい reponse の発信元 URL。
-- `status` {{optional_inline}}
-  - : response のオプションのステータスコード (例 `302` )
+<dl>
+ <dt><code>url</code></dt>
+ <dd>新しい reponse の発信元URL。</dd>
+ <dt><code>status</code> {{optional_inline}}</dt>
+ <dd>response のオプションのステータスコード (例 <code>302</code> )</dd>
+</dl>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-{{domxref("Response")}} オブジェクト
+<p>{{domxref("Response")}} オブジェクト</p>
 
-### 例外
+<h3 id="例外">例外</h3>
 
-| 例外         | 説明                                                         |
-| ------------ | ------------------------------------------------------------ |
-| `RangeError` | 指定されたステータスはリダイレクトステータスではありません。 |
-| `TypeError`  | 指定された URL は無効です。                                  |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">例外</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>RangeError</code></td>
+   <td>指定されたステータスはリダイレクトステータスではありません。</td>
+  </tr>
+  <tr>
+   <td><code>TypeError</code></td>
+   <td>指定されたURLは無効です。</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-responseObj.redirect('https://www.example.com', 302);
-```
+<pre class="brush: js notranslate">responseObj.redirect('https://www.example.com', 302);</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                             | 状態                     | コメント |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Fetch','#dom-response-redirect','redirect()')}} | {{Spec2('Fetch')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-response-redirect','redirect()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Response.redirect")}}
 
-## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+<p>{{Compat("api.Response.redirect")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
+</ul>

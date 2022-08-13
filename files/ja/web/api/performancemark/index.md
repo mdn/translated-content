@@ -9,46 +9,67 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceMark
 ---
-{{APIRef("User Timing API")}}
+<div>{{APIRef("User Timing API")}}</div>
 
-**`PerformanceMark`** は {{domxref("PerformanceEntry.entryType","entryType")}} の "`mark`" を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。
-このタイプのエントリは、{{domxref("Performance.mark","performance.mark()")}} を呼び出して、ブラウザの*パフォーマンスタイムライン*に*名前付き* {{domxref("DOMHighResTimeStamp")}} (_mark_) を追加することによって作成されます。
+<p><span class="seoSummary"><code><strong>PerformanceMark</strong></code> は {{domxref("PerformanceEntry.entryType","entryType")}} の "<code>mark</code>" を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。<br>
+ このタイプのエントリは、{{domxref("Performance.mark","performance.mark()")}} を呼び出して、ブラウザの<em>パフォーマンスタイムライン</em>に<em>名前付き</em> {{domxref("DOMHighResTimeStamp")}} (<em>mark</em>) を追加することによって作成されます。</span></p>
 
-{{InheritanceDiagram}}
+<p>{{InheritanceDiagram}}</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-このインターフェイスはプロパティを持ちませんが、以下のようにプロパティを修飾/制約することで以下の {{domxref("PerformanceEntry")}} プロパティを拡張します。
+<p>このインターフェイスはプロパティを持ちませんが、以下のようにプロパティを修飾/制約することで以下の {{domxref("PerformanceEntry")}} プロパティを拡張します。</p>
 
-- {{domxref("PerformanceEntry.entryType")}}
-  - : "`mark`" を返します。
-- {{domxref("PerformanceEntry.name")}}
-  - : マークが{{domxref("Performance.mark()","performance.mark()")}} を呼び出して作成されたときに付けられた名前を返します。
-- {{domxref("PerformanceEntry.startTime")}}
-  - : {{domxref("Performance.mark()","performance.mark()")}} が呼び出されたときに {{domxref("DOMHighResTimeStamp")}} を返します。
-- {{domxref("PerformanceEntry.duration")}}
-  - : "`0`" を返します (マークには*期間*がありません)
+<dl>
+ <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
+ <dd>"<code>mark</code>" を返します。</dd>
+ <dt>{{domxref("PerformanceEntry.name")}}</dt>
+ <dd>マークが{{domxref("Performance.mark()","performance.mark()")}} を呼び出して作成されたときに付けられた名前を返します。</dd>
+ <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
+ <dd>{{domxref("Performance.mark()","performance.mark()")}} が呼び出されたときに {{domxref("DOMHighResTimeStamp")}} を返します。</dd>
+ <dt>{{domxref("PerformanceEntry.duration")}}</dt>
+ <dd>"<code>0</code>" を返します (マークには<em>期間</em>がありません)</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-このインターフェイスにはメソッドがありません。
+<p>このインターフェイスにはメソッドがありません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-[ユーザータイミング API の使用](/Web/API/User_Timing_API/Using_the_User_Timing_API)の例を参照してください。
+<p><a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">ユーザータイミング API の使用</a>の例を参照してください。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                               | ステータス                                   | コメント     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |              |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | 基本的な定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}}</td>
+   <td>{{Spec2('User Timing Level 2')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}</td>
+   <td>{{Spec2('User Timing')}}</td>
+   <td>基本的な定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceMark")}}
 
-## あわせて参照
 
-- [User Timing (Overview)](/Web/API/User_Timing_API)
-- [Using the User Timing API](/Web/API/User_Timing_API/Using_the_User_Timing_API)
+<p>{{Compat("api.PerformanceMark")}}</p>
+
+<h2 id="あわせて参照">あわせて参照</h2>
+
+<ul>
+ <li><a href="/Web/API/User_Timing_API">User Timing (Overview)</a></li>
+ <li><a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a></li>
+</ul>

@@ -11,28 +11,39 @@ tags:
   - byobRequest
 translation_of: Web/API/ReadableByteStreamController/byobRequest
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableByteStreamController")}} インターフェイスの **`byobRequest`** 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は `undefined` を返します。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableByteStreamController")}} インターフェイスの <strong><code>byobRequest</code></strong> 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は <code>undefined</code> を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var request = readableByteStreamController.byobRequest;
+<pre class="syntaxbox"><var><code>var <em>request</em> = </code>readableByteStreamController</var>.byobRequest;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("ReadableStreamBYOBRequest")}} オブジェクトのインスタンス、または `undefined`。
+<p>{{domxref("ReadableStreamBYOBRequest")}} オブジェクトのインスタンス、または <code>undefined</code>。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-未定。
+<p>未定。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rbs-controller-byob-request","byobRequest")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#rbs-controller-byob-request","byobRequest")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableByteStreamController.byobRequest")}}
+<p>{{Compat("api.ReadableByteStreamController.byobRequest")}}</p>

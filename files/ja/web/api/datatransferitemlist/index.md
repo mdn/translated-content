@@ -13,40 +13,66 @@ tags:
   - drag and drop
 translation_of: Web/API/DataTransferItemList
 ---
-{{APIRef("HTML Drag and Drop API")}}
+<div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
+<p>The <code><strong>DataTransferItemList</strong></code> object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a <em>drag operation</em>, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a <code>DataTransferItemList</code>.</p>
 
-This interface has no constructor.
+<p>This interface has no constructor.</p>
 
-## Properties
+<h2 id="Properties">Properties</h2>
 
-- {{domxref("DataTransferItemList.length")}} {{readonlyInline}}
-  - : An `unsigned long` that is the number of drag items in the list.
+<dl>
+ <dt>{{domxref("DataTransferItemList.length")}} {{readonlyInline}}</dt>
+ <dd>An <code>unsigned long</code> that is the number of drag items in the list.</dd>
+</dl>
 
-## Methods
+<h2 id="Methods">Methods</h2>
 
-- {{domxref("DataTransferItemList.add()")}}
-  - : Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
-- {{domxref("DataTransferItemList.remove()")}}
-  - : Removes the drag item from the list at the given index.
-- {{domxref("DataTransferItemList.clear()")}}
-  - : Removes all of the drag items from the list.
-- {{domxref("DataTransferItemList.DataTransferItem()")}}
-  - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
+<dl>
+ <dt>{{domxref("DataTransferItemList.add()")}}</dt>
+ <dd>Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.</dd>
+ <dt>{{domxref("DataTransferItemList.remove()")}}</dt>
+ <dd>Removes the drag item from the list at the given index.</dd>
+ <dt>{{domxref("DataTransferItemList.clear()")}}</dt>
+ <dd>Removes all of the drag items from the list.</dd>
+ <dt>{{domxref("DataTransferItemList.DataTransferItem()")}}</dt>
+ <dd>Getter that returns a {{domxref("DataTransferItem")}} at the given index.</dd>
+</dl>
 
-## Example
+<h2 id="Example">Example</h2>
 
-Each of this interface's methods and properties has a reference page, and each reference page has an example of its usage.
+<p>Each of this interface's methods and properties has a reference page, and each reference page has an example of its usage.</p>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                            | Status                           | Comment                                                |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'interaction.html#datatransferitemlist','DataTransferItemList')}} | {{Spec2('HTML WHATWG')}} |                                                        |
-| {{SpecName('HTML5.1', 'editing.html#datatransferitemlist','DataTransferItemList')}}         | {{Spec2('HTML5.1')}}     | Not included in W3C HTML5 {{Spec2('HTML5 W3C')}} |
-|                                                                                                                          |                                  |                                                        |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'interaction.html#datatransferitemlist','DataTransferItemList')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'editing.html#datatransferitemlist','DataTransferItemList')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.DataTransferItemList")}}
+<p> </p>
+
+
+
+<p>{{Compat("api.DataTransferItemList")}}</p>
+
+<p> </p>

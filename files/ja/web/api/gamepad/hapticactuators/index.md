@@ -11,34 +11,45 @@ tags:
   - hapticActuators
 translation_of: Web/API/Gamepad/hapticActuators
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
 
-{{domxref("Gamepad")}} インターフェイスの **`hapticActuators`** 読み取り専用プロパティは、 {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列を返します。各オブジェクトは、コントローラーで利用可能な触覚フィードバックハードウェアを表します。
+<p>{{domxref("Gamepad")}} インターフェイスの <strong><code>hapticActuators</code></strong> 読み取り専用プロパティは、 {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列を返します。各オブジェクトは、コントローラーで利用可能な触覚フィードバックハードウェアを表します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var myHapticActuators = gamepadInstance.hapticActuators;
-```
+<pre class="brush: js notranslate">var myHapticActuators = gamepadInstance.hapticActuators;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("GamepadHapticActuator")}} オブジェクトを含む配列。
+<p>{{domxref("GamepadHapticActuator")}} オブジェクトを含む配列。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-TBC
+<p>TBC</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                         | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'hapticActuators')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'hapticActuators')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Gamepad.hapticActuators")}}
+<p>{{Compat("api.Gamepad.hapticActuators")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+</ul>

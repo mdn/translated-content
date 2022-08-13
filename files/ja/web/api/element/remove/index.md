@@ -6,53 +6,49 @@ tags:
   - Element
   - DOM
   - Method
-translation_of: Web/API/Element/remove
 browser-compat: api.Element.remove
+translation_of: Web/API/Element/remove
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-**`Element.remove()`** は所属するツリーから要素を削除します。
+<p><code><strong>Element.remove()</strong></code> は所属するツリーから要素を削除します。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-remove()
-```
+<pre class="brush: js">remove()</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-### `remove()` の使用
+<h3 id="Using_remove"><code>remove()</code> の使用</h3>
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
-<div id="div-03">Here is div-03</div>
-```
+<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
+&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+&lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
+</pre>
 
-```js
-var el = document.getElementById('div-02');
+<pre class="brush: js">var el = document.getElementById('div-02');
 el.remove(); // 'div-02' の id を持った div を削除
-```
+</pre>
 
-### `Element.remove()` はスコープ化に非対応
+<h3 id="Element.remove_is_unscopable"><code>Element.remove()</code> はスコープ化に非対応</h3>
 
-`remove()` メソッドは `with` 文によるスコープ化に対応していません。 詳細は {{jsxref("Symbol.unscopables")}} を参照してください。
+<p><code>remove()</code> メソッドは <code>with</code> 文によるスコープ化に対応していません。 詳細は {{jsxref("Symbol.unscopables")}} を参照してください。</p>
 
-```js
-with(node) {
+<pre class="brush: js">with(node) {
   remove();
 }
-// ReferenceError: remove is not defined
-```
+// ReferenceError: remove is not defined </pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [ポリフィル](https://github.com/chenzhenxi/element-remove)
+<ul>
+  <li><a href="https://github.com/chenzhenxi/element-remove">ポリフィル</a></li>
+</ul>

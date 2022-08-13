@@ -13,33 +13,51 @@ tags:
   - videoTracks
 translation_of: Web/API/SourceBuffer/videoTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-{{domxref("SourceBuffer")}} インターフェイスの **`videoTracks`** 読み取り専用プロパティは、現在 `SourceBuffer` 内に含まれている動画トラックのリストを返します。
+<p><span class="seoSummary">{{domxref("SourceBuffer")}} インターフェイスの <strong><code>videoTracks</code></strong> 読み取り専用プロパティは、現在 <code>SourceBuffer</code> 内に含まれている動画トラックのリストを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var myVideoTracks = sourceBuffer.videoTracks;
+<pre class="syntaxbox">var <em>myVideoTracks</em> = <em>sourceBuffer</em>.videoTracks;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("VideoTrackList")}} オブジェクト。
+<p>{{domxref("VideoTrackList")}} オブジェクト。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-未定
+<p>未定</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                     | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-videotracks', 'videoTracks')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-videotracks', 'videoTracks')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.SourceBuffer.videoTracks")}}
+<div>
 
-## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+<p>{{Compat("api.SourceBuffer.videoTracks")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("MediaSource")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

@@ -9,44 +9,59 @@ tags:
   - load
 translation_of: Web/API/FileReader/load_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`load` イベントは、ファイルが正常に読み込めたときに発生します。
+<p><code>load</code> イベントは、ファイルが正常に読み込めたときに発生します。</p>
 
-| バブリング                   | なし                                         |
-| ---------------------------- | -------------------------------------------- |
-| キャンセル可能               | いいえ                                       |
-| インターフェイス             | {{domxref("ProgressEvent")}}         |
-| イベントハンドラープロパティ | {{domxref("FileReader.onload")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル可能</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("ProgressEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("FileReader.onload")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### ライブデモ
+<h3 id="Live_example" name="Live_example">ライブデモ</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="example">
+<pre class="brush: html">&lt;div class="example"&gt;
 
-    <div class="file-select">
-        <label for="avatar">Choose a profile picture:</label>
-        <input type="file"
+    &lt;div class="file-select"&gt;
+        &lt;label for="avatar"&gt;Choose a profile picture:&lt;/label&gt;
+        &lt;input type="file"
                id="avatar" name="avatar"
-               accept="image/png, image/jpeg">
-    </div>
+               accept="image/png, image/jpeg"&gt;
+    &lt;/div&gt;
 
-    <img src="" class="preview" height="200" alt="Image preview...">
+    &lt;img src="" class="preview" height="200" alt="Image preview..."&gt;
 
-    <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
-    </div>
+    &lt;div class="event-log"&gt;
+        &lt;label&gt;Event log:&lt;/label&gt;
+        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
 
-  </div>
-```
+  &lt;/div&gt;</pre>
 
-```css hidden
-img.preview {
+<div class="hidden">
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">img.preview {
   margin: 1rem 0;
 }
 
@@ -77,19 +92,18 @@ img.preview {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log&gt;label {
   display: block;
 }
 
 .event-log-contents {
   resize: none;
-}
-```
+}</pre>
+</div>
 
-#### JS
+<h4 id="JS">JS</h4>
 
-```js
-const fileInput = document.querySelector('input[type="file"]');
+<pre class="brush: js">const fileInput = document.querySelector('input[type="file"]');
 const preview = document.querySelector('img.preview');
 const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
@@ -121,22 +135,35 @@ function handleSelected(e) {
 }
 
 fileInput.addEventListener('change', handleSelected);
-```
+</pre>
 
-#### 結果
+<h4 id="Result" name="Result">結果</h4>
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+<p>{{ EmbedLiveSample('Live_example', '100%', '300px') }}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                   | 状態                         |
-| -------------------------------------------------------- | ---------------------------- |
-| {{SpecName('File API', '#dfn-load-event')}} | {{Spec2('File API')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('File API', '#dfn-load-event')}}</td>
+   <td>{{Spec2('File API')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.FileReader.load_event")}}
+<p>{{Compat("api.FileReader.load_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}
+<ul>
+ <li>関連イベント: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}</li>
+</ul>

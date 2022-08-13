@@ -8,40 +8,69 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-**`DOMImplementation`** インターフェイスは特定の文書に依存しないメソッドを提供するオブジェクトを表します。こうしたオブジェクトは{{domxref("Document.implementation")}} プロパティを返します。
+<p><code><strong>DOMImplementation</strong></code> インターフェイスは特定の文書に依存しないメソッドを提供するオブジェクトを表します。こうしたオブジェクトは{{domxref("Document.implementation")}} プロパティを返します。</p>
 
-## プロパティ
+<h2 id="Property" name="Property">プロパティ</h2>
 
-_このインターフェイスは特定のプロパティを持たず、継承もしていません。_
+<p><em>このインターフェイスは特定のプロパティを持たず、継承もしていません。</em></p>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_継承するメソッドはありません。_
+<p><em>継承するメソッドはありません。</em></p>
 
-- {{domxref("DOMImplementation.createDocument()")}}
-  - : {{domxref("XMLDocument")}}を作成して返します。
-- {{domxref("DOMImplementation.createDocumentType()")}}
-  - : {{domxref("DocumentType")}}を作成して返します。
-- {{domxref("DOMImplementation.createHTMLDocument()")}}
-  - : HTML {{domxref("Document")}}を作成して返します。
-- {{domxref("DOMImplementation.hasFeature()")}}
-  - : 所与の機能がサポートされているかどうかを返す{{domxref("Boolean")}}。この関数は信頼できず、互換性の目的のためだけに残されていますが、例外は SVG 関連の問い合わせで、常に `true`を返します。古いブラウザーはこのふるまいは、とても不整合を起こします。
+<dl>
+ <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
+ <dd>{{domxref("XMLDocument")}}を作成して返します。</dd>
+ <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
+ <dd>{{domxref("DocumentType")}}を作成して返します。</dd>
+ <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
+ <dd>HTML {{domxref("Document")}}を作成して返します。</dd>
+ <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
+ <dd>所与の機能がサポートされているかどうかを返す{{domxref("Boolean")}}。この関数は信頼できず、互換性の目的のためだけに残されていますが、例外は SVG関連の問い合わせで、常に <code>true</code>を返します。古いブラウザーはこのふるまいは、とても不整合を起こします。</dd>
+</dl>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                   | 策定状況                         | コメント                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | `getFeature()` メソッドを削除。 `createHTMLDocument()` メソッドを追加。 `createDocument()` の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。 |
-| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | `getFeature()` メソッド追加 (ユーザーエージェントで実装されることはありません)。                                                                                                              |
-| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | `createDocument()` および `createDocumentType()` メソッドが追加。                                                                                                                             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | 初期定義。                                                                                                                                                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td><code>getFeature()</code> メソッドを削除。<br>
+    <code>createHTMLDocument()</code> メソッドを追加。<br>
+    <code>createDocument()</code> の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td><code>getFeature()</code> メソッド追加 (ユーザーエージェントで実装されることはありません)。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td><code>createDocument()</code> および <code>createDocumentType()</code> メソッドが追加。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("api.DOMImplementation")}}
+<p>{{Compat("api.DOMImplementation")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference '/ja/docs/DOM/DOM_Reference"')
+<ul>
+ <li><a href="/ja/docs/DOM/DOM_Reference" title='/ja/docs/DOM/DOM_Reference"'>The DOM interfaces index.</a></li>
+</ul>

@@ -8,31 +8,48 @@ tags:
   - Reference
 translation_of: Web/API/HTMLUnknownElement
 ---
-{{ APIRef("HTML DOM") }}
+<div>{{ APIRef("HTML DOM") }}</div>
 
-**`HTMLUnknownElement`** インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。
+<p><strong><code>HTMLUnknownElement</code></strong> インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。</p>
 
-{{InheritanceDiagram(600, 120)}}
+<p>{{InheritanceDiagram(600, 120)}}</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-固有プロパティはありません。{{domxref("HTMLElement")}} インターフェイスから継承するプロパティのみ利用可能です。
+<p>固有プロパティはありません。{{domxref("HTMLElement")}} インターフェイスから継承するプロパティのみ利用可能です。</p>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-固有メソッドはありません。{{domxref("HTMLElement")}} インターフェイスから継承するメソッドのみ利用可能です。
+<p>固有メソッドはありません。{{domxref("HTMLElement")}} インターフェイスから継承するメソッドのみ利用可能です。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                           | 策定状況                         | コメント                                      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#htmlunknownelement", "HTMLUnknownElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更無し |
-| {{SpecName('HTML5 W3C', "dom.html#htmlunknownelement", "HTMLUnknownElement")}}         | {{Spec2('HTML5 W3C')}}     | 最初期の定義                                  |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "elements.html#htmlunknownelement", "HTMLUnknownElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>{{SpecName("HTML5 W3C")}} より変更無し</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#htmlunknownelement", "HTMLUnknownElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>最初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("api.HTMLUnknownElement")}}
+<p>{{Compat("api.HTMLUnknownElement")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- このインターフェイスを持つ非標準要素及び廃止要素 : {{HTMLElement("bgsound")}} 、 {{HTMLElement("blink")}} 、 {{HTMLElement("isindex")}} 、 {{HTMLElement("multicol")}} 、 {{HTMLElement("nextid")}} 、 {{HTMLElement("rb")}} 、 {{HTMLElement("spacer")}}
+<ul>
+ <li>このインターフェイスを持つ非標準要素及び廃止要素 : {{HTMLElement("bgsound")}} 、 {{HTMLElement("blink")}} 、 {{HTMLElement("isindex")}} 、 {{HTMLElement("multicol")}} 、 {{HTMLElement("nextid")}} 、 {{HTMLElement("rb")}} 、 {{HTMLElement("spacer")}}</li>
+</ul>

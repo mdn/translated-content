@@ -3,24 +3,37 @@ title: Window.visualViewport
 slug: Web/API/Window/visualViewport
 translation_of: Web/API/Window/visualViewport
 ---
-{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
+<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
 
-{{domxref("Window")}}インターフェイスの**`visualViewport`** は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す{{domxref("VisualViewport")}}オブジェクトを返します。
+<p>{{domxref("Window")}}インターフェイスの<strong><code>visualViewport</code></strong> は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す{{domxref("VisualViewport")}}オブジェクトを返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var visualViewport = Window.visualViewport
+<pre class="syntaxbox notranslate">var <em>visualViewport</em> = Window.visualViewport</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("VisualViewport")}} はオブジェクトです。
+<p>{{domxref("VisualViewport")}} はオブジェクトです。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Visual Viewport','#dom-window-visualviewport','visualViewport')}} | {{Spec2('Visual Viewport')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Visual Viewport','#dom-window-visualviewport','visualViewport')}}</td>
+   <td>{{Spec2('Visual Viewport')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.visualViewport")}}
+
+
+<p>{{Compat("api.Window.visualViewport")}}</p>

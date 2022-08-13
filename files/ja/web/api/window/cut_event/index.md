@@ -12,38 +12,64 @@ tags:
   - イベント
 translation_of: Web/API/Window/cut_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を実行したときに発生します。
+<p><span class="seoSummary"><strong><code>cut</code></strong> イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を実行したときに発生します。</span></p>
 
-| バブリング                   | あり                                                     |
-| ---------------------------- | -------------------------------------------------------- |
-| キャンセル                   | 可                                                       |
-| インターフェイス             | {{domxref("ClipboardEvent")}}                 |
-| イベントハンドラープロパティ | {{domxref("HTMLElement/oncut", "oncut")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("ClipboardEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-このイベントの本来の対象は、切り取り操作の意図の対象である {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [Element: cut イベント](/ja/docs/Web/API/Element/cut_event)を参照してください。
+<p>このイベントの本来の対象は、切り取り操作の意図の対象である {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 <a href="/ja/docs/Web/API/Element/cut_event">Element: cut イベント</a>を参照してください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-window.addEventListener('cut', (event) => {
+<pre class="brush: js">window.addEventListener('cut', (event) =&gt; {
     console.log('cut action initiated')
-});
-```
+});</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Clipboard API', '#clipboard-event-cut')}}</td>
+   <td>{{Spec2('Clipboard API')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.cut_event")}}
+<p>{{Compat("api.Window.cut_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
-- {{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/cut_event", "cut")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/cut_event", "cut")}}
+<ul>
+ <li>関連イベント: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}</li>
+ <li>{{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/cut_event", "cut")}}</li>
+ <li>{{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/cut_event", "cut")}}</li>
+</ul>

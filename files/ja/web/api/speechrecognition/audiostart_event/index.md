@@ -11,47 +11,75 @@ tags:
   - イベント
 translation_of: Web/API/SpeechRecognition/audiostart_event
 ---
-{{APIRef("Web Speech API")}} {{SeeCompatTable}}
+<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`audiostart`** イベントは、ユーザーエージェントが会話認識のためのオーディオキャプチャを開始したときに発生します。
+<div>
+<p><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> の <code><strong>audiostart</strong></code> イベントは、ユーザーエージェントが会話認識のためのオーディオキャプチャを開始したときに発生します。</p>
+</div>
 
-| バブリング         | なし                                                                             |
-| ------------------ | -------------------------------------------------------------------------------- |
-| キャンセル         | 不可                                                                             |
-| インターフェイス   | {{domxref("Event")}}                                                     |
-| イベントハンドラー | {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラー</th>
+   <td>{{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`audiostart` イベントは、 {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} メソッドの中で使用することができます。
+<p><code>audiostart</code> イベントは、 {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} メソッドの中で使用することができます。</p>
 
-```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('audiostart', function() {
   console.log('Audio capturing started');
-});
-```
+});</pre>
 
-または、 [onaudiostart](/ja/docs/Web/API/SpeechRecognition/onaudiostart) イベントハンドラープロパティを使用してください。
+<p>または、 <a href="/ja/docs/Web/API/SpeechRecognition/onaudiostart">onaudiostart</a> イベントハンドラープロパティを使用してください。</p>
 
-```js
-recognition.onaudiostart = function() {
+<pre class="brush: js">recognition.onaudiostart = function() {
   console.log('Audio capturing started');
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       | 状態                                 | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-events', 'speech recognition events')}} | {{Spec2('Web Speech API')}} |      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#speechreco-events', 'speech recognition events')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.SpeechRecognition.audiostart_event")}}
+<div>
+<p>{{Compat("api.SpeechRecognition.audiostart_event")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
-- {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} イベントハンドラープロパティ
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+ <li>{{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} イベントハンドラープロパティ</li>
+</ul>

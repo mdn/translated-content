@@ -11,41 +11,68 @@ tags:
   - イベント
 translation_of: Web/API/Element/show_event
 ---
-{{APIRef}}{{deprecated_header}}
+<div>{{APIRef}}{{deprecated_header}}</div>
 
-**`show`** イベントは、 {{domxref("Element/contextmenu_event", "contextmenu")}} イベントが [`contextmenu` 属性](/ja/docs/Web/HTML/Global_attributes/contextmenu)を持つ要素に発生またはバブリングしたときに発生します。
+<p><strong><code>show</code></strong> イベントは、 {{domxref("Element/contextmenu_event", "contextmenu")}} イベントが <a href="/ja/docs/Web/HTML/Global_attributes/contextmenu"><code>contextmenu</code> 属性</a>を持つ要素に発生またはバブリングしたときに発生します。</p>
 
-| バブリング                   | なし                                                                 |
-| ---------------------------- | -------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                 |
-| インターフェイス             | {{domxref("Event")}}                                         |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.onshow", "onshow")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onshow", "onshow")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```html
-<div contextmenu="test"></div>
-<menu type="context" id="test">
-  <menuitem label="alert" onclick="alert('the alert label has been clicked')" />
-</menu>
+<pre class="brush:html;">&lt;div contextmenu="test"&gt;&lt;/div&gt;
+&lt;menu type="context" id="test"&gt;
+  &lt;menuitem label="alert" onclick="alert('the alert label has been clicked')" /&gt;
+&lt;/menu&gt;
 
-<script>
+&lt;script&gt;
   document.getElementById("test").addEventListener("show", function(e){
     alert("the context menu will be displayed");
   }, false);
-</script>
-```
+&lt;/script&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                           | 状態                         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName("HTML5 W3C", "webappapis.html#handler-onshow", "show event")}} | {{Spec2('HTML5 W3C')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "webappapis.html#handler-onshow", "show event")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Element.show_event")}}
+<p>{{Compat("api.Element.show_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("GlobalEventHandlers.onshow", "onshow")}}
+<ul>
+ <li>{{domxref("GlobalEventHandlers.onshow", "onshow")}}</li>
+</ul>

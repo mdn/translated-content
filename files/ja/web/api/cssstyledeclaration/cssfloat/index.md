@@ -6,49 +6,42 @@ tags:
   - CSSOM
   - CSSStyleDeclaration
   - Reference
-translation_of: Web/API/CSSStyleDeclaration/cssFloat
 browser-compat: api.CSSStyleDeclaration.cssFloat
+translation_of: Web/API/CSSStyleDeclaration/cssFloat
 ---
-{{APIRef("CSSOM")}}
+<div>{{APIRef("CSSOM")}}</div>
 
-**`cssFloat`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を `float` を引数として呼び出したときの結果を返します。
+<p><span class="seoSummary"><code><strong>cssFloat</strong></code> は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を <code>float</code> を引数として呼び出したときの結果を返します。</span></p>
+<p>設定したときは、 {{DOMxRef("CSSStyleDeclaration.setProperty()")}} を <code>float</code> を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxref("float")}} プロパティで有効な値でなければなりません。</p>
 
-設定したときは、 {{DOMxRef("CSSStyleDeclaration.setProperty()")}} を `float` を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxref("float")}} プロパティで有効な値でなければなりません。
+<h2 id="Syntax">構文</h2>
 
-## 構文
+<pre class="brush: js">var <var>float</var> = <var>CSSStyleDeclaration</var>.cssFloat();
+<var>CSSStyleDeclaration</var>.cssFloat = <var>"right"</var></pre>
 
-```js
-var float = CSSStyleDeclaration.cssFloat();
-CSSStyleDeclaration.cssFloat = "right"
-```
+<h3>値</h3>
+<p>{{domxref('CSSOMString')}} です。</p>
 
-### 値
+<h2 id="Example">例</h2>
 
-{{domxref('CSSOMString')}} です。
+<p>以下の例では、スタイルシートには、 1 つだけのルール <code>.box</code> に {{cssxref("float")}} プロパティの値が <code>left</code> と設定されています。この値は <code>cssFloat</code> から返されます。次に、 <code>cssFloat</code> を使用して値を "right" に設定し、新しい値を返します。</p>
 
-## 例
-
-以下の例では、スタイルシートには、 1 つだけのルール `.box` に {{cssxref("float")}} プロパティの値が `left` と設定されています。この値は `cssFloat` から返されます。次に、 `cssFloat` を使用して値を "right" に設定し、新しい値を返します。
-
-```css
-.box {
+<pre class="brush: css">.box {
   float: left;
   inline-size: 300px;
 }
-```
+</pre>
 
-```js
-let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 let rule = myRules[0];
 console.log(rule.style.cssFloat); // "left"
 rule.style.cssFloat = "right";
-console.log(rule.style.cssFloat); //right
-```
+console.log(rule.style.cssFloat); //right</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

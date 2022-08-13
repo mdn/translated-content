@@ -15,28 +15,39 @@ tags:
   - onactivate
 translation_of: Web/API/Element/DOMActivate_event
 ---
-{{APIRef}}
+<p>{{APIRef}}</p>
 
-{{Deprecated_Header}}
+<div>{{Deprecated_Header}}</div>
 
-**`DOMActivate`** イベントは、要素がアクティブになったとき、例えば、マウスを使ったりキーを押したりしてそこに移動したときに発行されます。
+<p><code><strong>DOMActivate</strong></code> イベントは、要素がアクティブになったとき、例えば、マウスを使ったりキーを押したりしてそこに移動したときに発行されます。</p>
 
-| バブリング       | あり                             |
-| ---------------- | -------------------------------- |
-| キャンセル       | 可                               |
-| インターフェイス | {{domxref("MouseEvent")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("MouseEvent")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
+<pre class="brush: html notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
      xmlns:ev="http://www.w3.org/2001/xml-events"
-     width="6cm" height="5cm" viewBox="0 0 600 500">
+     width="6cm" height="5cm" viewBox="0 0 600 500"&gt;
 
-  <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
+  &lt;desc&gt;Example: invoke an ECMAScript function from a DOMActivate event&lt;/desc&gt;
 
-  <!-- ECMAScript to change the radius -->
-  <script type="application/ecmascript"><![CDATA[
+  &lt;!-- ECMAScript to change the radius --&gt;
+  &lt;script type="application/ecmascript"&gt;&lt;![CDATA[
     function change(evt) {
       var circle = evt.target;
       var currentRadius = circle.getFloatTrait("r");
@@ -45,34 +56,47 @@ translation_of: Web/API/Element/DOMActivate_event
       else
         circle.setFloatTrait("r", currentRadius * 0.5);
     }
-  ]]></script>
+  ]]&gt;&lt;/script&gt;
 
-  <!-- Act on each DOMActivate event -->
-  <circle cx="300" cy="225" r="100" fill="red">
-    <handler type="application/ecmascript" ev:event="DOMActivate"> change(evt); </handler>
-  </circle>
+  &lt;!-- Act on each DOMActivate event --&gt;
+  &lt;circle cx="300" cy="225" r="100" fill="red"&gt;
+    &lt;handler type="application/ecmascript" ev:event="DOMActivate"&gt; change(evt); &lt;/handler&gt;
+  &lt;/circle&gt;
 
-  <text x="300" y="480" font-family="Verdana" font-size="35" text-anchor="middle">
+  &lt;text x="300" y="480" font-family="Verdana" font-size="35" text-anchor="middle"&gt;
     Activate the circle to change its size
-  </text>
-</svg>
-```
+  &lt;/text&gt;
+&lt;/svg&gt;
+</pre>
 
-{{EmbedLiveSample("Examples", 640, 200)}}
+<p>{{EmbedLiveSample("Examples", 640, 200)}}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                   | 状態                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-DOMActivate', 'DOMActivate')}} | {{Spec2('UI Events')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-DOMActivate', 'DOMActivate')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Element.DOMActivate_event")}}
+<p>{{Compat("api.Element.DOMActivate_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("MouseEvent")}}
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
+<ul>
+ <li>{{domxref("MouseEvent")}}</li>
+ <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
+ <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
+ <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
+</ul>

@@ -11,18 +11,17 @@ tags:
   - ガイド
 translation_of: Web/API/Battery_Status_API
 ---
-{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
+<div>{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}</div>
 
-**Battery Status API** は、 **Battery API** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。
+<p><strong>Battery Status API</strong> は、 <strong>Battery API</strong> と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。</p>
 
-Battery Status API は {{domxref("window.navigator")}} を、 battery promise を返す {{domxref("navigator.getBattery()")}} メソッドで拡張します。 Promise は、バッテリーの状態監視を制御できる新たなイベントも提供する、{{domxref("BatteryManager")}} オブジェクトで解決します。
+<p>Battery Status API は {{domxref("window.navigator")}} を、 battery promise を返す {{domxref("navigator.getBattery()")}} メソッドで拡張します。 Promise は、バッテリーの状態監視を制御できる新たなイベントも提供する、{{domxref("BatteryManager")}} オブジェクトで解決します。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-以下の例では、充電状況 (電源に接続して充電中であるか) の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。
+<p>以下の例では、充電状況 (電源に接続して充電中であるか) の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。</p>
 
-```js
-navigator.getBattery().then(function(battery) {
+<pre class="brush: js;">navigator.getBattery().then(function(battery) {
   function updateAllBatteryInfo(){
     updateChargeInfo();
     updateLevelInfo();
@@ -64,21 +63,36 @@ navigator.getBattery().then(function(battery) {
   }
 
 });
-```
+</pre>
 
-[仕様書に記載されているサンプル](http://www.w3.org/TR/battery-status/#examples)もご覧ください。
+<p><a href="http://www.w3.org/TR/battery-status/#examples">仕様書に記載されているサンプル</a>もご覧ください。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                               | 状態                             | 備考     |
-| ------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Battery API")}}</td>
+   <td>{{Spec2("Battery API")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.BatteryManager")}}
+<p>{{Compat("api.BatteryManager")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Retrieving battery status information - demo & article](/ja/Apps/Build/gather_and_modify_data/retrieving_battery_status_information)
-- [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+<ul>
+ <li><a href="/ja/Apps/Build/gather_and_modify_data/retrieving_battery_status_information">Retrieving battery status information - demo &amp; article</a></li>
+ <li><a href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Hacks blog post - Using the Battery API</a></li>
+</ul>

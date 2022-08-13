@@ -11,59 +11,79 @@ tags:
   - Window
 translation_of: Web/API/Window/statusbar
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`Window.statusbar`** プロパティはステータスバーオブジェクトを返します。これにより、ウィンドウ内で表示/非表示を切り替えることができます。
+<p><code><strong>Window.statusbar</strong></code> プロパティはステータスバーオブジェクトを返します。これにより、ウィンドウ内で表示/非表示を切り替えることができます。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-objRef = window.statusbar
-```
+<pre class="brush: js"><var>objRef</var> = <em>window</em>.statusbar
+</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-次の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティを利用する方法を示しています。既存のウィンドウのあらゆるバーの visible プロパティを書き換えるには、権限が必要です。
+<p>次の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティを利用する方法を示しています。既存のウィンドウのあらゆるバーの visible プロパティを書き換えるには、権限が必要です。</p>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;様々な DOM テスト&lt;/title&gt;
 
-<script>
+&lt;script&gt;
      // 存在するウィンドウのバーの状態を変更します
     netscape.security.PrivilegeManager.
         enablePrivilege("UniversalBrowserWrite");
     window.statusbar.visible=!window.statusbar.visible;
-  </script>
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
-</html>
-```
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;様々な DOM テスト&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 注
+<h2 id="Notes">注</h2>
 
-上記の例のページを読み込むと、ブラウザーは次のようなダイアログを表示します。![](modify_any_open_window_dialog.png)
+<p>上記の例のページを読み込むと、ブラウザーは次のようなダイアログを表示します。<img
+    alt="" src="modify_any_open_window_dialog.png"></p>
 
-これらのバーの表示状態を切り替えるには、上記の例のように、スクリプトに署名を入れるか適切な権限を有効にするかしなければなりません。また、様々なツールバーの表示状態を動的に変更すると、ウィンドウの大きさを劇的に変化させ、ページのレイアウトに影響を与える可能性があることに注意してください。
+<p>これらのバーの表示状態を切り替えるには、上記の例のように、スクリプトに署名を入れるか適切な権限を有効にするかしなければなりません。また、様々なツールバーの表示状態を動的に変更すると、ウィンドウの大きさを劇的に変化させ、ページのレイアウトに影響を与える可能性があることに注意してください。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}}     | {{Spec2('HTML5 W3C')}}     |      |
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar',
+        'Window.statusbar')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar',
+        'Window.statusbar')}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.statusbar")}}
+<p>{{Compat("api.Window.statusbar")}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [window.locationbar](/ja/docs/Web/API/Window/locationbar), [window.menubar](/ja/docs/Web/API/Window/menubar), [window.personalbar](/ja/docs/Web/API/Window/personalbar), [window.scrollbars](/ja/docs/Web/API/Window/scrollbars), [window.toolbar](/ja/docs/Web/API/Window/toolbar)
+<ul>
+  <li><a href="/ja/docs/Web/API/Window/locationbar">window.locationbar</a>, <a
+      href="/ja/docs/Web/API/Window/menubar">window.menubar</a>, <a
+      href="/ja/docs/Web/API/Window/personalbar">window.personalbar</a>, <a
+      href="/ja/docs/Web/API/Window/scrollbars">window.scrollbars</a>, <a
+      href="/ja/docs/Web/API/Window/toolbar">window.toolbar</a></li>
+</ul>

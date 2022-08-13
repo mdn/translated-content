@@ -10,52 +10,83 @@ tags:
   - リファレンス
 translation_of: Web/API/HTMLStyleElement/media
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**`HTMLStyleElement.media`** プロパティは、スタイル情報の対象と想定するメディアを指定します。
+<p><strong><code>HTMLStyleElement.media</code></strong> プロパティは、スタイル情報の対象と想定するメディアを指定します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    medium = style.media
-    style.media = medium
+<pre class="syntaxbox"><var>medium</var> = style.media
+style.media = <var>medium</var>
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `medium` は単一のメディア又はコンマで区切られたリストを記述する文字列です。
+<ul>
+ <li><code>medium</code> は単一のメディア又はコンマで区切られたリストを記述する文字列です。</li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```html
-<!doctype html>
-<html>
-<head>
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
 
-<link id="LinkedStyle" rel="stylesheet" href="document.css" type="text/css" media="screen" />
-<style id="InlineStyle" rel="stylesheet" type="text/css" media="screen, print">
+&lt;link id="LinkedStyle" rel="stylesheet" href="document.css" type="text/css" media="screen" /&gt;
+&lt;style id="InlineStyle" rel="stylesheet" type="text/css" media="screen, print"&gt;
 p { color: blue; }
-</style>
-</head>
-<body>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-<script>
+&lt;script&gt;
 alert('LinkedStyle: ' + document.getElementById('LinkedStyle').media); // 'screen'
 alert('InlineStyle: ' + document.getElementById('InlineStyle').media); // 'screen, print'
-</script>
+&lt;/script&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "semantics.html#attr-style-media", "HTMLStyleElement")}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', "semantics.html#attr-style-media", "HTMLStyleElement")}}     | {{Spec2('HTML5.1')}}     |          |
-| {{SpecName('HTML5 W3C', "semantics.html#attr-style-media", "HTMLStyleElement")}} | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}                 | {{Spec2('DOM2 HTML')}}     |          |
-| {{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}         | {{Spec2('DOM1')}}         | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "semantics.html#attr-style-media", "HTMLStyleElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "semantics.html#attr-style-media", "HTMLStyleElement")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "semantics.html#attr-style-media", "HTMLStyleElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}</td>
+   <td>{{Spec2('DOM2 HTML')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.HTMLStyleElement.media")}}
+<p>{{Compat("api.HTMLStyleElement.media")}}</p>

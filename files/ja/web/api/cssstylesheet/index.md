@@ -7,62 +7,130 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleSheet
 ---
-{{APIRef("CSSOM")}}
+<div>{{APIRef("CSSOM")}}</div>
 
-**`CSSStyleSheet`** インターフェイスは、1 枚の [CSS](/ja/docs/Web/CSS) スタイルシートを表します。これは、その親の {{domxref("StyleSheet")}} からプロパティとメソッドを継承します。
+<p><strong><code>CSSStyleSheet</code></strong> インターフェイスは、1 枚の <a href="/ja/docs/Web/CSS">CSS</a> スタイルシートを表します。これは、その親の {{domxref("StyleSheet")}} からプロパティとメソッドを継承します。</p>
 
-スタイルシートは、_{{domxref("CSSStyleRule", "スタイル規則", "", 1)}}\_\_ _("`h1,h2 { font-size: 16pt }"`)、様々な _\@-規則_ (`@import`, `@media`, ...) 等の _{{domxref("CSSRule", "規則", "", 1)}}_ から構成されます。このインターフェイスは、スタイルシート内の規則のリストを調査および変更できます。
+<p>スタイルシートは、<em>{{domxref("CSSStyleRule", "スタイル規則", "", 1)}}</em><em> </em>("<code>h1,h2 { font-size: 16pt }"</code>)、様々な <em>@-規則</em> (<code>@import</code>, <code>@media</code>, ...) 等の <em>{{domxref("CSSRule", "規則", "", 1)}}</em> から構成されます。このインターフェイスは、スタイルシート内の規則のリストを調査および変更できます。</p>
 
-CSSStyleSheet オブジェクトを取得できる様々な方法は、[補記](#notes) セクションを参照してください。
+<p>CSSStyleSheet オブジェクトを取得できる様々な方法は、<a href="#notes">補記</a> セクションを参照してください。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_親である {{domxref("Stylesheet")}} からプロパティを継承します。_
+<p><em>親である {{domxref("Stylesheet")}} からプロパティを継承します。</em></p>
 
-- {{domxref("CSSStyleSheet.cssRules")}}
-  - : 現在の {{domxref("CSSRuleList")}} を返す。これは、スタイルシート内の {{domxref("CSSRule")}} オブジェクトのリストです。
-    これは通常、次のように個々の規則へアクセスするために使用されます: styleSheet.cssRules[i] // where i = 0..cssRules.length`cssRules` 内のアイテムを追加または削除するには、下記のように、`CSSStyleSheet` の `deleteRule()` メソッドと `insertRule()` メソッドを使用します。
-- {{domxref("CSSStyleSheet.ownerRule")}}
-  - : これが {{cssxref("@import")}} 規則を使用して document にインポートされたスタイルシートである場合、`ownerRule` は、その {{domxref("CSSImportRule")}} を返す。そうでない場合、`null` を返す。
+<dl>
+ <dt id="cssRules">{{domxref("CSSStyleSheet.cssRules")}}</dt>
+ <dd>現在の {{domxref("CSSRuleList")}} を返す。これは、スタイルシート内の {{domxref("CSSRule")}} オブジェクトのリストです。<br>
+ これは通常、次のように個々の規則へアクセスするために使用されます:
+ <pre><code>   styleSheet.cssRules[i] // where i = 0..cssRules.length</code></pre>
+ <code>cssRules</code> 内のアイテムを追加または削除するには、下記のように、<code>CSSStyleSheet</code> の <code>deleteRule()</code> メソッドと <code>insertRule()</code> メソッドを使用します。</dd>
+ <dt id="ownerRule">{{domxref("CSSStyleSheet.ownerRule")}}</dt>
+ <dd>これが {{cssxref("@import")}} 規則を使用して document にインポートされたスタイルシートである場合、<code>ownerRule</code> は、その {{domxref("CSSImportRule")}} を返す。そうでない場合、<code>null</code> を返す。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_親である {{domxref("Stylesheet")}} からメソッドを継承します。_
+<p><em>親である {{domxref("Stylesheet")}} からメソッドを継承します。</em></p>
 
-- {{domxref("CSSStyleSheet.deleteRule")}}
-  - : スタイルシートから、指定した位置の規則を削除する。
-- {{domxref("CSSStyleSheet.insertRule")}}
-  - : スタイルシート内の指定した位置に新しい規則を挿入する。規則のテキスト表現が与えられます。
+<dl>
+ <dt id="deleteRule">{{domxref("CSSStyleSheet.deleteRule")}}</dt>
+ <dd>スタイルシートから、指定した位置の規則を削除する。</dd>
+ <dt id="insertRule">{{domxref("CSSStyleSheet.insertRule")}}</dt>
+ <dd>スタイルシート内の指定した位置に新しい規則を挿入する。規則のテキスト表現が与えられます。</dd>
+</dl>
 
-## 補記
+<h2 id="Notes" name="Notes">補記</h2>
 
-一部のブラウザーでは、スタイルシートが異なるドメインから読み込まれている場合、`cssRules` の呼び出しで `SecurityError` が発生します。
+<p>一部のブラウザーでは、スタイルシートが異なるドメインから読み込まれている場合、<code>cssRules</code> の呼び出しで <code>SecurityError</code> が発生します。</p>
 
-スタイルシートは、多くても 1 個の {{domxref("Document")}} と関連付けられ、これに適用されます ({{domxref("StyleSheet.disabled", "disabled", "", 1)}} でない限り)。与えられた document の `CSSStyleSheet` オブジェクトのリストは、{{domxref("document.styleSheets")}} プロパティを使用して取得できます。特定のスタイルシートは、もしあれば、その _owner_ オブジェクト (`Node` または `CSSImportRule`) からもアクセスできます。
+<p>スタイルシートは、多くても 1 個の {{domxref("Document")}} と関連付けられ、これに適用されます ({{domxref("StyleSheet.disabled", "disabled", "", 1)}} でない限り)。与えられた document の <code>CSSStyleSheet</code> オブジェクトのリストは、{{domxref("document.styleSheets")}} プロパティを使用して取得できます。特定のスタイルシートは、もしあれば、その <em>owner</em> オブジェクト (<code>Node</code> または <code>CSSImportRule</code>) からもアクセスできます。</p>
 
-`CSSStyleSheet` オブジェクトは、document のスタイルシートが読み込まれた時に、ブラウザーによって自動的に作成され、その document の `styleSheets` リストに挿入されます。{{domxref("document.styleSheets")}} リストは直接変更できないため、新しい `CSSStyleSheet` オブジェクトを手動で作成する手ごろな方法はありません (とはいえ、[Constructable Stylesheet Objects](http://tabatkins.github.io/specs/construct-stylesheets/) が Web API のどこかに追加される可能性があります)。新しいスタイルシートを作成するには、{{HTMLElement("style")}} 要素か {{HTMLElement("link")}} 要素を document に挿入してください。
+<p><code>CSSStyleSheet</code> オブジェクトは、document のスタイルシートが読み込まれた時に、ブラウザーによって自動的に作成され、その document の <code>styleSheets</code> リストに挿入されます。{{domxref("document.styleSheets")}} リストは直接変更できないため、新しい <code>CSSStyleSheet</code> オブジェクトを手動で作成する手ごろな方法はありません (とはいえ、<a href="http://tabatkins.github.io/specs/construct-stylesheets/">Constructable Stylesheet Objects</a> が Web API のどこかに追加される可能性があります)。新しいスタイルシートを作成するには、{{HTMLElement("style")}} 要素か {{HTMLElement("link")}} 要素を document に挿入してください。</p>
 
-スタイルシートを document と関連付ける方法のリスト (おそらく未完成) は次のとおり:
+<p>スタイルシートを document と関連付ける方法のリスト (おそらく未完成) は次のとおり:</p>
 
-| スタイルシートが document と関連付けられる理由                                              | `document .styleSheets` リストに現れる | スタイルシートオブジェクトを与える owner 要素または規則の取得        | owner オブジェクトのインターフェイス                                                                                                | CSSStyleSheet オブジェクトを owner から取得                              |
-| ------------------------------------------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| document 内の {{HTMLElement("style")}} 要素と {{HTMLElement("link")}} 要素 | はい                                   | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("HTMLLinkElement")}} または {{domxref("HTMLStyleElement")}}、 {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| document に適用される他のスタイルシート内の CSS {{cssxref("@import")}} 規則           | はい                                   | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}} | {{domxref("CSSImportRule")}}                                                                                                | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
-| (HTML でない) document 内の `<?xml-stylesheet ?>` 処理命令                                  | はい                                   | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("ProcessingInstruction")}}                                                                                    | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| HTTP Link Header                                                                            | はい                                   | _N/A_                                                                | N/A                                                                                                                                 | N/A                                                                      |
-| ユーザーエージェントの (既定の) スタイルシート                                              | いいえ                                 | N/A                                                                  | N/A                                                                                                                                 | N/A                                                                      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">スタイルシートが document と関連付けられる理由</th>
+   <th scope="col"><code>document<br>
+    .styleSheets</code> リストに現れる</th>
+   <th scope="col">スタイルシートオブジェクトを与える owner 要素または規則の取得</th>
+   <th scope="col">owner オブジェクトのインターフェイス</th>
+   <th scope="col">CSSStyleSheet オブジェクトを owner から取得</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>document 内の {{HTMLElement("style")}} 要素と {{HTMLElement("link")}} 要素</td>
+   <td>はい</td>
+   <td>{{domxref("StyleSheet.ownerNode", ".ownerNode")}}</td>
+   <td>{{domxref("HTMLLinkElement")}} または<br>
+    {{domxref("HTMLStyleElement")}}、<br>
+    {{domxref("SVGStyleElement")}}</td>
+   <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
+  </tr>
+  <tr>
+   <td>document に適用される他のスタイルシート内の CSS {{cssxref("@import")}} 規則</td>
+   <td>はい</td>
+   <td>{{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}</td>
+   <td>{{domxref("CSSImportRule")}}</td>
+   <td>{{domxref("CSSImportRule.styleSheet", ".styleSheet")}}</td>
+  </tr>
+  <tr>
+   <td>(HTML でない) document 内の <code>&lt;?xml-stylesheet ?&gt;</code> 処理命令</td>
+   <td>はい</td>
+   <td>{{domxref("StyleSheet.ownerNode", ".ownerNode")}}</td>
+   <td>{{domxref("ProcessingInstruction")}}</td>
+   <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
+  </tr>
+  <tr>
+   <td>HTTP Link Header</td>
+   <td>はい</td>
+   <td><em>N/A</em></td>
+   <td>N/A</td>
+   <td>N/A</td>
+  </tr>
+  <tr>
+   <td>ユーザーエージェントの (既定の) スタイルシート</td>
+   <td>いいえ</td>
+   <td>N/A</td>
+   <td>N/A</td>
+   <td>N/A</td>
+  </tr>
+ </tbody>
+</table>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                           | 策定状況                         | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}                     | {{Spec2("CSSOM")}}         |          |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}} | {{Spec2("DOM2 Style")}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>仕様書</th>
+   <th>策定状況</th>
+   <th>備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}</td>
+   <td>{{Spec2("CSSOM")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}}</td>
+   <td>{{Spec2("DOM2 Style")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.CSSStyleSheet")}}
+<p>{{Compat("api.CSSStyleSheet")}}</p>
 
-## 関連情報
 
-- [動的なスタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+<h2 id="See also" name="See also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">動的なスタイル情報の利用</a></li>
+</ul>

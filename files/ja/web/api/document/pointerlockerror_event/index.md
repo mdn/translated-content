@@ -12,46 +12,70 @@ tags:
   - ポインター
 translation_of: Web/API/Document/pointerlockerror_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`pointerlockerror` イベントは、 (技術的な理由、またはパーミッションが拒否されたために) ポインターのロックに失敗したときに発生します。
+<p><code>pointerlockerror</code> イベントは、 (技術的な理由、またはパーミッションが拒否されたために) ポインターのロックに失敗したときに発生します。</p>
 
-| バブリング                   | あり                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| キャンセル可能               | いいえ                                                                                   |
-| インターフェイス             | {{domxref("Event")}}                                                             |
-| イベントハンドラープロパティ | {{domxref("Document/onpointerlockchange", "onpointerlockerror")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル可能</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("Document/onpointerlockchange", "onpointerlockerror")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`addEventListener()` を使用した場合
+<p><code>addEventListener()</code> を使用した場合</p>
 
-```js
-const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
-document.addEventListener('pointerlockerror', (event) => {
+document.addEventListener('pointerlockerror', (event) =&gt; {
   console.log('Error locking pointer');
-});
-```
+});</pre>
 
-`onpointerlockerror` イベントハンドラープロパティを使用した場合
+<p><code>onpointerlockerror</code> イベントハンドラープロパティを使用した場合</p>
 
-```js
-document.onpointerlockerror = (event) => {
+<pre class="brush: js">document.onpointerlockerror = (event) =&gt; {
   console.log('Error locking pointer');
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   | 状態                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Pointer Lock', '#pointerlockchange-and-pointerlockerror-events')}} | {{Spec2('Pointer Lock')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Lock', '#pointerlockchange-and-pointerlockerror-events')}}</td>
+   <td>{{Spec2('Pointer Lock')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.pointerlockerror_event")}}
+<p>{{Compat("api.Document.pointerlockerror_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Pointer Lock API の使用](/ja/docs/API/Pointer_Lock_API)
+<ul>
+ <li><a href="/ja/docs/API/Pointer_Lock_API">Pointer Lock API の使用</a></li>
+</ul>

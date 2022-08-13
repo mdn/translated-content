@@ -10,37 +10,46 @@ tags:
   - locked
 translation_of: Web/API/ReadableStream/locked
 ---
-{{APIRef("Streams")}}
+<div>{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、読み取り可能なストリームが[リーダーにロックされている](https://streams.spec.whatwg.org/#lock)かどうかを返します。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>locked</code></strong> 読み取り専用プロパティは、読み取り可能なストリームが<a href="https://streams.spec.whatwg.org/#lock" id="ref-for-locked-to-a-reader②">リーダーにロックされている</a>かどうかを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var locked = readableStream.locked;
+<pre class="syntaxbox"><var><code>var <em>locked</em> = </code>readableStream</var>.locked;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-読み取り可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。
+<p>読み取り可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-const stream = new ReadableStream({
+<pre class="brush: js">const stream = new ReadableStream({
   ...
 });
 
 const reader = stream.getReader();
 
 stream.locked
-// ストリームがリーダーにロックされているため、true を返すべきです
-```
+// ストリームがリーダーにロックされているため、true を返すべきです</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                         | 状態                         | コメント |
-| ------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-locked","locked")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#rs-locked","locked")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStream.locked")}}
+<p>{{Compat("api.ReadableStream.locked")}}</p>

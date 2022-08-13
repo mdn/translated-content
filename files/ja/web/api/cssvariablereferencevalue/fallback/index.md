@@ -13,24 +13,37 @@ tags:
   - プロパティ
 translation_of: Web/API/CSSVariableReferenceValue/fallback
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
-**`fallback`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、組み込み CSS 値のカスタム名を返します。
+<p class="summary"><strong><code>fallback</code></strong> は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、組み込みCSS 値のカスタム名を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var variable = CSSVariableReferenceValue.variable;
+<pre class="syntaxbox">var variable = CSSVariableReferenceValue.variable;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref('CSSUnparsedValue')}} です。
+<p>{{domxref('CSSUnparsedValue')}} です。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssvariablereferencevalue-fallback','fallback')}} | {{Spec2('CSSOM')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM','#dom-cssvariablereferencevalue-fallback','fallback')}}</td>
+   <td>{{Spec2('CSSOM')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.CSSVariableReferenceValue.fallback")}}
+<p>{{Compat("api.CSSVariableReferenceValue.fallback")}}</p>

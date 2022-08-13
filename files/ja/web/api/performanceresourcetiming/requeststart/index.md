@@ -8,31 +8,31 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceResourceTiming/requestStart
 ---
-{{APIRef("Resource Timing API")}}
+<div>{{APIRef("Resource Timing API")}}</div>
 
-**`requestStart`** 読み取り専用プロパティは、ブラウザがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザがリクエストを終了すると、返される値は再試行要求の開始になります。
+<p><strong><code>requestStart</code></strong> 読み取り専用プロパティは、ブラウザがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザがリクエストを終了すると、返される値は再試行要求の開始になります。</p>
 
-`requestStart` には _end_ プロパティはありません。
+<p><code>requestStart</code> には <em>end</em> プロパティはありません。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    resource.requestStart;
+<pre class="syntaxbox"><em>resource</em>.requestStart;
+</pre>
 
-### 戻り値
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
 
-ブラウザがサーバからのリソースのリクエストを開始する直前の時間を表す {{domxref("DOMHighResTimeStamp")}}
+<p>ブラウザがサーバからのリソースのリクエストを開始する直前の時間を表す {{domxref("DOMHighResTimeStamp")}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+<p>次の例では、すべての "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} イベントの <code>*Start</code> プロパティと <code>*End</code> プロパティの値が記録されます。</p>
 
-```js
-function print_PerformanceEntries() {
+<pre class="brush: js">function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  for (var i=0; i &lt; p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -46,7 +46,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (var i=0; i &lt; properties.length; i++) {
     // check each property
     var supported = properties[i] in perfEntry;
     if (supported) {
@@ -57,14 +57,27 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                           | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-requestStart', 'requestStart')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-requestStart', 'requestStart')}}</td>
+   <td>{{Spec2('Resource Timing')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceResourceTiming.requestStart")}}
+<div>
+<p>{{Compat("api.PerformanceResourceTiming.requestStart")}}</p>
+</div>

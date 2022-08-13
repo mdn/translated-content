@@ -12,61 +12,70 @@ tags:
   - インターフェイス
 translation_of: Web/API/EventSource
 ---
-{{APIRef("Server Sent Events")}}
+<div>{{APIRef("Server Sent Events")}}</div>
 
-**`EventSource`** インターフェイスは、 [Server-sent event](/ja/docs/Web/API/Server-sent_events) のウェブコンテンツのインターフェイスです。 `EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Web/API/Document_Object_Model/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
+<p><span class="seoSummary"><strong><code>EventSource</code></strong> インターフェイスは、 <a href="/ja/docs/Web/API/Server-sent_events">Server-sent event</a> のウェブコンテンツのインターフェイスです。 <code>EventSource</code> インターフェイスは、 <a href="/ja/docs/Web/HTTP">HTTP</a> サーバーとの間で永続的なコネクションを開き、<a href="/ja/docs/Web/API/Document_Object_Model/Events">イベント</a>を <code>text/event-stream</code> の形式で受け取ります。</span>コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。</p>
 
-いったんコネクションが開かれると、サーバーから入って来るメッセージは {{event("message")}} イベントの形でコードに配信されます。
+<p>いったんコネクションが開かれると、サーバーから入って来るメッセージは {{event("message")}} イベントの形でコードに配信されます。</p>
 
-[WebSocket](/ja/docs/Web/API/WebSockets_API) とは異なり、 Server-sent event は単一方向です。つまり、データメッセージはサーバーからクライアント (たとえばユーザーのウェブブラウザー) に向けて、一方向に配信されます。これは、メッセージの形でクライアントからサーバーにデータを送る必要がない場合には良い選択です。例えば、 `EventSource` はソーシャルメディアの状況アップデートやニュースフィードのようなものを扱ったり、[クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) ([IndexedDB](/ja/docs/Web/API/IndexedDB_API) や [web storage](/ja/docs/Web/API/Web_Storage_API) など) の仕組みにデータを配信したりするアプローチに有用です。
+<p><a href="/ja/docs/Web/API/WebSockets_API">WebSocket</a> とは異なり、 Server-sent event は単一方向です。つまり、データメッセージはサーバーからクライアント (たとえばユーザーのウェブブラウザー) に向けて、一方向に配信されます。これは、メッセージの形でクライアントからサーバーにデータを送る必要がない場合には良い選択です。例えば、 <code>EventSource</code> はソーシャルメディアの状況アップデートやニュースフィードのようなものを扱ったり、<a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">クライアント側ストレージ</a> (<a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> や <a href="/ja/docs/Web/API/Web_Storage_API">web storage</a> など) の仕組みにデータを配信したりするアプローチに有用です。</p>
 
-## コンストラクター
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
-- {{domxref("EventSource.EventSource", "EventSource()")}}
-  - : 指定された URL と、オプション資格情報モードから Server-sent event の受信を扱うために、新しい `EventSource` を生成します。
+<dl>
+ <dt>{{domxref("EventSource.EventSource", "EventSource()")}}</dt>
+ <dd>指定された URL と、オプション資格情報モードから Server-sent event の受信を扱うために、新しい <code>EventSource</code> を生成します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_このインターフェイスは、親である {{domxref("EventTarget")}} からプロパティを継承します。_
+<p><em>このインターフェイスは、親である {{domxref("EventTarget")}} からプロパティを継承します。</em></p>
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : 接続の状態を表す数値です。許容値は `CONNECTING` (`0`)、`OPEN` (`1`)、`CLOSED` (`2`) です。
-- {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : ソースの URL を表す {{domxref("DOMString")}} です。
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : {{domxref("Boolean")}} で、 `EventSource` オブジェクトがオリジン間 ([CORS](/ja/docs/Web/HTTP/CORS)) 資格情報を設定してインスタンス化されたか (`true`)、設定されずにインスタンス化されたか (`false`、既定値) を示します。
+<dl>
+ <dt>{{domxref("EventSource.readyState")}} {{readonlyinline}}</dt>
+ <dd>接続の状態を表す数値です。許容値は <code>CONNECTING</code> (<code>0</code>)、<code>OPEN</code> (<code>1</code>)、<code>CLOSED</code> (<code>2</code>) です。</dd>
+ <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
+ <dd>ソースの URL を表す {{domxref("DOMString")}} です。</dd>
+ <dt>{{domxref("EventSource.withCredentials")}} {{readonlyinline}}</dt>
+ <dd>{{domxref("Boolean")}} で、 <code>EventSource</code> オブジェクトがオリジン間 (<a href="/ja/docs/Web/HTTP/CORS">CORS</a>) 資格情報を設定してインスタンス化されたか (<code>true</code>)、設定されずにインスタンス化されたか (<code>false</code>、既定値) を示します。</dd>
+</dl>
 
-### イベントハンドラー
+<h3 id="Event_handlers" name="Event_handlers">イベントハンドラー</h3>
 
-- {{domxref("EventSource.onerror")}}
-  - : エラーが発生して、`EventSource` オブジェクトで {{domxref("EventSource/error_event", "error")}} イベントが発生したときに呼び出される {{event("Event_handlers", "event handler")}} です。
-- {{domxref("EventSource.onmessage")}}
-  - : {{domxref("EventSource/message_event", "message")}} イベントを受け取ったとき、すなわち発信元からメッセージが到着したときに呼び出される {{event("Event_handlers", "event handler")}} です。
-- {{domxref("EventSource.onopen")}}
-  - : {{domxref("EventSource/open_event", "open")}} イベントを受け取ったとき、すなわち接続を開始したときに呼び出される {{event("Event_handlers", "event handler")}} です。
+<dl>
+ <dt>{{domxref("EventSource.onerror")}}</dt>
+ <dd>エラーが発生して、<code>EventSource</code> オブジェクトで {{domxref("EventSource/error_event", "error")}} イベントが発生したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("EventSource.onmessage")}}</dt>
+ <dd>{{domxref("EventSource/message_event", "message")}} イベントを受け取ったとき、すなわち発信元からメッセージが到着したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("EventSource.onopen")}}</dt>
+ <dd>{{domxref("EventSource/open_event", "open")}} イベントを受け取ったとき、すなわち接続を開始したときに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_このインターフェイスは、親である {{domxref("EventTarget")}} からメソッドを継承します。_
+<p><em>このインターフェイスは、親である {{domxref("EventTarget")}} からメソッドを継承します。</em></p>
 
-- {{domxref("EventSource.close()")}}
-  - : 接続を切断して、 `readyState` 属性を `CLOSED` に設定します。すでに切断されている場合は何も行いません。
+<dl>
+ <dt>{{domxref("EventSource.close()")}}</dt>
+ <dd>接続を切断して、 <code>readyState</code> 属性を <code>CLOSED</code> に設定します。すでに切断されている場合は何も行いません。</dd>
+</dl>
 
-## イベント
+<h2 id="Events" name="Events">イベント</h2>
 
-- {{domxref("EventSource/error_event", "error")}}
-  - : イベントソースへのコネクションを開くことに失敗したときに発生します。
-- {{domxref("EventSource/message_event", "message")}}
-  - : イベントソースからデータを受信したときに発生します。
-- {{domxref("EventSource/open_event", "open")}}
-  - : イベントソースへのコネクションが開かれたときに発生します。
+<dl>
+ <dt>{{domxref("EventSource/error_event", "error")}}</dt>
+ <dd>イベントソースへのコネクションを開くことに失敗したときに発生します。</dd>
+ <dt>{{domxref("EventSource/message_event", "message")}}</dt>
+ <dd>イベントソースからデータを受信したときに発生します。</dd>
+ <dt>{{domxref("EventSource/open_event", "open")}}</dt>
+ <dd>イベントソースへのコネクションが開かれたときに発生します。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この基本的な例では、 `EventSource` を生成してサーバーからイベントを受け取ります。 `sse.php` という名前のページがイベントを生成する責任を負います。
+<p>この基本的な例では、 <code>EventSource</code> を生成してサーバーからイベントを受け取ります。 <code>sse.php</code> という名前のページがイベントを生成する責任を負います。</p>
 
-```js
-var evtSource = new EventSource('sse.php');
+<pre class="brush: js">var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -74,24 +83,41 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
-```
+}</pre>
 
-受信されたそれぞれのイベントは、 `EventSource` オブジェクトの `onmessage` イベントハンドラーを実行させます。ここでは、新しい {{HTMLElement("li")}} 要素を生成してその中にメッセージのデータを書き込み、この要素を文書の中にある既存のリスト要素に追加します。
+<p>受信されたそれぞれのイベントは、 <code>EventSource</code> オブジェクトの <code>onmessage</code> イベントハンドラーを実行させます。ここでは、新しい {{HTMLElement("li")}} 要素を生成してその中にメッセージのデータを書き込み、この要素を文書の中にある既存のリスト要素に追加します。</p>
 
-> **Note:** **メモ**: この例の全容が GitHub にあります。[Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) をご覧ください。
+<div class="note">
+<p><strong>メモ</strong>: この例の全容が GitHub にあります。<a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP</a> をご覧ください。</p>
+</div>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       | 備考                             |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<ul>
+</ul>
 
-{{Compat("api.EventSource")}}
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-## 関連情報
+<div>
+<p>{{Compat("api.EventSource")}}</p>
+</div>
 
-- [Server-sent event](/ja/docs/Web/API/Server-sent_events)
-- [Server-sent event の使用](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Server-sent_events">Server-sent event</a></li>
+ <li><a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">Server-sent event の使用</a></li>
+</ul>

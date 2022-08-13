@@ -12,45 +12,69 @@ tags:
   - イベント
 translation_of: Web/API/Document/pointerdown_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`pointerdown` イベントは、ポインターがアクティブになったときに発生します。マウスでは、端末がボタンが押されていない状態から一つ以上のボタンが押されている状態に遷移したときに発生します。タッチ操作では、デジタイザーに物理的な接触が行われたときに発生します。ペンでは、スタイラスがデジタイザーに物理的に接触したときに発生します。
+<p><code>pointerdown</code> イベントは、ポインターがアクティブになったときに発生します。マウスでは、端末がボタンが押されていない状態から一つ以上のボタンが押されている状態に遷移したときに発生します。タッチ操作では、デジタイザーに物理的な接触が行われたときに発生します。ペンでは、スタイラスがデジタイザーに物理的に接触したときに発生します。</p>
 
-| バブリング                   | あり                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| キャンセル可能               | はい                                                                                     |
-| インターフェイス             | {{domxref("PointerEvent")}}                                                     |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル可能</th>
+   <td>はい</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("PointerEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`addEventListener()` の使用例:
+<p><code>addEventListener()</code> の使用例:</p>
 
-```js
-document.addEventListener('pointerdown', (event) => {
+<pre class="brush: js">document.addEventListener('pointerdown', (event) =&gt; {
   console.log('Pointer down event');
-});
-```
+});</pre>
 
-`onpointerdown` イベントハンドラープロパティの使用例:
+<p><code>onpointerdown</code> イベントハンドラープロパティの使用例:</p>
 
-```js
-document.onpointerdown = (event) => {
+<pre class="brush: js">document.onpointerdown = (event) =&gt; {
   console.log('Pointer down event');
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                       | 状態                                 |
-| ---------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('Pointer Events', '#the-pointerdown-event')}} | {{Spec2('Pointer Events')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#the-pointerdown-event')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.pointerdown_event")}}
+<p>{{Compat("api.Document.pointerdown_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}} イベントハンドラープロパティ
-- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} イベント
+<ul>
+ <li>{{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}} イベントハンドラープロパティ</li>
+ <li><code>HTMLElement</code> を対象としたこのイベント: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} イベント</li>
+</ul>

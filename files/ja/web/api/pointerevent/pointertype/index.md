@@ -10,33 +10,39 @@ tags:
   - Reference
 translation_of: Web/API/PointerEvent/pointerType
 ---
-{{ APIRef("Pointer Events") }}
+<div>{{ APIRef("Pointer Events") }}</div>
 
-{{domxref("PointerEvent")}} インターフェイスの **`pointerType`** 読み取り専用プロパティは、特定のポインタイベントを引き起こしたデバイスタイプ（マウス、ペン、またはタッチ）を示します。
+<p><span class="seoSummary">{{domxref("PointerEvent")}} インターフェイスの <strong><code>pointerType</code></strong> 読み取り専用プロパティは、特定のポインタイベントを引き起こしたデバイスタイプ（マウス、ペン、またはタッチ）を示します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var pType = pointerEvent.pointerType;
+<pre class="syntaxbox">var <em>pType</em> = <em>pointerEvent</em>.pointerType;
+</pre>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-- `pType`
-  - : イベントのポインタタイプ。 サポートする値は次の文字列です。
-    - `"mouse"`
-      - : イベントはマウスデバイスによって生成されました。
-    - `"pen"`
-      - : イベントはペンデバイスまたはスタイラスデバイスによって生成されました。
-    - `"touch"`
-      - : イベントは指などのタッチによって生成されました。
+<dl>
+ <dt><code>pType</code></dt>
+ <dd>イベントのポインタタイプ。 サポートする値は次の文字列です。<br>
 
-デバイスタイプがブラウザーで検出できない場合、値は空の文字列（`""`）になります。 ブラウザーが上記以外のポインタデバイスタイプをサポートしている場合は、異なるタイプのデバイスと名前が競合しないように、値に*{{glossary("Vendor Prefix","ベンダー接頭辞")}}を付ける*必要があります。
+ <dl>
+  <dt><code>"mouse"</code></dt>
+  <dd>イベントはマウスデバイスによって生成されました。</dd>
+  <dt><code>"pen"</code></dt>
+  <dd>イベントはペンデバイスまたはスタイラスデバイスによって生成されました。</dd>
+  <dt><code>"touch"</code></dt>
+  <dd>イベントは指などのタッチによって生成されました。</dd>
+ </dl>
+ </dd>
+</dl>
 
-## 例
+<p>デバイスタイプがブラウザーで検出できない場合、値は空の文字列（<code>""</code>）になります。 ブラウザーが上記以外のポインタデバイスタイプをサポートしている場合は、異なるタイプのデバイスと名前が競合しないように、値に<em>{{glossary("Vendor Prefix","ベンダー接頭辞")}}を付ける</em>必要があります。</p>
 
-この例は、`pointerType` プロパティの値を使用して適切なポインタタイプ処理関数を呼び出す方法を示しています。
+<h2 id="Example" name="Example">例</h2>
 
-```js
-targetElement.addEventListener('pointerdown', function(event) {
+<p>この例は、<code>pointerType</code> プロパティの値を使用して適切なポインタタイプ処理関数を呼び出す方法を示しています。</p>
+
+<pre class="brush: js">targetElement.addEventListener('pointerdown', function(event) {
   // 適切なポインタタイプのハンドラを呼び出す
   switch (event.pointerType) {
     case 'mouse':
@@ -52,16 +58,35 @@ targetElement.addEventListener('pointerdown', function(event) {
       console.log(`pointerType ${event.pointerType} はサポートしていません`);
   }
 }, false);
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                         | 状態                                     | コメント                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Pointer Events', '#dom-pointerevent-pointertype', 'pointerType')}}     | {{Spec2('Pointer Events')}}     | 初期定義                                                                                                                                                                                       |
-| {{SpecName('Pointer Events 2','#dom-pointerevent-pointertype', 'pointerType')}}     | {{Spec2('Pointer Events 2')}} | 不安定版                                                                                                                                                                                       |
-| {{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}}         | {{domxref("MouseEvent")}} を `long` 型から `double` 型に再定義します。 これは、`pointerType` がマウスである {{domxref("PointerEvent")}} が `double` 型になることを意味します。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#dom-pointerevent-pointertype', 'pointerType')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初期定義</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-pointerevent-pointertype', 'pointerType')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>{{domxref("MouseEvent")}} を <code>long</code> 型から <code>double</code> 型に再定義します。 これは、<code>pointerType</code> がマウスである {{domxref("PointerEvent")}} が <code>double</code> 型になることを意味します。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.PointerEvent.pointerType", 2)}}
+<p>{{Compat("api.PointerEvent.pointerType", 2)}}</p>

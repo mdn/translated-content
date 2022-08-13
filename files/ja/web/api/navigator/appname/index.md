@@ -8,35 +8,39 @@ tags:
   - Navigator
   - Property
   - Reference
+browser-compat: api.Navigator.appName
 translation_of: Web/API/NavigatorID/appName
 original_slug: Web/API/NavigatorID/appName
-browser-compat: api.Navigator.appName
 ---
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
 
-**`Navigator.appName`** プロパティの値は、どのブラウザーでも常に "`Netscape`" です。このプロパティは互換性ためだけに維持されています。
+<p><strong><code>Navigator.appName</code></strong> プロパティの値は、どのブラウザーでも常に "<code>Netscape</code>" です。このプロパティは互換性ためだけに維持されています。</p>
 
-> **Note:** #### メモこのプロパティが実際のブラウザー名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Netscape`" を返します。
+<div class="notecard note">
+  <h4>メモ</h4>
+  <p>このプロパティが実際のブラウザー名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "<code>Netscape</code>" を返します。</p>
+</div>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-appName = navigator.appName
-```
+<pre class="brush: js"><var>appName</var> = navigator.appName
+</pre>
 
-### 値
+<h3 id="Value">値</h3>
 
-文字列 "`Netscape`" です。
+<p>文字列 "<code>Netscape</code>" です。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{domxref("Navigator.appCodeName")}}
-- {{domxref("Navigator.product")}}
+<ul>
+  <li>{{domxref("Navigator.appCodeName")}}</li>
+  <li>{{domxref("Navigator.product")}}</li>
+</ul>

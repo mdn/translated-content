@@ -3,36 +3,51 @@ title: VRStageParameters
 slug: Web/API/VRStageParameters
 translation_of: Web/API/VRStageParameters
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRStageParameters`** インターフェイスは，ルームスケール体験に対応しているデバイス用にステージエリアを記述する値を表現しています．
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRStageParameters</code></strong> インターフェイスは，ルームスケール体験に対応しているデバイス用にステージエリアを記述する値を表現しています．</p>
 
-このインターフェイスには {{domxref("VRDisplay.stageParameters")}} プロパティを通じてアクセスできます．
+<p>このインターフェイスには {{domxref("VRDisplay.stageParameters")}} プロパティを通じてアクセスできます．</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{readonlyInline}}
-  - : {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} で返される着席(sitting-space)位置を立位(standing-space)位置にするための変換行列を含んでいます．
-- {{domxref("VRStageParameters.sizeX")}} {{readonlyInline}}
-  - : _プレイエリア境界の幅を返します．単位はメートルです．_
-- {{domxref("VRStageParameters.sizeY")}} {{readonlyInline}}
-  - : _プレイエリア境界の奥行きを返します．単位はメートルです．_
+<dl>
+ <dt>{{domxref("VRStageParameters.sittingToStandingTransform")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} で返される着席(sitting-space)位置を立位(standing-space)位置にするための変換行列を含んでいます．</dd>
+ <dt>{{domxref("VRStageParameters.sizeX")}} {{readonlyInline}}</dt>
+ <dd><dfn>プレイエリア境界の幅を返します．単位はメートルです．</dfn></dd>
+ <dt>{{domxref("VRStageParameters.sizeY")}} {{readonlyInline}}</dt>
+ <dd><dfn>プレイエリア境界の奥行きを返します．単位はメートルです．</dfn></dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-    TBD.
+<pre>TBD.</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#interface-vrstageparameters', 'VRStageParameters')}} | {{Spec2('WebVR')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#interface-vrstageparameters', 'VRStageParameters')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.VRStageParameters")}}
+<p>{{Compat("api.VRStageParameters")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

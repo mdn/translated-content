@@ -14,28 +14,31 @@ tags:
   - speech
 translation_of: Web/API/SpeechRecognitionResult
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
-The **`SpeechRecognitionResult`** interface of the [Web Speech API](/ja/docs/Web/API/Web_Speech_API) represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
+<p>The <strong><code>SpeechRecognitionResult</code></strong> interface of the <a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.</p>
 
-## Properties
+<h2 id="Properties">Properties</h2>
 
-- {{domxref("SpeechRecognitionResult.isFinal")}} {{readonlyinline}}
-  - : A {{domxref("Boolean")}} that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.
-- {{domxref("SpeechRecognitionResult.length")}} {{readonlyinline}}
-  - : Returns the length of the "array" — the number of {{domxref("SpeechRecognitionAlternative")}} objects contained in the result (also referred to as "n-best alternatives".)
+<dl>
+	<dt>{{domxref("SpeechRecognitionResult.isFinal")}} {{readonlyinline}}</dt>
+	<dd>A {{domxref("Boolean")}} that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.</dd>
+	<dt>{{domxref("SpeechRecognitionResult.length")}} {{readonlyinline}}</dt>
+	<dd>Returns <cite>the length of the "array" — the </cite>number of {{domxref("SpeechRecognitionAlternative")}} objects contained in the result (also referred to as "n-best alternatives".)</dd>
+</dl>
 
-## Methods
+<h2 id="Methods">Methods</h2>
 
-- {{domxref("SpeechRecognitionResult.item")}}
-  - : A standard getter that allows {{domxref("SpeechRecognitionAlternative")}} objects within the result to be accessed via array syntax.
+<dl>
+	<dt>{{domxref("SpeechRecognitionResult.item")}}</dt>
+	<dd>A standard getter that allows {{domxref("SpeechRecognitionAlternative")}} objects within the result to be accessed via array syntax.</dd>
+</dl>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+<p>This code is excerpted from our <a href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech color changer</a> example.</p>
 
-```js
-recognition.onresult = function(event) {
+<pre class="brush: js">recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -47,40 +50,52 @@ recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
-}
-```
+}</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#speechreco-result', 'SpeechRecognitionResult')}} | {{Spec2('Web Speech API')}} |         |
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Web Speech API', '#speechreco-result', 'SpeechRecognitionResult')}}</td>
+			<td>{{Spec2('Web Speech API')}}</td>
+			<td> </td>
+		</tr>
+	</tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.SpeechRecognitionResult")}}
+<div>
 
-### Firefox OS permissions
 
-To use speech recognition in an app, you need to specify the following permissions in your [manifest](/ja/docs/Web/Apps/Build/Manifest):
+<p>{{Compat("api.SpeechRecognitionResult")}}</p>
+</div>
 
-```json
-"permissions": {
+<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+
+<p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+
+<pre class="brush: json">"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}
-```
+}</pre>
 
-You also need a privileged app, so you need to include this as well:
+<p>You also need a privileged app, so you need to include this as well:</p>
 
-```json
-  "type": "privileged"
-```
+<pre class="brush: json">  "type": "privileged"</pre>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+<ul>
+	<li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

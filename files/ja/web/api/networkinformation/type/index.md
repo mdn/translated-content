@@ -11,33 +11,48 @@ tags:
   - Reference
 translation_of: Web/API/NetworkInformation/type
 ---
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+<p>{{apiref("Network Information API")}}{{SeeCompatTable}}</p>
 
-**`NetworkInformation.type`** 読み取り専用プロパティは、デバイスがネットワーク通信に使用している接続の種類を返します。
+<p><code><strong>NetworkInformation.type</strong></code> 読み取り専用プロパティは、デバイスがネットワーク通信に使用している接続の種類を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var type = netInfo.type
+<pre class="syntaxbox">var <em>type</em> = <em>netInfo</em>.type</pre>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-次の値のいずれかである列挙値です：
+<p>次の値のいずれかである列挙値です：</p>
 
-- `"bluetooth"`
-- `"cellular"`
-- `"ethernet"`
-- `"none`"
-- `"wifi"`
-- `"wimax"`
-- `"other"`
-- `"unknown"`
+<ul>
+ <li><code>"bluetooth"</code></li>
+ <li><code>"cellular"</code></li>
+ <li><code>"ethernet"</code></li>
+ <li><code>"none</code>"</li>
+ <li><code>"wifi"</code></li>
+ <li><code>"wimax"</code></li>
+ <li><code>"other"</code></li>
+ <li><code>"unknown"</code></li>
+</ul>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                 | ステータス                                   | コメント   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('Network Information', '#widl-NetworkInformation-type', 'type')}} | {{Spec2('Network Information')}} | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Network Information', '#widl-NetworkInformation-type', 'type')}}</td>
+   <td>{{Spec2('Network Information')}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.NetworkInformation.type")}}
+<p>{{Compat("api.NetworkInformation.type")}}</p>

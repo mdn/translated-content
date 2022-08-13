@@ -9,29 +9,42 @@ tags:
   - Reference
 translation_of: Web/API/HTMLPictureElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
-**`HTMLPictureElement`** インタフェースは、{{HTMLElement("picture")}} HTML 要素をあらわします。これは固有のプロパティやメソッドを実装していません。
+<p><code><strong>HTMLPictureElement</strong></code> インタフェースは、{{HTMLElement("picture")}} HTML 要素をあらわします。これは固有のプロパティやメソッドを実装していません。</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_固有のプロパティはありませんが、親要素である {{domxref("HTMLElement")}} のプロパティを継承します。_
+<p><em>固有のプロパティはありませんが、親要素である {{domxref("HTMLElement")}} のプロパティを継承します。</em></p>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_固有のメソッドはありませんが、親要素である {{domxref("HTMLElement")}} のメソッドを継承します。_
+<p><em>固有のメソッドはありませんが、親要素である {{domxref("HTMLElement")}} のメソッドを継承します。</em></p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                             | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "edits.html#the-picture-element", "HTMLPictureElement")}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "edits.html#the-picture-element", "HTMLPictureElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.HTMLPictureElement")}}
+<p>{{Compat("api.HTMLPictureElement")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- これを実装している {{HTMLElement("picture")}} HTML 要素。
-- {{domxref("HTMLImageElement")}} と {{domxref("HTMLSourceElement")}} は、しばしば {{HTMLElement("picture")}} 要素と同時に使用されます。
+<ul>
+ <li>これを実装している {{HTMLElement("picture")}} HTML 要素。</li>
+ <li>{{domxref("HTMLImageElement")}} と {{domxref("HTMLSourceElement")}} は、しばしば {{HTMLElement("picture")}} 要素と同時に使用されます。</li>
+</ul>

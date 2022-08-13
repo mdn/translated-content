@@ -12,26 +12,43 @@ tags:
 translation_of: Web/API/MessagePort/onmessageerror
 original_slug: Web/API/MessagePort/onmessageerror
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("MessagePort")}} インターフェースの **`onmessageerror`** イベントハンドラーは、ポートで `messageerror` 型の {{domxref("MessageEvent")}} が発火すると呼び出されます。つまり、{{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。
+<p>{{domxref("MessagePort")}} インターフェースの <code><strong>onmessageerror</strong></code> イベントハンドラーは、ポートで <code>messageerror</code> 型の {{domxref("MessageEvent")}} が発火すると呼び出されます。つまり、{{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    port.onmessageerror = function() { ... };
+<pre class="syntaxbox">port.onmessageerror = function() { ... };</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                                     | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#handler-messageport-onmessageerror', 'onmessageerror')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#handler-messageport-onmessageerror', 'onmessageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.MessagePort.onmessageerror")}}
+<div>
 
-## 関連項目
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+<p>{{Compat("api.MessagePort.onmessageerror")}}</p>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

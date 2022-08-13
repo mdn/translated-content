@@ -13,26 +13,25 @@ tags:
   - speech
 translation_of: Web/API/SpeechRecognition/abort
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`abort()`**メソッドは音声認識サービスが、入ってくる音声を聞くことを停止します。あと、{{domxref("SpeechRecognitionResult")}} を返しません。
+<p><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> の <code><strong>abort()</strong></code>メソッドは音声認識サービスが、入ってくる音声を聞くことを停止します。あと、{{domxref("SpeechRecognitionResult")}} を返しません。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    mySpeechRecognition.abort();
+<pre class="syntaxbox">mySpeechRecognition.abort();</pre>
 
-### 返り値
+<h3 id="Returns" name="Returns">返り値</h3>
 
-Void 型
+<p>Void型</p>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-無し
+<p>無し</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -55,39 +54,52 @@ recognition.onspeechend = function() {
   recognition.stop();
   console.log('音声認識サービスが停止されました');
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-abort', 'abort()')}} | {{Spec2('Web Speech API')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#dfn-abort', 'abort()')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("api.SpeechRecognition.abort")}}
+<div>
 
-### Firefox OS の権限
 
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
+<p>{{Compat("api.SpeechRecognition.abort")}}</p>
+</div>
 
-```json
-"permissions": {
+<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>
+
+<p>アプリで音声認識を利用する前に、下記の権限を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> に追加する必要があります。</p>
+
+<pre class="brush: json">"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}
-```
+}</pre>
 
-privileged アプリ権限も必要なので、下記も追加が必要です。
+<p>privileged アプリ権限も必要なので、下記も追加が必要です。</p>
 
-```json
-  "type": "privileged"
-```
+<pre class="brush: json">  "type": "privileged"</pre>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

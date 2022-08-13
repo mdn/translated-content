@@ -9,36 +9,42 @@ tags:
   - Reference
 translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
-{{APIRef("Canvas API")}}
+<div>
+<div>
+<div>{{APIRef("Canvas API")}}</div>
+</div>
+</div>
 
-**`HTMLCanvasElement.toBlob()`** メソッドは、 キャンバスに含まれる画像を表す {{domxref("Blob")}} オブジェクトを生成します；このファイルは、ユーザーエージェントの裁量によって、ディスクにキャッシュされるか、メモリに保存されます。`type` が指定されてない場合、画像の type は、 `image/png` です。生成された画像の解像度は、96dpi です。
-`image/jpeg` 画像と一緒に使用される 3 つ目の引数は、出力の品質を指定します。
+<p><strong><code>HTMLCanvasElement.toBlob()</code></strong> メソッドは、 キャンバスに含まれる画像を表す {{domxref("Blob")}} オブジェクトを生成します；このファイルは、ユーザーエージェントの裁量によって、ディスクにキャッシュされるか、メモリに保存されます。<code>type</code> が指定されてない場合、画像の type は、 <code>image/png</code> です。生成された画像の解像度は、96dpi です。<br>
+ <code>image/jpeg</code> 画像と一緒に使用される 3 つ目の引数は、出力の品質を指定します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    void canvas.toBlob(callback, mimeType, qualityArgument);
+<pre class="syntaxbox"><var>void <em>canvas</em>.toBlob(<em>callback</em>, <em>mimeType</em>, <em>qualityArgument</em>);</var>
+</pre>
 
-### パラメーター
+<h3 id="パラメーター">パラメーター</h3>
 
-- callback
-  - : 引数として {{domxref("Blob")}} オブジェクトを受け取るコールバック関数。
-- `mimeType` {{optional_inline}}
-  - : 画像フォーマットを示す {{domxref("DOMString")}}。既定の型は `image/png`。
-- `qualityArgument` {{optional_inline}}
-  - : 要求した type が `image/jpeg `か `image/webp` だった場合、画像の品質を示す `0` から `1` の {{jsxref("Number")}}。type 引数がそのほかの値だった場合、既定の値が画質に使用される。ほかの引数は無視される。
+<dl>
+ <dt>callback</dt>
+ <dd>引数として {{domxref("Blob")}} オブジェクトを受け取るコールバック関数。</dd>
+ <dt><code>mimeType</code> {{optional_inline}}</dt>
+ <dd>画像フォーマットを示す {{domxref("DOMString")}}。既定の型は <code>image/png</code>。</dd>
+ <dt><code>qualityArgument</code> {{optional_inline}}</dt>
+ <dd>要求した type が <code>image/jpeg </code> か <code>image/webp</code> だった場合、画像の品質を示す <code>0</code> から <code>1</code> の {{jsxref("Number")}}。type 引数がそのほかの値だった場合、既定の値が画質に使用される。ほかの引数は無視される。</dd>
+</dl>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-なし。
+<p>なし。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### キャンバスに表示されている画像を取得する
+<h3 id="キャンバスに表示されている画像を取得する">キャンバスに表示されている画像を取得する</h3>
 
-一度キャンバスにコンテンツを描画したら、これを何らかのサポートされている画像フォーマットに変換できます。たとえば、下記のコードスニペットは、ID が "canvas" の {{HTMLElement("canvas")}} 要素を取得して、PNG 画像としてコピーしてから、ドキュメントに新しい {{HTMLElement("img")}} 要素を追加しています。この画像ソースはキャンバスを使用して生成されたものです。
+<p>一度キャンバスにコンテンツを描画したら、これを何らかのサポートされている画像フォーマットに変換できます。たとえば、下記のコードスニペットは、ID が "canvas" の {{HTMLElement("canvas")}} 要素を取得して、PNG 画像としてコピーしてから、ドキュメントに新しい {{HTMLElement("img")}} 要素を追加しています。この画像ソースはキャンバスを使用して生成されたものです。</p>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 
 canvas.toBlob(function(blob) {
   var newImg = document.createElement("img"),
@@ -52,20 +58,18 @@ canvas.toBlob(function(blob) {
   newImg.src = url;
   document.body.appendChild(newImg);
 });
-```
+</pre>
 
-ここでは、PNG 画像を生成していることに注意してください；`toBlob()` の呼び出しに 2 つ目のパラメーターを追加した場合、画像の種類を指定できます。たとえば、 JPEG フォーマットの画像を取得できます：
+<p>ここでは、PNG 画像を生成していることに注意してください；<code>toBlob()</code> の呼び出しに 2 つ目のパラメーターを追加した場合、画像の種類を指定できます。たとえば、 JPEG フォーマットの画像を取得できます：</p>
 
-```js
- canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG at 95% quality
-```
+<pre class="brush: js"> canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG at 95% quality</pre>
 
-### キャンバスをアイコンに変換する方法（Mozilla のみ）
+<div>
+<h3 id="キャンバスをアイコンに変換する方法（Mozilla_のみ）">キャンバスをアイコンに変換する方法（Mozilla のみ）</h3>
 
-キャンバスをアイコンに変換するには、`-moz-parse` を使用します。Windows XP は PNG から ico への変換をサポートしていませんが、代わりに bmp を使用できます。download 属性を設定することで、ダウンロードリンクを生成できます。download 属性の値は、ファイル名として使用される名前です。
+<p>キャンバスをアイコンに変換するには、<code>-moz-parse</code> を使用します。Windows XP は PNG から ico への変換をサポートしていませんが、代わりに bmp を使用できます。download 属性を設定することで、ダウンロードリンクを生成できます。download 属性の値は、ファイル名として使用される名前です。</p>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var d = canvas.width;
 ctx = canvas.getContext("2d");
 ctx.beginPath();
@@ -87,15 +91,16 @@ function blobCallback(iconName) {
   }
 }
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
-```
+              '-moz-parse-options:format=bmp;bpp=32');</pre>
+</div>
 
-### OS.File（chrome/add-on コンテクストのみ）で toBlob をディスクに保存する
+<h3 id="OS.File（chromeadd-on_コンテクストのみ）で_toBlob_をディスクに保存する">OS.File（chrome/add-on コンテクストのみ）で toBlob をディスクに保存する</h3>
 
-> **Note:** このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。
+<div class="note">
+<p>このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。</p>
+</div>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var d = canvas.width;
 ctx = canvas.getContext("2d");
 ctx.beginPath();
@@ -130,27 +135,44 @@ function blobCallback(iconName) {
 }
 
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
-```
+              '-moz-parse-options:format=bmp;bpp=32');</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                     | 状態                             | コメント                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5 W3C')}} の最新のスナップショットから変更なし。  |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5.1')}}     | 変更なし。                                                               |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5 W3C')}}     | 初期定義を含む {{SpecName('HTML WHATWG')}} のスナップショット。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>{{SpecName('HTML5 W3C')}} の最新のスナップショットから変更なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>変更なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>初期定義を含む {{SpecName('HTML WHATWG')}} のスナップショット。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.HTMLCanvasElement.toBlob")}}
+<p>{{Compat("api.HTMLCanvasElement.toBlob")}}</p>
 
-## ポリフィル
+<h2 id="ポリフィル">ポリフィル</h2>
 
-toDataURL に基づいた低パフォーマンスのポリフィルです。
+<p>toDataURL に基づいた低パフォーマンスのポリフィルです。</p>
 
-```js
-if (!HTMLCanvasElement.prototype.toBlob) {
+<pre class="brush: js">if (!HTMLCanvasElement.prototype.toBlob) {
  Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
   value: function (callback, type, quality) {
 
@@ -158,7 +180,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
         len = binStr.length,
         arr = new Uint8Array(len);
 
-    for (var i=0; i<len; i++ ) {
+    for (var i=0; i&lt;len; i++ ) {
      arr[i] = binStr.charCodeAt(i);
     }
 
@@ -166,9 +188,11 @@ if (!HTMLCanvasElement.prototype.toBlob) {
   }
  });
 }
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- これが定義されているインターフェース： {{domxref("HTMLCanvasElement")}}
-- {{domxref("Blob")}}
+<ul>
+ <li>これが定義されているインターフェース： {{domxref("HTMLCanvasElement")}}</li>
+ <li>{{domxref("Blob")}}</li>
+</ul>

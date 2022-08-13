@@ -8,34 +8,36 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
-{{APIRef("Resource Timing API")}}
+<div>{{APIRef("Resource Timing API")}}</div>
 
-**`initiatorType`** 読み取り専用プロパティは、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","文字列")}} です。
+<p><strong><code>initiatorType</code></strong> 読み取り専用プロパティは、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","文字列")}} です。</p>
 
-この文字列の値は次のとおりです:
+<p>この文字列の値は次のとおりです:</p>
 
-- initiator が {{domxref("Element")}} の場合、このプロパティは要素の {{domxref("Node.localName","localName")}} を返します
-- initiator が {{domxref("CSS")}} リソースの場合、このプロパティは "`css`" を返します
-- initiator が {{domxref("XMLHttpRequest")}} オブジェクトの場合、このプロパティは "`xmlhttprequest`" を返します
-- initiator が {{domxref("PerformanceNavigationTiming")}} オブジェクトの場合、このプロパティは空の文字列 (`""`) を返します
+<ul>
+ <li>initiator が {{domxref("Element")}} の場合、このプロパティは要素の {{domxref("Node.localName","localName")}} を返します</li>
+ <li>initiator が {{domxref("CSS")}} リソースの場合、このプロパティは "<code>css</code>" を返します</li>
+ <li>initiator が {{domxref("XMLHttpRequest")}} オブジェクトの場合、このプロパティは "<code>xmlhttprequest</code>" を返します</li>
+ <li>initiator が {{domxref("PerformanceNavigationTiming")}} オブジェクトの場合、このプロパティは空の文字列 (<code>""</code>) を返します</li>
+</ul>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    resource.initiatorType;
+<pre class="syntaxbox"><em>resource</em>.initiatorType;
+</pre>
 
-### 戻り値
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
 
-上記で指定したように、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","string")}}。
+<p>上記で指定したように、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","string")}}。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-function print_PerformanceEntries() {
+<pre class="brush: js">function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  for (var i=0; i &lt; p.length; i++) {
     print_initiatorType(p[i]);
   }
 }
@@ -47,14 +49,25 @@ function print_initiatorType(perfEntry) {
   else
     console.log("... initiatorType = NOT supported");
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                           | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-initiatorType', 'initiatorType')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-initiatorType', 'initiatorType')}}</td>
+   <td>{{Spec2('Resource Timing')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceResourceTiming.initiatorType")}}
+<p>{{Compat("api.PerformanceResourceTiming.initiatorType")}}</p>

@@ -3,83 +3,103 @@ title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
 tags:
   - API
-  - API:Microsoft Extensions
+  - 'API:Microsoft Extensions'
   - Non-standard
   - Overview
   - Reference
 translation_of: Web/API/Microsoft_Extensions
 ---
-{{DefaultAPISidebar("Microsoft Extensions")}}
+<div>{{DefaultAPISidebar("Microsoft Extensions")}}</div>
 
-Microsoft ブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の [DOM API](/ja/docs/Web/API) に対するいくつかの特別な Microsoft 拡張機能をサポートしています。これらの拡張機能には `MS` または `ms`.のプレフィックスが付きます。
+<p>Microsoft ブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の <a href="/ja/docs/Web/API">DOM API</a> に対するいくつかの特別な Microsoft 拡張機能をサポートしています。これらの拡張機能には <code>MS</code> または <code>ms</code>.のプレフィックスが付きます。</p>
 
-> **Note:** これらの API は Microsoft アプリケーションでのみ機能し、標準化されていません。
+<div class="note">
+<p><strong>Note:</strong> これらの API は Microsoft アプリケーションでのみ機能し、標準化されていません。</p>
+</div>
 
-## Touch APIs
+<h2 id="Touch_APIs">Touch APIs</h2>
 
-- {{DOMxRef("Element.msZoomTo()")}}
-- {{Event("msContentZoom")}}
-- {{DOMxRef("MSManipulationEvent")}}
-- {{Event("MSManipulationStateChanged")}}
-- {{DOMxRef("msManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+<div class="index">
+<ul>
+ <li>{{DOMxRef("Element.msZoomTo()")}}</li>
+ <li>{{Event("msContentZoom")}}</li>
+ <li>{{DOMxRef("MSManipulationEvent")}}</li>
+ <li>{{Event("MSManipulationStateChanged")}}</li>
+ <li>{{DOMxRef("msManipulationViewsEnabled")}}</li>
+ <li>{{Event("MSPointerHover")}} {{Deprecated_Inline}}</li>
+</ul>
+</div>
 
-## Media APIs
+<h2 id="Media_APIs">Media APIs</h2>
 
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}}
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}}
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}}
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}}
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}}
-- {{DOMxRef("HTMLVideoElement.msZoom")}}
-- {{DOMxRef("HTMLAudioElement.msAudioCategory")}}
-- {{DOMxRef("HTMLAudioElement.msAudioDeviceType")}}
-- {{DOMxRef("HTMLMediaElement.msClearEffects()")}}
-- {{DOMxRef("HTMLMediaElement.msInsertAudioEffect()")}}
-- {{DOMxRef("MediaError.msExtendedCode")}}
-- {{DOMxRef("MSGraphicsTrust")}}
-- {{DOMxRef("msGraphicsTrustStatus")}}
-- {{DOMxRef("msIsBoxed")}}
-- {{DOMxRef("msPlayToDisabled")}}
-- {{DOMxRef("msPlayToPreferredSourceUri")}}
-- {{DOMxRef("msPlayToPrimary")}}
-- {{DOMxRef("msPlayToSource")}}
-- {{DOMxRef("msRealTime")}}
-- {{DOMxRef("msSetMediaProtectionManager")}}
-- {{DOMxRef("msSetVideoRectangle")}}
-- {{DOMxRef("msStereo3DPackingMode")}}
-- {{DOMxRef("msStereo3DRenderMode")}}
-- {{DOMxRef("onMSVideoFormatChanged")}}
-- {{DOMxRef("onMSVideoFrameStepCompleted")}}
-- {{DOMxRef("onMSVideoOptimalLayoutChanged")}}
-- {{DOMxRef("msFirstPaint")}}
+<div class="index">
+<ul>
+ <li>{{DOMxRef("HTMLVideoElement.msFrameStep()")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.msHorizontalMirror")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.msIsStereo3D")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.msZoom")}}</li>
+ <li>{{DOMxRef("HTMLAudioElement.msAudioCategory")}}</li>
+ <li>{{DOMxRef("HTMLAudioElement.msAudioDeviceType")}}</li>
+ <li>{{DOMxRef("HTMLMediaElement.msClearEffects()")}}</li>
+ <li>{{DOMxRef("HTMLMediaElement.msInsertAudioEffect()")}}</li>
+ <li>{{DOMxRef("MediaError.msExtendedCode")}}</li>
+ <li>{{DOMxRef("MSGraphicsTrust")}}</li>
+ <li>{{DOMxRef("msGraphicsTrustStatus")}}</li>
+ <li>{{DOMxRef("msIsBoxed")}}</li>
+ <li>{{DOMxRef("msPlayToDisabled")}}</li>
+ <li>{{DOMxRef("msPlayToPreferredSourceUri")}}</li>
+ <li>{{DOMxRef("msPlayToPrimary")}}</li>
+ <li>{{DOMxRef("msPlayToSource")}}</li>
+ <li>{{DOMxRef("msRealTime")}}</li>
+ <li>{{DOMxRef("msSetMediaProtectionManager")}}</li>
+ <li>{{DOMxRef("msSetVideoRectangle")}}</li>
+ <li>{{DOMxRef("msStereo3DPackingMode")}}</li>
+ <li>{{DOMxRef("msStereo3DRenderMode")}}</li>
+ <li>{{DOMxRef("onMSVideoFormatChanged")}}</li>
+ <li>{{DOMxRef("onMSVideoFrameStepCompleted")}}</li>
+ <li>{{DOMxRef("onMSVideoOptimalLayoutChanged")}}</li>
+ <li>{{DOMxRef("msFirstPaint")}}</li>
+</ul>
+</div>
 
-## Pinned Sites APIs
+<h2 id="Pinned_Sites_APIs">Pinned Sites APIs</h2>
 
-- {{DOMxRef("MSSiteModeEvent")}}
-- {{DOMxRef("mssitemodejumplistitemremoved")}}
-- {{DOMxRef("msthumbnailclick")}}
+<div class="index">
+<ul>
+ <li>{{DOMxRef("MSSiteModeEvent")}}</li>
+ <li>{{DOMxRef("mssitemodejumplistitemremoved")}}</li>
+ <li>{{DOMxRef("msthumbnailclick")}}</li>
+</ul>
+</div>
 
-## Other APIs
+<h2 id="Other_APIs">Other APIs</h2>
 
-- [`x-ms-aria-flowfrom`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom)
-- [`x-ms-acceleratorkey`](/ja/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey)
-- [`x-ms-format-detection`](/ja/docs/Web/HTML/Global_attributes/x-ms-format-detection)
-- {{DOMxRef("msCaching")}}
-- {{DOMxRef("msCachingEnabled")}}
-- {{DOMxRef("msCapsLockWarningOff")}}
-- {{DOMxRef("Event.msConvertURL()")}}
-- {{DOMxRef("mselementresize")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()", "Document.msElementsFromRect()")}}
-- {{DOMxRef("msIsStaticHTML")}}
-- {{DOMxRef("Navigator.msLaunchUri()")}}
-- {{DOMxRef("msLaunchUriCallback")}}
-- {{DOMxRef("Element.msMatchesSelector()")}} {{Deprecated_Inline}}
-- {{DOMxRef("msProtocols")}}
-- {{DOMxRef("msPutPropertyEnabled")}}
-- {{DOMxRef("msWriteProfilerMark")}}
+<div class="index">
+<ul>
+ <li><code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom">x-ms-aria-flowfrom</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey">x-ms-acceleratorkey</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Global_attributes/x-ms-format-detection">x-ms-format-detection</a></code></li>
+ <li>{{DOMxRef("msCaching")}}</li>
+ <li>{{DOMxRef("msCachingEnabled")}}</li>
+ <li>{{DOMxRef("msCapsLockWarningOff")}}</li>
+ <li>{{DOMxRef("Event.msConvertURL()")}}</li>
+ <li>{{DOMxRef("mselementresize")}}</li>
+ <li>{{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()", "Document.msElementsFromRect()")}}</li>
+ <li>{{DOMxRef("msIsStaticHTML")}}</li>
+ <li>{{DOMxRef("Navigator.msLaunchUri()")}}</li>
+ <li>{{DOMxRef("msLaunchUriCallback")}}</li>
+ <li>{{DOMxRef("Element.msMatchesSelector()")}} {{Deprecated_Inline}}</li>
+ <li>{{DOMxRef("msProtocols")}}</li>
+ <li>{{DOMxRef("msPutPropertyEnabled")}}</li>
+ <li>{{DOMxRef("msWriteProfilerMark")}}</li>
+</ul>
+</div>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Microsoft CSS extensions](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [Microsoft JavaScript extensions](/ja/docs/Web/JavaScript/Microsoft_JavaScript_extensions)
+<ul>
+ <li><a href="/ja/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Microsoft_JavaScript_extensions">Microsoft JavaScript extensions</a></li>
+</ul>

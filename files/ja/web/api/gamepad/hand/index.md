@@ -11,38 +11,51 @@ tags:
   - hand
 translation_of: Web/API/Gamepad/hand
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
 
-{{domxref("Gamepad")}} インターフェイスの **`hand`** 読み取り専用プロパティは、コントローラが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。
+<p>{{domxref("Gamepad")}} インターフェイスの <strong><code>hand</code></strong> 読み取り専用プロパティは、コントローラが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var myHand = gamepadInstance.hand;
-```
+<pre class="brush: js notranslate">var myHand = gamepadInstance.hand;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-[`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum) 列挙型; 可能な値は次の通りです:
+<p><code><a href="https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum">GamepadHand</a></code> 列挙型; 可能な値は次の通りです:</p>
 
-- `left` — 左手。
-- `right` — 右手。
-- 空文字 ("") — この値は、他の値が適用できない場合に返されます。コントローラは両手で持っているか、またはどちらでも結構です。
+<ul>
+ <li><code>left</code> — 左手。</li>
+ <li><code>right</code> — 右手。</li>
+ <li>空文字 ("") — この値は、他の値が適用できない場合に返されます。コントローラは両手で持っているか、またはどちらでも結構です。</li>
+</ul>
 
-## 例
+<h2 id="例">例</h2>
 
-TBC
+<p>TBC</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                 | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepad-hand', 'hand')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#dom-gamepad-hand', 'hand')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Gamepad.hand")}}
+<p>{{Compat("api.Gamepad.hand")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+</ul>

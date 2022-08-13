@@ -11,34 +11,37 @@ tags:
   - abort
 translation_of: Web/API/WritableStreamDefaultWriter/abort
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`abort()`** メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに書き込まれた書き込みを破棄してすぐにエラー状態に移行することを通知します。
+<p class="summary"><span class="seoSummary">{{domxref("WritableStreamDefaultWriter")}} インターフェイスの <strong><code>abort()</code></strong> メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに書き込まれた書き込みを破棄してすぐにエラー状態に移行することを通知します。</span></p>
 
-ライターがアクティブな場合、`abort()` メソッドは、関連するストリーム（{{domxref("WritableStream.abort()")}}）と同じように振る舞います。 そうでない場合、拒否された promise を返します。
+<p>ライターがアクティブな場合、<code>abort()</code> メソッドは、関連するストリーム（{{domxref("WritableStream.abort()")}}）と同じように振る舞います。 そうでない場合、拒否された promise を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = writableStreamDefaultWriter.abort(reason);
+<pre class="syntaxbox">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.abort(<em>reason</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- reason {{optional_inline}}
-  - : 人間が読むことができる中止の理由を提供する {{domxref("DOMString")}}。
+<dl>
+ <dt>reason {{optional_inline}}</dt>
+ <dd>人間が読むことができる中止の理由を提供する {{domxref("DOMString")}}。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
+<p>{{jsxref("Promise")}}。 <code>reason</code> パラメーターで指定された値で満たされます。</p>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-- TypeError
-  - : 中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。
+<dl>
+ <dt>TypeError</dt>
+ <dd>中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-const writableStream = new WritableStream({
+<pre class="brush: js">const writableStream = new WritableStream({
   write(chunk) {
     ...
   },
@@ -57,17 +60,29 @@ const writer = writableStream.getWriter();
 ...
 
 // 必要に応じてストリームを中止します
-writer.abort.then((reason) => {
+writer.abort.then((reason) =&gt; {
   console.log(reason);
-})
-```
+})</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-writer-abort","abort()")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#default-writer-abort","abort()")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WritableStreamDefaultWriter.abort")}}
+
+
+<p>{{Compat("api.WritableStreamDefaultWriter.abort")}}</p>

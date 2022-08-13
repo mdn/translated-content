@@ -11,63 +11,73 @@ tags:
   - メソッド
 translation_of: Web/API/SubtleCrypto/digest
 ---
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
-{{domxref("SubtleCrypto")}} インターフェースの **`digest()`** メソッドは、指定されたデータの {{Glossary("digest")}} を返します。ダイジェストとは、可変長の入力に由来する固定長の短い値です。暗号的ダイジェスト値は耐衝突性を示すため、同じダイジェスト値を持つ 2 つの異なる入力を見つけるのは非常に困難です。
+<p>{{domxref("SubtleCrypto")}} インターフェースの <code><strong>digest()</strong></code> メソッドは、指定されたデータの {{Glossary("digest")}} を返します。ダイジェストとは、可変長の入力に由来する固定長の短い値です。暗号的ダイジェスト値は耐衝突性を示すため、同じダイジェスト値を持つ2つの異なる入力を見つけるのは非常に困難です。</p>
 
-引数として、使用するダイジェストアルゴリズムの識別子とダイジェスト値の元となるデータを受け取ります。ダイジェスト値で解決される {{jsxref("Promise")}} を返します。
+<p>引数として、使用するダイジェストアルゴリズムの識別子とダイジェスト値の元となるデータを受け取ります。ダイジェスト値で解決される {{jsxref("Promise")}} を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    const digest = crypto.subtle.digest(algorithm, data);
+<pre class="syntaxbox notranslate">const digest = <var>crypto</var><code>.subtle.digest(<var>algorithm</var>, <var>data</var>)</code>;
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `algorithm` は、使用するダイジェストアルゴリズムを定義する {{domxref("DOMString")}} です。サポートされる値は次のとおりです:
+<ul>
+ <li><code><var>algorithm</var></code> は、使用するダイジェストアルゴリズムを定義する {{domxref("DOMString")}} です。サポートされる値は次のとおりです:
 
-  - `SHA-1` (暗号化アプリケーションではこれを使用しないでください)
-  - `SHA-256`
-  - `SHA-384`
-  - `SHA-512`
+  <ul>
+   <li><code>SHA-1</code> (暗号化アプリケーションではこれを使用しないでください)</li>
+   <li><code>SHA-256</code></li>
+   <li><code>SHA-384</code></li>
+   <li><code>SHA-512</code></li>
+  </ul>
+ </li>
+ <li><code><var>data</var></code> は、ダイジェスト値の元となるデータを含む {{jsxref("ArrayBuffer")}} もしくは {{domxref("ArrayBufferView")}} です。</li>
+</ul>
 
-- `data` は、ダイジェスト値の元となるデータを含む {{jsxref("ArrayBuffer")}} もしくは {{domxref("ArrayBufferView")}} です。
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-### 返値
+<ul>
+ <li><code><var>digest</var></code> は {{jsxref("Promise")}} であり、ダイジェスト値を含む {{jsxref("ArrayBuffer")}} で解決されます。</li>
+</ul>
 
-- `digest` は {{jsxref("Promise")}} であり、ダイジェスト値を含む {{jsxref("ArrayBuffer")}} で解決されます。
+<h2 id="Supported_algorithms" name="Supported_algorithms">対応しているアルゴリズム</h2>
 
-## 対応しているアルゴリズム
+<p>ダイジェストアルゴリズムは <a href="/ja/docs/Glossary/Cryptographic_hash_function">暗号ハッシュ関数</a> とも呼ばれ、任意の大きなデータブロックを固定サイズの出力 (通常は入力よりもはるかに短い出力) に変換します。暗号化にはさまざまな用途があります。</p>
 
-ダイジェストアルゴリズムは [暗号ハッシュ関数](/ja/docs/Glossary/Cryptographic_hash_function) とも呼ばれ、任意の大きなデータブロックを固定サイズの出力 (通常は入力よりもはるかに短い出力) に変換します。暗号化にはさまざまな用途があります。
+<h3 id="SHA-1">SHA-1</h3>
 
-### SHA-1
+<p>このアルゴリズムは <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1 で定義されており、160 bit 長の出力を生成します。</p>
 
-このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1 で定義されており、160 bit 長の出力を生成します。
+<div class="blockIndicator warning">
+<p><strong>警告</strong>: このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。</p>
+</div>
 
-> **Warning:** **警告**: このアルゴリズムは現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
+<h3 id="SHA-256">SHA-256</h3>
 
-### SHA-256
+<p>このアルゴリズムは <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.2 で定義されており、256 bit 長の出力を生成します。</p>
 
-このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.2 で定義されており、256 bit 長の出力を生成します。
+<h3 id="SHA-384">SHA-384</h3>
 
-### SHA-384
+<p>このアルゴリズムは <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.5 で定義されており、384 bit 長の出力を生成します。</p>
 
-このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.5 で定義されており、384 bit 長の出力を生成します。
+<h3 id="SHA-512">SHA-512</h3>
 
-### SHA-512
+<p>このアルゴリズムは <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4 で定義されており、512 bit 長の出力を生成します。</p>
 
-このアルゴリズムは [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4 で定義されており、512 bit 長の出力を生成します。
+<div class="blockIndicator note">
+<p>ヒント: キー付きハッシュメッセージ認証コード (<a href="/ja/docs/Glossary/HMAC">HMAC</a>), の作成方法をここで探している場合は、代わりに <a href="/ja/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a> を使用する必要があります。</p>
+</div>
 
-> **Note:** ヒント: キー付きハッシュメッセージ認証コード ([HMAC](/ja/docs/Glossary/HMAC)), の作成方法をここで探している場合は、代わりに [SubtleCrypto.sign()](/ja/docs/Web/API/SubtleCrypto/sign#HMAC) を使用する必要があります。
+<h2 id="Example" name="Example">例</h2>
 
-## 例
+<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
 
-### 基本的な例
+<p>この例では、メッセージをエンコードし、 SHA-256 ダイジェスト値を計算して、ダイジェスト長を記録します:</p>
 
-この例では、メッセージをエンコードし、 SHA-256 ダイジェスト値を計算して、ダイジェスト長を記録します:
-
-```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+<pre class="brush: js notranslate">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -78,40 +88,56 @@ async function digestMessage(message) {
 
 const digestBuffer = await digestMessage(text);
 console.log(digestBuffer.byteLength);
-```
+</pre>
 
-### ダイジェスト値を 16 進文字列に変換する
+<h3 id="ダイジェスト値を16進文字列に変換する">ダイジェスト値を16進文字列に変換する</h3>
 
-ダイジェストは`ArrayBuffer`として返されますが、比較および表示のために、ダイジェスト値は多くの場合 16 進文字列として表されます。 この例では、ダイジェストを計算し、`ArrayBuffer`を 16 進文字列に変換します:
+<p>ダイジェストは<code>ArrayBuffer</code>として返されますが、比較および表示のために、ダイジェスト値は多くの場合16進文字列として表されます。 この例では、ダイジェストを計算し、<code>ArrayBuffer</code>を16進文字列に変換します:</p>
 
-```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+<pre class="brush: js notranslate">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
   return hashHex;
 }
 
 const digestHex = await digestMessage(text);
 console.log(digestHex);
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}}</td>
+   <td>{{Spec2('Web Crypto API')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.SubtleCrypto.digest")}}
+<p>{{Compat("api.SubtleCrypto.digest")}}</p>
 
-> **Note:** Chrome 60 では、 TLS 接続出ない場合に crypto.subtle を無効化する機能が追加されました。
+<div class="blockIndicator note">
+<p>Chrome 60 では、 TLS 接続出ない場合に crypto.subtle を無効化する機能が追加されました。</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
-- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.
+<ul>
+ <li><a href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Chromium secure origins specification</a></li>
+ <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf" rel="noopener">FIPS 180-4</a> specifies the SHA family of digest algorithms.</li>
+</ul>

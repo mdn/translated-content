@@ -7,21 +7,21 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
-{{APIRef}}概要
-
-`acceptCharset` は対象フォームでサポートされる文字エンコーディングのリストを返します。リストの各アイテムは、カンマか半角スペースで区切られます。
-
-## 構文
-
-    string = form.acceptCharset;
-
-## 例
-
-```js
-inputs = document.forms["myform"].acceptCharset
-```
-
-## 仕様書
-
-- [HTML 5, Section 4.10.3: The Form Element](http://www.w3.org/TR/html5/forms.html#dom-form-acceptcharset)
-- [DOM Level 2 HTML: acceptCharset](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-19661795)
+<div>
+ {{APIRef}}</div>
+<div>
+  </div>
+<div>
+ <span style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">概要</span></div>
+<p><code>acceptCharset</code> は対象フォームでサポートされる文字エンコーディングのリストを返します。リストの各アイテムは、カンマか半角スペースで区切られます。</p>
+<h2 id="Syntax" name="Syntax">構文</h2>
+<pre class="syntaxbox"><em>string</em> = form.acceptCharset;
+</pre>
+<h2 id="Example" name="Example">例</h2>
+<pre class="brush:js">inputs = document.forms["myform"].acceptCharset
+</pre>
+<h2 id="Specification" name="Specification">仕様書</h2>
+<ul>
+ <li><a href="http://www.w3.org/TR/html5/forms.html#dom-form-acceptcharset">HTML 5, Section 4.10.3: The Form Element</a></li>
+ <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-19661795">DOM Level 2 HTML: acceptCharset</a></li>
+</ul>

@@ -10,36 +10,70 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceEntry/entryType
 ---
-{{APIRef("Performance Timeline API")}}
+<div>{{APIRef("Performance Timeline API")}}</div>
 
-**`entryType`** プロパティは、たとえば "`mark`" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}} を返します。このプロパティは読み取り専用です。
+<p><span class="seoSummary"><strong><code>entryType</code></strong> プロパティは、たとえば "<code>mark</code>" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}} を返します。このプロパティは読み取り専用です。</span></p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var type = entry.entryType;
+<pre class="syntaxbox">var <em>type</em> = <em>entry</em>.entryType;</pre>
 
-### 戻り値
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
 
-戻り値は `PerformanceEntry` オブジェクトのサブタイプに依存し、次の表に示すように {{domxref('PerformanceEntry.name')}} プロパティの値に影響します。
+<p>戻り値は <code>PerformanceEntry</code> オブジェクトのサブタイプに依存し、次の表に示すように {{domxref('PerformanceEntry.name')}} プロパティの値に影響します。</p>
 
-### パフォーマンスエントリタイプの名前
+<h3 id="パフォーマンスエントリタイプの名前">パフォーマンスエントリタイプの名前</h3>
 
-| 値                    | サブタイプ                                                                                                 | name プロパティのタイプ          | name プロパティの説明                                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | ドキュメントのアドレス                                                                                                             |
-| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。                                 |
-| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前              |
-| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前 |
-| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                                     |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">値</th>
+   <th scope="col">サブタイプ</th>
+   <th scope="col">name プロパティのタイプ</th>
+   <th scope="col">name プロパティの説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>frame</code>, <code>navigation</code></td>
+   <td>{{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}}</td>
+   <td>{{domxref("URL")}}</td>
+   <td>ドキュメントのアドレス</td>
+  </tr>
+  <tr>
+   <td><code>resource</code></td>
+   <td>{{domxref('PerformanceResourceTiming')}}</td>
+   <td>{{domxref("URL")}}</td>
+   <td>リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。</td>
+  </tr>
+  <tr>
+   <td><code>mark</code></td>
+   <td>{{domxref('PerformanceMark')}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>{{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前</td>
+  </tr>
+  <tr>
+   <td><code>measure</code></td>
+   <td>{{domxref('PerformanceMeasure')}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前</td>
+  </tr>
+  <tr>
+   <td><code>paint</code></td>
+   <td>{{domxref('PerformancePaintTiming')}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td><code>'first-paint'</code> もしくは <code>'first-contentful-paint'</code> のいずれか</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例は、`entryType` プロパティの使用方法を示しています。
+<p>次の例は、<code>entryType</code> プロパティの使用方法を示しています。</p>
 
-```js
-function run_PerformanceEntry() {
+<pre class="brush: js">function run_PerformanceEntry() {
 
   // check for feature support before continuing
   if (performance.mark === undefined) {
@@ -52,21 +86,38 @@ function run_PerformanceEntry() {
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-	for (var i=0; i < entriesNamedBegin.length; i++) {
+	for (var i=0; i &lt; entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }
 
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                       | ステータス                                               | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype', 'entryType')}} | {{Spec2('Performance Timeline Level 2')}} |          |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-entrytype', 'entryType')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype', 'entryType')}}</td>
+   <td>{{Spec2('Performance Timeline Level 2')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-entrytype', 'entryType')}}</td>
+   <td>{{Spec2('Performance Timeline')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceEntry.entryType")}}
+<div>
+<p>{{Compat("api.PerformanceEntry.entryType")}}</p>
+</div>

@@ -14,21 +14,20 @@ tags:
 translation_of: Web/API/MediaRecorder/onstart
 original_slug: Web/API/MediaRecorder/onstart
 ---
-{{APIRef("Media Recorder API")}}
+<div>{{APIRef("Media Recorder API")}}</div>
 
-**`MediaRecorder.onstartevent`** ハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は `start` イベントを処理します。 これにより、`MediaRecorder` によってメディアの記録が開始されたことに応答してコードを実行できるようにします。
+<p><strong><code>MediaRecorder.onstartevent</code></strong> ハンドラ（<a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> の一部）は <code>start</code> イベントを処理します。 これにより、<code>MediaRecorder</code> によってメディアの記録が開始されたことに応答してコードを実行できるようにします。</p>
 
-`start` イベントは、{{domxref("MediaRecorder.start()")}} メソッドを呼び出した結果としてスローされます。 この時点で、データは {{domxref("Blob")}} に集められ始めます。
+<p><code>start</code> イベントは、{{domxref("MediaRecorder.start()")}} メソッドを呼び出した結果としてスローされます。 この時点で、データは {{domxref("Blob")}} に集められ始めます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    MediaRecorder.onstart = function(event) { ... }
-    MediaRecorder.addEventListener('start', function(event) { ... })
+<pre class="syntaxbox">MediaRecorder.onstart = function(event) { ... }
+MediaRecorder.addEventListener('start', function(event) { ... })</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-...
+<pre class="brush: js">...
 
   record.onclick = function() {
     mediaRecorder.start();
@@ -40,26 +39,40 @@ original_slug: Web/API/MediaRecorder/onstart
     // 応答して何かをする
   }
 
-...
-```
+...</pre>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-無し。
+<p>無し。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                         | 状態                                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onstart", "MediaRecorder.onstart")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("MediaStream Recording", "#widl-MediaRecorder-onstart", "MediaRecorder.onstart")}}</td>
+   <td>{{Spec2("MediaStream Recording")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.MediaRecorder.onstart")}}
 
-## 関連情報
 
-- [Media​Stream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](http://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("MediaDevices.getUserMedia")}}
+<p>{{Compat("api.MediaRecorder.onstart")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Media​Stream Recording API の使用</a></li>
+ <li><a href="http://mdn.github.io/web-dictaphone/">ウェブディクタフォン</a>: MediaRecorder + getUserMedia + Web Audio API 可視化デモ、<a href="https://twitter.com/chrisdavidmills">Chris Mills</a> 著（<a href="https://github.com/mdn/web-dictaphone/">Github のソース</a>）。（英語）</li>
+ <li><a href="http://simpl.info/mediarecorder/">simpl.info の MediaStream Recording のデモ</a>、<a href="https://twitter.com/sw12">Sam Dutton</a> 著。（英語）</li>
+ <li>{{domxref("MediaDevices.getUserMedia")}}</li>
+</ul>

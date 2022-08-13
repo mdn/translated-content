@@ -10,65 +10,94 @@ tags:
   - WindowEventHandlers
 translation_of: Web/API/WindowEventHandlers
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**`WindowEventHandlers`** ミックスインは、{{domxref("Window")}}、{{domxref("HTMLBodyElement")}}、{{domxref("HTMLFrameSetElement")}} などのいくつかのインターフェイスに共通のイベントハンドラを記述します。 これらの各インターフェイスは、追加の固有のイベントハンドラを実装できます。
+<p><span class="seoSummary"><strong><code>WindowEventHandlers</code></strong> ミックスインは、{{domxref("Window")}}、{{domxref("HTMLBodyElement")}}、{{domxref("HTMLFrameSetElement")}} などのいくつかのインターフェイスに共通のイベントハンドラを記述します。 これらの各インターフェイスは、追加の固有のイベントハンドラを実装できます。</span></p>
 
-> **Note:** **注**: `WindowEventHandlers` はインターフェースではなく、ミックスインです。 実際には、`WindowEventHandlers` 型のオブジェクトを作成することはできません。
+<div class="blockIndicator note">
+<p><strong>注</strong>: <code>WindowEventHandlers</code> はインターフェースではなく、ミックスインです。 実際には、<code>WindowEventHandlers</code> 型のオブジェクトを作成することはできません。</p>
+</div>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_`onXYZ` という形式のイベントプロパティは、{{domxref("WindowEventHandlers")}} で定義され、{{domxref("Window")}} および Web Workers の {{domxref("WorkerGlobalScope")}} によって実装されます。_
+<p><em><code>onXYZ</code> という形式のイベントプロパティは、{{domxref("WindowEventHandlers")}} で定義され、{{domxref("Window")}} および Web Workers の {{domxref("WorkerGlobalScope")}} によって実装されます。</em></p>
 
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : {{event("afterprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : {{event("beforeprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : {{event("beforeunload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : {{event("hashchange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : {{event("languagechange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : {{event("message")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onmessageerror")}}
-  - : {{event("MessageError")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onoffline")}}
-  - : {{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.ononline")}}
-  - : {{event("online")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onpagehide")}}
-  - : {{event("pagehide")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onpageshow")}}
-  - : {{event("pageshow")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onpopstate")}}
-  - : {{event("popstate")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-  - : {{event("rejectionhandled")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} が拒否され、拒否が処理されたことを示します。
-- {{domxref("WindowEventHandlers.onstorage")}}
-  - : {{event("storage")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
-- {{domxref("WindowEventHandlers.onunhandledrejection")}}
-  - : {{event("unhandledrejection")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} は拒否されたが拒否が処理されなかったことを示します。
-- {{domxref("WindowEventHandlers.onunload")}}
-  - : {{event("unload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。
+<dl>
+ <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
+ <dd>{{event("afterprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
+ <dd>{{event("beforeprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
+ <dd>{{event("beforeunload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
+ <dd>{{event("hashchange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
+ <dd>{{event("languagechange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
+ <dd>{{event("message")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onmessageerror")}}</dt>
+ <dd>{{event("MessageError")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
+ <dd>{{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
+ <dd>{{event("online")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
+ <dd>{{event("pagehide")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
+ <dd>{{event("pageshow")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
+ <dd>{{event("popstate")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onrejectionhandled")}}</dt>
+ <dd>{{event("rejectionhandled")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} が拒否され、拒否が処理されたことを示します。</dd>
+ <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
+ <dd>{{event("storage")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}}</dt>
+ <dd>{{event("unhandledrejection")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} は拒否されたが拒否が処理されなかったことを示します。</dd>
+ <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
+ <dd>{{event("unload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_このインターフェイスはメソッドを定義しません。_
+<p><em>このインターフェイスはメソッドを定義しません。</em></p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                 | 状態                             | コメント                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'WindowEventHandlers')}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName("HTML5.1")}} 以降、変更はありません。                                                            |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'WindowEventHandlers')}}         | {{Spec2('HTML5.1')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 {{SpecName("HTML5 W3C")}} スナップショット以降に `onlanguage` が追加されました。 |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "WindowEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 `WindowEventHandlers` の作成（ターゲットの前にあるプロパティ）。                        |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'WindowEventHandlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>最新のスナップショットである {{SpecName("HTML5.1")}} 以降、変更はありません。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'WindowEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>{{SpecName("HTML WHATWG")}} のスナップショット。 {{SpecName("HTML5 W3C")}} スナップショット以降に <code>onlanguage</code> が追加されました。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "WindowEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>{{SpecName("HTML WHATWG")}} のスナップショット。 <code>WindowEventHandlers</code> の作成（ターゲットの前にあるプロパティ）。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WindowEventHandlers")}}
 
-## 関連情報
 
-- {{domxref("Window")}} と {{domxref("WorkerGlobalScope")}}
+<p>{{Compat("api.WindowEventHandlers")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Window")}} と {{domxref("WorkerGlobalScope")}}</li>
+</ul>

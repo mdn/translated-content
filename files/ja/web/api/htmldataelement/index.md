@@ -7,34 +7,57 @@ tags:
   - Reference
 translation_of: Web/API/HTMLDataElement
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-**`HTMLDataElement`**インターフェースは{{HTMLElement("data")}}要素を扱うための（継承される通常の{{domxref("HTMLElement")}}より高度な）固有の属性を提供します。
+<p><span class="seoSummary"><strong><code>HTMLDataElement</code></strong>インターフェースは{{HTMLElement("data")}}要素を扱うための（継承される通常の{{domxref("HTMLElement")}}より高度な）固有の属性を提供します。</span></p>
 
-{{InheritanceDiagram(600, 120)}}
+<p>{{InheritanceDiagram(600, 120)}}</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-_親である{{domxref("HTMLElement")}}から属性を継承しています。_
+<p><em>親である{{domxref("HTMLElement")}}から属性を継承しています。</em></p>
 
-- {{domxref("HTMLDataElement.value")}}
-  - : は{{domxref("DOMString")}}であり，{{htmlattrxref("value", "data")}} HTML 属性に含まれる機械可読な要素の値を示しています。
+<dl>
+ <dt>{{domxref("HTMLDataElement.value")}}</dt>
+ <dd>は{{domxref("DOMString")}}であり，{{htmlattrxref("value", "data")}} HTML属性に含まれる機械可読な要素の値を示しています。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_固有のメソッドなし。親である{{domxref("HTMLElement")}}からメソッドを継承しています。_
+<p><em>固有のメソッドなし。親である{{domxref("HTMLElement")}}からメソッドを継承しています。</em></p>
 
-## 仕様書
+<h2 id="仕様書">仕様書</h2>
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "#htmldataelement", "HTMLDataElement")}}                                 | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', 'HTMLDataElement')}} | {{Spec2('HTML5 W3C')}}     |      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#htmldataelement", "HTMLDataElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', 'HTMLDataElement')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.HTMLDataElement")}}
+<div>
 
-## 関連項目
 
-- 本インターフェースを実装する HTML 要素: {{HTMLElement("data")}}.
+<p>{{Compat("api.HTMLDataElement")}}</p>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>本インターフェースを実装するHTML要素: {{HTMLElement("data")}}.</li>
+</ul>

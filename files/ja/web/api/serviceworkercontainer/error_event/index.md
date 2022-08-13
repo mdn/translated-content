@@ -13,22 +13,25 @@ tags:
 translation_of: Web/API/ServiceWorkerContainer/onerror
 original_slug: Web/API/ServiceWorkerContainer/onerror
 ---
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`onerror`** プロパティは、関連するサービスワーカーで {{Event("error")}} イベントが発生するたびに発生するイベントハンドラーです。
+<p><span class="seoSummary">{{domxref("ServiceWorkerContainer")}} インターフェイスの <code><strong>onerror</strong></code> プロパティは、関連するサービスワーカーで {{Event("error")}} イベントが発生するたびに発生するイベントハンドラーです。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    serviceWorkerContainer.onerror = function(errorevent) { ... }
+<pre class="syntaxbox"><em>serviceWorkerContainer</em>.onerror = function(<em>errorevent</em>) { ... }</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-navigator.serviceWorker.onerror = function(errorevent) {
+<pre class="brush: js">navigator.serviceWorker.onerror = function(errorevent) {
   console.log(`受信したエラーメッセージ: ${errorevent.message}`);
 }
-```
+</pre>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerContainer.onerror")}}
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerContainer.onerror")}}</p>
+</div>

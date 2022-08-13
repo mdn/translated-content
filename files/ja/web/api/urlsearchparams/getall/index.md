@@ -9,43 +9,61 @@ tags:
   - getAll
 translation_of: Web/API/URLSearchParams/getAll
 ---
-{{ApiRef("URL API")}}
+<p>{{ApiRef("URL API")}}</p>
 
-{{domxref("URLSearchParams")}} インターフェイスの **`getAll()`** メソッドは、指定された検索パラメーターに関連付けられたすべての値を配列として返します。
+<p><span class="seoSummary">{{domxref("URLSearchParams")}} インターフェイスの <strong><code>getAll()</code></strong> メソッドは、指定された検索パラメーターに関連付けられたすべての値を配列として返します。</span></p>
 
-{{availableinworkers}}
+<p>{{availableinworkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    URLSearchParams.getAll(name)
+<pre class="syntaxbox">URLSearchParams.getAll(<em>name</em>)</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- name
-  - : 返すパラメーターの名前。
+<dl>
+ <dt>name</dt>
+ <dd> 返すパラメーターの名前。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{domxref("USVString")}} の配列。
+<p>{{domxref("USVString")}} の配列。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-let url = new URL('https://example.com?foo=1&bar=2');
+<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 // 2番目の foo パラメーターを追加します。
 params.append('foo', 4);
 
 console.log(params.getAll('foo')) // ["1","4"] を表示します。
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                 | 状態                 | コメント |
-| ------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-getall', "getAll()")}} | {{Spec2('URL')}} | 初期定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('URL', '#dom-urlsearchparams-getall', "getAll()")}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.URLSearchParams.getAll")}}
+<div>
+
+
+<p>{{Compat("api.URLSearchParams.getAll")}}</p>
+</div>

@@ -10,6 +10,6 @@ tags:
 translation_of: Web/API/Document/onoffline
 original_slug: Web/API/Document/onoffline
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-**`Document.onoffline`** イベントハンドラーは、 {{event("offline")}} が {{HtmlElement("body")}} 要素上で発生してバブリングしたとき、 {{domxref("navigator.onLine")}} プロパティが変化して `false` になったときに呼び出されます。
+<p><strong><code>Document.onoffline</code></strong> イベントハンドラーは、 {{event("offline")}} が {{HtmlElement("body")}} 要素上で発生してバブリングしたとき、 {{domxref("navigator.onLine")}} プロパティが変化して <code>false</code> になったときに呼び出されます。</p>

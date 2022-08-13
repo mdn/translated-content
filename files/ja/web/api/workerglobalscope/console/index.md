@@ -10,41 +10,41 @@ tags:
   - 読み込み専用
 translation_of: Web/API/WorkerGlobalScope/console
 ---
-{{APIRef("Web Workers API")}}{{Non-standard_header}}
+<p>{{APIRef("Web Workers API")}}{{Non-standard_header}}</p>
 
-{{domxref("Console")}} インターフェイスの読み取り専用 `console` プロパティは、ワーカーにブラウザコンソールへのアクセスを提供する {{domxref("Console")}} オブジェクトを返します。
+<p>{{domxref("Console")}} インターフェイスの読み取り専用 <code>console</code> プロパティは、ワーカーにブラウザコンソールへのアクセスを提供する {{domxref("Console")}} オブジェクトを返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var consoleObj = self.console;
-```
+<pre class="brush: js">var consoleObj = self.console;</pre>
 
-### 値
+<h3 id="Specifications" name="Specifications">値</h3>
 
-{{domxref("Console")}} オブジェクト
+<p>{{domxref("Console")}} オブジェクト</p>
 
-## 例
+<h2 id="例">例</h2>
 
-このプロパティはワーカー内でデバッグのためにブラウザコンソールへアクセスすることを可能にします。よって、例えばこのようにコールできます
+<p>このプロパティはワーカー内でデバッグのためにブラウザコンソールへアクセスすることを可能にします。よって、例えばこのようにコールできます</p>
 
-```js
-console.log('test');
-```
+<pre class="brush: js">console.log('test');</pre>
 
-inside a worker (which would basically be the equivalent of `self.console.log('test');`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.
+<p>inside a worker (which would basically be the equivalent of <code>self.console.log('test');</code>, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.</p>
 
-If you are calling `console.log()` from a {{domxref("DedicatedWorkerGlobalScope")}} or other worker scope that acts on a single loaded window, that tab's web console will receive the logs. However, If you are calling `console.log()` from a {{domxref("SharedWorkerGlobalScope")}}, the global browser console will receive the logs.
+<p>If you are calling <code>console.log()</code> from a {{domxref("DedicatedWorkerGlobalScope")}} or other worker scope that acts on a single loaded window, that tab's web console will receive the logs. However, If you are calling <code>console.log()</code> from a {{domxref("SharedWorkerGlobalScope")}}, the global browser console will receive the logs.</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-仕様の一部ではありません。
+<p>仕様の一部ではありません。</p>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.WorkerGlobalScope.console")}}
 
-## 関連
 
-- {{domxref("Console")}}
-- {{domxref("WorkerGlobalScope")}}
+<p>{{Compat("api.WorkerGlobalScope.console")}}</p>
+
+<h2 id="関連">関連</h2>
+
+<ul>
+ <li>{{domxref("Console")}}</li>
+ <li>{{domxref("WorkerGlobalScope")}}</li>
+</ul>

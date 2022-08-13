@@ -11,46 +11,65 @@ tags:
   - Window
 translation_of: Web/API/Window/self
 ---
-{{ APIRef() }}
+<p>{{ APIRef() }}</p>
 
-**`Window.self`** 読み取り専用プロパティは、{{domxref("WindowProxy")}} のように、ウィンドウ自身を返します。`window` オブジェクトでドット表記法 (つまり、`window.self`) を使用して使うことも、単独 (`self`) で使うこともできます。単独表記法を使用する利点は、{{domxref("Worker", "Web Workers")}} のような非 window コンテクストにも同様の表記法が存在することです。`self` を使用することで、window コンテキスト (`self` は `window.self` として解決されます) だけでなく、worker コンテキスト (`self` は {{domxref("WorkerGlobalScope.self")}} として解決されます) でも機能するようにグローバルスコープを参照できます。
+<p><code><strong>Window.self</strong></code> 読み取り専用プロパティは、{{domxref("WindowProxy")}} のように、ウィンドウ自身を返します。<code>window</code> オブジェクトでドット表記法 (つまり、<code>window.self</code>) を使用して使うことも、単独 (<code>self</code>) で使うこともできます。単独表記法を使用する利点は、{{domxref("Worker", "Web Workers")}} のような非 window コンテクストにも同様の表記法が存在することです。<code>self</code> を使用することで、window コンテキスト (<code>self</code> は <code>window.self</code> として解決されます) だけでなく、worker コンテキスト (<code>self</code> は {{domxref("WorkerGlobalScope.self")}} として解決されます) でも機能するようにグローバルスコープを参照できます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var w = window.self;  // w === window
+<pre class="eval">var w = window.self;  // w === window
+</pre>
 
-## 例
+<h2 id="例">例</h2>
 
-次のような `window.self` の使い方は、`window` に置き換えることもできます。
+<p>次のような <code>window.self</code> の使い方は、<code>window</code> に置き換えることもできます。</p>
 
-```js
-if (window.parent.frames[0] != window.self) {
+<pre class="brush:js">if (window.parent.frames[0] != window.self) {
   // このウィンドウは、一覧における一番最初のフレームではありません。
-}
-```
+}</pre>
 
-さらに、ブラウジングコンテクストのアクティブなドキュメントで実行するとき、`window` は現在のグローバルオブジェクトを参照するため、以下のものはすべて等価です:
+<p>さらに、ブラウジングコンテクストのアクティブなドキュメントで実行するとき、<code>window</code> は現在のグローバルオブジェクトを参照するため、以下のものはすべて等価です:</p>
 
-```js
-var w1 = window;
+<pre class="brush:js">var w1 = window;
 var w2 = self;
 var w3 = window.window;
 var w4 = window.self;
 // w1, w2, w3, w4 は厳密に等価、しかし w2 だけは worker で動作します。
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                     | 状態                             | コメント                                                               |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}                 | {{Spec2('HTML WHATWG')}} | 最新のスナップショット {{SpecName("HTML5.1")}} からの変更なし |
-| {{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}} からの変更なし                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}} | {{Spec2('HTML5 W3C')}}     | `Window.self` の定義を含む最初のスナップショット                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>最新のスナップショット {{SpecName("HTML5.1")}} からの変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>{{SpecName("HTML5 W3C")}} からの変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td><code>Window.self</code> の定義を含む最初のスナップショット</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("api.Window.self")}}
+<p>{{Compat("api.Window.self")}}</p>
 
-## 関連
+<h2 class="noinclude" id="関連">関連</h2>
 
-- この `Worker` は {{domxref("WorkerGlobalScope.self")}} と等しい。
+<ul>
+ <li>この <code>Worker</code> は {{domxref("WorkerGlobalScope.self")}} と等しい。</li>
+</ul>

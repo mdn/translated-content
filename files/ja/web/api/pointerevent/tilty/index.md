@@ -10,38 +10,54 @@ tags:
   - Reference
 translation_of: Web/API/PointerEvent/tiltY
 ---
-{{ APIRef("Pointer Events") }}
+<div>{{ APIRef("Pointer Events") }}</div>
 
-{{domxref("PointerEvent")}} インターフェイスの **`tiltY`** 読み取り専用プロパティは、ポインタの *X-Z 平面*と画面の間の角度（度単位）です。 このプロパティは通常、ペン/スタイラスポインタタイプにのみ役立ちます。
+<p><span class="seoSummary">{{domxref("PointerEvent")}} インターフェイスの <strong><code>tiltY</code></strong> 読み取り専用プロパティは、ポインタの <em>X-Z 平面</em>と画面の間の角度（度単位）です。 このプロパティは通常、ペン/スタイラスポインタタイプにのみ役立ちます。</span></p>
 
-このプロパティの説明については、[仕様の図 3](https://w3c.github.io/pointerevents/#dom-pointerevent-tilty) を参照してください。
+<p>このプロパティの説明については、<a href="https://w3c.github.io/pointerevents/#dom-pointerevent-tilty">仕様の図 3</a> を参照してください。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var tiltY = pointerEvent.tiltY;
+<pre class="syntaxbox">var <em>tiltY</em> = pointerEvent.<em>tiltY</em>;
+</pre>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-- `tiltY`
-  - : ポインタ（スタイラス）の X-Z 平面と画面の間の角度（度単位）。 値の範囲は `-90` から `90` です。 ここで、正の値はユーザーの方への傾きです。 このプロパティをサポートしていないデバイスの場合、値は `0` です。
+<dl>
+ <dt><code>tiltY</code></dt>
+ <dd>ポインタ（スタイラス）の X-Z 平面と画面の間の角度（度単位）。 値の範囲は <code>-90</code> から <code>90</code> です。 ここで、正の値はユーザーの方への傾きです。 このプロパティをサポートしていないデバイスの場合、値は <code>0</code> です。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例は、{{domxref("PointerEvent.tiltX","tiltX")}} プロパティおよび `tiltY` プロパティへの簡単なアクセスを示しています。
+<p>この例は、{{domxref("PointerEvent.tiltX","tiltX")}} プロパティおよび <code>tiltY</code> プロパティへの簡単なアクセスを示しています。</p>
 
-```js
-someElement.addEventListener("pointerdown", function(event) {
+<pre class="brush: js">someElement.addEventListener("pointerdown", function(event) {
   process_tilt(event.tiltX, event.tiltY);
-}, false);
-```
+}, false);</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                     | 状態                                     | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-pointerevent-tilty', 'tiltY')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#dom-pointerevent-tilty', 'tiltY')}} | {{Spec2('Pointer Events')}}     | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-pointerevent-tilty', 'tiltY')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#dom-pointerevent-tilty', 'tiltY')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.PointerEvent.tiltY")}}
+<p>{{Compat("api.PointerEvent.tiltY")}}</p>

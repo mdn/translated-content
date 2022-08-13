@@ -13,35 +13,46 @@ tags:
   - hasOrientation
 translation_of: Web/API/GamepadPose/hasOrientation
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-{{domxref("GamepadPose")}} インターフェイスの **`hasOrientation`** 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します。
+<p>{{domxref("GamepadPose")}} インターフェイスの <strong><code>hasOrientation</code></strong> 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var hasItGotOrientation = gamepadPoseInstance.hasOrientation;
-```
+<pre class="brush: js notranslate">var hasItGotOrientation = gamepadPoseInstance.<code>hasOrientation</code>;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("Boolean")}} 。
+<p>{{domxref("Boolean")}} 。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-TBD
+<p>TBD</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                 | ステータス                               | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadpose-hasorientation', 'hasOrientation')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#dom-gamepadpose-hasorientation', 'hasOrientation')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.GamepadPose.hasOrientation")}}
+<p>{{Compat("api.GamepadPose.hasOrientation")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a></li>
+ <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+</ul>

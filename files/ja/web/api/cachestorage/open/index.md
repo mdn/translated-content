@@ -12,35 +12,39 @@ tags:
   - open
 translation_of: Web/API/CacheStorage/open
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("CacheStorage")}} インターフェイスの **`open()`** メソッドは、`cacheName` に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
+<p><span class="seoSummary">{{domxref("CacheStorage")}} インターフェイスの <strong><code>open()</code></strong> メソッドは、<code>cacheName</code> に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。</span></p>
 
-グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
+<p>グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して <code>CacheStorage</code> にアクセスできます。</p>
 
-> **Note:** **注**: 指定した {{domxref("Cache")}} が存在しない場合、その `cacheName` で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
+<div class="note">
+<p><strong>注</strong>: 指定した {{domxref("Cache")}} が存在しない場合、その <code>cacheName</code> で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    caches.open(cacheName).then(function(cache) {
-      // cache で何かをする
-    });
+<pre class="syntaxbox">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+  // cache で何かをする
+});
+</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- cacheName
-  - : 開きたいキャッシュの名前。
+<dl>
+ <dt>cacheName</dt>
+ <dd>開きたいキャッシュの名前。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-要求した {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}}。
+<p>要求した {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この例は MDN の [sw-test の例](https://github.com/mdn/sw-test/)からのものです（[sw-test をライブで](https://mdn.github.io/sw-test/)見る）。 ここでは、{{domxref("InstallEvent")}} が発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} を実行してアプリのインストールプロセスを処理します。 これは、`CacheStorage.open()` を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll()")}} を使用して一連のアセットを追加することで構成されます。
+<p>この例は MDN の <a href="https://github.com/mdn/sw-test/">sw-test の例</a>からのものです（<a href="https://mdn.github.io/sw-test/">sw-test をライブで</a>見る）。 ここでは、{{domxref("InstallEvent")}} が発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} を実行してアプリのインストールプロセスを処理します。 これは、<code>CacheStorage.open()</code> を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll()")}} を使用して一連のアセットを追加することで構成されます。</p>
 
-```js
-self.addEventListener('install', function(event) {
+<pre class="brush: js">self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -56,20 +60,35 @@ self.addEventListener('install', function(event) {
       ]);
     })
   );
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.CacheStorage.open")}}
 
-## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+<p>{{Compat("api.CacheStorage.open")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service worker の使用</a></li>
+ <li>{{domxref("Cache")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+</ul>

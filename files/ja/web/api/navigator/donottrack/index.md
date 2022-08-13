@@ -10,29 +10,43 @@ tags:
   - Reference
 translation_of: Web/API/Navigator/doNotTrack
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`Navigator.doNotTrack`** プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。
+<p><strong><code>Navigator.doNotTrack</code></strong> プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。</p>
 
-プロパティの値は HTTP の {{httpheader("DNT")}} ヘッダーの値、つまり、 "`1`", "`0`", "`unspecified`" の値を返します。
+<p>プロパティの値は HTTP の {{httpheader("DNT")}} ヘッダーの値、つまり、 "<code>1</code>", "<code>0</code>", "<code>unspecified</code>" の値を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-```js
-console.log(navigator.doNotTrack);
+<pre class="brush: js notranslate">console.log(navigator.doNotTrack);
 // DNT が有効な場合は "1" です。追跡をオプトインした場合は "0" になります。それ以外は "unspecified" です。
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Tracking", "#dom-navigator-donottrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Tracking", "#dom-navigator-donottrack", "Navigator.doNotTrack")}}</td>
+   <td>{{Spec2("Tracking")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Navigator.doNotTrack")}}
+<p>{{Compat("api.Navigator.doNotTrack")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Do Not Track フィールドガイド](/ja/docs/Web/Security/Do_not_track_field_guide)
+<ul>
+ <li><a href="/ja/docs/Web/Security/Do_not_track_field_guide">Do Not Track フィールドガイド</a></li>
+</ul>

@@ -2,51 +2,53 @@
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
 tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-  - scrollByPages
-  - scrolling
+- API
+- HTML DOM
+- Method
+- Non-standard
+- Reference
+- Window
+- scrollByPages
+- scrolling
 translation_of: Web/API/Window/scrollByPages
 ---
-{{ ApiRef() }} {{Non-standard_header}}
+<div>{{ ApiRef() }} {{Non-standard_header}}</div>
 
-**`Window.scrollByPages()`** メソッドは、現在の文書を指定されたページ数だけスクロールさせます。
+<p><code><strong>Window.scrollByPages()</strong></code> メソッドは、現在の文書を指定されたページ数だけスクロールさせます。</p>
 
-## 概要
+<h2 id="Syntax">概要</h2>
 
-```js
-window.scrollByPages(pages)
-```
+<pre class="brush: js">window.scrollByPages(<em>pages</em>)
+</pre>
 
-### 引数
+<h3 id="Parameters">引数</h3>
 
-- `pages` はスクロールさせるページ数です。正または負の整数を指定することができます。
+<ul>
+  <li><code>pages</code> はスクロールさせるページ数です。正または負の整数を指定することができます。</li>
+</ul>
 
-## 例
+<h2 id="Example">例</h2>
 
-```js
-// 文書を下へ 1 ページスクロール
+<pre class="brush: js">// 文書を下へ 1 ページスクロール
 window.scrollByPages(1);
 
 // 文書を上へ 1 ページスクロール
 window.scrollByPages(-1);
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-DOM Level 0 です。仕様書にはありません。
+<p>DOM Level 0 です。仕様書にはありません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.scrollByPages")}}
+<p>{{Compat("api.Window.scrollByPages")}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{domxref("window.scroll()")}}
-- {{domxref("window.scrollBy()")}}
-- {{domxref("window.scrollByLines()")}}
-- {{domxref("window.scrollTo()")}}
+<ul>
+  <li>{{domxref("window.scroll()")}}</li>
+  <li>{{domxref("window.scrollBy()")}}</li>
+  <li>{{domxref("window.scrollByLines()")}}</li>
+  <li>{{domxref("window.scrollTo()")}}</li>
+</ul>

@@ -14,32 +14,28 @@ translation_of: Web/API/Worker/onerror
 original_slug: Web/API/Worker/onerror
 browser-compat: api.Worker.onerror
 ---
-{{APIRef("Web Workers API")}}
+<div>{{APIRef("Web Workers API")}}</div>
 
-**`onerror`** は {{domxref("Worker")}} インターフェイスのプロパティで、 [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)を表し、 {{event("error")}} イベントが発行されたときに呼び出される関数を表します。
+<p><code><strong>onerror</strong></code> は {{domxref("Worker")}} インターフェイスのプロパティで、 <a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>を表し、 {{event("error")}} イベントが発行されたときに呼び出される関数を表します。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-myWorker.onerror = function(event) { ... };
-```
+<pre class="brush: js">myWorker.onerror = function(event) { ... };</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに `onerror` ハンドラーを設定しています。
+<p>以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに <code>onerror</code> ハンドラーを設定しています。</p>
 
-```js
-var myWorker = new Worker('worker.js');
+<pre class="brush: js">var myWorker = new Worker('worker.js');
 
   myWorker.onerror = function(event) {
     console.log('There is an error with your worker!');
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

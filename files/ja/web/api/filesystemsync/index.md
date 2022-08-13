@@ -10,35 +10,54 @@ tags:
   - ファイルシステム
 translation_of: Web/API/FileSystemSync
 ---
-{{APIRef("File System API")}} {{non-standard_header}}
+<div>
+<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+</div>
 
-[File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction "en/DOM/File_API/File_System_APIB") では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 それは 2 つの特性を有する。
+<p><a href="/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="en/DOM/File_API/File_System_APIB">File System API</a> では、 <code>FileSystemSync</code> オブジェクトはファイルシステムを表します。 それは2つの特性を有する。</p>
 
-## このドキュメントについて
+<h2 id="このドキュメントについて">このドキュメントについて</h2>
 
-このドキュメントは 2012 年 3 月 2 日に最後に更新され、2011 年 4 月 19 日に作成された [W3C の仕様 (作業中のドラフト)](http://www.w3.org/TR/file-system-api/) に準拠しています。
+<p>このドキュメントは 2012年3月2日に最後に更新され、2011年4月19日に作成された <a href="http://www.w3.org/TR/file-system-api/">W3C の仕様 (作業中のドラフト)</a> に準拠しています。</p>
 
-この仕様は現在放棄されており、大きな牽引力を得ることはできません。
+<p>この仕様は現在放棄されており、大きな牽引力を得ることはできません。</p>
 
-## 基本のコンセプト
+<h2 id="基本のコンセプト">基本のコンセプト</h2>
 
-`FileSystemSync` オブジェクトは API 全体へのゲートウェイであり、頻繁に使用します。したがって、参照を取得したら、オブジェクトをグローバル変数またはクラスプロパティにキャッシュします。
+<p><code>FileSystemSync</code> オブジェクトは API 全体へのゲートウェイであり、頻繁に使用します。したがって、参照を取得したら、オブジェクトをグローバル変数またはクラスプロパティにキャッシュします。</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-| 属性   | タイプ                    | 説明                                                                                       |
-| ------ | ------------------------- | ------------------------------------------------------------------------------------------ |
-| `name` | `readonly DOMString`      | ファイルシステムの名前。名前は公開ファイルシステムのリスト全体で一意でなければなりません。 |
-| `root` | `readonly DirectoryEntry` | ファイルシステムのルートディレクトリ。                                                     |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">属性</th>
+   <th scope="col">タイプ</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a name="attr_name"><code>name</code></a></td>
+   <td><code>readonly DOMString</code></td>
+   <td>ファイルシステムの名前。名前は公開ファイルシステムのリスト全体で一意でなければなりません。</td>
+  </tr>
+  <tr>
+   <td><a name="attr_root"><code>root</code></a></td>
+   <td><code>readonly DirectoryEntry</code></td>
+   <td>ファイルシステムのルートディレクトリ。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザの互換性</h2>
 
-{{Compat("api.FileSystemSync")}}
+<p>{{Compat("api.FileSystemSync")}}</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
+<p>仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+<p>リファレンス: <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
 
-イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+<p>イントロダクション: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

@@ -12,28 +12,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointerout
 original_slug: Web/API/GlobalEventHandlers/onpointerout
 ---
-{{ApiRef("HTML DOM")}}
+<div>{{ApiRef("HTML DOM")}}</div>
 
-**`onpointerout`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("pointerout")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
+<p><strong><code>onpointerout</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("pointerout")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    targetElement.onpointerout = outHandler;
+<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointerout = <var>outHandler</var>;
 
-    var outHandler = targetElement.onpointerout;
+var <var>outHandler</var> = <var>targetElement</var>.onpointerout;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-- `outHandler`
-  - : 要素 `targetElement` の `pointerout` イベントハンドラー。
+<dl>
+ <dt><code>outHandler</code></dt>
+ <dd>要素 <code>targetElement</code> の <code>pointerout</code> イベントハンドラー。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、`onpointerout` を使用して要素の `pointerout` イベントハンドラーを設定する 2 つの方法を示します。
+<p>この例では、<code>onpointerout</code> を使用して要素の <code>pointerout</code> イベントハンドラーを設定する2つの方法を示します。</p>
 
-```js
-<html>
-<script>
+<pre class="brush: js notranslate">&lt;html&gt;
+&lt;script&gt;
 function outHandler(ev) {
   // pointerout イベントの処理
 }
@@ -41,27 +43,46 @@ function init() {
   let el=document.getElementById('target1');
   el.onpointerout = outHandler;
 }
-</script>
+&lt;/script&gt;
 
-<body onload="init();">
-  <div id="target1"> Touch me ... </div>
-  <div id="target2" onpointerout="outHandler(event)"> Touch me ... </div>
-</body>
-</html>
-```
+&lt;body onload="init();"&gt;
+  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+  &lt;div id="target2" onpointerout="outHandler(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                               | 状態                                     | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerout', 'onpointerout')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerout', 'onpointerout')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerout', 'onpointerout')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerout', 'onpointerout')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.GlobalEventHandlers.onpointerout")}}
+<p>{{Compat("api.GlobalEventHandlers.onpointerout")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [`Document: pointerout`](/ja/docs/Web/API/Document/pointerout_event) イベント
-- [`HTMLElement: pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event) イベント
+<ul>
+ <li><code><a href="/ja/docs/Web/API/Document/pointerout_event">Document: pointerout</a></code> イベント</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerout_event">HTMLElement: pointerout</a></code> イベント</li>
+</ul>

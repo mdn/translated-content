@@ -3,24 +3,23 @@ title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
 translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("ExtendableMessageEvent")}} インターフェイスの **`lastEventID`** 読み取り専用プロパティは、サーバー送信イベント（[server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)）で、イベントソースの最後のイベント ID を表します。 これは空の文字列です。
+<p>{{domxref("ExtendableMessageEvent")}} インターフェイスの <strong><code>lastEventID</code></strong> 読み取り専用プロパティは、サーバー送信イベント（<a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">server-sent events</a>）で、イベントソースの最後のイベント ID を表します。 これは空の文字列です。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var myLastEventId = extendableMessageEvent.lastEventId;
+<pre class="syntaxbox notranslate">var <em>myLastEventId</em> = <em>extendableMessageEvent</em>.lastEventId;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("DOMString")}}。
+<p>{{domxref("DOMString")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを[チャンネルメッセージ](/ja/docs/Web/API/Channel_Messaging_API)を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、`onmessage` のイベントオブジェクトは `ExtendableMessageEvent` になります。
+<p>次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを<a href="/ja/docs/Web/API/Channel_Messaging_API">チャンネルメッセージ</a>を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、<code>onmessage</code> のイベントオブジェクトは <code>ExtendableMessageEvent</code> になります。</p>
 
-```js
-var port;
+<pre class="brush: js notranslate">var port;
 
 self.addEventListener('push', function(e) {
   var obj = e.data.json();
@@ -36,21 +35,38 @@ self.onmessage = function(e) {
   console.log(e.lastEventId);
   port = e.ports[0];
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-extendablemessageevent-lasteventid', 'ExtendableMessageEvent.lastEventId')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-extendablemessageevent-lasteventid', 'ExtendableMessageEvent.lastEventId')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ExtendableMessageEvent.lastEventId")}}
+<div>
 
-## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)
+<p>{{Compat("api.ExtendableMessageEvent.lastEventId")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
+ <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
+ <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
+</ul>

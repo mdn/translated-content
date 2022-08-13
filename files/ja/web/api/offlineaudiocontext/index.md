@@ -3,50 +3,65 @@ title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
 translation_of: Web/API/OfflineAudioContext
 ---
-{{APIRef("Web Audio API")}}`OfflineAudioContext` インターフェイスは {{domxref("AudioContext")}} インターフェイスの一種で、{{domxref("AudioNode")}} をつなげて造られる音声処理グラフを表しています。通常の {{domxref("AudioContext")}} と異なり、`OfflineAudioContext` で処理された音声はハードウェアから再生されることはありません。処理された結果は {{domxref("AudioBuffer")}} に出力されます。
+<div>{{APIRef("Web Audio API")}}</div>
 
-{{InheritanceDiagram}}
+<div><code>OfflineAudioContext</code> インターフェイスは {{domxref("AudioContext")}} インターフェイスの一種で、{{domxref("AudioNode")}} をつなげて造られる音声処理グラフを表しています。通常の {{domxref("AudioContext")}} と異なり、<code>OfflineAudioContext</code> で処理された音声はハードウェアから再生されることはありません。処理された結果は {{domxref("AudioBuffer")}} に出力されます。</div>
 
-## コンストラクター
+<div> </div>
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()")}}
-  - : 新しい `OfflineAudioContext` のインスタンスを作成します。
+<p>{{InheritanceDiagram}}</p>
 
-## プロパティ
+<h2 id="コンストラクター">コンストラクター</h2>
 
-_親インターフェイスである {{domxref("BaseAudioContext")}} からのプロパティも継承します。_
+<dl>
+ <dt>{{domxref("OfflineAudioContext.OfflineAudioContext()")}}</dt>
+ <dd>新しい <code>OfflineAudioContext</code> のインスタンスを作成します。</dd>
+</dl>
 
-- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
-  - : サンプルフレーム数で表されるバッファの大きさの整数値。
+<h2 id="プロパティ">プロパティ</h2>
 
-### イベントハンドラー
+<p><em>親インターフェイスである {{domxref("BaseAudioContext")}} からのプロパティも継承します。</em></p>
 
-- {{domxref("OfflineAudioContext.oncomplete")}}
-  - : 処理終了時に呼ばれる {{event("Event_handlers", "event handler")}} イベントハンドラーです。 {{event("complete")}} イベント (型は {{domxref("OfflineAudioCompletionEvent")}} )を受け取ります。このイベントは、{{domxref("OfflineAudioContext.startRendering()")}} のイベント駆動型が利用された場合、処理終了時に送出さます。
+<dl>
+ <dt>{{domxref('OfflineAudioContext.length')}} {{readonlyinline}}</dt>
+ <dd>サンプルフレーム数で表されるバッファの大きさの整数値。</dd>
+</dl>
 
-## メソッド
+<h3 id="イベントハンドラー">イベントハンドラー</h3>
 
-_親インターフェースである {{domxref("BaseAudioContext")}} からのメソッドも継承します。_
+<dl>
+ <dt>{{domxref("OfflineAudioContext.oncomplete")}}</dt>
+ <dd>
+ <p>処理終了時に呼ばれる {{event("Event_handlers", "event handler")}} イベントハンドラーです。 {{event("complete")}} イベント (型は {{domxref("OfflineAudioCompletionEvent")}} )を受け取ります。このイベントは、{{domxref("OfflineAudioContext.startRendering()")}} のイベント駆動型が利用された場合、処理終了時に送出さます。</p>
+ </dd>
+</dl>
 
-- {{domxref("OfflineAudioContext.resume()")}}
-  - : Resumes the progression of time in an audio context that has previously been suspended.
-- {{domxref("OfflineAudioContext.suspend()")}}
-  - : Schedules a suspension of the time progression in the audio context at the specified time and returns a promise.
-- {{domxref("OfflineAudioContext.startRendering()")}}
-  - : Starts rendering the audio, taking into account the current connections and the current scheduled changes. This page covers both the event-based version and the promise-based version.
+<h2 id="メソッド">メソッド</h2>
 
-## 例
+<p><em>親インターフェースである {{domxref("BaseAudioContext")}} からのメソッドも継承します。</em></p>
 
-この例では、{{domxref("AudioContext")}} と `OfflineAudioContext` 二つのオブジェクトを作っています。`AudioContext` は XHR ({{domxref("AudioContext.decodeAudioData")}})でオーディオトラックを読み込むのに使い、`OfflineAudioContext` で{{domxref("AudioBufferSourceNode")}} の中に音声をレンダリングし、そしてその音声を再生します。オフライン音声グラフのセットアップが終わった後、{{domxref("OfflineAudioContext.startRendering")}} を使って {{domxref("AudioBuffer")}} にレンダリングする必要があります。
+<dl>
+ <dt>{{domxref("OfflineAudioContext.resume()")}}</dt>
+ <dd>Resumes the progression of time in an audio context that has previously been suspended.</dd>
+ <dt>{{domxref("OfflineAudioContext.suspend()")}}</dt>
+ <dd>Schedules a suspension of the time progression in the audio context at the specified time and returns a promise.</dd>
+ <dt>{{domxref("OfflineAudioContext.startRendering()")}}</dt>
+ <dd>Starts rendering the audio, taking into account the current connections and the current scheduled changes. This page covers both the event-based version and the promise-based version.</dd>
+</dl>
 
-`startRendering()` の Promise が解決されるとレンダリングは完了し、出力結果の `AudioBuffer` が Promise の結果として戻されます。
+<h2 id="例">例</h2>
 
-At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise `AudioBuffer`. This is then played as part of a simple standard audio graph.
+<p>この例では、{{domxref("AudioContext")}} と <code>OfflineAudioContext</code> 二つのオブジェクトを作っています。<code>AudioContext</code> はXHR ({{domxref("AudioContext.decodeAudioData")}})でオーディオトラックを読み込むのに使い、<code>OfflineAudioContext</code> で{{domxref("AudioBufferSourceNode")}} の中に音声をレンダリングし、そしてその音声を再生します。オフライン音声グラフのセットアップが終わった後、{{domxref("OfflineAudioContext.startRendering")}} を使って {{domxref("AudioBuffer")}} にレンダリングする必要があります。</p>
 
-> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (see the [source code](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) too.)
+<p><code>startRendering()</code> のPromiseが解決されるとレンダリングは完了し、出力結果の <code>AudioBuffer</code> がPromiseの結果として戻されます。</p>
 
-```js
-// オンラインとオフラインのオーディオコンテキストを定義
+<p>At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise <code>AudioBuffer</code>. This is then played as part of a simple standard audio graph.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For a working example, see our <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (see the <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">source code</a> too.)</p>
+</div>
+
+<pre class="brush: js">// オンラインとオフラインのオーディオコンテキストを定義
 
 var audioCtx = new AudioContext();
 var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
@@ -95,19 +110,35 @@ function getData() {
 
 // getData で処理を開始する。
 
-getData();
-```
+getData();</pre>
 
-## 仕様書
+<h2 id="仕様書">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}} | {{Spec2('Web Audio API')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.OfflineAudioContext")}}
+<div>
 
-## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+<p>{{Compat("api.OfflineAudioContext")}}</p>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

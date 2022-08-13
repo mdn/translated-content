@@ -10,34 +10,45 @@ tags:
   - closed
 translation_of: Web/API/ReadableStreamDefaultReader/closed
 ---
-{{APIRef("Streams")}}
+<div>{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamDefaultReader")}} インターフェイスの <strong><code>closed</code></strong> 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var closed = readableStreamDefaultReader.closed;
+<pre class="syntaxbox"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{jsxref("Promise")}}。
+<p>{{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-このスニペットでは、以前に作成したリーダーに問い合わせて、ストリームが閉じられているかどうかを確認します。 閉じられると、promise が満たされ、メッセージをコンソールに記録します。
+<p>このスニペットでは、以前に作成したリーダーに問い合わせて、ストリームが閉じられているかどうかを確認します。 閉じられると、promise が満たされ、メッセージをコンソールに記録します。</p>
 
-```js
-reader.closed.then(() => {
+<pre class="brush: js">reader.closed.then(() =&gt; {
   console.log('reader closed');
-})
-```
+})</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-closed","closed")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#default-reader-closed","closed")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStreamDefaultReader.closed")}}
+
+
+<p>{{Compat("api.ReadableStreamDefaultReader.closed")}}</p>

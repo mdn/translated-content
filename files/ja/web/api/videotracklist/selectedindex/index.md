@@ -13,24 +13,39 @@ tags:
   - track
 translation_of: Web/API/VideoTrackList/selectedIndex
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-読み取り専用の **{{domxref("VideoTrackList")}}** の **`selectedIndex`** プロパティは、現在選択されているトラックがある場合はそのインデックスを返し、それ以外の場合は `-1` を返します。
+<p><span class="seoSummary">読み取り専用の <strong>{{domxref("VideoTrackList")}}</strong> の <strong><code>selectedIndex</code></strong> プロパティは、現在選択されているトラックがある場合はそのインデックスを返し、それ以外の場合は <code>-1</code> を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var index = VideoTrackList.selectedIndex;
+<pre class="syntaxbox">var <em>index</em> = <em>VideoTrackList</em>.selectedIndex;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-現在選択されているトラックがある場合はそのインデックスを示す数値、それ以外の場合は `-1`。
+<p>現在選択されているトラックがある場合はそのインデックスを示す数値、それ以外の場合は <code>-1</code>。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotracklist-selectedindex', 'VideoTrackList: selectedIndex')}} | {{Spec2('HTML WHATWG')}} |          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-videotracklist-selectedindex', 'VideoTrackList: selectedIndex')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.VideoTrackList.selectedIndex")}}
+
+
+<p>{{Compat("api.VideoTrackList.selectedIndex")}}</p>

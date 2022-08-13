@@ -10,32 +10,29 @@ tags:
   - Service Workers
 translation_of: Web/API/PushManager/getSubscription
 ---
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
 
-{{domxref("PushManager")}} インターフェースの **`PushManager.getSubscription()`** メソッドは、既存のプッシュサブスクリプションを取得します。
+<p>{{domxref("PushManager")}} インターフェースの <strong><code>PushManager.getSubscription()</code></strong> メソッドは、既存のプッシュサブスクリプションを取得します。</p>
 
-これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} を解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合 `null` 値で解決されます。
+<p>これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} を解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合 <code>null</code> 値で解決されます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-​PushManager.getSubscription().then(function(pushSubscription) { ... } );
-```
+<pre class="brush: js" style="font-size: 14px;">​PushManager.getSubscription().then(function(pushSubscription) { ... } );</pre>
 
-### パラメーター
+<h3 id="パラメーター">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-{{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}}。
+<p>{{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-このコードスニペットは、[push messaging and notification sample ](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications)から取ってきました（使用できるライブデモはありません）。
+<p>このコードスニペットは、<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications">push messaging and notification sample </a>から取ってきました（使用できるライブデモはありません）。</p>
 
-```js
-// サブスクリプションをチェックするために、service worker の登録が必要である。
+<pre class="brush: js" style="font-size: 14px;">// サブスクリプションをチェックするために、service worker の登録が必要である。
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     // 既にプッシュメッセージサブスクリプションがあるか？
     serviceWorkerRegistration.pushManager.getSubscription()
@@ -65,19 +62,31 @@ translation_of: Web/API/PushManager/getSubscription
         window.Demo.debug.log('Error during getSubscription()', err);
       });
   });
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                                             | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushManager-getSubscription-Promise-PushSubscription', 'getSubscription()')}} | {{Spec2('Push API')}} | 初期定義。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Push API', '#widl-PushManager-getSubscription-Promise-PushSubscription', 'getSubscription()')}}</td>
+   <td>{{Spec2('Push API')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.PushManager.getSubscription")}}
+<p>{{Compat("api.PushManager.getSubscription")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
+</ul>

@@ -8,43 +8,54 @@ tags:
   - NeedsUpdate
 translation_of: Web/API/StyleSheetList
 ---
-{{APIRef("CSSOM")}}
+<div>{{APIRef("CSSOM")}}</div>
 
-`StyleSheetList` インターフェイスは {{domxref("StyleSheet")}} のリストを表します。
+<p><code>StyleSheetList</code> インターフェイスは {{domxref("StyleSheet")}} のリストを表します。</p>
 
-これは配列風のオブジェクトですが、 {{jsxref("Array")}} のメソッドを適用しての反復処理はできません。しかし標準の {{jsxref("Statements/for", "for")}} ループと添字による反復処理、もしくは {{jsxref("Array")}} への変換ができます。
+<p>これは配列風のオブジェクトですが、 {{jsxref("Array")}} のメソッドを適用しての反復処理はできません。しかし標準の {{jsxref("Statements/for", "for")}} ループと添字による反復処理、もしくは {{jsxref("Array")}} への変換ができます。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-### for ループを使用して document の [styleSheet](/ja/docs/Web/API/CSSStyleSheet) オブジェクトを取得
+<h3 id="Get_document_styleSheet_objects_with_for_loop" name="Get_document_styleSheet_objects_with_for_loop">for ループを使用して document の <a href="/ja/docs/Web/API/CSSStyleSheet">styleSheet</a> オブジェクトを取得</h3>
 
-```js
-for (let i = 0; i < document.styleSheets.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; document.styleSheets.length; i++) {
   let styleSheet = document.styleSheets[i];
-}
-```
+}</pre>
 
-### Array のメソッドを適用してすべての CSS ルールを取得
+<h3 id="Get_all_CSS_rules_for_the_document_using_Array_methods" name="Get_all_CSS_rules_for_the_document_using_Array_methods">Array のメソッドを適用してすべての CSS ルールを取得</h3>
 
-    const allCSS = [...document.styleSheets]
-      .map(styleSheet => {
-        try {
-          return [...styleSheet.cssRules]
-            .map(rule => rule.cssText)
-            .join('');
-        } catch (e) {
-          console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
-        }
-      })
-      .filter(Boolean)
-      .join('\n');
+<pre>const allCSS = [...document.styleSheets]
+  .map(styleSheet =&gt; {
+    try {
+      return [...styleSheet.cssRules]
+        .map(rule =&gt; rule.cssText)
+        .join('');
+    } catch (e) {
+      console.log('Access to stylesheet %s is denied. Ignoring...', styleSheet.href);
+    }
+  })
+  .filter(Boolean)
+  .join('\n');</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                     | 備考 |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName("CSSOM", "#the-stylesheetlist-interface", 'CSSStyleSheetList')}} | {{Spec2("CSSOM")}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>仕様書</th>
+   <th>状態</th>
+   <th>備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSSOM", "#the-stylesheetlist-interface", 'CSSStyleSheetList')}}</td>
+   <td>{{Spec2("CSSOM")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.StyleSheetList")}}
+<p>{{Compat("api.StyleSheetList")}}</p>

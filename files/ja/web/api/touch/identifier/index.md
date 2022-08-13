@@ -11,37 +11,52 @@ tags:
   - touch
 translation_of: Web/API/Touch/identifier
 ---
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+<p>{{ APIRef("Touch Events") }}{{SeeCompatTable}}</p>
 
-**`Touch.identifier`** はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指 (またはスタイラス) の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。
+<p><strong><code>Touch.identifier</code></strong> はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指 (またはスタイラス) の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    touchItem.identifier;
+<pre class="syntaxbox notranslate"><var>touchItem</var>.identifier;</pre>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-`long` で、 {{ domxref("Touch") }} オブジェクトの固有の ID を表します。
+<p><code>long</code> で、 {{ domxref("Touch") }} オブジェクトの固有の ID を表します。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-someElement.addEventListener('touchmove', function(e) {
+<pre class="brush: js notranslate">someElement.addEventListener('touchmove', function(e) {
 // Iterate through the list of touch points that changed
 // since the last event and print each touch point's identifier.
-  for (var i=0; i < e.changedTouches.length; i++) {
+  for (var i=0; i &lt; e.changedTouches.length; i++) {
     console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
   }
-}, false);
-```
+}, false);</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Touch Events 2','#dom-touch-identifier')}} | {{Spec2('Touch Events 2')}} | 変更なし |
-| {{SpecName('Touch Events', '#widl-Touch-identifier')}} | {{Spec2('Touch Events')}}     | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#dom-touch-identifier')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events', '#widl-Touch-identifier')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Touch.identifier")}}
+<p>{{Compat("api.Touch.identifier")}}</p>

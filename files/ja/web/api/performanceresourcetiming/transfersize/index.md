@@ -8,28 +8,28 @@ tags:
   - リファレンス
 translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
-{{APIRef("Resource Timing API")}}
+<div>{{APIRef("Resource Timing API")}}</div>
 
-**`transferSize`** 読み取り専用プロパティは、取得したリソースのサイズ (オクテット) を表します。サイズには、レスポンスヘッダーフィールドとレスポンスペイロードボディ ([RFC7230](http://httpwg.github.io/specs/rfc7230.html#message.body) で定義されているとおり) が含まれます。
+<p><strong><code>transferSize</code></strong> 読み取り専用プロパティは、取得したリソースのサイズ (オクテット) を表します。サイズには、レスポンスヘッダーフィールドとレスポンスペイロードボディ (<a href="http://httpwg.github.io/specs/rfc7230.html#message.body">RFC7230</a> で定義されているとおり) が含まれます。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-リソースがローカルキャッシュから取得された場合、またはクロスオリジンリソースの場合、このプロパティはゼロを返します。
+<p>リソースがローカルキャッシュから取得された場合、またはクロスオリジンリソースの場合、このプロパティはゼロを返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    resource.transferSize;
+<pre class="syntaxbox"><em>resource</em>.transferSize;
+</pre>
 
-### 戻り値
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
 
-取得したリソースのサイズ (オクテット単位) を表す数値。サイズには、レスポンスヘッダーフィールドと[レスポンスペイロードボディ](http://httpwg.github.io/specs/rfc7230.html#message.body) (RFC7230) が含まれています。
+<p>取得したリソースのサイズ (オクテット単位) を表す数値。サイズには、レスポンスヘッダーフィールドと<a href="http://httpwg.github.io/specs/rfc7230.html#message.body">レスポンスペイロードボディ</a> (RFC7230) が含まれています。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントのサイズプロパティの値が記録されます。
+<p>次の例では、すべての "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} イベントのサイズプロパティの値が記録されます。</p>
 
-```js
-function log_sizes(perfEntry){
+<pre class="brush: js">function log_sizes(perfEntry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
   if ("decodedBodySize" in perfEntry)
@@ -50,18 +50,31 @@ function log_sizes(perfEntry){
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  for (var i=0; i &lt; p.length; i++) {
     log_sizes(p[i]);
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                                                           | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-transferSize', 'transferSize')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-transferSize', 'transferSize')}}</td>
+   <td>{{Spec2('Resource Timing')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.PerformanceResourceTiming.transferSize")}}
+<div>
+<p>{{Compat("api.PerformanceResourceTiming.transferSize")}}</p>
+</div>

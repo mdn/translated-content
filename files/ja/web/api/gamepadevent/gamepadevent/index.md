@@ -9,27 +9,48 @@ tags:
   - Referece
 translation_of: Web/API/GamepadEvent/GamepadEvent
 ---
-{{APIRef("Gamepad API")}}
+<p>{{APIRef("Gamepad API")}}</p>
 
-**`GamepadEvent_`** コンストラクタは新規の {{domxref("GamepadEvent")}} オブジェクトを作成します。.
+<p><strong><code>GamepadEvent_</code></strong> コンストラクタは新規の  {{domxref("GamepadEvent")}} オブジェクトを作成します。.</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var gamepadEvent = new GamepadEvent(typeArg, options)
+<pre class="syntaxbox">var gamepadEvent = new GamepadEvent(typeArg, options)</pre>
 
-### パラメータ
+<h3 id="パラメータ">パラメータ</h3>
 
-- _typeArg_
-  - : `gamepadconnected` か `gamepaddisconnected` のどちらかの{{domxref("DOMString")}}。
-- _options_ {{optional_inline}}
-  - : オプションは次のとおりです。\* `gamepad`: イベントに関連付けられたゲームパッドを記述する {{domxref("Gamepad")}} のインスタンス。
+<dl>
+ <dt><em>typeArg</em></dt>
+ <dd><code>gamepadconnected</code> か <code>gamepaddisconnected</code> のどちらかの{{domxref("DOMString")}}。</dd>
+ <dt><em>options</em> {{optional_inline}}</dt>
+ <dd>オプションは次のとおりです。
+ <ul>
+  <li><code>gamepad</code>: <span class="tlid-translation translation"><span title="">イベントに関連付けられたゲームパッドを記述する</span></span> {{domxref("Gamepad")}} のインスタンス。</li>
+ </ul>
+ </dd>
+</dl>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Gamepad','#gamepadevent-interface','GamepadEvent_')}} | {{Spec2('Gamepad')}} | 初版     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Gamepad','#gamepadevent-interface','GamepadEvent_')}}</td>
+   <td>{{Spec2('Gamepad')}}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.Gamepad.Gamepad")}}
+<p> </p>
+
+
+
+<p>{{Compat("api.Gamepad.Gamepad")}}</p>

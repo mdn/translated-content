@@ -13,61 +13,74 @@ tags:
 translation_of: Web/API/SpeechRecognitionError
 original_slug: Web/API/SpeechRecognitionError
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognitionError`** インターフェイスは、認識サービスからのエラーメッセージを表します。
+<p><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> の <strong><code>SpeechRecognitionError</code></strong> インターフェイスは、認識サービスからのエラーメッセージを表します。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_`SpeechRecognitionError` は、親インターフェイスである {{domxref("Event")}} からのプロパティも継承します。_
+<p><em><code>SpeechRecognitionError</code> は、親インターフェイスである {{domxref("Event")}} からのプロパティも継承します。</em></p>
 
-- {{domxref("SpeechRecognitionError.error")}} {{readonlyinline}}
-  - : 起こったエラーの種類を返します。
-- {{domxref("SpeechRecognitionError.message")}} {{readonlyinline}}
-  - : エラーの内容が詳しく書かれたメッセージを返します。
+<dl>
+ <dt>{{domxref("SpeechRecognitionError.error")}} {{readonlyinline}}</dt>
+ <dd>起こったエラーの種類を返します。</dd>
+ <dt>{{domxref("SpeechRecognitionError.message")}} {{readonlyinline}}</dt>
+ <dd>エラーの内容が詳しく書かれたメッセージを返します。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-var recognition = new SpeechRecognition();
+<pre class="brush: js">var recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
   console.log('Speech recognition error detected: ' + event.error);
   console.log('Additional information: ' + event.message);
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                   | 策定状況                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-error', 'SpeechRecognitionError')}} | {{Spec2('Web Speech API')}} |      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#speechreco-error', 'SpeechRecognitionError')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.SpeechRecognitionError")}}
+<div>
 
-### Firefox OS の許可設定
 
-アプリ内で音声認識を使用するには、以下の許可設定を [manifest](/ja/docs/Web/Apps/Build/Manifest) で指定する必要があります:
+<p>{{Compat("api.SpeechRecognitionError")}}</p>
+</div>
 
-```json
-"permissions": {
+<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の許可設定</h3>
+
+<p>アプリ内で音声認識を使用するには、以下の許可設定を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> で指定する必要があります:</p>
+
+<pre class="brush: json">"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}
-```
+}</pre>
 
-特権アプリも必要なため、以下も同様に含める必要があります:
+<p>特権アプリも必要なため、以下も同様に含める必要があります:</p>
 
-```json
-  "type": "privileged"
-```
+<pre class="brush: json">  "type": "privileged"</pre>
 
-## 関連項目
+<h2 id="See_also" name="See_also">関連項目</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

@@ -11,42 +11,59 @@ tags:
   - read
 translation_of: Web/API/ReadableStreamBYOBReader/read
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`read()`** メソッドは、バイトストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamBYOBReader")}} インターフェイスの <strong><code>read()</code></strong> メソッドは、バイトストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = readableStreamBYOBReader.read(view);
+<pre class="syntaxbox">var <em>promise</em> = <em>readableStreamBYOBReader</em>.read(<em>view</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- view
-  - : 読み込み先のビュー。
+<dl>
+ <dt>view</dt>
+ <dd>読み込み先のビュー。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref("Promise")}}。 ストリームの状態に応じて結果を充足/拒否します。 異なる可能性は次のとおりです。
+<p>{{jsxref("Promise")}}。 ストリームの状態に応じて結果を充足/拒否します。 異なる可能性は次のとおりです。</p>
 
-- チャンクが使用可能な場合、`{ value: theChunk, done: false }` の形式のオブジェクトで promise が満たされます。
-- ストリームが閉じられると、`{ value: undefined, done: true }` という形式のオブジェクトで promise が満たされます。
-- ストリームがエラーになると、関連するエラーで promise が拒否されます。
+<ul>
+ <li>チャンクが使用可能な場合、<code>{ value: theChunk, done: false }</code> の形式のオブジェクトで promise が満たされます。</li>
+ <li>ストリームが閉じられると、<code>{ value: undefined, done: true }</code> という形式のオブジェクトで promise が満たされます。</li>
+ <li>ストリームがエラーになると、関連するエラーで promise が拒否されます。</li>
+</ul>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-- TypeError
-  - : ソースオブジェクトが `ReadableStreamBYOBReader` ではない、ストリームに所有者がない、ビューがオブジェクトではない、または切り離されている、またはビューの長さが 0 である。
+<dl>
+ <dt>TypeError</dt>
+ <dd>ソースオブジェクトが <code>ReadableStreamBYOBReader</code> ではない、ストリームに所有者がない、ビューがオブジェクトではない、または切り離されている、またはビューの長さが 0 である。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-未定。
+<p>未定。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-read","read()")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#byob-reader-read","read()")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStreamBYOBReader.read")}}
+<p>{{Compat("api.ReadableStreamBYOBReader.read")}}</p>

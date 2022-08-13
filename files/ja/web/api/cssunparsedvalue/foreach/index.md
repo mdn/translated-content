@@ -14,38 +14,57 @@ tags:
   - forEach()
 translation_of: Web/API/CSSUnparsedValue/forEach
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
-**`CSSUnparsedValue.forEach()`** メソッドは、指定された関数を、 {{domxref('CSSUnparsedValue')}} オブジェクトのそれぞれの要素に対して実行します。
+<p class="summary"><strong><code>CSSUnparsedValue.forEach()</code></strong> メソッドは、指定された関数を、 {{domxref('CSSUnparsedValue')}} オブジェクトのそれぞれの要素に対して実行します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
-        // your iterator
-    }[, thisArg]);
+<pre class="syntaxbox"><var>CSSUnparsedValue</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+    // your iterator
+}</var>[, <var>thisArg</var>]);</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `callback`
-  - : それぞれの要素について呼び出される関数で、三つの引数を取ります。_ `currentValue`
-    _ : 処理中の現在の要素の値。
-    - `index`{{optional_inline}}
-      - : 処理中の現在の要素の添字。
-    - `array`{{optional_inline}}
-      - : `forEach()` が呼び出されている `CSSUnparsedValue`。
-- `thisArg` {{Optional_inline}}
-  - : `callback` の実行中に、 **`this`** として使用する値 (つまり、 `Object` の参照)。.
+<dl>
+ <dt><code>callback</code></dt>
+ <dd>それぞれの要素について呼び出される関数で、三つの引数を取ります。
+ <dl>
+  <dt><code><var>currentValue</var></code></dt>
+  <dd>処理中の現在の要素の値。</dd>
+  <dt><code><var>index</var></code>{{optional_inline}}</dt>
+  <dd>処理中の現在の要素の添字。</dd>
+  <dt><code><var>array</var></code>{{optional_inline}}</dt>
+  <dd><code>forEach()</code> が呼び出されている <code>CSSUnparsedValue</code>。</dd>
+ </dl>
+ </dd>
+ <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
+ <dd>
+ <p><code><var>callback</var></code> の実行中に、 <code><strong>this</strong></code> として使用する値 (つまり、 <code>Object</code> の参照)。.</p>
+ </dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-{{jsxref("undefined")}}
+<p>{{jsxref("undefined")}}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssunparsedvalue','forEach()')}} | {{Spec2('CSSOM')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM','#cssunparsedvalue','forEach()')}}</td>
+   <td>{{Spec2('CSSOM')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.CSSUnparsedValue.forEach")}}
+<p>{{Compat("api.CSSUnparsedValue.forEach")}}</p>

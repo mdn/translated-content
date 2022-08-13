@@ -6,31 +6,45 @@ tags:
   - Forms
   - Reference
   - formevent
-translation_of: Web/API/HTMLFormElement/formdata_event
 browser-compat: api.HTMLFormElement.formdata_event
+translation_of: Web/API/HTMLFormElement/formdata_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`formdata`** イベントは、フォームのデータを表すエントリーリストが構築された後に発行されます。このイベントは、フォームが送信されたときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターが呼び出されたときにも発行されます。
+<p><strong><code>formdata</code></strong> イベントは、フォームのデータを表すエントリーリストが構築された後に発行されます。このイベントは、フォームが送信されたときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターが呼び出されたときにも発行されます。</p>
 
-## 一般情報
+<h2 id="General_info">一般情報</h2>
 
-| バブリング                   | なし                                                         |
-| ---------------------------- | ------------------------------------------------------------ |
-| キャンセル                   | 不可                                                         |
-| インターフェイス             | {{DOMxRef("FormDataEvent")}}                         |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.onformdata")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th>キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th>インターフェイス</th>
+   <td>{{DOMxRef("FormDataEvent")}}</td>
+  </tr>
+  <tr>
+   <th>イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onformdata")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples">例</h2>
 
-```js
-// フォームの参照を得る
+<pre class="brush: js">// フォームの参照を得る
 
 const formElem = document.querySelector('form');
 
 // submit ハンドラー
 
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener('submit', (e) =&gt; {
   // フォームの送信時、既定の動作を抑止
   e.preventDefault();
 
@@ -40,7 +54,7 @@ formElem.addEventListener('submit', (e) => {
 
 // データを受け取るための formdata ハンドラー
 
-formElem.addEventListener('formdata', (e) => {
+formElem.addEventListener('formdata', (e) =&gt; {
   console.log('formdata fired');
 
   // イベントオブジェクトからフォームデータを取得する
@@ -53,13 +67,11 @@ formElem.addEventListener('formdata', (e) => {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});
-```
+});</pre>
 
-`onformdata` 版はこのようになります。
+<p><code>onformdata</code> 版はこのようになります。</p>
 
-```js
-formElem.onformdata = (e) => {
+<pre class="brush: js">formElem.onformdata = (e) =&gt; {
   console.log('formdata fired');
 
   // イベントオブジェクトからフォームデータを取得する
@@ -72,18 +84,19 @@ formElem.onformdata = (e) => {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- HTML の {{htmlElement("form")}} 要素
-- {{domxref("FormDataEvent")}}
+<ul>
+ <li>HTML の {{htmlElement("form")}} 要素</li>
+ <li>{{domxref("FormDataEvent")}}</li>
+</ul>

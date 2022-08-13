@@ -3,35 +3,46 @@ title: VRDisplayCapabilities.maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
 translation_of: Web/API/VRDisplayCapabilities/maxLayers
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-{{domxref("VRDisplayCapabilities")}} インターフェイスの **`maxLayers`** 読取専用プロパティは，その VR ディスプレイが同時に表示できる {{domxref("VRLayer")}} の最大値を示す数値を返します（例えば {{domxref("Display.requestPresent()")}} が受け取ることのできる配列の最大長です)．
+<p>{{domxref("VRDisplayCapabilities")}} インターフェイスの <strong><code>maxLayers</code></strong> 読取専用プロパティは，そのVRディスプレイが同時に表示できる {{domxref("VRLayer")}} の最大値を示す数値を返します（例えば {{domxref("Display.requestPresent()")}} が受け取ることのできる配列の最大長です)．</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-var maximumLayers = vrDisplayCapabilitiesInstance.maxLayers;
-```
+<pre class="brush: js">var maximumLayers = vrDisplayCapabilitiesInstance.<code>maxLayers</code>;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-数値であり，{{domxref("VRDisplayCapabilities.canPresent")}} が `true の場合は1でなければなりません，`それ以外は 0 です．
+<p>数値であり，{{domxref("VRDisplayCapabilities.canPresent")}} が <code>true の場合は1でなければなりません，</code>それ以外は 0 です．</p>
 
-## 例
+<h2 id="例">例</h2>
 
-    TBD.
+<pre>TBD.</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vrdisplaycapabilities-maxlayers', 'maxLayers')}} | {{Spec2('WebVR')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vrdisplaycapabilities-maxlayers', 'maxLayers')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.VRDisplayCapabilities.maxLayers")}}
+<p>{{Compat("api.VRDisplayCapabilities.maxLayers")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

@@ -3,71 +3,87 @@ title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
 translation_of: Web/API/MediaStream_Image_Capture_API
 ---
-{{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
+<p>{{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}</p>
 
-**MediaStream Image Capture API** は、写真デバイスから画像やビデオをキャプチャするための API です。データをキャプチャするだけでなく、画像サイズ、赤目軽減、フラッシュの有無、現在の設定などのデバイス機能に関する情報を取得することもできます。逆に、API では、デバイスが許可する制限内で機能を設定できます。
+<p class="summary"><strong>MediaStream Image Capture API</strong> は、写真デバイスから画像やビデオをキャプチャするためのAPIです。データをキャプチャするだけでなく、画像サイズ、赤目軽減、フラッシュの有無、現在の設定などのデバイス機能に関する情報を取得することもできます。逆に、API では、デバイスが許可する制限内で機能を設定できます。</p>
 
-## MediaStream image capture の概念と使用方法
+<h2 id="MediaStream_image_capture_の概念と使用方法">MediaStream image capture の概念と使用方法</h2>
 
-画像またはビデオストリームを検索するプロセスは、以下のように行われます。サンプルコードは、[Chrome の Image Capture の例](https://googlechrome.github.io/samples/image-capture/)を基にしています。
+<p>画像またはビデオストリームを検索するプロセスは、以下のように行われます。サンプルコードは、<a href="https://googlechrome.github.io/samples/image-capture/">Chrome の Image Capture の例</a>を基にしています。</p>
 
-First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below simply says give me whatever video device is available, though the `getUserMedia()` method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.
+<p>First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below simply says give me whatever video device is available, though the <code>getUserMedia()</code> method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.</p>
 
-```js
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
+<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({ video: true })
+  .then(mediaStream =&gt; {
     // Do something with the stream.
   })
-```
+</pre>
 
-Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the `MediaStreamTrack` array is the one to use. You can use the properties of the `MediaStreamTrack` objects to select the one you need.
+<p id="sect1">Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the <code>MediaStreamTrack</code> array is the one to use. You can use the properties of the <code>MediaStreamTrack</code> objects to select the one you need.</p>
 
-```js
-const track = mediaStream.getVideoTracks()[0];
-```
+<pre class="brush: js notranslate">const track = mediaStream.getVideoTracks()[0];</pre>
 
-At this point, you might want to configure the device capabilities before capturing an image. You can do this by calling {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} on the track object before doing anything else.
+<p>At this point, you might want to configure the device capabilities before capturing an image. You can do this by calling {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} on the track object before doing anything else.</p>
 
-```js
-let zoom = document.querySelector('#zoom');
+<pre class="brush: js notranslate">let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
 if(!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
-```
+</pre>
 
-Finally, pass the `MediaStreamTrack` object to the {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} constructor. Though a `MediaStream` holds several types of tracks and provides multiple methods for retrieving them, the ImageCapture constructor will throw a {{domxref("DOMException")}} of type `NotSupportedError` if {{domxref("MediaStreamTrack.kind")}} is not `"video"`.
+<p>Finally, pass the <code>MediaStreamTrack</code> object to the {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} constructor. Though a <code>MediaStream</code> holds several types of tracks and provides multiple methods for retrieving them, the ImageCapture constructor will throw a {{domxref("DOMException")}} of type <code>NotSupportedError</code> if {{domxref("MediaStreamTrack.kind")}} is not <code>"video"</code>.</p>
 
-```js
-let imageCapture = new ImageCapture(track);
-```
+<pre class="brush: js notranslate">let imageCapture = new ImageCapture(track);
+</pre>
 
-## インターフェイス
+<h2 id="インターフェイス">インターフェイス</h2>
 
-- {{domxref("ImageCapture")}}
-  - : 有効な {{domxref("MediaStreamTrack")}} を通じて参照される写真デバイスから画像をキャプチャするためのインタフェース。
-- {{domxref("PhotoCapabilities")}}
-  - : 接続されている写真デバイスに利用可能な設定オプションを提供します。 {{domxref("ImageCapture.getPhotoCapabilities", "ImageCapture.getPhotoCapabilities()")}} を呼び出して `PhotoCapabilities` オブジェクトを取得します。
+<dl>
+ <dt>{{domxref("ImageCapture")}}</dt>
+ <dd>有効な {{domxref("MediaStreamTrack")}} を通じて参照される写真デバイスから画像をキャプチャするためのインタフェース。</dd>
+ <dt>{{domxref("PhotoCapabilities")}}</dt>
+ <dd>接続されている写真デバイスに利用可能な設定オプションを提供します。 {{domxref("ImageCapture.getPhotoCapabilities", "ImageCapture.getPhotoCapabilities()")}} を呼び出して <code>PhotoCapabilities</code> オブジェクトを取得します。</dd>
+</dl>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                               | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
+   <td>{{Spec2('Media Capture')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-### `ImageCapture`
+<h3 id="ImageCapture"><code>ImageCapture</code></h3>
 
-{{Compat("api.ImageCapture")}}
+<div>
+<p>{{Compat("api.ImageCapture")}}</p>
 
-### `PhotoCapabilities`
+<h3 id="PhotoCapabilities"><code>PhotoCapabilities</code></h3>
 
-{{Compat("api.PhotoCapabilities")}}
+<div>
+<p>{{Compat("api.PhotoCapabilities")}}</p>
+</div>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("MediaStream")}}
-- {{domxref("MediaStreamTrack")}}
+<ul>
+ <li>{{domxref("MediaStream")}}</li>
+ <li>{{domxref("MediaStreamTrack")}}</li>
+</ul>

@@ -12,89 +12,87 @@ tags:
 translation_of: Web/API/Element/prepend
 original_slug: Web/API/ParentNode/prepend
 ---
-{{APIRef("DOM")}}
+<p>{{APIRef("DOM")}}</p>
 
-**`Element.prepend()`** メソッドは、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの {{domxref("Element")}} の最初の子の前に挿入します。 {{domxref("DOMString")}} オブジェクトは、同等の {{domxref("Text")}} ノードとして挿入されます。
+<p><strong><code>Element.prepend()</code></strong> メソッドは、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの {{domxref("Element")}} の最初の子の前に挿入します。 {{domxref("DOMString")}} オブジェクトは、同等の {{domxref("Text")}} ノードとして挿入されます。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-prepend(...nodesOrDOMStrings);
-```
+<pre class="brush: js">prepend(...nodesOrDOMStrings);
+</pre>
 
-### 引数
+<h3 id="Parameters">引数</h3>
 
-- `nodesOrDOMStrings`
-  - : 挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。
+<dl>
+  <dt><code>nodesOrDOMStrings</code></dt>
+  <dd>挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value">返値</h3>
 
-`undefined`.
+<p><code>undefined</code>.</p>
 
-### 例外
+<h3 id="Exceptions">例外</h3>
 
-- {{domxref("HierarchyRequestError")}}: ノードを階層の特定の箇所に追加することができません。
+<ul>
+ <li>{{domxref("HierarchyRequestError")}}: ノードを階層の特定の箇所に追加することができません。</li>
+</ul>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 要素の前に追加
+<h3 id="Prepending_an_element">要素の前に追加</h3>
 
-```js
-let div = document.createElement("div");
+<pre class="brush: js">let div = document.createElement("div");
 let p = document.createElement("p");
 let span = document.createElement("span");
 div.append(p);
 div.prepend(span);
 
-console.log(div.childNodes); // NodeList [ <span>, <p> ]
-```
+console.log(div.childNodes); // NodeList [ &lt;span&gt;, &lt;p&gt; ]
+</pre>
 
-### テキストの前に追加
+<h3 id="Prepending_text">テキストの前に追加</h3>
 
-```js
-let div = document.createElement("div");
+<pre class="brush: js">let div = document.createElement("div");
 div.append("Some text");
 div.prepend("Headline: ");
 
-console.log(div.textContent); // "Headline: Some text"
-```
+console.log(div.textContent); // "Headline: Some text"</pre>
 
-### 要素とテキストの追加
+<h3 id="Appending_an_element_and_text">要素とテキストの追加</h3>
 
-```js
-let div = document.createElement("div");
+<pre class="brush: js">let div = document.createElement("div");
 let p = document.createElement("p");
 div.prepend("Some text", p);
 
-console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
-```
+console.log(div.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
 
-### prepend() メソッドはスコープが効かない
+<h3 id="The_prepend_method_is_unscopable">prepend() メソッドはスコープが効かない</h3>
 
-`prepend()` メソッドは `with` 文の中ではスコープが効きません。詳しくは {{jsxref("Symbol.unscopables")}} をご覧ください。
+<p><code>prepend()</code> メソッドは <code>with</code> 文の中ではスコープが効きません。詳しくは {{jsxref("Symbol.unscopables")}} をご覧ください。</p>
 
-```js
-let div = document.createElement("div");
+<pre class="brush: js">let div = document.createElement("div");
 
 with(div) {
   prepend("foo");
 }
-// ReferenceError: prepend is not defined
-```
+// ReferenceError: prepend is not defined </pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Node.insertBefore()")}}
-- {{domxref("Element.before()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+<ul>
+  <li>{{domxref("Element.append()")}}</li>
+  <li>{{domxref("Node.appendChild()")}}</li>
+  <li>{{domxref("Node.insertBefore()")}}</li>
+  <li>{{domxref("Element.before()")}}</li>
+  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
+  <li>{{domxref("NodeList")}}</li>
+</ul>

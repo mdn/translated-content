@@ -10,22 +10,36 @@ tags:
   - install
 translation_of: Web/API/ServiceWorkerGlobalScope/install_event
 ---
-{{DefaultAPISidebar("Service Workers API")}}
+<p>{{DefaultAPISidebar("Service Workers API")}}</p>
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`install`** イベントは、{{domxref("ServiceWorkerRegistration")}} が新しいインストール中のワーカー（{{domxref("ServiceWorkerRegistration.installing")}} worker）を取得すると発生します。
+<p><span class="seoSummary">{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの <strong><code>install</code></strong> イベントは、{{domxref("ServiceWorkerRegistration")}} が新しいインストール中のワーカー（{{domxref("ServiceWorkerRegistration.installing")}} worker）を取得すると発生します。</span></p>
 
-| バブリング                   | なし                                                             |
-| ---------------------------- | ---------------------------------------------------------------- |
-| キャンセル                   | 不可                                                             |
-| インターフェイス             | {{domxref("ExtendableEvent")}}                         |
-| イベントハンドラープロパティ | {{domxref("ServiceWorkerGlobalScope.oninstall")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("ExtendableEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-次のスニペットは、`install` イベントハンドラーを使用してキャッシュに多数のレスポンスを設定する方法を示しています。 サービスワーカーはこれを使用して、資産をオフラインで提供できます。
+<p>次のスニペットは、<code>install</code> イベントハンドラーを使用してキャッシュに多数のレスポンスを設定する方法を示しています。 サービスワーカーはこれを使用して、資産をオフラインで提供できます。</p>
 
-```js
-this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
    caches.open('v1').then(function(cache) {
          return cache.add(
@@ -42,29 +56,41 @@ this.addEventListener('install', function(event) {
      );
    })
    );
-});
-```
+});</pre>
 
-次のように {{domxref("ServiceWorkerGlobalScope.oninstall")}} プロパティを使用してイベントハンドラーを設定することもできます。
+<p>次のように {{domxref("ServiceWorkerGlobalScope.oninstall")}} プロパティを使用してイベントハンドラーを設定することもできます。</p>
 
-```js
-globalScope.oninstall = function(event) {
+<pre class="brush: js">globalScope.oninstall = function(event) {
   ...
-};
-```
+};</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                 | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#service-worker-global-scope-install-event', 'install')}} | {{Spec2('Service Workers')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#service-worker-global-scope-install-event', 'install')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerGlobalScope.install_event")}}
 
-## 関連情報
 
-- [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate) イベント
-- {{domxref("ServiceWorkerGlobalScope")}}
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+<p>{{Compat("api.ServiceWorkerGlobalScope.install_event")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><code><a href="/ja/docs/Web/API/ServiceWorkerGlobalScope/activate">activate</a></code> イベント</li>
+ <li>{{domxref("ServiceWorkerGlobalScope")}}</li>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
+</ul>

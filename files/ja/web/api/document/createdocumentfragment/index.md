@@ -10,45 +10,41 @@ tags:
   - createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
-{{APIRef("DOM WHATWG")}}
+<p>{{APIRef("DOM WHATWG")}}</p>
 
-新しい空の {{domxref("DocumentFragment")}} を作成し、そこに DOM ノードを追加して画面外の DOM ツリーを作成します。
+<p><span class="seoSummary">新しい空の {{domxref("DocumentFragment")}} を作成し、そこに DOM ノードを追加して画面外の DOM ツリーを作成します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var fragment = document.createDocumentFragment();
+<pre class="syntaxbox notranslate">var <var>fragment</var> = document.createDocumentFragment();
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-新しく作成された空の {{domxref("DocumentFragment")}} オブジェクトで、中にノードが挿入できるものです。
+<p>新しく作成された空の {{domxref("DocumentFragment")}} オブジェクトで、中にノードが挿入できるものです。</p>
 
-## 使用上の注意
+<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
 
-`DocumentFragment` は DOM の {{domxref("Node")}} オブジェクトですが、メインの DOM ツリーの一部にはなりません。通常の使い方は、文書フラグメントを生成し、その文書フラグメントに要素を追加して、その文書フラグメントを DOM ツリーへ追加することです。 DOM ツリー内では、文書フラグメントはすべての子要素によって置き換えられます。
+<p><code>DocumentFragment</code> は DOM の {{domxref("Node")}} オブジェクトですが、メインの DOM ツリーの一部にはなりません。通常の使い方は、文書フラグメントを生成し、その文書フラグメントに要素を追加して、その文書フラグメントを DOM ツリーへ追加することです。 DOM ツリー内では、文書フラグメントはすべての子要素によって置き換えられます。</p>
 
-文書フラグメントは*メモリ内*にあり、メインの DOM ツリーの一部ではないため、文書フラグメントに子要素を追加してもページの[リフロー](https://developers.google.com/speed/articles/reflow?csw=1) (要素の位置と大きさを決定するための計算) が行われません。そのため文書フラグメントを利用することによって、[性能の改善](http://ejohn.org/blog/dom-documentfragments/)が見込まれます。
+<p>文書フラグメントは<em>メモリ内</em>にあり、メインの DOM ツリーの一部ではないため、文書フラグメントに子要素を追加してもページの<a href="https://developers.google.com/speed/articles/reflow?csw=1">リフロー</a> (要素の位置と大きさを決定するための計算) が行われません。そのため文書フラグメントを利用することによって、<a href="http://ejohn.org/blog/dom-documentfragments/">性能の改善</a>が見込まれます。</p>
 
-`DocumentFragment` コンストラクターを使用して新しいフラグメントを生成することもできます。
+<p><code>DocumentFragment</code> コンストラクターを使用して新しいフラグメントを生成することもできます。</p>
 
-```js
-let fragment = new DocumentFragment();
-```
+<pre class="brush: js notranslate">let fragment = new DocumentFragment();</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-この例では、主要なウェブブラウザのリストを `DocumentFragment` 内に作成し、表示するドキュメントに新しい DOM サブツリーを追加しています。
+<p>この例では、主要なウェブブラウザのリストを <code>DocumentFragment</code> 内に作成し、表示するドキュメントに新しい DOM サブツリーを追加しています。</p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<ul id="ul">
-</ul>
-```
+<pre class="brush: html notranslate">&lt;ul id="ul"&gt;
+&lt;/ul&gt;</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-var element  = document.getElementById('ul'); // ul が存在することを仮定
+<pre class="brush: js notranslate">var element  = document.getElementById('ul'); // ul が存在することを仮定
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
@@ -60,23 +56,40 @@ browsers.forEach(function(browser) {
 });
 
 element.appendChild(fragment);
-```
+</pre>
 
-### 結果
+<h3 id="Result" name="Result">結果</h3>
 
-{{EmbedLiveSample("Example", 600, 140)}}
+<p>{{EmbedLiveSample("Example", 600, 140)}}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                                   | 状態                             | 備考                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | DOM 1 仕様書にて初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>DOM 1 仕様書にて初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.createDocumentFragment")}}
+<div>
+<p>{{Compat("api.Document.createDocumentFragment")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+<ul>
+ <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
+ <li>{{domxref("documentFragment")}}</li>
+</ul>

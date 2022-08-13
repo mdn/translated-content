@@ -6,24 +6,23 @@ tags:
   - DOM
   - Property
   - Reference
-translation_of: Web/API/DocumentFragment/childElementCount
 browser-compat: api.DocumentFragment.childElementCount
+translation_of: Web/API/DocumentFragment/childElementCount
 ---
-{{ APIRef("DOM") }}
+<div>{{ APIRef("DOM") }}</div>
 
-**`Document.childElementCount`** は読み取り専用のプロパティで、 `DocumentFragment` の子要素の数を返します。
+<p><code><strong>Document.childElementCount</strong></code> は読み取り専用のプロパティで、 <code>DocumentFragment</code> の子要素の数を返します。</p>
 
-特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。
+<p>特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-fragment.childElementCount;
-```
+<pre class="brush: js"><em>fragment</em>.childElementCount;
+</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-```js
+<pre class="brush:js">
 let fragment = new DocumentFragment()
 fragment.childElementCount; // 0
 
@@ -31,17 +30,19 @@ let paragraph = document.createElement('p')
 fragment.appendChild(paragraph)
 
 fragment.childElementCount; // 1
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{domxref("Element.childElementCount")}}
-- {{domxref("Document.childElementCount")}}
+<ul>
+  <li>{{domxref("Element.childElementCount")}}</li>
+  <li>{{domxref("Document.childElementCount")}}</li>
+</ul>

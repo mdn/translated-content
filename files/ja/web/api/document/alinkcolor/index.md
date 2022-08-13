@@ -11,27 +11,28 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/alinkColor
 ---
-{{APIRef("DOM")}}{{Deprecated_header}}
+<div>{{APIRef("DOM")}}{{Deprecated_header}}</div>
 
-文書本文のアクティブなリンクの色を取得または設定します。リンクは `mousedown` と `mouseup` イベントの間にアクティブになります。
+<p>文書本文のアクティブなリンクの色を取得または設定します。リンクは <code>mousedown</code> と <code>mouseup</code> イベントの間にアクティブになります。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var color = document.alinkColor;
-    document.alinkColor = color;
+<pre class="syntaxbox">var <var>color</var> = <var>document</var>.alinkColor;
+<var>document</var>.alinkColor = <var>color</var>;
+</pre>
 
-_color_ は文字列で、色の名前 (`blue`, `darkblue`, など) または色の 16 進値 (`#0000FF` など) が入ります。
+<p><var>color</var> は文字列で、色の名前 (<code>blue</code>, <code>darkblue</code>, など) または色の16進値 (<code>#0000FF</code> など) が入ります。</p>
 
-## メモ
+<h2 id="Notes" name="Notes">メモ</h2>
 
-Mozilla Firefox では、このプロパティの既定値は赤 (16 進で `#ee0000`) です。
+<p>Mozilla Firefox では、このプロパティの既定値は赤 (16進で <code>#ee0000</code>) です。</p>
 
-`document.alinkColor` は [DOM Level 2 HTML で非推奨](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)となっています。代替方法の一つは CSS セレクターの {{Cssxref(":active")}} です。
+<p><code>document.alinkColor</code> は <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML で非推奨</a>となっています。代替方法の一つは CSS セレクターの {{Cssxref(":active")}} です。</p>
 
-他の代替手段として `document.body.alink` がありますが、上記の CSS による代替手段が設置されたため [HTML 4.01 で非推奨](http://www.w3.org/TR/html401/struct/global.html#adef-text)となっています。
+<p>他の代替手段として <code>document.body.alink</code> がありますが、上記の CSS による代替手段が設置されたため <a href="http://www.w3.org/TR/html401/struct/global.html#adef-text">HTML 4.01 で非推奨</a>となっています。</p>
 
-[Gecko](/ja/docs/Mozilla/Gecko) は `alinkColor`/`:active` および {{Cssxref(":focus")}} の両方に対応しています。 Internet Explorer 6 および 7 は [HTML アンカー (\<a>) リンク](/ja/docs/Web/HTML/Element/a)には `alinkColor`/`:active` のみに対応しており、 `:focus` は Gecko と同様に動作します。 IE は `:focus` には対応していません。
+<p><a href="/ja/docs/Mozilla/Gecko">Gecko</a> は <code>alinkColor</code>/<code>:active</code> および {{Cssxref(":focus")}} の両方に対応しています。 Internet Explorer 6 および 7 は <a href="/ja/docs/Web/HTML/Element/a">HTML アンカー (&lt;a&gt;) リンク</a>には <code>alinkColor</code>/<code>:active</code> のみに対応しており、 <code>:focus</code> は Gecko と同様に動作します。 IE は <code>:focus</code> には対応していません。</p>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Document.alinkColor")}}
+<p>{{Compat("api.Document.alinkColor")}}</p>

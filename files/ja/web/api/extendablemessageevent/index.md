@@ -9,83 +9,100 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent
 ---
-{{APIRef("Service Workers API")}}
+<div>{{APIRef("Service Workers API")}}</div>
 
-[Service Worker API](/ja/docs/Web/API/Service_Worker_API) の **`ExtendableMessageEvent`** インターフェイスは、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{event("message_(ServiceWorker)","message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
+<p><span class="seoSummary"><a href="/ja/docs/Web/API/Service_Worker_API">Service Worker API</a> の <strong><code>ExtendableMessageEvent</code></strong> インターフェイスは、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{event("message_(ServiceWorker)","message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。</span></p>
 
-このインターフェイスは、{{domxref("ExtendableEvent")}} インターフェイスを継承しています。
+<p>このインターフェイスは、{{domxref("ExtendableEvent")}} インターフェイスを継承しています。</p>
 
-## コンストラクター
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
-- {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}
-  - : 新しい `ExtendableMessageEvent` オブジェクトのインスタンスを作成します。
+<dl>
+ <dt>{{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}</dt>
+ <dd>新しい <code>ExtendableMessageEvent</code> オブジェクトのインスタンスを作成します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_親の {{domxref("ExtendableEvent")}} からプロパティを継承します。_
+<p><em>親の {{domxref("ExtendableEvent")}} からプロパティを継承します。</em></p>
 
-- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
-  - : イベントのデータを返します。 任意のデータ型を使用できます。
-- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
-  - : メッセージを送信した {{domxref("Client")}} のオリジンを返します。
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
-  - : サーバー送信イベント（[server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)）で、イベントソースの最後のイベント ID を表します。 これは空の文字列です。
-- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
-  - : メッセージを送信した {{domxref("Client")}} オブジェクトへの参照を返します。
-- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
-  - : 関連するメッセージチャンネルのポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
+<dl>
+ <dt>{{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}</dt>
+ <dd>イベントのデータを返します。 任意のデータ型を使用できます。</dd>
+ <dt>{{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}</dt>
+ <dd>メッセージを送信した {{domxref("Client")}} のオリジンを返します。</dd>
+ <dt>{{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}</dt>
+ <dd>サーバー送信イベント（<a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">server-sent events</a>）で、イベントソースの最後のイベント ID を表します。 これは空の文字列です。</dd>
+ <dt>{{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}</dt>
+ <dd>メッセージを送信した {{domxref("Client")}} オブジェクトへの参照を返します。</dd>
+ <dt>{{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}</dt>
+ <dd>関連するメッセージチャンネルのポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_親の {{domxref("ExtendableEvent")}} からメソッドを継承します。_
+<p><em>親の {{domxref("ExtendableEvent")}} からメソッドを継承します。</em></p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-以下の例では、ページが {{domxref("ServiceWorkerRegistration.active")}} を介して {{domxref("ServiceWorker")}} オブジェクトへのハンドルを取得し、その `postMessage()` 関数を呼び出します。
+<p>以下の例では、ページが {{domxref("ServiceWorkerRegistration.active")}} を介して {{domxref("ServiceWorker")}} オブジェクトへのハンドルを取得し、その <code>postMessage()</code> 関数を呼び出します。</p>
 
-```js
-// 制御されているページ内
+<pre class="brush: js notranslate">// 制御されているページ内
 if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
 
-  navigator.serviceWorker.addEventListener('message', event => {
+  navigator.serviceWorker.addEventListener('message', event =&gt; {
     // event は MessageEvent オブジェクトです
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration => {
+  navigator.serviceWorker.ready.then( registration =&gt; {
     registration.active.postMessage("Hi service worker");
   });
 
-}
-```
+}</pre>
 
-次のように、サービスワーカーは、`message` イベントをリッスンしてメッセージを受信できます。
+<p>次のように、サービスワーカーは、<code>message</code> イベントをリッスンしてメッセージを受信できます。</p>
 
-```js
-// サービスワーカー内
-addEventListener('message', event => {
+<pre class="brush: js notranslate">// サービスワーカー内
+addEventListener('message', event =&gt; {
   // event は ExtendableMessageEvent オブジェクトです
   console.log(`The client sent me a message: ${event.data}`);
 
   event.source.postMessage("Hi client");
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                             | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#extendablemessageevent', 'ExtendableMessageEvent')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#extendablemessageevent', 'ExtendableMessageEvent')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ExtendableMessageEvent")}}
+<div>
 
-## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)
+<p>{{Compat("api.ExtendableMessageEvent")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
+ <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
+ <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
+</ul>

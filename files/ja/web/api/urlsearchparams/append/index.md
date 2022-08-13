@@ -9,51 +9,70 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams/append
 ---
-{{ApiRef("URL API")}}
+<p>{{ApiRef("URL API")}}</p>
 
-{{domxref("URLSearchParams")}} インターフェイスの **`append()`** メソッドは、指定されたキー/値のペアを新しい検索パラメーターとして追加します。
+<p><span class="seoSummary">{{domxref("URLSearchParams")}} インターフェイスの <strong><code>append()</code></strong> メソッドは、指定されたキー/値のペアを新しい検索パラメーターとして追加します。</span></p>
 
-下にある例に示すように、同じキーが複数回追加された場合、各値がパラメーター文字列に複数回現れます。
+<p>下にある例に示すように、同じキーが複数回追加された場合、各値がパラメーター文字列に複数回現れます。</p>
 
-{{availableinworkers}}
+<p>{{availableinworkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    URLSearchParams.append(name, value)
+<pre class="syntaxbox">URLSearchParams.append(<em>name</em>, <em>value</em>)</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- name
-  - : 追加するパラメーターの名前。
-- value
-  - : 追加するパラメーターの値。
+<dl>
+ <dt>name</dt>
+ <dd>追加するパラメーターの名前。</dd>
+ <dt>value </dt>
+ <dd>追加するパラメーターの値。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-無効。
+<p>無効。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-let url = new URL('https://example.com?foo=1&bar=2');
+<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 // 2番目の foo パラメーターを追加します。
 params.append('foo', 4);
-// クエリー文字列は現在: 'foo=1&bar=2&foo=4'
-```
+// クエリー文字列は現在: 'foo=1&amp;bar=2&amp;foo=4'</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                 | 状態                 | コメント |
-| ------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-append', "append()")}} | {{Spec2('URL')}} | 初期定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('URL', '#dom-urlsearchparams-append', "append()")}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.URLSearchParams.append")}}
+<div>
 
-## 関連項目
 
-- その他の URL 関連インターフェイス: {{domxref("URL")}}、{{domxref("HTMLHyperlinkElementUtils")}}。
-- [Google Developers: URLSearchParams を使用した簡単な URL 操作](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)（英語）
+<p>{{Compat("api.URLSearchParams.append")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li>その他の URL 関連インターフェイス: {{domxref("URL")}}、{{domxref("HTMLHyperlinkElementUtils")}}。</li>
+ <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: URLSearchParams を使用した簡単な URL 操作</a>（英語）</li>
+</ul>

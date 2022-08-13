@@ -5,54 +5,47 @@ tags:
   - XSLT
 translation_of: Web/API/XSLTProcessor/Basic_Example
 ---
-## 基本的な例
+<h2 id="Basic_Example">基本的な例</h2>
 
-最初の例は、ブラウザーで XSLT 変換の設定の基本を実演します。 この例は、人が読むことのできる書式で書かれた記事についての情報 (タイトル、著者の一覧、本文) を含む XML 文書を取得します。
+<p>最初の例は、ブラウザーで XSLT 変換の設定の基本を実演します。 この例は、人が読むことのできる書式で書かれた記事についての情報 (タイトル、著者の一覧、本文) を含む XML 文書を取得します。</p>
+<p>図 1 は基本的な XSLT の例のソースです。 XML 文書 (example.xml) は記事についての情報を含んでいます。 <code>?xml-stylesheet?</code> で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。</p>
+<p>XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、<code>xsl:stylesheet</code> 要素で開始します。図 1 の例には二つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。ルートノードが出力する記事のタイトルにテンプレートが一致すると、(<code>apply-templates</code> を通して) Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。</p>
 
-図 1 は基本的な XSLT の例のソースです。 XML 文書 (example.xml) は記事についての情報を含んでいます。 `?xml-stylesheet?` で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。
+<p>図 1 : 簡単な XSLT の例</p>
+<p>XML 文書 (example.xml) :</p>
 
-XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、`xsl:stylesheet` 要素で開始します。図 1 の例には二つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。ルートノードが出力する記事のタイトルにテンプレートが一致すると、(`apply-templates` を通して) Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="example.xsl"?&gt;
+&lt;Article&gt;
+  &lt;Title&gt;My Article&lt;/Title&gt;
+  &lt;Authors&gt;
+    &lt;Author&gt;Mr. Foo&lt;/Author&gt;
+    &lt;Author&gt;Mr. Bar&lt;/Author&gt;
+  &lt;/Authors&gt;
+  &lt;Body&gt;This is my article text.&lt;/Body&gt;
+&lt;/Article&gt;</pre>
 
-図 1 : 簡単な XSLT の例
+<p>XSL スタイルシート (example.xsl) :</p>
 
-XML 文書 (example.xml) :
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
 
-```xml
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="example.xsl"?>
-<Article>
-  <Title>My Article</Title>
-  <Authors>
-    <Author>Mr. Foo</Author>
-    <Author>Mr. Bar</Author>
-  </Authors>
-  <Body>This is my article text.</Body>
-</Article>
-```
+  &lt;xsl:output method="text"/&gt;
 
-XSL スタイルシート (example.xsl) :
+  &lt;xsl:template match="/"&gt;
+    Article - &lt;xsl:value-of select="/Article/Title"/&gt;
+    Authors: &lt;xsl:apply-templates select="/Article/Authors/Author"/&gt;
+  &lt;/xsl:template&gt;
 
-```xml
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  &lt;xsl:template match="Author"&gt;
+    - &lt;xsl:value-of select="." /&gt;
+  &lt;/xsl:template&gt;
 
-  <xsl:output method="text"/>
+&lt;/xsl:stylesheet&gt;</pre>
 
-  <xsl:template match="/">
-    Article - <xsl:value-of select="/Article/Title"/>
-    Authors: <xsl:apply-templates select="/Article/Authors/Author"/>
-  </xsl:template>
+<p>ブラウザーの出力:</p>
 
-  <xsl:template match="Author">
-    - <xsl:value-of select="." />
-  </xsl:template>
-
-</xsl:stylesheet>
-```
-
-ブラウザーの出力:
-
-    Article - My Article
-    Authors:
-    - Mr. Foo
-    - Mr. Bar
+<pre>Article - My Article
+Authors:
+- Mr. Foo
+- Mr. Bar</pre>

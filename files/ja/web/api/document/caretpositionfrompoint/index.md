@@ -12,46 +12,45 @@ tags:
 translation_of: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 ---
-{{APIRef("CSSOM View")}}{{SeeCompatTable}}
+<p>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</p>
 
-{{domxref("DocumentOrShadowRoot")}} インターフェイスの **`caretPositionFromPoint()`** プロパティは、 DOM ノードを含む {{domxref('CaretPosition')}} オブジェクトを、そのノード内のキャレットとキャレットの文字オフセットと共に返します。
+<p><span class="seoSummary">{{domxref("DocumentOrShadowRoot")}} インターフェイスの <strong><code>caretPositionFromPoint()</code></strong> プロパティは、 DOM ノードを含む {{domxref('CaretPosition')}} オブジェクトを、そのノード内のキャレットとキャレットの文字オフセットと共に返します。</span></p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var caretPosition = document.caretPositionFromPoint(float x, float y);
+<pre class="syntaxbox notranslate">var caretPosition = document.caretPositionFromPoint(float x, float y);</pre>
 
-### パラメータ
+<h3 id="パラメータ">パラメータ</h3>
 
-- `x`
-  - : ポイントの水平座標。
-- `y`
-  - : ポイントの垂直座標。
+<dl>
+ <dt><code>x</code></dt>
+ <dd>ポイントの水平座標。</dd>
+ <dt><code>y</code></dt>
+ <dd>ポイントの垂直座標。</dd>
+</dl>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-{{domxref('CaretPosition')}} オブジェクト。
+<p>{{domxref('CaretPosition')}} オブジェクト。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-この例では、クリックした場所に改行を挿入します。そのコードはデモの下にあります。
+<p>この例では、クリックした場所に改行を挿入します。そのコードはデモの下にあります。</p>
 
-### Demo
+<h3 id="Demo">Demo</h3>
 
-{{EmbedLiveSample('Example', '100%', '300px')}}
+<p>{{EmbedLiveSample('Example', '100%', '300px')}}</p>
 
-### HTML Content
+<h3 id="HTML_Content">HTML Content</h3>
 
-```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+<pre class="brush: html notranslate">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-```
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</pre>
 
-### JavaScript Content
+<h3 id="JavaScript_Content">JavaScript Content</h3>
 
-```js
-function insertBreakAtPoint(e) {
+<pre class="brush: js notranslate">function insertBreakAtPoint(e) {
   var range;
   var textNode;
   var offset;
@@ -76,18 +75,30 @@ function insertBreakAtPoint(e) {
 
 window.onload = function (){
   var paragraphs = document.getElementsByTagName("p");
-  for (i=0 ; i < paragraphs.length; i++) {
+  for (i=0 ; i &lt; paragraphs.length; i++) {
     paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
   }
-};
-```
+};</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                         | ステータス                       | 備考                |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}} | {{Spec2('CSSOM View')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}
+
+
+<p>{{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}</p>

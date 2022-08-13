@@ -14,55 +14,81 @@ tags:
 translation_of: Web/API/Document/transitioncancel_event
 original_slug: Web/API/Document/transitioncancel_event
 ---
-{{APIRef}}{{SeeCompatTable}}
+<div>{{APIRef}}{{SeeCompatTable}}</div>
 
-**`transitioncancel`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)がキャンセルされたときに発生します。
+<p><strong><code>transitioncancel</code></strong> イベントは、 <a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジション</a>がキャンセルされたときに発生します。</p>
 
-詳しくは {{domxref("GlobalEventHandlers.ontransitioncancel")}} をご覧ください。
+<p>詳しくは {{domxref("GlobalEventHandlers.ontransitioncancel")}} をご覧ください。</p>
 
-| バブリング                   | あり                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                     |
-| インターフェイス             | {{domxref("TransitionEvent")}}                                 |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.ontransitioncancel")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("TransitionEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.ontransitioncancel")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 [HTMLElement: transitioncancel イベント](/ja/docs/Web/API/HTMLElement/transitioncancel_event)を参照してください。
+<p>このイベントの本来の対象は、トランジションが適用された {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントについて完全な詳細は、 <a href="/ja/docs/Web/API/HTMLElement/transitioncancel_event">HTMLElement: transitioncancel イベント</a>を参照してください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-このコードは、リスナーに `transitioncancel` イベントを追加します。
+<p>このコードは、リスナーに <code>transitioncancel</code> イベントを追加します。</p>
 
-```js
-document.addEventListener('transitioncancel', () => {
+<pre class="brush: js">document.addEventListener('transitioncancel', () =&gt; {
   console.log('Transition canceled');
-});
-```
+});</pre>
 
-同様に、 {{domxref("GlobalEventHandlers.ontransitioncancel", "ontransitioncancel")}} プロパティを `addEventListener()` の代わりに使用した例です。
+<p>同様に、 {{domxref("GlobalEventHandlers.ontransitioncancel", "ontransitioncancel")}} プロパティを <code>addEventListener()</code> の代わりに使用した例です。</p>
 
-```js
-document.ontransitioncancel = () => {
+<pre class="brush: js">document.ontransitioncancel = () =&gt; {
   console.log('Transition canceled');
-};
-```
+};</pre>
 
-[このイベントのライブデモを参照してください。](/ja/docs/Web/API/HTMLElement/transitioncancel_event#Live_example)
+<p><a href="/ja/docs/Web/API/HTMLElement/transitioncancel_event#Live_example">このイベントのライブデモを参照してください。</a></p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                           | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('CSS3 Transitions', '#transitioncancel', 'transitioncancel')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions', '#transitioncancel', 'transitioncancel')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.transitioncancel_event")}}
+<p>{{Compat("api.Document.transitioncancel_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("GlobalEventHandlers.ontransitioncancel")}} イベントハンドラー
-- {{domxref("TransitionEvent")}} インターフェイス
-- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- 関連イベント: {{domxref("Document/transitionrun_event", "transitionrun")}}, {{domxref("Document/transitionstart_event", "transitionstart")}}, {{domxref("Document/transitionend_event", "transitionend")}}
-- {{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/transitioncancel_event", "transitioncancel")}}
+<ul>
+ <li>{{domxref("GlobalEventHandlers.ontransitioncancel")}} イベントハンドラー</li>
+ <li>{{domxref("TransitionEvent")}} インターフェイス</li>
+ <li>CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
+ <li>関連イベント: {{domxref("Document/transitionrun_event", "transitionrun")}}, {{domxref("Document/transitionstart_event", "transitionstart")}}, {{domxref("Document/transitionend_event", "transitionend")}}</li>
+ <li>{{domxref("HTMLElement")}} を対象としたこのイベント: {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}</li>
+ <li>{{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/transitioncancel_event", "transitioncancel")}}</li>
+</ul>

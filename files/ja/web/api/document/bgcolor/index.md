@@ -12,29 +12,33 @@ tags:
   - Reference
 translation_of: Web/API/Document/bgColor
 ---
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+<p>{{APIRef("DOM")}} {{ Deprecated_header() }}</p>
 
-廃止された `bgColor` プロパティは、現在の文書の背景色を取得または設定します。
+<p>廃止された <code>bgColor</code> プロパティは、現在の文書の背景色を取得または設定します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    color = document.bgColor
-    document.bgColor =color
+<pre class="syntaxbox"><em>color</em> = document.bgColor
+document.bgColor =<em>color</em>
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `color` : 色名 (`"white"` 等) またはカラーコード (`"#FFFFFF"` 等) の文字列
+<ul>
+ <li><code>color</code> : 色名 (<code>"white"</code> 等) またはカラーコード (<code>"#FFFFFF"</code> 等) の文字列</li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-    document.bgColor = "darkblue";
+<pre class="eval">document.bgColor = "darkblue";
+</pre>
 
-## メモ
+<h2 id="Notes" name="Notes">メモ</h2>
 
-Firefox ではこのプロパティの初期値は白 (16 進表記で `#FFFFFF`) となっています。
+<p>Firefox ではこのプロパティの初期値は白 (16進表記で <code>#FFFFFF</code>) となっています。</p>
 
-`document.bgColor` は [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) で非推奨になっています。推奨される代替方法は、 CSS の {{Cssxref("background-color")}} を使用することで、 `document.body.style.backgroundColor` で DOM を通してアクセスできます。もう一つの代替手段である `document.body.bgColor` は、 HTML 4.01 で CSS に代替されたため非推奨となっています。
+<p><code>document.bgColor</code> は <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML</a> で非推奨になっています。推奨される代替方法は、 CSS の {{Cssxref("background-color")}} を使用することで、 <code>document.body.style.backgroundColor</code> で DOM を通してアクセスできます。もう一つの代替手段である <code>document.body.bgColor</code> は、 HTML 4.01 で CSS に代替されたため非推奨となっています。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.bgColor")}}
+<p>{{Compat("api.Document.bgColor")}}</p>

@@ -7,47 +7,72 @@ tags:
   - Worker API
 translation_of: Web/API/ErrorEvent
 ---
-{{APIRef("HTML DOM")}}
+<p>{{APIRef("HTML DOM")}}</p>
 
-**`ErrorEvent`** インターフェイスは、スクリプトまたはファイルのエラーに関連する情報を提供するイベントを表します。
+<p><strong><code>ErrorEvent</code></strong> インターフェイスは、スクリプトまたはファイルのエラーに関連する情報を提供するイベントを表します。</p>
 
-{{InheritanceDiagram(600, 120)}}
+<p>{{InheritanceDiagram(600, 120)}}</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_また、親である {{domxref("Event")}}_ からプロパティを継承します。
+<p><em>また、親である {{domxref("Event")}}</em> からプロパティを継承します。</p>
 
-- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : 関数を説明するヒューマンリーダブルなエラーメッセージを含む {{domxref("DOMString")}} です。
-- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : エラーが発生したスクリプトファイルの名前を含む {{domxref("DOMString")}} です。
-- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
-  - : エラーが発生したスクリプトファイルの行番号を含む `integer` です。
-- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
-  - : エラーが発生したスクリプトファイルの列番号を含む `integer` です。
-- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
-  - : イベントに関係する JavaScript `Object` です。
+<dl>
+ <dt>{{domxref("ErrorEvent.message")}} {{readonlyInline}}</dt>
+ <dd>関数を説明するヒューマンリーダブルなエラーメッセージを含む {{domxref("DOMString")}} です。</dd>
+ <dt>{{domxref("ErrorEvent.filename")}} {{readonlyInline}}</dt>
+ <dd>エラーが発生したスクリプトファイルの名前を含む {{domxref("DOMString")}} です。</dd>
+ <dt>{{domxref("ErrorEvent.lineno")}} {{readonlyInline}}</dt>
+ <dd>エラーが発生したスクリプトファイルの行番号を含む <code>integer</code> です。</dd>
+ <dt>{{domxref("ErrorEvent.colno")}} {{readonlyInline}}</dt>
+ <dd>エラーが発生したスクリプトファイルの列番号を含む <code>integer</code> です。</dd>
+ <dt>{{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>イベントに関係する JavaScript <code>Object</code> です。</dd>
+</dl>
 
-## コンストラクタ
+<h2 id="コンストラクタ">コンストラクタ</h2>
 
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : 指定されたパラメータで `ErrorEvent` イベントを作成します。
+<dl>
+ <dt>{{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}</dt>
+ <dd>指定されたパラメータで <code>ErrorEvent</code> イベントを作成します。</dd>
+</dl>
 
-## 関数
+<h2 id="関数">関数</h2>
 
-_親である {{domxref("Event")}}_ から関数を継承します。
+<p><em>親である {{domxref("Event")}}</em> から関数を継承します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                 | ステータス                           | 備考                                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }} | {{ Spec2('HTML WHATWG') }} | `error` プロパティと 5 番目のパラメータをコンストラクタに追加。 |
-| {{ SpecName('HTML5 W3C', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}     | {{ Spec2('HTML5 W3C') }}     | 初回定義。                                                      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('HTML WHATWG', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td><code>error</code> プロパティと5番目のパラメータをコンストラクタに追加。</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5 W3C', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}</td>
+   <td>{{ Spec2('HTML5 W3C') }}</td>
+   <td>初回定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.ErrorEvent")}}
 
-## 関連項目
 
-- [web worker を使用して](/ja/docs/Web/Guide/Performance/Using_web_workers "/en-US/docs/Web/Guide/Performance/Using_web_workers")、 その様なイベントを発生させる可能性が最も高いオブジェクト
+<p>{{Compat("api.ErrorEvent")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/Guide/Performance/Using_web_workers" title="/en-US/docs/Web/Guide/Performance/Using_web_workers">web worker を使用して</a>、 その様なイベントを発生させる可能性が最も高いオブジェクト</li>
+</ul>

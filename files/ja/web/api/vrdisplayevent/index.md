@@ -12,43 +12,59 @@ tags:
   - WebVR
 translation_of: Web/API/VRDisplayEvent
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRDisplayEvent`** インターフェイスは、 WebVR 関連イベントのイベントオブジェクトを表します ([WebVR ウインドウ拡張機能のリスト](/ja/docs/Web/API/WebVR_API#Window)を参照)。
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRDisplayEvent</code></strong> インターフェイスは、 WebVR 関連イベントのイベントオブジェクトを表します (<a href="/ja/docs/Web/API/WebVR_API#Window">WebVR ウインドウ拡張機能のリスト</a>を参照)。</p>
 
-## コンストラクタ
+<h2 id="コンストラクタ">コンストラクタ</h2>
 
-- {{domxref("VRDisplayEvent.VRDisplayEvent()")}}
-  - : `VRDisplayEvent` オブジェクトのインスタンスを生成します。
+<dl>
+ <dt>{{domxref("VRDisplayEvent.VRDisplayEvent()")}}</dt>
+ <dd><code>VRDisplayEvent</code> オブジェクトのインスタンスを生成します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_`VRDisplayEvent` は、親オブジェクト {{domxref("Event")}} からプロパティも継承します。_
+<p><em><code>VRDisplayEvent</code> は、親オブジェクト {{domxref("Event")}} からプロパティも継承します。</em></p>
 
-- {{domxref("VRDisplayEvent.display")}} {{readonlyInline}}
-  - : このイベントに関連付けられた {{domxref("VRDisplay")}} 。
-- {{domxref("VRDisplayEvent.reason")}} {{readonlyInline}}
-  - : イベントが発生したヒューマンリーダブルな理由。
+<dl>
+ <dt>{{domxref("VRDisplayEvent.display")}} {{readonlyInline}}</dt>
+ <dd>このイベントに関連付けられた {{domxref("VRDisplay")}} 。</dd>
+ <dt>{{domxref("VRDisplayEvent.reason")}} {{readonlyInline}}</dt>
+ <dd>イベントが発生したヒューマンリーダブルな理由。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-window.addEventListener('vrdisplaypresentchange', function(e) {
+<pre class="brush: js notranslate">window.addEventListener('vrdisplaypresentchange', function(e) {
   console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
 })
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                             | ステータス                   | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}} | {{Spec2('WebVR 1.1')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}}</td>
+   <td>{{Spec2('WebVR 1.1')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.VRDisplayEvent")}}
+<p>{{Compat("api.VRDisplayEvent")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
+</ul>

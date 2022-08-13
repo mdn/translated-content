@@ -8,39 +8,54 @@ tags:
   - Reference
 translation_of: Web/API/DeviceProximityEvent
 ---
-{{APIRef("Proximity Events")}}{{SeeCompatTable}}
+<p>{{APIRef("Proximity Events")}}{{SeeCompatTable}}</p>
 
-`DeviceProximityEvent` インターフェースは、端末の近接センサーを使用して近くの物理オブジェクトの距離についての情報を提供します。
+<p><code>DeviceProximityEvent</code> インターフェースは、端末の近接センサーを使用して近くの物理オブジェクトの距離についての情報を提供します。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-- {{domxref("DeviceProximityEvent.max")}} {{readonlyinline}}
-  - : センサーが報告できる最大検出距離 (センチメートル単位)。
-- {{domxref("DeviceProximityEvent.min")}} {{readonlyinline}}
-  - : センサーが報告できる最小検出距離 (センチメートル単位)。通常は 0。
-- {{domxref("DeviceProximityEvent.value")}} {{readonlyinline}}
-  - : 現在の端末近接度 (センチメートル単位)
+<dl>
+ <dt>{{domxref("DeviceProximityEvent.max")}} {{readonlyinline}}</dt>
+ <dd>センサーが報告できる最大検出距離 (センチメートル単位)。</dd>
+ <dt>{{domxref("DeviceProximityEvent.min")}} {{readonlyinline}}</dt>
+ <dd>センサーが報告できる最小検出距離 (センチメートル単位)。通常は 0。</dd>
+ <dt>{{domxref("DeviceProximityEvent.value")}} {{readonlyinline}}</dt>
+ <dd>現在の端末近接度 (センチメートル単位)</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-window.addEventListener('deviceproximity', function(event) {
-  console.log("value: " + event.value, "max: " + event.max, "min: " + event.min);
-});
-```
+<pre class="brush: js">window.addEventListener('deviceproximity', function(event) {
+  console.log(<code class="brush: js">"value: " + event.value, "max: " + event.max, "min: " + event.min</code>);
+});</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{ SpecName('Proximity Events', '', 'Proximity Events') }} | {{ Spec2('Proximity Events') }} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Proximity Events', '', 'Proximity Events') }}</td>
+   <td>{{ Spec2('Proximity Events') }}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.DeviceProximityEvent")}}
+<p>{{Compat("api.DeviceProximityEvent")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{event("deviceproximity")}}
-- {{domxref("UserProximityEvent")}}
-- [Proximity API](/ja/docs/WebAPI/Proximity)
+<ul>
+ <li>{{event("deviceproximity")}}</li>
+ <li>{{domxref("UserProximityEvent")}}</li>
+ <li><a href="/ja/docs/WebAPI/Proximity" title="/ja/docs/WebAPI/Proximity">Proximity API</a></li>
+</ul>

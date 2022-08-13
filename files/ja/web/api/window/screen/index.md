@@ -9,30 +9,42 @@ tags:
   - Window
 translation_of: Web/API/Window/screen
 ---
-{{APIRef("CSSOM")}}
+<p>{{APIRef("CSSOM")}}</p>
 
-{{DOMxRef("Window")}} の **`screen`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `screen` オブジェクトは {{DOMxRef("Screen")}} インターフェースを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。
+<p>{{DOMxRef("Window")}} の <strong><code>screen</code></strong> プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 <code>screen</code> オブジェクトは {{DOMxRef("Screen")}} インターフェースを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    let screenObj = window.screen;
+<pre class="syntaxbox notranslate">let <var>screenObj</var> = <var>window</var>.screen;</pre>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-if (screen.pixelDepth < 8) {
+<pre class="brush: js; notranslate">if (screen.pixelDepth &lt; 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                   | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.screen")}}
+<p>{{Compat("api.Window.screen")}}</p>

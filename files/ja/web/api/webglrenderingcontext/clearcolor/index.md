@@ -3,57 +3,75 @@ title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
-{{APIRef("WebGL")}}
+<div>{{APIRef("WebGL")}}</div>
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clearColor()`** メソッドは、カラーバッファーの消去に使われる色の値を指定します。
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の  <strong><code>WebGLRenderingContext.clearColor()</code></strong> メソッドは、カラーバッファーの消去に使われる色の値を指定します。</p>
 
-この指定は {{domxref("WebGLRenderingContext.clear", "clear()")}} メソッドを呼んだときに使用される色です。値は 0 から 1 に丸められます。
+<p>この指定は {{domxref("WebGLRenderingContext.clear", "clear()")}} メソッドを呼んだときに使用される色です。値は 0 から 1 に丸められます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    void gl.clearColor(red, green, blue, alpha);
+<pre class="syntaxbox">void <var>gl</var>.clearColor(<var>red, green, blue, alpha</var>);
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-- `red`
-  - : 赤色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。
-- `green`
-  - : 緑色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。
-- `blue`
-  - : 青色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。
-- `alpha`
-  - : アルファ (不透明度) を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。
+<dl>
+ <dt><code>red</code></dt>
+ <dd>赤色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。</dd>
+ <dt><code>green</code></dt>
+ <dd>緑色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。</dd>
+ <dt><code>blue</code></dt>
+ <dd>青色を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。</dd>
+ <dt><code>alpha</code></dt>
+ <dd>アルファ (不透明度) を指定する {{domxref("GLclampf")}} で、カラーバッファーの消去に使われます。既定値は 0 です。</dd>
+</dl>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-ありません。
+<p>ありません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-gl.clearColor(1, 0.5, 0.5, 3);
-```
+<pre class="brush: js">gl.clearColor(1, 0.5, 0.5, 3);
+</pre>
 
-現在の消去に使われる色を取得するには、`COLOR_CLEAR_VALUE` 定数で問い合わせると {{jsxref("Float32Array")}} を返します。
+<p>現在の消去に使われる色を取得するには、<code>COLOR_CLEAR_VALUE</code> 定数で問い合わせると {{jsxref("Float32Array")}} を返します。</p>
 
-```js
-gl.getParameter(gl.COLOR_CLEAR_VALUE);
+<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
 // Float32Array[1, 0.5, 0.5, 1]
-```
+</pre>
 
-## 仕様策定状況
+<h2 id="仕様策定状況">仕様策定状況</h2>
 
-| 仕様                                                                                     | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "clearColor")}}                             | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glClearColor.xml", "glClearColor")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.3", "clearColor")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>初回定義。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glClearColor.xml", "glClearColor")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>OpenGL API のマニュアルページ。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.WebGLRenderingContext.clearColor")}}
+<p>{{Compat("api.WebGLRenderingContext.clearColor")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{domxref("WebGLRenderingContext.clear()")}}
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+<ul>
+ <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
+</ul>

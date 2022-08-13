@@ -3,87 +3,117 @@ title: unload
 slug: Web/API/Window/unload_event
 translation_of: Web/API/Window/unload_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`unload` イベントは、文書または子リソースがアンロードされるときに発生します。
+<p><span class="seoSummary"><code>unload</code> イベントは、文書または子リソースがアンロードされるときに発生します。</span></p>
 
-| バブリング                   | なし                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                     |
-| インターフェイス             | {{domxref("Event")}}                                             |
-| イベントハンドラープロパティ | {{domxref("WindowEventHandlers/onunload", "onunload")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("WindowEventHandlers/onunload", "onunload")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-以下のイベントの後に発生します。
+<p>以下のイベントの後に発生します。</p>
 
-- {{domxref("Window/beforeunload_event", "beforeunload")}} (キャンセル可能なイベント)
-- {{domxref("Window/pagehide_event", "pagehide")}}
+<ul>
+ <li>{{domxref("Window/beforeunload_event", "beforeunload")}} (キャンセル可能なイベント)</li>
+ <li>{{domxref("Window/pagehide_event", "pagehide")}}</li>
+</ul>
 
-文書は以下のような状態にあります。
+<p>文書は以下のような状態にあります。</p>
 
-- すべてのリソースがまだ存在する (img、iframe など)
-- エンドユーザーから見えるものは何もない
-- UI でのやり取りは効果がない ({{domxref("window.open")}}, {{domxref("window.alert", "alert")}}, {{domxref("window.confirm", "confirm")}}, など)
-- エラーが発生しても、アンロードの処理の流れは停止しない
+<ul>
+ <li>すべてのリソースがまだ存在する (img、iframe など)</li>
+ <li>エンドユーザーから見えるものは何もない</li>
+ <li>UI でのやり取りは効果がない ({{domxref("window.open")}}, {{domxref("window.alert", "alert")}}, {{domxref("window.confirm", "confirm")}}, など)</li>
+ <li>エラーが発生しても、アンロードの処理の流れは停止しない</li>
+</ul>
 
-unload イベントは文書ツリーにも続くことに注意してください。親フレームのアンロードは、子フレームの `unload` の前に行われます (以下の例を参照)。
+<p>unload イベントは文書ツリーにも続くことに注意してください。親フレームのアンロードは、子フレームの <code>unload</code> の前に行われます (以下の例を参照)。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Parent Frame</title>
-    <script>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Parent Frame&lt;/title&gt;
+    &lt;script&gt;
       window.addEventListener('beforeunload', function(event) {
         console.log('I am the 1st one.');
       });
       window.addEventListener('unload', function(event) {
         console.log('I am the 3rd one.');
       });
-    </script>
-  </head>
-  <body>
-    <iframe src="child-frame.html"></iframe>
-  </body>
-</html>
-```
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;iframe src="child-frame.html"&gt;&lt;/iframe&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
-`child-frame.html` の内容を以下に示します。
+<p><code>child-frame.html</code> の内容を以下に示します。</p>
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Child Frame</title>
-    <script>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Child Frame&lt;/title&gt;
+    &lt;script&gt;
       window.addEventListener('beforeunload', function(event) {
         console.log('I am the 2nd one.');
       });
       window.addEventListener('unload', function(event) {
         console.log('I am the 4th and last one…');
       });
-    </script>
-  </head>
-  <body>
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
       ☻
-  </body>
-</html>
-```
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
-親フレームがアンロードされると、 `console.log()` のメッセージに記述された順序でイベントが発生します。
+<p>親フレームがアンロードされると、 <code>console.log()</code> のメッセージに記述された順序でイベントが発生します。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                       | 状態                         | 備考 |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---- |
-| {{SpecName('UI Events', '#event-type-unload', 'unload')}} | {{Spec2('UI Events')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-unload', 'unload')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Window.unload_event")}}
+<p>{{Compat("api.Window.unload_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
+<ul>
+ <li>関連イベント: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}</li>
+ <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents">Unloading Documents — unload a document</a></li>
+</ul>

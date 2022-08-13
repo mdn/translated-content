@@ -10,77 +10,90 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/FormData
 ---
-{{APIRef("XMLHttpRequest")}}
+<p>{{APIRef("XMLHttpRequest")}}</p>
 
-**`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。
+<p><code><strong>FormData()</strong></code> コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。</p>
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+<div class="note">
+<p><strong>Note</strong>: このメソッドは <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> で使用できます。</p>
+</div>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var formData = new FormData(form)
-```
+<pre class="brush: js notranslate"><code>var formData = new FormData(</code><code>form</code><code>)</code></pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `form `{{optional_inline}}
-  - : HTML の {{HTMLElement("form")}} 要素です。これが指定されたとき、{{domxref("FormData")}} オブジェクトは、その各要素の name プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。
+<dl>
+ <dt><code>form </code>{{optional_inline}}</dt>
+ <dd>HTML の {{HTMLElement("form")}} 要素です。これが指定されたとき、{{domxref("FormData")}} オブジェクトは、その各要素の name プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-次の行は、空の `FormData` オブジェクトを生成します:
+<p>次の行は、空の <code>FormData</code> オブジェクトを生成します:</p>
 
-```js
-var formData = new FormData(); // Currently empty
-```
+<pre class="brush: js notranslate">var formData = new FormData(); // Currently empty</pre>
 
-{{domxref("FormData.append")}} を使って、これにキーと値の組を追加することができます:
+<p>{{domxref("FormData.append")}} を使って、これにキーと値の組を追加することができます:</p>
 
-```js
-formData.append('username', 'Chris');
-```
+<pre class="brush: js notranslate">formData.append('username', 'Chris');
+</pre>
 
-または、`FormData` オブジェクトを生成するときにオプションの `form` 引数を指定することにより、指定したフォームの値を設定することができます:
+<p>または、<code>FormData</code> オブジェクトを生成するときにオプションの <code><em>form</em></code> 引数を指定することにより、指定したフォームの値を設定することができます:</p>
 
-```html
-<form id="myForm" name="myForm">
-  <div>
-    <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username">
-  </div>
-  <div>
-    <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc">
-  </div>
-  <div>
-    <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile">
-  </div>
-  <input type="submit" value="Submit!">
-</form>
-```
+<pre class="brush: html notranslate">&lt;form id="myForm" name="myForm"&gt;
+  &lt;div&gt;
+    &lt;label for="username"&gt;Enter name:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="useracc"&gt;Enter account number:&lt;/label&gt;
+    &lt;input type="text" id="useracc" name="useracc"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="userfile"&gt;Upload file:&lt;/label&gt;
+    &lt;input type="file" id="userfile" name="userfile"&gt;
+  &lt;/div&gt;
+  &lt;input type="submit" value="Submit!"&gt;
+&lt;/form&gt;
+</pre>
 
-> **Note:** 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。
+<div class="note">
+<p><strong>Note</strong>: 正しく選択されたフォーム コントロールだけが FormData に含まれます。つまり、name 属性を持ち、disabled ではなく、checked (ラジオボタンやチェックボックス) または selected (選択リストのひとつ以上のオプション) であるものです。</p>
+</div>
 
-```js
-let myForm = document.getElementById('myForm');
-let formData = new FormData(myForm);
-```
+<pre class="brush: js notranslate">let myForm = document.getElementById('myForm');
+let formData = new FormData(myForm);</pre>
 
-## 仕様書
+<h2 id="仕様書">仕様書</h2>
 
-| Specification                                                                    | Status                               | Comment            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.FormData.FormData")}}
 
-## 関連情報
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
-- {{HTMLElement("Form")}}
+<p>{{Compat("api.FormData.FormData")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{domxref("XMLHTTPRequest")}}</li>
+ <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
+ <li>{{HTMLElement("Form")}}</li>
+</ul>

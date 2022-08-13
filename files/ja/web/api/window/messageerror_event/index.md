@@ -10,45 +10,69 @@ tags:
   - イベント
 translation_of: Web/API/Window/messageerror_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`messageerror` イベントは、解読できないメッセージを受け取った時に {{domxref('Window')}} オブジェクトに発生します。
+<p><code>messageerror</code> イベントは、解読できないメッセージを受け取った時に {{domxref('Window')}} オブジェクトに発生します。</p>
 
-| バブリング                   | なし                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                                     |
-| インターフェイス             | {{domxref("MessageEvent")}}                                                     |
-| イベントハンドラープロパティ | {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("MessageEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`messageerror` は {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用して待ち受けします。
+<p><code>messageerror</code> は {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用して待ち受けします。</p>
 
-```js
-window.addEventListener('messageerror', (event) => {
+<pre class="brush: js">window.addEventListener('messageerror', (event) =&gt; {
     console.error(event);
-});
-```
+});</pre>
 
-同じですが、 {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} イベントハンドラープロパティを使用する場合です。
+<p>同じですが、 {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} イベントハンドラープロパティを使用する場合です。</p>
 
-```js
-window.onmessageerror = (event) => {
+<pre class="brush: js">window.onmessageerror = (event) =&gt; {
     console.error(event);
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                               | 状態                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}} | {{Spec2('HTML WHATWG')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.messageerror_event")}}
+<p>{{Compat("api.Window.messageerror_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Window.postMessage()")}}
-- 関連イベント: {{domxref("Window/message_event", "message")}}
+<ul>
+ <li>{{domxref("Window.postMessage()")}}</li>
+ <li>関連イベント: {{domxref("Window/message_event", "message")}}</li>
+</ul>

@@ -14,33 +14,51 @@ tags:
   - Video
 translation_of: Web/API/SourceBuffer/updating
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-{{domxref("SourceBuffer")}} インターフェイスの `updating` 読み取り専用プロパティは、`SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}}、または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。
+<p>{{domxref("SourceBuffer")}} インターフェイスの <code>updating</code> 読み取り専用プロパティは、<code>SourceBuffer</code> が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}}、または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var isUpdating = sourceBuffer.updating;
+<pre class="syntaxbox">var <em>isUpdating</em> = <em>sourceBuffer</em>.updating;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{jsxref("Boolean")}}。
+<p>{{jsxref("Boolean")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-未定
+<p>未定</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-updating', 'updating')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-updating', 'updating')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.SourceBuffer.updating")}}
+<div>
 
-## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+<p>{{Compat("api.SourceBuffer.updating")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("MediaSource")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

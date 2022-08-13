@@ -9,40 +9,37 @@ tags:
   - Property
   - Reference
   - platform
+browser-compat: api.Navigator.platform
 translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
-browser-compat: api.Navigator.platform
 ---
-{{ APIRef("HTML DOM") }} {{Deprecated_Header}}
+<p>{{ APIRef("HTML DOM") }} {{Deprecated_Header}}</p>
 
-ブラウザーのプラットフォームを表す文字列を返します。仕様書ではブラウザーが常に空文字列を返すことを許可していますので、信頼できる答えを得るためにこのプロパティを頼らないようにしてください。
+<p>ブラウザーのプラットフォームを表す文字列を返します。仕様書ではブラウザーが常に空文字列を返すことを許可していますので、信頼できる答えを得るためにこのプロパティを頼らないようにしてください。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-platform = navigator.platform
-```
+<pre class="brush: js"><em>platform</em> = navigator.platform
+</pre>
 
-### 値
+<h3 id="Value">値</h3>
 
-ブラウザーを実行しているプラットフォームを識別する {{domxref("DOMString")}}、あるいはブラウザーがプラットフォームの識別を断わった (または識別できない) 場合は空文字列になります。`platform` は空文字列か、ブラウザーを実行しているプラットフォームを表す文字列でなければなりません。
+<p>ブラウザーを実行しているプラットフォームを識別する {{domxref("DOMString")}}、あるいはブラウザーがプラットフォームの識別を断わった (または識別できない) 場合は空文字列になります。<code>platform</code> は空文字列か、ブラウザーを実行しているプラットフォームを表す文字列でなければなりません。</p>
 
-例: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
+<p>例: "<code>MacIntel</code>", "<code>Win32</code>", "<code>FreeBSD i386</code>", "<code>WebTV OS</code>"</p>
 
-## 例
+<h2 id="Example">例</h2>
 
-```js
-console.log(navigator.platform);
-```
+<pre class="brush: js">console.log(navigator.platform);</pre>
 
-## 使用上のメモ
+<h2 id="Usage_notes">使用上のメモ</h2>
 
-Chrome、Edge、Firefox 63 以降を含むほとんどのブラウザーは、64 ビット版の Windows で実行していても `"Win32"` を返します。 Internet Explorer やバージョン 63 より前の Firefox は `"Win64"` を返します。
+<p>Chrome、Edge、Firefox 63 以降を含むほとんどのブラウザーは、64 ビット版の Windows で実行していても <code>"Win32"</code> を返します。 Internet Explorer やバージョン 63 より前の Firefox は <code>"Win64"</code> を返します。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

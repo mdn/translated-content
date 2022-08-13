@@ -13,31 +13,30 @@ tags:
   - Video
 translation_of: Web/API/MediaSource/MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-{{domxref("MediaSource")}} インターフェイスの **`MediaSource()`** コンストラクタは、ソースバッファが関連付けられていない新しい `MediaSource` オブジェクトを構築して返します。
+<p>{{domxref("MediaSource")}} インターフェイスの <strong><code>MediaSource()</code></strong> コンストラクタは、ソースバッファが関連付けられていない新しい <code>MediaSource</code> オブジェクトを構築して返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var mediaSource = new MediaSource();
+<pre class="syntaxbox">var <em>mediaSource</em> = new MediaSource();</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-次のスニペットは、Nick Desaulniers によって書かれた簡単な例から抜粋したものです（[ライブで完全なデモを見る](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)か、[ソースをダウンロード](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)してさらに調査してください）。
+<p>次のスニペットは、Nick Desaulniers によって書かれた簡単な例から抜粋したものです（<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">ライブで完全なデモを見る</a>か、<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">ソースをダウンロード</a>してさらに調査してください）。</p>
 
-```js
-var video = document.querySelector('video');
+<pre class="brush: js">var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Blink はコーデックに関して特定する必要がある
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -47,13 +46,19 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 }
 
 ...
-```
+</pre>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.MediaSource.MediaSource")}}
+<div>
 
-## 関連情報
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+<p>{{Compat("api.MediaSource.MediaSource")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("SourceBuffer")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

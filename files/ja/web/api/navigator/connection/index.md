@@ -10,28 +10,43 @@ tags:
   - Reference
 translation_of: Web/API/Navigator/connection
 ---
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
 
-**`Navigator.connection`** は読み取り専用プロパティで、ユーザーの端末の現在の帯域幅や、接続が測定されているかどうかなどのシステムの接続に関する情報を含む {{domxref("NetworkInformation")}} を返します。ユーザーの接続に基づいて高解像度コンテンツ、または低解像度コンテンツのいずれを使うかの選択に使用できます。
+<p><span class="seoSummary"><code><strong>Navigator.connection</strong></code> は読み取り専用プロパティで、ユーザーの端末の現在の帯域幅や、接続が測定されているかどうかなどのシステムの接続に関する情報を含む {{domxref("NetworkInformation")}} を返します。</span>ユーザーの接続に基づいて高解像度コンテンツ、または低解像度コンテンツのいずれを使うかの選択に使用できます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    networkInformation = navigator.connection
+<pre class="syntaxbox notranslate"><var>networkInformation</var> = navigator.connection</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("NetworkInformation")}} オブジェクトです。
+<p>{{domxref("NetworkInformation")}} オブジェクトです。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                           | 状態                                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('Network Information', '#connection-attribute', 'Navigator.connection')}} | {{Spec2('Network Information')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Network Information', '#connection-attribute', 'Navigator.connection')}}</td>
+   <td>{{Spec2('Network Information')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Navigator.connection")}}
+<p>{{Compat("api.Navigator.connection")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [オンライン・オフラインイベント](/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events)
+<ul>
+ <li><a href="/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events">オンライン・オフラインイベント</a></li>
+</ul>

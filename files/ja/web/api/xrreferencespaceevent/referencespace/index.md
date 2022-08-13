@@ -21,26 +21,37 @@ tags:
   - source
 translation_of: Web/API/XRReferenceSpaceEvent/referenceSpace
 ---
-{{APIRef("WebXR Device API")}}{{SecureContext_header}}
+<p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
 
-{{domxref("XRReferenceSpaceEvent")}} の **`referenceSpace`** 読み取り専用プロパティは、イベントの発生元である参照空間を指定します。
+<p>{{domxref("XRReferenceSpaceEvent")}} の <strong><code>referenceSpace</code></strong> 読み取り専用プロパティは、イベントの発生元である参照空間を指定します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    let refSpace = xrReferenceSpaceEvent.referenceSpace;
+<pre class="syntaxbox notranslate">let <em>refSpace</em> = <em>xrReferenceSpaceEvent</em>.referenceSpace;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-イベントのソースを示す {{domxref("XRReferenceSpace")}}。
+<p>イベントのソースを示す {{domxref("XRReferenceSpace")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespaceevent-referencespace','XRReferenceSpaceEvent.referenceSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebXR','#dom-xrreferencespaceevent-referencespace','XRReferenceSpaceEvent.referenceSpace')}}</td>
+   <td>{{Spec2('WebXR')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.XRReferenceSpaceEvent.referenceSpace")}}
+<p>{{Compat("api.XRReferenceSpaceEvent.referenceSpace")}}</p>

@@ -10,52 +10,55 @@ tags:
   - Reference
 translation_of: Web/API/CSS_Painting_API
 ---
-{{DefaultAPISidebar("CSS Painting API")}}
+<div>{{DefaultAPISidebar("CSS Painting API")}}</div>
 
-CSS Painting API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）を使用すると、開発者は要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できます。
+<p>CSS Painting API（<a href="/ja/docs/Web/Houdini">CSS Houdini</a> API の傘の一部）を使用すると、開発者は要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できます。</p>
 
-## 概念と使用方法
+<h2 id="Concepts_and_usage" name="Concepts_and_usage">概念と使用方法</h2>
 
-基本的に、CSS Painting API には、開発者が CSS の [`<image>`](/ja/docs/Web/CSS/image) の関数である {{cssxref('paint', 'paint()')}} のためのカスタム値を作成できる機能が含まれています。 次に、これらの値を {{cssxref("background-image")}} などのプロパティに適用して、要素に複雑なカスタム背景を設定できます。
+<p>基本的に、CSS Painting API には、開発者が CSS の <code><a href="/ja/docs/Web/CSS/image">&lt;image&gt;</a></code> の関数である {{cssxref('paint', 'paint()')}} のためのカスタム値を作成できる機能が含まれています。 次に、これらの値を {{cssxref("background-image")}} などのプロパティに適用して、要素に複雑なカスタム背景を設定できます。</p>
 
-例えば、次のようにです。
+<p>例えば、次のようにです。</p>
 
-```css
-aside {
+<pre class="brush: css notranslate">aside {
   background-image: paint(myPaintedImage);
-}
-```
+}</pre>
 
-この API は {{domxref('PaintWorklet')}} を定義します。 これは、計算されたスタイルの変更に応じて画像をプログラムで生成するために使用できるワークレット（{{domxref('worklet')}}）です。 これの使用方法の詳細については、[CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/ガイド)を参照してください。
+<p>この API は {{domxref('PaintWorklet')}} を定義します。 これは、計算されたスタイルの変更に応じて画像をプログラムで生成するために使用できるワークレット（{{domxref('worklet')}}）です。 これの使用方法の詳細については、<a href="/ja/docs/Web/API/CSS_Painting_API/ガイド">CSS Painting API の使用</a>を参照してください。</p>
 
-## インターフェイス
+<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
 
-- {{domxref('PaintWorklet')}}
-  - : CSS プロパティがファイルを予期している画像をプログラムで生成します。 [`CSS.paintWorklet`](/ja/docs/Web/API/CSS/paintWorklet) を介してこのインターフェイスにアクセスします。
-- {{domxref('PaintWorkletGlobalScope')}}
-  - : `paintWorklet` のグローバル実行コンテキスト。
-- {{domxref('PaintRenderingContext2D')}}
-  - : [CanvasRenderingContext2D API](/ja/docs/Web/API/CanvasRenderingContext2D) のサブセットを実装します。 レンダリング先のオブジェクトのサイズである出力ビットマップを持ちます。
-- {{domxref('PaintSize')}}
-  - : 出力ビットマップの幅と高さの読み取り専用の値を返します。
+<dl>
+ <dt>{{domxref('PaintWorklet')}}</dt>
+ <dd>CSS プロパティがファイルを予期している画像をプログラムで生成します。 <a href="/ja/docs/Web/API/CSS/paintWorklet"><code>CSS.paintWorklet</code></a> を介してこのインターフェイスにアクセスします。</dd>
+ <dt>{{domxref('PaintWorkletGlobalScope')}}</dt>
+ <dd><code>paintWorklet</code> のグローバル実行コンテキスト。</dd>
+ <dt>{{domxref('PaintRenderingContext2D')}}</dt>
+ <dd>
+ <p><a href="/ja/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D API</a> のサブセットを実装します。 レンダリング先のオブジェクトのサイズである出力ビットマップを持ちます。</p>
+ </dd>
+ <dt>{{domxref('PaintSize')}}</dt>
+ <dd>出力ビットマップの幅と高さの読み取り専用の値を返します。</dd>
+</dl>
 
-## ディクショナリ
+<h2 id="Dictionaries" name="Dictionaries">ディクショナリ</h2>
 
-- {{domxref('PaintRenderingContext2DSettings')}}
-  - : [CanvasRenderingContext2D](/ja/docs/Web/API/CanvasRenderingContext2D) 設定のサブセットを提供するディクショナリ。
+<dl>
+ <dt>{{domxref('PaintRenderingContext2DSettings')}}</dt>
+ <dd><a href="/ja/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D</a> 設定のサブセットを提供するディクショナリ。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-CSS で JavaScript を使用して要素の背景に直接描画するには、[`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を使用してペイントワークレットを定義し、paintWorklet の `addModule()` メソッドを使用してワークレットを含めるようドキュメントに指示し、CSS {{cssxref('paint', 'paint()')}} 関数を使用して作成した画像を含めます。
+<p>CSS で JavaScript を使用して要素の背景に直接描画するには、<code><a href="/ja/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> 関数を使用してペイントワークレットを定義し、paintWorklet の <code>addModule()</code> メソッドを使用してワークレットを含めるようドキュメントに指示し、CSS {{cssxref('paint', 'paint()')}} 関数を使用して作成した画像を含めます。</p>
 
-[`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を使用して、`'hollowHighlights'` という PaintWorklet を作成します。
+<p><code><a href="/ja/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> 関数を使用して、<code>'hollowHighlights'</code> という PaintWorklet を作成します。</p>
 
-```js
-registerPaint('hollowHighlights', class {
+<pre class="brush: js notranslate">registerPaint('hollowHighlights', class {
 
   static get inputProperties() { return ['--boxColor']; }
 
-  static get inputArguments() { return ['*','<length>']; }
+  static get inputArguments() { return ['*','&lt;length&gt;']; }
 
   static get contextOptions() { return {alpha: true}; }
 
@@ -99,7 +102,7 @@ registerPaint('hollowHighlights', class {
 		ctx.fill();
 		ctx.stroke();
 
-		for (let i = 0; i < 4; i++) {
+		for (let i = 0; i &lt; 4; i++) {
 			let start = i * 2;
 			ctx.beginPath();
 			ctx.moveTo( blockWidth + (start * 10) + 10, y);
@@ -112,44 +115,40 @@ registerPaint('hollowHighlights', class {
 			ctx.stroke();
 		}
   }
-});
-```
+});</pre>
 
-次に、paintWorklet を含めます。
+<div id="hollowExample">
+<p>次に、paintWorklet を含めます。</p>
 
-```html hidden
-<ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item 18</li>
-    <li>item 19</li>
-    <li>item 20</li>
-</ul>
-```
+<pre class="brush: html hidden notranslate">&lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item 18&lt;/li&gt;
+    &lt;li&gt;item 19&lt;/li&gt;
+    &lt;li&gt;item 20&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
-```js
-  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
-```
+<pre class="brush: js notranslate">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+</pre>
 
-次に、CSS の {{cssxref('paint', 'paint()')}} 関数で {{cssxref('&lt;image&gt;')}} を使用できます。
+<p>次に、CSS の {{cssxref('paint', 'paint()')}} 関数で {{cssxref('&lt;image&gt;')}} を使用できます。</p>
 
-```css
-li {
+<pre class="brush: css notranslate">li {
    --boxColor: hsla(55, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 2px);
 }
@@ -162,25 +161,38 @@ li:nth-of-type(3n) {
 li:nth-of-type(3n+1) {
    --boxColor: hsla(255, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 1px);
-}
-```
+}</pre>
+</div>
 
-セレクターブロックに boxColor を定義するカスタムプロパティを含めました。 PaintWorklet からカスタムプロパティにアクセスできます。
+<p>セレクターブロックに boxColor を定義するカスタムプロパティを含めました。 PaintWorklet からカスタムプロパティにアクセスできます。</p>
 
-{{EmbedLiveSample("hollowExample", 300, 300)}}
+<p>{{EmbedLiveSample("hollowExample", 300, 300)}}</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                         | 状態                                     | コメント |
-| -------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('CSS Painting API')}} | {{Spec2('CSS Painting API')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS Painting API')}}</td>
+   <td>{{Spec2('CSS Painting API')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-各 CSS Painting API インターフェイスのブラウザーの互換性のデータを参照してください。
+<p>各 CSS Painting API インターフェイスのブラウザーの互換性のデータを参照してください。</p>
 
-## 関連情報
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
-- [CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/ガイド)
-- [CSS Typed Object Model API](/ja/docs/Web/CSS_Typed_OM)
-- [CSS Houdini](/ja/docs/Web/Houdini)
+<ul>
+ <li><a href="/ja/docs/Web/API/CSS_Painting_API/ガイド">CSS Painting API の使用</a></li>
+ <li><a href="/ja/docs/Web/CSS_Typed_OM">CSS Typed Object Model API</a></li>
+ <li><a href="/ja/docs/Web/Houdini">CSS Houdini</a></li>
+</ul>

@@ -12,38 +12,61 @@ tags:
   - touch
 translation_of: Web/API/TouchList
 ---
-{{APIRef("Touch Events")}}
+<p>{{APIRef("Touch Events")}}</p>
 
-**`TouchList`** インターフェイスは、タッチ面上の接触点のリストを表します。例えば、ユーザーがタッチ面 (画面やトラックパッドなど) を 3 本指で操作している場合、対応する `TouchList` オブジェクトは 1 本の指あたり 1 つの {{domxref("Touch")}} オブジェクトを持ち、全部で 3 要素になります。
+<p><strong><code>TouchList</code></strong> インターフェイスは、タッチ面上の接触点のリストを表します。例えば、ユーザーがタッチ面 (画面やトラックパッドなど) を 3 本指で操作している場合、対応する <code>TouchList</code> オブジェクトは 1 本の指あたり 1 つの {{domxref("Touch")}} オブジェクトを持ち、全部で 3 要素になります。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-- {{domxref("TouchList.length")}} {{readonlyInline}}
-  - : `TouchList` 中の {{domxref("Touch")}} オブジェクトの個数
+<dl>
+ <dt>{{domxref("TouchList.length")}} {{readonlyInline}}</dt>
+ <dd><code>TouchList</code> 中の {{domxref("Touch")}} オブジェクトの個数</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-- {{domxref("TouchList.identifiedTouch()")}}
-  - : 識別子が指定された値と一致するリスト内の、最初の {{domxref("Touch")}} 要素を返す
-- {{domxref("TouchList.item()")}}
-  - : リスト内の指定した位置の {{domxref("Touch")}} オブジェクトを返します。
+<dl>
+ <dt>{{domxref("TouchList.identifiedTouch()")}}</dt>
+ <dd>識別子が指定された値と一致するリスト内の、最初の {{domxref("Touch")}} 要素を返す</dd>
+ <dt>{{domxref("TouchList.item()")}}</dt>
+ <dd>リスト内の指定した位置の {{domxref("Touch")}} オブジェクトを返します。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-[タッチイベントのメイン記事にある例](/ja/docs/Web/API/Touch_events#Example)をご覧ください。
+<p><a href="/ja/docs/Web/API/Touch_events#Example">タッチイベントのメイン記事にある例</a>をご覧ください。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 状態                                 | 備考                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Touch Events 2','#touchlist-interface')}} | {{Spec2('Touch Events 2')}} | Non-stable version. |
-| {{SpecName('Touch Events', '#touchlist-interface')}}     | {{Spec2('Touch Events')}}     | 初回定義            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#touchlist-interface')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>Non-stable version.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events', '#touchlist-interface')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TouchList")}}
+<p>{{Compat("api.TouchList")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
-- {{domxref("Document.createTouchList()")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
+ <li>{{domxref("Document.createTouchList()")}}</li>
+</ul>

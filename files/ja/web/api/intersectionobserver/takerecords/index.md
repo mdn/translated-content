@@ -13,38 +13,58 @@ tags:
   - メソッド
 translation_of: Web/API/IntersectionObserver/takeRecords
 ---
-{{APIRef("Intersection Observer API")}}
+<div>{{APIRef("Intersection Observer API")}}</div>
 
-{{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは、明示的にこのメソッドを呼び出したか、監視のコールバックで暗黙的に自動呼出しされたかのどちらかで前回交差をチェックした後で交差状態の変化があった対象要素を示す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。
+<p><span class="seoSummary">{{domxref("IntersectionObserver")}} の <code><strong>takeRecords()</strong></code> メソッドは、明示的にこのメソッドを呼び出したか、監視のコールバックで暗黙的に自動呼出しされたかのどちらかで前回交差をチェックした後で交差状態の変化があった対象要素を示す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。</span></p>
 
-> **Note:** **メモ:** コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
+<div class="note">
+<p><strong>メモ:</strong> コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    intersectionObserverEntries = intersectionObserver.takeRecords();
+<pre class="syntaxbox"><em>intersectionObserverEntries</em> = <em>intersectionObserver</em>.takeRecords();</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-なし。
+<p>なし。</p>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-前回交差をチェックした後で交差状態の変化があった対象要素を示す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列です。
+<p>前回交差をチェックした後で交差状態の変化があった対象要素を示す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列です。</p>
 
-## 例
+<dl>
+</dl>
 
-<<<...>>>
+<h2 id="Examples" name="Examples">例</h2>
 
-## 仕様書
+<p>&lt;&lt;&lt;...&gt;&gt;&gt;</p>
 
-| 仕様書                                                                                                                                                   | 状態                                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}} | {{Spec2('IntersectionObserver')}} | 初回定義 |
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-## ブラウザーの互換性
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}}</td>
+   <td>{{Spec2('IntersectionObserver')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.IntersectionObserver.takeRecords")}}
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-## 関連情報
+<p>{{Compat("api.IntersectionObserver.takeRecords")}}</p>
 
-- [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
+</ul>

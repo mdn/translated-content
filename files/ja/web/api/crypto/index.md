@@ -8,36 +8,59 @@ tags:
   - Web Crypt API
 translation_of: Web/API/Crypto
 ---
-{{APIRef("Web Crypto API")}}
+<p>{{APIRef("Web Crypto API")}}</p>
 
-**`Crypto`** インターフェイスは、現在のコンテキストで利用できる基本的な暗号機能を表します。これは、暗号強度の強い乱数生成器と暗号プリミティブへのアクセスを許可します。
+<p><code><strong>Crypto</strong></code> インターフェイスは、現在のコンテキストで利用できる基本的な暗号機能を表します。これは、暗号強度の強い乱数生成器と暗号プリミティブへのアクセスを許可します。</p>
 
-このインターフェイスを持つオブジェクトは、{{domxref("Window.crypto")}} プロパティを通じてウェブコンテキスト上で利用可能です。
+<p>このインターフェイスを持つオブジェクトは、{{domxref("Window.crypto")}} プロパティを通じてウェブコンテキスト上で利用可能です。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたプロパティを実装します。_
+<p><em>このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたプロパティを実装します。</em></p>
 
-- {{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}
-  - : ハッシュや署名、暗号化、複合など、共通の暗号プリミティブへのアクセスを提供する {{domxref("SubtleCrypto")}} オブジェクトを返します。
+<dl>
+ <dt>{{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}</dt>
+ <dd>ハッシュや署名、暗号化、複合など、共通の暗号プリミティブへのアクセスを提供する {{domxref("SubtleCrypto")}} オブジェクトを返します。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたメソッドを実装します。_
+<p><em>このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたメソッドを実装します。</em></p>
 
-- {{domxref("RandomSource.getRandomValues()")}}
-  - : 渡された {{ jsxref("TypedArray") }} を意味不明の乱数値で埋めます。
+<dl>
+ <dt>{{domxref("RandomSource.getRandomValues()")}}</dt>
+ <dd>渡された {{ jsxref("TypedArray") }} を意味不明の乱数値で埋めます。</dd>
+</dl>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                           | 策定状況                             | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+ </tbody>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}}</td>
+   <td>{{Spec2("Web Crypto API")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.Crypto")}}
+<div>
+<div>
+<p>{{Compat("api.Crypto")}}</p>
+</div>
+</div>
 
-## 関連情報
+<h2 id="See_Also" name="See_Also">関連情報</h2>
 
-- [Components.utils.importGlobalProperties](/ja/docs/Components.utils.importGlobalProperties)
+<ul>
+ <li><a href="/ja/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
+</ul>

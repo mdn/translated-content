@@ -17,35 +17,50 @@ tags:
   - augmented
 translation_of: Web/API/XRBoundedReferenceSpace
 ---
-{{APIRef("WebXR Device API")}}{{secureContext_header}}
+<p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
 
-.[WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRBoundedReferenceSpace`** インターフェイスは、事前設定された境界を持つ仮想世界の[参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)を記述します。 これは {{domxref("XRReferenceSpace")}} を拡張して、ビューアーの位置の周囲の本質的に制限のない空間を記述します。 これらの境界は、点の配列を使用して定義し、各点は、ユーザーがその中で移動することができる多角形の頂点を定義します。
+<p>.<span class="seoSummary"><a href="/ja/docs/Web/API/WebXR_Device_API">WebXR Device API</a> の <strong><code>XRBoundedReferenceSpace</code></strong> インターフェイスは、事前設定された境界を持つ仮想世界の<a href="/ja/docs/Web/API/WebXR_Device_API/Geometry">参照空間</a>を記述します。 これは {{domxref("XRReferenceSpace")}} を拡張して、ビューアーの位置の周囲の本質的に制限のない空間を記述します。</span> これらの境界は、点の配列を使用して定義し、各点は、ユーザーがその中で移動することができる多角形の頂点を定義します。</p>
 
-これは通常、XR システムがユーザーの開始位置から限られた距離内でユーザーの物理的な移動を追跡できる場合に使用します。 指定された境界は、実際には、WebXR サイトまたはアプリケーションがユーザーが現実世界の壁やその他の障害物と衝突するのを防ぐために、ユーザーがいる部屋の形状とサイズを表す場合があります。 少なくとも、境界は、XR デバイスがユーザーの移動を追跡できる領域を示します。 制限付き空間の仕組みとその有用性の詳細については、[制限付き参照空間の使用](/ja/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)の記事を参照してください。
+<p>これは通常、XR システムがユーザーの開始位置から限られた距離内でユーザーの物理的な移動を追跡できる場合に使用します。 指定された境界は、実際には、WebXR サイトまたはアプリケーションがユーザーが現実世界の壁やその他の障害物と衝突するのを防ぐために、ユーザーがいる部屋の形状とサイズを表す場合があります。 少なくとも、境界は、XR デバイスがユーザーの移動を追跡できる領域を示します。 制限付き空間の仕組みとその有用性の詳細については、<a href="/ja/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">制限付き参照空間の使用</a>の記事を参照してください。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_{{domxref("XRReferenceSpace")}} のプロパティに加えて、`XRBoundedReferenceSpace` には次のものが含まれています。_
+<p><em>{{domxref("XRReferenceSpace")}} のプロパティに加えて、<code>XRBoundedReferenceSpace</code> には次のものが含まれています。</em></p>
 
-- {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMPointReadOnly")}} オブジェクトの配列。 各オブジェクトは、ユーザーが留まる必要がある境界を定義する多角形の頂点を定義します。 これらの頂点は、ビューアーの位置の周囲を*時計回り*に移動するように並べ替える*必要があります*。
+<dl>
+ <dt>{{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("DOMPointReadOnly")}} オブジェクトの配列。 各オブジェクトは、ユーザーが留まる必要がある境界を定義する多角形の頂点を定義します。 これらの頂点は、ビューアーの位置の周囲を<em>時計回り</em>に移動するように並べ替える<em>必要があります</em>。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_`XRBoundedReferenceSpace` は、その親インターフェイスである {{domxref("XRReferenceSpace")}} のメソッドを継承します。 それ以上のメソッドはありません。_
+<p><em><code>XRBoundedReferenceSpace</code> は、その親インターフェイスである {{domxref("XRReferenceSpace")}} のメソッドを継承します。 それ以上のメソッドはありません。</em></p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                             | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#xrboundedreferencespace-interface','XRBoundedReferenceSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebXR','#xrboundedreferencespace-interface','XRBoundedReferenceSpace')}}</td>
+   <td>{{Spec2('WebXR')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.XRBoundedReferenceSpace")}}
+<p>{{Compat("api.XRBoundedReferenceSpace")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
-- [WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
-- [視点とビューアー: WebXR でのカメラのシミュレーション](/ja/docs/Web/API/WebXR_Device_API/Cameras)
+<ul>
+ <li><a href="/ja/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
+ <li><a href="/ja/docs/Web/API/WebXR_Device_API/Geometry">WebXR の幾何学と参照空間</a></li>
+ <li><a href="/ja/docs/Web/API/WebXR_Device_API/Cameras">視点とビューアー: WebXR でのカメラのシミュレーション</a></li>
+</ul>

@@ -3,32 +3,30 @@ title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
 translation_of: Web/API/AudioContext/resume
 ---
-{{ APIRef("Web Audio API") }}
+<p>{{ APIRef("Web Audio API") }}</p>
 
-{{ domxref("AudioContext") }}インターフェースの`resume()`メソッドは、一時停止されたオーディオコンテキストの時間の流れを再開します。
+<p>{{ domxref("AudioContext") }}インターフェースの<code>resume()</code>メソッドは、一時停止されたオーディオコンテキストの時間の流れを再開します。</p>
 
-{{domxref("OfflineAudioContext")}}でこのメソッドを呼ぶと`INVALID_STATE_ERR`例外が発生します。
+<p>{{domxref("OfflineAudioContext")}}でこのメソッドを呼ぶと<code>INVALID_STATE_ERR</code>例外が発生します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-Promise<> baseAudioContext.resume();
-```
+<pre class="brush: js">Promise&lt;&gt; baseAudioContext.resume();
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-なし
+<p>なし</p>
 
-### 戻り値
+<h3 id="戻り値">戻り値</h3>
 
-void で完了する{{jsxref("Promise")}}。コンテキストが既に閉じている場合、プロミスは失敗します。
+<p>voidで完了する{{jsxref("Promise")}}。コンテキストが既に閉じている場合、プロミスは失敗します。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし`running`ならば、{{domxref("suspend()")}}が呼ばれます。`suspended`ならば、`resume()`が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。
+<p>次のスニペットは<a class="external external-icon" href="https://github.com/mdn/audiocontext-states/settings">AudioContext states デモ</a>(<a class="external external-icon" href="http://mdn.github.io/audiocontext-states/">すぐ実行</a>)から取ったものです。suspend/resumeボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし<code>running</code>ならば、{{domxref("suspend()")}}が呼ばれます。<code>suspended</code>ならば、<code>resume()</code>が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。</p>
 
-```js
-susresBtn.onclick = function() {
+<pre class="brush: js">susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -39,19 +37,38 @@ susresBtn.onclick = function() {
     });
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-resume', 'resume()')}} | {{Spec2('Web Audio API')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-resume', 'resume()')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.BaseAudioContext.resume")}}
+<div>
+<div>
 
-## 参考
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
+<p>{{Compat("api.BaseAudioContext.resume")}}</p>
+</div>
+</div>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+</ul>

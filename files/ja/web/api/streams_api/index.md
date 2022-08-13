@@ -10,108 +10,143 @@ tags:
   - Streams
 translation_of: Web/API/Streams_API
 ---
-{{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}
+<p>{{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}</p>
 
-Streams API を使用すると、JavaScript がネットワーク経由で受信したデータのストリームにプログラムでアクセスし、開発者の希望どおりに処理できます。
+<div>
+<p><span class="seoSummary">Streams API を使用すると、JavaScript がネットワーク経由で受信したデータのストリームにプログラムでアクセスし、開発者の希望どおりに処理できます。</span></p>
+</div>
 
-## 概念と使用方法
+<h2 id="Concepts_and_usage" name="Concepts_and_usage">概念と使用方法</h2>
 
-ストリーミングでは、ネットワーク経由で受信するリソースを小さなチャンクに分割し、少しずつ処理します。 これは、ブラウザーがウェブページに表示されるアセットを受信するときにとにかく行うことです — 動画がバッファされて徐々に再生可能になり、画像が読み込まれるにつれて徐々に表示されることもあります。
+<p>ストリーミングでは、ネットワーク経由で受信するリソースを小さなチャンクに分割し、少しずつ処理します。 これは、ブラウザーがウェブページに表示されるアセットを受信するときにとにかく行うことです — 動画がバッファされて徐々に再生可能になり、画像が読み込まれるにつれて徐々に表示されることもあります。</p>
 
-しかし、これはこれまで JavaScript で利用できたことはありません。 以前は、何らかの種類のリソース（動画、テキストファイルなど）を処理したい場合は、ファイル全体をダウンロードし、適切な形式にデシリアライズされるのを待ってから、完全に受信した後に全部まとめて処理する必要がありました。
+<p>しかし、これはこれまで JavaScript で利用できたことはありません。 以前は、何らかの種類のリソース（動画、テキストファイルなど）を処理したい場合は、ファイル全体をダウンロードし、適切な形式にデシリアライズされるのを待ってから、完全に受信した後に全部まとめて処理する必要がありました。</p>
 
-Streams が JavaScript で利用できるようになったことで、これがすべて変わりました — クライアント側で利用可能になると、バッファ、文字列、または blob を生成せずに、JavaScript で少しずつ生データの処理を開始できます。
+<p>Streams が JavaScript で利用できるようになったことで、これがすべて変わりました — クライアント側で利用可能になると、バッファ、文字列、または blob を生成せずに、JavaScript で少しずつ生データの処理を開始できます。</p>
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/15817/Concept.png" style="display: block; height: 382px; margin: 0px auto; width: 1000px;"></p>
 
-さらに利点もあります。 ストリームの開始または終了の検出、ストリームの連鎖、エラー処理と必要に応じたストリームのキャンセル、ストリームの読み取り速度への対応が可能です。
+<p>さらに利点もあります。 ストリームの開始または終了の検出、ストリームの連鎖、エラー処理と必要に応じたストリームのキャンセル、ストリームの読み取り速度への対応が可能です。</p>
 
-Streams の基本的な使用法は、応答をストリームとして利用可能にすることにかかっています。 例えば、成功した[フェッチ要求](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch)によって返された応答の {{domxref("Body")}} は、{{domxref("ReadableStream")}} として公開できます。 その後、{{domxref("ReadableStream.getReader()")}} で作成したリーダーを使用して読み取り、{{domxref("ReadableStream.cancel()")}} でキャンセルできます。
+<p>Streams の基本的な使用法は、応答をストリームとして利用可能にすることにかかっています。 例えば、成功した<a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">フェッチ要求</a>によって返された応答の {{domxref("Body")}} は、{{domxref("ReadableStream")}} として公開できます。 その後、{{domxref("ReadableStream.getReader()")}} で作成したリーダーを使用して読み取り、{{domxref("ReadableStream.cancel()")}} でキャンセルできます。</p>
 
-より複雑な用途では、例えば[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内でデータを処理するために、{{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターを使用して独自のストリームを作成します。
+<p>より複雑な用途では、例えば<a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a>内でデータを処理するために、{{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターを使用して独自のストリームを作成します。</p>
 
-{{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。
+<p>{{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。</p>
 
-> **Note:** **注**: ストリームの理論と実践の詳細については、[Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
+<div class="note">
+<p><strong>注</strong>: ストリームの理論と実践の詳細については、<a href="/ja/docs/Web/API/Streams_API/Concepts">Streams API の概念</a>、<a href="/ja/docs/Web/API/Streams_API/Using_readable_streams">読み取り可能なストリームの使用</a>、<a href="/ja/docs/Web/API/Streams_API/Using_writable_streams">書き込み可能なストリームの使用</a>の記事をご覧ください。</p>
+</div>
 
-## ストリームのインターフェイス
+<h2 id="Stream_interfaces" name="Stream_interfaces">ストリームのインターフェイス</h2>
 
-### 読み取り可能なストリーム
+<h3 id="Readable_streams" name="Readable_streams">読み取り可能なストリーム</h3>
 
-- {{domxref("ReadableStream")}}
-  - : 読み取り可能なデータのストリームを表します。 [Fetch API](/ja/docs/Web/API/Fetch_API) の応答ストリーム、または開発者定義のストリーム（カスタムの {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターなど）を処理するために使用できます。
-- {{domxref("ReadableStreamDefaultReader")}}
-  - : ネットワークから提供されたストリームデータ（フェッチ要求など）を読み取るために使用できるデフォルトのリーダーを表します。
-- {{domxref("ReadableStreamDefaultController")}}
-  - : {{domxref("ReadableStream")}} の状態と内部キューの制御を許可するコントローラーを表します。 デフォルトのコントローラーは、バイトストリームではないストリーム用です。
+<dl>
+ <dt>{{domxref("ReadableStream")}}</dt>
+ <dd>読み取り可能なデータのストリームを表します。 <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の応答ストリーム、または開発者定義のストリーム（カスタムの {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターなど）を処理するために使用できます。</dd>
+ <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
+ <dd>ネットワークから提供されたストリームデータ（フェッチ要求など）を読み取るために使用できるデフォルトのリーダーを表します。</dd>
+ <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
+ <dd>{{domxref("ReadableStream")}} の状態と内部キューの制御を許可するコントローラーを表します。 デフォルトのコントローラーは、バイトストリームではないストリーム用です。</dd>
+</dl>
 
-### 書き込み可能なストリーム
+<h3 id="Writable_streams" name="Writable_streams">書き込み可能なストリーム</h3>
 
-- {{domxref("WritableStream")}}
-  - : シンク（sink）と呼ばれる宛先にストリーミングデータを書き込むための標準的な抽象化を提供します。 このオブジェクトには、組み込みのバックプレッシャー（受信側のバッファあふれの予防）とキューイングが付属しています。
-- {{domxref("WritableStreamDefaultWriter")}}
-  - : データのチャンクを書き込み可能なストリームに書き込むために使用できるデフォルトの書き込み可能なストリームのライターを表します。
-- {{domxref("WritableStreamDefaultController")}}
-  - : {{domxref("WritableStream")}} の状態の制御を許可するコントローラーを表します。 `WritableStream` を構築するとき、基になるシンクには、対応する `WritableStreamDefaultController` インスタンスが与えられて操作します。
+<dl>
+ <dt>{{domxref("WritableStream")}}</dt>
+ <dd>シンク（sink）と呼ばれる宛先にストリーミングデータを書き込むための標準的な抽象化を提供します。 このオブジェクトには、組み込みのバックプレッシャー（受信側のバッファあふれの予防）とキューイングが付属しています。</dd>
+ <dt>{{domxref("WritableStreamDefaultWriter")}}</dt>
+ <dd>データのチャンクを書き込み可能なストリームに書き込むために使用できるデフォルトの書き込み可能なストリームのライターを表します。</dd>
+ <dt>{{domxref("WritableStreamDefaultController")}}</dt>
+ <dd>{{domxref("WritableStream")}} の状態の制御を許可するコントローラーを表します。 <code>WritableStream</code> を構築するとき、基になるシンクには、対応する <code>WritableStreamDefaultController</code> インスタンスが与えられて操作します。</dd>
+</dl>
 
-### 関連するストリームの API と操作
+<h3 id="Related_stream_APIs_and_operations" name="Related_stream_APIs_and_operations">関連するストリームの API と操作</h3>
 
-- {{domxref("ByteLengthQueuingStrategy")}}
-  - : ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略（byte length queuing strategy）を提供します。
-- {{domxref("CountQueuingStrategy")}}
-  - : ストリームを構築するときに使用できる組み込みのチャンクカウントキューイング戦略（chunk counting queuing strategy）を提供します。
+<dl>
+ <dt>{{domxref("ByteLengthQueuingStrategy")}}</dt>
+ <dd>ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略（byte length queuing strategy）を提供します。</dd>
+ <dt>{{domxref("CountQueuingStrategy")}}</dt>
+ <dd>ストリームを構築するときに使用できる組み込みのチャンクカウントキューイング戦略（chunk counting queuing strategy）を提供します。</dd>
+</dl>
 
-### 他の API の拡張
+<h3 id="Extensions_to_other_APIs" name="Extensions_to_other_APIs">他の API の拡張</h3>
 
-- {{domxref("Request")}}
-  - : 新しい `Request` オブジェクトが構築されると、その `RequestInit` ディクショナリの `body` プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この `Request` を {{domxref("WindowOrWorkerGlobalScope.fetch()")}} に渡して、ストリームのフェッチを開始できます。
-- {{domxref("Body")}}
-  - : 成功した[フェッチ要求](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch)によって返された応答の {{domxref("Body")}} は、デフォルトで {{domxref("ReadableStream")}} として公開され、リーダーを取りつけることができます。
+<dl>
+ <dt>{{domxref("Request")}}</dt>
+ <dd>新しい <code>Request</code> オブジェクトが構築されると、その <code>RequestInit</code> ディクショナリの <code>body</code> プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この <code>Request</code> を {{domxref("WindowOrWorkerGlobalScope.fetch()")}} に渡して、ストリームのフェッチを開始できます。</dd>
+ <dt>{{domxref("Body")}}</dt>
+ <dd>成功した<a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">フェッチ要求</a>によって返された応答の {{domxref("Body")}} は、デフォルトで {{domxref("ReadableStream")}} として公開され、リーダーを取りつけることができます。</dd>
+</dl>
 
-### ByteStream 関連のインターフェイス
+<h3 id="ByteStream-related_interfaces" name="ByteStream-related_interfaces">ByteStream 関連のインターフェイス</h3>
 
-> **Warning:** **重要**: これらはまだどこにも実装されておらず、仕様の詳細が実装に十分な完成状態にあるかどうかについて疑問が提起されています。 これは時間とともに変化する可能性があります。
+<div class="warning">
+<p><strong>重要</strong>: これらはまだどこにも実装されておらず、仕様の詳細が実装に十分な完成状態にあるかどうかについて疑問が提起されています。 これは時間とともに変化する可能性があります。</p>
+</div>
 
-- {{domxref("ReadableStreamBYOBReader")}}
-  - : 開発者が提供するストリームデータの読み取りに使用できる BYOB（bring your own buffer、独自のバッファを持ち込む）リーダーを表します（カスタムの {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターなど）。
-- {{domxref("ReadableByteStreamController")}}
-  - : {{domxref("ReadableStream")}} の状態と内部キューの制御を許可するコントローラーを表します。 バイトストリームコントローラーは、バイトストリーム用です。
-- {{domxref("ReadableStreamBYOBRequest")}}
-  - : {{domxref("ReadableByteStreamController")}} 内のプルインリクエストを表します。
+<dl>
+ <dt>{{domxref("ReadableStreamBYOBReader")}}</dt>
+ <dd>開発者が提供するストリームデータの読み取りに使用できる BYOB（bring your own buffer、独自のバッファを持ち込む）リーダーを表します（カスタムの {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターなど）。</dd>
+ <dt>{{domxref("ReadableByteStreamController")}}</dt>
+ <dd>{{domxref("ReadableStream")}} の状態と内部キューの制御を許可するコントローラーを表します。 バイトストリームコントローラーは、バイトストリーム用です。</dd>
+ <dt>{{domxref("ReadableStreamBYOBRequest")}}</dt>
+ <dd>{{domxref("ReadableByteStreamController")}} 内のプルインリクエストを表します。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-Streams API のドキュメントに合わせてサンプルのディレクトリを作成しました。 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) を参照してください。 例は次のとおりです。
+<p>Streams API のドキュメントに合わせてサンプルのディレクトリを作成しました。 <a href="https://github.com/mdn/dom-examples/tree/master/streams">mdn/dom-examples/streams</a> を参照してください。 例は次のとおりです。</p>
 
-- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/)（単純なストリームポンプ）: この例は、`ReadableStream` を使用してそのデータを別のストリームに渡す方法を示しています。
-- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/)（PNG のグレースケール化）: この例は、PNG の `ReadableStream` をグレースケールに変換する方法を示しています。
-- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/)（単純なランダムストリーム）: この例は、カスタムストリームを使用してランダムな文字列を生成し、それらをチャンクとしてキューに入れてから、再度読み取る方法を示しています。
-- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/)（単純な tee の例）: この例は、単純なランダムストリームの例を拡張したもので、ストリームを tee 化して、両方の結果のストリームの独立して読み取る方法を示しています。
-- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/)（単純なライター）: この例では、書き込み可能なストリームに書き込み、ストリームをデコードして、コンテンツを UI に書き込む方法を示します。
-- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/)（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG チャンクのストリームに変換することにより、{{domxref("ReadableStream.pipeThrough","pipeThrough()")}} を使用して `ReadableStream` を他のデータ型のストリームに変換する方法を示します。
+<ul>
+ <li><a href="http://mdn.github.io/dom-examples/streams/simple-pump/">Simple stream pump</a>（単純なストリームポンプ）: この例は、<code>ReadableStream</code> を使用してそのデータを別のストリームに渡す方法を示しています。</li>
+ <li><a href="http://mdn.github.io/dom-examples/streams/grayscale-png/">Grayscale a PNG</a>（PNG のグレースケール化）: この例は、PNG の <code>ReadableStream</code> をグレースケールに変換する方法を示しています。</li>
+ <li><a href="http://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream</a>（単純なランダムストリーム）: この例は、カスタムストリームを使用してランダムな文字列を生成し、それらをチャンクとしてキューに入れてから、再度読み取る方法を示しています。</li>
+ <li><a href="http://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee example</a>（単純な tee の例）: この例は、単純なランダムストリームの例を拡張したもので、ストリームを tee 化して、両方の結果のストリームの独立して読み取る方法を示しています。</li>
+ <li><a href="http://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer</a>（単純なライター）: この例では、書き込み可能なストリームに書き込み、ストリームをデコードして、コンテンツを UI に書き込む方法を示します。</li>
+ <li><a href="http://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks of a PNG</a>（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG チャンクのストリームに変換することにより、{{domxref("ReadableStream.pipeThrough","pipeThrough()")}} を使用して <code>ReadableStream</code> を他のデータ型のストリームに変換する方法を示します。</li>
+</ul>
 
-他の開発者による例
+<p>他の開発者による例</p>
 
-- [Streams、Service Worker、および Fetch を含む進行状況インジケーター](https://fetch-progress.anthum.com/)（英語）。
+<ul>
+ <li><a href="https://fetch-progress.anthum.com/">Streams、Service Worker、および Fetch を含む進行状況インジケーター</a>（英語）。</li>
+</ul>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                           | 状態                         | 備考     |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams')}} | {{Spec2('Streams')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Streams')}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-### ReadableStream
+<h3 id="ReadableStream" name="ReadableStream">ReadableStream</h3>
 
-{{Compat("api.ReadableStream")}}
+<p>{{Compat("api.ReadableStream")}}</p>
 
-### WritableStream
+<h3 id="WritableStream" name="WritableStream">WritableStream</h3>
 
-{{Compat("api.WritableStream")}}
+<p>{{Compat("api.WritableStream")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
-- [書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)
+<ul>
+ <li><a href="/ja/docs/Web/API/Streams_API/Concepts">Streams API の概念</a></li>
+ <li><a href="/ja/docs/Web/API/Streams_API/Using_readable_streams">読み取り可能なストリームの使用</a></li>
+ <li><a href="/ja/docs/Web/API/Streams_API/Using_writable_streams">書き込み可能なストリームの使用</a></li>
+</ul>

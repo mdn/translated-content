@@ -10,35 +10,35 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollMaxX
 ---
-{{APIRef}} {{Non-standard_header}}
+<div>{{APIRef}} {{Non-standard_header}}</div>
 
-**`Window.scrollMaxX`** は読み取り専用プロパティで、文書が横方向にスクロールできる最大ピクセル数を返します。
+<p><code><strong>Window.scrollMaxX</strong></code> は読み取り専用プロパティで、文書が横方向にスクロールできる最大ピクセル数を返します。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-xMax = window.scrollMaxX
-```
+<pre class="brush: js"><em>xMax</em> = window.scrollMaxX
+</pre>
 
-- `xMax` はピクセル数です。
+<ul>
+  <li><code>xMax</code> はピクセル数です。</li>
+</ul>
 
-## Example
+<h2 id="Example">Example</h2>
 
-```js
-// ページの右端までスクロールする
+<pre class="brush:js">// ページの右端までスクロールする
 let maxX = window.scrollMaxX;
 
 window.scrollTo(maxX, 0);
-```
+</pre>
 
-## 注
+<h2 id="Notes">注</h2>
 
-このプロパティを、文書の全体の幅を取得するためには使用しないでください。これは [window.innerWidth](/ja/docs/Web/API/Window/innerWidth) + window\.scrollMaxX とは等しくありません。これは {{domxref("window.innerWidth")}} には表示中の垂直スクロールバーがすべて含まれるからであり、結果は文書の幅よりすべての表示中の垂直スクロールバーの幅だけ大きくなります。代わりに {{domxref("element.scrollWidth","document.body.scrollWidth")}} を使用してください。 {{domxref("window.scrollMaxY")}} も参照してください。
+<p>このプロパティを、文書の全体の幅を取得するためには使用しないでください。これは <a href="/ja/docs/Web/API/Window/innerWidth">window.innerWidth</a> + window.scrollMaxX とは等しくありません。これは {{domxref("window.innerWidth")}} には表示中の垂直スクロールバーがすべて含まれるからであり、結果は文書の幅よりすべての表示中の垂直スクロールバーの幅だけ大きくなります。代わりに {{domxref("element.scrollWidth","document.body.scrollWidth")}} を使用してください。 {{domxref("window.scrollMaxY")}} も参照してください。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-どの仕様書にも含まれていません。
+<p>どの仕様書にも含まれていません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.scrollMaxX")}}
+<p>{{Compat("api.Window.scrollMaxX")}}</p>

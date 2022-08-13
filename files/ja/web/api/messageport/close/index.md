@@ -9,55 +9,69 @@ tags:
   - Reference
 translation_of: Web/API/MessagePort/close
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("MessagePort")}} インターフェイスの **`close()`** メソッドは、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。
+<p>{{domxref("MessagePort")}} インターフェイスの <code><strong>close()</strong></code> メソッドは、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    port.close()
+<pre class="syntaxbox">port.close()</pre>
 
-### 戻り値
+<h3 id="Returns" name="Returns">戻り値</h3>
 
-無効。
+<p>無効。</p>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-なし。
+<p>なし。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-次のコードブロックには、`handleMessage` ハンドラ関数があり、{{domxref("EventTarget.addEventListener")}} を使用してこのドキュメントにメッセージが返された時に実行されます。
+<p>次のコードブロックには、<code>handleMessage</code> ハンドラ関数があり、{{domxref("EventTarget.addEventListener")}} を使用してこのドキュメントにメッセージが返された時に実行されます。</p>
 
-```js
-channel.port1.addEventListener('message',handleMessage,false);
+<pre class="brush: js">channel.port1.addEventListener('message',handleMessage,false);
 function handleMessage(e) {
   para.innerHTML = e.data;
   textInput.value = '';
 }
 
 channel.port1.start();
-```
+</pre>
 
-次のようにして、いつでもメッセージの送信を停止できます。
+<p>次のようにして、いつでもメッセージの送信を停止できます。</p>
 
-```js
-channel.port1.close();
-```
+<pre class="brush: js">channel.port1.close();</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                           | 策定状況                                     | 備考                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-messageport-close','close()')}}             | {{Spec2('HTML WHATWG')}}             | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
-| {{SpecName('HTML5 Web Messaging', '#dom-messageport-close','close()')}} | {{Spec2('HTML5 Web Messaging')}} | 仕様の W3C バージョン。                                         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-messageport-close','close()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>{{SpecName("HTML5 Web Messaging")}} との差異なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 Web Messaging', '#dom-messageport-close','close()')}}</td>
+   <td>{{Spec2('HTML5 Web Messaging')}}</td>
+   <td>仕様の W3C バージョン。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの実装状況</h2>
 
-{{Compat("api.MessagePort.close")}}
+<p>{{Compat("api.MessagePort.close")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

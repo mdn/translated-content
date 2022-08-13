@@ -10,37 +10,51 @@ tags:
   - toJSON()
 translation_of: Web/API/URL/toJSON
 ---
-{{APIRef("URL API")}}
+<div>{{APIRef("URL API")}}</div>
 
-{{domxref("URL")}} インターフェイスの **`toJSON()`** メソッドは、URL のシリアル化されたバージョンを含む {{domxref("USVString")}} を返しますが、実際には {{domxref("URL.toString()")}} と同じ効果があるようです。
+<p><span class="seoSummary">{{domxref("URL")}} インターフェイスの <strong><code>toJSON()</code></strong> メソッドは、URL のシリアル化されたバージョンを含む {{domxref("USVString")}} を返しますが、実際には {{domxref("URL.toString()")}} と同じ効果があるようです。</span></p>
 
-（訳注：このメソッドは、{{jsxref("JSON.stringify()")}} メソッドが、このメソッドを持つオブジェクトを JSON 文字列に変換するために使います。）
+<p>（訳注：このメソッドは、{{jsxref("JSON.stringify()")}} メソッドが、このメソッドを持つオブジェクトを JSON 文字列に変換するために使います。）</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    json = url.toJSON();
+<pre class="syntaxbox">json = url.toJSON();</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{domxref("USVString")}}。
+<p>{{domxref("USVString")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-    url.toJSON()
+<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">const</span> <span class="cm-def">url</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">URL</span>(<span class="cm-string">"https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"</span>);
+<span class="cm-variable">url</span>.<span class="cm-property">toJSON</span>()</span></span></span>
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-tojson', 'toJSON()')}} | {{Spec2('URL')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('URL', '#dom-url-tojson', 'toJSON()')}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.URL.toJSON")}}
+
+
+<p>{{Compat("api.URL.toJSON")}}</p>

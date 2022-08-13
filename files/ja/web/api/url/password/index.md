@@ -9,40 +9,55 @@ tags:
   - password
 translation_of: Web/API/URL/password
 ---
-{{ApiRef("URL API")}}
+<div>{{ApiRef("URL API")}}</div>
 
-{{domxref("URL")}} インターフェイスの **`password`** プロパティは、ドメイン名の前に指定されたパスワードを含む {{domxref("USVString")}} です。
+<p><span class="seoSummary">{{domxref("URL")}} インターフェイスの <strong><code>password</code></strong> プロパティは、ドメイン名の前に指定されたパスワードを含む {{domxref("USVString")}} です。</span></p>
 
-最初に [`username`](/ja/docs/Web/API/URL/username) プロパティを設定せずに設定しようとすると、静かに失敗します。
+<p>最初に <code><a href="/ja/docs/Web/API/URL/username">username</a></code> プロパティを設定せずに設定しようとすると、静かに失敗します。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    string = object.password;
-    object.password = string;
+<pre class="syntaxbox"><em>string</em> = <em>object</em>.password;
+<em>object</em>.password = <em>string</em>;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("USVString")}}。
+<p>{{domxref("USVString")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
+<pre class="brush: js">var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
 var result = url.password; // 戻り値: "flabada"
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-password', 'URL.password')}} | {{Spec2('URL')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('URL', '#dom-url-password', 'URL.password')}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.URL.password")}}
 
-## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+<p>{{Compat("api.URL.password")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("URL")}} インターフェイスに属します。</li>
+</ul>

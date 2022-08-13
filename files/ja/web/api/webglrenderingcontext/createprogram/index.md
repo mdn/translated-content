@@ -3,28 +3,28 @@ title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
 translation_of: Web/API/WebGLRenderingContext/createProgram
 ---
-{{APIRef("WebGL")}}
+<div>{{APIRef("WebGL")}}</div>
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.createProgram()`** メソッドは、{{domxref("WebGLProgram")}} オブジェクトを作成、初期化します。
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.createProgram()</code></strong> メソッドは、{{domxref("WebGLProgram")}} オブジェクトを作成、初期化します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    WebGLProgram gl.createProgram();
+<pre class="syntaxbox">WebGLProgram <var>gl</var>.createProgram();
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-ありません。
+<p>ありません。</p>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-{{domxref("WebGLProgram")}} オブジェクトは、2 つのコンパイルされた {{domxref("WebGLShader")}} の組み合わせで、頂点シェーダーとフラグメントシェーダー (どちらも GLSL で書かれる) で成り立ちます。そして、これらを使用可能なプログラムへとリンクします。
+<p>{{domxref("WebGLProgram")}} オブジェクトは、2 つのコンパイルされた {{domxref("WebGLShader")}} の組み合わせで、頂点シェーダーとフラグメントシェーダー (どちらも GLSL で書かれる) で成り立ちます。そして、これらを使用可能なプログラムへとリンクします。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### WebGL プログラムの作成
+<h3 id="WebGL_プログラムの作成">WebGL プログラムの作成</h3>
 
-```js
-var program = gl.createProgram();
+<pre class="brush: js">var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -36,27 +36,46 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
   throw 'Could not compile WebGL program. \n\n' + info;
 }
-```
+</pre>
 
-{{domxref("WebGLShader")}} を参照すると、上記サンプルの `vertexShader` と `fragmentShader` の作成についての情報が得られます。
+<p>{{domxref("WebGLShader")}} を参照すると、上記サンプルの <code>vertexShader</code> と <code>fragmentShader</code> の作成についての情報が得られます。</p>
 
-## 仕様策定状況
+<h2 id="仕様策定状況">仕様策定状況</h2>
 
-| 仕様                                                                                             | 策定状況                             | コメント                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "createProgram")}}                                 | {{Spec2('WebGL')}}             | 初回定義。                               |
-| {{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API (と同様の) マニュアルページ。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.9", "createProgram")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>初回定義。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>
+    <p>OpenGL API (と同様の) マニュアルページ。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.WebGLRenderingContext.createProgram")}}
+<p>{{Compat("api.WebGLRenderingContext.createProgram")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+<ul>
+ <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
+</ul>

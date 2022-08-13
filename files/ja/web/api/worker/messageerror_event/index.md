@@ -11,26 +11,41 @@ tags:
 translation_of: Web/API/Worker/onmessageerror
 original_slug: Web/API/Worker/onmessageerror
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("Worker")}} インターフェイスの **`onmessageerror`** イベントハンドラは {{domxref("EventListener")}} であり、 `messageerror` 型の {{domxref("MessageEvent")}} が `Worker` インスタンスで発生する度に呼び出されます。 — つまり {{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。
+<p>{{domxref("Worker")}} インターフェイスの <code><strong>onmessageerror</strong></code> イベントハンドラは {{domxref("EventListener")}} であり、 <code>messageerror</code> 型の {{domxref("MessageEvent")}} が <code>Worker</code> インスタンスで発生する度に呼び出されます。 — つまり  {{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    Worker.onmessageerror = function() { ... };
+<pre class="syntaxbox notranslate">Worker.onmessageerror = function() { ... };</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                     | ステータス                       | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#handler-worker-onmessageerror', 'onmessageerror')}} | {{Spec2('HTML WHATWG')}} |      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-worker-onmessageerror', 'onmessageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
 
-{{Compat("api.Worker.onmessageerror")}}
 
-## 関連項目
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+<p>{{Compat("api.Worker.onmessageerror")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

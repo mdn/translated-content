@@ -12,32 +12,32 @@ tags:
   - keys
 translation_of: Web/API/CacheStorage/keys
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("CacheStorage")}} インターフェイスの **`keys()`** メソッドは、{{domxref("CacheStorage")}} オブジェクトによって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列をそれが作成された順番で含む配列で解決する {{jsxref("Promise")}} を返します。 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。
+<p><span class="seoSummary">{{domxref("CacheStorage")}} インターフェイスの <strong><code>keys()</code></strong> メソッドは、{{domxref("CacheStorage")}} オブジェクトによって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列をそれが作成された順番で含む配列で解決する {{jsxref("Promise")}} を返します。 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。</span></p>
 
-グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
+<p>グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して <code>CacheStorage</code> にアクセスできます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    caches.keys().then(function(keyList) {
-      // keyList で何かをする
-    });
+<pre class="syntaxbox">caches.keys().then(function(<em>keyList</em>) {
+  // keyList で何かをする
+});
+</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{domxref("CacheStorage")}} オブジェクト内の {{domxref("Cache")}} 名の配列で解決する {{jsxref("Promise")}}。
+<p>{{domxref("CacheStorage")}} オブジェクト内の {{domxref("Cache")}} 名の配列で解決する {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-このコードスニペットでは、{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} イベントを待機してから、新しいサービスワーカーがアクティブ化される前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュの名前を含むホワイトリスト（`cacheWhitelist`）があります。 `keys()` を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてホワイトリストにあるかどうかを確認します。 ない場合は、{{domxref("CacheStorage.delete()")}} を使用して削除します。
+<p>このコードスニペットでは、{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} イベントを待機してから、新しいサービスワーカーがアクティブ化される前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュの名前を含むホワイトリスト（<code>cacheWhitelist</code>）があります。 <code>keys()</code> を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてホワイトリストにあるかどうかを確認します。 ない場合は、{{domxref("CacheStorage.delete()")}} を使用して削除します。</p>
 
-```js
-this.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -49,21 +49,35 @@ this.addEventListener('activate', function(event) {
       });
     })
   );
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-keys', 'CacheStorage: keys')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-cachestorage-keys', 'CacheStorage: keys')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.CacheStorage.keys")}}
 
-## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+<p>{{Compat("api.CacheStorage.keys")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service worker の使用</a></li>
+ <li>{{domxref("Cache")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+</ul>

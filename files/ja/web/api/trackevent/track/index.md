@@ -15,25 +15,42 @@ tags:
   - track
 translation_of: Web/API/TrackEvent/track
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-{{domxref("TrackEvent")}} インターフェイスの読み取り専用の **`track`** プロパティは、イベントが適用されるメディアトラックオブジェクトを指定します。 これは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のオブジェクトになります。
+<p><span class="seoSummary">{{domxref("TrackEvent")}} インターフェイスの読み取り専用の <strong><code>track</code></strong> プロパティは、イベントが適用されるメディアトラックオブジェクトを指定します。</span> これは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のオブジェクトになります。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    track = TrackEvent.track;
+<pre class="syntaxbox"><em>track</em> = <em>TrackEvent</em>.track;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-トラックで表されるメディアの種類に応じて、{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のいずれかの種類のオブジェクトです。 これは、イベントが適用されるトラックを識別します。
+<p>トラックで表されるメディアの種類に応じて、{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のいずれかの種類のオブジェクトです。 これは、イベントが適用されるトラックを識別します。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-track", "TrackEvent.track")}}                 | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#dom-trackevent-track", "TrackEvent.track")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "media.html#dom-trackevent-track", "TrackEvent.track")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初期定義</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#dom-trackevent-track", "TrackEvent.track")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TrackEvent.track")}}
+
+
+<p>{{Compat("api.TrackEvent.track")}}</p>

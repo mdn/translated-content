@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: error イベント'
 slug: Web/API/HTMLMediaElement/error_event
+page-type: web-api-event
 tags:
   - API
   - Error
@@ -8,33 +9,60 @@ tags:
   - HTMLMediaElement
   - Reference
   - Web
-translation_of: Web/API/HTMLMediaElement/error_event
 browser-compat: api.HTMLMediaElement.error_event
+translation_of: Web/API/HTMLMediaElement/error_event
 ---
 {{APIRef}}
-\*\*\`error\`\*\* イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
-| バブリング                   | なし                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                     |
-| インターフェイス             | {{domxref("Event")}}                                             |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onerror", "onerror")}} |
+**`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
-\## 例
-\`\`\`js
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## 例
+
+```js
 const video = document.querySelector('video');
-const videoSrc = 'https\://path/to/video.webm';
+const videoSrc = 'https://path/to/video.webm';
+
 video.addEventListener('error', () => {
-console.error(\`Error loading: ${videoSrc}\`);
+  console.error(`Error loading: ${videoSrc}`);
 });
+
 video.setAttribute('src', videoSrc);
-\`\`\`
-\## 仕様書
+```
+
+## 仕様書
+
 {{Specifications}}
-\## ブラウザーの互換性
+
+## ブラウザーの互換性
+
 {{Compat}}
-\## 関連情報
-\- {{domxref("HTMLAudioElement")}}
-\- {{domxref("HTMLVideoElement")}}
-\- {{HTMLElement("audio")}}
-\- {{HTMLElement("video")}}
+
+## 関連情報
+
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

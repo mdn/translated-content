@@ -3,31 +3,38 @@ title: Window.content
 slug: Web/API/Window/content
 translation_of: Web/API/Window/content
 ---
-{{APIRef}}{{non-standard_header}}
+<p>{{APIRef}}{{non-standard_header}}</p>
 
-> **Note:** **注**: Firefox 57 以降 (当初はナイトリーのみ)、 `content` および `_content` の変化形はクロームの (特権) コードでのみ利用可能となり、ウェブではどこでも利用できなくなりました。
+<div class="note">
+<p><strong>注</strong>: Firefox 57 以降 (当初はナイトリーのみ)、 <code>content</code> および <code>_content</code> の変化形はクロームの (特権) コードでのみ利用可能となり、ウェブではどこでも利用できなくなりました。</p>
+</div>
 
-主となるコンテンツウィンドウを表す [Window object](/ja/docs/Web/API/Window) オブジェクトを返します。これは、`type="content-primary"` 属性を持つ `<browser>` (もしくは `tabbrowser` や `<iframe>`) 要素のある XUL ウィンドウにおいて役立ちます。最も有名な例は、Firefox のメインウィンドウである `browser.xul` です。このような場合、`content` はブラウザーに現在表示されている文書のための `Window` オブジェクトへの参照を返します。これは、`browserRef.contentWindow` のショートカットです。
+<p>主となるコンテンツウィンドウを表す <a href="/ja/docs/Web/API/Window">Window object</a> オブジェクトを返します。これは、<code>type="content-primary"</code> 属性を持つ <code>&lt;browser&gt;</code> (もしくは <code>tabbrowser</code> や <code>&lt;iframe&gt;</code>) 要素のある XUL ウィンドウにおいて役立ちます。最も有名な例は、Firefox のメインウィンドウである <code>browser.xul</code> です。このような場合、<code>content</code> はブラウザーに現在表示されている文書のための <code>Window</code> オブジェクトへの参照を返します。これは、<code><var>browserRef</var>.contentWindow</code> のショートカットです。</p>
+<p>特権のないコンテンツ (ウェブページ) では、<code>content</code> は通常 <a href="/ja/docs/Web/API/Window/top">top</a> と同じです (ウェブページがサイドバーに読み込まれた場合は例外で、 <code>content</code> は現在選択しているタブの <code>Window</code> を参照します)。</p>
 
-特権のないコンテンツ (ウェブページ) では、`content` は通常 [top](/ja/docs/Web/API/Window/top) と同じです (ウェブページがサイドバーに読み込まれた場合は例外で、 `content` は現在選択しているタブの `Window` を参照します)。
+<div class="note">
+<p><strong>注</strong>: いくつかの例では、<code>content</code> の代わりに <code>_content</code> を使用しています。しかし、後者は長い間非推奨とされています。ですから、新しいコードでは <code>content</code> を使うべきです。</p>
+</div>
 
-> **Note:** **注**: いくつかの例では、`content` の代わりに `_content` を使用しています。しかし、後者は長い間非推奨とされています。ですから、新しいコードでは `content` を使うべきです。
+<h3 id="Syntax">構文</h3>
 
-### 構文
+<pre class="eval">var <var>windowObject</var> = window.content;
+</pre>
 
-    var windowObject = window.content;
+<h3 id="Example">例</h3>
 
-### 例
+<p>以下のコードを <code>&lt;browser type="content-primary"/&gt;</code> 要素を持つ chrome XUL ウィンドウで実行すると、ブラウザーで現在表示されているページの最初の div 要素の周囲に赤い枠が描画されます。</p>
 
-以下のコードを `<browser type="content-primary"/>` 要素を持つ chrome XUL ウィンドウで実行すると、ブラウザーで現在表示されているページの最初の div 要素の周囲に赤い枠が描画されます。
+<pre class="eval">content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+</pre>
 
-    content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+<h3 id="Specifications">仕様書</h3>
 
-### 仕様書
+<p>なし。</p>
 
-なし。
+<h3 id="See_also">関連情報</h3>
 
-### 関連情報
-
-- [chrome コードでウィンドウを取り扱う](/ja/docs/Working_with_windows_in_chrome_code)
-- 特権コードからコンテンツの文書にアクセスする場合は、 [XPCNativeWrapper](/ja/XPCNativeWrapper) 注意してください。
+<ul>
+ <li><a href="/ja/docs/Working_with_windows_in_chrome_code">chrome コードでウィンドウを取り扱う</a></li>
+ <li>特権コードからコンテンツの文書にアクセスする場合は、 <a href="/ja/XPCNativeWrapper">XPCNativeWrapper</a> 注意してください。</li>
+</ul>

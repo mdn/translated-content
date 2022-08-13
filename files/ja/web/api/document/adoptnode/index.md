@@ -12,60 +12,83 @@ tags:
   - Reference
 translation_of: Web/API/Document/adoptNode
 ---
-{{ ApiRef("DOM") }}
+<div>{{ ApiRef("DOM") }}</div>
 
-**`Document.adoptNode()`** は、{{Glossary("node/dom", "ノード")}}を他の{{domxref("Document", "文書", "", "1")}}からメソッドの文書へ移動します。取り込まれたノードおよびそのサブツリーは (もしあれば) 元の文書から削除され、 {{domxref("Node.ownerDocument", "ownerDocument")}} が現在の文書に変更されます。その後、ノードを現在の文書に挿入することができます。
+<p><strong><code>Document.adoptNode()</code></strong> は、{{Glossary("node/dom", "ノード")}}を他の{{domxref("Document", "文書", "", "1")}}からメソッドの文書へ移動します。取り込まれたノードおよびそのサブツリーは (もしあれば) 元の文書から削除され、 {{domxref("Node.ownerDocument", "ownerDocument")}} が現在の文書に変更されます。その後、ノードを現在の文書に挿入することができます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    const importedNode = document.adoptNode(externalNode);
+<pre class="syntaxbox notranslate">const <var>importedNode</var> = document.adoptNode(<var>externalNode</var>);
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `externalNode`
-  - : 他の文書から取り込まれるノードです。
+<dl>
+ <dt><code><var>externalNode</var></code></dt>
+ <dd>他の文書から取り込まれるノードです。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-インポートする文書のスコープ内にコピーされた `importedNode`。
+<p>インポートする文書のスコープ内にコピーされた <code><var>importedNode</var></code>。</p>
 
-このメソッドを呼び出した後、 `importedNode` および `externalNode` は同じオブジェクトになります。
+<p>このメソッドを呼び出した後、 <code><var>importedNode</var></code> および <code><var>externalNode</var></code> は同じオブジェクトになります。</p>
 
-> **Note:** **注:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
+<div class="blockIndicator note">
+<p><strong>注:</strong> <code><var>importedNode</var></code> の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので <code>null</code> です。</p>
+</div>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-const iframe = document.querySelector('iframe');
+<pre class="brush: js notranslate">const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
 iframeImages.forEach(function(imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
-```
+</pre>
 
-## 注
+<h2 id="Notes" name="Notes">注</h2>
 
-外部の文書から取り込まれるノードは、現在の文書に挿入する前に、次のいずれかを実行してください。
+<p>外部の文書から取り込まれるノードは、現在の文書に挿入する前に、次のいずれかを実行してください。</p>
 
-- {{domXref("document.importNode()")}} を使用して複製する
-- {{domXref("document.adoptNode()")}} を使用して取り込む
+<ul>
+ <li>{{domXref("document.importNode()")}} を使用して複製する</li>
+ <li>{{domXref("document.adoptNode()")}} を使用して取り込む</li>
+</ul>
 
-> **Note:** **ベストプラクティス:** Firefox は現在はこの規則を強制しませんが、将来の互換性を向上するためにこの規則に従うことを強くお勧めします。
+<div class="blockIndicator note">
+<p><strong>ベストプラクティス:</strong> Firefox は現在はこの規則を強制しませんが、将来の互換性を向上するためにこの規則に従うことを強くお勧めします。</p>
+</div>
 
-{{domXref("Node.ownerDocument")}} の問題についての詳細は、 W3C DOM FAQ を参照してください。
+<p>{{domXref("Node.ownerDocument")}} の問題についての詳細は、 W3C DOM FAQ を参照してください。</p>
 
-## 仕様書
+<h2 id="Specification" name="Specification">仕様書</h2>
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-adoptnode', 'document.adoptNode')}} | {{Spec2('DOM WHATWG')}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-document-adoptnode', 'document.adoptNode')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.adoptNode")}}
+<p>{{Compat("api.Document.adoptNode")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("document.importNode()")}}
+<ul>
+ <li>{{domxref("document.importNode()")}}</li>
+</ul>

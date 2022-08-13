@@ -9,14 +9,25 @@ tags:
   - Typed Arrays
 translation_of: Web/API/BufferSource
 ---
-{{JSRef("Global_Objects", "ArrayBuffer")}}
+<div>{{JSRef("Global_Objects", "ArrayBuffer")}}</div>
 
-**`BufferSource`** は、 {{jsxref("ArrayBuffer")}} または、 {{domxref("ArrayBufferView")}} を提供する {{jsxref("TypedArray")}} のどちらかのオブジェクトを表現するために用いられる typedef です。
+<p><code><strong>BufferSource</strong></code> は、 {{jsxref("ArrayBuffer")}} または、 {{domxref("ArrayBufferView")}} を提供する {{jsxref("TypedArray")}} のどちらかのオブジェクトを表現するために用いられる typedef です。</p>
 
-これは仕様を簡潔にするためのヘルパー型です。インターフェースではなく、それを実装したオブジェクトもありません。
+<p>これは仕様を簡潔にするためのヘルパー型です。インターフェースではなく、それを実装したオブジェクトもありません。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                               | 策定状況                 | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('WebIDL', "#common-BufferSource", "BufferSource")}} | {{Spec2('WebIDL')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebIDL', "#common-BufferSource", "BufferSource")}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>

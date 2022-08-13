@@ -3,82 +3,92 @@ title: User Timing API
 slug: Web/API/User_Timing_API
 translation_of: Web/API/User_Timing_API
 ---
-{{DefaultAPISidebar("User Timing API")}}
+<div>{{DefaultAPISidebar("User Timing API")}}</div>
 
-**`User Timing`** インターフェイスを使用すると、開発者はブラウザのパフォーマンスタイムラインの一部であるアプリケーション固有の {{domxref("DOMHighResTimeStamp","timestamps")}} を作成できます。ユーザー定義のタイミングイベントタイプには 2 種類あります。"`mark`" {{domxref("PerformanceEntry.entryType","イベントタイプ")}} と "`measure`" {{domxref("PerformanceEntry.entryType","イベントタイプ")}}です。
+<p><strong><code>User Timing</code></strong> インターフェイスを使用すると、開発者はブラウザのパフォーマンスタイムラインの一部であるアプリケーション固有の {{domxref("DOMHighResTimeStamp","timestamps")}} を作成できます。ユーザー定義のタイミングイベントタイプには2種類あります。"<code>mark</code>" {{domxref("PerformanceEntry.entryType","イベントタイプ")}} と "<code>measure</code>" {{domxref("PerformanceEntry.entryType","イベントタイプ")}}です。</p>
 
-**`mark`** events are _named_ by the application and can be set at any location in an application. **`measure`** events are also _named_ by the application but they are placed between two marks thus they are effectively a _midpoint_ between two marks.
+<p><code><strong>mark</strong></code> events are <em>named</em> by the application and can be set at any location in an application. <code><strong>measure</strong></code> events are also <em>named</em> by the application but they are placed between two marks thus they are effectively a <em>midpoint</em> between two marks.</p>
 
-This document provides an overview of the `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance event types")}} including the four `User Timing` methods that extend the {{domxref("Performance")}} interface. For more details and example code regarding these two performance event types and the methods, see [Using the User Timing API](/Web/API/User_Timing_API/Using_the_User_Timing_API).
+<p>This document provides an overview of the <code>mark</code> and <code>measure</code> {{domxref("PerformanceEntry.entryType","performance event types")}} including the four <code>User Timing</code> methods that extend the {{domxref("Performance")}} interface. For more details and example code regarding these two performance event types and the methods, see <a href="/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a>.</p>
 
-## Performance `marks`
+<h2 id="Performance_marks">Performance <code>marks</code></h2>
 
-A performance **`mark`** is a _named_ {{domxref("PerformanceEntry","performance entry")}} that is created by the application. The mark is a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance timeline_.
+<p>A performance <code><strong>mark</strong></code> is a <em>named</em> {{domxref("PerformanceEntry","performance entry")}} that is created by the application. The mark is a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's <em>performance timeline</em>.</p>
 
-### Creating a performance `mark`
+<h3 id="Creating_a_performance_mark">Creating a performance <code>mark</code></h3>
 
-The {{domxref("Performance.mark","performance.mark()")}} method is used to create a performance mark. The method takes one argument, the _name_ of the mark (for example `performance.mark("mark-1")`).
+<p>The {{domxref("Performance.mark","performance.mark()")}} method is used to create a performance mark. The method takes one argument, the <em>name</em> of the mark (for example <code>performance.mark("mark-1")</code>).</p>
 
-The `mark's` {{domxref("PerformanceEntry","performance entry")}} will have the following property values:
+<p>The <code>mark's</code> {{domxref("PerformanceEntry","performance entry")}} will have the following property values:</p>
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`mark`".
-- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" given when the mark was created.
-- {{domxref("PerformanceEntry.startTime","startTime")}} - set to the {{domxref("DOMHighResTimeStamp","timestamp")}} when `mark()` was called.
-- {{domxref("PerformanceEntry.duration","duration")}} - set to "`0`" (a mark has no _duration_).
+<ul>
+ <li>{{domxref("PerformanceEntry.entryType","entryType")}} - set to "<code>mark</code>".</li>
+ <li>{{domxref("PerformanceEntry.name","name")}} - set to the "<code>name</code>" given when the mark was created.</li>
+ <li>{{domxref("PerformanceEntry.startTime","startTime")}} - set to the {{domxref("DOMHighResTimeStamp","timestamp")}} when <code>mark()</code> was called.</li>
+ <li>{{domxref("PerformanceEntry.duration","duration")}} - set to "<code>0</code>" (a mark has no <em>duration</em>).</li>
+</ul>
 
-### Retrieving performance `marks`
+<h3 id="Retrieving_performance_marks">Retrieving performance <code>marks</code></h3>
 
-The {{domxref("Performance")}} interface has three methods that can be used to retrieve a mark:
+<p>The {{domxref("Performance")}} interface has three methods that can be used to retrieve a mark:</p>
 
-- {{domxref("Performance.getEntries","performance.getEntries()")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline. Finding only `mark` entries requires checking each entry's {{domxref("PerformanceEntry.entryType","entryType")}} for "`mark`".
-- {{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified `name` and `entryType`, thus set `entryType` to "`mark`" to get all marks (and set `name` accordingly to retrieve more specific entries).
-- {{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified `entryType`, thus set `entryType` to "`mark`" to get all marks.
+<dl>
+ <dt>{{domxref("Performance.getEntries","performance.getEntries()")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline. Finding only <code>mark</code> entries requires checking each entry's {{domxref("PerformanceEntry.entryType","entryType")}} for "<code>mark</code>".</dd>
+ <dt>{{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified <code>name</code> and <code>entryType</code>, thus set <code>entryType</code> to "<code>mark</code>" to get all marks (and set <code>name</code> accordingly to retrieve more specific entries).</dd>
+ <dt>{{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified <code>entryType</code>, thus set <code>entryType</code> to "<code>mark</code>" to get all marks.</dd>
+</dl>
 
-### Removing performance `marks`
+<h3 id="Removing_performance_marks">Removing performance <code>marks</code></h3>
 
-To remove a specific mark from the performance timeline, call `performance.clearMarks(name)` where `name` is the name of the mark(s) you want removed. If this method is called with no arguments, all mark type entries will be removed from the performance timeline.
+<p>To remove a specific mark from the performance timeline, call <code>performance.clearMarks(name)</code> where <code>name</code> is the name of the mark(s) you want removed. If this method is called with no arguments, all mark type entries will be removed from the performance timeline.</p>
 
-## Performance `measures`
+<h2 id="Performance_measures">Performance <code>measures</code></h2>
 
-**`measure`** events are also _named_ by the application but they are placed between two marks thus they are effectively a _midpoint_ between two marks.
+<p><code><strong>measure</strong></code> events are also <em>named</em> by the application but they are placed between two marks thus they are effectively a <em>midpoint</em> between two marks.</p>
 
-### Creating a performance `measure`
+<h3 id="Creating_a_performance_measure">Creating a performance <code>measure</code></h3>
 
-A `measure` is created by calling `performance.measure(measureName, startMarkName, endMarkName)` where `measureName` is the measure's name and `startMarkName` and `endMarkName` are the start and end names, respectively, of the marks the measure will be placed between (in the performance timeline).
+<p>A <code>measure</code> is created by calling <code>performance.measure(measureName, startMarkName, endMarkName)</code> where <code>measureName</code> is the measure's name and <code>startMarkName</code> and <code>endMarkName</code> are the start and end names, respectively, of the marks the measure will be placed between (in the performance timeline).</p>
 
-The `measure's` {{domxref("PerformanceEntry","performance entry")}} will have the following property values:
+<p>The <code>measure's</code> {{domxref("PerformanceEntry","performance entry")}} will have the following property values:</p>
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
-- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" given when the measure was created.
-- {{domxref("PerformanceEntry.startTime","startTime")}} - set to the {{domxref("DOMHighResTimeStamp","timestamp")}} when `measure()` was called.
-- {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).
+<ul>
+ <li>{{domxref("PerformanceEntry.entryType","entryType")}} - set to "<code>measure</code>".</li>
+ <li>{{domxref("PerformanceEntry.name","name")}} - set to the "<code>name</code>" given when the measure was created.</li>
+ <li>{{domxref("PerformanceEntry.startTime","startTime")}} - set to the {{domxref("DOMHighResTimeStamp","timestamp")}} when <code>measure()</code> was called.</li>
+ <li>{{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).</li>
+</ul>
 
-### Retrieving performance `measures`
+<h3 id="Retrieving_performance_measures">Retrieving performance <code>measures</code></h3>
 
-The {{domxref("Performance")}} interface has three methods that can be used to retrieve a measure:
+<p>The {{domxref("Performance")}} interface has three methods that can be used to retrieve a measure:</p>
 
-- {{domxref("Performance.getEntries","performance.getEntries()")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline. Finding the `measure` entries requires checking each entry's {{domxref("PerformanceEntry.entryType","entryType")}} for "`measure`".
-- {{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified `name` and `entryType`, thus set `entryType` to "`measure`" to get all measures (and set `name` accordingly to retrieve more specific entries).
-- {{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}
-  - : Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified `entryType`, thus set `entryType` to "`measure`" to get all measures.
+<dl>
+ <dt>{{domxref("Performance.getEntries","performance.getEntries()")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline. Finding the <code>measure</code> entries requires checking each entry's {{domxref("PerformanceEntry.entryType","entryType")}} for "<code>measure</code>".</dd>
+ <dt>{{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified <code>name</code> and <code>entryType</code>, thus set <code>entryType</code> to "<code>measure</code>" to get all measures (and set <code>name</code> accordingly to retrieve more specific entries).</dd>
+ <dt>{{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}</dt>
+ <dd>Returns all {{domxref("PerformanceEntry","performance entries")}} in the performance timeline with the specified <code>entryType</code>, thus set <code>entryType</code> to "<code>measure</code>" to get all measures.</dd>
+</dl>
 
-### Removing performance `measures`
+<h3 id="Removing_performance_measures">Removing performance <code>measures</code></h3>
 
-To remove a specific measure from the performance timeline, call `performance.clearMeasures(name)` where `name` is the name of the measure(s) you want removed. If this method is called with no arguments, all measure type entries will be removed from the performance timeline.
+<p>To remove a specific measure from the performance timeline, call <code>performance.clearMeasures(name)</code> where <code>name</code> is the name of the measure(s) you want removed. If this method is called with no arguments, all measure type entries will be removed from the performance timeline.</p>
 
-## Interoperability
+<h2 id="Interoperability">Interoperability</h2>
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
+<p>As shown in the {{domxref("Performance")}} interface's <a href="/Web/API/Performance#Browser_compatibility">Browser Compatibility</a> table, the <code>User Timing</code> methods are broadly implemented by desktop and mobile browsers (the only exceptions are  Desktop Safari and Mobile Safari, however <a href="https://developer.apple.com/safari/technology-preview/release-notes/#r24">the Safari Technology Preview 24 has support</a>).</p>
 
-To test your browser's support for this API, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
+<p>To test your browser's support for this API, run the <code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code> application.</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- [User Timing Standard](https://w3c.github.io/user-timing/); W3C Editor's Draft
-- [CanIUse data](http://caniuse.com/#search=user-timing)
-- [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft
+<ul>
+ <li><a href="https://w3c.github.io/user-timing/">User Timing Standard</a>; W3C Editor's Draft</li>
+ <li><a href="http://caniuse.com/#search=user-timing">CanIUse data</a></li>
+ <li><a href="http://siusin.github.io/perf-timing-primer/">A Primer for Web Performance Timing APIs</a>; Xiaoqian Wu; W3C Editor's Draft</li>
+</ul>

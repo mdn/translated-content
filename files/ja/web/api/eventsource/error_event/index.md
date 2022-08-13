@@ -11,34 +11,56 @@ tags:
 translation_of: Web/API/EventSource/onerror
 original_slug: Web/API/EventSource/onerror
 ---
-{{APIRef('WebSockets API')}}
+<div>{{APIRef('WebSockets API')}}</div>
 
-{{domxref("EventSource")}} インターフェースの**`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
 
-## 構文
 
-    eventSource.onerror = function
+<p>{{domxref("EventSource")}} インターフェースの<code><strong>onerror</strong></code> プロパティは、エラーが発生し、<code>EventSource</code> オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。</p>
 
-## 例
+<h2 id="構文">構文</h2>
 
-```js
-evtSource.onerror = function() {
+<pre class="syntaxbox">eventSource.onerror = function</pre>
+
+<h2 id="例">例</h2>
+
+<pre class="brush: js">evtSource.onerror = function() {
   console.log("EventSource failed.");
-};
-```
+};</pre>
 
-> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+<div class="note">
+<p><strong>メモ</strong>: 完全な例を GitHub から見つけることができます — <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events" rel="noopener">PHP を用いた簡単な SSE のデモ</a> を参照。</p>
+</div>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                         | ステータス                       | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<ul>
+</ul>
 
-{{Compat("api.EventSource.onerror")}}
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-## 関連情報
+<div>
 
-- {{domxref("EventSource")}}
+
+<p>{{Compat("api.EventSource.onerror")}}</p>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{domxref("EventSource")}}</li>
+</ul>

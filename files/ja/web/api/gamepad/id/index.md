@@ -12,46 +12,57 @@ tags:
   - Référence(2)
 translation_of: Web/API/Gamepad/id
 ---
-{{APIRef("Gamepad API")}}
+<div>{{APIRef("Gamepad API")}}</div>
 
-{{domxref("Gamepad") }} インターフェースの** `Gamepad.id`** プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。
+<p>{{domxref("Gamepad") }} インターフェースの<strong> <code>Gamepad.id</code></strong> プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。</p>
 
-正確な構文は厳密には指定されていませんが、Firefox では 3 つの情報がダッシュ (`-`) で区切られています :
+<p><span class="tlid-translation translation"><span title="">正確な構文は厳密には指定されていませんが、Firefox では3つの情報がダッシュ </span></span>(<code>-</code>)<span class="tlid-translation translation"><span title=""> で区切られています</span></span> :</p>
 
-- USB ベンダーとコントローラーの製品 ID を含む 2 つの 4 桁 16 進数字列
-- ドライバーが提供するコントローラーの名前
+<ul>
+ <li><span class="tlid-translation translation"><span title="">USBベンダーとコントローラーの製品IDを含む</span></span>2つの4桁16進数字列</li>
+ <li><span class="tlid-translation translation"><span title="">ドライバーが提供するコントローラーの名前</span></span></li>
+</ul>
 
-例えば、PS2 のコントローラーは **810-3-USB Gamepad** を返します。
+<p>例えば、PS2 のコントローラーは <strong>810-3-USB Gamepad</strong> を返します。</p>
 
-この情報は、デバイス上のコントロールのマッピングを見つけたり、ユーザーに有用なフィードバックを表示したりすることを目的としています。
+<p><span class="tlid-translation translation"><span title="">この情報は、デバイス上のコントロールのマッピングを見つけたり、ユーザーに有用なフィードバックを表示したりすることを目的としています。</span></span></p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    readonly    attribute DOMString           id;
+<pre class="syntaxbox"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMString</span>           <span class="idlAttrName">id</span>;</span></span></pre>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-window.addEventListener("gamepadconnected", function() {
+<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});
-```
+});</pre>
 
-## 値
+<h2 id="値">値</h2>
 
-{{domxref("string")}}.
+<p>{{domxref("string")}}.</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-id", "Gamepad.id")}} | {{Spec2("Gamepad")}} | 初版     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Gamepad", "#widl-Gamepad-id", "Gamepad.id")}}</td>
+   <td>{{Spec2("Gamepad")}}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.Gamepad.id")}}
+<p>{{Compat("api.Gamepad.id")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-[Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)
+<p><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API の利用</a></p>

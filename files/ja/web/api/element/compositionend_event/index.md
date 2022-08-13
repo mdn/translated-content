@@ -6,47 +6,60 @@ tags:
   - Reference
 translation_of: Web/API/Element/compositionend_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`compositionend`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト編集システムが現在の編集セッションを完了またはキャンセルした時に発生します。
+<p><strong><code>compositionend</code></strong> イベントは、 {{glossary("input method editor", "IME")}} などのテキスト編集システムが現在の編集セッションを完了またはキャンセルした時に発生します。</p>
 
-例えば、このイベントは、ユーザーが [ピン音](https://ja.wikipedia.org/wiki/ピン音) IME を使用して漢字の入力を完了した後に発生します。
+<p>例えば、このイベントは、ユーザーが <a href="https://ja.wikipedia.org/wiki/ピン音">ピン音</a> IME を使用して漢字の入力を完了した後に発生します。</p>
 
-| バブリング                   | あり                                     |
-| ---------------------------- | ---------------------------------------- |
-| キャンセル                   | 可                                       |
-| インターフェイス             | {{domxref("CompositionEvent")}} |
-| イベントハンドラープロパティ | なし                                     |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th>キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th>インターフェイス</th>
+   <td>{{domxref("CompositionEvent")}}</td>
+  </tr>
+  <tr>
+   <th>イベントハンドラープロパティ</th>
+   <td>なし</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-```js
-const inputElement = document.querySelector('input[type="text"]');
+<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionend', (event) => {
+inputElement.addEventListener('compositionend', (event) =&gt; {
   console.log(`generated characters were: ${event.data}`);
-});
-```
+});</pre>
 
-### 実行例
+<h3 id="Live_example" name="Live_example">実行例</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="control">
-  <label for="name">On macOS, click in the textbox below,<br> then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label>
-  <input type="text" id="example" name="example">
-</div>
+<pre class="brush: html">&lt;div class="control"&gt;
+  &lt;label for="name"&gt;On macOS, click in the textbox below,&lt;br&gt; then type &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, then &lt;kbd&gt;a&lt;/kbd&gt;:&lt;/label&gt;
+  &lt;input type="text" id="example" name="example"&gt;
+&lt;/div&gt;
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
-  <button class="clear-log">Clear</button>
-</div>
-```
+&lt;div class="event-log"&gt;
+  &lt;label&gt;Event log:&lt;/label&gt;
+  &lt;textarea readonly class="event-log-contents" rows="8" cols="25"&gt;&lt;/textarea&gt;
+  &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
+&lt;/div&gt;</pre>
 
-```css hidden
-body {
+<div class="hidden">
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -77,16 +90,16 @@ kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-```
+</pre>
+</div>
 
-#### JS
+<h4 id="JS">JS</h4>
 
-```js
-const inputElement = document.querySelector('input[type="text"]');
+<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
-clearLog.addEventListener('click', () => {
+clearLog.addEventListener('click', () =&gt; {
     log.textContent = '';
 });
 
@@ -97,22 +110,35 @@ function handleEvent(event) {
 inputElement.addEventListener('compositionstart', handleEvent);
 inputElement.addEventListener('compositionupdate', handleEvent);
 inputElement.addEventListener('compositionend', handleEvent);
-```
+</pre>
 
-#### 結果
+<h4 id="Result" name="Result">結果</h4>
 
-{{ EmbedLiveSample('Live_example', '100%', '180px') }}
+<p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 状態                         |
-| ------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-compositionend')}} | {{Spec2('UI Events')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-compositionend')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Element.compositionend_event")}}
+<p>{{Compat("api.Element.compositionend_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- 関連イベント: {{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}。
+<ul>
+ <li>関連イベント: {{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}。</li>
+</ul>

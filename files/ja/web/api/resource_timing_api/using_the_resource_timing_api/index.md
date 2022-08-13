@@ -12,31 +12,30 @@ tags:
   - リソースタイミング API
 translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 ---
-{{DefaultAPISidebar("Resource Timing API")}}
+<div>{{DefaultAPISidebar("Resource Timing API")}}</div>
 
-**Resource Timing API** は、アプリケーションのリソースのロードに関する詳細なネットワークタイミングデータを取得して分析する方法を提供します。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG element")}}、画像、スクリプトなど特定のリソースを取得するのにかかる時間を判断できます。
+<p><strong>Resource Timing API</strong> は、アプリケーションのリソースのロードに関する詳細なネットワークタイミングデータを取得して分析する方法を提供します。<span class="tlid-translation translation" lang="ja"><span title="">アプリケーションはタイミングメトリックを使用して、たとえば、</span></span>{{domxref("XMLHttpRequest")}}<span class="tlid-translation translation" lang="ja"><span title="">、</span></span>{{SVGElement("SVG","SVG element")}}<span class="tlid-translation translation" lang="ja"><span title="">、画像、スクリプトなど特定のリソースを取得するの</span></span><span class="tlid-translation translation" lang="ja"><span title="">にかかる時間を判断できます。</span></span></p>
 
-The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
+<p>The interface's properties create a <em>resource loading timeline</em> with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the <em>type</em> of resource that initiated the fetch.</p>
 
-This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
+<p>This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the <a href="#see_also">See also</a> section.</p>
 
-A _live_ version of the examples is available on [Github](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+<p>A <em>live</em> version of the examples is available on <a href="https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html">Github</a>, as is the <a href="https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html">source code</a>. Pull requests and <a href="https://github.com/mdn/dom-examples/issues">bug reports</a> are welcome.</p>
 
-## Resource loading phases
+<h2 id="Resource_loading_phases">Resource loading phases</h2>
 
-An application can get timestamps for the various phases of resource loading such as redirection, DNS lookup, and TCP connection setup. Those phases and their property names are illustrated in Figure 1.
+<p>An application can get timestamps for the various phases of resource loading such as redirection, DNS lookup, and TCP connection setup. Those phases and their property names are illustrated in Figure 1.</p>
 
-![Graphic of Resource Timing timestamps](https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg)
-Figure 1. Resource timing properties
+<p><img alt="Graphic of Resource Timing timestamps" src="https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg" style="height: 540px; width: 720px;"><br>
+ Figure 1. Resource timing properties</p>
 
-An application developer can use the property values to calculate the length of time a phase takes and that information can help diagnose performance issues.
+<p>An application developer can use the property values to calculate the length of time a phase takes and that information can help diagnose performance issues.</p>
 
-## Timing resource loading phases
+<h2 id="Timing_resource_loading_phases">Timing resource loading phases</h2>
 
-The following example illustrates using the resource timing properties to calculate the amount of time the following phases take: redirection ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} ), DNS lookup ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}), TCP handshake ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}), and response ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This example also calculates the time from the start of the fetch and request start phases ({{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}, respectively), until the response has ended ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This timing data provides a detailed profile of the resource loading phases and this data can be used to help identify performance bottlenecks.
+<p>The following example illustrates using the resource timing properties to calculate the amount of time the following phases take: redirection ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} ), DNS lookup ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}), TCP handshake ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}), and response ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This example also calculates the time from the start of the fetch and request start phases ({{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}, respectively), until the response has ended ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This timing data provides a detailed profile of the resource loading phases and this data can be used to help identify performance bottlenecks.</p>
 
-```js
-function calculate_load_times() {
+<pre class="brush: js">function calculate_load_times() {
   // Check performance support
   if (performance === undefined) {
     console.log("= Calculate Load Times: performance NOT supported");
@@ -45,13 +44,13 @@ function calculate_load_times() {
 
   // Get a list of "resource" performance entries
   var resources = performance.getEntriesByType("resource");
-  if (resources === undefined || resources.length <= 0) {
+  if (resources === undefined || resources.length &lt;= 0) {
     console.log("= Calculate Load Times: there are NO `resource` performance records");
     return;
   }
 
   console.log("= Calculate Load Times");
-  for (var i=0; i < resources.length; i++) {
+  for (var i=0; i &lt; resources.length; i++) {
     console.log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
     var t = resources[i].redirectEnd - resources[i].redirectStart;
@@ -66,7 +65,7 @@ function calculate_load_times() {
     console.log("... TCP time = " + t);
 
     // Secure connection time
-    t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+    t = (resources[i].secureConnectionStart &gt; 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
     console.log("... Secure connection time = " + t);
 
     // Response time
@@ -74,28 +73,27 @@ function calculate_load_times() {
     console.log("... Response time = " + t);
 
     // Fetch until response end
-    t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+    t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
     console.log("... Fetch until response end time = " + t);
 
     // Request start until reponse end
-    t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+    t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
     console.log("... Request start until response end time = " + t);
 
     // Start until reponse end
-    t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
     console.log("... Start until response end time = " + t);
   }
 }
-```
+</pre>
 
-## Size matters?
+<h2 id="Size_matters">Size matters?</h2>
 
-アプリケーションのリソースのサイズはアプリケーションのパフォーマンスに影響を与える可能性があるため、リソースサイズに関する正確なデータを取得することが重要になる可能性があります（特に非ホストリソースの場合）。{{domxref("PerformanceResourceTiming")}} インターフェースには、リソースに関するサイズデータを取得するために使用できる 3 つのプロパティがあります。 {{domxref('PerformanceResourceTiming.transferSize','transferSize')}} プロパティは、レスポンスヘッダフィールドとレスポンスペイロードボディを含む、取得したリソースのサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツコーディングを削除する前に、フェッチ（HTTP またはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツコーディングを削除した後、メッセージ本文のフェッチ（HTTP またはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。
+<p>アプリケーションのリソースのサイズはアプリケーションのパフォーマンスに影響を与える可能性があるため、リソースサイズに関する正確なデータを取得することが重要になる可能性があります（特に非ホストリソースの場合）。{{domxref("PerformanceResourceTiming")}} インターフェースには、リソースに関するサイズデータを取得するために使用できる3つのプロパティがあります。 {{domxref('PerformanceResourceTiming.transferSize','transferSize')}}  プロパティは、レスポンスヘッダフィールドとレスポンスペイロードボディを含む、取得したリソースのサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツコーディングを削除する前に、フェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツコーディングを削除した後、メッセージ本文のフェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。</p>
 
-次の例は、これら 3 つのプロパティの使い方を示しています。
+<p>次の例は、これら3つのプロパティの使い方を示しています。</p>
 
-```js
-function display_size_data(){
+<pre class="brush: js">function display_size_data(){
   // Check for support of the PerformanceResourceTiming.*size properties and print their values
   // if supported.
   if (performance === undefined) {
@@ -111,7 +109,7 @@ function display_size_data(){
 
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
-  for (var i=0; i < list.length; i++) {
+  for (var i=0; i &lt; list.length; i++) {
     console.log("== Resource[" + i + "] - " + list[i].name);
     if ("decodedBodySize" in list[i])
       console.log("... decodedBodySize[" + i + "] = " + list[i].decodedBodySize);
@@ -129,16 +127,17 @@ function display_size_data(){
       console.log("... transferSize[" + i + "] = NOT supported");
   }
 }
-```
+</pre>
 
-## Managing the resource buffer
+<h2 id="Managing_the_resource_buffer">Managing the resource buffer</h2>
 
-ブラウザは、リソースタイミングバッファ内で少なくとも 150 のリソースタイミングパフォーマンスエントリをサポートする必要がありますが、アプリケーションによっては、その制限を超えるリソースを使用することがあります。開発者がバッファサイズを管理しやすくするために、Resource Timing は{{domxref("Performance")}}インターフェースを拡張する 2 つのメソッドを定義します。{{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} メソッドは、ブラウザのリソースパフォーマンスエントリバッファからすべての "リソース"タイプのパフォーマンスエントリを削除します。 {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} メソッドは、リソースパフォーマンスエントリのバッファサイズを、指定された数のリソースに設定します{{domxref("PerformanceEntry","performance entries")}}.。
+<p>ブラウザは、リソースタイミングバッファ内で少なくとも150のリソースタイミングパフォーマンスエントリをサポートする必要がありますが、アプリケーションによっては、その制限を超えるリソースを使用することがあります。開発者がバッファサイズを管理しやすくするために、Resource Timingは{{domxref("Performance")}}インターフェースを拡張する2つのメソッドを定義します。{{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} メソッドは、ブラウザのリソースパフォーマンスエントリバッファからすべての "リソース"タイプのパフォーマンスエントリを削除します。 {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} メソッドは、リソースパフォーマンスエントリのバッファサイズを、指定された数のリソースに設定します{{domxref("PerformanceEntry","performance entries")}}.。</p>
 
-次の例は、これら 2 つの方法の使用方法を示しています。
 
-```js
-function clear_resource_timings() {
+
+<p>次の例は、これら2つの方法の使用方法を示しています。</p>
+
+<pre class="brush: js">function clear_resource_timings() {
   if (performance === undefined) {
     console.log("= performance.clearResourceTimings(): peformance NOT supported");
     return;
@@ -176,12 +175,11 @@ function set_resource_timing_buffer_size(n) {
     console.log("... Performance.setResourceTimingBufferSize() = NOT supported");
   }
 }
-```
+</pre>
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+<p>The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the <code>init()</code> function.</p>
 
-```js
-function buffer_full(event) {
+<pre class="brush: js">function buffer_full(event) {
   console.log("WARNING: Resource Timing Buffer is FULL!");
   set_resource_timing_buffer_size(200);
 }
@@ -196,17 +194,21 @@ function init() {
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 }
-```
+</pre>
 
-## Coping with CORS
+<h2 id="Coping_with_CORS">Coping with CORS</h2>
 
-When {{Glossary("CORS")}} is in effect, many of the timing properties' values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the {{httpheader("Timing-Allow-Origin")}} HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
+<p>When {{Glossary("CORS")}} is in effect, many of the timing properties' values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the {{httpheader("Timing-Allow-Origin")}} HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.</p>
 
-> **Note:** The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+<div class="note">
+<p>The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: <code>redirectStart</code>, <code>redirectEnd</code>, <code>domainLookupStart</code>, <code>domainLookupEnd</code>, <code>connectStart</code>, <code>connectEnd</code>, <code>secureConnectionStart</code>, <code>requestStart</code>, and <code>responseStart</code>.</p>
+</div>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- [Firefox Performance Tool](/ja/docs/Tools/Performance)
-- [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+<ul>
+ <li><a href="/ja/docs/Tools/Performance">Firefox Performance Tool</a></li>
+ <li><a href="https://w3c.github.io/resource-timing/">Resource Timing Standard</a>; W3C Editor's Draft</li>
+ <li><a href="http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/">Resource Timing practical tips</a>; Steve Souders; 2014 August 21</li>
+ <li><a href="http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html">Measuring network performance with Resource Timing API</a>; Ilya Grigorik; 2013 December 11</li>
+</ul>

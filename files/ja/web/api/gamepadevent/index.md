@@ -9,51 +9,62 @@ tags:
   - Reference
 translation_of: Web/API/GamepadEvent
 ---
-{{APIRef("Gamepad API")}}
+<p>{{APIRef("Gamepad API")}}</p>
 
-Gamepad API の GamepadEvent インターフェースは、システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント {{domxref("Window.gamepadconnected")}} と {{domxref("Window.gamepaddisconnected")}} が応答して発生するものです。
+<p>Gamepad API の GamepadEvent インターフェースは、<span class="tlid-translation translation"><span title="">システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント </span></span>{{domxref("Window.gamepadconnected")}} <span class="tlid-translation translation"><span title=""> と </span></span>{{domxref("Window.gamepaddisconnected")}}<span class="tlid-translation translation"><span title=""> が応答して発生するものです。</span></span></p>
 
-## コンストラクタ
+<h2 id="コンストラクタ">コンストラクタ</h2>
 
-- {{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}
-  - : 新しい `GamepadEvent` オブジェクトを返します。
+<dl>
+ <dt>{{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}</dt>
+ <dd>新しい <code>GamepadEvent</code> オブジェクトを返します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-- {{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}
-  - : 発生したイベントの関連するゲームパッドデータへのアクセスを提供する {{ domxref("Gamepad") }} オブジェクトを返します。
+<dl>
+ <dt>{{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}</dt>
+ <dd><span class="tlid-translation translation"><span title="">発生したイベントの関連するゲームパッドデータへのアクセスを提供する </span></span>{{ domxref("Gamepad") }}<span class="tlid-translation translation"><span title=""> オブジェクトを返します。</span></span></dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-ゲームパッドプロパティは、起動された {{domxref("Window.gamepadconnected")}} イベントで呼び出されます。
+<p><span class="tlid-translation translation"><span title="">ゲームパッドプロパティは、起動された </span></span>{{domxref("Window.gamepadconnected")}}<span class="tlid-translation translation"><span title=""> イベントで呼び出されます。</span></span></p>
 
-```js
-window.addEventListener("gamepadconnected", function(e) {
+<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});
-```
+});</pre>
 
-また {{domxref("Window.gamepaddisconnected")}} イベントでも呼び出されます。
+<p>また {{domxref("Window.gamepaddisconnected")}} イベントでも呼び出されます。</p>
 
-```js
-window.addEventListener("gamepaddisconnected", function(e) {
+<pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
   console.log("Gamepad disconnected from index %d: %s",
   e.gamepad.index, e.gamepad.id);
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#gamepadevent-interface", "GamepadEvent")}} | {{Spec2("Gamepad")}} | 初版     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Gamepad", "#gamepadevent-interface", "GamepadEvent")}}</td>
+   <td>{{Spec2("Gamepad")}}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの互換性</h2>
 
-{{Compat("api.GamepadEvent")}}
+<p>{{Compat("api.GamepadEvent")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-[Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)
+<p><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API の利用</a></p>

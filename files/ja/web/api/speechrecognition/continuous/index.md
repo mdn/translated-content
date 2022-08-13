@@ -13,27 +13,27 @@ tags:
   - speech
 translation_of: Web/API/SpeechRecognition/continuous
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-{{domxref("SpeechRecognition")}} インターフェイスの **`continuous`** プロパティは、認識が行われるたびに、継続的に結果を返すのか、あるいは１つの結果のみ返すのかを制御するようになります。
+<p>{{domxref("SpeechRecognition")}} インターフェイスの <strong><code>continuous</code></strong> プロパティは、認識が行われるたびに、継続的に結果を返すのか、あるいは１つの結果のみ返すのかを制御するようになります。</p>
 
-既定では１つの結果です (`false`)
+<p>既定では１つの結果です (<code>false</code>)</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var myContinuous = mySpeechRecognition.continuous;
-    mySpeechRecognition.continuous = true;
+<pre class="syntaxbox">var myContinuous = mySpeechRecognition.continuous;
+mySpeechRecognition.continuous = true;
+</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-現在の `SpeechRecognition` の継続の状態を表す {{domxref("Boolean")}} 型。`true` の場合は継続的で、`false` の場合は１つのみの返しです。
+<p>現在の <code>SpeechRecognition</code> の継続の状態を表す {{domxref("Boolean")}} 型。<code>true</code> の場合は継続的で、<code>false</code> の場合は１つのみの返しです。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-下記のソースコードは [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) を参考しています
+<p>下記のソースコードは <a href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech color changer</a> を参考しています</p>
 
-```js
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -43,49 +43,59 @@ recognition.lang = 'ja-JP';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-...
-```
+...</pre>
 
-注意: 現在 `continuous` は Gecko で実装されておらず、いつも１つを返します。今のところ、継続的な返しをエミュレートするには、下記のソースコードのように何か返す結果が取れた時に、{{domxref("SpeechRecognition.start()")}} を実行します。
+<p>注意: 現在 <code>continuous</code> は Gecko で実装されておらず、いつも１つを返します。今のところ、継続的な返しをエミュレートするには、下記のソースコードのように何か返す結果が取れた時に、{{domxref("SpeechRecognition.start()")}} を実行します。</p>
 
-```js
-recognition.onresult = function(event) {
+<pre class="brush: js">recognition.onresult = function(event) {
     ...
   recognition.start();
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-continuous', 'continuous')}} | {{Spec2('Web Speech API')}} |          |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#dfn-continuous', 'continuous')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("api.SpeechRecognition.continuous")}}
+<div>
 
-### Firefox OS の権限
 
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
+<p>{{Compat("api.SpeechRecognition.continuous")}}</p>
 
-```json
-"permissions": {
+<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>
+</div>
+
+<p>アプリで音声認識を利用する前に、下記の権限を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> に追加する必要があります。</p>
+
+<pre class="brush: json">"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}
-```
+}</pre>
 
-privileged アプリ権限も必要なので、下記も追加が必要です。
+<p>privileged アプリ権限も必要なので、下記も追加が必要です。</p>
 
-```json
-  "type": "privileged"
-```
+<pre class="brush: json">  "type": "privileged"</pre>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

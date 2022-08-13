@@ -3,35 +3,46 @@ title: VREyeParameters.renderHeight
 slug: Web/API/VREyeParameters/renderHeight
 translation_of: Web/API/VREyeParameters/renderHeight
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
 
-{{domxref("VREyeParameters")}} インターフェイスの **`renderHeight`** 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット高さをピクセル値で表します．
+<p>{{domxref("VREyeParameters")}}  インターフェイスの <strong><code>renderHeight</code></strong> 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット高さをピクセル値で表します．</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-```js
-var curRenderHeight = myVRDisplay.getEyeParameters('left').renderHeight;
-```
+<pre class="brush: js">var curRenderHeight = myVRDisplay.getEyeParameters('left').renderHeight;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-高さを表す数値．ピクセル単位．
+<p>高さを表す数値．ピクセル単位．</p>
 
-## 例
+<h2 id="例">例</h2>
 
-    TBD.
+<pre>TBD.</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR', '#dom-vreyeparameters-renderheight', 'renderHeight')}} | {{Spec2('WebVR')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vreyeparameters-renderheight', 'renderHeight')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.VREyeParameters.renderHeight")}}
+<p>{{Compat("api.VREyeParameters.renderHeight")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

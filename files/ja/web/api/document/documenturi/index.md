@@ -2,55 +2,68 @@
 title: Document.documentURI
 slug: Web/API/Document/documentURI
 tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference - Web - プロパティ
+- API
+- DOM
+- Document
+- Property
+- Read-only
+- Reference
+  - Web
+  - プロパティ
 translation_of: Web/API/Document/documentURI
 ---
-{{ApiRef("DOM")}}
+<div>{{ApiRef("DOM")}}</div>
 
-{{domxref("Document")}} インターフェイスの **`documentURI`** プロパティは、文書の位置を文字列で返します。
+<p>{{domxref("Document")}} インターフェイスの <code><strong>documentURI</strong></code> プロパティは、文書の位置を文字列で返します。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-const uri = document.documentURI
-```
+<pre class="brush: js">const <em>uri</em> = <em>document</em>.documentURI
+</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-document.getElementById("url").textContent = document.documentURI;
-```
+<pre
+  class="brush: js">document.getElementById("url").textContent = document.documentURI;</pre>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p id="urlText">
-  URL:<br/>
-  <span id="url">URL goes here</span>
-</p>
-```
+<pre class="brush: html">&lt;p id="urlText"&gt;
+  URL:&lt;br/&gt;
+  &lt;span id="url"&gt;URL goes here&lt;/span&gt;
+&lt;/p&gt;</pre>
 
-### 結果
+<h3 id="Result">結果</h3>
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |      |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.documentURI")}}
+<p>{{Compat("api.Document.documentURI")}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- 同じ値を返す {{domxref("document.URL")}} プロパティ
+<ul>
+  <li>同じ値を返す {{domxref("document.URL")}} プロパティ</li>
+</ul>

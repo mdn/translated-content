@@ -11,110 +11,137 @@ tags:
   - インターフェイス
 translation_of: Web/API/TouchEvent
 ---
-{{APIRef("Touch Events")}}
+<p>{{APIRef("Touch Events")}}</p>
 
-**`TouchEvent`** インターフェイスは、タッチ感応面への接触状態が変化したときに発生する {{domxref("UIEvent")}} を表します。この面は、例えばタッチ画面やトラックパッドです。このイベントは画面との 1 か所以上の接触を表すことが可能であり、また接触個所の移動、増加、減少などに対応することができます。
+<p><strong><code>TouchEvent</code></strong> インターフェイスは、タッチ感応面への接触状態が変化したときに発生する {{domxref("UIEvent")}} を表します。この面は、例えばタッチ画面やトラックパッドです。このイベントは画面との 1 か所以上の接触を表すことが可能であり、また接触個所の移動、増加、減少などに対応することができます。</p>
 
-タッチは {{domxref("Touch")}} オブジェクトで表されます。それぞれのタッチで位置、大きさと形状、圧力の量、対象要素を示します。タッチのリストは {{domxref("TouchList")}} オブジェクトで表されます。
+<p>タッチは {{domxref("Touch")}} オブジェクトで表されます。それぞれのタッチで位置、大きさと形状、圧力の量、対象要素を示します。タッチのリストは {{domxref("TouchList")}} オブジェクトで表されます。</p>
 
-{{InheritanceDiagram}}
+<p>{{InheritanceDiagram}}</p>
 
-## コンストラクター
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
-- {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
-  - : `TouchEvent` オブジェクトを生成します。
+<dl>
+ <dt>{{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}</dt>
+ <dd><code>TouchEvent</code> オブジェクトを生成します。</dd>
+</dl>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+<p><em>このインターフェイスは、親である {{domxref("UIEvent")}} および {{domxref("Event")}} からプロパティを継承しています。</em></p>
 
-- {{domxref("TouchEvent.altKey")}} {{readonlyInline}}
-  - : タッチイベントが発生したときに alt キーが押下されていたかを示す論理値です。
-- {{domxref("TouchEvent.changedTouches")}} {{readonlyInline}}
-  - : {{domxref("TouchList")}} で、前回のタッチイベントと今回との間に接触状態が変化したそれぞれの接触点を表すすべての {{domxref("Touch")}} オブジェクトです。
-- {{domxref("TouchEvent.ctrlKey")}} {{readonlyInline}}
-  - : タッチイベントが発生したときに control キーが押下されていたかを示す論理値です。
-- {{domxref("TouchEvent.metaKey")}} {{readonlyInline}}
-  - : タッチイベントが発生したときに meta キーが押下されていたかを示す論理値です。
-- {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
-  - : タッチイベントが発生したときに shift キーが押下されていたかを示す論理値です。
-- {{domxref("TouchEvent.targetTouches")}}{{readonlyInline}}
-  - : 現在タッチ面に接触している、**かつ**イベントのターゲットと同じ要素でタッチを始めた {{domxref("Touch")}} オブジェクトすべてで構成される {{domxref("TouchList")}} です。
-- {{domxref("TouchEvent.touches")}} {{readonlyInline}}
-  - : {{domxref("TouchList")}} で、対象や状態の変化にかかわらず、この面における現在のすべての接触点を表すすべての {{domxref("Touch")}} オブジェクトが入ります。
-- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : イベントの開始以来の回転の変化 (角度) です。正の数は時計回りの回転です。負の数は逆時計回りの回転です。初期値は `0.0` です。
-- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : イベントの開始以来の 2 本の指の間の距離です。イベントの開始時における最初の指の間の距離に対する浮動小数点の倍数で表現します。 1.0 より小さな値は内側へのピンチ (ズームアウト) です。 1.0 より大きな値は外側へのピンチ (ズームイン) です。初期値は `1.0` です。
+<dl>
+ <dt>{{domxref("TouchEvent.altKey")}} {{readonlyInline}}</dt>
+ <dd>タッチイベントが発生したときに alt キーが押下されていたかを示す論理値です。</dd>
+ <dt>{{domxref("TouchEvent.changedTouches")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("TouchList")}} で、前回のタッチイベントと今回との間に接触状態が変化したそれぞれの接触点を表すすべての {{domxref("Touch")}} オブジェクトです。</dd>
+ <dt>{{domxref("TouchEvent.ctrlKey")}} {{readonlyInline}}</dt>
+ <dd>タッチイベントが発生したときに control キーが押下されていたかを示す論理値です。</dd>
+ <dt>{{domxref("TouchEvent.metaKey")}} {{readonlyInline}}</dt>
+ <dd>タッチイベントが発生したときに meta キーが押下されていたかを示す論理値です。</dd>
+ <dt>{{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}</dt>
+ <dd>タッチイベントが発生したときに shift キーが押下されていたかを示す論理値です。</dd>
+ <dt>{{domxref("TouchEvent.targetTouches")}}{{readonlyInline}}</dt>
+ <dd>現在タッチ面に接触している、<strong>かつ</strong>イベントのターゲットと同じ要素でタッチを始めた {{domxref("Touch")}} オブジェクトすべてで構成される {{domxref("TouchList")}} です。</dd>
+ <dt>{{domxref("TouchEvent.touches")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("TouchList")}} で、対象や状態の変化にかかわらず、この面における現在のすべての接触点を表すすべての {{domxref("Touch")}} オブジェクトが入ります。</dd>
+ <dt>{{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
+ <dd>イベントの開始以来の回転の変化 (角度) です。正の数は時計回りの回転です。負の数は逆時計回りの回転です。初期値は <code>0.0</code> です。</dd>
+ <dt>{{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
+ <dd>イベントの開始以来の2本の指の間の距離です。イベントの開始時における最初の指の間の距離に対する浮動小数点の倍数で表現します。 1.0 より小さな値は内側へのピンチ (ズームアウト) です。 1.0 より大きな値は外側へのピンチ (ズームイン) です。初期値は <code>1.0</code> です。</dd>
+</dl>
 
-## タッチイベントの種類
+<h2 id="Touch_event_types" name="Touch_event_types">タッチイベントの種類</h2>
 
-タッチ関連の変化があったことを示すために発生するイベントは、数種類あります。イベントの {{domxref("event.type", "TouchEvent.type")}} プロパティを確認すると、何が発生したかを判断できます。
+<p>タッチ関連の変化があったことを示すために発生するイベントは、数種類あります。イベントの {{domxref("event.type", "TouchEvent.type")}} プロパティを確認すると、何が発生したかを判断できます。</p>
 
-### {{domxref("Element/touchstart_event", "touchstart")}}
+<h3 id="touchstart_event" name="touchstart_event">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
 
-ユーザーがタッチ面のタッチ点に触れたときに発生します。イベントのターゲットは、タッチが発生した場所の要素 ({{domxref("Element")}}) です。
+<p>ユーザーがタッチ面のタッチ点に触れたときに発生します。イベントのターゲットは、タッチが発生した場所の要素 ({{domxref("Element")}}) です。</p>
 
-### {{domxref("Element/touchend_event", "touchend")}}
+<h3 id="touchend_event" name="touchend_event">{{domxref("Element/touchend_event", "touchend")}}</h3>
 
-ユーザーがタッチ面からタッチ点を削除したとき (すなわち、指やスタイラスをタッチ面から離したとき) に発生します。これはタッチ点がタッチ面の端の外へ移動した場合にも発生します。例えば、ユーザーの指が画面の端よりも外に移動した場合です。
+<p>ユーザーがタッチ面からタッチ点を削除したとき (すなわち、指やスタイラスをタッチ面から離したとき) に発生します。これはタッチ点がタッチ面の端の外へ移動した場合にも発生します。例えば、ユーザーの指が画面の端よりも外に移動した場合です。</p>
 
-イベントのターゲットは、タッチ点が要素の外に移動した場合であっても、タッチ点に対応する `touchstart` イベントを受信したのと同じ要素 ({{domxref("Element")}}) です。
+<p>イベントのターゲットは、タッチ点が要素の外に移動した場合であっても、タッチ点に対応する <code>touchstart</code> イベントを受信したのと同じ要素 ({{domxref("Element")}}) です。</p>
 
-タッチ面から削除されたタッチ点所 (複数の場合を含む) は、 `changedTouches` 属性で示される {{domxref("TouchList")}} でわかります。
+<p>タッチ面から削除されたタッチ点所 (複数の場合を含む) は、 <code>changedTouches</code> 属性で示される {{domxref("TouchList")}} でわかります。</p>
 
-### {{domxref("Element/touchmove_event", "touchmove")}}
+<h3 id="touchmove_event" name="touchmove_event">{{domxref("Element/touchmove_event", "touchmove")}}</h3>
 
-ユーザがタッチ面でタッチ点を動かしたときに発生します。イベントのターゲットは、タッチ点が要素の外に移動した場合であっても、タッチ点に対応する `touchstart` イベントを受信したのと同じ要素 ({{domxref("Element")}}) です。
+<p>ユーザがタッチ面でタッチ点を動かしたときに発生します。イベントのターゲットは、タッチ点が要素の外に移動した場合であっても、タッチ点に対応する <code>touchstart</code> イベントを受信したのと同じ要素 ({{domxref("Element")}}) です。</p>
 
-このイベントはタッチ点の範囲、回転角、強さの属性が変化したときにも発生します。
+<p>このイベントはタッチ点の範囲、回転角、強さの属性が変化したときにも発生します。</p>
 
-> **Note:** **注:** `touchmove` イベントが発生する頻度はブラウザーごとに異なります。また、ユーザーのハードウェアの能力にも大きく依存するでしょう。特定のイベント粒度に依存してはいけません。
+<div class="note"><strong>注:</strong> <code>touchmove</code> イベントが発生する頻度はブラウザーごとに異なります。また、ユーザーのハードウェアの能力にも大きく依存するでしょう。特定のイベント粒度に依存してはいけません。</div>
 
-### {{domxref("Element/touchcancel_event", "touchcancel")}}
+<h3 id="touchcancel_event" name="touchcancel_event">{{domxref("Element/touchcancel_event", "touchcancel")}}</h3>
 
-タッチ個所が何らかの方法で取り消されたときに発生します。このイベントが発生する理由はいくつか考えられます (正確な理由はデバイスごと、およびブラウザごとに異なるでしょう):
+<p>タッチ個所が何らかの方法で取り消されたときに発生します。このイベントが発生する理由はいくつか考えられます (正確な理由はデバイスごと、およびブラウザごとに異なるでしょう):</p>
 
-- タッチを取り消す、ある種のイベントが発生した。これは、操作中にモーダルなアラートがポップアップした場合に発生するでしょう。
-- タッチ個所がドキュメントウィンドウから外れて、ブラウザの UI 領域、プラグイン、あるいは他の外部コンテンツに移動した。
-- スクリーンがサポートする個数より多くのタッチ個所にユーザがタッチすると、{{domxref("TouchList")}} の中でもっとも古い {{domxref("Touch")}} が取り消される。
+<ul>
+ <li>タッチを取り消す、ある種のイベントが発生した。これは、操作中にモーダルなアラートがポップアップした場合に発生するでしょう。</li>
+ <li>タッチ個所がドキュメントウィンドウから外れて、ブラウザの UI 領域、プラグイン、あるいは他の外部コンテンツに移動した。</li>
+ <li>スクリーンがサポートする個数より多くのタッチ個所にユーザがタッチすると、{{domxref("TouchList")}} の中でもっとも古い {{domxref("Touch")}} が取り消される。</li>
+</ul>
 
-### addEventListener() および preventDefault() の使用
+<h3 id="Using_with_addEventListener_and_preventDefault" name="Using_with_addEventListener_and_preventDefault">addEventListener() および preventDefault() の使用</h3>
 
-重要なのは多くの場合、タッチイベントとマウスイベントの両方が送られることです (タッチに特化していないコードがユーザーと対話するため)。タッチイベントを使用する場合は、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出してマウスイベントが送信されないようにしてください。
+<p>重要なのは多くの場合、タッチイベントとマウスイベントの両方が送られることです (タッチに特化していないコードがユーザーと対話するため)。タッチイベントを使用する場合は、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出してマウスイベントが送信されないようにしてください。</p>
 
-Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, Android WebView) は例外で、 `passive` オプションの {{domxref("Element/touchstart_event", "touchstart")}} および {{domxref("Element/touchmove_event", "touchmove")}} における既定値は `true` であり、 {{domxref("Event.preventDefault","preventDefault()")}} の呼び出しは効果がありません。この動作を変更するためには、`passive` オプションを `false` に設定します。そうすると {{domxref("Event.preventDefault","preventDefault()")}} が仕様書通りに動作します。リスナーを既定で `passive` と扱うことで、ユーザーがスクロール中にページのレンダリングがブロックされることを防いでいます。デモが [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) サイトにあります。
+<p>Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, Android WebView) は例外で、 <code>passive</code> オプションの {{domxref("Element/touchstart_event", "touchstart")}} および {{domxref("Element/touchmove_event", "touchmove")}} における既定値は <code>true</code> であり、 {{domxref("Event.preventDefault","preventDefault()")}} の呼び出しは効果がありません。この動作を変更するためには、<code>passive</code> オプションを <code>false</code> に設定します。そうすると {{domxref("Event.preventDefault","preventDefault()")}} が仕様書通りに動作します。リスナーを既定で <code>passive</code> と扱うことで、ユーザーがスクロール中にページのレンダリングがブロックされることを防いでいます。デモが <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> サイトにあります。</p>
 
-## GlobalEventHandlers
+<h2 id="GlobalEventHandlers">GlobalEventHandlers</h2>
 
-{{domxref("GlobalEventHandlers")}} ミックスインは以下のイベントをグローバルイベントとして定義しており、 DOM 中のユーザーと対話できるあらゆる要素で利用できます。
+<p>{{domxref("GlobalEventHandlers")}} ミックスインは以下のイベントをグローバルイベントとして定義しており、 DOM 中のユーザーと対話できるあらゆる要素で利用できます。</p>
 
-- {{domxref("GlobalEventHandlers.ontouchstart")}} {{experimental_inline}}
-  - : {{domxref("Element/touchstart_event", "touchstart")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。
-- {{domxref("GlobalEventHandlers.ontouchend")}} {{experimental_inline}}
-  - : {{domxref("Element/touchend_event", "touchend")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。
-- {{domxref("GlobalEventHandlers.ontouchmove")}} {{experimental_inline}}
-  - : {{domxref("Element/touchmove_event", "touchmove")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。
-- {{domxref("GlobalEventHandlers.ontouchcancel")}} {{experimental_inline}}
-  - : {{domxref("Element/touchcancel_event", "touchcancel")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。
+<dl>
+ <dt>{{domxref("GlobalEventHandlers.ontouchstart")}} {{experimental_inline}}</dt>
+ <dd>{{domxref("Element/touchstart_event", "touchstart")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。</dd>
+ <dt>{{domxref("GlobalEventHandlers.ontouchend")}} {{experimental_inline}}</dt>
+ <dd>{{domxref("Element/touchend_event", "touchend")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。</dd>
+ <dt>{{domxref("GlobalEventHandlers.ontouchmove")}} {{experimental_inline}}</dt>
+ <dd>{{domxref("Element/touchmove_event", "touchmove")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。</dd>
+ <dt>{{domxref("GlobalEventHandlers.ontouchcancel")}} {{experimental_inline}}</dt>
+ <dd>{{domxref("Element/touchcancel_event", "touchcancel")}} イベントの {{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-[タッチイベントのメイン記事にある例](/ja/docs/Web/API/Touch_events#Example)をご覧ください。
+<p><a href="/ja/docs/Web/API/Touch_events#Example">タッチイベントのメイン記事にある例</a>をご覧ください。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                       | 状態                                 | 備考                                                                                        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
-| {{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}} | {{Spec2('Touch Events 2')}} | グローバル属性ハンドラーの `ontouchstart`, `ontouchend`, `ontouchmove`, `ontouchend` を追加 |
-| {{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}     | {{Spec2('Touch Events')}}     | 初回定義                                                                                    |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>グローバル属性ハンドラーの <code>ontouchstart</code>, <code>ontouchend</code>, <code>ontouchmove</code>, <code>ontouchend</code> を追加</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TouchEvent")}}
+<p>{{Compat("api.TouchEvent")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
-- {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
+ <li>{{domxref("GestureEvent")}}</li>
+ <li>{{domxref("MSGestureEvent")}}</li>
+</ul>

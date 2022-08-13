@@ -9,28 +9,42 @@ tags:
   - イベント
 translation_of: Web/API/IDBTransaction/complete_event
 ---
-{{APIRef("IndexedDB")}}
+<div>{{APIRef("IndexedDB")}}</div>
 
-`complete` イベントはトランザクションが成功裏に終了した場合に発生します。
+<p><code>complete</code> イベントはトランザクションが成功裏に終了した場合に発生します。</p>
 
-| バブリング                   | なし                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| キャンセル                   | 不可                                                                     |
-| インターフェイス             | {{DOMxRef("Event")}}                                             |
-| イベントハンドラープロパティ | {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{DOMxRef("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-{{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用:
+<p>{{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用:</p>
 
-```js
-// データベースを開く
+<pre class="brush: js;">// データベースを開く
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = event =&gt; {
   const db = event.target.result;
 
-  db.onerror = () => {
+  db.onerror = () =&gt; {
     console.log('Error creating database');
   };
 
@@ -45,14 +59,14 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = event =&gt; {
   const db = DBOpenRequest.result;
 
   // DB の読み書きトランザクションを開き、データを追加する準備ができる
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // `complete` のためのリスナーを追加
-  transaction.addEventListener('complete', event => {
+  transaction.addEventListener('complete', event =&gt; {
     console.log('Transaction was competed');
   });
 
@@ -60,18 +74,18 @@ DBOpenRequest.onsuccess = event => {
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
   const objectStoreRequest = objectStore.add(newItem);
 };
-```
 
-{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} プロパティを使用:
+</pre>
 
-```js
-// データベースを開く
+<p>{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} プロパティを使用:</p>
+
+<pre class="brush: js;">// データベースを開く
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = event =&gt; {
   const db = event.target.result;
 
-  db.onerror = () => {
+  db.onerror = () =&gt; {
     console.log('Error creating database');
   };
 
@@ -86,28 +100,29 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = event =&gt; {
   const db = DBOpenRequest.result;
 
   // DB の読み書きトランザクションを開き、データを追加する準備ができる
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // `complete` のためのリスナーを追加
-  transaction.oncomplete = event => {
+  transaction.oncomplete = event =&gt; {
     console.log('Transaction was competed');
   };
 
   const objectStore = transaction.objectStore('toDoList');
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
   const objectStoreRequest = objectStore.add(newItem);
-};
-```
+};</pre>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.IDBTransaction.complete_event")}}
+<p>{{Compat("api.IDBTransaction.complete_event")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [IndexedDB の使用](/ja/docs/IndexedDB/Using_IndexedDB)
-- {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} イベントハンドラープロパティ
+<ul>
+ <li><a href="/ja/docs/IndexedDB/Using_IndexedDB">IndexedDB の使用</a></li>
+ <li>{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} イベントハンドラープロパティ</li>
+</ul>

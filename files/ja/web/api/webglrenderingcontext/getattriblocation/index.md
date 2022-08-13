@@ -3,42 +3,61 @@ title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
-{{APIRef("WebGL")}}
+<div>{{APIRef("WebGL")}}</div>
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.getAttribLocation()`**メソッドは指定された{{domxref("WebGLProgram")}}内の属性の場所を返します。
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.getAttribLocation()</code></strong>メソッドは指定された{{domxref("WebGLProgram")}}内の属性の場所を返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    GLint gl.getAttribLocation(program, name);
+<pre class="syntaxbox notranslate">GLint <var>gl</var>.getAttribLocation(<var>program</var>, <var>name</var>);
+</pre>
 
-### 引数
+<h3 id="引数">引数</h3>
 
-- program
-  - : 属性の変数を含む{{domxref("WebGLProgram")}}
-- name
-  - : 場所を取得する属性の変数名を指定する{{domxref("DOMString")}}
+<dl>
+ <dt>program</dt>
+ <dd>属性の変数を含む{{domxref("WebGLProgram")}}</dd>
+ <dt>name</dt>
+ <dd>場所を取得する属性の変数名を指定する{{domxref("DOMString")}}</dd>
+</dl>
 
-### 返り値
+<h3 id="返り値">返り値</h3>
 
-見つかった場合、変数名の場所を示す{{domxref("GLint")}}番号を、それ以外の場合は-1 を返します。
+<p>見つかった場合、変数名の場所を示す{{domxref("GLint")}}番号を、それ以外の場合は-1を返します。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-gl.getAttribLocation(program, 'vColor');
-```
+<pre class="brush: js notranslate">gl.getAttribLocation(program, 'vColor');
+</pre>
 
-## 仕様策定状況
+<h2 id="仕様策定状況">仕様策定状況</h2>
 
-| Specification                                                                                            | Status                               | Comment                       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | 初回定義                      |
-| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>初回定義</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}}</td>
+   <td>{{Spec2('OpenGL ES 2.0')}}</td>
+   <td>OpenGL API のマニュアルページ</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+<p>{{Compat("api.WebGLRenderingContext.getAttribLocation")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+<ul>
+ <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
+</ul>

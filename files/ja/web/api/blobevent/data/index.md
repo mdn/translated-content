@@ -12,26 +12,41 @@ tags:
   - Reference
 translation_of: Web/API/BlobEvent/data
 ---
-{{ apiref("Media Capture and Streams") }}
+<p>{{ apiref("Media Capture and Streams") }}</p>
 
-{{ SeeCompatTable() }}
+<p>{{ SeeCompatTable() }}</p>
 
-**`BlobEvent.data`** 読み取り専用プロパティは、イベントに関連付けられた {{domxref("Blob")}} を表します。
+<p><code><strong>BlobEvent.data</strong></code> 読み取り専用プロパティは、イベントに関連付けられた {{domxref("Blob")}} を表します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    associatedBlob = BlobEvent.data
+<pre class="syntaxbox"><em>associatedBlob</em> = <em>BlobEvent</em>.data</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                   | 策定状況                                     | 備考       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording', '#dom-blobevent-data', 'BlobEvent.data')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('MediaStream Recording', '#dom-blobevent-data', 'BlobEvent.data')}}</td>
+   <td>{{Spec2('MediaStream Recording')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
 
-{{Compat("api.BlobEvent.data")}}
 
-## 関連項目
 
-- このプロパティが属する {{domxref("BlobEvent")}} インターフェイス。
+<p>{{Compat("api.BlobEvent.data")}}</p>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li>このプロパティが属する {{domxref("BlobEvent")}} インターフェイス。</li>
+</ul>

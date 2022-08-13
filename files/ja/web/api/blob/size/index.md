@@ -13,45 +13,63 @@ tags:
   - size
 translation_of: Web/API/Blob/size
 ---
-{{APIRef("File API")}}
+<div class="boxed translate-rendered text-content">
+<div>{{APIRef("File API")}}</div>
 
-{{domxref("Blob")}} インターフェイスの **`size`** プロパティは、{{domxref("Blob")}} または {{domxref("File")}} のサイズをバイト単位で返します。
+<p>{{domxref("Blob")}} インターフェイスの <strong><code>size</code></strong> プロパティは、{{domxref("Blob")}} または {{domxref("File")}} のサイズをバイト単位で返します。</p>
 
-## シンタックス
+<h2 id="シンタックス">シンタックス</h2>
 
-    var sizeInBytes = blob.size
+<pre class="syntaxbox notranslate">var <em>sizeInBytes</em> = <em>blob</em>.size
+</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-`Blob` (または `Blob` ベースのオブジェクト、例えば{{domxref("File")}}) 内に含まれるデータのバイト数。
+<p><code>Blob</code> (または <code>Blob</code> ベースのオブジェクト、例えば{{domxref("File")}}) 内に含まれるデータのバイト数。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-この例では、`file` 型の {{HTMLElement("input")}} 要素を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。
+<p>この例では、<code>file</code> 型の {{HTMLElement("input")}} 要素を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。</p>
 
-```js
-// fileInputは HTMLInputElement <input type="file" multiple id="myfileinput"> です。
+<pre class="brush:js notranslate">// fileInputは HTMLInputElement &lt;input type="file" multiple id="myfileinput"&gt; です。
 var fileInput = document.getElementById("myfileinput");
 
 // files は FileList オブジェクトです (NodeList に似ています)。
 var files = fileInput.files;
 
-for (var i = 0; i < files.length; i++) {
+for (var i = 0; i &lt; files.length; i++) {
   console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                               | ステータス                   | コメント |
-| -------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API', '#dfn-size', 'Blob.size')}} | {{Spec2('File API')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('File API', '#dfn-size', 'Blob.size')}}</td>
+   <td>{{Spec2('File API')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.Blob.size")}}
+<div>
+<p>{{Compat("api.Blob.size")}}</p>
+</div>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+<ul>
+ <li>{{domxref("Blob")}}</li>
+ <li>
+  <p><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">Web アプリケーションからのファイルの使用</a></p>
+ </li>
+</ul>
+</div>

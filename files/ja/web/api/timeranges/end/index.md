@@ -10,29 +10,33 @@ tags:
   - TimeRanges
 translation_of: Web/API/TimeRanges/end
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-指定された時間範囲が終わる時間オフセットを返します。
+<p><span class="seoSummary">指定された時間範囲が終わる時間オフセットを返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    endTime = TimeRanges.end(index)
+<pre class="syntaxbox"><em>endTime</em> = TimeRanges.end(index)
+</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- `index` は、終了時間を返す範囲の番号です。
+<ul>
+ <li><code>index</code> は、終了時間を返す範囲の番号です。</li>
+</ul>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-- INDEX_SIZE_ERR
-  - : 指定されたインデックスが既存の範囲に対応しない場合にスローされる `DOMException`。
+<dl>
+ <dt>INDEX_SIZE_ERR</dt>
+ <dd>指定されたインデックスが既存の範囲に対応しない場合にスローされる <code>DOMException</code>。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-ID が "myVideo" の動画要素がある場合、
+<p>ID が "myVideo" の動画要素がある場合、</p>
 
-```js
-var v = document.getElementById("myVideo");
+<pre class="brush: js">var v = document.getElementById("myVideo");
 
 var buf = v.buffered;
 
@@ -40,21 +44,36 @@ var numRanges = buf.length;
 
 if (buf.length == 1) {
   // 1つの範囲のみ
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
+  if (buf.start(0) == 0 &amp;&amp; buf.end(0) == v.duration) {
     // 1つの範囲が動画の最初から始まり、
     // 動画の最後で終わるため、すべてが読み込まれています
   }
 }
-```
+</pre>
 
-この例では、時間範囲を見て、動画全体が読み込まれたかどうかを確認します。
+<p>この例では、時間範囲を見て、動画全体が読み込まれたかどうかを確認します。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#dom-timeranges-end", "TimeRanges.end()")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "#dom-timeranges-end", "TimeRanges.end()")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TimeRanges.end")}}
+
+
+<p>{{Compat("api.TimeRanges.end")}}</p>

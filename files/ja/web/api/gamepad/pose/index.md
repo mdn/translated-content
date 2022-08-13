@@ -11,35 +11,46 @@ tags:
   - pose
 translation_of: Web/API/Gamepad/pose
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
 
-{{domxref("Gamepad")}} インターフェイスの **`pose`** 読み取り専用プロパティは、 WebVR controller に関連付けられた pose 情報 ( 3D 空間での位置と方向など) を表す {{domxref("GamepadPose")}} オブジェクトを返します。
+<p>{{domxref("Gamepad")}} インターフェイスの <strong><code>pose</code></strong> 読み取り専用プロパティは、 WebVR controller に関連付けられた pose 情報 ( 3D 空間での位置と方向など) を表す {{domxref("GamepadPose")}} オブジェクトを返します。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var myGamepadPose = gamepadInstance.pose;
-```
+<pre class="brush: js notranslate">var myGamepadPose = gamepadInstance.pose;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("GamepadPose")}} オブジェクト。
+<p>{{domxref("GamepadPose")}} オブジェクト。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-TBC
+<p>TBC</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                             | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'pose')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'pose')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Gamepad.pose")}}
+<p>{{Compat("api.Gamepad.pose")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a></li>
+</ul>

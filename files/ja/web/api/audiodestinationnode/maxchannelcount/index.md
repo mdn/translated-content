@@ -3,48 +3,60 @@ title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 translation_of: Web/API/AudioDestinationNode/maxChannelCount
 ---
-{{ APIRef("Web Audio API") }}
+<p>{{ APIRef("Web Audio API") }}</p>
 
-{{ domxref("AudioDestinationNode") }}インターフェースの`maxchannelCount`プロパティは、`unsigned long`で表された物理的なデバイスが扱えるチャンネルの最大数です。
+<div>
+<p>{{ domxref("AudioDestinationNode") }}インターフェースの<code>maxchannelCount</code>プロパティは、<code>unsigned long</code>で表された物理的なデバイスが扱えるチャンネルの最大数です。</p>
 
-{{domxref("AudioNode.channelCount")}}プロパティは 0 からこの値の間(両端を含む)です。もし{{domxref("OfflineAudioContext")}}のように`maxChannelCount`が 0 ならば、チャンネルの数は変えられません。
+<p>{{domxref("AudioNode.channelCount")}}プロパティは0からこの値の間(両端を含む)です。もし{{domxref("OfflineAudioContext")}}のように<code>maxChannelCount</code>が0ならば、チャンネルの数は変えられません。</p>
+</div>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-```js
-var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var myDestination = audioCtx.destination;
 myDestination.maxChannelCount = 2;
-```
+</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-`unsigned long`
+<p><code>unsigned long</code></p>
 
-## 例
+<h2 id="例">例</h2>
 
-次の例は単純な設定です。`AudioDestinationNode`の`maxChannelCount`を 2 にしています。
+<p>次の例は単純な設定です。<code>AudioDestinationNode</code>の<code>maxChannelCount</code>を2にしています。</p>
 
-```js
-var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
-gainNode.connect(audioCtx.destination);
-```
+gainNode.connect(audioCtx.destination);</pre>
 
-完全な実装は、MDN Web Audio の[Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/)や[Violent Theremin](http://mdn.github.io/violent-theremin/)のようなサンプルを参考にしてください。
+<p>完全な実装は、MDN Web Audioの<a class="external external-icon" href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a>や<a class="external external-icon" href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>のようなサンプルを参考にしてください。</p>
 
-## 使用
+<h2 id="使用">使用</h2>
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioDestinationNode-maxChannelCount', 'maxChannelCount')}} | {{Spec2('Web Audio API')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#widl-AudioDestinationNode-maxChannelCount', 'maxChannelCount')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.AudioDestinationNode.maxChannelCount")}}
+<p>{{Compat("api.AudioDestinationNode.maxChannelCount")}}</p>
 
-## 参考
+<h2 id="参考">参考</h2>
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+<ul>
+ <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

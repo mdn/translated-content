@@ -13,43 +13,44 @@ tags:
   - forward
 translation_of: Web/API/Window/forward
 ---
-{{ApiRef}}{{Non-standard_header}} {{deprecated_header}}
+<div>{{ApiRef}}{{Non-standard_header}} {{deprecated_header}}</div>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-ウィンドウの文書の履歴のひとつ分だけ前へ進めます。これは Firefox 固有のメソッドであり、Firefox 31 で削除しました。代わりに、標準の {{domxref("History.forward", "window.history.forward()")}} メソッドを使用してください。
+<p>ウィンドウの文書の履歴のひとつ分だけ前へ進めます。これは Firefox 固有のメソッドであり、Firefox 31 で削除しました。代わりに、標準の {{domxref("History.forward", "window.history.forward()")}} メソッドを使用してください。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    window.forward();
+<pre>window.forward();</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-ありません。
+<p>ありません。</p>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-`undefined` です。
+<p><code>undefined</code> です。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-function goForward() {
+<pre class="brush:js">function goForward() {
   if (canGoForward) {
     window.forward();
   }
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-どの仕様にも属していません。
+<p>どの仕様にも属していません。</p>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-この非標準メソッドは Firefox だけが実装しており、Firefox 31 で削除しました。
+<p>この非標準メソッドは Firefox だけが実装しており、Firefox 31 で削除しました。</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("History.back()")}}
-- {{domxref("History.forward()")}}
+<ul>
+ <li>{{domxref("History.back()")}}</li>
+ <li>{{domxref("History.forward()")}}</li>
+</ul>

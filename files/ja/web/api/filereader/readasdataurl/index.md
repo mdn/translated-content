@@ -12,32 +12,33 @@ tags:
   - メソッド
 translation_of: Web/API/FileReader/readAsDataURL
 ---
-`readAsDataURL` メソッドは、指定された{{domxref("Blob")}} または {{domxref("File")}} の内容を読み込むために使用されます。読み込み操作が終了すると、{{domxref("FileReader.readyState", "readyState")}} が `DONE` となり、{{event("loadend")}} が発生します。このとき、{{domxref("FileReader.result", "result")}} 属性には、ファイルのデータを表す、base64 エンコーディングされた [data: URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) の文字列が格納されます。
+<p><code>readAsDataURL</code> メソッドは、指定された{{domxref("Blob")}} または {{domxref("File")}} の内容を読み込むために使用されます。読み込み操作が終了すると、{{domxref("FileReader.readyState", "readyState")}} が <code>DONE</code> となり、{{event("loadend")}} が発生します。このとき、{{domxref("FileReader.result", "result")}} 属性には、ファイルのデータを表す、base64 エンコーディングされた <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data: URL</a> の文字列が格納されます。</p>
 
-> **Note:** **メモ:** blob の {{domxref("FileReader.result","result")}} は、先に Base64 でエンコードされたデータの前にある Data-URL の宣言を削除しておかないと、直接 Base64 としてデコードすることができません。 Base64 でエンコードされた文字列のみを受け取る場合は、先に結果から `data:*/*;base64,` を削除しておく必要があります。
+<div class="note">
+<p><strong>メモ:</strong> blob の {{domxref("FileReader.result","result")}} は、先に Base64 でエンコードされたデータの前にある Data-URL の宣言を削除しておかないと、直接 Base64 としてデコードすることができません。 Base64 でエンコードされた文字列のみを受け取る場合は、先に結果から <code>data:*/*;base64,</code> を削除しておく必要があります。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    instanceOfFileReader.readAsDataURL(blob);
+<pre class="syntaxbox notranslate"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `blob`
-  - : メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。
+<dl>
+ <dt><code>blob</code></dt>
+ <dd>メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="画像のプレビュー...">
-```
+<pre class="brush: html notranslate">&lt;input type="file" onchange="previewFile()"&gt;&lt;br&gt;
+&lt;img src="" height="200" alt="画像のプレビュー..."&gt;</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-function previewFile() {
+<pre class="brush: js notranslate">function previewFile() {
   const preview = document.querySelector('img');
   const file = document.querySelector('input[type=file]').files[0];
   const reader = new FileReader();
@@ -50,26 +51,22 @@ function previewFile() {
   if (file) {
     reader.readAsDataURL(file);
   }
-}
-```
+}</pre>
 
-### ライブ結果
+<h3 id="Live_Result" name="Live_Result">ライブ結果</h3>
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+<p>{{EmbedLiveSample("Example", "100%", 240)}}</p>
 
-## 複数ファイルを読み取る例
+<h2 id="Example_reading_multiple_files" name="Example_reading_multiple_files">複数ファイルを読み取る例</h2>
 
-### HTML
+<h3 id="HTML_2">HTML</h3>
 
-```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
-<div id="preview"></div>
-```
+<pre class="brush: html notranslate">&lt;input id="browse" type="file" onchange="previewFiles()" multiple&gt;
+&lt;div id="preview"&gt;&lt;/div&gt;</pre>
 
-### JavaScript
+<h3 id="JavaScript_2">JavaScript</h3>
 
-```js
-function previewFiles() {
+<pre class="brush: js notranslate">function previewFiles() {
 
   var preview = document.querySelector('#preview');
   var files   = document.querySelector('input[type=file]').files;
@@ -97,24 +94,38 @@ function previewFiles() {
     [].forEach.call(files, readAndPreview);
   }
 
-}
-```
+}</pre>
 
-> **Note:** **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html") または [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) を参照してください。
+<div class="note"><strong>メモ:</strong> Internet Explorer 10 以前では <a href="/ja/docs/Web/API/FileReader"><code>FileReader()</code></a> コンストラクターに対応していません。十分な互換性が必要とされるときは <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a> または <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a> を参照してください。</div>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
+   <td>{{Spec2("File API")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの互換性</h2>
 
-{{Compat("api.FileReader.readAsDataURL")}}
+<p>{{Compat("api.FileReader.readAsDataURL")}}</p>
 
-## あわせて参照
+<h2 id="See_also" name="See_also">あわせて参照</h2>
 
-- {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
+<ul>
+ <li>{{domxref("FileReader")}}</li>
+ <li>{{domxref("URL.createObjectURL()")}}</li>
+</ul>
 
-{{APIRef("File API")}}
+<div>{{APIRef("File API")}}</div>

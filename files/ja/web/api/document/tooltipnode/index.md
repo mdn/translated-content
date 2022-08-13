@@ -3,7 +3,7 @@ title: Document.tooltipNode
 slug: Web/API/Document/tooltipNode
 tags:
   - API
-  - API:Mozilla Extensions
+  - 'API:Mozilla Extensions'
   - DOM
   - Draft
   - Gecko
@@ -13,18 +13,18 @@ tags:
   - Reference
 translation_of: Web/API/Document/tooltipNode
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+<p>{{APIRef("DOM")}}{{Non-standard_Header}}</p>
 
-**`Document.tooltipNode`** プロパティは、現在の {{XULElem("tooltip")}} の対象となるノードを返します。
+<p><code><strong>Document.tooltipNode</strong></code> プロパティは、現在の {{XULElem("tooltip")}} の対象となるノードを返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    document.tooltipNode;
+<pre class="syntaxbox notranslate"><var>document</var>.tooltipNode;</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-XUL で定められたメソッドであり、標準仕様には含まれていません。{{Source("dom/public/idl/xul/nsIDOMXULDocument.idl#59", "nsIDOMXULDocument.idl")}} で定義されています。
+<p>XUL で定められたメソッドであり、標準仕様には含まれていません。{{Source("dom/public/idl/xul/nsIDOMXULDocument.idl#59", "nsIDOMXULDocument.idl")}} で定義されています。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Document.tooltipNode")}}
+<p>{{Compat("api.Document.tooltipNode")}}</p>

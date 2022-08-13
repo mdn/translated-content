@@ -14,44 +14,64 @@ tags:
   - appendstream
 translation_of: Web/API/SourceBuffer/appendStream
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-{{domxref("SourceBuffer")}} インターフェイスの **`appendStream()`** メソッドは、`ReadableStream` オブジェクトから `SourceBuffer` にメディアセグメントデータを追加します。
+<p><span class="seoSummary">{{domxref("SourceBuffer")}} インターフェイスの <strong><code>appendStream()</code></strong> メソッドは、<code>ReadableStream</code> オブジェクトから <code>SourceBuffer</code> にメディアセグメントデータを追加します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    sourceBuffer.appendStream(stream, maxSize);
+<pre class="syntaxbox"><em>sourceBuffer</em>.appendStream(<em>stream</em>, <em>maxSize</em>);
+</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- stream
-  - : `SourceBuffer` に追加するメディアセグメントデータのソースである {{domxref("ReadableStream")}}。
-- maxSize
-  - : この操作で追加できる最大バイト数を示す unsigned long 値。
+<dl>
+ <dt>stream</dt>
+ <dd><code>SourceBuffer</code> に追加するメディアセグメントデータのソースである {{domxref("ReadableStream")}}。</dd>
+ <dt>maxSize</dt>
+ <dd>この操作で追加できる最大バイト数を示す unsigned long 値。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref('undefined')}}。
+<p>{{jsxref('undefined')}}。</p>
 
-### 例外
+<h3 id="Exceptions" name="Exceptions">例外</h3>
 
-なし。
+<p>なし。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-未定
+<p>未定</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                                                                                 | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize', 'appendStream()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions', '#widl-SourceBuffer-appendStream-void-ReadableStream-stream-unsigned-long-long-maxSize', 'appendStream()')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.SourceBuffer.appendStream")}}
+<div>
 
-## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+<p>{{Compat("api.SourceBuffer.appendStream")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("MediaSource")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

@@ -10,39 +10,42 @@ tags:
   - 実験的
 translation_of: Web/API/AbortSignal
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-**`AbortSignal`** インターフェイスは DOM 要求 (Fetch など) と通信し、必要に応じて {{domxref("AbortController")}} オブジェクトを介して中断することを可能にするシグナルオブジェクトを表します。
+<p><strong><code>AbortSignal</code></strong> インターフェイスは DOM 要求 (Fetch など) と通信し、必要に応じて {{domxref("AbortController")}} オブジェクトを介して中断することを可能にするシグナルオブジェクトを表します。</p>
 
-## プロパティ
+<h2 id="Properties" name="Properties">プロパティ</h2>
 
-_AbortSignal インターフェイスはまた、親のインターフェースである、 {{domxref("EventTarget")}} からプロパティを継承しています。_
+<p><em>AbortSignal インターフェイスはまた、親のインターフェースである、 {{domxref("EventTarget")}} からプロパティを継承しています。</em></p>
 
-- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : シグナルが通信しているリクエスト(複数回も)が中断しているかを示す {{domxref("Boolean")}} で、(`true`) が中断している 、(`false`) は中断していないを表します。
+<dl>
+ <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
+ <dd>シグナルが通信しているリクエスト(複数回も)が中断しているかを示す {{domxref("Boolean")}} で、(<code>true</code>) が中断している 、(<code>false</code>) は中断していないを表します。</dd>
+</dl>
 
-## イベント
+<h2 id="Events" name="Events">イベント</h2>
 
-[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使うかこのインターフェースの `oneventname` プロパティにイベントリスナーを割り当てることでこのイベントへのアクセスに待機します。
+<p><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> を使うかこのインターフェースの <code>on<em>eventname</em></code> プロパティにイベントリスナーを割り当てることでこのイベントへのアクセスに待機します。</p>
 
-- [`abort`](/ja/docs/Web/API/AbortSignal/abort_event)
-  - : シグナルが通信している DOM リクエスト (複数回も) の中断を呼び出す。
-    また [`onabort`](/ja/docs/Web/API/AbortSignal/onabort) プロパティを介して利用可能です。
+<dl>
+ <dt><code><a href="/ja/docs/Web/API/AbortSignal/abort_event">abort</a></code></dt>
+ <dd>シグナルが通信している DOM リクエスト (複数回も) の中断を呼び出す。<br>
+ また <code><a href="/ja/docs/Web/API/AbortSignal/onabort">onabort</a></code> プロパティを介して利用可能です。</dd>
+</dl>
 
-## メソッド
+<h2 id="Methods" name="Methods">メソッド</h2>
 
-_AbortSignal インターフェースは親インタフェースである、{{domxref("EventTarget")}} からメソッドを継承します。_
+<p><em>AbortSignal インターフェースは親インタフェースである、{{domxref("EventTarget")}} からメソッドを継承します。</em></p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-この後の短いコードで、[Fetch API](/ja/docs/Web/API/Fetch_API) を使用してビデオをダウンロードします。
+<p>この後の短いコードで、<a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> を使用してビデオをダウンロードします。</p>
 
-まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。
+<p>まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。</p>
 
-[読み込みリクエスト](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch) が初期化すると、リクエストのオプションオブジェクト (下記 `{signal}` を参照) の内部のオプションとして `AbortSignal` を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、{{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
+<p><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">読み込みリクエスト</a> が初期化すると、リクエストのオプションオブジェクト (下記 <code>{signal}</code> を参照) の内部のオプションとして <code>AbortSignal</code> を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、{{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。</p>
 
-```js
-var controller = new AbortController();
+<pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -62,26 +65,42 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}
-```
+}</pre>
 
-> **Note:** **注記**: `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
+<div class="note">
+<p><strong>注記</strong>: <code>abort()</code> が呼ばれると、<code>fetch()</code> promise は <code>AbortError</code> で失敗します。</p>
+</div>
 
-> **Warning:** 現在のバージョンの Firefox は、`DOMException` で失敗します。
+<div class="warning">
+<p>現在のバージョンの Firefox は、<code>DOMException</code> で失敗します。</p>
+</div>
 
-GitHub で完全に動作する例を見ることができます — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) (または [実際に動作する様子](https://mdn.github.io/dom-examples/abort-api/) を参照) を参照してください。
+<p>GitHub で完全に動作する例を見ることができます — <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (または <a href="https://mdn.github.io/dom-examples/abort-api/">実際に動作する様子</a> を参照) を参照してください。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                   | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}} | {{Spec2('DOM WHATWG')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの実装状況</h2>
 
-{{Compat("api.AbortSignal")}}
+<p>{{Compat("api.AbortSignal")}}</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- [Fetch API](/ja/docs/Web/API/Fetch_API)
-- Jake Archibald による [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
+<ul>
+ <li><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a></li>
+ <li>Jake Archibald による <a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a></li>
+</ul>

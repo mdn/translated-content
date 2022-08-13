@@ -10,24 +10,39 @@ tags:
   - TaskAttributionTiming
 translation_of: Web/API/TaskAttributionTiming/containerType
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
 
-{{domxref("TaskAttributionTiming")}} インターフェイスの **`containerType`** 読み取り専用プロパティは、フレームコンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を返します。
+<p>{{domxref("TaskAttributionTiming")}} インターフェイスの <strong><code>containerType</code></strong> 読み取り専用プロパティは、フレームコンテナのタイプ（<code>iframe</code>、<code>embed</code>、<code>object</code> のいずれか）を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var containerType = TaskAttributionTiming.containerType;
+<pre class="syntaxbox">var <em>containerType</em> = TaskAttributionTiming.containerType;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-コンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を含む {{domxref("DOMString")}} です。
+<p>コンテナのタイプ（<code>iframe</code>、<code>embed</code>、<code>object</code> のいずれか）を含む {{domxref("DOMString")}} です。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containertype','containerType')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Long Tasks','#dom-taskattributiontiming-containertype','containerType')}}</td>
+   <td>{{Spec2('Long Tasks')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TaskAttributionTiming.containerType")}}
+<div>
+
+
+<p>{{Compat("api.TaskAttributionTiming.containerType")}}</p>
+</div>

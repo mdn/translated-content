@@ -13,30 +13,34 @@ tags:
   - Window
 translation_of: Web/API/Window/pkcs11
 ---
-{{APIRef()}}{{deprecated_header}}
+<p>{{APIRef()}}{{deprecated_header}}</p>
 
-## 概要
+<h2 id="Summary">概要</h2>
 
-`pkcs11` オブジェクトを返します。これは [pkcs11 プロトコル](/ja/docs/Pkcs11_protocol)に関連付けられたドライバーやその他のソフトウェアをインストールするために使用されます。 `pkcs11` に対応していない場合、このプロパティは `null` を返します。
+<p><code>pkcs11</code> オブジェクトを返します。これは <a href="/ja/docs/Pkcs11_protocol">pkcs11 プロトコル</a>に関連付けられたドライバーやその他のソフトウェアをインストールするために使用されます。 <code>pkcs11</code> に対応していない場合、このプロパティは <code>null</code> を返します。</p>
 
-> **Note:** **注:** このプロパティはセキュリティ上の理由から、 Gecko 1.9.0.14 (Firefox 3.0.14) 以降で `null` を返すようになり、 Gecko 29.0 {{geckoRelease(29)}}) で**削除されました**。 PKCS11 モジュールのインストールに関する詳細情報は、 [PKCS11 モジュールのインストール](/ja/docs/PKCS11_Module_Installation)を参照してください。このプロパティが削除された理由の詳細については、 {{ Bug(326628) }} にを参照してください。
+<div class="note">
+<p><strong>注:</strong> このプロパティはセキュリティ上の理由から、 Gecko 1.9.0.14 (Firefox 3.0.14) 以降で <code>null</code> を返すようになり、 Gecko 29.0 {{geckoRelease(29)}}) で<strong>削除されました</strong>。 PKCS11 モジュールのインストールに関する詳細情報は、 <a href="/ja/docs/PKCS11_Module_Installation">PKCS11 モジュールのインストール</a>を参照してください。このプロパティが削除された理由の詳細については、 {{ Bug(326628) }} にを参照してください。</p>
+</div>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-    objRef = window.pkcs11
+<pre class="eval"><em>objRef</em> = window.pkcs11
+</pre>
 
-## 例
+<h2 id="Example">例</h2>
 
-     window.pkcs11.addModule(sMod, secPath, 0, 0);
+<pre> window.pkcs11.addModule(sMod, secPath, 0, 0);
+</pre>
 
-## 注
+<h2 id="Notes">注</h2>
 
-`pkcs11` オブジェクトの操作方法について詳しい情報は、 `nsIDOMPkcs11` を参照してください。
+<p><code>pkcs11</code> オブジェクトの操作方法について詳しい情報は、 <code>nsIDOMPkcs11</code> を参照してください。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-仕様書にはありません。
+<p>仕様書にはありません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.Window.pkcs11")}}
+<p>{{Compat("api.Window.pkcs11")}}</p>

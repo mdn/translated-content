@@ -6,57 +6,77 @@ tags:
   - DOM
 translation_of: Web/API/Window/scroll
 ---
-{{ApiRef}}
+<p>{{ApiRef}}</p>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-ウィンドウを文書内の特定の位置までスクロールします。
+<p>ウィンドウを文書内の特定の位置までスクロールします。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    window.scroll(x-coord,y-coord)
-    window.scroll(options)
+<pre class="syntaxbox">window.scroll(<em>x-coord</em>,<em>y-coord)</em>
+window.scroll(options)
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `x-coord` : 左上を基準とした、表示させたい文書の水平軸上のピクセル
-- `y-coord` : 左上を基準とした、表示させたい文書の垂直軸上のピクセル
+<ul>
+ <li><code>x-coord</code> : 左上を基準とした、表示させたい文書の水平軸上のピクセル</li>
+ <li><code>y-coord</code> : 左上を基準とした、表示させたい文書の垂直軸上のピクセル</li>
+</ul>
 
-または
+<p>または</p>
 
-- `options` : 三つのプロパティを持たせられるオブジェクト
+<ul>
+ <li><code>options</code> : 三つのプロパティを持たせられるオブジェクト
 
-  - `top` `y-coord` と同じです
-  - `left` `x-coord` と同じです``
-  - `behavior` `smooth`、 `instant`、 `auto` のうちどれか一つを含む文字列。初期値は `auto` です
+  <ul>
+   <li><code>top</code> <code>y-coord</code> と同じです</li>
+   <li><code>left</code> <code>x-coord</code> と同じです<code> </code></li>
+   <li><code>behavior</code> <code>smooth</code>、 <code>instant</code>、 <code>auto</code> のうちどれか一つを含む文字列。初期値は <code>auto</code> です</li>
+  </ul>
+ </li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```html
-<!-- 100 個目の垂直ピクセル上にウィンドウの最上部を配置します。 -->
+<pre class="brush:html">&lt;!-- 100 個目の垂直ピクセル上にウィンドウの最上部を配置します。 --&gt;
 
-<button onClick="scroll(0, 100);">click to scroll down 100 pixels</button>
-```
+&lt;button onClick="scroll(0, 100);"&gt;click to scroll down 100 pixels&lt;/button&gt;
+</pre>
 
-#### スクロールの動作を変更する
+<h4 id="スクロールの動作を変更する">スクロールの動作を変更する</h4>
 
-スクロールの仕方を変えたいなら、options で指定してください
+<p>スクロールの仕方を変えたいなら、options で指定してください</p>
 
-```js
-window.scroll({
-  top: 1000,
-  behavior: "smooth"
-});
-```
+<pre class="brush: js line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="function token">scroll</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+  top<span class="punctuation token">:</span> <span class="number token">1000</span><span class="punctuation token">,</span>
+  behavior<span class="punctuation token">:</span> <span class="string token">"smooth"</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-## 注記
+<h2 id="Notes" name="Notes">注記</h2>
 
-効果としては、 {{domxref("window.scrollTo")}} もこのメソッドと同じです。 繰り返し特定の距離をスクロールさせるには {{domxref("window.scrollBy")}} を使用してください。
+<p>効果としては、 {{domxref("window.scrollTo")}} もこのメソッドと同じです。 繰り返し特定の距離をスクロールさせるには {{domxref("window.scrollBy")}} を使用してください。</p>
 
-次のページもご覧下さい : {{domxref("window.scrollByLines")}} 、 {{domxref("window.scrollByPages")}} 、 {{domxref("Element.scrollIntoView()")}}
+<p>次のページもご覧下さい : {{domxref("window.scrollByLines")}} 、 {{domxref("window.scrollByPages")}} 、 {{domxref("Element.scrollIntoView()")}}</p>
 
-## 仕様
+<h2 id="Specification" name="Specification">仕様</h2>
 
-| Specification                                                                                | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+<table class="standard-table" style="height: 129px; width: 1675px;">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }}</td>
+   <td>{{ Spec2('CSSOM View') }}</td>
+   <td>
+    <p>Initial definition.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>

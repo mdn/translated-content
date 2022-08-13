@@ -14,37 +14,50 @@ tags:
   - setLiveSeekableRange()
 translation_of: Web/API/MediaSource/setLiveSeekableRange
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
 
-{{domxref("MediaSource")}} インターフェイスの **`setLiveSeekableRange()`** メソッドは、ユーザーがメディア要素でシークできる範囲を設定します。
+<p>{{domxref("MediaSource")}} インターフェイスの <strong><code>setLiveSeekableRange()</code></strong> メソッドは、ユーザーがメディア要素でシークできる範囲を設定します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    mediaSource.setLiveSeekableRange(start, end)
+<pre class="syntaxbox"><var>mediaSource</var>.setLiveSeekableRange(<var>start</var>, <var>end</var>)</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- start
-  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の始まり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以下の開始タイムスタンプを持ちます。
-- end
-  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の終わり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以上の終了タイムスタンプを持ちます。
+<dl>
+ <dt>start</dt>
+ <dd>ソースの最初から測定された秒単位で設定するシーク可能な範囲の始まり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以下の開始タイムスタンプを持ちます。</dd>
+ <dt>end</dt>
+ <dd>ソースの最初から測定された秒単位で設定するシーク可能な範囲の終わり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以上の終了タイムスタンプを持ちます。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref('undefined')}}
+<p>{{jsxref('undefined')}}</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-// 未定
-```
+<pre class="brush: js">// 未定</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                         | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions','#dom-mediasource-setliveseekablerange','setLiveSeekableRange()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions','#dom-mediasource-setliveseekablerange','setLiveSeekableRange()')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.MediaSource.setLiveSeekableRange")}}
+
+
+<p>{{Compat("api.MediaSource.setLiveSeekableRange")}}</p>

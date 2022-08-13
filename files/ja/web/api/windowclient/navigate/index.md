@@ -10,31 +10,48 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/navigate
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("WindowClient")}} インターフェイスの **`navigate()`** メソッドは、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}} を返します。
+<p><span class="seoSummary">{{domxref("WindowClient")}} インターフェイスの <strong><code>navigate()</code></strong> メソッドは、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}} を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    windowClient.navigate(url).then(function(windowClient) {
-      // ナビゲーション後に WindowClient で何かを行います
-    });
+<pre class="syntaxbox"><em>windowClient</em>.navigate(<em>url</em>).then(function(<em>windowClient</em>) {
+  // ナビゲーション後に WindowClient で何かを行います
+});</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- `url`
-  - : ナビゲートする場所。
+<dl>
+ <dt><code>url</code></dt>
+ <dd>ナビゲートする場所。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}}。
+<p>既存の {{domxref("WindowClient")}} に解決される {{jsxref("Promise")}}。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-windowclient-navigate', 'navigate()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#dom-windowclient-navigate', 'navigate()')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.WindowClient.navigate")}}
+<div>
+
+
+<p>{{Compat("api.WindowClient.navigate")}}</p>
+</div>

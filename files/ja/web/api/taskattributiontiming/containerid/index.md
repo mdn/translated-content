@@ -10,24 +10,39 @@ tags:
   - TaskAttributionTiming
 translation_of: Web/API/TaskAttributionTiming/containerId
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
+<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
 
-{{domxref("TaskAttributionTiming")}} インタフェースの **`containerId`** 読み取り専用プロパティは、コンテナの `id` 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。
+<p>{{domxref("TaskAttributionTiming")}} インタフェースの <strong><code>containerId</code></strong> 読み取り専用プロパティは、コンテナの <code>id</code> 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var containerId = TaskAttributionTiming.containerId;
+<pre class="syntaxbox">var <em>containerId</em> = TaskAttributionTiming.containerId;</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-コンテナの `id` 属性を含む {{domxref("DOMString")}}。
+<p>コンテナの <code>id</code> 属性を含む {{domxref("DOMString")}}。</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containerid','containerId')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Long Tasks','#dom-taskattributiontiming-containerid','containerId')}}</td>
+   <td>{{Spec2('Long Tasks')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.TaskAttributionTiming.containerId")}}
+<div>
+
+
+<p>{{Compat("api.TaskAttributionTiming.containerId")}}</p>
+</div>

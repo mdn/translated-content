@@ -2,51 +2,58 @@
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 tags:
-  - API
-  - CSSOM
-  - Method
-  - Deprecated
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+- API
+- CSSOM
+- Method
+- Deprecated
+- Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
+translation_of: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 ---
-{{ APIRef("CSSOM") }} {{deprecated_header}}
+<p>{{ APIRef("CSSOM") }} {{deprecated_header}}</p>
 
-**CSSStyleDeclaration.getPropertyCSSValue()** メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。プロパティ名が一括指定プロパティの場合は `null` を返すことに注意して下さい。
+<p><strong>CSSStyleDeclaration.getPropertyCSSValue()</strong> メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。プロパティ名が一括指定プロパティの場合は <code>null</code> を返すことに注意して下さい。</p>
 
-> **Note:** **注:** このインターフェースは、型付けされた CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄されており、ほとんどのブラウザーは実装していません。この目的を達成するには、以下のものを使用することができます。\* {{domxref("CSSStyleDeclaration.getPropertyValue()")}} が型付けなしの [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)にあり、広く対応されています。
->
-> - {{domxref("Element.computedStyleMap()")}} が最近の [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) にありますが、対応が少なく実験的なものと考えられています。
+<div class="notecard note">
+  <p><strong>注:</strong> このインターフェースは、型付けされた CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄されており、ほとんどのブラウザーは実装していません。</p>
+  <p>この目的を達成するには、以下のものを使用することができます。</p>
+  <ul>
+    <li>{{domxref("CSSStyleDeclaration.getPropertyValue()")}} が型付けなしの <a href="/ja/docs/Web/API/CSS_Object_Model">CSS オブジェクトモデル</a>にあり、広く対応されています。</li>
+    <li>{{domxref("Element.computedStyleMap()")}} が最近の <a href="/ja/docs/Web/API/CSS_Typed_OM_API">CSS 型付きオブジェクトモデル API</a> にありますが、対応が少なく実験的なものと考えられています。</li>
+  </ul>
+</div>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-var value = style.getPropertyCSSValue(property);
-```
+<pre
+  class="brush: js">var <em>value</em> = <em>style</em>.getPropertyCSSValue(<em>property</em>);</pre>
 
-### 引数
+<h3 id="Parameters">引数</h3>
 
-- _`property`_ は、取得するプロパティ名を表す {{domxref('DOMString')}} です。
+<ul>
+  <li><em><code>property</code></em> は、取得するプロパティ名を表す {{domxref('DOMString')}} です。</li>
+</ul>
 
-### 返値
+<h3 id="Return_value">返値</h3>
 
-- `value` は、プロパティの CSS 値を含む {{domxref('CSSValue')}} です。存在しない場合は `null` を返します。
+<ul>
+ <li><code><em>value</em></code> は、プロパティの CSS 値を含む {{domxref('CSSValue')}} です。存在しない場合は <code>null</code> を返します。</li>
+</ul>
 
-## 例
+<h2 id="Example">例</h2>
 
-次の JavaScript コードは、 CSS の `color` プロパティの計算済みの RGB 値を含むオブジェクトを取得します。
+<p>次の JavaScript コードは、 CSS の <code>color</code> プロパティの計算済みの RGB 値を含むオブジェクトを取得します。</p>
 
-```js
-var style = window.getComputedStyle(elem, null);
+<pre class="brush: js">var style = window.getComputedStyle(elem, null);
 var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-この機能はもともと、 [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) 仕様書で定義されていましたが、それ以降の標準化の取り組みからは外れています。
+<p>この機能はもともと、 <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> 仕様書で定義されていましたが、それ以降の標準化の取り組みからは外れています。</p>
 
-この機能は、最新の、しかし互換性のない、 [CSS Typed Object Model API](/ja/docs/Web/API/CSS_Typed_OM_API) に取って代わられ、現在は標準化されています。
+<p>この機能は、最新の、しかし互換性のない、 <a href="/ja/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> に取って代わられ、現在は標準化されています。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

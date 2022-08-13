@@ -3,47 +3,75 @@ title: vrdisplaydisconnected
 slug: Web/API/Window/vrdisplaydisconnect_event
 translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
-{{APIRef}}{{SeeCompatTable}}
+<div>{{APIRef}}{{SeeCompatTable}}</div>
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplaydisconnected`** イベントは，互換性のある VR デバイスがコンピュータから接続解除された時に発火します．
+<div>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>vrdisplaydisconnected</code></strong> イベントは，互換性のあるVRデバイスがコンピュータから接続解除された時に発火します．</p>
+</div>
 
-| Bubbles        | No                           |
-| -------------- | ---------------------------- |
-| Cancelable     | No                           |
-| Target objects | {{domxref("Window")}} |
-| Interface      | {{domxref("Event")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <td>Bubbles</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>Cancelable</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>Target objects</td>
+   <td>{{domxref("Window")}}</td>
+  </tr>
+  <tr>
+   <td>Interface</td>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="例">例</h2>
 
-You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) method:
+<p>You can use the <code>vrdisplaydisconnect</code> event in an <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
-```js
-window.addEventListener('vrdisplaydisconnect', function() {
+<pre class="brush: js">window.addEventListener('vrdisplaydisconnect', function() {
   info.textContent = 'Display disconnected.';
   reportDisplays();
-});
-```
+});</pre>
 
-Or use the [`onvrdisplaydisconnect`](/ja/docs/Web/API/Window/onvrdisplaydisconnect) event handler property:
+<p>Or use the <code><a href="/ja/docs/Web/API/Window/onvrdisplaydisconnect">onvrdisplaydisconnect</a></code> event handler property:</p>
 
-```js
-window.onvrdisplaydisconnect = function() {
+<pre class="brush: js">window.onvrdisplaydisconnect = function() {
   info.textContent = 'Display disconnected.';
   reportDisplays();
-);
-```
+);</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| Specification                                                                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnected', 'vrdisplaydisconnected')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnected', 'vrdisplaydisconnected')}}</td>
+   <td>{{Spec2('WebVR 1.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.Window.vrdisplaydisconnect_event")}}
 
-## 参照
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+<p>{{Compat("api.Window.vrdisplaydisconnect_event")}}</p>
+
+<h2 id="参照">参照</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

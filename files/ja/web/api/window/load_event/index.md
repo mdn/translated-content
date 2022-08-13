@@ -9,51 +9,63 @@ tags:
   - load
 translation_of: Web/API/Window/load_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-**`load`** イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。これは {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が、ページの DOM の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。
+<p><strong><code>load</code></strong> イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。これは {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が、ページの DOM の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。</p>
 
-| バブリング                   | なし                                                                 |
-| ---------------------------- | -------------------------------------------------------------------- |
-| キャンセル                   | 不可                                                                 |
-| インターフェイス             | {{domxref("Event")}}                                         |
-| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/onload", "onload")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers/onload", "onload")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-ページが完全に読み込まれたときに、メッセージを記録します。
+<p>ページが完全に読み込まれたときに、メッセージを記録します。</p>
 
-```js
-window.addEventListener('load', (event) => {
+<pre class="brush: js">window.addEventListener('load', (event) =&gt; {
   console.log('ページが完全に読み込まれました');
-});
-```
+});</pre>
 
-同じですが、 `onload` イベントハンドラープロパティの場合です。
+<p>同じですが、 <code>onload</code> イベントハンドラープロパティの場合です。</p>
 
-```js
-window.onload = (event) => {
+<pre class="brush: js">window.onload = (event) =&gt; {
   console.log('page is fully loaded');
 };
-```
+</pre>
 
-### ライブデモ
+<h3 id="Live_example" name="Live_example">ライブデモ</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
-</div>
+<pre class="brush: html">&lt;div class="controls"&gt;
+  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
+&lt;/div&gt;
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
-</div>
-```
+&lt;div class="event-log"&gt;
+  &lt;label&gt;Event log:&lt;/label&gt;
+  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
 
-```css hidden
-body {
+<div class="hidden">
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -80,49 +92,69 @@ label, button {
 #reload {
   height: 2rem;
 }
-```
+</pre>
+</div>
 
-#### JS
+<h4 id="JS">JS</h4>
 
-```js
-const log = document.querySelector('.event-log-contents');
+<pre class="brush: js">const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () => {
+reload.addEventListener('click', () =&gt; {
   log.textContent ='';
-  window.setTimeout(() => {
+  window.setTimeout(() =&gt; {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', (event) =&gt; {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) => {
+document.addEventListener('readystatechange', (event) =&gt; {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) =&gt; {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
-```
 
-#### 結果
+</pre>
 
-{{ EmbedLiveSample('Live_example', '100%', '160px') }}
+<h4 id="Result" name="Result">結果</h4>
 
-## 仕様書
+<p>{{ EmbedLiveSample('Live_example', '100%', '160px') }}</p>
 
-| 仕様書                                                                                               | 状態                             | 備考                                                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('UI Events', '#event-type-load', 'load')}}                             | {{Spec2('UI Events')}}     |                                                                                                                                                                                                                                                                                                              |
-| {{SpecName('HTML WHATWG', 'parsing.html#the-end:event-load', 'Load event')}} | {{Spec2('HTML WHATWG')}} | このリンクは文書の読み込みの最後に実行されるステップの章へのリンクです。 load イベントは他の多くの要素でも発生します。そして、[load イベントを遅延させる](https://html.spec.whatwg.org/multipage/parsing.html#delay-the-load-event) ものに言及している箇所が仕様書の中に多く存在することに注意してください。 |
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-## ブラウザーの互換性
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-load', 'load')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'parsing.html#the-end:event-load', 'Load event')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>このリンクは文書の読み込みの最後に実行されるステップの章へのリンクです。 load イベントは他の多くの要素でも発生します。そして、<a href="https://html.spec.whatwg.org/multipage/parsing.html#delay-the-load-event">load イベントを遅延させる</a> ものに言及している箇所が仕様書の中に多く存在することに注意してください。</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.Window.load_event")}}
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-## 関連情報
+<p>{{Compat("api.Window.load_event")}}</p>
 
-- 関連イベント: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>関連イベント: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}</li>
+</ul>

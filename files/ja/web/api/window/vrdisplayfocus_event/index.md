@@ -9,47 +9,75 @@ tags:
   - vrdisplayfocus
 translation_of: Web/API/Window/vrdisplayfocus_event
 ---
-{{APIRef("Window")}}
+<div>{{APIRef("Window")}}</div>
 
-[WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplayfocus`** イベントは VR ディスプレイへのプレゼンテーションがぼやけた後に再開されたときに発生します。
+<div>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>vrdisplayfocus</code></strong> イベントは VR ディスプレイへのプレゼンテーションがぼやけた後に再開されたときに発生します。</p>
+</div>
 
-| Bubbles                | No                                                             |
-| ---------------------- | -------------------------------------------------------------- |
-| Cancelable             | No                                                             |
-| Interface              | {{domxref("VRDisplayEvent")}}                       |
-| Event handler property | [`onvrdisplayfocus`](/ja/docs/Web/API/Window/onvrdisplayfocus) |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("VRDisplayEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td><code><a href="/ja/docs/Web/API/Window/onvrdisplayfocus">onvrdisplayfocus</a></code></td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="例">例</h2>
 
-[`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで `vrdisplayfocus` イベントを使用できます:
+<p><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> メソッドで <code>vrdisplayfocus</code> イベントを使用できます:</p>
 
-```js
-window.addEventListener('vrdisplayfocus', function() {
+<pre class="brush: js notranslate">window.addEventListener('vrdisplayfocus', function() {
   info.textContent = 'Display focused.';
   reportDisplays();
-});
-```
+});</pre>
 
-または、 [`onvrdisplayfocus`](/ja/docs/Web/API/Window/onvrdisplayfocus) イベントハンドラープロパティを使用します:
+<p>または、 <code><a href="/ja/docs/Web/API/Window/onvrdisplayfocus">onvrdisplayfocus</a></code> イベントハンドラープロパティを使用します:</p>
 
-```js
-window.onvrdisplayfocus = function() {
+<pre class="brush: js notranslate">window.onvrdisplayfocus = function() {
   info.textContent = 'Display focused.';
   reportDisplays();
-};
-```
+};</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                 | ステータス                   | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplayfocus', 'vrdisplayfocus')}} | {{Spec2('WebVR 1.1')}} | 初回定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR 1.1', '#dom-window-onvrdisplayfocus', 'vrdisplayfocus')}}</td>
+   <td>{{Spec2('WebVR 1.1')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Window.vrdisplayfocus_event")}}
 
-## 関連項目
 
-- [WebVR API homepage](/ja/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+<p>{{Compat("api.Window.vrdisplayfocus_event")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
+</ul>

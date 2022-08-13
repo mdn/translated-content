@@ -11,36 +11,49 @@ tags:
   - getRegistrations
 translation_of: Web/API/ServiceWorkerContainer/getRegistrations
 ---
-{{APIRef("Service Workers API")}}
+<div>{{APIRef("Service Workers API")}}</div>
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`getRegistrations()`** メソッドは、`ServiceWorkerContainer` に関するすべての {{domxref("ServiceWorkerRegistration")}} を配列で取得します。 このメソッドは、{{domxref("ServiceWorkerRegistration")}} の配列に解決される {{jsxref("Promise")}} を返します。
+<p><span class="seoSummary">{{domxref("ServiceWorkerContainer")}} インターフェイスの <strong><code>getRegistrations()</code></strong> メソッドは、<code>ServiceWorkerContainer</code> に関するすべての {{domxref("ServiceWorkerRegistration")}} を配列で取得します。 このメソッドは、{{domxref("ServiceWorkerRegistration")}} の配列に解決される {{jsxref("Promise")}} を返します。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistrations) { ... });
+<pre class="syntaxbox"><em>serviceWorkerContainer</em>.getRegistrations().then(function(<em>serviceWorkerRegistrations</em>) { ... });</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-なし。
+<p>なし。</p>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{domxref("ServiceWorkerRegistration")}} オブジェクトの配列に解決される {{jsxref("Promise")}}。
+<p>{{domxref("ServiceWorkerRegistration")}} オブジェクトの配列に解決される {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-navigator.serviceWorker.getRegistrations().then(function(registrations) {
+<pre class="brush: js">navigator.serviceWorker.getRegistrations().then(function(registrations) {
   document.querySelector('#status').textContent = 'ServiceWorkerRegistrations が見つかりました。';
-});
-```
+});</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#navigator-service-worker-getRegistrations', 'getRegistrations()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#navigator-service-worker-getRegistrations', 'getRegistrations()')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerContainer.getRegistrations")}}
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerContainer.getRegistrations")}}</p>
+</div>

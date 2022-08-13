@@ -9,47 +9,70 @@ tags:
   - Reference
 translation_of: Web/API/NetworkInformation
 ---
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
 
-**`NetworkInformation`** インターフェースは、デバイスがネットワーク通信に使用している接続の情報を提供します。また、接続の種類が変更した場合、スクリプトに通知する手段を提供します。`NetworkInformation` インターフェースは、インスタンス生成できません。代わりに、{{domxref("Navigator")}} インターフェースの `connection` プロパティを通してアクセスします。
+<p><code><strong>NetworkInformation</strong></code> インターフェースは、デバイスがネットワーク通信に使用している接続の情報を提供します。また、接続の種類が変更した場合、スクリプトに通知する手段を提供します。<code>NetworkInformation</code> インターフェースは、インスタンス生成できません。代わりに、{{domxref("Navigator")}} インターフェースの <code>connection</code> プロパティを通してアクセスします。</p>
 
-## プロパティ
+<h2 id="プロパティ">プロパティ</h2>
 
-_このインターフェースは、親である {{domxref("EventTarget")}} のプロパティも継承しています。_
+<p><em>このインターフェースは、親である {{domxref("EventTarget")}} のプロパティも継承しています。</em></p>
 
-- {{domxref("NetworkInformation.type")}} {{readonlyinline}}
-  - : デバイスがネットワーク通信に使用している接続の種類を返す。値は次のうちのいずれかである：\* `bluetooth`
-    - `cellular`
-    - `ethernet`
-    - `none`
-    - `wifi`
-    - `wimax`
-    - `other`
-    - `unknown`
-- {{domxref("NetworkInformation.downlinkMax")}} {{readonlyinline}}
-  - : メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返す。
+<dl>
+ <dt>{{domxref("NetworkInformation.type")}} {{readonlyinline}}</dt>
+ <dd>デバイスがネットワーク通信に使用している接続の種類を返す。値は次のうちのいずれかである：
+ <ul>
+  <li><code>bluetooth</code></li>
+  <li><code>cellular</code></li>
+  <li><code>ethernet</code></li>
+  <li><code>none</code></li>
+  <li><code>wifi</code></li>
+  <li><code>wimax</code></li>
+  <li><code>other</code></li>
+  <li><code>unknown</code></li>
+ </ul>
+ </dd>
+ <dt>{{domxref("NetworkInformation.downlinkMax")}} {{readonlyinline}}</dt>
+ <dd>メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返す。</dd>
+</dl>
 
-### イベントハンドラ
+<h3 id="イベントハンドラ">イベントハンドラ</h3>
 
-- {{domxref("NetworkInformation.onchange")}}
-  - : 接続情報が変更されたときに発火するイベントで、このオブジェクトで {{event("change")}} が発火する。
+<dl>
+ <dt>{{domxref("NetworkInformation.onchange")}}</dt>
+ <dd>接続情報が変更されたときに発火するイベントで、このオブジェクトで {{event("change")}} が発火する。</dd>
+</dl>
 
-## メソッド
+<h2 id="メソッド">メソッド</h2>
 
-_このインターフェースは、親である {{domxref("EventTarget")}} のメソッドを継承しています。_
+<p><em>このインターフェースは、親である {{domxref("EventTarget")}} のメソッドを継承しています。</em></p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                                 | ステータス                                   | コメント   |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('Network Information', '#idl-def-NetworkInformation', 'NetworkInformation')}} | {{Spec2('Network Information')}} | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Network Information', '#idl-def-NetworkInformation', 'NetworkInformation')}}</td>
+   <td>{{Spec2('Network Information')}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.NetworkInformation")}}
+<p>{{Compat("api.NetworkInformation")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Network Information API](/ja/docs/Web/API/Network_Information_API)
-- [Online and offline events](/ja/docs/Online_and_offline_events)
-- これを実装している {{domxref("Navigator")}} インターフェース。
+<ul>
+ <li><a href="/ja/docs/Web/API/Network_Information_API">Network Information API</a></li>
+ <li><a href="/ja/docs/Online_and_offline_events">Online and offline events</a></li>
+ <li>これを実装している {{domxref("Navigator")}} インターフェース。</li>
+</ul>

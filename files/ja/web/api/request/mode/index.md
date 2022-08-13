@@ -11,52 +11,66 @@ tags:
   - request
 translation_of: Web/API/Request/mode
 ---
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+<div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-{{domxref("Request")}} インターフェースの **`mode`** 読み取り専用プロパティは、リクエストのモード（たとえば、` cors、``no-cors、``cors-with-forced-preflight、``same-origin `）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
+<p>{{domxref("Request")}} インターフェースの <strong><code>mode</code></strong> 読み取り専用プロパティは、リクエストのモード（たとえば、<code>cors、</code><code>no-cors、</code><code>cors-with-forced-preflight、</code><code>same-origin</code>）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。</p>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    var myMode = request.mode;
+<pre class="syntaxbox">var <var>myMode</var> = <var>request</var>.mode;</pre>
 
-### 値
+<h3 id="値">値</h3>
 
-{{domxref("RequestMode")}} の値は以下のいずれかです。
+<p>{{domxref("RequestMode")}} の値は以下のいずれかです。</p>
 
-- `same-origin` — このモードを設定してほかのオリジンにリクエストをした場合、結果は単純にエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
-- `no-cors` — `HEAD か` ` GET、`` POST  `以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、[シンプルヘッダー](https://fetch.spec.whatwg.org/#simple-header)を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これは ServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。
-- `cors` — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/Access_control_CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。
-- `navigate` — ナビゲーションを許可します。`navigate` は HTML ナビゲーションによってのみ利用されることを意図しています。ナビゲーションリクエストはドキュメント間のナビゲーションの場合にだけ生成されます。
+<ul>
+ <li><code>same-origin</code> — このモードを設定してほかのオリジンにリクエストをした場合、結果は単純にエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。</li>
+ <li><code>no-cors</code> — <code>HEAD か</code> <code>GET、</code><code>POST </code>以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、<a href="https://fetch.spec.whatwg.org/#simple-header">シンプルヘッダー</a>を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これはServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。</li>
+ <li><code>cors</code> — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、<a href="/ja/docs/Web/HTTP/Access_control_CORS">CORS プロトコル</a>に則ることが期待されています。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">制限された</a>ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。</li>
+ <li><code>navigate</code> — ナビゲーションを許可します。<code>navigate</code> はHTMLナビゲーションによってのみ利用されることを意図しています。ナビゲーションリクエストはドキュメント間のナビゲーションの場合にだけ生成されます。</li>
+</ul>
 
-#### デフォルトの mode
+<h4 id="デフォルトのmode">デフォルトのmode</h4>
 
-リクエストは様々な方法で初期化されますが、mode の値はその方法によって変わります。
+<p>リクエストは様々な方法で初期化されますが、modeの値はその方法によって変わります。</p>
 
-たとえば、`Request`オブジェクトが{{domxref("Request.Request")}}コンストラクタで生成された場合、`mode`の値は`cors`にセットされます。
+<p>たとえば、<code>Request</code>オブジェクトが{{domxref("Request.Request")}}コンストラクタで生成された場合、<code>mode</code>の値は<code>cors</code>にセットされます。</p>
 
-しかし、リクエストが{{domxref("Request.Request")}}コンストラクタ以外で生成された場合は`mode`として通常`no-cors`がセットされます。たとえばマークアップから生成された埋め込みリソースのようなリクエストは、[`crossorigin`](/ja/docs/Web/HTML/CORS_settings_attributes)アトリビュートが設定されていない限り、`no-cors`を利用します。そのようなものの例として、{{HTMLElement("link")}} や {{HTMLElement("script")}} エレメント（ただしモジュールを除く）、{{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} エレメントなどが存在します。
+<p>しかし、リクエストが{{domxref("Request.Request")}}コンストラクタ以外で生成された場合は<code>mode</code>として通常<code>no-cors</code>がセットされます。たとえばマークアップから生成された埋め込みリソースのようなリクエストは、<code><a href="/ja/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code>アトリビュートが設定されていない限り、<code>no-cors</code>を利用します。そのようなものの例として、{{HTMLElement("link")}} や {{HTMLElement("script")}} エレメント（ただしモジュールを除く）、{{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} エレメントなどが存在します。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-以下のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストモードを変数に保存しています：
+<p>以下のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストモードを変数に保存しています：</p>
 
-```js
-var myRequest = new Request('flowers.jpg');
-var myMode = myRequest.mode; // 既定で "cors" を返す。
-```
+<pre class="brush: js">var myRequest = new Request('flowers.jpg');
+var myMode = myRequest.mode; // 既定で "cors" を返す。</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                             | 状態                     | コメント           |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-mode','mode')}} | {{Spec2('Fetch')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-request-mode','mode')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("api.Request.mode")}}
+<p><br>
+ {{Compat("api.Request.mode")}}</p>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [**ServiceWorker API**](/ja/docs/Web/API/ServiceWorker_API)
-- [**HTTP access control (CORS)**](/ja/docs/Web/HTTP/Access_control_CORS)
-- [**HTTP**](/ja/docs/Web/HTTP)
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API"><u><font color="#0066cc">ServiceWorker API</font></u></a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS"><u><font color="#0066cc">HTTP access control (CORS)</font></u></a></li>
+ <li><a href="/ja/docs/Web/HTTP"><u><font color="#0066cc">HTTP</font></u></a></li>
+</ul>

@@ -2,48 +2,52 @@
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/removeProperty
+- API
+- CSSOM
+- Method
+- Reference
 browser-compat: api.CSSStyleDeclaration.removeProperty
+translation_of: Web/API/CSSStyleDeclaration/removeProperty
 ---
-{{ APIRef("CSSOM") }}
+<p>{{ APIRef("CSSOM") }}</p>
 
-**`CSSStyleDeclaration.removeProperty()`** メソッドインターフェイスは、 CSS スタイル宣言オブジェクトからプロパティを削除します。
+<p><strong><code>CSSStyleDeclaration.removeProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトからプロパティを削除します。</p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-var oldValue = style.removeProperty(property);
-```
+<pre
+  class="brush: js">var <em>oldValue</em> = <em>style</em>.removeProperty(<em>property</em>);</pre>
 
-### 引数
+<h3 id="Parameters">引数</h3>
 
-- _`property`_ は {{domxref('DOMString')}} で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。
+<ul>
+  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。</li>
+</ul>
 
-### 返値
+<h3 id="Return_value">返値</h3>
 
-- `oldValue` は {{domxref('DOMString')}} で、削除される前の CSS プロパティの値と等しいものです。
+<ul>
+  <li><code><em>oldValue</em></code> は {{domxref('DOMString')}} で、削除される前の CSS プロパティの値と等しいものです。</li>
+</ul>
 
-### 例外
+<h3 id="Exceptions">例外</h3>
 
-- {{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: プロパティまたは宣言ブロックが読取専用の場合。
+<ul>
+  <li>{{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: プロパティまたは宣言ブロックが読取専用の場合。</li>
+</ul>
 
-## 例
+<h2 id="Example">例</h2>
 
-次の JavaScript コードは、 CSS の `background-color` プロパティをセレクター規則から削除します。
+<p>次の JavaScript コードは、 CSS の <code>background-color</code> プロパティをセレクター規則から削除します。</p>
 
-```js
-var declaration = document.styleSheets[0].rules[0].style;
+<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
 var oldValue = declaration.removeProperty('background-color');
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

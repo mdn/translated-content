@@ -10,54 +10,70 @@ tags:
   - メソッド
 translation_of: Web/API/Document/createTextNode
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-新しい {{domxref("Text")}} ノードを生成します。このメソッドは HTML 文字をエスケープするのに利用できます。
+<p>新しい {{domxref("Text")}} ノードを生成します。このメソッドは HTML 文字をエスケープするのに利用できます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var text = document.createTextNode(data);
+<pre class="syntaxbox">var <var>text</var> = document.createTextNode(<var>data</var>);
+</pre>
 
-- _text_: {{domxref("Text")}} ノード。
-- _data_: テキストノードの中に入れるデータが入った[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)。
+<ul>
+ <li><var>text</var>: {{domxref("Text")}} ノード。</li>
+ <li><var>data</var>: テキストノードの中に入れるデータが入った<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String">文字列</a>。</li>
+</ul>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;createTextNode example&lt;/title&gt;
+&lt;script&gt;
 function addTextNode(text) {
   var newtext = document.createTextNode(text),
       p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
-</script>
-</head>
+&lt;/script&gt;
+&lt;/head&gt;
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+&lt;body&gt;
+  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
+  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
+  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
 
-  <hr />
+  &lt;hr /&gt;
 
-  <p id="p1">First line of paragraph.</p>
-</body>
-</html>
-```
+  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
-{{EmbedLiveSample('Example')}}
+</pre>
 
-## 仕様書
+<p>{{EmbedLiveSample('Example')}}</p>
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}} | {{Spec2('DOM WHATWG')}} |      |
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-## ブラウザーの対応
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.Document.createTextNode")}}
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<p>{{Compat("api.Document.createTextNode")}}</p>

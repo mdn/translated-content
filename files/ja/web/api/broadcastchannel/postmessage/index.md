@@ -11,26 +11,42 @@ tags:
   - Reference
 translation_of: Web/API/BroadcastChannel/postMessage
 ---
-{{APIRef("BroadCastChannel API")}}
+<p>{{APIRef("BroadCastChannel API")}}</p>
 
-**`BroadcastChannel.postMessage()`** は、任意の種類の {{jsxref("Object")}} のメッセージを、同じ{{glossary("origin","オリジン")}}を持つ任意の{{glossary("browsing context","閲覧コンテキスト")}}内の各リスナーに送信します。 メッセージは、チャネルに結び付けられた各 `BroadcastChannel` を対象とした {{event("message")}} イベントとして送信します。
+<p><strong><code>BroadcastChannel.postMessage()</code></strong> は、任意の種類の {{jsxref("Object")}} のメッセージを、同じ{{glossary("origin","オリジン")}}を持つ任意の{{glossary("browsing context","閲覧コンテキスト")}}内の各リスナーに送信します。 メッセージは、チャネルに結び付けられた各 <code>BroadcastChannel</code> を対象とした {{event("message")}} イベントとして送信します。</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var str = channel.postMessage(object);
+<pre class="syntaxbox">var <em>str</em> = <em>channe<code>l</code></em><code>.postMessage(<em>object</em>);</code>
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                             | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel-postmessage", "BroadcastChannel.postmessage()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel-postmessage", "BroadcastChannel.postmessage()")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.BroadcastChannel.postMessage")}}
 
-## 関連情報
 
-- {{domxref("BroadcastChannel")}}: これが属するインターフェース。
+<p>{{Compat("api.BroadcastChannel.postMessage")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("BroadcastChannel")}}: これが属するインターフェース。</li>
+</ul>

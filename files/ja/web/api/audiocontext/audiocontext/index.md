@@ -3,24 +3,35 @@ title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 translation_of: Web/API/AudioContext/AudioContext
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+<p>{{APIRef("Web Audio API")}}{{SeeCompatTable}}</p>
 
-**`AudioContext()`** コンストラクタは新しい {{domxref("AudioContext")}} オブジェクトを作成します。このオブジェクトはオーディオモジュールが相互に接続された音声処理のグラフを表現しています。このグラフ中で用いられるオーディオモジュールは {{domxref("AudioNode")}} として表現されます。
+<p><strong><code>AudioContext()</code></strong> コンストラクタは新しい {{domxref("AudioContext")}} オブジェクトを作成します。このオブジェクトはオーディオモジュールが相互に接続された音声処理のグラフを表現しています。このグラフ中で用いられるオーディオモジュールは {{domxref("AudioNode")}} として表現されます。</p>
 
-## 記法
+<h2 id="Syntax" name="Syntax">記法</h2>
 
-    var audioContext = new AudioContext(options)
+<pre class="syntaxbox">var audioContext = new AudioContext(options)</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-なし。
+<p>なし。</p>
 
-**仕様**
+<p><strong style="color: #4d4e53; font-size: 2.143rem; font-weight: 700; letter-spacing: -1px;">仕様</strong></p>
 
-| 仕様                                                                                 | 状態                                 | コメント            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#AudioContext','AudioContext()')}} | {{Spec2('Web Audio API')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API','#AudioContext','AudioContext()')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザー互換性</h2>
 
-{{Compat("api.AudioContext.AudioContext")}}
+<p>{{Compat("api.AudioContext.AudioContext")}}</p>

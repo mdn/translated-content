@@ -10,74 +10,105 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API
 ---
-{{DefaultAPISidebar("Web Storage API")}}
+<p>{{DefaultAPISidebar("Web Storage API")}}</p>
 
-**Web Storage API** は、{{Glossary("Cookie","クッキー")}}を使用するよりも直感的な方法で、ブラウザーがキーと値のペアを保存できる仕組みを提供します。
+<p><span class="seoSummary"><strong>Web Storage API</strong> は、{{Glossary("Cookie","クッキー")}}を使用するよりも直感的な方法で、ブラウザーがキーと値のペアを保存できる仕組みを提供します。</span></p>
 
-## Web Storage の概念と使用方法
+<h2 id="Web_Storage_concepts_and_usage" name="Web_Storage_concepts_and_usage">Web Storage の概念と使用方法</h2>
 
-Web Storage には、以下の 2 種類の仕組みがあります:
+<p>Web Storage には、以下の 2 種類の仕組みがあります:</p>
 
-- `sessionStorage` は、ページのセッション中 (ページの再読み込みや復元を含む、ブラウザーを開いている間) に使用可能な、{{glossary("origin","オリジン")}}ごとに区切られた保存領域を管理します。
+<ul>
+ <li><code>sessionStorage</code> は、ページのセッション中 (ページの再読み込みや復元を含む、ブラウザーを開いている間) に使用可能な、{{glossary("origin","オリジン")}}ごとに区切られた保存領域を管理します。
 
-  - セッションデータのみを保存します。つまり、データはブラウザ（またはタブ）が閉じられるまで保存されます。
-  - データがサーバに転送されることはありません。
-  - ストレージの制限がクッキーよりも大きいです（最大 5MB ）。
+  <ul>
+   <li>セッションデータのみを保存します。つまり、データはブラウザ（またはタブ）が閉じられるまで保存されます。</li>
+   <li>データがサーバに転送されることはありません。</li>
+   <li>ストレージの制限がクッキーよりも大きいです（最大 5MB ）。</li>
+  </ul>
+ </li>
+ <li><code>localStorage</code> も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
+  <ul>
+   <li>有効期限なしでデータを保存し、 JavaScript を介してクリアされます。もしくは、ブラウザキャッシュ/ローカルに保存したデータのクリアによりクリアされます。</li>
+   <li>ストレージ制限は3つの中で最大です。</li>
+  </ul>
+ </li>
+</ul>
 
-- `localStorage` も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
+<p>これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、サポートするブラウザーは <code>Window</code> オブジェクトが <code>WindowLocalStorage</code> および <code>WindowSessionStorage</code> オブジェクトを実装しており、これらに <code>localStorage</code> および <code>sessionStorage</code> プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。 同じオリジンに対して <code>sessionStorage</code> と <code>localStorage</code> は、別の Storage オブジェクトを使用します。 これらは別々に制御されて機能します。</p>
 
-  - 有効期限なしでデータを保存し、 JavaScript を介してクリアされます。もしくは、ブラウザキャッシュ/ローカルに保存したデータのクリアによりクリアされます。
-  - ストレージ制限は 3 つの中で最大です。
+<div class="note">
+<p><strong>注記</strong>: Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。</p>
+</div>
 
-これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、サポートするブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。 同じオリジンに対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。 これらは別々に制御されて機能します。
+<div class="note">
+<p><strong>注記</strong>: ユーザーが<a href="https://support.mozilla.org/kb/disable-third-party-cookies">サードパーティのクッキーを禁止している</a>（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません (<a href="/ja/docs/Mozilla/Firefox/Releases/43">Firefox 43</a> から、この動作を実装しています)。</p>
+</div>
 
-> **Note:** **注記**: Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。
+<div class="note">
+<p><strong>注記:</strong> Web Storage は、<a href="/ja/docs/Storage" title="Storage">mozStorage</a> (SQLite 用の、Mozilla の XPCOM インターフェイス) や <a href="/ja/docs/Session_store_API" title="Session_store_API">Session store API</a> (拡張機能で使用するための、<a href="/ja/docs/XPCOM" title="XPCOM">XPCOM</a> ストレージユーティリティ) とは異なります。</p>
+</div>
 
-> **Note:** **注記**: ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
+<h2 id="Web_Storage_interfaces" name="Web_Storage_interfaces">Web Storage インターフェイス</h2>
 
-> **Note:** **注記:** Web Storage は、[mozStorage](/ja/docs/Storage "Storage") (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API "Session_store_API") (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM "XPCOM") ストレージユーティリティ) とは異なります。
+<dl>
+ <dt>{{domxref("Storage")}}</dt>
+ <dd>特定のドメインおよびストレージタイプ (session または local) に対して、データを保存、取り出し、削除できます。</dd>
+ <dt>{{domxref("Window")}}</dt>
+ <dd>Web Storage API は {{domxref("Window")}} オブジェクトを、{{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} という新たなプロパティで拡張します。 これらは、それぞれ現在のドメインの session および local {{domxref("Storage")}} オブジェクトへのアクセス手段を提供します。 また、保存領域が変更される (例えば新たなアイテムを保存する) と発生する、{{domxref("Window.onstorage")}} イベントハンドラもあります。</dd>
+ <dt>{{domxref("StorageEvent")}}</dt>
+ <dd><code title="event-storage">storage</code> イベントは、保存領域が変更されたときにドキュメントの <code>Window</code> オブジェクトで発生します。</dd>
+</dl>
 
-## Web Storage インターフェイス
+<h2 id="Examples" name="Examples">例</h2>
 
-- {{domxref("Storage")}}
-  - : 特定のドメインおよびストレージタイプ (session または local) に対して、データを保存、取り出し、削除できます。
-- {{domxref("Window")}}
-  - : Web Storage API は {{domxref("Window")}} オブジェクトを、{{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} という新たなプロパティで拡張します。 これらは、それぞれ現在のドメインの session および local {{domxref("Storage")}} オブジェクトへのアクセス手段を提供します。 また、保存領域が変更される (例えば新たなアイテムを保存する) と発生する、{{domxref("Window.onstorage")}} イベントハンドラもあります。
-- {{domxref("StorageEvent")}}
-  - : `storage` イベントは、保存領域が変更されたときにドキュメントの `Window` オブジェクトで発生します。
+<p>Web Storage の典型的な使用法を示すため、想像力豊かに <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">Web Storage Demo</a> と名づけたシンプルな例を作成しました。<a href="https://mdn.github.io/dom-examples/web-storage/"> ランディングページ</a>には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を <code>localStorage</code> に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。</p>
 
-## 例
+<p>また、<a href="https://mdn.github.io/dom-examples/web-storage/event.html">event output ページ</a>も提供します。 このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。</p>
 
-Web Storage の典型的な使用法を示すため、想像力豊かに [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage) と名づけたシンプルな例を作成しました。[ ランディングページ](https://mdn.github.io/dom-examples/web-storage/)には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-また、[event output ページ](https://mdn.github.io/dom-examples/web-storage/event.html)も提供します。 このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## 仕様
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-| 仕様書                                                                       | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |          |
+<h3 id="Window.localStorage"><code>Window.localStorage</code></h3>
 
-## ブラウザー実装状況
+<div>
+<p>{{Compat("api.Window.localStorage")}}</p>
 
-### `Window.localStorage`
+<h3 id="Window.sessionStorage"><code>Window.sessionStorage</code></h3>
 
-{{Compat("api.Window.localStorage")}}
+<div>
+<p>{{Compat("api.Window.sessionStorage")}}</p>
+</div>
+</div>
 
-### `Window.sessionStorage`
+<h2 id="Private_Browsing_Incognito_modes" name="Private_Browsing_Incognito_modes">プライベートブラウジング / シークレットモード</h2>
 
-{{Compat("api.Window.sessionStorage")}}
+<p>ほとんどの現行ブラウザーは 'シークレット' や 'プライベートブラウジング' などと呼ばれる、履歴やクッキーといったデータを保存しないプライバシーモードをサポートしています。 これらは明白な理由で、Web Storage とは根本的に互換性がありません。 それでもブラウザーベンダーは、この非互換性をどのように扱うかを、さまざまなシナリオで実験しています。</p>
 
-## プライベートブラウジング / シークレットモード
+<p>ほとんどのブラウザーは Storage API を有効にして、見かけ上完全に機能する方針をとっていますが、保存したデータはすべて、ブラウザーを閉じた後に消去されることが大きな違いです。 これらのブラウザーでは、既存の保存済みデータ (通常のブラウジングセッションで保存したもの) をどう扱うかについて、まださまざまな解釈が存在します。 このデータはプライベートモードで読み出せるべきでしょうか? 一部のブラウザー、特に Safari ではストレージは使用できますが空であり、また割り当てられたクォータが 0 バイトであるため事実上データを書き込めないという解決策をとっています。</p>
 
-ほとんどの現行ブラウザーは 'シークレット' や 'プライベートブラウジング' などと呼ばれる、履歴やクッキーといったデータを保存しないプライバシーモードをサポートしています。 これらは明白な理由で、Web Storage とは根本的に互換性がありません。 それでもブラウザーベンダーは、この非互換性をどのように扱うかを、さまざまなシナリオで実験しています。
+<p>開発者はこれらのさまざまな実装を意識して、Web Storage API に依存する Web サイトを開発する際に考慮するべきです。 詳しくはこのトピックを扱った、<a href="https://blog.whatwg.org/tag/localstorage">WHATWG のブログ記事</a>（英語）をご覧ください。</p>
 
-ほとんどのブラウザーは Storage API を有効にして、見かけ上完全に機能する方針をとっていますが、保存したデータはすべて、ブラウザーを閉じた後に消去されることが大きな違いです。 これらのブラウザーでは、既存の保存済みデータ (通常のブラウジングセッションで保存したもの) をどう扱うかについて、まださまざまな解釈が存在します。 このデータはプライベートモードで読み出せるべきでしょうか? 一部のブラウザー、特に Safari ではストレージは使用できますが空であり、また割り当てられたクォータが 0 バイトであるため事実上データを書き込めないという解決策をとっています。
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-開発者はこれらのさまざまな実装を意識して、Web Storage API に依存する Web サイトを開発する際に考慮するべきです。 詳しくはこのトピックを扱った、[WHATWG のブログ記事](https://blog.whatwg.org/tag/localstorage)（英語）をご覧ください。
-
-## 関連情報
-
-- [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
-- [HTML5 Storage API By Venkatraman](https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API を使用する</a></li>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">ブラウザーのストレージ制限と削除基準</a></li>
+ <li><a href="https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b">HTML5 Storage API By Venkatraman</a></li>
+</ul>

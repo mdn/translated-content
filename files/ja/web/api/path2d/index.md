@@ -11,48 +11,67 @@ tags:
   - TopicStub
 translation_of: Web/API/Path2D
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-The **`Path2D`** interface of the Canvas 2D API is used to declare paths that are then later used on {{domxref("CanvasRenderingContext2D")}} objects. The[ path methods](/ja/docs/Web/API/CanvasRenderingContext2D#Paths) of the `CanvasRenderingContext2D` interface are present on this interface as well and are allowing you to create paths that you can retain and replay as required on a canvas.
+<p>The <strong><code>Path2D</code></strong> interface of the Canvas 2D API is used to declare paths that are then later used on {{domxref("CanvasRenderingContext2D")}} objects. The<a href="/ja/docs/Web/API/CanvasRenderingContext2D#Paths"> path methods</a> of the <code>CanvasRenderingContext2D</code> interface are present on this interface as well and are allowing you to create paths that you can retain and replay as required on a canvas.</p>
 
-## Constructors
+<h2 id="Constructors">Constructors</h2>
 
-- {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : `Path2D` constructor. Creates a new `Path2D` object.
+<dl>
+ <dt>{{domxref("Path2D.Path2D", "Path2D()")}}</dt>
+ <dd><code>Path2D</code> constructor. Creates a new <code>Path2D</code> object.</dd>
+</dl>
 
-## Methods
+<h2 id="Methods">Methods</h2>
 
-- {{domxref("Path2D.addPath()")}}
-  - : Adds a path to the current path.
-- {{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}
-  - : Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
-- {{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}
-  - : Moves the starting point of a new sub-path to the **(x, y)** coordinates.
-- {{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}
-  - : Connects the last point in the subpath to the `x, y` coordinates with a straight line.
-- {{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}
-  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
-- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}
-  - : Adds a quadratic Bézier curve to the current path.
-- {{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}
-  - : Adds an arc to the path which is centered at _(x, y)_ position with radius _r_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
-- {{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}
-  - : Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.
-- {{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}
-  - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
-- {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
-  - : Creates a path for a rectangle at\_ _position _(x, y)_ with a size that is determined by \_width_ and _height_.
+<dl>
+ <dt>{{domxref("Path2D.addPath()")}}</dt>
+ <dd>Adds a path to the current path.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}</dt>
+ <dd>Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}</dt>
+ <dd>Moves the starting point of a new sub-path to the <strong>(x, y)</strong> coordinates.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}</dt>
+ <dd>Connects the last point in the subpath to the <code>x, y</code> coordinates with a straight line.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}</dt>
+ <dd>Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using <code>moveTo()</code> before creating the Bézier curve.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}</dt>
+ <dd>Adds a quadratic Bézier curve to the current path.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}</dt>
+ <dd>Adds an arc to the path which is centered at <em>(x, y)</em> position with radius<em> r</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction by <em>anticlockwise</em> (defaulting to clockwise).</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}</dt>
+ <dd>Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}</dt>
+ <dd>Adds an ellipse to the path which is centered at <em>(x, y)</em> position with the radii <em>radiusX</em> and <em>radiusY</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction by <em>anticlockwise</em> (defaulting to clockwise).</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}</dt>
+ <dd>Creates a path for a rectangle at<em> </em>position <em>(x, y)</em> with a size that is determined by <em>width</em> and <em>height</em>.</dd>
+</dl>
 
-## Specifications
+<h2 id="Specifications" name="Specifications">Specifications</h2>
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}} | {{Spec2('HTML WHATWG')}} |         |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.Path2D")}}
+<p>{{Compat("api.Path2D")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{domxref("CanvasRenderingContext2D")}}
+<ul>
+ <li>{{domxref("CanvasRenderingContext2D")}}</li>
+</ul>

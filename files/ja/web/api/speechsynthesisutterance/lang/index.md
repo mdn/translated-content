@@ -3,30 +3,34 @@ title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 translation_of: Web/API/SpeechSynthesisUtterance/lang
 ---
-{{APIRef("Web Speech API")}} {{SeeCompatTable}}
-{{domxref("SpeechSynthesisUtterance")}}インターフェースの**lang**プロパティは、発話の言語を取得、設定します。
+<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}<br>
+{{domxref("SpeechSynthesisUtterance")}}インターフェースの<strong>lang</strong>プロパティは、発話の言語を取得、設定します。</div>
 
-If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.
+<div> </div>
 
-## Syntax
+<p> </p>
 
-    var myLang = speechSynthesisUtteranceInstance.lang;
-    speechSynthesisUtteranceInstance.lang = 'en-US';
+<p>If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.</p>
 
-### Value
+<h2 id="Syntax">Syntax</h2>
 
-A {{domxref("DOMString")}} representing a BCP 47 language tag.
+<pre class="syntaxbox">var myLang = speechSynthesisUtteranceInstance.lang;
+speechSynthesisUtteranceInstance.lang = 'en-US';
+</pre>
 
-## Examples
+<h3 id="Value">Value</h3>
 
-```js
-var synth = window.speechSynthesis;
+<p>A {{domxref("DOMString")}} representing a BCP 47 language tag.</p>
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+<h2 id="Examples">Examples</h2>
 
-var voices = synth.getVoices();
+<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> synth <span class="operator token">=</span> window<span class="punctuation token">.</span>speechSynthesis<span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> inputForm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'form'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> inputTxt <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> voiceSelect <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> voices <span class="operator token">=</span> synth<span class="punctuation token">.</span><span class="function token">getVoices</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
 
   ...
 
@@ -35,7 +39,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  for(i = 0; i &lt; voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -43,19 +47,31 @@ inputForm.onsubmit = function(event) {
   utterThis.lang = 'en-US';
   synth.speak(utterThis);
   inputTxt.blur();
-}
-```
+}</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#dfn-utterancelang', 'lang')}} | {{Spec2('Web Speech API')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#dfn-utterancelang', 'lang')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.SpeechSynthesisUtterance.lang")}}
+<p>{{Compat("api.SpeechSynthesisUtterance.lang")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+<ul>
+ <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

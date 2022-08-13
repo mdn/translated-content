@@ -11,22 +11,21 @@ tags:
   - ServiceWorkerContainer
 translation_of: Web/API/ServiceWorkerContainer/ready
 ---
-{{APIRef("Service Workers API")}}
+<p>{{APIRef("Service Workers API")}}</p>
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`ready`** 読み取り専用プロパティは、サービスワーカーがアクティブになるまでコードの実行を遅らせる方法を提供します。 決して拒否しない {{jsxref("Promise")}} を返し、現在のページに関連する {{domxref("ServiceWorkerRegistration")}} がアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを持つまで無期限に待機します。 その条件が満たされると、{{domxref("ServiceWorkerRegistration")}} で解決されます。
+<p><span class="seoSummary">{{domxref("ServiceWorkerContainer")}} インターフェイスの <strong><code>ready</code></strong> 読み取り専用プロパティは、サービスワーカーがアクティブになるまでコードの実行を遅らせる方法を提供します。 決して拒否しない {{jsxref("Promise")}} を返し、現在のページに関連する {{domxref("ServiceWorkerRegistration")}} がアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを持つまで無期限に待機します。 その条件が満たされると、{{domxref("ServiceWorkerRegistration")}} で解決されます。</span></p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) { ... });
+<pre class="syntaxbox">navigator.serviceWorker.ready.then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-決して拒否せず、最終的には {{domxref("ServiceWorkerRegistration")}} で解決される可能性がある {{jsxref("Promise")}}。
+<p>決して拒否せず、最終的には {{domxref("ServiceWorkerRegistration")}} で解決される可能性がある {{jsxref("Promise")}}。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```js
-if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready
   .then(function(registration) {
     console.log('サービスワーカーがアクティブ:', registration.active);
@@ -37,14 +36,29 @@ if ('serviceWorker' in navigator) {
 } else {
   console.log('サービスワーカーをサポートしていません。');
 }
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#navigator-service-worker-ready', 'ServiceWorkerRegistration.ready')}} | {{Spec2('Service Workers')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#navigator-service-worker-ready', 'ServiceWorkerRegistration.ready')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ServiceWorkerContainer.ready")}}
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerContainer.ready")}}</p>
+</div>

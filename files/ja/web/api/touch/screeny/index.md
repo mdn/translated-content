@@ -9,32 +9,52 @@ tags:
   - touch
 translation_of: Web/API/Touch/screenY
 ---
-{{ APIRef("Touch Events") }}
+<p>{{ APIRef("Touch Events") }}</p>
 
-## 概要
+<h2 id="Summary" name="Summary">概要</h2>
 
-画面を基準としたタッチポイントの Y 座標を返します。スクロールオフセットは含まれません。
+<p>画面を基準としたタッチポイントの Y 座標を返します。スクロールオフセットは含まれません。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var y = touchItem.screenY;
+<pre class="eval notranslate">var <em>y</em> = <em>touchItem</em>.screenY;
+</pre>
 
-### 返り値
+<h3 id="Return_Value" name="Return_Value">返り値</h3>
 
-- `y`
-  - : 画面を基準としたタッチポイントの Y 座標。スクロールオフセットは含まれません。
+<dl>
+ <dt><code>y</code></dt>
+ <dd>画面を基準としたタッチポイントの Y 座標。スクロールオフセットは含まれません。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-[Touch.screenX の例](/ja/docs/Web/API/Touch/screenX#Example)には、このプロパティの使用例が含まれています。
+<p><a href="/ja/docs/Web/API/Touch/screenX#Example">Touch.screenX の例</a>には、このプロパティの使用例が含まれています。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                 | ステータス                           | 備考                 |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Touch Events 2','#dom-touch-screeny')}} | {{Spec2('Touch Events 2')}} | 前の版から変更なし。 |
-| {{SpecName('Touch Events', '#widl-Touch-screenY')}} | {{Spec2('Touch Events')}}     | 初回定義。           |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#dom-touch-screeny')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>前の版から変更なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events', '#widl-Touch-screenY')}}</td>
+   <td>{{Spec2('Touch Events')}}</td>
+   <td>初回定義。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
-{{Compat("api.Touch.screenY")}}
+
+
+<p>{{Compat("api.Touch.screenY")}}</p>

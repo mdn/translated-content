@@ -12,39 +12,50 @@ tags:
   - Référence(2)
 translation_of: Web/API/Gamepad/timestamp
 ---
-{{APIRef("Gamepad API")}}
+<div>{{APIRef("Gamepad API")}}</div>
 
-{{domxref("Gamepad")}} インターフェースの **`Gamepad.timestamp`** プロパティは、このゲームパッドのデータが最後に更新された時刻を表す {{domxref("DOMHighResTimeStamp")}} を返します。
+<p>{{domxref("Gamepad")}} インターフェースの <strong><code>Gamepad.timestamp</code></strong> プロパティは、このゲームパッドのデータが最後に更新された時刻を表す {{domxref("DOMHighResTimeStamp")}} を返します。</p>
 
-このプロパティの背景にある考え方は、ハードウェアにより `axes` や `button` のデータが更新されたかどうかを開発者が判断できるようにすることです。このプロパティの値は `{{domxref("PerformanceTiming")}}` インターフェースの `navigationStart` 属性との相対的な値になります。値は単調増加しています。つまり、新しい値は常に古い値以上であるため、新旧の値を比較することでデータの更新を判断できます。
+<p>このプロパティの背景にある考え方は、ハードウェアにより <code>axes</code> や <code>button</code> のデータが更新されたかどうかを開発者が判断できるようにすることです。このプロパティの値は <code>{{domxref("PerformanceTiming")}}</code> インターフェースの <code>navigationStart</code> 属性との相対的な値になります。値は単調増加しています。つまり、新しい値は常に古い値以上であるため、新旧の値を比較することでデータの更新を判断できます。</p>
 
-> **Note:** **注釈**: このプロパティは現在サポートされていない環境があります。
+<div class="note">
+<p><strong>注釈</strong>: このプロパティは現在サポートされていない環境があります。</p>
+</div>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    readonly    attribute DOMHighResTimeStamp timestamp;
+<pre class="syntaxbox notranslate"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMHighResTimeStamp</span> <span class="idlAttrName">timestamp</span>;</span></span></pre>
 
-## 例
+<h2 id="例">例</h2>
 
-```js
-var gp = navigator.getGamepads()[0];
-console.log(gp.timestamp);
-```
+<pre class="brush: js notranslate">var gp = navigator.getGamepads()[0];
+console.log(gp.timestamp);</pre>
 
-## 値
+<h2 id="値">値</h2>
 
-{{domxref("DOMHighResTimeStamp")}} 。
+<p>{{domxref("DOMHighResTimeStamp")}} 。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}} | {{Spec2("Gamepad")}} | 初版     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}}</td>
+   <td>{{Spec2("Gamepad")}}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("api.Gamepad.timestamp")}}
+<p>{{Compat("api.Gamepad.timestamp")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-[ゲームパッド API の使用](/ja/docs/Web/Guide/API/Gamepad)
+<p><a href="/ja/docs/Web/Guide/API/Gamepad">ゲームパッド API の使用</a></p>

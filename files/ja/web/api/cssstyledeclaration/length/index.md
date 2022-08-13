@@ -2,43 +2,42 @@
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
 tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/length
+- API
+- CSSOM
+- Property
+- Reference
 browser-compat: api.CSSStyleDeclaration.length
+translation_of: Web/API/CSSStyleDeclaration/length
 ---
-{{ APIRef("CSSOM") }}
+<p>{{ APIRef("CSSOM") }}</p>
 
-読み取り専用のプロパティで、この CSS 宣言ブロックにあるスタイル宣言の数を整数で表します。
+<p><span class="seoSummary">読み取り専用のプロパティで、この CSS 宣言ブロックにあるスタイル宣言の数を整数で表します。</span></p>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-var num = styles.length;
-```
+<pre
+	class="brush: js">var <em>num</em> = <em>styles</em>.length;</pre>
 
-### 値
+<h3 id="Value">値</h3>
 
-このインスタンスの親に明示的に設定されているスタイルの数を示す整数です。
+<p>このインスタンスの親に明示的に設定されているスタイルの数を示す整数です。</p>
 
-## 例
+<h2 id="Example">例</h2>
 
-次の例は、以下の HTML 要素に明示的に設定されたスタイルの数を取得します。
+<p>次の例は、以下の HTML 要素に明示的に設定されたスタイルの数を取得します。
+</p>
 
-```html
-<div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
-```
+<pre
+	class="brush: html">&lt;div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"&gt;&lt;/div&gt;</pre>
 
-JavaScript コード:
+<p>JavaScript コード:</p>
 
-    var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+<pre>var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

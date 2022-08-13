@@ -11,40 +11,63 @@ tags:
   - イベント
 translation_of: Web/API/Window/orientationchange_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-`orientationchange` イベントは、端末の向きが変化した時に発生します。
+<p><code>orientationchange</code> イベントは、端末の向きが変化した時に発生します。</p>
 
-| バブリング         | なし                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| キャンセル         | 不可                                                                                 |
-| インターフェイス   | {{domxref("Event")}}                                                         |
-| イベントハンドラー | {{domxref("Window/onorientationchange", "onorientationchange")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>不可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラー</th>
+   <td>{{domxref("Window/onorientationchange", "onorientationchange")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-`orientationchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+<p><code>orientationchange</code> イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。</p>
 
-```js
-window.addEventListener("orientationchange", function() {
+<pre class="brush:js;">window.addEventListener("orientationchange", function() {
   console.log("端末の向きが " + screen.orientation.angle + "になりました。");
 });
-```
+</pre>
 
-または、 {{domxref("Window/onorientationchange", "onorientationchange")}} イベントハンドラープロパティを使用します。
+<p>または、 {{domxref("Window/onorientationchange", "onorientationchange")}} イベントハンドラープロパティを使用します。</p>
 
-```js
-window.onorientationchange = function() {
+<pre class="brush: js">window.onorientationchange = function() {
   console.log("端末の向きが " + screen.orientation.angle + "になりました。");
-};
-```
+};</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| Specification                                                                                    | Status                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName('Compat', '#event-orientationchange', 'orientationchange')}} | {{Spec2('Compat')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Compat', '#event-orientationchange', 'orientationchange')}}</td>
+   <td>{{Spec2('Compat')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("api.Window.orientationchange_event")}}
+<p>{{Compat("api.Window.orientationchange_event")}}</p>

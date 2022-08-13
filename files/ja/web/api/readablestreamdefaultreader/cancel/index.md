@@ -10,40 +10,43 @@ tags:
   - cancel
 translation_of: Web/API/ReadableStreamDefaultReader/cancel
 ---
-{{APIRef("Streams")}}
+<div>{{APIRef("Streams")}}</div>
 
-{{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`cancel()`** メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された reason 引数は、基になるソースに与えられ、使用する場合もしない場合もあります。
+<p class="summary"><span class="seoSummary">{{domxref("ReadableStreamDefaultReader")}} インターフェイスの <strong><code>cancel()</code></strong> メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された reason 引数は、基になるソースに与えられ、使用する場合もしない場合もあります。</span></p>
 
-キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入っている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、{{domxref("ReadableStreamDefaultController.close()")}} を使用します。
+<p>キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入っている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、{{domxref("ReadableStreamDefaultController.close()")}} を使用します。</p>
 
-> **Note:** **注**: リーダーがアクティブな場合、`cancel()` メソッドは、関連付けられたストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
+<div class="note"><strong>注</strong>: リーダーがアクティブな場合、<code>cancel()</code> メソッドは、関連付けられたストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var promise = readableStreamDefaultReader.cancel(reason);
+<pre class="syntaxbox">var <em>promise</em> = <em>readableStreamDefaultReader</em>.cancel(<em>reason</em>);</pre>
 
-### パラメーター
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
 
-- reason {{optional_inline}}
-  - : 人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。
+<dl>
+ <dt>reason {{optional_inline}}</dt>
+ <dd>人間が読むことができるキャンセルの理由を提供する {{domxref("DOMString")}}。</dd>
+</dl>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
+<p>{{jsxref("Promise")}}。 <code>reason</code> パラメーターで指定された値で満たされます。</p>
 
-### Exceptions
+<h3 id="Exceptions" name="Exceptions">Exceptions</h3>
 
-- TypeError
-  - : ソースオブジェクトが `ReadableStreamDefaultReader` ではないか、ストリームに所有者がいません。
+<dl>
+ <dt>TypeError</dt>
+ <dd>ソースオブジェクトが <code>ReadableStreamDefaultReader</code> ではないか、ストリームに所有者がいません。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-次の簡単な例では、`getReader()` を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの `ReadableStream` を読み取ります（このコードは、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)に基づいています）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。
+<p>次の簡単な例では、<code>getReader()</code> を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの <code>ReadableStream</code> を読み取ります（このコードは、<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">単純なランダムストリームの例</a>に基づいています）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。</p>
 
-ストリームが完了したら（`if (done)`）、`reader.cancel()` を実行してストリームをキャンセルし、それ以上使用する必要がないことを通知します。
+<p>ストリームが完了したら（<code>if (done)</code>）、<code>reader.cancel()</code> を実行してストリームをキャンセルし、それ以上使用する必要がないことを通知します。</p>
 
-```js
-function fetchStream() {
+<pre class="brush: js">function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -71,15 +74,27 @@ function fetchStream() {
     // さらに読み、この関数を再度呼び出します
     return reader.read().then(processText);
   });
-}
-```
+}</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                             | 状態                         | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-cancel","cancel()")}} | {{Spec2('Streams')}} | 初期定義 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Streams","#default-reader-cancel","cancel()")}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.ReadableStreamDefaultReader.cancel")}}
+
+
+<p>{{Compat("api.ReadableStreamDefaultReader.cancel")}}</p>

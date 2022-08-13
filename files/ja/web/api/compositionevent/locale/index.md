@@ -11,28 +11,43 @@ tags:
   - プロパティ
 translation_of: Web/API/CompositionEvent/locale
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+<div>{{deprecated_header}}{{APIRef("DOM Events")}}</div>
 
-**`locale`** は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力メソッドのロケール (例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール) を返します。
+<p><code><strong>locale</strong></code> は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力メソッドのロケール (例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール) を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    myLocale = CompositionEvent.locale
+<pre class="syntaxbox"><var>myLocale</var> = <var>CompositionEvent</var>.locale</pre>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-{{domxref("DOMString")}} で、現在の入力メソッドのロケールを表します。
+<p>{{domxref("DOMString")}} で、現在の入力メソッドのロケールを表します。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                               | 状態                             | 備考                                                 |
-| ------------------------------------ | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('DOM3 Events')}} | {{Spec2('DOM3 Events')}} | すでに仕様書にはありませんが、まだ対応されています。 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM3 Events')}}</td>
+   <td>{{Spec2('DOM3 Events')}}</td>
+   <td>すでに仕様書にはありませんが、まだ対応されています。</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("api.CompositionEvent.locale")}}
+<p>{{Compat("api.CompositionEvent.locale")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("CompositionEvent")}}
+<ul>
+ <li>{{domxref("CompositionEvent")}}</li>
+</ul>

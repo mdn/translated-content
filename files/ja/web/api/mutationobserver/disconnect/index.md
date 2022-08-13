@@ -3,34 +3,39 @@ title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 translation_of: Web/API/MutationObserver/disconnect
 ---
-{{APIRef("DOM WHATWG")}}
+<div>{{APIRef("DOM WHATWG")}}</div>
 
-{{domxref("MutationObserver")}} の **`disconnect()`** メソッドは、オブザーバーに変更の監視を停止させます。 オブザーバーは、 {{domxref("MutationObserver.observe", "observe()")}} メソッドを再度呼び出すことで再利用できます。
+<p><span class="seoSummary">{{domxref("MutationObserver")}} の <code><strong>disconnect()</strong></code> メソッドは、オブザーバーに変更の監視を停止させます。</span> オブザーバーは、 {{domxref("MutationObserver.observe", "observe()")}} メソッドを再度呼び出すことで再利用できます。</p>
 
-## 構文
+<ul>
+</ul>
 
-    mutationObserver.disconnect()
+<h2 id="構文">構文</h2>
 
-### 引数
+<pre class="syntaxbox notranslate"><var>mutationObserver</var>.disconnect()
+</pre>
 
-なし
+<h3 id="引数">引数</h3>
 
-### 戻り値
+<p>なし</p>
 
-`undefined`
+<h3 id="戻り値">戻り値</h3>
 
-> **Note:** **注:** すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。
+<p><code>undefined</code></p>
 
-## 使用における注意点
+<div class="note">
+<p><strong>注:</strong> すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。</p>
+</div>
 
-監視されている要素が DOM から削除され、その後ブラウザのガベージコレクション機構によって解放された場合、`MutationObserver` も同様に削除されます。
+<h2 id="使用における注意点">使用における注意点</h2>
 
-## 例
+<p>監視されている要素が DOM から削除され、その後ブラウザのガベージコレクション機構によって解放された場合、<code>MutationObserver</code> も同様に削除されます。</p>
 
-この例では、オブザーバを作成してから切断し、再利用できるようにします。
+<h2 id="例">例</h2>
 
-```js
-const targetNode = document.querySelector("#someElement");
+<p>この例では、オブザーバを作成してから切断し、再利用できるようにします。</p>
+
+<pre class="brush: js notranslate">const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true
@@ -41,15 +46,29 @@ observer.observe(targetNode, observerOptions);
 
 /* some time later... */
 
-observer.disconnect();
-```
+observer.disconnect();</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| Specification                                                                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-disconnect', 'MutationObserver.disconnect()')}} | {{ Spec2('DOM WHATWG') }} |         |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-disconnect', 'MutationObserver.disconnect()')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("api.MutationObserver.disconnect")}}
+
+
+<p>{{Compat("api.MutationObserver.disconnect")}}</p>
