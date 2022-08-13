@@ -15,46 +15,36 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>StorageArea is an object representing a storage area.</p>
+StorageArea is an object representing a storage area.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects.</p>
+Values of this type are objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>Retrieves one or more items from the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>Stores one or more items in the storage area. If an item already exists, its value will be updated.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>Removes one or more items from the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>Removes all items from the storage area.</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : Retrieves one or more items from the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : Stores one or more items in the storage area. If an item already exists, its value will be updated.
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : Removes one or more items from the storage area.
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : Removes all items from the storage area.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("webextensions.api.storage.StorageArea")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.storage.StorageArea")}}</p>
+> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#type-StorageArea) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#type-StorageArea"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,4 +72,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>
