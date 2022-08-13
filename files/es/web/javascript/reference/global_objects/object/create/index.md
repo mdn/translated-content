@@ -271,7 +271,7 @@ ocn.prototype.toString = Object.toString; // since new object lacks method then 
 > ocn.toString() // error: ocn.toString is not a function
 ```
 
-Adding the missing object-method by using the standard-object\*\* \*\*as new object's prototype does not work either:
+Adding the missing object-method by using the standard-object as new object's prototype does not work either:
 
 ```js
 ocn = Object.create( null );        // create "null" object (same as before)

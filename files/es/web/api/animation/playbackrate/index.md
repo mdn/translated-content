@@ -13,7 +13,7 @@ translation_of: Web/API/Animation/playbackRate
 ---
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-La propiedad **`Animation`\*\***`.playbackRate`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.
+La propiedad **`Animation.playbackRate`** de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.
 
 Las animaciones tienen un **playback rate** que proporciona un factor de escala para el cambio de velocidad de la animación {{domxref("DocumentTimeline", "timeline")}} valores del estado actual de la linea de tiempo de la animación. La velocidad de reproducción inicial es `1`.
 

@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 
 ## Descripción
 
-A diferencia de los demás objetos globales, el objeto `Math`\*\* **no se puede editar. Todas las propiedades y métodos de `Math` son** **estáticos. Usted se puede referir a la constante _pi_ como `Math.PI`\_** **_y puede llamar a la función \_seno_ como `Math.sin(x)`,\_** **_donde_** **\_**`x`**\_** \*\*\_es el argumento del método. Las constantes se definen con la precisión completa de los números reales en JavaScript.
+A diferencia de los demás objetos globales, el objeto `Math` no se puede editar. Todas las propiedades y métodos de `Math` son estáticos. Usted se puede referir a la constante _pi_ como `Math.PI` y puede llamar a la función seno como `Math.sin(x)`, donde `x` es el argumento del método. Las constantes se definen con la precisión completa de los números reales en JavaScript.
 
 ## Propiedades
 

@@ -89,4 +89,4 @@ The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub cont
 - [Using the Web Speech API](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
-- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]
+- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) [aurelio.audero.it]

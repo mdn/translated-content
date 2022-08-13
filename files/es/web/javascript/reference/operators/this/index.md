@@ -36,7 +36,7 @@ this.a = 37;
 console.log(window.a); // 37
 ```
 
-> **Nota:** Nota: Puedes obtener el objeto global usando la propieda global `globalThis`, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global.
+> **Nota:** Puedes obtener el objeto global usando la propieda global `globalThis`, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global.
 
 ## Contexto de la función
 

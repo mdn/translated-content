@@ -24,14 +24,14 @@ _elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa 
 
 ## Métodos
 
-- add( String \[, String] )
+- add( String [, String] )
   - : Añade las clases indicadas. Si estas clases existieran en el atributo del elemento serán ignoradas.
-- remove( String \[, String] )
+- remove( String [, String] )
   - : Elimina las clases indicadas.
     **Nota:** Eliminar una clase que no existe NO produce un error.
 - **item**( Number )
   - : Devuelve el valor de la clase por índice en la colección.
-- **toggle**( String \[, force] )
+- **toggle**( String [, force] )
   - : Cuando sólo hay un argumento presente: Alterna el valor de la clase; ej., si la clase existe la **elimina** y devuelve `false`, si no, la **añade** y devuelve `true`.
     Cuando el segundo argumento está presente: Si el segundo argumento se evalúa como `true`, se añade la clase indicada, y si se evalúa como `false`, la elimina.
 - contains( String )

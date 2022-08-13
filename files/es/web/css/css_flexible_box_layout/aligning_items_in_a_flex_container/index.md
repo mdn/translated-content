@@ -40,7 +40,7 @@ Las propiedades que veremos en esta guía son las siguientes.
 
 También descubriremos cómo se pueden usar los márgenes automáticos para la alineación en flexbox
 
-> **Nota:** Nota: Las propiedades de alineación en Flexbox se han colocado en su propia especificación — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Se espera que esta especificación finalmente reemplace las propiedades tal como se definen en Flexbox Nivel Uno.
+> **Nota:** Las propiedades de alineación en Flexbox se han colocado en su propia especificación — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Se espera que esta especificación finalmente reemplace las propiedades tal como se definen en Flexbox Nivel Uno.
 
 ## El eje transversal
 

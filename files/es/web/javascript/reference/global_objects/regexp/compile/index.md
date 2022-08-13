@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/compile
 ---
 {{JSRef}} {{deprecated_header}}
 
-El método obsoleto **`compile`\*\***`()`\*\* es usado para (re-)compilar una expresión regular durante la ejecución del script. Es básicamente lo mismo que el constructor `RegExp`.
+El método obsoleto **`compile()`** es usado para (re-)compilar una expresión regular durante la ejecución del script. Es básicamente lo mismo que el constructor `RegExp`.
 
 ## Sintaxis
 

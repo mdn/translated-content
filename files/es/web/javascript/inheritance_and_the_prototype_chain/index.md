@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Herencia_y_la_cadena_de_protipos
 
 JavaScript provoca cierta confusión en desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), por ser dinámico y no proporcionar una implementación de clases en sí mismo (la palabra clave `class` se introdujo en ES2015, pero sólo para endulzar la sintaxis, ya que JavaScript sigue estando basado en prototipos).
 
-En lo que a herencia se refiere, JavaScript sólo tiene una estructura: objetos. Cada objeto tiene una propiedad privada (referida como su \[\[Prototype]]) que mantiene un enlace a otro objeto llamado su **prototipo**. Ese objeto prototipo tiene su propio prototipo, y así sucesivamente hasta que se alcanza un objeto cuyo prototipo es `null`. Por definición, `null` no tiene prototipo, y actúa como el enlace final de esta **cadena de prototipos**.
+En lo que a herencia se refiere, JavaScript sólo tiene una estructura: objetos. Cada objeto tiene una propiedad privada (referida como su [[Prototype]]) que mantiene un enlace a otro objeto llamado su **prototipo**. Ese objeto prototipo tiene su propio prototipo, y así sucesivamente hasta que se alcanza un objeto cuyo prototipo es `null`. Por definición, `null` no tiene prototipo, y actúa como el enlace final de esta **cadena de prototipos**.
 
 Casi todos los objetos en JavaScript son instancias de {{jsxref("Object")}} que se sitúa a la cabeza de la cadena de prototipos.
 

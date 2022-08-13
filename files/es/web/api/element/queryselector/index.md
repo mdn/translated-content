@@ -5,7 +5,7 @@ translation_of: Web/API/Element/querySelector
 ---
 {{APIRef("DOM")}}
 
-El método **`querySelector() `**de la intrefaz \*\*\*\*{{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
+El método **`querySelector()`** de la intrefaz {{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
 
 ## Sintáxis
 

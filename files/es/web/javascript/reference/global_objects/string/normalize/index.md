@@ -24,7 +24,7 @@ El método **`normalize()`** retorna la Forma de Normalización Unicode de la ca
 ### Parámetros
 
 - `form`
-  - : Uno de`"NFC"`, `"NFD"`, `"NFKC"`, o `"NFKD"`, especificando la Forma de Normalización Unicode. Si es omitida o {{jsxref("undefined")}}, se utiliza `"NFC"`.\* `NFC` — Forma de Normalización de Composición Canónica.
+  - : Uno de`"NFC"`, `"NFD"`, `"NFKC"`, o `"NFKD"`, especificando la Forma de Normalización Unicode. Si es omitida o {{jsxref("undefined")}}, se utiliza `"NFC"`. `NFC` — Forma de Normalización de Composición Canónica.
     - `NFD` — Forma de Normalización de Descomposición Canónica.
     - `NFKC` — Forma de Normalización de Composición de Compatibilidad.
     - `NFKD` — Forma de Normalización de Descomposición de Compatibilidad.

@@ -44,7 +44,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 - {{domxref("FileReader.onprogress")}}
   - : Un controlador para el evento {{event("progress")}}. Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
 
-> **Nota:** Nota: Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
+> **Nota:** Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
 ## Métodos
 

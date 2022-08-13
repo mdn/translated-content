@@ -8,7 +8,7 @@ original_slug: Web/API/Animation/tiempoActual
 ---
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-La propiedad **`Animation`\*\***`.currentTime`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece el valor del tiempo de la animación en milisegundos, tanto si se está ejecutando como en pausa.
+La propiedad **`Animation.currentTime`** de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece el valor del tiempo de la animación en milisegundos, tanto si se está ejecutando como en pausa.
 
 Si la animación carece de un {{domxref("AnimationTimeline", "timeline")}}, está inactiva, o no ha sido reproducida todavía, el valor devuelto por `currentTime` es `null`.
 

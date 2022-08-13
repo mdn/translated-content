@@ -30,7 +30,7 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/HTM
 - {{ htmlattrdef("height") }}
   - : La altura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 150.
 
-> **Nota:** Nota: el tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .
+> **Nota:** el tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .
 
 ## Interfaz DOM
 

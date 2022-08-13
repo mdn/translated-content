@@ -55,7 +55,7 @@ Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y​no {{
 myCar.color; // undefined
 ```
 
-También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑\[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
+También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
 
 ```js
 myCar['make']  = 'Ford';
@@ -450,7 +450,7 @@ var o = {
 - `o.b` — un captador que devuelve `o.a` más 1
 - `o.c` — un establecedor que establece el valor de `o.a` en la mitad del valor que se establece en `o.c`
 
-Ten en cuenta que los nombres de función de los captadores y establecedores definidos en un objeto literal usando "\[gs]et _propiedad_()" (en contraposición a `__define [GS]etter__`) no son los nombres de los captadores en sí, aunque la sintaxis `[gs]et propertyName() {}` te puede inducir a pensar lo contrario.
+Ten en cuenta que los nombres de función de los captadores y establecedores definidos en un objeto literal usando "[gs]et _propiedad_()" (en contraposición a `__define [GS]etter__`) no son los nombres de los captadores en sí, aunque la sintaxis `[gs]et propertyName() {}` te puede inducir a pensar lo contrario.
 
 Los captadores y establecedores también se pueden agregar a un objeto en cualquier momento después de la creación usando el método `Object.defineProperties`. El primer parámetro de este método es el objeto sobre el que se quiere definir el captador o establecedor. El segundo parámetro es un objeto cuyo nombre de propiedad son los nombres `getter` o `setter`, y cuyos valores de propiedad son objetos para la definición de las funciones `getter` o `setter`. Aquí hay un ejemplo que define el mismo `getter` y `setter` utilizado en el ejemplo anterior:
 

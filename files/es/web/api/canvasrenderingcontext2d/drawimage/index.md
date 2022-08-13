@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 {{APIRef}}
 
-El método **`CanvasRenderingContext2D`\*\***`.drawImage()`\*\* de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
+El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
 
 ## Sintaxis
 
