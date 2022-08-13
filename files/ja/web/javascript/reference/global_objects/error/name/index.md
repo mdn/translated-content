@@ -7,47 +7,37 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>name</strong></code> プロパティは、エラーの種類の名称を表します。初期値は "Error" です。</p>
+**`name`** プロパティは、エラーの種類の名称を表します。初期値は "Error" です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>既定で {{jsxref("Error")}} インスタンスには "Error" という名称が与えられます。 <code>name</code> プロパティは {{jsxref("Error.prototype.message", "message")}} プロパティに加えて、 Error の文字列表現を生成するため、{{jsxref("Error.prototype.toString()")}} メソッドにより使用されます。</p>
+既定で {{jsxref("Error")}} インスタンスには "Error" という名称が与えられます。 `name` プロパティは {{jsxref("Error.prototype.message", "message")}} プロパティに加えて、 Error の文字列表現を生成するため、{{jsxref("Error.prototype.toString()")}} メソッドにより使用されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Throwing_a_custom_error" name="Throwing_a_custom_error">独自のエラーを発生させる</h3>
+### 独自のエラーを発生させる
 
-<pre class="brush: js notranslate">var e = new Error('Malformed input'); // e.name は 'Error'
+```js
+var e = new Error('Malformed input'); // e.name は 'Error'
 
 e.name = 'ParseError';
 throw e;
 // e.toString() would return 'ParseError: Malformed input'
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                               |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Error.name")}}</p>
-</div>
+{{Compat("javascript.builtins.Error.name")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Error.prototype.message")}}</li>
- <li>{{jsxref("Error.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.message")}}
+- {{jsxref("Error.prototype.toString()")}}

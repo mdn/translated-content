@@ -9,52 +9,48 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>String.raw()</code></strong> 静的メソッドは、<a href="/ja/docs/Web/JavaScript/Reference/template_strings">文字列リテラル</a>のためのタグ関数です。この関数は Python の文字列リテラルの <code>r</code> 接頭辞や C# の文字列リテラルの <code>@</code> 接頭辞に似ています (それでも違いがあります。<a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">この問題に関するスレッド</a>の説明を参照してください)。この関数は、テンプレート文字列の生の文字列形式を取得するために使用されます。つまり、置換 (例えば <code>${foo}</code>) は行われますが、エスケープ (例えば <code>\n</code>) は実行されません。</span></p>
+**`String.raw()`** 静的メソッドは、[文字列リテラル](/ja/docs/Web/JavaScript/Reference/template_strings)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています (それでも違いがあります。[この問題に関するスレッド](https://bugs.chromium.org/p/v8/issues/detail?id=5016)の説明を参照してください)。この関数は、テンプレート文字列の生の文字列形式を取得するために使用されます。つまり、置換 (例えば `${foo}`) は行われますが、エスケープ (例えば `\n`) は実行されません。
 
-<div>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code>String.raw(<var>callSite</var>, <var>...substitutions</var>)
+    String.raw(callSite, ...substitutions)
 
-String.raw`<var>templateString</var>`
-</code></pre>
+    String.raw`templateString`
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>callSite</var></code></dt>
- <dd><code>{ raw: 'string' }</code> のような、よく形成されたテンプレート呼び出しサイトオブジェクトです。</dd>
- <dt><code><var>...substitutions</var></code></dt>
- <dd>置換される値が含まれます。</dd>
- <dt><code><var>templateString</var></code></dt>
- <dd>{{jsxref("template_strings", "テンプレート文字列", "", 1)}}です。必要に応じて置換します (<code>${...}</code>)。</dd>
-</dl>
+- `callSite`
+  - : `{ raw: 'string' }` のような、よく形成されたテンプレート呼び出しサイトオブジェクトです。
+- `...substitutions`
+  - : 置換される値が含まれます。
+- `templateString`
+  - : {{jsxref("template_strings", "テンプレート文字列", "", 1)}}です。必要に応じて置換します (`${...}`)。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>与えられたテンプレート文字列の生の文字列形式です。</p>
+与えられたテンプレート文字列の生の文字列形式です。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>第1 引数が正常に形成されていないオブジェクトの場合、{{jsxref("TypeError")}} が発生します。</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : 第 1 引数が正常に形成されていないオブジェクトの場合、{{jsxref("TypeError")}} が発生します。
 
-<h2 id="Description" name="Description">説明</h2>
+## 説明
 
-<p>ほとんどの場合、<code>String.raw()</code> はテンプレート文字列とともに使用されます。上記の最初の構文は、JavaScript エンジンが (他の<a href="/ja/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings">タグ関数</a>のように) 適切な引数で呼び出すので、実際に使用されます。</p>
+ほとんどの場合、`String.raw()` はテンプレート文字列とともに使用されます。上記の最初の構文は、JavaScript エンジンが (他の[タグ関数](/ja/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings)のように) 適切な引数で呼び出すので、実際に使用されます。
 
-<p><code>String.raw()</code> はテンプレート文字列の唯一の組込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の JavaScript コードで再実装することができます。</p>
+`String.raw()` はテンプレート文字列の唯一の組込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の JavaScript コードで再実装することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_String.raw" name="Using_String.raw">String.raw() の使用</h3>
+### String.raw() の使用
 
-<pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`;
+```js
+String.raw`Hi\n${2+3}!`;
 // 'Hi\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -86,31 +82,20 @@ String.raw({
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:
 String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.raw")}}</p>
+{{Compat("javascript.builtins.String.raw")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/template_strings">テンプレート文字列</a></li>
- <li>{{jsxref("String")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar">字句文法</a></li>
-</ul>
+- [テンプレート文字列](/ja/docs/Web/JavaScript/Reference/template_strings)
+- {{jsxref("String")}}
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

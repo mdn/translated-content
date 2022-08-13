@@ -1,5 +1,5 @@
 ---
-title: '<xsl:include>'
+title: <xsl:include>
 slug: Web/XSLT/Element/include
 tags:
   - XSLT
@@ -8,33 +8,31 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/include
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:include&gt;</code> 要素はあるスタイルシートの内容を別のスタイルシートにマージします。<code>&lt;xsl:import&gt;</code> の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。</p>
+`<xsl:include>` 要素はあるスタイルシートの内容を別のスタイルシートにマージします。`<xsl:import>` の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:include href=URI /&gt;</pre>
+    <xsl:include href=URI />
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<dl>
- <dt><code>href</code></dt>
- <dd>含めるスタイルシートの URI を指定します。</dd>
-</dl>
+- `href`
+  - : 含めるスタイルシートの URI を指定します。
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>トップレベルは <code>&lt;xsl:stylesheet&gt;</code> または <code>&lt;xsl:transform&gt;</code> の子として任意の順序で表示されます。</p>
+トップレベルは `<xsl:stylesheet>` または `<xsl:transform>` の子として任意の順序で表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 2.6.1.</p>
+XSLT, section 2.6.1.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

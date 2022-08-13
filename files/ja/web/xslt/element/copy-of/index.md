@@ -1,5 +1,5 @@
 ---
-title: '<xsl:copy-of>'
+title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
 tags:
   - XSLT
@@ -8,33 +8,31 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/copy-of
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:copy-of&gt;</code> 要素は、select 属性が出力文書に指定するものすべての深いコピー (子孫ノードを含む) を作成します。</p>
+`<xsl:copy-of>` 要素は、select 属性が出力文書に指定するものすべての深いコピー (子孫ノードを含む) を作成します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:copy-of select=EXPRESSION /&gt; </pre>
+    <xsl:copy-of select=EXPRESSION />
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<dl>
- <dt><code>select</code></dt>
- <dd>何をコピーするかを指定する XPath 式を使用します。</dd>
-</dl>
+- `select`
+  - : 何をコピーするかを指定する XPath 式を使用します。
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">タイプ</h3>
+### タイプ
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 11.3.</p>
+XSLT, section 11.3.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

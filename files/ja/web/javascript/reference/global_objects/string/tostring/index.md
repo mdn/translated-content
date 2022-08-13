@@ -9,55 +9,47 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toString()</code></strong> メソッドは指定されたオブジェクトを表す文字列を返します。</p>
+**`toString()`** メソッドは指定されたオブジェクトを表す文字列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.toString()</code></pre>
+    str.toString()
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>呼び出したオブジェクトを表す文字列です。</p>
+呼び出したオブジェクトを表す文字列です。
 
-<h2 id="Description" name="Description">詳細</h2>
+## 詳細
 
-<p>その {{jsxref("String")}} オブジェクトは、{{jsxref("Object")}} の <code>toString</code> メソッドを上書きします。つまり、{{jsxref("Object.prototype.toString()")}} を継承しません。{{jsxref("String")}} オブジェクトの <code>toString()</code> メソッドは、そのオブジェクトを表す文字列を返します（ {{jsxref("String.prototype.valueOf()")}} と同等です）。</p>
+その {{jsxref("String")}} オブジェクトは、{{jsxref("Object")}} の `toString` メソッドを上書きします。つまり、{{jsxref("Object.prototype.toString()")}} を継承しません。{{jsxref("String")}} オブジェクトの `toString()` メソッドは、そのオブジェクトを表す文字列を返します（ {{jsxref("String.prototype.valueOf()")}} と同等です）。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_toString" name="Using_toString()"><code>toString</code> メソッドを使う</h3>
+### `toString` メソッドを使う
 
-<p>以下の例は、{{jsxref("String")}} オブジェクトを表す文字列の値を表示します。</p>
+以下の例は、{{jsxref("String")}} オブジェクトを表す文字列の値を表示します。
 
-<pre class="brush: js notranslate">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 
 alert(x.toString()) // 'Hello world' を表示します
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("javascript.builtins.String.toString")}}</p>
+{{Compat("javascript.builtins.String.toString")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("String.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("String.prototype.valueOf()")}}

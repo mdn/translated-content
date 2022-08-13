@@ -9,50 +9,47 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.of()</strong></code> メソッドは、引数の数や型にかかわらず、可変長引数から、新しい <code>Array</code> インスタンスを生成します。</p>
+**`Array.of()`** メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-<p><code><strong>Array.of()</strong></code> と <code>Array</code> コンストラクタの違いは整数引数の扱いにあります。<code><strong>Array.of(7)</strong></code> は単一の要素、<code>7</code> を持つ配列を作成しますが、<code><strong>Array(7)</strong></code> は <code>length</code> プロパティが 7 の空の配列を作成します（<strong>注:</strong> これは実際の <code>undefined</code> の値を持つスロットではなく、7 つの空のスロットの配列を意味します）。</p>
+**`Array.of()`** と `Array` コンストラクタの違いは整数引数の扱いにあります。**`Array.of(7)`** は単一の要素、`7` を持つ配列を作成しますが、**`Array(7)`** は `length` プロパティが 7 の空の配列を作成します（**注:** これは実際の `undefined` の値を持つスロットではなく、7 つの空のスロットの配列を意味します）。
 
-<pre class="brush: js notranslate">Array.of(7);       // [7]
+```js
+Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
 Array(7);          // 7 つの空のスロットの配列
 Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</pre>
+    Array.of(element0[, element1[, ...[, elementN]]])
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>element<em>N</em></var></code></dt>
- <dd>生成する配列の要素。</dd>
-</dl>
+- `elementN`
+  - : 生成する配列の要素。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>新しい {{jsxref("Array")}} インスタンス。</p>
+新しい {{jsxref("Array")}} インスタンス。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>この関数は、ECMAScript 標準の第 6 版の一部です。詳しい情報は、<a href="https://gist.github.com/rwaldron/1074126"><code>Array.of</code> と <code>Array.from</code> 提案</a>、<a href="https://gist.github.com/rwaldron/3186576"><code>Array.of</code> 互換コード</a> をご覧ください。</p>
+この関数は、ECMAScript 標準の第 6 版の一部です。詳しい情報は、[`Array.of` と `Array.from` 提案](https://gist.github.com/rwaldron/1074126)、[`Array.of` 互換コード](https://gist.github.com/rwaldron/3186576) をご覧ください。
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}
 
+## ポリフィル
 
-<h2 id="ポリフィル">ポリフィル</h2>
+以下のコードを他のコードよりも前に記述する事により、ネイティブで実装されていなくても、`Array.of()` が使用可能になります。
 
-<p>以下のコードを他のコードよりも前に記述する事により、ネイティブで実装されていなくても、<code>Array.of()</code> が使用可能になります。</p>
-
-<pre class="brush: js notranslate">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
     // Or
@@ -63,45 +60,30 @@ Array(1, 2, 3);    // [1, 2, 3]
     return vals;
   }
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Array.of_の使用">Array.of の使用</h3>
+### Array.of の使用
 
-<pre class="brush: js notranslate">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
+## 仕様
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+| 仕様書                                                               |
+| -------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.of', 'Array.of')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザー実装状況
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Compat("javascript.builtins.Array.of")}}
 
-<div>
+## 関連情報
 
-
-<p>{{Compat("javascript.builtins.Array.of")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

@@ -7,60 +7,35 @@ tags:
   - WOFF
 translation_of: Web/Guide/WOFF
 ---
-<p><span class="seoSummary"><strong>WOFF (Web Open Font Format)</strong> は、Mozilla が Type Supply や LettError、他の組織と提携して開発した新しい Web フォント形式です。</span>これは、TrueType および OpenType, Open Font Format に使用されているテーブルベースの <code>sfnt</code> 構造と同じ圧縮されたバージョンを使用しています。<span class="seoSummary">WOFF には、これにメタデータと個人利用のためのデータ構造が追加されており、作成者とベンダーがライセンス情報を書き込むことができる予約フィールドも含まれています。</span></p>
+**WOFF (Web Open Font Format)** は、Mozilla が Type Supply や LettError、他の組織と提携して開発した新しい Web フォント形式です。これは、TrueType および OpenType, Open Font Format に使用されているテーブルベースの `sfnt` 構造と同じ圧縮されたバージョンを使用しています。WOFF には、これにメタデータと個人利用のためのデータ構造が追加されており、作成者とベンダーがライセンス情報を書き込むことができる予約フィールドも含まれています。
 
-<p>WOFF の使用には 3 つの利点があります:</p>
+WOFF の使用には 3 つの利点があります:
 
-<ol>
- <li>フォントデータが圧縮されているため、サイトで WOFF を使用すると、無圧縮の TrueType や OpenType ファイルの使用と比べて帯域を抑えることができ、読み込み時間も短縮されます。</li>
- <li>自社の TrueType や OpenType 形式のフォントが Web 上で使用されることを許可したくない多くのフォントベンダーは、WOFF 形式のフォントなら使用を許可できるでしょう。これは、サイトのデザイナーに対してフォントの可用性を高めることになります。</li>
- <li>プロプライエタリなブラウザベンダーもフリーソフトウェアのブラウザベンダーも、WOFF 形式を好んでいます。つまり、他の既存のフォント形式と異なり、WOFF 形式のフォントが、Web のための真にユニバーサルで相互運用が可能なフォント形式になる可能性があります。</li>
-</ol>
+1.  フォントデータが圧縮されているため、サイトで WOFF を使用すると、無圧縮の TrueType や OpenType ファイルの使用と比べて帯域を抑えることができ、読み込み時間も短縮されます。
+2.  自社の TrueType や OpenType 形式のフォントが Web 上で使用されることを許可したくない多くのフォントベンダーは、WOFF 形式のフォントなら使用を許可できるでしょう。これは、サイトのデザイナーに対してフォントの可用性を高めることになります。
+3.  プロプライエタリなブラウザベンダーもフリーソフトウェアのブラウザベンダーも、WOFF 形式を好んでいます。つまり、他の既存のフォント形式と異なり、WOFF 形式のフォントが、Web のための真にユニバーサルで相互運用が可能なフォント形式になる可能性があります。
 
-<p>WOFF と WOFF2 という、2 つのバージョンの WOFF があります。これらの主な違いは、使用する圧縮アルゴリズムです。{{cssxref("@font-face")}} では <code>format</code> 記述子で、それぞれ <code>'woff'</code> と <code>'woff2'</code> で識別されます。</p>
+WOFF と WOFF2 という、2 つのバージョンの WOFF があります。これらの主な違いは、使用する圧縮アルゴリズムです。{{cssxref("@font-face")}} では `format` 記述子で、それぞれ `'woff'` と `'woff2'` で識別されます。
 
-<h2 id="Using_WOFF" name="Using WOFF">WOFF の使用</h2>
+## WOFF の使用
 
-<p>Web コンテンツのテキストに WOFF フォントを使用するには、{{cssxref("@font-face")}} CSS プロパティを使用します。これは、OpenType や TrueType 形式のフォントの使用方法と同じです。WOFF 形式のフォントは圧縮されているため、より効率的にコンテンツがダウンロードされるでしょう。</p>
+Web コンテンツのテキストに WOFF フォントを使用するには、{{cssxref("@font-face")}} CSS プロパティを使用します。これは、OpenType や TrueType 形式のフォントの使用方法と同じです。WOFF 形式のフォントは圧縮されているため、より効率的にコンテンツがダウンロードされるでしょう。
 
-<h2 id="Tools_for_working_with_WOFF_fonts" name="Tools_for_working_with_WOFF_fonts">WOFF フォントを扱うためのツール</h2>
+## WOFF フォントを扱うためのツール
 
-<ul>
- <li><a href="https://github.com/odemiral/woff2sfnt-sfnt2woff">WOFF フォントを扱うためのツール</a>を利用できます。<code>sfnt2woff</code> および <code>woff2sfnt</code> は、WOFF と OpenType の間の変換を行います。</li>
-</ul>
+- [WOFF フォントを扱うためのツール](https://github.com/odemiral/woff2sfnt-sfnt2woff)を利用できます。`sfnt2woff` および `woff2sfnt` は、WOFF と OpenType の間の変換を行います。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WOFF2.0', '', '')}}</td>
-   <td>{{Spec2('WOFF2.0')}}</td>
-   <td>新しい圧縮アルゴリズム</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WOFF1.0', '', '')}}</td>
-   <td>{{Spec2('WOFF1.0')}}</td>
-   <td>最初期の仕様</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                   | 策定状況                     | コメント               |
+| ---------------------------------------- | ---------------------------- | ---------------------- |
+| {{SpecName('WOFF2.0', '', '')}} | {{Spec2('WOFF2.0')}} | 新しい圧縮アルゴリズム |
+| {{SpecName('WOFF1.0', '', '')}} | {{Spec2('WOFF1.0')}} | 最初期の仕様           |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
+{{Compat("css.at-rules.font-face")}}
 
+## 関連情報
 
-<p>{{Compat("css.at-rules.font-face")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("@font-face")}}</li>
-</ul>
+- {{cssxref("@font-face")}}

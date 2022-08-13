@@ -7,9 +7,9 @@ tags:
   - 要素
   - HTML
   - HTML 文字レベルの意味付け
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
-  - 'HTML:記述コンテンツ'
+  - HTML:フローコンテンツ
+  - HTML:知覚可能コンテンツ
+  - HTML:記述コンテンツ
   - 左書き
   - リファレンス
   - テキスト
@@ -19,90 +19,59 @@ tags:
   - Web
   - ltr
   - rtl
-browser-compat: html.elements.bdo
 translation_of: Web/HTML/Element/bdo
+browser-compat: html.elements.bdo
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong><code>&lt;bdo&gt;</code></strong> は <a href="/ja/docs/Web/HTML">HTML</a> の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。</span></p>
+**`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
-<p>テキストの文字は指定された方向の開始位置から描画されます。それぞれの文字の向きには影響を与えません (ですから、例えば、文字は裏返しにはなりません)。</p>
+テキストの文字は指定された方向の開始位置から描画されます。それぞれの文字の向きには影響を与えません (ですから、例えば、文字は裏返しにはなりません)。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4) 以前では、Firefox はこの要素に対し <code><a href="/ja/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> インターフェイスを実装しています。</td>
-  </tr>
- </tbody>
-</table>
+| [コンテンツカテゴリー](/ja/docs/Web/Guide/HTML/Content_categories) | [フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ), [記述コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ), 知覚可能コンテンツ          |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 許可されている内容                                                 | [記述コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ)                                                                                                               |
+| タグの省略                                                         | {{no_tag_omission}}                                                                                                                                                                  |
+| 許可されている親要素                                               | [記述コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ)を受け入れるすべての要素                                                                                       |
+| 暗黙の ARIA ロール                                                 | [対応するロールなし](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                          |
+| 許可されている ARIA ロール                                         | すべて                                                                                                                                                                                    |
+| DOM インターフェイス                                               | {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4) 以前では、Firefox はこの要素に対し [`HTMLSpanElement`](/ja/docs/Web/API/HTMLSpanElement) インターフェイスを実装しています。 |
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{htmlattrdef("dir")}}</dt>
- <dd>この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
- <ul>
-  <li><code>ltr</code>: テキストを左から右へ (left-to-right) 向かわせることを意味する指定。</li>
-  <li><code>rtl</code>: テキストを右から左へ (right-to-left) 向かわせることを意味する指定。</li>
- </ul>
- </dd>
-</dl>
+- {{htmlattrdef("dir")}}
+  - : この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。\* `ltr`: テキストを左から右へ (left-to-right) 向かわせることを意味する指定。
+    - `rtl`: テキストを右から左へ (right-to-left) 向かわせることを意味する指定。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<pre class="brush: html">&lt;!-- 書字方向を切り替える --&gt;
-&lt;p&gt;This text will go left to right.&lt;/p&gt;
-&lt;p&gt;&lt;bdo dir="rtl"&gt;This text will go right
-to left.&lt;/bdo&gt;&lt;/p&gt;
-</pre>
+```html
+<!-- 書字方向を切り替える -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right
+to left.</bdo></p>
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Notes">メモ</h2>
+## メモ
 
-<p>HTML 4 の仕様では、この要素にイベントが指定されていません。イベントは XHTML で追加されました。これは、恐らく見落としでしょう。</p>
+HTML 4 の仕様では、この要素にイベントが指定されていません。イベントは XHTML で追加されました。これは、恐らく見落としでしょう。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連する HTML 要素: {{HTMLElement("bdi")}}</li>
-</ul>
+- 関連する HTML 要素: {{HTMLElement("bdi")}}

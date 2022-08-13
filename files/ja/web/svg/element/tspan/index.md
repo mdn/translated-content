@@ -8,102 +8,81 @@ tags:
   - SVG Text Content
 translation_of: Web/SVG/Element/tspan
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG の <code><strong>&lt;tspan&gt;</strong></code> 要素は、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の <code>&lt;tspan&gt;</code> 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。</p>
+SVG の **`<tspan>`** 要素は、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[9] notranslate">&lt;svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
     text  { font: italic 12px serif; }
     tspan { font: bold 10px sans-serif; fill: red; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;text x="10" y="30" class="small"&gt;
+  <text x="10" y="30" class="small">
     You are
-    &lt;tspan&gt;not&lt;/tspan&gt;
+    <tspan>not</tspan>
     a banana!
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 100, '100%')}}</p>
-</div>
+{{EmbedLiveSample('Example', 100, '100%')}}
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<dl>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>テキストのベースラインの開始点の X 座標です。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>既定値: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>テキストのベースラインの開始点の Y 座標です。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>既定値: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("dx")}}</dt>
- <dd>テキストの位置を直前のテキスト要素から水平方向にずらします。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("dy")}}</dt>
- <dd>テキストの位置を直前のテキスト要素から垂直方向にずらします。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>既定値: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("rotate")}}</dt>
- <dd>それぞれの文字の向きを回転します。文字ごとに個別に回転させることができます。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#List-of-Ts"><strong>&lt;list-of-number&gt;</strong></a> ; <em>既定値</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("lengthAdjust")}}</dt>
- <dd>テキストを<code>textLength</code> 属性で定義された幅に合わせるために伸縮する方法です。<br>
- <small><em>値の型</em>: <code>spacing</code>|<code>spacingAndGlyphs</code>; <em>既定値</em>: <code>spacing</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("textLength")}}</dt>
- <dd>テキストを伸縮して合わせる幅です。<br>
- <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>既定値</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+- {{SVGAttr("x")}}
+  - : テキストのベースラインの開始点の X 座標です。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _既定値: none; Animatable_: **yes**
+- {{SVGAttr("y")}}
+  - : テキストのベースラインの開始点の Y 座標です。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _既定値: none; Animatable_: **yes**
+- {{SVGAttr("dx")}}
+  - : テキストの位置を直前のテキスト要素から水平方向にずらします。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _Default value_: _none_; _Animatable_: **yes**
+- {{SVGAttr("dy")}}
+  - : テキストの位置を直前のテキスト要素から垂直方向にずらします。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _既定値: none; Animatable_: **yes**
+- {{SVGAttr("rotate")}}
+  - : それぞれの文字の向きを回転します。文字ごとに個別に回転させることができます。
+    _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Content_type#List-of-Ts) ; _既定値_: none; _Animatable_: **yes**
+- {{SVGAttr("lengthAdjust")}}
+  - : テキストを`textLength` 属性で定義された幅に合わせるために伸縮する方法です。
+    _値の型_: `spacing`|`spacingAndGlyphs`; _既定値_: `spacing`; _Animatable_: **yes**
+- {{SVGAttr("textLength")}}
+  - : テキストを伸縮して合わせる幅です。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _既定値_: _none_; _Animatable_: **yes**
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+### グローバル属性
 
-<dl>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Core">コア属性</a></dt>
- <dd><small>特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Styling">スタイル属性</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Conditional_Processing">条件処理属性</a></dt>
- <dd><small>特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">グローバルイベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">グラフィックイベント属性</a></small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Presentation">プレゼンテーション属性</a></dt>
- <dd><small>特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Aria 属性</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Event Attributes
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Aria 属性
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_context" name="Usage_context">使用場面</h2>
+## 使用場面
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   | 状態                     | 備考     |
+| ---------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |          |
+| {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("svg.elements.tspan")}}</p>
+{{Compat("svg.elements.tspan")}}

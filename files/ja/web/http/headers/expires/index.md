@@ -11,73 +11,43 @@ tags:
   - レスポンス
 translation_of: Web/HTTP/Headers/Expires
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Expires</strong></code> ヘッダーには、レスポンスが古くなると見なされる日時が入ります。</p>
+**`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。
 
-<p>値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。</p>
+値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。
 
-<div class="note">レスポンスに <code>max-age</code> または <code>s-maxage</code> ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、<code>Expires</code> ヘッダーは無視されます。</div>
+> **Note:** レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}</th>
-   <td>はい</td>
-  </tr>
- </tbody>
-</table>
+| ヘッダー種別                                                                                                                             | {{Glossary("Response header", "レスポンスヘッダー")}} |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| {{Glossary("Forbidden header name", "禁止ヘッダー名")}}                                                     | いいえ                                                                               |
+| {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}} | はい                                                                                 |
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">Expires: &lt;http-date&gt;
-</pre>
+    Expires: <http-date>
 
-<h2 id="Directives" name="Directives">ディレクティブ</h2>
+## ディレクティブ
 
-<dl>
- <dt>&lt;http-date&gt;</dt>
- <dd>
- <p>HTTP-date タイムスタンプ</p>
- </dd>
-</dl>
+- \<http-date>
+  - : HTTP-date タイムスタンプ
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre>Expires: Wed, 21 Oct 2015 07:28:00 GMT</pre>
+    Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7234", "Expires", "5.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                       | 題名                                            |
+| -------------------------------------------- | ----------------------------------------------- |
+| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Expires")}}</p>
+{{Compat("http.headers.Expires")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Age")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Age")}}

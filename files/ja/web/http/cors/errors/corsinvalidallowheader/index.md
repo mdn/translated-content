@@ -15,25 +15,23 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSInvalidAllowHeader
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason" name="Reason">理由</h2>
+## 理由
 
-<pre class="syntaxbox">Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’</pre>
+    Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’
 
-<h2 id="What_went_wrong" name="What_went_wrong">何に失敗したか</h2>
+## 何に失敗したか
 
-<p>サーバーから送信された {{Glossary("CORS")}} 要求への応答に、一つ以上の無効なヘッダー名を含んだ {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーが含まれています。</p>
+サーバーから送信された {{Glossary("CORS")}} 要求への応答に、一つ以上の無効なヘッダー名を含んだ {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーが含まれています。
 
-<p><code>Access-Control-Allow-Headers</code> ヘッダーは、{{Glossary("preflight request", "プリフライト要求")}}への応答の中でサーバーから送信されます。これはどの <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a>が CORS 要求で許可されているかをクライアントに知らせます。クライアントの{{Glossary("user agent", "ユーザーエージェント")}}が、このヘッダーで示されたコンマで区切られた値の中から理解できないヘッダーがあれば、このエラーが発生します。</p>
+`Access-Control-Allow-Headers` ヘッダーは、{{Glossary("preflight request", "プリフライト要求")}}への応答の中でサーバーから送信されます。これはどの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)が CORS 要求で許可されているかをクライアントに知らせます。クライアントの{{Glossary("user agent", "ユーザーエージェント")}}が、このヘッダーで示されたコンマで区切られた値の中から理解できないヘッダーがあれば、このエラーが発生します。
 
-<p>これはほとんどはサーバー側でしか修正できない問題であり、サーバーの構成を変更して、 <code>Access-Control-Allow-Headers</code> ヘッダーから無効又は未知のヘッダー名を送らないようにします。クライアントで使用しているユーザーエージェントの HTTP ライブラリが最新版であるかどうかをチェックするのも良いかもしれません。</p>
+これはほとんどはサーバー側でしか修正できない問題であり、サーバーの構成を変更して、 `Access-Control-Allow-Headers` ヘッダーから無効又は未知のヘッダー名を送らないようにします。クライアントで使用しているユーザーエージェントの HTTP ライブラリが最新版であるかどうかをチェックするのも良いかもしれません。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
- <li>用語集: {{Glossary("CORS")}}</li>
- <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
- <li><a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a></li>
-</ul>
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- 用語集: {{Glossary("CORS")}}
+- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)

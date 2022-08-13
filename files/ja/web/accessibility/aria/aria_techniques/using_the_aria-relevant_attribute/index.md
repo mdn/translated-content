@@ -7,25 +7,21 @@ tags:
   - ariaLive
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute
 ---
-<p><span class="seoSummary"><code><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant" rel="external">aria-relevant</a></code> 属性は、<code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> リージョンにどのような変更が生じたかを記述するために使用されるオプションの値で、関連性があり、アナウンスする必要があります。 関連性のない変更は、<code>aria-live</code> 属性が <code>off</code> に設定されている場合と同じように動作します。</span></p>
+[`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性は、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) リージョンにどのような変更が生じたかを記述するために使用されるオプションの値で、関連性があり、アナウンスする必要があります。 関連性のない変更は、`aria-live` 属性が `off` に設定されている場合と同じように動作します。
 
-<p><code>aria-relevant</code> は、ウェブページにページを表示中に更新される可能性のあるコンテンツが含まれている場合によく使用されます。</p>
+`aria-relevant` は、ウェブページにページを表示中に更新される可能性のあるコンテンツが含まれている場合によく使用されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p>スペースで区切られた次の値の1つ以上のリスト。</p>
+スペースで区切られた次の値の 1 つ以上のリスト。
 
-<ul>
- <li><strong>"</strong><code>additions</code>" は、ライブリージョンにノードを挿入することです。 関連性があるとみなされるべきです。</li>
- <li>"<code>removals</code>" は、ノードの削除です。 関連性があるとみなされるべきです。</li>
- <li><strong>"</strong><code>text</code>" は、既存のノードのテキストコンテンツに対する変更です。 関連性があるとみなされるべきです。</li>
- <li>"<code>all</code>" は、"<code>additions removals text</code>" と同等です。</li>
-</ul>
+- **"**`additions`" は、ライブリージョンにノードを挿入することです。 関連性があるとみなされるべきです。
+- "`removals`" は、ノードの削除です。 関連性があるとみなされるべきです。
+- **"**`text`" は、既存のノードのテキストコンテンツに対する変更です。 関連性があるとみなされるべきです。
+- "`all`" は、"`additions removals text`" と同等です。
 
-<p><code>aria-relevant="additions text"</code> は、ライブリージョンのデフォルト値です。</p>
+`aria-relevant="additions text"` は、ライブリージョンのデフォルト値です。
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+### その他のリソース
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant の WAI-ARIA 仕様</a>（英語）</li>
-</ul>
+- [aria-relevant の WAI-ARIA 仕様](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant)（英語）

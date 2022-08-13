@@ -9,35 +9,24 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/511
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>511 Network Authentication Required</strong></code> レスポンスステータスコードは、クライアントがネットワークアクセスを取得するために認証する必要があることを示します。</p>
+HTTP **`511 Network Authentication Required`** レスポンスステータスコードは、クライアントがネットワークアクセスを取得するために認証する必要があることを示します。
 
-<p>この状態は、オリジンサーバーによって生成されるのではなく、ネットワークへのアクセスを制御するプロキシをインターセプトすることによって生成されます。</p>
+この状態は、オリジンサーバーによって生成されるのではなく、ネットワークへのアクセスを制御するプロキシをインターセプトすることによって生成されます。
 
-<p>ネットワークオペレータは、アクセスを許可する前 (インターネットカフェや空港などで) に何らかの認証、条件の受け入れ、またはその他のユーザー対話を必要とすることがあります。彼らはしばしば、Media Access Control ({{Glossary("MAC")}}) アドレスを使用していないクライアントを識別します。</p>
+ネットワークオペレータは、アクセスを許可する前 (インターネットカフェや空港などで) に何らかの認証、条件の受け入れ、またはその他のユーザー対話を必要とすることがあります。彼らはしばしば、Media Access Control ({{Glossary("MAC")}}) アドレスを使用していないクライアントを識別します。
 
-<h2 id="ステータス">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox">511 Network Authentication Required</pre>
+    511 Network Authentication Required
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">タイトル</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "511 Network Authentication Required" , "6")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           | タイトル                     |
+| -------------------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "511 Network Authentication Required" , "6")}} | Additional HTTP Status Codes |
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{Glossary("Proxy server")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}

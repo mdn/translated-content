@@ -8,36 +8,35 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Int32Array()</code></strong> は型付き配列のコンストラクターで、プラットフォームのバイト順による 2 の補数形式の 32 ビット符号付き整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は <code>0</code> で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。</p>
+**`Int32Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 2 の補数形式の 32 ビット符号付き整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new Int32Array(); // new in ES2017
-new Int32Array(<var>length</var>);
-new Int32Array(<var>typedArray</var>);
-new Int32Array(<var>object</var>);
-new Int32Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+    new Int32Array(); // new in ES2017
+    new Int32Array(length);
+    new Int32Array(typedArray);
+    new Int32Array(object);
+    new Int32Array(buffer [, byteOffset [, length]]);
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>length</var></code></dt>
- <dd><code><var>length</var></code> 引数付きで呼び出されると、メモリ内に内部的な配列バッファーを作成し、大きさは <code><var>length</var></code><em> を <code>BYTES_PER_ELEMENT</code></em> で乗じたバイト数になり、ゼロになることもあります。</dd>
- <dt><code><var>typedArray</var></code></dt>
- <dd><code>typedArray</code> 引数付きで呼び出されると、これはあらゆる型付き配列型 (例えば <code>Int32Array</code>) にすることができますが、 <code><var>typedArray</var></code> を新しい型付き配列にコピーします。 <code><var>typedArray</var></code> の中のそれぞれの値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換されます。新しい型付き配列の長さは <code><var>typedArray</var></code> 引数の長さと同じになります。</dd>
- <dt><code><var>object</var></code></dt>
- <dd><code><var>object</var></code> 引数付きで呼び出されると、あたかも <code><var>TypedArray</var>.from()</code> メソッドであるかのように新しい型付き配列が生成されます。</dd>
- <dt><code><var>buffer</var></code>, <code><var>byteOffset</var></code>, <code><var>length</var></code></dt>
- <dd><code><var>buffer</var></code> と、オプションで <code><var>byteOffset</var></code> と <code><var>length</var></code> 引数を指定して呼び出されると、指定された {{jsxref("ArrayBuffer")}} を表示する型付き配列ビューが生成されます。 <code><var>byteOffset</var></code> および <code><var>length</var></code> 引数は、型付き配列ビューが表示するメモリ範囲を指定する。 両方を省略した場合は <code><var>buffer</var></code> の全てを表示し、 <code><var>length</var></code> のみを省略した場合は <code><var>buffer</var></code> の残りを表示します。</dd>
-</dl>
+- `length`
+  - : `length` 引数付きで呼び出されると、メモリ内に内部的な配列バッファーを作成し、大きさは `length` _を `BYTES_PER_ELEMENT`_ で乗じたバイト数になり、ゼロになることもあります。
+- `typedArray`
+  - : `typedArray` 引数付きで呼び出されると、これはあらゆる型付き配列型 (例えば `Int32Array`) にすることができますが、 `typedArray` を新しい型付き配列にコピーします。 `typedArray` の中のそれぞれの値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換されます。新しい型付き配列の長さは `typedArray` 引数の長さと同じになります。
+- `object`
+  - : `object` 引数付きで呼び出されると、あたかも `TypedArray.from()` メソッドであるかのように新しい型付き配列が生成されます。
+- `buffer`, `byteOffset`, `length`
+  - : `buffer` と、オプションで `byteOffset` と `length` 引数を指定して呼び出されると、指定された {{jsxref("ArrayBuffer")}} を表示する型付き配列ビューが生成されます。 `byteOffset` および `length` 引数は、型付き配列ビューが表示するメモリ範囲を指定する。 両方を省略した場合は `buffer` の全てを表示し、 `length` のみを省略した場合は `buffer` の残りを表示します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Different_ways_to_create_an_Int32Array" name="Different_ways_to_create_an_Int32Array">様々な方法による Int32Array の生成</h3>
+### 様々な方法による Int32Array の生成
 
-<pre class="brush: js notranslate">// From a length
+```js
+// From a length
 var int32 = new Int32Array(2);
 int32[0] = 42;
 console.log(int32[0]); // 42
@@ -61,41 +60,34 @@ var z = new Int32Array(buffer, 0, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Int32Array.Int32Array")}}</p>
+{{Compat("javascript.builtins.Int32Array.Int32Array")}}
 
-<h3 id="Compatibility_notes" name="Compatibility_notes">互換性メモ</h3>
+### 互換性メモ
 
-<p>ECMAScript 2015 から、 <code>Int32Array</code> コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 <code>Int32Array</code> コンストラクターを <code>new</code> なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。</p>
+ECMAScript 2015 から、 `Int32Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Int32Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
-<pre class="brush: js example-bad notranslate">var dv = Int32Array([1, 2, 3]);
+```js example-bad
+var dv = Int32Array([1, 2, 3]);
 // TypeError: calling a builtin Int32Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good notranslate">var dv = new Int32Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Int32Array([1, 2, 3]);
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">JavaScript 型付き配列</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

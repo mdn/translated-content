@@ -1,5 +1,5 @@
 ---
-title: '<xsl:for-each>'
+title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
 tags:
   - XSLT
@@ -9,36 +9,34 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/for-each
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>&lt;xsl:for-each&gt;</code> 要素は一連のノードを選択し、それぞれのノードを同じ方法で処理します。これはノードのセットを反復処理したり、現在のノードを変更したりするためによく使用されます。1つ以上の <code>&lt;xsl:sort&gt;</code> 要素がこの要素の子として表示される場合、処理の前にソートが行われます。それ以外の場合、ノードはドキュメント順に処理されます。</p>
+`<xsl:for-each>` 要素は一連のノードを選択し、それぞれのノードを同じ方法で処理します。これはノードのセットを反復処理したり、現在のノードを変更したりするためによく使用されます。1 つ以上の `<xsl:sort>` 要素がこの要素の子として表示される場合、処理の前にソートが行われます。それ以外の場合、ノードはドキュメント順に処理されます。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+### 構文
 
-<pre>&lt;xsl:for-each select=EXPRESSION&gt;
-	&lt;xsl:sort&gt; [optional]
-	TEMPLATE
-&lt;/xsl:for-each&gt;</pre>
+    <xsl:for-each select=EXPRESSION>
+    	<xsl:sort> [optional]
+    	TEMPLATE
+    </xsl:for-each>
 
-<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
+### 必須属性
 
-<dl>
- <dt><code>select</code></dt>
- <dd>XPath 式を使用して、処理するノードを選択します。</dd>
-</dl>
+- `select`
+  - : XPath 式を使用して、処理するノードを選択します。
 
-<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
+### 任意属性
 
-<p>なし</p>
+なし
 
-<h3 id="Type" name="Type">Type</h3>
+### Type
 
-<p>命令は、テンプレート内に表示されます。</p>
+命令は、テンプレート内に表示されます。
 
-<h3 id="Defined" name="Defined">定義</h3>
+### 定義
 
-<p>XSLT, section 8.</p>
+XSLT, section 8.
 
-<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
+### Gecko のサポート
 
-<p>サポート済み</p>
+サポート済み

@@ -8,32 +8,29 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WeakSet</code></strong> オブジェクトは、コレクションに弱く参照された<em>オブジェクト</em>を格納することができます。</p>
+**`WeakSet`** オブジェクトは、コレクションに弱く参照された*オブジェクト*を格納することができます。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>WeakSet</code> オブジェクトはコレクションオブジェクトです。 {{jsxref("Set")}} と同様に、 <code>WeakSet</code> 内の各オブジェクトは一度だけ存在します。すなわち、 <code>WeakSet</code> コレクション内で固有になります。</p>
+`WeakSet` オブジェクトはコレクションオブジェクトです。 {{jsxref("Set")}} と同様に、 `WeakSet` 内の各オブジェクトは一度だけ存在します。すなわち、 `WeakSet` コレクション内で固有になります。
 
-<p>{{jsxref("Set")}} オブジェクトとの主な違いは下記の通りです。</p>
+{{jsxref("Set")}} オブジェクトとの主な違いは下記の通りです。
 
-<ul>
- <li><code>WeakSet</code> は<strong>オブジェクトのみ</strong>のコレクションです。 {{jsxref("Set")}} のように、任意の型の自由な値を入れることはできません。</li>
- <li><code>WeakSet</code> は<em>弱い参照</em>です。コレクション内のオブジェクトへの<em>弱い参照</em>で保持されます。 <code>WeakSet</code> 内に格納されているオブジェクトへの参照が他にない場合、ガベージコレクションにより削除されます。
-  <div class="blockIndicator note">
-  <p><strong>注:</strong> これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 <code>WeakSets</code> は列挙可能ではありません。</p>
-  </div>
- </li>
-</ul>
+- `WeakSet` は**オブジェクトのみ**のコレクションです。 {{jsxref("Set")}} のように、任意の型の自由な値を入れることはできません。
+- `WeakSet` は*弱い参照*です。コレクション内のオブジェクトへの*弱い参照*で保持されます。 `WeakSet` 内に格納されているオブジェクトへの参照が他にない場合、ガベージコレクションにより削除されます。
 
-<h3 id="Use_case_Detecting_circular_references" name="Use_case_Detecting_circular_references">使用例: 循環参照の検出</h3>
+  > **Note:** **注:** これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 `WeakSets` は列挙可能ではありません。
 
-<p>自分自身を再帰的に呼び出す関数は、どのオブジェクトが処理済みであるかを追跡することで、循環したデータ構造を防ぐ必要があります。</p>
+### 使用例: 循環参照の検出
 
-<p><code>WeakSet</code> はこの目的に理想的です。</p>
+自分自身を再帰的に呼び出す関数は、どのオブジェクトが処理済みであるかを追跡することで、循環したデータ構造を防ぐ必要があります。
 
-<pre class="brush: js notranslate">// Execute a callback on everything stored inside an object
+`WeakSet` はこの目的に理想的です。
+
+```js
+// Execute a callback on everything stored inside an object
 function execRecursively(fn, subject, _refs = null){
   if(!_refs)
     _refs = new WeakSet();
@@ -58,36 +55,33 @@ const foo = {
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj =&gt; console.log(obj), foo);
-</pre>
+execRecursively(obj => console.log(obj), foo);
+```
 
-<p>ここで、 <code>WeakSet</code> は最初の実行時に作成され、その後の関数呼び出しのたびに (内部の <code>_refs</code> 引数を使用して) 渡されます。</p>
+ここで、 `WeakSet` は最初の実行時に作成され、その後の関数呼び出しのたびに (内部の `_refs` 引数を使用して) 渡されます。
 
-<p>オブジェクトの数や探索順序は重要ではないので、オブジェクトの参照を追跡するには <code>WeakSet</code> のほうが {{jsxref("Set")}} よりも、特に巨大な数のオブジェクトを処理する場合にはよりふさわしい (そして性能もよい) ものです。</p>
+オブジェクトの数や探索順序は重要ではないので、オブジェクトの参照を追跡するには `WeakSet` のほうが {{jsxref("Set")}} よりも、特に巨大な数のオブジェクトを処理する場合にはよりふさわしい (そして性能もよい) ものです。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{jsxref("WeakSet/WeakSet", "WeakSet()")}}</dt>
- <dd>新しい<code>WeakSet</code>オブジェクトを生成します。</dd>
-</dl>
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
+  - : 新しい`WeakSet`オブジェクトを生成します。
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+## インスタンスメソッド
 
-<dl>
- <dt>{{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}</dt>
- <dd><code><var>value</var></code> を <code>WeakSet</code> オブジェクトに追加します。</dd>
- <dt>{{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}</dt>
- <dd><code><var>value</var></code> を <code>WeakSet</code> オブジェクトから削除します。削除後、 <code>WeakSet.prototype.has(<var>value</var>)</code> は <code>false</code> を返します。</dd>
- <dt>{{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}</dt>
- <dd><code><var>value</var></code> が <code>WeakSet</code> オブジェクト内の要素に含まれているかどうかを示す論理値を返します。</dd>
-</dl>
+- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
+  - : `value` を `WeakSet` オブジェクトに追加します。
+- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
+  - : `value` を `WeakSet` オブジェクトから削除します。削除後、 `WeakSet.prototype.has(value)` は `false` を返します。
+- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
+  - : `value` が `WeakSet` オブジェクト内の要素に含まれているかどうかを示す論理値を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_WeakSet_object" name="Using_the_WeakSet_object">WeakSet オブジェクトの使用</h3>
+### WeakSet オブジェクトの使用
 
-<pre class="brush: js notranslate">const ws = new WeakSet();
+```js
+const ws = new WeakSet();
 const foo = {};
 const bar = {};
 
@@ -99,33 +93,23 @@ ws.has(bar);    // true
 
 ws.delete(foo); // foo を set から削除
 ws.has(foo);    // false, foo は削除済み
-ws.has(bar);    // true, bar は残っている</pre>
+ws.has(bar);    // true, bar は残っている
+```
 
-<p><code>foo !== bar</code> であることに注意してください。これらは似たオブジェクトですが、<em><strong>まったく同じオブジェクト</strong>ではありません</em>。したがって、両方のオブジェクトが set に追加されます。</p>
+`foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.WeakSet")}}</p>
+{{Compat("javascript.builtins.WeakSet")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

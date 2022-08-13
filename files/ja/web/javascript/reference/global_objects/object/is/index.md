@@ -12,56 +12,51 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.is()</code></strong> メソッドは 2 つの値が<a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness">同一値</a>であるかどうかを判定します。</p>
+**`Object.is()`** メソッドは 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)であるかどうかを判定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+    Object.is(value1, value2);
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>value1</var></code></dt>
- <dd>比較する 1 つ目の値。</dd>
- <dt><code><var>value2</var></code></dt>
- <dd>比較する 2 つ目の値。</dd>
-</dl>
+- `value1`
+  - : 比較する 1 つ目の値。
+- `value2`
+  - : 比較する 2 つ目の値。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("Boolean")}} で、 2 つの引数が同一値であるかどうかを表します。</p>
+{{jsxref("Boolean")}} で、 2 つの引数が同一値であるかどうかを表します。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>Object.is()</code> は 2 つの値が<a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness">同一値</a>であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。</p>
+`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
 
-<ul>
- <li>どちらも {{jsxref("undefined")}}</li>
- <li>どちらも {{jsxref("null")}}</li>
- <li>どちらも <code>true</code> かどちらも <code>false</code></li>
- <li>どちらも同じ文字からなる同じ長さの文字列</li>
- <li>どちらも同じオブジェクト</li>
- <li>どちらも数で、
-  <ul>
-   <li>どちらも <code>+0</code></li>
-   <li>どちらも <code>-0</code></li>
-   <li>どちらも {{jsxref("NaN")}}</li>
-   <li>あるいはどちらもゼロ以外で {{jsxref("NaN")}} でなく、同じ数値を持つ</li>
-  </ul>
- </li>
-</ul>
+- どちらも {{jsxref("undefined")}}
+- どちらも {{jsxref("null")}}
+- どちらも `true` かどちらも `false`
+- どちらも同じ文字からなる同じ長さの文字列
+- どちらも同じオブジェクト
+- どちらも数で、
 
-<p>このメソッドは {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} 演算子による等値比較と同じものでは<strong>ありません</strong>。 <code>==</code> 演算子は等値性比較の前に (同じ型でなければ) 両辺に対して様々な型変換を適用します (結果、例えば <code>"" == false</code> は <code>true</code> に評価されます) が、<code>Object.is</code> は両辺どちらの値にも型変換を行いません。</p>
+  - どちらも `+0`
+  - どちらも `-0`
+  - どちらも {{jsxref("NaN")}}
+  - あるいはどちらもゼロ以外で {{jsxref("NaN")}} でなく、同じ数値を持つ
 
-<p>また {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} 演算子による同値比較とも同じものでも<strong>ありません</strong>。 <code>===</code> 演算子は (そして <code>==</code> 演算子も) 数値 <code>-0</code> と <code>+0</code> は同じものとして扱い、 {{jsxref("Number.NaN")}} と {{jsxref("NaN")}} は異なるものとして扱います。</p>
+このメソッドは {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} 演算子による等値比較と同じものでは**ありません**。 `==` 演算子は等値性比較の前に (同じ型でなければ) 両辺に対して様々な型変換を適用します (結果、例えば `"" == false` は `true` に評価されます) が、`Object.is` は両辺どちらの値にも型変換を行いません。
 
-<h2 id="Examples" name="Examples">例</h2>
+また {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} 演算子による同値比較とも同じものでも**ありません**。 `===` 演算子は (そして `==` 演算子も) 数値 `-0` と `+0` は同じものとして扱い、 {{jsxref("Number.NaN")}} と {{jsxref("NaN")}} は異なるものとして扱います。
 
-<h3 id="Using_Object.is" name="Using_Object.is">Object.is の使用</h3>
+## 例
 
-<pre class="brush: js notranslate">Object.is('foo', 'foo');     // true
+### Object.is の使用
+
+```js
+Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -78,11 +73,12 @@ Object.is(null, null);       // true
 Object.is(0, -0);            // false
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<pre class="brush: js notranslate">if (!Object.is) {
+```js
+if (!Object.is) {
   Object.defineProperty(Object, "is", {
     value: function (x, y) {
       // 同値アルゴリズム
@@ -91,33 +87,23 @@ Object.is(NaN, 0/0);         // true
         return x !== 0 || 1 / x === 1 / y;
       } else {
         // ステップ 6.a の場合: NaN == NaN
-        return x !== x &amp;&amp; y !== y;
+        return x !== x && y !== y;
       }
     }
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.is', 'Object.is')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-object.is', 'Object.is')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Object.is")}}</p>
+{{Compat("javascript.builtins.Object.is")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness">等値比較と同一性</a> — 標準搭載されている 3 つの同一性比較支援機能の比較</li>
-</ul>
+- [等値比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 標準搭載されている 3 つの同一性比較支援機能の比較

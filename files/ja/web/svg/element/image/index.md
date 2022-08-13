@@ -8,93 +8,71 @@ tags:
   - SVG Graphics
 translation_of: Web/SVG/Element/image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><span class="seoSummary">The <strong><code>&lt;image&gt;</code></strong> は SVG の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。</span></p>
+The **`<image>`** は SVG の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。
 
-<p>SVG ソフトウェアが対応する必要がある画像形式は {{glossary("JPEG")}}, {{glossary("PNG")}}, および他の SVG ファイルです。アニメーション {{glossary("GIF")}} の動作は未定義です。</p>
+SVG ソフトウェアが対応する必要がある画像形式は {{glossary("JPEG")}}, {{glossary("PNG")}}, および他の SVG ファイルです。アニメーション {{glossary("GIF")}} の動作は未定義です。
 
-<p><code>&lt;image&gt;</code> で表示される SVG ファイルは<a href="/ja/docs/Web/SVG/SVG_as_an_Image">画像として扱われます</a>。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは<a href="/ja/docs/Web/CSS/Privacy_and_the_:visited_selector">適用されず</a>、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。</p>
+`<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/SVG_as_an_Image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
 
-<div class="note">
-<p><strong>注:</strong> HTML 仕様書は、解釈時に <code>&lt;image&gt;</code> を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または<a href="/ja/docs/SVG_In_HTML_Introduction">インライン SVG</a> 内のみのものです。</p>
-</div>
+> **Note:** **注:** HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/SVG_In_HTML_Introduction) 内のみのものです。
 
-<h2 id="Usage_context" name="Usage_context">使用場所</h2>
+## 使用場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes">条件処理属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Core_attributes">コア属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Graphical_event_attributes">グラフィカルイベント属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Presentation_attributes">プレゼンテーション属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Xlink_attributes">Xlink 属性</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes)
+- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
+- [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
+- [Xlink 属性](/ja/docs/Web/SVG/Attribute#Xlink_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Specific_attributes" name="Specific_attributes">固有の属性</h3>
+### 固有の属性
 
-<ul>
- <li>{{SVGAttr("x")}}: 原点から見た画像の水平位置です。</li>
- <li>{{SVGAttr("y")}}: 原点から見た画像の垂直位置です。</li>
- <li>{{SVGAttr("width")}}: 画像が描画される幅です。 HTML の <code>&lt;img&gt;</code> とは異なり、この属性は必須です。</li>
- <li>{{SVGAttr("height")}}: 画像が描画される高さです。 HTML の <code>&lt;img&gt;</code> とは異なり、この属性は必須です。</li>
- <li>{{SVGAttr("href")}} および {{SVGAttr("xlink:href")}}: 画像ファイルの URL を指します。</li>
- <li>{{SVGAttr("preserveAspectRatio")}}: 画像の拡大縮小方法を制御します。</li>
-</ul>
+- {{SVGAttr("x")}}: 原点から見た画像の水平位置です。
+- {{SVGAttr("y")}}: 原点から見た画像の垂直位置です。
+- {{SVGAttr("width")}}: 画像が描画される幅です。 HTML の `<img>` とは異なり、この属性は必須です。
+- {{SVGAttr("height")}}: 画像が描画される高さです。 HTML の `<img>` とは異なり、この属性は必須です。
+- {{SVGAttr("href")}} および {{SVGAttr("xlink:href")}}: 画像ファイルの URL を指します。
+- {{SVGAttr("preserveAspectRatio")}}: 画像の拡大縮小方法を制御します。
 
-<h2 id="DOM_Interface" name="DOM_Interface">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p><code>&lt;image&gt;</code> は {{domxref("SVGImageElement")}} インターフェイスを実装しています。</p>
+`<image>` は {{domxref("SVGImageElement")}} インターフェイスを実装しています。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>SVG 内における PNG 画像の基本的な描画:</p>
+SVG 内における PNG 画像の基本的な描画:
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html notranslate">&lt;svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="200" height="200"
+  xmlns="http://www.w3.org/2000/svg">
+  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+</svg>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 250, 260)}}</p>
+{{EmbedLiveSample("Example", 250, 260)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td><code>height</code> および <code>width</code> を省略可能とした</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                   | 状態                     | 備考                                     |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------- |
+| {{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG2')}} | `height` および `width` を省略可能とした |
+| {{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義                                 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("svg.elements.image")}}</p>
+{{Compat("svg.elements.image")}}

@@ -6,119 +6,70 @@ tags:
   - SVG属性
 translation_of: Web/SVG/Attribute/r
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>r</code></strong> 属性は円の半径を定義します。</p>
+**`r`** 属性は円の半径を定義します。
 
-<p>二つの要素、すなわち、{{SVGElement("circle")}} と {{SVGElement("radialGradient")}} が、この属性を使っています。</p>
+二つの要素、すなわち、{{SVGElement("circle")}} と {{SVGElement("radialGradient")}} が、この属性を使っています。
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;radialGradient r="0" id="myGradient000"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;radialGradient r="50%" id="myGradient050"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;radialGradient r="100%" id="myGradient100"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
+```html
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient r="0" id="myGradient000">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="50%" id="myGradient050">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="100%" id="myGradient100">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
 
-  &lt;circle cx="50"  cy="50" r="0"/&gt;
-  &lt;circle cx="150" cy="50" r="25"/&gt;
-  &lt;circle cx="250" cy="50" r="50"/&gt;
+  <circle cx="50"  cy="50" r="0"/>
+  <circle cx="150" cy="50" r="25"/>
+  <circle cx="250" cy="50" r="50"/>
 
-  &lt;rect x="20"  y="120" width="60" height="60" fill="url(#myGradient000)" /&gt;
-  &lt;rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" /&gt;
-  &lt;rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="20"  y="120" width="60" height="60" fill="url(#myGradient000)" />
+  <rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" />
+  <rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="circle">circle</h2>
+## circle
 
-<p>{{SVGElement('circle')}} に関しては、<code>r</code> は、円の半径を定めており、したがって、その円の大きさを定めています。ゼロ以下の値を用いると、その円はまったく描画されません。</p>
+{{SVGElement('circle')}} に関しては、`r` は、円の半径を定めており、したがって、その円の大きさを定めています。ゼロ以下の値を用いると、その円はまったく描画されません。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">デフォルト値</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可能か</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 値                   | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| デフォルト値         | `0`                                                                                                                  |
+| アニメーション可能か | Yes                                                                                                                  |
 
-<p class="note"><strong>注:</strong> SVG2 からは、<code>r</code> は <em>幾何属性 (Geometry Property)</em> です。これが意味することは、<code>r</code> 属性を <code>circle</code> の CSS 属性としても使える、ということです。</p>
+> **Note:** **注:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
 
-<h2 id="radialGradient">radialGradient</h2>
+## radialGradient
 
-<p>{{ SVGElement("radialGradient") }} に関しては、<code>r</code> は、放射状グラデーションの末端の円の半径を定めています。</p>
+{{ SVGElement("radialGradient") }} に関しては、`r` は、放射状グラデーションの末端の円の半径を定めています。
 
-<p>グラデーションの <strong>100%</strong> にあたるピン留め箇所 (stop) が、この末端の円の外周にマッピングされるように、グラデーションが描画されます。ゼロ以下の値を用いると、グラデーションの最後の {{ SVGElement("stop") }} の色と不透明度を使った単一の色で、当該領域を塗りつぶすことになります。</p>
+グラデーションの **100%** にあたるピン留め箇所 (stop) が、この末端の円の外周にマッピングされるように、グラデーションが描画されます。ゼロ以下の値を用いると、グラデーションの最後の {{ SVGElement("stop") }} の色と不透明度を使った単一の色で、当該領域を塗りつぶすことになります。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">値</th>
-   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">デフォルト値</th>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">アニメーション可能か</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 値                   | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| デフォルト値         | `50%`                                                                                                                |
+| アニメーション可能か | Yes                                                                                                                  |
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "geometry.html#R", "r")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition as a geometry property</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for SVG2 paint servers <code>&lt;radialGradient&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;radialGradient&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;circle&gt;</code></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                 | 状態                     | 備考                                                 |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName("SVG2", "geometry.html#R", "r")}}                                         | {{Spec2("SVG2")}} | Definition as a geometry property                    |
+| {{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG2")}} | Definition for SVG2 paint servers `<radialGradient>` |
+| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG1.1")}} | Initial definition for `<radialGradient>`            |
+| {{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}             | {{Spec2("SVG1.1")}} | Initial definition for `<circle>`                    |

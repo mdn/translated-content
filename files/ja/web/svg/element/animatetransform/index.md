@@ -7,91 +7,70 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/animateTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>animateTransform</code> 要素は、 ターゲット要素に対して変換属性をアニメーション化し、これにより変形、スケーリング、回転およびまたはゆがみのアニメーションを制御することができます。</p>
+`animateTransform` 要素は、 ターゲット要素に対して変換属性をアニメーション化し、これにより変形、スケーリング、回転およびまたはゆがみのアニメーションを制御することができます。
 
-<h2 id="使用可能な場所">使用可能な場所</h2>
+## 使用可能な場所
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"  viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    &lt;polygon points="60,30 90,90 30,90"&gt;
-        &lt;animateTransform attributeName="transform"
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
                           attributeType="XML"
                           type="rotate"
                           from="0 60 70"
                           to="360 60 70"
                           dur="10s"
-                          repeatCount="indefinite"/&gt;
-    &lt;/polygon&gt;
-&lt;/svg&gt;</pre>
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+```
 
-<p><strong>ライブサンプル</strong></p>
+**ライブサンプル**
 
-<p>{{ EmbedLiveSample('例','120','120') }}</p>
+{{ EmbedLiveSample('例','120','120') }}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="グローバル属性">グローバル属性</h3>
+### グローバル属性
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Attribute#ConditionalProccessing">条件処理属性</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#Core" title="en/SVG/Attribute#Core">コア属性</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#AnimationEvent">アニメーションイベント属性</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#XLink">Xlink属性</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget">Animation attribute target attributes</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#AnimationTiming" title="en/SVG/Attribute#AnimationTiming">アニメーションタイミング属性</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#AnimationValue">Animation value attributes</a> »</li>
- <li><a href="/ja/docs/Web/SVG/Attribute#AnimationAddition">Animation addition attributes</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件処理属性](/ja/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [コア属性](/ja/docs/Web/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#AnimationEvent) »
+- [Xlink 属性](/ja/docs/Web/SVG/Attribute#XLink) »
+- [Animation attribute target attributes](/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
+- [Animation value attributes](/ja/docs/Web/SVG/Attribute#AnimationValue) »
+- [Animation addition attributes](/ja/docs/Web/SVG/Attribute#AnimationAddition) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="専用属性">専用属性</h3>
+### 専用属性
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
- <li>{{ SVGAttr("type") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
+- {{ SVGAttr("type") }}
 
-<h2 id="DOM_インターフェース">DOM インターフェース</h2>
+## DOM インターフェース
 
-<p>この属性は <code><a href="/ja/docs/DOM/SVGAnimateTransformElement" title="en/DOM/SVGAnimateTransformElement">SVGAnimateTransformElement</a></code> インターフェースを提供します。</p>
+この属性は [`SVGAnimateTransformElement`](/ja/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement") インターフェースを提供します。
 
-<p> </p>
+## 仕様
 
-<h2 id="仕様">仕様</h2>
+| 仕様                                                                                                                     | ステータス                               | コメント |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
+| {{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
+| {{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}} | {{Spec2('SVG1.1')}}                 | 初回定義 |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザ互換性
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
-
-<p>{{Compat("svg.elements.animateTransform")}}</p>
+{{Compat("svg.elements.animateTransform")}}

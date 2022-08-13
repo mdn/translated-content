@@ -11,97 +11,72 @@ tags:
   - Web Components
 translation_of: Web/HTML/Element/content
 ---
-<div>{{Deprecated_header}}</div>
+{{Deprecated_header}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;content&gt;</code> 要素</strong>は、一連の<a href="/ja/docs/Web/Web_Components">ウェブコンポーネント</a>技術の廃止された部分であり、 <a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> の中で {{glossary("insertion point")}} として使われていましたが、通常の HTML で利用することは意図されていませんでした。</span>現在では DOM の中で Shadow DOM を挿入することができる場所を作成する {{HTMLElement("slot")}} 要素に置き換えられました。</p>
+**HTML の `<content>` 要素**は、一連の[ウェブコンポーネント](/ja/docs/Web/Web_Components)技術の廃止された部分であり、 [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) の中で {{glossary("insertion point")}} として使われていましたが、通常の HTML で利用することは意図されていませんでした。現在では DOM の中で Shadow DOM を挿入することができる場所を作成する {{HTMLElement("slot")}} 要素に置き換えられました。
 
-<div class="note">
-<p><strong>メモ:</strong> この要素は初期のドラフト仕様に存在し、いくつかのブラウザーで実装されていましたが、後のバージョンの仕様書から削除され、使用するべきではありません。ここで文書化しているのは、その間に書かれたコードを、新しいバージョンの仕様書で動作するように適合させるのを支援するためです。</p>
-</div>
+> **Note:** **メモ:** この要素は初期のドラフト仕様に存在し、いくつかのブラウザーで実装されていましたが、後のバージョンの仕様書から削除され、使用するべきではありません。ここで文書化しているのは、その間に書かれたコードを、新しいバージョンの仕様書で動作するように適合させるのを支援するためです。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories" title="HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ" title="HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td>フローコンテンツを受け入れるすべての要素。</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLContentElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [コンテンツカテゴリー](/ja/docs/Web/HTML/Content_categories "HTML/Content_categories") | [透過的コンテンツ](/ja/docs/Web/HTML/Content_categories#透過的コンテンツ "HTML/Content_categories#透過的コンテンツ") |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 許可されている内容                                                                     | [フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)                                            |
+| タグの省略                                                                             | {{no_tag_omission}}                                                                                             |
+| 許可されている親要素                                                                   | フローコンテンツを受け入れるすべての要素。                                                                           |
+| DOM インターフェイス                                                                   | {{domxref("HTMLContentElement")}}                                                                         |
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は<a href="/ja/docs/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>を持ちます。</p>
+この要素は[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")を持ちます。
 
-<dl>
- <dt><code>select</code></dt>
- <dd>コンマ区切りで複数のセレクターを指定できます。これらは CSS セレクターと同じ文法です。 <code>&lt;content&gt;</code> 要素が指定された場所に挿入する内容を指定します。</dd>
-</dl>
+- `select`
+  - : コンマ区切りで複数のセレクターを指定できます。これらは CSS セレクターと同じ文法です。 `<content>` 要素が指定された場所に挿入する内容を指定します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>以下に <code>&lt;content&gt;</code> 要素の使用例を示します。これは必要なものがすべて含まれている HTML ファイルです。</p>
+以下に `<content>` 要素の使用例を示します。これは必要なものがすべて含まれている HTML ファイルです。
 
-<div class="note">
-<p><strong>メモ:</strong> 以下のコードを動作させるには、ブラウザーが Web Components をサポートしている必要があります。 <a href="/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Firefox で Web Components を有効にするには</a>の記事も参照してください。</p>
-</div>
+> **Note:** **メモ:** 以下のコードを動作させるには、ブラウザーが Web Components をサポートしている必要があります。 [Firefox で Web Components を有効にするには](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)の記事も参照してください。
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;&lt;/head&gt;
-  &lt;body&gt;
-  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
-  &lt;div&gt;
-    &lt;h4&gt;My Content Heading&lt;/h4&gt;
-    &lt;p&gt;My content text&lt;/p&gt;
-  &lt;/div&gt;
+```html
+<html>
+  <head></head>
+  <body>
+  <!-- The original content accessed by <content> -->
+  <div>
+    <h4>My Content Heading</h4>
+    <p>My content text</p>
+  </div>
 
-  &lt;script&gt;
-  // Get the &lt;div&gt; above.
+  <script>
+  // Get the <div> above.
   var myContent = document.querySelector('div');
-  // Create a shadow DOM on the &lt;div&gt;
+  // Create a shadow DOM on the <div>
   var shadowroot = myContent.createShadowRoot();
   // Insert into the shadow DOM a new heading and
-  // part of the original content: the &lt;p&gt; tag.
+  // part of the original content: the <p> tag.
   shadowroot.innerHTML =
-   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
-  &lt;/script&gt;
+   '<h2>Inserted Heading</h2> <content select="p"></content>';
+  </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </body>
+</html>
+```
 
-<p>ブラウザーで表示した場合、以下のように表示されます。</p>
+ブラウザーで表示した場合、以下のように表示されます。
 
-<p><img alt="content example" src="https://mdn.mozillademos.org/files/10077/content-example.png" style="height: 383px; width: 716px;"></p>
+![content example](https://mdn.mozillademos.org/files/10077/content-example.png)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>この要素は現在、どの仕様書でも定義されていません。</p>
+この要素は現在、どの仕様書でも定義されていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<p>{{Compat("html.elements.content")}}</p>
+{{Compat("html.elements.content")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Web_Components">Web Components</a></li>
- <li>{{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
-</ul>
+- [Web Components](/ja/docs/Web/Web_Components)
+- {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

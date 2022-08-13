@@ -15,33 +15,31 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason" name="Reason">理由</h2>
+## 理由
 
-<pre class="syntaxbox">Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'</pre>
+    Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 
-<h2 id="What_went_wrong" name="What_went_wrong">何が悪いのか</h2>
+## 何が悪いのか
 
-<p>リクエストを作成しているオリジンが、 {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーによって許可されたオリジンのいずれにも一致しないことを表します。</p>
+リクエストを作成しているオリジンが、 {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーによって許可されたオリジンのいずれにも一致しないことを表します。
 
-<p>このエラーは、レスポンスに複数の <code>Access-Control-Allow-Origin</code> ヘッダーが含まれていると発生することがあります。</p>
+このエラーは、レスポンスに複数の `Access-Control-Allow-Origin` ヘッダーが含まれていると発生することがあります。
 
-<p>コードが CORS リクエストを使用してアクセスしているサービスが管理下にあるのであれば、 <code>Access-Control-Allow-Origin</code> ヘッダーがそのアクセス元が含むように構成されていること、及びそのヘッダーがレスポンス内に1つしか含まれていないことを確認してください。ヘッダー自体はコンマ区切りで複数のオリジンを受け付けるので、新しいオリジンを追加することは難しくはありません。</p>
+コードが CORS リクエストを使用してアクセスしているサービスが管理下にあるのであれば、 `Access-Control-Allow-Origin` ヘッダーがそのアクセス元が含むように構成されていること、及びそのヘッダーがレスポンス内に 1 つしか含まれていないことを確認してください。ヘッダー自体はコンマ区切りで複数のオリジンを受け付けるので、新しいオリジンを追加することは難しくはありません。
 
-<p>例えば Apache では、サーバー構成 (の中の <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code>, <code>&lt;VirtualHost&gt;</code> のうち適切な節) に次のような行を追加してください。構成はふつう、 <code>.conf</code> ファイル又は (一般的な名前は <code>httpd.conf</code> や <code>apache.conf</code>) 又は <code>.htaccess</code> ファイルにあります。</p>
+例えば Apache では、サーバー構成 (の中の `<Directory>`, `<Location>`, `<Files>`, `<VirtualHost>` のうち適切な節) に次のような行を追加してください。構成はふつう、 `.conf` ファイル又は (一般的な名前は `httpd.conf` や `apache.conf`) 又は `.htaccess` ファイルにあります。
 
-<pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
+    Header set Access-Control-Allow-Origin 'origin-list'
 
-<p>Nginx では、このヘッダーを設定するコマンドは次の通りです。</p>
+Nginx では、このヘッダーを設定するコマンドは次の通りです。
 
-<pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
+    add_header 'Access-Control-Allow-Origin' 'origin-list'
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
- <li>用語集: {{Glossary("CORS")}}</li>
- <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
- <li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
-</ul>
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- 用語集: {{Glossary("CORS")}}
+- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)

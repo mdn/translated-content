@@ -8,34 +8,36 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
-<div>{{JSSidebar("Errors")}}</div>
+{{JSSidebar("Errors")}}
 
-<p>JavaScript の例外 "identifier starts immediately after numeric literal" は、識別子が数字で始まっているときに発生します。識別子の先頭は英字、アンダースコア (_)、ドル記号 ($) しか使うことができません。</p>
+JavaScript の例外 "identifier starts immediately after numeric literal" は、識別子が数字で始まっているときに発生します。識別子の先頭は英字、アンダースコア (\_)、ドル記号 ($) しか使うことができません。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">SyntaxError: Unexpected identifier after numeric literal (Edge)
+```js
+SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
-</pre>
+```
 
-<h2 id="エラータイプ">エラータイプ</h2>
+## エラータイプ
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+## 何がうまくいかなかったのか？
 
-<p>変数の名前、いわゆる<a href="/ja/docs/Glossary/Identifier">識別子</a>は特定のルールに従う必要があり、それに反しています。</p>
+変数の名前、いわゆる[識別子](/ja/docs/Glossary/Identifier)は特定のルールに従う必要があり、それに反しています。
 
-<p>JavaScript の識別子は文字かアンダースコア (_)、ドル記号 ($) で始まる必要があります。数値からは始められません。 2 文字目以降でのみ、数値 (0-9) を使用することができます。</p>
+JavaScript の識別子は文字かアンダースコア (\_)、ドル記号 ($) で始まる必要があります。数値からは始められません。 2 文字目以降でのみ、数値 (0-9) を使用することができます。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="Variable_names_starting_with_numeric_literals">数字から始まる変数名</h3>
+### 数字から始まる変数名
 
-<p>JavaScript は変数名を数字から始めることはできません。次の例は失敗します。</p>
+JavaScript は変数名を数字から始めることはできません。次の例は失敗します。
 
-<pre class="brush: js example-bad">var 1life = 'foo';
+```js example-bad
+var 1life = 'foo';
 // SyntaxError: identifier starts immediately after numeric literal
 
 var foo = 1life;
@@ -43,17 +45,16 @@ var foo = 1life;
 
 alert(1.foo);
 // SyntaxError: identifier starts immediately after numeric literal
-</pre>
+```
 
-<p>数値始まりにならないように、変数名を変更する必要があります。</p>
+数値始まりにならないように、変数名を変更する必要があります。
 
-<pre class="brush: js example-good">var life1 = 'foo';
+```js example-good
+var life1 = 'foo';
 var foo = life1;
-</pre>
+```
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar">字句文法</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a>の<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables">変数</a></li>
-</ul>
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の[変数](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables)

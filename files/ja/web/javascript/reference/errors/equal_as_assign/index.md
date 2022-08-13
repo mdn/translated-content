@@ -8,49 +8,53 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript の警告 "test for equality (==) mistyped as assignment (=)?" は、代入 (<code>=</code>) が通常は等価性 (<code>==</code>) の検査をすべき場面にあった場合に発生します。</p>
+JavaScript の警告 "test for equality (==) mistyped as assignment (=)?" は、代入 (`=`) が通常は等価性 (`==`) の検査をすべき場面にあった場合に発生します。
 
-<h2 id="Message">エラーメッセージ</h2>
+## エラーメッセージ
 
-<pre class="brush: js">Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
-</pre>
+```js
+Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
 
-<h2 id="エラータイプ">エラータイプ</h2>
+## エラータイプ
 
-<p>(Firefox のみ) {{jsxref("SyntaxError")}} の警告であり、 <code>javascript.options.strict</code> の設定が <code>true</code> に設定されていた場合に発生します。</p>
+(Firefox のみ) {{jsxref("SyntaxError")}} の警告であり、 `javascript.options.strict` の設定が `true` に設定されていた場合に発生します。
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+## 何がうまくいかなかったのか？
 
-<p>代入 (<code>=</code>) が通常は等価性 (<code>==</code>) の検査をすべき場面にあった場合に発生します。デバッグを行いやすくするために、 JavaScript は (厳密な警告が有効な場合は) このパターンについて警告を出します。</p>
+代入 (`=`) が通常は等価性 (`==`) の検査をすべき場面にあった場合に発生します。デバッグを行いやすくするために、 JavaScript は (厳密な警告が有効な場合は) このパターンについて警告を出します。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="Assignment_within_conditional_expressions">条件式内での代入</h3>
+### 条件式内での代入
 
-<p>(<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> のような) 条件式内では、単純な代入を行わないことをお勧めします。コードを一目見たときに、代入は等価と混同しやすいからです。たとえば、以下のコードは使用しないでください。</p>
+([`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) のような) 条件式内では、単純な代入を行わないことをお勧めします。コードを一目見たときに、代入は等価と混同しやすいからです。たとえば、以下のコードは使用しないでください。
 
-<pre class="brush: js example-bad">if (x = y) {
+```js example-bad
+if (x = y) {
   // 正しいことを実行する
 }
-</pre>
+```
 
-<p>条件式内で代入を行う必要がある場合、一般的には次のように、代入の周りに追加の括弧を置きます。</p>
+条件式内で代入を行う必要がある場合、一般的には次のように、代入の周りに追加の括弧を置きます。
 
-<pre class="brush: js">if ((x = y)) {
+```js
+if ((x = y)) {
   // 正しいことを実行する
-}</pre>
+}
+```
 
-<p>または、本当は比較演算子 (<code>==</code> や <code>===</code> など) を使用しようとしたのかもしれません。</p>
+または、本当は比較演算子 (`==` や `===` など) を使用しようとしたのかもしれません。
 
-<pre class="brush: js">if (x == y) {
+```js
+if (x == y) {
   // 正しいことを実行する
-}</pre>
+}
+```
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators#equality_operators">等価演算子</a></li>
-</ul>
+- [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
+- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)

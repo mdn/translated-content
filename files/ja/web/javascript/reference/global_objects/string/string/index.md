@@ -8,55 +8,43 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/String
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>String</code></strong> コンストラクターは新しい {{jsxref("String")}} オブジェクトを生成するために使用します。関数として呼び出された場合は、{{Glossary("string", "プリミティブ文字列", "", 1)}}への型変換を行うので、普通はより便利です。</p>
+**`String`** コンストラクターは新しい {{jsxref("String")}} オブジェクトを生成するために使用します。関数として呼び出された場合は、{{Glossary("string", "プリミティブ文字列", "", 1)}}への型変換を行うので、普通はより便利です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new String(<var>thing</var>)
-String(<var>thing</var>)</pre>
+    new String(thing)
+    String(thing)
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>thing</var></code></dt>
- <dd>文字列に変換するもの。</dd>
-</dl>
+- `thing`
+  - : 文字列に変換するもの。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="String_constructor_and_String_function" name="String_constructor_and_String_function">String コンストラクターと String 関数</h3>
+### String コンストラクターと String 関数
 
-<p>String 関数と String コンストラクターは異なる結果を生み出します。</p>
+String 関数と String コンストラクターは異なる結果を生み出します。
 
-<pre class="brush: js notranslate">typeof String('Hello world'); // string
+```js
+typeof String('Hello world'); // string
 typeof new String('Hello world'); // object
-</pre>
+```
 
-<p>ここでは、この関数は約束通り ({{Glossary("primitive", "プリミティブ")}}型の) 文字列を生成します。しかし、コンストラクターは String 型 (オブジェクトのラッパー) のインスタンスを生成しますので、 String コンストラクターを使用するのは稀だといえます。</p>
+ここでは、この関数は約束通り ({{Glossary("primitive", "プリミティブ")}}型の) 文字列を生成します。しかし、コンストラクターは String 型 (オブジェクトのラッパー) のインスタンスを生成しますので、 String コンストラクターを使用するのは稀だといえます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string-constructor', 'String constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                           |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string-constructor', 'String constructor')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.String.String")}}</p>
+{{Compat("javascript.builtins.String.String")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Text_formatting">JavaScript ガイドのテキスト処理</a></li>
-</ul>
+- [JavaScript ガイドのテキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)

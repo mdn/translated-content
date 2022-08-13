@@ -8,40 +8,41 @@ tags:
   - Strict Mode
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="メッセージ">メッセージ</h2>
+## メッセージ
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
-</pre>
+    ReferenceError: reference to undefined property "x" (Firefox)
 
-<h2 id="Error_type">エラーの種類</h2>
+## エラーの種類
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a> でのみ、{{jsxref("ReferenceError")}} の警告が出ます。</p>
+[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ、{{jsxref("ReferenceError")}} の警告が出ます。
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+## 何がうまくいかなかったのか？
 
-<p>存在しないオブジェクトのプロパティにアクセスしようとしています。プロパティにアクセスする方法は 2 つあります。詳細については、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors">メンバー演算子</a>参照ページを見てください。</p>
+存在しないオブジェクトのプロパティにアクセスしようとしています。プロパティにアクセスする方法は 2 つあります。詳細については、[メンバー演算子](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)参照ページを見てください。
 
-<p>未定義プロパティを参照することによるエラーは、<a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モードのコード</a>でのみ発生します。非 strict コードでは、暗黙的に無視されます。</p>
+未定義プロパティを参照することによるエラーは、[strict モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。非 strict コードでは、暗黙的に無視されます。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="無効なケース">無効なケース</h3>
+### 無効なケース
 
-<p>このケースでは、"bar" は未定義のプロパティです。</p>
+このケースでは、"bar" は未定義のプロパティです。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
-</pre>
+```
 
-<h3 id="有効なケース">有効なケース</h3>
+### 有効なケース
 
-<p>エラーを避けるには、"bar" プロパティを定義するか、使用する前に "bar" プロパティが存在するか確認する必要があります（たとえば、{{jsxref("Object.prototype.hasOwnProperty()")}} メソッドを使用します）。</p>
+エラーを避けるには、"bar" プロパティを定義するか、使用する前に "bar" プロパティが存在するか確認する必要があります（たとえば、{{jsxref("Object.prototype.hasOwnProperty()")}} メソッドを使用します）。
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 
 var foo = {};
 
@@ -50,10 +51,9 @@ console.log(foo.bar); // "moon"
 
 if (foo.hasOwnProperty("bar") {
   console.log(foo.bar);
-}</pre>
+}
+```
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">Strict モード</a></li>
-</ul>
+- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)

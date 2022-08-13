@@ -6,29 +6,26 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/last
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><code>last</code> 関数は、式評価コンテキストのコンテキストサイズに等しい数値を返します。</p>
+`last` 関数は、式評価コンテキストのコンテキストサイズに等しい数値を返します。
 
-<h3 id="Syntax">構文</h3>
+### 構文
 
-<pre class="eval">last()
-</pre>
+    last()
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>式評価コンテキストのコンテキストサイズに等しい整数。</p>
+式評価コンテキストのコンテキストサイズに等しい整数。
 
-<h3 id="Notes">注</h3>
+### 注
 
-<ul>
- <li>この関数は、特定のノードがノード集合内で最後のものであるかどうかを判定するために、 <a href="/ja/XPath/Functions/position"> position()</a> 関数をともなってよく用いられます。</li>
-</ul>
+- この関数は、特定のノードがノード集合内で最後のものであるかどうかを判定するために、 [position()](/ja/XPath/Functions/position) 関数をともなってよく用いられます。
 
-<h3 id="Defined">定義</h3>
+### 定義
 
-<p><a href="https://www.w3.org/TR/xpath#function-last">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-last)
 
-<h3 id="Gecko_support">Gecko での対応</h3>
+### Gecko での対応
 
-<p>対応済み。</p>
+対応済み。

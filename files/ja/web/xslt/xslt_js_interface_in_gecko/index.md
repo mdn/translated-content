@@ -5,12 +5,10 @@ tags:
   - XSLT
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko
 ---
-<ol>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction">前書き</a></li>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/JavaScript_XSLT_Bindings">JavaScript/XSLT バインディング</a></li>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Basic_Example">基本的な例</a></li>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters" title="The_XSLT//JavaScript_Interface_in_Gecko/Setting_Parameters">パラメータの設定</a></li>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example">高度な例</a></li>
- <li><a href="/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Interface_List" title="The_XSLT//JavaScript_Interface_in_Gecko/Interface_List">インターフェースリスト</a></li>
- <li><a href="/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources" title="The_XSLT//JavaScript_Interface_in_Gecko/Resources">リソース</a></li>
-</ol>
+1.  [前書き](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction)
+2.  [JavaScript/XSLT バインディング](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/JavaScript_XSLT_Bindings)
+3.  [基本的な例](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Basic_Example)
+4.  [パラメータの設定](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters "The_XSLT//JavaScript_Interface_in_Gecko/Setting_Parameters")
+5.  [高度な例](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example)
+6.  [インターフェースリスト](/ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Interface_List "The_XSLT//JavaScript_Interface_in_Gecko/Interface_List")
+7.  [リソース](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources "The_XSLT//JavaScript_Interface_in_Gecko/Resources")

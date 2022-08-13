@@ -7,43 +7,27 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/418
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の <strong><code>418 I'm a teapot</code></strong> クライアントエラーレスポンスコードは、サーバーが、自身がティーポットであることを理由としてコーヒーを入れることを拒否することを示します。コーヒーとティーの複合ポットで、一時的にコーヒーが提供できない場合は、代わりに 503 を返してください。このエラーは、1998年のエイプリルフールのジョークである Hyper Text Coffee Pot Control Protocol に由来します。</p>
+HTTP の **`418 I'm a teapot`** クライアントエラーレスポンスコードは、サーバーが、自身がティーポットであることを理由としてコーヒーを入れることを拒否することを示します。コーヒーとティーの複合ポットで、一時的にコーヒーが提供できない場合は、代わりに 503 を返してください。このエラーは、1998 年のエイプリルフールのジョークである Hyper Text Coffee Pot Control Protocol に由来します。
 
-<p>一部のウェブサイトでは、自動化されたクエリなど、処理したくないリクエストに対してこのレスポンスを使用しています。</p>
+一部のウェブサイトでは、自動化されたクエリなど、処理したくないリクエストに対してこのレスポンスを使用しています。
 
-<h2 id="Status" name="Status">ステータス</h2>
+## ステータス
 
-<pre class="syntaxbox notranslate">418 I'm a teapot</pre>
+    418 I'm a teapot
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("2324", "418 I'm a teapot" , "2.3.2")}}</td>
-   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7168", "418 I'm a teapot" , "2.3.3")}}</td>
-   <td>The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA): Response Codes</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                       | 題名                                                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content                        |
+| {{RFC("7168", "418 I'm a teapot" , "2.3.3")}} | The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA): Response Codes |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.status.418")}}</p>
+{{Compat("http.status.418")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}</li>
-</ul>
+- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}

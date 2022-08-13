@@ -10,123 +10,76 @@ tags:
   - 要素
 translation_of: Web/HTML/Element/hr
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;hr&gt;</code> 要素</strong>は、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。</span></p>
+**HTML の `<hr>` 要素**は、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
 
-<p>以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。</p>
+以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>なし。これは{{Glossary("empty element", "空要素")}}です。</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>開始タグは必須。終了タグを記述してはならない。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-    <th scope="row">暗黙の ARIA ロール</th>
-    <td>{{ARIARole("separator")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLHRElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [コンテンツカテゴリー](/ja/docs/Web/Guide/HTML/Content_categories) | [フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)                         |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| 許可されている内容                                                 | なし。これは{{Glossary("empty element", "空要素")}}です。                              |
+| タグの省略                                                         | 開始タグは必須。終了タグを記述してはならない。                                                          |
+| 許可されている親要素                                               | [フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)を受け入れるすべての要素 |
+| 暗黙の ARIA ロール                                                 | {{ARIARole("separator")}}                                                                        |
+| 許可されている ARIA ロール                                         | {{ARIARole("presentation")}} または {{ARIARole("none")}}                                |
+| DOM インターフェイス                                               | {{domxref("HTMLHRElement")}}                                                                    |
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>区切り線の配置を指定します。初期値は <code>left</code> です。</dd>
- <dt>{{htmlattrdef("color")}} {{Non-standard_inline}}</dt>
- <dd>区切り線の色を色名、または16進数で指定します。</dd>
- <dt>{{htmlattrdef("noshade")}} {{deprecated_inline}}</dt>
- <dd>網掛けをしないように指定します。</dd>
- <dt>{{htmlattrdef("size")}} {{deprecated_inline}}</dt>
- <dd>区切り線の高さをピクセル数で指定します。</dd>
- <dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt>
- <dd>区切り線の幅をピクセル数、あるいはパーセントで指定します。</dd>
-</dl>
+- {{htmlattrdef("align")}} {{deprecated_inline}}
+  - : 区切り線の配置を指定します。初期値は `left` です。
+- {{htmlattrdef("color")}} {{Non-standard_inline}}
+  - : 区切り線の色を色名、または 16 進数で指定します。
+- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+  - : 網掛けをしないように指定します。
+- {{htmlattrdef("size")}} {{deprecated_inline}}
+  - : 区切り線の高さをピクセル数で指定します。
+- {{htmlattrdef("width")}} {{deprecated_inline}}
+  - : 区切り線の幅をピクセル数、あるいはパーセントで指定します。
 
-<h2 id="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   This is the first paragraph of text.
   This is the first paragraph of text.
   This is the first paragraph of text.
   This is the first paragraph of text.
-&lt;/p&gt;
+</p>
 
-&lt;hr&gt;
+<hr>
 
-&lt;p&gt;
+<p>
   This is the second paragraph of text.
   This is the second paragraph of text.
   This is the second paragraph of text.
   This is the second paragraph of text.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><code>&lt;hr&gt;</code> 要素の定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td><code>align</code>, <code>noshade</code>, <code>size</code>, <code>width</code> 属性を非推奨にする</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考                                                   |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML WHATWG')}} | `<hr>` 要素の定義                                      |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                        |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}             | {{Spec2('HTML4.01')}}     | `align`, `noshade`, `size`, `width` 属性を非推奨にする |
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.hr")}}</p>
+{{Compat("html.elements.hr")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement('p')}}</li>
-</ul>
+- {{HTMLElement('p')}}

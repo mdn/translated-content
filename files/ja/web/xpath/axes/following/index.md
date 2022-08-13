@@ -6,4 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/following
 ---
-<p><code>following</code>軸は、<code>descendant</code>ノード、<code>attribute</code>ノード、および<code>namespace</code>ノードを除き、コンテキストノードの後に表示されるすべてのノードを示します。</p>
+`following`軸は、`descendant`ノード、`attribute`ノード、および`namespace`ノードを除き、コンテキストノードの後に表示されるすべてのノードを示します。
