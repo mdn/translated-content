@@ -3,120 +3,200 @@ title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["borderify.js"]
   }
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Instructs the browser to load <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> into web pages whose URL matches a given pattern.</p>
+Instructs the browser to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages whose URL matches a given pattern.
 
-<p>This key is an array. Each item is an object which:</p>
+This key is an array. Each item is an object which:
 
-<ul>
- <li><strong>must</strong> contain a key named <strong><code>matches</code></strong>, that specifies the URL patterns to be matched in order for the scripts to be loaded</li>
- <li><strong>may</strong> contain keys named <strong><code>js</code></strong> and <strong><code>css</code></strong>, which list scripts to be loaded into matching pages</li>
- <li><strong>may</strong> contain a number of other properties that control finer aspects of how and when content scripts are loaded</li>
-</ul>
+- **must** contain a key named **`matches`**, which specifies the URL patterns to be matched in order for the scripts to be loaded;
+- **may** contain keys named **`js`** and **`css`**, which list scripts and/or stylesheets to be loaded into matching pages; and
+- **may** contain a number of other properties that control finer aspects of how and when content scripts are loaded.
 
-<p>Details of all the keys you can include are given in the table below.</p>
+Details of all the keys you can include are given in the table below.
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a id="all_frames" name="all_frames" style=""><code>all_frames</code></a></td>
-   <td><code>Boolean</code></td>
-   <td>
-    <p><code>true</code>: inject the scripts specified in <code><a href="#js">js</a></code> and <code><a href="#css">css</a></code> into all frames matching the specified URL requirements, even if the frame is not the topmost frame in a tab. This does not inject into child frames where only their parent matches the URL requirements and the child frame does not match the URL requirements. The URL requirements are checked for each frame independently.</p>
-
-    <p><code>false</code>: inject only into frames matching the URL requirements which are the topmost frame in a tab.</p>
-
-    <p>Defaults to <code>false</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a id="css" name="css" style=""><code>css</code></a></td>
-   <td><code>Array</code></td>
-   <td>
-    <p>An array of paths, relative to manifest.json, referencing CSS files that will be injected into matching pages.</p>
-
-    <p>Files are injected in the order given, and before the DOM is loaded.</p>
-
-    <div class="blockIndicator note">
-    <p>Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
-    </div>
-   </td>
-  </tr>
-  <tr>
-   <td><a id="exclude_globs" name="exclude_globs" style=""><code>exclude_globs</code></a></td>
-   <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
-  </tr>
-  <tr>
-   <td><a id="exclude_matches" name="exclude_matches" style=""><code>exclude_matches</code></a></td>
-   <td><code>Array</code></td>
-   <td>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
-  </tr>
-  <tr>
-   <td><a id="include_globs" name="include_globs" style=""><code>include_globs</code></a></td>
-   <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
-  </tr>
-  <tr>
-   <td><a id="js" name="js" style=""><code>js</code></a></td>
-   <td><code>Array</code></td>
-   <td>
-    <p>An array of paths, relative to the manifest.json file, referencing JavaScript files that will be injected into matching pages.</p>
-
-    <p>Files are injected in the order given. This means that, for example, if you include jQuery here followed by another content script, like this:</p>
-
-    <pre class="brush: json no-line-numbers">
-<code>"js": ["jquery.js", "my-content-script.js"]</code></pre>
-
-    <p>then <code>"my-content-script.js"</code> can use jQuery.</p>
-
-    <p>Files are injected at the time specified by <code><a href="#run_at">run_at</a></code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a id="match_about_blank" name="match_about_blank" style="">match_about_blank</a></code></td>
-   <td><code>Boolean</code></td>
-   <td>
-    <p>Insert the content scripts into pages whose URL is "about:blank" or "about:srcdoc", if the URL of the page that opened or created this page <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
-
-    <p>This is especially useful to run scripts in empty iframes , whose URL is "about:blank". To do this you should also set the <code>all_frames</code> key.</p>
-
-    <p>For example, suppose you have a <code>content_scripts</code> key like this:</p>
-
-    <pre class="brush: json no-line-numbers">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a id="all_frames"><code>all_frames</code></a>
+      </td>
+      <td><code>Boolean</code></td>
+      <td>
+        <dl>
+          <dt><code>true</code></dt>
+          <dd>
+            <p>
+              Inject the scripts specified in
+              <code><a href="#js">js</a></code> and
+              <code><a href="#css">css</a></code> into all frames matching the
+              specified URL requirements, even if the frame is not the topmost
+              frame in a tab. This does not inject into child frames where only
+              their parent matches the URL requirements and the child frame does
+              not match the URL requirements. The URL requirements are checked
+              for each frame independently.
+            </p>
+            <div class="notecard note">
+              <p>
+                <strong>Note:</strong> This also applies to any tracker or ad
+                that uses iframes, which means that enabling this could make
+                your content script get called dozens of times on some pages.
+              </p>
+            </div>
+          </dd>
+          <dt><code>false</code></dt>
+          <dd>
+            Inject only into frames matching the URL requirements which are the
+            topmost frame in a tab.
+          </dd>
+        </dl>
+        <p>Defaults to <code>false</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="css"><code>css</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        <p>
+          An array of paths, relative to <code>manifest.json</code>, referencing
+          CSS files that will be injected into matching pages.
+        </p>
+        <p>
+          Files are injected in the order given, and at the time specified by
+          <code><a href="#run_at">run_at</a></code
+          >.
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Firefox resolves URLs in injected CSS files
+            relative to the CSS file itself, rather than to the page it's
+            injected into.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="exclude_globs"><code>exclude_globs</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        An array of strings containing wildcards. See
+        <a href="#matching_url_patterns">Matching URL patterns</a> below.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="exclude_matches"><code>exclude_matches</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        An array of
+        <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+          >match patterns</a
+        >. See <a href="#matching_url_patterns">Matching URL patterns</a> below.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="include_globs"><code>include_globs</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        An array of strings containing wildcards. See
+        <a href="#matching_url_patterns">Matching URL patterns</a> below.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="js"><code>js</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        <p>
+          An array of paths, relative to <code>manifest.json</code>, referencing
+          JavaScript files that will be injected into matching pages.
+        </p>
+        <p>
+          Files are injected in the order given. This means that, for example,
+          if you include jQuery here followed by another content script, like
+          this:
+        </p>
+        <pre class="brush: json">
+"js": ["jquery.js", "my-content-script.js"]</pre
+        >
+        <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>
+        <p>
+          The files are injected after any files in
+          <code><a href="#css">css</a></code
+          >, and at the time specified by
+          <code><a href="#run_at">run_at</a></code
+          >.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a id="match_about_blank">match_about_blank</a></code>
+      </td>
+      <td><code>Boolean</code></td>
+      <td>
+        <p>
+          Insert the content scripts into pages whose URL is
+          <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL
+          of the page that opened or created this page
+          <a href="#matching_url_patterns">matches the patterns</a> specified in
+          the rest of the <code>content_scripts</code> key.
+        </p>
+        <p>
+          This is especially useful to run scripts in empty iframes , whose URL
+          is <code>"about:blank"</code>. To do this you should also set the
+          <code>all_frames</code> key.
+        </p>
+        <p>
+          For example, suppose you have a <code>content_scripts</code> key like
+          this:
+        </p>
+        <pre class="brush: json">
   "content_scripts": [
     {
       "js": ["my-script.js"],
@@ -124,102 +204,150 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       "match_about_blank": true,
       "all_frames": true
     }
-  ]</pre>
-
-    <p>If the user loads https://example.org/, and this page embeds an empty iframe, then "my-script.js" will be loaded into the iframe.</p>
-
-    <p><code>match_about_blank</code> is supported in Firefox from version 52. Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code> even if you specify that value in <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a id="matches" name="matches" style=""><code>matches</code></a></td>
-   <td><code>Array</code></td>
-   <td>
-    <p>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</p>
-
-    <p>This is the only mandatory key.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a id="run_at" name="run_at" style=""><code>run_at</code></a></td>
-   <td><code>String</code></td>
-   <td>
-    <p>This option determines when the scripts specified in <code><a href="#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>
-
-    <ul>
-     <li>"<code>document_start</code>": corresponds to <code>loading</code>. The DOM is still loading.</li>
-     <li>"<code>document_end</code>": corresponds to <code>interactive</code>. The DOM has finished loading, but resources such as scripts and images may still be loading.</li>
-     <li>"<code>document_idle</code>": corresponds to <code>complete</code>. The document and all its resources have finished loading.</li>
-    </ul>
-
-    <p>The default value is <code>"document_idle"</code>.</p>
-
-    <p>In all cases, files in <code><a href="#js">js</a></code> are injected after files in <code><a href="#css">css</a></code>.</p>
-   </td>
-  </tr>
- </tbody>
+  ]</pre
+        >
+        <p>
+          If the user loads <code>https://example.org/</code>, and this page
+          embeds an empty iframe, then <code>"my-script.js"</code> will be
+          loaded into the iframe.
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> <code>match_about_blank</code> is supported
+            in Firefox from version 52.
+          </p>
+          <p>
+            Note that in Firefox, content scripts won't be injected into empty
+            iframes at <code>"document_start"</code>, even if you specify that
+            value in <code><a href="#run_at">run_at</a></code> .
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="matches"><code>matches</code></a>
+      </td>
+      <td><code>Array</code></td>
+      <td>
+        <p>
+          An array of
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+            >match patterns</a
+          >. See
+          <a href="#matching_url_patterns">Matching URL patterns</a> below.
+        </p>
+        <p>This is the only mandatory key.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="run_at"><code>run_at</code></a>
+      </td>
+      <td><code>String</code></td>
+      <td>
+        <p>
+          This option determines when the files specified in
+          <code><a href="#css">css</a></code> and
+          <code><a href="#js">js</a></code> are injected. You can supply one of
+          three strings here, each of which identifies a state in the process of
+          loading a document. The states directly correspond to
+          {{domxref("Document/readyState", "Document.readyState")}}:
+        </p>
+        <dl>
+          <dt><code>"document_start"</code></dt>
+          <dd>
+            Corresponds to <code>loading</code>. The DOM is still loading.
+          </dd>
+          <dt><code>"document_end"</code></dt>
+          <dd>
+            Corresponds to <code>interactive</code>. The DOM has finished
+            loading, but resources such as scripts and images may still be
+            loading.
+          </dd>
+          <dt><code>"document_idle"</code></dt>
+          <dd>
+            Corresponds to <code>complete</code>. The document and all its
+            resources have finished loading.
+          </dd>
+        </dl>
+        <p>The default value is <code>"document_idle"</code>.</p>
+        <p>
+          In all cases, files in <code><a href="#js">js</a></code> are injected
+          after files in <code><a href="#css">css</a></code
+          >.
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Matching_URL_patterns">Matching URL patterns</h2>
+## Matching URL patterns
 
-<p>The <code>"content_scripts"</code> key attaches content scripts to documents based on URL matching: if the document's URL matches the specification in the key, then the script will be attached. There are four properties inside <code>"content_scripts"</code> that you can use for this specification:</p>
+The `"content_scripts"` key attaches content scripts to documents based on URL matching: if the document's URL matches the specification in the key, then the script will be attached. There are four properties inside `"content_scripts"` that you can use for this specification:
 
-<ul>
- <li><code>matches</code>: an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>.</li>
- <li><code>exclude_matches:</code> an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>.</li>
- <li><code>include_globs</code>: an array of <a href="#globs">globs</a>.</li>
- <li><code>exclude_globs:</code> an array of <a href="#globs">globs</a>.</li>
-</ul>
+- `matches`
+  - : an array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- `exclude_matches`
+  - : an array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- `include_globs`
+  - : an array of [globs](#globs)
+- `exclude_globs`
+  - : an array of [globs](#globs)
 
-<p>To match one of these properties, a URL must match at least one of the items in its array. For example, given a property like:</p>
+To match one of these properties, a URL must match at least one of the items in its array. For example, given a property like:
 
-<pre class="brush: json  no-line-numbers">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
+```json
+"matches": ["*://*.example.org/*", "*://*.example.com/*"]
+```
 
-<p>Both "http://example.org/" and "http://example.com/" will match.</p>
+Both `http://example.org/` and `http://example.com/` will match.
 
-<p>Since <code>matches</code> is the only mandatory key, the other three keys are used to limit further the URLs that match. To match the key as a whole, a URL must:</p>
+Since `matches` is the only mandatory key, the other three keys are used to limit further the URLs that match. To match the key as a whole, a URL must:
 
-<ol>
- <li>match the <code>matches</code> property</li>
- <li>AND match the <code>include_globs</code> property, if present</li>
- <li>AND NOT match the <code>exclude_matches</code> property, if present</li>
- <li>AND NOT match the <code>exclude_globs</code> property, if present</li>
-</ol>
+- match the `matches` property
+- AND match the `include_globs` property, if present
+- AND NOT match the `exclude_matches` property, if present
+- AND NOT match the `exclude_globs` property, if present
 
-<h3 id="globs">globs</h3>
+### globs
 
-<p>A glob is just a string that may contain wildcards. There are two types of wildcard, and you can combine them in the same glob:</p>
+A _glob_ is just a string that may contain wildcards.
 
-<ul>
- <li>"*" matches zero or more characters</li>
- <li>"?" matches exactly one character.</li>
-</ul>
+There are two types of wildcard, and you can combine them in the same glob:
 
-<p>For example: <code>"*na?i"</code> would match <code>"illuminati"</code> and <code>"annunaki"</code>, but not <code>"sagnarelli"</code>.</p>
+1. `*` matches zero or more characters
+2. `?` matches exactly one character.
 
-<h2 id="Example">Example</h2>
+For example: `"*na?i"` would match `"illuminati"` and `"annunaki"`, but not `"sagnarelli"`.
 
-<pre class="brush: json  no-line-numbers">"content_scripts": [
+## Example
+
+```json
+"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["borderify.js"]
   }
-]</pre>
+]
+```
 
-<p>This injects a single content script "borderify.js" into all pages under "mozilla.org" or any of its subdomains, whether served over HTTP or HTTPS.</p>
+This injects a single content script `borderify.js` into all pages under `mozilla.org` or any of its subdomains, whether served over HTTP or HTTPS.
 
-<pre class="brush: json  no-line-numbers">  "content_scripts": [
+```json
+  "content_scripts": [
     {
       "exclude_matches": ["*://developer.mozilla.org/*"],
       "matches": ["*://*.mozilla.org/*"],
       "js": ["jquery.js", "borderify.js"]
     }
-  ]</pre>
+  ]
+```
 
-<p>This injects two content scripts into all pages under "mozilla.org" or any of its subdomains except "developer.mozilla.org", whether served over HTTP or HTTPS.</p>
+This injects two content scripts into all pages under `mozilla.org` or any of its subdomains except `developer.mozilla.org`, whether served over HTTP or HTTPS.
 
-<p>The content scripts see the same view of the DOM and are injected in the order they appear in the array, so "borderify.js" can see global variables added by "jquery.js".</p>
+The content scripts see the same view of the DOM and are injected in the order they appear in the array, so `borderify.js` can see global variables added by `jquery.js`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.manifest.content_scripts")}}</p>
+{{Compat}}

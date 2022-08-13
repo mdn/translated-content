@@ -3,27 +3,26 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>manifest.json 파일은 json 포맷 파일로서, 모든 웹 익스텐션이 포함하고 있어야 하는 파일입니다. </p>
+manifest.json 파일은 json 포맷 파일로서, 모든 웹 익스텐션이 포함하고 있어야 하는 파일입니다.
 
-<p>manifest.json을 사용함으로써, 당신은 당신의 익스텐션의 이름, 버젼과 같은 기본 정보를 명시하며, 또한 당신의 익스텐션의 기능, 예를 들어 기본 스크립트, 내용 스크립트, 브라우져 활동 등과 같은 측면을 명시합니다. </p>
+manifest.json을 사용함으로써, 당신은 당신의 익스텐션의 이름, 버젼과 같은 기본 정보를 명시하며, 또한 당신의 익스텐션의 기능, 예를 들어 기본 스크립트, 내용 스크립트, 브라우져 활동 등과 같은 측면을 명시합니다.
 
-<p>manifest.json에 지원되는 키들은 아래와 같습니다.</p>
+manifest.json에 지원되는 키들은 아래와 같습니다.
 
-<p>{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}</p>
+{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
 
-<div class="twocolumns"> </div>
+`"manifest_version"`, `"version"`, `"name" 키들은 반드시 있어야 합니다.`
 
-<p><code>"manifest_version"</code>, <code>"version"</code>, <code>"name" 키들은 반드시 있어야 합니다. </code></p>
+"\_locales" 경로가 있다면, `"default_locale"은 반드시 있어야 하며, `"\_locales" 경로가 없다면, `"default_locale"은 없어야 합니다.`
 
-<p>"_locales"  경로가 있다면, <code>"default_locale"은 반드시 있어야 하며, </code>"_locales"  경로가 없다면, <code>"default_locale"은 없어야 합니다. </code></p>
+`"applications"는 구글 크롬에서는 지원되지 않고, 파이어폭스 48 이전 버젼에는 의무적으로 있어야 합니다.`
 
-<p><code>"applications"는 구글 크롬에서는 지원되지 않고, 파이어폭스 48 이전 버젼에는 의무적으로 있어야 합니다. </code></p>
+간단한 manifest.json 구문은 다음과 같습니다:
 
-<p>간단한  manifest.json 구문은 다음과 같습니다:</p>
-
-<pre class="brush: json">{
+```json
+{
 
     "applications": {
       "gecko": {
@@ -96,6 +95,5 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 
     "web_accessible_resources": ["images/my-image.png"]
 
-}</pre>
-
-<p> </p>
+}
+```
