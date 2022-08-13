@@ -7,19 +7,20 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Обзор">Обзор</h2>
+## Обзор
 
-<p class="summary">Свойство <strong><code>padding</code></strong> устанавливает внутренние отступы/поля со всех сторон элемента. <a href="/en/CSS/box_model#padding">Область отступов</a> это пространство между содержанием элемента и его границей. Отрицательные значения не допускаются.</p>
+Свойство **`padding`** устанавливает внутренние отступы/поля со всех сторон элемента. [Область отступов](/en/CSS/box_model#padding) это пространство между содержанием элемента и его границей. Отрицательные значения не допускаются.
 
-<p class="summary">Свойство <code>padding</code> краткая форма записи свойств, чтобы не писать отдельное правило для каждой стороны (<code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>).</p>
+Свойство `padding` краткая форма записи свойств, чтобы не писать отдельное правило для каждой стороны (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Применяется для всех 4 сторон */
+```css
+/* Применяется для всех 4 сторон */
 padding: 1em;
 
 /* По вертикали | По горизонтали */
@@ -35,66 +36,71 @@ padding: 2px 1em 0 1em;
 padding: inherit;
 padding: initial;
 padding: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Укажите одно, два, три или четыре следующих значения:</p>
+Укажите одно, два, три или четыре следующих значения:
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Устанавливает неотрицательный, фиксированный размер. Подробнее в разделе {{cssxref("&lt;length&gt;")}}.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Относительно ширины родительского блока.</dd>
-</dl>
+- `<length>`
+  - : Устанавливает неотрицательный, фиксированный размер. Подробнее в разделе {{cssxref("&lt;length&gt;")}}.
+- `<percentage>`
+  - : Относительно ширины родительского блока.
 
-<ul>
- <li><strong>Одно</strong> значение применяется ко всем четырём сторонам</li>
- <li><strong>Два</strong> значения применяются: <strong>1.</strong> <em>верхняя и нижняя</em> и <strong>2.</strong> <em>левая и правая</em> стороны</li>
- <li><strong>Три</strong> значения применяются: <strong>1.</strong> <em>верхняя</em>, <strong>2.</strong> <em>левая и правая</em> и <strong>3.</strong> <em>нижняя</em> стороны</li>
- <li><strong>Четыре</strong> значения применяются<strong>:</strong> <strong>1.</strong> <em>верхняя</em>, <strong>2.</strong> <em>правая</em>, <strong>3.</strong> <em>нижняя</em> и <strong>4.</strong> <em>левая</em> стороны</li>
-</ul>
+<!---->
 
-<h3 id="Формальное_описание_синтаксиса">Формальное описание синтаксиса</h3>
+- **Одно** значение применяется ко всем четырём сторонам
+- **Два** значения применяются: **1.** _верхняя и нижняя_ и **2.** _левая и правая_ стороны
+- **Три** значения применяются: **1.** _верхняя_, **2.** _левая и правая_ и **3.** _нижняя_ стороны
+- **Четыре** значения применяются**:** **1.** _верхняя_, **2.** _правая_, **3.** _нижняя_ и **4.** _левая_ стороны
+
+### Формальное описание синтаксиса
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css"> padding: 5%;                /*  со всех сторон отступ 5% */
-</pre>
+```css
+ padding: 5%;                /*  со всех сторон отступ 5% */
+```
 
-<pre class="brush: css"> padding: 10px;              /*  со всех сторон отступ 10px */
-</pre>
+```css
+ padding: 10px;              /*  со всех сторон отступ 10px */
+```
 
-<pre class="brush: css"> padding: 10px 20px;         /*  сверху и снизу отступ 10px */
+```css
+ padding: 10px 20px;         /*  сверху и снизу отступ 10px */
                              /*  слева и справа отступ 20px */
-</pre>
+```
 
-<pre class="brush: css"> padding: 10px 3% 20px;      /*  сверху отступ 10px       */
+```css
+ padding: 10px 3% 20px;      /*  сверху отступ 10px       */
                              /*  слева и справа отступ 3% */
                              /*  снизу отступ 20px        */
-</pre>
+```
 
-<pre class="brush: css"> padding: 1em 3px 30px 5px;  /*  сверху отступ 1em   */
+```css
+ padding: 1em 3px 30px 5px;  /*  сверху отступ 1em   */
                              /*  справа отступ 3px   */
                              /*  снизу отступ 30px   */
                              /*  слева отступ 5px    */
-</pre>
+```
 
-<p style="padding: 5% 1em; border: outset currentColor;">border:outset; padding:5% 1em;</p>
+border:outset; padding:5% 1em;
 
-<h2 id="Live_Sample">Рабочий пример</h2>
+## Рабочий пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;Hello world!&lt;/h4&gt;
-&lt;h3&gt;The padding is different in this line.&lt;/h3&gt;
-</pre>
+```html
+<h4>Hello world!</h4>
+<h3>The padding is different in this line.</h3>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">h4{
+```css
+h4{
   background-color: green;
   padding: 50px 20px 20px 50px;
 }
@@ -103,22 +109,18 @@ h3{
   background-color: blue;
   padding: 400px 50px 50px 400px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Live_Sample', 'Live Sample Link', 300) }}</p>
+{{ EmbedLiveSample('Live_Sample', 'Live Sample Link', 300) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-desktop"></div>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="internal" href="/en/CSS/box_model" title="en/CSS/box model">CSS Box Model</a></li>
-</ul>
+- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")

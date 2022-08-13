@@ -7,68 +7,39 @@ tags:
   - формат экрана
 translation_of: Web/CSS/ratio
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Types">Тип данных</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>&lt;ratio&gt;</code></strong> используется для описания <a href="/en-US/docs/Web/CSS/@media/aspect-ratio">соотношений сторон</a> в <a href="/en-US/docs/Web/CSS/Media_Queries">медиавыражениях</a>, обозначает соотношения между двумя безразмерными значениями.</p>
+[Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<ratio>`** используется для описания [соотношений сторон](/ru/docs/Web/CSS/@media/aspect-ratio) в [медиавыражениях](/ru/docs/Web/CSS/Media_Queries), обозначает соотношения между двумя безразмерными значениями.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Тип данных <code>&lt;ratio&gt;</code> состоит из строго положительного  {{cssxref("&lt;integer&gt;")}}, за которым следует слеш  ('/', Unicode <code>U+002F SOLIDUS</code>) и второй строго положительный {{cssxref("&lt;integer&gt;")}}. Пробелы до и после черты не обязательны. Первое число представляет ширину, а второе высоту.</p>
+Тип данных `<ratio>` состоит из строго положительного {{cssxref("&lt;integer&gt;")}}, за которым следует слеш ('/', Unicode `U+002F SOLIDUS`) и второй строго положительный {{cssxref("&lt;integer&gt;")}}. Пробелы до и после черты не обязательны. Первое число представляет ширину, а второе высоту.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_в_медиавыражениях">Использование в медиавыражениях</h3>
+### Использование в медиавыражениях
 
-<pre class="brush: css">@media screen and (min-aspect-ratio: 16/9) { ... }</pre>
+```css
+@media screen and (min-aspect-ratio: 16/9) { ... }
+```
 
-<h3 id="Общее_соотношение_сторон">Общее соотношение сторон</h3>
+### Общее соотношение сторон
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"> </th>
-   <th scope="col">Ratio</th>
-   <th scope="col">Usage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><img alt="Ratio4_3.png" class="default internal" src="/@api/deki/files/5714/=Ratio4_3.png"></td>
-   <td><code>4/3</code></td>
-   <td>Традиционный TV-формат 20<sup>th</sup> века.</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio16_9.png" src="/@api/deki/files/5711/=Ratio16_9.png"></td>
-   <td><code>16/9</code></td>
-   <td>Современный "широкоэкранный" TV-формат.</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_1.85.png" src="/@api/deki/files/5712/=Ratio1_1.85.png"></td>
-   <td><code>185/100</code> = <code>91/50</code><br>
-    <em>(нецелые делимые и делители не допускаются)</em></td>
-   <td>Наиболее распространённый видео-формат в 1960-х.</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_2.39.png" src="/@api/deki/files/5713/=Ratio1_2.39.png"></td>
-   <td><code>239/100</code><br>
-    <em>(нецелые делимые и делители не допускаются)</em></td>
-   <td>"Широкоэкранный," анаморфный видео-формат.</td>
-  </tr>
- </tbody>
-</table>
+|                                                            | Ratio                                                             | Usage                                            |
+| ---------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------ |
+| ![Ratio4_3.png](/@api/deki/files/5714/=Ratio4_3.png)       | `4/3`                                                             | Традиционный TV-формат 20th века.                |
+| ![Ratio16_9.png](/@api/deki/files/5711/=Ratio16_9.png)     | `16/9`                                                            | Современный "широкоэкранный" TV-формат.          |
+| ![Ratio1_1.85.png](/@api/deki/files/5712/=Ratio1_1.85.png) | `185/100` = `91/50` _(нецелые делимые и делители не допускаются)_ | Наиболее распространённый видео-формат в 1960-х. |
+| ![Ratio1_2.39.png](/@api/deki/files/5713/=Ratio1_2.39.png) | `239/100` _(нецелые делимые и делители не допускаются)_           | "Широкоэкранный," анаморфный видео-формат.       |
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><code><a href="/en-US/docs/Web/CSS/@media/aspect-ratio">aspect-ratio</a></code> медиа-функция</li>
-</ul>
+- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) медиа-функция

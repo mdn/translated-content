@@ -3,46 +3,44 @@ title: '@document'
 slug: Web/CSS/@document
 translation_of: Web/CSS/@document
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p><strong><code>@document</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>  <span id="result_box" lang="ru"><span>ограничивает правила стиля, содержащиеся в нем, на основе URL-адреса документа.</span> <span>Он разработан в основном для пользовательских таблиц стилей, хотя он также может использоваться в авторских таблицах стилей.</span></span></p>
+**`@document`** [CSS](/ru/docs/Web/CSS) [at-rule](/ru/docs/Web/CSS/At-rule) ограничивает правила стиля, содержащиеся в нем, на основе URL-адреса документа. Он разработан в основном для пользовательских таблиц стилей, хотя он также может использоваться в авторских таблицах стилей.
 
-<pre class="brush: css no-line-numbers">@document url("https://www.example.com/") {
+```css
+@document url("https://www.example.com/") {
   h1 {
     color: green;
   }
 }
-</pre>
+```
 
-<h2 id="Синтаксис"><span class="short_text" id="result_box" lang="ru"><span>Синтаксис</span></span></h2>
+## Синтаксис
 
-<p><span id="result_box" lang="ru"><span>Правило</span></span> <code>@document</code> <span id="result_box" lang="ru"><span>может указывать одну или несколько подходящих функций.</span> <span>Если какая-либо из функций применяется к данному URL-адресу, это правило вступит в силу для этого URL-адреса.</span> <span>Доступны следующие функции:</span></span></p>
+Правило `@document` может указывать одну или несколько подходящих функций. Если какая-либо из функций применяется к данному URL-адресу, это правило вступит в силу для этого URL-адреса. Доступны следующие функции:
 
-<ul>
- <li><code>url()</code>, <span class="short_text" id="result_box" lang="ru"><span>который соответствует точному URL-адресу.</span></span></li>
- <li><code>url-prefix()</code>, <span id="result_box" lang="ru"><span>который совпадает, если URL-адрес документа начинается с указанного значения.</span></span></li>
- <li><code>domain()</code>, <span id="result_box" lang="ru"><span>который совпадает, если URL-адрес документа находится в предоставленном домене (или его субдомене).</span></span></li>
- <li><code>media-document()</code>,<span class="short_text" id="result_box" lang="ru"><span>с параметром видео, изображения, плагина или всего.</span></span></li>
- <li><code>regexp()</code>, <span id="result_box" lang="ru"><span>который совпадает, если URL-адрес документа сопоставляется с предоставленным</span></span> <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">регулярным выражением</a>. <span id="result_box" lang="ru"><span>Выражение должно соответствовать всему URL-адресу.</span></span></li>
-</ul>
+- `url()`, который соответствует точному URL-адресу.
+- `url-prefix()`, который совпадает, если URL-адрес документа начинается с указанного значения.
+- `domain()`, который совпадает, если URL-адрес документа находится в предоставленном домене (или его субдомене).
+- `media-document()`,с параметром видео, изображения, плагина или всего.
+- `regexp()`, который совпадает, если URL-адрес документа сопоставляется с предоставленным [регулярным выражением](/ru/docs/Web/JavaScript/Guide/Regular_Expressions). Выражение должно соответствовать всему URL-адресу.
 
-<p><span id="result_box" lang="ru"><span>Значения, предоставляемые функциям </span></span> <code>url()</code>, <code>url-prefix()</code>, <code>domain()</code>, и <code>media-document()</code> <span id="result_box" lang="ru"><span>могут быть необязательно заключены в одинарные или двойные кавычки.</span> <span>Значения, предоставляемые функции</span></span> <code>regexp()</code> <span id="result_box" lang="ru"><span> должны быть заключены в кавычки.</span></span> .</p>
+Значения, предоставляемые функциям `url()`, `url-prefix()`, `domain()`, и `media-document()` могут быть необязательно заключены в одинарные или двойные кавычки. Значения, предоставляемые функции `regexp()` должны быть заключены в кавычки. .
 
-<p><span id="result_box" lang="ru"><span>Экранированные значения, предоставляемые функции</span></span> <code>regexp()</code> <span id="result_box" lang="ru"><span>также должны быть экранированы из CSS</span></span>. <span id="result_box" lang="ru"><span>Например,</span></span> <code>.</code> (период) <span id="result_box" lang="ru"><span>соответствует любому символу в регулярных выражениях</span></span>. <span id="result_box" lang="ru"><span>Чтобы соответствовать буквальному периоду, вам сначала нужно избежать этого, используя правила регулярных выражений</span></span> (<code>\.</code>), <span id="result_box" lang="ru"><span> А затем убежать от этой строки с помощью правил CSS </span></span> (<code>\\.</code>).</p>
+Экранированные значения, предоставляемые функции `regexp()` также должны быть экранированы из CSS. Например, `.` (период) соответствует любому символу в регулярных выражениях. Чтобы соответствовать буквальному периоду, вам сначала нужно избежать этого, используя правила регулярных выражений (`\.`), А затем убежать от этой строки с помощью правил CSS (`\\.`).
 
-<div class="note">
-<p><strong>Примечание</strong>: <span id="result_box" lang="ru"><span>Существует версия -moz-prefixed этого свойства </span></span>— <code>@-moz-document</code>. <span id="result_box" lang="ru"><span>Это было ограничено использованием только в пользовательских и UA-листах в Firefox 59 в Nightly and Beta - эксперименте, предназначенном для смягчения потенциальных атак с помощью CSS-инъекций</span></span> ({{bug(1035091)}}).</p>
-</div>
+> **Примечание:** Существует версия -moz-prefixed этого свойства — `@-moz-document`. Это было ограничено использованием только в пользовательских и UA-листах в Firefox 59 в Nightly and Beta - эксперименте, предназначенном для смягчения потенциальных атак с помощью CSS-инъекций ({{bug(1035091)}}).
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@document url(http://www.w3.org/),
+```css
+@document url(http://www.w3.org/),
           url-prefix(http://www.w3.org/Style/),
           domain(mozilla.org),
           media-document(video),
@@ -61,22 +59,18 @@ translation_of: Web/CSS/@document
     background: yellow;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document">Initially</a> in {{SpecName('CSS3 Conditional')}}, <code>@document</code> has been <a href="http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes">postponed</a> to Level 4.</p>
+[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
+- [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a class="external" href="http://lists.w3.org/Archives/Public/www-style/2004Aug/0135">Per-site user style sheet rules</a> on the www-style mailing list.</li>
-</ul>
-
-<div>{{CSSRef}}</div>
+{{CSSRef}}

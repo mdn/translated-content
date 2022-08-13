@@ -3,11 +3,12 @@ title: '@font-feature-values'
 slug: Web/CSS/@font-feature-values
 translation_of: Web/CSS/@font-feature-values
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule" title="At-rule">правило</a> <strong><code>@font-feature-values</code></strong> позволяет использовать общее имя в свойстве {{cssxref("font-variant-alternates")}} для функций, которые по разному активируются в OpenType. Это может помочь упростить ваш CSS при использовании нескольких шрифтов.</p>
+[CSS](/ru/docs/Web/CSS "CSS") [правило](/ru/docs/Web/CSS/At-rule "At-rule") **`@font-feature-values`** позволяет использовать общее имя в свойстве {{cssxref("font-variant-alternates")}} для функций, которые по разному активируются в OpenType. Это может помочь упростить ваш CSS при использовании нескольких шрифтов.
 
-<pre class="brush: css">/* Правило для "хорошего стиля" в Font One */
+```css
+/* Правило для "хорошего стиля" в Font One */
 @font-feature-values Font One {
   @styleset {
     nice-style: 12;
@@ -27,45 +28,39 @@ translation_of: Web/CSS/@font-feature-values
 .nice-look {
   font-variant-alternates: styleset(nice-style);
 }
-</pre>
+```
 
-<p>Правило <code>@font-feature-values</code> может использоваться как на вернём уровне вашего CSS так и внутри любого <a href="/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules" title="CSS/At-rule#Conditional_Group_Rules">условного CSS-правила</a>.</p>
+Правило `@font-feature-values` может использоваться как на вернём уровне вашего CSS так и внутри любого [условного CSS-правила](/ru/docs/Web/CSS/At-rule#Conditional_Group_Rules "CSS/At-rule#Conditional_Group_Rules").
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Блоки_значений_функций">Блоки значений функций</h3>
+### Блоки значений функций
 
-<dl>
- <dt><code>@swash</code></dt>
- <dd>Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "swash()", "#swash()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции swash допускает только одно значение: <code>ident1: 2</code> является действительным, но <code>ident2: 2 4</code> нет.</dd>
- <dt><code>@annotation</code></dt>
- <dd>Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции допускает только одно значение: <code>ident1: 2</code> действительным , но <code>ident2: 2 4</code> нет.</dd>
- <dt><code>@ornaments</code></dt>
- <dd>Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции ornaments допускает только одно значение: <code>ident1: 2</code> является действительным, но <code>ident2: 2 4</code> нет.</dd>
- <dt><code>@stylistic</code></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistic feature value definition allows only one value: <code>ident1: 2</code> is valid, but <code>ident2: 2 4</code> isn't.</dd>
- <dt><code>@styleset</code></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows an unlimited number of values: <code>ident1: 2 4 12 1</code> maps to the OpenType values <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, and <code>ss01</code>. Note that values higher than <code>99</code> are valid, but don't map to any OpenType values and are ignored.</dd>
- <dt><code>@character-variant</code></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows either one or two values: <code>ident1: 3</code> maps to <code>cv03=1</code>, and <code>ident2: 2 4</code> maps to <code>cv02=4</code>, but <code>ident2: 2 4 5</code> is invalid.</dd>
-</dl>
+- `@swash`
+  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "swash()", "#swash()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции swash допускает только одно значение: `ident1: 2` является действительным, но `ident2: 2 4` нет.
+- `@annotation`
+  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции допускает только одно значение: `ident1: 2` действительным , но `ident2: 2 4` нет.
+- `@ornaments`
+  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции ornaments допускает только одно значение: `ident1: 2` является действительным, но `ident2: 2 4` нет.
+- `@stylistic`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistic feature value definition allows only one value: `ident1: 2` is valid, but `ident2: 2 4` isn't.
+- `@styleset`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows an unlimited number of values: `ident1: 2 4 12 1` maps to the OpenType values `ss02`, `ss04`, `ss12`, and `ss01`. Note that values higher than `99` are valid, but don't map to any OpenType values and are ignored.
+- `@character-variant`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows either one or two values: `ident1: 3` maps to `cv03=1`, and `ident2: 2 4` maps to `cv02=4`, but `ident2: 2 4 5` is invalid.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Свойство {{cssxref("font-variant-alternates")}} которое использует значения, определённые этим правилом.</li>
-</ul>
+- Свойство {{cssxref("font-variant-alternates")}} которое использует значения, определённые этим правилом.

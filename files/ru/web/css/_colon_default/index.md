@@ -1,61 +1,65 @@
 ---
 title: ':default'
-slug: 'Web/CSS/:default'
-translation_of: 'Web/CSS/:default'
+slug: Web/CSS/:default
+translation_of: Web/CSS/:default
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a> <strong><code>:default</code></strong> находит элемент формы, установленный по умолчанию для группы связанных элементов.</p>
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
 
-<p>Этот селектор используется для  элементов: {{htmlelement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, и {{htmlelement("option")}} .</p>
+Этот селектор используется для элементов: {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), и {{htmlelement("option")}} .
 
-<pre class="brush: css no-line-numbers">/* Выбрать установленный по умолчанию среди &lt;input&gt; */
+```css
+/* Выбрать установленный по умолчанию среди <input> */
 input:default {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>Сгруппированные элементы, поддерживающие множественный выбор, также могут иметь несколько элементов, выбранных по умолчанию. В этом случае псевдокласс <code>:default</code> найдёт <em>все</em> эти элементы. Например, можно стилизовать чекбоксы по умолчанию в группе чекбоксов.</p>
+Сгруппированные элементы, поддерживающие множественный выбор, также могут иметь несколько элементов, выбранных по умолчанию. В этом случае псевдокласс `:default` найдёт _все_ эти элементы. Например, можно стилизовать чекбоксы по умолчанию в группе чекбоксов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><strong><code>:default</code></strong>
-</pre>
+    :default
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="radio" name="season" id="spring"&gt;
-&lt;label for="spring"&gt;Spring&lt;/label&gt;
+```html
+<input type="radio" name="season" id="spring">
+<label for="spring">Spring</label>
 
-&lt;input type="radio" name="season" id="summer" checked&gt;
-&lt;label for="summer"&gt;Summer&lt;/label&gt;
+<input type="radio" name="season" id="summer" checked>
+<label for="summer">Summer</label>
 
-&lt;input type="radio" name="season" id="fall"&gt;
-&lt;label for="fall"&gt;Fall&lt;/label&gt;
+<input type="radio" name="season" id="fall">
+<label for="fall">Fall</label>
 
-&lt;input type="radio" name="season" id="winter"&gt;
-&lt;label for="winter"&gt;Winter&lt;/label&gt;</pre>
+<input type="radio" name="season" id="winter">
+<label for="winter">Winter</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:default {
+```css
+input:default {
   box-shadow: 0 0 2px 1px coral;
 }
 
 input:default + label {
   color: coral;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

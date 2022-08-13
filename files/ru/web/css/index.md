@@ -15,50 +15,43 @@ tags:
   - Стиль
 translation_of: Web/CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><strong>Cascading Style Sheets</strong> (<strong>CSS</strong>) — это язык иерархических правил (<a href="/ru/docs/DOM/stylesheet">таблиц стилей</a>), используемый для представления внешнего вида документа, написанного на <a href="/ru/docs/HTML" title="The HyperText Mark-up Language">HTML</a> или <a href="/ru/docs/XML" title="ru/docs/XML">XML</a> (включая различные языки XML, такие как <a href="/ru/docs/SVG">SVG</a> и <a href="/ru/docs/XHTML">XHTML</a>). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.</p>
+**Cascading Style Sheets** (**CSS**) — это язык иерархических правил ([таблиц стилей](/ru/docs/DOM/stylesheet)), используемый для представления внешнего вида документа, написанного на [HTML](/ru/docs/HTML "The HyperText Mark-up Language") или [XML](/ru/docs/XML "ru/docs/XML") (включая различные языки XML, такие как [SVG](/ru/docs/SVG) и [XHTML](/ru/docs/XHTML)). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.
 
-<p><strong>CSS</strong> является одним из основных языков <em>свободной веб-разработки,</em> который стандартизован <a class="external" href="http://w3.org/Style/CSS/#specs">спецификацией W3C</a>. Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а <a href="/ru/docs/CSS/CSS3" title="CSS3">CSS3</a>, разбитый на более мелкие модули, развивается на пути стандартизации.</p>
+**CSS** является одним из основных языков _свободной веб-разработки,_ который стандартизован [спецификацией W3C](http://w3.org/Style/CSS/#specs). Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а [CSS3](/ru/docs/CSS/CSS3 "CSS3"), разбитый на более мелкие модули, развивается на пути стандартизации.
 
-<ul>
- <li>Справочник по CSS
+- Справочник по CSS
 
-  <p><a href="/ru/docs/Web/CSS/Reference" title="ru/docs/CSS/CSS_Reference">Исчерпывающий справочник</a> для опытных веб-разработчиков, описывающий каждое свойство и понятие CSS.</p>
- </li>
- <li>Самоучитель по CSS
-  <p><a href="/Learn/CSS/Introduction_to_CSS" title="ru/docs/CSS/Getting_Started">Пошаговое руководство</a> для помощи начинающим программистам CSS. Содержит все необходимые основы.</p>
- </li>
- <li>Примеры CSS3
-  <p><a href="/ru/demos/tag/tech:css3" title="https://developer.mozilla.org/ru/demos/tag/tech:css3">Набор примеров</a> представляющий новейшие технологии CSS в действии: толчок к креативности.</p>
- </li>
-</ul>
+  [Исчерпывающий справочник](/ru/docs/Web/CSS/Reference "ru/docs/CSS/CSS_Reference") для опытных веб-разработчиков, описывающий каждое свойство и понятие CSS.
 
-<h2 id="Documentation">Документация и самоучители</h2>
+- Самоучитель по CSS
 
-<dl>
- <dt>Ключевые понятия CSS</dt>
- <dd>Описание <a href="/ru/docs/CSS/Syntax">синтаксиса и внешнего вида языка</a> и введение в фундаментальные понятия такие как <a href="/ru/docs/CSS/Specificity">специфичность</a>, <a href="/ru/docs/CSS/inheritance">наследование(каскадирование)</a>, блочная модель(<a href="/ru/docs//ru/docs/CSS/box_model">box-model</a>) и схлопывание отступов(<a href="/ru/docs/CSS/margin_collapsing">margin-collapse</a>), <a href="/ru/docs/CSS/Understanding_z-index/The_stacking_context">наложение</a> и контекст форматирования(<a href="/ru/docs/CSS/block_formatting_context">Block formatting context</a>), начальное(<a href="/ru/docs/CSS/initial_value">initial</a>), вычисленное(<a href="/ru/docs/CSS/computed_value">computed</a>), используемое(<a href="/ru/docs/CSS/used_value">used</a>) и актуальное(<a href="/ru/docs/CSS/actual_value">actual</a>) значения. Кроме того, описана <a href="/ru/docs/CSS/Shorthand_properties">краткая форма записи</a> свойств CSS.</dd>
- <dt><a href="/ru/docs/Web/Guide/CSS" title="/ru/docs/Web/Guide/CSS">Руководство разработчика CSS</a></dt>
- <dd>Статьи, которые помогут вам узнать все: начиная от основ организации стилей в HTML, заканчивая различными методами языка CSS, чтобы сделать свой контент сияющим.</dd>
- <dt><a href="/ru/docs/Web/CSS/Common_CSS_Questions">Распространённые вопросы по CSS</a></dt>
- <dd>Ответы на часто возникающие вопросы о <strong>CSS</strong>.</dd>
-</dl>
+  [Пошаговое руководство](/Learn/CSS/Introduction_to_CSS "ru/docs/CSS/Getting_Started") для помощи начинающим программистам CSS. Содержит все необходимые основы.
 
-<h2 id="Tools">Инструменты для разработки CSS</h2>
+- Примеры CSS3
 
-<ul>
- <li><a class="external" href="http://jigsaw.w3.org/css-validator/">Служба проверки W3C CSS</a> проверяет правильность работы вашего CSS кода. Служба <a href="//www.OnlineWebCheck.com/">OnlineWebCheck.com</a> делает то же самое. Это отличные инструменты для отладки.</li>
- <li><a href="/ru/docs/Tools">Инструменты разработчика Firefox</a> позволяют рассматривать и изменять "на лету" CSS страницы с помощью инструментов <a href="/ru/docs/Tools/Page_Inspector">Инспектор</a> и <a href="/ru/docs/Tools/Style_Editor">Редактор таблиц стилей</a>.</li>
- <li><a class="link-https" href="https://addons.mozilla.org/ru/firefox/addon/1843">Расширение Firebug</a> для Firefox, популярное расширение для этого браузера, которое также позволяет редактировать "на лету" CSS код при просмотре сайтов. Помогает легко тестировать работу кода при внесении различных изменений. Помимо этого, расширение имеет другие полезные функции.</li>
- <li><a class="link-https" href="https://addons.mozilla.org/ru/firefox/addon/60">Расширение Web Developer</a> для Firefox позволяет отслеживать и изменять "на лету" CSS код на просматриваемых сайтах. Проще чем Firebug, но обладает меньшей функциональностью.</li>
- <li><a href="/en-US/docs/Web/CSS/Tools">Прочие инструменты CSS.</a></li>
-</ul>
+  [Набор примеров](/ru/demos/tag/tech:css3 "https://developer.mozilla.org/ru/demos/tag/tech:css3") представляющий новейшие технологии CSS в действии: толчок к креативности.
 
-<h2 id="Related_Topics">Смотрите также</h2>
+## Документация и самоучители
 
-<ul>
- <li>Изучение <a href="/ru/docs/Learn/CSS" title="/ru/docs/Learn/CSS">CSS</a> от Mozilla.</li>
- <li>Веб-языки для которых часто применяется CSS: <a href="/ru/docs/HTML" title="ru/docs/HTML">HTML</a>, <a href="/ru/docs/Web/SVG" title="SVG">SVG</a>, <a href="/ru/docs/XHTML" title="ru/docs/XHTML">XHTML</a>, <a href="/ru/docs/XML" title="ru/docs/XML">XML</a>.</li>
- <li>Технологии Mozilla, широко использующие CSS: <a href="/ru/docs/Mozilla/Tech/XUL">XUL</a>, <a href="/ru/Firefox">Firefox</a>, а также <a href="/ru/docs/Mozilla/Thunderbird">Thunderbird</a> <a href="/ru/docs/Extensions">расширения</a> и <a href="/ru/Add-ons/Themes">темы</a>.</li>
-</ul>
+- Ключевые понятия CSS
+  - : Описание [синтаксиса и внешнего вида языка](/ru/docs/CSS/Syntax) и введение в фундаментальные понятия такие как [специфичность](/ru/docs/CSS/Specificity), [наследование(каскадирование)](/ru/docs/CSS/inheritance), блочная модель([box-model](/ru/docs//ru/docs/CSS/box_model)) и схлопывание отступов([margin-collapse](/ru/docs/CSS/margin_collapsing)), [наложение](/ru/docs/CSS/Understanding_z-index/The_stacking_context) и контекст форматирования([Block formatting context](/ru/docs/CSS/block_formatting_context)), начальное([initial](/ru/docs/CSS/initial_value)), вычисленное([computed](/ru/docs/CSS/computed_value)), используемое([used](/ru/docs/CSS/used_value)) и актуальное([actual](/ru/docs/CSS/actual_value)) значения. Кроме того, описана [краткая форма записи](/ru/docs/CSS/Shorthand_properties) свойств CSS.
+- [Руководство разработчика CSS](/ru/docs/Web/Guide/CSS)
+  - : Статьи, которые помогут вам узнать все: начиная от основ организации стилей в HTML, заканчивая различными методами языка CSS, чтобы сделать свой контент сияющим.
+- [Распространённые вопросы по CSS](/ru/docs/Web/CSS/Common_CSS_Questions)
+  - : Ответы на часто возникающие вопросы о **CSS**.
+
+## Инструменты для разработки CSS
+
+- [Служба проверки W3C CSS](http://jigsaw.w3.org/css-validator/) проверяет правильность работы вашего CSS кода. Служба [OnlineWebCheck.com](//www.OnlineWebCheck.com/) делает то же самое. Это отличные инструменты для отладки.
+- [Инструменты разработчика Firefox](/ru/docs/Tools) позволяют рассматривать и изменять "на лету" CSS страницы с помощью инструментов [Инспектор](/ru/docs/Tools/Page_Inspector) и [Редактор таблиц стилей](/ru/docs/Tools/Style_Editor).
+- [Расширение Firebug](https://addons.mozilla.org/ru/firefox/addon/1843) для Firefox, популярное расширение для этого браузера, которое также позволяет редактировать "на лету" CSS код при просмотре сайтов. Помогает легко тестировать работу кода при внесении различных изменений. Помимо этого, расширение имеет другие полезные функции.
+- [Расширение Web Developer](https://addons.mozilla.org/ru/firefox/addon/60) для Firefox позволяет отслеживать и изменять "на лету" CSS код на просматриваемых сайтах. Проще чем Firebug, но обладает меньшей функциональностью.
+- [Прочие инструменты CSS.](/ru/docs/Web/CSS/Tools)
+
+## Смотрите также
+
+- Изучение [CSS](/ru/docs/Learn/CSS) от Mozilla.
+- Веб-языки для которых часто применяется CSS: [HTML](/ru/docs/HTML "ru/docs/HTML"), [SVG](/ru/docs/Web/SVG "SVG"), [XHTML](/ru/docs/XHTML "ru/docs/XHTML"), [XML](/ru/docs/XML "ru/docs/XML").
+- Технологии Mozilla, широко использующие CSS: [XUL](/ru/docs/Mozilla/Tech/XUL), [Firefox](/ru/Firefox), а также [Thunderbird](/ru/docs/Mozilla/Thunderbird) [расширения](/ru/docs/Extensions) и [темы](/ru/Add-ons/Themes).

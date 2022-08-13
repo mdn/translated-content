@@ -11,11 +11,12 @@ tags:
   - справочник
 translation_of: Web/CSS/margin-inline-start
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>Свойство <strong><code>margin-inline-start</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> задаёт логическое строковое (inline)  значение start margin элемента, которое сопоставляется с физическим значением margin в зависимости от режима записи (writing_mode) элемента, направленности и ориентации текста. Это логическое свойство соответствует одному из свойств {{cssxref("margin-top")}},  {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} в зависимости от значений {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+Свойство **`margin-inline-start`** [CSS](/ru/docs/Web/CSS "CSS") задаёт логическое строковое (inline) значение start margin элемента, которое сопоставляется с физическим значением margin в зависимости от режима записи (writing_mode) элемента, направленности и ориентации текста. Это логическое свойство соответствует одному из свойств {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} в зависимости от значений {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-inline-start: 10px;  /* абсолютная величина */
 margin-inline-start: 1em;   /* относительно размера текста */
 margin-inline-start: 5%;    /* относительно ширины ближайшего контейнера */
@@ -25,34 +26,36 @@ margin-inline-start: auto;
 
 /* Global values */
 margin-inline-start: inherit;
-</pre>
+```
 
-<p>Это свойство связано со свойствами {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} и {{cssxref("margin-inline-end")}}, которые определяют другие компоненты margins элемента.</p>
+Это свойство связано со свойствами {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} и {{cssxref("margin-inline-end")}}, которые определяют другие компоненты margins элемента.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Свойство <code>margin-inline-start</code> принимает такие же значения как и свойство {{cssxref("margin-left")}}.</p>
+Свойство `margin-inline-start` принимает такие же значения как и свойство {{cssxref("margin-left")}}.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -62,21 +65,21 @@ margin-inline-start: inherit;
   writing-mode: vertical-lr;
   margin-inline-start: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Пример", 140, 140)}}</p>
+{{EmbedLiveSample("Пример", 140, 140)}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("margin-inline-end")}}</li>
- <li><span class="short_text" id="result_box" lang="ru"><span>Отображаемые физические свойства</span></span>: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+## Смотрите также
+
+- {{cssxref("margin-inline-end")}}
+- Отображаемые физические свойства: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

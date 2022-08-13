@@ -9,45 +9,37 @@ tags:
   - поточная раскладка
 translation_of: Web/CSS/CSS_Flow_Layout
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><em>Нормальный поток (normal flow) </em>или поточная раскладка (flow layout), это способ отображения блочных (block) и строчных (inline) элементов на странице. Сначала раскладка этих элементов происходит согласно правилам потока, после чего в неё могут быть внесены изменения, например, относительное позиционирование.</p>
+_Нормальный поток (normal flow)_ или поточная раскладка (flow layout), это способ отображения блочных (block) и строчных (inline) элементов на странице. Сначала раскладка этих элементов происходит согласно правилам потока, после чего в неё могут быть внесены изменения, например, относительное позиционирование.
 
-<p class="summary">По сути поток представляется собой набор сущностей, которые работают вместе и знают друг о друге. Когда некоторая сущность <em>вынимается из потока (out of flow)</em>, то она работает независимо.</p>
+По сути поток представляется собой набор сущностей, которые работают вместе и знают друг о друге. Когда некоторая сущность _вынимается из потока (out of flow)_, то она работает независимо.
 
-<p class="summary">В нормальном потоке <strong>строчные (inline)</strong> элементы отображаются в направлении строки (inline direction), то есть в том же направлении, как идут слова в предложении в соответствии с режимом письма (<a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">writing mode</a>) документа. <strong>Блочные (block)</strong> элементы отображаются один за другим, также как параграфы в соответствии с режимом письма документа. Поэтому в английском языке строчные элементы отображаются один за другим, начиная слева, а блочные элементы выкладываются на странице сверху вниз.</p>
+В нормальном потоке **строчные (inline)** элементы отображаются в направлении строки (inline direction), то есть в том же направлении, как идут слова в предложении в соответствии с режимом письма ([writing mode](/ru/docs/Web/CSS/CSS_Writing_Modes)) документа. **Блочные (block)** элементы отображаются один за другим, также как параграфы в соответствии с режимом письма документа. Поэтому в английском языке строчные элементы отображаются один за другим, начиная слева, а блочные элементы выкладываются на странице сверху вниз.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример показывает боксы уровня блока (block level) и уровня строки (inline level). Боксы уровня блока участвуют в блочном контексте форматирования, а боксы уровня строки в строчном контексте форматирования.</p>
+Следующий пример показывает боксы уровня блока (block level) и уровня строки (inline level). Боксы уровня блока участвуют в блочном контексте форматирования, а боксы уровня строки в строчном контексте форматирования.
 
-<p>Два элемента параграфа с зелёной границей создают боксы уровня блока, отображающиеся один под другим.</p>
+Два элемента параграфа с зелёной границей создают боксы уровня блока, отображающиеся один под другим.
 
-<p>Первое предложение также содержит элемент span с голубым фоном. Он создаёт бокс уровня строки и, следовательно, размещается внутри предложения.</p>
+Первое предложение также содержит элемент span с голубым фоном. Он создаёт бокс уровня строки и, следовательно, размещается внутри предложения.
 
-<p>{{EmbedGHLiveSample("css-examples/layout/normal-flow.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/layout/normal-flow.html", '100%', 720)}}
 
-<h2 id="Руководства">Руководства</h2>
+## Руководства
 
-<ul>
- <li>Блочная и строчная раскладки в нормальном потоке (<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a>).</li>
- <li>В потоке и вне потока (<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a>).</li>
- <li>Объяснение контекстов форматирования (<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained">Formatting Contexts Explained</a>).</li>
- <li>Поточная раскладка и режимы письма (<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">Flow Layout and Writing Modes</a>).</li>
- <li>Поточная раскладка и переполнение (<a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow">Flow Layout and Overflow</a>).</li>
-</ul>
+- Блочная и строчная раскладки в нормальном потоке ([Block and Inline Layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)).
+- В потоке и вне потока ([In Flow and Out of Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)).
+- Объяснение контекстов форматирования ([Formatting Contexts Explained](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)).
+- Поточная раскладка и режимы письма ([Flow Layout and Writing Modes](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)).
+- Поточная раскладка и переполнение ([Flow Layout and Overflow](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)).
 
-<h2 id="Ссылки">Ссылки</h2>
+## Ссылки
 
-<h3 id="Записи_глоссария">Записи глоссария</h3>
+### Записи глоссария
 
-<ul>
- <li>{{Glossary("Block/CSS", "Block (CSS)")}}</li>
-</ul>
+- {{Glossary("Block/CSS", "Block (CSS)")}}
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
-</ol>
-</section>
+1.  [**CSS**](/ru/docs/Web/CSS)
+2.  [**CSS Reference**](/ru/docs/Web/CSS/Reference)

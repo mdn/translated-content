@@ -1,33 +1,34 @@
 ---
 title: ':blank'
-slug: 'Web/CSS/:-moz-only-whitespace'
+slug: Web/CSS/:-moz-only-whitespace
 tags:
   - ':blank'
   - CSS
   - Псевдо-класс
   - Экспериментальное
   - селектор
-translation_of: 'Web/CSS/:-moz-only-whitespace'
+translation_of: Web/CSS/:-moz-only-whitespace
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS псевдо класс</a>  <strong><code>:blank</code></strong> находит элементы, у которых либо вообще нет дочерних узлов, либо только пустые текстовые узлы, либо только текстовые узлы, содержащие только пробельные символы.</p>
+[CSS псевдо класс](/ru/docs/Web/CSS) **`:blank`** находит элементы, у которых либо вообще нет дочерних узлов, либо только пустые текстовые узлы, либо только текстовые узлы, содержащие только пробельные символы.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;div&gt; &lt;/div&gt;
-</pre>
+```html
+<div> </div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<div class="hidden">
-<pre class="brush: css;">:root {
+```css hidden
+:root {
   overflow: hidden;
   max-width: 100vw;
   max-height: 100vh;
@@ -43,30 +44,31 @@ div {
 
 :-moz-only-whitespace {
   border-color: lime;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css;">div {
+```css
+div {
   border: 4px solid red;
 }
 
 :blank {
   border-color: lime;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример", "100%", "50")}}</p>
+{{EmbedLiveSample("Пример", "100%", "50")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
-</ul>
+## Смотрите также
+
+- {{CSSxRef(":empty")}}

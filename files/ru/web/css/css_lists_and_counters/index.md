@@ -10,75 +10,44 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Lists and Counters</strong> is a module of CSS that defines how lists are laid out, how the list marker can be styled and how authors can create new counters.</p>
+**CSS Lists and Counters** is a module of CSS that defines how lists are laid out, how the list marker can be styled and how authors can create new counters.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<div class="index">
-<ul>
- <li>{{cssxref("list-style-image")}}</li>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-position")}}</li>
- <li>{{cssxref("list-style")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
-</ul>
-</div>
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-position")}}
+- {{cssxref("list-style")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-increment")}}
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<dl>
- <dt>{{cssxref("@counter-style")}}</dt>
- <dd>
- <div class="index">
- <ul>
-  <li>{{cssxref("@counter-style/system","system")}}</li>
-  <li>{{cssxref("@counter-style/additive-symbols", "additive-symbols")}}</li>
-  <li>{{cssxref("@counter-style/negative", "negative")}}</li>
-  <li>{{cssxref("@counter-style/prefix", "prefix")}}</li>
-  <li>{{cssxref("@counter-style/suffix", "suffix")}}</li>
-  <li>{{cssxref("@counter-style/range", "range")}}</li>
-  <li>{{cssxref("@counter-style/pad", "pad")}}</li>
-  <li>{{cssxref("@counter-style/speak-as", "speak-as")}}</li>
-  <li>{{cssxref("@counter-style/fallback", "fallback")}}</li>
- </ul>
- </div>
- </dd>
-</dl>
+- {{cssxref("@counter-style")}}
+  - : \* {{cssxref("@counter-style/system","system")}}
+    - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+    - {{cssxref("@counter-style/negative", "negative")}}
+    - {{cssxref("@counter-style/prefix", "prefix")}}
+    - {{cssxref("@counter-style/suffix", "suffix")}}
+    - {{cssxref("@counter-style/range", "range")}}
+    - {{cssxref("@counter-style/pad", "pad")}}
+    - {{cssxref("@counter-style/speak-as", "speak-as")}}
+    - {{cssxref("@counter-style/fallback", "fallback")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation">Consistent list indentation</a></dt>
- <dd>Explains how to reach a consistent indentation between different browsers.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS counters</a></dt>
- <dd>Describes how to use counters to be able to use numbering outside of traditional list elements or to perform complex counting.</dd>
-</dl>
+- [Consistent list indentation](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
+  - : Explains how to reach a consistent indentation between different browsers.
+- [Using CSS counters](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - : Describes how to use counters to be able to use numbering outside of traditional list elements or to perform complex counting.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                           | Comment            |
+| ---------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |                    |
+| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | Initial definition |

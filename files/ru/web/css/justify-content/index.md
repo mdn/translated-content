@@ -6,19 +6,20 @@ tags:
   - justify-content
 translation_of: Web/CSS/justify-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> свойство  <strong><code>justify-content</code></strong> определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{Glossary("Main Axis", "главной оси")}} flex контейнера, или вдоль строчной оси grid контейнера.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`justify-content`** определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{Glossary("Main Axis", "главной оси")}} flex контейнера, или вдоль строчной оси grid контейнера.
 
-<p>Интерактивный пример ниже демонстрирует некоторые значения, используя Grid размещение.</p>
+Интерактивный пример ниже демонстрирует некоторые значения, используя Grid размещение.
 
-<p>{{EmbedInteractiveExample("pages/css/justify-content.html")}}</p>
+{{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-<p>Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во <a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox разметке</a> есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от <code>0</code>, эффект не будет применён, потому что не останется свободного места.</p>
+Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Позиционное выравнивание */
+```css
+/* Позиционное выравнивание */
 justify-content: center;     /* Выравнивание элементов по центру */
 justify-content: start;      /* Выравнивание элементов в начале */
 justify-content: end;        /* Выравнивание элементов в конце */
@@ -54,133 +55,122 @@ justify-content: unsafe center;
 justify-content: inherit;
 justify-content: initial;
 justify-content: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси.</dd>
- <dt><code>end</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси.</dd>
- <dt><code>flex-start</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси, в зависимости от её направления (<a href="/ru/docs/Web/CSS/flex-direction">flex-direction</a>). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси, в зависимости от её направления (<a href="/ru/docs/Web/CSS/flex-direction">flex-direction</a>). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как <code>end</code>.</dd>
- <dt><code>center</code></dt>
- <dd>Элементы располагаются друг за другом в центре контейнера по главной оси.</dd>
- <dt><code>left</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к левому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как  <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>Элементы располагаются друг за другом и прижимаются к правому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как  <code>start</code>.</dd>
- <dt><code>normal</code></dt>
- <dd>Элементы располагаются на своих обычных позициях, так как будто свойство <code>justify-content</code> не задано. Этот параметр ведёт себя как <code>stretch</code> в grid и flex контейнерах.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>space-between</code></dt>
- <dd>Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, а последний - к концу.</dd>
- <dt><code>space-around</code></dt>
- <dd>Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Пустые пространства перед первым элементом и после последнего элемента равны половине расстояния между парами соседних элементов.</dd>
- <dt><code>space-evenly</code></dt>
- <dd>Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны расстояниям от начала контейнера до первого элемента и от последнего элемента до конца контейнера.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.</dd>
-</dl>
+- `start`
+  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси.
+- `end`
+  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси.
+- `flex-start`
+  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси, в зависимости от её направления ([flex-direction](/ru/docs/Web/CSS/flex-direction)). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как `start`.
+- `flex-end`
+  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси, в зависимости от её направления ([flex-direction](/ru/docs/Web/CSS/flex-direction)). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как `end`.
+- `center`
+  - : Элементы располагаются друг за другом в центре контейнера по главной оси.
+- `left`
+  - : Элементы располагаются друг за другом и прижимаются к левому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как `start`.
+- `right`
+  - : Элементы располагаются друг за другом и прижимаются к правому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как `start`.
+- `normal`
+  - : Элементы располагаются на своих обычных позициях, так как будто свойство `justify-content` не задано. Этот параметр ведёт себя как `stretch` в grid и flex контейнерах.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `space-between`
+  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, а последний - к концу.
+- `space-around`
+  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Пустые пространства перед первым элементом и после последнего элемента равны половине расстояния между парами соседних элементов.
+- `space-evenly`
+  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны расстояниям от начала контейнера до первого элемента и от последнего элемента до конца контейнера.
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> <code>stretch</code> не поддерживается гибкими контейнерами (flexbox).</p>
-</div>
+> **Примечание:** `stretch` не поддерживается гибкими контейнерами (flexbox).
 
-<dl>
- <dt><code>safe</code></dt>
- <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
-</dl>
+- `safe`
+  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: flex;
   justify-content: space-between; /* Может быть изменено */
 }
 
-#container &gt; div {
+#container > div {
   width: 100px;
   height: 100px;
   background: linear-gradient(-45deg, #788cff, #b4c8ff);
 }
-</pre>
+```
 
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
+```html hidden
+<div id="container">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<select id="justifyContent">
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="center">center</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="baseline">baseline</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="space-between" selected>space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+</select>
+```
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="justifyContent"&gt;
-  &lt;option value="start"&gt;start&lt;/option&gt;
-  &lt;option value="end"&gt;end&lt;/option&gt;
-  &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-  &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-  &lt;option value="center"&gt;center&lt;/option&gt;
-  &lt;option value="left"&gt;left&lt;/option&gt;
-  &lt;option value="right"&gt;right&lt;/option&gt;
-  &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-  &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-  &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
-  &lt;option value="space-between" selected&gt;space-between&lt;/option&gt;
-  &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-  &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-&lt;/select&gt;</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var justifyContent = document.getElementById("justifyContent");
+```js hidden
+var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
   document.getElementById("container").style.justifyContent =
       evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример", "100%", 140)}}</p>
+{{EmbedLiveSample("Пример", "100%", 140)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications("css.properties.justify-content.grid_context")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<h3 id="Поддержка_в_Flex_разметке">Поддержка в Flex разметке</h3>
+### Поддержка в Flex разметке
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Поддержка_в_Grid_разметке">Поддержка в Grid разметке</h3>
+### Поддержка в Grid разметке
 
-<p>{{Compat("css.properties.justify-content.grid_context")}}</p>
+{{Compat("css.properties.justify-content.grid_context")}}
 
-<h2 id="Смотрите_также"> Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Гид по CSS Flexbox: <em><a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Основные понятия Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере">Выравнивание элементов во Flex контейнере</a></em></li>
- <li>CSS Grid Guide: <em><a href="/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Выравнивание ячейки в CSS Grid layout</a></em></li>
- <li><a href="/ru/docs/Web/CSS/CSS_Box_Alignment">Выравнивание полей CSS</a></li>
-</ul>
+- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере)_
+- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_Box_Alignment)

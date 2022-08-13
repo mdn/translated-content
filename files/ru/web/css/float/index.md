@@ -3,194 +3,123 @@ title: float
 slug: Web/CSS/float
 translation_of: Web/CSS/float
 ---
-<div>Свойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его.{{CSSRef}}</div>
+Свойство float CSS указывает, что элемент должен быть взят из нормального потока и помещён вдоль левой или правой стороны его контейнера, где текст и встроенные элементы будут обтекать его.{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>CSS-свойство <code>float</code> указывает, что текущий элемент должен быть изъят из обычного flow (потока) и прижат к левой или правой стороне родительского элемента. Текст и inline элементы будут обтекать такой элемент.</p>
+CSS-свойство `float` указывает, что текущий элемент должен быть изъят из обычного flow (потока) и прижат к левой или правой стороне родительского элемента. Текст и inline элементы будут обтекать такой элемент.
 
-<p><strong>Плавающий элемент</strong> - это любой элемент со свойством <code>float</code> отличным от <code>none</code>.</p>
+**Плавающий элемент** - это любой элемент со свойством `float` отличным от `none`.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Поскольку <code>float</code> подразумевает использование блочной модели, это свойство изменяет вычисляемые значения {{cssxref("display")}} в следующих случаях:</p>
+Поскольку `float` подразумевает использование блочной модели, это свойство изменяет вычисляемые значения {{cssxref("display")}} в следующих случаях:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specified value</th>
-   <th scope="col">Computed value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>inline</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-block</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-table</code></td>
-   <td><code>table</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-cell</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-caption</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-header-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-footer-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>flex</code></td>
-   <td><code>flex</code>, <code>float</code> не оказывает влияния на такие элементы</td>
-  </tr>
-  <tr>
-   <td><code>inline-flex</code></td>
-   <td><code>inline-flex</code>, <code>float</code> не оказывает влияния на такие элементы</td>
-  </tr>
-  <tr>
-   <td><em>other</em></td>
-   <td><em>не меняются</em></td>
-  </tr>
- </tbody>
-</table>
+| Specified value      | Computed value                                                |
+| -------------------- | ------------------------------------------------------------- |
+| `inline`             | `block`                                                       |
+| `inline-block`       | `block`                                                       |
+| `inline-table`       | `table`                                                       |
+| `table-row`          | `block`                                                       |
+| `table-row-group`    | `block`                                                       |
+| `table-column`       | `block`                                                       |
+| `table-column-group` | `block`                                                       |
+| `table-cell`         | `block`                                                       |
+| `table-caption`      | `block`                                                       |
+| `table-header-group` | `block`                                                       |
+| `table-footer-group` | `block`                                                       |
+| `flex`               | `flex`, `float` не оказывает влияния на такие элементы        |
+| `inline-flex`        | `inline-flex`, `float` не оказывает влияния на такие элементы |
+| _other_              | _не меняются_                                                 |
 
-<div class="note"><strong>Note: </strong>If you're referring to this property from JavaScript as a member of the {{domxref("element.style")}} object, you must spell it as <code>cssFloat</code>. Also note that Internet Explorer versions 8 and older spelled this <code>styleFloat</code>. This is an exception to the rule that the name of the DOM member is the camel-case name of the dash-separated CSS name (and is due to the fact that "float" is a reserved word in JavaScript, as with the need to escape "class" as "className" and escape &lt;label&gt;'s "for" as "htmlFor").</div>
+> **Примечание:**If you're referring to this property from JavaScript as a member of the {{domxref("element.style")}} object, you must spell it as `cssFloat`. Also note that Internet Explorer versions 8 and older spelled this `styleFloat`. This is an exception to the rule that the name of the DOM member is the camel-case name of the dash-separated CSS name (and is due to the fact that "float" is a reserved word in JavaScript, as with the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">float: left;
+```css
+float: left;
 float: right;
 float: none;
 
 float: inherit;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Is a keyword indicating that the element must float on the left side of its containing block.</dd>
- <dt><code>right</code></dt>
- <dd>Is a keyword indicating that the element must float on the right side of its containing block.</dd>
- <dt><code>none</code></dt>
- <dd>Is a keyword indicating that the element must not float.</dd>
-</dl>
+- `left`
+  - : Is a keyword indicating that the element must float on the left side of its containing block.
+- `right`
+  - : Is a keyword indicating that the element must float on the right side of its containing block.
+- `none`
+  - : Is a keyword indicating that the element must not float.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax("float")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><a href="/samples/cssref/float.html">Посмотреть живые примеры</a></p>
+[Посмотреть живые примеры](/samples/cssref/float.html)
 
-<pre class="brush: html">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
   div { border: solid red;  max-width: 70ex; }
   h4  { float: left;  margin: 0; }
-&lt;/style&gt;
+</style>
 
-&lt;div&gt;
-  &lt;h4&gt;HELLO!&lt;/h4&gt;
+<div>
+  <h4>HELLO!</h4>
   This is some text. This is some text. This is some text.
   This is some text. This is some text. This is some text.
   This is some text. This is some text. This is some text.
   This is some text. This is some text. This is some text.
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<div style="border: solid red; max-width: 70ex;">
-<h4 id="HELLO!" style="float: left; margin: 0;">HELLO!</h4>
-This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</div>
+#### HELLO!
 
-<h3 id="How_floats_are_positioned">How floats are positioned</h3>
+This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
 
-<p>As mentioned above, when an element is floated it is taken out of the normal flow of the document. It is shifted to the left or right until it touches the edge of it's containing box <em>or another floated element</em>.</p>
+### How floats are positioned
 
-<p>In the image below, there are three red squares. Two are floated left and one is floated right. Note that the second "left" red square is placed to the right of the first. Additional squares would continue to stack to the right until they filled the containing box, after which they would wrap to the next line.</p>
+As mentioned above, when an element is floated it is taken out of the normal flow of the document. It is shifted to the left or right until it touches the edge of it's containing box _or another floated element_.
 
-<p><img src="/@api/deki/files/4927/=floats.png" style="height: 248px; width: 729px;"></p>
+In the image below, there are three red squares. Two are floated left and one is floated right. Note that the second "left" red square is placed to the right of the first. Additional squares would continue to stack to the right until they filled the containing box, after which they would wrap to the next line.
 
-<h3 id="Clearing_floats">Clearing floats</h3>
+![](/@api/deki/files/4927/=floats.png)
 
-<p>In the example above, the floated elements are shorter vertically than the block of text they're floated within. However, if the text was not long enough to wrap below the bottom of all the floats, we might see unanticipated effects. If the paragraph above, for instance, only read "Lorem ipsum dolor sit amet," and was followed by another heading of the same style as the "Floats Example" heading, the second heading would appear between the red boxes. Most likely, we want the next heading to be aligned all the way to the left. To accomplish that, we'd need to clear the floats.</p>
+### Clearing floats
 
-<p>The simplest way to clear the floats in this example is to add the {{Cssxref("clear")}} property to the new heading we want to be sure is aligned left:</p>
+In the example above, the floated elements are shorter vertically than the block of text they're floated within. However, if the text was not long enough to wrap below the bottom of all the floats, we might see unanticipated effects. If the paragraph above, for instance, only read "Lorem ipsum dolor sit amet," and was followed by another heading of the same style as the "Floats Example" heading, the second heading would appear between the red boxes. Most likely, we want the next heading to be aligned all the way to the left. To accomplish that, we'd need to clear the floats.
 
-<pre class="brush:css">h2.secondHeading { clear: both; }
-</pre>
+The simplest way to clear the floats in this example is to add the {{Cssxref("clear")}} property to the new heading we want to be sure is aligned left:
 
-<p>However, this method only works if there are no other elements within the same <a href="/ru/docs/Web/CSS/block_formatting_context" rel="internal">block formatting context</a> that we <em>do</em> want the heading to continue to appear next to horizontally. If our <code>H2</code> has siblings which are a sidebars floated to the left and right, using <code>clear</code> will force it to appear below both sidebars, which is probably not what we want.</p>
+```css
+h2.secondHeading { clear: both; }
+```
 
-<p>If clearing floats on an element below them is not an option, another approach is to limit the block formatting context of the floats' container. Referring to the example above again, it appears that all three red boxes are within a <code>P</code> element. We can set the {{Cssxref("overflow")}} property on that P to <code>hidden</code> or <code>auto</code> to cause it to expand to contain them, but not allow them to drop out the bottom of it:</p>
+However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
 
-<pre class="brush:css">p.withRedBoxes { overflow: hidden; height: auto; }
-</pre>
+If clearing floats on an element below them is not an option, another approach is to limit the block formatting context of the floats' container. Referring to the example above again, it appears that all three red boxes are within a `P` element. We can set the {{Cssxref("overflow")}} property on that P to `hidden` or `auto` to cause it to expand to contain them, but not allow them to drop out the bottom of it:
 
-<div class="note"><strong>Note:</strong> Setting <code>overflow</code> to <code>scroll</code> will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting <code>height</code> to <code>auto</code> even though that's the default to indicate that the container should grow to accommodate its content.</div>
+```css
+p.withRedBoxes { overflow: hidden; height: auto; }
+```
 
-<h2 id="Specifications">Specifications</h2>
+> **Примечание:** Setting `overflow` to `scroll` will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting `height` to `auto` even though that's the default to indicate that the container should grow to accommodate its content.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#float', 'float')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#float', 'float')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                                                        | Status                       | Comment                                                                                                                                                 |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#float', 'float')}}                             | {{Spec2('CSS3 Box')}} | Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report. |
+| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}} | {{Spec2('CSS2.1')}}     | No change.                                                                                                                                              |
+| {{SpecName('CSS1', '#float', 'float')}}                                 | {{Spec2('CSS1')}}     | Initial definition.                                                                                                                                     |
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/block_formatting_context">Block formatting context</a></li>
-</ul>
+## See also
+
+- [Block formatting context](/ru/docs/Web/CSS/block_formatting_context)

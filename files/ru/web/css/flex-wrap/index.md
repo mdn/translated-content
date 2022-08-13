@@ -3,11 +3,12 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>flex-wrap</code></strong> задаёт правила вывода flex-элементов —  в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.</p>
+Свойство [CSS](/ru/docs/CSS "CSS") **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
 
-<pre class="brush:css no-line-numbers">flex-wrap: nowrap;
+```css
+flex-wrap: nowrap;
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
 
@@ -15,61 +16,60 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Подробнее по свойствам и общей информации смотрите <a href="/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a>.</p>
+Подробнее по свойствам и общей информации смотрите [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Свойство <code>flex-wrap</code> может содержать одно из следующих ниже значений.</p>
+Свойство `flex-wrap` может содержать одно из следующих ниже значений.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Допускаются следующие значения:</p>
+Допускаются следующие значения:
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>Расположение в одну линию, может привести к переполнению контейнера. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения {{cssxref("flex-direction")}}.</dd>
- <dt><code>wrap</code></dt>
- <dd>Расположение в несколько линий. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения <code>flex-direction</code> и свойство <strong>cross-end</strong> противоположно <strong>cross-start</strong>.</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd>Ведёт себя так же, как и <code>wrap</code> но <strong>cross-start</strong> и <strong>cross-end</strong> инвертированы.</dd>
-</dl>
+- `nowrap`
+  - : Расположение в одну линию, может привести к переполнению контейнера. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения {{cssxref("flex-direction")}}.
+- `wrap`
+  - : Расположение в несколько линий. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения `flex-direction` и свойство **cross-end** противоположно **cross-start**.
+- `wrap-reverse`
+  - : Ведёт себя так же, как и `wrap` но **cross-start** и **cross-end** инвертированы.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<div id="Live_Sample">
-<pre class="brush: html">&lt;h4&gt;This is an example for flex-wrap:wrap &lt;/h4&gt;
-&lt;div class="content"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:nowrap &lt;/h4&gt;
-&lt;div class="content1"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:wrap-reverse &lt;/h4&gt;
-&lt;div class="content2"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>This is an example for flex-wrap:wrap </h4>
+<div class="content">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:nowrap </h4>
+<div class="content1">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<div class="content2">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Common Styles */
+```css
+/* Common Styles */
 .content,
 .content1,
 .content2 {
@@ -108,39 +108,22 @@ flex-wrap: unset;
     display: flex;
     flex-wrap: wrap-reverse;
 }
+```
 
-</pre>
-</div>
+### Results
 
-<h3 id="Results">Results</h3>
+{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-<p>{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}</p>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+| Specification                                                                            | Status                               | Comment |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |         |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
-</ul>
+- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

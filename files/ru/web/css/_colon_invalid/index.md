@@ -1,21 +1,22 @@
 ---
 title: ':invalid'
-slug: 'Web/CSS/:invalid'
+slug: Web/CSS/:invalid
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:invalid'
+translation_of: Web/CSS/:invalid
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:invalid</code> находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит <a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">валидацию</a>, в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:invalid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит [валидацию](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation"), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.
 
-<p>По умолчанию, Gecko не применяет стили к псевдоклассу <code>:invalid</code>. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдоклассу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для <code>:invalid</code>.</p>
+По умолчанию, Gecko не применяет стили к псевдоклассу `:invalid`. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдоклассу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для `:invalid`.
 
-<p>Вы можете отключить свечение, используя следующий CSS или полностью изменить внешний вид некорректных полей.</p>
+Вы можете отключить свечение, используя следующий CSS или полностью изменить внешний вид некорректных полей.
 
-<pre class="brush: css">:invalid {
+```css
+:invalid {
   box-shadow: none;
 }
 
@@ -26,32 +27,35 @@ translation_of: 'Web/CSS/:invalid'
 :-moz-ui-invalid {
   box-shadow:none;
 }
-</pre>
+```
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<h4 id="Радиокнопки">Радиокнопки</h4>
+#### Радиокнопки
 
-<p>Если любая из радиокнопок в группе (т.е., с одинаковым атрибутом <code>name</code>) имеет атрибут <code>required</code>, псевдокласс <code>:invalid</code> применяется ко всем из них, если ни одна из кнопок группы не выбрана.</p>
+Если любая из радиокнопок в группе (т.е., с одинаковым атрибутом `name`) имеет атрибут `required`, псевдокласс `:invalid` применяется ко всем из них, если ни одна из кнопок группы не выбрана.
 
-<h2 id="Example2">Пример</h2>
+## Пример
 
-<p>Этот пример представляет собой простую форму, цвета элементов которой зелёные, когда данные корректные, и красные, когда нет.</p>
+Этот пример представляет собой простую форму, цвета элементов которой зелёные, когда данные корректные, и красные, когда нет.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label&gt;Введите URL:&lt;/label&gt;
-  &lt;input type="url" /&gt;
-  &lt;br /&gt;
-  &lt;br /&gt;
-  &lt;label&gt;Введите эл. почту:&lt;/label&gt;
-  &lt;input type="email" required/&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label>Введите URL:</label>
+  <input type="url" />
+  <br />
+  <br />
+  <label>Введите эл. почту:</label>
+  <input type="email" required/>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   background-color: #ffdddd;
 }
 
@@ -70,25 +74,24 @@ form:valid {
 input:required {
   border-color: #800000;
   border-width: 3px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example2',600,150) }}</p>
+{{ EmbedLiveSample('Example2',600,150) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ cssxref(":valid") }}</li>
- <li>{{ cssxref(":-moz-submit-invalid") }}</li>
- <li>{{ cssxref(":required") }}</li>
- <li>{{ cssxref(":optional") }}</li>
-</ul>
+- {{ cssxref(":valid") }}
+- {{ cssxref(":-moz-submit-invalid") }}
+- {{ cssxref(":required") }}
+- {{ cssxref(":optional") }}
 
-<p>{{ languages( { "fr": "fr/CSS/:invalid" }) }}</p>
+{{ languages( { "fr": "fr/CSS/:invalid" }) }}

@@ -9,54 +9,35 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Columns
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Columns</strong> is a module of CSS that defines a multi-column layout, allowing to express how content should flow between columns and how gaps and rules are handled.</p>
+**CSS Columns** is a module of CSS that defines a multi-column layout, allowing to express how content should flow between columns and how gaps and rules are handled.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<div class="index">
-<ul>
- <li>{{cssxref("break-after")}}</li>
- <li>{{cssxref("break-before")}}</li>
- <li>{{cssxref("break-inside")}}</li>
- <li>{{cssxref("column-count")}}</li>
- <li>{{cssxref("column-fill")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("column-rule")}}</li>
- <li>{{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("column-rule-style")}}</li>
- <li>{{cssxref("column-rule-width")}}</li>
- <li>{{cssxref("column-span")}}</li>
- <li>{{cssxref("column-width")}}</li>
- <li>{{cssxref("columns")}}</li>
-</ul>
-</div>
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("column-count")}}
+- {{cssxref("column-fill")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("column-rule-color")}}
+- {{cssxref("column-rule-style")}}
+- {{cssxref("column-rule-width")}}
+- {{cssxref("column-span")}}
+- {{cssxref("column-width")}}
+- {{cssxref("columns")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">Using CSS multi-column layouts</a></dt>
- <dd>Step-by-step tutorial about how to build layouts using several columns.</dd>
-</dl>
+- [Using CSS multi-column layouts](/ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+  - : Step-by-step tutorial about how to build layouts using several columns.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment            |
+| ---------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Initial definition |

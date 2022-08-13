@@ -9,19 +9,20 @@ tags:
   - Свойство CSS
 translation_of: Web/CSS/transition
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="/ru/docs/Web/CSS" title="CSS">CSS</a> <strong><code>transition</code></strong> - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.</p>
+Свойство [CSS](/ru/docs/Web/CSS "CSS") **`transition`** - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.
 
-<div>{{EmbedInteractiveExample("pages/css/transition.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition.html")}}
 
-<p>Transition позволяет определять переходное состояние между двумя состояниями элемента. Различные состояния могут быть определены с помощью {{ cssxref("Псевдо-классы", "псевдоклассов") }}, таких как {{cssxref(":hover")}} или {{cssxref(":active")}} или установлены динамически с помощью JavaScript.</p>
+Transition позволяет определять переходное состояние между двумя состояниями элемента. Различные состояния могут быть определены с помощью {{ cssxref("Псевдо-классы", "псевдоклассов") }}, таких как {{cssxref(":hover")}} или {{cssxref(":active")}} или установлены динамически с помощью JavaScript.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Применить к 1 свойству */
+```css
+/* Применить к 1 свойству */
 /* имя свойства | длительность */
 transition: margin-left 4s;
 
@@ -41,46 +42,42 @@ transition: all 0.5s ease-out;
 transition: inherit;
 transition: initial;
 transition: unset;
-</pre>
+```
 
-<p>Свойство <code>transition</code> указывается как один или более одно-свойственных переходов (single-property transitions), разделённых запятой.</p>
+Свойство `transition` указывается как один или более одно-свойственных переходов (single-property transitions), разделённых запятой.
 
-<p>Каждый одно-свойственный transition описывает переход, который должен быть применён к одному свойству (или специальным значениям <code>all</code> и <code>none</code>). Это включает в себя:</p>
+Каждый одно-свойственный transition описывает переход, который должен быть применён к одному свойству (или специальным значениям `all` и `none`). Это включает в себя:
 
-<ul>
- <li>ноль или одно значение, представляющее свойство, к которому должен быть применён переход. Это может быть одно из:
-  <ul>
-   <li>ключевое слово <code>none</code></li>
-   <li>ключевое слово <code>all</code></li>
-   <li>{{cssxref("&lt;custom-ident&gt;")}} именование свойства CSS.</li>
-  </ul>
- </li>
- <li>ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию</li>
- <li>ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.</li>
-</ul>
+- ноль или одно значение, представляющее свойство, к которому должен быть применён переход. Это может быть одно из:
 
-<p>Посмотрите, <a href="/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Когда_у_списков_значений_свойств_разные_длины" title="ru/CSS/CSS Transitions#Когда у списков значений свойств разные длины">что предпринимается</a> когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.</p>
+  - ключевое слово `none`
+  - ключевое слово `all`
+  - {{cssxref("&lt;custom-ident&gt;")}} именование свойства CSS.
 
-<h3 id="Формальное_описание_синтаксиса">Формальное описание синтаксиса</h3>
+- ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию
+- ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.
+
+Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Когда_у_списков_значений_свойств_разные_длины "ru/CSS/CSS Transitions#Когда у списков значений свойств разные длины") когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
+
+### Формальное описание синтаксиса
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Примеры CSS переходов включены в главную статью о <a href="/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="/ru/CSS/CSS transitions">CSS переходах</a>.</p>
+Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "/ru/CSS/CSS transitions").
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<p>[2] <a href="http://www.quirksmode.org/css/transitions/properties.html#t031">PPK test</a></p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+\[2] [PPK test](http://www.quirksmode.org/css/transitions/properties.html#t031)
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="ru/CSS/CSS transitions">Использование CSS переходов</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+## Смотрите также
+
+- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "ru/CSS/CSS transitions")
+- {{ domxref("TransitionEvent") }}

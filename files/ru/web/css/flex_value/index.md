@@ -3,32 +3,29 @@ title: <flex>
 slug: Web/CSS/flex_value
 translation_of: Web/CSS/flex_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/CSS_Types">тип данных</a> <strong><code>&lt;flex&gt;</code></strong> определяет гибкую длину в сеточном контейнере. Он используется в таких свойствах, как {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}.</p>
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) **`<flex>`** определяет гибкую длину в сеточном контейнере. Он используется в таких свойствах, как {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Тип данных <code>&lt;flex&gt;</code> определяется как {{cssxref("&lt;number&gt;")}} с единицей измерения <code>fr</code>. Единица измерения <code>fr</code> представляет собой долю оставшегося в сетке пространства. Как и все CSS размеры, между числом и единицей измерения нет пробела.</p>
+Тип данных `<flex>` определяется как {{cssxref("&lt;number&gt;")}} с единицей измерения `fr`. Единица измерения `fr` представляет собой долю оставшегося в сетке пространства. Как и все CSS размеры, между числом и единицей измерения нет пробела.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">1fr    /* Целочисленное значение */
+```css
+1fr    /* Целочисленное значение */
 2.5fr  /* Дробное значение */
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
-</ul>
+- [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout)

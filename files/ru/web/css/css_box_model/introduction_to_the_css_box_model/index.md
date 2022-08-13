@@ -8,60 +8,41 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 original_slug: Web/CSS/box_model
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>В HTML-документе каждому элементу на странице соответствует прямоугольная область (бокс или блок). Движок рендеринга в браузере определяет размеры и положение боксов на странице, а также их свойства вроде цвета, фоновой картинки для того, чтобы отобразить их на экране.</p>
+В HTML-документе каждому элементу на странице соответствует прямоугольная область (бокс или блок). Движок рендеринга в браузере определяет размеры и положение боксов на странице, а также их свойства вроде цвета, фоновой картинки для того, чтобы отобразить их на экране.
 
-<p>В языке CSS есть специальная боксовая модель (также блоковая модель или блочная модель, англ. <span lang="en">box model</span>), которая описывает, из чего состоит бокс и какие свойства влияют на его размеры. В ней у каждого бокса есть 4 области: <strong>margin </strong>(внешние отступы), <strong>border </strong>(рамка), <strong>padding </strong>(внутренние поля), и <strong>content </strong>(контент или содержимое).</p>
+В языке CSS есть специальная боксовая модель (также блоковая модель или блочная модель, англ. box model), которая описывает, из чего состоит бокс и какие свойства влияют на его размеры. В ней у каждого бокса есть 4 области: **margin** (внешние отступы), **border** (рамка), **padding** (внутренние поля), и **content** (контент или содержимое).
 
-<p><img alt="CSS Box model" src="https://mdn.mozillademos.org/files/8685/boxmodel-(3).png" style="height: 384px; width: 548px;"></p>
+![CSS Box model](<https://mdn.mozillademos.org/files/8685/boxmodel-(3).png>)
 
-<p><strong>Внутренняя область</strong> элемента (<strong>content area</strong>) содержит текст и другие элементы, расположенные внутри (<em>контент</em> или <em>содержимое</em>). У неё часто бывает фон, цвет или изображение (в таком порядке: фоновый цвет скрывается под непрозрачным изображением), и она находится внутри <em>content edge</em>; её размеры называются <em>ширина контента</em> (<em>content width</em> или <em>content-box width)</em>, и <em>высота контента</em> (<em>content height</em> или content-box height). Иногда ещё говорят «внутренняя ширина/высота элемента»</p>
+**Внутренняя область** элемента (**content area**) содержит текст и другие элементы, расположенные внутри (_контент_ или _содержимое_). У неё часто бывает фон, цвет или изображение (в таком порядке: фоновый цвет скрывается под непрозрачным изображением), и она находится внутри _content edge_; её размеры называются _ширина контента_ (_content width_ или _content-box width)_, и _высота контента_ (_content height_ или content-box height). Иногда ещё говорят «внутренняя ширина/высота элемента»
 
-<p>По умолчанию, если CSS-свойство {{ cssxref("box-sizing") }} не задано, размер внутренней области с содержимым задаётся свойствами {{ cssxref("width") }}, {{ cssxref("min-width") }}, {{ cssxref("max-width") }}, {{ cssxref("height") }}, {{ cssxref("min-height") }} и {{ cssxref("max-height") }}. Если же свойство  {{ cssxref("box-sizing") }} задано, то оно определяет, для какой области указаны размеры.</p>
+По умолчанию, если CSS-свойство {{ cssxref("box-sizing") }} не задано, размер внутренней области с содержимым задаётся свойствами {{ cssxref("width") }}, {{ cssxref("min-width") }}, {{ cssxref("max-width") }}, {{ cssxref("height") }}, {{ cssxref("min-height") }} и {{ cssxref("max-height") }}. Если же свойство {{ cssxref("box-sizing") }} задано, то оно определяет, для какой области указаны размеры.
 
-<p>Поля элемента (<strong>padding area)</strong> — это пустая область, окружающая контент. Она может быть залита каким-то цветом, покрыта фоновый картинкой, а её границы называются края полей (<em>padding edge)</em>.</p>
+Поля элемента (**padding area)** — это пустая область, окружающая контент. Она может быть залита каким-то цветом, покрыта фоновый картинкой, а её границы называются края полей (_padding edge)_.
 
-<p>Размеры полей задаются по отдельности с разных сторон свойствами {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }} или общим свойством {{ cssxref("padding") }}.</p>
+Размеры полей задаются по отдельности с разных сторон свойствами {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }} или общим свойством {{ cssxref("padding") }}.
 
-<p>Область рамки (<strong>border area)</strong> окружает поля элемента, а её граница называется края рамки (<em>border edge).</em> Ширина рамки задаётся отдельным свойством  {{ cssxref("border-width") }} или в составе свойства {{ cssxref("border") }}. Размеры элемента с учётом полей и рамки иногда называют внешней шириной/высотой элемента.</p>
+Область рамки (**border area)** окружает поля элемента, а её граница называется края рамки (_border edge)._ Ширина рамки задаётся отдельным свойством {{ cssxref("border-width") }} или в составе свойства {{ cssxref("border") }}. Размеры элемента с учётом полей и рамки иногда называют внешней шириной/высотой элемента.
 
-<p>Отступы (<strong>margin area)</strong> добавляют пустое пространство вокруг элемента и определяют расстояние до соседних элементов.</p>
+Отступы (**margin area)** добавляют пустое пространство вокруг элемента и определяют расстояние до соседних элементов.
 
-<p>Величина отступов задаётся по отдельности в разных направлениях свойствами {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} или общим свойством {{ cssxref("margin") }}.</p>
+Величина отступов задаётся по отдельности в разных направлениях свойствами {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} или общим свойством {{ cssxref("margin") }}.
 
-<p>Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ (<a href="/ru/docs/Web/CSS/margin_collapsing" title="ru/CSS/margin_collapsing">margin collapsing</a>). Схлопываются только вертикальные отступы.</p>
+Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ ([margin collapsing](/ru/docs/Web/CSS/margin_collapsing "ru/CSS/margin_collapsing")). Схлопываются только вертикальные отступы.
 
-<p>Для элементов с {{ cssxref("display") }}<code>: inline</code> (или <code>inline-block, inline-table</code>) на занимаемое по высоте место также влияет значение свойства {{ cssxref('line-height') }}.</p>
+Для элементов с {{ cssxref("display") }}`: inline` (или `inline-block, inline-table`) на занимаемое по высоте место также влияет значение свойства {{ cssxref('line-height') }}.
 
-<h2 id="Стандарты">Стандарты</h2>
+## Стандарты
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Стандарт</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Примечание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a class="external" href="http://www.w3.org/TR/CSS21/box.html#box-dimensions">CSS Level 2 (revision 1)</a></td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Though more precisely worded, there is no practical change</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://www.w3.org/TR/REC-CSS1/#formatting-model">CSS Level 1</a></td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Стандарт                                                                       | Статус                       | Примечание                                                 |
+| ------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------- |
+| [CSS Level 2 (revision 1)](http://www.w3.org/TR/CSS21/box.html#box-dimensions) | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change |
+| [CSS Level 1](http://www.w3.org/TR/REC-CSS1/#formatting-model)                 | {{ Spec2('CSS1') }}     |                                                            |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/CSS/CSS_Reference">Справочник по CSS</a></li>
- <li>{{ CSS_key_concepts() }}</li>
- <li>Связанные свойства: {{ cssxref("box-sizing") }}, {{ cssxref("background-clip") }}, {{ cssxref("height") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("width") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("padding") }}, {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }}, {{ cssxref("border") }}, {{ cssxref("border-top") }}, {{ cssxref("border-right") }}, {{ cssxref("border-bottom") }}, {{ cssxref("border-left") }}, {{ cssxref("border-width") }}, {{ cssxref("border-top-width") }}, {{ cssxref("border-right-width") }}, {{ cssxref("border-bottom-width") }}, {{ cssxref("border-left-width") }}, {{ cssxref("margin") }}, {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }}</li>
-</ul>
+- [Справочник по CSS](/ru/CSS/CSS_Reference)
+- {{ CSS_key_concepts() }}
+- Связанные свойства: {{ cssxref("box-sizing") }}, {{ cssxref("background-clip") }}, {{ cssxref("height") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("width") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("padding") }}, {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }}, {{ cssxref("border") }}, {{ cssxref("border-top") }}, {{ cssxref("border-right") }}, {{ cssxref("border-bottom") }}, {{ cssxref("border-left") }}, {{ cssxref("border-width") }}, {{ cssxref("border-top-width") }}, {{ cssxref("border-right-width") }}, {{ cssxref("border-bottom-width") }}, {{ cssxref("border-left-width") }}, {{ cssxref("margin") }}, {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }}

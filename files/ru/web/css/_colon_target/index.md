@@ -1,58 +1,64 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
+slug: Web/CSS/:target
 tags:
   - Вёрстка
   - Псевдоклассы
-translation_of: 'Web/CSS/:target'
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS/Pseudo-classes">Псевдокласс </a> <a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>:target</code></strong> представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}}  URL-фрагментом.</p>
+[Псевдокласс ](/ru/docs/Web/CSS/Pseudo-classes)[CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}} URL-фрагментом.
 
-<pre class="brush: css no-line-numbers">/* Выбирает элемент с подходящим ID текущего URL-фрагмента */
+```css
+/* Выбирает элемент с подходящим ID текущего URL-фрагмента */
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>Для примера, следующий URL имеет фрагмент (обозначается знаком <em>#</em>), который указывает на элемент с именем <code>section2</code>:</p>
+Для примера, следующий URL имеет фрагмент (обозначается знаком _#_), который указывает на элемент с именем `section2`:
 
-<pre>http://www.example.com/index.html#section2</pre>
+    http://www.example.com/index.html#section2
 
-<p>Следующий элемент будет выбран селектором <code>:target</code>, если текущий URL равен вышеуказанному:</p>
+Следующий элемент будет выбран селектором `:target`, если текущий URL равен вышеуказанному:
 
-<pre class="brush: html">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
+```html
+<section id="section2">Example</section>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="A_table_of_contents">Таблица контента</h3>
+### Таблица контента
 
-<p>Псевдокласс <code>:target</code> может использоваться для выделения части страницы, на которую была сделана ссылка из оглавления .</p>
+Псевдокласс `:target` может использоваться для выделения части страницы, на которую была сделана ссылка из оглавления .
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#nowhere"&gt;This link goes nowhere,
-   because the target doesn't exist.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<h3>Table of Contents</h3>
+<ol>
+ <li><a href="#p1">Jump to the first paragraph!</a></li>
+ <li><a href="#p2">Jump to the second paragraph!</a></li>
+ <li><a href="#nowhere">This link goes nowhere,
+   because the target doesn't exist.</a></li>
+</ol>
 
-&lt;h3&gt;My Fun Article&lt;/h3&gt;
-&lt;p id="p1"&gt;You can target &lt;i&gt;this paragraph&lt;/i&gt; using a
-  URL fragment. Click on the link above to try out!&lt;/p&gt;
-&lt;p id="p2"&gt;This is &lt;i&gt;another paragraph&lt;/i&gt;, also accessible
-  from the links above. Isn't that delightful?&lt;/p&gt;
-</pre>
+<h3>My Fun Article</h3>
+<p id="p1">You can target <i>this paragraph</i> using a
+  URL fragment. Click on the link above to try out!</p>
+<p id="p2">This is <i>another paragraph</i>, also accessible
+  from the links above. Isn't that delightful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:target {
+```css
+p:target {
   background-color: gold;
 }
 
@@ -67,45 +73,49 @@ p:target::before {
 /* Стиль italic-элементов без target-элемента */
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<div>{{EmbedLiveSample('A_table_of_contents', 500, 300)}}</div>
+{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
 
-<h3 id="Pure-CSS_lightbox">Pure-CSS lightbox</h3>
+### Pure-CSS lightbox
 
-<p>Вы можете использовать псевдокласс <code>:target</code> для создания lightbox без использования JavaScript. Этот метод основан на способности якорных ссылок указывать на элементы, которые изначально скрыты на странице. После этого, CSS изменяет их  <code>display</code> на видимый.</p>
+Вы можете использовать псевдокласс `:target` для создания lightbox без использования JavaScript. Этот метод основан на способности якорных ссылок указывать на элементы, которые изначально скрыты на странице. После этого, CSS изменяет их `display` на видимый.
 
-<div class="note"><strong>Примечание:</strong> Более полный pure-CSS lightbox , основанный на псевдоклассе<code>:target</code> -  <a href="https://github.com/madmurphy/takefive.css/">available on GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</div>
+> **Примечание:** Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#example1"&gt;Open example #1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#example2"&gt;Open example #2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul>
+  <li><a href="#example1">Open example #1</a></li>
+  <li><a href="#example2">Open example #2</a></li>
+</ul>
 
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+  </figure>
+</div>
 
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et,
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et,
       mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+      Quisque quis neque arcu, nec gravida magna.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Закрываем lightbox */
+```css
+/* Закрываем lightbox */
 .lightbox {
   display: none;
 }
@@ -163,24 +173,21 @@ p:target i {
   background-color: rgba(0,0,0,.7);
   content: "";
   cursor: default;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<div>{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}</div>
+{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<div>{{Compat}}</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors">Using the :target pseudo-class in selectors</a></li>
-</ul>
+- [Using the :target pseudo-class in selectors](/ru/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)

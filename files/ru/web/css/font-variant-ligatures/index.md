@@ -3,86 +3,70 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 translation_of: Web/CSS/font-variant-ligatures
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p><strong>Свойство CSS<strong> </strong><code>Font-variant-ligatures</code></strong> <strong>контролирует, какие лигатуры и контекстные формы используются в текстовом содержимом элемента, к которому применяется. Это повышает гармоничность форм получаемого в результате текста.</strong></p>
+**Свойство CSS** **`Font-variant-ligatures`** **контролирует, какие лигатуры и контекстные формы используются в текстовом содержимом элемента, к которому применяется. Это повышает гармоничность форм получаемого в результате текста.**
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">font-variant-ligatures: normal;
+```css
+font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* &lt;common-lig-values&gt; */
-font-variant-ligatures: no-common-ligatures;        /* &lt;common-lig-values&gt; */
-font-variant-ligatures: discretionary-ligatures;    /* &lt;discretionary-lig-values&gt; */
-font-variant-ligatures: no-discretionary-ligatures; /* &lt;discretionary-lig-values&gt; */
-font-variant-ligatures: historical-ligatures;       /* &lt;historical-lig-values&gt; */
-font-variant-ligatures: no-historical-ligatures;    /* &lt;historical-lig-values&gt; */
-font-variant-ligatures: contextual;                 /* &lt;contextual-alt-values&gt; */
-font-variant-ligatures: no-contextual;              /* &lt;contextual-alt-values&gt; */
-font-variant-ligatures: contextual;                 /* &lt;no-historical-ligatures&gt; &lt;common-ligatures&gt; */
+font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
+font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
+font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: contextual;                 /* <no-historical-ligatures> <common-ligatures> */
 
 /* Глобальные значения */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Это ключевое слово ведёт к активации обычных лигатур и контекстных форм, необходимых для корректного рендеринга. Активируемые лигатуры и формы зависят от шрифта, языка и типа письма. Это значение по умолчанию.</dd>
- <dt><code>none</code></dt>
- <dd>Это ключевое слово устанавливает, что все лигатуры и контекстные формы отключены, даже распространённые.</dd>
- <dt>&lt;<em>common-lig-values&gt;</em></dt>
- <dd>Эти значения контролируют наиболее распространённые лигатуры, такие как лигатуры для сочетаний <code>fi</code>, <code>ffi</code>, <code>th</code> или подобных. Они относятся к значениям <code>liga</code> и <code>clig</code> в OpenType. Допустимы два значения:
- <ul>
-  <li><code>common-ligatures</code> активирует эти лигатуры. Обратите внимание, что ключевое слово <code>normal</code> активирует лигатуры.</li>
-  <li><code>no-common-ligatures</code> отключает эти лигатуры.</li>
- </ul>
- </dd>
- <dt>&lt;<em>discretionary-lig-values</em>&gt;</dt>
- <dd>Эти значения управляют определёнными лигатурами, специфичными для шрифта и определяемыми дизайнером шрифта. Они соответствуют значениям OpenType <code>hlig</code>. Доступны два значения:
- <ul>
-  <li><code>discretionary-ligatures</code> активирует данные лигатуры.</li>
-  <li><code>no-discretionary-ligatures</code> деактивирует лигатуры. Обратите внимание, обычно, ключевое слово <code>normal</code> также деактивирует лигатуры.</li>
- </ul>
- </dd>
- <dt><em>&lt;historical-lig-values&gt;</em></dt>
- <dd>(ß) Эти значения контролируют лигатуры, которые исторически использовались в старых книгах, например, немецкий <em>tz</em> ("tz диаграф", прим. перев.). Они соответствуют значениям OpenType <code>hlig</code>. Доступны два значения:
- <ul>
-  <li><code>historical-ligatures</code> активирует данные лигатуры.</li>
-  <li><code>no-historical-ligatures</code> деактивирует лигатуры. Обратите внимание, обычно, ключевое слово <code>normal</code> также деактивирует лигатуры.</li>
- </ul>
- </dd>
- <dt><em>&lt;contextual-alt-values&gt;</em></dt>
- <dd>Эти значения определяют, адаптируются ли буквы к своему контексту, то есть адаптируются ли они к окружающим их буквам. Эти значения соответствуют вычисленным значениям OpenType. Возможны два значения:
- <ul>
-  <li><code>contextual</code>указывает, что должны использоваться контекстные альтернативы. Обратите внимание, что ключевое слово <code>normal</code> обычно также активирует лигатуры.</li>
-  <li><code>no-contextual</code> предотвращает их использование.</li>
- </ul>
- </dd>
-</dl>
+- `normal`
+  - : Это ключевое слово ведёт к активации обычных лигатур и контекстных форм, необходимых для корректного рендеринга. Активируемые лигатуры и формы зависят от шрифта, языка и типа письма. Это значение по умолчанию.
+- `none`
+  - : Это ключевое слово устанавливает, что все лигатуры и контекстные формы отключены, даже распространённые.
+- <_common-lig-values>_
+  - : Эти значения контролируют наиболее распространённые лигатуры, такие как лигатуры для сочетаний `fi`, `ffi`, `th` или подобных. Они относятся к значениям `liga` и `clig` в OpenType. Допустимы два значения:\* `common-ligatures` активирует эти лигатуры. Обратите внимание, что ключевое слово `normal` активирует лигатуры.
+    - `no-common-ligatures` отключает эти лигатуры.
+- <_discretionary-lig-values_>
+  - : Эти значения управляют определёнными лигатурами, специфичными для шрифта и определяемыми дизайнером шрифта. Они соответствуют значениям OpenType `hlig`. Доступны два значения:\* `discretionary-ligatures` активирует данные лигатуры.
+    - `no-discretionary-ligatures` деактивирует лигатуры. Обратите внимание, обычно, ключевое слово `normal` также деактивирует лигатуры.
+- _\<historical-lig-values>_
+  - : (ß) Эти значения контролируют лигатуры, которые исторически использовались в старых книгах, например, немецкий _tz_ ("tz диаграф", прим. перев.). Они соответствуют значениям OpenType `hlig`. Доступны два значения:\* `historical-ligatures` активирует данные лигатуры.
+    - `no-historical-ligatures` деактивирует лигатуры. Обратите внимание, обычно, ключевое слово `normal` также деактивирует лигатуры.
+- _\<contextual-alt-values>_
+  - : Эти значения определяют, адаптируются ли буквы к своему контексту, то есть адаптируются ли они к окружающим их буквам. Эти значения соответствуют вычисленным значениям OpenType. Возможны два значения:\* `contextual`указывает, что должны использоваться контекстные альтернативы. Обратите внимание, что ключевое слово `normal` обычно также активирует лигатуры.
+    - `no-contextual` предотвращает их использование.
 
-<h3 id="Соответствующий_правилам_синтаксис">Соответствующий правилам синтаксис</h3>
+### Соответствующий правилам синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:css">p {
+```css
+p {
   font-variant-ligatures: none;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

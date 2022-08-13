@@ -3,19 +3,20 @@ title: background-origin
 slug: Web/CSS/background-origin
 translation_of: Web/CSS/background-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>background-origin</code></strong> устанавливает <em>область расположения фона</em>. Другими словами, оно устанавливает исходную позицию изображения, установленную с помощью свойства {{cssxref("background-image")}}.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`background-origin`** устанавливает _область расположения фона_. Другими словами, оно устанавливает исходную позицию изображения, установленную с помощью свойства {{cssxref("background-image")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/background-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
-<p>Обратите внимание, что <code>background-origin</code> игнорируется, когда {{cssxref("background-attachment")}} является <code>fixed</code>.</p>
+Обратите внимание, что `background-origin` игнорируется, когда {{cssxref("background-attachment")}} является `fixed`.
 
-<div class="note"><strong>Примечание:</strong> Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.</div>
+> **Примечание:** Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css no-line-numbers">/* Ключевые значения */
+```css
+/* Ключевые значения */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -24,62 +25,63 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: unset;
-</pre>
+```
 
-<p>Свойство <code>background-origin</code> указывается в качестве одного из значений ключевых слов, перечисленных ниже.</p>
+Свойство `background-origin` указывается в качестве одного из значений ключевых слов, перечисленных ниже.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>Фон располагается относительно рамки.</dd>
- <dt><code>padding-box</code></dt>
- <dd>Фон расположен относительно поля отступа.</dd>
- <dt><code>content-box</code></dt>
- <dd>Фон располагается относительно поля содержимого.</dd>
-</dl>
+- `border-box`
+  - : Фон располагается относительно рамки.
+- `padding-box`
+  - : Фон расположен относительно поля отступа.
+- `content-box`
+  - : Фон располагается относительно поля содержимого.
 
-<h3 id="Официальный_синтаксис">Официальный синтаксис</h3>
+### Официальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:css; highlight:[6];">.example {
+```css
+.example {
   border: 10px double;
   padding: 10px;
   background: url('image.jpg');
   background-position: center left;
   background-origin: content-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[6];">#example2 {
+```css
+#example2 {
   border: 4px solid black;
   padding: 10px;
   background: url('image.gif');
   background-repeat: no-repeat;
   background-origin: border-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[4];">div {
+```css
+div {
   background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
   background-position: top right, 0px 0px;
   background-origin: content-box, padding-box;
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
-<p>{{Compat}}</p>
+## Совместимость браузеров
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("background-clip")}}</li>
-</ul>
+## Смотрите также
+
+- {{cssxref("background-clip")}}

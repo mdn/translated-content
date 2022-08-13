@@ -3,42 +3,38 @@ title: Раздельная навигация
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">Навигационный паттерн, в котором один или более элементов отделены от остальных элементов навигации.</p>
+Навигационный паттерн, в котором один или более элементов отделены от остальных элементов навигации.
 
-<p><img alt="Items separated into two groups." src="https://mdn.mozillademos.org/files/16227/split-navigation.png" style="height: 145px; width: 1272px;"></p>
+![Items separated into two groups.](https://mdn.mozillademos.org/files/16227/split-navigation.png)
 
-<h2 id="Требования">Требования</h2>
+## Требования
 
-<p>Распространённый навигационный шаблон имеет один элемент, который отделен от остальных. Мы можем использовать Flexbox для того, чтобы сделать это, без необходимости создавать два набора элементов в двух раздельных flex контейнерах. </p>
+Распространённый навигационный шаблон имеет один элемент, который отделен от остальных. Мы можем использовать Flexbox для того, чтобы сделать это, без необходимости создавать два набора элементов в двух раздельных flex контейнерах.
 
-<h2 id="Рецепт">Рецепт</h2>
+## Рецепт
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-<div class="note">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html">Download this example</a></p>
-</div>
+> **Примечание:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>Этот паттерн объединяет margin со значением auto и Flexbox для разделения элементов.</p>
+Этот паттерн объединяет margin со значением auto и Flexbox для разделения элементов.
 
-<p>Auto margin поглощает все доступное пространство в указанном направлении. Так же работает центрирование блока с автоматическими margin - вы имеете отступы на каждой стороне блока, пытающиеся занять все доступное пространство, таким образом толкая блок в центр.</p>
+Auto margin поглощает все доступное пространство в указанном направлении. Так же работает центрирование блока с автоматическими margin - вы имеете отступы на каждой стороне блока, пытающиеся занять все доступное пространство, таким образом толкая блок в центр.
 
-<p>В этом случаи левый auto margin занимает любое доступное пространство и толкает элемент к правому краю. Вы могли применить класс push к любому элементу в списке.</p>
+В этом случаи левый auto margin занимает любое доступное пространство и толкает элемент к правому краю. Вы могли применить класс push к любому элементу в списке.
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h4 id="Flexbox">Flexbox</h4>
+#### Flexbox
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat("css.properties.flex")}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a></li>
-</ul>
+- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)

@@ -3,345 +3,248 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 translation_of: Web/CSS/blend-mode
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Описание" style="">Описание</h2>
+## Описание
 
-<p>The <strong><code>&lt;blend-mode&gt;</code></strong> type is a collection of keywords describing blend modes.</p>
+The **`<blend-mode>`** type is a collection of keywords describing blend modes.
 
-<p>A blend mode is a method of calculating the final color value of a pixel when layers overlap. Each blend mode takes the color value of the foreground and the backdrop (top color and bottom color respectively), perfoms its calculation and returns a color value. The final, visible layer is the result of performing the blend mode calculation on every overlapping pixel among the blended layers.</p>
+A blend mode is a method of calculating the final color value of a pixel when layers overlap. Each blend mode takes the color value of the foreground and the backdrop (top color and bottom color respectively), perfoms its calculation and returns a color value. The final, visible layer is the result of performing the blend mode calculation on every overlapping pixel among the blended layers.
 
-<h2 id="Синтаксис" style="">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Формальный синтаксис: normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity</pre>
+    Формальный синтаксис: normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity
 
-<h3 id="Возможные_значения" style="">Возможные значения</h3>
+### Возможные значения
 
-<dl style="">
- <dt><code>normal</code></dt>
- <dd>
- <p>The final color is the top color, whatever the bottom color may be.<br>
-  The effect is similar to two opaque pieces of paper overlapping.</p>
-
- <div id="normal">
-
- <pre class="brush: css; hidden">#div {
+- `normal`
+  - : The final color is the top color, whatever the bottom color may be.
+    The effect is similar to two opaque pieces of paper overlapping.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: normal;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('normal', "300", "300") }}
 
- <p>{{ EmbedLiveSample('normal', "300", "300") }}</p>
- </dd>
- <dt><code>multiply</code></dt>
- <dd>
- <p>The final color is the result of multiplying the top and bottom colors.<br>
-  A black layer leads to a black final layer, and a white layer leads to no change.<br>
-  The effect is similar to two images printed on transparent film overlapping.</p>
-
- <div id="multiply">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `multiply`
+  - : The final color is the result of multiplying the top and bottom colors.
+    A black layer leads to a black final layer, and a white layer leads to no change.
+    The effect is similar to two images printed on transparent film overlapping.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: multiply;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('multiply', "300", "300") }}
 
- <p>{{ EmbedLiveSample('multiply', "300", "300") }}</p>
- </dd>
- <dt><code>screen</code></dt>
- <dd>
- <p>The final color is the result of inverting the colors, multiplying them and inverting that color value.<br>
-  A black layer leads to no change, and a white layer leads to a white final layer.<br>
-  The effect is similar to two images shone onto a projection screen.</p>
-
- <div id="screen">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `screen`
+  - : The final color is the result of inverting the colors, multiplying them and inverting that color value.
+    A black layer leads to no change, and a white layer leads to a white final layer.
+    The effect is similar to two images shone onto a projection screen.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: screen;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('screen', "300", "300") }}
 
- <p>{{ EmbedLiveSample('screen', "300", "300") }}</p>
- </dd>
- <dt><code>overlay</code></dt>
- <dd>The final color is the result of <code>multiply</code> if the bottom color is darker, or <code>screen</code> if the bottom color is lighter.<br>
- This blend mode is equivalent to <code>hard-light</code> but with the layers swapped.
- <div id="overlay">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `overlay`
+  - : The final color is the result of `multiply` if the bottom color is darker, or `screen` if the bottom color is lighter.
+    This blend mode is equivalent to `hard-light` but with the layers swapped.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: overlay;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('overlay', "300", "300") }}
 
- <p>{{ EmbedLiveSample('overlay', "300", "300") }}</p>
- </dd>
- <dt><code>darken</code></dt>
- <dd>
- <p>The final color is a color composed of the darkest values per color channel.</p>
-
- <div id="darken">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `darken`
+  - : The final color is a color composed of the darkest values per color channel.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: darken;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('darken', "300", "300") }}
 
- <p>{{ EmbedLiveSample('darken', "300", "300") }}</p>
- </dd>
- <dt><code>lighten</code></dt>
- <dd>
- <p>The final color is a color composed of the lightest values per color channel.</p>
-
- <div id="lighten">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `lighten`
+  - : The final color is a color composed of the lightest values per color channel.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: lighten;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('lighten', "300", "300") }}
 
- <p>{{ EmbedLiveSample('lighten', "300", "300") }}</p>
- </dd>
- <dt><code>color-dodge</code></dt>
- <dd>
- <p>The final color is the result of dividing the bottom color by the inverse of the top color.<br>
-  A black foreground leads to no change. A foreground with the inverse color of the backdrop leads to a fully lit color.<br>
-  This blend mode is similar to screen, but the foreground need only be as light as the inverse of the backdrop to reach a fully lit color.</p>
-
- <div id="color-dodge">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `color-dodge`
+  - : The final color is the result of dividing the bottom color by the inverse of the top color.
+    A black foreground leads to no change. A foreground with the inverse color of the backdrop leads to a fully lit color.
+    This blend mode is similar to screen, but the foreground need only be as light as the inverse of the backdrop to reach a fully lit color.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: color-dodge;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('color-dodge', "300", "300") }}
 
- <p>{{ EmbedLiveSample('color-dodge', "300", "300") }}</p>
- </dd>
- <dt><code>color-burn</code></dt>
- <dd>
- <p>This final color is the result of inverting the bottom color, dividing the value by the top color, and inverting that value.<br>
-  A white foreground leads to no change. A foreground with the inverse color of the backdrop leads to a black final image.<br>
-  This blend mode is similar to multiply, but the foreground need only be as dark as the inverse of the backdrop to make the final image black.</p>
-
- <div id="color-burn">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `color-burn`
+  - : This final color is the result of inverting the bottom color, dividing the value by the top color, and inverting that value.
+    A white foreground leads to no change. A foreground with the inverse color of the backdrop leads to a black final image.
+    This blend mode is similar to multiply, but the foreground need only be as dark as the inverse of the backdrop to make the final image black.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: color-burn;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('color-burn', "300", "300") }}
 
- <p>{{ EmbedLiveSample('color-burn', "300", "300") }}</p>
- </dd>
- <dt><code>hard-light</code></dt>
- <dd>
- <p>The final color is the result of <code>multiply</code> if the top color is darker, or <code>screen</code> if the top color is lighter.<br>
-  This blend mode is equivalent to <code>overlay</code> but with the layers swapped.<br>
-  The effect is similar to shining a <em>harsh</em> spotlight on the backdrop.</p>
-
- <div id="hard-light">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `hard-light`
+  - : The final color is the result of `multiply` if the top color is darker, or `screen` if the top color is lighter.
+    This blend mode is equivalent to `overlay` but with the layers swapped.
+    The effect is similar to shining a _harsh_ spotlight on the backdrop.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: hard-light;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('hard-light', "300", "300") }}
 
- <p>{{ EmbedLiveSample('hard-light', "300", "300") }}</p>
- </dd>
- <dt><code>soft-light</code></dt>
- <dd>
- <p>The final color is similar to hard-light, but softer.<br>
-  This blend mode behaves similar to <code>hard-light</code>.<br>
-  The effect is similar to shining a <em>diffused</em> spotlight on the backdrop<em><code>.</code></em></p>
-
- <div id="soft-light">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `soft-light`
+  - : The final color is similar to hard-light, but softer.
+    This blend mode behaves similar to `hard-light`.
+    The effect is similar to shining a _diffused_ spotlight on the backdrop*`.`*```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: soft-light;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('soft-light', "300", "300") }}
 
- <p>{{ EmbedLiveSample('soft-light', "300", "300") }}</p>
- </dd>
- <dt><code>difference</code></dt>
- <dd>
- <p>The final color is the result of subtracting the darker of the two colors from the lighter one.<br>
-  A black layer has no effect, while a white layer inverts the other layer's color.</p>
-
- <div id="difference">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `difference`
+  - : The final color is the result of subtracting the darker of the two colors from the lighter one.
+    A black layer has no effect, while a white layer inverts the other layer's color.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: difference;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('difference', "300", "300") }}
 
- <p>{{ EmbedLiveSample('difference', "300", "300") }}</p>
- </dd>
- <dt><code>exclusion</code></dt>
- <dd>
- <p>The final color is similar to <code>difference,</code> but with less contrast.<br>
-  As with <code>difference</code>,  a black layer has no effect, while a white layer inverts the other layer's color.</p>
-
- <div id="exclusion">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `exclusion`
+  - : The final color is similar to `difference,` but with less contrast.
+    As with `difference`, a black layer has no effect, while a white layer inverts the other layer's color.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: exclusion;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('exclusion', "300", "300") }}
 
- <p>{{ EmbedLiveSample('exclusion', "300", "300") }}</p>
- </dd>
- <dt><code>hue</code></dt>
- <dd>
- <p>The final color has the <em>hue</em> of the top color, while using the <em>saturation</em> and <em>luminosity</em> of the bottom color.</p>
-
- <div id="hue">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `hue`
+  - : The final color has the _hue_ of the top color, while using the _saturation_ and _luminosity_ of the bottom color.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: hue;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('hue', "300", "300") }}
 
- <p>{{ EmbedLiveSample('hue', "300", "300") }}</p>
- </dd>
- <dt><code>saturation</code></dt>
- <dd>
- <p>The final color has the <em>saturation</em> of the top color, while using the <em>hue</em> and <em>luminosity</em> of the bottom color.<br>
-  A pure gray backdrop, having no saturation, will have no effect.</p>
-
- <div id="saturation">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `saturation`
+  - : The final color has the _saturation_ of the top color, while using the _hue_ and _luminosity_ of the bottom color.
+    A pure gray backdrop, having no saturation, will have no effect.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: saturation;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('saturation', "300", "300") }}
 
- <p>{{ EmbedLiveSample('saturation', "300", "300") }}</p>
- </dd>
- <dt><code>color</code></dt>
- <dd>
- <p>The final color has the<em> <em>hue</em></em> and <em><em>saturation</em> </em>of the top color, while using the <em>luminosity</em> of the bottom color.<br>
-  The effect preserves gray levels and can be used to colorize the foreground.</p>
-
- <div id="color">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `color`
+  - : The final color has the\_ _hue** and **saturation_ _of the top color, while using the \_luminosity_ of the bottom color.
+    The effect preserves gray levels and can be used to colorize the foreground.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: color;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('color', "300", "300") }}
 
- <p>{{ EmbedLiveSample('color', "300", "300") }}</p>
- </dd>
- <dt><code>luminosity</code></dt>
- <dd style="">
- <p>The final color has the <em>luminosity</em> of the top color, while using the <em>hue</em> and <em>saturation</em> of the bottom color.<br>
-  This blend mode is equivalent to color, but with the layers swapped.</p>
-
- <div id="luminosity">
-
- <pre class="brush: css; hidden">#div {
+    ```
+- `luminosity`
+  - : The final color has the _luminosity_ of the top color, while using the _hue_ and _saturation_ of the bottom color.
+    This blend mode is equivalent to color, but with the layers swapped.```css hidden
+    #div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: luminosity;
-}</pre>
- </div>
+    }
+    ```{{ EmbedLiveSample('luminosity', "300", "300") }}
 
- <p style="">{{ EmbedLiveSample('luminosity', "300", "300") }}</p>
- </dd>
-</dl>
+    ```
 
-<h2 id="Интерполяция_режимов_наложения" style=""><span class="short_text" id="result_box" lang="ru"><span class="hps">Интерполяция режимов наложения</span></span></h2>
+## Интерполяция режимов наложения
 
-<div> </div>
+Changes between blends mode are not interpolated. Any change occurs abruptly.
 
-<p>Changes between blends mode are not interpolated. Any change occurs abruptly.</p>
+## Спецификации
 
-<h2 id="Спецификации" style="">Спецификации</h2>
+| Спецификация                                                                                 | Статус                               | Комментарий                |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------- |
+| {{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }} | {{ Spec2('Compositing') }} | Первоначальное определение |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr style="">
-   <td style="">{{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }}</td>
-   <td>{{ Spec2('Compositing') }}</td>
-   <td style="">Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+## Совместимость с браузерами
 
-<h2 id="Browser_Compatibility" style="">Совместимость с браузерами</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<h2 id="Смотрите_также" style="">Смотрите также</h2>
-
-<ul style="">
- <li>Properties using a value of this type: {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}}</li>
- <li style=""><a href="http://en.wikipedia.org/wiki/Blend_modes" style="">Blend modes</a></li>
- <li style=""><a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">CSS Reference</a> index</li>
-</ul>
+- Properties using a value of this type: {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}}
+- [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
+- [CSS Reference](/ru/docs/CSS/CSS_Reference "CSS Reference") index

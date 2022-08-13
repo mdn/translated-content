@@ -6,75 +6,75 @@ tags:
   - Селекторы
 translation_of: Web/CSS/Column_combinator
 ---
-<div>{{CSSRef("Selectors")}}{{SeeCompatTable}}</div>
+{{CSSRef("Selectors")}}{{SeeCompatTable}}
 
-<p><strong>Комбинатор столбцов</strong> (<code>||</code>) помещается между двумя селекторами CSS. Он соответствует только тем элементам, которым соответствует второй селектор, которые принадлежат элементам столбца, соответствующим первому.</p>
+**Комбинатор столбцов** (`||`) помещается между двумя селекторами CSS. Он соответствует только тем элементам, которым соответствует второй селектор, которые принадлежат элементам столбца, соответствующим первому.
 
-<pre class="brush: css no-line-numbers">/* Ячейки таблицы, принадлежащие к столбцу "выделено" */
+```css
+/* Ячейки таблицы, принадлежащие к столбцу "выделено" */
 col.selected || td {
   background: gray;
 }
-</pre>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>column-selector</var> || <var>cell-selector</var> {
-  <var>/* свойства стиля */</var>
-}
-</pre>
+    column-selector || cell-selector {
+      /* свойства стиля */
+    }
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table border="1"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2"/&gt;
-    &lt;col class="selected"/&gt;
-  &lt;/colgroup&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A
-      &lt;td&gt;B
-      &lt;td&gt;C
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;D&lt;/td&gt;
-      &lt;td&gt;E&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;F&lt;/td&gt;
-      &lt;td colspan="2"&gt;G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table border="1">
+  <colgroup>
+    <col span="2"/>
+    <col class="selected"/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>A
+      <td>B
+      <td>C
+    </tr>
+    <tr>
+      <td colspan="2">D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td colspan="2">G</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">col.selected || td {
+```css
+col.selected || td {
   background: gray;
   color: white;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Примеры", "100%")}}</p>
+{{EmbedLiveSample("Примеры", "100%")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}}</li>
- <li>{{CSSxRef("grid")}}</li>
-</ul>
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{CSSxRef("grid")}}

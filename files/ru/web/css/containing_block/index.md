@@ -3,100 +3,88 @@ title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
 translation_of: Web/CSS/Containing_block
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p class="summary">На размер и позицию элемента часто влияет его <strong>содержащий блок</strong> (containing block). Чаще всего содержащим блоком является content область (<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>) ближайшего блочного (<a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a>) предка, но это не всегда так. <span class="seoSummary">В этой статье мы рассмотрим факторы, которые</span> определяют <span class="seoSummary">содержащий блок элемента.</span></p>
+На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Web/HTML/Block-level_elements)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.
 
-<p class="summary">Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:</p>
+Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:
 
-<ol>
- <li>Content область или область контента (content area).</li>
- <li>Padding область или область внутреннего поля (padding area).</li>
- <li>Border область или область границы (border area).</li>
- <li>Margin область или область внешнего поля (margin area).</li>
-</ol>
+1.  Content область или область контента (content area).
+2.  Padding область или область внутреннего поля (padding area).
+3.  Border область или область границы (border area).
+4.  Margin область или область внешнего поля (margin area).
 
-<p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
 
-<p>Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.</p>
+Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.
 
-<h2 id="Эффекты_содержащего_блока">Эффекты содержащего блока</h2>
+## Эффекты содержащего блока
 
-<p>Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.</p>
+Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.
 
-<p>На размер и положение элемента часто влияет его содержащий блок. </p>
+На размер и положение элемента часто влияет его содержащий блок.
 
-<p>Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение <code>absolute</code> или <code>fixed</code>) рассчитываются исходя из его содержащего блока.</p>
+Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение `absolute` или `fixed`) рассчитываются исходя из его содержащего блока.
 
-<h2 id="Определение_содержащего_блока">Определение содержащего блока</h2>
+## Определение содержащего блока
 
-<p>Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:</p>
+Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:
 
-<ol>
- <li>Если свойство <code>position</code> имеет значение  <code><strong>static</strong></code>,<strong> </strong><code><strong>relative</strong></code>, или <strong><code>sticky</code></strong>, то содержащий блок задаётся краем <em>content бокса</em> ближайшего предка, который:
+1.  Если свойство `position` имеет значение **`static`**,** \*\***`relative`**, или **`sticky`\*\*, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
 
-  <ul>
-   <li>либо является <strong>блочным контейнером</strong> (block container), например, если его свойство display имеет значение inline-block, block или list-item.</li>
-   <li>либо <strong>устанавливает контекст форматирования</strong> (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).</li>
-  </ul>
- </li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code>, то содержащий блок задаётся краем <em>padding бокса</em> ближайшего предка, у которого свойство <code>position</code><strong> </strong>имеет значение отличное от <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code> или <code>sticky</code>).</li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>fixed</strong></code>, то содержащий блок задаётся:
-  <ul>
-   <li>в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});</li>
-   <li>в случае страничного медиа (paged media) областью страницы.</li>
-  </ul>
- </li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code> или <code><strong>fixed</strong></code>, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
-  <ol>
-   <li>Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от <code>none</code>.</li>
-   <li>Свойство {{cssxref("will-change")}} имеет значение <code>transform</code> или <code>perspective</code>.</li>
-   <li>Свойство {{cssxref("filter")}}<strong> </strong> имеет значение отличное от <code>none</code> или <code>will-change</code> value of <code>filter</code> (работает только в Firefox).</li>
-   <li>Свойство {{cssxref("contain")}} имеет значение <code>paint</code> (например, <code>contain: paint;</code>).</li>
-  </ol>
- </li>
-</ol>
+    - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
+    - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
 
-<div class="note">
-<p><strong>Примечание: </strong>Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется <strong>начальный содержащий блок</strong>. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).</p>
-</div>
+2.  Если свойство `position`\*\* **имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство `position`** \*\*имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
+3.  Если свойство `position`\*\* **имеет значение **`fixed`\*\*, то содержащий блок задаётся:
 
-<h2 id="Calculating_percentage_values_from_the_containing_block">Calculating percentage values from the containing block</h2>
+    - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
+    - в случае страничного медиа (paged media) областью страницы.
 
-<p>As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
+4.  Если свойство `position`\*\* **имеет значение **`absolute`** или **`fixed`\*\*, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
 
-<ol>
- <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code><strong> </strong>of the containing block.</li>
- <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code><strong> </strong>of the containing block.</li>
-</ol>
+    1.  Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
+    2.  Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
+    3.  Свойство {{cssxref("filter")}}\*\* \*\*имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
+    4.  Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
 
-<h2 id="Some_examples">Some examples</h2>
+> **Примечание:**Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
 
-<p>The HTML code for all our examples is:</p>
+## Calculating percentage values from the containing block
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are **box model properties** and **offset properties**:
 
-<p>Only the CSS is altered in each instance below.</p>
+1.  The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height`\*\* \*\*of the containing block.
+2.  The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width`\*\* \*\*of the containing block.
 
-<h3 id="Example_1">Example 1</h3>
+## Some examples
 
-<p>In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.</p>
+The HTML code for all our examples is:
 
-<div class="hidden">
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+Only the CSS is altered in each instance below.
+
+### Example 1
+
+In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.
+
+```html hidden
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
+
+```css
+body {
   background: beige;
 }
 
@@ -114,24 +102,24 @@ p {
   padding: 5%;  /* == 400px * .05 = 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_1','100%','300')}}</p>
+{{EmbedLiveSample('Example_1','100%','300')}}
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<p>In this example, the paragraph's containing block is the {{HTMLElement("body")}}<strong> </strong>element, because <code>&lt;section&gt;</code> is not a block container (because of <code>display: inline</code>) and doesn’t establish a formatting context.</p>
+In this example, the paragraph's containing block is the {{HTMLElement("body")}}\*\* \*\*element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
 
-<div class="hidden">
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -145,24 +133,24 @@ p {
   height: 200px;  /* Note: a percentage would be 0 */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_2','100%','300')}}</p>
+{{EmbedLiveSample('Example_2','100%','300')}}
 
-<h3 id="Example_3">Example 3</h3>
+### Example 3
 
-<p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were <code>border-box</code> this would not be the case.</p>
+In this example, the paragraph's containing block is `<section>` because the latter's `position` is `absolute`. The paragraph's percentage values are affected by the `padding` of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were `border-box` this would not be the case.
 
-<div class="hidden">
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -184,24 +172,24 @@ p {
   padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_3','100%','300')}}</p>
+{{EmbedLiveSample('Example_3','100%','300')}}
 
-<h3 id="Example_4">Example 4</h3>
+### Example 4
 
-<p>In this example, the paragraph's <code>position</code> is <code>fixed</code>, so its containing block is the initial containing block (on screens, the viewport). Thus, the paragraph's dimensions change based on the size of the browser window.</p>
+In this example, the paragraph's `position` is `fixed`, so its containing block is the initial containing block (on screens, the viewport). Thus, the paragraph's dimensions change based on the size of the browser window.
 
-<div class="hidden">
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -221,24 +209,24 @@ p {
   padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_4','100%','300')}}</p>
+{{EmbedLiveSample('Example_4','100%','300')}}
 
-<h3 id="Example_5">Example 5</h3>
+### Example 5
 
-<p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't <code>none</code>.</p>
+In this example, the paragraph's `position` is `absolute`, so its containing block is `<section>`, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't `none`.
 
-<div class="hidden">
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>This is a paragraph!</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -259,13 +247,11 @@ p {
   padding: 5%;  /* == 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_5','100%','300')}}</p>
+{{EmbedLiveSample('Example_5','100%','300')}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{css_key_concepts}}</li>
- <li>The {{cssxref("all")}} property resets all CSS declarations to a given known state</li>
-</ul>
+- {{css_key_concepts}}
+- The {{cssxref("all")}} property resets all CSS declarations to a given known state

@@ -3,59 +3,57 @@ title: all
 slug: Web/CSS/all
 translation_of: Web/CSS/all
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Сокращённое свойство CSS<em> </em><code><strong>all</strong></code> сбрасывает все свойства, кроме {{cssxref("unicode-bidi")}} и {{cssxref("direction")}}, до их начального или унаследованного значения.</p>
+Сокращённое свойство CSS\_ \_**`all`** сбрасывает все свойства, кроме {{cssxref("unicode-bidi")}} и {{cssxref("direction")}}, до их начального или унаследованного значения.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">all: initial;
+```css
+all: initial;
 all: inherit;
 all: unset;
 
 /* CSS Cascading and Inheritance Level 4 */
 all: revert;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>initial</code></dt>
- <dd>Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.</dd>
- <dt><code>inherit</code></dt>
- <dd>Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу, на значение их родителя. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.</dd>
- <dt><code>unset</code></dt>
- <dd>Это ключевое слово указывает на изменение всех свойств, применимых к элементу или родительскому элементу, на значение их родителя, если они наследуются или на их начальное значение, если нет. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.</dd>
- <dt><code>revert</code></dt>
- <dd>Если каскадным значением свойства является ключевое слово revert, поведение зависит от источника, которому принадлежит объявление:
- <dl>
-  <dt>user-agent origin</dt>
-  <dd>Эквивалент unset.</dd>
-  <dt>user origin</dt>
-  <dd>Откатывает каскад до уровня пользовательского агента, так что указанное значение вычисляется так, как если бы для этого свойства не были заданы правила уровня автора или уровня пользователя.</dd>
-  <dt>author origin</dt>
-  <dd>Откатывает каскад до уровня пользователя, так что указанное значение вычисляется так, как если бы для этого свойства не было задано никаких правил уровня автора. В целях возврата этот источник включает в себя источники переопределения и анимации.</dd>
- </dl>
- </dd>
-</dl>
+- `initial`
+  - : Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
+- `inherit`
+  - : Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу, на значение их родителя. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
+- `unset`
+  - : Это ключевое слово указывает на изменение всех свойств, применимых к элементу или родительскому элементу, на значение их родителя, если они наследуются или на их начальное значение, если нет. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
+- `revert`
+  - : Если каскадным значением свойства является ключевое слово revert, поведение зависит от источника, которому принадлежит объявление:_ user-agent origin
+    _ : Эквивалент unset.
+    - user origin
+      - : Откатывает каскад до уровня пользовательского агента, так что указанное значение вычисляется так, как если бы для этого свойства не были заданы правила уровня автора или уровня пользователя.
+    - author origin
+      - : Откатывает каскад до уровня пользователя, так что указанное значение вычисляется так, как если бы для этого свойства не было задано никаких правил уровня автора. В целях возврата этот источник включает в себя источники переопределения и анимации.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p id="HTML"><strong>HTML</strong></p>
+**HTML**
 
-<pre class="brush: html">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<p id="CSS"><strong>CSS</strong></p>
+**CSS**
 
-<pre class="brush: css">html {
+```css
+html {
   font-size: small;
   background-color: #F0F0F0;
   color: blue;
@@ -65,69 +63,81 @@ blockquote {
   background-color: skyblue;
   color: red;
 }
-</pre>
+```
 
-<p id="Results">Результат:</p>
+Результат:
 
-<div id="ex0" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="No_all_property">No <code>all</code> property</h4>
+#### No `all` property
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }</pre>
+```css hidden
+html { font-size: small; background-color: #F0F0F0; color:blue; }
+blockquote { background-color: skyblue;  color: red; }
+```
+
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. Он также ведёт себя как <em>block </em>элемент<em> </em>: текст, который следует за ним, находится под ним.</p>
-</div>
+{{HTMLElement("blockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. Он также ведёт себя как _block_ элемент\_ \_: текст, который следует за ним, находится под ним.
 
-<div id="ex1" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allunset"><code>all:unset</code></h4>
+#### `all:unset`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">html { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+html { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }</pre>
+blockquote { all: unset; }
+```
+
 {{EmbedLiveSample("ex1", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это <em>inline</em> элемент (начальное значение), его {{cssxref("background-color")}} является <code>transparent</code> (начальное значение), но его {{cssxref("font-size")}} по-прежнему <code>small</code> унаследованное значение) и его {{cssxref("color")}} является <code>blue</code> (унаследованное значение).</p>
-</div>
+{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _inline_ элемент (начальное значение), его {{cssxref("background-color")}} является `transparent` (начальное значение), но его {{cssxref("font-size")}} по-прежнему `small` унаследованное значение) и его {{cssxref("color")}} является `blue` (унаследованное значение).
 
-<div id="ex2" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allinitial"><code>all:initial</code></h4>
+#### `all:initial`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">html { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+html { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }</pre>
+blockquote { all: initial; }
+```
+
 {{EmbedLiveSample("ex2", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это<em> inline</em> элемент(начальное значение), его {{cssxref("background-color")}} является <code>transparent</code> (начальное значение), его {{cssxref("font-size")}} является <code>normal</code> (начальное значение) и его {{cssxref("color")}} является <code>black</code> (начальное значение).</p>
-</div>
+{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _inline_ элемент(начальное значение), его {{cssxref("background-color")}} является `transparent` (начальное значение), его {{cssxref("font-size")}} является `normal` (начальное значение) и его {{cssxref("color")}} является `black` (начальное значение).
 
-<div id="ex3" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allinherit"><code>all:inherit</code></h4>
+#### `all:inherit`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">html { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+html { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }</pre>
+blockquote { all: inherit; }
+```
+
 {{EmbedLiveSample("ex3", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это <em>block</em> элемент (унаследованное значение от содержащего его {{HTMLElement("div")}}), его {{cssxref("background-color")}} является <code>transparent</code> (унаследованное значение), его {{cssxref("font-size")}} является <code>small</code> (унаследованное значение) и его {{cssxref("color")}} является <code>blue</code> (унаследованное значение).</p>
-</div>
+{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _block_ элемент (унаследованное значение от содержащего его {{HTMLElement("div")}}), его {{cssxref("background-color")}} является `transparent` (унаследованное значение), его {{cssxref("font-size")}} является `small` (унаследованное значение) и его {{cssxref("color")}} является `blue` (унаследованное значение).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p>Значения свойств в масштабе CSS:  {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, и {{cssxref("revert")}}.</p>
+Значения свойств в масштабе CSS: {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, и {{cssxref("revert")}}.

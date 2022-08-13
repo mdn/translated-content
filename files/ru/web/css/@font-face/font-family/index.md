@@ -6,47 +6,45 @@ tags:
   - дескрипторы
 translation_of: Web/CSS/@font-face/font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS дескриптор <strong><code>font-family</code></strong> позволяет авторам указывать font family для шрифта, указанного в правиле {{cssxref("@font-face")}}.</p>
+CSS дескриптор **`font-family`** позволяет авторам указывать font family для шрифта, указанного в правиле {{cssxref("@font-face")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* &lt;string&gt; значения */
+```css
+/* <string> значения */
 font-family: "font family";
 font-family: 'another font family';
 
-/* &lt;custom-ident&gt; значение */
+/* <custom-ident> значение */
 font-family: examplefont;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>Указывает имя font family.</dd>
-</dl>
+- `<family-name>`
+  - : Указывает имя font family.
 
-<h3 id="Синтаксис_2">Синтаксис</h3>
+### Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: examplefont;
   src: url('examplefont.ttf');
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

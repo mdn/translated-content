@@ -3,17 +3,16 @@ title: overflow-block
 slug: Web/CSS/overflow-block
 translation_of: Web/CSS/overflow-block
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>overflow-block</code></strong> устанавливает, что будет отображаться, когда содержимое переполняет начальные и конечные края блока. Это может быть ничего, полоса прокрутки или содержимое переполнения.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`overflow-block`** устанавливает, что будет отображаться, когда содержимое переполняет начальные и конечные края блока. Это может быть ничего, полоса прокрутки или содержимое переполнения.
 
-<div class="note">
-<p>Свойство <code>overflow-block</code> отображается на {{Cssxref("overflow-y")}} или {{Cssxref("overflow-x")}} в зависимости от режима записи документа.</p>
-</div>
+> **Примечание:** Свойство `overflow-block` отображается на {{Cssxref("overflow-y")}} или {{Cssxref("overflow-x")}} в зависимости от режима записи документа.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Значения свойства */
+```css
+/* Значения свойства */
 overflow-block: visible;
 overflow-block: hidden;
 overflow-block: scroll;
@@ -23,62 +22,61 @@ overflow-block: auto;
 overflow-block: inherit;
 overflow-block: initial;
 overflow-block: unset;
-</pre>
+```
 
-<p>Свойство <code>overflow-block</code> указывается как одно ключевое слово, выбранное из списка значений ниже.</p>
+Свойство `overflow-block` указывается как одно ключевое слово, выбранное из списка значений ниже.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Содержимое не обрезается и может отображаться за пределами начального и конечного краёв блока отступа.</dd>
- <dt><code>hidden</code></dt>
- <dd>При необходимости содержимое обрезается, чтобы соответствовать размеру блока в поле заполнения. Полосы прокрутки отсутствуют.</dd>
- <dt><code>scroll</code></dt>
- <dd>При необходимости содержимое обрезается, чтобы поместиться в размер блока в поле заполнения. Браузеры отображают полосы прокрутки вне зависимости от того, вырезано ли содержимое. (Это предотвращает появление или исчезновение полос прокрутки при изменении содержимого.) Принтеры могут по-прежнему печатать переполненное содержимое.</dd>
- <dt><code>auto</code></dt>
- <dd>Зависит от пользовательского агента. Если содержимое помещается в поле дополнения, оно выглядит так же, как visible, но всё же устанавливает новый контекст форматирования блока. Настольные браузеры устанавливают полосы прокрутки, если содержимое переполняется.</dd>
-</dl>
+- `visible`
+  - : Содержимое не обрезается и может отображаться за пределами начального и конечного краёв блока отступа.
+- `hidden`
+  - : При необходимости содержимое обрезается, чтобы соответствовать размеру блока в поле заполнения. Полосы прокрутки отсутствуют.
+- `scroll`
+  - : При необходимости содержимое обрезается, чтобы поместиться в размер блока в поле заполнения. Браузеры отображают полосы прокрутки вне зависимости от того, вырезано ли содержимое. (Это предотвращает появление или исчезновение полос прокрутки при изменении содержимого.) Принтеры могут по-прежнему печатать переполненное содержимое.
+- `auto`
+  - : Зависит от пользовательского агента. Если содержимое помещается в поле дополнения, оно выглядит так же, как visible, но всё же устанавливает новый контекст форматирования блока. Настольные браузеры устанавливают полосы прокрутки, если содержимое переполняется.
 
-<h3 id="Формат_синтаксиса">Формат синтаксиса</h3>
+### Формат синтаксиса
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-block:hidden&lt;/code&gt; — скрывает текст за пределами поля
-  &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-block:hidden</code> — скрывает текст за пределами поля
+  <div id="div1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:scroll&lt;/code&gt; — всегда добавляет полосу прокрутки
-  &lt;div id="div2"&gt;
+  <li><code>overflow-block:scroll</code> — всегда добавляет полосу прокрутки
+  <div id="div2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:visible&lt;/code&gt; — отображает текст вне поля, если это необходимо
-  &lt;div id="div3"&gt;
+  <li><code>overflow-block:visible</code> — отображает текст вне поля, если это необходимо
+  <div id="div3">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:auto&lt;/code&gt; — в большинстве браузеров, что эквивалентно &lt;code&gt;scroll&lt;/code&gt;
-  &lt;div id="div4"&gt;
+  <li><code>overflow-block:auto</code> — в большинстве браузеров, что эквивалентно <code>scroll</code>
+  <div id="div4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+  </li>
+</ul>
+```
 
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#div1,
+```css
+#div1,
 #div2,
 #div3,
 #div4 {
@@ -91,25 +89,22 @@ overflow-block: unset;
 #div2 { overflow-block: scroll; margin-bottom: 12px;}
 #div3 { overflow-block: visible; margin-bottom: 120px;}
 #div4 { overflow-block: auto; margin-bottom: 120px;}
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры", "100%", "780")}}</p>
+{{EmbedLiveSample("Примеры", "100%", "780")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## Совместимость браузера
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">Логические свойства CSS</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">Режимы письма</a></li>
-</ul>
+- Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [Логические свойства CSS](/ru/docs/Web/CSS/CSS_Logical_Properties)
+- [Режимы письма](/ru/docs/Web/CSS/CSS_Writing_Modes)

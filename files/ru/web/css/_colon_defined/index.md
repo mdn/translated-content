@@ -1,13 +1,14 @@
 ---
 title: ':defined'
-slug: 'Web/CSS/:defined'
-translation_of: 'Web/CSS/:defined'
+slug: Web/CSS/:defined
+translation_of: Web/CSS/:defined
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <strong><code>:defined</code></strong> находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательские элементы</a> (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).</span></p>
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
 
-<pre class="brush: css no-line-numbers">/* Находит любой элемент, который был определён */
+```css
+/* Находит любой элемент, который был определён */
 :defined {
   font-style: italic;
 }
@@ -16,17 +17,18 @@ translation_of: 'Web/CSS/:defined'
 simple-custom:defined {
   display: block;
 }
-</pre>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Этот пример включает скрипт, определяющий <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательский элемент</a> <code>&lt;simple-custom&gt;</code>:</p>
+Этот пример включает скрипт, определяющий [пользовательский элемент](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) `<simple-custom>`:
 
-<pre class="brush: js">customElements.define('simple-custom',
+```js
+customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -37,17 +39,21 @@ simple-custom:defined {
       let shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(divElem);
   }
-})</pre>
+})
+```
 
-<p>Затем мы используем короткий HTML код с элементом <code>&lt;simple-custom&gt;</code> и стандартным элементом {{htmlelement("p")}}:</p>
+Затем мы используем короткий HTML код с элементом `<simple-custom>` и стандартным элементом {{htmlelement("p")}}:
 
-<pre class="brush: html">&lt;simple-custom text="Текст пользовательского элемента"&gt;&lt;/simple-custom&gt;
+```html
+<simple-custom text="Текст пользовательского элемента"></simple-custom>
 
-&lt;p&gt;Пример текста стандартного параграфа&lt;/p&gt;</pre>
+<p>Пример текста стандартного параграфа</p>
+```
 
-<p>Теперь немного CSS. Здесь мы определяем цвета фона для разных элементов и используем селектор <code>:defined</code>, чтобы поменять шрифт всех определённых элементов на курсив.</p>
+Теперь немного CSS. Здесь мы определяем цвета фона для разных элементов и используем селектор `:defined`, чтобы поменять шрифт всех определённых элементов на курсив.
 
-<pre class="brush: css">/* Определение разных фонов для разных элементов */
+```css
+/* Определение разных фонов для разных элементов */
 p {
   background: yellow;
 }
@@ -60,40 +66,41 @@ simple-custom {
 /* И пользовательский, и встроенный элементы будет отображены курсивом */
 :defined {
   font-style: italic;
-}</pre>
+}
+```
 
-<p>Наконец, мы добавляем следующие два правила, чтобы спрятать наш пользовательский элемент, если он не был определён или показать в обратном случае:</p>
+Наконец, мы добавляем следующие два правила, чтобы спрятать наш пользовательский элемент, если он не был определён или показать в обратном случае:
 
-<pre class="brush: css">simple-custom:not(:defined) {
+```css
+simple-custom:not(:defined) {
   opacity: 0;
 }
 
 simple-custom:defined {
   opacity: 0.75;
   text-decoration: underline;
-}</pre>
+}
+```
 
-<p>Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не стилизованные элементы.</p>
+Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не стилизованные элементы.
 
-<h3 id="результат">результат</h3>
+### результат
 
-<p>Вот результат выполнения представленного выше кода:</p>
+Вот результат выполнения представленного выше кода:
 
-<p>{{EmbedLiveSample('Примеры')}}</p>
+{{EmbedLiveSample('Примеры')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="ru/docs/Web/Web_Components">Веб-компоненты</a></li>
- <li>{{cssxref(":host")}}</li>
- <li>{{cssxref(":host()")}}</li>
- <li>{{cssxref(":host-context()")}}</li>
-</ul>
+- [Веб-компоненты](ru/docs/Web/Web_Components)
+- {{cssxref(":host")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}

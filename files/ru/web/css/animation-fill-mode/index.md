@@ -7,120 +7,71 @@ tags:
   - CSS-свойства
 translation_of: Web/CSS/animation-fill-mode
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/en/CSS" title="CSS">CSS</a> свойство <strong><code>animation-fill-mode</code></strong> определяет, как нужно применять стили к объекту анимации до и после её выполнения.</p>
+[CSS](/en/CSS "CSS") свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">animation-fill-mode: none;
+```css
+animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
 animation-fill-mode: both;
 
 /* Несколько значений могут быть заданы через запятую. */
-/* Каждое значение соответствует для анимации в animation-name<code>.</code> */
+/* Каждое значение соответствует для анимации в animation-name. */
 animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Стили анимации не будут применены к элементу до и после её выполнения.</dd>
- <dt><code>forwards</code></dt>
- <dd>По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">последний ключевой кадр</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>любое</td>
-    <td><code>100%</code> или <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>любое</td>
-    <td><code>0%</code> или <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>чётное</td>
-    <td><code>0%</code> или <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>нечётное</td>
-    <td><code>100%</code> или <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>чётное</td>
-    <td><code>100%</code> или <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>нечётное</td>
-    <td><code>0%</code> или <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>Элемент сохранит стиль первого <a href="/en-US/docs/CSS/@keyframes">ключевого кадра</a> на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">первый ключевой кадр</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> или <code>alternate</code></td>
-    <td><code>0%</code> или <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> или <code>alternate-reverse</code></td>
-    <td><code>100%<font face="Open Sans, Arial, sans-serif"> или </font></code><code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.</dd>
-</dl>
+- `none`
+  - : Стили анимации не будут применены к элементу до и после её выполнения.
+- `forwards`
+  - | : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}: | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
+    | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | ----------------------- |
+    | `normal`                                                                                                                                                                                                        | любое                 | `100%` или `to`             |
+    | `reverse`                                                                                                                                                                                                       | любое                 | `0%` или `from`             |
+    | `alternate`                                                                                                                                                                                                     | чётное                | `0%` или `from`             |
+    | `alternate`                                                                                                                                                                                                     | нечётное              | `100%` или `to`             |
+    | `alternate-reverse`                                                                                                                                                                                             | чётное                | `100%` или `to`             |
+    | `alternate-reverse`                                                                                                                                                                                             | нечётное              | `0%` или `from`             |
+- `backwards`
+  - | : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}: | `animation-direction` | первый ключевой кадр |
+    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------- |
+    | `normal` или `alternate`                                                                                                                                                                                                              | `0%` или `from`       |
+    | `reverse` или `alternate-reverse`                                                                                                                                                                                                     | ` 100% или ``to`      |
+- `both`
+  - : Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Вы можете посмотреть эффект animation-fill-mode в следующем примере. По умолчанию, по окончании анимации стиль элемента возвращается к исходному. Значение forwards сохранит для элемента стиль последнего ключевого кадра.</p>
+Вы можете посмотреть эффект animation-fill-mode в следующем примере. По умолчанию, по окончании анимации стиль элемента возвращается к исходному. Значение forwards сохранит для элемента стиль последнего ключевого кадра.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Наведите курсор мыши на серый блок&lt;/p&gt;
-&lt;div class="demo"&gt;
-  &lt;div class="grows"&gt;Этот просто растёт&lt;/div&gt;
-  &lt;div class="growsandstays"&gt;Этот растёт и остаётся большим&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>Наведите курсор мыши на серый блок</p>
+<div class="demo">
+  <div class="grows">Этот просто растёт</div>
+  <div class="growsandstays">Этот растёт и остаётся большим</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.demo {
+```css
+.demo {
   border-top: 100px solid #ccc;
   height: 300px;
   font-family: sans-serif;
@@ -146,21 +97,20 @@ animation-fill-mode: both, forwards, none;
     -webkit-animation-name: grow;
     -webkit-animation-duration: 3s;
     -webkit-animation-fill-mode: forwards;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example',700,300)}}</p>
+{{EmbedLiveSample('Example',700,300)}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимации</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -1,87 +1,90 @@
 ---
 title: ':hover'
-slug: 'Web/CSS/:hover'
+slug: Web/CSS/:hover
 tags:
   - CSS
   - Псевдоклассы
   - Руководство
-translation_of: 'Web/CSS/:hover'
+translation_of: Web/CSS/:hover
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:hover</code> срабатывает, когда пользователь наводит на элемент мышью, но не обязательно активирует его. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":visited") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вставьте правило <code>:hover</code> после правил <code>:link</code> и <code>:visited</code> до <code>:active</code>, как определено <em>LVHA-порядком</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:hover` срабатывает, когда пользователь наводит на элемент мышью, но не обязательно активирует его. Этот стиль может переопределяться другими относящимися к ссылкам псевдоклассами, такими как {{ cssxref(":link") }}, {{ cssxref(":visited") }} и {{ cssxref(":active") }}, появляющимися в соответствующем порядке. Чтобы стилизировать ссылки должным образом, вставьте правило `:hover` после правил `:link` и `:visited` до `:active`, как определено _LVHA-порядком_: `:link` — `:visited` — `:hover` — `:active`.
 
-<p>Псевдокласс <code>:hover</code> может применяться к любому <a href="/ru/docs/Web/CSS/pseudo-elements" title="Pseudo-classes">псевдоэлементу</a>. {{experimental_inline}}</p>
+Псевдокласс `:hover` может применяться к любому [псевдоэлементу](/ru/docs/Web/CSS/pseudo-elements "Pseudo-classes"). {{experimental_inline}}
 
-<p>Браузеры, такие как Firefox, Internet Explorer, Safari, Opera или Chrome, применяют соответствующий стиль, когда курсор (указатель мыши) наводится на элемент.</p>
+Браузеры, такие как Firefox, Internet Explorer, Safari, Opera или Chrome, применяют соответствующий стиль, когда курсор (указатель мыши) наводится на элемент.
 
-<div class="note"><strong>Замечания по использованию</strong>: на сенсорных экранах <code>:hover</code> проблемный или не работает. В зависимости от браузера, псевдокласс <code>:hover</code> может никогда не сработать, или сработать на некоторое время после нажатия на элемента, или может продолжать действовать даже остаться после того, как пользователь коснулся элемента до нажатия на другой элемент. Так как сенсорные устройства очень распространены, то веб-разработчикам очень важно не иметь контент, доступный только при наведении, так как такой контент неудобно или невозможно использовать на таких устройствах.</div>
+> **Примечание:** **Замечания по использованию**: на сенсорных экранах `:hover` проблемный или не работает. В зависимости от браузера, псевдокласс `:hover` может никогда не сработать, или сработать на некоторое время после нажатия на элемента, или может продолжать действовать даже остаться после того, как пользователь коснулся элемента до нажатия на другой элемент. Так как сенсорные устройства очень распространены, то веб-разработчикам очень важно не иметь контент, доступный только при наведении, так как такой контент неудобно или невозможно использовать на таких устройствах.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">:link:hover { outline: dotted red; }
+```css
+:link:hover { outline: dotted red; }
 
 .foo:hover { background: gold; }
-</pre>
+```
 
-<h3 id="Выпадающее_меню">Выпадающее меню</h3>
+### Выпадающее меню
 
-<p>С псевдоклассом <code>:hover</code> вы можете создавать сложные каскадные алгоритмы. Эта техника часто используется, например, чтобы создать <strong>выпадающие меню на чистом CSS</strong> (только на CSS, без использования <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>). Сущность этой техники - создание правил, типа следующего:</p>
+С псевдоклассом `:hover` вы можете создавать сложные каскадные алгоритмы. Эта техника часто используется, например, чтобы создать **выпадающие меню на чистом CSS** (только на CSS, без использования [JavaScript](/en/JavaScript "en/JavaScript")). Сущность этой техники - создание правил, типа следующего:
 
-<pre class="brush: css">div.menu-bar ul ul {
+```css
+div.menu-bar ul ul {
   display: none;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>применим к HTML структуре типа следующей:</p>
+применим к HTML структуре типа следующей:
 
-<pre class="brush: html">&lt;div class="menu-bar"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="example.html"&gt;Меню&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;a href="example.html"&gt;Ссылка&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a class="menu-nav" href="example.html"&gt;Подменю&lt;/a&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a class="menu-nav" href="example.html"&gt;Подменю&lt;/a&gt;
-              &lt;ul&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Ссылка&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Ссылка&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Ссылка&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Ссылка&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li&gt;&lt;a href="example.html"&gt;Ссылка&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="menu-bar">
+  <ul>
+    <li>
+      <a href="example.html">Меню</a>
+      <ul>
+        <li>
+          <a href="example.html">Ссылка</a>
+        </li>
+        <li>
+          <a class="menu-nav" href="example.html">Подменю</a>
+          <ul>
+            <li>
+              <a class="menu-nav" href="example.html">Подменю</a>
+              <ul>
+                <li><a href="example.html">Ссылка</a></li>
+                <li><a href="example.html">Ссылка</a></li>
+                <li><a href="example.html">Ссылка</a></li>
+                <li><a href="example.html">Ссылка</a></li>
+              </ul>
+            </li>
+            <li><a href="example.html">Ссылка</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+```
 
-<p>Смотрите наш полный <a class="internal" href="/@api/deki/files/6238/=css_dropdown_menu.html" title="css_dropdown_menu.html">пример выпадающего меню, основанный на CSS</a>.</p>
+Смотрите наш полный [пример выпадающего меню, основанный на CSS](/@api/deki/files/6238/=css_dropdown_menu.html "css_dropdown_menu.html").
 
-<h3 id="Галерея_полноразмерных_изображений_и_превью">Галерея полноразмерных изображений и превью</h3>
+### Галерея полноразмерных изображений и превью
 
-<p>Вы можете использовать псевдокласс <code>:hover</code>, чтобы создать галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши. Посмотрите <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">это демо</a>.</p>
+Вы можете использовать псевдокласс `:hover`, чтобы создать галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши. Посмотрите [это демо](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip").
 
-<div class="note"><strong>Замечания:</strong> Для аналогичного эффекта, но основанного на псевдоклассе<a class="internal" href="/en/CSS/%3Achecked" title="en/CSS/:checked"><code>:checked</code></a> (применяется к скрытым радиокнопкам), смотрите <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">это демо</a>, взятое со страницы <a class="internal" href="/ru/docs/Web/CSS/:checked" title="ru/CSS/:checked">ru/CSS/:checked</a>.</div>
+> **Примечание:** **Замечания:** Для аналогичного эффекта, но основанного на псевдоклассе[`:checked`](/en/CSS/%3Achecked "en/CSS/:checked") (применяется к скрытым радиокнопкам), смотрите [это демо](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), взятое со страницы [ru/CSS/:checked](/ru/docs/Web/CSS/:checked "ru/CSS/:checked").
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,17 +8,18 @@ tags:
   - Ссылки
 translation_of: Web/CSS/grid
 ---
-<h2 id="Общие_сведения">Общие сведения</h2>
+## Общие сведения
 
-<p>Свойство CSS <strong><code>grid</code></strong> является сокращённой формой записи, которая  устанавливает значения для всех явных свойств сетки  (grid)  ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}},  и {{cssxref("grid-template-areas")}}), всех неявных свойств сетки (grid) ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, и {{cssxref("grid-auto-flow")}}), и свойств для промежутков между рядами и столбцами сетки ({{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}) в одной строчке.</p>
+Свойство CSS **`grid`** является сокращённой формой записи, которая устанавливает значения для всех явных свойств сетки (grid) ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, и {{cssxref("grid-template-areas")}}), всех неявных свойств сетки (grid) ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, и {{cssxref("grid-auto-flow")}}), и свойств для промежутков между рядами и столбцами сетки ({{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}) в одной строчке.
 
-<p class="note"><strong>Note:</strong> В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращённых формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращённой формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установлены в сокращённой форме записи.</p>
+> **Примечание:** В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращённых формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращённой формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установлены в сокращённой форме записи.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* &lt;'grid-template'&gt; значения*/
+```css
+/* <'grid-template'> значения*/
 grid: none;
 grid: "a" 100px "b" 1fr;
 grid: [linename1] "a" 100px [linename2];
@@ -27,15 +28,15 @@ grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;
 grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
 
-/* &lt;'grid-template-rows'&gt; /
-   [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;? values */
+/* <'grid-template-rows'> /
+   [ auto-flow && dense? ] <'grid-auto-columns'>? values */
 grid: 200px / auto-flow;
 grid: 30% / auto-flow dense;
 grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
 grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
 
-/* [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? /
-   &lt;'grid-template-columns'&gt; values */
+/* [ auto-flow && dense? ] <'grid-auto-rows'>? /
+   <'grid-template-columns'> values */
 grid: auto-flow / 200px;
 grid: auto-flow dense / 30%;
 grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
@@ -45,71 +46,67 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 grid: inherit;
 grid: initial;
 grid: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;'grid-template'&gt;</code></dt>
- <dd>Определяет {{cssxref("grid-template")}} (шаблон сетки) включая {{cssxref("grid-template-columns")}} (столбцы), {{cssxref("grid-template-rows")}}  (ряды) и {{cssxref("grid-template-areas")}} (области).</dd>
- <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd><p>Устанавливает auto-flow явно задавая  размещение по рядам с помощью  свойства {{cssxref("grid-template-rows")}} (и устанавливая свойство {{cssxref("grid-template-columns")}} в значение <code>none</code>) и уточняет, как должно работать авто-повторение столбцов при помощи свойства {{cssxref("grid-auto-columns")}} (и устанавливая {{cssxref("grid-auto-rows")}} в значение <code>auto</code>). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для столбцов со свойством <code>dense</code> если оно определено.</p>
- <p>Все остальные подсвойства grid сбрасываются в их начальные значения .</p>
- </dd>
- <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Устанавливает auto-flow явно задавая  размещение по столбцам с помощью  свойства {{cssxref("grid-template-columns")}} (и устанавливая свойство {{cssxref("grid-template-rows")}} в значение <code>none</code>) и уточняет, как должно работать авто-повторение рядов при помощи свойства {{cssxref("grid-auto-rows")}} (и устанавливая {{cssxref("grid-auto-columns")}} в значение <code>auto</code>). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для рядов со свойством <code>dense</code> если оно определено.
- <p>Все остальные подсвойства grid сбрасываются в их начальные значения .</p>
- </dd>
-</dl>
+- `<'grid-template'>`
+  - : Определяет {{cssxref("grid-template")}} (шаблон сетки) включая {{cssxref("grid-template-columns")}} (столбцы), {{cssxref("grid-template-rows")}} (ряды) и {{cssxref("grid-template-areas")}} (области).
+- `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
+  - : Устанавливает auto-flow явно задавая размещение по рядам с помощью свойства {{cssxref("grid-template-rows")}} (и устанавливая свойство {{cssxref("grid-template-columns")}} в значение `none`) и уточняет, как должно работать авто-повторение столбцов при помощи свойства {{cssxref("grid-auto-columns")}} (и устанавливая {{cssxref("grid-auto-rows")}} в значение `auto`). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для столбцов со свойством `dense` если оно определено.Все остальные подсвойства grid сбрасываются в их начальные значения .
+- `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
+  - : Устанавливает auto-flow явно задавая размещение по столбцам с помощью свойства {{cssxref("grid-template-columns")}} (и устанавливая свойство {{cssxref("grid-template-rows")}} в значение `none`) и уточняет, как должно работать авто-повторение рядов при помощи свойства {{cssxref("grid-auto-rows")}} (и устанавливая {{cssxref("grid-auto-columns")}} в значение `auto`). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для рядов со свойством `dense` если оно определено.Все остальные подсвойства grid сбрасываются в их начальные значения .
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: grid;
   grid: repeat(2, 60px) / auto-flow 80px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   width: 50px;
   height: 50px;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Example", "100%", 150)}}</p>
+{{EmbedLiveSample("Example", "100%", 150)}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Связанные свойства CSS: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
- <li>Руководство по разметке сетки: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Руководство по разметке сетки: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
-</ul>
+- Связанные свойства CSS: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
+- Руководство по разметке сетки: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Руководство по разметке сетки: _[Grid template areas - Grid definition shorthands](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_

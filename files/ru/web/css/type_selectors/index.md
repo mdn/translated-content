@@ -3,41 +3,42 @@ title: Селектор по типу
 slug: Web/CSS/Type_selectors
 translation_of: Web/CSS/Type_selectors
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Краткое описание</h2>
+## Краткое описание
 
-<p>CSS селекторы по типу выбирают элементы по имени узла. Используются отдельно, поэтому, селектор типа для конкретного имени тега выбирает все элементы этого типа, то есть с этим именем узла в документе.</p>
+CSS селекторы по типу выбирают элементы по имени узла. Используются отдельно, поэтому, селектор типа для конкретного имени тега выбирает все элементы этого типа, то есть с этим именем узла в документе.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element { <em>style properties</em> }
-</pre>
+    element { style properties }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   background-color: DodgerBlue;
   color: #ffffff;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;Здесь тег <em>span</em> с каким-то текстом.&lt;/span&gt;
-&lt;p&gt;Здесь тег <em>p</em> с каким-то текстом.&lt;/p&gt;
-</pre>
+```html
+<span>Здесь тег span с каким-то текстом.</span>
+<p>Здесь тег p с каким-то текстом.</p>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example', 200, 100) }}</p>
+{{ EmbedLiveSample('Example', 200, 100) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

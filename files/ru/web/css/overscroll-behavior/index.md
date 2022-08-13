@@ -5,11 +5,12 @@ tags:
   - CSS
 translation_of: Web/CSS/overscroll-behavior
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">CSS-свойство <strong><code>overscroll-behavior</code></strong> — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.</span></p>
+CSS-свойство **`overscroll-behavior`** — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.
 
-<pre class="brush:css no-line-numbers">/* Значения-ключевые слова */
+```css
+/* Значения-ключевые слова */
 overscroll-behavior: auto; /* по умолчанию */
 overscroll-behavior: contain;
 overscroll-behavior: none;
@@ -21,87 +22,70 @@ overscroll-behavior: auto contain;
 overflow: inherit;
 overflow: initial;
 overflow: unset;
-</pre>
+```
 
-<p>По умолчанию мобильные браузеры, как правило, обеспечивают эффект «отскока» или даже обновляют страницу при достижении её верхней или нижней части (или другой области прокрутки). Возможно, вы также замечали, что когда поверх страницы с прокруткой расположено диалоговое окно с прокруткой, то при достижении границы прокрутки диалогового окна нижележащая страница начинает прокручиваться. Это называется цепочкой прокрутки (scroll chaining, англ.)</p>
+По умолчанию мобильные браузеры, как правило, обеспечивают эффект «отскока» или даже обновляют страницу при достижении её верхней или нижней части (или другой области прокрутки). Возможно, вы также замечали, что когда поверх страницы с прокруткой расположено диалоговое окно с прокруткой, то при достижении границы прокрутки диалогового окна нижележащая страница начинает прокручиваться. Это называется цепочкой прокрутки (scroll chaining, англ.)
 
-<p>В некоторых случаях такое поведение нежелательно. Вы можете использовать <code>overscroll-behavior</code>, чтобы избавиться от нежелательных цепочек прокрутки и поведения страниц браузера по принципу «потяните, чтобы обновить» (pull to refresh, англ.), характерного, например, для приложений Facebook и Twitter.</p>
+В некоторых случаях такое поведение нежелательно. Вы можете использовать `overscroll-behavior`, чтобы избавиться от нежелательных цепочек прокрутки и поведения страниц браузера по принципу «потяните, чтобы обновить» (pull to refresh, англ.), характерного, например, для приложений Facebook и Twitter.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<p>Свойство <code>overscroll-behavior</code> задаётся в виде одного или двух ключевых слов, выбранных из списка значений ниже.</p>
+Свойство `overscroll-behavior` задаётся в виде одного или двух ключевых слов, выбранных из списка значений ниже.
 
-<p>Два ключевых слова определяют значение <code>overscroll-behavior</code> по осям <code>x</code> и <code>y</code> соответственно. Если задано только одно значение, то предполагается, что и <code>x</code>, и <code>y</code> одинаковы.</p>
+Два ключевых слова определяют значение `overscroll-behavior` по осям `x` и `y` соответственно. Если задано только одно значение, то предполагается, что и `x`, и `y` одинаковы.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Поведение по умолчанию.</dd>
- <dt><code>contain</code></dt>
- <dd>Поведение для <code>overscroll-behavior</code> применяется внутри элемента, для которого установлено это значение (например, эффекты «отскока» или обновления), но не возникают цепочки прокрутки для соседних областей прокрутки, например, нижележащие элементы не будут прокручиваться.</dd>
- <dt><code>none</code></dt>
- <dd>Не происходит цепочки прокрутки в соседних областях прокрутки, и по умолчанию предотвращается достижение границы области прокрутки.</dd>
-</dl>
+- `auto`
+  - : Поведение по умолчанию.
+- `contain`
+  - : Поведение для `overscroll-behavior` применяется внутри элемента, для которого установлено это значение (например, эффекты «отскока» или обновления), но не возникают цепочки прокрутки для соседних областей прокрутки, например, нижележащие элементы не будут прокручиваться.
+- `none`
+  - : Не происходит цепочки прокрутки в соседних областях прокрутки, и по умолчанию предотвращается достижение границы области прокрутки.
 
-<h3 id="Formal_syntax">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>В нашем примере <a href="https://mdn.github.io/css-examples/overscroll-behavior/">overscroll-поведения</a> (см. также код по ссылке <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior"></a>) представлен полностраничный список поддельных контактов и диалоговое окно с чатом.</p>
+В нашем примере [overscroll-поведения](https://mdn.github.io/css-examples/overscroll-behavior/) (см. также код по ссылке [](https://github.com/mdn/css-examples/tree/master/overscroll-behavior)) представлен полностраничный список поддельных контактов и диалоговое окно с чатом.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15778/example.png" style="border-style: solid; border-width: 1px; display: block; height: 622px; margin: 0px auto; width: 350px;"></p>
+![](https://mdn.mozillademos.org/files/15778/example.png)
 
-<p>Обе эти области прокручиваются; обычно, если вы прокручиваете окно чата до тех пор, пока не достигнете границы прокрутки, нижележащее окно контактов тоже начнёт прокручиваться, что нежелательно. Предотвратить такое поведение можно, используя <code>overscroll-behavior-y</code> (<code>overscroll-behavior</code> также подойдет) для окна чата, как показано ниже: </p>
+Обе эти области прокручиваются; обычно, если вы прокручиваете окно чата до тех пор, пока не достигнете границы прокрутки, нижележащее окно контактов тоже начнёт прокручиваться, что нежелательно. Предотвратить такое поведение можно, используя `overscroll-behavior-y` (`overscroll-behavior` также подойдет) для окна чата, как показано ниже:
 
-<pre class="brush: css">.messages {
+```css
+.messages {
   height: 220px;
   overflow: auto;
   overscroll-behavior-y: contain;
-} </pre>
+}
+```
 
-<p>Мы также хотим избавиться от стандартного overscroll-эффекта при прокрутке контактов вверх или вниз (например, Chrome на Android обновляет страницу при прокрутке за пределы верхней границы). Это можно предотвратить, установив для элемента {{htmlelement("body")}} значение <code>overscroll-behavior: none</code>:</p>
+Мы также хотим избавиться от стандартного overscroll-эффекта при прокрутке контактов вверх или вниз (например, Chrome на Android обновляет страницу при прокрутке за пределы верхней границы). Это можно предотвратить, установив для элемента {{htmlelement("body")}} значение `overscroll-behavior: none`:
 
-<pre class="brush: css">body {
+```css
+body {
   margin: 0;
   overscroll-behavior: none;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<p>Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только<a href="https://wicg.github.io/overscroll-behavior/">на Github в репозитории WICG</a>.</p>
+Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только[на Github в репозитории WICG](https://wicg.github.io/overscroll-behavior/).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}}</td>
-   <td>{{Spec2('Overscroll Behavior')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                       | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------- |
+| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('Overscroll Behavior')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## См. также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">См. также</h2>
-
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
-</ul>
-
-<p> </p>
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)

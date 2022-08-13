@@ -1,84 +1,77 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
-translation_of: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
+translation_of: Web/CSS/:dir
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>:dir()</code></strong> — это <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <a href="/en-US/docs/Web/CSS">CSS</a>, который выбирает элементы на основе направления текста в них.</p>
+**`:dir()`** — это [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS), который выбирает элементы на основе направления текста в них.
 
-<pre class="brush: css no-line-numbers">/* Выбирает все элементы с текстом справа-налево */
+```css
+/* Выбирает все элементы с текстом справа-налево */
 :dir(rtl) {
   background-color: red;
-}</pre>
+}
+```
 
-<p><code>:dir()</code> учитывает только <em>семантическое </em>направление, т.е. заданное в самом документе. Он не учитывает <em>стилизованное </em>направление, т.е. заданное CSS-правилами, например {{cssxref("direction")}}.</p>
+`:dir()` учитывает только _семантическое_ направление, т.е. заданное в самом документе. Он не учитывает _стилизованное_ направление, т.е. заданное CSS-правилами, например {{cssxref("direction")}}.
 
-<div class="note">
-<p><strong>Примечание:</strong>  помните о том, что псевдокласс <code>:dir()</code> <strong>не эквивалентен</strong> <a href="/ru/docs/Web/CSS/Attribute_selectors">выбору по атрибуту</a> <code>[dir=…]</code>. Последний применяется только к тем элементам HTML, у которых есть атрибут {{htmlattrxref("dir")}}, игнорируя те, у которых он не задан — даже если они унаследовали его значение. (Похожим образом <code>[dir=rtl]</code> и<code>[dir=ltr]</code> не будут включать <code>auto</code>.) <code>:dir()</code>, же, напротив, соответствует значению вычисленному {{glossary("user agent")}}, даже унаследованному.</p>
-</div>
+> **Примечание:** помните о том, что псевдокласс `:dir()` **не эквивалентен** [выбору по атрибуту](/ru/docs/Web/CSS/Attribute_selectors) `[dir=…]`. Последний применяется только к тем элементам HTML, у которых есть атрибут {{htmlattrxref("dir")}}, игнорируя те, у которых он не задан — даже если они унаследовали его значение. (Похожим образом `[dir=rtl]` и`[dir=ltr]` не будут включать `auto`.) `:dir()`, же, напротив, соответствует значению вычисленному {{glossary("user agent")}}, даже унаследованному.
 
-<div class="note">
-<p><strong>Примечание:</strong> В HTML, направление задаётся атрибутом {{htmlattrxref("dir")}}. В других форматах могут использоваться иные методы.</p>
-</div>
+> **Примечание:** В HTML, направление задаётся атрибутом {{htmlattrxref("dir")}}. В других форматах могут использоваться иные методы.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p><code>:dir()</code> требует одного параметра, представляющего желаемое направление.</p>
+`:dir()` требует одного параметра, представляющего желаемое направление.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>ltr</code></dt>
- <dd>Выбирает элементы с направлением текста слева-направо.</dd>
- <dt><code>rtl</code></dt>
- <dd>Выбирает элементы с направлением текста справа-налево.</dd>
-</dl>
+- `ltr`
+  - : Выбирает элементы с направлением текста слева-направо.
+- `rtl`
+  - : Выбирает элементы с направлением текста справа-налево.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:dir(ltr) {
+```css
+:dir(ltr) {
   background-color: yellow;
 }
 
 :dir(rtl) {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Пример') }}</p>
+{{ EmbedLiveSample('Пример') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Языково-специфичные селекторы CSS: {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
-</ul>
+- Языково-специфичные селекторы CSS: {{cssxref(":lang")}}, {{cssxref(":dir")}}

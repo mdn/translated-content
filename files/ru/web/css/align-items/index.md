@@ -3,19 +3,20 @@ title: align-items
 slug: Web/CSS/align-items
 translation_of: Web/CSS/align-items
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <strong><code>align-items</code></strong> выравнивает flex-элементы текущей flex-линии таким же образом, как и <code><a href="/en/CSS/justify-content" title="en/CSS/justify-content">justify-content</a></code>, но в перпендикулярном направлении.</p>
+[CSS](/ru/docs/CSS "CSS") свойство **`align-items`** выравнивает flex-элементы текущей flex-линии таким же образом, как и [`justify-content`](/en/CSS/justify-content "en/CSS/justify-content"), но в перпендикулярном направлении.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Подробнее и больше информации читайте в <a href="https://developer.mozilla.org/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Использование гибких блоков CSS</a>.</p>
+Подробнее и больше информации читайте в [Использование гибких блоков CSS](https://developer.mozilla.org/en/CSS/Using_CSS_flexible_boxes "/en/CSS/Using_CSS_flexible_boxes").
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Align to cross-start */
+```css
+/* Align to cross-start */
 align-items: flex-start;
 
 /* Align to cross-end */
@@ -34,53 +35,45 @@ align-items: stretch;
 align-items: inherit;
 align-items: initial;
 align-items: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Эффект этого ключевого слова зависит от режима макета, в котором мы находимся::
- <ul>
-  <li>В абсолютно позиционированных макетах ключевое слово ведёт себя как <code>start</code> в <em>заменённых</em> абсолютно позиционированных блоках, и как <code>stretch</code> во <em>всех других</em> абсолютно позиционированных блоках.</li>
-  <li>В статическом положении абсолютно позиционированных макетов ключевое слово ведёт себя как <code>stretch</code>.</li>
-  <li>Для гибких элементов ключевое слово ведёт себя как <code>stretch</code>.</li>
-  <li>Для элементов сетки это ключевое слово ведёт к поведению, аналогичному <code>stretch</code>, за исключением полей с соотношением сторон или внутренних размеров, где оно ведёт себя как <code>start</code>.</li>
-  <li>Это свойство не применяется к блокам уровня блока и к ячейкам таблицы.</li>
- </ul>
- </dd>
- <dt><code>flex-start</code></dt>
- <dd>Край поперечного начала края гибкого элемента выровнен с краем поперечного начала линии.</dd>
- <dt><code>flex-end</code></dt>
- <dd>The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.</dd>
- <dt><code>center</code></dt>
- <dd>Внешний отступ полей гибкого элемента центрируется в пределах линии на поперечной оси. Если поперечный размер элемента больше, чем у гибкого контейнера, он будет одинаково переполнен в обоих направлениях.</dd>
- <dt><code>baseline</code></dt>
- <dd>All flex items are aligned such that their baselines align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.</dd>
- <dt><code>stretch</code></dt>
- <dd>Элементы Flex растягиваются, например, поперечный размер поля элемента совпадает с линией при соблюдении ограничений ширины и высоты.</dd>
-</dl>
+- `normal`
+  - : Эффект этого ключевого слова зависит от режима макета, в котором мы находимся::\* В абсолютно позиционированных макетах ключевое слово ведёт себя как `start` в _заменённых_ абсолютно позиционированных блоках, и как `stretch` во _всех других_ абсолютно позиционированных блоках.
+    - В статическом положении абсолютно позиционированных макетов ключевое слово ведёт себя как `stretch`.
+    - Для гибких элементов ключевое слово ведёт себя как `stretch`.
+    - Для элементов сетки это ключевое слово ведёт к поведению, аналогичному `stretch`, за исключением полей с соотношением сторон или внутренних размеров, где оно ведёт себя как `start`.
+    - Это свойство не применяется к блокам уровня блока и к ячейкам таблицы.
+- `flex-start`
+  - : Край поперечного начала края гибкого элемента выровнен с краем поперечного начала линии.
+- `flex-end`
+  - : The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.
+- `center`
+  - : Внешний отступ полей гибкого элемента центрируется в пределах линии на поперечной оси. Если поперечный размер элемента больше, чем у гибкого контейнера, он будет одинаково переполнен в обоих направлениях.
+- `baseline`
+  - : All flex items are aligned such that their baselines align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
+- `stretch`
+  - : Элементы Flex растягиваются, например, поперечный размер поля элемента совпадает с линией при соблюдении ограничений ширины и высоты.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications("css.properties.align-items.grid_context")}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
+### Support in Flex layout
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
+### Support in Grid layout
 
-<p>{{Compat("css.properties.align-items.grid_context")}}</p>
+{{Compat("css.properties.align-items.grid_context")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Использование гибких блоков CSS</a></li>
-</ul>
+- [Использование гибких блоков CSS](/ru/docs/CSS/Using_CSS_flexible_boxes)

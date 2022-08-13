@@ -7,75 +7,73 @@ tags:
   - CSS-свойства
 translation_of: Web/CSS/order
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство  <strong><code>order</code></strong> определяет порядок, используемый для размещения flex элементов в их flex контейнере. Элементы располагаются в восходящем порядке по значению <code>order</code>. Элементы с одинаковым значением <code>order</code>  располагаются в том порядке, в каком они находятся в исходном коде.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`order`** определяет порядок, используемый для размещения flex элементов в их flex контейнере. Элементы располагаются в восходящем порядке по значению `order`. Элементы с одинаковым значением `order` располагаются в том порядке, в каком они находятся в исходном коде.
 
-<div>{{EmbedInteractiveExample("pages/css/order.html")}}</div>
+{{EmbedInteractiveExample("pages/css/order.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Числовые значения, в том числе отрицательные */
+```css
+/* Числовые значения, в том числе отрицательные */
 order: 5;
 order: -5;
 
 /* Глобальные значения */
 order: inherit;
 order: initial;
-order: unset;</pre>
+order: unset;
+```
 
-<div class="note">
-<p><strong>Важно</strong>: <code>order</code> воздействует только на <strong>визуальный порядок</strong> элементов, но не логический порядок или табуляцию. <code><strong>order</strong></code> не должен применяться к невизуальным медиаданным, таким как речь.</p>
-</div>
+> **Примечание:** **Важно**: `order` воздействует только на **визуальный порядок** элементов, но не логический порядок или табуляцию. **`order`** не должен применяться к невизуальным медиаданным, таким как речь.
 
-<p>Посмотрите <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Используем CSS flexible boxes</a> для более подробной информации и дополнительных свойствах.</p>
+Посмотрите [Используем CSS flexible boxes](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) для более подробной информации и дополнительных свойствах.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>Представляет порядковую группу, которая присвоена flex элементу.</dd>
-</dl>
+- `<integer>`
+  - : Представляет порядковую группу, которая присвоена flex элементу.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Имеется базовый отрывок HTML кода:</p>
+Имеется базовый отрывок HTML кода:
 
-<pre class="brush:html;">&lt;header&gt;...&lt;/header&gt;
-&lt;main&gt;
-  &lt;article&gt;Article&lt;/article&gt;
-  &lt;nav&gt;Nav&lt;/nav&gt;
-  &lt;aside&gt;Aside&lt;/aside&gt;
-&lt;/main&gt;
-&lt;footer&gt;...&lt;/footer&gt;</pre>
+```html
+<header>...</header>
+<main>
+  <article>Article</article>
+  <nav>Nav</nav>
+  <aside>Aside</aside>
+</main>
+<footer>...</footer>
+```
 
-<p>Следующий CSS код должен создать классический блок контента окружённый боковыми панелями. Flexible Box Layout Module автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины.</p>
+Следующий CSS код должен создать классический блок контента окружённый боковыми панелями. Flexible Box Layout Module автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины.
 
-<pre class="brush:css;">main { display: flex;  text-align:center; }
-main &gt; article { flex:1;        order: 2; }
-main &gt; nav     { width: 200px;  order: 1; }
-main &gt; aside   { width: 200px;  order: 3; }</pre>
+```css
+main { display: flex;  text-align:center; }
+main > article { flex:1;        order: 2; }
+main > nav     { width: 200px;  order: 1; }
+main > aside   { width: 200px;  order: 3; }
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Пример') }}</p>
+{{ EmbedLiveSample('Пример') }}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/docs/Web/Guide/CSS/Flexible_boxes">Используя CSS flexible boxes</a></li>
-</ul>
+- [Используя CSS flexible boxes](/docs/Web/Guide/CSS/Flexible_boxes)

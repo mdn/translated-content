@@ -3,19 +3,20 @@ title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 translation_of: Web/CSS/scroll-behavior
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p><strong><code>scroll-behavior</code></strong> - CSS-свойство, которое определяет поведение прокрутки для любого элемента на странице. Отрабатывается в момент автоматической прокрутки навигационных элементов, либо CSSOM прокручивается API. Любые другие прокручивания, например, те, которые выполняются пользователем, не затрагиваются этим свойством. Если это свойство указано на корневой элемент, оно относится ко всему <em>viewport</em> пространству.</p>
+**`scroll-behavior`** - CSS-свойство, которое определяет поведение прокрутки для любого элемента на странице. Отрабатывается в момент автоматической прокрутки навигационных элементов, либо CSSOM прокручивается API. Любые другие прокручивания, например, те, которые выполняются пользователем, не затрагиваются этим свойством. Если это свойство указано на корневой элемент, оно относится ко всему _viewport_ пространству.
 
-<p>Юзер-агенты могут игнорировать это свойство.</p>
+Юзер-агенты могут игнорировать это свойство.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Ключевые значения */
+```css
+/* Ключевые значения */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -23,39 +24,40 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
-</pre>
+```
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Стандартное поведение прокрутки без эффекта плавности.</dd>
- <dt><code>smooth</code></dt>
- <dd>Элемент прокручивается плавно; используется функция тайминга, определяемая юзер-агентом через период времени, отмеченный в нем. Юзер-агенты должны следовать соглашениям платформы, если таковые имеются.</dd>
-</dl>
+- `auto`
+  - : Стандартное поведение прокрутки без эффекта плавности.
+- `smooth`
+  - : Элемент прокручивается плавно; используется функция тайминга, определяемая юзер-агентом через период времени, отмеченный в нем. Юзер-агенты должны следовать соглашениям платформы, если таковые имеются.
 
-<h3 id="Синтаксис">Синтаксис</h3>
+### Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#page-1"&gt;1&lt;/a&gt;
-  &lt;a href="#page-2"&gt;2&lt;/a&gt;
-  &lt;a href="#page-3"&gt;3&lt;/a&gt;
-&lt;/nav&gt;
-&lt;scroll-container&gt;
-  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
-&lt;/scroll-container&gt;</pre>
+```html
+<nav>
+  <a href="#page-1">1</a>
+  <a href="#page-2">2</a>
+  <a href="#page-3">3</a>
+</nav>
+<scroll-container>
+  <scroll-page id="page-1">1</scroll-page>
+  <scroll-page id="page-2">2</scroll-page>
+  <scroll-page id="page-3">3</scroll-page>
+</scroll-container>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -84,31 +86,18 @@ scroll-page {
   height: 100%;
   font-size: 5em;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example', "100%", 250) }}</p>
+{{ EmbedLiveSample('Example', "100%", 250) }}
 
-<h2 id="Specifications">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристика</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+| Характеристика                                                                                   | Статус                           | Комментарий           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Initial specification |
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

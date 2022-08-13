@@ -1,48 +1,47 @@
 ---
 title: ':not()'
-slug: 'Web/CSS/:not'
-translation_of: 'Web/CSS/:not'
+slug: Web/CSS/:not
+translation_of: Web/CSS/:not
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p><strong>Отрицательный </strong><a href="/ru/docs/CSS/Pseudo-classes" title="Pseudo-classes">CSS псевдокласс</a>, <code>:not(X)</code> - функция, принимающая простой селектор <var>X</var> в качестве аргумента. Он находит элементы, не соответствующие селектору. <var>X</var> не должен содержать других отрицательных селекторов.</p>
+**Отрицательный** [CSS псевдокласс](/ru/docs/CSS/Pseudo-classes "Pseudo-classes"), `:not(X)` - функция, принимающая простой селектор _X_ в качестве аргумента. Он находит элементы, не соответствующие селектору. _X_ не должен содержать других отрицательных селекторов.
 
-<div class="note"><strong>Замечания:</strong>
+> **Примечание:** **Замечания:\*** С этого псевдокласса можно написать бесполезные селекторы. Например, `:not(*)` найдёт любой элемент, являющийся не любым, то есть правило не применится ни к одному элементу.
+>
+> - Возможно переписать другие правила. Например `foo:not(bar)` найдёт тот же элемент, что и простой `foo`. Тем не менее [специфичность](/ru/docs/CSS/Specificity "Specificity") первого выше.
+> - `:not(foo){} `найдёт что угодно, что не `foo`, **включая {{HTMLElement("html")}} и {{HTMLElement("body")}}.**
+> - Это селектор применяется только к одному элементу. Вы не можете использовать его, чтобы исключить всех родителей. Например, `body :not(table) a` применится к ссылкам внутри таблицы, тогда как {{HTMLElement("tr")}} будет соответствовать `:not()` части селектора.
 
-<ul>
- <li>С этого псевдокласса можно написать бесполезные селекторы. Например, <code>:not(*)</code> найдёт любой элемент, являющийся не любым, то есть правило не применится ни к одному элементу.</li>
- <li>Возможно переписать другие правила. Например <code>foo:not(bar)</code> найдёт тот же элемент, что и простой <code>foo</code>. Тем не менее <a href="/ru/docs/CSS/Specificity" title="Specificity">специфичность</a> первого выше.</li>
- <li><code>:not(foo){} </code>найдёт что угодно, что не <code>foo</code>, <strong>включая {{HTMLElement("html")}} и {{HTMLElement("body")}}.</strong></li>
- <li>Это селектор применяется только к одному элементу. Вы не можете использовать его, чтобы исключить всех родителей. Например, <code>body :not(table) a</code> применится к ссылкам внутри таблицы, тогда как {{HTMLElement("tr")}} будет соответствовать <code>:not()</code> части селектора.</li>
-</ul>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+    :not(selector) { style properties }
 
-<pre class="syntaxbox">:not(selector) { <em>style properties</em> }</pre>
+## Пример
 
-<h2 id="Examples">Пример</h2>
+```css
+p:not(.classy) { color: red; }
+body :not(p) { color: green; }
+```
 
-<pre class="brush: css">p:not(.classy) { color: red; }
-body :not(p) { color: green; }</pre>
+CSS выше и HTML ниже...
 
-<p>CSS выше и HTML ниже...</p>
+```html
+<p>Некоторый текст.</p>
+<p class="classy">Какой-то другой текст.</p>
+<span>Ещё текст<span>
+```
 
-<pre class="brush: html">&lt;p&gt;Некоторый текст.&lt;/p&gt;
-&lt;p class="classy"&gt;Какой-то другой текст.&lt;/p&gt;
-&lt;span&gt;Ещё текст&lt;span&gt;
-</pre>
+Выведет это:
 
-<p>Выведет это:</p>
+{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:not') }}
 
-<p>{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:not') }}</p>
-
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

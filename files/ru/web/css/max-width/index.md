@@ -3,20 +3,21 @@ title: max-width
 slug: Web/CSS/max-width
 translation_of: Web/CSS/max-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="ru/docs/Web/CSS">CSS</a> <strong><code>max-width</code></strong> устанавливает максимальную ширину элемента. Оно предотвращает <a href="/ru/docs/Web/CSS/used_value">используемое значение</a> свойства {{ Cssxref("width") }}  от становления больше, чем значение, указанное для <code>max-width</code>.</p>
+Свойство [CSS](ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
 
-<div>{{EmbedInteractiveExample("pages/css/max-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-width.html")}}
 
-<p>{{ Cssxref("max-width") }} перекрывает {{cssxref("width")}}, но {{ Cssxref("min-width") }} перекрывает {{ Cssxref("max-width") }}.</p>
+{{ Cssxref("max-width") }} перекрывает {{cssxref("width")}}, но {{ Cssxref("min-width") }} перекрывает {{ Cssxref("max-width") }}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; значение */
+```css
+/* <length> значение */
 max-width: 3.5em;
 
-/* &lt;percentage&gt; значение */
+/* <percentage> значение */
 max-width: 75%;
 
 /* Значения-ключевые слова */
@@ -30,49 +31,46 @@ max-width: fill-available;
 max-width: inherit;
 max-width: initial;
 max-width: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Максимальная ширина выражается как {{cssxref("&lt;length&gt;")}}.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Максимальная ширина выражается как {{cssxref("&lt;percentage&gt;")}} от ширины родительского блока.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Максимальная ширина выражается как {{cssxref("&lt;length&gt;")}}.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Максимальная ширина выражается как {{cssxref("&lt;percentage&gt;")}} от ширины родительского блока.
 
-<h4 id="Значения-ключевые_слова">Значения-ключевые слова</h4>
+#### Значения-ключевые слова
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Ширина не имеет максимального значения. (по умолчанию)</dd>
- <dt><code>max-content</code>{{experimental_inline()}}</dt>
- <dd>Внутренняя предпочтительная ширина.</dd>
- <dt><code>min-content</code>{{experimental_inline()}}</dt>
- <dd>Внутренняя минимальная ширина.</dd>
- <dt><code>fill-available</code>{{experimental_inline()}}</dt>
- <dd>Ширина родительского блока минус горизонтальные <code>margin</code>, <code>border</code>, и <code>padding</code>. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., <code>available</code>.)</dd>
- <dt><code>fit-content</code>{{experimental_inline()}}</dt>
- <dd>То же что и <code>max-content.</code></dd>
-</dl>
+- `none`
+  - : Ширина не имеет максимального значения. (по умолчанию)
+- `max-content`{{experimental_inline()}}
+  - : Внутренняя предпочтительная ширина.
+- `min-content`{{experimental_inline()}}
+  - : Внутренняя минимальная ширина.
+- `fill-available`{{experimental_inline()}}
+  - : Ширина родительского блока минус горизонтальные `margin`, `border`, и `padding`. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `available`.)
+- `fit-content`{{experimental_inline()}}
+  - : То же что и `max-content.`
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В этом примере, "child" будет иметь ширину 150 пикселей или ширину "parent", в зависимости от того, что меньше:</p>
+В этом примере, "child" будет иметь ширину 150 пикселей или ширину "parent", в зависимости от того, что меньше:
 
-<div id="basic-max-width-demo">
-<pre class="brush: html">&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
+```html
+<div id="parent">
+  <div id="child">
     Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   background: lightblue;
   width: 300px;
 }
@@ -82,22 +80,22 @@ max-width: unset;
   width: 100%;
   max-width: 150px;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}</p>
+{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}
 
-<p>Значение <code>fit-content</code> можно использовать для установки ширины элемента на основе внутреннего размера, требуемого его содержимым:</p>
+Значение `fit-content` можно использовать для установки ширины элемента на основе внутреннего размера, требуемого его содержимым:
 
-<div id="fit-content-demo">
-<pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
-    &lt;div id="child"&gt;
+```html
+<div id="parent">
+    <div id="child">
         Child Text
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   background: lightblue;
   width: 300px;
 }
@@ -108,32 +106,28 @@ max-width: unset;
   max-width: -moz-fit-content;
   max-width: -webkit-fit-content;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("fit-content-demo", 400, 100)}}</p>
+{{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Убедитесь, что элементы с <code>max-width</code> не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста. </p>
+Убедитесь, что элементы с `max-width` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}</li>
- <li><a href="/en-US/docs/CSS/box_model" title="en/CSS/box_model">Блочная модель</a>, {{ Cssxref("box-sizing") }}</li>
-</ul>
+## Смотрите также
+
+- {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
+- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}

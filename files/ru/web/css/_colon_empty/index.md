@@ -1,6 +1,6 @@
 ---
 title: ':empty'
-slug: 'Web/CSS/:empty'
+slug: Web/CSS/:empty
 tags:
   - CSS
   - CSS Pseudo-class
@@ -8,22 +8,22 @@ tags:
   - Reference
   - Web
   - Псевдоклассы
-translation_of: 'Web/CSS/:empty'
+translation_of: Web/CSS/:empty
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>{{ Cssxref("pseudo-classes", "Псевдокласс") }} <code>:empty</code> находит любой элемент, у которого нет потомков. Учитываются элементы и текст (включая пробелы). Комментарии не повлияют на то, что элемент будет рассматриваться как не пустой.</p>
+{{ Cssxref("pseudo-classes", "Псевдокласс") }} `:empty` находит любой элемент, у которого нет потомков. Учитываются элементы и текст (включая пробелы). Комментарии не повлияют на то, что элемент будет рассматриваться как не пустой.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">&lt;element&gt;:empty { <em>/* стили</em> */ }
-</pre>
+    <element>:empty { /* стили */ }
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">.box {
+```css
+.box {
   background: red;
   height: 200px;
   width: 200px;
@@ -32,18 +32,20 @@ translation_of: 'Web/CSS/:empty'
 .box:empty {
   background: lime;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;!-- Я буду лаймовым --&gt;&lt;/div&gt;
-&lt;div class="box"&gt;Я буду красным&lt;/div&gt;
-&lt;div class="box"&gt;
-    &lt;!-- Я буду красным, так как перед комментарием стоят пробелы --&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box"><!-- Я буду лаймовым --></div>
+<div class="box">Я буду красным</div>
+<div class="box">
+    <!-- Я буду красным, так как перед комментарием стоят пробелы -->
+</div>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

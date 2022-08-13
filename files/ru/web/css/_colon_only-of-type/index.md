@@ -1,65 +1,66 @@
 ---
 title: ':only-of-type'
-slug: 'Web/CSS/:only-of-type'
+slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - Псевдоклассы
-translation_of: 'Web/CSS/:only-of-type'
+translation_of: Web/CSS/:only-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:only-of-type</code>  выбирает такой элемент, который является единственным потомком такого типа.</p>
+[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:only-of-type` выбирает такой элемент, который является единственным потомком такого типа.
 
-<pre class="brush: css">/* Выбирает все &lt;p&gt;, которые являются */
-/* единственным потомками типа &lt;p&gt; */
+```css
+/* Выбирает все <p>, которые являются */
+/* единственным потомками типа <p> */
 p:only-of-type {
   background-color: lime;
 }
-</pre>
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;Я `div` №1.&lt;/div&gt;
-  &lt;p&gt;Я тут единственный `p` элемент.&lt;/p&gt;
-  &lt;div&gt;Я `div` №2.&lt;/div&gt;
-  &lt;div&gt;Я `div` №3.
-    &lt;i&gt;Я единственный потомок типа `i`.&lt;/i&gt;
-    &lt;em&gt;Я `em` №1.&lt;/em&gt;
-    &lt;em&gt;Я `em` №2.&lt;/em&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+```html
+<main>
+  <div>Я `div` №1.</div>
+  <p>Я тут единственный `p` элемент.</p>
+  <div>Я `div` №2.</div>
+  <div>Я `div` №3.
+    <i>Я единственный потомок типа `i`.</i>
+    <em>Я `em` №1.</em>
+    <em>Я `em` №2.</em>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main :only-of-type {
+```css
+main :only-of-type {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Пример', '', '', '', 'Web/CSS/:only-of-type')}}</p>
+{{EmbedLiveSample('Пример', '', '', '', 'Web/CSS/:only-of-type')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{Cssxref(":nth-of-type")}}, {{Cssxref(":first-of-type")}}, {{Cssxref(":last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-of-type")}}, {{Cssxref(":first-of-type")}}, {{Cssxref(":last-of-type")}}

@@ -8,17 +8,18 @@ tags:
   - справочник
 translation_of: Web/CSS/margin-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>margin-top</code></strong> <a href="/ru/CSS" title="CSS">CSS</a> определяет <a href="/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">внешний отступ</a> в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.</p>
+Свойство **`margin-top`** [CSS](/ru/CSS "CSS") определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-<p>Это свойство не имеет эффекта на <em>незамещаемых</em> (<em>non-<a href="/ru/docs/Web/CSS/Замещаемый_элемент">replaced</a></em>) строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.</p>
+Это свойство не имеет эффекта на _незамещаемых_ (_non-[replaced](/ru/docs/Web/CSS/Замещаемый_элемент)_) строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* значения &lt;length&gt; */
+```css
+/* значения <length> */
 margin-top: 10px;  /* абсолютное значение */
 margin-top: 1em;   /* относительно размера текста */
 margin-top: 5%;    /* относительно ширины ближайшего контейнера */
@@ -30,68 +31,43 @@ margin-top: auto;
 margin-top: inherit;
 margin-top: initial;
 margin-top: unset;
-</pre>
+```
 
-<p>Свойство <code>margin-top</code> может принимать значение <code>auto,</code> <code>&lt;length&gt;</code> или <code>&lt;percentage&gt;</code>. Эти значения могут быть положительные, отрицательные или равны нулю.</p>
+Свойство `margin-top` может принимать значение `auto,` `<length>` или `<percentage>`. Эти значения могут быть положительные, отрицательные или равны нулю.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Значение margin является фиксированной величиной</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Значение margin выражается в процентах по отношению к <em>ширине </em>блока, содержащего элемент.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер выбирает подходящее значение для использования. Смотри {{cssxref("margin")}}.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Значение margin является фиксированной величиной
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Значение margin выражается в процентах по отношению к _ширине_ блока, содержащего элемент.
+- `auto`
+  - : Браузер выбирает подходящее значение для использования. Смотри {{cssxref("margin")}}.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:css;">.content { margin-top:   5%; }
+```css
+.content { margin-top:   5%; }
 .sidebox { margin-top: 10px; }
 .logo    { margin-top: -5px; }
 #footer  { margin-top:  1em; }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Никаких существенных изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Определяет <code>margin-top</code> как анимационный.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Устраняет его влияние на строковые (inline) элементы.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-top', 'margin-top')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                   | Comment                                               |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Никаких существенных изменений                        |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | Определяет `margin-top` как анимационный.             |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | Устраняет его влияние на строковые (inline) элементы. |
+| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Начальное определение                                 |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Совместимость с браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
+
+{{Compat}}

@@ -1,48 +1,50 @@
 ---
 title: ':last-child'
-slug: 'Web/CSS/:last-child'
-translation_of: 'Web/CSS/:last-child'
+slug: Web/CSS/:last-child
+translation_of: Web/CSS/:last-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <code>:last-child</code> находит любой элемент, являющийся последним в его родителе.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:last-child` находит любой элемент, являющийся последним в его родителе.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element:last-child { <em>style properties</em> }</pre>
+    element:last-child { style properties }
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Этот элемент не лаймовый.&lt;/li&gt;
-  &lt;li&gt;И этот тоже.&lt;/li&gt;
-  &lt;li&gt;А этот да! :)&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Этот элемент не лаймовый.</li>
+  <li>И этот тоже.</li>
+  <li>А этот да! :)</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li:last-child {
+```css
+li:last-child {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Пример', '100%', 100)}}</p>
+{{EmbedLiveSample('Пример', '100%', 100)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref(":first-child")}}</li>
- <li>{{cssxref(":nth-child")}}</li>
- <li>{{cssxref(":last-of-type")}}</li>
-</ul>
+- {{cssxref(":first-child")}}
+- {{cssxref(":nth-child")}}
+- {{cssxref(":last-of-type")}}

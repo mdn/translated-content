@@ -1,43 +1,43 @@
 ---
 title: ':first'
-slug: 'Web/CSS/:first'
+slug: Web/CSS/:first
 tags:
   - '@page'
   - CSS
   - Псевдо-класс
   - Разметка
-translation_of: 'Web/CSS/:first'
+translation_of: Web/CSS/:first
 ---
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:first`** используется с @-правилом {{cssxref("@page")}}, представляя первую страницу документа при печати.
 
-
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">псевдокласс</a> <strong><code>:first</code></strong> используется с @-правилом  {{cssxref("@page")}}, представляя первую страницу документа при печати.</p>
-
-<pre class="brush: css no-line-numbers">/* Выбирает первую страницу при печати */
+```css
+/* Выбирает первую страницу при печати */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Обратите внимание:</strong> Вы можете изменять не все CSS-свойства в этом псевдоклассе. Вы можете изменять только внешние отступы, {{cssxref("orphans")}}, {{cssxref("widows")}}, и разбитие документа на страницы. Более того, вы можете использовать только <a href="/en-US/docs/Web/CSS/размер#Абсолютные_единицы_измерения_размера">абсолютные единицы измерения</a>, определяя внешние отступы. Все остальные правила будут проигнорированы.</p>
-</div>
+> **Примечание:** **Обратите внимание:** Вы можете изменять не все CSS-свойства в этом псевдоклассе. Вы можете изменять только внешние отступы, {{cssxref("orphans")}}, {{cssxref("widows")}}, и разбитие документа на страницы. Более того, вы можете использовать только [абсолютные единицы измерения](/ru/docs/Web/CSS/размер#Абсолютные_единицы_измерения_размера), определяя внешние отступы. Все остальные правила будут проигнорированы.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Первая страница.&lt;/p&gt;
-&lt;p&gt;Вторая страница.&lt;/p&gt;
-&lt;button&gt;Напечатать&lt;/button&gt;
-</pre>
+```html
+<p>Первая страница.</p>
+<p>Вторая страница.</p>
+<button>Напечатать</button>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@page :first {
+```css
+@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
@@ -45,34 +45,31 @@ translation_of: 'Web/CSS/:first'
 p {
   page-break-after: always;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector("button").onclick = function () {
+```js
+document.querySelector("button").onclick = function () {
   window.print();
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>Нажмите кнопку "Напечатать", чтобы напечатать пример. Слова на первой странице должны быть примерно в центре, тогда как на остальных страницах надписи будут на своих обычных местах.</p>
+Нажмите кнопку "Напечатать", чтобы напечатать пример. Слова на первой странице должны быть примерно в центре, тогда как на остальных страницах надписи будут на своих обычных местах.
 
-<p>{{ EmbedLiveSample('Example', '80%', '150px') }}</p>
+{{ EmbedLiveSample('Example', '80%', '150px') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также
 
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{Cssxref("@page")}}</li>
- <li>Другие связанные псевдоклассы: {{Cssxref(":left")}}, {{Cssxref(":right")}}</li>
-</ul>
+- {{Cssxref("@page")}}
+- Другие связанные псевдоклассы: {{Cssxref(":left")}}, {{Cssxref(":right")}}

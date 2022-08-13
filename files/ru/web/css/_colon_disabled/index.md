@@ -1,81 +1,78 @@
 ---
 title: ':disabled'
-slug: 'Web/CSS/:disabled'
+slug: Web/CSS/:disabled
 tags:
   - Псевдо-класс
-translation_of: 'Web/CSS/:disabled'
+translation_of: Web/CSS/:disabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:disabled</code> находит любой отключённый элемент. Элемент отключён, если не может быть активирован (например, его нельзя выбрать, нажать на него или ввести текст) или получить фокус. У элемента также есть включённое состояние, когда его можно активировать или сфокусировать.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:disabled` находит любой отключённый элемент. Элемент отключён, если не может быть активирован (например, его нельзя выбрать, нажать на него или ввести текст) или получить фокус. У элемента также есть включённое состояние, когда его можно активировать или сфокусировать.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пример_селекторов">Пример селекторов</h3>
+### Пример селекторов
 
-<dl>
- <dt>input:disabled</dt>
- <dd>Выберет все отключённые поля ввода</dd>
- <dt>select.country:disabled</dt>
- <dd>Найдёт все отключённые <code>select</code> элементы с классом <code>country</code></dd>
-</dl>
+- input:disabled
+  - : Выберет все отключённые поля ввода
+- select.country:disabled
+  - : Найдёт все отключённые `select` элементы с классом `country`
 
-<h3 id="Пример_использования">Пример использования</h3>
+### Пример использования
 
-<p>Следующий CSS:</p>
+Следующий CSS:
 
-<pre class="brush: css">input[type="text"]:disabled { background: #ccc; }
-</pre>
+```css
+input[type="text"]:disabled { background: #ccc; }
+```
 
-<p>Применим к этому HTML5 фрагменту:</p>
+Применим к этому HTML5 фрагменту:
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Адрес доставки&lt;/legend&gt;
-    &lt;input type="text" placeholder="Имя"&gt;
-    &lt;input type="text" placeholder="Адрес"&gt;
-    &lt;input type="text" placeholder="Почтовый индекс"&gt;
-  &lt;/fieldset&gt;
-  &lt;fieldset id="billing"&gt;
-    &lt;legend&gt;Адрес оплаты&lt;/legend&gt;
-    &lt;label for="billing_is_shipping"&gt;Такой же как адрес доставки:&lt;/label&gt;
-    &lt;input type="checkbox" onchange="javascript:toggleBilling()" checked&gt;
-    &lt;br /&gt;
-    &lt;input type="text" placeholder="Имя" disabled&gt;
-    &lt;input type="text" placeholder="Адрес" disabled&gt;
-    &lt;input type="text" placeholder="Почтовый индекс" disabled&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="#">
+  <fieldset>
+    <legend>Адрес доставки</legend>
+    <input type="text" placeholder="Имя">
+    <input type="text" placeholder="Адрес">
+    <input type="text" placeholder="Почтовый индекс">
+  </fieldset>
+  <fieldset id="billing">
+    <legend>Адрес оплаты</legend>
+    <label for="billing_is_shipping">Такой же как адрес доставки:</label>
+    <input type="checkbox" onchange="javascript:toggleBilling()" checked>
+    <br />
+    <input type="text" placeholder="Имя" disabled>
+    <input type="text" placeholder="Адрес" disabled>
+    <input type="text" placeholder="Почтовый индекс" disabled>
+  </fieldset>
+</form>
+```
 
-<p>Добавим немного javascript:</p>
+Добавим немного javascript:
 
-<pre class="brush: js">function toggleBilling() {
+```js
+function toggleBilling() {
   var billingItems = document.querySelectorAll('#billing input[type="text"]');
-  for (var i = 0; i &lt; billingItems.length; i++) {
+  for (var i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
   }
 }
-</pre>
+```
 
-<p>Результатом будет отключение всех полей в группе адреса оплаты и окраска их в серый цвет.</p>
+Результатом будет отключение всех полей в группе адреса оплаты и окраска их в серый цвет.
 
-<p>{{EmbedLiveSample('Пример_использования', '300px', '250px', '', 'Web/CSS/:disabled')}}</p>
+{{EmbedLiveSample('Пример_использования', '300px', '250px', '', 'Web/CSS/:disabled')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>
-  <p>{{Cssxref(":enabled")}}</p>
- </li>
-</ul>
+- {{Cssxref(":enabled")}}

@@ -1,71 +1,67 @@
 ---
 title: '::grammar-error'
-slug: 'Web/CSS/::grammar-error'
+slug: Web/CSS/::grammar-error
 tags:
   - CSS
   - Псевдо-элемент
   - Экспериментальные
   - селектор
-translation_of: 'Web/CSS/::grammar-error'
+translation_of: Web/CSS/::grammar-error
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en/CSS/Pseudo-elements">псевдо-элемент</a> <strong><code>::grammar-error</code></strong>  представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.</p>
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
 
-<h2 id="Доступные_свойства">Доступные свойства</h2>
+## Доступные свойства
 
-<p>Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом <code>::grammar-error</code> :</p>
+Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::grammar-error` :
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("cursor")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li>{{cssxref("outline")}} и его полные формы</li>
- <li>{{cssxref("text-decoration")}} и связанные свойства</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
+- {{cssxref("caret-color")}}
+- {{cssxref("outline")}} и его полные формы
+- {{cssxref("text-decoration")}} и связанные свойства
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-shadow")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">::grammar-error</pre>
+    ::grammar-error
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простая_проверка_грамматики_документа">Простая проверка грамматики документа</h3>
+### Простая проверка грамматики документа
 
-<p>В этом примере браузеры, поддерживающие псевдоэлемент, выделят грамматические ошибки, применив к ним заданные стили.</p>
+В этом примере браузеры, поддерживающие псевдоэлемент, выделят грамматические ошибки, применив к ним заданные стили.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;My friends is coming to the party tonight.&lt;/p&gt;</pre>
+```html
+<p>My friends is coming to the party tonight.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">::grammar-error  {
+```css
+::grammar-error  {
   text-decoration: underline red;
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Простая_проверка_грамматики_документа', '100%', 60)}}</p>
+{{EmbedLiveSample('Простая_проверка_грамматики_документа', '100%', 60)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{cssxref("::spelling-error")}}</li>
-</ul>
+- {{cssxref("::spelling-error")}}

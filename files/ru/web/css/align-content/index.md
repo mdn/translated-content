@@ -3,19 +3,20 @@ title: align-content
 slug: Web/CSS/align-content
 translation_of: Web/CSS/align-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство {{cssxRef('', 'CSS')}} <strong><code>align-content</code></strong> устанавливает распределение пространства между и вокруг элементами контента вдоль поперечной оси {{cssxRef('CSS_Flexible_Box_Layout', 'flexbox')}} контейнера или вдоль блочной оси {{cssxRef('CSS_Grid_Layout', 'grid')}} контейнера.</p>
+Свойство {{cssxRef('', 'CSS')}} **`align-content`** устанавливает распределение пространства между и вокруг элементами контента вдоль поперечной оси {{cssxRef('CSS_Flexible_Box_Layout', 'flexbox')}} контейнера или вдоль блочной оси {{cssxRef('CSS_Grid_Layout', 'grid')}} контейнера.
 
-<p>The interactive example below use Grid Layout to demonstrate some of the values of this property.</p>
+The interactive example below use Grid Layout to demonstrate some of the values of this property.
 
-<div>{{EmbedInteractiveExample("pages/css/align-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-content.html")}}
 
-<p>Это свойство не влияет на однострочные flex-контейнеры (т.е. с <code>flex-wrap: nowrap</code>)</p>
+Это свойство не влияет на однострочные flex-контейнеры (т.е. с `flex-wrap: nowrap`)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* Основное позиционное выравнивание */
+```css
+/* Основное позиционное выравнивание */
 /* align-content не принимает значения left и right */
 align-content: center;     /* Расположить элементы вокруг центра */
 align-content: start;      /* Расположить элементы в начале */
@@ -52,54 +53,51 @@ align-content: unsafe center;
 align-content: inherit;
 align-content: initial;
 align-content: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Элементы расположены вплотную друг к другу, прижавшись к началу контейнера выравнивания по поперечной оси.</dd>
- <dt><code>end</code></dt>
- <dd>Элементы расположены вплотную друг к другу, прижавшись к концу контейнера выравнивания по поперечной оси.</dd>
- <dt><code>flex-start</code></dt>
- <dd>Элементы расположены вплотную друг к другу, прижавшись к краю контейнера выравнивания в зависимости от поперечной стороны начала (cross-start) контейнера flex.<br>
- Это относится только к элементам макета flex. Для элементов, которые не являются потомками flex контейнера, это значение трактуется как <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>Элементы расположены вплотную друг к другу, прижавшись к краю контейнера выравнивания в зависимости от поперечной стороны конца (cross-end) контейнера flex.<br>
- Это относится только к элементам макета flex. Для элементов, которые не являются потомками flex контейнера, это значение трактуется как <code>end</code>.</dd>
- <dt><code>center</code></dt>
- <dd>Элементы расположены вплотную друг к другу в центре контейнера выравнивания по поперечной оси.</dd>
- <dt><code>normal</code></dt>
- <dd>Элементы расположены в их дефолтной позиции как если бы <code>align-content</code> не было определено.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd><p><img alt="базовая линия - это линия, на которой «сидит» большинство букв и ниже которой располагаются нижние выносные элементы (свисания)." src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png" style="height: 110px; width: 410px;"></p>
- <p>Определяет участие в выравнивании первой или последней базовой линии: выравнивает базовую линию выравнивания первого или последнего базового набора блока с соответствующей базовой линией в общем первом или последнем базовом наборе всех блоков в его группе совместного использования базовой линии.<br>
- Резервное выравнивание для <code>first baseline</code> равно <code>start</code>, для <code>last baseline</code> - <code>end</code>.</p>
- <dt><code>space-between</code></dt>
- <dd>Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних элементов одинаков. Первый элемент находится на одном уровне с начальной кромкой контейнера выравнивания на поперечной оси, а последний элемент находится на одном уровне с конечной кромкой контейнера выравнивания на поперечной оси.</dd>
- <dt><code>space-around</code></dt>
- <dd>Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних предметов одинаков. Пустое пространство до первого и после последнего элемента равно половине пространства между каждой парой смежных элементов.</dd>
- <dt><code>space-evenly</code></dt>
- <dd>Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних элементов, начальным краем и первым элементом, а также конечным краем и последним элементом абсолютно одинаков.</dd>
- <dt><code>stretch</code></dt>
- <dd>Если объединённый размер элементов вдоль поперечной оси меньше размера контейнера выравнивания, размер любого <code>auto</code>-размерного элемента увеличивается одинаково (не пропорционально), но при этом соблюдаются ограничения, налагаемые {{cssxRef('max-height')}}/{{cssxRef('max-width')}} (или эквивалентной функциональности), так что объединённый размер точно заполняет контейнер выравнивания вдоль поперечной оси.</dd>
- <dt><code>safe</code></dt>
- <dd>Используется вместе с ключевым словом выравнивания. Если выбранное ключевое слово означает, что элемент переполняет контейнер выравнивания, что приводит к потере данных, вместо этого элемент выравнивается, как если бы режим выравнивания был <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Используется вместе с ключевым словом выравнивания. Независимо от относительных размеров элемента и контейнера выравнивания и от того, может ли произойти переполнение, которое приводит к потере данных, данное значение выравнивания учитывается.</dd>
-</dl>
+- `start`
+  - : Элементы расположены вплотную друг к другу, прижавшись к началу контейнера выравнивания по поперечной оси.
+- `end`
+  - : Элементы расположены вплотную друг к другу, прижавшись к концу контейнера выравнивания по поперечной оси.
+- `flex-start`
+  - : Элементы расположены вплотную друг к другу, прижавшись к краю контейнера выравнивания в зависимости от поперечной стороны начала (cross-start) контейнера flex.
+    Это относится только к элементам макета flex. Для элементов, которые не являются потомками flex контейнера, это значение трактуется как `start`.
+- `flex-end`
+  - : Элементы расположены вплотную друг к другу, прижавшись к краю контейнера выравнивания в зависимости от поперечной стороны конца (cross-end) контейнера flex.
+    Это относится только к элементам макета flex. Для элементов, которые не являются потомками flex контейнера, это значение трактуется как `end`.
+- `center`
+  - : Элементы расположены вплотную друг к другу в центре контейнера выравнивания по поперечной оси.
+- `normal`
+  - : Элементы расположены в их дефолтной позиции как если бы `align-content` не было определено.
+- `baseline first baseline`
+  `last baseline`
+  - : ![базовая линия - это линия, на которой «сидит» большинство букв и ниже которой располагаются нижние выносные элементы (свисания).](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png)Определяет участие в выравнивании первой или последней базовой линии: выравнивает базовую линию выравнивания первого или последнего базового набора блока с соответствующей базовой линией в общем первом или последнем базовом наборе всех блоков в его группе совместного использования базовой линии.
+    Резервное выравнивание для `first baseline` равно `start`, для `last baseline` - `end`.
+- `space-between`
+  - : Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних элементов одинаков. Первый элемент находится на одном уровне с начальной кромкой контейнера выравнивания на поперечной оси, а последний элемент находится на одном уровне с конечной кромкой контейнера выравнивания на поперечной оси.
+- `space-around`
+  - : Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних предметов одинаков. Пустое пространство до первого и после последнего элемента равно половине пространства между каждой парой смежных элементов.
+- `space-evenly`
+  - : Элементы равномерно распределены внутри контейнера выравнивания вдоль поперечной оси. Интервал между каждой парой соседних элементов, начальным краем и первым элементом, а также конечным краем и последним элементом абсолютно одинаков.
+- `stretch`
+  - : Если объединённый размер элементов вдоль поперечной оси меньше размера контейнера выравнивания, размер любого `auto`-размерного элемента увеличивается одинаково (не пропорционально), но при этом соблюдаются ограничения, налагаемые {{cssxRef('max-height')}}/{{cssxRef('max-width')}} (или эквивалентной функциональности), так что объединённый размер точно заполняет контейнер выравнивания вдоль поперечной оси.
+- `safe`
+  - : Используется вместе с ключевым словом выравнивания. Если выбранное ключевое слово означает, что элемент переполняет контейнер выравнивания, что приводит к потере данных, вместо этого элемент выравнивается, как если бы режим выравнивания был `start`.
+- `unsafe`
+  - : Используется вместе с ключевым словом выравнивания. Независимо от относительных размеров элемента и контейнера выравнивания и от того, может ли произойти переполнение, которое приводит к потере данных, данное значение выравнивания учитывается.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
@@ -116,7 +114,7 @@ align-content: unset;
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -163,64 +161,63 @@ select {
 .row {
   margin-top: 10px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-content: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-    &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-    &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
+<div class="row">
+  <label for="values">align-content: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="stretch">stretch</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+    <option value="space-evenly">space-evenly</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="baseline">baseline</option>
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<div class="hidden">
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -231,31 +228,27 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример', 260, 290)}}</p>
+{{EmbedLiveSample('Пример', 260, 290)}}
 
-<h2 id="Спецификации">Спецификации</h2>
-
-{{Specifications("css.properties.align-content.grid_context")}}
+## Спецификации
 
 {{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications("css.properties.align-content.grid_context")}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
+### Support in Flex layout
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
+### Support in Grid layout
 
-<p>{{Compat("css.properties.align-content.grid_context")}}</p>
+{{Compat("css.properties.align-content.grid_context")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="../../CSS/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">Использование гибких блоков CSS</a></li>
-</ul>
+- [Использование гибких блоков CSS](../../CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes")

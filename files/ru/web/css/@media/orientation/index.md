@@ -3,39 +3,37 @@ title: Ориентация
 slug: Web/CSS/@media/orientation
 translation_of: Web/CSS/@media/orientation
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">медиа-функции</a> <strong><code>orientation</code></strong> может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для <a href="/en-US/docs/Web/CSS/Paged_media">медийных страниц</a>).</p>
+[CSS](/ru/docs/CSS) [медиа-функции](/ru/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`orientation`** может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для [медийных страниц](/ru/docs/Web/CSS/Paged_media)).
 
-<div class="note">
-<p><strong>Примечание:</strong> Эта функция не соответствует ориентации <em>устройства</em>. Открытие программной клавиатуры на многих устройствах в книжной ориентации приведёт к тому, что область просмотра станет шире, чем высокая, в результате чего браузер будет использовать альбомные стили вместо портретного.</p>
-</div>
+> **Примечание:** Эта функция не соответствует ориентации _устройства_. Открытие программной клавиатуры на многих устройствах в книжной ориентации приведёт к тому, что область просмотра станет шире, чем высокая, в результате чего браузер будет использовать альбомные стили вместо портретного.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Функция <code>orientation</code> указывается в качестве значения ключевого слова, выбранного из списка ниже.</p>
+Функция `orientation` указывается в качестве значения ключевого слова, выбранного из списка ниже.
 
-<h3 id="Значения_ключевых_слов">Значения ключевых слов</h3>
+### Значения ключевых слов
 
-<dl>
- <dt><code>portrait</code></dt>
- <dd>Окно просмотра находится в портретной ориентации, то есть высота больше или равна ширине.</dd>
- <dt><code>landscape</code></dt>
- <dd>Окно просмотра находится в альбомной ориентации, то есть ширина больше высоты.</dd>
-</dl>
+- `portrait`
+  - : Окно просмотра находится в портретной ориентации, то есть высота больше или равна ширине.
+- `landscape`
+  - : Окно просмотра находится в альбомной ориентации, то есть ширина больше высоты.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Вставка 1&lt;/div&gt;
-&lt;div&gt;Вставка 2&lt;/div&gt;
-&lt;div&gt;Вставка 3&lt;/div&gt;
-</pre>
+```html
+<div>Вставка 1</div>
+<div>Вставка 2</div>
+<div>Вставка 3</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   display: flex;
 }
 
@@ -53,38 +51,20 @@ div {
   body {
     flex-direction: column;
   }
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Бе изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                                   | Комментарий            |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------- |
+| {{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS4 Media Queries')}} | Бе изменений.          |
+| {{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS3 Media Queries')}} | Начальное определение. |
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

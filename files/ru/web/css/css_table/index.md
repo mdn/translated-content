@@ -8,44 +8,27 @@ tags:
   - Overview
 translation_of: Web/CSS/CSS_Table
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Table</strong> - модуль в CSS, который определяет, как размещать данные в таблицах.</p>
+**CSS Table** - модуль в CSS, который определяет, как размещать данные в таблицах.
 
-<h2 id="Справка">Справка</h2>
+## Справка
 
-<h3 id="Свойства">Свойства</h3>
+### Свойства
 
-<div class="index">
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-spacing")}}</li>
- <li>{{cssxref("caption-side")}}</li>
- <li>{{cssxref("empty-cells")}}</li>
- <li>{{cssxref("table-layout")}}</li>
- <li>{{cssxref("vertical-align")}}</li>
-</ul>
-</div>
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-spacing")}}
+- {{cssxref("caption-side")}}
+- {{cssxref("empty-cells")}}
+- {{cssxref("table-layout")}}
+- {{cssxref("vertical-align")}}
 
-<h2 id="Руководства">Руководства</h2>
+## Руководства
 
-<p><em>Нет.</em></p>
+_Нет._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS2.1", "tables.html")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                    | Status                   | Comment            |
+| ------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |

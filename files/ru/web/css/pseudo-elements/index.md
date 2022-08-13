@@ -8,95 +8,87 @@ tags:
   - Селекторы
 translation_of: Web/CSS/Pseudo-elements
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Псевдоэлемент</strong> в CSS — <dfn>это ключевое слово, добавляемое к селектору,</dfn> которое позволяет стилизовать определённую часть выбранного элемента. Например, псевдоэлемент {{ Cssxref("::first-line") }} может быть использован для изменения шрифта первой строки абзаца.</p>
+**Псевдоэлемент** в CSS — _это ключевое слово, добавляемое к селектору,_ которое позволяет стилизовать определённую часть выбранного элемента. Например, псевдоэлемент {{ Cssxref("::first-line") }} может быть использован для изменения шрифта первой строки абзаца.
 
-<pre class="brush: css no-line-numbers">/* Первая строка каждого элемента &lt;p&gt;. */
+```css
+/* Первая строка каждого элемента <p>. */
 p::first-line {
   color: blue;
   text-transform: uppercase;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> В отличие от псевдоэлементов, <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдоклассы</a> могут быть использованы для стилизации элемента на основе его <em>состояния</em>.</p>
-</div>
+> **Примечание:** В отличие от псевдоэлементов, [псевдоклассы](/ru/docs/Web/CSS/Псевдо-классы) могут быть использованы для стилизации элемента на основе его _состояния_.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">selector::pseudo-element {
-  property: value;
-}</pre>
+    selector::pseudo-element {
+      property: value;
+    }
 
-<p>В селекторе можно использовать только один псевдоэлемент. Он должен находиться после простых селекторов в выражении.</p>
+В селекторе можно использовать только один псевдоэлемент. Он должен находиться после простых селекторов в выражении.
 
-<div class="note">
-<p><strong>Примечание:</strong> Как правило, следует использовать двойное двоеточие (<code>::</code>) вместо одинарного (<code>:</code>). В этом состоит различие между псевдоклассами и псевдоэлементами. Однако, так как это различие не присутствовало в старых версиях спецификации W3C, большинство браузеров поддерживают оба синтаксиса для псевдоэлементов.</p>
-</div>
+> **Примечание:** Как правило, следует использовать двойное двоеточие (`::`) вместо одинарного (`:`). В этом состоит различие между псевдоклассами и псевдоэлементами. Однако, так как это различие не присутствовало в старых версиях спецификации W3C, большинство браузеров поддерживают оба синтаксиса для псевдоэлементов.
 
-<h2 id="Список_стандартных_псевдоэлементов">Список стандартных псевдоэлементов</h2>
+## Список стандартных псевдоэлементов
 
-<div class="index">
-<ul>
- <li>{{ Cssxref("::after") }}</li>
- <li>{{ Cssxref("::before") }}</li>
- <li>{{ cssxref("::cue")}}</li>
- <li>{{ Cssxref("::first-letter") }}</li>
- <li>{{ Cssxref("::first-line") }}</li>
- <li>{{ Cssxref("::selection") }}</li>
- <li>{{ Cssxref("::slotted") }}</li>
- <li>{{ Cssxref("::backdrop") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::placeholder") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::marker") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::spelling-error") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::grammar-error") }} {{experimental_inline}}</li>
-</ul>
-</div>
+- {{ Cssxref("::after") }}
+- {{ Cssxref("::before") }}
+- {{ cssxref("::cue")}}
+- {{ Cssxref("::first-letter") }}
+- {{ Cssxref("::first-line") }}
+- {{ Cssxref("::selection") }}
+- {{ Cssxref("::slotted") }}
+- {{ Cssxref("::backdrop") }} {{experimental_inline}}
+- {{ Cssxref("::placeholder") }} {{experimental_inline}}
+- {{ Cssxref("::marker") }} {{experimental_inline}}
+- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
+- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Браузер</th>
-   <th>Начиная с версии</th>
-   <th>Поддерживает</th>
-  </tr>
-  <tr>
-   <td rowspan="2">Internet Explorer</td>
-   <td>8.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>9.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Firefox (Gecko)</td>
-   <td>1.0 (1.0)</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>1.0 (1.5)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Opera</td>
-   <td>4.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>7.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>Safari (WebKit)</td>
-   <td>1.0 (85)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Браузер</th>
+      <th>Начиная с версии</th>
+      <th>Поддерживает</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Internet Explorer</td>
+      <td>8.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>9.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Firefox (Gecko)</td>
+      <td>1.0 (1.0)</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>1.0 (1.5)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Opera</td>
+      <td>4.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>Safari (WebKit)</td>
+      <td>1.0 (85)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/Псевдо-классы">Псевдоклассы</a></li>
-</ul>
+- [Псевдоклассы](/ru/docs/Web/CSS/Псевдо-классы)

@@ -3,69 +3,63 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 translation_of: Web/CSS/text-align-last
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+## Кратко
 
-<h2 id="Кратко">Кратко</h2>
+`text-align-last` CSS-свойство описывает как выравнивается последняя строка в блоке или строка, идущая сразу перед принудительным разрывом строки.
 
-<p><code>text-align-last</code> CSS-свойство описывает как выравнивается последняя строка в блоке или строка, идущая сразу перед принудительным разрывом строки.</p>
+{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+[Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align-last")}}
 
-<p><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("text-align-last")}}</p>
+    text-align-last: auto
+    text-align-last: start
+    text-align-last: end
+    text-align-last: left
+    text-align-last: right
+    text-align-last: center
+    text-align-last: justify
 
-<pre>text-align-last: auto
-text-align-last: start
-text-align-last: end
-text-align-last: left
-text-align-last: right
-text-align-last: center
-text-align-last: justify
+    text-align-last: inherit
 
-text-align-last: inherit
-</pre>
+### Значения
 
-<h3 id="Значения">Значения</h3>
+- `auto`
+  - : Затронутая строка выравнивается в зависимости от значения {{cssxref("text-align")}}, за исключением {{cssxref("text-align")}} со значением `justify`, в этом случае эффект такой же как установить `text-align-last` равным `left`.
+- `start`
+  - : Подобно `left` если направление слева направо, и `right` если направление справа налево.
+- `end`
+  - : Подобно `right` если направление слева направо, и `left` если направление справа налево.
+- `left`
+  - : Линейное содержимое выравнивается по левому краю линейного блока.
+- `right`
+  - : Линейное содержимое выравнивается по правому краю линейного блока.
+- `center`
+  - : Линейное содержимое центрируется внутри линейного блока.
+- `justify`
+  - : Текст выравнивается по ширине. Тексту следует выстраивать свои левые и правые границы по левым и правым границам содержимого параграфа.
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Затронутая строка выравнивается в зависимости от значения  {{cssxref("text-align")}}, за исключением {{cssxref("text-align")}} со значением <code>justify</code>, в этом случае эффект такой же как установить <code>text-align-last</code> равным <code>left</code>.</dd>
- <dt><code>start</code></dt>
- <dd>Подобно <code>left</code> если направление слева направо, и <code>right</code> если направление справа налево.</dd>
- <dt><code>end</code></dt>
- <dd>Подобно <code>right</code> если направление слева направо, и <code>left</code> если направление справа налево.</dd>
- <dt><code>left</code></dt>
- <dd>Линейное содержимое выравнивается по левому краю линейного блока.</dd>
- <dt><code>right</code></dt>
- <dd>Линейное содержимое выравнивается по правому краю линейного блока.</dd>
- <dt><code>center</code></dt>
- <dd>Линейное содержимое центрируется внутри линейного блока.</dd>
- <dt><code>justify</code></dt>
- <dd>Текст выравнивается по ширине. Тексту следует выстраивать свои левые и правые границы по левым и правым границам содержимого параграфа.</dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush:css">div {
+```css
+div {
   text-align: justify;
   -moz-text-align-last: center;
   text-align-last: center;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("text-align")}}</li>
-</ul>
+- {{cssxref("text-align")}}

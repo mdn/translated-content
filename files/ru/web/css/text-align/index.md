@@ -3,90 +3,84 @@ title: text-align
 slug: Web/CSS/text-align
 translation_of: Web/CSS/text-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Резюме">Резюме</h2>
+## Резюме
 
-<p><code>text-align</code> CSS-свойство описывает, как линейное содержимое, наподобие текста, выравнивается в блоке его родительского элемента. <code>text-align</code> не контролирует выравнивание элементов самого блока, но только их линейное содержимое.</p>
+`text-align` CSS-свойство описывает, как линейное содержимое, наподобие текста, выравнивается в блоке его родительского элемента. `text-align` не контролирует выравнивание элементов самого блока, но только их линейное содержимое.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p><a href="/en-US/docs/CSS/Value_definition_syntax">Формальный синтаксис</a>: {{csssyntax("text-align")}}</p>
+[Формальный синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align")}}
 
-<pre>text-align: left
-text-align: right
-text-align: center
-text-align: justify
-text-align: start
-text-align: end
-text-align: match-parent
-text-align: start end
-text-align: "."
-text-align: start "."
-text-align: "." end
+    text-align: left
+    text-align: right
+    text-align: center
+    text-align: justify
+    text-align: start
+    text-align: end
+    text-align: match-parent
+    text-align: start end
+    text-align: "."
+    text-align: start "."
+    text-align: "." end
 
-text-align: inherit
-</pre>
+    text-align: inherit
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>start</code> {{experimental_inline}}</dt>
- <dd>Подобно <code>left</code> если направление слева направо, и <code>right</code> если наоборот.</dd>
- <dt><code>end</code> {{experimental_inline}}</dt>
- <dd>Подобно <code>right</code> если направление слева направо, и <code>left</code> если наоборот.</dd>
- <dt><code>left</code></dt>
- <dd>Линейное содержимое выравнивается по левому краю линейного блока.</dd>
- <dt><code>right</code></dt>
- <dd>Линейное содержимое выравнивается по правому краю линейного блока.</dd>
- <dt><code>center</code></dt>
- <dd>Линейное содержимое центрируется в линейном блоке.</dd>
- <dt><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
- <dd>Первое появление односимвольной строки - это элемент используемый для выравнивания. Ключевое слово, следует или предшествует, и определяет, как это выравнивается. Это позволяет выравнять численные значения с десятичной точкой, к примеру.</dd>
- <dt><code>justify</code></dt>
- <dd>Текст выравнивается. Тексту следует выстраивать свои левые и правые границы по левым и правым границам содержимого параграфа.</dd>
- <dt><code>match-parent</code> {{experimental_inline}}</dt>
- <dd>Наподобие <code>inherit</code> с различием, что значение <code>start</code> и <code>end</code> вычисляются в соответствии {{cssxref("direction")}} и заменяются соответствующим <code>left</code> или <code>right</code> значением.</dd>
-</dl>
+- `start` {{experimental_inline}}
+  - : Подобно `left` если направление слева направо, и `right` если наоборот.
+- `end` {{experimental_inline}}
+  - : Подобно `right` если направление слева направо, и `left` если наоборот.
+- `left`
+  - : Линейное содержимое выравнивается по левому краю линейного блока.
+- `right`
+  - : Линейное содержимое выравнивается по правому краю линейного блока.
+- `center`
+  - : Линейное содержимое центрируется в линейном блоке.
+- `<string>` {{experimental_inline}}
+  - : Первое появление односимвольной строки - это элемент используемый для выравнивания. Ключевое слово, следует или предшествует, и определяет, как это выравнивается. Это позволяет выравнять численные значения с десятичной точкой, к примеру.
+- `justify`
+  - : Текст выравнивается. Тексту следует выстраивать свои левые и правые границы по левым и правым границам содержимого параграфа.
+- `match-parent` {{experimental_inline}}
+  - : Наподобие `inherit` с различием, что значение `start` и `end` вычисляются в соответствии {{cssxref("direction")}} и заменяются соответствующим `left` или `right` значением.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p><a href="/samples/cssref/text-align.html">Посмотреть живые примеры</a></p>
+[Посмотреть живые примеры](/samples/cssref/text-align.html)
 
-<h3 id="Живые_примеры">Живые примеры</h3>
+### Живые примеры
 
-<div style="text-align: center; border: solid; margin: 1em 0;">div { <strong>text-align: center</strong>; border:solid; }
+div { **text-align: center**; border:solid; }
 
-<p style="background: gold; width: 22em; margin: 1em 0;">p { background:gold; width:22em; }</p>
-несколько текста...</div>
+p { background:gold; width:22em; }
 
-<div style="text-align: center; border: solid; margin: 1em 0;">div { <strong>text-align: center</strong>; border:solid; }
+несколько текста...div { **text-align: center**; border:solid; }
 
-<p style="background: gold; width: 22em; margin: 1em auto;">p { background:gold; width:22em; <strong>margin: 1em auto</strong>; }</p>
-несколько текста...</div>
+p { background:gold; width:22em; **margin: 1em auto**; }
 
-<div style="text-align: -moz-center; text-align: -webkit-center; border: solid; margin: 1em 0;">div { <strong>text-align:-moz-center</strong>; text-align:-webkit-center; border:solid; }
+несколько текста...div { **text-align:-moz-center**; text-align:-webkit-center; border:solid; }
 
-<p style="background: gold; width: 22em; margin: 1em 0;">p { background:gold; width:22em; }</p>
-несколько текста...</div>
+p { background:gold; width:22em; }
 
-<h3 id="Примечание">Примечание</h3>
+несколько текста...
 
-<p>Стандартный совместимый способ центрировать сам блок без выравнивания его содержимого, это установка его left и right margin в auto, пример:<br>
- <code>margin:auto;</code> или <code>margin:0 auto;</code> или <code> margin-left:auto; margin-right:auto;</code></p>
+### Примечание
 
-<h2 id="Спецификации">Спецификации</h2>
+Стандартный совместимый способ центрировать сам блок без выравнивания его содержимого, это установка его left и right margin в auto, пример:
+`margin:auto;` или `margin:0 auto;` или `margin-left:auto; margin-right:auto;`
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}</li>
-</ul>
+- {{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}

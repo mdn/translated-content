@@ -3,152 +3,111 @@ title: Cascade
 slug: Web/CSS/Cascade
 translation_of: Web/CSS/Cascade
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
+Каскадность это алгоритм, который определяет как совмещать и сочетать значения свойств происходящих из различных источников(CSS-правила могут располагаться как в самом веб-документе, так и во внешних файлах). Данный алгоритм лежит в основе CSS, как можно понять из его названия: _Cascading_ Style Sheets(_Каскадные_ Таблицы Стилей). Данная статья объясняет что такое каскадность, порядок в котором определяется какие свойства будут в конечном итоге выполнены и как это затрагивает вас, веб разработчика.
 
+## What CSS entities participate in the cascade
 
-<p>Каскадность это алгоритм, который определяет как совмещать и сочетать значения свойств происходящих из различных источников(CSS-правила могут располагаться как в самом веб-документе, так и во внешних файлах). Данный алгоритм лежит в основе CSS, как можно понять из его названия: <em>Cascading</em> Style Sheets(<em>Каскадные </em>Таблицы Стилей). Данная статья объясняет что такое каскадность, порядок в котором определяется какие свойства будут в конечном итоге выполнены и как это затрагивает вас, веб разработчика.</p>
+Only CSS declarations, that is property/value pairs, participate in the cascade. That means that at-rules containing entities other than declarations, like {{ cssxref("@font-face")}} containing _descriptors_ don't participate in the cascade. In these case, only the at-rule as the whole participates in the cascade; here the @font-face identified by its `font-family` descriptor. If several `@font-face` with the same descriptor are defined, only the most adequate `@font-face`, as a whole, is considered.
 
-<h2 id="What_CSS_entities_participate_in_the_cascade">What CSS entities participate in the cascade</h2>
+If the declarations contained in most [at-rules](/ru/docs/CSS/At-rule) participate in the cascade, like declarations contained in {{cssxref("@media")}}, {{cssxref("@documents")}}, or {{cssxref("@supports")}}, declarations contained in {{cssxref("@keyframes")}} doesn't. Like for {{cssxref("@font-face")}}, only the at-rule as a whole is selected via the cascade algorithm.
 
-<p>Only CSS declarations, that is property/value pairs, participate in the cascade. That means that at-rules containing entities other than declarations, like  {{ cssxref("@font-face")}} containing <em>descriptors</em> don't participate in the cascade. In these case, only the at-rule as the whole participates in the cascade; here the @font-face identified by its <code>font-family</code> descriptor. If several <code>@font-face</code> with the same descriptor are defined, only the most adequate <code>@font-face</code>, as a whole, is considered.</p>
+Finally note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey specific algorithms and aren't affected by the cascade algorithm.
 
-<p>If the declarations contained in most <a href="/en-US/docs/CSS/At-rule" title="/en-US/docs/CSS/At-rule">at-rules</a> participate in the cascade, like declarations contained in {{cssxref("@media")}}, {{cssxref("@documents")}}, or {{cssxref("@supports")}}, declarations contained in {{cssxref("@keyframes")}} doesn't. Like for {{cssxref("@font-face")}}, only the at-rule as a whole is selected via the cascade algorithm.</p>
+## Origin of CSS declarations
 
-<p>Finally note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey specific algorithms and aren't affected by the cascade algorithm.</p>
+The CSS cascade algorithm wants to select CSS declarations to set the correct value for CSS properties. CSS declarations originate from different origins:
 
-<h2 id="Origin_of_CSS_declarations">Origin of CSS declarations</h2>
+- The browser has a basic style sheet that gives a default style to any document. These style sheets are named **user-agent stylesheets**. Some browsers uses actual style sheets to perform this, while others simulate them in code, but both cases should be indetectable. Some browsers also allow users to modify the user-agent stylesheet. Although some constraints on user-agent stylesheets are set by the HTML specification, browsers still have a lot of latitude: that means that significant differences exist from one browser to another. To ease their development and lower the basic ground on which to work, Web developers often use a CSS reset style sheet, forcing common properties values to a known state.
+- The author of the Web page define styles for the document. These are the most common style sheets. Most of the time several of them are defined and they make the look and feel of the Web site — its theme.
+- The _reader_, the user of the browser, may have a custom style sheet to tailor its experience.
 
-<p>The CSS cascade algorithm wants to select CSS declarations to set the correct value for CSS properties. CSS declarations originate from different origins:</p>
+Though style sheets come from these different origins, they overlap in scope: the cascade algorithm defines how they interact.
 
-<ul>
- <li>The browser has a basic style sheet that gives a default style to any document. These style sheets are named <strong>user-agent stylesheets</strong>. Some browsers uses actual style sheets to perform this, while others simulate them in code, but both cases should be indetectable. Some browsers also allow users to modify the user-agent stylesheet. Although some constraints on user-agent stylesheets are set by the HTML specification, browsers still have a lot of latitude: that means that significant differences exist from one browser to another. To ease their development and lower the basic ground on which to work, Web developers often use a CSS reset style sheet, forcing common properties values to a known state.</li>
- <li>The author of the Web page define styles for the document. These are the most common style sheets. Most of the time several of them are defined and they make the look and feel of the Web site — its theme.</li>
- <li>The <em>reader</em>, the user of the browser, may have a custom style sheet to tailor its experience.</li>
-</ul>
+## Cascading order
 
-<p>Though style sheets come from these different origins, they overlap in scope: the cascade algorithm defines how they interact.</p>
+The cascading algorithm determines how to find the value to apply for each property for each document element.
 
-<h2 id="Cascading_order">Cascading order</h2>
+1.  It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
+2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
-<p>The cascading algorithm determines how to find the value to apply for each property for each document element.</p>
+    |     | Origin         | Importance   |
+    | --- | -------------- | ------------ |
+    | 1   | user agent     | normal       |
+    | 2   | user           | normal       |
+    | 3   | author         | normal       |
+    | 4   | CSS Animations | _see below_  |
+    | 5   | author         | `!important` |
+    | 6   | user           | `!important` |
+    | 7   | user agent\*   | `!important` |
 
-<ol>
- <li>It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.</li>
- <li>Then it sorts these rules according to their importance, that is, whether or not they are followed by <code>!important</code>, and by their origin. The cascade is in ascending order, which means that <code>!important</code> values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
-  <table class="standard-table">
-   <thead>
-    <tr>
-     <th scope="col"></th>
-     <th scope="col">Origin</th>
-     <th scope="col">Importance</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <td>1</td>
-     <td>user agent</td>
-     <td>normal</td>
-    </tr>
-    <tr>
-     <td>2</td>
-     <td>user</td>
-     <td>normal</td>
-    </tr>
-    <tr>
-     <td>3</td>
-     <td>author</td>
-     <td>normal</td>
-    </tr>
-    <tr>
-     <td>4</td>
-     <td>CSS Animations</td>
-     <td><em>see below</em></td>
-    </tr>
-    <tr>
-     <td>5</td>
-     <td>author</td>
-     <td><code>!important</code></td>
-    </tr>
-    <tr>
-     <td>6</td>
-     <td>user</td>
-     <td><code>!important</code></td>
-    </tr>
-    <tr>
-     <td>7</td>
-     <td>user agent*</td>
-     <td><code>!important</code></td>
-    </tr>
-   </tbody>
-  </table>
-  <span style="font-size: 1rem; letter-spacing: -0.00278rem;">* based on <a href="https://www.w3.org/TR/css-cascade-3/#importance">w3.org CSS3 specs</a></span></li>
-</ol>
+    \* based on [w3.org CSS3 specs](https://www.w3.org/TR/css-cascade-3/#importance)
 
-<ol>
- <li>In case of equality, the <a href="/en-US/docs/CSS/Specificity" title="/en-US/docs/CSS/Specificity">specificity</a> of a value is considered to choose one or the other.</li>
-</ol>
+<!---->
 
-<h2 id="CSS_animations_and_the_cascade">CSS animations and the cascade</h2>
+1.  In case of equality, the [specificity](/ru/docs/CSS/Specificity) of a value is considered to choose one or the other.
 
-<p><a href="/en-US/docs/CSS/Using_CSS_animations" title="/en-US/docs/CSS/Using_CSS_animations">CSS Animations</a>, using {{ cssxref("@keyframes")}} at-rules defines animations between states. Keyframes don't cascade, meaning that at any time CSS takes values from one single <code>@keyframes</code> and never mixes several of them.</p>
+## CSS animations and the cascade
 
-<p>When several keyframes are appropriate, it chooses the latest defined in the most important document, but never combined all together.</p>
+[CSS Animations](/ru/docs/CSS/Using_CSS_animations), using {{ cssxref("@keyframes")}} at-rules defines animations between states. Keyframes don't cascade, meaning that at any time CSS takes values from one single `@keyframes` and never mixes several of them.
 
-<p>Also note that values within <code>@keyframes</code> at-rules overwrite all normal values but are overwritten by <code>!important</code> values.</p>
+When several keyframes are appropriate, it chooses the latest defined in the most important document, but never combined all together.
 
-<h2 id="Example">Example</h2>
+Also note that values within `@keyframes` at-rules overwrite all normal values but are overwritten by `!important` values.
 
-<p><strong>User-agent CSS:</strong></p>
+## Example
 
-<pre>li { margin-left: 10px }</pre>
+**User-agent CSS:**
 
-<p><strong>Author CSS 1:</strong></p>
+    li { margin-left: 10px }
 
-<pre>li { margin-left: 0 } /* This is a reset */</pre>
+**Author CSS 1:**
 
-<p><strong>Author CSS 2:</strong></p>
+    li { margin-left: 0 } /* This is a reset */
 
-<pre>@media screen {
-  li { margin-left: 3px }
-}
+**Author CSS 2:**
 
-@media print {
-  li { margin-left: 1px }
-}
-</pre>
+    @media screen {
+      li { margin-left: 3px }
+    }
 
-<p><strong>User CSS:</strong></p>
+    @media print {
+      li { margin-left: 1px }
+    }
 
-<pre>.specific { margin-left: 1em }</pre>
+**User CSS:**
 
-<p><strong>HTML:</strong></p>
+    .specific { margin-left: 1em }
 
-<pre>&lt;ul&gt;
-  &lt;li class="specific"&gt;1&lt;sup&gt;st&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;2&lt;sup&gt;nd&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+**HTML:**
 
-<p>In this case, declarations inside <code>li</code> and <code>.specific</code> rules should apply. No declaration is marked as <code>!important</code> so the precedence order is author style sheets before user style sheets or user-agent stylesheet.</p>
+    <ul>
+      <li class="specific">1<sup>st</sup></li>
+      <li>2<sup>nd</sup></li>
+    </ul>
 
-<p>So three declarations are in competition:</p>
+In this case, declarations inside `li` and `.specific` rules should apply. No declaration is marked as `!important` so the precedence order is author style sheets before user style sheets or user-agent stylesheet.
 
-<pre>margin-left: 0</pre>
+So three declarations are in competition:
 
-<pre>margin-left: 3px</pre>
+    margin-left: 0
 
-<pre>margin-left: 1px</pre>
+<!---->
 
-<p>The last one is ignored (on a screen), and the two first have the same selector, hence the same specificity: it is the last one that is then selected:</p>
+    margin-left: 3px
 
-<pre>margin-left: 3px</pre>
+<!---->
 
-<p>Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.</p>
+    margin-left: 1px
 
-<h2 id="See_also">See also</h2>
+The last one is ignored (on a screen), and the two first have the same selector, hence the same specificity: it is the last one that is then selected:
 
-<ul>
- <li>The very simple <a href="https://developer.mozilla.org/en-US/docs/CSS/Getting_Started/Cascading_and_inheritance" title="/en-US/docs/">introduction</a> of cascading in the CSS Tutorial.</li>
- <li>{{CSS_Key_Concepts()}}</li>
-</ul>
+    margin-left: 3px
+
+Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.
+
+## See also
+
+- The very simple [introduction](/ru/docs/CSS/Getting_Started/Cascading_and_inheritance "/en-US/docs/") of cascading in the CSS Tutorial.
+- {{CSS_Key_Concepts()}}

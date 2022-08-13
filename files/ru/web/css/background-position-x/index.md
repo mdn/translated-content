@@ -3,27 +3,26 @@ title: background-position-x
 slug: Web/CSS/background-position-x
 translation_of: Web/CSS/background-position-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <strong><code>background-position-x</code></strong> - это <a href="/en-US/docs/Web/CSS">CSS</a> - свойство, которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. Эта позиция является относительной к позиции слоя, установленной с помощью свойства {{cssxref("background-origin")}}.</p>
+Свойство **`background-position-x`** - это [CSS](/ru/docs/Web/CSS) - свойство, которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. Эта позиция является относительной к позиции слоя, установленной с помощью свойства {{cssxref("background-origin")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position-x.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
 
+Значение этого свойства отменяется любой декларацией {{cssxref("background")}} или коротким свойством {{cssxref("background-position")}} применёнными после его объявления.
 
+## Синтаксис
 
-<p>Значение этого свойства отменяется любой декларацией {{cssxref("background")}} или коротким свойством {{cssxref("background-position")}} применёнными после его объявления.</p>
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-position-x: left;
 background-position-x: center;
 background-position-x: right;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 background-position-x: 25%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 background-position-x: 0px;
 background-position-x: 1cm;
 background-position-x: 8em;
@@ -39,44 +38,41 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: unset;
-</pre>
+```
 
-<p>Свойство <code>background-position-x</code> принимает одно или несколько значений, разделённых запятыми.</p>
+Свойство `background-position-x` принимает одно или несколько значений, разделённых запятыми.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Выравнивает левый край фонового изображения по левому краю фонового позиционирующего слоя.</dd>
- <dt><code>center</code></dt>
- <dd>Выравнивает центр фонового изображения по центру фонового позиционирующего слоя.</dd>
- <dt><code>right</code></dt>
- <dd>Выравнивает правый край фонового изображения по правому краю фонового позиционирующего слоя.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Смещение левого вертикального края данного фонового изображения от левого вертикального края фонового слоя.</span> <span title="">(Некоторые браузеры позволяют назначать правый край для смещения).</span></span></dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Смещение горизонтальной позиции заданного фонового изображения относительно контейнера.</span> <span title="">Значение 0% означает, что левый край фонового изображения выровнен с левым краем контейнера, а значение 100% означает, что правый край фонового изображения выровнен с правым краем контейнера, таким образом</span> <span title="">значение 50% горизонтально центрирует фоновое изображение.</span></span></dd>
-</dl>
+- `left`
+  - : Выравнивает левый край фонового изображения по левому краю фонового позиционирующего слоя.
+- `center`
+  - : Выравнивает центр фонового изображения по центру фонового позиционирующего слоя.
+- `right`
+  - : Выравнивает правый край фонового изображения по правому краю фонового позиционирующего слоя.
+- {{cssxref("&lt;length&gt;")}}
+  - : Смещение левого вертикального края данного фонового изображения от левого вертикального края фонового слоя. (Некоторые браузеры позволяют назначать правый край для смещения).
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Смещение горизонтальной позиции заданного фонового изображения относительно контейнера. Значение 0% означает, что левый край фонового изображения выровнен с левым краем контейнера, а значение 100% означает, что правый край фонового изображения выровнен с правым краем контейнера, таким образом значение 50% горизонтально центрирует фоновое изображение.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Использование множественных фонов</a></li>
-</ul>
+## Смотрите также
+
+- {{cssxref("background-position")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Использование множественных фонов](/ru/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")

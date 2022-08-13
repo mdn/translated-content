@@ -5,23 +5,20 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-rule
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS/Shorthand_properties">Краткая форма записи</a> <a href="/en-US/docs/Web/CSS">CSS</a> свойств <strong><code>column-rule</code></strong> устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.</p>
+[Краткая форма записи](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
+Эта краткая форма записи задаёт индивидуальные `column-rule-*` свойства, обычно задаваемые: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, и {{Cssxref("column-rule-color")}}.
 
+> **Примечание:** Как и с другими краткими формами записи, любые индивидуальные значения, не указанные явно принимают значение по умолчанию (возможно переопределение значений, заданных ранее с помощью свойств, не являющихся краткими формами).
 
-<p>Эта краткая форма записи задаёт индивидуальные  <code>column-rule-*</code> свойства, обычно задаваемые: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, и {{Cssxref("column-rule-color")}}.</p>
+## Синтаксис
 
-<div class="note">
-<p><strong>Примечание:</strong> Как и с другими краткими формами записи, любые индивидуальные значения, не указанные явно принимают значение по умолчанию (возможно переопределение значений, заданных ранее с помощью свойств, не являющихся краткими формами).</p>
-</div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">column-rule: dotted;
+```css
+column-rule: dotted;
 column-rule: solid 8px;
 column-rule: solid blue;
 column-rule: thick inset blue;
@@ -30,30 +27,29 @@ column-rule: thick inset blue;
 column-rule: inherit;
 column-rule: initial;
 column-rule: unset;
-</pre>
+```
 
-<p>Свойство <code>column-rule</code> указывается в виде одного, двух или трёх значений, перечисленных ниже, в любом порядке.</p>
+Свойство `column-rule` указывается в виде одного, двух или трёх значений, перечисленных ниже, в любом порядке.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;'column-rule-width'&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}} или одно из трёх ключевых свойств, <code>thin</code>, <code>medium</code>, или <code>thick</code>. См. подробно -  {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'column-rule-style'&gt;</code></dt>
- <dd>См. подробно {{cssxref("border-style")}} .</dd>
- <dt><code>&lt;'column-rule-color'&gt;</code></dt>
- <dd>Значение {{cssxref("&lt;color&gt;")}} .</dd>
-</dl>
+- `<'column-rule-width'>`
+  - : {{cssxref("&lt;length&gt;")}} или одно из трёх ключевых свойств, `thin`, `medium`, или `thick`. См. подробно - {{cssxref("border-width")}}.
+- `<'column-rule-style'>`
+  - : См. подробно {{cssxref("border-style")}} .
+- `<'column-rule-color'>`
+  - : Значение {{cssxref("&lt;color&gt;")}} .
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<pre class="brush: css">/* Аналогично "medium dotted currentColor" */
+```css
+/* Аналогично "medium dotted currentColor" */
 p.foo { column-rule: dotted; }
 
 /* Аналогично "medium solid blue" */
@@ -63,42 +59,42 @@ p.bar { column-rule: solid blue; }
 p.baz { column-rule: solid 8px; }
 
 p.abc { column-rule: thick inset blue; }
-</pre>
+```
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is a bunch of text split into three columns.
   Take note of how the `column-rule` property is used
   to adjust the style, width, and color of the rule
   that appears between the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   padding: 0.3em;
   background: #ff7;
   column-count: 3;
   column-rule: inset 2px #33f;
 }
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Example_2')}}</p>
+{{EmbedLiveSample('Example_2')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

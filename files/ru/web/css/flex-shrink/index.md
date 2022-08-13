@@ -3,17 +3,18 @@ title: flex-shrink
 slug: Web/CSS/flex-shrink
 translation_of: Web/CSS/flex-shrink
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>flex-shrink</code></strong> — свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a>, которое определяет фактор сжатия flex-элемента. Flex-элементы будут заполнять контейнер в зависимости от значения <code>flex-shrink</code>, когда стандартная ширина flex-элементов шире, чем flex-контейнер.</p>
+**`flex-shrink`** — свойство [CSS](/ru/docs/CSS "CSS"), которое определяет фактор сжатия flex-элемента. Flex-элементы будут заполнять контейнер в зависимости от значения `flex-shrink`, когда стандартная ширина flex-элементов шире, чем flex-контейнер.
 
-<p>flex-shrink используется вместе со свойствами flex {{cssxref("flex-grow")}} и {{cssxref("flex-basis")}}. Обычно определяется с помощью сокращения {{cssxref("flex")}}.</p>
+flex-shrink используется вместе со свойствами flex {{cssxref("flex-grow")}} и {{cssxref("flex-basis")}}. Обычно определяется с помощью сокращения {{cssxref("flex")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;number&gt; значения */
+```css
+/* <number> значения */
 flex-shrink: 2;
 flex-shrink: 0.6;
 
@@ -21,41 +22,40 @@ flex-shrink: 0.6;
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: unset;
-</pre>
+```
 
-<p><code>flex-shrink</code> свойство определятся одним <code><a href="#&lt;number>">&lt;number&gt;</a></code>.</p>
+`flex-shrink` свойство определятся одним [`<number>`](#<number>).
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Смотри {{cssxref("&lt;number&gt;")}}. Отрицательные значения не валидны.</dd>
-</dl>
+- `<number>`
+  - : Смотри {{cssxref("&lt;number&gt;")}}. Отрицательные значения не валидны.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<div id="Live_Sample">
-<pre class="brush: html">&lt;p&gt;Ширина контента 500px; flex-basis для flex элементов 120px.&lt;/p&gt;
-&lt;p&gt;A, B, C имеют flex-shrink:1 значение. А у D и E - flex-shrink:2&lt;/p&gt;
-&lt;p&gt;Ширина D и E меньше других.&lt;/p&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>Ширина контента 500px; flex-basis для flex элементов 120px.</p>
+<p>A, B, C имеют flex-shrink:1 значение. А у D и E - flex-shrink:2</p>
+<p>Ширина D и E меньше других.</p>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
   width: 500px;
 }
@@ -72,25 +72,20 @@ flex-shrink: unset;
 .box1 {
   flex-shrink: 2;
 }
-</pre>
-</div>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Пример', '500px', '300px', '', 'Web/CSS/flex-shrink') }}</p>
+{{ EmbedLiveSample('Пример', '500px', '300px', '', 'Web/CSS/flex-shrink') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
-</ul>
-
-<p><nobr></nobr></p>
+- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

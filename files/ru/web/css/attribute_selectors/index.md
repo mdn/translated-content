@@ -3,32 +3,31 @@ title: Селекторы атрибутов
 slug: Web/CSS/Attribute_selectors
 translation_of: Web/CSS/Attribute_selectors
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Обзор</h2>
+## Обзор
 
-<p>Селекторы атрибутов отбирают элементы по наличию атрибута или его значению.</p>
+Селекторы атрибутов отбирают элементы по наличию атрибута или его значению.
 
-<dl>
- <dt><code>[<em>attr</em>]</code></dt>
- <dd>Обозначает элемент с атрибутом по имени attr.</dd>
- <dt><code>[<em>attr</em>=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr и значением в точности совпадающим с value.</dd>
- <dt><code>[<em>attr</em>~=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr значением которого является набор слов разделённых пробелами, одно из которых в точности равно value</dd>
- <dt><code>[<em>attr</em>|=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr. Его значение при этом может быть или в точности равно "value" или может начинаться с "value" со сразу же следующим "-" (U+002D). Это может быть использовано когда язык описывается с подходом.</dd>
- <dt><code>[<em>attr</em>^=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr значение которого начинается с "value"</dd>
- <dt><code>[<em>attr</em>$=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr чьё значение заканчивается на "value"</dd>
- <dt><code>[<em>attr</em>*=<em>value</em>]</code></dt>
- <dd>Обозначает элемент с именем атрибута attr чьё значение содержит по крайней мере одно вхождение строки "value" как подстроки.</dd>
-</dl>
+- `[attr]`
+  - : Обозначает элемент с атрибутом по имени attr.
+- `[attr=value]`
+  - : Обозначает элемент с именем атрибута attr и значением в точности совпадающим с value.
+- `[attr~=value]`
+  - : Обозначает элемент с именем атрибута attr значением которого является набор слов разделённых пробелами, одно из которых в точности равно value
+- `[attr|=value]`
+  - : Обозначает элемент с именем атрибута attr. Его значение при этом может быть или в точности равно "value" или может начинаться с "value" со сразу же следующим "-" (U+002D). Это может быть использовано когда язык описывается с подходом.
+- `[attr^=value]`
+  - : Обозначает элемент с именем атрибута attr значение которого начинается с "value"
+- `[attr$=value]`
+  - : Обозначает элемент с именем атрибута attr чьё значение заканчивается на "value"
+- `[attr*=value]`
+  - : Обозначает элемент с именем атрибута attr чьё значение содержит по крайней мере одно вхождение строки "value" как подстроки.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: css">/* Все span с атрибутом "lang" будут жирными */
+```css
+/* Все span с атрибутом "lang" будут жирными */
 span[lang] {font-weight:bold;}
 
 /* Все span в Португалии будут зелёными */
@@ -48,39 +47,38 @@ a[href$=".cn"] {color: red;}
 
 /* Все ссылки содержащие "example" в url будут иметь серый фон */
 a[href*="example"] {background-color: #CCCCCC;}
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="hello-example"&gt;
-    &lt;a href="http://example.com"&gt;English:&lt;/a&gt;
-    &lt;span lang="en-us en-gb en-au en-nz"&gt;Hello World!&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class="hello-example"&gt;
-    &lt;a href="#portuguese"&gt;Portuguese:&lt;/a&gt;
-    &lt;span lang="pt"&gt;Olá Mundo!&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class="hello-example"&gt;
-    &lt;a href="http://example.cn"&gt;Chinese (Simplified):&lt;/a&gt;
-    &lt;span lang="zh-CN"&gt;世界您好！&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class="hello-example"&gt;
-    &lt;a href="http://example.cn"&gt;Chinese (Traditional):&lt;/a&gt;
-    &lt;span lang="zh-TW"&gt;世界您好！&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="hello-example">
+    <a href="http://example.com">English:</a>
+    <span lang="en-us en-gb en-au en-nz">Hello World!</span>
+</div>
+<div class="hello-example">
+    <a href="#portuguese">Portuguese:</a>
+    <span lang="pt">Olá Mundo!</span>
+</div>
+<div class="hello-example">
+    <a href="http://example.cn">Chinese (Simplified):</a>
+    <span lang="zh-CN">世界您好！</span>
+</div>
+<div class="hello-example">
+    <a href="http://example.cn">Chinese (Traditional):</a>
+    <span lang="zh-TW">世界您好！</span>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Example', 250, 100) }}</p>
+{{ EmbedLiveSample('Example', 250, 100) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://dev.l-c-n.com/CSS3-selectors/browser-support.php" rel="noreferrer">CSS селекторы: базовая поддержка браузерами</a></li>
- <li><a href="http://kimblim.dk/css-tests/selectors/" rel="noreferrer">Совместимость с браузерами селекторов и псевдо-селекторов CSS</a></li>
-</ul>
+- [CSS селекторы: базовая поддержка браузерами](http://dev.l-c-n.com/CSS3-selectors/browser-support.php)
+- [Совместимость с браузерами селекторов и псевдо-селекторов CSS](http://kimblim.dk/css-tests/selectors/)

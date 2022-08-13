@@ -7,72 +7,64 @@ tags:
   - страница
 translation_of: Web/CSS/@page
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Правило CSS <strong><code>@page</code></strong> используется для модификации некоторых свойств CSS при печати документа.<strong> </strong>Вы не можете изменить все CSS-свойства с <code>@page</code>. Вы можете изменить только margin, orphans, widows, и разрывы страницы документа. Попытки изменить любые другие свойства CSS будут игнорироваться.</p>
+Правило CSS **`@page`** используется для модификации некоторых свойств CSS при печати документа.\*\* \*\*Вы не можете изменить все CSS-свойства с `@page`. Вы можете изменить только margin, orphans, widows, и разрывы страницы документа. Попытки изменить любые другие свойства CSS будут игнорироваться.
 
-<pre class="brush: css no-line-numbers">@page {
+```css
+@page {
   margin: 1cm;
 }
 
 @page :first {
   margin: 2cm;
-}</pre>
+}
+```
 
-<p>Правило <code>@page</code> доступно через интерфейс объектной модели CSS {{domxref("CSSPageRule")}}.</p>
+Правило `@page` доступно через интерфейс объектной модели CSS {{domxref("CSSPageRule")}}.
 
-<div class="note"><strong>Примечание:</strong> В W3C обсуждают, как обрабатывать связанные с областью просмотра единицы {{cssxref("&lt;length&gt;")}} такие как, <code>vh</code>, <code>vw</code>, <code>vmin</code>, и <code>vmax</code>. Тем временем не используя их с правилом <code>@page</code>.</div>
+> **Примечание:** В W3C обсуждают, как обрабатывать связанные с областью просмотра единицы {{cssxref("&lt;length&gt;")}} такие как, `vh`, `vw`, `vmin`, и `vmax`. Тем временем не используя их с правилом `@page`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Дескрипторы">Дескрипторы</h3>
+### Дескрипторы
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@page/size"><code>size</code></a></dt>
- <dd>Указывает целевой размер и ориентацию полей страницы, содержащихся в блоке. В общем случае, когда одно поле страницы отображается на одном листе страницы, он также определяет размер и ориентацию листа страницы.</dd>
-</dl>
+- [`size`](/ru/docs/Web/CSS/@page/size)
+  - : Указывает целевой размер и ориентацию полей страницы, содержащихся в блоке. В общем случае, когда одно поле страницы отображается на одном листе страницы, он также определяет размер и ориентацию листа страницы.
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@page/marks"><code>marks</code></a></dt>
- <dd>Добавляет обрезку и/или регистрационные отметки в документ.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@page/bleed"><code>bleed</code></a></dt>
- <dd>Определяет степень заступа за пределы поля страницы, при котором отображаемая область страницы отрезается.</dd>
-</dl>
+- [`marks`](/ru/docs/Web/CSS/@page/marks)
+  - : Добавляет обрезку и/или регистрационные отметки в документ.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+<!---->
+
+- [`bleed`](/ru/docs/Web/CSS/@page/bleed)
+  - : Определяет степень заступа за пределы поля страницы, при котором отображаемая область страницы отрезается.
+
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Пожалуйста, обратитесь к различным <a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">плевдоклассам</a> <code>@page</code> для примеров.</p>
+Пожалуйста, обратитесь к различным [плевдоклассам](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) `@page` для примеров.
 
-<ul>
- <li>{{Cssxref(":blank")}}</li>
- <li>{{Cssxref(":first")}}</li>
- <li>{{Cssxref(":left")}}</li>
- <li>{{Cssxref(":right")}}</li>
- <li>{{Cssxref(":recto")}} {{experimental_inline}}</li>
- <li>{{Cssxref(":verso")}} {{experimental_inline}}</li>
-</ul>
+- {{Cssxref(":blank")}}
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
+- {{Cssxref(":recto")}} {{experimental_inline}}
+- {{Cssxref(":verso")}} {{experimental_inline}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p> </p>
+{{Compat}}
 
+## Смотрите также
 
-
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Смотрите тикет <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286443">[META] CSS Paged Media Module Level 3</a> в Bugzilla для отслеживания прогресса по теме (базовый страничный счётчик, и т.д.)</li>
-</ul>
+- Смотрите тикет [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) в Bugzilla для отслеживания прогресса по теме (базовый страничный счётчик, и т.д.)

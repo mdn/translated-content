@@ -1,120 +1,99 @@
 ---
 title: ':active'
-slug: 'Web/CSS/:active'
+slug: Web/CSS/:active
 tags:
   - Псевдоклассы
-translation_of: 'Web/CSS/:active'
+translation_of: Web/CSS/:active
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">Псевдокласс</a> <strong><code>:active</code></strong> соответствует элементу в момент, когда он активируется пользователем. Он позволяет странице среагировать, когда элемент активируется. Взаимодействие элемента с мышью - это, как правило, время между нажатием и отпусканием пользователем кнопки мыши.</p>
+[Псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") **`:active`** соответствует элементу в момент, когда он активируется пользователем. Он позволяет странице среагировать, когда элемент активируется. Взаимодействие элемента с мышью - это, как правило, время между нажатием и отпусканием пользователем кнопки мыши.
 
-<pre class="brush: css">/*  Любой элемент &lt;a&gt;, который будет активирован */
+```css
+/*  Любой элемент <a>, который будет активирован */
 a:active {
   color: red;
-}</pre>
+}
+```
 
-<p>Также псевдокласс <code>:active</code> срабатывает при использовании клавиши TAB на клавиатуре. Обычно это используется для HTML-элементов {{HTMLElement("a")}} и {{HTMLElement("button")}}, но может применяться и к другим элементам.</p>
+Также псевдокласс `:active` срабатывает при использовании клавиши TAB на клавиатуре. Обычно это используется для HTML-элементов {{HTMLElement("a")}} и {{HTMLElement("button")}}, но может применяться и к другим элементам.
 
-<p>Это свойство может быть переопределено любыми другими псевдоклассами, относящимся к ссылке, такими как <span style="line-height: 1.5;">{{cssxref(":link")}}, {{cssxref(":hover")}} и {{cssxref(":visited")}}, описанными в последующих правилах. Чтобы стилизировать нужные ссылки, вам нужно ставить правило </span><code style="font-style: normal; line-height: 1.5;">:active</code><span style="line-height: 1.5;"> после всех других правил, относящихся к ссылке, как определено правилом </span><em>LVHA-порядком</em><span style="line-height: 1.5;">: </span><code style="font-style: normal; line-height: 1.5;">:link</code><span style="line-height: 1.5;"> — </span><code style="font-style: normal; line-height: 1.5;">:visited</code><span style="line-height: 1.5;"> — </span><code style="font-style: normal; line-height: 1.5;">:hover</code><span style="line-height: 1.5;"> — </span><code style="font-style: normal; line-height: 1.5;">:active</code><span style="line-height: 1.5;">.</span></p>
+Это свойство может быть переопределено любыми другими псевдоклассами, относящимся к ссылке, такими как {{cssxref(":link")}}, {{cssxref(":hover")}} и {{cssxref(":visited")}}, описанными в последующих правилах. Чтобы стилизировать нужные ссылки, вам нужно ставить правило `:active` после всех других правил, относящихся к ссылке, как определено правилом _LVHA-порядком_: `:link` — `:visited` — `:hover` — `:active`.
 
-<div class="note"><strong>Примечание:</strong> В системах с много-кнопочными мышами, CSS 3 указывает, что псевдокласс <code>:active</code> должен применяться только к первой кнопке; для праворуких мышей - это обычно самая левая кнопка.</div>
+> **Примечание:** В системах с много-кнопочными мышами, CSS 3 указывает, что псевдокласс `:active` должен применяться только к первой кнопке; для праворуких мышей - это обычно самая левая кнопка.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="Активные_ссылки">Активные ссылки</h3>
+### Активные ссылки
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Этот абзац содержит ссылку:
-&lt;a href="#"&gt;Эта ссылка будет окрашена в красный, когда вы нажмёте на неё.&lt;/a&gt;
-У абзаца фон станет серым при нажатии на него или на ссылку. &lt;/p&gt;</pre>
+```html
+<p>Этот абзац содержит ссылку:
+<a href="#">Эта ссылка будет окрашена в красный, когда вы нажмёте на неё.</a>
+У абзаца фон станет серым при нажатии на него или на ссылку. </p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a:link { color: blue; }          /* Непосещённые ссылки */
+```css
+a:link { color: blue; }          /* Непосещённые ссылки */
 a:visited { color: purple; }     /* Посещённые ссылки */
 a:hover { background: yellow; }  /* Ссылки при наведении */
 a:active { color: red; }         /* Активные ссылки */
 
-p:active { background: #eee; }   /* Активные абзацы */</pre>
+p:active { background: #eee; }   /* Активные абзацы */
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Активные_ссылки')}}</p>
+{{EmbedLiveSample('Активные_ссылки')}}
 
-<h3 id="Активные_элементы_формы">Активные элементы формы</h3>
+### Активные элементы формы
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="my-button"&gt;Моя кнопка: &lt;/label&gt;
-  &lt;button id="my-button" type="button"&gt;Попробуй Нажать Меня или Мою подсказку!&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="my-button">Моя кнопка: </label>
+  <button id="my-button" type="button">Попробуй Нажать Меня или Мою подсказку!</button>
+</form>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">form :active {
+```css
+form :active {
   color: red;
 }
 
 form button {
   background: white;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Активные_элементы_формы')}}</p>
+{{EmbedLiveSample('Активные_элементы_формы')}}
 
-<h2 id="Спецификации"><span>Спецификации</span></h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                     | Статус                               | Комментарий                |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}} | {{Spec2('HTML WHATWG')}}     |                            |
+| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Без изменений              |
+| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Без изменений              |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Без изменений              |
+| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Первоначальное определение |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Псевдоклассы, связанные с ссылками: {{cssxref(":link")}}, {{cssxref(":visited")}} и {{cssxref(":hover")}}.</li>
-</ul>
+- Псевдоклассы, связанные с ссылками: {{cssxref(":link")}}, {{cssxref(":visited")}} и {{cssxref(":hover")}}.

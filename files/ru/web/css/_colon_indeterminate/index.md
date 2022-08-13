@@ -1,78 +1,84 @@
 ---
 title: ':indeterminate'
-slug: 'Web/CSS/:indeterminate'
+slug: Web/CSS/:indeterminate
 tags:
   - CSS
   - Псевдо-класс
   - Разметка
-translation_of: 'Web/CSS/:indeterminate'
+translation_of: Web/CSS/:indeterminate
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a><a href="/ru/docs/Web/CSS/Псевдо-классы"> псевдокласс</a> <strong><code>:indeterminate</code></strong> находит элементы в неопределённом состоянии.</p>
+[CSS](/ru/docs/Web/CSS)[ псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:indeterminate`** находит элементы в неопределённом состоянии.
 
-<pre class="brush: css no-line-numbers">/* Выбирает все элементы &lt;input&gt;, которые находятся в неопределённом состоянии */
+```css
+/* Выбирает все элементы <input>, которые находятся в неопределённом состоянии */
 input:indeterminate {
   background: lime;
-}</pre>
+}
+```
 
-<p>Селектор находит следующие элементы:</p>
+Селектор находит следующие элементы:
 
-<ul>
- <li>Элементы <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, свойство <code>indeterminate</code> которых было установлено в <code>true</code> через <a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
- <li>Элементы <code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, когда все радио переключатели в одной группе (с одинаковым атрибутом <code>name</code>) не выбраны</li>
- <li>Элементы {{HTMLElement("progress")}} в неопределённом состоянии</li>
-</ul>
+- Элементы [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), свойство `indeterminate` которых было установлено в `true` через [JavaScript](/ru/docs/Web/JavaScript)
+- Элементы [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
+- Элементы {{HTMLElement("progress")}} в неопределённом состоянии
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Чекбокс_и_радио_переключатели">Чекбокс и радио переключатели</h3>
+### Чекбокс и радио переключатели
 
-<p>В этом примере специальные стили применяются к меткам, которые привязаны к неопределённым полям формы.</p>
+В этом примере специальные стили применяются к меткам, которые привязаны к неопределённым полям формы.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="checkbox" id="checkbox"&gt;
-  &lt;label for="checkbox"&gt;Эта метка будет зелёной.&lt;/label&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;input type="radio" id="radio"&gt;
-  &lt;label for="radio"&gt;Эта метка будет зелёной.&lt;/label&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">Эта метка будет зелёной.</label>
+</div>
+<div>
+  <input type="radio" id="radio">
+  <label for="radio">Эта метка будет зелёной.</label>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">input:indeterminate + label {
+```css
+input:indeterminate + label {
   background: lime;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var inputs = document.getElementsByTagName("input");
+```js
+var inputs = document.getElementsByTagName("input");
 
-for (var i = 0; i &lt; inputs.length; i++) {
+for (var i = 0; i < inputs.length; i++) {
   inputs[i].indeterminate = true;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Чекбокс_и_радио_переключатели', 'auto', 50)}}</p>
+{{EmbedLiveSample('Чекбокс_и_радио_переключатели', 'auto', 50)}}
 
-<h3 id="Полоса_прогресса">Полоса прогресса</h3>
+### Полоса прогресса
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;progress&gt;
-</pre>
+```html
+<progress>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">progress {
+```css
+progress {
   margin: 4px;
 }
 
@@ -81,18 +87,16 @@ progress:indeterminate {
   background-color: lightgray;
   box-shadow: 0 0 2px 1px red;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Полоса_прогресса', 'auto', 30)}}</p>
+{{EmbedLiveSample('Полоса_прогресса', 'auto', 30)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

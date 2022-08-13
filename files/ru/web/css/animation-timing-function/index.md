@@ -3,75 +3,71 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 translation_of: Web/CSS/animation-timing-function
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <code><strong>animation-timing-function</strong></code> задаёт как происходит анимация в течении длительности каждого цикла.</p>
+[CSS](/ru/docs/CSS "CSS") свойство **`animation-timing-function`** задаёт как происходит анимация в течении длительности каждого цикла.
 
-<p>{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}</p>
+{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
+Достаточно удобно использовать сокращённое свойство {{cssxref("animation")}} для того, чтобы установить все свойства для анимации одновременно.
 
+## Синтаксис
 
-<p>Достаточно удобно использовать сокращённое свойство {{cssxref("animation")}} для того, чтобы установить все свойства для анимации одновременно.</p>
+```css
+/* Keyword values */
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: ease-in-out;
+animation-timing-function: linear;
+animation-timing-function: step-start;
+animation-timing-function: step-end;
 
-<h2 id="Синтаксис">Синтаксис</h2>
+/* Function values */
+animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: steps(4, end);
 
-<pre class="brush: css no-line-numbers language-css"><code class="language-css"><span class="comment token">/* Keyword values */</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> ease<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> ease-in<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> ease-out<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> ease-in-out<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> linear<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> step-start<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> step-end<span class="punctuation token">;</span>
+/* Steps Function keywords */
+animation-timing-function: steps(4, jump-start);
+animation-timing-function: steps(10, jump-end);
+animation-timing-function: steps(20, jump-none);
+animation-timing-function: steps(5, jump-both);
+animation-timing-function: steps(6, start);
+animation-timing-function: steps(8, end);
 
-<span class="comment token">/* Function values */</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">cubic-bezier</span><span class="punctuation token">(</span><span class="number token">0.1</span><span class="punctuation token">,</span> <span class="number token">0.7</span><span class="punctuation token">,</span> <span class="number token">1.0</span><span class="punctuation token">,</span> <span class="number token">0.1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">4</span><span class="punctuation token">,</span> end<span class="punctuation token">)</span><span class="punctuation token">;</span>
+/* Multiple animations */
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-<span class="comment token">/* Steps Function keywords */</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">4</span><span class="punctuation token">,</span> jump-start<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">10</span><span class="punctuation token">,</span> jump-end<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">20</span><span class="punctuation token">,</span> jump-none<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">5</span><span class="punctuation token">,</span> jump-both<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">6</span><span class="punctuation token">,</span> start<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> <span class="function token">steps</span><span class="punctuation token">(</span><span class="number token">8</span><span class="punctuation token">,</span> end<span class="punctuation token">)</span><span class="punctuation token">;</span>
+/* Global values */
+animation-timing-function: inherit;
+animation-timing-function: initial;
+animation-timing-function: unset;
+```
 
-<span class="comment token">/* Multiple animations */</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> ease<span class="punctuation token">,</span> step-start<span class="punctuation token">,</span> <span class="function token">cubic-bezier</span><span class="punctuation token">(</span><span class="number token">0.1</span><span class="punctuation token">,</span> <span class="number token">0.7</span><span class="punctuation token">,</span> <span class="number token">1.0</span><span class="punctuation token">,</span> <span class="number token">0.1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+Временные функции могут быть установлены в пользовательских ключевых кадрах в правилах [@keyframes](/ru/docs/Web/CSS/@keyframes). Если в ключевом кадре значение **`animation-timing-function`** указано, соответствующее значение **`animation-timing-function`** от элемента к которому анимация применена используется для этого ключевого кадра.
 
-<span class="comment token">/* Global values */</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">animation-timing-function</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+### Значения
 
-<p>Временные функции могут быть установлены в пользовательских ключевых кадрах в правилах <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a>. Если в ключевом кадре значение <code><strong>animation-timing-function</strong></code> указано, соответствующее значение <code><strong>animation-timing-function</strong></code> от элемента к которому анимация применена используется для этого ключевого кадра.</p>
+- `<timingfunction>`
+  - : Каждый {{cssxref("&lt;timing-function&gt;")}} представляет функцию расчёта времени для связи с соответствующим свойством animate, как определено в {{cssxref("animation-property")}}.
 
-<h3 id="Значения">Значения</h3>
-
-<dl>
- <dt><code>&lt;timingfunction&gt;</code></dt>
- <dd>Каждый {{cssxref("&lt;timing-function&gt;")}} представляет функцию расчёта времени для связи с соответствующим свойством animate, как определено в {{cssxref("animation-property")}}.</dd>
-</dl>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>См. <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="en-US/docs/CSS/CSS_animations">CSS animations</a>.</p>
+См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "en-US/docs/CSS/CSS_animations").
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.33333rem; letter-spacing: -0.00278rem;'>Смотрите также</span></p>
+Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Использование CSS-анимаций</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- {{domxref("AnimationEvent", "AnimationEvent")}}

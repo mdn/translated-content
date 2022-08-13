@@ -3,37 +3,38 @@ title: Селектор потомков
 slug: Web/CSS/Descendant_combinator
 translation_of: Web/CSS/Descendant_combinator
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Комбинатор<code> ␣</code> (пробел) представляет собой 2 или более селекторов, найдёт элементы соответствующие обоим селекторам. Селекторы по потомкам похожи на селекторы <a href="/ru/docs/Web/CSS/Child_selectors">дочерних элементов</a>, но они не учитывают вложенность элементов и применяют свои свойства ко всем элементам данного типа, находящимся внутри родительского элемента, независимо от глубины вложенности.</p>
+Комбинатор` ␣` (пробел) представляет собой 2 или более селекторов, найдёт элементы соответствующие обоим селекторам. Селекторы по потомкам похожи на селекторы [дочерних элементов](/ru/docs/Web/CSS/Child_selectors), но они не учитывают вложенность элементов и применяют свои свойства ко всем элементам данного типа, находящимся внутри родительского элемента, независимо от глубины вложенности.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">selector1 selector2 {<em>стили</em> }
-</pre>
+    selector1 selector2 {стили }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: css">span { background-color: white; }
+```css
+span { background-color: white; }
 div span { background-color: DodgerBlue; }
-</pre>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Span 1
-    &lt;span&gt;Span 2&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;span&gt;Span 3&lt;/span&gt;
-</pre>
+```html
+<div>
+  <span>Span 1
+    <span>Span 2</span>
+  </span>
+</div>
+<span>Span 3</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 200, 50) }}</p>
+{{ EmbedLiveSample('Example', 200, 50) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

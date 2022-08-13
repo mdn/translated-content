@@ -3,17 +3,16 @@ title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 translation_of: Web/CSS/scroll-snap-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> свойство <strong><code>scroll-snap-type</code></strong> определяет как строго прокрутка контейнера привязывается к  точкам привязки.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`scroll-snap-type`** определяет как строго прокрутка контейнера привязывается к точкам привязки.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
 
+Это свойство не уточняет какие именно анимации используются для привязки прокрутки, это остаётся за агентом пользователя.
 
-
-<p>Это свойство не уточняет какие именно анимации используются для привязки прокрутки, это остаётся за агентом пользователя.</p>
-
-<pre class="brush:css no-line-numbers">/* Ключевые слова */
+```css
+/* Ключевые слова */
 scroll-snap-type: none;
 scroll-snap-type: x;
 scroll-snap-type: y;
@@ -32,111 +31,111 @@ scroll-snap-type: both mandatory;
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
 scroll-snap-type: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Когда визуальный {{Glossary("viewport")}} этого контейнера прокручивается, точки прокрутки игнорируются.</dd>
- <dt><code>x</code></dt>
- <dd>Прокрутка контейнера привязывается только по горизонтальной оси.</dd>
- <dt><code>y</code></dt>
- <dd>Прокрутка контейнера привязывается только по вертикальной оси.</dd>
- <dt><code>block</code></dt>
- <dd>Прокрутка контейнера привязывается только по блоковой оси.</dd>
- <dt><code>inline</code></dt>
- <dd>Прокрутка контейнера привязывается только по строчной оси.</dd>
- <dt><code>both</code></dt>
- <dd>Прокрутка контейнера независимо привязывается только по обоим осям (потенциально может привязываться к разным элементам на разных осях).</dd>
- <dt><code>mandatory</code></dt>
- <dd>Визуальный viewport контейнера остаётся на точке привязки, если он в данный момент не прокручивается. То есть он привязывается к точке, когда прокручивание завершилось. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка будет отрегулирована так, чтобы оставаться на этой же точке.</dd>
- <dt><code>proximity</code></dt>
- <dd>Визуальный viewport контейнера может оставаться на точке привязки, если он в данный момент не прокручивается, в зависимости от параметров пользовательского агента. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка может быть отрегулирована так, чтобы оставаться на этой же точке.</dd>
-</dl>
+- `none`
+  - : Когда визуальный {{Glossary("viewport")}} этого контейнера прокручивается, точки прокрутки игнорируются.
+- `x`
+  - : Прокрутка контейнера привязывается только по горизонтальной оси.
+- `y`
+  - : Прокрутка контейнера привязывается только по вертикальной оси.
+- `block`
+  - : Прокрутка контейнера привязывается только по блоковой оси.
+- `inline`
+  - : Прокрутка контейнера привязывается только по строчной оси.
+- `both`
+  - : Прокрутка контейнера независимо привязывается только по обоим осям (потенциально может привязываться к разным элементам на разных осях).
+- `mandatory`
+  - : Визуальный viewport контейнера остаётся на точке привязки, если он в данный момент не прокручивается. То есть он привязывается к точке, когда прокручивание завершилось. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка будет отрегулирована так, чтобы оставаться на этой же точке.
+- `proximity`
+  - : Визуальный viewport контейнера может оставаться на точке привязки, если он в данный момент не прокручивается, в зависимости от параметров пользовательского агента. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка может быть отрегулирована так, чтобы оставаться на этой же точке.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="holster"&gt;
-&lt;div class="container x mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Mand. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div class="holster">
+<div class="container x mandatory-scroll-snapping" dir="ltr">
+  <div>X Mand. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Prox. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="ltr">
+  <div>X Prox. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Mand. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="ltr">
+  <div>Y Mand. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Prox. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y proximity-scroll-snapping" dir="ltr">
+  <div>Y Prox. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Mand. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x mandatory-scroll-snapping" dir="rtl">
+  <div>X Mand. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Prox. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="rtl">
+  <div>X Prox. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Mand. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="rtl">
+  <div>Y Mand. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Prox. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div class="container y proximity-scroll-snapping" dir="rtl">
+  <div>Y Prox. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* setup */
+```css
+/* setup */
 html, body, .holster {
   height: 100%;
 }
@@ -183,47 +182,48 @@ html, body, .holster {
   scroll-snap-type: y proximity;
 }
 
-.container &gt; div {
+.container > div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
 }
 
-.x.container &gt; div {
+.x.container > div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
 
-.y.container &gt; div {
+.y.container > div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 100%;
 }
 /* appearance fixes */
-.y.container &gt; div:first-child {
+.y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
 /* coloration */
-.container &gt; div:nth-child(even) {
+.container > div:nth-child(even) {
   background-color: #87EA87;
 }
 
-.container &gt; div:nth-child(odd) {
+.container > div:nth-child(odd) {
   background-color: #87CCEA;
 }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Example", "100%", "1630")}}</p>
+{{EmbedLiveSample("Example", "100%", "1630")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
+
+{{Compat}}

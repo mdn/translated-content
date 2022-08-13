@@ -4,11 +4,12 @@ slug: Web/CSS/url
 translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> function is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the &lt;url&gt; data type.</span></p>
+The **`url()`** [CSS](/ru/docs/Web/CSS) function is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the \<url> data type.
 
-<pre class="brush: css no-line-numbers">/* Simple usage */
+```css
+/* Simple usage */
 url(https://example.com/images/myImg.jpg);
 url(data:image/png;base64,iRxVB0…);
 url(myFont.woff);
@@ -42,131 +43,100 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 @document url("https://www.example.com/") { ... } {{Experimental_Inline}}
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
-</pre>
+```
 
-<p>Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).</p>
+Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
 
-<p>The <code><strong>url()</strong></code> function can be included as a value for {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, <a href="/en-US/docs/Web/CSS/@font-face/src">src</a> as part of a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block, and <a href="/en-US/docs/Web/CSS/@counter-style/symbols">@counter-style/symbol</a></p>
+The **`url()`** function can be included as a value for {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, [src](/ru/docs/Web/CSS/@font-face/src) as part of a [@font-face](/ru/docs/Web/CSS/@font-face) block, and [@counter-style/symbol](/ru/docs/Web/CSS/@counter-style/symbols)
 
-<p>In CSS Level 1, the <code>url()</code> functional notation described only true URLs. In CSS Level 2, the definition of <code>url()</code> was extended to describe any URI, including URNs. CSS Values and Units Level 3 returned to the narrower, initial definition. Now, <code>url()</code> denotes only true <code>&lt;url&gt;</code>s.</p>
+In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, including URNs. CSS Values and Units Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>
- <dl>
-  <dt>&lt;url&gt;</dt>
-  <dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-  <pre class="syntaxbox">&lt;css_property&gt;: url("https://example.com/image.png")
-&lt;css_property&gt;: url('https://example.com/image.png')
-&lt;css_property&gt;: url(https://example.com/image.png)</pre>
-  </dd>
-  <dt>path</dt>
-  <dd>References the ID of an <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">SVG shape</a> -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code> -- using the shape's geometry as the path.</dd>
- </dl>
- </dd>
- <dt><code style="white-space: nowrap;">&lt;url-modifier&gt;</code> {{Experimental_Inline}}</dt>
- <dd>In the future, the <code>url()</code> function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.</dd>
-</dl>
+- `<string>`
+  - : _ \<url>
+    _ : A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent: <css_property>: url("https://example.com/image.png")
+    <css_property>: url('https://example.com/image.png')
+    <css_property>: url(https://example.com/image.png)
+    - path
+      - : References the ID of an [SVG shape](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
+- `<url-modifier>` {{Experimental_Inline}}
+  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<pre class="syntaxbox">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
+    url( <string> <url-modifier>* )
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="content_property">content property</h3>
+### content property
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css highlight[2]">li::after {
+```css
+li::after {
   content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("content_property", "100%", 50)}}</p>
+{{EmbedLiveSample("content_property", "100%", 50)}}
 
-<h3 id="data-uri">data-uri</h3>
+### data-uri
 
-<div id="color-value">
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="background"&gt;&lt;/div&gt;</pre>
+```html
+<div class="background"></div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css">.background {
+```css hidden
+.background {
   height: 100vh;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css highlight[6]">.background {
+```css
+.background {
   background: yellow;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
-}</pre>
-</div>
+}
+```
 
-<p>{{EmbedLiveSample("data-uri", "100%", 50)}}</p>
+{{EmbedLiveSample("data-uri", "100%", 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#urls', 'url()')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#urls', 'url()')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>No significant change from CSS Level 2 (Revision 1).</td>
-  </tr>
-  <tr>
-   <td>{{Specname('CSS2.1', 'syndata.html#uri', 'uri()')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant change from CSS Level 1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#url', 'url()')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                           | Comment                                              |
+| -------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('CSS4 Values', '#urls', 'url()')}}         | {{Spec2('CSS4 Values')}} |                                                      |
+| {{SpecName('CSS3 Values', '#urls', 'url()')}}         | {{Spec2('CSS3 Values')}} | No significant change from CSS Level 2 (Revision 1). |
+| {{Specname('CSS2.1', 'syndata.html#uri', 'uri()')}} | {{Spec2('CSS2.1')}}         | No significant change from CSS Level 1.              |
+| {{SpecName('CSS1', '#url', 'url()')}}                     | {{Spec2('CSS1')}}         | Initial definition.                                  |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<div>{{Compat}}</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("_image","image()")}}</li>
- <li><font><font>{{cssxref ("набор изображений", "набор изображений ()")}}</font></font></li>
- <li><font><font>{{cssxref ("плавное затухание")}}</font></font></li>
-</ul>
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("element()")}}
+- {{cssxref("_image","image()")}}
+- {{cssxref ("набор изображений", "набор изображений ()")}}
+- {{cssxref ("плавное затухание")}}

@@ -7,55 +7,50 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 ---
-<h3 id="Наложения_без_Z-индекса">Наложения без Z-индекса</h3>
+### Наложения без Z-индекса
 
-<p>Когда элементы не имеют z-индекса, они накладываются в таком порядке(снизу вверх):</p>
+Когда элементы не имеют z-индекса, они накладываются в таком порядке(снизу вверх):
 
-<p>1. Фон и границы корневого элемента.</p>
+1\. Фон и границы корневого элемента.
 
-<p>2. Дочерние блоки в нормальном потоке в порядке размещения(в HTML порядке).</p>
+2\. Дочерние блоки в нормальном потоке в порядке размещения(в HTML порядке).
 
-<p>3. Дочерние позиционированные элементы, в порядке размещения (в HTML порядке).</p>
+3\. Дочерние позиционированные элементы, в порядке размещения (в HTML порядке).
 
-<p>В следующем примере, абсолютно и относительно спозиционированным блокам определена величина  и позиция таким образом, чтобы продемонстрировать правила наложения.</p>
+В следующем примере, абсолютно и относительно спозиционированным блокам определена величина и позиция таким образом, чтобы продемонстрировать правила наложения.
 
-<div class="note">
-<p><strong>Примечания:</strong></p>
+> **Примечание:** **Примечания:\*** Given a homogeneous group of elements without any z-index property, such as the positioned blocks (DIV #1 to #4) in the example, the element's stacking order is their order in the HTML hierarchy, regardless of their position.
+>
+> - Standard blocks (DIV #5) in the normal flow, without any positioning property, are always rendered before positioned elements, and appear below them, even if they come later in the HTML hierarchy.
 
-<ul>
- <li>Given a homogeneous group of elements without any z-index property, such as the positioned blocks (DIV #1 to #4) in the example, the element's stacking order is their order in the HTML hierarchy, regardless of their position.</li>
- <li>
-  <p>Standard blocks (DIV #5) in the normal flow, without any positioning property, are always rendered before positioned elements, and appear below them, even if they come later in the HTML hierarchy. </p>
- </li>
-</ul>
-</div>
+![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
 
-<p><img alt="understanding_zindex_01.png" class="default internal" src="/@api/deki/files/910/=understanding_zindex_01.png"></p>
+## Пример
 
-<h2 id="Example">Пример</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div id="absdiv1">
+    <br /><span class="bold">DIV #1</span>
+    <br />position: absolute; </div>
+<div id="reldiv1">
+    <br /><span class="bold">DIV #2</span>
+    <br />position: relative; </div>
+<div id="reldiv2">
+    <br /><span class="bold">DIV #3</span>
+    <br />position: relative; </div>
+<div id="absdiv2">
+    <br /><span class="bold">DIV #4</span>
+    <br />position: absolute; </div>
+<div id="normdiv">
+    <br /><span class="bold">DIV #5</span>
+    <br />no positioning </div>
+```
 
-<pre class="brush: html">&lt;div id="absdiv1"&gt;
-    &lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-    &lt;br /&gt;position: absolute; &lt;/div&gt;
-&lt;div id="reldiv1"&gt;
-    &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-    &lt;br /&gt;position: relative; &lt;/div&gt;
-&lt;div id="reldiv2"&gt;
-    &lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-    &lt;br /&gt;position: relative; &lt;/div&gt;
-&lt;div id="absdiv2"&gt;
-    &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-    &lt;br /&gt;position: absolute; &lt;/div&gt;
-&lt;div id="normdiv"&gt;
-    &lt;br /&gt;&lt;span class="bold"&gt;DIV #5&lt;/span&gt;
-    &lt;br /&gt;no positioning &lt;/div&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css"> .bold {
+```css
+ .bold {
      font-weight: bold;
      font: 12px Arial;
  }
@@ -109,21 +104,19 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
      background-color: #ffdddd;
      text-align: center;
  }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>(If the image does not display in CodePen, click the Tidy button in the CSS section)</p>
+(If the image does not display in CodePen, click the Tidy button in the CSS section)
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}
 
-<h3 id="Так_же_посмотрите">Так же посмотрите</h3>
+### Так же посмотрите
 
-<ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
- <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="en/CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
-</ul>
+- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float "en/CSS/Understanding_z-index/Stacking_and_float") : How floating elements are handled
+- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index "en/CSS/Understanding_z-index/Adding_z-index") : Using z-index to change default stacking
+- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context") : Notes on the stacking context
+- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1 "en/CSS/Understanding_z-index/Stacking_context_example_1") : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2 "en/CSS/Understanding_z-index/Stacking_context_example_2") : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3 "en/CSS/Understanding_z-index/Stacking_context_example_3") : 3-level HTML hierarchy, z-index on the second level

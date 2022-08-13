@@ -1,130 +1,127 @@
 ---
 title: ':nth-child'
-slug: 'Web/CSS/:nth-child'
+slug: Web/CSS/:nth-child
 tags:
   - CSS
   - Layout
   - Reference
   - Web
   - Псевдоклассы
-translation_of: 'Web/CSS/:nth-child'
+translation_of: Web/CSS/:nth-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a>  <strong><code>:nth-child()</code></strong> находит один или более элементов, основываясь на их позиции среди группы соседних элементов.</p>
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:nth-child()`** находит один или более элементов, основываясь на их позиции среди группы соседних элементов.
 
-<pre class="brush: css no-line-numbers">/* Выбирает каждый четвёртый элемент
+```css
+/* Выбирает каждый четвёртый элемент
    среди любой группы соседних элементов */
 :nth-child(4n) {
   color: lime;
 }
-</pre>
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<p>Псевдокласс <code>nth-child</code> указывается с единственным аргументом, описывающим паттерн для выбирания элементов.</p>
+Псевдокласс `nth-child` указывается с единственным аргументом, описывающим паттерн для выбирания элементов.
 
-<h3 id="Ключевые_слова">Ключевые слова</h3>
+### Ключевые слова
 
-<dl>
- <dt><code>odd</code></dt>
- <dd>Описывает элементы среди группы соседних с нечётными номерами 1, 3, 5, и т. д.</dd>
- <dt><code>even</code></dt>
- <dd>Описывает элементы среди группы соседних с чётными номерами 2, 4, 6, и т. д.</dd>
-</dl>
+- `odd`
+  - : Описывает элементы среди группы соседних с нечётными номерами 1, 3, 5, и т. д.
+- `even`
+  - : Описывает элементы среди группы соседних с чётными номерами 2, 4, 6, и т. д.
 
-<h3 id="Функциональная_запись">Функциональная запись</h3>
+### Функциональная запись
 
-<dl>
- <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Описывает элементы среди группы соседних с номерами, соответствующими паттерну <code>An+B</code> (для каждого целого числа n &gt;= 0). Нумерация элементов начинается с единицы. Значения <code>A</code> и <code>B</code> должны быть {{cssxref("&lt;integer&gt;")}}s.</dd>
-</dl>
+- `<An+B>`
+  - : Описывает элементы среди группы соседних с номерами, соответствующими паттерну `An+B` (для каждого целого числа n >= 0). Нумерация элементов начинается с единицы. Значения `A` и `B` должны быть {{cssxref("&lt;integer&gt;")}}s.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_selectors">Примеры селекторов</h3>
+### Примеры селекторов
 
-<dl>
- <dt><code>tr:nth-child(odd)</code> или <code>tr:nth-child(2n+1)</code></dt>
- <dd>Описывает нечётные строки HTML таблицы: 1, 3, 5, и т. д.</dd>
- <dt><code>tr:nth-child(even)</code> or <code>tr:nth-child(2n)</code></dt>
- <dd>Описывает чётные строки HTML таблицы: 2, 4, 6, и т. д.</dd>
- <dt><code>:nth-child(7)</code></dt>
- <dd>Описывает седьмой элемент.</dd>
- <dt><code>:nth-child(5n)</code></dt>
- <dd>Описывает элементы с номерами 5, 10, 15, и т. д.</dd>
- <dt><code>:nth-child(3n+4)</code></dt>
- <dd>Описывает элементы с номерами 4, 7, 10, 13, и т. д.</dd>
- <dt><code>:nth-child(-n+3)</code></dt>
- <dd>Описывает первые три элемента среди группы соседних элементов.</dd>
- <dt><code>p:nth-child(n)</code></dt>
- <dd>Описывает каждый элемент<code>&lt;p&gt;</code> среди группы соседних элементов. Эквивалентно простому селектору <code>p</code>.</dd>
- <dt><code>p:nth-child(1)</code> или <code>p:nth-child(0n+1)</code></dt>
- <dd>Описывает каждый элемент <code>&lt;p&gt;</code>, являющийся первым среди группы соседних элементов. Эквивалентно селектору {{cssxref(":first-child")}}.</dd>
-</dl>
+- `tr:nth-child(odd)` или `tr:nth-child(2n+1)`
+  - : Описывает нечётные строки HTML таблицы: 1, 3, 5, и т. д.
+- `tr:nth-child(even)` or `tr:nth-child(2n)`
+  - : Описывает чётные строки HTML таблицы: 2, 4, 6, и т. д.
+- `:nth-child(7)`
+  - : Описывает седьмой элемент.
+- `:nth-child(5n)`
+  - : Описывает элементы с номерами 5, 10, 15, и т. д.
+- `:nth-child(3n+4)`
+  - : Описывает элементы с номерами 4, 7, 10, 13, и т. д.
+- `:nth-child(-n+3)`
+  - : Описывает первые три элемента среди группы соседних элементов.
+- `p:nth-child(n)`
+  - : Описывает каждый элемент`<p>` среди группы соседних элементов. Эквивалентно простому селектору `p`.
+- `p:nth-child(1)` или `p:nth-child(0n+1)`
+  - : Описывает каждый элемент `<p>`, являющийся первым среди группы соседних элементов. Эквивалентно селектору {{cssxref(":first-child")}}.
 
-<h3 id="Подробный_пример">Подробный пример</h3>
+### Подробный пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, БЕЗ элемента
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; в группе элементов-потомков.&lt;/h3&gt;
-&lt;p&gt;Элементы 1, 3, 5 и 7 будут выбраны.&lt;/p&gt;
-&lt;div class="first"&gt;
-  &lt;span&gt;Span 1!&lt;/span&gt;
-  &lt;span&gt;Span 2&lt;/span&gt;
-  &lt;span&gt;Span 3!&lt;/span&gt;
-  &lt;span&gt;Span 4&lt;/span&gt;
-  &lt;span&gt;Span 5!&lt;/span&gt;
-  &lt;span&gt;Span 6&lt;/span&gt;
-  &lt;span&gt;Span 7!&lt;/span&gt;
-&lt;/div&gt;
+```html
+<h3><code>span:nth-child(2n+1)</code>, БЕЗ элемента
+   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
+<p>Элементы 1, 3, 5 и 7 будут выбраны.</p>
+<div class="first">
+  <span>Span 1!</span>
+  <span>Span 2</span>
+  <span>Span 3!</span>
+  <span>Span 4</span>
+  <span>Span 5!</span>
+  <span>Span 6</span>
+  <span>Span 7!</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, С элементом
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; в группе элементов-потомков.&lt;/h3&gt;
-&lt;p&gt;Элементы 1, 5 и 7 будут выбраны.&lt;br&gt;
+<h3><code>span:nth-child(2n+1)</code>, С элементом
+   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
+<p>Элементы 1, 5 и 7 будут выбраны.<br>
    3 используется в подсчёте потому что это элемент-потомок,
-   но он не выбран потому что он не &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="second"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;Это `em`.&lt;/em&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-&lt;/div&gt;
+   но он не выбран потому что он не <code>&lt;span&gt;</code>.</p>
+<div class="second">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>Это `em`.</em>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-of-type(2n+1)&lt;/code&gt;, С элементом
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; в группе элементов-потомков.&lt;/h3&gt;
-&lt;p&gt;Элементы 1, 4, 6 и 8 будут выбраны.&lt;br&gt;
-   3 не используется в подсчёте и не выбран, потому что это &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;,
-   но не &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, а &lt;code&gt;nth-of-type&lt;/code&gt; выбирает только
-   потомков этого типа. Элемент &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; полностью пропускается и игнорируется.&lt;/p&gt;
-&lt;div class="third"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;Это `em`.&lt;/em&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<h3><code>span:nth-of-type(2n+1)</code>, С элементом
+   <code>&lt;em&gt;</code> в группе элементов-потомков.</h3>
+<p>Элементы 1, 4, 6 и 8 будут выбраны.<br>
+   3 не используется в подсчёте и не выбран, потому что это <code>&lt;em&gt;</code>,
+   но не <code>&lt;span&gt;</code>, а <code>nth-of-type</code> выбирает только
+   потомков этого типа. Элемент <code>&lt;em&gt;</code> полностью пропускается и игнорируется.</p>
+<div class="third">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>Это `em`.</em>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -140,24 +137,21 @@ div em {
 .second span:nth-child(2n+1),
 .third span:nth-of-type(2n+1) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Подробный_пример', 550, 550)}}</p>
+{{EmbedLiveSample('Подробный_пример', 550, 550)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}</li>
-</ul>
+- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}

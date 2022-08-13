@@ -12,53 +12,51 @@ tags:
   - TopicStub
 translation_of: Web/CSS/@viewport
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
+## Кратко
 
-<h2 id="Кратко">Кратко</h2>
+**`@viewport`** [CSS](/en/CSS "CSS") [at-rule](/en/CSS/At-rule "en/CSS/At-rule") содержит набор вложенных дескрипторов в блоке CSS, который разделён фигурными скобками. Эти дескрипторы управляют настройками видового экрана, в первую очередь на мобильных устройствах.
 
-<p><strong><code>@viewport</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> содержит набор вложенных дескрипторов в блоке CSS, который разделён фигурными скобками. Эти дескрипторы управляют настройками видового экрана, в первую очередь на мобильных устройствах.</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Коэффициент масштабирования, равный 1,0 или 100%, соответствует отсутствию масштабирования. Увеличьте масштаб больших значений. Меньшие значения уменьшаются
 
-<p>Коэффициент масштабирования, равный 1,0 или 100%, соответствует отсутствию масштабирования. Увеличьте масштаб больших значений. Меньшие значения уменьшаются</p>
+### Дескриптор
 
-<h3 id="Дескриптор">Дескриптор</h3>
+Браузеры должны игнорировать непризнанные дескрипторы.
 
-<p>Браузеры должны игнорировать непризнанные дескрипторы.</p>
+- [`min-width`](/ru/docs/Web/CSS/@viewport/min-width)
+  - : Используется при определении ширины видового экрана при первом отображении документа.
+- [`max-width`](/ru/docs/Web/CSS/@viewport/max-width)
+  - : Используется при определении ширины видового экрана при первом отображении документа.
+- [`width`](/ru/docs/Web/CSS/@viewport/width)
+  - : Сокращённый дескриптор для установки как минимальной ширины(min-width), так и максимальной ширины(max-width).
+- [`min-height`](/ru/docs/Web/CSS/@viewport/min-height)
+  - : Используется при определении высоты видового экрана при первом отображении документа.
+- [`max-height`](/ru/docs/Web/CSS/@viewport/max-height)
+  - : Используется при определении высоты видового экрана при первом отображении документа.
+- [`height`](/ru/docs/Web/CSS/@viewport/height)
+  - : Сокращённый дескриптор для установки как минимальной высоты(min-height), так и максимальной высоты(max-height).
+- [`zoom`](/ru/docs/Web/CSS/@viewport/zoom)
+  - : Устанавливает начальный коэффициент масштабирования.
+- [`min-zoom`](/ru/docs/Web/CSS/@viewport/min-zoom)
+  - : Устанавливает минимальный коэффициент масштабирования.
+- [`max-zoom`](/ru/docs/Web/CSS/@viewport/max-zoom)
+  - : Устанавливает максимальный коэффициент масштабирования.
+- [`user-zoom`](/ru/docs/Web/CSS/@viewport/user-zoom)
+  - : Управляет тем, должен ли пользователь иметь возможность изменять коэффициент масштабирования.
+- [`orientation`](/ru/docs/Web/CSS/@viewport/orientation)
+  - : Управляет ориентацией документа.
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-width"><code>min-width</code></a></dt>
- <dd>Используется при определении ширины видового экрана при первом отображении документа.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a></dt>
- <dd>Используется при определении ширины видового экрана при первом отображении документа.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/width"><code>width</code></a></dt>
- <dd>Сокращённый дескриптор для установки как минимальной ширины(min-width), так и максимальной ширины(max-width).</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-height"><code>min-height</code></a></dt>
- <dd>Используется при определении высоты видового экрана при первом отображении документа.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-height"><code>max-height</code></a></dt>
- <dd>Используется при определении высоты видового экрана при первом отображении документа.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/height"><code>height</code></a></dt>
- <dd>Сокращённый дескриптор для установки как минимальной высоты(min-height), так и максимальной высоты(max-height).</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/zoom"><code>zoom</code></a></dt>
- <dd>Устанавливает начальный коэффициент масштабирования.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-zoom"><code>min-zoom</code></a></dt>
- <dd>Устанавливает минимальный коэффициент масштабирования.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-zoom"><code>max-zoom</code></a></dt>
- <dd>Устанавливает максимальный коэффициент масштабирования.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/user-zoom"><code>user-zoom</code></a></dt>
- <dd>Управляет тем, должен ли пользователь иметь возможность изменять коэффициент масштабирования.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/orientation"><code>orientation</code></a></dt>
- <dd>Управляет ориентацией документа.</dd>
-</dl>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример:</h2>
+## Пример:
 
-<pre class="brush: css">@viewport {
+```css
+@viewport {
   min-width: 640px;
   max-width: 800px;
 }
@@ -69,34 +67,20 @@ translation_of: Web/CSS/@viewport
 }
 @viewport {
   orientation: landscape;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Спецификация:</h2>
+## Спецификация:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Device', '#the-atviewport-rule', '@viewport')}}</td>
-   <td>{{Spec2('CSS3 Device')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                         | Статус                           | Комментарий        |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Device', '#the-atviewport-rule', '@viewport')}} | {{Spec2('CSS3 Device')}} | Initial definition |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами:</h2>
+## Совместимость с браузерами:
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотреть_также">Смотреть также</h2>
+## Смотреть также
 
-<ul>
- <li>{{HTMLElement("meta")}}, specifically <code>&lt;meta name="viewport"&gt;</code></li>
- <li><a href="/en-US/docs/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
-</ul>
+- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
+- [Using the viewport meta tag to control layout on mobile browsers](/ru/docs/Mobile/Viewport_meta_tag)

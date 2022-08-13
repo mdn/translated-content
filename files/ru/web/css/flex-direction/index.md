@@ -3,74 +3,72 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 translation_of: Web/CSS/flex-direction
 ---
-<p>{{ CSSRef("CSS Flexible Boxes") }}</p>
+{{ CSSRef("CSS Flexible Boxes") }}
 
-<h2 id="Резюме">Резюме</h2>
+## Резюме
 
-<p><code>flex-direction -</code> <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).</p>
+`flex-direction -` [CSS](/ru/docs/CSS "CSS") свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).
 
-<p>Обратите внимание, что значения <code>row</code> и <code>row-reverse</code> зависят от направления flex-контейнера. Если его атрибут <code>dir</code> равен <code>ltr</code>, <code>row</code> представляет собой горизонтальную ось, ориентированную слева направо, а <code>row-reverse</code> - справа налево; если атрибут <code>dir</code> равен <code>rtl</code>, <code>row</code> представляет собой горизонтальную ось, ориентированную справа налево, а <code>row-reverse</code> - слева направо.</p>
+Обратите внимание, что значения `row` и `row-reverse` зависят от направления flex-контейнера. Если его атрибут `dir` равен `ltr`, `row` представляет собой горизонтальную ось, ориентированную слева направо, а `row-reverse` - справа налево; если атрибут `dir` равен `rtl`, `row` представляет собой горизонтальную ось, ориентированную справа налево, а `row-reverse` - слева направо.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>См. <a href="/en-US/docs/Web/Guide/CSS/Flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a> для детализации по свойствам и дополнительной информации.</p>
+См. [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes "/en/CSS/Using_CSS_flexible_boxes") для детализации по свойствам и дополнительной информации.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css">/* Направление, в котором блоки будут располагаться в строку */
+```css
+/* Направление, в котором блоки будут располагаться в строку */
 flex-direction: row;
 
-/* Как &lt;row&gt;, но наоборот */
+/* Как <row>, но наоборот */
 flex-direction: row-reverse;
 
 /* Направление, в котором блоки будут располагаться вертикально */
 flex-direction: column;
 
-/* Как &lt;column&gt;, но наоборот */
+/* Как <column>, но наоборот */
 flex-direction: column-reverse;
 
 /* Общие значения */
 flex-direction: inherit;
 flex-direction: initial;
 flex-direction: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Может принимать следующие значения::</p>
+Может принимать следующие значения::
 
-<dl>
- <dt><code>row</code></dt>
- <dd>Главная ось flex-контейнера определена точно так же, как направление текста. Точки <strong>main-start</strong> и <strong>main-end</strong> совпадают с направлением контента.</dd>
- <dt><code>row-reverse</code></dt>
- <dd>Ведёт себя аналогично <code>row</code> , но точки <strong>main-start</strong> и <strong>main-end</strong> поменяны местами.</dd>
- <dt><code>column</code></dt>
- <dd>Главная ось flex-контейнера такая же, как ось блока (block-axis). Точки <strong>main-start</strong> и <strong>main-end</strong> такие же, как точки <strong>before</strong> и <strong>after</strong> режима записи (writing-mode).</dd>
- <dt><code>column-reverse</code></dt>
- <dd>Ведёт себя, как <code>column</code> , но точки <strong>main-start</strong> и <strong>main-end</strong> поменяны местами.</dd>
-</dl>
+- `row`
+  - : Главная ось flex-контейнера определена точно так же, как направление текста. Точки **main-start** и **main-end** совпадают с направлением контента.
+- `row-reverse`
+  - : Ведёт себя аналогично `row` , но точки **main-start** и **main-end** поменяны местами.
+- `column`
+  - : Главная ось flex-контейнера такая же, как ось блока (block-axis). Точки **main-start** и **main-end** такие же, как точки **before** и **after** режима записи (writing-mode).
+- `column-reverse`
+  - : Ведёт себя, как `column` , но точки **main-start** и **main-end** поменяны местами.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:css">element {
+```css
+element {
   flex-direction: row-reverse;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+## Поддержка браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также:</h2>
+## Смотрите также:
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
-</ul>
+- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

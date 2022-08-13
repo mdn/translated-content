@@ -3,19 +3,20 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 translation_of: Web/CSS/animation-direction
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS-свойство <strong><code>animation-direction</code></strong> определяет, должна ли анимация воспроизводиться вперёд, назад или переменно вперёд и назад.<br>
- <br>
- <span style="font-size: 1rem; letter-spacing: -0.00278rem;">Также удобно использовать сокращённое свойство {{cssxref("animation")}}, чтобы одновременно установить все свойства анимации.</span></p>
+CSS-свойство **`animation-direction`** определяет, должна ли анимация воспроизводиться вперёд, назад или переменно вперёд и назад.
 
-<p>{{cssinfo}}</p>
+Также удобно использовать сокращённое свойство {{cssxref("animation")}}, чтобы одновременно установить все свойства анимации.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+{{cssinfo}}
 
-<pre class="brush: css">/* Одиночная анимация */
+## Синтаксис
+
+```css
+/* Одиночная анимация */
 animation-direction: normal;
 animation-direction: reverse;
 animation-direction: alternate;
@@ -29,40 +30,36 @@ animation-direction: alternate, reverse, normal;
 animation-direction: inherit;
 animation-direction: initial;
 animation-direction: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Анимация проигрывается вперёд каждую итерацию, то есть, когда анимация заканчивается, она сразу сбрасывается в <em>начальное </em>положение и снова проигрывается. Это значение по умолчанию.</dd>
- <dt><code>reverse</code></dt>
- <dd>Анимация проигрывается наоборот, с <em>последнего </em>положения до первого и потом снова сбрасывается в <em>конечное </em>положение и снова проигрывается.</dd>
- <dt><code>alternate</code></dt>
- <dd>Анимация меняет направление в каждом цикле, то есть в первом цикле она начинает с <em>начального</em> положения, доходит до <em>конечного</em>, а во втором цикле продолжает с <em>конечного </em>и доходит до <em>начального </em>и так далее, в зависимости от количества циклов анимации <code>animation-iteration-count</code>.</dd>
- <dt><code>alternate-reverse</code></dt>
- <dd>Анимация начинает проигрываться с <em>конечного </em>положения и доходит до <em>начального</em>, а в следующем цикле продолжая с <em>начального </em>переходит в <em>конечное</em>, в зависимости от количества итераций анимации <code>animation-iteration-count</code>.</dd>
-</dl>
+- `normal`
+  - : Анимация проигрывается вперёд каждую итерацию, то есть, когда анимация заканчивается, она сразу сбрасывается в _начальное_ положение и снова проигрывается. Это значение по умолчанию.
+- `reverse`
+  - : Анимация проигрывается наоборот, с _последнего_ положения до первого и потом снова сбрасывается в _конечное_ положение и снова проигрывается.
+- `alternate`
+  - : Анимация меняет направление в каждом цикле, то есть в первом цикле она начинает с _начального_ положения, доходит до _конечного_, а во втором цикле продолжает с _конечного_ и доходит до _начального_ и так далее, в зависимости от количества циклов анимации `animation-iteration-count`.
+- `alternate-reverse`
+  - : Анимация начинает проигрываться с _конечного_ положения и доходит до _начального_, а в следующем цикле продолжая с _начального_ переходит в _конечное_, в зависимости от количества итераций анимации `animation-iteration-count`.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Смотрите примеры <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS а</a>нимаций.</p>
+Смотрите примеры [CSS а](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations")нимаций.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимации</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- {{domxref("AnimationEvent", "AnimationEvent")}}

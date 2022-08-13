@@ -9,33 +9,32 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/inverted-colors
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries">медиа функция</a> <code><strong>inverted-colors</strong></code> может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.</p>
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Функция <code>inverted-colors</code> указана в качестве значения ключевого слова, выбранного из списка ниже.</p>
+Функция `inverted-colors` указана в качестве значения ключевого слова, выбранного из списка ниже.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>
- <p>Цвета отображаются нормально.</p>
- </dd>
- <dt><code>inverted</code></dt>
- <dd>Все пиксели в отображаемой области были инвертированы.</dd>
-</dl>
+- `none`
+  - : Цвета отображаются нормально.
+- `inverted`
+  - : Все пиксели в отображаемой области были инвертированы.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Если вы используете инвертированные цвета, этот текст должен быть синим по белому (инверсия жёлтого по чёрному). Если нет, он должен быть красным на светло-сером.&lt;/p&gt;
-&lt;p&gt;Если текст серого цвета, ваш браузер не поддерживает медиа-функцию `inverted-colors`.&lt;/p&gt;</pre>
+```html
+<p>Если вы используете инвертированные цвета, этот текст должен быть синим по белому (инверсия жёлтого по чёрному). Если нет, он должен быть красным на светло-сером.</p>
+<p>Если текст серого цвета, ваш браузер не поддерживает медиа-функцию `inverted-colors`.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: gray;
 }
 
@@ -51,18 +50,17 @@ translation_of: Web/CSS/@media/inverted-colors
     background: #eee;
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

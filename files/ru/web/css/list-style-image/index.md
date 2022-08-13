@@ -6,81 +6,75 @@ tags:
   - список
 translation_of: Web/CSS/list-style-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>list-style-image </code></strong>устанавливает изображение, используемое в качестве маркера списка.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image `**устанавливает изображение, используемое в качестве маркера списка.
 
-<p>Чаще, удобнее использовать общее свойство {{ cssxref("list-style") }}.</p>
+Чаще, удобнее использовать общее свойство {{ cssxref("list-style") }}.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-image.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
+> **Примечание:** Это свойство применяется к элементам списка, т.е. к элементам с `{{cssxref("display")}}: list-item;` [по умолчанию](https://www.w3.org/TR/html5/rendering.html#lists) оно включает элементы {{HTMLElement("li")}}. Т.к. это свойство наследуется, его можно задать для родительского элемента (обычно {{HTMLElement("ol")}} или {{HTMLElement("ul")}}), что позволит применить его ко всем элементам списка.
 
+## Синтаксис
 
-<div class="note">
-<p><strong>Примечание:</strong> Это свойство применяется к элементам списка, т.е. к элементам с <code>{{cssxref("display")}}: list-item;</code> <a href="https://www.w3.org/TR/html5/rendering.html#lists">по умолчанию</a> оно включает элементы {{HTMLElement("li")}}. Т.к. это свойство наследуется, его можно задать для родительского элемента (обычно {{HTMLElement("ol")}} или {{HTMLElement("ul")}}), что позволит применить его ко всем элементам списка.</p>
-</div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* Значение ключевым словом */
+```css
+/* Значение ключевым словом */
 list-style-image: none;
 
-/* &lt;url&gt; значения */
+/* <url> значения */
 list-style-image: url('starsolid.gif');
 
 /* Глобальные значения */
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;url&gt;")}}</dt>
- <dd>Расположение элемента для использования в качестве маркера.</dd>
- <dt><code>none</code></dt>
- <dd>Указывает, что изображение не используется в качестве маркера списка. Если установлено это значение, вместо него будет использоваться маркер, определённый в {{ Cssxref("list-style-type") }}.</dd>
-</dl>
+- {{cssxref("&lt;url&gt;")}}
+  - : Расположение элемента для использования в качестве маркера.
+- `none`
+  - : Указывает, что изображение не используется в качестве маркера списка. Если установлено это значение, вместо него будет использоваться маркер, определённый в {{ Cssxref("list-style-type") }}.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Пример') }}</p>
+{{ EmbedLiveSample('Пример') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}

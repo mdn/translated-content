@@ -1,87 +1,91 @@
 ---
 title: ':only-child'
-slug: 'Web/CSS/:only-child'
+slug: Web/CSS/:only-child
 tags:
   - Псевдоклассы
-translation_of: 'Web/CSS/:only-child'
+translation_of: Web/CSS/:only-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:only-child</code> находит любой элемент, являющийся единственным потомком родителя. Это тоже, что и <code>:first-child:last-child</code> или <code>:nth-child(1):nth-last-child(1)</code>, но с меньшей специфичностью.</p>
+[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:only-child` находит любой элемент, являющийся единственным потомком родителя. Это тоже, что и `:first-child:last-child` или `:nth-child(1):nth-last-child(1)`, но с меньшей специфичностью.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">parent child:only-child {
-  property: value;
-}
-</pre>
+    parent child:only-child {
+      property: value;
+    }
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<pre class="brush: css">span:only-child {
+```css
+span:only-child {
   color: red;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Этот span единственный ребёнок своего папы:(&lt;/span&gt;
-&lt;/div&gt;
+```html
+<div>
+  <span>Этот span единственный ребёнок своего папы:(</span>
+</div>
 
-&lt;div&gt;
-  &lt;span&gt;Этот span один из потомков родителя&lt;/span&gt;
-  &lt;span&gt;Этот span один из детей отца&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<div>
+  <span>Этот span один из потомков родителя</span>
+  <span>Этот span один из детей отца</span>
+</div>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Простой_пример', '100%', 60)}}</p>
+{{EmbedLiveSample('Простой_пример', '100%', 60)}}
 
-<h3 id="Пример_со_списком">Пример со списком</h3>
+### Пример со списком
 
-<pre class="brush: css">li li {
+```css
+li li {
   list-style-type: disc;
 }
 li:only-child {
   color: #6699ff;
   font-style: italic;
   list-style-type: square;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Первый
-    &lt;ul&gt;
-      &lt;li&gt;Это единственный ребёнок
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Второй
-    &lt;ul&gt;
-      &lt;li&gt;Этот список с двумя элементами
-      &lt;li&gt;Этот список с двумя элементами
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Третий
-    &lt;ul&gt;
-      &lt;li&gt;Этот список с тремя элементами
-      &lt;li&gt;Этот список с тремя элементами
-      &lt;li&gt;Этот список с тремя элементами
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;ol&gt;
-</pre>
+```html
+<ol>
+  <li>Первый
+    <ul>
+      <li>Это единственный ребёнок
+    </ul>
+  </li>
+  <li>Второй
+    <ul>
+      <li>Этот список с двумя элементами
+      <li>Этот список с двумя элементами
+    </ul>
+  </li>
+  <li>Третий
+    <ul>
+      <li>Этот список с тремя элементами
+      <li>Этот список с тремя элементами
+      <li>Этот список с тремя элементами
+    </ul>
+  </li>
+<ol>
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Пример_со_списком', '100%', 220)}}</p>
+{{EmbedLiveSample('Пример_со_списком', '100%', 220)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}

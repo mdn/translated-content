@@ -1,77 +1,76 @@
 ---
 title: ':fullscreen'
-slug: 'Web/CSS/:fullscreen'
+slug: Web/CSS/:fullscreen
 tags:
   - Вёрстка
   - полноэкранный режим
   - псевдокласс
   - экран
-translation_of: 'Web/CSS/:fullscreen'
+translation_of: Web/CSS/:fullscreen
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">Псевдокласс</a>  <strong><code>:fullscreen</code></strong> соответствует элементу, который в данный момент находится в полноэкранном режиме. Если в полноэкранном режиме находятся несколько элементов, то выбираются все они. </span></p>
+[CSS](/ru/docs/Web/CSS) [Псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:fullscreen`** соответствует элементу, который в данный момент находится в полноэкранном режиме. Если в полноэкранном режиме находятся несколько элементов, то выбираются все они.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примечания_по_использованию">Примечания по использованию</h2>
+## Примечания по использованию
 
-<p>Псевдокласс <code>:fullscreen</code> позволяет настроить ваши таблицы стилей для автоматического регулирования размера, стилю или шаблона содержимого, когда элемент переключается между полноэкранным режимом и традиционным представлением.</p>
+Псевдокласс `:fullscreen` позволяет настроить ваши таблицы стилей для автоматического регулирования размера, стилю или шаблона содержимого, когда элемент переключается между полноэкранным режимом и традиционным представлением.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере, цвет кнопки меняется в зависимости от того, находится ли документ в полноэкранном режиме. Он выполнен без принудительного изменения стиля посредством JavaScript.</p>
+В этом примере, цвет кнопки меняется в зависимости от того, находится ли документ в полноэкранном режиме. Он выполнен без принудительного изменения стиля посредством JavaScript.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>HTML выглядит так:</p>
+HTML выглядит так:
 
-<pre class="brush: html">&lt;h1&gt;MDN Web Docs Demo: :fullscreen pseudo-class&lt;/h1&gt;
+```html
+<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-&lt;p&gt;This demo uses the &lt;code&gt;:fullscreen&lt;/code&gt; pseudo-class to automatically
+<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.&lt;/p&gt;
+  entirely using CSS.</p>
 
-&lt;button id="fs-toggle"&gt;Toggle Fullscreen&lt;/button&gt;</pre>
+<button id="fs-toggle">Toggle Fullscreen</button>
+```
 
-<p>{{HTMLElement("button")}} с ID <code>"fs-toggle"</code> будет изменятся между бледно-красный и бледно-зелёный в зависимости от того, находится ли документ в полноэкранном режиме.</p>
+{{HTMLElement("button")}} с ID `"fs-toggle"` будет изменятся между бледно-красный и бледно-зелёный в зависимости от того, находится ли документ в полноэкранном режиме.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>Магия происходит в CSS. Используются два правила. Первое устанавливает цвет фона кнопки на "Toggle Full-screen Mode", когда элемент не находится в полноэкранном режиме. Для этого используется ключ <code>:not(:fullscreen)</code>, который выглядит как элемент, не имеющий установленного псевдокласса <code>:fullscreen</code>.</p>
+Магия происходит в CSS. Используются два правила. Первое устанавливает цвет фона кнопки на "Toggle Full-screen Mode", когда элемент не находится в полноэкранном режиме. Для этого используется ключ `:not(:fullscreen)`, который выглядит как элемент, не имеющий установленного псевдокласса `:fullscreen`.
 
-<pre class="brush: css">#fs-toggle:not(:fullscreen) {
+```css
+#fs-toggle:not(:fullscreen) {
   background-color: #afa;
 }
-</pre>
+```
 
-<p>Когда документ находится в полноэкранном режиме, применяется следующее правило CSS, устанавливающее цвет фона на оттенок бледно-красного.</p>
+Когда документ находится в полноэкранном режиме, применяется следующее правило CSS, устанавливающее цвет фона на оттенок бледно-красного.
 
-<pre class="brush: css">#fs-toggle:fullscreen {
+```css
+#fs-toggle:fullscreen {
   background-color: #faa;
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{cssxref(":not")}}</li>
- <li>{{cssxref("::backdrop")}}</li>
- <li>DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}</li>
- <li>{{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute</li>
-</ul>
+- [Fullscreen API](/ru/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/ru/docs/Web/API/Fullscreen_API/Guide)
+- {{cssxref(":not")}}
+- {{cssxref("::backdrop")}}
+- DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
+- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute

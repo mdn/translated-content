@@ -3,41 +3,43 @@ title: Селекторы по классу
 slug: Web/CSS/Class_selectors
 translation_of: Web/CSS/Class_selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Краткое описание</h2>
+## Краткое описание
 
-<p>В HTML документе, селекторы по CSS классу находят элементы с нужным классом. Атрибут класса определяется как разделённый пробелами список элементов, и один из этих пунктов должен точно соответствовать имени класса, приведённому в селекторе.</p>
+В HTML документе, селекторы по CSS классу находят элементы с нужным классом. Атрибут класса определяется как разделённый пробелами список элементов, и один из этих пунктов должен точно соответствовать имени класса, приведённому в селекторе.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">.classname { <em>style properties</em> }</pre>
+    .classname { style properties }
 
-<p>Это эквивалентно следующему {{ Cssxref("Attribute_selectors", "селектор по атрибуту") }}:</p>
+Это эквивалентно следующему {{ Cssxref("Attribute_selectors", "селектор по атрибуту") }}:
 
-<pre class="syntaxbox">[class~=classname] { <em>style properties</em> }</pre>
+    [class~=classname] { style properties }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span.classy {
+```css
+span.classy {
   background-color: DodgerBlue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span class="classy"&gt;Здесь span с каким-то текстом.&lt;/span&gt;
-&lt;span&gt;А тут другой span.&lt;/span&gt;
-</pre>
+```html
+<span class="classy">Здесь span с каким-то текстом.</span>
+<span>А тут другой span.</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 200, 50) }}</p>
+{{ EmbedLiveSample('Example', 200, 50) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

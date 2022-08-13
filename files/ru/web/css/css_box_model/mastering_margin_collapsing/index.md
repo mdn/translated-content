@@ -7,84 +7,69 @@ tags:
   - Справка
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Отступы <a href="/en-US/docs/Web/CSS/margin-top">margin-top</a> и <a href="/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a> иногда объединяются в один, с размером равным наибольшему из них (или размеру одного, если они равны).<br>
- Это поведение известно как <strong>схлопывание внешних отступов (margin collapsing).</strong><br>
- Обратите внимание, что отступы <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">плавающих </a>и <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#absolute">абсолютно позиционированных</a> элементов никогда не схлопываются.</p>
+Отступы [margin-top](/ru/docs/Web/CSS/margin-top) и [margin-bottom](/ru/docs/Web/CSS/margin-bottom) иногда объединяются в один, с размером равным наибольшему из них (или размеру одного, если они равны).
+Это поведение известно как **схлопывание внешних отступов (margin collapsing).**
+Обратите внимание, что отступы [плавающих ](/ru/docs/Web/CSS/float)и [абсолютно позиционированных](/ru/docs/Web/CSS/position#absolute) элементов никогда не схлопываются.
 
-<p>Схлопывание внешних отступов происходит в трёх случаях:</p>
+Схлопывание внешних отступов происходит в трёх случаях:
 
-<dl>
- <dt>Соседние элементы (siblings)</dt>
- <dd>Схлопываются отступы соседних элементов  (за исключением случая, когда к последнему элементу применено свойство {{cssxref("clear")}}).</dd>
- <dt>Родительский и первый/последний дочерние элементы</dt>
- <dd>Если отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block) или промежуток для отделения {{cssxref("margin-top")}} родительского элемента, от {{cssxref("margin-top")}} одного или нескольких его дочерних элементов/блоков или отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block), {{cssxref("height")}}, {{cssxref("min-height")}} или {{cssxref("max-height")}} для отделения отступов {{cssxref("margin-bottom")}} родительского блока от {{cssxref("margin-bottom")}} отступов одного или нескольких его дочерних элементов/блоков, то внешние отступы схлопываются. Схлопнутые отступы заканчиваются за пределами родительского элемента.</dd>
- <dt>Пустые блоки</dt>
- <dd>Если отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block), {{cssxref("height")}} или {{cssxref("min-height")}} для отделения {{cssxref("margin-top")}} верхнего отступа этого блока от его {{cssxref("margin-bottom")}} нижнего отступа, то верхние и нижние внешние отступы этого блока схлопываются.</dd>
-</dl>
+- Соседние элементы (siblings)
+  - : Схлопываются отступы соседних элементов (за исключением случая, когда к последнему элементу применено свойство {{cssxref("clear")}}).
+- Родительский и первый/последний дочерние элементы
+  - : Если отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block) или промежуток для отделения {{cssxref("margin-top")}} родительского элемента, от {{cssxref("margin-top")}} одного или нескольких его дочерних элементов/блоков или отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block), {{cssxref("height")}}, {{cssxref("min-height")}} или {{cssxref("max-height")}} для отделения отступов {{cssxref("margin-bottom")}} родительского блока от {{cssxref("margin-bottom")}} отступов одного или нескольких его дочерних элементов/блоков, то внешние отступы схлопываются. Схлопнутые отступы заканчиваются за пределами родительского элемента.
+- Пустые блоки
+  - : Если отсутствуют границы (border), внутренние отступы (padding), строчное содержимое (inline/inline-block), {{cssxref("height")}} или {{cssxref("min-height")}} для отделения {{cssxref("margin-top")}} верхнего отступа этого блока от его {{cssxref("margin-bottom")}} нижнего отступа, то верхние и нижние внешние отступы этого блока схлопываются.
 
-<p><u>На заметку:</u></p>
+**На заметку:**
 
-<ul>
- <li>Более сложное схлопывание отступов (более, чем двух) происходит, когда описанные случаи сочетаются.</li>
- <li>Эти правила применяются даже к отступам, равным 0, поэтому отступ первого/последнего дочернего элемента заканчивается за пределами его родителя (согласно правилу выше) независимо от того, равен ли отступ родителя нулю.</li>
- <li>При использовании отрицательных отступов, размер схлопнутого отступа вычисляется, как сумма наибольшего положительного и наименьшего отрицательного (наибольшего по модулю) отступа.</li>
- <li>Если все отступы отрицательные, размер схлопнутого отступа равен наименьшему (наибольшему по модулю) отступу. Это относится как к вложенным элементам, так и к соседним.</li>
- <li>Внешние отступы <a href="/en-US/docs/Web/CSS/float">плавающих</a> и  <a href="/en-US/docs/Web/CSS/position">абсолютно позиционируемых</a> элементов никогда не схлопываются.</li>
-</ul>
+- Более сложное схлопывание отступов (более, чем двух) происходит, когда описанные случаи сочетаются.
+- Эти правила применяются даже к отступам, равным 0, поэтому отступ первого/последнего дочернего элемента заканчивается за пределами его родителя (согласно правилу выше) независимо от того, равен ли отступ родителя нулю.
+- При использовании отрицательных отступов, размер схлопнутого отступа вычисляется, как сумма наибольшего положительного и наименьшего отрицательного (наибольшего по модулю) отступа.
+- Если все отступы отрицательные, размер схлопнутого отступа равен наименьшему (наибольшему по модулю) отступу. Это относится как к вложенным элементам, так и к соседним.
+- Внешние отступы [плавающих](/ru/docs/Web/CSS/float) и [абсолютно позиционируемых](/ru/docs/Web/CSS/position) элементов никогда не схлопываются.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Нижний отступ этого абзаца схлопнулся …<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>… с верхним отступом этого абзаца, объеденив отступы между ними в один, равный <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>code</span><span class="punctuation token">&gt;</span></span>1.2rem<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>code</span><span class="punctuation token">&gt;</span></span>.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+```html
+<p>Нижний отступ этого абзаца схлопнулся …</p>
+<p>… с верхним отступом этого абзаца, объеденив отступы между ними в один, равный <code>1.2rem</code>.</p>
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;Этот родительский элемент содержит два</span></span></code> <code>абзаца</code><code class="language-html">!
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Этот абзац имеет отступ</code><code class="language-html"> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>code</span><span class="punctuation token">&gt;</span></span>.4rem<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>code</span><span class="punctuation token">&gt;</span></span></code> <code class="language-html">между ним и текстом выше.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;Н</span></span>ижний отступ этого абзаца схлопывается с отступом родителя, принимая значение <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>code</span><span class="punctuation token">&gt;</span></span>2rem<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>code</span><span class="punctuation token">&gt;</span></span>.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<div>Этот родительский элемент содержит два абзаца!
+  <p>Этот абзац имеет отступ <code>.4rem</code> между ним и текстом выше.</p>
+  <p>Нижний отступ этого абзаца схлопывается с отступом родителя, принимая значение <code>2rem</code>.</p>
+</div>
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;Этот абзац имеет отступ</span></span> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>code</span><span class="punctuation token">&gt;</span></span>2rem<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>code</span><span class="punctuation token">&gt;</span></span> от элемента выше.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+<p>Этот абзац имеет отступ <code>2rem</code> от элемента выше.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token">div</span> <span class="punctuation token">{</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">2</span><span class="token unit">rem</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">background</span><span class="punctuation token">:</span> lavender<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+div {
+  margin: 2rem 0;
+  background: lavender;
+}
 
-<span class="selector token">p</span> <span class="punctuation token">{</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">.4</span><span class="token unit">rem</span> <span class="number token">0</span> <span class="number token">1.2</span><span class="token unit">rem</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">background</span><span class="punctuation token">:</span> yellow<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+p {
+  margin: .4rem 0 1.2rem 0;
+  background: yellow;
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Примеры', 'auto', 350)}}</p>
+{{EmbedLiveSample('Примеры', 'auto', 350)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Reference">CSS Reference</a> </li>
-</ul>
+- [CSS Reference](/ru/docs/Web/CSS/CSS_Reference)

@@ -3,20 +3,21 @@ title: max-height
 slug: Web/CSS/max-height
 translation_of: Web/CSS/max-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="ru/docs/Web/CSS">CSS</a> <strong><code>max-height</code></strong> устанавливает максимальную высоту элемента. Оно предотвращает <a href="/ru/docs/Web/CSS/used_value">используемое значение</a> свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для <code>max-height</code>.</p>
+Свойство [CSS](ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
 
-<div>{{EmbedInteractiveExample("pages/css/max-height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-height.html")}}
 
-<p>{{ Cssxref("max-height") }} перекрывает {{cssxref("height")}}, но {{ Cssxref("min-height") }} перекрывает {{ Cssxref("max-height") }}.</p>
+{{ Cssxref("max-height") }} перекрывает {{cssxref("height")}}, но {{ Cssxref("min-height") }} перекрывает {{ Cssxref("max-height") }}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; значения */
+```css
+/* <length> значения */
 max-height: 3.5em;
 
-/* &lt;percentage&gt; значения */
+/* <percentage> значения */
 max-height: 75%;
 
 /* Значения-ключевые слова */
@@ -30,65 +31,58 @@ max-height: fill-available;
 max-height: inherit;
 max-height: initial;
 max-height: unset;
-</pre>
+```
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Максимальная высота выражается как {{cssxref("&lt;length&gt;")}}.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Максимальная высота выражается как {{cssxref("&lt;percentage&gt;")}} от высоты родительского блока.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Максимальная высота выражается как {{cssxref("&lt;length&gt;")}}.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Максимальная высота выражается как {{cssxref("&lt;percentage&gt;")}} от высоты родительского блока.
 
-<h4 id="Значения-ключевые_слова">Значения-ключевые слова</h4>
+#### Значения-ключевые слова
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Высота не имеет максимального значения.</dd>
- <dt><code>max-content</code>{{experimental_inline()}}</dt>
- <dd>Внутренняя предпочтительная высота.</dd>
- <dt><code>min-content</code>{{experimental_inline()}}</dt>
- <dd>Внутренняя минимальная высота.</dd>
- <dt><code>fill-available</code>{{experimental_inline()}}</dt>
- <dd>Высота родительского блока минус вертикальные <code>margin</code>, <code>border</code>, и <code>padding</code>. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., <code>available</code>.)</dd>
- <dt><code>fit-content</code>{{experimental_inline()}}</dt>
- <dd>То же что и <code>max-content.</code></dd>
-</dl>
+- `none`
+  - : Высота не имеет максимального значения.
+- `max-content`{{experimental_inline()}}
+  - : Внутренняя предпочтительная высота.
+- `min-content`{{experimental_inline()}}
+  - : Внутренняя минимальная высота.
+- `fill-available`{{experimental_inline()}}
+  - : Высота родительского блока минус вертикальные `margin`, `border`, и `padding`. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `available`.)
+- `fit-content`{{experimental_inline()}}
+  - : То же что и `max-content.`
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">table { max-height: 75%; }
+```css
+table { max-height: 75%; }
 
 form { max-height: none; }
+```
 
-</pre>
+## Проблемы доступности
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+Убедитесь, что элементы с `max-height` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
 
-<p>Убедитесь, что элементы с <code>max-height</code> не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста. </p>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/CSS/box_model" title="en/CSS/box_model">Блочная модель</a></li>
- <li>{{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}</li>
-</ul>
+## Смотрите также
+
+- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model")
+- {{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}

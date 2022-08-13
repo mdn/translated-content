@@ -8,19 +8,20 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS счётчики, в своей сущности, переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе. CSS счётчики реализованы в CSS 2.1 (<a href="https://www.w3.org/TR/CSS21/generate.html#counters">ссылка на спецификацию</a>).</p>
+CSS счётчики, в своей сущности, переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе. CSS счётчики реализованы в CSS 2.1 ([ссылка на спецификацию](https://www.w3.org/TR/CSS21/generate.html#counters)).
 
-<p>Значение счётчика сбрасывается (инициализируется) при помощи {{cssxref("counter-reset")}}. </p>
+Значение счётчика сбрасывается (инициализируется) при помощи {{cssxref("counter-reset")}}.
 
-<p>{{cssxref("counter-increment")}} может быть отображён на странице, используя функцию <code>counter() или counters() в свойстве </code>{{cssxref("content")}}.</p>
+{{cssxref("counter-increment")}} может быть отображён на странице, используя функцию `counter() или counters() в свойстве `{{cssxref("content")}}.
 
-<h2 id="Использование_счётчиков">Использование счётчиков</h2>
+## Использование счётчиков
 
-<p>Для того, чтобы использовать CSS счётчики, сначала необходимо сбросить их значение (0 по умолчанию). Для того, чтобы отобразить значение счётчика - используйте функцию <code>counter(). Следующий пример прибавляет в начале каждого h3 элемента </code>"Section &lt;<em>значение счётчика</em>&gt;:".</p>
+Для того, чтобы использовать CSS счётчики, сначала необходимо сбросить их значение (0 по умолчанию). Для того, чтобы отобразить значение счётчика - используйте функцию `counter(). Следующий пример прибавляет в начале каждого h3 элемента `"Section <_значение счётчика_>:".
 
-<pre class="brush: css">body {
+```css
+body {
   counter-reset: section;                     /* Устанавливает значение
                                                  счётчика, равным 0 */
 }
@@ -30,23 +31,26 @@ h3::before {
   content: "Секция " counter(section) ": ";   /* Отображает текущее
                                                  значение счётчика */
 }
-</pre>
+```
 
-<p>Пример:</p>
+Пример:
 
-<pre class="brush: html">&lt;h3&gt;Вступление&lt;/h3&gt;
-&lt;h3&gt;Основная часть&lt;/h3&gt;
-&lt;h3&gt;Заключение&lt;/h3&gt;</pre>
+```html
+<h3>Вступление</h3>
+<h3>Основная часть</h3>
+<h3>Заключение</h3>
+```
 
-<p>{{EmbedLiveSample("Использование_счётчиков", 200, 150)}}</p>
+{{EmbedLiveSample("Использование_счётчиков", 200, 150)}}
 
-<h2 id="Вложенные_счётчики">Вложенные счётчики</h2>
+## Вложенные счётчики
 
-<p>CSS счётчики могут быть очень полезны для создания нумерованных списков, потому что новая сущность CSS счётчика автоматически создаётся в дочерних элементах. Используя функцию <code>counters(), можно вставить строку между разными уровнями вложенных счётчиков. Пример:</code></p>
+CSS счётчики могут быть очень полезны для создания нумерованных списков, потому что новая сущность CSS счётчика автоматически создаётся в дочерних элементах. Используя функцию `counters(), можно вставить строку между разными уровнями вложенных счётчиков. Пример:`
 
-<pre class="brush: css">ol {
+```css
+ol {
   counter-reset: section;           /*Создаёт новый счётчик для каждого
-                                      тега &lt;ol&gt;*/
+                                      тега <ol>*/
   list-style-type: none;
 }
 
@@ -55,73 +59,56 @@ li::before {
                                      текущего уровня вложенности*/
   content: counters(section,".") " ";/*Добавляем значения всех уровней
                                     вложенности, используя разделитель '.'*/
-                                   /*Если необходима поддержка &lt; IE8,
+                                   /*Если необходима поддержка < IE8,
                                       необходимо убедиться, что после
                                       разделителя ('.') не стоит пробел*/
 }
-</pre>
+```
 
-<p>Объединим с данным HTML:</p>
+Объединим с данным HTML:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item               &lt;!-- 2     --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
-      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-        &lt;/ol&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item               <!-- 2     -->
+    <ol>
+      <li>item</li>      <!-- 2.1   -->
+      <li>item</li>      <!-- 2.2   -->
+      <li>item           <!-- 2.3   -->
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+        </ol>
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.3 -->
+        </ol>
+      </li>
+      <li>item</li>      <!-- 2.4   -->
+    </ol>
+  </li>
+  <li>item</li>          <!-- 3     -->
+  <li>item</li>          <!-- 4     -->
+</ol>
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item</li>          <!-- 2     -->
+</ol>
+```
 
-<p>Результат:</p>
+Результат:
 
-<p>{{EmbedLiveSample("Вложенные_счётчики", 250, 350)}}</p>
+{{EmbedLiveSample("Вложенные_счётчики", 250, 350)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}</td>
-      <td>{{Spec2("CSS3 Lists")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                                        | Status                           | Comment            |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | No change          |
+| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Initial definition |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
-</ul>
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-increment")}}

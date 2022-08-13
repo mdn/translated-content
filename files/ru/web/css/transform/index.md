@@ -11,23 +11,20 @@ tags:
   - трансформация
 translation_of: Web/CSS/transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>transform</code></strong> позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS <a href="/en-US/docs/Web/CSS/Visual_formatting_model">визуальной форматируемой модели</a>.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/Visual_formatting_model).
 
-<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform.html")}}
 
+Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
 
+> **Предупреждение:** Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
 
-<p>Если свойство имеет значение, отличное от  <code>none</code>, будет создан <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">контекст наложения</a>. В этом случае, элемент будет действовать как <a href="/en-US/docs/Web/CSS/Containing_block">содержащий блок</a> для любых элементов <code>position: fixed;</code> или <code>position: absolute;</code> которые он содержит.</p>
+## Синтаксис
 
-<div class="warning">
-<p>Только трансформируемый элемент может быть <code>transform</code>. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">неизменяемые инлайновые блоки</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">блоки таблица-колонка</a>, и <a href="/en-US/docs/Web/HTML/Element/colgroup">блоки таблица-колонка-группа</a>.</p>
-</div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css">/* Значения ключевым словом*/
+```css
+/* Значения ключевым словом*/
 transform: none;
 
 /* Значения функций */
@@ -61,75 +58,71 @@ transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 transform: inherit;
 transform: initial;
 transform: unset;
-</pre>
+```
 
-<p>Свойство <code>transform</code> может быть указано как значение ключевого слова <code><a href="#none">none</a></code> или как одно или более значений <code><a href="#&lt;transform-function>">&lt;transform-function&gt;</a></code>.</p>
+Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#<transform-function>).
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt id="&lt;transform-function>">{{cssxref("&lt;transform-function&gt;")}}</dt>
- <dd>Одна или более применяемых <a href="/en-US/docs/Web/CSS/transform-function">функций CSS-трансформации</a>. Функции трансформации  умножаются в порядке слева направо, что означает, что составное трансформирование эффективнее применять в порядке справа налево.</dd>
- <dt id="none"><code>none</code></dt>
- <dd>Указывает, что трансформация не должна применяться.</dd>
-</dl>
+- {{cssxref("&lt;transform-function&gt;")}}
+  - : Одна или более применяемых [функций CSS-трансформации](/ru/docs/Web/CSS/transform-function). Функции трансформации умножаются в порядке слева направо, что означает, что составное трансформирование эффективнее применять в порядке справа налево.
+- `none`
+  - : Указывает, что трансформация не должна применяться.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<p>Если {{cssxref("transform-function/perspective", "perspective()")}} является одним из мультифункциональных значений, оно должно быть указано первым.</p>
+Если {{cssxref("transform-function/perspective", "perspective()")}} является одним из мультифункциональных значений, оно должно быть указано первым.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
+```html
+<div>Transformed element</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
   width: 140px;
   height: 60px;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры", "400", "160")}}</p>
+{{EmbedLiveSample("Примеры", "400", "160")}}
 
-<p>Для того, чтобы посмотреть другие примеры, обратитесь к <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transforms">Использование CSS-трансформации</a> и {{cssxref("&lt;transform-function&gt;")}}.</p>
+Для того, чтобы посмотреть другие примеры, обратитесь к [Использование CSS-трансформации](/ru/docs/Web/Guide/CSS/Using_CSS_transforms) и {{cssxref("&lt;transform-function&gt;")}}.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Scaling/zooming анимации являются проблемой для accessibility, поскольку они становятся частым триггером для определённых типов мигрени. Если вам нужно добавить такие анимации на вашем веб-сайте, вы должны предоставить элемент управления, позволяющий пользователям отключать анимации, предпочтительно для всего сайта.</p>
+Scaling/zooming анимации являются проблемой для accessibility, поскольку они становятся частым триггером для определённых типов мигрени. Если вам нужно добавить такие анимации на вашем веб-сайте, вы должны предоставить элемент управления, позволяющий пользователям отключать анимации, предпочтительно для всего сайта.
 
-<p>Кроме того, рассмотрите возможность использования @media-опции {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — используйте её для написания {{cssxref("Media_Queries", "медиавыражения")}}, которое отключит анимацию, если пользователь уменьшил анимацию в системных настройках.</p>
+Кроме того, рассмотрите возможность использования @media-опции {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — используйте её для написания {{cssxref("Media_Queries", "медиавыражения")}}, которое отключит анимацию, если пользователь уменьшил анимацию в системных настройках.
 
-<p>Узнать больше:</p>
+Узнать больше:
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN Understanding WCAG, Guideline 2.3 explanations</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Использование CSS-трансформации</a></li>
- <li>{{cssxref("&lt;transform-function&gt;")}} типы  данных</li>
- <li><a href="https://louisremi.github.io/jquery.transform.js/">Плагин jQuery для кросс-браузерной 2D-трансформации</a></li>
-</ul>
+- [Использование CSS-трансформации](/ru/docs/CSS/Using_CSS_transforms)
+- {{cssxref("&lt;transform-function&gt;")}} типы данных
+- [Плагин jQuery для кросс-браузерной 2D-трансформации](https://louisremi.github.io/jquery.transform.js/)

@@ -3,19 +3,18 @@ title: object-position
 slug: Web/CSS/object-position
 translation_of: Web/CSS/object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ru/docs/Web/CSS">CSS</a>-свойство <strong><code>object-position</code></strong> определяет выравнивание контента выбранного <a href="/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">замещаемого элемента</a> внутри блока элемента.</span> На областях блока, не покрытых объектом замещаемого элемента, будет отображаться фон элемента.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`object-position`** определяет выравнивание контента выбранного [замещаемого элемента](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутри блока элемента. На областях блока, не покрытых объектом замещаемого элемента, будет отображаться фон элемента.
 
-<p>Вы можете задавать способ подстройки собственного размера объекта замещаемого элемента (т. е., его естественного размера) под размер блока элемента, используя свойство {{cssxref("object-fit")}}.</p>
+Вы можете задавать способ подстройки собственного размера объекта замещаемого элемента (т. е., его естественного размера) под размер блока элемента, используя свойство {{cssxref("object-fit")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/object-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-position.html")}}
 
+## Синтаксис
 
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="brush:css no-line-numbers">/* значения &lt;position&gt; */
+```css
+/* значения <position> */
 object-position: center top;
 object-position: 100px 50px;
 
@@ -23,44 +22,42 @@ object-position: 100px 50px;
 object-position: inherit;
 object-position: initial;
 object-position: unset;
-</pre>
+```
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>От одного до четырёх значений, которые определяют 2D-позицию элемента. Могут использоваться как абсолютные, так и относительные значения сдвигов.</dd>
-</dl>
+- {{cssxref("&lt;position&gt;")}}
+  - : От одного до четырёх значений, которые определяют 2D-позицию элемента. Могут использоваться как абсолютные, так и относительные значения сдвигов.
 
-<div class="note">
-<p><strong>Примечание:</strong> Позиция может быть даже такой, что замещаемый элемент будет отрисовываться за пределами своего блока.</p>
-</div>
+> **Примечание:** Позиция может быть даже такой, что замещаемый элемент будет отрисовываться за пределами своего блока.
 
-<h2 id="Формальное_определение">Формальное определение</h2>
+## Формальное определение
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Формальный_синтаксис">Формальный синтаксис</h2>
+## Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Позиционирование_изображений">Позиционирование изображений</h3>
+### Позиционирование изображений
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>Здесь мы видим HTML, содержаний два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.</p>
+Здесь мы видим HTML, содержаний два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-</pre>
+```html
+<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>CSS содержит стандартные стили для самого <code>&lt;img&gt;</code>-элемента, а также отдельные стили для обоих изображений.</p>
+CSS содержит стандартные стили для самого `<img>`-элемента, а также отдельные стили для обоих изображений.
 
-<pre class="brush: css">img {
+```css
+img {
   width: 300px;
   height: 250px;
   border: 1px solid black;
@@ -76,26 +73,22 @@ object-position: unset;
 #object-position-2 {
   object-position: 100% 10%;
 }
-</pre>
+```
 
-<p>Первое изображение расположено с отступом в 10 пикселей относительно левого края блока элемента. Второе изображение расположено своим правым краем впритык к правому краю блока элемента и сдвинуто вниз на 10% высоты блока элемента.</p>
+Первое изображение расположено с отступом в 10 пикселей относительно левого края блока элемента. Второе изображение расположено своим правым краем впритык к правому краю блока элемента и сдвинуто вниз на 10% высоты блока элемента.
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Позиционирование_изображений', '100%','600px') }}</p>
+{{ EmbedLiveSample('Позиционирование_изображений', '100%','600px') }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>Другие CSS-свойства, связанные с изображениями: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- Другие CSS-свойства, связанные с изображениями: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

@@ -1,32 +1,30 @@
 ---
 title: ':required'
-slug: 'Web/CSS/:required'
+slug: Web/CSS/:required
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:required'
+translation_of: Web/CSS/:required
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:required</code> находит любые {{ HTMLElement("input") }} элементы, имеющие атрибут {{ htmlattrxref("required", "input") }}. Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:required` находит любые {{ HTMLElement("input") }} элементы, имеющие атрибут {{ htmlattrxref("required", "input") }}. Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.
 
-<p>Псевдо-класс {{ cssxref(":optional") }} может использоваться, чтобы дать особый внешний вид полям, не обязательным для заполнения.</p>
+Псевдо-класс {{ cssxref(":optional") }} может использоваться, чтобы дать особый внешний вид полям, не обязательным для заполнения.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Смотрите {{ cssxref(":invalid") }}.</p>
+Смотрите {{ cssxref(":invalid") }}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
-</ul>
+- {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}

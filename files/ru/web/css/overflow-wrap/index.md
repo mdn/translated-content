@@ -3,21 +3,20 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 translation_of: Web/CSS/overflow-wrap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <code><strong>overflow-wrap</strong></code> применяется к строковым элементам, устанавливая должен ли браузер расставлять переносы строк внутри неразрывной строки, чтобы избежать выхода текста за границы элемента.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`overflow-wrap`** применяется к строковым элементам, устанавливая должен ли браузер расставлять переносы строк внутри неразрывной строки, чтобы избежать выхода текста за границы элемента.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-<div class="note">
-<p><strong>Note:</strong> В отличие от {{cssxref("word-break")}}, <code>overflow-wrap</code> создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения</p>
-</div>
+> **Примечание:** В отличие от {{cssxref("word-break")}}, `overflow-wrap` создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения
 
-<p>Изначально свойство <code>word-wrap</code> не было стандартом, хотя и было реализовано большинством браузеров. Впоследствии оно было переименовано в <code>overflow-wrap</code> c алиасом <code>word-wrap</code>.</p>
+Изначально свойство `word-wrap` не было стандартом, хотя и было реализовано большинством браузеров. Впоследствии оно было переименовано в `overflow-wrap` c алиасом `word-wrap`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 overflow-wrap: normal;
 overflow-wrap: break-word;
 overflow-wrap: anywhere;
@@ -26,63 +25,63 @@ overflow-wrap: anywhere;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: unset;
-</pre>
+```
 
-<p>Свойство <code>overflow-wrap</code> задаётся с помощью ключевого слова и выбирается из списка значений приведённых ниже:</p>
+Свойство `overflow-wrap` задаётся с помощью ключевого слова и выбирается из списка значений приведённых ниже:
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Разрыв строк происходит согласно обычным правилам разрыва (такими как пробел между двумя словами).</dd>
- <dt><code>anywhere</code></dt>
- <dd>Чтобы избежать <span style="">выхода текста за границы элемента, таких как длинных слов или URL, неразрывная строка символов может быть разбита </span>в любой точке, если в строке нет других допустимых точек разрыва. Тире не вставляется. Возможность мягкого переноса, представленная разрывом слов, рассматривается, когда вычисляется минимальный контент внутренних размеров.</dd>
- <dt><code>break-word</code></dt>
- <dd>Так же как и со значением <code>anywhere</code>, слова, которые обычно нельзя перенести по слогам, могут быть разбиты в произвольных точках, если нет других допустимых разрывов в строке, но возможность мягкого переноса, представленная разрывом слов не рассматривается, когда вычисляется минимальный контент внутренних размеров.</dd>
-</dl>
+- `normal`
+  - : Разрыв строк происходит согласно обычным правилам разрыва (такими как пробел между двумя словами).
+- `anywhere`
+  - : Чтобы избежать выхода текста за границы элемента, таких как длинных слов или URL, неразрывная строка символов может быть разбита в любой точке, если в строке нет других допустимых точек разрыва. Тире не вставляется. Возможность мягкого переноса, представленная разрывом слов, рассматривается, когда вычисляется минимальный контент внутренних размеров.
+- `break-word`
+  - : Так же как и со значением `anywhere`, слова, которые обычно нельзя перенести по слогам, могут быть разбиты в произвольных точках, если нет других допустимых разрывов в строке, но возможность мягкого переноса, представленная разрывом слов не рассматривается, когда вычисляется минимальный контент внутренних размеров.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Сравнение_overflow-wrap_word-break_и_hyphens">Сравнение overflow-wrap, word-break, и hyphens</h3>
+### Сравнение overflow-wrap, word-break, и hyphens
 
-<p>Этот пример сравнивает результаты применения <code>overflow-wrap</code>, <code>word-break</code>, и <code>hyphens</code>, когда разбивается длинное слово.</p>
+Этот пример сравнивает результаты применения `overflow-wrap`, `word-break`, и `hyphens`, когда разбивается длинное слово.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="normal"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;normal&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-anywhere"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;overflow-wrap: anywhere&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-break-word"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;overflow-wrap: break-word&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="word-break"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;word-break&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, without &lt;code&gt;lang&lt;/code&gt; attribute)&lt;/p&gt;
-&lt;p lang="en"&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, English rules)&lt;/p&gt;
-&lt;p class="hyphens" lang="de"&gt;They say the fishing is excellent at
-  Lake &lt;em class="hyphens"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. (&lt;code&gt;hyphens&lt;/code&gt;, German rules)&lt;/p&gt;
-</pre>
+```html
+<p>They say the fishing is excellent at
+  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>normal</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)</p>
+<p>They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
+<p lang="en">They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
+<p class="hyphens" lang="de">They say the fishing is excellent at
+  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
    width: 13em;
    margin: 2px;
    background: gold;
@@ -103,43 +102,26 @@ overflow-wrap: unset;
 .hyphens {
    hyphens: auto;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}</p>
+{{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Text') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li>{{cssxref("text-overflow")}}</li>
-</ul>
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}
+- {{cssxref("text-overflow")}}

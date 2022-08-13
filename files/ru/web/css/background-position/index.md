@@ -3,25 +3,26 @@ title: background-position
 slug: Web/CSS/background-position
 translation_of: Web/CSS/background-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>background-position</code></strong> устанавливает начальную позицию для каждого фонового изображения. Положение относительно уровня положения, установленного {{cssxref("background-origin")}}.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`background-position`** устанавливает начальную позицию для каждого фонового изображения. Положение относительно уровня положения, установленного {{cssxref("background-origin")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css no-line-numbers">/* Ключевые значения */
+```css
+/* Ключевые значения */
 background-position: top;
 background-position: bottom;
 background-position: left;
 background-position: right;
 background-position: center;
 
-/* &lt;процент&gt; значения */
+/* <процент> значения */
 background-position: 25% 75%;
 
-/* &lt;отрезок&gt; значения */
+/* <отрезок> значения */
 background-position: 0 0;
 background-position: 1cm 2cm;
 background-position: 10ch 8em;
@@ -39,58 +40,39 @@ background-position: top right 10px;
 background-position: inherit;
 background-position: initial;
 background-position: unset;
-</pre>
+```
 
-<p>Свойство <code>background-position</code> указывается в виде одного или нескольких значений <code><a href="#&lt;position>">&lt;position&gt;</a></code>, разделённых запятыми.</p>
+Свойство `background-position` указывается в виде одного или нескольких значений [`<position>`](#<position>), разделённых запятыми.
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd><p>{{cssxref("&lt;position&gt;")}}. Позиция определяет координату x/y, чтобы разместить элемент относительно границ поля элемента. Она может быть определена с использованием одного и двух значений. Если используются два значения, первое значение предоставляет горизонтальную позицию, а второе представляет вертикальную позицию. Если указано только одно, второе значение считается <code>center</code>.</p>
- <p><strong>Синтаксис 1-значения:</strong> значение может быть:</p>
+- `<position>`
+  - : {{cssxref("&lt;position&gt;")}}. Позиция определяет координату x/y, чтобы разместить элемент относительно границ поля элемента. Она может быть определена с использованием одного и двух значений. Если используются два значения, первое значение предоставляет горизонтальную позицию, а второе представляет вертикальную позицию. Если указано только одно, второе значение считается `center`.**Синтаксис 1-значения:** значение может быть:\* Значение ключевого слова `center`, которое центрирует изображение.
+    - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Оно указывает край напротив, которого нужно поместить элемент. Затем для другого измерения устанавливается значение 50%, таким образом элемент размещается в середине указанного края.
+    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Оно указывает координату X относительно левого края, с координатой Y установленной на 50%.**Синтаксис с 2-значениями:** одно из значений определяет X, а другое определяет Y. Каждое значение может быть:\* Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Если здесь указаны `left` или `right`, то оно определяет X, а другое заданное значение определяет Y. Если даны `top` или `bottom`, то оно определяет Y, а другое значение определяет X.
+    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Если другое значение является `left` или `right`, то оно определяет Y, относительно верхнего края. Если другое значение `top` или `bottom`, то оно определяет X, относительно левого края. Если оба значения `<length>` или `<percentage>`, то первое определяет X, а второе Y.Обратите внимание,что:\* Если одно значение `top` или `bottom`, то другое значение не может быть `top` или `bottom`.
+    - Если одно значение является `left` или `right`, то другое значение не может быть `left` или `right`.Это означает, например, что `top top` и `left right` являются недействительные.
 
- <ul>
-  <li>Значение ключевого слова <code>center</code>, которое центрирует изображение.</li>
-  <li>Одно из значений ключевых слов <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. Оно указывает край напротив, которого нужно поместить элемент. Затем для другого измерения устанавливается значение 50%, таким образом элемент размещается в середине указанного края.</li>
-  <li>{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Оно указывает координату X относительно левого края, с координатой Y установленной на 50%.</li>
- </ul>
-
- <p><strong>Синтаксис с 2-значениями:</strong> одно из значений определяет X, а другое определяет Y. Каждое значение может быть:</p>
-
- <ul>
-  <li>Одно из значений ключевых слов <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. Если здесь указаны <code>left</code> или <code>right</code>, то оно определяет  X, а другое заданное значение определяет Y. Если даны <code>top</code> или <code>bottom</code>, то оно определяет Y, а другое значение определяет X.</li>
-  <li>{{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Если другое значение является <code>left</code> или <code>right</code>, то оно определяет Y, относительно верхнего края. Если другое значение <code>top</code> или <code>bottom</code>, то оно определяет X, относительно левого края. Если оба значения <code>&lt;length&gt;</code> или <code>&lt;percentage&gt;</code>, то первое определяет X, а второе Y.</li>
- </ul>
-
- <p>Обратите внимание,что:</p>
-
- <ul>
-  <li>Если одно значение <code>top</code> или <code>bottom</code>, то другое значение не может быть <code>top</code> или <code>bottom</code>.</li>
-  <li>Если одно значение  является <code>left</code> или <code>right</code>, то другое значение не может быть <code>left</code> или <code>right</code>.</li>
- </ul>
-
- <p>Это означает, например, что <code>top top</code> и <code>left right</code> являются недействительные.</p>
- </dd>
-</dl>
-
-<h3 id="Официальный_синтаксис">Официальный синтаксис</h3>
+### Официальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Каждый из этих примеров использует свойство {{cssxref("background")}} для создания жёлтого, прямоугольного элемента, содержащего изображение звезды. В каждом примере, звезда находится в другой позиции. Третий пример иллюстрирует, как указать позиции для разных фоновых изображений в одном элементе.</p>
+Каждый из этих примеров использует свойство {{cssxref("background")}} для создания жёлтого, прямоугольного элемента, содержащего изображение звезды. В каждом примере, звезда находится в другой позиции. Третий пример иллюстрирует, как указать позиции для разных фоновых изображений в одном элементе.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;Example One&lt;/div&gt;
-&lt;div class="exampletwo"&gt;Example Two&lt;/div&gt;
-&lt;div class="examplethree"&gt;Example Three&lt;/div&gt;</pre>
+```html
+<div class="exampleone">Example One</div>
+<div class="exampletwo">Example Two</div>
+<div class="examplethree">Example Three</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Общий среди всех &lt;div&gt;-ов */
+```css
+/* Общий среди всех <div>-ов */
 div {
   background-color: #FFEE99;
   background-repeat: no-repeat;
@@ -114,34 +96,32 @@ div {
                        url("https://mdn.mozillademos.org/files/7693/catfront.png");
   background-position: 0px 0px,
                        center;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Examples', 420, 200)}}</p>
+{{EmbedLiveSample('Examples', 420, 200)}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Совместимость браузеров</h2>
-<p>{{Compat}}</p>
+## Совместимость браузеров
 
-<h3 id="Quantum_CSS_заметки">Quantum CSS заметки</h3>
+{{Compat}}
 
-<ul>
- <li>В Gecko есть ошибка, означающая, что <code>background-position</code> не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (смотрите {{bug(1390446)}}). Новый параллельный CSS движок Firefox (также известный как <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> или <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, который планируется выпустить в Firefox 57) исправляет это.</li>
-</ul>
+### Quantum CSS заметки
 
-<h2 id="See_also">Смотрите также</h2>
+- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите {{bug(1390446)}}). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
 
-<ul>
- <li>{{cssxref("background-position-x")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Использование нескольких значений</a></li>
- <li>{{cssxref("transform-origin")}}</li>
-</ul>
+## Смотрите также
+
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Использование нескольких значений](/ru/docs/Web/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- {{cssxref("transform-origin")}}

@@ -4,122 +4,126 @@ slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 original_slug: Web/Guide/CSS/Using_multi-column_layouts
 ---
-<p>{{CSSRef("CSS Multi-columns")}}</p>
+{{CSSRef("CSS Multi-columns")}}
 
-<p><span class="seoSummary"><strong>CSS разметка для многих колонок</strong> расширяет <em>способ блочной разметки, </em>чтобы позволить лёгкое описание нескольких колонок текста.</span> Людям сложно читать текст, если строки слишком длинные; это занимает слишком много времени для глаз, чтобы перемещать взгляд с конца одной на начало следующей строки, и они забывают на какой строке находились. Поэтому, чтобы использовать большие дисплеи по максимуму, авторам следует ограничить ширину колонок текст расположенных бок о бок, как в газетах.</p>
+**CSS разметка для многих колонок** расширяет _способ блочной разметки,_ чтобы позволить лёгкое описание нескольких колонок текста. Людям сложно читать текст, если строки слишком длинные; это занимает слишком много времени для глаз, чтобы перемещать взгляд с конца одной на начало следующей строки, и они забывают на какой строке находились. Поэтому, чтобы использовать большие дисплеи по максимуму, авторам следует ограничить ширину колонок текст расположенных бок о бок, как в газетах.
 
-<p>К несчастью, это невозможно сделать с CSS и HTML без принудительного разбиения колонки в фиксированных позициях, или строго ограничить допустимую разметку в тексте, или использовать экстраординарный скрипт. Это ограничение снимается с помощью добавления новых CSS-свойств, чтобы расширить традиционный блочный способ разметки.</p>
+К несчастью, это невозможно сделать с CSS и HTML без принудительного разбиения колонки в фиксированных позициях, или строго ограничить допустимую разметку в тексте, или использовать экстраординарный скрипт. Это ограничение снимается с помощью добавления новых CSS-свойств, чтобы расширить традиционный блочный способ разметки.
 
-<h2 id="Использование_колонок">Использование колонок</h2>
+## Использование колонок
 
-<h3 id="Количество_колонок_и_ширина">Количество колонок и ширина</h3>
+### Количество колонок и ширина
 
-<p>Два свойства CSS контролируют появятся ли колонки и как много их будет: {{ Cssxref("column-count") }} and {{ Cssxref("column-width") }}.</p>
+Два свойства CSS контролируют появятся ли колонки и как много их будет: {{ Cssxref("column-count") }} and {{ Cssxref("column-width") }}.
 
-<p><code>Свойство column-count</code> устанавливает количество колонок определённым числом. Пример,</p>
+`Свойство column-count` устанавливает количество колонок определённым числом. Пример,
 
-<pre class="brush: html">&lt;div style="column-count:2;"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="column-count:2;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p>отобразит содержимое в двух колонках (если вы используете многоколоночно совместимый браузер):</p>
+отобразит содержимое в двух колонках (если вы используете многоколоночно совместимый браузер):
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<p><code>Свойство column-width</code> устанавливает минимальную желаемую ширину колонки. Если <code>column-count</code> также не установлено, тогда браузер автоматически сделает столько колонок, сколько нужно, чтобы заполнить  доступную ширину.</p>
+`Свойство column-width` устанавливает минимальную желаемую ширину колонки. Если `column-count` также не установлено, тогда браузер автоматически сделает столько колонок, сколько нужно, чтобы заполнить доступную ширину.
 
-<pre class="brush: html">&lt;div style="column-width:20em;"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="column-width:20em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p>становится:</p>
+становится:
 
-<p style="-moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<p>Подробные детали описаны в <a class="external" href="http://www.w3.org/TR/css3-multicol/">CSS3 спецификации</a>.</p>
+Подробные детали описаны в [CSS3 спецификации](http://www.w3.org/TR/css3-multicol/).
 
-<p>В многоколончатом блоке, содержимое автоматически перетекает из одной колонки в следующую, как это необходимо. Вся HTML, CSS и DOM функциональность поддерживается внутри колонок, как например редактирование и печать.</p>
+В многоколончатом блоке, содержимое автоматически перетекает из одной колонки в следующую, как это необходимо. Вся HTML, CSS и DOM функциональность поддерживается внутри колонок, как например редактирование и печать.
 
-<h3 id="Ккраткая_запись_columns"><code>К</code>краткая запись columns</h3>
+### `К`краткая запись columns
 
-<p>В большинстве случаев веб-разработчики используют одно из двух свойств CSS: {{ cssxref("column-count") }} или {{ cssxref("column-width") }}. Так как значения для этих свойств не пересекаются, то часто удобно использовать короткую запись {{ cssxref("columns") }}. Пример:</p>
+В большинстве случаев веб-разработчики используют одно из двух свойств CSS: {{ cssxref("column-count") }} или {{ cssxref("column-width") }}. Так как значения для этих свойств не пересекаются, то часто удобно использовать короткую запись {{ cssxref("columns") }}. Пример:
 
-<p>CSS объявление  <code>column-width:12em</code> может быть заменено:</p>
+CSS объявление `column-width:12em` может быть заменено:
 
-<pre class="brush: html">&lt;div style="columns:12em"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="columns:12em">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p style="-moz-column-width: 12em; -moz-columns: 12em; -webkit-columns: 12em; columns: 12em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<p>CSS объявление <code>column-count:4</code> может быть заменено:</p>
+CSS объявление `column-count:4` может быть заменено:
 
-<pre class="brush: html">&lt;div style="columns:4"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="columns:4">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p style="-moz-columns: 4; -webkit-columns: 4; columns: 4;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<p>Два CSS объявления <code>column-width:8em</code> и <code>column-count:12</code> могут быть заменены:</p>
+Два CSS объявления `column-width:8em` и `column-count:12` могут быть заменены:
 
-<pre class="brush: html">&lt;div style="columns:12 8em"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="columns:12 8em">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p style="-moz-columns: 12 8em; -webkit-columns: 12 8em; columns: 12 8em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<h3 id="Выравнивание_высоты">Выравнивание высоты</h3>
+### Выравнивание высоты
 
-<p>CSS3-спецификация колонок требует, чтобы высота колонки была выровнена, т.е. браузер автоматически устанавливает максимальную высоту колонки, для того, чтобы высота содержимого в каждой из них была приблизительно одинаковая. Firefox так и делает.</p>
+CSS3-спецификация колонок требует, чтобы высота колонки была выровнена, т.е. браузер автоматически устанавливает максимальную высоту колонки, для того, чтобы высота содержимого в каждой из них была приблизительно одинаковая. Firefox так и делает.
 
-<p>Однако, в некоторых ситуациях полезно установить максимальную высоту колонок явно, тогда расположение содержимого, начиная с первой колонки и последующих созданных, как необходимо, возможно, перекроют правую границу. Поэтому, если высота ограничена, с помощью CSS {{ cssxref("height") }} или {{ cssxref("max-height") }} свойств на многоколончатом блоке, каждой колонке разрешено расти до этой высоты, но не более, пока не добавится новая колонка. Этот режим также более эффективен для разметки.</p>
+Однако, в некоторых ситуациях полезно установить максимальную высоту колонок явно, тогда расположение содержимого, начиная с первой колонки и последующих созданных, как необходимо, возможно, перекроют правую границу. Поэтому, если высота ограничена, с помощью CSS {{ cssxref("height") }} или {{ cssxref("max-height") }} свойств на многоколончатом блоке, каждой колонке разрешено расти до этой высоты, но не более, пока не добавится новая колонка. Этот режим также более эффективен для разметки.
 
-<h3 id="Промежутки_между_колонками">Промежутки между колонками</h3>
+### Промежутки между колонками
 
-<p>Существует промежуток между колонками. По умолчанию рекомендовано значение <code>1em</code>. Это значение можно изменить, применяя свойство {{ Cssxref("column-gap") }} на многоколончатом блоке:</p>
+Существует промежуток между колонками. По умолчанию рекомендовано значение `1em`. Это значение можно изменить, применяя свойство {{ Cssxref("column-gap") }} на многоколончатом блоке:
 
-<pre class="brush: html">&lt;div style="column-width:20em; column-gap:2em;"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+```html
+<div style="column-width:20em; column-gap:2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum&lt;/div&gt;
-</pre>
+qui officia deserunt mollit anim id est laborum</div>
+```
 
-<p style="-moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-<h2 id="Постепенное_ухудшение">Постепенное ухудшение</h2>
+## Постепенное ухудшение
 
-<p>Свойства колонки будут просто проигнорированы браузерами, которые не поддерживают многоколончатый режим. Поэтому соответственно легче создать разметку, которая отобразит содержимое в одной колонке и будет использовать несколько колонок в тех браузерах, которые поддерживают многоколончатый режим.</p>
+Свойства колонки будут просто проигнорированы браузерами, которые не поддерживают многоколончатый режим. Поэтому соответственно легче создать разметку, которая отобразит содержимое в одной колонке и будет использовать несколько колонок в тех браузерах, которые поддерживают многоколончатый режим.
 
-<p>Обратите внимание, что не все браузеры поддерживают эти свойства без префикса. Чтобы использовать эти свойства в большинстве современных браузеров, каждое свойство должно быть написано трижды: одно с префиксом {{ property_prefix("-moz") }} , одно с префиксом {{ property_prefix("-webkit") }} и третье без префикса.</p>
+Обратите внимание, что не все браузеры поддерживают эти свойства без префикса. Чтобы использовать эти свойства в большинстве современных браузеров, каждое свойство должно быть написано трижды: одно с префиксом {{ property_prefix("-moz") }} , одно с префиксом {{ property_prefix("-webkit") }} и третье без префикса.
 
-<h2 id="Заключение">Заключение</h2>
+## Заключение
 
-<p>CSS3 колонки - примитивная разметка, которая поможет Веб-разработчикам лучше воспользоваться реальным участком экрана. Разработчики с воображением могут найти много способов для их использования, особенно с автоматическим выравниванием высоты.</p>
+CSS3 колонки - примитивная разметка, которая поможет Веб-разработчикам лучше воспользоваться реальным участком экрана. Разработчики с воображением могут найти много способов для их использования, особенно с автоматическим выравниванием высоты.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://weblogs.mozillazine.org/roc/archives/2005/03/gecko_18_for_we.html" rel="freelink">http://weblogs.mozillazine.org/roc/a...18_for_we.html</a></li>
-</ul>
+- [http://weblogs.mozillazine.org/roc/a...18_for_we.html](http://weblogs.mozillazine.org/roc/archives/2005/03/gecko_18_for_we.html)

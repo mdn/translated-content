@@ -3,15 +3,14 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 translation_of: Web/CSS/grid-auto-flow
 ---
-<p>CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.</p>
+CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
+## Синтаксис
 
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css no-line-numbers">/* Ключевые свойства и значения */
+```css
+/* Ключевые свойства и значения */
 grid-auto-flow: row;
 grid-auto-flow: column;
 grid-auto-flow: dense;
@@ -22,53 +21,50 @@ grid-auto-flow: column dense;
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
 grid-auto-flow: unset;
-</pre>
+```
 
-<p>Свойство можно использовать в двух вариантах:</p>
+Свойство можно использовать в двух вариантах:
 
-<ul>
- <li>с одним ключевым значением: <code>row</code>, <code>column</code>, или <code>dense</code>.</li>
- <li>с двумя значениями: <code>row dense</code> или <code>column dense</code>.</li>
-</ul>
+- с одним ключевым значением: `row`, `column`, или `dense`.
+- с двумя значениями: `row dense` или `column dense`.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>row</code></dt>
- <dd>Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждую строку и добавляя новые строки по мере необходимости. Это значение используется по умолчанию.</dd>
- <dt><code>column</code></dt>
- <dd>Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости.</dd>
- <dt><code>dense</code></dt>
- <dd><p>Ключевое слово, указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, т.к. элементы будут выстраиваться не в соответствии со своим расположением, а в соответствии с размером.</p>
- <p>Если свойство не используется, алгоритм разместит элементы строго по порядку, вне зависимости от наличия свободных ячеек.</p></dd>
-</dl>
+- `row`
+  - : Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждую строку и добавляя новые строки по мере необходимости. Это значение используется по умолчанию.
+- `column`
+  - : Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости.
+- `dense`
+  - : Ключевое слово, указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, т.к. элементы будут выстраиваться не в соответствии со своим расположением, а в соответствии с размером.Если свойство не используется, алгоритм разместит элементы строго по порядку, вне зависимости от наличия свободных ячеек.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-  &lt;div id="item4"&gt;&lt;/div&gt;
-  &lt;div id="item5"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="direction" onchange="changeGridAutoFlow()"&gt;
-  &lt;option value="column"&gt;column&lt;/option&gt;
-  &lt;option value="row"&gt;row&lt;/option&gt;
-&lt;/select&gt;
-&lt;input id="dense" type="checkbox" onchange="changeGridAutoFlow()"&gt;
-&lt;label for="dense"&gt;dense&lt;/label&gt;
-</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+</div>
+<select id="direction" onchange="changeGridAutoFlow()">
+  <option value="column">column</option>
+  <option value="row">row</option>
+</select>
+<input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
+<label for="dense">dense</label>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css; highlight[7]">#grid {
+```css
+#grid {
   height: 200px;
   width: 200px;
   display: grid;
@@ -97,9 +93,11 @@ grid-auto-flow: unset;
 
 #item5 {
   background-color: aqua;
-}</pre>
+}
+```
 
-<pre class="brush: js; hidden">function changeGridAutoFlow() {
+```js hidden
+function changeGridAutoFlow() {
   var grid = document.getElementById("grid");
   var direction = document.getElementById("direction");
   var dense = document.getElementById("dense");
@@ -110,26 +108,23 @@ grid-auto-flow: unset;
   }
 
   grid.style.gridAutoFlow = gridAutoFlow;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Пример", "200px", "230px")}}</p>
+{{EmbedLiveSample("Пример", "200px", "230px")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
+- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
+- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_

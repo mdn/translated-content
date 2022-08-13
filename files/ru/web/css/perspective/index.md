@@ -3,26 +3,27 @@ title: perspective
 slug: Web/CSS/perspective
 translation_of: Web/CSS/perspective
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство <a href="/en/CSS" title="CSS">CSS</a> <strong><code>perspective </code></strong>определяет расcтояние между плоскостью z = 0 и пользователем для того чтобы придать 3D-позиционируемому элементу эффект переспективы. Каждый трансформируемый элемент с z &gt; 0 станет больше, с z &lt; 0 соответственно меньше.</p>
+Свойство [CSS](/en/CSS "CSS") **`perspective `**определяет расcтояние между плоскостью z = 0 и пользователем для того чтобы придать 3D-позиционируемому элементу эффект переспективы. Каждый трансформируемый элемент с z > 0 станет больше, с z < 0 соответственно меньше.
 
-<p>Элементы части которые находятся за пользователем, т.е. z-координата этих элементов больше чем значение  свойства <code>perspective, не отрисовываются.</code></p>
+Элементы части которые находятся за пользователем, т.е. z-координата этих элементов больше чем значение свойства `perspective, не отрисовываются.`
 
-<p><em><code>Точка схождения </code></em>по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.</p>
+*`Точка схождения `*по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.
 
-<p>При использовании данного свойства со значениями отличными от 0 или none создаётся новый <a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">stacking context</a>.</p>
+При использовании данного свойства со значениями отличными от 0 или none создаётся новый [stacking context](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context").
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* Keyword value */
+```css
+/* Keyword value */
 perspective: none;
 
-/* Значения &lt;length&gt; */
+/* Значения <length> */
 perspective: 20px;
 perspective: 3.5em;
 
@@ -30,81 +31,82 @@ perspective: 3.5em;
 perspective: inherit;
 perspective: initial;
 perspective: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>none</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">Указывает что трансформация перспективы к элементу применяться не будет.</font></dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}} устанавливает растояние от пользователя до плоскости z = 0. Применяет трасформацию к элементу и его содержимому. Если значение отрицательно или равно 0, то преобразование не применяется.</dd>
-</dl>
+- `none`
+  - : Указывает что трансформация перспективы к элементу применяться не будет.
+- `<length>`
+  - : {{cssxref("&lt;length&gt;")}} устанавливает растояние от пользователя до плоскости z = 0. Применяет трасформацию к элементу и его содержимому. Если значение отрицательно или равно 0, то преобразование не применяется.
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Three_cubes">Три куба</h3>
+### Три куба
 
-<h4 id="HTML_Content">HTML Content</h4>
+#### HTML Content
 
-<pre class="brush: html">&lt;table&gt;
-   &lt;tbody&gt;
-      &lt;tr&gt;
-         &lt;th&gt;&lt;code&gt;perspective: 250px;&lt;/code&gt;
-         &lt;/th&gt;
-         &lt;th&gt;&lt;code&gt;perspective: 350px;&lt;/code&gt;
-         &lt;/th&gt;
-         &lt;th&gt;&lt;code&gt;perspective: 500px;&lt;/code&gt;
-         &lt;/th&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;td&gt;
-            &lt;div class="container"&gt;
-               &lt;div class="cube pers250"&gt;
-                  &lt;div class="face front"&gt;1&lt;/div&gt;
-                  &lt;div class="face back"&gt;2&lt;/div&gt;
-                  &lt;div class="face right"&gt;3&lt;/div&gt;
-                  &lt;div class="face left"&gt;4&lt;/div&gt;
-                  &lt;div class="face top"&gt;5&lt;/div&gt;
-                  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/td&gt;
-         &lt;td&gt;
-            &lt;div class="container"&gt;
-               &lt;div class="cube pers350"&gt;
-                  &lt;div class="face front"&gt;1&lt;/div&gt;
-                  &lt;div class="face back"&gt;2&lt;/div&gt;
-                  &lt;div class="face right"&gt;3&lt;/div&gt;
-                  &lt;div class="face left"&gt;4&lt;/div&gt;
-                  &lt;div class="face top"&gt;5&lt;/div&gt;
-                  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/td&gt;
-         &lt;td&gt;
-            &lt;div class="container"&gt;
-               &lt;div class="cube pers500"&gt;
-                  &lt;div class="face front"&gt;1&lt;/div&gt;
-                  &lt;div class="face back"&gt;2&lt;/div&gt;
-                  &lt;div class="face right"&gt;3&lt;/div&gt;
-                  &lt;div class="face left"&gt;4&lt;/div&gt;
-                  &lt;div class="face top"&gt;5&lt;/div&gt;
-                  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+   <tbody>
+      <tr>
+         <th><code>perspective: 250px;</code>
+         </th>
+         <th><code>perspective: 350px;</code>
+         </th>
+         <th><code>perspective: 500px;</code>
+         </th>
+      </tr>
+      <tr>
+         <td>
+            <div class="container">
+               <div class="cube pers250">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="container">
+               <div class="cube pers350">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="container">
+               <div class="cube pers500">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+               </div>
+            </div>
+         </td>
+      </tr>
+   </tbody>
+</table>
+```
 
-<h4 id="CSS_Content">CSS Content</h4>
+#### CSS Content
 
-<pre class="brush: css">/* Короткие классы для различных значений perspective */
+```css
+/* Короткие классы для различных значений perspective */
 .pers250 {
     perspective: 250px;
     -webkit-perspective: 250px;
@@ -187,22 +189,21 @@ th, p, td {
    padding: 10px;
    font-family: sans-serif;
    text-align: left;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Three_cubes', 940, 460) }}</p>
+{{ EmbedLiveSample('Three_cubes', 940, 460) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></li>
-</ul>
+- [Using CSS Transforms](/ru/docs/CSS/Using_CSS_transforms)

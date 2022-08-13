@@ -9,29 +9,29 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries">медиа функция</a> <code><strong>prefers-reduced-motion</strong></code> может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.</p>
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Указывает, что пользователь не сделал никаких предпочтений, известных системе.</dd>
- <dt><code><dfn>reduce</dfn></code></dt>
- <dd>Указывает, что пользователь уведомил ОС, что он предпочитает интерфейс, который минимизирует количество движения или анимации, предпочтительно до точки, где удаляются все несущественные движения.</dd>
-</dl>
+- `no-preference`
+  - : Указывает, что пользователь не сделал никаких предпочтений, известных системе.
+- `reduce`
+  - : Указывает, что пользователь уведомил ОС, что он предпочитает интерфейс, который минимизирует количество движения или анимации, предпочтительно до точки, где удаляются все несущественные движения.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В этом примере присутствует раздражающая анимация, если вы не включите «Уменьшить движение» в настройках доступности.</p>
+В этом примере присутствует раздражающая анимация, если вы не включите «Уменьшить движение» в настройках доступности.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="animation"&gt;animated box&lt;/div&gt;
-</pre>
+```html
+<div class="animation">animated box</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.animation {
+```css
+.animation {
   -webkit-animation: vibrate 0.3s linear infinite both;
   animation: vibrate 0.3s linear infinite both;
 }
@@ -42,10 +42,10 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
     -webkit-animation: none;
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: css">.animation {
+```css hidden
+.animation {
   background-color: rebeccapurple;
   color: #fff;
   font: 1.2em Helvetica, arial, sans-serif;
@@ -117,27 +117,22 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
             transform: translate(0);
   }
 }
-</pre>
-</div>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Примеры")}}</p>
+{{EmbedLiveSample("Примеры")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## [Смотрите также](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#See_also)
 
-<p>{{Compat}}</p>
+- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-<h2 id="See_also"><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#See_also">Смотрите также</a></h2>
-
-<ul>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An introduction to the reduced motion media query</a></li>
-</ul>
-
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

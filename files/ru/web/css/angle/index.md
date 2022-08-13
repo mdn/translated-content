@@ -7,66 +7,41 @@ tags:
   - Тип данных CSS
 translation_of: Web/CSS/angle
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Types">Тип данных</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>&lt;angle&gt;</code></strong> представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}}  и в некоторых функциях {{cssxref ("transform")}}.</p>
+[Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<angle>`** представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}} и в некоторых функциях {{cssxref ("transform")}}.
 
-<p>{{EmbedInteractiveExample("pages/css/type-angle.html")}}</p>
+{{EmbedInteractiveExample("pages/css/type-angle.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Тип данных <code>&lt;angle&gt;</code> состоит из числа ({{cssxref("&lt;number&gt;")}}), за которым следует одна из единиц измерения, представленные ниже. Между литералом единицы измерения и цифрой нет пробела. После <code>0</code> указывать единицу измерения необязательно.</p>
+Тип данных `<angle>` состоит из числа ({{cssxref("&lt;number&gt;")}}), за которым следует одна из единиц измерения, представленные ниже. Между литералом единицы измерения и цифрой нет пробела. После `0` указывать единицу измерения необязательно.
 
-<p>Опционально перед числом может стоять знак <code>+</code> или <code>-</code> . Положительное значение отмеряется по часовой стрелке, а отрицательные – против часовой. Чтобы достичь статистических свойств, каждый угол может быть представлен разными значениями, эквивалентными друг другу. Например, <code>90deg</code> равняется <code>-270deg</code>, а <code>1turn</code> равняется <code>4turn</code>. Тем не менее, для достижения динамических свойств эффект будет другим. Например, при применении {{cssxref ("animation")}} или {{cssxref ("transition")}}. </p>
+Опционально перед числом может стоять знак `+` или `-` . Положительное значение отмеряется по часовой стрелке, а отрицательные – против часовой. Чтобы достичь статистических свойств, каждый угол может быть представлен разными значениями, эквивалентными друг другу. Например, `90deg` равняется `-270deg`, а `1turn` равняется `4turn`. Тем не менее, для достижения динамических свойств эффект будет другим. Например, при применении {{cssxref ("animation")}} или {{cssxref ("transition")}}.
 
-<h3 id="Единицы_измерения">Единицы измерения</h3>
+### Единицы измерения
 
-<dl>
- <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">deg</span></font></dt>
- <dd>
- <p id="tw-target-text">Представляет угол в <a href="https://ru.wikipedia.org/wiki/Градус_(геометрия)">градусах</a>. Один полный круг равен <code>360deg</code>. Например: <code>0deg</code>, <code>90deg</code>, <code>14.23deg</code>.</p>
- </dd>
- <dt id="grad"><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">grad</span></font></dt>
- <dd>Представляет угол в <a href="https://ru.wikipedia.org/wiki/Град,_минута,_секунда">градах</a>. Один полный круг равен <code>400grad</code>. Например: <code>0grad</code>, <code>100grad</code>, <code>38.8grad</code>.</dd>
- <dt id="rad"><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">rad</span></font></dt>
- <dd>Представляет угол в <a href="https://ru.wikipedia.org/wiki/Радиан">радианах</a>. Один полный круг равен 2π или примерно <code>6.2832rad</code>. <code>1rad</code> - это 180/π градусов. Например: <code>0rad</code>, <code>1.0708rad</code>, <code>6.2832rad</code>.</dd>
- <dt id="turn"><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">turn</span></font></dt>
- <dd>Представляет угол в количестве <a href="https://ru.wikipedia.org/wiki/Оборот_(единица_измерения)">оборотов</a>. Один полный круг равен <code>1turn</code>. Например: <code>0turn</code>, <code>0.25turn</code>, <code>1.2turn</code>.</dd>
-</dl>
+- deg
+  - : Представляет угол в [градусах](<https://ru.wikipedia.org/wiki/Градус_(геометрия)>). Один полный круг равен `360deg`. Например: `0deg`, `90deg`, `14.23deg`.
+- grad
+  - : Представляет угол в [градах](https://ru.wikipedia.org/wiki/Град,_минута,_секунда). Один полный круг равен `400grad`. Например: `0grad`, `100grad`, `38.8grad`.
+- rad
+  - : Представляет угол в [радианах](https://ru.wikipedia.org/wiki/Радиан). Один полный круг равен 2π или примерно `6.2832rad`. `1rad` - это 180/π градусов. Например: `0rad`, `1.0708rad`, `6.2832rad`.
+- turn
+  - : Представляет угол в количестве [оборотов](<https://ru.wikipedia.org/wiki/Оборот_(единица_измерения)>). Один полный круг равен `1turn`. Например: `0turn`, `0.25turn`, `1.2turn`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<table style="width: 100%;">
- <tbody>
-  <tr>
-   <td><img alt="Angle90.png" class="default internal" src="/@api/deki/files/5704/=Angle90.png"></td>
-   <td>
-    <p>Прямой угол: <code>90deg = 100grad = 0.25turn</code><code style="white-space: nowrap;">≈</code><code> 1.5708rad</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td><img alt="Angle180.png" class="default internal" src="/@api/deki/files/5706/=Angle180.png"></td>
-   <td>Развёрнутый угол: <code>180deg = 200grad = 0.5turn</code><code> </code><code style="white-space: nowrap;">≈</code><code> 3.1416rad</code></td>
-  </tr>
-  <tr>
-   <td><img alt="AngleMinus90.png" class="default internal" src="/@api/deki/files/5707/=AngleMinus90.png"></td>
-   <td>Прямой угол (против часовой стрелки): <code>-90deg = -100grad = -0.25turn</code> <code style="white-space: nowrap;">≈</code><code> -1.5708rad</code></td>
-  </tr>
-  <tr>
-   <td><img alt="Angle0.png" class="default internal" src="/@api/deki/files/5708/=Angle0.png"></td>
-   <td>
-    <p>Нулевой угол: <code>0deg = 0grad = 0turn</code><code> </code><code style="white-space: nowrap;">=</code><code> 0rad</code></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Прямой угол: ` 90deg = 100grad = 0.25turn``≈`` 1.5708rad  `                               |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Развёрнутый угол: ` 180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad  `                       |
+| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Прямой угол (против часовой стрелки): `-90deg = -100grad = -0.25turn` ` ≈`` -1.5708rad  ` |
+| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Нулевой угол: ` 0deg = 0grad = 0turn`` ``=`` 0rad  `                                      |
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
-
-<div id="compat-mobile"></div>
+{{Compat}}

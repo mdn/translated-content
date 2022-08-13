@@ -1,98 +1,94 @@
 ---
 title: '::first-letter (:first-letter)'
-slug: 'Web/CSS/::first-letter'
+slug: Web/CSS/::first-letter
 tags:
   - CSS
   - Layout
   - Reference
   - Псевдоэлементы
-translation_of: 'Web/CSS/::first-letter'
+translation_of: Web/CSS/::first-letter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a> <strong><code>::first-letter</code></strong> применяет стили к первой букве первой строки <a href="/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">блочного элемента</a>, но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).</p>
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
 
-<pre class="brush: css no-line-numbers">/* Стили для первой буквы элемента &lt;p&gt; */
+```css
+/* Стили для первой буквы элемента <p> */
 p::first-letter {
   font-size: 130%;
-}</pre>
+}
+```
 
-<p>Может быть непросто определить первую букву элемента:</p>
+Может быть непросто определить первую букву элемента:
 
-<ul>
- <li>Пунктуация, которая предшествует или следует сразу за первой буквой, включается в селектор. Пунктуация включает любой символ Юникода, определённый в классах <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), and <em>other punctuation</em> (Po).</li>
- <li>В некоторых языках существуют диграфы, которые должны преобразовываться в верхний регистр вместе, например <code>IJ</code> в Нидерландском. В этих случаях обе буквы диграфа должны соответствовать псевдоэлементу <code>::first-letter</code>  (это слабо поддерживается браузерами, смотрите <a href="/En/CSS/::first-letter#Browser_compatibility" title="https://developer.mozilla.org/En/CSS/::first-letter#Browser_compatibility">таблицу совместимости</a> ниже).</li>
- <li>Комбинация псевдоэлемента {{ cssxref("::before") }} и свойства {{ cssxref("content") }} может привести к добавлению некоторого текста в начало элемента. В этом случае псевдоэлементу <code>::first-letter</code> будет соответствовать первая буква добавленного содержимого.</li>
-</ul>
+- Пунктуация, которая предшествует или следует сразу за первой буквой, включается в селектор. Пунктуация включает любой символ Юникода, определённый в классах _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po).
+- В некоторых языках существуют диграфы, которые должны преобразовываться в верхний регистр вместе, например `IJ` в Нидерландском. В этих случаях обе буквы диграфа должны соответствовать псевдоэлементу `::first-letter` (это слабо поддерживается браузерами, смотрите [таблицу совместимости](/En/CSS/::first-letter#Browser_compatibility "https://developer.mozilla.org/En/CSS/::first-letter#Browser_compatibility") ниже).
+- Комбинация псевдоэлемента {{ cssxref("::before") }} и свойства {{ cssxref("content") }} может привести к добавлению некоторого текста в начало элемента. В этом случае псевдоэлементу `::first-letter` будет соответствовать первая буква добавленного содержимого.
 
-<div class="note">
-<p>В CSS3 появилась запись  <code>::first-letter</code> (с двумя двоеточиями) для различения <a href="/ru/docs/Web/CSS/Pseudo-classes">псевдоклассов</a> и <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлементов</a>. Браузеры также поддерживают запись <code>:first-letter</code>, введённую в CSS2.</p>
-</div>
+> **Примечание:** В CSS3 появилась запись `::first-letter` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-letter`, введённую в CSS2.
 
-<h2 id="Разрешённые_свойства">Разрешённые свойства</h2>
+## Разрешённые свойства
 
-<p>Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом <code>::first-letter</code>:</p>
+Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::first-letter`:
 
-<ul>
- <li>Все свойства, связанные с шрифтами: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} и {{ Cssxref("font-family") }}</li>
- <li>Все свойства, связанные с фоном: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }} и {{cssxref("background-blend-mode")}}</li>
- <li>Все свойства для внешних отступов: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}</li>
- <li>Все свойства для внутренних отступов: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}</li>
- <li>Все свойства, связанные с рамкой: сокращения {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}} и полные записи свойств</li>
- <li>Свойства {{ cssxref("color") }}</li>
- <li>Свойства {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (только если <code>float</code> равен <code>none</code>)</li>
-</ul>
+- Все свойства, связанные с шрифтами: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} и {{ Cssxref("font-family") }}
+- Все свойства, связанные с фоном: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }} и {{cssxref("background-blend-mode")}}
+- Все свойства для внешних отступов: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}
+- Все свойства для внутренних отступов: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}
+- Все свойства, связанные с рамкой: сокращения {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}} и полные записи свойств
+- Свойства {{ cssxref("color") }}
+- Свойства {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (только если `float` равен `none`)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Сделаем первую букву каждого абзаца красной и большой.</p>
+Сделаем первую букву каждого абзаца красной и большой.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
   ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.&lt;/p&gt;
-&lt;p&gt;Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.&lt;/p&gt;
-&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
   aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-  esse molestie consequat.&lt;/p&gt;
-&lt;p&gt;-Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;_Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;"Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;'Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;*Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;#Начало специального знака препинания.&lt;/p&gt;
-&lt;p&gt;「特殊的汉字标点符号开头。&lt;/p&gt;
-&lt;p&gt;《特殊的汉字标点符号开头。&lt;/p&gt;
-&lt;p&gt;“特殊的汉字标点符号开头。&lt;/p&gt;</pre>
+  esse molestie consequat.</p>
+<p>-Начало специального знака препинания.</p>
+<p>_Начало специального знака препинания.</p>
+<p>"Начало специального знака препинания.</p>
+<p>'Начало специального знака препинания.</p>
+<p>*Начало специального знака препинания.</p>
+<p>#Начало специального знака препинания.</p>
+<p>「特殊的汉字标点符号开头。</p>
+<p>《特殊的汉字标点符号开头。</p>
+<p>“特殊的汉字标点符号开头。</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p::first-letter {
+```css
+p::first-letter {
   color: red;
   font-size: 130%;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example', '80%', 420) }}</p>
+{{ EmbedLiveSample('Example', '80%', 420) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref("::first-line")}}</li>
-</ul>
+- {{cssxref("::first-line")}}

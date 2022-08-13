@@ -1,90 +1,93 @@
 ---
 title: ':last-of-type'
-slug: 'Web/CSS/:last-of-type'
+slug: Web/CSS/:last-of-type
 tags:
   - CSS
   - Layout
   - Reference
   - Web
   - Псевдоклассы
-translation_of: 'Web/CSS/:last-of-type'
+translation_of: Web/CSS/:last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ru/docs/CSS" title="CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <strong><code>:last-of-type</code></strong> находит последнего потомка с заданным тегом в списке детей родительского элемента.</p>
+[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") **`:last-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента.
 
-<pre class="brush: css no-line-numbers">/* Выбирает &lt;p&gt;, являющийся последним элементом
+```css
+/* Выбирает <p>, являющийся последним элементом
    среди элементов своего типа среди своих соседей */
 p:last-of-type {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: В первоначальном определении выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это не является обязательным.</p>
-</div>
+> **Примечание:** В первоначальном определении выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это не является обязательным.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Стилизация_последнего_параграфа">Стилизация последнего параграфа</h3>
+### Стилизация последнего параграфа
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Заголовок&lt;/h2&gt;
-&lt;p&gt;Параграф 1&lt;/p&gt;
-&lt;p&gt;Параграф 2&lt;/p&gt;</pre>
+```html
+<h2>Заголовок</h2>
+<p>Параграф 1</p>
+<p>Параграф 2</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:last-of-type {
+```css
+p:last-of-type {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Стилизация_последнего_параграфа')}}</p>
+{{EmbedLiveSample('Стилизация_последнего_параграфа')}}
 
-<h3 id="Вложенные_элементы">Вложенные элементы</h3>
+### Вложенные элементы
 
-<p>Этот пример показывает как можно обратиться к вложенным элементам. Заметим, что в случаях когда не указано ни одного простого селектора, подразумевается <a href="/ru/docs/Web/CSS/Universal_selectors">универсальный селектор</a> (<code>*</code>).</p>
+Этот пример показывает как можно обратиться к вложенным элементам. Заметим, что в случаях когда не указано ни одного простого селектора, подразумевается [универсальный селектор](/ru/docs/Web/CSS/Universal_selectors) (`*`).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;div&gt;Этот `div` первый.&lt;/div&gt;
-  &lt;div&gt;Этот &lt;span&gt;вложенный `span` является последним&lt;/span&gt;!&lt;/div&gt;
-  &lt;div&gt;Этот &lt;em&gt;вложенный `em` первый&lt;/em&gt;, а этот &lt;em&gt;вложенный `em` последний&lt;/em&gt;!&lt;/div&gt;
-  &lt;b&gt;Этот `b` будет выбран!&lt;/b&gt;
-  &lt;div&gt;Это последний `div`!&lt;/div&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <div>Этот `div` первый.</div>
+  <div>Этот <span>вложенный `span` является последним</span>!</div>
+  <div>Этот <em>вложенный `em` первый</em>, а этот <em>вложенный `em` последний</em>!</div>
+  <b>Этот `b` будет выбран!</b>
+  <div>Это последний `div`!</div>
+</article>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">article :last-of-type {
+```css
+article :last-of-type {
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Вложенные_элементы', 500)}}</p>
+{{EmbedLiveSample('Вложенные_элементы', 500)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{cssxref(":last-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{cssxref(":last-child")}}, {{Cssxref(":nth-last-of-type")}}

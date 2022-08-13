@@ -3,21 +3,22 @@ title: width
 slug: Web/CSS/width
 translation_of: Web/CSS/width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство CSS <strong><code>width</code></strong> устанавливает ширину элемента. По умолчанию она равняется ширине <a href="/ru/docs/Web/CSS/box_model#content">внутренней области</a>, но если {{cssxref("box-sizing")}} имеет значение <code>border-box</code>, то она будет равняться ширине <a href="/ru/docs/Web/CSS/box_model#border">области рамки</a>.</p>
+Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/box_model#border).
 
-<div>{{EmbedInteractiveExample("pages/css/width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/width.html")}}
 
-<p>Свойства {{cssxref("min-width")}} и {{cssxref("max-width")}} перекрывают {{cssxref("width")}}.</p>
+Свойства {{cssxref("min-width")}} и {{cssxref("max-width")}} перекрывают {{cssxref("width")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; значения */
+```css
+/* <length> значения */
 width: 300px;
 width: 25em;
 
-/* &lt;percentage&gt; значения */
+/* <percentage> значения */
 width: 75%;
 
 /* Значения-ключевые слова */
@@ -33,64 +34,61 @@ width: auto;
 width: inherit;
 width: initial;
 width: unset;
-</pre>
+```
 
-<p>Свойство <code>width</code> указывается как:</p>
+Свойство `width` указывается как:
 
-<ul>
- <li>одно из следующих ключевых слов: <code><a href="#available">available</a></code>, <code><a href="#min-content">min-content</a></code>, <code><a href="#max-content">max-content</a></code>, <code><a href="#fit-content">fit-content</a></code>, <code><a href="#auto">auto</a></code>.</li>
- <li><code><a href="#&lt;length>">&lt;length&gt;</a></code> или <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code>. За ними так же могут быть указаны одни из следующих ключевых слов: <code><a href="#border-box">border-box</a></code>, <code><a href="#content-box">content-box</a></code>.</li>
-</ul>
+- одно из следующих ключевых слов: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
+- [`<length>`](#<length>) или [`<percentage>`](#<percentage>). За ними так же могут быть указаны одни из следующих ключевых слов: [`border-box`](#border-box), [`content-box`](#content-box).
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Ширина - фиксированная величина.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Ширина в процентах - размер относительно ширины родительского блока.</dd>
- <dt><code>border-box</code>{{experimental_inline}}</dt>
- <dd>Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к области рамки элемента.</dd>
- <dt><code>content-box</code>{{experimental_inline}}</dt>
- <dd>Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к внутренней области элемента.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер рассчитает и выберет ширину для указанного элемента.</dd>
- <dt><code>fill</code>{{experimental_inline}}</dt>
- <dd>Использует <code>fill-available</code> размер строки или <code>fill-available</code> размер блока, в зависимости от способа разметки.</dd>
- <dt><code>max-content</code>{{experimental_inline}}</dt>
- <dd>Внутренняя максимальная предпочтительная ширина.</dd>
- <dt><code>min-content</code>{{experimental_inline}}</dt>
- <dd>Внутренняя минимальная ширина.</dd>
- <dt><code>available</code>{{experimental_inline}}</dt>
- <dd>Ширина содержащего блока минус горизонтальные <code>margin</code>, <code>border</code> и <code>padding</code>.</dd>
- <dt><code>fit-content</code>{{experimental_inline}}</dt>
- <dd>Наибольшее из:
- <ul>
-  <li>внутренняя минимальная ширина</li>
-  <li>меньшая из внутренней предпочтительной ширины и доступной ширины</li>
- </ul>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Ширина - фиксированная величина.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Ширина в процентах - размер относительно ширины родительского блока.
+- `border-box`{{experimental_inline}}
+  - : Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к области рамки элемента.
+- `content-box`{{experimental_inline}}
+  - : Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к внутренней области элемента.
+- `auto`
+  - : Браузер рассчитает и выберет ширину для указанного элемента.
+- `fill`{{experimental_inline}}
+  - : Использует `fill-available` размер строки или `fill-available` размер блока, в зависимости от способа разметки.
+- `max-content`{{experimental_inline}}
+  - : Внутренняя максимальная предпочтительная ширина.
+- `min-content`{{experimental_inline}}
+  - : Внутренняя минимальная ширина.
+- `available`{{experimental_inline}}
+  - : Ширина содержащего блока минус горизонтальные `margin`, `border` и `padding`.
+- `fit-content`{{experimental_inline}}
+  - : Наибольшее из:\* внутренняя минимальная ширина
+    - меньшая из внутренней предпочтительной ширины и доступной ширины
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Ширина_по_умолчанию">Ширина по умолчанию</h3>
+### Ширина по умолчанию
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;Сообщество Mozilla производит множество отличного ПО.&lt;/p&gt;</pre>
+```html
+<p class="goldie">Сообщество Mozilla производит множество отличного ПО.</p>
+```
 
-<p>{{EmbedLiveSample('Ширина_по_умолчанию', '500px', '64px')}}</p>
+{{EmbedLiveSample('Ширина_по_умолчанию', '500px', '64px')}}
 
-<h3 id="Пиксели_и_em">Пиксели и em</h3>
+### Пиксели и em
 
-<pre class="brush: css">.px_length {
+```css
+.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -103,70 +101,79 @@ width: unset;
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="px_length"&gt;Ширина в пикселях&lt;/div&gt;
-&lt;div class="em_length"&gt;Ширина в em&lt;/div&gt;</pre>
+```html
+<div class="px_length">Ширина в пикселях</div>
+<div class="em_length">Ширина в em</div>
+```
 
-<p>{{EmbedLiveSample('Пиксели_и_em', '500px', '64px')}}</p>
+{{EmbedLiveSample('Пиксели_и_em', '500px', '64px')}}
 
-<h3 id="Проценты">Проценты</h3>
+### Проценты
 
-<pre class="brush: css">.percent {
+```css
+.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="percent"&gt;Ширина в процентах&lt;/div&gt;</pre>
+```html
+<div class="percent">Ширина в процентах</div>
+```
 
-<p>{{EmbedLiveSample('Проценты', '500px', '64px')}}</p>
+{{EmbedLiveSample('Проценты', '500px', '64px')}}
 
-<h3 id="max-content_2">max-content</h3>
+### max-content
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit используют нестандартное имя */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;Сообщество Mozilla производит множество отличного ПО.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">Сообщество Mozilla производит множество отличного ПО.</p>
+```
 
-<p>{{EmbedLiveSample('max-content_2', '500px', '64px')}}</p>
+{{EmbedLiveSample('max-content_2', '500px', '64px')}}
 
-<h3 id="min-content_2">min-content</h3>
+### min-content
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;Сообщество Mozilla производит множество отличного ПО.&lt;/p&gt;</pre>
+```html
+<p class="minblue">Сообщество Mozilla производит множество отличного ПО.</p>
+```
 
-<p>{{EmbedLiveSample('min-content_2', '500px', '155px')}}</p>
+{{EmbedLiveSample('min-content_2', '500px', '155px')}}
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+## Проблемы доступности
 
-<p>Убедитесь, что элементы с <code>width</code> не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста.</p>
+Убедитесь, что элементы с `width` не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## Поддержка браузерами
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/box_model">Блочная модель</a>, {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
-</ul>
+- [Блочная модель](/ru/docs/Web/CSS/box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

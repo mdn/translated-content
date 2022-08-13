@@ -10,40 +10,41 @@ tags:
   - Справка
 translation_of: Web/CSS/display-listitem
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">Ключевое слово <code>list-item</code> приводит к тому, что элемент генерирует <code>::marker</code> псевдо-элемент с определяемыми {{cssxref("list-style")}} свойствами (например, маркерной точкой) вместе с основным блоком указанного типа для его  содержимого.</p>
+Ключевое слово `list-item` приводит к тому, что элемент генерирует `::marker` псевдо-элемент с определяемыми {{cssxref("list-style")}} свойствами (например, маркерной точкой) вместе с основным блоком указанного типа для его содержимого.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Единственное значение <code> list-item  приведёт к тому, что элемент будет вести себя как элемент списка. Это можно использовать вместе с {{CSSxRef("list-style-type")}} и {{CSSxRef("list-style-position")}}.</code></p>
+Единственное значение `list-item приведёт к тому, что элемент будет вести себя как элемент списка. Это можно использовать вместе с {{CSSxRef("list-style-type")}} и {{CSSxRef("list-style-position")}}.`
 
-<div class="note">
-<p><code><strong>Примечание</strong>:В браузерах, поддерживающих двухзначный синтаксис, если внутреннее значение не указано, по умолчанию оно будет </code>flow<code>. Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (</code>outer display type<code>) <code>block</code>.</code></p>
-</div>
+> **Примечание:** `Примечание:В браузерах, поддерживающих двухзначный синтаксис, если внутреннее значение не указано, по умолчанию оно будет `flow`. Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (`outer display type`) block.`
 
-<h2 id="Пример"><code>Пример</code></h2>
+## `Пример`
 
-<h3 id="HTML"><code>HTML</code></h3>
+### `HTML`
 
-<pre class="brush: html"><code>
-&lt;div class="fake-list"&gt;I will display as a list item&lt;/div&gt;
-</code></pre>
+```html
 
-<h3 id="CSS"><code>CSS</code></h3>
+<div class="fake-list">I will display as a list item</div>
+```
 
-<pre class="brush: css"><code>
+### `CSS`
+
+```css
+
 .fake-list {
   display: list-item;
   list-style-position: inside;
 }
-</code></pre>
+```
 
-<h3 id="Результат"><code>Результат</code></h3>
+### `Результат`
 
-<p><code>{{EmbedLiveSample("Пример", "100%", 150)}}</code></p>
+`{{EmbedLiveSample("Пример", "100%", 150)}}`
 
-<h2 id="Совместимость с браузерами">Совместимость с браузерами</h2>
-<h3 id="Поддержка_list-item"><code>Поддержка <code>list-item</code></code></h3>
+## Совместимость с браузерами
 
-<p>{{Compat("css.properties.display.list-item", 10)}}</p>
+### `Поддержка list-item`
+
+{{Compat("css.properties.display.list-item", 10)}}

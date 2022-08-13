@@ -9,79 +9,48 @@ translation_of: Web/CSS/CSS_Color
 translation_of_original: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Colors</strong> - модуль в CSS, который работает с цветами, типами цветов и прозрачностью.</p>
+**CSS Colors** - модуль в CSS, который работает с цветами, типами цветов и прозрачностью.
 
-<h2 id="Руководство">Руководство</h2>
+## Руководство
 
-<h3 id="Свойства">Свойства</h3>
+### Свойства
 
-<div class="index">
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("opacity")}}</li>
-</ul>
-</div>
+- {{cssxref("color")}}
+- {{cssxref("opacity")}}
 
-<h3 id="Типы_данных_в_CSS">Типы данных в CSS</h3>
+### Типы данных в CSS
 
-<p>{{cssxref("&lt;color&gt;")}}</p>
+{{cssxref("&lt;color&gt;")}}
 
-<h2 id="Руководства">Руководства</h2>
+## Руководства
 
-<p><em>Нет.</em></p>
+_Нет._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS4 Colors')}}</td>
-      <td>{{Spec2('CSS4 Colors')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Colors')}}</td>
-      <td>{{Spec2('CSS3 Colors')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS2.1', 'colors.html')}}</td>
-      <td>{{Spec2('CSS2.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS1')}}</td>
-      <td>{{Spec2('CSS1')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                    | Status                           | Comment            |
+| ------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                    |
+| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
+| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<h3 id="color_property"><code>color</code> property</h3>
+### `color` property
 
-<p>{{Compat("css.properties.color")}}</p>
+{{Compat("css.properties.color")}}
 
-<h3 id="color-adjust_property"><code>color-adjust</code> property</h3>
+### `color-adjust` property
 
-<p>{{Compat("css.properties.color-adjust")}}</p>
+{{Compat("css.properties.color-adjust")}}
 
-<h3 id="opacity_property"><code>opacity</code> property</h3>
+### `opacity` property
 
-<p>{{Compat("css.properties.opacity")}}</p>
+{{Compat("css.properties.opacity")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>В CSS градиенты не цвета, а <a href="/en-US/docs/Web/CSS/CSS_Images">изображения</a>.</li>
-</ul>
+- В CSS градиенты не цвета, а [изображения](/ru/docs/Web/CSS/CSS_Images).

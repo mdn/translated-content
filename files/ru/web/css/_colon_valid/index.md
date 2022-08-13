@@ -1,34 +1,37 @@
 ---
 title: ':valid'
-slug: 'Web/CSS/:valid'
+slug: Web/CSS/:valid
 tags:
   - Псевдо-классы
-translation_of: 'Web/CSS/:valid'
+translation_of: Web/CSS/:valid
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:valid</code> находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых <a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">валиден</a>, в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что помогает понять пользователю, что он ввёл данные правильно.</p>
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:valid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых [валиден](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation"), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что помогает понять пользователю, что он ввёл данные правильно.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этот пример представляет собой простую форму, цвета элементов которой зелёные, когда данные корректные, и красные, когда нет.</p>
+Этот пример представляет собой простую форму, цвета элементов которой зелёные, когда данные корректные, и красные, когда нет.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label&gt;Введите URL:&lt;/label&gt;
-  &lt;input type="url" /&gt;
-  &lt;br /&gt;
-  &lt;br /&gt;
-  &lt;label&gt;Введите адрес эл. почты:&lt;/label&gt;
-  &lt;input type="email" required/&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label>Введите URL:</label>
+  <input type="url" />
+  <br />
+  <br />
+  <label>Введите адрес эл. почты:</label>
+  <input type="email" required/>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   background-color: #ffdddd;
 }
 
@@ -47,20 +50,19 @@ form:valid {
 input:required {
   border-color: #800000;
   border-width: 3px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Пример',600,150) }}</p>
+{{ EmbedLiveSample('Пример',600,150) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}</li>
-</ul>
+- {{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}

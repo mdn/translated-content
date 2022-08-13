@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Краткое описание</h2>
+## Краткое описание
 
-<p>Если указано {{Cssxref("background-image")}}, <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <code>background-attachment</code> определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.</p>
+Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/CSS "CSS") свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css">/* Ключевые значения */
+```css
+/* Ключевые значения */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -26,57 +27,60 @@ background-attachment: local;
 /* Глобальные значения */
 background-attachment: inherit;
 background-attachment: initial;
-background-attachment: unset;</pre>
+background-attachment: unset;
+```
 
-<p>Значение свойства <code>background-attachment</code> задаётся одним из ключевых значений из списка ниже.</p>
+Значение свойства `background-attachment` задаётся одним из ключевых значений из списка ниже.
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>Фон фиксируется относительно области просмотра. Даже если элемент имеет механизм прокрутки, фон не перемещается вместе с элементом. (Это значение несовместимо с {{cssxref("background-clip", "background-clip: text", "#text")}}.)</dd>
- <dt><code>local</code></dt>
- <dd>Фон фиксируется относительно содержимого элемента. Если элемент имеет механизм прокрутки, фон прокручивается с содержимым элемента, и область рисования фона и область позиционирования фона относятся к прокручиваемой области элемента, а не к границе, обрамляющей их.</dd>
- <dt><code>scroll</code></dt>
- <dd>Фон фиксируется относительно самого элемента и не прокручивается с его содержимым. (Он фактически прикреплён к границе элемента.)</dd>
-</dl>
+- `fixed`
+  - : Фон фиксируется относительно области просмотра. Даже если элемент имеет механизм прокрутки, фон не перемещается вместе с элементом. (Это значение несовместимо с {{cssxref("background-clip", "background-clip: text", "#text")}}.)
+- `local`
+  - : Фон фиксируется относительно содержимого элемента. Если элемент имеет механизм прокрутки, фон прокручивается с содержимым элемента, и область рисования фона и область позиционирования фона относятся к прокручиваемой области элемента, а не к границе, обрамляющей их.
+- `scroll`
+  - : Фон фиксируется относительно самого элемента и не прокручивается с его содержимым. (Он фактически прикреплён к границе элемента.)
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Простой_пример")}}</p>
+{{EmbedLiveSample("Простой_пример")}}
 
-<h3 id="Поддержка_нескольких_фоновых_изображений">Поддержка нескольких фоновых изображений</h3>
+### Поддержка нескольких фоновых изображений
 
-<p>Это свойство поддерживает несколько фоновых изображений. Вы можете указать разные <code>&lt;attachment&gt;</code> для каждого фона, разделённых запятыми. Каждое изображение сопоставляется с соответствующим типом вложения, от первого указанного до последнего.</p>
+Это свойство поддерживает несколько фоновых изображений. Вы можете указать разные `<attachment>` для каждого фона, разделённых запятыми. Каждое изображение сопоставляется с соответствующим типом вложения, от первого указанного до последнего.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -90,30 +94,31 @@ background-attachment: unset;</pre>
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample("Поддержка_нескольких_фоновых_изображений")}}</p>
+{{EmbedLiveSample("Поддержка_нескольких_фоновых_изображений")}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Несколько фонов</a></li>
-</ul>
+- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")

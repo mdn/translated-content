@@ -3,20 +3,21 @@ title: min-height
 slug: Web/CSS/min-height
 translation_of: Web/CSS/min-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="ru/docs/Web/CSS">CSS</a><strong> <code>min-height</code></strong> устанавливает минимальную высоту элемента. Оно предотвращает <a href="/ru/docs/Web/CSS/used_value">используемое значение</a> свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для <code>min-height</code>.</p>
+Свойство [CSS](ru/docs/Web/CSS)** `min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
 
-<div>{{EmbedInteractiveExample("pages/css/min-height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/min-height.html")}}
 
-<p>Высота элемента принимает значение <code>min-height</code> всякий раз, когда <code>min-height</code> больше чем {{ Cssxref("max-height") }} или {{Cssxref("height")}}.</p>
+Высота элемента принимает значение `min-height` всякий раз, когда `min-height` больше чем {{ Cssxref("max-height") }} или {{Cssxref("height")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; значения */
+```css
+/* <length> значения */
 min-height: 3.5em;
 
-/* &lt;percentage&gt; значения */
+/* <percentage> значения */
 min-height: 10%;
 
 /* Значения-ключевые слова */
@@ -29,58 +30,54 @@ min-height: fill-available;
 min-height: inherit;
 min-height: initial;
 min-height: unset;
-</pre>
+```
 
-<h3 id="Values">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Минимальная высота выражается как {{cssxref("&lt;length&gt;")}}. Отрицательные значения делают свойство недействительным.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Минимальная высота выражается как {{cssxref("&lt;percentage&gt;")}} от высоты родительского блока. Отрицательные значения делают свойство недействительным.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Минимальная высота выражается как {{cssxref("&lt;length&gt;")}}. Отрицательные значения делают свойство недействительным.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Минимальная высота выражается как {{cssxref("&lt;percentage&gt;")}} от высоты родительского блока. Отрицательные значения делают свойство недействительным.
 
-<h4 id="Значения-ключевые_слова">Значения-ключевые слова</h4>
+#### Значения-ключевые слова
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Минимальная высота для flex-элементов по умолчанию, предоставляет более разумное значение по умолчанию, чем 0 для других способов разметки.</dd>
-</dl>
+- `auto`
+  - : Минимальная высота для flex-элементов по умолчанию, предоставляет более разумное значение по умолчанию, чем 0 для других способов разметки.
 
-<dl>
- <dt><code>max-content</code> {{ experimental_inline() }}</dt>
- <dd>Внутренняя предпочтительная высота.</dd>
- <dt><code>min-content</code> {{ experimental_inline() }}</dt>
- <dd>Внутренняя минимальная высота.</dd>
- <dt><code>fill-available</code>{{ experimental_inline() }}</dt>
- <dd>Высота родительского блока минус вертикальные <code>margin</code>, <code>border</code>, и <code>padding</code>. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., <code>available</code>.)</dd>
- <dt><code>fit-content</code> {{ experimental_inline() }}</dt>
- <dd>Согласно CSS3 Box, это синоним <code>min-content</code>. CSS3 Sizing определяет более сложный алгоритм, но ни один браузер не реализует его даже экспериментальным путём.</dd>
-</dl>
+<!---->
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+- `max-content` {{ experimental_inline() }}
+  - : Внутренняя предпочтительная высота.
+- `min-content` {{ experimental_inline() }}
+  - : Внутренняя минимальная высота.
+- `fill-available`{{ experimental_inline() }}
+  - : Высота родительского блока минус вертикальные `margin`, `border`, и `padding`. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `available`.)
+- `fit-content` {{ experimental_inline() }}
+  - : Согласно CSS3 Box, это синоним `min-content`. CSS3 Sizing определяет более сложный алгоритм, но ни один браузер не реализует его даже экспериментальным путём.
+
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: css">table { min-height: 75%; }
+```css
+table { min-height: 75%; }
 
 form { min-height: 0; }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{ Cssxref("height") }}, {{ Cssxref("max-height") }}</li>
- <li><a href="/en-US/docs/CSS/box_model" title="en/CSS/box_model">Блочная модель</a>, {{ Cssxref("box-sizing") }}</li>
-</ul>
+## Смотрите также
+
+- {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}

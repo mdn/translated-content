@@ -3,45 +3,42 @@ title: Выравнивание блоков в CSS разметке Grid
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
-<p>Если вы знакомы с <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, вы уже столкнулись с тем, как гибкие элементы могут быть правильно выровнены внутри контейнера flex. Эти свойства выравнивания, которые мы впервые встретили в спецификации flexbox, были перенесены в новую спецификацию под названием <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Эта спецификация содержит подробную информацию о том, как выравнивание должно работать во всех различных методах компоновки.</p>
+Если вы знакомы с [flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout), вы уже столкнулись с тем, как гибкие элементы могут быть правильно выровнены внутри контейнера flex. Эти свойства выравнивания, которые мы впервые встретили в спецификации flexbox, были перенесены в новую спецификацию под названием [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Эта спецификация содержит подробную информацию о том, как выравнивание должно работать во всех различных методах компоновки.
 
-<p>Каждый метод макета, который реализует выравнивание ящиков, будет иметь некоторые отличия из-за того, что каждый метод имеет разные функции и ограничения (и унаследованное поведение), что делает невозможным выравнивание точно таким же образом по всем направлениям. Спецификация Box Alignment содержит подробную информацию для каждого метода, однако вы были бы разочарованы, если бы попытались выполнить выравнивание по многим методам прямо сейчас, поскольку поддержка браузера ещё не существует. Там, где у нас есть поддержка браузера для свойств выравнивания и распределения пространства из спецификации Box Alignment, в grid макета.</p>
+Каждый метод макета, который реализует выравнивание ящиков, будет иметь некоторые отличия из-за того, что каждый метод имеет разные функции и ограничения (и унаследованное поведение), что делает невозможным выравнивание точно таким же образом по всем направлениям. Спецификация Box Alignment содержит подробную информацию для каждого метода, однако вы были бы разочарованы, если бы попытались выполнить выравнивание по многим методам прямо сейчас, поскольку поддержка браузера ещё не существует. Там, где у нас есть поддержка браузера для свойств выравнивания и распределения пространства из спецификации Box Alignment, в grid макета.
 
-<p>В этом руководстве представлены демонстрации того, как работает выравнивание ячеек в макете. Вы увидите много общего в том, как эти свойства и ценности работают в flexbox. Из-за того, что сетка двумерна и однобочечна, существует несколько небольших различий, за которыми вы должны следить. Поэтому мы начнём с рассмотрения двух осей, с которыми мы сталкиваемся при выравнивании объектов в сетке.</p>
+В этом руководстве представлены демонстрации того, как работает выравнивание ячеек в макете. Вы увидите много общего в том, как эти свойства и ценности работают в flexbox. Из-за того, что сетка двумерна и однобочечна, существует несколько небольших различий, за которыми вы должны следить. Поэтому мы начнём с рассмотрения двух осей, с которыми мы сталкиваемся при выравнивании объектов в сетке.
 
-<h2 id="Две_оси_grid_layout">Две оси grid layout</h2>
+## Две оси grid layout
 
-<p>При работе с раскладкой сетки у вас есть две оси для выравнивания объектов - <em>оси</em> <em>блока или столбца</em>, <em>оси inline или строки</em>. Ось блока - это ось, на которой блоки выложены в макете блока. Если у вас есть два абзаца на вашей странице, они отображаются один под другим, поэтому в этом направлении мы описываем ось блока. В спецификации CSS Grid Layout она называется осью столбца, так как это ось, по которой выполняются наши дорожки столбцов.</p>
+При работе с раскладкой сетки у вас есть две оси для выравнивания объектов - _оси_ _блока или столбца_, _оси inline или строки_. Ось блока - это ось, на которой блоки выложены в макете блока. Если у вас есть два абзаца на вашей странице, они отображаются один под другим, поэтому в этом направлении мы описываем ось блока. В спецификации CSS Grid Layout она называется осью столбца, так как это ось, по которой выполняются наши дорожки столбцов.
 
-<p><img alt="Image showing the location of the Block or Column axis." src="https://mdn.mozillademos.org/files/14725/7_Block_Axis.png" style="height: 306px; width: 940px;"></p>
+![Image showing the location of the Block or Column axis.](https://mdn.mozillademos.org/files/14725/7_Block_Axis.png)
 
-<p><em>Внутренняя ось (inline axis)</em> проходит по оси блока, это направление, в котором выполняется регулярный поток строк. В спецификации CSS Grid Layout его иногда называют осью строки, являющейся осью, по которой идут наши дорожки.</p>
+_Внутренняя ось (inline axis)_ проходит по оси блока, это направление, в котором выполняется регулярный поток строк. В спецификации CSS Grid Layout его иногда называют осью строки, являющейся осью, по которой идут наши дорожки.
 
-<p><img alt="Image demonstrating the Inline or Row axis location." src="https://mdn.mozillademos.org/files/14727/7_Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+![Image demonstrating the Inline or Row axis location.](https://mdn.mozillademos.org/files/14727/7_Inline_Axis.png)
 
-<p>Мы можем выровнять содержимое внутри областей сетки и сетка отслеживает себя на этих двух осях.</p>
+Мы можем выровнять содержимое внутри областей сетки и сетка отслеживает себя на этих двух осях.
 
-<h2 id="Выравнивание_элементов_на_блоке_или_столбце_по_оси">Выравнивание элементов на блоке или столбце по оси</h2>
+## Выравнивание элементов на блоке или столбце по оси
 
-<p>Элементы управления {{cssxref ("align-self")}} и {{cssxref ("align-items")}} на оси блока. Когда мы используем эти свойства, мы меняем выравнивание элемента в области сетки, которую вы поместили.</p>
+Элементы управления {{cssxref ("align-self")}} и {{cssxref ("align-items")}} на оси блока. Когда мы используем эти свойства, мы меняем выравнивание элемента в области сетки, которую вы поместили.
 
-<p>В следующем примере у меня есть четыре области сетки внутри моей сетки. Я могу использовать свойство {{cssxref ("align-items")}} в контейнере сетки, чтобы выровнять элементы, используя одно из следующих значений:</p>
+В следующем примере у меня есть четыре области сетки внутри моей сетки. Я могу использовать свойство {{cssxref ("align-items")}} в контейнере сетки, чтобы выровнять элементы, используя одно из следующих значений:
 
-<ul>
- <li><code>auto</code></li>
- <li><code>normal</code></li>
- <li><code>start</code></li>
- <li><code>end</code></li>
- <li><code>center</code></li>
- <li><code>stretch</code></li>
- <li><code>baseline</code></li>
- <li><code>first baseline</code></li>
- <li><code>last baseline</code></li>
-</ul>
+- `auto`
+- `normal`
+- `start`
+- `end`
+- `center`
+- `stretch`
+- `baseline`
+- `first baseline`
+- `last baseline`
 
-<div id="alignment_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -49,17 +46,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
@@ -83,28 +80,27 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_1', '500', '450') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<p>Имейте в виду, что после установки <code>align-self: start</code> высота каждого дочернего <code>&lt;div&gt;</code> будет определяться содержимым <code>&lt;div&gt;</code>. Это противоречит полностью отсутствию выравнивания и в этом случае высота каждого <code>&lt;div&gt; </code>растягивается, чтобы заполнить его область сетки.</p>
+{{ EmbedLiveSample('alignment_1', '500', '450') }}
 
-<p>Свойство {{cssxref ("align-items")}} устанавливает свойство {{cssxref ("align-self")}} для всех дочерних элементов сетки. Это означает, что вы можете установить свойство индивидуально, используя <code>align-self</code> по элементу сетки.</p>
+Имейте в виду, что после установки `align-self: start` высота каждого дочернего `<div>` будет определяться содержимым `<div>`. Это противоречит полностью отсутствию выравнивания и в этом случае высота каждого `<div> `растягивается, чтобы заполнить его область сетки.
 
-<p>В следующем примере я использую свойство <code>align-self</code>, чтобы продемонстрировать различные значения выравнивания. В первой области отображается поведение по умолчанию для выравнивания, которое должно растягиваться. Второй элемент имеет значение самоограничения <code>start</code>, третий <code>end</code> и четвёртый <code>center</code>.</p>
+Свойство {{cssxref ("align-items")}} устанавливает свойство {{cssxref ("align-self")}} для всех дочерних элементов сетки. Это означает, что вы можете установить свойство индивидуально, используя `align-self` по элементу сетки.
 
-<div id="alignment_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+В следующем примере я использую свойство `align-self`, чтобы продемонстрировать различные значения выравнивания. В первой области отображается поведение по умолчанию для выравнивания, которое должно растягиваться. Второй элемент имеет значение самоограничения `start`, третий `end` и четвёртый `center`.
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -112,17 +108,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
@@ -148,48 +144,45 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-area: d;
   align-self: center;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_2', '500', '450') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<h3 id="Элементы_с_внутренним_соотношением_сторон">Элементы с внутренним соотношением сторон</h3>
+{{ EmbedLiveSample('alignment_2', '500', '450') }}
 
-<p>Спецификация указывает, что поведение по умолчанию в {{cssxref ("align-self")}} должно растягиваться, за исключением элементов, которые имеют внутреннее соотношение сторон, в этом случае они ведут себя как <code>start</code>. Причиной этого является то, что если элементы с соотношением сторон настроены на растяжение, это значение по умолчанию будет искажать их.</p>
+### Элементы с внутренним соотношением сторон
 
-<p>Это поведение было уточнено в спецификации, при этом браузеры ещё не реализовали правильное поведение. Пока это не произойдёт, вы можете убедиться, что элементы не растягиваются, например изображения, которые являются прямыми дочерними элементами сетки, путём установки {{cssxref ("align-self")}} и {{cssxref ("justify-self") }} <code>start</code>. Это будет имитировать правильное поведение после его реализации.</p>
+Спецификация указывает, что поведение по умолчанию в {{cssxref ("align-self")}} должно растягиваться, за исключением элементов, которые имеют внутреннее соотношение сторон, в этом случае они ведут себя как `start`. Причиной этого является то, что если элементы с соотношением сторон настроены на растяжение, это значение по умолчанию будет искажать их.
 
-<h2 id="Justifying_Items_on_the_Inline_or_Row_Axis">Justifying Items on the Inline or Row Axis</h2>
+Это поведение было уточнено в спецификации, при этом браузеры ещё не реализовали правильное поведение. Пока это не произойдёт, вы можете убедиться, что элементы не растягиваются, например изображения, которые являются прямыми дочерними элементами сетки, путём установки {{cssxref ("align-self")}} и {{cssxref ("justify-self") }} `start`. Это будет имитировать правильное поведение после его реализации.
 
-<p>Поскольку {{cssxref ("align-items")}} и {{cssxref ("align-self")}} обрабатывают выравнивание элементов на оси блока, {{cssxref ("justify-items")}} и {{cssxref ("justify-self")}} выполнить ту же работу на оси inline или row. Значения, которые вы можете выбрать, такие же, как для <code>align-self</code>.</p>
+## Justifying Items on the Inline or Row Axis
 
-<ul>
- <li><code>auto</code></li>
- <li><code>normal</code></li>
- <li><code>start</code></li>
- <li><code>end</code></li>
- <li><code>center</code></li>
- <li><code>stretch</code></li>
- <li><code>baseline</code></li>
- <li><code>first baseline</code></li>
- <li><code>last baseline</code></li>
-</ul>
+Поскольку {{cssxref ("align-items")}} и {{cssxref ("align-self")}} обрабатывают выравнивание элементов на оси блока, {{cssxref ("justify-items")}} и {{cssxref ("justify-self")}} выполнить ту же работу на оси inline или row. Значения, которые вы можете выбрать, такие же, как для `align-self`.
 
-<p>Вы можете увидеть тот же пример, что и для {{cssxref ("align-items")}} ниже. На этот раз мы применяем свойство {{cssxref ("justify-self")}}.</p>
+- `auto`
+- `normal`
+- `start`
+- `end`
+- `center`
+- `stretch`
+- `baseline`
+- `first baseline`
+- `last baseline`
 
-<p>Опять же, значение по умолчанию <code>stretch</code>, за исключением элементов с внутренним соотношением сторон. Это означает, что по умолчанию элементы сетки будут покрывать их площадь сетки, если вы не измените её, установив выравнивание. Первый элемент в примере демонстрирует это выравнивание по умолчанию:</p>
+Вы можете увидеть тот же пример, что и для {{cssxref ("align-items")}} ниже. На этот раз мы применяем свойство {{cssxref ("justify-self")}}.
 
-<div id="alignment_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Опять же, значение по умолчанию `stretch`, за исключением элементов с внутренним соотношением сторон. Это означает, что по умолчанию элементы сетки будут покрывать их площадь сетки, если вы не измените её, установив выравнивание. Первый элемент в примере демонстрирует это выравнивание по умолчанию:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -197,17 +190,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
@@ -233,30 +226,29 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-area: d;
   justify-self: center;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_3', '500', '450') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<p>Как и {{cssxref ("align-self")}} и {{cssxref ("align-items")}}, вы можете применить {{cssxref ("justify-items")}} к контейнеру сетки, чтобы установить значение {{cssxref ("justify-self")}} для всех элементов.</p>
+{{ EmbedLiveSample('alignment_3', '500', '450') }}
 
-<p>Свойства {{cssxref ("justify-self")}} и {{cssxref ("justify-items")}} не реализованы в flexbox. Это связано с одномерным характером <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> и может быть несколько элементов вдоль оси, что делает невозможным оправдание одного элемента. Чтобы выровнять элементы вдоль основной, встроенной оси в flexbox, вы используете свойство {{cssxref ("justify-content")}}.</p>
+Как и {{cssxref ("align-self")}} и {{cssxref ("align-items")}}, вы можете применить {{cssxref ("justify-items")}} к контейнеру сетки, чтобы установить значение {{cssxref ("justify-self")}} для всех элементов.
 
-<h2 id="Center_an_item_in_the_area">Center an item in the area</h2>
+Свойства {{cssxref ("justify-self")}} и {{cssxref ("justify-items")}} не реализованы в flexbox. Это связано с одномерным характером [flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout) и может быть несколько элементов вдоль оси, что делает невозможным оправдание одного элемента. Чтобы выровнять элементы вдоль основной, встроенной оси в flexbox, вы используете свойство {{cssxref ("justify-content")}}.
 
-<p>Объединив свойства align и justify, мы можем легко центрировать элемент внутри области сетки.</p>
+## Center an item in the area
 
-<div id="alignment_4">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Объединив свойства align и justify, мы можем легко центрировать элемент внутри области сетки.
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -264,17 +256,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -288,41 +280,38 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   align-self: center;
   justify-self: center;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
- &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_4', '500', '480') }}</p>
+```html
+<div class="wrapper">
+ <div class="item1">Item 1</div>
 </div>
+```
 
-<h2 id="Aligning_the_grid_tracks_on_the_block_or_column_axis">Aligning the grid tracks on the block, or column, axis</h2>
+{{ EmbedLiveSample('alignment_4', '500', '480') }}
 
-<p>Если у вас есть ситуация, когда ваши дорожки сетки используют область, которая меньше, чем контейнер сетки, вы можете выровнять трассы сетки самостоятельно внутри контейнера. И снова это работает на блочной и встроенной осях с {{cssxref ("align-content")}} выравниванием дорожек на оси блока и {{cssxref ("justify-content")}}, выполняющим выравнивание по встроенной оси. Значения для {{cssxref ("align-content")}} и {{cssxref ("justify-content")}}:</p>
+## Aligning the grid tracks on the block, or column, axis
 
-<ul>
- <li><code>normal</code></li>
- <li><code>start</code></li>
- <li><code>end</code></li>
- <li><code>center</code></li>
- <li><code>stretch</code></li>
- <li><code>space-around</code></li>
- <li><code>space-between</code></li>
- <li><code>space-evenly</code></li>
- <li><code>baseline</code></li>
- <li><code>first baseline</code></li>
- <li><code>last baseline</code></li>
-</ul>
+Если у вас есть ситуация, когда ваши дорожки сетки используют область, которая меньше, чем контейнер сетки, вы можете выровнять трассы сетки самостоятельно внутри контейнера. И снова это работает на блочной и встроенной осях с {{cssxref ("align-content")}} выравниванием дорожек на оси блока и {{cssxref ("justify-content")}}, выполняющим выравнивание по встроенной оси. Значения для {{cssxref ("align-content")}} и {{cssxref ("justify-content")}}:
 
-<p>В приведённом ниже примере у меня есть контейнер сетки размером 500 пикселей на 500 пикселей. Я определил 3 строки и столбцы, каждый из 100 пикселей с 10-пиксельным жёлобом. Это означает, что внутри контейнера сетки есть пространство как в блочном, так и в линейном направлениях.</p>
+- `normal`
+- `start`
+- `end`
+- `center`
+- `stretch`
+- `space-around`
+- `space-between`
+- `space-evenly`
+- `baseline`
+- `first baseline`
+- `last baseline`
 
-<p>Свойство <code>align-content</code> применяется к контейнеру сетки, поскольку оно работает на всей сетке. Поведение по умолчанию в макете сетки <code>start</code>, поэтому наши дорожки сетки находятся в верхнем левом углу сетки, выровнены по отношению к стартовым линиям сетки:</p>
+В приведённом ниже примере у меня есть контейнер сетки размером 500 пикселей на 500 пикселей. Я определил 3 строки и столбцы, каждый из 100 пикселей с 10-пиксельным жёлобом. Это означает, что внутри контейнера сетки есть пространство как в блочном, так и в линейном направлениях.
 
-<div id="alignment_5">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Свойство `align-content` применяется к контейнеру сетки, поскольку оно работает на всей сетке. Поведение по умолчанию в макете сетки `start`, поэтому наши дорожки сетки находятся в верхнем левом углу сетки, выровнены по отношению к стартовым линиям сетки:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -330,17 +319,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3,100px);
@@ -364,24 +353,23 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_5', '500', '520') }}</p>
-
-<p>Если я добавлю <code>align-conten</code> в мой контейнер со значением <code>end</code>, все треки перейдут в конечную строку контейнера сетки в размерности блока:</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<div id="alignment_6">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+{{ EmbedLiveSample('alignment_5', '500', '520') }}
+
+Если я добавлю `align-conten` в мой контейнер со значением `end`, все треки перейдут в конечную строку контейнера сетки в размерности блока:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -389,17 +377,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3,100px);
@@ -424,24 +412,23 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_6', '500', '520') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<p>Мы также можем использовать значения для этого свойства, которые могут быть знакомы с flexbox; значения пространственного распределения <code>space-between</code>, <code>space-around</code> и <code>space-evenly</code>. Если мы обновим {{cssxref ("align-content")}} до <code>space-between</code>, вы увидите как выглядят элементы на нашем пространстве grid:</p>
+{{ EmbedLiveSample('alignment_6', '500', '520') }}
 
-<div id="alignment_7">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Мы также можем использовать значения для этого свойства, которые могут быть знакомы с flexbox; значения пространственного распределения `space-between`, `space-around` и `space-evenly`. Если мы обновим {{cssxref ("align-content")}} до `space-between`, вы увидите как выглядят элементы на нашем пространстве grid:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -449,17 +436,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3,100px);
@@ -484,34 +471,33 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_7', '500', '520') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<p>Стоит отметить, что использование этих значений пространственного распределения может привести к увеличению элементов в вашей сетке. Если элемент охватывает более одной дорожки сетки, так как дополнительное пространство добавляется между дорожками, этот предмет должен стать большим, чтобы поглотить пространство. Мы всегда работаем в строгой сетке. Поэтому, если вы решите использовать эти значения, убедитесь, что содержимое ваших треков может справиться с дополнительным пространством или что вы использовали свойства выравнивания для элементов, чтобы заставить их перемещаться в начало, а не растягиваться.</p>
+{{ EmbedLiveSample('alignment_7', '500', '520') }}
 
-<p>В приведённом ниже изображении я поместил сетку с <code>align-content</code>, со значением <code>start</code> рядом с сеткой, когда значение <code>align-content</code> имеет значение <code>space-between</code>. Вы можете видеть, как элементы 1 и 2, которые охватывают два ряда дорожек, взяты на дополнительной высоте, поскольку они получают дополнительное пространство, добавленное к промежутку между этими двумя дорожками:</p>
+Стоит отметить, что использование этих значений пространственного распределения может привести к увеличению элементов в вашей сетке. Если элемент охватывает более одной дорожки сетки, так как дополнительное пространство добавляется между дорожками, этот предмет должен стать большим, чтобы поглотить пространство. Мы всегда работаем в строгой сетке. Поэтому, если вы решите использовать эти значения, убедитесь, что содержимое ваших треков может справиться с дополнительным пространством или что вы использовали свойства выравнивания для элементов, чтобы заставить их перемещаться в начало, а не растягиваться.
 
-<p><img alt="Demonstrating how items become larger if we use space-between." src="https://mdn.mozillademos.org/files/14729/7_space-between.png" style="height: 534px; width: 1030px;"></p>
+В приведённом ниже изображении я поместил сетку с `align-content`, со значением `start` рядом с сеткой, когда значение `align-content` имеет значение `space-between`. Вы можете видеть, как элементы 1 и 2, которые охватывают два ряда дорожек, взяты на дополнительной высоте, поскольку они получают дополнительное пространство, добавленное к промежутку между этими двумя дорожками:
 
-<h2 id="Justifying_the_grid_tracks_on_the_row_axis">Justifying the grid tracks on the row axis</h2>
+![Demonstrating how items become larger if we use space-between.](https://mdn.mozillademos.org/files/14729/7_space-between.png)
 
-<p>На оси inline мы можем использовать {{cssxref ("justify-content")}} для выполнения того же типа выравнивания, что мы использовали {{cssxref ("align-content")}} для оси блока.</p>
+## Justifying the grid tracks on the row axis
 
-<p>Используя тот же пример, я устанавливаю {{cssxref ("justify-content")}} <code>space-around</code>. Это снова вызывает дорожки, которые охватывают более одного столбца, чтобы получить дополнительное пространство:</p>
+На оси inline мы можем использовать {{cssxref ("justify-content")}} для выполнения того же типа выравнивания, что мы использовали {{cssxref ("align-content")}} для оси блока.
 
-<div id="alignment_8">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+Используя тот же пример, я устанавливаю {{cssxref ("justify-content")}} `space-around`. Это снова вызывает дорожки, которые охватывают более одного столбца, чтобы получить дополнительное пространство:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -519,17 +505,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3,100px);
@@ -555,28 +541,27 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_8', '500', '500') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<h2 id="Alignment_and_auto_margins">Alignment and auto margins</h2>
+{{ EmbedLiveSample('alignment_8', '500', '500') }}
 
-<p>Другой способ выравнивания элементов внутри их области - использовать автоматические поля. Если вы когда-либо центрировали ваш макет в окне просмотра, установив правое и левое поле блока контейнера в <code>auto</code>, вы знаете, что автоматическая маржа поглощает все доступное пространство. Установив маржу в <code>auto</code> с обеих сторон, она выдвигает блок в середину, так как оба поля пытаются взять все пространство.</p>
+## Alignment and auto margins
 
-<p>В следующем примере я дал элементу 1 левое поле <code>auto</code>. Вы можете увидеть, как содержимое теперь переместится в правую часть области, поскольку автоматическая маржа занимает оставшееся пространство после того, как было назначено место для содержимого этого элемента:</p>
+Другой способ выравнивания элементов внутри их области - использовать автоматические поля. Если вы когда-либо центрировали ваш макет в окне просмотра, установив правое и левое поле блока контейнера в `auto`, вы знаете, что автоматическая маржа поглощает все доступное пространство. Установив маржу в `auto` с обеих сторон, она выдвигает блок в середину, так как оба поля пытаются взять все пространство.
 
-<div id="alignment_9">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+В следующем примере я дал элементу 1 левое поле `auto`. Вы можете увидеть, как содержимое теперь переместится в правую часть области, поскольку автоматическая маржа занимает оставшееся пространство после того, как было назначено место для содержимого этого элемента:
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -584,17 +569,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3,100px);
@@ -619,27 +604,27 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 .item4 {
   grid-area: d;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;Item 1&lt;/div&gt;
-  &lt;div class="item2"&gt;Item 2&lt;/div&gt;
-  &lt;div class="item3"&gt;Item 3&lt;/div&gt;
-  &lt;div class="item4"&gt;Item 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('alignment_9', '500', '500') }}</p>
+```html
+<div class="wrapper">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
 </div>
+```
 
-<p>Вы можете видеть, как элемент выравнивается с помощью <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a>:</p>
+{{ EmbedLiveSample('alignment_9', '500', '500') }}
 
-<p><img alt="Image showing auto-margins using the Grid Highlighter." src="https://mdn.mozillademos.org/files/14731/7_auto_margins.png" style="height: 1000px; width: 1000px;"></p>
+Вы можете видеть, как элемент выравнивается с помощью [Firefox Grid Highlighter](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts):
 
-<h2 id="Alignment_and_Writing_Modes">Alignment and Writing Modes</h2>
+![Image showing auto-margins using the Grid Highlighter.](https://mdn.mozillademos.org/files/14731/7_auto_margins.png)
 
-<p>Во всех этих примерах я работал на английском языке, который является языком слева направо. Это означает, что наши стартовые линии находятся сверху и слева от нашей сетки, когда мы думаем в физических направлениях.</p>
+## Alignment and Writing Modes
 
-<p>CSS Grid Layout и спецификация Box Alignment предназначены для работы с режимами записи в CSS. Это означает, что если вы работаете с языком справа налево, например на арабском языке, начало сетки будет верхним и правым, поэтому значение по умолчанию для <code>justify-content: start</code> будет состоять в том, что треки сетки начинаются с правой стороны сетки.</p>
+Во всех этих примерах я работал на английском языке, который является языком слева направо. Это означает, что наши стартовые линии находятся сверху и слева от нашей сетки, когда мы думаем в физических направлениях.
 
-<p>Однако, если вы устанавливаете автоматические поля, используя <code>margin-right</code> или <code>margin-left</code>, или абсолютно позиционирующий элемент, используя <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code> смещения, вы не будете соблюдать режимы записи. В следующем руководстве мы рассмотрим это взаимодействие между компоновкой сетки CSS, выравниванием ящиков и режимами записи. Это будет важно понимать, если вы разрабатываете сайты, которые затем отображаются на нескольких языках, или если вы хотите смешивать языки или режимы записи в дизайне.</p>
+CSS Grid Layout и спецификация Box Alignment предназначены для работы с режимами записи в CSS. Это означает, что если вы работаете с языком справа налево, например на арабском языке, начало сетки будет верхним и правым, поэтому значение по умолчанию для `justify-content: start` будет состоять в том, что треки сетки начинаются с правой стороны сетки.
+
+Однако, если вы устанавливаете автоматические поля, используя `margin-right` или `margin-left`, или абсолютно позиционирующий элемент, используя `top`, `right`, `bottom` and `left` смещения, вы не будете соблюдать режимы записи. В следующем руководстве мы рассмотрим это взаимодействие между компоновкой сетки CSS, выравниванием ящиков и режимами записи. Это будет важно понимать, если вы разрабатываете сайты, которые затем отображаются на нескольких языках, или если вы хотите смешивать языки или режимы записи в дизайне.

@@ -3,82 +3,79 @@ title: height
 slug: Web/CSS/height
 translation_of: Web/CSS/height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS атрибут <strong><code>height</code></strong> позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту <a href="/ru/docs/Web/CSS/box_model#content">внутренней области</a>. Если {{cssxref("box-sizing")}} имеет значение <code>border-box</code>, то свойство будет определять высоту <a href="/ru/docs/Web/CSS/box_model#border">области рамки</a>.<br>
- <br>
- {{EmbedInteractiveExample("pages/css/height.html")}}</p>
+CSS атрибут **`height`** позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту [внутренней области](/ru/docs/Web/CSS/box_model#content). Если {{cssxref("box-sizing")}} имеет значение `border-box`, то свойство будет определять высоту [области рамки](/ru/docs/Web/CSS/box_model#border).
 
-<p><br>
- Атрибуты {{cssxref("min-height")}} и {{cssxref("max-height")}} при добавлении меняют значение {{Cssxref("height")}}.</p>
+{{EmbedInteractiveExample("pages/css/height.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Атрибуты {{cssxref("min-height")}} и {{cssxref("max-height")}} при добавлении меняют значение {{Cssxref("height")}}.
 
-<pre class="brush:css">/* Значения-ключевые слова */
+## Синтаксис
+
+```css
+/* Значения-ключевые слова */
 height: auto;
 
-/* &lt;length&gt; значения */
+/* <length> значения */
 height: 120px;
 height: 10em;
 
-/* &lt;percentage&gt; значения */
+/* <percentage> значения */
 height: 75%;
 
 /* Глобальные значения */
 height: inherit;
 height: initial;
 height: unset;
-</pre>
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Высота - фиксированная величина.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Высота в процентах - размер относительно высоты родительского блока.</dd>
- <dt><code>border-box</code> {{experimental_inline}}</dt>
- <dd>Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к области рамки элемента.</dd>
- <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} применяются к внутренней области элемента.</dd>
- <dt><code>auto</code></dt>
- <dd>Браузер рассчитает и выберет высоту для указанного элемента.</dd>
- <dt><code>fill</code> {{experimental_inline}}</dt>
- <dd>Использует <code>fill-available</code> размер строки или <code>fill-available</code> размер блока, в зависимости от способа разметки.</dd>
- <dt><code>max-content</code> {{experimental_inline}}</dt>
- <dd>Внутренняя максимальная предпочтительная высота.</dd>
- <dt><code>min-content</code> {{experimental_inline}}</dt>
- <dd>Внутренняя минимальная предпочтительная высота.</dd>
- <dt><code>available</code> {{experimental_inline}}</dt>
- <dd>Высота содержащего блока минус вертикальные <code>margin</code>, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">border</span></font> и <code>padding</code>.</dd>
- <dt><code>fit-content</code> {{experimental_inline}}</dt>
- <dd>Наибольшее из:
- <ul>
-  <li>внутренняя минимальная высота</li>
-  <li>меньшая из внутренней предпочтительной высоты и доступной высоты</li>
- </ul>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Высота - фиксированная величина.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Высота в процентах - размер относительно высоты родительского блока.
+- `border-box` {{experimental_inline}}
+  - : Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}} применяются к области рамки элемента.
+- `content-box` {{experimental_inline}}
+  - : Если присутствует, то предшествующие {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} применяются к внутренней области элемента.
+- `auto`
+  - : Браузер рассчитает и выберет высоту для указанного элемента.
+- `fill` {{experimental_inline}}
+  - : Использует `fill-available` размер строки или `fill-available` размер блока, в зависимости от способа разметки.
+- `max-content` {{experimental_inline}}
+  - : Внутренняя максимальная предпочтительная высота.
+- `min-content` {{experimental_inline}}
+  - : Внутренняя минимальная предпочтительная высота.
+- `available` {{experimental_inline}}
+  - : Высота содержащего блока минус вертикальные `margin`, border и `padding`.
+- `fit-content` {{experimental_inline}}
+  - : Наибольшее из:\* внутренняя минимальная высота
+    - меньшая из внутренней предпочтительной высоты и доступной высоты
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Пример">Пример:</h2>
+## Пример:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="taller"&gt;Я 50 пикселей в высоту.&lt;/div&gt;
-&lt;div id="shorter"&gt;Я 25 пикселей в высоту.&lt;/div&gt;
-&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
+```html
+<div id="taller">Я 50 пикселей в высоту.</div>
+<div id="shorter">Я 25 пикселей в высоту.</div>
+<div id="parent">
+  <div id="child">
     Моя высота - половина от высоты родителя.
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 250px;
   margin-bottom: 5px;
   border: 2px solid blue;
@@ -99,39 +96,30 @@ height: unset;
 #child {
   height: 50%;
   width: 75%;
-}</pre>
+}
+```
 
-<p> </p>
+### Результат
 
-<h3 id="Результат">Результат</h3>
+{{EmbedLiveSample('Пример', 'auto', 240)}}
 
-<p>{{EmbedLiveSample('Пример', 'auto', 240)}}</p>
+## Проблемы доступности
 
-<p> </p>
+Убедитесь, что элементы с `height` не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста.
 
-<h2 id="Проблемы_доступности">Проблемы доступности</h2>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<p>Убедитесь, что элементы с <code>height</code> не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста. </p>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/CSS/box_model">Блочная модель</a>, {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}</li>
-</ul>
+- [Блочная модель](/ru/docs/Web/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

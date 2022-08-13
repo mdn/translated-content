@@ -3,25 +3,20 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 translation_of: Web/CSS/flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>flex-basis</code></strong> задаёт базовый размер флекс элемента по <strong>основной оси</strong>. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.</p>
+[CSS](/ru/docs/Web/CSS) свойство **`flex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
+> **Примечание:** **Внимание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
 
+{{cssinfo}}
 
-<div class="note">
-<p><strong>Внимание:</strong> в случае, если для элемента одновременно заданы <code>flex-basis</code> (отличное от <code>auto</code>) и <code>width</code> ( или <code>height</code> в случае <code>flex-direction: column</code>), <code>flex-basis</code> имеет приоритет.</p>
-</div>
+## Синтаксис
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-
-
-<pre class="brush:css no-line-numbers">/* Устанавливает &lt;'ширину'&gt; */
+```css
+/* Устанавливает <'ширину'> */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -39,57 +34,45 @@ flex-basis: content;
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;
-</pre>
+```
 
+Свойство `flex-basis` задаётся через ключевое слово [`content`](#content) или через [`<'width'>`](#<'width'>).
 
+### Значения
 
-<p>Свойство <code>flex-basis</code> задаётся через ключевое слово <code><a href="#content">content</a></code> или через <code><a href="#&lt;'width'>">&lt;'width'&gt;</a></code>.</p>
+- `<'ширина'>`
+  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово `auto`. Негативные значения не допустимы.
+- `content`
+  - : Автоматический задаёт размер на основе содержимого элемента flex.> **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.> **Примечание:** **История:\*** Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
+    > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922 'RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value').
+    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316 'RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec') это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).
 
-<h3 id="Значения">Значения</h3>
-
-<dl>
- <dt><code>&lt;'ширина'&gt;</code></dt>
- <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово <code>auto</code>. Негативные значения не допустимы.</dd>
- <dt><code>content</code></dt>
- <dd><p>Автоматический задаёт размер на основе содержимого элемента flex.</p>
- <div class="note"><strong>Примечание:</strong> Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя <code>auto</code> вместе с основным размером (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> или <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) <code>auto</code>.</div>
-
- <div class="note">
- <p id="comment_text_0"><strong>История:</strong></p>
-
- <ul>
-  <li>Первоначально, <code>flex-basis:auto</code> означает "смотреть на значения <code>width</code> или <code>height</code>".</li>
-  <li>Затем <code>flex-basis:auto</code> был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения <code>width</code> или <code>height</code>".  Это было реализован в  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>баге 1032922</a>.</li>
-  <li>Затем в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>баге 1093316</a> это было возвращено обратно, поэтому <code>auto</code> снова означает "смотреть на значения <code>width</code> или <code>height</code>"; а новое ключевое слово <code>content</code> было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).</li>
- </ul>
- </div>
- </dd>
-</dl>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -167,41 +150,24 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill';
 }
-</pre>
+```
 
-<h3 id="Results">Results</h3>
+### Results
 
-<p>{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}</p>
+{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
- <li>{{cssxref("width")}}</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- {{cssxref("width")}}

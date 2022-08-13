@@ -6,74 +6,82 @@ tags:
   - список селекторов
 translation_of: Web/CSS/Selector_list
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS <strong>список селекторов</strong> (<code>,</code>) выбирает все соответствующие ноды.</p>
+CSS **список селекторов** (`,`) выбирает все соответствующие ноды.
 
-<pre class="brush: css no-line-numbers">/* Выбирает все соответствующие элементы */
+```css
+/* Выбирает все соответствующие элементы */
 span,
 div {
   border: red 2px solid;
-}</pre>
+}
+```
 
-<p>Для уменьшения размеры таблицы стилей, можно использовать разделяемый запятой список селекторов.</p>
+Для уменьшения размеры таблицы стилей, можно использовать разделяемый запятой список селекторов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element, element, element { <em>свойства стиля</em> }</pre>
+    element, element, element { свойства стиля }
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Группирование_на_одной_линии">Группирование на одной линии</h3>
+### Группирование на одной линии
 
-<p>Группирование селекторов списком, разделённым запятой, на одной строк.</p>
+Группирование селекторов списком, разделённым запятой, на одной строк.
 
-<pre class="brush: css">h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
-</pre>
+```css
+h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
+```
 
-<h3 id="Мультистрочное_группирование">Мультистрочное группирование</h3>
+### Мультистрочное группирование
 
-<p>Группирование селекторов списком, разделённым запятой, на нескольких строках.</p>
+Группирование селекторов списком, разделённым запятой, на нескольких строках.
 
-<pre class="brush: css">#main,
+```css
+#main,
 .content,
 article {
   font-size: 1.1em;
 }
-</pre>
+```
 
-<h3 id="Невалидные_списки_селекторов">Невалидные списки селекторов</h3>
+### Невалидные списки селекторов
 
-<p>Недостатком использования списков селекторов является то, что они не являются эквивалентными:</p>
+Недостатком использования списков селекторов является то, что они не являются эквивалентными:
 
-<pre class="brush: css">h1 { font-family: sans-serif }
+```css
+h1 { font-family: sans-serif }
 h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }</pre>
+h3 { font-family: sans-serif }
+```
 
-<pre class="brush: css">h1, h2:maybe-unsupported, h3 { font-family: sans-serif }</pre>
+```css
+h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
+```
 
-<p>Это происходит потому, что один неподдерживаемый селектор в списке селекторов делает недействительным все правило.</p>
+Это происходит потому, что один неподдерживаемый селектор в списке селекторов делает недействительным все правило.
 
-<p>Есть способ исправить это - нужно использовать селектор {{CSSxRef(":is", ":is()")}}, который просто игнорирует недопустимые селекторы в своих аргумента, но за счёт этого, все селекторы имеют одинаковую спецификацию, так как {{CSSxRef(":is", ":is()")}} вычисляет спецификацию.</p>
+Есть способ исправить это - нужно использовать селектор {{CSSxRef(":is", ":is()")}}, который просто игнорирует недопустимые селекторы в своих аргумента, но за счёт этого, все селекторы имеют одинаковую спецификацию, так как {{CSSxRef(":is", ":is()")}} вычисляет спецификацию.
 
-<pre class="brush: css">h1 { font-family: sans-serif }
+```css
+h1 { font-family: sans-serif }
 h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }</pre>
+h3 { font-family: sans-serif }
+```
 
-<pre class="brush: css">:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }</pre>
+```css
+:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which don't have the legacy mistake that is selector list invalidation.</li>
-</ul>
+- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which don't have the legacy mistake that is selector list invalidation.

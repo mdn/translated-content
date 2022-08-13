@@ -9,84 +9,76 @@ tags:
   - Справка
 translation_of: Web/CSS/border
 ---
-<div>{{CSSRef("CSS Borders")}}</div>
+{{CSSRef("CSS Borders")}}
 
-<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>border</code></strong> это  <a href="/en-US/docs/Web/CSS/Shorthand_properties">универсальное свойство</a> для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.</p>
+Свойство [CSS](/ru/docs/CSS "CSS") **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border.html")}}
 
-<p>Как и во всех универсальных свойствах, любое персональное значение, которое не указанно, устанавливается в начальное значение. Обратите внимание, <code>border</code> не может быть использован для указания пользовательского значения {{cssxref("border-image")}}, но вместо этого устанавливает его в начальное значение, т.е. <code>none</code>.</p>
+Как и во всех универсальных свойствах, любое персональное значение, которое не указанно, устанавливается в начальное значение. Обратите внимание, `border` не может быть использован для указания пользовательского значения {{cssxref("border-image")}}, но вместо этого устанавливает его в начальное значение, т.е. `none`.
 
-<pre class="brush: css no-line-numbers">border: 1px;
+```css
+border: 1px;
 border: 2px dotted;
 border: medium dashed green;
-</pre>
+```
 
-<p> </p>
+> **Примечание:** **Замечание:** Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
 
-<div class="note">
-<p><strong>Замечание:</strong> Рекомендуется использовать <code>border</code>, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}  принимают до четырёх значений, позволяя установить различные значения для каждого ребра, <code>border</code> принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.</p>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+Свойство `border` указывается используя одно или более значений [`<br-width>`](#<br-width>), [`<br-style>`](#<br-style>), и [`<color>`](#<color>) указанных ниже.
 
-<p>Свойство <code>border</code>  указывается используя одно или более значений <code><a href="#&lt;br-width>">&lt;br-width&gt;</a></code>, <code><a href="#&lt;br-style>">&lt;br-style&gt;</a></code>, и <code><a href="#&lt;color>">&lt;color&gt;</a></code> указанных ниже.</p>
+### Значения
 
-<h3 id="Values">Значения</h3>
+- `<br-width>`
+  - : Толщина границ. По умолчанию `medium` если отсутствует. Больше информации {{Cssxref("border-width")}}.
+- `<br-style>`
+  - : Стиль линии границ. По умолчанию `none` если отсутствует. Больше информации {{Cssxref("border-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : Цвет границ. По умолчанию принимает значение свойства элементов {{cssxref("color")}}. Больше информации {{Cssxref("border-color")}}.
 
-<dl>
- <dt id="&lt;br-width>"><code>&lt;br-width&gt;</code></dt>
- <dd>Толщина границ. По умолчанию <code>medium</code> если отсутствует. Больше информации {{Cssxref("border-width")}}.</dd>
- <dt id="&lt;br-style>"><code>&lt;br-style&gt;</code></dt>
- <dd>Стиль линии границ. По умолчанию <code>none</code> если отсутствует. Больше информации {{Cssxref("border-style")}}.</dd>
- <dt id="&lt;color>">{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Цвет границ. По умолчанию принимает значение свойства элементов {{cssxref("color")}}. Больше информации {{Cssxref("border-color")}}.</dd>
-</dl>
+### Обычный синтаксис
 
-<h3 id="Обычный_синтаксис">Обычный синтаксис</h3>
+    {{csssyntax}}
 
-<pre class="syntaxbox"><code>{{csssyntax}}</code></pre>
+## Примеры
 
-<h2 id="Examples">Примеры</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="fun-border"&gt;Look at my borders.&lt;/div&gt;
-&lt;p&gt;Вы можете редактировать CSS ниже для экспериментов со стилями границ!&lt;/p&gt;
-&lt;style contenteditable&gt;
+```html
+<div class="fun-border">Look at my borders.</div>
+<p>Вы можете редактировать CSS ниже для экспериментов со стилями границ!</p>
+<style contenteditable>
   .fun-border {
     border: 2px solid red;
   }
-&lt;/style&gt;
-</pre>
+</style>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css  language-css"><code class="language-css"><span class="selector token">style </span><span class="punctuation token">{</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> block<span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> 1px dashed black<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```css
+style {
+  display: block;
+  border: 1px dashed black;
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<div id="compat-mobile">
-<article>
-<p>{{Compat}}</p>
-</article>
-</div>
+{{Compat}}
 
-<h2 id="Также_смотрите">Также смотрите</h2>
+## Также смотрите
 
-<ul>
- <li>{{ Cssxref("border-radius") }}-related CSS properties: {{ Cssxref("border-top-left-radius") }}, {{ Cssxref("border-top-right-radius") }}, {{ Cssxref("border-bottom-right-radius") }}, {{ Cssxref("border-bottom-left-radius") }}</li>
-</ul>
+- {{ Cssxref("border-radius") }}-related CSS properties: {{ Cssxref("border-top-left-radius") }}, {{ Cssxref("border-top-right-radius") }}, {{ Cssxref("border-bottom-right-radius") }}, {{ Cssxref("border-bottom-left-radius") }}

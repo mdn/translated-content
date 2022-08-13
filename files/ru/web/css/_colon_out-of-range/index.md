@@ -1,38 +1,38 @@
 ---
 title: ':out-of-range'
-slug: 'Web/CSS/:out-of-range'
+slug: Web/CSS/:out-of-range
 tags:
   - CSS
   - Псевдоклассы
   - Руководство
-translation_of: 'Web/CSS/:out-of-range'
+translation_of: Web/CSS/:out-of-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+## Summary
 
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:out-of-range` находит элементы, значение которых находится вне диапазона их ограничений. Он позволяет странице показывать, когда значение элемента находится вне допустимого диапазона. Значение будет вне диапазона, если оно меньше или больше, чем минимальное и максимальное значения.
 
-<h2 id="Summary">Summary</h2>
+> **Примечание:** **Замечание:** этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:out-of-range</code> находит элементы, значение которых находится вне диапазона их ограничений. Он позволяет странице показывать, когда значение элемента находится вне допустимого диапазона. Значение будет вне диапазона, если оно меньше или больше, чем минимальное и максимальное значения.</p>
+## Пример
 
-<div class="note"><strong>Замечание:</strong> этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".</div>
+### HTML
 
-<h2 id="Пример">Пример</h2>
+```html
+<form action="" id="form1">
+    <ul>Приминаются значения между 1 и 10.
+        <li>
+            <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+            <label for="value1">Your value is </label>
+        </li>
+</form>
+```
 
-<div id="example">
-<h3 id="HTML">HTML</h3>
+### CSS
 
-<pre class="brush: html">&lt;form action="" id="form1"&gt;
-    &lt;ul&gt;Приминаются значения между 1 и 10.
-        &lt;li&gt;
-            &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
-            &lt;label for="value1"&gt;Your value is &lt;/label&gt;
-        &lt;/li&gt;
-&lt;/form&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css; highlight:[5]">li {
+```css
+li {
     list-style: none;
     margin-bottom: 1em;
 }
@@ -51,44 +51,23 @@ input:in-range + label::after {
 }
 input:out-of-range + label::after {
     content:'вне диапазона!';
-}</pre>
-</div>
+}
+```
 
-<div>{{EmbedLiveSample('Пример',600,140)}}</div>
+{{EmbedLiveSample('Пример',600,140)}}
 
+## Спецификации
 
+| Спецификация                                                                                                     | Статус                               | Комментарий                                                |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Определяет, когда `:out-of-range` находит элементы в HTML. |
+| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Изначальное определение.                                   |
 
-<h2 id="Спецификации"><span>Спецификации</span></h2>
+## Поддержка браузерами
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Определяет, когда <code>:out-of-range</code> находит элементы в HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{cssxref(":in-range")}}</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Forms/Data_form_validation">Руководство валидации данных в формах</a></li>
-</ul>
+- {{cssxref(":in-range")}}
+- [Руководство валидации данных в формах](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)

@@ -5,40 +5,41 @@ tags:
   - смежные селекторы CSS спецификация комбинатор
 translation_of: Web/CSS/General_sibling_combinator
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Общий комбинатор смежных селекторов <code>(~)</code> разделяет два селектора и находит второй элемент только если ему предшествует первый, и они оба имеют общего родителя. Свойства будут применены ко всем элементам, указанным в правой части, следующим за элементом, указанным в левой части.</p>
+Общий комбинатор смежных селекторов `(~)` разделяет два селектора и находит второй элемент только если ему предшествует первый, и они оба имеют общего родителя. Свойства будут применены ко всем элементам, указанным в правой части, следующим за элементом, указанным в левой части.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element ~ element { <em>style properties</em> }
-</pre>
+    element ~ element { style properties }
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: css">p ~ span {
+```css
+p ~ span {
   color: red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;span&gt;Это не красный.&lt;/span&gt;
-&lt;p&gt;Здесь параграф.&lt;/p&gt;
-&lt;code&gt;Тут какой-то код.&lt;/code&gt;
-&lt;span&gt;А здесь span.&lt;/span&gt;</pre>
+```html
+<span>Это не красный.</span>
+<p>Здесь параграф.</p>
+<code>Тут какой-то код.</code>
+<span>А здесь span.</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 280, 120) }}</p>
+{{ EmbedLiveSample('Example', 280, 120) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/Adjacent_sibling_selectors">Смежные селекторы</a></li>
-</ul>
+- [Смежные селекторы](/ru/docs/Web/CSS/Adjacent_sibling_selectors)

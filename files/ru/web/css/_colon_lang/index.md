@@ -1,75 +1,69 @@
 ---
 title: ':lang()'
-slug: 'Web/CSS/:lang'
+slug: Web/CSS/:lang
 tags:
   - CSS
   - Псевдо-класс
-translation_of: 'Web/CSS/:lang'
+translation_of: Web/CSS/:lang
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS/Pseudo-classes">Псевдо-класс</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:lang()</code></strong> выбирает элементы основываясь на языке, на котором они определены.</p>
+[Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.
 
-<pre class="brush: css no-line-numbers">/* Выбирает все &lt;p&gt;, что на английском (en) */
+```css
+/* Выбирает все <p>, что на английском (en) */
 p:lang(en) {
   quotes: '\201C' '\201D' '\2018' '\2019';
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> В HTML язык определяется комбинацией атрибута {{htmlattrxref("lang")}}, элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.</p>
-</div>
+> **Примечание:** В HTML язык определяется комбинацией атрибута {{htmlattrxref("lang")}}, элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h3 id="Параметр">Параметр</h3>
+### Параметр
 
-<dl>
- <dt><code>&lt;language-code&gt;</code></dt>
- <dd>{{cssxref("&lt;string&gt;")}}, представляющая язык, который вы хотите отобрать. Допустимые значения указаны в документации <a href="/en-US/docs/Web/HTML">HTML</a>.</dd>
-</dl>
+- `<language-code>`
+  - : {{cssxref("&lt;string&gt;")}}, представляющая язык, который вы хотите отобрать. Допустимые значения указаны в документации [HTML](/ru/docs/Web/HTML).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>In this example, the <code>:lang()</code> pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using <a href="/en-US/docs/Web/CSS/Child_selectors">child combinators</a>. Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.</p>
+In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Child_selectors). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div lang="en"&gt;&lt;q&gt;This English quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="fr"&gt;&lt;q&gt;This French quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="de"&gt;&lt;q&gt;This German quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-</pre>
+```html
+<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
+<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
+<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:lang(en) &gt; q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) &gt; q { quotes: '« ' ' »'; }
-:lang(de) &gt; q { quotes: '»' '«' '\2039' '\203A'; }
-</pre>
+```css
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > q { quotes: '« ' ' »'; }
+:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример', 350)}}</p>
+{{EmbedLiveSample('Пример', 350)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
+{{Compat}}
 
+## Также смотрите
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Также_смотрите">Также смотрите</h2>
-
-<ul>
- <li>Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
- <li>HTML {{htmlattrxref("lang")}} attribute</li>
- <li><a class="external" href="https://tools.ietf.org/html/bcp47">BCP 47 - Tags for Identifying Languages</a></li>
-</ul>
+- Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- HTML {{htmlattrxref("lang")}} attribute
+- [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

@@ -3,55 +3,55 @@ title: Смежные селекторы
 slug: Web/CSS/Adjacent_sibling_combinator
 translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
-<p>{{CSSRef("Selectors")}}</p>
+{{CSSRef("Selectors")}}
 
-<p>Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определённым в первой части элементом.</p>
+Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определённым в первой части элементом.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">former_element + target_element { <em>style properties</em> }
-</pre>
+    former_element + target_element { style properties }
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<div id="Example_1">
-<pre class="brush: css">li:first-of-type + li {
+```css
+li:first-of-type + li {
   color: red;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Один&lt;/li&gt;
-  &lt;li&gt;Два&lt;/li&gt;
-  &lt;li&gt;Три&lt;/li&gt;
-&lt;/ul&gt;</pre>
-</div>
+```html
+<ul>
+  <li>Один</li>
+  <li>Два</li>
+  <li>Три</li>
+</ul>
+```
 
-<p>{{EmbedLiveSample('Example_1', 200, 100)}}</p>
+{{EmbedLiveSample('Example_1', 200, 100)}}
 
-<p>Так же может использоваться для задания стиля определённого класса "caption span" следующих {{HTMLElement("img")}} вложенных элементов:</p>
+Так же может использоваться для задания стиля определённого класса "caption span" следующих {{HTMLElement("img")}} вложенных элементов:
 
-<pre class="brush: css">img + span.caption {
+```css
+img + span.caption {
   font-style: italic;
 }
-</pre>
+```
 
-<p>сработает только на тех тегах span, для которых задан класс caption:</p>
+сработает только на тех тегах span, для которых задан класс caption:
 
-<pre class="brush: html">&lt;img src="photo1.jpg"&gt;&lt;span class="caption"&gt;Первая фотка&lt;/span&gt;
-&lt;img src="photo2.jpg"&gt;&lt;span class="caption"&gt;Вторая&lt;/span&gt;
-</pre>
+```html
+<img src="photo1.jpg"><span class="caption">Первая фотка</span>
+<img src="photo2.jpg"><span class="caption">Вторая</span>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/CSS/General_sibling_selectors">Селекторы следующего элемента</a></li>
-</ul>
+- [Селекторы следующего элемента](/ru/docs/Web/CSS/General_sibling_selectors)

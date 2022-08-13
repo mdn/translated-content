@@ -3,86 +3,79 @@ title: line-height
 slug: Web/CSS/line-height
 translation_of: Web/CSS/line-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/css">CSS</a> <strong><code>line-height</code></strong> устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В <a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">незамещаемых</a> внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.</p>
+Свойство [CSS](/ru/docs/Web/css) **`line-height`** устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В [незамещаемых](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.
 
-<div>{{EmbedInteractiveExample("pages/css/line-height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/line-height.html")}}
 
+## Синтаксис
 
-
-<p id="Syntax"></p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: css">/* Keyword value */
+```css
+/* Keyword value */
 line-height: normal;
 
 /* Unitless values: use this number multiplied
 by the element's font size */
 line-height: 3.5;
 
-/* &lt;length&gt; values */
+/* <length> values */
 line-height: 3em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 line-height: 34%;
 
 /* Global values */
 line-height: inherit;
 line-height: initial;
 line-height: unset;
-</pre>
+```
 
-<p dir="rtl"></p>
+Свойство `line-height` задаётся с помощью:
 
-<p>Свойство <code>line-height</code> задаётся с помощью:</p>
+- [`<числа>`](#<number>)
+- [`<величины>`](#<length>)
+- [`<процентного соотношения>`](#<percentage>)
+- ключевого слова [`normal`](#normal).
 
-<ul>
- <li><code><a href="#&lt;number>">&lt;числа&gt;</a></code></li>
- <li><code><a href="#&lt;length>">&lt;величины&gt;</a></code></li>
- <li><code><a href="#&lt;percentage>">&lt;процентного соотношения&gt;</a></code></li>
- <li>ключевого слова <code><a href="#normal">normal</a></code>.</li>
-</ul>
+### Значения
 
-<h3 id="Значения">Значения</h3>
+- [`normal`]()
+  - : Зависит от пользовательского браузера. Компьютерные браузеры (включая Firefox) используют значение по умолчанию приблизительно **`1.2`**, в зависимости от элементов `font-family`.
+- `<число> (без именования)`
+  - : Значением `line-height` будет результат умножения указанного числа (без именования) на размер шрифта элементов. Указанное число, по сути, множитель. В большинстве случаев **это предпочтительный способ** указания значения `line-height`, потому что позволяет избежать непредвиденных результатов при наследовании.
+- [`<величина>`]()
+  - : Указанная {{cssxref("&lt;величина&gt;")}} используется при вычислении высоты блока строки. Значение, заданное в единицах **em** может привести к непредвидимым результатам (смотри пример ниже).
+- [`<процентное соотношение>`]()
+  - : Относительно размера шрифта самого элемента.Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. **Percentage** values may produce unexpected results (see the second example below).
 
-<dl>
- <dt><code><a id="normal" name="normal">normal</a></code></dt>
- <dd>Зависит от пользовательского браузера. Компьютерные браузеры (включая Firefox) используют значение по умолчанию приблизительно <strong><code>1.2</code></strong>, в зависимости от элементов <code>font-family</code>.</dd>
- <dt><code><a id="&lt;number>">&lt;число&gt;</a> (без именования)</code></dt>
- <dd>Значением <code>line-height</code> будет результат умножения указанного числа (без именования) на размер шрифта элементов. Указанное число, по сути, множитель. В большинстве случаев <strong>это предпочтительный способ</strong> указания значения <code>line-height</code>, потому что позволяет избежать непредвиденных результатов при наследовании.</dd>
- <dt><code><a id="&lt;length>">&lt;величина&gt;</a></code></dt>
- <dd>Указанная {{cssxref("&lt;величина&gt;")}} используется при вычислении высоты блока строки. Значение, заданное в  единицах <strong>em</strong> может привести к непредвидимым результатам (смотри пример ниже).</dd>
- <dt><code><a id="&lt;percentage>">&lt;процентное соотношение&gt;</a></code></dt>
- <dd><p>Относительно размера шрифта самого элемента.</p>
- <p>Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. <strong>Percentage</strong> values may produce unexpected results (see the second example below).</p></dd>
-</dl>
-
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+### Формальный синтаксис
 
 {{csssyntax}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: css">/* All rules below have the same resultant line height */
+```css
+/* All rules below have the same resultant line height */
 
 div { line-height: 1.2;   font-size: 10pt; }   /* number */
 div { line-height: 1.2em; font-size: 10pt; }   /* length */
 div { line-height: 120%;  font-size: 10pt; }   /* percentage */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */</pre>
+div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
+```
 
-<p>It is often more convenient to set <code>line-height</code> by using the {{cssxref("font")}} shorthand as shown above, but this requires the <code>font-family</code> property to be specified as well.</p>
+It is often more convenient to set `line-height` by using the {{cssxref("font")}} shorthand as shown above, but this requires the `font-family` property to be specified as well.
 
-<h3 id="Prefer_unitless_numbers_for_line-height_values">Prefer unitless numbers for line-height values</h3>
+### Prefer unitless numbers for line-height values
 
-<p>This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values instead of {{cssxref("&lt;length&gt;")}} values. We will use two {{HTMLElement("div")}} elements. The first, with the green border, uses a unitless <code>line-height</code> value. The second, with the red border, uses a <code>line-height</code> value defined in <code>em</code>s.</p>
+This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values instead of {{cssxref("&lt;length&gt;")}} values. We will use two {{HTMLElement("div")}} elements. The first, with the green border, uses a unitless `line-height` value. The second, with the red border, uses a `line-height` value defined in `em`s.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.green {
+```css
+.green {
   line-height: 1.1;
   border: solid limegreen;
 }
@@ -102,69 +95,43 @@ h1 {
   vertical-align: top;
   font-size: 15px;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box green"&gt;
- &lt;h1&gt;Avoid unexpected results by using unitless line-height.&lt;/h1&gt;
+```html
+<div class="box green">
+ <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
-&lt;/div&gt;
-
-&lt;div class="box red"&gt;
- &lt;h1&gt;Avoid unexpected results by using unitless line-height.&lt;/h1&gt;
-  length and percentage line-heights have poor inheritance behavior ...
-&lt;/div&gt;
-
-&lt;!-- The first &lt;h1&gt; line-height is calculated from its own font-size   (30px × 1.1) = 33px  --&gt;
-&lt;!-- The second &lt;h1&gt; line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want --&gt;
-</pre>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Defines <code>line-height</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#line-height', 'line-height')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div>
-
-
-<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also">See also</h2>
+<div class="box red">
+ <h1>Avoid unexpected results by using unitless line-height.</h1>
+  length and percentage line-heights have poor inheritance behavior ...
+</div>
 
-<ul>
- <li>{{Cssxref("font")}}, {{Cssxref("font-size")}}</li>
-</ul>
+<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
+<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+```
+
+#### Result
+
+{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
+
+## Specifications
+
+| Specification                                                                                    | Status                                   | Comment                              |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}         | {{Spec2('CSS3 Transitions')}} | Defines `line-height` as animatable. |
+| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}                 | No change.                           |
+| {{SpecName('CSS1', '#line-height', 'line-height')}}                             | {{Spec2('CSS1')}}                 | Initial definition.                  |
+
+{{cssinfo}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{Cssxref("font")}}, {{Cssxref("font-size")}}
