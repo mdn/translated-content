@@ -23,6 +23,6 @@ Este glosario es un trabajo en curso que nunca termina. Puedes ayudar a mejorarl
 
 **[Añadir una nueva entrada en el glosario](/es/docs/new?parent=4391)**
 
-{{GlossaryList({"terms":\["DMZ","HMAC","condition","modem","OVP","TTL","Unicode"], "filter":"notdefined", "css":"multiColumnList"})}}
+{{GlossaryList({"terms":["DMZ","HMAC","condition","modem","OVP","TTL","Unicode"], "filter":"notdefined", "css":"multiColumnList"})}}
 
 Si deseas saber más acerca de cómo contribuir al glosario, echa un vistazo a [la página de estado de la documentación del glosario](/es/docs/MDN/Doc_status/Glossary).
