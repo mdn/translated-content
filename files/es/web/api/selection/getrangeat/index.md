@@ -35,5 +35,3 @@ Devuelve un objeto de rango representando uno de los rangos seleccionados.
     /* Cada artículo en el array de rangos ahora es
      * un objeto rango representando uno de los
      * rangos en la selección */
-
-{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}

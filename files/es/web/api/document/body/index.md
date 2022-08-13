@@ -33,5 +33,3 @@ Aunque `body` es programable, colocando un nuevo cuerpo en un documento efectiva
 ### Especificación
 
 [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
-
-{{ languages( { "en": "en/DOM/document.body", "pl": "pl/DOM/document.body" } ) }}

@@ -203,5 +203,3 @@ Y en `alertContents()` es necerario remplazar la línea donde aparece `alert(htt
 De esta manera se utiliza el objeto `XMLDocument` dado por `responseXML` y se usan métodos del DOM para acceder a la información contenida en el documento XML. El archivo `test.xml` se encuentra [aquí](http://www.w3clubs.com/mozdev/test.xml) y el script actualizado está [aquí](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
 Para más información sobre los metodos del DOM, visita los documentos de la [implementación del DOM de Mozilla](http://www.mozilla.org/docs/dom/).
-
-{{ languages( { "ca": "ca/AJAX/Primers_passos", "de": "de/AJAX/Getting_Started", "en": "en/AJAX/Getting_Started", "fr": "fr/AJAX/Premiers_pas", "it": "it/AJAX/Iniziare", "ja": "ja/AJAX/Getting_Started", "ko": "ko/AJAX/Getting_Started", "pl": "pl/AJAX/Na_pocz\u0105tek", "pt": "pt/AJAX/Como_come\u00e7ar", "ru": "ru/AJAX/\u0421\_\u0447\u0435\u0433\u043e\_\u043d\u0430\u0447\u0430\u0442\u044c", "zh-cn": "cn/AJAX/\u5f00\u59cb", "zh-tw": "zh_tw/AJAX/\u4e0a\u624b\u7bc7" } ) }}

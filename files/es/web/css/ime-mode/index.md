@@ -69,5 +69,3 @@ La propiedad `ime-mode` es soportada en Firefox 3 y posteriores, así como en In
 Categorías
 
 Interwiki Languages [zh tw:CSS:ime-mode](/zh_tw/CSS/ime-mode)
-
-{{ languages( { "en": "en/CSS/ime-mode", "fr": "fr/CSS/ime-mode", "ja": "ja/CSS/ime-mode", "zh-tw": "zh_tw/CSS/ime-mode" } ) }}

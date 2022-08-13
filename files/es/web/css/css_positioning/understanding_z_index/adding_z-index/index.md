@@ -162,5 +162,3 @@ En el siguiente ejempo, el orden de apilamiento de las capas es organizado usand
 - Autor(es): Paolo Lombardi
 - Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: November 3rd, 2014
-
-{{ languages( { "fr": "fr/CSS/Comprendre_z-index/Ajout_de_z-index" } ) }}

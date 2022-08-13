@@ -60,5 +60,3 @@ En **CSS3**
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "en": "en/CSS/content" } ) }}

@@ -31,5 +31,3 @@ El valor por defecto de esta propiedad en Mozilla Firefox es blanco (`#ffffff` e
 ### Especificación
 
 DOM Nivel 0. No es parte de ningún estándar.
-
-{{ languages( { "en": "en/DOM/document.bgColor", "pl": "pl/DOM/document.bgColor" } ) }}

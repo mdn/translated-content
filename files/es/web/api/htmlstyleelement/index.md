@@ -111,5 +111,3 @@ Ten presente, si embargo, que el método `setAttribute `eliminará cualquier otr
   - : Especifica el destino intencionado de la información de estilo
 - [style.type](/Es/DOM/Style.type "es/DOM/style.type")
   - : Devuelve el tipo de estilo que esta siendo aplicado por esta declaración.
-
-{{ languages( { "en": "en/DOM/style", "fr": "fr/DOM/style", "pl": "pl/DOM/style" } ) }}

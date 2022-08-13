@@ -134,5 +134,3 @@ El segundo tipo de hojas de transformación que soporta Gecko son las hojas de e
 Categorías
 
 enlaces interwikis
-
-{{ languages( { "en": "en/Transforming_XML_with_XSLT", "fr": "fr/Transformations_XML_avec_XSLT", "ko": "ko/Transforming_XML_with_XSLT", "pl": "pl/Transformacje_XML_z_XSLT" } ) }}

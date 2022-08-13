@@ -28,5 +28,3 @@ Para una lista completa de juegos/conjuntos de caracteres, visite: <http://www.i
 ### Especificación
 
 DOM Nivel 0. No es parte de ningún estándar.
-
-{{ languages( { "en": "en/DOM/document.characterSet", "pl": "pl/DOM/document.characterSet" } ) }}

@@ -247,5 +247,3 @@ While this property works on older browsers, not all values are fully supported.
 | Safari (Win)      | 3.0                                  | 3.0                      |
 
 ### See also
-
-{{ languages( { "fr": "fr/CSS/cursor", "pl": "pl/CSS/cursor", "en": "en/CSS/cursor" } ) }}
