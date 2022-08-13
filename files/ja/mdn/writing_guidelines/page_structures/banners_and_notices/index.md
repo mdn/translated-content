@@ -1,10 +1,10 @@
 ---
 title: バナーと注意
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
+page-type: mdn-writing-guide
 tags:
-  - MDN メタ
-  - ガイド
-  - 構造
+  - meta
+  - writing-guide
 translation_of: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 original_slug: MDN/Structures/Banners_and_notices
 ---
@@ -24,7 +24,7 @@ original_slug: MDN/Structures/Banners_and_notices
 
 > **Note:** 編集についてもっと知るには、[content リポジトリーの README](https://github.com/mdn/content) を見てください。
 
-時には、項目リストやテーブルの中の一つの項目に、廃止 (obsolete) や非推奨 (deprecated) などのフラグを立てたいことがあります。
+時には、項目リストや表の中の一つの項目に、廃止 (obsolete) や非推奨 (deprecated) などのフラグを立てたいことがあります。
 以下の各マクロには、そのための特別バージョンがあります。マクロ名の最後にある "\_header" を "\_inline"に変えてください。
 
 ## 非推奨のコンテンツ
